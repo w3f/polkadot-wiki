@@ -8,18 +8,15 @@ slug: ../learn-proxies
 ---
 import RPC from "./../../components/RPC-Connection"
 
-Polkadot provides a module that allows users to set proxy accounts to perform a limited number of
-actions on their behalf. Much like the Stash and Controller account relationship in
-[staking](learn-staking.md), proxies allow users to keep one account in cold storage and actively
-participate in the network with the weight of the tokens in that account.
-
-Check out our Polkadot YouTube video that explains what proxy accounts are:
+Much like controller accounts in
+[staking](learn-staking.md), proxies allow users to use an account (it can be a stash account in cold storage or another account in a hot wallet) less frequently but actively
+participate in the network with the weight of the tokens in that account. Proxies can be viewed as an "extreme" version of a controller account, i.e. proxies are allowed to perform a limited amount of actions related to specific [substrate pallets](https://docs.substrate.io/reference/frame-pallets/). Check out the video below about proxies.
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
 ## Anonymous Proxies
 
-Polkadot includes a function to create an **Anonymous proxy**. Such type of proxy is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
+This proxy category is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. 
 
