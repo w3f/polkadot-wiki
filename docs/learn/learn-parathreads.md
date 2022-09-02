@@ -53,7 +53,7 @@ distinction than a technological one.
 
 Parathreads have the exact same benefits for connecting to {{ polkadot: Polkadot :polkadot }} 
 {{ kusama: Kusama :kusama }} that a full parachain has. Namely, it is able to send messages to 
-other para-objects through [XCMP](learn-cross-consensus.md###XCMP) and it is secured
+other para-objects through [XCMP](learn-xcm.md###XCMP) and it is secured
 under the full economic security of {{ polkadot: Polkadot's :polkadot }} 
 {{ kusama: Kusama's :kusama }} validator set.
 

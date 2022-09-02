@@ -247,7 +247,7 @@ customer base has significant implications, so multiple projects focus on making
 this possible.
 
 Apart from RMRK (Substrate-to-Substrate seamless teleportation natively with 
-[XCMP](learn-cross-consensus.md)) and Efinity (Paratoken), the following efforts are 
+[XCMP](learn-xcm.md)) and Efinity (Paratoken), the following efforts are 
 underway:
 
 - **MyNFT**: an EVM to EVM bridging effort.

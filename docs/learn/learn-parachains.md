@@ -26,7 +26,7 @@ Due to their parallel nature, they are
 able to parallelize transaction processing and achieve scalability of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
 [share in the security](learn-security.md) of the entire network and can communicate with other
-parachains through the [XCM](learn-cross-consensus.md) format.
+parachains through the [XCM](learn-xcm.md) format.
 
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
 of the collator node is to maintain a full node of the parachain, retain all necessary information

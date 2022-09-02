@@ -132,7 +132,7 @@ every block, [4] meaning that shards could contain logic that executes based on 
 proof of a transaction on another shard. [8] Ethereum 2.0 has not released a specification for which
 nodes pass messages between shards.
 
-Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-cross-consensus.md) for
+Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-xcm.md) for
 parachains to send arbitrary messages to each other. Parachains open connections with each other
 and can send messages via their established channels. Given that collators will need to be full
 nodes of the Relay Chain as well, they will be connected and will be able to relay messages from

@@ -84,7 +84,7 @@ protocols to enable across a wide breadth of chains.
 
 With {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, you will get this feature out
 of the box if you build your application as a parachain.
-The [XCM format](../learn/learn-cross-consensus.md) allows any parachains to communicate by
+The [XCM format](../learn/learn-xcm.md) allows any parachains to communicate by
 passing messages between them. Furthermore, as bridges to other chains are connected (such as those
 to Bitcoin or Ethereum) {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains
 will be able to communicate with these as well.
@@ -101,7 +101,7 @@ On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, you are able 
 blockchain’s latest block head onto the relay chain.
 As a parachain, the blocks you submit are verified by validators with a Wasm runtime, which can
 be stored on the relay chain. You also get the ability to communicate with other parachains using the
-[XCM](../learn/learn-cross-consensus.md) format: an abstract message passing system.
+[XCM](../learn/learn-xcm.md) format: an abstract message passing system.
 Message passing is tracked on the relay chain - as such, you can prove the delivery of messages and
 facilitate trustless interactions.
 
@@ -320,7 +320,7 @@ There may be grants available for this type of work.
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a testnet built for testing
 parachains. Rococo utilizes Cumulus and
-[HRMP](../learn/learn-cross-consensus.md#xcmp-lite-hrmp) (Horizontal Relay-routed Message Passing) 
+[HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) (Horizontal Relay-routed Message Passing) 
 in order to send transfers and messages between parachains and a Relay Chain. Every message is sent
 to the Relay Chain, then from the Relay Chain to the desired parachain.
 

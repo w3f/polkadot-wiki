@@ -29,7 +29,7 @@ the censorship problem is solved with having just one honest collator.
 ## XCM
 
 Collators are a key element of the
-[XCM (Cross-Consensus Message Passing Format)](learn-cross-consensus.md).
+[XCM (Cross-Consensus Message Passing Format)](learn-xcm.md).
 By being full nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible
 for them to send messages from parachain A to parachain B.
 
