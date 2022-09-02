@@ -98,7 +98,7 @@ module.exports = {
           label: 'Advanced',
           items: [
             'learn/learn-availability',
-            'learn/learn-cross-consensus',
+            'learn/learn-xcm',
             'learn/learn-phragmen',
             'learn/learn-proxies',
             'learn/learn-randomness',
