@@ -142,7 +142,7 @@ function Banner() {
 function HomeFooter() {
 	const FooterContainer = ({ children }) => (
 		<section className="homeFooterContainer text-white text-left">
-			<Container className="custom-breakpoints">
+			<Container className="container-custom">
 				<Row className="">{children}</Row>
 			</Container>
 		</section>
@@ -151,7 +151,7 @@ function HomeFooter() {
 	const LearnKusama = () => (
 		<Col lg={6}>
 			<KusamaCanary height={45} />
-			<h3 className="h2 font-weight-bold">
+			<h3 className="h2 font-weight-bold text-heading">
 				<Translate
 					id="homepage.homeFooter.learnKusama.title"
 					description="Title of Learn Kusama Footer Section in Home Page"
@@ -190,7 +190,7 @@ function HomeFooter() {
 			<span className="material-icons" style={{ fontSize: 50 + 'px' }}>
 				language
 			</span>
-			<h3 className="h2 font-weight-bold">
+			<h3 className="h2 font-weight-bold text-heading">
 				<Translate
 					id="homepage.homeFooter.improveWiki.title"
 					description="Title of Improve Wiki Footer Section in Home page"

@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Unbounded';
-  src: url(../fonts/Unbounded-Variable.woff2) format('woff2');
+  src: url(../fonts/Unbounded-Variable.woff2) format('woff2-variations');
+  font-weight: 100 1000;
 }
 
 :root {
@@ -38,6 +39,11 @@ h1 {
   font-family: var(--headingFontFamily);
   line-height: 1.333333;
   padding-top: 1.2rem;
+}
+
+.text-heading {
+  font-family: var(--headingFontFamily);
+  line-height: 1.333333;
 }
 
 h2,
@@ -232,7 +238,7 @@ button.menu__button {
   .homeNavItem {
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    height: 400px;
+    min-height: 400px;
     border-radius: 3.25rem !important;
     margin-top: -3rem;
   }
@@ -714,32 +720,32 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
    Custom breakpoints
    ========================================================================== */
 
-.custom-breakpoints {
+.container.container-custom {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 576px) {
-  .custom-breakpoints {
+  .container.container-custom {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .custom-breakpoints {
+  .container.container-custom {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .custom-breakpoints {
+  .container.container-custom {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .custom-breakpoints {
+  .container.container-custom {
     max-width: 1140px;
   }
 }

@@ -12,7 +12,7 @@ import Logo from '@site/static/img/Polkadot_Logo_Horizontal_White.svg';
 function FooterNavColumn({ headline, children }) {
 	return (
 		<Col xs={6} md={4} lg={3} className="mb-3 mb-md-5">
-			<h5 className="text-white">{headline}</h5>
+			<h5 className="text-white text-heading">{headline}</h5>
 			<ul className="list-unstyled">{children}</ul>
 		</Col>
 	);
@@ -97,7 +97,7 @@ export default function Footer() {
 
 	return (
 		<footer className="nav-footer spacer-y-4 pb-4" id="footer">
-			<Container className="custom-breakpoints">
+			<Container className="container-custom">
 				<Row className="justify-content-start">
 					<FooterNavColumn
 						headline={translate({
@@ -121,22 +121,6 @@ export default function Footer() {
 								description: 'Roadmap link in General column in Footer',
 							})}
 							href="https://polkadot.network/launch-roadmap"
-						/>
-						<FooterLink
-							content={translate({
-								message: 'FAQ',
-								id: 'footer.body.general.faq',
-								description: 'FAQ link in General column in Footer',
-							})}
-							href="https://polkadot.network/faq"
-						/>
-						<FooterLink
-							content={translate({
-								message: 'Support',
-								id: 'footer.body.general.support',
-								description: 'Support link in General column in Footer',
-							})}
-							href="https://polkadot.network/contact"
 						/>
 						<FooterLink
 							content={translate({
@@ -176,6 +160,22 @@ export default function Footer() {
 								description: 'Careers link in General column in Footer',
 							})}
 							href="https://polkadot.network/jobs"
+						/>
+						<FooterLink
+							content={translate({
+								message: 'FAQ',
+								id: 'footer.body.general.faq',
+								description: 'FAQ link in General column in Footer',
+							})}
+							href="https://polkadot.network/faq"
+						/>
+						<FooterLink
+							content={translate({
+								message: 'Contact',
+								id: 'footer.body.general.contact',
+								description: 'Contact link in General column in Footer',
+							})}
+							href="https://polkadot.network/contact"
 						/>
 					</FooterNavColumn>
 					<FooterNavColumn
