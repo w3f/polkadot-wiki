@@ -12,7 +12,7 @@ import Logo from '@site/static/img/Polkadot_Logo_Horizontal_White.svg';
 function FooterNavColumn({ headline, children }) {
 	return (
 		<Col xs={6} md={4} lg={3} className="mb-3 mb-md-5">
-			<h5 className="text-white text-heading">{headline}</h5>
+			<h5 className="text-white text-heading font-weight-medium">{headline}</h5>
 			<ul className="list-unstyled">{children}</ul>
 		</Col>
 	);
