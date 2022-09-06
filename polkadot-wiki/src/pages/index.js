@@ -19,7 +19,7 @@ import KusamaCanary from "@site/static/img/kusama_canary_white.svg";
 function HomeNav() {
   const NavContainer = ({ children }) => (
     <section className="homeNavContainer">
-      <Container className="h-100">
+      <Container className="h-100 px-5">
         <Row className="h-100 d-flex align-items-center">{children}</Row>
       </Container>
     </section>
@@ -34,7 +34,7 @@ function HomeNav() {
   );
 
   const NavItemTitle = ({ children }) => (
-    <h1 className="display-4 mt-0 text-dark font-weight-bold text-center">{children}</h1>
+    <h1 className="mt-0 text-dark font-weight-bold text-center">{children}</h1>
   );
 
   const NavItemContent = ({ children }) => <div className="homeNavItemContent">{children}</div>;
