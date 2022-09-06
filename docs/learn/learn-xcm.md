@@ -157,6 +157,12 @@ parachains.
 
 ### XCMP (Cross-Chain Message Passing)
 
+:::caution
+
+XCMP is currently under development and most cross-chain message passing uses HRMP channels for the time being.
+
+:::
+
 _Cross-Chain Message Passing_ secure message passing between parachains. There are two variants:
 _Direct_ and _Relayed_.
 
