@@ -71,6 +71,7 @@ h6 {
   font-weight: 500 !important;
 }
 
+
 /* ==========================================================================
    General components
    ========================================================================== */
@@ -281,12 +282,23 @@ button.menu__button {
   }
 }
 
+.homeNavItem h1 {
+  font-size: 3rem;
+}
+
+@media (min-width: 992px) {
+  .homeNavItem h1 {
+    font-size: 4.2vw;
+  }
+}
+
 @media (min-width: 1200px) {
   .homeNavItem h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.2;
   }
 }
+
 
 /* ==========================================================================
   Banner
@@ -548,7 +560,6 @@ article iframe {
 .nav-footer h5 {
   font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: -0.04em;
   margin-top: 0;
 }
 
