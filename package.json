@@ -53,7 +53,7 @@
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "ipfs-http-client": "^57.0.3",
-    "jest": "^29.0.1",
+    "jest": "^29.0.2",
     "jest-environment-jsdom": "^29.0.2",
     "katex": "^0.16.2",
     "loud-rejection": "^2.2.0",
