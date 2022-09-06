@@ -134,7 +134,7 @@ by Dr. Gavin Wood.
 
 XCM Instructions might change a register, they might change the state of the consensus system or both.
 
-One example of such an instruction would be TransferAsset which is used to transfer an asset to some other address on the remote system. It needs to be told which asset(s) to transfer and to whom/where the asset is to be transferred.
+One example of such an instruction would be `TransferAsset` which is used to transfer an asset to some other address on the remote system. It needs to be told which asset(s) to transfer and to whom/where the asset is to be transferred.
 
 ```
 enum Instruction {
@@ -145,8 +145,11 @@ enum Instruction {
     /* snip */
 }
 ```
+A `MultiAsset` is a general identifier for an asset. It may represent both fungible and non-fungible assets, and in the case of a fungible asset, it represents some defined amount of the asset.
 
-## Cross-Consensus Protocols
+A `MultiLocation` is a relative identifier, meaning that it can only be used to define the relative path between two locations, and cannot generally be used to refer to a location universally. Much like a relative file-system path will first begin with any "../" components used to ascend into to the containing directory, followed by the directory names into which to descend, a `MultiLocation` has two main parts to it: the number of times to ascend into the outer consensus from the local and then an interior location within that outer consensus.
+
+## Cross-Consensus Protocols (XCMP, VMP, HRMP)
 
 With the XCM format established, common patterns for protocols of these messages are needed.
 Polkadot implements two message passing protocols for acting on XCM messages between its constituent
