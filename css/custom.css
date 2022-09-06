@@ -18,8 +18,8 @@
   --nickelColor: #6d7278;
   --blackColor: black;
   --ifm-navbar-height: 50px;
-  --sansFontFamily: 'Inter', sans-serif !important;
-  --headingFontFamily: 'Unbounded', sans-serif !important;
+  --sansFontFamily: "Inter", sans-serif !important;
+  --headingFontFamily: "Unbounded", sans-serif !important;
   --docsearch-searchbox-background: white;
   --docsearch-searchbox-shadow: var(--snowColor);
 
@@ -36,10 +36,13 @@ body {
    ========================================================================== */
 
 h1 {
-  font-family: var(--headingFontFamily);
+  /* 
+    custom font-family needs to be once assigned directly to class from font-face definition
+    otherwise it will be omitted in the css bundle by webpack
+  */
+  font-family: "Unbounded", sans-serif !important;;
   line-height: 1.333333;
   padding-top: 1.2rem;
-  font-weight: 600 !important;
 }
 
 h2,
@@ -66,10 +69,6 @@ h6 {
 
 .font-weight-medium {
   font-weight: 500 !important;
-}
-
-.font-weight-bold {
-  font-weight: 600 !important;
 }
 
 /* ==========================================================================
