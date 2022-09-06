@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Unbounded';
+  src: url(../fonts/Unbounded-Variable.woff2) format('woff2-variations');
+  font-weight: 100 1000;
+}
+
 :root {
   --ifm-color-primary: #e6007a;
   --ifm-color-primary-dark: #cf006e;
@@ -12,7 +18,8 @@
   --nickelColor: #6d7278;
   --blackColor: black;
   --ifm-navbar-height: 50px;
-  --sansFontFamily: "Work Sans", sans-serif !important;
+  --sansFontFamily: 'Inter', sans-serif !important;
+  --headingFontFamily: 'Unbounded', sans-serif !important;
   --docsearch-searchbox-background: white;
   --docsearch-searchbox-shadow: var(--snowColor);
 
@@ -28,6 +35,21 @@ body {
    Typography
    ========================================================================== */
 
+h1 {
+  font-family: var(--headingFontFamily);
+  line-height: 1.333333;
+  padding-top: 1.2rem;
+  font-weight: 600 !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sansFontFamily);
+}
+
 .h1,
 .h2,
 .h3,
@@ -35,6 +57,19 @@ body {
 .h5,
 .h6 {
   margin-top: 0;
+}
+
+.text-heading {
+  font-family: var(--headingFontFamily);
+  line-height: 1.333333;
+}
+
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
 }
 
 /* ==========================================================================
@@ -74,13 +109,13 @@ button.menu__button {
   margin-right: auto;
 }
 
-.navbar__inner a.navbar__item svg[class^="iconExternalLink"] {
+.navbar__inner a.navbar__item svg[class^='iconExternalLink'] {
   display: none;
 }
 
 /*  Contribute button */
 @media only screen and (min-width: 1024px) {
-  .navbar__inner a.navbar__item[href*="contributing"] {
+  .navbar__inner a.navbar__item[href*='contributing'] {
     background: white;
     color: var(--ifm-color-primary);
     border: solid 1px var(--ifm-color-primary);
@@ -94,7 +129,7 @@ button.menu__button {
     font-weight: bold;
   }
 
-  .navbar__inner a.navbar__item[href*="contributing"]:hover {
+  .navbar__inner a.navbar__item[href*='contributing']:hover {
     background: var(--ifm-color-primary);
     color: white;
   }
@@ -156,20 +191,12 @@ button.menu__button {
   color: var(--secondaryColor);
 }
 
-.navbar__inner
-  .navbar__item:last-child
-  .dropdown__menu
-  > li
-  a.dropdown__link--active {
+.navbar__inner .navbar__item:last-child .dropdown__menu > li a.dropdown__link--active {
   color: var(--blackColor);
   background-color: white;
 }
 
-.navbar__inner
-  .navbar__item:last-child
-  .dropdown__menu
-  > li
-  a.dropdown__link--active:hover {
+.navbar__inner .navbar__item:last-child .dropdown__menu > li a.dropdown__link--active:hover {
   color: var(--ifm-color-primary);
 }
 
@@ -220,17 +247,16 @@ button.menu__button {
   .homeNavItem {
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    height: 60vh;
-    max-height: 500px;
+    min-height: 400px;
     border-radius: 3.25rem !important;
     margin-top: -3rem;
   }
 
   .homeNavItem::after {
     font-size: 1.5rem;
-    font-family: "Material Icons";
-    content: "arrow_upward";
-    -webkit-font-feature-settings: "liga";
+    font-family: 'Material Icons';
+    content: 'arrow_upward';
+    -webkit-font-feature-settings: 'liga';
     position: absolute;
     left: 50%;
     bottom: 3rem;
@@ -251,17 +277,14 @@ button.menu__button {
     opacity: 1;
   }
 
-  .homeNavItem h2 {
-    font-size: 3.5rem;
-    font-weight: 400;
-    line-height: 1.2;
+  .homeNavItemContent {
+    margin-top: 10%;
   }
 }
 
 @media (min-width: 1200px) {
-  .homeNavItem h2 {
-    font-size: 4.5rem;
-    font-weight: 400;
+  .homeNavItem h1 {
+    font-size: 4rem;
     line-height: 1.2;
   }
 }
@@ -278,7 +301,9 @@ button.menu__button {
   background-color: red;
   color: white;
   text-align: center;
-  background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%), linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%), linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
+  background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%),
+    linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
+    linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
   background-color: #e6007a;
 }
 
@@ -298,11 +323,7 @@ button.menu__button {
 
 .homeFooterContainer {
   padding: 6rem 0 4rem;
-  background-image: linear-gradient(
-      217deg,
-      rgba(196, 0, 97, 0.8),
-      rgba(196, 0, 97, 0) 70%
-    ),
+  background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%),
     linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
   background-color: #e6007a;
@@ -415,7 +436,7 @@ article iframe {
   transform: scale(0.999);
 }
 .btn-primary:before {
-  content: "";
+  content: '';
   height: 100%;
   position: absolute;
   top: 0;
@@ -442,9 +463,9 @@ article iframe {
 .btn-primary:not(:disabled):not(.disabled):active {
   background-color: transparent;
 }
-.btn-primary[type="submit"]:hover,
-.btn-primary[type="submit"]:focus,
-.btn-primary[type="submit"]:active {
+.btn-primary[type='submit']:hover,
+.btn-primary[type='submit']:focus,
+.btn-primary[type='submit']:active {
   background: var(--ifm-color-primary);
 }
 .btn-primary:hover:before,
@@ -548,6 +569,15 @@ article iframe {
   color: white !important;
 }
 
+.nav-footer-item-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #e6007a;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
 /*
    Footer Social
    ========================================================================== */
@@ -567,7 +597,7 @@ footer .list-social-links a {
   text-decoration: none;
 }
 
-footer [class^="socicon-"] {
+footer [class^='socicon-'] {
   line-height: 2;
 }
 
@@ -605,7 +635,7 @@ footer .list-social-links a {
 }
 
 .footer-legal .list-pipe-separator > li:not(:last-child) > a:after {
-  content: "|";
+  content: '|';
   margin: 0 0.375rem;
   opacity: 0.5;
 }
@@ -692,4 +722,38 @@ footer .list-social-links a {
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   /* Color which works with dark mode syntax highlighting theme */
   background-color: rgb(100, 100, 100);
+}
+
+/* ==========================================================================
+   Custom breakpoints
+   ========================================================================== */
+
+.container.container-custom {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container.container-custom {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container.container-custom {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container.container-custom {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container.container-custom {
+    max-width: 1140px;
+  }
 }
