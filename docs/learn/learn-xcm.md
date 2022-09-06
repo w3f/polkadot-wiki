@@ -192,7 +192,7 @@ data in both cases exists on the Relay-chain. This includes:
 - #### DMP (Downward Message Passing)
   _Downward Message Passing_ message passing from the Relay-chain to a parachain.
 
-#### XCMP-Lite (HRMP)
+### HRMP (XCMP-Lite)
 
 While XCMP is still being implemented, a stop-gap protocol (see definition below) known as
 **Horizontal Relay-routed Message Passing (HRMP)** exists in its place. HRMP has the same interface
