@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Unbounded';
-  src: url(../fonts/Unbounded-Variable.woff2) format('woff2-variations');
-  font-weight: 100 1000;
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
 }
 
 :root {
