@@ -7,22 +7,20 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
-Cross-Consensus Message Format or XCM for short is a consensus agnostic, messaging protocol which
-allows Substrate based chains to communicate with eachother. Think TCP/IP but for blockchains and instead of data packets one can pass around arbitrary messages that contain some metadata and the message data. One
+Cross-Consensus Message Format(XCM) aims to be a language to communicate ideas between consensus systems. One
 of Polkadot's promises is that of interoperability, and XCM is the vehicle by which it will deliver this
-promise. Simply, it is a standard that allows protocol developers to define the type of data which
-their chains can send and recieve. It comes out of the box with a VM that allows for customization
-of execution and the format defines useful structures that makes sense for cross consensus messaging
-such as the universal consensus location identifiers like **MultiLocation** and universal asset identifiers like **MultiAsset**.
+promise. Simply, it is a standard that allows protocol developers to define the data and origins which
+their chains can send and recieve from. Out of the box it comes with a VM that allows for customization
+of execution as well as the following properties:
 
-**XCM is:**
-- Generic and extensible for use with fee-free and gas-metered smart contract platforms,
-  community parachains, trusted interactions between system parachains and their relay chain,
-  and more.
-- Well-versioned, abstract and general and can be used as a means of providing a
-  long-lasting transaction format for wallets to use to create many common transactions.
-  It is _extensible_ and, in turn, _future-proof_ and _forward-compatible_.
-- Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
+1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
+   completion.
+2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
+   and in a timely fashion.
+3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to
+   the sender with an additional message.
+4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
+   messages are being passed.
 
 :::note 
 
@@ -30,7 +28,6 @@ XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
 development. See Gavins talk about v3 in the resources section.
 
 :::
-
 
 ## A Format, Not a Protocol
 
@@ -43,18 +40,6 @@ sharded enclaves like [SPREE](learn-spree.md).
 
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.
-
-XCM aims to be a language to communicate ideas between consensus systems, hence, "Cross-Consensus"
-with the following properties:
-
-1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
-   completion.
-2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
-   and in a timely fashion.
-3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to
-   the sender with an additional message.
-4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
-   messages are being passed.
 
 Similar to UDP, out of the box XCM is a "fire and forget" model. Unless, there is a seperate XCM message
 designed to be a response message which can be sent from the recipient to the sender. Any kind of error
