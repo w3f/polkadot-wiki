@@ -442,9 +442,9 @@ generating them manually.
 
 There are three types of actions you can take with a multi-sig account:
 
-- Executing a call.
-- Approving a call.
-- Cancelling a call.
+- Executing a call `as_multi`. 
+- Approving a call `approve_as_multi`.
+- Cancelling a call `cancel_as_multi`.
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
 should be used. This function takes only the other signatories and the raw call as its arguments.
