@@ -10,65 +10,16 @@ import RPC from "./../../components/RPC-Connection"
 
 Much like controller accounts in
 [staking](learn-staking.md), proxies allow users to use an account (it can be a stash account in cold storage or another account in a hot wallet) less frequently but actively
-participate in the network with the weight of the tokens in that account. Proxies can be viewed as an "extreme" version of a controller account, i.e. proxies are allowed to perform a limited amount of actions related to specific [substrate pallets](https://docs.substrate.io/reference/frame-pallets/). Check out the video below about proxies.
+participate in the network with the weight of the tokens in that account. Proxies can be viewed as an "extreme" version of a controller account, i.e. proxies are allowed to perform a limited amount of actions related to specific [substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another account. Check out the video below about proxies.
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
-## Anonymous Proxies
-
-This proxy category is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
-account designates a proxy account, but anonymous proxies are the opposite. The account that creates
-the proxy relationship is the proxy account and the new account is the primary. 
-
-:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the proxy account will be inaccessible.
-
-:::
-
-![anonymous proxy](../assets/proxy_anonymous_diagram.png)
-
-:::note Explainer video on anonymous proxies
-
-Learn more about anonymous proxies from our
-[technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
-
-:::
-
-## Time-delayed Proxies
-
-We can add an additional layer of security to proxies by giving them a delay time. The delay will be
-quantified in number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has 6 
-seconds of block-time. A delay value of 10 will mean 10 blocks, which equals to 1 minute of delay.
-The proxy will announce it's intended action and wait for the number
-of blocks defined in the delay time before executing it. The proxy will include the hash of the
-intended function call in the announcement. Within this time window, the intended action may be
-cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
-actions can be noticed and reverted within a delay period.
-
-:::caution The Polkadot-JS UI cannot handle complicated proxy setups
-
-The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig 
--> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
-the chain, as you will be unable to sign extrinsics using the UI.
-
-:::
 
 ## Why use a Proxy?
 
 Proxies are great to use for specific purposes because they add in a layer of security. Rather than
 using funds in one sole account, smaller accounts with unique roles complete tasks for the main
 stash account. This drives attention away from the main account and to proxies.
-
-Anonymous proxies, in particular, can be used for permissionless management. In this example below,
-there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an
-anonymous proxy attached to them. In the case that the multisig account wanted to add or remove
-Alice or Bob or even add in a new account into the anonymous proxy, the anonymous proxy would take
-care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new
-multisig would be created.
-
-![anonymous multisig proxy](../assets/multisig_proxy_diagram.png)
 
 ## Proxy Types
 
@@ -231,6 +182,56 @@ The required deposit amount for one proxy is equal to:
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }} + 
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} * num_proxies
+
+## Anonymous Proxies
+
+This proxy category is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
+account designates a proxy account, but anonymous proxies are the opposite. The account that creates
+the proxy relationship is the proxy account and the new account is the primary. 
+
+:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the proxy account will be inaccessible.
+
+:::
+
+![anonymous proxy](../assets/proxy_anonymous_diagram.png)
+
+:::note Explainer video on anonymous proxies
+
+Learn more about anonymous proxies from our
+[technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
+
+:::
+
+Anonymous proxies, in particular, can be used for permissionless management. In this example below,
+there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an
+anonymous proxy attached to them. In the case that the multisig account wanted to add or remove
+Alice or Bob or even add in a new account into the anonymous proxy, the anonymous proxy would take
+care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new
+multisig would be created.
+
+![anonymous multisig proxy](../assets/multisig_proxy_diagram.png)
+
+## Time-delayed Proxies
+
+We can add an additional layer of security to proxies by giving them a delay time. The delay will be
+quantified in number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has 6 
+seconds of block-time. A delay value of 10 will mean 10 blocks, which equals to 1 minute of delay.
+The proxy will announce it's intended action and wait for the number
+of blocks defined in the delay time before executing it. The proxy will include the hash of the
+intended function call in the announcement. Within this time window, the intended action may be
+cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
+actions can be noticed and reverted within a delay period.
+
+:::caution The Polkadot-JS UI cannot handle complicated proxy setups
+
+The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig 
+-> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
+[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
+the chain, as you will be unable to sign extrinsics using the UI.
+
+:::
 
 ## Resources
 [Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
