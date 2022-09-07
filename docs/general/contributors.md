@@ -73,6 +73,16 @@ for computational design. He was previously employed in the CAD/3D graphics soft
 domains. Keith is passionate about learning, developing and sharing decentralized solutions that
 help aid an anti-authoritarian future.
 
+### Filippo Franchini
+
+- email: [filippo@web3.foundation](mailto:filippo@web3.foundation)
+- matrix: [@filippo:web3.foundation](https://matrix.to/#/@filippo:web3.foundation)
+- twitter: [@filippoweb3](https://twitter.com/filippoweb3)
+
+Filippo is a Technical Educator at the Web3 Foundation. Filippo has a PhD in Statistics and 
+has 6 years of experience in teaching statistical computing and data analysis. Filippo strongly believes is the Web3 vision of having a privacy-focused, secure and decentralized internet where power is given back to the users. The complexity of Web3 technology can be intimidating and it is still a major blocking element behind mainstream adoption. Filippo is excited to contribute to Web3 Foundation's vision by educating professionals and the general 
+public about Web3 and blockchain technology.
+
 ## Technical Integrations
 
 ### Joe Petrowski
