@@ -25,7 +25,7 @@ of execution as well as the following properties:
 :::note 
 
 XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
-development. See Gavins talk about v3 in the resources section.
+development. See Gavin's talk about v3 in the resources section.
 
 :::
 
