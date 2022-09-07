@@ -69,7 +69,7 @@ reasonable interpretations under some systems or will be intentionally unsupport
     form of the asset on each of those chains would be fully backed, allowing the derivative asset
     to be exchanged for the underlying asset on the reserve chain backing it.
 
-Lets review two of these example asset transfer use cases **Asset Teleportation** and **Reserve Asset Transfer**.
+Let's review two of these example asset transfer use cases: **Asset Teleportation** and **Reserve Asset Transfer**.
 
 ### Asset Teleportation
 An asset teleport operation from a single source to a single destination. 
