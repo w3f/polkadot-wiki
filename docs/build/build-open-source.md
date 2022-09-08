@@ -59,7 +59,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 
 **Maintenance Status**: 
 - 🟢 Actively maintained
-- 🟡 Stale (no activity since 1 month) 
+- 🟡 Stale (no activity for 1 month) 
 - 🔴 Unmaintained (no activity for more than 3 months)
 
 ### User Interface 
@@ -148,7 +148,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Gaming | [Bit.country](https://github.com/bit-country/Bit-Country-Blockchain) 🟢, [SubGame](https://github.com/SubGame-Network/subgame-network) 🔴, [subzero](https://github.com/playzero/subzero) 🔴, [Web3Games](https://github.com/web3gamesofficial/web3games-blockchain) 🔴, [Ajuna Network](https://github.com/ajuna-network/Ajuna) 🟢, [Gafi Network](https://github.com/cryptoviet/gafi) 🟡, [Asylum](https://gitlab.com/asylum-space/asylum-item-nft) | 
 | Computation/AI | [DeepBrain Chain](https://github.com/DeepBrainChain/DeepBrainChain-MainChain) 🟢, [AI Infrastructure on Blockchain](https://github.com/anudit/cerebrum) 🔴|
 | Enable specific use-cases | [Robonomics](https://github.com/airalab/substrate-node-robonomics) 🟢, [UniversalDOT](https://github.com/UniversalDot/pallets) 🟢, [Evercity Sustainable Finance Protocol](https://github.com/EvercityEcosystem/evercity-chain) 🟡, [Fennel Protocol](https://github.com/fennelLabs/Fennel-Protocol) 🟡, [logion](https://github.com/logion-network/logion-node) 🟢
-| NFT | [ternoa](https://github.com/capsule-corp-ternoa/chain) 🟢, [FRAME Pallet: NFTs for Substrate](https://github.com/danforbes/pallet-nft) 🔴, [Unique NFT Parachain](https://github.com/UniqueNetwork/unique-chain) 🟡, [DNFT](https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets) 🔴, [RMRK-Substrate](https://github.com/rmrk-team/rmrk-substrate) 🟢, [NT-NFTs](https://github.com/Popular-Coding/nt-nft) 🟡
+| NFT | [ternoa](https://github.com/capsule-corp-ternoa/chain) 🟢, [FRAME Pallet: NFTs for Substrate](https://github.com/danforbes/pallet-nft) 🔴, [Unique NFT Parachain](https://github.com/UniqueNetwork/unique-chain) 🟡, [DNFT](https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets) 🔴, [RMRK-Substrate](https://github.com/rmrk-team/rmrk-substrate) 🟢, [NT-NFTs](https://github.com/Popular-Coding/nt-nft) 🟡, [Green Lemon](https://github.com/GreenLemonProtocol/dksap-polkadot) 🟢
 | Randomness | [DKG and Randomness Beacon](https://github.com/Cardinal-Cryptography/substrate/tree/randomness-beacon) 🟢
 | Licensing | [Anagolay Network](https://github.com/anagolay/anagolay-chain) 🟢| 
 | Banking Integration | [FIAT on-off-ramp](https://github.com/element36-io/ebics-java-service) 🟡
