@@ -231,12 +231,18 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards.
 
-In Polkadot and Kusama, this limit is currently {{ polkadot_max_nominators }}, although this can be
-modified via runtime upgrade. A validator with more than {{ polkadot_max_nominators }} nominators is
-_oversubscribed_. When payouts occur, only the top {{ polkadot_max_nominators }} nominators as
-measured by amount of stake allocated to that validator will receive rewards. All other nominators
-are essentially "wasting" their stake - they used their nomination to elect that validator to the
-active stake, but receive no rewards in exchange for doing so.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, this limit is currently
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/>, :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>, :kusama }}
+although it can be modified via runtime upgrade. A validator with more than
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominators is _oversubscribed_. When payouts occur, only the top
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominators as measured by amount of stake allocated to that validator will receive rewards. All
+other nominators are essentially "wasting" their stake - they used their nomination to elect that
+validator to the active stake, but receive no rewards in exchange for doing so.
 
 We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator
 offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount),
