@@ -38,7 +38,7 @@ type.
 This `enum` is a multi-format address wrapper for on-chain accounts and allows us to describe
 Polkadot's default address format to represent many different address types. This includes **20
 byte**, **32 byte**, and **arbitrary raw byte** variants. It also allows an enhancement to the
-original [`indices`](learn-accounts.md##indices) lookup.
+original [`indices`](learn-accounts.md#indices) lookup.
 
 :::info
 
