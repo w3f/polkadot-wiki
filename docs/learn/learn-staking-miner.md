@@ -7,6 +7,8 @@ keywords: [staking, npos, miner, phragmén]
 slug: ../learn-staking-miner
 ---
 
+import RPC from "./../../components/RPC-Connection"
+
 :::caution
 
 The staking-miner code is experimental and it is still in development phase. Use is at your own
@@ -78,8 +80,10 @@ A maximum of `pallet::Config::MaxSignedSubmissions` will be stored on-chain and 
 based on score. Higher the score the more optimal the election solution is. On both Polkadot and
 Kusama the
 ['MaxSignedSubmissions'](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L446)
-is set to {{ signed_max_submission }} submissions. This variable can be modified if needed through
-governance.
+is set to
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :kusama }}
+submissions. This variable can be modified if needed through governance.
 
 Upon arrival of a new solution:
 
