@@ -442,9 +442,9 @@ generating them manually.
 
 There are three types of actions you can take with a multi-sig account:
 
-- Executing a call.
-- Approving a call.
-- Cancelling a call.
+- Executing a call `as_multi`. 
+- Approving a call `approve_as_multi`.
+- Cancelling a call `cancel_as_multi`.
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
 should be used. This function takes only the other signatories and the raw call as its arguments.
@@ -498,9 +498,9 @@ Thus the deposit values can be calculated as shown in the table below.
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
 Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
 call. When doing this Alice will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
-while she waits for either Bob or Charlie also to approve the call. When Bob comes to approve the
+while she waits for either Bob or Charlie also to approve the call using the `approve_as_multi` extrinsic. When Bob comes to approve the
 call and execute the transaction, he will not need to place the deposit, and Alice will receive her
-deposit back.
+deposit back. Similarly, after Alice sends the initial transaction, say Bob or Charlie choose to cancel the transaction due to an error on Alice's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Alice.
 
 ### Example with Polkadot JS
 
