@@ -192,15 +192,16 @@ Learn more about anonymous proxies from our
 
 :::
 
-Anonymous proxies are not real proxies. They are accounts that are created by a primary account. Such primary account then acts as `any proxy` on behalf of the anonymous proxy. To avoid confusion in this section we will refer to `Anon` for anonymous proxy. Anon accounts have an address but no corresponding private key. As a consequence, once the relationship between the Anon and `Any` proxy (not necessarily the one who created the Anon in the first place) is broken, the Anon will be inaccessible (even if visible on the Polkadot-JS UI).
+Anonymous proxies are not real proxies. Proxies the we described so far are _existing accounts_ assigned as proxies by a primary accounts. Such proxies act on behalf of the primary account reducing the exposure of the primary account's private key. The purpose a proxies is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account.
+
+
+Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. Such primary account then acts as `any proxy` on behalf of the anonymous proxy. To avoid confusion in this section we will refer to `Anon` for anonymous proxy. Anon accounts have an address but no corresponding private key. As a consequence, once the relationship between the Anon and `Any` proxy (not necessarily the one who created the Anon in the first place) is broken, the Anon will be inaccessible (even if visible on the Polkadot-JS UI).
 
 :::danger 
 
 Once you remove the relationship with `Any` proxy, the Anon will be inaccessible.
 
 :::
-
-
 
 
 Anonymous proxies, in particular, can be used for permissionless management. In this example below,
