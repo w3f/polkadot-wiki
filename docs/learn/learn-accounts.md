@@ -446,6 +446,12 @@ There are three types of actions you can take with a multi-sig account:
 - Approving a call `approve_as_multi`.
 - Cancelling a call `cancel_as_multi`.
 
+:::info
+
+Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig) for more information about the actions you can take with a multi signature account.
+
+:::
+
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
 should be used. This function takes only the other signatories and the raw call as its arguments.
 
