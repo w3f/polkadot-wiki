@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
+import { BlocksToDays } from "./utilities/filters";
 
+// Number of auctions to display in drop-down
+const auctionCount = 100;
+const firstAuctionBlockDot = 7658910;
+const firstAuctionBlockKsm = 7924237;
+
+// Generated at run-time
 let chain = undefined;
-
-let auctionBlocks = [
-
-]
+let auctionBlocks = [];
+let widgetData = [];
 
 let widget =
 	<div>
-		<select onChange={update} style={{ border: '2px solid #e6007a', height: '40px' }}>
+		<select /*onChange={update}*/ style={{ border: '2px solid #e6007a', height: '40px' }}>
 			<option value="No1">1st Auction - Nov 11, 2021</option>
 			<option value="No2">2nd Auction - Nov 18, 2021</option>
 			<option value="No2">3rd Auction - Nov 25, 2021</option>
@@ -36,11 +41,46 @@ function AuctionSchedule() {
 	useEffect(() => {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
+			// Set chain type
 			chain = "polkadot"
-			update();
+			
+			/*
+			PSEUDO CODE
+
+			// Get ending period for the given chain
+			const endPeriod = consts.auctions.endingPeriod();
+			
+			// Add starting block for the given chain
+			auctionBlocks.push(firstAuctionBlockDot);
+			
+			// Build auction objects with all required values for UI
+			for (let i = 0; i < auctionCount; i++) {
+				let auction = { };
+				auction.startBlock = auctionBlocks[auctionBlocks.length - 1];
+				const [leased, end ] = rpc.chain.getBlockHash(startBlock);
+				auction.weeksLeased = lease;
+				auction.endPeriodBlock = end;
+				auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
+
+				// TODO: a conversion is still required here (currently only # of days not dates)
+				auction.startDate = BlocksToDays(auction.startBlock);
+				auction.endPeriodDate = BlocksToDays(auction.endPeriodBlock);
+				auction.biddingEndsDate = BlocksToDays(auction.biddingEndsBlock);
+
+				auction.startOnBoard = ??;
+				auction.endOnBoard = auction.weeksLeased * 7 + auction.startOnBoard;
+
+				// Calculate next starting block
+				auction.nextStartingBlock = auction.biddingEndsBlock + 3600; // TODO: Get 3600 on-chain??
+				auctionBlocks.push(nextStartingBlock);
+				
+				// Add auction to widget for visualization
+				widgetData.push(auction);
+			}
+			*/
+
 		} else if (title === "Parachain Slot Auctions · Guide") {
 			chain = "kusama";
-			update();
 		} else {
 			console.log("Unknown wiki/guide type");
 		}
@@ -50,31 +90,6 @@ function AuctionSchedule() {
 		return (widget);
 	} else {
 		return (<div />)
-	}
-}
-
-/*
-NOTES:
-The entire widget can be calculated using the following operations
-From a block number - given (first ever was 7658910)
-Get the block hash - rpc.chain.getBlockHash(blockNumber)
-Get the lease duration in weeks and ending period block - query.auctions.auctionInfo(blockHash)
-Get the bidding end block - consts.auctions.endingPeriod() + ending period block
-Estimate date/time based on current block number when page loads for all 3 blocks mentioned above
-
-lease duration * 7 is the amount of days added to find on boarded final date
-next auction starts 3600 blocks after previous end
-
-blocks to days:
-days = (blocks * 6) / 86400;
-*/
-
-function update() {
-	console.log('run');
-	if (chain === "polkadot") {
-		// TODO - get Polkadot chain values
-	} else if (chain === "kusama") {
-		// TODO - get Kusama chain values
 	}
 }
 
