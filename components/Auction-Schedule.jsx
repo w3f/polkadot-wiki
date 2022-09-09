@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 
+let chain = undefined;
+
 let widget =
 	<div>
-		<select style={{ border: '2px solid #e6007a', height: '40px'}}>
+		<select onChange={update} style={{ border: '2px solid #e6007a', height: '40px' }}>
 			<option value="No1">1st Auction - Nov 11, 2021</option>
 			<option value="No2">2nd Auction - Nov 18, 2021</option>
 			<option value="No2">3rd Auction - Nov 25, 2021</option>
@@ -30,21 +32,28 @@ function AuctionSchedule() {
 	useEffect(() => {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			update("polkadot")
+			chain = "polkadot"
+			update();
 		} else if (title === "Parachain Slot Auctions · Guide") {
-			update("kusama");
+			chain = "kusama";
+			update();
 		} else {
 			console.log("Unknown wiki/guide type");
 		}
 	}, []);
 
-	return (widget);
+	if (chain !== undefined) {
+		return (widget);
+	} else {
+		return (<div />)
+	}
 }
 
-function update(network) {
-	if (network === "polkadot") {
+function update() {
+	console.log('run');
+	if (chain === "polkadot") {
 		// TODO - get Polkadot chain values
-	} else if (network === "kusama") {
+	} else if (chain === "kusama") {
 		// TODO - get Kusama chain values
 	}
 }
