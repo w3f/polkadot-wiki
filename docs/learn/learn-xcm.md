@@ -15,8 +15,8 @@ of execution as well as the following properties:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
-2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
-   and in a timely fashion.
+2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in an orderly
+   and timely fashion.
 3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to
    the sender with an additional message.
 4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
