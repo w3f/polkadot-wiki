@@ -177,19 +177,11 @@ The required deposit amount for one proxy is equal to:
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} * num_proxies
 
-## Anonymous Proxies
+## Anonymous Proxies (aka key-less anonymous accounts)
 
 :::info
 
 To create an **anonymous proxy account** check out [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
-
-:::
-
-This proxy category is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
-account designates a proxy account, but anonymous proxies are the opposite. The account that creates
-the proxy relationship is the proxy account and the new account is the primary. 
-
-:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the proxy account will be inaccessible.
 
 :::
 
@@ -199,6 +191,17 @@ Learn more about anonymous proxies from our
 [technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
 
 :::
+
+Anonymous proxies are not real proxies. They are accounts that are created by a primary account. Such primary account then acts as `any proxy` on behalf of the anonymous proxy. To avoid confusion in this section we will refer to `Anon` for anonymous proxy. Anon accounts have an address but no corresponding private key. As a consequence, once the relationship between the Anon and `Any` proxy (not necessarily the one who created the Anon in the first place) is broken, the Anon will be inaccessible (even if visible on the Polkadot-JS UI).
+
+:::danger 
+
+Once you remove the relationship with `Any` proxy, the Anon will be inaccessible.
+
+:::
+
+
+
 
 Anonymous proxies, in particular, can be used for permissionless management. In this example below,
 there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an
