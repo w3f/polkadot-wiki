@@ -90,7 +90,7 @@ An asset teleport operation from a single source to a single destination.
   The destination then deposits the assets to the receiving account of the asset.
 
 ### Reserve Asset Transfer
-When consensus systems do not have a established layer of trust over which they can transfer assets, they can opt for a trusted 3rd entity to store the assets. Eg. Statemine(Kusama) to Polkadot or Statemint(Polkadot) to Kusama. 
+When consensus systems do not have a established layer of trust over which they can transfer assets, they can opt for a trusted 3rd entity to store the assets. 
 
 ![](../assets/cross-consensus/xcm-reserve-asset-transfer.png)
 
