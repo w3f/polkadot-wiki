@@ -8,9 +8,9 @@ slug: ../learn-xcm
 ---
 
 Cross-Consensus Message Format(XCM) aims to be a language to communicate ideas between consensus systems. One
-of Polkadot's promises is that of interoperability, and XCM is the vehicle by which it will deliver this
+of Polkadot's promises is that of interoperability, and XCM is the vehicle through which it will deliver this
 promise. Simply, it is a standard that allows protocol developers to define the data and origins which
-their chains can send and recieve from. Out of the box it comes with a VM that allows for customization
+their chains can send and recieve from. Out of the box, it comes with a VM that allows for customization
 of execution as well as the following properties:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
@@ -19,13 +19,13 @@ of execution as well as the following properties:
    and in a timely fashion.
 3. **Asymmetric**: XCM messages out of the box do not have results that let the sender know that the message was received. Any results must be separately communicated to
    the sender with an additional message.
-4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
+4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus Systems between which the 
    messages are being passed.
 
 :::note 
 
 XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
-development. See Gavins talk about v3 in the resources section.
+development. See Gavin's talk about v3 in the [resources](#Resources) section.
 
 :::
 
@@ -69,7 +69,7 @@ reasonable interpretations under some systems or will be intentionally unsupport
     form of the asset on each of those chains would be fully backed, allowing the derivative asset
     to be exchanged for the underlying asset on the reserve chain backing it.
 
-Lets review two of these example asset transfer use cases **Asset Teleportation** and **Reserve Asset Transfer**.
+Let's review two of these example asset transfer use cases: **Asset Teleportation** and **Reserve Asset Transfer**.
 
 ### Asset Teleportation
 An asset teleport operation from a single source to a single destination. 
@@ -213,7 +213,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 #### XCMP Design
 
 - Cross-chain messages will _not_ be delivered to the Relay Chain.
-- Cross-chain messages will be constrained to a maximum size in bytes.
+- Cross-chain messages will be constrained to a maximum size specified in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching
   parachain would be aware of this block.
 - Collator nodes are responsible for routing messages between chains.
