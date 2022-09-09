@@ -36,8 +36,6 @@ What started as an approach to _cross-chain communication_, has evolved into a f
 not only conducted between chains, but also between smart contracts, pallets, bridges, and even
 sharded enclaves like [SPREE](learn-spree.md).
 
-**XCM is related to cross-chain in the same way that REST is related to RESTful.**
-
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.
 
@@ -162,6 +160,8 @@ parachains.
 XCMP is currently under development and most cross-chain message passing uses HRMP channels for the time being.
 
 :::
+
+XCM is related to XCMP in the same way that REST is related to RESTful.
 
 _Cross-Chain Message Passing_ secure message passing between parachains. There are two variants:
 _Direct_ and _Relayed_.
