@@ -10,7 +10,7 @@ slug: ../learn-xcm
 Cross-Consensus Message Format(XCM) aims to be a language to communicate ideas between consensus systems. One
 of Polkadot's promises is that of interoperability, and XCM is the vehicle through which it will deliver this
 promise. Simply, it is a standard that allows protocol developers to define the data and origins which
-their chains can send and recieve from. Out of the box it comes with a VM that allows for customization
+their chains can send and recieve from. Out of the box, it comes with a VM that allows for customization
 of execution as well as the following properties:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
