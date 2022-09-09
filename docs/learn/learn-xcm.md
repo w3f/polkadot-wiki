@@ -19,7 +19,7 @@ of execution as well as the following properties:
    and timely fashion.
 3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to
    the sender with an additional message.
-4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
+4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus Systems between which the 
    messages are being passed.
 
 :::note 
