@@ -209,8 +209,6 @@ Alice or Bob or even add in a new account into the anonymous proxy, the anonymou
 care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new
 multisig would be created.
 
-![anonymous multisig proxy](../assets/multisig_proxy_diagram.png)
-
 :::caution Removing anonymous proxies
 
 The procedure for removing an Anonymous Proxy is different. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
