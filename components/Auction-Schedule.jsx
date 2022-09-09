@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-let table =
+let widget =
 	<div>
 		<select style={{ border: '2px solid #e6007a', height: '40px'}}>
 			<option value="No1">1st Auction - Nov 11, 2021</option>
@@ -30,18 +30,18 @@ function AuctionSchedule() {
 	useEffect(() => {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			updateTable("polkadot")
+			update("polkadot")
 		} else if (title === "Parachain Slot Auctions · Guide") {
-			updateTable("kusama");
+			update("kusama");
 		} else {
 			console.log("Unknown wiki/guide type");
 		}
 	}, []);
 
-	return (table);
+	return (widget);
 }
 
-function updateTable(network) {
+function update(network) {
 	if (network === "polkadot") {
 		// TODO - get Polkadot chain values
 	} else if (network === "kusama") {
