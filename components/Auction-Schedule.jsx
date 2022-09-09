@@ -11,6 +11,16 @@ let chain = undefined;
 let auctionBlocks = [];
 let widgetData = [];
 
+// Mock sample
+const auctionStartDate = "November 11, 2021";
+const auctionStartBlock = 7658910;
+const auctionEndDate = "November 13, 2021";
+const auctionEndBlock = 7684110;
+const biddingEndDate = "November 18, 2021";
+const biddingEndBlock = 77756110;
+const onboardStart = "December 17th, 2021";
+const onboardEnd = "October 20th, 2023";
+
 let widget =
 	<div>
 		<select /*onChange={update}*/ style={{ border: '2px solid #e6007a', height: '40px' }}>
@@ -21,19 +31,19 @@ let widget =
 		<hr />
 		<b>Auction Starts:</b>
 		<br />
-		November 11, 2021 - <a href="https://polkadot.subscan.io/block/7658910">Block #7658910</a>
+		{auctionStartDate} - <a href={`https://polkadot.subscan.io/block/${auctionStartBlock}`}>Block #{auctionStartBlock}</a>
 		<hr />
 		<b>Auction Ends:</b>
 		<br />
-		November 13, 2021 - <a href="https://polkadot.subscan.io/block/7684110">Block #7684110</a>
+		{auctionEndDate} - <a href={`https://polkadot.subscan.io/block/${auctionEndBlock}`}>Block #{auctionEndBlock}</a>
 		<hr />
 		<b>Bidding Ends:</b>
 		<br />
-		November 18, 2021 - <a href="https://polkadot.subscan.io/block/77756110">Block #77756110</a>
+		{biddingEndDate} - <a href={`https://polkadot.subscan.io/block/${biddingEndBlock}`}>Block #{biddingEndBlock}</a>
 		<hr />
 		<b>Winning parachain(s) onboarded:</b>
 		<br />
-		December 17th, 2021 for the period December 17th, 2021 to October 20th, 2023
+		{onboardStart} for the period December {onboardStart} to {onboardEnd}
 		<hr />
 	</div>
 
