@@ -39,7 +39,7 @@ sharded enclaves like [SPREE](learn-spree.md).
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.
 
-Similar to UDP, out of the box XCM is a "fire and forget" model. Unless, there is a seperate XCM message
+Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a seperate XCM message
 designed to be a response message which can be sent from the recipient to the sender. Any kind of error
 handling should also be done on the recipient side.
 
@@ -88,7 +88,7 @@ An asset teleport operation from a single source to a single destination.
   The destination then deposits the assets to the receiving account of the asset.
 
 ### Reserve Asset Transfer
-When consensus systems do not have a established layer of trust over which they can transfer assets, they can opt for a trusted 3rd entity to store the assets. Eg. Statemine(Kusama) to Polkadot or Statemint(Polkadot) to Kusama. 
+When consensus systems do not have a established layer of trust over which they can transfer assets, they can opt for a trusted 3rd entity to store the assets. 
 
 ![](../assets/cross-consensus/xcm-reserve-asset-transfer.png)
 
