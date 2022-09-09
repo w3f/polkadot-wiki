@@ -192,13 +192,21 @@ Learn more about anonymous proxies from our
 
 :::
 
+:::danger Risk of loss of funds
+
+Read carefully the text below and before performing any action using anonymous proxies on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, experiment on the Westend testnet.
+
+:::
+
 Anonymous proxies are not real proxies. Proxies that we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign for different things, the more we expose such key to the internet increasing the visibility of that account. The purpose a proxies is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account. We can imagine proxies as bodyguards of a VIP, loyal and ready to risk their life to ensure the VIP's protection.
 
 Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That primary account then acts as `any proxy` on behalf of the anonymous proxy. Note that, to avoid confusion, in this section we will refer to `Anon` for anonymous proxy. Anon are not real proxies, they are **key-less anonymous accounts** as they do have an address but do not have a corresponding private key and, in some sense, are anonymous and belong to nobody. Nobody owns the Anon, as nobody has a private key to control it. The use of the Anon is strictly bound to the relationship between the Anon and the `Any` proxy (not necessarily the one who created the Anon in the first place). Once that relationship is broken, the Anon will be inaccessible (even if visible on the Polkadot-JS UI). Also, Anon accounts are non-deterministic, this means that if we lose one Anon, the next one we create from the same primary account will have a totally different address.
 
+Anon accounts cannot sign anything because they do not have private keys. As a consequence, Anon cannot act as proxies (which is controversial given their original name), and cannot be included in multi-sig. An Anon account acting as a proxy will not be able to sign anything on behalf of the primary account, and an Anon within a multi-sig will not be able neither to initiate nor to approve any call.
+
 :::danger 
 
-Once you remove the relationship with `Any` proxy, the Anon will be inaccessible.
+Once you remove the relationship with `Any` proxy, the Anon will be inaccessible. Also, Anon accounts cannot sign for anything. For example, do not include Anon in a multi-sig account.
 
 :::
 
