@@ -239,6 +239,3 @@ These complex proxy setups should only be performed if you are comfortable enoug
 the chain, as you will be unable to sign extrinsics using the UI.
 
 :::
-
-## Resources
-[Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
