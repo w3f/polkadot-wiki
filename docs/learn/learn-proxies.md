@@ -193,8 +193,6 @@ the proxy relationship is the proxy account and the new account is the primary.
 
 :::
 
-![anonymous proxy](../assets/proxy_anonymous_diagram.png)
-
 :::note Explainer video on anonymous proxies
 
 Learn more about anonymous proxies from our
