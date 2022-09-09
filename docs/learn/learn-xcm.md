@@ -213,7 +213,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 #### XCMP Design
 
 - Cross-chain messages will _not_ be delivered to the Relay Chain.
-- Cross-chain messages will be constrained to a maximum size in bytes.
+- Cross-chain messages will be constrained to a maximum size specified in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching
   parachain would be aware of this block.
 - Collator nodes are responsible for routing messages between chains.
