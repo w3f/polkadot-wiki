@@ -212,11 +212,11 @@ Once you remove the relationship with `Any` proxy, the Anon will be inaccessible
 
 ### Why bother about Anon accounts?
 
-Although using Anon accounts can be dangerous, there are some benefits:
+Despite their complexity and associated dangers, Anon accounts have a few important benefits:
 
-- Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
+- **Enhanced security**. Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
 
-- Probably the greatest benefit of Anon accounts is for the management of complex account relationships at corporate-level.
+- **Simplified and secure account management at corporate-level**. Probably the greatest benefit of using Anon accounts is for the management of complex account relationships at corporate-level. Let's take for example 3 Board members Alice, Bob and Charlie. They create a multi-signature account `ABC 1` holding the treasury of their company, and they use it to create the anonymous account `Anon`. They transfer the treasury to the Anon, and they decide to add the multi-signature account `DEF` composed by Dan, Eleanor and Frank (Finance Team) as a staking proxy of Anon to delegate all staking-related actions. After some time, Charlie decides to leave the company. Alice and Bob just have to create a new multi-sig account `ABC 2` (with Carl, the new member of the Board), add it as `Any` proxy to the Anon, and remove `ABC 1`. The rest of the relationships between the Anon and any other proxy stays the same, and the process will always require 4 signatures (two to add ABC 2 as a new proxy, and two remove ABC 1). Without the Anon, the funds will stay on ABC 1. If Charlie leaves, Alice and Bob will have to create ABC 2 with Carl and transfer all funds to it from ABC 1, remove any proxy from ABC 1 and add them to ABC 2. This procedure must be repeated for any modifications of the Board membership. The procedure not only requires much more signatures (4 signatures for each proxy in the case of a multi-sig with `threshold=2`), but it also exposes all funds to potential attackers every time the Board changes its members.
 
 :::caution Removing anonymous proxies
 
