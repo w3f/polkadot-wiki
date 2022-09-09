@@ -9,6 +9,8 @@ slug: ../learn-auction
 
 import RPC from "./../../components/RPC-Connection"
 
+import AuctionSchedule from "./../../components/Auction-Schedule"
+
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
 parachain slots. A parachain slot is a scarce resource on
@@ -26,8 +28,7 @@ details.
 
 :::info Auction Schedule
 
-The auction schedule for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is available
-on the auctions page of the {{ polkadot: [Polkadot website](https://polkadot.network/auctions/). :polkadot }}{{ kusama: [Kusama website](https://kusama.network/auctions/). :kusama }}
+The auction schedule for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is available [here](#auction-schedule).
 
 :::
 
@@ -316,6 +317,10 @@ extended without the need of swapping. This method has the advantage of not havi
 on different slots owned by the same team, however it has the disadvantage of losing flexibility on
 when to win a new slot: if the team does not win the exact slot, then it will suffer some downtime
 until it wins a new slot.
+
+## Auction Schedule
+
+<AuctionSchedule />
 
 ## FAQ
 
