@@ -2,6 +2,10 @@ import React, { useEffect } from 'react';
 
 let chain = undefined;
 
+let auctionBlocks = [
+
+]
+
 let widget =
 	<div>
 		<select onChange={update} style={{ border: '2px solid #e6007a', height: '40px' }}>
@@ -48,6 +52,22 @@ function AuctionSchedule() {
 		return (<div />)
 	}
 }
+
+/*
+NOTES:
+The entire widget can be calculated using the following operations
+From a block number - given (first ever was 7658910)
+Get the block hash - rpc.chain.getBlockHash(blockNumber)
+Get the lease duration in weeks and ending period block - query.auctions.auctionInfo(blockHash)
+Get the bidding end block - consts.auctions.endingPeriod() + ending period block
+Estimate date/time based on current block number when page loads for all 3 blocks mentioned above
+
+lease duration * 7 is the amount of days added to find on boarded final date
+next auction starts 3600 blocks after previous end
+
+blocks to days:
+days = (blocks * 6) / 86400;
+*/
 
 function update() {
 	console.log('run');
