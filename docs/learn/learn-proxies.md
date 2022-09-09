@@ -21,9 +21,17 @@ Proxies are great to use for specific purposes because they add in a layer of se
 using funds in one sole account, smaller accounts with unique roles complete tasks for the main
 stash account. This drives attention away from the main account and to proxies.
 
+## Creating Proxies
+
+:::info
+
+To create a **proxy account** read [this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
+
+:::
+
 ## Proxy Types
 
-You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of
+You can set a proxy account via the Proxy pallet. When you set a proxy, you must choose a type of
 proxy for the relationship. Polkadot offers:
 
 - Any
@@ -90,25 +98,11 @@ proxy can do. Before participating in a crowdloan using an Auction proxy, it is 
 check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
 distribution.
 
-## Creating Proxies
-
-:::info
-
-To create a **proxy account** read [this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account), while to create an **anonymous proxy account** you check out [this other support article](https://support.polkadot.network/support/solutions/articles/65000182196).
-
-:::
-
 ## Removing Proxies
 
 :::info Removing proxies
 
 The remove proxies read the section "Removing Proxies" on [this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
-
-:::
-
-:::caution Removing anonymous proxies
-
-The procedure for removing an Anonymous Proxy is different. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
 
 :::
 
@@ -185,6 +179,12 @@ The required deposit amount for one proxy is equal to:
 
 ## Anonymous Proxies
 
+:::info
+
+To create an **anonymous proxy account** check out [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
+
+:::
+
 This proxy category is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. 
@@ -210,6 +210,12 @@ care of that change. If a multisig wanted to modify itself without an anonymous 
 multisig would be created.
 
 ![anonymous multisig proxy](../assets/multisig_proxy_diagram.png)
+
+:::caution Removing anonymous proxies
+
+The procedure for removing an Anonymous Proxy is different. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
+
+:::
 
 ## Time-delayed Proxies
 
