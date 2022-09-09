@@ -210,15 +210,13 @@ Once you remove the relationship with `Any` proxy, the Anon will be inaccessible
 
 :::
 
-### Why bother about anonymous proxies?
+### Why bother about Anon accounts?
 
+Although using Anon accounts can be dangerous, there are some benefits:
 
-Anonymous proxies, in particular, can be used for permissionless management. In this example below,
-there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an
-anonymous proxy attached to them. In the case that the multisig account wanted to add or remove
-Alice or Bob or even add in a new account into the anonymous proxy, the anonymous proxy would take
-care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new
-multisig would be created.
+- Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
+
+- Probably the greatest benefit of Anon accounts is for the management of complex account relationships at corporate-level.
 
 :::caution Removing anonymous proxies
 
