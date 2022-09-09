@@ -41,7 +41,7 @@ sharded enclaves like [SPREE](learn-spree.md).
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.
 
-Similar to UDP, out of the box XCM is a "fire and forget" model. Unless, there is a seperate XCM message
+Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a seperate XCM message
 designed to be a response message which can be sent from the recipient to the sender. Any kind of error
 handling should also be done on the recipient side.
 
