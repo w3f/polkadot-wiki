@@ -17,7 +17,7 @@ of execution as well as the following properties:
    completion.
 2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
    and in a timely fashion.
-3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to
+3. **Asymmetric**: XCM messages out of the box do not have results that let the sender know that the message was received. Any results must be separately communicated to
    the sender with an additional message.
 4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
    messages are being passed.
