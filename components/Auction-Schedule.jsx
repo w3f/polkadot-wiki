@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { BlocksToDays } from "./utilities/filters";
 
 // Number of auctions to display in drop-down
 const auctionCount = 1;
@@ -13,7 +12,7 @@ const auctionStartBlock = 7658910;
 const auctionEndDate = "November 13, 2021";
 const auctionEndBlock = 7684110;
 const biddingEndDate = "November 18, 2021";
-const biddingEndBlock = 77756110;
+const biddingEndBlock = 7756110;
 const onboardStart = "December 17th, 2021";
 const onboardEnd = "October 20th, 2023";
 
@@ -59,8 +58,15 @@ function AuctionSchedule() {
 			wsProvider = new WsProvider("wss://rpc.polkadot.io");
   		api = await ApiPromise.create({ provider: wsProvider });
 
+			// Get the current block for projection
+			const currentBlock = await api.rpc.chain.getBlock();
+			const currentBlockNumber = parseInt(currentBlock.block.header.number.toString());
+
+			// Get current date/time
+			let date = new Date();
+
 			// Get ending period for the given chain
-			const endPeriod = api.consts.auctions.endingPeriod.toString();
+			const endPeriod = parseInt(api.consts.auctions.endingPeriod.toString());
 			
 			// Add starting block for the given chain
 			auctionBlocks.push(firstAuctionBlockDot);
@@ -70,22 +76,20 @@ function AuctionSchedule() {
 				let auction = { };
 				auction.startBlock = auctionBlocks[auctionBlocks.length - 1];
 				const hash = (await api.rpc.chain.getBlockHash(auction.startBlock)).toString();
-				console.log(hash);
-				// TODO: why does passing this hash not work???
 				const apiAt = await api.at(hash);
 				const [lease, end] = (await apiAt.query.auctions.auctionInfo()).toJSON();
-				auction.weeksLeased = lease;
-				auction.endPeriodBlock = end;
+				auction.weeksLeased = parseInt(lease);
+				auction.endPeriodBlock = parseInt(end);
 				auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
-				console.log(lease);
-				console.log(end);
+				
+				auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
+				auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
+				auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock);
+				console.log(auction.startDate);
+				console.log(auction.endPeriodDate);
+				console.log(auction.biddingEndsDate);
 
 				/*
-				// TODO: a conversion is still required here (currently only # of days not dates)
-				auction.startDate = BlocksToDays(auction.startBlock);
-				auction.endPeriodDate = BlocksToDays(auction.endPeriodBlock);
-				auction.biddingEndsDate = BlocksToDays(auction.biddingEndsBlock);
-
 				auction.startOnBoard = ??;
 				auction.endOnBoard = auction.weeksLeased * 7 + auction.startOnBoard;
 
@@ -114,8 +118,17 @@ function AuctionSchedule() {
 	}
 }
 
-function rpc() {
+function EstimateBlockDate(date, currentBlock, estimatedBlock) {
+	const blockDifference = parseInt(estimatedBlock) - currentBlock;
+	const seconds = blockDifference * 6 // 6 seconds per block
+	let dateCopy = new Date(date.valueOf())
+	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
+	return dateCopy;
+}
 
+function BlocksToDays(value) {
+	value = (value * 6) / 86400;
+	return value;
 }
 
 export default AuctionSchedule;
