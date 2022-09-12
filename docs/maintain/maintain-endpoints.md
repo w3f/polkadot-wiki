@@ -61,10 +61,15 @@ It is still under [active development](https://github.com/paritytech/substrate-c
 There are a number of third-party providers of RPC infrastructure to the Polkadot and Kusama 
 communities, commonly providing access to multiple networks and parachains in a single service. 
 They provide additional services such as higher rate limits, potentially more reliable and scalable 
-service, and additional metrics.
+service, and additional metrics. 
 
 - [OnFinality](https://onfinality.io)
 - [Dwellir](https://dwellir.com)
 - [Pinknode](https://pinknode.io)
 - [Radium Block](https://radiumblock.io)
 
+::: note
+
+The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from Polkdot-JS UI 
+
+:::
