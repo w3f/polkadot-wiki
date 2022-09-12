@@ -145,7 +145,10 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
   the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when
+  validator. Staking rewards are received by top 
+  {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} 
+  nominators, but when
   slashing occurs, all the active nominators backing the validator get slashed.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
@@ -181,11 +184,17 @@ Thus, for **nominator counters**, we have:
 ### Oversubscribed Validators
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to
-{{ polkadot_max_nominators }}, but can be modified via governance. If more than
-{{ polkadot_max_nominators }} nominators nominate the same validator, it is "oversubscribed", and
-only the top {{ polkadot_max_nominators }} staked nominators (ranked by amount of stake) are paid
-rewards. Other nominators will receive no rewards for that era, although their stake will still be
-used to calculate entry into the active validator set.
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }},
+but can be modified via governance. If more than
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }},
+nominators nominate the same validator, it is "oversubscribed", and
+only the top 
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}, 
+staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era, 
+although their stake will still be used to calculate entry into the active validator set.
 
 Although it is difficult to determine exactly how many nominators will nominate a given validator in
 the next era, one can estimate based on the current number of nominators. A validator with only 5
