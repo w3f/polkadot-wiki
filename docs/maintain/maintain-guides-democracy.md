@@ -270,6 +270,15 @@ Then you would be presented with a pop up window which lets you enter the accoun
 Your delegation will count toward whatever the account you delegated for votes on until you
 explicitly undelegate your vote.
 
+:::tip Query the chain state for an account's delegation preferences
+
+It is possible to query the delegation preferences of any actively delegating account on the network through `democracy.votingOf` extrinsic. 
+
+![query delegation](../assets/democracy/query-delegation.png)
+
+:::
+
+
 
 
 ## Undelegate a Vote
@@ -289,7 +298,7 @@ The easiest way to do this is from the ["Accounts" tab on Polkadot-JS UI](https:
 
 ![manage delegation](../assets/democracy/manage-delegation.png)
 
-When you click on "manage delegation", you would be presented with a pre-populated pop up window with that account's delegation preferences.
+When you click on "manage delegation", you would be presented with a pre-populated pop up window with that account's delegation preferences. Here, you have an option to undelegate or save the modifications made to the account's delegation preferences.
 
 ![undelegate](../assets/democracy/undelegate-save.png)
 
