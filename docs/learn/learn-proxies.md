@@ -181,7 +181,7 @@ The required deposit amount for one proxy is equal to:
 
 :::info
 
-To create an **anonymous proxy account** check out [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
+To create an **anonymous proxy account** see [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
 
 :::
 
