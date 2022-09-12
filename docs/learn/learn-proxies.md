@@ -18,7 +18,7 @@ participate in the network with the weight of the tokens in that account. Proxie
 ## Why use a Proxy?
 
 Proxies are useful because they add in a layer of security. Rather than
-using funds in one sole account, smaller accounts with unique roles complete tasks for the main
+using funds in a single account, smaller accounts with unique roles complete tasks for the main
 stash account. This drives attention away from the main account and to proxies.
 
 ## Creating Proxies
