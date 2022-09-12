@@ -17,9 +17,9 @@ participate in the network with the weight of the tokens in that account. Proxie
 
 ## Why use a Proxy?
 
-Proxies are useful because they add in a layer of security. Rather than
+Proxies are useful because they add a layer of security. Rather than
 using funds in a single account, smaller accounts with unique roles complete tasks for the main
-stash account. This drives attention away from the main account and to proxies.
+stash account. This drives attention away from the main account and to proxies. Proxies can be "hotter" than the initial account (for example the stash account in staking), which can be kept cold but the "weight" of the tokens can still be used by the hotter accounts.
 
 ## Creating Proxies
 
@@ -31,7 +31,7 @@ To create a **proxy account** read [this support article](https://support.polkad
 
 ## Proxy Types
 
-You can set a proxy account via the Proxy pallet. When you set a proxy, you must choose a type of
+You can set up a proxy account via the Proxy pallet. When you set a proxy, you must choose a type of
 proxy for the relationship. Polkadot offers:
 
 - Any
@@ -71,17 +71,16 @@ governance proxies or watch our
 
 ### Staking
 
-The **Staking** type allows staking-related transactions, but do not confuse a staking proxy with the
+The **Staking** type allows staking-related transactions. Do not confuse a staking proxy with the
 controller account. Within the staking pallet, some transactions must come from the stash account, while
 others must come from the controller account. The stash account is meant to stay in cold storage, while the
 controller account makes day-to-day transactions like setting session keys or deciding which
-validators to nominate. The stash account still needs to make some transactions such as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_ of stash and
-controller accounts, but does allow the stash to be accessed even less frequently than using a controller account.
+validators to nominate. The stash account still needs to make some transactions such as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_ of stash and controller accounts but does allow the stash to be accessed even less frequently than using a controller account.
 
 ### Identity Judgement
 
-The **Identity Judgement** proxies are in charge of allowing registrars to make judgement on an account's
-identity. If you are unfamiliar with judgements and identities on chain, please refer to
+The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an account's
+identity. If you are unfamiliar with judgment and identities on chain, please refer to
 [this page](learn-identity.md#judgements).
 
 ### Cancel
@@ -93,7 +92,7 @@ announcements.
 
 Proxies that are of the type **Auction** are accounts that allow transactions pertaining to parachain 
 auctions and crowdloans. The Auction proxy account can sign those transactions on behalf of an account 
-in cold storage. If you already setup a Non-transfer proxy account, it can do everything an Auction 
+in cold storage. If you already set up a Non-transfer proxy account, it can do everything an Auction 
 proxy can do. Before participating in a crowdloan using an Auction proxy, it is recommended that you 
 check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
 distribution.
@@ -102,7 +101,7 @@ distribution.
 
 :::info Removing proxies
 
-The remove proxies read the section "Removing Proxies" on [this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
+Read the section "Removing Proxies" on [this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account) to learn how to remove proxies.
 
 :::
 
@@ -121,8 +120,7 @@ announcements are what time lock proxies do to announce they are going to conduc
 ## Putting It All Together
 
 If the idea of proxy types and their application seems abstract, it is. Here is an example of how
-you might use these accounts. Imagine you have one account as your primary token-holding account,
-and don't want to access it very often, but you do want to participate in governance and staking.
+you might use these accounts. Imagine you have one account as your primary token-holding account and don't want to access it very often, but you do want to participate in governance and staking.
 You could set Governance and Staking proxies.
 
 ![proxies](../assets/regular_proxy_diagram.png)
@@ -132,12 +130,12 @@ governance proxy and account C as its staking proxy. Now, account B could partic
 activity on behalf of A.
 
 Likewise, account C could perform actions typically associated with a stash account, like bonding
-funds and setting a Controller, in this case account D. Actions that normally require the Stash,
+funds and setting a Controller, in this case, account D. Actions that normally require the Stash,
 like bonding extra tokens or setting a new Controller, can all be handled by its proxy account C. In
 the case that account C is compromised, it doesn't have access to transfer-related transactions, so
 the primary account could just set a new proxy to replace it.
 
-By creating multiple accounts that act for a single account, it lets you come up with more granular
+Creating multiple accounts that act for a single account, lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
 participate in a network.
 
@@ -147,7 +145,7 @@ Proxies require deposits in the native currency (i.e. DOT or KSM) in order to be
 deposit is required because adding a proxy requires some storage space on-chain, which must be
 replicated across every peer in the network. Due to the costly nature of this, these functions could
 open up the network to a Denial-of-Service attack. In order to defend against this attack, proxies
-require a deposit to be reserved while the storage space is consumed over the life time of the
+require a deposit to be reserved while the storage space is consumed over the lifetime of the
 proxy. When the proxy is removed, so is the storage space, and therefore the deposit is returned.
 
 The deposits are calculated in the runtime, and the function can be found in the runtime code. For
@@ -198,11 +196,11 @@ Read carefully the text below and before performing any action using anonymous p
 
 :::
 
-Anonymous proxies are not real proxies. Proxies that we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign for different things, the more we expose such key to the internet increasing the visibility of that account. The purpose a proxies is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account. We can imagine proxies as bodyguards of a VIP, loyal and ready to risk their life to ensure the VIP's protection.
+Anonymous proxies are very different from other proxy types. Proxies that we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign for different things, the more we expose that key to the internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account. We can imagine proxies as bodyguards of a VIP, loyal and ready to risk their lives to ensure the VIP's protection.
 
-Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That primary account then acts as `any proxy` on behalf of the anonymous proxy. Note that, to avoid confusion, in this section we will refer to `Anon` for anonymous proxy. Anon are not real proxies, they are **key-less anonymous accounts** as they do have an address but do not have a corresponding private key and, in some sense, are anonymous and belong to nobody. Nobody owns the Anon, as nobody has a private key to control it. The use of the Anon is strictly bound to the relationship between the Anon and the `Any` proxy (not necessarily the one who created the Anon in the first place). Once that relationship is broken, the Anon will be inaccessible (even if visible on the Polkadot-JS UI). Also, Anon accounts are non-deterministic, this means that if we lose one Anon, the next one we create from the same primary account will have a totally different address.
+Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That primary account then acts as `any proxy` on behalf of the anonymous proxy. Note that, to avoid confusion, in this section we will refer to `Anon` for anonymous proxy. Anon are **key-less anonymous accounts** as they do have an address but do not have a corresponding private key and, in some sense, are anonymous and belong to nobody. Nobody owns the Anon, as nobody has a private key to control it. The use of the Anon is strictly bound to the relationship between the Anon and the `Any` proxy (not necessarily the one who created the Anon in the first place). Once that relationship is broken, the Anon will be inaccessible (even if visible on the Polkadot-JS UI). Also, Anon accounts are non-deterministic, this means that if we lose one Anon, the next one we create from the same primary account will have a totally different address.
 
-Anon accounts cannot sign anything because they do not have private keys. As a consequence, Anon cannot act as proxies (which is admittedly confusing given their original name), and cannot be included in multi-sig. An Anon account acting as a proxy will not be able to sign anything on behalf of the primary account, and an Anon within a multi-sig will not be able neither to initiate nor to approve any call.
+Anon accounts cannot sign anything because they do not have private keys. As a consequence, Anon cannot act as proxies (which is admittedly confusing given their original name), and cannot be included in multi-sig. An Anon account acting as a proxy will not be able to sign anything on behalf of the primary account, and an Anon within a multi-sig will be able neither to initiate nor to approve any call.
 
 :::danger 
 
@@ -214,9 +212,15 @@ Once you remove the relationship with `Any` proxy, the Anon will be inaccessible
 
 Despite their complexity and associated dangers, Anon accounts have a few important benefits:
 
-- **Enhanced security**. Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
+**Enhanced security.**
+Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
 
-- **Simplified and secure account management at corporate-level**. Probably the greatest benefit of using Anon accounts is for the management of complex account relationships at corporate-level. Let's take for example 3 Board members Alice, Bob and Charlie. They create a multi-signature account `ABC 1` holding the treasury of their company, and they use it to create the anonymous account `Anon`. They transfer the treasury to the Anon, and they decide to add the multi-signature account `DEF` composed by Dan, Eleanor and Frank (Finance Team) as a staking proxy of Anon to delegate all staking-related actions. After some time, Charlie decides to leave the company. Alice and Bob just have to create a new multi-sig account `ABC 2` (with Carl, the new member of the Board), add it as `Any` proxy to the Anon, and remove `ABC 1`. The rest of the relationships between the Anon and any other proxy stays the same, and the process will always require 4 signatures (two to add ABC 2 as a new proxy, and two remove ABC 1). Without the Anon, the funds will stay on ABC 1. If Charlie leaves, Alice and Bob will have to create ABC 2 with Carl and transfer all funds to it from ABC 1, remove any proxy from ABC 1 and add them to ABC 2. This procedure must be repeated for any modifications of the Board membership. The procedure not only requires much more signatures (4 signatures for each proxy in the case of a multi-sig with `threshold=2`), but it also exposes all funds to potential attackers every time the Board changes its members.
+**Simplified and secure account management at a corporate level.**
+Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 Board members Alice, Bob and Charlie. They create a multi-signature account `ABC 1` holding the treasury of their company, and they use it to create the anonymous account `Anon`. They transfer the treasury to the Anon, and they decide to add the multi-signature account `DEF` composed of Dan, Eleanor and Frank (Finance Team) as a staking proxy of Anon to delegate all staking-related actions. 
+
+After some time, Charlie decides to leave the company. Alice and Bob just have to create a new multi-sig account `ABC 2` (with Carl, the new member of the Board), add it as `Any` proxy to the Anon, and remove `ABC 1`. The rest of the relationships between the Anon and any other proxy stays the same, and the process will always require 4 signatures (two to add ABC 2 as a new proxy, and two to remove ABC 1). 
+
+Without the Anon, the funds will stay on ABC 1. If Charlie leaves, Alice and Bob will have to create ABC 2 with Carl and transfer all funds to it from ABC 1, remove any proxy from ABC 1 and add them to ABC 2. This procedure must be repeated for any modifications of the Board membership. The procedure not only requires much more signatures (4 signatures for each proxy in the case of a multi-sig with `threshold=2`), but it also exposes all funds to potential attackers every time the Board changes its members.
 
 :::caution Removing anonymous proxies
 
@@ -226,13 +230,11 @@ The procedure for removing an Anon is different from the one used to remove prox
 
 ## Time-delayed Proxies
 
-We can add an additional layer of security to proxies by giving them a delay time. The delay will be
-quantified in number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has 6 
-seconds of block-time. A delay value of 10 will mean 10 blocks, which equals to 1 minute of delay.
-The proxy will announce it's intended action and wait for the number
+We can add a layer of security to proxies by giving them a delay time. The delay will be
+quantified in a number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean 10 blocks, which equals approximately 1 minute of delay.
+The proxy will announce its intended action and wait for the number
 of blocks defined in the delay time before executing it. The proxy will include the hash of the
-intended function call in the announcement. Within this time window, the intended action may be
-cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
+intended function call in the announcement. Within this time window, the intended action may be canceled by accounts that control the proxy. Now we can use proxies knowing that any malicious
 actions can be noticed and reverted within a delay period.
 
 :::caution The Polkadot-JS UI cannot handle complicated proxy setups
