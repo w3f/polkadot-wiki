@@ -267,18 +267,6 @@ This means you are accessing the democracy pallet and choosing the delegate tran
 send. Your delegation will count toward whatever the account you delegated for votes on until you
 explicitly undelegate your vote.
 
-In the first input select the account you want to delegate to and in the second input select the
-amount of your conviction. Remember, higher convictions means that your vote will be locked longer.
-So choose wisely!
-
-![delegate](../assets/democracy/delegate.png)
-
-After you send the delegate transaction, you can verify it went through by navigating to the "Chain
-State" tab and selecting the "democracy" and "delegations" options. You will see an output similar
-to below, showing the addresses to which you have delegated your voting power.
-
-![delegate state](../assets/democracy/delegate_state.png)
-
 ## Undelegate a Vote
 
 You may decide at some point in the future to remove your delegation to a target account. In this
