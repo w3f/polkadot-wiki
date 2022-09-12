@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
+import { ApiPromise, WsProvider } from "@polkadot/api";
 import { BlocksToDays } from "./utilities/filters";
 
 // Number of auctions to display in drop-down
-const auctionCount = 100;
+const auctionCount = 1;
 const firstAuctionBlockDot = 7658910;
 const firstAuctionBlockKsm = 7924237;
-
-// Generated at run-time
-let chain = undefined;
-let auctionBlocks = [];
-let widgetData = [];
 
 // Mock sample
 const auctionStartDate = "November 11, 2021";
@@ -20,6 +16,13 @@ const biddingEndDate = "November 18, 2021";
 const biddingEndBlock = 77756110;
 const onboardStart = "December 17th, 2021";
 const onboardEnd = "October 20th, 2023";
+
+// Generated at run-time
+let chain = undefined;
+let wsProvider = undefined;
+let api = undefined;
+let auctionBlocks = [];
+let widgetData = [];
 
 let widget =
 	<div>
@@ -48,17 +51,16 @@ let widget =
 	</div>
 
 function AuctionSchedule() {
-	useEffect(() => {
+	useEffect(async () => {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
 			// Set chain type
 			chain = "polkadot"
-			
-			/*
-			PSEUDO CODE
+			wsProvider = new WsProvider("wss://rpc.polkadot.io");
+  		api = await ApiPromise.create({ provider: wsProvider });
 
 			// Get ending period for the given chain
-			const endPeriod = consts.auctions.endingPeriod();
+			const endPeriod = api.consts.auctions.endingPeriod.toString();
 			
 			// Add starting block for the given chain
 			auctionBlocks.push(firstAuctionBlockDot);
@@ -67,11 +69,18 @@ function AuctionSchedule() {
 			for (let i = 0; i < auctionCount; i++) {
 				let auction = { };
 				auction.startBlock = auctionBlocks[auctionBlocks.length - 1];
-				const [leased, end ] = rpc.chain.getBlockHash(startBlock);
+				const hash = (await api.rpc.chain.getBlockHash(auction.startBlock)).toString();
+				console.log(hash);
+				// TODO: why does passing this hash not work???
+				const apiAt = await api.at(hash);
+				const [lease, end] = (await apiAt.query.auctions.auctionInfo()).toJSON();
 				auction.weeksLeased = lease;
 				auction.endPeriodBlock = end;
 				auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
+				console.log(lease);
+				console.log(end);
 
+				/*
 				// TODO: a conversion is still required here (currently only # of days not dates)
 				auction.startDate = BlocksToDays(auction.startBlock);
 				auction.endPeriodDate = BlocksToDays(auction.endPeriodBlock);
@@ -86,11 +95,13 @@ function AuctionSchedule() {
 				
 				// Add auction to widget for visualization
 				widgetData.push(auction);
+				*/
 			}
-			*/
 
 		} else if (title === "Parachain Slot Auctions · Guide") {
 			chain = "kusama";
+			wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io/");
+  		api = await ApiPromise.create({ provider: wsProvider });
 		} else {
 			console.log("Unknown wiki/guide type");
 		}
@@ -101,6 +112,10 @@ function AuctionSchedule() {
 	} else {
 		return (<div />)
 	}
+}
+
+function rpc() {
+
 }
 
 export default AuctionSchedule;
