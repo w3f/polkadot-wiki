@@ -16,6 +16,7 @@ networks with public endpoints. These endpoints can be used with
 [Polkadot-JS API](https://polkadot.js.org/docs/api) to interact with their respective chains. The
 tables below list these endpoints.
 
+
 ### Network Endpoints
 
 #### Main Networks
@@ -47,11 +48,23 @@ async () => {
   // ...
 ```
 
+#### Substrate Connect
+
+[Substrate connect](https://substrate.io/developers/substrate-connect/) builds on Polkadot JS so 
+building an app is the same experience as with using a traditional RPC server node. It is a fast, 
+secure, and decentralized way to interact with Polkadot, Kusama, and their parachains right in the browser.
+It is still under [active development](https://github.com/paritytech/substrate-connect).
+
+
 ### Third Party Providers
 
-There are a number of third-party providers of RPC infrastructure to the Polkadot and Kusama communities, commonly providing access to multiple networks and parachains in a single service. They provide additional services such as higher rate limits, potentially more reliable and scalable service, and additional metrics.
+There are a number of third-party providers of RPC infrastructure to the Polkadot and Kusama 
+communities, commonly providing access to multiple networks and parachains in a single service. 
+They provide additional services such as higher rate limits, potentially more reliable and scalable 
+service, and additional metrics.
 
 - [OnFinality](https://onfinality.io)
 - [Dwellir](https://dwellir.com)
 - [Pinknode](https://pinknode.io)
 - [Radium Block](https://radiumblock.io)
+
