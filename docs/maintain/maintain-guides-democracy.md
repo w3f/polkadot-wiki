@@ -262,10 +262,15 @@ Democracy system tallies votes, the delegated tokens now are added to whatever v
 has made.
 
 You can delegate your vote to another account and even attach a "Conviction" to the delegation.
-Navigate to the "Extrinsics" tab on Polkadot Apps and select the options "democracy" and "delegate".
-This means you are accessing the democracy pallet and choosing the delegate transaction type to
-send. Your delegation will count toward whatever the account you delegated for votes on until you
+Navigate to the ["Accounts" tab on Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) and click on the three vertical dots and select "Delegate democracy votes" option for the account of your choice. 
+Then you would be presented with a pop up window which lets you enter the account details of delegated account, delegated amount and conviction. You can enter the relevant details and click on the delegate button and then sign and submit the transaction.
+
+![delegate](../assets/democracy/delegate-vote.png)
+
+Your delegation will count toward whatever the account you delegated for votes on until you
 explicitly undelegate your vote.
+
+
 
 ## Undelegate a Vote
 
@@ -280,11 +285,13 @@ The `undelegate` transaction must be sent from the account that you wish to clea
 For example, if Alice has delegated her tokens to Bob, Alice would need to be the one to call the
 `undelegate` transaction to clear her delegation.
 
-The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select the "democracy"
-pallet and the "undelegate" transaction type. Ensure that you are sending the transaction from the
-account you want to clear of delegations. Click "Submit transaction" and confirm.
+The easiest way to do this is from the ["Accounts" tab on Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) where you can manage delegation of your account.
 
-![undelegate](../assets/democracy/undelegate.png)
+![manage delegation](../assets/democracy/manage-delegation.png)
+
+When you click on "manage delegation", you would be presented with a pre-populated pop up window with that account's delegation preferences.
+
+![undelegate](../assets/democracy/undelegate-save.png)
 
 ## Voting with a Governance Proxy
 
