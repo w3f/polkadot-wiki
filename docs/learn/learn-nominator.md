@@ -185,14 +185,14 @@ Thus, for **nominator counters**, we have:
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }},
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
 but can be modified via governance. If more than
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }},
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
 nominators nominate the same validator, it is "oversubscribed", and
 only the top 
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}, 
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} 
 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era, 
 although their stake will still be used to calculate entry into the active validator set.
 
@@ -253,11 +253,14 @@ each.
   2) Total amount of nominators that nominated that validator.
 
   - You may want to be cautious of validators with a high number of subscribers. A validator is
-    considered oversubscribed when more than 256 'active' nominators are assigned to the validator. In this
-    scenario only the top 256 nominators will receive rewards. The remaining nominators will
+    considered oversubscribed when more than 
+    {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}  'active' nominators are assigned to the validator. In this
+    scenario only the top {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators will receive rewards. The remaining nominators will
     recieve nothing, however they can be slashed in the event that validator commits a
     slashable offence.
-  - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
+  - Every nominator can select up to a maxium of {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} validators, which contributes towards maximizing
     the probability of having the nominators stake applied to the validators active set. Nominating too
     few validators could result in the nominators losing their rewards when none of them make it to active set or 
     when those Validator nodes stop validating. The election algorithm attempts to maximize the overall network 
