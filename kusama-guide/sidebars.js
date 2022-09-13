@@ -125,7 +125,10 @@ module.exports = {
         {
           type: "category",
           label: "Tools",
-          items: ["build/build-tools-index"],
+          items: [
+            "build/build-tools-index",
+            'build/build-open-source'
+          ],
         },
         {
           type: "category",

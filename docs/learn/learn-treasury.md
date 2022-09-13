@@ -6,30 +6,32 @@ description: Details about Polkadot's on-chain Treasury.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
+
 import RPC from "./../../components/RPC-Connection"
 
-The Treasury is a pot of funds collected through a portion of block production rewards,
-transaction fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
- 
-The funds held in the Treasury can be spent by making a spending proposal that, if approved by the 
-[Council](learn-governance.md#council), will enter a waiting period before distribution. This waiting 
-period is known as the *spend period*, and its duration is subject to [governance](learn-governance.md), 
-with the current default set to 
+The Treasury is a pot of funds collected through a portion of block production rewards, transaction
+fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
+
+The funds held in the Treasury can be spent by making a spending proposal that, if approved by the
+[Council](learn-governance.md#council), will enter a waiting period before distribution. This
+waiting period is known as the _spend period_, and its duration is subject to
+[governance](learn-governance.md), with the current default set to
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
-days. The Treasury attempts to spend as many proposals 
-in the queue as it can without running out of funds. 
+days. The Treasury attempts to spend as many proposals in the queue as it can without running out of
+funds.
 
 Treasury payout is an automatic process:
-- If the Treasury funds run out with approved proposals left to fund, those proposals are kept in the 
-  approved queue, and will receive funding in the following spend period.
+
+- If the Treasury funds run out with approved proposals left to fund, those proposals are kept in
+  the approved queue, and will receive funding in the following spend period.
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
-percentage of its funds - thereby causing deflationary pressure. This encourages the spending of the 
-funds in the Treasury by Polkadot's governance system. 
-{{ polkadot: This percentage is currently at 1%
-on Polkadot. :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently 
-going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
-burned. :kusama }}.
+  percentage of its funds - thereby causing deflationary pressure. This encourages the spending of
+  the funds in the Treasury by Polkadot's governance system.
+  {{ polkadot: This percentage is currently at 1%
+  on Polkadot :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
+  going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
+  burned :kusama }}.
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
 least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
@@ -44,13 +46,13 @@ Proposals may consist of (but are not limited to):
 - Community events and outreach (meetups, pizza parties, hackerspaces).
 - Software development (wallets and wallet integration, clients and client upgrades).
 
-The [Council](learn-governance#council) governs the Treasury and how the funds are spent is up to their 
-judgment.
+The [Council](learn-governance#council) governs the Treasury and how the funds are spent is up to
+their judgment.
 
-:::caution 
+:::caution
 
-The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are not 
-approved just because there are funds ready to spend but are subject to a burn.
+The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are
+not approved just because there are funds ready to spend but are subject to a burn.
 
 :::
 
@@ -78,12 +80,11 @@ The Treasury is funded from different sources:
 The proposer has to deposit a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
-or 5% of the requested amount with a maximum cap of 
+or 5% of the requested amount with a maximum cap of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
-as an anti-spam measure. This amount is burned if 
-the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance.md)
-so they may change in the future.
+as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise.
+These values are subject to [governance](learn-governance.md) so they may change in the future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been
 submitted. The Council will either accept or reject the proposal, and if the proposal is rejected,
@@ -150,7 +151,8 @@ You will notice the "spend period" at the top of the Treasury UI.
 
 Next to the proposals process, a separate system for making tips exists for the Treasury. Tips can
 be suggested by anyone and are supported by members of the Council. Tips do not have any definite
-value; the final value of the tip is decided based on the median of all tips issued by the tippers.
+value, and the final value of the tip is decided based on the median of all tips issued by the
+tippers.
 
 Currently, the tippers are the same as the members of the Council. However, being a tipper is not
 the direct responsibility of the Council, and at some point the Council and the tippers may be
@@ -161,16 +163,23 @@ tip. During that time frame, the other members of the tipping group can still is
 do not have to. Once the window closes, anyone can call the `close_tip` extrinsic, and the tip will
 be paid out.
 
-There are two types of tips: public and tipper-initiated. With public tips, a small bond is required
-to place them. This bond depends on the tip message length, and a fixed bond constant defined on
-chain, currently 
-{{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadable"/> :kusama }}.
-Public tips carry a finder's fee of
-{{ polkadot: <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/> :kusama }}% 
-which is paid out from the total amount. Tipper-initiated tips, i.e. tips
-that a Council member published, do not have a finder's fee or a bond.
+There are two types of tips:
 
-To better understand the process a tip goes through until it is paid out, let's consider an example.
+- public: A small bond is required to place them. This bond depends on the tip message length, and a
+  fixed bond constant defined on chain, currently
+  {{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadable"/>. :kusama }}
+  Public tips carry a finder's fee of
+  {{ polkadot: <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :kusama }}
+  which is paid out from the total amount.
+- tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
+
+:::info For information about how to submit a tip from the Treasury you can read
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181971). :::
+
+To better understand the process a tip goes through until it is paid out, let's consider the example
+below.
 
 ### Example
 
@@ -179,30 +188,23 @@ Alice has noticed this and decides to report Bob as deserving a tip from the Tre
 is composed of three members Charlie, Dave, and Eve.
 
 Alice begins the process by issuing the `report_awesome` extrinsic. This extrinsic requires two
-arguments, a reason and the address to tip. Alice submits Bob's address with the reason being a
-UTF-8 encoded URL to a post on
-{{ polkadot: [Polkassembly](https://polkadot.polkassembly.io) :polkadot }}
+arguments, a reason and the beneficiary. Alice submits Bob's address with the reason being a UTF-8
+encoded URL to a post on {{ polkadot: [Polkassembly](https://polkadot.polkassembly.io) :polkadot }}
 {{ kusama: [Polkassembly](https://kusama.polkassembly.io) :kusama }} that explains her reasoning for
 why Bob deserves the tip.
 
 As mentioned above, Alice must also lock up a deposit for making this report. The deposit is the
 base deposit as set in the chain's parameter list, plus the additional deposit per byte contained in
 the reason. This is why Alice submitted a URL as the reason instead of the explanation directly: it
-was cheaper for her to do so.
-
-For her trouble, Alice is able to claim the eventual finder's fee if the tip is approved by the
-tippers.
+was cheaper for her to do so. For her trouble, Alice is able to claim the eventual finder's fee if
+the tip is approved by the tippers.
 
 Since the tipper group is the same as the Council, the Council must now collectively (but also
-independently) decide on the value of the tip that Bob deserves.
-
-Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of
-the benefit Bob has provided to Kusama.
-
-For example:
-
-Charlie tips {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }}. Dave tips
-{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }}. Eve tips
+independently) decide on the value of the tip that Bob deserves. Charlie, Dave, and Eve all review
+the report and make tips according to their personal valuation of the benefit Bob has provided to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. Charlie tips
+{{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }}, Dave tips
+{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }}, and Eve tips
 {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}.
 
 The tip could have been closed out with only two of the three tippers. Once more than half of the
@@ -210,11 +212,10 @@ tippers group have issued tip valuations, the countdown to close the tip will be
 the third tipper issued their tip before the end of the closing period, so all three were able to
 make their tip valuations known.
 
-Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out
-{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }} from the Treasury.
-
-In order for Bob to be paid his tip, some account must call the `close_tip` extrinsic at the end of
-the closing period for the tip. This extrinsic may be called by anyone.
+The actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out
+{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }} from the Treasury. In order for Bob to
+be paid his tip, some account must call the `close_tip` extrinsic at the end of the closing period
+for the tip. This extrinsic may be called by anyone.
 
 ## Bounties Spending
 
@@ -341,5 +342,5 @@ migration to a minority fork. However, the possibility of this scenario is quite
 ## Further Reading
 
 - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs)
- 
+
 - [Documentation of the Rust implementation of the Treasury](https://paritytech.github.io/substrate/master/pallet_treasury/index.html)

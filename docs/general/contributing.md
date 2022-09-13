@@ -86,6 +86,10 @@ This document is based on the
 
 ## Helping With Translations
 
+:::caution
+Currently the Wiki is being reorgnaized and updated, during this time we will not be prioritizing translations.
+:::
+
 The Wiki's default language is _English_, though, there is a desire to translate the Wiki
 in as many languages as possible. Another way you can contribute is by helping with translations.
 

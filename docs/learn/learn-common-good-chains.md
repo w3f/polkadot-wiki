@@ -14,8 +14,8 @@ as a whole. By allocating a subset of parachain slots to common good chains, the
 realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider
 problem. They are not allocated via the parachain auction process but by the on-chain
 {{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good
-parachain's lease would not expire; it would only be removed via governance.
+{{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good parachain's
+lease would not expire; it would only be removed via governance.
 
 The purpose of these parachains will probably fall into one of two categories: system level chains
 or public utility chains.
@@ -40,10 +40,10 @@ The vast majority of common good chains will likely be unopinionated system leve
 
 Public utility chains add functionality that doesn’t exist yet, but that the stakeholders believe
 will add value to the entire network. Because public utility chains add new functionality, there is
-a subjective component to their addition: the network's stakeholders must believe that it is
-worth allocating a slot that would otherwise go to the winners of an auction and thus would have an
-objective expression conviction from its backers. Governance provides the means to internalize
-the value of the parachain slot and distribute it across all members of the network.
+a subjective component to their addition: the network's stakeholders must believe that it is worth
+allocating a slot that would otherwise go to the winners of an auction and thus would have an
+objective expression conviction from its backers. Governance provides the means to internalize the
+value of the parachain slot and distribute it across all members of the network.
 
 Public utility chains will always be fully aligned with their Relay Chain stakeholder base. This
 means that they will adopt the Relay Chain's native token (i.e. DOT or KSM) as their native token
@@ -64,14 +64,15 @@ likely be approved by the network stakeholders only in rare scenarios.
 
 ### Statemint
 
-[Statemint](https://github.com/paritytech/cumulus#statemint-) 
-(and its cousin *Statemine* on Kusama) are the first common good parachains.
+[Statemint](https://github.com/paritytech/cumulus#statemint-) (and its cousin _Statemine_ on Kusama)
+are the first common good parachains.
 
-Statemint is a public utility chain in that it adds functionality not available in the Relay Chain, 
-namely, the creation and management of assets. Statemint will support both fungible and non-fungible 
-assets. The chain offers an interface similar to ERC-20 for fungible tokens and ERC-721 for non-fungible 
-token. These interfaces are in the logic of the chain itself; by encoding this logic directly into the 
-Statemint runtime, token storage, and actions do not need to be metered and can happen faster and cheaper.
+Statemint is a public utility chain in that it adds functionality not available in the Relay Chain,
+namely, the creation and management of assets. Statemint will support both fungible and non-fungible
+assets. The chain offers an interface similar to ERC-20 for fungible tokens and ERC-721 for
+non-fungible token. These interfaces are in the logic of the chain itself; by encoding this logic
+directly into the Statemint runtime, token storage, and actions do not need to be metered and can
+happen faster and cheaper.
 
 Like most common good chains, Statemint will use the DOT token as its native token, i.e. represented
 in its instance of the Balances pallet. Statemint trusts messages about balances from the Relay
@@ -79,9 +80,9 @@ Chain, and vice versa, so users can transfer DOT from the Relay Chain to their a
 and back.
 
 Because of the efficiency of executing logic in a parachain, the transaction fees and deposits
-(including the existential deposit) are about 1/10th of their value on the Relay Chain. These low fee
-levels mean that Statemint is well suited to handling DOT balances and transfers as well as managing
-on-chain assets.
+(including the existential deposit) are about 1/10th of their value on the Relay Chain. These low
+fee levels mean that Statemint is well suited to handling DOT balances and transfers as well as
+managing on-chain assets.
 
 As a common good parachain, Statemint must stay fully aligned with the Relay Chain. Upgrades to
 Statemint will require the Relay Chain's "root origin", i.e. a referendum. Some of the other logic
@@ -89,36 +90,40 @@ Statemint will require the Relay Chain's "root origin", i.e. a referendum. Some 
 
 ### Encointer
 
-Encointer will become Kusama's second common good parachain, which adds logic to the Relay Chain
-that aims to bring financial inclusivity to WEB3 and mitigate Sybil attacks with a novel 
-Proof of Personhood (PoP) system for unique identity. 
+Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With
+[referendum 158](https://kusama.polkassembly.io/referendum/158) Encointer was registered as the
+second common good parachain on Kusama's network. The functionality of Encointer adds logic to the
+Relay Chain that aims to bring financial inclusivity to WEB3 and mitigate Sybil attacks with a novel
+Proof of Personhood (PoP) system for unique identity.
 
-Encointer offers a framework that, in principle, allows for any group of real people to create, 
+Encointer offers a framework that, in principle, allows for any group of real people to create,
 distribute and use their own digital community tokens.
+[Referendum 187](https://kusama.polkassembly.io/referendum/187) introduced a runtime upgrade
+bringing governance and full funcitonality for communities to be able to use the protocol.
 
-Encointer aims to invert the [Cantillon Effect](https://www.newworldencyclopedia.org/entry/Richard_Cantillon), 
-where money is issued at the bottom, and not as credit to businesses or creditworthy individuals. This way, 
-every individual gets a [universal basic income (UBI)](https://book.encointer.org/economics-ubi.html).
+Encointer aims to invert the
+[Cantillon Effect](https://www.newworldencyclopedia.org/entry/Richard_Cantillon), where money is
+issued at the bottom, and not as credit to businesses or creditworthy individuals. This way, every
+individual gets a [universal basic income (UBI)](https://book.encointer.org/economics-ubi.html).
 
-To resist Sybil attacks, the Encointer protocol uses a PoP mechanism to foster a 
-unique identity system. The notion is that a person can only be present at one place at a given time. 
-Participants are requested to attend physical key-signing ceremonies with small groups of random people 
-at randomized locations, where these local meetings are part of one global ceremony that co-occur. 
-Participants use the Encointer wallet app to participate in these ceremonies, and the wallet enables the 
-management of local community currencies. Watch an Encointer ceremony in action in 
+To resist Sybil attacks, the Encointer protocol uses a PoP mechanism to foster a unique identity
+system. The notion is that a person can only be present at one place at a given time. Participants
+are requested to attend physical key-signing ceremonies with small groups of random people at
+randomized locations, where these local meetings are part of one global ceremony that co-occur.
+Participants use the Encointer wallet app to participate in these ceremonies, and the wallet enables
+the management of local community currencies. Watch an Encointer ceremony in action in
 [this video](https://www.youtube.com/watch?v=tcgpCCYBqko).
 
-The protocol involves [other mechanisms](https://book.encointer.org/ssi.html#privacy-considerations) to 
-protect the privacy of users in addition to the physical key-signing ceremonies.
+The protocol involves [other mechanisms](https://book.encointer.org/ssi.html#privacy-considerations)
+to protect the privacy of users in addition to the physical key-signing ceremonies.
 
-Encointer falls under common good logic as it offers a Sybil defense mechanism and a basis for digital 
-democracy. This can also be adapted by system level chains which can use the unique identity system to 
-prevent Sybil attacks, and use PoP for token airdrops or faucets.
+Encointer falls under common good logic as it offers a Sybil defense mechanism and a basis for
+digital democracy. This can also be adapted by system level chains which can use the unique identity
+system to prevent Sybil attacks, and use PoP for token airdrops or faucets.
 
-:::note
+:::tip
 
-Encointer is currently in testnet phase, and its mainnet is planned for launch as a common good parachain 
-on Kusama. To learn more about Encointer, check out the official 
+To learn more about Encointer, check out the official
 [Encointer book](https://book.encointer.org/introduction.html).
 
 :::

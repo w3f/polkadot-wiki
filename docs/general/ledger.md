@@ -14,183 +14,94 @@ browsers like Brave and Chrome.
 
 :::
 
-The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
-devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that
-does not expose it to your computer or the internet.
+The Polkadot [Ledger](https://www.ledger.com/) application is compatible with both the Ledger Nano S and the Ledger Nano X
+devices. Ledger devices are hardware wallets that keep your secret key secured on a physical device that
+does not expose it to your computer or the internet. That is, even if you connect your nano via USB to your computer, the private keys will not be leaked. Ledger devices are also hierarchical deterministic wallets (HD wallets), that is:
 
+  - *Deterministic* means that there is only one seed phrase to generate all the accounts for different blockchain networks.
+  - *Hierarchical* means that the accounts are generated in a tree-like structure for different purposes.
+
+Ledger devices can be equipped with applications that are blockchain-specific. Such applications are usually developed by third parties and they enable the user to transact securely on the blockchain network.
 The Polkadot Ledger application allows you to manage Polkadot's native token, DOT. It supports
-most of the transaction types of the network ,including batch transactions from the Utility pallet.
+most of the transaction types of the network, including batch transactions from the Utility pallet. 
+
+:::note Ledger apps may not support all the transactions
+
+Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of transactions supported. It could be possible that some transactions are supported only on a specific version of the app and some transactions are not supported at all by any version. For instance, the staking `rebag` extrinsic is supported on the XL version but not on the light version. The `setIdentity` extrinsic is not supported by any of the app versions.
+
+:::
+
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
-issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
+issue on the [Polkadot support pages](https://support.polkadot.network/).
 
 ## Requirements
 
-Here is a list of what you will need before starting:
+Here is a list of what you will need before using Polkadot with Ledger:
 
-- A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on
-  the Nano X).
+- A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements). The Ledger Nano S has limited memory and is no longer produced.
+- The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
-- A Chromium-based web browser is installed that you can use to access [Polkadot-JS Apps][].
+- A Chromium-based web browser is installed that you can use to access the [Polkadot-JS UI][].
 
-## Installing the Ledger Application
 
-### Using Ledger Live
+## Using Ledger Live
 
-- Open the "Manager" tab in Ledger Live.
-- Connect and unlock your Ledger device.
-- If asked, allow the manager on your device by pressing both buttons on the YES screen.
-- Find Polkadot in the app catalog and install it.
-
-![The Polkadot App in the Ledger Manager](../assets/ledger/manager-app-polkadot.png)
-
-Watch the instructions on how to create an account, send/receive and state/unstake DOTs in the video below
-
-[![Polkadot on Ledger Live](https://img.youtube.com/vi/jL-N_IWiYVA/0.jpg)](https://www.youtube.com/watch?v=jL-N_IWiYVA)
-
-### Using the Developer Release
-
-:::tip Instructions
-
-These instructions are for development installation only. It is recommended to install the
-application from Ledger Live unless you *know exactly what you're doing*.
-
-:::
-
-Instructions for downloading the pre-release binary from the GitHub releases are written [in the
-README][prerelease instructions] for the Polkadot Ledger application GitHub repository.
-
-On the [releases page][] you can download the shell script `install_app.sh` and then make it
-executable in your shell by typing the command `chmod +x install_app.sh`.
-
-Using `install_app.sh` `help` command will show you the available options:
-
-```zsh
-$ ./install_app.sh --help
-Zondax Installer [Polkadot-1.2011.1] [Warning: use only for test/demo apps]
-  load    - Load Polkadot app
-  delete  - Delete Polkadot app
-  version - Show Polkadot app version
-```
-
-Next, you must make sure your Ledger device is plugged in and unlocked and you're using the latest
-firmware (1.6.1 at the time of writing). If everything is prepared, then type
-`./install_app.sh load` and accept the prompts on your Ledger device to install the application.
-
-First it will prompt you to allow an unsafe manager - confirm this by switching the screen to the
-allow screen and pressing the corresponding buttons.
-
-After some processing time, the screen of your device will update to say "Install app Polkadot".
-Navigate all the way to the right, verify the Identifier hash matches the one that is printed in
-your terminal. Click both buttons on "Perform Installation" to install the application. It will ask
-again for your PIN code.
-
-At the end of the process you should have the newly installed Polkadot application on the device.
-
-## Using on Polkadot-JS Apps
-
-Please consider watching this video tutorial on how to connect your Ledger
-device with Polkadot-JS UI, by importing your accounts to Polkadot-JS Extension
-
-[![Connect Ledger to Polkadot JS UI](https://img.youtube.com/vi/7VlTncHCGPc/0.jpg)](https://youtu.be/7VlTncHCGPc)
+Check [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live) to learn how to use Polkadot with ledger live.
 
 :::info
 
-Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with
-normal operation.
+Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if you create a [derived account using Polkadot JS](#using-on-polkadot-js-apps) with a derivation path 44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. As a consequence it is not possible to transact with derived accounts using the Ledger Live App, but it is possible to do so using Polkadot JS. For more information about derived accounts and derivation paths check [the accounts page](../learn/learn-accounts.md).
 
 :::
 
+## Using on Polkadot-JS Apps
+
 ### Loading Your Account
 
-You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the Polkadot JS UI. For instructions
-on how to import Ledger accounts to Polkadot JS extension in written format, read through this [article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
-For importing your account to the UI, read through the instructions below.
+:::info Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with normal operation.
 
-[Polkadot-JS Apps][] already has an integration with the Ledger application so that your device will
-work with the browser interface after installation. The functionality is currently gated behind a
-feature setting that you will need to turn on.
+:::
 
-In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
-tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from the
-default "Do not attach Ledger devices" to "Attach Ledger via WebUSB". Be aware: if you are not
-seeing this it is because there is
-[no Ledger support](https://github.com/polkadot-js/apps/issues/3771) on FireFox.
+You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). For instructions
+on how to import Ledger accounts to the Polkadot Extension read through [this support article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension), while if you want to import Ledger accounts to the Polkadot JS UI you can consult [this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
 
-![Dropdown selector for allowing Ledger connections in PolkadotJS Settings](../assets/ledger.png)
+#### Derivation paths
 
-Click "Save" to keep your settings.
+When adding a Ledger account using the extension or the UI, you will be asked to select an `account type` and an `account index`. The first lets you select an account, while the second lets you pick a derivation path from that account - think of it like a formula from which child accounts are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live with name `Polkadot 1`, this can be added to Polkadot JS using the 0/0 derivation path (i.e. account type = 0 and account index = 0). If then you add a second account called `Polkadot 2`, this will correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that can be viewed and used in both Ledger Live and Polkadot JS. Additionally, we can use Polkadot-JS UI to created multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0 derivation path can have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be used in Ledger Live, as it only scans through the parent accounts. So, keep in mind that the balances on the children accounts cannot be viewed, and you will not be able to transact with those accounts on Ledger Live.
 
-Now when you go to the "Accounts" tab you will see a new button that says "Add Ledger". Ensure that
-your Ledger device is unlocked and you have navigated into the Polkadot application, then click this
-button.
+#### Connecting your ledger device
 
-![Add Ledger button in PolkadotJS](../assets/ledger/query-ledger.png)
-
-A popup will appear asking you to select an account and derivation path.
-
-![Picking an account and derivation path](../assets/ledger/add-account.png)
-
-The first input will let you name your account if you have not done so already. If you have already
-named your account, this will not change the existing name. The first dropdown lets you select an
-account. You can have multiple accounts on a single Ledger device. The second dropdown lets you pick
-a derivation path - think of it like a formula from which child accounts are generated. If in doubt,
-pick the first option for both. 0 / 0 is a good default.
-
-Once you confirm your selection, depending on your browser and its security settings, you might need
-to confirm the USB connection through a popup like the one below when adding the Ledger device for
-the first time:
+While using a ledger device to sign transactions, depending on your browser and its security settings, you might need
+to confirm the USB connection through a popup like the one below:
 
 ![Display the device connection popup](../assets/ledger/query-device.png)
 
-Click on the "Unknown device" line and the "Connect" button will become available.
+If you are adding your Ledger Nano for the first time, click on the "Unknown device" line and the "Connect" button will become available. 
 
-You should now be able to scroll down and find a new account on the page with the type "ledger".
+:::info Signature error message
 
-![Displaying the Ledger account in the list](../assets/ledger/ledger-balance.png)
+If you already connected your device but an error message appears before signing a transaction, make sure you have opened the Polkadot application on your Ledger Nano device. Visit [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for more information about signing transactions using your ledger.
 
-You can now use this account to interact with Polkadot on Polkadot-JS Apps and it will prompt your
-ledger for confirmation when you initiate a transaction.
+:::
 
 ### Confirming the Address on your Device
 
-On the "Accounts" tab, find your Ledger-connected account. Click on the three vertical dots at the
-end of the row. This will open a new menu, here you can click the "Show address on hardware device"
-option to display the address on your device.
-
-![Options menu of an account in the Accounts screen of PolkadotJS](../assets/ledger-4.png)
-
-Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS
-Apps.
+To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device). Here you can scroll through and make sure the address matches to what is displayed on [Polkadot-JS UI][].
 
 ### Checking the Balance of Your Account
 
-There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you
-can use a block explorer like [Polkascan][] or [Subscan][].
-
-#### Using Polkadot-JS Apps
-
-Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
-account. At the far right of the row is located your account's DOT balance. If you expand the
-balance arrow, it will show details of your balance such as locks or reserved amounts.
-
-![Account row showing empty balance](../assets/ledger/ledger-balance.png)
+There are a few methods to check the balance of your account. Check out [this support article](https://support.polkadot.network/support/solutions/articles/65000169332-where-can-i-see-the-balance-of-my-account-) for information.
 
 ### Sending a Transfer
 
-Instructions to send a transfer can be found on the
-[balance transfer page](../learn/learn-balance-transfers.md).
+General instructions to send a transfer can be found on [this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui). To sign transactions with your Ledger nano check [this support article](https://support.polkadot.network/support/solutions/articles/65000181994).
 
 ### Receiving a Transfer
 
 In order to receive a transfer on the accounts stored on your Ledger device, you will need to
-provide the sender (i.e. the payer) with your address.
-
-The easiest way to get your address is to click on the account name which will open a sidebar. Your
-address will be shown in this sidebar, along with some other information. Another method is just
-clicking on your account's avatar icon - this immediately copies your address to the clipboard.
+provide the sender (i.e. the payer) with your address. To do so follow the instructions on [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
 :::warning
 
@@ -203,54 +114,15 @@ extra vigilant around copy-paste operations makes sense.
 
 ### Staking
 
-You can enable staking by issuing a batch transaction that will include
-the required extrinsics.
-
-You can also issue two separate transactions when you want to stake using an account stored on a
-Ledger device, as follows:
-
-- Go to the "Staking" tab found under the "Network" dropdown in the top navigation menu.
-- Click the "Account Actions" pane in the inner navigation.
-- Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not
-  work).
-- Input the amount of tokens to bond and confirm the transaction.
-- Confirm the transaction on the Ledger device.
-- When the transaction is included you will see the newly bonded account in the "Account Actions"
-  page.
-- Select "Start Nominating" or "Start Validating" to start nominating or validating.
-- Confirm the transaction on Apps and on the Ledger device.
+For staking using Ledger devices check the section "How to stake using your Ledger" on [this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
 
 ### Removing Expired Democracy Locks
 
-You can remove expired democracy locks by issuing a batch transaction that will include
-the required extrinsics.
-
-You can also manually issue several extrinsics when you want remove expired democracy locks on an
-account stored on a Ledger device, as follows:
-
-- Go to https://polkadot.js.org/apps/#/accounts. Look at your expired locks and note which referenda
-  they were for.
-- Go to https://polkadot.js.org/apps/#/extrinsics
-- For each referendum with an expired lock, issue a "democracy.removeVote(X)" extrinsic, where X =
-  the referendum you voted on and has an expired lock. Make sure you do it from the account with the
-  expired locks - you can't do it from another account.
-- Once you have removed all of the votes, issue a "democracy.unlock(ACCOUNT)" extrinsic, where
-  ACCOUNT is the account you just removed the votes from.
-- Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
+Check out [this support page](https://support.polkadot.network/support/solutions/articles/65000181870-how-to-remove-expired-democracy-locks) the learn how to remove democracy locks after the end of a Governance referendum.
 
 **Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger
 Nano S and the Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics
-are available in the light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on the full ledger.
-
-## Support
-
-If you need support, please visit the
-[Polkadot Support page](https://support.polkadot.network).
+are available in the light version. The following [repository by Zondax](https://github.com/Zondax/ledger-polkadot) lists the currently supported Democracy extrinsics on the full ledger.
 
 [ledger]: https://www.ledger.com/
-[repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy
-[polkadot-js apps]: https://polkadot.js.org/apps
-[prerelease instructions]: https://github.com/Zondax/ledger-polkadot#download-and-install
-[releases page]: https://github.com/Zondax/ledger-polkadot/releases
-[polkascan]: https://polkascan.io/polkadot
-[subscan]: https://polkadot.subscan.io/
+[polkadot-js ui]: https://polkadot.js.org/apps/#/explorer

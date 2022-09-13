@@ -75,7 +75,7 @@ Candidates will receive a score of up to 50 points for voting for council member
 
 #### Democracy
 
-Candidates will receive 10 * 1KV points for each referendum they have voted on (Aye/Nay). Scores are based on votes for referendum {{ polkadot: 49 :polkadot }}{{ kusama: 163 :kusama }} and beyond.
+Candidates will receive 10 * 1KV points for each referendum they have voted on (Aye/Nay) to a limit of 100 points. Scores are based on votes for referendum {{ polkadot: 49 :polkadot }}{{ kusama: 163 :kusama }} and beyond.
 
 \* Scores that are based on their relative position against others are assessed as follows:  
 
@@ -106,7 +106,7 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - {{ kusama: Minimum of 10 KSM self-stake :kusama }}{{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }} (exceptions by approval for good intentions)
-- {{ kusama: No more than 10% commission :kusama }}{{ polkadot: No more than 3% commission :polkadot }}
+- {{ kusama: No more than 15% commission :kusama }}{{ polkadot: No more than 5% commission :polkadot }}
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on the latest release
 - {{ kusama: Max two nodes (under same sub/super identity) :kusama }}{{ polkadot: Reward destination 'Staked' :polkadot }}

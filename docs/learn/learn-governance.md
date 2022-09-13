@@ -7,8 +7,9 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
-import RPC from "./../../components/RPC-Connection" import VLTable from
-"./../../components/Voluntary-Locking"
+import RPC from "./../../components/RPC-Connection"
+
+import VLTable from "./../../components/Voluntary-Locking"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
@@ -190,7 +191,8 @@ referendum in progress.
 #### Voting Timetable
 
 In Governance v1, every
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 days, a new referendum will be up for a vote, assuming there is at least one proposal in one of the
 queues. There is a queue for Council-approved proposals and a queue for publicly submitted
 proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
@@ -427,7 +429,8 @@ In Governance v1, passive stakeholders are represented on
 "council". The council is an on-chain entity comprising several actors, each represented as an
 on-chain account. On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council
 currently consists of
-{{ polkadot:  <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" />  :kusama }}
+{{ polkadot: <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" /> :kusama }}
 members.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
