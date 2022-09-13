@@ -233,7 +233,7 @@ opened, which will get returned when the channel is closed.
 
 #### Cross-Consensus Message Format (XCM)
 
-For an updated and complete description of the XCMP message format please see the
+For an updated and complete description of the cross-consensus message format please see the
 [xcm-format repository on GitHub](https://github.com/paritytech/xcm-format).
 
 #### The Anatomy of an XCMP Interaction
