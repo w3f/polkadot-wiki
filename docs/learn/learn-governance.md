@@ -109,7 +109,8 @@ approved, it would be scheduled for enactment. Referenda is considered _unbaked_
 outcome, i.e. being voted on.
 
 If a proposal is submitted by the public or council there is a fixed enactment delay period of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={115,200} filter="blocksToDays" /> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={115,200} filter="blocksToDays" /> :kusama }}
 days. Proposals submitted as part of the enactment of a prior referendum can set the enactment delay
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
@@ -207,7 +208,8 @@ council-proposed) is the only time that multiple referenda will be able to be vo
 simultaneously.
 
 Governance v2 shares the same
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 day eligibility period when the proposal can get approved. If not approved by then end of this
 period, the proposal is automatically rejected.
 
@@ -348,7 +350,8 @@ realistic amount earlier than those which use highly privileged classes such as 
 more political significance can be made to require a higher approval early on, to avoid controversy.
 
 In Gov2, proposals that are not approved after
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 days are considered rejected by default and the Decision Deposit is refunded. If the proposal
 manages to stay passing until the end of the Confirmation Period, it is considered approved and is
 scheduled to execute from the proposed origin but after the Enactment Period . The Enactment Period
@@ -498,13 +501,15 @@ Council elections are handled by the same [Phragmén election](../docs/learn-phr
 selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for
-{{ polkadot:  <RPC network="polkadot" path="consts.phragmenElection.termDuration" defaultValue={100800} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.termDuration" defaultValue={14400} filter="blocksToDays" />  :kusama }}
+{{ polkadot:  <RPC network="polkadot" path="consts.phragmenElection.termDuration" defaultValue={100800} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.phragmenElection.termDuration" defaultValue={14400} filter="blocksToDays" />  :kusama }}
 day(s).
 
 At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
 the result will choose the new councillors based on the vote configurations of all voters. The
 election also chooses a set number of runners up which is currently
-{{ polkadot:  <RPC network="polkadot" path="consts.phragmenElection.desiredRunnersUp" defaultValue={20} /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.desiredRunnersUp" defaultValue={19} />  :kusama }}
+{{ polkadot:  <RPC network="polkadot" path="consts.phragmenElection.desiredRunnersUp" defaultValue={20} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.phragmenElection.desiredRunnersUp" defaultValue={19} />  :kusama }}
 that will remain in the queue with their votes intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
