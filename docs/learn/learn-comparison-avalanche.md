@@ -7,6 +7,8 @@ keywords: [avalance, proof of stake, comparison]
 slug: ../learn-comparisons-avalanche
 ---
 
+<!-- TODO: Add links -->
+
 Polkadot and Avalance both have an architecture which allows for application specific blockchains to be designed and connected via a "main" chain. In Polkadot this is the Relay-chain and Avalance does this with 3 primary chains, the P-chain, X-chain, and C-chain. Similar to how Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what're called subnets. Subnets are application specific chains that can be deployed along side the primary chains. Similar to Polkadot, Avalanche also uses a PoS mechanism for in its consensus algorithm to elect its validators who stake their AVAX tokens to be able to secure the network.
 
 ## Model
@@ -39,7 +41,20 @@ Subnets can be public or private and allow for developers to design and launch a
 
 <!-- TODO: How different is this model from the parachain model? Do subnets also have to use the avalanche consensus model? They have a choice of VM but do they of consensus? -->
 
-## Consensus                       
+## Consensus 
+
+<!-- TODO: Dig into each Snow protocol in detail -->
+
+Avalanche uses a family of consensus protocols to achieve security, liveness and finality. These are known as the Snow* protocols. This group of protocol composed together use both classical and Nakomoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
+
+The Snow family is a hierarchical collection of systems used to reach finality on Avalanche:
+
+- Slush
+- Snowflake
+- Snowball
+
+
+Compared to Polkadot, Avalanche uses a asynchronous hybrid system that is based on a clasical and Nakomoto approach. Polkadot uses an synchronous hybrid model that combines BABE and GRADNPA, where BABE is the algorithm used to build blocks in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single new blocks.
 
 ## Staking Mechanics
 
