@@ -48,6 +48,20 @@ Subnets can be public or private and allow for developers to design and launch a
 ## Message Passing
 
 ## Governance
+<!-- 
+TODO: Add definitions to each key parameter that is subject to change via governance -->
+
+Avalanche plans to have an on-chain governance mechanism based on its whitepaper. Even though it does not currently have an on-chain or off-chain system in production. Its governance system will be subject to only a few key protocol parameters which include:
+
+- Staking amount
+- Minimum staking time for a node
+- Maximum staking time for a node
+- Minting rate
+- Transaction fee amount
+
+Limiting the governance functionality is a design choice to increase predictibility and safety.
+
+Polkadot's governance mechanism has been in production from the very begining, and was used to slowly release functionality and decentralize the initial network. It is also not limited to a few parameters, the whole runtime is subject to change via protocol.
 
 ## Upgrades
 
