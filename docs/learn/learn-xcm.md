@@ -130,7 +130,7 @@ XCM instructions. To learn more about the XCVM and the XCM Format, see the lates
 [blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
 by Dr. Gavin Wood.
 
-XCM Instructions might change a register, they might change the state of the consensus system or both.
+XCM instructions might change a register, they might change the state of the consensus system or both.
 
 One example of such an instruction would be `TransferAsset` which is used to transfer an asset to some other address on the remote system. It needs to be told which asset(s) to transfer and to whom/where the asset is to be transferred.
 
