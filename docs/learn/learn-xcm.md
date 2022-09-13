@@ -231,7 +231,7 @@ of parachains can have at most establish two channels between them, one for send
 other chain and another for receiving messages. The channel will require a deposit in DOT to be
 opened, which will get returned when the channel is closed.
 
-#### XCMP Message Format
+#### Cross-Consensus Message Format (XCM)
 
 For an updated and complete description of the XCMP message format please see the
 [xcm-format repository on GitHub](https://github.com/paritytech/xcm-format).
