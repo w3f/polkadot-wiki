@@ -54,7 +54,7 @@
     "husky": "^8.0.1",
     "ipfs-http-client": "^57.0.3",
     "jest": "^29.0.2",
-    "jest-environment-jsdom": "^29.0.2",
+    "jest-environment-jsdom": "^29.0.3",
     "katex": "^0.16.2",
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.1.0",
