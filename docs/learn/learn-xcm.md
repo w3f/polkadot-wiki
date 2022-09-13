@@ -72,7 +72,7 @@ Let's review two of these example asset transfer use cases: **Asset Teleportatio
 ### Asset Teleportation
 An asset teleport operation from a single source to a single destination. 
 
-![](../assets/cross-consensus/xcm-asset-teleportation.png)
+![Diagram of the usage flow while teleporting assets](../assets/cross-consensus/xcm-asset-teleportation.png)
 
 
 1. [InitiateTeleport](https://github.com/paritytech/xcm-format#initiateteleport)
