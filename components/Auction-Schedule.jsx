@@ -91,14 +91,6 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 	Update(auctions, setAuctions, { target: { value: 0 } });
 }
 
-function EstimateBlockDate(date, currentBlock, estimatedBlock) {
-	const blockDifference = parseInt(estimatedBlock) - currentBlock;
-	const seconds = blockDifference * 6 // 6 seconds per block
-	let dateCopy = new Date(date.valueOf())
-	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
-	return dateCopy;
-}
-
 function Update(auctions, setAuctions, event) {
 	const index = event.target.value;
 
@@ -136,6 +128,14 @@ function Update(auctions, setAuctions, event) {
 	</div>
 
 	setAuctions(content);
+}
+
+function EstimateBlockDate(date, currentBlock, estimatedBlock) {
+	const blockDifference = parseInt(estimatedBlock) - currentBlock;
+	const seconds = blockDifference * 6 // 6 seconds per block
+	let dateCopy = new Date(date.valueOf())
+	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
+	return dateCopy;
 }
 
 export default AuctionSchedule;
