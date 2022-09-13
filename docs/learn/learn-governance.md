@@ -6,25 +6,27 @@ description: Learn about Polkadot's thought-through governance model.
 keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
+
 import RPC from "./../../components/RPC-Connection"
 import VLTable from "./../../components/Voluntary-Locking"
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance 
-mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. 
-The stated goal is to ensure that the majority of the stake can always command the network.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
+mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
+stakeholders. The stated goal is to ensure that the majority of the stake can always command the
+network.
 
 :::caution Upcoming governance changes
 
-The contents in this guide are subject to change as per the recent efforts to
-modify Polkadot Governance. See this [pull request](https://github.com/paritytech/substrate/pull/10195) 
-for more details**.
+The contents in this guide are subject to change as per the recent efforts to modify Polkadot
+Governance. See this [pull request](https://github.com/paritytech/substrate/pull/10195) for more
+details\*\*.
 
 :::
 
-To do this, the network brings together various novel mechanisms, including an amorphous state-transition
-function stored on-chain and defined in a platform-neutral intermediate language (i.e.
-[WebAssembly](learn-wasm.md)) and several on-chain voting mechanisms such as referenda with adaptive
-super-majority thresholds and batch approval voting. 
+To do this, the network brings together various novel mechanisms, including an amorphous
+state-transition function stored on-chain and defined in a platform-neutral intermediate language
+(i.e. [WebAssembly](learn-wasm.md)) and several on-chain voting mechanisms such as referenda with
+adaptive super-majority thresholds and batch approval voting.
 
 All changes to the protocol must be agreed upon by stake-weighted referenda.
 
@@ -40,7 +42,7 @@ To better understand how the council is formed, please read [this section](#coun
 ## Referenda
 
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
-*proposal* associated with it that takes the form of a privileged function call in the runtime (that
+_proposal_ associated with it that takes the form of a privileged function call in the runtime (that
 includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
 achieving what would otherwise require a "hard fork").
 
@@ -55,18 +57,17 @@ Referenda can be started in one of several ways:
 - Proposals submitted as part of the enactment of a prior referendum;
 - Emergency proposals submitted by the Technical Committee and approved by the Council.
 
-All referenda have an *enactment delay* associated with them. This is the period between the
-referendum ending and, assuming the proposal was approved, the changes being enacted. 
+All referenda have an _enactment delay_ associated with them. This is the period between the
+referendum ending and, assuming the proposal was approved, the changes being enacted.
 
-Referenda is considered *baked* if it is closed and tallied. Again, assuming the proposal was 
-approved, it would be scheduled for enactment. Referenda is considered *unbaked* if it is pending 
-an outcome, i.e. being voted on.
+Referenda is considered _baked_ if it is closed and tallied. Again, assuming the proposal was
+approved, it would be scheduled for enactment. Referenda is considered _unbaked_ if it is pending an
+outcome, i.e. being voted on.
 
-For the first
-two ways that a referendum is launched, this is a fixed time of 
-{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For the third type, it can be set as 
-desired. Emergency proposals deal with major problems with the network that need to be "fast-tracked". 
-These will have a shorter enactment time.
+For the first two ways that a referendum is launched, this is a fixed time of
+{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For the third type, it can be set as
+desired. Emergency proposals deal with major problems with the network that need to be
+"fast-tracked". These will have a shorter enactment time.
 
 ### Proposing a Referendum
 
@@ -74,12 +75,12 @@ These will have a shorter enactment time.
 
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
 (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it - this action is called *endorsing*. The proposal with the highest amount of bonded
+to support it - this action is called _endorsing_. The proposal with the highest amount of bonded
 support will be selected to be a referendum in the next voting cycle.
 
-Note that this may be different from the absolute number of endorsements; for instance, three accounts
-bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a 
-single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}. 
+Note that this may be different from the absolute number of endorsements; for instance, three
+accounts bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a
+single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}.
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
@@ -100,10 +101,10 @@ referendum in progress.
 
 #### Voting Timetable
 
-Every {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, a new referendum will come up for 
-a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved 
-proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between 
-the top proposal in the two queues.
+Every {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, a new referendum will come up
+for a vote, assuming there is at least one proposal in one of the queues. There is a queue for
+Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted
+upon alternates between the top proposal in the two queues.
 
 The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose
 turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in the
@@ -129,23 +130,22 @@ this at [Voluntary Locking](#voluntary-locking).
 To learn more about voting on referenda, please check out our
 [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
 
-
 :::
 
 Example:
 
-Peter: Votes `No` with {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} for 
-a 128 week lock period  => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+Peter: Votes `No` with {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} for a 128 week
+lock period => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
 
-Logan: Votes `Yes` with {{ polkadot: 20 DOT :polkadot }}{{ kusama: 2 KSM :kusama }} for 
-a 4 week lock period => {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+Logan: Votes `Yes` with {{ polkadot: 20 DOT :polkadot }}{{ kusama: 2 KSM :kusama }} for a 4 week
+lock period => {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
 
-Kevin: Votes `Yes` with {{ polkadot: 15 DOT :polkadot }}{{ kusama: 1.5 KSM :kusama }} for 
-a 8 week lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+Kevin: Votes `Yes` with {{ polkadot: 15 DOT :polkadot }}{{ kusama: 1.5 KSM :kusama }} for a 8 week
+lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
 
-Even though combined both Logan and Kevin vote with more 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both 
-of them is less than Peter, leading to their voting power counting as less.
+Even though combined both Logan and Kevin vote with more
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
+is less than Peter, leading to their voting power counting as less.
 
 #### Tallying
 
@@ -199,29 +199,28 @@ _To know more about where these above formulas come from, please read the
 
 Example:
 
-Assume we only have {{ polkadot: 1_500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in total and
-that this is a public proposal.
+Assume we only have {{ polkadot: 1_500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in total
+and that this is a public proposal.
 
-- John:  {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
+- John: {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
 - Peter: {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}
 - Lilly: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
-- JJ:    {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
-- Ken:   {{ polkadot: 600 DOT :polkadot }}{{ kusama: 60 KSM :kusama }}
+- JJ: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
+- Ken: {{ polkadot: 600 DOT :polkadot }}{{ kusama: 60 KSM :kusama }}
 
-
-John: Votes `Yes` for a 4 week lock period  => 
+John: Votes `Yes` for a 4 week lock period =>
 {{ polkadot: 500 x 1 = 500 Votes :polkadot }}{{ kusama: 50 x 1 = 50 Votes :kusama }}
 
-Peter: Votes `Yes` for a 4 week lock period => 
+Peter: Votes `Yes` for a 4 week lock period =>
 {{ polkadot: 100 x 1 = 100 Votes :polkadot }}{{ kusama: 10 x 1 = 10 Votes :kusama }}
 
-JJ: Votes `No` for a 16 week lock period => 
+JJ: Votes `No` for a 16 week lock period =>
 {{ polkadot: 150 x 3 = 450 Votes :polkadot }}{{ kusama: 150 x 3 = 450 Votes :kusama }}
 
 - approve = {{ polkadot: 600 :polkadot }}{{ kusama: 60 :kusama }}
 - against = {{ polkadot: 450 :polkadot }}{{ kusama: 45 :kusama }}
 - turnout = {{ polkadot: 750 :polkadot }}{{ kusama: 75 :kusama }}
-- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }} 
+- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }}
 
 ![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
 
@@ -237,9 +236,10 @@ period.
 
 #### Voluntary Locking
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called `Voluntary Locking` 
-that allows token holders to increase their voting power by declaring how long they are willing to lock up 
-their tokens, hence, the number of votes for each token holder will be calculated by the following formula:
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called
+`Voluntary Locking` that allows token holders to increase their voting power by declaring how long
+they are willing to lock up their tokens, hence, the number of votes for each token holder will be
+calculated by the following formula:
 
 ```
 votes = tokens * conviction_multiplier
@@ -251,11 +251,12 @@ double.
 <VLTable network="polkadot"/>
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals 
+total), and one lock period equals
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.voteLockingPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }} days. 
-Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
-5.5. For additional information regarding the timeline of governance events, check out the governance section on the
+{{ kusama: <RPC network="kusama" path="consts.democracy.voteLockingPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }}
+days. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction
+by 5.5. For additional information regarding the timeline of governance events, check out the
+governance section on the
 {{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
@@ -266,10 +267,10 @@ the tokens are locked.
 
 #### Adaptive Quorum Biasing
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces a concept, 
-"Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective 
-super-majority required to make it easier or more difficult for a proposal to pass in the case that there 
-is no clear majority of voting power backing it or against it.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces a concept, "Adaptive
+Quorum Biasing", which functions as a lever that the council can use to alter the effective
+super-majority required to make it easier or more difficult for a proposal to pass in the case that
+there is no clear majority of voting power backing it or against it.
 
 ![](../assets/governance/adaptive-quorum-biasing.png)
 
@@ -298,10 +299,11 @@ against - equate to a simple majority-carries system at 100% turnout.
 
 ## Council
 
-To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
-introduces the idea of a "council". The council is an on-chain entity comprising several actors, each 
-represented as an on-chain account. On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, 
-the council currently consists of {{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
+To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+introduces the idea of a "council". The council is an on-chain entity comprising several actors,
+each represented as an on-chain account. On
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
+{{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
@@ -318,7 +320,8 @@ becomes a referendum with negative adaptive quorum biasing.
 
 :::note Explainer video on the Council
 
-For more information, check out our [video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
+For more information, check out our
+[video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
 
 :::
 
@@ -333,7 +336,7 @@ last-resort if there is an issue found late in a referendum's proposal such as a
 the runtime that the proposal would institute.
 
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
-it will be left to the stakeholders *en masse* to determine the fate of the proposal.
+it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
 
 ### Blacklisting
 
@@ -345,10 +348,10 @@ proposals that could be submitted with the same hash, i.e.
 text to make a suggestion.
 
 Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
-system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to re-submit 
-the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from 
-being submitted - a single changed character in a proposal's text will also change the hash of the proposal, 
-rendering the per-hash blacklist invalid.
+system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
+re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
+proposals from being submitted - a single changed character in a proposal's text will also change
+the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ### How to be a council member?
 
@@ -407,7 +410,7 @@ B.
 
 The council, being an instantiation of
 [Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
-implements what's called a *prime member* whose vote acts as the default for other members that fail
+implements what's called a _prime member_ whose vote acts as the default for other members that fail
 to vote before the timeout.
 
 The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
@@ -423,15 +426,15 @@ prime.
 The Technical Committee(TC) was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
-TC is composed of the teams that have successfully implemented or specified either
-a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are 
+TC is composed of the teams that have successfully implemented or specified either a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
 added or removed from the TC via a simple majority vote of the [Council](#council).
 
-The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, 
-reverse faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
-proposals by using the Democracy pallet, and is the only origin that is able to trigger the fast-tracking
-functionality. We can think of the TC as a "unique origin" that cannot generate proposals, but are able
-to fast track existing proposals.
+The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
+faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
+proposals by using the Democracy pallet, and is the only origin that is able to trigger the
+fast-tracking functionality. We can think of the TC as a "unique origin" that cannot generate
+proposals, but are able to fast track existing proposals.
 
 Fast-tracked referenda are the only type of referenda that can be active alongside another active
 referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
@@ -446,25 +449,25 @@ behalf. One example of this circumstance is the case of lost or locked funds whe
 lost due to a human interface error (such as inputting an address for another network). Another
 example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does not
 let you sign a message easily. When these circumstances can be proven beyond a reasonable doubt to
-be an error, the council *may* consider a governance motion to correct it.
+be an error, the council _may_ consider a governance motion to correct it.
 
 The first step to appeal to the council is to get in contact with the councillors. There is no
 singular place where you are guaranteed to grab every councillor's ear with your message. However,
 there are a handful of good places to start where you can get the attention of some of them. The
-{{ polkadot: [Polkadot Direction][] :polkadot }}{{ kusama: [Kusama Direction][] :kusama }} matrix 
-room is one such place. After creating an account and joining this room, you can post a 
-well-thought-through message here that lays down your case and provides justification for why you think 
-the council should consider enacting a change to the protocol on your behalf.
+{{ polkadot: [Polkadot Direction][] :polkadot }}{{ kusama: [Kusama Direction][] :kusama }} matrix
+room is one such place. After creating an account and joining this room, you can post a
+well-thought-through message here that lays down your case and provides justification for why you
+think the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. For this, making a post on
 [Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
 you present all the evidence for your circumstances and state clearly what kind of change you would
-suggest to the councillors to enact. 
+suggest to the councillors to enact.
 
-:::info 
+:::info
 
-Remember, the councillors do not need to make the change, it is your responsibility to make a 
-strong case for why the change should be made.
+Remember, the councillors do not need to make the change, it is your responsibility to make a strong
+case for why the change should be made.
 
 :::
 

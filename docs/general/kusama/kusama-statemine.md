@@ -13,8 +13,12 @@ assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good par
 to be confused with [Statemint](../../learn/learn-common-good-chains.md#statemint), which is a
 parachain on Polkadot). The native token of Statemine is KSM. Balance transfers and the Existential
 Deposit (ED) of KSM on Statemine are about 1/10th of the values on the Relay chain. For example, the
-Existential Deposit of a Statemine account is <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>,
-when compared to <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>,
+Existential Deposit of a Statemine account is
+{{ polkadot: <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>, :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>, :kusama }}
+when compared to
+{{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}
 on Kusama. Apart from the core protocol token KSM, the assets held on Statemine can be broadly
 categorized as
 
@@ -35,10 +39,13 @@ is a parachain on Westend. The WND tokens (Westies) are free and are available t
 
 :::
 
-To create an asset on Statemine, you would need a deposit
-of <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and
-around <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for
-the metadata . Before you create an asset on Statemine, ensure that your Statemine account
+To create an asset on Statemine, you need a deposit of
+{{ polkadot: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+and around
+{{ polkadot: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :kusama }}
+for the metadata. Before you create an asset on Statemine, ensure that your Statemine account
 balance is a bit more than the sum of those two deposits, which should seamlessly account for the
 required deposits and transaction fees. You can send KSM from a Kusama account to a Statemine
 account using the teleport functionality. For instructions on teleporting KSM, check this

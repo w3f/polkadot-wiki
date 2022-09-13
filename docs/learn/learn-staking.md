@@ -65,11 +65,13 @@ list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
 :::caution Minimum Nomination to Receive Staking Rewards
 
 Although the minimum nomination intent is
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>, :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>, :kusama }}
 it does not guarantee staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
 which is a dynamic value that can be much higher than
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
 
 :::
 
@@ -577,16 +579,15 @@ For specific details about validator payouts, please see
 
 ## Inflation
 
-{{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
-to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. DOT went through [redenomination](../general/redenomination.md)
-in 2020. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflationary; There is no maximum number
+of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Inflation is designed to be approximately
+10% annually, with validator rewards being a function of the amount staked and the remainder going
+to treasury.
+{{ polkadot: DOT went through [redenomination](../general/redenomination.md) in 2020. :polkadot }}
 
-{{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
-to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. The current token supply on Kusama is
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }}
-(Over 12 Million KSM). :kusama }}
+The current token supply on
+{{ polkadot: Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
+{{ kusama: Kusama is <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> (Over 12 Million KSM). :kusama }}
 
 There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the _system
 staking rate_ meet the _ideal staking rate_. The system staking rate would be the total amount
