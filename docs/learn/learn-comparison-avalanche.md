@@ -88,7 +88,11 @@ Polkadot's governance mechanism has been in production from the very begining, a
 
 ## Upgrades
 
+The upgradibility of Avalanche is up to the protocol devleopers at Avax Labs vs the forkless upgrade funcitonality of Polkadot that is achieved through on-chain governance.
+
 ## Conclusion
+
+In concolusion, Avalanche has made some design decisions which allow for an improved smart-contract development environment in which protocol engineers can have the freedom to create their own blockchains and include them into the Avalanche ecosystem via subnets. The trade-offs being that autonomy of design is limited and blockchains have to buy into the design decisions of Avalanches main chains. Subnets are not able to share the security of the main chains however they are able to use the low-transaction fee to create working applicaiton quick. We have even seen some Ethereum projects move to Avalanche to take advantage of the lower fees. Whereas Polkadot provides a heteregeneous model, in which blockchains have ultimate autonomy in the way they design their consensus systems, and on top of that are able to share the security of the main Relay-chain, and use XCM to pass native trustless messages instead of having to rely on bridges.
 
 ## References
 
