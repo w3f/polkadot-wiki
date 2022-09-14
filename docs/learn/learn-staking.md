@@ -215,7 +215,7 @@ For ledger users staking directly on Ledger Live, currently there is no option t
 ### Staking proxies
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
-[substrate](https://substrate.io/), a modular system to efficiently build blockchains without having necessarily deep knowledge about blockchain technology. Within each module or `pallet`, one can `call` different
+[substrate](https://substrate.io/), a modular system to efficiently build blockchains. Within each module or `pallet`, one can `call` different
 functions that have similar logic. For example, the staking pallet contains all functionalities
 related to staking such as bonding or unbonding funds. The combined information of pallets and calls
 constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that
