@@ -126,10 +126,10 @@ would like to securely stake your tokens using Polkadot JS Apps, refer to [this]
 
 The task of choosing validators is not simple, as it should take into account nominator reward and
 risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maximizing rewards and minimizing risks, with sometimes having to
-compromise between the two as minimizing risks might decrease rewards as well. Nominators should pay attention, especially to six criteria when nominating validators (not in order of importance):
+compromise between the two, as minimizing risks might decrease rewards as well. Nominators should pay attention, especially to six criteria when nominating validators (not in order of importance):
 
 - recent history of the era points earned across eras
-- validator's self stake (shows skin in the game)
+- validator's (own) stake (shows skin in the game)
 - total stake backing the validator (which is the sum of self stake and the stake coming from nominators)
 - commission fees (i.e. how much validators charge nominators)
 - verified identity
@@ -146,7 +146,7 @@ that:
 
 - have era points above average (because they will get more rewards for being active), 
 - have the total stake backing the validator below the average active validator stake (because they will pay out more rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}), 
-- have high own stake (because if slashed they have a lot to lose), 
+- have high own stake (because if slashed they have something to lose), 
 - have low commission fees but not 0% (because it makes sense that for doing the heavy lifting, validators ask for a small commission), 
 - have on-chain registered identity (because it adds a layer of trust and possibly provides access to their website and contact details), 
 - and have not been slashed (meaning that their on-chain behavior is genuine).
@@ -157,24 +157,23 @@ that:
 
 Nominating is _not_ a "set and forget" operation. The whole NPoS system is dynamic and nominators should
 periodically monitor the performance and reputation of their validators. Failing to do so could
-result in applied slashes and/or rewards not being paid out, possibly for a prolonged period of time.
+result in applied slashes and/or rewards not being paid out, possibly for a prolonged period.
 
 :::
 
 Although the theory can be used as a general guideline, in practice it is more complicated and
-following the theory might not necessarily lead to the desired result. Validators might have the total stake backing them below average, low commission and above average era points in one era and then have a totally
-different profile in the next one. Selection based the criteria like on-chain identity, slash history and low commission make the staking rewards deterministic. But there are criteria that vary more than others, with era points
-being the most variable and thus one of the key probabilistic components of staking rewards. It is not recommended
-to change nominations because of the low era points of a validator in a single era. Variability in rewards due to the era points should level out over time. If a validator consistently gets
-era points below average, it makes sense to nominate a better-performing validator for the health of the network and for increased staking rewards.
+following the theory might not necessarily lead to the desired result. Validators might have the total stake backing them below average, low commission and above average era points in one era and then have a different profile in the next one. Selection based the criteria like on-chain identity, slash history and low commission make the staking rewards deterministic. But some criteria vary more than others, with era points
+being the most variable and thus one of the key probabilistic components of staking rewards. Part of this probability is directly related to the fact that a validator can produce blocks for a parachain (i.e. para-validators) or the relay chain, with para-validators earning more era points per unit time (see [this](../maintain/maintain-guides-validator-payout.md#era-points) page for more information). The role can switch between sessions, and you can look at [the staking tab on the Polkadot-JS UI](https://polkadot.js.org/apps/#/staking) to know which validator is producing blocks for the relay chain or parachains.
 
-See
+It is not recommended
+to change nominations because of the low era points of a validator in a single era. Variability in rewards due to the era points should level out over time. If a validator consistently gets
+era points below average, it makes sense to nominate a better-performing validator for the health of the network and increased staking rewards. See
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 support article to understand in detail how to select the set of validators to nominate.
 
 ### Accounts
 
-There are two different accounts that can be used to securely manage your funds while staking.
+Two different accounts can be used to securely manage your funds while staking.
 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
   controller account. As a result, you may actively participate in staking with a stash private key kept in
@@ -207,7 +206,7 @@ compromised. More information about account derivation can be found
 
 :::info
 
-For ledger users staking directly on Ledger Live, currently there is no option to use separate stash and controller accounts.
+For ledger users staking directly on Ledger Live, currently, there is no option to use separate stash and controller accounts. That is if you stake on Ledger Live your stash account will be your controller too.
 
 :::
 
