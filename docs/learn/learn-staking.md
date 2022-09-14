@@ -195,7 +195,7 @@ There are two different accounts that can be used to securely manage your funds 
   which would effectively compound the rewards you receive over time. You could also choose to have
   them deposited to your controller account or a different account as free (transferable) balance.
   If you are a validator, it can also be used to set your [session keys](learn-keys.md#session-keys). Controller
-  accounts only needs enough funds to pay for transaction fees.
+  accounts only need sufficient funds to pay for the transaction fees.
 
 :::warning
 
