@@ -9,7 +9,7 @@ slug: ../learn-staking
 
 import RPC from "./../../components/RPC-Connection"
 
-Here you will lean about what is staking, why is important and how it works for
+Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Introduction
