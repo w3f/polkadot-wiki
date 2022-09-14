@@ -82,7 +82,7 @@ Validators who produce a block are rewarded with tokens, and they can share rewa
 nominators. Both validators and nominators can stake their tokens on chain and receive staking
 rewards at the end of each era. The staking system pays out rewards equally to all validators
 regardless of stake. Thus, having more stake on a validator does not influence the amount of block rewards
-it receives. This avoids centralization of power to few validators. There is a probabilistic
+it receives. This avoids centralization of power to a few validators. There is a probabilistic
 component in the calculation of rewards, so they may not be exactly equal for all validators. In
 fact, during each era validators can earn `era points` by doing different tasks on chain. The more
 the points, the higher the reward for a specific era. This promotes validators' activity on chain.
