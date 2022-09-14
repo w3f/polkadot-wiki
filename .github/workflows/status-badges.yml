@@ -12,14 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check and update badges
-        uses: w3f/status-badges@v1.1
+        uses: w3f/status-badges@v1.2
         with:
           path: 'docs/build/build-open-source.md'
           token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true
-          active-emoji: ':green_heart:'
-          stale-emoji: ':yellow_heart:'
-          inactive-emoji: ':broken_heart:'
+          active-emoji: '🟢'
+          stale-emoji: '🟡'
+          inactive-emoji: '🔴'
           not-found-emoji: ':grey_question:'
 

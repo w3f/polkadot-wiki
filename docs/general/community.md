@@ -118,6 +118,6 @@ Matrix client. If you face any issues, join the rooms individually.
 - [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
   building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
   unofficial)
-- [Polkadot Stack](https://github.com/w3f/Grants-Program/blob/master/docs/polkadot_stack.md) -
+- [Polkadot Stack](../build/build-open-source.md) -
   if you're interested in seeing what's under development and where there's room for your
   contributions.

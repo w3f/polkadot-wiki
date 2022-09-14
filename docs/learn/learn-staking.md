@@ -176,6 +176,15 @@ era points below average, it makes sense to nominate a better performing validat
 Check
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 support article to understand in detail how to select the set of validators to nominate.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements NPoS (Nominated
+Proof-of-Stake), a relatively novel and sophisticated mechanism to select the validators who are
+allowed to participate in its [consensus](learn-consensus.md) protocol. The NPoS encourages
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as nominators.
+Nominators may back up to
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+validators as trusted validator candidates. Both validators and nominators lock their tokens as
+collateral and receive staking rewards.
 
 ### Accounts
 
@@ -249,6 +258,7 @@ are made public to all nominators, and a nominator in turn submits a list of up 
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 candidates that it supports. In the next era, a certain number of validators having the most
+
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. For more information about the election algorithm go to [this](learn-phragmen.md) page on the wiki or [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article. As a
 nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
@@ -258,11 +268,13 @@ is required to submit an intention to nominate.
 :::caution Minimum Nomination to Receive Staking Rewards
 
 Although the minimum nomination intent is
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>, :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>, :kusama }}
 it does not guarantee staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
 which is a dynamic value that can be much higher than
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
 
 :::
 
@@ -419,11 +431,20 @@ as an indicator.
 
 There is an additional factor to consider in terms of rewards. While there is no limit to the number
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is currently {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}, although this can be
-modified via runtime upgrade. A validator with more than {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators is
-_oversubscribed_. When payouts occur, only the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }} nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators
-are essentially "wasting" their stake - they used their nomination to elect that validator to the
-active stake, but receive no rewards in exchange for doing so.
+can pay rewards.
+
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, this limit is currently
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/>, :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>, :kusama }}
+although it can be modified via runtime upgrade. A validator with more than
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominators is _oversubscribed_. When payouts occur, only the top
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominators as measured by amount of stake allocated to that validator will receive rewards. All
+other nominators are essentially "wasting" their stake - they used their nomination to elect that
+validator to the active stake, but receive no rewards in exchange for doing so.
 
 Note that the network slashes a validator slot for a misbehavior (e.g. validator
 offline, equivocation, etc.) the slashed amount is a fixed percentage (and not a fixed amount),
@@ -539,6 +560,7 @@ For more information about slashing visit the dedicated page.
 
 ## Chilling
 
+
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
 validator or nominator at any time themselves, taking effect in the next era. It can also
 specifically mean removing a validator from the active validator set by another validator,
@@ -558,7 +580,6 @@ large, Polkadot will trigger a new validator election to get a full set. Disable
 need to resubmit their intention to validate and re-garner support from nominators.
 
 For more on chilling, see the [How to Chill][] page on this wiki.
-
 
 ## Inflation
 
@@ -589,13 +610,19 @@ According to the inflation model, this would suggest that if you do not use your
 
 :::
 
-The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
-estimation of all DOT that should be staked, per parachain slot).
+The ideal staking rate on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is designed
+to be dynamic and is adjusted based on the number of parachain slots. As the number of parachain
+slots increase, the ideal staking rate decreases.
 
-:::info Staking rate without parachains
+:::note
 
-In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
-constrained by locked parachain bonds.
+The current staking rate on Polkadot still assumes the absence of parachains, with the suggested
+ideal staking rate of 75%. You can track the progress on the issue to adjust it
+[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama.
+At the time of updating this section, the ideal staking rate on Kusama was 50.5% when there were 49
+parachain slots. When the number of slots goes to 60, the ideal staking rate will be 45%.
+[Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the
+code for reference.
 
 :::
 
@@ -603,16 +630,18 @@ If the amount of tokens staked goes below the ideal rate, then staking rewards f
 up. On the contrary, if it goes above, staking rewards drop. This is a result of the change in the
 percentage of staking rewards that go to the Treasury.
 
-![staking](../assets/NPoS/staking-participation-rate.png)
+![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
 <p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
-- **Blue line**: Inflation rewards to stakers
-- **Green line**: Staker rate of return
+- **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators
+  and nominators.
+- **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual
+  returns on the staked tokens.
 
-You can determine the inflation rewards by checking the staking overview on
+You can determine the staking rewards by checking the staking overview on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking).
 
 The above chart shows the inflation model of the network. Depending on the staking participation,
@@ -650,11 +679,13 @@ return will be less, encouraging some users to withdraw.
 
 ## How many validators does Polkadot have?
 
-Polkadot started with 20 open validator positions and has increased gradually to 297. The top bound
-on the number of validators has not been determined yet, but should only be limited by the bandwidth
+Polkadot started with 20 open validator positions and has increased gradually to
+<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>. The top bound on
+the number of validators has not been determined yet, but should only be limited by the bandwidth
 strain of the network due to peer-to-peer message passing. The estimate of the number of validators
 that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
-900 validator slots in the active set.
+<RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> validator slots in
+the active set.
 
 ## Resources
 

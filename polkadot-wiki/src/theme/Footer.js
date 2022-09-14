@@ -11,8 +11,8 @@ import Logo from "@site/static/img/Polkadot_Logo_Horizontal_White.svg";
 
 function FooterNavColumn({ headline, children }) {
   return (
-    <Col xs={6} md={3} className="mb-3 mb-md-0">
-      <h5 className="text-white">{headline}</h5>
+    <Col xs={6} md={4} lg={3} className="mb-3 mb-md-5">
+      <h5 className="text-white text-heading font-weight-medium">{headline}</h5>
       <ul className="list-unstyled">{children}</ul>
     </Col>
   );
@@ -21,7 +21,7 @@ function FooterNavColumn({ headline, children }) {
 function FooterSocialColumn() {
   const SocialItem = ({ href, className }) => {
     return (
-      <li className="text-white">
+      <li className="text-white mr-2 mr-lg-0 mr-xl-2 mb-2">
         <a href={href} target="_blank" rel="noopener noreferrer">
           <i className={className} />
         </a>
@@ -30,37 +30,22 @@ function FooterSocialColumn() {
   };
 
   const Social = () => (
-    <ul className="list-social-links justify-content-around">
-      <SocialItem
-        href="https://twitter.com/Polkadot"
-        className="socicon-twitter"
-      />
-      <SocialItem
-        href="https://www.reddit.com/r/polkadot"
-        className="socicon-reddit"
-      />
-      <SocialItem
-        href="https://github.com/paritytech/polkadot"
-        className="socicon-github"
-      />
+    <ul className="list-social-links mb-4 mt-5 mt-lg-0">
+      <SocialItem href="https://twitter.com/Polkadot" className="socicon-twitter" />
+      <SocialItem href="https://www.reddit.com/r/polkadot" className="socicon-reddit" />
+      <SocialItem href="https://github.com/paritytech/polkadot" className="socicon-github" />
       <SocialItem
         href="https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw"
         className="socicon-youtube"
       />
-      <SocialItem
-        href="https://discord.gg/polkadot"
-        className="socicon-discord"
-      />
+      <SocialItem href="https://discord.gg/polkadot" className="socicon-discord" />
     </ul>
   );
 
   const Newsletter = () => (
     <>
       <p className="d-block text-white">
-        <Translate
-          id="footer.subscribeMessage"
-          description="Subscribe message in Footer"
-        >
+        <Translate id="footer.subscribeMessage" description="Subscribe message in Footer">
           Subscribe to the newsletter to hear about Polkadot updates and events.
         </Translate>
       </p>
@@ -70,10 +55,7 @@ function FooterSocialColumn() {
           target="_blank"
           style={{ color: "white" }}
         >
-          <Translate
-            id="footer.subscribeButton"
-            description="Label of Subscribe button in Footer"
-          >
+          <Translate id="footer.subscribeButton" description="Label of Subscribe button in Footer">
             Subscribe
           </Translate>
         </a>
@@ -82,7 +64,7 @@ function FooterSocialColumn() {
   );
 
   return (
-    <Col md={3} className="px-lg-0">
+    <Col md={12} lg={3} className="px-lg-0">
       <Social />
       <Newsletter />
     </Col>
@@ -92,12 +74,7 @@ function FooterSocialColumn() {
 function FooterLegalLink({ href, content }) {
   return (
     <li>
-      <a
-        href={href}
-        className="text-white text-small"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={href} className="text-white text-small" target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     </li>
@@ -107,12 +84,7 @@ function FooterLegalLink({ href, content }) {
 function FooterLink({ href, content }) {
   return (
     <li className="py-0 py-md-1">
-      <a
-        href={href}
-        className="text-white"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={href} className="text-white" target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     </li>
@@ -125,7 +97,7 @@ export default function Footer() {
 
   return (
     <footer className="nav-footer spacer-y-4 pb-4" id="footer">
-      <Container>
+      <Container className="container-custom">
         <Row className="justify-content-start">
           <FooterNavColumn
             headline={translate({
@@ -144,6 +116,53 @@ export default function Footer() {
             />
             <FooterLink
               content={translate({
+                message: "Roadmap",
+                id: "footer.body.general.roadmap",
+                description: "Roadmap link in General column in Footer",
+              })}
+              href="https://polkadot.network/launch-roadmap"
+            />
+            <FooterLink
+              content={translate({
+                message: "Build",
+                id: "footer.body.general.build",
+                description: "Build link in General column in Footer",
+              })}
+              href="https://polkadot.network/build"
+            />
+            <FooterLink
+              content={
+                <>
+                  <span className="mr-2">
+                    {translate({
+                      message: "Staking",
+                      id: "footer.body.general.staking",
+                      description: "Staking link in General column in Footer",
+                    })}
+                  </span>
+                  <span className="nav-footer-item-pill">BETA</span>
+                </>
+              }
+              href="https://staking.polkadot.network/dashboard/"
+            />
+            <FooterLink
+              content={translate({
+                message: "Grants and Bounties",
+                id: "footer.body.general.grantsAndBounties",
+                description: "Grants and Bounties link in General column in Footer",
+              })}
+              href="https://github.com/w3f/General-Grants-Program"
+            />
+            <FooterLink
+              content={translate({
+                message: "Careers",
+                id: "footer.body.general.careers",
+                description: "Careers link in General column in Footer",
+              })}
+              href="https://polkadot.network/jobs"
+            />
+            <FooterLink
+              content={translate({
                 message: "FAQ",
                 id: "footer.body.general.faq",
                 description: "FAQ link in General column in Footer",
@@ -157,31 +176,6 @@ export default function Footer() {
                 description: "Contact link in General column in Footer",
               })}
               href="https://polkadot.network/contact"
-            />
-            <FooterLink
-              content={translate({
-                message: "Build",
-                id: "footer.body.general.build",
-                description: "Build link in General column in Footer",
-              })}
-              href="https://polkadot.network/build"
-            />
-            <FooterLink
-              content={translate({
-                message: "Grants and Bounties",
-                id: "footer.body.general.grantsAndBounties",
-                description:
-                  "Grants and Bounties link in General column in Footer",
-              })}
-              href="https://github.com/w3f/General-Grants-Program"
-            />
-            <FooterLink
-              content={translate({
-                message: "Careers",
-                id: "footer.body.general.careers",
-                description: "Careers link in General column in Footer",
-              })}
-              href="https://polkadot.network/jobs"
             />
           </FooterNavColumn>
           <FooterNavColumn
@@ -198,6 +192,22 @@ export default function Footer() {
                 description: "Technology link in Technology column in Footer",
               })}
               href="https://polkadot.network/technology"
+            />
+            <FooterLink
+              content={translate({
+                message: "XCM",
+                id: "footer.body.technology.xcm",
+                description: "XCM link in Technology column in Footer",
+              })}
+              href="https://polkadot.network/cross-chain-communication"
+            />
+            <FooterLink
+              content={translate({
+                message: "Parachains",
+                id: "footer.body.technology.parachains",
+                description: "Parachains link in Technology column in Footer",
+              })}
+              href="https://polkadot.network/parachains"
             />
             <FooterLink
               content={translate({
@@ -257,12 +267,29 @@ export default function Footer() {
             />
             <FooterLink
               content={translate({
+                message: "Auctions",
+                id: "footer.body.community.auctions",
+                description: "Auctions link in Community column in Footer",
+              })}
+              href="https://polkadot.network/auctions"
+            />
+            <FooterLink
+              content={translate({
+                message: "Treasury",
+                id: "footer.body.community.treasury",
+                description: "Treasury link in Community column in Footer",
+              })}
+              href="https://polkadot.network/treasury/"
+            />
+            <FooterLink
+              content={translate({
                 message: "Documentation",
                 id: "footer.body.community.documentation",
                 description: "Documentation link in Community column in Footer",
               })}
               href="http://wiki.polkadot.network/en/latest/"
             />
+            <FooterLink content="Blog" href="https://polkadot.network/blog" />
             <FooterLink
               content={translate({
                 message: "Brand Assets",
@@ -271,15 +298,11 @@ export default function Footer() {
               })}
               href="https://polkadot.network/brand-assets"
             />
-            <FooterLink content="Blog" href="https://polkadot.network/blog" />
             <FooterLink
               content="Element Chat"
               href="https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation"
             />
-            <FooterLink
-              content="Medium"
-              href="https://medium.com/polkadot-network"
-            />
+            <FooterLink content="Medium" href="https://medium.com/polkadot-network" />
           </FooterNavColumn>
           <FooterSocialColumn />
         </Row>
@@ -298,10 +321,7 @@ export default function Footer() {
           )}
           <Col lg={10}>
             <ul className="list-unstyled d-flex flex-wrap list-pipe-separator">
-              <FooterLegalLink
-                content={footer.copyright}
-                href="https://web3.foundation"
-              />
+              <FooterLegalLink content={footer.copyright} href="https://web3.foundation" />
               <FooterLegalLink
                 content={translate({
                   message: "Impressum",
