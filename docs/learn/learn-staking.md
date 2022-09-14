@@ -422,7 +422,7 @@ which means that validator pools with more stake get slashed more DOT. Again, th
 provide nominators with an economic incentive to shift their preferences and back less popular
 validators whom they consider to be trustworthy.
 
-Also note that each validator candidate is free to name their desired commission
+Also, note that each validator candidate is free to name their desired commission
 fee (as a percentage of rewards) to cover operational costs. Since validator pools are paid the
 same, pools with lower commission fees pay more to nominators than pools with higher fees. Thus,
 each validator can choose between increasing their fees to earn more, or decreasing their fees to
