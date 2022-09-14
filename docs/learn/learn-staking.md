@@ -94,7 +94,7 @@ pro-rata to all stakers after the validator's commission is deducted.
 
 The security of PoS networks depends on the amount of staked tokens. This means
 that to successfully attack the network one would need a large amount of tokens that can be accrued
-by one single participant alone or by colluding different participants to act maliciously. In case
+by one single participant alone or would need different participants to collude and act maliciously. In case
 of NPoS, if there is an attack both the validator(s) and nominators will be
 `slashed` and in some cases their stake partially or fully confiscated. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad actions. Also, in NPoS validators are paid equal rewards regardless from
