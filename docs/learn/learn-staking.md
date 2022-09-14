@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection"
 Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Introduction
+## Introduction to Proof-of-Stake (PoS)
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to finalize
 blocks on the chain. Consensus is the process of agreeing on something, in this case, the progression
