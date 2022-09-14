@@ -125,7 +125,7 @@ to understand your responsibilities as a nominator.
 
 If you want to become a nominator, check
 [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
-would like to securely stake your tokens using Polkadot JS Apps, watch [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-) support article. {{ kusama: The video demonstrates it on Polkadot, but the procedure is the same for Kusama :kusama }}
+would like to securely stake your tokens using Polkadot JS Apps, refer to [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-) support article. {{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama :kusama }}
 
 ### Selection of validators
 
