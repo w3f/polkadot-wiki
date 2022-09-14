@@ -219,7 +219,7 @@ For ledger users staking directly on Ledger Live, currently there is no option t
 functions that have similar logic. For example, the staking pallet contains all functionalities
 related to staking such as bonding or unbonding funds. The combined information of pallets and calls
 constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that
-triggers an event within the chain. Continuing with the staking example, within the staking pallet
+triggers an event on the chain. Continuing with the staking example, within the staking pallet
 one can bond funds and nominate some validators. The signature of such
 extrinsic might trigger a reward payout at the end of an era; this is an event inside the chain. This way of having
 transactions categorized within pallets and functionalities makes it possible to create accounts
