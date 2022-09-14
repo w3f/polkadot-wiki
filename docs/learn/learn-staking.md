@@ -199,7 +199,7 @@ There are two different accounts that can be used to securely manage your funds 
 
 :::warning
 
-Never leave high balance on a controller account, such accounts are usually "hot" meaning that the
+Never leave high balance on a controller account which are usually "hot" as their
 private key is stored on the device (PC, phone) and it is exposed to the internet all the time you
 are using it. It is good practice to deposit rewards on the stash account or to send them to another
 cold account.
