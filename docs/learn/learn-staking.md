@@ -168,13 +168,10 @@ result in applied slashes and/or rewards not being paid out, possibly for a prol
 
 Although the theory can be used as a general guideline, in practice it is more complicated and
 following the theory might not necessarily lead to the desired result. Validators might have the total stake backing them below average, low commission and above average era points in one era and then having a totally
-different profile in the next one. There are criteria that vary more than others with era points
-being the most variable and thus the probabilistic component of staking rewards. It is not recommended
-to change nominations at each era only because the era points of one validator were low. Selection
-based on identity, no slashes and low commission should be fine. Variability in rewards due to the
-other criteria should level out over time. There might be the case when one validator always gets
-below average era points, this is a case when selecting another validator might help to increase the
-stake performance.
+different profile in the next one. Selection based the criteria like on-chain identity, slash history and low commission make the staking rewards deterministic. But there are criteria that vary more than others, with era points
+being the most variable and thus one of the key probabilistic components of staking rewards. It is not recommended
+to change nominations because of the low era points of a validator in a single era. Variability in rewards due to the era points should level out over time. If a validator consistently gets
+era points below average, it makes sense to nominate a better performing validator for the health of the network and for increased staking rewards.
 
 Check
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
