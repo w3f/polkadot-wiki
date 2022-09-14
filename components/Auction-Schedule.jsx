@@ -3,6 +3,8 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 
 // Number of auctions to display in drop-down
 const auctionCount = 2;
+
+// First auction blocks for both chains
 const firstAuctionBlockDot = 7658910;
 const firstAuctionBlockKsm = 7924237;
 
@@ -12,27 +14,31 @@ let wsProvider = undefined;
 let api = undefined;
 let auctionSelections = [];
 
+// Component that retrieves and displays on-chain auction data
 function AuctionSchedule() {
 	const [auctions, setAuctions] = useState("Loading Auctions...");
 
 	useEffect(async () => {
 		const title = document.title;
-
 		// Polkadot
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			// Set chain type
 			chain = "polkadot"
 			wsProvider = new WsProvider("wss://rpc.polkadot.io");
 			await Connect(wsProvider, firstAuctionBlockDot, setAuctions);
-		} else if (title === "Parachain Slot Auctions · Guide") {
+		} 
+		// Kusama
+		else if (title === "Parachain Slot Auctions · Guide") {
 			chain = "kusama";
 			wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io/");
 			await Connect(wsProvider, firstAuctionBlockKsm, setAuctions);
-		} else {
+		}
+	// Other
+		else {
 			console.log("Unknown wiki/guide type");
 		}
 	}, []);
 
+	// Render
 	if (chain !== undefined) {
 		return auctions;
 	} else {
@@ -40,18 +46,20 @@ function AuctionSchedule() {
 	}
 }
 
+// Connect to a chain, retrieve required values, generate UI output values
 async function Connect(wsProvider,  initialBlock, setAuctions) {
 	api = await ApiPromise.create({ provider: wsProvider });
 
 	// Get the current block for projection
 	const currentBlock = await api.rpc.chain.getBlock();
-	const currentBlockNumber = parseInt(currentBlock.block.header.number.toString());
+	const currentBlockNumber = currentBlock.block.header.number.toPrimitive();
 
-	// Get current date/time
-	let date = new Date();
+	// Get current on-chain date/time
+	let chainTimestamp = await api.query.timestamp.now();
+	let date = new Date(chainTimestamp.toPrimitive());
 
 	// Get ending period for the given chain
-	const endPeriod = parseInt(api.consts.auctions.endingPeriod.toString());
+	const endPeriod = api.consts.auctions.endingPeriod.toPrimitive();
 
 	// Add starting block for the given chain
 	let auctions = [];
@@ -61,18 +69,22 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 	// Build auction objects with all required values for UI
 	for (let i = 0; i < auctionCount; i++) {
 		let auction = {};
-		auction.startBlock = auctionBlocks[auctionBlocks.length - 1];
-		auction.startHash = (await api.rpc.chain.getBlockHash(auction.startBlock)).toString();
-		const apiAt = await api.at(auction.startHash);
-		const [lease, end] = (await apiAt.query.auctions.auctionInfo()).toJSON();
 
-		auction.weeksLeased = parseInt(lease);
-		auction.endPeriodBlock = parseInt(end);
+		// Blocks
+		auction.startBlock = auctionBlocks[auctionBlocks.length - 1];
+		auction.startHash = await api.rpc.chain.getBlockHash(auction.startBlock);
+		const apiAt = await api.at(auction.startHash.toString());
+		const [lease, end] = (await apiAt.query.auctions.auctionInfo()).toJSON();
+		auction.weeksLeased = lease;
+		auction.endPeriodBlock = end;
 		auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
+
+		// TODO - if bidding has already ended we can get the exact block times?
+
+		// Dates
 		auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
 		auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
 		auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock);
-
 		// TODO - how to get his value?
 		auction.startOnBoard = "December 17th, 2021";
 		auction.endOnBoard = "October 20th, 2023";
@@ -91,6 +103,7 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 	Update(auctions, setAuctions, { target: { value: 0 } });
 }
 
+// Update JSX
 function Update(auctions, setAuctions, event) {
 	const index = event.target.value;
 
@@ -130,9 +143,10 @@ function Update(auctions, setAuctions, event) {
 	setAuctions(content);
 }
 
+// Estimate a future blocks date based on 6 second block times
 function EstimateBlockDate(date, currentBlock, estimatedBlock) {
-	const blockDifference = parseInt(estimatedBlock) - currentBlock;
-	const seconds = blockDifference * 6 // 6 seconds per block
+	const blockDifference = estimatedBlock - currentBlock;
+	const seconds = blockDifference * 6;
 	let dateCopy = new Date(date.valueOf())
 	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
 	return dateCopy;
