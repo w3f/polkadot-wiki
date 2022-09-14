@@ -96,7 +96,7 @@ The security of PoS networks depends on the amount of staked tokens. This means
 that to successfully attack the network one would need a large amount of tokens that can be accrued
 by one single participant alone or would need different participants to collude and act maliciously. In case
 of NPoS, if there is an attack both the validator(s) and nominators will be
-`slashed` and in some cases their stake partially or fully confiscated. So there is little interest of acting in a harmful way because all participants can be
+`slashed` and in some cases their stake partially or fully confiscated by the network and deposited to the treasury. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad actions. Also, in NPoS validators are paid equal rewards regardless from
 the amount they have at stake, avoiding thus large payouts to few large validators which would
 ultimately lead to consensus centralization.
