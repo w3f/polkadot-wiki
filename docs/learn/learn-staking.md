@@ -28,7 +28,7 @@ locked the lower the chance of an attack on the network, as the attacker
 needs to incur heavy loss to orchestrate a successful attack (more on this later on). The process of
 locking tokens on chain is called `staking`. 
 
-Similar to the miners in PoW networks, PoS networks have `validators` who do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
+Similar to the miners in PoW networks, PoS networks have `validators` but they do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
 Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is
 thus an economic incentive for token holders to become active participants who contribute to the
 security and economic stability of the network. PoS networks in general are therefore more inclusive
