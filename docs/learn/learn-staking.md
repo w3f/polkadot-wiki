@@ -201,8 +201,7 @@ account on a cold wallet.
 ![staking](../assets/NPoS/staking-keys_stash_controller.png)
 
 This hierarchy of separate keys for stash and controller accounts was designed to add a layer of protection to nominators and validator operators. The more often one exposes and uses a private key, the higher its vulnerability for hacks or scams. So, if one uses a key
-for multiple roles on a blockchain network, security can be easily compromised as the likelihood one
-uses that key often is high. Note that the damage linked to stolen private keys is different
+for multiple roles on a blockchain network, it is likely that the account can get compromised. Note that the damage linked to stolen private keys is different
 depending on the type of account derivation. In the case of soft derivation, all derived accounts are
 compromised. More information about account derivation can be found
 [here](../learn/learn-accounts.md/#derivation-paths).
