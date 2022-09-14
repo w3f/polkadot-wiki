@@ -21,13 +21,14 @@ of the blockchain or how blocks are added to the chain. Consensus consists of tw
 - `block production`, i.e. the way multiple blocks candidates are produced, and 
 - `block finality`, i.e. the way only one block out of many candidates is selected and added to the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article for more information about finality).
 
-Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where we have many participants who do not know each other (and probably never will). In PoW, network security relies on the fact that the miners (responsible for adding blocks to the chain) must compete to solve difficult mathematic puzzles to add blocks - a solution that has been criticized for energy wastage. For doing this work, miners are typically rewarded with tokens. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
+Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where there are many participants who do not know each other (and probably never will). In PoW, network security relies on the fact that the miners who are responsible for adding blocks to the chain must compete to solve difficult mathematic puzzles to add blocks - a solution that has been criticized for the wastage of energy. For doing this work, miners are typically rewarded with tokens. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 security of the network depends on the amount of capital locked on the chain: the more the capital
-locked the lower the chance of an attack on the network, as the attacker
+locked, the lower the chance of an attack on the network, as the attacker
 needs to incur a heavy loss to orchestrate a successful attack (more on this later on). The process of
 locking tokens on the chain is called `staking`.
 
-Similar to the miners in PoW networks, PoS networks have `validators`, but they do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
+Similar to the miners in PoW networks, PoS networks have `validators`, but they do not have to compete with each other to solve mathematical puzzles.
+They are instead pre-selected to produce the blocks based on the stake backing them.
 Token holders can lock funds on the chain and for doing so, they are getting `staking rewards`. There is
 thus an economic incentive for token holders to become active participants who contribute to the
 security and economic stability of the network. PoS networks in general are therefore more inclusive
