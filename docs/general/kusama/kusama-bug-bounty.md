@@ -9,10 +9,9 @@ slug: ../../kusama-bug-bounty
 
 :::note Program Scope
 
-The bug bounty program does *not* cover bugs on code bases that are external to or, written 
-on top of Kusama, or that use Kusama. To be eligible for the bug bounty program the bug has to
-be a part of the Kusama codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
-GRANDPA, etc.
+The bug bounty program does _not_ cover bugs on code bases that are external to or, written on top
+of Kusama, or that use Kusama. To be eligible for the bug bounty program the bug has to be a part of
+the Kusama codebase, this includes protocols that Polkadot uses such as AnV, XCM, GRANDPA, etc.
 
 :::
 
@@ -26,16 +25,16 @@ Disclosure to any third parties disqualifies bug bounty eligibility.
 
 Generally speaking, any bug that poses a significant vulnerability, either to the soundness of
 protocols and protocol/implementation compliance to network security, to classical client security,
-as well as security of cryptographic primitives, could be eligible for a reward. Please note that it's
-entirely our discretion to decide whether a bug is significant enough to qualify for a reward.
+as well as security of cryptographic primitives, could be eligible for a reward. Please note that
+it's entirely our discretion to decide whether a bug is significant enough to qualify for a reward.
 
 **Examples include:** An attack that could disrupt the entire network and harm the validity to the
-network would be considered a critical threat. An attack that would disrupt service to others
-would be regarded as a high threat.
+network would be considered a critical threat. An attack that would disrupt service to others would
+be regarded as a high threat.
 
-Please note: The submission quality will be a significant factor in the level of considered compensation.
-A high-quality submission includes explaining how the bug can be reproduced, how it was
-discovered, and otherwise critical details. Please disclose responsibly; disclosure to any third
+Please note: The submission quality will be a significant factor in the level of considered
+compensation. A high-quality submission includes explaining how the bug can be reproduced, how it
+was discovered, and otherwise critical details. Please disclose responsibly; disclosure to any third
 parties disqualifies bug bounty eligibility.
 
 **Responsible investigation and reporting** Responsible investigation and reporting include, but

@@ -9,9 +9,9 @@ slug: ../learn-staking-faq
 
 # Staking FAQ
 
-:::info 
+:::info
 
-This page has been moved to [this support page.](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
+This page has been moved to
+[this support page.](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
 
 :::
-

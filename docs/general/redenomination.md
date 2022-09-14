@@ -9,19 +9,19 @@ slug: ../redenomination
 
 :::info Denomination Day
 
-The DOT redenomination took place on 21 August 2020, known as Denomination Day, at block
-number 1_248_328.
+The DOT redenomination took place on 21 August 2020, known as Denomination Day, at block number
+1_248_328.
 
 :::
 
-While [DOT](../learn/learn-DOT.md) is the unit of currency on Polkadot that most people use when interacting
-with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is
-like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12
-Plancks, that is, twelve decimal places. After Denomination Day, DOT is denominated as 
-1e10 Plancks, as in, ten decimal places. DOT denominated to twelve decimal places is referred to 
-as "DOT (old)" and DOT denominated to ten decimal places is generally referred to as "DOT". 
-When the difference must be made explicit, the current ten-decimal-denominated DOT is referred to 
-as "*New DOT*".
+While [DOT](../learn/learn-DOT.md) is the unit of currency on Polkadot that most people use when
+interacting with the system, the smallest unit of account is called the Planck. A Planck's relation
+to DOT is like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as
+1e12 Plancks, that is, twelve decimal places. After Denomination Day, DOT is denominated as 1e10
+Plancks, as in, ten decimal places. DOT denominated to twelve decimal places is referred to as "DOT
+(old)" and DOT denominated to ten decimal places is generally referred to as "DOT". When the
+difference must be made explicit, the current ten-decimal-denominated DOT is referred to as "_New
+DOT_".
 
 :::note Redenomination Explainer
 
@@ -30,7 +30,7 @@ Check out our
 
 :::
 
-The change in denomination, henceforth referred to as the *redenomination*, was voted on by the
+The change in denomination, henceforth referred to as the _redenomination_, was voted on by the
 community of DOT holders. The community decided between four options, to change the DOT denomination
 by a factor of ten, one hundred, one thousand, or not at all. The end result was to change the
 denomination by a factor of one hundred.
@@ -52,11 +52,10 @@ under the old denomination.
      After the change the decimal is here
 ```
 
-:::note 
+:::note
 
-There are no state changes with redenomination. There are no transfers. The real change regards
-the social consensus around where to put the decimal place when we talk about what constitutes a
-DOT.
+There are no state changes with redenomination. There are no transfers. The real change regards the
+social consensus around where to put the decimal place when we talk about what constitutes a DOT.
 
 :::
 
@@ -68,8 +67,7 @@ blockchain. The referendum was summarized as having four effects if approved by 
 :::info Referendum Summary
 
 - The total allocations of DOT will increase one hundred times from 10 million to 1 billion.
-- DOT allocation balances will increase by a factor of one hundred, such that 1 DOT will be 100
-  DOT.
+- DOT allocation balances will increase by a factor of one hundred, such that 1 DOT will be 100 DOT.
 - The distribution of DOT does not change, and holders of DOT still own an equal share of the
   network as before the change.
 - The precision of DOT will change from 12 decimal places to 10 decimal places.
@@ -81,17 +79,17 @@ blockchain. The referendum was summarized as having four effects if approved by 
 The initial referendum was proposed prior to the Polkadot genesis block under the assumption that
 making a redenomination would be simpler before the Polkadot chain was live. However, many in the
 community pointed out the disconnect of the two networks and how it was unfair for holders of DOT to
-be impacted by a vote by a different token holder set. For this reason, Web3 Foundation [decided
-to make a new vote on Polkadot][blog 1] when it went live, although the Kusama vote ended with a
+be impacted by a vote by a different token holder set. For this reason, Web3 Foundation [decided to
+make a new vote on Polkadot][blog 1] when it went live, although the Kusama vote ended with a
 majority in favor of the redenomination change.
 
 Web3 Foundation summarized the decision not to change:
 
 :::note
 
-However, given the non-negligible amount of opposition, including from some within the ranks of
-Web3 Foundation and Parity, **the Foundation decided that we cannot, in good faith, sponsor
-the redenomination.**
+However, given the non-negligible amount of opposition, including from some within the ranks of Web3
+Foundation and Parity, **the Foundation decided that we cannot, in good faith, sponsor the
+redenomination.**
 
 :::
 
@@ -116,11 +114,12 @@ for this poll.
 - Approving of all or none of the options was equivalent and did not affect the outcome.
 - All voters were able to alter their votes any number of times prior to the close of the poll.
 - No discretionary lock-voting was in place; all DOT used to vote counts the same.
-- Voting was made on a per-account basis; a single account must have voted the same way and was unable
-  to split its vote.
-- This vote did not affect any economics of the Polkadot platform. As in, staking rewards, inflation,
-  effective market capitalization, and the underlying balances of every account remained completely
-  unchanged. It was “merely” about what units the network uses to denominate the balances into “DOT”.
+- Voting was made on a per-account basis; a single account must have voted the same way and was
+  unable to split its vote.
+- This vote did not affect any economics of the Polkadot platform. As in, staking rewards,
+  inflation, effective market capitalization, and the underlying balances of every account remained
+  completely unchanged. It was “merely” about what units the network uses to denominate the balances
+  into “DOT”.
 
 :::
 
@@ -165,4 +164,5 @@ assistance in making sure your software is compatible with the redenomination.
 [blog 1]: https://polkadot.network/results-of-dot-redenomination-referendum/
 [blog 2]: https://polkadot.network/the-first-polkadot-vote/
 [blog 3]: https://polkadot.network/the-results-are-in/
-[ecosystem guide]: https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#
+[ecosystem guide]:
+  https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#

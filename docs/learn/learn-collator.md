@@ -23,27 +23,35 @@ Unlike validators, collator nodes do not secure the network. If a parachain bloc
 will get rejected by validators. Therefore the assumption that having more collators is better or
 more secure is not correct. On the contrary, too many collators may slow down the network. The only
 nefarious power collators have is transaction censorship. To prevent censorship, a parachain only
-needs to ensure that there exist some neutral collators - but not necessarily a majority. Theoretically,
-the censorship problem is solved with having just one honest collator.
+needs to ensure that there exist some neutral collators - but not necessarily a majority.
+Theoretically, the censorship problem is solved with having just one honest collator.
 
 ## XCM
 
 Collators are a key element of the
-[XCM (Cross-Consensus Message Passing Format)](learn-cross-consensus.md).
-By being full nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible
-for them to send messages from parachain A to parachain B.
+[XCM (Cross-Consensus Message Passing Format)](learn-cross-consensus.md). By being full nodes of the
+Relay Chain, they are all aware of each other as peers. This makes it possible for them to send
+messages from parachain A to parachain B.
 
 ## Taking the Case for One Parachain
 
-A start of a new block candidate is initiated with a block creation time. The collator aggregates all new transactions at the end of the process. When doing so, the collator signs the *parachain block candidate* and produces state transition proofs, which are a summary of the final account balances caused by the transactions in the candidate block. The collator relays the candidate block and state transition proofs to the validators
-on-chain. The validators verify the transactions within the parachain block candidate. Upon verification, and if
-all is well, the validator shares the candidate block with the Relay Chain.
+A start of a new block candidate is initiated with a block creation time. The collator aggregates
+all new transactions at the end of the process. When doing so, the collator signs the _parachain
+block candidate_ and produces state transition proofs, which are a summary of the final account
+balances caused by the transactions in the candidate block. The collator relays the candidate block
+and state transition proofs to the validators on-chain. The validators verify the transactions
+within the parachain block candidate. Upon verification, and if all is well, the validator shares
+the candidate block with the Relay Chain.
 
-Parachain block candidates are collected together and a *Relay Chain block candidate* is produced.
+Parachain block candidates are collected together and a _Relay Chain block candidate_ is produced.
 
 ![parachain candidate block diagram](../assets/polkadot-consensus-example-1.png)
 
-The validators on the network will try to reach a consensus on the Relay Chain block candidate. Upon reaching consensus, the now validated Relay Chain block candidate is shared with the validators and collators, and the process repeats for new transactions. A collator cannot continue building blocks on a parachain until the block candidate they proposed to the Relay Chain validators have been validated.
+The validators on the network will try to reach a consensus on the Relay Chain block candidate. Upon
+reaching consensus, the now validated Relay Chain block candidate is shared with the validators and
+collators, and the process repeats for new transactions. A collator cannot continue building blocks
+on a parachain until the block candidate they proposed to the Relay Chain validators have been
+validated.
 
 ![Relay Chain candidate block diagram](../assets/polkadot-consensus-example-2.png)
 
@@ -51,12 +59,13 @@ A block is produced every 6 seconds.
 
 ## Collators in the Wild
 
-Blockchains that are built using Substrate are unable to hook onto the Relay Chain on their own.
-The Parity team built the [Cumulus library](https://github.com/paritytech/cumulus/) to address this.
-Collators are being used on the [Rococo](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) testnet, and you can learn more
-about how they are used with Cumulus via the [Cumulus](https://github.com/paritytech/cumulus/)
-repository. More information can be found under the [Cumulus section](../build/build-parachains.md###cumulus) on
-the build parachain page.
+Blockchains that are built using Substrate are unable to hook onto the Relay Chain on their own. The
+Parity team built the [Cumulus library](https://github.com/paritytech/cumulus/) to address this.
+Collators are being used on the
+[Rococo](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) testnet, and you can
+learn more about how they are used with Cumulus via the
+[Cumulus](https://github.com/paritytech/cumulus/) repository. More information can be found under
+the [Cumulus section](../build/build-parachains.md###cumulus) on the build parachain page.
 
 ## Guides and Tools
 

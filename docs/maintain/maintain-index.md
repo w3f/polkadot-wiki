@@ -22,28 +22,30 @@ guides to set up a node and run the network.
 
 ## Collator
 
-- [Learn about Collators](../learn/learn-collator.md) - High level overview of collators and related links.
+- [Learn about Collators](../learn/learn-collator.md) - High level overview of collators and related
+  links.
 
 ## Nominator
 
-- [Learn about Nominators](../learn/learn-nominator.md) - High level overview of nominators and related
-  links.
+- [Learn about Nominators](../learn/learn-nominator.md) - High level overview of nominators and
+  related links.
 - [Nomination Guide (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Walkthrough on how to
   nominate on the Polkadot network.
-- [Nomination Guide (Kusama)](kusama/maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how to
-  nominate on the Kusama canary network.
+- [Nomination Guide (Kusama)](kusama/maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how
+  to nominate on the Kusama canary network.
 - [How to stop being a Nominator](maintain-guides-how-to-unbond.md) - Guide on how to stop
   nominating.
 
 ## Validator
 
-- [Learn about Validators](../learn/learn-validator.md) - High level overview of validator and related links.
+- [Learn about Validators](../learn/learn-validator.md) - High level overview of validator and
+  related links.
 - [Validator Payouts](maintain-guides-validator-payout.md) - Overview on how validator rewards are
   calculated and paid.
 - [Validation Guide (Polkadot)](maintain-guides-how-to-validate-polkadot.md) - Walkthrough on how to
   validate on the Polkadot network.
-- [Validation Guide (Kusama)](kusama/maintain-guides-how-to-validate-kusama.md) - Walkthrough on how to
-  validate on the Kusama canary network.
+- [Validation Guide (Kusama)](kusama/maintain-guides-how-to-validate-kusama.md) - Walkthrough on how
+  to validate on the Kusama canary network.
 - [Using systemmd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
   with the Validator node.
 - [Secure Validator](maintain-guides-secure-validator.md) - Best tips and practices for validating.

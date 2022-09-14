@@ -11,16 +11,16 @@ Stakers can be in any one of the three states: validating, nominating, or chilli
 wants to temporarily pause their active engagement in staking but does not want to unbond their
 funds, they can choose to "chill" their involvement and keep their funds staked.
 
-An account can step back from participating in active staking by clicking "Stop" under the
-Network > Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by
-calling the `chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to
-chill, it becomes inactive in the next era. The call must be signed by the _controller_ account, not
-the _stash_.
+An account can step back from participating in active staking by clicking "Stop" under the Network >
+Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by calling the
+`chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to chill, it
+becomes inactive in the next era. The call must be signed by the _controller_ account, not the
+_stash_.
 
 :::note Primer on stash and controller accounts
 
-If you need a refresher on the different responsibilities of the stash and controller
-account when staking, take a look at the [accounts][] section in the general staking guide.
+If you need a refresher on the different responsibilities of the stash and controller account when
+staking, take a look at the [accounts][] section in the general staking guide.
 
 :::
 
@@ -66,9 +66,23 @@ order to start nominating you again.
 
 ## Chill Other
 
-An unbounded and unlimited number of nominators and validators in Polkadot's NPoS is just not possible due to constraints in the runtime. As a result, multiple checks are incorporated to keep the size of staking system manageable, like mandating minimum active bond requirements for both nominators and validators. When these requirements are modified through on-chain governance, they can be enforced only on the accounts that newly call `nominate` or `validate` after the update. The changes to the bonding parameters would not automatically chill the active accounts on-chain which do not meet the requirements.
+An unbounded and unlimited number of nominators and validators in Polkadot's NPoS is just not
+possible due to constraints in the runtime. As a result, multiple checks are incorporated to keep
+the size of staking system manageable, like mandating minimum active bond requirements for both
+nominators and validators. When these requirements are modified through on-chain governance, they
+can be enforced only on the accounts that newly call `nominate` or `validate` after the update. The
+changes to the bonding parameters would not automatically chill the active accounts on-chain which
+do not meet the requirements.
 
-For instance, let us consider a scenario where the minimum staking requirement for nominators is changed from 80 DOTs to 120 DOTs. An account that was actively nominating with 80 DOTs before this update would still keep receiving staking rewards. To handle this corner case, the `chill_other` extrinsic was incorporated which also helps to keep things backwards compatible and safe. The `chill_other` extrinsic is permissionless and any third party user can target it on an account where the minimum active bond is not satisfied, and chill that account. The list of addresses of all the active validators and their nominators can be viewed by running [validator stats](https://github.com/w3f/validator-stats) script.
+For instance, let us consider a scenario where the minimum staking requirement for nominators is
+changed from 80 DOTs to 120 DOTs. An account that was actively nominating with 80 DOTs before this
+update would still keep receiving staking rewards. To handle this corner case, the `chill_other`
+extrinsic was incorporated which also helps to keep things backwards compatible and safe. The
+`chill_other` extrinsic is permissionless and any third party user can target it on an account where
+the minimum active bond is not satisfied, and chill that account. The list of addresses of all the
+active validators and their nominators can be viewed by running
+[validator stats](https://github.com/w3f/validator-stats) script.
 
-[chill extrinsic]: https://paritytech.github.io/substrate/master/pallet_staking/pallet/enum.Call.html#variant.chill
+[chill extrinsic]:
+  https://paritytech.github.io/substrate/master/pallet_staking/pallet/enum.Call.html#variant.chill
 [accounts]: ../learn/learn-staking.md#accounts

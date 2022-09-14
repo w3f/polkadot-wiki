@@ -47,28 +47,30 @@ under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community [made a public proposal](../maintain/maintain-guides-democracy.md)
-for a runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
-subsequently enabled on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39 UTC.
+To enable balance transfers, the community
+[made a public proposal](../maintain/maintain-guides-democracy.md) for a runtime upgrade that lifted
+the restriction on balance transfers. Transfer functionality was subsequently enabled on Polkadot at
+block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Redenomination
 
-On August 21, 2020, [redenomination](../general/redenomination.md) of DOT, the native token on Polkadot,
-occurred. From this date, one DOT (old) equals 100 new DOT.
+On August 21, 2020, [redenomination](../general/redenomination.md) of DOT, the native token on
+Polkadot, occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
 
-After 5 years of research and development, and a multi-stage launch that began in May of 2020, Polkadot launch 
-is completed on December 18, 2021, with all auction-winning  parachains producing blocks on the network. 
+After 5 years of research and development, and a multi-stage launch that began in May of 2020,
+Polkadot launch is completed on December 18, 2021, with all auction-winning parachains producing
+blocks on the network.
 
 Check out these resources for further information:
+
 - [Polkadot Network blog](https://polkadot.network/blog/parachains-are-live-polkadot-launch-is-now-complete/).
 - [Polkadot A to Z: L for Polkadot Launch](https://www.reddit.com/r/Polkadot/comments/s3yb3d/l_for_polkadot_launch_polkadot_a_to_z/).
 
-
 ## Polkadot 2.0
 
-Researchers are in the midst of research for the next version of the Polkadot network. With many 
+Researchers are in the midst of research for the next version of the Polkadot network. With many
 questions yet to be answered, as of now, some big areas of research will be in:
 
 - Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?

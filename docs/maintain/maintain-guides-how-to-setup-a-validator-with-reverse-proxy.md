@@ -7,35 +7,38 @@ keywords: [reverse proxy, nginx, setup, secure]
 slug: ../maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 ---
 
-This guide assumes that you have already configured your hardware with the appropriate specs. It has the same configuration
-as the [polkadot validator setup](https://github.com/w3f/polkadot-secure-validator).
+This guide assumes that you have already configured your hardware with the appropriate specs. It has
+the same configuration as the
+[polkadot validator setup](https://github.com/w3f/polkadot-secure-validator).
 
 :::info
 
-Because validators of parachains need to have publicly accessible IP addresses and ports to receive connections from parachain collators, adding a proxy may potentially reduce connectivity and result 
-in lower era points or the inability to validate parachain blocks. If using a proxy, it's recommended 
-to keep an eye out on networking metrics.
+Because validators of parachains need to have publicly accessible IP addresses and ports to receive
+connections from parachain collators, adding a proxy may potentially reduce connectivity and result
+in lower era points or the inability to validate parachain blocks. If using a proxy, it's
+recommended to keep an eye out on networking metrics.
 
 :::
 
-We will walk you through how to configure a reverse proxy using NGINX in front of your validator node. The
-validator uses the reverse proxy to filter traffic, whereby additional adjustments can be made to respond to a DDoS attack.
+We will walk you through how to configure a reverse proxy using NGINX in front of your validator
+node. The validator uses the reverse proxy to filter traffic, whereby additional adjustments can be
+made to respond to a DDoS attack.
 
 ### 1. Firewall configuration
 
-We will configure the firewall with [ufw](https://wiki.ubuntu.com/UncomplicatedFirewall). There needs to be three main ports
-for this setup.
+We will configure the firewall with [ufw](https://wiki.ubuntu.com/UncomplicatedFirewall). There
+needs to be three main ports for this setup.
 
 - An SSH port, commonly ssh/tcp port `22`.
 - A proxy port
 - p2p port: must be denied at the firewall level.
 
-In this example, we will assign the port number `2435` to the proxy port and the port number `30333` to the p2p port.
-To enable the firewall and the use of the ports, allow SSH access.
+In this example, we will assign the port number `2435` to the proxy port and the port number `30333`
+to the p2p port. To enable the firewall and the use of the ports, allow SSH access.
 
 :::note For parachains, you will need to allow for both inbound and outbound traffic on the p2p port
 
-Since the proxy port is the public-facing port, this will need to have inbound and outbound traffic 
+Since the proxy port is the public-facing port, this will need to have inbound and outbound traffic
 open, with the normal p2p port closed.
 
 :::
@@ -61,8 +64,8 @@ The `verbose` option shows some extra information about the firewall's behavior.
 
 ### 2. Basic log viewing
 
-We use [journald](https://www.loggly.com/blog/why-journald/) logs for basic log viewing.
-Create a file called `journald.conf` file inside the `/etc/systemd/` directory with the following content:
+We use [journald](https://www.loggly.com/blog/why-journald/) logs for basic log viewing. Create a
+file called `journald.conf` file inside the `/etc/systemd/` directory with the following content:
 
 ```bash
 [Journal]
@@ -74,7 +77,9 @@ SystemMaxFileSize=512M
 SystemMaxFiles=100
 ```
 
-Check out the [example journald configuration file](https://github.com/w3f/polkadot-secure-validator/blob/master/ansible/roles/polkadot-validator/files/journald.conf) for more available options.
+Check out the
+[example journald configuration file](https://github.com/w3f/polkadot-secure-validator/blob/master/ansible/roles/polkadot-validator/files/journald.conf)
+for more available options.
 
 Finally, run the following command to restart the journald service:
 
@@ -90,7 +95,8 @@ First, install NGINX with the following command:
 sudo apt-get install nginx
 ```
 
-Next, create an NGINX configuration file called `nginx.conf` inside the `/etc/nginx/` directory with the following content:
+Next, create an NGINX configuration file called `nginx.conf` inside the `/etc/nginx/` directory with
+the following content:
 
 ```bash
 user www-data www-data;
@@ -109,11 +115,13 @@ events{
 }
 ```
 
-This will import and make use of the [NGINX stream module](https://nginx.org/en/docs/stream/ngx_stream_core_module.html).
-In a nutshell, this module allows for continuous streaming of data in or out of the validator machine with all the benefits
-of having an optimized reverse proxy.
+This will import and make use of the
+[NGINX stream module](https://nginx.org/en/docs/stream/ngx_stream_core_module.html). In a nutshell,
+this module allows for continuous streaming of data in or out of the validator machine with all the
+benefits of having an optimized reverse proxy.
 
-Next, create a folder called `/streams-enabled/` inside the `/etc/nginx/` directory and remove the default NGINX site.
+Next, create a folder called `/streams-enabled/` inside the `/etc/nginx/` directory and remove the
+default NGINX site.
 
 ```bash
 # Create the streams-enabled folder
@@ -122,10 +130,11 @@ mkdir /etc/nginx/streams-enabled
 /etc/nginx/sites-enabled/default
 ```
 
-Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create the proxy service file called
-`polkadot-proxy.conf` with the following content:
+Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create the proxy service file
+called `polkadot-proxy.conf` with the following content:
 
-:::info Use the previously defined ports: port `2435` for the proxy port & port number `30333` for the p2p port
+:::info Use the previously defined ports: port `2435` for the proxy port & port number `30333` for
+the p2p port
 
 :::
 
@@ -154,41 +163,42 @@ service nginx restart
 
 These are some of the flags you are going to use when executing the command.
 
-`--public-addr <VALIDATOR_IP>, <PROXY_PORT>` - This flag defines the validator's IP and the proxy port
-that all other nodes in the network will connect to.
+`--public-addr <VALIDATOR_IP>, <PROXY_PORT>` - This flag defines the validator's IP and the proxy
+port that all other nodes in the network will connect to.
 
-`--listen-addr <LOCALHOST>, <P2P_PORT>` - This flag defines the p2p port that the polkadot application
-will use to connect to the NGINX reverse proxy.
+`--listen-addr <LOCALHOST>, <P2P_PORT>` - This flag defines the p2p port that the polkadot
+application will use to connect to the NGINX reverse proxy.
 
 #### P2P Networking
 
 Nodes will use [libp2p](https://libp2p.io/) as the networking layer to establish peers and gossip
-messages, but uses NGINX as a load balancer which acts as a _first listener_ of the streaming data to help
-balance the load.
+messages, but uses NGINX as a load balancer which acts as a _first listener_ of the streaming data
+to help balance the load.
 
 ##### public-addr
 
-`public-addr` - a flexible encoding of multiple layers of protocols into a human-readable addressing scheme.
-In our example, `/ip4/<VALIDATOR_IP>/tcp/<PROXY_PORT>` is a valid `public-addr` that
-specifies wanting the network to reach the validator IPv4 address with TCP packets on the pre-defined proxy port.
+`public-addr` - a flexible encoding of multiple layers of protocols into a human-readable addressing
+scheme. In our example, `/ip4/<VALIDATOR_IP>/tcp/<PROXY_PORT>` is a valid `public-addr` that
+specifies wanting the network to reach the validator IPv4 address with TCP packets on the
+pre-defined proxy port.
 
 - `IP_ADDRESS` - the public IP address of the validator.
 
-- `PROXY_PORT` - the port that nodes will send p2p messages over the network and are read by the NGINX reverse proxy.
+- `PROXY_PORT` - the port that nodes will send p2p messages over the network and are read by the
+  NGINX reverse proxy.
 
 ##### listen-addr
 
-`listen-addr` - the specification of what port the polkadot application will connect to the reverse proxy.
-In our example, `/ip4/0.0.0.0/tcp/<P2P_PORT>`
-specifies that you want to listen to NGINX on the localhost address (`0.0.0.0`, or all interfaces), with TCP
-packets on the pre-defined p2p port.
+`listen-addr` - the specification of what port the polkadot application will connect to the reverse
+proxy. In our example, `/ip4/0.0.0.0/tcp/<P2P_PORT>` specifies that you want to listen to NGINX on
+the localhost address (`0.0.0.0`, or all interfaces), with TCP packets on the pre-defined p2p port.
 
 - `P2P_PORT` - the port that the polkadot application connects to NGINX.
 
 #### Starting the validator with the NGINX proxy
 
-After retrieving the appropriate `IP_ADDRESS`, `PROXY_PORT` and `P2P_PORT` of the validator node, we can start the
-validator.
+After retrieving the appropriate `IP_ADDRESS`, `PROXY_PORT` and `P2P_PORT` of the validator node, we
+can start the validator.
 
 Start your validator with the `--validator` flag:
 
@@ -217,5 +227,5 @@ You should see your validator's peers, as well as the p2p port you are using to 
 2020-12-17 19:04:54  __ Idle (35 peers), best: #2940154 (0x1419_56db), finalized #2940151 (0xc4b8_8fa1), _ 1.2MiB/s _ 1002.5kiB/s
 ```
 
-Congratulations! You have successfully set up a validator with NGINX and now have a
-more secure way of running your validator.
+Congratulations! You have successfully set up a validator with NGINX and now have a more secure way
+of running your validator.

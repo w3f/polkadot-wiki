@@ -7,8 +7,7 @@ keywords: [node, full node, sync, setup node]
 slug: ../maintain-sync
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom
 Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's
@@ -16,8 +15,8 @@ always better to rely on your own infrastructure than on a third-party-hosted on
 decentralized world.
 
 This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
-same process applies to any other [Substrate](https://substrate.io)-based chain. First,
-let's clarify the term _full node_.
+same process applies to any other [Substrate](https://substrate.io)-based chain. First, let's
+clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -34,10 +33,10 @@ was, or which extrinsics resulted in a certain state change are fast operations 
 archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth
 block this was around 660 GB.
 
-:::tip 
+:::tip
 
-The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama nodes
-in real-time.
+The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama
+nodes in real-time.
 
 :::
 
@@ -62,20 +61,19 @@ Another type of node is a **light node**. A light node has only the runtime and 
 but does not store past blocks and so cannot read historical data without requesting it from a node
 that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
 light nodes is a browser extension, which is a node in its own right, running the runtime in WASM
-format as well as a full or light node that is completely encapsulated in WASM and can be integrated 
+format as well as a full or light node that is completely encapsulated in WASM and can be integrated
 into webapps: https://github.com/paritytech/smoldot#wasm-light-node
 
 :::note Substrate Connect
 
-[Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with 
-substrate based blockchains in the browser without using an RPC server. It is a light node that runs 
-entirely in Javascript. Substrate Connect uses a 
-[smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the  blockchain network without relying on specific 
-3rd parties. Substrate Connect is available as a 
+[Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with
+substrate based blockchains in the browser without using an RPC server. It is a light node that runs
+entirely in Javascript. Substrate Connect uses a
+[smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the
+blockchain network without relying on specific 3rd parties. Substrate Connect is available as a
 [browser extension](https://substrate.io/developers/substrate-connect/) on both Chrome and Firefox.
 
 :::
-
 
 <!--seperates content from instructions-->
 
@@ -88,12 +86,11 @@ entirely in Javascript. Substrate Connect uses a
 This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
-:::note The bash commands that are provided to run against **your node** use
-`Polkadot` as the default chain
+:::note The bash commands that are provided to run against **your node** use `Polkadot` as the
+default chain
 
-Use the `--chain` flag if you are
-following the setup instructions to setup a `Kusama` node.
-For example:
+Use the `--chain` flag if you are following the setup instructions to setup a `Kusama` node. For
+example:
 
 ```bash
 ./target/release/polkadot --name "Your Node's Name" --chain kusama
@@ -101,14 +98,8 @@ For example:
 
 :::
 
-<Tabs
-groupId="operating-systems"
-values={[
-{label: 'macOS', value: 'mac'},
-{label: 'Windows', value: 'win'},
-{label: 'Linux', value: 'linux'},
-]}>
-<TabItem value="mac">
+<Tabs groupId="operating-systems" values={[ {label: 'macOS', value: 'mac'}, {label: 'Windows',
+value: 'win'}, {label: 'Linux', value: 'linux'}, ]}> <TabItem value="mac">
 
 - Install Homebrew within the terminal by running:
   ```bash
@@ -145,7 +136,8 @@ values={[
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 - Install [Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (same webpage).
 
-- Determine the latest version of the [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+- Determine the latest version of the
+  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
 - Download the correct Polkadot binary within Ubuntu by running the following command. Replace
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
@@ -168,14 +160,15 @@ values={[
 </TabItem>
 <TabItem value="linux">
 
-- Determine the latest version of the [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+- Determine the latest version of the
+  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
 
   :::info
 
-  The nature of pre-built binaries means that they may not work on your particular architecture 
-  or Linux distribution. If you see an error like `cannot execute binary file: Exec format error` 
-  it likely means the binary is not compatible with your system. You will either need to compile 
-  the [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
+  The nature of pre-built binaries means that they may not work on your particular architecture or
+  Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it
+  likely means the binary is not compatible with your system. You will either need to compile the
+  [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
 
   :::
 
@@ -200,9 +193,8 @@ values={[
 
 ## Get Substrate
 
-Follow instructions as outlined
-[here](https://docs.substrate.io/quick-start/) - note that Windows users will
-have their work cut out for them. It's better to use a virtual machine instead.
+Follow instructions as outlined [here](https://docs.substrate.io/quick-start/) - note that Windows
+users will have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
 
@@ -274,10 +266,10 @@ after the node is in sync.
 
 Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so
 it's best left up to those that either already have familiarity with docker, or have completed the
-other set-up instructions in this guide.
-Be aware that when you run polkadot in docker the process only listen on localhost by default. 
-If you would like to connect to your node's services (rpc, websockets, and prometheus) you need to ensure
-that you run you node with the `--rpc-external`, `--ws-external`, and `--prometheus-external` commands.
+other set-up instructions in this guide. Be aware that when you run polkadot in docker the process
+only listen on localhost by default. If you would like to connect to your node's services (rpc,
+websockets, and prometheus) you need to ensure that you run you node with the `--rpc-external`,
+`--ws-external`, and `--prometheus-external` commands.
 
 ```zsh
 docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external
