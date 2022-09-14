@@ -107,8 +107,7 @@ ultimately lead to consensus centralization.
 
 Since validator slots are limited, most of those who wish to stake their DOT and contribute to the
 economic security of the network will be nominators, thus here we focus on the role of nominators.
-However, it is worth mentioning that validators do most of the heavy lifting: they run hardware
-equipment and manage
+However, it is worth mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
 [session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys),
 produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to
 consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition
