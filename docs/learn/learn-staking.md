@@ -146,7 +146,7 @@ The diagram below shows how the selection of those criteria affects reward-to-ri
 
 #### In theory
 
-To maximize rewards and minimize risk one could select those validators
+To maximize rewards and minimize risk, one could select those validators
 that:
 
 - have era points above average (because they will get more rewards for being active), 
