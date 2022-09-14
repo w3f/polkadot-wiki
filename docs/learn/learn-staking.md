@@ -442,8 +442,7 @@ there may be slight differences in your rewards from era to era, and even amongs
 active set at the same time. These variations should cancel out over a long enough timeline. See the
 page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md).
 
-In order to be paid your staking rewards, someone must claim them for each validator that you
-nominate. Staking rewards are kept available for 84 eras, which is approximately {{ polkadot: 84 days :polkadot }}{{ kusama: 21 days :kusama }}. For more information on why this is so, see the page on [simple payouts](learn-simple-payouts.md).
+The distribution of staking rewards to the nominators is not automatic and needs to be triggered by someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards payout for all the nominators whose stake has backed a specific validator in the active set of that era. Staking rewards are kept available for 84 eras, which is approximately {{ polkadot: 84 days :polkadot }}{{ kusama: 21 days :kusama }}. For more information on why this is so, see the page on [simple payouts](learn-simple-payouts.md).
 
 :::info Payouts
 
