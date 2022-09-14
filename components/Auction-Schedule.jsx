@@ -54,6 +54,10 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 	const currentBlock = await api.rpc.chain.getBlock();
 	const currentBlockNumber = currentBlock.block.header.number.toPrimitive();
 
+	currentBlock.block.extrinsics.forEach((ex, index) => {
+		console.log(index, ex.hash.toHex());
+	});
+
 	// Get current on-chain date/time
 	let chainTimestamp = await api.query.timestamp.now();
 	let date = new Date(chainTimestamp.toPrimitive());
@@ -77,24 +81,11 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 		auction.endPeriodBlock = end;
 		auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
 
-		// Retrieve or estimate dates depending on if the block has past or a future block
-		if (auction.startBlock < currentBlockNumber) {
-			const stamp = await apiAt.query.timestamp.now();
-			const confirmedDate = new Date(stamp);
-			auction.startDate = confirmedDate;
-		} else {
-			auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
-		}
-		if (auction.endPeriodBlock < currentBlockNumber) {
-			auction.endPeriodDate = date;
-		} else {
-			auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
-		}
-		if (auction.biddingEndsBlock < currentBlockNumber) {
-			auction.biddingEndsDate = date;
-		} else {
-			auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock);
-		}
+
+		// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
+		auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
+		auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
+		auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock);
 
 		// TODO - how to get his value?
 		auction.startOnBoard = "December 17th, 2021";
