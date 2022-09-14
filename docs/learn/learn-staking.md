@@ -348,8 +348,8 @@ by backing a validator with a low reputation will get paid more).
 
 Before distributing rewards to nominators, validators can create a cut of the reward (a commission) that is not shared with the nominators.
 This cut is a percentage of the block reward, not an absolute value. After the commission gets
-deducted, the remaining portion is based on their staked value and split between the validator and
-all of the nominators who have voted for this validator.
+deducted, the remaining portion is distributed pro-rata based on their staked value and split between the validator and
+all of the nominators whose stake has backed this validator.
 
 For example, assume the block reward for a validator is 10 DOT. A validator may specify
 `validator_commission = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT
