@@ -133,9 +133,9 @@ The task of choosing validators is not simple, as it should take into account fo
 risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maximizing rewards and minimizing risks, with sometimes having to
 compromise between the two as minimizing risks might decrease rewards as well. Nominators should pay attention especially to six criteria when nominating validators (not in order of importance):
 
-- amount of era points
-- validator pool, equivalent to own stake (i.e. coming from the validator) + other stake (i.e. coming from nominators)
-- own stake
+- recent history of the era points earned across eras
+- validator's self stake (shows skin in the game)
+- total stake backing the validator (which is the sum of self stake and the stake coming from nominators)
 - commission fees (i.e. how much validators charge nominators)
 - verified identity
 - previous slashes
