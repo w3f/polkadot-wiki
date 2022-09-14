@@ -187,7 +187,7 @@ There are two different accounts that can be used to securely manage your funds 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
   controller account. As a result, you may actively participate to staking with a stash private key kept in
   a cold wallet like ledger, meaning it stays offline all the time. Stash account keys are used to
-  sign staking actions such as bonding and unbonding funds.
+  sign staking actions such as bonding additional funds.
 
 - **Controller:** This account acts on behalf of the stash account, signalling decisions about
   nominating and validating. It can set preferences like commission (for validators) and the staking rewards payout
