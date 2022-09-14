@@ -129,7 +129,7 @@ would like to securely stake your tokens using Polkadot JS Apps, refer to [this]
 
 ### Selection of validators
 
-Choosing validators is not a simple task and it should take into account for nominator reward and
+The task of choosing validators is not simple, as it should take into account for nominator reward and
 risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maximizing rewards and minimizing risks, with sometimes having to
 compromise between the two as minimizing risks might decrease rewards as well. Nominators should pay attention especially to six criteria when nominating validators (not in order of importance):
 
