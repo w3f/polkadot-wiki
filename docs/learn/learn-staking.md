@@ -458,7 +458,7 @@ see anything in this tab, yet still have received a payout if somebody (generall
 necessarily, another nominator or the validator operator) has triggered the payout for that
 validator for that era.
 
-:::warning Time limit
+:::warning Time limit to claim staking rewards
 
 If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts will also be lost. Since unbonding takes {{ polkadot: <RPC network="polkadot" path="query.staking.bondingDuration" defaultValue={28}/> days :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.bondingDuration" defaultValue={7}/> days :kusama }}, nominators should check if they have pending payouts at least this often.
 
