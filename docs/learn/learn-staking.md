@@ -190,7 +190,7 @@ There are two different accounts that can be used to securely manage your funds 
   sign staking actions such as bonding and unbonding funds.
 
 - **Controller:** This account acts on behalf of the stash account, signalling decisions about
-  nominating and validating. It sets preferences like commission (for validators) and payout
+  nominating and validating. It can set preferences like commission (for validators) and the staking rewards payout
   account. The earned rewards can be bonded (locked) immediately for staking on your stash account,
   which would effectively compound the rewards you receive over time. You could also choose to have
   them deposited to your controller account or a different account as free (transferable) balance.
