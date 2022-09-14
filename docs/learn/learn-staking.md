@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection"
 Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Introduction
+## Introduction to Proof-of-Stake (PoS)
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to finalize
 blocks on the chain. Consensus is the process of agreeing on something, in this case, the progression
@@ -21,13 +21,14 @@ of the blockchain or how blocks are added to the chain. Consensus consists of tw
 - `block production`, i.e. the way multiple blocks candidates are produced, and 
 - `block finality`, i.e. the way only one block out of many candidates is selected and added to the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article for more information about finality).
 
-Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where we have many participants who do not know each other (and probably never will). In PoW, network security relies on the fact that the miners (responsible for adding blocks to the chain) must compete to solve difficult mathematic puzzles to add blocks - a solution that has been criticized for energy wastage. For doing this work, miners are typically rewarded with tokens. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
+Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where there are many participants who do not know each other (and probably never will). In PoW, network security relies on the fact that the miners who are responsible for adding blocks to the chain must compete to solve difficult mathematic puzzles to add blocks - a solution that has been criticized for the wastage of energy. For doing this work, miners are typically rewarded with tokens. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 security of the network depends on the amount of capital locked on the chain: the more the capital
-locked the lower the chance of an attack on the network, as the attacker
+locked, the lower the chance of an attack on the network, as the attacker
 needs to incur a heavy loss to orchestrate a successful attack (more on this later on). The process of
 locking tokens on the chain is called `staking`.
 
-Similar to the miners in PoW networks, PoS networks have `validators` but they do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
+Similar to the miners in PoW networks, PoS networks have `validators`, but they do not have to compete with each other to solve mathematical puzzles.
+They are instead pre-selected to produce the blocks based on the stake backing them.
 Token holders can lock funds on the chain and for doing so, they are getting `staking rewards`. There is
 thus an economic incentive for token holders to become active participants who contribute to the
 security and economic stability of the network. PoS networks in general are therefore more inclusive
@@ -39,7 +40,7 @@ PoS ensures that everybody participating in the staking process has
 staking process can be punished or `slashed`, and depending on the gravity of the situation, their
 stake can be partly or fully confiscated by the network. It is not in a staker's economic interest to orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
-## Nominated Proof-of-stake overview
+## Nominated Proof-of-Stake Overview
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake),
 a relatively novel and sophisticated mechanism to select the validators who are allowed to participate in 
@@ -54,7 +55,7 @@ validators as trusted validator candidates, and the network will automatically d
 an even manner. Also, in NPoS the stake of both nominators and validators can be slashed.  For an in-depth review of NPoS see
 [this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
-### Nominating validators
+### Nominating Validators
 
 The action of nominating consists of a) locking or
 bonding tokens (stake) on the chain, and b) nominating a set of validator candidates to whom the stake will
@@ -63,7 +64,7 @@ from election theory to game theory to discrete optimization, to develop an effi
 selection process that offers fair representation and security, thus avoiding uneven power and
 influence among validators. The election algorithms used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are based on the Proportional Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information about PJR methods visit [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article.
 
-### Eras and sessions
+### Eras and Sessions
 
 The stake from nominators is used to increase the number of tokens held by such candidates, increasing their chance of being selected by the election algorithm for block
 production during a specific `era`. An era is a period of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
@@ -75,7 +76,7 @@ required to produce a block within a specific session, but they do not know all 
 specific era. Having sessions adds a layer of security because it decreases the chance of having
 multiple validators assigned to a slot colluding to harm the network.
 
-### Rewards
+### Staking Rewards
 
 Validators who produce a block are rewarded with tokens, and they can share rewards with their
 nominators. Both validators and nominators can stake their tokens on chain and receive staking
@@ -89,16 +90,13 @@ To know more about era points, and how and on which basis they are distributed v
 
 ### Skin in the game when Staking
 
-The security of PoS networks depends on the amount of staked tokens. This means
-that to successfully attack the network one would need a large number of tokens that can be accrued
-by one single participant alone or would need different participants to collude and act maliciously. In the case of NPoS, if there is an attack both the validator(s) and nominators will be
-`slashed` and in some cases, their stake partially or fully confiscated by the network and deposited in the treasury. So there is little interest in acting in a harmful way because all participants can be
-held accountable for bad actions. In NPoS, validators are paid equal rewards regardless of the amount they have at stake, thus avoiding large payouts to few large validators which would
-ultimately lead to consensus centralization.
+The security of PoS networks depends on the amount of staked tokens. To successfully attack the network, a malicious actor would need to accrue a large number of tokens or would need different participants to collude and act maliciously. If there is an attack in the case of NPoS, both the validator(s) and nominators will be
+`slashed` resulting in their stake being partially or fully confiscated by the network and then deposited to the treasury. There is little interest for a rational network participant to act in a harmful way because NPoS ensures that all participants can be
+held accountable for their bad actions. In NPoS, validators are paid equal rewards regardless of the amount of stake backing them, thus avoiding large payouts to few large validators which might lead to centralization.
 
 ## Being a nominator
 
-### Tasks and responsibilities
+### Tasks and Responsibilities of a Nominator
 
 Since validator slots are limited, most of those who wish to stake their DOT and contribute to the
 economic security of the network will be nominators, thus here we focus on the role of nominators.
@@ -122,7 +120,7 @@ If you want to become a nominator, see
 [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
 would like to securely stake your tokens using Polkadot JS Apps, refer to [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-) support article. {{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama :kusama }}
 
-### Selection of validators
+### Selection of Validators
 
 The task of choosing validators is not simple, as it should take into account nominator reward and
 risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maximizing rewards and minimizing risks, with sometimes having to
@@ -139,7 +137,7 @@ The diagram below shows how the selection of those criteria affects the reward-t
 
 ![rewards and risks diagram](../assets/staking/Reward-risk%20nominating.png)
 
-#### In theory
+#### Validator Selection Criteria
 
 To maximize rewards and minimize risk, one could select those validators
 that:
@@ -151,7 +149,7 @@ that:
 - have on-chain registered identity (because it adds a layer of trust and possibly provides access to their website and contact details), 
 - and have not been slashed (meaning that their on-chain behavior is genuine).
 
-#### In practice
+#### Keeping Track of Nominated Validators
 
 :::caution Nominators must periodically check their validators
 
@@ -171,7 +169,7 @@ era points below average, it makes sense to nominate a better-performing validat
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 support article to understand in detail how to select the set of validators to nominate.
 
-### Accounts
+### Stash and Controller Accounts for Staking
 
 Two different accounts can be used to securely manage your funds while staking.
 
@@ -210,7 +208,7 @@ For ledger users staking directly on Ledger Live, currently, there is no option 
 
 :::
 
-### Staking proxies
+### Staking Proxies
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
 [substrate](https://substrate.io/), a modular system to efficiently build blockchains. Within each module or `pallet`, one can `call` different
@@ -232,7 +230,7 @@ it is important to remember that actions that can be performed by the proxy acco
 proxy, extrinsic calls to the balances pallet cannot be signed. This means it is not possible to do balance transfers
 on the proxied account through a staking proxy.
 
-## Staking system overview
+## Staking System Overview
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator, in turn, submits a list of up to
@@ -256,7 +254,7 @@ which is a dynamic value that can be much higher than
 
 :::
 
-### Bags list
+### Bags List
 
 The nomination intents are placed in a so-called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
@@ -327,7 +325,7 @@ achieve fair representation of the nominators. If you want to know more about ho
 election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
 
-### Rewards distribution
+### Rewards Distribution
 
 :::info
 
@@ -403,7 +401,7 @@ stake with your DOT, provider fees, compound rewards, etc.) to have a better est
 it may not be entirely accurate since staking participation is changing dynamically, it works well
 as an indicator.
 
-#### Oversubscription, commission fees & slashes
+#### Oversubscription, Commission Fees & Slashes
 
 There is an additional factor to consider in terms of rewards. While there is no limit to the number
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
@@ -427,7 +425,7 @@ attract more nominators and increase their chances of being elected. In the long
 that all validators will need to be cost-efficient to remain competitive, and that validators with
 higher reputation will be able to charge slightly higher commission fees (which is fair).
 
-### Claiming rewards
+### Claiming Staking Rewards
 
 {{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
 Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
