@@ -127,7 +127,7 @@ risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maxim
 compromise between the two, as minimizing risks might decrease rewards as well. Nominators should pay attention, especially to six criteria when nominating validators (not in order of importance):
 
 - recent history of the era points earned across eras
-- validator's (own) stake (shows skin in the game)
+- validator's self stake (shows skin in the game)
 - total stake backing the validator (which is the sum of self stake and the stake coming from nominators)
 - commission fees (i.e. how much validators charge nominators)
 - verified identity
@@ -135,7 +135,7 @@ compromise between the two, as minimizing risks might decrease rewards as well. 
 
 The diagram below shows how the selection of those criteria affects the reward-to-risk ratio.
 
-![rewards and risks diagram](../assets/staking/Reward-risk%20nominating.png)
+![rewards and risks diagram](../assets/staking/Reward-risk.png)
 
 #### Validator Selection Criteria
 
@@ -194,7 +194,7 @@ account on a cold wallet.
 
 :::
 
-![staking](../assets/NPoS/staking-keys_stash_controller.png)
+![staking](../assets/staking/stash-controller.png)
 
 This hierarchy of separate keys for stash and controller accounts was designed to add a layer of protection to nominators and validator operators. The more often one exposes and uses a private key, the higher its vulnerability for hacks or scams. So, if one uses a key
 for multiple roles on a blockchain network, it is likely that the account can get compromised. Note that the damage linked to stolen private keys is different
@@ -204,7 +204,7 @@ compromised. More information about account derivation can be found
 
 :::info
 
-For ledger users staking directly on Ledger Live, currently, there is no option to use separate stash and controller accounts. That is if you stake on Ledger Live your stash account will be your controller too.
+For Ledger users staking directly on Ledger Live, currently, there is no option to use separate stash and controller accounts. That is if you stake on Ledger Live your stash account will be your controller too.
 
 :::
 
@@ -220,6 +220,8 @@ a nominator can bond funds and nominate some validators. The signature of such
 extrinsic might lead to an event on the chain such as a reward payout to that nominator at the end of an era; this is an event inside the chain. This way of having
 transactions categorized within pallets and functionalities makes it possible to create accounts
 having special permissions also called **proxy accounts**.
+
+![staking](../assets/staking/stash-stakingProxy.png)
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} proxy accounts are special
 accounts which can sign extrinsic calls made to specific pallets on behalf of the proxied account. There is thus the
