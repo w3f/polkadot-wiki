@@ -226,7 +226,7 @@ transactions categorized within pallets and functionalities makes it possible to
 having special permissions also called **proxy accounts**.
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} proxy accounts are special
-accounts to which one can delegate signatures to calls from specific pallets. There is thus the
+accounts which can sign extrinsic calls made to specific pallets on behalf of the proxied account. There is thus the
 possibility to create staking proxy accounts that can be used to sign only calls from staking,
 session and utility pallets. This makes the stash account even more isolated than using a controller
 account since now one can bond / unbond / bond more funds using the staking proxy account. However,
