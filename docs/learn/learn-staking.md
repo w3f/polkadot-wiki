@@ -21,43 +21,43 @@ of the blockchain or how blocks are added to the chain. Consensus consists of tw
 - `block production`, i.e. the way multiple blocks candidates are produced, and 
 - `block finality`, i.e. the way only one block out of many candidates is selected and added to the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article for more information about finality).
 
-Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where we have many participants who do not know each other (and probably never will). In PoW networks, network security relies on the fact that the miners (responsible for adding blocks to the chain) must compete to solve difficult mathematic puzzles to add blocks - a solution that has been criticized for energy wastage. For doing this work, miners are typically rewarded with tokens. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
+Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where we have many participants who do not know each other (and probably never will). In PoW, network security relies on the fact that the miners (responsible for adding blocks to the chain) must compete to solve difficult mathematic puzzles to add blocks - a solution that has been criticized for energy wastage. For doing this work, miners are typically rewarded with tokens. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 security of the network depends on the amount of capital locked on the chain: the more the capital
 locked the lower the chance of an attack on the network, as the attacker
 needs to incur a heavy loss to orchestrate a successful attack (more on this later on). The process of
-locking tokens on the chain is called `staking`. 
+locking tokens on the chain is called `staking`.
 
 Similar to the miners in PoW networks, PoS networks have `validators` but they do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
-Token holders can lock funds on chain and for doing so, they are getting `staking rewards`. There is
+Token holders can lock funds on the chain and for doing so, they are getting `staking rewards`. There is
 thus an economic incentive for token holders to become active participants who contribute to the
 security and economic stability of the network. PoS networks in general are therefore more inclusive
 than PoW networks, as participants do not need to have either technical knowledge about
 blockchain technology or experience in running mining equipment. 
 
 PoS ensures that everybody participating in the staking process has
-"skin in the game" and thus can be held accountable. In case of misbehavior participants in the
+"skin in the game" and thus can be held accountable. In case of misbehavior, participants in the
 staking process can be punished or `slashed`, and depending on the gravity of the situation, their
 stake can be partly or fully confiscated by the network. It is not in a staker's economic interest to orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
 ## Nominated Proof-of-stake overview
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements NPoS (Nominated Proof-of-Stake),
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake),
 a relatively novel and sophisticated mechanism to select the validators who are allowed to participate in 
 its [consensus](learn-consensus.md) protocol. The NPoS encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
-holders to participate as nominators.
+holders to participate as nominators. NPoS encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+holders to participate as `nominators`. 
 
-[Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-holders to participate as `nominators`. Nominators may back up to
+Nominators may back up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 validators as trusted validator candidates, and the network will automatically distribute the stake among validators in
-an even manner. Also, in NPoS the stake of both nominators and validators can be slashed.  For an in-depth review of NPoS check
+an even manner. Also, in NPoS the stake of both nominators and validators can be slashed.  For an in-depth review of NPoS see
 [this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
 ### Nominating validators
 
 The action of nominating consists of a) locking or
-bonding tokens (stake) on chain, and 2) nominating a set of validator candidates to whom the stake will
+bonding tokens (stake) on the chain, and b) nominating a set of validator candidates to whom the stake will
 be allocated. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
 from election theory to game theory to discrete optimization, to develop an efficient validator
 selection process that offers fair representation and security, thus avoiding uneven power and
@@ -66,7 +66,7 @@ influence among validators. The election algorithms used by {{ polkadot: Polkado
 ### Eras and sessions
 
 The stake from nominators is used to increase the number of tokens held by such candidates, increasing their chance of being selected by the election algorithm for block
-production during a specific `era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
+production during a specific `era`. An era is a period of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
 which an `active set` of validators is producing blocks and performing other actions on chain. This
 means that not all validators are in the active set and such set changes between eras. Each era is
 divided into 6 epochs or `sessions` during which validators are assigned as block producers to
@@ -109,7 +109,7 @@ consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate th
 function of parachains, and possibly some other responsibilities regarding data availability and
 [XCM](learn-cross-consensus.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
-to become a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
+to become a validator you can consult [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
 Nominators have far fewer responsibilities than validators. These include selecting validators and
 monitoring their performance, keeping an eye on changing commission rates (a validator can change
@@ -118,7 +118,7 @@ being completely set-it-and-forget-it, a nominator's experience is relatively ha
 a validator. For more information, you can take a look at the [nominator guide](learn-nominator.md)
 to understand your responsibilities as a nominator.
 
-If you want to become a nominator, check
+If you want to become a nominator, see
 [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
 would like to securely stake your tokens using Polkadot JS Apps, refer to [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-) support article. {{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama :kusama }}
 
@@ -168,7 +168,7 @@ being the most variable and thus one of the key probabilistic components of stak
 to change nominations because of the low era points of a validator in a single era. Variability in rewards due to the era points should level out over time. If a validator consistently gets
 era points below average, it makes sense to nominate a better-performing validator for the health of the network and for increased staking rewards.
 
-Check
+See
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 support article to understand in detail how to select the set of validators to nominate.
 
@@ -298,7 +298,7 @@ The `voterList` pallet comes with the extrinsic `putInFrontOf` which helps the n
 bag. Also, the pallet comes with an important permissionless extrinsic: `rebag`. This
 allows anyone to specify another account that is in the wrong bag, and place it in the correct one.
 Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like
-staking rewards/slashing do not. Check the [bags-list](learn-nominator.md#bags-list) section for
+staking rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) section for
 more information.
 
 This sorting functionality using bags is extremely important for the
@@ -308,7 +308,7 @@ to the chain's runtime storage. In the current staking system configuration, the
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
 nomination intents, of which, at most {{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
-come out as the electing nominators. Check
+come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
@@ -316,7 +316,7 @@ come out as the electing nominators. Check
 Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
 {{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }} nominators is applied to the
 validators in the active set. To avail of staking rewards, ensure that the number of tokens bonded is
-higher than the minimum active nomination. For more information, check the
+higher than the minimum active nomination. For more information, see the
 [nominator guide](learn-nominator.md)
 
 :::
@@ -464,7 +464,7 @@ Rewards can be directed to the same account used to sign the payout (controller)
 increasing the staked value or not increasing the staked value), or to a completely unrelated
 account. It is also possible to top-up / withdraw some bonded tokens without having to un-stake all staked tokens.
 
-If you wish to check if you received a payout, you will have to check via a block explorer. See
+If you wish to know if you received a payout, you will have to check via a block explorer. See
 [the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
 for details.
 
@@ -598,7 +598,7 @@ percentage of staking rewards that go to the Treasury.
 - **Blue line**: Inflation rewards to stakers
 - **Green line**: Staker rate of return
 
-You can determine the inflation rewards by checking the staking overview on
+You can determine the inflation rewards by looking at the top bar of the staking overview on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking).
 
 The above chart shows the inflation model of the network. Depending on the staking participation,
