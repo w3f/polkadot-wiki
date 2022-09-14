@@ -354,8 +354,7 @@ all of the nominators who have voted for this validator.
 For example, assume the block reward for a validator is 10 DOT. A validator may specify
 `validator_commission = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT
 would then be split between the validator and their nominators based on the proportion of stake each
-nominator had. Note that validators can put up their own stake, and for this calculation, their
-stake acts just as if they were another nominator.
+nominator had. Note that for this calculation, validator's self-stake acts just as if they were another nominator.
 
 Thus, a percentage of the reward goes thus to pay the validator's
 commission fees and the remainder is paid pro-rata (i.e. proportional to stake) to the
