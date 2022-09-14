@@ -342,7 +342,7 @@ each pool. There is a probabilistic component to staking rewards in the form of
 :::
 
 Validators are paid the same regardless of stake backing them. Validators with less stake will generally pay more to nominators
-per-token than pools with more stake. This gives nominators an economic incentive to gradually shift their preferences to lower-staked validators that gain a sufficient amount of reputation. A consequence of this is that the stake across validator pools will be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, validator pools will have similar levels of stake, with the stake
+per-token than the ones with more stake. This gives nominators an economic incentive to gradually shift their preferences to lower-staked validators that gain a sufficient amount of reputation. A consequence of this is that the stake across validators will be as evenly distributed as possible which avoids concentration of power among a few validators. In the long term, validators will have similar levels of stake, with the stake
 being higher for validators with higher reputation. A nominator who is willing to risk more
 by backing a validator with a lower reputation will get paid more, provided there are no slashing events.
 
