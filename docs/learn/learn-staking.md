@@ -153,7 +153,7 @@ that:
 - have the total stake backing the validator below the average active validator stake (because they will pay out more rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}), 
 - have high own stake (because if slashed they have a lot to lose), 
 - have low commission fees but not 0% (because it makes sense that for doing the heavy lifting, validators ask for a small commission), 
-- have on-chain registered identity (because increases trust and you can reach out to them or look at their website or social media), 
+- have on-chain registered identity (because it adds a layer of trust and possibly provides access to their website and contact details), 
 - and have not been slashed (meaning that their on-chain behavior is genuine).
 
 #### In practice
