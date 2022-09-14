@@ -62,7 +62,7 @@ bonding tokens (stake) on chain, and 2) nominate a set validator candidates to w
 be allocated. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
 from election theory to game theory to discrete optimization, to develop an efficient validator
 selection process that offers fair representation and security, thus avoiding uneven power and
-influence among validators. The `election algorithm` used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} bases on the Proportional Justified Representation (PJR) method called [Phragmen](learn-phragmen.md). For more information about PJR methods visit [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article.
+influence among validators. The election algorithms used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are based on the Proportional Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information about PJR methods visit [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article.
 
 ### Eras and sessions
 
