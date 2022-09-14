@@ -322,7 +322,7 @@ higher than the minimum active nomination. For more information, check the
 
 :::
 
-The solution to the election of nominators has to meet certain requirements, such as maximizing the
+The "election solution" which is a connected graph between nominators and validators with the stake as edge weights, has to meet certain requirements, such as maximizing the
 amount of stake to nominate validators and distributing the stake backing validators as evenly as
 possible. The objectives of this election mechanism are to maximize the security of the network, and
 achieve fair representation of the nominators. If you want to know more about how NPoS works (e.g.
