@@ -357,7 +357,7 @@ would then be split between the validator and their nominators based on the prop
 nominator had. Note that validators can put up their own stake, and for this calculation, their
 stake acts just as if they were another nominator.
 
-Within a validator pool, a percentage of the reward goes thus to pay the validator's
+Thus, a percentage of the reward goes thus to pay the validator's
 commission fees and the remainder is paid pro-rata (i.e. proportional to stake) to the
 nominators and validator. If a validator's commission is set to 100%, no tokens will be paid out to any
 nominations in the validator pool. Notice in particular that the validator is rewarded twice: once in
