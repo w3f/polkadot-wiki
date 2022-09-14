@@ -508,21 +508,21 @@ particular levels are not implemented or referred to in the code or in the syste
 guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
 
-- Level 1: isolated unresponsiveness, i.e. being offline for an entire session. Generally no
-  slashing, only [_chilling_](#chilling).
-- Level 2: concurrent unresponsiveness or isolated equivocation, slashes a very small amount of the
-  stake and chills.
+- Level 1: isolated [unresponsiveness](#unresponsiveness), i.e. being offline for an entire session. Generally no slashing, only [_chilling_](#chilling).
+- Level 2: concurrent unresponsiveness or isolated [equivocation](#equivocation), slashes a very small amount of the stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
   in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
 - Level 4: misconduct that poses serious security or monetary risk to the system, or mass
   collusion. Slashes all or most of the stake behind the validator and chills.
 
+If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
+
 ### Unresponsiveness
 
 For every session, validators will send an "I'm online" heartbeat to indicate they are live. If a
 validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
-unresponsive. Slashing may occur depending on the repeated offences and how many other validators
+unresponsive. Slashing may occur depending on the repeated offenses and how many other validators
 were unresponsive or offline during the epoch.
 
 Validators should have a well-architected network infrastructure to ensure the node runs to reduce
@@ -552,7 +552,7 @@ would be 3 _ (10 - (100 / 10 + 1)) / 100 = 3 \* (10 - (10 + 1)) / 100 = -0.03 wh
 
 :::note
 
-The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0.
+The minimum value between 0 and 1 is 0. 0 multiplied by 0.07 is 0.
 
 :::
 
@@ -578,7 +578,7 @@ slot.
 
 Both GRANDPA and BABE equivocation use the same formula for calculating the slashing penalty:
 
-    Let x = offenders, n = total no. validators in active set
+    Let x = offenders, n = total no. validators in the active set
 
     min( (3 * x / n )^2, 1)
 
@@ -586,11 +586,11 @@ As an example, assume that there are 100 validators in the active set, and one o
 in a slot (for our purposes, it does not matter whether it was a BABE or GRANDPA equivocation). This
 is unlikely to be an attack on the network, but much more likely to be a misconfiguration of a
 validator. The penalty would be min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% slash for that
-validator pool (i.e., all stake held by the validator and its nominators).
+validator pool (i.e., the stake held by the validator and its nominators).
 
 Now assume that there is a group running several validators, and all of them have an issue in the
 same slot. The penalty would be min((3 \* 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20
-validators equivocate, this is a much more serious offence and possibly indicates a coordinated
+validators equivocate, this is a much more serious offense and possibly indicates a coordinated
 attack on the network, and so the slash will be much greater - min((3 \* 20 / 100)^2, 1) = 0.36, or
 a 36% slash on all of these validators and their nominators. All slashed validators will also be
 chilled.
@@ -604,16 +604,13 @@ staking rewards as one), slashing grows exponentially. A single validator equivo
 Validators may run their nodes on multiple machines to make sure they can still perform validation
 work in case one of their nodes goes down, but validator operators should be extremely careful in
 setting these up. If they do not have good coordination to manage signing machines, equivocation is
-possible, and equivocation offences are slashed at much higher rates than equivalent offline
-offences.
+possible, and equivocation offenses are slashed at much higher rates than equivalent offline
+offenses.
 
-If a validator is reported for any one of the offences they will be removed from the validator set
+If a validator is reported for any one of the offenses they will be removed from the validator set
 ([chilled](#chilling)) and they will not be paid while they are out. They will be considered
 inactive immediately and will lose their nominators. They need to re-issue intent to validate and
 again gather support from nominators.
-
-If you want to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
 ### Slashing Across Eras
 
@@ -744,7 +741,7 @@ return will be less, encouraging some users to withdraw.
 
 ## How many validators does Polkadot have?
 
-Polkadot started with 20 open validator positions and has increased gradually to 297. The top bound
+Polkadot started with 20 open validator positions and has increased gradually to <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>. The top bound
 on the number of validators has not been determined yet, but should only be limited by the bandwidth
 strain of the network due to peer-to-peer message passing. The estimate of the number of validators
 that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
