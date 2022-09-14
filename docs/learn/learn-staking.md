@@ -462,7 +462,7 @@ If nobody claims your staking rewards within 84 eras, then you will not be able 
 
 :::
 
-Rewards can be directed to the same account used to sign the payout (controller), to the stash account (and either
+Rewards can be directed to the same account used to sign the payout (controller), or to the stash account (and either
 increasing the staked value or not increasing the staked value), or to a completely unrelated
 account. It is also possible to top-up / withdraw some bonded tokens without having to un-stake all staked tokens.
 
