@@ -124,6 +124,22 @@ as long as the logic compiles to Wasm and the shard provides an "execute block" 
 validators. Polkadot has the Substrate development framework that allows full spectrum composability
 with a suite of modules that can be configured, composed, and extended to develop a chain's STF.
 
+## Rollups
+
+Rollups have been talked about for some time and it's potential to be one of the only trustless way of scaling Ethereum. Rollups reduce transaction fees significantly, and there are a few different versions that are being worked on.
+
+### Optimism
+
+### Arbitrum
+
+### ZK Rollups
+
+#### EIP 4844
+
+Until the ETH 2.0 merge is finalized, this stopgap implements "blob-transactions" in the same way they would be designed with sharding.
+
+Blob-transactions are transactions which carry a large amount of data that cannot be accessed by the EVM, but whose commitment can be accessed.
+
 ## Message Passing
 
 Shards in Ethereum 2.0 will have access to each other's state via their crosslinks and state proofs.
