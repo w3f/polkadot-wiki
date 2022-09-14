@@ -160,7 +160,7 @@ that:
 
 :::caution Nominators must periodically check their validators
 
-Nominating is _not_ a "set and forget" operation. The whole NPoS system is dynamic and as such nominators should
+Nominating is _not_ a "set and forget" operation. The whole NPoS system is dynamic and nominators should
 periodically monitor the performance and reputation of their validators. Failing to do so could
 result in applied slashes and/or rewards not being paid out, even for a prolonged period of time.
 
