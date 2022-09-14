@@ -58,9 +58,6 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 	let chainTimestamp = await api.query.timestamp.now();
 	let date = new Date(chainTimestamp.toPrimitive());
 
-	// Get ending period for the given chain
-	const endPeriod = api.consts.auctions.endingPeriod.toPrimitive();
-
 	// Add starting block for the given chain
 	let auctions = [];
 	let auctionBlocks = [];
@@ -74,17 +71,31 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 		auction.startBlock = auctionBlocks[auctionBlocks.length - 1];
 		auction.startHash = await api.rpc.chain.getBlockHash(auction.startBlock);
 		const apiAt = await api.at(auction.startHash.toString());
+		const endPeriod = apiAt.consts.auctions.endingPeriod.toPrimitive();
 		const [lease, end] = (await apiAt.query.auctions.auctionInfo()).toJSON();
 		auction.weeksLeased = lease;
 		auction.endPeriodBlock = end;
 		auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
 
-		// TODO - if bidding has already ended we can get the exact block times?
+		// Retrieve or estimate dates depending on if the block has past or a future block
+		if (auction.startBlock < currentBlockNumber) {
+			const stamp = await apiAt.query.timestamp.now();
+			const confirmedDate = new Date(stamp);
+			auction.startDate = confirmedDate;
+		} else {
+			auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
+		}
+		if (auction.endPeriodBlock < currentBlockNumber) {
+			auction.endPeriodDate = date;
+		} else {
+			auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
+		}
+		if (auction.biddingEndsBlock < currentBlockNumber) {
+			auction.biddingEndsDate = date;
+		} else {
+			auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock);
+		}
 
-		// Dates
-		auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
-		auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
-		auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock);
 		// TODO - how to get his value?
 		auction.startOnBoard = "December 17th, 2021";
 		auction.endOnBoard = "October 20th, 2023";
