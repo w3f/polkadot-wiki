@@ -90,7 +90,7 @@ To know more about era points, how and on which basis they are distributed visit
 [dedicated page](../maintain/maintain-guides-validator-payout.md). Distribution of the rewards are
 pro-rata to all stakers after the validator's commission is deducted.
 
-### Skin in the game
+### Skin in the game when Staking
 
 The security of PoS networks depends on the amount of staked tokens. This means
 that to successfully attack the network one would need a large amount of tokens that can be accrued
