@@ -35,7 +35,7 @@ security and economic stability of the network. PoS networks in general are ther
 than PoW networks, as participants do not need to have either the technical knowledge about
 blockchain technology nor the experience in running mining equipment. 
 
-PoS ensures that everybody has
+PoS ensures that everybody participating in the staking process has
 "skin in the game" and thus can be held accountable. In case of misbehavior participants to the
 staking process can be punished or `slashed`, and depending on the gravity of the situation their
 stake can be partly or fully confiscated. It is not in a staker's economic interest to orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
