@@ -230,9 +230,9 @@ accounts which can sign extrinsic calls made to specific pallets on behalf of th
 possibility to create staking proxy accounts that can be used to sign only extrinsic calls to staking,
 session and utility pallets. This makes the stash account even more isolated than using a controller
 account since one can bond / unbond / bond more funds using the staking proxy account. However,
-it is important to remember that actions on proxy accounts are limited, and in the case of staking
-proxy accounts, calls from the balance pallet cannot be signed. This means that it is not possible to
-send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
+it is important to remember that actions that can be performed by the proxy accounts are limited, and in the case of staking
+proxy, extrinsic calls to the balances pallet cannot be signed. This means it is not possible to do balance transfers
+on the proxied account through a staking proxy.
 
 ## Staking system overview
 
