@@ -211,8 +211,7 @@ compromised. More information about account derivation can be found
 
 :::info
 
-For ledger users staking directly on Ledger Live, there is currently only one option to use one
-account as both stash and controller.
+For ledger users staking directly on Ledger Live, currently there is no option to use separate stash and controller accounts.
 
 :::
 
