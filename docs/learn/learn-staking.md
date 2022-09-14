@@ -435,9 +435,7 @@ higher reputation will be able to charge slightly higher commission fees (which 
 {{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
 Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
 
-Rewards are recorded per session (approximately {{ polkadot: 4 hours :polkadot }}{{ kusama: one hour :kusama }}) and
-calculated per era (approximately {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }}). Thus,
-rewards will be calculated {{ polkadot: once per day :polkadot }}{{ kusama: 4 times per day :kusama }}. Rewards are calculated based on era points, which have a probabilistic component. In other words,
+Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). These rewards are calculated based on era points, which have a probabilistic component. In other words,
 there may be slight differences in your rewards from era to era, and even amongst validators in the
 active set at the same time. These variations should cancel out over a long enough timeline. See the
 page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md).
