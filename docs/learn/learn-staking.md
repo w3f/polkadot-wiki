@@ -167,7 +167,7 @@ result in applied slashes and/or rewards not being paid out, possibly for a prol
 :::
 
 Although the theory can be used as a general guideline, in practice it is more complicated and
-following the theory might not necessarily lead to the desired result. Validators might have validator pool below average, low commission and above average era points in one era and then having a totally
+following the theory might not necessarily lead to the desired result. Validators might have the total stake backing them below average, low commission and above average era points in one era and then having a totally
 different profile in the next one. There are criteria that vary more than others with era points
 being the most variable and thus the probabilistic component of staking rewards. It is not recommended
 to change nominations at each era only because the era points of one validator were low. Selection
