@@ -91,7 +91,8 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 		//auction.endOnBoard = auction.weeksLeased * 7 + auction.startOnBoard;
 
 		// Calculate next starting block
-		auction.nextStartingBlock = auction.biddingEndsBlock + 3600; // TODO: Get 3600 on-chain??
+		const periodStep = 3600; // TODO: Get on-chain
+		auction.nextStartingBlock = auction.biddingEndsBlock + periodStep;
 		auctionBlocks.push(auction.nextStartingBlock);
 		auctions.push(auction);
 
