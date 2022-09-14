@@ -108,15 +108,15 @@ However, it is worth mentioning that validators do most of the heavy lifting: th
 produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to
 consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition
 function of parachains, and possibly some other responsibilities regarding data availability and
-[XCM](learn-cross-consensus.md). For more information you can take a look at the
+[XCM](learn-cross-consensus.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
-to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
+to become a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
-Nominators have far fewer responsibilities than validators. Those include selecting validators and
+Nominators have far fewer responsibilities than validators. These include selecting validators and
 monitoring their performance, keeping an eye on changing commission rates (a validator can change
-commission at any time), and general health monitoring of their validators' account. Thus, while not
-being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared to
-a validators. For more information you can take a look at the [nominator guide](learn-nominator.md)
+commission at any time), and general health monitoring of their validators' accounts. Thus, while not
+being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared to that of
+a validator. For more information, you can take a look at the [nominator guide](learn-nominator.md)
 to understand your responsibilities as a nominator.
 
 If you want to become a nominator, check
@@ -125,9 +125,9 @@ would like to securely stake your tokens using Polkadot JS Apps, refer to [this]
 
 ### Selection of validators
 
-The task of choosing validators is not simple, as it should take into account for nominator reward and
+The task of choosing validators is not simple, as it should take into account nominator reward and
 risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maximizing rewards and minimizing risks, with sometimes having to
-compromise between the two as minimizing risks might decrease rewards as well. Nominators should pay attention especially to six criteria when nominating validators (not in order of importance):
+compromise between the two as minimizing risks might decrease rewards as well. Nominators should pay attention, especially to six criteria when nominating validators (not in order of importance):
 
 - recent history of the era points earned across eras
 - validator's self stake (shows skin in the game)
@@ -136,7 +136,7 @@ compromise between the two as minimizing risks might decrease rewards as well. N
 - verified identity
 - previous slashes
 
-The diagram below shows how the selection of those criteria affects reward-to-risk ratio.
+The diagram below shows how the selection of those criteria affects the reward-to-risk ratio.
 
 ![rewards and risks diagram](../assets/staking/Reward-risk%20nominating.png)
 
@@ -163,11 +163,11 @@ result in applied slashes and/or rewards not being paid out, possibly for a prol
 :::
 
 Although the theory can be used as a general guideline, in practice it is more complicated and
-following the theory might not necessarily lead to the desired result. Validators might have the total stake backing them below average, low commission and above average era points in one era and then having a totally
+following the theory might not necessarily lead to the desired result. Validators might have the total stake backing them below average, low commission and above average era points in one era and then have a totally
 different profile in the next one. Selection based the criteria like on-chain identity, slash history and low commission make the staking rewards deterministic. But there are criteria that vary more than others, with era points
 being the most variable and thus one of the key probabilistic components of staking rewards. It is not recommended
 to change nominations because of the low era points of a validator in a single era. Variability in rewards due to the era points should level out over time. If a validator consistently gets
-era points below average, it makes sense to nominate a better performing validator for the health of the network and for increased staking rewards.
+era points below average, it makes sense to nominate a better-performing validator for the health of the network and for increased staking rewards.
 
 Check
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
@@ -178,21 +178,21 @@ support article to understand in detail how to select the set of validators to n
 There are two different accounts that can be used to securely manage your funds while staking.
 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  controller account. As a result, you may actively participate to staking with a stash private key kept in
-  a cold wallet like ledger, meaning it stays offline all the time. Stash account keys are used to
+  controller account. As a result, you may actively participate in staking with a stash private key kept in
+  a cold wallet like Ledger, meaning it stays offline all the time. Stash account keys are used to
   sign staking actions such as bonding additional funds.
 
-- **Controller:** This account acts on behalf of the stash account, signalling decisions about
+- **Controller:** This account acts on behalf of the stash account, signaling decisions about
   nominating and validating. It can set preferences like commission (for validators) and the staking rewards payout
   account. The earned rewards can be bonded (locked) immediately for staking on your stash account,
   which would effectively compound the rewards you receive over time. You could also choose to have
-  them deposited to your controller account or a different account as free (transferable) balance.
+  them deposited to your controller account or a different account as a free (transferable) balance.
   If you are a validator, it can also be used to set your [session keys](learn-keys.md#session-keys). Controller
   accounts only need sufficient funds to pay for the transaction fees.
 
 :::warning
 
-Never leave high balance on a controller account which are usually "hot" as their
+Never leave a high balance on a controller account which are usually "hot" as their
 private key is stored on the device (PC, phone) and it is always exposed to the internet for potential hacks and scams. It is good practice to deposit rewards on the stash account or to send them to another
 account on a cold wallet.
 
@@ -205,13 +205,13 @@ protect themselves much better than in systems with only one key. As a rule, the
 a private key the higher its visibility and thus the chance it can be stolen. So, if one uses a key
 for multiple roles on a blockchain network, security can be easily compromised as the likelihood one
 uses that key often is high. Note that the damage linked to stolen private keys is different
-depending on the type of account derivation. In case of soft derivation all derived accounts are
+depending on the type of account derivation. In the case of soft derivation, all derived accounts are
 compromised. More information about account derivation can be found
 [here](../learn/learn-accounts.md/#derivation-paths).
 
 :::info
 
-For ledger users staking directly on Ledger Live, currently there is only one option to use one
+For ledger users staking directly on Ledger Live, there is currently only one option to use one
 account as both stash and controller.
 
 :::
@@ -219,7 +219,7 @@ account as both stash and controller.
 ### Staking proxies
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
-[substrate](https://substrate.io/), a modular system to efficiently build blockchains without having necessarily deep knowledge about blockchain technology. Within each module or `pallet` one can `call` different
+[substrate](https://substrate.io/), a modular system to efficiently build blockchains without having necessarily deep knowledge about blockchain technology. Within each module or `pallet`, one can `call` different
 functions that have similar logic. For example, the staking pallet contains all functionalities
 related to staking such as bonding or unbonding funds. The combined information of pallets and calls
 constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that
@@ -235,13 +235,13 @@ possibility to create staking proxy accounts that can be used to sign only calls
 session and utility pallets. This makes the stash account even more isolated than using a controller
 account since now one can bond / unbond / bond more funds using the staking proxy account. However,
 it is important to remember that actions on proxy accounts are limited, and in the case of staking
-proxy accounts calls from the balance pallet cannot be signed. This means that it is not possible to
+proxy accounts, calls from the balance pallet cannot be signed. This means that it is not possible to
 send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
 
 ## Staking system overview
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
-are made public to all nominators, and a nominator in turn submits a list of up to
+are made public to all nominators, and a nominator, in turn, submits a list of up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 candidates that it supports. In the next era, a certain number of validators having the most
@@ -274,7 +274,7 @@ DOT, etc). Each bag contains nodes that correspond to nominators and their stake
 The bags-list pallet is designed to be self-maintaining, with minimal effort from the blockchain,
 making it extremely scalable. Let us explore the sorting functionality of the bags list with an
 example. In the bags list below, there are 8 nodes (corresponding to 8 accounts with staked funds)
-placed in 3 bags. It can be observed that the list of nodes within the bags are arranged based on
+placed in 3 bags. It can be observed that the list of nodes within the bags is arranged based on
 their insertion order and not based on the number of tokens bonded. For instance, the nodes in bag 1
 are arranged in this order: 15 → 12 → 19.
 
@@ -286,7 +286,7 @@ that nominator node in bag 2, right after the node with 27 DOT.
 ![bags list example 2](../assets/staking/bags-list-example-2.png)
 
 Once the nomination period ends, the NPoS election mechanism takes the nomination intents and their
-associated votes as input, and outputs a set of validators. The bags are iterated from the most
+associated votes as input, and it outputs a set of validators. The bags are iterated from the most
 staked to the least staked. This could leave the last touched bag to only be partially iterated.
 This means that in some edge cases, the order of members within a bag is also important. Recall that
 within each bag, the iteration order is simply the insertion order. If only 7 nodes must be picked
@@ -312,21 +312,21 @@ staking/election system. The bags-list is capable of including an unlimited numb
 to the chain's runtime storage. In the current staking system configuration, the bags list keeps
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nomination intents, of which, at most {{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }}
+nomination intents, of which, at most {{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
 come out as the electing nominators. Check
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
 Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} nominators is applied to the
-validators in the active set. To avail staking rewards, ensure that the number of tokens bonded is
+{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }} nominators is applied to the
+validators in the active set. To avail of staking rewards, ensure that the number of tokens bonded is
 higher than the minimum active nomination. For more information, check the
 [nominator guide](learn-nominator.md)
 
 :::
 
-The solution of the election of nominators has to meet certain requirements, such as maximizing the
+The solution to the election of nominators has to meet certain requirements, such as maximizing the
 amount of stake to nominate validators and distributing the stake backing validators as evenly as
 possible. The objectives of this election mechanism are to maximize the security of the network, and
 achieve fair representation of the nominators. If you want to know more about how NPoS works (e.g.
@@ -346,8 +346,7 @@ each pool. There is a probabilistic component to staking rewards in the form of
 :::
 
 Validator pools are paid the same regardless of stake level. Pools with less stake will generally pay more to nominators
-per-token than pools with more stake. This gives nominators an economic incentive to gradually shift their preferences to lower staked
-validators that gain a sufficient amount of reputation. A consequence of this is that the stake across validator pools will be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, validator pools will have similar levels of stake, with the stake
+per-token than pools with more stake. This gives nominators an economic incentive to gradually shift their preferences to lower-staked validators that gain a sufficient amount of reputation. A consequence of this is that the stake across validator pools will be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, validator pools will have similar levels of stake, with the stake
 being higher for higher reputation validators (meaning that a nominator that is willing to risk more
 by backing a validator with a low reputation will get paid more).
 
@@ -367,7 +366,7 @@ commission fees and the remainder is paid pro-rata (i.e. proportional to stake) 
 nominators and validator. If a validator's commission is set to 100%, no tokens will be paid out to any
 nominations in the validator pool. Notice in particular that the validator is rewarded twice: once in
 commission fees for validating (if their commission rate is above 0%), and once for nominating
-itself with stake.
+itself with own stake.
 
 The following example should clarify the above. For simplicity, we have the following assumptions:
 
@@ -397,7 +396,7 @@ The following example should clarify the above. For simplicity, we have the foll
 |     John      |          150           |            0.375            |  37.5   |
 |   **Kitty**   |           50           |            0.125            |  12.5   |
 
-_Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
+_Both validator pools A & B have 4 nominators with a total stake 600 and 400 respectively._
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT
 than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he
@@ -417,7 +416,7 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is currently {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}, although this can be
 modified via runtime upgrade. A validator with more than {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators is
-_oversubscribed_. When payouts occur, only the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }} nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators
+_oversubscribed_. When payouts occur, only the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }} nominators as measured by the amount of stake allocated to that validator will receive rewards. All other nominators
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
 
@@ -432,13 +431,13 @@ fee (as a percentage of rewards) to cover operational costs. Since validator poo
 same, pools with lower commission fees pay more to nominators than pools with higher fees. Thus,
 each validator can choose between increasing their fees to earn more, or decreasing their fees to
 attract more nominators and increase their chances of being elected. In the long term, we expect
-that all validators will need to be cost efficient to remain competitive, and that validators with
+that all validators will need to be cost-efficient to remain competitive, and that validators with
 higher reputation will be able to charge slightly higher commission fees (which is fair).
 
 ### Claiming rewards
 
 {{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
-Polkadot will also produce blocks at approximately six second intervals. :kusama }}
+Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
 
 Rewards are recorded per session (approximately {{ polkadot: 4 hours :polkadot }}{{ kusama: one hour :kusama }}) and
 calculated per era (approximately {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }}). Thus,
@@ -466,7 +465,7 @@ validator for that era.
 
 :::warning Time limit
 
-If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts will also be lost. Since unbonding takes {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, nominators should check if they have pending payouts at least this often.
+If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts will also be lost. Since unbonding takes {{ polkadot: <RPC network="polkadot" path="query.staking.bondingDuration" defaultValue={28}/> days :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.bondingDuration" defaultValue={7}/> days :kusama }}, nominators should check if they have pending payouts at least this often.
 
 :::
 
@@ -489,11 +488,11 @@ of their bonded/staked DOT.
 
 Any slashed DOT will be added to the [Treasury](learn-treasury.md). The rationale for this (rather
 than burning or distributing them as rewards) is that slashes may then be reverted by the Council by
-simply paying out from the Treasury. This would be useful in situations such as a faulty slashes. In the case of
+simply paying out from the Treasury. This would be useful in situations such as faulty slashes. In the case of
 legitimate slashing, it moves tokens away from malicious validators to those building the ecosystem
 through the normal Treasury process.
 
-Validator pools with larger total stake backing them will get slashed more harshly than less popular
+Validator pools with a larger total stake backing them will get slashed more harshly than less popular
 ones, so we encourage nominators to shift their nominations to less popular validators to reduce
 their possible losses.
 
@@ -515,20 +514,20 @@ The UI shows it per validator and then all the affected nominators along with th
 unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
 days on Polkadot). After the grace period, the slashes are applied.
 
-The following levels of offence are
+The following levels of offense are
 [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html). However, these
 particular levels are not implemented or referred to in the code or in the system; they are meant as
-guidelines for different levels of severity for offences. To understand how slash amounts are
+guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
 
 - Level 1: isolated unresponsiveness, i.e. being offline for an entire session. Generally no
   slashing, only [_chilling_](#chilling).
-- Level 2: concurrent unresponsiveness or isolated equivocation, it slashes a very small amount of the
+- Level 2: concurrent unresponsiveness or isolated equivocation, slashes a very small amount of the
   stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
   in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
-- Level 4: misconduct that poses a serious security or monetary risk to the system, or mass
+- Level 4: misconduct that poses serious security or monetary risk to the system, or mass
   collusion. Slashes all or most of the stake behind the validator and chills.
 
 For more information about slashing visit the dedicated page.
@@ -536,7 +535,7 @@ For more information about slashing visit the dedicated page.
 ## Chilling
 
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
-validator or nominator at any time themselves, taking effect in the next era. It can also
+validator or nominator at any time, taking effect in the next era. It can also
 specifically mean removing a validator from the active validator set by another validator,
 disqualifying them from the set of electable candidates in the next NPoS cycle.
 
@@ -560,12 +559,12 @@ For more on chilling, see the [How to Chill][] page on this wiki.
 
 {{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. The current token supply of DOT is ~1,000,000,000, as
+and the remainder going to the treasury. The current token supply of DOT is ~1,000,000,000, as
 a result of [redenomination](../general/redenomination.md). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. The current token supply of KSM is ~10,000,000. :kusama }}
+and the remainder going to the treasury. The current token supply of KSM is ~10,000,000. :kusama }}
 
 There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the _system
 staking rate_ meet the _ideal staking rate_.
@@ -619,7 +618,7 @@ For instance, assuming that the ideal staking rate is 50%, all of the inflation 
 validators/nominators if 50% of all KSM / DOT are staked. Any deviation from the 50% - positive or
 negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
 
-For those who are interested in knowing more about the design of inflation model for the network,
+For those who are interested in knowing more about the design of the inflation model for the network,
 please see
 [here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).
 
@@ -640,7 +639,7 @@ return will be less, encouraging some users to withdraw.
 
 ### Why not stake?
 
-- Tokens will be locked for about 28 days on Polkadot after unbonding, seven days on Kusama.
+- Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
