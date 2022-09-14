@@ -175,7 +175,7 @@ era points below average, it makes sense to nominate a better performing validat
 
 Check
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
-support article to understand in detail how to select your own set of validators.
+support article to understand in detail how to select the set of validators to nominate.
 
 ### Accounts
 
