@@ -98,7 +98,7 @@ by one single participant alone or would need different participants to collude 
 of NPoS, if there is an attack both the validator(s) and nominators will be
 `slashed` and in some cases their stake partially or fully confiscated by the network and deposited to the treasury. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad actions. In NPoS, validators are paid equal rewards regardless from
-the amount they have at stake, avoiding thus large payouts to few large validators which would
+the amount they have at stake, thus avoiding large payouts to few large validators which would
 ultimately lead to consensus centralization.
 
 ## Being a nominator
