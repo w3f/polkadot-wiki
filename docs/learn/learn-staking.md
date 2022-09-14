@@ -37,7 +37,7 @@ blockchain technology nor the experience in running mining equipment.
 
 PoS ensures that everybody participating in the staking process has
 "skin in the game" and thus can be held accountable. In case of misbehavior participants in the
-staking process can be punished or `slashed`, and depending on the gravity of the situation their
+staking process can be punished or `slashed`, and depending on the gravity of the situation, their
 stake can be partly or fully confiscated. It is not in a staker's economic interest to orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
 ## Nominated Proof-of-stake overview
