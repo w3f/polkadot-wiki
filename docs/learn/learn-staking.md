@@ -416,7 +416,7 @@ _oversubscribed_. When payouts occur, only the top {{ polkadot: <RPC network="po
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
 
-Note that the network slashes a validator slot for a misbehavior (e.g. validator
+Note that the network slashes a validator for a misbehavior (e.g. validator
 offline, equivocation, etc.) the slashed amount is a fixed percentage (and not a fixed amount),
 which means that validator pools with more stake get slashed more DOT. Again, this is done to
 provide nominators with an economic incentive to shift their preferences and back less popular
