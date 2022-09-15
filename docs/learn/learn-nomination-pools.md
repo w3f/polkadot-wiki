@@ -6,9 +6,12 @@ description: Learn about Nomination Pools and their features
 keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
+
 import RPC from "./../../components/RPC-Connection"
 
-:::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and [Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/staking/pools).
+:::info Nomination Pools are live on
+[Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and
+[Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/staking/pools).
 
 Get some [Westies (WND)](learn-DOT.md#getting-westies) and start experimenting with Nomination
 pools! Soon they will be deployed on Polkadot.
@@ -24,32 +27,36 @@ If you have questions about nomination pools, please join our
 
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
-Nomination pools are one of the key features from the roadmap of staking improvements on {{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}. They are designed to permissionlessly allow members to pool their funds together and act
-as a single nominator account. 
+Nomination pools are one of the key features from the roadmap of staking improvements on
+{{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}. They are designed to
+permissionlessly allow members to pool their funds together and act as a single nominator account.
 
-Due to the current runtime constraints, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can only handle
+Due to the current runtime constraints,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can only handle
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
-nominators comfortably in the
-[electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
-[NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
-inferred that the staking system on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} favors nominators with a larger stake. Only the
-nominator accounts which back the validators in the active set are eligible for receiving staking
-rewards. This leaves out nomination intents from the accounts with lower token balance than the
-min-active nomination and places them in a waiting queue to enter electing set. Nomination pools
-will be handy to the members who would like to participate in the staking system with a stake much
-lower than the dynamic min-active nomination threshold on the network. All operations are constant
-space and time complexity relative to the number of members, eliminating any theoretical upper bound
-on the quantity of members the system can handle and thus scaling the number of accounts that can
-participate and earn rewards in the staking system on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In summary, each nomination pool is
+nominators comfortably in the [electing set](learn-nominator.md#staking-election-stages). As one of
+the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the
+network, it can be inferred that the staking system on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} favors nominators with a larger
+stake. Only the nominator accounts which back the validators in the active set are eligible for
+receiving staking rewards. This leaves out nomination intents from the accounts with lower token
+balance than the min-active nomination and places them in a waiting queue to enter electing set.
+Nomination pools will be handy to the members who would like to participate in the staking system
+with a stake much lower than the dynamic min-active nomination threshold on the network. All
+operations are constant space and time complexity relative to the number of members, eliminating any
+theoretical upper bound on the quantity of members the system can handle and thus scaling the number
+of accounts that can participate and earn rewards in the staking system on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In summary, each nomination pool is
 viewed as a single nominator from the NPoS system point of view.
 
 :::info Why aren't the members in the nomination pools called delegators?
 
 The term `delegator` is associated too much with Delegated Proof of Staking (DPoS) and since
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements Nominated Proof of Staking (NPoS), naming them as delegators would be
-misleading. The term `member` is our generic replacement for `delegator`. In action, members are actually
-quite similar to delegators and do delegate their nomination power to the pool.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements Nominated Proof of Staking
+(NPoS), naming them as delegators would be misleading. The term `member` is our generic replacement
+for `delegator`. In action, members are actually quite similar to delegators and do delegate their
+nomination power to the pool.
 
 :::
 
@@ -88,33 +95,64 @@ pool's internal logic can access the account.
 
 :::
 
-Check the "How to join a pool" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
+Check the "How to join a pool" section in
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+for guidelines.
 
 ### Claim rewards
 
 The member can claim their portion of any rewards that have accumulated since the previous time they
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
-era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How to claim rewards" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
+era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How
+to claim rewards" section in
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+for guidelines.
 
 ### Unbond and withdraw funds
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
-`unbond` will unbond part or all of the member's funds. After unbond has been called and the unbonding duration has passed (28 eras {{ polkadot: which correspond to 28 days on Polkadot :polkadot }}{{ kusama: which correspond to 7 days on Kusama :kusama }}), a
-member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
+`unbond` will unbond part or all of the member's funds. After unbond has been called and the unbonding
+duration has passed
+{{ polkadot: (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
+{{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
+eras which correspond to
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
+days on
+{{ polkadot: Polkadot). :polkadot }}
+{{ kusama: Kusama). :kusama }}
+A member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
 relationship with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
 
 ### Limitations
 
 - A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This
   may be changed in the future once accounts are afforded the ability to split votes.
-- In order for a member to switch pools all funds from the account must be unbonded.  This process takes 28 eras.
+- In order for a member to switch pools all funds from the account must be unbonded. This process
+  takes 28 eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
-
 :::info Kusama Pool Stats
-- There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> members (there are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> members).
-- There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> pools (there are currently <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> pools).
-- There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> members per pool.
+
+- There can be a maximum of
+  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
+  members (there are currently
+  {{ polkadot: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :kusama }}
+  members).
+- There can be a maximum of
+  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :kusama }}
+  pools (there are currently
+  {{ polkadot: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :kusama }}
+  pools).
+- There can be a maximum of
+  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :kusama }}
+  members per pool.
+
 :::info
 
 ## Pool Administration
@@ -147,13 +185,12 @@ The depositor calls the `create` extrinsic, setting the administrative roles and
 funds to the pool in order to add themselves as the first member. As stated above, the depositor
 must always be a member as long as the pool exists; they will be the last member to leave, ensuring
 they always have some skin in the game. Significant stake from the depositor is always a good
-indicator for the pool's credibility. 
+indicator for the pool's credibility.
 
 {{ kusama: **The current minimum bond to create a pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
 
-The pool’s ‘nominator role’ selects validators with the
-nominate extrinsic. On Polkadot JS Apps UI, navigate to Network > Staking > Pools and click on Add
-Pool button.
+The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
+navigate to Network > Staking > Pools and click on Add Pool button.
 
 ![Create Nomination Pools](../assets/staking/Nomination-Pools-1.png)
 

@@ -18,9 +18,7 @@ class HomeNav extends React.Component {
     const NavContainer = (props) => (
       <section className="homeNavContainer">
         <Container className="h-100">
-          <Row className="h-100 d-flex align-items-center">
-            {props.children}
-          </Row>
+          <Row className="h-100 d-flex align-items-center">{props.children}</Row>
         </Container>
       </section>
     );
@@ -34,9 +32,7 @@ class HomeNav extends React.Component {
           data-aos-delay={props.aosDelay}
         >
           <div className="mx-auto">
-            <h2 className="display-4 mt-0 text-dark font-weight-bold text-center">
-              {props.title}
-            </h2>
+            <h2 className="display-4 mt-0 text-dark font-weight-bold text-center">{props.title}</h2>
             <p className="small text-secondary px-4">{props.content}</p>
           </div>
         </a>
@@ -79,28 +75,22 @@ class HomeFooter extends React.Component {
     );
 
     const LearnKusama = () => (
-      <Col
-        lg={6}
-        className="d-flex align-items-end flex-column pb-5 mb-5 mb-lg-0"
-      >
+      <Col lg={6} className="d-flex align-items-end flex-column pb-5 mb-5 mb-lg-0">
         <Col xs={12}>
           <img src="/img/kusama_canary_white.svg" height={41} />
-          <h3 className="h2 font-weight-bold mt-2">
+          <h3 className="h2 font-weight-medium mt-2">
             Learn about Polkadot’s canary network Kusama
           </h3>
           <p className="mb-5">
-            Kusama is Polkadot’s canary network; a scalable, multi-chain network
-            for radical innovation and early stage Polkadot deployments. For
-            developers, Kusama is a proving ground for all things Polkadot (i.e.
-            runtime upgrades, on-chain governance, parachains, parathreads,
-            etc.).
+            Kusama is Polkadot’s canary network; a scalable, multi-chain network for radical
+            innovation and early stage Polkadot deployments. For developers, Kusama is a proving
+            ground for all things Polkadot (i.e. runtime upgrades, on-chain governance, parachains,
+            parathreads, etc.).
           </p>
         </Col>
         <Col>
           <a href="https://guide.kusama.network">
-            <button className="btn btn-lg btn-primary btn-bg-primary">
-              Discover Kusama
-            </button>
+            <button className="btn btn-lg btn-primary btn-bg-primary">Discover Kusama</button>
           </a>
         </Col>
       </Col>
@@ -112,27 +102,23 @@ class HomeFooter extends React.Component {
           <span className="material-icons" style={{ fontSize: 50 + "px" }}>
             language
           </span>
-          <h3 className="h2 font-weight-bold">Help improve this wiki</h3>
+          <h3 className="h2 font-weight-medium">Help improve this wiki</h3>
           <p className="mb-5">
-            This wiki was started by and is maintained by Web3 Foundation. It is
-            an open-source-ish project and aims to be the most extensive
-            resource of knowledge on Polkadot and the Polkadot ecosystem.
+            This wiki was started by and is maintained by Web3 Foundation. It is an open-source-ish
+            project and aims to be the most extensive resource of knowledge on Polkadot and the
+            Polkadot ecosystem.
           </p>
         </Col>
         <Col>
           <a href={this.props.docUrl("contributing")}>
-            <button className="btn btn-lg btn-primary btn-bg-primary mr-3">
-              Contribute
-            </button>
+            <button className="btn btn-lg btn-primary btn-bg-primary mr-3">Contribute</button>
           </a>
           <a
             href={this.props.siteConfig.translationRecruitingLink}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <button className="btn btn-lg btn-primary btn-bg-primary">
-              Help Translate
-            </button>
+            <button className="btn btn-lg btn-primary btn-bg-primary">Help Translate</button>
           </a>
         </Col>
       </Col>

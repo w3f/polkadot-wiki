@@ -53,7 +53,7 @@ control their data and are not limited by trust bounds within the network.
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-account-generation">
-      <img src="/img/polkadot-guide/Account.png" alt="Drawing" width="250" height="150"/>
+      <img src="/img/polkadot-guide/Account.jpg" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Creating an Account</h5>
         </div>
@@ -61,7 +61,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-balance-transfers">
-      <img src="/img/polkadot-guide/Transfer.png" alt="Drawing" width="250" height="150"/>
+      <img src="/img/polkadot-guide/Transfer.jpg" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Balance Transfers</h5>
         </div>
@@ -69,7 +69,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-staking">
-      <img class="guide-image" src="/img/polkadot-guide/Stake.png" alt="Drawing" width="250" height="150" />
+      <img class="guide-image" src="/img/polkadot-guide/Stake.jpg" alt="Drawing" width="250" height="150" />
               <div class="cards-body">
                   <h5 class="cards-title">Staking</h5>
               </div>
@@ -82,7 +82,7 @@ control their data and are not limited by trust bounds within the network.
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-parachains">  
-      <img class="guide-image" src="/img/polkadot-guide/Parachain.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Parachain.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Parachains</h5>
               </div>
@@ -90,7 +90,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-bridges">  
-      <img class="guide-image" src="/img/polkadot-guide/Bridges.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Bridges.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Bridges</h5>
               </div>
@@ -98,7 +98,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/maintain-guides-how-to-vote-councillor">
-      <img class="guide-image" src="/img/polkadot-guide/Voting.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Voting.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Vote for Councilors</h5>
               </div>
@@ -111,7 +111,7 @@ control their data and are not limited by trust bounds within the network.
 <tr class="cards-container">
   <td>
   <a class="guide-link" href="../docs/learn-treasury#creating-the-proposal">
-    <img class="guide-image" src="/img/polkadot-guide/Proposal.png" alt="Drawing" width="250" height="150"/>
+    <img class="guide-image" src="/img/polkadot-guide/Proposal.jpg" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
                 <h5 class="cards-title">Make Proposals</h5>
             </div>
@@ -119,7 +119,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/maintain-guides-how-to-join-council#submit-candidacy">  
-      <img class="guide-image" src="/img/polkadot-guide/Council.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Council Candidacy</h5>
               </div>
@@ -127,7 +127,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-treasury">  
-      <img class="guide-image" src="/img/polkadot-guide/Treasury.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Treasury.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Treasury</h5>
               </div>
@@ -140,7 +140,7 @@ control their data and are not limited by trust bounds within the network.
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/polkadot-guide/Identity.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                  <h5 class="cards-title">Set an Identity</h5>
               </div>
@@ -148,7 +148,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/polkadot-guide/Proxy.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Proxy Accounts</h5>
               </div>
@@ -156,7 +156,7 @@ control their data and are not limited by trust bounds within the network.
   </td>
   <td>
   <a class="guide-link" href="../docs/ambassadors">  
-    <img class="guide-image" src="/img/polkadot-guide/Ambassadors.png" alt="Drawing" width="250" height="150"/>
+    <img class="guide-image" src="/img/polkadot-guide/Ambassadors.jpg" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
                 <h5 class="cards-title">Become an Ambassador</h5>
             </div>
