@@ -167,6 +167,26 @@ The required deposit amount for one proxy is equal to:
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} * num_proxies
 
+## Time-delayed Proxies
+
+We can add a layer of security to proxies by giving them a delay time. The delay will be
+quantified in a number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean 10 blocks, which equals approximately 1 minute of delay.
+The proxy will announce its intended action and wait for the number
+of blocks defined in the delay time before executing it. The proxy will include the hash of the
+intended function call in the announcement. Within this time window, the intended action may be canceled by accounts that control the proxy. Now we can use proxies knowing that any malicious
+actions can be noticed and reverted within a delay period.
+
+:::caution The Polkadot-JS UI cannot handle complicated proxy setups
+
+The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig 
+-> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
+[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
+the chain, as you will be unable to sign extrinsics using the UI.
+
+:::
+
 ## Anonymous Proxies (aka key-less anonymous accounts)
 
 :::info
@@ -217,25 +237,5 @@ Without the Anon, the funds will stay on ABC 1. If Charlie leaves, Alice and Bob
 :::caution Removing anonymous proxies
 
 The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
-
-:::
-
-## Time-delayed Proxies
-
-We can add a layer of security to proxies by giving them a delay time. The delay will be
-quantified in a number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean 10 blocks, which equals approximately 1 minute of delay.
-The proxy will announce its intended action and wait for the number
-of blocks defined in the delay time before executing it. The proxy will include the hash of the
-intended function call in the announcement. Within this time window, the intended action may be canceled by accounts that control the proxy. Now we can use proxies knowing that any malicious
-actions can be noticed and reverted within a delay period.
-
-:::caution The Polkadot-JS UI cannot handle complicated proxy setups
-
-The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig 
--> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
-the chain, as you will be unable to sign extrinsics using the UI.
 
 :::
