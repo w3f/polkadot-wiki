@@ -9,7 +9,7 @@ slug: ../learn-staking-advanced
 
 import RPC from "./../../components/RPC-Connection"
 
-This page is meant to be an advanced guide to staking with Polkadot. If you are a nominator in a nominator pool
+This page is meant to be an advanced guide to staking with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Staking Proxies
 
