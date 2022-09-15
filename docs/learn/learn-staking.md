@@ -75,11 +75,16 @@ which is a dynamic value that can be much higher than
 
 ### Nominating Validators
 
-The action of nominating consists of:
+Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} requires 2 actions:
 
-- locking or bonding tokens (stake) on the chain, and
-- nominating a set of validator candidates to whom the stake will
-be allocated. 
+- Locking tokens on-chain.
+- Selecting a set of validators, to whom these locked tokens will automatically be allocated to.
+
+How many tokens you lock up is completely up to you - as are the validators you wish to select. Locking tokens is also known as **bonding**. You can also refer to your locked tokens as your bonded tokens, or staked tokens. Likewise, selecting validators is also known as backing or nominating validators. These terms are used interchangeably by the community. From now on locked tokens will be referred to as bonded tokens.
+
+Once the previous 2 steps are completed and you are nominating, your bonded tokens could be allocated to one or more of your selected validators, and this happens every time the active validator set changes. This validator set is updated every era on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+
+Unlike other staking systems, Polkadot automatically chooses which of your selected validators will be backed by your bonded tokens. Selecting a group of validators increases your chances of consistently backing at least one who is active. This results in your bonded tokens being allocated to validators more often, which means more network security and more rewards. This is in strong contrast to other staking systems that only allow you to back one validator; if that validator is not active, you as a staker will also not be. Polkadot's nomination model solves this.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
 from election theory to game theory to discrete optimization, to develop an efficient validator
