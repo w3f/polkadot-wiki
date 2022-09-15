@@ -1,7 +1,7 @@
 ---
 id: learn-staking
-title: Staking
-sidebar_label: Staking Concepts
+title: Introduction to staking
+sidebar_label: Introduction to staking
 description: An introduction on staking in Polkadot's NPoS consensus model.
 keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection"
 Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Introduction to Proof-of-Stake (PoS)
+## Proof-of-Stake (PoS)
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to finalize
 blocks on the chain. Consensus is the process of agreeing on something, in this case, the progression
@@ -41,7 +41,7 @@ PoS ensures that everybody participating in the staking process has
 staking process can be punished or **slashed**, and depending on the gravity of the situation, their
 stake can be partly or fully confiscated by the network. It is not in a staker's economic interest to orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
-## Nominated Proof-of-Stake Overview
+## Nominated Proof-of-Stake (NPoS)
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake),
 a relatively novel and sophisticated mechanism to select the validators who are allowed to participate in 
