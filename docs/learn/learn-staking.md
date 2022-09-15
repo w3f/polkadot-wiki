@@ -227,7 +227,7 @@ nominating validators (not in order of importance):
 
 The diagram below shows how the selection of those criteria affects the reward-to-risk ratio.
 
-![rewards and risks diagram](../assets/staking/Reward-risk.png)
+![rewards and risks diagram](../assets/staking/reward-risk.png)
 
 #### Validator Selection Criteria
 
