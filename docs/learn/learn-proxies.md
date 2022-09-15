@@ -19,7 +19,7 @@ participate in the network with the weight of the tokens in that account. Proxie
 
 Proxies are useful because they add a layer of security. Rather than
 using funds in a single account, smaller accounts with unique roles complete tasks for the main
-stash account.  Proxies can be "hotter" than the initial account, which can be kept cold, but the "weight" of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the amount of transaction the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
+stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the amount of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
 
 ## Creating Proxies
 
@@ -31,8 +31,8 @@ To create a **proxy account** read [this support article](https://support.polkad
 
 ## Proxy Types
 
-You can set up a proxy account via the Proxy pallet. When you set a proxy, you must choose a type of
-proxy for the relationship. Polkadot offers:
+You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
+proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
 
 - Any
 - Non-transfer
@@ -41,9 +41,9 @@ proxy for the relationship. Polkadot offers:
 - Identity Judgement
 - Auction
 
-When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure
+When a proxy account makes a transaction, Polkadot filters the desired transaction to ensure
 that the proxy account has the appropriate permission to make that transaction on behalf of the cold
-account.
+account. For example, staking proxies have permission to do only staking-related transactions.
 
 ### Any
 
@@ -107,7 +107,7 @@ Read the section "Removing Proxies" on [this support page](https://support.polka
 
 ## How to view your Proxies
 
-To view your proxy, head over to the Chain State (underneath "Developer") page on
+To view your proxy, head over to the _Chain State_ tab (underneath the _Developer_ menu) on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
 you've created your proxy on a Kusama account, it is required to change your network accordingly
 using the top left navigation button. On this page, the proxy pallet should be selected, returning
