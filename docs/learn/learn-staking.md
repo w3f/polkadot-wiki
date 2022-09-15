@@ -320,7 +320,7 @@ calculated, see the equations in the section below.
 
 If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
-## Chilling
+### Chilling
 
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
 validator or nominator at any time, taking effect in the next era. It can also
