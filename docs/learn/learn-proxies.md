@@ -198,7 +198,7 @@ To create an **anonymous proxy account** see [this support article](https://supp
 :::note Explainer video on anonymous proxies
 
 Learn more about anonymous proxies from our
-[technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
+[technical explainer video](https://www.youtube.com/watch?v=YkYApbhU3i0).
 
 :::
 
