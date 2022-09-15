@@ -19,7 +19,7 @@ participate in the network with the weight of the tokens in that account. Proxie
 
 Proxies are useful because they add a layer of security. Rather than
 using funds in a single account, smaller accounts with unique roles complete tasks for the main
-stash account. This drives attention away from the main account and to proxies. Proxies can be "hotter" than the initial account (for example the stash account in staking), which can be kept cold but the "weight" of the tokens can still be used by the hotter accounts.
+stash account.  Proxies can be "hotter" than the initial account, which can be kept cold, but the "weight" of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the amount of transaction the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
 
 ## Creating Proxies
 
