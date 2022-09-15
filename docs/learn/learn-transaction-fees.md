@@ -107,7 +107,7 @@ situations where shards themselves make transactions on the Relay Chain.
 
 [Parachains](learn-parachains.md) have a dedicated slot on the Relay Chain for execution, so their
 collators do not need to own DOT in order to include blocks. The parachain will make some
-transactions itself, for example, opening or closing an [XCM](learn-cross-consensus.md) channel,
+transactions itself, for example, opening or closing an [XCM](learn-xcm.md) channel,
 participating in an [auction](learn-auction.md) to renew its slot, or upgrading its runtime.
 Parachains have their own accounts on the Relay Chain and will need to use those funds to issue
 transactions on the parachain's behalf.

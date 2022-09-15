@@ -121,7 +121,7 @@ nominating a validator does not assign any governance voting rights to the valid
 
 ## Message Passing
 
-Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-cross-consensus.md) for parachains
+Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-xcm.md) for parachains
 to send arbitrary messages to each other. Parachains open connections with each other and can send
 messages via their established channels. [Collators](learn-collator.md) are full nodes of parachains
 and full nodes of the Relay Chain, so collator nodes are a key component of message passing. Messages

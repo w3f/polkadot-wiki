@@ -50,5 +50,5 @@ If you do not see "Accounts > Teleport" in [Polkadot-JS UI], the source chain th
 selected does not support teleportation yet.
 
 [polkadot-js ui]: https://polkadot.js.org/apps/
-[xcm]: learn-cross-consensus.md
+[xcm]: learn-xcm.md
 [spree modules]: learn-spree.md
