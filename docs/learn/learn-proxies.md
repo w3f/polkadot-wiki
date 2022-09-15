@@ -191,7 +191,7 @@ the chain, as you will be unable to sign extrinsics using the UI.
 
 :::info
 
-To create an **anonymous proxy account** see [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
+To create an **anonymous proxy account** see [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 :::
 
@@ -240,6 +240,6 @@ Without the Anon, the funds will stay on ABC 1. If Charlie leaves, Alice and Bob
 
 :::caution Removing anonymous proxies
 
-The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
+The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 :::
