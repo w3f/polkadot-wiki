@@ -14,30 +14,20 @@ participate in the network with the weight of the tokens in that account. Proxie
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
-
 ## Why use a Proxy?
 
 Proxies are useful because they add a layer of security. Rather than
 using funds in a single account, smaller accounts with unique roles complete tasks for the main
-stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the amount of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
+stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the number of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
 
-If the idea of proxy types and their application seems abstract, it is. Here is an example of how
-you might use these accounts. Imagine you have one account as your primary token-holding account and don't want to access it very often, but you do want to participate in governance and staking.
-You could set Governance and Staking proxies.
+Here below there is an example of how you might use these accounts. Imagine you have one stash account as your primary token-holding account and don't want to access it very often, but you do want to participate in staking to earn staking rewards. You could set one of your existing accounts as a staking proxy for that stash account and then make that proxy your controller account.
 
-![proxies](../assets/regular_proxy_diagram.png)
+![proxies](../assets/controller_vs_staking_proxy.png)
 
-In this example, the primary account A would only make two transactions to set account B as its
-governance proxy and account C as its staking proxy. Now, account B could participate in governance
-activity on behalf of A.
+If you just use a controller that is not a staking proxy, the stash account will still have to sign for some staking-related transactions such as _bond more funds_ and _change controller account_ (Figure _left_). But if your controller account is also a staking proxy, everything will be signed by the proxy, making the stash account even more isolated (Figure _right_). In other words, the controller account can participate in staking on behalf of the stash. If the proxy is compromised, it doesn't have access to transfer-related transactions, so
+the stash account could just set a new proxy to replace it.
 
-Likewise, account C could perform actions typically associated with a stash account, like bonding
-funds and setting a Controller, in this case, account D. Actions that normally require the Stash,
-like bonding extra tokens or setting a new Controller, can all be handled by its proxy account C. In
-the case that account C is compromised, it doesn't have access to transfer-related transactions, so
-the primary account could just set a new proxy to replace it.
-
-Creating multiple accounts that act for a single account, lets you come up with more granular
+Creating multiple proxy accounts that act for a single account, lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
 participate in a network.
 
