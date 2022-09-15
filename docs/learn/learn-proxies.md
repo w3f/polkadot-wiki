@@ -187,7 +187,7 @@ the chain, as you will be unable to sign extrinsics using the UI.
 
 :::
 
-## Anonymous Proxies (aka key-less anonymous accounts)
+## Anonymous Proxies
 
 :::info
 
@@ -222,7 +222,7 @@ Once you remove the relationship with `Any` proxy, the Anon will be inaccessible
 
 :::
 
-### Why bother about anonymous proxies?
+### Why anonymous proxies?
 
 Despite their complexity and associated dangers, Anon accounts have a few important benefits:
 
