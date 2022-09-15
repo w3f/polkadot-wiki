@@ -170,7 +170,7 @@ lead to centralization.
 
 ### Tasks and Responsibilities of a Nominator
 
-Since validator slots are limited, most of those who wish to stake their
+**Validators.** Since validator slots are limited, most of those who wish to stake their
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and contribute to the economic security of
 the network will be nominators, thus here we focus on the role of nominators. However, it is worth
 mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
@@ -183,7 +183,7 @@ function of parachains, and possibly some other responsibilities regarding data 
 to become a validator you can consult
 [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
-Nominators have far fewer responsibilities than validators. These include selecting validators and
+**Nominators.** Nominators have far fewer responsibilities than validators. These include selecting validators and
 monitoring their performance, keeping an eye on changing commission rates (a validator can change
 commission at any time), and general health monitoring of their validators' accounts. Thus, while
 not being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared
@@ -206,6 +206,8 @@ user-friendly alternative to staking. See the instructions in
 support article to learn how to stake with the dashboard.
 
 :::
+
+**Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking, without sacrificing Polkadot's strict security model.
 
 ### Selection of Validators
 
