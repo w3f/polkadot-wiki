@@ -49,12 +49,29 @@ its [consensus](learn-consensus.md) protocol. The NPoS encourages {{ polkadot: D
 holders to participate as nominators. NPoS encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 holders to participate as **nominators**. 
 
-Nominators may back up to
+Any potential validators can indicate their intention to be a validator candidate. Their candidacies
+are made public to all nominators, and a nominator, in turn, submits a list of up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
-validators as trusted validator candidates, and the network will automatically distribute the stake among validators in
-an even manner so that the economic security is maximized. Also, in NPoS the stake of both nominators and validators can be slashed.  For an in-depth review of NPoS see
+candidates that it supports, and the network will automatically distribute the stake among validators in
+an even manner so that the economic security is maximized. In the next era, a certain number of validators having the most
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. For more information about the election algorithm go to [this](learn-phragmen.md) page on the wiki or [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article. As a
+nominator, a minimum of
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+is required to submit an intention to nominate. Note that in NPoS the stake of both nominators and validators can be slashed.  For an in-depth review of NPoS see
 [this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
+
+:::caution Minimum Nomination to Receive Staking Rewards
+
+Although the minimum nomination intent is
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
+it does not guarantee staking rewards. The nominated amount has to be greater than
+[minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
+which is a dynamic value that can be much higher than
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
+
+:::
 
 ### Nominating Validators
 
@@ -209,30 +226,6 @@ compromised. More information about account derivation can be found
 :::info
 
 For Ledger users staking directly on Ledger Live, currently, there is no option to use separate stash and controller accounts. That is if you stake on Ledger Live your stash account will be your controller too.
-
-:::
-
-## Staking System Overview
-
-Any potential validators can indicate their intention to be a validator candidate. Their candidacies
-are made public to all nominators, and a nominator, in turn, submits a list of up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
-candidates that it supports. In the next era, a certain number of validators having the most
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. For more information about the election algorithm go to [this](learn-phragmen.md) page on the wiki or [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article. As a
-nominator, a minimum of
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-is required to submit an intention to nominate.
-
-:::caution Minimum Nomination to Receive Staking Rewards
-
-Although the minimum nomination intent is
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
-it does not guarantee staking rewards. The nominated amount has to be greater than
-[minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
-which is a dynamic value that can be much higher than
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
 
 :::
 
