@@ -343,7 +343,9 @@ need to resubmit their intention to validate and re-garner support from nominato
 For more on chilling, see the [How to Chill][] page on this wiki.
 
 
-### Why stake?
+## Why and why not staking?
+
+### Pros of staking
 
 - 10% inflation/year when the network launches
 - 50% targeted active staking
@@ -358,7 +360,7 @@ nominal return rate will be higher, encouraging more users to use their tokens f
 contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal
 return will be less, encouraging some users to withdraw.
 
-### Why not stake?
+### Cons of staking?
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
