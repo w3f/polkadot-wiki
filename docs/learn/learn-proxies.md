@@ -21,6 +21,26 @@ Proxies are useful because they add a layer of security. Rather than
 using funds in a single account, smaller accounts with unique roles complete tasks for the main
 stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the amount of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
 
+If the idea of proxy types and their application seems abstract, it is. Here is an example of how
+you might use these accounts. Imagine you have one account as your primary token-holding account and don't want to access it very often, but you do want to participate in governance and staking.
+You could set Governance and Staking proxies.
+
+![proxies](../assets/regular_proxy_diagram.png)
+
+In this example, the primary account A would only make two transactions to set account B as its
+governance proxy and account C as its staking proxy. Now, account B could participate in governance
+activity on behalf of A.
+
+Likewise, account C could perform actions typically associated with a stash account, like bonding
+funds and setting a Controller, in this case, account D. Actions that normally require the Stash,
+like bonding extra tokens or setting a new Controller, can all be handled by its proxy account C. In
+the case that account C is compromised, it doesn't have access to transfer-related transactions, so
+the primary account could just set a new proxy to replace it.
+
+Creating multiple accounts that act for a single account, lets you come up with more granular
+security practices around how you protect private keys while still being able to actively
+participate in a network.
+
 ## Creating Proxies
 
 :::info
@@ -120,28 +140,6 @@ proxies for either one account or for all accounts (using the toggle will enable
 announcements are what time lock proxies do to announce they are going to conduct an action.
 
 ![view proxies](../assets/polkadot_view_proxies_dev.png)
-
-## Putting It All Together
-
-If the idea of proxy types and their application seems abstract, it is. Here is an example of how
-you might use these accounts. Imagine you have one account as your primary token-holding account and don't want to access it very often, but you do want to participate in governance and staking.
-You could set Governance and Staking proxies.
-
-![proxies](../assets/regular_proxy_diagram.png)
-
-In this example, the primary account A would only make two transactions to set account B as its
-governance proxy and account C as its staking proxy. Now, account B could participate in governance
-activity on behalf of A.
-
-Likewise, account C could perform actions typically associated with a stash account, like bonding
-funds and setting a Controller, in this case, account D. Actions that normally require the Stash,
-like bonding extra tokens or setting a new Controller, can all be handled by its proxy account C. In
-the case that account C is compromised, it doesn't have access to transfer-related transactions, so
-the primary account could just set a new proxy to replace it.
-
-Creating multiple accounts that act for a single account, lets you come up with more granular
-security practices around how you protect private keys while still being able to actively
-participate in a network.
 
 ## Proxy Deposits
 
