@@ -188,7 +188,7 @@ monitoring their performance, keeping an eye on changing commission rates (a val
 commission at any time), and general health monitoring of their validators' accounts. Thus, while
 not being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared
 to that of a validator, and even more with [nominator pools](./learn-nomination-pools.md). For more
-information, you can take a look at the [nominator [guide](learn-nominator.md) to understanding your
+information, you can take a look at the nominator [guide](learn-nominator.md) to understanding your
 responsibilities as a nominator.
 
 If you want to become a nominator, see
@@ -412,9 +412,9 @@ particular levels are not implemented or referred to in the code or in the syste
 guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
 
-- Level 1: isolated [unresponsiveness](#unresponsiveness), i.e. being offline for an entire session.
-  Generally no slashing, only [_chilling_](#chilling).
-- Level 2: concurrent unresponsiveness or isolated [equivocation](#equivocation), slashes a very
+- Level 1: isolated [unresponsiveness](./learn-staking-advanced.md/#unresponsiveness), i.e. being offline for an entire session.
+  Generally no slashing, only [chilling](#chilling).
+- Level 2: concurrent unresponsiveness or isolated [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very
   small amount of the stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
@@ -445,7 +445,7 @@ Polkadot allows some validators to be disabled, but if the number of disabled va
 large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
 need to resubmit their intention to validate and re-garner support from nominators.
 
-For more on chilling, see the [How to Chill][] page on this wiki.
+For more on chilling, see the "[How to Chill][]" page on this wiki.
 
 ## Why and why not staking?
 
@@ -467,7 +467,7 @@ return will be less, encouraging some users to withdraw.
 ### Cons of staking?
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
-- Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
+- Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
 ## How many validators does Polkadot have?
