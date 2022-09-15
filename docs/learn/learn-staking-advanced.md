@@ -105,3 +105,102 @@ possible. The objectives of this election mechanism are to maximize the security
 achieve fair representation of the nominators. If you want to know more about how NPoS works (e.g.
 election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
+
+## Rewards Distribution
+
+:::info
+
+The general rule for rewards across validators is that two validators get paid essentially
+the same amount of tokens for equal work, i.e. they are not paid proportional to their total stakes. There is a probabilistic component to staking rewards in the form of
+[era points](../maintain/maintain-guides-validator-payout.md##era-points) and
+[tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
+
+:::
+
+Validators are paid the same regardless of stake backing them. Validators with less stake will generally pay more to nominators
+per-token than the ones with more stake. This gives nominators an economic incentive to gradually shift their preferences to lower-staked validators that gain a sufficient amount of reputation. A consequence of this is that the stake across validators will be as evenly distributed as possible which avoids concentration of power among a few validators. In the long term, validators will have similar levels of stake, with the stake
+being higher for validators with higher reputation. A nominator who is willing to risk more
+by backing a validator with a lower reputation will get paid more, provided there are no slashing events.
+
+Before distributing rewards to nominators, validators can create a cut of the reward (a commission) that is not shared with the nominators.
+This cut is a percentage of the block reward, not an absolute value. After the commission gets
+deducted, the remaining portion is distributed pro-rata based on their staked value and split between the validator and
+all of the nominators whose stake has backed this validator.
+
+For example, assume the block reward for a validator is 10 DOT. A validator may specify
+`validator_commission = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT
+would then be split between the validator and their nominators based on the proportion of stake each
+nominator had. Note that for this calculation, validator's self-stake acts just as if they were another nominator.
+
+Thus, a percentage of the reward goes thus to pay the validator's
+commission fees and the remainder is paid pro-rata (i.e. proportional to stake) to the
+nominators and validator. If a validator's commission is set to 100%, no tokens will be paid out to any
+of the nominators. Notice in particular that the validator is rewarded twice: once in
+commission fees for validating (if their commission rate is above 0%), and once for nominating
+itself with own stake.
+
+The following example should clarify the above. For simplicity, we have the following assumptions:
+
+- These validators do not have a stake of their own.
+- They each receive the same number of era points.
+- There are no tips for any transactions processed.
+- They do NOT charge any commission fees.
+- Total reward amount is 100 DOT tokens.
+- The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual
+  value, which fluctuates, but merely an assumption for purposes of this example; to understand how
+  the actual minimal stake is calculated, see
+  [here](../general/faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
+
+|               | **Validator A** |                             |         |
+| :-----------: | :--------------------: | :-------------------------: | :-----: |
+| Nominator (4) |      Stake (600)       | Fraction of the Total Stake | Rewards |
+|      Jin      |          100           |            0.167            |  16.7   |
+|    **Sam**    |           50           |            0.083            |   8.3   |
+|     Anson     |          250           |            0.417            |  41.7   |
+|     Bobby     |          200           |            0.333            |  33.3   |
+
+|               | **Validator B** |                             |         |
+| :-----------: | :--------------------: | :-------------------------: | :-----: |
+| Nominator (4) |      Stake (400)       | Fraction of the Total Stake | Rewards |
+|     Alice     |          100           |            0.25             |   25    |
+|     Peter     |          100           |            0.25             |   25    |
+|     John      |          150           |            0.375            |  37.5   |
+|   **Kitty**   |           50           |            0.125            |  12.5   |
+
+_Both validators A & B have 4 nominators with a total stake 600 and 400 respectively._
+
+Based on the above rewards distribution, nominators of validator B get more rewards per DOT
+than those of validator A because A has more overall stake. Sam has staked 50 DOT with validator A, but he
+only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
+
+
+To estimate how many tokens you can get each month as a nominator or
+validator, you can use this [tool](https://www.stakingrewards.com/earn/polkadot/calculate) as a
+reference and play around with it by changing some parameters (e.g. how many days you would like to
+stake with your DOT, provider fees, compound rewards, etc.) to have a better estimate. Even though
+it may not be entirely accurate since staking participation is changing dynamically, it works well
+as an indicator.
+
+#### Oversubscription, Commission Fees & Slashes
+
+There is an additional factor to consider in terms of rewards. While there is no limit to the number
+of nominators a validator may have, a validator does have a limit to how many nominators to which it
+can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is currently {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}, although this can be
+modified via runtime upgrade. A validator with more than {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators is
+_oversubscribed_. When payouts occur, only the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }} nominators as measured by the amount of stake allocated to that validator will receive rewards. All other nominators
+are essentially "wasting" their stake - they used their nomination to elect that validator to the
+active stake, but receive no rewards in exchange for doing so.
+
+Note that the network slashes a validator for a misbehavior (e.g. validator
+offline, equivocation, etc.) the slashed amount is a fixed percentage (and not a fixed amount),
+which means that validators with more stake get slashed more DOT. Again, this is done to
+provide nominators with an economic incentive to shift their preferences and back less popular
+validators whom they consider to be trustworthy.
+
+Also, note that each validator candidate is free to name their desired commission
+fee (as a percentage of rewards) to cover operational costs. Since validators are paid the
+same, validators with lower commission fees pay more to nominators than validators with higher fees. Thus,
+each validator can choose between increasing their fees to earn more, or decreasing their fees to
+attract more nominators and increase their chances of being elected. In the long term, we expect
+that all validators will need to be cost-efficient to remain competitive, and that validators with
+higher reputation will be able to charge slightly higher commission fees (which is fair).
