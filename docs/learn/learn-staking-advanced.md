@@ -204,3 +204,115 @@ each validator can choose between increasing their fees to earn more, or decreas
 attract more nominators and increase their chances of being elected. In the long term, we expect
 that all validators will need to be cost-efficient to remain competitive, and that validators with
 higher reputation will be able to charge slightly higher commission fees (which is fair).
+
+## Slashing
+
+### Unresponsiveness
+
+For every session, validators will send an "I'm online" heartbeat to indicate they are live. If a
+validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
+unresponsive. Slashing may occur depending on the repeated offenses and how many other validators
+were unresponsive or offline during the epoch.
+
+Validators should have a well-architected network infrastructure to ensure the node runs to reduce
+the risk of slashing or chilling. A high availability setup is desirable, preferably with backup
+nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
+and being slashed for equivocation - see below). A comprehensive guide on validator setup is
+available [here](../maintain/maintain-guides-secure-validator.md).
+
+Here is the formula for calculating slashing due to unresponsiveness:
+
+    Let x = offenders, n = total no. validators in the active set
+
+    min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
+
+The examples demonstrate how to calculate the slashing penalty for unresponsiveness.
+
+:::note
+
+In all of the examples, assume that there are 100 validators in the active set.
+
+:::
+
+No slashing would enact if < 10% of all validators are unresponsive.
+
+For example, if exactly 10 validators were unresponsive, the expression 3 _ (x - (n / 10 + 1))) / n
+would be 3 _ (10 - (100 / 10 + 1)) / 100 = 3 \* (10 - (10 + 1)) / 100 = -0.03 which is rounded to 0.
+
+:::note
+
+The minimum value between 0 and 1 is 0. 0 multiplied by 0.07 is 0.
+
+:::
+
+If 14 validators are unresponsive, then slashing would occur, as > 10% of validators are
+unresponsive.
+
+The slashing penalty would be min((3 _ (14 - (100 / 10 + 1))) / 100, 1) _ 0.07 = min((3 _ (14 -
+11))/100, 1) _ 0.07 = min(0.09, 1) \* 0.07 = 0.6%
+
+Similarly, if one-third of the validator set (around 33/100) are unresponsive, the slashing penalty
+would be about 5%.
+
+The maximum slashing that can occur due to unresponsiveness is 7%. After around 45% of the
+validators go offline, the expression 3 _ (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 _
+(x - (n / 10 + 1))) / n, 1) \* 0.07 will be ceiled to 7%.
+
+### Equivocation
+
+**GRANDPA Equivocation**: A validator signs two or more votes in the same round on different chains.
+
+**BABE Equivocation**: A validator produces two or more blocks on the Relay Chain in the same time
+slot.
+
+Both GRANDPA and BABE equivocation use the same formula for calculating the slashing penalty:
+
+    Let x = offenders, n = total no. validators in the active set
+
+    min( (3 * x / n )^2, 1)
+
+As an example, assume that there are 100 validators in the active set, and one of them equivocates
+in a slot (for our purposes, it does not matter whether it was a BABE or GRANDPA equivocation). This
+is unlikely to be an attack on the network, but much more likely to be a misconfiguration of a
+validator. The penalty would be min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% slash for that
+validator (i.e., the stake held by the validator and its nominators).
+
+Now assume that there is a group running several validators, and all of them have an issue in the
+same slot. The penalty would be min((3 \* 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20
+validators equivocate, this is a much more serious offense and possibly indicates a coordinated
+attack on the network, and so the slash will be much greater - min((3 \* 20 / 100)^2, 1) = 0.36, or
+a 36% slash on all of these validators and their nominators. All slashed validators will also be
+chilled.
+
+From the example above, the risk of nominating or running many validators in the active set are
+apparent. While rewards grow linearly (two validators will get you approximately twice as many
+staking rewards as one), slashing grows exponentially. A single validator equivocating causes a
+0.09% slash, two validators equivocating does not cause a 0.09 \* 2 = 0.18% slash, but rather a
+0.36% slash - 4x as much as the single validator.
+
+Validators may run their nodes on multiple machines to make sure they can still perform validation
+work in case one of their nodes goes down, but validator operators should be extremely careful in
+setting these up. If they do not have good coordination to manage signing machines, equivocation is
+possible, and equivocation offenses are slashed at much higher rates than equivalent offline
+offenses.
+
+If a validator is reported for any one of the offenses they will be removed from the validator set
+([chilled](#chilling)) and they will not be paid while they are out. They will be considered
+inactive immediately and will lose their nominators. They need to re-issue intent to validate and
+again gather support from nominators.
+
+### Slashing Across Eras
+
+There are 3 main difficulties to account for with slashing in NPoS:
+
+- A nominator can nominate multiple validators and be slashed via any of them.
+- Until slashed, the stake is reused from era to era. Nominating with N coins for E eras in a row does
+  not mean you have N\*E coins to be slashed - you've only ever had N.
+- Slashable offenses can be found after the fact and out of order.
+
+To balance this, we only slash for the maximum slash a participant can receive in some time period,
+rather than the sum. This ensures protection from overslashing. Likewise, the period over which
+maximum slashes are computed is finite and the validator is chilled with nominations withdrawn
+after a slashing event, as stated in the previous section. This prevents rage-quit attacks in which,
+once caught misbehaving, a participant deliberately misbehaves more because their slashing amount is
+already maxed out.
