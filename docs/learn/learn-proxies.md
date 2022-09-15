@@ -107,7 +107,11 @@ Read the section "Removing Proxies" on [this support page](https://support.polka
 
 ## How to view your Proxies
 
-To view your proxy, head over to the _Chain State_ tab (underneath the _Developer_ menu) on
+To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next to the proxied account you will notice a blue icon. Hover on it, and you will see _Proxy overview_. Click on it and you will be presented with a list of all proxies for that account.
+
+![view proxies](../assets/polkadot_view_proxies.png)
+
+Additionally, you can head over to the _Chain State_ tab (underneath the _Developer_ menu) on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
 you've created your proxy on a Kusama account, it is required to change your network accordingly
 using the top left navigation button. On this page, the proxy pallet should be selected, returning
@@ -115,7 +119,7 @@ the announcements and proxies functions. The proxies function will allow you to 
 proxies for either one account or for all accounts (using the toggle will enable this). Proxy
 announcements are what time lock proxies do to announce they are going to conduct an action.
 
-![view proxies](../assets/polkadot_view_proxies.png)
+![view proxies](../assets/polkadot_view_proxies_dev.png)
 
 ## Putting It All Together
 
