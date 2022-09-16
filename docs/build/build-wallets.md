@@ -46,6 +46,7 @@ these wallets or other non-Parity developed wallets.
 | [Nova Wallet](https://novawallet.io/)*         | [1](https://kusama.polkassembly.io/treasury/122), [2](https://kusama.polkassembly.io/treasury/158)                                                                                                 | Live              | Nova Foundation | iOS, Android | Non-custodial | Staking  |
 | [Talisman](https://talisman.xyz/)             | Received a Tip**                                                                                                                                                                                    | Live              | TalismanSociety | Browser      | Non-custodial | Staking  |
 | [SubWallet](https://subwallet.app/)             | [1](https://polkadot.polkassembly.io/treasury/138)                                                                                                                                                | Live              | SubWallet | Browser      | Non-custodial | Staking  |
+| [Polkadot js Plus](http://polkadotjs.plus/)      | [1](https://kusama.polkassembly.io/treasury/205)    | Live              | PolkaGate | Browser      | Non-custodial | Staking (Nomination Pools), Crowdloans, Governance, Social recovery  |
 
 :::caution *Note about Nova wallet
 
