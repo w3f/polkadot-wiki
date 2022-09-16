@@ -243,6 +243,8 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 **With Anon** (see _right_ side of the Figure above), Charlie must add Eleanor as Any proxy of the Anon, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1 signature to add the new Any proxy and 1 signature the remove the old one). The funds remain in the Anon, and it is not necessary to stop nominating or unbond funds. Also, any proxy relationships with the Anon stay in place. Thus, if we use the Anon, with an increasing number of proxies we will always have to sign twice (not necessarily true in multi-signature accounts). While if we are not using the Anon, the more the proxies the more signatures we need to detach them from the old stash and attach them to the new stash (see Figure below).
 
+![anon vs stash plot](../assets/anon_vs_stash_plot.png)
+
 :::caution Removing anonymous proxies
 
 The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
