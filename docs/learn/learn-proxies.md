@@ -230,13 +230,18 @@ Despite their complexity and associated dangers, Anon accounts have a few import
 Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
 
 **Simplified and secure account management at a corporate level.**
-Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 Board members Alice, Bob and Charlie. They create a multi-signature account `ABC 1` holding the treasury of their company, and they use it to create the anonymous account `Anon`. They transfer the treasury to the Anon, and they decide to add the multi-signature account `DEF` composed of Dan, Eleanor and Frank (Finance Team) as a staking proxy of Anon to delegate all staking-related actions. 
+Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
+
+**Without Anon**, Charlie must (see _left_ side of the Figure below):
+- Remove Dan as a staking proxy, this step requires 1 signature
+- Stop nominating and unbound all funds , this step requires 2 signatures
+- Transfer the funds to Eleanor, this step requires 1 signature
+
+Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requires 5 signatures; and here we are presenting a simple example, in fact, with multi-signature accounts and multiple proxies the procedure would be more time-consuming and labor-intensive.
 
 ![why anonymous proxies](../assets/why_anon_proxies.png)
 
-After some time, Charlie decides to leave the company. Alice and Bob just have to create a new multi-sig account `ABC 2` (with Carl, the new member of the Board), add it as `Any` proxy to the Anon, and remove `ABC 1`. The rest of the relationships between the Anon and any other proxy stays the same, and the process will always require 4 signatures (two to add ABC 2 as a new proxy, and two to remove ABC 1). 
-
-Without the Anon, the funds will stay on ABC 1. If Charlie leaves, Alice and Bob will have to create ABC 2 with Carl and transfer all funds to it from ABC 1, remove any proxy from ABC 1 and add them to ABC 2. This procedure must be repeated for any modifications of the Board membership. The procedure not only requires much more signatures (4 signatures for each proxy in the case of a multi-sig with `threshold=2`), but it also exposes all funds to potential attackers every time the Board changes its members.
+**With Anon** (see _right_ side of the Figure above), Charlie must add Eleanor as Any proxy of the Anon, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1 signature to add the new Any proxy and 1 signature the remove the old one). The funds remain in the Anon, and it is not necessary to stop nominating or unbond funds. Also, any proxy relationships with the Anon stay in place. Thus, if we use the Anon, with an increasing number of proxies we will always have to sign twice (not necessarily true in multi-signature accounts). While if we are not using the Anon, the more the proxies the more signatures we need to detach them from the old stash and attach them to the new stash (see Figure below).
 
 :::caution Removing anonymous proxies
 
