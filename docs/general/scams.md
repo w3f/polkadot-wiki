@@ -25,19 +25,19 @@ scammed, please get in contact via the [Polkadot Support page](https://support.p
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
 6. If you can, try to always verify new information that you see with an official source, such as
-   [Polkadot network's official blog](../general/community.md) or 
-   [Polkadot's Official Support](https://support.polkadot.network). 
-   Often scammers will fake a website or a blog post, but if you check it against a secondary source 
-   you will reduce the chances of being scammed.
+   [Polkadot network's official blog](../general/community.md) or
+   [Polkadot's Official Support](https://support.polkadot.network). Often scammers will fake a
+   website or a blog post, but if you check it against a secondary source you will reduce the
+   chances of being scammed.
 
    :::caution
 
-   With crowdloans active on the network, it is very important to know how to safely
-   participate. Fake crowdloan campaigns may present an attractive target for scammers. If you are
-   participating in a network-native crowdloan, **never send your tokens to an address.** Native
-   crowdloan contributions are made with a special transaction using a campaign index, where the
-   contributed assets remain locked until the end of the lease period. Legitimate teams will not
-   ask you to send your assets to an address to participate in a network-native crowdloan.
+   With crowdloans active on the network, it is very important to know how to safely participate.
+   Fake crowdloan campaigns may present an attractive target for scammers. If you are participating
+   in a network-native crowdloan, **never send your tokens to an address.** Native crowdloan
+   contributions are made with a special transaction using a campaign index, where the contributed
+   assets remain locked until the end of the lease period. Legitimate teams will not ask you to send
+   your assets to an address to participate in a network-native crowdloan.
 
    :::
 
@@ -80,8 +80,8 @@ be found below:
 - [Discord](https://discord.gg/polkadot)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Polkadot Medium](https://medium.com/polkadot-network)
-- [Our Community Page](../general/community.md) also lists more social media accounts that Web3 Foundation,
-  Polkadot, and Kusama have.
+- [Our Community Page](../general/community.md) also lists more social media accounts that Web3
+  Foundation, Polkadot, and Kusama have.
 
 ### Keep your data secure
 

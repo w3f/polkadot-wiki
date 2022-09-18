@@ -10,18 +10,20 @@ slug: ../grants
 ## Web3 Foundation Grants
 
 Web3 Foundation offers grants for open source software development and research around Substrate,
-Polkadot, Kusama and ink!. Applications and deliveries are tracked transparently on GitHub. Information 
-regarding requirements, the application process, deliveries, etc. can be found in the
-[Grants Program README](https://github.com/w3f/Grants-Program#web3-foundation-grants-program). For guidance, there is also a list of
+Polkadot, Kusama and ink!. Applications and deliveries are tracked transparently on GitHub.
+Information regarding requirements, the application process, deliveries, etc. can be found in the
+[Grants Program README](https://github.com/w3f/Grants-Program#web3-foundation-grants-program). For
+guidance, there is also a list of
 [previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/docs/accepted_grant_applications.md#accepted-grant-applications-)
-and a list of [frequently asked questions](https://github.com/w3f/Grants-Program/blob/master/docs/faq.md).
+and a list of
+[frequently asked questions](https://github.com/w3f/Grants-Program/blob/master/docs/faq.md).
 
 ## Alternative Funding Sources
 
 :::info
 
-Check the 
-[alternative funding sources](https://github.com/w3f/Grants-Program/blob/master/README.md#rocket-alternative-funding-sources) 
+Check the
+[alternative funding sources](https://github.com/w3f/Grants-Program/blob/master/README.md#rocket-alternative-funding-sources)
 section on the Web3 Foundation grants repo for comprehensive information.
 
 :::
@@ -38,11 +40,12 @@ Polkadot and Kusama offer everyone the opportunity to apply for funding via the 
 
 :::info Kusama Faucet
 
-Due to high demand and spamming issues, the Kusama faucet is no longer in operation. The Web3 Foundation has considered new ways to distribute KSM for people who need KSM to build.
+Due to high demand and spamming issues, the Kusama faucet is no longer in operation. The Web3
+Foundation has considered new ways to distribute KSM for people who need KSM to build.
 
 If you are interested in obtaining KSM for building or research, you can apply through the
 [Treasury](../learn/learn-treasury.md#creating-a-treasury-proposal) or receive a
-[tip](../learn/learn-treasury.md#tipping) for doing something cool in the community. 
+[tip](../learn/learn-treasury.md#tipping) for doing something cool in the community.
 
 :::
 
@@ -60,5 +63,3 @@ Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 - [SubQuery Grants Programme](https://subquery.network/grants)
 - [Acala Grants Program](https://acala.network/ecosystem-program)
 - [OAK’s Developer Grants](https://oak.tech/community/grants/)
-
-

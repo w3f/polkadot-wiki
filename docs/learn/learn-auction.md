@@ -27,7 +27,8 @@ details.
 :::info Auction Schedule
 
 The auction schedule for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is available
-on the auctions page of the {{ polkadot: [Polkadot website](https://polkadot.network/auctions/). :polkadot }}{{ kusama: [Kusama website](https://kusama.network/auctions/). :kusama }}
+on the auctions page of the
+{{ polkadot: [Polkadot website](https://polkadot.network/auctions/). :polkadot }}{{ kusama: [Kusama website](https://kusama.network/auctions/). :kusama }}
 
 :::
 
@@ -69,7 +70,8 @@ propagating through the entire ending period, where a snapshot is taken at each 
 ending period to capture the winners for that given block. At the end of the period, one of the
 snapshots is randomly selected to determine the winner of the auction.
 
-:::info The parachain candidate with the highest bid at the ending time chosen by the Verifiable Random Function wins the slot auction.
+:::info The parachain candidate with the highest bid at the ending time chosen by the Verifiable
+Random Function wins the slot auction.
 
 :::
 
@@ -166,10 +168,11 @@ ended before having an opportunity to bid.
 the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The VRF will provide the base of
 the randomness, which will retroactively determine the end-time of the auction.
 
-The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }}{{ kusama: 1 year and divided into 6-week periods :kusama }}. Parachains may lease a slot for any
-combination of periods of the slot duration. Parachains may lease more than one slot over time,
-meaning that they could extend their lease to the network past the maximum duration by leasing a
-contiguous slot.
+The slot durations are capped to
+{{ polkadot: 2 years and divided into 3-month periods :polkadot }}{{ kusama: 1 year and divided into 6-week periods :kusama }}.
+Parachains may lease a slot for any combination of periods of the slot duration. Parachains may
+lease more than one slot over time, meaning that they could extend their lease to the network past
+the maximum duration by leasing a contiguous slot.
 
 :::note Individual parachain slots are fungible
 
@@ -208,7 +211,8 @@ for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` 
 periods available for a slot.
 (`n`={{ polkadot: <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Polkadot :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Kusama :kusama }})
 
-:::note If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
+:::note If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way,
+you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
 :::
 
@@ -267,10 +271,11 @@ Dave - 100 \* 4 = 400 for range 5 - 8
 
 Emily - 40 \* 4 = 160 for range 1 - 4
 
-Although Dave had the highest bid in accordance to token amount per period, when we do the calculations we see
-that since he only bid for a range of 4, he would need to share the slot with Emily who bid much
-less. Together Dave and Emily's bids only equals a valuation of `560`. Charlie's valuation for the entire range is `600`. Therefore Charlie is awarded the complete range
-of the parachain slot.
+Although Dave had the highest bid in accordance to token amount per period, when we do the
+calculations we see that since he only bid for a range of 4, he would need to share the slot with
+Emily who bid much less. Together Dave and Emily's bids only equals a valuation of `560`. Charlie's
+valuation for the entire range is `600`. Therefore Charlie is awarded the complete range of the
+parachain slot.
 
 ## Parachain Lease Extension
 

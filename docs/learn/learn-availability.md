@@ -27,8 +27,8 @@ validators that are currently assigned to the parachain.
 
 :::note Candidate block
 
-A candidate block is a new block from a parachain collator that may or may not be valid and
-must go through validity checks before being included into the Relay Chain.
+A candidate block is a new block from a parachain collator that may or may not be valid and must go
+through validity checks before being included into the Relay Chain.
 
 :::
 
@@ -82,18 +82,26 @@ validators can provide their pieces of the data.
 
 :::note
 
-The 1/3+1 threshold of validators that must be responsive in order to construct the full
-parachain state data corresponds to Polkadot's security assumption in regard to Byzantine nodes.
+The 1/3+1 threshold of validators that must be responsive in order to construct the full parachain
+state data corresponds to Polkadot's security assumption in regard to Byzantine nodes.
 
 :::
 
 ## Fishermen: Deprecated
 
-The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a different role in relation to the Polkadot network. Instead of packaging the state transitions and producing the next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state transitions are included.
+The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a
+different role in relation to the Polkadot network. Instead of packaging the state transitions and
+producing the next parachain blocks as collators do, fishermen will watch this process and ensure no
+invalid state transitions are included.
 
-**Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation, despite previous proposals in the [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
+**Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation,
+despite previous proposals in the
+[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
 
-To address the motivation behind the Fishermen design consideration, the current secondary backing checkers perform a similar role in relation to the Polkadot network. From a security standpoint, security is based on having at least one honest validator either among parachain validators or secondary checker.
+To address the motivation behind the Fishermen design consideration, the current secondary backing
+checkers perform a similar role in relation to the Polkadot network. From a security standpoint,
+security is based on having at least one honest validator either among parachain validators or
+secondary checker.
 
 ## Further Resources
 
@@ -105,4 +113,5 @@ To address the motivation behind the Fishermen design consideration, the current
 [reed solomon]: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
 [pruning]: https://example.org
 [life of]: https://polkadot.network/the-path-of-a-parachain-block/
-[anv paper]: https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV
+[anv paper]:
+  https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV

@@ -7,47 +7,48 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
-Cross-Consensus Message Format(XCM) aims to be a language to communicate ideas between consensus systems. One
-of Polkadot's promises is that of interoperability, and XCM is the vehicle through which it will deliver this
-promise. Simply, it is a standard that allows protocol developers to define the data and origins which
-their chains can send and recieve from. Out of the box, it comes with a VM that allows for customization
-of execution as well as the following properties:
+Cross-Consensus Message Format(XCM) aims to be a language to communicate ideas between consensus
+systems. One of Polkadot's promises is that of interoperability, and XCM is the vehicle through
+which it will deliver this promise. Simply, it is a standard that allows protocol developers to
+define the data and origins which their chains can send and recieve from. Out of the box, it comes
+with a VM that allows for customization of execution as well as the following properties:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
 2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
    and in a timely fashion.
-3. **Asymmetric**: XCM messages out of the box do not have results that let the sender know that the message was received. Any results must be separately communicated to
-   the sender with an additional message.
-4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus Systems between which the 
-   messages are being passed.
+3. **Asymmetric**: XCM messages out of the box do not have results that let the sender know that the
+   message was received. Any results must be separately communicated to the sender with an
+   additional message.
+4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus Systems between which
+   the messages are being passed.
 
-:::note 
+:::note
 
-XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
-development. Learn more about XCM v3 and its new features in the [resources](#resources) section.
+XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in development. Learn
+more about XCM v3 and its new features in the [resources](#resources) section.
 
 :::
 
 ## A Format, Not a Protocol
 
 What started as an approach to _cross-chain communication_, has evolved into a format for
-[**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is
-not only conducted between chains, but also between smart contracts, pallets, bridges, and even
-sharded enclaves like [SPREE](learn-spree.md).
+[**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is not
+only conducted between chains, but also between smart contracts, pallets, bridges, and even sharded
+enclaves like [SPREE](learn-spree.md).
 
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.
 
-Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a seperate XCM message
-designed to be a response message which can be sent from the recipient to the sender. Any kind of error
-handling should also be done on the recipient side.
+Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a seperate XCM
+message designed to be a response message which can be sent from the recipient to the sender. Any
+kind of error handling should also be done on the recipient side.
 
 :::info
 
-XCM is not designed in a way where every system supporting the format is expected to be able to interpret
-any possible XCM message. Practically speaking, one can imagine that some messages will not have
-reasonable interpretations under some systems or will be intentionally unsupported.
+XCM is not designed in a way where every system supporting the format is expected to be able to
+interpret any possible XCM message. Practically speaking, one can imagine that some messages will
+not have reasonable interpretations under some systems or will be intentionally unsupported.
 
 :::
 
@@ -60,57 +61,70 @@ reasonable interpretations under some systems or will be intentionally unsupport
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an
     address on the remote chain for receiving funds and to eventually transfer those funds it
     controls into other accounts on that remote chain.
-  - **Asset Teleportation**: movement of an asset happens by destroying it on one side and creating a clone
-    on the other side.
+  - **Asset Teleportation**: movement of an asset happens by destroying it on one side and creating
+    a clone on the other side.
   - **Reserve Asset Transfer**: there may be two chains that want to nominate a third chain, where
     one includes a native asset that can be used as a reserve for that asset. Then, the derivative
     form of the asset on each of those chains would be fully backed, allowing the derivative asset
     to be exchanged for the underlying asset on the reserve chain backing it.
 
-Let's review two of these example asset transfer use cases: **Asset Teleportation** and **Reserve Asset Transfer**.
+Let's review two of these example asset transfer use cases: **Asset Teleportation** and **Reserve
+Asset Transfer**.
 
 ### Asset Teleportation
-An asset teleport operation from a single source to a single destination. 
+
+An asset teleport operation from a single source to a single destination.
 
 ![Diagram of the usage flow while teleporting assets](../assets/cross-consensus/xcm-asset-teleportation.png)
 
-
 1. [InitiateTeleport](https://github.com/paritytech/xcm-format#initiateteleport)
 
-  The source gathers the assets to be teleported from the sending account and takes them out of the circulating supply, taking note of the total amount of assets that was taken out.
+The source gathers the assets to be teleported from the sending account and takes them out of the
+circulating supply, taking note of the total amount of assets that was taken out.
 
 2. [ReceiveTeleportedAsset](https://github.com/paritytech/xcm-format#receiveteleportedasset)
 
-  The source then creates an XCM instruction called `ReceiveTeleportedAssets` and puts the amount of assets taken out of circulation and the receiving account as parameters to this instruction. It then sends this instruction over to the destination, where it gets processed and new assets gets put back into circulating supply accordingly.
+The source then creates an XCM instruction called `ReceiveTeleportedAssets` and puts the amount of
+assets taken out of circulation and the receiving account as parameters to this instruction. It then
+sends this instruction over to the destination, where it gets processed and new assets gets put back
+into circulating supply accordingly.
 
 3. [DepositAsset](https://github.com/paritytech/xcm-format#depositasset)
 
-  The destination then deposits the assets to the receiving account of the asset.
+The destination then deposits the assets to the receiving account of the asset.
 
 ### Reserve Asset Transfer
-When consensus systems do not have a established layer of trust over which they can transfer assets, they can opt for a trusted 3rd entity to store the assets. 
+
+When consensus systems do not have a established layer of trust over which they can transfer assets,
+they can opt for a trusted 3rd entity to store the assets.
 
 ![](../assets/cross-consensus/xcm-reserve-asset-transfer.png)
 
 1. [InitiateReserveWithdraw](https://github.com/paritytech/xcm-format#initiatereservewithdraw)
 
-  The source gathers the derivative assets to be transferred from the sending account and burns them, taking note of the amount of derivatives that were burned.
+The source gathers the derivative assets to be transferred from the sending account and burns them,
+taking note of the amount of derivatives that were burned.
 
 2. [WithdrawAsset](https://github.com/paritytech/xcm-format#withdrawasset)
 
-  The source sends a WithdrawAsset instruction to the reserve, instructing the reserve to withdraw assets equivalent to the amount of derivatives burned from the source's sovereign account.
+The source sends a WithdrawAsset instruction to the reserve, instructing the reserve to withdraw
+assets equivalent to the amount of derivatives burned from the source's sovereign account.
 
 3. [DepositReserveAsset](https://github.com/paritytech/xcm-format#depositreserveasset)
 
-  The reserve deposits the assets withdrawn from the previous step to the destination's sovereign account, taking note of the amount of assets deposited.
+The reserve deposits the assets withdrawn from the previous step to the destination's sovereign
+account, taking note of the amount of assets deposited.
 
 4. [ReserveAssetDeposited](https://github.com/paritytech/xcm-format#reserveassetdeposited)
 
-  The reserve creates a ReserveAssetDeposited instruction with the amount of assets deposited to the destination's sovereign account, and sends this instruction onwards to the destination. The destination receives the instruction and processes it, minting the derivative assets as a result of the process.
+The reserve creates a ReserveAssetDeposited instruction with the amount of assets deposited to the
+destination's sovereign account, and sends this instruction onwards to the destination. The
+destination receives the instruction and processes it, minting the derivative assets as a result of
+the process.
 
 5. [DepositAsset](https://github.com/paritytech/xcm-format#depositasset)
 
-  The destination deposits the derivative assets minted to the receiving account.
+The destination deposits the derivative assets minted to the receiving account.
 
 ### XCM Tech Stack
 
@@ -121,18 +135,27 @@ channels.
 
 ## XCVM (Cross-Consensus Virtual Machine)
 
-At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM program. The XCVM is a state machine, state is kept track in Registers.
+At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
+program. The XCVM is a state machine, state is kept track in Registers.
 
-It’s an ultra-high level non-Turing-complete computer whose instructions are designed to be roughly at the same level as transactions. Messages are one or more XCM instructions. The program executes until it either runs to the end or hits an error, at which point it finishes up and halts. An XCM executor following the XCVM specification is provided by Parity, and it can be extended or customized, or even ignored altogether and users can create their own construct that follows the XCVM spec.
+It’s an ultra-high level non-Turing-complete computer whose instructions are designed to be roughly
+at the same level as transactions. Messages are one or more XCM instructions. The program executes
+until it either runs to the end or hits an error, at which point it finishes up and halts. An XCM
+executor following the XCVM specification is provided by Parity, and it can be extended or
+customized, or even ignored altogether and users can create their own construct that follows the
+XCVM spec.
 
 A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more
 XCM instructions. To learn more about the XCVM and the XCM Format, see the latest
 [blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
 by Dr. Gavin Wood.
 
-XCM instructions might change a register, they might change the state of the consensus system or both.
+XCM instructions might change a register, they might change the state of the consensus system or
+both.
 
-One example of such an instruction would be `TransferAsset` which is used to transfer an asset to some other address on the remote system. It needs to be told which asset(s) to transfer and to whom/where the asset is to be transferred.
+One example of such an instruction would be `TransferAsset` which is used to transfer an asset to
+some other address on the remote system. It needs to be told which asset(s) to transfer and to
+whom/where the asset is to be transferred.
 
 ```
 enum Instruction {
@@ -143,9 +166,16 @@ enum Instruction {
     /* snip */
 }
 ```
-A `MultiAsset` is a general identifier for an asset. It may represent both fungible and non-fungible assets, and in the case of a fungible asset, it represents some defined amount of the asset.
 
-A `MultiLocation` is a relative identifier, meaning that it can only be used to define the relative path between two locations, and cannot generally be used to refer to a location universally. Much like a relative file-system path will first begin with any "../" components used to ascend into to the containing directory, followed by the directory names into which to descend, a `MultiLocation` has two main parts to it: the number of times to ascend into the outer consensus from the local and then an interior location within that outer consensus.
+A `MultiAsset` is a general identifier for an asset. It may represent both fungible and non-fungible
+assets, and in the case of a fungible asset, it represents some defined amount of the asset.
+
+A `MultiLocation` is a relative identifier, meaning that it can only be used to define the relative
+path between two locations, and cannot generally be used to refer to a location universally. Much
+like a relative file-system path will first begin with any "../" components used to ascend into to
+the containing directory, followed by the directory names into which to descend, a `MultiLocation`
+has two main parts to it: the number of times to ascend into the outer consensus from the local and
+then an interior location within that outer consensus.
 
 ## Cross-Consensus Protocols (XCMP, VMP, HRMP)
 
@@ -157,7 +187,8 @@ parachains.
 
 :::caution
 
-XCMP is currently under development and most cross-chain message passing uses HRMP channels for the time being.
+XCMP is currently under development and most cross-chain message passing uses HRMP channels for the
+time being.
 
 :::
 
@@ -279,21 +310,29 @@ doesn't support embedded videos. </video>
 
 ## Resources
 
-- [Shawn Tabrizi: XCM - The Backbone Of A Multichain Future | Polkadot Decoded 2022](https://www.youtube.com/watch?v=cS8GvPGMLS0) - High level overview which should answer “What is XCM?
+- [Shawn Tabrizi: XCM - The Backbone Of A Multichain Future | Polkadot Decoded 2022](https://www.youtube.com/watch?v=cS8GvPGMLS0) -
+  High level overview which should answer “What is XCM?
 
-- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) - Detailed blog post by Dr. Gavin Wood about the XCM Format.
+- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) -
+  Detailed blog post by Dr. Gavin Wood about the XCM Format.
 
-- [XCM Format specification](https://github.com/paritytech/xcm-format) - The best starting point for understanding the XCM API at a technical level.
+- [XCM Format specification](https://github.com/paritytech/xcm-format) - The best starting point for
+  understanding the XCM API at a technical level.
 
-- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) - High level overview of XCM and specifically the new features available in XCM v3.
+- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) -
+  High level overview of XCM and specifically the new features available in XCM v3.
 
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical description of cross-chain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
+  description of cross-chain communication on the Web3 Foundation research wiki.
 
-- [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An
-  overview of the messaging schemes from the Polkadot Parachain Host Implementor's guide.
+- [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An overview
+  of the messaging schemes from the Polkadot Parachain Host Implementor's guide.
 
-- [Sub0 Online: Getting Started with XCM - Your First Cross Chain Messages](https://www.youtube.com/watch?v=5cgq5jOZx9g) - Code focused workshop on how XCM v1 works, and the core concepts of XCM.
+- [Sub0 Online: Getting Started with XCM - Your First Cross Chain Messages](https://www.youtube.com/watch?v=5cgq5jOZx9g) -
+  Code focused workshop on how XCM v1 works, and the core concepts of XCM.
 
-- [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) - Technical audit report by Quarkslab prepared for Parity.
+- [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) -
+  Technical audit report by Quarkslab prepared for Parity.
 
-- [XCM pallet code](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs) - The pallet that contains XCM logic from the Polkadot code repository
+- [XCM pallet code](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs) -
+  The pallet that contains XCM logic from the Polkadot code repository

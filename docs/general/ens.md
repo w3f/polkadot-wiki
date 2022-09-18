@@ -15,12 +15,12 @@ decentralized and secure way to translate text via smart contracts. Supporting w
 allow senders to input ENS domains instead of long and unwieldy addresses. This prevents phishing,
 fraud, typos, and adds a layer of usability on top of the regular wallet user experience.
 
-:::note 
+:::note
 
-You will need an ENS name and an Ethereum account with some ether in it to follow along with
-this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
-subdomain registrars like [Nameth](https://nameth.io). Note that if you're using an older ENS
-name, you should make sure you're using the
+You will need an ENS name and an Ethereum account with some ether in it to follow along with this
+guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
+subdomain registrars like [Nameth](https://nameth.io). Note that if you're using an older ENS name,
+you should make sure you're using the
 [new resolver](https://medium.com/the-ethereum-name-service/ens-registry-migration-is-over-now-what-a-few-things-to-know-fb05f921872a).
 Visiting the ENS App will warn you about this if not. You will also need some way to use your
 Ethereum address - following this guide on a personal computer is recommended. Wallets like
@@ -35,8 +35,8 @@ show two different approaches.
 
 :::note
 
-DOT can currently only be added using the Resolver method. KSM can be added through both
-methods are described below.
+DOT can currently only be added using the Resolver method. KSM can be added through both methods are
+described below.
 
 :::
 

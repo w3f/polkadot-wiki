@@ -512,12 +512,12 @@ already maxed out.
 Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
 Polkadot will also produce blocks at approximately six second intervals.
 
-Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). 
-These rewards are calculated based on era points, which have a probabilistic component. In other words,
-there may be slight differences in your rewards from era to era, and even amongst validators in the
-active set at the same time. These variations should cancel out over a long enough timeline. See the
-page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md) for more
-information on how these are calculated.
+Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on
+Polkadot). These rewards are calculated based on era points, which have a probabilistic component.
+In other words, there may be slight differences in your rewards from era to era, and even amongst
+validators in the active set at the same time. These variations should cancel out over a long enough
+timeline. See the page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md)
+for more information on how these are calculated.
 
 In order to be paid your staking rewards, someone must claim them for each validator that you
 nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot

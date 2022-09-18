@@ -8,9 +8,9 @@ slug: ../build-hrmp-channels
 ---
 
 [HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) has the same interface and functionality as
-[XCMP](../learn/learn-xcm.md#xcmp-cross-chain-message-passing) but is much more
-demanding on resources since it passes all messages via the Relay Chain. When XCMP is implemented on
-Polkadot, HRMP is planned to be deprecated and phased out in favor of it.
+[XCMP](../learn/learn-xcm.md#xcmp-cross-chain-message-passing) but is much more demanding on
+resources since it passes all messages via the Relay Chain. When XCMP is implemented on Polkadot,
+HRMP is planned to be deprecated and phased out in favor of it.
 
 ## Opening HRMP channel: parachain to parachain
 
@@ -63,10 +63,12 @@ review and ultimately vote:
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls) :
 
-     - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP channel with your chain;
-     - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
+    - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP
+      channel with your chain;
+    - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
 
-    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT, the first transaction should not be necessary (these guidelines will be updated accordingly).
+    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
+    the first transaction should not be necessary (these guidelines will be updated accordingly).
 
 4.  The XCM message to Statemint, which can be decoded on the network;
 5.  The call data to verify on
@@ -93,9 +95,10 @@ the same as in the post.
 
 ## Submission of the proposal as an external motion to Council
 
-A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in order to be able to submit an external motion: they will
-use the proposal hash for your preimage and submit it to Council vote. The same contextual
-information you used in the discussion post will be used for the motion post on Polkassembly.
+A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in
+order to be able to submit an external motion: they will use the proposal hash for your preimage and
+submit it to Council vote. The same contextual information you used in the discussion post will be
+used for the motion post on Polkassembly.
 
 Once the Council approves your proposal, this will move to the external queue - and soon after to be
 voted by the community in the Referenda queue: make sure to discuss the proposal with your parachain
