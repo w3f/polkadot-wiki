@@ -7,7 +7,7 @@ keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms
 slug: ../learn-phragmen
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 ## NPoS Election Algorithms
 

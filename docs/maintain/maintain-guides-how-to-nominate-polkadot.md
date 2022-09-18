@@ -7,7 +7,7 @@ keywords: [nominate, how to nominate, nominator, stake]
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 :::info
 

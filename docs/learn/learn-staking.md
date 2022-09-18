@@ -7,7 +7,7 @@ keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements NPoS (Nominated
 Proof-of-Stake), a relatively novel and sophisticated mechanism to select the validators who are
