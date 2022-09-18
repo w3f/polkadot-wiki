@@ -146,7 +146,7 @@ popular chains with clear use cases will be given priority, and novel bridge des
 - [XCLAIM][] - XCLAIM is a framework for achieving trustless and efficient cross-chain exchanges
   using cryptocurrency-backed assets.
 
-[cross consensus]: learn-cross-consensus.md
+[cross consensus]: learn-xcm.md
 [parity bridge]: https://github.com/paritytech/parity-bridge
 [interlay]: https://interlay.gitlab.io/polkabtc-spec/
 [xclaim]: https://eprint.iacr.org/2018/643.pdf

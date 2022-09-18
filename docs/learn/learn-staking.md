@@ -288,7 +288,7 @@ security to the network will be nominators.
 
 Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
 consensus in GRANDPA, validate the state transition function of parachains, and possibly some other
-responsibilities regarding data availability and [XCM](learn-cross-consensus.md).
+responsibilities regarding data availability and [XCM](learn-xcm.md).
 
 Nominators, on the other hand, have far fewer responsibilities. Those include monitoring their
 validators' performance (uptime), keeping an eye on changing commission rates (a validator can

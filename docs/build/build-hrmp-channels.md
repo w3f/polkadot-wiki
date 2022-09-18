@@ -7,8 +7,8 @@ keywords: [HRMP, parachain, Statemint, proposal]
 slug: ../build-hrmp-channels
 ---
 
-[HRMP](../learn/learn-cross-consensus.md#xcmp-lite-hrmp) has the same interface and functionality as
-[XCMP](../learn/learn-cross-consensus.md#xcmp-cross-chain-message-passing) but is much more
+[HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) has the same interface and functionality as
+[XCMP](../learn/learn-xcm.md#xcmp-cross-chain-message-passing) but is much more
 demanding on resources since it passes all messages via the Relay Chain. When XCMP is implemented on
 Polkadot, HRMP is planned to be deprecated and phased out in favor of it.
 
