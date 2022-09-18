@@ -7,7 +7,7 @@ keywords: [polkadot, kusama, polkadot vs kusama, canary]
 slug: ../learn-kusama-vs-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Although they are like cousins and share many parts of their code, Polkadot and Kusama are
 independent, standalone networks with different priorities. Kusama is wild and fast, and great for

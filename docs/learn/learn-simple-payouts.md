@@ -7,7 +7,7 @@ keywords: [payouts, simple payouts, rewards, staking]
 slug: ../learn-simple-payouts
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Polkadot and Kusama make stakers claim their rewards for past eras by submitting a transaction. This
 naturally leads to spreading out reward distribution, as people make transactions at disparate

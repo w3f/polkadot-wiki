@@ -7,7 +7,7 @@ keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralized
 blockchain interoperability. This interoperability allows for asset teleportation: the process of

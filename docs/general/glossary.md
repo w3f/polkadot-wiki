@@ -7,7 +7,7 @@ keywords: [glossary, questions, definitions]
 slug: ../glossary
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 ## Active Nomination
 

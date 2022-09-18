@@ -7,7 +7,7 @@ keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Nominators secure the Relay Chain by selecting good validators and staking DOT.
 
