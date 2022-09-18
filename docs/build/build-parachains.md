@@ -84,11 +84,11 @@ become a parachain. Interoperability between sovereign chains involves certain c
 complex protocols to enable across a wide breadth of chains.
 
 With {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, you will get this feature out
-of the box if you build your application as a parachain. The
-[XCM format](../learn/learn-xcm.md) allows any parachains to communicate by passing
-messages between them. Furthermore, as bridges to other chains are connected (such as those to
-Bitcoin or Ethereum) {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains
-will be able to communicate with these as well.
+of the box if you build your application as a parachain. The [XCM format](../learn/learn-xcm.md)
+allows any parachains to communicate by passing messages between them. Furthermore, as bridges to
+other chains are connected (such as those to Bitcoin or Ethereum)
+{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains will be able to
+communicate with these as well.
 
 :::note
 
@@ -101,9 +101,9 @@ a viable one for their project.
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, you are able to put your
 blockchain’s latest block head onto the relay chain. As a parachain, the blocks you submit are
 verified by validators with a Wasm runtime, which can be stored on the relay chain. You also get the
-ability to communicate with other parachains using the [XCM](../learn/learn-xcm.md)
-format: an abstract message passing system. Message passing is tracked on the relay chain - as such,
-you can prove the delivery of messages and facilitate trustless interactions.
+ability to communicate with other parachains using the [XCM](../learn/learn-xcm.md) format: an
+abstract message passing system. Message passing is tracked on the relay chain - as such, you can
+prove the delivery of messages and facilitate trustless interactions.
 
 As you can place your blockchain’s latest block head, you can achieve deterministic finalization for
 your chain. The hard part of reaching finalization for blockchains tends to be the consensus, where,
@@ -317,10 +317,9 @@ grants available for this type of work.
 ### Rococo Testnet
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a testnet built for testing
-parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp)
-(Horizontal Relay-routed Message Passing) in order to send transfers and messages between parachains
-and a Relay Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the
-desired parachain.
+parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) (Horizontal
+Relay-routed Message Passing) in order to send transfers and messages between parachains and a Relay
+Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
 Rococo currently runs four test system parachains:
 [Statemint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fstatemint-rococo-rpc.parity.io#/explorer)

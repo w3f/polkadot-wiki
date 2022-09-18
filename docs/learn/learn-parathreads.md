@@ -53,9 +53,8 @@ distinction than a technological one.
 
 Parathreads have the exact same benefits for connecting to {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} that a full parachain has. Namely, it is able to send messages to other
-para-objects through [XCMP](learn-xcm.md###XCMP) and it is secured under the full
-economic security of {{ polkadot: Polkadot's :polkadot }} {{ kusama: Kusama's :kusama }} validator
-set.
+para-objects through [XCMP](learn-xcm.md###XCMP) and it is secured under the full economic security
+of {{ polkadot: Polkadot's :polkadot }} {{ kusama: Kusama's :kusama }} validator set.
 
 The difference between parachains and parathreads is economic. Parachains must be registered through
 a normal means of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, i.e. governance
