@@ -6,3 +6,6 @@
 
 # Check subdirectories too
 !*/
+
+# Ignore translated docs (not currently maintained)
+/polkadot-wiki/translated_docs/
