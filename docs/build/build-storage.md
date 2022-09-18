@@ -88,13 +88,9 @@ supports multiple storage-layer protocols such as [IPFS](#ipfs-interplanetary-fi
 exposes instant accessible on-chain storage functions to users. Crustʼs technical stack is also
 capable of supporting data manipulating and computing.
 
-<<<<<<< HEAD
 Crust provides a native cross-chain communication communication pallet based on
-[XCMP](https://wiki.polkadot.network/docs/learn-crosschain), called
+[XCMP](https://wiki.polkadot.network/docs/learn-xcm), called
 [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
-=======
-Crust provides a native cross-chain communication communication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-xcm), called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
->>>>>>> master
 
 The protocol also supports most smart contract platforms, including Ethereum, with its
 [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
