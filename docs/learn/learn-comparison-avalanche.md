@@ -45,7 +45,7 @@ Subnets can be public or private and allow for developers to design and launch a
 
 <!-- TODO: Dig into each Snow protocol in detail -->
 
-Avalanche uses a family of consensus protocols to achieve security, liveness and finality. These are known as the Snow* protocols. This group of protocol composed together use both classical and Nakomoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
+Avalanche uses a family of consensus protocols to achieve security, liveness and finality. These are known as the Snow* protocols. This group of protocols composed together use both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
 
 The Snow family is a hierarchical collection of systems used to reach finality on Avalanche:
 
