@@ -410,6 +410,9 @@ threshold, they will immediately have access to these tokens.
 
 ### Generating Addresses of Multi-signature Accounts
 
+The Polkadot-JS UI supports multisig accounts, as documented in the
+[Account Generation page](learn-account-generation.md#multi-signature-accounts).
+
 :::note Addresses that are provided to the multisig wallets must be sorted
 
 The below methods for generating sort the accounts for you, but if you are implementing your own
@@ -434,9 +437,6 @@ Threshold: 1
 Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 --------------------------------
 ```
-
-The Polkadot-JS UI supports multisig accounts, as documented in the
-[Account Generation page](learn-account-generation.md#multi-signature-accounts).
 
 ### Making Transactions with a Multi-signature Account
 
