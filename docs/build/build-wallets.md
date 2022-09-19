@@ -13,12 +13,12 @@ transactions. Below are some non-custodial wallets that support Polkadot along w
 
 ### Supported Wallets
 
-| Wallet Name                                                         | Development State | Team Name | Description       | 
-| ------------------------------------------------------------------- | ----------------- | --------- | ----------------- | 
-| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android   | 
-| [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | 
-| [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | 
-| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | 
+| Wallet Name                                                         | Development State | Team Name | Description       | Staking support |
+| ------------------------------------------------------------------- | ----------------- | --------- | ----------------- | ------- |
+| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android   | Yes |
+| [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Yes |
+| [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Yes |
+| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Yes |
 
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
 Polkadot-JS, the Polkadot{.js} extension, or Parity Signer. For other wallet software, you should
