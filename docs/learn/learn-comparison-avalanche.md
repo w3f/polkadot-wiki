@@ -84,7 +84,7 @@ According to its whitepaper, Avalanche plans to have an on-chain governance mech
 
 Limiting the governance functionality is a design choice to increase predictibility and safety.
 
-Polkadot's governance mechanism has been in production from the very begining, and was used to slowly release functionality and decentralize the initial network. It is also not limited to a few parameters, the whole runtime is subject to change via protocol.
+Polkadot's governance mechanism has been in production from the very begining, and was used to slowly release functionality and decentralize the initial network. It is also not limited to a few parameters and in fact, the whole runtime is subject to change via protocol making Polkadot a meta-protocol.
 
 ## Upgrades
 
