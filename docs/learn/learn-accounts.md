@@ -477,12 +477,7 @@ bytes) and the **DepositFactor** equals `deposit(0, 32)` (additional address of 
 The deposit function in JavaScript is defined below, cribbed from the
 [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/constants/src/lib.rs).
 
-Thus the deposit values can be calculated as shown in the table below.
 
-|               | Polkadot (DOT) | Kusama (KSM)   | Polkadot (planck) | Kusama (planck) |
-| ------------- | -------------- | -------------- | ----------------- | --------------- |
-| DepositBase   | 20.088         | 3.3401         | 200880000000      | 3340100000000   |
-| DepositFactor | .032           | 0.005333333312 | 320000000         | 5333333312      |
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
 Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
@@ -491,7 +486,7 @@ while she waits for either Bob or Charlie also to approve the call using the `ap
 call and execute the transaction, he will not need to place the deposit, and Alice will receive her
 deposit back. Similarly, after Alice sends the initial transaction, say Bob or Charlie choose to cancel the transaction due to an error on Alice's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Alice.
 
-### Example with Polkadot JS
+### Example with the Polkadot-JS UI
 
 :::info
 
