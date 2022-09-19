@@ -37,7 +37,7 @@ The C-chain is where most activity will happen on the Avalanche network. It allo
 
 #### Subnets or sub-networks
 
-Subnets can be public or private and allow for developers to design and launch a blockchain on Avalanche. These are one or many validators that are subsets from the overall validator set of the network. Any validator in the Avalanche network has to validate all three chains making them a part of the primary network subnet. Subnets can validate any blockchains, however each blcokcahin is validated by exactly one subnet. 
+Subnets can be public or private and allow for developers to design and launch a blockchain on Avalanche. There are one or many validators that are subsets from the overall validator set of the network. Any validator in the Avalanche network has to validate all three chains making them a part of the primary network subnet. Subnets can validate any blockchains, however each blockchain is validated by exactly one subnet. 
 
 <!-- TODO: How different is this model from the parachain model? Do subnets also have to use the avalanche consensus model? They have a choice of VM but do they of consensus? -->
 
