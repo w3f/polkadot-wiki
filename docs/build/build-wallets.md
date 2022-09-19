@@ -9,7 +9,7 @@ slug: ../build-wallets
 
 The integration of a [wallet](../general/glossary.md#wallet) with {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} allows for simple and easy access to private keys and signing
-transactions. Below are some non-custodial wallets that support Polkadot along with their development statuses.
+transactions. Below are some wallets that support Polkadot along with their development statuses.
 
 ### Supported Wallets
 
@@ -26,7 +26,7 @@ contact the developers of that wallet.
 
 ### Treasury Funded Wallets
 
-These are non-custodial wallets which have been supported by either the Polkadot or Kusama Treasury via Treasury
+These are wallets which have been supported by either the Polkadot or Kusama Treasury via Treasury
 Proposal. Links in the Proposals section go to the Polkassembly post where the Treasury Proposal was
 discussed.
 
