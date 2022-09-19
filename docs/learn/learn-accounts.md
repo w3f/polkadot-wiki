@@ -408,21 +408,6 @@ account existing yet. This means one can send tokens to an address that does not
 the entities designated as the recipients come together in a new multisig under a matching
 threshold, they will immediately have access to these tokens.
 
-### Generating Addresses of Multi-signature Accounts
-
-The Polkadot-JS UI supports multisig accounts, as documented in the
-[Account Generation page](learn-account-generation.md#multi-signature-accounts).
-
-:::note Addresses that are provided to the multisig wallets must be sorted
-
-The below methods for generating sort the accounts for you, but if you are implementing your own
-sorting, then be aware that the public keys are compared byte-for-byte and sorted ascending before
-being inserted in the payload that is hashed.
-
-:::
-
-Addresses are deterministically generated from the signers and threshold of the multisig wallet. 
-
 ### Making Transactions with a Multi-signature Account
 
 There are three types of actions you can take with a multisig account:
@@ -464,7 +449,17 @@ call, in this case a balance transfer. When doing this Charlie will have to depo
 while he waits for either Dan or Eleanor also to approve the balance transfer call using the `as_multi` extrinsic. When Dan comes to approve the call and execute the transaction, he will not need to place the deposit, and Charlie will receive his
 deposit back. Similarly, after Charlie sends the initial transaction, say Dan or Eleanor choose to cancel the transaction due to an error on Charlie's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Charlie.
 
-Note that multisigs are deterministic, which means that no matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. This has some implications when using the Extrinsic menu to perform multisig transactions as if the order of the other signatories is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the account tab (recommended).
+Note that multisigs are deterministic, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. 
+
+:::note Addresses that are provided to the multisig wallet are sorted
+
+Public keys of signers' wallets are compared byte-for-byte and sorted ascending before
+being used to generate the multisig address.
+
+:::
+
+This has some implications when using the Extrinsic menu to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented in the
+[Account Generation page](learn-account-generation.md#multi-signature-accounts). See this video tutorial for more information about creating multisig accounts, as well as transact with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
 
 ### Example with the Polkadot-JS UI
 
