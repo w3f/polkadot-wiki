@@ -7,6 +7,8 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
 
+import RPC from "./../../components/RPC-Connection"
+
 This document covers the basics of Polkadot and Kusama account addresses and how they exist
 on-chain. For a more in-depth explanation of the cryptography behind them, please see
 [the cryptography page](learn-cryptography.md).
@@ -466,18 +468,10 @@ participants in multi-signature wallets should have spare funds available.
 The deposit is dependent on the `threshold` parameter and is calculated as follows:
 
 ```
-Deposit = DepositBase + threshold * DepositFactor
+Deposit = depositBase + threshold * depositFactor
 ```
 
-Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
-
-Currently, the **DepositBase** equals `deposit(1, 88)` (key size is 32; value is size 4+4+16+32 = 56
-bytes) and the **DepositFactor** equals `deposit(0, 32)` (additional address of 32 bytes).
-
-The deposit function in JavaScript is defined below, cribbed from the
-[Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/constants/src/lib.rs).
-
-
+Where `depositBase` and `depositFactor` are chain constants (in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} units) set in the runtime code. Currently, the deposit base equals <RPC network="polkadot" path="query.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> DOT and the deposit factor equals <RPC network="polkadot" path="query.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/> DOT.
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
 Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
