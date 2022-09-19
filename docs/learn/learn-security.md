@@ -29,7 +29,8 @@ two more 51% attacks on ETC.
 
 Polkadot overcomes security scalability concerns since it gravitates all the economic incentives to
 the Relay Chain and allows the parachains to tap into stronger guarantees at genesis. Sovereign
-chains must expend much more effort to grow the value of their coin so that it is sufficiently secure against well-funded attackers.
+chains must expend much more effort to grow the value of their coin so that it is sufficiently
+secure against well-funded attackers.
 
 ### Example
 

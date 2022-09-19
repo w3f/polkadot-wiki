@@ -7,16 +7,18 @@ keywords: [RPC, api, integration]
 slug: ../build-node-interaction
 ---
 
-This page will guide you through some basic interactions with your node. This guide should _guide you to the proper tools,_ not be
-seen as canonical reference. Always refer to the proper
+This page will guide you through some basic interactions with your node. This guide should _guide
+you to the proper tools,_ not be seen as canonical reference. Always refer to the proper
 documentation for the tool you are using:
 
 - [Substrate RPC API](https://paritytech.github.io/substrate/master/sc_rpc_api/index.html)
 - [Polkadot-JS RPC](https://polkadot.js.org/docs/substrate/rpc)
 - [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar)
 
-**Polkadot-JS RPC** is a JavaScript library for interacting with the **Substrate RPC API** endpoint, distributed as `@polkadot/api` Node.js package.  
-**Substrate API Sidecar** is using the **Polkadot-JS RPC** to provide separately runnable REST services.
+**Polkadot-JS RPC** is a JavaScript library for interacting with the **Substrate RPC API** endpoint,
+distributed as `@polkadot/api` Node.js package.  
+**Substrate API Sidecar** is using the **Polkadot-JS RPC** to provide separately runnable REST
+services.
 
 ## Polkadot RPC
 
@@ -46,9 +48,9 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 ```
 
 Some return values may not appear meaningful at first glance. Polkadot uses
-[SCALE encoding](https://docs.substrate.io/reference/scale-codec/) as a format that is
-suitable for resource-constrained execution environments. You will need to decode the information
-and use the chain [metadata](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata)
+[SCALE encoding](https://docs.substrate.io/reference/scale-codec/) as a format that is suitable for
+resource-constrained execution environments. You will need to decode the information and use the
+chain [metadata](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata)
 (`state_getMetadata`) to obtain human-readable information.
 
 ### Tracking the Chain Head
@@ -98,8 +100,8 @@ Notice that some extrinsics do not have a signature. These are
 
 :::info Tracking transaction fees
 
-When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining
-if the extrinsic had a fee. This field only means that it would require a fee if submitted as a
+When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining if
+the extrinsic had a fee. This field only means that it would require a fee if submitted as a
 transaction. In order to charge a fee, a transaction also needs to be signed. So in the following
 example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the
 block by the block author.
@@ -390,9 +392,8 @@ block by the block author.
 
 :::info The JS number type is a 53 bit precision float
 
-There is no guarantee that the numerical values in
-the response will have a numerical type. Any numbers larger than `2**53-1` will have a string
-type.
+There is no guarantee that the numerical values in the response will have a numerical type. Any
+numbers larger than `2**53-1` will have a string type.
 
 :::
 

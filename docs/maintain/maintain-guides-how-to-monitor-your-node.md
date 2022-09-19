@@ -256,8 +256,8 @@ password is admin/admin.
 
 If you want to change the port on which Grafana runs (3000 is a popular port), edit the file
 `/usr/share/grafana/conf/defaults.ini` with a command like
-`sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something
-else. Then restart grafana with `sudo systemctl restart grafana-server`.
+`sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something else.
+Then restart grafana with `sudo systemctl restart grafana-server`.
 
 :::
 
@@ -335,7 +335,7 @@ There is a configuration file named `alertmanager.yml` inside the directory that
 in the previous command, but that is not of our use. We will create our `alertmanager.yml` file
 under `/etc/alertmanager` with the following config.
 
-:::note 
+:::note
 
 Ensure to change the ownership of "/etc/alertmanager" to `prometheus` by executing
 

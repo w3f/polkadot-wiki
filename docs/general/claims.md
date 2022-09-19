@@ -7,7 +7,8 @@ keywords: [claim, DOT, token sale]
 slug: ../claims
 ---
 
-For the most update-to-date information on DOT claims, checkout the following claiming resources and tutorials:
+For the most update-to-date information on DOT claims, checkout the following claiming resources and
+tutorials:
 
 - [Why do I need to claim my DOT tokens and is there a deadline?](https://support.polkadot.network/support/solutions/articles/65000063553-why-do-i-need-to-claim-my-dot-tokens-and-is-there-a-deadline-)
 - [I claimed my DOT before Polkadot went live, but still see zero balance!](https://support.polkadot.network/support/solutions/articles/65000063667-i-claimed-my-dot-before-polkadot-went-live-but-still-see-zero-balance-)

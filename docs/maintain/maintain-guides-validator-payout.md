@@ -7,7 +7,7 @@ keywords: [validator payout, payments, rewards, era points]
 slug: ../maintain-guides-validator-payout
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 ## Era Points
 

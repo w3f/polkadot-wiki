@@ -28,8 +28,8 @@ Polkadot from a research or academic perspective.
   Lefteris Kokoris Kogias
 - [`A Verifiably Secure and Proportional Committee Election Rule`](https://arxiv.org/abs/2004.12990) -
   Validator Election in Nominated Proof of Stake. Authors: Alfonso Cevallos and Alistair Stewart
-- [`Network Time with a Consensus on Clock`](https://eprint.iacr.org/2019/1348.pdf) - Consensus on Clock
-  in Universally Composable Timing. Author: Handan Kılınç Alper
+- [`Network Time with a Consensus on Clock`](https://eprint.iacr.org/2019/1348.pdf) - Consensus on
+  Clock in Universally Composable Timing. Author: Handan Kılınç Alper
 - [`Delay Encryption`](https://eprint.iacr.org/2020/638) - Delay Encryption can roughly be described
   as “identity based encryption with slow derived private key issuance”. Authors: Jeff Burdges and
   Luca de Feo

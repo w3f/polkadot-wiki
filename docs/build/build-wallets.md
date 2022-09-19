@@ -26,15 +26,16 @@ contact the developers of that wallet.
 
 ### Treasury Funded Wallets
 
-These are wallets which have been supported by either the Polkadot or Kusama Treasury via Treasury Proposal. Links in the Proposals section go to the Polkassembly 
-post where the Treasury Proposal was discussed.
+These are wallets which have been supported by either the Polkadot or Kusama Treasury via Treasury
+Proposal. Links in the Proposals section go to the Polkassembly post where the Treasury Proposal was
+discussed.
 
 :::caution Web3 Technologies Foundation does not endorse these wallets
 
-These third-party wallets have been funded by the community through either the Polkadot or Kusama 
-[Treasury](learn-treasury). You should use your own due diligence in researching and using them.
-The official Polkadot Support cannot provide support for issues with 
-these wallets or other non-Parity developed wallets.
+These third-party wallets have been funded by the community through either the Polkadot or Kusama
+[Treasury](learn-treasury). You should use your own due diligence in researching and using them. The
+official Polkadot Support cannot provide support for issues with these wallets or other non-Parity
+developed wallets.
 
 :::
 
@@ -48,18 +49,23 @@ these wallets or other non-Parity developed wallets.
 | [SubWallet](https://subwallet.app/)             | [1](https://polkadot.polkassembly.io/treasury/138)                                                                                                                                                | Live              | SubWallet | Browser      | Non-custodial | Staking  |
 | [Polkadot js Plus](http://polkadotjs.plus/)      | [1](https://kusama.polkassembly.io/treasury/205)    | Live              | PolkaGate | Browser      | Non-custodial | Staking (Nomination Pools), Crowdloans, Governance, Social recovery  |
 
-:::caution *Note about Nova wallet
 
-There's **another** Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised to ensure that they use the correct Nova wallet by 
-downloading the app from their official website: [https://novawallet.io/](https://novawallet.io/). Before creating or restoring accounts , it is wise to 
-double-check the wallet website URLs through official channels (most projects have it listed on their official social media handles). 
+:::caution \*Note about Nova wallet
+
+There's **another** Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised
+to ensure that they use the correct Nova wallet by downloading the app from their official website:
+[https://novawallet.io/](https://novawallet.io/). Before creating or restoring accounts , it is wise
+to double-check the wallet website URLs through official channels (most projects have it listed on
+their official social media handles).
 
 :::
 
-:::note **Tip from the Treasury
+:::note \*\*Tip from the Treasury
 
-This third-party wallet was not funded by a Treasury Proposal and instead received a tip from the Treasury. Unlike a Treasury Proposal, tipping is a separate 
-system that the council members individually participate in to collectively decide on the value of the tip. Learn more about tipping on the [Treasury Page](learn-treasury#tipping).
+This third-party wallet was not funded by a Treasury Proposal and instead received a tip from the
+Treasury. Unlike a Treasury Proposal, tipping is a separate system that the council members
+individually participate in to collectively decide on the value of the tip. Learn more about tipping
+on the [Treasury Page](learn-treasury#tipping).
 
 :::
 

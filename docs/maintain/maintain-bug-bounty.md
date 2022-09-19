@@ -13,10 +13,10 @@ Disclosure to any third parties disqualifies bug bounty eligibility.
 
 :::info Bug bounty program scope
 
-The bug bounty program does *not* cover bugs on code bases that are external to or, 
-written on top of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug 
-has to be a part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, 
-XCM, GRANDPA, etc.
+The bug bounty program does _not_ cover bugs on code bases that are external to or, written on top
+of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug has to be a
+part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, XCM, GRANDPA,
+etc.
 
 We call on our community and all bug bounty hunters to help identify bugs in Polkadot.
 
@@ -26,28 +26,27 @@ We call on our community and all bug bounty hunters to help identify bugs in Pol
 
 Generally speaking, any bug that poses a significant vulnerability, either to the soundness of
 protocols and protocol/implementation compliance to network security, to classical client security,
-as well as security of cryptographic primitives, could be eligible for a reward. Please note that it's
-entirely our discretion to decide whether a bug is significant enough to qualify for a reward.
+as well as security of cryptographic primitives, could be eligible for a reward. Please note that
+it's entirely our discretion to decide whether a bug is significant enough to qualify for a reward.
 
 :::note
 
-The submission quality will be a significant factor in the level of considered compensation.
-A high-quality submission includes explaining how the bug can be reproduced, how it was
-discovered, and otherwise critical details. Please disclose responsibly; disclosure to any third
-parties disqualifies bug bounty eligibility.
+The submission quality will be a significant factor in the level of considered compensation. A
+high-quality submission includes explaining how the bug can be reproduced, how it was discovered,
+and otherwise critical details. Please disclose responsibly; disclosure to any third parties
+disqualifies bug bounty eligibility.
 
 Examples:
- 
-* An attack that could disrupt the entire network and harm the validity to the network would be 
+
+- An attack that could disrupt the entire network and harm the validity to the network would be
   considered a critical threat.
-* An attack that would disrupt service to others would be regarded as a high threat.
+- An attack that would disrupt service to others would be regarded as a high threat.
 
 :::
 
-:::tip Responsible investigation and reporting 
+:::tip Responsible investigation and reporting
 
-Responsible investigation and reporting include, but
-isn't limited to, the following:
+Responsible investigation and reporting include, but isn't limited to, the following:
 
 - Don't violate the privacy of other users, destroy data, etc.
 - Don't defraud or harm Polkadot network or its users during your research; you should make a good

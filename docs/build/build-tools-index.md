@@ -7,8 +7,8 @@ keywords: [tools, clients, libraries, explorers, monitor, data, SCALE]
 slug: ../build-tools-index
 ---
 
-Here, we provide a list of tools available for your development needs. They are sorted by context. If
-you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
+Here, we provide a list of tools available for your development needs. They are sorted by context.
+If you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
 developers, feel free to [add it in](../general/contributing.md).
 
 ## Wallets
@@ -24,13 +24,15 @@ Please see the [Wallets](build-wallets.md) page.
   chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
-- [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain explorer.
-- [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi support across 40+ parachains.
+- [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain
+  explorer.
+- [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi
+  support across 40+ parachains.
 
 ## Blockchain Analytics
 
-- [Web3go](https://app.web3go.xyz/#/) - An open platform for everyone to play with,
-curate and visualize multi-blockchain data
+- [Web3go](https://app.web3go.xyz/#/) - An open platform for everyone to play with, curate and
+  visualize multi-blockchain data
 - [Polkawatch](https://polkawatch.app/) - Polkadot Decentralization Analytics
 
 ## Network Monitoring & Reporting
@@ -66,8 +68,8 @@ curate and visualize multi-blockchain data
 
 - [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in
   Rust. The Rust version of the Polkadot Host is being built with Substrate.
-- [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and
-  tutorials for building a blockchain using Substrate.
+- [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and tutorials for
+  building a blockchain using Substrate.
 - [Substrate VSCode plugin](https://github.com/paritytech/vscode-substrate).
 - [Substrate Debug Kit](https://github.com/paritytech/substrate-debug-kit) - A collection of debug
   tools and libraries around substrate chains. Includes tools to calculate NPoS elections offline,
@@ -100,23 +102,21 @@ curate and visualize multi-blockchain data
 - [Polkadot JS Browser Extension](https://github.com/polkadot-js/extension) - Key management in a
   Chrome extension.
 
-
 ## Libraries
 
 ### Polkadot-JS API
 
 The Polkadot-JS API provides various utility functions that are used across all projects in the
 `@polkadot` namespace and is split into a number of internal utility packages. The documentation and
-usage instructions are provided at
-[Polkadot-JS API Documentation](https://polkadot.js.org/docs/).
+usage instructions are provided at [Polkadot-JS API Documentation](https://polkadot.js.org/docs/).
 
 - [@polkadot/keyring](https://polkadot.js.org/docs/keyring) This allows you to create and load
   accounts in JavaScript. It is helpful for creating wallets or any application that will require
   the user to write to chain. [Examples](https://polkadot.js.org/docs/keyring/start/create).
-- [@polkadot/util](https://polkadot.js.org/docs/keyring/start/install#other-dependencies) Utility functions like checking if a string
-  is hex-encoded.
-- [@polkadot/util-crypto](https://polkadot.js.org/docs/util-crypto/) Useful cryptographic
-  utilities for developing with Polkadot.
+- [@polkadot/util](https://polkadot.js.org/docs/keyring/start/install#other-dependencies) Utility
+  functions like checking if a string is hex-encoded.
+- [@polkadot/util-crypto](https://polkadot.js.org/docs/util-crypto/) Useful cryptographic utilities
+  for developing with Polkadot.
 
 ### CLI Tools
 
@@ -128,8 +128,8 @@ usage instructions are provided at
   Tool to construct, sign, and broadcast transactions. Signing can be done offline.
 - [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - A С++ API for Polkadot, can
   build `clip`, a command line tool.
-- [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) - Command line utility for
-  generating and inspecting key pairs.
+- [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) - Command line utility
+  for generating and inspecting key pairs.
 
 ### WASM
 
@@ -167,9 +167,8 @@ WebAssembly related tools and projects.
 
 ### SCALE Codec
 
-The SCALE (Simple Concatenated
-Aggregate Little-Endian) Codec is a lightweight, efficient, binary serialization and deserialization
-codec.
+The SCALE (Simple Concatenated Aggregate Little-Endian) Codec is a lightweight, efficient, binary
+serialization and deserialization codec.
 
 It is designed for high-performance, copy-free encoding and decoding of data in resource-constrained
 execution contexts, such as the Substrate runtime. It is not self-describing in any way and assumes
@@ -178,7 +177,8 @@ the decoding context has all type knowledge about the encoded data.
 It is used in almost all communication to/from Substrate nodes, so implementations in different
 languages exist:
 
-- [Substrate Awesome](https://github.com/substrate-developer-hub/awesome-substrate#scale-codec) maintains a list of SCALE codex implementations.
+- [Substrate Awesome](https://github.com/substrate-developer-hub/awesome-substrate#scale-codec)
+  maintains a list of SCALE codex implementations.
 
 ## Data Crawling and Conversion
 
@@ -190,8 +190,11 @@ The following tools help you extract and structure data from a Substrate node.
 - [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive) - Can be run
   alongside a Substrate node to archive all blocks, state, and extrinsic data into PostgreSQL
   database.
-- [Subsquid Archives](https://github.com/subsquid/squid-archive-setup) -
-  Generate a GraphQL database from a Substrate chain's data with rich filtering and querying capabilities. The data (events, extrinsics, blocks) for most parachains is readily available though public archive GraphQL endpoints, kept in [Squid Archive Registry](https://github.com/subsquid/archive-registry/blob/main/archives.json)
+- [Subsquid Archives](https://github.com/subsquid/squid-archive-setup) - Generate a GraphQL database
+  from a Substrate chain's data with rich filtering and querying capabilities. The data (events,
+  extrinsics, blocks) for most parachains is readily available though public archive GraphQL
+  endpoints, kept in
+  [Squid Archive Registry](https://github.com/subsquid/archive-registry/blob/main/archives.json)
 - [Polka-store](https://github.com/TheGoldenEye/polka-store) - A tool which scans a Substrate chain
   and stores balance-relevant transactions in an SQLite database.
 - [Substrate-graph](https://github.com/playzero/substrate-graph) - A compact indexer for Substrate

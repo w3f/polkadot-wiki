@@ -121,12 +121,12 @@ nominating a validator does not assign any governance voting rights to the valid
 
 ## Message Passing
 
-Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-xcm.md) for parachains
-to send arbitrary messages to each other. Parachains open connections with each other and can send
-messages via their established channels. [Collators](learn-collator.md) are full nodes of parachains
-and full nodes of the Relay Chain, so collator nodes are a key component of message passing. Messages
-do not pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.)
-go into the Relay Chain. This enhances scalability by keeping data on the edges of the system.
+Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-xcm.md) for parachains to send
+arbitrary messages to each other. Parachains open connections with each other and can send messages
+via their established channels. [Collators](learn-collator.md) are full nodes of parachains and full
+nodes of the Relay Chain, so collator nodes are a key component of message passing. Messages do not
+pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.) go into
+the Relay Chain. This enhances scalability by keeping data on the edges of the system.
 
 In the case of a chain re-organization, messages can be rolled back to the point of the
 re-organization based on the proofs of post in the Relay Chain. The shared state amongst parachains
@@ -181,17 +181,16 @@ Cosmos chains can be developed using the Cosmos SDK, written in Go. The Cosmos S
 modules (e.g. staking, governance, etc.) that can be included in a chain's STF. The SDK builds on
 top of Tendermint.
 
-The primary development framework for parachains is [Substrate](https://substrate.io),
-written in Rust. Substrate comes with FRAME, a set of about 40 modules (called "pallets") to use in
-a chain's STF. Beyond simply using the pallets, Substrate adds a further layer of abstraction that
-allows developers to compose FRAME's pallets by adding custom modules and configuring the parameters
-and initial storage values for the chain.
+The primary development framework for parachains is [Substrate](https://substrate.io), written in
+Rust. Substrate comes with FRAME, a set of about 40 modules (called "pallets") to use in a chain's
+STF. Beyond simply using the pallets, Substrate adds a further layer of abstraction that allows
+developers to compose FRAME's pallets by adding custom modules and configuring the parameters and
+initial storage values for the chain.
 
 :::note Polkadot can support an STF written in any language
 
-So long as it compiles to its
-meta-protocol Wasm. Likewise, it could still use the Substrate client (database, RPC, networking,
-etc.); it only needs to implement the primitives at the interface.
+So long as it compiles to its meta-protocol Wasm. Likewise, it could still use the Substrate client
+(database, RPC, networking, etc.); it only needs to implement the primitives at the interface.
 
 :::
 

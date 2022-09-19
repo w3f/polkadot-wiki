@@ -7,7 +7,7 @@ keywords: [validate, validator, maintain, NPoS, stake]
 slug: ../learn-validator
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Validators secure the [Relay Chain](learn-architecture.md#relay-chain) by staking DOT, validating
 proofs from collators and participating in consensus with other validators.

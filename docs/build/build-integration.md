@@ -40,5 +40,5 @@ node and [TxWrapper Core](https://github.com/paritytech/txwrapper-core/) to cons
 transactions. Parity and Web3 Foundation will be able to provide the best support if you use these
 tools.
 
-If your team would like support, join some of our [community channels](../general/community.md) or contact
-support@polkadot.network.
+If your team would like support, join some of our [community channels](../general/community.md) or
+contact support@polkadot.network.
