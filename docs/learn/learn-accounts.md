@@ -441,6 +441,19 @@ Deposit = depositBase + threshold * depositFactor
 
 Where `depositBase` and `depositFactor` are chain constants (in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} units) set in the runtime code. Currently, the deposit base equals <RPC network="polkadot" path="query.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> DOT and the deposit factor equals <RPC network="polkadot" path="query.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/> DOT.
 
+### Example using multi-signature accounts
+
+:::info
+
+Check the "How to create a multisig account" section on
+[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
+We recommend trying out the tutorial on
+[Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
+
+You can also see this video tutorial for more information about creating multisig accounts, as well as transact with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
+
+:::
+
 ![multisig diagram](../assets/multisig-diagram.png)
 
 Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Charlie,
@@ -458,19 +471,7 @@ being used to generate the multisig address.
 
 :::
 
-This has some implications when using the Extrinsic menu to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented in the
-[Account Generation page](learn-account-generation.md#multi-signature-accounts). See this video tutorial for more information about creating multisig accounts, as well as transact with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
-
-### Example with the Polkadot-JS UI
-
-:::info
-
-Check the "How to create a multisig account" section on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
-We recommend trying out the tutorial on
-[Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
-
-:::
+This has some implications when using the Extrinsic menu to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented in the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see this video tutorial for more information about creating multisig accounts, as well as transact with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
 
 ## Decoding Call Data
 
