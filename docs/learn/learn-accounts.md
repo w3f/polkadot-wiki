@@ -435,9 +435,8 @@ Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 --------------------------------
 ```
 
-The Polkadot-JS Apps UI also supports multi-sig accounts, as documented in the
-[Account Generation page](learn-account-generation.md#multi-signature-accounts). This is easier than
-generating them manually.
+The Polkadot-JS UI supports multisig accounts, as documented in the
+[Account Generation page](learn-account-generation.md#multi-signature-accounts).
 
 ### Making Transactions with a Multi-signature Account
 
