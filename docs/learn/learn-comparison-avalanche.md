@@ -68,7 +68,7 @@ Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The ba
 
 ## Message Passing
 
-Avalanche does not have a native trustless message passing mechanism, instead it relies on bridges. Though, because it is an EVM compatible protocol, it's able to interoperate at a token level, however subnets do not have a messaging layer out of the box. Polkadot, with its XCM and XCMP messaging protocols allows for a native and trustless messaging scheme, making composibility of chains to build powerful applications much simpler.
+Avalanche does not have a native trustless message passing mechanism. Instead, it relies on bridges. Though, because it is an EVM compatible protocol, it's able to interoperate at a token level. However, subnets do not have a messaging layer out of the box. Polkadot, with its XCM and XCMP messaging protocols allows for a native and trustless messaging scheme, thus supporting composability of chains and enabling the development of powerful cross-chain applications.
 
 ## Governance
 <!-- 
