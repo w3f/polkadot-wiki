@@ -33,7 +33,7 @@ The X-chain is responsible for the transaction layer of the Avalanche blockchain
 
 #### C-chain (Contracts)
 
-The C-chain is where most activity will happen on the Avalanche blockchain. It allows for different virtual machines to execute smart contract code. Out of the box it has support for EVM and AVM(Avalanche VM). 
+The C-chain is where most activity will happen on the Avalanche network. It allows for different virtual machines to execute smart contract code. Out of the box, it has support for EVM and AVM (Avalanche VM). 
 
 #### Subnets or sub-networks
 
