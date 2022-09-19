@@ -81,7 +81,6 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 		auction.endPeriodBlock = end;
 		auction.biddingEndsBlock = auction.endPeriodBlock + endPeriod;
 
-
 		// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
 		auction.startDate = EstimateBlockDate(date, currentBlockNumber, auction.startBlock);
 		auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock);
