@@ -7,7 +7,8 @@ keywords: [node, full node, sync, setup node]
 slug: ../maintain-sync
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom
 Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's
@@ -98,8 +99,15 @@ example:
 
 :::
 
-<Tabs groupId="operating-systems" values={[ {label: 'macOS', value: 'mac'}, {label: 'Windows',
-value: 'win'}, {label: 'Linux', value: 'linux'}, ]}> <TabItem value="mac">
+<Tabs
+  groupId="operating-systems"
+  values={[
+    {label: 'macOS', value: 'mac'},
+    {label: 'Windows', value: 'win'},
+    {label: 'Linux', value: 'linux'},
+  ]}
+>
+<TabItem value="mac">
 
 - Install Homebrew within the terminal by running:
   ```bash
