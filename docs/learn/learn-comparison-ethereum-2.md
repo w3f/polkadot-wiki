@@ -126,7 +126,7 @@ with a suite of modules that can be configured, composed, and extended to develo
 
 ## Rollups
 
-Rollups have been talked about for some time and it's potential to be one of the only trustless way of scaling Ethereum. Rollups reduce transaction fees significantly, and there are a few different versions that are being worked on.
+Rollups, a layer 2 scaling solution, have been talked about for some time and it's potential to scaling Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled up transaction could inclue 10,000 transactions. Rollups reduce transaction fees significantly, and there are a few different versions that are being worked on.
 
 ### Optimism
 
