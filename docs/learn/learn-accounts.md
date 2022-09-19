@@ -421,22 +421,7 @@ being inserted in the payload that is hashed.
 
 :::
 
-Addresses are deterministically generated from the signers and threshold of the multisig wallet. For
-a code example (in TypeScript) of generating you can view the internals of `@w3f/msig-util`
-[here](https://github.com/lsaether/msig-util/blob/master/src/actions/deriveAddress.ts).
-
-The `@w3f/msig-util` is a small CLI tool that can determine the multi-signature address based on
-your inputs.
-
-```zsh
-$ npx @w3f/msig-util@1.0.7 derive --addresses 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr,1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU --threshold 1
-npx: installed 79 in 7.764s
---------------------------------
-Addresses: 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr 1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU
-Threshold: 1
-Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
---------------------------------
-```
+Addresses are deterministically generated from the signers and threshold of the multisig wallet. 
 
 ### Making Transactions with a Multi-signature Account
 
