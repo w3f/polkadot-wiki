@@ -373,12 +373,11 @@ storage while proxies act on their behalf with restricted (or unrestricted) func
 
 ## Multi-signature Accounts
 
-It is possible to create a multi-signature (multi-sig) account in Substrate-based chains. A multi-signature
-account is composed of one or more addresses and a threshold. The threshold defines how many
+It is possible to create a multi-signature account (multisig) in Substrate-based chains. A multisig is composed of one or more addresses and a threshold. The threshold defines how many
 signatories (participating addresses) need to agree on submitting an extrinsic for the call to be
 successful.
 
-For example, Alice, Bob, and Charlie set up a multi-sig with a threshold of 2. This means Alice and
+For example, Alice, Bob, and Charlie set up a multisig with a threshold of 2. This means Alice and
 Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute
 any call without Alice. A threshold is typically a number smaller than the total number of members
 but can also be equal to it, which means they all have to agree.
@@ -395,23 +394,23 @@ Multi-signature accounts have several uses:
 - securing your own stash: use additional signatories as a 2FA mechanism to secure your funds. One
   signer can be on one computer, and another can be on another or in cold storage. This slows down
   your interactions with the chain but is orders of magnitude more secure.
-- board decisions: legal entities such as businesses and foundations use multi-sigs to govern over
+- board decisions: legal entities such as businesses and foundations use multisigs to govern over
   the entity's treasury collectively.
-- group participation in governance: a multi-sig account can do everything a regular account can. A
-  multi-sig account could be a council member in Kusama's governance, where a set of community
+- group participation in governance: a multisig account can do everything a regular account can. A
+  multisig account could be a council member in Kusama's governance, where a set of community
   members could vote as one entity.
 
 Multi-signature accounts **cannot be modified after being created**. Changing the set of members or
-altering the threshold is not possible and instead requires the dissolution of the current multi-sig
-and creation of a new one. As such, multi-sig account addresses are **deterministic**, i.e. you can
-always calculate the address of a multi-sig by knowing the members and the threshold, without the
+altering the threshold is not possible and instead requires the dissolution of the current multisig
+and creation of a new one. As such, multisig account addresses are **deterministic**, i.e. you can
+always calculate the address of a multisig by knowing the members and the threshold, without the
 account existing yet. This means one can send tokens to an address that does not exist yet, and if
-the entities designated as the recipients come together in a new multi-sig under a matching
+the entities designated as the recipients come together in a new multisig under a matching
 threshold, they will immediately have access to these tokens.
 
 ### Generating Addresses of Multi-signature Accounts
 
-:::note Addresses that are provided to the multi-sig wallets must be sorted
+:::note Addresses that are provided to the multisig wallets must be sorted
 
 The below methods for generating sort the accounts for you, but if you are implementing your own
 sorting, then be aware that the public keys are compared byte-for-byte and sorted ascending before
@@ -442,7 +441,7 @@ generating them manually.
 
 ### Making Transactions with a Multi-signature Account
 
-There are three types of actions you can take with a multi-sig account:
+There are three types of actions you can take with a multisig account:
 
 - Executing a call `as_multi`. 
 - Approving a call `approve_as_multi`.
@@ -455,15 +454,15 @@ Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig
 :::
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
-should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multi-sig accounts with `threshold=1`. If you would like to create a multisig with threshold 1 then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core) which is a tool that Parity supports with new features and weekly updates. There is a detailed [Multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
+should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you would like to create a multisig with threshold 1 then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core) which is a tool that Parity supports with new features and weekly updates. There is a detailed [Multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
-call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the pallet
+call as a multisig, you will need to place a small deposit. The deposit stays locked in the pallet
 until the call is executed. The deposit is to establish an economic cost on the storage space that
-the multi-sig call takes up on the chain and discourage users from creating dangling multi-sig
+the multisig call takes up on the chain and discourage users from creating dangling multisig
 operations that never get executed. The deposit will be reserved in the caller's accounts, so
-participants in multi-signature wallets should have spare funds available.
+participants in multisig wallets should have spare funds available.
 
 The deposit is dependent on the `threshold` parameter and is calculated as follows:
 
@@ -473,7 +472,7 @@ Deposit = depositBase + threshold * depositFactor
 
 Where `depositBase` and `depositFactor` are chain constants (in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} units) set in the runtime code. Currently, the deposit base equals <RPC network="polkadot" path="query.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> DOT and the deposit factor equals <RPC network="polkadot" path="query.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/> DOT.
 
-Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
+Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Alice,
 Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
 call. When doing this Alice will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
 while she waits for either Bob or Charlie also to approve the call using the `approve_as_multi` extrinsic. When Bob comes to approve the
