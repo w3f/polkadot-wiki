@@ -2800,13 +2800,6 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
 
-"@polkadot/x-global@10.1.7":
-  version "10.1.7"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.7.tgz#91a472ac2f83fd0858dcd0df528844a5b650790e"
-  integrity sha512-k2ZUZyBVgDnP/Ysxapa0mthn63j6gsN2V0kZejEQPyOfCHtQQkse3jFvAWdslpWoR8j2k8SN5O6reHc0F4f7mA==
-  dependencies:
-    "@babel/runtime" "^7.18.9"
-
 "@polkadot/x-global@10.1.8", "@polkadot/x-global@^10.1.8":
   version "10.1.8"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.8.tgz#4843a2eef47939b612283c2a24f9df0fe321bc4f"
@@ -2814,13 +2807,13 @@
   dependencies:
     "@babel/runtime" "^7.19.0"
 
-"@polkadot/x-randomvalues@*":
-  version "10.1.7"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.7.tgz#d537f1f7bf3fb03e6c08ae6e6ac36e069c1f9844"
-  integrity sha512-3er4UYOlozLGgFYWwcbmcFslmO8m82u4cAGR4AaEag0VdV7jLO/M5lTmivT/3rtLSww6sjkEfr522GM2Q5lmFg==
+"@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@10.1.8":
+  version "10.1.8"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.8.tgz#7da02e6aea33df22d6daafd333e9dfc4a357f265"
+  integrity sha512-Hnv9RFy+MxIoLKW3JEjGXQ05C6/iLogC0d2UWNwXbCwXoSCrK0zQwqKO8mx33rwpn98rycye8gV7pN6vTNqtbQ==
   dependencies:
-    "@babel/runtime" "^7.18.9"
-    "@polkadot/x-global" "10.1.7"
+    "@babel/runtime" "^7.19.0"
+    "@polkadot/x-global" "10.1.8"
 
 "@polkadot/x-randomvalues@10.1.1":
   version "10.1.1"
@@ -2829,14 +2822,6 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
-
-"@polkadot/x-randomvalues@10.1.8":
-  version "10.1.8"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.8.tgz#7da02e6aea33df22d6daafd333e9dfc4a357f265"
-  integrity sha512-Hnv9RFy+MxIoLKW3JEjGXQ05C6/iLogC0d2UWNwXbCwXoSCrK0zQwqKO8mx33rwpn98rycye8gV7pN6vTNqtbQ==
-  dependencies:
-    "@babel/runtime" "^7.19.0"
-    "@polkadot/x-global" "10.1.8"
 
 "@polkadot/x-textdecoder@10.1.1":
   version "10.1.1"
