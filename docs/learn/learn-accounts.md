@@ -489,14 +489,13 @@ console.log("DepositBase", deposit(1, 88));
 console.log("DepositFactor", deposit(0, 32));
 ```
 
-Thus the deposit values can be calculated as shown in the table below.
+Thus the deposit values can be calculated as shown in the table below. They are also shown
+in [plancks](learn-DOT.md#polkadot) for convenience.
 
 |          | Deposit Base                                                                                                    | Deposit Factor                                                                                                  |
 | -------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Polkadot | <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> | <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000 } filter="humanReadable"/> |
-| Polkadot | <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000}/> Planck                 | <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000 }/> Planck                 |
-| Kusama   | <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={66959996400} filter="humanReadable"/>    | <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={106665600} filter="humanReadable"/>    |
-| Kusama   | <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={66959996400}/> Planck                    | <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={106665600}/> Planck                    |
+| Polkadot | <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> (<RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000}/> Planck) | <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000 } filter="humanReadable"/> (<RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000 }/> Planck) |
+| Kusama   | <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={66959996400} filter="humanReadable"/> (<RPC network="kusama" path="consts.multisig.depositBase" defaultValue={66959996400}/> Planck)    | <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={106665600} filter="humanReadable"/> (<RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={106665600}/> Planck)   |
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
 Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
