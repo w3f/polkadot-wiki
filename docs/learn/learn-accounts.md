@@ -477,23 +477,6 @@ bytes) and the **DepositFactor** equals `deposit(0, 32)` (additional address of 
 The deposit function in JavaScript is defined below, cribbed from the
 [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/constants/src/lib.rs).
 
-```js
-// Polkadot
-const DOLLARS = 10000000000; // planck
-const MILLICENTS = 100000; // planck
-
-// Kusama
-// const DOLLARS = 166666666666.67;
-// const MILLICENTS = 1666666.66;
-
-const deposit = (items, bytes) => {
-  return items * 20 * DOLLARS + bytes * 100 * MILLICENTS;
-};
-
-console.log('DepositBase', deposit(1, 88));
-console.log('DepositFactor', deposit(0, 32));
-```
-
 Thus the deposit values can be calculated as shown in the table below.
 
 |               | Polkadot (DOT) | Kusama (KSM)   | Polkadot (planck) | Kusama (planck) |
