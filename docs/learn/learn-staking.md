@@ -317,6 +317,8 @@ For Ledger users staking directly on Ledger Live, currently, there is no option 
 stash and controller accounts. That is if you stake on Ledger Live your stash account will be your
 controller too.
 
+Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import their Ledger accounts in the extension and use them as a stash and controller. You can find more information about Talisman and other third-party wallets that officially secured funding from the treasury [here](..//build/build-wallets.md/#treasury-funded-wallets).
+
 :::
 
 ### Claiming Staking Rewards
