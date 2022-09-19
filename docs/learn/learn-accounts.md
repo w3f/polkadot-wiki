@@ -471,12 +471,15 @@ Deposit = depositBase + threshold * depositFactor
 
 Where `depositBase` and `depositFactor` are chain constants (in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} units) set in the runtime code. Currently, the deposit base equals <RPC network="polkadot" path="query.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> DOT and the deposit factor equals <RPC network="polkadot" path="query.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/> DOT.
 
-Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Alice,
-Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
-call. When doing this Alice will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
-while she waits for either Bob or Charlie also to approve the call using the `approve_as_multi` extrinsic. When Bob comes to approve the
-call and execute the transaction, he will not need to place the deposit, and Alice will receive her
-deposit back. Similarly, after Alice sends the initial transaction, say Bob or Charlie choose to cancel the transaction due to an error on Alice's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Alice.
+![multisig diagram](../assets/multisig-diagram.png)
+
+Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Charlie,
+Dan, and Eleanor. First, Charlie will create the call on-chain by calling `approve_as_multi` with the raw
+call, in this case a balance transfer. When doing this Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
+while he waits for either Dan or Eleanor also to approve the balance transfer call using the `as_multi` extrinsic. When Dan comes to approve the call and execute the transaction, he will not need to place the deposit, and Charlie will receive his
+deposit back. Similarly, after Charlie sends the initial transaction, say Dan or Eleanor choose to cancel the transaction due to an error on Charlie's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Charlie.
+
+Note that multisigs are deterministic, which means that no matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. This has some implications when using the Extrinsic menu to perform multisig transactions as if the order of the other signatories is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the account tab (recommended).
 
 ### Example with the Polkadot-JS UI
 
