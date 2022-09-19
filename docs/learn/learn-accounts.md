@@ -371,7 +371,7 @@ storage while proxies act on their behalf with restricted (or unrestricted) func
 
 ## Multi-signature Accounts
 
-It is possible to create a multi-signature account in Substrate-based chains. A multi-signature
+It is possible to create a multi-signature (multi-sig) account in Substrate-based chains. A multi-signature
 account is composed of one or more addresses and a threshold. The threshold defines how many
 signatories (participating addresses) need to agree on submitting an extrinsic for the call to be
 successful.
@@ -453,7 +453,7 @@ Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig
 :::
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
-should be used. This function takes only the other signatories and the raw call as its arguments.
+should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multi-sig accounts with `threshold=1`. If you would like to create a multisig with threshold 1 then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core) which is a tool that Parity supports with new features and weekly updates. There is a detailed [Multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
