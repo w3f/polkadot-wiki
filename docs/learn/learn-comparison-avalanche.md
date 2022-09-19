@@ -74,7 +74,7 @@ Avalanche does not have a native trustless message passing mechanism. Instead, i
 <!-- 
 TODO: Add definitions to each key parameter that is subject to change via governance -->
 
-Avalanche plans to have an on-chain governance mechanism based on its whitepaper. Even though it does not currently have an on-chain or off-chain system in production. Its governance system will be subject to only a few key protocol parameters which include:
+According to its whitepaper, Avalanche plans to have an on-chain governance mechanism. It currently does not have an on-chain or off-chain system in production. Its governance system will limited to updating only a few key protocol parameters which include:
 
 - Staking amount
 - Minimum staking time for a node
