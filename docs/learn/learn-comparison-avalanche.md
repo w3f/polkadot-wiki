@@ -27,7 +27,7 @@ The P-chain is responsible for the validator set and securing the network. AVAX 
 
 #### X-chain (Exchange)
 
-The X-chain is responsible for the transaction layer of the Avalanche blockchain. It uses a UTXO model like Bitcoin vs Polkadot which uses an account model like Ethereum.
+The X-chain is responsible for the transaction layer of the Avalanche blockchain. It uses a UTXO model like Bitcoin whereas Polkadot uses an account model like Ethereum.
 
 <!-- TODO: Figure out what a Directed Acyclyc Graph (DAG) is in accordance to a linear blockchain. And state the different in the Polkadot model -->
 
