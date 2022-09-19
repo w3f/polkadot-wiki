@@ -88,7 +88,7 @@ Polkadot's governance mechanism has been in production from the very begining, a
 
 ## Upgrades
 
-The upgradibility of Avalanche is up to the protocol devleopers at Avax Labs vs the forkless upgrade funcitonality of Polkadot that is achieved through on-chain governance.
+The upgrades to Avalanche are administered by the protocol developers at Avax Labs. On Polkadot, the forkless upgrades are administered and deployed through the on-chain governance.
 
 ## Conclusion
 
