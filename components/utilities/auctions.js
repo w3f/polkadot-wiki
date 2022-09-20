@@ -1,4 +1,4 @@
-const defaults = [
+const polkadot = [
   {
     "index": 0,
     "option": "Auction #0 - November 11th, 2021",
@@ -449,5 +449,410 @@ const defaults = [
     "endBiddingDate": "March 3, 2023",
     "endBiddingBlock": "#14510200",
     "onboard": "March 3, 2023 for the period March 3, 2023 to December 17, 2024"
+  }
+]
+
+const kusama = [
+  {
+    "index": 0,
+    "option": "Auction #0",
+    "startBlock": "#7924237",
+    "endBiddingBlock": "#8023773"
+  },
+  {
+    "index": 1,
+    "option": "Auction #1",
+    "startBlock": "#8024552",
+    "endBiddingBlock": "#8123989"
+  },
+  {
+    "index": 2,
+    "option": "Auction #2",
+    "startBlock": "#8124516",
+    "endBiddingBlock": "#8224041"
+  },
+  {
+    "index": 3,
+    "option": "Auction #3",
+    "startBlock": "#8224581",
+    "endBiddingBlock": "#8324128"
+  },
+  {
+    "index": 4,
+    "option": "Auction #4",
+    "startBlock": "#8324750",
+    "endBiddingBlock": "#8423852"
+  },
+  {
+    "index": 5,
+    "option": "Auction #5",
+    "startBlock": "#9034309",
+    "endBiddingBlock": "#9133371"
+  },
+  {
+    "index": 6,
+    "option": "Auction #6",
+    "startBlock": "#9134492",
+    "endBiddingBlock": "#9233727"
+  },
+  {
+    "index": 7,
+    "option": "Auction #7",
+    "startBlock": "#9235576",
+    "endBiddingBlock": "#9334719"
+  },
+  {
+    "index": 8,
+    "option": "Auction #8",
+    "startBlock": "#9335014",
+    "endBiddingBlock": "#9434278"
+  },
+  {
+    "index": 9,
+    "option": "Auction #9",
+    "startBlock": "#9435968",
+    "endBiddingBlock": "#9535356"
+  },
+  {
+    "index": 10,
+    "option": "Auction #10",
+    "startBlock": "#9535569",
+    "endBiddingBlock": "#9634925"
+  },
+  {
+    "index": 11,
+    "option": "Auction #11",
+    "startBlock": "#9806873",
+    "endBiddingBlock": "#9906305"
+  },
+  {
+    "index": 12,
+    "option": "Auction #12",
+    "startBlock": "#9907673",
+    "endBiddingBlock": "#10006967"
+  },
+  {
+    "index": 13,
+    "option": "Auction #13",
+    "startBlock": "#10008473",
+    "endBiddingBlock": "#10107473"
+  },
+  {
+    "index": 14,
+    "option": "Auction #14",
+    "startBlock": "#10109273",
+    "endBiddingBlock": "#10208273"
+  },
+  {
+    "index": 15,
+    "option": "Auction #15",
+    "startBlock": "#10282200",
+    "endBiddingBlock": "#10381200"
+  },
+  {
+    "index": 16,
+    "option": "Auction #16",
+    "startBlock": "#10383000",
+    "endBiddingBlock": "#10482000"
+  },
+  {
+    "index": 17,
+    "option": "Auction #17",
+    "startBlock": "#10483800",
+    "endBiddingBlock": "#10582800"
+  },
+  {
+    "index": 18,
+    "option": "Auction #18",
+    "startBlock": "#10584600",
+    "endBiddingBlock": "#10683600"
+  },
+  {
+    "index": 19,
+    "option": "Auction #19",
+    "startBlock": "#10685400",
+    "endBiddingBlock": "#10784400"
+  },
+  {
+    "index": 20,
+    "option": "Auction #20",
+    "startBlock": "#10887000",
+    "endBiddingBlock": "#10986000"
+  },
+  {
+    "index": 21,
+    "option": "Auction #21",
+    "startBlock": "#10987800",
+    "endBiddingBlock": "#11086800"
+  },
+  {
+    "index": 22,
+    "option": "Auction #22",
+    "startBlock": "#11088600",
+    "endBiddingBlock": "#11187600"
+  },
+  {
+    "index": 23,
+    "option": "Auction #23",
+    "startBlock": "#11189400",
+    "endBiddingBlock": "#11288400"
+  },
+  {
+    "index": 24,
+    "option": "Auction #24",
+    "startBlock": "#11290200",
+    "endBiddingBlock": "#11389200"
+  },
+  {
+    "index": 25,
+    "option": "Auction #25",
+    "startBlock": "#11491800",
+    "endBiddingBlock": "#11590800"
+  },
+  {
+    "index": 26,
+    "option": "Auction #26",
+    "startBlock": "#11592600",
+    "endBiddingBlock": "#11691600"
+  },
+  {
+    "index": 27,
+    "option": "Auction #27",
+    "startBlock": "#11693400",
+    "endBiddingBlock": "#11792400"
+  },
+  {
+    "index": 28,
+    "option": "Auction #28",
+    "startBlock": "#11794200",
+    "endBiddingBlock": "#11893200"
+  },
+  {
+    "index": 29,
+    "option": "Auction #29",
+    "startBlock": "#11895000",
+    "endBiddingBlock": "#11994000"
+  },
+  {
+    "index": 30,
+    "option": "Auction #30",
+    "startBlock": "#12096600",
+    "endBiddingBlock": "#12195600"
+  },
+  {
+    "index": 31,
+    "option": "Auction #31",
+    "startBlock": "#12197400",
+    "endBiddingBlock": "#12296400"
+  },
+  {
+    "index": 32,
+    "option": "Auction #32",
+    "startBlock": "#12298200",
+    "endBiddingBlock": "#12397200"
+  },
+  {
+    "index": 33,
+    "option": "Auction #33",
+    "startBlock": "#12399000",
+    "endBiddingBlock": "#12498000"
+  },
+  {
+    "index": 34,
+    "option": "Auction #34",
+    "startBlock": "#12499800",
+    "endBiddingBlock": "#12598800"
+  },
+  {
+    "index": 35,
+    "option": "Auction #35",
+    "startBlock": "#12700800",
+    "endBiddingBlock": "#12727800"
+  },
+  {
+    "index": 36,
+    "option": "Auction #36",
+    "startBlock": "#12801600",
+    "endBiddingBlock": "#12828600"
+  },
+  {
+    "index": 37,
+    "option": "Auction #37",
+    "startBlock": "#12902400",
+    "endBiddingBlock": "#12929400"
+  },
+  {
+    "index": 38,
+    "option": "Auction #38",
+    "startBlock": "#13003200",
+    "endBiddingBlock": "#13030200"
+  },
+  {
+    "index": 39,
+    "option": "Auction #39",
+    "startBlock": "#13104000",
+    "endBiddingBlock": "#13131000"
+  },
+  {
+    "index": 40,
+    "option": "Auction #40",
+    "startBlock": "#13204800",
+    "endBiddingBlock": "#13231800"
+  },
+  {
+    "index": 41,
+    "option": "Auction #41",
+    "startBlock": "#13305600",
+    "endBiddingBlock": "#13332600"
+  },
+  {
+    "index": 42,
+    "option": "Auction #42",
+    "startBlock": "#13406400",
+    "endBiddingBlock": "#13433400"
+  },
+  {
+    "index": 43,
+    "option": "Auction #43",
+    "startBlock": "#13507200",
+    "endBiddingBlock": "#13534200"
+  },
+  {
+    "index": 44,
+    "option": "Auction #44",
+    "startBlock": "#13608000",
+    "endBiddingBlock": "#13635000"
+  },
+  {
+    "index": 45,
+    "option": "Auction #45",
+    "startBlock": "#13708800",
+    "endBiddingBlock": "#13735800"
+  },
+  {
+    "index": 46,
+    "option": "Auction #46",
+    "startBlock": "#13809600",
+    "endBiddingBlock": "#13836600"
+  },
+  {
+    "index": 47,
+    "option": "Auction #47",
+    "startBlock": "#13910400",
+    "endBiddingBlock": "#13937400"
+  },
+  {
+    "index": 48,
+    "option": "Auction #48",
+    "startBlock": "#14001200",
+    "endBiddingBlock": "#14038200"
+  },
+  {
+    "index": 49,
+    "option": "Auction #49",
+    "startBlock": "#14112001",
+    "endBiddingBlock": "#14139001"
+  },
+  {
+    "index": 50,
+    "option": "Auction #50",
+    "startBlock": "#14212801",
+    "endBiddingBlock": "#14239801"
+  },
+  {
+    "index": 51,
+    "option": "Auction #51",
+    "startBlock": "#14313601",
+    "endBiddingBlock": "#14340601"
+  },
+  {
+    "index": 52,
+    "option": "Auction #52",
+    "startBlock": "#14515200",
+    "endBiddingBlock": "#14542200"
+  },
+  {
+    "index": 53,
+    "option": "Auction #53",
+    "startBlock": "#14616000",
+    "endBiddingBlock": "#14643000"
+  },
+  {
+    "index": 54,
+    "option": "Auction #54",
+    "startBlock": "#14716800",
+    "endBiddingBlock": "#14743800"
+  },
+  {
+    "index": 55,
+    "option": "Auction #55",
+    "startBlock": "#14817600",
+    "endBiddingBlock": "#14844600"
+  },
+  {
+    "index": 56,
+    "option": "Auction #56",
+    "startBlock": "#14918400",
+    "endBiddingBlock": "#14945400"
+  },
+  {
+    "index": 57,
+    "option": "Auction #57",
+    "startBlock": "#15019200",
+    "endBiddingBlock": "#15046200"
+  },
+  {
+    "index": 58,
+    "option": "Auction #58",
+    "startBlock": "#15120000",
+    "endBiddingBlock": "#15147000"
+  },
+  {
+    "index": 59,
+    "option": "Auction #59",
+    "startBlock": "#15220800",
+    "endBiddingBlock": "#15247800"
+  },
+  {
+    "index": 60,
+    "option": "Auction #60",
+    "startBlock": "#15321600",
+    "endBiddingBlock": "#15348600"
+  },
+  {
+    "index": 61,
+    "option": "Auction #61",
+    "startBlock": "#15422400",
+    "endBiddingBlock": "#15449400"
+  },
+  {
+    "index": 62,
+    "option": "Auction #62",
+    "startBlock": "#15523200",
+    "endBiddingBlock": "#15550200"
+  },
+  {
+    "index": 63,
+    "option": "Auction #63",
+    "startBlock": "#15624000",
+    "endBiddingBlock": "#15651000"
+  },
+  {
+    "index": 64,
+    "option": "Auction #64",
+    "startBlock": "#15724800",
+    "endBiddingBlock": "#15751800"
+  },
+  {
+    "index": 65,
+    "option": "Auction #65",
+    "startBlock": "#15825600",
+    "endBiddingBlock": "#15852600"
+  },
+  {
+    "index": 66,
+    "option": "Auction #66",
+    "startBlock": "#15926400",
+    "endBiddingBlock": "#15953400"
   }
 ]
