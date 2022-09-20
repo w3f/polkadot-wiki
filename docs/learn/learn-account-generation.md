@@ -8,8 +8,12 @@ slug: ../learn-account-generation
 ---
 
 An address is the public part of a Polkadot account. The private part is the key used to access this
-address. The public and private parts together make up a Polkadot account. You can think of the public address  of your account like your mailbox and the private key like the key to open that mailbox. Anybody can send mail to your mailbox, but only you can access them as only you have access to its key. In the context of Polkadot accounts,  anybody can send tokens to your public address but only you can transact with them using your private key. That is why you should keep your private key secret.
-
+address. The public and private parts together make up a Polkadot account. You can think of the
+public address of your account like your mailbox and the private key like the key to open that
+mailbox. Anybody can send mail to your mailbox, but only you can access them as only you have access
+to its key. In the context of Polkadot accounts, anybody can send tokens to your public address but
+only you can transact with them using your private key. That is why you should keep your private key
+secret.
 
 There are several ways to generate a Polkadot account:
 
@@ -40,14 +44,17 @@ security trade-offs. Please review this page carefully before making your accoun
 understand the risks of the account generation method you choose and how to properly mitigate them
 in order to keep your funds safe.
 
-:::info Visit [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely) for more information about key security.
+:::info Visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely)
+for more information about key security.
 
 :::
 
 ## Polkadot JS Browser Extension
 
-The Polkadot-JS Browser Extension (simply referred to as Polkadot Extension) provides a reasonable balance of security and usability. It provides a
-separate local mechanism to generate your address and interact with Polkadot.
+The Polkadot-JS Browser Extension (simply referred to as Polkadot Extension) provides a reasonable
+balance of security and usability. It provides a separate local mechanism to generate your address
+and interact with Polkadot.
 
 This method involves installing the Polkadot Extension and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows the signing of transactions and
@@ -56,7 +63,8 @@ similar functionality.
 It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
 
-:::info For the tutorial on how to create an account using Polkadot Extension, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account). 
+:::info For the tutorial on how to create an account using Polkadot Extension, visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
 
 :::
 
@@ -100,27 +108,30 @@ networks without having to set different passwords to access such accounts.
 
 ### Set Address for Polkadot Mainnet
 
-In Polkadot you can use the same address on multiple chains. To switch between chains you can follow the guidelines in [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-). The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to
-convert your address between the different chain formats. 
+In Polkadot you can use the same address on multiple chains. To switch between chains you can follow
+the guidelines in
+[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
+The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to convert
+your address between the different chain formats.
 
 :::info For privacy reasons, we recommend creating a new address for each chain you're using.
 
 Your address' format is only visual - the data used to derive this representation of your address
 are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
-recommend creating a new address for each chain you're using.
-:::
+recommend creating a new address for each chain you're using. :::
 
 You can copy your address by clicking on the account's icon while the desired chain format is
-active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful icon of your account will copy it in that format. While in Polkadot
-mode, that address format will be copied, and so on.
+active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful
+icon of your account will copy it in that format. While in Polkadot mode, that address format will
+be copied, and so on.
 
 ## Subkey
 
 Subkey is recommended for technically advanced users who are comfortable with the command line and
 compiling Rust code. Subkey allows you to generate keys on any device that can compile the code.
 Subkey may also be useful for automated account generation using an air-gapped device. It is not
-recommended for general users. For the tutorial on how to create an account using Subkey, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
-
+recommended for general users. For the tutorial on how to create an account using Subkey, visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
 
 ## Polkadot-JS Apps
 
@@ -135,17 +146,22 @@ extension. Learn more about account backup and restoration [here](learn-account-
 
 Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least
 secure way of generating an account. It should only be used if all of the other methods are not
-feasible in your situation. For the tutorial on how to create an account using Polkadot-JS Apps, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000180529).
+feasible in your situation. For the tutorial on how to create an account using Polkadot-JS Apps,
+visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000180529).
 
 ### Reset password using Polkadot-JS Apps UI
 
-To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the "Accounts"
-tab, click the icon with three vertical dots on your account and select "Change this account's
-password".
+To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the
+"Accounts" tab, click the icon with three vertical dots on your account and select "Change this
+account's password".
 
 :::info
 
-If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension, you need to follow the [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the password of such account.
+If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension,
+you need to follow the
+[guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
+password of such account.
 
 :::
 
@@ -155,18 +171,19 @@ Multi-signature accounts are accounts created from several standard accounts (or
 multi-sig accounts). For a full explanation, please see the
 [Accounts Explainer section on multi-sigs](learn-accounts.md#multi-signature-accounts).
 
-
 ## Parity Signer
 
 Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it. For the tutorial on how to create an account using Parity Signer, [this support article](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+installing it. For the tutorial on how to create an account using Parity Signer,
+[this support article](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
 
 ## Vanity Generator
 
 The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
-that lets you generate addresses that contain a specific substring.
-For the tutorial on how to create an account using Vanity Generator, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
+that lets you generate addresses that contain a specific substring. For the tutorial on how to
+create an account using Vanity Generator, visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
 
 ## Ledger Hardware Wallet
 

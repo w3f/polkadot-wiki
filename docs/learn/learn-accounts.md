@@ -7,6 +7,8 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 This document covers the basics of Polkadot and Kusama account addresses and how they exist
 on-chain. For a more in-depth explanation of the cryptography behind them, please see
 [the cryptography page](learn-cryptography.md).
@@ -124,16 +126,15 @@ There is an additional type of derivation called password derivation. On Polkado
 'caution juice atom organ advance problem want pledge someone senior holiday very///0'
 ```
 
-In this type of derivation, if the mnemonic phrase would leak, accounts cannot be derived without the initial
-password. In fact, for soft- and hard-derived accounts, if someone knows the mnemonic phrase and the derivation path, they will have access to
-your account.
-For password-derived accounts, the password is applied on the derivation path. You can
-know the mnemonic phrase and the derivation path, but without the password it is not possible to access
-the account. In mathematical terms, if we have a `written derivation path` and a `password`, we can
-calculate the `real derivation path` as `f(written derivation path, password)`; where `f` is a
-function. We can then calculate the `account key pair` using `f(seed, real derivation path)`. Note
-that unlike hard and soft derivations that can be mixed, only a single password should be specified
-per derivation.
+In this type of derivation, if the mnemonic phrase would leak, accounts cannot be derived without
+the initial password. In fact, for soft- and hard-derived accounts, if someone knows the mnemonic
+phrase and the derivation path, they will have access to your account. For password-derived
+accounts, the password is applied on the derivation path. You can know the mnemonic phrase and the
+derivation path, but without the password it is not possible to access the account. In mathematical
+terms, if we have a `written derivation path` and a `password`, we can calculate the
+`real derivation path` as `f(written derivation path, password)`; where `f` is a function. We can
+then calculate the `account key pair` using `f(seed, real derivation path)`. Note that unlike hard
+and soft derivations that can be mixed, only a single password should be specified per derivation.
 
 :::info
 
@@ -442,7 +443,7 @@ generating them manually.
 
 There are three types of actions you can take with a multi-sig account:
 
-- Executing a call `as_multi`. 
+- Executing a call `as_multi`.
 - Approving a call `approve_as_multi`.
 - Cancelling a call `cancel_as_multi`.
 
@@ -484,23 +485,27 @@ const deposit = (items, bytes) => {
   return items * 20 * DOLLARS + bytes * 100 * MILLICENTS;
 };
 
-console.log('DepositBase', deposit(1, 88));
-console.log('DepositFactor', deposit(0, 32));
+console.log("DepositBase", deposit(1, 88));
+console.log("DepositFactor", deposit(0, 32));
 ```
 
-Thus the deposit values can be calculated as shown in the table below.
+Thus the deposit values can be calculated as shown in the table below. They are also shown
+in [plancks](learn-DOT.md#polkadot) for convenience.
 
-|               | Polkadot (DOT) | Kusama (KSM)   | Polkadot (planck) | Kusama (planck) |
-| ------------- | -------------- | -------------- | ----------------- | --------------- |
-| DepositBase   | 20.088         | 3.3401         | 200880000000      | 3340100000000   |
-| DepositFactor | .032           | 0.005333333312 | 320000000         | 5333333312      |
+|          | Deposit Base                                                                                                    | Deposit Factor                                                                                                  |
+| -------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Polkadot | <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> (<RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000}/> Planck) | <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000 } filter="humanReadable"/> (<RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000 }/> Planck) |
+| Kusama   | <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={66959996400} filter="humanReadable"/> (<RPC network="kusama" path="consts.multisig.depositBase" defaultValue={66959996400}/> Planck)    | <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={106665600} filter="humanReadable"/> (<RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={106665600}/> Planck)   |
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
 Bob, and Charlie. First, Alice will create the call on-chain by calling `as_multi` with the raw
 call. When doing this Alice will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
-while she waits for either Bob or Charlie also to approve the call using the `approve_as_multi` extrinsic. When Bob comes to approve the
-call and execute the transaction, he will not need to place the deposit, and Alice will receive her
-deposit back. Similarly, after Alice sends the initial transaction, say Bob or Charlie choose to cancel the transaction due to an error on Alice's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Alice.
+while she waits for either Bob or Charlie also to approve the call using the `approve_as_multi`
+extrinsic. When Bob comes to approve the call and execute the transaction, he will not need to place
+the deposit, and Alice will receive her deposit back. Similarly, after Alice sends the initial
+transaction, say Bob or Charlie choose to cancel the transaction due to an error on Alice's part,
+they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to
+Alice.
 
 ### Example with Polkadot JS
 

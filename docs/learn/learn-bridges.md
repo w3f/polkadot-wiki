@@ -14,16 +14,15 @@ decentralised and trustless. Polkadot favors the latter bridge designs for its e
 there is nothing that blocks a development team from building and deploying the former.
 
 While bridge designs are now getting to a place where they are sufficiently planned out, there have
-not been too many used heavily in production. For this reason, you can consider this
-page a work in progress. It will be updated as more information is determined and available.
+not been too many used heavily in production. For this reason, you can consider this page a work in
+progress. It will be updated as more information is determined and available.
 
 :::info Purpose of bridging
 
-Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
-Kusama :kusama }} ecosystem compatible with external blockchains
-such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
-interoperability technology that allows parachains to communicate trustlessly, please see the
-dedicated [cross consensus][] page on the Wiki.
+Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }}{{ kusama:
+Kusama :kusama }} ecosystem compatible with external blockchains such as Bitcoin, Ethereum, or Tezos
+(among others). For information on XCM, the native interoperability technology that allows parachains
+to communicate trustlessly, please see the dedicated [cross consensus][] page on the Wiki.
 
 :::
 
@@ -32,33 +31,33 @@ dedicated [cross consensus][] page on the Wiki.
 Building a bridge that is as decentralised and trustless as possible can be done through any of the
 following methods (ordered by suggested methodology):
 
-- *Bridge pallets* - For Substrate-native chains, use a bridge pallet (e.g. Kusama `<->` Polkadot
+- _Bridge pallets_ - For Substrate-native chains, use a bridge pallet (e.g. Kusama `<->` Polkadot
   bridge, since both networks' parachains use Substrate).
-- *Smart contracts* - If the chain is not on Substrate, you should have smart contracts on the
+- _Smart contracts_ - If the chain is not on Substrate, you should have smart contracts on the
   non-Substrate chain to bridge (e.g. Ethereum mainnet will have a bridge smart contract that
   initiates Eth transactions based on incoming XCMP messages).
-- *Higher-order protocols* - If your chain does not support smart contracts (e.g. Bitcoin), you
+- _Higher-order protocols_ - If your chain does not support smart contracts (e.g. Bitcoin), you
   should use [XClaim][xclaim] or similar protocols to bridge.
 
 ### via Bridge Pallets
 
-Receiving messages on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} from 
-an external, non-parachain blockchain can be possible through a Substrate pallet. The Substrate 
-instance can then be deployed to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
-either as a system-level parachain (native extension to the core Polkadot software) or as a 
+Receiving messages on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} from an
+external, non-parachain blockchain can be possible through a Substrate pallet. The Substrate
+instance can then be deployed to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+either as a system-level parachain (native extension to the core Polkadot software) or as a
 community-operated parachain.
 
 An example of a bridge that would strictly use bridge pallets would be a Kusama `<->` Polkadot
 bridge, since both use parachains based on Substrate.
 
-For the standalone chains that will not have a parachain bridging module on 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-(non-Substrate), it will be necessary to deploy bridge contracts (see below).
+For the standalone chains that will not have a parachain bridging module on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (non-Substrate), it will be necessary
+to deploy bridge contracts (see below).
 
 ### via Smart Contracts
 
 Given the generality of blockchain platforms with Turing-complete smart contract languages, it is
-possible to bridge {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and any other 
+possible to bridge {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and any other
 smart contract capable blockchain.
 
 Those who are already familiar with Ethereum may know of the now archived [Parity Bridge][] and the
@@ -71,8 +70,8 @@ on `side` can free up Ether on `main`.
 
 :::note
 
-To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through Polkadot, check
-out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
+To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through Polkadot, check out
+this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
 
 :::
 
@@ -120,11 +119,10 @@ There is now a
 
 ### For Bridge Builders
 
-If your team is interested in building a bridge between an external chain and Polkadot, funding may be 
-available from the W3F [grants program][]. Please first check that the chain you intend to bridge between 
-hasn't already been built or is in the process of being created by another
-team. More popular chains with clear use cases will be given priority, and novel bridge designs are
-welcome.
+If your team is interested in building a bridge between an external chain and Polkadot, funding may
+be available from the W3F [grants program][]. Please first check that the chain you intend to bridge
+between hasn't already been built or is in the process of being created by another team. More
+popular chains with clear use cases will be given priority, and novel bridge designs are welcome.
 
 ### Resources and Examples
 
@@ -148,11 +146,12 @@ welcome.
 - [XCLAIM][] - XCLAIM is a framework for achieving trustless and efficient cross-chain exchanges
   using cryptocurrency-backed assets.
 
-[cross consensus]: learn-cross-consensus.md
+[cross consensus]: learn-xcm.md
 [parity bridge]: https://github.com/paritytech/parity-bridge
 [interlay]: https://interlay.gitlab.io/polkabtc-spec/
 [xclaim]: https://eprint.iacr.org/2018/643.pdf
 [bifrost]: https://github.com/bifrost-codes/bifrost
 [wave 5]: https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096
-[eth bridging blog]: https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13
+[eth bridging blog]:
+  https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13
 [grants program]: https://github.com/w3f/General-Grants-Program

@@ -15,7 +15,7 @@ and may be opted into by parachains.
 SPREE in brief was described with the following properties and functions:
 
 - Parachains can opt-in to special runtime logic fragments (like smart contracts).
-- These fragments have their own storage and own [XCM](learn-cross-consensus.md) endpoint.
+- These fragments have their own storage and own [XCM](learn-xcm.md) endpoint.
 - All instances across parachains have identical logic.
 - It executes alongside parachain logic.
 - Protected: storage can not be altered by parachain logic; messages can not be faked from them by

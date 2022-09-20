@@ -91,10 +91,10 @@ secp256k1 curve. This curve is considered much more secure than NIST curves, whi
 considered possibly _even more_ secure than this one and allows for easier implementation of Schnorr
 signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
 
-The choice of using Schnorr signatures over using ECDSA is not so cut and dry. Jeff
-Burdges (a Web3 researcher) provides additional details on the decision in this
-[research post](https://research.web3.foundation/en/latest/polkadot/keys/1-accounts.html)
-on the topic:
+The choice of using Schnorr signatures over using ECDSA is not so cut and dry. Jeff Burdges (a Web3
+researcher) provides additional details on the decision in this
+[research post](https://research.web3.foundation/en/latest/polkadot/keys/1-accounts.html) on the
+topic:
 
 :::info Choosing Schnorr signatures over ECDSA signatures
 
@@ -148,11 +148,10 @@ them, which can allow for other protocol optimizations.
 
 :::info From the BLS library's README
 
-Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and
-much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS
-permits a diverse array of signature aggregation options far beyond any other known signature
-scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold
-signatures.
+Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much
+less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a
+diverse array of signature aggregation options far beyond any other known signature scheme, which
+makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
 
 :::
 
@@ -163,33 +162,32 @@ validators on the Polkadot network and critical to the GRANDPA finality gadget.
 ## Resources
 
 - [Key discovery attack on BIP32-Ed25519](https://web.archive.org/web/20210513183118/https://forum.w3f.community/t/key-recovery-attack-on-bip32-ed25519/44) -
-  Archive of forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition to the
-  sr25519 variant.
+  Archive of forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition
+  to the sr25519 variant.
 - [Account signatures and keys in Polkadot](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
   Research post by Web3 researcher Jeff Burdges.
 - [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 
 ## Appendix A: On the security of curves
 
-:::note From the [Introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10) into `libssl`
+:::note From the
+[Introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10)
+into `libssl`
 
-The reason is the following: During summer of 2013, revelations from ex-
-consultant at [the] NSA Edward Snowden gave proof that [the] NSA willingly inserts backdoors
-into software, hardware components and published standards. While it is still
-believed that the mathematics behind ECC (Elliptic-curve cryptography) are still sound and solid,
-some people (including Bruce Schneier [SCHNEIER]), showed their lack of confidence
-in NIST-published curves such as nistp256, nistp384, nistp521, for which constant
-parameters (including the generator point) are defined without explanation. It
-is also believed that [the] NSA had a word to say in their definition. These curves
-are not the most secure or fastest possible for their key sizes [DJB], and
-researchers think it is possible that NSA have ways of cracking NIST curves.
-It is also interesting to note that SSH belongs to the list of protocols the NSA
-claims to be able to eavesdrop. Having a secure replacement would make passive
-attacks much harder if such a backdoor exists.
+The reason is the following: During summer of 2013, revelations from ex- consultant at [the] NSA
+Edward Snowden gave proof that [the] NSA willingly inserts backdoors into software, hardware
+components and published standards. While it is still believed that the mathematics behind ECC
+(Elliptic-curve cryptography) are still sound and solid, some people (including Bruce Schneier
+[SCHNEIER]), showed their lack of confidence in NIST-published curves such as nistp256, nistp384,
+nistp521, for which constant parameters (including the generator point) are defined without
+explanation. It is also believed that [the] NSA had a word to say in their definition. These curves
+are not the most secure or fastest possible for their key sizes [DJB], and researchers think it is
+possible that NSA have ways of cracking NIST curves. It is also interesting to note that SSH belongs
+to the list of protocols the NSA claims to be able to eavesdrop. Having a secure replacement would
+make passive attacks much harder if such a backdoor exists.
 
-However an alternative exists in the form of Curve25519. This algorithm has been
-proposed in 2006 by DJB [Curve25519]. Its main strengths are its speed, its
-constant-time run time (and resistance against side-channel attacks), and its
-lack of nebulous hard-coded constants.
+However an alternative exists in the form of Curve25519. This algorithm has been proposed in 2006 by
+DJB [Curve25519]. Its main strengths are its speed, its constant-time run time (and resistance
+against side-channel attacks), and its lack of nebulous hard-coded constants.
 
 :::

@@ -10,31 +10,32 @@ slug: ../maintain-guides-how-to-use-polkadot-validator-setup
 # Polkadot Validator Setup
 
 The following guide will walk you through using Web3 Foundation's [polkadot validator setup][] to
-offer a potential setup for your validator that aims to prevent some types of potential attacks
-at the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and,
-if you're using another Substrate-based chain, it should work with some tweaks.
+offer a potential setup for your validator that aims to prevent some types of potential attacks at
+the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and, if
+you're using another Substrate-based chain, it should work with some tweaks.
 
 :::tip This setup should not be assumed to include the best security practices
 
 It is up to you to add additional security hardening.
 
-Also, the current version of polkadot validator setup doesn't allow for the creation 
-and configuration of sentry nodes.
+Also, the current version of polkadot validator setup doesn't allow for the creation and
+configuration of sentry nodes.
 
 There are two ways that the setup can be configured:
 
-1. **Platform & Application Layer** which allows for configuring the credentials for
-   infrastructure providers, then executes the Terraform process to automatically deploy
-   the required machines (Platform Layer) and setup the Application Layer. This configuration
-   uses [Terraform](https://www.terraform.io/) for defining and managing your infrastructure.
+1. **Platform & Application Layer** which allows for configuring the credentials for infrastructure
+   providers, then executes the Terraform process to automatically deploy the required machines
+   (Platform Layer) and setup the Application Layer. This configuration uses
+   [Terraform](https://www.terraform.io/) for defining and managing your infrastructure.
 
-2. **Application Layer** which allows for setting up Debian-based machines, where you only
-   need basic SSH access and configure those in an inventory. The Ansible scripts will setup
-   the entire Application Layer. This configuration uses [Ansible](https://www.ansible.com/)
-   as an automation tool for setting up the VPN, Firewall, and the validator node. It supports
-   a few different cloud providers such as AWS, Microsoft Azure, GCP, and Packet.
+2. **Application Layer** which allows for setting up Debian-based machines, where you only need
+   basic SSH access and configure those in an inventory. The Ansible scripts will setup the entire
+   Application Layer. This configuration uses [Ansible](https://www.ansible.com/) as an automation
+   tool for setting up the VPN, Firewall, and the validator node. It supports a few different cloud
+   providers such as AWS, Microsoft Azure, GCP, and Packet.
 
-   :::note Please file an [issue][] if you would like to make a feature request or report a bug for this setup
+   :::note Please file an [issue][] if you would like to make a feature request or report a bug for
+   this setup
 
    :::
 
@@ -43,9 +44,10 @@ There are two ways that the setup can be configured:
 ## Dependencies
 
 The initial step is to install the software dependencies for running the validator setup scripts. We
-will need to acquire NodeJS, Yarn, Terraform, and Ansible. Usually, these are readily available using
-your operating system's package manager. Instructions may vary depending on which system you are on;
-the instructions below demonstrate the commands for a user of a _Debian_ or _Ubuntu-based_ system.
+will need to acquire NodeJS, Yarn, Terraform, and Ansible. Usually, these are readily available
+using your operating system's package manager. Instructions may vary depending on which system you
+are on; the instructions below demonstrate the commands for a user of a _Debian_ or _Ubuntu-based_
+system.
 
 ### NodeJS
 
@@ -103,8 +105,8 @@ machines.
 
 ### Step Two: Generate the SSH keys
 
-We will use [SSH][], a remote shell tool, to access our validator. You will
-first use the `ssh-keygen` command to generate a key for your validator.
+We will use [SSH][], a remote shell tool, to access our validator. You will first use the
+`ssh-keygen` command to generate a key for your validator.
 
 ```zsh
 $ ssh-keygen -m pem -f id_rsa_validator
@@ -149,8 +151,8 @@ the user to use for SSH.
 
 #### Getting the authorization keys
 
-The validator setup supports Google Cloud, AWS, Microsoft Azure, and Packet. For this
-tutorial we will be using Google Cloud.
+The validator setup supports Google Cloud, AWS, Microsoft Azure, and Packet. For this tutorial we
+will be using Google Cloud.
 
 ##### Log in to the Google Cloud console
 
@@ -199,9 +201,9 @@ to the public. If you want to do that, see [substrate telemetry source][].
 
 :::note
 
-If you decided to send your node’s information to public telemetry, the name for your
-validator and public node that is displayed on the telemetry would look something like
-`PROJECT_NAME-sv-public-0` / `PROJECT_NAME-sv-validator-0`.
+If you decided to send your node’s information to public telemetry, the name for your validator and
+public node that is displayed on the telemetry would look something like `PROJECT_NAME-sv-public-0`
+/ `PROJECT_NAME-sv-validator-0`.
 
 :::
 
@@ -221,15 +223,15 @@ Besides that, you need two additional environment variables that will allow Ansi
 the created machines. These values of these variables will be the keys that you generated at the
 beginning of the guide.
 
-* `SSH_ID_RSA_PUBLIC` - Path to private SSH key you want to use for the public nodes
-* `SSH_ID_RSA_VALIDATOR` - Path to private SSH key you want to use for the validator
+- `SSH_ID_RSA_PUBLIC` - Path to private SSH key you want to use for the public nodes
+- `SSH_ID_RSA_VALIDATOR` - Path to private SSH key you want to use for the validator
 
 :::
 
-:::note 
+:::note
 
-You will need to configure the Compute Engine API and enable billing on your GCP accounts 
-to properly run these scripts.
+You will need to configure the Compute Engine API and enable billing on your GCP accounts to
+properly run these scripts.
 
 :::
 
@@ -241,10 +243,10 @@ $ scripts/deploy.sh
 
 :::note
 
-Certain steps of the process may hang, however the scripts are idempotent so you simply need
-to re-run them and when the deployment and configuration is completed, you should see some output 
-that looks like what's below. You are able to find the validator’s session keys by searching for 
-"show rotateKeys output".
+Certain steps of the process may hang, however the scripts are idempotent so you simply need to
+re-run them and when the deployment and configuration is completed, you should see some output that
+looks like what's below. You are able to find the validator’s session keys by searching for "show
+rotateKeys output".
 
 :::
 

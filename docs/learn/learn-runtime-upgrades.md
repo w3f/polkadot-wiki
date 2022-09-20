@@ -68,8 +68,8 @@ timely manner, should monitor changes to runtime events and auxiliary tooling, s
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
 Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
-occurs before broadcasting a previously constructed transaction, you will need to reconstruct it with
-the appropriate runtime version and corresponding metadata.
+occurs before broadcasting a previously constructed transaction, you will need to reconstruct it
+with the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
@@ -85,8 +85,8 @@ proposals related to any on-chain upgrades for easy matching. Monitor the chain 
 1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
    referendum has started (although does not mean that it is a runtime upgrade). Get the referendum
    info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
-   enactment `delay` (delay). If the referendum passes, it will execute on block number `end +
-   delay`.
+   enactment `delay` (delay). If the referendum passes, it will execute on block number
+   `end + delay`.
 2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
    If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
    enactment block.

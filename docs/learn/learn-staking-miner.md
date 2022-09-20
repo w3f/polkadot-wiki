@@ -7,7 +7,7 @@ keywords: [staking, npos, miner, phragmén]
 slug: ../learn-staking-miner
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 :::caution
 

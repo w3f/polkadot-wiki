@@ -6,7 +6,8 @@ description: Learn about account proxies and how they can benefit your account(s
 keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
-import RPC from "./../../components/RPC-Connection"
+
+import RPC from "./../../components/RPC-Connection";
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of
 actions on their behalf. Much like the Stash and Controller account relationship in
@@ -42,57 +43,63 @@ frequently than the cold account and is therefore less secure.
 ### Non-transfer Proxies
 
 Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
-[balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting) transfers).
+[balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting)
+transfers).
 
 ### Governance Proxies
 
-The **Governance** type will allow proxies to make transactions related to governance (i.e., from the
-Democracy, Council, Treasury, Technical Committee, and Elections pallets).
+The **Governance** type will allow proxies to make transactions related to governance (i.e., from
+the Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
 :::note Explainers on governance proxies
 
-See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information on
-governance proxies or watch our
+See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information
+on governance proxies or watch our
 [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
 
 :::
 
 ### Staking Proxies
 
-The **Staking** type allows staking-related transactions, but do not confuse a staking proxy with the
-controller account. Within the staking pallet, some transactions must come from the stash account, while
-others must come from the controller account. The stash account is meant to stay in cold storage, while the
-controller account makes day-to-day transactions like setting session keys or deciding which
-validators to nominate. The stash account still needs to make some transactions such as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_ of stash and
-controller accounts, but does allow the stash to be accessed even less frequently than using a controller account.
+The **Staking** type allows staking-related transactions, but do not confuse a staking proxy with
+the controller account. Within the staking pallet, some transactions must come from the stash
+account, while others must come from the controller account. The stash account is meant to stay in
+cold storage, while the controller account makes day-to-day transactions like setting session keys
+or deciding which validators to nominate. The stash account still needs to make some transactions
+such as bonding extra funds or designating a new controller account. A proxy doesn't change the
+_roles_ of stash and controller accounts, but does allow the stash to be accessed even less
+frequently than using a controller account.
 
 ### Identity Judgement Proxies
 
-The **Identity Judgement** proxies are in charge of allowing registrars to make judgement on an account's
-identity. If you are unfamiliar with judgements and identities on chain, please refer to
+The **Identity Judgement** proxies are in charge of allowing registrars to make judgement on an
+account's identity. If you are unfamiliar with judgements and identities on chain, please refer to
 [this page](learn-identity.md#judgements).
 
 ### Cancel Proxies
 
-Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy 
+Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy
 announcements.
 
 ### Auction Proxies
 
-Proxies that are of the type **Auction** are accounts that allow transactions pertaining to parachain 
-auctions and crowdloans. The Auction proxy account can sign those transactions on behalf of an account 
-in cold storage. If you already setup a Non-transfer proxy account, it can do everything an Auction 
-proxy can do. Before participating in a crowdloan using an Auction proxy, it is recommended that you 
-check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
-distribution.
+Proxies that are of the type **Auction** are accounts that allow transactions pertaining to
+parachain auctions and crowdloans. The Auction proxy account can sign those transactions on behalf
+of an account in cold storage. If you already setup a Non-transfer proxy account, it can do
+everything an Auction proxy can do. Before participating in a crowdloan using an Auction proxy, it
+is recommended that you check with the respective parachain team for any possible issues pertaining
+to the crowdloan rewards distribution.
 
 ### Anonymous Proxies
 
-Polkadot includes a function to create an **Anonymous proxy**. Such type of proxy is the only way of accessing a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
-account designates a proxy account, but anonymous proxies are the opposite. The account that creates
-the proxy relationship is the proxy account and the new account is the primary. 
+Polkadot includes a function to create an **Anonymous proxy**. Such type of proxy is the only way of
+accessing a designated primary account. That is, it generates an address but no corresponding
+private key. Normally, a primary account designates a proxy account, but anonymous proxies are the
+opposite. The account that creates the proxy relationship is the proxy account and the new account
+is the primary.
 
-:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the primary account will be inaccessible.
+:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the
+primary account will be inaccessible.
 
 :::
 
@@ -108,22 +115,22 @@ Learn more about anonymous proxies from our
 ### Time-delayed Proxies
 
 We can add an additional layer of security to proxies by giving them a delay time. The delay will be
-quantified in number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has 6 
+quantified in number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has 6
 seconds of block-time. A delay value of 10 will mean 10 blocks, which equals to 1 minute of delay.
-The proxy will announce it's intended action and wait for the number
-of blocks defined in the delay time before executing it. The proxy will include the hash of the
-intended function call in the announcement. Within this time window, the intended action may be
-cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
-actions can be noticed and reverted within a delay period.
+The proxy will announce it's intended action and wait for the number of blocks defined in the delay
+time before executing it. The proxy will include the hash of the intended function call in the
+announcement. Within this time window, the intended action may be cancelled by accounts that control
+the proxy. Now we can use proxies knowing that any malicious actions can be noticed and reverted
+within a delay period.
 
 :::caution The Polkadot-JS UI cannot handle complicated proxy setups
 
-The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig 
--> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
+The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig -> an anonymous
+proxy which is part of another multisig). These complex setups must be done using the
 [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
 
-These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
-the chain, as you will be unable to sign extrinsics using the UI.
+These complex proxy setups should only be performed if you are comfortable enough interacting
+directly with the chain, as you will be unable to sign extrinsics using the UI.
 
 :::
 
@@ -151,22 +158,23 @@ multisig would be created.
 
 ### Removing Proxies
 
-Under the [accounts tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) there is blue button next to the account that has proxies.
-Hovering on the blue button lets you click on a link that says "proxy overview", which displays a pop-up 
-window like the one shown below. In this pop-up window, you have an option to clear individual proxy accounts
-or all of them. Under the hood, the UI is calling the extrinsics `removeProxy` for individual accounts and
- `removeProxies` for clearing all of the proxy accounts.
+Under the [accounts tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) there is
+blue button next to the account that has proxies. Hovering on the blue button lets you click on a
+link that says "proxy overview", which displays a pop-up window like the one shown below. In this
+pop-up window, you have an option to clear individual proxy accounts or all of them. Under the hood,
+the UI is calling the extrinsics `removeProxy` for individual accounts and `removeProxies` for
+clearing all of the proxy accounts.
 
 ![Remove Proxies](../assets/remove_proxies.png)
 
-The procedure for removing an Anonymous Proxy is different and there are a few functions on the extrinsic page 
-that will help do this.
+The procedure for removing an Anonymous Proxy is different and there are a few functions on the
+extrinsic page that will help do this.
 
 :::warning There is no way to get access to the primary account after deleting the anonymous proxy
 
-`removeProxy` or `removeProxies` do not work for anonymous proxies. You must use the 
-`killAnonymous` function which must be called **from** the *anonymous* proxy. 
-This means that the anonymous proxy must be added as an account to the Polkadot-JS UI.
+`removeProxy` or `removeProxies` do not work for anonymous proxies. You must use the `killAnonymous`
+function which must be called **from** the _anonymous_ proxy. This means that the anonymous proxy
+must be added as an account to the Polkadot-JS UI.
 
 :::
 
@@ -177,18 +185,23 @@ The following steps can be used to remove your anonymous proxy:
   - the **account** you created the anonymous proxy from
   - **type of proxy**, index (almost always 0)
   - **block height** it was created at
-  - the **extrinsic index** in the block (on most block explorers, you will see the extrinsic ID listed as something along the lines of "9000-2" -> 9000 is the block height (block number) and 2 is the extrinsic index. You can find this information by looking up your account in a block explorer.
+  - the **extrinsic index** in the block (on most block explorers, you will see the extrinsic ID
+    listed as something along the lines of "9000-2" -> 9000 is the block height (block number) and 2
+    is the extrinsic index. You can find this information by looking up your account in a block
+    explorer.
 
   ![anon proxy info](../assets/kill-proxy-1.png)
 
 - **Step 1**: Go to https://polkadot.js.org/apps/#/accounts (make sure you are on correct network).
-- **Step 2**: Click `Proxied` and add your address, name it `ANON PROXY`. You should now see this address
-  in accounts. Now you need to call `killAnonymous` from the anonymous proxy. It is important to note that anonymous proxies *work backwards*; the original account acts as the proxy.
+- **Step 2**: Click `Proxied` and add your address, name it `ANON PROXY`. You should now see this
+  address in accounts. Now you need to call `killAnonymous` from the anonymous proxy. It is
+  important to note that anonymous proxies _work backwards_; the original account acts as the proxy.
 
   ![add proxy to delete](../assets/kill-proxy-2.png)
 
 - **Step 3**: Go to https://polkadot.js.org/apps/#/extrinsics
-- **Step 4**: Call extrinsic `proxy.killAnonymous` using the selected account ANON PROXY and the following parameters:
+- **Step 4**: Call extrinsic `proxy.killAnonymous` using the selected account ANON PROXY and the
+  following parameters:
 
   - Spawner: (original account)
   - Proxy type (kind of proxy)
@@ -260,18 +273,21 @@ The `ProxyDepositBase` is the required amount to be reserved for an account to h
 (creates one new item in storage). For every proxy the account has, an additional amount defined by
 the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
-The `ProxyDepositBase` is 
+The `ProxyDepositBase` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }}
-and the `ProxyDepositFactor` is 
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }}.
+and the `ProxyDepositFactor` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/>. :kusama }}
 
 The required deposit amount for one proxy is equal to:
 
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }} + 
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }} +
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} * num_proxies
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} \*
+num_proxies
 
 ## Resources
+
 [Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
