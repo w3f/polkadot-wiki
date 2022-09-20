@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
+import { PolkadotAuctions, KusamaAuctions } from './utilities/auctions';
 
 // Number of auctions to display in drop-down
 const auctionCount = 2;
@@ -12,7 +13,7 @@ const firstAuctionBlockKsm = 7924237;
 let chain = undefined;
 let wsProvider = undefined;
 let api = undefined;
-let auctionSelections = [];
+let options = [];
 
 // Component that retrieves and displays on-chain auction data
 function AuctionSchedule() {
@@ -22,15 +23,17 @@ function AuctionSchedule() {
 		const title = document.title;
 		// Polkadot
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			chain = "polkadot"
-			wsProvider = new WsProvider("wss://rpc.polkadot.io");
-			await Connect(wsProvider, firstAuctionBlockDot, setAuctions);
+			chain = "polkadot";
+			LoadDefaults(PolkadotAuctions, setAuctions);
+			//wsProvider = new WsProvider("wss://rpc.polkadot.io");
+			//await Connect(wsProvider, firstAuctionBlockDot, setAuctions);
 		} 
 		// Kusama
 		else if (title === "Parachain Slot Auctions · Guide") {
 			chain = "kusama";
-			wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io/");
-			await Connect(wsProvider, firstAuctionBlockKsm, setAuctions);
+			LoadDefaults(KusamaAuctions, setAuctions);
+			//wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io/");
+			//await Connect(wsProvider, firstAuctionBlockKsm, setAuctions);
 		}
 	// Other
 		else {
@@ -46,6 +49,15 @@ function AuctionSchedule() {
 	}
 }
 
+// Loads hard-coded auction default values
+function LoadDefaults(auctions, setAuctions) {
+	for (let i = 0; i < auctions.length; i++) {
+		const option = <option value={i} key={i}>{auctions[i].option}</option>
+		options.push(option);
+	}
+	Update(options, auctions, setAuctions, { target: { value: 0 } });
+}
+
 // Connect to a chain, retrieve required values, generate UI output values
 async function Connect(wsProvider,  initialBlock, setAuctions) {
 	api = await ApiPromise.create({ provider: wsProvider });
@@ -53,10 +65,6 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 	// Get the current block for projection
 	const currentBlock = await api.rpc.chain.getBlock();
 	const currentBlockNumber = currentBlock.block.header.number.toPrimitive();
-
-	currentBlock.block.extrinsics.forEach((ex, index) => {
-		console.log(index, ex.hash.toHex());
-	});
 
 	// Get current on-chain date/time
 	let chainTimestamp = await api.query.timestamp.now();
@@ -99,46 +107,46 @@ async function Connect(wsProvider,  initialBlock, setAuctions) {
 
 		// Drop-down option
 		let option = <option value={i} key={i}>{`Auction #${i + 1} - ${auction.startDate.toDateString()}`}</option>
-		auctionSelections.push(option);
+		options.push(option);
 	}
 
 	Update(auctions, setAuctions, { target: { value: 0 } });
 }
 
 // Update JSX
-function Update(auctions, setAuctions, event) {
+function Update(options, auctions, setAuctions, event) {
 	const index = event.target.value;
 
 	// First child in select is rendered by default
 	const content = <div>
-		<select id="AuctionSelector" onChange={(e) => Update(auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
-			{auctionSelections.map((option) => (option))}
+		<select id="AuctionSelector" onChange={(e) => Update(options, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+			{options.map((option) => (option))}
 		</select>
 		<hr />
 		<b>Auction Starts:</b>
 		<br />
-		{`${auctions[index].startDate.toDateString()} - `}
-		<a href={`https://polkadot.subscan.io/block/${auctions[index].startBlock.toString()}`}>
-			Block #{auctions[index].startBlock.toString()}
+		{`${auctions[index].startDate} - `}
+		<a href={`https://polkadot.subscan.io/block/${auctions[index].startBlock.substring(1)}`}>
+			Block {auctions[index].startBlock}
 		</a>
 		<hr />
 		<b>Auction Ends:</b>
 		<br />
-		{`${auctions[index].endPeriodDate.toDateString()} - `}
-		<a href={`https://polkadot.subscan.io/block/${auctions[index].endPeriodBlock.toString()}`}>
-			Block #{auctions[index].endPeriodBlock.toString()}
+		{`${auctions[index].endPeriodDate} - `}
+		<a href={`https://polkadot.subscan.io/block/${auctions[index].endPeriodBlock.substring(1)}`}>
+			Block {auctions[index].endPeriodBlock}
 		</a>
 		<hr />
 		<b>Bidding Ends:</b>
 		<br />
-		{`${auctions[index].biddingEndsDate.toDateString()} - `}
-		<a href={`https://polkadot.subscan.io/block/${auctions[index].biddingEndsBlock.toString()}`}>
-			Block #{auctions[index].biddingEndsBlock.toString()}
+		{`${auctions[index].biddingEndsDate} - `}
+		<a href={`https://polkadot.subscan.io/block/${auctions[index].biddingEndsBlock.substring(1)}`}>
+			Block {auctions[index].biddingEndsBlock}
 		</a>
 		<hr />
 		<b>Winning parachain(s) onboarded:</b>
 		<br />
-		{auctions[0].startOnBoard} for the period {auctions[0].startOnBoard} to {auctions[0].endOnBoard}
+		{auctions[index].onboard}
 		<hr />
 	</div>
 
