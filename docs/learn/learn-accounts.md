@@ -458,9 +458,9 @@ You can also see this video tutorial for more information about creating multisi
 
 Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Charlie,
 Dan, and Eleanor. First, Charlie will create the call on-chain by calling `approve_as_multi` with the raw
-call, in this case a balance transfer. When doing this Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
-while he waits for either Dan or Eleanor also to approve the balance transfer call using the `as_multi` extrinsic. When Dan comes to approve the call and execute the transaction, he will not need to place the deposit, and Charlie will receive his
-deposit back. Similarly, after Charlie sends the initial transaction, say Dan or Eleanor choose to cancel the transaction due to an error on Charlie's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Charlie.
+call, in this case a balance transfer from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
+while he waits for either Dan or Eleanor also to approve the balance transfer call using the `as_multi` extrinsic. When Dan comes to approve the call, he will not need to place the deposit, and Charlie will receive his
+deposit back. Once the balance transfer call is approved, the multisig CDE will transfer funds to Frank. Similarly, after Charlie sends the initial transaction, say Dan or Eleanor choose to cancel the transaction due to an error on Charlie's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Charlie.
 
 Note that multisigs are deterministic, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. 
 
