@@ -76,8 +76,9 @@ get elected and become active. For more information about the election algorithm
 research article. As a nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-is required to submit an intention to nominate, which can be thought of as registering to be a nominator. Note that in NPoS the stake of both nominators and
-validators can be slashed. For an in-depth review of NPoS see
+is required to submit an intention to nominate, which can be thought of as registering to be a
+nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
+in-depth review of NPoS see
 [this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
 :::caution Minimum Nomination to Receive Staking Rewards
@@ -87,7 +88,9 @@ Although the minimum nomination intent is
 it does not guarantee staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
 which is a dynamic value that can be much higher than
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}. This dynamic value depends on the amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} being staked, in addition to the selected nominations.
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
+This dynamic value depends on the amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+being staked, in addition to the selected nominations.
 
 :::
 
@@ -98,11 +101,11 @@ Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} req
 - Locking tokens on-chain.
 - Selecting a set of validators, to whom these locked tokens will automatically be allocated to.
 
-How many tokens you lock up is completely up to you - as are the validators you wish to select.
-Locking tokens is also known as **bonding**. You can also refer to your locked tokens as your bonded
-tokens, or staked tokens. Likewise, selecting validators is also known as backing or nominating
-validators. These terms are used interchangeably by the community. From now on locked tokens will be
-referred to as bonded tokens.
+How many tokens you lock up is completely up to you - as are the validators you wish to select. The
+action of locking tokens is also known as **bonding**. You can also refer to your locked tokens as
+your bonded tokens, or staked tokens. Likewise, selecting validators is also known as backing or
+nominating validators. These terms are used interchangeably by the community. From now on locked
+tokens will be referred to as bonded tokens.
 
 Once the previous 2 steps are completed and you are nominating, your bonded tokens could be
 allocated to one or more of your selected validators, and this happens every time the active
@@ -183,13 +186,13 @@ function of parachains, and possibly some other responsibilities regarding data 
 to become a validator you can consult
 [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
-**Nominators.** Nominators have far fewer responsibilities than validators. These include selecting validators and
-monitoring their performance, keeping an eye on changing commission rates (a validator can change
-commission at any time), and general health monitoring of their validators' accounts. Thus, while
-not being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared
-to that of a validator, and even more with [nomination pools](./learn-nomination-pools.md). For more
-information, you can take a look at the nominator [guide](learn-nominator.md) to understanding your
-responsibilities as a nominator.
+**Nominators.** Nominators have far fewer responsibilities than validators. These include selecting
+validators and monitoring their performance, keeping an eye on changing commission rates (a
+validator can change commission at any time), and general health monitoring of their validators'
+accounts. Thus, while not being completely set-it-and-forget-it, a nominator's experience is
+relatively hands-off compared to that of a validator, and even more with
+[nomination pools](./learn-nomination-pools.md). For more information, you can take a look at the
+nominator [guide](learn-nominator.md) to understanding your responsibilities as a nominator.
 
 If you want to become a nominator, see
 [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
@@ -207,7 +210,8 @@ support article to learn how to stake with the dashboard.
 
 :::
 
-**Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking, without sacrificing Polkadot's strict security model.
+**Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking,
+without sacrificing Polkadot's strict security model.
 
 ### Selection of Validators
 
@@ -317,7 +321,10 @@ For Ledger users staking directly on Ledger Live, currently, there is no option 
 stash and controller accounts. That is if you stake on Ledger Live your stash account will be your
 controller too.
 
-Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import their Ledger accounts in the extension and use them as a stash and controller. You can find more information about Talisman and other third-party wallets that officially secured funding from the treasury [here](..//build/build-wallets.md/#treasury-funded-wallets).
+Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import
+their Ledger accounts in the extension and use them as a stash and controller. You can find more
+information about Talisman and other third-party wallets that officially secured funding from the
+treasury [here](..//build/build-wallets.md/#treasury-funded-wallets).
 
 :::
 
@@ -396,10 +403,12 @@ mitigated by the validator operator running separate validators; each validator 
 own entity for purposes of slashing, just as they are for staking rewards.
 
 In rare instances, a nominator may be actively nominating several validators in a single era. In
-this case, the slash is proportionate to the amount staked to that specific validator. With very large bonds, such as parachain liquid staking accounts, a nominator has multiple active nominations per era (Acala's LDOT nominator typically has 7-12 active nominations per era). Note that you
-cannot control the percentage of stake you have allocated to each validator or choose who your
-active validator will be (except in the trivial case of nominating a single validator). Staking
-allocations are controlled by the [Phragmén algorithm](learn-phragmen.md).
+this case, the slash is proportionate to the amount staked to that specific validator. With very
+large bonds, such as parachain liquid staking accounts, a nominator has multiple active nominations
+per era (Acala's LDOT nominator typically has 7-12 active nominations per era). Note that you cannot
+control the percentage of stake you have allocated to each validator or choose who your active
+validator will be (except in the trivial case of nominating a single validator). Staking allocations
+are controlled by the [Phragmén algorithm](learn-phragmen.md).
 
 Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
 via
@@ -414,10 +423,11 @@ particular levels are not implemented or referred to in the code or in the syste
 guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
 
-- Level 1: isolated [unresponsiveness](./learn-staking-advanced.md/#unresponsiveness), i.e. being offline for an entire session.
-  Generally no slashing, only [chilling](#chilling).
-- Level 2: concurrent unresponsiveness or isolated [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very
-  small amount of the stake and chills.
+- Level 1: isolated [unresponsiveness](./learn-staking-advanced.md/#unresponsiveness), i.e. being
+  offline for an entire session. Generally no slashing, only [chilling](#chilling).
+- Level 2: concurrent unresponsiveness or isolated
+  [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small amount of the
+  stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
   in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
@@ -474,11 +484,12 @@ return will be less, encouraging some users to withdraw.
 
 ## How many validators does Polkadot have?
 
-Polkadot currently has <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top bound on
-the number of validators has not been determined yet, but should only be limited by the bandwidth
-strain of the network due to peer-to-peer message passing. The estimate of the number of validators
-that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
-900 validator slots in the active set.
+Polkadot currently has
+<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top
+bound on the number of validators has not been determined yet, but should only be limited by the
+bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of
+validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network,
+currently has 900 validator slots in the active set.
 
 ## Resources
 
