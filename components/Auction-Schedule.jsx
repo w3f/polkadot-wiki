@@ -1,86 +1,105 @@
 import React, { useEffect, useState } from 'react';
 import { PolkadotAuctions, KusamaAuctions } from './utilities/auctions';
 
-// Drop-down auction selector options
-let options = [];
-let chain = undefined;
-
-// Component that retrieves and displays on-chain auction data
+// Component for displaying auction data
 function AuctionSchedule() {
 	const [auctions, setAuctions] = useState("Loading Auctions...");
 
 	useEffect(async () => {
 		const title = document.title;
-		// Polkadot
+		let chain = undefined;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
 			chain = "Polkadot"
-			LoadDefaults(PolkadotAuctions, setAuctions);
-		} 
-		// TODO - Kusama needs schema changes in JSX
+			LoadDefaults(chain, PolkadotAuctions, setAuctions);
+		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			chain = "Kusama"
-			LoadDefaults(KusamaAuctions, setAuctions);
+			LoadDefaults(chain, KusamaAuctions, setAuctions, chain);
 		}
-	// Other
 		else {
 			console.log("Unknown wiki/guide type");
 		}
 	}, []);
 
 	// Render
-	if (chain !== undefined) {
+	if (auctions !== undefined) {
 		return auctions;
 	} else {
-		return (<div>Loading Auctions...</div>)
+		return (<div>Loading auction data...</div>)
 	}
 }
 
 // Loads hard-coded auction default values
-function LoadDefaults(auctions, setAuctions) {
+function LoadDefaults(chain, auctions, setAuctions) {
+	let options = [];
 	for (let i = 0; i < auctions.length; i++) {
 		const option = <option value={i} key={i}>{auctions[i].option}</option>
 		options.push(option);
 	}
-	Update(options, auctions, setAuctions, { target: { value: 0 } });
+	Update(chain, options, auctions, setAuctions, { target: { value: 0 } });
 }
 
 // Update JSX
-function Update(options, auctions, setAuctions, event) {
+function Update(chain, options, auctions, setAuctions, event) {
 	const index = event.target.value;
+	let content = <div>Failed to load auction data...</div>
 
-	// First child in select is rendered by default
-	const content = <div>
-		<select id="AuctionSelector" onChange={(e) => Update(options, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
-			{options.map((option) => (option))}
-		</select>
-		<hr />
-		<b>Auction Starts:</b>
-		<br />
-		{`${auctions[index].startDate} - `}
-		<a href={`https://polkadot.subscan.io/block/${auctions[index].startBlock.substring(1)}`}>
-			Block {auctions[index].startBlock}
-		</a>
-		<hr />
-		<b>Auction Ends:</b>
-		<br />
-		{`${auctions[index].endPeriodDate} - `}
-		<a href={`https://polkadot.subscan.io/block/${auctions[index].endPeriodBlock.substring(1)}`}>
-			Block {auctions[index].endPeriodBlock}
-		</a>
-		<hr />
-		<b>Bidding Ends:</b>
-		<br />
-		{`${auctions[index].biddingEndsDate} - `}
-		<a href={`https://polkadot.subscan.io/block/${auctions[index].biddingEndsBlock.substring(1)}`}>
-			Block {auctions[index].biddingEndsBlock}
-		</a>
-		<hr />
-		<b>Winning parachain(s) onboarded:</b>
-		<br />
-		{auctions[index].onboard}
-		<hr />
-	</div>
+	// TODO - this should be the same for both chains, however the original tool
+	// only provided limited hard-coded data for Kusama
+	if (chain === "Polkadot") {
+		content = <div>
+			<select id="AuctionSelector" onChange={(e) => Update(chain, options, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+				{options.map((option) => (option))}
+			</select>
+			<hr />
+			<b>Auction Starts:</b>
+			<br />
+			{`${auctions[index].startDate} - `}
+			<a href={`https://polkadot.subscan.io/block/${auctions[index].startBlock.substring(1)}`}>
+				Block {auctions[index].startBlock}
+			</a>
+			<hr />
+			<b>Auction Ends:</b>
+			<br />
+			{`${auctions[index].endPeriodDate} - `}
+			<a href={`https://polkadot.subscan.io/block/${auctions[index].endPeriodBlock.substring(1)}`}>
+				Block {auctions[index].endPeriodBlock}
+			</a>
+			<hr />
+			<b>Bidding Ends:</b>
+			<br />
+			{`${auctions[index].biddingEndsDate} - `}
+			<a href={`https://polkadot.subscan.io/block/${auctions[index].biddingEndsBlock.substring(1)}`}>
+				Block {auctions[index].biddingEndsBlock}
+			</a>
+			<hr />
+			<b>Winning parachain(s) onboarded:</b>
+			<br />
+			{auctions[index].onboard}
+			<hr />
+		</div>
+	} else if (chain === "Kusama") {
+		content = <div>
+			<select id="AuctionSelector" onChange={(e) => Update(chain, options, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+				{options.map((option) => (option))}
+			</select>
+			<hr />
+			<b>Auction Starts:</b>
+			<br />
+			<a href={`https://kusama.subscan.io/block/${auctions[index].startBlock.substring(1)}`}>
+				Block {auctions[index].startBlock}
+			</a>
+			<hr />
+			<b>Bidding Ends:</b>
+			<br />
+			<a href={`https://kusama.subscan.io/block/${auctions[index].biddingEndsBlock.substring(1)}`}>
+				Block {auctions[index].biddingEndsBlock}
+			</a>
+			<hr />
+		</div>
+	}
 
+	// Re-render
 	setAuctions(content);
 }
 
