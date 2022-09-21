@@ -77,6 +77,10 @@ function Update(chain, options, auctions, setAuctions, event) {
 			<br />
 			{auctions[index].onboard}
 			<hr />
+			<p style={{ color: "#6c757d" }}>
+				The dates (based on UTC) and block numbers listed above can change based on network block production and the potential for skipped blocks.
+				Click on the block number for an up-to-date estimate.
+			</p>
 		</div>
 	} else if (chain === "Kusama") {
 		content = <div>
@@ -96,6 +100,10 @@ function Update(chain, options, auctions, setAuctions, event) {
 				Block {auctions[index].biddingEndsBlock}
 			</a>
 			<hr />
+			<p style={{ color: "#6c757d" }}>
+			The block numbers listed above can change based on network block production and the potential for skipped blocks.
+			Click on the block number for an estimate of the date and time.
+			</p>
 		</div>
 	}
 
