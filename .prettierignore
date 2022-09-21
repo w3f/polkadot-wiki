@@ -1,0 +1,11 @@
+# Ignore everything recursively
+*
+
+# But not the markdown files
+!*.md
+
+# Check subdirectories too
+!*/
+
+# Ignore translated docs (not currently maintained)
+/polkadot-wiki/translated_docs/
