@@ -3,6 +3,7 @@ import { PolkadotAuctions, KusamaAuctions } from './utilities/auctions';
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
 let options = [];
+let wsProvider = undefined;
 
 // Component for displaying auction data
 function AuctionSchedule() {
@@ -11,20 +12,16 @@ function AuctionSchedule() {
 	useEffect(async () => {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			// Load Defaults
 			const chain = "Polkadot";
-			const auctions = LoadDefaults(chain, PolkadotAuctions, setAuctions);
-			// Load on-chain data for initial selection
-			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
-			await GetChainData(chain, wsProvider, auctions, setAuctions, 0);
+			wsProvider = new WsProvider("wss://rpc.polkadot.io");
+			LoadOptions(PolkadotAuctions);
+			LoadCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
-			// Load Defaults
 			const chain = "Kusama";
-			const auctions = LoadDefaults(chain, KusamaAuctions, setAuctions, chain);
-			// Load on-chain data for initial selection
-			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
-			await GetChainData(chain, wsProvider, auctions, setAuctions, 0);
+			wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
+			LoadOptions(KusamaAuctions);
+			LoadCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else {
 			console.log("Unknown wiki/guide type");
@@ -40,26 +37,29 @@ function AuctionSchedule() {
 }
 
 // Loads hard-coded auction default values
-function LoadDefaults(chain, auctions, setAuctions) {
+function LoadOptions(auctions) {
 	for (let i = 0; i < auctions.length; i++) {
 		const option = <option value={i} key={i}>{auctions[i].option}</option>
 		options.push(option);
 	}
-	const initialBlock = Update(chain, auctions, setAuctions, { target: { value: 0 } });
-	return initialBlock;
+}
+
+// Renders default value prior to initializing on-chain retrieval
+async function LoadCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
+	const index = e.target.value;
+	const auctions = Render(chain, defaultAuctions, setAuctions, index);
+	await GetChainData(chain, auctions, setAuctions, index)
 }
 
 // Update JSX
-function Update(chain, auctions, setAuctions, event) {
-	console.log("updating");
-	const index = event.target.value;
+function Render(chain, auctions, setAuctions, index) {
 	let content = <div>Failed to load auction data...</div>
 
 	// TODO - this should be the same for both chains, however the original tool
 	// only provided limited hard-coded data for Kusama
 	if (chain === "Polkadot") {
 		content = <div>
-			<select id="AuctionSelector" onChange={(e) => Update(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+			<select id="AuctionSelector" onChange={(e) => LoadCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
 				{options.map((option) => (option))}
 			</select>
 			<hr />
@@ -95,7 +95,7 @@ function Update(chain, auctions, setAuctions, event) {
 		</div>
 	} else if (chain === "Kusama") {
 		content = <div>
-			<select id="AuctionSelector" onChange={(e) => Update(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+			<select id="AuctionSelector" onChange={(e) => LoadCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
 				{options.map((option) => (option))}
 			</select>
 			<hr />
@@ -118,14 +118,12 @@ function Update(chain, auctions, setAuctions, event) {
 		</div>
 	}
 
-	// Re-render
 	setAuctions(content);
 	return auctions;
 }
 
-// Connect to a chain, retrieve required values, generate UI output values
-async function GetChainData(chain, wsProvider, auctions, setAuctions, index) {
-	console.log("pulling chain data");
+// Connect to a chain, retrieve required values, re-render
+async function GetChainData(chain, auctions, setAuctions, index) {
 	const api = await ApiPromise.create({ provider: wsProvider });
 
 	// Get the current block for projection
@@ -133,8 +131,8 @@ async function GetChainData(chain, wsProvider, auctions, setAuctions, index) {
 	const currentBlockNumber = currentBlock.block.header.number.toPrimitive();
 
 	// Get current on-chain date/time
-	let chainTimestamp = await api.query.timestamp.now();
-	let date = new Date(chainTimestamp.toPrimitive());
+	const chainTimestamp = await api.query.timestamp.now();
+	const date = new Date(chainTimestamp.toPrimitive());
 
 	// Get chain data for the current selection
 	let auction = {};
@@ -160,7 +158,7 @@ async function GetChainData(chain, wsProvider, auctions, setAuctions, index) {
 	auction.endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auction.endPeriodBlock.substring(1));
 	auction.biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auction.biddingEndsBlock.substring(1));
 	auction.onboard = "TEST";
-	// TODO - how to get his value?
+	// TODO - how to get this value?
 	//auction.startOnBoard = "test1";
 	//auction.endOnBoard = "test2";
 	//auction.endOnBoard = weeksLeased * 7 + auction.startOnBoard;
@@ -168,7 +166,7 @@ async function GetChainData(chain, wsProvider, auctions, setAuctions, index) {
 	// Swap hard-coded data for on-chain at drop-down index
 	auctions[index] = auction;
 
-	Update(chain, auctions, setAuctions, { target: { value: index } });
+	Render(chain, auctions, setAuctions, index);
 }
 
 // Estimate a future blocks date based on 6 second block times
