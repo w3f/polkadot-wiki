@@ -126,13 +126,15 @@ with a suite of modules that can be configured, composed, and extended to develo
 
 ## Rollups
 
-Rollups, a layer 2 scaling solution, have been talked about for some time and it's potential to scaling Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled up transaction could inclue 10,000 transactions. Rollups reduce transaction fees significantly, and there are a few different versions that are being worked on.
+Rollups, a layer 2 scaling solution, have been talked about for some time and it's potential to scaling Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled up transaction could inclue 10,000 transactions. Rollups increase TPS and reduce transaction fees significantly, and there are a few different versions that are being worked on.
 
-### Optimism
+### Optimistic Rollups
 
-### Arbitrum
+Using a "innocent until proven guilty" approach, optimistic rollups will accept transaction commitments to the network while validating for errors and security issues. If invalid, validators can submit a fradulent commitment proof(fraud-proofs). These proofs will be used to reject fradulant transactions. This way, transaction results along with a proof can be stored on the main network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction scalability 10-100x, and writes transactions to Ethereum as [`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata) reducing gas fees significantly.
 
-### ZK Rollups
+Examples of optimistic rollup solutions include [Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and [Unipig](https://unipig.exchange/welcome).
+
+### Zero-Knowledge Rollups
 
 #### EIP 4844
 
