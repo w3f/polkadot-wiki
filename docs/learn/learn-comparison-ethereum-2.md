@@ -140,6 +140,10 @@ Until the ETH 2.0 merge is finalized, this stopgap implements "blob-transactions
 
 Blob-transactions are transactions which carry a large amount of data that cannot be accessed by the EVM, but whose commitment can be accessed.
 
+### Rollups in Polkadot
+
+
+
 ## Message Passing
 
 Shards in Ethereum 2.0 will have access to each other's state via their crosslinks and state proofs.
