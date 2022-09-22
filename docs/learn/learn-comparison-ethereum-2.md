@@ -134,7 +134,17 @@ Using a "innocent until proven guilty" approach, optimistic rollups will accept 
 
 Examples of optimistic rollup solutions include [Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and [Unipig](https://unipig.exchange/welcome).
 
-### Zero-Knowledge Rollups
+### Zero-knowledge Rollups
+
+[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as the "proof" layer fro transaction batches, effectively reducing the transaction payload to be the size of a zk-proof. This, similar to optimistic approach, allows transaction data to be abstracted away and reduced significantly in size before being committed to the main chain.
+
+<!-- The ZK-rollup’s state, which includes L2 accounts and balances, is represented as a Merkle tree. A cryptographic hash of the Merkle tree’s root (Merkle root) is stored in the on-chain contract, allowing the rollup protocol to track changes in the state of the ZK-rollup.
+
+The rollup transitions to a new state after the execution of a new set of transactions. The operator who initiated the state transition is required to compute a new state root and submit to the on-chain contract. If the validity proof associated with the batch is authenticated by the verifier contract, the new Merkle root becomes the ZK-rollup’s canonical state root.
+
+Besides computing state roots, the ZK-rollup operator also creates a batch root—the root of a Merkle tree comprising all transactions in a batch. When a new batch is submitted, the rollup contract stores the batch root, allowing users to prove a transaction (e.g., a withdrawal request) was included in the batch. Users will have to provide transaction details, the batch root, and a Merkle proof showing the inclusion path.
+
+ -->
 
 #### EIP 4844
 
