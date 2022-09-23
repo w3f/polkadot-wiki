@@ -109,15 +109,14 @@ function HomeNav() {
 
 // Used for advertising events, conferences, etc
 // To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
-/*
+
 function Banner() {
   const FixedBanner = ({ children }) => (
     <div className="fixed-banner">
       <div className="fixed-banner-text-container col-12 col-md-8 col-lg-10 text-center text-md-left mb-2 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
         <p className="banner-text">
-         <span class="font-weight-bolder">POLKADOT DECODED </span>
-           June 29th-30th, 2022
-          <span class="d-flex d-lg-inline-block pl-lg-3">Join 100+ talks, live streamed from 4 locations worldwide.</span>
+         <span class="font-weight-bolder">Sub0 is coming to Lisbon!</span>
+          <span class="d-flex d-lg-inline-block pl-lg-3">Join the Polkadot developer conference, November 28th-29th</span>
         </p>
         <a href="https://decoded.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=decoded%202022&utm_content=notification%20banner5">
           <button className="banner-button btn btn-md btn-primary btn-bg-primary mr-3">
@@ -137,7 +136,7 @@ function Banner() {
     <FixedBanner />
   )
 }
-*/
+
 
 function HomeFooter() {
   const FooterContainer = ({ children }) => (
@@ -251,6 +250,7 @@ export default function Index() {
   return (
     <Layout title={siteConfig.tagline}>
       <div className="homeContainer">
+        <Banner />
         <HomeNav />
         <HomeFooter />
       </div>

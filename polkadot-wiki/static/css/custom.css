@@ -304,6 +304,7 @@ button.menu__button {
   Banner
    ========================================================================== */
 .fixed-banner {
+  z-index: 10;
   position: fixed;
   left: 0;
   bottom: 0;
