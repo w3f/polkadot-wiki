@@ -66,6 +66,7 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 
 	// Dates
 	// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
+	// Should we also cache block hashes to avoid having to make multiple rpc invocations?
 	if (currentBlockNumber > auctions[index].startBlock) {
 		console.log("start block has already occurred");
 	} else {
