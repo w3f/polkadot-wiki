@@ -15,13 +15,13 @@ function AuctionSchedule() {
 			const chain = "Polkadot";
 			wsProvider = new WsProvider("wss://rpc.polkadot.io");
 			LoadOptions(PolkadotAuctions);
-			LoadCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
+			LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
 			wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
 			LoadOptions(KusamaAuctions);
-			LoadCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
+			LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else {
 			console.log(title);
@@ -46,7 +46,7 @@ function LoadOptions(auctions) {
 }
 
 // Renders default value prior to initializing on-chain retrieval
-function LoadCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
+function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
 	const index = e.target.value;
 	const auctions = Render(chain, defaultAuctions, setAuctions, index);
 	GetChainData(chain, auctions, setAuctions, index)
@@ -64,17 +64,6 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	const chainTimestamp = await api.query.timestamp.now();
 	const date = new Date(chainTimestamp.toPrimitive());
 
-	// Blocks
-	/*
-	const startHash = await api.rpc.chain.getBlockHash(auctions[index].startBlock.substring(1));
-	const apiAt = await api.at(startHash.toString());
-	const endPeriod = apiAt.consts.auctions.endingPeriod.toPrimitive();
-	const [lease, end] = (await apiAt.query.auctions.auctionInfo()).toJSON();
-	const weeksLeased = lease;
-	auctions[index].endPeriodBlock = `#${end.toString()}`;
-	auctions[index].biddingEndsBlock = `#${(end + endPeriod).toString()}`;
-	*/
-
 	// Dates
 	// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
 	if (currentBlockNumber > auctions[index].startBlock) {
@@ -83,9 +72,7 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 		console.log("start block has not yet occurred");
 	}
 	auctions[index].startDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].startBlock);
-	if (chain === "Polkadot") {
-		auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock);
-	}
+	auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock);
 	auctions[index].biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].biddingEndsBlock);
 	auctions[index].onboard = "TODO";
 	// TODO - how to get this value?
@@ -107,7 +94,12 @@ function EstimateBlockDate(date, currentBlock, estimatedBlock) {
 
 // Update JSX
 function Render(chain, auctions, setAuctions, index) {
-	let content = <div>Failed to load auction data...</div>
+	let explorerUrl = undefined;
+	if (chain === "Polkadot") {
+		explorerUrl = "https://polkadot.subscan.io/block/";
+	} else if (chain === "Kusama") {
+		explorerUrl = "https://kusama.subscan.io/block/";
+	}
 
 	// If still calculating date estimation, inform user
 	if (auctions[index].hasOwnProperty("startDate") === false) {
@@ -117,74 +109,41 @@ function Render(chain, auctions, setAuctions, index) {
 		auctions[index]["biddingEndsDate"] = msg;
 	}
 
-	// TODO - this should be the same for both chains, however the original tool
-	// only provided limited hard-coded data for Kusama
-	if (chain === "Polkadot") {
-		content = <div>
-			<select id="AuctionSelector" onChange={(e) => LoadCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
-				{options.map((option) => (option))}
-			</select>
-			<hr />
-			<b>Auction Starts:</b>
-			<br />
-			{`${auctions[index].startDate} - `}
-			<a href={`https://polkadot.subscan.io/block/${auctions[index].startBlock}`}>
-				Block #{auctions[index].startBlock}
-			</a>
-			<hr />
-			<b>Auction Ends:</b>
-			<br />
-			{`${auctions[index].endPeriodDate} - `}
-			<a href={`https://polkadot.subscan.io/block/${auctions[index].endPeriodBlock}`}>
-				Block #{auctions[index].endPeriodBlock}
-			</a>
-			<hr />
-			<b>Bidding Ends:</b>
-			<br />
-			{`${auctions[index].biddingEndsDate} - `}
-			<a href={`https://polkadot.subscan.io/block/${auctions[index].biddingEndsBlock}`}>
-				Block #{auctions[index].biddingEndsBlock}
-			</a>
-			<hr />
-			<b>Winning parachain(s) onboarded:</b>
-			<br />
-			{auctions[index].onboard}
-			<hr />
-			<p style={{ color: "#6c757d" }}>
-				The dates (based on UTC) and block numbers listed above can change based on network block production and the potential for skipped blocks.
-				Click on the block number for an up-to-date estimate.
-			</p>
-		</div>
-	} else if (chain === "Kusama") {
-		if (!auctions[index].hasOwnProperty("startDate")) {
-			auctions[index].startDate = "Estimating Date...";
-			auctions[index].biddingEndsDate = "Estimating Date..."
-		}
-		content = <div>
-			<select id="AuctionSelector" onChange={(e) => LoadCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
-				{options.map((option) => (option))}
-			</select>
-			<hr />
-			<b>Auction Starts:</b>
-			<br />
-			{`${auctions[index].startDate} - `}
-			<a href={`https://kusama.subscan.io/block/${auctions[index].startBlock}`}>
-				Block {auctions[index].startBlock}
-			</a>
-			<hr />
-			<b>Bidding Ends:</b>
-			<br />
-			{`${auctions[index].biddingEndsDate} - `}
-			<a href={`https://kusama.subscan.io/block/${auctions[index].biddingEndsBlock}`}>
-				Block {auctions[index].biddingEndsBlock}
-			</a>
-			<hr />
-			<p style={{ color: "#6c757d" }}>
-			The block numbers listed above can change based on network block production and the potential for skipped blocks.
-			Click on the block number for an estimate of the date and time.
-			</p>
-		</div>
-	}
+	const content = <div>
+		<select id="AuctionSelector" onChange={(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+			{options.map((option) => (option))}
+		</select>
+		<hr />
+		<b>Auction Starts:</b>
+		<br />
+		{`${auctions[index].startDate} - `}
+		<a href={`${explorerUrl}${auctions[index].startBlock}`}>
+			Block #{auctions[index].startBlock}
+		</a>
+		<hr />
+		<b>Auction Ends:</b>
+		<br />
+		{`${auctions[index].endPeriodDate} - `}
+		<a href={`${explorerUrl}${auctions[index].endPeriodBlock}`}>
+			Block #{auctions[index].endPeriodBlock}
+		</a>
+		<hr />
+		<b>Bidding Ends:</b>
+		<br />
+		{`${auctions[index].biddingEndsDate} - `}
+		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock}`}>
+			Block #{auctions[index].biddingEndsBlock}
+		</a>
+		<hr />
+		<b>Winning parachain(s) onboarded:</b>
+		<br />
+		{auctions[index].onboard}
+		<hr />
+		<p style={{ color: "#6c757d" }}>
+			The dates (based on UTC) and block numbers listed above can change based on network block production and the potential for skipped blocks.
+			Click on the block number for an up-to-date estimate.
+		</p>
+	</div>
 
 	setAuctions(content);
 	return auctions;
