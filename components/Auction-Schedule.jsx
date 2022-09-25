@@ -40,7 +40,7 @@ function AuctionSchedule() {
 // Loads hard-coded auction default values
 function LoadOptions(auctions) {
 	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{auctions[i].option}</option>
+		const option = <option value={i} key={i}>{`Auction #${i} at Block #${auctions[i]["startBlock"]}`}</option>
 		options.push(option);
 	}
 }
@@ -77,16 +77,16 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 
 	// Dates
 	// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
-	if (currentBlockNumber > parseInt(auctions[index].startBlock.substring(1))) {
+	if (currentBlockNumber > auctions[index].startBlock) {
 		console.log("start block has already occurred");
 	} else {
 		console.log("start block has not yet occurred");
 	}
-	auctions[index].startDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].startBlock.substring(1));
+	auctions[index].startDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].startBlock);
 	if (chain === "Polkadot") {
-		auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock.substring(1));
+		auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock);
 	}
-	auctions[index].biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].biddingEndsBlock.substring(1));
+	auctions[index].biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].biddingEndsBlock);
 	auctions[index].onboard = "TODO";
 	// TODO - how to get this value?
 	//auctions[index].startOnBoard = "test1";
@@ -102,12 +102,20 @@ function EstimateBlockDate(date, currentBlock, estimatedBlock) {
 	const seconds = blockDifference * 6;
 	const dateCopy = new Date(date.valueOf())
 	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
-	return dateCopy.toString();
+	return dateCopy.toDateString();
 }
 
 // Update JSX
 function Render(chain, auctions, setAuctions, index) {
 	let content = <div>Failed to load auction data...</div>
+
+	// If still calculating date estimation, inform user
+	if (auctions[index].hasOwnProperty("startDate") === false) {
+		const msg = "Estimating block date...";
+		auctions[index]["startDate"] = msg;
+		auctions[index]["endPeriodDate"] = msg;
+		auctions[index]["biddingEndsDate"] = msg;
+	}
 
 	// TODO - this should be the same for both chains, however the original tool
 	// only provided limited hard-coded data for Kusama
@@ -121,21 +129,21 @@ function Render(chain, auctions, setAuctions, index) {
 			<br />
 			{`${auctions[index].startDate} - `}
 			<a href={`https://polkadot.subscan.io/block/${auctions[index].startBlock}`}>
-				Block {auctions[index].startBlock}
+				Block #{auctions[index].startBlock}
 			</a>
 			<hr />
 			<b>Auction Ends:</b>
 			<br />
 			{`${auctions[index].endPeriodDate} - `}
 			<a href={`https://polkadot.subscan.io/block/${auctions[index].endPeriodBlock}`}>
-				Block {auctions[index].endPeriodBlock}
+				Block #{auctions[index].endPeriodBlock}
 			</a>
 			<hr />
 			<b>Bidding Ends:</b>
 			<br />
 			{`${auctions[index].biddingEndsDate} - `}
 			<a href={`https://polkadot.subscan.io/block/${auctions[index].biddingEndsBlock}`}>
-				Block {auctions[index].biddingEndsBlock}
+				Block #{auctions[index].biddingEndsBlock}
 			</a>
 			<hr />
 			<b>Winning parachain(s) onboarded:</b>
