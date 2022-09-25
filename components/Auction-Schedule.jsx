@@ -138,7 +138,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<hr />
 		<b>Winning parachain(s) onboarded:</b>
 		<br />
-		{auctions[index].onboard}
+		`ONBOARD_START_DATE` for the period `ONBOARD_START_DATE` to `ONBOARD_END_DATE`
 		<hr />
 		<p style={{ color: "#6c757d" }}>
 			The dates (based on UTC) and block numbers listed above can change based on network block production and the potential for skipped blocks.
