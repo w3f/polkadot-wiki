@@ -113,13 +113,13 @@ function HomeNav() {
 function Banner() {
   const FixedBanner = ({ children }) => (
     <div className="fixed-banner">
-      <div className="fixed-banner-text-container col-12 col-md-8 col-lg-10 text-center text-md-left mb-2 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
-        <p className="banner-text">
-         <span class="font-weight-bolder">Sub0 is coming to Lisbon!</span>
-          <span class="d-flex d-lg-inline-block pl-lg-3">Join the Polkadot developer conference, November 28th-29th</span>
+      <div className="mx-auto col-12 col-md-10 col-xl-8 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <p className="mb-0 text-center text-md-left">
+         <span class="font-weight-bolder pr-lg-4">Sub0 is coming to Lisbon!</span>
+          <span class="d-flex d-lg-inline-block">Join the Polkadot developer conference, November 28th-29th</span>
         </p>
-        <a href="https://decoded.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=decoded%202022&utm_content=notification%20banner5">
-          <button className="banner-button btn btn-md btn-primary btn-bg-primary mr-3">
+        <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki">
+          <button className="banner-button btn btn-md btn-primary btn-bg-primary mt-3 mt-md-0 ml-md-3">
             <Translate
               id="homepage.homeFooter.improveWiki.contributeButton"
               description="Contribute Button Label of Improve Wiki Footer Section in Home page"
