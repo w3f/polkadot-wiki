@@ -195,15 +195,17 @@ Proxy calls are used by proxies to call proxied accounts. These calls are especi
 
 As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a stash account that has a staking proxy account, Anon. Anon is an anonymous proxy, a proxied account originally spawned by Charly that is now a any proxy of Anon and signs everything on its behalf.
 
-![nested proxy calls](../assets/nested_proxy_calls.png)
+![nested proxy calls 2x](../assets/nested_proxy_calls_2x.png)
 
-In this case, for example to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to Anon, which in turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic call, specifying the number of tokens that need to be bounded. If Charly wants to leave, a new account can take his place as any proxy (before Charly leaves!). There is no need to change the staking proxy account. Also, Alice is the only one who can remove Anon as a staking proxy, and Anon can only perform staking-related tasks. For example, Anon cannot send funds out from Alice's account. 
+In this case, for example to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to Anon, which in turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic call, specifying the number of tokens that need to be bounded. If Charly wants to leave, a new account can take his place as any proxy (before Charly leaves!). There is no need to change the staking proxy account. Also, Alice is the only one who can remove Anon as a staking proxy, and Anon can only perform staking-related tasks. For example, Anon cannot send funds out from Alice's account.
 
 :::note
 
-Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be done by calling each `proxy.proxy` extrinsic separately, or by just calling the last `proxy.proxy` extrinsic. In the diagram above, submitting Extrinsic (1.2) will automatically ask for the signature for Extrinsic (1.1).
+Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last `proxy.proxy` extrinsic. In the diagram above, submitting Extrinsic (1.2) will automatically ask for the signature of Extrinsic (1.1). In the diagram below, submitting Extrinsic (1.3) will still ask for the signature of Extrinsic (1.2) and not (1.1). If you wish to sign with Bob's account you need to manually submit all three extrinsics.
 
 :::
+
+![nested proxy calls 3x](../assets/nested_proxy_calls_3x.png)
 
 ## Anonymous Proxies
 
