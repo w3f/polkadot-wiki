@@ -189,7 +189,7 @@ the chain, as you will be unable to sign extrinsics using the UI.
 
 ## Proxy calls 
 
-Proxy calls are used by proxies to call proxied accounts.
+Proxy calls are used by proxies to call proxied accounts. These calls are especially important for anonymous proxies, as any attempt to sign transactions with an anonymous proxy will fail. For more details see the [dedicated section about anonymous proxies](#anonymous-proxies).
 
 ### Nested proxy calls
 
@@ -269,7 +269,7 @@ It is possible to put an anonymous proxy within a multisig, and then transaction
 
 If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this specific example does not do anything.
 
-:::note
+:::note Proxy calls
 
 To use an anonymous proxy within a multisig you need to use the Extrinsic Tab and generate a `proxy.proxy` extrinsic. If you try to sign a multisig transaction using the anonymous proxy you will be prompted with a warning. Remember, you cannot sign something directly if you do not have a private key.
 
