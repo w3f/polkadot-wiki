@@ -253,5 +253,11 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 ### Multi-signature account management
 
+Anonymous proxies are useful to efficiently manage multi-signature (multisigs) accounts. In fact, multisigs are deterministic, which means that once a multisig is created the signatories cannot be changed. If one of the signatories wants to leave the multisig, a new multisig must be created. This is inconvenient, especially at corporate-level management where the chance of replacing someone within a multisig can be high.
 
+:::note Proxy calls
+
+To use an anonymous proxy within a multisig you need to use the Extrinsic Tab and generate a `proxy.proxy` extrinsic. If you try to sign a multisig transaction using the anonymous proxy you will be prompted with a warning. Remember, you cannot sign something directly if you do not have a private key.
+
+:::
 
