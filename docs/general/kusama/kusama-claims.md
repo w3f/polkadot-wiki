@@ -25,14 +25,13 @@ since it will allow you to store your encrypted keystore locally.
 In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger.md),
 or [Parity Signer](../../learn/learn-account-generation.md#parity-signer).
 
-Another option you may consider using is the 
-[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) 
-command-line utility, which will allow you to
-take extra steps to protect the security of your key.
+Another option you may consider using is the
+[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) command-line utility, which
+will allow you to take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](../../build/build-wallets.md) for more details. 
-Many of these wallets support generating Kusama accounts as well.
+[Polkadot Wiki Wallets page](../../build/build-wallets.md) for more details. Many of these wallets
+support generating Kusama accounts as well.
 
 ### Using Kusama Ledger application
 
@@ -73,9 +72,9 @@ You can install Subkey with this one-line command:
 cargo install --force --git https://github.com/paritytech/substrate subkey
 ```
 
-Note that you will already have had to install the correct Rust version and dependencies. If you have
-not done so, or experience problems installing using that command, run the following commands first,
-and then re-try the previous command:
+Note that you will already have had to install the correct Rust version and dependencies. If you
+have not done so, or experience problems installing using that command, run the following commands
+first, and then re-try the previous command:
 
 ```
 curl https://sh.rustup.rs -sSf | sh
@@ -88,8 +87,7 @@ cargo install --git https://github.com/alexcrichton/wasm-gc
 
 Alternatively, you can build Subkey from the source code.
 
-1. Follow the build instructions for
-   [Substrate](https://docs.substrate.io/quick-start/).
+1. Follow the build instructions for [Substrate](https://docs.substrate.io/quick-start/).
 2. When building, only build Subkey by typing `cargo build -p subkey`.
 3. The executable is `./target/debug/subkey`.
 
@@ -146,9 +144,9 @@ enter `subkey --help` for more usage examples.
 ![kusama save backup](../../assets/kusama/kusama_backup_account.png)
 
 6. Save your encrypted keystore locally. Ideally, you would also save it on an external hard drive
-   or thumb drive or print it out and be able to re-enter it later. You should not store it in
-   cloud storage, email it to yourself, etc. You can use this backup file to restore your account.
-   The seed in the backup file is not readable unless it is decrypted with the password.
+   or thumb drive or print it out and be able to re-enter it later. You should not store it in cloud
+   storage, email it to yourself, etc. You can use this backup file to restore your account. The
+   seed in the backup file is not readable unless it is decrypted with the password.
 
 7. The account now appears in your Accounts tab and is backed up to the keystore you just saved.
 
@@ -176,8 +174,8 @@ enter `subkey --help` for more usage examples.
 
 5. Click on the pink QR Code symbol and select "Copy address" to copy your address to the clipboard.
 
-<img src={require('./../../assets/kusama/polkawallet-accounts-page.jpg').default} width="50%" /> <img
-src={require('./../../assets/kusama/polkawallet-copy-address.jpg').default} width="50%" />
+<img src={require('./../../assets/kusama/polkawallet-accounts-page.jpg').default} width="50%" />
+<img src={require('./../../assets/kusama/polkawallet-copy-address.jpg').default} width="50%" />
 
 6. [Get the Kusama address from the Substrate address.](#kusama-from-substrate-address)
 
@@ -207,8 +205,8 @@ There are two methods to claim KSM.
 Those who participated in the Polkadot sales before 2020 and have been allocated DOT indicator
 tokens on Ethereum can claim a proportional amount of KSM on the Kusama network.
 
-To do this, you must sign a message containing the address of your Kusama account. You can do this by
-using the Polkadot-JS UI
+To do this, you must sign a message containing the address of your Kusama account. You can do this
+by using the Polkadot-JS UI
 [Claims app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/claims). Ensure
 that you are connected to the Kusama network (displayed in the upper-left hand corner of the
 screen). If you are not, change the network to Kusama by clicking in the network change tab in the
@@ -228,10 +226,9 @@ raw private keys, mnemonics, and the Parity signer.
 
 :::tip Downloading MyCrypto
 
-It is much more secure to download and use the MyCrypto app locally. Please make sure
-to download the latest version for your operating system. You can always find the most up-to-date
-releases of the desktop app on their
-[releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
+It is much more secure to download and use the MyCrypto app locally. Please make sure to download
+the latest version for your operating system. You can always find the most up-to-date releases of
+the desktop app on their [releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
 
 :::
 
@@ -243,8 +240,8 @@ screen should look something like this:
 ![Claim Step 1](../../assets/kusama/claim/claim-1.png)
 
 The hex-encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the
-hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public 
-key is correct, you can use the Subkey tool to inspect your address.
+hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key
+is correct, you can use the Subkey tool to inspect your address.
 
 The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab. This
 will prompt you to select a method for unlocking your wallet. After unlocking your wallet, you will
@@ -263,8 +260,9 @@ Polkadot-JS UI and click "Confirm Claim."
 
 At this point, you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama
-network such as [governance](../../learn/learn-governance.md) and [staking](../../learn/learn-staking.md). During the soft
-launch period balance transfers will not be enabled.
+network such as [governance](../../learn/learn-governance.md) and
+[staking](../../learn/learn-staking.md). During the soft launch period balance transfers will not be
+enabled.
 
 ![Claim Step 4](../../assets/kusama/claim/claim-4.png)]
 
@@ -273,7 +271,7 @@ launch period balance transfers will not be enabled.
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
 immediately.
 
-Are you having trouble? Get in touch on the 
+Are you having trouble? Get in touch on the
 [Polkadot Support page](https://support.polkadot.network).
 
 ### Third Party Claims Processes

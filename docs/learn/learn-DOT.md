@@ -28,12 +28,11 @@ is equal to 1e10 Planck.
 | Dot (DOT)       | 10             | 1.0000000000 |
 | Million (MDOT)  | 16             | 1,000,000.00 |
 
-
 :::note DOT was redenominated at block #1_248_328
 
-Previously, DOT was denominated as equal to 1e12 Planck,
-just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".
-See [Redenomination of DOT](../general/redenomination.md) for more details.*
+Previously, DOT was denominated as equal to 1e12 Planck, just like Kusama. This denomination is
+deprecated, and, if necessary, referred to as "DOT (old)". See
+[Redenomination of DOT](../general/redenomination.md) for more details.\*
 
 :::
 
@@ -161,8 +160,8 @@ beside allowing you to experiment with the network.
 
 ### Getting Westies
 
-The current testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and you can
-obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
+The current testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and
+you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org).
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator.md).
@@ -183,11 +182,12 @@ Watch this video on how to get started on Westend
 ### Getting Rococo Tokens
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
-the [cross consensus](learn-cross-consensus.md) message passing aspects of this testnet. General users can
+the [cross consensus](learn-xcm.md) message passing aspects of this testnet. General users can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
 
-Learn more about Rococo on its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
+Learn more about Rococo on its
+[dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
 ## Kusama Tokens
 

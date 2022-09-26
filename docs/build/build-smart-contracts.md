@@ -7,17 +7,17 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain will
-not natively support smart contracts, however,
-parachains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain will not natively
+support smart contracts, however, parachains on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  
 will support smart contracts.
 
 ## Difference between developing a smart contract and a parachain
 
 ### Layer of Abstraction
 
-When you write a smart contract, you are creating the instructions that associate with
-and deploy on a specific chain address.
+When you write a smart contract, you are creating the instructions that associate with and deploy on
+a specific chain address.
 
 In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a
 state transition function).
@@ -39,17 +39,16 @@ language, it is impossible to know ahead of time whether or not a program will e
 Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting
 language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute
 their code. If a smart contract does get into a state where execution will never halt, it eventually
-runs out of gas, ceases execution, and any state transition that the smart contract would have made is
-rolled back. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a *weight-fee model*
-and not a *gas-metering model*.
+runs out of gas, ceases execution, and any state transition that the smart contract would have made
+is rolled back. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a _weight-fee
+model_ and not a _gas-metering model_.
 
-Parachains can implement arbitrarily powerful programming languages and contain no gas notion for their
-own native logic. This means that some functionality is easier to implement for the
-developer, but some constructs, such as a loop without a terminating
-condition, should *never* be implemented. Leaving certain logic, such as complex loops that
-could run indefinitely, to a non-smart contract layer, or even trying to eliminate it, will often be a
-wiser choice. Parachains try to be proactive, while smart contract
-platforms are event-driven.
+Parachains can implement arbitrarily powerful programming languages and contain no gas notion for
+their own native logic. This means that some functionality is easier to implement for the developer,
+but some constructs, such as a loop without a terminating condition, should _never_ be implemented.
+Leaving certain logic, such as complex loops that could run indefinitely, to a non-smart contract
+layer, or even trying to eliminate it, will often be a wiser choice. Parachains try to be proactive,
+while smart contract platforms are event-driven.
 
 ## Building a Smart Contract
 
@@ -63,22 +62,22 @@ Substrate presently supports smart contracts out-of-the-box in two ways:
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts
-(EVM) natively with the same API/RPC interface, Ethereum exposes on Substrate. Ethereum Addresses
-can also be mapped directly to and from Substrate's SS58 scheme from existing accounts.
+[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts (EVM)
+natively with the same API/RPC interface, Ethereum exposes on Substrate. Ethereum Addresses can also
+be mapped directly to and from Substrate's SS58 scheme from existing accounts.
 
 ### Substrate Contracts
 
 Substrate offers a built-in
-[contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html);
-as time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
+[contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html); as
+time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
 Additionally, there is the
 [EVM Pallet](https://github.com/paritytech/frontier/tree/master/frame/evm#evm-module), which allows
 a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
 Ethereum contracts.
 
-A video version of the recap of the smart contract situation is available
-on the [Polkadot YouTube channel](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
+A video version of the recap of the smart contract situation is available on the
+[Polkadot YouTube channel](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
 
 #### Resources
 
@@ -90,8 +89,8 @@ Here is the list of current resources available to developers who want to get st
 contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/smart-contracts/develop-contract/) - Walks you
-  through the basics of writing and deploying an ERC-20 token using `ink!`.
+- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/smart-contracts/develop-contract/) -
+  Walks you through the basics of writing and deploying an ERC-20 token using `ink!`.
 
 ### Contracts Pallet
 
@@ -101,33 +100,38 @@ design of the EVM:
 
 1. **Wasm**. The Contracts pallet uses WebAssembly as its compilation target. Any language that
    compiles to Wasm can potentially be used to write smart contracts. Nevertheless, it is better to
-   have a dedicated domain-specific language, and for that reason Parity offers the [ink!](#ink) language.
+   have a dedicated domain-specific language, and for that reason Parity offers the [ink!](#ink)
+   language.
 
-2. **Deposit**. Contracts must hold a deposit (named _ContractDeposit_ ) suitably large enough in order to
-   justify their existence on-chain. A deployer needs to deposit this into the new contract on 
-   top of the _ExistentialDeposit_.
-   
+2. **Deposit**. Contracts must hold a deposit (named _ContractDeposit_ ) suitably large enough in
+   order to justify their existence on-chain. A deployer needs to deposit this into the new contract
+   on top of the _ExistentialDeposit_.
 3. **Caching**. Contracts are cached by default and therefore means they only need to be deployed
    once and afterward be instantiated as many times as you want. This helps to keep the storage load
    on the chain down to the minimum. On top of this, when a contract is no longer being used and the
-   *existential deposit* is drained, the code will be erased from storage (known as reaping).
+   _existential deposit_ is drained, the code will be erased from storage (known as reaping).
 
 #### Storage Rent: Deprecated
 
 `pallet_contracts` was initially designed to combat unbounded state growth by charging contracts for
 the state they consume but has since been deprecated.
 
-See the associated [pull request](https://github.com/paritytech/substrate/pull/9669) for more details.
+See the associated [pull request](https://github.com/paritytech/substrate/pull/9669) for more
+details.
 
 ### Polkadot Standards Proposals (PSPs)
 
 Web3 Foundation supports proposals for Polkadot that define a set standards to fit ecosystem needs.
-These standards go through several acceptance phases, where the engagement of the whole community is needed to build valuable and future-proof standards.
-All the teams who will benefit from a standard need to agree on its content.
+These standards go through several acceptance phases, where the engagement of the whole community is
+needed to build valuable and future-proof standards. All the teams who will benefit from a standard
+need to agree on its content.
 
 Some of these PSPs are targeting Substrate's `contracts` pallet:
-- [PSP22 - Fungible Token Standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md)
-Please visit [Polkadot Standards Proposals (PSPs) Github](https://github.com/w3f/PSPs) for more information.
+
+- [PSP22 - Fungible Token Standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md) Please
+  visit [Polkadot Standards Proposals (PSPs) Github](https://github.com/w3f/PSPs) for more
+  information.
+
 ### Ink
 
 [ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts
@@ -152,14 +156,15 @@ smart contract example? Ask us to add it to this page!**
 
 - [OpenBrush](https://docs.openbrush.io/): an `ink!` library providing standard contracts based on
   [PSP](https://github.com/w3f/PSPs) with useful contracts and macros for building.
-- [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by [Patract Labs](https://github.com/patractlabs).
+- [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by
+  [Patract Labs](https://github.com/patractlabs).
 
 ## Smart Contract Environments are still Maturing
 
 It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} and the development is only now stabilizing.
-We are actively producing content to help developers get up to speed and will maintain the Wiki
-with the latest resources. You should also keep up to date with the following links:
+{{ kusama: Kusama :kusama }} and the development is only now stabilizing. We are actively producing
+content to help developers get up to speed and will maintain the Wiki with the latest resources. You
+should also keep up to date with the following links:
 
 ### Parity Tech
 
@@ -173,31 +178,32 @@ with the latest resources. You should also keep up to date with the following li
 - [Acala](https://acala.network/)
 - [Phala](https://phala.network)
 
-Many smart contract platforms are building to become a parachain in the ecosystem.
-A community created and maintained list of different smart
-contract platforms building on Polkadot can be found at
-[PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
+Many smart contract platforms are building to become a parachain in the ecosystem. A community
+created and maintained list of different smart contract platforms building on Polkadot can be found
+at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
 
 [Moonbeam][] is another project that is planning to deploy to Polkadot as a parachain and will
-support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier][], an interoperability layer
-with existing Ethereum tooling, it will support all applications that are written to target the EVM
-environment with little friction.
+support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier][], an interoperability
+layer with existing Ethereum tooling, it will support all applications that are written to target
+the EVM environment with little friction.
 
-[Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam, launched
-as a parachain on Kusama. Parachain functionality is live, and features are being incrementally released.
-The final phase of the launch will include EVM functionality and balance transfers.
+[Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam,
+launched as a parachain on Kusama. Parachain functionality is live, and features are being
+incrementally released. The final phase of the launch will include EVM functionality and balance
+transfers.
 
 Try deploying a smart contract to Moonbeam by following their [documentation][moonbeam docs].
 
 #### Astar
 
-[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform and
-intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is the sister
-network to Astar, is currently live on Kusama, and supports EVM, WASM, and Layer 2 solutions. Astar aims
-to house all layer 2 scaling solutions and support all layer 2 protocols through the
-[OVM](https://docs.astar.network/learn/layer2/optimistic-virtual-machine) (Optimistic Virtual Machine).
+[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform
+and intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is
+the sister network to Astar, is currently live on Kusama, and supports EVM, WASM, and Layer 2
+solutions. Astar aims to house all layer 2 scaling solutions and support all layer 2 protocols
+through the [OVM](https://docs.astar.network/learn/layer2/optimistic-virtual-machine) (Optimistic
+Virtual Machine).
 
 Try deploying an Ethereum or ink! smart contract by following their
 [documentation](https://docs.astar.network/build/smart-contracts).
@@ -205,20 +211,21 @@ Try deploying an Ethereum or ink! smart contract by following their
 #### Acala
 
 [Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
-delivering a set of protocols to serve as the DeFi hub on Polkadot. [Karura](https://acala.network/karura),
-Acala's canary network is live as a parachain on Kusama. Interested teams are now able to deploy DApps and
-smart contracts on Karura's platform. Acala is also implementing the
-[Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
+delivering a set of protocols to serve as the DeFi hub on Polkadot.
+[Karura](https://acala.network/karura), Acala's canary network is live as a parachain on Kusama.
+Interested teams are now able to deploy DApps and smart contracts on Karura's platform. Acala is
+also implementing the [Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
 
 Try deploying an Acala EVM smart contract by following their
 [documentation](https://wiki.acala.network/build/development-guide/smart-contracts).
 
 #### Phala
 
-[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide strong
-guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala will enable
-the use of confidential smart contracts on Polkadot. [Khala](https://phala.network/en/khala) is Phala's
-canary network and is live as a parachain on Kusama.
+[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
+strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala
+will enable the use of confidential smart contracts on Polkadot.
+[Khala](https://phala.network/en/khala) is Phala's canary network and is live as a parachain on
+Kusama.
 
 Try deploying a confidential smart contract by following their
 [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).

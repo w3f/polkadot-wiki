@@ -7,7 +7,7 @@ keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of
 actions on their behalf. Much like the Stash and Controller account relationship in

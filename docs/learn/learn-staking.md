@@ -7,7 +7,7 @@ keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
@@ -353,13 +353,12 @@ the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking
 list of all validators that you have nominated in the past 84 eras and for which you have not yet
 received a payout. The payout page is visible only to stakers.
 
-:::
-
 Each validator as well as their nominators have the option to trigger the payout for all unclaimed
 eras. Note that this will pay everyone who was nominating that validator during those eras.
 Therefore, you may not see anything in this tab, yet still have received a payout if somebody
 (generally, but not necessarily, another nominator or the validator operator) has triggered the
 payout for that validator for that era.
+
 
 :::warning Time limit to claim staking rewards
 

@@ -41,13 +41,14 @@ Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-form
 handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
 Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
-See the [SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses) in the Substrate documentation for
-encoding information and a more comprehensive list of network prefixes.
+See the
+[SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses)
+in the Substrate documentation for encoding information and a more comprehensive list of network
+prefixes.
 
 :::warning Do not use regular expressions (regex) to validate addresses
 
-Always verify using the
-prefix and checksum of the address. Substrate API Sidecar provides an
+Always verify using the prefix and checksum of the address. Substrate API Sidecar provides an
 `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
 address.
 
@@ -91,17 +92,17 @@ make the transfer if doing so would result in reaping the sender's account.
 
 :::info The existential deposit is a property of the Relay Chain
 
-Your account on the Relay Chain has no direct impact on parachains as you have seperate accounts 
-on each parachain. Still, parachains are able to define an existential deposit of their own, but this 
+Your account on the Relay Chain has no direct impact on parachains as you have seperate accounts on
+each parachain. Still, parachains are able to define an existential deposit of their own, but this
 is seperate to that of the Relay Chain ED.
 
 :::
 
 :::note Existential deposit for Statemint
 
-The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT)
- as well as lower transaction fees. It is highly recommended to handle balance
-transfers on Statemint. Statemint integration is discussed in the next page of the guide.
+The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT) as
+well as lower transaction fees. It is highly recommended to handle balance transfers on Statemint.
+Statemint integration is discussed in the next page of the guide.
 
 :::
 
@@ -185,11 +186,11 @@ immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
 
-:::caution 
+:::caution
 
-The assumption that a transaction's hash is a unique identifier is the number one mistake
-that indexing services and custodians make. This error will cause major issues for your users.
-Make sure that you read this section carefully.
+The assumption that a transaction's hash is a unique identifier is the number one mistake that
+indexing services and custodians make. This error will cause major issues for your users. Make sure
+that you read this section carefully.
 
 :::
 

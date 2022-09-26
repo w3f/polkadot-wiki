@@ -7,7 +7,7 @@ keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows
 participants to add personal information to their on-chain account and subsequently ask for

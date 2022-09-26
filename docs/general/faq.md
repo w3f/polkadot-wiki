@@ -7,7 +7,7 @@ keywords: [FAQ, questions]
 slug: ../faq
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 :::info
 

@@ -42,7 +42,7 @@ parts in grey are stable and can not change without an explicit hard fork.
 
 - [Polkadot Host Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the
   Polkadot Host spec, including tests.
-- [Gossamer: A Go implementation of the Polkadot Host](https://github.com/ChainSafe/gossamer) 
+- [Gossamer: A Go implementation of the Polkadot Host](https://github.com/ChainSafe/gossamer)
 - [Kagome - C++ implementation of Polkadot Host](https://github.com/soramitsu/kagome)
 
 [specification]: https://github.com/w3f/polkadot-spec/

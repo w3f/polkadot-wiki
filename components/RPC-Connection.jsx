@@ -6,7 +6,7 @@ import { HumanReadable, BlocksToDays} from "./utilities/filters";
 This component connects to the Polkadot/Kusama APIs and renders the response data.
 It can be used in Docusaurus markdown by adding the following lines anywhere within the file.
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 <RPC network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>
 */
 

@@ -9,8 +9,8 @@ slug: ../../kusama-statemine-ledger
 
 :::info
 
-Because of required WebUSB support, Ledger wallets currently only work on
-Chromium-based browsers like Brave, Chrome or Edge.
+Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
+like Brave, Chrome or Edge.
 
 :::
 
@@ -48,11 +48,10 @@ Here is a list of what you will need before starting:
 
 :::note Ledger Nano S
 
-There are two versions of the Statemine app: the normal (light)
-version and the XL version. The light version has smaller size but it supports only basic
-functionality. If you want access to all the supported extrinsics, you need to install the XL
-version of the app. You can see [here][prerelease instructions] a full list of the extrinsics
-supported by both versions.
+There are two versions of the Statemine app: the normal (light) version and the XL version. The
+light version has smaller size but it supports only basic functionality. If you want access to all
+the supported extrinsics, you need to install the XL version of the app. You can see
+[here][prerelease instructions] a full list of the extrinsics supported by both versions.
 
 :::
 
@@ -69,18 +68,18 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 :::info
 
-The Polkadot extension doesn't support Statemine Ledger accounts at this point, so
-you need to add your account on Polkadot-JS UI as described below.
+The Polkadot extension doesn't support Statemine Ledger accounts at this point, so you need to add
+your account on Polkadot-JS UI as described below.
 
 :::
 
 ### Adding Your Account
 
-:::note 
+:::note
 
-These instructions will guide you on how to add a Ledger account that's **only**
-available on Statemine. If you want to use the same Ledger account on both Kusama **and**
-Statemine check the instructions [below](#working-on-both-kusama-and-statemine).
+These instructions will guide you on how to add a Ledger account that's **only** available on
+Statemine. If you want to use the same Ledger account on both Kusama **and** Statemine check the
+instructions [below](#working-on-both-kusama-and-statemine).
 
 :::
 
@@ -130,12 +129,12 @@ prompt your ledger for confirmation when you initiate a transaction.
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
 will show up in Statemint and Statemine respectively, even if they're not set to be used on all
-chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama respectively,
-use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes sense to also be
-available on their respective common good parachains. What this means is that if you already have a
-Kusama Ledger account configured on the extension, that account will also be available on Statemine.
-But the opposite is not the case: an account created specifically on Statemine or Statemint won't show up
-on Kusama or Polkadot respectively.
+chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama
+respectively, use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes
+sense to also be available on their respective common good parachains. What this means is that if
+you already have a Kusama Ledger account configured on the extension, that account will also be
+available on Statemine. But the opposite is not the case: an account created specifically on
+Statemine or Statemint won't show up on Kusama or Polkadot respectively.
 
 **However**, as mentioned above, the
 [Polkadot extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
@@ -185,9 +184,8 @@ method is to use [Polkadot-JS Apps UI][apps].
 
 :::info Transfers
 
-Transferring in this way sends tokens to another account on the Statemine
-parachain. If you need to transfer KSM between Statemine and Kusama, see the
-[Teleporting](#teleporting) section below.
+Transferring in this way sends tokens to another account on the Statemine parachain. If you need to
+transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting) section below.
 
 :::
 
@@ -203,10 +201,10 @@ parachain. If you need to transfer KSM between Statemine and Kusama, see the
 
 Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
 account will be unable to make transactions which would get its balance below the existential
-deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
-will be able to go below existential deposit balance, causing your account to be deleted and any
-dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
-might be the reason.
+deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you will
+be able to go below existential deposit balance, causing your account to be deleted and any dust
+amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this might
+be the reason.
 
 A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
 
@@ -223,18 +221,17 @@ clicking on your account's avatar icon - this immediately copies your address to
 
 :::note Your Statemine address is the same as your Kusama address
 
-Make sure that you clarify to the sender that you wish to receive your tokens on the 
-Statemine parachain, otherwise (if you're receiving KSM tokens) they could be sent on the Kusama 
-chain.
+Make sure that you clarify to the sender that you wish to receive your tokens on the Statemine
+parachain, otherwise (if you're receiving KSM tokens) they could be sent on the Kusama chain.
 
 :::
 
 :::caution Before giving anyone your address
 
-Make sure it matches what's really on the Ledger
-by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
-will intercept clicks and clipboard requests and can change your copied value in-flight, so being
-extra vigilant around copy-paste operations makes sense.
+Make sure it matches what's really on the Ledger by
+[confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
+intercept clicks and clipboard requests and can change your copied value in-flight, so being extra
+vigilant around copy-paste operations makes sense.
 
 :::
 
