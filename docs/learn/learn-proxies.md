@@ -255,6 +255,12 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 Anonymous proxies are useful to efficiently manage multi-signature (multisigs) accounts. In fact, multisigs are deterministic, which means that once a multisig is created the signatories cannot be changed. If one of the signatories wants to leave the multisig, a new multisig must be created. This is inconvenient, especially at corporate-level management where the chance of replacing someone within a multisig can be high.
 
+It is possible to put an anonymous proxy within a multisig, and then transactions will be signed by the _any proxy(ies)_ on behalf of the anonymous proxy (proxied account). Let's take for example the diagram below. Alice, Bob and Anon are part of the multisig AB_anon, a multisig account with threshold 2. Anon is an anonymous proxy spawned by Charlie, who now acts as any proxy and thus signs anything on behalf of Anon. The anonymous proxy cannot sign directly because it does not have a private key. So, for example, to send funds from the multisig to Dan, Charly needs to submit a `proxy.proxy` extrinsic to Anon, which in turn will submit a `multisg.asMulti` extrinsic to AB_anon containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan. Alice can then approve the transfer by submitting a multisig.asMulti extrinsic also containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan.
+
+![anon vs stash plot](../assets/anons_&_multisigs.png)
+
+If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy).
+
 :::note Proxy calls
 
 To use an anonymous proxy within a multisig you need to use the Extrinsic Tab and generate a `proxy.proxy` extrinsic. If you try to sign a multisig transaction using the anonymous proxy you will be prompted with a warning. Remember, you cannot sign something directly if you do not have a private key.
