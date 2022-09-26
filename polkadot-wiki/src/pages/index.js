@@ -257,15 +257,13 @@ export default function Index() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <>
+    <Layout title={siteConfig.tagline}>
       <Banner />
-      <Layout title={siteConfig.tagline}>
-        <div className="homeContainer">
-          <HomeNav />
-          <HomeFooter />
-        </div>
-      </Layout>
-    </>
+      <div className="homeContainer">
+        <HomeNav />
+        <HomeFooter />
+      </div>
+    </Layout>
   );
 }
 
