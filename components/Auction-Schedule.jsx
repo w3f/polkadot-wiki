@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { 
 	PolkadotAuctions,
-	PolkadotLeasePeriod,
-	PolkadotLeaseOffset,
+	PolkadotSlotLeasePeriod,
+	PolkadotSlotLeaseOffset,
 	KusamaAuctions,
 	KusamaLeasePeriod,
 	KusamaLeaseOffset
 } from './utilities/auctions';
 
 let options = [];
-let wsProvider = undefined;
 
 // Component for displaying auction data
 function AuctionSchedule() {
@@ -20,15 +19,15 @@ function AuctionSchedule() {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
 			const chain = "Polkadot";
-			wsProvider = new WsProvider("wss://rpc.polkadot.io");
+			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
 			LoadOptions(PolkadotAuctions);
-			LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
+			LoadBlockCacheThenUpdate(chain, wsProvider, PolkadotAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
-			wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
+			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
 			LoadOptions(KusamaAuctions);
-			LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
+			LoadBlockCacheThenUpdate(chain, wsProvider, KusamaAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else {
 			console.log("Unknown wiki/guide type");
@@ -52,14 +51,14 @@ function LoadOptions(auctions) {
 }
 
 // Renders default value prior to initializing on-chain retrieval
-function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
+function LoadBlockCacheThenUpdate(chain, wsProvider, defaultAuctions, setAuctions, e) {
 	const index = e.target.value;
 	const auctions = Render(chain, defaultAuctions, setAuctions, index);
-	GetChainData(chain, auctions, setAuctions, index)
+	GetChainData(chain, wsProvider, auctions, setAuctions, index)
 }
 
 // Connect to a chain, retrieve required values, re-render
-async function GetChainData(chain, auctions, setAuctions, index) {
+async function GetChainData(chain, wsProvider, auctions, setAuctions, index) {
 	const api = await ApiPromise.create({ provider: wsProvider });
 
 	// Get the current block for projection
@@ -81,6 +80,8 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	auctions[index].startDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].startBlock);
 	auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock);
 	auctions[index].biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].biddingEndsBlock);
+	auctions[index].onboardStartDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].onboardStartBlock);
+	auctions[index].onboardEndDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].onboardEndBlock);
 	
 	// TODO
 	auctions[index].onboard = "TODO";
@@ -115,6 +116,8 @@ function Render(chain, auctions, setAuctions, index) {
 		auctions[index]["startDate"] = msg;
 		auctions[index]["endPeriodDate"] = msg;
 		auctions[index]["biddingEndsDate"] = msg;
+		auctions[index]["onboardStartDate"] = msg;
+		auctions[index]["onboardEndDate"] = msg;
 	}
 
 	const content = <div>
@@ -145,7 +148,16 @@ function Render(chain, auctions, setAuctions, index) {
 		<hr />
 		<b>Winning parachain(s) onboarded:</b>
 		<br />
-		`ONBOARD_START_DATE` for the period `ONBOARD_START_DATE` to `ONBOARD_END_DATE`
+		{`${auctions[index].onboardStartDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
+			Block #{auctions[index].onboardStartBlock}
+		</a>
+		{` to`}
+		<br />
+		{`${auctions[index].onboardEndDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
+			Block #{auctions[index].onboardEndBlock}
+		</a>
 		<hr />
 		<p style={{ color: "#6c757d" }}>
 			The dates (based on UTC) and block numbers listed above can change based on network block production and the potential for skipped blocks.
@@ -155,6 +167,26 @@ function Render(chain, auctions, setAuctions, index) {
 
 	setAuctions(content);
 	return auctions;
+}
+
+// TODO - these functions will be used by the GitHub action when adding new values to auctions.js
+
+async function OnboardingBlocks(api, hash) {
+	if (hash !== "0x0000000000000000000000000000000000000000000000000000000000000000") {
+		const apiAt = await api.at(hash);
+		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
+		const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
+		const onboardEndBlock = (auctionLeasePeriod + 1) * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset - 1;
+		return [onboardStartBlock, onboardEndBlock]
+	}
+	else {
+		return [0, 0];
+	}
+}
+
+async function BlockToHash(api, block) {
+	const hash = await api.rpc.chain.getBlockHash(block);
+	return hash;
 }
 
 export default AuctionSchedule;
