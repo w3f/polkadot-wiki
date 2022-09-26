@@ -9,6 +9,7 @@ import {
 	KusamaLeaseOffset
 } from './utilities/auctions';
 
+let api = undefined;
 let options = [];
 
 // Component for displaying auction data
@@ -20,14 +21,14 @@ function AuctionSchedule() {
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
 			const chain = "Polkadot";
 			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
-			LoadOptions(PolkadotAuctions);
-			LoadBlockCacheThenUpdate(chain, wsProvider, PolkadotAuctions, setAuctions, { target: { value: 0 } })
+			await LoadOptions(PolkadotAuctions,wsProvider);
+			LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
 			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
-			LoadOptions(KusamaAuctions);
-			LoadBlockCacheThenUpdate(chain, wsProvider, KusamaAuctions, setAuctions, { target: { value: 0 } })
+			await LoadOptions(KusamaAuctions, wsProvider);
+			LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else {
 			console.log("Unknown wiki/guide type");
@@ -43,24 +44,23 @@ function AuctionSchedule() {
 }
 
 // Loads drop-down selections
-function LoadOptions(auctions) {
+async function LoadOptions(auctions, wsProvider) {
 	for (let i = 0; i < auctions.length; i++) {
 		const option = <option value={i} key={i}>{`Auction #${i} at Block #${auctions[i]["startBlock"]}`}</option>
 		options.push(option);
 	}
+	api = await ApiPromise.create({ provider: wsProvider });
 }
 
 // Renders default value prior to initializing on-chain retrieval
-function LoadBlockCacheThenUpdate(chain, wsProvider, defaultAuctions, setAuctions, e) {
+function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
 	const index = e.target.value;
 	const auctions = Render(chain, defaultAuctions, setAuctions, index);
-	GetChainData(chain, wsProvider, auctions, setAuctions, index)
+	GetChainData(chain, auctions, setAuctions, index)
 }
 
 // Connect to a chain, retrieve required values, re-render
-async function GetChainData(chain, wsProvider, auctions, setAuctions, index) {
-	const api = await ApiPromise.create({ provider: wsProvider });
-
+async function GetChainData(chain, auctions, setAuctions, index) {
 	// Get the current block for projection
 	const currentBlock = await api.rpc.chain.getBlock();
 	const currentBlockNumber = currentBlock.block.header.number.toPrimitive();
