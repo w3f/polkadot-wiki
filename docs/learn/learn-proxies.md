@@ -187,6 +187,14 @@ the chain, as you will be unable to sign extrinsics using the UI.
 
 :::
 
+## Proxy calls 
+
+Proxy calls are used by proxies to call proxied accounts.
+
+### Nested proxy calls
+
+As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves.
+
 ## Anonymous Proxies
 
 :::info
@@ -259,9 +267,9 @@ It is possible to put an anonymous proxy within a multisig, and then transaction
 
 ![anon vs stash plot](../assets/anons_&_multisigs.png)
 
-If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy).
+If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this specific example does not do anything.
 
-:::note Proxy calls
+:::note
 
 To use an anonymous proxy within a multisig you need to use the Extrinsic Tab and generate a `proxy.proxy` extrinsic. If you try to sign a multisig transaction using the anonymous proxy you will be prompted with a warning. Remember, you cannot sign something directly if you do not have a private key.
 
