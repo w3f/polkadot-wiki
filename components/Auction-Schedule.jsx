@@ -43,7 +43,7 @@ function AuctionSchedule() {
 	}
 }
 
-// Loads hard-coded auction default values
+// Loads drop-down selections
 function LoadOptions(auctions) {
 	for (let i = 0; i < auctions.length; i++) {
 		const option = <option value={i} key={i}>{`Auction #${i} at Block #${auctions[i]["startBlock"]}`}</option>
@@ -81,8 +81,9 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	auctions[index].startDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].startBlock);
 	auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock);
 	auctions[index].biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].biddingEndsBlock);
+	
+	// TODO
 	auctions[index].onboard = "TODO";
-	// TODO - how to get this value?
 	//auctions[index].startOnBoard = "test1";
 	//auctions[index].endOnBoard = "test2";
 	//auctions[index].endOnBoard = weeksLeased * 7 + auction.startOnBoard;
