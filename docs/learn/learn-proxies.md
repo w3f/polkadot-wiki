@@ -238,7 +238,7 @@ Anon accounts cannot be stolen because they do not have private keys. The only a
 **Simplified and secure account management at a corporate level.**
 Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
 
-**Without Anon**, Charlie must (see _left_ side of the Figure below):
+Without Anon, Charlie must (see _left_ side of the Figure below):
 - Remove Dan as a staking proxy, this step requires 1 signature
 - Stop nominating and unbound all funds , this step requires 2 signatures
 - Transfer the funds to Eleanor, this step requires 1 signature
@@ -247,7 +247,7 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 ![why anonymous proxies](../assets/why_anon_proxies.png)
 
-**With Anon** (see _right_ side of the Figure above), Charlie must add Eleanor as Any proxy of the Anon, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1 signature to add the new Any proxy and 1 signature the remove the old one). The funds remain in the Anon, and it is not necessary to stop nominating or unbond funds. Also, any proxy relationships with the Anon stay in place. Thus, if we use the Anon, with an increasing number of proxies we will always have to sign twice (not necessarily true in multi-signature accounts). While if we are not using the Anon, the more the proxies the more signatures we need to detach them from the old stash and attach them to the new stash (see Figure below).
+With Anon (see _right_ side of the Figure above), Charlie must add Eleanor as Any proxy of the Anon, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1 signature to add the new Any proxy and 1 signature the remove the old one). The funds remain in the Anon, and it is not necessary to stop nominating or unbond funds. Also, any proxy relationships with the Anon stay in place. Thus, if we use the Anon, with an increasing number of proxies we will always have to sign twice (not necessarily true in multi-signature accounts). While if we are not using the Anon, the more the proxies the more signatures we need to detach them from the old stash and attach them to the new stash (see Figure below).
 
 ![anon vs stash plot](../assets/anon_vs_stash_plot.png)
 
