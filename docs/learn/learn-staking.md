@@ -359,6 +359,7 @@ Therefore, you may not see anything in this tab, yet still have received a payou
 (generally, but not necessarily, another nominator or the validator operator) has triggered the
 payout for that validator for that era.
 
+:::
 
 :::warning Time limit to claim staking rewards
 
