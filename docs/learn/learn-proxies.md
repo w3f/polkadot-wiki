@@ -193,7 +193,11 @@ Proxy calls are used by proxies to call proxied accounts. These calls are especi
 
 ### Nested proxy calls
 
-As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves.
+As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a stash account that has a staking proxy account, Anon. Anon is an anonymous proxy, a proxied account originally spawned by Charly that is now a any proxy of Anon and signs everything on its behalf.
+
+![nested proxy calls](../assets/nested_proxy_calls.png)
+
+In this case, in order for example to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to Anon, which in turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic call specifying the number of tokens that need to be bounded.
 
 ## Anonymous Proxies
 
@@ -265,7 +269,7 @@ Anonymous proxies are useful to efficiently manage multi-signature (multisigs) a
 
 It is possible to put an anonymous proxy within a multisig, and then transactions will be signed by the _any proxy(ies)_ on behalf of the anonymous proxy (proxied account). Let's take for example the diagram below. Alice, Bob and Anon are part of the multisig AB_anon, a multisig account with threshold 2. Anon is an anonymous proxy spawned by Charlie, who now acts as any proxy and thus signs anything on behalf of Anon. The anonymous proxy cannot sign directly because it does not have a private key. So, for example, to send funds from the multisig to Dan, Charly needs to submit a `proxy.proxy` extrinsic to Anon, which in turn will submit a `multisg.asMulti` extrinsic to AB_anon containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan. Alice can then approve the transfer by submitting a multisig.asMulti extrinsic also containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan.
 
-![anon vs stash plot](../assets/anons_&_multisigs.png)
+![anons within multisig](../assets/anons_&_multisigs.png)
 
 If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this specific example does not do anything.
 
