@@ -1,3 +1,11 @@
+// consts.slots.leasePeriod()
+export const PolkadotLeasePeriod = 1209600;
+export const KusamaLeasePeriod = 604800;
+
+// consts.slots.leaseOffsets()
+export const PolkadotLeaseOffset = 921600;
+export const KusamaLeaseOffset = 0;
+
 export const PolkadotAuctions = [
   { "index": 0, "startBlock": 7658910, "endPeriodBlock": 7684110, "biddingEndsBlock": 7756110 },
   { "index": 1, "startBlock": 7759710, "endPeriodBlock": 7784910, "biddingEndsBlock": 7856910 },

@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { PolkadotAuctions, KusamaAuctions } from './utilities/auctions';
 import { ApiPromise, WsProvider } from "@polkadot/api";
+import { 
+	PolkadotAuctions,
+	PolkadotLeasePeriod,
+	PolkadotLeaseOffset,
+	KusamaAuctions,
+	KusamaLeasePeriod,
+	KusamaLeaseOffset
+} from './utilities/auctions';
 
 let options = [];
 let wsProvider = undefined;
@@ -24,7 +31,6 @@ function AuctionSchedule() {
 			LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else {
-			console.log(title);
 			console.log("Unknown wiki/guide type");
 		}
 	}, []);
