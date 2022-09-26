@@ -201,7 +201,7 @@ In this case, for example to bond more funds, Charly needs to submit a `prox.pro
 
 :::note
 
-Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be done by calling each `proxy.proxy` extrinsic separately, or by just calling the last `proxy.proxy` extrinsic. In the diagram above, submitting 1.2) will automatically trigger 1.1).
+Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be done by calling each `proxy.proxy` extrinsic separately, or by just calling the last `proxy.proxy` extrinsic. In the diagram above, submitting Extrinsic (1.2) will automatically ask for the signature for Extrinsic (1.1).
 
 :::
 
