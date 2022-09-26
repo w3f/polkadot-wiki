@@ -11,23 +11,26 @@ import RPC from "./../../components/RPC-Connection"
 
 This page is meant to be an advanced guide to staking with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Staking Proxies
+## Pallets and extrinsics
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
 [substrate](https://substrate.io/), a modular system to efficiently build blockchains. Within each module or **pallet**, one can **call** different
-functions that have similar logic. For example, the staking pallet contains all functionalities
+functions that have similar logic. You can explore substrate pallets on [this dedicated page](https://docs.substrate.io/reference/frame-pallets/). For example, the staking pallet contains all functionalities
 related to staking such as bonding or unbonding funds. The combined information of pallets and calls
 constitutes an **extrinsic**, i.e. a transaction that is executed from outside the chain but that
 triggers an event on the chain. Continuing with the staking example, within the staking pallet
 a nominator can bond funds and nominate some validators. The signature of such
-extrinsic might lead to an event on the chain such as a reward payout to that nominator at the end of an era; this is an event inside the chain. This way of having
-transactions categorized within pallets and functionalities makes it possible to create accounts
-having special permissions also called **proxy accounts**.
+extrinsic might lead to an event on the chain such as a reward payout to that nominator at the end of an era; this is an event inside the chain. 
+
+## Staking Proxies
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes it possible to create accounts
+having special permissions also called **proxy accounts**. For mode details about proxy accounts visit the [dedicated page](./learn-proxies.md) on this wiki.
 
 ![staking](../assets/staking/stash-stakingProxy.png)
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} proxy accounts are special
-accounts which can sign extrinsic calls made to specific pallets on behalf of the proxied account. There is thus the
+Proxy accounts are special
+accounts which can sign [**extrinsic calls**](#pallets-and-extrinsics) made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied account. There is thus the
 possibility to create staking proxy accounts that can be used to sign only extrinsic calls to staking,
 session and utility pallets. This makes the stash account even more isolated than using a controller
 account since one can bond / unbond / bond more funds using the staking proxy account. However,
@@ -71,10 +74,7 @@ left out.
 If one receives staking rewards and the amount of staked tokens within the stash account increases
 over time, the position within a bag changes and may also result in a change of bag. This may also
 happen if accounts within the bag bond more tokens or unbond tokens, one's account position and the
-position of other accounts in the bags list might change. These changes are not done automatically.
-The `voterList` pallet comes with the extrinsic `putInFrontOf` which helps the node to move up in the
-bag. Also, the pallet comes with an important permissionless extrinsic: `rebag`. This
-allows anyone to specify another account that is in the wrong bag, and place it in the correct one.
+position of other accounts in the bags list might change. These changes are not done automatically, requiring the nominator to submit the permissionless extrinsic `rebag` within the `voterList` pallet to update their position. This allows anyone to specify another account that is in the wrong bag, and place it in the correct one. The `voterList` pallet also comes with the extrinsic `putInFrontOf` which helps the node to move up in the bag. 
 Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like
 staking rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) section for
 more information.
