@@ -1,8 +1,8 @@
 ---
 id: learn-staking
-title: Introduction to staking
-sidebar_label: Introduction to staking
-description: An introduction on staking in Polkadot's NPoS consensus model.
+title: Introduction to Staking
+sidebar_label: Introduction to Staking
+description: A high level introduction to Staking on Polkadot and NPoS model
 keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
@@ -19,8 +19,8 @@ finalize blocks on the chain. Consensus is the process of agreeing on something,
 progression of the blockchain or how blocks are added to the chain. Consensus consists of two
 actions:
 
-- **block production**, i.e. the way multiple blocks candidates are produced, and
-- **block finality**, i.e. the way only one block out of many candidates is selected and added to
+- **Block production**, i.e. the way multiple blocks candidates are produced, and
+- **Block finality**, i.e. the way only one block out of many candidates is selected and added to
   the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article
   for more information about finality).
 
@@ -169,7 +169,7 @@ be held accountable for their bad actions. In NPoS, validators are paid equal re
 the amount of stake backing them, thus avoiding large payouts to few large validators which might
 lead to centralization.
 
-## Being a nominator
+## Being a Nominator
 
 ### Tasks and Responsibilities of a Nominator
 
@@ -458,9 +458,9 @@ need to resubmit their intention to validate and re-garner support from nominato
 
 For more on chilling, see the "[How to Chill][]" page on this wiki.
 
-## Why and why not to stake?
+## Why and why not to Stake?
 
-### Pros of staking
+### Pros of Staking
 
 - 10% inflation/year when the network launches
 - 50% targeted active staking
@@ -475,13 +475,13 @@ nominal return rate will be higher, encouraging more users to use their tokens f
 contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal
 return will be less, encouraging some users to withdraw.
 
-### Cons of staking?
+### Cons of Staking?
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
-## How many validators does Polkadot have?
+## How many Validators does Polkadot have?
 
 Polkadot currently has
 <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top

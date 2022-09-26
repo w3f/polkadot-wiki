@@ -1,8 +1,8 @@
 ---
 id: learn-staking-advanced
-title: Advanced staking
-sidebar_label: Advanced staking
-description: Advanced staking information
+title: Advanced Staking
+sidebar_label: Advanced Staking
+description: Learn about Staking Proxies, Bags list, Staking Rewards and Slashing
 keywords: [staking, stake, nominate, nominating, NPoS, proxies]
 slug: ../learn-staking-advanced
 ---
@@ -11,7 +11,7 @@ import RPC from "./../../components/RPC-Connection"
 
 This page is meant to be an advanced guide to staking with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Pallets and extrinsics
+## Pallets and Extrinsics
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
 [substrate](https://substrate.io/), a modular system to efficiently build blockchains. Within each module or **pallet**, one can **call** different
