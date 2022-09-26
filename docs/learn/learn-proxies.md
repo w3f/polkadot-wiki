@@ -277,7 +277,7 @@ Anonymous proxies are useful to efficiently manage multi-signature (multisigs) a
 
 It is possible to put an anonymous proxy within a multisig, and then transactions will be signed by the _any proxy(ies)_ on behalf of the anonymous proxy (proxied account). Let's take for example the diagram below. Alice, Bob and Anon are part of the multisig AB_anon, a multisig account with threshold 2. Anon is an anonymous proxy spawned by Charlie, who now acts as any proxy and thus signs anything on behalf of Anon. The anonymous proxy cannot sign directly because it does not have a private key. So, for example, to send funds from the multisig to Dan, Charly needs to submit a `proxy.proxy` extrinsic to Anon, which in turn will submit a `multisg.asMulti` extrinsic to AB_anon containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan. Alice can then approve the transfer by submitting a multisig.asMulti extrinsic also containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan.
 
-![anons within multisig](../assets/anons_&_multisigs.png)
+![multisig with one anon](../assets/multisig_with_one_anon.png)
 
 If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this specific example does not do anything.
 
@@ -287,3 +287,6 @@ To use an anonymous proxy within a multisig you need to use the Extrinsic Tab an
 
 :::
 
+The diagram below shows a multisig that is made only with anonymous proxies. In this situation Alice, Bob or Charly can leave the multisig at anytime without the requirement of creating a new multisig. If for example, Bob leaves the multisig the procedure will require somebody else to be added as any proxy to Anon B, and then Bob can remove himself (or the new any proxy can remove Bob).
+
+![multisig with anons](../assets/multisig_with_anons.png)
