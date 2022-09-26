@@ -222,6 +222,12 @@ Once you remove the relationship with `Any` proxy, the Anon will be inaccessible
 
 :::
 
+:::caution Removing anonymous proxies
+
+The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
+
+:::
+
 ### Why anonymous proxies?
 
 Despite their complexity and associated dangers, Anon accounts have a few important benefits:
@@ -245,8 +251,3 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 ![anon vs stash plot](../assets/anon_vs_stash_plot.png)
 
-:::caution Removing anonymous proxies
-
-The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
-
-:::
