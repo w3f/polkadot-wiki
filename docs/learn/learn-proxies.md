@@ -197,7 +197,7 @@ As the term suggests, nested proxy calls are proxy calls within proxy calls. Suc
 
 ![nested proxy calls](../assets/nested_proxy_calls.png)
 
-In this case, in order for example to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to Anon, which in turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic call specifying the number of tokens that need to be bounded.
+In this case, for example to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to Anon, which in turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic call, specifying the number of tokens that need to be bounded. If Charly wants to leave, a new account can take his place as any proxy (before Charly leaves!). There is no need to change the staking proxy account. Also, Alice is the only one who can remove Anon as a staking proxy, and Anon can only perform staking-related tasks. For example, Anon cannot send funds out from Alice's account.
 
 ## Anonymous Proxies
 
