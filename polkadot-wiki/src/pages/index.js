@@ -112,32 +112,34 @@ function HomeNav() {
 // To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
 
 function Banner() {
-  const scroll = useScrollListener()
-  const [isScrolled, setIsScrolled] = useState()
+  const FixedBanner = () => {
+    const scroll = useScrollListener();
+    const [isScrolled, setIsScrolled] = useState(false);
+  
+    useEffect(() => {
+      if (scroll.y > 100) {
+        setIsScrolled(true);
+      } else if (scroll.y < 1) {
+        setIsScrolled(false);
+      }
+    }, [scroll.y]);
 
-  useEffect(() => {
-    if (scroll.y > 100) {
-      setIsScrolled(true);
-    } else if (scroll.y < 1) {
-      setIsScrolled(false);
-    }
-  }, [scroll.y]);
-
-  const FixedBanner = () => (
-    <div className={`fixed-banner ${isScrolled ? 'fixed-banner--hidden' : 'fixed-banner--visible'}`}>
-      <div className="mx-auto col-12 col-md-10 col-xl-8 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <p className="mb-0 text-center text-md-left">
-         <span class="font-weight-bolder pr-lg-4">Sub0 is coming to Lisbon!</span>
-          <span class="d-flex d-lg-inline-block">Join the Polkadot developer conference, November 28th-29th</span>
-        </p>
-        <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki">
-          <button className="banner-button btn btn-md btn-primary btn-bg-primary mt-3 mt-md-0 ml-md-3">
-              Sign Up
-          </button>
-        </a>
+    return (
+      <div className={`fixed-banner ${isScrolled ? 'fixed-banner--hidden' : ''}`}>
+        <div className="mx-auto col-12 col-md-10 col-xl-8 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <p className="mb-0 text-center text-md-left">
+          <span className="font-weight-bolder pr-lg-4">Sub0 is coming to Lisbon!</span>
+            <span className="d-flex d-lg-inline-block">Join the Polkadot developer conference, November 28th-29th</span>
+          </p>
+          <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki">
+            <button className="banner-button btn btn-md btn-primary btn-bg-primary mt-3 mt-md-0 ml-md-3">
+                Sign Up
+            </button>
+          </a>
+        </div>
       </div>
-    </div>
-  )
+    )
+  };
 
   return (
     <FixedBanner />
