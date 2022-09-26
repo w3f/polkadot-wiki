@@ -46,7 +46,7 @@ function AuctionSchedule() {
 // Loads drop-down selections
 async function LoadOptions(auctions, wsProvider) {
 	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{`Auction #${i} at Block #${auctions[i]["startBlock"]}`}</option>
+		const option = <option value={i} key={i}>{`Auction #${i + 1} at Block #${auctions[i]["startBlock"]}`}</option>
 		options.push(option);
 	}
 	api = await ApiPromise.create({ provider: wsProvider });
@@ -69,7 +69,6 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	const chainTimestamp = await api.query.timestamp.now();
 	const date = new Date(chainTimestamp.toPrimitive());
 
-	// Dates
 	// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
 	// Should we also cache block hashes to avoid having to make multiple rpc invocations?
 	if (currentBlockNumber > auctions[index].startBlock) {
@@ -83,12 +82,6 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	auctions[index].onboardStartDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].onboardStartBlock);
 	auctions[index].onboardEndDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].onboardEndBlock);
 	
-	// TODO
-	auctions[index].onboard = "TODO";
-	//auctions[index].startOnBoard = "test1";
-	//auctions[index].endOnBoard = "test2";
-	//auctions[index].endOnBoard = weeksLeased * 7 + auction.startOnBoard;
-
 	Render(chain, auctions, setAuctions, index);
 }
 
