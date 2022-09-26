@@ -309,11 +309,13 @@ button.menu__button {
    ========================================================================== */
 .fixed-banner {
   z-index: 10;
+  padding: 10px;
   position: fixed;
   left: 0px;
   bottom: 0px;
   width: 100%;
   color: white;
+  font-size: 0.875rem;
   background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%),
     linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
@@ -323,6 +325,13 @@ button.menu__button {
 
 .fixed-banner--hidden {
   transform: translateY(100%);
+}
+
+@media (min-width: 768px) {
+  .fixed-banner {
+    padding: 12px;
+    font-size: 1rem;
+  }
 }
 
 /* ==========================================================================
