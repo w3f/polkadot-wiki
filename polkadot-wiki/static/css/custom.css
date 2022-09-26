@@ -318,6 +318,15 @@ button.menu__button {
     linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
   background-color: #e6007a;
+  transition: transform 0.4s linear;
+}
+
+.fixed-banner--visible {
+  transform: translateY(0px);
+}
+
+.fixed-banner--hidden {
+  transform: translateY(100%);
 }
 
 /* ==========================================================================

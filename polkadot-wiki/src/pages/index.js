@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from "react";
+import React, {useEffect, useState} from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -15,6 +15,7 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import KusamaCanary from "@site/static/img/kusama_canary_white.svg";
+import { useScrollListener } from "../hooks/useScroll";
 
 function HomeNav() {
   const NavContainer = ({ children }) => (
@@ -111,8 +112,19 @@ function HomeNav() {
 // To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
 
 function Banner() {
-  const FixedBanner = ({ children }) => (
-    <div className="fixed-banner">
+  const scroll = useScrollListener()
+  const [isScrolled, setIsScrolled] = useState()
+
+  useEffect(() => {
+    if (scroll.y > 100) {
+      setIsScrolled(true);
+    } else if (scroll.y < 1) {
+      setIsScrolled(false);
+    }
+  }, [scroll.y]);
+
+  const FixedBanner = () => (
+    <div className={`fixed-banner ${isScrolled ? 'fixed-banner--hidden' : 'fixed-banner--visible'}`}>
       <div className="mx-auto col-12 col-md-10 col-xl-8 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
         <p className="mb-0 text-center text-md-left">
          <span class="font-weight-bolder pr-lg-4">Sub0 is coming to Lisbon!</span>
@@ -120,12 +132,7 @@ function Banner() {
         </p>
         <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki">
           <button className="banner-button btn btn-md btn-primary btn-bg-primary mt-3 mt-md-0 ml-md-3">
-            <Translate
-              id="homepage.homeFooter.improveWiki.contributeButton"
-              description="Contribute Button Label of Improve Wiki Footer Section in Home page"
-            >
               Sign Up
-            </Translate>
           </button>
         </a>
       </div>
@@ -248,13 +255,15 @@ export default function Index() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout title={siteConfig.tagline}>
-      <div className="homeContainer">
-        <Banner />
-        <HomeNav />
-        <HomeFooter />
-      </div>
-    </Layout>
+    <>
+      <Banner />
+      <Layout title={siteConfig.tagline}>
+        <div className="homeContainer">
+          <HomeNav />
+          <HomeFooter />
+        </div>
+      </Layout>
+    </>
   );
 }
 
