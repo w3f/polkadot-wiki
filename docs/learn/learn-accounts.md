@@ -22,7 +22,7 @@ to its key. In the context of Polkadot accounts, anybody can send tokens to your
 only you can transact with them using your private key. That is why you should keep your private key
 secret.
 
-### Address Generation
+### Mnemonic and Address Generation
 
 A valid account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography).
@@ -132,6 +132,8 @@ bear in mind that some of these are **unaudited** and are not officially affilia
 Foundation or the Polkadot project unless otherwise stated.
 
 ## Account Balance Types
+
+![account_balance_types](../assets/account-balance-types.png)
 
 On Polkadot, **four different balance types** indicate whether your balance can be used for
 transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
