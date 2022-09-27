@@ -1,7 +1,7 @@
 ---
 id: learn-account-advanced
 title: Polkadot Accounts Advanced
-sidebar_label: Accounts Advanced Info
+sidebar_label: Accounts
 description: Advanced information about Polkadot accounts
 keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-account-advanced
