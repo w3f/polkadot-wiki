@@ -46,6 +46,7 @@ module.exports = {
               label: "Accounts",
               items: [
                 "learn/learn-accounts",
+                "learn/learn-account-advanced",
                 "learn/learn-account-generation",
                 "learn/learn-account-restore",
                 "learn/learn-balance-transfers",
