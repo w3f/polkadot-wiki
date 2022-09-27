@@ -46,10 +46,10 @@ module.exports = {
               label: "Accounts",
               items: [
                 "learn/learn-accounts",
-                "learn/learn-account-multisig",
                 "learn/learn-account-generation",
                 "learn/learn-account-restore",
                 "learn/learn-balance-transfers",
+                "learn/learn-account-multisig",
               ],
             },
             {
