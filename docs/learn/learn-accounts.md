@@ -423,7 +423,7 @@ Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig
 :::
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
-should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you would like to create a multisig with threshold 1 then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core) which is a tool that Parity supports with new features and weekly updates. There is a detailed [Multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
+should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you would like to create a multisig with threshold 1 then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core) which is a tool that Parity supports with new features and weekly updates. There is a detailed [multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
@@ -461,7 +461,9 @@ Dan, and Eleanor. First, Charlie will create the call on-chain by calling `asMul
 call, in this case a balance transfer from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
 while he waits for either Dan or Eleanor also to approve the balance transfer call using the `approveAsMulti` or the `asMulti` extrinsics. 
 
-If Dan submits the `approveAsMulti` extrinsic, he approves Charlie's call but he passes on the final approval to Eleanor. So, although the multisig has threshold 2, in this case all 3/3 signatories need to participate in the transaction approval. Eleanor will need to submit a `asMulti` or `approveAsMulti` extrinsic to transfer funds from CDE to Frank. Alternatively, Dan or Eleanor can just submit a `asMulti` extrinsic after Charlie to transfer the funds. In this case, 2/3 signatories will participate in the transaction approval. The accounts that approve Charlie's call will not need to place the deposit, and Charlie will receive his
+If Dan submits the `approveAsMulti` extrinsic, he approves Charlie's call but he passes on the final approval to Eleanor. So, although the multisig has threshold 2, in this case all 3/3 signatories need to participate in the transaction approval. Eleanor will need to submit a `asMulti` or `approveAsMulti` extrinsic to transfer funds from CDE to Frank. 
+
+Alternatively, Dan or Eleanor can just submit a `asMulti` extrinsic after Charlie to transfer the funds. In this case, 2/3 signatories will participate in the transaction approval. The accounts approving Charlie's call will not need to place the deposit, and Charlie will receive his
 deposit back once the transfer is successful or canceled. To cancel the transaction, Dan or Eleanor can use the `cancelAsMulti` extrinsic.
 
 Note that multisigs are deterministic, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. 
