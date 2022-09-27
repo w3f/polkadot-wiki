@@ -9,16 +9,16 @@ slug: ../learn-accounts
 
 import RPC from "./../../components/RPC-Connection";
 
-This document covers the basics of Polkadot and Kusama account addresses. For a more in-depth explanation of the cryptography behind them, please see
+This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account addresses. For a more in-depth explanation of the cryptography behind them, please see
 [the cryptography page](learn-cryptography.md).
 
 ## Account Address
 
-An address is the public part of a Polkadot account. The private part is the key used to access this
-address. The public and private parts together make up a Polkadot account. You can think of the
+An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. The private part is the key used to access this
+address. The public and private parts together make up a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can think of the
 public address of your account like your mailbox and the private key like the key to open that
 mailbox. Anybody can send mail to your mailbox, but only you can access them as only you have access
-to its key. In the context of Polkadot accounts, anybody can send tokens to your public address but
+to its key. In the context of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, anybody can send tokens to your public address but
 only you can transact with them using your private key. That is why you should keep your private key
 secret.
 
@@ -58,41 +58,11 @@ See [Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for mo
 
 ### Obtaining and Managing an Address
 
-The **most user-friendly** way to create a Polkadot or Kusama address is through the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
-to generate your account - the accounts are stored only in your browser, so purging the cache will
-wipe your accounts as well. You would then have to recreate them using the seed phrase given to you
-by the UI - this will also restore all your previously held balances.
+:::info
 
-A **more convenient and recommended** method of keeping the accounts stored on your computer is
-using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension
-remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget
-to back up your seed phrase - if you lose access to this computer or the extension somehow crashes
-beyond repair, the phrase will come in handy.
+To learn more about generating accounts on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} visit the [Account Generation page](./learn-account-generation.md).
 
-Please note that as this keeps your accounts in the browser, it is not safe to keep significant
-holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so
-keep your funds in cold storage when dealing with non-trivial amounts. For improved security, you
-can securely stash away the seed phrase for your accounts and remove all traces of the accounts from
-your computer after creating them.
-
-Besides the extension and the default UI, Polkadot and Kusama addresses can also be created with the
-[Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
-intended for users comfortable with using the command line and can seem intimidating but is quite
-approachable. Follow the instructions in the
-[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/). When used
-properly, Subkey is the **most secure** available method of creating an account.
-
-There is also the very secure [Parity Signer](https://www.parity.io/signer/). This keeps your keys
-on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible
-phone that you are comfortable using only for Parity Signer.
-
-Hardware wallet integration is possible with Ledger. A full guide is available
-[here](../general/ledger.md).
-
-Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but
-bear in mind that some of these are **unaudited** and are not officially affiliated with Web3
-Foundation or the Polkadot project unless otherwise stated.
+:::
 
 ## Account Balance Types
 
@@ -158,7 +128,7 @@ storage while proxies act on their behalf with restricted (or unrestricted) func
 
 Multi-signature accounts are accounts created from several standard accounts (or even other
 multi-sig accounts). For a full explanation, please see the
-[Accounts Explainer section on multi-sigs](learn-accounts.md#multi-signature-accounts).
+[Multi-signature accounts page](./learn-account-multisig.md).
 
 ## Resources
 
