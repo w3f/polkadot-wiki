@@ -171,12 +171,12 @@ async function OnboardingBlocks(api, hash, chain) {
 		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
 		if (chain === "Polkadot") {
 			const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
-			const onboardEndBlock = onboardStartBlock + DaysToBlocks(auctionLeasePeriod * 12 * 7);
+			const onboardEndBlock = onboardStartBlock + DaysToBlocks(8 * 12 * 7);
 			return [onboardStartBlock, onboardEndBlock]
 		}
 		else if (chain === "Kusama") {
 			const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
-			const onboardEndBlock = onboardStartBlock + DaysToBlocks(auctionLeasePeriod * 6 * 7);
+			const onboardEndBlock = onboardStartBlock + DaysToBlocks(8 * 6 * 7);
 			return [onboardStartBlock, onboardEndBlock]
 		}
 	}
