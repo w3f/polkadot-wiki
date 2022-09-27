@@ -160,3 +160,109 @@ BIP39.
 [Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)
 
 &sect; Sr25519 planned
+
+## Address Conversion Tools
+
+You can use the tools below to convert any SS58 address for any network for use on different
+networks
+
+- [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform)
+- [simple address converter](https://polkadot-address-convertor.netlify.app/)
+
+### How to Verify a Public Key's Associated Address
+
+You can verify your public key's associated address through a series of inspection steps, where the
+key is a base-16 (hexadecimal) address.
+
+#### Using Subkey to Retrieve Public Key from SS58 Address
+
+This is to showcase that the **SS58 address is based on the public key (aka "Account ID")**
+
+The Subkey Tool's The
+[Inspecting Keys](https://docs.substrate.io/reference/command-line-tools/subkey/#inspecting-keys)
+section explains how to use the `inspect` command to recalculate your key pair's public key and
+address.
+
+Start by inspecting your account's Polkadot address by running the inspect command against your
+account's address:
+
+```bash
+$ subkey inspect 1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F
+
+Public Key URI `1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F` is account:
+  Network ID/version: polkadot
+  Public key (hex):   0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Account ID:         0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  SS58 Address:       1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F
+```
+
+Take note of the hexadecimal string for "Public key (hex)". This is your account's public key.
+
+Running the `inspect` command on your public key along with the `--public` parameter the SS58
+address for the default network (substrate) is returned.
+
+```bash
+$ subkey inspect --public 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+
+Network ID/version: substrate
+  Public key (hex):   0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Account ID:         0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Public key (SS58):  5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp
+  SS58 Address:       5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp
+```
+
+Using the `--network` flag, you can define the network that you would like to inspect, where the
+SS58 address will be based on that network. Now, running the `inspect` command with
+`--network polkadot` return your original Polkadot address, thus verifying the public key.
+
+```bash
+$ subkey inspect --network polkadot 5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp
+
+Public Key URI `5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp` is account:
+  Network ID/version: polkadot
+  Public key (hex):   0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Account ID:         0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Public key (SS58):  1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F
+  SS58 Address:       1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F
+```
+
+You will notice that the Subkey Tool recognizes the correct address network and returns the
+associated public key. The public key is returned as a hexadecimal string (i.e. prefixed with
+**"0x"**). **For both SS58 addresses, the same public key is returned.**
+
+#### Address Verification
+
+##### Consider the following example:
+
+![19](../assets/accounts/pubkey-1.png)
+
+If you are comfortable enough to distinguish between each account parameter, you can prefix the
+public-key string with **"0x"** on your own:
+
+From:
+`Pay DOTs to the Polkadot account:192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`,
+we prefix the address by "0x" ->
+`0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`.
+
+Using the [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform), you can verify
+both address associations to your public key. Copy your public key into the "Input Account or Public
+Key" textbox and click "Transform" at the bottom. On the right-hand side, the addresses for Polkadot
+and Substrate that are returned based on your public key should match the ones you inspected.
+
+![20](../assets/accounts/pubkey-2.png)
+
+:::note
+
+You may have to scroll down to the bottom of the menu to find the Substrate address based on the
+menu listings. You will notice that many networks that also use the same Substrate address.
+
+:::
+
+You can verify your public key verification by recalling that Polkadot addresses start with a '1',
+whereas Substrate addresses generally start with a '5' (Kusama addresses start with a capital
+letter). See [Addresses](learn-accounts.md#address-format) for more details.
+
+Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced for how
+the verification is performed:
+[pubkeyToAddress.js](https://github.com/w3f/utility-scripts/blob/master/src/misc/pubkeyToAddress.js)
+demonstrates how a single public key interprets a Polkadot, Substrate, or Kusama address.
