@@ -9,8 +9,7 @@ slug: ../learn-accounts
 
 import RPC from "./../../components/RPC-Connection";
 
-This document covers the basics of Polkadot and Kusama account addresses and how they exist
-on-chain. For a more in-depth explanation of the cryptography behind them, please see
+This document covers the basics of Polkadot and Kusama account addresses. For a more in-depth explanation of the cryptography behind them, please see
 [the cryptography page](learn-cryptography.md).
 
 ## Address Generation
