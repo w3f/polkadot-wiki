@@ -85,37 +85,6 @@ wallets due to the various cryptographic algorithms used.
 
 See [Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for more information.
 
-### Portability
-
-The above information brings us to portability: the ability to use a mnemonic phrase or seed across
-multiple wallets. Portability depends on several factors:
-
-- Derivation path
-- Mnemonic format
-- Seed derivation
-- Signature scheme
-
-If you want to use the exact mnemonic across multiple wallets, make sure that they follow compatible
-methods for generating keys and signing messages. If you cannot find understandable documentation,
-reach out to the project maintainers.
-
-|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-| :---------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
-| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                  |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
-
-\* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with
-BIP39.
-
-&dagger; [BIP44 Registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
-
-&Dagger; Ed25519 and BIP32 based on
-[Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)
-
-&sect; Sr25519 planned
-
 ## Obtaining and Managing an Address
 
 The **most user-friendly** way to create a Polkadot or Kusama address is through the
