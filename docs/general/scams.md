@@ -77,7 +77,7 @@ be found below:
 
 - [Twitter](https://twitter.com/Polkadot)
 - [Reddit](https://www.reddit.com/r/polkadot)
-- [Discord](https://discord.gg/CarTrFyppf)
+- [Discord](https://dot.li/discord)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Polkadot Medium](https://medium.com/polkadot-network)
 - [Our Community Page](../general/community.md) also lists more social media accounts that Web3
