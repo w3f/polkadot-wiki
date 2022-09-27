@@ -87,7 +87,6 @@ module.exports = {
               label: "Staking",
               items: [
                 "learn/learn-staking",
-                "learn/learn-staking-advanced",
                 "learn/learn-nomination-pools",
                 "learn/learn-staking-faq"
               ],
@@ -105,6 +104,7 @@ module.exports = {
             'learn/learn-randomness',
             'learn/learn-simple-payouts',
             'learn/learn-spree',
+            "learn/learn-staking-advanced",
             'learn/learn-staking-miner',
             'learn/learn-wasm',
           ],
