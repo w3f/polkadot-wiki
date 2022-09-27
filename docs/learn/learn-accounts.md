@@ -391,7 +391,7 @@ Learn more about multisig accounts from our
 
 Multi-signature accounts have several uses:
 
-- securing your own stash: use additional signatories as a 2FA mechanism to secure your funds. One
+- securing your stash: use additional signatories as a 2FA mechanism to secure your funds. One
   signer can be on one computer, and another can be on another or in cold storage. This slows down
   your interactions with the chain but is orders of magnitude more secure.
 - board decisions: legal entities such as businesses and foundations use multisigs to govern over
@@ -458,7 +458,7 @@ You can also see this video tutorial for more information about creating multisi
 
 Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Charlie,
 Dan, and Eleanor. First, Charlie will create the call on-chain by calling `asMulti` with the raw
-call, in this case a balance transfer from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
+call, in this case, a balance transfer from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
 while he waits for either Dan or Eleanor also to approve the balance transfer call using the `approveAsMulti` or the `asMulti` extrinsics. 
 
 If Dan submits the `approveAsMulti` extrinsic, he approves Charlie's call but he passes on the final approval to Eleanor. So, although the multisig has threshold 2, in this case all 3/3 signatories need to participate in the transaction approval. Eleanor will need to submit a `asMulti` or `approveAsMulti` extrinsic to transfer funds from CDE to Frank. 
@@ -475,7 +475,7 @@ being used to generate the multisig address.
 
 :::
 
-This has some implications when using the Extrinsic menu to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented in the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see this video tutorial for more information about creating multisig accounts, as well as transact with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
+This has some implications when using the Extrinsic menu to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see this video tutorial for more information about creating multisig accounts, as well as transacting with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
 
 ## Decoding Call Data
 
