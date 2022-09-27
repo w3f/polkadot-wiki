@@ -22,13 +22,13 @@ function AuctionSchedule() {
 			const chain = "Polkadot";
 			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
 			await LoadOptions(PolkadotAuctions,wsProvider);
-			LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
+			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
 			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
 			await LoadOptions(KusamaAuctions, wsProvider);
-			LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
+			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
 		}
 		else {
 			console.log("Unknown wiki/guide type");
@@ -53,10 +53,10 @@ async function LoadOptions(auctions, wsProvider) {
 }
 
 // Renders default value prior to initializing on-chain retrieval
-function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
+async function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
 	const index = e.target.value;
 	const auctions = Render(chain, defaultAuctions, setAuctions, index);
-	GetChainData(chain, auctions, setAuctions, index)
+	await GetChainData(chain, auctions, setAuctions, index)
 }
 
 // Connect to a chain, retrieve required values, re-render
@@ -169,7 +169,7 @@ async function OnboardingBlocks(api, hash) {
 		const apiAt = await api.at(hash);
 		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
 		const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
-		const onboardEndBlock = (auctionLeasePeriod + 1) * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset - 1;
+		const onboardEndBlock = onboardStartBlock + DaysToBlocks(auctionLeasePeriod * 12 * 7);
 		return [onboardStartBlock, onboardEndBlock]
 	}
 	else {
@@ -180,6 +180,11 @@ async function OnboardingBlocks(api, hash) {
 async function BlockToHash(api, block) {
 	const hash = await api.rpc.chain.getBlockHash(block);
 	return hash;
+}
+
+function DaysToBlocks(days) {
+	const blocks = (days / 6) * 86400;
+	return blocks;
 }
 
 export default AuctionSchedule;
