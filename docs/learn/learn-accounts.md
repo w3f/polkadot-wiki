@@ -12,7 +12,17 @@ import RPC from "./../../components/RPC-Connection";
 This document covers the basics of Polkadot and Kusama account addresses. For a more in-depth explanation of the cryptography behind them, please see
 [the cryptography page](learn-cryptography.md).
 
-## Address Generation
+## Address
+
+An address is the public part of a Polkadot account. The private part is the key used to access this
+address. The public and private parts together make up a Polkadot account. You can think of the
+public address of your account like your mailbox and the private key like the key to open that
+mailbox. Anybody can send mail to your mailbox, but only you can access them as only you have access
+to its key. In the context of Polkadot accounts, anybody can send tokens to your public address but
+only you can transact with them using your private key. That is why you should keep your private key
+secret.
+
+### Address Generation
 
 A valid account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography).
@@ -46,7 +56,7 @@ wallets due to the various cryptographic algorithms used.
 
 See [Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for more information.
 
-## Address Format
+### Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
 from Bitcoin with some minor changes. Notably, the format contains an _address type_ prefix that
@@ -83,7 +93,7 @@ them in the [address conversion tools](#address-conversion-tools) section.
 :::
 
 
-## Obtaining and Managing an Address
+### Obtaining and Managing an Address
 
 The **most user-friendly** way to create a Polkadot or Kusama address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
@@ -182,7 +192,9 @@ storage while proxies act on their behalf with restricted (or unrestricted) func
 
 ## Multi-signature Accounts
 
-Multi-signature accounts allow 
+Multi-signature accounts are accounts created from several standard accounts (or even other
+multi-sig accounts). For a full explanation, please see the
+[Accounts Explainer section on multi-sigs](learn-accounts.md#multi-signature-accounts).
 
 ## Resources
 
