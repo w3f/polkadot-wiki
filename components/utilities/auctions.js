@@ -385,8 +385,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x2d0111f32aeed67506e4b28a492223562289467f1eaa3247cc0442b0051d2adc",
       "endPeriodBlock": 7951237,
       "biddingEndsBlock": 8023773,
-      "onboardStartBlock": 16646400,
-      "onboardEndBlock": 32371200
+      "onboardStartBlock": 7862400,
+      "onboardEndBlock": 15724800
   },
   {
       "index": 1,
@@ -394,8 +394,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x36007e8adfe18b6cd310b0a1fd2edfbc4e51e26bafb6ec396831919a5e21604b",
       "endPeriodBlock": 8051552,
       "biddingEndsBlock": 8123989,
-      "onboardStartBlock": 16646400,
-      "onboardEndBlock": 32371200
+      "onboardStartBlock": 7862400,
+      "onboardEndBlock": 15724800
   },
   {
       "index": 2,
@@ -403,8 +403,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x0d091fa7aef542770fcd198bb72e60f569f65a21de033d6f2946180735182dcb",
       "endPeriodBlock": 8151516,
       "biddingEndsBlock": 8224041,
-      "onboardStartBlock": 16646400,
-      "onboardEndBlock": 32371200
+      "onboardStartBlock": 7862400,
+      "onboardEndBlock": 15724800
   },
   {
       "index": 3,
@@ -412,8 +412,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xed87292d639e0fa4de970a966ac36671fb4945d290836638b6e2b59de0866e38",
       "endPeriodBlock": 8251581,
       "biddingEndsBlock": 8324128,
-      "onboardStartBlock": 16646400,
-      "onboardEndBlock": 32371200
+      "onboardStartBlock": 7862400,
+      "onboardEndBlock": 15724800
   },
   {
       "index": 4,
@@ -421,8 +421,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xf0bb4c1ba7de324e264673dedcc2931eb41cf5235dad7d47fe78b889796a9a01",
       "endPeriodBlock": 8351750,
       "biddingEndsBlock": 8423852,
-      "onboardStartBlock": 16646400,
-      "onboardEndBlock": 32371200
+      "onboardStartBlock": 7862400,
+      "onboardEndBlock": 15724800
   },
   {
       "index": 5,
@@ -430,8 +430,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x76cd95e9279ad833572427a959faa0c85ff99c8e543dc22f940279d42693f903",
       "endPeriodBlock": 9061309,
       "biddingEndsBlock": 9133371,
-      "onboardStartBlock": 19065600,
-      "onboardEndBlock": 37209600
+      "onboardStartBlock": 9072000,
+      "onboardEndBlock": 18144000
   },
   {
       "index": 6,
@@ -439,8 +439,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x6a2b6fc78b25a34e892d5318351040bfc62d5277a984341e1c58f77f3d410e31",
       "endPeriodBlock": 9161492,
       "biddingEndsBlock": 9233727,
-      "onboardStartBlock": 19065600,
-      "onboardEndBlock": 37209600
+      "onboardStartBlock": 9072000,
+      "onboardEndBlock": 18144000
   },
   {
       "index": 7,
@@ -448,8 +448,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x2b601cea1d97d8c51427d23928680fb393eba64bba2b109c941919b2bc365493",
       "endPeriodBlock": 9262576,
       "biddingEndsBlock": 9334719,
-      "onboardStartBlock": 19065600,
-      "onboardEndBlock": 37209600
+      "onboardStartBlock": 9072000,
+      "onboardEndBlock": 18144000
   },
   {
       "index": 8,
@@ -457,8 +457,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x5a46f63e3d5ca41f716be18dacdaddcc2ca4ecefa0f04447072d76f9d42bbbc5",
       "endPeriodBlock": 9362014,
       "biddingEndsBlock": 9434278,
-      "onboardStartBlock": 19065600,
-      "onboardEndBlock": 37209600
+      "onboardStartBlock": 9072000,
+      "onboardEndBlock": 18144000
   },
   {
       "index": 9,
@@ -466,8 +466,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x5ea504dc225dbed83b3d6150ae80595f81f08f73ce574c0dfb26ff02d0399eef",
       "endPeriodBlock": 9462968,
       "biddingEndsBlock": 9535356,
-      "onboardStartBlock": 19065600,
-      "onboardEndBlock": 37209600
+      "onboardStartBlock": 9072000,
+      "onboardEndBlock": 18144000
   },
   {
       "index": 10,
@@ -475,8 +475,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x2386cd79a9d9afadda1e07c0e95d7a196cc62915e9edc6a0ff1a40aca9582a84",
       "endPeriodBlock": 9562569,
       "biddingEndsBlock": 9634925,
-      "onboardStartBlock": 19065600,
-      "onboardEndBlock": 37209600
+      "onboardStartBlock": 9072000,
+      "onboardEndBlock": 18144000
   },
   {
       "index": 11,
@@ -484,8 +484,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x2c9d6a4eeb6b2699cef52ccdc6df9cbbcfd8e2f68eb52382b429936ca2604f81",
       "endPeriodBlock": 9833873,
       "biddingEndsBlock": 9906305,
-      "onboardStartBlock": 21484800,
-      "onboardEndBlock": 42048000
+      "onboardStartBlock": 10281600,
+      "onboardEndBlock": 20563200
   },
   {
       "index": 12,
@@ -493,8 +493,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x132cb6bbeef57df940a789eb9ee10db8227e05c0b30f742436b5823b62ac9bf0",
       "endPeriodBlock": 9934673,
       "biddingEndsBlock": 10006967,
-      "onboardStartBlock": 21484800,
-      "onboardEndBlock": 42048000
+      "onboardStartBlock": 10281600,
+      "onboardEndBlock": 20563200
   },
   {
       "index": 13,
@@ -502,8 +502,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x610f08d77ab1d01d3d90911c7897437c91110c4f0215ce4f592c977917d30ea8",
       "endPeriodBlock": 10035473,
       "biddingEndsBlock": 10107473,
-      "onboardStartBlock": 21484800,
-      "onboardEndBlock": 42048000
+      "onboardStartBlock": 10281600,
+      "onboardEndBlock": 20563200
   },
   {
       "index": 14,
@@ -511,8 +511,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x02d5b66c3b1494144e8eb47265cc30ecc99770381959aaea9608a363e56bf3f4",
       "endPeriodBlock": 10136273,
       "biddingEndsBlock": 10208273,
-      "onboardStartBlock": 21484800,
-      "onboardEndBlock": 42048000
+      "onboardStartBlock": 10281600,
+      "onboardEndBlock": 20563200
   },
   {
       "index": 15,
@@ -520,8 +520,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xfea9e9ac26b987ccd851d4e2bd32bc70cea2b3cc652a549210f7c233553cb689",
       "endPeriodBlock": 10309200,
       "biddingEndsBlock": 10381200,
-      "onboardStartBlock": 22694400,
-      "onboardEndBlock": 44467200
+      "onboardStartBlock": 10886400,
+      "onboardEndBlock": 21772800
   },
   {
       "index": 16,
@@ -529,8 +529,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xca57d934d2537fb59d190acb31618d2f5daf74102f9fddbd1d94c5a4d6084f53",
       "endPeriodBlock": 10410000,
       "biddingEndsBlock": 10482000,
-      "onboardStartBlock": 22694400,
-      "onboardEndBlock": 44467200
+      "onboardStartBlock": 10886400,
+      "onboardEndBlock": 21772800
   },
   {
       "index": 17,
@@ -538,8 +538,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xdd4414c1e60b10a9703541868bf9b46b406bfaf972d9bc289699e378fe8f97bb",
       "endPeriodBlock": 10510800,
       "biddingEndsBlock": 10582800,
-      "onboardStartBlock": 22694400,
-      "onboardEndBlock": 44467200
+      "onboardStartBlock": 10886400,
+      "onboardEndBlock": 21772800
   },
   {
       "index": 18,
@@ -547,8 +547,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xd03c6e60ad902c0c4038a97a3716b75958c5a19cf01249cd83e9f014ce8197f7",
       "endPeriodBlock": 10611600,
       "biddingEndsBlock": 10683600,
-      "onboardStartBlock": 22694400,
-      "onboardEndBlock": 44467200
+      "onboardStartBlock": 10886400,
+      "onboardEndBlock": 21772800
   },
   {
       "index": 19,
@@ -556,8 +556,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xacbdace8900b4a24d3a4240a3bfe9186ce776b7815da3199a30d890f6fac5e91",
       "endPeriodBlock": 10712400,
       "biddingEndsBlock": 10784400,
-      "onboardStartBlock": 22694400,
-      "onboardEndBlock": 44467200
+      "onboardStartBlock": 10886400,
+      "onboardEndBlock": 21772800
   },
   {
       "index": 20,
@@ -565,8 +565,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x865d6563511ab9c5b4d6f79c27c2af92d1317e6512db2d6c5fd3320b82ca5a3c",
       "endPeriodBlock": 10914000,
       "biddingEndsBlock": 10986000,
-      "onboardStartBlock": 23904000,
-      "onboardEndBlock": 46886400
+      "onboardStartBlock": 11491200,
+      "onboardEndBlock": 22982400
   },
   {
       "index": 21,
@@ -574,8 +574,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xb4fcc3c318fb97632302d325630ccb27135c5973fa54aea2eaa079fad4d954c9",
       "endPeriodBlock": 11014800,
       "biddingEndsBlock": 11086800,
-      "onboardStartBlock": 23904000,
-      "onboardEndBlock": 46886400
+      "onboardStartBlock": 11491200,
+      "onboardEndBlock": 22982400
   },
   {
       "index": 22,
@@ -583,8 +583,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x5706199b2d0f7c7e4117f6ee47b3d4d347cfaa84a850194412c5fbbaa62f8875",
       "endPeriodBlock": 11115600,
       "biddingEndsBlock": 11187600,
-      "onboardStartBlock": 23904000,
-      "onboardEndBlock": 46886400
+      "onboardStartBlock": 11491200,
+      "onboardEndBlock": 22982400
   },
   {
       "index": 23,
@@ -592,8 +592,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xe40647df950ac7e52136ad1d7e4cbab231f9c5d7eb509a0a569e40787e22f974",
       "endPeriodBlock": 11216400,
       "biddingEndsBlock": 11288400,
-      "onboardStartBlock": 23904000,
-      "onboardEndBlock": 46886400
+      "onboardStartBlock": 11491200,
+      "onboardEndBlock": 22982400
   },
   {
       "index": 24,
@@ -601,8 +601,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x10fb8d191fcf29fd25509a0af5546c1e387ceac6a495525ac508469281cebb5e",
       "endPeriodBlock": 11317200,
       "biddingEndsBlock": 11389200,
-      "onboardStartBlock": 23904000,
-      "onboardEndBlock": 46886400
+      "onboardStartBlock": 11491200,
+      "onboardEndBlock": 22982400
   },
   {
       "index": 25,
@@ -610,8 +610,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xaf6b62fd6ad165b2d968a4ed50e75c8042bbc429a813f41007b6df06b2fd5233",
       "endPeriodBlock": 11518800,
       "biddingEndsBlock": 11590800,
-      "onboardStartBlock": 25113600,
-      "onboardEndBlock": 49305600
+      "onboardStartBlock": 12096000,
+      "onboardEndBlock": 24192000
   },
   {
       "index": 26,
@@ -619,8 +619,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x4894a1c7e85c5d5eb528dbd80c748f6fe0327d73de74ed12064bea6db1db0fec",
       "endPeriodBlock": 11619600,
       "biddingEndsBlock": 11691600,
-      "onboardStartBlock": 25113600,
-      "onboardEndBlock": 49305600
+      "onboardStartBlock": 12096000,
+      "onboardEndBlock": 24192000
   },
   {
       "index": 27,
@@ -628,8 +628,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x455c44057a7fa4cfd8d07840fcade9118462655b59fa7d2698df0e2d8e606002",
       "endPeriodBlock": 11720400,
       "biddingEndsBlock": 11792400,
-      "onboardStartBlock": 25113600,
-      "onboardEndBlock": 49305600
+      "onboardStartBlock": 12096000,
+      "onboardEndBlock": 24192000
   },
   {
       "index": 28,
@@ -637,8 +637,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xd64cd21f36c28e35d5e39a8e2c11fc274384b63dba5c1fa342bb2ded05d501a1",
       "endPeriodBlock": 11821200,
       "biddingEndsBlock": 11893200,
-      "onboardStartBlock": 25113600,
-      "onboardEndBlock": 49305600
+      "onboardStartBlock": 12096000,
+      "onboardEndBlock": 24192000
   },
   {
       "index": 29,
@@ -646,8 +646,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x70b4ffbae43a1997aabbb3467218a90fa6e2d65a3ce82d878b6e8755ed77c6c8",
       "endPeriodBlock": 11922000,
       "biddingEndsBlock": 11994000,
-      "onboardStartBlock": 25113600,
-      "onboardEndBlock": 49305600
+      "onboardStartBlock": 12096000,
+      "onboardEndBlock": 24192000
   },
   {
       "index": 30,
@@ -655,8 +655,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x459ea8c36e03365642748a8278df9e3e42815c9a96162ad77739e4489c586d75",
       "endPeriodBlock": 12123600,
       "biddingEndsBlock": 12195600,
-      "onboardStartBlock": 26323200,
-      "onboardEndBlock": 51724800
+      "onboardStartBlock": 12700800,
+      "onboardEndBlock": 25401600
   },
   {
       "index": 31,
@@ -664,8 +664,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xe5e0ddf24e45040bc391ec80b10967cbff08670d2c2884f5030383428279aa28",
       "endPeriodBlock": 12224400,
       "biddingEndsBlock": 12296400,
-      "onboardStartBlock": 26323200,
-      "onboardEndBlock": 51724800
+      "onboardStartBlock": 12700800,
+      "onboardEndBlock": 25401600
   },
   {
       "index": 32,
@@ -673,8 +673,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x7616b2c586e2004cadc6644884dbfddf6b66a480b2ef18cf98552b7cda5dc973",
       "endPeriodBlock": 12325200,
       "biddingEndsBlock": 12397200,
-      "onboardStartBlock": 26323200,
-      "onboardEndBlock": 51724800
+      "onboardStartBlock": 12700800,
+      "onboardEndBlock": 25401600
   },
   {
       "index": 33,
@@ -682,8 +682,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xce5897c1778448644dc2bebec8c6ba249e01e24442b851d14507ece915cccc02",
       "endPeriodBlock": 12426000,
       "biddingEndsBlock": 12498000,
-      "onboardStartBlock": 26323200,
-      "onboardEndBlock": 51724800
+      "onboardStartBlock": 12700800,
+      "onboardEndBlock": 25401600
   },
   {
       "index": 34,
@@ -691,8 +691,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x3c4b1daf363f376d7e7f07fd9cc498349f0c38abacc6392994d862673592024a",
       "endPeriodBlock": 12526800,
       "biddingEndsBlock": 12598800,
-      "onboardStartBlock": 26323200,
-      "onboardEndBlock": 51724800
+      "onboardStartBlock": 12700800,
+      "onboardEndBlock": 25401600
   },
   {
       "index": 35,
@@ -700,8 +700,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xe27332a1b5e8bfd9ec7e4434ee253f693614a00f45fa360c3c6acac9e8067138",
       "endPeriodBlock": 12727800,
       "biddingEndsBlock": 12727800,
-      "onboardStartBlock": 27532800,
-      "onboardEndBlock": 54144000
+      "onboardStartBlock": 13305600,
+      "onboardEndBlock": 26611200
   },
   {
       "index": 36,
@@ -709,8 +709,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x5ed0b9a0f78087e8d357795e03672350692780764fd227520000233b519a073b",
       "endPeriodBlock": 12828600,
       "biddingEndsBlock": 12828600,
-      "onboardStartBlock": 27532800,
-      "onboardEndBlock": 54144000
+      "onboardStartBlock": 13305600,
+      "onboardEndBlock": 26611200
   },
   {
       "index": 37,
@@ -718,8 +718,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x976423f990548aeb29246a3d8a388f8afb57c122900e6fda7649616a24feb1da",
       "endPeriodBlock": 12929400,
       "biddingEndsBlock": 12929400,
-      "onboardStartBlock": 27532800,
-      "onboardEndBlock": 54144000
+      "onboardStartBlock": 13305600,
+      "onboardEndBlock": 26611200
   },
   {
       "index": 38,
@@ -727,8 +727,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xd3bde817fe5589b99741f555dd5ea2443395fff614bb58a1727f3dd9ed22690f",
       "endPeriodBlock": 13030200,
       "biddingEndsBlock": 13030200,
-      "onboardStartBlock": 27532800,
-      "onboardEndBlock": 54144000
+      "onboardStartBlock": 13305600,
+      "onboardEndBlock": 26611200
   },
   {
       "index": 39,
@@ -736,8 +736,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xeb1432637587d361152596ab14567bc432f3e0c3ef90d7534598a10c12097801",
       "endPeriodBlock": 13131000,
       "biddingEndsBlock": 13131000,
-      "onboardStartBlock": 27532800,
-      "onboardEndBlock": 54144000
+      "onboardStartBlock": 13305600,
+      "onboardEndBlock": 26611200
   },
   {
       "index": 40,
@@ -745,8 +745,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xe1f58309aa85651b2ea05a22983387a5ff30df63840605168f0203b587dbc521",
       "endPeriodBlock": 13231800,
       "biddingEndsBlock": 13231800,
-      "onboardStartBlock": 27532800,
-      "onboardEndBlock": 54144000
+      "onboardStartBlock": 13305600,
+      "onboardEndBlock": 26611200
   },
   {
       "index": 41,
@@ -754,8 +754,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
       "endPeriodBlock": 13332600,
       "biddingEndsBlock": 13332600,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 42,
@@ -763,8 +763,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x588edb868b417462cb128cd5c932a099145d74e89f5fd009e093763c346e5739",
       "endPeriodBlock": 13433400,
       "biddingEndsBlock": 13433400,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 43,
@@ -772,8 +772,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xc070c3b0af662363ab5f72d137b799efd22d421283a02e8cce6264614dc558ef",
       "endPeriodBlock": 13534200,
       "biddingEndsBlock": 13534200,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 44,
@@ -781,8 +781,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xabdd4d07400bef8fecac1b23907b3ebf2a43f765787c469407d8f81056b8c776",
       "endPeriodBlock": 13635000,
       "biddingEndsBlock": 13635000,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 45,
@@ -790,8 +790,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x506fc08e37915ca4d0bd126c1baf81d82380104892925038cff73d24f49f532f",
       "endPeriodBlock": 13735800,
       "biddingEndsBlock": 13735800,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 46,
@@ -799,8 +799,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x3241177420d2bafdeb68b53f4aced333c677f434113ec3af907fe18027d86142",
       "endPeriodBlock": 13836600,
       "biddingEndsBlock": 13836600,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 47,
@@ -808,8 +808,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
       "endPeriodBlock": 13937400,
       "biddingEndsBlock": 13937400,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 48,
@@ -817,8 +817,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x0a7373d836b55992c8018f8fa6291fbfd95a38ac2928fdb6db818d9655d42efe",
       "endPeriodBlock": 14028200,
       "biddingEndsBlock": 14038200,
-      "onboardStartBlock": 28742400,
-      "onboardEndBlock": 56563200
+      "onboardStartBlock": 13910400,
+      "onboardEndBlock": 27820800
   },
   {
       "index": 49,
@@ -826,8 +826,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xdb16a16ca80e647d09ebbad493c43940defb0db2f1bb24843749b17f9de1539b",
       "endPeriodBlock": 14139001,
       "biddingEndsBlock": 14139001,
-      "onboardStartBlock": 29952000,
-      "onboardEndBlock": 58982400
+      "onboardStartBlock": 14515200,
+      "onboardEndBlock": 29030400
   },
   {
       "index": 50,
@@ -835,8 +835,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xa8b4948e3601084ddb99e2dbf395ee70e97bf7c05415e41490e596a8e952ec5a",
       "endPeriodBlock": 14239801,
       "biddingEndsBlock": 14239801,
-      "onboardStartBlock": 29952000,
-      "onboardEndBlock": 58982400
+      "onboardStartBlock": 14515200,
+      "onboardEndBlock": 29030400
   },
   {
       "index": 51,
@@ -844,8 +844,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x7ebb5cc9146f9f2c90a5dda4c3eec1e2ca2355d67a04b20c1b988c1725424ee0",
       "endPeriodBlock": 14340601,
       "biddingEndsBlock": 14340601,
-      "onboardStartBlock": 29952000,
-      "onboardEndBlock": 58982400
+      "onboardStartBlock": 14515200,
+      "onboardEndBlock": 29030400
   },
   {
       "index": 52,
@@ -853,8 +853,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
       "endPeriodBlock": 14542200,
       "biddingEndsBlock": 14542200,
-      "onboardStartBlock": 29952000,
-      "onboardEndBlock": 58982400
+      "onboardStartBlock": 14515200,
+      "onboardEndBlock": 29030400
   },
   {
       "index": 53,
@@ -862,8 +862,8 @@ export const KusamaAuctions = [
       "startBlockHash": "0x69027e1053359a8fcc641cbec6a76866f45c69958d5e8efd79ad7f639c46d056",
       "endPeriodBlock": 14643000,
       "biddingEndsBlock": 14643000,
-      "onboardStartBlock": 29952000,
-      "onboardEndBlock": 58982400
+      "onboardStartBlock": 14515200,
+      "onboardEndBlock": 29030400
   },
   {
       "index": 54,

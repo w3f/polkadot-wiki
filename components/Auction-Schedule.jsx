@@ -5,8 +5,8 @@ import {
 	PolkadotSlotLeasePeriod,
 	PolkadotSlotLeaseOffset,
 	KusamaAuctions,
-	KusamaLeasePeriod,
-	KusamaLeaseOffset
+	KusamaSlotLeasePeriod,
+	KusamaSlotLeaseOffset
 } from './utilities/auctions';
 
 let api = undefined;
@@ -164,13 +164,21 @@ function Render(chain, auctions, setAuctions, index) {
 
 // TODO - these functions will be used by the GitHub action when adding new values to auctions.js
 
-async function OnboardingBlocks(api, hash) {
+async function OnboardingBlocks(api, hash, chain) {
+
 	if (hash !== "0x0000000000000000000000000000000000000000000000000000000000000000") {
 		const apiAt = await api.at(hash);
 		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
-		const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
-		const onboardEndBlock = onboardStartBlock + DaysToBlocks(auctionLeasePeriod * 12 * 7);
-		return [onboardStartBlock, onboardEndBlock]
+		if (chain === "Polkadot") {
+			const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
+			const onboardEndBlock = onboardStartBlock + DaysToBlocks(auctionLeasePeriod * 12 * 7);
+			return [onboardStartBlock, onboardEndBlock]
+		}
+		else if (chain === "Kusama") {
+			const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
+			const onboardEndBlock = onboardStartBlock + DaysToBlocks(auctionLeasePeriod * 6 * 7);
+			return [onboardStartBlock, onboardEndBlock]
+		}
 	}
 	else {
 		return [0, 0];
