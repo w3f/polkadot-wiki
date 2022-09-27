@@ -291,4 +291,4 @@ The diagram below shows a multisig that is made only with anonymous proxies. In 
 
 ![multisig with anons](../assets/multisig_with_anons.png)
 
-In the diagram above, Alice submits the `proxy.proxy` Extrinsic (1.1) to Anon A, which in turn submits the `multisig.asMulti` Extrinsic (1.2) containing the `balances.transferKeepAlive` extrinsic about the transfer of some tokens from ABC anon to Dan. Then, Charly does the same to confirm the transaction. Note that Charly will need to pay some weight, i.e. for the computation that is necessary to execute the transaction.
+In the diagram above, Alice submits the `proxy.proxy` Extrinsic (1.1) to Anon A, which in turn submits the `multisig.asMulti` Extrinsic (1.2) containing the `balances.transferKeepAlive` extrinsic about the transfer of some tokens from ABC anon to Dan. Then, Charly does the same to confirm the transaction. Note that Charly will need to pay for some weight, for the computation that is necessary to execute the transaction.
