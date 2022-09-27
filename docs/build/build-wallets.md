@@ -13,7 +13,7 @@ transactions. Below are some wallets that support Polkadot along with their deve
 
 :::tip Non-Custodial Wallets
 
-With non-custodial wallets, only you have access to your account's private key. With custodial wallets (like accounts on Central Exchanges), another party controls your private keys. **All the wallets listed on this page are non-custodial wallets**
+ **All the wallets listed on this page are non-custodial wallets**. With non-custodial wallets, only you have access to your account's private key. With custodial wallets (like accounts on Central Exchanges), another party controls your private keys.
 
 :::
 
@@ -25,9 +25,9 @@ contact the developers of that wallet.
 
 | Wallet Name                                                         | Development State | Team Name | Description       |
 | ------------------------------------------------------------------- | ----------------- | --------- | ----------------- |
-| [Parity Signer](https://www.parity.io/signer/)                       | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) (browser extension)   |
+| [Parity Signer](https://www.parity.io/signer/)                       | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) or [Polkadot-JS Extension](https://github.com/polkadot-js/extension)    |
 | [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   |
-| [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)            |
+| [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)            |
 
 
 ### Treasury Funded Wallets
