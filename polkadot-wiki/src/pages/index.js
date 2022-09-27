@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from "react";
+import React, {useEffect, useState} from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -15,6 +15,7 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import KusamaCanary from "@site/static/img/kusama_canary_white.svg";
+import { useScrollListener } from "../hooks/useScroll";
 
 function HomeNav() {
   const NavContainer = ({ children }) => (
@@ -109,35 +110,42 @@ function HomeNav() {
 
 // Used for advertising events, conferences, etc
 // To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
-/*
+
 function Banner() {
-  const FixedBanner = ({ children }) => (
-    <div className="fixed-banner">
-      <div className="fixed-banner-text-container col-12 col-md-8 col-lg-10 text-center text-md-left mb-2 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
-        <p className="banner-text">
-         <span class="font-weight-bolder">POLKADOT DECODED </span>
-           June 29th-30th, 2022
-          <span class="d-flex d-lg-inline-block pl-lg-3">Join 100+ talks, live streamed from 4 locations worldwide.</span>
-        </p>
-        <a href="https://decoded.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=decoded%202022&utm_content=notification%20banner5">
-          <button className="banner-button btn btn-md btn-primary btn-bg-primary mr-3">
-            <Translate
-              id="homepage.homeFooter.improveWiki.contributeButton"
-              description="Contribute Button Label of Improve Wiki Footer Section in Home page"
-            >
-              Sign Up
-            </Translate>
-          </button>
-        </a>
+  const FixedBanner = () => {
+    const scroll = useScrollListener();
+    const [isScrolled, setIsScrolled] = useState(false);
+  
+    useEffect(() => {
+      if (scroll.y > 200) {
+        setIsScrolled(true);
+      } else if (scroll.y < 1) {
+        setIsScrolled(false);
+      }
+    }, [scroll.y]);
+
+    return (
+      <div className={`fixed-banner ${isScrolled ? 'fixed-banner--hidden' : ''}`}>
+        <div className="mx-auto col-12 col-md-10 col-xl-8 d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <p className="mb-0 text-center text-md-left">
+          <span className="font-weight-bolder pr-lg-4">Sub0 is coming to Lisbon!</span>
+            <span className="d-flex d-lg-inline-block">Join the Polkadot developer conference, November 28th-29th</span>
+          </p>
+          <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki">
+            <button className="btn btn-md btn-primary btn-bg-primary mt-2 mt-md-0 ml-md-3">
+                Sign Up
+            </button>
+          </a>
+        </div>
       </div>
-    </div>
-  )
+    )
+  };
 
   return (
     <FixedBanner />
   )
 }
-*/
+
 
 function HomeFooter() {
   const FooterContainer = ({ children }) => (
@@ -250,6 +258,7 @@ export default function Index() {
 
   return (
     <Layout title={siteConfig.tagline}>
+      <Banner />
       <div className="homeContainer">
         <HomeNav />
         <HomeFooter />
