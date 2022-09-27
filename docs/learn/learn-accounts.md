@@ -412,9 +412,9 @@ threshold, they will immediately have access to these tokens.
 
 There are three types of actions you can take with a multisig account:
 
-- Executing a call `as_multi`. 
-- Approving a call `approve_as_multi`.
-- Cancelling a call `cancel_as_multi`.
+- Executing a call `asMulti`. This is used to begin or end a multisig transaction.
+- Approving a call `approveAsMulti`. This is used to approve an extrinsic and pass-on to the next signatory (see [example below](#example-using-multi-signature-accounts) for more information).
+- Cancelling a call `cancelAsMulti`.
 
 :::info
 
@@ -457,10 +457,12 @@ You can also see this video tutorial for more information about creating multisi
 ![multisig diagram](../assets/multisig-diagram.png)
 
 Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Charlie,
-Dan, and Eleanor. First, Charlie will create the call on-chain by calling `approve_as_multi` with the raw
+Dan, and Eleanor. First, Charlie will create the call on-chain by calling `asMulti` with the raw
 call, in this case a balance transfer from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
-while he waits for either Dan or Eleanor also to approve the balance transfer call using the `as_multi` extrinsic. When Dan comes to approve the call, he will not need to place the deposit, and Charlie will receive his
-deposit back. Once the balance transfer call is approved, the multisig CDE will transfer funds to Frank. Similarly, after Charlie sends the initial transaction, say Dan or Eleanor choose to cancel the transaction due to an error on Charlie's part, they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to Charlie.
+while he waits for either Dan or Eleanor also to approve the balance transfer call using the `approveAsMulti` or the `asMulti` extrinsics. 
+
+If Dan submits the `approveAsMulti` extrinsic, he approves Charlie's call but he passes on the final approval to Eleanor. So, although the multisig has threshold 2, in this case all 3/3 signatories need to participate in the transaction approval. Eleanor will need to submit a `asMulti` or `approveAsMulti` extrinsic to transfer funds from CDE to Frank. Alternatively, Dan or Eleanor can just submit a `asMulti` extrinsic after Charlie to transfer the funds. In this case, 2/3 signatories will participate in the transaction approval. The accounts that approve Charlie's call will not need to place the deposit, and Charlie will receive his
+deposit back once the transfer is successful or canceled. To cancel the transaction, Dan or Eleanor can use the `cancelAsMulti` extrinsic.
 
 Note that multisigs are deterministic, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. 
 
