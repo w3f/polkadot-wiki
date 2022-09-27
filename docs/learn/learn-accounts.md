@@ -9,7 +9,7 @@ slug: ../learn-accounts
 
 import RPC from "./../../components/RPC-Connection";
 
-This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account addresses. For a more in-depth explanation of the cryptography behind them, please see
+This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and [indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
 [the cryptography page](learn-cryptography.md).
 
 ## Account Address
