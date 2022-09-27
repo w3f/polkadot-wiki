@@ -1,10 +1,14 @@
-// consts.slots.leasePeriod()
+// consts.slots.leasePeriod
 export const PolkadotSlotLeasePeriod = 1209600;
 export const KusamaSlotLeasePeriod = 604800;
 
-// consts.slots.leaseOffsets()
+// consts.slots.leaseOffsets
 export const PolkadotSlotLeaseOffset = 921600;
 export const KusamaSlotLeaseOffset = 0;
+
+// consts.auctions.leasePeriodsPerSlot
+export const PolkadotLeasePeriodPerSlot = 8;
+export const KusamaLeasePeriodPerSlot = 8;
 
 export const PolkadotAuctions = [
   {
