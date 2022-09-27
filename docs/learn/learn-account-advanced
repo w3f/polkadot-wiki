@@ -1,0 +1,11 @@
+---
+id: learn-accounts-advanced
+title: Polkadot Accounts Advanced Info
+sidebar_label: Accounts Advanced Info
+description: Advanced information about Polkadot accounts
+keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
+slug: ../learn-accounts-advanced
+---
+
+import RPC from "./../../components/RPC-Connection";
+
