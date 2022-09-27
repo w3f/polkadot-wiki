@@ -11,18 +11,24 @@ The integration of a [wallet](../general/glossary.md#wallet) with {{ polkadot: P
 {{ kusama: Kusama :kusama }} allows for simple and easy access to private keys and signing
 transactions. Below are some wallets that support Polkadot along with their development statuses.
 
+:::tip Non-Custodial Wallets
+
+With non-custodial wallets, only you have access to your account's private key. With custodial wallets (like accounts on Central Exchanges), another party controls your private keys. **All the wallets listed on this page are non-custodial wallets**
+
+:::
+
 ### Supported Wallets
 
-| Wallet Name                                                         | Development State | Team Name | Description       | Staking support | Non-custodial |
-| ------------------------------------------------------------------- | ----------------- | --------- | ----------------- | --------------- | ------------- |
-| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android   | Yes             | Yes           |
-| [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Yes             | Yes           |
-| [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Yes             | Yes           |
-| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Yes             | Yes           |
-
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
-Polkadot-JS, the Polkadot{.js} extension, or Parity Signer. For other wallet software, you should
+Polkadot-JS UI, the Polkadot-JS extension, or Parity Signer. For other wallet software, you should
 contact the developers of that wallet.
+
+| Wallet Name                                                         | Development State | Team Name | Description       |
+| ------------------------------------------------------------------- | ----------------- | --------- | ----------------- |
+| [Parity Signer](https://www.parity.io/signer/)                       | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) (browser extension)   |
+| [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   |
+| [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)            |
+
 
 ### Treasury Funded Wallets
 
@@ -39,15 +45,15 @@ developed wallets.
 
 :::
 
-| Wallet Name                                   | Proposals                                                                                                                                                                                                                                             | Development State | Team Name       | Description  | Staking support | Non-custodial |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ------------ | --------------- | ------------- |
-| [Fearless Wallet](https://fearlesswallet.io/) | [1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178) | Live              | SORAMITSU       | iOS, Android | Yes             | Yes           |
-| [Polkawallet](https://polkawallet.io/)        | [1](https://kusama.polkassembly.io/treasury/32), [2](https://kusama.polkassembly.io/treasury/41)                                                                                                                                                      | Live              | Polkawallet     | iOS, Android | Yes             | Yes           |
-| [Stylo](https://stylo-app.com/)               | [1](https://polkadot.polkassembly.io/treasury/39)                                                                                                                                                                                                     | Live              | Thibaut Sardan  | Android      | Yes             | Yes           |
-| [Nova Wallet](https://novawallet.io/)\*       | [1](https://kusama.polkassembly.io/treasury/122), [2](https://kusama.polkassembly.io/treasury/158)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Yes             | Yes           |
-| [Talisman](https://talisman.xyz/)             | [1](https://polkadot.polkassembly.io/treasury/148); Treasury tipp\*\*                                                                                                                                                                                 | Live              | TalismanSociety | Browser      | Yes             | Yes           |
-| [SubWallet](https://subwallet.app/)           | [1](https://polkadot.polkassembly.io/treasury/138)                                                                                                                                                                                                    | Live              | SubWallet       | Browser      | Yes             | Yes           |
-| [Polkadot js Plus](http://polkadotjs.plus/)   | [1](https://kusama.polkassembly.io/treasury/205)                                                                                                                                                                                                      | Live              | PolkaGate       | Browser      | Yes             | Yes           |
+| Wallet Name                                   | Proposals                                                                                                                                                                                                                                             | Development State | Team Name       | Description  | Features |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ------------ | --------------- |
+| [Fearless Wallet](https://fearlesswallet.io/) | [1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178) | Live              | SORAMITSU       | iOS, Android | Staking, Crowdloans, parachain accounts            |
+| [Polkawallet](https://polkawallet.io/)        | [1](https://kusama.polkassembly.io/treasury/32), [2](https://kusama.polkassembly.io/treasury/41)                                                                                                                                                      | Live              | Polkawallet     | iOS, Android | Staking, Crowdloans, parachain accounts, Governance             |
+| [Stylo](https://stylo-app.com/)               | [1](https://polkadot.polkassembly.io/treasury/39)                                                                                                                                                                                                     | Live              | Thibaut Sardan  | Android      | Air-gapped offline wallet             |
+| [Nova Wallet](https://novawallet.io/)\*       | [1](https://kusama.polkassembly.io/treasury/122), [2](https://kusama.polkassembly.io/treasury/158)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Staking, Crowdloans, parachain accounts, Parity Signer and Ledger support            |
+| [Talisman](https://talisman.xyz/)             | [1](https://polkadot.polkassembly.io/treasury/148); Treasury tipp\*\*                                                                                                                                                                                 | Live              | TalismanSociety | Browser      | Staking, Crowdloans, parachain accounts, Ledger support            |
+| [SubWallet](https://subwallet.app/)           | [1](https://polkadot.polkassembly.io/treasury/138)                                                                                                                                                                                                    | Live              | SubWallet       | Browser      | Staking, Crowdloans, parachain accounts             |
+| [Polkadot js Plus](http://polkadotjs.plus/)   | [1](https://kusama.polkassembly.io/treasury/205)                                                                                                                                                                                                      | Live              | PolkaGate       | Browser      | Staking (Nomination Pools), Proxy accounts, Crowdloans, Governance, Social recovery           |
 
 :::caution \*Note about Nova wallet
 
