@@ -65,7 +65,7 @@ implemented so that transactions must pay a minimum fee to collators to be valid
 will enforce this validity. Similarly, a parachain could not include that in their implementation,
 and Polkadot would still enforce its validity.
 
-Parachains are not required to have their own token. If they do, is up to the parachain to make the
+Parachains are not required to have their own token. If they do, it is up to the parachain to make the
 economic case for their token, not {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Parachain Hubs
@@ -128,7 +128,7 @@ automatically become parathreads.
 
 ## Common Good Parachains
 
-"Common Good" parachains are parachain slots reserved for functionality that benefits the the
+"Common Good" parachains are parachain slots reserved for functionality that benefits the
 ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
 network can realize the benefit of valuable parachains that would otherwise be underfunded due to
 the free-rider problem. They are not allocated via the parachain auction process but by the on-chain
