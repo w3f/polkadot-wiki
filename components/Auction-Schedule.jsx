@@ -87,15 +87,28 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 		onboardEndDate: [selection.onboardEndBlock, selection.onboardEndHash]
 	}
 
-	// If block is finalized get on-chain timestamp, otherwise estimate it
+	// If a block is finalized get the on-chain timestamp, otherwise estimate it
+	let promises = [];
+	let keys = [];
+
 	for (const [key, value] of Object.entries(selectedBlocks)) {
 		if (value[1] !== FutureBlock) {
-			const block = await API.rpc.chain.getBlock(value[1]);
-			auctions[index][key] = GetBlockTimestamp(block).toDateString();
+			promises.push(API.rpc.chain.getBlock(value[1]));
+			keys.push(key);
 		} else {
 			auctions[index][key] = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, value[0]);
 		}
 	}
+
+	await Promise.all(promises)
+		.then((blocks) => {
+			for(let i = 0; i < promises.length; i++) {
+				auctions[index][keys[i]] = GetBlockTimestamp(blocks[i]).toDateString();
+			}
+		})
+		.catch((error) => {
+			console.log(error);
+		})
 	
 	Render(chain, auctions, setAuctions, index);
 }
