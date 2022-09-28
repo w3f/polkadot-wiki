@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection"
 This page is meant to be an advanced guide to staking with
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Pallets and extrinsics
+## Pallets and Extrinsics
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
 [substrate](https://substrate.io/), a modular system to efficiently build blockchains. Within each
