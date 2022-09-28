@@ -38,10 +38,11 @@ made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied
 thus the possibility to create staking proxy accounts that can be used to sign only extrinsic calls
 to staking, session and utility pallets. This makes the stash account even more isolated than using
 a controller account since one can bond / unbond / bond more funds using the staking proxy account.
-However, it is important to remember that actions that can be performed by the proxy accounts are
-limited, and in the case of staking proxy, extrinsic calls to the balances pallet cannot be signed.
-This means it is not possible to do balance transfers on the proxied account through a staking
-proxy.
+Note that it is not necessary to have a controller, if you have a staking proxy: the stash can also
+be the controller. It is important to remember that actions that can be performed by the proxy
+accounts are limited, and in the case of staking proxy, extrinsic calls to the balances pallet
+cannot be signed. This means it is not possible to do balance transfers on the proxied account
+through a staking proxy.
 
 ## Bags List
 
