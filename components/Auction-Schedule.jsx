@@ -169,8 +169,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
 			Block #{auctions[index].onboardStartBlock}
 		</a>
-		{` to`}
-		<br />
+		{` to `}
 		{`${auctions[index].onboardEndDate} - `}
 		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
 			Block #{auctions[index].onboardEndBlock}
