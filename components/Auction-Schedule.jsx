@@ -24,7 +24,7 @@ function AuctionSchedule() {
 			const chain = "Polkadot";
 			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
 			await LoadOptions(PolkadotAuctions,wsProvider);
-			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } })
+			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } });
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
@@ -185,6 +185,17 @@ async function OnboardingBlocks(api, hash, chain) {
 	else {
 		return [0, 0];
 	}
+}
+
+async function GetBlockTimestamp(api, block) {
+	const hash = await BlockToHash(api, block);
+	const signedBlock = await api.rpc.chain.getBlock(hash);
+	// Decode block extrinsics - first item is always a timestamp
+	const ex = signedBlock.block.extrinsics[0];
+	const { isSigned, meta, method: { args, method, section } } = ex;
+	const timestampString = `${args.map((a) => a.toString()).join(', ')}`;
+	const timestamp = new Date(parseInt(timestampString));
+	return timestamp.toDateString();
 }
 
 async function BlockToHash(api, block) {
