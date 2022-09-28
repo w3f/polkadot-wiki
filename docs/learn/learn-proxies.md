@@ -256,12 +256,19 @@ The procedure for removing an Anon is different from the one used to remove prox
 
 ## Why Anonymous Proxies?
 
-Despite their complexity and associated dangers, Anon accounts have a few important benefits:
+Despite their complexity and associated dangers, Anon accounts have important benefits. We discuss these benefits below.
 
 ### Enhanced Security
 Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
 
 ### Simplified and Secure Account Management at a Corporate Level
+
+:::info Walk-through tutorial video
+
+You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
+
+:::
+
 Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
 
 **Without Anon**, Charlie must (see _left_ side of the Figure below):
