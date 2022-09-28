@@ -30,7 +30,7 @@ function AuctionSchedule() {
 			const chain = "Kusama";
 			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
 			await LoadOptions(KusamaAuctions, wsProvider);
-			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } })
+			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } });
 		}
 		else {
 			console.log("Unknown wiki/guide type");

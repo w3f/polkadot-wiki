@@ -10,6 +10,7 @@ export const KusamaSlotLeaseOffset = 0;
 export const PolkadotLeasePeriodPerSlot = 8;
 export const KusamaLeasePeriodPerSlot = 8;
 
+// These hard-coded block numbers will be updated by a GitHub action
 export const PolkadotAuctions = [
   {
     "index": 0,
@@ -18,12 +19,7 @@ export const PolkadotAuctions = [
     "endPeriodBlock": 7684110,
     "biddingEndsBlock": 7756110,
     "onboardStartBlock": 8179200,
-    "onboardEndBlock": 17856000,
-    "startDate": "Sat Nov 13 2021",
-    "endPeriodDate": "Mon Nov 15 2021",
-    "biddingEndsDate": "Sat Nov 20 2021",
-    "onboardStartDate": "Sun Dec 19 2021",
-    "onboardEndDate": "Sun May 07 2023"
+    "onboardEndBlock": 17856000
   },
   {
     "index": 1,
@@ -395,12 +391,7 @@ export const KusamaAuctions = [
     "endPeriodBlock": 7951237,
     "biddingEndsBlock": 8023773,
     "onboardStartBlock": 7862400,
-    "onboardEndBlock": 12700800,
-    "startDate": "Fri Jun 18 2021",
-    "endPeriodDate": "Sun Jun 20 2021",
-    "biddingEndsDate": "Fri Jun 25 2021",
-    "onboardStartDate": "Mon Jun 14 2021",
-    "onboardEndDate": "Mon Dec 12 2022"
+    "onboardEndBlock": 12700800
   },
   {
     "index": 1,
