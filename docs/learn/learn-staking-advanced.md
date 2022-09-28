@@ -27,7 +27,7 @@ extrinsic might lead to an event on the chain such as a reward payout to that no
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes it possible to create accounts
 having special permissions also called **proxy accounts**. For mode details about proxy accounts visit the [dedicated page](./learn-proxies.md) on this wiki.
 
-![staking](../assets/staking/stash-stakingProxy.png)
+![staking](../assets/stash-stakingProxy.png)
 
 Proxy accounts are special
 accounts which can sign [**extrinsic calls**](#pallets-and-extrinsics) made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied account. There is thus the
