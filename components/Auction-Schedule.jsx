@@ -143,7 +143,7 @@ function Render(chain, auctions, setAuctions, index) {
 
 	// If still calculating date estimation, inform user
 	if (auctions[index].hasOwnProperty("startDate") === false) {
-		const msg = "Estimating block date...";
+		const msg = "Retrieving date...";
 		auctions[index]["startDate"] = msg;
 		auctions[index]["endPeriodDate"] = msg;
 		auctions[index]["biddingEndsDate"] = msg;
