@@ -197,7 +197,7 @@ You can see this video tutorial that goes through the scenarios below. The tutor
 
 :::
 
-### Nested proxy calls
+### Nested Proxy Calls
 
 As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a stash account that has a staking proxy account, Anon. Anon is an anonymous proxy, a proxied account originally spawned by Charly that is now a any proxy of Anon and signs everything on its behalf.
 
@@ -254,14 +254,14 @@ The procedure for removing an Anon is different from the one used to remove prox
 
 :::
 
-## Why anonymous proxies?
+## Why Anonymous Proxies?
 
 Despite their complexity and associated dangers, Anon accounts have a few important benefits:
 
-### Enhanced security
+### Enhanced Security
 Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
 
-### Simplified and secure account management at a corporate level
+### Simplified and Secure Account Management at a Corporate Level
 Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
 
 **Without Anon**, Charlie must (see _left_ side of the Figure below):
@@ -277,11 +277,11 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 ![anon vs stash plot](../assets/anon_vs_stash_plot.png)
 
-### Multi-signature account management
+### Multi-signature Account Management
 
 Anonymous proxies are useful to efficiently manage multi-signature (multisigs) accounts. In fact, multisigs are deterministic, which means that once a multisig is created the signatories cannot be changed. If one of the signatories wants to leave the multisig, a new multisig must be created. This is inconvenient, especially at corporate-level management where the chance of replacing someone within a multisig can be high.
 
-#### One anonymous proxy within a multisig
+#### One Anonymous Proxy within a Multisig
 
 :::info Walk-through tutorial video
 
@@ -301,7 +301,7 @@ To use an anonymous proxy within a multisig you need to use the Extrinsic Tab an
 
 :::
 
-#### Multisig made of anonymous proxies
+#### Multisig made of Anonymous Proxies
 
 :::info Walk-through tutorial video
 
