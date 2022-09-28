@@ -148,7 +148,7 @@ class Owner can add on-chain, for example, a link to an IPFS hash or other off-c
 service. The Uniques pallet also supports setting key/value pairs as attributes to a class or
 instance.
 
-### Transferring Asset Balances
+### Transferring NFTs
 
 Users can transfer their NFTs to other accounts. The chain also provides an `approve_transfer`,
 `transfer_approved`, and `cancel_approval` interface that application developers can use to allow
