@@ -418,7 +418,7 @@ There are three types of actions you can take with a multisig account:
 
 :::info
 
-Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig) for more information about the actions you can take with a multi signature account.
+Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig) for more information about the actions you can take with a multi-signature account.
 
 :::
 
@@ -450,7 +450,7 @@ Check the "How to create a multisig account" section on
 We recommend trying out the tutorial on
 [Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
 
-You can also see this video tutorial for more information about creating multisig accounts, as well as transact with them using both the Accounts and the Extrinsic tabs in the Polkadot-JS UI.
+You can also see [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) for more information about transacting with multisigs using the Accounts Tab, or [this other video](https://www.youtube.com/watch?v=T0vIuJcTJeQ) using the Extrinsic Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
 
 :::
 
