@@ -166,8 +166,9 @@ function Render(chain, auctions, setAuctions, index) {
 
 // TODO - these functions will be used by the GitHub action when adding new values to auctions.js
 
-async function OnboardingBlocks(api, hash, chain) {
-
+// Get the auction end, on-board start and end blocks from auction start block
+async function GetAuctionBlocks(api, startBlock, chain) {
+	const hash = await BlockToHash(startBlock);
 	if (hash !== "0x0000000000000000000000000000000000000000000000000000000000000000") {
 		const apiAt = await api.at(hash);
 		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
@@ -183,14 +184,15 @@ async function OnboardingBlocks(api, hash, chain) {
 		}
 	}
 	else {
+		// We are dealing with a future block - TODO use subscan instead of PolkadotJS?
 		return [0, 0];
 	}
 }
 
+// Decode block extrinsics - first item is always a timestamp
 async function GetBlockTimestamp(api, block) {
 	const hash = await BlockToHash(api, block);
 	const signedBlock = await api.rpc.chain.getBlock(hash);
-	// Decode block extrinsics - first item is always a timestamp
 	const ex = signedBlock.block.extrinsics[0];
 	const { isSigned, meta, method: { args, method, section } } = ex;
 	const timestampString = `${args.map((a) => a.toString()).join(', ')}`;
@@ -198,11 +200,13 @@ async function GetBlockTimestamp(api, block) {
 	return timestamp.toDateString();
 }
 
+// Block number to block hash
 async function BlockToHash(api, block) {
 	const hash = await api.rpc.chain.getBlockHash(block);
 	return hash;
 }
 
+// Convert an integer representing number of days block count for that time span
 function DaysToBlocks(days) {
 	const blocks = (days / 6) * 86400;
 	return blocks;
