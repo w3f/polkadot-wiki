@@ -191,13 +191,13 @@ the chain, as you will be unable to sign extrinsics using the UI.
 
 Proxy calls are used by proxies to call proxied accounts. These calls are especially important for anonymous proxies, as any attempt to sign transactions with an anonymous proxy will fail. For more details see the [dedicated section about anonymous proxies](#anonymous-proxies).
 
-### Nested proxy calls
-
 :::info Walk-through tutorial video
 
 You can see this video tutorial that goes through the scenarios below. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
 
 :::
+
+### Nested proxy calls
 
 As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a stash account that has a staking proxy account, Anon. Anon is an anonymous proxy, a proxied account originally spawned by Charly that is now a any proxy of Anon and signs everything on its behalf.
 
