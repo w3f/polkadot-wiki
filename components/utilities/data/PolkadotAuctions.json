@@ -2,7 +2,7 @@
   {
     "index": 0,
     "startBlock": 7658910,
-    "startBlockHash": "0xf34a77856ab1190ff207ddc2cf7f05dd5fe9760a24bf8a1631fb19f142858bc7",
+    "startHash": "0xf34a77856ab1190ff207ddc2cf7f05dd5fe9760a24bf8a1631fb19f142858bc7",
     "endPeriodBlock": 7684110,
     "endPeriodHash": "0x829a220ff77951e94d6c33324d190bfae7fe07d62b4fc1dbf6c8f1cc93936c7d",
     "biddingEndsBlock": 7756110,
@@ -15,7 +15,7 @@
   {
     "index": 1,
     "startBlock": 7759710,
-    "startBlockHash": "0xe33d55c5e89bbe614c745021c9c8f47de5bd23044b6ed63f03827c69593f8133",
+    "startHash": "0xe33d55c5e89bbe614c745021c9c8f47de5bd23044b6ed63f03827c69593f8133",
     "endPeriodBlock": 7784910,
     "endPeriodHash": "0xf8db7bf3fdb6ba575d2fbb0ffe04b6920439b1205764420167526993fc60c103",
     "biddingEndsBlock": 7856910,
@@ -28,7 +28,7 @@
   {
     "index": 2,
     "startBlock": 7860510,
-    "startBlockHash": "0xc98c7d2115f98c956df7cb0809358ff9ff4579d04e4163e304ad27f20328815e",
+    "startHash": "0xc98c7d2115f98c956df7cb0809358ff9ff4579d04e4163e304ad27f20328815e",
     "endPeriodBlock": 7885710,
     "endPeriodHash": "0xbfe99f7c66392b4bf71ff991a0f25ea3a6cdf7b246ba604cb7fe11bdcf43d694",
     "biddingEndsBlock": 7957710,
@@ -41,7 +41,7 @@
   {
     "index": 3,
     "startBlock": 7961310,
-    "startBlockHash": "0x39a7d60f4d0b8e866034779a6bebf459fccd5979162da46488acb9d5ac37dc13",
+    "startHash": "0x39a7d60f4d0b8e866034779a6bebf459fccd5979162da46488acb9d5ac37dc13",
     "endPeriodBlock": 7986510,
     "endPeriodHash": "0x9ff708405391ff5c50159caac1a3c81833ee6ef23eafc2e2912955ef3a2a8d05",
     "biddingEndsBlock": 8058510,
@@ -54,7 +54,7 @@
   {
     "index": 4,
     "startBlock": 8062110,
-    "startBlockHash": "0x5bb07fb18101cebfcc12e52dcd680b9f5fe9532110f36f0b451d275b5b228ae9",
+    "startHash": "0x5bb07fb18101cebfcc12e52dcd680b9f5fe9532110f36f0b451d275b5b228ae9",
     "endPeriodBlock": 8087310,
     "endPeriodHash": "0xeacde5254d66281f5b1ce4724bccbb35a4daf2b6ee5df9c2125e8dec59524bfc",
     "biddingEndsBlock": 8159310,
@@ -67,7 +67,7 @@
   {
     "index": 5,
     "startBlock": 8263710,
-    "startBlockHash": "0x58380e09558a1203b7f1e47dcb9a7f8e100f736c309d86a9b0bed00648566373",
+    "startHash": "0x58380e09558a1203b7f1e47dcb9a7f8e100f736c309d86a9b0bed00648566373",
     "endPeriodBlock": 8288910,
     "endPeriodHash": "0x7baad846dfe9d4eaea2c9999a602cee23cdccfb376207a71fd06f09c2f36c101",
     "biddingEndsBlock": 8360910,
@@ -80,7 +80,7 @@
   {
     "index": 6,
     "startBlock": 8465310,
-    "startBlockHash": "0x300cf7f0ce8a02c40fcfbbe9a0d112a78bf3091e5d48f73535c481ca5719a377",
+    "startHash": "0x300cf7f0ce8a02c40fcfbbe9a0d112a78bf3091e5d48f73535c481ca5719a377",
     "endPeriodBlock": 8490510,
     "endPeriodHash": "0xbd0478beb09ecad1b4c85e6398ac391249841ee22b9f9f0ef698be1955ad7fda",
     "biddingEndsBlock": 8562510,
@@ -93,7 +93,7 @@
   {
     "index": 7,
     "startBlock": 8666910,
-    "startBlockHash": "0x6fce71374fc38960dd0c09aba38ecb9b661cea53fcac0a17b04c45776c19b573",
+    "startHash": "0x6fce71374fc38960dd0c09aba38ecb9b661cea53fcac0a17b04c45776c19b573",
     "endPeriodBlock": 8692110,
     "endPeriodHash": "0x81ac18b899688a84ed88f16de3f7304bf571634d62b50b7bcb3b0397b215909f",
     "biddingEndsBlock": 8764110,
@@ -106,7 +106,7 @@
   {
     "index": 8,
     "startBlock": 8868510,
-    "startBlockHash": "0xcffffee46f77c13655225dae770c92df4f75117dea77ef09b9266b8ec9221a03",
+    "startHash": "0xcffffee46f77c13655225dae770c92df4f75117dea77ef09b9266b8ec9221a03",
     "endPeriodBlock": 8893710,
     "endPeriodHash": "0x8f0ce3a01728cc4df20ead4faf2457977db491ce58a4b53695257f60ed10d5eb",
     "biddingEndsBlock": 8965710,
@@ -119,7 +119,7 @@
   {
     "index": 9,
     "startBlock": 9070110,
-    "startBlockHash": "0x0d244f2cf1555189e284f5a95f473a5dee3efa933b5e9778bef33208e8f19b64",
+    "startHash": "0x0d244f2cf1555189e284f5a95f473a5dee3efa933b5e9778bef33208e8f19b64",
     "endPeriodBlock": 9095310,
     "endPeriodHash": "0x349f58fa5d19147125cd551211aea19efc0d994ea61b78be8b8052f91ccc199b",
     "biddingEndsBlock": 9167310,
@@ -132,7 +132,7 @@
   {
     "index": 10,
     "startBlock": 9271910,
-    "startBlockHash": "0x4f6abb1f2cf81490980e82cbb990738a4448d48d7af6ed4f28b9d45284ba8a16",
+    "startHash": "0x4f6abb1f2cf81490980e82cbb990738a4448d48d7af6ed4f28b9d45284ba8a16",
     "endPeriodBlock": 9296910,
     "endPeriodHash": "0x1107df4dad628f5cd59634118f5baed9bd2c0983b928851a5d1c860d41843568",
     "biddingEndsBlock": 9368910,
@@ -145,7 +145,7 @@
   {
     "index": 11,
     "startBlock": 9400000,
-    "startBlockHash": "0xfbaea316f6f2875a4e233cf5794edf1b4f3cb8b2cd1b16e3e5f29418f9658736",
+    "startHash": "0xfbaea316f6f2875a4e233cf5794edf1b4f3cb8b2cd1b16e3e5f29418f9658736",
     "endPeriodBlock": 9427000,
     "endPeriodHash": "0xb78f8e3956915273b43b21f65c892b95807fcfddd6ac6e1b3a6fe43518ad2edc",
     "biddingEndsBlock": 9499000,
@@ -158,7 +158,7 @@
   {
     "index": 12,
     "startBlock": 9572800,
-    "startBlockHash": "0x8f70ea26f4fdda4943b9e3cdd254d3ad2f02b79668f39bd43a58617491840eae",
+    "startHash": "0x8f70ea26f4fdda4943b9e3cdd254d3ad2f02b79668f39bd43a58617491840eae",
     "endPeriodBlock": 9599800,
     "endPeriodHash": "0x03fa144cac5be0cf60be4b6a4bf9fd71d123ecf714a77f0be6e74d0a2ebf0eb0",
     "biddingEndsBlock": 9671800,
@@ -171,7 +171,7 @@
   {
     "index": 13,
     "startBlock": 9745600,
-    "startBlockHash": "0xba827bee7443dd29374773fe94fa0087d9c5be6ed410cfd053b486c90454a949",
+    "startHash": "0xba827bee7443dd29374773fe94fa0087d9c5be6ed410cfd053b486c90454a949",
     "endPeriodBlock": 9772600,
     "endPeriodHash": "0xddde763dbb5e3f772823685ca6ae95ab7de4a9ea16c99e852a39280fbdb1d314",
     "biddingEndsBlock": 9844600,
@@ -184,7 +184,7 @@
   {
     "index": 14,
     "startBlock": 9918400,
-    "startBlockHash": "0x31c0d819ad75d0b28eb74569d9a3aac6c6122a827a82a65d5180059bd18aca9f",
+    "startHash": "0x31c0d819ad75d0b28eb74569d9a3aac6c6122a827a82a65d5180059bd18aca9f",
     "endPeriodBlock": 9945400,
     "endPeriodHash": "0x645862ffd0f8d25314e856e6f88fbbca85317362055f15462eabb151139dc794",
     "biddingEndsBlock": 10017400,
@@ -197,7 +197,7 @@
   {
     "index": 15,
     "startBlock": 10091200,
-    "startBlockHash": "0x016929971c883a92e9bd1e7fd8e1702bdeba4313ccc37adb6aab065737c9fbbc",
+    "startHash": "0x016929971c883a92e9bd1e7fd8e1702bdeba4313ccc37adb6aab065737c9fbbc",
     "endPeriodBlock": 10118200,
     "endPeriodHash": "0x605c6f46277692402e3438ef1666011ce9840516a4691fe782679c36305615c4",
     "biddingEndsBlock": 10190200,
@@ -210,7 +210,7 @@
   {
     "index": 16,
     "startBlock": 10264000,
-    "startBlockHash": "0x857281a1c6d7d51db4e18e2c4769258fd9c4ccfa8985b2f6f078b4268968862f",
+    "startHash": "0x857281a1c6d7d51db4e18e2c4769258fd9c4ccfa8985b2f6f078b4268968862f",
     "endPeriodBlock": 10291000,
     "endPeriodHash": "0xf93bc04d073e42667f9c455e0441ba88b725079548d51256e130b70233afaa92",
     "biddingEndsBlock": 10363000,
@@ -223,7 +223,7 @@
   {
     "index": 17,
     "startBlock": 10436800,
-    "startBlockHash": "0xdbf63dd4777587c577bd0b9c1d94578b90a9a6b633243d11ec40781df2c27f3b",
+    "startHash": "0xdbf63dd4777587c577bd0b9c1d94578b90a9a6b633243d11ec40781df2c27f3b",
     "endPeriodBlock": 10463800,
     "endPeriodHash": "0x88814521f67cccb58ac540ec34d769f411138f5f2c381d3b82f85e6a19606e21",
     "biddingEndsBlock": 10535800,
@@ -236,7 +236,7 @@
   {
     "index": 18,
     "startBlock": 10609600,
-    "startBlockHash": "0x4567f26267abdc005ff14393cb10515b1e7aa948b5c158cb8726e6648c3f83cc",
+    "startHash": "0x4567f26267abdc005ff14393cb10515b1e7aa948b5c158cb8726e6648c3f83cc",
     "endPeriodBlock": 10636600,
     "endPeriodHash": "0xcd0f4d456d3bacda9b525397d66ea4bfc31f04532814403612c9f3ba4f7693bf",
     "biddingEndsBlock": 10708600,
@@ -249,7 +249,7 @@
   {
     "index": 19,
     "startBlock": 10782400,
-    "startBlockHash": "0x2cfaed1b584595954f34df3a78cc71afcdb2162c3c346bde665bc906183f9f22",
+    "startHash": "0x2cfaed1b584595954f34df3a78cc71afcdb2162c3c346bde665bc906183f9f22",
     "endPeriodBlock": 10809400,
     "endPeriodHash": "0x5b75ee71410cf71981c1be651994966a2de87532e1671c0a6077b71be5c70c4f",
     "biddingEndsBlock": 10881400,
@@ -262,7 +262,7 @@
   {
     "index": 20,
     "startBlock": 10955200,
-    "startBlockHash": "0x6051954494cefd6fcaec356b6c29306fb5246c2a4227a31ee0ed8c764a6be521",
+    "startHash": "0x6051954494cefd6fcaec356b6c29306fb5246c2a4227a31ee0ed8c764a6be521",
     "endPeriodBlock": 10982200,
     "endPeriodHash": "0x9030aa514439fc472de91d04c5dbfc8eb4f2df4088f09fb32481f66371896ff0",
     "biddingEndsBlock": 11054200,
@@ -275,7 +275,7 @@
   {
     "index": 21,
     "startBlock": 11128000,
-    "startBlockHash": "0x200798f8c5ec345cfdbbc0aaa01f3049dc6342491d03ae946f5ea7f8cf891f29",
+    "startHash": "0x200798f8c5ec345cfdbbc0aaa01f3049dc6342491d03ae946f5ea7f8cf891f29",
     "endPeriodBlock": 11155000,
     "endPeriodHash": "0x13035e180f6aea9d7ed8f35384282a5d21311c7450373792823e6ac32aa972c7",
     "biddingEndsBlock": 11227000,
@@ -288,7 +288,7 @@
   {
     "index": 22,
     "startBlock": 11300800,
-    "startBlockHash": "0x9a2181f3b935ba5f970b0d7f67a900026ac5f90004f65f450fcf76734559cd9a",
+    "startHash": "0x9a2181f3b935ba5f970b0d7f67a900026ac5f90004f65f450fcf76734559cd9a",
     "endPeriodBlock": 11327800,
     "endPeriodHash": "0xf64a9ac91e79eaece8d83a4b8afe1c2d3109389e14f39c0df9090d13f00b0725",
     "biddingEndsBlock": 11399800,
@@ -301,7 +301,7 @@
   {
     "index": 23,
     "startBlock": 11473600,
-    "startBlockHash": "0x6a4bd3603ed1e81d7abbe3be7235cfd37daefb09090805c1ba0724bd02e49372",
+    "startHash": "0x6a4bd3603ed1e81d7abbe3be7235cfd37daefb09090805c1ba0724bd02e49372",
     "endPeriodBlock": 11500600,
     "endPeriodHash": "0x027e35b550b0fd3b14f28e9225b2436626c308b639340f9223472a5de6588ce5",
     "biddingEndsBlock": 11572600,
@@ -314,7 +314,7 @@
   {
     "index": 24,
     "startBlock": 11646400,
-    "startBlockHash": "0x8b04c7bdc88cdd1d596ee41b9f6ebd864dc2faeab2c47a1a1e12218d3b8fef60",
+    "startHash": "0x8b04c7bdc88cdd1d596ee41b9f6ebd864dc2faeab2c47a1a1e12218d3b8fef60",
     "endPeriodBlock": 11673400,
     "endPeriodHash": "0xdcdcd0810efe1b3efce16c1c34ea932c56af9543bb36f416e23376259c532814",
     "biddingEndsBlock": 11745400,
@@ -327,7 +327,7 @@
   {
     "index": 25,
     "startBlock": 11819200,
-    "startBlockHash": "0x29a02e7e248c00d28ecb3ba21bfc15388699fdf78fa2a27965fbf5febefafac4",
+    "startHash": "0x29a02e7e248c00d28ecb3ba21bfc15388699fdf78fa2a27965fbf5febefafac4",
     "endPeriodBlock": 11846200,
     "endPeriodHash": "0x6e88992bf80757310124a7ae690c0ca724e48790afe84e6dbe8a3139873e3d67",
     "biddingEndsBlock": 11918200,
@@ -340,7 +340,7 @@
   {
     "index": 26,
     "startBlock": 11992000,
-    "startBlockHash": "0xe414aed846b09dc66b6eca44d38267451032e6b24330fbfe0e8ca5cf49837651",
+    "startHash": "0xe414aed846b09dc66b6eca44d38267451032e6b24330fbfe0e8ca5cf49837651",
     "endPeriodBlock": 12019000,
     "endPeriodHash": "0x8e018adaad4b19f8e54e3b3863730942c754e800ade37d584618cfb0eb329a28",
     "biddingEndsBlock": 12091000,
@@ -353,7 +353,7 @@
   {
     "index": 27,
     "startBlock": 12164800,
-    "startBlockHash": "0xc07d6fdc949315ac606c89af6dc16181413a4f972a72f1159ee328d3a66cff5f",
+    "startHash": "0xc07d6fdc949315ac606c89af6dc16181413a4f972a72f1159ee328d3a66cff5f",
     "endPeriodBlock": 12191800,
     "endPeriodHash": "0x5ad4033dfca9d1ec020c0fad804390b6e215408c23af39bdb48d67d07cd865d3",
     "biddingEndsBlock": 12263800,
@@ -366,7 +366,7 @@
   {
     "index": 28,
     "startBlock": 12337600,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 12364600,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 12436600,
@@ -379,7 +379,7 @@
   {
     "index": 29,
     "startBlock": 12510400,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 12537400,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 12609400,
@@ -392,7 +392,7 @@
   {
     "index": 30,
     "startBlock": 12683200,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 12710200,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 12782200,
@@ -405,7 +405,7 @@
   {
     "index": 31,
     "startBlock": 12856000,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 12883000,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 12955000,
@@ -418,7 +418,7 @@
   {
     "index": 32,
     "startBlock": 13028800,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 13055800,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 13127800,
@@ -431,7 +431,7 @@
   {
     "index": 33,
     "startBlock": 13201600,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 13228600,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 13300600,
@@ -444,7 +444,7 @@
   {
     "index": 34,
     "startBlock": 13374400,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 13401400,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 13473400,
@@ -457,7 +457,7 @@
   {
     "index": 35,
     "startBlock": 13547200,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 13574200,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 13646200,
@@ -470,7 +470,7 @@
   {
     "index": 36,
     "startBlock": 13720000,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 13747000,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 13819000,
@@ -483,7 +483,7 @@
   {
     "index": 37,
     "startBlock": 13892800,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 13919800,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 13991800,
@@ -496,7 +496,7 @@
   {
     "index": 38,
     "startBlock": 14065600,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 14092600,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 14164600,
@@ -509,7 +509,7 @@
   {
     "index": 39,
     "startBlock": 14238400,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 14265400,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 14337400,
@@ -522,7 +522,7 @@
   {
     "index": 40,
     "startBlock": 14411200,
-    "startBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 14438200,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 14510200,

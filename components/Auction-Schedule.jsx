@@ -18,6 +18,7 @@ let ChainState =  {
 	blockDate: undefined,
 }
 let Options = [];
+const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
 
 // Component for displaying auction data
 function AuctionSchedule() {
@@ -77,17 +78,24 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 		ChainState.blockDate = GetBlockTimestamp(ChainState.block);
 	}
 
-	// Retrieve or estimate block times
-	if (ChainState.blockNumber > auctions[index].startBlock) {
-		console.log("start block has already occurred");
-	} else {
-		console.log("start block has not yet occurred");
+	const selection = auctions[index];
+	const selectedBlocks = {
+		startDate: [selection.startBlock, selection.startHash],
+		endPeriodDate: [selection.endPeriodBlock, selection.endPeriodHash],
+		biddingEndsDate: [selection.biddingEndsBlock, selection.biddingEndsHash],
+		onboardStartDate: [selection.onboardStartBlock, selection.onboardStartHash],
+		onboardEndDate: [selection.onboardEndBlock, selection.onboardEndHash]
 	}
-	auctions[index].startDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].startBlock);
-	auctions[index].endPeriodDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].endPeriodBlock);
-	auctions[index].biddingEndsDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].biddingEndsBlock);
-	auctions[index].onboardStartDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].onboardStartBlock);
-	auctions[index].onboardEndDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].onboardEndBlock);
+
+	// If block is finalized get on-chain timestamp, otherwise estimate it
+	for (const [key, value] of Object.entries(selectedBlocks)) {
+		if (value[1] !== FutureBlock) {
+			const block = await API.rpc.chain.getBlock(value[1]);
+			auctions[index][key] = GetBlockTimestamp(block).toDateString();
+		} else {
+			auctions[index][key] = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, value[0]);
+		}
+	}
 	
 	Render(chain, auctions, setAuctions, index);
 }
@@ -188,7 +196,7 @@ function Render(chain, auctions, setAuctions, index) {
 // Get the auction end, on-board start and end blocks from auction start block
 async function GetAuctionBlocks(api, startBlock, chain) {
 	const hash = await BlockToHash(startBlock);
-	if (hash !== "0x0000000000000000000000000000000000000000000000000000000000000000") {
+	if (hash !== FutureBlock) {
 		const apiAt = await api.at(hash);
 		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
 		if (chain === "Polkadot") {
