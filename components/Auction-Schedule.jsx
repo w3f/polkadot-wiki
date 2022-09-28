@@ -9,7 +9,7 @@ import {
 	KusamaSlotLeasePeriod,
 	KusamaSlotLeaseOffset,
 	KusamaLeasePeriodPerSlot
-} from './utilities/auctions';
+} from './utilities/auctionVariables';
 
 let API = undefined;
 let ChainState =  {
