@@ -11,8 +11,13 @@ import {
 	KusamaLeasePeriodPerSlot
 } from './utilities/auctions';
 
-let api = undefined;
-let options = [];
+let API = undefined;
+let ChainState =  {
+	block: undefined,
+	blockNumber: undefined,
+	blockDate: undefined,
+}
+let Options = [];
 
 // Component for displaying auction data
 function AuctionSchedule() {
@@ -49,9 +54,9 @@ function AuctionSchedule() {
 async function LoadOptions(auctions, wsProvider) {
 	for (let i = 0; i < auctions.length; i++) {
 		const option = <option value={i} key={i}>{`Auction #${i + 1} at Block #${auctions[i]["startBlock"]}`}</option>
-		options.push(option);
+		Options.push(option);
 	}
-	api = await ApiPromise.create({ provider: wsProvider });
+	API = await ApiPromise.create({ provider: wsProvider });
 }
 
 // Renders default value prior to initializing on-chain retrieval
@@ -63,26 +68,26 @@ async function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) 
 
 // Connect to a chain, retrieve required values, re-render
 async function GetChainData(chain, auctions, setAuctions, index) {
-	// Get the current block for projection
-	const currentBlock = await api.rpc.chain.getBlock();
-	const currentBlockNumber = currentBlock.block.header.number.toPrimitive();
+	// Check if current block was already retrieved
+	if(ChainState.block === undefined) {
+		// Get the current block for projection
+		ChainState.block = await API.rpc.chain.getBlock();
+		ChainState.blockNumber = ChainState.block.block.header.number.toPrimitive();
+		// Get current on-chain date/time
+		ChainState.blockDate = GetBlockTimestamp(ChainState.block);
+	}
 
-	// Get current on-chain date/time
-	const chainTimestamp = await api.query.timestamp.now();
-	const date = new Date(chainTimestamp.toPrimitive());
-
-	// TODO - estimates should only be made for future block, otherwise use on-chain timestamp
-	// Should we also cache block hashes to avoid having to make multiple rpc invocations?
-	if (currentBlockNumber > auctions[index].startBlock) {
+	// Retrieve or estimate block times
+	if (ChainState.blockNumber > auctions[index].startBlock) {
 		console.log("start block has already occurred");
 	} else {
 		console.log("start block has not yet occurred");
 	}
-	auctions[index].startDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].startBlock);
-	auctions[index].endPeriodDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].endPeriodBlock);
-	auctions[index].biddingEndsDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].biddingEndsBlock);
-	auctions[index].onboardStartDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].onboardStartBlock);
-	auctions[index].onboardEndDate = EstimateBlockDate(date, currentBlockNumber, auctions[index].onboardEndBlock);
+	auctions[index].startDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].startBlock);
+	auctions[index].endPeriodDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].endPeriodBlock);
+	auctions[index].biddingEndsDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].biddingEndsBlock);
+	auctions[index].onboardStartDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].onboardStartBlock);
+	auctions[index].onboardEndDate = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, auctions[index].onboardEndBlock);
 	
 	Render(chain, auctions, setAuctions, index);
 }
@@ -105,6 +110,16 @@ function Render(chain, auctions, setAuctions, index) {
 		explorerUrl = "https://kusama.subscan.io/block/";
 	}
 
+	// Current block information
+	let currentBlockNumber = ChainState.blockNumber;
+	let currentBlockDate = ChainState.blockDate;
+	if (currentBlockNumber !== undefined) {
+		currentBlockDate = currentBlockDate.toDateString();
+	} else {
+		currentBlockNumber = 0;
+		currentBlockDate = "Connecting...";
+	}
+
 	// If still calculating date estimation, inform user
 	if (auctions[index].hasOwnProperty("startDate") === false) {
 		const msg = "Estimating block date...";
@@ -117,8 +132,15 @@ function Render(chain, auctions, setAuctions, index) {
 
 	const content = <div>
 		<select id="AuctionSelector" onChange={(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
-			{options.map((option) => (option))}
+			{Options.map((option) => (option))}
 		</select>
+		<hr />
+		<b>Current Chain State:</b>
+		<br />
+		{`${currentBlockDate} - `}
+		<a href={`${explorerUrl}${currentBlockNumber}`}>
+			Block #{currentBlockNumber}
+		</a>
 		<hr />
 		<b>Auction Starts:</b>
 		<br />
@@ -155,16 +177,14 @@ function Render(chain, auctions, setAuctions, index) {
 		</a>
 		<hr />
 		<p style={{ color: "#6c757d" }}>
-			The dates (based on UTC) and block numbers listed above can change based on network block production and the potential for skipped blocks.
-			Click on the block number for an up-to-date estimate.
+			The dates and block numbers listed above can change based on network block production and the potential for skipped blocks.
+			Dates for finalized blocks are pulled from on-chain, while future blocks are estimated using 6 second average block times.
 		</p>
 	</div>
 
 	setAuctions(content);
 	return auctions;
 }
-
-// TODO - these functions will be used by the GitHub action when adding new values to auctions.js
 
 // Get the auction end, on-board start and end blocks from auction start block
 async function GetAuctionBlocks(api, startBlock, chain) {
@@ -175,29 +195,27 @@ async function GetAuctionBlocks(api, startBlock, chain) {
 		if (chain === "Polkadot") {
 			const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
 			const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
-			return [onboardStartBlock, onboardEndBlock]
+			return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
 		}
 		else if (chain === "Kusama") {
 			const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
 			const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
-			return [onboardStartBlock, onboardEndBlock]
+			return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
 		}
 	}
 	else {
-		// We are dealing with a future block - TODO use subscan instead of PolkadotJS?
-		return [0, 0];
+		// We are dealing with future blocks - TODO use subscan instead of PolkadotJS?
+		return [0, 0, 0];
 	}
 }
 
 // Decode block extrinsics - first item is always a timestamp
-async function GetBlockTimestamp(api, block) {
-	const hash = await BlockToHash(api, block);
-	const signedBlock = await api.rpc.chain.getBlock(hash);
+function GetBlockTimestamp(signedBlock) {
 	const ex = signedBlock.block.extrinsics[0];
 	const { isSigned, meta, method: { args, method, section } } = ex;
-	const timestampString = `${args.map((a) => a.toString()).join(', ')}`;
-	const timestamp = new Date(parseInt(timestampString));
-	return timestamp.toDateString();
+	const timestamp = `${args.map((a) => a.toString()).join(', ')}`;
+	const date = new Date(parseInt(timestamp));
+	return date;
 }
 
 // Block number to block hash
