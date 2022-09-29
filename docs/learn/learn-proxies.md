@@ -31,7 +31,7 @@ Creating multiple proxy accounts that act for a single account, lets you come up
 security practices around how you protect private keys while still being able to actively
 participate in a network.
 
-## Creating Proxies
+## Creating Proxy
 
 :::info
 
@@ -107,7 +107,7 @@ proxy can do. Before participating in a crowdloan using an Auction proxy, it is 
 check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
 distribution.
 
-## Removing Proxies
+## Removing Proxy
 
 :::info Removing proxies
 
@@ -115,7 +115,7 @@ Read the section "Removing Proxies" on [this support page](https://support.polka
 
 :::
 
-## How to view your Proxies
+## How to view your Proxy
 
 To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next to the proxied account you will notice a blue icon. Hover on it, and you will see _Proxy overview_. Click on it and you will be presented with a list of all proxies for that account.
 
@@ -167,7 +167,7 @@ The required deposit amount for one proxy is equal to:
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} * num_proxies
 
-## Time-delayed Proxies
+## Time-delayed Proxy
 
 We can add a layer of security to proxies by giving them a delay time. The delay will be
 quantified in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute delay.
@@ -213,7 +213,7 @@ Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested pr
 
 ![nested proxy calls 3x](../assets/nested_proxy_calls_3x.png)
 
-## Anonymous Proxies
+## Anonymous Proxy
 
 :::info
 
@@ -254,7 +254,7 @@ The procedure for removing an _Anon_ is different from the one used to remove pr
 
 :::
 
-## Why Anonymous Proxies?
+## Why Anonymous Proxy?
 
 Despite their complexity and associated dangers, _Anon_ accounts have important benefits. We discuss these benefits below.
 
