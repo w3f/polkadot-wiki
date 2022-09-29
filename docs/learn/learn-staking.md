@@ -9,6 +9,18 @@ slug: ../learn-staking
 
 import RPC from "./../../components/RPC-Connection";
 
+:::tip New to Staking?
+
+Start your staking journey or explore more information about staking on
+[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
+[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+check this
+[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
+help you get started.
+{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+
+:::
+
 Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
