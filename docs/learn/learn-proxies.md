@@ -256,7 +256,7 @@ The procedure for removing an Anon is different from the one used to remove prox
 
 ## Why Anonymous Proxies?
 
-Despite their complexity and associated dangers, Anon accounts have important benefits. We discuss these benefits below.
+Despite their complexity and associated dangers, _Anon_ accounts have important benefits. We discuss these benefits below.
 
 ### Enhanced Security
 Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the Anon are `Any` proxies. Security can be further increased if the `Any` proxy is a multi-signature account.
