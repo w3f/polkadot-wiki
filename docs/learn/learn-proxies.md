@@ -234,7 +234,7 @@ Read carefully the text below and before performing any action using anonymous p
 
 :::
 
-Anonymous proxies are very different from other proxy types. Proxies that we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign for different things, the more we expose that key to the internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account. We can imagine proxies as bodyguards of a VIP, loyal and ready to risk their lives to ensure the VIP's protection.
+Anonymous proxies are very different from other proxy types. The proxies we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account, reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign transactions, the more we expose that key to the internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account. We can imagine proxies as bodyguards of a VIP, loyal and ready to risk their lives to ensure the VIP's protection.
 
 ![anonymous proxies](../assets/proxy_vs_anon.png)
 
