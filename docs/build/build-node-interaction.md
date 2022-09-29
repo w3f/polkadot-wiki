@@ -27,7 +27,7 @@ The Parity Polkadot client exposes HTTP and WS endpoints for RPC connections. Th
 
 To get a list of all RPC methods, the node has an RPC endpoint called `rpc_methods`.
 
-For example:
+For example, using [websocat](https://github.com/vi/websocat#installation):
 
 ```bash
 echo '{"id":1,"jsonrpc":"2.0","method":"rpc_methods","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9944
