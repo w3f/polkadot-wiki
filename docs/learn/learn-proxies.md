@@ -93,7 +93,7 @@ The **Identity Judgement** proxies are in charge of allowing registrars to make 
 identity. If you are unfamiliar with judgment and identities on chain, please refer to
 [this page](learn-identity.md#judgements).
 
-### Cancel
+### Cancel Proxy
 
 Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy 
 announcements.
