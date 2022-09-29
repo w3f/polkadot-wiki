@@ -55,7 +55,7 @@ When a proxy account makes a transaction, Polkadot filters the desired transacti
 that the proxy account has the appropriate permission to make that transaction on behalf of the cold
 account. For example, staking proxies have permission to do only staking-related transactions.
 
-### Any
+### Any Proxy
 
 As implied by the name, a proxy type of **Any** allows the proxy account to make any transaction,
 including balance transfers. In most cases, this should be avoided as the proxy account is used more
