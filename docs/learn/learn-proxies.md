@@ -87,7 +87,7 @@ others must come from the controller account. The stash account is meant to stay
 controller account makes day-to-day transactions like setting session keys or deciding which
 validators to nominate. The stash account still needs to make some transactions such as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_ of stash and controller accounts but does allow the stash to be accessed even less frequently than using a controller account.
 
-### Identity Judgement
+### Identity Judgement Proxy
 
 The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an account's
 identity. If you are unfamiliar with judgment and identities on chain, please refer to
