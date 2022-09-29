@@ -22,6 +22,7 @@
   --headingFontFamily: "Unbounded", sans-serif !important;
   --docsearch-searchbox-background: white;
   --docsearch-searchbox-shadow: var(--snowColor);
+  --docusaurus-announcement-bar-height: auto !important;
 
   --custom-code-block-background: #f6f8fa;
   --custom-content-max-width: none;
@@ -305,34 +306,20 @@ button.menu__button {
 
 
 /* ==========================================================================
-  Banner
+  Banner / Announcement bar
    ========================================================================== */
-.fixed-banner {
-  z-index: 10;
-  padding: 10px;
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  color: white;
-  font-size: 0.875rem;
+
+div[role=banner] {
+  padding: 10px 0px;
   background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%),
     linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
-  background-color: #e6007a;
-  transition: transform 0.2s linear;
 }
 
-.fixed-banner--hidden {
-  transform: translateY(100%);
+div[role=banner] .close {
+  color: #fff;
 }
 
-@media (min-width: 768px) {
-  .fixed-banner {
-    padding: 12px;
-    font-size: 1rem;
-  }
-}
 
 /* ==========================================================================
    Home Footer
