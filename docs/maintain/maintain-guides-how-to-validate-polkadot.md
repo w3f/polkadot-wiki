@@ -7,7 +7,8 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection";;
+import RPC from "./../../components/RPC-Connection";
+
 import MinimumStake from "./../../components/Minimum-Stake";
 
 :::info

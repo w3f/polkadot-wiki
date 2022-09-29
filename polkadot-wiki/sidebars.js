@@ -87,8 +87,9 @@ module.exports = {
               label: "Staking",
               items: [
                 "learn/learn-staking",
-                "learn/learn-staking-faq",
+                "learn/learn-staking-advanced",
                 "learn/learn-nomination-pools",
+                "learn/learn-staking-faq"
               ],
             },
           ],

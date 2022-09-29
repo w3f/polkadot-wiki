@@ -38,7 +38,7 @@ function FooterSocialColumn() {
         href="https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw"
         className="socicon-youtube"
       />
-      <SocialItem href="https://discord.gg/polkadot" className="socicon-discord" />
+      <SocialItem href="https://dot.li/discord" className="socicon-discord" />
     </ul>
   );
 
@@ -131,19 +131,12 @@ export default function Footer() {
               href="https://polkadot.network/build"
             />
             <FooterLink
-              content={
-                <>
-                  <span className="mr-2">
-                    {translate({
-                      message: "Staking",
-                      id: "footer.body.general.staking",
-                      description: "Staking link in General column in Footer",
-                    })}
-                  </span>
-                  <span className="nav-footer-item-pill">BETA</span>
-                </>
-              }
-              href="https://staking.polkadot.network/dashboard/"
+              content={translate({
+                message: "Staking",
+                id: "footer.body.general.staking",
+                description: "Staking link in General column in Footer",
+              })}
+              href="https://polkadot.network/staking/"
             />
             <FooterLink
               content={translate({
