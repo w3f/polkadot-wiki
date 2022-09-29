@@ -29,7 +29,7 @@ function AuctionSchedule() {
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
 			const chain = "Polkadot";
 			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
-			await LoadOptions(PolkadotAuctions,wsProvider);
+			await LoadOptions(PolkadotAuctions, wsProvider);
 			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } });
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
@@ -92,6 +92,8 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	let promises = [];
 	let keys = [];
 
+	// TODO - this is expensive to repetitively invocate so it might be worth caching dates for finalized blocks
+	// The values are cached once calculated in the viewing sessions so returning to a previous auction will display the cache
 	for (const [key, value] of Object.entries(selectedBlocks)) {
 		if (value[1] !== FutureBlock) {
 			const apiAt = await API.at(value[1]);
@@ -153,6 +155,25 @@ function Render(chain, auctions, setAuctions, index) {
 		auctions[index]["onboardStartDate"] = msg;
 		auctions[index]["onboardEndDate"] = msg;
 	}
+	
+	// On-boarding range
+	let onboarding = <div>
+		{`${auctions[index].onboardStartDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
+			Block #{auctions[index].onboardStartBlock}
+		</a>
+		{` to `}
+		{`${auctions[index].onboardEndDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
+			Block #{auctions[index].onboardEndBlock}
+		</a>
+	</div>
+	// If onboarding is too far in the future to calculate
+	if (auctions[index]["onboardStartBlock"] === 0 || auctions[index]["onboardEndBlock"] === 0) {
+		onboarding = <div>
+			On-boarding cannot yet be determined for this future event.
+		</div>
+	}
 
 	const content = <div>
 		<select id="AuctionSelector" onChange={(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
@@ -189,15 +210,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<hr />
 		<b>Winning parachain(s) onboarded:</b>
 		<br />
-		{`${auctions[index].onboardStartDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
-			Block #{auctions[index].onboardStartBlock}
-		</a>
-		{` to `}
-		{`${auctions[index].onboardEndDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
-			Block #{auctions[index].onboardEndBlock}
-		</a>
+		{ onboarding }
 		<hr />
 		<p style={{ color: "#6c757d" }}>
 			The dates and block numbers listed above can change based on network block production and the potential for skipped blocks.
