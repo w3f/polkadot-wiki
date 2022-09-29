@@ -320,6 +320,11 @@ div[role=banner] .close {
   color: #fff;
 }
 
+div[role=banner] .close:hover {
+  color: #fff !important;
+  opacity: 1;
+}
+
 
 /* ==========================================================================
    Home Footer
