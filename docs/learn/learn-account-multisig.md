@@ -1,7 +1,7 @@
 ---
 id: learn-account-multisig
 title: Multi-Signature Accounts
-sidebar_label: Multi-signature accounts
+sidebar_label: Multi-Signature Accounts
 description: Multisigs accounts on Polkadot.
 keywords: [account, multisig, polkadot account, polkadotjs]
 slug: ../learn-account-multisig
