@@ -1,7 +1,7 @@
 ---
 id: learn-staking-advanced
 title: Advanced staking
-sidebar_label: Staking
+sidebar_label: Advanced Staking Concepts
 description: Advanced staking information
 keywords: [staking, stake, nominate, nominating, NPoS, proxies]
 slug: ../learn-staking-advanced
