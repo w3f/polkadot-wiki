@@ -171,7 +171,7 @@ The required deposit amount for one proxy is equal to:
 
 We can add a layer of security to proxies by giving them a delay time. The delay will be
 quantified in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute delay.
-The proxy will announce its intended action and wait for the number
+The proxy will announce its intended action and will wait for the number
 of blocks defined in the delay time before executing it. The proxy will include the hash of the
 intended function call in the announcement. Within this time window, the intended action may be canceled by accounts that control the proxy. Now we can use proxies knowing that any malicious
 actions can be noticed and reverted within a delay period.
