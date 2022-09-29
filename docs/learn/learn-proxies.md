@@ -269,7 +269,7 @@ You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) t
 
 :::
 
-Probably the greatest benefit of using Anon accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
+Probably the greatest benefit of using _Anon_ accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
 
 **Without Anon**, Charlie must (see _left_ side of the Figure below):
 - Remove Dan as a staking proxy, this step requires 1 signature
