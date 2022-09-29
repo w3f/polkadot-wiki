@@ -9,6 +9,21 @@ slug: ../learn-nominator
 
 import RPC from "./../../components/RPC-Connection";
 
+{{ polkadot:
+
+:::tip New to Staking?
+
+Start your staking journey or explore more information about staking on 
+[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new 
+[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes 
+staking much easier and check this 
+[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) 
+to help you get started.
+
+:::
+
+:polkadot }}
+
 Nominators secure the Relay Chain by selecting good validators and staking DOT.
 
 You may have an account with DOT and want to earn fresh DOT. You could do so as validator, which
