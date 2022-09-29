@@ -423,7 +423,7 @@ Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig
 :::
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
-should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you would like to create a multisig with threshold 1 then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core) which is a tool that Parity supports with new features and weekly updates. There is a detailed [multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
+should be used. This function takes only the other signatories and the raw call as its arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you want to create a multisig with threshold 1, then you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core), which is a tool that Parity supports with new features and weekly updates. There is a detailed [multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
