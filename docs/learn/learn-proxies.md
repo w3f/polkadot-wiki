@@ -240,7 +240,7 @@ Anonymous proxies are very different from other proxy types. Proxies that we des
 
 Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That primary account then acts as _any_ proxy on behalf of the anonymous proxy. Note that, to avoid confusion, in this section we will refer to _Anon_ for anonymous proxy. _Anon_ are **key-less anonymous accounts** as they do have an address but do not have a corresponding private key and, in some sense, are anonymous as nobody has a private key to control it. The use of the _Anon_ is strictly bound to the relationship between the _Anon_ and the _any_ proxy (not necessarily the one who created the _Anon_ in the first place). Once that relationship is broken, the _Anon_ will be inaccessible (even if visible on the Polkadot-JS UI). Also, _Anon_ accounts are non-deterministic, this means that if we lose one _Anon_, the next one we create from the same primary account will have a different address.
 
-Anon accounts cannot sign anything because they do not have private keys. As a consequence, Anon cannot act as proxies (which is admittedly confusing given their original name), and cannot be included in multi-sig. An Anon account acting as a proxy will not be able to sign anything on behalf of the primary account, and an Anon within a multi-sig will be able neither to initiate nor to approve any call.
+_Anon_ accounts cannot sign anything because they do not have private keys. Although _Anon_ cannot sign any transaction directly, they can act as proxies (or better, proxy channels) within `proxy.proxy` calls. 
 
 :::danger 
 
