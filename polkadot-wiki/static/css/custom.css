@@ -316,7 +316,7 @@ div[role=banner] {
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
 }
 
-div[role=banner] button {
+div[role=banner] .close {
   color: #fff;
 }
 
