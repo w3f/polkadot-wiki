@@ -98,7 +98,7 @@ identity. If you are unfamiliar with judgment and identities on chain, please re
 Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy 
 announcements.
 
-### Auction
+### Auction Proxy
 
 Proxies that are of the type **Auction** are accounts that allow transactions pertaining to parachain 
 auctions and crowdloans. The Auction proxy account can sign those transactions on behalf of an account 
