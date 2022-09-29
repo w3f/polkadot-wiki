@@ -18,7 +18,9 @@ participate in the network with the weight of the tokens in that account. Proxie
 
 Proxies are helpful because they let you delegate efficiently and add a layer of security. Rather than
 using funds in a single account, smaller accounts with unique roles can complete tasks on behalf of the main
-stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the number of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
+stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the number of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account. 
+
+From the security perspective, we can imagine proxies as bodyguards of a VIP, loyal and ready to risk their lives to ensure the VIP's protection. But proxies are also useful in other contexts such as efficient account management at the corporate level. They also provide an elegant solution to change signatories within multi-signature accounts, and they can be used within proxy calls and nested proxy calls. In this page we will explore all these interesting use cases of proxies within the Polkadot ecosystem.
 
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as your primary token-holding account and don't want to access it very often, but you want to participate in staking to earn staking rewards. You could set one of your existing accounts as a staking proxy for that stash account. The stash account is also the controller here, but it does not matter because you will always use your staking proxy to sign staking-related transactions.
 
@@ -234,7 +236,7 @@ Read carefully the text below and before performing any action using anonymous p
 
 :::
 
-Anonymous proxies are very different from other proxy types. The proxies we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account, reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign transactions, the more we expose that key to the internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account. We can imagine proxies as bodyguards of a VIP, loyal and ready to risk their lives to ensure the VIP's protection.
+Anonymous proxies are very different from other proxy types. The proxies we described so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the primary account, reducing the exposure of the primary account's private key. Remember, the more often we use an account's private key to sign transactions, the more we expose that key to the internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the attention of potential attackers away from the primary account, as proxies' private keys will be used most of the time to perform actions on behalf of the primary account.
 
 ![anonymous proxies](../assets/proxy_vs_anon.png)
 
