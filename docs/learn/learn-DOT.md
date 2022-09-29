@@ -15,7 +15,7 @@ Bitcoin or Ether is the native token of the Ethereum blockchain.
 The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck (a
 reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible
 distance in the physical Universe). You can compare the Planck to Satoshis or Wei, while the DOT is
-like a bitcoin or an ether. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT
+like a BTC or an ETH. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT
 is equal to 1e10 Planck.
 
 ### Polkadot
