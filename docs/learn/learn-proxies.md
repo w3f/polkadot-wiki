@@ -300,7 +300,7 @@ It is possible to put an anonymous proxy within a multisig, and then transaction
 
 ![multisig with one anon](../assets/multisig_with_one_anon.png)
 
-If Charly wants to leave the multisig, a new any proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this specific example does not do anything.
+If Charly wants to leave the multisig, a new _any_ proxy can be added to Anon and Charly can be removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this specific example does not do anything.
 
 :::note Proxy calls
 
