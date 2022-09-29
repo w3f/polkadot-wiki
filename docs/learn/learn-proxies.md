@@ -17,7 +17,7 @@ participate in the network with the weight of the tokens in that account. Proxie
 ## Why use a Proxy?
 
 Proxies are helpful because they let you delegate efficiently and add a layer of security. Rather than
-using funds in a single account, smaller accounts with unique roles complete tasks for the main
+using funds in a single account, smaller accounts with unique roles can complete tasks on behalf of the main
 stash account.  Proxies can be _hotter_ than the initial account, which can be kept cold, but the _weight_ of the tokens in the colder account can be used by the hotter accounts. This increases the security of your accounts by minimizing the number of transactions the cold account has to make. This also drives attention away from the stash account, although it is possible to determine the relationship between the proxy and the proxied account.
 
 Here below there is an example of how you might use these accounts. Imagine you have one stash account as your primary token-holding account and don't want to access it very often, but you do want to participate in staking to earn staking rewards. You could set one of your existing accounts as a staking proxy for that stash account. Note that here the stash account is also the controller, but it does not matter because you will always use your staking proxy to sign staking-related transactions.
