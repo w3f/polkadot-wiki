@@ -1,0 +1,21 @@
+name: Update Auction Schedules
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Once a week
+  workflow_dispatch: # Or manually from GitHub UI
+
+jobs:
+  update_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Update
+        run: |
+        yarn && yarn polkadot:auctions
