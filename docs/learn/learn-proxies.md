@@ -250,7 +250,7 @@ Once you remove the relationship with _any_ proxy, the Anon will be inaccessible
 
 :::caution Removing anonymous proxies
 
-The procedure for removing an Anon is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
+The procedure for removing an _Anon_ is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 :::
 
