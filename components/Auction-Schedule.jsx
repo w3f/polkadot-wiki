@@ -70,12 +70,13 @@ async function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) 
 // Connect to a chain, retrieve required values, re-render
 async function GetChainData(chain, auctions, setAuctions, index) {
 	// Check if current block was already retrieved
-	if(ChainState.block === undefined) {
+	if(ChainState.header === undefined) {
 		// Get the current block for projection
-		ChainState.block = await API.rpc.chain.getBlock();
-		ChainState.blockNumber = ChainState.block.block.header.number.toPrimitive();
+		ChainState.header = await API.rpc.chain.getHeader();
+		ChainState.blockNumber = ChainState.header.number.toPrimitive();
 		// Get current on-chain date/time
-		ChainState.blockDate = GetBlockTimestamp(ChainState.block);
+		const timestamp = (await API.query.timestamp.now()).toPrimitive();
+		ChainState.blockDate = new Date(timestamp)
 	}
 
 	const selection = auctions[index];
@@ -229,15 +230,6 @@ async function GetAuctionBlocks(api, startBlock, chain) {
 		// We are dealing with future blocks - TODO use subscan instead of PolkadotJS?
 		return [0, 0, 0];
 	}
-}
-
-// Decode block extrinsics - first item is always a timestamp
-function GetBlockTimestamp(signedBlock) {
-	const ex = signedBlock.block.extrinsics[0];
-	const { isSigned, meta, method: { args, method, section } } = ex;
-	const timestamp = `${args.map((a) => a.toString()).join(', ')}`;
-	const date = new Date(parseInt(timestamp));
-	return date;
 }
 
 // Block number to block hash
