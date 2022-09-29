@@ -9,7 +9,7 @@ slug: ../learn-proxies
 import RPC from "./../../components/RPC-Connection"
 
 Much like controller accounts in
-[staking](learn-staking.md), proxies allow users to use an account (it can be a stash account in cold storage or another account in a hot wallet) less frequently but actively
+[staking](learn-staking.md#stash-and-controller-accounts-for-staking), proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently but actively
 participate in the network with the weight of the tokens in that account. Proxies can be viewed as a more powerful and flexible version of a controller account, i.e. proxies are allowed to perform a limited amount of actions related to specific [substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another account. The video below contains more information about using proxies.
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
