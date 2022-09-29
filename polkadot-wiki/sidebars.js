@@ -49,6 +49,7 @@ module.exports = {
                 "learn/learn-account-generation",
                 "learn/learn-account-restore",
                 "learn/learn-balance-transfers",
+                "learn/learn-account-multisig",
               ],
             },
             {
@@ -97,6 +98,7 @@ module.exports = {
           type: "category",
           label: "Advanced",
           items: [
+            'learn/learn-account-advanced',
             'learn/learn-availability',
             'learn/learn-xcm',
             'learn/learn-phragmen',
