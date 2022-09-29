@@ -30,7 +30,8 @@
     "pdf": "npx mr-pdf --contentSelector=\"article\" --paginationSelector=\".pagination-nav__item--next > a\" --pdfFormat=\"A4\" --pdfMargin=\"90,60,80,60\"",
     "crowdin": "crowdin",
     "docusaurus": "docusaurus",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "update:auctions": "node ./components/utilities/updateAuctions.js"
   },
   "devDependencies": {
     "@actions/core": "^1.9.1",
