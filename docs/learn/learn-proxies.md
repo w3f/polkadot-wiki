@@ -170,7 +170,7 @@ The required deposit amount for one proxy is equal to:
 ## Time-delayed Proxies
 
 We can add a layer of security to proxies by giving them a delay time. The delay will be
-quantified in a number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean 10 blocks, which equals approximately 1 minute of delay.
+quantified in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute delay.
 The proxy will announce its intended action and wait for the number
 of blocks defined in the delay time before executing it. The proxy will include the hash of the
 intended function call in the announcement. Within this time window, the intended action may be canceled by accounts that control the proxy. Now we can use proxies knowing that any malicious
