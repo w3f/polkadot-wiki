@@ -199,7 +199,7 @@ You can see this video tutorial that goes through the scenarios below. The tutor
 
 ### Nested Proxy Calls
 
-As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a stash account that has a staking proxy account, Anon. Anon is an anonymous proxy, a proxied account originally spawned by Charly that is now a any proxy of Anon and signs everything on its behalf.
+As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a stash account that has a _staking_ proxy account, _Anon_. _Anon_ is an _anonymous_ proxy, a proxied account originally spawned by Charly that is now an _any_ proxy of _Anon_ and signs everything on its behalf.
 
 ![nested proxy calls 2x](../assets/nested_proxy_calls_2x.png)
 
