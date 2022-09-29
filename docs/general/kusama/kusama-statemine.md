@@ -6,7 +6,7 @@ description: Statemine and its features
 slug: ../../kusama-statemine
 ---
 
-import RPC from "./../../../components/RPC-Connection"
+import RPC from "./../../../components/RPC-Connection";
 
 Statemine is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Kusama (not

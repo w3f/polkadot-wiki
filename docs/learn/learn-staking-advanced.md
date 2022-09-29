@@ -3,11 +3,12 @@ id: learn-staking-advanced
 title: Advanced Staking Concepts
 sidebar_label: Advanced Staking Concepts
 description: Advanced staking information
+
 keywords: [staking, stake, nominate, nominating, NPoS, proxies]
 slug: ../learn-staking-advanced
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 This page is meant to be an advanced guide to staking with
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
@@ -38,6 +39,7 @@ made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied
 thus the possibility to create staking proxy accounts that can be used to sign only extrinsic calls
 to staking, session and utility pallets. This makes the stash account even more isolated than using
 a controller account since one can bond / unbond / bond more funds using the staking proxy account.
+
 Note that it is not necessary to have a controller, if you have a staking proxy: the stash can also
 be the controller. It is important to remember that actions that can be performed by the proxy
 accounts are limited, and in the case of staking proxy, extrinsic calls to the balances pallet

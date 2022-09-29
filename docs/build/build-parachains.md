@@ -215,7 +215,7 @@ networking layer, consensus, a Wasm interpreter) while providing an intuitive wa
 runtime. Substrate is made to ease the process of creating a new chain, but it does not provide
 support for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} compatibility directly.
 For this reason, `Cumulus`, an added _library_ contains all of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} adot compatibility glue code.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} compatibility glue code.
 
 :::note Get started with Substrate
 
@@ -322,7 +322,7 @@ Relay-routed Message Passing) in order to send transfers and messages between pa
 Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
 Rococo currently runs four test system parachains:
-[Statemint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fstatemint-rococo-rpc.parity.io#/explorer)
+[Statemint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fstatemint-rococo-rpc.parity.io#/explorer),
 [Tick](https://polkadot.js.org/apps/?rpc=wss://tick-rpc.polkadot.io#/explorer),
 [Trick](https://polkadot.js.org/apps/?rpc=wss://trick-rpc.polkadot.io#/explorer) and
 [Track](https://polkadot.js.org/apps/?rpc=wss://track-rpc.polkadot.io#/explorer). as well as several
@@ -347,7 +347,7 @@ channel on Matrix. To receive ROC tokens, use the command:
 ### Build and Register a Rococo Parathread
 
 The parachains of Rococo all use the same runtime code. The only difference between them is the
-parachain ID used for registration with the Relay Chain.x
+parachain ID used for registration with the Relay Chain.
 
 You will need to run a Rococo collator. To do so, you need to compile the following binary:
 

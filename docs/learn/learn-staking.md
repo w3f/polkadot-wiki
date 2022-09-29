@@ -1,8 +1,8 @@
 ---
 id: learn-staking
-title: Introduction to staking
-sidebar_label: Introduction to staking
-description: An introduction on staking in Polkadot's NPoS consensus model.
+title: Introduction to Staking
+sidebar_label: Introduction to Staking
+description: A high level introduction to Staking on Polkadot and NPoS model
 keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
@@ -19,8 +19,8 @@ finalize blocks on the chain. Consensus is the process of agreeing on something,
 progression of the blockchain or how blocks are added to the chain. Consensus consists of two
 actions:
 
-- **block production**, i.e. the way multiple blocks candidates are produced, and
-- **block finality**, i.e. the way only one block out of many candidates is selected and added to
+- **Block production**, i.e. the way multiple blocks candidates are produced, and
+- **Block finality**, i.e. the way only one block out of many candidates is selected and added to
   the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article
   for more information about finality).
 
