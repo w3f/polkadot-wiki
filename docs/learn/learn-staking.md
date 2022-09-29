@@ -359,6 +359,7 @@ Therefore, you may not see anything in this tab, yet still have received a payou
 (generally, but not necessarily, another nominator or the validator operator) has triggered the
 payout for that validator for that era.
 
+:::
 
 :::warning Time limit to claim staking rewards
 
@@ -458,7 +459,7 @@ need to resubmit their intention to validate and re-garner support from nominato
 
 For more on chilling, see the "[How to Chill][]" page on this wiki.
 
-## Why and why not to Stake?
+## Why and Why not to Stake?
 
 ### Pros of Staking
 

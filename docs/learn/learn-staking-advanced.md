@@ -1,8 +1,9 @@
 ---
 id: learn-staking-advanced
-title: Advanced Staking
-sidebar_label: Advanced Staking
-description: Learn about Staking Proxies, Bags list, Staking Rewards and Slashing
+title: Advanced Staking Concepts
+sidebar_label: Advanced Staking Concepts
+description: Advanced staking information
+
 keywords: [staking, stake, nominate, nominating, NPoS, proxies]
 slug: ../learn-staking-advanced
 ---
@@ -31,17 +32,19 @@ as a reward payout to that nominator at the end of an era; this is an event insi
 having special permissions also called **proxy accounts**. For mode details about proxy accounts
 visit the [dedicated page](./learn-proxies.md) on this wiki.
 
-![staking](../assets/staking/stash-stakingProxy.png)
+![staking](../assets/stash-stakingProxy.png)
 
 Proxy accounts are special accounts which can sign [**extrinsic calls**](#pallets-and-extrinsics)
 made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied account. There is
 thus the possibility to create staking proxy accounts that can be used to sign only extrinsic calls
 to staking, session and utility pallets. This makes the stash account even more isolated than using
 a controller account since one can bond / unbond / bond more funds using the staking proxy account.
-However, it is important to remember that actions that can be performed by the proxy accounts are
-limited, and in the case of staking proxy, extrinsic calls to the balances pallet cannot be signed.
-This means it is not possible to do balance transfers on the proxied account through a staking
-proxy.
+
+Note that it is not necessary to have a controller, if you have a staking proxy: the stash can also
+be the controller. It is important to remember that actions that can be performed by the proxy
+accounts are limited, and in the case of staking proxy, extrinsic calls to the balances pallet
+cannot be signed. This means it is not possible to do balance transfers on the proxied account
+through a staking proxy.
 
 ## Bags List
 
