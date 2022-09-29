@@ -61,7 +61,7 @@ As implied by the name, a proxy type of **Any** allows the proxy account to make
 including balance transfers. In most cases, this should be avoided as the proxy account is used more
 frequently than the cold account and is therefore less secure.
 
-### Non-transfer
+### Non-transfer Proxy
 
 Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
 [balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting) transfers).
