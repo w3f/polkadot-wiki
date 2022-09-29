@@ -25,11 +25,9 @@ The parachain slots will be leased according to an unpermissioned
 improving security while operating on a blockchain. See [Rationale](#rationale) for additional
 details.
 
-:::info Auction Schedule
+## Auction Schedule
 
-The auction schedule for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is available [here](#auction-schedule).
-
-:::
+<AuctionSchedule />
 
 [![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
 
@@ -320,10 +318,6 @@ extended without the need of swapping. This method has the advantage of not havi
 on different slots owned by the same team, however it has the disadvantage of losing flexibility on
 when to win a new slot: if the team does not win the exact slot, then it will suffer some downtime
 until it wins a new slot.
-
-## Auction Schedule
-
-<AuctionSchedule />
 
 ## FAQ
 
