@@ -93,7 +93,8 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 
 	for (const [key, value] of Object.entries(selectedBlocks)) {
 		if (value[1] !== FutureBlock) {
-			promises.push(API.rpc.chain.getBlock(value[1]));
+			const apiAt = await API.at(value[1]);
+			promises.push(apiAt.query.timestamp.now());
 			keys.push(key);
 		} else {
 			auctions[index][key] = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, value[0]);
@@ -101,15 +102,16 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	}
 
 	await Promise.all(promises)
-		.then((blocks) => {
+		.then((stamps) => {
 			for(let i = 0; i < promises.length; i++) {
-				auctions[index][keys[i]] = GetBlockTimestamp(blocks[i]).toDateString();
+				const date = new Date(stamps[i].toPrimitive());
+				auctions[index][keys[i]] = date.toDateString();
 			}
 		})
 		.catch((error) => {
 			console.log(error);
 		})
-	
+
 	Render(chain, auctions, setAuctions, index);
 }
 
