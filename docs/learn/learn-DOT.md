@@ -17,36 +17,37 @@ Bitcoin or Ether is the native token of the Ethereum blockchain.
 The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck (a
 reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible
 distance in the physical Universe). You can compare the Planck to Satoshis or Wei, while the DOT is
-like a BTC or an ETH. Kusama tokens (KSM) are equal to 10<sup>12</sup> Planck, and Polkadot mainnet DOT
-is equal to 10<sup>10</sup> Planck.
+like a BTC or an ETH. Kusama tokens (KSM) are equal to 10<sup>12</sup> Planck, and Polkadot mainnet
+DOT is equal to 10<sup>10</sup> Planck.
 
 ### Polkadot
 
-| Unit            | Decimal Places | Example      |
-| --------------- | -------------- | ------------ |
-| Planck          | 0              | 0.0000000001 or  |
-| Microdot (uDOT) | 4              | 0.0000010000 |
-| Millidot (mDOT) | 7              | 0.0010000000 |
-| Dot (DOT)       | 10             | 1.0000000000 |
-| Million (MDOT)  | 16             | 1,000,000.00 |
+| Unit            | Decimal Places | Conversion to Planck   | Conversion to DOT |
+| --------------- | -------------- | ---------------------- | ----------------- |
+| Planck          | 0              | 1 Planck               | 0.0000000001 DOT  |
+| Microdot (uDOT) | 4              | 10<sup>4</sup> Planck  | 0.0000010000 DOT  |
+| Millidot (mDOT) | 7              | 10<sup>7</sup> Planck  | 0.0010000000 DOT  |
+| Dot (DOT)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 DOT  |
+| Million (MDOT)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 DOT  |
 
 :::note DOT was redenominated at block #1_248_328
 
-Previously, DOT was denominated as equal to 1e12 Planck, just like Kusama. This denomination is
-deprecated, and, if necessary, referred to as "DOT (old)". See
-[Redenomination of DOT](../general/redenomination.md) for more details.\*
+Previously, DOT was denominated as equal to 10<sup>12</sup> Planck, just like Kusama. This
+denomination is deprecated, and, if necessary, referred to as "DOT (old)". DOT supply was increased
+by 100x and as a consequence now 1 DOT = 10<sup>10</sup> Planck. See
+[Redenomination of DOT](../general/redenomination.md) for more details.
 
 :::
 
 ### Kusama
 
-| Unit            | Decimal Places | Example        |
-| --------------- | -------------- | -------------- |
-| Planck          | 0              | 0.000000000001 |
-| Point           | 3              | 0.000000001000 |
-| MicroKSM (uKSM) | 6              | 0.000001000000 |
-| MilliKSM (mKSM) | 9              | 0.001000000000 |
-| KSM             | 12             | 1.000000000000 |
+| Unit            | Decimal Places | Conversion to Planck   | Conversion to KSM  |
+| --------------- | -------------- | ---------------------- | ------------------ |
+| Planck          | 0              | 1 Planck               | 0.000000000001 KSM |
+| Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 KSM |
+| MicroKSM (uKSM) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 KSM |
+| MilliKSM (mKSM) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 KSM |
+| KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 KSM |
 
 ## What are the uses of DOT?
 
@@ -56,8 +57,8 @@ DOT serves three key functions in Polkadot:
 - to be staked for the operation of the network,
 - to be bonded to connect a chain to Polkadot as a parachain.
 
-DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT
-stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
+DOT can also serve ancillary functions by being a transferrable token. For example, DOT stored in
+the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
 :::note Explainer video on token utility
 
@@ -85,7 +86,8 @@ holders of DOT to play active roles. Participants will put their DOT at risk (vi
 perform these functions. The staking of DOT acts as a disincentive for malicious participants who
 will be punished by the network by getting their DOT slashed. The DOT required to participate in the
 network will vary depending on the activity that is being performed, the duration the DOT will be
-staked for, and the total number of DOT staked.
+staked for, and the total number of DOT staked. For more information about staking on Polkadot visit
+[the dedicated staking page](./learn-staking.md).
 
 ### DOT for Parachain Slot Acquisition
 
@@ -117,7 +119,7 @@ There are two ways that vesting schedules can be created.
   the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
 
 Vesting schedules have three parameters, `locked`, `per_block`, and `starting_block`. The
-configuration of these three fields dictate the amount of funds that are originally locked, the
+configuration of these three fields dictates the amount of funds that are originally locked, the
 slope of the unlock line and the block number for when the unlocking begins.
 
 #### Lazy Vesting
@@ -155,33 +157,29 @@ the future).
    approximately 14’400 blocks per day, and you can see what the latest block is shown on the
    [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
 
-## Obtaining Testnet DOT
+## Obtaining Testnet Tokens
 
-DOT are required to make transactions on the Polkadot network. Testnet DOT do not have any value
-beside allowing you to experiment with the network.
+DOT are required to make transactions on the Polkadot network. Testnet tokens exist on copies of the Polkadot network (or its parachains) and do not have any value besides allowing you to experiment with the network.
 
-### Getting Westies
+### Getting Tokens on the Westend Testnet
 
-The current testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and
+The current Polkadot testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and
 you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
-[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org).
+[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be credited with 1 WND by default. YOu can also specify to get more tokens by `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
 
-You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator.md).
+You can make your WNDs (testnet DOT) by [becoming a validator](learn-validator.md). Watch the video below on how to get started on Westend.
 
-Watch this video on how to get started on Westend
 [![Testing Polkadot features on Westend](https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg)](https://www.youtube.com/watch?v=0ji0ccZyb3k)
 
-### Westend
+| Unit            | Decimal Places | Conversion to Planck   | Conversion to WND  |
+| --------------- | -------------- | ---------------------- | ------------------ |
+| Planck          | 0              | 1 Planck               | 0.000000000001 WND |
+| Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 WND |
+| MicroWND (uWND) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 WND |
+| MilliWND (mWND) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 WND |
+| KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 WND |
 
-| Unit            | Decimal Places | Example        |
-| --------------- | -------------- | -------------- |
-| Planck          | 0              | 0.000000000001 |
-| Point           | 3              | 0.000000001000 |
-| MicroWND (uWND) | 6              | 0.000001000000 |
-| MilliWND (mWND) | 9              | 0.001000000000 |
-| WND             | 12             | 1.000000000000 |
-
-### Getting Rococo Tokens
+### Getting Tokens on the Rococo Testnet
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
 the [cross consensus](learn-xcm.md) message passing aspects of this testnet. General users can
