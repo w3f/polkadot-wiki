@@ -159,15 +159,21 @@ the future).
 
 ## Obtaining Testnet Tokens
 
-DOT are required to make transactions on the Polkadot network. Testnet tokens exist on copies of the Polkadot network (or its parachains) and do not have any value besides allowing you to experiment with the network.
+DOT are required to make transactions on the Polkadot network. Testnet tokens exist on copies of the
+Polkadot network (or its parachains) and do not have any value besides allowing you to experiment
+with the network.
 
 ### Getting Tokens on the Westend Testnet
 
-The current Polkadot testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and
-you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
-[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be credited with 1 WND by default. YOu can also specify to get more tokens by `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
+The current Polkadot testnet is called
+[Westend](../maintain/maintain-networks.md#westend-test-network) and you can obtain its native
+tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
+[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be
+credited with 1 WND by default. YOu can also specify to get more tokens by
+`!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
 
-You can make your WNDs (testnet DOT) by [becoming a validator](learn-validator.md). Watch the video below on how to get started on Westend.
+You can make your WNDs (testnet DOT) by [becoming a validator](learn-validator.md). Watch the video
+below on how to get started on Westend.
 
 [![Testing Polkadot features on Westend](https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg)](https://www.youtube.com/watch?v=0ji0ccZyb3k)
 
@@ -184,10 +190,8 @@ You can make your WNDs (testnet DOT) by [becoming a validator](learn-validator.m
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
 the [cross consensus](learn-xcm.md) message passing aspects of this testnet. General users can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
-[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
-
-Learn more about Rococo on its
-[dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
+[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org). Learn more about Rococo
+on its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
 ## Kusama Tokens
 
