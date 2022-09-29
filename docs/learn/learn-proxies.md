@@ -79,7 +79,7 @@ governance proxies or watch our
 
 :::
 
-### Staking
+### Staking Proxy
 
 The **Staking** type allows staking-related transactions. Do not confuse a staking proxy with the
 controller account. Within the staking pallet, some transactions must come from the stash account, while
