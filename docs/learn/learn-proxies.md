@@ -244,7 +244,7 @@ _Anon_ accounts cannot sign anything because they do not have private keys. Alth
 
 :::danger 
 
-Once you remove the relationship with `Any` proxy, the Anon will be inaccessible. Also, Anon accounts cannot sign for anything. For example, do not include Anon in a multi-sig account.
+Once you remove the relationship with _any_ proxy, the Anon will be inaccessible. Also, Anon accounts cannot sign for anything.
 
 :::
 
