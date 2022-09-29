@@ -215,7 +215,7 @@ Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested pr
 
 ![nested proxy calls 3x](../assets/nested_proxy_calls_3x.png)
 
-## Anonymous Proxy
+## Anonymous Proxy (Pure Proxy)
 
 :::info
 
@@ -240,28 +240,28 @@ Anonymous proxies are very different from other proxy types. The proxies we desc
 
 ![anonymous proxies](../assets/proxy_vs_anon.png)
 
-Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That primary account then acts as _any_ proxy on behalf of the anonymous proxy. Note that, to avoid confusion, in this section we will refer to _Anon_ for anonymous proxy. _Anon_ are **key-less anonymous accounts** as they do have an address but do not have a corresponding private key and, in some sense, are anonymous as nobody has a private key to control it. The use of the _Anon_ is strictly bound to the relationship between the _Anon_ and the _any_ proxy (not necessarily the one who created the _Anon_ in the first place). Once that relationship is broken, the _Anon_ will be inaccessible (even if visible on the Polkadot-JS UI). Also, _Anon_ accounts are non-deterministic, this means that if we lose one _Anon_, the next one we create from the same primary account will have a different address.
+Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That primary account then acts as _any_ proxy on behalf of the anonymous proxy. Note that, to avoid confusion, in this section we will refer to _anon_ for anonymous proxy. _anon_ are **key-less anonymous accounts** as they do have an address but do not have a corresponding private key and, in some sense, nobody owns them as nobody has a private key to control it. The use of the _anon_ is strictly bound to the relationship between the _anon_ and the _any_ proxy. Note that the _any_ proxy does not necessarily be the one who created the _anon_ in the first place. Hence, _anon_ are not really owned by somebody, but they can be controlled. Once that relationship between the _anon_ and its _any_ proxy is broken, the _Anon_ will be inaccessible (even if visible on the Polkadot-JS UI). Also, _anon_ accounts are non-deterministic, this means that if we lose one _anon_, the next one we create from the same primary account will have a different address.
 
-_Anon_ accounts cannot sign anything because they do not have private keys. Although _Anon_ cannot sign any transaction directly, they can act as proxies (or better, proxy channels) within `proxy.proxy` calls. 
+_Anon_ accounts cannot sign anything because they do not have private keys. However, although _anon_ do not have private keys and cannot sign any transaction directly, they can act as proxies (or better, proxy channels) within `proxy.proxy` calls. For example, it is possible to have _anon_ within a multisig. Using proxy calls, it is possible to use the _any_ proxy to call the _anon_, which in turn will do a multisig call. More about this later on. 
 
 :::danger 
 
-Once you remove the relationship with _any_ proxy, the Anon will be inaccessible. Also, Anon accounts cannot sign for anything.
+Once you remove the relationship with _any_ proxy, the Anon will be inaccessible. Also, _anon_ accounts cannot sign for anything.
 
 :::
 
 :::caution Removing anonymous proxies
 
-The procedure for removing an _Anon_ is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
+The procedure for removing an _anon_ is different from the one used to remove proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 :::
 
 ## Why Anonymous Proxy?
 
-Despite their complexity and associated dangers, _Anon_ accounts have important benefits. We discuss these benefits below.
+Despite their complexity and associated dangers, _anon_ accounts have important benefits. We discuss these benefits below.
 
 ### Enhanced Security
-Anon accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the _Anon_ are _Any_ proxies. Security can be further increased if the _Any_ proxy is a multi-signature account.
+_Anon_ accounts cannot be stolen because they do not have private keys. The only accounts that have full access to the _anon_ are _any_ proxies. Security can be further increased if the _any_ proxy is a multi-signature account.
 
 ### Simplified and Secure Account Management at a Corporate Level
 
@@ -271,7 +271,7 @@ You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) t
 
 :::
 
-Probably the greatest benefit of using _Anon_ accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
+Probably the greatest benefit of using _anon_ accounts is the management of complex account relationships at a corporate level. Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X. Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the economic responsibility to Eleanor. Dan is a staking proxy of Charlie.
 
 **Without Anon**, Charlie must (see _left_ side of the Figure below):
 - Remove Dan as a staking proxy, this step requires 1 signature
@@ -282,7 +282,7 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 
 ![why anonymous proxies](../assets/why_anon_proxies.png)
 
-**With Anon** (see _right_ side of the Figure above), Charlie must add Eleanor as Any proxy of the Anon, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1 signature to add the new Any proxy and 1 signature the remove the old one). The funds remain in the Anon, and it is not necessary to stop nominating or unbond funds. Also, any proxy relationships with the Anon stay in place. Thus, if we use the Anon, with an increasing number of proxies we will always have to sign twice (not necessarily true in multi-signature accounts). While if we are not using the Anon, the more the proxies the more signatures we need to detach them from the old stash and attach them to the new stash (see Figure below).
+**With Anon** (see _right_ side of the Figure above), Charlie must add Eleanor as _any_ proxy of the _anon_, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1 signature to add the new _any_ proxy and 1 signature the remove the old one). The funds remain in the _anon_, and it is not necessary to stop nominating or unbond funds. Also, any proxy relationships with the _anon_ stay in place. Thus, if we use the _anon_, with an increasing number of proxies we will always have to sign twice (not necessarily true in multi-signature accounts). While if we are not using the _anon_, the more the proxies the more signatures we need to detach them from the old stash and attach them to the new stash (see Figure below).
 
 ![anon vs stash plot](../assets/anon_vs_stash_plot.png)
 
@@ -298,7 +298,7 @@ You can see [this video tutorial](https://www.youtube.com/watch?v=iGRoGstB_pQ) t
 
 :::
 
-It is possible to put an anonymous proxy within a multisig, and then transactions will be signed by the _any proxy(ies)_ on behalf of the anonymous proxy (proxied account). Let's take for example the diagram below. Alice, Bob and Anon are part of the multisig AB_anon, a multisig account with threshold 2. Anon is an anonymous proxy spawned by Charlie, who now acts as any proxy and thus signs anything on behalf of Anon. The anonymous proxy cannot sign directly because it does not have a private key. So, for example, to send funds from the multisig to Dan, Charly needs to submit a `proxy.proxy` extrinsic to Anon, which in turn will submit a `multisg.asMulti` extrinsic to AB_anon containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan. Alice can then approve the transfer by submitting a multisig.asMulti extrinsic also containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan.
+It is possible to put an _anon_ within a multisig, and then transactions will be signed by the _any_ proxy(ies) on behalf of the _anon_ (proxied account). Let's take for example the diagram below. Alice, Bob and Anon are part of the multisig AB_anon, a multisig account with threshold 2. _Anon_ is an anonymous proxy spawned by Charlie, who now acts as any proxy and thus signs anything on behalf of _anon_. The anonymous proxy cannot sign directly because it does not have a private key. So, for example, to send funds from the multisig to Dan, Charly needs to submit a `proxy.proxy` extrinsic to _anon_, which in turn will submit a `multisg.asMulti` extrinsic to AB_anon containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan. Alice can then approve the transfer by submitting a `multisig.asMulti` extrinsic also containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of some funds from AB_anon to Dan.
 
 ![multisig with one anon](../assets/multisig_with_one_anon.png)
 
@@ -318,7 +318,7 @@ You can see this video tutorial that goes through this scenario. The tutorial re
 
 :::
 
-The diagram below shows a multisig that is made only with anonymous proxies. In this situation Alice, Bob or Charly can leave the multisig at anytime without the requirement of creating a new multisig. If for example, Bob leaves the multisig the procedure will require somebody else to be added as any proxy to Anon B, and then Bob can remove himself (or the new any proxy can remove Bob).
+The diagram below shows a multisig that is made only with anonymous proxies. In this situation Alice, Bob or Charly can leave the multisig at anytime without the requirement of creating a new multisig. If for example, Bob leaves the multisig the procedure will require somebody else to be added as _any_ proxy to Anon B, and then Bob can remove himself (or the new _any_ proxy can remove Bob).
 
 ![multisig with anons](../assets/multisig_with_anons.png)
 
