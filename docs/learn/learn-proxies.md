@@ -66,7 +66,7 @@ frequently than the cold account and is therefore less secure.
 Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
 [balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting) transfers).
 
-### Governance
+### Governance Proxy
 
 The **Governance** type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
