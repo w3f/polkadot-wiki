@@ -54,7 +54,7 @@ function AuctionSchedule() {
 // Loads drop-down selections
 async function LoadOptions(auctions, wsProvider) {
 	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{`Auction #${i + 1} at Block #${auctions[i]["startBlock"]}`}</option>
+		const option = <option value={i} key={i}>{`Auction #${i + 1}`}</option>
 		Options.push(option);
 	}
 	API = await ApiPromise.create({ provider: wsProvider });
