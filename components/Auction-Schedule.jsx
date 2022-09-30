@@ -180,13 +180,6 @@ function Render(chain, auctions, setAuctions, index) {
 			{Options.map((option) => (option))}
 		</select>
 		<hr />
-		<b>Current Chain State:</b>
-		<br />
-		{`${currentBlockDate} - `}
-		<a href={`${explorerUrl}${currentBlockNumber}`}>
-			Block #{currentBlockNumber}
-		</a>
-		<hr />
 		<b>Auction Starts:</b>
 		<br />
 		{`${auctions[index].startDate} - `}
@@ -215,6 +208,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<p style={{ color: "#6c757d" }}>
 			The dates and block numbers listed above can change based on network block production and the potential for skipped blocks.
 			Dates for finalized blocks are pulled from on-chain, while future blocks are estimated using 6 second average block times.
+			The current block is <a href={`${explorerUrl}${currentBlockNumber}`}> Block #{currentBlockNumber}</a>.
 		</p>
 	</div>
 
