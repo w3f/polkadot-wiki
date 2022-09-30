@@ -325,12 +325,11 @@ parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-h
 Relay-routed Message Passing) in order to send transfers and messages between parachains and a Relay
 Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
-Rococo currently runs four test system parachains:
-[Statemint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fstatemint-rococo-rpc.parity.io#/explorer),
-[Tick](https://polkadot.js.org/apps/?rpc=wss://tick-rpc.polkadot.io#/explorer),
-[Trick](https://polkadot.js.org/apps/?rpc=wss://trick-rpc.polkadot.io#/explorer) and
-[Track](https://polkadot.js.org/apps/?rpc=wss://track-rpc.polkadot.io#/explorer). as well as several
-externally developed parachains.
+Rococo currently a few test system parachains:
+[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-statemint-rpc.polkadot.io#/explorer),
+and
+[Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer).
+It also runs several externally developed parachains.
 
 ### What Parachains are on Rococo Now?
 
@@ -368,8 +367,8 @@ Once the executable is built, launch collators for your parachain:
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created
 [parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
-to show you how. Get stuck or need support along the way? Join
-[Substrate Stack Exchange](https://substrate.stackexchange.com/))and connect with other builders
+to show you how. Got stuck or need support along the way? Join
+[Substrate Stack Exchange](https://substrate.stackexchange.com/)) to interact with other builders
 there.
 
 ### How to Make Cross Chain Transfers
