@@ -364,9 +364,8 @@ Once the executable is built, launch collators for your parachain:
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created
 [parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
-to show you how. Get stuck or need support along the way? Join the
-[Parachain Technical matrix chat channel](https://matrix.to/#/#parachain-technical:matrix.parity.io)
-and connect with other builders there.
+to show you how. Get stuck or need support along the way? Join
+[Substrate Stack Exchange](https://substrate.stackexchange.com/))and connect with other builders there.
 
 ### How to Make Cross Chain Transfers
 
