@@ -126,35 +126,28 @@ with a suite of modules that can be configured, composed, and extended to develo
 
 ## Rollups
 
-Rollups, a layer 2 scaling solution, have been talked about for some time and it's potential to scaling Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled up transaction could inclue 10,000 transactions. Rollups increase TPS and reduce transaction fees significantly, and there are a few different versions that are being worked on.
+Rollups, a layer 2 scaling solution, have been talked about for some time and it's potential to scaling Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled up transaction could inclue 10,000 transactions. Rollups increase TPS and can reduce transaction fees significantly. When it comes to implementing it, there are a few different ways to approach the problem.
 
 ### Optimistic Rollups
 
-Using a "innocent until proven guilty" approach, optimistic rollups will accept transaction commitments to the network while validating for errors and security issues. If invalid, validators can submit a fradulent commitment proof(fraud-proofs). These proofs will be used to reject fradulant transactions. This way, transaction results along with a proof can be stored on the main network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction scalability 10-100x, and writes transactions to Ethereum as [`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata) reducing gas fees significantly.
+Using an "innocent until proven guilty" approach, optimistic rollups will accept transaction commitments to the network while validating for errors and security issues. If invalid, validators can submit a fradulent commitment proof(fraud-proofs). These proofs will be used to reject fradulant transactions. This way, transaction results along with a proof can be stored on the main network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction scalability 10-100x, and writes transactions to Ethereum as [`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata) reducing gas fees significantly.
 
 Examples of optimistic rollup solutions include [Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and [Unipig](https://unipig.exchange/welcome).
 
 ### Zero-knowledge Rollups
 
-[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as the "proof" layer fro transaction batches, effectively reducing the transaction payload to be the size of a zk-proof. This, similar to optimistic approach, allows transaction data to be abstracted away and reduced significantly in size before being committed to the main chain.
-
-<!-- The ZK-rollup’s state, which includes L2 accounts and balances, is represented as a Merkle tree. A cryptographic hash of the Merkle tree’s root (Merkle root) is stored in the on-chain contract, allowing the rollup protocol to track changes in the state of the ZK-rollup.
-
-The rollup transitions to a new state after the execution of a new set of transactions. The operator who initiated the state transition is required to compute a new state root and submit to the on-chain contract. If the validity proof associated with the batch is authenticated by the verifier contract, the new Merkle root becomes the ZK-rollup’s canonical state root.
-
-Besides computing state roots, the ZK-rollup operator also creates a batch root—the root of a Merkle tree comprising all transactions in a batch. When a new batch is submitted, the rollup contract stores the batch root, allowing users to prove a transaction (e.g., a withdrawal request) was included in the batch. Users will have to provide transaction details, the batch root, and a Merkle proof showing the inclusion path.
-
- -->
+[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as a "proof" of valid transactions when batching, effectively reducing the transaction payload to be the size of a zk-proof. This, similar to optimistic approach, allows transaction data to be abstracted away and reduced significantly in size before being committed to the main chain. Similar to most on-chain transactions and state, a ZK-rollup's state is represented as a [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), and the cryptographic hash of the tree's root(Merkle root) is what is stored on-chain. This allows for efficient batching, and tracking of changes to the transaction states. Any changes to the state will require the operator who initiated the changes to compute a new state root, and commit it to the on-chain contract. If the contract varifies the new state as valid, then provided root hash becomes the new state root.
 
 #### EIP 4844
 
-Until the ETH 2.0 merge is finalized, this stopgap implements "blob-transactions" in the same way they would be designed with sharding.
+"Introduce a new transaction format for “blob-carrying transactions” which contain a large amount of data that cannot be accessed by EVM execution, but whose commitment can be accessed. The format is intended to be fully compatible with the format that will be used in full sharding."
 
-Blob-transactions are transactions which carry a large amount of data that cannot be accessed by the EVM, but whose commitment can be accessed.
+Until full spec of ETH 2.0 sharding is implemented, this stopgap introduces "blob-transactions" transaction format in the same way they would be designed with sharding, but without sharding those transactions. Blob-transactions are transactions which carry a large amount of data that cannot be accessed by the EVM, but whose commitment can be accessed. Compared to full sharding where the space allocated for this additional transaction data will be ~16mb, this EIP allows for a reduced cap corresponding to a target of ~1mb and a limit of ~2mb which the rollup transactions can utilize. 
 
 ### Rollups in Polkadot
 
-
+In Polkadot the sharding model already exists as the Relay-chain being the beacon chain  and Parachains being the shards. Parachains are most similar in implementation to an Optimistic rollup and most similar in architecture to a ZK-rollup. Parachain logic already run a validity proof. The proof (the approvals protocol) is interactive, unlike ZK-rollups which are non-interactive. Aditionally, unlike ZK-rollups, there are no difficulties in creating parachains with turing-complete logic. This is a fundamental weakness of ZK rollups, as turing completeness within ZK circuits is not easy.
+Optimistic rollups are required by architecture to have their 'sequencer selection' logic live in their host contract. This is because the contract needs to accept blocks which may be bad, and may not be executed, and needs to filter out spam. Parachains, like ZK rollups, can encapsulate the sequencer-selection logic within their validation code.
 
 ## Message Passing
 
