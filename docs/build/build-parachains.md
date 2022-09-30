@@ -117,7 +117,7 @@ Any validator in the validator pool can help validate your blockchain.
 
 ### [Para-nomics](../learn/learn-parachains.md#parachain-economies)
 
-#### Digital nation states
+#### Digital Nation States
 
 Parachains can be seen as autonomous agents; networks that act as decentralised digital nation
 states. Parachains have their own communities, rules, economies, governance, treasuries, and
@@ -129,10 +129,10 @@ Moreover, _becoming a parachain_ has an opportunity cost associated. Ideally, yo
 value of the network by participating in the parachain selection process, and this should serve as a
 good return on investment.
 
-#### Connecting digital economies
+#### Connecting Digital Economies
 
 [Collators](../learn/learn-collator.md) act as network maintainers and maintain a full node of a
-parachain. They are incentivized with a native token payout from:
+parachain. They can be incentivized with a native token payout from:
 
 - Transaction fees collected
 - Parathread token sponsorship
@@ -220,15 +220,19 @@ For this reason, `Cumulus`, an added _library_ contains all of the
 :::note Get started with Substrate
 
 The best way to get started with Substrate is to explore the
-[Substrate Developer Hub](https://docs.substrate.io/), an online resource built and maintained by
+[Substrate Documentation](https://docs.substrate.io/) maintained by
 [Parity Technologies](https://parity.io).
 
 :::
 
 #### Cumulus
 
-    Cumulus clouds are shaped sort of like dots; together they form an intricate system;
-    beautiful and functional.
+:::info
+
+Cumulus clouds are shaped sort of like dots. Together, they form an intricate system that is
+beautiful and functional.
+
+:::
 
 [Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to
 make any Substrate-built runtime into a Polkadot-compatible parachain.
@@ -308,8 +312,8 @@ updating the state (in practice, most likely a Merkle tree, which would be easil
 the user inputs. The operator would act as the collator node, which would aggregate the state and
 create the zk-SNARK proof that it would hand to a Relay Chain's validators for verification.
 
-If you or your team are interested in developing a PDK feel free to open an issue on the
-[W3F collaboration repository](https://github.com/w3f/Web3-collaboration) for comment. There may be
+If you or your team are interested in developing a PDK feel free to apply for a grant on the
+[W3F Grants Program repository](https://github.com/w3f/Grants-Program) for comment. There may be
 grants available for this type of work.
 
 ## Testing a Parachain
@@ -365,7 +369,8 @@ If you are interested in running and launching your own parathread or parachain,
 has created
 [parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
 to show you how. Get stuck or need support along the way? Join
-[Substrate Stack Exchange](https://substrate.stackexchange.com/))and connect with other builders there.
+[Substrate Stack Exchange](https://substrate.stackexchange.com/))and connect with other builders
+there.
 
 ### How to Make Cross Chain Transfers
 
