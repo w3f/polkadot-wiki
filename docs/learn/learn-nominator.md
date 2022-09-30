@@ -68,7 +68,7 @@ occur often, so you should almost always see only a single active nomination per
 
 :::info
 
-On Polkadot and Kusama, the instance of the pallet 
+On Polkadot and Kusama, the instance of the pallet
 [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named 'voterList'
 
 :::
@@ -134,10 +134,10 @@ _insertion_ order, not _amount at stake_. So if only five nominating accounts ar
 electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 DOT, she
 is first in line in Bag3.
 
-Charlie can put himself in front (move up in the bag) using the `bagsList.putInFrontOf` extrinsic,
+Charlie can put himself in front (move up in the bag) using the `voterList.putInFrontOf` extrinsic,
 since he has 15 DOT (more than Alice does at 10). Now if nothing changes for the next era, Frank,
 Georgina, Eve, Dave, and Charlie will get rewards. Bag3 now has: Charlie, Alice, Bob. The
-`bagsList.putInFrontOf` extrinsic can be issued through Polkadot JS Apps UI by clicking on the Move
+`voterList.putInFrontOf` extrinsic can be issued through Polkadot JS Apps UI by clicking on the Move
 up button.
 
 ![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
@@ -148,7 +148,7 @@ move himself in front of Alice, since he has 11 DOT (> 10), but he still wouldn'
 Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded
 automatically and Charlie's stash crosses 20 DOT after rewards from several staking eras. As changes
 in bonded balance due to staking rewards or slashing do not automatically re-bag the account,
-Charlie has to issue `bagsList.rebag` extrinsic to place his nominator node in the right bag. The
+Charlie has to issue `voterList.rebag` extrinsic to place his nominator node in the right bag. The
 re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes in the bag needs to
 be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain.
 
