@@ -66,6 +66,13 @@ occur often, so you should almost always see only a single active nomination per
 
 ### Bags-list
 
+:::info
+
+On Polkadot and Kusama, the instance of the pallet 
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named 'voterList'
+
+:::
+
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
@@ -99,10 +106,10 @@ represented in the correct bag, certain changes in bonded funds (e.g. a slash in
 direction, or rewards in the positive direction) can cause an account to be in the wrong bag, and
 for scalability reasons the system will not automatically self-adjust.
 
-:::caution `bagsList.putInFrontOf` and `bagsList.rebag` extrinsics
+:::caution `voterList.putInFrontOf` and `voterList.rebag` extrinsics
 
 The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
-stake. `bagsList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
+stake. `voterList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
 useful for the accounts in the last bag eligible for receiving staking rewards. Also, balance
 changes due to staking rewards or slashing do not automatically re-bag the account. Whenever
 applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the
