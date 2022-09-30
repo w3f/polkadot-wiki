@@ -283,6 +283,13 @@ through `democracy.votingOf` extrinsic.
 
 ## Undelegate a Vote
 
+:::caution Currently, the undelegation logic has a flaw in it. If you choose to delegate and
+undelegate two times, and the second undelegation happens before the lock period of the initial
+delegation has ended. The initial undelegations lock period will be reset to the second undelegation
+lock period. To understand this in further detail checkout
+[this](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
+stackexchange post. :::
+
 You may decide at some point in the future to remove your delegation to a target account. In this
 case, your tokens will be locked for the maximum amount of time in accordance with the conviction
 you set at the beginning of the delegation. For example, if you chose "2x" delegation for four weeks
