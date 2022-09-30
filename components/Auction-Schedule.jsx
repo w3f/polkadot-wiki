@@ -194,7 +194,7 @@ function Render(chain, auctions, setAuctions, index) {
 			Block #{auctions[index].startBlock}
 		</a>
 		<hr />
-		<b>Auction Ends:</b>
+		<b>Bidding Starts:</b>
 		<br />
 		{`${auctions[index].endPeriodDate} - `}
 		<a href={`${explorerUrl}${auctions[index].endPeriodBlock}`}>
