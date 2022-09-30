@@ -72,6 +72,7 @@ service, and additional metrics.
 - [Dwellir](https://dwellir.com)
 - [Pinknode](https://pinknode.io)
 - [Radium Block](https://radiumblock.io)
+- [NOWNodes](https://nownodes.io/nodes/polkadot-dot)
 
 ::: note
 
