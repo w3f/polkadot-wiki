@@ -32,10 +32,9 @@ DOT is equal to 10<sup>10</sup> Planck.
 
 :::note DOT was redenominated at block #1_248_328
 
-Previously, DOT was denominated as equal to 10<sup>12</sup> Planck, just like Kusama. This
-denomination is deprecated, and, if necessary, referred to as "DOT (old)". DOT supply was increased
-by 100x and as a consequence now 1 DOT = 10<sup>10</sup> Planck. See
-[Redenomination of DOT](../general/redenomination.md) for more details.
+DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT (old)"), but went through a 
+process of [redenomination](../general/redenomination.md) which increased DOT's supply
+by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck. 
 
 :::
 
