@@ -32,9 +32,9 @@ equals to 10<sup>12</sup> Planck.
 
 :::note DOT was redenominated at block #1_248_328
 
-DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT (old)"), but went through a 
-process of [redenomination](../general/redenomination.md) which increased DOT's supply
-by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck. 
+DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT
+(old)"), but went through a process of [redenomination](../general/redenomination.md) which
+increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
 
 :::
 
@@ -158,19 +158,20 @@ the future).
 
 ## Obtaining Testnet Tokens
 
-DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets like Westend and Rococo do not have any value besides allowing you to experiment with the features on the network.
+DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets like
+Westend and Rococo do not have any value besides allowing you to experiment with the features on the
+network.
 
 ### Getting Tokens on the Westend Testnet
 
-Polkadot's testnet is called
-[Westend](../maintain/maintain-networks.md#westend-test-network) and you can obtain its native
-tokens (called Westies!) by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
-[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be
-credited with 1 WND by default. You can also specify to get more tokens by
+Polkadot's testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and
+you can obtain its native tokens (called Westies!) by posting `!drip <WESTEND_ADDRESS>` in the
+Matrix chatroom [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your
+account will be credited with 1 WND by default. You can also specify to get more tokens by
 `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
 
-You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network. Watch the video
-below on how to get started on Westend.
+You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network.
+Watch the video below on how to get started on Westend.
 
 [![Testing Polkadot features on Westend](https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg)](https://www.youtube.com/watch?v=0ji0ccZyb3k)
 
