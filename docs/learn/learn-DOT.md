@@ -167,7 +167,7 @@ with the network.
 
 The current Polkadot testnet is called
 [Westend](../maintain/maintain-networks.md#westend-test-network) and you can obtain its native
-tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
+tokens (called Westies!) by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be
 credited with 1 WND by default. You can also specify to get more tokens by
 `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
