@@ -476,7 +476,7 @@ nominal return rate will be higher, encouraging more users to use their tokens f
 contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal
 return will be less, encouraging some users to withdraw.
 
-### Cons of Staking?
+### Cons of Staking
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
@@ -484,8 +484,7 @@ return will be less, encouraging some users to withdraw.
 
 ## How many Validators does Polkadot have?
 
-Polkadot currently has
-<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top
+Polkadot currently has <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top
 bound on the number of validators has not been determined yet, but should only be limited by the
 bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of
 validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network,
