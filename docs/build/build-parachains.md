@@ -325,7 +325,7 @@ parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-h
 Relay-routed Message Passing) in order to send transfers and messages between parachains and a Relay
 Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
-Rococo currently a few test system parachains:
+Rococo run a few test system parachains:
 [Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-statemint-rpc.polkadot.io#/explorer),
 and
 [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer).
