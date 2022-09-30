@@ -15,11 +15,11 @@ Avalanche's architecture seperates the responsibility of a layer-1 smart contrac
 
 ## Architecture
 
-As formentioned, the Avalanche architecture is comprised of three different chains. With this model, the seperations of concerns targets the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchain
+As formentioned, the Avalanche architecture is comprised of three different chains. With this model, the seperations of concerns targets the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche.
 
 #### P-chain (Platform)
 
-The P-chain is responsible for the validator set and securing the network. AVAX token holders can spin up their own nodes and become validators by staking their tokens. Similar to the NPoS system that Polkadot uses, Avalanche allows token holders who do not want to spin up their own node to become validators to delegate their token stake to existing validators. When a new subnet is spun up, it will also be connected to the p-chain. 
+The P-chain is responsible for the validator set and securing the network. AVAX token holders can spin up their own nodes and become validators by staking their tokens. Similar to the NPoS system that Polkadot uses, Avalanche uses a Delegated PoS which allows token holders who do not want to spin up their own node to become validators to delegate their token stake to existing validators. When a new subnet is spun up, it will also be connected to the p-chain. 
 
 <!-- TODO: do subnet validators also have to validate the p-chain? In Polkadot collators do not have to do this, but they do have to sync with the relay chain effectively running a relay chain node on their machine. -->
 
@@ -32,6 +32,8 @@ The X-chain is responsible for the transaction layer of the Avalanche blockchain
 #### C-chain (Contracts)
 
 The C-chain is where most activity will happen on the Avalanche network. It allows for different virtual machines to execute smart contract code. Out of the box, it has support for EVM and AVM (Avalanche VM). 
+
+As Polkadot does not have a smart contract layer ouot of the box, the EVM and WASM smart contract abilities lie in the Parachain layers. This is a major difference between Polkadot and Avalanche. The smart-contract abilities of Avalanche are baked into the main chain. 
 
 #### Subnets or sub-networks
 
