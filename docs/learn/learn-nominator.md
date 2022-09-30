@@ -69,7 +69,7 @@ occur often, so you should almost always see only a single active nomination per
 :::info
 
 On Polkadot and Kusama, the instance of the pallet
-[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named 'voterList'
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
 
 :::
 
