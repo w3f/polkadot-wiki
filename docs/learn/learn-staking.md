@@ -476,7 +476,7 @@ nominal return rate will be higher, encouraging more users to use their tokens f
 contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal
 return will be less, encouraging some users to withdraw.
 
-### Cons of Staking?
+### Cons of Staking
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
@@ -485,11 +485,15 @@ return will be less, encouraging some users to withdraw.
 ## How many Validators does Polkadot have?
 
 Polkadot currently has
-<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top
-bound on the number of validators has not been determined yet, but should only be limited by the
-bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of
-validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network,
-currently has 900 validator slots in the active set.
+{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
+validators. The top bound on the number of validators has not been determined yet, but should only
+be limited by the bandwidth strain of the network due to peer-to-peer message passing. The estimate
+of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's
+canary network, currently has
+{{ polkadot: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
+validator slots in the active set.
 
 ## Resources
 
