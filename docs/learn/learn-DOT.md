@@ -172,7 +172,7 @@ tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 credited with 1 WND by default. You can also specify to get more tokens by
 `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
 
-You can make your WNDs (testnet DOT) by [becoming a validator](learn-validator.md). Watch the video
+You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network. Watch the video
 below on how to get started on Westend.
 
 [![Testing Polkadot features on Westend](https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg)](https://www.youtube.com/watch?v=0ji0ccZyb3k)
