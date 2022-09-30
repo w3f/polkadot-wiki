@@ -159,9 +159,7 @@ the future).
 
 ## Obtaining Testnet Tokens
 
-DOT are required to make transactions on the Polkadot network. Testnet tokens exist on copies of the
-Polkadot network (or its parachains) and do not have any value besides allowing you to experiment
-with the network.
+DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets like Westend and Rococo do not have any value besides allowing you to experiment with the features on the network.
 
 ### Getting Tokens on the Westend Testnet
 
