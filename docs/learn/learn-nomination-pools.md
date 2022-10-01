@@ -127,7 +127,7 @@ for guidelines.
 
 :::info Unbonding transaction automatically triggers withdrawal of rewards
 
-When there is a change in the amount of the bonded funds, the accumulated rewards thus far are automatically 
+When there is a change in the bonded balance, the accumulated rewards in the pool thus far are automatically 
 withdrawn to the account. The rewards are then accrued based on the updated bonded balance. 
 
 :::
