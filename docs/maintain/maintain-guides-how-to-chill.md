@@ -43,7 +43,7 @@ When you become an active validator, you will also need to reset your validator 
 
 If a validator was unresponsive for an entire session, the validator bond would be chilled in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it may restrict the validator from being selected in the next election depending on the session in which it was chilled (see considerations above).  A chilled validator may re-declare the intent to validate at any time. However, it is recommended that the validator attempts to determine the source of the chill before doing so.
 
-Slashing may also result in an involuntary chill, however, in this scenario the validator would also lose their nominations.  By this action, even if the validator re-declares his intent to validate before session 5, there were wouldn't be sufficient nominations to re-elect the bond into the active set.
+Slashing may also result in an involuntary chill. However, in that scenario, the validator would also lose their nominations.  By this action, even if the validator re-declares its intent to validate before session 5, there wouldn't be sufficient nominations to re-elect the node into the active set.
 
 Nominators who have the option to renominate a slashed validator using a display row in Polkadot-JS Apps. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Renomination required". 
 
