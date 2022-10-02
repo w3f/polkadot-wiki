@@ -37,7 +37,7 @@ Your nominator will remain bonded when it is chilled. When you are ready to nomi
 
 When you voluntarily chill after being a validator, your nominators will remain.  As long as your nominators make no action, you will still have the nominations when you choose to become an active validator once again.  You bond however would not be listed as a nominable validator thus any nominators issuing new or revisions to existing nominations would not be able to select your bond.
 
-When you become an active validator you will also need to reset your validator preferences (commission, etc.). These can be configured as the same values that were set previously or something different.
+When you become an active validator, you will also need to reset your validator preferences (commission, etc.). These can be configured as the same values set previously or something different.
 
 ## Involuntary Chills
 
