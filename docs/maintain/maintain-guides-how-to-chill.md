@@ -7,7 +7,7 @@ keywords: [chill, chilling, pause]
 slug: ../maintain-guides-how-to-chill
 ---
 
-Staking bonds can be in any one of the three states: validating, nominating, or chilled (neither validating or nominating).  When a staker wants to temporarily pauses their active engagement in staking but does not want to unbond their funds, they can choose to "chill" their involvement and keep their funds bonded.
+Staking bonds can be in any of the three states: validating, nominating, or chilled (neither validating nor nominating).  When a staker wants to temporarily pause their active engagement in staking but does not want to unbond their funds, they can choose to "chill" their involvement and keep their funds bonded.
 
 An account can step back from participating in active staking by clicking "Stop" under the Network >
 Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by calling the
