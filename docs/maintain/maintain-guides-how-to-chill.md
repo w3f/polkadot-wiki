@@ -45,7 +45,7 @@ If a validator was unresponsive for an entire session, the validator bond would 
 
 Slashing may also result in an involuntary chill. However, in that scenario, the validator would also lose their nominations.  By this action, even if the validator re-declares its intent to validate before session 5, there wouldn't be sufficient nominations to re-elect the node into the active set.
 
-Nominators who have the option to renominate a slashed validator using a display row in Polkadot-JS Apps. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Renomination required". 
+Nominators have the option to renominate a slashed validator using a display row in Polkadot-JS UI. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Renomination required". 
 
 ## Chill Other
 
