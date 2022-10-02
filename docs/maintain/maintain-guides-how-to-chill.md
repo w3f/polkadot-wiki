@@ -25,7 +25,7 @@ staking, take a look at the [accounts][] section in the general staking guide.
 ![staking](../assets/NPoS/staking-keys_stash_controller.png)
 ## Consideration for Staking Election
 
-A bond that is actively participating in staking but chilled would continue to participate in staking for the rest of the current era.  If the bond was chilled in sessions 1 through 4 and continues to be chilled for the rest of the era it would NOT be selected for election in the next era.  If a bond was chilled for the entire of session 5 it would not be considered in the next election.  If the bond was chilled in session 6 its participation in the next era's election would be dependent on its state in session 5.
+A bond that is actively participating in staking but chilled would continue to participate in staking for the rest of the current era.  If the bond was chilled in sessions 1 through 4 and continues to be chilled for the rest of the era, it would NOT be selected for election in the next era.  If a bond was chilled for the entire session 5, it would not be considered in the next election.  If the bond was chilled in session 6, its participation in the next era's election would depend on its state in session 5.
 
 ## Chilling as a Nominator
 
