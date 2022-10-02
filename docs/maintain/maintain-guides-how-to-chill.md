@@ -41,7 +41,7 @@ When you become an active validator, you will also need to reset your validator 
 
 ## Involuntary Chills
 
-If a validator was unresponsive for an entire session the validator bond would be chilled in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it may restrict the validator from being selected in the next election depending on the session in which it was chilled (see considerations above).  A validator that was chilled may re-declare the intent to validate at any time, however, it is recommended that the validator attempt to determine the source of the chill before doing so.
+If a validator was unresponsive for an entire session, the validator bond would be chilled in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it may restrict the validator from being selected in the next election depending on the session in which it was chilled (see considerations above).  A chilled validator may re-declare the intent to validate at any time. However, it is recommended that the validator attempts to determine the source of the chill before doing so.
 
 Slashing may also result in an involuntary chill, however, in this scenario the validator would also lose their nominations.  By this action, even if the validator re-declares his intent to validate before session 5, there were wouldn't be sufficient nominations to re-elect the bond into the active set.
 
