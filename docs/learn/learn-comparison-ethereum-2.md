@@ -126,7 +126,7 @@ with a suite of modules that can be configured, composed, and extended to develo
 
 ## Rollups
 
-Rollups, a layer 2 scaling solution, have been talked about for some time and it's potential to scaling Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled up transaction could inclue 10,000 transactions. Rollups increase TPS and can reduce transaction fees significantly. When it comes to implementing it, there are a few different ways to approach the problem.
+Rollups, a layer 2 scaling solution, have been talked about for some time, and their potential to scale Ethereum. A layer 2 network of nodes would be responsible for "rolling up" transaction together by batching them before publishing them to the main Ethereum chain. A rolled-up transaction could include 10,000 transactions. Rollups increase TPS and can reduce transaction fees significantly. When it comes to implementing it, there are a few different ways to approach the problem.
 
 ### Optimistic Rollups
 
