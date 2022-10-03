@@ -125,6 +125,13 @@ in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
 
+:::info Unbonding transaction automatically triggers withdrawal of rewards
+
+When there is a change in the bonded balance, the accumulated rewards in the pool thus far are automatically 
+withdrawn to the account. The rewards are then accrued based on the updated bonded balance. 
+
+:::
+
 ### Limitations
 
 - A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This
