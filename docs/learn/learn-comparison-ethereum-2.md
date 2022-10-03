@@ -214,3 +214,7 @@ strong availability and validity guarantees with a smaller number of validators 
 7. [eWasm Design](https://github.com/ewasm/design)
 8. [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
 9. [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
+10. [ETH Docs: ZK Rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)
+11. [ETH Docs: Optimistic Rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/)
+12. [EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com)
+13. [Scaling Public Blockchains by Tobias Schaffner](https://wwz.unibas.ch/fileadmin/user_upload/wwz/00_Professuren/Schaer_DLTFintech/Lehre/Tobias_Schaffner_Masterthesis.pdf?ref=hackernoon.com)
