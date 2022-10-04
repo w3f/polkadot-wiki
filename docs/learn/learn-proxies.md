@@ -398,7 +398,7 @@ of proxies we will always have to sign twice (not necessarily true in multi-sign
 While if we are not using the _anon_, the more the proxies the more signatures we need to detach
 them from the old stash and attach them to the new stash (see Figure below).
 
-![anon vs stash plot](../assets/anon_vs_stash_plot.png)
+![anon vs stash plot](../assets/anon-vs-stash-plot.png)
 
 ### Multi-signature Account Management
 
@@ -419,7 +419,7 @@ this scenario. The tutorial requires some familiarity with the Extrinsic Tab of 
 
 It is possible to put an _anon_ within a multisig, and then transactions will be signed by the _any_
 proxy(ies) on behalf of the _anon_ (proxied account). Let's take for example the diagram below.
-Alice, Bob and Anon are part of the multisig AB*anon, a multisig account with threshold 2. \_Anon*
+Alice, Bob and Anon are part of the multisig ABC, a multisig account with threshold 2. P-C
 is an anonymous proxy spawned by Charlie, who now acts as any proxy and thus signs anything on
 behalf of _anon_. The anonymous proxy cannot sign directly because it does not have a private key.
 So, for example, to send funds from the multisig to Dan, Charly needs to submit a `proxy.proxy`
@@ -429,7 +429,7 @@ AB_anon to Dan. Alice can then approve the transfer by submitting a `multisig.as
 also containing the call data for the `balances.transferKeepAlive` extrinsic about the transfer of
 some funds from AB_anon to Dan.
 
-![multisig with one anon](../assets/multisig_with_one_anon.png)
+![multisig with one anon](../assets/multisig-with-one-anon.png)
 
 If Charly wants to leave the multisig, a new _any_ proxy can be added to Anon and Charly can be
 removed (by himself or by the new any proxy). Note that the multisig also contains Bob that in this
