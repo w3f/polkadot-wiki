@@ -243,7 +243,7 @@ nominating validators (not in order of importance):
 
 The diagram below shows how the selection of those criteria affects the reward-to-risk ratio.
 
-![rewards and risks diagram](../assets/staking/reward-risk.png)
+![rewards and risks diagram](../assets/reward-risk.png)
 
 #### Validator Selection Criteria
 
@@ -317,7 +317,7 @@ account on a cold wallet.
 
 :::
 
-![staking](../assets/staking/stash-controller.png)
+![staking](../assets/stash-controller.png)
 
 This hierarchy of separate keys for stash and controller accounts was designed to add a layer of
 protection to nominators and validator operators. The more often one exposes and uses a private key,
