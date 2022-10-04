@@ -33,15 +33,15 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@actions/core": "^1.9.1",
-    "@actions/github": "^5.1.0",
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
     "@crowdin/cli": "^3.8.1",
     "@docusaurus/core": "^2.1.0",
     "@docusaurus/module-type-aliases": "^2.1.0",
     "@docusaurus/plugin-client-redirects": "^2.1.0",
     "@docusaurus/preset-classic": "^2.1.0",
     "@octokit/rest": "^19.0.4",
-    "@polkadot/api": "^9.4.2",
+    "@polkadot/api": "^9.4.3",
 
     "@polkadot/keyring": "10.1.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -53,8 +53,8 @@
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "ipfs-http-client": "^57.0.3",
-    "jest": "^29.1.1",
-    "jest-environment-jsdom": "^29.1.1",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
     "katex": "^0.16.2",
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.1.0",
@@ -67,7 +67,7 @@
     "remarkable-katex": "^1.2.1",
     "shx": "^0.3.4",
     "unist-util-visit": "2.0.1",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.0"
   },
   "dependencies": {
     "@algolia/client-search": "^4.14.2",

@@ -73,9 +73,9 @@ service, and additional metrics.
 - [Pinknode](https://pinknode.io)
 - [Radium Block](https://radiumblock.io)
 
-::: note
+:::note
 
 The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from
-Polkdot-JS UI
+[Polkdot-JS UI](https://polkadot.js.org/apps/#/explorer)
 
 :::

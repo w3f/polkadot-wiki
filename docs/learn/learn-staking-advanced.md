@@ -10,6 +10,18 @@ slug: ../learn-staking-advanced
 
 import RPC from "./../../components/RPC-Connection";
 
+:::tip New to Staking?
+
+Start your staking journey or explore more information about staking on
+[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
+[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+check this
+[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
+help you get started.
+{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+
+:::
+
 This page is meant to be an advanced guide to staking with
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
@@ -48,14 +60,21 @@ through a staking proxy.
 
 ## Bags List
 
-The nomination intents are placed in a so-called
+:::info
+
+On Polkadot and Kusama, the instance of the pallet
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
+
+:::
+
+The nomination intents are placed in a semi-sorted list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
 {{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The bags list
 has two primary components, bags and nodes. The list is composed of bags that each describe a range
 of active bonded funds (e.g. the 1st bag will have nominators who staked 0 → 10 DOT, 2nd bag 11 → 20
 DOT, etc). Each bag contains nodes that correspond to nominators and their staked funds.
 
-The bags-list pallet is designed to be self-maintaining, with minimal effort from the blockchain,
+The Bags-List pallet is designed to be self-maintaining, with minimal effort from the blockchain,
 making it extremely scalable. Let us explore the sorting functionality of the bags list with an
 example. In the bags list below, there are 8 nodes (corresponding to 8 accounts with staked funds)
 placed in 3 bags. It can be observed that the list of nodes within the bags is arranged based on
@@ -84,11 +103,11 @@ over time, the position within a bag changes and may also result in a change of 
 happen if accounts within the bag bond more tokens or unbond tokens, one's account position and the
 position of other accounts in the bags list might change. These changes are not done automatically,
 requiring the nominator to submit the permissionless extrinsic `rebag` within the `voterList` pallet
-to update their position. This allows anyone to specify another account that is in the wrong bag,
-and place it in the correct one. The `voterList` pallet also comes with the extrinsic `putInFrontOf`
-which helps the node to move up in the bag. Actions like bonding/unbonding tokens automatically
-rebags the nominator node, but events like staking rewards/slashing do not. See the
-[bags-list](learn-nominator.md#bags-list) section for more information.
+instance to update their position. This allows anyone to specify another account that is in the
+wrong bag, and place it in the correct one. The `voterList` pallet instance also comes with the
+extrinsic `putInFrontOf` which helps the node to move up in the bag. Actions like bonding/unbonding
+tokens automatically rebags the nominator node, but events like staking rewards/slashing do not. See
+the [bags-list](learn-nominator.md#bags-list) section for more information.
 
 This sorting functionality using bags is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
