@@ -42,7 +42,7 @@ participate in staking to earn staking rewards. You could set one of your existi
 staking proxy for that stash account. The stash account is also the controller here, but it does not
 matter because you will always use your staking proxy to sign staking-related transactions.
 
-![proxies](../assets/controller_vs_staking_proxy.png)
+![proxies](../assets/controller-vs-staking-proxy.png)
 
 If you just use a controller that is not a staking proxy, the stash account will still have to sign
 for some staking-related transactions such as _bond more funds_ and _change controller account_
@@ -299,7 +299,7 @@ internet, increasing the visibility of that account. The purpose of a proxy is t
 attention of potential attackers away from the primary account, as proxies' private keys will be
 used most of the time to perform actions on behalf of the primary account.
 
-![anonymous proxies](../assets/proxy_vs_anon.png)
+![anonymous proxies](../assets/proxy-vs-anon.png)
 
 Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That
 primary account then acts as _any_ proxy on behalf of the anonymous proxy. Note that, to avoid
@@ -387,7 +387,7 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 here we are presenting a simple example, in fact, with multi-signature accounts and multiple proxies
 the procedure would be more time-consuming and labor-intensive.
 
-![why anonymous proxies](../assets/why_anon_proxies.png)
+![why anonymous proxies](../assets/why-anon-proxy.png)
 
 **With Anon** (see _right_ side of the Figure above), Charlie must add Eleanor as _any_ proxy of the
 _anon_, and remove himself (or Eleanor can remove him). The process requires just 2 signatures (1
