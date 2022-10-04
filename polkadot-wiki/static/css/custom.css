@@ -320,7 +320,8 @@ div[role=banner] .close {
   color: #fff;
 }
 
-div[role=banner] .close:hover {
+div[role=banner] .close:hover, 
+div[role=banner] .close:focus {
   color: #fff !important;
   opacity: 1;
 }
