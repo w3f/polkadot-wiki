@@ -78,7 +78,12 @@ module.exports = {
             to: "/",
 
             from: ["/en/latest", "/en/"],
+
           },
+          {
+            to: '/docs/learn-xcm',
+            from: ['/docs/learn-crosschain', '/docs/learn-cross-consensus']
+          }
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
@@ -175,5 +180,14 @@ module.exports = {
       contextualSearch: true,
     },
     docsSideNavCollapsible: true,
+    /* Banner / Announcement bar */
+    announcementBar: {
+      id: "banner",
+      content:
+        '<b>Sub0 is coming to Lisbon!</b> Join the Polkadot developer conference, November 28th-29th 👉 <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki" target="_blank" rel="noopener nofollow noreferrer">SIGN UP</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
   },
 };

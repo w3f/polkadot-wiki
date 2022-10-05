@@ -7,7 +7,7 @@ keywords: [nominate, nominator, kusama, stake, staking]
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
-import RPC from "./../../../components/RPC-Connection"
+import RPC from "./../../../components/RPC-Connection";
 
 :::info
 

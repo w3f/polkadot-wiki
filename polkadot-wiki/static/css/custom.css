@@ -22,6 +22,7 @@
   --headingFontFamily: "Unbounded", sans-serif !important;
   --docsearch-searchbox-background: white;
   --docsearch-searchbox-shadow: var(--snowColor);
+  --docusaurus-announcement-bar-height: auto !important;
 
   --custom-code-block-background: #f6f8fa;
   --custom-content-max-width: none;
@@ -69,6 +70,10 @@ h6 {
 
 .font-weight-medium {
   font-weight: 500 !important;
+}
+
+.font-weight-bolder {
+  font-weight: 900 !important;
 }
 
 
@@ -301,31 +306,24 @@ button.menu__button {
 
 
 /* ==========================================================================
-  Banner
+  Banner / Announcement bar
    ========================================================================== */
-.fixed-banner {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: red;
-  color: white;
-  text-align: center;
+
+div[role=banner] {
+  padding: 10px 0px;
   background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%),
     linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
-  background-color: #e6007a;
 }
 
-.fixed-banner-text-container {
-  font-weight: 900 !important;
-  margin: auto;
-  padding-top: 15px;
+div[role=banner] .close {
+  color: #fff;
 }
 
-.banner-text {
-  margin: auto;
+div[role=banner] .close:hover, 
+div[role=banner] .close:focus {
+  color: #fff !important;
+  opacity: 1;
 }
 
 /* ==========================================================================

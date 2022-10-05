@@ -9,18 +9,18 @@ slug: ../../kusama-getting-started
 
 ### Polkadot's Canary Network
 
-Kusama is a *canary network* for Polkadot; an earlier release of the code that is available first and
-holds real economic value. For developers, Kusama is a proving ground for runtime upgrades, on-chain
-governance, and parachains.
+Kusama is a _canary network_ for Polkadot; an earlier release of the code that is available first
+and holds real economic value. For developers, Kusama is a proving ground for runtime upgrades,
+on-chain governance, and parachains.
 
 :::info No Promises
 
-Kusama is owned by those who hold the Kusama tokens (KSM). There's no central kill switch and
-all changes are made through the protocol's on-chain governance. 
+Kusama is owned by those who hold the Kusama tokens (KSM). There's no central kill switch and all
+changes are made through the protocol's on-chain governance.
 
-The network is a permissionless and anyone can come along and start using it.
-Those who participated in the Polkadot sale can claim a proportional amount of KSM through
-the [Kusama Claims process][claims].
+The network is a permissionless and anyone can come along and start using it. Those who participated
+in the Polkadot sale can claim a proportional amount of KSM through the [Kusama Claims
+process][claims].
 
 Kusama is experimental. **Expect Chaos**.
 
@@ -28,9 +28,8 @@ Kusama is experimental. **Expect Chaos**.
 
 :::tip As a KSM holder
 
-You can interact with all the features of the Kusama network such as
-staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and
-everything else.
+You can interact with all the features of the Kusama network such as staking (i.e. validating or
+nominating), governance, parachain auctions, basic transfers and everything else.
 
 :::
 
@@ -179,8 +178,8 @@ everything else.
 
 <br />
 
-For brand-new learners of Kusama's cousin network, Polkadot, please head over to the 
-[Polkadot Wiki][].
+For brand-new learners of Kusama's cousin network, Polkadot, please head over to the [Polkadot
+Wiki][].
 
 ### Kusama Gifts
 
@@ -193,13 +192,15 @@ Kusama Gifts provide an easy way to:
 - Say ‘thank you’ or send someone tokens when you don’t know their address.
 - Get friends and family set up to participate in crowdloans.
 
-Learn more about how you can create and send Kusama Gifts [here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
+Learn more about how you can create and send Kusama Gifts
+[here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
 
-While Kusama does not support smart contracts natively, building apps on it is still possible
-(e.g. [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into *proper* development, 
+While Kusama does not support smart contracts natively, building apps on it is still possible (e.g.
+[RMRK.app](https://rmrk.app)). If you're interested in diving deeper into _proper_ development,
 however, check out the [builders guide](build-index).
 
 Additional Resources:
+
 - [mooc](https://mooc.web3.foundation/course/blockchain-fundamentals/)
 - [medium](https://medium.com/polkadot-network/kusama-network-7446706b8f4c)
 - [claims](kusama-claims)

@@ -42,8 +42,8 @@ and it uses slot numbers as a clock emulator, estimating time.
 ### Here's how it works in detail:
 
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
-Slots make up [epochs](../general/glossary.md##epoch) - on Polkadot, 2400 slots make one epoch, which makes
-epochs four hours long.
+Slots make up [epochs](../general/glossary.md##epoch) - on Polkadot, 2400 slots make one epoch,
+which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
 the following:
@@ -62,7 +62,8 @@ The `RESULT` is then compared to a _threshold_ defined in the implementation of 
 (specifically, in the Polkadot Host). If the value is less than the threshold, then the validator
 who rolled this number is a viable block production candidate for that slot. The validator then
 attempts to create a block and submits this block into the network along with the previously
-obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it against a threshold, and produces a block if the random roll is under that threshold.
+obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it
+against a threshold, and produces a block if the random roll is under that threshold.
 
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.

@@ -7,6 +7,8 @@ keywords: [assets, fungible, non-fungible]
 slug: ../learn-assets
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
 represented on several chains. They can also take many forms, from a parachain's native token to
 on-chain representations of off-chain reserves. This page focuses on the latter, namely assets that
@@ -33,9 +35,9 @@ just as good as DOT on the Relay Chain. :polkadot }}{{ kusama: Statemine has a t
 and as such, can teleport KSM between itself and the Relay Chain. That is, KSM on Statemine is
 just as good as KSM on the Relay Chain. :kusama }}
 
-{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart
-contracts. See the [Advanced](#advanced-techniques) section at the bottom for discussion on using
-proxy and multisig accounts to replicate oft used contract logic.
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart contracts.
+See the [Advanced](#advanced-techniques) section at the bottom for discussion on using proxy and
+multisig accounts to replicate oft used contract logic.
 
 ## Fungible Assets
 
@@ -49,8 +51,8 @@ upon every release, leading to efficient execution and stable transaction fees.
 ### Creation and Management
 
 Anyone on the network can create assets on {{ polkadot: Statemint, as long as they can reserve the
-required deposit of 100 DOT. :polkadot }}{{ kusama: Statemine, as long as they can reserve
-the required deposit of 1 KSM. :kusama }}. The network reserves the deposit on creation. The creator
+required deposit of <RPC network="polkadot" path="const.asset.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: Statemine, as long as they can reserve
+the required deposit of <RPC network="kusama" path="query.asset.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}. The network reserves the deposit on creation. The creator
 also must specify a unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId`
 should be the canonical identifier for an asset, as the chain does not enforce the uniqueness of
 metadata like "name" and "symbol". The creator must also specify a minimum balance, which will
@@ -72,19 +74,19 @@ the [reference documentation](https://crates.parity.io/pallet_assets/index.html)
 privileged roles.**
 
 An asset's details contain one field not accessible to its owner or admin team, that of asset
-sufficiency. Only the network's governance mechanism can deem an asset as *sufficient*. A balance of
+sufficiency. Only the network's governance mechanism can deem an asset as _sufficient_. A balance of
 a non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
 could not create a new account on-chain by transferring an insufficient asset to it; the account
 must already exist by having more than the existential deposit {{ polkadot: in DOT :polkadot }}
-{{ kusama: in KSM :kusama }} (or a sufficient asset). However, assets deemed *sufficient* can
-instantiate accounts. In the future, *sufficient* assets will be able to pay transaction fees, such
+{{ kusama: in KSM :kusama }} (or a sufficient asset). However, assets deemed _sufficient_ can
+instantiate accounts. In the future, _sufficient_ assets will be able to pay transaction fees, such
 that users can transact on {{ polkadot: Statemint without the need for DOT :polkadot }}
 {{ kusama: Statemine without the need for KSM :kusama }}.
 
-### Using
+### Transferring Asset Balances
 
 Users have a simple interface, namely the ability to transfer asset balances to other accounts
-on-chain. As mentioned before, if the asset is not *sufficient*, then the destination account must
+on-chain. As mentioned before, if the asset is not _sufficient_, then the destination account must
 already exist for the transfer to succeed.
 
 The chain also contains a `transfer_keep_alive` function, similar to that of the Balances pallet,
@@ -146,7 +148,7 @@ class Owner can add on-chain, for example, a link to an IPFS hash or other off-c
 service. The Uniques pallet also supports setting key/value pairs as attributes to a class or
 instance.
 
-### Using
+### Transferring NFTs
 
 Users can transfer their NFTs to other accounts. The chain also provides an `approve_transfer`,
 `transfer_approved`, and `cancel_approval` interface that application developers can use to allow

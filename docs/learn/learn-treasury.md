@@ -7,7 +7,7 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.

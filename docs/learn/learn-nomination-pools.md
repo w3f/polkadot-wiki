@@ -7,7 +7,7 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 :::info Nomination Pools are live on
 [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and
@@ -111,18 +111,26 @@ for guidelines.
 ### Unbond and withdraw funds
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
-`unbond` will unbond part or all of the member's funds. After unbond has been called and the unbonding
-duration has passed
+`unbond` will unbond part or all of the member's funds. After unbond has been called and the
+unbonding duration has passed
 {{ polkadot: (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
 {{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
 eras which correspond to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
-days on
-{{ polkadot: Polkadot). :polkadot }}
-{{ kusama: Kusama). :kusama }}
-A member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
-relationship with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
+days on {{ polkadot: Polkadot). :polkadot }} {{ kusama: Kusama). :kusama }} A member may withdraw
+their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their
+pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section
+in
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+for guidelines.
+
+:::info Unbonding transaction automatically triggers withdrawal of rewards
+
+When there is a change in the bonded balance, the accumulated rewards in the pool thus far are automatically 
+withdrawn to the account. The rewards are then accrued based on the updated bonded balance. 
+
+:::
 
 ### Limitations
 

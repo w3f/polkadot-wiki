@@ -7,9 +7,9 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
-import VLTable from "./../../components/Voluntary-Locking"
+import VLTable from "./../../components/Voluntary-Locking";
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled

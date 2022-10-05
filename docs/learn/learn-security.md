@@ -23,13 +23,14 @@ suggests that transaction volumes will filter down to lower market cap altcoins 
 fill their blocks. A major flaw in this idea is that the lower market cap coins will have less
 economic security attached, and be easier to attack. A real life example of a 51% attack occurred
 recently (
-[Ethereum Classic attack on January 10](https://cointelegraph.com/news/ethereum-classic-51-attack-the-reality-of-proof-of-work)
+[Ethereum Classic attack on January 10, 2019](https://cointelegraph.com/news/ethereum-classic-51-attack-the-reality-of-proof-of-work)
 ), in which an unknown attacker double spent 219_500 ETC (~1.1 million USD). This was followed by
 two more 51% attacks on ETC.
 
 Polkadot overcomes security scalability concerns since it gravitates all the economic incentives to
 the Relay Chain and allows the parachains to tap into stronger guarantees at genesis. Sovereign
-chains must expend much more effort to grow the value of their coin so that it is sufficiently secure against well-funded attackers.
+chains must expend much more effort to grow the value of their coin so that it is sufficiently
+secure against well-funded attackers.
 
 ### Example
 

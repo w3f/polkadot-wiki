@@ -8,7 +8,7 @@ slug: ../maintain-errors
 ---
 
 Errors in Substrate-based chains are usually accompanied by descriptive messages. However, to read
-these messages, a tool parsing the blockchain data needs to request *chain metadata* from a node.
+these messages, a tool parsing the blockchain data needs to request _chain metadata_ from a node.
 That metadata explains how to read the messages. One such tool with a built-in parser for chain
 metadata is the [Polkadot-JS Apps UI](https://polkadot.js.org/apps).
 
@@ -56,10 +56,11 @@ For example, if `index` is 5 and `error` is 3, as in the example linked above, w
 the runtime for the fourth error (index 3) in the sixth pallet (index 5).
 
 By looking at the
-[runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs)
-we see that the pallet at index 5 is
-`Balances`. Now we will check the Balances pallet's code which is hosted in the Substrate repository,
-and look for the fourth error in the `Error enum`. According to its source the error that we got is `InsufficientBalance`, or in other words, "Balance too low to send value".
+[runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs) we
+see that the pallet at index 5 is `Balances`. Now we will check the Balances pallet's code which is
+hosted in the Substrate repository, and look for the fourth error in the `Error enum`. According to
+its source the error that we got is `InsufficientBalance`, or in other words, "Balance too low to
+send value".
 
 ## Common Errors
 
@@ -77,7 +78,10 @@ The table below lists the most commonly encountered errors and ways to resolve t
 
 :::note Future Error
 
-This error will not cause the TX to be discarded immediately. Instead, it will be sent to the [futures queue](https://docs.substrate.io/main-docs/fundamentals/transaction-lifecycle/), where it will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to some other error (ex. the validity period expires).*
+This error will not cause the TX to be discarded immediately. Instead, it will be sent to the
+[futures queue](https://docs.substrate.io/main-docs/fundamentals/transaction-lifecycle/), where it
+will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to
+some other error (ex. the validity period expires).\*
 
 :::
 

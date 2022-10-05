@@ -7,7 +7,7 @@ keywords: [ledger, staking, kusama]
 slug: ../../kusama-ledger
 ---
 
-import RPC from "./../../../components/RPC-Connection"
+import RPC from "./../../../components/RPC-Connection";
 
 :::info
 

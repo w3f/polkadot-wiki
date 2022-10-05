@@ -7,7 +7,7 @@ description: Steps on how to perform balance transfers.
 slug: ../learn-balance-transfers
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Balance transfers are used to send a balance from one account to another account. To start
 transferring a balance, we will begin by using
