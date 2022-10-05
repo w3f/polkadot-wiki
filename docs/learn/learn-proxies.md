@@ -234,18 +234,18 @@ details see the [dedicated section about anonymous proxies](#anonymous-proxy-pur
 
 As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed
 if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a
-stash account that has a _staking_ proxy account, P-A. P-A is a _pure_ proxy, a proxied
-account originally spawned by Charly that is now an _any_ proxy of P-A and signs everything on
+stash account that has a _staking_ proxy account, P-C. P-C is a _pure_ proxy, a proxied
+account originally spawned by Charly that is now an _any_ proxy of P-C and signs everything on
 its behalf.
 
 ![nested proxy calls](../assets/nested-proxy-calls.png)
 
-For example, to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to P-A, which in
+For example, to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to P-C, which in
 turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic,
 specifying the number of tokens that need to be bounded. If Charly wants to leave, a new account can
 take his place as any proxy (before Charly leaves!). There is no need to change the staking proxy
-account. Also, Alice is the only one who can remove P-A as a staking proxy, and P-A can only
-perform staking-related tasks. For example, P-A cannot send funds out from Alice's account.
+account. Also, Alice is the only one who can remove P-C as a staking proxy, and P-C can only
+perform staking-related tasks. For example, P-C cannot send funds out from Alice's account.
 
 :::note
 
