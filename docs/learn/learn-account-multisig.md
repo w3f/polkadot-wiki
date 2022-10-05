@@ -118,7 +118,7 @@ being used to generate the multisig address.
 
 :::
 
-This has some implications when using the Extrinsics Tab on the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see our video tutorials for more information about creating multisig accounts and transacting with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
+This has some implications when using the Extrinsics tab on the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see our video tutorials for more information about creating multisig accounts and transacting with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
 
 ## Decoding Multisig Call Data
 
