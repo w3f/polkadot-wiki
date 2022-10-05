@@ -385,7 +385,7 @@ but can also be equal to it, which means they all have to agree.
 :::note Explainer on multisig accounts
 
 Learn more about multisig accounts from our
-[technical explainer video](https://www.youtube.com/watch?v=ZJLqszvhMyM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=25&ab_channel=Polkadot).
+[technical explainer video](https://www.youtube.com/watch?v=-cPiKMslZqI).
 
 :::
 
