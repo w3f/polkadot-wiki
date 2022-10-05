@@ -16,10 +16,10 @@ We want to foster a sense of collaboration amongst ourselves and the open-source
 participants exist to encourage the open exchange of ideas and expression and require an environment
 that recognizes the inherent worth of every person and group. We are here to collaborate, discuss,
 and even disagree. The key is doing this in a manner that comes from a place of respect and
-professionalism. Participants in the Kusama network may consist of an online forum,
-on-chain governance participants, parachain deployment teams, validators, enthusiasts, and ecosystem
-tool builders. We expect for there to be participation from all backgrounds but like to set some
-social boundaries on how you may be treated and treat others.
+professionalism. Participants in the Kusama network may consist of an online forum, on-chain
+governance participants, parachain deployment teams, validators, enthusiasts, and ecosystem tool
+builders. We expect for there to be participation from all backgrounds but like to set some social
+boundaries on how you may be treated and treat others.
 
 Kusama community members come from across the globe and are not bordered by race, gender, or
 background. Community participants have read through the requisite resources and obtained sufficient
@@ -28,10 +28,10 @@ requisite information needed to dispense of their duties as a participant.
 
 :::note Examples of Unacceptable Behavior
 
-These are just a few examples, and you can always consult a team member 
-if you have any questions.
+These are just a few examples, and you can always consult a team member if you have any questions.
 
-- Obnoxious, aggressive comments towards individuals or other projects on any medium of communication.
+- Obnoxious, aggressive comments towards individuals or other projects on any medium of
+  communication.
 - Knowingly distributing false information about Kusama or other projects.
 - Harassing other individuals or projects.
 

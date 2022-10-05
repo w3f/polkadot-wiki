@@ -7,8 +7,8 @@ keywords: [unbond, unbonding, rebond, rebonding, stake]
 slug: ../maintain-guides-how-to-unbond
 ---
 
-The following content describes how to stop nominating or validating and retrieve your stake. Please note
-that all networks on which you can nominate have a delayed exit period, called the _unbonding
+The following content describes how to stop nominating or validating and retrieve your stake. Please
+note that all networks on which you can nominate have a delayed exit period, called the _unbonding
 period_, which serves as a cooldown. You will not be able to transfer your tokens before this period
 has elapsed, and you will not receive any staking rewards during this period (as you are not
 nominating any validators).
@@ -24,9 +24,9 @@ staking with and would like to free the funds for. This will "chill" the tokens.
 
 ![Stop Nominating Button](../assets/NPoS/unbond1.png)
 
-After you confirm this transaction, your tokens will still remain _bonded_. This means they stay ready to
-be distributed among nominees or used as validator self-stake again. To actually withdraw them, you
-need to unbond.
+After you confirm this transaction, your tokens will still remain _bonded_. This means they stay
+ready to be distributed among nominees or used as validator self-stake again. To actually withdraw
+them, you need to unbond.
 
 ### Step 2: Unbonding an amount
 

@@ -9,8 +9,8 @@ slug: ../../kusama-community
 
 The following is a list of official chats, forums, and social channels for the Kusama community.
 
-**No admin or moderator will ever DM you for any reason whatsoever without prior
-public contact and anyone doing so is likely trying to scam you.**
+**No admin or moderator will ever DM you for any reason whatsoever without prior public contact and
+anyone doing so is likely trying to scam you.**
 
 ## General
 
@@ -26,8 +26,8 @@ public contact and anyone doing so is likely trying to scam you.**
 
 ### Events
 
-Web3 Foundation hosts many events online and in-person. To check out our current and past
-events, please refer to our public
+Web3 Foundation hosts many events online and in-person. To check out our current and past events,
+please refer to our public
 [Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
 
 ## Matrix Chats
@@ -50,8 +50,8 @@ application we use most often to interact with the Matrix protocol is the
 
 ### Technical
 
-- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More
-  advanced room for technical questions on building with Substrate.
+- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More advanced
+  room for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A room to discuss developing Substrate smart contracts using Parity Ink!
 

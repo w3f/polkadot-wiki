@@ -9,13 +9,13 @@ slug: ../../kusama-social-recovery
 
 Managing an account is not an easy task. Many people have lost their private keys due to improper
 key management over the past few years. Kusama provides a method that allows users to recover their
-accounts by setting up a social recovery. It is an M-of-N recovery tool based on the
-multi-signature wallet to get back access to your lost account.
+accounts by setting up a social recovery. It is an M-of-N recovery tool based on the multi-signature
+wallet to get back access to your lost account.
 
 :::caution There is no way to get back your private key by using this method
 
-This is just a way of performing transactions on behalf of the lost account, so you can
-think of it as a proxy instead.
+This is just a way of performing transactions on behalf of the lost account, so you can think of it
+as a proxy instead.
 
 :::
 
@@ -24,24 +24,24 @@ need to be aware of when using it.
 
 ## Create a Recoverable Account
 
-You will use your existing account to call `createRecovery` to select a list of accounts you
-trust to help you recover the account when you lose the private key. To create a recoverable
-account, you will be required to set a `threshold` that is the number of your friends who need to
-approve the recovery process to recover your account.
+You will use your existing account to call `createRecovery` to select a list of accounts you trust
+to help you recover the account when you lose the private key. To create a recoverable account, you
+will be required to set a `threshold` that is the number of your friends who need to approve the
+recovery process to recover your account.
 
 ![](../../assets/recovery/social-recovery-diag-1.png)
 
 :::note Account Recovery
 
-If you are recovering an account, ensure that your network is set to Kusama. 
-You can do this by selecting the network from the top right corner in the Polkadot-JS UI.
+If you are recovering an account, ensure that your network is set to Kusama. You can do this by
+selecting the network from the top right corner in the Polkadot-JS UI.
 
 :::
 
-First, see the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot-JS Apps
-that shows all available accounts on your browser's local storage and Polkadot-JS extension. 
-To create a recoverable account, make sure you have some KSM to pay the transaction fees. 
-You You will also need some for the reserve required by the account recovery setup.
+First, see the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot-JS Apps that
+shows all available accounts on your browser's local storage and Polkadot-JS extension. To create a
+recoverable account, make sure you have some KSM to pay the transaction fees. You You will also need
+some for the reserve required by the account recovery setup.
 
 ![kusama accounts page](../../assets/kusama/kusama_social_recovery_accounts_page.png)
 
@@ -61,8 +61,8 @@ order to recover the account.
 
 :::info
 
-1 is the minimum, but it is not recommended to set a small number. If you set 1, that means
-any of your recovery helpers would be able to recover your account.
+1 is the minimum, but it is not recommended to set a small number. If you set 1, that means any of
+your recovery helpers would be able to recover your account.
 
 :::
 
@@ -73,9 +73,9 @@ recovery process.
 
 :::info
 
-Setting the block delay to be a little longer would be better since even if an attacker
-acquired enough signatures to recover your account, they would still have to wait until the block
-delay is passed to control your account.
+Setting the block delay to be a little longer would be better since even if an attacker acquired
+enough signatures to recover your account, they would still have to wait until the block delay is
+passed to control your account.
 
 :::
 
@@ -92,13 +92,13 @@ The above diagram shows the whole process of recovering an account.
 
 :::info
 
-Ensure that your new account has enough KSM to pay for the transaction fees and the amount
-that is used for reserve when making a recovery.
+Ensure that your new account has enough KSM to pay for the transaction fees and the amount that is
+used for reserve when making a recovery.
 
 :::
 
-Navigate to the menu beside the send button in the row of your new account and click
-the "Initiate recover for another" option.
+Navigate to the menu beside the send button in the row of your new account and click the "Initiate
+recover for another" option.
 
 ![kusama accounts initial recoverable](../../assets/kusama/kusama_make_recoverable.png)
 
@@ -136,8 +136,8 @@ function as your lost account to get the locked KSM.
 
 Once the transaction goes through, the reserved KSM from the "NEW-ACC" will have been moved to the
 lost account. This is a way of preventing someone from recovering other accounts maliciously.
-Imagine if someone tried to initiate recovery on your account; you can do this to slash their 
-locked KSM.
+Imagine if someone tried to initiate recovery on your account; you can do this to slash their locked
+KSM.
 
 ![](../../assets/recovery/social-recovery-11.png)
 
@@ -160,10 +160,10 @@ The recovery process is now complete and successful.
 
 :::tip Using `Root` origin
 
-There is still one possible way to recover the account without going through the recovery
-process. That is by using the `Root` origin. However, in order to use root permissions, you will
-need to either go through the council or submit a public proposal. To learn more about governance,
-see [here](../../learn/learn-governance.md).
+There is still one possible way to recover the account without going through the recovery process.
+That is by using the `Root` origin. However, in order to use root permissions, you will need to
+either go through the council or submit a public proposal. To learn more about governance, see
+[here](../../learn/learn-governance.md).
 
 :::
 

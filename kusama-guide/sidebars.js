@@ -70,6 +70,7 @@ module.exports = {
               label: "Nominate",
               items: [
                 "learn/learn-staking",
+                "learn/learn-staking-advanced",
                 "maintain/kusama/maintain-guides-how-to-nominate-kusama",
               ],
         },

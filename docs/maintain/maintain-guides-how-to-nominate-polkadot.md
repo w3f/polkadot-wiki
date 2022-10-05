@@ -6,7 +6,8 @@ description: Steps on how to nominate on Polkadot.
 keywords: [nominate, how to nominate, nominator, stake]
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
-import RPC from "./../../components/RPC-Connection"
+
+import RPC from "./../../components/RPC-Connection";
 
 :::info
 
@@ -111,9 +112,11 @@ These concepts have been further explained in Polkadot's
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded
-funds can now be distributed to up to <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> 
-validators. Be careful about
-the validators you choose since you will be slashed if your validator commits an offence.
+funds can now be distributed to up to
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :kusama }}
+validators. Be careful about the validators you choose since you will be slashed if your validator
+commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select up to 16 validators. Although you may choose up to 16 validators, due to the
@@ -138,9 +141,9 @@ Staking wiki page for more details.
 This step is highly relevant if the staked DOT is close to the dynamic minimum active nomination
 threshold on the network, which can be viewed on
 [Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
-For instance, the minimum active nomination receiving staking rewards is 124.575 DOT in the
-snapshot below. See the [Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator
-wiki page for more details.
+For instance, the minimum active nomination receiving staking rewards is 124.575 DOT in the snapshot
+below. See the [Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator wiki page
+for more details.
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
 

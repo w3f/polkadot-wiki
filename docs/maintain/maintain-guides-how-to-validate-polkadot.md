@@ -6,12 +6,15 @@ description: The fundamentals for running a Polkadot validator.
 keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
-import RPC from "./../../components/RPC-Connection"
-import MinimumStake from "./../../components/Minimum-Stake"
+
+import RPC from "./../../components/RPC-Connection";
+
+import MinimumStake from "./../../components/Minimum-Stake";
 
 :::info
 
-The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
+The following information applies to the Polkadot network. If you want to set up a validator on
+Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
 
@@ -27,7 +30,8 @@ your stash.
 
 :::warning
 
-It is highly recommended that you have significant system administration experience before attempting to run your own validator.
+It is highly recommended that you have significant system administration experience before
+attempting to run your own validator.
 
 You must be able to handle technical issues and anomalies with your node which you must be able to
 tackle yourself. Being a validator involves more than just executing the Polkadot binary.
@@ -51,18 +55,28 @@ experience.
 ### How many DOT do I need?
 
 You can have a rough estimate on that by using the methods listed
-[here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). To be elected
-into the set, you need a minimum stake behind your validator. This stake can come from yourself or from
-[nominators](../learn/learn-nominator.md). This means that as a minimum, you will need enough DOT to set up
-Stash and Controller [accounts](../learn/learn-keys.md) with the existential deposit, plus a little extra for
-transaction fees. The rest can come from nominators. To understand how validators are elected, check the
+[here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
+To be elected into the set, you need a minimum stake behind your validator. This stake can come from
+yourself or from [nominators](../learn/learn-nominator.md). This means that as a minimum, you will
+need enough DOT to set up Stash and Controller [accounts](../learn/learn-keys.md) with the
+existential deposit, plus a little extra for transaction fees. The rest can come from nominators. To
+understand how validators are elected, check the
 [NPoS Election algorithms](../learn/learn-phragmen.md) page.
 
-
 :::info On-Chain Data for Reference
-On Polkadot, the minimum stake backing a validator in the active set is <MinimumStake network="polkadot" defaultValue={18684315524834056}/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>.
 
-On Kusama, the minimum stake backing a validator in the active set is <MinimumStake network="kusama" defaultValue={5367388652143741} /> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>.
+On Polkadot, the minimum stake backing a validator in the active set is
+{{ polkadot: <MinimumStake network="polkadot" defaultValue={18684315524834056}/> :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={18684315524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>. :kusama }}
+
+On Kusama, the minimum stake backing a validator in the active set is
+{{ kusama: <MinimumStake network="kusama" defaultValue={5367388652143741} /> :kusama }}
+{{ polkadot: <MinimumStake network="kusama" defaultValue={5367388652143741} /> :polkadot }} in the
+era
+{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>. :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>. :polkadot }}
 :::
 
 **Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
@@ -75,34 +89,43 @@ instead.
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is best to use a recent Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
+choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is best to use a recent
+Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
 #### Reference Hardware
 
-The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services (AWS).
-To be specific, we used `c2d-highcpu-8` VM instance on GCP and `c6id.2xlarge` on AWS.
-It is recommended that the hardware used to run the validators at least matches the specs of
-the reference hardware in order to ensure they are able to process all blocks
-in time. If you use subpar hardware you will possibly run into performance issues, get less era points, and potentially even get slashed.
+The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on
+VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services
+(AWS). To be specific, we used `c2d-highcpu-8` VM instance on GCP and `c6id.2xlarge` on AWS. It is
+recommended that the hardware used to run the validators at least matches the specs of the reference
+hardware in order to ensure they are able to process all blocks in time. If you use subpar hardware
+you will possibly run into performance issues, get less era points, and potentially even get
+slashed.
 
 - **CPU**
   - x86-64 compatible;
   - Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen);
   - 4 physical cores @ 3.4GHz;
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
-  - Prefer single-threaded performance over higher cores count. A comparison of single-threaded performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
+  - Prefer single-threaded performance over higher cores count. A comparison of single-threaded
+    performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
 - **Storage**
-  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In general, the latency is more important than the throughput.
+  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An
+    estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In
+    general, the latency is more important than the throughput.
 - **Memory**
   - 16GB DDR4 ECC.
 - **System**
   - Linux Kernel 5.16 or newer.
 - **Network**
-  - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to support a large number of parachains and allow for proper congestion control in busy network situations.
+  - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to
+    support a large number of parachains and allow for proper congestion control in busy network
+    situations.
 
-The specs posted above are not a *hard* requirement to run a validator, but are considered best practice.
-Running a validator is a responsible task; using professional hardware is a must in any way.
+The specs posted above are not a _hard_ requirement to run a validator, but are considered best
+practice. Running a validator is a responsible task; using professional hardware is a must in any
+way.
 
 ### Node Prerequisites: Install Rust and Dependencies
 
@@ -190,10 +213,10 @@ sudo ntpq -p
 
 :::warning
 
-Skipping this can result in the validator node missing block authorship opportunities.
-If the clock is out of sync (even by a small amount), the blocks the validator produces may not
-get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
-zero allocated blocks making it on chain.
+Skipping this can result in the validator node missing block authorship opportunities. If the clock
+is out of sync (even by a small amount), the blocks the validator produces may not get accepted by
+the network. This will result in `ImOnline` heartbeats making it on chain, but zero allocated blocks
+making it on chain.
 
 :::
 
@@ -201,7 +224,8 @@ zero allocated blocks making it on chain.
 
 #### Optional: Installation via Package Managers
 
-The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
+The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and
+`RPM-based` distros (i.e. **Fedora**, **CentOS**).
 
 #### Debian-based (Debian, Ubuntu)
 
@@ -308,7 +332,9 @@ cargo build --profile production
 
 :::note Compilation Errors
 
-If you run into compile errors, you may have to pin the version of Rust compiler to the one that was used to build the release. Check out `Rust compiler versions` section in the release notes. This can be done by running:
+If you run into compile errors, you may have to pin the version of Rust compiler to the one that was
+used to build the release. Check out `Rust compiler versions` section in the release notes. This can
+be done by running:
 
 ```sh
 rustup install nightly-2022-05-18
@@ -338,9 +364,8 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 :::info By default, Validator nodes are in archive mode
 
-If you've already synced the chain not in archive mode, you must first remove the
-database with `polkadot purge-chain` and then ensure that you run Polkadot with
-the `--pruning=archive` option.
+If you've already synced the chain not in archive mode, you must first remove the database with
+`polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 
 :::
 
@@ -380,15 +405,14 @@ if you do not want to start in validator mode right away.
 
 :::
 
-The `--pruning=archive` flag is implied by the `--validator` flag, so it is only
-required explicitly if you start your node without one of these two options. If you do not set your
-pruning to archive node, even when not running in validator mode, you will need to
-re-sync your database when you switch.
+The `--pruning=archive` flag is implied by the `--validator` flag, so it is only required explicitly
+if you start your node without one of these two options. If you do not set your pruning to archive
+node, even when not running in validator mode, you will need to re-sync your database when you
+switch.
 
 :::note Validators should sync using the RocksDb backend
 
-This is implicit by default, but can
-be explicit by passing the `--database RocksDb` flag.
+This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
 
 In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note
 that **ParityDB is still experimental and should not be used in production.** If you want to test
@@ -408,11 +432,11 @@ verified. You can then compare that to the current highest block via
 
 #### Database Snapshot Services
 
-If you start a node for the first time, it will start building from the genesis block. This process can
-take a while depending on the database size. To make this process faster, snapshots can be used. Snapshots
-are compressed backups of the database directory of Polkadot/Kusama nodes, containing the whole chain
-(or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed below are a few
-public snapshot providers for Polkadot and Kusama.
+If you start a node for the first time, it will start building from the genesis block. This process
+can take a while depending on the database size. To make this process faster, snapshots can be used.
+Snapshots are compressed backups of the database directory of Polkadot/Kusama nodes, containing the
+whole chain (or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed
+below are a few public snapshot providers for Polkadot and Kusama.
 
 - [STAKEWORLD](https://stakeworld.nl/docs/snapshot)
 - [Polkachu](https://polkachu.com/snapshots)
@@ -420,12 +444,12 @@ public snapshot providers for Polkadot and Kusama.
 
 :::caution
 
-For the security of the network, it is recommended that you sync from scratch, even if you are running your
-node in pruning mode for validation. The reason is that if these snapshots get corrupted and a majority of nodes
-run based on these snapshots, the network could end up running on a non-canonical chain.
+For the security of the network, it is recommended that you sync from scratch, even if you are
+running your node in pruning mode for validation. The reason is that if these snapshots get
+corrupted and a majority of nodes run based on these snapshots, the network could end up running on
+a non-canonical chain.
 
 :::
-
 
 ## Bond DOT
 
@@ -458,11 +482,11 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
-  [here](../learn/learn-staking.md/#reward-distribution). Starting with runtime version v23 natively included
-  in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3), payouts can
-  go to any custom address. If you'd like to redirect payments to an account that is neither the
-  controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange
-  address as the recipient of the staking rewards.
+  [here](../learn/learn-staking.md/#reward-distribution). Starting with runtime version v23 natively
+  included in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3),
+  payouts can go to any custom address. If you'd like to redirect payments to an account that is
+  neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set
+  an exchange address as the recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
@@ -481,9 +505,8 @@ the funds bonded by the Stash account.
 
 :::caution Session keys are consensus critical
 
-If you are not sure if your node has the
-current session keys that you made the `setKeys` transaction then you can use one of the two
-available RPC methods to query your node:
+If you are not sure if your node has the current session keys that you made the `setKeys`
+transaction then you can use one of the two available RPC methods to query your node:
 [hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
 check for a specific key or
 [hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
@@ -532,13 +555,13 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps RPC.
-If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator
-node. You can configure the apps dashboard to connect to the endpoint of your validator in the
-Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you
-will not be able to use this method since making RPC requests to this node would effect the local
-keystore hosted on a _public node_ and you want to make sure you are interacting with the keystore
-for _your node_.
+You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps
+RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+validator node. You can configure the apps dashboard to connect to the endpoint of your validator in
+the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
+you will not be able to use this method since making RPC requests to this node would effect the
+local keystore hosted on a _public node_ and you want to make sure you are interacting with the
+keystore for _your node_.
 
 Once ensuring that you have connected to your node, the easiest way to set session keys for your
 node is by calling the `author_rotateKeys` RPC request to create new keys in your validator's
@@ -598,7 +621,8 @@ validator's rewards. This is the rate that your validator will be commissioned w
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-:::caution Setting a commission rate of 100% suggests that you do not want your validator to receive nominations
+:::caution Setting a commission rate of 100% suggests that you do not want your validator to receive
+nominations
 
 :::
 
@@ -651,72 +675,122 @@ other peers over the network.
 
 :::info
 
-Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to quickly get the answers you need.
+Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to quickly get the
+answers you need.
 
 :::
 
 ## Note about VPS
 
-VPS providers are very popular for running servers of any kind.
-Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general.
+VPS providers are very popular for running servers of any kind. Extensive benchmarking was conducted
+to ensure that VPS servers are able to keep up with the work load in general.
 
 :::note
 
-Before you run a live Validator, please verify if the advertised performance is actually delivered consistently by the VPS provider.
+Before you run a live Validator, please verify if the advertised performance is actually delivered
+consistently by the VPS provider.
 
-:::
-The following server types showed acceptable performance during the benchmark tests. Please note that this is not an endorsement in any way:
-- GCP's *c2* and *c2d* machine families
-- AWS's *c6id* machine family
+::: The following server types showed acceptable performance during the benchmark tests. Please note
+that this is not an endorsement in any way:
+
+- GCP's _c2_ and _c2d_ machine families
+- AWS's _c6id_ machine family
 
 The following additional configurations were applied to the instances to tune their performance:
 
 ### Disable [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)
-As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. The node still profits from multiple cores when doing networking and other non-runtime operations. It is therefore still necessary to run it on at least the minimum required number of cores.
-Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core rather than being presented to the OS as two logical cores.
-SMT implementation is called _Hyper-Threading_ on Intel and _2-way SMT_ on AMD Zen. To disable SMT in runtime:
+
+As critical path of Substrate is single-threaded we need to optimize for single-core CPU
+performance. The node still profits from multiple cores when doing networking and other non-runtime
+operations. It is therefore still necessary to run it on at least the minimum required number of
+cores. Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core
+rather than being presented to the OS as two logical cores. SMT implementation is called
+_Hyper-Threading_ on Intel and _2-way SMT_ on AMD Zen. To disable SMT in runtime:
+
 ```bash
 for cpunum in $(cat /sys/devices/system/cpu/cpu*/topology/thread_siblings_list | cut -s -d, -f2- | tr ',' '\n' | sort -un)
 do
   echo 0 > /sys/devices/system/cpu/cpu$cpunum/online
 done
 ```
+
 It will disable every other (vCPU) core.
 
-To save changes permanently add `nosmt=force` as kernel parameter. Edit `/etc/default/grub` and add `nosmt=force` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After the reboot you should see half of the cores are offline. Run `lscpu --extended` to confirm.
+To save changes permanently add `nosmt=force` as kernel parameter. Edit `/etc/default/grub` and add
+`nosmt=force` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After the reboot
+you should see half of the cores are offline. Run `lscpu --extended` to confirm.
 
 ### Disable automatic NUMA balancing
-If you have multiple physical CPUs (CPU0 and CPU1) in the system each with its own memory bank (MB0 and MB1), then it is usually slower for a CPU0 to access MB1 due to the slower interconnection. To prevent the OS from automatically moving the running Substrate process from one CPU to another and thus causing an increased latency, it is recommended to disable automatic NUMA balancing.
 
-With automatic NUMA balancing disabled, an OS will always run a process on the same NUMA node where it was initially scheduled.
+If you have multiple physical CPUs (CPU0 and CPU1) in the system each with its own memory bank (MB0
+and MB1), then it is usually slower for a CPU0 to access MB1 due to the slower interconnection. To
+prevent the OS from automatically moving the running Substrate process from one CPU to another and
+thus causing an increased latency, it is recommended to disable automatic NUMA balancing.
+
+With automatic NUMA balancing disabled, an OS will always run a process on the same NUMA node where
+it was initially scheduled.
 
 To disable NUMA balancing in runtime:
+
 ```bash
 sysctl kernel.numa_balancing=0
 ```
-To save changes permanently, update startup options and reconfigure GRUB. Edit `/etc/default/grub` and add `numa_balancing=disable` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After reboot you can confirm the change by running `sysctl -a | grep 'kernel.numa_balancing'` and checking if the parameter is set to 0
+
+To save changes permanently, update startup options and reconfigure GRUB. Edit `/etc/default/grub`
+and add `numa_balancing=disable` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run
+`sudo update-grub`. After reboot you can confirm the change by running
+`sysctl -a | grep 'kernel.numa_balancing'` and checking if the parameter is set to 0
 
 ### Configure Spectre/Meltdown Mitigations
-Spectre and Meltdown are vulnerabilities discovered in modern CPUs a few years ago. Mitigations were made to the Linux kernel to cope with the multiple variations of these attacks. Check out https://meltdownattack.com/ for more info.
 
-Initially those mitigations added ~20% penalty to the performance of the workloads. As CPU manufacturers started to roll-out mitigations implemented in hardware, the performance gap [narrowed down](https://www.phoronix.com/scan.php?page=article&item=3-years-specmelt&num=1). As the benchmark demonstrates, the performance penalty got reduced to ~7% on Intel 10th Gen CPUs. This is true for the workloads running on both bare-metal and VMs. But the penalty remains high for the containerized workloads in some cases.
+Spectre and Meltdown are vulnerabilities discovered in modern CPUs a few years ago. Mitigations were
+made to the Linux kernel to cope with the multiple variations of these attacks. Check out
+https://meltdownattack.com/ for more info.
 
-As demonstrated in [Yusuke Endoh's article](http://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html), a performance penalty for containerized workloads can be as high as 100%. This is due to SECCOMP profile being overprotective about applying Spectre/Meltdown mitigations without providing real security. A longer explanation is a available in the [kernel patch discussion](https://lkml.org/lkml/2020/11/4/1135).
+Initially those mitigations added ~20% penalty to the performance of the workloads. As CPU
+manufacturers started to roll-out mitigations implemented in hardware, the performance gap
+[narrowed down](https://www.phoronix.com/scan.php?page=article&item=3-years-specmelt&num=1). As the
+benchmark demonstrates, the performance penalty got reduced to ~7% on Intel 10th Gen CPUs. This is
+true for the workloads running on both bare-metal and VMs. But the penalty remains high for the
+containerized workloads in some cases.
 
-Linux 5.16 [loosened the protections](https://www.phoronix.com/scan.php?page=news_item&px=Linux-Spectre-SECCOMP-Default) applied to SECCOMP threads by default. Containers running on kernel 5.16 and later now don't suffer from the performance penalty implied by using a SECCOMP profile in container runtimes.
+As demonstrated in
+[Yusuke Endoh's article](http://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html),
+a performance penalty for containerized workloads can be as high as 100%. This is due to SECCOMP
+profile being overprotective about applying Spectre/Meltdown mitigations without providing real
+security. A longer explanation is a available in the
+[kernel patch discussion](https://lkml.org/lkml/2020/11/4/1135).
+
+Linux 5.16
+[loosened the protections](https://www.phoronix.com/scan.php?page=news_item&px=Linux-Spectre-SECCOMP-Default)
+applied to SECCOMP threads by default. Containers running on kernel 5.16 and later now don't suffer
+from the performance penalty implied by using a SECCOMP profile in container runtimes.
 
 #### For Linux >= 5.16
-You are all set. The performance of containerized workloads is on par with non-containerized ones. You don't have to do anything.
+
+You are all set. The performance of containerized workloads is on par with non-containerized ones.
+You don't have to do anything.
 
 #### For Linux < 5.16
-You'll need to disable mitigations for Spectre V2 for user-space tasks as well as Speculative Store Bypass Disable (SSBD) for Spectre V4.
-[This patch message](https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=for-next/seccomp&id=2f46993d83ff4abb310ef7b4beced56ba96f0d9d) describes the reasoning for this default change in more detail:
 
-> Ultimately setting SSBD and STIBP by default for all seccomp jails is a bad sweet spot and bad default with more cons than pros that end up reducing security in the public cloud (by giving an huge incentive to not expose SPEC_CTRL which would be needed to get full security with IBPB after setting nosmt in the guest) and by excessively hurting performance to more secure apps using seccomp that end up having to opt out with SECCOMP_FILTER_FLAG_SPEC_ALLOW.
+You'll need to disable mitigations for Spectre V2 for user-space tasks as well as Speculative Store
+Bypass Disable (SSBD) for Spectre V4.
+[This patch message](https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=for-next/seccomp&id=2f46993d83ff4abb310ef7b4beced56ba96f0d9d)
+describes the reasoning for this default change in more detail:
 
-To disable the mitigations edit `/etc/default/grub` and add `spec_store_bypass_disable=prctl spectre_v2_user=prctl` to `GRUB_CMDLINE_LINUX_DEFAULT` variable, run `sudo update-grub`, then reboot.
+> Ultimately setting SSBD and STIBP by default for all seccomp jails is a bad sweet spot and bad
+> default with more cons than pros that end up reducing security in the public cloud (by giving an
+> huge incentive to not expose SPEC_CTRL which would be needed to get full security with IBPB after
+> setting nosmt in the guest) and by excessively hurting performance to more secure apps using
+> seccomp that end up having to opt out with SECCOMP_FILTER_FLAG_SPEC_ALLOW.
 
-Note that mitigations are not disabled completely. You can fully disable all the available kernel mitigations by setting `mitigations=off`. But we don't recommend doing this unless you run a fully trusted code on the host.
+To disable the mitigations edit `/etc/default/grub` and add
+`spec_store_bypass_disable=prctl spectre_v2_user=prctl` to `GRUB_CMDLINE_LINUX_DEFAULT` variable,
+run `sudo update-grub`, then reboot.
+
+Note that mitigations are not disabled completely. You can fully disable all the available kernel
+mitigations by setting `mitigations=off`. But we don't recommend doing this unless you run a fully
+trusted code on the host.
 
 ### VPS List
 
@@ -729,11 +803,12 @@ Note that mitigations are not disabled completely. You can fully disable all the
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
-:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
+:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS
+provider
 
-You may be locked out of your account and your server shut down if you come in violation.
-For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
-their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
+You may be locked out of your account and your server shut down if you come in violation. For
+instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their
+[Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
 explicit permission to do so. This may extend to other cryptocurrency activity.
 
 :::

@@ -7,30 +7,32 @@ keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms
 slug: ../learn-phragmen
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 ## NPoS Election Algorithms
 
-Since validators are paid almost equally in Polkadot in each era, it is important that the stake behind each validator 
-is uniformly spread out. An election algorithm for Nominated Proof of Staking (NPoS) on Polkadot will try to optimize three 
-metrics when computing a solution graph of nominators and validators:
+Since validators are paid almost equally in Polkadot in each era, it is important that the stake
+behind each validator is uniformly spread out. An election algorithm for Nominated Proof of Staking
+(NPoS) on Polkadot will try to optimize three metrics when computing a solution graph of nominators
+and validators:
 
 1. Maximize the total amount at stake.
 1. Maximize the stake behind the minimally staked validator.
 1. Minimize the variance of the stake in the set.
 
-:::note 
+:::note
 
- [Sequential Phragmén](#understanding-phragmén), [Phragmms](#phragmms-fka-balphragmms) and 
- [Star balancing](https://crates.parity.io/sp_npos_elections/balancing/fn.balance.html) are a few
- notable algorithms used for computing the NPoS solutions in Polkadot and Kusama.
+[Sequential Phragmén](#understanding-phragmén), [Phragmms](#phragmms-fka-balphragmms) and
+[Star balancing](https://crates.parity.io/sp_npos_elections/balancing/fn.balance.html) are a few
+notable algorithms used for computing the NPoS solutions in Polkadot and Kusama.
 
 :::
-
 
 ## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
-the 1890s. The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
-of the sequential Phragmén method:
+the 1890s. The quote below taken from the reference [Phragmén paper](#external-resources) sums up
+the purpose of the sequential Phragmén method:
 
 :::note
 
@@ -42,12 +44,11 @@ organization.
 
 :::
 
-
 ### Validator Elections
 
-The sequential Phragmén is one of the methods used in the Nominated Proof-of-Stake scheme to elect validators
-based on their own self-stake and the stake that is voted to them from nominators. It also tries to
-equalize the weights between the validators after each election round.
+The sequential Phragmén is one of the methods used in the Nominated Proof-of-Stake scheme to elect
+validators based on their own self-stake and the stake that is voted to them from nominators. It
+also tries to equalize the weights between the validators after each election round.
 
 #### Off-Chain Phragmén
 
@@ -112,7 +113,7 @@ weighting can be "simulated" by having multiple voters vote for the same slate o
 instance, five people voting for a particular candidate is mathematically the same as a single
 person with weight `5` voting for that candidate.
 
-The particular algorithm we call here the "Basic Phragmén" was first described by Brill *et al.* in
+The particular algorithm we call here the "Basic Phragmén" was first described by Brill _et al._ in
 their paper
 ["Phragmén’s Voting Methods and Justified Representation"](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791).
 
@@ -124,8 +125,8 @@ The Phragmén method will iterate, selecting one seat at a time, according to th
    modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters
-   would have the *least average (mean) cost* if that candidate wins.
-4. The *n* ballots that approved that winning candidate get *1/n* added to their load.
+   would have the _least average (mean) cost_ if that candidate wins.
+4. The _n_ ballots that approved that winning candidate get _1/n_ added to their load.
 5. The load of all ballots that supported the winner of this round are averaged out so that they are
    equal.
 6. If there are any more seats, go back to step 3. Otherwise, the selection ends.
@@ -247,8 +248,8 @@ Weighted Phragmén is similar to Basic Phragmén in that it selects candidates s
 round, until the maximum number of candidates are elected. However, it has additional features to
 also allocate weight (stake) behind the candidates.
 
-*NOTE: in terms of validator selection, for the following algorithm, you can think of "voters" as
-"nominators" and "candidates" as "validators".*
+_NOTE: in terms of validator selection, for the following algorithm, you can think of "voters" as
+"nominators" and "candidates" as "validators"._
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have
    won a "seat"). This aspect of the algorithm is very similar to the "basic Phragmén" algorithm
@@ -260,8 +261,8 @@ In more depth, the algorithm operates like so:
 
 1. Create a list of all voters, their total amount of stake, and which validators they support.
 2. Generate an initial edge-weighted graph mapping from voters to candidates, where each edge weight
-   is the total *potential* weight (stake) given by that voter. The sum of all potential weight for
-   a given candidate is called their *approval stake*.
+   is the total _potential_ weight (stake) given by that voter. The sum of all potential weight for
+   a given candidate is called their _approval stake_.
 3. Now we start electing candidates. For the list of all candidates who have not been elected, get
    their score, which is equal to `1 / approval_stake`.
 4. For each voter, update the score of each candidate they support by adding their total budget
@@ -280,11 +281,11 @@ In more depth, the algorithm operates like so:
 
 ### Example
 
-*Note: All numbers in this example are rounded off to three decimal places.*
+_Note: All numbers in this example are rounded off to three decimal places._
 
 In the following example, there are five voters and five candidates vying for three potential seats.
 Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2`
-has stake of 2, etc.). Every voter is also going to have a *load,* which initially starts at `0`.
+has stake of 2, etc.). Every voter is also going to have a _load,_ which initially starts at `0`.
 
 ```
 Filled seats: 0
@@ -364,7 +365,7 @@ the voters, and then calculate the new scores of the candidates.
 Any voter who had one of their choices for candidate fill the seat in this round (i.e., voters `V1`,
 `V2`, `V3`, and `V5`, who all voted for `A`) will have their load increased. This load increase will
 blunt the impact of their vote in future rounds, and the edge (which will be used in determining
-stake allocation later) is set to the score of the elected candidate minus the *current* voter load.
+stake allocation later) is set to the score of the elected candidate minus the _current_ voter load.
 
 ```
 edge_load = elected_candidate_score - voter_load
@@ -559,9 +560,9 @@ possible. It then runs an edge-reducing algorithm to minimize the number of vali
 nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an
-[off-chain worker](https://docs.substrate.io/reference/how-to-guides/offchain-workers/).
-In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are
-not allowed in the last quarter of each era.
+[off-chain worker](https://docs.substrate.io/reference/how-to-guides/offchain-workers/). In order to
+give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed
+in the last quarter of each era.
 
 These optimizations will not be covered in-depth on this page. For more details, you can view the
 [Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs),
@@ -626,12 +627,16 @@ significant amount of time to calculate the new active validator set and allocat
 an optimal manner.
 
 There are several further restrictions put in place to limit the complexity of the election and
-payout. As already mentioned, any given nominator can only select up to 16 validators to nominate.
-Conversely, a single validator can have only {{ polkadot_max_nominators }} nominators. A drawback to
-this is that it is possible, if the number of nominators is very high or the number of validators is
-very low, that all available validators may be "oversubscribed" and unable to accept more
-nominations. In this case, one may need a larger amount of stake to participate in staking, since
-nominations are priority-ranked in terms of amount of stake.
+payout. As already mentioned, any given nominator can only select up to
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+validators to nominate. Conversely, a single validator can have only
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominators. A drawback to this is that it is possible, if the number of nominators is very high or
+the number of validators is very low, that all available validators may be "oversubscribed" and
+unable to accept more nominations. In this case, one may need a larger amount of stake to
+participate in staking, since nominations are priority-ranked in terms of amount of stake.
 
 ### Phragmms (fka Balphragmms)
 
@@ -649,14 +654,14 @@ Kusama are the only blockchain networks that implement an election rule that gua
 representation.
 
 The security of a distributed and decentralized system such as Polkadot is directly related to the
-goal of avoiding *overrepresentation* of any minority. This is a stark contrast to traditional
+goal of avoiding _overrepresentation_ of any minority. This is a stark contrast to traditional
 approaches to proportional representation axioms, which typically only seek to avoid
 underrepresentation.
 
 #### Maximin Support Objective and PJR
 
-This new election rule aims to achieve a constant-factor approximation guarantee for the *maximin
-support objective* and the closely related *proportional justified representation* (PJR) property.
+This new election rule aims to achieve a constant-factor approximation guarantee for the _maximin
+support objective_ and the closely related _proportional justified representation_ (PJR) property.
 
 The maximin support objective is based on maximizing the support of the least-supported elected
 candidate, or in the case of Polkadot and Kusama, maximizing the least amount of stake backing
@@ -671,12 +676,12 @@ strength deserve to have a number of representatives proportional to the group�
 
 #### Comparing Sequential Phragmén, MMS, and Phragmms
 
-*Sequential Phragmén* (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve
+_Sequential Phragmén_ (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve
 PJR.
 
 Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although
 `seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the
-maximin support problem. This is due to `seqPhramen` only performing an *approximate* rebalancing of
+maximin support problem. This is due to `seqPhramen` only performing an _approximate_ rebalancing of
 the distribution of stake.
 
 In contrast, `MMS` is another standard greedy algorithm that simultaneously achieves the PJR
@@ -693,21 +698,21 @@ guarantee for maximin support.
 #### The New Election Rule: Phragmms
 
 `Phragmms` is an iterative greedy algorithm that starts with an empty committee and alternates
-between the `Phragmms` heuristic for inserting a new candidate and *rebalancing* by replacing the
+between the `Phragmms` heuristic for inserting a new candidate and _rebalancing_ by replacing the
 weight vector with a balanced one. The main differentiator between `Phragmms` and `seqPhragmen` is
 that the latter only perform an approximate rebalancing. Details can be found in
 [Balanced Stake Distribution](#rationale-for-maintaining-an-even-distribution-of-stake).
 
 The computation is executed by off-chain workers privately and separately from block production, and
-the validators only need to submit and verify the solutions on-chain. Relative to a committee *A*,
-the score of an unelected candidate *c* is an easy-to-compute rough estimate of what would be the
-size of the least stake backing if we added *c* to committee *A*. Observing on-chain, only one
+the validators only need to submit and verify the solutions on-chain. Relative to a committee _A_,
+the score of an unelected candidate _c_ is an easy-to-compute rough estimate of what would be the
+size of the least stake backing if we added _c_ to committee _A_. Observing on-chain, only one
 solution needs to be tracked at any given time, and a block producer can submit a new solution in
 the block only if the block passes the verification test, consisting of checking:
 
 1. Feasibility,
 2. Balancedness, and
-3. Local Optimality - The least stake backing of *A* is higher than the highest score among
+3. Local Optimality - The least stake backing of _A_ is higher than the highest score among
    unelected candidates
 
 If the tentative solution passes the tests, then it replaces the current solution as the tentative
@@ -726,7 +731,7 @@ inserts them with higher support values.
 - Inspired by `seqPhragmen`, the scoring system of `Phragmms` can be considered to be more intuitive
   and does a better job at estimating the value of adding a candidate to the current solution, and
   hence leads to a better candidate-selection heuristic.
-- Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector *w* is completely rebalanced after
+- Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector _w_ is completely rebalanced after
   each iteration of the algorithm.
 
 The `Phragmms` election rule is currently being implemented on Polkadot. Once completed, it will
@@ -737,16 +742,16 @@ approximation for the maximin support objection) to a blockchain network.
 #### Algorithm
 
 The `Phragmms` algorithm iterates through the available seats, starting with an empty committee of
-size *k*:
+size _k_:
 
-1. Initialize an empty committee *A* and zero edge weight vector *w = 0*.
+1. Initialize an empty committee _A_ and zero edge weight vector _w = 0_.
 
-2. Repeat *k* times:
+2. Repeat _k_ times:
 
-   - Find the unelected candidate with highest score and add it to committee *A*.
-   - Re-balance the weight vector *w* for the new committee *A*.
+   - Find the unelected candidate with highest score and add it to committee _A_.
+   - Re-balance the weight vector _w_ for the new committee _A_.
 
-3. Return *A* and *w*.
+3. Return _A_ and _w_.
 
 ## External Resources
 
@@ -761,7 +766,7 @@ size *k*:
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
 - [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
-  This paper by Brill *et al.* is the source for the simple Phragmén method, along with proofs about
+  This paper by Brill _et al._ is the source for the simple Phragmén method, along with proofs about
   its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
   Phragmén validator election outcome before the start of an era.

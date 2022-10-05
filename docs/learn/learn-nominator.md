@@ -6,7 +6,20 @@ description: Learn about what it means to be a nominator.
 keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
-import RPC from "./../../components/RPC-Connection"
+
+import RPC from "./../../components/RPC-Connection";
+
+:::tip New to Staking?
+
+Start your staking journey or explore more information about staking on
+[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
+[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+check this
+[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
+help you get started.
+{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+
+:::
 
 Nominators secure the Relay Chain by selecting good validators and staking DOT.
 
@@ -53,14 +66,20 @@ occur often, so you should almost always see only a single active nomination per
 
 ### Bags-list
 
+:::info
+
+On Polkadot and Kusama, the instance of the pallet
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
+
+:::
+
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system. Bags-list allows up to 
+staking/election system. Bags-list allows up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
-nominators to set
-their intention to nominate, of which, the stake of the top 
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+nominators to set their intention to nominate, of which, the stake of the top
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
 nominators is considered for [electing set](#staking-election-stages) that eventually determines the
@@ -87,10 +106,10 @@ represented in the correct bag, certain changes in bonded funds (e.g. a slash in
 direction, or rewards in the positive direction) can cause an account to be in the wrong bag, and
 for scalability reasons the system will not automatically self-adjust.
 
-:::caution `bagsList.putInFrontOf` and `bagsList.rebag` extrinsics
+:::caution `voterList.putInFrontOf` and `voterList.rebag` extrinsics
 
 The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
-stake. `bagsList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
+stake. `voterList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
 useful for the accounts in the last bag eligible for receiving staking rewards. Also, balance
 changes due to staking rewards or slashing do not automatically re-bag the account. Whenever
 applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the
@@ -115,11 +134,11 @@ _insertion_ order, not _amount at stake_. So if only five nominating accounts ar
 electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 DOT, she
 is first in line in Bag3.
 
-Charlie can put himself in front (move up in the bag) using the `bagsList.putInFrontOf` extrinsic, 
-since he has 15 DOT (more than Alice does at 10). Now if nothing changes for the next era, Frank, 
-Georgina, Eve, Dave, and Charlie will get rewards. Bag3 now has: Charlie, Alice, Bob. 
-The `bagsList.putInFrontOf` extrinsic can be issued through Polkadot JS Apps UI by clicking on the 
-Move up button.
+Charlie can put himself in front (move up in the bag) using the `voterList.putInFrontOf` extrinsic,
+since he has 15 DOT (more than Alice does at 10). Now if nothing changes for the next era, Frank,
+Georgina, Eve, Dave, and Charlie will get rewards. Bag3 now has: Charlie, Alice, Bob. The
+`voterList.putInFrontOf` extrinsic can be issued through Polkadot JS Apps UI by clicking on the Move
+up button.
 
 ![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
 
@@ -129,7 +148,7 @@ move himself in front of Alice, since he has 11 DOT (> 10), but he still wouldn'
 Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded
 automatically and Charlie's stash crosses 20 DOT after rewards from several staking eras. As changes
 in bonded balance due to staking rewards or slashing do not automatically re-bag the account,
-Charlie has to issue `bagsList.rebag` extrinsic to place his nominator node in the right bag. The
+Charlie has to issue `voterList.rebag` extrinsic to place his nominator node in the right bag. The
 re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes in the bag needs to
 be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain.
 
@@ -145,8 +164,10 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
   the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when
-  slashing occurs, all the active nominators backing the validator get slashed.
+  validator. Staking rewards are received by top
+  {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+  nominators, but when slashing occurs, all the active nominators backing the validator get slashed.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
@@ -170,27 +191,35 @@ to nominate with, in order to receive staking rewards, can change between the er
 Thus, for **nominator counters**, we have:
 
 - count of nominator intentions, and max possible nominator intentions
-  ({{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}).
+  {{ polkadot: (<RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/>) :polkadot }}
+  {{ kusama: (<RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>) :kusama }}
 - count of electing nominators, and maximum possible electing nominators
-  ({{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}).
+  {{ polkadot: (<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>) :polkadot }}
+  {{ kusama: (<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>) :kusama }}
 - count of active nominators, and maximum possible active nominators
-  ({{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}).
+  {{ polkadot: (<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>) :polkadot }}
+  {{ kusama: (<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>) :kusama }}
 
 ### Oversubscribed Validators
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to
-{{ polkadot_max_nominators }}, but can be modified via governance. If more than
-{{ polkadot_max_nominators }} nominators nominate the same validator, it is "oversubscribed", and
-only the top {{ polkadot_max_nominators }} staked nominators (ranked by amount of stake) are paid
-rewards. Other nominators will receive no rewards for that era, although their stake will still be
-used to calculate entry into the active validator set.
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+but can be modified via governance. If more than
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+nominators nominate the same validator, it is "oversubscribed", and only the top
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
+rewards for that era, although their stake will still be used to calculate entry into the active
+validator set.
 
 Although it is difficult to determine exactly how many nominators will nominate a given validator in
 the next era, one can estimate based on the current number of nominators. A validator with only 5
-nominators in this era, for instance, is unlikely to have more than {{ polkadot_max_nominators }} in
-the next era. An already-oversubscribed validator with 1000 nominators this era, however, is very
+nominators in this era, for instance, is unlikely to have more than
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+in the next era. An already-oversubscribed validator with 1000 nominators this era, however, is very
 likely to be oversubscribed in the next era as well.
 
 ### The Election Solution Set
@@ -212,9 +241,9 @@ fully distributed to one or more validators. That being said, you may not receiv
 nominated very few validator candidates and no one got elected, or your stake is small and you only
 selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
 generally wise to choose as many trustworthy validators as you can (up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}) 
-to reduce the risk of none of your nominated validators being
-elected.
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>) :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>) :kusama }}
+to reduce the risk of none of your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 
@@ -239,21 +268,28 @@ each.
 - **payout**: How recently the validator has made it's last reward payout to nominators.
 - **nominators**: This column consists of two number values.
 
-  1) Amount of nominators currently bonded in the current era and considered `active`.
+  1. Amount of nominators currently bonded in the current era and considered `active`.
 
-  2) Total amount of nominators that nominated that validator.
+  2. Total amount of nominators that nominated that validator.
 
   - You may want to be cautious of validators with a high number of subscribers. A validator is
-    considered oversubscribed when more than 256 'active' nominators are assigned to the validator. In this
-    scenario only the top 256 nominators will receive rewards. The remaining nominators will
-    recieve nothing, however they can be slashed in the event that validator commits a
-    slashable offence.
-  - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
-    the probability of having the nominators stake applied to the validators active set. Nominating too
-    few validators could result in the nominators losing their rewards when none of them make it to active set or 
-    when those Validator nodes stop validating. The election algorithm attempts to maximize the overall network 
-    stake, while minimizing the variance of the active stake across the validators. For additional information on
-    the election process checkout the research behind
+    considered oversubscribed when more than
+    {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+    {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+    'active' nominators are assigned to the validator. In this scenario only the top
+    {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+    {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+    nominators will receive rewards. The remaining nominators will recieve nothing, however they can
+    be slashed in the event that validator commits a slashable offence.
+  - Every nominator can select up to a maximum of
+    {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+    {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+    validators, which contributes towards maximizing the probability of having the nominators stake
+    applied to the validators active set. Nominating too few validators could result in the
+    nominators losing their rewards when none of them make it to active set or when those Validator
+    nodes stop validating. The election algorithm attempts to maximize the overall network stake,
+    while minimizing the variance of the active stake across the validators. For additional
+    information on the election process checkout the research behind
     [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
   - _example_: If nominator X has nominated validators A, B, C and D, but is actively only
     nominating validator B. The `active` count (left number) for nominator X is 1, counting B

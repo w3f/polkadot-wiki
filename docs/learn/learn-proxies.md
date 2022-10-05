@@ -452,3 +452,4 @@ submits the `multisig.asMulti` extrinsic containing the `balances.transferKeepAl
 about the transfer of some tokens from ABC to Dan. Then, Charly does the same to confirm the
 transaction. Note that Charly will need to pay for some weight, for the computation that is
 necessary to execute the transaction.
+

@@ -6,7 +6,8 @@ description: A description about fundamental Polkadot parameters.
 keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
-import RPC from "./../../components/RPC-Connection"
+
+import RPC from "./../../components/RPC-Connection";
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -16,8 +17,8 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Polkadot generally runs at &frac14;th the speed of Kusama, except in the time slot duration
-itself. See [Kusama Parameters](https://guide.kusama.network/docs/kusama-parameters/) for more details on how Polkadot's parameters
-differ from Kusama's._
+itself. See [Kusama Parameters](https://guide.kusama.network/docs/kusama-parameters/) for more
+details on how Polkadot's parameters differ from Kusama's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 4 hours (2_400 slots x 6 seconds)
@@ -32,18 +33,20 @@ differ from Kusama's._
 | Era      | 24 hours  | 14_400  |
 
 \*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
-a block in the chain. Thus, the times given are *estimates*. See [Consensus](../learn/learn-consensus.md) for
-more details._
+a block in the chain. Thus, the times given are *estimates*. See
+[Consensus](../learn/learn-consensus.md) for more details._
 
 ### Accounts, Identity and Crowdloans
 
-- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is 
-<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
-- The deposit required to set an Identity is 
-<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
-- The minimum contribution required to participate in a crowdloan is 
-<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>
-
+- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is
+  {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
+  {{ kusama: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :kusama }}
+- The deposit required to set an Identity is
+  {{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
+  {{ kusama: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :kusama }}
+- The minimum contribution required to participate in a crowdloan is
+  {{ polkadot: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :polkadot }}
+  {{ kusama: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :kusama }}
 
 ### Governance
 
@@ -67,7 +70,9 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
-Maximum number of Validators that can be nominated by a nominator - <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>
+The maximum number of validators that can be nominated by a nominator is
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>. :kusama }}
 
 | Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -78,16 +83,16 @@ Maximum number of Validators that can be nominated by a nominator - <RPC network
 
 ### Parachains
 
-| Crowdloans and Auctions  | Time    | Slots   | Description                                                                      |
-| ------------------------ | ------  | ------- | -------------------------------------------------------------------------------- |
-| Auction duration         | 7 days  | 100_800 | The total duration of the slot auction, subject to the candle auction mechanism. |
-| Opening period           | 2 days  | 28_800  | The opening period of the slot auction.                                          |
-| Ending period            | 5 days  | 72_000  | The ending period of the slot auction.                                           |
+| Crowdloans and Auctions | Time   | Slots   | Description                                                                      |
+| ----------------------- | ------ | ------- | -------------------------------------------------------------------------------- |
+| Auction duration        | 7 days | 100_800 | The total duration of the slot auction, subject to the candle auction mechanism. |
+| Opening period          | 2 days | 28_800  | The opening period of the slot auction.                                          |
+| Ending period           | 5 days | 72_000  | The ending period of the slot auction.                                           |
 
-| Parachain Slot           | Time     | Slots         | Description                                                                              |
-| ------------------------ | -------- | ------------- | ---------------------------------------------------------------------------------------- |
-| Lease period             | 12 weeks | 1_209_600     | The length of one lease period in a parachain slot.                                     |
-| Total slot duration      | 2 years  | 10_512_000    | The maximum duration a parachain can lease by winning a slot auction (8 lease periods). |
+| Parachain Slot      | Time     | Slots      | Description                                                                             |
+| ------------------- | -------- | ---------- | --------------------------------------------------------------------------------------- |
+| Lease period        | 12 weeks | 1_209_600  | The length of one lease period in a parachain slot.                                     |
+| Total slot duration | 2 years  | 10_512_000 | The maximum duration a parachain can lease by winning a slot auction (8 lease periods). |
 
 ### Treasury
 
@@ -102,5 +107,5 @@ Burn percentage is currently `1.00%`.
 DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
 Plancks make up a DOT.
 
-The denomination of DOT was changed from 12 decimals of precision at block #1\_248\_328 in an event
-known as *Denomination Day*. See [Redenomination](../general/redenomination.md) for details.
+The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
+known as \_Denomination Day*. See [Redenomination](../general/redenomination.md) for details.

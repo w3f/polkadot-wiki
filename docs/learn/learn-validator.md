@@ -7,6 +7,8 @@ keywords: [validate, validator, maintain, NPoS, stake]
 slug: ../learn-validator
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 Validators secure the [Relay Chain](learn-architecture.md#relay-chain) by staking DOT, validating
 proofs from collators and participating in consensus with other validators.
 
@@ -17,12 +19,14 @@ to the tx pool for a block producer to include on-chain. The Relay Chain validat
 each parachain follows its unique rules and can pass messages between shards in a trust-free
 environment.
 
-With parachains now on the network, para-validators are selected every epoch to validate parachain 
-blocks for all parachains connected to the Relay Chain. Para-validators work in groups to 
-validate parachain blocks. 
+With parachains now on the network, para-validators are selected every epoch to validate parachain
+blocks for all parachains connected to the Relay Chain. Para-validators work in groups to validate
+parachain blocks.
 
-The selected para-validators are one of {{ polkadot: 297 :polkadot }}{{ kusama: 1000 :kusama }}
-validators randomly selected (per epoch) to participate in the validation, creating a validator pool 
+The selected para-validators are one of
+{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
+validators randomly selected (per epoch) to participate in the validation, creating a validator pool
 of 200 para-validators.
 
 Validators perform two functions:
@@ -37,18 +41,18 @@ Validators perform two functions:
 
 ## Guides
 
-- [How to Validate on Polkadot](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on how to set
-  up a validator on the Polkadot live network.
-- [Validator Payout Overview](../maintain/maintain-guides-validator-payout.md) - A short overview on how the
-  validator payout mechanism works.
-- [How to run your validator as a systemd process](../maintain/maintain-guides-how-to-systemd.md) - Guide on
-  running your validator as a `systemd` process so that it will run in the background and start
-  automatically on reboots.
-- [How to Upgrade your Validator](../maintain/maintain-guides-how-to-upgrade.md) - Guide for securely upgrading
-  your validator when you want to switch to a different machine or begin running the latest version
-  of client code.
-- [How to Use Validator Setup](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md) - Guide on how
-  to use Polkadot / Kusama validator setup.
+- [How to Validate on Polkadot](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on
+  how to set up a validator on the Polkadot live network.
+- [Validator Payout Overview](../maintain/maintain-guides-validator-payout.md) - A short overview on
+  how the validator payout mechanism works.
+- [How to run your validator as a systemd process](../maintain/maintain-guides-how-to-systemd.md) -
+  Guide on running your validator as a `systemd` process so that it will run in the background and
+  start automatically on reboots.
+- [How to Upgrade your Validator](../maintain/maintain-guides-how-to-upgrade.md) - Guide for
+  securely upgrading your validator when you want to switch to a different machine or begin running
+  the latest version of client code.
+- [How to Use Validator Setup](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md) -
+  Guide on how to use Polkadot / Kusama validator setup.
 
 ## Other References
 
