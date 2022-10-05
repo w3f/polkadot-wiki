@@ -51,7 +51,7 @@ threshold, they will immediately have access to these tokens.
 
 :::note Addresses that are provided to the multi-sig wallets must be sorted
 
-The below methods for generating sorted accounts for you, but if you are implementing your own
+The methods below are for generating sorted accounts, but if you are implementing your own
 sorting, then be aware that the public keys are compared byte-for-byte and sorted ascending before
 being inserted in the payload that is hashed.
 
