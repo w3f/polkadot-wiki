@@ -51,7 +51,7 @@ threshold, they will immediately have access to these tokens.
 
 :::note Addresses that are provided to the multi-sig wallets must be sorted
 
-The below methods for generating sort the accounts for you, but if you are implementing your own
+The below methods for generating sorted accounts for you, but if you are implementing your own
 sorting, then be aware that the public keys are compared byte-for-byte and sorted ascending before
 being inserted in the payload that is hashed.
 
@@ -74,9 +74,15 @@ Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 --------------------------------
 ```
 
-The Polkadot-JS Apps UI also supports multi-sig accounts, as documented in the
-[Account Generation page](learn-account-generation.md#multi-signature-accounts). This is easier than
-generating them manually.
+### Create Multisig Account with Polkadot JS
+
+:::info
+
+Check the ["How to create a multisig account"](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account) section in the support docs.
+If you are a beginner, we recommend trying out the tutorial on
+[Westend network](../maintain/maintain-networks.md#westend-test-network) which is Polkadot's testnet.
+
+:::
 
 ### Making Transactions with a Multi-signature Account
 
@@ -145,16 +151,6 @@ the deposit, and Alice will receive her deposit back. Similarly, after Alice sen
 transaction, say Bob or Charlie choose to cancel the transaction due to an error on Alice's part,
 they can use the `cancel_as_multi` extrinsic. The cancellation will release the deposit back to
 Alice.
-
-### Create Multisig Account with Polkadot JS
-
-:::info
-
-Check the ["How to create a multisig account"](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account) section in the support docs.
-If you are a beginner, we recommend trying out the tutorial on
-[Westend network](../maintain/maintain-networks.md#westend-test-network) which is Polkadot's testnet.
-
-:::
 
 ## Decoding Multisig Call Data
 
