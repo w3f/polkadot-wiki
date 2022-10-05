@@ -167,40 +167,25 @@ announcements are what time lock proxies do to announce they are going to conduc
 
 ## Proxy Deposits
 
-Proxies require deposits in the native currency (i.e. DOT or KSM) in order to be created. The
-deposit is required because adding a proxy requires some storage space on-chain, which must be
-replicated across every peer in the network. Due to the costly nature of this, these functions could
-open up the network to a Denial-of-Service attack. In order to defend against this attack, proxies
-require a deposit to be reserved while the storage space is consumed over the lifetime of the proxy.
-When the proxy is removed, so is the storage space, and therefore the deposit is returned.
+Proxies require deposits in the native currency (i.e. DOT or KSM) to be created. The deposit is
+required because adding a proxy requires some storage space on-chain, which must be replicated
+across every peer in the network. Due to the costly nature of this, these functions could open up
+the network to a Denial-of-Service attack. To defend against this attack, proxies require a deposit
+to be reserved while the storage space is consumed over the lifetime of the proxy. When the proxy is
+removed, so is the storage space, and therefore the deposit is returned.
 
-The deposits are calculated in the runtime, and the function can be found in the runtime code. For
-example, the deposits are calculated in Polkadot with the following functions:
+The required deposit amount for `n` proxies is equal to:
 
-```rust
-// One storage item; key size 32, value size 8.
-pub const ProxyDepositBase: Balance = deposit(1, 8);
-// Additional storage item size of 33 bytes.
-pub const ProxyDepositFactor: Balance = deposit(0, 33);
-```
+`ProxyDepositBase` + `ProxyDepositFactor` \* `n`
 
-The `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy list
-(creates one new item in storage). For every proxy the account has, an additional amount defined by
-the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
-
-The `ProxyDepositBase` is
+where the `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy
+list (creates one new item in storage). For every proxy the account has, an additional amount
+defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location). The
+`ProxyDepositBase` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }}
 and the `ProxyDepositFactor` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }}.
-
-The required deposit amount for one proxy is equal to:
-
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }} +
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} \*
-num_proxies
 
 ## Time-delayed Proxy
 
