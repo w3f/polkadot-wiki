@@ -241,8 +241,8 @@ its behalf.
 ![nested proxy calls](../assets/nested-proxy-calls.png)
 
 For example, to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to P-C, which in
-turn submits a `proxy.proxy` extrinsic to Alice including a `staking.bondExtra` extrinsic,
-specifying the number of tokens that need to be bounded. If Charly wants to leave, a new account can
+turn submits a `proxy.proxy` extrinsic to Alice including for example a `staking.bondExtra` extrinsic,
+specifying the number of extra tokens that need to be bounded. If Charly wants to leave, a new account can
 take his place as any proxy (before Charly leaves!). There is no need to change the staking proxy
 account. Also, Alice is the only one who can remove P-C as a staking proxy, and P-C can only
 perform staking-related tasks. For example, P-C cannot send funds out from Alice's account.
