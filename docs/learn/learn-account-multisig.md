@@ -27,6 +27,16 @@ Learn more about using multisig accounts with the [Polkadot-JS UI](https://polka
 
 :::
 
+
+:::info
+
+Check the "How to create a multisig account" section on
+[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
+We recommend trying out the tutorial on
+[Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
+
+:::
+
 Multi-signature accounts have several uses:
 
 - securing your stash: use additional signatories as a 2FA mechanism to secure your funds. One
@@ -81,12 +91,7 @@ Where `depositBase` and `depositFactor` are chain constants (in {{ polkadot: DOT
 
 ### Example using Multisig Accounts
 
-:::info
-
-Check the "How to create a multisig account" section on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
-We recommend trying out the tutorial on
-[Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
+:::info Walk-through video tutorial
 
 You can also see [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) for more information about transacting with multisigs using the Accounts Tab, or [this other video](https://www.youtube.com/watch?v=T0vIuJcTJeQ) using the Extrinsic Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
 
@@ -95,16 +100,16 @@ You can also see [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZ
 ![multisig diagram](../assets/multisig-diagram.png)
 
 Let's consider an example of a multisig on Polkadot with a threshold of 2 and 3 signers: Charlie,
-Dan, and Eleanor. First, Charlie will create the call on-chain by calling `asMulti` with the raw
-call, in this case, a balance transfer from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
-while he waits for either Dan or Eleanor also to approve the balance transfer call using the `approveAsMulti` or the `asMulti` extrinsics. 
+Dan, and Eleanor. First, Charlie will create the call on-chain by calling the `multisig.asMulti` extrinsic with the raw
+call, in this case, a balance transfer (`balances.transferKeepAlive` extrinsic) from multisig CDE to Frank's account. When doing this, Charlie will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT`
+while he waits for either Dan or Eleanor also to approve the balance transfer call using the `multisig.approveAsMulti` or the `multisig.asMulti` extrinsics.
 
-If Dan submits the `approveAsMulti` extrinsic, he approves Charlie's call but he passes on the final approval to Eleanor. So, although the multisig has threshold 2, in this case all 3/3 signatories need to participate in the transaction approval. Eleanor will need to submit a `asMulti` or `approveAsMulti` extrinsic to transfer funds from CDE to Frank. 
+If Dan submits the `multisig.approveAsMulti` extrinsic, he approves Charlie's call but he passes on the final approval to Eleanor. So, although the multisig has threshold 2, in this case all 3/3 signatories need to participate in the transaction approval. Eleanor will need to submit a `multisig.asMulti` or `multisig.approveAsMulti` extrinsic to transfer funds from CDE to Frank.
 
-Alternatively, Dan or Eleanor can just submit a `asMulti` extrinsic after Charlie to transfer the funds. In this case, 2/3 signatories will participate in the transaction approval. The accounts approving Charlie's call will not need to place the deposit, and Charlie will receive his
-deposit back once the transfer is successful or canceled. To cancel the transaction, Dan or Eleanor can use the `cancelAsMulti` extrinsic.
+Alternatively, Dan or Eleanor can just submit a `multisig.asMulti` extrinsic after Charlie to transfer the funds. In this case, 2/3 signatories will participate in the transaction approval. The accounts approving Charlie's call will not need to place the deposit, and Charlie will receive his
+deposit back once the transfer is successful or canceled. To cancel the transaction, Dan or Eleanor can use the `multisig.cancelAsMulti` extrinsic.
 
-Note that multisigs are deterministic, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order. 
+Note that multisigs are **deterministic**, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order.
 
 :::note Addresses that are provided to the multisig wallet are sorted
 
@@ -113,7 +118,7 @@ being used to generate the multisig address.
 
 :::
 
-This has some implications when using the Extrinsics menu to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see our video tutorials for more information about creating multisig accounts and transacting with them using both the [Accounts tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the [Extrinsic tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
+This has some implications when using the Extrinsics Tab on the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see our video tutorials for more information about creating multisig accounts and transacting with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
 
 ## Decoding Multisig Call Data
 
