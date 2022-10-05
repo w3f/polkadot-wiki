@@ -109,7 +109,7 @@ If Dan submits the `multisig.approveAsMulti` extrinsic, he approves Charlie's ca
 Alternatively, Dan or Eleanor can just submit a `multisig.asMulti` extrinsic after Charlie to transfer the funds. In this case, 2/3 signatories will participate in the transaction approval. The accounts approving Charlie's call will not need to place the deposit, and Charlie will receive his
 deposit back once the transfer is successful or canceled. To cancel the transaction, Dan or Eleanor can use the `multisig.cancelAsMulti` extrinsic.
 
-Note that multisigs are **deterministic**, which means that multisig addresses are generated from the addresses of signers and threshold of the multisig wallet. No matter the order of the signatories' accounts the multisig will have always the same address because accounts' addresses are sorted in ascending order.
+Note that multisigs are **deterministic**, which means that multisig addresses are generated from the addresses of signers and the threshold of the multisig wallet. No matter the order of the signatories' accounts, the multisig will always have the same address because accounts' addresses are sorted in ascending order.
 
 :::note Addresses that are provided to the multisig wallet are sorted
 
