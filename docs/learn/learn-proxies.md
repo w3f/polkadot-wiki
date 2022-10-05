@@ -247,16 +247,9 @@ take his place as any proxy (before Charly leaves!). There is no need to change 
 account. Also, Alice is the only one who can remove P-C as a staking proxy, and P-C can only
 perform staking-related tasks. For example, P-C cannot send funds out from Alice's account.
 
-:::note
-
 Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be
 done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last
-`proxy.proxy` extrinsic. In the diagram above, submitting Extrinsic (1.2) will automatically ask for
-the signature of Extrinsic (1.1). In the diagram below, submitting Extrinsic (1.3) will still ask
-for the signature of Extrinsic (1.2) and not (1.1). If you wish to sign with Bob's account you need
-to manually submit all three extrinsics.
-
-:::
+`proxy.proxy` extrinsic. In the diagram above, submitting the proxy call from P-C to Alice will automatically ask for Charly's signature. Thus one proxy call will trigger the second one because Charly's is the only _any_ proxy of P-C, and P-C cannot sign anything. While if we want to use Bob's account we will need to submit all three proxy calls.
 
 ## Anonymous Proxy (Pure Proxy)
 
