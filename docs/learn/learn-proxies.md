@@ -230,13 +230,6 @@ Proxy calls are used by proxies to call proxied accounts. These calls are import
 _pure_ proxies, as any attempt to sign transactions with a _pure_ proxy will fail. For more
 details see the [dedicated section about anonymous proxies](#anonymous-proxy-pure-proxy).
 
-:::info Walk-through tutorial video
-
-You can see this video tutorial that goes through the scenarios below. The tutorial requires some
-familiarity with the Extrinsic Tab of the Polkadot-JS UI.
-
-:::
-
 ### Nested Proxy Calls
 
 As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed
