@@ -130,7 +130,7 @@ Rollups, a layer-2 scaling solution, has been talked about for some time, and th
 
 ### Optimistic Rollups
 
-Using an "innocent until proven guilty" approach, optimistic rollups will accept transaction commitments to the network while validating for errors and security issues. If invalid, validators can submit fraudulent commitment proof (fraud-proofs). These proofs will be used to reject fraudulent transactions. This way, transaction results along with proof can be stored on the main network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction scalability 10-100x, and write transactions to Ethereum as [`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata), reducing gas fees significantly.
+Using an "innocent until proven guilty" approach, optimistic rollups will accept transaction commitments to the network while validating for errors and security issues. If something is invalid, validators can submit fraudulent commitment proof (fraud-proofs). These proofs will be used to reject fraudulent transactions. This way, transaction results along with proof can be stored on the main network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction scalability 10-100x, and write transactions to Ethereum as [`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata), reducing gas fees significantly.
 
 Examples of optimistic rollup solutions include [Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and [Unipig](https://unipig.exchange/welcome).
 
