@@ -362,13 +362,12 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-You can begin syncing your node by running the following command:
+You can begin syncing your node by running the following command if you do not want to start in
+validator mode right away:
 
 ```sh
 ./target/release/polkadot
 ```
-
-if you do not want to start in validator mode right away.
 
 ```
 2021-06-17 03:07:07 Parity Polkadot
@@ -385,7 +384,7 @@ if you do not want to start in validator mode right away.
 2021-06-17 03:07:10 Listening for new connections on 127.0.0.1:9944.
 ```
 
-:::note Example of node sync
+:::info Example of node sync
 
 ```
 2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u
@@ -395,6 +394,8 @@ if you do not want to start in validator mode right away.
 2021-06-17 03:07:55 ⚙️  Syncing 138.4 bps, target=#5553767 (21 peers), best: #26874 (0xcf4b…6553), finalized #26624 (0x9dd9…27f8), ⬇ 18.9kiB/s ⬆ 2.0kiB/s
 2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s
 ```
+
+:::
 
 :::note Validators should sync using the RocksDb backend
 
