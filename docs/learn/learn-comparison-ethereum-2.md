@@ -136,6 +136,12 @@ Examples of optimistic rollup solutions include [Optimisim](https://www.optimism
 
 ### Zero-knowledge Rollups
 
+:::note
+
+Currently, Turing completeness is difficult in ZK rollups, a trusted setup is required to run the ZK Proofs, as well as the soundness of the cryptography, used needs to meet certain standards.
+
+:::
+
 [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as a "proof" of valid transactions when batching, effectively reducing the transaction payload to be the size of a zk-proof. This, similar to the optimistic approach, allows transaction data to be abstracted away and reduced significantly in size before being committed to the main chain. Similar to most on-chain transactions and states, a ZK-rollup's state is represented as a [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), and the cryptographic hash of the tree's root(Merkle root) is what is stored on-chain. This allows for efficient batching, and tracking of changes to the transaction states. Any changes to the state will require the operator who initiated the changes to compute a new state root and commit it to the on-chain contract. If the contract verifies the new state as valid, then provided root hash becomes the new state root.
 
 #### EIP 4844
