@@ -44,13 +44,19 @@ as a reward payout to that nominator at the end of an era; this is an event insi
 having special permissions also called **proxy accounts**. For mode details about proxy accounts
 visit the [dedicated page](./learn-proxies.md) on this wiki.
 
-![staking](../assets/stash-stakingProxy.png)
-
 Proxy accounts are special accounts which can sign [**extrinsic calls**](#pallets-and-extrinsics)
 made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied account. There is
 thus the possibility to create staking proxy accounts that can be used to sign only extrinsic calls
-to staking, session and utility pallets. This makes the stash account even more isolated than using
-a controller account since one can bond / unbond / bond more funds using the staking proxy account.
+to staking, session and utility pallets.
+
+Usually with the stash-controller setup the stash still needs to sign for bonding more funds and change the controller. With a staking proxy the stash account even more isolated than using 
+a controller account since one can bond more funds and change the controller using the staking proxy account. This does not necessarily mean that the staking proxy can sign for all staking-related transactions. Below we show two main configurations that affects the permissions of a staking proxy.
+
+### Stash is not Controller
+
+### Stash is also Controller 
+
+![staking](../assets/stash-stakingProxy.png)
 
 Note that it is not necessary to have a controller, if you have a staking proxy: the stash can also
 be the controller. It is important to remember that actions that can be performed by the proxy
