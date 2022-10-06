@@ -152,7 +152,7 @@ Until the full spec of ETH 2.0 sharding is implemented, this stopgap introduces 
 
 ### Rollups in Polkadot
 
-In Polkadot, the sharding model already exists as the Relay-chain being the beacon chain and Parachains being the shards. Parachains are most similar in implementation to an Optimistic rollup and in architecture to a ZK-rollup. Parachain logic already runs a validity proof. The proof (the approvals protocol) is interactive, unlike ZK-rollups, which are non-interactive. Additionally, unlike ZK-rollups, there are no difficulties in creating parachains with Turing-complete logic. This is a fundamental weakness of ZK rollups, as Turing completeness within ZK circuits is not easy.
+In Polkadot, the Parachains can be considered as a different way to achieve what rollups do. The sharding model already exists as the Relay-chain being the beacon chain and Parachains being the shards. Parachains are most similar in implementation to an Optimistic rollup and in architecture to a ZK-rollup. Parachain logic runs a validity proof. The proof (the approvals protocol) is interactive, unlike ZK-rollups, which are non-interactive. Additionally, unlike ZK-rollups, there are no difficulties in creating parachains with Turing-complete logic. This is a fundamental weakness of ZK rollups, as Turing completeness within ZK circuits is not easy.
 In addition, Optimistic rollups are required by architecture to have their 'sequencer selection' logic live in their host contract. This is because the smart contract needs to accept blocks that may be bad and may not be executed and needs to filter out spam. Parachains, like ZK rollups, can encapsulate the sequencer-selection logic within their validation code.
 
 ## Message Passing
