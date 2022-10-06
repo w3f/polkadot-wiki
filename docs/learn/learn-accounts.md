@@ -68,23 +68,17 @@ To learn more about generating accounts on {{ polkadot: Polkadot :polkadot }}{{ 
 
 ![account_balance_types](../assets/account-balance-types.png)
 
-On Polkadot, **four different balance types** indicate whether your balance can be used for
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, different balance types indicate whether your balance can be used for
 transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
 
-The `AccountData` struct defines the balance types in Substrate. The four types of balances include
-`free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen` (`feeFrozen` in
-camel-case).
-
-In general, the **usable** balance of the account is the amount that is `free` minus any funds that
-are considered frozen (either `misc_frozen` or `fee_frozen`) and depend on the reason for which the
-funds are to be used. If the funds are to be used for transfers, then the usable amount is the
-_free_ amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction
-fees, the usable amount would be the _free_ funds minus `fee_frozen`.
-
-The **total** balance of the account is considered to be the sum of `free` and `reserved` funds in
-the account. Reserved funds are held due to on-chain requirements and can usually be freed by taking
+- **total** indicates the total number of tokens in the account.
+- **reserved** indicates the number of tokens that are frozen for on-chain participation other than staking. Reserved funds are held due to on-chain requirements and can usually be freed by taking
 some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
-is registered, but by clearing the identity, you can unreserve the funds and make them free again.
+is registered, but by clearing the identity, you can unreserve the funds and make them free again. The same applies to proxies. The idea is that those actions require some network memory usage that is not given for free.
+- **bonded** indicates the number of tokens that are frozen for on-chain participation to staking.
+- **redeemable** indicates the number of tokens that are ready to be unlocked to become transferrable again. Those tokens already went through the unbonding period.
+- **locked** indicates the number of tokens that are frozen for on-chain participation such as staking for example. This is the sum of the _bonded_ and _redeemable_ tokens. Once the lock is removed from the _redeemable_ tokens, the number of _locked_ tokens will be the same as the one of _bonded_ tokens.
+- **transferrable** indicates the number of tokens that is free to be transferred. This is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of tokens.
 
 ## Existential Deposit and Reaping
 
