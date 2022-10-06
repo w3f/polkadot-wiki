@@ -22,9 +22,9 @@ Charizard are fungible with each other.
 Fungibility is a spectrum - what is fungible to some might not be fungible to others. In reality,
 Pokemon™ cards, the canonical example of non-fungible assets are more fungible than US dollar bills,
 each of which has a unique serial number that may be important to a government agency. The cards
-have no serial numbers [1].
+have no serial numbers.
 
-![](<https://www.investopedia.com/thmb/Nr-RLORu5CX_lIWZfLmV5X0eIrc=/613x345/smart/filters:no_upscale()/Clipboard01-d20f6eb9351e4f36a46e11fd87b53b2d.jpg>)
+![one dollar](<https://www.investopedia.com/thmb/Nr-RLORu5CX_lIWZfLmV5X0eIrc=/613x345/smart/filters:no_upscale()/Clipboard01-d20f6eb9351e4f36a46e11fd87b53b2d.jpg>)
 
 Additionally, a digital item like a "purple magic sword" in a game may be fungible with another
 visually identical sword if all the player cares about is the looks of their character. But if the
@@ -35,8 +35,6 @@ Bearing that in mind, the simplest explanation of NFTs is that **NFTs are rows o
 project-specific, and non-interchangeable data that can be cryptographically proven to "belong" to
 someone**. This data can be anything - concert tickets, attendance badges, simple words, avatars,
 plots of land in a metaverse, audio clips, house deeds, mortgages, and more.
-
----
 
 ## NFT Standards
 
@@ -63,7 +61,7 @@ Ethereum - profile pictures, generative "look once and then put away" art, [ENS]
 
 #### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
-![](../assets/nft/samurai.png)
+![samurai nft](../assets/nft/samurai.png)
 
 For the sake of comparison, we can refer to these as NFTs 1.0: static NFTs that are almost
 exclusively image-based collectibles of varying rarity.
@@ -72,11 +70,9 @@ exclusively image-based collectibles of varying rarity.
 
 ## NFTs 2.0: NFTs in Polkadot & Kusama
 
-This is where Polkadot's technology shines and where NFTs 2.0 come into play.
-
-By allowing [heterogeneous application-specific shards](learn-parachains.md) to exist, builders can
+This is where Polkadot's technology shines and where NFTs 2.0 come into play. By allowing [heterogeneous application-specific shards](learn-parachains.md) to exist, builders can
 natively optimize for complex NFT use cases without tradeoffs that would make interacting with the
-system prohibitively inefficient and expensive in other environments.
+system prohibitively inefficient and expensive in other environments. 
 
 The following NFT solutions exist and are under development in the Polkadot ecosystem:
 
