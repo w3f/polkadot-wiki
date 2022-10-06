@@ -427,8 +427,8 @@ private key.
 
 :::info Walk-through Tutorial Video
 
-You can see this video tutorial that goes through this scenario. The tutorial requires some
-familiarity with the Extrinsic Tab of the Polkadot-JS UI.
+You can see [this video tutorial](https://www.youtube.com/watch?v=F82C3zDNJyk) that goes through
+this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
 
 :::
 
