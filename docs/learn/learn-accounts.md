@@ -71,14 +71,14 @@ To learn more about generating accounts on {{ polkadot: Polkadot :polkadot }}{{ 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, different balance types indicate whether your balance can be used for
 transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
 
-- **total** indicates the total number of tokens in the account.
-- **reserved** indicates the number of tokens that are frozen for on-chain participation other than staking. Reserved funds are held due to on-chain requirements and can usually be freed by taking
+- The **total** balance indicates the total number of tokens in the account.
+- The **reserved** balance indicates the number of tokens that are frozen for on-chain participation other than staking. Reserved funds are held due to on-chain requirements and can usually be freed by taking
 some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
 is registered, but by clearing the identity, you can unreserve the funds and make them free again. The same applies to proxies. The idea is that those actions require some network memory usage that is not given for free.
-- **bonded** indicates the number of tokens that are frozen for on-chain participation to staking.
-- **redeemable** indicates the number of tokens that are ready to be unlocked to become transferrable again. Those tokens already went through the unbonding period.
-- **locked** indicates the number of tokens that are frozen for on-chain participation such as staking for example. This is the sum of the _bonded_ and _redeemable_ tokens. Once the lock is removed from the _redeemable_ tokens, the number of _locked_ tokens will be the same as the one of _bonded_ tokens.
-- **transferrable** indicates the number of tokens that is free to be transferred. This is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of tokens.
+- The **bonded** balance indicates the number of tokens that are frozen for on-chain participation to staking.
+- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become transferrable again. Those tokens already went through the unbonding period.
+- The **locked** balance indicates the number of tokens that are frozen for on-chain participation such as staking for example. This is the sum of the _bonded_ and _redeemable_ tokens. Once the lock is removed from the _redeemable_ tokens, the number of _locked_ tokens will be the same as the one of _bonded_ tokens.
+- The **transferrable** balance indicates the number of tokens that is free to be transferred. This is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of tokens.
 
 ## Existential Deposit and Reaping
 
