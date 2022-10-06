@@ -10,8 +10,6 @@ slug: ../learn-nft
 This page is a high-level overview of NFTs and the various approaches to NFTs within the Polkadot
 network.
 
-**Expect Chaos.**
-
 ## Fungibility
 
 NFT stands for _non-fungible token_. Fungibility means interchangeability inside of a group. In
