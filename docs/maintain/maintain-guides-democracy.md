@@ -289,7 +289,7 @@ If there is an existing lock due to a previous delegation change or undelegation
 undelegation will restart the lock period for the larger DOT amount and the longest conviction
 period between the existing and the new lock.
 
-This will only matter to accounts with conviction, as no conviction doesn't instill a lock period.
+This will only matter to accounts with conviction, as the accounts with no conviction don't have any lock period.
 
 Examples:
 
