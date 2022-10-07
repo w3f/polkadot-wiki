@@ -285,9 +285,23 @@ through `democracy.votingOf` extrinsic.
 
 :::caution
 
-Currently, the undelegation logic has a flaw in it. If you choose to delegate and undelegate two
-times, and the second undelegation happens before the lock period of the initial delegation has
-ended. The initial undelegations lock period will be reset to the second undelegation lock period.
+If there is an existing lock due to a previous change or undelegation, any new change or
+undelegation will restart the lock period for the larger DOT amount and the longest conviction
+period, between the existing and the new lock.
+
+This will only matter to accounts with conviction, as no conviction doesn't instill a lock period.
+
+Examples:
+
+1. Delegate 500 DOT with 1x conviction, then change delegation to 1000 DOT with 1x conviction, the
+   lock period will reset for 1000 DOT with 1x conviction.
+
+2. Delegate 500 DOT with 3x conviction, then change the delegation to 1000 DOT with 1x conviction,
+   the lock period will reset for 1000 DOT with 3x conviction.
+
+3. Delegate 500 DOT with 1x conviction, then change the delegation to 200 DOT with 1x conviction,
+   the lock period will reset for 500 DOT with 1x conviction.
+
 To understand this in further detail checkout
 [this](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
 stackexchange post.
