@@ -285,9 +285,9 @@ through `democracy.votingOf` extrinsic.
 
 :::caution
 
-If there is an existing lock due to a previous change or undelegation, any new change or
+If there is an existing lock due to a previous delegation change or undelegation, any new change or
 undelegation will restart the lock period for the larger DOT amount and the longest conviction
-period, between the existing and the new lock.
+period between the existing and the new lock.
 
 This will only matter to accounts with conviction, as no conviction doesn't instill a lock period.
 
