@@ -303,8 +303,7 @@ Examples:
    the lock period will reset for 500 DOT with 1x conviction.
 
 To understand this in further detail checkout
-[this](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
-stackexchange post.
+[this stackexchange post.](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
 
 :::
 
