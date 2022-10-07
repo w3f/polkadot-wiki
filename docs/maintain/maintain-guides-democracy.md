@@ -283,6 +283,30 @@ through `democracy.votingOf` extrinsic.
 
 ## Undelegate a Vote
 
+:::caution
+
+If there is an existing lock due to a previous delegation change or undelegation, any new change or
+undelegation will restart the lock period for the larger DOT amount and the longest conviction
+period between the existing and the new lock.
+
+This will only matter to accounts with conviction, as the accounts with no conviction don't have any lock period.
+
+Examples:
+
+1. Delegate 500 DOT with 1x conviction, then change delegation to 1000 DOT with 1x conviction, the
+   lock period will reset for 1000 DOT with 1x conviction.
+
+2. Delegate 500 DOT with 3x conviction, then change the delegation to 1000 DOT with 1x conviction,
+   the lock period will reset for 1000 DOT with 3x conviction.
+
+3. Delegate 500 DOT with 1x conviction, then change the delegation to 200 DOT with 1x conviction,
+   the lock period will reset for 500 DOT with 1x conviction.
+
+To understand this in further detail checkout
+[this stackexchange post.](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
+
+:::
+
 You may decide at some point in the future to remove your delegation to a target account. In this
 case, your tokens will be locked for the maximum amount of time in accordance with the conviction
 you set at the beginning of the delegation. For example, if you chose "2x" delegation for four weeks
