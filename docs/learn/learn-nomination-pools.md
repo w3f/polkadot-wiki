@@ -95,6 +95,14 @@ pool's internal logic can access the account.
 
 :::
 
+:::tip Use Non-Transfer Proxy Accounts to join Nomination Pools
+
+Currently, only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to
+participate in nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used 
+as they are not enabled to make calls to the nomination pools pallet.
+
+:::
+
 Check the "How to join a pool" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
