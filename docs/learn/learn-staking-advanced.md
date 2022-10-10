@@ -70,7 +70,7 @@ be the controller, and the account security will not be compromised. In this cas
 
 ![stash-stakingProxy](../assets/stash-stakingProxy.png)
 
-Note that this situation is similar to that of having the controller also as a staking proxy.
+Note that this situation is similar to having the controller as a staking proxy.
 
 It is important to remember that actions that can be performed by the proxy
 accounts are limited, and in the case of staking proxy, extrinsic calls to the balances pallet
