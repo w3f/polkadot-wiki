@@ -44,16 +44,35 @@ as a reward payout to that nominator at the end of an era; this is an event insi
 having special permissions also called **proxy accounts**. For mode details about proxy accounts
 visit the [dedicated page](./learn-proxies.md) on this wiki.
 
-![staking](../assets/stash-stakingProxy.png)
-
 Proxy accounts are special accounts which can sign [**extrinsic calls**](#pallets-and-extrinsics)
 made to specific [**pallets**](#pallets-and-extrinsics) on behalf of the proxied account. There is
 thus the possibility to create staking proxy accounts that can be used to sign only extrinsic calls
-to staking, session and utility pallets. This makes the stash account even more isolated than using
-a controller account since one can bond / unbond / bond more funds using the staking proxy account.
+to staking, session and utility pallets.
 
-Note that it is not necessary to have a controller, if you have a staking proxy: the stash can also
-be the controller. It is important to remember that actions that can be performed by the proxy
+![stash-controller](../assets/stash-controller.png)
+
+Usually, with the stash-controller setup, the stash still needs to sign for bonding more funds and
+change the controller (see figure above). With a staking proxy, the stash account is even more isolated
+than a controller account since one can bond more funds and change the controller using the
+staking proxy account. This does not necessarily mean that the staking proxy can sign for all
+staking-related transactions. Below we show two main configurations that affect a staking proxy's permissions.
+
+### Stash is not Controller
+
+If the stash and controller are different accounts, the staking proxy will just be used to bond more funds and change the controller. Thus the staking proxy will be used to sign for those transactions usually signed by the stash.
+
+![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
+
+### Stash is also Controller
+
+It is not necessary to have a controller if you have a staking proxy: the stash can also
+be the controller, and the account security will not be compromised. In this case, the staking proxy will be used to sign all staking-relate transactions.
+
+![stash-stakingProxy](../assets/stash-stakingProxy.png)
+
+Note that this situation is similar to having the controller as a staking proxy.
+
+It is important to remember that actions that can be performed by the proxy
 accounts are limited, and in the case of staking proxy, extrinsic calls to the balances pallet
 cannot be signed. This means it is not possible to do balance transfers on the proxied account
 through a staking proxy.
