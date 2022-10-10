@@ -51,12 +51,11 @@ to staking, session and utility pallets.
 
 ![stash-controller](../assets/stash-controller.png)
 
-Usually with the stash-controller setup the stash still needs to sign for bonding more funds and
-change the controller (see figure above). With a staking proxy the stash account even more isolated
-than using a controller account since one can bond more funds and change the controller using the
+Usually, with the stash-controller setup, the stash still needs to sign for bonding more funds and
+change the controller (see figure above). With a staking proxy, the stash account is even more isolated
+than a controller account since one can bond more funds and change the controller using the
 staking proxy account. This does not necessarily mean that the staking proxy can sign for all
-staking-related transactions. Below we show two main configurations that affects the permissions of
-a staking proxy.
+staking-related transactions. Below we show two main configurations that affect a staking proxy's permissions.
 
 ### Stash is not Controller
 
