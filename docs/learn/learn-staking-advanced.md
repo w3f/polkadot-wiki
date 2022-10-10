@@ -59,7 +59,7 @@ staking-related transactions. Below we show two main configurations that affect 
 
 ### Stash is not Controller
 
-If the stash and controller are different accounts, the staking proxy will just be used to bond more funds and change the controller. Thus the staking proxy will be used to sign for those transactions that are usually signed by the stash.
+If the stash and controller are different accounts, the staking proxy will just be used to bond more funds and change the controller. Thus the staking proxy will be used to sign for those transactions usually signed by the stash.
 
 ![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
 
