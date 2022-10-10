@@ -65,8 +65,8 @@ If the stash and controller are different accounts, the staking proxy will just 
 
 ### Stash is also Controller
 
-It is not necessary to have a controller, if you have a staking proxy: the stash can also
-be the controller, and the account security will be not compromised. In this case the staking proxy will be used to sign all staking-relate transactions.
+It is not necessary to have a controller if you have a staking proxy: the stash can also
+be the controller, and the account security will not be compromised. In this case, the staking proxy will be used to sign all staking-relate transactions.
 
 ![stash-stakingProxy](../assets/stash-stakingProxy.png)
 
