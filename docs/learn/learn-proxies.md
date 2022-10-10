@@ -117,6 +117,14 @@ as bonding extra funds or designating a new controller account. A proxy doesn't 
 of stash and controller accounts but does allow the stash to be accessed even less frequently than
 using a controller account.
 
+:::caution Do not use Staking proxy for participating in Nomination Pools
+
+Use a [non-transfer](#non-transfer-proxy) instead of a staking proxy to participate in nomination
+pools. The staking proxy is not enabled to make successful calls to the nomination pools pallet.
+
+:::
+
+
 ### Identity Judgement Proxy
 
 The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an
