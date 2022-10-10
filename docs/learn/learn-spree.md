@@ -85,7 +85,7 @@ Relay Chain. The two cylinders "A" and "B" represent two distinct parachains tha
 to this SPREE module creating two distinct instances of it with their own XCMP endpoints "A.X" and
 "B.X".
 
-In the example, we assume that this SPREE module "X" contains the functionality for incrementing of
+In the example, we assume that this SPREE module "X" contains the functionality for incrementing or
 decrementing the balance of a particular asset that is unique to this module.
 
 By initiating a transaction at A.X to decrease a particular balance by 1, a message over XCMP can be
