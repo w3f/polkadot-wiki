@@ -22,7 +22,7 @@ Charizard are fungible with each other.
 Fungibility is a spectrum - what is fungible to some might not be fungible to others. In reality,
 Pokemon™ cards, the canonical example of non-fungible assets are more fungible than US dollar bills,
 each of which has a unique serial number that may be important to a government agency. The cards
-have no serial numbers.
+have no serial numbers [1].
 
 ![one dollar](<https://www.investopedia.com/thmb/Nr-RLORu5CX_lIWZfLmV5X0eIrc=/613x345/smart/filters:no_upscale()/Clipboard01-d20f6eb9351e4f36a46e11fd87b53b2d.jpg>)
 
