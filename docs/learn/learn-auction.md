@@ -25,11 +25,11 @@ The parachain slots will be leased according to an unpermissioned
 improving security while operating on a blockchain. See [Rationale](#rationale) for additional
 details.
 
+[![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
+
 ## Auction Schedule
 
 <AuctionSchedule />
-
-[![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
 
 ## Mechanics of a Candle Auction
 

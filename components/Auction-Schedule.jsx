@@ -13,9 +13,11 @@ import {
 
 let API = undefined;
 let ChainState =  {
-	block: undefined,
-	blockNumber: undefined,
-	blockDate: undefined,
+	Header: undefined,
+	BlockNumber: undefined,
+	BlockDate: undefined,
+	AuctionStatus: undefined,
+	AuctionIndex: undefined,
 }
 let Options = [];
 const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
@@ -30,13 +32,17 @@ function AuctionSchedule() {
 			const chain = "Polkadot";
 			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
 			await LoadOptions(PolkadotAuctions, wsProvider);
-			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: 0 } });
+			await SetCurrentBlockData();
+			[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, PolkadotAuctions, ChainState.BlockNumber);
+			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: ChainState.AuctionIndex } });
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
 			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
 			await LoadOptions(KusamaAuctions, wsProvider);
-			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: 0 } });
+			await SetCurrentBlockData();
+			[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, KusamaAuctions, ChainState.BlockNumber);
+			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: ChainState.AuctionIndex } });
 		}
 		else {
 			console.log("Unknown wiki/guide type");
@@ -49,6 +55,14 @@ function AuctionSchedule() {
 	} else {
 		return (<div>Loading auction data...</div>)
 	}
+}
+
+// Set current chain block data
+async function SetCurrentBlockData() {
+	ChainState.Header = await API.rpc.chain.getHeader();
+	ChainState.BlockNumber = ChainState.Header.number.toPrimitive();
+	const timestamp = (await API.query.timestamp.now()).toPrimitive();
+	ChainState.BlockDate = new Date(timestamp)
 }
 
 // Loads drop-down selections
@@ -69,16 +83,6 @@ async function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) 
 
 // Connect to a chain, retrieve required values, re-render
 async function GetChainData(chain, auctions, setAuctions, index) {
-	// Check if current block was already retrieved
-	if(ChainState.header === undefined) {
-		// Get the current block for projection
-		ChainState.header = await API.rpc.chain.getHeader();
-		ChainState.blockNumber = ChainState.header.number.toPrimitive();
-		// Get current on-chain date/time
-		const timestamp = (await API.query.timestamp.now()).toPrimitive();
-		ChainState.blockDate = new Date(timestamp)
-	}
-
 	const selection = auctions[index];
 	const selectedBlocks = {
 		startDate: [selection.startBlock, selection.startHash],
@@ -100,7 +104,7 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 			promises.push(apiAt.query.timestamp.now());
 			keys.push(key);
 		} else {
-			auctions[index][key] = EstimateBlockDate(ChainState.blockDate, ChainState.blockNumber, value[0]);
+			auctions[index][key] = EstimateBlockDate(ChainState.BlockDate, ChainState.BlockNumber, value[0]);
 		}
 	}
 
@@ -137,8 +141,8 @@ function Render(chain, auctions, setAuctions, index) {
 	}
 
 	// Current block information
-	let currentBlockNumber = ChainState.blockNumber;
-	let currentBlockDate = ChainState.blockDate;
+	let currentBlockNumber = ChainState.BlockNumber;
+	let currentBlockDate = ChainState.BlockDate;
 	if (currentBlockNumber !== undefined) {
 		currentBlockDate = currentBlockDate.toDateString();
 	} else {
@@ -175,8 +179,18 @@ function Render(chain, auctions, setAuctions, index) {
 		</div>
 	}
 
+	// Set dates for current auction in status
+	[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, auctions, ChainState.BlockNumber);
+
 	const content = <div>
-		<select id="AuctionSelector" onChange={(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)} style={{ border: '2px solid #e6007a', height: '40px' }}>
+		<div>{ChainState.AuctionStatus}</div>
+		<br />
+		<select 
+			id = "AuctionSelector"
+			defaultValue = {ChainState.AuctionIndex}
+			onChange = {(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)}
+			style = {{ border: '2px solid #e6007a', height: '40px' }}
+		>
 			{Options.map((option) => (option))}
 		</select>
 		<hr />
@@ -203,7 +217,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<hr />
 		<b>Winning parachain(s) onboarded:</b>
 		<br />
-		{ onboarding }
+		{onboarding}
 		<hr />
 		<p style={{ color: "#6c757d" }}>
 			The dates and block numbers listed above can change based on network block production and the potential for skipped blocks.
@@ -214,6 +228,28 @@ function Render(chain, auctions, setAuctions, index) {
 
 	setAuctions(content);
 	return auctions;
+}
+
+function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
+	let index = 0;
+	let status = "";
+	for (let i = 0; i < auctions.length; i++) {
+		if (currentBlock === 0) {
+			status = "Current block is still loading...";
+			return [index, status];
+		}
+		if (auctions[i].biddingEndsBlock > currentBlock) {
+			if (auctions[i].startBlock > currentBlock) {
+				status = `Auction #${i + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
+			} else {
+				status = `Auction #${i + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
+			}
+			index = i;
+			return [index, status];
+		}
+	}
 }
 
 // Get the auction end, on-board start and end blocks from auction start block
