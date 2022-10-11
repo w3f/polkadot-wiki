@@ -7,6 +7,8 @@ keywords: [avalance, proof of stake, comparison]
 slug: ../learn-comparisons-avalanche
 ---
 
+<!-- Add infographics to this page -->
+
 Polkadot and Avalanche both have an architecture which allows for application specific blockchains to be designed and connected via a "main" chain. In Polkadot, this is the Relay-chain and Avalanche does this with 3 primary chains - the P-chain, X-chain, and C-chain. Similar to how Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what're called subnets. Subnets are application specific chains that can be deployed along side the primary chains. Similar to Polkadot, Avalanche also uses a PoS mechanism for in its consensus algorithm to elect its validators who stake their AVAX tokens in order to become validators and secure the network.
 
 ## Model
@@ -14,6 +16,8 @@ Polkadot and Avalanche both have an architecture which allows for application sp
 Avalanche's architecture seperates the responsibility of a layer-1 smart contract platform into three manageable chains. This allows for a seperation of concern over consensus, transactions and smart contract execution runtime. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions.
 
 ## Architecture
+
+![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png)
 
 As formentioned, the Avalanche architecture is comprised of three different chains. With this model, the seperations of concerns targets the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche.
 
