@@ -25,8 +25,6 @@ As formentioned, the Avalanche architecture is comprised of three different chai
 
 The P-chain is responsible for the validator set and securing the network. AVAX token holders can spin up their own nodes and become validators by staking their tokens. Similar to the NPoS system that Polkadot uses, Avalanche uses a Delegated PoS which allows token holders who do not want to spin up their own node to become validators to delegate their token stake to existing validators. When a new subnet is spun up, it will also be connected to the p-chain. 
 
-<!-- TODO: do subnet validators also have to validate the p-chain? In Polkadot collators do not have to do this, but they do have to sync with the relay chain effectively running a relay chain node on their machine. -->
-
 #### X-chain (Exchange)
 
 The X-chain is responsible for the transaction layer of the Avalanche blockchain. It uses a UTXO model like Bitcoin whereas Polkadot uses an account model like Ethereum.
@@ -69,13 +67,9 @@ The snowball protocol is an algorithm that nodes use to come to consensus. Each 
 
 ## Staking Mechanics
 
-<!-- TODO: Add Polkadot comparison to become a validator and nominator -->
+Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a delegator. With a minimum stake period being two weeks and maximum period being a year, for both validators and delagators. Validators acquire points for uptime and correctness of their work, the remuneration of rewards depend on that.
 
-Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a delegator. 
-
-## Shards
-
-<!-- TODO: Add sharding comparison... this will mainly be subnets vs parachains -->
+<!-- Staking points and how they're occured is not clear in the documentation -->
 
 ## Message Passing
 
