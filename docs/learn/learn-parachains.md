@@ -25,7 +25,7 @@ there is no specific need for them to be actual blockchains.
 
 Due to their parallel nature, they are able to parallelize transaction processing and achieve
 scalability of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
-[share in the security](learn-security.md) of the entire network and can communicate with other
+[inherit the security](learn-security.md) of the entire network and can communicate with other
 parachains through the [XCM](learn-xcm.md) format.
 
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
@@ -181,12 +181,12 @@ Substrate-based.
 
 ### How will parachain slots be distributed?
 
-Parachain slots will be acquirable through auction, please see the
-{{ polkadot: [parachain slots](learn-auction.md) :polkadot }}
-{{ kusama: [parachain slots](learn-auction.md) :kusama }} article. Additionally, some parachain
+Parachain slots are acquirable through auction. For more information on the auction process, please 
+see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
+{{ kusama: [parachain slot auctions](learn-auction.md) :kusama }} article. Additionally, some parachain
 slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
 {{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
-basis to be included in the Relay Chain.
+basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
@@ -207,7 +207,7 @@ If anywhere from 30% to 50% of the validators go offline, availability will suff
 two-thirds of the validator set to back the parachain candidates. In other words, all parachains
 will stop until the situation is resolved. Finality will also stop, but low-value transactions on
 the Relay Chain should be safe enough to execute, despite common forks. Once the required number of
-validators is in the validator set again, parachains will resume block production.
+validators are in the validator set again, parachains will resume block production.
 
 Given that collators are full nodes of the Relay Chain and the parachain they are running, they will
 be able to recognize a disruption as soon as it occurs and should stop producing block candidates.

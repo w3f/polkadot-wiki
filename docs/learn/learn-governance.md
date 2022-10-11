@@ -8,6 +8,7 @@ slug: ../learn-governance
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
 import VLTable from "./../../components/Voluntary-Locking";
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance

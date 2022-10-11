@@ -7,7 +7,8 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection";;
+import RPC from "./../../components/RPC-Connection";
+
 import MinimumStake from "./../../components/Minimum-Stake";
 
 :::info
@@ -361,20 +362,12 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-:::info By default, Validator nodes are in archive mode
-
-If you've already synced the chain not in archive mode, you must first remove the database with
-`polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
-
-:::
-
-You can begin syncing your node by running the following command:
+You can begin syncing your node by running the following command if you do not want to start in
+validator mode right away:
 
 ```sh
-./target/release/polkadot --pruning=archive
+./target/release/polkadot
 ```
-
-if you do not want to start in validator mode right away.
 
 ```
 2021-06-17 03:07:07 Parity Polkadot
@@ -391,7 +384,7 @@ if you do not want to start in validator mode right away.
 2021-06-17 03:07:10 Listening for new connections on 127.0.0.1:9944.
 ```
 
-:::note Example of node sync
+:::info Example of node sync
 
 ```
 2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u
@@ -403,11 +396,6 @@ if you do not want to start in validator mode right away.
 ```
 
 :::
-
-The `--pruning=archive` flag is implied by the `--validator` flag, so it is only required explicitly
-if you start your node without one of these two options. If you do not set your pruning to archive
-node, even when not running in validator mode, you will need to re-sync your database when you
-switch.
 
 :::note Validators should sync using the RocksDb backend
 

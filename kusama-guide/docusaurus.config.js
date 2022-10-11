@@ -137,5 +137,14 @@ module.exports = {
       indexName: 'kusama_guide',
       contextualSearch: true,
     },
+    /* Banner / Announcement bar */
+    announcementBar: {
+      id: "banner",
+      content:
+        '<b>Sub0 is coming to Lisbon!</b> Join the Polkadot developer conference, November 28th-29th 👉 <a href="https://sub0.polkadot.network/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20guide%20kusama" target="_blank" rel="noopener nofollow noreferrer">SIGN UP</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
   },
 };

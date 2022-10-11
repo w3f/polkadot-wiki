@@ -49,6 +49,7 @@ module.exports = {
                 "learn/learn-account-generation",
                 "learn/learn-account-restore",
                 "learn/learn-balance-transfers",
+                "learn/learn-account-multisig",
               ],
             },
             {
@@ -87,7 +88,6 @@ module.exports = {
               label: "Staking",
               items: [
                 "learn/learn-staking",
-                "learn/learn-staking-advanced",
                 "learn/learn-nomination-pools",
                 "learn/learn-staking-faq"
               ],
@@ -98,6 +98,7 @@ module.exports = {
           type: "category",
           label: "Advanced",
           items: [
+            'learn/learn-account-advanced',
             'learn/learn-availability',
             'learn/learn-xcm',
             'learn/learn-phragmen',
@@ -105,6 +106,7 @@ module.exports = {
             'learn/learn-randomness',
             'learn/learn-simple-payouts',
             'learn/learn-spree',
+            "learn/learn-staking-advanced",
             'learn/learn-staking-miner',
             'learn/learn-wasm',
           ],

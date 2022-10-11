@@ -9,6 +9,18 @@ slug: ../learn-staking
 
 import RPC from "./../../components/RPC-Connection";
 
+:::tip New to Staking?
+
+Start your staking journey or explore more information about staking on
+[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
+[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+check this
+[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
+help you get started.
+{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+
+:::
+
 Here you will learn about what staking is, why it is important and how it works on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
@@ -231,7 +243,7 @@ nominating validators (not in order of importance):
 
 The diagram below shows how the selection of those criteria affects the reward-to-risk ratio.
 
-![rewards and risks diagram](../assets/staking/reward-risk.png)
+![rewards and risks diagram](../assets/reward-risk.png)
 
 #### Validator Selection Criteria
 
@@ -305,7 +317,7 @@ account on a cold wallet.
 
 :::
 
-![staking](../assets/staking/stash-controller.png)
+![staking](../assets/stash-controller.png)
 
 This hierarchy of separate keys for stash and controller accounts was designed to add a layer of
 protection to nominators and validator operators. The more often one exposes and uses a private key,
@@ -359,6 +371,7 @@ Therefore, you may not see anything in this tab, yet still have received a payou
 (generally, but not necessarily, another nominator or the validator operator) has triggered the
 payout for that validator for that era.
 
+:::
 
 :::warning Time limit to claim staking rewards
 
@@ -458,7 +471,7 @@ need to resubmit their intention to validate and re-garner support from nominato
 
 For more on chilling, see the "[How to Chill][]" page on this wiki.
 
-## Why and why not to Stake?
+## Why and Why not to Stake?
 
 ### Pros of Staking
 
@@ -475,7 +488,7 @@ nominal return rate will be higher, encouraging more users to use their tokens f
 contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal
 return will be less, encouraging some users to withdraw.
 
-### Cons of Staking?
+### Cons of Staking
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
@@ -484,11 +497,15 @@ return will be less, encouraging some users to withdraw.
 ## How many Validators does Polkadot have?
 
 Polkadot currently has
-<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> validators. The top
-bound on the number of validators has not been determined yet, but should only be limited by the
-bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of
-validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network,
-currently has 900 validator slots in the active set.
+{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
+validators. The top bound on the number of validators has not been determined yet, but should only
+be limited by the bandwidth strain of the network due to peer-to-peer message passing. The estimate
+of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's
+canary network, currently has
+{{ polkadot: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
+validator slots in the active set.
 
 ## Resources
 

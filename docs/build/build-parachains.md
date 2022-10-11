@@ -117,7 +117,7 @@ Any validator in the validator pool can help validate your blockchain.
 
 ### [Para-nomics](../learn/learn-parachains.md#parachain-economies)
 
-#### Digital nation states
+#### Digital Nation States
 
 Parachains can be seen as autonomous agents; networks that act as decentralised digital nation
 states. Parachains have their own communities, rules, economies, governance, treasuries, and
@@ -129,10 +129,10 @@ Moreover, _becoming a parachain_ has an opportunity cost associated. Ideally, yo
 value of the network by participating in the parachain selection process, and this should serve as a
 good return on investment.
 
-#### Connecting digital economies
+#### Connecting Digital Economies
 
 [Collators](../learn/learn-collator.md) act as network maintainers and maintain a full node of a
-parachain. They are incentivized with a native token payout from:
+parachain. They can be incentivized with a native token payout from:
 
 - Transaction fees collected
 - Parathread token sponsorship
@@ -220,15 +220,19 @@ For this reason, `Cumulus`, an added _library_ contains all of the
 :::note Get started with Substrate
 
 The best way to get started with Substrate is to explore the
-[Substrate Developer Hub](https://docs.substrate.io/), an online resource built and maintained by
+[Substrate Documentation](https://docs.substrate.io/) maintained by
 [Parity Technologies](https://parity.io).
 
 :::
 
 #### Cumulus
 
-    Cumulus clouds are shaped sort of like dots; together they form an intricate system;
-    beautiful and functional.
+:::info
+
+Cumulus clouds are shaped sort of like dots. Together, they form an intricate system that is
+beautiful and functional.
+
+:::
 
 [Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to
 make any Substrate-built runtime into a Polkadot-compatible parachain.
@@ -308,9 +312,9 @@ updating the state (in practice, most likely a Merkle tree, which would be easil
 the user inputs. The operator would act as the collator node, which would aggregate the state and
 create the zk-SNARK proof that it would hand to a Relay Chain's validators for verification.
 
-If you or your team are interested in developing a PDK feel free to open an issue on the
-[W3F collaboration repository](https://github.com/w3f/Web3-collaboration) for comment. There may be
-grants available for this type of work.
+If you or your team are interested in developing a PDK feel free to apply for a grant on the
+[W3F Grants Program repository](https://github.com/w3f/Grants-Program). There may be grants
+available for this type of work.
 
 ## Testing a Parachain
 
@@ -321,12 +325,11 @@ parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-h
 Relay-routed Message Passing) in order to send transfers and messages between parachains and a Relay
 Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
-Rococo currently runs four test system parachains:
-[Statemint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fstatemint-rococo-rpc.parity.io#/explorer),
-[Tick](https://polkadot.js.org/apps/?rpc=wss://tick-rpc.polkadot.io#/explorer),
-[Trick](https://polkadot.js.org/apps/?rpc=wss://trick-rpc.polkadot.io#/explorer) and
-[Track](https://polkadot.js.org/apps/?rpc=wss://track-rpc.polkadot.io#/explorer). as well as several
-externally developed parachains.
+Rococo runs a few test system parachains:
+[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-statemint-rpc.polkadot.io#/explorer),
+and
+[Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer).
+It also runs several externally developed parachains.
 
 ### What Parachains are on Rococo Now?
 
@@ -364,71 +367,9 @@ Once the executable is built, launch collators for your parachain:
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created
 [parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
-to show you how. Get stuck or need support along the way? Join the
-[Parachain Technical matrix chat channel](https://matrix.to/#/#parachain-technical:matrix.parity.io)
-and connect with other builders there.
-
-### How to Make Cross Chain Transfers
-
-To send a transfer between parachains, navigate to "Accounts" > "Transfer" on Polkadot-JS Apps. From
-here, you'll need to select the parachain node that you are running. Next, enter in the amount that
-you'd like to send to another parachain. Be sure to select the correct parachain you'd like to send
-an amount to. Once you've hit the "Submit" button, you should see a green notification, indicating a
-successful transfer.
-
-#### Downward Transfers
-
-Downward transfers are when an account on the Relay Chain sends a transfer to their account on a
-different parachain. This type of transfer uses a depository and mint model, meaning that when the
-DOT leave the sender's account on the Relay Chain and are transferred into an account on a
-parachain, the parachain mints a corresponding amount of tokens on the parachain.
-
-For example, we can send tokens from Alice's account on the Relay Chain to her account on
-parachain 200. To do so, we will need to head to the "Network" > "Parachains" tab and click on the
-"Transfer to chain" button.
-
-![rococo downward transfer](../assets/rococo/rococo-downward-transfer.png)
-
-Notice here, that we can select which parachain to send the funds to, specify the amount to be sent,
-and add any comments or a memo for the transfer.
-
-#### Upward Transfers
-
-Upward transfers occur _from_ a parachain _to_ an account on the Relay Chain. To proceed with this
-kind of transfer, we need to be connected to a parachain node on the network and be on the
-"Network" > "Parachains" tab. Click on the "Transfer to chain" button.
-
-![rococo upward transfer](../assets/rococo/rococo-upward-transfer.png)
-
-Note that the toggle should be set to off, ensuring that the funds go to the Relay Chain and not
-another parachain.
-
-#### Lateral Transfers
-
-Lateral transfers are only possible with at least two different registered parachains. In true XCMP,
-lateral transfers would allow for messages to be sent directly from one parachain to another.
-However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
-being. Lateral transfers work through the depository model, which means that in order to transfer
-tokens from chain 200 to chain 300, tokens must already be owned by chain 200 deposited on
-chain 300. Lateral transfers are called HRMP, Horizontal Relay-Chain Message Passing.
-
-Before we can send funds from one parachain to another, we must ensure that the chain's account on
-the recipient chain has some funds in it. In this example, Alice will be sending some funds from her
-account on parachain 200 to her account on parachain 300.
-
-We can get that parachain account address, from our parachain 300's terminal:
-
-```
-2020-08-26 14:46:34 Parachain Account: 5Ec4AhNv5ArwGxtngtW8qcVgzpCAu8nokvnh6vhtvvFkJtpq
-```
-
-From Alice's account on the Relay Chain, she can send some amount to parachain 200's depository.
-
-![rococo lateral transfer](../assets/rococo/rococo-lateral-transfer.png)
-
-Alice is now able to send from her account on parachain 200 to her account on parachain 300.
-
-![rococo lateral transfer part 2](../assets/rococo/rococo-lateral-transfer2.png)
+to show you how. Got stuck or need support along the way? Join
+[Substrate Stack Exchange](https://substrate.stackexchange.com/)) to interact with other builders
+there.
 
 ### How to Connect to a Parachain
 

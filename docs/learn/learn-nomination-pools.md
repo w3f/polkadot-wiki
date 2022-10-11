@@ -95,6 +95,14 @@ pool's internal logic can access the account.
 
 :::
 
+:::tip Use Non-Transfer Proxy Accounts to join Nomination Pools
+
+Currently, only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to
+participate in nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used 
+as they are not enabled to make calls to the nomination pools pallet.
+
+:::
+
 Check the "How to join a pool" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
@@ -124,6 +132,13 @@ pool, allowing them to join a different pool if desired. Check the "Withdraw unb
 in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
+
+:::info Unbonding transaction automatically triggers withdrawal of rewards
+
+When there is a change in the bonded balance, the accumulated rewards in the pool thus far are automatically 
+withdrawn to the account. The rewards are then accrued based on the updated bonded balance. 
+
+:::
 
 ### Limitations
 
