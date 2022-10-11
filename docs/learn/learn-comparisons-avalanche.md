@@ -39,24 +39,33 @@ As Polkadot does not have a smart contract layer ouot of the box, the EVM and WA
 
 #### Subnets or sub-networks
 
-Subnets can be public or private and allow for developers to design and launch a blockchain on Avalanche. There are one or many validators that are subsets from the overall validator set of the network. Any validator in the Avalanche network has to validate all three chains making them a part of the primary network subnet. Subnets can validate any blockchains, however each blockchain is validated by exactly one subnet. 
-
-<!-- TODO: How different is this model from the parachain model? Do subnets also have to use the avalanche consensus model? They have a choice of VM but do they of consensus? -->
+Subnets can be public or private and allow for developers to design and launch a blockchain on Avalanche. There are one or many validators that are subsets from the overall validator set of the network. Any validator in the Avalanche network has to validate all three chains making them a part of the primary network subnet. Subnets can validate any blockchains, however each blockchain is validated by exactly one subnet. Subnets are a way to create application specific chains with their own logic and consensus, but also be a part of the Primary Network.
 
 ## Consensus 
 
-<!-- TODO: Dig into each Snow protocol in detail -->
+![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png)
 
-Avalanche uses a family of consensus protocols to achieve security, liveness and finality. These are known as the Snow* protocols. This group of protocols composed together use both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
+Avalanche consensus uses a family of protocols to achieve security, liveness and finality. These are known as the Snow* protocols. This group of protocols composed together use both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
 
 The Snow family is a hierarchical collection of systems used to reach finality on Avalanche:
 
 - Slush
 - Snowflake
 - Snowball
+- Avalanche
+- Snowman
+- Slushie
 
 
 Compared to Polkadot, Avalanche uses a asynchronous hybrid system that is based on a clasical and Nakomoto approach. Polkadot uses a synchronous hybrid model that combines BABE and GRADNPA, where BABE is the algorithm used to build blocks in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single new blocks.
+
+### Snowball 
+
+The snowball protocol is an algorithm that nodes use to come to consensus. Each node continuously queries x number of validators and takes the majority consensus and adopts it as its own. This method, in normal circumstances will lead to the network reaching a consensus. The scalability of Snowball is promising, as the number of participants in the network grows, the number of consensus messages being passed around remains the same. Nodes will query no more than 20 nodes at a given time.
+
+### DAG(Directed Acyclic Graph)
+
+[DAGs](https://en.wikipedia.org/wiki/Directed_acyclic_graph) are graphs consisting of vertices and edges. In Avalanche they are used for **partial ordering** of decisions, such as transactions. Vertices point to each other using edges, and when ordered topologically vertices and edges create a sequence. Edges in the case of Avalanche can be conflicting, and nodes will use the snowball algorithm to make decisions about which edges to keep and which to not. 
 
 ## Staking Mechanics
 
