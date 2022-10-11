@@ -18,4 +18,4 @@ jobs:
 
       - name: Update
         run: |
-        yarn && yarn update:auctions
+          yarn && yarn update:auctions
