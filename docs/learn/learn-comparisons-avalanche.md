@@ -94,9 +94,13 @@ Polkadot's governance mechanism has been in production from the very begining, a
 
 The upgrades to Avalanche are administered by the protocol developers at Avax Labs. On Polkadot, the forkless upgrades are administered and deployed through the on-chain governance.
 
+## In the physical realm
+
+Ava Labs, founded by Emin Gün Sirer is based in Brooklyn, NY and is currently the main organization behind the development of Avalanche consensus and the Avalanche Primary Network. Emin, a professor at Cornell and known for his work in the Bitcoin ecosystem, namely around the "selfish mining" attack together with Maofan Ted Yin produced the research and ideas for Avalanche at Cornell. 
+
 ## Conclusion
 
-In conclusion, Avalanche has made some design decisions which allow for an improved smart-contract development environment in which protocol engineers can have the freedom to create their own blockchains and include them into the Avalanche ecosystem via subnets. The trade-offs are that the autonomy of design is limited and blockchains have to buy into the design decisions of Avalanche's main chains. Subnets are not able to share the security of the main chains. However, they are able to utilize the low-transaction fee to create working applications quick. We have even seen some Ethereum projects move to Avalanche to take advantage of the lower fees. Whereas Polkadot provides a heterogeneous model, in which blockchains have ultimate autonomy in the way they design their consensus systems, and on top of that are able to share the security of the Relay-chain, and use XCM to pass native trustless messages, instead of having to rely on bridges.
+Avalanche has made some design decisions which allow for an improved smart-contract development environment in which protocol engineers can have the freedom to create their own blockchains and include them into the Avalanche ecosystem via subnets. The trade-offs are that the autonomy of design is limited and blockchains have to buy into the design decisions of Avalanche's main chains. Subnets are not able to share the security of the main chains. However, they are able to utilize the low-transaction fee to create working applications quick. We have even seen some Ethereum projects move to Avalanche to take advantage of the lower fees. Whereas Polkadot provides a heterogeneous model, in which blockchains have ultimate autonomy in the way they design their consensus systems, and on top of that are able to share the security of the Relay-chain, and use XCM to pass native trustless messages, instead of having to rely on bridges.
 
 ## References
 
