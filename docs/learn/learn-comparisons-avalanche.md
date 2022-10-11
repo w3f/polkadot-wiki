@@ -7,7 +7,7 @@ keywords: [avalance, proof of stake, comparison]
 slug: ../learn-comparisons-avalanche
 ---
 
-<!-- Add infographics to this page -->
+<!-- Add more infographics to this page -->
 
 Polkadot and Avalanche both have an architecture which allows for application specific blockchains to be designed and connected via a "main" chain. In Polkadot, this is the Relay-chain and Avalanche does this with 3 primary chains - the P-chain, X-chain, and C-chain. Similar to how Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what're called subnets. Subnets are application specific chains that can be deployed along side the primary chains. Similar to Polkadot, Avalanche also uses a PoS mechanism for in its consensus algorithm to elect its validators who stake their AVAX tokens in order to become validators and secure the network.
 
@@ -19,7 +19,7 @@ Avalanche's architecture seperates the responsibility of a layer-1 smart contrac
 
 ![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png)
 
-As formentioned, the Avalanche architecture is comprised of three different chains. With this model, the seperations of concerns targets the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche.
+As formentioned, the Avalanche architecture is comprised of three different chains. With this model, the seperations of concerns targets the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche. Additionally, the chain in Avalanche is not linear, rather it's a DAG(Directed Acyclic Graph).
 
 #### P-chain (Platform)
 
@@ -30,8 +30,6 @@ The P-chain is responsible for the validator set and securing the network. AVAX 
 #### X-chain (Exchange)
 
 The X-chain is responsible for the transaction layer of the Avalanche blockchain. It uses a UTXO model like Bitcoin whereas Polkadot uses an account model like Ethereum.
-
-<!-- TODO: Figure out what a Directed Acyclyc Graph (DAG) is in accordance to a linear blockchain. And state the different in the Polkadot model -->
 
 #### C-chain (Contracts)
 
