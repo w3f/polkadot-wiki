@@ -29,7 +29,11 @@ details.
 
 ## Auction Schedule
 
+:::info
+
 <AuctionSchedule />
+
+:::
 
 ## Mechanics of a Candle Auction
 
