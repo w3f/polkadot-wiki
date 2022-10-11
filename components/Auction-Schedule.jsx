@@ -215,7 +215,7 @@ function Render(chain, auctions, setAuctions, index) {
 			Block #{auctions[index].biddingEndsBlock}
 		</a>
 		<hr />
-		<b>Winning parachain(s) onboarded:</b>
+		<b>Lease Period:</b>
 		<br />
 		{onboarding}
 		<hr />
