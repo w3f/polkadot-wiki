@@ -272,7 +272,7 @@ primary account then acts as _any_ proxy on behalf of the anonymous proxy. Anony
 that is randomly generated. Also, in some sense, nobody owns an anonymous proxy as nobody has a
 private key to control them.
 
-:::info Redenomination of anonymous proxies to **pure proxies**
+:::info Renaming Anonymous Proxies as **Pure Proxies**
 
 Anonymous proxies are not anonymous because they have an address that is spawned by a primary
 account acting as _any_ proxy. Even if the _any_ proxy changes, it is still possible to find who
@@ -281,9 +281,9 @@ change the name of _anonymous_ proxy. People suggested _keyless accounts_ since 
 private key and are proxied accounts. However, multisig accounts are also keyless (but
 deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as
 proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that
-has been chosen is **pure proxy**. If you want to know more about the redenomination of pure proxies
-you see [this PR](https://github.com/paritytech/substrate/pull/12283) or the discussion
-[here](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
+has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of 
+pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or 
+the discussion on [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
 
 :::
 
