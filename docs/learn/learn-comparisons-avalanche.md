@@ -82,16 +82,17 @@ Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The ba
 Avalanche does not have a native trustless message passing mechanism. Instead, it relies on bridges. Though, because it is an EVM compatible protocol, it's able to interoperate at a token level. However, subnets do not have a messaging layer out of the box. Polkadot, with its XCM and XCMP messaging protocols allows for a native and trustless messaging scheme, thus supporting composability of chains and enabling the development of powerful cross-chain applications.
 
 ## Governance
-<!-- 
-TODO: Add definitions to each key parameter that is subject to change via governance -->
 
 According to its whitepaper, Avalanche plans to have an on-chain governance mechanism. It currently does not have an on-chain or off-chain system in production. Its governance system will limited to updating only a few key protocol parameters which include:
 
-- Staking amount
-- Minimum staking time for a node
-- Maximum staking time for a node
-- Minting rate
-- Transaction fee amount
+- **Staking amount:** This value defines the minimal stake required to be placed as
+bond before participating in the system.
+- **Minimum staking time for a node:** The minimal amount of time required for a node to stake into the system.
+- **Maximum staking time for a node:** The maximal amount of time a node can stake.
+- **Minting rate:** Reward rate function, also referred to as minting rate, determines the reward a
+participant can claim as a function of their staking amount given some number of x publicly disclosed nodes
+under its ownership, over a period of t consecutive *minimal staking time* timeframes, such that t*minimal staking time* ≤ *maximum staking time*.
+- **Transaction fee amount:** The fee structure, which is a set of governable fees parameters that specify costs to various transactions.
 
 Limiting the governance functionality is a design choice to increase predictibility and safety.
 
