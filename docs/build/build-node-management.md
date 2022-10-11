@@ -134,7 +134,9 @@ You can check the node's health via RPC with
 
 ```bash
 echo '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9944
+```
 
+```json
 {"jsonrpc":"2.0","result":{"peers":50,"isSyncing":false,"shouldHavePeers":true},"id":1}
 ```
 

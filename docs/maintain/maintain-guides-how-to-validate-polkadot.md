@@ -155,9 +155,8 @@ If you do not have "curl" installed, run:
 sudo apt install curl
 ```
 
-It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
-RPC interactions. Installation instructions for various operating systems can be found
-[here](https://github.com/vi/websocat#installation).
+It will also be valuable to have [websocat](https://github.com/vi/websocat) (Netcat, curl and socat for WebSockets) installed for RPC interactions.
+Installation instructions for various operating systems can be found [here](https://github.com/vi/websocat#installation).
 
 :::
 
