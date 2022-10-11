@@ -1,7 +1,7 @@
 name: Update Auction Schedules
 on:
-  schedule:
-    - cron: '0 0 * * 1' # Once a week
+  #schedule:
+  #  - cron: '0 0 * * 1' # Once a week
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:
@@ -18,4 +18,4 @@ jobs:
 
       - name: Update
         run: |
-        yarn && yarn polkadot:auctions
+        yarn && yarn update:auctions
