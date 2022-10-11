@@ -1,24 +1,51 @@
-let fs = require('fs');
+let fs = require("fs");
+let Polkadot = require("@polkadot/api");
 
-let test = {
-  sample: []
-};
+let API = undefined;
+const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
 
-test.sample.push({ polkadot: 1, kusama:2 });
+LoadAPI().then(() => {
+	fs.readFile("./components/utilities/data/PolkadotAuctions.json", "utf8", async function readFileCallback(err, data) {
+		if (err) {
+			console.log(err);
+		} else {
+			const existingAuctions = JSON.parse(data);
+			// Iterate existing auctions
+			for (let i = 0; i < existingAuctions.length; i++) {
+				let auction = existingAuctions[i];
+				const blocks = {
+					startDate: [auction.startBlock, auction.startHash],
+					endPeriodDate: [auction.endPeriodBlock, auction.endPeriodHash],
+					biddingEndsDate: [auction.biddingEndsBlock, auction.biddingEndsHash],
+					onboardStartDate: [auction.onboardStartBlock, auction.onboardStartHash],
+					onboardEndDate: [auction.onboardEndBlock, auction.onboardEndHash]
+				}
 
-let json = JSON.stringify(test);
+				for (const [key, value] of Object.entries(blocks)) {
+					if (value[1] !== FutureBlock) {
+						const apiAt = await API.at(value[1]);
+						const stamp = await apiAt.query.timestamp.now();
+						console.log(stamp);
+						existingAuctions[i][key] = stamp.toPrimitive();
+						console.log(`${key}: ${existingAuctions[i][key]}`);
+					}
+				}
+			}
 
-fs.writeFile('auctions-sample.json', json, 'utf8', callback);
+			// Write
+			json = JSON.stringify(existingAuctions); //convert it back to json
+			fs.writeFile("auctions-sample.json", json, "utf8", callback);
+		}
+	})
+}
+);
 
-fs.readFile('auctions-sample.json', 'utf8', function readFileCallback(err, data){
-  if (err){
-    console.log(err);
-  } else {
-  test = JSON.parse(data);
-  test.sample.push({ westend: 3 });
-  json = JSON.stringify(test); //convert it back to json
-  fs.writeFile('auctions-sample.json', json, 'utf8', callback);
-}});
+async function LoadAPI() {
+	const WSProvider = new Polkadot.WsProvider("wss://rpc.polkadot.io");
+	API = await Polkadot.ApiPromise.create({ provider: WSProvider });
+	console.log(API);
+	console.log("Done");
+}
 
 function callback() {
   console.log("Done writing");
