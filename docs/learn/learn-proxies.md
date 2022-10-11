@@ -108,6 +108,12 @@ on governance proxies or watch our
 
 ### Staking Proxy
 
+:::info
+
+Visit the [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more detailed information about staking proxies.
+
+:::
+
 The **Staking** type allows staking-related transactions. Do not confuse a staking proxy with the
 controller account. Within the staking pallet, some transactions must come from the stash account,
 while others must come from the controller account. The stash account is meant to stay in cold
