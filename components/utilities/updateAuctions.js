@@ -13,6 +13,7 @@ LoadAPI().then(() => {
 			// Iterate existing auctions
 			for (let i = 0; i < existingAuctions.length; i++) {
 				let auction = existingAuctions[i];
+				// All relevant block types for a single auction
 				const blocks = {
 					startDate: [auction.startBlock, auction.startHash],
 					endPeriodDate: [auction.endPeriodBlock, auction.endPeriodHash],
@@ -20,12 +21,11 @@ LoadAPI().then(() => {
 					onboardStartDate: [auction.onboardStartBlock, auction.onboardStartHash],
 					onboardEndDate: [auction.onboardEndBlock, auction.onboardEndHash]
 				}
-
+				
 				for (const [key, value] of Object.entries(blocks)) {
 					if (value[1] !== FutureBlock) {
 						const apiAt = await API.at(value[1]);
 						const stamp = await apiAt.query.timestamp.now();
-						console.log(stamp);
 						existingAuctions[i][key] = stamp.toPrimitive();
 						console.log(`${key}: ${existingAuctions[i][key]}`);
 					}
@@ -43,10 +43,8 @@ LoadAPI().then(() => {
 async function LoadAPI() {
 	const WSProvider = new Polkadot.WsProvider("wss://rpc.polkadot.io");
 	API = await Polkadot.ApiPromise.create({ provider: WSProvider });
-	console.log(API);
-	console.log("Done");
 }
 
 function callback() {
-  console.log("Done writing");
+  console.log("Done.");
 }

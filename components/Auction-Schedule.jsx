@@ -8,7 +8,8 @@ import {
 	KusamaAuctions,
 	KusamaSlotLeasePeriod,
 	KusamaSlotLeaseOffset,
-	KusamaLeasePeriodPerSlot
+	KusamaLeasePeriodPerSlot,
+	FutureBlock
 } from './utilities/auctionVariables';
 
 let API = undefined;
@@ -20,7 +21,6 @@ let ChainState =  {
 	AuctionIndex: undefined,
 }
 let Options = [];
-const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
 
 // Component for displaying auction data
 function AuctionSchedule() {
@@ -96,28 +96,14 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 	let promises = [];
 	let keys = [];
 
-	// TODO - this is expensive to repetitively invocate so it might be worth caching dates for finalized blocks
-	// The values are cached once calculated in the viewing sessions so returning to a previous auction will display the cache
 	for (const [key, value] of Object.entries(selectedBlocks)) {
-		if (value[1] !== FutureBlock) {
-			const apiAt = await API.at(value[1]);
-			promises.push(apiAt.query.timestamp.now());
-			keys.push(key);
-		} else {
+		// Estimate block date for future blocks
+		if (value[1] === FutureBlock) {
 			auctions[index][key] = EstimateBlockDate(ChainState.BlockDate, ChainState.BlockNumber, value[0]);
+		} else {
+			auctions[index][key] = new Date(auctions[index][key]).toDateString();
 		}
 	}
-
-	await Promise.all(promises)
-		.then((stamps) => {
-			for(let i = 0; i < promises.length; i++) {
-				const date = new Date(stamps[i].toPrimitive());
-				auctions[index][keys[i]] = date.toDateString();
-			}
-		})
-		.catch((error) => {
-			console.log(error);
-		})
 
 	Render(chain, auctions, setAuctions, index);
 }
@@ -150,6 +136,7 @@ function Render(chain, auctions, setAuctions, index) {
 		currentBlockDate = "Connecting...";
 	}
 
+	// TODO - can this be removed
 	// If still calculating date estimation, inform user
 	if (auctions[index].hasOwnProperty("startDate") === false) {
 		const msg = "Retrieving date...";

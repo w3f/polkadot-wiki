@@ -22,3 +22,6 @@ export const KusamaLeasePeriodPerSlot = 8;
 // GetAuctionBlocks() in Auction-Schedule.jsx can generate all these values from a starting block number
 export const PolkadotAuctions = DotAuctions;
 export const KusamaAuctions = KsmAuctions;
+
+// A future block that does not yet have an associated hash
+export const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
