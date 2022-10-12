@@ -18,9 +18,11 @@ LoadAPI().then(() => {
       console.log(err);
     } else {
       const existingAuctions = JSON.parse(data);
+      
       // Iterate existing auctions
       for (let i = 0; i < existingAuctions.length; i++) {
         let auction = existingAuctions[i];
+        
         // All relevant block types for a single auction
         const blocks = {
           startDate: [auction.startBlock, auction.startHash],
@@ -30,19 +32,50 @@ LoadAPI().then(() => {
           onboardEndDate: [auction.onboardEndBlock, auction.onboardEndHash]
         }
 
+        // Iterate block types for the given auction
         for (const [key, value] of Object.entries(blocks)) {
-          if (value[1] !== FutureBlock) {
+          // If cache presents a future block, check to see if it has been recently created and update it
+          if (value[1] === FutureBlock) {
+            const hash = await BlockToHash(API, startBlock);
+            if (hash !== FutureBlock) {
+              console.log("Future block replaced!");
+              switch (key) {
+                case startDate:
+                  existingAuctions[i].startHash = hash;
+                  break;
+                case endPeriodDate:
+                  existingAuctions[i].endPeriodHash = hash;
+                  break;
+                case biddingEndsDate:
+                  existingAuctions[i].biddingEndsHash = hash;
+                  break;
+                case onboardStartDate:
+                  existingAuctions[i].onboardStartHash = hash;
+                  break;
+                case onboardEndDate:
+                  existingAuctions[i].onboardEndHash = hash;
+                  break;
+                default:
+                  break;
+              }
+            }
+          }
+
+          // If not a future block at this point and there is not already a timestamp for the given block
+          if (value[1] !== FutureBlock && Object.hasOwn(existingAuctions[i], key) === false) {
             const apiAt = await API.at(value[1]);
             const stamp = await apiAt.query.timestamp.now();
             existingAuctions[i][key] = stamp.toPrimitive();
-            console.log(`${key}: ${existingAuctions[i][key]}`);
+            console.log(`${key}: ${existingAuctions[i][key]} added!`);
+          } else {
+            console.log("Future block found, no updates required!")
           }
         }
       }
 
-      // Write
+      // Write results
       json = JSON.stringify(existingAuctions); //convert it back to json
-      fs.writeFile("auctions-sample.json", json, "utf8", async function writeFileCallback(err) {
+      fs.writeFile("./components/utilities/data/PolkadotAuctions.json", json, "utf8", async function writeFileCallback(err) {
         if (err) {
           console.log(err);
         } else {

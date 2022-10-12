@@ -82,10 +82,6 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 		onboardEndDate: [selection.onboardEndBlock, selection.onboardEndHash]
 	}
 
-	// If a block is finalized get the on-chain timestamp, otherwise estimate it
-	let promises = [];
-	let keys = [];
-
 	for (const [key, value] of Object.entries(selectedBlocks)) {
 		// Estimate block date for future blocks
 		if (value[1] === FutureBlock) {
