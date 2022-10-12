@@ -59,7 +59,8 @@ async function LoadAPI() {
   API = await Polkadot.ApiPromise.create({ provider: WSProvider });
 }
 
-// Get the auction end, on-board start and end blocks from auction start block
+// TODO - update to also return auction bidding start
+// Get the auction bidding start, bidding end, lease period start and lease period end blocks from the auction start block
 async function GetAuctionBlocks(api, startBlock, chain) {
   const hash = await BlockToHash(startBlock);
   if (hash !== FutureBlock) {
@@ -77,7 +78,7 @@ async function GetAuctionBlocks(api, startBlock, chain) {
     }
   }
   else {
-    // We are dealing with future blocks - TODO use subscan instead of PolkadotJS?
+    // We are dealing with a future auction start block so a hash will not yet exist
     return [0, 0, 0];
   }
 }
