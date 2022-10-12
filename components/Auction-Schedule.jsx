@@ -135,17 +135,6 @@ function Render(chain, auctions, setAuctions, index) {
 		currentBlockNumber = 0;
 		currentBlockDate = "Connecting...";
 	}
-
-	// TODO - can this be removed
-	// If still calculating date estimation, inform user
-	if (auctions[index].hasOwnProperty("startDate") === false) {
-		const msg = "Retrieving date...";
-		auctions[index]["startDate"] = msg;
-		auctions[index]["endPeriodDate"] = msg;
-		auctions[index]["biddingEndsDate"] = msg;
-		auctions[index]["onboardStartDate"] = msg;
-		auctions[index]["onboardEndDate"] = msg;
-	}
 	
 	// On-boarding range
 	let onboarding = <div>
