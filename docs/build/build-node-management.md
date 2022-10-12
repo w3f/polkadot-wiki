@@ -129,10 +129,13 @@ information specific to deploying validator nodes.
 
 **Node status**
 
-You can check the node's health via RPC with:
+You can check the node's health via RPC with
+[websocat](https://github.com/vi/websocat#installation):
 
 ```bash
-curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933 
+echo '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9944
+
+{"jsonrpc":"2.0","result":{"peers":50,"isSyncing":false,"shouldHavePeers":true},"id":1}
 ```
 
 **Logs**

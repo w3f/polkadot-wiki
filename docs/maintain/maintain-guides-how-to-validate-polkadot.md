@@ -155,6 +155,10 @@ If you do not have "curl" installed, run:
 sudo apt install curl
 ```
 
+It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
+RPC interactions. Installation instructions for various operating systems can be found
+[here](https://github.com/vi/websocat#installation).
+
 :::
 
 To configure your shell, run the following command.
@@ -560,10 +564,10 @@ and remember to save the output that you get back for a later step.
 #### Option 2: CLI
 
 If you are on a remote server, it is easier to run this command on the same machine (while the node
-is running with the default HTTP RPC port configured):
+is running with the default WS RPC port configured):
 
 ```sh
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
+echo '{"id":1,"jsonrpc":"2.0","method":"author_rotateKeys","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9944
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
