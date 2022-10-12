@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { 
 	PolkadotAuctions,
-	PolkadotSlotLeasePeriod,
-	PolkadotSlotLeaseOffset,
-	PolkadotLeasePeriodPerSlot,
 	KusamaAuctions,
-	KusamaSlotLeasePeriod,
-	KusamaSlotLeaseOffset,
-	KusamaLeasePeriodPerSlot,
 	FutureBlock
 } from './utilities/auctionVariables';
 
@@ -206,6 +200,7 @@ function Render(chain, auctions, setAuctions, index) {
 	return auctions;
 }
 
+// Calculate the current or next upcoming auction based on the current block
 function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
 	let index = 0;
 	let status = "";
@@ -226,41 +221,6 @@ function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
 			return [index, status];
 		}
 	}
-}
-
-// Get the auction end, on-board start and end blocks from auction start block
-async function GetAuctionBlocks(api, startBlock, chain) {
-	const hash = await BlockToHash(startBlock);
-	if (hash !== FutureBlock) {
-		const apiAt = await api.at(hash);
-		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
-		if (chain === "Polkadot") {
-			const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
-			const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
-			return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
-		}
-		else if (chain === "Kusama") {
-			const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
-			const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
-			return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
-		}
-	}
-	else {
-		// We are dealing with future blocks - TODO use subscan instead of PolkadotJS?
-		return [0, 0, 0];
-	}
-}
-
-// Block number to block hash
-async function BlockToHash(api, block) {
-	const hash = await api.rpc.chain.getBlockHash(block);
-	return hash;
-}
-
-// Convert an integer representing number of days block count for that time span
-function DaysToBlocks(days) {
-	const blocks = (days / 6) * 86400;
-	return blocks;
 }
 
 export default AuctionSchedule;
