@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { 
-	PolkadotAuctions,
-	KusamaAuctions,
-	FutureBlock
-} from './utilities/auctionVariables';
+import { PolkadotAuctions, KusamaAuctions, FutureBlock } from './utilities/auctionVariables';
 
 let API = undefined;
 let ChainState =  {
@@ -111,6 +107,29 @@ function EstimateBlockDate(date, currentBlock, estimatedBlock) {
 	return dateCopy.toDateString();
 }
 
+// Calculate the current or next upcoming auction based on the current block
+function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
+	let index = 0;
+	let status = "";
+	for (let i = 0; i < auctions.length; i++) {
+		if (currentBlock === 0) {
+			status = "Current block is still loading...";
+			return [index, status];
+		}
+		if (auctions[i].biddingEndsBlock > currentBlock) {
+			if (auctions[i].startBlock > currentBlock) {
+				status = `Auction #${i + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
+			} else {
+				status = `Auction #${i + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
+			}
+			index = i;
+			return [index, status];
+		}
+	}
+}
+
 // Update JSX
 function Render(chain, auctions, setAuctions, index) {
 	let explorerUrl = undefined;
@@ -198,29 +217,6 @@ function Render(chain, auctions, setAuctions, index) {
 
 	setAuctions(content);
 	return auctions;
-}
-
-// Calculate the current or next upcoming auction based on the current block
-function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
-	let index = 0;
-	let status = "";
-	for (let i = 0; i < auctions.length; i++) {
-		if (currentBlock === 0) {
-			status = "Current block is still loading...";
-			return [index, status];
-		}
-		if (auctions[i].biddingEndsBlock > currentBlock) {
-			if (auctions[i].startBlock > currentBlock) {
-				status = `Auction #${i + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
-			} else {
-				status = `Auction #${i + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
-			}
-			index = i;
-			return [index, status];
-		}
-	}
 }
 
 export default AuctionSchedule;
