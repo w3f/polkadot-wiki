@@ -55,6 +55,13 @@ developed wallets.
 | [SubWallet](https://subwallet.app/)           | [1](https://polkadot.polkassembly.io/treasury/138)                                                                                                                                                                                                    | Live              | SubWallet       | Browser      | Staking, Crowdloans, parachain accounts             |
 | [Polkadot js Plus](http://polkadotjs.plus/)   | [1](https://kusama.polkassembly.io/treasury/205)                                                                                                                                                                                                      | Live              | PolkaGate       | Browser      | Staking (Nomination Pools), Proxy accounts, Crowdloans, Governance, Social recovery           |
 
+| Browser      | Staking             |
+| [Citadel.one](https://app.citadel.one/)
+| iOS | Staking          |
+| [Citadel.one](https://apps.apple.com/app/citadel-one/id1546701475)      
+| Android | Staking         |
+| [Citadel.one](https://play.google.com/store/apps/details?id=one.citadel.mobile)      
+
 :::caution \*Note about Nova wallet
 
 There's **another** Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised
@@ -74,7 +81,7 @@ on the [Treasury Page](learn-treasury#tipping).
 
 :::
 
-## Encryption Enhancement
+## Encryption Enhancement 
 
 Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
 This is due to an enhanced encryption method, which is also noticeable in a slight delay when
