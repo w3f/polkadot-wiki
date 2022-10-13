@@ -418,7 +418,7 @@ is the code for reference.
 
 :::
 
-If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators go up incentivizing to stake more tokens on the network. On the contrary, if it goes above the 
+If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators go up, incentivizing them to stake more tokens on the network. On the contrary, if it goes above the 
 ideal rate, staking rewards drop. This is a result of the change in the percentage of staking 
 rewards that go to the Treasury.
 
