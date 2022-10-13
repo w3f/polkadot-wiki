@@ -379,25 +379,22 @@ already maxed out.
 
 ## Inflation
 
-{{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
+{{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to the treasury. The current token supply of DOT is ~1,000,000,000, as
-a result of [redenomination](../general/redenomination.md). :polkadot }}
+and the remainder going to the treasury. DOT went through [redenomination](../general/redenomination.md) 
+in 2020 that saw the DOT token supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
-to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to the treasury. The current token supply of KSM is ~10,000,000. :kusama }}
+to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
+and the remainder going to the treasury. The current token supply on Kusama is 
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }} (Over 12 Million KSM). :kusama }}
 
-There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the _system
-staking rate_ meet the _ideal staking rate_.
-
-The system staking rate would be the total amount staked over the total token supply, where the
+There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the *system staking rate* meet the *ideal staking rate*. The system staking rate would be the total amount staked over the total token supply, where the
 total amount staked is the stake of all validators and nominators on the network. The ideal staking
 rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
-token liquid. An **ideal staking rate of 50% stabilizes the network**.
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the system staking
-rate of the entire network.
+token liquid. {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the 
+system staking rate of the entire network.
 
 :::info
 
@@ -409,27 +406,33 @@ According to the inflation model, this would suggest that if you do not use your
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
 estimation of all DOT that should be staked, per parachain slot).
 
-:::info Staking rate without parachains
+:::info The ideal staking rate varies based on the number of parachains
 
-In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
-constrained by locked parachain bonds.
+The current staking rate on Polkadot still assumes the absence of parachains, with the suggested 
+ideal staking rate of 75%. You can track the progress on the issue to adjust it 
+[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama.
+At the time of updating this section, the ideal staking rate on Kusama was 50.5% when there were 
+49 parachain slots. When the number of slots goes to 60, the ideal staking rate will be 45%. 
+[Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535)
+is the code for reference. This code assumes that the number of slots auctioned correspond to the number of parachains on the relaychain, which may not be true as new slots can be occupied by old parachains that are renewing their lease. You can also track the progress on resolving this specific issue 
+[here](https://github.com/paritytech/polkadot/pull/5872).
 
 :::
 
-If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators goes
-up. On the contrary, if it goes above, staking rewards drop. This is a result of the change in the
-percentage of staking rewards that go to the Treasury.
+If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators go up, incentivizing them to stake more tokens on the network. On the contrary, if it goes above the 
+ideal rate, staking rewards drop. This is a result of the change in the percentage of staking 
+rewards that go to the Treasury.
 
-![staking](../assets/NPoS/staking-participation-rate.png)
+![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
 <p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
-- **Blue line**: Inflation rewards to stakers
-- **Green line**: Staker rate of return
+- **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators and nominators.
+- **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual returns on the staked tokens.
 
-You can determine the inflation rewards by looking at the top bar of the staking overview on
+You can determine the staking rewards by looking at the top bar of the staking overview on
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking).
 
 The above chart shows the inflation model of the network. Depending on the staking participation,
