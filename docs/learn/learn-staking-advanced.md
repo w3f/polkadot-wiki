@@ -379,15 +379,15 @@ already maxed out.
 
 ## Inflation
 
-{{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
+{{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to the treasury. DOT went through [redenomination](../general/redenomination.md) 
-in 2020. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
+in 2020 that saw the DOT token supply increase by 100 times (and price decrease accordingly to keep the same market cap). The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to the treasury. The current token supply on Kusama is 
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }} (Over 12 Million KSM). :kusama }}.
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }} (Over 12 Million KSM). :kusama }}
 
 There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the *system staking rate* meet the *ideal staking rate*. The system staking rate would be the total amount staked over the total token supply, where the
 total amount staked is the stake of all validators and nominators on the network. The ideal staking
