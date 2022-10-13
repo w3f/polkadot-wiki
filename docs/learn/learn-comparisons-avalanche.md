@@ -92,7 +92,7 @@ Polkadot's governance mechanism has been in production from the very beginning a
 
 ## Upgrades
 
-The upgrades to Avalanche are administered by the protocol developers at Avax Labs. On Polkadot, the forkless upgrades are administered and deployed through the on-chain governance.
+The upgrades to Avalanche are administered by the protocol developers at [Ava Labs](https://www.avalabs.org/). On Polkadot, the forkless upgrades are administered and deployed through the on-chain governance.
 
 ## In the physical realm
 
