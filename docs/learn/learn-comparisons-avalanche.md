@@ -15,7 +15,7 @@ Polkadot and Avalanche both have an architecture that allows for application-spe
 Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into three manageable chains. This allows for a separation of concern over consensus, transactions, and smart contract execution runtime. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions.
 
 ## Architecture
-
+Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into three manageable chains. This allows for a separation of concern over consensus, transactions, and smart contract execution runtime. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions.
 ![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png)
 
 As aforementioned, the Avalanche architecture is comprised of three different chains. With this model, the separations of concerns target the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche. Additionally, the chain in Avalanche is not linear, rather it's a DAG(Directed Acyclic Graph).
