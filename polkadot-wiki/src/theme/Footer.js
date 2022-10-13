@@ -260,6 +260,14 @@ export default function Footer() {
             />
             <FooterLink
               content={translate({
+                message: "Academy",
+                id: "footer.body.community.academy",
+                description: "Academy link in Community column in Footer",
+              })}
+              href="https://polkadot.network/academy"
+            />
+            <FooterLink
+              content={translate({
                 message: "Auctions",
                 id: "footer.body.community.auctions",
                 description: "Auctions link in Community column in Footer",
