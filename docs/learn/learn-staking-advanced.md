@@ -385,7 +385,7 @@ and the remainder going to the treasury. DOT went through [redenomination](../ge
 in 2020 that saw the DOT token supply increase by 100 times (and price decrease accordingly to keep the same market cap). The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
-to be approximately 10% annually, with validator rewards being a function of the amount staked
+to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
 and the remainder going to the treasury. The current token supply on Kusama is 
 {{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }} (Over 12 Million KSM). :kusama }}
 
@@ -406,7 +406,7 @@ According to the inflation model, this would suggest that if you do not use your
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
 estimation of all DOT that should be staked, per parachain slot).
 
-:::info
+:::info The ideal staking rate varies based on the number of parachains
 
 The current staking rate on Polkadot still assumes the absence of parachains, with the suggested 
 ideal staking rate of 75%. You can track the progress on the issue to adjust it 
