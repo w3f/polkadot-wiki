@@ -382,7 +382,7 @@ already maxed out.
 {{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to the treasury. DOT went through [redenomination](../general/redenomination.md) 
-in 2020 that saw the DOT token supply increase by 100 times (and price decrease accordingly to keep the same market cap). The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
+in 2020 that saw the DOT token supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
