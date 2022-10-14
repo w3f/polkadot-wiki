@@ -1,19 +1,30 @@
-let fs = require("fs");
-let Polkadot = require("@polkadot/api");
-
-let AuctionVariables = require("./auctionVariables");
-const PolkadotSlotLeasePeriod = AuctionVariables.PolkadotSlotLeasePeriod;
-const PolkadotSlotLeaseOffset = AuctionVariables.PolkadotSlotLeaseOffset;
-const PolkadotLeasePeriodPerSlot = AuctionVariables.PolkadotLeasePeriodPerSlot;
-const KusamaSlotLeasePeriod = AuctionVariables.KusamaSlotLeasePeriod;
-const KusamaSlotLeaseOffset = AuctionVariables.KusamaSlotLeaseOffset;
-const KusamaLeasePeriodPerSlot = AuctionVariables.KusamaLeasePeriodPerSlot;
-const FutureBlock = AuctionVariables.FutureBlock;
+const fs = require("fs");
+const Polkadot = require("@polkadot/api");
+const {
+  PolkadotSlotLeasePeriod,
+  PolkadotSlotLeaseOffset,
+  PolkadotLeasePeriodPerSlot,
+  KusamaSlotLeasePeriod,
+  KusamaSlotLeaseOffset,
+  KusamaLeasePeriodPerSlot,
+  FutureBlock
+} = require("./auctionVariables");
 
 let API = undefined;
 
-LoadAPI().then(() => {
-  fs.readFile("./components/utilities/data/KusamaAuctions.json", "utf8", async function readFileCallback(err, data) {
+const PolkadotParameters = {
+  cache: "PolkadotAuctions.json",
+  ws: "wss://rpc.polkadot.io"
+}
+
+const KusamaParameters = {
+  cache: "KusamaAuctions.json",
+  ws: "wss://kusama-rpc.polkadot.io",
+}
+
+LoadAPI(PolkadotParameters).then(() => {
+
+  fs.readFile(`./components/utilities/data/${PolkadotParameters.cache}`, "utf8", async function readFileCallback(err, data) {
     if (err) {
       console.log(err);
     } else {
@@ -36,6 +47,7 @@ LoadAPI().then(() => {
         for (const [key, value] of Object.entries(blocks)) {
           // If cache presents a future block, check to see if it has been recently created and update it
           if (value[1] === FutureBlock) {
+            // TODO - handle is block number is unknown aka 0
             const hash = await BlockToHash(API, value[0]);
             if (hash !== FutureBlock) {
               console.log("Future block replaced!");
@@ -74,8 +86,8 @@ LoadAPI().then(() => {
       }
 
       // Write results
-      json = JSON.stringify(existingAuctions); //convert it back to json
-      fs.writeFile("./components/utilities/data/KusamaAuctions.json", json, "utf8", async function writeFileCallback(err) {
+      json = JSON.stringify(existingAuctions, null, 2); //convert it back to json
+      fs.writeFile(`./components/utilities/data/${PolkadotParameters.cache}`, json, "utf8", async function writeFileCallback(err) {
         if (err) {
           console.log(err);
         } else {
@@ -87,8 +99,8 @@ LoadAPI().then(() => {
 }
 );
 
-async function LoadAPI() {
-  const WSProvider = new Polkadot.WsProvider("wss://kusama-rpc.polkadot.io");
+async function LoadAPI(chain) {
+  const WSProvider = new Polkadot.WsProvider(chain.ws);
   API = await Polkadot.ApiPromise.create({ provider: WSProvider });
 }
 
