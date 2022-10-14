@@ -1,7 +1,8 @@
 /*
-There are utility functions in Auction-Schedule.jsx to retrieve all these values on-chain.
-To further reduce latency in the Auction Schedule tool we hard-code them as they have yet to change w/ time.
-A regularly scheduled GitHub action will be used to add future auction blocks.
+There are utility functions in updateAuction.js to retrieve all these values on-chain.
+To further reduce latency in the Auction Schedule tool we hard-code them as they have yet 
+to change w/ time or are derived from blocks that have already reach finality.
+A regularly scheduled GitHub action will be used to cache future auction blocks data.
 */
 
 let DotAuctions = require("./data/PolkadotAuctions.json");
