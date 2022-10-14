@@ -36,23 +36,23 @@ LoadAPI().then(() => {
         for (const [key, value] of Object.entries(blocks)) {
           // If cache presents a future block, check to see if it has been recently created and update it
           if (value[1] === FutureBlock) {
-            const hash = await BlockToHash(API, startBlock);
+            const hash = await BlockToHash(API, value[0]);
             if (hash !== FutureBlock) {
               console.log("Future block replaced!");
               switch (key) {
-                case startDate:
+                case "startDate":
                   existingAuctions[i].startHash = hash;
                   break;
-                case endPeriodDate:
+                case "endPeriodDate":
                   existingAuctions[i].endPeriodHash = hash;
                   break;
-                case biddingEndsDate:
+                case "biddingEndsDate":
                   existingAuctions[i].biddingEndsHash = hash;
                   break;
-                case onboardStartDate:
+                case "onboardStartDate":
                   existingAuctions[i].onboardStartHash = hash;
                   break;
-                case onboardEndDate:
+                case "onboardEndDate":
                   existingAuctions[i].onboardEndHash = hash;
                   break;
                 default:
