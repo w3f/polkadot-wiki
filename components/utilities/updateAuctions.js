@@ -13,7 +13,7 @@ const FutureBlock = AuctionVariables.FutureBlock;
 let API = undefined;
 
 LoadAPI().then(() => {
-  fs.readFile("./components/utilities/data/PolkadotAuctions.json", "utf8", async function readFileCallback(err, data) {
+  fs.readFile("./components/utilities/data/KusamaAuctions.json", "utf8", async function readFileCallback(err, data) {
     if (err) {
       console.log(err);
     } else {
@@ -75,7 +75,7 @@ LoadAPI().then(() => {
 
       // Write results
       json = JSON.stringify(existingAuctions); //convert it back to json
-      fs.writeFile("./components/utilities/data/PolkadotAuctions.json", json, "utf8", async function writeFileCallback(err) {
+      fs.writeFile("./components/utilities/data/KusamaAuctions.json", json, "utf8", async function writeFileCallback(err) {
         if (err) {
           console.log(err);
         } else {
@@ -88,7 +88,7 @@ LoadAPI().then(() => {
 );
 
 async function LoadAPI() {
-  const WSProvider = new Polkadot.WsProvider("wss://rpc.polkadot.io");
+  const WSProvider = new Polkadot.WsProvider("wss://kusama-rpc.polkadot.io");
   API = await Polkadot.ApiPromise.create({ provider: WSProvider });
 }
 
