@@ -24,18 +24,21 @@ const KusamaParameters = {
 
 let API = undefined;
 
-LoadAPI(PolkadotParameters).then(() => {
+LoadAPI(KusamaParameters).then(() => {
+  Update(KusamaParameters);
+});
 
-  fs.readFile(`./components/utilities/data/${PolkadotParameters.cache}`, "utf8", async function readFileCallback(err, data) {
+async function Update(params) {
+  fs.readFile(`./components/utilities/data/${params.cache}`, "utf8", async function readFileCallback(err, data) {
     if (err) {
       console.log(err);
     } else {
       const existingAuctions = JSON.parse(data);
-      
+
       // Iterate existing auctions
       for (let i = 0; i < existingAuctions.length; i++) {
         let auction = existingAuctions[i];
-        
+
         // All relevant block types for a single auction
         const blocks = {
           startDate: [auction.startBlock, auction.startHash],
@@ -54,13 +57,13 @@ LoadAPI(PolkadotParameters).then(() => {
             if (value[0] === 0 && (key === onboardStartDate || key === onboardEndDate)) {
               // If the start block hash is known we can calculate remaining blocks
               if (existingAuctions[i].startHash !== FutureBlock) {
-                const [auctionEndBlock, onboardStartBlock, onboardEndBlock] = GetAuctionBlocks(API, existingAuctions[i].startBlock, PolkadotParameters.chain);
+                const [auctionEndBlock, onboardStartBlock, onboardEndBlock] = GetAuctionBlocks(API, existingAuctions[i].startBlock, params.chain);
               }
             }
             */
-           if(value[0] === 0) {
-            continue;
-           }
+            if (value[0] === 0) {
+              continue;
+            }
             const hash = await BlockToHash(API, value[0]);
             if (hash !== FutureBlock) {
               console.log("Future block replaced!");
@@ -100,7 +103,7 @@ LoadAPI(PolkadotParameters).then(() => {
 
       // Write results
       json = JSON.stringify(existingAuctions, null, 2); //convert it back to json
-      fs.writeFile(`./components/utilities/data/${PolkadotParameters.cache}`, json, "utf8", async function writeFileCallback(err) {
+      fs.writeFile(`./components/utilities/data/${params.cache}`, json, "utf8", async function writeFileCallback(err) {
         if (err) {
           console.log(err);
         } else {
@@ -110,7 +113,6 @@ LoadAPI(PolkadotParameters).then(() => {
     }
   })
 }
-);
 
 async function LoadAPI(chain) {
   const WSProvider = new Polkadot.WsProvider(chain.ws);
