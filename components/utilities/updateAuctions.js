@@ -35,6 +35,8 @@ chains.forEach(params => {
   });
 });
 
+// TODO - end node process when updating of both chains completes
+
 async function Update(params) {
   fs.readFile(`./components/utilities/data/${params.cache}`, "utf8", async function readFileCallback(err, data) {
     if (err) {
