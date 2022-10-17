@@ -22,10 +22,15 @@ const KusamaParameters = {
   ws: "wss://kusama-rpc.polkadot.io",
 }
 
+const chains = [PolkadotParameters, KusamaParameters];
+
 let API = undefined;
 
-LoadAPI(KusamaParameters).then(() => {
-  Update(KusamaParameters);
+chains.forEach(params => {
+  LoadAPI(params).then(() => {
+    console.log(`Updating ${params.chain} cache.`);
+    Update(params);
+  });
 });
 
 async function Update(params) {
@@ -90,13 +95,14 @@ async function Update(params) {
           }
 
           // If not a future block at this point and there is not already a timestamp for the given block
+          // TODO - this should check existingAuctions[i], not value[1]
           if (value[1] !== FutureBlock && Object.hasOwn(existingAuctions[i], key) === false) {
             const apiAt = await API.at(value[1]);
             const stamp = await apiAt.query.timestamp.now();
             existingAuctions[i][key] = stamp.toPrimitive();
-            console.log(`${key}: ${existingAuctions[i][key]} added!`);
+            console.log(`${key}: ${existingAuctions[i][key]} added.`);
           } else {
-            console.log("Future block found, no updates required!")
+            console.log("Future block found, no updates required.")
           }
         }
       }
@@ -107,7 +113,7 @@ async function Update(params) {
         if (err) {
           console.log(err);
         } else {
-          console.log("Update Complete.");
+          console.log(`Updating of ${params.chain} cache complete.`);
         }
       });
     }
