@@ -34,7 +34,7 @@ Payments occur at the end of every era.
 Era points create a probabilistic component for staking rewards.
 
 If the _mean_ of staking rewards is the average rewards per era, then the _variance_ is the
-variability from the average staking rewards. the exact DOT value of each era point is not known in
+variability from the average staking rewards. The exact DOT value of each era point is not known in
 advance since it depends on the total number of points earned by all validators in a given era. This 
 is designed this way so that the total payout per era depends on Polkadot's 
 [inflation model](../learn/learn-staking-advanced.md#inflation), and not on the number of payable actions 
