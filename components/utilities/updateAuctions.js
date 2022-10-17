@@ -4,9 +4,11 @@ const {
   PolkadotSlotLeasePeriod,
   PolkadotSlotLeaseOffset,
   PolkadotLeasePeriodPerSlot,
+  PolkadotStartingPhase,
   KusamaSlotLeasePeriod,
   KusamaSlotLeaseOffset,
   KusamaLeasePeriodPerSlot,
+  KusamaStartingPhase,
   FutureBlock
 } = require("./auctionVariables");
 
@@ -125,22 +127,23 @@ async function LoadAPI(chain) {
   API = await Polkadot.ApiPromise.create({ provider: WSProvider });
 }
 
-// TODO - update to also return auction bidding start
 // Get the auction bidding start, bidding end, lease period start and lease period end blocks from the auction start block
 async function GetAuctionBlocks(api, startBlock, chain) {
   const hash = await BlockToHash(startBlock);
   if (hash !== FutureBlock) {
+    const biddingStarts = startBlock + PolkadotStartingPhase;
     const apiAt = await api.at(hash);
     const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
     if (chain === "Polkadot") {
       const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
       const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
-      return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
+      return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
     }
     else if (chain === "Kusama") {
+      const biddingStarts = startBlock + KusamaStartingPhase;
       const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
       const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
-      return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
+      return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
     }
   }
   else {

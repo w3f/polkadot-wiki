@@ -20,6 +20,10 @@ const KusamaSlotLeaseOffset = 0;
 const PolkadotLeasePeriodPerSlot = 8;
 const KusamaLeasePeriodPerSlot = 8;
 
+// Auction starting phases (45 hours)
+const PolkadotStartingPhase = 27000;
+const KusamaStartingPhase = 27000;
+
 // GetAuctionBlocks() in Auction-Schedule.jsx can generate all these values from a starting block number
 const PolkadotAuctions = DotAuctions;
 const KusamaAuctions = KsmAuctions;
