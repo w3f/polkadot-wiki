@@ -403,7 +403,7 @@ validator mode right away:
 
 :::tip Use Warp syncing for the fast syncing of a pruned node
 
-`./target/production/polkadot --sync warp`imports the latest blockchain state and proofs. While the
+`./target/production/polkadot --sync warp` imports the latest blockchain state and proofs. While the
 warp sync is in progress, the `failed to associate send_message response to the sender` messages can
 be ignored.  
 
