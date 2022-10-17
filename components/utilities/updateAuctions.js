@@ -55,6 +55,9 @@ async function Update(params) {
           onboardEndDate: [auction.onboardEndBlock, auction.onboardEndHash]
         }
 
+        // TODO - now that the cache is up-to-date this can be
+        // simplified greatly and possibly avoid the next iteration
+
         // Iterate block types for the given auction
         for (const [key, value] of Object.entries(blocks)) {
           // If cache presents a future block, check to see if it has been recently created and update it
