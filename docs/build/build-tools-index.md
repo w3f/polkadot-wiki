@@ -48,7 +48,7 @@ Please see the [Wallets](build-wallets.md) page.
 - [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows
   network information and staking details from validators and intentions.
   [GitHub Repository](https://github.com/Colm3na/polkastats-v2/).
-- [Panic](https://github.com/SimplyVC/panic_polkadot) - A node monitoring and alert server for
+- [Panic](https://github.com/SimplyVC/panic) - A node monitoring and alert server for
   validators.
 - [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to
   monitor on chain states and events.
