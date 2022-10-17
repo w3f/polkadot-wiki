@@ -58,6 +58,9 @@ LoadAPI(PolkadotParameters).then(() => {
               }
             }
             */
+           if(value[0] === 0) {
+            continue;
+           }
             const hash = await BlockToHash(API, value[0]);
             if (hash !== FutureBlock) {
               console.log("Future block replaced!");
