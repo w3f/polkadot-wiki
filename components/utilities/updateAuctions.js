@@ -10,17 +10,19 @@ const {
   FutureBlock
 } = require("./auctionVariables");
 
-let API = undefined;
-
 const PolkadotParameters = {
+  chain: "Polkadot",
   cache: "PolkadotAuctions.json",
   ws: "wss://rpc.polkadot.io"
 }
 
 const KusamaParameters = {
+  chain: "Kusama",
   cache: "KusamaAuctions.json",
   ws: "wss://kusama-rpc.polkadot.io",
 }
+
+let API = undefined;
 
 LoadAPI(PolkadotParameters).then(() => {
 
@@ -47,7 +49,15 @@ LoadAPI(PolkadotParameters).then(() => {
         for (const [key, value] of Object.entries(blocks)) {
           // If cache presents a future block, check to see if it has been recently created and update it
           if (value[1] === FutureBlock) {
-            // TODO - handle is block number is unknown aka 0
+            // Attempt to handle on-boarding data that was previously unknown
+            /*
+            if (value[0] === 0 && (key === onboardStartDate || key === onboardEndDate)) {
+              // If the start block hash is known we can calculate remaining blocks
+              if (existingAuctions[i].startHash !== FutureBlock) {
+                const [auctionEndBlock, onboardStartBlock, onboardEndBlock] = GetAuctionBlocks(API, existingAuctions[i].startBlock, PolkadotParameters.chain);
+              }
+            }
+            */
             const hash = await BlockToHash(API, value[0]);
             if (hash !== FutureBlock) {
               console.log("Future block replaced!");
