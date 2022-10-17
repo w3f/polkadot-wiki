@@ -5,8 +5,8 @@ to change w/ time or are derived from blocks that have already reach finality.
 A regularly scheduled GitHub action will be used to cache future auction blocks data.
 */
 
-let DotAuctions = require("./data/PolkadotAuctions.json");
-let KsmAuctions = require("./data/KusamaAuctions.json");
+const DotAuctions = require("./data/PolkadotAuctions.json");
+const KsmAuctions = require("./data/KusamaAuctions.json");
 
 // consts.slots.leasePeriod
 const PolkadotSlotLeasePeriod = 1209600;
