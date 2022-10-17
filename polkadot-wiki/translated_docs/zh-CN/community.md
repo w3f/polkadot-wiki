@@ -44,7 +44,7 @@ Web3 基金会主办了许多线上和线下的活动。你可以通过[这个 N
 ### 聊天
 
 - [Polkadot Discord](https://discord.gg/polkadot) (推荐）
-- [Kusama Discord](https://discord.com/invite/9AWjTf8wSk)
+- [Kusama Discord](https://kusa.ma/discord)
 
 ### 社交媒体和论坛
 

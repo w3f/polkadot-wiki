@@ -81,7 +81,7 @@ you face any issues, join the rooms individually.
 ### Chat
 
 - [Polkadot Discord](https://dot.li/discord) (RECOMMENDED)
-- [Kusama Discord](https://discord.gg/9AWjTf8wSk)
+- [Kusama Discord](https://kusa.ma/discord)
 
 ### Social media and forums
 
