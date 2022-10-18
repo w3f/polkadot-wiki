@@ -24,9 +24,14 @@ jobs:
           git branch auction-schedule-update
           git checkout auction-schedule-update
           yarn && yarn update:auctions
-          git commit -a -m 'auction schedule update'
-          git push --set-upstream origin auction-schedule-update
+      - name: Commit and push changes
+          run: |
+            if [[ `git status --porcelain` ]]; then
+              git commit -a -m 'auction schedule update'
+              git push --set-upstream origin auction-schedule-update
+            else
+              echo No auction changes detected, skipping update.
       - name: create pull request
-        run: gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Created by Github action'
+        run: gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Automated Auction Schedule Update'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
