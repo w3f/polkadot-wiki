@@ -5,7 +5,7 @@
     "startHash": "0x2d0111f32aeed67506e4b28a492223562289467f1eaa3247cc0442b0051d2adc",
     "endPeriodBlock": 7951237,
     "endPeriodHash": "0x0530970030751f5054f3e6ca2610344e92f21b275c7f1436920bdb4bd5277b32",
-    "biddingEndsBlock": 8023773,
+    "biddingEndsBlock": 8023237,
     "biddingEndsHash": "0x5e6c2391a18b8212620e5126bfb00bac3b65bea7dcd880f1b8d3999b54e877b9",
     "onboardStartBlock": 7862400,
     "onboardStartHash": "0x9ef15b97b1c0475a486afb4c0a3ca4823296fa463dd82462fc42bd393d55943e",
@@ -23,7 +23,7 @@
     "startHash": "0x36007e8adfe18b6cd310b0a1fd2edfbc4e51e26bafb6ec396831919a5e21604b",
     "endPeriodBlock": 8051552,
     "endPeriodHash": "0x7e40cd0767ba44020270e154229efad18a83ab44565c6d6c9963da8877368e16",
-    "biddingEndsBlock": 8123989,
+    "biddingEndsBlock": 8123552,
     "biddingEndsHash": "0x8259df609ae96cc1bc2dd431e51bbe1f2b9962c6c14c33e3aed06055bcc6a532",
     "onboardStartBlock": 7862400,
     "onboardStartHash": "0x9ef15b97b1c0475a486afb4c0a3ca4823296fa463dd82462fc42bd393d55943e",
@@ -41,7 +41,7 @@
     "startHash": "0x0d091fa7aef542770fcd198bb72e60f569f65a21de033d6f2946180735182dcb",
     "endPeriodBlock": 8151516,
     "endPeriodHash": "0x15622c39848c4a2646c3adb3913b707d59f051572233a363d5c896499def8372",
-    "biddingEndsBlock": 8224041,
+    "biddingEndsBlock": 8223516,
     "biddingEndsHash": "0x6d83c6a8975a3bd90817396bed7e7b227ccf1737b2eb1c973e049cb80f50f075",
     "onboardStartBlock": 7862400,
     "onboardStartHash": "0x9ef15b97b1c0475a486afb4c0a3ca4823296fa463dd82462fc42bd393d55943e",
@@ -59,7 +59,7 @@
     "startHash": "0xed87292d639e0fa4de970a966ac36671fb4945d290836638b6e2b59de0866e38",
     "endPeriodBlock": 8251581,
     "endPeriodHash": "0xad77455e298138b7df2f6e810dc94ed3b2b1d375884cd22415a7b1f65e7d8ee0",
-    "biddingEndsBlock": 8324128,
+    "biddingEndsBlock": 8323581,
     "biddingEndsHash": "0xa90fc359e97041cdcedc576681156ad6d4a1a09dbe6f8568cb4af2617c66403a",
     "onboardStartBlock": 7862400,
     "onboardStartHash": "0x9ef15b97b1c0475a486afb4c0a3ca4823296fa463dd82462fc42bd393d55943e",
@@ -77,7 +77,7 @@
     "startHash": "0xf0bb4c1ba7de324e264673dedcc2931eb41cf5235dad7d47fe78b889796a9a01",
     "endPeriodBlock": 8351750,
     "endPeriodHash": "0xdbeb26f226acc8651e21a6d5fc4121855658b3e0cd2e8626ac2815dd4ce0deeb",
-    "biddingEndsBlock": 8423852,
+    "biddingEndsBlock": 8423750,
     "biddingEndsHash": "0xa1ba2872c910ceaf2e1e81291b3247049f161a5091db58e925e6dbb798c8191a",
     "onboardStartBlock": 7862400,
     "onboardStartHash": "0x9ef15b97b1c0475a486afb4c0a3ca4823296fa463dd82462fc42bd393d55943e",
@@ -95,7 +95,7 @@
     "startHash": "0x76cd95e9279ad833572427a959faa0c85ff99c8e543dc22f940279d42693f903",
     "endPeriodBlock": 9061309,
     "endPeriodHash": "0x7b6b5a995914e88372840d72bad3a60d413225dad535fba671f2b14c43b6a66e",
-    "biddingEndsBlock": 9133371,
+    "biddingEndsBlock": 9133309,
     "biddingEndsHash": "0x8196339a28fdeb0b8c442caf7b1c69ae99af6bf4a76b36589f5cb38766988e80",
     "onboardStartBlock": 9072000,
     "onboardStartHash": "0x5edb22ec03228449737172c77f8163f3e29bbc0b20ae25ee19dadea5013ff39e",
@@ -113,7 +113,7 @@
     "startHash": "0x6a2b6fc78b25a34e892d5318351040bfc62d5277a984341e1c58f77f3d410e31",
     "endPeriodBlock": 9161492,
     "endPeriodHash": "0xc2f9f88e093254eec75208fe169629ee1c7a69de617181fca26653b2e1a4b905",
-    "biddingEndsBlock": 9233727,
+    "biddingEndsBlock": 9233492,
     "biddingEndsHash": "0x322b8e9e754415b37555e6e3bfda309f0ac2110e70206e3c14b66c35f435f549",
     "onboardStartBlock": 9072000,
     "onboardStartHash": "0x5edb22ec03228449737172c77f8163f3e29bbc0b20ae25ee19dadea5013ff39e",
@@ -131,7 +131,7 @@
     "startHash": "0x2b601cea1d97d8c51427d23928680fb393eba64bba2b109c941919b2bc365493",
     "endPeriodBlock": 9262576,
     "endPeriodHash": "0xe1b9566c9953c8d5cb5a76c6a702a7bda9081524b8cf3c2e5c1ff885dca3f184",
-    "biddingEndsBlock": 9334719,
+    "biddingEndsBlock": 9334576,
     "biddingEndsHash": "0x89de4dacb53baf4fcaac6e283ab63deb5ff3e0685a82c0db6414406091d96823",
     "onboardStartBlock": 9072000,
     "onboardStartHash": "0x5edb22ec03228449737172c77f8163f3e29bbc0b20ae25ee19dadea5013ff39e",
@@ -149,7 +149,7 @@
     "startHash": "0x5a46f63e3d5ca41f716be18dacdaddcc2ca4ecefa0f04447072d76f9d42bbbc5",
     "endPeriodBlock": 9362014,
     "endPeriodHash": "0xca8de19b95ea5dcd379f666840ee4feb5aee37150bbcf31e63002036655a9756",
-    "biddingEndsBlock": 9434278,
+    "biddingEndsBlock": 9434014,
     "biddingEndsHash": "0x6a93a2f79b3a5f1627dc8bd02e08c4301743145c9c67719c9d2ca3c09d9a332f",
     "onboardStartBlock": 9072000,
     "onboardStartHash": "0x5edb22ec03228449737172c77f8163f3e29bbc0b20ae25ee19dadea5013ff39e",
@@ -167,7 +167,7 @@
     "startHash": "0x5ea504dc225dbed83b3d6150ae80595f81f08f73ce574c0dfb26ff02d0399eef",
     "endPeriodBlock": 9462968,
     "endPeriodHash": "0x38903d0c0c463c1e74c896b2142043c0d10a5684e8318d52667f459562bc15ed",
-    "biddingEndsBlock": 9535356,
+    "biddingEndsBlock": 9534968,
     "biddingEndsHash": "0x70ca564e87a1e176d0e4f937c60e8891789f98a8fece7606a3d19a1a2e17b675",
     "onboardStartBlock": 9072000,
     "onboardStartHash": "0x5edb22ec03228449737172c77f8163f3e29bbc0b20ae25ee19dadea5013ff39e",
@@ -185,7 +185,7 @@
     "startHash": "0x2386cd79a9d9afadda1e07c0e95d7a196cc62915e9edc6a0ff1a40aca9582a84",
     "endPeriodBlock": 9562569,
     "endPeriodHash": "0x53e742af7e1696c4470cb6b49855bcc67831bc3069a607d81afde0be14308f08",
-    "biddingEndsBlock": 9634925,
+    "biddingEndsBlock": 9634569,
     "biddingEndsHash": "0xeb38a127482181bb6a21e66a168e76ff514e64797861332e743736e647f8da28",
     "onboardStartBlock": 9072000,
     "onboardStartHash": "0x5edb22ec03228449737172c77f8163f3e29bbc0b20ae25ee19dadea5013ff39e",
@@ -203,7 +203,7 @@
     "startHash": "0x2c9d6a4eeb6b2699cef52ccdc6df9cbbcfd8e2f68eb52382b429936ca2604f81",
     "endPeriodBlock": 9833873,
     "endPeriodHash": "0x378173f65b90ec4db3c477299c19e4066da92d11cc9953949bd44578084c794c",
-    "biddingEndsBlock": 9906305,
+    "biddingEndsBlock": 9905873,
     "biddingEndsHash": "0xf3cf82855911f397e60d1ae09f2b86a0cc9f7b65c4ce30d3df53b7db3e7b1f43",
     "onboardStartBlock": 10281600,
     "onboardStartHash": "0x566a5f52e343078ca4e1fd7ff39bd0930cd8311984d592b1709779215d5788bb",
@@ -212,7 +212,8 @@
     "startDate": 1635154374018,
     "endPeriodDate": 1635320378208,
     "biddingEndsDate": 1635766080009,
-    "onboardStartDate": 1638043770011
+    "onboardStartDate": 1638043770011,
+    "onboardEndDate": null
   },
   {
     "index": 12,
@@ -220,7 +221,7 @@
     "startHash": "0x132cb6bbeef57df940a789eb9ee10db8227e05c0b30f742436b5823b62ac9bf0",
     "endPeriodBlock": 9934673,
     "endPeriodHash": "0xb5596d42b2c691d8fb2ab7e083e97658b3322e25e28164d13199713db24e04de",
-    "biddingEndsBlock": 10006967,
+    "biddingEndsBlock": 10006673,
     "biddingEndsHash": "0x0731ada8b1d4dbabaad8909e750237ec5048ea478dcc8de0e3ca6286594e1d7e",
     "onboardStartBlock": 10281600,
     "onboardStartHash": "0x566a5f52e343078ca4e1fd7ff39bd0930cd8311984d592b1709779215d5788bb",
@@ -229,7 +230,8 @@
     "startDate": 1635774444011,
     "endPeriodDate": 1635940170011,
     "biddingEndsDate": 1636385280010,
-    "onboardStartDate": 1638043770011
+    "onboardStartDate": 1638043770011,
+    "onboardEndDate": null
   },
   {
     "index": 13,
@@ -246,7 +248,8 @@
     "startDate": 1636394634009,
     "endPeriodDate": 1636560696007,
     "biddingEndsDate": 1636995162012,
-    "onboardStartDate": 1638043770011
+    "onboardStartDate": 1638043770011,
+    "onboardEndDate": null
   },
   {
     "index": 14,
@@ -263,7 +266,8 @@
     "startDate": 1637005968017,
     "endPeriodDate": 1637168712015,
     "biddingEndsDate": 1637602614012,
-    "onboardStartDate": 1638043770011
+    "onboardStartDate": 1638043770011,
+    "onboardEndDate": null
   },
   {
     "index": 15,
@@ -280,7 +284,8 @@
     "startDate": 1638047412024,
     "endPeriodDate": 1638210060003,
     "biddingEndsDate": 1638670008009,
-    "onboardStartDate": 1641723168037
+    "onboardStartDate": 1641723168037,
+    "onboardEndDate": null
   },
   {
     "index": 16,
@@ -297,7 +302,8 @@
     "startDate": 1638680826011,
     "endPeriodDate": 1638843228025,
     "biddingEndsDate": 1639276242007,
-    "onboardStartDate": 1641723168037
+    "onboardStartDate": 1641723168037,
+    "onboardEndDate": null
   },
   {
     "index": 17,
@@ -314,7 +320,8 @@
     "startDate": 1639287084008,
     "endPeriodDate": 1639449804022,
     "biddingEndsDate": 1639883496008,
-    "onboardStartDate": 1641723168037
+    "onboardStartDate": 1641723168037,
+    "onboardEndDate": null
   },
   {
     "index": 18,
@@ -331,7 +338,8 @@
     "startDate": 1639894338012,
     "endPeriodDate": 1640056830007,
     "biddingEndsDate": 1640496288018,
-    "onboardStartDate": 1641723168037
+    "onboardStartDate": 1641723168037,
+    "onboardEndDate": null
   },
   {
     "index": 19,
@@ -348,7 +356,8 @@
     "startDate": 1640507406008,
     "endPeriodDate": 1640672244004,
     "biddingEndsDate": 1641107466012,
-    "onboardStartDate": 1641723168037
+    "onboardStartDate": 1641723168037,
+    "onboardEndDate": null
   },
   {
     "index": 20,
@@ -365,7 +374,8 @@
     "startDate": 1641726768006,
     "endPeriodDate": 1641889614043,
     "biddingEndsDate": 1642324038010,
-    "onboardStartDate": 1645371414006
+    "onboardStartDate": 1645371414006,
+    "onboardEndDate": null
   },
   {
     "index": 21,
@@ -382,7 +392,8 @@
     "startDate": 1642334868012,
     "endPeriodDate": 1642498326007,
     "biddingEndsDate": 1642932234007,
-    "onboardStartDate": 1645371414006
+    "onboardStartDate": 1645371414006,
+    "onboardEndDate": null
   },
   {
     "index": 22,
@@ -399,7 +410,8 @@
     "startDate": 1642943064004,
     "endPeriodDate": 1643105430037,
     "biddingEndsDate": 1643538816014,
-    "onboardStartDate": 1645371414006
+    "onboardStartDate": 1645371414006,
+    "onboardEndDate": null
   },
   {
     "index": 23,
@@ -416,7 +428,8 @@
     "startDate": 1643549682015,
     "endPeriodDate": 1643712330014,
     "biddingEndsDate": 1644145980017,
-    "onboardStartDate": 1645371414006
+    "onboardStartDate": 1645371414006,
+    "onboardEndDate": null
   },
   {
     "index": 24,
@@ -433,7 +446,8 @@
     "startDate": 1644156864014,
     "endPeriodDate": 1644319518012,
     "biddingEndsDate": 1644753432006,
-    "onboardStartDate": 1645371414006
+    "onboardStartDate": 1645371414006,
+    "onboardEndDate": null
   },
   {
     "index": 25,
@@ -450,7 +464,8 @@
     "startDate": 1645375080006,
     "endPeriodDate": 1645538148003,
     "biddingEndsDate": 1645972824004,
-    "onboardStartDate": 1649015628022
+    "onboardStartDate": 1649015628022,
+    "onboardEndDate": null
   },
   {
     "index": 26,
@@ -467,7 +482,8 @@
     "startDate": 1645983666006,
     "endPeriodDate": 1646146686014,
     "biddingEndsDate": 1646580270011,
-    "onboardStartDate": 1649015628022
+    "onboardStartDate": 1649015628022,
+    "onboardEndDate": null
   },
   {
     "index": 27,
@@ -484,7 +500,8 @@
     "startDate": 1646591094019,
     "endPeriodDate": 1646753724031,
     "biddingEndsDate": 1647187326012,
-    "onboardStartDate": 1649015628022
+    "onboardStartDate": 1649015628022,
+    "onboardEndDate": null
   },
   {
     "index": 28,
@@ -501,7 +518,8 @@
     "startDate": 1647198138010,
     "endPeriodDate": 1647360486023,
     "biddingEndsDate": 1647793698007,
-    "onboardStartDate": 1649015628022
+    "onboardStartDate": 1649015628022,
+    "onboardEndDate": null
   },
   {
     "index": 29,
@@ -518,7 +536,8 @@
     "startDate": 1647804510016,
     "endPeriodDate": 1647966954014,
     "biddingEndsDate": 1648402212029,
-    "onboardStartDate": 1649015628022
+    "onboardStartDate": 1649015628022,
+    "onboardEndDate": null
   },
   {
     "index": 30,
@@ -535,7 +554,8 @@
     "startDate": 1649019234013,
     "endPeriodDate": 1649181510044,
     "biddingEndsDate": 1649614650015,
-    "onboardStartDate": 1652653794024
+    "onboardStartDate": 1652653794024,
+    "onboardEndDate": null
   },
   {
     "index": 31,
@@ -552,7 +572,8 @@
     "startDate": 1649625468028,
     "endPeriodDate": 1649787948013,
     "biddingEndsDate": 1650220692016,
-    "onboardStartDate": 1652653794024
+    "onboardStartDate": 1652653794024,
+    "onboardEndDate": null
   },
   {
     "index": 32,
@@ -569,7 +590,8 @@
     "startDate": 1650231534008,
     "endPeriodDate": 1650393966001,
     "biddingEndsDate": 1650826812005,
-    "onboardStartDate": 1652653794024
+    "onboardStartDate": 1652653794024,
+    "onboardEndDate": null
   },
   {
     "index": 33,
@@ -586,7 +608,8 @@
     "startDate": 1650837624019,
     "endPeriodDate": 1651000008007,
     "biddingEndsDate": 1651432861293,
-    "onboardStartDate": 1652653794024
+    "onboardStartDate": 1652653794024,
+    "onboardEndDate": null
   },
   {
     "index": 34,
@@ -603,7 +626,8 @@
     "startDate": 1651443660050,
     "endPeriodDate": 1651606188019,
     "biddingEndsDate": 1652039450500,
-    "onboardStartDate": 1652653794024
+    "onboardStartDate": 1652653794024,
+    "onboardEndDate": null
   },
   {
     "index": 35,
@@ -611,7 +635,7 @@
     "startHash": "0xe27332a1b5e8bfd9ec7e4434ee253f693614a00f45fa360c3c6acac9e8067138",
     "endPeriodBlock": 12727800,
     "endPeriodHash": "0xad2e7c045a9c814b2e6bbe0fd41db3e7fb355782cb32b91e22dea665ae42420c",
-    "biddingEndsBlock": 12727800,
+    "biddingEndsBlock": 12799800,
     "biddingEndsHash": "0xad2e7c045a9c814b2e6bbe0fd41db3e7fb355782cb32b91e22dea665ae42420c",
     "onboardStartBlock": 13305600,
     "onboardStartHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
@@ -620,7 +644,8 @@
     "startDate": 1652653794024,
     "endPeriodDate": 1652816502019,
     "biddingEndsDate": 1652816502019,
-    "onboardStartDate": 1656290106013
+    "onboardStartDate": 1656290106013,
+    "onboardEndDate": null
   },
   {
     "index": 36,
@@ -628,7 +653,7 @@
     "startHash": "0x5ed0b9a0f78087e8d357795e03672350692780764fd227520000233b519a073b",
     "endPeriodBlock": 12828600,
     "endPeriodHash": "0xfa199ea892118554c5baeb28f670cb36af3d847bc335f211c4d2b136210b4aeb",
-    "biddingEndsBlock": 12828600,
+    "biddingEndsBlock": 12900600,
     "biddingEndsHash": "0xfa199ea892118554c5baeb28f670cb36af3d847bc335f211c4d2b136210b4aeb",
     "onboardStartBlock": 13305600,
     "onboardStartHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
@@ -637,7 +662,8 @@
     "startDate": 1653261654013,
     "endPeriodDate": 1653424206015,
     "biddingEndsDate": 1653424206015,
-    "onboardStartDate": 1656290106013
+    "onboardStartDate": 1656290106013,
+    "onboardEndDate": null
   },
   {
     "index": 37,
@@ -645,7 +671,7 @@
     "startHash": "0x976423f990548aeb29246a3d8a388f8afb57c122900e6fda7649616a24feb1da",
     "endPeriodBlock": 12929400,
     "endPeriodHash": "0xc8f5e60c14192752eee27683723b751fd90103e9dbc64e5acb950929356b34af",
-    "biddingEndsBlock": 12929400,
+    "biddingEndsBlock": 13001400,
     "biddingEndsHash": "0xc8f5e60c14192752eee27683723b751fd90103e9dbc64e5acb950929356b34af",
     "onboardStartBlock": 13305600,
     "onboardStartHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
@@ -654,7 +680,8 @@
     "startDate": 1653868446029,
     "endPeriodDate": 1654030548019,
     "biddingEndsDate": 1654030548019,
-    "onboardStartDate": 1656290106013
+    "onboardStartDate": 1656290106013,
+    "onboardEndDate": null
   },
   {
     "index": 38,
@@ -662,7 +689,7 @@
     "startHash": "0xd3bde817fe5589b99741f555dd5ea2443395fff614bb58a1727f3dd9ed22690f",
     "endPeriodBlock": 13030200,
     "endPeriodHash": "0x55f25a31747bb623c1c4c3493be57a7fe23ce384e3b92df2198bd46d36d65bd2",
-    "biddingEndsBlock": 13030200,
+    "biddingEndsBlock": 13102200,
     "biddingEndsHash": "0x55f25a31747bb623c1c4c3493be57a7fe23ce384e3b92df2198bd46d36d65bd2",
     "onboardStartBlock": 13305600,
     "onboardStartHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
@@ -671,7 +698,8 @@
     "startDate": 1654473864017,
     "endPeriodDate": 1654636050022,
     "biddingEndsDate": 1654636050022,
-    "onboardStartDate": 1656290106013
+    "onboardStartDate": 1656290106013,
+    "onboardEndDate": null
   },
   {
     "index": 39,
@@ -679,7 +707,7 @@
     "startHash": "0xeb1432637587d361152596ab14567bc432f3e0c3ef90d7534598a10c12097801",
     "endPeriodBlock": 13131000,
     "endPeriodHash": "0xc16a0b929976f9603f1d8ea0465e52f7d1a54cdb858c988b8fc077fe56b8590b",
-    "biddingEndsBlock": 13131000,
+    "biddingEndsBlock": 13203000,
     "biddingEndsHash": "0xc16a0b929976f9603f1d8ea0465e52f7d1a54cdb858c988b8fc077fe56b8590b",
     "onboardStartBlock": 13305600,
     "onboardStartHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
@@ -688,7 +716,8 @@
     "startDate": 1655079282015,
     "endPeriodDate": 1655241510012,
     "biddingEndsDate": 1655241510012,
-    "onboardStartDate": 1656290106013
+    "onboardStartDate": 1656290106013,
+    "onboardEndDate": null
   },
   {
     "index": 40,
@@ -696,7 +725,7 @@
     "startHash": "0xe1f58309aa85651b2ea05a22983387a5ff30df63840605168f0203b587dbc521",
     "endPeriodBlock": 13231800,
     "endPeriodHash": "0xf470ccb318f501048db2bb52d39d3a5a8c5d64317cd4326ae4c8d85a2b1846c0",
-    "biddingEndsBlock": 13231800,
+    "biddingEndsBlock": 13303800,
     "biddingEndsHash": "0xf470ccb318f501048db2bb52d39d3a5a8c5d64317cd4326ae4c8d85a2b1846c0",
     "onboardStartBlock": 13305600,
     "onboardStartHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
@@ -705,7 +734,8 @@
     "startDate": 1655684718010,
     "endPeriodDate": 1655846826020,
     "biddingEndsDate": 1655846826020,
-    "onboardStartDate": 1656290106013
+    "onboardStartDate": 1656290106013,
+    "onboardEndDate": null
   },
   {
     "index": 41,
@@ -713,7 +743,7 @@
     "startHash": "0x7c40dca2c161a0b224dd5d6f9a073288b6300cf4b1e29c1be7af3271784073c7",
     "endPeriodBlock": 13332600,
     "endPeriodHash": "0xc5f75cb3fb14c717228791119cc70d9fe9644218dc08b88404d262f2f71c986d",
-    "biddingEndsBlock": 13332600,
+    "biddingEndsBlock": 13404600,
     "biddingEndsHash": "0xc5f75cb3fb14c717228791119cc70d9fe9644218dc08b88404d262f2f71c986d",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -722,7 +752,8 @@
     "startDate": 1656290106013,
     "endPeriodDate": 1656452190011,
     "biddingEndsDate": 1656452190011,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 42,
@@ -730,7 +761,7 @@
     "startHash": "0x588edb868b417462cb128cd5c932a099145d74e89f5fd009e093763c346e5739",
     "endPeriodBlock": 13433400,
     "endPeriodHash": "0x8439a850388d70c5bb407bc29499004acda88ea8ec6ac4f87878b9f438d21e52",
-    "biddingEndsBlock": 13433400,
+    "biddingEndsBlock": 13505400,
     "biddingEndsHash": "0x8439a850388d70c5bb407bc29499004acda88ea8ec6ac4f87878b9f438d21e52",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -739,7 +770,8 @@
     "startDate": 1656895284009,
     "endPeriodDate": 1657057452019,
     "biddingEndsDate": 1657057452019,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 43,
@@ -747,7 +779,7 @@
     "startHash": "0xc070c3b0af662363ab5f72d137b799efd22d421283a02e8cce6264614dc558ef",
     "endPeriodBlock": 13534200,
     "endPeriodHash": "0x71cc07a27459863ac2bd5eb8ba992c512e1ca3df9ee7b16ef787be1effb28f53",
-    "biddingEndsBlock": 13534200,
+    "biddingEndsBlock": 13606200,
     "biddingEndsHash": "0x71cc07a27459863ac2bd5eb8ba992c512e1ca3df9ee7b16ef787be1effb28f53",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -756,7 +788,8 @@
     "startDate": 1657500804011,
     "endPeriodDate": 1657663014017,
     "biddingEndsDate": 1657663014017,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 44,
@@ -764,7 +797,7 @@
     "startHash": "0xabdd4d07400bef8fecac1b23907b3ebf2a43f765787c469407d8f81056b8c776",
     "endPeriodBlock": 13635000,
     "endPeriodHash": "0x980b6573cdc812afc08f456af2f085fda6a6ab0b2f13f354513d836fedd68a3b",
-    "biddingEndsBlock": 13635000,
+    "biddingEndsBlock": 13707000,
     "biddingEndsHash": "0x980b6573cdc812afc08f456af2f085fda6a6ab0b2f13f354513d836fedd68a3b",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -773,7 +806,8 @@
     "startDate": 1658106432041,
     "endPeriodDate": 1658268678009,
     "biddingEndsDate": 1658268678009,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 45,
@@ -781,7 +815,7 @@
     "startHash": "0x506fc08e37915ca4d0bd126c1baf81d82380104892925038cff73d24f49f532f",
     "endPeriodBlock": 13735800,
     "endPeriodHash": "0xd588d1f7edd8e226b27c81ded8daf265f9d869078de8f453043d463ee1af2474",
-    "biddingEndsBlock": 13735800,
+    "biddingEndsBlock": 13807800,
     "biddingEndsHash": "0xd588d1f7edd8e226b27c81ded8daf265f9d869078de8f453043d463ee1af2474",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -790,7 +824,8 @@
     "startDate": 1658712096015,
     "endPeriodDate": 1658874372013,
     "biddingEndsDate": 1658874372013,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 46,
@@ -798,7 +833,7 @@
     "startHash": "0x3241177420d2bafdeb68b53f4aced333c677f434113ec3af907fe18027d86142",
     "endPeriodBlock": 13836600,
     "endPeriodHash": "0x75ea493ca31a634fa8ad041133b384d91f8ce709403e4dfad9162da2c336a35f",
-    "biddingEndsBlock": 13836600,
+    "biddingEndsBlock": 13908600,
     "biddingEndsHash": "0x75ea493ca31a634fa8ad041133b384d91f8ce709403e4dfad9162da2c336a35f",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -807,7 +842,8 @@
     "startDate": 1659317922008,
     "endPeriodDate": 1659480642010,
     "biddingEndsDate": 1659480642010,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 47,
@@ -815,7 +851,7 @@
     "startHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
     "endPeriodBlock": 13937400,
     "endPeriodHash": "0x06e8c092cd3226963041c303296bf725a5de0f1871993fb192f48ef483315909",
-    "biddingEndsBlock": 13937400,
+    "biddingEndsBlock": 14009400,
     "biddingEndsHash": "0x06e8c092cd3226963041c303296bf725a5de0f1871993fb192f48ef483315909",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -824,7 +860,8 @@
     "startDate": 1659924354013,
     "endPeriodDate": 1660086666026,
     "biddingEndsDate": 1660086666026,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 48,
@@ -832,7 +869,7 @@
     "startHash": "0x0a7373d836b55992c8018f8fa6291fbfd95a38ac2928fdb6db818d9655d42efe",
     "endPeriodBlock": 14028200,
     "endPeriodHash": "0xaf670d71f2322cc3b53f13e1757a7dd128bea81efe655c7aa0df928a6d1c1561",
-    "biddingEndsBlock": 14038200,
+    "biddingEndsBlock": 14100200,
     "biddingEndsHash": "0xbd1457c4d886cb9bfc7f37c99a9413bb4c11282c8cb9ad4b095839cc69e19e5b",
     "onboardStartBlock": 13910400,
     "onboardStartHash": "0xfeebf094f840ea17916fcf1b1efc79d5b72b289cda749ac7d6a910f3cc42d61c",
@@ -841,7 +878,8 @@
     "startDate": 1660470084035,
     "endPeriodDate": 1660632450006,
     "biddingEndsDate": 1660692600002,
-    "onboardStartDate": 1659924354013
+    "onboardStartDate": 1659924354013,
+    "onboardEndDate": null
   },
   {
     "index": 49,
@@ -849,7 +887,7 @@
     "startHash": "0xdb16a16ca80e647d09ebbad493c43940defb0db2f1bb24843749b17f9de1539b",
     "endPeriodBlock": 14139001,
     "endPeriodHash": "0xf7d8075f9a5bc7faa73dc43d3e7a959d16a52443ab770224c21d914003a35ea9",
-    "biddingEndsBlock": 14139001,
+    "biddingEndsBlock": 14211001,
     "biddingEndsHash": "0xf7d8075f9a5bc7faa73dc43d3e7a959d16a52443ab770224c21d914003a35ea9",
     "onboardStartBlock": 14515200,
     "onboardStartHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
@@ -858,7 +896,8 @@
     "startDate": 1661136354016,
     "endPeriodDate": 1661299020014,
     "biddingEndsDate": 1661299020014,
-    "onboardStartDate": 1663565292009
+    "onboardStartDate": 1663565292009,
+    "onboardEndDate": null
   },
   {
     "index": 50,
@@ -866,7 +905,7 @@
     "startHash": "0xa8b4948e3601084ddb99e2dbf395ee70e97bf7c05415e41490e596a8e952ec5a",
     "endPeriodBlock": 14239801,
     "endPeriodHash": "0xdd811125d6ab50ee7f2aac2ac027303898890ac2eaf73b646c305b16029ea8ec",
-    "biddingEndsBlock": 14239801,
+    "biddingEndsBlock": 14311801,
     "biddingEndsHash": "0xdd811125d6ab50ee7f2aac2ac027303898890ac2eaf73b646c305b16029ea8ec",
     "onboardStartBlock": 14515200,
     "onboardStartHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
@@ -875,7 +914,8 @@
     "startDate": 1661742708030,
     "endPeriodDate": 1661905116013,
     "biddingEndsDate": 1661905116013,
-    "onboardStartDate": 1663565292009
+    "onboardStartDate": 1663565292009,
+    "onboardEndDate": null
   },
   {
     "index": 51,
@@ -883,7 +923,7 @@
     "startHash": "0x7ebb5cc9146f9f2c90a5dda4c3eec1e2ca2355d67a04b20c1b988c1725424ee0",
     "endPeriodBlock": 14340601,
     "endPeriodHash": "0xe6718f6d95972eb835a17a3a4139244668510869b933e6fed4ab57a4cfad09cd",
-    "biddingEndsBlock": 14340601,
+    "biddingEndsBlock": 14412601,
     "biddingEndsHash": "0xe6718f6d95972eb835a17a3a4139244668510869b933e6fed4ab57a4cfad09cd",
     "onboardStartBlock": 14515200,
     "onboardStartHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
@@ -892,7 +932,8 @@
     "startDate": 1662348594048,
     "endPeriodDate": 1662512394010,
     "biddingEndsDate": 1662512394010,
-    "onboardStartDate": 1663565292009
+    "onboardStartDate": 1663565292009,
+    "onboardEndDate": null
   },
   {
     "index": 52,
@@ -900,7 +941,7 @@
     "startHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
     "endPeriodBlock": 14542200,
     "endPeriodHash": "0x17b60e70a4fecf76fcd836cbf58edf03a284f40da18682cea087a55fa6ba6065",
-    "biddingEndsBlock": 14542200,
+    "biddingEndsBlock": 14614200,
     "biddingEndsHash": "0x17b60e70a4fecf76fcd836cbf58edf03a284f40da18682cea087a55fa6ba6065",
     "onboardStartBlock": 14515200,
     "onboardStartHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
@@ -909,7 +950,8 @@
     "startDate": 1663565292009,
     "endPeriodDate": 1663727604016,
     "biddingEndsDate": 1663727604016,
-    "onboardStartDate": 1663565292009
+    "onboardStartDate": 1663565292009,
+    "onboardEndDate": null
   },
   {
     "index": 53,
@@ -917,7 +959,7 @@
     "startHash": "0x69027e1053359a8fcc641cbec6a76866f45c69958d5e8efd79ad7f639c46d056",
     "endPeriodBlock": 14643000,
     "endPeriodHash": "0x471020ffa4995d0927f468b0f9b34a6452cc986d0dd38ca02d35cfebcc371e58",
-    "biddingEndsBlock": 14643000,
+    "biddingEndsBlock": 14715000,
     "biddingEndsHash": "0x471020ffa4995d0927f468b0f9b34a6452cc986d0dd38ca02d35cfebcc371e58",
     "onboardStartBlock": 14515200,
     "onboardStartHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
@@ -926,7 +968,8 @@
     "startDate": 1664174640018,
     "endPeriodDate": 1664337120017,
     "biddingEndsDate": 1664337120017,
-    "onboardStartDate": 1663565292009
+    "onboardStartDate": 1663565292009,
+    "onboardEndDate": null
   },
   {
     "index": 54,
@@ -934,15 +977,17 @@
     "startHash": "0xb265a712d465892715f3b6be184a7af0397e0e4cb25b6f5c48dc4ce5ab568adf",
     "endPeriodBlock": 14743800,
     "endPeriodHash": "0x1a6ca9ee4359c24526e53605bf205624a7b33ccac369d2347c3bcd4967c04ca9",
-    "biddingEndsBlock": 14743800,
+    "biddingEndsBlock": 14815800,
     "biddingEndsHash": "0x1a6ca9ee4359c24526e53605bf205624a7b33ccac369d2347c3bcd4967c04ca9",
-    "onboardStartBlock": null,
-    "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardEndBlock": null,
+    "onboardStartBlock": 14515200,
+    "onboardStartHash": "0xc76204bd68124e1e39249aa90770dcc72e9f3009344a83a1577e5471c99bfb73",
+    "onboardEndBlock": 19353600,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "startDate": 1664780388013,
     "endPeriodDate": 1664942646036,
-    "biddingEndsDate": 1664942646036
+    "biddingEndsDate": 1664942646036,
+    "onboardStartDate": 1663565292009,
+    "onboardEndDate": null
   },
   {
     "index": 55,
@@ -950,28 +995,35 @@
     "startHash": "0x0f8b21ca305b5a075c242baaf9b22d4fff5fb21a175a5bbaba362846fcc0aafd",
     "endPeriodBlock": 14844600,
     "endPeriodHash": "0x3b133556ca34d6012cb6ce385bd767576cb05962bda86ccf2d1a9bf9bdec8d64",
-    "biddingEndsBlock": 14844600,
+    "biddingEndsBlock": 14916600,
     "biddingEndsHash": "0x3b133556ca34d6012cb6ce385bd767576cb05962bda86ccf2d1a9bf9bdec8d64",
-    "onboardStartBlock": null,
+    "onboardStartBlock": 15120000,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardEndBlock": null,
+    "onboardEndBlock": 19958400,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "startDate": 1665385824023,
     "endPeriodDate": 1665547986015,
-    "biddingEndsDate": 1665547986015
+    "biddingEndsDate": 1665547986015,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 56,
     "startBlock": 14918400,
-    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0x3fe099e3d81fb7d4aecf2f11ed5cb3d243ba6d03bf6cfe76d84807f6160ed9cc",
     "endPeriodBlock": 14945400,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 14945400,
+    "biddingEndsBlock": 15017400,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardStartBlock": null,
+    "onboardStartBlock": 15120000,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndBlock": 19958400,
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": 1665991038012,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 57,
@@ -979,12 +1031,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15046200,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15046200,
+    "biddingEndsBlock": 15118200,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 58,
@@ -992,12 +1049,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15147000,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15147000,
+    "biddingEndsBlock": 15219000,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 59,
@@ -1005,12 +1067,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15247800,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15247800,
+    "biddingEndsBlock": 15319800,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 60,
@@ -1018,12 +1085,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15348600,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15348600,
+    "biddingEndsBlock": 15420600,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 61,
@@ -1031,12 +1103,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15449400,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15449400,
+    "biddingEndsBlock": 15521400,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 62,
@@ -1044,12 +1121,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15550200,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15550200,
+    "biddingEndsBlock": 15622200,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 63,
@@ -1057,12 +1139,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15651000,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15651000,
+    "biddingEndsBlock": 15723000,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 64,
@@ -1070,12 +1157,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15751800,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15751800,
+    "biddingEndsBlock": 15823800,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 65,
@@ -1083,12 +1175,17 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15852600,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15852600,
+    "biddingEndsBlock": 15924600,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   },
   {
     "index": 66,
@@ -1096,11 +1193,16 @@
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "endPeriodBlock": 15953400,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": 15953400,
+    "biddingEndsBlock": 16025400,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": null,
     "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startDate": null,
+    "endPeriodDate": null,
+    "biddingEndsDate": null,
+    "onboardStartDate": null,
+    "onboardEndDate": null
   }
 ]
