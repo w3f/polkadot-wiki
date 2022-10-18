@@ -25,7 +25,7 @@ jobs:
           git checkout auction-schedule-update
           yarn && yarn update:auctions
       - name: Commit and push changes
-        if: git status --porcelain
+        if: "git status --porcelain"
         run: |
           git commit -a -m 'auction schedule update'
           git push --set-upstream origin auction-schedule-update
