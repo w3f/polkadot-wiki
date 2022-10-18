@@ -8,14 +8,20 @@ jobs:
   update_json:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
       - uses: actions/setup-node@v2
         with:
           node-version: "18"
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
-      - name: Update
+      - name: Update cache
         run: |
+          git branch auction-schedule-update
+          git checkout auction-schedule-update
           yarn && yarn update:auctions
+          git commit -a -m 'auction schedule update'
+          git push --set-upstream origin auction-schedule-update
+      - name: create pull request
+        run: gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
