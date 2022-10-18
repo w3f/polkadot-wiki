@@ -26,7 +26,7 @@ const KusamaParameters = {
   ws: "wss://kusama-rpc.polkadot.io",
 }
 
-const chains = [PolkadotParameters/*, KusamaParameters*/];
+const chains = [/*PolkadotParameters,*/ KusamaParameters];
 
 let API = undefined;
 
@@ -143,15 +143,17 @@ async function GetAuctionBlocks(api, currentBlock, startBlock, chain) {
     const hash = await BlockToHash(startBlock);
     const apiAt = await api.at(hash);
     // If the starting block has already been produced all values are available on-chain
-    const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
+    const auctionLeasePeriod = (await apiAt.query.auctions.auctionInfo()).toJSON()[0];
     if (chain === "Polkadot") {
       const biddingStarts = startBlock + PolkadotStartingPhase;
+      const auctionEndBlock = biddingStarts + PolkadotEndingPeriod;
       const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
       const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
       return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
     }
     else if (chain === "Kusama") {
       const biddingStarts = startBlock + KusamaStartingPhase;
+      const auctionEndBlock = biddingStarts + KusamaEndingPeriod;
       const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
       const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
       return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
