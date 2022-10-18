@@ -38,7 +38,7 @@ Subnets can be public or private and allow developers to design and launch a blo
 
 ## Consensus 
 
-![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png, "Image from https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols")
+![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png "Image from https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols")
 
 Avalanche consensus uses a family of protocols to achieve security, liveness, and finality. These are known as the Snow* protocols. This group of protocols composed together uses both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
 
@@ -64,9 +64,9 @@ The snowball protocol is an algorithm that nodes use to come to a consensus. Eac
 
 ## Staking Mechanics
 
-Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a delegator. With a minimum stake period being two weeks and a maximum period being a year, for both validators and delegators. Validators acquire points for uptime and correctness of their work, and the remuneration of rewards depends on that.
+Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a delegator. With a minimum stake period being two weeks and a maximum period being a year, for both validators and delegators. It is not clear from the Avalanche documentation what happens after a year, it is likely that validators will have to re-stake and start a new period. Validators acquire points for uptime and correctness of their work, and the remuneration of rewards depends on that.
 
-In Polkadot the minimum
+In Polkadot the minimum stake for needed to be a validator is variable, same for being a nominator even though it takes 10 DOT to setup a stash and controller account to start nominating. The true minimum need to be competitive enough to be included in the active set for validators, or successfully being chosen as a nominator depends on the minimum staked amounts on the network at a given time. Read more about this in the [staking page](learn-staking).
 
 <!-- Staking points and how they are occurred is not clear in the documentation -->
 
