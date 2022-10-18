@@ -190,8 +190,7 @@ basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
 
 ### Is 100 a hard limit on the number of Parachains that can be supported?
 
-No. This number was an educated guess based on the benchmarking done on Testnets at the time of the network 
-launch. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
+No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
 number of optimizations, and there are [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) 
 in the near future. The exact number of parachains that the relay chain can support without any 
 degradation in performance is yet to be figured. Also, with the 
