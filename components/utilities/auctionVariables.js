@@ -24,6 +24,10 @@ const KusamaLeasePeriodPerSlot = 8;
 const PolkadotStartingPhase = 27000;
 const KusamaStartingPhase = 27000;
 
+// const.auctions.endingPeriod (5 days)
+const PolkadotEndingPeriod = 72000;
+const KusamaEndingPeriod = 72000;
+
 // GetAuctionBlocks() in Auction-Schedule.jsx can generate all these values from a starting block number
 const PolkadotAuctions = DotAuctions;
 const KusamaAuctions = KsmAuctions;
@@ -38,6 +42,10 @@ module.exports = {
   KusamaSlotLeaseOffset,
   PolkadotLeasePeriodPerSlot,
   KusamaLeasePeriodPerSlot,
+  PolkadotStartingPhase,
+  KusamaStartingPhase,
+  PolkadotEndingPeriod,
+  KusamaEndingPeriod,
   PolkadotAuctions,
   KusamaAuctions,
   FutureBlock,

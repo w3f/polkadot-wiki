@@ -5,10 +5,12 @@ const {
   PolkadotSlotLeaseOffset,
   PolkadotLeasePeriodPerSlot,
   PolkadotStartingPhase,
+  PolkadotEndingPeriod,
   KusamaSlotLeasePeriod,
   KusamaSlotLeaseOffset,
   KusamaLeasePeriodPerSlot,
   KusamaStartingPhase,
+  KusamaEndingPeriod,
   FutureBlock
 } = require("./auctionVariables");
 
@@ -24,7 +26,7 @@ const KusamaParameters = {
   ws: "wss://kusama-rpc.polkadot.io",
 }
 
-const chains = [PolkadotParameters, KusamaParameters];
+const chains = [PolkadotParameters/*, KusamaParameters*/];
 
 let API = undefined;
 
@@ -44,74 +46,37 @@ async function Update(params) {
     } else {
       const existingAuctions = JSON.parse(data);
 
+      // Get current block data
+      const header = await API.rpc.chain.getHeader();
+      const currentBlock = header.number.toPrimitive();
+
       // Iterate existing auctions
       for (let i = 0; i < existingAuctions.length; i++) {
         let auction = existingAuctions[i];
 
-        // All relevant block types for a single auction
-        const blocks = {
-          startDate: [auction.startBlock, auction.startHash],
-          endPeriodDate: [auction.endPeriodBlock, auction.endPeriodHash],
-          biddingEndsDate: [auction.biddingEndsBlock, auction.biddingEndsHash],
-          onboardStartDate: [auction.onboardStartBlock, auction.onboardStartHash],
-          onboardEndDate: [auction.onboardEndBlock, auction.onboardEndHash]
+        // First check if all block numbers are defined (0 indicates not available in cache)
+        if (auction.onboardStartBlock === null || auction.onboardEndBlock === null) {
+          // Use the startBlock recalculate remaining relevant block numbers
+          const [endPeriodBlock, auctionEndBlock, onboardStartBlock, onboardEndBlock] = await GetAuctionBlocks(API, currentBlock, auction.startBlock, params.chain);
+          existingAuctions[i].endPeriodBlock = endPeriodBlock;
+          existingAuctions[i].biddingEndsBlock = auctionEndBlock;
+          existingAuctions[i].onboardStartBlock = onboardStartBlock;
+          existingAuctions[i].onboardEndBlock = onboardEndBlock;
         }
 
-        // TODO - now that the cache is up-to-date this can be
-        // simplified greatly and possibly avoid the next iteration
+        // Check to see if all block numbers have an associated hash or are future blocks
+        existingAuctions[i].startHash = await UpdateBlockHash(currentBlock, auction.startBlock, auction.startHash);
+        existingAuctions[i].endPeriodHash = await UpdateBlockHash(currentBlock, auction.endPeriodBlock, auction.endPeriodHash);
+        existingAuctions[i].biddingEndsHash = await UpdateBlockHash(currentBlock, auction.biddingEndsBlock, auction.biddingEndsHash);
+        existingAuctions[i].onboardStartHash = await UpdateBlockHash(currentBlock, auction.onboardStartBlock, auction.onboardStartHash);
+        existingAuctions[i].onboardEndHash = await UpdateBlockHash(currentBlock, auction.onboardEndBlock, auction.onboardEndHash);
 
-        // Iterate block types for the given auction
-        for (const [key, value] of Object.entries(blocks)) {
-          // If cache presents a future block, check to see if it has been recently created and update it
-          if (value[1] === FutureBlock) {
-            // Attempt to handle on-boarding data that was previously unknown
-            /*
-            if (value[0] === 0 && (key === onboardStartDate || key === onboardEndDate)) {
-              // If the start block hash is known we can calculate remaining blocks
-              if (existingAuctions[i].startHash !== FutureBlock) {
-                const [auctionEndBlock, onboardStartBlock, onboardEndBlock] = GetAuctionBlocks(API, existingAuctions[i].startBlock, params.chain);
-              }
-            }
-            */
-            if (value[0] === 0) {
-              continue;
-            }
-            const hash = await BlockToHash(API, value[0]);
-            if (hash !== FutureBlock) {
-              console.log("Future block replaced!");
-              switch (key) {
-                case "startDate":
-                  existingAuctions[i].startHash = hash;
-                  break;
-                case "endPeriodDate":
-                  existingAuctions[i].endPeriodHash = hash;
-                  break;
-                case "biddingEndsDate":
-                  existingAuctions[i].biddingEndsHash = hash;
-                  break;
-                case "onboardStartDate":
-                  existingAuctions[i].onboardStartHash = hash;
-                  break;
-                case "onboardEndDate":
-                  existingAuctions[i].onboardEndHash = hash;
-                  break;
-                default:
-                  break;
-              }
-            }
-          }
-
-          // If not a future block at this point and there is not already a timestamp for the given block
-          // TODO - this should check existingAuctions[i], not value[1]
-          if (value[1] !== FutureBlock && Object.hasOwn(existingAuctions[i], key) === false) {
-            const apiAt = await API.at(value[1]);
-            const stamp = await apiAt.query.timestamp.now();
-            existingAuctions[i][key] = stamp.toPrimitive();
-            console.log(`${key}: ${existingAuctions[i][key]} added.`);
-          } else {
-            console.log("Future block found, no updates required.")
-          }
-        }
+        // Check to see if dates exists, if this is a future block or a date can be retrieved from on-chain
+        existingAuctions[i].startDate = await UpdateBlockDate(auction, auction.startHash, "startDate");
+        existingAuctions[i].endPeriodDate = await UpdateBlockDate(auction, auction.endPeriodHash, "endPeriodDate");
+        existingAuctions[i].biddingEndsDate = await UpdateBlockDate(auction, auction.biddingEndsHash, "biddingEndsDate");
+        existingAuctions[i].onboardStartDate = await UpdateBlockDate(auction, auction.onboardStartHash, "onboardStartDate");
+        existingAuctions[i].onboardEndDate = await UpdateBlockDate(auction, auction.onboardEndHash, "onboardEndDate");
       }
 
       // Write results
@@ -127,19 +92,60 @@ async function Update(params) {
   })
 }
 
+async function UpdateBlockDate(auction, hash, dateKey) {
+  // If timestamp already exists in cache
+  if (Object.hasOwn(auction, dateKey) === true && auction[dateKey] !== null) {
+    return auction[dateKey];
+  } else if (hash === FutureBlock) {
+    // If future block return null
+    return null
+  } else {
+    const apiAt = await API.at(hash);
+    const stamp = await apiAt.query.timestamp.now();
+    return stamp.toPrimitive();
+  }
+}
+
+async function UpdateBlockHash(currentBlock, blockNumber, currentHash) {
+  if (blockNumber === null) {
+    return FutureBlock
+  } else if (currentHash !== FutureBlock) {
+    return currentHash;
+  } else if (blockNumber < currentBlock) {
+    const hash = await BlockToHash(blockNumber);
+    return hash;
+  } else {
+    return FutureBlock;
+  }
+}
+
 async function LoadAPI(chain) {
   const WSProvider = new Polkadot.WsProvider(chain.ws);
   API = await Polkadot.ApiPromise.create({ provider: WSProvider });
 }
 
 // Get the auction bidding start, bidding end, lease period start and lease period end blocks from the auction start block
-async function GetAuctionBlocks(api, startBlock, chain) {
-  const hash = await BlockToHash(startBlock);
-  if (hash !== FutureBlock) {
-    const biddingStarts = startBlock + PolkadotStartingPhase;
+async function GetAuctionBlocks(api, currentBlock, startBlock, chain) {
+  // We are dealing with a future auction start block so a hash will not yet exist
+  if (startBlock > currentBlock) {
+    // On-boarding start and end will not yet be available on-chain
+    if (chain === "Polkadot") {
+      const biddingStarts = startBlock + PolkadotStartingPhase;
+      const auctionEndBlock = biddingStarts + PolkadotEndingPeriod;
+      return [biddingStarts, auctionEndBlock, null, null]
+    }
+    else if (chain === "Kusama") {
+      const biddingStarts = startBlock + KusamaStartingPhase;
+      const auctionEndBlock = biddingStarts + KusamaEndingPeriod;
+      return [biddingStarts, auctionEndBlock, null, null]
+    }
+  } else {
+    const hash = await BlockToHash(startBlock);
     const apiAt = await api.at(hash);
+    // If the starting block has already been produced all values are available on-chain
     const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
     if (chain === "Polkadot") {
+      const biddingStarts = startBlock + PolkadotStartingPhase;
       const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
       const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
       return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
@@ -151,15 +157,11 @@ async function GetAuctionBlocks(api, startBlock, chain) {
       return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
     }
   }
-  else {
-    // We are dealing with a future auction start block so a hash will not yet exist
-    return [0, 0, 0];
-  }
 }
 
 // Block number to block hash
-async function BlockToHash(api, block) {
-  const hash = await api.rpc.chain.getBlockHash(block);
+async function BlockToHash(block) {
+  const hash = await API.rpc.chain.getBlockHash(block);
   return hash;
 }
 
