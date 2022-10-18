@@ -3,9 +3,6 @@ on:
   schedule:
     - cron: '0 0 * * 1' # Once a week
   workflow_dispatch: # Or manually from GitHub UI
-  push:
-    branches:
-      - '#3815'
 
 jobs:
   update_json:
