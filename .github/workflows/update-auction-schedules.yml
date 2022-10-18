@@ -19,6 +19,8 @@ jobs:
           fetch-depth: 0
       - name: Update cache
         run: |
+          git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
+          git config --global user.name "Polkadot-Kusama Bot"
           git branch auction-schedule-update
           git checkout auction-schedule-update
           yarn && yarn update:auctions
