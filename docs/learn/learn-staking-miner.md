@@ -22,9 +22,10 @@ compete with each other to produce election solutions which consist of a validat
 distribution across that set, and a score indicating how optimal the solution is. Staking miners run
 the any given staking algortihms(as of now, sequential Phragmén or PhragMMS, this is subject to
 change if improved algorithms are introduced) to produce results, and the result is then sent as a
-transaction to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a
-transaction fee. The best solution is rewarded which in the least covers the transaction fee, and
-the bond is returned to the account. If the solution is not valid, the bond and the fee are lost.
+transaction to the relay chain via a normal signed extrinsic. The transaction requires a deposit,
+and a transaction fee. The best solution is rewarded which in the least covers the transaction fee,
+and the deposit is returned to the account. If the solution is not valid, the
+[deposit and the fee](learn-staking-miner#deposit-and-reward-mechanics) are lost.
 
 Staking miner uses a pallet called `pallet_election_provider_multi_phase` and can only produce
 solutions during the
@@ -35,8 +36,8 @@ starts, only the off-chain workers can provide election results.
 
 Running the staking miner requires passing the seed of a funded account in order to pay the fees for
 the transactions that will be sent. The same account's balance is used to reserve deposits as well.
-The best solution in each round is rewarded. All correct solutions will get their bond back and the
-ones that submit invalid solutions will lose their bond.
+The best solution in each round is rewarded. All correct solutions will get their deposit back and
+the ones that submit invalid solutions will lose their deposit.
 
 ## NPoS election optimization
 
@@ -47,6 +48,20 @@ connects to a specified chain and keeps listening to new signed phase of the ele
 order to submit solutions to the NPoS election. When the correct time comes, it computes its
 solution and submits it to the chain. The default miner algorithm is sequential Phragmén with a
 configurable number of balancing iterations that improve the score.
+
+## Deposit and reward mechanics
+
+Current deposit base is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :kusama }}
+
+Current deposit per KB of solution data is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :kusama }}
+
+Current rewards is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
 
 ![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
 
@@ -89,10 +104,10 @@ Upon arrival of a new solution:
 
 1. If the queue is not full, it is stored in the appropriate sorted index.
 2. If the queue is full but the submitted solution is better than one of the queued ones, the worse
-   solution is discarded, the bond of the outgoing solution is returned, and the new solution is
+   solution is discarded, the deposit of the outgoing solution is returned, and the new solution is
    stored in the correct index.
 3. If the queue is full and the solution is not an improvement compared to any of the queued ones,
-   it is instantly rejected and no bond is reserved.
+   it is instantly rejected and no deposit is reserved.
 
 Upon the end of the signed phase, no more solutions can be submitted and the solutions in the queue
 will be checked using
