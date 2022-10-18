@@ -119,7 +119,7 @@ using the {{ polkadot: [crowdloan functionality](learn-crowdloans.md) :polkadot 
 {{ kusama: [Parathreads](learn-parathreads.md) :kusama }} have the same API as parachains, but are
 scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
-### Slot Expiration
+### Parachain Lease Expiration
 
 When a parachain wins an auction, the tokens that it bids get reserved until the lease's end.
 Reserved balances are non-transferrable and cannot be used for staking. At the end of the lease, the
@@ -187,6 +187,16 @@ see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
 slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
 {{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
 basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
+
+### Is 100 a hard limit on the number of Parachains that can be supported?
+
+No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
+number of optimizations, and there are [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) 
+in the near future. The exact number of parachains that the Relay Chain can support without any 
+degradation in performance is yet to be discovered. Also, with the 
+[blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm which brings
+parathreads into the picture, there is no hard limit number on the number of blockchains that can be supported 
+by {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
