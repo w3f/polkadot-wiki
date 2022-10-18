@@ -192,8 +192,7 @@ basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
 
 No. This number was an educated guess based on the benchmarking done on Testnets at the time of the network 
 launch. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
-number of optimizations and there are 
-[several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/#parathreads-next-generation-scheduling) 
+number of optimizations and there are [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) 
 in the near future. The exact number of parachains that can be supported by the relay chain without any 
 degradation in performance is yet to be figured. Also, with the 
 [blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm which brings
