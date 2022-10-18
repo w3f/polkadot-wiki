@@ -26,19 +26,24 @@ const KusamaParameters = {
   ws: "wss://kusama-rpc.polkadot.io",
 }
 
-const Chains = [PolkadotParameters, KusamaParameters];
-
 let API = undefined;
-let UpdatedCaches = 0;
 
-Chains.forEach(params => {
-  LoadAPI(params).then(() => {
-    console.log(`Updating ${params.chain} cache.`);
-    Update(params);
+// Load Polkadot API
+LoadAPI(PolkadotParameters).then(() => {
+  // Update Polkadot cache
+  console.log(`Updating ${PolkadotParameters.chain} cache.`);
+  Update(PolkadotParameters).then(() => {
+    // Load Kusama API
+    LoadAPI(KusamaParameters).then(() => {
+      // Update Kusama cache
+      console.log(`Updating ${KusamaParameters.chain} cache.`);
+      Update(KusamaParameters);
+    });
   });
 });
 
 async function Update(params) {
+  // Load existing cache
   fs.readFile(`./components/utilities/data/${params.cache}`, "utf8", async function readFileCallback(err, data) {
     if (err) {
       console.log(err);
@@ -82,15 +87,14 @@ async function Update(params) {
       json = JSON.stringify(existingAuctions, null, 2); //convert it back to json
       fs.writeFile(`./components/utilities/data/${params.cache}`, json, "utf8", async function writeFileCallback(err) {
         // Once both async processes have completed terminate the script
-        UpdatedCaches += 1;
         if (err) {
           console.log(err);
-          if(UpdatedCaches === 2) {
+          if(params.chain === "Kusama") {
             process.exit(1);
           }
         } else {
           console.log(`Updating of ${params.chain} cache complete.`);
-          if(UpdatedCaches === 2) {
+          if(params.chain === "Kusama") {
             process.exit(0);
           }
         }
@@ -99,6 +103,7 @@ async function Update(params) {
   })
 }
 
+// Update a blocks date value according to current state
 async function UpdateBlockDate(auction, hash, dateKey) {
   // If timestamp already exists in cache
   if (Object.hasOwn(auction, dateKey) === true && auction[dateKey] !== null) {
@@ -113,6 +118,7 @@ async function UpdateBlockDate(auction, hash, dateKey) {
   }
 }
 
+// Update a blocks hash value according to current state
 async function UpdateBlockHash(currentBlock, blockNumber, currentHash) {
   if (blockNumber === null) {
     return FutureBlock
@@ -126,6 +132,7 @@ async function UpdateBlockHash(currentBlock, blockNumber, currentHash) {
   }
 }
 
+// Load appropriate API based on provided chain type
 async function LoadAPI(chain) {
   const WSProvider = new Polkadot.WsProvider(chain.ws);
   API = await Polkadot.ApiPromise.create({ provider: WSProvider });
@@ -133,7 +140,7 @@ async function LoadAPI(chain) {
 
 // Get the auction bidding start, bidding end, lease period start and lease period end blocks from the auction start block
 async function GetAuctionBlocks(api, currentBlock, startBlock, chain) {
-  // We are dealing with a future auction start block so a hash will not yet exist
+  // If dealing with a future auction start block a hash will not yet exist
   if (startBlock > currentBlock) {
     // On-boarding start and end will not yet be available on-chain
     if (chain === "Polkadot") {
