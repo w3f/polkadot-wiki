@@ -11,10 +11,9 @@ slug: ../learn-comparisons-avalanche
 
 Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to be designed and connected to a "main" chain. In Polkadot, the "main" chain is the Relay-chain and Avalanche does this with 3 primary chains - the P-chain, X-chain, and C-chain. Similar to how Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what're called [subnets](https://docs.avax.network/subnets). Subnets are application-specific, sovereign chains that can be deployed alongside the primary chains. Similar to Polkadot, Avalanche also uses a PoS mechanism for achieving consensus. The validators stake their AVAX tokens in order to participate in the PoS system and secure the network.
 
-
-
 ## Architecture
 Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into three manageable chains. This allows for a separation of concern over consensus, transactions, and smart contract execution runtime. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions.
+
 ![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png)
 
 As aforementioned, the Avalanche architecture is comprised of three different chains. With this model, the separations of concerns target the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche. Additionally, the chain in Avalanche is not linear, rather it's a DAG(Directed Acyclic Graph).
@@ -53,7 +52,7 @@ The Snow family is a hierarchical collection of systems used to reach finality o
 - Slushie
 
 
-Compared to Polkadot, Avalanche uses an asynchronous hybrid system that is based on a classical and Nakomoto approach. Polkadot uses a synchronous hybrid model that combines BABE and GRADNPA, where BABE is the algorithm used to build blocks in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single new blocks.
+Compared to Polkadot, Avalanche uses an asynchronous hybrid system that is based on a classical and Nakomoto approach. Polkadot uses a synchronous hybrid model that combines [BABE](learn-consensus#block-production-babe) and [GRADNPA](learn-consensus#finality-gadget-grandpa), where BABE is the algorithm used to build blocks in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single new blocks.
 
 ### Snowball 
 
