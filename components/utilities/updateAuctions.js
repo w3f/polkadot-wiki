@@ -26,7 +26,7 @@ const KusamaParameters = {
   ws: "wss://kusama-rpc.polkadot.io",
 }
 
-const chains = [/*PolkadotParameters,*/ KusamaParameters];
+const chains = [PolkadotParameters, KusamaParameters];
 
 let API = undefined;
 
