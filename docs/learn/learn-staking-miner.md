@@ -148,3 +148,5 @@ resources section below.
 
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
+- [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L389:L397)
+
