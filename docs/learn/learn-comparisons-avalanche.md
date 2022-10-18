@@ -14,7 +14,7 @@ Polkadot and Avalanche both have an architecture that allows for application-spe
 ## Architecture
 Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into three manageable chains. This allows for a separation of concern over consensus, transactions, and smart contract execution runtime. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions.
 
-![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png)
+![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png "Image from https://docs.avax.network/")
 
 As aforementioned, the Avalanche architecture is comprised of three different chains. With this model, the separations of concerns target the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche. Additionally, the chain in Avalanche is not linear, rather it's a DAG(Directed Acyclic Graph).
 
@@ -38,7 +38,7 @@ Subnets can be public or private and allow developers to design and launch a blo
 
 ## Consensus 
 
-![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png)
+![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png, "Image from https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols")
 
 Avalanche consensus uses a family of protocols to achieve security, liveness, and finality. These are known as the Snow* protocols. This group of protocols composed together uses both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
 
