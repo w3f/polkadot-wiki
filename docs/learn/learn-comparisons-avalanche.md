@@ -66,11 +66,13 @@ The snowball protocol is an algorithm that nodes use to come to a consensus. Eac
 
 Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a delegator. With a minimum stake period being two weeks and a maximum period being a year, for both validators and delegators. Validators acquire points for uptime and correctness of their work, and the remuneration of rewards depends on that.
 
+In Polkadot the minimum
+
 <!-- Staking points and how they are occurred is not clear in the documentation -->
 
 ## Message Passing
 
-Avalanche does not have a native trustless message-passing mechanism. Instead, it relies on bridges. Though, because it is an EVM-compatible protocol, it's able to interoperate at a token level. However, subnets do not have a messaging layer out of the box. Polkadot, with its XCM and XCMP messaging protocols, allows for a native and trustless messaging scheme, thus supporting the composability of chains and enabling the development of powerful cross-chain applications.
+Avalanche does not have a native trustless message-passing mechanism. Instead, it relies on bridges. Though, because it is an EVM-compatible protocol, it's able to interoperate at a token level. However, subnets do not have a messaging layer out of the box. Polkadot, with its [XCM](learn-xcm) and [XCMP](learn-xcm#xcmp-cross-chain-message-passing) messaging protocols, allows for a native and trustless messaging scheme, thus supporting the composability of chains and enabling the development of powerful cross-chain applications.
 
 ## Governance
 
