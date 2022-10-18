@@ -30,13 +30,17 @@ Kusama is lower than on Polkadot, making it the more affordable development envi
 Another key technical difference between Polkadot and Kusama is that Kusama has modified governance
 parameters that allow for faster upgrades. Kusama is up to four times faster than Polkadot. On
 Polkadot, the voting period on referendums lasts
-<RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/>
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
+{{ kusama:  <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/> :kusama }}
 days, followed by an enactment period of
-<RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/>
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
+{{ kusama: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/> :kusama }}
 days before the changes are enacted on-chain. On Kusama, voting lasts
-<RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100,800} filter="blocksToDays"/>
+{{ polkadot: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
 days, followed by an
-<RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115,200} filter="blocksToDays"/>
+{{ polkadot: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }}
 day enactment period. This means stakeholders need to stay active and vigilant if they want to keep
 up with all the proposals, referenda, and upgrades, and validators on Kusama often need to update on
 short notice.
