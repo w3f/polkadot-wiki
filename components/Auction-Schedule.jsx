@@ -108,7 +108,7 @@ function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
 	let index = 0;
 	let status = "";
 	for (let i = 0; i < auctions.length; i++) {
-		if (currentBlock === 0) {
+		if (currentBlock === null) {
 			status = "Current block is still loading...";
 			return [index, status];
 		}
@@ -141,7 +141,7 @@ function Render(chain, auctions, setAuctions, index) {
 	if (currentBlockNumber !== undefined) {
 		currentBlockDate = currentBlockDate.toDateString();
 	} else {
-		currentBlockNumber = 0;
+		currentBlockNumber = null;
 		currentBlockDate = "Connecting...";
 	}
 	
@@ -158,7 +158,7 @@ function Render(chain, auctions, setAuctions, index) {
 		</a>
 	</div>
 	// If onboarding is too far in the future to calculate
-	if (auctions[index]["onboardStartBlock"] === 0 || auctions[index]["onboardEndBlock"] === 0) {
+	if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
 		onboarding = <div>
 			On-boarding cannot yet be determined for this future event.
 		</div>
