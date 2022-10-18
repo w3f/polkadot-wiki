@@ -26,18 +26,17 @@ const KusamaParameters = {
   ws: "wss://kusama-rpc.polkadot.io",
 }
 
-const chains = [PolkadotParameters, KusamaParameters];
+const Chains = [PolkadotParameters, KusamaParameters];
 
 let API = undefined;
+let UpdatedCaches = 0;
 
-chains.forEach(params => {
+Chains.forEach(params => {
   LoadAPI(params).then(() => {
     console.log(`Updating ${params.chain} cache.`);
     Update(params);
   });
 });
-
-// TODO - end node process when updating of both chains completes
 
 async function Update(params) {
   fs.readFile(`./components/utilities/data/${params.cache}`, "utf8", async function readFileCallback(err, data) {
@@ -82,10 +81,18 @@ async function Update(params) {
       // Write results
       json = JSON.stringify(existingAuctions, null, 2); //convert it back to json
       fs.writeFile(`./components/utilities/data/${params.cache}`, json, "utf8", async function writeFileCallback(err) {
+        // Once both async processes have completed terminate the script
+        UpdatedCaches += 1;
         if (err) {
           console.log(err);
+          if(UpdatedCaches === 2) {
+            process.exit(1);
+          }
         } else {
           console.log(`Updating of ${params.chain} cache complete.`);
+          if(UpdatedCaches === 2) {
+            process.exit(0);
+          }
         }
       });
     }
