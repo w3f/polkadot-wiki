@@ -41,6 +41,8 @@ the ones that submit invalid solutions will lose their deposit.
 
 ## NPoS election optimization
 
+![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
+
 A basic election solution is a simple distribution of stake across validators, but this can be
 optimized for better distribution equaling a higher security score. The staking miner does not act
 as a validator and focuses solely on the election result and optimization of the solution. It
@@ -51,19 +53,26 @@ configurable number of balancing iterations that improve the score.
 
 ## Deposit and reward mechanics
 
-Current deposit base is
+The staking miners are required to pay a deposit in order to post their solutions. The deposit is a
+sum of the `SignedDepositBase`, which is a fixed amount and `SignedDepositByte`, a variable amount
+per KB of solution data. All good solutions are subject to recieving a `SignedRewardBase`.
+
+Current deposit(**SignedDepositBase**) is
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :kusama }}
 
-Current deposit per KB of solution data is
+Current deposit per byte(**SignedDepositByte**) is
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :kusama }}
 
-Current rewards is
+Current rewards(**SignedRewardBase**) is
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
 
-![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
+Once the staking miner with a good solution is ready to be rewarded,
+[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/master/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
+will be called, which will submit the solution to the queue of solutions, reward the staking miner
+and refund the deposit.
 
 ## Signed Phase of the election pallet
 
