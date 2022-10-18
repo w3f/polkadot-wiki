@@ -196,7 +196,7 @@ in the near future. The exact number of parachains that the Relay Chain can supp
 degradation in performance is yet to be discovered. Also, with the 
 [blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm which brings
 parathreads into the picture, there is no hard limit number on the number of blockchains that can be supported 
-by {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}. 
+by {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
