@@ -84,7 +84,7 @@ means it is not possible to do balance transfers on the proxied account through 
 
 If the stash and controller are different accounts, the staking proxy will just be used to bond more
 funds and change the controller. Thus the staking proxy will be used to sign for those transactions
-used less often and that are usually signed by the stash.
+that are used less often and that are usually signed by the stash.
 
 ![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
 
