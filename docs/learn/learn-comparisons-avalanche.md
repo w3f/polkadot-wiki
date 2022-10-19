@@ -42,7 +42,7 @@ Subnets can be public or private and allow developers to design and launch a blo
 
 Avalanche consensus uses a family of protocols to achieve security, liveness, and finality. These are known as the Snow* protocols. This group of protocols composed together uses both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
 
-The Snow family is a hierarchical collection of systems used to reach finality on Avalanche:
+The [Snow family](https://docs.avax.network/overview/getting-started/avalanche-consensus) is a hierarchical collection of systems used to reach finality on Avalanche:
 
 - Slush
 - Snowflake
