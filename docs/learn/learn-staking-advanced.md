@@ -89,8 +89,8 @@ that are used less often and that are usually signed by the stash.
 ![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
 
 From a practical perspective, we now have two accounts and we need to remember two passwords. From a
-security perspective, the party who wants to fully control our staking actions must have access to two
-accounts.
+security perspective, the party who wants to fully control our staking actions must have access to
+two accounts.
 
 ## Bags List
 
@@ -427,9 +427,9 @@ estimation of all DOT that should be staked, per parachain slot).
 
 The current staking rate on Polkadot still assumes the absence of parachains, with the suggested
 ideal staking rate of 75%. You can track the progress on the issue to adjust it
-[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama.
-At the time of updating this section, the ideal staking rate on Kusama was 50.5% when there were 49
-parachain slots. When the number of slots goes to 60, the ideal staking rate will be 45%.
+[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama,
+which has an ideal staking rate of approximately 50% with 50 parachains. When the number of slots
+reaches 60, the ideal staking rate is 45%.
 [Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the
 code for reference. This code assumes that the number of slots auctioned correspond to the number of
 parachains on the relaychain, which may not be true as new slots can be occupied by old parachains
