@@ -34,7 +34,7 @@ As Polkadot does not have a smart contract layer out of the box, the EVM and WAS
 
 #### Subnets or sub-networks
 
-Subnets can be public or private and allow developers to design and launch a blockchain on Avalanche. There are one or many validators that are subsets from the overall validator set of the network. Any validator in the Avalanche network has to validate all three chains making them a part of the primary network subnet. Subnets can validate any blockchain, however, each blockchain is validated by exactly one subnet. Subnets are a way to create application-specific chains with their own logic and consensus, but also be a part of the Primary Network.
+Subnets can be public or private and allow developers to create application-specific chains and run alongside the Primary Network. A subnet can be public or private, and developers have the freedom to choose the runtime VM, transaction fees, tokenomics, and custom compile rules. One or many validators can start validating a subnet runtime, effectively becoming a subset of the overall validator set of the Primary Network. Subnets can validate any blockchain, however, each runtime is validated by exactly one subnet.
 
 ## Consensus 
 
