@@ -55,7 +55,7 @@ Usually, with the stash-controller setup, the stash still needs to sign for acti
 performed less often, i.e. bonding more funds and changing the controller (see figure above). The
 controller is used to sign for those staking actions that are performed more often such as
 nominating. Remember, staking on polkadot is not a set-and-forget action, as a nominator you will
-need to monitor the performance of your validators and change them if needed. Also, each time you
+need to monitor the performance of your validators and make changes if needed. Also, each time you
 sign with an account, you expose the private key of that account to the internet with consequent
 risk of attack. Ideally, accounts with high economic power like the stash must be and remain as
 isolated as possible. With a staking proxy, the stash account is even more isolated than when using
