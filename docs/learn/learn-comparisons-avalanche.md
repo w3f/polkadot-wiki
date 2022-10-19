@@ -30,7 +30,7 @@ The X-chain is responsible for the transaction layer of the Avalanche blockchain
 
 The C-chain is where the most activity will happen on the Avalanche network. It allows for different virtual machines to execute smart contract code. Out of the box, it has support for EVM and AVM (Avalanche VM). 
 
-As Polkadot does not have a smart contract layer out of the box, the EVM and WASM smart contract abilities lie in the Parachain layers. This is a major difference between Polkadot and Avalanche. The smart-contract abilities of Avalanche are baked into the main chain. 
+As Polkadot does not have a smart contract layer out of the box, the EVM and WASM smart contract abilities lie in the Parachain layers. This is a major difference between Polkadot and Avalanche. The smart-contract abilities of Avalanche are baked into its three-chain model. 
 
 #### Subnets or sub-networks
 
