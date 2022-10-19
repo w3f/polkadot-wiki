@@ -88,8 +88,8 @@ that are used less often and that are usually signed by the stash.
 
 ![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
 
-From a practical perspective we now have two accounts and we need to remember two passwords. From a
-security perspective who wants to fully control our staking actions must have access to two
+From a practical perspective, we now have two accounts and we need to remember two passwords. From a
+security perspective, the party who wants to fully control our staking actions must have access to two
 accounts.
 
 ## Bags List
