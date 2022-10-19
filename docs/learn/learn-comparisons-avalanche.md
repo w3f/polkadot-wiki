@@ -9,14 +9,13 @@ slug: ../learn-comparisons-avalanche
 
 <!-- Add more infographics to this page -->
 
-Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to be designed and connected to a "main" chain. In Polkadot, the "main" chain is the Relay-chain and Avalanche does this with 3 primary chains - the P-chain, X-chain, and C-chain. Similar to how Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what're called [subnets](https://docs.avax.network/subnets). Subnets are application-specific, sovereign chains that can be deployed alongside the primary chains. Similar to Polkadot, Avalanche also uses a PoS mechanism for achieving consensus. The validators stake their AVAX tokens in order to participate in the PoS system and secure the network.
+Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to be designed and connected to a primary network. In Polkadot, the primary network is the Relay-chain and Avalanche does this with 3 main chains - the P-chain, X-chain, and C-chain. Similar to how Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what’s called [subnets](https://docs.avax.network/subnets). Subnets are application-specific runtimes that can be deployed alongside the primary network. Similar to Polkadot, Avalanche also uses a PoS mechanism for achieving consensus. The validators stake their AVAX tokens in order to participate in the PoS system and secure the network.
 
 ## Architecture
-Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into three manageable chains. This allows for a separation of concern over consensus, transactions, and smart contract execution runtime. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions.
+
+Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into three chains. This allows for a separation of concern over validators and consensus, transactions, and smart contract execution. Polkadot is not a smart contract platform and does not have plans to be. The Relay-chain manages the consensus layer as well as the transactions. Smart contracts in Polkadot are independent solutions from the Relay-chain, and include [ink!](build-smart-contracts#ink), as well as the [parachains](build-smart-contracts#parachains) that allow for solidity smart contract execution. Additionally, Avalanche uses a different data structure for its chain that is non-linear, rather it's a DAG(Directed Acyclic Graph). Unlike Polkadot, which uses the longest chain structure similar to Bitcoin and Ethereum.
 
 ![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png "Image from https://docs.avax.network/")
-
-As aforementioned, the Avalanche architecture is comprised of three different chains. With this model, the separations of concerns target the main platform, exchange, and contracts. It also has what're called Subnets, which allow a subsection of the validators to validate blockchains that are built on top of Avalanche. Additionally, the chain in Avalanche is not linear, rather it's a DAG(Directed Acyclic Graph).
 
 #### P-chain (Platform)
 
@@ -34,7 +33,7 @@ As Polkadot does not have a smart contract layer out of the box, the EVM and WAS
 
 #### Subnets or sub-networks
 
-Subnets can be public or private and allow developers to create application-specific chains and run alongside the Primary Network. A subnet can be public or private, and developers have the freedom to choose the runtime VM, transaction fees, tokenomics, and custom compile rules. One or many validators can start validating a subnet runtime, effectively becoming a subset of the overall validator set of the Primary Network. Subnets can validate any blockchain, however, each runtime is validated by exactly one subnet.
+Subnets are public or private blockchain runtimes that can be built on top of the primary network and allow a subsection of the validators to validate these runtimes. Developers have the freedom to choose the runtime VM, transaction fees, tokenomics, and custom compile rules. One or many validators can start validating a subnet runtime, effectively becoming a subset of the overall validator set of the Primary Network. Subnets can validate any blockchain, however, each runtime is validated by exactly one subnet.
 
 ## Consensus 
 
