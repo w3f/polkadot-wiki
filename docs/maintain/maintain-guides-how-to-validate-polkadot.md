@@ -408,9 +408,8 @@ history. `warp` sync can be used as a faster way to sync the validator node.
 
 `./target/production/polkadot --sync warp`
 
-Warp sync initially downloads the whole state of the latest finalized block, and the finality proofs
-from [GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa) for all validator set
-transitions from the genesis up until the latest era. After the warp sync, the node is ready to
+Warp sync initially downloads the finality proofs from [GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa)
+and validates them and then downloads the state of the latest finalized block. After the warp sync, the node is ready to
 import the latest blocks from the network and can be used as a Validator. The blocks from genesis
 will be downloaded in the background. Check
 [this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
