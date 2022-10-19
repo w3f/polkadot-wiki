@@ -1,0 +1,35 @@
+name: Update Auction Schedules
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Once a week
+  workflow_dispatch: # Or manually from GitHub UI
+
+jobs:
+  update_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Update cache
+        run: |
+          git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
+          git config --global user.name "Polkadot-Kusama Bot"
+          git branch auction-schedule-update
+          git checkout auction-schedule-update
+          yarn && yarn update:auctions
+      - name: Commit and push changes
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git commit -a -m 'auction schedule update'
+            git push --set-upstream origin auction-schedule-update
+          else
+            echo No auction changes detected, skipping update.
+          fi
+      - name: create pull request
+        run: gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Automated Auction Schedule Update'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
