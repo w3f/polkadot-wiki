@@ -404,7 +404,7 @@ validator mode right away:
 :::tip Use Warp sync for faster syncing
 
 By default, the node performs `full` sync, which downloads and validates the full blockchain
-history. `warp` sync can be used as a faster way for syncing the validator node.
+history. `warp` sync can be used as a faster way to sync the validator node.
 
 `./target/production/polkadot --sync warp`
 
