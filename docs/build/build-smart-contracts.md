@@ -173,7 +173,7 @@ should also keep up to date with the following links:
 
 ### Parachains
 
-- [Moonbeam][]
+- [Moonbeam](https://moonbeam.network/)
 - [Astar](https://astar.network/)
 - [Acala](https://acala.network/)
 - [Phala](https://phala.network)
@@ -184,8 +184,8 @@ at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
 
-[Moonbeam][] is another project that is planning to deploy to Polkadot as a parachain and will
-support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier][], an interoperability
+[Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a parachain and will
+support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier](https://github.com/paritytech/frontier), an interoperability
 layer with existing Ethereum tooling, it will support all applications that are written to target
 the EVM environment with little friction.
 
@@ -198,15 +198,11 @@ Try deploying a smart contract to Moonbeam by following their [documentation][mo
 
 #### Astar
 
-[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform
-and intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is
-the sister network to Astar, is currently live on Kusama, and supports EVM, WASM, and Layer 2
-solutions. Astar aims to house all layer 2 scaling solutions and support all layer 2 protocols
-through the [OVM](https://docs.astar.network/learn/layer2/optimistic-virtual-machine) (Optimistic
-Virtual Machine).
+[Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability. True interoperability with cross-consensus messaging [XCM](https://wiki.polkadot.network/docs/learn-xcm) and cross-virtual machine [XVM](https://github.com/AstarNetwork/). We are made by developers and for developers. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.
 
-Try deploying an Ethereum or ink! smart contract by following their
-[documentation](https://docs.astar.network/build/smart-contracts).
+[Shiden Network](https://shiden.astar.network/) is the canary network of Astar Network, live as a parachain on Kusama, and supports the EVM and WASM environment for all developers who want to build out use-cases in a canary network with economic value. Shiden acts as a playground for developers.
+
+Try deploying an Ethereum or ink! smart contract by following their [documentation](https://docs.astar.network/).
 
 #### Acala
 
