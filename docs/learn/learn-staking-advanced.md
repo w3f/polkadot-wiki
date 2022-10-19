@@ -401,8 +401,7 @@ in 2020 that saw the DOT token supply increase by 100 times. The current token s
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
-and the remainder going to the treasury. The current token supply on Kusama is
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }}
+and the remainder going to the treasury. The current token supply on Kusama is <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/>
 (Over 12 Million KSM). :kusama }}
 
 There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the _system
