@@ -57,6 +57,14 @@ export default function Footer() {
             Community Hub
           </a>
           <a
+            href="https://kusa.ma/discord"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="homepage-font"
+          >
+            Kusama Discord
+          </a>
+          <a
             href="https://matrix.to/#/!HfRYKXBoPmDBCAWUEJ:polkadot.builders"
             target="_blank"
             rel="noreferrer noopener"
