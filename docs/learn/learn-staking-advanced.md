@@ -51,31 +51,46 @@ to staking, session and utility pallets.
 
 ![stash-controller](../assets/stash-controller.png)
 
-Usually, with the stash-controller setup, the stash still needs to sign for bonding more funds and
-change the controller (see figure above). With a staking proxy, the stash account is even more isolated
-than a controller account since one can bond more funds and change the controller using the
-staking proxy account. This does not necessarily mean that the staking proxy can sign for all
-staking-related transactions. Below we show two main configurations that affect a staking proxy's permissions.
-
-### Stash is not Controller
-
-If the stash and controller are different accounts, the staking proxy will just be used to bond more funds and change the controller. Thus the staking proxy will be used to sign for those transactions usually signed by the stash.
-
-![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
+Usually, with the stash-controller setup, the stash still needs to sign for actions that are
+performed less often, i.e. bonding more funds and changing the controller (see figure above). The
+controller is used to sign for those staking actions that are performed more often such as
+nominating. Remember, staking on polkadot is not a set-and-forget action, as a nominator you will
+need to monitor the performance of your validators and make changes if needed. Also, each time you
+sign with an account, you expose the private key of that account to the internet with consequent
+risk of attack. Ideally, accounts with high economic power like the stash must be and remain as
+isolated as possible. With a staking proxy, the stash account is even more isolated than when using
+a controller. This does not necessarily mean that the staking proxy can sign for all staking-related
+transactions. Below we show two main configurations that affect a staking proxy's permissions.
 
 ### Stash is also Controller
 
-It is not necessary to have a controller if you have a staking proxy: the stash can also
-be the controller, and the account security will not be compromised. In this case, the staking proxy will be used to sign all staking-relate transactions.
+It is not necessary to have a controller if you have a staking proxy: the stash can also be the
+controller, and the account security will not be compromised. In this case, the staking proxy will
+be used to sign all staking-relate transactions. Note that to change the staking proxy you will need
+to sign with the stash.
 
 ![stash-stakingProxy](../assets/stash-stakingProxy.png)
 
-Note that this situation is similar to having the controller as a staking proxy.
+This situation is similar to having the controller as a staking proxy. For a practical perspective
+we need to use only one account and remember one password to sign for all staking-related
+transactions. From a security perspective who controls the staking proxy controls our staking
+actions.
 
-It is important to remember that actions that can be performed by the proxy
-accounts are limited, and in the case of staking proxy, extrinsic calls to the balances pallet
-cannot be signed. This means it is not possible to do balance transfers on the proxied account
-through a staking proxy.
+It is important to remember that actions that can be performed by the proxy accounts are limited,
+and in the case of staking proxy, extrinsic calls to the balances pallet cannot be signed. This
+means it is not possible to do balance transfers on the proxied account through a staking proxy.
+
+### Stash is not Controller
+
+If the stash and controller are different accounts, the staking proxy will just be used to bond more
+funds and change the controller. Thus the staking proxy will be used to sign for those transactions
+that are used less often and that are usually signed by the stash.
+
+![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
+
+From a practical perspective, we now have two accounts and we need to remember two passwords. From a
+security perspective, the party who wants to fully control our staking actions must have access to
+two accounts.
 
 ## Bags List
 
@@ -381,20 +396,22 @@ already maxed out.
 
 {{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to the treasury. DOT went through [redenomination](../general/redenomination.md) 
+and the remainder going to the treasury. DOT went through [redenomination](../general/redenomination.md)
 in 2020 that saw the DOT token supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
-and the remainder going to the treasury. The current token supply on Kusama is 
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }} (Over 12 Million KSM). :kusama }}
+and the remainder going to the treasury. The current token supply on Kusama is <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/>
+(Over 12 Million KSM). :kusama }}
 
-There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the *system staking rate* meet the *ideal staking rate*. The system staking rate would be the total amount staked over the total token supply, where the
-total amount staked is the stake of all validators and nominators on the network. The ideal staking
-rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
-{{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
-token liquid. {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the 
-system staking rate of the entire network.
+There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the _system
+staking rate_ meet the _ideal staking rate_. The system staking rate would be the total amount
+staked over the total token supply, where the total amount staked is the stake of all validators and
+nominators on the network. The ideal staking rate accounts for having sufficient backing of
+{{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} to prevent the possible compromise of
+security while keeping the native token liquid.
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the system staking
+rate of the entire network.
 
 :::info
 
@@ -408,20 +425,23 @@ estimation of all DOT that should be staked, per parachain slot).
 
 :::info The ideal staking rate varies based on the number of parachains
 
-The current staking rate on Polkadot still assumes the absence of parachains, with the suggested 
-ideal staking rate of 75%. You can track the progress on the issue to adjust it 
-[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama.
-At the time of updating this section, the ideal staking rate on Kusama was 50.5% when there were 
-49 parachain slots. When the number of slots goes to 60, the ideal staking rate will be 45%. 
-[Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535)
-is the code for reference. This code assumes that the number of slots auctioned correspond to the number of parachains on the relaychain, which may not be true as new slots can be occupied by old parachains that are renewing their lease. You can also track the progress on resolving this specific issue 
+The current staking rate on Polkadot still assumes the absence of parachains, with the suggested
+ideal staking rate of 75%. You can track the progress on the issue to adjust it
+[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama,
+which has an ideal staking rate of approximately 50% with 50 parachains. When the number of slots
+reaches 60, the ideal staking rate is 45%.
+[Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the
+code for reference. This code assumes that the number of slots auctioned correspond to the number of
+parachains on the relaychain, which may not be true as new slots can be occupied by old parachains
+that are renewing their lease. You can also track the progress on resolving this specific issue
 [here](https://github.com/paritytech/polkadot/pull/5872).
 
 :::
 
-If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators go up, incentivizing them to stake more tokens on the network. On the contrary, if it goes above the 
-ideal rate, staking rewards drop. This is a result of the change in the percentage of staking 
-rewards that go to the Treasury.
+If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators go up,
+incentivizing them to stake more tokens on the network. On the contrary, if it goes above the ideal
+rate, staking rewards drop. This is a result of the change in the percentage of staking rewards that
+go to the Treasury.
 
 ![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
@@ -429,8 +449,10 @@ rewards that go to the Treasury.
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
-- **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators and nominators.
-- **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual returns on the staked tokens.
+- **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators
+  and nominators.
+- **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual
+  returns on the staked tokens.
 
 You can determine the staking rewards by looking at the top bar of the staking overview on
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking).
