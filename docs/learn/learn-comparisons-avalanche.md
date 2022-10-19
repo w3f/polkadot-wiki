@@ -20,7 +20,7 @@ As aforementioned, the Avalanche architecture is comprised of three different ch
 
 #### P-chain (Platform)
 
-The P-chain is responsible for the validator set and securing the network. AVAX token holders can spin up their own nodes and become validators by staking their tokens. Similar to the NPoS system that Polkadot uses, Avalanche uses a Delegated PoS which allows token holders who do not want to spin up their own node to become validators to delegate their token stake to existing validators. When a new subnet is spun up, it will also be connected to the p-chain. 
+The P-chain is responsible for maintaining the validator set and securing the network. AVAX token holders can spin up their own nodes and become validators by staking their tokens. Similar to the NPoS system that Polkadot uses, Avalanche uses a Delegated PoS which allows token holders to delegate their token stake to existing validators, instead of spinning up their own nodes.
 
 #### X-chain (Exchange)
 
