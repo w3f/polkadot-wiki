@@ -403,7 +403,14 @@ validator mode right away:
 
 :::tip Use Warp syncing for the fast syncing of a pruned node
 
-`./target/production/polkadot --sync warp` imports the latest blockchain state and proofs.
+`./target/production/polkadot --sync warp`
+
+Warp sync initially downloads the whole state of the latest finalized block, and the finality proofs 
+from GRANDPA for all validator set transitions from the genesis up until the latest era. After 
+the warp sync, the node is ready to import the latest blocks from the network and can be
+used as a Validator. The blocks from genesis will be downloaded in the background. Check 
+[this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
+for more information about the different sync options available. 
 
 :::
 
