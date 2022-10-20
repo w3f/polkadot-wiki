@@ -107,10 +107,6 @@ The upgrades to Avalanche are administered by the protocol developers at [Ava La
 When performing upgrades, every single validator on the Subnet will need to perform the identical upgrade. 
 This requires a co-ordination effort among the Validators of the Subnet. On Polkadot, upgrades to Parachains can be deployed automatically without any coordination with the Validators on the relaychain.
 
-## In the physical realm
-
-Ava Labs, founded by Emin Gün Sirer is based in Brooklyn, NY, and is currently the main organization behind the development of Avalanche consensus and the Avalanche Primary Network. Emin, a professor at Cornell and known for his work in the Bitcoin ecosystem, namely around the "selfish mining" attack together with Maofan Ted Yin produced the research and ideas for Avalanche at Cornell. 
-
 ## Conclusion
 
 Avalanche has made some design decisions that allow for an improved smart-contract development environment in which protocol engineers can have the freedom to create their own blockchains and include them in the Avalanche ecosystem via subnets. The trade-offs are that the autonomy of design is limited and blockchains have to buy into the design decisions of Avalanche's main chains. Unlike parachains on Polkadot, Subnets are not able to share the security of the main chains. In addition to utilizing block finality and security of the Relay-chain, parachains on Polkadot use [XCM](learn-xcm) to pass native trustless messages, instead of having to rely on multiple bridging solutions. However, Subnets are easy to launch when compared to parachains, given that they only need a recommended minimum of 5 validators, which make the costs of launch predictable. Avalanche has plans to implement shared security, interoperability, composability and on-chain governance features which are already offered by Polkadot.
