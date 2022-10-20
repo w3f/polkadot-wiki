@@ -9,7 +9,7 @@ slug: ../learn-comparisons-avalanche
 
 <!-- Add more infographics to this page -->
 
-:::note
+:::info
 
 To keep the content on this page factually correct and up-to-date, [contributions](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) are welcome.
 
@@ -23,7 +23,7 @@ Avalanche's architecture separates the responsibility of a layer-1 smart contrac
 
 ![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png "Image from https://docs.avax.network/")
 
-<span class="caption"> Image source: [Avalanche docs](https://docs.avax.network/).</span>
+Image source: [Avalanche docs](https://docs.avax.network/).
 
 #### P-chain (Platform)
 
@@ -48,7 +48,7 @@ In Polkadot's terminology, Subnets can be viewed as public or private blockchain
 
 ![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png "Image from https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols")
 
-<span class="caption"> Image source: [gyuho.dev](https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols).</span>
+Image source: [gyuho.dev](https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols).
 
 Avalanche consensus uses a family of protocols to achieve security, liveness, and finality. These are known as the Snow* protocols. This group of protocols composed together uses both classical and Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
 
