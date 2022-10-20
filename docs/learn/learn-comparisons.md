@@ -16,6 +16,8 @@ chains.
 
 - [vs Cosmos](learn-comparisons-cosmos.md)
 
+- [vs Avalanche](learn-comparisons-avalanche.md)
+
 ## Other Comparisons
 
 ### Ethereum 1.x
