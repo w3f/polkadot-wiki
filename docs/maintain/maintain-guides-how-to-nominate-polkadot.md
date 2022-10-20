@@ -24,7 +24,7 @@ help you get started.
 :::info
 
 The following information applies to the Polkadot network. If you want to nominate on Kusama, check
-out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
+out the [Kusama guide](https://guide.kusama.network/docs/maintain-guides-how-to-nominate-kusama/) instead.
 
 :::
 
