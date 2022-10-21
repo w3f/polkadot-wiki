@@ -71,6 +71,7 @@ service, and additional metrics.
 - [OnFinality](https://onfinality.io)
 - [Dwellir](https://dwellir.com)
 - [Pinknode](https://pinknode.io)
+- [Radium Block](https://radiumblock.com/)
 
 :::note
 
