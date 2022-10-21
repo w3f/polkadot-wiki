@@ -370,7 +370,7 @@ You can begin syncing your node by running the following command if you do not w
 validator mode right away:
 
 ```sh
-./target/release/polkadot
+./target/production/polkadot
 ```
 
 ```
@@ -398,6 +398,22 @@ validator mode right away:
 2021-06-17 03:07:55 ⚙️  Syncing 138.4 bps, target=#5553767 (21 peers), best: #26874 (0xcf4b…6553), finalized #26624 (0x9dd9…27f8), ⬇ 18.9kiB/s ⬆ 2.0kiB/s
 2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s
 ```
+
+:::
+
+:::tip Use Warp sync for faster syncing
+
+By default, the node performs `full` sync, which downloads and validates the full blockchain
+history. `warp` sync can be used as a faster way to sync the validator node.
+
+`./target/production/polkadot --sync warp`
+
+Warp sync initially downloads and validates the finality proofs from [GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa)
+and then downloads the state of the latest finalized block. After the warp sync, the node is ready to
+import the latest blocks from the network and can be used as a Validator. The blocks from genesis
+will be downloaded in the background. Check
+[this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
+for more information about the different sync options available.
 
 :::
 
