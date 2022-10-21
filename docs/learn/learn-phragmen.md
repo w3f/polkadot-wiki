@@ -115,7 +115,7 @@ person with weight `5` voting for that candidate.
 
 The particular algorithm we call here the "Basic Phragmén" was first described by Brill _et al._ in
 their paper
-["Phragmén’s Voting Methods and Justified Representation"](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791).
+["Phragmén’s Voting Methods and Justified Representation"](https://ojs.aaai.org/index.php/AAAI/article/view/10598).
 
 ### Algorithm
 
@@ -765,7 +765,7 @@ size _k_:
   Rust implementation used in Substrate.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
-- [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
+- [Phragmén’s Voting Methods and Justified Representation](https://ojs.aaai.org/index.php/AAAI/article/view/10598) -
   This paper by Brill _et al._ is the source for the simple Phragmén method, along with proofs about
   its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
