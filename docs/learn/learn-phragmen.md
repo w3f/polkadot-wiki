@@ -121,7 +121,7 @@ their paper
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 
-1. Candidates submit their ballots, marking which candidates they approve. Ballots will not be
+1. Voters submit their ballots, marking which candidates they approve. Ballots will not be
    modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters
