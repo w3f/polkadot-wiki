@@ -22,7 +22,7 @@ own logic and runs in parallel within the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 Developers can focus on creating state-of-the-art chains that take advantage of
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} next-generation approach. Some
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s next-generation approach. Some
 examples of what a parachain could be are:
 
 - DeFi (Decentralized Finance) Applications
@@ -87,7 +87,7 @@ With {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, you will ge
 of the box if you build your application as a parachain. The [XCM format](../learn/learn-xcm.md)
 allows any parachains to communicate by passing messages between them. Furthermore, as bridges to
 other chains are connected (such as those to Bitcoin or Ethereum)
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains will be able to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s parachains will be able to
 communicate with these as well.
 
 :::note
@@ -429,8 +429,7 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## Resources
 
-<!-- - [Parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) -->
-
+- [Parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/)
 - [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)

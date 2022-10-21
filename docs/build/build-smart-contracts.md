@@ -22,7 +22,7 @@ a specific chain address.
 In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a
 state transition function).
 
-Smart contracts must consciously implement upgradability while parachains will have the ability to
+Smart contracts must consciously implement upgradeability while parachains will have the ability to
 swap out their code entirely through a root command or via the governance pallet.
 
 When you build a smart contract, it will eventually be deployed to a target chain with its own
@@ -89,8 +89,8 @@ Here is the list of current resources available to developers who want to get st
 contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/smart-contracts/develop-contract/) -
-  Walks you through the basics of writing and deploying an ERC-20 token using `ink!`.
+- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/smart-contracts/) - Walks you
+  through the basics of writing and deploying an ERC-20 token using `ink!`.
 
 ### Contracts Pallet
 
@@ -184,10 +184,11 @@ at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
 
-[Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a parachain and will
-support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier](https://github.com/paritytech/frontier), an interoperability
-layer with existing Ethereum tooling, it will support all applications that are written to target
-the EVM environment with little friction.
+[Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
+parachain and will support Ethereum compatible smart contracts. Since Moonbeam uses
+[Frontier](https://github.com/paritytech/frontier), an interoperability layer with existing Ethereum
+tooling, it will support all applications that are written to target the EVM environment with little
+friction.
 
 [Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam,
 launched as a parachain on Kusama. Parachain functionality is live, and features are being
@@ -198,11 +199,19 @@ Try deploying a smart contract to Moonbeam by following their [documentation][mo
 
 #### Astar
 
-[Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability. True interoperability with cross-consensus messaging [XCM](https://wiki.polkadot.network/docs/learn-xcm) and cross-virtual machine [XVM](https://github.com/AstarNetwork/). We are made by developers and for developers. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.
+[Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart
+contracts and offers developers true interoperability. True interoperability with cross-consensus
+messaging [XCM](https://wiki.polkadot.network/docs/learn-xcm) and cross-virtual machine
+[XVM](https://github.com/AstarNetwork/). We are made by developers and for developers. Astar’s
+unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the
+code they write and dApps they build.
 
-[Shiden Network](https://shiden.astar.network/) is the canary network of Astar Network, live as a parachain on Kusama, and supports the EVM and WASM environment for all developers who want to build out use-cases in a canary network with economic value. Shiden acts as a playground for developers.
+[Shiden Network](https://shiden.astar.network/) is the canary network of Astar Network, live as a
+parachain on Kusama, and supports the EVM and WASM environment for all developers who want to build
+out use-cases in a canary network with economic value. Shiden acts as a playground for developers.
 
-Try deploying an Ethereum or ink! smart contract by following their [documentation](https://docs.astar.network/).
+Try deploying an Ethereum or ink! smart contract by following their
+[documentation](https://docs.astar.network/).
 
 #### Acala
 
