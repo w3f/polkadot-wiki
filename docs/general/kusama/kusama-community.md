@@ -65,7 +65,6 @@ application we use most often to interact with the Matrix protocol is the
 - [Web3 Medium Blog](https://medium.com/@web3)
 - [Polkadot Blog](https://polkadot.network/blog/)
 - [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-- [Dotleap.com Tutorials](https://dotleap.com)
 
 ## Newsletters
 
