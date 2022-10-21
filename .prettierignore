@@ -9,3 +9,4 @@
 
 # Ignore translated docs (not currently maintained)
 /polkadot-wiki/translated_docs/
+/docs/build/build-open-source.md
