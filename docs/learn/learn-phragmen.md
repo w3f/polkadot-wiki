@@ -56,20 +56,14 @@ Given the large set of nominators and validators, Phragmén's method is a diffic
 problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to
 propose the set of winners. The reason for performing this computation off-chain is to keep a
 constant block time of six seconds and prevent long block times at the end of each era, when the
-validator election takes place.
+validator election takes place. 
 
-Because certain user actions, like changing nominations, can change the outcome of the Phragmén
-election, the system forbids calls to these functions for the last quarter of the session before an
-era change. These functions are not permitted:
+:::info Staking Miners
 
-- `bondExtra`
-- `unbond`
-- `withdrawUnbonded`
-- `validate`
-- `nominate`
-- `chill`
-- `payoutStakers`
-- `rebond`
+The process of computing the optimal solution for NPoS election can be delegated to 
+[Staking Miners](learn-staking-miner).
+
+:::
 
 ### Council Elections
 
