@@ -56,20 +56,14 @@ Given the large set of nominators and validators, Phragmén's method is a diffic
 problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to
 propose the set of winners. The reason for performing this computation off-chain is to keep a
 constant block time of six seconds and prevent long block times at the end of each era, when the
-validator election takes place.
+validator election takes place. 
 
-Because certain user actions, like changing nominations, can change the outcome of the Phragmén
-election, the system forbids calls to these functions for the last quarter of the session before an
-era change. These functions are not permitted:
+:::info Staking Miners
 
-- `bondExtra`
-- `unbond`
-- `withdrawUnbonded`
-- `validate`
-- `nominate`
-- `chill`
-- `payoutStakers`
-- `rebond`
+The process of computing the optimal solution for NPoS election can be delegated to 
+[Staking Miners](learn-staking-miner).
+
+:::
 
 ### Council Elections
 
@@ -115,13 +109,13 @@ person with weight `5` voting for that candidate.
 
 The particular algorithm we call here the "Basic Phragmén" was first described by Brill _et al._ in
 their paper
-["Phragmén’s Voting Methods and Justified Representation"](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791).
+["Phragmén’s Voting Methods and Justified Representation"](https://ojs.aaai.org/index.php/AAAI/article/view/10598).
 
 ### Algorithm
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 
-1. Candidates submit their ballots, marking which candidates they approve. Ballots will not be
+1. Voters submit their ballots, marking which candidates they approve. Ballots will not be
    modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters
@@ -765,7 +759,7 @@ size _k_:
   Rust implementation used in Substrate.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
-- [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
+- [Phragmén’s Voting Methods and Justified Representation](https://ojs.aaai.org/index.php/AAAI/article/view/10598) -
   This paper by Brill _et al._ is the source for the simple Phragmén method, along with proofs about
   its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
