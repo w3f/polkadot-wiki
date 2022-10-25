@@ -51,29 +51,6 @@ order to submit solutions to the NPoS election. When the correct time comes, it 
 solution and submits it to the chain. The default miner algorithm is sequential Phragmén with a
 configurable number of balancing iterations that improve the score.
 
-## Deposit and reward mechanics
-
-The staking miners are required to pay a deposit in order to post their solutions. The deposit is a
-sum of the `SignedDepositBase`, which is a fixed amount and `SignedDepositByte`, a variable amount
-per KB of solution data. All good solutions are subject to recieving a `SignedRewardBase`.
-
-Current deposit(**SignedDepositBase**) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :kusama }}
-
-Current deposit per byte(**SignedDepositByte**) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :kusama }}
-
-Current rewards(**SignedRewardBase**) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
-
-Once the staking miner with a good solution is ready to be rewarded,
-[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/f2bc08a3071a91b71fec63cf2b22c707411cec0e/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
-will be called, which will submit the solution to the queue of solutions, reward the staking miner
-and refund the deposit.
-
 ## Signed Phase of the election pallet
 
 The election provider pallet `pallet_election_provider_multi_phase` is divided into two phases,
@@ -140,6 +117,32 @@ Queue
 |             None              |
 +-------------------------------+
 ```
+
+## Deposit and reward mechanics
+
+The staking miners are required to pay a deposit in order to post their solutions. The deposit is a
+sum of the `SignedDepositBase`, which is a fixed amount and `SignedDepositByte`, a variable amount
+per KB of solution data. All good solutions are subject to recieving a `SignedRewardBase`.
+
+Current deposit(**SignedDepositBase**) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :kusama }}
+
+Current deposit per byte(**SignedDepositByte**) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :kusama }}
+
+Current rewards(**SignedRewardBase**) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
+
+Once the `SignedPhase` is over the runtime will automatically check the solutions from best to worst
+based on score.
+
+<!-- Once the staking miner with a good solution is ready to be rewarded the `SignedPhase` will execute
+[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/f2bc08a3071a91b71fec63cf2b22c707411cec0e/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
+will be executed by the , which will submit the solution to the queue of solutions, reward the staking miner
+and refund the deposit.  -->
 
 If you want to run a staking miner on your validator, refer to the repository provided in the
 resources section below.
