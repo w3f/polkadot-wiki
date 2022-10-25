@@ -95,13 +95,16 @@ Upon arrival of a new solution:
 3. If the queue is full and the solution is not an improvement compared to any of the queued ones,
    it is instantly rejected and no deposit is reserved.
 
-Upon the end of the signed phase, no more solutions can be submitted and the solutions in the queue
+Upon the end of the `SignedPhase`, no more solutions can be submitted and the solutions in the queue
 will be checked using
 [`Pallet::feasibility_check`](https://paritytech.github.io/substrate/master/pallet_election_provider_multi_phase/pallet/struct.Pallet.html#method.feasibility_check)
 which ensures the score is indeed correct, and marks them as valid or invalid. By checking each
 solution in the queue, the queue will be reorganized by score. The highest valid score will be
 rewarded. Invalid solutions with higher score than the winning solution will be slashed. The rest of
-the solutions will be discarded and their deposit will be returned.
+the solutions will be discarded and their deposit will be returned. Once the staking miner with a
+winning solution is ready to be rewarded the runtime will automatically execute
+[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/f2bc08a3071a91b71fec63cf2b22c707411cec0e/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
+which reward account associated with the winning solution.
 
 ```
 Queue
@@ -135,14 +138,6 @@ Current deposit per byte(**SignedDepositByte**) is
 Current rewards(**SignedRewardBase**) is
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
-
-Once the `SignedPhase` is over the runtime will automatically check the solutions from best to worst
-based on score.
-
-<!-- Once the staking miner with a good solution is ready to be rewarded the `SignedPhase` will execute
-[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/f2bc08a3071a91b71fec63cf2b22c707411cec0e/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
-will be executed by the , which will submit the solution to the queue of solutions, reward the staking miner
-and refund the deposit.  -->
 
 If you want to run a staking miner on your validator, refer to the repository provided in the
 resources section below.
