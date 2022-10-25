@@ -11,20 +11,25 @@ import RPC from "./../../components/RPC-Connection";
 
 :::caution
 
-The staking-miner code is experimental and it is still in development phase. Use is at your own
+The staking-miner code is experimental and it is still in the development phase. Use is at your own
 discretion, as there is a risk of losing some funds.
 
 :::
 
-The staking miner is a passive validator functionality which runs when a new set of validators need
-to be elected for NPoS. This is a computationally intense process, hence the mining. Staking miners
-compete with each other to produce election solutions which consist of a validator set, stake
-distribution across that set, and a score indicating how optimal the solution is. Staking miners run
-the any given staking algortihms(as of now, sequential Phragmén or PhragMMS, this is subject to
-change if improved algorithms are introduced) to produce results, and the result is then sent as a
-transaction to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a
-transaction fee. The best solution is rewarded which in the least covers the transaction fee, and
-the bond is returned to the account. If the solution is not valid, the bond and the fee are lost.
+At the end of each era on Polkadot and Kusama, using [NPoS](learn-phragmen), a new set of validators 
+must be elected based on the nominator preferences. This is a computationally intensive process, hence 
+the usage of the term "mining" for computing the solution. The validators use 
+[off-chain workers](https://docs.substrate.io/reference/how-to-guides/offchain-workers/) to 
+compute the result and submit a transaction to propose the set of winners. This can also be delegated 
+to stand-alone programs, whose task is to mine the optimal solution. Staking miners compete with each other 
+to produce election solutions which consist of a validator set, stake distribution across that set, and a score 
+indicating how optimal the solution is. Staking miners run any given staking algorithms (as of now, 
+sequential Phragmén or PhragMMS, subject to change if improved algorithms are introduced) to produce results, 
+which are then sent as a transaction to the relay chain via a normal signed extrinsic. The transaction 
+requires a bond and a transaction fee. The best solution is rewarded, which the least covers the 
+transaction fee, and the bond is returned to the account. The bond and the fee are lost if the solution 
+is invalid.
+
 
 Staking miner uses a pallet called `pallet_election_provider_multi_phase` and can only produce
 solutions during the
