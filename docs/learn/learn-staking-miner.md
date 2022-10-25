@@ -70,7 +70,7 @@ Current rewards(**SignedRewardBase**) is
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
 
 Once the staking miner with a good solution is ready to be rewarded,
-[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/master/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
+[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/f2bc08a3071a91b71fec63cf2b22c707411cec0e/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
 will be called, which will submit the solution to the queue of solutions, reward the staking miner
 and refund the deposit.
 
@@ -148,5 +148,4 @@ resources section below.
 
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
-- [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L389:L397)
-
+- [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
