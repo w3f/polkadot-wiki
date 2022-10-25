@@ -123,27 +123,37 @@ Queue
 
 ## Deposit and reward mechanics
 
-The staking miners are required to pay a deposit in order to post their solutions. The deposit is a
-sum of the `SignedDepositBase`, which is a fixed amount and `SignedDepositByte`, a variable amount
-per KB of solution data. All good solutions are subject to recieving a `SignedRewardBase`.
+The staking miners are required to pay a deposit to post their solutions. Deposit amount is the sum
+of `SignedDepositBase` +`SignedDepositByte` + `SignedDepositWeight`. All good solutions are subject
+to receiving a `SignedRewardBase`.
 
-Current deposit(**SignedDepositBase**) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={16} filter="humanReadable"/> :kusama }}
+### Deposit
 
-Current deposit per byte(**SignedDepositByte**) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={16} filter="humanReadable"/> :kusama }}
+Current deposit(`SignedDepositBase`) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/> :kusama }}
+which is a fixed amount.
 
-Current rewards(**SignedRewardBase**) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={16} filter="humanReadable"/> :kusama }}
+Current deposit per byte(`SignedDepositByte`) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="humanReadable"/> :kusama }}
+which is variable depending on the size of the solution data.
+
+And the weight deposit(`SignedDepositWeight`) is calculated by the runtime once a winning solution
+has been elected.
+
+### Reward
+
+Current reward(`SignedRewardBase`) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+which is a fixed amount.
+
+## Further Resources
 
 If you want to run a staking miner on your validator, refer to the repository provided in the
 resources section below.
 
-## Further Resources
-
-- [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
+- [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
 - [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
