@@ -175,8 +175,12 @@ There are two types of tips:
   which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
-:::info For information about how to submit a tip from the Treasury you can read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181971). :::
+:::info 
+
+For information about how to submit a tip from the Treasury you can read
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181971). 
+
+:::
 
 To better understand the process a tip goes through until it is paid out, let's consider the example
 below.
