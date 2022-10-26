@@ -140,8 +140,7 @@ variable depending on the size of the solution data. For example a solution weig
 yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
 {{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
 
-And the weight deposit(`SignedDepositWeight`) is calculated by the runtime once a winning solution
-has been elected.
+And the weight deposit(`SignedDepositWeight`) is currently set to `0` and has no effect.
 
 ### Reward
 
