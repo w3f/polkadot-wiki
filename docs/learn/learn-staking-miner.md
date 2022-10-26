@@ -135,10 +135,9 @@ Current deposit(`SignedDepositBase`) is
 which is a fixed amount.
 
 Current deposit per byte(`SignedDepositByte`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={0.0000097656} /> DOT :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={0.00000032551} /> KSM :kusama }}
-and the total is variable depending on the size of the solution data. For example a solution
-weighing 200KB would yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
+{{ polkadot: 0.0000097656 DOT :polkadot }}{{ kusama: 0.00000032551 KSM :kusama }} and the total is
+variable depending on the size of the solution data. For example a solution weighing 200KB would
+yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
 {{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
 
 And the weight deposit(`SignedDepositWeight`) is calculated by the runtime once a winning solution
