@@ -70,8 +70,7 @@ PoS network rewards good behavior and punishes bad behavior.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements
 [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake), a relatively novel
 and sophisticated mechanism to select the validators who are allowed to participate in its
-[consensus](learn-consensus.md) protocol. The NPoS encourages
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as nominators. NPoS
+[consensus](learn-consensus.md) protocol. NPoS
 encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as
 **nominators**.
 
