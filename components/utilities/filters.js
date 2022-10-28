@@ -5,12 +5,12 @@ const Statemint = "statemint";
 
 const values = {
   polkadot: {
-      precision: 1e10,
-      symbol: "DOT",
+    precision: 1e10,
+    symbol: "DOT",
   },
-    kusama: {
-      precision: 1e12,
-      symbol: "KSM",
+  kusama: {
+    precision: 1e12,
+    symbol: "KSM",
   },
   statemint: {
     precision: 1e10,

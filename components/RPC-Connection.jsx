@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { HumanReadable, BlocksToDays} from "./utilities/filters";
+import { HumanReadable, BlocksToDays } from "./utilities/filters";
 
 /*
 This component connects to the Polkadot/Kusama APIs and renders the response data.
@@ -139,7 +139,7 @@ function applyFilter(value, filter, network, setReturnValue) {
     	break;
 		case "blocksToDays":
 			BlocksToDays(value, setReturnValue);
-			break;
+		break;
 		default:
 			console.log("Ignoring unknown filter type");
 			return;

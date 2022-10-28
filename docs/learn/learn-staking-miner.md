@@ -27,7 +27,7 @@ indicating how optimal the solution is. Staking miners run any given staking alg
 sequential Phragmén or PhragMMS, subject to change if improved algorithms are introduced) to produce results, 
 which are then sent as a transaction to the relay chain via a normal signed extrinsic. The transaction 
 requires a bond and a transaction fee. The best solution is rewarded, which the least covers the 
-transaction fee, and the bond is returned to the account. The bond and the fee are lost if the solution 
+transaction fee, and the bond is returned to the account. [The bond and the fee](learn-staking-miner#deposit-and-reward-mechanics)  are lost if the solution 
 is invalid.
 
 
@@ -40,10 +40,12 @@ starts, only the off-chain workers can provide election results.
 
 Running the staking miner requires passing the seed of a funded account in order to pay the fees for
 the transactions that will be sent. The same account's balance is used to reserve deposits as well.
-The best solution in each round is rewarded. All correct solutions will get their bond back and the
-ones that submit invalid solutions will lose their bond.
+The best solution in each round is rewarded. All correct solutions will get their deposit back and
+the ones that submit invalid solutions will lose their deposit.
 
 ## NPoS election optimization
+
+![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
 
 A basic election solution is a simple distribution of stake across validators, but this can be
 optimized for better distribution equaling a higher security score. The staking miner does not act
@@ -52,8 +54,6 @@ connects to a specified chain and keeps listening to new signed phase of the ele
 order to submit solutions to the NPoS election. When the correct time comes, it computes its
 solution and submits it to the chain. The default miner algorithm is sequential Phragmén with a
 configurable number of balancing iterations that improve the score.
-
-![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
 
 ## Signed Phase of the election pallet
 
@@ -94,18 +94,21 @@ Upon arrival of a new solution:
 
 1. If the queue is not full, it is stored in the appropriate sorted index.
 2. If the queue is full but the submitted solution is better than one of the queued ones, the worse
-   solution is discarded, the bond of the outgoing solution is returned, and the new solution is
+   solution is discarded, the deposit of the outgoing solution is returned, and the new solution is
    stored in the correct index.
 3. If the queue is full and the solution is not an improvement compared to any of the queued ones,
-   it is instantly rejected and no bond is reserved.
+   it is instantly rejected and no deposit is reserved.
 
-Upon the end of the signed phase, no more solutions can be submitted and the solutions in the queue
+Upon the end of the `SignedPhase`, no more solutions can be submitted and the solutions in the queue
 will be checked using
 [`Pallet::feasibility_check`](https://paritytech.github.io/substrate/master/pallet_election_provider_multi_phase/pallet/struct.Pallet.html#method.feasibility_check)
 which ensures the score is indeed correct, and marks them as valid or invalid. By checking each
 solution in the queue, the queue will be reorganized by score. The highest valid score will be
 rewarded. Invalid solutions with higher score than the winning solution will be slashed. The rest of
-the solutions will be discarded and their deposit will be returned.
+the solutions will be discarded and their deposit will be returned. Once the staking miner with a
+winning solution is ready to be rewarded the runtime will automatically execute
+[`finalize_signed_phase_accept_solution`](https://github.com/paritytech/substrate/blob/f2bc08a3071a91b71fec63cf2b22c707411cec0e/frame/election-provider-multi-phase/src/signed.rs#L453-L474)
+which reward account associated with the winning solution.
 
 ```
 Queue
@@ -122,10 +125,39 @@ Queue
 +-------------------------------+
 ```
 
-If you want to run a staking miner on your validator, refer to the repository provided in the
-resources section below.
+## Deposit and reward mechanics
+
+The staking miners are required to pay a deposit to post their solutions. Deposit amount is the sum
+of `SignedDepositBase` +`SignedDepositByte` + `SignedDepositWeight`. All good solutions are subject
+to receiving a `SignedRewardBase`.
+
+### Deposit
+
+Current deposit(`SignedDepositBase`) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/> :kusama }}
+which is a fixed amount.
+
+Current deposit per byte(`SignedDepositByte`) is
+{{ polkadot: 0.0000097656 DOT :polkadot }}{{ kusama: 0.00000032551 KSM :kusama }} and the total is
+variable depending on the size of the solution data. For example a solution weighing 200KB would
+yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
+{{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
+
+And the weight deposit(`SignedDepositWeight`) is currently set to `0` and has no effect.
+
+### Reward
+
+Current reward(`SignedRewardBase`) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+which is a fixed amount.
 
 ## Further Resources
 
-- [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
+If you want to run a staking miner on your validator, refer to the repository provided in the
+resources section below.
+
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
+- [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
+- [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
