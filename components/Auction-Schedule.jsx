@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { 
-	PolkadotAuctions,
-	PolkadotSlotLeasePeriod,
-	PolkadotSlotLeaseOffset,
-	PolkadotLeasePeriodPerSlot,
-	KusamaAuctions,
-	KusamaSlotLeasePeriod,
-	KusamaSlotLeaseOffset,
-	KusamaLeasePeriodPerSlot
-} from './utilities/auctionVariables';
+import { PolkadotAuctions, KusamaAuctions, FutureBlock } from './utilities/auctionVariables';
 
 let API = undefined;
 let ChainState =  {
@@ -20,7 +11,6 @@ let ChainState =  {
 	AuctionIndex: undefined,
 }
 let Options = [];
-const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
 
 // Component for displaying auction data
 function AuctionSchedule() {
@@ -92,32 +82,14 @@ async function GetChainData(chain, auctions, setAuctions, index) {
 		onboardEndDate: [selection.onboardEndBlock, selection.onboardEndHash]
 	}
 
-	// If a block is finalized get the on-chain timestamp, otherwise estimate it
-	let promises = [];
-	let keys = [];
-
-	// TODO - this is expensive to repetitively invocate so it might be worth caching dates for finalized blocks
-	// The values are cached once calculated in the viewing sessions so returning to a previous auction will display the cache
 	for (const [key, value] of Object.entries(selectedBlocks)) {
-		if (value[1] !== FutureBlock) {
-			const apiAt = await API.at(value[1]);
-			promises.push(apiAt.query.timestamp.now());
-			keys.push(key);
-		} else {
+		// Estimate block date for future blocks
+		if (value[1] === FutureBlock) {
 			auctions[index][key] = EstimateBlockDate(ChainState.BlockDate, ChainState.BlockNumber, value[0]);
+		} else {
+			auctions[index][key] = new Date(auctions[index][key]).toDateString();
 		}
 	}
-
-	await Promise.all(promises)
-		.then((stamps) => {
-			for(let i = 0; i < promises.length; i++) {
-				const date = new Date(stamps[i].toPrimitive());
-				auctions[index][keys[i]] = date.toDateString();
-			}
-		})
-		.catch((error) => {
-			console.log(error);
-		})
 
 	Render(chain, auctions, setAuctions, index);
 }
@@ -129,6 +101,29 @@ function EstimateBlockDate(date, currentBlock, estimatedBlock) {
 	const dateCopy = new Date(date.valueOf())
 	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
 	return dateCopy.toDateString();
+}
+
+// Calculate the current or next upcoming auction based on the current block
+function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
+	let index = 0;
+	let status = "";
+	for (let i = 0; i < auctions.length; i++) {
+		if (currentBlock === null) {
+			status = "Current block is still loading...";
+			return [index, status];
+		}
+		if (auctions[i].biddingEndsBlock > currentBlock) {
+			if (auctions[i].startBlock > currentBlock) {
+				status = `Auction #${i + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
+			} else {
+				status = `Auction #${i + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
+			}
+			index = i;
+			return [index, status];
+		}
+	}
 }
 
 // Update JSX
@@ -146,18 +141,8 @@ function Render(chain, auctions, setAuctions, index) {
 	if (currentBlockNumber !== undefined) {
 		currentBlockDate = currentBlockDate.toDateString();
 	} else {
-		currentBlockNumber = 0;
+		currentBlockNumber = null;
 		currentBlockDate = "Connecting...";
-	}
-
-	// If still calculating date estimation, inform user
-	if (auctions[index].hasOwnProperty("startDate") === false) {
-		const msg = "Retrieving date...";
-		auctions[index]["startDate"] = msg;
-		auctions[index]["endPeriodDate"] = msg;
-		auctions[index]["biddingEndsDate"] = msg;
-		auctions[index]["onboardStartDate"] = msg;
-		auctions[index]["onboardEndDate"] = msg;
 	}
 	
 	// On-boarding range
@@ -173,7 +158,7 @@ function Render(chain, auctions, setAuctions, index) {
 		</a>
 	</div>
 	// If onboarding is too far in the future to calculate
-	if (auctions[index]["onboardStartBlock"] === 0 || auctions[index]["onboardEndBlock"] === 0) {
+	if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
 		onboarding = <div>
 			On-boarding cannot yet be determined for this future event.
 		</div>
@@ -228,63 +213,6 @@ function Render(chain, auctions, setAuctions, index) {
 
 	setAuctions(content);
 	return auctions;
-}
-
-function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
-	let index = 0;
-	let status = "";
-	for (let i = 0; i < auctions.length; i++) {
-		if (currentBlock === 0) {
-			status = "Current block is still loading...";
-			return [index, status];
-		}
-		if (auctions[i].biddingEndsBlock > currentBlock) {
-			if (auctions[i].startBlock > currentBlock) {
-				status = `Auction #${i + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
-			} else {
-				status = `Auction #${i + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
-			}
-			index = i;
-			return [index, status];
-		}
-	}
-}
-
-// Get the auction end, on-board start and end blocks from auction start block
-async function GetAuctionBlocks(api, startBlock, chain) {
-	const hash = await BlockToHash(startBlock);
-	if (hash !== FutureBlock) {
-		const apiAt = await api.at(hash);
-		const [auctionLeasePeriod, auctionEndBlock] = (await apiAt.query.auctions.auctionInfo()).toJSON();
-		if (chain === "Polkadot") {
-			const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
-			const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
-			return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
-		}
-		else if (chain === "Kusama") {
-			const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
-			const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
-			return [auctionEndBlock, onboardStartBlock, onboardEndBlock]
-		}
-	}
-	else {
-		// We are dealing with future blocks - TODO use subscan instead of PolkadotJS?
-		return [0, 0, 0];
-	}
-}
-
-// Block number to block hash
-async function BlockToHash(api, block) {
-	const hash = await api.rpc.chain.getBlockHash(block);
-	return hash;
-}
-
-// Convert an integer representing number of days block count for that time span
-function DaysToBlocks(days) {
-	const blocks = (days / 6) * 86400;
-	return blocks;
 }
 
 export default AuctionSchedule;

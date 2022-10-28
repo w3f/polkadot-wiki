@@ -9,10 +9,22 @@ slug: ../maintain-guides-how-to-nominate-polkadot
 
 import RPC from "./../../components/RPC-Connection";
 
+:::tip New to Staking?
+
+Start your staking journey or explore more information about staking on
+[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
+[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+check this
+[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
+help you get started.
+{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+
+:::
+
 :::info
 
 The following information applies to the Polkadot network. If you want to nominate on Kusama, check
-out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
+out the [Kusama guide](https://guide.kusama.network/docs/maintain-guides-how-to-nominate-kusama/) instead.
 
 :::
 

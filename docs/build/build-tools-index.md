@@ -48,8 +48,7 @@ Please see the [Wallets](build-wallets.md) page.
 - [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows
   network information and staking details from validators and intentions.
   [GitHub Repository](https://github.com/Colm3na/polkastats-v2/).
-- [Panic](https://github.com/SimplyVC/panic) - A node monitoring and alert server for
-  validators.
+- [Panic](https://github.com/SimplyVC/panic) - A node monitoring and alert server for validators.
 - [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to
   monitor on chain states and events.
 
@@ -94,7 +93,7 @@ Please see the [Wallets](build-wallets.md) page.
 ## UI
 
 - [Polkadash](https://github.com/Swader/polkadash) - VueJS-based starter kit for custom user
-  interfaces for Substrate chains. [Tutorials](https://dotleap.com/tag/tutorial/).
+  interfaces for Substrate chains.
 - [Polkadot JS Apps UI](https://github.com/polkadot-js/apps) - Repository of the
   [polkadot.js.org/apps](https://polkadot.js.org/apps) UI.
 - [Substrate Front-end Template](https://github.com/substrate-developer-hub/substrate-front-end-template) -

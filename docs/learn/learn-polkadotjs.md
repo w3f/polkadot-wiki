@@ -113,7 +113,7 @@ For more user-friendly wallets, check out the supported and treasury-funded wall
 
 - [Introduction to Polkadot-JS](https://www.youtube.com/watch?v=4EQqwGFV1D8)
 - [Create an account using Polkadot-JS](https://www.youtube.com/watch?v=sy7lvAqyzkY)
-  [Network Explorer on Polkadot-JS UI](https://www.youtube.com/watch?v=g4b4IWR6OrE)
+- [Network Explorer on Polkadot-JS UI](https://www.youtube.com/watch?v=g4b4IWR6OrE)
 
 ### Documentation
 

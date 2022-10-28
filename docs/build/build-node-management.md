@@ -173,5 +173,6 @@ puts your node at higher risk of attack. You can run your own, private
 [this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). Substrate
-has a [monitor node metrics tutorial](https://docs.substrate.io/tutorials/get-started/node-metrics/)
+has a
+[monitor node metrics tutorial](https://docs.substrate.io/tutorials/get-started/monitor-node-metrics/)
 which uses this endpoint.
