@@ -31,7 +31,8 @@
     "crowdin": "crowdin",
     "docusaurus": "docusaurus",
     "prepare": "husky install",
-    "update:auctions": "node ./components/utilities/updateAuctions.js"
+    "update:auctions": "node ./components/utilities/updateAuctions.js",
+    "audit:links": "python ./scripts/auditLinks.py"
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
