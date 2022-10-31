@@ -193,7 +193,7 @@ mentioning that validators do most of the heavy lifting: they run the validator 
 produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to
 consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition
 function of parachains, and possibly some other responsibilities regarding data availability and
-[XCM](learn-cross-consensus.md). For more information, you can take a look at the
+[XCM](learn-xcm.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
 to become a validator you can consult
 [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.

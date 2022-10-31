@@ -258,7 +258,7 @@ total), and one lock period equals
 days. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction
 by 5.5. For additional information regarding the timeline of governance events, check out the
 governance section on the
-{{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.
+{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.

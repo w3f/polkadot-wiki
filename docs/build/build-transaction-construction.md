@@ -238,8 +238,8 @@ const txHash = getTxHash(signedTx);
 There are several ways to submit a signed payload:
 
 1. Signer CLI (`yarn run:signer submit --tx <signed-transaction> --ws <endpoint>`)
-1. [Substrate API Sidecar](build-node-interaction#substrate-api-sidecar)
-1. [RPC](build-node-interaction#polkadot-rpc) with `author_submitExtrinsic` or
+1. [Substrate API Sidecar](build-node-interaction.md#substrate-api-sidecar)
+1. [RPC](build-node-interaction.md#polkadot-rpc) with `author_submitExtrinsic` or
    `author_submitAndWatchExtrinsic`, the latter of which will subscribe you to events to be notified
    as a transaction gets validated and included in the chain.
 
