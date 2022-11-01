@@ -76,82 +76,88 @@ def getRefSlug(fullPath):
                 return slug
         return None
 
-# Table header
-log += "|File|Error|Tag|Url|\n"
-log += "|---|---|---|---|\n"
+def main():
+    # Table header
+    log += "|File|Error|Tag|Url|\n"
+    log += "|---|---|---|---|\n"
 
-for path, subdirs, files in os.walk(root):
-    for name in files:
-        if name[-3:] == ".md":
-            fullPath = os.path.join(path, name)
-            shortPath = fullPath.split("docs")[1]
-            results = parseMarkdown(fullPath)
-            links = results[0]
-            slug = results[1]
-            if links != {}:
-                for key in links:
-                    print("Validating: " + key + " - " + links[key])
+    for path, subdirs, files in os.walk(root):
+        for name in files:
+            if name[-3:] == ".md":
+                fullPath = os.path.join(path, name)
+                shortPath = fullPath.split("docs")[1]
+                results = parseMarkdown(fullPath)
+                links = results[0]
+                slug = results[1]
+                if links != {}:
+                    for key in links:
+                        print("Validating: " + key + " - " + links[key])
 
-                    # Url not supported by regex parser
-                    if links[key][0] == "<":
-                        continue
-
-                    # Regular http(s) - external link
-                    if links[key][:4] == "http":
-                        # Check if url is whitelisted
-                        if links[key] not in whitelist:
-                            test = testLink(links[key])
-                            logger(test, log)
-                        else:
+                        # Url not supported by regex parser
+                        if links[key][0] == "<":
                             continue
 
-                    # Current local page reference
-                    elif links[key][0] == "#":
-                        url = polkadotUrl + slug + links[key]
-                        test = testLink(url)
-                        logger(test, log)
-
-                    # Reference to another local md document
-                    elif ".md" in links[key]:
-
-                        if "#" in links[key]:
-                            fileDir = os.path.dirname(fullPath)
-                            keyBeforeHash = links[key].split("#")[0]
-                            keyBeforeHash = keyBeforeHash.rstrip("/")
-                            linkedFile = os.path.join(fileDir, keyBeforeHash)
-                            if os.path.isfile(linkedFile):
-                                refSlug = getRefSlug(linkedFile)
-                                if refSlug is not None:
-                                    keyAfterHash = links[key].rsplit("#", 1)[-1]
-                                    url = polkadotUrl + refSlug + "#" + keyAfterHash
-                                    test = testLink(url)
-                                    logger(test, log)
-                                else:
-                                    log += "|" + shortPath + "|failed to get ref slug|" + key + "|" + links[key] + "|\n"
+                        # Regular http(s) - external link
+                        if links[key][:4] == "http":
+                            # Check if url is whitelisted
+                            if links[key] not in whitelist:
+                                test = testLink(links[key])
+                                logger(test, log)
                             else:
-                                log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
+                                continue
+
+                        # Current local page reference
+                        elif links[key][0] == "#":
+                            url = polkadotUrl + slug + links[key]
+                            test = testLink(url)
+                            logger(test, log)
+
+                        # Reference to another local md document
+                        elif ".md" in links[key]:
+
+                            if "#" in links[key]:
+                                fileDir = os.path.dirname(fullPath)
+                                keyBeforeHash = links[key].split("#")[0]
+                                keyBeforeHash = keyBeforeHash.rstrip("/")
+                                linkedFile = os.path.join(fileDir, keyBeforeHash)
+                                if os.path.isfile(linkedFile):
+                                    refSlug = getRefSlug(linkedFile)
+                                    if refSlug is not None:
+                                        keyAfterHash = links[key].rsplit("#", 1)[-1]
+                                        url = polkadotUrl + refSlug + "#" + keyAfterHash
+                                        test = testLink(url)
+                                        logger(test, log)
+                                    else:
+                                        log += "|" + shortPath + "|failed to get ref slug|" + key + "|" + links[key] + "|\n"
+                                else:
+                                    log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
+                            else:
+                                fileDir = os.path.dirname(fullPath)
+                                linkedFile = os.path.join(fileDir, links[key])
+                                if not os.path.isfile(linkedFile):
+                                    log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
+
+                        # Local image reference
+                        elif links[key][-4:] == ".png" or links[key][-4:] == ".jpg":
+                            continue
+
+                        # Link to an email address
+                        elif "mailto:" in links[key]:
+                            continue
+
+                        # Last effort
                         else:
-                            fileDir = os.path.dirname(fullPath)
-                            linkedFile = os.path.join(fileDir, links[key])
-                            if not os.path.isfile(linkedFile):
-                                log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
+                            url = polkadotUrl + links[key]
+                            test = testLink(url)
+                            logger(test, log)
 
-                    # Local image reference
-                    elif links[key][-4:] == ".png" or links[key][-4:] == ".jpg":
-                        continue
+    print()
+    print("Audit Complete.")
+    print()
+    print("Results:")
+    print(log)
 
-                    # Link to an email address
-                    elif "mailto:" in links[key]:
-                        continue
+    return log
 
-                    # Last effort
-                    else:
-                        url = polkadotUrl + links[key]
-                        test = testLink(url)
-                        logger(test, log)
-
-print()
-print("Audit Complete.")
-print()
-print("Results:")
-print(log)
+if __name__ == "__main__":
+    main()
