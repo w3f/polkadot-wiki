@@ -43,7 +43,7 @@ jobs:
             echo "$File does not exist" 
             echo "audit_result=false" >> $GITHUB_ENV 
           fi
-
+          
       - name: Create GitHub Issue
         if: "${{ env.audit_result }}" == "true"
         uses: JasonEtco/create-an-issue@v2
