@@ -39,7 +39,7 @@
     "@crowdin/cli": "^3.9.0",
     "@docusaurus/core": "^2.1.0",
     "@docusaurus/module-type-aliases": "^2.1.0",
-    "@docusaurus/plugin-client-redirects": "^2.1.0",
+    "@docusaurus/plugin-client-redirects": "^2.2.0",
     "@docusaurus/preset-classic": "^2.2.0",
     "@octokit/rest": "^19.0.5",
     "@polkadot/api": "^9.6.1",
