@@ -8,10 +8,13 @@ jobs:
   update_json:
     runs-on: ubuntu-latest
     steps:
-      - name: Git config
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
       
       - name: Pull repo
         run: |
@@ -20,10 +23,6 @@ jobs:
           git branch audit-links
           git checkout audit-links
       
-      - name: Install python
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.8
       
       - name: Execute python
         run: |
