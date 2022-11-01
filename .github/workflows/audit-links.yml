@@ -12,22 +12,23 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      
       - name: Pull repo
         run: |
           git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
           git config --global user.name "Polkadot-Kusama Bot"
           git branch audit-links
           git checkout audit-links
-      - name: Setup python
+      
+      - name: Execute python script
       - uses: actions/setup-python@v4
         with:
           python-version: 3.8
         run: |
           python -m pip install --upgrade pip
           pip install requests
-      - name: Execute py script
-        run: |
           echo ::set-output name=AUDIT_RESULTS::$(python './scripts/auditLinks.py')
+      
       - name: Check results for broken links
         run: |
           echo results are ${{ steps.token.outputs.AUDIT_RESULTS }}
