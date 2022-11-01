@@ -30,8 +30,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests
-          echo ::set-output name=AUDIT_RESULTS::$(python './scripts/auditLinks.py')
+          echo "::set-output name=AUDIT_RESULTS::$(python './scripts/auditLinks.py')::true"
       
       - name: Check results for broken links
         run: |
-          echo results are ${{ steps.token.outputs.AUDIT_RESULTS }}
+          echon Results:
+          echo  ${{ steps.vars.outputs.AUDIT_RESULTS }}

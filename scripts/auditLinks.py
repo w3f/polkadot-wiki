@@ -157,7 +157,13 @@ def main():
     print("Results:")
     print(log)
 
-    return log
+    emptyLog = "|File|Error|Tag|Url|\n"
+    emptyLog += "|---|---|---|---|\n"
+
+    if log == emptyLog:
+        return False
+    else:
+        return log
 
 if __name__ == "__main__":
     main()
