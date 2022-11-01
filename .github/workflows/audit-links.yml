@@ -34,5 +34,5 @@ jobs:
       
       - name: Check results for broken links
         run: |
-          echon Results:
+          echo Results:
           echo  ${{ steps.vars.outputs.AUDIT_RESULTS }}
