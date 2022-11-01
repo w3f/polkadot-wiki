@@ -34,12 +34,20 @@ jobs:
       
       - name: Check results for broken links
         run: |
-          File="./Audit-Results.txt"
+          File="./Audit-Results.md"
           echo Reading Audit...
-          ls
           if test -f "$File"; then
-            TEXT=$(cat ./Audit-Results.txt)
-            echo "$TEXT"
+            TEXT=$(cat ./Audit-Results.md)
+            echo "audit_result=true" >> $GITHUB_ENV
           else  
-            echo "$File does not exist"  
+            echo "$File does not exist" 
+            echo "audit_result=false" >> $GITHUB_ENV 
           fi
+
+    - name: Create GitHub Issue
+      if: "${{ env.audit_result }}" == "true"
+      uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: ./Audit-Results.md

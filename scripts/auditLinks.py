@@ -163,8 +163,14 @@ def main():
     if log == emptyLog:
         return False
     else:
-        with open("Audit-Results.txt", "w") as text_file:
-            text_file.write(log)
+        with open("Audit-Results.md", "w") as text_file:
+            ghIssue = "---\n"
+            ghIssue += "title: Monthly Audit of Wiki/Guide Links\n"
+            ghIssue += "labels: audit\n"
+            ghIssue += "---\n"
+            ghIssue += "# Audit Results\n"
+            ghIssue += log
+            text_file.write(ghIssue)
         return True
 
 if __name__ == "__main__":
