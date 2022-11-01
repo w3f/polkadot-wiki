@@ -3,9 +3,6 @@ on:
   schedule:
     - cron: '0 0 1 * * ' # Once a month
   workflow_dispatch: # Or manually from GitHub UI
-  push:
-    branches:
-      - '#3970' # Debug
 
 jobs:
   Audit_Links:
