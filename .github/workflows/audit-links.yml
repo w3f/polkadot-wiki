@@ -34,9 +34,9 @@ jobs:
       
       - name: Check results for broken links
         run: |
-          File=Audit-Results.txt
+          File="./Audit-Results.txt"
           if test -f "$FILE"; then
-            TEXT=$(<Audit-Results.txt)
+            TEXT=$(<./Audit-Results.txt)
             echo "$TEXT"
           else  
             echo "$File does not exist"  
