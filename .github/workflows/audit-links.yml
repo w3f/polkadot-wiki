@@ -30,13 +30,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests
-          OUTPUT=$(python './scripts/auditLinks.py')
-          OUTPUT="${OUTPUT//'%'/'%25'}"
-          OUTPUT="${OUTPUT//$'\n'/'%0A'}"
-          OUTPUT="${OUTPUT//$'\r'/'%0D'}"
-          echo "AUDIT_RESULTS=${OUTPUT}" >> $GITHUB_ENV
+          python './scripts/auditLinks.py'
       
       - name: Check results for broken links
         run: |
-          echo Results:
-          echo "${{ env.AUDIT_RESULTS }}" 
+          File=Audit-Results.txt
+          if test -f "$FILE"; then
+            TEXT=$(<Audit-Results.txt)
+            echo "$TEXT"
+          else  
+            echo "$File does not exist"  
+          fi

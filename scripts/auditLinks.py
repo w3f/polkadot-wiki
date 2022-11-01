@@ -163,7 +163,9 @@ def main():
     if log == emptyLog:
         return False
     else:
-        return log
+        with open("Audit-Results.txt", "w") as text_file:
+            text_file.write(log)
+        return True
 
 if __name__ == "__main__":
     main()
