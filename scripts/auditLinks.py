@@ -2,12 +2,11 @@ import os
 import re
 import requests
 
-log = ""
-root = "./docs"
-polkadotUrl = "https://wiki.polkadot.network/docs/"
+Root = "./docs"
+PolkadotUrl = "https://wiki.polkadot.network/docs/"
 
 # Frequently occurring false positives
-whitelist = [
+Whitelist = [
     "https://wiki.polkadot.network/docs/community/",
     "https://crates.io/crates/diener",
     "https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be",
@@ -58,7 +57,7 @@ def testLink(link):
     return result
 
 # Add url failures to log table
-def logger(test, log):
+def logger(test, log, shortPath, links, key):
     # Check for 400 errors - lots of 300 redirects that are still valid
     if test[1] == 400 or test[1] == 403 or test[1] == 404:
         log += "|" + shortPath + "|" + str(test[1]) + "|" + key + "|" + links[key] + "|\n"
@@ -78,10 +77,11 @@ def getRefSlug(fullPath):
 
 def main():
     # Table header
+    log = ""
     log += "|File|Error|Tag|Url|\n"
     log += "|---|---|---|---|\n"
 
-    for path, subdirs, files in os.walk(root):
+    for path, subdirs, files in os.walk(Root):
         for name in files:
             if name[-3:] == ".md":
                 fullPath = os.path.join(path, name)
@@ -99,18 +99,18 @@ def main():
 
                         # Regular http(s) - external link
                         if links[key][:4] == "http":
-                            # Check if url is whitelisted
-                            if links[key] not in whitelist:
+                            # Check if url is Whitelisted
+                            if links[key] not in Whitelist:
                                 test = testLink(links[key])
-                                logger(test, log)
+                                logger(test, log, shortPath, links, key)
                             else:
                                 continue
 
                         # Current local page reference
                         elif links[key][0] == "#":
-                            url = polkadotUrl + slug + links[key]
+                            url = PolkadotUrl + slug + links[key]
                             test = testLink(url)
-                            logger(test, log)
+                            logger(test, log, shortPath, links, key)
 
                         # Reference to another local md document
                         elif ".md" in links[key]:
@@ -124,9 +124,9 @@ def main():
                                     refSlug = getRefSlug(linkedFile)
                                     if refSlug is not None:
                                         keyAfterHash = links[key].rsplit("#", 1)[-1]
-                                        url = polkadotUrl + refSlug + "#" + keyAfterHash
+                                        url = PolkadotUrl + refSlug + "#" + keyAfterHash
                                         test = testLink(url)
-                                        logger(test, log)
+                                        logger(test, log, shortPath, links, key)
                                     else:
                                         log += "|" + shortPath + "|failed to get ref slug|" + key + "|" + links[key] + "|\n"
                                 else:
@@ -147,9 +147,9 @@ def main():
 
                         # Last effort
                         else:
-                            url = polkadotUrl + links[key]
+                            url = PolkadotUrl + links[key]
                             test = testLink(url)
-                            logger(test, log)
+                            logger(test, log, shortPath, links, key)
 
     print()
     print("Audit Complete.")

@@ -8,7 +8,7 @@ on:
       - '#3970' # Debug
 
 jobs:
-  update_json:
+  Audit_Links:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
