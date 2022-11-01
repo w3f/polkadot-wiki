@@ -64,4 +64,4 @@ As you can imagine, blockchain explorers also offer data analytics through an in
 can examine common data points.
 
 Some block explorers in the Polkadot ecosystem are listed on the
-[tools page](build-tools-index.md##block-explorers).
+[tools page](buixld-tools-index.md##block-explorers).
