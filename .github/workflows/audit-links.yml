@@ -3,6 +3,9 @@ on:
   schedule:
     - cron: '0 0 1 * * ' # Once a month
   workflow_dispatch: # Or manually from GitHub UI
+  push:
+    branches:
+      - '#3970' # Debug
 
 jobs:
   update_json:
@@ -22,7 +25,6 @@ jobs:
           git config --global user.name "Polkadot-Kusama Bot"
           git branch audit-links
           git checkout audit-links
-      
       
       - name: Execute python
         run: |
