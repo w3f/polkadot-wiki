@@ -98,6 +98,8 @@ def main():
                         print("Validating: " + key + " - " + links[key])
 
                         # Url not supported by regex parser
+                        # (Prettier adds these sometimes when attempting
+                        # to escape a url containing certain characters)
                         if links[key][0] == "<":
                             continue
 
