@@ -16,12 +16,12 @@ Whitelist = [
 
 # Read markdown content from a file path
 def parseMarkdown(fullPath):
-
     links = {}
     slug = ""
 
     linkRegEx = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 
+    # Attempt to open file and extract links
     with open(fullPath) as f:
         md = f.read()
         links = dict(linkRegEx.findall(md))
@@ -77,9 +77,10 @@ def getRefSlug(fullPath):
 
 def main():
     # Table header
-    log = ""
-    log += "|File|Error|Tag|Url|\n"
-    log += "|---|---|---|---|\n"
+    emptyLog = "|File|Error|Tag|Url|\n"
+    emptyLog += "|---|---|---|---|\n"
+    # New log
+    log = emptyLog
 
     for path, subdirs, files in os.walk(Root):
         for name in files:
@@ -90,6 +91,7 @@ def main():
                 links = results[0]
                 slug = results[1]
                 if links != {}:
+                    # For each link
                     for key in links:
                         print("Validating: " + key + " - " + links[key])
 
@@ -114,16 +116,18 @@ def main():
 
                         # Reference to another local md document
                         elif ".md" in links[key]:
-
+                            # If the link contains a sub-section reference
                             if "#" in links[key]:
                                 fileDir = os.path.dirname(fullPath)
                                 keyBeforeHash = links[key].split("#")[0]
                                 keyBeforeHash = keyBeforeHash.rstrip("/")
                                 linkedFile = os.path.join(fileDir, keyBeforeHash)
+                                # Navigate to the base file and extract slug
                                 if os.path.isfile(linkedFile):
                                     refSlug = getRefSlug(linkedFile)
                                     if refSlug is not None:
                                         keyAfterHash = links[key].rsplit("#", 1)[-1]
+                                        # Build fully qualified url for testing
                                         url = PolkadotUrl + refSlug + "#" + keyAfterHash
                                         test = testLink(url)
                                         logger(test, log, shortPath, links, key)
@@ -132,6 +136,7 @@ def main():
                                 else:
                                     log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
                             else:
+                                # No '#' present in link, so attempt to navigate to local page directly
                                 fileDir = os.path.dirname(fullPath)
                                 linkedFile = os.path.join(fileDir, links[key])
                                 if not os.path.isfile(linkedFile):
@@ -156,9 +161,6 @@ def main():
     print()
     print("Results:")
     print(log)
-
-    emptyLog = "|File|Error|Tag|Url|\n"
-    emptyLog += "|---|---|---|---|\n"
 
     if log == emptyLog:
         return False
