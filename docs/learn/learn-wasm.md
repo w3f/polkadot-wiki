@@ -34,6 +34,11 @@ levels of offline coordination required, and thus, the propensity to bundle many
 large-scale event. By deploying Wasm on-chain and having nodes auto-enact the new logic at a certain
 block height, upgrades can be small, isolated, and very specific.
 
+As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
+sensitive and calls to Runtime can change the Runtime code itself. Therefore the Polkadot Host needs
+to always make sure to provide the Runtime corresponding to the state in which the entrypoint has
+been called.
+
 ## Resources
 
 - [WebAssembly.org](https://webassembly.org/) - WebAssembly homepage that contains a link to the

@@ -149,10 +149,10 @@ As an infrastructure provider, you will deal almost exclusively with signed tran
 however, see other extrinsics within the blocks that you decode. Find more information in the
 [Substrate documentation](https://docs.substrate.io/main-docs/build/tx-weights-fees/).
 
-Inherents contain information that is not provably true, but validators agree on based on some
-measure of reasonability. For example, a timestamp cannot be proved, but validators can agree that
-it is within some delta of their system clock. Inherents are not gossiped on the network, and only
-block authors insert them into blocks.
+Inherent extrinsics are unsigned and contain information that is not provably true, but validators
+agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but
+validators can agree that it is within some delta of their system clock. Inherents are broadcasted
+as part of the produced blocks rather than being gossiped as individual extrinsics.
 
 Signed transactions contain a signature of the account that issued the transaction and stands to pay
 a fee to have the transaction included on chain. Because the value of including signed transactions
@@ -163,6 +163,9 @@ Bitcoin.
 Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For
 example, when a user claims their DOT from the Ethereum DOT indicator contract to a new DOT address,
 the new address doesn't yet have any funds with which to pay fees.
+
+The Polkadot Host does not specify or limit the internals of each extrinsics and those are defined
+and dealt with by the Runtime.
 
 ### Transaction Mortality
 
