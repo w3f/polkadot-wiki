@@ -137,6 +137,29 @@ More info:
 
 ## Extrinsics and Events
 
+### Block Format
+
+A Polkadot block consists a block header and a block body. The block body in turn is made up out of
+extrinsics, which represent the generalization of the concept of transactions. Extrinsics can
+contain any set of external data the underlying chain wishes to validate and track.
+
+The block header is a 5-tuple containing the following elements:
+
+- `parent_hash`: 32-byte Blake2b hash of the SCALE encoded parent block header.
+- `number`: an integer, which represents the index of the current block in the chain. It is equal to
+  the number of the ancestor blocks. The genesis state has number 0.
+- `state_root`: the root of the Merkle trie, whose leaves implement the storage for the system.
+- `extrinsics_root`: field which is reserved for the Runtime to validate the integrity of the
+  extrinsics composing the block body.
+- `digest`: field used to store any chain-specific auxiliary data, which could help the light
+  clients interact with the block without the need of accessing the full storage as well as
+  consensus-related data including the block signature.
+
+When a node creates or receives a new block, it must be announced to the network. Other nodes within
+the network will track this announcement and can request information about this block. Additional
+details on the process are outlined [here](https://spec.polkadot.network/#sect-msg-block-announce)
+in the Polkadot Spec.
+
 ### Extrinsics
 
 Extrinsics constitute information from the outside world and take on three forms:
