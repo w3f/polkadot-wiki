@@ -134,6 +134,11 @@ to receiving a `SignedRewardBase`.
 ### Deposit
 
 Current deposit(`SignedDepositBase`) is
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/> :kusama }}
+which is a fixed amount.
+
+Current deposit per byte(`SignedDepositByte`) is
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/> :kusama }}
 and the total is variable depending on the size of the solution data. For example a solution
