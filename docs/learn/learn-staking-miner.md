@@ -141,8 +141,11 @@ which is a fixed amount.
 Current deposit per byte(`SignedDepositByte`) is
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/> :kusama }}
-and the total is variable depending on the size of the solution data. For example a solution
-weighing 200KB would yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
+and the total is variable depending on the size of the solution data. For example, a solution
+weighing 200KB would require a (200 x
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/>) :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/>) :kusama }}
+deposit for the given payload.
 
 And the weight deposit(`SignedDepositWeight`) is currently set to `0` and has no effect.
 
