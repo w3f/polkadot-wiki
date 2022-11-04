@@ -46,6 +46,13 @@ module.exports = {
     setReturnValue(value.toString());
   },
 
+  Precise: function (value, network, setReturnValue) {
+    // Append symbol without rounding
+    value = `${value} ${values[network].symbol}`;
+    // Update value
+    setReturnValue(value);
+  },
+
   BlocksToDays: function (value, setReturnValue) {
     value = (value * 6) / 86400;
     // Update value
