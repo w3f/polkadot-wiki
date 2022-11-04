@@ -49,7 +49,7 @@ module.exports = {
   Precise: function (value, network, setReturnValue) {
     // String to number
     value = parseFloat(value);
-    // Append symbol without rounding
+    // Apply precision and append symbol without additional rounding
     value = `${value / values[network].precision} ${values[network].symbol}`;
     // Update value
     setReturnValue(value);
