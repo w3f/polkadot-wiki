@@ -9,12 +9,12 @@ slug: ../learn-nomination-pools
 
 import RPC from "./../../components/RPC-Connection";
 
-:::info Nomination Pools are live on
-[Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and
-[Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/staking/pools).
+:::info Nomination Pools are live on Polkadot!
 
-Get some [Westies (WND)](learn-DOT.md#getting-westies) and start experimenting with Nomination
-pools! Soon they will be deployed on Polkadot.
+Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their 
+DOT tokens together on-chain to nominate validators and receive rewards, significantly improving
+the system’s scalability. Now, anyone with as little as [1 DOT can receive rewards for staking 
+natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). 
 
 :::
 
