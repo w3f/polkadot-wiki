@@ -70,9 +70,10 @@ exclusively image-based collectibles of varying rarity.
 
 ## NFTs 2.0: NFTs in Polkadot & Kusama
 
-This is where Polkadot's technology shines and where NFTs 2.0 come into play. By allowing [heterogeneous application-specific shards](learn-parachains.md) to exist, builders can
-natively optimize for complex NFT use cases without tradeoffs that would make interacting with the
-system prohibitively inefficient and expensive in other environments. 
+This is where Polkadot's technology shines and where NFTs 2.0 come into play. By allowing
+[heterogeneous application-specific shards](learn-parachains.md) to exist, builders can natively
+optimize for complex NFT use cases without tradeoffs that would make interacting with the system
+prohibitively inefficient and expensive in other environments.
 
 The following NFT solutions exist and are under development in the Polkadot ecosystem:
 

@@ -1,0 +1,50 @@
+name: Audit Wiki Links
+on:
+  schedule:
+    - cron: '0 0 1 * * ' # Once a month
+  workflow_dispatch: # Or manually from GitHub UI
+
+jobs:
+  Audit_Links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+      
+      - name: Pull repo
+        run: |
+          git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
+          git config --global user.name "Polkadot-Kusama Bot"
+          git branch audit-links
+          git checkout audit-links
+      
+      - name: Execute python
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+          python './scripts/auditLinks.py'
+      
+      - name: Check results for broken links
+        run: |
+          File="./Audit-Results.md"
+          echo Reading Audit...
+          if test -f "$File"; then
+            TEXT=$(cat ./Audit-Results.md)
+            echo "audit_result=true" >> $GITHUB_ENV
+          else  
+            echo "$File does not exist" 
+            echo "audit_result=false" >> $GITHUB_ENV 
+          fi
+
+      - name: Create GitHub Issue
+        if: ${{ env.audit_result }} == "true"
+        uses: "JasonEtco/create-an-issue@v2"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: ./Audit-Results.md
