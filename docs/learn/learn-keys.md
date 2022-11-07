@@ -8,7 +8,8 @@ slug: ../learn-keys
 ---
 
 Public and private keys are an important aspect of most crypto-systems and an essential component
-that enables blockchains like Polkadot to exist.
+that enables blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to
+exist.
 
 ## Account Keys
 
@@ -18,29 +19,26 @@ Account keys are keys that are meant to control funds. They can be either:
 - The Schnorrkel/Ristretto `sr25519` variant using Schnorr signatures.
 - ECDSA signatures on secp256k1
 
-There are no differences in security between `ed25519` and `sr25519` for simple signatures.
-
-We expect `ed25519` to be much better supported by commercial HSMs for the foreseeable future.
-
-At the same time, `sr25519` makes implementing more complex protocols safer. In particular,
-`sr25519` comes with safer version of many protocols like HDKD common in the Bitcoin and Ethereum
-ecosystem.
+There are no differences in security between `ed25519` and `sr25519` for simple signatures. We
+expect `ed25519` to be much better supported by commercial HSMs for the foreseeable future. At the
+same time, `sr25519` makes implementing more complex protocols safer. In particular, `sr25519` comes
+with safer version of many protocols like HDKD common in the Bitcoin and Ethereum ecosystem.
 
 ### "Controller" and "Stash" Keys
 
 When we talk about "controller" and "stash" keys, we usually talk about them in the context of
-running a validator or nominating DOT, but they are useful concepts for all users to know. Both keys
-are types of account keys. They are distinguished by their intended use, not by an underlying
+running a validator or nominating, but they are useful concepts for all users to know. Both keys are
+types of account keys. They are distinguished by their intended use, not by an underlying
 cryptographic difference. All the info mentioned in the parent section applies to these keys. When
 creating new controller or stash keys, all cryptography supported by account keys are an available
 option.
 
 The controller key is a semi-online key that will be in the direct control of a user, and used to
 submit manual extrinsics. For validators or nominators, this means that the controller key will be
-used to start or stop validating or nominating. Controller keys should hold some DOT to pay for
-fees, but they should not be used to hold huge amounts or life savings. Since they will be exposed
-to the internet with relative frequency, they should be treated carefully and occasionally replaced
-with new ones.
+used to start or stop validating or nominating. Controller keys should hold some
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to pay for fees, but they should not be used
+to hold huge amounts or life savings. Since they will be exposed to the internet with relative
+frequency, they should be treated carefully and occasionally replaced with new ones.
 
 The stash key is a key that will, in most cases, be a cold wallet, existing on a piece of paper in a
 safe or protected by layers of hardware security. It should rarely, if ever, be exposed to the
@@ -64,14 +62,14 @@ meant to control funds and should only be used for their intended purpose. They 
 regularly; your controller only need create a certificate by signing a session public key and
 broadcast this certificate via an extrinsic.
 
-Polkadot uses four session keys:
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses six session keys:
 
-- Authority Discovery: 
+- Authority Discovery:
 - GRANDPA: ed25519
 - BABE: sr25519
 - I'm Online: sr25519
 - Parachain Assignment: sr25519
-- Parachain Validator: 
+- Parachain Validator:
 
 BABE requires keys suitable for use in a [Verifiable Random Function](learn-randomness.md/#vrfs) as
 well as for digital signatures. Sr25519 keys have both capabilities and so are used for BABE.
@@ -83,15 +81,17 @@ aggregation.
 
 ### Why was `ed25519` selected over `secp256k1`?
 
-The original key derivation cryptography that was implemented for Polkadot and Substrate chains was
-`ed25519`, which is a Schnorr signature algorithm implemented over the Edward's Curve 25519 (so
-named due to the parameters of the curve equation).
+The original key derivation cryptography that was implemented for
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate chains was `ed25519`,
+which is a Schnorr signature algorithm implemented over the Edward's Curve 25519 (so named due to
+the parameters of the curve equation).
 
 Most cryptocurrencies, including Bitcoin and Ethereum, currently use ECDSA signatures on the
 secp256k1 curve. This curve is considered much more secure than NIST curves, which
 [have possible backdoors from the NSA](#appendix-a-on-the-security-of-curves). The Curve25519 is
 considered possibly _even more_ secure than this one and allows for easier implementation of Schnorr
-signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
+signatures. A recent patent expiration on it has made it the preferred choice for use in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 The choice of using Schnorr signatures over using ECDSA is not so cut and dry. Jeff Burdges (a Web3
 researcher) provides additional details on the decision in this
