@@ -19,3 +19,11 @@ transaction that is executed from outside the chain but that triggers an event o
 Continuing with the staking example, within the staking pallet a nominator can bond funds and
 nominate some validators. The signature of such extrinsic might lead to an event on the chain such
 as a reward payout to that nominator at the end of an era; this is an event inside the chain.
+
+## Importance of Verifying Extrinsics
+
+:::info Walk-through Video Tutorial 
+
+See [this technical explainer](https://youtu.be/bxMs-9fBtFk) tutorial to learn about how to verify extrinsics before signing them.
+
+:::
