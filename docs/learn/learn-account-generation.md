@@ -15,18 +15,22 @@ anyone they will have full access to your account, including all of your funds. 
 a target for hackers and others with bad intentions - see also
 [How to Recognize Scams](../general/scams.md).
 
+<iframe width="560" height="315" src="https://youtube.com/embed/ARsdXZycJAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+
 On this page, we recommend a variety of account generation methods that have various convenience and
 security trade-offs. Please review this page carefully before making your account so that you
 understand the risks of the account generation method you choose and how to properly mitigate them
-in order to keep your funds safe.
+in order to keep your funds safe.<br/><br/>
 
-:::info Visit
+:::info
+
+Visit
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely)
 for more information about key security.
 
 :::
 
-## Ways to generate an account 
+## Ways to generate an account
 
 The **most user-friendly** way to create a Polkadot or Kusama address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
