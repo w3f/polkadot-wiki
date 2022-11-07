@@ -28,6 +28,12 @@ See [this technical explainer](https://youtu.be/bxMs-9fBtFk) tutorial to learn a
 
 :::
 
+:::warning Always check for Metadata Updates
+
+Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Signer, always check for metadata updates. [This technical explainer video](https://youtu.be/gbvrHzr4EDY) will explain how to do it. Failing to update metadata will result in errors while signing that for example will ultimately result in you not being able to transfer funds. Before authorizing the metadata update check who is requesting it. Any request not coming from the Polkadot-JS Apps must not be signed.
+
+:::
+
 Verifying the extrinsic you are signing can take some more time before signing for a transaction but it allows you to add an extra security step. There are a multitude of possible attacks that will prevent you to send funds to the desired destination account. Here below we will list some major attacks that can happen to you.
 
 ### Clipboard Memory Attack
@@ -46,4 +52,8 @@ There a minor risk that the Polkadot-JS Browser Extension is corrupted because i
 
 ### Genuine Polkadot-JS Browser Extension
 
-An attack can still happen if your extension is genuine, but the website it is connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which will send Extrinsic B to the extension for signature. If you are using a Ledger device, it will display Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know the extrinsic that was created on the website in the first place. 
+An attack can still happen if your extension is genuine, but the website it is connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which will send Extrinsic B to the extension for signature. If you are using a Ledger device, it will display Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know the extrinsic that was created on the website in the first place.
+
+### Corrupted QR-code (Parity Signer)
+
+If you are using Parity Signer, there might be 
