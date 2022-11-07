@@ -24,7 +24,7 @@ as a reward payout to that nominator at the end of an era; this is an event insi
 
 :::info Walk-through Video Tutorial 
 
-See [this technical explainer](https://youtu.be/bxMs-9fBtFk) tutorial to learn about how to verify extrinsics before signing them. The video will also mention potential attacks that can happen to you while signing for transactions. **Do not sign any transaction if you suspect you are or have been under attack.**
+Visit the [dedicated support page](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-) and see [this technical explainer](https://youtu.be/bxMs-9fBtFk) tutorial to learn about how to verify extrinsics before signing them. The video will also mention potential attacks that can happen to you while signing for transactions. **Do not sign any transaction if you suspect you are or have been under attack.**
 
 :::
 
@@ -34,7 +34,7 @@ Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Sign
 
 :::
 
-Verifying the extrinsic you are signing can take some more time before signing for a transaction but it allows you to add an extra security step. There are a multitude of possible attacks that will prevent you to send funds to the desired destination account. Here below we will list some major attacks that can happen to you.
+Verifying the extrinsic you are signing can take some more time before signing for a transaction but it allows you to add an extra security step. There are a multitude of possible attacks that will prevent you to send funds to the desired destination account. Here below we will list some major attacks that can happen to you ordered from the most to the least probable.
 
 ### Clipboard Memory Attack
 
@@ -46,14 +46,14 @@ For a more detailed read about clipboard memory attacks see [this article](https
 
 The clipboard memory is that memory on you computer dedicated to copy-paste operations. There is malicious software that can be remotely installed on your computer and that is able to detect when a cryptocurrency address is copied. Let's say you want to send funds to Address A (belonging to you), after copying address A the software swaps that address with Address B (belonging to the attacker). If you do not check the receiver address before signing the funds will be lost. 
 
+### Corrupted Website
+
+An attack can still happen if your extension is genuine, but the website (dApp) it is connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which will send Extrinsic B to the extension for signature. If you are using a Ledger device, it will display Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know the extrinsic that was created on the website in the first place.
+
 ### Corrupted Polkadot-JS Browser Extension
 
-There a minor risk that the Polkadot-JS Browser Extension is corrupted because it was downloaded by non-trusted source. In this scenario the extension will display that you will sign for an Extrinsic A but in the background will execute another extrinsic, Extrinsic B. If you are using a Ledger device this attack can be detected because you will be able to see Extrinsic B on the screen of you Ledger Nano.
-
-### Genuine Polkadot-JS Browser Extension
-
-An attack can still happen if your extension is genuine, but the website it is connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which will send Extrinsic B to the extension for signature. If you are using a Ledger device, it will display Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know the extrinsic that was created on the website in the first place.
+There a minor risk that the [Polkadot-JS Browser Extension](https://polkadot.js.org/extension/) is corrupted because it was downloaded by non-trusted source. In this scenario the extension will display that you will sign for an Extrinsic A but in the background will execute another extrinsic, Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see Extrinsic B on the screen of you Ledger Nano.
 
 ### Corrupted QR-code (Parity Signer)
 
-If you are using Parity Signer, there might be 
+If you are using [Parity Signer](https://www.parity.io/technologies/signer/), there might be the risk of scanning corrupted QR codes to sign for transactions or to update matadata. In this scenario the Signer App will display Extrinsic B when you want to sign for Extrinsic A.
