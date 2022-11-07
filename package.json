@@ -69,7 +69,7 @@
     "remarkable-katex": "^1.2.1",
     "shx": "^0.3.4",
     "unist-util-visit": "2.0.1",
-    "yargs": "^17.6.0"
+    "yargs": "^17.6.2"
   },
   "dependencies": {
     "@algolia/client-search": "^4.14.2",
