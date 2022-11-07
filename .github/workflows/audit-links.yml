@@ -42,7 +42,7 @@ jobs:
           fi
 
       - name: Create GitHub Issue
-        if: ${{ env.audit_result }} == "true"
+        if: ${{ env.audit_result }} == true
         uses: "JasonEtco/create-an-issue@v2"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
