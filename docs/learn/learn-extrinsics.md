@@ -20,6 +20,20 @@ Continuing with the staking example, within the staking pallet a nominator can b
 nominate some validators. The signature of such extrinsic might lead to an event on the chain such
 as a reward payout to that nominator at the end of an era; this is an event inside the chain.
 
+## Extrinsics (a.k.a. Types of Transactions)
+
+Now that we introduced where the term _extrisic_ comes from, we can explain what extrinsics really are. In Substrate, a _"thing that could exist in the transaction pool"_ — more commonly known as "a transaction" in the non-Substrate world — can be one of 3 distinct types, all of which fall under a broader category called "extrinsics". Extrinsics is just a general term to mean "any information that originates from outside a runtime". These are:
+
+- **Signed transactions:** these must contain the signature of the account sending the inbound request to the runtime. With signed transactions, the account used to submit the request typically pays a transaction fee and must sign it using the account's private key.
+- **Unsigned transactions:** these don't carry any information about who submitted the transaction, since the format of this type of transaction doesn't require a signature. You can define what conditions must be met for such a transaction to be valid.
+- **Inherents:** are a special type of unsigned transaction made by block authors which carry information required to build a block such as timestamps, storage proofs and uncle blocks.
+ 
+Here are some key differences between the different types of extrinsics:
+
+- Contrary to signed transactions, unsigned transaction types require implementing custom validation logic which can consume more resources for checking validity compared to signed transactions.
+- Unsigned transactions have no economic deterrent to prevent spam or replay attacks, so custom logic must account for protecting the network from these types of transactions being misused.
+- Inherents exist to address the need of adding some data to a block, whereas signed or unsigned transactions exist to potentially change the state of the blockchain.
+
 ## Importance of Verifying Extrinsics
 
 :::info Walk-through Video Tutorial 
@@ -50,10 +64,10 @@ The clipboard memory is that memory on you computer dedicated to copy-paste oper
 
 An attack can still happen if your extension is genuine, but the website (dApp) it is connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which will send Extrinsic B to the extension for signature. If you are using a Ledger device, it will display Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know the extrinsic that was created on the website in the first place.
 
-### Corrupted Polkadot-JS Browser Extension
-
-There a minor risk that the [Polkadot-JS Browser Extension](https://polkadot.js.org/extension/) is corrupted because it was downloaded by non-trusted source. In this scenario the extension will display that you will sign for an Extrinsic A but in the background will execute another extrinsic, Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see Extrinsic B on the screen of you Ledger Nano.
-
 ### Corrupted QR-code (Parity Signer)
 
 If you are using [Parity Signer](https://www.parity.io/technologies/signer/), there might be the risk of scanning corrupted QR codes to sign for transactions or to update matadata. In this scenario the Signer App will display Extrinsic B when you want to sign for Extrinsic A.
+
+### Corrupted Polkadot-JS Browser Extension
+
+There a minor risk that the [Polkadot-JS Browser Extension](https://polkadot.js.org/extension/) is corrupted because it was downloaded by non-trusted source. In this scenario the extension will display that you will sign for an Extrinsic A but in the background will execute another extrinsic, Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see Extrinsic B on the screen of you Ledger Nano.
