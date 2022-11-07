@@ -66,10 +66,12 @@ broadcast this certificate via an extrinsic.
 
 Polkadot uses four session keys:
 
+- Authority Discovery: 
 - GRANDPA: ed25519
 - BABE: sr25519
 - I'm Online: sr25519
-- Parachain: sr25519
+- Parachain Assignment: sr25519
+- Parachain Validator: 
 
 BABE requires keys suitable for use in a [Verifiable Random Function](learn-randomness.md/#vrfs) as
 well as for digital signatures. Sr25519 keys have both capabilities and so are used for BABE.
