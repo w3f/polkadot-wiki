@@ -35,9 +35,10 @@ A host node...
 1. must populate the state storage with the official genesis state.
 2. should maintain a set of around 50 active peers at any time. New peers can be found using the
    discovery protocols.
-3. should open and maintain the various required streams with each of its active peers. 4.should
-   send block requests to these peers to receive all blocks in the chain and execute each of them.
-4. should exchange neighbor packets.
+3. should open and maintain the various required streams with each of its active peers.
+4. should send block requests to these peers to receive all blocks in the chain and execute each of
+   them.
+5. should exchange neighbor packets.
 
 Additional information on each of these requirements can be found
 [here](https://spec.polkadot.network/#chapter-bootstrapping).
