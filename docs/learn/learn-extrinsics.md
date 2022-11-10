@@ -46,24 +46,15 @@ Here are some key differences between the different types of extrinsics:
 - Inherents exist to address the need of adding some data to a block, whereas signed or unsigned
   transactions exist to potentially change the state of the blockchain.
 
-## Importance of Verifying Extrinsics
-
-:::info Walk-through Video Tutorial
-
-Visit the
-[dedicated support page](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-)
-and see [this technical explainer](https://youtu.be/bxMs-9fBtFk) tutorial to learn about how to
-verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing for transactions. **Do not sign a transaction if you can't verify what you are
-signing or you suspect you might be signing a different extrinsic than the one intended.**
-
-:::
+## Metadata Updates
 
 :::warning Always check for Metadata Updates
 
 Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Signer, always check for
 metadata updates. [This technical explainer video](https://youtu.be/gbvrHzr4EDY) will explain how to
 do it.
+
+:::
 
 Parity Signer updates the full metadata through the QR fountain while the extension updates the
 metadata index (the metadata is not loaded into it). As a consequence the process of updating
@@ -78,12 +69,24 @@ requested by the Polkadot-JS UI and dApps (for example DeFi apps of parachains).
 you should trust the app that requests the update while for Signer you should trust the issuer of
 the metadata (or do the update yourself).
 
+## Verifying Extrinsics
+
+:::info Walk-through Video Tutorial
+
+Visit the
+[dedicated support page](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-)
+and see [this technical explainer](https://youtu.be/bxMs-9fBtFk) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions. **Do not sign a transaction if you can't verify what you are
+signing or you suspect you might be signing a different extrinsic than the one intended.**
+
 :::
 
 Verifying the extrinsic you are signing can take some more time before signing for a transaction but
 it allows you to add an extra security step. There are a multitude of possible attacks that will
-prevent you to send funds to the desired destination account. Here below we will list some major
-attacks that could happen:
+prevent you to send funds to the desired destination account.
+
+## Importance of Verifying Extrinsics
 
 ### Clipboard Memory Attack
 
