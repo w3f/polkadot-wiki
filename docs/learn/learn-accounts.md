@@ -82,6 +82,12 @@ is registered, but by clearing the identity, you can unreserve the funds and mak
 
 ## Existential Deposit and Reaping
 
+:::info
+
+See [this technical explainer video](https://youtu.be/Wg0pH05CC9Y) or visit [this support page](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) for more information about existential deposit.
+
+:::
+
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the existential deposit of {{ polkadot: <RPC network="polkadot" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}.
 
