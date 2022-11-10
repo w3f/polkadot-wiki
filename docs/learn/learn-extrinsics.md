@@ -86,9 +86,12 @@ Verifying the extrinsic you are signing can take some more time before signing f
 it allows you to add an extra security step. There are a multitude of possible attacks that will
 prevent you to send funds to the desired destination account.
 
-## Importance of Verifying Extrinsics
+## How do Attacks look like
 
-### Clipboard Memory Attack
+In general, an attacker would make you think you are signing an extrinsic A when you are signing an
+extrinsic B. An Attack might come from:
+
+### Clipboard Memory
 
 :::info
 
@@ -97,11 +100,21 @@ For a more detailed read about clipboard memory attacks see
 
 :::
 
-The clipboard memory is that memory on you computer dedicated to copy-paste operations. There is
-malicious software that can be remotely installed on your computer and that can detect when a
-cryptocurrency address is copied. For example, you want to send funds to Address A (belonging to
-you) but after copying address A a malicious software swaps that address with Address B (belonging
-to an attacker). If you do not check the receiver address before signing the funds will be lost.
+This is a common attack. The clipboard memory is that memory on you computer dedicated to copy-paste
+operations. There is malicious software that can be remotely installed on your computer and that can
+detect when a cryptocurrency address is copied. For example, you want to send funds to Address A
+(belonging to you) but after copying address A a malicious software swaps that address with Address
+B (belonging to an attacker). If you do not check the receiver address before signing the funds will
+be lost.
+
+### Corrupted Website
+
+This is a common attack that can happen if your extension is genuine, but the website (dApp) it is
+connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which
+will send Extrinsic B to the extension for signature. In this case the extension will show Extrinsic
+B. If you are using a Ledger device you have a second layer of verification, is it will also display
+Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know
+the extrinsic that was created on the website in the first place.
 
 ### Corrupted Polkadot-JS Browser Extension
 
@@ -111,17 +124,23 @@ display that you will sign for an Extrinsic A but in the background will execute
 Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device this attack can be detected
 because you will be able to see Extrinsic B on the screen of your Ledger device.
 
-### Corrupted Website
-
-An attack can still happen if your extension is genuine, but the website (dApp) it is connected with
-is corrupted. In this scenario you want to perform Extrinsic A on the website, which will send
-Extrinsic B to the extension for signature. In this case the extension will show Extrinsic B. If you
-are using a Ledger device you have a second layer of verification, is it will also display Extrinsic
-B. In this case it is more difficult to spot the attack and it is up to the user to know the
-extrinsic that was created on the website in the first place.
-
 ### Corrupted QR-code (Parity Signer)
 
 If you are using [Parity Signer](https://www.parity.io/technologies/signer/), if the metadata is
 incorrect (or the signer is corrupted) there is the risk of signing a non-intended extrinsic without
 the possibility of verifying it.
+
+## Defense against Attacks
+
+:::warning If you can't verify the extrinsic or you suspect you are signing something different than
+what you intended, don't sign it!
+
+:::
+
+To avoid being victim of an attack:
+
+- Use only trusted extensions, sites and software in general
+- Use cold storage options (Ledger, Signer) and verify on them. Trust what these devices tell you
+  over what is shown in the app or the browser extension
+- Update Signer metadata only from trusted sources (or do it yourself)
+- Accept metadata updates for the extension only from trusted apps
