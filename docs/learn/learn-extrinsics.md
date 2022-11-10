@@ -64,11 +64,6 @@ will be able to click the sign button but the extrinsic will likely fail similar
 outdated Ledger app. In general, failing to update metadata will most likely result in you not being
 able to transfer funds.
 
-Before authorizing the metadata update check who is requesting it. Metadata updates might be
-requested by the Polkadot-JS UI and dApps (for example DeFi apps of parachains). For the extension,
-you should trust the app that requests the update while for Signer you should trust the issuer of
-the metadata (or do the update yourself).
-
 ## Verifying Extrinsics
 
 :::info Walk-through Video Tutorial
@@ -84,7 +79,7 @@ signing or you suspect you might be signing a different extrinsic than the one i
 
 Verifying the extrinsic you are signing can take some more time before signing for a transaction but
 it allows you to add an extra security step. There are a multitude of possible attacks that will
-prevent you to send funds to the desired destination account.
+prevent you to send funds to the desired destination account (see below).
 
 ## How do Attacks look like
 
@@ -125,11 +120,22 @@ an Extrinsic A but in the background will execute another extrinsic, Extrinsic B
 [Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see
 Extrinsic B on the screen of your Ledger device.
 
+### Corrupted metadata
+
+This attack is least common and might result in signing a non-intended extrinsic without the
+possibility of verifying it. Before authorizing the metadata update check who is requesting it.
+Metadata updates might be requested by the Polkadot-JS UI and dApps (for example DeFi apps of
+parachains). For the extension, you should trust the app that requests the update while for Signer
+you should trust the issuer of the metadata (or do the update yourself).
+
 ### Corrupted QR-code (Parity Signer)
 
-If you are using [Parity Signer](https://www.parity.io/technologies/signer/), there can be a minor
-chance that the metadata is incorrect (or the signer is corrupted). In this case, there is the risk
-of signing a non-intended extrinsic without the possibility of verifying it.
+If you are using [Parity Signer](https://www.parity.io/technologies/signer/), there can be the
+possibility of scanning a corrupted QR code. This can be either to sign a extrinsic or to do a
+metadata update. The corrupted QR code will make you sign for an extrinsic B when you want to sign
+for extrinsic B. This will be showed in the Signer app and a careful user will notice it. If the
+metadata in the Signer is already incorrect (or the Signer is corrupted) there is the risk of
+signing a non-intended extrinsic without the possibility of verifying it.
 
 ## Defense against Attacks
 
