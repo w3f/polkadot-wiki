@@ -133,8 +133,7 @@ of signing a non-intended extrinsic without the possibility of verifying it.
 
 ## Defense against Attacks
 
-:::warning If you can't verify the extrinsic or you suspect you are signing something different than
-what you intended, don't sign it!
+:::warning If you can't verify the extrinsic or you suspect you are signing something different than what you intended, don't sign it!
 
 :::
 
