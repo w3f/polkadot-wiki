@@ -182,5 +182,28 @@ extrinsics are available in the light version. The following
 [repository by Zondax](https://github.com/Zondax/ledger-polkadot) lists the currently supported
 Democracy extrinsics on the full ledger.
 
+## Ledger Developer Release
+
+:::warning
+
+These instructions are for development installation only. It is recommended to install the application from Ledger Live unless you _know exactly what you're doing_.
+
+:::
+
+### Why you might need the Developer Release
+
+Ledger apps for the Polkadot and Kusama ecosystems are developed by [Zondax](https://zondax.ch/). The developer release of the apps are published before updates are usually implemented on the runtime to make sure that when the new runtime version is deployed the app can be downloaded and installed using [Ledger Live](https://www.ledger.com/ledger-live). However, because it takes some time for Ledger to audit and review the release, there might be a risk that the app upgrade is not available on Leger Live when the runtime is deployed. If this happens users cannot use Ledger devices together with the Polkadot-JS UI, and most likely while signing for transaction they will incur in the error message "txn version not supported". Please do not panic if this happens as there are solutions to this problem. If you cannot wait a couple of days that the app passes the Ledger audit, you can install the developer release from the shell using the latest version published on [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
+
+To install the developer version make sure you have the latest `pip` version and follow the steps below:
+- Install _ledgerblue_ running the command `python3 -m pip install ledgerblue`.
+- Download the developer release from the [Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases). The file will be named `installer_nanos_plus.sh`or something similar depending on the ledger device you are using.
+- Locate the downloaded shell script and make it executable in your shell by typing the command `chmod +x installer_nanos_plus.sh`.
+- You can now use the `./installer_nanos_plus.sh --help` command to visualize the available options (see below)
+
+![Dev Ledger Help Menu](../assets/ledger-help-menu.png)
+
+- Next attach your Ledger Nano (in this case Nano S Plus) to your computer, enter the PIN code and run the command `./installer_nanos_plus.sh load`. Scroll with the right button until you see "Allow unsafe manager", left and right press to confirm. You will be asked to confirm the action of uninstalling the app, and subsequently installing the newer version. After confirming both actions the shell script will proceed to install the version on your device. You will need to insert the PIN code to use the device after the installation.
+- If you wish to revert the version back to stable release just go to Ledger Live, the app will automatically detect the developer release and give the option to install the previous stable release.
+
 [ledger]: https://www.ledger.com/
 [polkadot-js ui]: https://polkadot.js.org/apps/#/explorer
