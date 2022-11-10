@@ -116,19 +116,20 @@ B. If you are using a Ledger device you have a second layer of verification, is 
 Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know
 the extrinsic that was created on the website in the first place.
 
-### Corrupted Polkadot-JS Browser Extension
+### Corrupted Browser Extension
 
-There is a minor risk that the [Polkadot-JS Browser Extension](https://polkadot.js.org/extension/)
-is corrupted because it was downloaded by non-trusted source. In this scenario the extension will
-display that you will sign for an Extrinsic A but in the background will execute another extrinsic,
-Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device this attack can be detected
-because you will be able to see Extrinsic B on the screen of your Ledger device.
+There is a minor risk that the browser extension such as the
+[Polkadot-JS Browser Extension](https://polkadot.js.org/extension/) is corrupted because it was
+downloaded by non-trusted source. In this scenario the extension will display that you will sign for
+an Extrinsic A but in the background will execute another extrinsic, Extrinsic B. If you are using a
+[Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see
+Extrinsic B on the screen of your Ledger device.
 
 ### Corrupted QR-code (Parity Signer)
 
-If you are using [Parity Signer](https://www.parity.io/technologies/signer/), if the metadata is
-incorrect (or the signer is corrupted) there is the risk of signing a non-intended extrinsic without
-the possibility of verifying it.
+If you are using [Parity Signer](https://www.parity.io/technologies/signer/), there can be a minor
+chance that the metadata is incorrect (or the signer is corrupted). In this case, there is the risk
+of signing a non-intended extrinsic without the possibility of verifying it.
 
 ## Defense against Attacks
 
