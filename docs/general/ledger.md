@@ -14,6 +14,12 @@ like Brave and Chrome.
 
 :::
 
+:::warning Ledger does not currently support batch transactions
+
+Ledger does not currently support batch calls, as a consequence if you stake using the [staking dashboard](https://staking.polkadot.network/#/overview) you must use a hot wallet. Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that allows for single calls (i.e. bonding and nominating).
+
+:::
+
 The Polkadot [Ledger](https://www.ledger.com/) application is compatible with both the Ledger Nano S
 and the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret key secured
 on a physical device that does not expose it to your computer or the internet. That is, even if you
