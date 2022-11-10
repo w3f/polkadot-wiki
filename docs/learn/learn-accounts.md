@@ -58,7 +58,7 @@ Polkadot default address format is the `MultiAddress` type. This means that the 
 
 ### Obtaining and Managing an Address
 
-:::info
+:::info 
 
 To learn more about generating accounts on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} visit the [Account Generation page](./learn-account-generation.md).
 
@@ -112,23 +112,31 @@ but gets put back when it has the existential deposit.
 
 ## Account Identity
 
+:::info To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity.md).
+
+:::
+
 The [Identities pallet](https://github.com/paritytech/substrate/tree/master/frame/identity) built
 into Polkadot allows users to attach on-chain metadata to their accounts. Independent registrars can
-verify this metadata to provide trustworthiness. To learn more about how to set or release an
-identity, how to define sub-accounts, or how to become a registrar, please read
-[this guide](learn-identity.md).
+verify this metadata to provide trustworthiness.
 
 ## Proxy Accounts
 
+:::info See the [proxies](learn-proxies.md) page for more information about proxies.
+
+:::
+
 Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
-storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the
-[proxies](learn-proxies.md) page for more information.
+storage while proxies act on their behalf with restricted (or unrestricted) functionality.
 
 ## Multi-signature Accounts
 
+:::info  See the [Multi-signature accounts page](./learn-account-multisig.md) for a full explanation about multi-signature accounts, including their use-cases.
+
+:::
+
 Multi-signature accounts are accounts created from several standard accounts (or even other
-multi-sig accounts). For a full explanation, please see the
-[Multi-signature accounts page](./learn-account-multisig.md).
+multi-sig accounts).
 
 ## Resources
 
