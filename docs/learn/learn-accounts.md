@@ -112,31 +112,31 @@ but gets put back when it has the existential deposit.
 
 ## Account Identity
 
-:::info To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity.md).
-
-:::
-
 The [Identities pallet](https://github.com/paritytech/substrate/tree/master/frame/identity) built
 into Polkadot allows users to attach on-chain metadata to their accounts. Independent registrars can
 verify this metadata to provide trustworthiness.
 
+:::info To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity.md).
+
+:::
+
 ## Proxy Accounts
+
+Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
+storage while proxies act on their behalf with restricted (or unrestricted) functionality.
 
 :::info See the [proxies](learn-proxies.md) page for more information about proxies.
 
 :::
 
-Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
-storage while proxies act on their behalf with restricted (or unrestricted) functionality.
-
 ## Multi-signature Accounts
+
+Multi-signature accounts are accounts created from several standard accounts (or even other
+multi-sig accounts).
 
 :::info  See the [Multi-signature accounts page](./learn-account-multisig.md) for a full explanation about multi-signature accounts, including their use-cases.
 
 :::
-
-Multi-signature accounts are accounts created from several standard accounts (or even other
-multi-sig accounts).
 
 ## Resources
 
