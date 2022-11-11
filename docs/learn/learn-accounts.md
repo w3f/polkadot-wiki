@@ -9,34 +9,50 @@ slug: ../learn-accounts
 
 import RPC from "./../../components/RPC-Connection";
 
-This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and [indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
+This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about
+accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and
+[indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography
+behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
 [the cryptography page](learn-cryptography.md).
 
 ## Account Address
 
-An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. The private part is the key used to access this
-address. The public and private parts together make up a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can think of the
-public address of your account like your mailbox and the private key like the key to open that
-mailbox. Anybody can send mail to your mailbox, but only you can access them as only you have access
-to its key. In the context of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, anybody can send tokens to your public address but
-only you can transact with them using your private key. That is why you should keep your private key
-secret.
+An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+account. The private part is the key used to access this address. The public and private parts
+together make up a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can
+think of the public address of your account like your mailbox and the private key like the key to
+open that mailbox. Anybody can send mail to your mailbox, but only you can access them as only you
+have access to its key. In the context of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, anybody can send tokens to
+your public address but only you can transact with them using your private key. That is why you
+should keep your private key secret.
 
 ### Mnemonic and Address Generation
 
 A valid account requires a private key that can sign on to one of the
-[supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a private key an account cannot sign anything. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts that do not have private keys (i.e. key-less accounts). Such accounts are [multi-signature accounts](./learn-account-multisig.md) and [anonymous proxies](./learn-proxies.md/#anonymous-proxies) that are not discussed here and are meant for an advanced audience.
+[supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
+private key an account cannot sign anything. In
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
+that do not have private keys (i.e. key-less accounts). Such accounts are
+[multi-signature accounts](./learn-account-multisig.md) and
+[anonymous proxies](./learn-proxies.md/#anonymous-proxies) that are not discussed here and are meant
+for an advanced audience.
 
 Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private
 key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to
-private key, which affects the ability to use the same mnemonic phrase in multiple wallets. Wallets that use different measures will arrive at a different set of addresses from the exact mnemonic phrase.
+private key, which affects the ability to use the same mnemonic phrase in multiple wallets. Wallets
+that use different measures will arrive at a different set of addresses from the exact mnemonic
+phrase.
 
 :::danger Not all wallets use the same algorithm to convert from mnemonic phrase to private key
 
-[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) and Polkadot-JS based wallets use the BIP39 dictionary for mnemonic generation, but use the
-entropy byte array to generate the private key, while full BIP39 wallets (like Ledger) use 2048
-rounds of PBKDF2 on the mnemonic. The same mnemonic may generate different private keys on other
-wallets due to the various cryptographic algorithms used. See [Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for more information.
+[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) and Polkadot-JS based
+wallets use the BIP39 dictionary for mnemonic generation, but use the entropy byte array to generate
+the private key, while full BIP39 wallets (like Ledger) use 2048 rounds of PBKDF2 on the mnemonic.
+The same mnemonic may generate different private keys on other wallets due to the various
+cryptographic algorithms used. See
+[Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for more information.
 
 :::
 
@@ -54,36 +70,89 @@ Secret seed (Private key): 0x056a6a4e203766ffbea3146967ef25e9daf677b14dc6f6ed891
 Public key (SS58): 5F3sa2TJAWMqDhXG6jhV4N8ko9SxwGy8TpaNS1repo5EYjQX
 ```
 
-Polkadot default address format is the `MultiAddress` type. This means that the same mnemonic phrase will generate public keys for different parachains. For more information see the [Address Format](./learn-account-advanced.md#address-format) section on the [Advanced Account](./learn-account-advanced.md) page.
+Polkadot default address format is the `MultiAddress` type. This means that the same mnemonic phrase
+will generate public keys for different parachains. For more information see the
+[Address Format](./learn-account-advanced.md#address-format) section on the
+[Advanced Account](./learn-account-advanced.md) page.
 
 ### Obtaining and Managing an Address
 
 :::info
 
-To learn more about generating accounts on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} visit the [Account Generation page](./learn-account-generation.md).
+To learn more about generating accounts on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} visit the
+[Account Generation page](./learn-account-generation.md).
 
 :::
 
 ## Account Balance Types
 
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
+balance depending on the account activity. Different balance types indicate whether your balance can
+be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
+Below we give an example of different balance types on Kusama
+{{ polkadot: (note that on Polkadot the situation will look the same). :polkadot }}
+
 ![account_balance_types](../assets/account-balance-types.png)
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, different balance types indicate whether your balance can be used for
-transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
+- The **total** balance indicates the total number of tokens in the account. Note that this number
+  does not necessarily correspond to the tokens you are allowed to transfer. In the example the
+  total number of tokens in 0.6274 KSM.
+The **transferrable** balance indicates the number of tokens that are free to be transferred. This
+  is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of
+  tokens. Locked funds correspond to tokens used in staking, governance, and vested transfers (see
+  below). In the example, the transferrable balance is 0.0106 KSM.
+- The **vested** balance indicates tokens that were sent to the account and that are released with a
+  specific time schedule. The tokens are owned by the account but are _locked_ and become available
+  for transfer after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
+- The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
+  to staking. In the example the bonded balance is 0.4 KSM.
+- The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
+  participation to democracy (i.e. voting for referenda and council). In the example, the democracy
+  balance is 0.4 KSM.
+- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become
+  transferrable again. Those tokens already went through the unbonding period. In this case, the
+  redeemable balance is 0.1 KSM.
+- The **locked** balance indicates the number of tokens that are frozen for on-chain participation
+  to staking and democracy, or for vested transfers. **Locks do not stack**, which means that if you
+  have different locks the total locked balance is not the addition of all single locks. Instead,
+  **the biggest lock decides the total locked balance**. In the example, the locked balance is 0.55
+  KSM because the biggest lock is on democracy (0.55 KSM).
+- The **reserved** balance indicates the number of tokens that are frozen for on-chain activity
+  other than staking, governance, and vested transfers. Such activity can be setting an identity or
+  a proxy. Reserved funds are held due to on-chain requirements and can usually be freed by taking
+  some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
+  is registered, but by clearing the identity, you can unreserve the funds and make them free again.
+  The same applies to proxies. The idea is that those actions require some network memory usage that
+  is not given for free. In the example we created a governance proxy and the reserved funds for
+  this are 0.0668 KSM.
 
-- The **total** balance indicates the total number of tokens in the account.
-- The **reserved** balance indicates the number of tokens that are frozen for on-chain participation other than staking. Reserved funds are held due to on-chain requirements and can usually be freed by taking
-some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
-is registered, but by clearing the identity, you can unreserve the funds and make them free again. The same applies to proxies. The idea is that those actions require some network memory usage that is not given for free.
-- The **bonded** balance indicates the number of tokens that are frozen for on-chain participation to staking.
-- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become transferrable again. Those tokens already went through the unbonding period.
-- The **locked** balance indicates the number of tokens that are frozen for on-chain participation such as staking for example. This is the sum of the _bonded_ and _redeemable_ tokens. Once the lock is removed from the _redeemable_ tokens, the number of _locked_ tokens will be the same as the one of _bonded_ tokens.
-- The **transferrable** balance indicates the number of tokens that is free to be transferred. This is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of tokens.
+### Unlocking Locks
+
+:::info Locks do not stack!
+
+The biggest lock decides the total amount of locked funds. See
+[this walk-through video tutorial](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
+of unlocking funds in the example above.
+
+:::
+
+In the example, we mentioned that the locked balance is 0.55 KSM because the biggest lock is on
+democracy and is 0.55 KSM. As soon as the democracy lock is removed the next biggest lock is on
+staking 0.5 KSM (bonded 0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be
+0.5 KSM, and 0.05 KSM will be added to the transferrable balance. After redeeming the unbonded 0.1
+KSM, the locked balance will be 0.4 KSM, and an additional 0.1 KSM will be added to the
+transferrable balance. Now the biggest lock is still the bonded one. This means that even if we
+remove the vested lock, the locked balance will still be 0.4 KSM and no tokens will be added to the
+transferrable balance. To free those bonded tokens we will need to unbond them and wait for the
+unbonding period to make them redeemable. If we remove the proxy the reserved funds will be
+automatically added to the transferrable balance.
 
 ## Existential Deposit and Reaping
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
-account does not exist yet on-chain. For that, it needs the existential deposit of {{ polkadot: <RPC network="polkadot" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}.
+account does not exist yet on-chain. For that, it needs the existential deposit of
+{{ polkadot: <RPC network="polkadot" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}.
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account
 will be wiped from the blockchain's state to conserve space, along with any funds in that address.
