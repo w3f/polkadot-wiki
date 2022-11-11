@@ -34,17 +34,27 @@ provide support for third party applications.
 
 <iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-:::info Most of the content on this page has been moved to several support pages. See the links below.
+:::info Transfer of Funds
+
+See the Polkadot Support pages for detailed information about transferring funds using the [Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
 
 :::
 
-- [Using the transfer tab or the send button on your account in the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui)
-  - [Signing with the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993)
-  - [Signing with the browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
-  - [Signing with ledger](https://support.polkadot.network/support/solutions/articles/65000181994)
-  - [Signing with parity signer](https://support.polkadot.network/support/solutions/articles/65000182000)
+:::info Signing Transactions
+
+See the Polkadot Support pages for detailed information about signing transactions using:
+- [The Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
+- [The Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
+- [Ledger devices](https://support.polkadot.network/support/solutions/articles/65000181994-how-to-sign-a-transaction-on-ledger)
+- [The Parity Signer app](https://support.polkadot.network/support/solutions/articles/65000182000-how-to-sign-a-transaction-in-parity-signer). 
+
+:::
 
 ## Keep-Alive Checks
+
+:::info See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) to learn about keep-alive checks and existential deposit.
+
+:::
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are two main ways to
 transfer funds from one account to another:
@@ -101,24 +111,26 @@ If you have tokens that are bonded, you will need to unbond them before you can 
 Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-unbond.md)
 to check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
-### Purging Session Keys
-
-If you used this account to set up a validator and you did not purge your keys before unbonding your
-tokens, you need to purge your keys. You can do this by seeing the
-[How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also
-be checked by checking `session.nextKeys` in the chain state for an existing key.
-
 ### Checking for Locks
 
-Check out
-[this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-)
-to learn how to check for locks.
+:::info
+
+See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and [this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-) to learn how to check for locks and remove them.
+
+:::
 
 You can also check for locks by querying `system.account(AccountId)` in
 [`Chain state` tab under the `Developer` drop-down menu in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate).
 Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
 JSON object. If you see a non-zero value for anything other than `free`, you have locks on your
 account that need to get resolved.
+
+### Purging Session Keys
+
+If you used this account to set up a validator and you did not purge your keys before unbonding your
+tokens, you need to purge your keys. You can do this by seeing the
+[How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also
+be checked by checking `session.nextKeys` in the chain state for an existing key.
 
 ### Existing Recovery Info
 
