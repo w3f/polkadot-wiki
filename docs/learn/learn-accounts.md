@@ -98,7 +98,7 @@ Below we give an example of different balance types on Kusama
 - The **total** balance indicates the total number of tokens in the account. Note that this number
   does not necessarily correspond to the tokens you are allowed to transfer. In the example the
   total number of tokens in 0.6274 KSM.
-- The **transferrable** balance indicates the number of tokens that is free to be transferred. This
+The **transferrable** balance indicates the number of tokens that are free to be transferred. This
   is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of
   tokens. Locked funds correspond to tokens used in staking, governance, and vested transfers (see
   below). In the example, the transferrable balance is 0.0106 KSM.
