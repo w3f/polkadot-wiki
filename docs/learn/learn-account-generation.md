@@ -107,7 +107,7 @@ secure than using Parity Signer or other air-gapped approaches.
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) to learn how to change the password for an account that has been created on the Polkadot-JS browser extension (i.e. an injected account).
+See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc) to learn how to change the password for an account that has been created on the Polkadot-JS browser extension (i.e. an injected account).
 
 :::
 
@@ -210,7 +210,7 @@ account's password".
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) to learn how to change the password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
+See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc) to learn how to change the password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
 
 :::
 

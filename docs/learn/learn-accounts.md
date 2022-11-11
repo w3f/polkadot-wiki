@@ -84,7 +84,7 @@ is registered, but by clearing the identity, you can unreserve the funds and mak
 
 :::info
 
-See [this technical explainer video](https://youtu.be/Wg0pH05CC9Y) or visit [this support page](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) for more information about existential deposit.
+See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) or visit [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) for more information about existential deposit.
 
 :::
 
