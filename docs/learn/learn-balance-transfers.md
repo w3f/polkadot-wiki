@@ -15,16 +15,26 @@ transferring a balance, we will begin by using
 [created an account](learn-account-generation.md) and have some funds that are ready to be
 transferred.
 
-:::info We support only the use of the [_Polkadot-JS UI_](https://polkadot.js.org/apps/#/explorer)
-together with the [_browser extension_](https://polkadot.js.org/extension/),
-[_ledger_](https://www.ledger.com/ledger-live) and
-[_parity signer_](https://www.parity.io/technologies/signer/) for signing transactions. We do not
+:::info 
+
+We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
+together with the [**browser extension**](https://polkadot.js.org/extension/),
+[**Ledger**](https://www.ledger.com/ledger-live) and
+[**Parity Signer**](https://www.parity.io/technologies/signer/) for signing transactions. We do not
 provide support for third party applications.
 
 :::
 
-:::info Most of the content on this page has been moved to several support pages. See the links
-below.
+## Sending Funds using UI, Extension, Parity Signer & Ledger
+
+:::info See the video tutorial below to learn how to send funds using the supported tools.
+
+:::
+
+
+<iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+
+:::info Most of the content on this page has been moved to several support pages. See the links below.
 
 :::
 
@@ -33,32 +43,6 @@ below.
   - [Signing with the browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
   - [Signing with ledger](https://support.polkadot.network/support/solutions/articles/65000181994)
   - [Signing with parity signer](https://support.polkadot.network/support/solutions/articles/65000182000)
-
-## Signing Transactions with Parity Signer
-
-:::info This information is complementary to the
-[dedicated support page](https://support.polkadot.network/support/solutions/articles/65000182000).
-
-:::
-
-If you directly import your Parity Signer account to Polkadot-JS UI, you will see a pop-up window
-with a QR code and a camera window, as shown below. Open the QR scanner on Parity Signer and scan
-the QR code. You may be prompted to enter your PIN to sign the transaction. The signed extrinsic
-will then be available as a QR code that needs to be shown in front of your computer's camera (as
-shown in the red square window shown to the right in the screenshot below).
-
-![Companion transfer](../assets/accounts/signer-transaction.png)
-
-If your account was setup on [Parity Signer Companion](https://parity.link/signer-companion) instead
-of Polkadot-JS UI, you will see a pop-up window with a QR code, as shown below for this transaction.
-
-![Companion transfer](../assets/accounts/companion-transfer.png)
-
-Scan the QR code using Parity Signer. You will see a QR code consisting of the signed extrinsic for
-this transaction. Click on the **next to signing** button in the pop-up window, as shown above. You
-can then show the QR code on your phone within the red square window.
-
-![Companion transfer](../assets/accounts/companion-transfer2.png)
 
 ## Keep-Alive Checks
 
