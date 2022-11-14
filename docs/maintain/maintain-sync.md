@@ -45,8 +45,8 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** prunes historical states: all finalized blocks' older than a configurable number
-except the genesis block's: This is 256 blocks from the last finalized one, by default. A node that is
+A **full node** prunes historical states: all finalized blocks' states older than a configurable number
+except the genesis block's state. This is 256 blocks from the last finalized one, by default. A node that is
 pruned this way requires much less space than an archive node.
 
 A full node may eventually be able to rebuild every block's state with no additional information, and
