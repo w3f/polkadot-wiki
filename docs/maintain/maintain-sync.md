@@ -28,7 +28,7 @@ pending changes on top of it, and emits the events that are the result of these 
 state of the chain at block 1 is used in the same way to build the state of the chain at block 2,
 and so on. Once two thirds of the validators agree on a specific block being valid, it is finalized.
 
-An **archive node** keeps all the past blocks. An archive node makes it convenient to query the past
+An **archive node** keeps all the past blocks and their states. An archive node makes it convenient to query the past
 state of the chain at any point in time. Finding out what an account's balance at a certain block
 was, or which extrinsics resulted in a certain state change are fast operations when using an
 archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth
@@ -45,15 +45,15 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** is _pruned_: it discards all finalized blocks older than a configurable number
-except the genesis block: This is 256 blocks from the last finalized one, by default. A node that is
+A **full node** prunes historical states: all finalized blocks' states older than a configurable number
+except the genesis block's state. This is 256 blocks from the last finalized one, by default. A node that is
 pruned this way requires much less space than an archive node.
 
-A full node may eventually be able to rebuild the entire chain with no additional information, and
+A full node may eventually be able to rebuild every block's state with no additional information, and
 become an archive node, but at the time of writing, this is not implemented. If you need to query
-historical blocks past what you pruned, you need to purge your database and resync your node
+historical blocks' states past what you pruned, you need to purge your database and resync your node
 starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to
-avoid needing to sync from genesis with the network, and only need the blocks past that snapshot.
+avoid needing to sync from genesis with the network, and only need the states of blocks past that snapshot.
 
 Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
 directly on the network without relying on a centralized infrastructure provider.
