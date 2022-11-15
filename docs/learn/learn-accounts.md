@@ -138,7 +138,9 @@ See the [proxies](learn-proxies.md) page for more information about proxies.
 Multi-signature accounts are accounts created from several standard accounts (or even other
 multi-sig accounts).
 
-:::info  See the [Multi-signature accounts page](./learn-account-multisig.md) for a full explanation about multi-signature accounts, including their use-cases.
+:::info  
+
+See the [Multi-signature accounts page](./learn-account-multisig.md) for a full explanation about multi-signature accounts, including their use-cases.
 
 :::
 
