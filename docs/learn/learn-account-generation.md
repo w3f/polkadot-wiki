@@ -210,7 +210,7 @@ account's password".
 
 :::info
 
-See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc) to learn how to change the password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
 
 :::
 
