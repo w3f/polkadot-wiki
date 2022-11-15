@@ -132,7 +132,7 @@ The **transferrable** balance indicates the number of tokens that are free to be
 :::info Locks do not stack!
 
 The biggest lock decides the total amount of locked funds. See
-[this walk-through video tutorial](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
+[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
 of unlocking funds in the example above.
 
 :::
