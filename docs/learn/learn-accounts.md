@@ -127,7 +127,9 @@ To learn more about how to set or release an identity, how to define sub-account
 Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
 storage while proxies act on their behalf with restricted (or unrestricted) functionality.
 
-:::info See the [proxies](learn-proxies.md) page for more information about proxies.
+:::info 
+
+See the [proxies](learn-proxies.md) page for more information about proxies.
 
 :::
 
