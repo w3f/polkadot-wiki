@@ -52,7 +52,9 @@ See the Polkadot Support pages for detailed information about signing transactio
 
 ## Keep-Alive Checks
 
-:::info See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) to learn about keep-alive checks and existential deposit.
+:::info 
+
+See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) to learn about keep-alive checks and existential deposit.
 
 :::
 
