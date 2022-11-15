@@ -17,14 +17,20 @@ meaning they retain all necessary information to be able to author new blocks an
 transactions in much the same way as miners do on current PoW blockchains. Under normal
 circumstances, they will collate and execute transactions to create an unsealed block and provide
 it, together with a proof of state transition, to one or more validators responsible for proposing a
-parachain block.
+parachain block.relay chain validator
 
 Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
-will get rejected by validators. Therefore the assumption that having more collators is better or
-more secure is not correct. On the contrary, too many collators may slow down the network. The only
-nefarious power collators have is transaction censorship. To prevent censorship, a parachain only
-needs to ensure that there exist some neutral collators - but not necessarily a majority.
-Theoretically, the censorship problem is solved with having just one honest collator.
+will get rejected by validators. The validators are required to check the validity of submitted
+candidates, followed by issuing and collecting statements about the validity of candidates to other
+validators. This process is known as **candidate backing**. Once a candidate meets a specified
+criteria for inclusion, the selected relay chain block author then choses any of the backed
+candidates for each parachain and includes those into the relay chain block.
+
+The assumption that having more collators is better or more secure is not correct. On the contrary,
+too many collators may slow down the network. The only nefarious power collators have is transaction
+censorship. To prevent censorship, a parachain only needs to ensure that there exist some neutral
+collators - but not necessarily a majority. Theoretically, the censorship problem is solved with
+having just one honest collator.
 
 ## XCM
 
