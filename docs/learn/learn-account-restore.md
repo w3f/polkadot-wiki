@@ -42,7 +42,7 @@ See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and [**this support 
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer) to learn how to restore your account on the Polkadot-JS UI.
+See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer) to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 
