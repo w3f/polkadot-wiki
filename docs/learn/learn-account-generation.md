@@ -22,7 +22,9 @@ security trade-offs. Please review this page carefully before making your accoun
 understand the risks of the account generation method you choose and how to properly mitigate them
 in order to keep your funds safe.<br/><br/>
 
-:::info Visit [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely) for more information about key security.
+:::info 
+
+Visit [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely) for more information about key security.
 
 :::
 
