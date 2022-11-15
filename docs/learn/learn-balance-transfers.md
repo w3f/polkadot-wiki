@@ -36,7 +36,9 @@ See the video tutorial below to learn how to send funds using the supported tool
 
 <iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-:::info Transfer of Funds
+:::info
+
+Transfer of Funds
 
 See the Polkadot Support pages for detailed information about transferring funds using the [Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
 
