@@ -27,7 +27,9 @@ provide support for third party applications.
 
 ## Sending Funds using UI, Extension, Parity Signer & Ledger
 
-:::info See the video tutorial below to learn how to send funds using the supported tools.
+:::info
+
+See the video tutorial below to learn how to send funds using the supported tools.
 
 :::
 
