@@ -44,7 +44,9 @@ See the Polkadot Support pages for detailed information about transferring funds
 
 :::
 
-:::info Signing Transactions
+:::info
+
+Signing Transactions
 
 See the Polkadot Support pages for detailed information about signing transactions using:
 - [The Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
