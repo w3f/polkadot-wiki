@@ -15,7 +15,7 @@ transferring a balance, we will begin by using
 [created an account](learn-account-generation.md) and have some funds that are ready to be
 transferred.
 
-:::info 
+:::info
 
 We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
 together with the [**browser extension**](https://polkadot.js.org/extension/),
@@ -33,34 +33,33 @@ See the video tutorial below to learn how to send funds using the supported tool
 
 :::
 
-
 <iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-:::info
+:::info Transfer of Funds
 
-Transfer of Funds
-
-See the Polkadot Support pages for detailed information about transferring funds using the [Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
+See the Polkadot Support pages for detailed information about transferring funds using the
+[Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
 
 :::
 
-:::info
-
-Signing Transactions
+:::info Signing Transactions
 
 See the Polkadot Support pages for detailed information about signing transactions using:
+
 - [The Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
 - [The Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
 - [Ledger devices](https://support.polkadot.network/support/solutions/articles/65000181994-how-to-sign-a-transaction-on-ledger)
-- [The Parity Signer app](https://support.polkadot.network/support/solutions/articles/65000182000-how-to-sign-a-transaction-in-parity-signer). 
+- [The Parity Signer app](https://support.polkadot.network/support/solutions/articles/65000182000-how-to-sign-a-transaction-in-parity-signer).
 
 :::
 
 ## Keep-Alive Checks
 
-:::info 
+:::info
 
-See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) to learn about keep-alive checks and existential deposit.
+See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
+to learn about keep-alive checks and existential deposit.
 
 :::
 
@@ -123,7 +122,9 @@ to check if you have bonded tokens, stop nominating (if necessary) and unbond yo
 
 :::info
 
-See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and [this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-) to learn how to check for locks and remove them.
+See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and
+[this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-)
+to learn how to check for locks and remove them.
 
 :::
 

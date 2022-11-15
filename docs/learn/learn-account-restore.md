@@ -9,24 +9,28 @@ slug: ../learn-account-restore
 
 ## Backing Up Accounts
 
-:::info 
+:::info
 
-See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file) to know how to backup your account.
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
+to know how to backup your account.
 
 :::
 
 Depending on what software you are using to access your account, there are various ways to back up
 and restore your account. It is a good idea to back your information up and keep it in a secure
 place. Note that in order to recover an account, you should create your account according to the
-instructions [here](learn-account-generation.md). In general, however, as long as you know how you
-created your account, and have the seed phrase ([mnemonic phrase](learn-accounts#portability)) or
-JSON file (and password) stored securely, you will be able to restore your account.
+instructions [here](learn-account-generation.md). In general, as long as you know how you created
+your account, and have the seed phrase ([mnemonic phrase](learn-accounts#portability)) or JSON file
+(and password) stored securely, you will be able to restore your account.
 
 ## Restore Account on the Polkadot-JS UI
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui) to learn how to restore your account on the Polkadot-JS UI.
+See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui)
+to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 
@@ -34,7 +38,9 @@ See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and [**this support 
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension) to learn how to restore your account on the Polkadot-JS UI.
+See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension)
+to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 
@@ -42,7 +48,9 @@ See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and [**this support 
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer) to learn how to restore your account on the Polkadot-JS UI.
+See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
+to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 

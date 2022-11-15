@@ -22,9 +22,11 @@ security trade-offs. Please review this page carefully before making your accoun
 understand the risks of the account generation method you choose and how to properly mitigate them
 in order to keep your funds safe.<br/><br/>
 
-:::info 
+:::info
 
-Visit [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely) for more information about key security.
+Visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely)
+for more information about key security.
 
 :::
 
@@ -81,16 +83,18 @@ See our Support Articles for more information about how to create an account usi
 
 :::note
 
-If you prefer video instructions for creating an account using Polkadot JS, we have an easy to
-follow guide for beginners [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
+If you prefer video instructions for creating an account using Polkadot JS, see
+[**this video tutorial**](https://www.youtube.com/watch?v=sy7lvAqyzkY).
 
 :::
 
 ## Polkadot-JS Browser Extension
 
-:::info 
+:::info
 
-For guidelines about how to create an account using Polkadot Extension, see [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
+For guidelines about how to create an account using Polkadot Extension, see
+[**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
 
 :::
 
@@ -109,7 +113,9 @@ secure than using Parity Signer or other air-gapped approaches.
 
 :::info
 
-See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc&t=280s) to learn how to change the password for an account that has been created on the Polkadot-JS browser extension (i.e. an injected account).
+See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc&t=280s) to learn how to
+change the password for an account that has been created on the Polkadot-JS browser extension (i.e.
+an injected account).
 
 :::
 
@@ -174,7 +180,9 @@ be copied, and so on.
 
 :::info
 
-For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+For guidelines about how to create an account using Subkey, see
+[**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
 
 :::
 
@@ -185,9 +193,11 @@ recommended for general users.
 
 ## Polkadot-JS UI
 
-:::info 
+:::info
 
-For guidelines about how to create an account using Polkadot-JS UI, see [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180529).
+For guidelines about how to create an account using Polkadot-JS UI, see
+[**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180529).
 
 :::
 
@@ -212,7 +222,8 @@ account's password".
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the
+password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
 
 :::
 
@@ -229,7 +240,9 @@ password of such account.
 
 :::info
 
-For guidelines about how to create an account using Parity Signer, see [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+For guidelines about how to create an account using Parity Signer, see
+[**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
 
 :::
 
@@ -252,5 +265,3 @@ To use a Ledger hardware wallet to create your address and keep your tokens in c
 the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
 
 :::
-
-
