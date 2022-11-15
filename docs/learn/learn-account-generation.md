@@ -227,7 +227,7 @@ password of such account.
 
 :::info
 
-For guidelines about how to create an account using Parity Signer, see [**this video tutorial**](https://youtu.be/hgv1R9mPEXw) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+For guidelines about how to create an account using Parity Signer, see [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
 
 :::
 
