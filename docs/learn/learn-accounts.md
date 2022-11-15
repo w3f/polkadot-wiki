@@ -116,7 +116,9 @@ The [Identities pallet](https://github.com/paritytech/substrate/tree/master/fram
 into Polkadot allows users to attach on-chain metadata to their accounts. Independent registrars can
 verify this metadata to provide trustworthiness.
 
-:::info To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity.md).
+:::info 
+
+To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity.md).
 
 :::
 
