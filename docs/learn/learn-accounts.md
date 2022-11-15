@@ -87,30 +87,66 @@ To learn more about generating accounts on
 
 ## Account Balance Types
 
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
+balance depending on the account activity. Different balance types indicate whether your balance can
+be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
+Below we give an example of different balance types on Kusama
+{{ polkadot: (note that on Polkadot the situation will look the same). :polkadot }}
+
 ![account_balance_types](../assets/account-balance-types.png)
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, different balance types indicate
-whether your balance can be used for transfers, to pay fees, or must remain frozen and unused due to
-an on-chain requirement.
-
-- The **total** balance indicates the total number of tokens in the account.
-- The **reserved** balance indicates the number of tokens that are frozen for on-chain participation
-  other than staking. Reserved funds are held due to on-chain requirements and can usually be freed
-  by taking some on-chain action. For example, the "Identity" pallet reserves funds while an
-  on-chain identity is registered, but by clearing the identity, you can unreserve the funds and
-  make them free again. The same applies to proxies. The idea is that those actions require some
-  network memory usage that is not given for free.
-- The **bonded** balance indicates the number of tokens that are frozen for on-chain participation
-  to staking.
-- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become
-  transferrable again. Those tokens already went through the unbonding period.
-- The **locked** balance indicates the number of tokens that are frozen for on-chain participation
-  such as staking for example. This is the sum of the _bonded_ and _redeemable_ tokens. Once the
-  lock is removed from the _redeemable_ tokens, the number of _locked_ tokens will be the same as
-  the one of _bonded_ tokens.
-- The **transferrable** balance indicates the number of tokens that is free to be transferred. This
+- The **total** balance indicates the total number of tokens in the account. Note that this number
+  does not necessarily correspond to the tokens you are allowed to transfer. In the example the
+  total number of tokens in 0.6274 KSM.
+The **transferrable** balance indicates the number of tokens that are free to be transferred. This
   is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of
-  tokens.
+  tokens. Locked funds correspond to tokens used in staking, governance, and vested transfers (see
+  below). In the example, the transferrable balance is 0.0106 KSM.
+- The **vested** balance indicates tokens that were sent to the account and that are released with a
+  specific time schedule. The tokens are owned by the account but are _locked_ and become available
+  for transfer after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
+- The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
+  to staking. In the example the bonded balance is 0.4 KSM.
+- The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
+  participation to democracy (i.e. voting for referenda and council). In the example, the democracy
+  balance is 0.4 KSM.
+- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become
+  transferrable again. Those tokens already went through the unbonding period. In this case, the
+  redeemable balance is 0.1 KSM.
+- The **locked** balance indicates the number of tokens that are frozen for on-chain participation
+  to staking and democracy, or for vested transfers. **Locks do not stack**, which means that if you
+  have different locks the total locked balance is not the addition of all single locks. Instead,
+  **the biggest lock decides the total locked balance**. In the example, the locked balance is 0.55
+  KSM because the biggest lock is on democracy (0.55 KSM).
+- The **reserved** balance indicates the number of tokens that are frozen for on-chain activity
+  other than staking, governance, and vested transfers. Such activity can be setting an identity or
+  a proxy. Reserved funds are held due to on-chain requirements and can usually be freed by taking
+  some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
+  is registered, but by clearing the identity, you can unreserve the funds and make them free again.
+  The same applies to proxies. The idea is that those actions require some network memory usage that
+  is not given for free. In the example we created a governance proxy and the reserved funds for
+  this are 0.0668 KSM.
+
+### Unlocking Locks
+
+:::info Locks do not stack!
+
+The biggest lock decides the total amount of locked funds. See
+[this walk-through video tutorial](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
+of unlocking funds in the example above.
+
+:::
+
+In the example, we mentioned that the locked balance is 0.55 KSM because the biggest lock is on
+democracy and is 0.55 KSM. As soon as the democracy lock is removed the next biggest lock is on
+staking 0.5 KSM (bonded 0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be
+0.5 KSM, and 0.05 KSM will be added to the transferrable balance. After redeeming the unbonded 0.1
+KSM, the locked balance will be 0.4 KSM, and an additional 0.1 KSM will be added to the
+transferrable balance. Now the biggest lock is still the bonded one. This means that even if we
+remove the vested lock, the locked balance will still be 0.4 KSM and no tokens will be added to the
+transferrable balance. To free those bonded tokens we will need to unbond them and wait for the
+unbonding period to make them redeemable. If we remove the proxy the reserved funds will be
+automatically added to the transferrable balance.
 
 ## Existential Deposit and Reaping
 
