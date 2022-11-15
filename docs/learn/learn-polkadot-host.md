@@ -40,6 +40,10 @@ A host node...
    them.
 5. should exchange neighbor packets.
 
+Consensus in the Polkadot Host is achieved during the execution of two different procedures,
+block-production and finality. The Polkadot Host must run these procedures if (and only if) it is
+running on a validator node.
+
 Additional information on each of these requirements can be found
 [here](https://spec.polkadot.network/#chapter-bootstrapping).
 

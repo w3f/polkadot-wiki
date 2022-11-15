@@ -55,9 +55,10 @@ Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the
 is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
 who are interested in maintaining the network can run a validator node.
 
-Validators assume the role of producing new blocks in [BABE](learn-consensus.md/#babe), validating
-parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
-their stake. Nominators can approve candidates that they trust and back them with their tokens.
+Validators assume the role of producing new blocks in
+[BABE](learn-consensus.md/#block-production-babe), validating parachain blocks, and guaranteeing
+finality. Nominators can choose to back select validators with their stake. Nominators can approve
+candidates that they trust and back them with their tokens.
 
 ## Probabilistic vs. Provable Finality
 
@@ -110,10 +111,16 @@ the validator nodes and determines the authors of new blocks. BABE is comparable
 selection rule and slot time adjustments. BABE assigns block production slots to validators
 according to stake and using the Polkadot [randomness cycle](learn-randomness.md).
 
-Validators in Polkadot will participate in a lottery in every slot that will tell them whether or
-not they are the block producer candidate for that slot. Slots are discrete units of time, nominally
-6 seconds in length. Because of this randomness mechanism, multiple validators could be candidates
-for the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
+BABE execution happens in sequential non-overlapping phases known as an epoch. Each epoch on its
+turn is divided into a predefined number of slots. All slots in each epoch are sequentially indexed
+starting from 0 (slot number). At the beginning of each epoch, the BABE node needs to run the
+[Block-Production-Lottery algorithm](https://spec.polkadot.network/#algo-block-production-lottery)
+to find out in which slots it should produce a block and gossip to the other block producers.
+
+Validators in Polkadot participate in a lottery for every slot, which will inform whether or not
+they are the block producer candidate for that slot. Slots are discrete units of time, nominally 6
+seconds in length. Because of this randomness mechanism, multiple validators could be candidates for
+the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
 
 ### Multiple Validators per Slot
 
@@ -148,6 +155,10 @@ construct a ring-VRF and is a work in progress. This section will be updated as 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
 implemented for the Polkadot Relay Chain.
 
+The Polkadot Host uses the GRANDPA Finality protocol to finalize blocks. Finality is obtained by
+consecutive rounds of voting by the validator nodes. Validators execute GRANDPA finality process in
+parallel to Block Production as an independent service.
+
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope
 with 1/5 Byzantine nodes in an asynchronous setting.
 
@@ -168,6 +179,22 @@ for a full description of the protocol.
 The
 [Substrate implementation of GRANDPA](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)
 is part of Substrate Frame.
+
+## Bridging: BEEFY
+
+The BEEFY (Bridge Efficiency Enabling Finality Yielder) is a secondary protocol to GRANDPA to
+support efficient bridging between the Polkadot network (relay chain) and remote, segregated
+blockchains, such as Ethereum, which were not built with the Polkadot interchain operability in
+mind. The protocol allows participants of the remote network to verify finality proofs created by
+the Polkadot relay chain validators. In other words: clients in the Ethereum network should able to
+verify that the Polkadot network is at a specific state.
+
+Storing all the information necessary to verify the state of the remote chain, such as the block
+headers, is too expensive. BEEFY stores the information in a space-efficient way and clients can
+request additional information over the protocol.
+
+For additional implementation details, check out
+[this](https://spec.polkadot.network/#sect-grandpa-beefy) section of the Polkadot Spec.
 
 ## Fork Choice
 
