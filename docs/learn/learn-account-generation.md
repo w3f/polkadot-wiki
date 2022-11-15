@@ -30,7 +30,7 @@ for more information about key security.
 
 :::
 
-## Ways to generate an account
+## Ways to Generate an Account
 
 The **most user-friendly** way to create a Polkadot or Kusama address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
@@ -83,12 +83,20 @@ See our Support Articles for more information about how to create an account usi
 
 :::note
 
-If you prefer video instructions for creating an account using Polkadot JS, we have an easy to
-follow guide for beginners [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
+If you prefer video instructions for creating an account using Polkadot JS, see
+[**this video tutorial**](https://www.youtube.com/watch?v=sy7lvAqyzkY).
 
 :::
 
 ## Polkadot-JS Browser Extension
+
+:::info
+
+For guidelines about how to create an account using Polkadot Extension, see
+[**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
+
+:::
 
 The Polkadot-JS Browser Extension (simply referred to as Polkadot Extension) provides a reasonable
 balance of security and usability. It provides a separate local mechanism to generate your address
@@ -101,12 +109,15 @@ similar functionality.
 It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
 
-:::info For the tutorial on how to create an account using Polkadot Extension, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
+### Reset Password using the Browser Extension
+
+:::info
+
+See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc&t=280s) to learn how to
+change the password for an account that has been created on the Polkadot-JS browser extension (i.e.
+an injected account).
 
 :::
-
-### Reset Password using the browser extension
 
 :::warning
 
@@ -167,13 +178,28 @@ be copied, and so on.
 
 ## Subkey
 
+:::info
+
+For guidelines about how to create an account using Subkey, see
+[**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+
+:::
+
 Subkey is recommended for technically advanced users who are comfortable with the command line and
 compiling Rust code. Subkey allows you to generate keys on any device that can compile the code.
 Subkey may also be useful for automated account generation using an air-gapped device. It is not
-recommended for general users. For the tutorial on how to create an account using Subkey, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+recommended for general users.
 
 ## Polkadot-JS UI
+
+:::info
+
+For guidelines about how to create an account using Polkadot-JS UI, see
+[**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180529).
+
+:::
 
 :::caution
 
@@ -186,9 +212,7 @@ extension. Learn more about account backup and restoration [here](learn-account-
 
 Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least
 secure way of generating an account. It should only be used if all of the other methods are not
-feasible in your situation. For the tutorial on how to create an account using Polkadot-JS Apps,
-visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000180529).
+feasible in your situation.
 
 ### Reset password using the Polkadot-JS UI
 
@@ -197,6 +221,13 @@ To reset the password of an account created with Polkadot-JS Apps UI you just ne
 account's password".
 
 :::info
+
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the
+password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
+
+:::
+
+:::note
 
 If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension,
 you need to follow the
@@ -207,10 +238,17 @@ password of such account.
 
 ## Parity Signer
 
+:::info
+
+For guidelines about how to create an account using Parity Signer, see
+[**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+
+:::
+
 Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it. For the tutorial on how to create an account using Parity Signer,
-[this support article](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+installing it.
 
 ## Vanity Generator
 
@@ -221,5 +259,9 @@ create an account using Vanity Generator, visit
 
 ## Ledger Hardware Wallet
 
+:::info
+
 To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on our [Ledger hardware wallet guide page](../general/ledger.md).
+the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
+
+:::

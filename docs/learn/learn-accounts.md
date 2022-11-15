@@ -132,7 +132,7 @@ The **transferrable** balance indicates the number of tokens that are free to be
 :::info Locks do not stack!
 
 The biggest lock decides the total amount of locked funds. See
-[this walk-through video tutorial](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
+[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
 of unlocking funds in the example above.
 
 :::
@@ -149,6 +149,14 @@ unbonding period to make them redeemable. If we remove the proxy the reserved fu
 automatically added to the transferrable balance.
 
 ## Existential Deposit and Reaping
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) or visit
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
+for more information about existential deposit.
+
+:::
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the existential deposit of
@@ -177,21 +185,37 @@ but gets put back when it has the existential deposit.
 
 The [Identities pallet](https://github.com/paritytech/substrate/tree/master/frame/identity) built
 into Polkadot allows users to attach on-chain metadata to their accounts. Independent registrars can
-verify this metadata to provide trustworthiness. To learn more about how to set or release an
-identity, how to define sub-accounts, or how to become a registrar, please read
-[this guide](learn-identity.md).
+verify this metadata to provide trustworthiness.
+
+:::info
+
+To learn more about how to set or release an identity, how to define sub-accounts, or how to become
+a registrar, please read [this guide](learn-identity.md).
+
+:::
 
 ## Proxy Accounts
 
 Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
-storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the
-[proxies](learn-proxies.md) page for more information.
+storage while proxies act on their behalf with restricted (or unrestricted) functionality.
+
+:::info
+
+See the [proxies](learn-proxies.md) page for more information about proxies.
+
+:::
 
 ## Multi-signature Accounts
 
-Multi-signature accounts are accounts created from several standard accounts (or even other
-multi-sig accounts). For a full explanation, please see the
-[Multi-signature accounts page](./learn-account-multisig.md).
+Multi-signature accounts are accounts created from several standard accounts, pure proxies, and even
+other multi-sig accounts.
+
+:::info
+
+See the [Multi-signature accounts page](./learn-account-multisig.md) for a full explanation about
+multi-signature accounts, including their use-cases.
+
+:::
 
 ## Resources
 
