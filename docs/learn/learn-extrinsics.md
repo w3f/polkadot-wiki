@@ -59,10 +59,10 @@ do it.
 Parity Signer updates the full metadata through the QR fountain while the extension updates the
 metadata index (the metadata is not loaded into it). As a consequence the process of updating
 metadata is different (you will notice that on the Signer app the update takes longer for example).
-Having outdated metadata on the Signer app will prevent you from signing while on the extension you
-will be able to click the sign button but the extrinsic will likely fail similarly of having an
-outdated Ledger app. In general, failing to update metadata will most likely result in you not being
-able to transfer funds.
+Having outdated metadata on the Signer app will prevent you from signing, while on the extension you
+will be able to click the sign button but the extrinsic will likely fail (similarly of having an
+outdated Ledger app). In general, failing to update metadata will most likely result in you not
+being able to sign extrinsics.
 
 ## Verifying Extrinsics
 
@@ -102,44 +102,47 @@ detect when a cryptocurrency address is copied. For example, you want to send fu
 B (belonging to an attacker). If you do not check the receiver address before signing the funds will
 be lost.
 
-### Corrupted Website
+### Malicious Website/dApp
 
-This is a common attack that can happen if your extension is genuine, but the website (dApp) it is
-connected with is corrupted. In this scenario you want to perform Extrinsic A on the website, which
-will send Extrinsic B to the extension for signature. In this case the extension will show Extrinsic
-B. If you are using a Ledger device you have a second layer of verification, is it will also display
-Extrinsic B. In this case it is more difficult to spot the attack and it is up to the user to know
-the extrinsic that was created on the website in the first place.
+This is a common attack that can happen if you are interacting with a malicious site (dApp). In this
+scenario you want to perform Extrinsic A on the website, but the dApp will send Extrinsic B to the
+extension for signing. In this case the extension will show Extrinsic B. If you are using a Ledger
+device you have a second layer of verification, as it will also display Extrinsic B.
 
-### Corrupted Browser Extension
+### Malicious Browser Extension
 
-There is a minor risk that the browser extension such as the
-[Polkadot-JS Browser Extension](https://polkadot.js.org/extension/) is corrupted because it was
-downloaded by non-trusted source. In this scenario the extension will display that you will sign for
-an Extrinsic A but in the background will execute another extrinsic, Extrinsic B. If you are using a
-[Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see
-Extrinsic B on the screen of your Ledger device.
+This scenario can happen if you have downloaded a malicious extension or a trusted extension, like
+the [Polkadot-JS Browser Extension](https://polkadot.js.org/extension/), from a non-trusted source.
+In this scenario the extension will display that you will sign for an Extrinsic A but in the
+background will execute Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device
+this attack can be detected because you will be able to see Extrinsic B on the screen of your Ledger
+device.
 
 ### Corrupted metadata
 
-This attack is least common and might result in signing a non-intended extrinsic without the
-possibility of verifying it. Before authorizing the metadata update check who is requesting it.
-Metadata updates might be requested by the Polkadot-JS UI and dApps (for example DeFi apps of
-parachains). For the extension, you should trust the app that requests the update while for Signer
-you should trust the issuer of the metadata (or do the update yourself).
+If you are using a Ledger device or Parity Signer this attack is least common and might result in
+signing a non-intended extrinsic without the possibility of verifying it. Before authorizing the
+metadata update check who is requesting it. Metadata updates for the Polkadot-JS Browser Extension
+(or other extensions) might be requested by the Polkadot-JS UI and dApps (for example DeFi apps of
+parachains). For the extensions, you should trust the app that requests the update. When updating
+the metadata for Parity Signer you should trust the issuer of the metadata (or generate the QR
+fountain yourself).
 
 ### Corrupted QR-code (Parity Signer)
 
-If you are using [Parity Signer](https://www.parity.io/technologies/signer/), there can be the
-possibility of scanning a corrupted QR code. This can be either to sign a extrinsic or to do a
-metadata update. The corrupted QR code will make you sign for an extrinsic B when you want to sign
-for extrinsic B. This will be showed in the Signer app and a careful user will notice it. If the
-metadata in the Signer is already incorrect (or the Signer is corrupted) there is the risk of
-signing a non-intended extrinsic without the possibility of verifying it.
+This is a sub-case of the malicious dApp scenario. If your account is on
+[Parity Signer](https://www.parity.io/technologies/signer/) the extrinsic will be displayed as a QR
+code, instead of the extension showing its details and you need to verify it on the device. There
+can be the possibility of scanning a corrupted QR code. This can be either to sign for an extrinsic
+or to do a metadata update. The corrupted QR code will make you sign for an Extrinsic B when you
+want to sign for Extrinsic A. This will be showed in the Signer app and a careful user will notice
+it. If the metadata in the Signer is already incorrect (or the Signer is corrupted) there is the
+risk of signing a non-intended extrinsic without the possibility of verifying it.
 
 ## Defense against Attacks
 
-:::warning If you can't verify the extrinsic or you suspect you are signing something different than what you intended, don't sign it!
+:::warning If you can't verify the extrinsic or you suspect you are signing something different than
+what you intended, don't sign it!
 
 :::
 
