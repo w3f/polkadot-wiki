@@ -40,7 +40,7 @@ parachain's registered code. If the verification succeeds, then the validators w
 candidate block to the other validators in the gossip network. However, if the verification fails,
 the validators immediately reject the candidate block as invalid.
 
-validators need to determine their assignments for each parachain and issue approvals for valid
+Validators need to determine their assignments for each parachain and issue approvals for valid
 candidates, respectively disputes for invalid candidates. Since it cannot be expected that each
 validator verifies every single parachain candidate, this mechanism ensures that enough honest
 validators are selected to verify parachain candidates in order prevent the finalization of invalid

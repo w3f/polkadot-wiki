@@ -29,7 +29,7 @@ statement about that candidate.
 
 The validator must successfully verify the following conditions in the following order:
 
-1. The candidate does not exceed any parameters in the persisted validation data (Definition 231).
+1. The candidate does not exceed any parameters in the persisted validation data.
 
 2. The signature of the collator is valid.
 
