@@ -40,6 +40,14 @@ parachain's registered code. If the verification succeeds, then the validators w
 candidate block to the other validators in the gossip network. However, if the verification fails,
 the validators immediately reject the candidate block as invalid.
 
+validators need to determine their assignments for each parachain and issue approvals for valid
+candidates, respectively disputes for invalid candidates. Since it cannot be expected that each
+validator verifies every single parachain candidate, this mechanism ensures that enough honest
+validators are selected to verify parachain candidates in order prevent the finalization of invalid
+blocks. If an honest validator detects an invalid block which was approved by one or more
+validators, the honest validator must issue a disputes which wil cause escalations, resulting in
+consequences for all malicious parties.
+
 When more than half of the parachain validators agree that a particular parachain block candidate is
 a valid state transition, they prepare a _candidate receipt_. The candidate receipt is what will
 eventually be included into the Relay Chain state. It includes:
