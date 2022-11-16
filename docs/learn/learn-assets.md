@@ -79,9 +79,15 @@ a non-sufficient asset (the default) can only exist on already-existing accounts
 could not create a new account on-chain by transferring an insufficient asset to it; the account
 must already exist by having more than the existential deposit {{ polkadot: in DOT :polkadot }}
 {{ kusama: in KSM :kusama }} (or a sufficient asset). However, assets deemed _sufficient_ can
-instantiate accounts. In the future, _sufficient_ assets will be able to pay transaction fees, such
+instantiate accounts and pay for transaction fees, such
 that users can transact on {{ polkadot: Statemint without the need for DOT :polkadot }}
-{{ kusama: Statemine without the need for KSM :kusama }}.
+{{ kusama: Statemine without the need for KSM :kusama }}. 
+
+:::info Fees on Polkadot-JS UI 
+
+Polkadot-JS UI [doesn't support this functionality yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI fees need to be paid in the native token.
+
+:::
 
 ### Transferring Asset Balances
 
