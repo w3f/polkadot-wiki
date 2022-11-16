@@ -73,13 +73,6 @@ Using yarn, run:
 yarn install
 ```
 
-> The site is built using Docusaurus: you may need to install Docusaurus before running the Wiki
-> locally.
-
-```bash
-yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
-```
-
 ### Build
 
 > The Wiki is currently in the process of being deployed onto IPFS and will follow the same
@@ -111,20 +104,6 @@ yarn kusama:start
 yarn polkadot:start
 ```
 
-### Test
-
-✅❌ Running tests locally:
-
-```bash
-yarn polkadot:test
-
-or
-
-yarn kusama:test
-```
-
-There is no need to run both as the tests are unified.
-
 ### Publish
 
 :bird: Publishing the Kusama Guide:
@@ -146,23 +125,12 @@ Use the style guide from the
 
 ### Formatting
 
-Prettier should be run on all modified docs when submitting a new PR.
+Prettier is automatically run when making a local commit. Verify that all changes render as expected
+after making new commits by [running the projects locally](#start).
 
-To format markdown pages, run the following in the `docs` folder:
-
-```bash
-# Run on entire project
-npm pretty-quick
-# Run only on staged changes
-npx pretty-quick --staged
-# Run only on local changes
-npx pretty-quick --branch
-```
-
-### Static Site Generator
-
-The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website generator to
-convert the Markdown docs into a documentation website.
+See the [Conditional Rendering](#conditional-rendering) and
+[React Components](#inline-react-components) sections for additional details regarding how to
+properly format syntax for elements outside of the standard markdown library.
 
 ### Search Engine
 
@@ -204,17 +172,29 @@ workflow will deploy `prod` to the public sites: [Polkadot Wiki](https://wiki.po
 
 The two Wikis support conditional rendering depending on which Wiki is being deployed. This is
 useful for mirrored pages with most content in common but have minor differences. To use this
-functionality, surround Kusama specific content with {{ kusama: :kusama }}, and polkadot specific
-content with {{ polkadot: :polkadot }}. Example:
+functionality, surround Kusama specific content with
+`{{ kusama: KUSAMA_SPECIFIC_CONTENT :kusama }}`, and polkadot specific content with
+`{{ polkadot: POLKADOT_SPECIFIC_CONTENT :polkadot }}`.
 
-```md
-If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
-percentage of its funds -- thereby causing deflationary pressure.
-{{ polkadot: This percentage is currently at 1%
-on Polkadot. :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
-going to [Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
-burned. :kusama }}
+For example the syntax:
+
+```markdown
+The {{ polkadot: Polkdadot Wiki :polkadot }} {{ kusama: Kusama Guide :kusama }} is a great resource!
 ```
+
+Will render:
+
+```
+The Polkdadot Wiki is a great resource!
+```
+
+or
+
+```
+The Kusama Guide is a great resource!
+```
+
+depending on which project is currently loaded.
 
 To verify the appropriate values have been substituted in each scenario, run `polkadot:start` and
 `kusama:start` in separate terminals. If prompted with
@@ -237,12 +217,11 @@ A full list of sample components can be found
 [here](https://github.com/w3f/polkadot-wiki/tree/master/components).
 
 Try and reuse existing components as much as possible instead of creating new ones to keep the code
-lean and comprehensive. It is also important to run prettier after adding a new component,
-validating that the desired rendering format is not altered based on the formatting changes. Below
-are some best practices for achieving common formatting that will not be modified by the prettier
-command:
+lean and comprehensive. It is also important to verify prettier has not modified the formatting of
+your component after making a commit. Below are some best practices for achieving common formatting
+that will not be modified by the prettier command:
 
-Always wrap RPC components in conditional rendering & keep them on newlines:
+Always wrap RPC components in conditional rendering & keep them on new lines:
 
 ```
 {{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
@@ -266,15 +245,8 @@ spacing, especially after running prettier.
 
 ## Internationalization
 
-| ❗ Currently the Wiki is being reorgnaized and updated. It is recommended to resume working on translations after the Wiki revamp is completed. |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- |
-
-We are using Crowdin to manage all different translations. You can go to the
-[project page](https://crowdin.com/project/polkadot-wiki) and select the language you would like to
-translate to start.  
-All translated content through Crowdin will regularly submit a pull request to this repository.
-
-If you do not see the language you would like to translate in, please let us know via Matrix.
+| ❗ The Wiki is currently being reorganized and updated. Work will resume on translations after the Wiki revamp is completed. |
+| ---------------------------------------------------------------------------------------------------------------------------- |
 
 ## License
 
