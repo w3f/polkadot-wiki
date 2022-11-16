@@ -413,8 +413,7 @@ treasury.
 :::info
 
 DOT went through [redenomination](../general/redenomination.md) in 2020 that saw the DOT token
-supply increase by 100 times. The current token supply on Polkadot is
-<RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>
+supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>
 (Over 1.2 Billion DOT).
 
 ::: :polkadot }}
