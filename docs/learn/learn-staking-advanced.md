@@ -400,13 +400,20 @@ already maxed out.
 
 ## Inflation
 
-{{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. Inflation is designed
-to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to the treasury. DOT went through [redenomination](../general/redenomination.md)
-in 2020 that saw the DOT token supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
+{{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. On Polkadot network, inflation is
+[set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), with validator rewards being a function of the amount staked
+and the remainder going to the treasury. 
 
-{{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
-to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
+:::info
+
+DOT went through [redenomination](../general/redenomination.md)
+in 2020 that saw the DOT token supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT).
+
+:::
+
+:polkadot }}
+
+{{ kusama: KSM is inflationary; there is no maximum number of KSM. On Kusama network, inflation is [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), with validator rewards being a function of the amount staked
 and the remainder going to the treasury. The current token supply on Kusama is <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/>
 (Over 12 Million KSM). :kusama }}
 
