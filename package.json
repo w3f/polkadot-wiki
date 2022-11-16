@@ -94,7 +94,7 @@
     "remark-docusaurus-tabs": "^0.2.0",
     "set-value": "^4.1.0",
     "trim": "^1.0.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.3"
   },
   "husky": {
     "hooks": {
