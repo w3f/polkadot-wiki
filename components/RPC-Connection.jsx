@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { HumanReadable, BlocksToDays } from "./utilities/filters";
+import { HumanReadable, Precise, BlocksToDays } from "./utilities/filters";
 
 /*
 This component connects to the Polkadot/Kusama APIs and renders the response data.
@@ -135,11 +135,14 @@ async function syncData(network, path, setReturnValue) {
 function applyFilter(value, filter, network, setReturnValue) {
 	switch (filter) {
 		case "humanReadable":
-			HumanReadable(value, network, setReturnValue)
+			HumanReadable(value, network, setReturnValue);
     	break;
+		case "precise":
+			Precise(value, network, setReturnValue);
+			break;
 		case "blocksToDays":
 			BlocksToDays(value, setReturnValue);
-		break;
+			break;
 		default:
 			console.log("Ignoring unknown filter type");
 			return;

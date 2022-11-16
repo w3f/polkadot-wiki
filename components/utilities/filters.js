@@ -46,6 +46,15 @@ module.exports = {
     setReturnValue(value.toString());
   },
 
+  Precise: function (value, network, setReturnValue) {
+    // String to number
+    value = parseFloat(value);
+    // Apply precision and append symbol without additional rounding
+    value = `${value / values[network].precision} ${values[network].symbol}`;
+    // Update value
+    setReturnValue(value);
+  },
+
   BlocksToDays: function (value, setReturnValue) {
     value = (value * 6) / 86400;
     // Update value
