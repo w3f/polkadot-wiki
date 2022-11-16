@@ -22,9 +22,14 @@ parachain block.relay chain validator
 Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
 will get rejected by validators. The validators are required to check the validity of submitted
 candidates, followed by issuing and collecting statements about the validity of candidates to other
-validators. This process is known as **candidate backing**. Once a candidate meets a specified
-criteria for inclusion, the selected relay chain block author then choses any of the backed
-candidates for each parachain and includes those into the relay chain block.
+validators. This process is known as **candidate backing**. The Polkadot validator receives an
+arbitrary number of parachain candidates with associated proofs from untrusted collators. A
+candidate is considered backable when at least 2/3 of all assigned validators have issued a Valid
+statement about that candidate
+
+Once a candidate meets a specified criteria for inclusion, the selected relay chain block author
+then choses any of the backed candidates for each parachain and includes those into the relay chain
+block.
 
 The assumption that having more collators is better or more secure is not correct. On the contrary,
 too many collators may slow down the network. The only nefarious power collators have is transaction

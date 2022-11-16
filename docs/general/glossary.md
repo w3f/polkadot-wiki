@@ -96,7 +96,7 @@ at capacity cannot be oversubscribed unless more nominators select it before the
 
 ## Collations
 
-Pparachain blocks or candidates that are being proposed to the Polkadot relay chain validators. More
+Parachain blocks or candidates that are being proposed to the Polkadot relay chain validators. More
 specifically, a collation is a [data structure](https://spec.polkadot.network/#defn-collation) which
 contains the proposed parachain candidate, including an optional validation parachain Runtime update
 and upward messages.
