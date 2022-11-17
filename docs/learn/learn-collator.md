@@ -22,9 +22,9 @@ parachain block.
 Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
 will get rejected by validators. The validators are required to check the validity of submitted
 candidates, followed by issuing and collecting statements about the validity of candidates to other
-validators. This process is known as **candidate backing**. The Polkadot validator receives an
+validators. This process is known as **candidate backing**. Validators receive an
 arbitrary number of parachain candidates with associated proofs from untrusted collators. A
-candidate is considered backable when at least 2/3 of all assigned validators have issued a Valid
+candidate is considered backable when at least 2/3 of all assigned validators have issued a valid
 statement about that candidate.
 
 The validator must successfully verify the following conditions in the following order:
@@ -41,7 +41,7 @@ block.
 
 The assumption that having more collators is better or more secure is not correct. On the contrary,
 too many collators may slow down the network. The only nefarious power collators have is transaction
-censorship. To prevent censorship, a parachain only needs to ensure that there exist some neutral
+censorship. To prevent censorship, a parachain only needs to ensure that there are some neutral
 collators - but not necessarily a majority. Theoretically, the censorship problem is solved with
 having just one honest collator.
 

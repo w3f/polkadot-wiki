@@ -36,7 +36,7 @@ block height, upgrades can be small, isolated, and very specific.
 
 As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
 sensitive and calls to Runtime can change the Runtime code itself. Therefore the Polkadot Host needs
-to always make sure to provide the Runtime corresponding to the state in which the entrypoint has
+to always make sure it provides the Runtime corresponding to the state in which the entrypoint has
 been called.
 
 ## Resources

@@ -8,7 +8,7 @@ slug: ../learn-availability
 ---
 
 The [Availability and Validity](https://spec.polkadot.network/#chapter-anv) (AnV) protocol of
-Polkadot is what allows for the network to be efficiently sharded among parachains while maintaining
+Polkadot allows the network to be efficiently sharded among parachains while maintaining
 strong security guarantees.
 
 ## Phases of the AnV protocol

@@ -42,12 +42,10 @@ with their applications.
 
 ### Substrate (full node) vs. Substrate connect (light client)
 
-A light client is a client that lets you utilize all the possibilities of the chain, but it does not
-require you to run a full copy of the entire blockchain. Light clients fetch the required data that
+A light client lets you utilize all basic features of the chain such as fetching data and transferring tokens, but it does not
+require you to run a full copy of the entire blockchain or having to trust remote peers. Light clients fetch the required data that
 they need from a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node with an
-associated proof to validate the data. This makes it possible to interact with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network without requiring to run a
-full node or having to trust the remote peers.
+associated proof to validate the data.
 
 | Substrate: Full node                                                                                        | Substrate connect: Light client                                                                               |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |

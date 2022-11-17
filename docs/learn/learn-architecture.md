@@ -87,9 +87,8 @@ isolation.
 the Relay Chain. They also accept proofs of valid state transition from collators and receive
 staking rewards in return.
 
-Validators are required to keep enough parachain blocks that should be included in the relay chain
-available in their local storage in order to make those retrievable by peers, who lack the
-information, to reliably confirm the issued validity statements about parachain blocks. The
+Validators are required to keep enough parachain blocks available for later use in their local storage. Those blocks are retrievable by peers who lack that
+information, so that they can reliably confirm the issued validity statements about parachain blocks. The
 [Availability & Validity](https://spec.polkadot.network/#chapter-anv) (AnV) protocol consists of
 multiple steps for successfully upholding those responsibilities.
 

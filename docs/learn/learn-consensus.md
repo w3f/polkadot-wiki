@@ -111,15 +111,14 @@ the validator nodes and determines the authors of new blocks. BABE is comparable
 selection rule and slot time adjustments. BABE assigns block production slots to validators
 according to stake and using the Polkadot [randomness cycle](learn-randomness.md).
 
-BABE execution happens in sequential non-overlapping phases known as an epoch. Each epoch on its
-turn is divided into a predefined number of slots. All slots in each epoch are sequentially indexed
+BABE execution happens in sequential non-overlapping phases known as epochs. Each epoch is divided into a predefined number of slots. All slots in each epoch are sequentially indexed
 starting from 0 (slot number). At the beginning of each epoch, the BABE node needs to run the
 [Block-Production-Lottery algorithm](https://spec.polkadot.network/#algo-block-production-lottery)
 to find out in which slots it should produce a block and gossip to the other block producers.
 
-Validators in Polkadot participate in a lottery for every slot, which will inform whether or not
-they are the block producer candidate for that slot. Slots are discrete units of time, nominally 6
-seconds in length. Because of this randomness mechanism, multiple validators could be candidates for
+Validators participate in a lottery for every slot, which will inform whether or not
+they are the block producer candidate for that slot. Slots are discrete units of time of approximately 6
+seconds in length. Because the mechanism of allocating slots to validators is based on a randomized design, multiple validators could be candidates for
 the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
 
 ### Multiple Validators per Slot

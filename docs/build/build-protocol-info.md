@@ -155,7 +155,7 @@ The block header is a 5-tuple containing the following elements:
   clients interact with the block without the need of accessing the full storage as well as
   consensus-related data including the block signature.
 
-When a node creates or receives a new block, it must be announced to the network. Other nodes within
+A node creating or receiving a block must gossip that block to the network (i.e. to the other nodes). Other nodes within
 the network will track this announcement and can request information about the block. Additional
 details on the process are outlined [here](https://spec.polkadot.network/#sect-msg-block-announce)
 in the Polkadot Spec.
@@ -174,7 +174,7 @@ however, see other extrinsics within the blocks that you decode. Find more infor
 
 Inherent extrinsics are unsigned and contain information that is not provably true, but validators
 agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but
-validators can agree that it is within some time difference of their system clock. Inherents are broadcasted
+validators can agree that it is within some time difference on their system clock. Inherents are broadcasted
 as part of the produced blocks rather than being gossiped as individual extrinsics.
 
 Signed transactions contain a signature of the account that issued the transaction and stands to pay

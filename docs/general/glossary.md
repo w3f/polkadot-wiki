@@ -37,7 +37,7 @@ such as Polkadot's NPoS algorithm.
 
 ## Availability Cores
 
-Slots used to process parachains. The Runtime assigns each parachain to a availability core and
+Slots used to process parachains. The Runtime assigns each parachain to an availability core and
 validators can fetch information about the cores, such as parachain block candidates, by calling the
 appropriate Runtime API.
 
