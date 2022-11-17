@@ -16,6 +16,12 @@ Polkadot from a research or academic perspective.
 
 ## Research Papers
 
+- [`Accountable Light Client Systems for PoS Blockchains`](https://github.com/w3f/apk-proofs/blob/9f3ed95d4dba4a4ea4b0dca3a57f4b7495271346/Light%20Client.pdf) -
+  [`Implemented`](https://github.com/w3f/apk-proofs) as an efficient method to aggregate BLS
+  signatures and BLS public keys which in turn is used to build light client systems that are the
+  core cryptographic primitive for secure proof-of-stake blockchain bridges. In turn, the efficient
+  BLS aggregation can be securely proven to a light client verifier using a custom designed SNARK.
+  Authors: Oana Ciobotaru, Fatemeh Shirazi, Alistair Stewart, Sergey Vasilyev
 - [`Overview of Polkadot and its Design Considerations`](https://arxiv.org/pdf/2005.13456.pdf) - A
   broad overview of the design of Polkadot. Authors: Jeff Burdges, Alfonso Cevallos, Peter Czaban,
   Rob Habermeier, Syed Hosseini, Fabio Lama, Handan Kılınç Alper, Ximin Luo, Fatemeh Shirazi,
