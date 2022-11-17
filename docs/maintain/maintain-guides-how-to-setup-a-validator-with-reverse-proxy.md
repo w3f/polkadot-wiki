@@ -175,20 +175,19 @@ Nodes will use [libp2p](https://libp2p.io/) as the networking layer to establish
 messages, but uses NGINX as a load balancer which acts as a _first listener_ of the streaming data
 to help balance the load.
 
-Each Polkadot Host node maintains an ED25519 key pair which is used to identify the node. The public
-key is shared with the rest of the network allowing the nodes to establish secure communication
-channels.
+Each host node maintains an ED25519 key pair which is used to identify the node. The public key is
+shared with the rest of the network allowing the nodes to establish secure communication channels.
 
-The Polkadot Host uses various mechanisms to locate peers within the network and allows them to
-share this information with one another.
+The node uses various mechanisms to locate peers within the network and allows them to share this
+information with one another.
 
-Polkadot nodes connect to peers by establishing a TCP connection. Once established, the node
-initiates a handshake with the remote peers on the encryption layer. An additional layer on top of
-the encryption layer, known as the multiplexing layer, allows a connection to be split into
-substreams, as described by the [yamux specification](https://docs.libp2p.io/concepts/multiplex/),
-either by the local or remote node.
+Nodes connect to peers by establishing a TCP connection. Once established, the node initiates a
+handshake with the remote peers on the encryption layer. An additional layer on top of the
+encryption layer, known as the multiplexing layer, allows a connection to be split into substreams,
+as described by the [yamux specification](https://docs.libp2p.io/concepts/multiplex/), either by the
+local or remote node.
 
-The Polkadot node supports two types of substream protocols:
+Nodes supports two types of substream protocols:
 
 - Request-Response substreams
 - Notification substreams
