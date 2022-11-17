@@ -85,7 +85,7 @@ that users can transact on {{ polkadot: Statemint without the need for DOT :polk
 
 :::info Transaction Fees on Polkadot-JS UI 
 
-Polkadot-JS UI [doesn't support this functionality yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI fees need to be paid in the native token.
+Polkadot-JS UI [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI, transaction fee needs to be paid in {{ polkadot:  DOT :polkadot }}{{ kusama: KSM :kusama }}.
 
 :::
 
