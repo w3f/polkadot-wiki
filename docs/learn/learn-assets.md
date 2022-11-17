@@ -83,7 +83,7 @@ instantiate accounts and pay for transaction fees, such
 that users can transact on {{ polkadot: Statemint without the need for DOT :polkadot }}
 {{ kusama: Statemine without the need for KSM :kusama }}. 
 
-:::info Fees on Polkadot-JS UI 
+:::info Transaction Fees on Polkadot-JS UI 
 
 Polkadot-JS UI [doesn't support this functionality yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI fees need to be paid in the native token.
 
