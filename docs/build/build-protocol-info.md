@@ -140,14 +140,14 @@ More info:
 ### Block Format
 
 A Polkadot block consists of a block header and a block body. The block body is made up of
-extrinsics representing the generalization of the concept of transactions. Extrinsics can
-contain any external data the underlying chain wishes to validate and track.
+extrinsics representing the generalization of the concept of transactions. Extrinsics can contain
+any external data the underlying chain wishes to validate and track.
 
 The block header is a 5-tuple containing the following elements:
 
 - `parent_hash`: a 32-byte Blake2b hash of the SCALE encoded parent block header.
-- `number`: an integer representing the index of the current block in the chain. It is equal to
-  the number of the ancestor blocks. The genesis state has number 0.
+- `number`: an integer representing the index of the current block in the chain. It is equal to the
+  number of the ancestor blocks. The genesis state has number 0.
 - `state_root`: the root of the Merkle tree, used as storage for the system.
 - `extrinsics_root`: field which is reserved for the Runtime to validate the integrity of the
   extrinsics composing the block body.
@@ -155,10 +155,10 @@ The block header is a 5-tuple containing the following elements:
   clients interact with the block without the need of accessing the full storage as well as
   consensus-related data including the block signature.
 
-A node creating or receiving a block must gossip that block to the network (i.e. to the other nodes). Other nodes within
-the network will track this announcement and can request information about the block. Additional
-details on the process are outlined [here](https://spec.polkadot.network/#sect-msg-block-announce)
-in the Polkadot Spec.
+A node creating or receiving a block must gossip that block to the network (i.e. to the other
+nodes). Other nodes within the network will track this announcement and can request information
+about the block. Additional details on the process are outlined
+[here](https://spec.polkadot.network/#sect-msg-block-announce) in the Polkadot Spec.
 
 ### Extrinsics
 
@@ -174,8 +174,8 @@ however, see other extrinsics within the blocks that you decode. Find more infor
 
 Inherent extrinsics are unsigned and contain information that is not provably true, but validators
 agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but
-validators can agree that it is within some time difference on their system clock. Inherents are broadcasted
-as part of the produced blocks rather than being gossiped as individual extrinsics.
+validators can agree that it is within some time difference on their system clock. Inherents are
+broadcasted as part of the produced blocks rather than being gossiped as individual extrinsics.
 
 Signed transactions contain a signature of the account that issued the transaction and stands to pay
 a fee to have the transaction included on chain. Because the value of including signed transactions
