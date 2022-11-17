@@ -145,7 +145,7 @@ contain any external data the underlying chain wishes to validate and track.
 
 The block header is a 5-tuple containing the following elements:
 
-- `parent_hash`: 32-byte Blake2b hash of the SCALE encoded parent block header.
+- `parent_hash`: a 32-byte Blake2b hash of the SCALE encoded parent block header.
 - `number`: an integer representing the index of the current block in the chain. It is equal to
   the number of the ancestor blocks. The genesis state has number 0.
 - `state_root`: the root of the Merkle tree, used as storage for the system.
