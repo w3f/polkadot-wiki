@@ -50,10 +50,10 @@ developed wallets.
 | [Fearless Wallet](https://fearlesswallet.io/) | [1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178) | Live              | SORAMITSU       | iOS, Android | Staking, Crowdloans, parachain accounts            |
 | [Polkawallet](https://polkawallet.io/)        | [1](https://kusama.polkassembly.io/treasury/32), [2](https://kusama.polkassembly.io/treasury/41)                                                                                                                                                      | Live              | Polkawallet     | iOS, Android | Staking, Crowdloans, parachain accounts, Governance             |
 | [Stylo](https://stylo-app.com/)               | [1](https://polkadot.polkassembly.io/treasury/39)                                                                                                                                                                                                     | Live              | Thibaut Sardan  | Android      | Air-gapped offline wallet             |
-| [Nova Wallet](https://novawallet.io/)\*       | [1](https://kusama.polkassembly.io/treasury/122), [2](https://kusama.polkassembly.io/treasury/158)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Staking, Crowdloans, parachain accounts, Parity Signer and Ledger support            |
-| [Talisman](https://talisman.xyz/)             | [1](https://polkadot.polkassembly.io/treasury/148); Treasury tip\*\*                                                                                                                                                                                 | Live              | TalismanSociety | Browser      | Staking, Crowdloans, parachain accounts, Ledger support            |
+| [Nova Wallet](https://novawallet.io/)\*       | [1](https://kusama.polkassembly.io/treasury/122), [2](https://kusama.polkassembly.io/treasury/158)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Staking, Nomination Pools, Crowdloans, parachain accounts, Parity Signer and Ledger support            |
+| [Talisman](https://talisman.xyz/)             | [1](https://polkadot.polkassembly.io/treasury/148)                                                                                                                                                                                | Live              | TalismanSociety | Browser      | Staking, Nomination Pools, Crowdloans, parachain accounts, Ledger support            |
 | [SubWallet](https://subwallet.app/)           | [1](https://polkadot.polkassembly.io/treasury/138)                                                                                                                                                                                                    | Live              | SubWallet       | Browser      | Staking, Crowdloans, parachain accounts             |
-| [Polkadot js Plus](http://polkadotjs.plus/)   | [1](https://kusama.polkassembly.io/treasury/205)                                                                                                                                                                                                      | Live              | PolkaGate       | Browser      | Staking (Nomination Pools), Proxy accounts, Crowdloans, Governance, Social recovery           |
+| [Polkadot js Plus](http://polkadotjs.plus/)   | [1](https://kusama.polkassembly.io/treasury/205)                                                                                                                                                                                                      | Live              | PolkaGate       | Browser      | Staking, Nomination Pools, Proxy accounts, Crowdloans, Governance, Social recovery           |
 
 :::caution \*Note about Nova wallet
 
@@ -62,15 +62,6 @@ to ensure that they use the correct Nova wallet by downloading the app from thei
 [https://novawallet.io/](https://novawallet.io/). Before creating or restoring accounts , it is wise
 to double-check the wallet website URLs through official channels (most projects have it listed on
 their official social media handles).
-
-:::
-
-:::note \*\*Tip from the Treasury
-
-This third-party wallet was not funded by a Treasury Proposal and instead received a tip from the
-Treasury. Unlike a Treasury Proposal, tipping is a separate system that the council members
-individually participate in to collectively decide on the value of the tip. Learn more about tipping
-on the [Treasury Page](learn-treasury#tipping).
 
 :::
 
