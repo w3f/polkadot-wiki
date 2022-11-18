@@ -32,6 +32,8 @@ for more information about key security.
 
 ## Ways to Generate an Account
 
+<iframe width="560" height="315" src="https://youtube.com/embed/DNU0p5G0Gqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+
 The **most user-friendly** way to create a Polkadot or Kusama address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
 to generate your account - the accounts are stored only in your browser, so purging the cache will
