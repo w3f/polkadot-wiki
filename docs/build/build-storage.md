@@ -62,7 +62,7 @@ integrating with Crust by following their
 #### Using Polkadot-JS Files (IPFS) module
 
 Polkadot-JS UI includes a decentralized storage module that allows Substrate-based chain users to
-upload their files to [IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW)
+upload their files to an [IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW)
 and use the [IPFS W3Auth Pinning Service](https://wiki.crust.network/docs/en/buildIPFSW3AuthPin) to
 pin their files on Crust Network.
 
