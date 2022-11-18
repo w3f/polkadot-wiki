@@ -14,10 +14,9 @@ slug: ../learn-extrinsics
 Substrate's FRAME pallets on [this dedicated page](https://docs.substrate.io/reference/frame-pallets/). 
 
 Within each functional **pallet** on the blockchain, one can **call** its functions and execute them successfully, provided they have the permission to do so. Because these calls originate outside of the blockchain runtime, such transactions are referred to as **extrinsics**. Extrinsics normally contain a signature, some data to describe if the extrinsic has passed some validity checks and a reference to the pallet and call that it is intended for. For example, the Staking pallet contains all functions related to staking.
-transaction that is executed from outside the chain but that triggers an event on the chain.
-Continuing with the staking example, within the staking pallet a nominator can bond funds and
-nominate some validators. The signature of such extrinsic might lead to an event on the chain such
-as a reward payout to that nominator at the end of an era; this is an event inside the chain.
+A nominator can bond funds and
+nominate validators by issuing the respective extrinsics. Some extrinsics might also trigger an event on the chain such
+as a reward payout to the nominators. 
 
 ## Extrinsics (a.k.a. Types of Transactions)
 
