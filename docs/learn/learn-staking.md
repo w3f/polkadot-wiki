@@ -260,7 +260,11 @@ To maximize rewards and minimize risk, one could select those validators that:
 
 #### Network Providers
 
-Most validator nodes run on cloud service providers. You must check if your nominations are using providers that allow Proof-of-Stake operations.
+Most validator nodes run on cloud service providers that guarantee high hardware specifications and all safety measures in the case for example there is a shortage in power supply. Keep in mind that if a validator is supposed to be online producing blocks and the internet connection drops because there is a cutoff in electricity, if the node is run in-house and it does not have a backup, that validator will be slashed. As a consequence, the stake of that validator as well as the stake of all nominators will be partially or even fully confiscated (depending on the gravity of the situation). Cloud services reduce such risks and also provide a way of decentralizing the locations of the nodes. Validators can live in one part of the world and set up a node in a completely different region.
+
+However, cloud services might not support Proof-of-Stake (PoS) operations in their Terms and Conditions Policy depending on the country they are based in. In case of conflict between the provider and PoS nodes, the provider can cut off such nodes. This can have important consequences for the network especially if many nodes are running on that provider. For example, on the 2nd of November 2022, a thousand validators on Solana's (40% of the total number of nodes) went offline because Hetzner Online GmbH stated they do not support PoW and PoS operations on their servers.
+
+You must check if your nominations are using cloud service providers that allow for Proof-of-Stake operations. You can contact via email providers and they should get back to you with more information about this topic. Additionally, you can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will show your rewards earned in the past 60 eras divided by network provider and country. You will be able to see networks used by each validator and verify if your validators are using providers who support PoS. This is also a great tool to explore how decentralized your nominations are and act accordingly.
 
 #### Keeping Track of Nominated Validators
 
