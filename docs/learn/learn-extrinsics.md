@@ -10,11 +10,10 @@ slug: ../learn-extrinsics
 ## Pallets and Extrinsics
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
-[substrate](https://substrate.io/), a modular system to efficiently build blockchains. Within each
-module or **pallet**, one can **call** different functions that have similar logic. You can explore
-substrate pallets on [this dedicated page](https://docs.substrate.io/reference/frame-pallets/). For
-example, the staking pallet contains all functionalities related to staking such as bonding or
-unbonding funds. The combined information of pallets and calls constitutes an **extrinsic**, i.e. a
+[Substrate](https://substrate.io/), a modular framework to efficiently build blockchains. Substrate's FRAME development environment provides modules called pallets and support libraries that you can use, modify, and extend to build the runtime logic to suit the needs of your blockchain. You can explore
+Substrate's FRAME pallets on [this dedicated page](https://docs.substrate.io/reference/frame-pallets/). 
+
+Within each functional **pallet** on the blockchain, one can **call** its functions and execute them successfully, provided they have the permission to do so. Because these calls originate outside of the blockchain runtime, such transactions are referred to as **extrinsics**. Extrinsics normally contain a signature, some data to describe if the extrinsic has passed some validity checks and a reference to the pallet and call that it is intended for. For example, the Staking pallet contains all functions related to staking.
 transaction that is executed from outside the chain but that triggers an event on the chain.
 Continuing with the staking example, within the staking pallet a nominator can bond funds and
 nominate some validators. The signature of such extrinsic might lead to an event on the chain such
