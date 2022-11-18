@@ -28,7 +28,7 @@ that originates from outside a runtime". These are:
 
 - **Signed transactions:** these must contain the signature of the account sending the inbound
   request to the runtime. With signed transactions, the account used to submit the request typically
-  pays a transaction fee and must sign it using the account's private key.
+  pays the transaction fee and must sign it using the account's private key.
 - **Unsigned transactions:** these don't carry any information about who submitted the transaction,
   since the format of this type of transaction doesn't require a signature. You can define what
   conditions must be met for such a transaction to be valid.
