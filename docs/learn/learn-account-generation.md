@@ -88,6 +88,44 @@ If you prefer video instructions for creating an account using Polkadot JS, see
 
 :::
 
+### Set Address for Polkadot Mainnet
+
+In Polkadot you can use the same address on multiple chains. To switch between chains you can follow
+the guidelines in
+[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
+The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to convert
+your address between the different chain formats.
+
+:::info For privacy reasons, we recommend creating a new address for each chain you're using.
+
+Your address' format is only visual - the data used to derive this representation of your address
+are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
+recommend creating a new address for each chain you're using.
+
+:::
+
+You can copy your address by clicking on the account's icon while the desired chain format is
+active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful
+icon of your account will copy it in that format. While in Polkadot mode, that address format will
+be copied, and so on.
+
+### Backing Up Accounts
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
+to know how to backup your account.
+
+:::
+
+Depending on what software you are using to access your account, there are various ways to back up
+and restore your account. It is a good idea to back your information up and keep it in a secure
+place. Note that in order to recover an account, you should create your account according to the
+instructions [here](learn-account-generation.md). In general, as long as you know how you created
+your account, and have the seed phrase ([mnemonic phrase](learn-accounts#portability)) or JSON file
+(and password) stored securely, you will be able to restore your account.
+
 ## Polkadot-JS Browser Extension
 
 :::info
@@ -155,26 +193,15 @@ networks without having to set different passwords to access such accounts.
 
 :::
 
-### Set Address for Polkadot Mainnet
+### Restore Account on the Polkadot-JS Browser Extension
 
-In Polkadot you can use the same address on multiple chains. To switch between chains you can follow
-the guidelines in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
-The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to convert
-your address between the different chain formats.
+:::info
 
-:::info For privacy reasons, we recommend creating a new address for each chain you're using.
-
-Your address' format is only visual - the data used to derive this representation of your address
-are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
-recommend creating a new address for each chain you're using.
+See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension)
+to learn how to restore your account on the Polkadot-JS UI.
 
 :::
-
-You can copy your address by clicking on the account's icon while the desired chain format is
-active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful
-icon of your account will copy it in that format. While in Polkadot mode, that address format will
-be copied, and so on.
 
 ## Subkey
 
@@ -236,6 +263,16 @@ password of such account.
 
 :::
 
+### Restore Account on the Polkadot-JS UI
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui)
+to learn how to restore your account on the Polkadot-JS UI.
+
+:::
+
 ## Parity Signer
 
 :::info
@@ -249,6 +286,16 @@ For guidelines about how to create an account using Parity Signer, see
 Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
 installing it.
+
+### Restore Account on Parity Signer
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
+to learn how to restore your account on the Polkadot-JS UI.
+
+:::
 
 ## Vanity Generator
 
