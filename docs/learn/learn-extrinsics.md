@@ -21,10 +21,7 @@ as a reward payout to the nominators.
 ## Extrinsics (a.k.a. Types of Transactions)
 
 Now that we introduced where the term _extrisic_ comes from, we can explain what extrinsics really
-are. In Substrate, a _"thing that could exist in the transaction pool"_ — more commonly known as "a
-transaction" in the non-Substrate world — can be one of 3 distinct types, all of which fall under a
-broader category called "extrinsics". Extrinsics is just a general term to mean "any information
-that originates from outside a runtime". These are:
+are. Extrinsics can be one of 3 distinct types:
 
 - **Signed transactions:** these must contain the signature of the account sending the inbound
   request to the runtime. With signed transactions, the account used to submit the request typically
