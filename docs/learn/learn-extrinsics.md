@@ -20,7 +20,7 @@ as a reward payout to the nominators.
 
 ## Extrinsics (a.k.a. Types of Transactions)
 
-Now that we introduced where the term _extrisic_ comes from, we can explain what extrinsics really
+Now that we introduced the term _extrinsic_, let us dive deeper and understand what extrinsics really
 are. Extrinsics can be one of 3 distinct types:
 
 - **Signed transactions:** these must contain the signature of the account sending the inbound
