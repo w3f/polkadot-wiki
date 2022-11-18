@@ -99,6 +99,7 @@ module.exports = {
           items: [
             'learn/learn-account-advanced',
             'learn/learn-account-transfer',
+            "learn/learn-staking-advanced",
             'learn/learn-availability',
             'learn/learn-xcm',
             'learn/learn-phragmen',
@@ -106,7 +107,6 @@ module.exports = {
             'learn/learn-randomness',
             'learn/learn-simple-payouts',
             'learn/learn-spree',
-            "learn/learn-staking-advanced",
             'learn/learn-staking-miner',
             'learn/learn-wasm',
           ],
