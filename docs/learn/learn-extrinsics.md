@@ -53,8 +53,7 @@ Here are some key differences between the different types of extrinsics:
 :::warning Always check for Metadata Updates
 
 Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Signer, always check for
-metadata updates. [**This video tutorial**](https://youtu.be/gbvrHzr4EDY) will explain how to
-do it.
+metadata updates. [**This video tutorial**](https://youtu.be/gbvrHzr4EDY) will explain how to do it.
 
 :::
 
@@ -62,11 +61,11 @@ do it.
 
 Parity Signer updates the full metadata through the QR fountain while the extension updates the
 metadata index (the metadata is not loaded into it). As a consequence the process of updating
-metadata is different in this two cases (you will notice that on the Signer app the update takes longer for example).
-Having outdated metadata on the Signer app will prevent you from signing, while on the extension you
-will be able to click the sign button but the extrinsic will likely fail (similarly of having an
-outdated Ledger app). In general, failing to update metadata will most likely result in you not
-being able to sign extrinsics.
+metadata is different in this two cases (you will notice that on the Signer app the update takes
+longer for example). Having outdated metadata on the Signer app will prevent you from signing, while
+on the extension you will be able to click the sign button but the extrinsic will likely fail
+(similarly of having an outdated Ledger app). In general, failing to update metadata will most
+likely result in you not being able to sign extrinsics.
 
 ## Verifying Extrinsics
 
@@ -82,8 +81,8 @@ to you while signing for transactions.
 
 :::danger
 
-Do not sign a transaction if you can't verify what you are
-signing or you suspect you might be signing a different extrinsic than the one intended.
+Do not sign a transaction if you can't verify what you are signing or you suspect you might be
+signing a different extrinsic than the one intended.
 
 :::
 
@@ -93,8 +92,8 @@ prevent you to send funds to the desired destination account (see below).
 
 ## How do Attacks look like
 
-In general, an attacker would make you think you are signing an extrinsic A when in reality you are signing an
-extrinsic B. An Attack might come from:
+In general, an attacker would make you think you are signing an extrinsic A when in reality you are
+signing an extrinsic B. An Attack might come from:
 
 ### Clipboard Memory
 
@@ -109,7 +108,8 @@ This is a common attack. The clipboard memory is that memory on you computer ded
 operations. There is malicious software that can be remotely installed on your computer and that can
 detect when a cryptocurrency address is copied. For example, you want to send funds to Address A
 (belonging to you) but after copying address A a malicious software swaps that address with Address
-B (belonging to an attacker). This attack can be prevented by checking the receiver address before signing. Failing to do so could result in loss of the funds.
+B (belonging to an attacker). This attack can be prevented by checking the receiver address before
+signing. Failing to do so could result in loss of the funds.
 
 ### Malicious Website/dApp
 
@@ -148,10 +148,10 @@ without the possibility of verifying it.
 
 ## Defense against Attacks
 
-:::warning 
+:::warning
 
-If you can't verify the extrinsic or you suspect you are signing something different than
-what you intended, don't sign it!
+If you can't verify the extrinsic or you suspect you are signing something different than what you
+intended, don't sign it!
 
 :::
 
