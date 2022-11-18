@@ -258,6 +258,10 @@ To maximize rewards and minimize risk, one could select those validators that:
   to their website and contact details),
 - and have not been slashed (meaning that their on-chain behavior is genuine).
 
+#### Network Providers
+
+Most validator nodes run on cloud service providers. You must check if your nominations are using providers that allow Proof-of-Stake operations.
+
 #### Keeping Track of Nominated Validators
 
 :::caution Nominators must periodically check their validators
