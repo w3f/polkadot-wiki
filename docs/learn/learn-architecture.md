@@ -84,8 +84,14 @@ isolation.
 ## Validators
 
 [Validators](../general/glossary.md#validator), if elected to the validator set, produce blocks on
-the Relay Chain. They also accept proofs of valid state transition from collators. In return, they
-will receive staking rewards.
+the Relay Chain. They also accept proofs of valid state transition from collators and receive
+staking rewards in return.
+
+Validators are required to keep enough parachain blocks available for later use in their local
+storage. Those blocks are retrievable by peers who lack that information, so that they can reliably
+confirm the issued validity statements about parachain blocks. The
+[Availability & Validity](https://spec.polkadot.network/#chapter-anv) (AnV) protocol consists of
+multiple steps for successfully upholding those responsibilities.
 
 ## Nominators
 
@@ -98,6 +104,9 @@ nominators are generally rewarded with a portion of the staking rewards from tha
 [Collators](../general/glossary.md#collator) are full nodes on both a parachain and the Relay Chain.
 They collect parachain transactions and produce state transition proofs for the validators on the
 Relay Chain. They can also send and receive messages from other parachains using XCMP.
+
+Parachain blocks themselves are produced by collators, whereas the relay chain validators only
+verify their validity (and later, their availability).
 
 ---
 

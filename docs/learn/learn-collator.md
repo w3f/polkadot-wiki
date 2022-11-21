@@ -20,11 +20,30 @@ it, together with a proof of state transition, to one or more validators respons
 parachain block.
 
 Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
-will get rejected by validators. Therefore the assumption that having more collators is better or
-more secure is not correct. On the contrary, too many collators may slow down the network. The only
-nefarious power collators have is transaction censorship. To prevent censorship, a parachain only
-needs to ensure that there exist some neutral collators - but not necessarily a majority.
-Theoretically, the censorship problem is solved with having just one honest collator.
+will get rejected by validators. The validators are required to check the validity of submitted
+candidates, followed by issuing and collecting statements about the validity of candidates to other
+validators. This process is known as **candidate backing**. Validators receive an
+arbitrary number of parachain candidates with associated proofs from untrusted collators. A
+candidate is considered backable when at least 2/3 of all assigned validators have issued a valid
+statement about that candidate.
+
+The validator must successfully verify the following conditions in the following order:
+
+1. The candidate does not exceed any parameters in the persisted validation data.
+
+2. The signature of the collator is valid.
+
+3. Validate the candidate by executing the parachain Runtime.
+
+Once a candidate meets a specified criteria for inclusion, the selected relay chain block author
+then choses any of the backed candidates for each parachain and includes those into the relay chain
+block.
+
+The assumption that having more collators is better or more secure is not correct. On the contrary,
+too many collators may slow down the network. The only nefarious power collators have is transaction
+censorship. To prevent censorship, a parachain only needs to ensure that there are some neutral
+collators - but not necessarily a majority. Theoretically, the censorship problem is solved with
+having just one honest collator.
 
 ## XCM
 

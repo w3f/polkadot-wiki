@@ -35,9 +35,22 @@ mechanisms. In [GRANDPA](#grandpa-finality-gadget), the authorities vote on chai
 final. In BABE, the authorities are block producers. Authority sets can be chosen to be mechanisms
 such as Polkadot's NPoS algorithm.
 
+## Availability Cores
+
+Slots used to process parachains. The Runtime assigns each parachain to an availability core and
+validators can fetch information about the cores, such as parachain block candidates, by calling the
+appropriate Runtime API.
+
 ## BABE
 
 Blind Assignment for Blockchain Extension (BABE) is Polkadot's block production mechanism.
+
+## Bitfield Array
+
+A bitfield array contains single-bit values which indicate whether a [candidate](#candidate) is
+available. The number of items is equal of to the number of
+[availability cores](#availability-cores) and each bit represents a vote on the corresponding core
+in the given order.
 
 ## Block
 
@@ -93,6 +106,18 @@ potentially actively nominate that validator in the next session). This maximum 
 the number of nominators necessary to oversubscribe a validator. Any validator which is "at
 capacity" or higher may potentially be oversubscribed in the next session; a validator that is not
 at capacity cannot be oversubscribed unless more nominators select it before the next election.
+
+## Candidate
+
+A candidate is a submitted parachain block to the relay chain validators. A parachain block stops
+being referred to as a candidate as soon it has been finalized.
+
+## Collations
+
+Parachain blocks or candidates that are being proposed to the Polkadot relay chain validators. More
+specifically, a collation is a [data structure](https://spec.polkadot.network/#defn-collation) which
+contains the proposed parachain candidate, including an optional validation parachain Runtime update
+and upward messages.
 
 ## Collator
 
@@ -607,6 +632,15 @@ Networks are often executed on a testnet before they are deployed to a [mainnet]
 ## Tokenization
 
 The process of replacing sensitive data with non-sensitive data.
+
+## Tranche
+
+Validators use a subjective, tick-based system to determine when the approval process should start.
+A validator starts the tick-based system when a new availability core candidates have been proposed,
+which can be retrieved via the
+[Runtime API](https://spec.polkadot.network/#sect-rt-api-availability-cores), and increments the
+tick every 500 milliseconds. Each tick/increment is referred to as a “tranche”, represented as an
+integer, starting at 0.
 
 ## Transfer
 

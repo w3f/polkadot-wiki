@@ -7,8 +7,9 @@ keywords: [availability, validity, sharding, AnV]
 slug: ../learn-availability
 ---
 
-The Availability and Validity (AnV) protocol of Polkadot is what allows for the network to be
-efficiently sharded among parachains while maintaining strong security guarantees.
+The [Availability and Validity](https://spec.polkadot.network/#chapter-anv) (AnV) protocol of
+Polkadot allows the network to be efficiently sharded among parachains while maintaining
+strong security guarantees.
 
 ## Phases of the AnV protocol
 
@@ -38,6 +39,14 @@ The validators then check the candidate block against the verification function 
 parachain's registered code. If the verification succeeds, then the validators will pass the
 candidate block to the other validators in the gossip network. However, if the verification fails,
 the validators immediately reject the candidate block as invalid.
+
+Validators need to determine their assignments for each parachain and issue approvals for valid
+candidates, respectively disputes for invalid candidates. Since it cannot be expected that each
+validator verifies every single parachain candidate, this mechanism ensures that enough honest
+validators are selected to verify parachain candidates in order prevent the finalization of invalid
+blocks. If an honest validator detects an invalid block which was approved by one or more
+validators, the honest validator must issue a disputes which wil cause escalations, resulting in
+consequences for all malicious parties.
 
 When more than half of the parachain validators agree that a particular parachain block candidate is
 a valid state transition, they prepare a _candidate receipt_. The candidate receipt is what will

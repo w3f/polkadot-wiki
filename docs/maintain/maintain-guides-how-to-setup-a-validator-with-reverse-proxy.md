@@ -175,6 +175,37 @@ Nodes will use [libp2p](https://libp2p.io/) as the networking layer to establish
 messages, but uses NGINX as a load balancer which acts as a _first listener_ of the streaming data
 to help balance the load.
 
+Each host node maintains an ED25519 key pair which is used to identify the node. The public key is
+shared with the rest of the network allowing the nodes to establish secure communication channels.
+
+The node uses various mechanisms to locate peers within the network and allows them to share this
+information with one another.
+
+Nodes connect to peers by establishing a TCP connection. Once established, the node initiates a
+handshake with the remote peers on the encryption layer. An additional layer on top of the
+encryption layer, known as the multiplexing layer, allows a connection to be split into substreams,
+as described by the [yamux specification](https://docs.libp2p.io/concepts/multiplex/), either by the
+local or remote node.
+
+Nodes supports two types of substream protocols:
+
+- Request-Response substreams
+- Notification substreams
+
+More technical details on the connection establishment can be found
+[here](https://spec.polkadot.network/#sect-connection-establishment).
+
+The encryption layer leverages the libp2p Noise framework in order to establish encrypted
+communication channels. The three following steps are required to complete the handshake process:
+
+1. The initiator generates a keypair and sends the public key to the responder.
+2. The responder generates its own key pair and sends its public key back to the initiator. After
+   that, the responder derives a shared secret and uses it to encrypt all further communication. The
+   responder now sends its static Noise public key, its libp2p public key and a signature of the
+   static Noise public key signed with the libp2p public key.
+3. The initiator derives a shared secret and uses it to encrypt all further communication. They also
+   send its static Noise public key, libp2p public key and signature to the responder.
+
 ##### public-addr
 
 `public-addr` - a flexible encoding of multiple layers of protocols into a human-readable addressing

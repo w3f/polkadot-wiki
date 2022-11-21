@@ -404,14 +404,21 @@ validator mode right away:
 :::tip Use Warp sync for faster syncing
 
 By default, the node performs `full` sync, which downloads and validates the full blockchain
-history. `warp` sync can be used as a faster way to sync the validator node.
+history. Full sync works by listening to announced blocks and requesting the blocks from the
+announcing peers, or just the block headers in case of light clients.
+
+`Fast` sync is another option that works by downloading the block header history and validating the
+authority set changes in order to arrive at a specific (usually the most recent) header. After the
+desired header has been reached and verified, the state can be downloaded and imported. Once this
+process has been completed, the node can proceed with a full sync.
 
 `./target/production/polkadot --sync warp`
 
-Warp sync initially downloads and validates the finality proofs from [GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa)
-and then downloads the state of the latest finalized block. After the warp sync, the node is ready to
-import the latest blocks from the network and can be used as a Validator. The blocks from genesis
-will be downloaded in the background. Check
+`Warp sync` initially downloads and validates the finality proofs from
+[GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa) and then downloads the state of the
+latest finalized block. After the warp sync, the node is ready to import the latest blocks from the
+network and can be used as a Validator. The blocks from genesis will be downloaded in the
+background. Check
 [this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
 for more information about the different sync options available.
 
