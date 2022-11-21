@@ -118,6 +118,8 @@ has two primary components, bags and nodes. The list is composed of bags that ea
 of active bonded funds (e.g. the 1st bag will have nominators who staked 0 → 10 DOT, 2nd bag 11 → 20
 DOT, etc). Each bag contains nodes that correspond to nominators and their staked funds.
 
+![bags list example 1](../assets/bags-list-example-0.png)
+
 The Bags-List pallet is designed to be self-maintaining, with minimal effort from the blockchain,
 making it extremely scalable. Let us explore the sorting functionality of the bags list with an
 example. In the bags list below, there are 8 nodes (corresponding to 8 accounts with staked funds)
