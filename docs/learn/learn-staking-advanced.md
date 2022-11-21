@@ -125,12 +125,12 @@ placed in 3 bags. It can be observed that the list of nodes within the bags is a
 their insertion order and not based on the number of tokens bonded. For instance, the nodes in bag 1
 are arranged in this order: 15 → 12 → 19.
 
-![bags list example 1](../assets/staking/bags-list-example-1.png)
+![bags list example 1](../assets/bags-list-example-1.png)
 
 Let's say the nominator with the stake of 19 DOT bonds 2 DOT additionally. This action would place
 that nominator node in bag 2, right after the node with 27 DOT.
 
-![bags list example 2](../assets/staking/bags-list-example-2.png)
+![bags list example 2](../assets/bags-list-example-2.png)
 
 Once the nomination period ends, the NPoS election mechanism takes the nomination intents and their
 associated votes as input, and it outputs a set of validators. The bags are iterated from the most
@@ -139,8 +139,6 @@ This means that in some edge cases, the order of members within a bag is also im
 within each bag, the iteration order is simply the insertion order. If only 7 nodes must be picked
 for the electing set, the nodes with 5 and 7 DOT will be selected while the node with 8 DOT will be
 left out.
-
-![bags list example 3](../assets/staking/bags-list-example-3.png)
 
 If one receives staking rewards and the amount of staked tokens within the stash account increases
 over time, the position within a bag changes and may also result in a change of bag. This may also
