@@ -111,47 +111,54 @@ On Polkadot and Kusama, the instance of the pallet
 
 :::
 
-The nomination intents are placed in a semi-sorted list called
+The nomination intents are placed in a list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
 {{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The bags list
-has two primary components, bags and nodes. The list is composed of bags that each describe a range
-of active bonded funds (e.g. the 1st bag will have nominators who staked 0 → 10 DOT, 2nd bag 11 → 20
-DOT, etc). Each bag contains nodes that correspond to nominators and their staked funds.
+has two primary components, bags and nodes, with bags containing the nodes (or nominators' accounts)
+with bonded balance within a specific range. In the Figure below the 1st empty bag will contain
+nominators who staked 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination
+intents are the nominators' accounts (in this case they are 8) with bonded tokens that will be put
+inside each of those three bags depending on the stake they have.
 
-![bags list example 1](../assets/bags-list-example-0.png)
+![bags list example 0](../assets/bags-list-example-0.png)
 
 The Bags-List pallet is designed to be self-maintaining, with minimal effort from the blockchain,
-making it extremely scalable. Let us explore the sorting functionality of the bags list with an
-example. In the bags list below, there are 8 nodes (corresponding to 8 accounts with staked funds)
-placed in 3 bags. It can be observed that the list of nodes within the bags is arranged based on
-their insertion order and not based on the number of tokens bonded. For instance, the nodes in bag 1
-are arranged in this order: 15 → 12 → 19.
+making it extremely scalable. The bags list is semi-sorted, meaning that sorting is partially done
+automatically. In fact, the nomination intents are automatically put into each bag based on the
+number of bonded tokens, but within each bag the nodes are arranged based on the time they are
+inserted and not by stake. To sort nodes within a bag by stake there is a manual step (more on this
+later on). Note in the figure below how in the 2nd bag the order of the node with 19 DOT (yellow
+circle) is the last one, meaning that the nomination intent was submitted after the other nodes.
+Similar case for the node with 8 DOT (green circle) in the 3rd bag.
+
+These two nodes have the right to move up in their respective bags un put them in front of the nodes
+with less stake than them. This action must be done manually by submitting the `putInFrontOf`
+extrinsic within the `voterList` pallet instance. Moreover, if for example the node with 19 DOT
+bonds an additional 2 DOT, that node will be put automatically in the 1st bag because the total
+number of bonded tokens will be outside the range of the 2nd bag. That node with now 21 DOT will be
+put at the tail of the 1st bag with the possibility to manually put itself in front of "older" nodes
+with less than 21 DOT (if there are any).
 
 ![bags list example 1](../assets/bags-list-example-1.png)
 
-Let's say the nominator with the stake of 19 DOT bonds 2 DOT additionally. This action would place
-that nominator node in bag 2, right after the node with 27 DOT.
-
-![bags list example 2](../assets/bags-list-example-2.png)
+If one decides to automatically send staking rewards to the stash account and bond them (i.e.
+compound staking), the position within a bag changes over time and this may result in a change of
+bag. Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like
+staking rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) section for more
+information. Briefly, any nominator within a specific bag can submit the permissionless extrinsic
+`rebag` within the `voterList` pallet instance to update the positions of those accounts that do not
+belong to their bag, and place them in the correct one.
 
 Once the nomination period ends, the NPoS election mechanism takes the nomination intents and their
 associated votes as input, and it outputs a set of validators. The bags are iterated from the most
-staked to the least staked. This could leave the last touched bag to only be partially iterated.
+staked to the least staked. If the accounts are not appropriately sorted, this could leave the last touched bag to only be partially iterated.
 This means that in some edge cases, the order of members within a bag is also important. Recall that
-within each bag, the iteration order is simply the insertion order. If only 7 nodes must be picked
-for the electing set, the nodes with 5 and 7 DOT will be selected while the node with 8 DOT will be
-left out.
+within each bag, the iteration order is simply the insertion order.
 
-If one receives staking rewards and the amount of staked tokens within the stash account increases
-over time, the position within a bag changes and may also result in a change of bag. This may also
-happen if accounts within the bag bond more tokens or unbond tokens, one's account position and the
-position of other accounts in the bags list might change. These changes are not done automatically,
-requiring the nominator to submit the permissionless extrinsic `rebag` within the `voterList` pallet
-instance to update their position. This allows anyone to specify another account that is in the
-wrong bag, and place it in the correct one. The `voterList` pallet instance also comes with the
-extrinsic `putInFrontOf` which helps the node to move up in the bag. Actions like bonding/unbonding
-tokens automatically rebags the nominator node, but events like staking rewards/slashing do not. See
-the [bags-list](learn-nominator.md#bags-list) section for more information.
+![bags list example 2](../assets/bags-list-example-2.png)
+
+If only 7 nodes must be picked for the electing set, the nodes with 5 and 7 DOT will be selected
+while the node with 8 DOT will be left out.
 
 This sorting functionality using bags is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
@@ -413,7 +420,8 @@ treasury.
 :::info
 
 DOT went through [redenomination](../general/redenomination.md) in 2020 that saw the DOT token
-supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>
+supply increase by 100 times. The current token supply on Polkadot is
+<RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>
 (Over 1.2 Billion DOT).
 
 ::: :polkadot }}
