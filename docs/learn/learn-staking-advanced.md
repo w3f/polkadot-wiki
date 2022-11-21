@@ -111,9 +111,8 @@ On Polkadot and Kusama, the instance of the pallet
 
 :::
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} NPoS nominators do not necessarily
-receive staking rewards. The nomination intents are sorted in a list called
-[bags-list](https://github.com/paritytech/substrate/pull/9507).
+In {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} NPoS nomination intents are
+sorted in a list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
 {{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The Bags-List
 substrate pallet is designed to be self-maintaining, with minimal effort from the blockchain, making
 it extremely scalable. This sorting functionality using bags is extremely important for the
@@ -164,23 +163,23 @@ nomination intents, of which, at most
 come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
-This means that the number of nominators eligible to earn rewards is limited. Once the nomination
-period ends, the NPoS election mechanism takes the nomination intents and their associated votes as
-input, and it outputs a set of validators. The bags are iterated from the most staked to the least
-staked and only a portion of them . If the accounts are not appropriately sorted, this could leave
-the last touched bag to only be partially iterated. Thus, in some edge cases, the order of the
-members within a bag is important. Continuing with the example used in the previous figures, there are
-8 nomination intents of which only 7 will be kept. If the bags list stays semi-sorted (i.e. no
-accounts call the `putInFrontOf` and `rebag` extrinsics), the node with 8 DOT in the 3rd bag will
-not receive rewards while the preceding node with 5 DOT will. The node with 8 DOT will earn rewards
-only by putting itself in front of the one with 5 DOT. Note how changing the position of the node
-with 19 DOT in the 2nd bag will not affect reward payments for that node.
+This means that only a portion of the nomination intents is kept. Once the nomination period ends,
+the NPoS election mechanism takes all nomination intents and their associated votes as input, and it
+outputs a set of validators. The bags are iterated from the most staked to the least staked. If the
+accounts are not appropriately sorted, this could leave the last touched bag to only be partially
+iterated. Thus, in some edge cases, the order of the members within a bag is important. Continuing
+with the example used in the previous figures, there are 8 nomination intents of which only 7 will
+be kept. If the bags list stays semi-sorted (i.e. no accounts call the `putInFrontOf` and `rebag`
+extrinsics), the nomination of the node with 8 DOT in the 3rd bag will not be considered while that
+of the preceding node with 5 DOT will. Nomination of the node with 8 DOT will be kept only if it
+will put itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in
+the 3rd bag will be considered regardless of changing its position inside the bag.
 
 ![bags list example 2](../assets/bags-list-example-2.png)
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
+Submitting a nomination intent does not guarantee staking rewards. The stake of the top
 {{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
 nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
 the number of tokens bonded is higher than the minimum active nomination. For more information, see
