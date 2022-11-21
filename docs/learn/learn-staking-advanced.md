@@ -169,8 +169,8 @@ period ends, the NPoS election mechanism takes the nomination intents and their 
 input, and it outputs a set of validators. The bags are iterated from the most staked to the least
 staked and only a portion of them . If the accounts are not appropriately sorted, this could leave
 the last touched bag to only be partially iterated. Thus, in some edge cases, the order of the
-members within a bag is important. Continuing with the example used in the previous figures, there a
-8 nodes of which only 7 will be electing nominators. If the bags list stays semi-sorted (i.e. no
+members within a bag is important. Continuing with the example used in the previous figures, there are
+8 nomination intents of which only 7 will be kept. If the bags list stays semi-sorted (i.e. no
 accounts call the `putInFrontOf` and `rebag` extrinsics), the node with 8 DOT in the 3rd bag will
 not receive rewards while the preceding node with 5 DOT will. The node with 8 DOT will earn rewards
 only by putting itself in front of the one with 5 DOT. Note how changing the position of the node
