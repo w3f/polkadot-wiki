@@ -189,7 +189,7 @@ Democracy extrinsics on the full ledger.
 
 :::warning
 
-These instructions are for development installation only. It is recommended to install the
+This section is for developers only. It is recommended to install the
 application from Ledger Live unless you _know exactly what you're doing_.
 
 :::
