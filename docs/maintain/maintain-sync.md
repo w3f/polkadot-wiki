@@ -104,7 +104,8 @@ example:
   values={[
     {label: 'macOS', value: 'mac'},
     {label: 'Windows', value: 'win'},
-    {label: 'Linux', value: 'linux'},
+    {label: 'Linux (standalone)', value: 'linux-standalone'},
+    {label: 'Linux (package)', value: 'linux-package'},
   ]}
 >
 <TabItem value="mac">
@@ -166,7 +167,7 @@ example:
 - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
 
 </TabItem>
-<TabItem value="linux">
+<TabItem value="linux-standalone">
 
 - Determine the latest version of the
   [Polkadot binary](https://github.com/paritytech/polkadot/releases).
@@ -195,6 +196,87 @@ example:
   ```
 
 - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+
+</TabItem>
+<TabItem value="linux-package">
+
+You can also install Polkadot from one of our package repositories.
+
+Installation from the Debian or rpm repositories will create a `systemd`
+service that can be used to run a Polkadot node. The service is disabled by default,
+and can be started by running `systemctl start polkadot` on demand (use
+`systemctl enable polkadot` to make it auto-start after reboot). By default, it
+will run as the `polkadot` user.  Command-line flags passed to the binary can
+be customized by editing `/etc/default/polkadot`. This file will not be
+overwritten on updating polkadot.
+  
+### Debian-based (Debian, Ubuntu)
+
+Currently supports Debian 10 (Buster) and Ubuntu 20.04 (Focal), and
+derivatives. Run the following commands as the `root` user.
+
+```bash
+# Import the security@parity.io GPG key
+gpg --recv-keys --keyserver hkps://keys.mailvelope.com 9D4B2B6EB8F97156D19669A9FF0812D491B96798
+gpg --export 9D4B2B6EB8F97156D19669A9FF0812D491B96798 > /usr/share/keyrings/parity.gpg
+# Add the Parity repository and update the package index
+echo 'deb [signed-by=/usr/share/keyrings/parity.gpg] https://releases.parity.io/deb release main' > /etc/apt/sources.list.d/parity.list
+apt update
+# Install the `parity-keyring` package - This will ensure the GPG key
+# used by APT remains up-to-date
+apt install parity-keyring
+# Install polkadot
+apt install polkadot
+
+```
+If you don't want polkadot package to be automatically updated when you update packages on your server,
+you can issue the following command:
+
+```bash
+sudo apt-mark hold polkadot
+```
+
+### RPM-based (Fedora, CentOS)
+
+Currently supports Fedora 32 and CentOS 8, and derivatives.
+
+```bash
+# Install dnf-plugins-core (This might already be installed)
+dnf install dnf-plugins-core
+# Add the repository and enable it
+dnf config-manager --add-repo https://releases.parity.io/rpm/polkadot.repo
+dnf config-manager --set-enabled polkadot
+# Install polkadot (You may have to confirm the import of the GPG key, which
+# should have the following fingerprint: 9D4B2B6EB8F97156D19669A9FF0812D491B96798)
+dnf install polkadot
+```
+  
+:::info
+
+If you choose to use a custom folder for the polkadot home by passing `--base-path '/custom-path'`,
+you will need to issue following command:
+
+```bash
+sudo mkdir /etc/systemd/system/polkadot.service.d
+```
+And create a new file inside this folder:
+  
+```bash
+sudo -e /etc/systemd/system/polkadot.service.d/custom.conf
+```
+With the following content:
+
+```
+[Service]
+ReadWritePaths=/custom-path
+```
+And finally issue a reload to have your modifications applied by systemd:
+  
+```bash
+systemctl daemon-reload
+```
+
+:::
 
 </TabItem>
 </Tabs>
