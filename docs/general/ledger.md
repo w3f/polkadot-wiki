@@ -16,10 +16,10 @@ like Brave and Chrome.
 
 :::warning Ledger does not currently support batch transactions
 
-Ledger does not currently support batch calls, as a consequence if you stake using the
-[staking dashboard](https://staking.polkadot.network/#/overview) you must use a hot wallet.
+Ledger does not currently support batch calls; As a consequence, if you stake using the
+[staking dashboard](https://staking.polkadot.network/#/overview), you must use a hot wallet.
 Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that allows
-for single calls (i.e. bonding and nominating).
+for single calls (i.e., bonding and nominating).
 
 :::
 
