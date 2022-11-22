@@ -86,7 +86,9 @@ using Polkadot JS. For more information about derived accounts and derivation pa
 
 ### Loading Your Account
 
-:::info Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with
+:::info 
+
+Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with
 normal operation.
 
 :::
@@ -208,6 +210,12 @@ audit, you can install the developer release from the shell using the latest ver
 [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
 ### Install the Developer Release
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer release of your ledger app.
+
+:::
 
 To install the developer version make sure you have the latest `pip` version and follow the steps
 below:
