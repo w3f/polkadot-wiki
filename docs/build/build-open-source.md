@@ -22,7 +22,7 @@ apologize if we missed your project!
   - [User Interface](#user-interface)
   - [Tools, APIs and Languages](#tools-apis-and-languages)
   - [ink Smart Contracts](#ink-smart-contracts)
-  - [Chains and Pallets](#chains-and-pallets)https://github.com/pendulum-chain/stellar-experiments
+  - [Chains and Pallets](#chains-and-pallets)
   - [Host](#host)
   - [Network Maintenance Tools](#network-maintenance-tools)
   - [Signatures](#signatures)
