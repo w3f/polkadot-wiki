@@ -7,17 +7,17 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
+:::caution The contents in this guide are subject to change
+
+Gov2: Polkadot’s next generation of decentralized governance is now live on Kusama network. Check
+Gov2 page for a detailed explanation on the upcoming changes to the Polkadot governance.
+
+:::
+
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the
 [council](maintain-guides-how-to-join-council.md) and the
 [technical committee](../learn/learn-governance.md#technical-committee).
-
-:::caution The contents in this guide are subject to change
-
-See the following [pull request](https://github.com/paritytech/substrate/pull/10195) for more
-details on the recent efforts to modify Polkadot Governance
-
-:::
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _endorsing_ it and putting up
@@ -289,7 +289,8 @@ If there is an existing lock due to a previous delegation change or undelegation
 undelegation will restart the lock period for the larger DOT amount and the longest conviction
 period between the existing and the new lock.
 
-This will only matter to accounts with conviction, as the accounts with no conviction don't have any lock period.
+This will only matter to accounts with conviction, as the accounts with no conviction don't have any
+lock period.
 
 Examples:
 
