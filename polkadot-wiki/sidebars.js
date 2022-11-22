@@ -101,6 +101,7 @@ module.exports = {
           items: [
             'learn/learn-account-advanced',
             'learn/learn-availability',
+            'learn/learn-extrinsics',
             'learn/learn-xcm',
             'learn/learn-phragmen',
             'learn/learn-proxies',
