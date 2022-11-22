@@ -20,7 +20,8 @@ natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-st
 
 :::tip Have questions on Nomination Pools?
 
-If you have questions about nomination pools, please join our
+Please join the [Polkadot Discord](https://dot.li/discord) for asking general questions about Nomination Pools.
+If you are a developer, please join our
 [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
 
 :::
