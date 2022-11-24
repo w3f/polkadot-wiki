@@ -98,11 +98,9 @@ the guidelines in
 The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to convert
 your address between the different chain formats.
 
-:::info For privacy reasons, we recommend creating a new address for each chain you're using.
+:::info Using the same account on multiple chains - Pros and Cons
 
-Your address' format is only visual - the data used to derive this representation of your address
-are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
-recommend creating a new address for each chain you're using.
+The address format differs from chain to chain, but that difference is only visual. The same private key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain full access to the accounts on all other chains. This also has implications for the account holder's privacy, as knowing the identity of an account on one chain can expose the account holder's identity on all the chains.
 
 :::
 
