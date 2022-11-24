@@ -90,7 +90,7 @@ If you prefer video instructions for creating an account using Polkadot JS, see
 
 :::
 
-### Set Address for Polkadot Mainnet
+### Account Address Format
 
 In Polkadot you can use the same address on multiple chains. To switch between chains you can follow
 the guidelines in
