@@ -16,6 +16,12 @@ mechanism that allows it to evolve gracefully overtime at the ultimate behest of
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
 
+:::info Gov2 is live on Kusama Network
+
+Learn about the upcoming changes to the governance on Polkadot in this [Wiki doc on Gov2](learn-gov2.md).
+
+:::
+
 :::caution Upcoming governance changes
 
 The contents in this guide are subject to change as per the recent efforts to modify Polkadot
