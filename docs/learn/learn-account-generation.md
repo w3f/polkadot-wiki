@@ -106,7 +106,7 @@ recommend creating a new address for each chain you're using.
 
 :::
 
-You can copy your address by clicking on the account's icon while the desired chain format is
+On Polkadot-JS Extension, you can copy your address by clicking on the account's icon while the desired chain format is
 active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful
 icon of your account will copy it in that format. While in Polkadot mode, that address format will
 be copied, and so on.
