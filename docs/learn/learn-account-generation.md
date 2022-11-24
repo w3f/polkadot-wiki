@@ -95,12 +95,14 @@ If you prefer video instructions for creating an account using Polkadot JS, see
 An account created for Polkadot can also be used on multiple chains in the Polkadot ecosystem. More specifically, the account of a chain that uses the `*25519` account address format (the latest list can be accessed on the [ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)) is cross-compatible with all the chains that use the similar format. To switch between the accounts on different chains, you can follow
 the guidelines in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
-The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to convert
+[Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert
 your address between the different chain formats.
 
 :::info Using the same account on multiple chains - Pros and Cons
 
-The address format differs from chain to chain, but that difference is only visual. The same private key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain full access to the accounts on all other chains. This also has implications for the account holder's privacy, as knowing the identity of an account on one chain can expose the account holder's identity on all the chains.
+The address format differs from chain to chain, but that difference is only visual. The same private key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain full access to the accounts on all other chains. This also has implications for the account holder's privacy, as knowing the identity of an account on one chain can expose the account holder's identity on all the chains. In the Accounts tab, the Polkadot-JS UI displays a warning message next to each Account that you are using on multiple chains, and recommends to use different Accounts on different chains (see below).
+
+![warning multiple chains](../assets/warning-multichain-account.png)
 
 :::
 
