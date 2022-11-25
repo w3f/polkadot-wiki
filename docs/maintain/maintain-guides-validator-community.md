@@ -281,7 +281,7 @@ work outside their validation services. Some potential categories of building th
 explorers, deployment scripts, monitoring and observability services, staking dashboards, wallets,
 command-line utilities, or porting implementations to other languages. Additionally, this may also
 be eligible to be funded via a
-[Web 3 Foundation Grant](https://github.com/w3f/General-Grants-Program).
+[Web 3 Foundation Grant](https://github.com/w3f/Grants-Program).
 
 [setting up a validator]: maintain-guides-how-to-validate-polkadot
 [identity]: ../learn/learn-identity.md#setting-an-identity
