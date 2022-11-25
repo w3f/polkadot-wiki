@@ -134,12 +134,11 @@ figure below, when a nomination intent of 19 DOT is submitted, it gets placed at
 
 ![bags list example 1](../assets/bags-list-example-1.png)
 
-The mentioned two nodes have the right to move up in their respective bags un put them in front of
-the nodes with less stake than them. This action of appropriately sorting the bag must be done
+The mentioned two nodes (19 DOT and 8 DOT) have the option to move up in their respective bags, which can put them in front of the nodes with less stake than them. This action must be done
 manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet instance.
-Moreover, if for example the node with 19 DOT bonds an additional 2 DOT, that node will be put
-automatically in the 1st bag because the total number of bonded tokens will be outside the range of
-the 2nd bag (see figure below). That node with now 21 DOT will be put at the tail of the 1st bag
+Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put
+automatically in the 1st bag because the total number of bonded tokens will now be within the range of
+the 1st bag (see figure below). That node with now 21 DOT will be put at the tail end of the 1st bag
 with the possibility to manually put itself in front of "older" nodes with less than 21 DOT (if
 there are any).
 
