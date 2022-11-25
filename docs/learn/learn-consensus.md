@@ -55,10 +55,9 @@ Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the
 is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
 who are interested in maintaining the network can run a validator node.
 
-Validators assume the role of producing new blocks in
-[BABE](learn-consensus.md/#block-production-babe), validating parachain blocks, and guaranteeing
-finality. Nominators can choose to back select validators with their stake. Nominators can approve
-candidates that they trust and back them with their tokens.
+Validators assume the role of producing new blocks in [BABE](#block-production-babe), validating
+parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
+their stake. Nominators can approve candidates that they trust and back them with their tokens.
 
 ## Probabilistic vs. Provable Finality
 
@@ -109,7 +108,10 @@ BABE (Blind Assignment for Blockchain Extension) is the block production mechani
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
-according to stake and using the Polkadot [randomness cycle](learn-randomness.md).
+according to stake and using the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+[randomness cycle](learn-randomness.md). The chains Runtime is required to provide the BABE
+authority list and randomness to the host via a consensus message in the header of the first block
+of each epoch.
 
 BABE execution happens in sequential non-overlapping phases known as epochs. Each epoch is divided
 into a predefined number of slots. All slots in each epoch are sequentially indexed starting from 0
