@@ -14,7 +14,7 @@ Polkadot, Kusama and ink!. Applications and deliveries are tracked transparently
 Information regarding requirements, the application process, deliveries, etc. can be found in the
 [Grants Program README](https://github.com/w3f/Grants-Program#web3-foundation-grants-program). For
 guidance, there is also a list of
-[previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/docs/accepted_grant_applications.md#accepted-grant-applications-)
+[previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/applications/index.md)
 and a list of
 [frequently asked questions](https://github.com/w3f/Grants-Program/blob/master/docs/faq.md).
 
