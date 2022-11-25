@@ -127,7 +127,7 @@ will be put inside each of those three bags depending on their stake.
 The bags list is semi-sorted, meaning that sorting is only partially done. When the nomination
 intents are submitted to the network, they are automatically put into each bag based on the number
 of bonded tokens, but within each bag, those nodes are arranged based on the time they are inserted
-and not based on their stake. In the figure below, when a nomination intent of 19 DOT is submitted,
+and not based on their stake (see figure below). When the nomination intent of 19 DOT is submitted,
 it gets placed at the last spot in the 2nd bag (shown in the yellow circle). The same scenario
 applies for the node with 8 DOT (green circle) in the 3rd bag. Placing the node above all nodes with
 a lesser stake requires an additional step (more on this later).
@@ -135,12 +135,14 @@ a lesser stake requires an additional step (more on this later).
 ![bags list example 1](../assets/bags-list-example-1.png)
 
 The mentioned two nodes (19 DOT and 8 DOT) have the option to move up in their respective bags,
-which can put them in front of the nodes with less stake than them. This action must be done
+which can put them in front of the nodes with less stake than them (see figure below). This action must be done
 manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet instance.
 Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put automatically in
-the 1st bag because the total number of bonded tokens will now be within the range of the 1st bag. That node with now 21 DOT will be put at the tail end of the 1st bag with the
+the 1st bag (i.e. automatic `rebag`) because the total number of bonded tokens will now be within the range of the 1st bag. That node with now 21 DOT will be put at the tail end of the 1st bag with the
 possibility to manually put itself in front of "older" nodes with less than 21 DOT (if there are
 any).
+
+![bags list example 2](../assets/bags-list-example-2.png)
 
 If one decides to send staking rewards to the stash account and automatically bond them (i.e.
 compounding the staking rewards), the position within a bag does not change automatically. The same
@@ -177,15 +179,15 @@ functionality of nomination intents using bags is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system.
 
-![bags list example 2](../assets/bags-list-example-2.png)
+![bags list example 2](../assets/bags-list-example-3.png)
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
 Submitting a nomination intent does not guarantee staking rewards. The stake of the top
 {{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
 nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
-the number of tokens bonded is higher than the minimum active nomination. For more information, see
-the [nominator guide](learn-nominator.md)
+the number of tokens bonded is higher than the minimum active bond. For more information, see
+the [nominator guide](learn-nominator.md).
 
 :::
 
