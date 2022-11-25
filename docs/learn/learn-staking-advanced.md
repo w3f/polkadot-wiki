@@ -146,9 +146,9 @@ there are any).
 
 If one decides to send staking rewards to the stash account and automatically bond them (i.e.
 compounding the staking rewards), the position within a bag does not change automatically. The same scenario applies to a slashing event, i.e., when a nominator gets slashed, their position within a bag does not change. This might result in a scenario where the node is in the wrong bag and needs to be placed in the right
-bag. Any nominator within a specific bag can submit the permissionless extrinsic `rebag` within the
-`voterList` pallet instance to update the positions of those accounts that do not belong to their
-bag, and place them in the correct one. Actions like bonding/unbonding tokens automatically rebags
+bag. To address this issue, any account on-chain can submit the permissionless extrinsic `rebag` within the
+`voterList` pallet instance to update the positions of the nodes that do not belong to their
+bag and place them in the correct one. To reiterate, actions like bonding/unbonding tokens automatically rebag
 the nominator node, but events like staking rewards/slashing do not. See the
 [bags-list](learn-nominator.md#bags-list) section for more information.
 
