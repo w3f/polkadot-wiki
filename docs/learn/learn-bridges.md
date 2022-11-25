@@ -117,15 +117,6 @@ There is now a
 
 ## Additional Resources and Examples
 
-### For Bridge Builders
-
-If your team is interested in building a bridge between an external chain and Polkadot, funding may
-be available from the W3F [grants program][]. Please first check that the chain you intend to bridge
-between hasn't already been built or is in the process of being created by another team. More
-popular chains with clear use cases will be given priority, and novel bridge designs are welcome.
-
-### Resources and Examples
-
 - [Parity Bridges Common Resources](https://github.com/paritytech/parity-bridges-common)
 - [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe and Centrifuge
   were awarded a grant in W3F Grants [Wave 5][] to build a Substrate to Ethereum two-way bridge.
@@ -154,4 +145,3 @@ popular chains with clear use cases will be given priority, and novel bridge des
 [wave 5]: https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096
 [eth bridging blog]:
   https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13
-[grants program]: https://github.com/w3f/General-Grants-Program
