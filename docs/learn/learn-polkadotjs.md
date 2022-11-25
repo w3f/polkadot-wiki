@@ -79,9 +79,10 @@ One important detail to understand while interacting with the underlying
 automatically when connecting to an available node. This is quite a departure from many other API
 designs where the interfaces are commonly static.
 
-When the API connects to a node, it initially retrieves the metadata which is used to "decorate" the
-API based on its contents. The metadata provides data in the form of `api.<type>.<module>.<section>`
-and fits into one of the following categories:
+When the API connects to a node, it initially retrieves the
+[metadata](https://polkadot.js.org/apps/#/runtime) which is used to "decorate" the API based on its
+contents. The metadata provides data in the form of `api.<type>.<module>.<section>` and fits into
+one of the following categories:
 
 - `consts` - runtime constants (these are not functions so the values are returned directly as they
   are defined by the endpoint)
