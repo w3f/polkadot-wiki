@@ -10,9 +10,9 @@ slug: ../build-build-with-polkadot
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
 [XCM](../learn/learn-xcm.md). With the advent of
-[PDKs](<../build/build-parachains.md##parachain-development-kit-(pdk)>>) like Parity Substrate and
-Cumulus, the time it takes to develop and launch a new chain has dropped significantly. While before
-it would take years to launch a new chain, now it may only take weeks or even days.
+[PDKs](../build/build-parachains.md#parachain-development-kit) like Parity Substrate and Cumulus,
+the time it takes to develop and launch a new chain has dropped significantly. While before it would
+take years to launch a new chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision
 with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will explain the difference
