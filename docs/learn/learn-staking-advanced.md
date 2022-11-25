@@ -170,7 +170,7 @@ with the example used in the previous figures, there are 8 nomination intents of
 be kept. If the bags list stays semi-sorted (i.e. no accounts call the `putInFrontOf` and `rebag`
 extrinsics), the nomination of the node with 8 DOT in the 3rd bag will not be considered while that
 of the preceding node with 5 DOT will be. Nomination of the node with 8 DOT will be kept only if it
-will put itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in
+puts itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in
 the 3rd bag will be considered regardless of changing its position inside the bag.
 
 ![bags list example 2](../assets/bags-list-example-2.png)
