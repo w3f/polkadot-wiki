@@ -16,7 +16,8 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. {{ polkadot: You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
+help you get started.
+{{ polkadot: You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
 {{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
 
 :::
@@ -70,9 +71,8 @@ PoS network rewards good behavior and punishes bad behavior.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements
 [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake), a relatively novel
 and sophisticated mechanism to select the validators who are allowed to participate in its
-[consensus](learn-consensus.md) protocol. NPoS
-encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as
-**nominators**.
+[consensus](learn-consensus.md) protocol. NPoS encourages
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as **nominators**.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator, in turn, submits a list of up to
@@ -260,19 +260,32 @@ To maximize rewards and minimize risk, one could select those validators that:
 
 #### Network Providers
 
+For successful operation, a Validator node should always be ensured to meet the required
+[software, hardware, and network bandwidth specifications](../maintain/maintain-guides-how-to-validate-polkadot#reference-hardware).
+Understandably, most of the validator nodes run on cloud service providers that guarantee high
+hardware specifications and high levels of availability and connectivity. Keep in mind that a
+validator in the active set is supposed to be fully online and available for producing blocks. If
+the active validator node goes offline due to network interruptions or a power outage, that
+validator might be subject to
+[slashing due to unresponsiveness](./learn-staking-advanced#unresponsiveness). As
+[Polkadot's block production mechanism](./learn-consensus.md#block-production-babe) is reasonably
+resilient to a small proportion of validators going offline, no slashing is imposed until 10% of the
+validators in the active set go offline. Hence, if multiple nodes are running on a single cloud
+service provider and go offline simultaneously due to an outage or due to a change in their terms
+and conditions policy regarding the support of Proof-of-Stake (PoS) operations, the offline
+validators and all the nominators backing them can be slashed up 7% of their stake on Polkadot.
+Hence, it is recommended that you check if you are nominating the validator nodes that are running
+on cloud service providers, and if they do, check if they allow for Proof-of-Stake operations.
 
-For successful operation, a Validator node should always be ensured to meet the required [software, hardware, and network bandwidth specifications](../maintain/maintain-guides-how-to-validate-polkadot#reference-hardware). 
-Understandably, most of the validator nodes run on cloud service providers that guarantee high hardware specifications and high levels of availability and connectivity. Keep in mind that a validator in the active set is supposed to be fully online and available for producing blocks. If the active validator node goes offline due to network interruptions or a power outage, that validator might be subject to [slashing due to unresponsiveness](learn-staking-advanced#unresponsiveness). As [Polkadot's block production mechanism] is reasonably resilient to a small proportion of validators going offline, no slashing is imposed until 10% of the validators in the active set go offline. Hence, if multiple nodes are running on a single cloud service provider and go offline simultaneously due to an outage or due to a change in their terms and conditions policy regarding the support of Proof-of-Stake (PoS) operations, the offline validators and all the nominators backing them can be slashed up 7% of their stake on Polkadot.
+:::tip Checking Validators using Network Providers
 
-
-Hence, it is recommended that you check if you are nominating the validator nodes that are running on cloud service providers, and if they do, check if they allow for Proof-of-Stake operations. 
-
-:::tip
-
-You can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will show your rewards earned in the past 60 eras divided by network provider and country. You will be able to see networks used by each validator and verify if your validators are using providers who support PoS. This is also a great tool to explore how decentralized your nominations are and act accordingly.
+You can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will
+show your rewards earned in the past 60 eras divided by network provider and country. You will be
+able to see networks used by each validator and verify if your validators are using providers who
+support PoS. This is also a great tool to explore how decentralized your nominations are and act
+accordingly.
 
 :::
-
 
 #### Keeping Track of Nominated Validators
 
