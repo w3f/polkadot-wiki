@@ -121,7 +121,7 @@ staking/election system.
 
 The bags list has two primary components, bags and nodes (or nominators' accounts), with bags
 containing the nodes with bonded balance within a specific range. In the figure below the 1st empty
-bag will contain nominators will take 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10
+bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10
 DOT. The nomination intents are the nominators' accounts with bonded tokens (in this case they
 are 8) that will be put inside each of those three bags depending on the stake they have.
 
