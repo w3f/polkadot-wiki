@@ -265,7 +265,14 @@ For successful operation, a Validator node should always be ensured to meet the 
 Understandably, most of the validator nodes run on cloud service providers that guarantee high hardware specifications and high levels of availability and connectivity. Keep in mind that a validator in the active set is supposed to be fully online and available for producing blocks. If the active validator node goes offline due to network interruptions or a power outage, that validator might be subject to [slashing due to unresponsiveness](learn-staking-advanced#unresponsiveness). As [Polkadot's block production mechanism] is reasonably resilient to a small proportion of validators going offline, no slashing is imposed until 10% of the validators in the active set go offline. Hence, if multiple nodes are running on a single cloud service provider and go offline simultaneously due to an outage or due to a change in their terms and conditions policy regarding the support of Proof-of-Stake (PoS) operations, the offline validators and all the nominators backing them can be slashed up 7% of their stake on Polkadot.
 
 
-You must check if your nominations use cloud service providers that allow for Proof-of-Stake operations. You can contact them via email providers, and they should get back to you with more information about this topic. Additionally, you can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will show your rewards earned in the past 60 eras divided by network provider and country. You will be able to see networks used by each validator and verify if your validators are using providers who support PoS. This is also a great tool to explore how decentralized your nominations are and act accordingly.
+Hence, it is recommended that you check if you are nominating the validator nodes that are running on cloud service providers, and if they do, check if they allow for Proof-of-Stake operations. 
+
+:::tip
+
+You can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will show your rewards earned in the past 60 eras divided by network provider and country. You will be able to see networks used by each validator and verify if your validators are using providers who support PoS. This is also a great tool to explore how decentralized your nominations are and act accordingly.
+
+:::
+
 
 #### Keeping Track of Nominated Validators
 
