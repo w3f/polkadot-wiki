@@ -162,7 +162,7 @@ come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 This means that only a portion of the nomination intents is kept. Once the nomination period ends,
-the NPoS election mechanism takes all nomination intents and their associated votes as input, and it
+the NPoS election system takes all nomination intents and their associated votes as input, and it
 outputs a set of validators. The bags are iterated from the most staked to the least staked. If the
 accounts are not appropriately sorted, this could leave the last touched bag to only be partially
 iterated. Thus, in some edge cases, the order of the members within a bag is important. Continuing
