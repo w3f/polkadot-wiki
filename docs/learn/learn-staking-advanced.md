@@ -126,7 +126,7 @@ DOT. The nomination intents are the nominators' accounts with bonded tokens (in 
 
 ![bags list example 0](../assets/bags-list-example-0.png)
 
-The bags list is semi-sorted, meaning that automatic sorting is only partially done. In fact, the
+The bags list is semi-sorted, meaning that sorting is only partially done. When the
 nomination intents are automatically put into each bag based on the number of bonded tokens, but
 within each bag the nodes are arranged based on the time they are inserted and not by their stake.
 To sort nodes by stake within a bag there is a manual step (more on this later on). Note in the
