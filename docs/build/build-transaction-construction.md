@@ -46,10 +46,10 @@ function from the Balances pallet will take:
 **Serialized transaction format**
 
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded
-SCALE-encoded bytes. Considering that {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-runtimes are upgradable and therefore any interfaces are subject to change, the metadata allows
-developers to structure any extrinsics or storage entries accordingly. This being said, the
-serialization format can be described as follows:
+SCALE-encoded bytes. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtimes are
+upgradable and therefore any interfaces are subject to change, the metadata allows developers to
+structure any extrinsics or storage entries accordingly. This being said, the serialization format
+can be described as follows:
 
 - Compact encoded number of SCALE encoded bytes following this.
 - 1 bit: it is a 0 if no signature is present, or a 1 if it is.

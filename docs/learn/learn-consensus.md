@@ -109,7 +109,7 @@ the validator nodes and determines the authors of new blocks. BABE is comparable
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
 according to stake and using the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-[randomness cycle](learn-randomness.md). The chains Runtime is required to provide the BABE
+[randomness cycle](learn-randomness.md). The chains runtime is required to provide the BABE
 authority list and randomness to the host via a consensus message in the header of the first block
 of each epoch.
 

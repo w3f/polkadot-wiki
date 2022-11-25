@@ -31,9 +31,9 @@ Fees on the Polkadot Relay Chain are calculated based on three parameters:
 - A Length fee
 - A Tip (optional).
 
-As a permissionless system, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network
-needs to implement a mechanism to measure and to limit the usage in order to establish an economic
-incentive structure, to prevent the network overload, and to mitigate DoS vulnerabilities.
+As a permissionless system, the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+network needs to implement a mechanism to measure and to limit the usage in order to establish an
+economic incentive structure, to prevent the network overload, and to mitigate DoS vulnerabilities.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} enforces a limited time-window for
 block producers to create a block, including limitations on block size, which can make the selection
 and execution of certain extrinsics too expensive and decelerate the network. Extrinsics which
@@ -95,14 +95,14 @@ Checkout some examples of how various weights are gauged in the Polkadot runtime
 different types of operations:
 
 - [request_judgement](https://spec.polkadot.network/#sect-practical-examples) - from the identity
-  pallet allows users to request judgement from a specific registrar
+  pallet, allows users to request judgement from a specific registrar
 - [payout_stakers](https://spec.polkadot.network/#sect-practical-example-payout-stakers) - from the
-  staking Pallet can be called by a single account in order to payout the reward for all nominators
+  staking Pallet, is invoked by a single account in order to payout the reward for all nominators
   who back a particular validator
 - [transfer](https://spec.polkadot.network/#_practical_example_3_transfer) - from the balances
-  module is designed to move the specified balance by the sender to the receiver
+  module, is designed to move the specified balance by the sender to the receiver
 - [withdraw_unbounded](https://spec.polkadot.network/#_practical_example_4_withdraw_unbounded) -
-  from the staking module is designed to move any unlocked funds from the staking management system
+  from the staking module, is designed to move any unlocked funds from the staking management system
   to be ready for transfer
 
 ## Block Limits and Transaction Priority
@@ -157,7 +157,7 @@ Base fee: 100 uDOTs
 
 Length fee: Length fee: 0.1 uDOTs
 
-Weight to fee conversion:
+So, the weight to fee conversion is calculated as follows:
 
 ```
 weight_fee = weight * (100 uDots / (10 * 10’000))
@@ -171,8 +171,8 @@ exceed the max size of an unsigned 128 bit integer.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can add a additional fee to
 transactions if the network becomes too busy and starts to decelerate the system. This fee can
 create an incentive to avoid the production of low priority or insignificant transactions. In
-contrast, those additional fees will decrease if the network calms down and it can execute
-transactions without much difficulties.
+contrast, those additional fees will decrease if the network calms down and can execute transactions
+without much difficulties.
 
 This additional fee is known as the `Fee Multiplier` and its value is defined by the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime. The multiplier works by
@@ -198,12 +198,10 @@ One useful utility for estimating transaction fees programmatically is the via t
 logs some relevant fee information:
 
 ```js
-// estimate the fees as RuntimeDispatchInfo, using the signer (either
-// address or locked/unlocked keypair) (When overrides are applied, e.g
-// nonce, the format would be `paymentInfo(sender, { nonce })`)
+// Estimate the fees as RuntimeDispatchInfo using the signer
 const info = await api.tx.balances.transfer(recipient, 123).paymentInfo(sender);
 
-// log relevant info, partialFee is Balance, estimated for current
+// Log relevant info, partialFee is Balance, estimated for current
 console.log(`
   class=${info.class.toString()},
   weight=${info.weight.toString()},
