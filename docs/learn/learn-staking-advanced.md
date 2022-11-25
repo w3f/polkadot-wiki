@@ -134,6 +134,8 @@ figure below how in the 2nd bag the node with 19 DOT (yellow circle) is the last
 the nomination intent was submitted after the other nodes. Same scenario for the node with 8 DOT
 (green circle) in the 3rd bag.
 
+![bags list example 1](../assets/bags-list-example-1.png)
+
 The mentioned two nodes have the right to move up in their respective bags un put them in front of
 the nodes with less stake than them. This action of appropriately sorting the bag must be done
 manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet instance.
