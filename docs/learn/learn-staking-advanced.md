@@ -111,46 +111,50 @@ On Polkadot and Kusama, the instance of the pallet
 
 :::
 
-In {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} NPoS nomination intents are placed in
-a semi-sorted list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
+In {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} NPoS nomination intents are
+placed in a semi-sorted list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
 {{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The Bags-List
 substrate pallet is designed to be self-maintaining, with minimal effort from the blockchain, making
-it extremely scalable. This sorting functionality using bags is extremely important for the
-[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system.
-
-The bags list has two primary components, bags and nodes (or nominators' accounts), with bags
-containing the nodes with bonded balance within a specific range. In the figure below the 1st empty
-bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10
-DOT. The nomination intents are the nominators' accounts with bonded tokens (in the example shown below, there are eight nomination intents) that will be put inside each of those three bags depending on their stake.
+it extremely scalable. The bags list has two primary components, bags and nodes (or nominators'
+accounts), with bags containing the nodes with bonded balance within a specific range. In the figure
+below the 1st empty bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT,
+the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are the nominators'
+accounts with bonded tokens (in the example shown below, there are eight nomination intents) that
+will be put inside each of those three bags depending on their stake.
 
 ![bags list example 0](../assets/bags-list-example-0.png)
 
-The bags list is semi-sorted, meaning that sorting is only partially done. When the
-nomination intents are submitted to the network, they are automatically put into each bag based on the number of bonded tokens, but
-within each bag, those nodes are arranged based on the time they are inserted and not based on their stake.
-In the
-figure below, when a nomination intent of 19 DOT is submitted, it gets placed at the last spot in the 2nd bag (shown in the yellow circle). The same scenario applies for the node with 8 DOT (green circle) in the 3rd bag. Placing the node above all nodes with a lesser stake requires an additional step (more on this later).
+The bags list is semi-sorted, meaning that sorting is only partially done. When the nomination
+intents are submitted to the network, they are automatically put into each bag based on the number
+of bonded tokens, but within each bag, those nodes are arranged based on the time they are inserted
+and not based on their stake. In the figure below, when a nomination intent of 19 DOT is submitted,
+it gets placed at the last spot in the 2nd bag (shown in the yellow circle). The same scenario
+applies for the node with 8 DOT (green circle) in the 3rd bag. Placing the node above all nodes with
+a lesser stake requires an additional step (more on this later).
 
 ![bags list example 1](../assets/bags-list-example-1.png)
 
-The mentioned two nodes (19 DOT and 8 DOT) have the option to move up in their respective bags, which can put them in front of the nodes with less stake than them. This action must be done
+The mentioned two nodes (19 DOT and 8 DOT) have the option to move up in their respective bags,
+which can put them in front of the nodes with less stake than them. This action must be done
 manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet instance.
-Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put
-automatically in the 1st bag because the total number of bonded tokens will now be within the range of
-the 1st bag (see figure below). That node with now 21 DOT will be put at the tail end of the 1st bag
-with the possibility to manually put itself in front of "older" nodes with less than 21 DOT (if
-there are any).
+Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put automatically in
+the 1st bag because the total number of bonded tokens will now be within the range of the 1st bag
+(see figure below). That node with now 21 DOT will be put at the tail end of the 1st bag with the
+possibility to manually put itself in front of "older" nodes with less than 21 DOT (if there are
+any).
 
 ![bags list example 1](../assets/bags-list-example-1.png)
 
 If one decides to send staking rewards to the stash account and automatically bond them (i.e.
-compounding the staking rewards), the position within a bag does not change automatically. The same scenario applies to a slashing event, i.e., when a nominator gets slashed, their position within a bag does not change. This might result in a scenario where the node is in the wrong bag and needs to be placed in the right
-bag. To address this issue, any account on-chain can submit the permissionless extrinsic `rebag` within the
-`voterList` pallet instance to update the positions of the nodes that do not belong to their
-bag and place them in the correct one. To reiterate, actions like bonding/unbonding tokens automatically rebag
-the nominator node, but events like staking rewards/slashing do not. See the
-[bags-list](learn-nominator.md#bags-list) section for more information.
+compounding the staking rewards), the position within a bag does not change automatically. The same
+scenario applies to a slashing event, i.e., when a nominator gets slashed, their position within a
+bag does not change. This might result in a scenario where the node is in the wrong bag and needs to
+be placed in the right bag. To address this issue, any account on-chain can submit the
+permissionless extrinsic `rebag` within the `voterList` pallet instance to update the positions of
+the nodes that do not belong to their bag and place them in the correct one. To reiterate, actions
+like bonding/unbonding tokens automatically rebag the nominator node, but events like staking
+rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) section for more
+information.
 
 The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime
 storage. In the current staking system configuration, the bags list keeps
@@ -170,8 +174,11 @@ with the example used in the previous figures, there are 8 nomination intents of
 be kept. If the bags list stays semi-sorted (i.e. no accounts call the `putInFrontOf` and `rebag`
 extrinsics), the nomination of the node with 8 DOT in the 3rd bag will not be considered while that
 of the preceding node with 5 DOT will be. Nomination of the node with 8 DOT will be kept only if it
-puts itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in
-the 3rd bag will be considered regardless of changing its position inside the bag.
+puts itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in the
+2nd bag will be considered regardless of changing its position inside the bag. The sorting
+functionality of nomination intents using bags is extremely important for the
+[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
+staking/election system.
 
 ![bags list example 2](../assets/bags-list-example-2.png)
 
