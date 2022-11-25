@@ -128,7 +128,7 @@ DOT. The nomination intents are the nominators' accounts with bonded tokens (in 
 
 The bags list is semi-sorted, meaning that sorting is only partially done. When the
 nomination intents are submitted to the network, they are automatically put into each bag based on the number of bonded tokens, but
-within each bag the nodes are arranged based on the time they are inserted and not by their stake.
+within each bag, those nodes are arranged based on the time they are inserted and not based on their stake.
 To sort nodes by stake within a bag there is a manual step (more on this later on). Note in the
 figure below how in the 2nd bag the node with 19 DOT (yellow circle) is the last one, meaning that
 the nomination intent was submitted after the other nodes. Same scenario for the node with 8 DOT
