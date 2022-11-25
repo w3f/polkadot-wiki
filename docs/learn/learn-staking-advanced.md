@@ -111,8 +111,8 @@ On Polkadot and Kusama, the instance of the pallet
 
 :::
 
-In {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} NPoS nomination intents are
-sorted in a list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
+In {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} NPoS nomination intents are placed in
+a semi-sorted list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
 {{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The Bags-List
 substrate pallet is designed to be self-maintaining, with minimal effort from the blockchain, making
 it extremely scalable. This sorting functionality using bags is extremely important for the
