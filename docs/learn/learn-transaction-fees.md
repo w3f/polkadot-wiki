@@ -44,8 +44,8 @@ require too many resources are discarded by the network.
 of the total block size gets used for regular extrinsics. The remaining space is reserved for
 critical, operational extrinsics required for the functionality by network itself.
 
-This is handled by a weight system, where the cost of the transactions (referred to as
-[extrinsics](../general/glossary.md#extrinsics)) are determined before execution. Weights are a
+This is handled by a [weight](../general/glossary.md#weights) system, where the cost of the transactions (referred to as
+[extrinsics](../general/glossary.md#extrinsics) are determined before execution. Weights are a
 fixed set of numbers used in Substrate-based chains to manage the time it takes to validate a block.
 Each transaction has a base weight that accounts for the overhead of inclusion (e.g. signature
 verification) and a dispatch weight that accounts for the time to execute the transaction. All
