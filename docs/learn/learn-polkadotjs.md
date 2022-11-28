@@ -74,6 +74,30 @@ Among other things, Polkadot-JS Apps allows a user to:
 A developer can utilize Polkadot-JS Apps to test your code's functionality. Interacting with the
 Polkadot-JS comes down to either querying on-chain data or issuing an extrinsic.
 
+One important detail to understand while interacting with the underlying
+[@polkadot/api](https://www.npmjs.com/package/@polkadot/api) is that most interfaces are generated
+automatically when connecting to an available node. This is quite a departure from many other API
+designs where the interfaces are commonly static.
+
+When the API connects to a node, it initially retrieves the
+[metadata](https://polkadot.js.org/apps/#/runtime) which is used to "decorate" the API based on its
+contents. The metadata provides data in the form of `api.<type>.<module>.<section>` and fits into
+one of the following categories:
+
+- `consts` - runtime constants (these are not functions so the values are returned directly as they
+  are defined by the endpoint)
+- `query` - chain state values
+- `tx` - all extrinsics
+
+The metadata also provides information on [events](https://polkadot.js.org/docs/substrate/events/),
+which can be queried using the `api.query.system.events()` interface.
+
+None of the information contained within the `api.{consts, query, tx}.<module>.<method>` endpoints
+are hard-coded in the API. These values are defined by the decoration applied from the initial
+metadata response and are therefore completely dynamic. This suggests that when you connect to
+different parachains, the metadata and API decoration will change and provide varying interfaces
+based on the chain.
+
 #### Querying on-chain data
 
 To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a Polkadot

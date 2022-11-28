@@ -162,6 +162,10 @@ about the block. Additional details on the process are outlined
 
 ### Extrinsics
 
+An extrinsic is a [SCALE encoded](https://docs.substrate.io/reference/scale-codec/) array consisting
+of a `version number`, `signature`, and varying `data` types indicating the resulting runtime
+function to be called, including the parameters required for that function to be executed.
+
 Extrinsics constitute information from the outside world and take on three forms:
 
 - Inherents

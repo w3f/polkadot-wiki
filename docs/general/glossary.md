@@ -37,7 +37,7 @@ such as Polkadot's NPoS algorithm.
 
 ## Availability Cores
 
-Slots used to process parachains. The Runtime assigns each parachain to an availability core and
+Slots used to process parachains. The runtime assigns each parachain to an availability core and
 validators can fetch information about the cores, such as parachain block candidates, by calling the
 appropriate Runtime API.
 
@@ -200,8 +200,12 @@ Compare the Community queue.
 
 ## Extrinsic
 
-State changes that come from the outside world, i.e. they are not part of the system itself.
-Extrinsics can take two forms, "[inherents](#inherent)" and "[transactions](#transaction)".
+A [SCALE encoded](https://docs.substrate.io/reference/scale-codec/) array consisting of a version
+number, signature, and varying data types indicating the resulting runtime function to be called,
+including the parameters required for that function to be executed. These state changes are invoked
+from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms,
+"[inherents](#inherent)" and "[transactions](#transaction)". For more technical details see the
+[polkadot spec](https://spec.polkadot.network/#_extrinsics)
 
 ## Finality
 
@@ -703,6 +707,17 @@ methods to safeguard decentralization, to the benefit and for the stability of t
 
 An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to
 WebAssembly. Also known as Wasm.
+
+## Weights
+
+A permission-less system needs to implement a mechanism to measure and limit usage in order to
+establish an economic incentive structure, to prevent the network overload, and to mitigate DoS
+vulnerabilities. This mechanism must enforce a limited time-window for block producers to create a
+block and include limitations on block size, to prevent execution of certain extrinsics which are
+deemed too expensive and could decelerate the network. This is handled by the weight system, where
+the cost of the transactions (referred to as [extrinsics](#extrinsic)) are determined before
+execution. Checkout this section of the Substrate docs covering
+[transaction weights and fees](https://docs.substrate.io/build/tx-weights-fees/).
 
 ## Witness
 

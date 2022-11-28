@@ -176,10 +176,10 @@ The Parachain Implementer's Guide is a significant work in progress and maintain
 located in the official
 [Polkadot repository](https://github.com/paritytech/polkadot/tree/master/roadmap/implementers-guide).
 
-### Parachain Development Kit (PDK)
+### Parachain Development Kit
 
-A **PDK** is a set of tools that allows developers to easily create a parachain. In practice, the
-PDK will consist of the following key components:
+The Parachain Development Kit or **PDK** is a set of tools that allows developers to easily create a
+parachain. In practice, the PDK will consist of the following key components:
 
 - _State transition function_ : a way for your application to move from one state to another state.
 - _Collator node_ : a type of peer-to-peer node in the {{ polkadot: Polkadot :polkadot }}{{ kusama:
