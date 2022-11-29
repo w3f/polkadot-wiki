@@ -7,6 +7,12 @@ keywords: [parachains, application-specific, sharding, protocol, validator, coll
 slug: ../learn-parachains-protocol
 ---
 
+:::info
+
+This page is a summary of the [Protocol Overview chapter in **The Polkadot Parachain Host Implementer's Guide**](https://paritytech.github.io/polkadot/book/protocol-overview.html)
+
+:::
+
 The aim of the protocol is to carry a parachain's block from authoring to inclusion through a process that can be carried out repeatedly and in parallel for each parachain connected to the relay chain.
 
 ## Main Actors
