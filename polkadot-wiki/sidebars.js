@@ -127,6 +127,7 @@ module.exports = {
               label: "Parachains",
               items: [
                 "learn/learn-parachains",
+                "learn/learn-parachains-protocol",
                 "learn/learn-common-goods",
                 "learn/learn-auction",
                 "learn/learn-crowdloans",
