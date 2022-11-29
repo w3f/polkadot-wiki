@@ -16,6 +16,8 @@ on the parachain development guide.
 
 :::
 
+## Definition of a Parachain
+
 A parachain is an application-specific data structure that is globally coherent and validatable by
 the validators of the Relay Chain. They take their name from the concept of parallelized chains that
 run parallel to the Relay Chain. Most commonly, a parachain will take the form of a blockchain, but
@@ -50,8 +52,8 @@ checked.
 
 Parachains are a solution to two fundamental problems in blockchains:
 
- - Scalability: 
- - Flexibility: 
+ - **Scalability**: Having one blockchain for many purposes makes it difficult to scale as future implementations and upgrades will likely advantage some purposes and disadvantage others. On the other hand, having different blockchains will allow them to implement features themselves without affecting other chains.
+ - **Flexibility**: It is reasonable to state a blockchain either will be really good in solving one problem or not so good trying to solve many problems. A blockchain able to specialize in solving a specific problem has more leverage towards itself and its users. Parachains are purpose-built blockchains highly specialized and able to take advantage from each other by cooperation.
 
 ## Parachain Economies
 
