@@ -80,11 +80,11 @@ the Relay Chain and allows the parachains to tap into stronger guarantees at gen
 chains must expend much more effort to grow the value of their coin so that it is sufficiently
 secure against well-funded attackers.
 
-### Example
+### PoW vs Polkadot
 
 Let's compare the standard sovereign security model that exists on current proof-of-work (PoW)
 chains to that of the shared security of Polkadot. Chains that are secured by their own security
-model like Bitcoin, Zcash, Ethereum, and their derivatives all must bootstrap their own independent
+model like Bitcoin, Zcash, and their derivatives all must bootstrap their own independent
 network of miners and maintain a competitive portion of honest hashing power. Since mining is
 becoming a larger industry that increasingly centralizes on key players, it is becoming more real
 that a single actor may control enough hash power to attack a chain.
@@ -98,7 +98,7 @@ Ethereum Classic (see above),
 [Bitcoin Gold](https://bitcoingold.org/responding-to-attacks/), and other cryptocurrencies.
 
 On Polkadot, this disparity between chain security will not be present. When a parachain connects to
-Polkadot, the Relay Chain validator set become the securers of that parachain's state transitions.
+Polkadot, the relay chain validators become the securers of that parachain's state transitions.
 The parachain will only have the overhead of needing to run a few collator nodes to keep the
 validators informed with the latest state transitions and proofs/witness. Validators will then check
 these for the parachains to which they are assigned. In this way, new parachains instantly benefit
@@ -198,9 +198,9 @@ See the
 [Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 and the [common good parachains](learn-common-good-chains.md) page for more information.
 
-## Examples
+## Parachains' Use Cases
 
-Some examples of parachains:
+Note that we still have to see the true potential of parachains and what it is listed below are just a few examples.
 
 - **Encrypted Consortium Chains**: These are possibly private chains that do not leak any
   information to the public, but still can be interacted with trustlessly due to the nature of the
