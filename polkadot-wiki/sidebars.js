@@ -131,6 +131,7 @@ module.exports = {
                 "learn/learn-auction",
                 "learn/learn-crowdloans",
                 "learn/learn-teleport",
+                "learn/learn-parachains-faq",
               ],
             },
             "learn/learn-parathreads",
