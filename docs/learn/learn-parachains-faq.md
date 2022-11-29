@@ -80,6 +80,28 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 
 Parachain Development Kits are a set of tools that enable developers to create their own
 applications as parachains. For more information, see the
-[PDK content](../build/build-parachains.md#parachain-development-kit-pdk).
+[PDK content](../build/build-parachains.md#parachain-development-kit-pdk). Please see the [Parachain Development page](../build/build-parachains.md) for more information.
 
-Please see the [Parachain Development page](../build/build-parachains.md) for more information.
+## Is security correlated to the number of validators? What about the number of parachains?
+
+Security is independent of the number of parachains that are connected to the Polkadot Relay Chain.
+The correlation of security and the number of validators exists as the higher number of validators
+will give the network stronger decentralization properties and make it harder to try to take down.
+However, the biggest indicator of the security of the network is the economic signal of the number
+of DOT that are bonded and staked. The greater the number of DOT staked by honest validators and
+nominators, the higher the minimum amount of DOT an attacker would need to acquire a validator slot.
+
+## Will parachains ever need their own security? In what scenarios do parachains need their own security?
+
+Most parachains will not need to worry about their own security, since all state transitions will be
+secured by the Polkadot Relay Chain validator set. However, in some cases (which are considered more
+experimental), parachains may require their own security. In general, these cases will revolve
+around lack of data available to Relay Chain validators.
+
+One example is if the state transition function is some succinct or zero-knowledge proof, the
+parachain would be responsible for keeping its data available as the Relay Chain won't have it.
+Additionally, for chains with their own consensus, like the one that enables fast payments on
+[Blink Network](https://www.youtube.com/watch?v=sf5GMDlG7Uk), there would probably need to be a
+Byzantine agreement between stakers before a parachain block is valid. The agreement would be
+necessary because the data associated with the fast consensus would be unknown to Relay Chain
+validators.

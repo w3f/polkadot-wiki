@@ -72,7 +72,6 @@ module.exports = {
                 "learn/learn-governance",
                 "learn/learn-gov2",
                 "learn/learn-identity",
-                "learn/learn-security",
                 "learn/learn-nominator",
                 "learn/learn-polkadot-host",
                 "learn/learn-polkadotjs",
