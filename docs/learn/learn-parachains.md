@@ -52,10 +52,16 @@ checked.
 
 Parachains are a solution to two fundamental problems in blockchains:
 
- - **Scalability**: Having one blockchain for many purposes makes it difficult to scale as future implementations and upgrades will likely advantage some purposes and disadvantage others. On the other hand, having different blockchains will allow them to implement features themselves without affecting other chains.
- - **Flexibility**: It is reasonable to state a blockchain either will be really good in solving one problem or not so good trying to solve many problems. A blockchain able to specialize in solving a specific problem has more leverage towards itself and its users. Parachains are purpose-built blockchains highly specialized and able to take advantage from each other by cooperation.
+- **Scalability**: Having one blockchain for many purposes makes it difficult to scale as future
+  implementations and upgrades will likely advantage some purposes and disadvantage others. On the
+  other hand, having different blockchains will allow them to implement features themselves without
+  affecting other chains.
+- **Flexibility**: It is reasonable to state a blockchain either will be really good in solving one
+  problem or not so good trying to solve many problems. A blockchain able to specialize in solving a
+  specific problem has more leverage towards itself and its users. Parachains are purpose-built
+  blockchains highly specialized and able to take advantage from each other by cooperation.
 
-### Shared security
+### Shared Security
 
 Shared security, sometimes referred in documentation as _pooled security_, is one of the unique
 value propositions for chains considering to become a [parachain](learn-parachains.md) and join the
@@ -84,10 +90,10 @@ secure against well-funded attackers.
 
 Let's compare the standard sovereign security model that exists on current proof-of-work (PoW)
 chains to that of the shared security of Polkadot. Chains that are secured by their own security
-model like Bitcoin, Zcash, and their derivatives all must bootstrap their own independent
-network of miners and maintain a competitive portion of honest hashing power. Since mining is
-becoming a larger industry that increasingly centralizes on key players, it is becoming more real
-that a single actor may control enough hash power to attack a chain.
+model like Bitcoin, Zcash, and their derivatives all must bootstrap their own independent network of
+miners and maintain a competitive portion of honest hashing power. Since mining is becoming a larger
+industry that increasingly centralizes on key players, it is becoming more real that a single actor
+may control enough hash power to attack a chain.
 
 This means that smaller chains that cannot maintain a secure amount of hash power on their networks
 could potentially be attacked by a large mining cartel at the simple whim of redirecting its hash
@@ -98,11 +104,11 @@ Ethereum Classic (see above),
 [Bitcoin Gold](https://bitcoingold.org/responding-to-attacks/), and other cryptocurrencies.
 
 On Polkadot, this disparity between chain security will not be present. When a parachain connects to
-Polkadot, the relay chain validators become the securers of that parachain's state transitions.
-The parachain will only have the overhead of needing to run a few collator nodes to keep the
-validators informed with the latest state transitions and proofs/witness. Validators will then check
-these for the parachains to which they are assigned. In this way, new parachains instantly benefit
-from the overall security of Polkadot even if they have just been launched.
+Polkadot, the relay chain validators become the securers of that parachain's state transitions. The
+parachain will only have the overhead of needing to run a few collator nodes to keep the validators
+informed with the latest state transitions and proofs/witness. Validators will then check these for
+the parachains to which they are assigned. In this way, new parachains instantly benefit from the
+overall security of Polkadot even if they have just been launched.
 
 ## Parachain Economies
 
@@ -123,8 +129,9 @@ implemented so that transactions must pay a minimum fee to collators to be valid
 will enforce this validity. Similarly, a parachain could not include that in their implementation,
 and Polkadot would still enforce its validity.
 
-Parachains are not required to have their own token. If they do, it is up to the parachain to make the
-economic case for their token, not {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Parachains are not required to have their own token. If they do, it is up to the parachain to make
+the economic case for their token, not
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Parachain Hubs
 
@@ -186,10 +193,10 @@ automatically become parathreads.
 
 ## Common Good Parachains
 
-"Common Good" parachains are parachain slots reserved for functionality that benefits the
-ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
-network can realize the benefit of valuable parachains that would otherwise be underfunded due to
-the free-rider problem. They are not allocated via the parachain auction process but by the on-chain
+"Common Good" parachains are parachain slots reserved for functionality that benefits the ecosystem
+as a whole. By allocating a subset of parachain slots to common good chains, the entire network can
+realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider
+problem. They are not allocated via the parachain auction process but by the on-chain
 {{ polkadot: [governance](learn-governance.md) :polkadot }}
 {{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good parachain's
 lease would not expire; it would only be removed via governance.
@@ -200,7 +207,8 @@ and the [common good parachains](learn-common-good-chains.md) page for more info
 
 ## Parachains' Use Cases
 
-Note that we still have to see the true potential of parachains and what it is listed below are just a few examples.
+Note that we still have to see the true potential of parachains and what it is listed below are just
+a few examples.
 
 - **Encrypted Consortium Chains**: These are possibly private chains that do not leak any
   information to the public, but still can be interacted with trustlessly due to the nature of the
