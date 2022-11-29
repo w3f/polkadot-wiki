@@ -102,6 +102,7 @@ module.exports = {
             'learn/learn-account-transfer',
             "learn/learn-staking-advanced",
             'learn/learn-availability',
+            "learn/learn-cryptography",
             'learn/learn-extrinsics',
             'learn/learn-xcm',
             'learn/learn-phragmen',
@@ -112,11 +113,6 @@ module.exports = {
             'learn/learn-staking-miner',
             'learn/learn-wasm',
           ],
-        },
-        {
-          type: "category",
-          label: "Cryptography",
-          items: ["learn/learn-cryptography", "learn/learn-keys"],
         },
         {
           type: "category",
