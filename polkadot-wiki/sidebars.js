@@ -130,7 +130,6 @@ module.exports = {
                 "learn/learn-common-goods",
                 "learn/learn-auction",
                 "learn/learn-crowdloans",
-                "learn/learn-teleport",
                 "learn/learn-parachains-faq",
               ],
             },
