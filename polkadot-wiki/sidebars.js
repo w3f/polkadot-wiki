@@ -101,7 +101,6 @@ module.exports = {
           label: "Advanced",
           items: [
             'learn/learn-account-advanced',
-            'learn/learn-account-transfer',
             "learn/learn-staking-advanced",
             'learn/learn-availability',
             'learn/learn-xcm',
