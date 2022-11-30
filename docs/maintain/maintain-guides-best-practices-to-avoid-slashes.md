@@ -1,3 +1,12 @@
+---
+id: maintain-guides-avoid-slashing
+title: Participate in Democracy
+sidebar_label: Validator Best Practices
+description: Best practices to avoid slashing.
+keywords: [validator, rewards, slashing]
+slug: ../maintain-guides-avoid-slashing
+---
+
 ## Best practices to prevent slashing
 
 Slashing is implemented as a deterrent for validators to misbehave. Slashes are applied to a validators total stake (own + nominated) and can range from as little as 0.01% or rise to 100%.  In all instances slashes are accompanied by a loss of nominators.  
