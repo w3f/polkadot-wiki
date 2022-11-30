@@ -83,6 +83,10 @@ module.exports = {
           {
             to: '/docs/learn-xcm',
             from: ['/docs/learn-crosschain', '/docs/learn-cross-consensus']
+          },
+          {
+            to: '/docs/learn-parachains',
+            from: ['/docs/learn-security']
           }
         ],
         createRedirects: function (existingPath) {
