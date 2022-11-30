@@ -105,7 +105,6 @@ module.exports = {
             'learn/learn-availability',
             'learn/learn-xcm',
             "learn/learn-cryptography",
-            'learn/learn-extrinsics',
             'learn/learn-phragmen',
             'learn/learn-randomness',
             'learn/learn-simple-payouts',
