@@ -176,7 +176,8 @@ functionalities on Polkadot.
   [Accounts](../learn/learn-accounts.md) and the
   [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement. With 1 DOT
   you can also join a [nomination pool](../learn/learn-nomination-pools.md) and contribute to
-  network security and for doing than you will get staking rewards.
+  network security, and for doing so you can get staking rewards.
+
 - **5 DOT**: the minimum contribution required to participate in
   [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
