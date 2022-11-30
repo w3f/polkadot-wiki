@@ -186,9 +186,10 @@ functionalities on Polkadot.
 
 - **10 DOT**: the minimum stake required to submit your intent to directly nominate validators. But, to
   increase the chance of earning staking rewards, your stake should not be less than the minimum
-  stake among the active nominators which is a dynamic threshold (which is around 210 DOT in era 911). Learn more about
-  [becoming a nominator](../learn/learn-nominator.md).
-
+  stake among the active nominators which is a dynamic threshold (which is around 210 DOT in era 911).
+  If you have lesser DOT than the minimum active nomination, please consider contributing to 
+  [nomination pools](../learn/learn-nomination-pools.md). Learn more about [becoming a nominator](../learn/learn-nominator.md).
+  
 - **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md), vote for
   [council](../maintain/maintain-guides-how-to-vote-councillor.md), or create a
   [proxy account](../learn/learn-proxies.md).
