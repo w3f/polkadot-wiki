@@ -9,20 +9,20 @@ slug: ../maintain-guides-avoid-slashing
 
 ## Best practices to prevent slashing
 
-Slashing is implemented as a deterrent for validators to misbehave. Slashes are applied to a validators total stake (own + nominated) and can range from as little as 0.01% or rise to 100%.  In all instances slashes are accompanied by a loss of nominators.  
+Slashing is implemented as a deterrent to ensure validators do not misbehave. Slashes are applied to a validators total stake (own + nominated) and can range from as little as 0.01% or rise to 100%.  In all instances slashes are accompanied by a loss of nominators.  
 
 Broadly speaking, a slash may occur under four circumstances:
 
-1.	Liveliness – Slashing starts when 10% of the active validators set are offline and increases in a linear manner until 44% of the validator set is offline, at this point the slash is held at 7% 
+1.	Unresponsiveness – Slashing starts when 10% of the active validators set are offline and increases in a linear manner until 44% of the validator set is offline, at this point the slash is held at 7% 
 2.	Equivocation – A slash of 0.01% is applied with as little as a single evocation.   The slashed amount increases to 100% incrementally as more validators also equivocate.
 3.	Malicious action – This may result from a validator trying to falsely represent the contents of a block.  Slashing penalties of 100% may apply.
 4.	Application related (bug or otherwise) – The amount is unknown and may manifest itself as scenarios 1, 2 and 3 above.
 
 This article seeks to provide some best-practices to prevent slashing based on lesson’s learned from previous slashes.  It provides comments and guidance for all circumstances except for malicious action by the node-operator.
 
-## Liveliness
-An offline event occurs when a validator does not produce a BLOCK or IMONLINE message within an EPOCH.  Isolated offline events do not result in a slash however the validator would not earn any era points while offline.
-A slash under liveliness occurs when 10% or more of the active validators are offline at the same time.  
+## Unresponsiveness
+An offline event occurs when a validator does not produce a BLOCK or IMONLINE message within an EPOCH. Isolated offline events do not result in a slash however the validator would not earn any era points while offline.
+A slash for unresponsiveness occurs when 10% or more of the active validators are offline at the same time. Check the  Wiki section on [slashing due to unresponsiveness](../learn/learn-staking-advanced.md#unresponsiveness) to learn more about its specifics. 
 
 The following are recommendations to validators to avoid slashing under liveliness for servers that have historically functioned:
 1.	Utilize systemd to host your validator instance.  Systemd should be configured to auto reboot the service with a minimum of 60 second delay.  This configuration should aid with re-establishing the instance under isolated failures with the binary.  
@@ -38,7 +38,9 @@ There is precedent that a slash maybe forgiven if a single validator faces an of
 
 ## Equivocation 
 Equivocation events can occur when a validator produces two or more of the same block, under this condition it is referred to as a BABE equivocation.  Equivocation may also occur when a validator signs two or more of the same consensus vote, under this condition it is referred to as a GRANDPA Equivocation.
-Equivocations usually occur when there is the existence of duplicate signing keys that reside on the validator host.  If keys are never duplicated the probability of an equivocation slash decreases to near 0.
+Equivocations usually occur when there is the existence of duplicate signing keys that reside on the validator host.  If keys are never duplicated the probability of an equivocation slash decreases to near 0. Check the  Wiki section on [Equivocation](../learn/learn-staking-advanced.md#equivocation) to learn more about its specifics. 
+
+
 The following are scenarios that build towards slashes under equivocation:
 1.	Cloning a server i.e. copying all contents when migrating to new hardware.  This action should be avoided.  If an image is desired, it should be taken before keys are generated.
 2.	High Availability (HA) Systems – Equivocation can occur if there are any concurrent operations either when a failed server restarts or if there’s a false positive event resulting in both servers being online at the same time.  HA systems are to be treated with extreme caution and are not advised.
