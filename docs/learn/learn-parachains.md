@@ -23,7 +23,7 @@ the validators of the Relay Chain. They take their name from the concept of para
 run parallel to the Relay Chain. Most commonly, a parachain will take the form of a blockchain, but
 there is no specific need for them to be actual blockchains.
 
-![One parachain](../assets/network/one_parachain.png)
+![One parachain](../assets/one-parachain.png)
 
 Due to their parallel nature, they are able to parallelize transaction processing and achieve
 scalability of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
