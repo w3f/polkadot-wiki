@@ -174,17 +174,19 @@ functionalities on Polkadot.
 - **1 DOT**: the minimum balance required to have an active account on Polkadot Network. If your
   account balance drops below 1 DOT, your account will be reaped. Learn more about
   [Accounts](../learn/learn-accounts.md) and the
-  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement. With 1 DOT
-  you can also join a [nomination pool](../learn/learn-nomination-pools.md) and contribute to
-  network security, and for doing so you can get staking rewards.
+  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+
+- **1 DOT**: the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md) and
+  earn staking rewards for contributing to the security of the network. Learn more about
+  [nomination pools](../learn/learn-nomination-pools.md).
 
 - **5 DOT**: the minimum contribution required to participate in
   [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
 
-- **10 DOT**: the minimum stake required to submit your intent to nominate validators. But, to
+- **10 DOT**: the minimum stake required to submit your intent to directly nominate validators. But, to
   increase the chance of earning staking rewards, your stake should not be less than the minimum
-  stake among the active nominators which is a dynamic threshold. Learn more about
+  stake among the active nominators which is a dynamic threshold (which is around 210 DOT in era 911). Learn more about
   [becoming a nominator](../learn/learn-nominator.md).
 
 - **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md), vote for
