@@ -85,7 +85,7 @@ module.exports = {
             from: ['/docs/learn-crosschain', '/docs/learn-cross-consensus']
           },
           {
-            to: '/docs/learn-cryptography',
+            to: '/docs/learn-cryptography#keys',
             from: ['/docs/learn-keys']
           }
         ],
