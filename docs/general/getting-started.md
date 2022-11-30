@@ -174,7 +174,7 @@ functionalities on Polkadot.
 - **1 DOT**: the minimum balance required to have an active account on Polkadot Network. If your
   account balance drops below 1 DOT, your account will be reaped. Learn more about
   [Accounts](../learn/learn-accounts.md) and the
-  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement. With 1 DOT you can also join a [nomination pool](../learn/learn-nomination-pools.md) and contribute to network security and for doing than you will get staking rewards.
 
 - **5 DOT**: the minimum contribution required to participate in
   [crowdloans](../learn/learn-crowdloans.md) for
