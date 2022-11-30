@@ -16,7 +16,7 @@ static over the lifetime of Polkadot.
 The Polkadot host interacts with the Polkadot runtime in limited, and well-specified ways. For this
 reason, implementation teams can build an alternative implementation of the Polkadot host while
 treating the Polkadot runtime as a black box. For more details of the interactions between the host
-and the runtime, please see the [specification][https://spec.polkadot.network/].
+and the runtime, please see the [specification](https://spec.polkadot.network/).
 
 ## Components of the Polkadot host
 

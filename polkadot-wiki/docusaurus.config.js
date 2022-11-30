@@ -87,6 +87,10 @@ module.exports = {
           {
             to: '/docs/learn-account-advanced',
             from: ['/docs/learn-account-transfer']
+          },
+          {
+            to: '/docs/learn-cryptography',
+            from: ['/docs/learn-keys']
           }
         ],
         createRedirects: function (existingPath) {
