@@ -4,7 +4,7 @@ title: Advanced Staking Concepts
 sidebar_label: Advanced Staking Concepts
 description: Advanced staking information
 
-keywords: [staking, stake, nominate, nominating, NPoS, proxies]
+keywords: [staking, stake, nominate, nominating, NPoS, proxies, payouts, simple payouts, rewards]
 slug: ../learn-staking-advanced
 ---
 
