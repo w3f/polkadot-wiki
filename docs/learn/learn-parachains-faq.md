@@ -7,7 +7,9 @@ keywords: [parachains, application-specific, sharding, faq]
 slug: ../learn-parachains-faq
 ---
 
-## What is "parachain consensus"?
+## General
+
+### What is "parachain consensus"?
 
 "Parachain consensus" is special in that it will follow the {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} Relay Chain. Parachains cannot use other consensus algorithms that
@@ -17,7 +19,7 @@ by whom. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} guarant
 transitions. Executing a block finality outside the context of the relay chain is outside the scope
 of trust that {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} provides.
 
-## How about parachains that are not Substrate-based?
+### How about parachains that are not Substrate-based?
 
 Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
@@ -30,16 +32,7 @@ validate the state transitions. Thus, parachains can have their own block produc
 [collators](learn-collator.md) act as the block producers, even if the parachain is not
 Substrate-based.
 
-## How will parachain slots be distributed?
-
-Parachain slots are acquirable through auction. For more information on the auction process, please 
-see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
-{{ kusama: [parachain slot auctions](learn-auction.md) :kusama }} article. Additionally, some parachain
-slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
-basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
-
-## Is 100 a hard limit on the number of Parachains that can be supported?
+### Is 100 a hard limit on the number of Parachains that can be supported?
 
 No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
 number of optimizations, and there are [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) 
@@ -49,7 +42,7 @@ degradation in performance is yet to be discovered. Also, with the
 parathreads into the picture, there is no hard limit number on the number of blockchains that can be supported 
 by {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
 
-## What happens to parachains when the number of validators drops below a certain threshold?
+### What happens to parachains when the number of validators drops below a certain threshold?
 
 The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
@@ -76,13 +69,15 @@ Likewise, it should be easy for them to recognize when it's safe to restart bloc
 perhaps based on finality delay, validator set size or some other factor that is yet to be decided
 within [Cumulus](https://github.com/paritytech/cumulus).
 
-## Parachain Development Kits (PDKs)
+### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
 applications as parachains. For more information, see the
 [PDK content](../build/build-parachains.md#parachain-development-kit-pdk). Please see the [Parachain Development page](../build/build-parachains.md) for more information.
 
-## Is security correlated to the number of validators? What about the number of parachains?
+## Security
+
+### Is security correlated to the number of validators? What about the number of parachains?
 
 Security is independent of the number of parachains that are connected to the Polkadot Relay Chain.
 The correlation of security and the number of validators exists as the higher number of validators
@@ -91,7 +86,7 @@ However, the biggest indicator of the security of the network is the economic si
 of DOT that are bonded and staked. The greater the number of DOT staked by honest validators and
 nominators, the higher the minimum amount of DOT an attacker would need to acquire a validator slot.
 
-## Will parachains ever need their own security? In what scenarios do parachains need their own security?
+### Will parachains ever need their own security? In what scenarios do parachains need their own security?
 
 Most parachains will not need to worry about their own security, since all state transitions will be
 secured by the Polkadot Relay Chain validator set. However, in some cases (which are considered more
@@ -105,3 +100,64 @@ Additionally, for chains with their own consensus, like the one that enables fas
 Byzantine agreement between stakers before a parachain block is valid. The agreement would be
 necessary because the data associated with the fast consensus would be unknown to Relay Chain
 validators.
+
+## Slot Auctions
+
+### How will parachain slots be distributed?
+
+Parachain slots are acquirable through auction. For more information on the auction process, please 
+see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
+{{ kusama: [parachain slot auctions](learn-auction.md) :kusama }} article. Additionally, some parachain
+slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
+{{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
+basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
+
+### Why doesn't everyone bid for the max length?
+
+For the duration of the slot, the tokens used for bidding in the auction are locked up. This
+suggests there is an opportunity cost associated with bidding, as the tokens could have been
+leveraged for something else.
+
+### How does this mechanism help ensure parachain diversity?
+
+The method for dividing the parachain slots into intervals was partly inspired by the desire to
+allow for a greater amount of parachain diversity, while preventing particularly large and
+well-funded parachains from hoarding slots. By making each period a
+{{ polkadot: three-month duration but the
+overall slot a 2-year duration :polkadot }}{{ kusama: 6-week duration but the overall slot a 1-year
+duration :kusama }}, the mechanism can cope with well-funded parachains, ensuring they secure a slot
+at the end of their lease, while gradually allowing other parachains to enter the ecosystem to
+occupy the durations that are not filled. For example, if a large, well-funded parachain has already
+acquired a slot for range 1 - 8, they would be very interested in getting the next slot that would
+open for 2 - 9. Under this mechanism, that parachain could acquire just period 9 (since that is the
+only one required) and allow the 2 - 8 range of the second parachain slot to be occupied by another
+party.
+
+### Why is randomness difficult on blockchains?
+
+Generating a random number trustlessly on a transparent and open network opens up the possibility
+for bad actors to attempt to alter or manipulate the randomness. There have been a few solutions
+that have been proposed, including hash-onions like [RANDAO](https://github.com/randao/randao) and
+[verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The
+latter is what {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses as a base for its
+randomness.
+
+### Are there other ways of acquiring a slot besides the candle auction?
+
+Aa parachain slot can also be acquired through a secondary market where a 3rd party has already won
+a parachain slot and has the ability to resell the slot along with the associated deposit of tokens
+that are locked up to another buyer. This would allow the seller to get liquid tokens in exchange
+for the parachain slot and the buyer to acquire the slot as well as the deposited tokens.
+
+A number of system or common-good parachains may be granted slots by the
+[governing bodies](learn-governance.md) of the Relay Chain. System parachains can be recognized by a
+parachain ID lower than 1_000, and common-good parachains by a parachain ID between 1_000 and 1_999.
+Other parachains will have IDs 2_000 or higher. Such parachains would not have to bid for or renew
+their slots as they would be considered essential to the ecosystem's future.
+
+### How are auctions scheduled?
+
+The parachain slot auctions are scheduled through the governance. At least 2/3 of the Council can
+initiate an auction, however, Root origin (via referendum) is needed to cancel an auction. Here is a
+proposal that gives a glimpse of what goes into planning auctions schedule -
+[Proposed Polkadot Auction Schedule 2022](https://polkadot.polkassembly.io/post/863).
