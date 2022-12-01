@@ -218,7 +218,7 @@ do not run nodes.
 ##### Security / Key handling policies
 
 It is paramount that session keys and stash/controller keys are stored and handled with the utmost
-As a compromise of these, care can get both validator and nominator slashed. Outlining how keys are
+care.  If compromised, both the validator and nominator can be slashed. Outlining how keys are
 handled, how they are stored, who has access to them, and the overall policies and procedures around
 them is a great point of reference for nominators to gauge how comfortable they are with the
 security a validator takes.
