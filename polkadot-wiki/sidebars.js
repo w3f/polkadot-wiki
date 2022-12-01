@@ -231,6 +231,7 @@ module.exports = {
             "maintain/maintain-guides-how-to-chill",
             "maintain/maintain-guides-how-to-stop-validating",
             "maintain/doc-maintain-guides-validator-community",
+            "maintain/maintain-guides-avoid-slashing",
           ],
         },
         {
