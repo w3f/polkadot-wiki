@@ -106,10 +106,8 @@ validators.
 ### How will parachain slots be distributed?
 
 Parachain slots are acquirable through auction. For more information on the auction process, please 
-see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
-{{ kusama: [parachain slot auctions](learn-auction.md) :kusama }} article. Additionally, some parachain
-slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
+see the [parachain slot auctions](learn-auction.md) article. Additionally, some parachain
+slots will be set aside to run [parathreads](learn-parathreads.md) &mdash; chains that bid on a per-block
 basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
 
 ### Why doesn't everyone bid for the max length?
