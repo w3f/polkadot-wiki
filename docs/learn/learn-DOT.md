@@ -123,7 +123,7 @@ slope of the unlock line and the block number for when the unlocking begins.
 
 #### Lazy Vesting
 
-Like [simple payouts](learn-simple-payouts.md), vesting is _lazy_, which means that someone must
+Like [simple payouts](learn-staking-advanced.md), vesting is _lazy_, which means that someone must
 explicitly call an extrinsic to update the lock that is placed on an account.
 
 - The `vest` extrinsic will update the lock that is placed on the caller.

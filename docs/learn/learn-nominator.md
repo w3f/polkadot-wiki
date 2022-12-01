@@ -254,7 +254,7 @@ To explore the possible reasons for not receiving staking rewards, check out the
 
 Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go all of the
 validator's nominators. Any account can do this, although in practice validator operators often do
-this as a service to their nominators. See the page on [Simple Payouts](learn-simple-payouts.md) for
+this as a service to their nominators. See the page on [Simple Payouts](learn-staking-advanced.md) for
 more information and instructions for claiming rewards.
 
 ### What to Take Into Consideration When Nominating
@@ -341,7 +341,7 @@ interested in filtering.
 - **with capacity**: Do not show any validators who are currently operating
   [at capacity](../general/glossary.md#capacity) (i.e., could potentially be oversubscribed).
 - **recent payouts**: Only show validators that have recently caused a
-  [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it
+  [payout to be issued](learn-staking-advanced.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
 - **currently elected**: Only show validators that are currently in the active set (i.e., they have
   been elected to produce blocks this era).

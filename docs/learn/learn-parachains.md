@@ -27,7 +27,7 @@ there is no specific need for them to be actual blockchains.
 
 Due to their parallel nature, they are able to parallelize transaction processing and achieve
 scalability of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
-[inherit the security](learn-security.md) of the entire network and can communicate with other
+[inherit the security](#shared-security) of the entire network and can communicate with other
 parachains through the [XCM](learn-xcm.md) format.
 
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role

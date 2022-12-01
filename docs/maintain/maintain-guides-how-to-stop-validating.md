@@ -24,7 +24,7 @@ extrinsics.
 
 To chill your validator or nominator, call the `staking.chill()` extrinsic. See the
 [How to Chill](maintain-guides-how-to-chill.md) page for more information. You can also
-[claim your rewards](../learn/learn-simple-payouts.md#claiming-rewards) at this time.
+[claim your rewards](../learn/learn-staking-advanced.md) at this time.
 
 ## Purge validator session keys
 

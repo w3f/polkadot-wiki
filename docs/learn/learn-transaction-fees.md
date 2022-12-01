@@ -265,7 +265,7 @@ pair that does not control funds. For example, when users
 [claim their DOT tokens](https://claims.polkadot.network) after genesis, their DOT address doesn't
 have any funds yet, so that uses an unsigned transaction. Validators also submit unsigned
 transactions in the form of "heartbeat" messages to indicate that they are online. These heartbeats
-must be signed by one of the validator's [session keys](learn-keys.md). Session keys never control
+must be signed by one of the validator's [session keys](learn-cryptography.md). Session keys never control
 funds. Unsigned transactions are only used in special cases because, since Polkadot cannot charge a
 fee for them, each one needs its own, custom validation logic.
 

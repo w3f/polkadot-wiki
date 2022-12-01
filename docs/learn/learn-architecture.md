@@ -44,7 +44,7 @@ Parathreads and parachains have the same API; their difference is economic. Para
 reserve DOT for the duration of their slot lease; parathreads will pay on a per-block basis.
 Parathreads can become parachains, and vice-versa.
 
-### [Shared Security](learn-security.md)
+### [Shared Security](learn-parachains.md)
 
 Parachains connected to the Polkadot Relay Chain all share in the security of the Relay Chain.
 Polkadot has a shared state between the Relay Chain and all of the connected parachains. If the

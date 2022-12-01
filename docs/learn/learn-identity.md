@@ -202,7 +202,7 @@ automatically loaded.
 Users can also link accounts by setting "sub accounts", each with its own identity, under a primary
 account. The system reserves a bond for each sub account. An example of how you might use this would
 be a validation company running multiple validators. A single entity, "My Staking Company", could
-register multiple sub accounts that represent the [Stash accounts](learn-keys.md) of each of their
+register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of their
 validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a deposit of
