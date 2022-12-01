@@ -40,7 +40,7 @@ performs due diligence on the validators that they elect. When looking for valid
 nominator should pay attention to their own reward percentage for nominating a specific validator -
 as well as the risk that they bear of being slashed if the validator gets slashed.
 
-If you are a beginner, please watch the video below for detailed instructions
+If you are a beginner, please watch the video below for detailed instructions.
 
 [![Stake on Polkadot/Kusama](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
@@ -60,6 +60,18 @@ stash account, set one up. Note that it is extremely unsafe to set an exchange a
 recipient of the staking rewards.
 
 ## Using Polkadot-JS UI
+
+:::info Using the Polkadot-JS UI for nominating
+
+If you need to use the Polkadot-JS UI, clicking on the topics below will take you to the relevant support articles.
+
+- [Bonding Tokens and Nominating](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
+- [Selecting Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
+- [Monitoring the Bags List](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards)
+- [Stop Nominating](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-)
+- [Rebonding Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period)
+
+:::
 
 ### Step 1: Bond your tokens
 
