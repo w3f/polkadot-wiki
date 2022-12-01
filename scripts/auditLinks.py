@@ -4,6 +4,7 @@ import requests
 
 Root = "./docs"
 PolkadotUrl = "https://wiki.polkadot.network/docs/"
+ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs/"
 
 # Frequently occurring false positives
 Whitelist = [
@@ -60,7 +61,7 @@ def testLink(link):
 def logger(test, log, shortPath, links, key):
     # Check for 400 errors - lots of 300 redirects that are still valid
     if test[1] == 400 or test[1] == 403 or test[1] == 404:
-        log += "|" + shortPath + "|" + str(test[1]) + "|" + key + "|" + links[key] + "|\n"
+        log += "|[" + shortPath + "](" + ReporUrl + shortPath + ")|" + str(test[1]) + "|" + key + "|" + links[key] + "|\n"
 
 # Retrieve a page slug from page path
 def getRefSlug(fullPath):
@@ -136,15 +137,15 @@ def main():
                                         test = testLink(url)
                                         logger(test, log, shortPath, links, key)
                                     else:
-                                        log += "|" + shortPath + "|failed to get ref slug|" + key + "|" + links[key] + "|\n"
+                                        log += "|[" + shortPath + "](" + ReporUrl + shortPath + ")|failed to get ref slug|" + key + "|" + links[key] + "|\n"
                                 else:
-                                    log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
+                                    log += "|[" + shortPath + "](" + ReporUrl + shortPath + ")|no local file|" + key + "|" + links[key] + "|\n"
                             else:
                                 # No '#' present in link, so attempt to navigate to local page directly
                                 fileDir = os.path.dirname(fullPath)
                                 linkedFile = os.path.join(fileDir, links[key])
                                 if not os.path.isfile(linkedFile):
-                                    log += "|" + shortPath + "|no local file|" + key + "|" + links[key] + "|\n"
+                                    log += "|[" + shortPath + "](" + ReporUrl + shortPath + ")|no local file|" + key + "|" + links[key] + "|\n"
 
                         # Local image reference
                         elif links[key][-4:] == ".png" or links[key][-4:] == ".jpg":
