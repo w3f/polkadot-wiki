@@ -95,6 +95,10 @@ module.exports = {
           {
             to: '/docs/learn-staking-advanced',
             from: ['/docs/learn-simple-payouts']
+          },
+          {
+            to: '/docs/maintain-guides-how-to-nominate-polkadot',
+            from: ['/docs/maintain-guides-how-to-unbond']
           }
         ],
         createRedirects: function (existingPath) {
