@@ -24,7 +24,7 @@ of trust that {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} pr
 Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
 that can be used for consensus. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}
-being a Substrate-based chain relies on BABE as the block production scheme and GRANDPA as the
+being a Substrate-based chain rely on BABE as the block production scheme and GRANDPA as the
 finality gadget as part of its consensus mechanism. Collectively, this is a
 [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block
 finality are separate. Parachains only need to produce blocks as they can rely on the relay chain to
