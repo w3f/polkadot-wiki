@@ -178,7 +178,7 @@ fashion. This signals to nominators that a validator is timely care about their 
 quick to adapt to necessary circumstances.
 
 It can also be helpful for Nominators to know how the Validator runs software and where they get new
-binaries. How do they get alerted for new releases? Do they hear about things from the matrix chatrooms? Do
+binaries. How do they get alerted for new releases? Do they receive updates from the matrix chatrooms? Do
 they have alerts for particular GitHub activities? Do they use the Debian/RPM packages? Do they use
 the Parity-provided GitHub binaries? Do they use Parity Docker images? Do they make their own Docker
 images? Do they build the binaries themselves? Validators often have their own build server for
