@@ -140,7 +140,7 @@ Additionally, how does a Validator contribute to decentralization? It can be hel
 these efforts so that the values of a Nominator and Validator are aligned.
 
 It's also helpful to outline what kind of OS is used on these servers and what is the updating
-policy on the software on that OS. For example, are LTS versions used? Do they use NiXOS,
+policy for the software on that OS. For example, are LTS versions used? Do they use NiXOS,
 distro-packaged libraries? Any server hardening practices, etc.
 
 #### Specs
