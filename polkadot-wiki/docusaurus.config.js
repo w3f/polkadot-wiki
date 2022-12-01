@@ -88,6 +88,7 @@ module.exports = {
             to: '/docs/learn-parachains',
             from: ['/docs/learn-security']
           },
+          {
             to: '/docs/learn-account-advanced',
             from: ['/docs/learn-account-transfer']
           },
