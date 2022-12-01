@@ -85,6 +85,10 @@ module.exports = {
             from: ['/docs/learn-crosschain', '/docs/learn-cross-consensus']
           },
           {
+            to: '/docs/learn-parachains',
+            from: ['/docs/learn-security']
+          },
+          {
             to: '/docs/learn-account-advanced',
             from: ['/docs/learn-account-transfer']
           },

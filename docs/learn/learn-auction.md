@@ -323,58 +323,6 @@ on different slots owned by the same team, however it has the disadvantage of lo
 when to win a new slot: if the team does not win the exact slot, then it will suffer some downtime
 until it wins a new slot.
 
-## FAQ
-
-### Why doesn't everyone bid for the max length?
-
-For the duration of the slot, the tokens used for bidding in the auction are locked up. This
-suggests there is an opportunity cost associated with bidding, as the tokens could have been
-leveraged for something else.
-
-### How does this mechanism help ensure parachain diversity?
-
-The method for dividing the parachain slots into intervals was partly inspired by the desire to
-allow for a greater amount of parachain diversity, while preventing particularly large and
-well-funded parachains from hoarding slots. By making each period a
-{{ polkadot: three-month duration but the
-overall slot a 2-year duration :polkadot }}{{ kusama: 6-week duration but the overall slot a 1-year
-duration :kusama }}, the mechanism can cope with well-funded parachains, ensuring they secure a slot
-at the end of their lease, while gradually allowing other parachains to enter the ecosystem to
-occupy the durations that are not filled. For example, if a large, well-funded parachain has already
-acquired a slot for range 1 - 8, they would be very interested in getting the next slot that would
-open for 2 - 9. Under this mechanism, that parachain could acquire just period 9 (since that is the
-only one required) and allow the 2 - 8 range of the second parachain slot to be occupied by another
-party.
-
-### Why is randomness difficult on blockchains?
-
-Generating a random number trustlessly on a transparent and open network opens up the possibility
-for bad actors to attempt to alter or manipulate the randomness. There have been a few solutions
-that have been proposed, including hash-onions like [RANDAO](https://github.com/randao/randao) and
-[verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The
-latter is what {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses as a base for its
-randomness.
-
-### Are there other ways of acquiring a slot besides the candle auction?
-
-Aa parachain slot can also be acquired through a secondary market where a 3rd party has already won
-a parachain slot and has the ability to resell the slot along with the associated deposit of tokens
-that are locked up to another buyer. This would allow the seller to get liquid tokens in exchange
-for the parachain slot and the buyer to acquire the slot as well as the deposited tokens.
-
-A number of system or common-good parachains may be granted slots by the
-[governing bodies](learn-governance.md) of the Relay Chain. System parachains can be recognized by a
-parachain ID lower than 1_000, and common-good parachains by a parachain ID between 1_000 and 1_999.
-Other parachains will have IDs 2_000 or higher. Such parachains would not have to bid for or renew
-their slots as they would be considered essential to the ecosystem's future.
-
-### How are auctions scheduled?
-
-The parachain slot auctions are scheduled through the governance. At least 2/3 of the Council can
-initiate an auction, however, Root origin (via referendum) is needed to cancel an auction. Here is a
-proposal that gives a glimpse of what goes into planning auctions schedule -
-[Proposed Polkadot Auction Schedule 2022](https://polkadot.polkassembly.io/post/863).
-
 ## Resources
 
 - [How do Parachain Slot Auctions Work](https://support.polkadot.network/support/solutions/articles/65000182287-how-does-a-parachain-slots-auction-work-)

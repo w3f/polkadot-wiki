@@ -53,7 +53,7 @@ described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper.pd
 - **Applicability**: Does the technology address a burning need on its own? Is other “middleware”
   required to bridge the gap to actual applications?
 
-#### [Shared Security](../learn/learn-security.md) (Pooled Security)
+#### [Shared Security](../learn/learn-parachains.md) (Pooled Security)
 
 Parachains can lease the security of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network by bonding

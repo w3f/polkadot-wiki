@@ -333,7 +333,7 @@ Two different accounts can be used to securely manage your funds while staking.
   stash account, which would effectively compound the rewards you receive over time. You could also
   choose to have them deposited to your controller account or a different account as a free
   (transferable) balance. If you are a validator, it can also be used to set your
-  [session keys](learn-keys.md#session-keys). Controller accounts only need sufficient funds to pay
+  [session keys](learn-cryptography.md). Controller accounts only need sufficient funds to pay
   for the transaction fees.
 
 :::warning
@@ -384,7 +384,7 @@ someone. Typically the validators take care of this, but anyone can permissionle
 payout for all the nominators whose stake has backed a specific validator in the active set of that
 era. Staking rewards are kept available for 84 eras, which is approximately
 {{ polkadot: 84 days :polkadot }}{{ kusama: 21 days :kusama }}. For more information on why this is
-so, see the page on [simple payouts](learn-simple-payouts.md).
+so, see the page on [simple payouts](learn-staking-advanced.md).
 
 :::info Payouts
 
