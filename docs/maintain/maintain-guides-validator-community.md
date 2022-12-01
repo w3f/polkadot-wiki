@@ -137,7 +137,7 @@ to go offline, causing slashing for unresponsiveness. Nominators may want to cho
 have thoroughly diversified the providers they use or the facilities they operate in.
 
 Additionally, how does a Validator contribute to decentralization? It can be helpful to outline
-efforts towards this so that the values of a Nominator and Validator are aligned.
+these efforts so that the values of a Nominator and Validator are aligned.
 
 It's also helpful to outline what kind of OS is used on these servers and what is the updating
 policy on the software on that OS. For example, are LTS versions used? Do they use NiXOS,
