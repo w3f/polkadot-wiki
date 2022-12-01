@@ -1,6 +1,6 @@
 ---
 id: maintain-guides-avoid-slashing
-title: Participate in Democracy
+title: Validator Best Practices
 sidebar_label: Validator Best Practices
 description: Best practices to avoid slashing.
 keywords: [validator, rewards, slashing]
