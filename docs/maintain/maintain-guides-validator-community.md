@@ -164,7 +164,7 @@ human errors.
 #### Network Topology
 
 Does the Validator node have protection against Denial of Service attacks, and if so, how is that
-done? Outlining the kind of network topology of Validator infrastructure will help Nominators understand how resilient operations are to attacks. Some things to highlight are the usage of firewalls,
+done? Outlining a desired network topology for a Validators infrastructure design will help Nominators understand how resilient their operations are to attacks. Some things to highlight are the usage of firewalls,
 VPNs, network segmentation, proxies, or other layers separation.
 
 #### Upgrading
