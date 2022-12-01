@@ -11,8 +11,8 @@ slug: ../build-hackathon
 
 Web3 Foundation regularly supports developer focused events! Be the first to know by signing up for
 the
-{{ polkadot: [Polkadot newsletter](https://info.polkadot.network/subscribe) :polkadot }}{{ kusama:
-[Kusama newsletter](https://kusama.network/newsletter/) :kusama }}.
+{{ polkadot: [Polkadot newsletter](https://info.polkadot.network/subscribe) :polkadot }}
+{{ kusama: [Kusama newsletter](https://kusama.network/newsletter/) :kusama }}.
 
 ## Host a Hackathon
 

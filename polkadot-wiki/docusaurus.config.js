@@ -87,6 +87,17 @@ module.exports = {
           {
             to: '/docs/learn-parachains',
             from: ['/docs/learn-security']
+          },
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/learn-account-transfer']
+          },
+          {
+            to: '/docs/learn-cryptography',
+            from: ['/docs/learn-keys']
+          },
+          {
+            to: '/docs/learn-staking-advanced',
+            from: ['/docs/learn-simple-payouts']
           }
         ],
         createRedirects: function (existingPath) {
