@@ -63,7 +63,7 @@ identity, assign a [sub-identity](../learn/learn-identity.md#sub-accounts) to th
 
 ### Website
 
-One thing that can help get some visibility is set up a dedicated site for your validator, which
+One strategy for helping gain additional visibility is to set up a dedicated site for your validator, which
 includes the networks that one is a validator for and validator details such as addresses,
 commission, and so forth. Including all suggestions from this page is potential content to include
 on the site. After setting up a website, a validator should consist of this website in the
