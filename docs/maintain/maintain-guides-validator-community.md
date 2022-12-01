@@ -77,7 +77,7 @@ most essential factors in running quality validator services.
 ### Self Stake
 
 Validators should have skin in the game in their operations in the form of a stake that is self-bonded
-to their validator stash. As slashing applies to the total stake of a Validator, having a high self-stake shows confidence in operations, and they have skin in the game and a lot to lose if they
+to their validator stash. Slashing applies to the total stake of a Validator, therefore having a high self-stake shows confidence in the operations. This helps show commitment from the Validator as they have skin in the game and can be penalized for negative actions or poor maintenance.
 mess up. Having very little self-stake can signal to nominators that they have nothing to lose
 in the case of failures.
 
