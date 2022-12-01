@@ -86,7 +86,7 @@ However, the biggest indicator of the security of the network is the economic si
 of DOT that are bonded and staked. The greater the number of DOT staked by honest validators and
 nominators, the higher the minimum amount of DOT an attacker would need to acquire a validator slot.
 
-### Will parachains ever need their own security? In what scenarios do parachains need their own security?
+### In what scenarios do parachains need their own security?
 
 Most parachains will not need to worry about their own security, since all state transitions will be
 secured by the Polkadot Relay Chain validator set. However, in some cases (which are considered more
