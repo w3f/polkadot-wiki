@@ -62,7 +62,7 @@ recipient of the staking rewards is extremely unsafe.
 
 ## Using Polkadot-JS UI
 
-:::info Support Articles
+:::info Using Polkadot-JS UI as a Nominator
 
 If you need to use the Polkadot-JS UI, clicking on the topics below will take you to the relevant support articles.
 
