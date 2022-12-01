@@ -12,8 +12,10 @@ import RPC from "./../../components/RPC-Connection";
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+[Polkadot's Home Page](https://polkadot.network/staking/). You can lear how staking works by reading [this dedicated page](../learn/learn-staking.md). 
+
+Discover the new
+[**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started.
@@ -44,7 +46,7 @@ If you are a beginner, please watch the video below for detailed instructions.
 
 [![Stake on Polkadot/Kusama](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
-## Setting up Stash and Controller keys
+## Setting up Stash and Controller Accounts
 
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
@@ -76,127 +78,6 @@ If you need to use the Polkadot-JS UI, clicking on the topics below will take yo
 :::info Video Tutorials
 
 - [How to Nominate/Stake](https://youtu.be/FCXC0CDhyS4?t=219)
-- [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
-- [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
-
-:::
-
-### Step 1: Bond your tokens
-
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
-"Network" menu).
-
-The "Staking Overview" subsection will show you all the active validators and their information -
-their identities, the amount of DOT that are staking for them, amount that is their own provided
-stake, how much they charge in commission, the era points they've earned in the current era, and the
-last block number that they produced. If you click on the chart button it will take you to the
-"Validator Stats" page for that validator that shows you more detailed and historical information
-about the validator's stake, rewards and slashes.
-
-The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
-to stake and nominate.
-
-The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)) allows you to
-claim rewards from staking.
-
-The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
-estimate your earnings and this is where it's good to start picking favorites. For additional
-information on content provided in this table checkout
-[What to take into consideration when nominating](learn-nominator#what-to-take-into-consideration-when-nominating).
-
-The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
-validators that are awaiting more nominations to enter the active validator set. Validators will
-stay in the waiting queue until they have enough DOT backing them (as allocated through the
-[Phragmén election mechanism](../learn/learn-phragmen.md)). It is possible validator can remain in
-the queue for a very long time if they never get enough backing.
-
-The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
-to query a validator's stash address and see historical charts on era points, elected stake,
-rewards, and slashes.
-
-Pick "Account actions", then click the "+ Nominator" button.
-
-You will see a modal window that looks like the below:
-![nominator-update-1](../assets/polkadotjs_nominate_button.png)
-
-Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some
-left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are
-dynamic based on a variety of factors including the load of recent blocks.
-
-Also be mindful of the reaping threshold - the amount that must remain in an account lest it be
-burned. That amount is 1 DOT on Polkadot, so it's recommended to keep at least 1.5 DOT in your
-account to be on the safe side.
-
-Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash
-account (increase amount at stake)" to simply accrue the rewards into the amount you're staking and
-earn compound interest.
-
-![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
-
-:::note
-
-These concepts have been further explained in Polkadot's
-[UI Walkthrough Video](https://youtu.be/FCXC0CDhyS4?t=219)
-
-:::
-
-### Step 2: Nominate a validator
-
-You are now bonded. Being bonded means your tokens are locked and could be
-[slashed](../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded
-funds can now be distributed to up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :kusama }}
-validators. Be careful about the validators you choose since you will be slashed if your validator
-commits an offence.
-
-Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
-you to select up to 16 validators. Although you may choose up to 16 validators, due to the
-[Phragmén](../learn/learn-phragmen.md) election algorithm your stake may be dispersed in different
-proportions to any subset or all of the validators your choose.
-
-![Nominating validators](../assets/polkadotjs_setup_nominator2.png)
-
-Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
-will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you
-do this, your nominations may become active almost immediately, or you may have to wait almost the
-entire twenty-four hours before your nominations are active. You can check how far along Polkadot is
-in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
-
-Assuming at least one of your nominations ends up in the active validator set, you will start to get
-rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
-claim them. See the [Claiming Rewards](../learn/learn-staking.md#claiming-rewards) section of the
-Staking wiki page for more details.
-
-### Step 3: Monitoring Bags list
-
-This step is highly relevant if the staked DOT is close to the dynamic minimum active nomination
-threshold on the network, which can be viewed on
-[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
-For instance, the minimum active nomination receiving staking rewards is 124.575 DOT in the snapshot
-below. See the [Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator wiki page
-for more details.
-
-![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
-
-The nominations within a bag are sorted based on the insertion order and not based on the stake. If
-your stake is close to this dynamic threshold, it is advised that you monitor your bag across the
-staking eras on
-[Polkadot JS Apps > Network > Staking > Bags ](https://polkadot.js.org/apps/#/staking/bags). If any
-action is required, the respective buttons (Move up/rebag) will appear beside your stash account.
-
-![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
-
-### Step 4: Stop nominating
-
-At some point, you might decide to stop nominating one or more validators. You can always change who
-you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](maintain-guides-how-to-unbond.md).
-
-:::note Explainer videos on staking
-
-The following videos related to staking are also available for your reference:
-
 - [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
 - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
