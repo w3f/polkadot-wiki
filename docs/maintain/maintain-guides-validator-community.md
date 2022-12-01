@@ -153,7 +153,7 @@ If a validator is running underpowered machines, they may not want to nominate t
 result in fewer blocks produced and fewer overall rewards. In certain circumstances, more powerful
 machines can result in higher rewards for both the Validator and their Nominators.
 
-#### Automation and orchestration approaches (terraform, ansible, chef, puppet, Kubernetes, etc.)
+#### Automation and orchestration approaches (Terraform, Ansible, Chef, Puppet, Kubernetes, etc.)
 
 What kind of approach is taken for spinning up and provisioning nodes? How might you automate
 spinning up large clusters of nodes and upgrading them? Elaborating on what type of automation (or
