@@ -64,7 +64,7 @@ recipient of the staking rewards is extremely unsafe.
 
 :::info Using Polkadot-JS UI as a Nominator
 
-If you need to use the Polkadot-JS UI, clicking on the topics below will take you to the relevant support articles.
+Here is the list of basic nominator actions that can be performed using the Polkadot-JS UI.
 
 - [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
 - [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
