@@ -12,14 +12,14 @@ import RPC from "./../../components/RPC-Connection";
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). You can lear how staking works by reading [this dedicated page](../learn/learn-staking.md). 
+[Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by reading [this dedicated page](../learn/learn-staking.md). 
 
 Discover the new
 [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started.
-{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+{{ kusama: All the examples presented on Polkadot also apply to Kusama. :kusama }}
 
 :::
 
@@ -30,9 +30,8 @@ out the [Kusama guide](https://guide.kusama.network/docs/maintain-guides-how-to-
 
 :::
 
-Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
-for appointing their stake to the validators who are the second type of participant. By appointing
-their stake, they are able to elect the active set of validators and share in the rewards that are
+Nominators are one type of participant in the staking subsystem of Polkadot. They appoint their stake to the validators, the second type of participant. By appointing
+their stake, they can elect the active set of validators and share in the rewards that are
 paid out.
 
 While the [validators][] are active participants in the network that engage in the block production
@@ -44,22 +43,22 @@ as well as the risk that they bear of being slashed if the validator gets slashe
 
 If you are a beginner, please watch the video below for detailed instructions.
 
-[![Stake on Polkadot/Kusama](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
+[![Stake on Polkadot/Kusama](https://img.youtube.com/vi/KTBUOFq0KO4/0.jpg)](https://youtu.be/KTBUOFq0KO4)
 
 ## Setting up Stash and Controller Accounts
 
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
-reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
+the reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
 
-You can generate your stash and controller account via any of the recommended methods that are
+You can generate your stash and controller account via any of the recommended methods, which are
 detailed on the [account generation][] page.
 
-Starting with runtime version v23 natively included in client version
+Starting with runtime version v23 natively included in the client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
 address. If you'd like to redirect payments to an account that is neither the controller nor the
-stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
-recipient of the staking rewards.
+stash account, set one up. Note that setting an exchange address as the
+recipient of the staking rewards is extremely unsafe.
 
 ## Using Polkadot-JS UI
 
@@ -159,9 +158,10 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRES
 polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.polkadot.io
 ```
 
-After a few seconds, you should see the hash of the transaction and if you would like to verify the
+After a few seconds, you should see the hash of the transaction, and if you would like to verify the
 nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-polkadot.md
-[keys]: ../learn/learn-keys.md###"controller"-and-"stash"-keys
+[keys]: ../learn/learn-keys.md#keys
 [account generation]: ../learn/learn-account-generation.md
+
