@@ -61,15 +61,23 @@ recipient of the staking rewards.
 
 ## Using Polkadot-JS UI
 
-:::info Using the Polkadot-JS UI for nominating
+:::info Support Articles
 
 If you need to use the Polkadot-JS UI, clicking on the topics below will take you to the relevant support articles.
 
-- [Bonding Tokens and Nominating](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
-- [Selecting Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
-- [Monitoring the Bags List](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards)
-- [Stop Nominating](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-)
-- [Rebonding Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period)
+- [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
+- [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
+- [How to Monitor the Bags List](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards)
+- [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-)
+- [How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period)
+
+:::
+
+:::info Video Tutorials
+
+- [How to Nominate/Stake](https://youtu.be/FCXC0CDhyS4?t=219)
+- [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
+- [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
 :::
 
