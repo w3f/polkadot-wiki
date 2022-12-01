@@ -24,7 +24,7 @@ of trust that {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} pr
 Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
 that can be used for consensus. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}
-being a Substrate-based chain relies on BABE as the block production scheme and GRANDPA as the
+being a Substrate-based chain rely on BABE as the block production scheme and GRANDPA as the
 finality gadget as part of its consensus mechanism. Collectively, this is a
 [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block
 finality are separate. Parachains only need to produce blocks as they can rely on the relay chain to
@@ -73,7 +73,7 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 
 Parachain Development Kits are a set of tools that enable developers to create their own
 applications as parachains. For more information, see the
-[PDK content](../build/build-parachains.md#parachain-development-kit-pdk). Please see the [Parachain Development page](../build/build-parachains.md) for more information.
+PDK content](../build/build-parachains.md#parachain-development-kit-pdk) and [Parachain Development page](../build/build-parachains.md).
 
 ## Security
 
@@ -86,7 +86,7 @@ However, the biggest indicator of the security of the network is the economic si
 of DOT that are bonded and staked. The greater the number of DOT staked by honest validators and
 nominators, the higher the minimum amount of DOT an attacker would need to acquire a validator slot.
 
-### Will parachains ever need their own security? In what scenarios do parachains need their own security?
+### In what scenarios do parachains need their own security?
 
 Most parachains will not need to worry about their own security, since all state transitions will be
 secured by the Polkadot Relay Chain validator set. However, in some cases (which are considered more
@@ -106,10 +106,8 @@ validators.
 ### How will parachain slots be distributed?
 
 Parachain slots are acquirable through auction. For more information on the auction process, please 
-see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
-{{ kusama: [parachain slot auctions](learn-auction.md) :kusama }} article. Additionally, some parachain
-slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
+see the [parachain slot auctions](learn-auction.md) article. Additionally, some parachain
+slots will be set aside to run [parathreads](learn-parathreads.md) &mdash; chains that bid on a per-block
 basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
 
 ### Why doesn't everyone bid for the max length?
