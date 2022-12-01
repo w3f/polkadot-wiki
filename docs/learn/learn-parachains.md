@@ -197,8 +197,7 @@ automatically become parathreads.
 as a whole. By allocating a subset of parachain slots to common good chains, the entire network can
 realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider
 problem. They are not allocated via the parachain auction process but by the on-chain
-{{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good parachain's
+[governance](learn-governance.md) system. Generally, a common good parachain's
 lease would not expire; it would only be removed via governance.
 
 See the
