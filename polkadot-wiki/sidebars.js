@@ -207,14 +207,7 @@ module.exports = {
             "maintain/maintain-errors",
           ],
         },
-        {
-          type: "category",
-          label: "Nominator Guides",
-          items: [
-            "maintain/maintain-guides-how-to-nominate-polkadot",
-            "maintain/maintain-guides-how-to-unbond",
-          ],
-        },
+        "maintain/maintain-guides-how-to-nominate-polkadot",
         {
           type: "category",
           label: "Validator Guides",

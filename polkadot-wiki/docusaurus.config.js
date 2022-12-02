@@ -103,6 +103,9 @@ module.exports = {
           {
             to: '/docs/learn-account-generation',
             from: ['/docs/learn-account-restore']
+          },
+            to: '/docs/maintain-guides-how-to-nominate-polkadot',
+            from: ['/docs/maintain-guides-how-to-unbond']
           }
         ],
         createRedirects: function (existingPath) {
