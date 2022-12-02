@@ -53,8 +53,8 @@ can be described as follows:
 
 - Compact encoded number of SCALE encoded bytes following this.
 - 1 bit: it is a 0 if no signature is present, or a 1 if it is.
-- 7 bits: the extrinsic version, it is equal to 4 in decimal.\- 4 bytes: Spec version of the
-  runtime.
+- 7 bits: the extrinsic version, it is equal to 4 in decimal.
+- 4 bytes: Spec version of the runtime.
 - 4 bytes: Transaction version of the runtime.
 - 32 bytes: Genesis hash of the chain.
 - 32 bytes: Block hash serving as the era reference. If the transaction is immortal, then this would
