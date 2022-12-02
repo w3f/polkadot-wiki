@@ -60,6 +60,25 @@ address. If you'd like to redirect payments to an account that is neither the co
 stash account, set one up. Note that setting an exchange address as the
 recipient of the staking rewards is extremely unsafe.
 
+## Using the Polkadot Staking Dashboard
+
+:::info Walk-through Video Tutorials
+
+- [**Nominating**](https://youtu.be/F59N3YKYCRs): Choose your best validators, start your staking journey on Polkadot.
+- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot movement, keep Polkadot secure by staking minimum 1 DOT and receiving staking rewards. 
+- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking Dashboard.
+- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on Polkadot is not a set-and-forget action, learn what you can do after you started staking.
+
+:::
+
+## Why am I not receiving Staking Rewards?
+
+:::info Bags List & Minimum Active Bond
+
+See [**this video tutorial**](https://youtu.be/hIIZRJLrBZA) and read [**this support article**](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards) to understand why in some cases you might not receive staking rewards and how to avoid those situations.
+
+:::
+
 ## Using Polkadot-JS UI
 
 :::info Using Polkadot-JS UI as a Nominator
@@ -68,7 +87,6 @@ Here is the list of basic nominator actions that can be performed using the Polk
 
 - [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
 - [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
-- [How to Monitor the Bags List](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards)
 - [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-)
 - [How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period)
 
