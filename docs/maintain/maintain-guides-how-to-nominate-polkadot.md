@@ -43,7 +43,7 @@ as well as the risk that they bear of being slashed if the validator gets slashe
 
 If you are a beginner, please watch the video below for detailed instructions.
 
-[![Stake on Polkadot/Kusama](https://img.youtube.com/vi/KTBUOFq0KO4/0.jpg)](https://youtu.be/KTBUOFq0KO4)
+<iframe width="560" height="315" src="https://youtube.com/embed/F59N3YKYCRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
 ## Setting up Stash and Controller Accounts
 
