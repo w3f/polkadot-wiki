@@ -99,6 +99,10 @@ module.exports = {
           {
             to: '/docs/learn-staking-advanced',
             from: ['/docs/learn-simple-payouts']
+          },
+          {
+            to: '/docs/learn-account-generation',
+            from: ['/docs/learn-account-restore']
           }
         ],
         createRedirects: function (existingPath) {
