@@ -58,7 +58,7 @@ You can have a rough estimate on that by using the methods listed
 [here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
 To be elected into the set, you need a minimum stake behind your validator. This stake can come from
 yourself or from [nominators](../learn/learn-nominator.md). This means that as a minimum, you will
-need enough DOT to set up Stash and Controller [accounts](../learn/learn-keys.md) with the
+need enough DOT to set up Stash and Controller [accounts](../learn/learn-cryptography.md) with the
 existential deposit, plus a little extra for transaction fees. The rest can come from nominators. To
 understand how validators are elected, check the
 [NPoS Election algorithms](../learn/learn-phragmen.md) page.
@@ -569,7 +569,7 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps
+You can generate your [Session keys](../learn/learn-cryptography.md) in the client via the apps
 RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
 validator node. You can configure the apps dashboard to connect to the endpoint of your validator in
 the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation,

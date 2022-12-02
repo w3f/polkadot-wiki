@@ -233,9 +233,9 @@ For guidelines about how to create an account using Polkadot-JS UI, see
 :::caution
 
 If you use this method to create your account and clear your cookies in your browser, your account
-will be lost forever if you do not [back it up](learn-account-restore.md). Make sure you store your
+will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure you store your
 seed phrase in a safe place, or download the account's JSON file if using the Polkadot{.js} browser
-extension. Learn more about account backup and restoration [here](learn-account-restore.md).
+extension. Learn more about account backup and restoration [here](#restore-account-on-the-polkadot-js-ui).
 
 :::
 
