@@ -60,6 +60,18 @@ address. If you'd like to redirect payments to an account that is neither the co
 stash account, set one up. Note that setting an exchange address as the
 recipient of the staking rewards is extremely unsafe.
 
+## Nominating vs Joining a Pool
+
+Nominating is the action of choosing validators. It does not simply involve bonding tokens. Nominating implies that you constantly monitor your validators to ensure you are always getting your staking rewards but more importantly to make sure you always have genuine validators and decrease the chance of getting slashed. In order to nominate you need a minimum of 10 DOT, and to receive rewards you need at least a balance greater than the minimum active bond. Depending on your validators, if your active validator is oversubscribed you will earn rewards only if your stake is within that of the top 256 nominators.
+
+Let's be straight, if you want to be eligible to earn rewards while nominating you need 1.5-2 times the minimum active bond. If you cannot make sure you have that number of bonded tokens not only you will not always earn rewards, but you will always be eligible for slashes if you have active validators and those validators get slashed.
+
+Nomination pools are a way to participate to staking and earn rewards starting from 1 DOT. The pools are different from custodial solutions because they are native of Polkadot, they are fully decentralized and they are a non-custodial solution. Pool members do not have to choose validators and thus do not have to constantly monitor validators' performance. So, in a way, pools are more a set-and-forget action than being a nominator. The pool creator will do the nominator for you in exchange of a fee.
+
+### Taxation of Staking Rewards
+
+Remember that depending on the country of residence, staking rewards are subjected to taxes. If you are nominating the staking rewards are constantly paid out with little control on when you can receive them. Pools work differently as you can claim rewards when you desire. This allows you to optimize your taxes as you can claim rewards during bear markets for example (you are taxed on the token value when you receive the token in your wallet).
+
 ## Using the Polkadot Staking Dashboard
 
 :::info Walk-through Video Tutorials
