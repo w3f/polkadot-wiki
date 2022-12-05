@@ -145,7 +145,7 @@ page for more details.
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](../maintain-guides-how-to-unbond.md).
+are available [here](../maintain-guides-how-to-nominate-polkadot.md).
 
 ## Using Command-Line Interface (CLI)
 
@@ -222,5 +222,5 @@ After a few seconds, you should see the hash of the transaction and if you would
 nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-kusama.md
-[keys]: ../../learn/learn-keys.md###"controller"-and-"stash"-keys
+[keys]: ../../learn/learn-cryptography.md
 [account generation]: ../../learn/learn-account-generation.md

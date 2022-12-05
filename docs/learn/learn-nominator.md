@@ -34,7 +34,7 @@ generate.
 
 While your DOT are staked by nominating a validator, they are 'locked' (bonded). You can receive new
 DOT in your account but you cannot stake as validator or transfer DOT away from your account. You
-can [un-nominate at any time](../maintain/maintain-guides-how-to-unbond.md) to stop staking your
+can [un-nominate at any time](../maintain/maintain-guides-how-to-nominate-polkadot.md) to stop staking your
 funds. Keep in mind that the un-nomination is effective in the next era, and that un-nominating does
 not automatically unbond your funds. There is an unbonding period of 7 days on Kusama and 28 days on
 Polkadot before bonded funds can be transferred after issuing an unbond transaction.
@@ -406,5 +406,5 @@ and [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
 
 - [Be a Nominator (Polkadot)](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Guide on
   nominating on the Kusama canary network.
-- [Stop Being a Nominator (all networks)](../maintain/maintain-guides-how-to-unbond.md) - Guide on
+- [Stop Being a Nominator (all networks)](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Guide on
   stopping nominations and withdrawing tokens.

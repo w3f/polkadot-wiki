@@ -33,7 +33,7 @@ guides to set up a node and run the network.
   nominate on the Polkadot network.
 - [Nomination Guide (Kusama)](kusama/maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how
   to nominate on the Kusama canary network.
-- [How to stop being a Nominator](maintain-guides-how-to-unbond.md) - Guide on how to stop
+- [How to stop being a Nominator](maintain-guides-how-to-nominate-polkadot.md) - Guide on how to stop
   nominating.
 
 ## Validator

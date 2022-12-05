@@ -48,7 +48,7 @@ that **cannot** be removed, and as a result that account cannot be reaped.
 to rebond, purge the session keys, unbond, and wait the unbonding period again before being able to
 transfer your tokens.
 
-See [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) for more details.
+See [Unbonding and Rebonding](maintain-guides-how-to-nominate-polkadot.md) for more details.
 
 :::
 
