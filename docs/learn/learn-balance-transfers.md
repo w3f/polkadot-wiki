@@ -115,7 +115,7 @@ reaped. References may still exist from:
 ### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-unbond.md)
+Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 to check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 ### Checking for Locks

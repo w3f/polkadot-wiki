@@ -145,7 +145,7 @@ page for more details.
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](../maintain-guides-how-to-unbond.md).
+are available [here](../maintain-guides-how-to-nominate-polkadot.md).
 
 ## Using Command-Line Interface (CLI)
 

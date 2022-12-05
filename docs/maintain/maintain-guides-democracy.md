@@ -200,7 +200,7 @@ Like [vesting](../learn/learn-DOT.md#lazy-vesting), the tokens that are locked i
 unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make
 your funds available again after the lock expires. Unbonding is another term you hear a lot in
 Polkadot, it means withdrawing your DOT that was used in staking. To know more about it, please see
-[here](maintain-guides-how-to-unbond.md).
+[here](maintain-guides-how-to-nominate-polkadot.md).
 
 You can do this from the "Accounts" page in
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts), unless you use Ledger (see below).
