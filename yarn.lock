@@ -2855,13 +2855,6 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
 
-"@polkadot/x-global@10.1.14":
-  version "10.1.14"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.14.tgz#d7d788f00eddd05e72c8ccf44034e2292e312854"
-  integrity sha512-ye3Yx2bfIoHf5t78rbDad587J16JanrcfpGSWoknWOZ7wmatj/CJKWhJ/VKMPfJGEJm2LidH1B0W8QDfrMEmTA==
-  dependencies:
-    "@babel/runtime" "^7.20.1"
-
 "@polkadot/x-global@10.2.1", "@polkadot/x-global@^10.2.1":
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.2.1.tgz#6fbaab05653e680adc8c69c07947eee49afc1238"
@@ -2869,13 +2862,13 @@
   dependencies:
     "@babel/runtime" "^7.20.6"
 
-"@polkadot/x-randomvalues@*":
-  version "10.1.14"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.14.tgz#d34e74c983d7740cc30ac4c594fe237a1f60c0ca"
-  integrity sha512-mrZho4qogLZmox7wuP1XF03HTZ4CwAjzV7RvKmwH8ToNCR6E4NRo2btgG67Z0K+bUOQRbXWL2hQazusa2p2N6w==
+"@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.2.1.tgz#1c463625c0b7cf775e94594f522eb21a5229b42e"
+  integrity sha512-bEwG6j/+HMZ5LIkyzRbTB0N1Wz2lHyxP25pPFgHFqGqon/KZoRN5kxOwEJ1DpPJIv+9PVn5tt7bc4R3qsaZ93g==
   dependencies:
-    "@babel/runtime" "^7.20.1"
-    "@polkadot/x-global" "10.1.14"
+    "@babel/runtime" "^7.20.6"
+    "@polkadot/x-global" "10.2.1"
 
 "@polkadot/x-randomvalues@10.1.1":
   version "10.1.1"
@@ -2884,14 +2877,6 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
-
-"@polkadot/x-randomvalues@10.2.1":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.2.1.tgz#1c463625c0b7cf775e94594f522eb21a5229b42e"
-  integrity sha512-bEwG6j/+HMZ5LIkyzRbTB0N1Wz2lHyxP25pPFgHFqGqon/KZoRN5kxOwEJ1DpPJIv+9PVn5tt7bc4R3qsaZ93g==
-  dependencies:
-    "@babel/runtime" "^7.20.6"
-    "@polkadot/x-global" "10.2.1"
 
 "@polkadot/x-textdecoder@10.1.1":
   version "10.1.1"
