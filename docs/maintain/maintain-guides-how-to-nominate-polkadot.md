@@ -67,11 +67,11 @@ Nominating is the action of choosing validators. It does not simply involve bond
 Nominating is an active task, which implies that you regularly monitor that your stake is backing an
 active validator in all the eras and check if you are receiving your staking rewards. More
 importantly, ensure that the validators you chose always act in the best interests of the network
-protocol and have less chance of getting slashed. To nominate, you need a minimum of 10 DOT, and to
+protocol and have less chance of getting slashed. To nominate, you need a minimum of {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}, and to
 receive rewards, you need at least a balance greater than the minimum active bond. Depending on your
 validators, if your active validator is oversubscribed, you will earn rewards only if your stake is
-within that of the top 256 nominators. If the validator misbehaves, It is worth noting that your
-stake is subject to slashing, irrespective of whether you are in the top 256 nominators or not.
+within that of the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators. If the validator misbehaves, It is worth noting that your
+stake is subject to slashing, irrespective of whether you are in the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the
 threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
