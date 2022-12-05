@@ -66,7 +66,7 @@ Nominating is the action of choosing validators. It does not simply involve bond
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating, you would need to stake a much higher balance than the minimum active bond.
 
-Nomination pools are a way to participate to staking and earn rewards starting from 1 DOT. The pools are different from custodial solutions because they are native of Polkadot, they are fully decentralized and they are a non-custodial solution. Pool members do not have to choose validators and thus do not have to constantly monitor validators' performance. So, in a way, pools are more a set-and-forget action than being a nominator. The pool creator will do the nominator for you in exchange of a fee.
+Nomination pools are a way to participate in staking with as little as 1 DOT and earn staking rewards. Nomination pools differ from custodial solutions (like staking through central exchanges) because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run in a decentralized way by the community. Before joining a nomination pool, you must ensure that the pool is earning rewards and nominating the validators that match your preferences. Participating in pools is more of a set-and-forget action than nominating by yourself. It is worth noting that it is the pool operator that maintains the list of validators nominated by the pool, and so, in a way, you are trusting the pool operator to act in your best interests. However, it is advised to check the validators nominated by the pool from time to time and change the pool if necessary.
 
 
 ## Using the Polkadot Staking Dashboard
