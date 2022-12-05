@@ -67,16 +67,11 @@ Nominating is the action of choosing validators. It does not simply involve bond
 Nominating is an active task, which implies that you regularly monitor that your stake is backing an
 active validator in all the eras and check if you are receiving your staking rewards. More
 importantly, ensure that the validators you chose always act in the best interests of the network
-protocol and have less chance of getting slashed. To nominate, you need a minimum of
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
-and to receive rewards, you need at least a balance greater than the minimum active bond. Depending
-on your validators, if your active validator is oversubscribed, you will earn rewards only if your
-stake is within that of the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
-nominators. If the validator misbehaves, It is worth noting that your stake is subject to slashing,
-irrespective of whether you are in the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
-nominators or not.
+protocol and have less chance of getting slashed. To nominate, you need a minimum of {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}, and to
+receive rewards, you need at least a balance greater than the minimum active bond. Depending on your
+validators, if your active validator is oversubscribed, you will earn rewards only if your stake is
+within that of the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators. If the validator misbehaves, It is worth noting that your
+stake is subject to slashing, irrespective of whether you are in the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the
 threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
@@ -90,8 +85,7 @@ pool is earning rewards and nominating the validators that match your preference
 pools is more of a set-and-forget action than nominating by yourself. It is worth noting that it is
 the pool operator that maintains the list of validators nominated by the pool, and so, in a way, you
 are trusting the pool operator to act in your best interests. However, it is advised to check the
-validators nominated by the pool from time to time and change the pool if necessary. The table below
-shows the main differences between nominating and joining a pool.
+validators nominated by the pool from time to time and change the pool if necessary.
 
 |                                         Nominating                                          |                                                     Joining a Pool                                                      |
 | :-----------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
@@ -103,7 +97,7 @@ shows the main differences between nominating and joining a pool.
 |                      Nominate and regularly check up to 16 validators.                      |                                                     No nomination.                                                      |
 | Rewards paid out regularly every 2-3 days by the active validator or any of the nominators. |                                       Rewards must be claimed by the pool member.                                       |
 |                            Bonded funds remain in your account.                             | Bonded funds are transferred to a pool account not accessible by anyone (only accessible by the pool's internal logic). |
-|                             Non-custodial, native to Polkadot.                              |                                           Non-custodial, native to Polkadot.                                            |
+|                              Non-custodial, native to Polkadot                              |                                            Non-custodial, native to Polkadot                                            |
 
 ## Using the Polkadot Staking Dashboard
 
