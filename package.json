@@ -43,7 +43,7 @@
     "@docusaurus/plugin-client-redirects": "^2.2.0",
     "@docusaurus/preset-classic": "^2.2.0",
     "@octokit/rest": "^19.0.5",
-    "@polkadot/api": "^9.9.4",
+    "@polkadot/api": "^9.10.1",
 
     "@polkadot/keyring": "10.1.1",
     "@testing-library/jest-dom": "^5.16.5",
