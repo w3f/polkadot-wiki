@@ -222,5 +222,5 @@ After a few seconds, you should see the hash of the transaction and if you would
 nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-kusama.md
-[keys]: ../../learn/learn-keys.md###"controller"-and-"stash"-keys
+[keys]: ../../learn/learn-cryptography.md
 [account generation]: ../../learn/learn-account-generation.md
