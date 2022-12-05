@@ -68,9 +68,6 @@ As the minimum active bond is a dynamic value, it can make your nomination inact
 
 Nomination pools are a way to participate to staking and earn rewards starting from 1 DOT. The pools are different from custodial solutions because they are native of Polkadot, they are fully decentralized and they are a non-custodial solution. Pool members do not have to choose validators and thus do not have to constantly monitor validators' performance. So, in a way, pools are more a set-and-forget action than being a nominator. The pool creator will do the nominator for you in exchange of a fee.
 
-### Taxation of Staking Rewards
-
-Remember that depending on the country of residence, staking rewards are subjected to taxes. If you are nominating the staking rewards are constantly paid out with little control on when you can receive them. Pools work differently as you can claim rewards when you desire. This allows you to optimize your taxes as you can claim rewards during bear markets for example (you are taxed on the token value when you receive the token in your wallet).
 
 ## Using the Polkadot Staking Dashboard
 
