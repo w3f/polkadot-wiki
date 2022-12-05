@@ -1116,24 +1116,6 @@
     "onboardEndDate": null
   },
   {
-    "index": 62,
-    "startBlock": 0,
-    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "endPeriodBlock": null,
-    "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "biddingEndsBlock": null,
-    "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardStartBlock": null,
-    "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardEndBlock": null,
-    "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "startDate": null,
-    "endPeriodDate": null,
-    "biddingEndsDate": null,
-    "onboardStartDate": null,
-    "onboardEndDate": null
-  },
-  {
     "index": 63,
     "startBlock": 15624000,
     "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
