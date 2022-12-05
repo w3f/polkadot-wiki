@@ -69,7 +69,7 @@ As the minimum active bond is a dynamic value, it can make your nomination inact
 Nomination pools are a way to participate in staking with as little as 1 DOT and earn staking rewards. Nomination pools differ from custodial solutions (like staking through central exchanges) because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run in a decentralized way by the community. Before joining a nomination pool, you must ensure that the pool is earning rewards and nominating the validators that match your preferences. Participating in pools is more of a set-and-forget action than nominating by yourself. It is worth noting that it is the pool operator that maintains the list of validators nominated by the pool, and so, in a way, you are trusting the pool operator to act in your best interests. However, it is advised to check the validators nominated by the pool from time to time and change the pool if necessary.
 
 | Nominating | Joining a Pool|
-|:--------:|:----------:|:-----------:|
+|:--------:|:----------:|
 | Minimum 10 DOT to nominate. | Minimum 1 DOT to be a member. |
 | Unlimited bonding period. | Unlimited bonding period until the pool exists. |
 | Unbonding period of 28 days. | Unbonding period of 28 days. |
