@@ -68,6 +68,17 @@ As the minimum active bond is a dynamic value, it can make your nomination inact
 
 Nomination pools are a way to participate in staking with as little as 1 DOT and earn staking rewards. Nomination pools differ from custodial solutions (like staking through central exchanges) because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run in a decentralized way by the community. Before joining a nomination pool, you must ensure that the pool is earning rewards and nominating the validators that match your preferences. Participating in pools is more of a set-and-forget action than nominating by yourself. It is worth noting that it is the pool operator that maintains the list of validators nominated by the pool, and so, in a way, you are trusting the pool operator to act in your best interests. However, it is advised to check the validators nominated by the pool from time to time and change the pool if necessary.
 
+| Nominating | Joining a Pool| Centralized Exchanges |
+|:--------:|:----------:|:-----------:|
+| Minimum 10 DOT to nominate. | Minimum 1 DOT to be a member. | Less than 1 DOT possible. |
+| Unlimited bonding period. | Unlimited bonding period until the pool exists. | Limited bonding period with some possibilities to renew the subscription. |
+| Unbonding period of 28 days. | Unbonding period of 28 days. | No unbonding period, but fees possible for unstaking before the bonding period. |
+| Maximum uncapped. | Maximum uncapped. | Maximum capped depending on promised returns. Usually, lower maximum for high returns. |
+| Staking rewards not guaranteed. | Staking rewards guaranteed. | Staking rewards guaranteed. |
+| Nominate and regularly check up to 16 validators. | No nomination. | No nomination. |
+| Rewards paid out regularly every 2-3 days by the active validator or any of the nominators. | Rewards must be claimed by the pool member. | Depending on the provider rewards are paid out automatically or must be claimed. |
+| Bonded funds remain in your account. | Bonded funds are transferred to a pool account not accessible by anyone (only accessible by the pool's internal logic). | Unclear. |
+| Non-custodial, native to Polkadot | Non-custodial, native to Polkadot | Custodial. |
 
 ## Using the Polkadot Staking Dashboard
 
