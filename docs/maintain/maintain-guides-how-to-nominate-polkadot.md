@@ -90,6 +90,9 @@ validators nominated by the pool from time to time and change the pool if necess
 |                                         Nominating                                          |                                                     Joining a Pool                                                      |
 | :-----------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
 |                                 Minimum 10 DOT to nominate.                                 |                                              Minimum 1 DOT to be a member.                                              |
+| Annual rewards based on past performance is approximately 15% of the bonded funds. | Annual rewards based on past performance is approximately 15% of the bonded funds. |
+| Rewards can be compounded automatically or sent to any account. | Rewards must be manually claimed to compound them or send them to another account. |
+| If the active validator gets slashed, all active nominators are subjected to slashing, also those that do not receive rewards. | If the active validator gets slashed, all pool members are subjected to slashing. |
 |                                  Can bond and stake DOT indefinitely.                                  |                                     Can bond and stake DOT until the pool exists.                                     |
 |                                Unbonding period of 28 days. Can switch validators without unbonding.                                 |                                              Unbonding period of 28 days. Need to unbond before switching to a different pool.                                              |
 |                                      Maximum uncapped.                                      |                                                    Maximum uncapped.                                                    |
@@ -97,7 +100,7 @@ validators nominated by the pool from time to time and change the pool if necess
 |                      Nominate up to 16 validators.                      |                                                     Nomination performed by the pool operator.                                                      |
 | [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).   |                                       Rewards must be claimed by the pool member.                                       |
 |                            Bonded funds remain in your account.                             | Bonded funds are transferred to a pool account which is administered by the network protocol and is not accessible to anyone else. |
-|                              Nominator is responsible for managing the list of staked validators.                              |                                            Pool member plays a passive role and needs to monitor the list of staked validators managed by the pool operator.                                            |
+|                              Nominator is responsible for managing the list of staked validators.                              |                                            Nominations managed by the pool operator.                                            |
 
 ## Using the Polkadot Staking Dashboard
 
