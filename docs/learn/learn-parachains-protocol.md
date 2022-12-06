@@ -58,11 +58,16 @@ The candidate can fail to be included in the parachain in any of the following w
 - The candidate is not selected by a relay chain block author.
 - The candidate's PoV is not considered available within a timeout, and it is discarded frm the relay chain.
 
-Once the parablock is considered available and part of the parachain, is still "pending approval".
+## Approval Process
 
-## Approval Pipeline
+Once the parablock is considered available and part of the parachain, is still "pending approval". At this stage the parablock is tentatively included in the parachain, although more confirmation is necessary. In fact, the validators in the parachain (i.e. the parachain validators) are sampled from a validator set which is assumed to be 1/3 dishonest. This means that there is a chance to randomly sample parachain validators for a parachain that are majority or fully dishonest and can back a candidate wrongly. The **Approval Process** allows to detect misbehavior after-the-fact without allocating more validators that would ultimately reduce the throughput of the system. Because after being considered available a parablock will accept children blocks, failure to pass the approval process will invalidate the parablock and its descendants. Only the validators who backed the block in question will be slashed, not the validators who backed the descendants.
 
-
+The approval pipeline can be divided into the following steps:
+1. Parablocks that have been included by the Inclusion Pipeline are pending approval for a time window known as the **secondary checking window**.
+2. During the secondary checking window, validators (secondary checkers) randomly self-select to perform secondary checks on the parablock.
+3. Secondary checkers acquire the parablock with PoV and re-run the validation function.
+4. Secondary checkers gossip the results of their checks. Contradictory results lead to escalation in which all validators are required to check the block. The validators on the losing side will be slashed.
+5. At the end of the process the parablock is either approved or rejected.
 
 
 
