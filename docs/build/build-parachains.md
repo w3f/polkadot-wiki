@@ -33,10 +33,12 @@ examples of what a parachain could be are:
 
 and more.
 
-Polkadot aims to be a bet against blockchain maximalism, where the success of Polkadot's
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} aims to be a bet against blockchain
+maximalism, where the success of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
 heterogeneous multi-chain approach will play a key part in the overall advancement of Web 3.0 and
-decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
-internet of the future will have many different types of blockchains working together.
+decentralized systems. As a result, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
+parachain model was designed with the belief that the internet of the future will have many
+different types of blockchains working together.
 
 ### What are the Benefits of Deploying a Parachain?
 
@@ -66,9 +68,10 @@ parachain to share in that pooled security.
 
 #### [On-Chain Governance](../learn/learn-governance.md) (Thought-through Governance)
 
-Most governance systems in blockchains use an off-chain governance mechanism. Polkadot's on-chain
-governance encourages maximum participation of token holders and is frictionless and transparent. It
-also enables [forkless upgrades](../learn/learn-runtime-upgrades.md).
+Most governance systems in blockchains use an off-chain governance mechanism.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain governance encourages
+maximum participation of token holders and is frictionless and transparent. It also enables
+[forkless upgrades](../learn/learn-runtime-upgrades.md).
 
 #### Scalability
 
@@ -235,7 +238,8 @@ beautiful and functional.
 :::
 
 [Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to
-make any Substrate-built runtime into a Polkadot-compatible parachain.
+make any Substrate-built runtime into a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}-compatible parachain.
 
 Cumulus Consensus is a consensus engine for Substrate that follows a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain (i.e., parachains). This
@@ -273,8 +277,8 @@ Are you interested in building a PDK? See the [future PDKs](##future-pdks) secti
 
 After creating your chain runtime logic with Substrate, you will be able to compile it down to a
 Wasm executable. This Wasm code blob will contain the entire state transition function of your
-chain, and is what you will need to deploy your project to Polkadot as either a parachain or
-parathread.
+chain, and is what you will need to deploy your project to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as either a parachain or parathread.
 
 Validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use the submitted
 Wasm code to validate the state transitions of your chain or thread, but doing this requires some
