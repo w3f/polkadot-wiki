@@ -69,6 +69,12 @@ The approval pipeline can be divided into the following steps:
 4. Secondary checkers gossip the results of their checks. Contradictory results lead to escalation in which all validators are required to check the block. The validators on the losing side will be slashed.
 5. At the end of the process the parablock is either approved or rejected.
 
+:::info
+
+More information can be found in the dedicated sections about the [approval process](https://paritytech.github.io/polkadot/book/protocol-approval.html) and [disputes](https://paritytech.github.io/polkadot/book/protocol-disputes.html). 
+
+:::
+
 
 
 
