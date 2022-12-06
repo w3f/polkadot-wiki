@@ -100,7 +100,7 @@ validators nominated by the pool from time to time and change the pool if necess
 |                      Nominate up to 16 validators.                      |                                                     Nomination performed by the pool operator.                                                      |
 | [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).   |                                       Rewards must be claimed by the pool member.                                       |
 |                            Bonded funds remain in your account.                             | Bonded funds are transferred to a pool account which is administered by the network protocol and is not accessible to anyone else. |
-|                              Nominator is responsible for managing the list of staked validators.                              |                                            Nominations managed by the pool operator.                                            |
+|                              Nominator is responsible for managing the list of staked validators (up to 16).                              |                                            Nominations managed by the pool operator.                                            |
 
 ## Using the Polkadot Staking Dashboard
 
