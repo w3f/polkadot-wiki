@@ -89,7 +89,7 @@ validators nominated by the pool from time to time and change the pool if necess
 
 |                                         Nominating                                          |                                                     Joining a Pool                                                      |
 | :-----------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
-|                                 Minimum 10 DOT to nominate.                                 |                                              Minimum 1 DOT to be a member.                                              |
+|                                 Minimum 100 DOT to nominate.                                 |                                              Minimum 1 DOT to be a member.                                              |
 | Rewards can be compounded automatically or sent to any account. | Rewards can be manually claimed to the pool member's account and be bonded in the pool again to compound them. |
 | If the active validator gets slashed, all active nominators are subjected to slashing, also those that do not receive rewards due to the oversubscription issue. | If the active validator gets slashed, all pool members are subjected to slashing. |
 |                                  Can bond and stake DOT indefinitely.                                  |                                     Can bond and stake DOT until the pool exists.                                     |
