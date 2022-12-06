@@ -12,11 +12,11 @@ import RPC from "./../../components/RPC-Connection";
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by reading [this dedicated page](../learn/learn-staking.md). 
+[Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by
+reading [this dedicated page](../learn/learn-staking.md).
 
-Discover the new
-[**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes staking much easier and
-check this
+Discover the new [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes
+staking much easier and check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started.
 {{ kusama: All the examples presented on Polkadot also apply to Kusama. :kusama }}
@@ -26,13 +26,14 @@ help you get started.
 :::info
 
 The following information applies to the Polkadot network. If you want to nominate on Kusama, check
-out the [Kusama guide](https://guide.kusama.network/docs/maintain-guides-how-to-nominate-kusama/) instead.
+out the [Kusama guide](https://guide.kusama.network/docs/maintain-guides-how-to-nominate-kusama/)
+instead.
 
 :::
 
-Nominators are one type of participant in the staking subsystem of Polkadot. They appoint their stake to the validators, the second type of participant. By appointing
-their stake, they can elect the active set of validators and share in the rewards that are
-paid out.
+Nominators are one type of participant in the staking subsystem of Polkadot. They appoint their
+stake to the validators, the second type of participant. By appointing their stake, they can elect
+the active set of validators and share in the rewards that are paid out.
 
 While the [validators][] are active participants in the network that engage in the block production
 and finality mechanisms, nominators take a slightly more passive role. Being a nominator does not
@@ -47,8 +48,8 @@ If you are a beginner, please watch the video below for detailed instructions.
 
 ## Setting up Stash and Controller Accounts
 
-Nominators are recommended to set up separate stash and controller accounts. Explanation and
-the reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
+Nominators are recommended to set up separate stash and controller accounts. Explanation and the
+reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
 
 You can generate your stash and controller account via any of the recommended methods, which are
@@ -57,17 +58,61 @@ detailed on the [account generation][] page.
 Starting with runtime version v23 natively included in the client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
 address. If you'd like to redirect payments to an account that is neither the controller nor the
-stash account, set one up. Note that setting an exchange address as the
-recipient of the staking rewards is extremely unsafe.
+stash account, set one up. Note that setting an exchange address as the recipient of the staking
+rewards is extremely unsafe.
+
+## Nominating vs Joining a Pool
+
+Nominating is the action of choosing validators. It does not simply involve bonding tokens.
+Nominating is an active task, which implies that you regularly monitor that your stake is backing an
+active validator in all the eras and check if you are receiving your staking rewards. More
+importantly, ensure that the validators you chose always act in the best interests of the network
+protocol and have less chance of getting slashed. To nominate, you need a minimum of {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}, and to
+receive rewards, you need at least a balance greater than the minimum active bond. Depending on your
+validators, if your active validator is oversubscribed, you will earn rewards only if your stake is
+within that of the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators. If the validator misbehaves, It is worth noting that your
+stake is subject to slashing, irrespective of whether you are in the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators or not.
+
+As the minimum active bond is a dynamic value, it can make your nomination inactive when the
+threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
+you would need to stake a much higher balance than the minimum active bond.
+
+Nomination pools are a way to participate in staking with as little as 1 DOT and earn staking
+rewards. Nomination pools differ from custodial solutions (like staking through central exchanges)
+because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run
+in a decentralized way by the community. Before joining a nomination pool, you must ensure that the
+pool is earning rewards and nominating the validators that match your preferences. Participating in
+pools is more of a set-and-forget action than nominating by yourself. It is worth noting that it is
+the pool operator that maintains the list of validators nominated by the pool, and so, in a way, you
+are trusting the pool operator to act in your best interests. However, it is advised to check the
+validators nominated by the pool from time to time and change the pool if necessary.
+
+|                                         Nominating                                          |                                                     Joining a Pool                                                      |
+| :-----------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
+|                                 Minimum 10 DOT to nominate.                                 |                                              Minimum 1 DOT to be a member.                                              |
+| Rewards can be compounded automatically or sent to any account. | Rewards can be manually claimed to the pool member's account and be bonded in the pool again to compound them. |
+| If the active validator gets slashed, all active nominators are subjected to slashing, also those that do not receive rewards due to the oversubscription issue. | If the active validator gets slashed, all pool members are subjected to slashing. |
+|                                  Can bond and stake DOT indefinitely.                                  |                                     Can bond and stake DOT until the pool exists.                                     |
+|                                Unbonding period of 28 days. Can switch validators without unbonding.                                 |                                              Unbonding period of 28 days. Need to unbond before switching to a different pool.                                              |
+|                                      Maximum uncapped.                                      |                                                    Maximum uncapped.                                                    |
+|                               Should bond more than the [minimum active nomination](../learn/learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards) in an era to be eligible to earn staking rewards, although it can depend on multiple other factors outlined in the linked document.                               |                                               A nomination pool earns rewards in an era if it satisfies all the conditions mentioned for the nominator (as the nomination pool is just a nominator from [the NPoS system](../learn/learn-phragmen.md) perspective).                                                |
+|                      Staked tokens can be used for participation in Governance.                    |        Staked tokens cannot be used for participation in Governance.                                                    |
+| [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).   |                                       Rewards must be claimed by the pool member.                                       |
+|                            Bonded funds remain in your account.                             | Bonded funds are transferred to a pool account which is administered by the network protocol and is not accessible to anyone else. |
+|                              Nominator is responsible for managing the list of staked validators (up to 16).                              |                                            Nominations managed by the pool operator.                                            |
 
 ## Using the Polkadot Staking Dashboard
 
 :::info Walk-through Video Tutorials
 
-- [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators, and start your staking journey on Polkadot.
-- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot movement, keep Polkadot secure by staking minimum 1 DOT and receiving staking rewards. 
-- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking Dashboard.
-- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on Polkadot is not a set-and-forget action, learn what you can do with the dashboard after you started staking.
+- [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
+  and start your staking journey on Polkadot.
+- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
+  movement, keep Polkadot secure by staking minimum 1 DOT and receiving staking rewards.
+- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
+  Dashboard.
+- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on Polkadot is not a set-and-forget
+  action, learn what you can do with the dashboard after you started staking.
 
 :::
 
@@ -75,7 +120,10 @@ recipient of the staking rewards is extremely unsafe.
 
 :::info Bags List & Minimum Active Bond
 
-See [**this video tutorial**](https://youtu.be/hIIZRJLrBZA) and read [**this support article**](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards) to understand why in some cases you might not receive staking rewards and how to avoid those situations.
+See [**this video tutorial**](https://youtu.be/hIIZRJLrBZA) and read
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards)
+to understand why in some cases you might not receive staking rewards and how to avoid those
+situations.
 
 :::
 
@@ -182,4 +230,3 @@ nomination status, you can check that on the Polkadot-JS UI as well.
 [validators]: maintain-guides-how-to-validate-polkadot.md
 [keys]: ../learn/learn-cryptography.md#keys
 [account generation]: ../learn/learn-account-generation.md
-
