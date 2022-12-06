@@ -90,7 +90,7 @@ validators nominated by the pool from time to time and change the pool if necess
 |                                         Nominating                                          |                                                     Joining a Pool                                                      |
 | :-----------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
 |                                 Minimum 10 DOT to nominate.                                 |                                              Minimum 1 DOT to be a member.                                              |
-| Annual rewards based on past performance is approximately 15% of the bonded funds. | Annual rewards based on past performance is approximately 15% of the bonded funds. |
+| Annual return based on past performance is approximately 15% of the bonded funds. | Annual return based on past performance is approximately 15% of the bonded funds. |
 | Rewards can be compounded automatically or sent to any account. | Rewards must be manually claimed to compound them or send them to another account. |
 | If the active validator gets slashed, all active nominators are subjected to slashing, also those that do not receive rewards. | If the active validator gets slashed, all pool members are subjected to slashing. |
 |                                  Can bond and stake DOT indefinitely.                                  |                                     Can bond and stake DOT until the pool exists.                                     |
