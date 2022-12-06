@@ -37,6 +37,10 @@ The parachains' protocol can be summarized into three main steps:
 2. Validators validate the block using the PoV, signing statements that can have positive or negative.
 3. With enough positive statements the block can be added to the relay chain.
 
+The figure below shows a representation of a parachain with collators and validators. The figure also shows the journey of a block through the three main steps.
+
+![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
+
 Negative statements will lead to a dispute, and if there are false negatives whoever will be on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen, those actors responsible for it will also be slashed and whoever reported the case will get a bounty. In order to detect false positives, PoV information must be available after the block has been added to the relay chain so that validators can check the work. PoVs are expected to be between 1 MB and 10 MB; as a consequence they are not included in blocks but they are part of the data availability scheme in which validators must prove that the inputs to their work will remain available.
 
 ## Inclusion Pipeline
