@@ -56,6 +56,8 @@ The inclusion pipeline is the path of a parachain block (or parablock) from its 
 7. In the following relay chain blocks, the validators will participate to the **Availability Distribution** subsystem to ensure availability of the candidate. That is, information regarding the availability of the candidate will be noted in the subsequent relay chain blocks.
 8. Once the relay chain state machine has enough information to consider the candidate's PoV as being available, the candidate is considered to be part of the parachain and is graduated to being a full parachain block.
 
+![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
+
 The candidate can fail to be included in the parachain in any of the following ways:
 - The collator is not able to propagate the block to any of the assigned validators.
 - The candidate is not backed by validators participating to the Candidate Backing subsystem.
@@ -72,6 +74,8 @@ The approval pipeline can be divided into the following steps:
 3. Secondary checkers acquire the parablock with PoV and re-run the validation function.
 4. Secondary checkers gossip the results of their checks. Contradictory results lead to escalation in which all validators are required to check the block. The validators on the losing side will be slashed.
 5. At the end of the process the parablock is either approved or rejected.
+
+![parachain-approval-process](../assets/parachain-approval-process.png)
 
 :::info
 
