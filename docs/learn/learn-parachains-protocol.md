@@ -37,7 +37,7 @@ The parachains' protocol can be summarized into three main steps:
 2. Validators validate the block using the PoV, signing statements that can have positive or negative.
 3. With enough positive statements the block can be added to the relay chain.
 
-The figure below shows a representation of a parachain with collators and validators. The figure also shows the journey of a block through the three main steps.
+The figure below shows a representation of a parachain with collators and validators. The figure also shows the journey of a block through the three main steps, as well as the sections where the [Inclusion Pipeline](#inclusion-pipeline) and the [Approval Process](#approval-process) take place (see next Sections).
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
@@ -49,7 +49,7 @@ The inclusion pipeline is the path of a parachain block (or parablock) from its 
 
 1. Validators are assigned to parachains by the **Validator Assignment** routine.
 2. A collator produces the parachain block (known as parachain candidate, or candidate) along with PoV.
-3. The collator forwards the candidate and PoV to validators assigned to the same parachain via the **Collator Protocol**.
+3. The collator forwards the candidate and PoV to validators assigned to the same parachain via the **Collator Distribution** subsystem.
 4. The validators assigned to the parachain participate to the **Candidate Backing** subsystem. Candidates that gather enough signed validity statement are considered **"backable"** and their backing is the set of signed statements.
 5. A relay chain block author (selected by [BABE][]) can note up to 1 backable candidate for each parachain to be included in the relay chain block alongside its backing. Once included in the relay chain the candidate is considered backable in the fork of the relay chain.
 6. Once backable in the relay chain, the candidate is considered to be "pending availability", i.e. it is not considered to be part of the parachain until it is **proven available**.
@@ -67,7 +67,7 @@ The figure above shows the path of a candidate block through the Inclusion pipel
 - Pending availability: The block is backed but not considered available yet.
 - Included: The block is backed and considered available (we have a parablock).
 
-
+Once the parablock is considered available and part of the parachain, it is still "pending approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be accepted on that parachain. After inclusion, the Approval Process starts, and it can run for many parachain blocks at once.
 
 The candidate can fail to be included in the parachain in any of the following ways:
 - The collator is not able to propagate the block to any of the assigned validators.
@@ -85,6 +85,8 @@ The approval pipeline can be divided into the following steps:
 3. Secondary checkers acquire the parablock with PoV and re-run the validation function.
 4. Secondary checkers gossip the results of their checks. Contradictory results lead to escalation in which all validators are required to check the block. The validators on the losing side will be slashed.
 5. At the end of the process the parablock is either approved or rejected.
+
+The figure below shows the path of a parachain block when it exits the Inclusion Pipeline and it enters the Approval Process. The parablock becomes accepted when it is backed, available and **undisputed**. Thr parablock is checked a second time by a subset of validators (V5, V6 and V7), and if there are no contradictory results the block is approved and gossiped to other relay chain validators.
 
 ![parachain-approval-process](../assets/parachain-approval-process.png)
 
