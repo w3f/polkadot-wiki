@@ -58,6 +58,17 @@ The inclusion pipeline is the path of a parachain block (or parablock) from its 
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
 
+The figure above shows the path of a candidate block through the Inclusion pipeline. The block changes its status through this path as follows:
+
+- Candidate: A block is put forward by a collator to a validator (in this case V1).
+- Seconded: The block is put forward by V1 to other validators (in this case V2 and V3).
+- Backable: The block validity is attested by a majority of the validators.
+- Backed: The block is backed and noted in a fork on the relay chain by a relay chain block author (in this case V4).
+- Pending availability: The block is backed but not considered available yet.
+- Included: The block is backed and considered available (we have a parablock).
+
+
+
 The candidate can fail to be included in the parachain in any of the following ways:
 - The collator is not able to propagate the block to any of the assigned validators.
 - The candidate is not backed by validators participating to the Candidate Backing subsystem.
