@@ -96,7 +96,12 @@ More information can be found in the dedicated sections about the [approval proc
 
 :::
 
+## Network Asynchrony
 
+We have mentioned how a relay chain block author must select the candidate and note it on the relay chain (we say the block is backed). The relay chain block author is selected by BABE, which is a forkful algorithm. This means that different block authors are chosen at the same time and they may not work on the same block parent (i.e. the representations in the previous figures are simplistic). Also, the sets of validators and parachains are not fixed, and the validators' assignments to parachains is also flexible. 
 
+We say that the network is **asynchronous** since there will be validators who gave received a block, and other validators who did not. Thus, the network is variable and it exists in multiple states.
+
+![parachain-forks](../assets/parachain-forks.png)
 
 [BABE]: ./learn-consensus.md#block-production-babe
