@@ -17,14 +17,18 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started.
-{{ polkadot: You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
-{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+help you get started. You can now stake on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
+{{ polkadot: <RPC network="polkadot" path="query.nomiationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.nomiationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
+and earn staking rewards. For additional information, check out
+[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 :::
 
 This page is meant to be an advanced guide to staking with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For a more general introduction,
+checkout the [Introduction to Staking](./learn-staking.md) page.
 
 ## Staking Proxies
 
@@ -41,23 +45,25 @@ those scenarios using the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accoun
 having special permissions also called **proxy accounts**. For mode details about proxy accounts
 visit the [dedicated page](./learn-proxies.md) on this wiki.
 
-Proxy accounts are special accounts which can sign [**extrinsic calls**](./learn-extrinsics.md/#pallets-and-extrinsics)
-made to specific [**pallets**](./learn-extrinsics.md/#pallets-and-extrinsics) on behalf of the proxied account. There is
-thus the possibility to create staking proxy accounts that can be used to sign only extrinsic calls
-to staking, session and utility pallets.
+Proxy accounts are special accounts which can sign
+[**extrinsic calls**](./learn-extrinsics.md/#pallets-and-extrinsics) made to specific
+[**pallets**](./learn-extrinsics.md/#pallets-and-extrinsics) on behalf of the proxied account. There
+is thus the possibility to create staking proxy accounts that can be used to sign only extrinsic
+calls to staking, session and utility pallets.
 
 ![stash-controller](../assets/stash-controller.png)
 
 Usually, with the stash-controller setup, the stash still needs to sign for actions that are
 performed less often, i.e. bonding more funds and changing the controller (see figure above). The
 controller is used to sign for those staking actions that are performed more often such as
-nominating. Remember, staking on polkadot is not a set-and-forget action, as a nominator you will
-need to monitor the performance of your validators and make changes if needed. Also, each time you
-sign with an account, you expose the private key of that account to the internet with consequent
-risk of attack. Ideally, accounts with high economic power like the stash must be and remain as
-isolated as possible. With a staking proxy, the stash account is even more isolated than when using
-a controller. This does not necessarily mean that the staking proxy can sign for all staking-related
-transactions. Below we show two main configurations that affect a staking proxy's permissions.
+nominating. Remember, staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
+not a set-and-forget action, as a nominator you will need to monitor the performance of your
+validators and make changes if needed. Also, each time you sign with an account, you expose the
+private key of that account to the internet with consequent risk of attack. Ideally, accounts with
+high economic power like the stash must be and remain as isolated as possible. With a staking proxy,
+the stash account is even more isolated than when using a controller. This does not necessarily mean
+that the staking proxy can sign for all staking-related transactions. Below we show two main
+configurations that affect a staking proxy's permissions.
 
 ### Stash is also Controller
 
@@ -98,16 +104,16 @@ On Polkadot and Kusama, the instance of the pallet
 
 :::
 
-In {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} NPoS nomination intents are
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS nomination intents are
 placed in a semi-sorted list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
-{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The Bags-List
-substrate pallet is designed to be self-maintaining, with minimal effort from the blockchain, making
-it extremely scalable. The bags list has two primary components, bags and nodes (or nominators'
-accounts), with bags containing the nodes with bonded balance within a specific range. In the figure
-below the 1st empty bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT,
-the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are the nominators'
-accounts with bonded tokens (in the example shown below, there are eight nomination intents) that
-will be put inside each of those three bags depending on their stake.
+{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }} The
+Bags-List substrate pallet is designed to be self-maintaining, with minimal effort from the
+blockchain, making it extremely scalable. The bags list has two primary components, bags and nodes
+(or nominators' accounts), with bags containing the nodes with bonded balance within a specific
+range. In the figure below the 1st empty bag will contain nominators whose bonded balance is in the
+range of 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are
+the nominators' accounts with bonded tokens (in the example shown below, there are eight nomination
+intents) that will be put inside each of those three bags depending on their stake.
 
 ![bags list example 0](../assets/bags-list-example-0.png)
 
@@ -122,12 +128,13 @@ a lesser stake requires an additional step (more on this later).
 ![bags list example 1](../assets/bags-list-example-1.png)
 
 The mentioned two nodes (19 DOT and 8 DOT) have the option to move up in their respective bags,
-which can put them in front of the nodes with less stake than them (see figure below). This action must be done
-manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet instance.
-Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put automatically in
-the 1st bag (i.e. automatic `rebag`) because the total number of bonded tokens will now be within the range of the 1st bag. That node with now 21 DOT will be put at the tail end of the 1st bag with the
-possibility to manually put itself in front of "older" nodes with less than 21 DOT (if there are
-any).
+which can put them in front of the nodes with less stake than them (see figure below). This action
+must be done manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet
+instance. Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put
+automatically in the 1st bag (i.e. automatic `rebag`) because the total number of bonded tokens will
+now be within the range of the 1st bag. That node with now 21 DOT will be put at the tail end of the
+1st bag with the possibility to manually put itself in front of "older" nodes with less than 21 DOT
+(if there are any).
 
 ![bags list example 2](../assets/bags-list-example-2.png)
 
@@ -147,7 +154,8 @@ storage. In the current staking system configuration, the bags list keeps
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
 nomination intents, of which, at most
-{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
 come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
@@ -171,10 +179,11 @@ staking/election system.
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
 Submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
+{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
 nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
-the number of tokens bonded is higher than the minimum active bond. For more information, see
-the [nominator guide](learn-nominator.md).
+the number of tokens bonded is higher than the minimum active bond. For more information, see the
+[nominator guide](learn-nominator.md).
 
 :::
 
@@ -271,11 +280,14 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is
 currently
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }},
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/>, :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/>, :kusama }}
 although this can be modified via runtime upgrade. A validator with more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
 nominators is _oversubscribed_. When payouts occur, only the top
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
 nominators as measured by the amount of stake allocated to that validator will receive rewards. All
 other nominators are essentially "wasting" their stake - they used their nomination to elect that
 validator to the active stake, but receive no rewards in exchange for doing so.
@@ -408,9 +420,10 @@ already maxed out.
 
 ## Simple Payouts
 
-Polkadot and Kusama make stakers claim their rewards for past eras by submitting a transaction. This
-naturally leads to spreading out reward distribution, as people make transactions at disparate
-times, rather than updating the accounts of all stakers in a single block.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes stakers claim their rewards for
+past eras by submitting a transaction. This naturally leads to spreading out reward distribution, as
+people make transactions at disparate times, rather than updating the accounts of all stakers in a
+single block.
 
 Even if everyone submitted a reward claim at the same time, the fact that they are individual
 transactions would allow the block construction algorithm to process only a limited number per block
@@ -418,17 +431,19 @@ and ensure that the network maintains a constant block time. If all rewards were
 block, this could cause serious issues with the stability of the network.
 
 Simple payouts require one transaction per validator, per [era](../general/glossary.md##era), to
-claim rewards. The reason Polkadot requires this is to avoid an attack where someone has several
-thousand accounts nominating a single validator. The major cost in reward distribution is mutating
-the accounts in storage, and Polkadot cannot pay out several thousand accounts in a single
-transaction.
+claim rewards. The reason {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} requires
+this is to avoid an attack where someone has several thousand accounts nominating a single
+validator. The major cost in reward distribution is mutating the accounts in storage, and
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} cannot pay out several thousand
+accounts in a single transaction.
 
 ### Claiming Rewards
 
-Polkadot stores the last 84 eras of reward information (e.g. maps of era number to validator points,
-staking rewards, nomination exposure, etc.). Rewards will not be claimable more than 84 eras after
-they were earned. This means that all rewards must be claimed within a maximum of 84 eras, although
-under certain circumstances (described below) this may be as low as 28 eras.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} stores the last 84 eras of reward
+information (e.g. maps of era number to validator points, staking rewards, nomination exposure,
+etc.). Rewards will not be claimable more than 84 eras after they were earned. This means that all
+rewards must be claimed within a maximum of 84 eras, although under certain circumstances (described
+below) this may be as low as 28 eras.
 
 If a validator kills their stash, any remaining rewards will no longer be claimable. Before doing
 this, however, they would need to first stop validating and then unbond the funds in their stash,
@@ -436,21 +451,22 @@ which takes 28 eras. If a validator were to immediately chill and start unbondin
 calculated, and nobody issued a payout for that era from that validator in the next 28 eras, the
 reward would no longer be claimable.
 
-:::info 
+:::info
 
-In order to be absolutely sure that staking rewards can be claimed, users should trigger a
-payout before 28 eras have passed.
+In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout
+before 28 eras have passed.
 
 :::
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
-fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will
-automatically calculate that validator's reward, find the top
+fee. Someone must submit a transaction with a validator ID and an era index.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will automatically calculate that
+validator's reward, find the top
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
 nominators for that era, and distribute the rewards pro rata.
 
-:::note 
+:::note
 
 The Staking system only applies the highest
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
@@ -495,27 +511,26 @@ transaction.
 4. Staking operations at the end of an era are closed to allow the off-chain validator election to
    take place. See [Off-chain Phragmén](learn-phragmen.md#off-chain-phragmen) for more information.
 
-
 ## Inflation
 
-{{ polkadot: DOT is an inflationary token. In fact, there is no maximum number of DOT. On Polkadot
-network, inflation is
-[set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576),
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is an inflationary token. In fact, there is
+no maximum number of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. On
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, inflation is
+{{ polkadot: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), :polkadot }}
+{{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), :kusama }}
 with validator rewards being a function of the amount staked and the remainder going to the
 treasury.
 
 :::info
 
 DOT went through [redenomination](../general/redenomination.md) in 2020 that saw the DOT token
-supply increase by 100 times. The current token supply on Polkadot is
-<RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>
-(Over 1.2 Billion DOT).
+supply increase by 100 times.
 
-::: :polkadot }}
+The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
+{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093} filter="humanReadable"/> (Over 12 Million KSM). :kusama }}
 
-{{ kusama: KSM is inflationary; there is no maximum number of KSM. On Kusama network, inflation is [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), with validator rewards being a function of the amount staked
-and the remainder going to the treasury. The current token supply on Kusama is <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/>
-(Over 12 Million KSM). :kusama }}
+:::
 
 There is an _ideal staking rate_ that the network tries to maintain. The goal is to have the _system
 staking rate_ meet the _ideal staking rate_. The system staking rate would be the total amount
@@ -533,20 +548,20 @@ According to the inflation model, this would suggest that if you do not use your
 
 :::
 
-The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
-estimation of all DOT that should be staked, per parachain slot).
+The ideal staking rate on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also varies
+with the number of parachains (50% is the current estimation of all
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} that should be staked, per parachain slot).
 
 :::info The ideal staking rate varies based on the number of parachains
 
-The current staking rate on Polkadot still assumes the absence of parachains, with the suggested
-ideal staking rate of 75%. You can track the progress on the issue to adjust it
-[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama,
-which has an ideal staking rate of approximately 50% with 50 parachains. When the number of slots
-reaches 60, the ideal staking rate is 45%.
-[Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the
-code for reference. This code assumes that the number of slots auctioned correspond to the number of
-parachains on the relaychain, which may not be true as new slots can be occupied by old parachains
-that are renewing their lease. You can also track the progress on resolving this specific issue
+The current staking rate on
+{{ polkadot: Polkadot still assumes the absence of parachains, with the suggested ideal staking rate of 75%. :polkadot }}
+{{ polkadot: You can track the progress on the issue to adjust it [here](https://github.com/paritytech/polkadot/pull/5872). :polkadot }}
+{{ kusama: Kusama has an ideal staking rate of approximately 50% with 50 parachains. :kusama }}
+{{ kusama: When the number of slots reaches 60, the ideal staking rate is 45%. [Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the code for reference. :kusama }}
+This code assumes that the number of slots auctioned correspond to the number of parachains on the
+relaychain, which may not be true as new slots can be occupied by old parachains that are renewing
+their lease. You can also track the progress on resolving this specific issue
 [here](https://github.com/paritytech/polkadot/pull/5872).
 
 :::
