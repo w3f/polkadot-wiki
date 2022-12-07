@@ -34,7 +34,8 @@ for more information about key security.
 
 <iframe width="560" height="315" src="https://youtube.com/embed/DNU0p5G0Gqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-The **most user-friendly** way to create a Polkadot or Kusama address is through the
+The **most user-friendly** way to create a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
 to generate your account - the accounts are stored only in your browser, so purging the cache will
 wipe your accounts as well. You would then have to recreate them using the seed phrase given to you
@@ -52,8 +53,9 @@ keep your funds in cold storage when dealing with non-trivial amounts. For impro
 can securely stash away the seed phrase for your accounts and remove all traces of the accounts from
 your computer after creating them.
 
-Besides the extension and the default UI, Polkadot and Kusama addresses can also be created with the
-[Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
+Besides the extension and the default UI,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can also be created with
+the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
 intended for users comfortable with using the command line and can seem intimidating but is quite
 approachable. Follow the instructions in the
 [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/). When used
@@ -68,7 +70,8 @@ Hardware wallet integration is possible with Ledger. A full guide is available
 
 Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but
 bear in mind that some of these are **unaudited** and are not officially affiliated with Web3
-Foundation or the Polkadot project unless otherwise stated.
+Foundation or the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless
+otherwise stated.
 
 :::info How-to guides to generate an account
 
@@ -92,24 +95,38 @@ If you prefer video instructions for creating an account using Polkadot JS, see
 
 ### Account Address Format
 
-An account created for Polkadot can also be used on multiple chains in the Polkadot ecosystem. More specifically, the account of a chain that uses the `*25519` account address format (the latest list can be accessed on the [ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)) is cross-compatible with all the chains that use the similar format. To switch between the accounts on different chains, you can follow
-the guidelines in
+An account created for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can also be
+used on multiple chains in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+ecosystem. More specifically, the account of a chain that uses the `*25519` account address format
+(the latest list can be accessed on the
+[ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json))
+is cross-compatible with all the chains that use the similar format. To switch between the accounts
+on different chains, you can follow the guidelines in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
-[Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert
-your address between the different chain formats.
+[Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert your
+address between the different chain formats.
 
 :::info Using the same account on multiple chains - Pros and Cons
 
-The address format differs from chain to chain, but that difference is only visual. The same private key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain full access to the accounts on all other chains. This also has implications for the account holder's privacy, as knowing the identity of an account on one chain can expose the account holder's identity on all the chains. In the Accounts tab, the Polkadot-JS UI displays a warning message next to each Account that you are using on multiple chains, and recommends to use different Accounts on different chains (see below).
+The address format differs from chain to chain, but that difference is only visual. The same private
+key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using
+a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic
+phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain
+full access to the accounts on all other chains. This also has implications for the account holder's
+privacy, as knowing the identity of an account on one chain can expose the account holder's identity
+on all the chains. In the Accounts tab, the Polkadot-JS UI displays a warning message next to each
+Account that you are using on multiple chains, and recommends to use different Accounts on different
+chains (see below).
 
 ![warning multiple chains](../assets/warning-multichain-account.png)
 
 :::
 
-On Polkadot-JS Extension, you can copy your address by clicking on the account's icon while the desired chain format is
-active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful
-icon of your account will copy it in that format. While in Polkadot mode, that address format will
-be copied, and so on.
+On Polkadot-JS Extension, you can copy your address by clicking on the account's icon while the
+desired chain format is active. E.g. selecting "Substrate" as the format will change your address,
+and clicking the colorful icon of your account will copy it in that format. While in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} mode, that address format will be
+copied, and so on.
 
 ### Backing Up Accounts
 
@@ -132,15 +149,15 @@ your account, and have the seed phrase ([mnemonic phrase](learn-accounts#portabi
 
 :::info
 
-For guidelines about how to create an account using Polkadot Extension, see
+For guidelines about how to create an account using the Polkadot Extension, see
 [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
 [**this support article**](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
 
 :::
 
-The Polkadot-JS Browser Extension (simply referred to as Polkadot Extension) provides a reasonable
-balance of security and usability. It provides a separate local mechanism to generate your address
-and interact with Polkadot.
+The Polkadot-JS Browser Extension (simply referred to as the Polkadot Extension) provides a
+reasonable balance of security and usability. It provides a separate local mechanism to generate
+your address and interact with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 This method involves installing the Polkadot Extension and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows the signing of transactions and
@@ -170,11 +187,11 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
 `ACCOUNT 1` using the browser extension you must follow the following steps:
 
 - On the browser extension go to `ACCOUNT 1` and click "Forget account". This action will delete the
-  access to your account. Note that your tokens are still in your account on the polkadot blockchain
-  network.
-- On the browser extension click the "+" button in the topright corner and select the option "Import
-  account from pre-existing seed". After entering the mnemonic phrase you can chose a new password
-  `PSW 2`.
+  access to your account. Note that your tokens are still in your account on the
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain network.
+- On the browser extension click the "+" button in the top right corner and select the option
+  "Import account from pre-existing seed". After entering the mnemonic phrase you can chose a new
+  password `PSW 2`.
 
 :::info JSON files do not allow to change account passwords
 
@@ -233,9 +250,10 @@ For guidelines about how to create an account using Polkadot-JS UI, see
 :::caution
 
 If you use this method to create your account and clear your cookies in your browser, your account
-will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure you store your
-seed phrase in a safe place, or download the account's JSON file if using the Polkadot{.js} browser
-extension. Learn more about account backup and restoration [here](#restore-account-on-the-polkadot-js-ui).
+will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure
+you store your seed phrase in a safe place, or download the account's JSON file if using the
+Polkadot{.js} browser extension. Learn more about account backup and restoration
+[here](#restore-account-on-the-polkadot-js-ui).
 
 :::
 
