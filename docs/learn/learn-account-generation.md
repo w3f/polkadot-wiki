@@ -99,7 +99,7 @@ An account created for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusa
 used on multiple chains in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 ecosystem. More specifically, the account of a chain that uses the `*25519` account address format
 (the latest list can be accessed on the
-[ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json))
+[ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
 is cross-compatible with all the chains that use the similar format. To switch between the accounts
 on different chains, you can follow the guidelines in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
