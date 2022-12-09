@@ -140,38 +140,43 @@ async function LoadAPI(chain) {
 
 // Get the auction bidding start, bidding end, lease period start and lease period end blocks from the auction start block
 async function GetAuctionBlocks(api, currentBlock, startBlock, chain) {
-  // If dealing with a future auction start block a hash will not yet exist
-  if (startBlock > currentBlock) {
-    // On-boarding start and end will not yet be available on-chain
-    if (chain === "Polkadot") {
-      const biddingStarts = startBlock + PolkadotStartingPhase;
-      const auctionEndBlock = biddingStarts + PolkadotEndingPeriod;
-      return [biddingStarts, auctionEndBlock, null, null]
+  try {
+    // If dealing with a future auction start block a hash will not yet exist
+    if (startBlock > currentBlock) {
+      // On-boarding start and end will not yet be available on-chain
+      if (chain === "Polkadot") {
+        const biddingStarts = startBlock + PolkadotStartingPhase;
+        const auctionEndBlock = biddingStarts + PolkadotEndingPeriod;
+        return [biddingStarts, auctionEndBlock, null, null]
+      }
+      else if (chain === "Kusama") {
+        const biddingStarts = startBlock + KusamaStartingPhase;
+        const auctionEndBlock = biddingStarts + KusamaEndingPeriod;
+        return [biddingStarts, auctionEndBlock, null, null]
+      }
+    } else {
+      const hash = await BlockToHash(startBlock);
+      const apiAt = await api.at(hash);
+      // If the starting block has already been produced all values are available on-chain
+      const auctionLeasePeriod = (await apiAt.query.auctions.auctionInfo()).toJSON()[0];
+      if (chain === "Polkadot") {
+        const biddingStarts = startBlock + PolkadotStartingPhase;
+        const auctionEndBlock = biddingStarts + PolkadotEndingPeriod;
+        const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
+        const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
+        return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
+      }
+      else if (chain === "Kusama") {
+        const biddingStarts = startBlock + KusamaStartingPhase;
+        const auctionEndBlock = biddingStarts + KusamaEndingPeriod;
+        const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
+        const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
+        return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
+      }
     }
-    else if (chain === "Kusama") {
-      const biddingStarts = startBlock + KusamaStartingPhase;
-      const auctionEndBlock = biddingStarts + KusamaEndingPeriod;
-      return [biddingStarts, auctionEndBlock, null, null]
-    }
-  } else {
-    const hash = await BlockToHash(startBlock);
-    const apiAt = await api.at(hash);
-    // If the starting block has already been produced all values are available on-chain
-    const auctionLeasePeriod = (await apiAt.query.auctions.auctionInfo()).toJSON()[0];
-    if (chain === "Polkadot") {
-      const biddingStarts = startBlock + PolkadotStartingPhase;
-      const auctionEndBlock = biddingStarts + PolkadotEndingPeriod;
-      const onboardStartBlock = auctionLeasePeriod * PolkadotSlotLeasePeriod + PolkadotSlotLeaseOffset;
-      const onboardEndBlock = onboardStartBlock + DaysToBlocks(PolkadotLeasePeriodPerSlot * 12 * 7);
-      return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
-    }
-    else if (chain === "Kusama") {
-      const biddingStarts = startBlock + KusamaStartingPhase;
-      const auctionEndBlock = biddingStarts + KusamaEndingPeriod;
-      const onboardStartBlock = auctionLeasePeriod * KusamaSlotLeasePeriod + KusamaSlotLeaseOffset;
-      const onboardEndBlock = onboardStartBlock + DaysToBlocks(KusamaLeasePeriodPerSlot * 6 * 7);
-      return [biddingStarts, auctionEndBlock, onboardStartBlock, onboardEndBlock]
-    }
+  } catch (error) {
+    console.log(`Failure updating auction blocks on ${chain} at starting block ${startBlock}.`)
+    throw error.message;
   }
 }
 
