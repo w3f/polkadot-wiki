@@ -16,7 +16,7 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. You can now stake on 
+help you get started. You can now stake on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
 {{ polkadot: <RPC network="polkadot" path="query.nomiationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.nomiationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
@@ -88,7 +88,7 @@ get elected and become active. For more information about the election algorithm
 [this](learn-phragmen.md) page on the wiki or
 [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
 research article. As a nominator, a minimum of
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 is required to submit an intention to nominate, which can be thought of as registering to be a
 nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
