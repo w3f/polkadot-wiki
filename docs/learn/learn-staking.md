@@ -527,7 +527,7 @@ users to withdraw. For in-depth understanding, check the
 
 ### Cons of Staking
 
-- Tokens will be locked away for about 28 days on Polkadot after unbonding, and seven days on
+- Tokens will be locked away for about {{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }} after unbonding, and seven days on
   Kusama. No rewards will be earned during the unbonding period.
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](#slashing)).
