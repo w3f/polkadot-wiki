@@ -10,7 +10,7 @@ slug: ../build-wallets
 The integration of a [wallet](../general/glossary.md#wallet) with {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} allows for simple and easy access to private keys and signing
 transactions. Multiple wallets are listed below, some developed by teams in the ecosystem with the help of on-chain treasury funding, 
-and some developed by Parity. Most community members prefer to use the more feature rich wallets supported by the treasury, as Polkadot.js 
+and some developed by Parity. Most community members use the more feature rich wallets supported by the treasury, as Polkadot.js 
 is a very bare bones wallet extension.
 
 :::tip Non-Custodial Wallets
