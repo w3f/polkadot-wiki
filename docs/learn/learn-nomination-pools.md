@@ -65,6 +65,29 @@ The earnings of the pool are split pro rata to a member's stake in the bonded po
 staking rewards for members will be the same as if they were a nominator). Importantly, slashes are
 also applied proportionally to members who may have been actively bonded.
 
+:::info Nomination Pool Stats
+
+```suggestion
+- There can be a maximum of
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
+  members (there are currently
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={2295} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
+  members).
+- There can be a maximum of
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
+  pools (there are currently
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={64} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
+  pools).
+- {{ polkadot: No limit on :polkadot }}
+  {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
+  members per pool.
+
+:::info
+
 ## Key Components
 
 - Bonded Pool: Tracks the distribution of actively staked funds.
@@ -153,29 +176,6 @@ balance.
   takes 28 eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
-:::info Kusama Pool Stats
-
-- There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
-  members (there are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={2166} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={385} /> :kusama }}
-  members).
-- There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
-  pools (there are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={113} /> :kusama }}
-  pools).
-- There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
-  members per pool.
-
-:::info
-
 ## Pool Administration
 
 ### States
@@ -254,7 +254,7 @@ A pool can be pushed into the “destroying” state via one of:
 - Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
   wiped from state.
 
-## Slashing
+## Nomination Pools - Slashing
 
 If a pool’s underlying nomination account is slashed by the staking system, then the slash is
 distributed evenly across the bonded pool and the unbonding pools from slash era+1 through the slash
