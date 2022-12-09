@@ -333,8 +333,8 @@ Two different accounts can be used to securely manage your funds while staking.
   stash account, which would effectively compound the rewards you receive over time. You could also
   choose to have them deposited to your controller account or a different account as a free
   (transferable) balance. If you are a validator, it can also be used to set your
-  [session keys](learn-cryptography.md). Controller accounts only need sufficient funds to pay
-  for the transaction fees.
+  [session keys](learn-cryptography.md). Controller accounts only need sufficient funds to pay for
+  the transaction fees.
 
 :::warning
 
@@ -503,24 +503,36 @@ For more on chilling, see the "[How to Chill][]" page on this wiki.
 
 ### Pros of Staking
 
-- 10% inflation/year when the network launches
-- 50% targeted active staking
-- ~20% annual nominal return
+- Earn rewards for contributing to the network's security through staking.
+- Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
+- Can choose up-to
+  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+ {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} validators which can help to decentralize the network through the sophisticated
+  [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
+- 10% inflation/year of the tokens is primarily intended for staking rewards.
 
-Up until now, the network has been following an inflation model that excludes the metric of active
-parachains. The ideal staking rate is not always 50%, as the number of active parachains influences
-the available liquidity that is available to secure the network.
+When the system staking rate matches with the ideal staking rate, the entire inflation of the
+network is given away as the staking rewards.
+{{ polkadot: Up until now, the network has been following an inflation model that excludes the metric of active parachains. :polkadot }}
+The ideal staking rate is a dynamic value - as the number of active parachains influences the
+available liquidity that is available to secure the network.
 
-Keep in mind that when the system's staking rate is lower than the ideal staking rate, the annual
-nominal return rate will be higher, encouraging more users to use their tokens for staking. On the
-contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal
-return will be less, encouraging some users to withdraw.
+Any divergence from the ideal staking rate will result in the distribution of a proportion of the
+newly minted tokens through inflation to go to the treasury. Keep in mind that when the system's
+staking rate is lower than the ideal staking rate, the annual nominal return rate will be higher,
+encouraging more users to use their tokens for staking. On the contrary, when the system staking
+rate is higher than the ideal staking rate, the annual nominal return will be less, encouraging some
+users to withdraw. For in-depth understanding, check the
+[inflation](learn-staking-advanced.md#inflation) section on the Wiki.
 
 ### Cons of Staking
 
-- Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
-- Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
-- You want to use the tokens for a parachain slot.
+- Tokens will be locked away for about {{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }} after unbonding, and seven days on
+  Kusama. No rewards will be earned during the unbonding period.
+- Possible punishment in case of the active validator found to be misbehaving (see
+  [slashing](#slashing)).
+- Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
+  transfer them to different account etc.
 
 ## How many Validators does Polkadot have?
 
