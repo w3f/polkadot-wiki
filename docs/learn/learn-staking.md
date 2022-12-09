@@ -16,7 +16,7 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. You can now on stake
+help you get started. You can now stake on 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
 {{ polkadot: <RPC network="polkadot" path="query.nomiationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.nomiationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
