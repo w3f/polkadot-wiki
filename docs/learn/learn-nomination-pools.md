@@ -81,7 +81,7 @@ also applied proportionally to members who may have been actively bonded.
   {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={64} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :kusama }}
   pools).
-- {{ polkadot: Unlimited :polkadot }}
+- {{ polkadot: No limit on :polkadot }}
   {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
   members per pool.
 
