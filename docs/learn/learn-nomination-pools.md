@@ -149,24 +149,24 @@ withdrawn to the account. The rewards are then accrued based on the updated bond
   takes 28 eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
-:::info Kusama Pool Stats
+:::info Nomination Pool Stats
 
 - There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :polkadot }}
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
   members (there are currently
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :polkadot }}
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :kusama }}
   members).
 - There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :kusama }}
   pools (there are currently
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :polkadot }}
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={59} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :kusama }}
   pools).
 - There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :polkadot }}
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :kusama }}
   members per pool.
 
@@ -247,7 +247,7 @@ A pool can be pushed into the “destroying” state via one of:
 - Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
   wiped from state.
 
-## Slashing
+## Slashing of Nomination Pools
 
 If a pool’s underlying nomination account is slashed by the staking system, then the slash is
 distributed evenly across the bonded pool and the unbonding pools from slash era+1 through the slash
