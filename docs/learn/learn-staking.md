@@ -518,7 +518,7 @@ The ideal staking rate is a dynamic value - as the number of active parachains i
 available liquidity that is available to secure the network.
 
 Any divergence from the ideal staking rate will result in the distribution of a proportion of the
-newly minted tokens through inflation to go to the treasury.Keep in mind that when the system's
+newly minted tokens through inflation to go to the treasury. Keep in mind that when the system's
 staking rate is lower than the ideal staking rate, the annual nominal return rate will be higher,
 encouraging more users to use their tokens for staking. On the contrary, when the system staking
 rate is higher than the ideal staking rate, the annual nominal return will be less, encouraging some
