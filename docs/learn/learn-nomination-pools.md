@@ -247,7 +247,7 @@ A pool can be pushed into the “destroying” state via one of:
 - Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
   wiped from state.
 
-## Slashing of Nomination Pools
+## Nomination Pools - Slashing
 
 If a pool’s underlying nomination account is slashed by the staking system, then the slash is
 distributed evenly across the bonded pool and the unbonding pools from slash era+1 through the slash
