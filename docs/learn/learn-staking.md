@@ -507,8 +507,7 @@ For more on chilling, see the "[How to Chill][]" page on this wiki.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
 - Can choose up-to
   {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
-  which can help decentralize the network through the sophisticated
+ {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} validators which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
 - 10% inflation/year of the tokens is primarily intended for staking rewards.
 
