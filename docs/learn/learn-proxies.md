@@ -34,7 +34,7 @@ risk their lives to ensure the VIP's protection. But proxies are also useful in 
 as efficient account management at the corporate level. They also provide an elegant solution to
 change signatories within multi-signature accounts, and they can be used within proxy calls and
 nested proxy calls. In this page we will explore all these interesting use cases of proxies within
-the Polkadot ecosystem.
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as
 your primary token-holding account and don't want to access it very often, but you want to
@@ -77,9 +77,11 @@ proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama 
 - Identity Judgement
 - Auction
 
-When a proxy account makes a transaction, Polkadot filters the desired transaction to ensure that
-the proxy account has the appropriate permission to make that transaction on behalf of the cold
-account. For example, staking proxies have permission to do only staking-related transactions.
+When a proxy account makes a transaction,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
+ensure that the proxy account has the appropriate permission to make that transaction on behalf of
+the cold account. For example, staking proxies have permission to do only staking-related
+transactions.
 
 ### Any Proxy
 
@@ -110,7 +112,8 @@ on governance proxies or watch our
 
 :::info
 
-Visit the [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more detailed information about staking proxies.
+Visit the [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more
+detailed information about staking proxies.
 
 :::
 
@@ -129,7 +132,6 @@ Use a [non-transfer](#non-transfer-proxy) instead of a staking proxy to particip
 pools. The staking proxy is not enabled to make successful calls to the nomination pools pallet.
 
 :::
-
 
 ### Identity Judgement Proxy
 
@@ -287,9 +289,10 @@ change the name of _anonymous_ proxy. People suggested _keyless accounts_ since 
 private key and are proxied accounts. However, multisig accounts are also keyless (but
 deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as
 proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that
-has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of 
-pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or 
-the discussion on [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
+has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of
+pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or
+the discussion on
+[Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
 
 :::
 
