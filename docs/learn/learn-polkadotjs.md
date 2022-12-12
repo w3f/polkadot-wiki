@@ -107,7 +107,7 @@ To populate the Apps UI, the web app queries the Polkadot-JS API. The API then q
 information that the UI will display on the screen. You can choose which node to connect to by
 changing it in the upper-left-hand corner of the screen.
 
-Let's see how we can query on-chain data with Polkadot-JS on the Polkadot network with an example.
+Let's see how we can query on-chain data with Polkadot-JS UI on the Polkadot network with an example.
 To find out the current value for existential deposit, navigate to Developer > Chain state >
 Constants and query the balances pallet for existential deposit as shown in the snapshot below. You
 need to click on the plus button to execute the query. The value displayed is in
