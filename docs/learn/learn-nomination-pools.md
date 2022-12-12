@@ -108,7 +108,10 @@ A member delegates funds to a pool by transferring some amount to the pool’s b
 ability to bond additional funds, or re-stake rewards as long as they are already actively bonded.
 Note that a member may only belong to one pool at a time.
 
-{{ kusama: **The current minimum bond to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.** :kusama }}
+**The current minimum bond to join a pool on**
+{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
+{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.** :polkadot }}
+{{ kusama: **is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.** :kusama }}
 
 :::info
 
@@ -150,7 +153,7 @@ unbonding duration has passed
 eras which correspond to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
-days on {{ polkadot: Polkadot). :polkadot }} {{ kusama: Kusama). :kusama }} A member may withdraw
+days on {{ polkadot: Polkadot), :polkadot }} {{ kusama: Kusama), :kusama }} a member may withdraw
 their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their
 pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section
 in
@@ -205,7 +208,10 @@ must always be a member as long as the pool exists; they will be the last member
 they always have some skin in the game. Significant stake from the depositor is always a good
 indicator for the pool's credibility.
 
-{{ kusama: **The current minimum bond to create a pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
+**The current minimum bond to create a pool on**
+{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
+{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable" />.** :polkadot }}
+{{ kusama: **is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
 
 The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
 navigate to Network > Staking > Pools and click on Add Pool button.
