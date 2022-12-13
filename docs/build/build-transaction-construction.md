@@ -80,7 +80,8 @@ serialized call data specific to your transaction. You can read more about the m
 and how to get it in the
 [Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
-\* Polkadot supports sr25519, ed25519, and ECDSA as signing schemes.
+\* {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports sr25519, ed25519, and
+ECDSA as signing schemes.
 
 **Summary**
 
@@ -133,7 +134,7 @@ Save the output and bring it to the machine that you will broadcast from, enter 
 signature field, and send the transaction (or just return the serialized transaction if using
 `sendOffline`).
 
-## Tx Wrapper Polkadot
+## Tx Wrapper
 
 If you do not want to use the CLI for signing operations, Parity provides an SDK called
 [TxWrapper Core](https://github.com/paritytech/txwrapper-core) to generate and sign transactions
