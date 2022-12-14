@@ -18,15 +18,17 @@ network.
 
 :::info Gov2 is live on Kusama Network
 
-Learn about the upcoming changes to the governance on Polkadot in this [Wiki doc on Gov2](learn-gov2.md).
+Learn about the upcoming changes to the governance on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
+[Wiki doc on Gov2](learn-gov2.md).
 
 :::
 
 :::caution Upcoming governance changes
 
-The contents in this guide are subject to change as per the recent efforts to modify Polkadot
-Governance. See this [pull request](https://github.com/paritytech/substrate/pull/10195) for more
-details\*\*.
+The contents in this guide are subject to change as per the recent efforts to modify
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Governance. See this
+[pull request](https://github.com/paritytech/substrate/pull/10195) for more details\*\*.
 
 :::
 
@@ -255,7 +257,8 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-<VLTable network="polkadot"/>
+{{ polkadot: <VLTable network="polkadot"/> :polkadot }}
+{{ kusama: <VLTable network="kusama"/> :kusama }}
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals

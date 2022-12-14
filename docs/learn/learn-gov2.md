@@ -113,7 +113,7 @@ outcome, i.e. being voted on.
 
 If a proposal is submitted by the public or council there is a fixed enactment delay period of
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={115,200} filter="blocksToDays" /> :kusama }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}
 days. Proposals submitted as part of the enactment of a prior referendum can set the enactment delay
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
@@ -148,8 +148,9 @@ to show support
   selected to be a referendum in the next voting cycle.
 
 Note that this may be different from the absolute number of endorsements; for instance, three
-accounts bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a
-single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}.
+accounts bonding
+{{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a single DOT each. :polkadot }}
+{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. }}
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
@@ -258,7 +259,8 @@ votes = tokens * conviction_multiplier
 The `conviction multiplier` increases the vote multiplier by one every time the number of lock
 periods double.
 
-<VLTable network="polkadot"/>
+{{ polkadot: <VLTable network="polkadot"/> :polkadot }}
+{{ kusama: <VLTable network="kusama"/> :kusama }}
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals
@@ -267,7 +269,8 @@ total), and one lock period equals
 days. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction
 by 5.5. For additional information regarding the timeline of governance events, check out the
 governance section on the
-{{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.
+{{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance). :polkadot }}
+{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance). :kusama }}
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.
@@ -285,7 +288,7 @@ system.
 In Governance v1, passive stakeholders are represented on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} via a governing body known as the
 "council". The council is an on-chain entity comprising several actors, each represented as an
-on-chain account. On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council
+on-chain account. On {{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} the council
 currently consists of
 {{ polkadot: <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" /> :kusama }}
@@ -336,8 +339,9 @@ In Governance v1, the Technical Committee (TC) was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 TC is composed of the teams that have successfully implemented or specified either a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
-added or removed from the TC via a simple majority vote of the [Council](#council).
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} host. Teams are added or removed from
+the TC via a simple majority vote of the [Council](#council).
 
 The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
 faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
@@ -356,10 +360,10 @@ details below.
 ## Polkadot Fellowship
 
 The Fellowship is a mostly self-governing expert body with a primary goal of representing humans who
-embody and contain the technical knowledge base of the Polkadot network and protocol. This is
-accomplished by associating a rank with members to categorize the degree to which the system expects
-their opinion to be well-informed, of a sound technical basis and in line with the interests of
-Polkadot.
+embody and contain the technical knowledge base of the Kusama and/or Polkadot networks and
+protocols. This is accomplished by associating a rank with members to categorize the degree to which
+the system expects their opinion to be well-informed, of a sound technical basis and in line with
+the interests of Polkadot and Kusama.
 
 Unlike the current Technical Collective, it is designed to be far broader in membership (i.e. to
 work well with even tens of thousands of members) and with far lower barrier to entry (both in terms
@@ -369,8 +373,8 @@ Fellowship is as easy as placing a small deposit.
 Members of the Fellowship can vote on any given Fellowship proposal and the aggregate opinion of the
 members (weighted by their rank) constitutes the Fellowship's considered opinion.
 
-The mechanism by which the Fellowship votes is the same as what is used for Polkadot stakeholder
-voting for a proposed referendum.
+The mechanism by which the Fellowship votes is the same as what is used for Polkadot and Kusama
+stakeholder voting for a proposed referendum.
 
 ### Ranking System
 
@@ -419,8 +423,8 @@ If both conditions are true, the operation executes with Root-level privileges.
 
 This system enables the ability to have a new parallel Track (Whitelisted-Root Origin), whose
 parameters allow for a shorter voting turnaround. Through an open and transparent process, a body of
-global experts on the Polkadot protocol have determined that the action is both safe and
-time-critical.
+global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have
+determined that the action is both safe and time-critical.
 
 ### Blacklisting
 
