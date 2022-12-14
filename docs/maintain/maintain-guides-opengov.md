@@ -11,6 +11,13 @@ slug: ../maintain-guides-opengov
 
 ### Submitting a Preimage
 
+The act of making a proposal is split from submitting the preimage for the proposal since the
+storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage
+submission to come as a separate transaction means that another account could submit the preimage
+for you and pay the fee for it.
+
+![submit preimage](../assets/governance/opengov-submit-preimage.png)
+
 ### Submitting a Proposal
 
 ## Voting on Referenda
