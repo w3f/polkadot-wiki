@@ -15,6 +15,13 @@ slug: ../maintain-guides-opengov
 
 ## Voting on Referenda
 
+:::caution
+
+Use `convictionVoting.vote` for voting on Referenda in OpenGov instead of `democracy.vote` (which
+only works for old version of governance)
+
+:::
+
 ## Origins and Tracks
 
 Whitelist
