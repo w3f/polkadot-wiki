@@ -1,10 +1,10 @@
 ---
-id: learn-gov2
-title: Governance V2
-sidebar_label: Governance V2
-description: Learn about Polkadot’s next generation of decentralised governance.
+id: learn-opengov
+title: OpenGov: Polkadot’s next generation of Decentralized Governance.
+sidebar_label: Governance (OpenGov)
+description: Learn about Polkadot’s next generation of decentralized governance.
 keywords: [governance, referenda, proposal, voting, endorse]
-slug: ../learn-gov2
+slug: ../learn-opengov
 ---
 
 import RPC from "./../../components/RPC-Connection";
@@ -23,7 +23,7 @@ the pipeline (v2.5).
 
 :::
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralised governance
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralized governance
 system (v1) was comprised of three main components.
 
 1. Technical Committee - A technocratic committee to manage upgrade timelines.
@@ -38,13 +38,13 @@ systems and protocols must evolve as they mature to improve upon their shortcomi
 modern advancements. For example, in Governance v1 all referenda carry the same weight as only one
 referenda can be voted on at a time and the voting period can last multiple weeks. This results in
 the system favoring careful consideration of very few proposals, as opposed to broad consideration
-of many. With that being said, Governance v2 is here!
+of many. With that being said, OpenGov (also referred to as Governance v2) is here!
 
-Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the
+OpenGov changes how the practical means of day-to-day decisions are made, making the
 repercussions of referenda better scoped and agile in order to dramatically increase the number of
 collective decisions the system is able to make.
 
-**Gov2 is set to launch on Kusama following the final professional audit of its code. Once tested on
+**OpenGov is launched on Kusama. After rigorous testing and improvements on
 Kusama, a proposal will be made for it to be deployed on Polkadot.**
 
 The following content will begin by walking through many of the core principles of governance on the
@@ -53,7 +53,7 @@ understand the roots of governance v1 to better understand the direction of the 
 These deltas and distinctions will be highlighted throughout the various sub-topics.
 
 This being said, it is important to remember that governance is a constantly evolving protocol at
-this stage in its lifecycle. As updates for Governance v2 are making their way to the networks,
+this stage in its lifecycle. As updates for OpenGov are making their way to the networks,
 plans for Governance v2.5 are already in development.
 
 ## Premise
@@ -74,7 +74,7 @@ conviction , make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
 
-There are several changes here with Governance v2. The way the new governance model reflects its
+There are several changes here with OpenGov. The way the new governance model reflects its
 decentralised character is by:
 
 1. Migrating all responsibilities of Council to token holders via democracy votes
@@ -83,7 +83,7 @@ decentralised character is by:
 
 The Council in Gov1 has fulfilled its role as the representative of passive token holders, guardian
 of the treasury and initiator of legislation, but is often seen as a centralized entity. To further
-decentralize Polkadot and Kusama networks, Gov2 proposes to return the responsibilities of the
+decentralize Polkadot and Kusama networks, OpenGov proposes to return the responsibilities of the
 council back to the community.
 
 ## Referenda
@@ -118,7 +118,7 @@ days. Proposals submitted as part of the enactment of a prior referendum can set
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
 
-In Gov2, anyone is able to start a referendum at anytime and they can do so as many times as they
+In OpenGov, anyone is able to start a referendum at anytime and they can do so as many times as they
 wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the flow
 and processing of the referenda protocol.
 
@@ -158,7 +158,7 @@ For Governance v1, there can be a maximum of
 {{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
 public proposals in the proposal queue.
 
-In Gov2, when a referendum is initially created, it can be immediately voted on by the community.
+In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not in a state where it can end, or otherwise have its votes counted, be approved and
 summarily enacted. Instead, referenda must fulfil a number of criteria before they are moved into a
 state known as **Deciding**. Until they are in this state, they remain undecided.
@@ -234,7 +234,7 @@ use less privileged origins, it is far more reasonable to drop the required turn
 realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
 more political significance can be made to require a higher approval early on, to avoid controversy.
 
-In Gov2, proposals that are not approved after
+In OpenGov, proposals that are not approved after
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 days are considered rejected by default and the Decision Deposit is refunded. If the proposal
@@ -300,7 +300,7 @@ three tasks of governance:
 
 In Governance v2, an alternate strategy was required to replace the Council in its previous duties
 as a body delegated by voters to compensate for the fact that many choose to not take part in
-day-to-day of governance. Gov2 builds on the **Vote Delegation** feature from v1 where a voter can
+day-to-day of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can
 choose to delegate their voting power to another voter in the system. It does so by improving a
 feature known as **Multirole Delegation**, where voters can specify a different delegate for every
 class of referendum in the system. So for example, a voter could delegate one entity for managing a
@@ -408,7 +408,7 @@ referendum.
 The Whitelist pallet does one thing: it allows one Origin to escalate the privilege level of another
 Origin for a certain operation.
 
-In Gov2, it allows the Fellowship to authorise a new origin (known as Whitelisted-Root) to be
+In OpenGov, it allows the Fellowship to authorise a new origin (known as Whitelisted-Root) to be
 executed with Root-level privileges and will only work with certain specified commands that have
 been authorised by the Fellowship. The Whitelist pallet verifies two things:
 
