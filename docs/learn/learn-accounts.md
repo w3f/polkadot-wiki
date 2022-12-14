@@ -90,8 +90,7 @@ To learn more about generating accounts on
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below we give an example of different balance types on Kusama. (note that on Polkadot the situation
-will look the same)
+Below we give an example of different balance types on Kusama (note that on Polkadot the situation will look the same).
 
 ![account_balance_types](../assets/account-balance-types.png)
 
