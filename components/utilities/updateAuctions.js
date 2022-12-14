@@ -184,7 +184,6 @@ async function GetAuctionBlocks(api, currentBlock, startBlock, chain) {
     }
   } catch (error) {
     console.log(`Failure updating auction blocks on ${chain} at starting block ${startBlock}.`)
-    throw error.message;
   }
 }
 

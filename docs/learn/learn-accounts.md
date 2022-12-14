@@ -90,18 +90,18 @@ To learn more about generating accounts on
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below we give an example of different balance types on Kusama
-{{ polkadot: (note that on Polkadot the situation will look the same). :polkadot }}
+Below we give an example of different balance types on Kusama. (note that on Polkadot the situation
+will look the same)
 
 ![account_balance_types](../assets/account-balance-types.png)
 
 - The **total** balance indicates the total number of tokens in the account. Note that this number
   does not necessarily correspond to the tokens you are allowed to transfer. In the example the
-  total number of tokens in 0.6274 KSM.
-The **transferrable** balance indicates the number of tokens that are free to be transferred. This
-  is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of
-  tokens. Locked funds correspond to tokens used in staking, governance, and vested transfers (see
-  below). In the example, the transferrable balance is 0.0106 KSM.
+  total number of tokens in 0.6274 KSM. The **transferrable** balance indicates the number of tokens
+  that are free to be transferred. This is calculated by subtracting the number of _locked_ and
+  _reserved_ tokens from the total number of tokens. Locked funds correspond to tokens used in
+  staking, governance, and vested transfers (see below). In the example, the transferrable balance
+  is 0.0106 KSM.
 - The **vested** balance indicates tokens that were sent to the account and that are released with a
   specific time schedule. The tokens are owned by the account but are _locked_ and become available
   for transfer after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
@@ -132,8 +132,8 @@ The **transferrable** balance indicates the number of tokens that are free to be
 :::info Locks do not stack!
 
 The biggest lock decides the total amount of locked funds. See
-[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
-of unlocking funds in the example above.
+[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the
+process of unlocking funds in the example above.
 
 :::
 
@@ -160,7 +160,8 @@ for more information about existential deposit.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the existential deposit of
-{{ polkadot: <RPC network="polkadot" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account
 will be wiped from the blockchain's state to conserve space, along with any funds in that address.
@@ -184,8 +185,9 @@ but gets put back when it has the existential deposit.
 ## Account Identity
 
 The [Identities pallet](https://github.com/paritytech/substrate/tree/master/frame/identity) built
-into Polkadot allows users to attach on-chain metadata to their accounts. Independent registrars can
-verify this metadata to provide trustworthiness.
+into {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows users to attach on-chain
+metadata to their accounts. Independent registrars can verify this metadata to provide
+trustworthiness.
 
 :::info
 
@@ -196,8 +198,9 @@ a registrar, please read [this guide](learn-identity.md).
 
 ## Proxy Accounts
 
-Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
-storage while proxies act on their behalf with restricted (or unrestricted) functionality.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} comes with a generalized proxy
+account system that allows users to keep keys in cold storage while proxies act on their behalf with
+restricted (or unrestricted) functionality.
 
 :::info
 
