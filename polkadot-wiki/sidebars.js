@@ -88,7 +88,7 @@ module.exports = {
             },
             {
               type: "category",
-              label: "Components",
+              label: "Architecture and Components",
               items: [
                 "learn/learn-architecture",
                 "learn/learn-collator",
