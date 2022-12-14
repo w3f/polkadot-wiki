@@ -43,7 +43,7 @@ module.exports = {
           items: [
             {
               type: "category",
-              label: "Accounts",
+              label: "Accounts and Identity",
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
@@ -51,6 +51,8 @@ module.exports = {
                 "learn/learn-extrinsics",
                 "learn/learn-account-multisig",
                 'learn/learn-proxies',
+                "learn/learn-identity",
+                "learn/learn-registrar",
               ],
             },
             {
@@ -66,31 +68,35 @@ module.exports = {
             },
             {
               type: "category",
-              label: "Components",
-              items: [
-                "learn/learn-architecture",
-                "learn/learn-collator",
-                "learn/learn-consensus",
-                "learn/learn-governance",
-                "learn/learn-gov2",
-                "learn/learn-identity",
-                "learn/learn-nominator",
-                "learn/learn-polkadot-host",
-                "learn/learn-polkadotjs",
-                "learn/learn-registrar",
-                "learn/learn-runtime-upgrades",
-                "learn/learn-transaction-fees",
-                "learn/learn-treasury",
-                "learn/learn-validator",
-              ],
-            },
-            {
-              type: "category",
               label: "Staking",
               items: [
                 "learn/learn-staking",
                 "learn/learn-nomination-pools",
                 "learn/learn-staking-faq"
+                "learn/learn-nominator",
+              ],
+            },
+            {
+              type: "category",
+              label: "Governance",
+              items: [
+                "learn/learn-governance",
+                "learn/learn-opengov",
+                "learn/learn-treasury",
+                "learn/learn-runtime-upgrades",
+              ],
+            },
+            {
+              type: "category",
+              label: "Components",
+              items: [
+                "learn/learn-architecture",
+                "learn/learn-collator",
+                "learn/learn-consensus",
+                "learn/learn-polkadot-host",
+                "learn/learn-polkadotjs",
+                "learn/learn-transaction-fees",
+                "learn/learn-validator",
               ],
             },
           ],
