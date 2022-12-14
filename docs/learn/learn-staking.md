@@ -562,13 +562,14 @@ be limited by the bandwidth strain of the network due to peer-to-peer message pa
 ## Why I am not receiving rewards?
 
 Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
-action. Nominators need to monitor their nominations and make sure they are eligible to rewards,
-otherwise they would risk their funds to keep the chain secure, with no benefit. If you are bonding
-a lot more than the Minimum Active Bond you do not have to worry about receiving rewards, unless
-your nominations are all waiting or your active validator has 100% commission. However, if you bond
-funds close to the Minimum Active Bond you might not be able to receive rewards all the time, and in
-some cases you might not be able to receive rewards at all. Here below you can see a summary table
-to you can use as a guide to troubleshoot why you might not be able to receive staking rewards.
+action. Nominators need to monitor their nominations and make sure they are eligible to receiving
+rewards, otherwise they would risk their funds to keep the chain secure, with no benefit. If you are
+bonding a lot more than the Minimum Active Bond you do not have to worry about receiving rewards,
+unless your nominations are all waiting or your active validator has 100% commission. However, if
+you bond funds close to the Minimum Active Bond you might not be able to receive rewards all the
+time, and in some cases you might not be able to receive rewards at all. Here below you can see a
+summary table that you can use as a guide to troubleshoot why you might not be able to receive
+staking rewards.
 
 |       Nomination Status        |                                                                                                        What's happening                                                                                                         |                                                                                                                              Causes                                                                                                                              |                                                                                                                 What to do                                                                                                                  |
 | :----------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
