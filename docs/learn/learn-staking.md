@@ -519,7 +519,8 @@ For more on chilling, see the "[How to Chill][]" page on this wiki.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
 - Can choose up-to
   {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
- {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} validators which can help to decentralize the network through the sophisticated
+  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+  validators which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
 - 10% inflation/year of the tokens is primarily intended for staking rewards.
 
@@ -540,8 +541,10 @@ users to withdraw. For in-depth understanding, check the
 ### Cons of Staking
 
 - Tokens will be locked for about {{ polkadot: 28 :polkadot }}{{ kusama: 7 :kusama }} days on
-  {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during the unbonding period.
-- Possible punishment in case of the active validator found to be misbehaving (see [slashing](#slashing)).
+  {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during
+  the unbonding period.
+- Possible punishment in case of the active validator found to be misbehaving (see
+  [slashing](#slashing)).
 - Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
   transfer them to different account etc.
 
@@ -555,6 +558,23 @@ be limited by the bandwidth strain of the network due to peer-to-peer message pa
 
 {{ polkadot: The estimate of the number of validators that Polkadot will have at maturity is around 1000. :polkadot }}
 {{ polkadot: Kusama is already operating at this threshold. :polkadot }}
+
+## Why I am not receiving rewards?
+
+Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
+action. Nominators need to monitor their nominations and make sure they are eligible to rewards,
+otherwise they would risk their funds to keep the chain secure, with no benefit. If you are bonding
+a lot more than the Minimum Active Bond you do not have to worry about receiving rewards, unless
+your nominations are all waiting or your active validator has 100% commission. However, if you bond
+funds close to the Minimum Active Bond you might not be able to receive rewards all the time, and in
+some cases you might not be able to receive rewards at all. Here below you can see a summary table
+to you can use as a guide to troubleshoot why you might not be able to receive staking rewards.
+
+|       Nomination Status        |                                                                                                        What's happening                                                                                                         |                                                                                                                              Causes                                                                                                                              |                                                                                                                 What to do                                                                                                                  |
+| :----------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|          All waiting           |                                                              Your stake has not been assigned to any of your nominations. You cannot earn rewards, nor be slashed.                                                              |                                                                                      Waiting validators are not active in the current era and the NPoS "does not see them".                                                                                      |                                                                                     Change your nominations. Try to select validators that are active.                                                                                      |
+|  Some inactive, some waiting   | Inactive validators are producing blocks in the current era, but your stake has not been assigned to any of your nominations. You are not earning rewards if you do not have an active validator. You cannot be slashed either. | **Scenario 1:** You have bonded less than the Minimum Active Bond. **Scenario 2:** You have more than the Minimum Active Bond, but your account is at the tail of the bags list and within your bag there are acounts with less stake than you, in front of you. |                                                     **Scenario 1:** Try bonding more funds. **Scenario 2:** Try to put your account in front of the accounts with less stake than you.                                                      |
+| You have one active validator. |                                    Active validators are producing blocks in the current era, and your stake has been assigned to them. If you are not earning rewards, you can be slashed.                                     |                                                     Your validator is oversubscribed, meaning that it has more than 256 nominators (ranked by stake), and your stake is less than that of those nominators.                                                      | You can try to select validators that are not oversubscribed but in the long term you might want to bond more funds (even more than the Minimum Active Bond) to increase the chance of earning rewards also with oversubscribed validators. |
 
 ## Resources
 
