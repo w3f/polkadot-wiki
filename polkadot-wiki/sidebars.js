@@ -8,10 +8,8 @@ module.exports = {
         "general/claims",
         "general/redenomination",
         "general/research",
-        "general/glossary",
         "general/ens",
         "general/ledger",
-        "general/faq",
         {
           type: "category",
           label: "Contributors & Community",
@@ -41,6 +39,8 @@ module.exports = {
             "general/how-to-dyor",
           ],
         },
+        "general/faq",
+        "general/glossary",
       ],
     },
     {
