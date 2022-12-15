@@ -128,7 +128,7 @@ account on-chain.
 ## Registrars
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For
-example, a registrar could charge{{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.1 KSM :kusama }} to
+example, a registrar could charge {{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.1 KSM :kusama }} to
 verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee
 to the registrar who provides the judgement on those claims. Users set a maximum fee they are
 willing to pay and only registrars below this amount would provide judgement.
