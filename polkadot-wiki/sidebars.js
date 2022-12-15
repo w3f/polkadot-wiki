@@ -14,8 +14,6 @@ module.exports = {
         "general/glossary",
         "general/ens",
         "general/ledger",
-        "general/scams",
-        "general/how-to-dyor",
         "general/faq",
         {
           type: "category",
@@ -27,6 +25,14 @@ module.exports = {
             "general/builders-program",
             "general/doc-thousand-validators",
             "general/doc-thousand-contributors",
+          ],
+        },
+        {
+          type: "category",
+          label: "Stay Safe",
+          items: [
+            "general/scams",
+            "general/how-to-dyor",
           ],
         },
       ],
