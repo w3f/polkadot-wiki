@@ -68,20 +68,16 @@ module.exports = {
               type: "category",
               label: "Components",
               items: [
-                "learn/learn-architecture",
-                "learn/learn-collator",
                 "learn/learn-consensus",
                 "learn/learn-governance",
                 "learn/learn-opengov",
                 "learn/learn-identity",
-                "learn/learn-nominator",
                 "learn/learn-polkadot-host",
                 "learn/learn-polkadotjs",
                 "learn/learn-registrar",
                 "learn/learn-runtime-upgrades",
                 "learn/learn-transaction-fees",
                 "learn/learn-treasury",
-                "learn/learn-validator",
               ],
             },
             {
@@ -113,8 +109,12 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Paraobjects",
+          label: "Architecture",
           items: [
+            "learn/learn-architecture",
+            "learn/learn-nominator",
+            "learn/learn-validator",
+            "learn/learn-collator",
             {
               type: "category",
               label: "Parachains",
