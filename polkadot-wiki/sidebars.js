@@ -12,7 +12,7 @@ module.exports = {
         "general/ledger",
         {
           type: "category",
-          label: "Contributors & Community",
+          label: "Community & Contributors",
           items: [
             "general/community",
             "general/contributing",
