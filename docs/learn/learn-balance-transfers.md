@@ -27,20 +27,11 @@ provide support for third party applications.
 
 ## Sending Funds using UI, Extension, Parity Signer & Ledger
 
-:::info
-
-See the video tutorial below to learn how to send funds using the supported tools.
-
-:::
-
-<iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
-
-:::info Transfer of Funds
-
-See the Polkadot Support pages for detailed information about transferring funds using the
+See the video tutorial below to learn how to send funds using the supported tools. See the Polkadot
+Support pages for detailed information about transferring funds using the
 [Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
 
-:::
+<iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
 :::info Signing Transactions
 
@@ -115,8 +106,9 @@ reaped. References may still exist from:
 ### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md)
-to check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+Follow the instructions at
+[Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md) to check if you
+have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 ### Checking for Locks
 
