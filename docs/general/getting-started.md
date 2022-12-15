@@ -13,17 +13,22 @@ The Polkadot Wiki serves as the central source of truth for Polkadot. It is a co
 initiative led by Web3 Foundation to keep an up-to-date resource on the best information for
 learning, building, and maintaining on Polkadot.
 
-The Wiki has three main sections: Learn (for learners), Build (for people that want to build on
-Polkadot), and Maintain (for people that want to maintain the network).
+The Wiki has three main sections: **Learn** (for learners), **Build** (for people that want to build
+on Polkadot), and **Maintain** (for people that want to maintain the network).
 
 :::
 
 ## What is Polkadot?
 
-Polkadot is the first fully-sharded blockchain.
+See the video below made by [DeFi Teller](https://defiteller.guru/) to know more about Polkadot.
 
-Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a
-secure, trust-free environment.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+Polkadot is the first fully-sharded blockchain, i.e. it is a multi-chain environment. Polkadot
+enables scalability by allowing specialized blockchains to communicate with each other in a secure,
+trust-free environment.
 
 Polkadot is built to connect and secure unique blockchains, whether they be public, permissionless
 networks, private consortium chains, or other Web3 technologies. It enables an internet where
@@ -39,13 +44,10 @@ growing needs without the risks of network forks.
 If you haven't heard of Governance before, a great place to start is the
 [Governance page](../learn/learn-governance.md)
 
-::: By connecting these dots, Polkadot serves as a foundational layer of a decentralized web, where
-users control their data and are not limited by trust bounds within the network.
+:::
 
-"What is Polkadot?" Parachains, Parathreads, and the Polkadot Ecosystem explained in simple terms by
-[DeFi Teller](https://defiteller.guru/)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Polkadot serves as a foundational layer of a decentralized web, where users control their data and
+are not limited by trust bounds within the network.
 
 ### Interact with Polkadot
 
@@ -176,20 +178,21 @@ functionalities on Polkadot.
   [Accounts](../learn/learn-accounts.md) and the
   [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
 
-- **1 DOT**: the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md) and
-  earn staking rewards for contributing to the security of the network. Learn more about
+- **1 DOT**: the minimum contribution required to join a
+  [nomination pool](../learn/learn-nomination-pools.md) and earn staking rewards for contributing to
+  the security of the network. Learn more about
   [nomination pools](../learn/learn-nomination-pools.md).
 
 - **5 DOT**: the minimum contribution required to participate in
   [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
 
-- **10 DOT**: the minimum stake required to submit your intent to directly nominate validators. But, to
-  increase the chance of earning staking rewards, your stake should not be less than the minimum
-stake among the active nominators which is a dynamic threshold (around 210 DOT in era 911).
-  If you have lesser DOT than the minimum active nomination, please consider contributing to 
-  [nomination pools](../learn/learn-nomination-pools.md). Learn more about [becoming a nominator](../learn/learn-nominator.md).
-  
+- **10 DOT**: the minimum stake required to submit your intent to directly nominate validators. But,
+  to increase the chance of earning staking rewards, your stake should not be less than the minimum
+  stake among the active nominators which is a dynamic threshold (around 210 DOT in era 911). If you
+  have lesser DOT than the minimum active nomination, please consider contributing to
+  [nomination pools](../learn/learn-nomination-pools.md). Learn more about
+  [becoming a nominator](../learn/learn-nominator.md).
 - **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md), vote for
   [council](../maintain/maintain-guides-how-to-vote-councillor.md), or create a
   [proxy account](../learn/learn-proxies.md).
@@ -230,10 +233,10 @@ where users can read and write information plus publish their own for others to 
 version of the web comes with downsides, dealing with data control, privacy issues, and the
 consequences of trust. This is where the WEB3 comes into the picture.
 
-The WEB3 is taking centralized infrastructure and applications and turning them into decentralized,
-trust-free protocols. The goal is to transform the internet into a decentralized web, where users
-control their own data and identity in a trust-free environment. The Web3 movement aims to remove
-intermediaries and build trustless infrastructure.
+The Web 3.0 is taking centralized infrastructure and applications and turning them into
+decentralized, trust-free protocols. The goal is to transform the internet into a decentralized web,
+where users control their own data and identity in a trust-free environment. The Web3 movement aims
+to remove intermediaries and build trustless infrastructure.
 
 :::note The Web3 Movement
 
@@ -293,7 +296,7 @@ For brand-new learners of Blockchain technology:
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
-### Brand-New Polkadot learners:
+### Brand-New Polkadot learners
 
 - [Polkadot's original white paper][white-paper] is a technical summary around one possible
   direction of implementing the Polkadot network. This paper uses rationale and technical details to
