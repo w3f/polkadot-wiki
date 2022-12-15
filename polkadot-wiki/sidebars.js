@@ -8,13 +8,19 @@ module.exports = {
         "general/claims",
         "general/redenomination",
         "general/research",
-        "general/community",
-        "general/contributing",
-        "general/contributors",
         "general/glossary",
         "general/ens",
         "general/ledger",
         "general/faq",
+        {
+          type: "category",
+          label: "Contributors & Community",
+          items: [
+            "general/community",
+            "general/contributing",
+            "general/contributors",
+          ],
+        },
         {
           type: "category",
           label: "Programmes",
