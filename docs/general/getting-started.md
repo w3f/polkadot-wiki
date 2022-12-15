@@ -20,12 +20,6 @@ on Polkadot), and **Maintain** (for people that want to maintain the network).
 
 ## What is Polkadot?
 
-See the video below made by [DeFi Teller](https://defiteller.guru/) to know more about Polkadot.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br />
-
 Polkadot is the first fully-sharded blockchain, i.e. it is a multi-chain environment. Polkadot
 enables scalability by allowing specialized blockchains to communicate with each other in a secure,
 trust-free environment.
@@ -48,6 +42,10 @@ If you haven't heard of Governance before, a great place to start is the
 
 Polkadot serves as a foundational layer of a decentralized web, where users control their data and
 are not limited by trust bounds within the network.
+
+See the video below made by [DeFi Teller](https://defiteller.guru/) to know more about Polkadot.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Interact with Polkadot
 
