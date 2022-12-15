@@ -90,6 +90,49 @@ sending account if you attempt to transfer.
 
 :::
 
+## Vested Transfers
+
+DOT may have a lock placed on them to account for vesting funds. Like other types of locks, these
+funds cannot be transferred but can be used in other parts of the protocol such as voting in
+governance or being staked as a validator or nominator.
+
+Vesting funds are on a linear release schedule and unlock a constant number of tokens at each block.
+Although the tokens are released in this manner, it does not get reflected on-chain automatically
+since locks are [lazy](#lazy-vesting) and require an extrinsic to update.
+
+There are two ways that vesting schedules can be created.
+
+- One way is as part of the genesis configuration of the chain. In the case of Polkadot and Kusama,
+  the chain specification genesis script reads the state of the Polkadot Claims contract that exists
+  on the Ethereum blockchain and creates vesting schedules in genesis for all the allocations
+  registered as being vested.
+- A second way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The
+  vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as
+  long as the account for which the vesting schedule will be created does not already have one and
+  the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
+
+Vesting schedules have three parameters, `locked`, `per_block`, and `starting_block`. The
+configuration of these three fields dictates the amount of funds that are originally locked, the
+slope of the unlock line and the block number for when the unlocking begins.
+
+### Lazy Vesting
+
+Like [simple payouts](learn-staking-advanced.md), vesting is _lazy_, which means that someone must
+explicitly call an extrinsic to update the lock that is placed on an account.
+
+- The `vest` extrinsic will update the lock that is placed on the caller.
+- The `vest_other` will update the lock that is placed on another "target" account's funds.
+
+These extrinsics are exposed from the Vesting pallet.
+
+If you are using Polkadot-JS, when there are DOT available to vest for an account, then you will
+have the ability to unlock DOT which has already vested from the
+[Accounts](https://polkadot.js.org/apps/#/accounts) page.
+
+![unbond](../assets/unlock-vesting.png)
+
+## Batch Transfers
+
 ## Existing Reference Error
 
 If you are trying to reap an account and you receive an error similar to
