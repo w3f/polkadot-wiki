@@ -98,7 +98,6 @@ module.exports = {
             'learn/learn-account-advanced',
             "learn/learn-staking-advanced",
             'learn/learn-availability',
-            'learn/learn-xcm',
             "learn/learn-cryptography",
             'learn/learn-phragmen',
             'learn/learn-randomness',
@@ -128,6 +127,7 @@ module.exports = {
             },
             "learn/learn-parathreads",
             "learn/learn-bridges",
+            'learn/learn-xcm',
           ],
         },
         {

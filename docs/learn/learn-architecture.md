@@ -9,8 +9,6 @@ slug: ../learn-architecture
 
 Polkadot is a heterogeneous multichain with shared security and interoperability.
 
-# Components
-
 ## Relay Chain
 
 The Relay Chain is the central chain of Polkadot. All validators of Polkadot are staked on the Relay
