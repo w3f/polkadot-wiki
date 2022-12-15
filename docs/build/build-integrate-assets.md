@@ -7,9 +7,10 @@ keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
 
-The Polkadot Relay Chain does not natively support assets beyond DOT (likewise, KSM for Kusama).
-This functionality exists in parachains. On Polkadot, this parachain is called Statemint, and on
-Kusama it is called Statemine. All information in this guide applies equally to Kusama/Statemine.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain does not natively
+support assets beyond {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} This functionality
+exists in parachains. On Polkadot, this parachain is called Statemint, and on Kusama it is called
+Statemine. All information in this guide applies equally to Kusama/Statemine.
 
 Statemint provides a first-class interface for creating, managing, and using both fungible and
 non-fungible assets. The fungible interface is similar to Ethereum's ERC-20 standard. However, the
@@ -84,7 +85,8 @@ a GitHub issue so a developer can help.
 ### Parachain Node
 
 Using Statemint will require running a parachain node to sync the chain. This is very similar to
-running a Polkadot node, with the addition of some extra flags. The basic format looks like this:
+running a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node, with the addition of
+some extra flags. The basic format looks like this:
 
 ```bash
 ./statemint $STATEMINT_CLI_ARGS --collator -- $POLKADOT_CLI_ARGS

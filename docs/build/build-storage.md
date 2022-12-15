@@ -8,8 +8,9 @@ slug: ../build-storage
 ---
 
 Storage is an integral part of modern computer systems, and the same is true for distributed and
-decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it will be
-helpful if you familiarize yourself with the current Web3 approach towards decentralized storage.
+decentralized systems like a blockchain. When interacting with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem, it will be helpful if you
+familiarize yourself with the current Web3 approach towards decentralized storage.
 
 ## DCS (Decentralized Cloud Storage)
 
@@ -62,9 +63,10 @@ integrating with Crust by following their
 #### Using Polkadot-JS Files (IPFS) module
 
 Polkadot-JS UI includes a decentralized storage module that allows Substrate-based chain users to
-upload their files to an [IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW)
-and use the [IPFS W3Auth Pinning Service](https://wiki.crust.network/docs/en/buildIPFSW3AuthPin) to
-pin their files on Crust Network.
+upload their files to an
+[IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW) and use the
+[IPFS W3Auth Pinning Service](https://wiki.crust.network/docs/en/buildIPFSW3AuthPin) to pin their
+files on Crust Network.
 
 Start by uploading a single file or folder:
 
