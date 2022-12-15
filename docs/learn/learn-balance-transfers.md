@@ -27,20 +27,11 @@ provide support for third party applications.
 
 ## Sending Funds using UI, Extension, Parity Signer & Ledger
 
-:::info
-
-See the video tutorial below to learn how to send funds using the supported tools.
-
-:::
-
-<iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
-
-:::info Transfer of Funds
-
-See the Polkadot Support pages for detailed information about transferring funds using the
+See the video tutorial below to learn how to send funds using the supported tools. See the Polkadot
+Support pages for detailed information about transferring funds using the
 [Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
 
-:::
+<iframe width="560" height="315" src="https://youtube.com/embed/gbvrHzr4EDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
 :::info Signing Transactions
 
@@ -99,6 +90,82 @@ sending account if you attempt to transfer.
 
 :::
 
+## Vested Transfers
+
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock placed on them to account for
+vesting funds. Like other types of locks, these funds cannot be transferred but can be used in other
+parts of the protocol such as voting in governance or being staked as a validator or nominator.
+
+Vesting funds are on a release schedule and unlock a constant number of tokens at each block
+(**linear vesting**) or can unlock the full amount after a specific block number (**cliff
+vesting**). Although the tokens are released in this manner, it does not get reflected on-chain
+automatically since locks are [lazy](#lazy-vesting) and require an extrinsic to update.
+
+There are two ways that vesting schedules can be created.
+
+- One way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The
+  vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as
+  long as the account for which the vesting schedule will be created does not already have one and
+  the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
+- A second way is as part of the genesis configuration of the chain. In the case of
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the chain specification genesis
+  script reads the state of the Claims contract that exists on the Ethereum blockchain and creates
+  vesting schedules in genesis for all the allocations registered as being vested.
+
+Vesting schedules have three parameters:
+
+- **locked**, the amount of tokens to be transferred in
+  [Planck units](../learn/learn-DOT#the-planck-unit))
+- **per block**, the number of tokens that are released per block
+- **starting block**, the block number after which the vesting schedule starts
+
+The configuration of these three fields dictates the amount of funds that are originally locked, the
+slope of the unlock line and the block number for when the unlocking begins.
+
+:::info
+
+You can watch [**this video tutorial**](https://youtu.be/JVlwTQBwNGc) to understand how to do vested
+transfers, including linear and cliff vesting. Note the tutorial uses the Westend Testnet, but the
+same applies to both Polkadot and Kusama.
+
+:::
+
+### Lazy Vesting
+
+Like [simple payouts](learn-staking-advanced.md), vesting is _lazy_, which means that someone must
+explicitly call an extrinsic to update the lock that is placed on an account.
+
+- The `vest` extrinsic will update the lock that is placed on the caller.
+- The `vest_other` will update the lock that is placed on another "target" account's funds.
+
+These extrinsics are exposed from the Vesting pallet.
+
+If you are using the Polkadot-JS UI, when there are
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} available to vest for an account, then you
+will have the ability to unlock {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} which has
+already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+
+![unbond](../assets/unlock-vesting.png)
+
+## Batch Transfers
+
+Batch transfers are balances transfers to multiple accounts executed by one account. In order to
+construct a batch transfer you need to:
+
+- Create a `utility.batch(calls)` extrinsic using the
+  [utility pallet](https://paritytech.github.io/substrate/master/pallet_utility/index.html), and
+- Within the batch call you can create multiple `balances.transferKeepAlive` extrinsics using the
+  [balances pallet](https://paritytech.github.io/substrate/master/pallet_balances/index.html). You
+  can specify as many receivers as you desire.
+
+:::info
+
+You can watch [**this video tutorial**](https://youtu.be/uoUC2K8muvw) to learn how to do batch
+transfers. Note the tutorial uses the Westend Testnet, but the same applies to both Polkadot and
+Kusama.
+
+:::
+
 ## Existing Reference Error
 
 If you are trying to reap an account and you receive an error similar to
@@ -115,8 +182,9 @@ reaped. References may still exist from:
 ### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md)
-to check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+Follow the instructions at
+[Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md) to check if you
+have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 ### Checking for Locks
 
@@ -150,7 +218,7 @@ probably not the reason for your tokens having existing references. :polkadot }}
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
 chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
 
-### Existing {{ polkadot: Non-DOT :polkadot }}{{ kusama: Non-KSM :kusama }} Assets
+### Existing Non-Native Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
