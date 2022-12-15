@@ -84,7 +84,7 @@ Information that is in this state or "erroneous" is "sticky" and cannot be modif
 removed by the complete removal of the identity.
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for
-issuing faulty judgements.
+issuing faulty judgement.
 
 To be judged after submitting your identity information, go to the
 [Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
@@ -96,9 +96,9 @@ If you don't know which registrar to pick, first check the available registrars 
 [Chain State tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate) and selecting
 `identity.registrars()` to get the full list.
 
-:::info Instructions for requesting and cancelling Identity judegements
+:::info Instructions for requesting and cancelling Identity judgments
 
-The procedure to request and cancel identity judgements is explained in detail in this
+The procedure to request and cancel identity judgement is explained in detail in this
 [support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
 
 :::
@@ -128,7 +128,7 @@ account on-chain.
 ## Registrars
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For
-example, a registrar could charge {{ kusama: 0.1 KSM :kusama }}{{ polkadot: 1 DOT :polkadot }} to
+example, a registrar could charge{{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.1 KSM :kusama }} to
 verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee
 to the registrar who provides the judgement on those claims. Users set a maximum fee they are
 willing to pay and only registrars below this amount would provide judgement.
@@ -167,29 +167,28 @@ this registrar.
 
 ### Current Registrars
 
-There are multiple registrars on {{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}.
+There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
 Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**:
-{{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,  <br /> :kusama }}{{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,  <br /> :polkadot }}
-**Fee**: {{ kusama:  0.04 KSM  <br /> :kusama }}{{ polkadot: 0 DOT,  <br /> :polkadot }}
+{{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }}
+{{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**:
+{{ polkadot: 0 DOT :polkadot }}{{ kusama:  0.04 KSM :kusama }} <br />
 
 Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-{{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn,  <br /> :kusama }}{{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,  <br /> :polkadot }}
-**Fee**: {{ kusama: 0.65 KSM,  <br /> :kusama }}{{ polkadot: 10 DOT,  <br /> :polkadot }}
+{{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }}
+{{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
+{{ polkadot: 10 DOT :polkadot }}{{ kusama: 0.65 KSM :kusama }} <br />
 
 Registrar 2: <br /> **Account**:
-{{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7,  <br /> :kusama }}{{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,  <br /> :polkadot }}
-**Fee**: {{ kusama: 1 KSM,  <br /> :kusama }}{{ polkadot: 0 DOT. :polkadot }}
+{{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
+{{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
+{{ polkadot: 0 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
 
-{{ kusama: Registrar 3:  <br />
-**Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM,  <br />
-**Fee**: 1 KSM,  <br /> :kusama }}
+{{ kusama: Registrar 3: <br /> **Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM <br /> **Fee**: 1 KSM <br /> :kusama }}
 
-{{ kusama: Registrar 4:  <br />
-**Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6,  <br />
-**Fee**: 0.04 KSM.  <br /> :kusama }}
+{{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**: 0.04 KSM <br /> :kusama }}
 
 To find out how to contact the registrar after the application for judgement or to learn who they
 are, we can check their identity by adding them to our Address Book. Their identity will be
@@ -202,8 +201,8 @@ automatically loaded.
 Users can also link accounts by setting "sub accounts", each with its own identity, under a primary
 account. The system reserves a bond for each sub account. An example of how you might use this would
 be a validation company running multiple validators. A single entity, "My Staking Company", could
-register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of their
-validators.
+register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of
+their validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a deposit of
 {{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
