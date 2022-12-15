@@ -125,7 +125,8 @@ slope of the unlock line and the block number for when the unlocking begins.
 :::info
 
 You can watch [**this video tutorial**](https://youtu.be/JVlwTQBwNGc) to understand how to do vested
-transfers, including linear and cliff vesting.
+transfers, including linear and cliff vesting. Note the tutorial uses the Westend Testnet, but the
+same applies to both Polkadot and Kusama.
 
 :::
 
