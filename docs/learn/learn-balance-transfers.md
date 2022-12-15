@@ -152,9 +152,11 @@ already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page
 Batch transfers are balances transfers to multiple accounts executed by one account. In order to
 construct a batch transfer you need to:
 
-- Create a `utility.batchCalls` extrinsic using the `utility` pallet, and
+- Create a `utility.batch(calls)` extrinsic using the
+  [utility pallet](https://paritytech.github.io/substrate/master/pallet_utility/index.html), and
 - Within the batch call you can create multiple `balances.transferKeepAlive` extrinsics using the
-  `balances` pallet. You can specify as may receivers you desire.
+  [balances pallet](https://paritytech.github.io/substrate/master/pallet_balances/index.html). You
+  can specify as may receivers you desire.
 
 :::info
 
