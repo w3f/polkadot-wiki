@@ -31,7 +31,7 @@ rewards for collators (although collators do receive a portion of transaction fe
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} as a trusted relationship with
 the Relay Chain, and as such, can teleport {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 between itself and the Relay Chain. That is,
-{{ polkadot: DOT on Statemint :polkadot }}{{ kusama: KSM on Statemine :kusama }} good as
+{{ polkadot: DOT on Statemint :polkadot }}{{ kusama: KSM on Statemine :kusama }} just as good as
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Relay Chain.
 
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart contracts.
