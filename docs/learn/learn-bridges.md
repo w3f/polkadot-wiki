@@ -19,10 +19,11 @@ progress. It will be updated as more information is determined and available.
 
 :::info Purpose of bridging
 
-Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }}{{ kusama:
-Kusama :kusama }} ecosystem compatible with external blockchains such as Bitcoin, Ethereum, or Tezos
-(among others). For information on XCM, the native interoperability technology that allows parachains
-to communicate trustlessly, please see the dedicated [cross consensus][] page on the Wiki.
+Bridges are specifically for making the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem compatible with external
+blockchains such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
+interoperability technology that allows parachains to communicate trustlessly, please see the
+dedicated [cross consensus][] page on the Wiki.
 
 :::
 
@@ -44,8 +45,9 @@ following methods (ordered by suggested methodology):
 Receiving messages on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} from an
 external, non-parachain blockchain can be possible through a Substrate pallet. The Substrate
 instance can then be deployed to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-either as a system-level parachain (native extension to the core Polkadot software) or as a
-community-operated parachain.
+either as a system-level parachain (native extension to the core
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} software) or as a community-operated
+parachain.
 
 An example of a bridge that would strictly use bridge pallets would be a Kusama `<->` Polkadot
 bridge, since both use parachains based on Substrate.
@@ -70,8 +72,9 @@ on `side` can free up Ether on `main`.
 
 :::note
 
-To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through Polkadot, check out
-this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
+To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, check out this explainer video
+[here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
 
 :::
 
@@ -89,9 +92,10 @@ it does not support smart-contracts and it's not based on Substrate.
 ### Ethereum Bridge (Smart Contracts <-> Polkadot)
 
 As explained by Dr. Gavin Wood in a [blog post][eth bridging blog] from late 2019, there are three
-ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ecosystem.
+ways that the {{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} and Substrate ecosystem
+can be bridged to the Ethereum ecosystem.
 
-1. Polkadot <-> Ethereum Public Bridge.
+1. {{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} <-> Ethereum Public Bridge.
 1. Substrate <-> Parity Ethereum (Openethereum) Bridge.
 1. The Substrate EVM module.
 

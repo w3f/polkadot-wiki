@@ -9,8 +9,9 @@ slug: ../learn-spree
 ---
 
 Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "trust wormholes," are
-fragments of logic comparable to runtime modules in Substrate, but live on the Polkadot Relay Chain
-and may be opted into by parachains.
+fragments of logic comparable to runtime modules in Substrate, but live on the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} Relay Chain and may be opted into by
+parachains.
 
 SPREE in brief was described with the following properties and functions:
 
@@ -34,11 +35,13 @@ each parachain. SmartProtocols are the precursor to SPREE.
 ## What is a SPREE module?
 
 SPREE modules are fragments of logic (in concrete terms they are blobs of
-[WebAssembly](learn-wasm.md) code) that are uploaded onto Polkadot through a governance mechanism or
-by parachains. Once the blob is uploaded to Polkadot, all other parachains can decide to opt-in to
-the logic. The SPREE module would retain its own storage independent of the parachain, but would be
-callable through an interface with the parachain. Parachains will send messages to the SPREE module
-synchronously.
+[WebAssembly](learn-wasm.md) code) that are uploaded onto
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} through a governance mechanism or by
+parachains. Once the blob is uploaded to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, all other parachains can decide to
+opt-in to the logic. The SPREE module would retain its own storage independent of the parachain, but
+would be callable through an interface with the parachain. Parachains will send messages to the
+SPREE module synchronously.
 
 SPREE modules are important to the overall XCMP architecture because they give a guarantee to the
 code that will be executed on destination parachains. While XCMP guarantees the delivery of a
@@ -54,11 +57,12 @@ book. Now we can also consult the same book that the cook has, and we have a pre
 of what will happen when we tell the cook to make a soufflé. In this example, “make a soufflé” was
 the message in XCMP and the cookbook was the SPREE module.
 
-In concrete terms, SPREE modules could be useful for various functionality on Polkadot. One
-suggested use case of SPREE modules is for a trustless decentralized exchange that is offered as
-functionality to any parachain without any extra effort from parachain developers. One can imagine
-this working by having a SPREE module that exposes the interface for the incrementing and
-decrementing of balances of various assets based on a unique identifier.
+In concrete terms, SPREE modules could be useful for various functionality on
+{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}. One suggested use case of SPREE
+modules is for a trustless decentralized exchange that is offered as functionality to any parachain
+without any extra effort from parachain developers. One can imagine this working by having a SPREE
+module that exposes the interface for the incrementing and decrementing of balances of various
+assets based on a unique identifier.
 
 ## Why?
 
@@ -78,12 +82,13 @@ change the total supply of tokens and a basic interface.
 
 ![spree example](../assets/SPREE/spree_module.png)
 
-The diagram above is a simplification of the Polkadot system.
+The diagram above is a simplification of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} system.
 
-In this diagram, we see that the Wasm code for SPREE module "X" has been uploaded to the Polkadot
-Relay Chain. The two cylinders "A" and "B" represent two distinct parachains that have both opted-in
-to this SPREE module creating two distinct instances of it with their own XCMP endpoints "A.X" and
-"B.X".
+In this diagram, we see that the Wasm code for SPREE module "X" has been uploaded to the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} Relay Chain. The two cylinders "A"
+and "B" represent two distinct parachains that have both opted-in to this SPREE module creating two
+distinct instances of it with their own XCMP endpoints "A.X" and "B.X".
 
 In the example, we assume that this SPREE module "X" contains the functionality for incrementing or
 decrementing the balance of a particular asset that is unique to this module.
