@@ -149,6 +149,21 @@ already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page
 
 ## Batch Transfers
 
+Batch transfers are balances transfers to multiple accounts executed by one account. In order to
+construct a batch transfer you need to:
+
+- Create a `utility.batchCalls` extrinsic using the `utility` pallet, and
+- Within the batch call you can create multiple `balances.transferKeepAlive` extrinsics using the
+  `balances` pallet. You can specify as may receivers you desire.
+
+:::info
+
+You can watch [**this video tutorial**](https://youtu.be/uoUC2K8muvw) to learn how to do batch
+transfers. Note the tutorial uses the Westend Testnet, but the same applies to both Polkadot and
+Kusama.
+
+:::
+
 ## Existing Reference Error
 
 If you are trying to reap an account and you receive an error similar to
