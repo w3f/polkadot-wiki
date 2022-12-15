@@ -84,7 +84,7 @@ Information that is in this state or "erroneous" is "sticky" and cannot be modif
 removed by the complete removal of the identity.
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for
-issuing faulty judgement.
+issuing faulty judgments.
 
 To be judged after submitting your identity information, go to the
 [Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
@@ -98,7 +98,7 @@ If you don't know which registrar to pick, first check the available registrars 
 
 :::info Instructions for requesting and cancelling Identity judgments
 
-The procedure to request and cancel identity judgement is explained in detail in this
+The procedure to request and cancel identity judgments is explained in detail in this
 [support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
 
 :::
