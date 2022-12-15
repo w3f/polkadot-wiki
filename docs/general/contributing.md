@@ -9,9 +9,9 @@ slug: ../contributing
 ---
 
 The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims to
-be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of
-the material currently focuses on Polkadot directly but it is not opposed to covering informational
-material for community projects.
+be the most extensive resource of knowledge on Polkadot and Kusama the ecosystem. A large part of
+the material currently focuses on Polkadot and Kusama directly but it is not opposed to covering
+informational material for community projects.
 
 :::caution Marketing material
 
@@ -87,7 +87,7 @@ This document is based on the
 
 ## Helping With Translations
 
-:::caution Currently the Wiki is being reorgnaized and updated, during this time we will not be
+:::caution Currently the Wiki is being reorganized and updated, during this time we will not be
 prioritizing translations. :::
 
 The Wiki's default language is _English_, though, there is a desire to translate the Wiki in as many
