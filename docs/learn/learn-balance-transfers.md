@@ -156,7 +156,7 @@ construct a batch transfer you need to:
   [utility pallet](https://paritytech.github.io/substrate/master/pallet_utility/index.html), and
 - Within the batch call you can create multiple `balances.transferKeepAlive` extrinsics using the
   [balances pallet](https://paritytech.github.io/substrate/master/pallet_balances/index.html). You
-  can specify as may receivers you desire.
+  can specify as many receivers as you desire.
 
 :::info
 
