@@ -38,7 +38,7 @@ The validator must successfully verify the following conditions in the following
 
 Once a candidate meets a specified criteria for inclusion, the selected relay chain block author
 then choses any of the backable candidates for each parachain and includes those into the relay
-chain block. We say the candidated blocks are _backed_.
+chain block. We say the candidate blocks are _backed_.
 
 The assumption that having more collators is better or more secure is not correct. On the contrary,
 too many collators may slow down the network. The only nefarious power collators have is transaction
@@ -69,7 +69,6 @@ The validators on the relay chain will try to reach a consensus on the block can
 reaching consensus, the now validated block candidate is shared with the validators and collators,
 and the process repeats for new transactions. A collator cannot continue building blocks on a
 parachain until the block candidate they proposed to the Relay Chain validators have been validated.
-
 A block is produced every 6 seconds.
 
 ## Collators in the Wild

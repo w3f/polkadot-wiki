@@ -49,8 +49,8 @@ Validators perform two main functions:
 2. **Participating** in the consensus mechanism to produce the relay chain blocks based on validity
    statements from other validators. These validators are called block authors, they are selected by
    [BABE](./learn-consensus.md/#block-production-babe) and can note up to one backable candidate for
-   each parachain to include in the relay chain. A backable condidatate included in the relay chain
-   is considered _backed_ in that fork of the chain.
+   each parachain to include in the relay chain. A backable candidate included in the relay chain is
+   considered _backed_ in that fork of the chain.
 
 Note that validators also participate to the so-called **availability distribution**. In fact, once
 the candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is
@@ -59,17 +59,17 @@ Information regarding the availability of the candidate will be noted in the fol
 blocks. Only when there is enough information, the candidate is considered a full parachain block or
 _parablock_.
 
-Finally, validators particiapte to the so-called **approval process**. Once the parablock is
-considered available and part of the parachain, it is still _pending approval_. Because
+Finally, validators participate to the so-called [**approval process**](#approval-process). Once the
+parablock is considered available and part of the parachain, it is still _pending approval_. Because
 para-validators are a small subset of all validators, there a risk that by chance the majority of
 para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
 verification of the parablock before it can be considered approved. Having a secondary verification
-step avoids the allocation of more para-validaotrs that will ultimately reduce the throughput of the
+step avoids the allocation of more para-validators that will ultimately reduce the throughput of the
 system.
 
 :::info
 
-For detailed information about the approval proceess see dedicated section in
+For detailed information about the approval process see dedicated section in
 [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
 
 :::
@@ -87,6 +87,17 @@ For detailed information about disputes see dedicated section in
 [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
 
 :::
+
+## Approval Process
+
+Having a bad parablock on the relay chain is not catastrophic as long as the block is not approved
+and finalized by the finality gadget [GRANPA](./learn-consensus.md/#finality-gadget-grandpa). If the
+block is not finalized, the fork on the chain containing that block can be ignored in favor of
+another fork containing good blocks. Dealing with a bad parablock includes the following stages:
+
+- Detection: the bad block must be detected by honest validators.
+- Escalation: the honest validators must send that block for checks to all validators.
+- Consequences: the chain is reverted and all malicious validators are slashed.
 
 ## Guides
 
