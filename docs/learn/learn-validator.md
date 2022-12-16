@@ -9,19 +9,19 @@ slug: ../learn-validator
 
 import RPC from "./../../components/RPC-Connection";
 
-Validators secure the [Relay Chain](learn-architecture.md#relay-chain) by staking DOT, validating
-proofs from collators and participating in consensus with other validators.
+Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, validating proofs from collators and
+participating in consensus with other validators.
 
-These participants play a crucial role in adding new blocks to the Relay Chain and, by extension, to
-all parachains. This allows parties to complete cross-chain transactions via the Relay Chain.
-Parachain validators participate in some form of off-chain consensus, and submit candidate receipts
-to the tx pool for a block producer to include on-chain. The Relay Chain validators guarantee that
-each parachain follows its unique rules and can pass messages between shards in a trust-free
-environment.
+Validators play a crucial role in adding new blocks to the relay chain and, by extension, to all
+parachains. This allows parties to complete cross-chain transactions via the relay chain. Parachain
+validators (i.e. para-validators) participate in some form of off-chain consensus, and submit
+candidate receipts to the tx pool for a block producer to include on-chain. The relay chain
+validators guarantee that each parachain follows its unique rules and can pass messages between
+shards in a trust-free environment.
 
-With parachains now on the network, para-validators are selected every epoch to validate parachain
-blocks for all parachains connected to the Relay Chain. Para-validators work in groups to validate
-parachain blocks.
+Para-validators work in groups and are selected every epoch to validate parachain blocks for all
+parachains connected to the relay chain.
 
 The selected para-validators are one of
 {{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
@@ -31,13 +31,28 @@ of 200 para-validators.
 
 Validators perform two functions:
 
-1. **Verifying** that the information contained in an assigned set of parachain blocks is valid
-   (such as the identities of the transacting parties and the subject matter of the contract).
-2. **Participating** in the consensus mechanism to produce the Relay Chain blocks based on validity
-   statements from other validators. Any instances of non-compliance with the consensus algorithms
-   result in punishment by removal of some or all of the validator’s staked DOT, thereby
-   discouraging bad actors. Good performance, however, will be rewarded, with validators receiving
-   block rewards (including transaction fees) in the form of DOT in exchange for their activities.
+1. **Verifying** that the information contained in an assigned set of parachain blocks is valid.
+   They receive parachain block candidates from the [Collators](./learn-collator.md) together with a
+   proof-of-validity (PoV). The para-validators then check if the block candidates are valid.
+   Candidates that gather enough signed validity statements are considered _backable_.
+2. **Participating** in the consensus mechanism to produce the relay chain blocks based on validity
+   statements from other validators. These validators are called block authors, they are selected by
+   [BABE](./learn-consensus.md/#block-production-babe) and can note up to one backable candidate for
+   each parachain to include in the relay chain. A backable condidatate included in the relay chain
+   is considered _backed_ in that fork of the chain.
+
+Any instances of non-compliance with the consensus algorithms result in punishment by removal of
+some or all of the validator’s staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }},
+thereby discouraging bad actors. Good performance, however, will be rewarded, with validators
+receiving block rewards (including transaction fees) in the form of
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange for their activities.
+
+:::info
+
+For detailed information about the role of validators you can read the Protocol Overview Section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-overview.html).
+
+:::
 
 ## Guides
 
