@@ -52,10 +52,11 @@ and respect any messages incoming from the Relay Chain and system level parachai
 Some examples of potential public utility chains are bridges, DOT/KSM-denominated smart contract
 platforms, and [generic asset chains](#statemint).
 
-Public utility parachains would typically grant privileged business logic to Polkadot’s governance.
-Just as the Polkadot Relay Chain has several privileged functions like setting the validator count
-or allocating DOT from the Treasury, these parachains can have privileged functions like changing
-system parameters or triggering an upgrade.
+Public utility parachains would typically grant privileged business logic to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s governance. Just as the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain has several privileged
+functions like setting the validator count or allocating DOT from the Treasury, these parachains can
+have privileged functions like changing system parameters or triggering an upgrade.
 
 Because public utility chains add functionality beyond the scope of the Relay Chain, they will
 likely be approved by the network stakeholders only in rare scenarios.

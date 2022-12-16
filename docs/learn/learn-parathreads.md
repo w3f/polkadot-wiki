@@ -12,7 +12,7 @@ Parathreads are an idea for parachains to temporarily participate (on a block by
 dedicated parachain slot. This is done through economically sharing the scarce resource of a
 _parachain slot_ among several competing resources (parathreads). Chains that otherwise would not be
 able to acquire a full parachain slot or do not find it economically sensible to do so, are enabled
-to participate in {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} shared security
+to participate in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s shared security
 &mdash; albeit with an associated fee per executed block. It also offers a graceful off-ramp to
 parachains that no longer require a dedicated parachain slot, but would like to continue using the
 Relay Chain.
@@ -54,7 +54,7 @@ distinction than a technological one.
 Parathreads have the exact same benefits for connecting to {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} that a full parachain has. Namely, it is able to send messages to other
 para-objects through [XCMP](learn-xcm.md###XCMP) and it is secured under the full economic security
-of {{ polkadot: Polkadot's :polkadot }} {{ kusama: Kusama's :kusama }} validator set.
+of {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}'s validator set.
 
 The difference between parachains and parathreads is economic. Parachains must be registered through
 a normal means of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, i.e. governance
@@ -95,8 +95,8 @@ There are two sources of compensation for collators:
 
 Collators may be paid in local parathread currency. However, the Relay Chain transacts with the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} native currency only. Collators must
-then submit block candidates with an associated bid in {{ polkadot: DOT :polkadot }}
-{{ kusama: KSM :kusama }}.
+then submit block candidates with an associated bid in {{ polkadot: DOT. :polkadot }}
+{{ kusama: KSM. :kusama }}
 
 ## Parachain Slot Swaps
 

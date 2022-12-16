@@ -130,37 +130,43 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 
 ## How to Apply
 
-{{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
-and fill in the [application form][kusama 1kv form].  The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
-
 {{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
 Attaining a rank of 25 usually takes around two months. The leaderboard is available [here][leaderboard]. In order to apply to the Polkadot programme, set up your node to adhere to the requirements below
 and fill in the [application form][polkadot 1kv form]. You will hear back from the team shortly. :polkadot }}
+
+{{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
+and fill in the [application form][kusama 1kv form].  The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
 
 #### Requirements
 
 - Verified identity (see [here][identity instructions] for instructions)
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
-- {{ kusama: Minimum of 10 KSM self-stake :kusama }}{{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}
+- {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
   (exceptions by approval for good intentions)
-- {{ kusama: No more than 15% commission :kusama }}{{ polkadot: No more than 5% commission :polkadot }}
+- {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on the latest release
-- {{ kusama: Max two nodes (under same sub/super identity) :kusama }}{{ polkadot: Reward destination 'Staked' :polkadot }}
+- {{ polkadot: Reward destination 'Staked' :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
 - Validators must operate nodes themselves, they may not be operated by third parties or staking
   providers.
 
 #### Nominators
 
 The below addresses are the stash / controller pairs for the primary nominators involved in the
-{{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }} Thousand Validators programme. They
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators programme. They
 are formatted like "`stash` / `controller`".
 
-- {{ kusama: `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq` :kusama }}{{ polkadot: `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw` :polkadot }}
-- {{ kusama: `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ` :kusama }}{{ polkadot: `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU` :polkadot }}
-- {{ kusama: `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V` :kusama }}{{ polkadot: `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd` :polkadot }}
-- {{ polkadot: `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `1324GSzD4bfBYj6ZnJjvMzWCjCJqwdVRNyyzgcncyX8C1VEN` :polkadot }}
+{{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw` :polkadot }}
+{{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq` :kusama }}
+
+{{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU` :polkadot }}
+{{ kusama: - `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ` :kusama }}
+
+{{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd` :polkadot }}
+{{ kusama: - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V` :kusama }}
+
+{{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `1324GSzD4bfBYj6ZnJjvMzWCjCJqwdVRNyyzgcncyX8C1VEN` :polkadot }}
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
@@ -169,8 +175,8 @@ A time delay proxy is used as the interaction method for some of these accounts.
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
 can be anywhere from a few validators receiving nomination from a single nominator, to the max of
-{{ kusama: 24 :kusama }}{{ polkadot: 16 :polkadot }} nominators on
-{{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}.
+{{ polkadot: 16 :polkadot }}{{ kusama: 24 :kusama }} nominators on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 [leaderboard]: https://thousand-validators.kusama.network/#/leaderboard
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
