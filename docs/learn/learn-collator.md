@@ -70,8 +70,6 @@ reaching consensus, the now validated block candidate is shared with the validat
 and the process repeats for new transactions. A collator cannot continue building blocks on a
 parachain until the block candidate they proposed to the Relay Chain validators have been validated.
 
-![Relay Chain candidate block diagram](../assets/polkadot-consensus-example-2.png)
-
 A block is produced every 6 seconds.
 
 ## Collators in the Wild
