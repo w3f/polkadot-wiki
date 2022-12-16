@@ -9,6 +9,15 @@ slug: ../learn-validator
 
 import RPC from "./../../components/RPC-Connection";
 
+:::info
+
+This page provides a general overview of the role of validators in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
+can read the Protocol Overview Section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-overview.html).
+
+:::
+
 Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, validating proofs from collators and
 participating in consensus with other validators.
@@ -29,7 +38,7 @@ The selected para-validators are one of
 validators randomly selected (per epoch) to participate in the validation, creating a validator pool
 of 200 para-validators.
 
-Validators perform two functions:
+Validators perform two main functions:
 
 1. **Verifying** that the information contained in an assigned set of parachain blocks is valid.
    They receive parachain block candidates from the [Collators](./learn-collator.md) together with a
@@ -41,18 +50,33 @@ Validators perform two functions:
    each parachain to include in the relay chain. A backable condidatate included in the relay chain
    is considered _backed_ in that fork of the chain.
 
+Note that validators also participate to the so-called **availability distribution**. In fact, once
+the candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is
+not included as part of the parachain until it is proven avaialable (together with the PoV).
+Information regarding the availability of the candidate will be noted in the following relay chain
+blocks. Only when there is enough information, the candidate is considered a full parachain block or
+_parablock_.
+
+Finally, validators particiapte to the so-called **approval process**. Once the parablock is
+considered vailable and part of the parachain, it is still _pending approval_. Becuase
+para-validators are a small subset of all validators, there a risk that by chance the majority of
+para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
+verification of the parablock before it can be considered approved. Having a secondary verification
+step avoids the allocation of more para-validaotrs that will ultimately reduce the throughput of the
+system.
+
+:::info
+
+For detailed information about the approval proceess see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
+
+:::
+
 Any instances of non-compliance with the consensus algorithms result in punishment by removal of
 some or all of the validator’s staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }},
 thereby discouraging bad actors. Good performance, however, will be rewarded, with validators
 receiving block rewards (including transaction fees) in the form of
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange for their activities.
-
-:::info
-
-For detailed information about the role of validators you can read the Protocol Overview Section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-overview.html).
-
-:::
 
 ## Guides
 
