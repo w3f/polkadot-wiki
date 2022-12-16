@@ -8,8 +8,8 @@ slug: ../learn-availability
 ---
 
 The [Availability and Validity](https://spec.polkadot.network/#chapter-anv) (AnV) protocol of
-Polkadot allows the network to be efficiently sharded among parachains while maintaining
-strong security guarantees.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows the network to be efficiently
+sharded among parachains while maintaining strong security guarantees.
 
 ## Phases of the AnV protocol
 
@@ -79,36 +79,40 @@ recovered from a subset of the code and in absence of some portion of the code. 
 original message padded with some extra data that enables the reconstruction of the code in the case
 of erasures.
 
-The type of erasure codes used by Polkadot's availability scheme are [Reed-Solomon][reed solomon]
-codes, which already enjoys a battle-tested application in technology outside the blockchain
-industry. One example is found in the compact disk industry. CDs use Reed-Solomon codes to correct
-any missing data due to inconsistencies on the disk face such as dust particles or scratches.
+The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
+availability scheme are [Reed-Solomon][reed solomon] codes, which already enjoys a battle-tested
+application in technology outside the blockchain industry. One example is found in the compact disk
+industry. CDs use Reed-Solomon codes to correct any missing data due to inconsistencies on the disk
+face such as dust particles or scratches.
 
-In Polkadot, the erasure codes are used to keep parachain state available to the system without
-requiring all validators to keep tabs on all the parachains. Instead, validators share smaller
-pieces of the data and can later reconstruct the entire data under the assumption that 1/3+1 of the
-validators can provide their pieces of the data.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the erasure codes are used to
+keep parachain state available to the system without requiring all validators to keep tabs on all
+the parachains. Instead, validators share smaller pieces of the data and can later reconstruct the
+entire data under the assumption that 1/3+1 of the validators can provide their pieces of the data.
 
 :::note
 
 The 1/3+1 threshold of validators that must be responsive in order to construct the full parachain
-state data corresponds to Polkadot's security assumption in regard to Byzantine nodes.
+state data corresponds to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s security
+assumption in regard to Byzantine nodes.
 
 :::
 
 ## Fishermen: Deprecated
 
 The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a
-different role in relation to the Polkadot network. Instead of packaging the state transitions and
-producing the next parachain blocks as collators do, fishermen will watch this process and ensure no
-invalid state transitions are included.
+different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+network. Instead of packaging the state transitions and producing the next parachain blocks as
+collators do, fishermen will watch this process and ensure no invalid state transitions are
+included.
 
-**Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation,
+**Fishermen are not available on Polkadot or Kusama and are not planned for formal implementation,
 despite previous proposals in the
 [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
 
 To address the motivation behind the Fishermen design consideration, the current secondary backing
-checkers perform a similar role in relation to the Polkadot network. From a security standpoint,
+checkers perform a similar role in relation to the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security standpoint,
 security is based on having at least one honest validator either among parachain validators or
 secondary checker.
 
