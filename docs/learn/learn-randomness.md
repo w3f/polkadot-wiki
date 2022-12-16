@@ -24,7 +24,7 @@ blockchain randomness.
 
 There are two main approaches to blockchain randomness in production today: `RANDAO` and `VRF`.
 
-**Polkadot uses VRF.**
+**{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses VRF.**
 
 ## VRF
 
@@ -33,17 +33,19 @@ random number along with a proof of authenticity that this random number was gen
 submitter. The proof can be verified by any challenger to ensure the random number generation is
 valid.
 
-The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos. Ouroboros
-randomness is secure for block production and works well for [BABE](learn-consensus.md#BABE). Where
-they differ is that Polkadot's VRF does not depend on a central clock (the problem becomes - whose
-central clock?), rather, it depends on its own past results to determine present and future results,
-and it uses slot numbers as a clock emulator, estimating time.
+The VRF used in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is roughly the same
+as the one used in Ouroboros Praos. Ouroboros randomness is secure for block production and works
+well for [BABE](learn-consensus.md#BABE). Where they differ is that Polkadot's VRF does not depend
+on a central clock (the problem becomes - whose central clock?), rather, it depends on its own past
+results to determine present and future results, and it uses slot numbers as a clock emulator,
+estimating time.
 
 ### Here's how it works in detail:
 
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
-Slots make up [epochs](../general/glossary.md##epoch) - on Polkadot, 2400 slots make one epoch,
-which makes epochs four hours long.
+Slots make up [epochs](../general/glossary.md##epoch) - on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, 2400 slots make one epoch, which
+makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
 the following:
@@ -59,16 +61,18 @@ The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof t
 was generated correctly).
 
 The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol
-(specifically, in the Polkadot Host). If the value is less than the threshold, then the validator
-who rolled this number is a viable block production candidate for that slot. The validator then
-attempts to create a block and submits this block into the network along with the previously
-obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it
-against a threshold, and produces a block if the random roll is under that threshold.
+(specifically, in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host). If the
+value is less than the threshold, then the validator who rolled this number is a viable block
+production candidate for that slot. The validator then attempts to create a block and submits this
+block into the network along with the previously obtained `PROOF` and `RESULT`. Under VRF, every
+validator rolls a number for themselves, checks it against a threshold, and produces a block if the
+random roll is under that threshold.
 
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.
-We clarify how we resolve this issue and make sure that Polkadot block times remain near
-constant-time in the wiki page on [consensus](learn-consensus.md).
+We clarify how we resolve this issue and make sure that
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} block times remain near constant-time
+in the wiki page on [consensus](learn-consensus.md).
 
 ## RANDAO
 

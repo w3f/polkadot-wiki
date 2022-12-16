@@ -7,9 +7,10 @@ keywords: [protocol, integration, structure]
 slug: ../build-integration
 ---
 
-Welcome to the Polkadot integration guide. This guide will provide all the information you need to
-get started on your integration. The target audiences for this guide are wallets and custodians, but
-it will be useful to any infrastructure provider such as validators or chain indexers.
+Welcome to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} integration guide.
+This guide will provide all the information you need to get started on your integration. The target
+audiences for this guide are wallets and custodians, but it will be useful to any infrastructure
+provider such as validators or chain indexers.
 
 ## Structure
 
@@ -17,10 +18,10 @@ The guide focuses on Polkadot and Kusama, but the principles will apply to parac
 Substrate-based chains. The guide contains four sections:
 
 1. [Protocol Info](build-protocol-info.md): The entry point to the guide. Please read it carefully
-   as it provides information about Polkadot that differentiates it from other blockchains. Use this
-   page to check your assumptions.
-1. [Assets](build-integrate-assets.md): The guide to integrating assets on Polkadot into your
-   systems.
+   as it provides information about {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+   that differentiates it from other blockchains. Use this page to check your assumptions.
+1. [Assets](build-integrate-assets.md): The guide to integrating assets on
+   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} into your systems.
 1. [Node Management](build-node-management.md): This page will guide you to starting and monitoring
    a node.
 1. [Node Interaction](build-node-interaction.md): This page will teach you to interact with your
