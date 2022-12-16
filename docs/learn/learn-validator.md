@@ -9,6 +9,8 @@ slug: ../learn-validator
 
 import RPC from "./../../components/RPC-Connection";
 
+## Validators' Functions
+
 :::info
 
 This page provides a general overview of the role of validators in
@@ -58,7 +60,7 @@ blocks. Only when there is enough information, the candidate is considered a ful
 _parablock_.
 
 Finally, validators particiapte to the so-called **approval process**. Once the parablock is
-considered vailable and part of the parachain, it is still _pending approval_. Becuase
+considered available and part of the parachain, it is still _pending approval_. Because
 para-validators are a small subset of all validators, there a risk that by chance the majority of
 para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
 verification of the parablock before it can be considered approved. Having a secondary verification
@@ -72,11 +74,19 @@ For detailed information about the approval proceess see dedicated section in
 
 :::
 
-Any instances of non-compliance with the consensus algorithms result in punishment by removal of
-some or all of the validator’s staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }},
-thereby discouraging bad actors. Good performance, however, will be rewarded, with validators
-receiving block rewards (including transaction fees) in the form of
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange for their activities.
+Any instances of non-compliance with the consensus algorithms result in **disputes** with the
+punishment of the validators on the wrong side by removing some or all their staked
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, thereby discouraging bad actors. Good
+performance, however, will be rewarded, with validators receiving block rewards (including
+transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange
+for their activities.
+
+:::info
+
+For detailed information about disputes see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
+
+:::
 
 ## Guides
 
