@@ -246,7 +246,7 @@ head start on your project, allowing you to innovate and create something truly 
 If you have interesting ideas for smart contracts on
 {{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} feel free to drop into the
 {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) :polkadot }}
-{{ [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to talk about
+{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to talk about
 them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) :polkadot }} or
 [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their
