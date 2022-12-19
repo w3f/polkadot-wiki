@@ -8,10 +8,11 @@ slug: ../learn-xcm
 ---
 
 Cross-Consensus Message Format (XCM) aims to be a language to communicate ideas between consensus
-systems. One of Polkadot's promises is that of interoperability, and XCM is the vehicle through
-which it will deliver this promise. Simply, it is a standard that allows protocol developers to
-define the data and origins which their chains can send and receive from. Out of the box, it comes
-with a VM that allows for customization of execution as well as the following properties:
+systems. One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
+that of interoperability, and XCM is the vehicle through which it will deliver this promise. Simply,
+it is a standard that allows protocol developers to define the data and origins which their chains
+can send and receive from. Out of the box, it comes with a VM that allows for customization of
+execution as well as the following properties:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
@@ -25,8 +26,9 @@ with a VM that allows for customization of execution as well as the following pr
 
 :::note
 
-XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in development. Learn
-more about XCM v3 and its new features in the [resources](#resources) section.
+XCM is a work-in-progress. XCM v2 is deployed on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and v3 is currently in development.
+Learn more about XCM v3 and its new features in the [resources](#resources) section.
 
 :::
 
@@ -40,7 +42,7 @@ enclaves like [SPREE](learn-spree.md).
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.
 
-Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a seperate XCM
+Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a separate XCM
 message designed to be a response message which can be sent from the recipient to the sender. Any
 kind of error handling should also be done on the recipient side.
 
@@ -180,8 +182,8 @@ then an interior location within that outer consensus.
 ## Cross-Consensus Protocols (XCMP, VMP, HRMP)
 
 With the XCM format established, common patterns for protocols of these messages are needed.
-Polkadot implements two message passing protocols for acting on XCM messages between its constituent
-parachains.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements two message passing
+protocols for acting on XCM messages between its constituent parachains.
 
 ### XCMP (Cross-Chain Message Passing)
 
@@ -208,8 +210,9 @@ ensure fidelity. It is the task of the Relay Chain validators to move transactio
 queue of one parachain into the input queue of the destination parachain. However, only the
 associated metadata is stored as a hash in the Relay Chain storage.
 
-The input and output queue are sometimes referred to in the Polkadot codebase and associated
-documentation as `ingress` and `egress` messages, respectively.
+The input and output queue are sometimes referred to in the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} codebase and associated documentation
+as `ingress` and `egress` messages, respectively.
 
 ### VMP (Vertical Message Passing)
 
