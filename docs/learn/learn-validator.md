@@ -166,10 +166,40 @@ one of the followings (ordered from most to least important):
 - A parablock backed on a branch of the relay chain is bad
 - A parablock seconded, but not backed on any branch of the relay chain, is bad
 
+Checking a parachain block requires 3 pieces of data: the parachain validator code, the availability
+of data, and the candidate receipt. The validator code is available on-chain and published ahead of
+time. Thus, a dispute process begins with the availability to ensure the availability of the data.
+Such process will conclude quickly if the data is already available, otherwise the initiator of the
+dispute must make it available.
+
+Disputes have both off- and on-chain components. Slashing is handled on-chain, so votes by
+validators on either sides of the dispute must be placed on-chain. Moreover, a dispute on one branch
+of the chain must be transposed to all active branches so that misbehavior can be punished in all
+possible histories. There is thus a distinction between _local_ (the one we are looking at) and
+_remote_ disputes relative to a particular branch of the relay chain.
+
+Disputes can be divided into three different phases:
+
+- [Dispute initiation][]: Disputes are initiated by any validator who finds their opinion on the
+  validity of a parablock in opposition to another issued statement. The initiation begins off-chain
+  by only nodes perceiving that a parablock is bad. The validator can be one of the para-validators
+  (i.e. one of the backers) or one of the approval checkers. Note that, if the dispute occurs during
+  the backing phase, the initiator must make the data available while if the dispute occurs during
+  the approval process the data is already available.
+- [Dispute participation][]: Once becoming aware of the dispute, all validators must participate.
+- [Dispute conclusion][]: Disputes conclude after 2/3 supermajority is reached on either side.
+  Disputes may also conclude after a timeout. This will only happen if the majority of validators
+  are unable to vote for some reason.
+
+The on-chain component of the dispute can be initiated by providing any two conflicting votes and it
+also waits for 2/3 supermajority on either side. The component also tracks which parablocks have
+already been disputed so that the same parablock can be disputed only once on any particular branch
+of the relay chain. Inclusion is halted for the parachain until the dispute resolves.
+
 :::info
 
 For detailed information about disputes see dedicated section in [The Polkadot Parachain Host
-Implementers' Guide][].
+Implementers' Guide][]. In the Guide there are also more details about [disputes' flows][].
 
 :::
 
@@ -244,3 +274,9 @@ Implementers' Guide][].
   https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-postponement
 [on-chain verification]:
   https://paritytech.github.io/polkadot/book/protocol-approval.html#on-chain-verification
+[dispute initiation]: https://paritytech.github.io/polkadot/book/protocol-disputes.html#initiation
+[dispute participation]:
+  https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-participation
+[dispute conclusion]:
+  https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-conclusion
+[disputes' flows]: https://paritytech.github.io/polkadot/book/disputes-flow.html
