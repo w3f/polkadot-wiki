@@ -12,21 +12,22 @@ slug: ../learn-collator
 Collators maintain parachains by collecting parachain transactions from users and producing state
 transition proofs for Relay Chain validators. In other words, collators maintain parachains by
 aggregating parachain transactions into parachain block candidates and producing state transition
-proofs (Proof-of-Validity, PoV) for validators based on those blocks.
+proofs (Proof-of-Validity, PoV) for validators.
 
 Collators maintain a full node for the Relay Chain and a full node for their particular parachain;
 meaning they retain all necessary information to be able to author new blocks and execute
-transactions in much the same way as miners do on current PoW blockchains. Under normal
-circumstances, they will collate and execute transactions to create an unsealed block and provide
-it, together with a PoV, to one or more validators responsible for proposing a parachain block.
+transactions in much the same way as miners do on PoW blockchains. Under normal circumstances, they
+will collate and execute transactions to create an unsealed block and provide it, together with a
+PoV, to one or more validators responsible for proposing a parachain block.
 
-Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
-will get rejected by validators. The validators are required to check the validity of submitted
-candidates, followed by issuing and collecting statements about the validity of candidates to other
-validators. This process is known as **candidate backing**. Validators receive an arbitrary number
-of parachain candidates with associated PoV from untrusted collators. A candidate is considered
-_backable_ when at least 2/3 of all assigned validators have issued a valid statement about that
-candidate.
+Collators are similar to validators on any other blockchain but they do not need to provide security
+guarantees because {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides those. If
+a parachain block is invalid, it will get rejected by validators. The validators are required to
+check the validity of submitted candidates, followed by issuing and collecting statements about the
+validity of candidates to other validators. This process is known as **candidate backing**.
+Validators receive an arbitrary number of parachain candidates with associated PoV from untrusted
+collators. A candidate is considered _backable_ when at least 2/3 of all assigned validators have
+issued a valid statement about that candidate.
 
 The validator must successfully verify the following conditions in the following order:
 
