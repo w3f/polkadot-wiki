@@ -198,8 +198,23 @@ of the relay chain. Inclusion is halted for the parachain until the dispute reso
 
 :::info
 
-For detailed information about disputes see dedicated section in [The Polkadot Parachain Host
-Implementers' Guide][]. In the Guide there are also more details about [disputes' flows][].
+For detailed information about disputes see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
+In the Guide there are also more details about [disputes' flows][].
+
+:::
+
+## Chain Selection
+
+Chain selection is used to select blocks to build on and finalize. These processes need to
+consistent among nodes and resilient to a maximum proportion of malicious nodes. The parachain host
+uses a block authoring system and a finality gadget. The chain selection strategy involves a
+_[leaf-selection rule][]_ and a set of _[finality constraints][]_.
+
+:::info
+
+For detailed information about chain selection see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html).
 
 :::
 
@@ -260,8 +275,7 @@ Implementers' Guide][]. In the Guide there are also more details about [disputes
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.
 
-[the polkadot parachain host implementers' guide]:
-  https://paritytech.github.io/polkadot/book/protocol-disputes.html
+[the polkadot parachain host implementers' guide]: https://paritytech.github.io/polkadot/book/
 [assignments]: https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments
 [no-show]: https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows
 [assignment criteria]:
@@ -280,3 +294,6 @@ Implementers' Guide][]. In the Guide there are also more details about [disputes
 [dispute conclusion]:
   https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-conclusion
 [disputes' flows]: https://paritytech.github.io/polkadot/book/disputes-flow.html
+[leaf-selection rule]: https://paritytech.github.io/polkadot/book/protocol-chain-selection.html
+[finality constraints]:
+  https://paritytech.github.io/polkadot/book/protocol-chain-selection.html#the-best-chain-containing-rule
