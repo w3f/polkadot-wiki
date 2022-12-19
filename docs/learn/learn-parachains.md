@@ -222,6 +222,36 @@ a few examples.
 - **Smart Contract Chains**: These are chains that can have additional logic implemented on them
   through the deployment of code known as _smart contracts_.
 
+## Parachain Host
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} includes a blockchain called relay
+chain. A blockchain is a [Directed Acyclic Graph][] (DAG) of state transitions, where every added
+block can be viewed as the head of the chain or fork with cumulative state. All paths through the
+DAG terminate at the Genesis Block. A blockchain is a tree as each block can have only one parent.
+
+A blockchain network is made of nodes that have a view of many forks of the chain, and must decide
+which fork to follow. To construct the parachain host we need to answer two categories of questions
+addressed by two different components:
+
+- What is the state transition function of the blockchain? This is handled by the **Runtime**, which
+  defines the state-transition logic of the chain. The Runtime logic is divided into\_
+  - Modules
+  - API
+- Being aware of various forks of the blockchain, what behaviors should a node take? What
+  information should a node extract from the state of which forks, and how should that information
+  be used? This is handled by the **Node-side behavior**, which defines all activities that a node
+  undertakes given its view of the blockchain. The node-side behavior can be divided into two
+  categories:
+
+  - **Networking behaviors**, these relate to how information is distributed between nodes, but not
+    hoe the information is used afterwards.
+  - **Core behaviors**, these relate to internal work that a specific node does. Such behavior cares
+    about that information is _distributed_ and _received_, but not how these two are achieved.
+
+  These two categories often interact but they can be heavily abstracted from each other. The
+  node-side behavior is split into various **subsystems**, which perform a particular category of
+  work. Subsystems can communicate with each other.
+
 ## Resources
 
 - [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) -
@@ -231,3 +261,5 @@ a few examples.
   of secure message-passing between them."
 - [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A
   technical walk-through of how parachains interact with the Relay Chain.
+
+[directed acyclic graph]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
