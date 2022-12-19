@@ -245,6 +245,13 @@ addressed by two different components:
   - **API** provides means for the node-side behavior to extract meaningful information from the
     state of a single fork.
 
+  :::info
+
+  The Polkadot Parachain Host Implementers' Guide provides details about [Runtime Architecture][]
+  and [Runtime API][].
+
+  :::
+
 - Being aware of various forks of the blockchain, what behaviors should a node take? What
   information should a node extract from the state of which forks, and how should that information
   be used? This is handled by the **Node-side behavior**, which defines all activities that a node
@@ -260,6 +267,20 @@ addressed by two different components:
   node-side behavior is split into various **subsystems**, which perform a particular category of
   work. Subsystems can communicate with each other through an [Overseer][] that prevents race
   conditions.
+
+  :::info
+
+  The Polkadot Parachain Host Implementers' Guide provides details about [node architecture][] the
+  main subsystems:
+
+  - [Collator subsystem][]
+  - [Backing subsystem][]
+  - [Availability subsystem][]
+  - [Approval subsystem][]
+  - [Dispute subsystem][]
+  - [Utility subsystem][]
+
+  :::
 
 The Runtime and Node-side behavior are dependent from each other. The Runtime depends on Node-side
 behavior to author blocks, and to include [extrinsics](./learn-extrinsics.md) which trigger the
@@ -278,3 +299,12 @@ necessary to determine which action to take.
 
 [directed acyclic graph]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
 [overseer]: https://paritytech.github.io/polkadot/book/node/overseer.html
+[runtime architecture]: https://paritytech.github.io/polkadot/book/runtime/index.html
+[runtime api]: https://paritytech.github.io/polkadot/book/runtime-api/index.html
+[node architecture]: https://paritytech.github.io/polkadot/book/node/index.html
+[collator subsystem]: https://paritytech.github.io/polkadot/book/node/collators/index.html
+[backing subsystem]: https://paritytech.github.io/polkadot/book/node/backing/index.html
+[availability subsystem]: https://paritytech.github.io/polkadot/book/node/availability/index.html
+[approval subsystem]: https://paritytech.github.io/polkadot/book/node/approval/index.html
+[dispute subsystem]: https://paritytech.github.io/polkadot/book/node/disputes/index.html
+[utility subsystem]: https://paritytech.github.io/polkadot/book/node/utility/index.html
