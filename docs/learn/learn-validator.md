@@ -98,12 +98,19 @@ that parablock.
 
 The Approval Process is divided into two parts:
 
-- **Assignments** determine which validators perform approval checks on which candidates, ensuring
-  each candidate receives enough random checkers. This stage tracks approval votes to identify when
-  "no show" approval checks takes suspiciously long. It also tracks relay chain
+- [**Assignments**](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments)
+  determine which validators perform approval checks on which candidates, ensuring each candidate
+  receives enough random checkers. This stage tracks approval votes to identify when
+  ["no show" approval checks](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows)
+  take suspiciously long. It also tracks relay chain
   [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
   determine when adversaries possibly gained foreknowledge about assignments and adding more checks
-  in those cases.
+  in those cases. Assignees determine their own assignments to check specific candidates using two
+  or three
+  [_assignment criteria_](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
+  which are based upon two possible
+  [stories](https://paritytech.github.io/polkadot/book/protocol-approval.html#stories) about the
+  relay chain block that included the candidate (i.e. declared the candidate available).
 - **Approval checks** performs the checks by obtaining the candidate, verify its validity, and
   sending out the approval vote or initiating a dispute.
 
@@ -111,7 +118,13 @@ These two steps first run as off-chain consensus protocols using messages gossip
 validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
 needed to provide rewards for the off-chain protocol. The gossiped messages are of two types,
 assignment notices and approval votes, and are singed with
-[session keys](./learn-cryptography.md/#session-keys).
+[approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
+Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) used by validators.
+Briefly, approval keys are:
+
+- **Approval assignment keys** that are sr25519 keys used only for assignment criteria
+  [VRF](./learn-randomness.md/#vrf).
+- **Approval vote keys** that are ed25519 and would only sign off on a candidate parablock validity.
 
 :::info
 
@@ -123,7 +136,7 @@ For detailed information about the approval process see dedicated section in
 Accepting a parablock is the end result of having passed through the detection stage without
 dispute, or having passed through and escalation/dispute stage with a positive outcome.
 
-### Parablocks vs Relay-Chain blocks
+## Parablocks vs Relay-Chain blocks
 
 It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
 sense to think of relay-chain blocks as having been approvead instead of parablocks have been
@@ -132,7 +145,9 @@ containing only approved parablocks can be considered approved as long as its pa
 block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
 ancestry.
 
-## Guides
+## Further Readings
+
+### Guides
 
 - [How to Validate on Polkadot](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on
   how to set up a validator on the Polkadot live network.
@@ -147,7 +162,7 @@ ancestry.
 - [How to Use Validator Setup](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md) -
   Guide on how to use Polkadot / Kusama validator setup.
 
-## Other References
+### Other References
 
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) -
@@ -163,11 +178,11 @@ ancestry.
   how to validate on Polkadot, with Joe Petrowski and David Dorgan of Parity Technologies, along
   with Tim Ogilvie from Staked.
 
-## Security / Key Management
+### Security / Key Management
 
 - [Validator Security Overview](https://github.com/w3f/validator-security)
 
-## Monitoring Tools
+### Monitoring Tools
 
 - [PANIC for Polkadot](https://github.com/SimplyVC/panic_polkadot) - A monitoring and alerting
   solution for Polkadot / Kusama node
@@ -175,7 +190,7 @@ ancestry.
   information, including what nodes are running on a given chain, what software versions they are
   running, and sync status.
 
-## Validator Stats
+### Validator Stats
 
 - [HashQuark Staking Strategy](https://polkacube.hashquark.io/#/polkadot/strategy) - The HashQuark
   staking strategy dashboard helps you choose the optimal set-up to maximize rewards, and provides
