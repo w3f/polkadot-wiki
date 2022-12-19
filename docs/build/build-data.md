@@ -18,7 +18,7 @@ aggregation layer.
 [Subsquid](https://subsquid.io/) is an open-source framework for building tailored GraphQL APIs to
 query Substrate chain state and history.
 
-Subsquid replaces direct gRPC node access with perfomant Squid archive gateways, allowing quick
+Subsquid replaces direct gRPC node access with performant Squid archive gateways, allowing quick
 synchronization of the API with the historical on-chain data.
 
 Subsquid-powered APIs support filtering, pagination, union types, interfaces and full-text search

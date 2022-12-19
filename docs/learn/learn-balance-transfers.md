@@ -77,11 +77,14 @@ keep-alive check is on or not.
 
 :::
 
-{{ polkadot: For instance, attempting to transfer 0.1 DOT to an account you just generated
-(and thus has no DOT) will fail, since 0.1 is less than the existential deposit of 1 DOT and the account
-cannot be initialized with such a low balance. :polkadot }}{{ kusama: For instance, attempting to transfer
-0.0001 KSM to an account you just generated (and thus has no KSM) will fail, since 0.1 is less than the
-existential deposit of 0.001666 KSM and the account cannot be initialized with such a low balance. :kusama }}
+For instance, attempting to transfer
+{{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} to an account you just generated
+(and thus has no balance) will fail, since
+{{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} is less than the existential
+deposit of
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :kusama }}
+and the account cannot be initialized with such a low balance.
 
 :::note
 
@@ -216,7 +219,7 @@ be checked by checking `session.nextKeys` in the chain state for an existing key
 probably not the reason for your tokens having existing references. :polkadot }}
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
-chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
+chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps](https://polkadot.js.org/apps/). :kusama }}
 
 ### Existing Non-Native Assets
 
