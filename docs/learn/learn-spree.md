@@ -83,7 +83,7 @@ change the total supply of tokens and a basic interface.
 ![spree example](../assets/SPREE/spree_module.png)
 
 The diagram above is a simplification of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} system.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system.
 
 In this diagram, we see that the Wasm code for SPREE module "X" has been uploaded to the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} Relay Chain. The two cylinders "A"
