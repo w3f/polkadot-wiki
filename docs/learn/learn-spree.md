@@ -86,7 +86,7 @@ The diagram above is a simplification of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system.
 
 In this diagram, we see that the Wasm code for SPREE module "X" has been uploaded to the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} Relay Chain. The two cylinders "A"
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain. The two cylinders "A"
 and "B" represent two distinct parachains that have both opted-in to this SPREE module creating two
 distinct instances of it with their own XCMP endpoints "A.X" and "B.X".
 
