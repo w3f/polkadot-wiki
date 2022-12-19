@@ -234,9 +234,17 @@ which fork to follow. To construct the parachain host we need to answer two cate
 addressed by two different components:
 
 - What is the state transition function of the blockchain? This is handled by the **Runtime**, which
-  defines the state-transition logic of the chain. The Runtime logic is divided into\_
-  - Modules
-  - API
+  defines the state-transition logic of the chain. The Runtime logic is divided into:
+
+  - **Modules** encapsulate particular behavior of the system and consist of:
+    - Storage
+    - Routines are invoked by entry points, other modules, upon block initialization or closing.
+      Routines can alter the storage of a module.
+    - Entry point are the means by which new information is introduced to a module and can limit the
+      origin from which they are called (user, root, parachain).
+  - **API** provides means for the node-side behavior to extract meaningful information from the
+    state of a single fork.
+
 - Being aware of various forks of the blockchain, what behaviors should a node take? What
   information should a node extract from the state of which forks, and how should that information
   be used? This is handled by the **Node-side behavior**, which defines all activities that a node
@@ -244,13 +252,19 @@ addressed by two different components:
   categories:
 
   - **Networking behaviors**, these relate to how information is distributed between nodes, but not
-    hoe the information is used afterwards.
+    how the information is used afterwards.
   - **Core behaviors**, these relate to internal work that a specific node does. Such behavior cares
     about that information is _distributed_ and _received_, but not how these two are achieved.
 
   These two categories often interact but they can be heavily abstracted from each other. The
   node-side behavior is split into various **subsystems**, which perform a particular category of
-  work. Subsystems can communicate with each other.
+  work. Subsystems can communicate with each other through an [Overseer][] that prevents race
+  conditions.
+
+The Runtime and Node-side behavior are dependent from each other. The Runtime depends on Node-side
+behavior to author blocks, and to include [extrinsics](./learn-extrinsics.md) which trigger the
+correct entry points. The Node-side behavior relies on the Runtime APIs to extract information
+necessary to determine which action to take.
 
 ## Resources
 
@@ -263,3 +277,4 @@ addressed by two different components:
   technical walk-through of how parachains interact with the Relay Chain.
 
 [directed acyclic graph]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
+[overseer]: https://paritytech.github.io/polkadot/book/node/overseer.html
