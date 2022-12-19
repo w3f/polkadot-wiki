@@ -65,19 +65,12 @@ verification of the parablock before it can be considered approved. Having a sec
 step avoids the allocation of more para-validators that will ultimately reduce the throughput of the
 system.
 
-Any instances of non-compliance with the consensus algorithms result in **disputes** with the
-punishment of the validators on the wrong side by removing some or all their staked
+Any instances of non-compliance with the consensus algorithms result in [**disputes**](#disputes)
+with the punishment of the validators on the wrong side by removing some or all their staked
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, thereby discouraging bad actors. Good
 performance, however, will be rewarded, with validators receiving block rewards (including
 transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange
 for their activities.
-
-:::info
-
-For detailed information about disputes see dedicated section in [The Polkadot Parachain Host
-Implementers' Guide][].
-
-:::
 
 ## Approval Process
 
@@ -94,6 +87,17 @@ another fork containing good blocks. Dealing with a bad parablock includes the f
 The result of the dispute must be transplantable to all other forks so that malicious validators are
 slashed in all possible histories and so that honest validators will ignore any forks containing
 that parablock.
+
+:::info Parablocks vs Relay-Chain blocks
+
+It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
+sense to think of relay-chain blocks as having been approvead instead of parablocks have been
+approved. A rely-chain block containing a bad parablock must be reverted, while a relay-chain block
+containing only approved parablocks can be considered approved as long as its parent relay-chain
+block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
+ancestry.
+
+:::
 
 The Approval Process is divided into two parts:
 
@@ -118,7 +122,9 @@ The Approval Process is divided into two parts:
 
 These two steps first run as off-chain consensus protocols using messages gossiped among all
 validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
-needed to provide rewards for the off-chain protocol.
+needed to provide rewards for the off-chain protocol. The [on-chain verification][] has two phases:
+a) assignments notices and approval votes are recorded in a relay chain block, and b) in another
+relay chain block notes are fed into the approval code.
 
 The gossiped messages are of two types, assignment notices and approval votes, and are singed with
 [approval keys][]. Such keys are part of the [session keys](./learn-cryptography.md/#session-keys)
@@ -138,14 +144,34 @@ For detailed information about the approval process see dedicated section in
 Accepting a parablock is the end result of having passed through the detection stage without
 dispute, or having passed through and escalation/dispute stage with a positive outcome.
 
-## Parablocks vs Relay-Chain blocks
+## Disputes
 
-It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
-sense to think of relay-chain blocks as having been approvead instead of parablocks have been
-approved. A rely-chain block containing a bad parablock must be reverted, while a relay-chain block
-containing only approved parablocks can be considered approved as long as its parent relay-chain
-block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
-ancestry.
+All parachain blocks that are in the finalized relay chain should be valid. This, does not apply to
+backed blocks that are not included. To ensure nothing invalid end up in the finalized relay chain
+there are approval checks (described above) and disputes. The latter ensures that each attempt to
+include something invalid is caught and the offending validators are punished.
+
+Disputes are _independent from a particular fork_, while backing and approval operate on particular
+forks. The approval voting stops if an alternative fork (which might not contain the
+currently-approved candidate) is finalized. In fact, the sole purpose of the approval process is to
+make sure invalid blocks are not finalized. However, even though the danger is past and the
+offending validators did not manage to get the invalid block approved, those validators need to get
+slashed for the attempt.
+
+A dispute stems from a disagreement between teo or more validators. For this to happen a bad actor
+needs to distribute and invalid block to honest validators. Scenarios leading to a dispute can be
+one of the followings (ordered from most to least important):
+
+- A parablock included on a branch of the relay chain is bad
+- A parablock backed on a branch of the relay chain is bad
+- A parablock seconded, but not backed on any branch of the relay chain, is bad
+
+:::info
+
+For detailed information about disputes see dedicated section in [The Polkadot Parachain Host
+Implementers' Guide][].
+
+:::
 
 ## Further Readings
 
@@ -216,3 +242,5 @@ ancestry.
   https://paritytech.github.io/polkadot/book/protocol-approval.html#announcements--notices
 [assignment postponement]:
   https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-postponement
+[on-chain verification]:
+  https://paritytech.github.io/polkadot/book/protocol-approval.html#on-chain-verification
