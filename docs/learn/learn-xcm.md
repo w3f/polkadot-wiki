@@ -211,6 +211,13 @@ associated metadata is stored as a hash in the Relay Chain storage.
 The input and output queue are sometimes referred to in the Polkadot codebase and associated
 documentation as `ingress` and `egress` messages, respectively.
 
+:::info
+
+For detailed information about VMP see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#horizontal-message-passing).
+
+:::
+
 ### VMP (Vertical Message Passing)
 
 _Vertical Message Passing_ message passing between the Relay-chain itself and a parachain. Message
