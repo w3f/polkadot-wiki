@@ -99,6 +99,19 @@ another fork containing good blocks. Dealing with a bad parablock includes the f
 - Escalation: the honest validators must send that block for checks to all validators.
 - Consequences: the chain is reverted and all malicious validators are slashed.
 
+The result of the dispute must be transplantable to all other forks so that malicious validators are
+slashed in all possible histories and so that honest validators will ignore any forks containing
+that parablock.
+
+### Parablocks vs Relay-Chain blocks
+
+It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
+sense to think of relay-chain blocks as having been approvead instead of parablocks have been
+approved. A rely-chain block containing a bad parablock must be reverted, while a relay-chain block
+containing only approved parablocks can be considered approved as long as its parent relay-chain
+block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
+ancestry.
+
 ## Guides
 
 - [How to Validate on Polkadot](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on
