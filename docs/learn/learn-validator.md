@@ -104,16 +104,25 @@ The Approval Process is divided into two parts:
   determine when adversaries possibly gained foreknowledge about assignments and adding more checks
   in those cases. Assignees determine their own assignments to check specific candidates using two
   or three [assignment criteria][], which are based upon two possible [stories][] about the relay
-  chain block that included the candidate (i.e. declared the candidate available).
+  chain block that included the candidate (i.e. declared the candidate available). [Assignment
+  notices][] are gossiped among nodes so that all validators know which validators should check
+  which candidates, and if any candidate requires more checkers.
 - **Approval checks** performs the checks by obtaining the candidate, verify its validity, and
-  sending out the approval vote or initiating a dispute.
+  sending out the approval vote or initiating a dispute. Approval checks have a no-show timeout
+  window (i.e. longer than one relay chain slot) to succeed in reconstructing the candidate block,
+  redo its erasure coding to check the candidate receipt, and recheck the candidate block itself. A
+  validator becomes tagged as no-show if does not approve or dispute within the no-show timeout
+  window. Because validators can be overloaded with assignments, they can intentionally delay
+  sending their assignment notice to avoid creating no-shows (see more in [Assignment
+  postponement][]).
 
 These two steps first run as off-chain consensus protocols using messages gossiped among all
 validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
-needed to provide rewards for the off-chain protocol. The gossiped messages are of two types,
-assignment notices and approval votes, and are singed with [approval keys][]. Such keys are part of
-the [session keys](./learn-cryptography.md/#session-keys) used by validators. Briefly, approval keys
-are:
+needed to provide rewards for the off-chain protocol.
+
+The gossiped messages are of two types, assignment notices and approval votes, and are singed with
+[approval keys][]. Such keys are part of the [session keys](./learn-cryptography.md/#session-keys)
+used by validators. Briefly, approval keys are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria
   [VRF](./learn-randomness.md/#vrf).
@@ -203,3 +212,7 @@ ancestry.
   https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria
 [stories]: https://paritytech.github.io/polkadot/book/protocol-approval.html#stories
 [approval keys]: https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys
+[assignment notices]:
+  https://paritytech.github.io/polkadot/book/protocol-approval.html#announcements--notices
+[assignment postponement]:
+  https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-postponement
