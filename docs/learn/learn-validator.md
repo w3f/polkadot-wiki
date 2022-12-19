@@ -15,8 +15,7 @@ import RPC from "./../../components/RPC-Connection";
 
 This page provides a general overview of the role of validators in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
-can read the Protocol Overview Section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-overview.html).
+can read the Protocol Overview Section in [The Polkadot Parachain Host Implementers' Guide][].
 
 :::
 
@@ -75,8 +74,8 @@ for their activities.
 
 :::info
 
-For detailed information about disputes see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
+For detailed information about disputes see dedicated section in [The Polkadot Parachain Host
+Implementers' Guide][].
 
 :::
 
@@ -98,29 +97,23 @@ that parablock.
 
 The Approval Process is divided into two parts:
 
-- [**Assignments**](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments)
-  determine which validators perform approval checks on which candidates, ensuring each candidate
-  receives enough random checkers. This stage tracks approval votes to identify when
-  ["no show" approval checks](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows)
-  take suspiciously long. It also tracks relay chain
+- **[Assignments][]** determine which validators perform approval checks on which candidates,
+  ensuring each candidate receives enough random checkers. This stage tracks approval votes to
+  identify when [no-show][] approval checks take suspiciously long. It also tracks relay chain
   [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
   determine when adversaries possibly gained foreknowledge about assignments and adding more checks
   in those cases. Assignees determine their own assignments to check specific candidates using two
-  or three
-  [_assignment criteria_](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
-  which are based upon two possible
-  [stories](https://paritytech.github.io/polkadot/book/protocol-approval.html#stories) about the
-  relay chain block that included the candidate (i.e. declared the candidate available).
+  or three [assignment criteria][], which are based upon two possible [stories][] about the relay
+  chain block that included the candidate (i.e. declared the candidate available).
 - **Approval checks** performs the checks by obtaining the candidate, verify its validity, and
   sending out the approval vote or initiating a dispute.
 
 These two steps first run as off-chain consensus protocols using messages gossiped among all
 validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
 needed to provide rewards for the off-chain protocol. The gossiped messages are of two types,
-assignment notices and approval votes, and are singed with
-[approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
-Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) used by validators.
-Briefly, approval keys are:
+assignment notices and approval votes, and are singed with [approval keys][]. Such keys are part of
+the [session keys](./learn-cryptography.md/#session-keys) used by validators. Briefly, approval keys
+are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria
   [VRF](./learn-randomness.md/#vrf).
@@ -201,3 +194,12 @@ ancestry.
   effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.
+
+[the polkadot parachain host implementers' guide]:
+  https://paritytech.github.io/polkadot/book/protocol-disputes.html
+[assignments]: https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments
+[no-show]: https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows
+[assignment criteria]:
+  https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria
+[stories]: https://paritytech.github.io/polkadot/book/protocol-approval.html#stories
+[approval keys]: https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys
