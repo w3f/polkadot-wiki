@@ -7,7 +7,7 @@ keywords: [collator, maintain, full node, block candidate]
 slug: ../learn-collator
 ---
 
-## Collators' Function
+## Collators' Role
 
 Collators maintain parachains by collecting parachain transactions from users and producing state
 transition proofs for Relay Chain validators. In other words, collators maintain parachains by

@@ -9,7 +9,7 @@ slug: ../learn-validator
 
 import RPC from "./../../components/RPC-Connection";
 
-## Validators' Functions
+## Validators' Role
 
 :::info
 
@@ -31,7 +31,7 @@ candidate receipts to the tx pool for a block producer to include on-chain. The 
 validators guarantee that each parachain follows its unique rules and can pass messages between
 shards in a trust-free environment.
 
-Para-validators work in groups and are selected every epoch to validate parachain blocks for all
+Para-validators work in groups and are selected in every epoch to validate parachain blocks for all
 parachains connected to the relay chain.
 
 The selected para-validators are one of
@@ -43,8 +43,8 @@ of 200 para-validators.
 Validators perform two main functions:
 
 1. **Verifying** that the information contained in an assigned set of parachain blocks is valid.
-   They receive parachain block candidates from the [Collators](./learn-collator.md) together with a
-   proof-of-validity (PoV). The para-validators then check if the block candidates are valid.
+   They receive parachain block candidates from the [collators](./learn-collator.md) together with a
+   Proof-of-Validity (PoV). The para-validators then check if the block candidates are valid.
    Candidates that gather enough signed validity statements are considered _backable_.
 2. **Participating** in the consensus mechanism to produce the relay chain blocks based on validity
    statements from other validators. These validators are called block authors, they are selected by
@@ -52,27 +52,19 @@ Validators perform two main functions:
    each parachain to include in the relay chain. A backable candidate included in the relay chain is
    considered _backed_ in that fork of the chain.
 
-Note that validators also participate to the so-called **availability distribution**. In fact, once
-the candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is
-not included as part of the parachain until it is proven avaialable (together with the PoV).
-Information regarding the availability of the candidate will be noted in the following relay chain
-blocks. Only when there is enough information, the candidate is considered a full parachain block or
-_parablock_.
+Validators also participate to the so-called **availability distribution**. In fact, once the
+candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is not
+included as part of the parachain until it is proven avaialable (together with the PoV). Information
+regarding the availability of the candidate will be noted in the following relay chain blocks. Only
+when there is enough information, the candidate is considered a full parachain block or _parablock_.
 
-Finally, validators participate to the so-called [**approval process**](#approval-process). Once the
+Validators also participate to the so-called [**approval process**](#approval-process). Once the
 parablock is considered available and part of the parachain, it is still _pending approval_. Because
 para-validators are a small subset of all validators, there a risk that by chance the majority of
 para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
 verification of the parablock before it can be considered approved. Having a secondary verification
 step avoids the allocation of more para-validators that will ultimately reduce the throughput of the
 system.
-
-:::info
-
-For detailed information about the approval process see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
-
-:::
 
 Any instances of non-compliance with the consensus algorithms result in **disputes** with the
 punishment of the validators on the wrong side by removing some or all their staked
@@ -91,17 +83,45 @@ For detailed information about disputes see dedicated section in
 ## Approval Process
 
 Having a bad parablock on the relay chain is not catastrophic as long as the block is not approved
-and finalized by the finality gadget [GRANPA](./learn-consensus.md/#finality-gadget-grandpa). If the
-block is not finalized, the fork on the chain containing that block can be ignored in favor of
+and finalized by the finality gadget [GRANDPA](./learn-consensus.md/#finality-gadget-grandpa). If
+the block is not finalized, the fork on the chain containing that block can be ignored in favor of
 another fork containing good blocks. Dealing with a bad parablock includes the following stages:
 
 - Detection: the bad block must be detected by honest validators.
-- Escalation: the honest validators must send that block for checks to all validators.
+- Escalation: the honest validators must send that block for checks to all validators. A dispute
+  starts.
 - Consequences: the chain is reverted and all malicious validators are slashed.
 
 The result of the dispute must be transplantable to all other forks so that malicious validators are
 slashed in all possible histories and so that honest validators will ignore any forks containing
 that parablock.
+
+The Approval Process is divided into two parts:
+
+- **Assignments** determine which validators perform approval checks on which candidates, ensuring
+  each candidate receives enough random checkers. This stage tracks approval votes to identify when
+  "no show" approval checks takes suspiciously long. It also tracks relay chain
+  [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
+  determine when adversaries possibly gained foreknowledge about assignments and adding more checks
+  in those cases.
+- **Approval checks** performs the checks by obtaining the candidate, verify its validity, and
+  sending out the approval vote or initiating a dispute.
+
+These two steps first run as off-chain consensus protocols using messages gossiped among all
+validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
+needed to provide rewards for the off-chain protocol. The gossiped messages are of two types,
+assignment notices and approval votes, and are singed with
+[session keys](./learn-cryptography.md/#session-keys).
+
+:::info
+
+For detailed information about the approval process see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
+
+:::
+
+Accepting a parablock is the end result of having passed through the detection stage without
+dispute, or having passed through and escalation/dispute stage with a positive outcome.
 
 ### Parablocks vs Relay-Chain blocks
 
