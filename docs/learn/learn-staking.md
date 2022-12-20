@@ -577,6 +577,13 @@ staking rewards.
 | You have some inactive, and some waiting nominations. | Inactive validators are producing blocks in the current era, but your stake has not been assigned to any of your nominations. You are not earning rewards if you do not have an active validator. You cannot be slashed either. | **Scenario 1:** You have bonded less than the Minimum Active Bond. **Scenario 2:** You have more than the Minimum Active Bond, but your account is at the tail of the bags list and within your bag there are acounts with less stake than you, in front of you. |                                                     **Scenario 1:** Try bonding more funds. **Scenario 2:** Try to put your account in front of the accounts with less stake than you.                                                      |
 |            You have one active validator.             |                                    Active validators are producing blocks in the current era, and your stake has been assigned to them. If you are not earning rewards, you can be slashed.                                     |                                                     Your validator is oversubscribed, meaning that it has more than 256 nominators (ranked by stake), and your stake is less than that of those nominators.                                                      | You can try to select validators that are not oversubscribed but in the long term you might want to bond more funds (even more than the Minimum Active Bond) to increase the chance of earning rewards also with oversubscribed validators. |
 
+:::info
+
+You can find information about why you might not receive staking rewards on
+[this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-).
+
+:::
+
 ## Resources
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
