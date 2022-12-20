@@ -153,6 +153,8 @@ WebAssembly related tools and projects.
   language.
 - [Go: Subscan API](https://github.com/itering/substrate-api-rpc) - Go API for Polkadot.
 - [C++ Polkadot API](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot.
+- [.NET Toolchain for Polkadot/Substrate API](https://github.com/ajuna-network/Ajuna.SDK) - Toolchain
+  to generate Polkadot API & Service Layer for .NET (usable in Unity).
 - [.NET Polkadot API](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API
   for .NET.
 - [Python Polkadot API](https://github.com/polkascan/py-substrate-interface) - Polkadot library for
