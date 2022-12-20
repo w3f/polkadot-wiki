@@ -72,7 +72,7 @@
     "yargs": "^17.6.2"
   },
   "dependencies": {
-    "@algolia/client-search": "^4.14.2",
+    "@algolia/client-search": "^4.14.3",
     "@mdx-js/runtime": "^1.6.22",
     "@polkadot/util": "10.1.1",
     "@polkadot/util-crypto": "10.1.1",
