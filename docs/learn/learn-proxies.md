@@ -9,6 +9,18 @@ slug: ../learn-proxies
 
 import RPC from "./../../components/RPC-Connection"
 
+:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
+
+The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy ->
+multisig -> an anonymous proxy which is part of another multisig). These complex setups must be done
+using the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+These complex proxy setups should only be performed if you are comfortable enough interacting
+directly with the chain. **We recommend to use the Westend Testnet if you are testing features for
+the first time.**
+
+:::
+
 Much like controller accounts in
 [staking](learn-staking.md#stash-and-controller-accounts-for-staking), proxies allow users to use an
 account (it can be in cold storage or a hot wallet) less frequently but actively participate in the
@@ -205,23 +217,31 @@ and the `ProxyDepositFactor` is
 
 ## Time-delayed Proxy
 
+:::info
+
+See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can use time-delayed
+proxies.
+
+:::
+
 We can add a layer of security to proxies by giving them a delay time. The delay will be quantified
 in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6
 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute
-delay. The proxy will announce its intended action and will wait for the number of blocks defined in
-the delay time before executing it. The proxy will include the hash of the intended function call in
-the announcement. Within this time window, the intended action may be canceled by accounts that
-control the proxy. Now we can use proxies knowing that any malicious actions can be noticed and
-reverted within a delay period.
+delay. The proxy will announce its intended action using the `proxy.announce` extrinsic and will
+wait for the number of blocks defined in the delay time before executing it. The proxy will include
+the hash of the intended function call in the announcement. Within this time window, the intended
+action may be canceled by accounts that control the proxy. This can be done by the proxy itself
+using the `proxy.removeAnnouncement` extrinsic or by the proxied account using the the
+`proxy.rejectAnnouncement` extrinsic. Now we can use proxies knowing that any malicious actions can
+be noticed and reverted within a delay period. After the time-delay, the proxy can use the
+`proxy.proxyAnnounced` extrinsic to execute the announced call.
 
-:::caution The Polkadot-JS UI cannot handle complicated proxy setups
+:::info
 
-The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig -> an anonymous
-proxy which is part of another multisig). These complex setups must be done using the
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-These complex proxy setups should only be performed if you are comfortable enough interacting
-directly with the chain, as you will be unable to sign extrinsics using the UI.
+If you try to use `proxy.proxyAnnounced` within the time-delay window you will get an error "Proxy
+unannounced" since the announcement will be done after the time delay. Also note that regular
+`proxy.proxy`calls do not work with time-delayed proxies, you need to announce the call first and
+then execute the announced call on a separate transaction.
 
 :::
 
