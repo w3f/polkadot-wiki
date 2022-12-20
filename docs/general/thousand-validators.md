@@ -131,15 +131,17 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 ## How to Apply
 
 {{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
-Attaining a rank of 25 usually takes around two months. The leaderboard is available [here][leaderboard]. In order to apply to the Polkadot programme, set up your node to adhere to the requirements below
-and fill in the [application form][polkadot 1kv form]. You will hear back from the team shortly. :polkadot }}
+Attaining a rank of 25 usually takes around two months. The leaderboard is available
+[here](https://thousand-validators.kusama.network/#/leaderboard).
+In order to apply to the Polkadot programme, set up your node to adhere to the requirements below
+and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). You will hear back from the team shortly. :polkadot }}
 
 {{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
-and fill in the [application form][kusama 1kv form].  The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
+and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6).  The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
 
 #### Requirements
 
-- Verified identity (see [here][identity instructions] for instructions)
+- Verified identity (see [here](../learn/learn-identity.md#setting-an-identity) for instructions)
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
@@ -177,9 +179,3 @@ to nominate based on the lowest amount staked for a validator and the amount of 
 can be anywhere from a few validators receiving nomination from a single nominator, to the max of
 {{ polkadot: 16 :polkadot }}{{ kusama: 24 :kusama }} nominators on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-
-[leaderboard]: https://thousand-validators.kusama.network/#/leaderboard
-[kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
-[polkadot 1kv form]:
-  https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform
-[identity instructions]: ../learn/learn-identity.md#setting-an-identity

@@ -103,7 +103,7 @@ These validators get assigned to "committees", which are randomly selected group
 in the network. Ethereum 2.0 relies on having a large validator set to provide availability and
 validity guarantees: They need at least 111 validators per shard to run the network and 256
 validators per shard to finalize all shards within one epoch. With 64 shards, that's 16_384
-validators (given 256 validators per shard). [4][5]
+validators (given 256 validators per shard). `[4][5]`
 
 Polkadot can provide strong finality and availability guarantees with much fewer validators.
 Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a

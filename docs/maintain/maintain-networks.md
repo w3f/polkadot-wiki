@@ -89,8 +89,9 @@ the CLI.
 
 ## Substrate Networks
 
-To connect to a Substrate public network, follow the [instructions][substrate install] for
-installing the Substrate executable first.
+To connect to a Substrate public network, follow the
+[instructions](https://docs.substrate.io/v3/getting-started/overview/) for installing the Substrate
+executable first.
 
 ### Flaming Fir
 
@@ -111,13 +112,10 @@ and you will connect and start syncing Flaming Fir.
 ## Telemetry Dashboard
 
 If you connect to the public networks, the default configuration for your node will connect it to
-the public [Telemetry][telemetry] service.
+the public [Telemetry](https://telemetry.polkadot.io/) service.
 
 You can verify that your node is connected by navigating to the correct network on the dashboard and
 finding the name of your node.
 
 There is a built-in search function on the nodes page. Simply start typing keystrokes in the main
 window to make it available.
-
-[substrate install]: https://docs.substrate.io/v3/getting-started/overview/
-[telemetry]: https://telemetry.polkadot.io/

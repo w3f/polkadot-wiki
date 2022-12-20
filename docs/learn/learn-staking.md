@@ -509,7 +509,8 @@ disabled, but if the number of disabled validators gets too large,
 to get a full set. Disabled validators will need to resubmit their intention to validate and
 re-garner support from nominators.
 
-For more on chilling, see the "[How to Chill][]" page on this wiki.
+For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
+this wiki.
 
 ## Why and Why not to Stake?
 
@@ -519,7 +520,8 @@ For more on chilling, see the "[How to Chill][]" page on this wiki.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
 - Can choose up-to
   {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
- {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} validators which can help to decentralize the network through the sophisticated
+  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+  validators which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
 - 10% inflation/year of the tokens is primarily intended for staking rewards.
 
@@ -540,8 +542,10 @@ users to withdraw. For in-depth understanding, check the
 ### Cons of Staking
 
 - Tokens will be locked for about {{ polkadot: 28 :polkadot }}{{ kusama: 7 :kusama }} days on
-  {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during the unbonding period.
-- Possible punishment in case of the active validator found to be misbehaving (see [slashing](#slashing)).
+  {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during
+  the unbonding period.
+- Possible punishment in case of the active validator found to be misbehaving (see
+  [slashing](#slashing)).
 - Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
   transfer them to different account etc.
 
@@ -561,6 +565,3 @@ be limited by the bandwidth strain of the network due to peer-to-peer message pa
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
 - [Validator setup](../maintain/maintain-guides-secure-validator.md)
-
-[epoch]: ../general/glossary.md#epoch
-[how to chill]: ../maintain/maintain-guides-how-to-chill.md

@@ -19,8 +19,8 @@ Kusama is owned by those who hold the Kusama tokens (KSM). There's no central ki
 changes are made through the protocol's on-chain governance.
 
 The network is a permissionless and anyone can come along and start using it. Those who participated
-in the Polkadot sale can claim a proportional amount of KSM through the [Kusama Claims
-process][claims].
+in the Polkadot sale can claim a proportional amount of KSM through the
+[Kusama Claims process](kusama-claims).
 
 Kusama is experimental. **Expect Chaos**.
 
@@ -178,8 +178,8 @@ nominating), governance, parachain auctions, basic transfers and everything else
 
 <br />
 
-For brand-new learners of Kusama's cousin network, Polkadot, please head over to the [Polkadot
-Wiki][].
+For brand-new learners of Kusama's cousin network, Polkadot, please head over to the
+[Polkadot Wiki](https://wiki.polkadot.network/).
 
 ### Kusama Gifts
 
