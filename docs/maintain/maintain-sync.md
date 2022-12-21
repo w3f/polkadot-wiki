@@ -101,10 +101,14 @@ example:
 
 :::
 
-<Tabs groupId="operating-systems" values={[ {label: 'macOS', value: 'mac'}, {label: 'Windows',
-value: 'win'}, {label: 'Linux (standalone)', value: 'linux-standalone'}, {label: 'Linux (package)',
-value: 'linux-package'}, ]}
-
+<Tabs
+  groupId="operating-systems"
+  values={[
+    {label: 'macOS', value: 'mac'},
+    {label: 'Windows', value: 'win'},
+    {label: 'Linux (standalone)', value: 'linux-standalone'},
+    {label: 'Linux (package)', value: 'linux-package'},
+  ]}
 >
 
 <TabItem value="mac">
