@@ -11,11 +11,13 @@ import RPC from "./../../components/RPC-Connection"
 
 :::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
 
-The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy ->
-multisig -> an anonymous proxy which is part of another multisig). These complex setups must be done
-using the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
+-> an anonymous proxy which is part of another multisig). These complex setups must be done using
+the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
 
- **We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if you are testing features for the first time.** By performing the complex proxy setups on the testnet, you can comfortably replicate the procedure on the main networks.
+**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
+you are testing features for the first time.** By performing the complex proxy setups on the
+testnet, you can comfortably replicate the procedure on the main networks.
 
 :::
 
@@ -215,13 +217,6 @@ and the `ProxyDepositFactor` is
 
 ## Time-delayed Proxy
 
-:::info
-
-See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use time-delayed
-proxies.
-
-:::
-
 We can add a layer of security to proxies by giving them a delay time. The delay will be quantified
 in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6
 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute
@@ -233,6 +228,21 @@ using the `proxy.removeAnnouncement` extrinsic or by the proxied account using t
 `proxy.rejectAnnouncement` extrinsic. Now we can use proxies knowing that any malicious actions can
 be noticed and reverted within a delay period. After the time-delay, the proxy can use the
 `proxy.proxyAnnounced` extrinsic to execute the announced call.
+
+:::info
+
+See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use
+time-delayed proxies. The video goes through the example below.
+
+:::
+
+Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
+fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
+Charly submits an extrinsic to change the controller to Bob, such extrinsic can be rejected by
+Eleanor. This implies that Eleanor monitors Charly, and that within the the time-delay she can spot
+the announced extrinsic. As a monitor tool you can use a block explorer.
+
+![time-delayed proxies](../assets/time-delayed-proxies.png)
 
 :::info
 
