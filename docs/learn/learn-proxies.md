@@ -7,7 +7,7 @@ keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Much like controller accounts in
 [staking](learn-staking.md#stash-and-controller-accounts-for-staking), proxies allow users to use an
