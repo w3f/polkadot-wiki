@@ -51,6 +51,20 @@ locked for the referendum duration.
 
 ## Voting on Referenda
 
+To vote on a referendum, navigate to the "Referenda" tab of Polkadot-JS UI. All the active referenda
+will be shown in their respective track sections. Click the "Vote" button to cast a vote for the
+corresponding referendum. As OpenGov takes both the approval and support into account, there are
+four options to choose from when voting on a referendum:
+
+- Aye
+- Nay
+- Split
+- Abstain
+
+Also, you have to specify the conviction multiplier for this vote. The longer you are willing to
+lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means
+that your vote only counts for 10% of the tokens that you hold.
+
 ![vote on referendum](../assets/governance/opengov-vote-referendum.png)
 
 :::caution OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
