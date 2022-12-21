@@ -242,18 +242,19 @@ Charly submits an extrinsic to change the controller to Bob, such extrinsic can 
 Eleanor. Bob can be even more malicious than Charly and change the reward destination to another
 account he only controls. Remember that Eleanor added Charly as proxy, but she might not want to add
 Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
-can spot the announced extrinsic. Eleanor can check all the proxy call announcements made on her
-account's behalf on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
-view the list of unexecuted proxy calls on Eleanor's account.
+can spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her 
+account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
+check the hashes for the calls made by the proxy accounts and the block height at which they are 
+enabled for execution. 
 
 ![time-delayed proxies](../assets/time-delayed-proxies.png)
 
 :::info
 
-If you try to use `proxy.proxyAnnounced` within the time-delay window you will get an error "Proxy
-unannounced" since the announcement will be done after the time delay. Also note that regular
-`proxy.proxy`calls do not work with time-delayed proxies, you need to announce the call first and
-then execute the announced call on a separate transaction.
+If you try to use `proxy.proxyAnnounced` to execute the call within the time-delay window you will 
+get an error "Proxy unannounced" since the announcement will be done after the time delay. Also 
+note that regular `proxy.proxy`calls do not work with time-delayed proxies, you need to announce the 
+call first and then execute the announced call on a separate transaction.
 
 :::
 
