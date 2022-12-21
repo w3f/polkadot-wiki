@@ -195,7 +195,7 @@ functionalities on Polkadot.
   [nomination pools](../learn/learn-nomination-pools.md). Learn more about
   [becoming a nominator](../learn/learn-nominator.md).
 
-- **Roughly 20 DOT**:
+- **Around 20 DOT**:
 
   - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
     register an [on-chain identity](../learn/learn-identity.md)
