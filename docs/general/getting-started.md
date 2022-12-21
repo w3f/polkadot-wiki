@@ -7,6 +7,8 @@ keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 :::info Welcome to the Polkadot Wiki
 
 The Polkadot Wiki serves as the central source of truth for Polkadot. It is a community-focused
@@ -171,18 +173,19 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
 transaction fees, staking, governance, acquisition of a parachain slot and for enabling several key
 functionalities on Polkadot.
 
-- **1 DOT**: the minimum balance required to have an active account on Polkadot Network. If your
-  account balance drops below 1 DOT, your account will be reaped. Learn more about
+- {{ polkadot: __<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum balance required to have an active account on Polkadot Network. If your account
+  balance drops below the minimum, your account will be reaped. Learn more about
   [Accounts](../learn/learn-accounts.md) and the
   [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
 
-- **1 DOT**: the minimum contribution required to join a
-  [nomination pool](../learn/learn-nomination-pools.md) and earn staking rewards for contributing to
-  the security of the network. Learn more about
+- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
+  and earn staking rewards for contributing to the security of the network. Learn more about
   [nomination pools](../learn/learn-nomination-pools.md).
 
-- **5 DOT**: the minimum contribution required to participate in
-  [crowdloans](../learn/learn-crowdloans.md) for
+- {{ polkadot: __<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
 
 - **10 DOT**: the minimum stake required to submit your intent to directly nominate validators. But,
@@ -191,15 +194,24 @@ functionalities on Polkadot.
   have lesser DOT than the minimum active nomination, please consider contributing to
   [nomination pools](../learn/learn-nomination-pools.md). Learn more about
   [becoming a nominator](../learn/learn-nominator.md).
-- **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md), vote for
-  [council](../maintain/maintain-guides-how-to-vote-councillor.md), or create a
-  [proxy account](../learn/learn-proxies.md).
 
-- **200 DOT**: you can create your own [nomination pool](../learn/learn-nomination-pools.md).
+- **Around 20 DOT**:
+
+  - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
+    register an [on-chain identity](../learn/learn-identity.md)
+  - {{ polkadot: __<RPC network="polkadot" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter="humanReadable"/>:__ :polkadot }}
+    vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
+  - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
+    create a [proxy account](../learn/learn-proxies.md).
+
+- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable"/>:__ :polkadot }}
+  you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
 DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is
 a requirement to create proposals, to endorse them and to vote on them when they become referendums.
-Bonding 100 DOT or 5% of requested funding is a requirement to make a
+Bonding
+{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
+or 5% of requested funding is a requirement to make a
 [treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). DOT can also enable
 you to participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).
