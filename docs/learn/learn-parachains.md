@@ -224,7 +224,7 @@ a few examples.
 
 ## Parachain Host
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} includes a blockchain called relay
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} includes a blockchain called a relay
 chain. A blockchain is a [Directed Acyclic Graph][] (DAG) of state transitions, where every added
 block can be viewed as the head of the chain or fork with cumulative state. All paths through the
 DAG terminate at the Genesis Block. A blockchain is a tree as each block can have only one parent.
