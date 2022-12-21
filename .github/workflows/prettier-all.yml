@@ -21,15 +21,14 @@ jobs:
           git branch prettier-update
           git checkout prettier-update
           yarn && yarn prettier:all
-      - name: commit any changes from prettier execution
+      - name: commit any changes from prettier execution and make new PR
         run: |
           if [[ `git status --porcelain` ]]; then
             git commit -a -m 'applying prettier to entire repo'
             git push --set-upstream origin prettier-update
+            gh pr create -B master -H prettier-update --title 'Automated prettier cleanup' --body 'Automated prettier cleanup over entire repo.'
           else
             echo No prettier changes detected, skipping update.
           fi
-      - name: create new pull request
-        run: gh pr create -B master -H prettier-update --title 'Automated prettier cleanup' --body 'Automated prettier cleanup over entire repo.'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
