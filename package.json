@@ -32,7 +32,8 @@
     "docusaurus": "docusaurus",
     "prepare": "husky install",
     "update:auctions": "node ./components/utilities/updateAuctions.js",
-    "audit:links": "python ./scripts/auditLinks.py"
+    "audit:links": "python ./scripts/auditLinks.py",
+    "prettier:all": "npx prettier --write ."
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
