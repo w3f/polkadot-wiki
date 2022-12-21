@@ -217,7 +217,7 @@ and the `ProxyDepositFactor` is
 
 :::info
 
-See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can use time-delayed
+See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use time-delayed
 proxies.
 
 :::
