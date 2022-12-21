@@ -240,7 +240,7 @@ addressed by two different components:
     - Storage
     - Routines are invoked by entry points, other modules, upon block initialization or closing.
       Routines can alter the storage of a module.
-    - Entry point are the means by which new information is introduced to a module and can limit the
+    - The entry point defines the means by which new information is introduced to a module and can limit the
       origin from which they are called (user, root, parachain).
   - **API** provides means for the node-side behavior to extract meaningful information from the
     state of a single fork.
