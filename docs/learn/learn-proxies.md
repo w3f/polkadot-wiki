@@ -15,9 +15,7 @@ The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. 
 multisig -> an anonymous proxy which is part of another multisig). These complex setups must be done
 using the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
 
-These complex proxy setups should only be performed if you are comfortable enough interacting
-directly with the chain. **We recommend to use the Westend Testnet if you are testing features for
-the first time.**
+ **We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if you are testing features for the first time.** By performing the complex proxy setups on the testnet, you can comfortably replicate the procedure on the main networks.
 
 :::
 
