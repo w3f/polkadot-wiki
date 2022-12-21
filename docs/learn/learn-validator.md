@@ -59,7 +59,7 @@ when there is enough information, the candidate is considered a full parachain b
 
 Validators also participate to the so-called [**approval process**](#approval-process). Once the
 parablock is considered available and part of the parachain, it is still _pending approval_. Because
-para-validators are a small subset of all validators, there a risk that by chance the majority of
+para-validators are a small subset of all validators, there is a risk that by chance the majority of
 para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
 verification of the parablock before it can be considered approved. Having a secondary verification
 step avoids the allocation of more para-validators that will ultimately reduce the throughput of the
