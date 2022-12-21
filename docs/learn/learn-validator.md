@@ -57,7 +57,7 @@ included as part of the parachain until it is proven avaialable (together with t
 regarding the availability of the candidate will be noted in the following relay chain blocks. Only
 when there is enough information, the candidate is considered a full parachain block or _parablock_.
 
-Validators also participate to the so-called [**approval process**](#approval-process). Once the
+Validators also participate in the the so-called [**approval process**](#approval-process). Once the
 parablock is considered available and part of the parachain, it is still _pending approval_. Because
 para-validators are a small subset of all validators, there is a risk that by chance the majority of
 para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
