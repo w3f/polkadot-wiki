@@ -40,12 +40,12 @@ referenda can be voted on at a time and the voting period can last multiple week
 the system favoring careful consideration of very few proposals, as opposed to broad consideration
 of many. With that being said, OpenGov (also referred to as Governance v2) is here!
 
-OpenGov changes how the practical means of day-to-day decisions are made, making the
-repercussions of referenda better scoped and agile in order to dramatically increase the number of
-collective decisions the system is able to make.
+OpenGov changes how the practical means of day-to-day decisions are made, making the repercussions
+of referenda better scoped and agile in order to dramatically increase the number of collective
+decisions the system is able to make.
 
-**OpenGov is launched on Kusama. Once it is rigorously tested on
-Kusama, a proposal will be made for it to be deployed on Polkadot.**
+**OpenGov is launched on Kusama. Once it is rigorously tested on Kusama, a proposal will be made for
+it to be deployed on Polkadot.**
 
 The following content will begin by walking through many of the core principles of governance on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to
@@ -303,8 +303,8 @@ three tasks of governance:
 
 In Governance v2, an alternate strategy was required to replace the Council in its previous duties
 as a body delegated by voters to compensate for the fact that many choose to not take part in
-day-to-day of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can
-choose to delegate their voting power to another voter in the system. It does so by improving a
+day-to-day of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter
+can choose to delegate their voting power to another voter in the system. It does so by improving a
 feature known as **Multirole Delegation**, where voters can specify a different delegate for every
 class of referendum in the system. So for example, a voter could delegate one entity for managing a
 less potent referenda class, choose a different delegate for a different class with more powerful

@@ -569,8 +569,8 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-cryptography.md) in the client via the apps
-RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+You can generate your [Session keys](../learn/learn-cryptography.md) in the client via the apps RPC.
+If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
 validator node. You can configure the apps dashboard to connect to the endpoint of your validator in
 the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
 you will not be able to use this method since making RPC requests to this node would effect the

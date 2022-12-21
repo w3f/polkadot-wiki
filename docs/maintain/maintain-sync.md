@@ -8,6 +8,7 @@ slug: ../maintain-sync
 ---
 
 import Tabs from "@theme/Tabs";
+
 import TabItem from "@theme/TabItem";
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom
@@ -28,11 +29,11 @@ pending changes on top of it, and emits the events that are the result of these 
 state of the chain at block 1 is used in the same way to build the state of the chain at block 2,
 and so on. Once two thirds of the validators agree on a specific block being valid, it is finalized.
 
-An **archive node** keeps all the past blocks and their states. An archive node makes it convenient to query the past
-state of the chain at any point in time. Finding out what an account's balance at a certain block
-was, or which extrinsics resulted in a certain state change are fast operations when using an
-archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth
-block this was around 660 GB.
+An **archive node** keeps all the past blocks and their states. An archive node makes it convenient
+to query the past state of the chain at any point in time. Finding out what an account's balance at
+a certain block was, or which extrinsics resulted in a certain state change are fast operations when
+using an archive node. However, an archive node takes up a lot of disk space - around Kusama's 12
+millionth block this was around 660 GB.
 
 :::tip
 
@@ -45,15 +46,16 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** prunes historical states: all finalized blocks' states older than a configurable number
-except the genesis block's state. This is 256 blocks from the last finalized one, by default. A node that is
-pruned this way requires much less space than an archive node.
+A **full node** prunes historical states: all finalized blocks' states older than a configurable
+number except the genesis block's state. This is 256 blocks from the last finalized one, by default.
+A node that is pruned this way requires much less space than an archive node.
 
-A full node may eventually be able to rebuild every block's state with no additional information, and
-become an archive node, but at the time of writing, this is not implemented. If you need to query
-historical blocks' states past what you pruned, you need to purge your database and resync your node
-starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to
-avoid needing to sync from genesis with the network, and only need the states of blocks past that snapshot.
+A full node may eventually be able to rebuild every block's state with no additional information,
+and become an archive node, but at the time of writing, this is not implemented. If you need to
+query historical blocks' states past what you pruned, you need to purge your database and resync
+your node starting in archive mode. Alternatively you can use a backup or snapshot of a trusted
+source to avoid needing to sync from genesis with the network, and only need the states of blocks
+past that snapshot.
 
 Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
 directly on the network without relying on a centralized infrastructure provider.
@@ -99,15 +101,12 @@ example:
 
 :::
 
-<Tabs
-  groupId="operating-systems"
-  values={[
-    {label: 'macOS', value: 'mac'},
-    {label: 'Windows', value: 'win'},
-    {label: 'Linux (standalone)', value: 'linux-standalone'},
-    {label: 'Linux (package)', value: 'linux-package'},
-  ]}
+<Tabs groupId="operating-systems" values={[ {label: 'macOS', value: 'mac'}, {label: 'Windows',
+value: 'win'}, {label: 'Linux (standalone)', value: 'linux-standalone'}, {label: 'Linux (package)',
+value: 'linux-package'}, ]}
+
 >
+
 <TabItem value="mac">
 
 - Install Homebrew within the terminal by running:
@@ -202,18 +201,17 @@ example:
 
 You can also install Polkadot from one of our package repositories.
 
-Installation from the Debian or rpm repositories will create a `systemd`
-service that can be used to run a Polkadot node. The service is disabled by default,
-and can be started by running `systemctl start polkadot` on demand (use
-`systemctl enable polkadot` to make it auto-start after reboot). By default, it
-will run as the `polkadot` user.  Command-line flags passed to the binary can
-be customized by editing `/etc/default/polkadot`. This file will not be
-overwritten on updating polkadot.
-  
+Installation from the Debian or rpm repositories will create a `systemd` service that can be used to
+run a Polkadot node. The service is disabled by default, and can be started by running
+`systemctl start polkadot` on demand (use `systemctl enable polkadot` to make it auto-start after
+reboot). By default, it will run as the `polkadot` user. Command-line flags passed to the binary can
+be customized by editing `/etc/default/polkadot`. This file will not be overwritten on updating
+polkadot.
+
 ### Debian-based (Debian, Ubuntu)
 
-Currently supports Debian 10 (Buster) and Ubuntu 20.04 (Focal), and
-derivatives. Run the following commands as the `root` user.
+Currently supports Debian 10 (Buster) and Ubuntu 20.04 (Focal), and derivatives. Run the following
+commands as the `root` user.
 
 ```bash
 # Import the security@parity.io GPG key
@@ -229,8 +227,9 @@ apt install parity-keyring
 apt install polkadot
 
 ```
-If you don't want polkadot package to be automatically updated when you update packages on your server,
-you can issue the following command:
+
+If you don't want polkadot package to be automatically updated when you update packages on your
+server, you can issue the following command:
 
 ```bash
 sudo apt-mark hold polkadot
@@ -250,7 +249,7 @@ dnf config-manager --set-enabled polkadot
 # should have the following fingerprint: 9D4B2B6EB8F97156D19669A9FF0812D491B96798)
 dnf install polkadot
 ```
-  
+
 :::info
 
 If you choose to use a custom folder for the polkadot home by passing `--base-path '/custom-path'`,
@@ -259,19 +258,22 @@ you will need to issue following command:
 ```bash
 sudo mkdir /etc/systemd/system/polkadot.service.d
 ```
+
 And create a new file inside this folder:
-  
+
 ```bash
 sudo -e /etc/systemd/system/polkadot.service.d/custom.conf
 ```
+
 With the following content:
 
 ```
 [Service]
 ReadWritePaths=/custom-path
 ```
+
 And finally issue a reload to have your modifications applied by systemd:
-  
+
 ```bash
 systemctl daemon-reload
 ```

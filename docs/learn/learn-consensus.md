@@ -48,8 +48,8 @@ equipment) is limited; this can directly increase operational costs as well. Sys
 number of validators tend to form pools to decrease the variance of their revenue and profit from
 economies of scale. These pools are often off-chain.
 
-A way to alleviate this is to implement pool formation on-chain and allow token holders to vote
-with their stake for validators to represent them.
+A way to alleviate this is to implement pool formation on-chain and allow token holders to vote with
+their stake for validators to represent them.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
 as its mechanism for selecting the validator set. It is designed with the roles of **validators**
