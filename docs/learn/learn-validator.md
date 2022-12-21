@@ -147,7 +147,7 @@ dispute, or having passed through and escalation/dispute stage with a positive o
 ## Disputes
 
 All parachain blocks that are in the finalized relay chain should be valid. This, does not apply to
-backed blocks that are not included. To ensure nothing invalid end up in the finalized relay chain
+backed blocks that are not included. To ensure nothing invalid ends up in the finalized relay chain
 there are approval checks (described above) and disputes. The latter ensures that each attempt to
 include something invalid is caught and the offending validators are punished.
 
