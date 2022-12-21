@@ -231,7 +231,7 @@ be noticed and reverted within a delay period. After the time-delay, the proxy c
 
 :::info
 
-See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use
+See [this video tutorial](https://youtu.be/LxIW7t15Iuw) to learn how you can setup and use
 time-delayed proxies. The video goes through the example below.
 
 :::
