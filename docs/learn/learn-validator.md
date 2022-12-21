@@ -91,8 +91,8 @@ that parablock.
 :::info Parablocks vs Relay-Chain blocks
 
 It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
-sense to think of relay-chain blocks as having been approvead instead of parablocks have been
-approved. A rely-chain block containing a bad parablock must be reverted, while a relay-chain block
+sense to think of relay-chain blocks as having been approvead instead of parablocks that have been
+approved. A relay-chain block containing a bad parablock must be reverted, while a relay-chain block
 containing only approved parablocks can be considered approved as long as its parent relay-chain
 block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
 ancestry.
