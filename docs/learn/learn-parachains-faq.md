@@ -34,13 +34,15 @@ Substrate-based.
 
 ### Is 100 a hard limit on the number of Parachains that can be supported?
 
-No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
-number of optimizations, and there are [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) 
-in the near future. The exact number of parachains that the Relay Chain can support without any 
-degradation in performance is yet to be discovered. Also, with the 
-[blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm which brings
-parathreads into the picture, there is no hard limit number on the number of blockchains that can be supported 
-by {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
+No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a
+significant number of optimizations, and there are
+[several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) in the near
+future. The exact number of parachains that the Relay Chain can support without any degradation in
+performance is yet to be discovered. Also, with the
+[blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm
+which brings parathreads into the picture, there is no hard limit number on the number of
+blockchains that can be supported by {{ polkadot: Polkadot :polkadot }}
+{{ kusama: Kusama :kusama }}.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
@@ -72,8 +74,9 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 ### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
-applications as parachains. For more information, see the
-PDK content](../build/build-parachains.md#parachain-development-kit-pdk) and [Parachain Development page](../build/build-parachains.md).
+applications as parachains. For more information, see the PDK
+content](../build/build-parachains.md#parachain-development-kit-pdk) and
+[Parachain Development page](../build/build-parachains.md).
 
 ## Security
 
@@ -105,10 +108,10 @@ validators.
 
 ### How will parachain slots be distributed?
 
-Parachain slots are acquirable through auction. For more information on the auction process, please 
-see the [parachain slot auctions](learn-auction.md) article. Additionally, some parachain
-slots will be set aside to run [parathreads](learn-parathreads.md) &mdash; chains that bid on a per-block
-basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
+Parachain slots are acquirable through auction. For more information on the auction process, please
+see the [parachain slot auctions](learn-auction.md) article. Additionally, some parachain slots will
+be set aside to run [parathreads](learn-parathreads.md) &mdash; chains that bid on a per-block basis
+to be included in the Relay Chain. (Parathreads are not implemented yet.)
 
 ### Why doesn't everyone bid for the max length?
 

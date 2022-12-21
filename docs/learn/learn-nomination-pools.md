@@ -67,7 +67,6 @@ also applied proportionally to members who may have been actively bonded.
 
 :::info Nomination Pool Stats
 
-```suggestion
 - There can be a maximum of
   {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
