@@ -33,6 +33,10 @@ LoadAPI(PolkadotParameters).then(() => {
   // Update Polkadot cache
   console.log(`Updating ${PolkadotParameters.chain} cache.`);
   Update(PolkadotParameters).then(() => {
+    console.log(`Updating auctions cache complete.`);
+    // Disabling Kusama updating for now due to https://github.com/paritytech/substrate/pull/11649
+    // Kusama auctions from #63 on have not been dispatched
+    /*
     // Load Kusama API
     LoadAPI(KusamaParameters).then(() => {
       // Update Kusama cache
@@ -41,6 +45,7 @@ LoadAPI(PolkadotParameters).then(() => {
         console.log(`Updating auctions cache complete.`);
       })
     });
+    */
   });
 });
 
@@ -92,12 +97,12 @@ async function Update(params) {
           // Once both async processes have completed terminate the script
           if (err) {
             console.log(err);
-            if(params.chain === "Kusama") {
+            if(params.chain === "Polkadot") {
               process.exit(1);
             }
           } else {
             console.log(`Updating of ${params.chain} cache complete.`);
-            if(params.chain === "Kusama") {
+            if(params.chain === "Polkadot") {
               process.exit(0);
             }
           }
