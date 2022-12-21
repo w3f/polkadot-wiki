@@ -51,7 +51,7 @@ Validators perform two main functions:
    each parachain to include in the relay chain. A backable candidate included in the relay chain is
    considered _backed_ in that fork of the chain.
 
-Validators also participate to the so-called **availability distribution**. In fact, once the
+Validators also contribute to the so-called **availability distribution**. In fact, once the
 candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is not
 included as part of the parachain until it is proven avaialable (together with the PoV). Information
 regarding the availability of the candidate will be noted in the following relay chain blocks. Only
