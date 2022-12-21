@@ -234,14 +234,14 @@ which fork to follow. To construct the parachain host we need to answer two cate
 addressed by two different components:
 
 - What is the state transition function of the blockchain? This is handled by the **Runtime**, which
-  defines the state-transition logic of the chain. The Runtime logic is divided into:
+  defines the state transition logic of the chain. The Runtime logic is divided into:
 
   - **Modules** encapsulate particular behavior of the system and consist of:
     - Storage
     - Routines are invoked by entry points, other modules, upon block initialization or closing.
       Routines can alter the storage of a module.
-    - The entry point defines the means by which new information is introduced to a module and can limit the
-      origin from which they are called (user, root, parachain).
+    - The entry point defines the means by which new information is introduced to a module and can
+      limit the origin from which they are called (user, root, parachain).
   - **API** provides means for the node-side behavior to extract meaningful information from the
     state of a single fork.
 
