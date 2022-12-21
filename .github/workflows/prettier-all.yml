@@ -5,7 +5,7 @@ on:
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:
-  update_json:
+  run_prettier:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
@@ -14,14 +14,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Update cache
+      - name: project setup
         run: |
           git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
           git config --global user.name "Polkadot-Kusama Bot"
           git branch prettier-update
           git checkout prettier-update
           yarn && yarn prettier:all
-      - name: Commit and push changes
+      - name: commit any changes from prettier execution
         run: |
           if [[ `git status --porcelain` ]]; then
             git commit -a -m 'applying prettier to entire repo'
@@ -29,7 +29,7 @@ jobs:
           else
             echo No prettier changes detected, skipping update.
           fi
-      - name: create pull request
+      - name: create new pull request
         run: gh pr create -B master -H prettier-update --title 'Automated prettier cleanup' --body 'Automated prettier cleanup over entire repo.'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
