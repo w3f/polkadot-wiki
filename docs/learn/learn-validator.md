@@ -158,8 +158,8 @@ make sure invalid blocks are not finalized. However, even though the danger is p
 offending validators did not manage to get the invalid block approved, those validators need to get
 slashed for the attempt.
 
-A dispute stems from a disagreement between teo or more validators. For this to happen a bad actor
-needs to distribute and invalid block to honest validators. Scenarios leading to a dispute can be
+A dispute stems from a disagreement between two or more validators. For this to happen, a bad actor
+needs to distribute an invalid block to honest validators. Scenarios leading to a dispute can be
 one of the followings (ordered from most to least important):
 
 - A parablock included on a branch of the relay chain is bad
