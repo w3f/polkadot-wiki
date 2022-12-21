@@ -244,7 +244,8 @@ account he only controls. Remember that Eleanor added Charly as proxy, but she m
 Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
 can spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her 
 account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
-check the call hashes and the block height at which they are enabled for execution.
+check the hashes for the calls made by the proxy accounts and the block height at which they are 
+enabled for execution. 
 
 ![time-delayed proxies](../assets/time-delayed-proxies.png)
 
