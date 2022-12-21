@@ -7,6 +7,8 @@ keywords: [getting started, introduction, kusama, interact]
 slug: ../../kusama-getting-started
 ---
 
+import RPC from "./../../../components/RPC-Connection";
+
 ### Polkadot's Canary Network
 
 Kusama is a _canary network_ for Polkadot; an earlier release of the code that is available first
@@ -180,6 +182,45 @@ nominating), governance, parachain auctions, basic transfers and everything else
 
 For brand-new learners of Kusama's cousin network, Polkadot, please head over to the
 [Polkadot Wiki](https://wiki.polkadot.network/).
+
+### What can I do with my KSM?
+
+KSM is the native token of the Kusama Network. KSM can be used for transaction fees, staking,
+governance, acquisition of a parachain slot and for enabling several key functionalities on Kusama.
+
+- {{ kusama: __<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>:__ :kusama }}
+  the minimum balance required to have an active account on Kusama Network. If your account balance
+  drops below the minimum, your account will be reaped. Learn more about
+  [Accounts](../learn/learn-accounts.md) and the
+  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+
+- {{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable"/>:__ :kusama }}
+  the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
+  and earn staking rewards for contributing to the security of the network. Learn more about
+  [nomination pools](../learn/learn-nomination-pools.md).
+
+- {{ kusama: __<RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={999999999000} filter="humanReadable"/>:__ :kusama }}
+  the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md) for
+  [parachain slot auctions](../learn/learn-auction.md).
+
+- {{ kusama: __<RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={333333333000} filter="humanReadable"/>:__ :kusama }}
+  register an [on-chain identity](../learn/learn-identity.md)
+
+- {{ kusama: __<RPC network="kusama" path="consts.phragmenElection.votingBondBase" defaultValue={668799997200} filter="humanReadable"/>:__ :kusama }}
+  vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
+
+- {{ kusama: __<RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>:__ :kusama }}
+  create a [proxy account](../learn/learn-proxies.md).
+
+- {{ kusama: __<RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :kusama }}
+  you can create your own [nomination pool](../learn/learn-nomination-pools.md).
+
+KSM has utility in [Kusama's democracy](../maintain/maintain-guides-democracy.md). Bonding KSM is a
+requirement to create proposals, to endorse them and to vote on them when they become referendums.
+Bonding
+{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={666666666000} filter="humanReadable"/> :kusama }}
+or 5% of requested funding is a requirement to make a
+[treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal).
 
 ### Kusama Gifts
 
