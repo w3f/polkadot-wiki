@@ -107,8 +107,6 @@ value: 'linux-package'} ]}>
 
 <TabItem value="mac">
 
-<TabItem value="mac">
-
 - Install Homebrew within the terminal by running:
   ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
