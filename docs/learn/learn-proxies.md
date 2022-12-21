@@ -231,7 +231,7 @@ be noticed and reverted within a delay period. After the time-delay, the proxy c
 
 :::info
 
-See [this video tutorial](https://youtu.be/LxIW7t15Iuw) to learn how you can setup and use
+See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use
 time-delayed proxies. The video goes through the example below.
 
 :::
@@ -242,7 +242,9 @@ Charly submits an extrinsic to change the controller to Bob, such extrinsic can 
 Eleanor. Bob can be even more malicious than Charly and change the reward destination to another
 account he only controls. Remember that Eleanor added Charly as proxy, but she might not want to add
 Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
-can spot the announced extrinsic. Eleanor can check all the proxy call announcements made on her account's behalf on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to view the list of unexecuted proxy calls on Eleanor's account.
+can spot the announced extrinsic. Eleanor can check all the proxy call announcements made on her
+account's behalf on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
+view the list of unexecuted proxy calls on Eleanor's account.
 
 ![time-delayed proxies](../assets/time-delayed-proxies.png)
 
