@@ -1,0 +1,35 @@
+name: Run Prettier on entire repo
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Once a week
+  workflow_dispatch: # Or manually from GitHub UI
+
+jobs:
+  update_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Update cache
+        run: |
+          git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
+          git config --global user.name "Polkadot-Kusama Bot"
+          git branch prettier-update
+          git checkout prettier-update
+          yarn && yarn prettier:all
+      - name: Commit and push changes
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git commit -a -m 'applying prettier to entire repo'
+            git push --set-upstream origin prettier-update
+          else
+            echo No prettier changes detected, skipping update.
+          fi
+      - name: create pull request
+        run: gh pr create -B master -H prettier-update --title 'Automated prettier cleanup' --body 'Automated prettier cleanup over entire repo.'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
