@@ -25,12 +25,12 @@ SPREE in brief was described with the following properties and functions:
 ## Origin
 
 On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on
-[r/dot][polkadot reddit] called "SmartProtocols Idea" and laid out a proposal for [Smart
-Protocols][smart protocols reddit post]. The core insight of the post was that XCMP had a
-complication in that it was difficult to verify and prove code was executed on a parachain without
-trust. A solution was to install the SmartProtocols in the Relay Chain that would be isolated blobs
-of code with their own storage per instance that could only be changed through an interface with
-each parachain. SmartProtocols are the precursor to SPREE.
+[r/dot](https://www.reddit.com/r/dot/) called "SmartProtocols Idea" and laid out a proposal for
+[Smart Protocols](https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/). The core
+insight of the post was that XCMP had a complication in that it was difficult to verify and prove
+code was executed on a parachain without trust. A solution was to install the SmartProtocols in the
+Relay Chain that would be isolated blobs of code with their own storage per instance that could only
+be changed through an interface with each parachain. SmartProtocols are the precursor to SPREE.
 
 ## What is a SPREE module?
 
@@ -106,6 +106,3 @@ with the previous state root of the SPREE module instances, the data of the XCMP
 instances, and the next state root of the instance. They do this validation by checking it against
 the `validate` function as provided by the SPREE module API. Collators are expected to be able to
 provide this information to progress their parachains.
-
-[polkadot reddit]: https://www.reddit.com/r/dot/
-[smart protocols reddit post]: https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/

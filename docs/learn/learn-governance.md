@@ -462,15 +462,16 @@ be an error, the council _may_ consider a governance motion to correct it.
 The first step to appeal to the council is to get in contact with the councillors. There is no
 singular place where you are guaranteed to grab every councillor's ear with your message. However,
 there are a handful of good places to start where you can get the attention of some of them. The
-{{ polkadot: [Polkadot Direction][] :polkadot }}{{ kusama: [Kusama Direction][] :kusama }} matrix
-room is one such place. After creating an account and joining this room, you can post a
+{{ polkadot: [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
+{{ kusama: [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) :kusama }} matrix room
+is one such place. After creating an account and joining this room, you can post a
 well-thought-through message here that lays down your case and provides justification for why you
 think the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. For this, making a post on
-[Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
-you present all the evidence for your circumstances and state clearly what kind of change you would
-suggest to the councillors to enact.
+[Polkassembly](https://polkadot.polkassembly.io/) is the recommended place to do so. When you write
+a post on Polkassembly make sure you present all the evidence for your circumstances and state
+clearly what kind of change you would suggest to the councillors to enact.
 
 :::info
 
@@ -487,7 +488,3 @@ case for why the change should be made.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
   explaining how governance works in Polkadot and Kusama.
-
-[polkadot direction]: https://matrix.to/#/#polkadot-direction:matrix.parity.io
-[kusama direction]: https://matrix.to/#/#kusama:matrix.parity.io
-[polkassembly]: https://polkadot.polkassembly.io/

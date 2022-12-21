@@ -288,38 +288,48 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 
 For brand-new learners of Blockchain technology:
 
-- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing
-  yourself with blockchain concepts such as cryptography and networks, and how these play into
-  things like decentralization and cryptocurrency.
+- The
+  [Blockchain Fundamentals MOOC course](https://mooc.web3.foundation/course/blockchain-fundamentals/)
+  is a great introduction to start familiarizing yourself with blockchain concepts such as
+  cryptography and networks, and how these play into things like decentralization and
+  cryptocurrency.
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
 ### Brand-New Polkadot learners
 
-- [Polkadot's original white paper][white-paper] is a technical summary around one possible
-  direction of implementing the Polkadot network. This paper uses rationale and technical details to
-  support why this direction is beneficial. This original white paper also explains how Polkadot's
-  core components work together to build this decentralized network.
-- [Polkadot's overview paper][overview-paper] is an updated version of the white paper that
-  describes the protocol in more technical terms. We would recommend reading this overview paper if
-  you are interested in digging more into the protocol itself.
-- [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
-  into its blockchain technology. This paper dives into the components of Polkadot but is
-  understandable for both a non-technical and technical reader.
-- [Polkadot for Beginners: A non-technical guide to decentralization, blockchains &
-  Polkadot][book] - a book funded by the Polkadot Treasury
-- [Polkadot's specification][spec] is a GitHub repository that holds the latest Polkadot Host
-  protocol specification, Polkadot's specification tests of the many components of the network, and
-  the Polkadot Runtime specification. This repo holds algorithms and explores how various processes
-  function in the Polkadot network. The Polkadot specification takes Polkadot's ideas and concepts
-  from the light and the white paper but focuses on the technical specs of the technology.
-- [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Polkadot and its [User Interface][ui].
-- Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
-  articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
+- [Polkadot's original white paper](https://polkadot.network/PolkaDotPaper.pdf) is a technical
+  summary around one possible direction of implementing the Polkadot network. This paper uses
+  rationale and technical details to support why this direction is beneficial. This original white
+  paper also explains how Polkadot's core components work together to build this decentralized
+  network.
+- [Polkadot's overview paper](https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf)
+  is an updated version of the white paper that describes the protocol in more technical terms. We
+  would recommend reading this overview paper if you are interested in digging more into the
+  protocol itself.
+- [Polkadot's light paper](https://polkadot.network/Polkadot-lightpaper.pdf) is a visual, easy to
+  read, and less technical introduction into its blockchain technology. This paper dives into the
+  components of Polkadot but is understandable for both a non-technical and technical reader.
+- [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot](https://linktr.ee/polkadotbook) -
+  a book funded by the Polkadot Treasury
+- [Polkadot's specification](https://github.com/w3f/polkadot-spec) is a GitHub repository that holds
+  the latest Polkadot Host protocol specification, Polkadot's specification tests of the many
+  components of the network, and the Polkadot Runtime specification. This repo holds algorithms and
+  explores how various processes function in the Polkadot network. The Polkadot specification takes
+  Polkadot's ideas and concepts from the light and the white paper but focuses on the technical
+  specs of the technology.
+- [Watching the Technical Explainer Videos](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8):
+  These are great introductory videos that explain and demonstrate how to use Polkadot and its
+  [User Interface](https://polkadot.js.org/apps/).
+- Reading
+  [What is Polkadot? A Brief Introduction](https://medium.com/polkadot-network/what-is-polkadot-a-brief-introduction-ca3eac9ddca5)
+  on Medium. There are also other great articles to read on
+  [Polkadot's Medium](https://medium.com/polkadot-network) or
+  [Web3 Foundation's Medium](https://medium.com/web3foundation).
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
-and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
+and maintain on the Kusama network, please head over to our
+[Kusama Guide](https://guide.kusama.network/).
 
 ## Resources
 
@@ -344,26 +354,3 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 - [Contributing Guide](contributing.md) - Rules for contributing to the wiki.
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
   specific errors and problems.
-
-[mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
-[white-paper]: https://polkadot.network/PolkaDotPaper.pdf
-[overview-paper]: https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf
-[light-paper]: https://polkadot.network/Polkadot-lightpaper.pdf
-[spec]: https://github.com/w3f/polkadot-spec
-[teched videos]: https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8
-[article]: https://medium.com/polkadot-network/what-is-polkadot-a-brief-introduction-ca3eac9ddca5
-[p medium]: https://medium.com/polkadot-network
-[w medium]: https://medium.com/web3foundation
-[ui]: https://polkadot.js.org/apps/
-[account generation]: ../learn/learn-account-generation.md
-[transfer]: ../learn/learn-balance-transfers.md
-[nominator]: ../maintain/maintain-guides-how-to-nominate-polkadot.md
-[validator]: ../maintain/maintain-guides-how-to-validate-polkadot.md
-[identity]: ../learn/learn-identity.md
-[proxy]: ../learn/learn-proxies.md
-[democracy]: ../maintain/maintain-guides-democracy.md
-[council]: ../maintain/maintain-guides-how-to-join-council.md
-[council voting]: ../maintain/maintain-guides-how-to-vote-councillor.md
-[treasury]: ../learn/learn-treasury.md
-[kusama guide]: https://guide.kusama.network/
-[book]: https://linktr.ee/polkadotbook

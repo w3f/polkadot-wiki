@@ -7,12 +7,12 @@ keywords: [implementations, wasm, meta protocol]
 slug: ../learn-implementations
 ---
 
-Polkadot is the flagship protocol of the [Web3 Foundation][], and while Polkadot can be defined as a
-protocol, a network, or, a type of infrastructure, it best serves to be an ecosystem. For true
-decentralization, there should be multiple implementations of Polkadot. Even being a _layer 0_
-protocol that attempts to build an interconnected, interoperable and secure Web3 ecosystem, Polkadot
-is a complex piece of software, and its formal implementation depends on being built on top of a
-tech stack.
+Polkadot is the flagship protocol of the [Web3 Foundation](https://web3.foundation/), and while
+Polkadot can be defined as a protocol, a network, or, a type of infrastructure, it best serves to be
+an ecosystem. For true decentralization, there should be multiple implementations of Polkadot. Even
+being a _layer 0_ protocol that attempts to build an interconnected, interoperable and secure Web3
+ecosystem, Polkadot is a complex piece of software, and its formal implementation depends on being
+built on top of a tech stack.
 
 > This page will focus on implementations of **Polkadot's underlying infrastructure** (i.e. runtime,
 > host).
@@ -23,11 +23,12 @@ Polkadot uses WebAssembly ([Wasm](learn-wasm.md)) as a "meta-protocol". This all
 any programming language that can be interpreted or compiled into Wasm - being the driver for
 Polkadot's multiple implementations.
 
-### Parity Technologies: A [Rustic Vision for Polkadot][]
+### Parity Technologies: A [Rustic Vision for Polkadot](https://github.com/paritytech/polkadot)
 
-[Parity Technologies][] is often in the spotlight for its core development of Polkadot, and while
-this is true, Parity Polkadot also serves to be the [Rust][] client. Parity Tech has a rustic vision
-for Polkadot through the use of their main product, [Substrate][]. Substrate can also be used for
+[Parity Technologies](https://www.parity.io/) is often in the spotlight for its core development of
+Polkadot, and while this is true, Parity Polkadot also serves to be the
+[Rust](https://www.rust-lang.org/) client. Parity Tech has a rustic vision for Polkadot through the
+use of their main product, [Substrate](https://www.substrate.io/). Substrate can also be used for
 different chains and different networks, but in the case of Polkadot, Substrate acts as the tech
 stack that is used to implement Polkadot's sharded heterogeneous multi-chain model.
 
@@ -58,46 +59,31 @@ As stated in the Soramitsu grant announcement:
 
 ## Alternative Implementations
 
-### ChainSafe Systems: [Gossamer][]
+### ChainSafe Systems: [Gossamer](https://github.com/ChainSafe/gossamer#a-go-implementation-of-the-polkadot-host)
 
 **Gossamer** is a Go implementation being built by
 [ChainSafe Systems](https://github.com/ChainSafeSystems), a blockchain R&D firm based in Toronto,
 Canada that is also building an Eth2.0 Serenity client. They were awarded a grant from the Web3
 Foundation.
 
-### SORAMITSU: [Kagome][]
+### SORAMITSU: [Kagome](https://github.com/soramitsu/kagome#intro)
 
-**Kagome** is a C++ implementation of the Polkadot Host being built by [Soramitsu][], a Japanese
-digital identity company that previously developed [Hyperledger Iroha][]. They were awarded a grant
-from the Web3 Foundation and released the first version of Kagome in April 2020. As part of the
-process, they also released a [libp2p][] networking layer in C++.
+**Kagome** is a C++ implementation of the Polkadot Host being built by
+[Soramitsu](https://soramitsu.co.jp/), a Japanese digital identity company that previously developed
+[Hyperledger Iroha](https://iroha.tech). They were awarded a grant from the Web3 Foundation and
+released the first version of Kagome in April 2020. As part of the process, they also released a
+[libp2p](https://github.com/soramitsu/libp2p-grpc) networking layer in C++.
 
-### Polkadot-JS Project: [Polkadot-JS][]
+### Polkadot-JS Project: [Polkadot-JS](https://github.com/polkadot-js)
 
-**Polkadot-JS** is a [JavaScript client][] and offers a collection of tools, interfaces, and
-libraries for Polkadot and Substrate.
+**Polkadot-JS** is a [JavaScript client](https://github.com/polkadot-js/client) and offers a
+collection of tools, interfaces, and libraries for Polkadot and Substrate.
 
 ### Other implementations that have received grants
 
-- [Golkadot][]
-- [Polkadot in Java][]
+- [Golkadot](https://github.com/opennetsys/golkadot)
+- [Polkadot in Java](https://github.com/polkadot-java)
 
 While the ecosystem continues to grow rapidly, the continued development of alternative
 implementations will only make Polkadot stronger. Consider becoming a contributor to the ecosystem,
 and learn about the how you can receieve a [grant](../general/grants.md) for your development.
-
-[web3 foundation]: https://web3.foundation/
-[parity technologies]: https://www.parity.io/
-[substrate]: https://www.substrate.io/
-[rust]: https://www.rust-lang.org/
-[chainsafe systems]: https://chainsafe.io/
-[soramitsu]: https://soramitsu.co.jp/
-[polkadot-js]: https://github.com/polkadot-js
-[rustic vision for polkadot]: https://github.com/paritytech/polkadot
-[gossamer]: https://github.com/ChainSafe/gossamer#a-go-implementation-of-the-polkadot-host
-[kagome]: https://github.com/soramitsu/kagome#intro
-[hyperledger iroha]: https://iroha.tech
-[libp2p]: https://github.com/soramitsu/libp2p-grpc
-[javascript client]: https://github.com/polkadot-js/client
-[golkadot]: https://github.com/opennetsys/golkadot
-[polkadot in java]: https://github.com/polkadot-java

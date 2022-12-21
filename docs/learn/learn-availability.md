@@ -80,10 +80,11 @@ original message padded with some extra data that enables the reconstruction of 
 of erasures.
 
 The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
-availability scheme are [Reed-Solomon][reed solomon] codes, which already enjoys a battle-tested
-application in technology outside the blockchain industry. One example is found in the compact disk
-industry. CDs use Reed-Solomon codes to correct any missing data due to inconsistencies on the disk
-face such as dust particles or scratches.
+availability scheme are
+[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction) codes, which
+already enjoys a battle-tested application in technology outside the blockchain industry. One
+example is found in the compact disk industry. CDs use Reed-Solomon codes to correct any missing
+data due to inconsistencies on the disk face such as dust particles or scratches.
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the erasure codes are used to
 keep parachain state available to the system without requiring all validators to keep tabs on all
@@ -118,13 +119,8 @@ secondary checker.
 
 ## Further Resources
 
-- [Path of a Parachain Block][life of] - Article by Parity analyst Joe Petrowski expounding on the
-  validity checks that a parachain block must pass in order to progress the parachain.
-- [Availability and Validity][anv paper] - Paper by the W3F Research Team that specifies the
-  availability and validity protocol in detail.
-
-[reed solomon]: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
-[pruning]: https://example.org
-[life of]: https://polkadot.network/the-path-of-a-parachain-block/
-[anv paper]:
-  https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV
+- [Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - Article by
+  Parity analyst Joe Petrowski expounding on the validity checks that a parachain block must pass in
+  order to progress the parachain.
+- [Availability and Validity](https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV) -
+  Paper by the W3F Research Team that specifies the availability and validity protocol in detail.

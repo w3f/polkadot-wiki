@@ -61,8 +61,9 @@ social consensus around where to put the decimal place when we talk about what c
 
 ## Origins
 
-The initial vote for redenomination occurred as a [referendum][referendum 52] on the Kusama
-blockchain. The referendum was summarized as having four effects if approved by KSM holders.
+The initial vote for redenomination occurred as a
+[referendum](https://kusama.polkassembly.io/referendum/52) on the Kusama blockchain. The referendum
+was summarized as having four effects if approved by KSM holders.
 
 :::info Referendum Summary
 
@@ -79,9 +80,10 @@ blockchain. The referendum was summarized as having four effects if approved by 
 The initial referendum was proposed prior to the Polkadot genesis block under the assumption that
 making a redenomination would be simpler before the Polkadot chain was live. However, many in the
 community pointed out the disconnect of the two networks and how it was unfair for holders of DOT to
-be impacted by a vote by a different token holder set. For this reason, Web3 Foundation [decided to
-make a new vote on Polkadot][blog 1] when it went live, although the Kusama vote ended with a
-majority in favor of the redenomination change.
+be impacted by a vote by a different token holder set. For this reason, Web3 Foundation
+[decided to make a new vote on Polkadot](https://polkadot.network/results-of-dot-redenomination-referendum/)
+when it went live, although the Kusama vote ended with a majority in favor of the redenomination
+change.
 
 Web3 Foundation summarized the decision not to change:
 
@@ -101,11 +103,12 @@ topic up to a vote again. This time, the vote was explicitly binding &mdash; mea
 be executed if voted through. In comparison, the vote on Kusama was of course non-binding, being at
 best a way to capture a signal without a direct way to affect the Polkadot chain.
 
-Based on the feedback received during the Kusama referendum, the [Polkadot vote][blog 2] was held as
-an approval vote, with four available options. DOT holders could issue votes for any configuration
-of the four options: no change, a change of 10x, a change of 100x, or a change of 1000x. The vote
-logic was contained in a specially-built Substrate pallet that was included in Polkadot's runtime
-for this poll.
+Based on the feedback received during the Kusama referendum, the
+[Polkadot vote](https://polkadot.network/the-first-polkadot-vote/) was held as an approval vote,
+with four available options. DOT holders could issue votes for any configuration of the four
+options: no change, a change of 10x, a change of 100x, or a change of 1000x. The vote logic was
+contained in a specially-built Substrate pallet that was included in Polkadot's runtime for this
+poll.
 
 :::info Summary of the Vote
 
@@ -130,9 +133,10 @@ community for a final, binding decision.
 
 ![redenomination](../assets/redenomination.png)
 
-After two weeks of voting, the [results][blog 3] of the redenomination vote were tallied. About one
-third of the total DOT in the network participated in the vote. The redenominaton proposal passed
-with 86% of the voters favoring a 100x factor increase (or two decimal places of precision loss).
+After two weeks of voting, the [results](https://polkadot.network/the-results-are-in/) of the
+redenomination vote were tallied. About one third of the total DOT in the network participated in
+the vote. The redenominaton proposal passed with 86% of the voters favoring a 100x factor increase
+(or two decimal places of precision loss).
 
 Polkadot's redenomination then took place on 21 August, now known as Denomination Day, at block
 #1_248_328.
@@ -155,14 +159,9 @@ However &mdash; if you are a builder of a tool that displays DOT balances to use
 or handles DOT balances in an off-chain or custodial way, then you will need to ensure that you
 display the correct denomination of DOT to users.
 
-Please see our [Ecosystem Redenomination Guide][ecosystem guide] for recommendations.
+Please see our
+[Ecosystem Redenomination Guide](https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#)
+for recommendations.
 
 Please reach out to [support@polkadot.network](mailto:support@polkadot.network) if you need any
 assistance in making sure your software is compatible with the redenomination.
-
-[referendum 52]: https://kusama.polkassembly.io/referendum/52
-[blog 1]: https://polkadot.network/results-of-dot-redenomination-referendum/
-[blog 2]: https://polkadot.network/the-first-polkadot-vote/
-[blog 3]: https://polkadot.network/the-results-are-in/
-[ecosystem guide]:
-  https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#
