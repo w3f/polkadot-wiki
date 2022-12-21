@@ -239,8 +239,10 @@ time-delayed proxies. The video goes through the example below.
 Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
 fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
 Charly submits an extrinsic to change the controller to Bob, such extrinsic can be rejected by
-Eleanor. This implies that Eleanor monitors Charly, and that within the the time-delay she can spot
-the announced extrinsic. As a monitor tool you can use a block explorer.
+Eleanor. Bob can be even more malicious than Charly and change the reward destination to another
+account he only controls. Remember that Eleanor added Charly as proxy, but she might not want to add
+Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
+can spot the announced extrinsic. As a monitor tool you can use a block explorer.
 
 ![time-delayed proxies](../assets/time-delayed-proxies.png)
 
