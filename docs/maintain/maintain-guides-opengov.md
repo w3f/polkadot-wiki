@@ -9,7 +9,7 @@ slug: ../maintain-guides-opengov
 
 ## Create a Referenda Proposal
 
-### Submitting a Preimage
+### Submitting a Preimage using Polkadot-JS UI
 
 The act of making a proposal is split from submitting the preimage for the proposal since the
 storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage
@@ -18,14 +18,21 @@ for you and pay the fee for it.
 
 ![submit preimage](../assets/governance/opengov-submit-preimage.png)
 
+After the preimage is submitted successfuly on-chain, Polkadot-JS UI lists it under the tab of
+Governance > Preimages.
+
+![preimage](../assets/governance/opengov-preimage-submitted.png)
+
 ### Submitting a Proposal
+
+![submit proposal](../assets/governance/opengov-submit-proposal.png)
 
 ## Voting on Referenda
 
 :::caution
 
 Use `convictionVoting.vote` for voting on Referenda in OpenGov instead of `democracy.vote` (which
-only works for old version of governance)
+only works for old version of governance).
 
 :::
 
