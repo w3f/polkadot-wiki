@@ -7,7 +7,7 @@ keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 :::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
 
