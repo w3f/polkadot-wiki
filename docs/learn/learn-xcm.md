@@ -214,10 +214,18 @@ The input and output queue are sometimes referred to in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} codebase and associated documentation
 as `ingress` and `egress` messages, respectively.
 
+:::info
+
+For detailed information about VMP see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#horizontal-message-passing).
+
+:::
+
 ### VMP (Vertical Message Passing)
 
 _Vertical Message Passing_ message passing between the Relay-chain itself and a parachain. Message
-data in both cases exists on the Relay-chain. This includes:
+data in both cases exists on the Relay-chain and are interpreted by the relay chain according to
+[XCM](./learn-xcm.md/#cross-consensus-message-format-xcm) standards. This includes:
 
 - #### UMP (Upward Message Passing)
 
@@ -225,6 +233,13 @@ data in both cases exists on the Relay-chain. This includes:
 
 - #### DMP (Downward Message Passing)
   _Downward Message Passing_ message passing from the Relay-chain to a parachain.
+
+:::info
+
+For detailed information about VMP see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#vertical-message-passing).
+
+:::
 
 ### HRMP (XCMP-Lite)
 

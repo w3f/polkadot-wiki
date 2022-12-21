@@ -222,6 +222,76 @@ a few examples.
 - **Smart Contract Chains**: These are chains that can have additional logic implemented on them
   through the deployment of code known as _smart contracts_.
 
+## Parachain Host
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} includes a blockchain called a relay
+chain. A blockchain is a
+[Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (DAG) of state
+transitions, where every added block can be viewed as the head of the chain or fork with cumulative
+state. All paths through the DAG terminate at the Genesis Block. A blockchain is a tree as each
+block can have only one parent.
+
+A blockchain network is made of nodes that have a view of many forks of the chain, and must decide
+which fork to follow. To construct the parachain host we need to answer two categories of questions
+addressed by two different components:
+
+- What is the state transition function of the blockchain? This is handled by the **Runtime**, which
+  defines the state transition logic of the chain. The Runtime logic is divided into:
+
+  - **Modules** encapsulate particular behavior of the system and consist of:
+    - Storage
+    - Routines are invoked by entry points, other modules, upon block initialization or closing.
+      Routines can alter the storage of a module.
+    - The entry point defines the means by which new information is introduced to a module and can
+      limit the origin from which they are called (user, root, parachain).
+  - **API** provides means for the node-side behavior to extract meaningful information from the
+    state of a single fork.
+
+  :::info
+
+  The Polkadot Parachain Host Implementers' Guide provides details about
+  [Runtime Architecture](https://paritytech.github.io/polkadot/book/runtime/index.html) and
+  [Runtime API](https://paritytech.github.io/polkadot/book/runtime-api/index.html).
+
+  :::
+
+- Being aware of various forks of the blockchain, what behaviors should a node take? What
+  information should a node extract from the state of which forks, and how should that information
+  be used? This is handled by the **Node-side behavior**, which defines all activities that a node
+  undertakes given its view of the blockchain. The node-side behavior can be divided into two
+  categories:
+
+  - **Networking behaviors**, these relate to how information is distributed between nodes, but not
+    how the information is used afterwards.
+  - **Core behaviors**, these relate to internal work that a specific node does. Such behavior cares
+    about that information is _distributed_ and _received_, but not how these two are achieved.
+
+  These two categories often interact but they can be heavily abstracted from each other. The
+  node-side behavior is split into various **subsystems**, which perform a particular category of
+  work. Subsystems can communicate with each other through an
+  [Overseer](https://paritytech.github.io/polkadot/book/node/overseer.html) that prevents race
+  conditions.
+
+  :::info
+
+  The Polkadot Parachain Host Implementers' Guide provides details about
+  [node architecture](https://paritytech.github.io/polkadot/book/node/index.html) the main
+  subsystems:
+
+  - [Collator subsystem](https://paritytech.github.io/polkadot/book/node/collators/index.html)
+  - [Backing subsystem](https://paritytech.github.io/polkadot/book/node/backing/index.html)
+  - [Availability subsystem](https://paritytech.github.io/polkadot/book/node/availability/index.html)
+  - [Approval subsystem](https://paritytech.github.io/polkadot/book/node/approval/index.html)
+  - [Dispute subsystem](https://paritytech.github.io/polkadot/book/node/disputes/index.html)
+  - [Utility subsystem](https://paritytech.github.io/polkadot/book/node/utility/index.html)
+
+  :::
+
+The Runtime and Node-side behavior are dependent from each other. The Runtime depends on Node-side
+behavior to author blocks, and to include [extrinsics](./learn-extrinsics.md) which trigger the
+correct entry points. The Node-side behavior relies on the Runtime APIs to extract information
+necessary to determine which action to take.
+
 ## Resources
 
 - [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) -

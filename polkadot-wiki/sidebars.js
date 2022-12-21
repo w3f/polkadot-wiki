@@ -107,7 +107,6 @@ module.exports = {
           items: [
             'learn/learn-account-advanced',
             "learn/learn-staking-advanced",
-            'learn/learn-availability',
             "learn/learn-cryptography",
             'learn/learn-phragmen',
             'learn/learn-randomness',
@@ -129,6 +128,7 @@ module.exports = {
               label: "Parachains",
               items: [
                 "learn/learn-parachains",
+                'learn/learn-availability',
                 "learn/learn-common-goods",
                 "learn/learn-auction",
                 "learn/learn-crowdloans",
