@@ -11,7 +11,7 @@ import RPC from "./../../components/RPC-Connection"
 
 :::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
 
-The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy ->
+The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy ->
 multisig -> an anonymous proxy which is part of another multisig). These complex setups must be done
 using the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
 
