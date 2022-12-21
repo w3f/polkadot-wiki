@@ -225,9 +225,11 @@ a few examples.
 ## Parachain Host
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} includes a blockchain called a relay
-chain. A blockchain is a [Directed Acyclic Graph][] (DAG) of state transitions, where every added
-block can be viewed as the head of the chain or fork with cumulative state. All paths through the
-DAG terminate at the Genesis Block. A blockchain is a tree as each block can have only one parent.
+chain. A blockchain is a
+[Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (DAG) of state
+transitions, where every added block can be viewed as the head of the chain or fork with cumulative
+state. All paths through the DAG terminate at the Genesis Block. A blockchain is a tree as each
+block can have only one parent.
 
 A blockchain network is made of nodes that have a view of many forks of the chain, and must decide
 which fork to follow. To construct the parachain host we need to answer two categories of questions
@@ -247,8 +249,9 @@ addressed by two different components:
 
   :::info
 
-  The Polkadot Parachain Host Implementers' Guide provides details about [Runtime Architecture][]
-  and [Runtime API][].
+  The Polkadot Parachain Host Implementers' Guide provides details about
+  [Runtime Architecture](https://paritytech.github.io/polkadot/book/runtime/index.html) and
+  [Runtime API](https://paritytech.github.io/polkadot/book/runtime-api/index.html).
 
   :::
 
@@ -265,20 +268,22 @@ addressed by two different components:
 
   These two categories often interact but they can be heavily abstracted from each other. The
   node-side behavior is split into various **subsystems**, which perform a particular category of
-  work. Subsystems can communicate with each other through an [Overseer][] that prevents race
+  work. Subsystems can communicate with each other through an
+  [Overseer](https://paritytech.github.io/polkadot/book/node/overseer.html) that prevents race
   conditions.
 
   :::info
 
-  The Polkadot Parachain Host Implementers' Guide provides details about [node architecture][] the
-  main subsystems:
+  The Polkadot Parachain Host Implementers' Guide provides details about
+  [node architecture](https://paritytech.github.io/polkadot/book/node/index.html) the main
+  subsystems:
 
-  - [Collator subsystem][]
-  - [Backing subsystem][]
-  - [Availability subsystem][]
-  - [Approval subsystem][]
-  - [Dispute subsystem][]
-  - [Utility subsystem][]
+  - [Collator subsystem](https://paritytech.github.io/polkadot/book/node/collators/index.html)
+  - [Backing subsystem](https://paritytech.github.io/polkadot/book/node/backing/index.html)
+  - [Availability subsystem](https://paritytech.github.io/polkadot/book/node/availability/index.html)
+  - [Approval subsystem](https://paritytech.github.io/polkadot/book/node/approval/index.html)
+  - [Dispute subsystem](https://paritytech.github.io/polkadot/book/node/disputes/index.html)
+  - [Utility subsystem](https://paritytech.github.io/polkadot/book/node/utility/index.html)
 
   :::
 
@@ -296,15 +301,3 @@ necessary to determine which action to take.
   of secure message-passing between them."
 - [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A
   technical walk-through of how parachains interact with the Relay Chain.
-
-[directed acyclic graph]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
-[overseer]: https://paritytech.github.io/polkadot/book/node/overseer.html
-[runtime architecture]: https://paritytech.github.io/polkadot/book/runtime/index.html
-[runtime api]: https://paritytech.github.io/polkadot/book/runtime-api/index.html
-[node architecture]: https://paritytech.github.io/polkadot/book/node/index.html
-[collator subsystem]: https://paritytech.github.io/polkadot/book/node/collators/index.html
-[backing subsystem]: https://paritytech.github.io/polkadot/book/node/backing/index.html
-[availability subsystem]: https://paritytech.github.io/polkadot/book/node/availability/index.html
-[approval subsystem]: https://paritytech.github.io/polkadot/book/node/approval/index.html
-[dispute subsystem]: https://paritytech.github.io/polkadot/book/node/disputes/index.html
-[utility subsystem]: https://paritytech.github.io/polkadot/book/node/utility/index.html

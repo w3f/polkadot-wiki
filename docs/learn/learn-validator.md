@@ -15,7 +15,8 @@ import RPC from "./../../components/RPC-Connection";
 
 This page provides a general overview of the role of validators in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
-can read the Protocol Overview Section in [The Polkadot Parachain Host Implementers' Guide][].
+can read the Protocol Overview Section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/).
 
 :::
 
@@ -101,34 +102,42 @@ ancestry.
 
 The Approval Process is divided into two parts:
 
-- **[Assignments][]** determine which validators perform approval checks on which candidates,
-  ensuring each candidate receives enough random checkers. This stage tracks approval votes to
-  identify when [no-show][] approval checks take suspiciously long. It also tracks relay chain
+- **[Assignments](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments)**
+  determine which validators perform approval checks on which candidates, ensuring each candidate
+  receives enough random checkers. This stage tracks approval votes to identify when
+  [no-show](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows) approval
+  checks take suspiciously long. It also tracks relay chain
   [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
   determine when adversaries possibly gained foreknowledge about assignments and adding more checks
   in those cases. Assignees determine their own assignments to check specific candidates using two
-  or three [assignment criteria][], which are based upon two possible [stories][] about the relay
-  chain block that included the candidate (i.e. declared the candidate available). [Assignment
-  notices][] are gossiped among nodes so that all validators know which validators should check
-  which candidates, and if any candidate requires more checkers.
+  or three
+  [assignment criteria](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
+  which are based upon two possible
+  [stories](https://paritytech.github.io/polkadot/book/protocol-approval.html#stories) about the
+  relay chain block that included the candidate (i.e. declared the candidate available).
+  [Assignment notices](https://paritytech.github.io/polkadot/book/protocol-approval.html#announcements--notices)
+  are gossiped among nodes so that all validators know which validators should check which
+  candidates, and if any candidate requires more checkers.
 - **Approval checks** performs the checks by obtaining the candidate, verify its validity, and
   sending out the approval vote or initiating a dispute. Approval checks have a no-show timeout
   window (i.e. longer than one relay chain slot) to succeed in reconstructing the candidate block,
   redo its erasure coding to check the candidate receipt, and recheck the candidate block itself. A
   validator becomes tagged as no-show if does not approve or dispute within the no-show timeout
   window. Because validators can be overloaded with assignments, they can intentionally delay
-  sending their assignment notice to avoid creating no-shows (see more in [Assignment
-  postponement][]).
+  sending their assignment notice to avoid creating no-shows (see more in
+  [Assignment postponement](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-postponement)).
 
 These two steps first run as off-chain consensus protocols using messages gossiped among all
 validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
-needed to provide rewards for the off-chain protocol. The [on-chain verification][] has two phases:
-a) assignments notices and approval votes are recorded in a relay chain block, and b) in another
-relay chain block notes are fed into the approval code.
+needed to provide rewards for the off-chain protocol. The
+[on-chain verification](https://paritytech.github.io/polkadot/book/protocol-approval.html#on-chain-verification)
+has two phases: a) assignments notices and approval votes are recorded in a relay chain block, and
+b) in another relay chain block notes are fed into the approval code.
 
 The gossiped messages are of two types, assignment notices and approval votes, and are singed with
-[approval keys][]. Such keys are part of the [session keys](./learn-cryptography.md/#session-keys)
-used by validators. Briefly, approval keys are:
+[approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
+Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) used by validators.
+Briefly, approval keys are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria
   [VRF](./learn-randomness.md/#vrf).
@@ -180,16 +189,19 @@ _remote_ disputes relative to a particular branch of the relay chain.
 
 Disputes can be divided into three different phases:
 
-- [Dispute initiation][]: Disputes are initiated by any validator who finds their opinion on the
-  validity of a parablock in opposition to another issued statement. The initiation begins off-chain
-  by only nodes perceiving that a parablock is bad. The validator can be one of the para-validators
-  (i.e. one of the backers) or one of the approval checkers. Note that, if the dispute occurs during
-  the backing phase, the initiator must make the data available while if the dispute occurs during
-  the approval process the data is already available.
-- [Dispute participation][]: Once becoming aware of the dispute, all validators must participate.
-- [Dispute conclusion][]: Disputes conclude after 2/3 supermajority is reached on either side.
-  Disputes may also conclude after a timeout. This will only happen if the majority of validators
-  are unable to vote for some reason.
+- [Dispute initiation](https://paritytech.github.io/polkadot/book/protocol-disputes.html#initiation):
+  Disputes are initiated by any validator who finds their opinion on the validity of a parablock in
+  opposition to another issued statement. The initiation begins off-chain by only nodes perceiving
+  that a parablock is bad. The validator can be one of the para-validators (i.e. one of the backers)
+  or one of the approval checkers. Note that, if the dispute occurs during the backing phase, the
+  initiator must make the data available while if the dispute occurs during the approval process the
+  data is already available.
+- [Dispute participation](https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-participation):
+  Once becoming aware of the dispute, all validators must participate.
+- [Dispute conclusion](https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-conclusion):
+  Disputes conclude after 2/3 supermajority is reached on either side. Disputes may also conclude
+  after a timeout. This will only happen if the majority of validators are unable to vote for some
+  reason.
 
 The on-chain component of the dispute can be initiated by providing any two conflicting votes and it
 also waits for 2/3 supermajority on either side. The component also tracks which parablocks have
@@ -200,7 +212,8 @@ of the relay chain. Inclusion is halted for the parachain until the dispute reso
 
 For detailed information about disputes see dedicated section in
 [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
-In the Guide there are also more details about [disputes' flows][].
+In the Guide there are also more details about
+[disputes' flows](https://paritytech.github.io/polkadot/book/disputes-flow.html).
 
 :::
 
@@ -209,7 +222,9 @@ In the Guide there are also more details about [disputes' flows][].
 Chain selection is used to select blocks to build on and finalize. These processes need to
 consistent among nodes and resilient to a maximum proportion of malicious nodes. The parachain host
 uses a block authoring system and a finality gadget. The chain selection strategy involves a
-_[leaf-selection rule][]_ and a set of _[finality constraints][]_.
+_[leaf-selection rule](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html)_
+and a set of
+_[finality constraints](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html#the-best-chain-containing-rule)_.
 
 :::info
 
@@ -274,26 +289,3 @@ For detailed information about chain selection see dedicated section in
   effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.
-
-[the polkadot parachain host implementers' guide]: https://paritytech.github.io/polkadot/book/
-[assignments]: https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments
-[no-show]: https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows
-[assignment criteria]:
-  https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria
-[stories]: https://paritytech.github.io/polkadot/book/protocol-approval.html#stories
-[approval keys]: https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys
-[assignment notices]:
-  https://paritytech.github.io/polkadot/book/protocol-approval.html#announcements--notices
-[assignment postponement]:
-  https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-postponement
-[on-chain verification]:
-  https://paritytech.github.io/polkadot/book/protocol-approval.html#on-chain-verification
-[dispute initiation]: https://paritytech.github.io/polkadot/book/protocol-disputes.html#initiation
-[dispute participation]:
-  https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-participation
-[dispute conclusion]:
-  https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-conclusion
-[disputes' flows]: https://paritytech.github.io/polkadot/book/disputes-flow.html
-[leaf-selection rule]: https://paritytech.github.io/polkadot/book/protocol-chain-selection.html
-[finality constraints]:
-  https://paritytech.github.io/polkadot/book/protocol-chain-selection.html#the-best-chain-containing-rule
