@@ -452,7 +452,7 @@ Snapshots are compressed backups of the database directory of Polkadot/Kusama no
 whole chain (or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed
 below are a few public snapshot providers for Polkadot and Kusama.
 
-- [STAKEWORLD](https://stakeworld.nl/docs/snapshot)
+- [Stakeworld](https://stakeworld.io/snapshot)
 - [Polkachu](https://polkachu.com/snapshots)
 - [Polkashots](https://polkashots.io/)
 
