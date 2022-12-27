@@ -20,7 +20,7 @@ jobs:
           git config --global user.name "Polkadot-Kusama Bot"
       - name: Check for existing branch
         run: |
-          if [[ git ls-remote --heads https://github.com/w3f/polkadot-wiki.git prettier-update | wc -l == 2]]; then
+          if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git prettier-update | wc -l" == "2" ]]; then
             echo deleting existing branch
             git branch -d prettier-update
           else

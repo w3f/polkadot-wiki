@@ -23,7 +23,7 @@ jobs:
 
       - name: Check for existing branch
         run: |
-          if [[ git ls-remote --heads https://github.com/w3f/polkadot-wiki.git audit-links | wc -l == 2]]; then
+          if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git audit-links | wc -l" == "2" ]]; then
             echo deleting existing branch
             git branch -d audit-links
           else
