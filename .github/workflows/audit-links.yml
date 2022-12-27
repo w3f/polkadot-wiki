@@ -15,11 +15,23 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.8
-      
-      - name: Pull repo
+
+      - name: Set credentials
         run: |
           git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
           git config --global user.name "Polkadot-Kusama Bot"
+
+      - name: Check for existing branch
+        run: |
+          if [[ git ls-remote --heads https://github.com/w3f/polkadot-wiki.git audit-links | wc -l === 2]]; then
+            echo deleting existing branch
+            git branch -d audit-links
+          else
+            echo no existing branch found
+          fi
+      
+      - name: Create new branch
+        run: |
           git branch audit-links
           git checkout audit-links
       
