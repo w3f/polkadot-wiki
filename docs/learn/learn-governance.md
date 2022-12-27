@@ -20,7 +20,7 @@ network.
 
 Learn about the upcoming changes to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
-[Wiki doc on Gov2](learn-gov2.md).
+[Wiki doc on Gov2](learn-opengov.md).
 
 :::
 
