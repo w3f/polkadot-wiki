@@ -185,7 +185,7 @@ to nominate with, in order to receive staking rewards, can change between the er
 - **min-intention-threshold:** minimum stake to declare the intention to nominate. This parameter
   can be updated via on-chain governance and the most recent and up to date version can be found on
   [chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query > staking >
-  minimumNominatorBond**)
+  minimumNominatorBond**) This doesn't show 100, it shows 1,000,000,000,000???
 
 - **min-electing:** minimum stake among the electing nominators. Since this is almost always the
   same as “min-active”, it might not be reported.
