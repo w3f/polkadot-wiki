@@ -2,7 +2,6 @@ import React from "react";
 import { render, act, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
-import { ApiPromise, WsProvider } from "@polkadot/api";
 
 test("Retrieves and applies a 'const' RPC value", async () => {
 	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={0} />);
@@ -11,7 +10,7 @@ test("Retrieves and applies a 'const' RPC value", async () => {
 
 test("Retrieves and applies a 'query' RPC value", async () => {
 	render(<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={0} filter="humanReadable"/>);
-	await waitFor(() => expect(screen.getByText("10 DOT")).toBeInTheDocument(), { timeout: 5000 });
+	await waitFor(() => expect(screen.getByText("100 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("RPC falls back to default", async () => {
