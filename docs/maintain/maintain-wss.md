@@ -1,86 +1,112 @@
 ---
 id: maintain-wss
-title: Set up Secure WebSocket for Remote Connections
-sidebar_label: Set up Secure WebSocket for Remote Connections
+title: Secure WebSocket
+sidebar_label: Secure WebSocket
 description: Steps on setting up a secure socket for remote connections.
 keywords: [web socket, remote, connection, secure websocket]
 slug: ../maintain-wss
 ---
 
-You might want to host a node on one server and then connect to it from a UI hosted on another, e.g.
-[Polkadot-JS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure
-proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
+A websocket provides access to the RPC server part of a substrate node, which can be used as a way
+to access the underlying network and/or validator node. By default you can access your node's RPC
+server from localhost (for example to rotate keys or do other maintenance) but to access it from
+from another server or for example connect to it from on UI like
+[Polkadot-JS UI](https://polkadot.js.org/apps) you will need to enable a secure proxy for the
+websocket connection.
 
-_Note: this should **only** be done for sync nodes used as back-end for some dapps or projects.
-Never open websockets to your validator node - there's no reason to do that and it can only lead to
-security gaffes._
-
-In this guide we'll be using Ubuntu 18.04 hosted on a \$10 DigitalOcean droplet. We'll assume you're
-using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
+:::note Enabling remote access to your validator node should not be neccessary and can only lead to
+security problems :::
 
 ## Set up a node
 
-Whether it's a generic Substrate node, a Kusama node, or your own private blockchain, they all
-default to the same websocket connection: port 9944 on localhost. For this example, we'll set up a
-Kusama sync node (non-validator).
+For this example, we'll set up a Kusama sync node on a debian flavoured server (Ubuntu 22.04 for
+example). Create a new server on your provider of choice or locally at home. See
+[Set up a Full Node](./maintain-sync) for instructions, you can choose to install from the default
+apt repository of build from scratch, whatever you prefer. In the startup options you can choose
+different settings.
 
-Create a new server on your provider of choice or locally at home (preferred). We'll assume you're
-using Ubuntu 18.04. Then install Substrate and build the node.
+A typically setting for an externally accessible kusama archive RPC node would be:
 
-```bash
-curl https://getsubstrate.io -sSf | bash
-git clone https://github.com/paritytech/polkadot kusama
-cd kusama
-./scripts/init.sh
-cargo build --release
-./target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
+```config
+polkadot --chain kusama --name myrpc --state-pruning archive --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
 ```
 
-This will start the syncing process with Kusama's mainnet.
+Or for a kusama pruned RPC node:
 
-:::note The `--rpc-cors` mode needs to be set to all so that all external connections are allowed
+```config
+polkadot --chain kusama --name myrpc --state-pruning 1000 --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
+```
 
-:::
+See below for explanation about the options.
 
-## Set up a certificate
+### Archive node vs pruned node
 
-To get WSS (secure websocket), you need an SSL certificate. There are two possible approaches.
+A pruned node knows only the recent information about the network and not its full history. Most
+frequently done actions can be done with a pruned node, for example see account balances, make
+transfers, setup session keys, staking, etc. An archive node has the full history (database) of the
+network and can be queried in all kind of ways, give information about transfers since the network
+started, historical balances, advanced queries about past events, etc.
 
-### Domain and Certbot
+An archive node requires a lot more diskspace ([overview](https://stakeworld.io/snapshot)). For an
+archive node you need the options `--state-pruning archive --blocks-pruning archive` in your startup
+settings.
 
-The first approach is getting a dedicated domain, redirecting its nameservers to your IP address,
-setting up an Nginx server for that domain, and finally
-[following LetsEncrypt instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntubionic)
-for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx
-configuration. This will let you connect Polkadot-JS UI to a URL like mynode.mydomain.com rather
-than 82.196.8.192:9944, which is arguably more user friendly.
+:::tip Inclusion in the Polkadot.js UI requires an archive node. :::
 
-This is simple to do on cloud hosting providers or if you have a static IP, but harder to pull off
-when running things from your home server.
+### Secure the RPC server
 
-### Self-signed
+Via the node startup settings you can choose **what** to expose with **how many** connections **from
+where** through your rpc server.
 
-The second approach and one we'll follow here is generating a self-signed certificate and relying on
-the raw IP address of your node when connecting to it.
+_How many_: You can set your maximum connections through `--ws-max-connections`, for example
+`--ws-max-connections 100`
 
-Generate a self-signed certificate.
+_From where_: by default localhost and the polkadot.js are allowed to access the RPC server, you can
+change this by setting `--rpc-cors`, to allow access from everywhere you need `--rpc-cors all`
+
+_What_: you can limit the methods to use with `--rpc-methods`, an easy way to set this to a safe
+mode is `--rpc-methods Safe`
+
+## Secure the ws port
+
+The main idea is converting the non secure ws port to a secure wss port by putting it behind a ssl
+enabled proxy. So from outside one see's the ssl enabled apache2/nginx/other proxy server, which
+redirects the request to the internal rpc node. For this you will need an SSL certificate. There are
+different possible approaches; an official certificate like letsencrypt or using a self signed
+certificate.
+
+### Get a SSL certificate
+
+Easiest is to get a real (free) SSL certificate following LetsEncrypt instructions
+([nginx](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)/[apache](https://certbot.eff.org/instructions?ws=apache&os=ubuntufocal)).
+This will auto-generate an SSL certificate and include it in your configuration.
+
+Alternatively you can generate a self-signed certificate and rely on the raw IP address of your node
+when connecting to it. This is not preferable since you will have to whitelist the certificate to
+access it from a browser.
 
 ```bash
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
-## Set up Nginx server
+## Install a proxy server
 
-Now it's time to tell Nginx to use these certificates. The server block below is all you need, but
-keep in mind that you need to replace some placeholder values. Notably:
+### Nginx
+
+```
+apt install nginx
+```
+
+The server block below is all you need, but keep in mind that you need to replace some placeholder
+values. Notably:
 
 - `SERVER_ADDRESS` should be replaced by your domain name if you have it, or your server's IP
   address if not.
 - `CERT_LOCATION` should be `/etc/letsencrypt/live/YOUR_DOMAIN/fullchain.pem` if you used Certbot,
-  or `/etc/ssl/certs/nginx-selfsigned.crt` if self-signed.
+  or `/etc/ssl/certs/selfsigned.crt` if self-signed.
 - `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem` if you used Certbot,
-  or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
+  or `/etc/ssl/private/selfsigned.key` if self-signed.
 - `CERT_DHPARAM` should be `/etc/letsencrypt/ssl-dhparams.pem` if you used Certbot, and
   `/etc/ssl/certs/dhparam.pem` if self-signed.
 
@@ -127,20 +153,32 @@ server {
 }
 ```
 
-Restart nginx after setting this up: `sudo service nginx restart`.
+### Apache2
 
-## Importing the Certificate
+Apache2 is a little heavier then nginx but also has some more tweaking posibilities. You can run it
+in different modes, prefork, worker or event. For this manual we use
+[event](https://httpd.apache.org/docs/2.4/mod/event.html) which works well on higher load
+enviroments but other modes also work fine.
 
-If you used the self-signed certificate approach, modern browsers will not let you connect to this
-websocket endpoint without that certificate being imported - they will emit an
-`NET:ERR_CERT_AUTHORITY_INVALID` message.
+```bash
+apt install apache2
+a2dismod mpm_prefork
+a2enmod mpm_event proxy proxy_html proxy_http proxy_wstunnel rewrite ssl
+```
 
-Every websocket connection bootstraps itself with `https` first, so to allow the certificate, visit
-the IP of your machine in the browser prefixed with `https`, like so: `https://MY_IP`. This should
-produce a "Not private" warning which you can skip by going to "Advanced" and the clicking on
-"Proceed to Site". You have now whitelisted this IP and its self-signed certificate for connecting.
+The [mod_proxy_wstunnel](https://httpd.apache.org/docs/2.4/mod/mod_proxy_wstunnel.html) provides
+_support for the tunnelling of web socket connections to a backend websockets server. The connection
+is automatically upgraded to a websocket connection_. In a ssl enabled virtualhost add:
 
-## Connecting to the node
+```apacheconf
+SSLProxyEngine on
+ProxyRequests off
+
+ProxyPass / ws://localhost:9944
+ProxyPassReverse / ws://localhost:9944
+```
+
+## Connect to the node
 
 Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch the
 node. Activate the "Development" toggle and input your node's address - either the domain or the IP
