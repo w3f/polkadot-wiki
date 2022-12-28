@@ -22,14 +22,10 @@ jobs:
           git config --global user.name "Polkadot-Kusama Bot"
 
       - name: Check for existing branch
+        if: ${{ git ls-remote --heads origin refs/heads/audit-images | wc -l }} == "1"
         run: |
-          git fetch
-          if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git refs/heads/audit-images | wc -l" == "1" ]]; then
-            echo deleting existing branch
-            git push origin --delete audit-images
-          else
-            echo no existing branch found
-          fi
+          echo deleting existing branch
+          git push origin --delete audit-images
       
       - name: Create new branch
         run: |
