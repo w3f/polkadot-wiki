@@ -21,7 +21,7 @@ jobs:
       - name: Check for existing branch
         run: |
           git fetch
-          if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git auction-schedule-update | wc -l" == "1" ]]; then
+          if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git refs/heads/auction-schedule-update | wc -l" == "1" ]]; then
             echo deleting existing branch
             git push origin --delete auction-schedule-update
           else
