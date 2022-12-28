@@ -23,9 +23,10 @@ jobs:
 
       - name: Check for existing branch
         run: |
+          git fetch
           if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git audit-images | wc -l" == "1" ]]; then
             echo deleting existing branch
-            git branch -d audit-images
+            git push origin --delete audit-images
           else
             echo no existing branch found
           fi

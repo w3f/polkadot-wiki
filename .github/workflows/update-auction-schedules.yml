@@ -20,9 +20,10 @@ jobs:
           git config --global user.name "Polkadot-Kusama Bot"
       - name: Check for existing branch
         run: |
+          git fetch
           if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git auction-schedule-update | wc -l" == "1" ]]; then
             echo deleting existing branch
-            git branch -d auction-schedule-update
+            git push origin --delete auction-schedule-update
           else
             echo no existing branch found
           fi
