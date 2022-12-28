@@ -23,11 +23,12 @@ jobs:
 
       - name: Check for existing branch
         run: |
-          if git ls-remote --heads origin refs/heads/audit-images | wc -l == 1; then
+          if "git ls-remote --heads origin refs/heads/audit-images | wc -l" == "1"; then
             echo deleting existing branch
             git push origin --delete audit-images
           else 
-            echo git ls-remote --heads origin refs/heads/audit-images | wc -l == 1
+            echo "git ls-remote --heads origin refs/heads/audit-images | wc -l" == 1
+            echo "git ls-remote --heads origin refs/heads/audit-images | wc -l" == "1"
             echo no existing branch found
           fi
       
