@@ -121,7 +121,7 @@ def main():
                             Image_References.append(base + linkExt)
 
     for image in Images:
-        if image not in Image_References: #and image not in FalsePositives:
+        if image not in Image_References and image not in FalsePositives:
             Diff.append(image)
 
     for path, subdirs, files in os.walk(Assets_Root):
