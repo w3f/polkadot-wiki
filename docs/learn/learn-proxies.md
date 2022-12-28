@@ -181,7 +181,7 @@ To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next t
 account you will notice a blue icon. Hover on it, and you will see _Proxy overview_. Click on it and
 you will be presented with a list of all proxies for that account.
 
-![view proxies](../assets/polkadot_view_proxies.png)
+![polkadot_view_proxies](../assets/polkadot_view_proxies.png)
 
 Additionally, you can head over to the _Chain State_ tab (underneath the _Developer_ menu) on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
@@ -191,7 +191,7 @@ the announcements and proxies functions. The proxies function will allow you to 
 proxies for either one account or for all accounts (using the toggle will enable this). Proxy
 announcements are what time lock proxies do to announce they are going to conduct an action.
 
-![view proxies](../assets/polkadot_view_proxies_dev.png)
+![polkadot_view_proxies_dev](../assets/polkadot_view_proxies_dev.png)
 
 ## Proxy Deposits
 

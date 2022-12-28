@@ -12,16 +12,11 @@ Extensions = [".png", ".jpg", ".svg", ".gif", ".jpeg"]
 
 # These manage to not be found due to formatting style (ex <img> tag used in md file)
 FalsePositives = [
-    "VRF_babe.png",
-    "creating-pull-request.png",
+    # These use <img> tags in markdown instead of standard ![alt tag](img url) formatting
     "polkawallet-accounts-page.jpg",
-    "contributing.png",
     "polkawallet-create-account.jpg",
     "polkawallet-copy-address.jpg",
     "kusama-gifs.gif",
-    "polkadot_view_proxies.png",
-    "creating-pull-request-2.png",
-    "xcm-reserve-asset-transfer.png",
     "polkadot-translate-feature.png",
     "crowdin-translate-1.png",
     "crowdin-translate-9.png",
@@ -32,50 +27,16 @@ FalsePositives = [
     "crowdin-translate-6.png",
     "crowdin-translate-8.png",
     "crowdin-translate-3.png",
-    "adaptive-quorum-biasing.png",
-    "approval-vote.png",
     "nominate.png",
-    "test_bid.jpg",
-    "polkadotjs_removeVoter.png",
-    "social-recovery-6.png",
-    "social-recovery-10.png",
-    "social-recovery-14.png",
-    "social-recovery-11.png",
-    "social-recovery-8.png",
-    "social-recovery-7.png",
-    "social-recovery-9.png",
-    "social-recovery-diag-1.png",
-    "social-recovery-12.png",
-    "social-recovery-diag-2.png",
-    "social-recovery-15.png",
-    "social-recovery-13.png",
-    "avalanche-network.png",
-    "uniques.png",
-    "kanaria.png",
-    "nft-statemine.png",
-    "claim_3.png",
     "kusama_polkadotjs_mnemonicseed.jpg",
     "polkawallet-accounts-page.jpg",
     "kusama_polkadotjs_add_account-1.png",
     "polkawallet-create-account.jpg",
     "kusama_polkadotjs_create.png",
-    "kusama_society_page2.png",
     "polkawallet-copy-address.jpg",
     "kusama_polkadotjs_uncheck.png",
     "kusama_polkadotjs_final_account.png",
-    "claim_3.png",
     "proposal.jpg",
-    "4-configure-data-source.png",
-    "1-grafana-login.png",
-    "2-add-data-source.png",
-    "5-import-dashboard-2.png",
-    "2-add-data-source-2.png",
-    "5-import-dashboard.png",
-    "3-select-prometheus.png",
-    "Voting.png",
-    "polkadot-dashboard-validate-1.png",
-    "polkadot-dashboard-telemetry.png",
-    "kusama_society_page.png",
 ]
 
 # Read markdown content from a file path
@@ -121,7 +82,7 @@ def main():
                             Image_References.append(base + linkExt)
 
     for image in Images:
-        if image not in Image_References and image not in FalsePositives:
+        if image not in Image_References: #and image not in FalsePositives:
             Diff.append(image)
 
     for path, subdirs, files in os.walk(Assets_Root):
@@ -132,9 +93,11 @@ def main():
                 if os.path.isfile(os.path.join(Legacy_Root, name)):
                     # Since the files are copied from nested directories there can be naming overlap
                     newName = os.path.join(Legacy_Root, str(uuid.uuid4()) + "-" + name)
-                    os.rename(fullPath, newName)
+                    print(fullPath)
+                    #os.rename(fullPath, newName)
                 else:
-                    os.rename(fullPath, os.path.join(Legacy_Root, name))
+                    print(fullPath)
+                    #os.rename(fullPath, os.path.join(Legacy_Root, name))
 
 
 if __name__ == "__main__":

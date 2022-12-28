@@ -282,7 +282,7 @@ Quorum Biasing", which functions as a lever that the council can use to alter th
 super-majority required to make it easier or more difficult for a proposal to pass in the case that
 there is no clear majority of voting power backing it or against it.
 
-![](../assets/governance/adaptive-quorum-biasing.png)
+![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
 
 Let's use the above image as an example.
 
@@ -363,7 +363,7 @@ the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ### How to be a council member?
 
-![](../assets/governance/approval-vote.png)
+![approval-vote](../assets/governance/approval-vote.png)
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 

@@ -55,7 +55,7 @@ the following:
   last (N-2), so past randomness affects the current pending randomness (N).
 - **The slot number.**
 
-![](../assets/VRF_babe.png)
+![VRF_babe](../assets/VRF_babe.png)
 
 The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof that the random value
 was generated correctly).

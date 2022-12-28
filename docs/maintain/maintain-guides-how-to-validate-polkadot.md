@@ -620,11 +620,11 @@ will show all nodes on the Polkadot network, which is why it is important to sel
 
 In this example, we used the name `techedtest` and have successfully located it upon searching:
 
-![dashboard validate](../assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
+![polkadot-dashboard-telemetry](../assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
 
 ### Setup via Validator Tab
 
-![dashboard validate](../assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
+![polkadot-dashboard-validate-1](../assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
 
 Here you will need to input the Keys from `rotateKeys`, which is the Hex output from
 `author_rotateKeys`. The keys will show as pending until applied at the start of a new session.

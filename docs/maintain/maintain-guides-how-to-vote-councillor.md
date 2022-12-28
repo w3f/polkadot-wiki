@@ -70,7 +70,7 @@ Go to the "Governance" > "Council" tab on the
 
 Under the "Council overview" tab, click on "Vote".
 
-![](../assets/council/polkadotjs_removeVoter.png)
+![polkadotjs_removeVoter](../assets/council/polkadotjs_removeVoter.png)
 
 Issue the "Unvote all" option.
 
