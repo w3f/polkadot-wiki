@@ -1,0 +1,54 @@
+name: Audit Wiki Images
+on:
+  schedule:
+    - cron: '0 0 1 * * ' # Once a month
+  workflow_dispatch: # Or manually from GitHub UI
+
+jobs:
+  Audit_Images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Set credentials
+        run: |
+          git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
+          git config --global user.name "Polkadot-Kusama Bot"
+
+      - name: Check for existing branch
+        run: |
+          if [[ "git ls-remote --heads https://github.com/w3f/polkadot-wiki.git audit-images | wc -l" == "2" ]]; then
+            echo deleting existing branch
+            git branch -d audit-images
+          else
+            echo no existing branch found
+          fi
+      
+      - name: Create new branch
+        run: |
+          git branch audit-images
+          git checkout audit-images
+      
+      - name: Execute python
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+          python './scripts/auditImages.py'
+      
+      - name: Commit any changes from image archiving execution and make new PR
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git commit -a -m 'Archiving unused images'
+            git push --set-upstream origin audit-images
+            gh pr create -B master -H audit-images --title 'Automated image archiving' --body 'Automated image auditing over entire repo.'
+          else
+            echo No unused images found, no changes to commit.
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

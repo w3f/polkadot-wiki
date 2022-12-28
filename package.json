@@ -33,6 +33,7 @@
     "prepare": "husky install",
     "update:auctions": "node ./components/utilities/updateAuctions.js",
     "audit:links": "python ./scripts/auditLinks.py",
+    "audit:images": "python ./scripts/auditImages.py",
     "prettier:all": "npx prettier --write ."
   },
   "devDependencies": {
