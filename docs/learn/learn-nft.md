@@ -133,7 +133,7 @@ dozens of chains.
 
 #### NFT from [Kanaria](https://kanaria.rmrk.app)
 
-![](../assets/nft/kanaria.png)
+![kanaria.png](../assets/nft/kanaria.png)
 
 :::note Multi-resource NFTs
 
@@ -219,12 +219,12 @@ Uniques NFTs can be viewed and interacted with on
 [RMRK's Singular platform](https://singular.rmrk.app), by switching the top right menu from Kusama
 to Statemine.
 
-![](../assets/nft/nft-statemine.png)
+![nft-statemine](../assets/nft/nft-statemine.png)
 
 The can also be interacted with directly through the
 [extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
 
-![](../assets/nft/uniques.png)
+![uniques.png](../assets/nft/uniques.png)
 
 **More UIs are already being developed**.
 

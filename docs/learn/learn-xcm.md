@@ -100,7 +100,7 @@ The destination then deposits the assets to the receiving account of the asset.
 When consensus systems do not have a established layer of trust over which they can transfer assets,
 they can opt for a trusted 3rd entity to store the assets.
 
-![](../assets/cross-consensus/xcm-reserve-asset-transfer.png)
+![xcm-reserve-asset-transfer](../assets/cross-consensus/xcm-reserve-asset-transfer.png)
 
 1. [InitiateReserveWithdraw](https://github.com/paritytech/xcm-format#initiatereservewithdraw)
 
