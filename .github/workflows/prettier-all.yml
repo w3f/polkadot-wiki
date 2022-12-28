@@ -19,10 +19,13 @@ jobs:
           git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
           git config --global user.name "Polkadot-Kusama Bot"
       - name: Check for existing branch
-        if: git ls-remote --heads origin refs/heads/prettier-update | wc -l == "1"
         run: |
-          echo deleting existing branch
-          git push origin --delete prettier-update
+          if git ls-remote --heads origin refs/heads/prettier-update | wc -l; then
+            echo deleting existing branch
+            git push origin --delete prettier-update
+          else 
+            echo no existing branch found
+          fi
       - name: Project setup
         run: |
           git branch prettier-update
