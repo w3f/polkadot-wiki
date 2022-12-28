@@ -22,14 +22,10 @@ jobs:
           git config --global user.name "Polkadot-Kusama Bot"
 
       - name: Check for existing branch
+        if: git ls-remote --heads origin refs/heads/audit-links | wc -l == "1"
         run: |
-          git fetch
-          if [[ "git ls-remote --heads origin refs/heads/audit-links | wc -l" == "1" ]]; then
-            echo deleting existing branch
-            git push origin --delete audit-links
-          else
-            echo no existing branch found
-          fi
+          echo deleting existing branch
+          git push origin --delete audit-links
       
       - name: Create new branch
         run: |
