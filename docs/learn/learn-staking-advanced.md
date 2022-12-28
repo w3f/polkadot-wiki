@@ -174,7 +174,7 @@ functionality of nomination intents using bags is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system.
 
-![bags list example 2](../assets/bags-list-example-3.png)
+![bags list example 3](../assets/bags-list-example-3.png)
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
