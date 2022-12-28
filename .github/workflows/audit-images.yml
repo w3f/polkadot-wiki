@@ -44,6 +44,7 @@ jobs:
       - name: Commit any changes from image archiving execution and make new PR
         run: |
           if [[ `git status --porcelain` ]]; then
+            git add -A
             git commit -a -m 'Archiving unused images'
             git push --set-upstream origin audit-images
             gh pr create -B master -H audit-images --title 'Automated image archiving' --body 'Automated image auditing over entire repo.'
