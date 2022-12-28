@@ -91,11 +91,9 @@ def main():
                 if os.path.isfile(os.path.join(Legacy_Root, name)):
                     # Since the files are copied from nested directories there can be naming overlap
                     newName = os.path.join(Legacy_Root, str(uuid.uuid4()) + "-" + name)
-                    print(fullPath)
-                    #os.rename(fullPath, newName)
+                    os.rename(fullPath, newName)
                 else:
-                    print(fullPath)
-                    #os.rename(fullPath, os.path.join(Legacy_Root, name))
+                    os.rename(fullPath, os.path.join(Legacy_Root, name))
 
 
 if __name__ == "__main__":
