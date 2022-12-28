@@ -10,9 +10,8 @@ Legacy_Root = os.path.join(Dir_Name, "./../docs/assets/_legacy")
 
 Extensions = [".png", ".jpg", ".svg", ".gif", ".jpeg"]
 
-# These manage to not be found due to formatting style (ex <img> tag used in md file)
+# These use <img> tags in markdown instead of standard ![alt tag](img url) formatting
 FalsePositives = [
-    # These use <img> tags in markdown instead of standard ![alt tag](img url) formatting
     "polkawallet-accounts-page.jpg",
     "polkawallet-create-account.jpg",
     "polkawallet-copy-address.jpg",
@@ -27,7 +26,6 @@ FalsePositives = [
     "crowdin-translate-6.png",
     "crowdin-translate-8.png",
     "crowdin-translate-3.png",
-    "nominate.png",
     "kusama_polkadotjs_mnemonicseed.jpg",
     "polkawallet-accounts-page.jpg",
     "kusama_polkadotjs_add_account-1.png",
