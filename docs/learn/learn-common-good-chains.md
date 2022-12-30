@@ -7,6 +7,8 @@ keywords: [common good, parachains, system level, public utility]
 slug: ../learn-common-goods
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 ## Overview
 
 "Common Good" parachains are parachain slots reserved for functionality that benefits the ecosystem
@@ -68,9 +70,8 @@ to only be approved by the network stakeholders in rare scenarios.
 ### {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }}
 
 {{ polkadot: [Statemint](https://github.com/paritytech/cumulus#statemint-) :polkadot }}
-{{ kusama: [Statemine](https://github.com/paritytech/cumulus#statemint-) :kusama }}
-
-and its cousin {{ polkadot: Statemine :polkadot }}{{ kusama: Statemint :kusama }} on
+{{ kusama: [Statemine](https://github.com/paritytech/cumulus#statemint-) :kusama }} and its cousin
+{{ polkadot: Statemine :polkadot }}{{ kusama: Statemint :kusama }} on
 {{ polkadot: Kusama :polkadot }}{{ kusama: Polkadot :kusama }}, are the first common good
 parachains.
 
@@ -96,6 +97,15 @@ Because of the efficiency of executing logic in a parachain, the transaction fee
 fee levels mean that {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} is well
 suited to handling {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balances and transfers as
 well as managing on-chain assets.
+
+For example, the existential deposit for
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,  :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>,  :kusama }}
+while only
+{{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>  :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>  :kusama }}
+on {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
 
 As a common good parachain, {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} must
 stay fully aligned with the Relay Chain. Upgrades to
