@@ -33,8 +33,8 @@ guides to set up a node and run the network.
   nominate on the Polkadot network.
 - [Nomination Guide (Kusama)](kusama/maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how
   to nominate on the Kusama canary network.
-- [How to stop being a Nominator](maintain-guides-how-to-nominate-polkadot.md) - Guide on how to stop
-  nominating.
+- [How to stop being a Nominator](maintain-guides-how-to-nominate-polkadot.md) - Guide on how to
+  stop nominating.
 
 ## Validator
 
@@ -61,9 +61,7 @@ guides to set up a node and run the network.
 
 - [How to participate in Governance](maintain-guides-democracy.md) - Walkthrough on how to
   participate in governance.
-- [How to join the Council][join the council] - Step by step guide for running for the Council.
-- [How to vote for a Councillor][vote for councillors] - Step by step guide for voting for your
-  favorite councillors.
-
-[join the council]: maintain-guides-how-to-join-council.md
-[vote for councillors]: maintain-guides-how-to-vote-councillor.md
+- [How to join the Council](maintain-guides-how-to-join-council.md) - Step by step guide for running
+  for the Council.
+- [How to vote for a Councillor](maintain-guides-how-to-vote-councillor.md) - Step by step guide for
+  voting for your favorite councillors.

@@ -7,8 +7,8 @@ keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft
 ---
 
-This page is a high-level overview of NFTs and the various approaches to NFTs within the Polkadot
-network.
+This page is a high-level overview of NFTs and the various approaches to NFTs within the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network.
 
 ## Fungibility
 
@@ -70,12 +70,14 @@ exclusively image-based collectibles of varying rarity.
 
 ## NFTs 2.0: NFTs in Polkadot & Kusama
 
-This is where Polkadot's technology shines and where NFTs 2.0 come into play. By allowing
+This is where {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s technology shines and
+where NFTs 2.0 come into play. By allowing
 [heterogeneous application-specific shards](learn-parachains.md) to exist, builders can natively
 optimize for complex NFT use cases without tradeoffs that would make interacting with the system
 prohibitively inefficient and expensive in other environments.
 
-The following NFT solutions exist and are under development in the Polkadot ecosystem:
+The following NFT solutions exist and are under development in the Polkadot and/or Kusama
+ecosystems:
 
 ### Unique network
 
@@ -131,7 +133,7 @@ dozens of chains.
 
 #### NFT from [Kanaria](https://kanaria.rmrk.app)
 
-![](../assets/nft/kanaria.png)
+![kanaria.png](../assets/nft/kanaria.png)
 
 :::note Multi-resource NFTs
 
@@ -167,11 +169,22 @@ parachains in the Polkadot ecosystem, but also into and out of Ethereum and othe
 
 ### Astar
 
-[Astar Network](https://astar.network) and its sister network [Shiden Network](https://shiden.astar.network) are the smart contract infrastructure in the Polkadot Ecosystem. Astar Ecosystem ("Astar") supports NFTs developed with EVM smart contracts and WASM smart contracts.
+[Astar Network](https://astar.network) and its sister network
+[Shiden Network](https://shiden.astar.network) are the smart contract infrastructure in the Polkadot
+Ecosystem. Astar Ecosystem ("Astar") supports NFTs developed with EVM smart contracts and WASM smart
+contracts.
 
-Astar has all toolings available that every EVM NFT developer knows. The availability of those toolings makes the onboarding to Astar networks very attractive to any developer looking to explore the Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides supporting all EVM toolings, Astar also bootstrapped the WASM smart contract environment for NFT developers writing smart contracts with [ink!](https://use.ink) based on [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals).
+Astar has all toolings available that every EVM NFT developer knows. The availability of those
+toolings makes the onboarding to Astar networks very attractive to any developer looking to explore
+the Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides
+supporting all EVM toolings, Astar also bootstrapped the WASM smart contract environment for NFT
+developers writing smart contracts with [ink!](https://use.ink) based on
+[PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals).
 
-The main advantage of having a multi-virtual machine environment for NFT developers is that it will give more possibilities to the builders for the use case they are developing. With the support of WASM smart contracts, developers can develop solutions like [RMRK](./learn-nft#rmrk) with smart contracts.
+The main advantage of having a multi-virtual machine environment for NFT developers is that it will
+give more possibilities to the builders for the use case they are developing. With the support of
+WASM smart contracts, developers can develop solutions like [RMRK](./learn-nft#rmrk) with smart
+contracts.
 
 ### Moonbeam
 
@@ -206,12 +219,12 @@ Uniques NFTs can be viewed and interacted with on
 [RMRK's Singular platform](https://singular.rmrk.app), by switching the top right menu from Kusama
 to Statemine.
 
-![](../assets/nft/nft-statemine.png)
+![nft-statemine](../assets/nft/nft-statemine.png)
 
 The can also be interacted with directly through the
 [extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
 
-![](../assets/nft/uniques.png)
+![uniques.png](../assets/nft/uniques.png)
 
 **More UIs are already being developed**.
 

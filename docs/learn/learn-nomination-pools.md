@@ -11,17 +11,17 @@ import RPC from "./../../components/RPC-Connection";
 
 :::info Nomination Pools are live on Polkadot!
 
-Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their 
-DOT tokens together on-chain to nominate validators and receive rewards, significantly improving
-the system’s scalability. Now, anyone with as little as [1 DOT can receive rewards for staking 
-natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). 
+Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their DOT
+tokens together on-chain to nominate validators and receive rewards, significantly improving the
+system’s scalability. Now, anyone with as little as
+[1 DOT can receive rewards for staking natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 :::
 
 :::tip Have questions on Nomination Pools?
 
-Please join the [Polkadot Discord](https://dot.li/discord) for asking general questions about Nomination Pools.
-If you are a developer, please join our
+Please join the [Polkadot Discord](https://dot.li/discord) for asking general questions about
+Nomination Pools. If you are a developer, please join our
 [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
 
 :::
@@ -65,6 +65,28 @@ The earnings of the pool are split pro rata to a member's stake in the bonded po
 staking rewards for members will be the same as if they were a nominator). Importantly, slashes are
 also applied proportionally to members who may have been actively bonded.
 
+:::info Nomination Pool Stats
+
+- There can be a maximum of
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
+  members (there are currently
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={2295} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
+  members).
+- There can be a maximum of
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
+  pools (there are currently
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={64} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
+  pools).
+- {{ polkadot: No limit on :polkadot }}
+  {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
+  members per pool.
+
+:::info
+
 ## Key Components
 
 - Bonded Pool: Tracks the distribution of actively staked funds.
@@ -85,7 +107,10 @@ A member delegates funds to a pool by transferring some amount to the pool’s b
 ability to bond additional funds, or re-stake rewards as long as they are already actively bonded.
 Note that a member may only belong to one pool at a time.
 
-{{ kusama: **The current minimum bond to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.** :kusama }}
+**The current minimum bond to join a pool on**
+{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
+{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.** :polkadot }}
+{{ kusama: **is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.** :kusama }}
 
 :::info
 
@@ -99,8 +124,8 @@ pool's internal logic can access the account.
 :::tip Use Non-Transfer Proxy Accounts to join Nomination Pools
 
 Currently, only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to
-participate in nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used 
-as they are not enabled to make calls to the nomination pools pallet.
+participate in nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used as
+they are not enabled to make calls to the nomination pools pallet.
 
 :::
 
@@ -127,7 +152,7 @@ unbonding duration has passed
 eras which correspond to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
-days on {{ polkadot: Polkadot). :polkadot }} {{ kusama: Kusama). :kusama }} A member may withdraw
+days on {{ polkadot: Polkadot), :polkadot }} {{ kusama: Kusama), :kusama }} a member may withdraw
 their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their
 pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section
 in
@@ -136,8 +161,9 @@ for guidelines.
 
 :::info Unbonding transaction automatically triggers withdrawal of rewards
 
-When there is a change in the bonded balance, the accumulated rewards in the pool thus far are automatically 
-withdrawn to the account. The rewards are then accrued based on the updated bonded balance. 
+When there is a change in the bonded balance, the accumulated rewards in the pool thus far are
+automatically withdrawn to the account. The rewards are then accrued based on the updated bonded
+balance.
 
 :::
 
@@ -148,29 +174,6 @@ withdrawn to the account. The rewards are then accrued based on the updated bond
 - In order for a member to switch pools all funds from the account must be unbonded. This process
   takes 28 eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
-
-:::info Kusama Pool Stats
-
-- There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
-  members (there are currently
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :kusama }}
-  members).
-- There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :kusama }}
-  pools (there are currently
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :kusama }}
-  pools).
-- There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :kusama }}
-  members per pool.
-
-:::info
 
 ## Pool Administration
 
@@ -204,7 +207,10 @@ must always be a member as long as the pool exists; they will be the last member
 they always have some skin in the game. Significant stake from the depositor is always a good
 indicator for the pool's credibility.
 
-{{ kusama: **The current minimum bond to create a pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
+**The current minimum bond to create a pool on**
+{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
+{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable" />.** :polkadot }}
+{{ kusama: **is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
 
 The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
 navigate to Network > Staking > Pools and click on Add Pool button.
@@ -247,7 +253,7 @@ A pool can be pushed into the “destroying” state via one of:
 - Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
   wiped from state.
 
-## Slashing
+## Nomination Pools - Slashing
 
 If a pool’s underlying nomination account is slashed by the staking system, then the slash is
 distributed evenly across the bonded pool and the unbonding pools from slash era+1 through the slash

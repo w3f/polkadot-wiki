@@ -7,18 +7,20 @@ keywords: [kappa sigma mu, society, kusama, member]
 slug: ../../maintain-guides-society-kusama
 ---
 
-Kappa Sigma Mu is a membership club using the Substrate [Society pallet][substrate pallet]. It is an
+Kappa Sigma Mu is a membership club using the Substrate
+[Society pallet](https://paritytech.github.io/substrate/master/pallet_society/index.html). It is an
 economic game to incentivize users to join a society that coordinates around whatever the rules are
 decided to be. The members of the society are incentivized to participate in the society via the
 rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to
 have multiple societies in the future through a runtime upgrade.
 
-![Society Dashboard](../../assets/kusama/kusama_society_page.png)
-![Society Dashboard](../../assets/kusama/kusama_society_page2.png)
+![kusama_society_page](../../assets/kusama/kusama_society_page.png)
+![kusama_society_page2](../../assets/kusama/kusama_society_page2.png)
 
 Before joining the society, let's take a brief look at the
 [Society UI](https://polkadot.js.org/apps/#/society) on Polkadot-JS apps and read through all the
-[rules][kappa rules] to become a member.
+[rules](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17)
+to become a member.
 
 ## UI Overview
 
@@ -43,13 +45,14 @@ Below are the various types of users at different stages.
 - `Head` - One winning candidate will be randomly chosen as head of the members, weighted by the
   number of approvals the winning candidates accumulated.
 - `Defender` - In every challenge period, one of the members will be randomly selected to defend
-  their membership in the society. The rules for defending the membership are documented [in the
-  rules][kappa rules].
+  their membership in the society. The rules for defending the membership are documented
+  [in the rules](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17).
 
 ## Procedure
 
-Remember to take a look at the [rules][kappa rules] first. And since those rules are not enforced
-entirely on-chain, it is recommended to join the
+Remember to take a look at the
+[rules](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17)
+first. And since those rules are not enforced entirely on-chain, it is recommended to join the
 [Kappa Sigma Mu Lounge](https://app.element.io/#/room/!BUmiAAnAYSRGarqwOt:matrix.parity.io) to ask
 any questions if anything is unclear.
 
@@ -67,7 +70,7 @@ chooses to unbid.
 Anyone who wants to join the society is required to deposit 1.6 KSM for reserve on Kusama and
 declare the bid amount (1 KSM in this case) that they will receive for joining the society.
 
-![Society Dashboard](../../assets/society/test_bid.jpg)
+![test_bid](../../assets/society/test_bid.jpg)
 
 Once you have submitted the transaction, your bid will be shown on the
 [Society page](https://ipfs.io/ipns/kusama.dotapps.io/#/society) under the bids section. You can
@@ -88,7 +91,7 @@ The final value that the candidate will get = (value - tip)
 
 :::
 
-![Society Dashboard](../../assets/society/vouch.jpg)
+![vouch](../../assets/society/vouch.jpg)
 
 ### 2. Candidate Phase
 
@@ -133,7 +136,9 @@ time - see below.
 
 It would take the number of members of the society as the variable to determine how many blocks you
 have to wait in order to get the payout. The longest lockup time is close to 3 years. The formula is
-defined [in the society pallet][substrate pallet] if you would like to have a look.
+defined
+[in the society pallet](https://paritytech.github.io/substrate/master/pallet_society/index.html) if
+you would like to have a look.
 
 Example:
 
@@ -169,9 +174,10 @@ the same as the above mentioned lockup formula.
 
 Third, there will be a membership challenge every seven days on Kusama. So one of the members will
 be randomly selected as a defender. Then, other members can vote whether this defender should stay
-in the society or not. A simple majority wins the vote. You can take a look [here][kappa rules] and
-search for "Existing Members (Challenges)". Besides that, you can earn extra KSM by helping a user
-apply for the membership and requesting a tip. This is useful when a user does not have enough
+in the society or not. A simple majority wins the vote. You can take a look
+[here](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17)
+and search for "Existing Members (Challenges)". Besides that, you can earn extra KSM by helping a
+user apply for the membership and requesting a tip. This is useful when a user does not have enough
 balance to reserve a deposit. The tip will be given when a user successfully joins the society.
 
 :::info
@@ -196,7 +202,3 @@ hexadecimal string. In order to see the rules in human-readable format, you can 
 extrinsic's parameters go to Element 1 ("proposal") -> "value" -> "params" -> Element 2 ("rules")
 and copy the value corresponding to the key "value". You can use a hex-to-UTF8 converter to then
 display the text. Note that the text is formatted with Markdown.
-
-[substrate pallet]: https://paritytech.github.io/substrate/master/pallet_society/index.html
-[kappa rules]:
-  https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17

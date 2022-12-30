@@ -1,11 +1,11 @@
-name: Update Auction Schedules
+name: Run Prettier on entire repo
 on:
   schedule:
     - cron: '0 0 * * 1' # Once a week
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:
-  update_json:
+  run_prettier:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
@@ -20,25 +20,25 @@ jobs:
           git config --global user.name "Polkadot-Kusama Bot"
       - name: Check for existing branch
         run: |
-          if [[ $(git ls-remote --heads origin refs/heads/auction-schedule-update | wc -l) == "1" ]]; then
+          if [[ $(git ls-remote --heads origin refs/heads/prettier-update | wc -l) == "1" ]]; then
             echo deleting existing branch
-            git push origin --delete auction-schedule-update
+            git push origin --delete prettier-update
           else 
             echo no existing branch found
           fi
-      - name: Update cache
+      - name: Project setup
         run: |
-          git branch auction-schedule-update
-          git checkout auction-schedule-update
-          yarn && yarn update:auctions
-      - name: Commit, push and open new PR with changes (if any)
+          git branch prettier-update
+          git checkout prettier-update
+          yarn && yarn prettier:all
+      - name: Commit any changes from prettier execution and make new PR
         run: |
           if [[ `git status --porcelain` ]]; then
-            git commit -a -m 'auction schedule update'
-            git push --set-upstream origin auction-schedule-update
-            gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Automated Auction Schedule Update'
+            git commit -a -m 'applying prettier to entire repo'
+            git push --set-upstream origin prettier-update
+            gh pr create -B master -H prettier-update --title 'Automated prettier cleanup' --body 'Automated prettier cleanup over entire repo.'
           else
-            echo No auction changes detected, skipping update.
+            echo No prettier changes detected, skipping update.
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -569,8 +569,8 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-cryptography.md) in the client via the apps
-RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+You can generate your [Session keys](../learn/learn-cryptography.md) in the client via the apps RPC.
+If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
 validator node. You can configure the apps dashboard to connect to the endpoint of your validator in
 the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
 you will not be able to use this method since making RPC requests to this node would effect the
@@ -620,11 +620,11 @@ will show all nodes on the Polkadot network, which is why it is important to sel
 
 In this example, we used the name `techedtest` and have successfully located it upon searching:
 
-![dashboard validate](../assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
+![polkadot-dashboard-telemetry](../assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
 
 ### Setup via Validator Tab
 
-![dashboard validate](../assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
+![polkadot-dashboard-validate-1](../assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
 
 Here you will need to input the Keys from `rotateKeys`, which is the Hex output from
 `author_rotateKeys`. The keys will show as pending until applied at the start of a new session.

@@ -16,7 +16,9 @@ Polkadot from a research or academic perspective.
 
 ## Research Papers
 
-- [Efficient Aggregatable BLS Signatures with Chaum-Pedersen Proofs](https://eprint.iacr.org/2022/1611) - describes our improvements regarding efficient verification for BLS signatures for both individual as well as aggregated signatures.
+- [Efficient Aggregatable BLS Signatures with Chaum-Pedersen Proofs](https://eprint.iacr.org/2022/1611) -
+  describes our improvements regarding efficient verification for BLS signatures for both individual
+  as well as aggregated signatures.
 - [Accountable Light Client Systems for PoS Blockchains](https://github.com/w3f/apk-proofs/blob/9f3ed95d4dba4a4ea4b0dca3a57f4b7495271346/Light%20Client.pdf) -
   [`Implemented`](https://github.com/w3f/apk-proofs) as an efficient method to aggregate BLS
   signatures and BLS public keys which in turn is used to build light client systems that are the

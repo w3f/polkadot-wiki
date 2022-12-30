@@ -13,12 +13,26 @@ transactions. Multiple wallets are listed below, some developed by teams in the 
 and some developed by Parity. The target audience for Polkadot-JS is the developer community. Most community
 members use the more feature rich wallets with intuitive user interface supported by the treasury.
 
-
 :::tip Non-Custodial Wallets
 
- **All the wallets listed on this page are non-custodial wallets**. With non-custodial wallets, only you have access to your account's private key. With custodial wallets (like accounts on Central Exchanges), another party controls your private keys.
+**All the wallets listed on this page are non-custodial wallets**. With non-custodial wallets, only
+you have access to your account's private key. With custodial wallets (like accounts on Central
+Exchanges), another party controls your private keys.
 
 :::
+
+### Supported Wallets
+
+[Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
+Polkadot-JS UI, the Polkadot-JS extension, or Parity Signer. For other wallet software, you should
+contact the developers of that wallet.
+
+| Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                     |
+| ------------------------------------------------------------------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) or [Polkadot-JS Extension](https://github.com/polkadot-js/extension)            |
+| [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux                                                                                                                                                 |
+| [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts)           | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)                                                                |
+| [Ledger](https://github.com/Zondax/ledger-polkadot)                 | Live              | Zondax    | Hardware wallet app used with [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (and [Polkadot-JS Extension](https://github.com/polkadot-js/extension)) |
 
 ### Treasury Funded Wallets
 

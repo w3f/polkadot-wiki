@@ -37,69 +37,74 @@ LoadAPI(PolkadotParameters).then(() => {
     LoadAPI(KusamaParameters).then(() => {
       // Update Kusama cache
       console.log(`Updating ${KusamaParameters.chain} cache.`);
-      Update(KusamaParameters);
+      Update(KusamaParameters).then(() => {
+        console.log(`Updating auctions cache complete.`);
+      })
     });
   });
 });
 
 async function Update(params) {
-  // Load existing cache
-  fs.readFile(`./components/utilities/data/${params.cache}`, "utf8", async function readFileCallback(err, data) {
-    if (err) {
-      console.log(err);
-    } else {
-      const existingAuctions = JSON.parse(data);
+  return new Promise(async (resolve) => {
+    // Load existing cache
+    fs.readFile(`./components/utilities/data/${params.cache}`, "utf8", async function readFileCallback(err, data) {
+      if (err) {
+        console.log(err);
+      } else {
+        const existingAuctions = JSON.parse(data);
 
-      // Get current block data
-      const header = await API.rpc.chain.getHeader();
-      const currentBlock = header.number.toPrimitive();
+        // Get current block data
+        const header = await API.rpc.chain.getHeader();
+        const currentBlock = header.number.toPrimitive();
 
-      // Iterate existing auctions
-      for (let i = 0; i < existingAuctions.length; i++) {
-        let auction = existingAuctions[i];
+        // Iterate existing auctions
+        for (let i = 0; i < existingAuctions.length; i++) {
+          let auction = existingAuctions[i];
 
-        // First check if all block numbers are defined (0 indicates not available in cache)
-        if (auction.onboardStartBlock === null || auction.onboardEndBlock === null) {
-          // Use the startBlock recalculate remaining relevant block numbers
-          const [endPeriodBlock, auctionEndBlock, onboardStartBlock, onboardEndBlock] = await GetAuctionBlocks(API, currentBlock, auction.startBlock, params.chain);
-          existingAuctions[i].endPeriodBlock = endPeriodBlock;
-          existingAuctions[i].biddingEndsBlock = auctionEndBlock;
-          existingAuctions[i].onboardStartBlock = onboardStartBlock;
-          existingAuctions[i].onboardEndBlock = onboardEndBlock;
+          // First check if all block numbers are defined (0 indicates not available in cache)
+          if (auction.onboardStartBlock === null || auction.onboardEndBlock === null) {
+            // Use the startBlock recalculate remaining relevant block numbers
+            const [endPeriodBlock, auctionEndBlock, onboardStartBlock, onboardEndBlock] = await GetAuctionBlocks(API, currentBlock, auction.startBlock, params.chain);
+            existingAuctions[i].endPeriodBlock = endPeriodBlock;
+            existingAuctions[i].biddingEndsBlock = auctionEndBlock;
+            existingAuctions[i].onboardStartBlock = onboardStartBlock;
+            existingAuctions[i].onboardEndBlock = onboardEndBlock;
+          }
+
+          // Check to see if all block numbers have an associated hash or are future blocks
+          existingAuctions[i].startHash = await UpdateBlockHash(currentBlock, auction.startBlock, auction.startHash);
+          existingAuctions[i].endPeriodHash = await UpdateBlockHash(currentBlock, auction.endPeriodBlock, auction.endPeriodHash);
+          existingAuctions[i].biddingEndsHash = await UpdateBlockHash(currentBlock, auction.biddingEndsBlock, auction.biddingEndsHash);
+          existingAuctions[i].onboardStartHash = await UpdateBlockHash(currentBlock, auction.onboardStartBlock, auction.onboardStartHash);
+          existingAuctions[i].onboardEndHash = await UpdateBlockHash(currentBlock, auction.onboardEndBlock, auction.onboardEndHash);
+
+          // Check to see if dates exists, if this is a future block or a date can be retrieved from on-chain
+          existingAuctions[i].startDate = await UpdateBlockDate(auction, auction.startHash, "startDate");
+          existingAuctions[i].endPeriodDate = await UpdateBlockDate(auction, auction.endPeriodHash, "endPeriodDate");
+          existingAuctions[i].biddingEndsDate = await UpdateBlockDate(auction, auction.biddingEndsHash, "biddingEndsDate");
+          existingAuctions[i].onboardStartDate = await UpdateBlockDate(auction, auction.onboardStartHash, "onboardStartDate");
+          existingAuctions[i].onboardEndDate = await UpdateBlockDate(auction, auction.onboardEndHash, "onboardEndDate");
         }
 
-        // Check to see if all block numbers have an associated hash or are future blocks
-        existingAuctions[i].startHash = await UpdateBlockHash(currentBlock, auction.startBlock, auction.startHash);
-        existingAuctions[i].endPeriodHash = await UpdateBlockHash(currentBlock, auction.endPeriodBlock, auction.endPeriodHash);
-        existingAuctions[i].biddingEndsHash = await UpdateBlockHash(currentBlock, auction.biddingEndsBlock, auction.biddingEndsHash);
-        existingAuctions[i].onboardStartHash = await UpdateBlockHash(currentBlock, auction.onboardStartBlock, auction.onboardStartHash);
-        existingAuctions[i].onboardEndHash = await UpdateBlockHash(currentBlock, auction.onboardEndBlock, auction.onboardEndHash);
-
-        // Check to see if dates exists, if this is a future block or a date can be retrieved from on-chain
-        existingAuctions[i].startDate = await UpdateBlockDate(auction, auction.startHash, "startDate");
-        existingAuctions[i].endPeriodDate = await UpdateBlockDate(auction, auction.endPeriodHash, "endPeriodDate");
-        existingAuctions[i].biddingEndsDate = await UpdateBlockDate(auction, auction.biddingEndsHash, "biddingEndsDate");
-        existingAuctions[i].onboardStartDate = await UpdateBlockDate(auction, auction.onboardStartHash, "onboardStartDate");
-        existingAuctions[i].onboardEndDate = await UpdateBlockDate(auction, auction.onboardEndHash, "onboardEndDate");
+        // Write results
+        json = JSON.stringify(existingAuctions, null, 2); //convert it back to json
+        fs.writeFile(`./components/utilities/data/${params.cache}`, json, "utf8", async function writeFileCallback(err) {
+          // Once both async processes have completed terminate the script
+          if (err) {
+            console.log(err);
+            if(params.chain === "Kusama") {
+              process.exit(1);
+            }
+          } else {
+            console.log(`Updating of ${params.chain} cache complete.`);
+            if(params.chain === "Kusama") {
+              process.exit(0);
+            }
+          }
+        });
       }
-
-      // Write results
-      json = JSON.stringify(existingAuctions, null, 2); //convert it back to json
-      fs.writeFile(`./components/utilities/data/${params.cache}`, json, "utf8", async function writeFileCallback(err) {
-        // Once both async processes have completed terminate the script
-        if (err) {
-          console.log(err);
-          if(params.chain === "Kusama") {
-            process.exit(1);
-          }
-        } else {
-          console.log(`Updating of ${params.chain} cache complete.`);
-          if(params.chain === "Kusama") {
-            process.exit(0);
-          }
-        }
-      });
-    }
+      return resolve();
+    })
   })
 }
 
@@ -134,8 +139,11 @@ async function UpdateBlockHash(currentBlock, blockNumber, currentHash) {
 
 // Load appropriate API based on provided chain type
 async function LoadAPI(chain) {
-  const WSProvider = new Polkadot.WsProvider(chain.ws);
-  API = await Polkadot.ApiPromise.create({ provider: WSProvider });
+  return new Promise(async (resolve) => {
+    const WSProvider = new Polkadot.WsProvider(chain.ws);
+    API = await Polkadot.ApiPromise.create({ provider: WSProvider });
+    return resolve();
+  });
 }
 
 // Get the auction bidding start, bidding end, lease period start and lease period end blocks from the auction start block
@@ -176,7 +184,6 @@ async function GetAuctionBlocks(api, currentBlock, startBlock, chain) {
     }
   } catch (error) {
     console.log(`Failure updating auction blocks on ${chain} at starting block ${startBlock}.`)
-    throw error.message;
   }
 }
 

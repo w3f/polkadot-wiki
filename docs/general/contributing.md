@@ -9,9 +9,9 @@ slug: ../contributing
 ---
 
 The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims to
-be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of
-the material currently focuses on Polkadot directly but it is not opposed to covering informational
-material for community projects.
+be the most extensive resource of knowledge on Polkadot and Kusama the ecosystem. A large part of
+the material currently focuses on Polkadot and Kusama directly but it is not opposed to covering
+informational material for community projects.
 
 :::caution Marketing material
 
@@ -49,12 +49,13 @@ directly. When you've completed your changes, you can add any specific details o
 and commit to a **new branch** to create a new Pull Request to the repository. From there one of the
 maintainers will review your changes, and either merge them or request changes.
 
-![](../assets/contributing.png) ![](../assets/creating-pull-request.png)
+![contributing](../assets/contributing.png)
+![creating-pull-request](../assets/creating-pull-request.png)
 
 Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the
 next page.
 
-![](../assets/creating-pull-request-2.png)
+![creating-pull-request-2](../assets/creating-pull-request-2.png)
 
 ## Guideline and Rules for Contributing
 
@@ -87,7 +88,7 @@ This document is based on the
 
 ## Helping With Translations
 
-:::caution Currently the Wiki is being reorgnaized and updated, during this time we will not be
+:::caution Currently the Wiki is being reorganized and updated, during this time we will not be
 prioritizing translations. :::
 
 The Wiki's default language is _English_, though, there is a desire to translate the Wiki in as many

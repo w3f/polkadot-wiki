@@ -1,11 +1,11 @@
-name: Audit Wiki Links
+name: Audit Wiki Images
 on:
   schedule:
     - cron: '0 0 1 * * ' # Once a month
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:
-  Audit_Links:
+  Audit_Images:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,40 +23,33 @@ jobs:
 
       - name: Check for existing branch
         run: |
-          if [[ $(git ls-remote --heads origin refs/heads/audit-links | wc -l) == "1" ]]; then
+          if [[ $(git ls-remote --heads origin refs/heads/audit-images | wc -l) == "1" ]]; then
             echo deleting existing branch
-            git push origin --delete audit-links
+            git push origin --delete audit-images
           else 
             echo no existing branch found
           fi
       
       - name: Create new branch
         run: |
-          git branch audit-links
-          git checkout audit-links
+          git branch audit-images
+          git checkout audit-images
       
       - name: Execute python
         run: |
           python -m pip install --upgrade pip
           pip install requests
-          python './scripts/auditLinks.py'
+          python './scripts/auditImages.py'
       
-      - name: Check results for broken links
+      - name: Commit any changes from image archiving execution and make new PR
         run: |
-          File="./Audit-Results.md"
-          echo Reading Audit...
-          if test -f "$File"; then
-            TEXT=$(cat ./Audit-Results.md)
-            echo "audit_result=true" >> $GITHUB_ENV
-          else  
-            echo "$File does not exist" 
-            echo "audit_result=false" >> $GITHUB_ENV 
+          if [[ `git status --porcelain` ]]; then
+            git add -A
+            git commit -a -m 'Archiving unused images'
+            git push --set-upstream origin audit-images
+            gh pr create -B master -H audit-images --title 'Automated image archiving' --body 'Automated image auditing over entire repo.'
+          else
+            echo No unused images found, no changes to commit.
           fi
-
-      - name: Create GitHub Issue
-        if: ${{ env.audit_result == 'true' }}
-        uses: "JasonEtco/create-an-issue@v2"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          filename: ./Audit-Results.md

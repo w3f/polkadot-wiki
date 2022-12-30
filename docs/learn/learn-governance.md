@@ -18,15 +18,17 @@ network.
 
 :::info Gov2 is live on Kusama Network
 
-Learn about the upcoming changes to the governance on Polkadot in this [Wiki doc on Gov2](learn-gov2.md).
+Learn about the upcoming changes to the governance on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
+[Wiki doc on Gov2](learn-opengov.md).
 
 :::
 
 :::caution Upcoming governance changes
 
-The contents in this guide are subject to change as per the recent efforts to modify Polkadot
-Governance. See this [pull request](https://github.com/paritytech/substrate/pull/10195) for more
-details\*\*.
+The contents in this guide are subject to change as per the recent efforts to modify
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Governance. See this
+[pull request](https://github.com/paritytech/substrate/pull/10195) for more details\*\*.
 
 :::
 
@@ -255,7 +257,8 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-<VLTable network="polkadot"/>
+{{ polkadot: <VLTable network="polkadot"/> :polkadot }}
+{{ kusama: <VLTable network="kusama"/> :kusama }}
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals
@@ -279,7 +282,7 @@ Quorum Biasing", which functions as a lever that the council can use to alter th
 super-majority required to make it easier or more difficult for a proposal to pass in the case that
 there is no clear majority of voting power backing it or against it.
 
-![](../assets/governance/adaptive-quorum-biasing.png)
+![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
 
 Let's use the above image as an example.
 
@@ -360,7 +363,7 @@ the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ### How to be a council member?
 
-![](../assets/governance/approval-vote.png)
+![approval-vote](../assets/governance/approval-vote.png)
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
@@ -459,15 +462,16 @@ be an error, the council _may_ consider a governance motion to correct it.
 The first step to appeal to the council is to get in contact with the councillors. There is no
 singular place where you are guaranteed to grab every councillor's ear with your message. However,
 there are a handful of good places to start where you can get the attention of some of them. The
-{{ polkadot: [Polkadot Direction][] :polkadot }}{{ kusama: [Kusama Direction][] :kusama }} matrix
-room is one such place. After creating an account and joining this room, you can post a
+{{ polkadot: [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
+{{ kusama: [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) :kusama }} matrix room
+is one such place. After creating an account and joining this room, you can post a
 well-thought-through message here that lays down your case and provides justification for why you
 think the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. For this, making a post on
-[Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
-you present all the evidence for your circumstances and state clearly what kind of change you would
-suggest to the councillors to enact.
+[Polkassembly](https://polkadot.polkassembly.io/) is the recommended place to do so. When you write
+a post on Polkassembly make sure you present all the evidence for your circumstances and state
+clearly what kind of change you would suggest to the councillors to enact.
 
 :::info
 
@@ -484,7 +488,3 @@ case for why the change should be made.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
   explaining how governance works in Polkadot and Kusama.
-
-[polkadot direction]: https://matrix.to/#/#polkadot-direction:matrix.parity.io
-[kusama direction]: https://matrix.to/#/#kusama:matrix.parity.io
-[polkassembly]: https://polkadot.polkassembly.io/

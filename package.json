@@ -32,7 +32,9 @@
     "docusaurus": "docusaurus",
     "prepare": "husky install",
     "update:auctions": "node ./components/utilities/updateAuctions.js",
-    "audit:links": "python ./scripts/auditLinks.py"
+    "audit:links": "python ./scripts/auditLinks.py",
+    "audit:images": "python ./scripts/auditImages.py",
+    "prettier:all": "npx prettier --write ."
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
@@ -43,13 +45,13 @@
     "@docusaurus/plugin-client-redirects": "^2.2.0",
     "@docusaurus/preset-classic": "^2.2.0",
     "@octokit/rest": "^19.0.5",
-    "@polkadot/api": "^9.10.1",
+    "@polkadot/api": "^9.10.5",
 
     "@polkadot/keyring": "10.1.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.0.4",
-    "axios": "^1.2.1",
-    "chalk": "^5.1.2",
+    "axios": "^1.2.2",
+    "chalk": "^5.2.0",
     "cloudflare": "^2.9.1",
     "cross-env": "^7.0.3",
     "fs-extra": "^11.1.0",
@@ -72,7 +74,7 @@
     "yargs": "^17.6.2"
   },
   "dependencies": {
-    "@algolia/client-search": "^4.14.2",
+    "@algolia/client-search": "^4.14.3",
     "@mdx-js/runtime": "^1.6.22",
     "@polkadot/util": "10.1.1",
     "@polkadot/util-crypto": "10.1.1",

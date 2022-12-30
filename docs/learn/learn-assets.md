@@ -28,12 +28,11 @@ thought of as the "home base" of assets in the network.
 token. The chain yields its governance to its parent Relay Chain, and has no inflation or era-based
 rewards for collators (although collators do receive a portion of transaction fees). As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-{{ polkadot: Statemint
-has a trusted relationship with the Relay Chain,
-and as such, can teleport DOT between itself and the Relay Chain. That is, DOT on Statemint is
-just as good as DOT on the Relay Chain. :polkadot }}{{ kusama: Statemine has a trusted relationship with the Relay Chain,
-and as such, can teleport KSM between itself and the Relay Chain. That is, KSM on Statemine is
-just as good as KSM on the Relay Chain. :kusama }}
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} as a trusted relationship with
+the Relay Chain, and as such, can teleport {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+between itself and the Relay Chain. That is,
+{{ polkadot: DOT on Statemint :polkadot }}{{ kusama: KSM on Statemine :kusama }} just as good as
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Relay Chain.
 
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart contracts.
 See the [Advanced](#advanced-techniques) section at the bottom for discussion on using proxy and
@@ -50,13 +49,15 @@ upon every release, leading to efficient execution and stable transaction fees.
 
 ### Creation and Management
 
-Anyone on the network can create assets on {{ polkadot: Statemint, as long as they can reserve the
-required deposit of <RPC network="polkadot" path="const.asset.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: Statemine, as long as they can reserve
-the required deposit of <RPC network="kusama" path="query.asset.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}. The network reserves the deposit on creation. The creator
-also must specify a unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId`
-should be the canonical identifier for an asset, as the chain does not enforce the uniqueness of
-metadata like "name" and "symbol". The creator must also specify a minimum balance, which will
-prevent accounts from having dust balances.
+Anyone on the network can create assets on
+{{ polkadot: Statemint, :polkadot }}{{ kusama: Statemine, :kusama }} as long as they can reserve the
+required deposit of
+{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
+The network reserves the deposit on creation. The creator also must specify a unique `AssetId`, an
+integer of type `u32`, to identify the asset. The `AssetId` should be the canonical identifier for
+an asset, as the chain does not enforce the uniqueness of metadata like "name" and "symbol". The
+creator must also specify a minimum balance, which will prevent accounts from having dust balances.
 
 An asset class has a number of privileged roles. The creator of the asset automatically takes on all
 privileged roles, but can reassign them after creation. These roles are:
@@ -77,15 +78,18 @@ An asset's details contain one field not accessible to its owner or admin team, 
 sufficiency. Only the network's governance mechanism can deem an asset as _sufficient_. A balance of
 a non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
 could not create a new account on-chain by transferring an insufficient asset to it; the account
-must already exist by having more than the existential deposit {{ polkadot: in DOT :polkadot }}
-{{ kusama: in KSM :kusama }} (or a sufficient asset). However, assets deemed _sufficient_ can
-instantiate accounts and pay for transaction fees, such
-that users can transact on {{ polkadot: Statemint without the need for DOT :polkadot }}
-{{ kusama: Statemine without the need for KSM :kusama }}. 
+must already exist by having more than the existential deposit in
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset). However, assets
+deemed _sufficient_ can instantiate accounts and pay for transaction fees, such that users can
+transact on {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} without the need for
+{{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
 
-:::info Transaction Fees on Polkadot-JS UI 
+:::info Transaction Fees on Polkadot-JS UI
 
-Polkadot-JS UI [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI, transaction fee needs to be paid in {{ polkadot:  DOT :polkadot }}{{ kusama: KSM :kusama }}.
+Polkadot-JS UI
+[doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812).
+When using Polkadot-JS UI, transaction fee needs to be paid in
+{{ polkadot:  DOT :polkadot }}{{ kusama: KSM :kusama }}.
 
 :::
 
@@ -115,12 +119,12 @@ of an account.
 manage asset transfers to other parachains. It tracks how much of each asset has gone to each
 parachain and will not accept more back from a particular parachain.
 
-As a result of this, asset owners can use {{ polkadot: Statemint :polkadot }}
-{{ kusama: Statemine :kusama }} to track information like the total issuance of their asset in the
-entire network, as parachain balances would be included in the reserve-backed table. Likewise, for
-the minting and burning of tokens, an asset's team can perform all operations on
-{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} and propagate any minted tokens
-to other parachains in the network.
+As a result of this, asset owners can use
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} to track information like the
+total issuance of their asset in the entire network, as parachain balances would be included in the
+reserve-backed table. Likewise, for the minting and burning of tokens, an asset's team can perform
+all operations on {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} and propagate
+any minted tokens to other parachains in the network.
 
 Parachains that want to send assets to other parachains should do so via instructions to
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} so that the reserve-backed table
@@ -130,8 +134,8 @@ stays up to date. For more info, see the "Moving Assets between Chains in XCM" s
 ## Non-Fungible Assets
 
 Unlike fungible assets, the particular instance of a non-fungible asset (NFT) has meaning separate
-from another instance of the same class. {{ polkadot: Statemint :polkadot }}
-{{ kusama: Statemine :kusama }} represents NFTs in the
+from another instance of the same class.
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} represents NFTs in the
 [Uniques pallet](https://crates.parity.io/pallet_uniques/index.html).
 
 Similar to the Assets pallet, this functionality is encoded into the chain. Operations are
@@ -140,12 +144,13 @@ stable transaction fees.
 
 ### Creation and Management
 
-{{ polkadot: Anyone on the network can create an asset class, as long as they reserve the required
-deposit of 100 DOT on Statemint :polkadot }}{{ kusama: Anyone on the network can create an asset class,
-as long as they reserve the required deposit of 1 KSM on Statemine :kusama }}. Creating instances of
-a class also requires a per-instance deposit, unless the chain's governance designates the class as
-"free holding", allowing the class to mint more instances without deposit. The creator must specify
-a `ClassId`, which, like its cousin `AssetId`, should be the canonical identifier for the class.
+Anyone on the network can create an asset class, as long as they reserve the required deposit of
+{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> on Statemint. :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> on Statemine. :kusama }}
+Creating instances of a class also requires a per-instance deposit, unless the chain's governance
+designates the class as "free holding", allowing the class to mint more instances without deposit.
+The creator must specify a `ClassId`, which, like its cousin `AssetId`, should be the canonical
+identifier for the class.
 
 The creator can also specify the same privileged roles of Owner, Admin, Issuer, and Freezer.
 

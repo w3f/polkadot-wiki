@@ -7,7 +7,19 @@ keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
+
+:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
+
+The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
+-> an anonymous proxy which is part of another multisig). These complex setups must be done using
+the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
+you are testing features for the first time.** By performing the complex proxy setups on the
+testnet, you can comfortably replicate the procedure on the main networks.
+
+:::
 
 Much like controller accounts in
 [staking](learn-staking.md#stash-and-controller-accounts-for-staking), proxies allow users to use an
@@ -34,7 +46,7 @@ risk their lives to ensure the VIP's protection. But proxies are also useful in 
 as efficient account management at the corporate level. They also provide an elegant solution to
 change signatories within multi-signature accounts, and they can be used within proxy calls and
 nested proxy calls. In this page we will explore all these interesting use cases of proxies within
-the Polkadot ecosystem.
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as
 your primary token-holding account and don't want to access it very often, but you want to
@@ -77,9 +89,11 @@ proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama 
 - Identity Judgement
 - Auction
 
-When a proxy account makes a transaction, Polkadot filters the desired transaction to ensure that
-the proxy account has the appropriate permission to make that transaction on behalf of the cold
-account. For example, staking proxies have permission to do only staking-related transactions.
+When a proxy account makes a transaction,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
+ensure that the proxy account has the appropriate permission to make that transaction on behalf of
+the cold account. For example, staking proxies have permission to do only staking-related
+transactions.
 
 ### Any Proxy
 
@@ -110,7 +124,8 @@ on governance proxies or watch our
 
 :::info
 
-Visit the [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more detailed information about staking proxies.
+Visit the [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more
+detailed information about staking proxies.
 
 :::
 
@@ -129,7 +144,6 @@ Use a [non-transfer](#non-transfer-proxy) instead of a staking proxy to particip
 pools. The staking proxy is not enabled to make successful calls to the nomination pools pallet.
 
 :::
-
 
 ### Identity Judgement Proxy
 
@@ -167,7 +181,7 @@ To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next t
 account you will notice a blue icon. Hover on it, and you will see _Proxy overview_. Click on it and
 you will be presented with a list of all proxies for that account.
 
-![view proxies](../assets/polkadot_view_proxies.png)
+![polkadot_view_proxies](../assets/polkadot_view_proxies.png)
 
 Additionally, you can head over to the _Chain State_ tab (underneath the _Developer_ menu) on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
@@ -177,7 +191,7 @@ the announcements and proxies functions. The proxies function will allow you to 
 proxies for either one account or for all accounts (using the toggle will enable this). Proxy
 announcements are what time lock proxies do to announce they are going to conduct an action.
 
-![view proxies](../assets/polkadot_view_proxies_dev.png)
+![polkadot_view_proxies_dev](../assets/polkadot_view_proxies_dev.png)
 
 ## Proxy Deposits
 
@@ -206,20 +220,41 @@ and the `ProxyDepositFactor` is
 We can add a layer of security to proxies by giving them a delay time. The delay will be quantified
 in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6
 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute
-delay. The proxy will announce its intended action and will wait for the number of blocks defined in
-the delay time before executing it. The proxy will include the hash of the intended function call in
-the announcement. Within this time window, the intended action may be canceled by accounts that
-control the proxy. Now we can use proxies knowing that any malicious actions can be noticed and
-reverted within a delay period.
+delay. The proxy will announce its intended action using the `proxy.announce` extrinsic and will
+wait for the number of blocks defined in the delay time before executing it. The proxy will include
+the hash of the intended function call in the announcement. Within this time window, the intended
+action may be canceled by accounts that control the proxy. This can be done by the proxy itself
+using the `proxy.removeAnnouncement` extrinsic or by the proxied account using the the
+`proxy.rejectAnnouncement` extrinsic. Now we can use proxies knowing that any malicious actions can
+be noticed and reverted within a delay period. After the time-delay, the proxy can use the
+`proxy.proxyAnnounced` extrinsic to execute the announced call.
 
-:::caution The Polkadot-JS UI cannot handle complicated proxy setups
+:::info
 
-The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig -> an anonymous
-proxy which is part of another multisig). These complex setups must be done using the
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use
+time-delayed proxies. The video goes through the example below.
 
-These complex proxy setups should only be performed if you are comfortable enough interacting
-directly with the chain, as you will be unable to sign extrinsics using the UI.
+:::
+
+Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
+fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
+Charly submits an extrinsic to change the controller to Bob, such extrinsic can be rejected by
+Eleanor. Bob can be even more malicious than Charly and change the reward destination to another
+account he only controls. Remember that Eleanor added Charly as proxy, but she might not want to add
+Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
+can spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
+account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
+check the hashes for the calls made by the proxy accounts and the block height at which they are
+enabled for execution.
+
+![time-delayed proxies](../assets/time-delayed-proxies.png)
+
+:::info
+
+If you try to use `proxy.proxyAnnounced` to execute the call within the time-delay window you will
+get an error "Proxy unannounced" since the announcement will be done after the time delay. Also note
+that regular `proxy.proxy`calls do not work with time-delayed proxies, you need to announce the call
+first and then execute the announced call on a separate transaction.
 
 :::
 
@@ -287,9 +322,10 @@ change the name of _anonymous_ proxy. People suggested _keyless accounts_ since 
 private key and are proxied accounts. However, multisig accounts are also keyless (but
 deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as
 proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that
-has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of 
-pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or 
-the discussion on [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
+has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of
+pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or
+the discussion on
+[Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
 
 :::
 

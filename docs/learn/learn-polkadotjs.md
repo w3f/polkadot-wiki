@@ -10,7 +10,8 @@ slug: ../learn-polkadotjs
 <!-- This page is a WIP -->
 <!-- The first version of this page takes motivation from Emre's ELI5 on Polkadot-JS -->
 
-Polkadot-JS is a collection of tools that interfaces with the Polkadot blockchain in a granular way.
+Polkadot-JS is a collection of tools that interfaces with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain in a granular way.
 
 ## Primary Implementation
 
@@ -49,7 +50,8 @@ part of the list, and automatically blocks the account address.
 
 ### [Polkadot-JS API](https://github.com/polkadot-js/api)
 
-A JavaScript API allowing for programs to interface with the functionality of Polkadot.
+A JavaScript API allowing for programs to interface with the functionality of
+{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}
 
 ## Polkadot-JS Apps
 
@@ -100,14 +102,15 @@ based on the chain.
 
 #### Querying on-chain data
 
-To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a Polkadot
-node and uses JavaScript to return information that the UI will display on the screen. You can
-choose which node to connect to by changing it in the upper-left-hand corner of the screen.
+To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node and uses JavaScript to return
+information that the UI will display on the screen. You can choose which node to connect to by
+changing it in the upper-left-hand corner of the screen.
 
-Let's see how we can query on-chain data with Polkadot JS Apps on Polkadot network with an example.
-To find out the current value for existential deposit, navigate to Developer > Chain state >
-Constants and query the balances pallet for existential deposit as shown in the snapshot below. You
-need to click on the plus button to execute the query. The value displayed is in
+Let's see how we can query on-chain data with Polkadot-JS UI on the Polkadot network with an
+example. To find out the current value for existential deposit, navigate to Developer > Chain
+state > Constants and query the balances pallet for existential deposit as shown in the snapshot
+below. You need to click on the plus button to execute the query. The value displayed is in
 [plancks](learn-DOT#polkadot)
 
 ![query chain state](../assets/chain-state-constant.png)
