@@ -23,7 +23,7 @@ module.exports = {
       defer: true,
     },
     {
-      src: "https://apisa.web3.foundation/latest.js",
+      src: "https://apisa.polkadot.network/latest.js",
       async: true,
       defer: true,
     },
