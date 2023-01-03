@@ -24,7 +24,7 @@ module.exports = {
       defer: true,
     },
 	{
-      src: "https://apisa.web3.foundation/latest.js",
+      src: "https://apisa.kusama.network/latest.js",
       async: true,
       defer: true,
     },
