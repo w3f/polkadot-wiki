@@ -113,6 +113,41 @@ stay fully aligned with the Relay Chain. Upgrades to
 "root origin", i.e. a referendum. Some of the other logic (like privileged asset functionality) will
 defer to the Relay Chain's Council.
 
+### Collectives
+
+Collectives are also categorized under common good chains. You may already be familiar with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+[Council](./learn-governance.md#council) and
+[Technical Committee](./learn-governance.md#technical-committee) collectives, both of which will be
+retired with the introduction of [OpenGov](./learn-opengov.md). The ability to organize and act as a
+group (without needing to trust third parties like lawyers and jurisdictional courts) remains an
+important element of Web3. OpenGov introduces a new collective called the
+[Fellowship](./learn-opengov.md#fellowship) to help aid in addressing this need.
+
+Another collective in development is the Polkadot Alliance. Several community teams banded together
+about two years ago and came up with the idea for the Alliance, primarily to fight misuse of the
+Polkadot brand and unattributed code. This collectives parachain will connect only to Polkadot and
+there are no plans for a Kusama counterpart. In fact, for some collectives, like the Alliance, the
+Kusama network could actually join the collective as a member. That is, networks themselves can act
+as collectives and express their legislative voices as single opinions within other networks. This
+is achieved with the assitance from a [bridge hub](#bridges).
+
+### Bridge Hub
+
+Bridges are a complex subject with many technical requirements. Before Polkadot and Kusama supported
+their first parachains, the only way to design a bridge was to put the logic onto the Relay Chain
+itself. Since both networks support parachains, it now makes sense to have a parachain on each
+network dedicated to bridges. Because of the execution isolation provided by parachains, the
+activity on a parachain does not affect the Relay Chain or other parachains. So, a bridge hub can
+support bridges to many other consensus systems.
+
+In practice, a bridge between Polkadot and Kusama will allow collectives like the Alliance and
+Fellowship to serve both networks, and even allow for Kusama to act as a unified voice and
+participant within those collectives or the Polkadot network as a whole.
+
+For additional information regarding bridges and projects related to bridging, see the
+[bridges page](learn-bridges.md).
+
 ### Encointer
 
 Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With
@@ -152,7 +187,3 @@ To learn more about Encointer, check out the official
 [Encointer book](https://book.encointer.org/introduction.html).
 
 :::
-
-### Bridges
-
-See the [Bridges page](learn-bridges.md) for information on the latest bridge projects.

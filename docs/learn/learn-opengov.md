@@ -357,7 +357,7 @@ In Governance v2, a new successor committee was introduced, known as the "Polkad
 replace the Technical Committee. It will serve both the Polkadot and Kusama networks. See additional
 details below.
 
-## Polkadot Fellowship
+## Fellowship
 
 The Fellowship is a mostly self-governing expert body with a primary goal of representing humans who
 embody and contain the technical knowledge base of the Kusama and/or Polkadot networks and
