@@ -125,12 +125,12 @@ important element of Web3. OpenGov introduces a new collective called the
 [Fellowship](./learn-opengov.md#fellowship) to help aid in addressing this need.
 
 Another collective in development is the Polkadot Alliance. Several community teams banded together
-about two years ago and came up with the idea for the Alliance, primarily to fight misuse of the
-Polkadot brand and unattributed code. This collectives parachain will connect only to Polkadot and
-there are no plans for a Kusama counterpart. In fact, for some collectives, like the Alliance, the
-Kusama network could actually join the collective as a member. That is, networks themselves can act
-as collectives and express their legislative voices as single opinions within other networks. This
-is achieved with the assitance from a [bridge hub](#bridges).
+and came up with the idea for the Alliance, primarily to fight misuse of the Polkadot brand and
+unattributed code. This collectives parachain will connect only to Polkadot and there are no plans
+for a Kusama counterpart. In fact, for some collectives, like the Alliance, the Kusama network could
+actually join the collective as a member. That is, networks themselves can act as collectives and
+express their legislative voices as single opinions within other networks. This is achieved with the
+assistance from a [bridge hub](#bridges).
 
 ### Bridge Hub
 
