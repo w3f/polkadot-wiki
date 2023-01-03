@@ -129,7 +129,7 @@ module.exports = {
               items: [
                 "learn/learn-parachains",
                 'learn/learn-availability',
-                "learn/learn-common-goods",
+                "learn/learn-system-chains",
                 "learn/learn-auction",
                 "learn/learn-crowdloans",
                 "learn/learn-parachains-faq",

@@ -205,7 +205,7 @@ expire; it would only be removed via governance.
 
 See the
 [Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
-and the [common good parachains](learn-common-good-chains.md) page for more information.
+and the [system parachains](learn-system-chains.md) page for more information.
 
 ## Parachains' Use Cases
 

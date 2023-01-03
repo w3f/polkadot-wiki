@@ -1,10 +1,10 @@
 ---
-id: learn-common-goods
+id: learn-system-chains
 title: Common Good Parachains
 sidebar_label: Common Good Parachains
 description: Learn about Common Good Parachains and ones currently on the network.
 keywords: [common good, parachains, system level, public utility]
-slug: ../learn-common-goods
+slug: ../learn-system-chains
 ---
 
 ## Overview
