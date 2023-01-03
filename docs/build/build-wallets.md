@@ -32,6 +32,7 @@ contact the developers of that wallet.
 | [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) or [Polkadot-JS Extension](https://github.com/polkadot-js/extension)            |
 | [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux                                                                                                                                                 |
 | [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts)           | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)                                                                |
+| [Enkrypt](https://www.enkrypt.com/)                      | Live              | MyEtherWallet    | Browser based, client-side wallet            |
 | [Ledger](https://github.com/Zondax/ledger-polkadot)                 | Live              | Zondax    | Hardware wallet app used with [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (and [Polkadot-JS Extension](https://github.com/polkadot-js/extension)) |
 
 ### Treasury Funded Wallets
@@ -82,6 +83,7 @@ towards power users.
 | [Parity Signer](https://www.parity.io/signer/)                       | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) or [Polkadot-JS Extension](https://github.com/polkadot-js/extension)    |
 | [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   |
 | [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)            |
+| [Enkrypt](https://www.enkrypt.com/)                      | Live              | MyEtherWallet    | Browser based, client-side wallet            |
 | [Ledger](https://github.com/Zondax/ledger-polkadot)         | Live              | Zondax    | Hardware wallet app used with [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (and [Polkadot-JS Extension](https://github.com/polkadot-js/extension))            |
 
 ## Encryption Enhancement
