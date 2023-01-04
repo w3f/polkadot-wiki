@@ -109,8 +109,8 @@ module.exports = {
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/learn-system-chains.md',
-            from: ['/docs/learn-common-good-chains.md']
+            to: '/docs/learn-system-chains',
+            from: ['/docs/learn-common-good-chains']
           }
         ],
         createRedirects: function (existingPath) {
