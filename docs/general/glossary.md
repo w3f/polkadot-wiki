@@ -131,6 +131,13 @@ and upward messages.
 A node that maintains a parachain by collecting parachain transactions and producing state
 transition proofs for the validators.
 
+## Collectives
+
+The Polkadot Collectives parachain was added in
+[Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
+there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
+Polkadot network, such as the [Fellowship](#fellowship) and [Polkadot Alliance]().
+
 ## Commission
 
 Validators and nominators get paid from block production on the network, where validators can set a
@@ -215,6 +222,15 @@ including the parameters required for that function to be executed. These state 
 from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms,
 "[inherents](#inherent)" and "[transactions](#transaction)". For more technical details see the
 [polkadot spec](https://spec.polkadot.network/#_extrinsics)
+
+## Fellowship
+
+A mostly self-governing expert body with a primary goal of representing humans who embody and
+contain the technical knowledge base of the Kusama and/or Polkadot networks and protocols. This is
+accomplished by associating a rank with members to categorize the degree to which the system expects
+their opinion to be well-informed, of a sound technical basis and in line with the interests of
+Polkadot and Kusama. Members can vote on any given Fellowship proposal and the aggregate opinion of
+the members (weighted by their rank) constitutes the Fellowship's considered opinion.
 
 ## Finality
 
@@ -401,6 +417,18 @@ This is a message that is broadcast by a validator to verify to the network that
 online, even if they haven't published a block this epoch. This is sometimes referred to as
 "ImOnline".
 
+## OpenGov
+
+Previously known as governance v2 during early development, OpenGov serves as the currently
+governance protocol for Kusama and eventually Polkadot. The primary goal of this mechanism is to
+ensure that the majority of the stake can always command the network and is built to evolve
+gracefully overtime at the ultimate behest of its assembled stakeholders. OpenGov is designed to
+make the repercussions of referenda better scoped and agile in order to dramatically increase the
+number of collective decisions the system is able to make. Anyone is able to start a referendum at
+anytime and they can do so as many times as they wish. OpenGov includes a Fellowship that replaces
+the Technical Committee from the original governance model, to help aid in technical decision making
+in a democratic manner.
+
 ## Origin
 
 The initiator of an extrinsic. A simple origin would be the account that is sending a token to
@@ -460,6 +488,14 @@ Store.
 
 A heterogeneous, multi-chain network allowing various blockchains of different characteristics to
 perform arbitrary, cross-chain communication under shared security.
+
+## Polkadot Alliance
+
+Seven of Polkadot’s leading projects have joined forces to establish standards and ethics for
+open-source development in [referendum #94](https://polkadot.polkassembly.io/referendum/94). The
+Polkadot Alliance was founded by Acala, Astar, Interlay, Kilt, Moonbeam, Phala, and Subscan, seven
+of the top projects occupying Polkadot’s parachain slots. The on-chain collective aims to support
+development standards and expose bad actors within the ecosystems of Polkadot.
 
 ## Host
 
@@ -667,6 +703,13 @@ Networks are often executed on a testnet before they are deployed to a [mainnet]
 
 The process of replacing sensitive data with non-sensitive data.
 
+## Tracks
+
+Each [Origin](#origin) is associated with a single referendum class and each class is associated
+with a Track. The Track outlines the lifecycle for the proposal and is independent from other
+class's tracks. Having independent tracks allows the network to tailor the dynamics of referenda
+based upon their implied privilege level.
+
 ## Tranche
 
 Validators use a subjective, tick-based system to determine when the approval process should start.
@@ -753,3 +796,9 @@ execution. Checkout this section of the Substrate docs covering
 ## Witness
 
 Cryptographic proof statements of data validity.
+
+## Whitelist Pallet
+
+Allows one [Origin ](#origin) to escalate the privilege level of another Origin for a certain
+operation. In terms of OpenGov, it allows the [Fellowship](#fellowship) to authorise a new origin
+(which we will call Whitelisted-Root) to be executed with Root-level privileges.

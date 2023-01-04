@@ -4,7 +4,7 @@ title: OpenGov
 sidebar_label: OpenGov
 description: Learn about Polkadot’s next generation of decentralised governance.
 keywords: [governance, referenda, proposal, voting, endorse]
-slug: ../learn-gov2
+slug: ../learn-opengov
 ---
 
 import RPC from "./../../components/RPC-Connection";
@@ -38,7 +38,8 @@ systems and protocols must evolve as they mature to improve upon their shortcomi
 modern advancements. For example, in Governance v1 all referenda carry the same weight as only one
 referenda can be voted on at a time and the voting period can last multiple weeks. This results in
 the system favoring careful consideration of very few proposals, as opposed to broad consideration
-of many. With that being said, OpenGov (also referred to as Governance v2) is here!
+of many. With that being said, OpenGov (previously referred to as Governance v2 while in
+development) is here!
 
 OpenGov changes how the practical means of day-to-day decisions are made, making the repercussions
 of referenda better scoped and agile in order to dramatically increase the number of collective
@@ -52,9 +53,9 @@ The following content will begin by walking through many of the core principles 
 understand the roots of governance v1 to better understand the direction of the second iteration.
 These deltas and distinctions will be highlighted throughout the various sub-topics.
 
-This being said, it is important to remember that governance is a constantly evolving protocol at
-this stage in its lifecycle. As updates for Governance v2 are making their way to the networks,
-plans for Governance v2.5 are already in development.
+This being said, it is also important to remember that governance is a constantly evolving protocol
+at this stage in its lifecycle. As updates for OpenGov are making their way to the networks, plans
+for future updates are already in development.
 
 ## Premise
 
@@ -74,7 +75,7 @@ conviction , make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
 
-There are several changes here with Governance v2. The way the new governance model reflects its
+There are several changes here with OpenGov. The way the new governance model reflects its
 decentralised character is by:
 
 1. Migrating all responsibilities of Council to token holders via democracy votes
@@ -211,16 +212,16 @@ emergency referendum occurring at the same time as a regular referendum (either 
 council-proposed) is the only time that multiple referenda will be able to be voted on
 simultaneously.
 
-Governance v2 shares the same
+OpenGov shares the same
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 day eligibility period when the proposal can get approved. If not approved by then end of this
 period, the proposal is automatically rejected.
 
-#### Voting on a referendum (governance v2)
+#### Voting on a referendum (OpenGov)
 
-In Governance v2, a proposal is approved if it meets the requirements for **approval** and
-**support**, removing the adaptive quorum biasing system.
+In OpenGov, a proposal is approved if it meets the requirements for **approval** and **support**,
+removing the adaptive quorum biasing system.
 
 **Approval** is defined as the share of approval vote-weight (after adjustment for conviction)
 against the total vote-weight (for both approval and rejection).
@@ -280,8 +281,7 @@ impacted by the locking period of the tokens.
 
 #### Adaptive Quorum Biasing
 
-Adaptive quorum biasing is longer used in Governance v2 and is replaced by the Approval/Support
-system.
+Adaptive quorum biasing is longer used in OpenGov and is replaced by the Approval/Support system.
 
 ## Council
 
@@ -301,13 +301,13 @@ three tasks of governance:
 2. Cancelling dangerous or malicious referenda
 3. Electing the Technical Committee
 
-In Governance v2, an alternate strategy was required to replace the Council in its previous duties
-as a body delegated by voters to compensate for the fact that many choose to not take part in
-day-to-day of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter
-can choose to delegate their voting power to another voter in the system. It does so by improving a
-feature known as **Multirole Delegation**, where voters can specify a different delegate for every
-class of referendum in the system. So for example, a voter could delegate one entity for managing a
-less potent referenda class, choose a different delegate for a different class with more powerful
+In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
+body delegated by voters to compensate for the fact that many choose to not take part in day-to-day
+of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can choose to
+delegate their voting power to another voter in the system. It does so by improving a feature known
+as **Multirole Delegation**, where voters can specify a different delegate for every class of
+referendum in the system. So for example, a voter could delegate one entity for managing a less
+potent referenda class, choose a different delegate for a different class with more powerful
 consequences and still retain full voting power over any remaining classes.
 
 ### Canceling Referenda
@@ -323,10 +323,10 @@ the runtime that the proposal would institute.
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
 
-In Governance v2, there is a special operation called **Cancelation** for intervening with a
-proposal that is already being voted on. The operation will immediately reject an ongoing referendum
-regardless of its status. There is also a provision to ensure the deposit of the proposer is
-slashed, if the proposal is malicious or spam.
+In OpenGov, there is a special operation called **Cancelation** for intervening with a proposal that
+is already being voted on. The operation will immediately reject an ongoing referendum regardless of
+its status. There is also a provision to ensure the deposit of the proposer is slashed, if the
+proposal is malicious or spam.
 
 Cancelation itself is a governance operation which must be voted upon by the network in order to be
 executed. Cancelation comes with its own Origin and Track which has a low lead-time and
@@ -353,11 +353,11 @@ Fast-tracked referenda are the only type of referenda that can be active alongsi
 referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
 
-In Governance v2, a new successor committee was introduced, known as the "Polkadot Fellowship", to
-replace the Technical Committee. It will serve both the Polkadot and Kusama networks. See additional
-details below.
+In OpenGov, a new successor committee was introduced, known as the "Polkadot Fellowship", to replace
+the Technical Committee. It will serve both the Polkadot and Kusama networks. See additional details
+below.
 
-## Polkadot Fellowship
+## Fellowship
 
 The Fellowship is a mostly self-governing expert body with a primary goal of representing humans who
 embody and contain the technical knowledge base of the Kusama and/or Polkadot networks and
