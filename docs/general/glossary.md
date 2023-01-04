@@ -140,8 +140,8 @@ remaining rewards set out for the nominators that are backing that validator.
 
 ## Common Good (Parachain)
 
-A parachain which does not win a parachain slot due to winning a slot auction, but is allowed on due
-to providing a common good service for the network.
+See [System Parachains](#system-parachains), which is generally preferred over the term "common
+good".
 
 ## Community Queue
 
@@ -633,14 +633,19 @@ describe how tokens can be transferred from one account to another.
 
 ## Statemint
 
-A common good parachain is used for asset management. The Kusama version is called Statemine; the
-Westend version is called Westmint.
+A system parachain used for asset management. The Kusama version is called Statemine; the Westend
+version is called Westmint.
 
 ## Substrate
 
 A modular framework for building blockchains.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using Substrate. Chains
 built with Substrate will be easy to connect as parachains.
+
+## System Parachains
+
+Parachains that are part of the Polkadot core protocol. These are allocated a parachain execution
+core by governance rather than auction.
 
 ## Tabling
 

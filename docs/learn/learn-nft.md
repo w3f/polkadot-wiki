@@ -208,7 +208,7 @@ optimizing storage and interactions for rich NFTs.
 ### Uniques
 
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
-deployed on the Statemint common good parachain. It implements the most basic kind of NFT - a data
+deployed on the Statemint system parachain. It implements the most basic kind of NFT -- a data
 record referencing some metadata. This metadata reference is mutable until frozen, so NFTs and their
 classes (entities derived from) are mutable unless specifically made immutable by the issuer.
 

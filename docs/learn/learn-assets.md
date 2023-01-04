@@ -27,11 +27,11 @@ thought of as the "home base" of assets in the network.
 {{ polkadot: Statemint uses DOT :polkadot }}{{ kusama: Statemine uses KSM :kusama }} as its native
 token. The chain yields its governance to its parent Relay Chain, and has no inflation or era-based
 rewards for collators (although collators do receive a portion of transaction fees). As a
-[common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} as a trusted relationship with
+[system parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} has a trusted relationship with
 the Relay Chain, and as such, can teleport {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 between itself and the Relay Chain. That is,
-{{ polkadot: DOT on Statemint :polkadot }}{{ kusama: KSM on Statemine :kusama }} just as good as
+{{ polkadot: DOT on Statemint :polkadot }}{{ kusama: KSM on Statemine :kusama }} is just as good as
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Relay Chain.
 
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart contracts.
