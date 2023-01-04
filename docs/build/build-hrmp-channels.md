@@ -31,8 +31,8 @@ the Relay Chain.
 ## Opening HRMP Channels with System Parachains
 
 Opening an HRMP channel with a system parachain requires a referendum. Like all other governance
-proposals, proposers should follow best practices like opening a discussion on Polkassembly or
-Subsquare and then submitting the proposal on-chain.
+proposals, proposers should follow best practices like opening a discussion on [Polkassembly](https://polkadot.polkassembly.io/) or
+[Subsquare](https://polkadot.subsquare.io/) and then submitting the proposal on-chain.
 
 Proposals should generally be a `batch_all` call containing:
 

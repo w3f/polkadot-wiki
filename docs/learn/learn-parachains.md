@@ -176,7 +176,8 @@ several ways to allocate them:
 ["System" parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
 [governance](learn-governance.md) system, and are deemed as part of the network's protocol, such as
-bridges to other networks or chains. These typically do not have an economic model and help remove\
+bridges to other networks or chains. These typically do not have an economic model and help remove 
+
 transactions from the Relay Chain, allowing for more efficient parachain processing.
 
 [Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
