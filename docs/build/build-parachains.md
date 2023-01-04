@@ -434,7 +434,7 @@ For more information on how parathread per-block auctions work, see the more det
 ## Resources
 
 - [Parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/)
-- [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+- [System (Common Good) Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
 - [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)

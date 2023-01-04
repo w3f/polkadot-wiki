@@ -134,12 +134,12 @@ and it will prompt your ledger for confirmation when you initiate a transaction.
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
 will show up in Statemint and Statemine respectively, even if they're not set to be used on all
-chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama
-respectively, use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes
-sense to also be available on their respective common good parachains. What this means is that if
-you already have a Kusama Ledger account configured on the extension, that account will also be
-available on Statemine. But the opposite is not the case: an account created specifically on
-Statemine or Statemint won't show up on Kusama or Polkadot respectively.
+chains. Statemint and Statemine, which are system parachains on Polkadot and Kusama respectively,
+are part of the core protocols and use DOT/KSM as their native tokens. Hence, accounts on a Relay
+Chain are also available on each Relay's system chains. What this means is that if you already have
+a Kusama Ledger account configured on the extension, that account will also be available on
+Statemine. But the opposite is not the case: an account created specifically on Statemine or
+Statemint won't show up on Kusama or Polkadot respectively.
 
 **However**, as mentioned above, the
 [Polkadot extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)

@@ -169,16 +169,15 @@ maintain the stronger property of single block composability.
 parachains, currently estimated to be about 100. As the number of slots is limited, there are
 several ways to allocate them:
 
-- Governance granted parachains, or "common good" parachains
+- Governance granted parachains, or "system parachains"
 - Auction granted parachains
 - Parathreads
 
-["Common Good" parachains](#common-good-parachains) are allocated by
+["System" parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
-[governance](learn-governance.md) system, and are deemed as a "common good" for the network, such as
-bridges to other networks or chains. They are usually considered system-level chains or public
-utility chains. These typically do not have an economic model and help remove transactions from the
-Relay Chain, allowing for more efficient parachain processing.
+[governance](learn-governance.md) system, and are deemed as part of the network's protocol, such as
+bridges to other networks or chains. These typically do not have an economic model and help remove\
+transactions from the Relay Chain, allowing for more efficient parachain processing.
 
 [Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
 teams can either bid with their own {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens,
@@ -194,17 +193,13 @@ Reserved balances are non-transferrable and cannot be used for staking. At the e
 tokens are unreserved. Parachains that have not secured a new lease to extend their slot will
 automatically become parathreads.
 
-## Common Good Parachains
+## System Parachains
 
-"Common Good" parachains are parachain slots reserved for functionality that benefits the ecosystem
-as a whole. By allocating a subset of parachain slots to common good chains, the entire network can
-realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider
-problem. They are not allocated via the parachain auction process but by the on-chain
-[governance](learn-governance.md) system. Generally, a common good parachain's lease would not
-expire; it would only be removed via governance.
+System parachains are parachains that use execution cores allocated by the network's governance. These chains remove transactions from the Relay Chain, allowing network validators to allocate their resources to validating parachains. System chains are Polkadot using its own scaling technology to host itself.
 
 See the
-[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
+this [Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866),
 and the [system parachains](learn-system-chains.md) page for more information.
 
 ## Parachains' Use Cases

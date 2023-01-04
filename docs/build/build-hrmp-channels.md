@@ -14,7 +14,7 @@ HRMP is planned to be deprecated and phased out in favor of it.
 
 ## Opening HRMP channel: parachain to parachain
 
-To open a channel from one parachain to another that are not common good chains on Polkadot, the
+To open a channel from one parachain to another that are not system chains on Polkadot, the
 governance of each parachain needs to declare its intent to open a channel on the Relay Chain, and
 the second chain needs to accept and do the same.
 
@@ -28,23 +28,22 @@ In order to do this, the calls to be dispatched from both chains are:
 Each parachain is to use its own governance process to execute this. The call will be executed on
 the Relay Chain.
 
-## Opening HRMP channel to Statemint
+## Opening HRMP Channels with System Parachains
 
-In order to provide complete contextual information and transparency to the community, which is the
-ultimate decision maker of the proposals, we encourage following the process implemented on Kusama.
+Opening an HRMP channel with a system parachain requires a referendum. Like all other governance
+proposals, proposers should follow best practices like opening a discussion on Polkassembly or
+Subsquare and then submitting the proposal on-chain.
 
-In general, a governance proposal process includes 4 steps:
+Proposals should generally be a `batch_all` call containing:
 
-1. Publication on [Polkassembly](https://polkadot.polkassembly.io/discussions) for discussion and
-   feedback;
-2. Preimage submission on democracy tab (Polkadot JS Apps);
-3. Submission of the proposal as an external motion to Council;
-4. Vote by the community in Democracy module.
+1. A `force_transfer` of the channel deposit from the Treasury to the System parachain's sovereign account. Remember that a bi-direction channel is _two_ channels so will need double the amount.
+1. A `force_open_hrmp_channel` from your chain to the system chain.
+1. A `force_open_hrmp_channel` from the system chain to your chain.
 
 :::caution
 
-Please note your parachain must make a channel request with Statemint before this proposal enacts,
-in order for the proposal to be enacted successfully.
+Please ensure that you use the new `force_open_hrmp_channel` directly on the Relay Chain, rather
+than the old two-phase channel request/accept method.
 
 :::
 
