@@ -415,15 +415,8 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 
 ## OpenGov
 
-Previously known as governance v2 during early development, OpenGov serves as the currently
-governance protocol for Kusama and eventually Polkadot. The primary goal of this mechanism is to
-ensure that the majority of the stake can always command the network and is built to evolve
-gracefully overtime at the ultimate behest of its assembled stakeholders. OpenGov is designed to
-make the repercussions of referenda better scoped and agile in order to dramatically increase the
-number of collective decisions the system is able to make. Anyone is able to start a referendum at
-anytime and they can do so as many times as they wish. OpenGov includes a Fellowship that replaces
-the Technical Committee from the original governance model, to help aid in technical decision making
-in a democratic manner.
+Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov) serves as the current
+governance protocol for Kusama and will eventually be deployed on Polkadot. 
 
 ## Origin
 
