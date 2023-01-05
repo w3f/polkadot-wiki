@@ -694,7 +694,7 @@ The process of replacing sensitive data with non-sensitive data.
 ## Tracks
 
 Each [Origin](#origin) is associated with a single referendum class and each class is associated
-with a Track. The Track outlines the lifecycle for the proposal and is independent from other
+with a [Track](../maintain/maintain-guides-opengov#origins-and-tracks). The Track outlines the lifecycle for the proposal and is independent from other
 class's tracks. Having independent tracks allows the network to tailor the dynamics of referenda
 based upon their implied privilege level.
 
