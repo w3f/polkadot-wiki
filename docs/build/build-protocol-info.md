@@ -302,6 +302,16 @@ Although upgrading your nodes is generally not necessary to follow an upgrade, w
 following the Polkadot releases and upgrading in a timely manner, especially for high priority or
 critical releases.
 
+### Transaction Version Upgrades
+Apart the `runtime_version` there is also the `transaction_version` which denotes how to correctly encode/decode calls for a given runtime (useful for hardware wallets). The reason `transaction_version` is separate from `runtime_version` is that it explicitly notes that the call interface is broken/not compatible. Hence, a signed transaction blob will be rejected by an incompatible runtime, rather than being misinterpreted.
+
+The `transaction_version` is updated in the cases mentioned in the [Substrate docs](https://paritytech.github.io/substrate/master/sp_version/struct.RuntimeVersion.html#structfield.transaction_version).
+
+So when a new transaction version is introduced (during a runtime upgrade), this results in a breaking change.
+In that case, any custom application/tool that constructs & signs transactions should also be updated in order to be compatible with the new transaction version.
+It is the responsibility of the maintainers of the custom application/tool to keep up with the `transaction_version` updates.
+However, if you do not want to keep monitoring these changes yourself, you can also use the [txwrapper-core](https://github.com/paritytech/txwrapper-core) tool that handles these breaking changes for you and allows you to construct transactions using the function names and chain metadata.
+
 ## Smart Contracts
 
 The Polkadot Relay Chain does not support smart contracts.
