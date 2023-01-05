@@ -487,10 +487,9 @@ perform arbitrary, cross-chain communication under shared security.
 
 ## Polkadot Alliance
 
-Seven of Polkadot’s leading projects have joined forces to establish standards and ethics for
-open-source development in [referendum #94](https://polkadot.polkassembly.io/referendum/94). The
-Polkadot Alliance was founded by Acala, Astar, Interlay, Kilt, Moonbeam, Phala, and Subscan, seven
-of the top projects occupying Polkadot’s parachain slots. The on-chain collective aims to support
+The
+Polkadot Alliance is an [on-chain collective](#collectives) founded by Acala, Astar, Interlay, Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for
+open-source development in [referendum #94](https://polkadot.polkassembly.io/referendum/94). It aims to support
 development standards and expose bad actors within the ecosystems of Polkadot.
 
 ## Host
