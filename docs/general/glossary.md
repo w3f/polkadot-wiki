@@ -226,11 +226,7 @@ from the outside world, i.e. they are not part of the system itself. Extrinsics 
 ## Fellowship
 
 A mostly self-governing expert body with a primary goal of representing humans who embody and
-contain the technical knowledge base of the Kusama and/or Polkadot networks and protocols. This is
-accomplished by associating a rank with members to categorize the degree to which the system expects
-their opinion to be well-informed, of a sound technical basis and in line with the interests of
-Polkadot and Kusama. Members can vote on any given Fellowship proposal and the aggregate opinion of
-the members (weighted by their rank) constitutes the Fellowship's considered opinion.
+contain the technical knowledge base of the Kusama and/or Polkadot networks and protocols.
 
 ## Finality
 
