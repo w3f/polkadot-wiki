@@ -70,7 +70,7 @@ All changes to the protocol must be agreed upon by stake-weighted referenda.
 In Governance v1, active token holders and the council together administrate a network upgrade
 decision. No matter whether the proposal is proposed by the public (token holders) or the council,
 it will eventually have to go through a referendum to let all holders, weighted by stake and
-conviction , make the decision.
+conviction, make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
 
@@ -118,7 +118,7 @@ days. Proposals submitted as part of the enactment of a prior referendum can set
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
 
-In OpenGov, anyone is able to start a referendum at anytime and they can do so as many times as they
+In OpenGov, anyone is able to start a referendum at any time and they can do so as many times as they
 wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the flow
 and processing of the referenda protocol.
 
@@ -202,7 +202,7 @@ days, a new referendum will be up for a vote, assuming there is at least one pro
 queues. There is a queue for Council-approved proposals and a queue for publicly submitted
 proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
 
-The "top" proposal is determined by the amount of stake bonded behind it. If the the current queue
+The "top" proposal is determined by the amount of stake bonded behind it. If the current queue
 selection attempts to create a referendum with no proposals (it is empty) and proposals are waiting
 in the other queue, the top proposal in the other queue will become a referendum.
 
@@ -240,14 +240,14 @@ In OpenGov, proposals that are not approved after
 {{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 days are considered rejected by default and the Decision Deposit is refunded. If the proposal
 manages to stay passing until the end of the Confirmation Period, it is considered approved and is
-scheduled to execute from the proposed origin but after the Enactment Period . The Enactment Period
+scheduled to execute from the proposed origin but after the Enactment Period. The Enactment Period
 is specified when the referendum is proposed but is also subject to a minimum value based on the
 Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time
 to prepare for any changes the proposal may bring.
 
 #### Voluntary Locking
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an concept called
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes a concept called
 `Voluntary Locking` which allows token holders to increase their voting power by declaring how long
 they are willing to lock up their tokens, hence, the number of votes for each token holder will be
 calculated using the following formula:
@@ -384,7 +384,7 @@ To prevent a small group of participants from gaining effective control over the
 system will adhere to three main principles:
 
 1. The Fellowship must never have hard power over the network: it cannot change the parameters,
-   conduct rescues or move assets. Their only power in governance resides in the the ability to
+   conduct rescues or move assets. Their only power in governance resides in the ability to
    reduce the effective timeline on which a referendum takes place.
 2. The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight
    should not be so high as to make a small number of higher members’ opinions be insurmountable
