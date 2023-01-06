@@ -7,8 +7,9 @@ keywords: [auction, slot auctions, parachain, bidding]
 slug: ../learn-auction
 ---
 
-import RPC from "./../../components/RPC-Connection"; import AuctionSchedule from
-"./../../components/Auction-Schedule";
+import RPC from "./../../components/RPC-Connection";
+
+import AuctionSchedule from "./../../components/Auction-Schedule";
 
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
@@ -187,7 +188,10 @@ maintain a slot to remain a parachain.
 
 Parachains or parachain teams, bid in the auction by specifying the slot range that they want to
 lease and the number of tokens they are willing to reserve. Bidders can be either ordinary accounts,
-or use the [crowdloan functionality](learn-crowdloans.md) to source tokens from the community.
+or use the [crowdloan functionality](learn-crowdloans.md) to source tokens from the community. For a
+more indepth comparison between both of these options for gaining a parachain slot check out this
+section on
+[Crowdloan Campaigns vs Parachain Auctions](./learn-crowdloans.md#crowdloan-campaigns-vs-parachain-auctions).
 
 ```
 Parachain slots at genesis
