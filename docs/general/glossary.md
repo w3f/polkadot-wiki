@@ -136,7 +136,7 @@ transition proofs for the validators.
 The Polkadot Collectives parachain was added in
 [Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
 there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
-Polkadot network, such as the [Fellowship](#fellowship) and [Polkadot Alliance]().
+Polkadot network, such as the [Fellowship](#fellowship) and [Polkadot Alliance](#polkadot-alliance).
 
 ## Commission
 
@@ -415,8 +415,8 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 
 ## OpenGov
 
-Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov) serves as the current
-governance protocol for Kusama and will eventually be deployed on Polkadot. 
+Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov)
+serves as the current governance protocol for Kusama and will eventually be deployed on Polkadot.
 
 ## Origin
 
@@ -480,10 +480,10 @@ perform arbitrary, cross-chain communication under shared security.
 
 ## Polkadot Alliance
 
-The
-Polkadot Alliance is an [on-chain collective](#collectives) founded by Acala, Astar, Interlay, Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for
-open-source development in [referendum #94](https://polkadot.polkassembly.io/referendum/94). It aims to support
-development standards and expose bad actors within the ecosystems of Polkadot.
+The Polkadot Alliance is an [on-chain collective](#collectives) founded by Acala, Astar, Interlay,
+Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for open-source development in
+[referendum #94](https://polkadot.polkassembly.io/referendum/94). It aims to support development
+standards and expose bad actors within the ecosystems of Polkadot.
 
 ## Host
 
@@ -694,9 +694,9 @@ The process of replacing sensitive data with non-sensitive data.
 ## Tracks
 
 Each [Origin](#origin) is associated with a single referendum class and each class is associated
-with a [Track](../maintain/maintain-guides-opengov#origins-and-tracks). The Track outlines the lifecycle for the proposal and is independent from other
-class's tracks. Having independent tracks allows the network to tailor the dynamics of referenda
-based upon their implied privilege level.
+with a [Track](../maintain/maintain-guides-opengov#origins-and-tracks). The Track outlines the
+lifecycle for the proposal and is independent from other class's tracks. Having independent tracks
+allows the network to tailor the dynamics of referenda based upon their implied privilege level.
 
 ## Tranche
 
