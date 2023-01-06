@@ -58,6 +58,18 @@ To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust
 integrating with Crust by following their
 [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
 
+### Filebase
+
+[Filebase](https://filebase.com) is the first S3-compatible object storage platform that allows you to store data in a secure, redundant, and performant manner across multiple decentralized storage networks. 
+
+Filebase offers a geo-redundant IPFS pinning service that allows you to pin files to IPFS across multiple diverse geographic locations. All files uploaded to IPFS through Filebase are automatically pinned to the Filebase infrastructure with 3x replication across the globe. This ensures that your data is globally available and redundant at all times.
+
+Filebase acts as an easy on-ramp to IPFS and decentralized storage by offering a user-friendly web console dashboard, making drag-and-dropping files onto Web3 simple and easy. Filebase also provides an S3-compatible API for widespread integrations and configurations in current workflows.
+
+:::note Learn more about Filebase
+
+To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com). You can get started with Filebase by signing up [here.](https://filebase.com/signup)
+
 :::
 
 #### Using Polkadot-JS Files (IPFS) module
