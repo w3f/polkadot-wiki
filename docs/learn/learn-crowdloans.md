@@ -34,7 +34,7 @@ please see the [Rococo content](../build/build-parachains.md##testing-a-parachai
 It is important to recognize that crowdloan campaigns are seeking parachain slots via a parachain
 auction, however these auction slots can also be won without the need for a crowdloan. To reiterate,
 crowdloans require auctions but auctions do not require crowdloans. Let's take a look at a couple
-potential scenario involving each path.
+potential scenarios involving each path.
 
 Party A is working on a project that hopes to gain a parachain slot on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} but they don't have the means to
@@ -45,14 +45,17 @@ enough public appeal.
 
 On the other hand, Party B also hopes to secure a parachain slot for their project. Party B is more
 established and has access to capital to self-fund their attempt at winning a parachain auction.
-Party B is not relying on any public funding (at least via the crowdfunding mechanism) so they will
-determine how much funding they are able to allocate towards winning a slot.
+Party B is not relying on any public funding/staking (at least via the crowdfunding mechanism) so
+they will have to determine how much funding they are able to allocate towards winning a slot.
 
-Party B is in control of how much they are ultimately willing to contribute towards their goal
-gaining a parachain slot. This means even if there is little public appeal they can self-fund the
+Party B is in control of how much they are ultimately willing to contribute towards their goal of
+gaining a parachain slot. This means even if there is little public interest, they can self-fund the
 project if they have the means. In contrast, Party A may have access to very little capital but the
-project could gain mass popularity amongst the public. Party A could end up beating the deep pockets
-Party B brings to the table via a successful crowdloan.
+project could gain mass popularity amongst the public. Party A could end up overcoming the deep
+pockets of Party B via a successful crowdloan.
+
+It is publicly visible (on-chain) whether or not a party that is bidding for a parachain auction
+slot is self-funded or participating in a crowdloan.
 
 ## Starting a Crowdloan Campaign
 
