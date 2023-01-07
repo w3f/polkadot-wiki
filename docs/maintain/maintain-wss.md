@@ -16,8 +16,10 @@ connection between the end user and the RPC server. This can be achieved by sett
 proxy. Many browsers such as Google Chrome will block non secure WS endpoints if they come from a
 different origin.
 
-:::note Enabling remote access to your validator node should not be necessary and is not suggested
-as it can often lead to security problems :::
+:::note 
+Enabling remote access to your validator node should not be necessary and is not suggested
+as it can often lead to security problems 
+:::
 
 ## Set up a node
 
@@ -56,7 +58,9 @@ An archive node requires a lot more diskspace. Start of januari 2023 a pruned po
 node you need the options `--state-pruning archive --blocks-pruning archive` in your startup
 settings.
 
-:::tip Inclusion in the Polkadot.js UI requires an archive node. :::
+:::tip
+Inclusion in the Polkadot.js UI requires an archive node. 
+:::
 
 ### Secure the RPC server
 
