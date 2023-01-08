@@ -106,7 +106,7 @@ examples provided below.
 
 ### Nginx
 
-```
+```bash
 apt install nginx
 ```
 
@@ -116,17 +116,29 @@ In a SSL enabled virtualhost add:
 server {
   (...)
   location / {
-    limit_req zone=zone burst=5;
     proxy_buffers 16 4k;
     proxy_buffer_size 2k;
-    proxy_pass ws://localhost:9944;
+    proxy_pass http://localhost:9944;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection "Upgrade";
     proxy_set_header Host $host;
    }
 }
+```
 
+Optionally some form of rate limiting can be introduced: 
+
+```conf
+http {
+  limit_req_zone $binary_remote_addr zone=zone:10m rate=10r/s;
+  (...)
+}
+  
+location / {
+  limit_req zone=zone burst=5;
+  (...)
+}
 ```
 
 ### Apache2
@@ -152,6 +164,20 @@ ProxyRequests off
 
 ProxyPass / ws://localhost:9944
 ProxyPassReverse / ws://localhost:9944
+```
+
+Optionally some form of rate limiting can be introduced: 
+
+```bash
+apt install libapache2-mod-qos
+a2enmod qos
+```
+
+And edit `/etc/apache2/mods-available/qos.conf`
+
+```conf
+# allows max 50 connections from a single ip address:
+QS_SrvMaxConnPerIP                                 50
 ```
 
 ## Connecting to the Node
