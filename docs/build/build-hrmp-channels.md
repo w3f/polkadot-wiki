@@ -31,12 +31,14 @@ the Relay Chain.
 ## Opening HRMP Channels with System Parachains
 
 Opening an HRMP channel with a system parachain requires a referendum. Like all other governance
-proposals, proposers should follow best practices like opening a discussion on [Polkassembly](https://polkadot.polkassembly.io/) or
-[Subsquare](https://polkadot.subsquare.io/) and then submitting the proposal on-chain.
+proposals, proposers should follow best practices like opening a discussion on
+[Polkassembly](https://polkadot.polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/) and
+then submitting the proposal on-chain.
 
 Proposals should generally be a `batch_all` call containing:
 
-1. A `force_transfer` of the channel deposit from the Treasury to the System parachain's sovereign account. Remember that a bi-direction channel is _two_ channels so will need double the amount.
+1. A `force_transfer` of the channel deposit from the Treasury to the System parachain's sovereign
+   account. Remember that a bi-direction channel is _two_ channels so will need double the amount.
 1. A `force_open_hrmp_channel` from your chain to the system chain.
 1. A `force_open_hrmp_channel` from the system chain to your chain.
 

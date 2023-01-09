@@ -26,8 +26,8 @@ KSM. In fact, there will likely be a system parachain specifically for network g
 :::note
 
 In the past, these were often called "Common Good Parachains", so you may come across articles and
-discussions using that term. As the network has evolved, that term has been confusing in many
-cases, so "System Parachains" is preferred now. A discussion on this evolution can be found in
+discussions using that term. As the network has evolved, that term has been confusing in many cases,
+so "System Parachains" is preferred now. A discussion on this evolution can be found in
 [this forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866).
 
 :::
@@ -48,8 +48,8 @@ Statemint also supports non-fungible assets (NFTs) via the Uniques pallet, howev
 is coming in 2023 with more advanced features.
 
 This logic for asset management is not encoded in smart contracts, but rather directly in the
-runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and
-deposits are about 1/10th of their respective value on the Relay Chain.
+runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and deposits
+are about 1/10th of their respective value on the Relay Chain.
 
 See this
 [November 2022 forum thread](https://forum.polkadot.network/t/statemint-update-roadmap/1200) for
@@ -60,8 +60,8 @@ updates on Statemint's roadmap.
 Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With
 [referendum 158](https://kusama.polkassembly.io/referendum/158) Encointer was registered as the
 second system parachain on Kusama's network. The functionality of Encointer adds logic to the Relay
-Chain that aims to bring financial inclusivity to WEB3 and mitigate Sybil attacks with a novel
-Proof of Personhood (PoP) system for unique identity.
+Chain that aims to bring financial inclusivity to WEB3 and mitigate Sybil attacks with a novel Proof
+of Personhood (PoP) system for unique identity.
 
 Encointer offers a framework that, in principle, allows for any group of real people to create,
 distribute, and use their own digital community tokens.
@@ -109,6 +109,6 @@ stewardship and decentralized governance.
 
 ### Bridge Hub
 
-See the [Bridges page](learn-bridges.md) for information on the latest bridge projects. Currently,
-a Bridge Hub parachain is in development that will be a portal for trust-minimized bridges to other
+See the [Bridges page](learn-bridges.md) for information on the latest bridge projects. Currently, a
+Bridge Hub parachain is in development that will be a portal for trust-minimized bridges to other
 networks.

@@ -10,7 +10,7 @@ slug: ../maintain-guides-democracy
 :::caution The contents in this guide are subject to change
 
 OpenGov: Polkadot’s next generation of decentralized governance is now live on Kusama network. Check
-[OpenGov page](../learn/learn-opengov.md) for a detailed explanation on the upcoming changes to the 
+[OpenGov page](../learn/learn-opengov.md) for a detailed explanation on the upcoming changes to the
 Polkadot governance.
 
 :::

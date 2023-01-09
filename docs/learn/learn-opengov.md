@@ -119,9 +119,9 @@ days. Proposals submitted as part of the enactment of a prior referendum can set
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
 
-In OpenGov, anyone is able to start a referendum at any time and they can do so as many times as they
-wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the flow
-and processing of the referenda protocol.
+In OpenGov, anyone is able to start a referendum at any time and they can do so as many times as
+they wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the
+flow and processing of the referenda protocol.
 
 An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the
 referenda now selects an appropriate Origin for their request based on the requirements of the
@@ -384,8 +384,8 @@ To prevent a small group of participants from gaining effective control over the
 system will adhere to three main principles:
 
 1. The Fellowship must never have hard power over the network: it cannot change the parameters,
-   conduct rescues or move assets. Their only power in governance resides in the ability to
-   reduce the effective timeline on which a referendum takes place.
+   conduct rescues or move assets. Their only power in governance resides in the ability to reduce
+   the effective timeline on which a referendum takes place.
 2. The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight
    should not be so high as to make a small number of higher members’ opinions be insurmountable
    when compared to a coherent opinion coming from lower-ranked membership.
