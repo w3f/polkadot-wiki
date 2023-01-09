@@ -53,10 +53,9 @@ full history (database) of the network and can be queried in all kind of ways, s
 historical information regarding transfers, balance histories, and more advanced queries involving
 past events, etc.
 
-An archive node requires a lot more diskspace. Start of januari 2023 a pruned polkadot takes around
-115 GB, a polkadot archive node around 765 GB, which will inrease slowly over time. For an archive
-node you need the options `--state-pruning archive --blocks-pruning archive` in your startup
-settings.
+An archive node requires a lot more diskspace. At the start of January 2023, polkadot disk usage was at 115 GB 
+for a pruned node and 765 GB for an archive node. This value will increase with time. For an archive
+node you need the options `--state-pruning archive --blocks-pruning archive` in your startup settings.
 
 :::tip
 Inclusion in the Polkadot.js UI requires an archive node. 
@@ -131,7 +130,7 @@ Optionally some form of rate limiting can be introduced:
 
 ```conf
 http {
-  limit_req_zone $binary_remote_addr zone=zone:10m rate=10r/s;
+  limit_req_zone  "$http_x_forwarded_for" zone=zone:10m rate=2r/s;
   (...)
 }
   
