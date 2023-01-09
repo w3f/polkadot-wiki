@@ -9,9 +9,9 @@ slug: ../../learn-statemint
 import RPC from "./../../components/RPC-Connection";
 
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
-assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot
-(not to be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is
-a parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED),
+assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
+be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
+parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations on Statemint are about 1/10th of
 the values on the Relay chain. For example, the Existential Deposit of a Statemint account is
 {{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :polkadot }}
