@@ -151,7 +151,7 @@ to show support
 Note that this may be different from the absolute number of endorsements; for instance, three
 accounts bonding
 {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a single DOT each. :polkadot }}
-{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. }}
+{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. :kusama }}
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
