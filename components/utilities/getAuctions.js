@@ -131,8 +131,8 @@ async function AppendNewAuctions(chain, blocks) {
       }
 
       // Only attempt to update JSON if blocks from scheduler were not added from previous scan
-      if (addedStartBlocks.length === 0) {
-        return;
+      if (addedStartBlocks.length === 0 && chain.name === "Kusama") {
+        process.exit(0);
       }
 
       const updatedAuctions = existingAuctions.concat(addedStartBlocks);
@@ -154,5 +154,4 @@ async function AppendNewAuctions(chain, blocks) {
       });
     }
   });
-  return;
 }
