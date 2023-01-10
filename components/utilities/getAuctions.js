@@ -6,11 +6,11 @@ let API = undefined;
 
 // Search for newly scheduled Polkadot auctions
 LoadAPI(PolkadotParameters).then(() => {
-  console.log(`Searching ${PolkadotParameters.chain}'s scheduler for new auctions.`)
+  console.log(`Searching ${PolkadotParameters.name}'s scheduler for new auctions.`)
   GetNewAuctions(PolkadotParameters).then(() => {
     // Repeat the process searching for newly scheduled Kusama auctions
     LoadAPI(KusamaParameters).then(() => {
-      console.log(`Searching ${KusamaParameters.chain}'s scheduler for new auctions.`)
+      console.log(`Searching ${KusamaParameters.name}'s scheduler for new auctions.`)
       GetNewAuctions(KusamaParameters)
     });
   });
@@ -115,8 +115,11 @@ async function AppendNewAuctions(chain, blocks) {
         }
       }
       // Only attempt to update JSON if blocks from scheduler were not added from previous scan
-      if (addedStartBlocks.length === 0 && chain.name === "Kusama") {
-        process.exit(0);
+      if (addedStartBlocks.length === 0) {
+        if (chain.name === "Kusama") {
+          process.exit(0);
+        }
+        return;
       }
       const updatedAuctions = existingAuctions.concat(addedStartBlocks);
       // Write results
