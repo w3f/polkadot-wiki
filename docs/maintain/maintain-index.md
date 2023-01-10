@@ -17,8 +17,7 @@ guides to set up a node and run the network.
 - [Set up a Full Node](maintain-sync.md) - Get up and started by syncing a full node for the Kusama
   network. The steps in the guide will broadly apply also to any Substrate-based network (like
   Polkadot).
-- [Set up WSS using Nginx](maintain-wss.md) - Set up a Secure WebSockets server for your node's
-  WebSockets connection.
+- [Set up Secure WebSocket](maintain-wss.md) - Set up a Secure WebSockets proxy server to safely access your node's RPC server
 
 ## Collator
 
@@ -46,7 +45,7 @@ guides to set up a node and run the network.
   validate on the Polkadot network.
 - [Validation Guide (Kusama)](kusama/maintain-guides-how-to-validate-kusama.md) - Walkthrough on how
   to validate on the Kusama canary network.
-- [Using systemmd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
+- [Using systemd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
   with the Validator node.
 - [Secure Validator](maintain-guides-secure-validator.md) - Best tips and practices for validating.
 - [How to use Polkadot Validator Setup](maintain-guides-how-to-use-polkadot-validator-setup.md) -
