@@ -37,7 +37,8 @@ async function GetNewAuctions(chain) {
       if (values.toHuman()[0] !== null) {
         try {
           let isNewAuction = false;
-          // Polkadot (schema is currently different when compared to Kusama due to Kusama's canary nature)
+          // NOTE - this will likely need to align with Kusama's schema when OpenGov hits Polkadot
+          // Currently the Polkadot schema for identifying scheduled methods is different when compared w/ Kusama
           if (chain.name === PolkadotParameters.name) {
             isNewAuction = values.toHuman()[0].call.Value.method === "newAuction";
           } else { // Kusama
@@ -50,7 +51,7 @@ async function GetNewAuctions(chain) {
             futureStartingBlocks.push(block);
           }
         } catch (error) {
-          // Do nothing
+          // Do nothing - this scheduled item is not a newly scheduled auction
         }
       }
     });
