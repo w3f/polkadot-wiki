@@ -74,7 +74,6 @@ async function AppendNewAuctions(chain, blocks) {
       const existingAuctions = JSON.parse(data);
       let latestIndex = 0;
       let existingStartBlocks = [];
-      let addedStartBlockIndices = [];
       let addedStartBlocks = [];
       // Iterate existing auctions
       for (let i = 0; i < existingAuctions.length; i++) {
@@ -93,7 +92,6 @@ async function AppendNewAuctions(chain, blocks) {
       for (let i = 0; i < blocks.length; i++) {
         if (existingStartBlocks.includes(blocks[i]) === false) {
           latestIndex += 1;
-          addedStartBlockIndices.push(latestIndex);
           // Add it to the cache
           const newStartBlock = {
             "index": latestIndex,
