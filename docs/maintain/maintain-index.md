@@ -45,7 +45,7 @@ guides to set up a node and run the network.
   validate on the Polkadot network.
 - [Validation Guide (Kusama)](kusama/maintain-guides-how-to-validate-kusama.md) - Walkthrough on how
   to validate on the Kusama canary network.
-- [Using systemd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
+- [Using systemd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemd
   with the Validator node.
 - [Secure Validator](maintain-guides-secure-validator.md) - Best tips and practices for validating.
 - [How to use Polkadot Validator Setup](maintain-guides-how-to-use-polkadot-validator-setup.md) -
