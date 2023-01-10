@@ -17,7 +17,7 @@ Bitcoin or Ether is the native token of the Ethereum blockchain.
 The smallest unit for the account balance on Substrate based blockchains (Polkadot, Kusama, etc.) is
 Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest
 possible distance in the physical Universe). You can compare DOT's Planck to BTC's Satoshi or ETH's
-Gwei. Polkadot's native token DOT equals to 10<sup>10</sup> Planck and Kusama's native token KSM
+Wei. Polkadot's native token DOT equals to 10<sup>10</sup> Planck and Kusama's native token KSM
 equals to 10<sup>12</sup> Planck.
 
 ### Polkadot

@@ -66,6 +66,12 @@ module.exports = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+       redirects: [
+          {
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
+          }
+        ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {
             return [existingPath.replace('/docs/', '/docs/en/')];

@@ -176,7 +176,7 @@ several ways to allocate them:
 ["System" parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
 [governance](learn-governance.md) system, and are deemed as part of the network's protocol, such as
-bridges to other networks or chains. These typically do not have an economic model and help remove 
+bridges to other networks or chains. These typically do not have an economic model and help remove
 
 transactions from the Relay Chain, allowing for more efficient parachain processing.
 
@@ -196,11 +196,15 @@ automatically become parathreads.
 
 ## System Parachains
 
-System parachains are parachains that use execution cores allocated by the network's governance. These chains remove transactions from the Relay Chain, allowing network validators to allocate their resources to validating parachains. System chains are Polkadot using its own scaling technology to host itself.
+System parachains are parachains that use execution cores allocated by the network's governance.
+These chains remove transactions from the Relay Chain, allowing network validators to allocate their
+resources to validating parachains. System chains are Polkadot using its own scaling technology to
+host itself.
 
 See the
 [Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-this [Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866),
+this
+[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866),
 and the [system parachains](learn-system-chains.md) page for more information.
 
 ## Parachains' Use Cases
