@@ -1,17 +1,6 @@
 const fs = require("fs");
 const Polkadot = require("@polkadot/api");
-
-const PolkadotParameters = {
-  name: "Polkadot",
-  cache: "PolkadotAuctions.json",
-  ws: "wss://rpc.polkadot.io"
-}
-
-const KusamaParameters = {
-  name: "Kusama",
-  cache: "KusamaAuctions.json",
-  ws: "wss://kusama-rpc.polkadot.io",
-}
+const { PolkadotParameters, KusamaParameters } = require("./auctionVariables");
 
 let API = undefined;
 
