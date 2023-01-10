@@ -108,10 +108,6 @@ function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
 	let index = 0;
 	let status = "";
 	for (let i = 0; i < auctions.length; i++) {
-		// Temporary patch until Kusama auctions are restored
-		if (chain === "Kusama") {
-			return [61, "No Kusama auctions are currently scheduled or in-progress."]
-		}
 		if (currentBlock === null) {
 			status = "Current block is still loading...";
 			return [index, status];

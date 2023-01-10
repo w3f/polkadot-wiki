@@ -55,7 +55,8 @@ have historically functioned:
 5.  If switching keys, ensure that the correct session keys are applied
 6.  If migrating using a two-server approach, ensure that you don’t switch off the original server
     too soon.
-7.  Ensure that the database on the new server is fully synchronized It is highly recommended to
+7.  Ensure that the database on the new server is fully synchronized.
+8.  It is highly recommended to
     avoid hosting on providers that other validators may also utilize. If the provider fails, there
     is a probability that one or more other validators would also fail due to liveliness building to
     a slash.  

@@ -105,8 +105,8 @@ module.exports = {
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/learn-account-generation',
-            from: ['/docs/learn-account-restore']
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
           },
           {
             to: '/docs/learn-system-chains',
