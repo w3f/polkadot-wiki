@@ -1,6 +1,5 @@
 const fs = require("fs");
 const Polkadot = require("@polkadot/api");
-const PolkaTypes = require("@polkadot/types/lookup");
 
 const PolkadotParameters = {
   chain: "Polkadot",
@@ -20,17 +19,12 @@ let API = undefined;
 LoadAPI(PolkadotParameters).then(async () => {
   console.log(`Searching ${PolkadotParameters.chain}'s scheduler for new auctions.`)
   GetNewAuctions().then((blocks) => {
-    console.log(`Attempting to add blocks ${blocks} to the ${PolkadotParameters.chain} cache.`);
-    AppendNewAuctions(PolkadotParameters, blocks).then((indices) => {
-      console.log(`Blocks ${blocks} added to the ${PolkadotParameters.chain} cache at indices ${indices}.`)
+    AppendNewAuctions(PolkadotParameters, blocks).then(() => {
       // Repeat the process searching for newly scheduled Kusama auctions
       LoadAPI(KusamaParameters).then(async () => {
         console.log(`Searching ${KusamaParameters.chain}'s scheduler for new auctions.`)
         GetNewAuctions().then((blocks) => {
-          console.log(`Attempting to add blocks ${blocks} to the ${KusamaParameters.chain} cache.`);
-          AppendNewAuctions(KusamaParameters, blocks).then((indices) => {
-            console.log(`Blocks ${blocks} added to the ${KusamaParameters.chain} cache at indices ${indices}.`)
-          });
+          AppendNewAuctions(KusamaParameters, blocks);
         });
       });
     });
@@ -58,7 +52,7 @@ async function GetNewAuctions() {
       const call = API.registry.createType('Call', values.toHuman()[0].call.Inline);
       const isNewAuction = call.toHuman().method === "newAuction";
       if (isNewAuction) {
-        const blockString = blockNumber.replace(",", "");
+        const blockString = blockNumber.replaceAll(",", "");
         const block = parseInt(blockString);
         futureStartingBlocks.push(block);
       }
@@ -73,7 +67,7 @@ async function AppendNewAuctions(chain, blocks) {
   return new Promise(async (resolve) => {
     // If no new blocks are available, bail
     if (blocks.length === 0) {
-      return resolve([]);
+      return resolve();
     }
     // Load existing cache
     fs.readFile(`./components/utilities/data/${chain.cache}`, "utf8", async function readFileCallback(err, data) {
@@ -130,8 +124,13 @@ async function AppendNewAuctions(chain, blocks) {
           }
         }
 
-        // Append new starting blocks to existing cache
-        existingAuctions.push()
+        // Only attempt to update JSON if changes are available
+        if (addedStartBlocks.length === 0) {
+          if (params.chain === "Kusama") {
+            process.exit(0);
+          }
+          return resolve();
+        }
 
         const updatedAuctions = existingAuctions.concat(addedStartBlocks);
         // Write results
@@ -151,7 +150,7 @@ async function AppendNewAuctions(chain, blocks) {
           }
         });
 
-        return resolve(addedStartBlockIndices);
+        return resolve();
       }
     });
   });
