@@ -84,12 +84,10 @@ async function AppendNewAuctions(chain, blocks) {
         }
         existingStartBlocks.push(startBlock);
       }
-
       // Make sure blocks are sorted before appending
       blocks.sort(function (a, b) {
         return a - b;
       });
-
       // Check if blocks from scheduler need to be added to the cache
       for (let i = 0; i < blocks.length; i++) {
         if (existingStartBlocks.includes(blocks[i]) === false) {
@@ -114,16 +112,13 @@ async function AppendNewAuctions(chain, blocks) {
             "onboardStartDate": null,
             "onboardEndDate": null
           }
-
           addedStartBlocks.push(newStartBlock);
         }
       }
-
       // Only attempt to update JSON if blocks from scheduler were not added from previous scan
       if (addedStartBlocks.length === 0 && chain.name === "Kusama") {
         process.exit(0);
       }
-
       const updatedAuctions = existingAuctions.concat(addedStartBlocks);
       // Write results
       const json = JSON.stringify(updatedAuctions, null, 2);
@@ -131,12 +126,12 @@ async function AppendNewAuctions(chain, blocks) {
         // Once both async processes have completed terminate the script
         if (err) {
           console.log(err);
-          if(chain.name === "Kusama") {
+          if (chain.name === "Kusama") {
             process.exit(1);
           }
         } else {
           console.log(`Updating of ${chain.name} cache complete.`);
-          if(chain.name === "Kusama") {
+          if (chain.name === "Kusama") {
             process.exit(0);
           }
         }
