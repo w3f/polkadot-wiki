@@ -165,6 +165,15 @@ ProxyPass / ws://localhost:9944
 ProxyPassReverse / ws://localhost:9944
 ```
 
+Older versions of mod_proxy_wstunnel do not upgrade the connection automatically and will need the following config added:
+
+```apacheconf
+RewriteEngine on
+RewriteCond %{HTTP:Upgrade} websocket [NC]
+RewriteRule /(.*) ws://localhost:9944/$1 [P,L]
+RewriteRule /(.*) http://localhost:9944/$1 [P,L]
+```
+
 Optionally some form of rate limiting can be introduced: 
 
 ```bash
