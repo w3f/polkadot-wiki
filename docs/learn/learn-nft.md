@@ -57,7 +57,8 @@ Ethereum.
 
 This prevents use cases that go beyond the current craze of _digital dust gathering NFTs_ on
 Ethereum - profile pictures, generative "look once and then put away" art, [ENS](ens) addresses, and
-[proof of attendance badges](https://poap.xyz/).
+[proof of attendance badges](https://poap.xyz/) (which have since moved to the xDAI chain to save on
+gas fees).
 
 #### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
@@ -86,38 +87,37 @@ sponsored transactions, bundling fungible tokens with non-fungibles, and splitti
 fungible tokens for partial ownership.
 
 Unique Network have launched two NFT projects to date: Substrapunks as part of
-[Hackusama](https://hackusama.devpost.com/), and Chelobricks as a recent promotion during
-[Polkadot Decoded](https://decoded.polkadot.network/). They are currently running a betanet which is
-bridged to Kusama, and on which these NFTs are already tradable.
+[Hackusama](https://hackusama.devpost.com/), and Chelobricks as a promotion during
+[Polkadot Decoded](https://decoded.polkadot.network/).
 
-#### NFT from [Unqnft.io](https://unqnft.io) [2]
-
-![](https://unique.network/local/templates/unique/static/images/content/chel-400.jpg)
-
-Users can send KSM into their Unique Network escrow account, trade with it there, and then send any
-earned or leftover KSM back.
+Unique Network focuses on B2B use cases, aiming to be an infrastructure provider for others to build
+on, rather than entering the NFT space themselves as an end-product.
 
 Unique Network aims to make their marketplace technology open-source and whitelabel-friendly. In
 theory, it should be trivial to set up a new marketplace for your project using Unique's technology.
 Unique network aims to be a parachain on Polkadot, and Quartz is their Kusama counterpart.
 
-_Unique Network works closely with RMRK (see below)._
-
 ### RMRK
 
-[RMRK](https://rmrk.app) is a "hack", a forced standard directly on top of the Kusama relay chain.
-Since Kusama is meant to be lightweight to process the various parachains connected to it, it does
-not have any other complex chain logic like native NFTs or smart contracts to enable them. However,
-because of market demand and Kusama's "chaotic" nature, the RMRK team decided to take the
-["colored coins"](https://en.bitcoin.it/wiki/Colored_Coins) approach from Bitcoin and implement NFTs
-as graffiti on the Kusama chain.
+[RMRK](https://rmrk.app) is a set of NFT 2.0 standards developed in three distinct code flavors:
 
-The RMRK standard is a set of rules and specifications for how to interpret special graffiti on
-Kusama called "remarks", accessible via the core `system` pallet in any Substrate chain.
+1. ["Colored coins"](https://en.bitcoin.it/wiki/Colored_Coins) approach, as on Bitcoin, originally
+   developed as a "hack" on the Kusama chain. This is now deprecated, and it is recommended
+   implementers use any of the other options.
+2. Solidity contracts, compatible with any EVM blockchain in and outside the Polkadot ecosystem.
+   Documented [here](https://evm.rmrk.app)
+3. Rust code (Substrate pallets), compatible with any Substrate chain. Code is available
+   [here](https://github.com/rmrk-team/rmrk-substrate).
 
-The RMRK team has just launched the 2.0 version of the protocol, a set of "NFT legos", primitives
-that, when put together, allow a builder to compose an NFT system of arbitrary complexity without
-smart contracts.
+Additionally, two more flavors are in development:
+
+1. Astar (see below) are developing the ink! version of RMRK:
+   [code here](https://github.com/rmrk-team/rmrk-ink).
+2. Gear are developing the Gear implementation:
+   [code and docs here](https://wiki.gear-tech.io/docs/examples/rmrk/).
+
+The RMRK NFT 2.0 standards are a set of "NFT legos", primitives that, when put together, allow a
+builder to compose an NFT system of arbitrary complexity without smart contracts.
 
 #### NFT Legos
 
@@ -126,10 +126,6 @@ smart contracts.
 3. NFTs can have on-chain emotes (reactions) for price discovery and social mechanics
 4. NFTs have conditional rendering (e.g. show Mona Lisa as blushing if she got 50 kissy 😘 emoji)
 5. NFTs can be governed by the community via fungible shareholder-tokens (fractionalization of NFTs)
-
-The upcoming version 3.0 (Q1 2022) will be pallet and smart contract (EVM) versions of all RMRK 2.0
-logic, and integration into partner chains for cheap and easy teleportation of non-fungibles across
-dozens of chains.
 
 #### NFT from [Kanaria](https://kanaria.rmrk.app)
 
@@ -142,21 +138,12 @@ other NFTs from within its "inventory".
 
 :::
 
-The RMRK team is collaborating closely with Unique network. RMRK's logic and technology will be
-deployed on Unique Network in the form of runtime upgrades (FRAME pallets).
-
 Two marketplaces for RMRK-based NFTs exist with hundreds of projects already launched:
 
 - [Singular](https://singular.rmrk.app), the official marketplace
-- [Kodadot](https://kodadot.xyz), a third party marketplace
 
-Additionally, RMRK 2.0 functionality featuring composable, nested, multi-resource NFTs can be
-accessed and tested on the [Kanaria](https://kanaria.rmrk.app) platform.
-
-For a complete introduction into RMRK, see
-[the video explainer of RMRK](https://url.rmrk.app/rmrkcc),
-[the video explainer of Kanaria (RMRK 2)](https://url.rmrk.app/kanariacc), and read
-[the docs](https://docs.rmrk.app).
+For a complete introduction into RMRK, see [this presentation](https://url.rmrk.app/wasmconf) or
+read [the non-technical docs](https://docs.rmrk.app).
 
 ### Efinity
 
@@ -208,16 +195,16 @@ optimizing storage and interactions for rich NFTs.
 ### Uniques
 
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
-deployed on the Statemint system parachain. It implements the most basic kind of NFT -- a data
-record referencing some metadata. This metadata reference is mutable until frozen, so NFTs and their
-classes (entities derived from) are mutable unless specifically made immutable by the issuer.
+deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
+-- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
+and their classes (entities derived from) are mutable unless specifically made immutable by the
+issuer.
 
-Uniques takes a very bare-bones approach on purpose, to keep the Statemint chain a simple
-balance-keeping chain for both fungible and non-fungibles.
+Uniques takes a very bare-bones approach on purpose, to keep the Statemine / Statemint chain a
+simple balance-keeping chain for both fungible and non-fungibles.
 
-Uniques NFTs can be viewed and interacted with on
-[RMRK's Singular platform](https://singular.rmrk.app), by switching the top right menu from Kusama
-to Statemine.
+These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
+switching the top right menu from Kusama to Statemine or Statemint.
 
 ![nft-statemine](../assets/nft/nft-statemine.png)
 
@@ -225,8 +212,6 @@ The can also be interacted with directly through the
 [extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
 
 ![uniques.png](../assets/nft/uniques.png)
-
-**More UIs are already being developed**.
 
 ---
 
@@ -239,13 +224,10 @@ so multiple projects focus on making this possible.
 Apart from RMRK (Substrate-to-Substrate seamless teleportation natively with [XCMP](learn-xcm.md))
 and Efinity (Paratoken), the following efforts are underway:
 
-- **MyNFT**: an EVM to EVM bridging effort.
+- [**MyNFT**](https://mynft.com/): an EVM to EVM bridging effort.
 - **RMRK <-> EVM** Simplification bridge: a bridge developed during the
   [RMRK hackathon](https://rmrk.devpost.com) for porting RMRK NFTs into simplified IOUs on EVM
-  chains, primary deployment pending November 2022 on Moonriver
-- **RMRK <-> EVM** Full bridge: EVM version of RMRK 2.0 should be ready in December 2021, meaning a
-  full migration of RMRK 2.0 NFTs from RMRK (Kusama) to Moonriver (and other EVMs) will become
-  possible
+  chains
 
 ### References
 
