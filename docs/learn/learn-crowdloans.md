@@ -40,13 +40,14 @@ Let's look at a scenario where Project A is hoping to gain a parachain slot on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but they don't have enough tokens to
 bid directly to win the parachain auction. Project A could benefit from starting a new crowdloan
 campaign to help secure a parachian slot. Crowdloans are trustless and are supported natively on
-Polkadot, allowing the community to bond their tokens on Project A's behalf for the entire parachain
-lease duration. This will allow Project A to compete with projects that may have access to greater
-capital, given the project has sufficient community support. In return, the community contributors
-are rewarded by the projects that win the parachain slot, which would typically compensate for the
-opportunity cost of bonding their tokens for the lease duration.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, allowing the community to bond their
+tokens on Project A's behalf for the entire parachain lease duration. This will allow Project A to
+compete with projects that may have access to greater capital, given the project has sufficient
+community support. In return, the community contributors are rewarded by the projects that win the
+parachain slot, which would typically compensate for the opportunity cost of bonding their tokens
+for the lease duration.
 
-On the other hand, let's say Project B, which is more established, and has access to capital, is
+On the other hand, let's say Project B, which is more established and has access to capital, is
 hoping to secure a parachain slot through self-funding. Project B is not relying on any community
 funding (at least via the crowdloan mechanism), so they will have to determine how much funding they
 can allocate towards winning a slot.
