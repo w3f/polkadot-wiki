@@ -31,26 +31,36 @@ please see the [Rococo content](../build/build-parachains.md##testing-a-parachai
 
 ## Crowdloan Campaigns vs Parachain Auctions
 
-It is important to recognize that starting a crowdloan campaign is **optional** for participating in a parachain slot 
-auction. The parachain slot auction can also be won directly through self-funding without community involvement. To reiterate,
-crowdloan campaigns are just one of the means to win auctions, which allow the community to participate in a trustless and permissionless way. 
+It is important to recognize that starting a crowdloan campaign is **optional** for participating in
+a parachain slot auction. The parachain slot auction can also be won directly through self-funding
+without community involvement. To reiterate, crowdloan campaigns are just one of the means to win
+auctions, which allow the community to participate in a trustless and permissionless way.
 
 Let's look at a scenario where Project A is hoping to gain a parachain slot on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but they don't have enough tokens to
-bid directly to win the parachain auction. Project A could benefit from
-starting a new crowdloan campaign to help secure a parachian slot. Crowdloans are trustless and are supported natively on Polkadot, allowing the community to bond their tokens on Project A's behalf for the entire parachain lease duration. This will allow
-Project A to compete with projects that may have access to greater capital, given the project has
-sufficient community support. In return, the community contributors are rewarded by the projects that win the parachain slot, which would typically compensate for the opportunity cost of bonding their tokens for the lease duration. 
+bid directly to win the parachain auction. Project A could benefit from starting a new crowdloan
+campaign to help secure a parachian slot. Crowdloans are trustless and are supported natively on
+Polkadot, allowing the community to bond their tokens on Project A's behalf for the entire parachain
+lease duration. This will allow Project A to compete with projects that may have access to greater
+capital, given the project has sufficient community support. In return, the community contributors
+are rewarded by the projects that win the parachain slot, which would typically compensate for the
+opportunity cost of bonding their tokens for the lease duration.
 
-On the other hand, let's say Project B, which is more
-established, and has access to capital, is hoping to secure a parachain slot through self-funding.
-Project B is not relying on any community funding (at least via the crowdloan mechanism), so
-they will have to determine how much funding they can allocate towards winning a slot.
+On the other hand, let's say Project B, which is more established, and has access to capital, is
+hoping to secure a parachain slot through self-funding. Project B is not relying on any community
+funding (at least via the crowdloan mechanism), so they will have to determine how much funding they
+can allocate towards winning a slot.
 
-Project B is in full control of how much they are ultimately willing to contribute towards their goal of
-gaining a parachain slot. Project B need not work on coming up with a rewards model for community contributors like Project A. In contrast, crowdloan campaigns are beneficial for projects that have access to limited capital but have strong community support. They are also beneficial for projects that are able to successfully bid to win the auction with self-funding, but are looking for a mechanism to bootstrap their community and get noticed by the key actors in the ecosystem.
+Project B is in full control of how much they are ultimately willing to contribute towards their
+goal of gaining a parachain slot. Project B need not work on coming up with a rewards model for
+community contributors like Project A. In contrast, crowdloan campaigns are beneficial for projects
+that have access to limited capital but have strong community support. They are also beneficial for
+projects that are able to successfully bid to win the auction with self-funding, but are looking for
+a mechanism to bootstrap their community and get noticed by the key actors in the ecosystem.
 
-It is publicly visible on-chain whether or not a project is bidding directly or through a crowdloan campaign. More details regarding the process of creating and executing a crowdloan campaign are provided below.
+It is publicly visible on-chain whether or not a project is bidding directly or through a crowdloan
+campaign. More details regarding the process of creating and executing a crowdloan campaign are
+provided below.
 
 ## Starting a Crowdloan Campaign
 
