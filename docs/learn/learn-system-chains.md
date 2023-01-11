@@ -134,8 +134,7 @@ within other networks. This is achieved with the assistance from a [bridge hub](
 Before Polkadot and Kusama supported their first parachains, the only way to design a bridge was to
 put the logic onto the Relay Chain itself. Since both networks now support parachains, it makes
 sense to have a parachain on each network dedicated to bridges. This is because of the execution
-isolation provided by parachains. The activity on a parachain does not affect the Relay Chain or
-other parachains, so a bridge hub can support bridges to many other consensus systems.
+isolation provided by parachains.
 
 See the [Bridges page](learn-bridges.md) for information on the latest bridge projects. Currently, a
 Bridge Hub parachain is in development that will be a portal for trust-minimized bridges to other
