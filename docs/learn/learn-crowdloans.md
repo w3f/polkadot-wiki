@@ -35,12 +35,12 @@ It is important to recognize that starting a crowdloan campaign is **optional** 
 auction. The parachain slot auction can also be won directly through self-funding without community involvement. To reiterate,
 crowdloan campaigns are just one of the means to win auctions, which allow the community to participate in a trustless and permissionless way. 
 
-Party A is working on a project that hopes to gain a parachain slot on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} but they don't have the means to
-self-fund their bidding efforts in order to win the parachain auction. Party A has the ability to
-start a new crowdloan campaign to help their chances of successfully landing a slot. This will allow
-Party A to compete with projects that may have access to greater capital, granted the project has
-enough public appeal.
+Let's look at a scenario where Project A is hoping to gain a parachain slot on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but they don't have enough tokens to
+bid directly to win the parachain auction. Project A could benefit from
+starting a new crowdloan campaign to help secure a parachian slot. Crowdloans are trustless and are supported natively on Polkadot, allowing the community to bond their tokens on Project A's behalf for the entire parachain lease duration. This will allow
+Project A to compete with projects that may have access to greater capital, given the project has
+sufficient community support. In return, the community contributors are rewarded by the projects that win the parachain slot, which would typically compensate for the opportunity cost of bonding their tokens for the lease duration. 
 
 On the other hand, Party B also hopes to secure a parachain slot for their project. Party B is more
 established and has access to capital to self-fund their attempt at winning a parachain auction.
