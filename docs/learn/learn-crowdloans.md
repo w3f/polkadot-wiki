@@ -47,11 +47,8 @@ established, and has access to capital, is hoping to secure a parachain slot thr
 Project B is not relying on any community funding (at least via the crowdloan mechanism), so
 they will have to determine how much funding they can allocate towards winning a slot.
 
-Party B is in control of how much they are ultimately willing to contribute towards their goal of
-gaining a parachain slot. This means even if there is little public interest, they can self-fund the
-project if they have the means. In contrast, Party A may have access to very little capital but the
-project could gain mass popularity amongst the public. Party A could end up overcoming the deep
-pockets of Party B via a successful crowdloan.
+Project B is in full control of how much they are ultimately willing to contribute towards their goal of
+gaining a parachain slot. Project B need not work on coming up with a rewards model for community contributors like Project A. In contrast, crowdloan campaigns are beneficial for projects that have access to limited capital but have strong community support. They are also beneficial for projects that are able to successfully bid to win the auction with self-funding, but are looking for a mechanism to bootstrap their community and get noticed by the key actors in the ecosystem.
 
 It is publicly visible on-chain whether or not a project is bidding directly or through a crowdloan campaign. More details regarding the process of creating and executing a crowdloan campaign are provided below.
 
