@@ -31,10 +31,9 @@ please see the [Rococo content](../build/build-parachains.md##testing-a-parachai
 
 ## Crowdloan Campaigns vs Parachain Auctions
 
-It is important to recognize that crowdloan campaigns are seeking parachain slots via a parachain
-auction, however these auction slots can also be won without the need for a crowdloan. To reiterate,
-crowdloans require auctions but auctions do not require crowdloans. Let's take a look at a couple
-potential scenarios involving each path.
+It is important to recognize that starting a crowdloan campaign is **optional** for participating in a parachain slot 
+auction. The parachain slot auction can also be won directly through self-funding without community involvement. To reiterate,
+crowdloan campaigns are just one of the means to win auctions, which allow the community to participate in a trustless and permissionless way. 
 
 Party A is working on a project that hopes to gain a parachain slot on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} but they don't have the means to
