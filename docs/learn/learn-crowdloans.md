@@ -54,9 +54,7 @@ project if they have the means. In contrast, Party A may have access to very lit
 project could gain mass popularity amongst the public. Party A could end up overcoming the deep
 pockets of Party B via a successful crowdloan.
 
-It is publicly visible (on-chain) whether or not a party that is bidding for a parachain auction
-slot is self-funded or participating in a crowdloan. More technical details regarding the process
-for executing a crowdloan campaign are provided below.
+It is publicly visible on-chain whether or not a project is bidding directly or through a crowdloan campaign. More details regarding the process of creating and executing a crowdloan campaign are provided below.
 
 ## Starting a Crowdloan Campaign
 
