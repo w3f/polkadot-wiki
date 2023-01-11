@@ -113,7 +113,7 @@ Additionally, two more flavors are in development:
 
 1. Astar (see below) are developing the ink! version of RMRK:
    [code here](https://github.com/rmrk-team/rmrk-ink).
-2. Gear are developing the Gear implementation:
+2. [Gear Technologies](https://www.gear-tech.io/) are developing the Gear implementation:
    [code and docs here](https://wiki.gear-tech.io/docs/examples/rmrk/).
 
 The RMRK NFT 2.0 standards are a set of "NFT legos", primitives that, when put together, allow a
