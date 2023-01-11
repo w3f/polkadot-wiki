@@ -42,10 +42,10 @@ starting a new crowdloan campaign to help secure a parachian slot. Crowdloans ar
 Project A to compete with projects that may have access to greater capital, given the project has
 sufficient community support. In return, the community contributors are rewarded by the projects that win the parachain slot, which would typically compensate for the opportunity cost of bonding their tokens for the lease duration. 
 
-On the other hand, Party B also hopes to secure a parachain slot for their project. Party B is more
-established and has access to capital to self-fund their attempt at winning a parachain auction.
-Party B is not relying on any public funding/staking (at least via the crowdfunding mechanism) so
-they will have to determine how much funding they are able to allocate towards winning a slot.
+On the other hand, let's say Project B, which is more
+established, and has access to capital, is hoping to secure a parachain slot through self-funding.
+Project B is not relying on any community funding (at least via the crowdloan mechanism), so
+they will have to determine how much funding they can allocate towards winning a slot.
 
 Party B is in control of how much they are ultimately willing to contribute towards their goal of
 gaining a parachain slot. This means even if there is little public interest, they can self-fund the
