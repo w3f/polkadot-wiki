@@ -32,6 +32,7 @@
     "docusaurus": "docusaurus",
     "prepare": "husky install",
     "update:auctions": "node ./components/utilities/updateAuctions.js",
+    "get:auctions": "node ./components/utilities/getAuctions.js",
     "audit:links": "python ./scripts/auditLinks.py",
     "audit:images": "python ./scripts/auditImages.py",
     "prettier:all": "npx prettier --write ."
