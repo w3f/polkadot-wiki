@@ -13,8 +13,8 @@ function Fellowship({ network, defaultValue }) {
     else { return (<div />) }
     // Set default value to render on component
     setReturnValue(
-      <div style={{ color: "#e6007a" }}>
-        {defaultValue}
+      <div style={{ color: "#e6007a", textAlign: "center" }}>
+        <b>{defaultValue}</b>
       </div>
     );
     // Calculate a more accurate approximation using on-chain data
@@ -65,7 +65,7 @@ async function GetFellows(network, wsUrl, setReturnValue) {
     const hash = member[0].toHuman();
     const rank = JSON.parse(member[1]).rank;
     tableData.push(
-      <tr key={ hash.toString() }>
+      <tr key={hash.toString()}>
         <td style={{ width: "100%", border: "none" }}>
           <a href={`${explorerUrl + hash}`}>
             {`${hash}`}
@@ -78,8 +78,9 @@ async function GetFellows(network, wsUrl, setReturnValue) {
 
   // Render Table
   setReturnValue(
-    <div>
-      Current { chain } Fellows:
+    <div style={{ textAlign: "center" }}>
+      <b>Current {chain} Fellows ({tableData.length}):</b>
+      <br /><br />
       <div style={{ margin: "auto", maxWidth: "650px", border: "1px solid #dadde1" }}>
         <table style={{ margin: 0 }}>
           {header}
