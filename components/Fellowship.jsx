@@ -84,7 +84,7 @@ async function GetFellows(network, wsUrl, setReturnValue) {
         <table style={{ margin: 0 }}>
           {header}
         </table>
-        <table style={{ width: "100%", overflow: "auto", height: "300px" }}>
+        <table style={{ margin: 0, width: "100%", overflow: "auto", height: "300px" }}>
           <tbody style={{ width: "100%", textAlign: "center" }}>
             {tableData}
           </tbody>
