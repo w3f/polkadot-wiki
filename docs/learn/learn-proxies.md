@@ -68,6 +68,14 @@ Creating multiple proxy accounts that act for a single account, lets you come up
 security practices around how you protect private keys while still being able to actively
 participate in a network.
 
+:::info
+
+The **maximum number of proxies** allowed for a single account is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }}
+
+:::
+
 ## Creating Proxy
 
 :::info
@@ -213,7 +221,8 @@ defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to sto
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }}
 and the `ProxyDepositFactor` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/>. :kusama }}
 
 ## Time-delayed Proxy
 
