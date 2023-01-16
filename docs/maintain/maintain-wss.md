@@ -60,7 +60,11 @@ at 115 GB for a pruned node and 765 GB for an archive node. This value will incr
 an archive node you need the options `--state-pruning archive --blocks-pruning archive` in your
 startup settings.
 
-:::tip Inclusion in the Polkadot.js UI requires an archive node. :::
+:::tip 
+
+Inclusion in the Polkadot.js UI requires an archive node. 
+
+:::
 
 ### Secure the RPC server
 
