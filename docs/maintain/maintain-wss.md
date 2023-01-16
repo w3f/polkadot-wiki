@@ -16,8 +16,12 @@ connection between the end user and the RPC server. This can be achieved by sett
 proxy. Many browsers such as Google Chrome will block non secure WS endpoints if they come from a
 different origin.
 
-:::note Enabling remote access to your validator node should not be necessary and is not suggested
-as it can often lead to security problems :::
+:::note 
+
+Enabling remote access to your validator node should not be necessary and is not suggested
+as it can often lead to security problems 
+
+:::
 
 ## Set up a node
 
