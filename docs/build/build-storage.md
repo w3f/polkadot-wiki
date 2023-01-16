@@ -68,7 +68,8 @@ Filebase acts as an easy on-ramp to IPFS and decentralized storage by offering a
 
 :::note Learn more about Filebase
 
-To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com). You can get started with Filebase by signing up [here.](https://filebase.com/signup)
+To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com), and specifically the documentation on [deploying Polkadot dApp on decentralized storage.](https://docs.filebase.com/web3-education/web3-tutorials/polkadot/polkadot-deploy-a-polkadot-dapp-on-decentralized-storage)
+. You can get started with Filebase by signing up [here.](https://filebase.com/signup)
 
 :::
 
