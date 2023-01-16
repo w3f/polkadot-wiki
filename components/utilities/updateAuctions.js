@@ -11,32 +11,22 @@ const {
   KusamaLeasePeriodPerSlot,
   KusamaStartingPhase,
   KusamaEndingPeriod,
-  FutureBlock
+  FutureBlock,
+  PolkadotParameters,
+  KusamaParameters
 } = require("./auctionVariables");
-
-const PolkadotParameters = {
-  chain: "Polkadot",
-  cache: "PolkadotAuctions.json",
-  ws: "wss://rpc.polkadot.io"
-}
-
-const KusamaParameters = {
-  chain: "Kusama",
-  cache: "KusamaAuctions.json",
-  ws: "wss://kusama-rpc.polkadot.io",
-}
 
 let API = undefined;
 
 // Load Polkadot API
 LoadAPI(PolkadotParameters).then(() => {
   // Update Polkadot cache
-  console.log(`Updating ${PolkadotParameters.chain} cache.`);
+  console.log(`Updating ${PolkadotParameters.name} cache.`);
   Update(PolkadotParameters).then(() => {
     // Load Kusama API
     LoadAPI(KusamaParameters).then(() => {
       // Update Kusama cache
-      console.log(`Updating ${KusamaParameters.chain} cache.`);
+      console.log(`Updating ${KusamaParameters.name} cache.`);
       Update(KusamaParameters).then(() => {
         console.log(`Updating auctions cache complete.`);
       })
@@ -64,7 +54,7 @@ async function Update(params) {
           // First check if all block numbers are defined (0 indicates not available in cache)
           if (auction.onboardStartBlock === null || auction.onboardEndBlock === null) {
             // Use the startBlock recalculate remaining relevant block numbers
-            const [endPeriodBlock, auctionEndBlock, onboardStartBlock, onboardEndBlock] = await GetAuctionBlocks(API, currentBlock, auction.startBlock, params.chain);
+            const [endPeriodBlock, auctionEndBlock, onboardStartBlock, onboardEndBlock] = await GetAuctionBlocks(API, currentBlock, auction.startBlock, params.name);
             existingAuctions[i].endPeriodBlock = endPeriodBlock;
             existingAuctions[i].biddingEndsBlock = auctionEndBlock;
             existingAuctions[i].onboardStartBlock = onboardStartBlock;
@@ -92,12 +82,12 @@ async function Update(params) {
           // Once both async processes have completed terminate the script
           if (err) {
             console.log(err);
-            if(params.chain === "Kusama") {
+            if(params.name === "Kusama") {
               process.exit(1);
             }
           } else {
-            console.log(`Updating of ${params.chain} cache complete.`);
-            if(params.chain === "Kusama") {
+            console.log(`Updating of ${params.name} cache complete.`);
+            if(params.name === "Kusama") {
               process.exit(0);
             }
           }

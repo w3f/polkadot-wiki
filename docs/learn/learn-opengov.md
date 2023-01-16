@@ -11,6 +11,8 @@ import RPC from "./../../components/RPC-Connection";
 
 import VLTable from "./../../components/Voluntary-Locking";
 
+import Fellowship from "./../../components/Fellowship";
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
@@ -370,11 +372,12 @@ work well with even tens of thousands of members) and with far lower barrier to 
 of administrative process flow and expectations of expertise). Becoming a candidate member in the
 Fellowship is as easy as placing a small deposit.
 
-Members of the Fellowship can vote on any given Fellowship proposal and the aggregate opinion of the
-members (weighted by their rank) constitutes the Fellowship's considered opinion.
-
 The mechanism by which the Fellowship votes is the same as what is used for Polkadot and Kusama
-stakeholder voting for a proposed referendum.
+stakeholder voting for a proposed referendum. Members of the Fellowship can vote on any given
+Fellowship proposal and the aggregate opinion of the members (weighted by their rank) constitutes
+the Fellowship's considered opinion.
+
+{{ kusama: <Fellowship network="kusama" defaultValue="Loading Kusama Fellows..."/> :kusama }}
 
 ### Ranking System
 

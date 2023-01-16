@@ -17,7 +17,8 @@ guides to set up a node and run the network.
 - [Set up a Full Node](maintain-sync.md) - Get up and started by syncing a full node for the Kusama
   network. The steps in the guide will broadly apply also to any Substrate-based network (like
   Polkadot).
-- [Set up Secure WebSocket](maintain-wss.md) - Set up a Secure WebSockets proxy server to safely access your node's RPC server
+- [Set up Secure WebSocket](maintain-wss.md) - Set up a Secure WebSockets proxy server to safely
+  access your node's RPC server
 
 ## Collator
 

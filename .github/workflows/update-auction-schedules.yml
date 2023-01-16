@@ -1,7 +1,7 @@
 name: Update Auction Schedules
 on:
   schedule:
-    - cron: '0 0 * * 1' # Once a week
+    - cron: '0 0 * * *' # At the end of every day (00:00)
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:
@@ -30,7 +30,9 @@ jobs:
         run: |
           git branch auction-schedule-update
           git checkout auction-schedule-update
-          yarn && yarn update:auctions
+          yarn
+          yarn get:auctions
+          yarn update:auctions
       - name: Commit, push and open new PR with changes (if any)
         run: |
           if [[ `git status --porcelain` ]]; then
