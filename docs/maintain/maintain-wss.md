@@ -17,8 +17,10 @@ proxy. Many browsers such as Google Chrome will block non secure WS endpoints if
 different origin.
 
 :::note 
+
 Enabling remote access to your validator node should not be necessary and is not suggested
 as it can often lead to security problems 
+
 :::
 
 ## Set up a node
@@ -53,12 +55,15 @@ full history (database) of the network and can be queried in all kind of ways, s
 historical information regarding transfers, balance histories, and more advanced queries involving
 past events, etc.
 
-An archive node requires a lot more diskspace. At the start of January 2023, polkadot disk usage was at 115 GB 
-for a pruned node and 765 GB for an archive node. This value will increase with time. For an archive
-node you need the options `--state-pruning archive --blocks-pruning archive` in your startup settings.
+An archive node requires a lot more diskspace. At the start of January 2023, polkadot disk usage was
+at 115 GB for a pruned node and 765 GB for an archive node. This value will increase with time. For
+an archive node you need the options `--state-pruning archive --blocks-pruning archive` in your
+startup settings.
 
-:::tip
+:::tip 
+
 Inclusion in the Polkadot.js UI requires an archive node. 
+
 :::
 
 ### Secure the RPC server
@@ -126,14 +131,14 @@ server {
 }
 ```
 
-Optionally some form of rate limiting can be introduced: 
+Optionally some form of rate limiting can be introduced:
 
 ```conf
 http {
   limit_req_zone  "$http_x_forwarded_for" zone=zone:10m rate=2r/s;
   (...)
 }
-  
+
 location / {
   limit_req zone=zone burst=5;
   (...)
@@ -165,7 +170,7 @@ ProxyPass / ws://localhost:9944
 ProxyPassReverse / ws://localhost:9944
 ```
 
-Optionally some form of rate limiting can be introduced: 
+Optionally some form of rate limiting can be introduced:
 
 ```bash
 apt install libapache2-mod-qos
