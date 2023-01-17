@@ -31,6 +31,7 @@ test("Human readable filter with float value", async () => {
 
 // Test all active RPC paths in individual tests
 const paths = [
+	// Add new RPC paths here for testing coverage
 	{ path: 'consts.system.blockHashCount', network: 'kusama' },
 	{ path: 'consts.balances.existentialDeposit', network: 'kusama' },
 	{ path: 'query.staking.validatorCount', network: 'kusama' },
