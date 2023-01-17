@@ -1,5 +1,5 @@
 import React from "react";
-import { render, act, screen, waitFor, fail } from "@testing-library/react";
+import { render, screen, waitFor, fail } from "@testing-library/react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
@@ -31,41 +31,58 @@ test("Human readable filter with float value", async () => {
 
 // Test all active RPC paths in individual tests
 const paths = [
-	'consts.system.blockHashCount',
-	'consts.balances.existentialDeposit',
-	'query.staking.validatorCount',
-	'consts.staking.maxNominatorRewardedPerValidator',
-	'consts.identity.basicDeposit',
-	'query.staking.currentEra',
-	'consts.phragmenElection.votingBondBase',
-	'query.staking.minNominatorBond',
-	'consts.staking.maxNominations',
-	'consts.democracy.votingPeriod',
-	'consts.crowdloan.minContribution',
-	'query.nominationPools.minJoinBond',
-	'consts.auctions.endingPeriod',
-	'consts.democracy.enactmentPeriod',
-	'consts.electionProviderMultiPhase.signedMaxSubmissions',
-	'query.multisig.depositBase',
-	'consts.proxy.maxProxies',
-	'query.nomiationPools.minJoinBond',
-	'consts.democracy.voteLockingPeriod',
-	'consts.assets.assetDeposit',
-	'consts.treasury.spendPeriod',
-	'consts.electionProviderMultiPhase.maxElectingVoters'
+	{ path: 'consts.system.blockHashCount', network: 'kusama' },
+	{ path: 'consts.balances.existentialDeposit', network: 'kusama' },
+	{ path: 'query.staking.validatorCount', network: 'kusama' },
+	{ path: 'consts.staking.maxNominatorRewardedPerValidator', network: 'kusama' },
+	{ path: 'consts.identity.basicDeposit', network: 'kusama' },
+	{ path: 'query.staking.currentEra', network: 'kusama' },
+	{ path: 'consts.phragmenElection.votingBondBase', network: 'kusama' },
+	{ path: 'query.staking.minNominatorBond', network: 'kusama' },
+	{ path: 'consts.staking.maxNominations', network: 'kusama' },
+	{ path: 'consts.democracy.votingPeriod', network: 'kusama' },
+	{ path: 'consts.crowdloan.minContribution', network: 'kusama' },
+	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
+	{ path: 'consts.auctions.endingPeriod', network: 'kusama' },
+	{ path: 'consts.democracy.enactmentPeriod', network: 'kusama' },
+	{ path: 'consts.electionProviderMultiPhase.signedMaxSubmissions', network: 'kusama' },
+	{ path: 'consts.multisig.depositBase', network: 'kusama' },
+	{ path: 'consts.proxy.maxProxies', network: 'kusama' },
+	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
+	{ path: 'consts.democracy.voteLockingPeriod', network: 'kusama' },
+	{ path: 'consts.treasury.spendPeriod', network: 'kusama' },
+	{ path: 'consts.electionProviderMultiPhase.maxElectingVoters', network: 'kusama' },
+	{ path: 'consts.assets.assetDeposit', network: 'statemint' },
 ]
 
 for (let i = 0; i < paths.length; i++) {
-	test(`RPC Path Test: ${paths[i]}`, async () => {
+	test(`RPC Path Test: ${paths[i].path}`, async () => {
 		let chainValue = undefined;
-		
+
 		try {
-			const wsUrl = "wss://kusama-rpc.polkadot.io/";
+			let wsUrl = undefined;
+			switch (paths[i].network) {
+				case "polkadot":
+					wsUrl = "wss://rpc.polkadot.io";
+					break;
+				case "kusama":
+					wsUrl = "wss://kusama-rpc.polkadot.io/";
+					break;
+				case "statemine":
+					wsUrl = "wss://statemine-rpc.polkadot.io/";
+					break;
+				case "statemint":
+					wsUrl = "wss://statemint-rpc.polkadot.io/";
+					break;
+				default:
+					fail("Unknown network provided, no connection made.");
+			}
+
 			const wsProvider = new WsProvider(wsUrl);
 			let api = await ApiPromise.create({ provider: wsProvider });
 
 			// Build API call
-			const pathParameters = paths[i].split(".");
+			const pathParameters = paths[i].path.split(".");
 			pathParameters.forEach(param => {
 				api = api[param];
 			});
@@ -80,14 +97,16 @@ for (let i = 0; i < paths.length; i++) {
 					chainValue = chainValue.toString();
 					break;
 				default:
-					fail(`Unknown path prefix (${pathParameters[0]}) in ${paths[i]}`);
+					fail(`Unknown path prefix (${pathParameters[0]}) in ${paths[i].path}`);
 			}
 		} catch (error) {
 			console.log(error);
 		}
 
+		console.log(`${paths[i].path} on-chain value: ${chainValue}`);
+
 		if (chainValue === undefined) {
-			fail(`Undefined value returned from ${paths[i]}`);
+			fail(`Undefined value returned from ${paths[i].path}`);
 		}
 	});
 }
