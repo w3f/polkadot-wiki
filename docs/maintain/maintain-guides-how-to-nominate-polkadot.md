@@ -73,10 +73,10 @@ protocol and have less chance of getting slashed. To nominate, you need a minimu
 and to receive rewards, you need at least a balance greater than the minimum active bond. Depending
 on your validators, if your active validator is oversubscribed, you will earn rewards only if your
 stake is within that of the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators. If the validator misbehaves, It is worth noting that your stake is subject to slashing,
 irrespective of whether you are in the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the

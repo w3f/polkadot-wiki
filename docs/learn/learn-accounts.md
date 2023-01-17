@@ -160,8 +160,8 @@ for more information about existential deposit.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the existential deposit of
-{{ polkadot: <RPC network="polkadot" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account
 will be wiped from the blockchain's state to conserve space, along with any funds in that address.
