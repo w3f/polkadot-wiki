@@ -618,12 +618,9 @@ Running the Phragmén algorithm is time-consuming, and often cannot be completed
 limits of production of a single block. Waiting for calculation to complete would jeopardize the
 constant block production time of the network. Therefore, as much computation as possible is moved
 to an off-chain worker, which validators can work on the problem without impacting block production
-time. By restricting the ability of users to make any modifications in the last 25% of an era, and
-running the selection of validators by nominators as an off-chain process, validators have a
-significant amount of time to calculate the new active validator set and allocate the nominators in
-an optimal manner.
+time.
 
-There are several further restrictions put in place to limit the complexity of the election and
+There are several restrictions put in place to limit the complexity of the election and
 payout. As already mentioned, any given nominator can only select up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
@@ -635,7 +632,7 @@ the number of validators is very low, that all available validators may be "over
 unable to accept more nominations. In this case, one may need a larger amount of stake to
 participate in staking, since nominations are priority-ranked in terms of amount of stake.
 
-### Phragmms (fka Balphragmms)
+### Phragmms (aka Balphragmms)
 
 `Phragmms`, formerly known as `Balphragmms`, is a new election rule inspired by Phragmén and
 developed in-house for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In general,
