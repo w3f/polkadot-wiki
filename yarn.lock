@@ -2845,13 +2845,6 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
 
-"@polkadot/x-global@10.2.5":
-  version "10.2.5"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.2.5.tgz#5fe4e974cdd01b5c6ef8d8b2da9dc8d5ea50164a"
-  integrity sha512-1OAlhacUum/dC2cKuvZR+YO5hEc53HyxEGQYOgeGlMJiS2ZKgAKB93p1kpPLhZ/hX6xYbjD0MTg7/Jj52m8xHw==
-  dependencies:
-    "@babel/runtime" "^7.20.7"
-
 "@polkadot/x-global@10.2.6", "@polkadot/x-global@^10.2.4":
   version "10.2.6"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.2.6.tgz#712af3d7c5731cc1d882afa0cc3c9bf448103917"
@@ -2859,13 +2852,13 @@
   dependencies:
     "@babel/runtime" "^7.20.7"
 
-"@polkadot/x-randomvalues@*":
-  version "10.2.5"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.2.5.tgz#501b46e144bddf5049bc69f732599810b8ea9289"
-  integrity sha512-Gm5rZXmLO1KEckFnJ0qNYjunRoAQGx9sQLMbUYkuawIiw8udwoq9mxPIUmAirsltPqxPQ5nGRzZHXS9zquCgyA==
+"@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@10.2.6":
+  version "10.2.6"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.2.6.tgz#723d787bddf478b6516537d6d9cbf5e0d3961252"
+  integrity sha512-yTuNO7RU9DINTdHyura2wUoZLaCRdtZftYcFV82obV/TqIprJFM2q5EzE7xvwWAxEvBbG4Z4KI1obL/y1bq3fg==
   dependencies:
     "@babel/runtime" "^7.20.7"
-    "@polkadot/x-global" "10.2.5"
+    "@polkadot/x-global" "10.2.6"
 
 "@polkadot/x-randomvalues@10.1.1":
   version "10.1.1"
@@ -2874,14 +2867,6 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
-
-"@polkadot/x-randomvalues@10.2.6":
-  version "10.2.6"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.2.6.tgz#723d787bddf478b6516537d6d9cbf5e0d3961252"
-  integrity sha512-yTuNO7RU9DINTdHyura2wUoZLaCRdtZftYcFV82obV/TqIprJFM2q5EzE7xvwWAxEvBbG4Z4KI1obL/y1bq3fg==
-  dependencies:
-    "@babel/runtime" "^7.20.7"
-    "@polkadot/x-global" "10.2.6"
 
 "@polkadot/x-textdecoder@10.1.1":
   version "10.1.1"
