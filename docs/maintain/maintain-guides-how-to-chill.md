@@ -102,9 +102,9 @@ start chilling one-another. This value is currently set to
 
 For instance, let us consider a scenario where the minimum staking requirement for nominators is
 changed from 80 DOTs to 120 DOTs. An account that was actively nominating with 80 DOTs before this
-update would still keep receiving staking rewards. To handle this corner case, the `chill_other`
+update would still keep receiving staking rewards. To handle this corner case, the `chillOther`
 extrinsic was incorporated which also helps to keep things backwards compatible and safe. The
-`chill_other` extrinsic is permissionless and any third party user can target it on an account where
+`chillOther` extrinsic is permissionless and any third party user can target it on an account where
 the minimum active bond is not satisfied, and chill that account. The list of addresses of all the
 active validators and their nominators can be viewed by running
 [validator stats](https://github.com/w3f/validator-stats) script.
