@@ -53,6 +53,7 @@ const paths = [
 	{ path: 'consts.democracy.voteLockingPeriod', network: 'kusama' },
 	{ path: 'consts.treasury.spendPeriod', network: 'kusama' },
 	{ path: 'consts.electionProviderMultiPhase.maxElectingVoters', network: 'kusama' },
+	{ path: 'query.staking.chillThreshold', network: 'kusama' },
 	{ path: 'consts.assets.assetDeposit', network: 'statemint' },
 ]
 
