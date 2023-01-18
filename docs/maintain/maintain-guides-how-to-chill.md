@@ -112,6 +112,7 @@ start chilling one-another. This value is currently set to
 :::info Chill Other on Polkadot Network
 
 Through [Referendum 90](https://polkadot.polkassembly.io/referendum/90), `maxNominatorCount` on Polkadot
-is set to `None`. The `chillOther` extrinsic 
+is set to `None`. Due to this, the `chillOther` extrinsic on Polkadot network has no effect as the chill 
+threshold will never be met. 
 
 :::
