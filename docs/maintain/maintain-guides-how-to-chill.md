@@ -7,6 +7,9 @@ keywords: [chill, chilling, pause]
 slug: ../maintain-guides-how-to-chill
 ---
 
+
+import RPC from "./../../components/RPC-Connection";
+
 Staking bonds can be in any of the three states: validating, nominating, or chilled (neither
 validating nor nominating). When a staker wants to temporarily pause their active engagement in
 staking but does not want to unbond their funds, they can choose to "chill" their involvement and
@@ -96,3 +99,19 @@ extrinsic was incorporated which also helps to keep things backwards compatible 
 the minimum active bond is not satisfied, and chill that account. The list of addresses of all the
 active validators and their nominators can be viewed by running
 [validator stats](https://github.com/w3f/validator-stats) script.
+
+:::note Chill Threshold
+ 
+`ChillThreshold` defines how close to the max nominators or validators we must reach before users can 
+start chilling one-another. This value is currently set to
+{{ polkadot: <RPC network="polkadot" path="query.staking.chillThreshold" defaultValue={90}/>% :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.chillThreshold" defaultValue={90}/>% :kusama }}
+
+:::
+
+:::info Chill Other on Polkadot Network
+
+Through [Referendum 90](https://polkadot.polkassembly.io/referendum/90), `maxNominatorCount` on Polkadot
+is set to `None`. The `chillOther` extrinsic 
+
+:::
