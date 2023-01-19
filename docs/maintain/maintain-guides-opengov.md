@@ -74,6 +74,11 @@ only works for old version of governance).
 
 :::
 
+### Removing expired voting locks
+
+To remove the lock from votes you first need to call `removeVote` and then `unlock` through the
+`convictionVoting` pallet.
+
 ## Origins and Tracks
 
 Whitelist
