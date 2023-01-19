@@ -54,8 +54,16 @@ const paths = [
 	{ path: 'consts.treasury.spendPeriod', network: 'kusama' },
 	{ path: 'consts.electionProviderMultiPhase.maxElectingVoters', network: 'kusama' },
 	{ path: 'query.staking.chillThreshold', network: 'kusama' },
+	{ path: 'query.nominationPools.counterForPoolMembers', network: 'kusama' },
+	{ path: 'query.nominationPools.lastPoolId', network: 'kusama' },
+	{ path: 'query.nominationPools.maxPoolMembers', network: 'kusama' },
+	{ path: 'query.nominationPools.maxPools', network: 'kusama' },
+	{ path: 'query.nominationPools.maxPoolMembersPerPool', network: 'kusama' },
+	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
 	{ path: 'consts.assets.assetDeposit', network: 'statemint' },
 ]
+
+jest.setTimeout(10000);
 
 for (let i = 0; i < paths.length; i++) {
 	test(`RPC Path Test: ${paths[i].path}`, async () => {
