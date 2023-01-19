@@ -532,7 +532,7 @@ Once your node is fully synced, stop the process by pressing Ctrl-C. At your ter
 will now start running the node.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/production/polkadot --validator --name "name on telemetry"
 ```
 
 Similarly:
@@ -684,7 +684,7 @@ other peers over the network.
 ### How do I clear all my chain data?
 
 ```sh
-./target/release/polkadot purge-chain
+./target/production/polkadot purge-chain
 ```
 
 :::info
