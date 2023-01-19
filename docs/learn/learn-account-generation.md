@@ -10,17 +10,17 @@ slug: ../learn-account-generation
 ## DISCLAIMER: Key Security
 
 The _only_ ways to get access to your account are via your secret seed or your account's JSON file
-in combination with a password. You must keep them both secure and private. If you share them with
-anyone they will have full access to your account, including all of your funds. This information is
-a target for hackers and others with bad intentions - see also
-[How to Recognize Scams](../general/scams.md).
+in combination with a password. Keep them offline in a secure and private location. If you share
+these with anyone, they can access your account, including all of your funds. This information is
+always a target for hackers and malicious actors. Check out the wiki doc on
+[how to recognize scams](../general/scams.md).
 
 <iframe width="560" height="315" src="https://youtube.com/embed/ARsdXZycJAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-On this page, we recommend a variety of account generation methods that have various convenience and
-security trade-offs. Please review this page carefully before making your account so that you
-understand the risks of the account generation method you choose and how to properly mitigate them
-in order to keep your funds safe.<br/><br/>
+On this page, we recommend various account generation methods with different levels of convenience
+vs. security trade-offs. Please review this page carefully before creating your account to
+understand the potential risks of the account generation method and how to mitigate them to keep
+your funds safe.<br/><br/>
 
 :::info
 
@@ -38,25 +38,32 @@ The **most user-friendly** way to create a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
 to generate your account - the accounts are stored only in your browser, so purging the cache will
-wipe your accounts as well. You would then have to recreate them using the seed phrase given to you
-by the UI - this will also restore all your previously held balances.
+also wipe your accounts. You would then have to recreate them using the seed phrase given to you by
+the UI - this will also restore all your previously held balances.
+
+:::info local in-browser account storage is disabled by default on the Polkadot-JS UI
+
+To create an account using the Polkadot-JS UI, navigate to settings > account options and click on allow
+local in-browser account storage in the drop-down menu.
+
+:::
 
 A **more convenient and recommended** method of keeping the accounts stored on your computer is
 using the [Polkadot browser extension](https://github.com/polkadot-js/extension). This extension
-remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget
-to back up your seed phrase - if you lose access to this computer or the extension somehow crashes
-beyond repair, the phrase will come in handy.
+remembers your accounts and allows you to clear your browser cache without fear. Remember to back up
+your seed phrase - if you lose access to this computer or the extension somehow crashes beyond
+repair, the seed phrase will come in handy.
 
-Please note that as this keeps your accounts in the browser, it is not safe to keep significant
-holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so
-keep your funds in cold storage when dealing with non-trivial amounts. For improved security, you
-can securely stash away the seed phrase for your accounts and remove all traces of the accounts from
-your computer after creating them.
+Please note that as this keeps your accounts in the browser extension, it is unsafe to hold
+significant funds on them. By definition, a browser is a "hot wallet" and is susceptible to a wide
+range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. For
+improved security, you securely stash away the seed phrase for your accounts and remove all traces
+of the accounts from your computer after creating them.
 
 Besides the extension and the default UI,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can also be created with
 the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
-intended for users comfortable with using the command line and can seem intimidating but is quite
+intended for users comfortable using the command line and can seem intimidating, but it is quite
 approachable. Follow the instructions in the
 [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/). When used
 properly, Subkey is the **most secure** available method of creating an account.
@@ -155,16 +162,16 @@ For guidelines about how to create an account using the Polkadot Extension, see
 
 :::
 
-The Polkadot-JS Browser Extension (simply referred to as the Polkadot Extension) provides a
-reasonable balance of security and usability. It provides a separate local mechanism to generate
-your address and interact with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+The Polkadot-JS Browser Extension (referred to as the Polkadot Extension) provides a reasonable
+balance of security and usability. It provides a separate local mechanism to generate your address
+and interact with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 This method involves installing the Polkadot Extension and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows the signing of transactions and
 similar functionality.
 
-It is still running on the same computer you use to connect to the internet with and thus is less
-secure than using Parity Signer or other air-gapped approaches.
+It is still running on the same computer you use to connect to the internet and thus is less secure
+than using Parity Signer or other air-gapped approaches.
 
 ### Reset Password using the Browser Extension
 
@@ -178,22 +185,22 @@ an injected account).
 
 :::warning
 
-Before following the instructions below make sure you have your mnemonic phrase stored in a safe
+Before following the instructions below, make sure you have your mnemonic phrase stored in a safe
 place accessible to you.
 
 :::
 
 Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the password of your
-`ACCOUNT 1` using the browser extension you must follow the following steps:
+`ACCOUNT 1` using the browser extension, you must follow the following steps:
 
-- On the browser extension go to `ACCOUNT 1` and click "Forget account". This action will delete the
-  access to your account. Note that your tokens are still in your account on the
+- On the browser extension, go to `ACCOUNT 1` and click "Forget account". This action will delete
+  the access to your account. Note that your tokens are still in your account on the
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain network.
 - On the browser extension click the "+" button in the top right corner and select the option
-  "Import account from pre-existing seed". After entering the mnemonic phrase you can chose a new
-  password `PSW 2`.
+  "Import account from pre-existing seed". After entering the mnemonic phrase, you can choose a new
+  password, `PSW 2`.
 
-:::info JSON files do not allow to change account passwords
+:::info JSON files do not allow changing account passwords
 
 If you add the account to the extension using the option "Restore account from backup JSON file",
 this will allow you to restore access to your account using JSON file protected by the password
@@ -232,10 +239,10 @@ For guidelines about how to create an account using Subkey, see
 
 :::
 
-Subkey is recommended for technically advanced users who are comfortable with the command line and
-compiling Rust code. Subkey allows you to generate keys on any device that can compile the code.
-Subkey may also be useful for automated account generation using an air-gapped device. It is not
-recommended for general users.
+Subkey is recommended for technically advanced users comfortable with the command line and compiling
+Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may
+also be useful for automated account generation using an air-gapped device. It is not recommended
+for general users.
 
 ## Polkadot-JS UI
 
@@ -251,7 +258,7 @@ For guidelines about how to create an account using Polkadot-JS UI, see
 
 If you use this method to create your account and clear your cookies in your browser, your account
 will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure
-you store your seed phrase in a safe place, or download the account's JSON file if using the
+you store your seed phrase in a safe place or download the account's JSON file if using the
 Polkadot{.js} browser extension. Learn more about account backup and restoration
 [here](#restore-account-on-the-polkadot-js-ui).
 
@@ -263,7 +270,7 @@ feasible in your situation.
 
 ### Reset password using the Polkadot-JS UI
 
-To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the
+To reset the password of an account created with Polkadot-JS Apps UI you need to go to the
 "Accounts" tab, click the icon with three vertical dots on your account and select "Change this
 account's password".
 
@@ -279,7 +286,7 @@ password for an account that has been created on the Polkadot-JS UI (i.e. a non-
 If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension,
 you need to follow the
 [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
-password of such account.
+the password of such an account.
 
 :::
 
