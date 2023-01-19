@@ -41,9 +41,9 @@ to generate your account - the accounts are stored only in your browser, so purg
 also wipe your accounts. You would then have to recreate them using the seed phrase given to you by
 the UI - this will also restore all your previously held balances.
 
-:::info local in-browser account storage is disabled by default on Polkadot-JS UI
+:::info local in-browser account storage is disabled by default on the Polkadot-JS UI
 
-To create an account using Polkadot-JS UI, navigate to settings > account options and click on allow
+To create an account using the Polkadot-JS UI, navigate to settings > account options and click on allow
 local in-browser account storage in the drop-down menu.
 
 :::
