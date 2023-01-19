@@ -16,12 +16,19 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. You can now stake on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
+help you get started.
+
+:::
+
+:::info Stake through Nomination Pools
+
+You can now stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with
+just
 {{ polkadot: <RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
 and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 :::
 
