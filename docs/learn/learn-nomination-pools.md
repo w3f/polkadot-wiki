@@ -16,6 +16,31 @@ tokens together on-chain to nominate validators and receive rewards, significant
 system’s scalability. Now, anyone with as little as
 [1 DOT can receive rewards for staking natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
+- There are currently
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
+  members. (There can be a maximum of
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
+  members.)
+- There are currently
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
+  pools. (There can be a maximum of
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
+  pools)
+- {{ polkadot: No limit on :polkadot }}
+  {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
+  members per pool.
+
+:::
+
+:::note
+
+Learn the key differences between
+[**Staking directly vs Joining a Nomination Pool**](../maintain/maintain-guides-how-to-nominate-polkadot.md#nominating-vs-joining-a-pool).
+
 :::
 
 :::tip Have questions on Nomination Pools?
@@ -64,28 +89,6 @@ nomination power to the pool.
 The earnings of the pool are split pro rata to a member's stake in the bonded pool (and thus the
 staking rewards for members will be the same as if they were a nominator). Importantly, slashes are
 also applied proportionally to members who may have been actively bonded.
-
-:::info Nomination Pool Stats
-
-- There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
-  members (there are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={2295} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
-  members).
-- There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
-  pools (there are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
-  pools).
-- {{ polkadot: No limit on :polkadot }}
-  {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
-  members per pool.
-
-:::info
 
 ## Key Components
 
@@ -167,7 +170,7 @@ balance.
 
 :::
 
-### Limitations
+### Limitations of Nomination Pools
 
 - A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This
   may be changed in the future once accounts are afforded the ability to split votes.
