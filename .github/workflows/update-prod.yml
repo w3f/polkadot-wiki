@@ -1,0 +1,27 @@
+name: Update Polkadot & Kusama Prod
+on:
+  schedule:
+    - cron: '0 0 * * *' # At the end of every day (00:00)
+  workflow_dispatch: # Or manually from GitHub UI
+
+jobs:
+  update_prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set credentials
+        run: |
+          git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
+          git config --global user.name "Polkadot-Kusama Bot"
+      - name: Rebase and deploy
+        run: |
+          git checkout --track origin/prod
+          git rebase master
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
