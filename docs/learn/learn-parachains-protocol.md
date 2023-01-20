@@ -19,7 +19,7 @@ The protocol aims to carry a parachain's block from authoring to inclusion throu
 
 ### Validators
 
-They are responsible for validating proposed parachain's blocks by checking the **Proof-of-Validity** (PoV) of the blocks and ensuring the PoV remains available. They have "skin in the game", meaning they have funds bonded on-chain that can be partially or fully confiscated in case of misbehavior.
+They are responsible for validating the proposed parachain's blocks by checking the **Proof-of-Validity** (PoV) of the blocks and ensuring the PoV remains available for a designated period. They have "skin in the game", meaning they have funds bonded on-chain that can be partially or fully confiscated by the network in case of misbehavior.
 
 ### Collators
 
