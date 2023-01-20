@@ -13,7 +13,7 @@ This page is a summary of the [Protocol Overview chapter in **The Polkadot Parac
 
 :::
 
-The aim of the protocol is to carry a parachain's block from authoring to inclusion through a process that can be carried out repeatedly and in parallel for each parachain connected to the relay chain.
+The protocol aims to carry a parachain's block from authoring to inclusion through a process that can be carried out repeatedly and in parallel for each parachain connected to the relay chain.
 
 ## Main Actors
 
