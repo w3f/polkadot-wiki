@@ -572,7 +572,7 @@ Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is 
 :::tip Join a Nomination Pool
 
 By joining a [nomination pool](learn-nomination-pools.md) that is active and earning rewards, you
-can start earning staking rewards with as low as 1 DOT.
+can start earning staking rewards with as low as 1 DOT. The nomination pools typically have a dedicated pool operator who ensures that the pool's stake is always backing an active validator and is receiving rewards.
 
 :::
 
