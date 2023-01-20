@@ -25,9 +25,6 @@ They are responsible for validating the proposed parachain's blocks by checking 
 
 They create the PoV that validators know how to check. Creating PoV requires familiarity with transaction format and block authoring rules of a specific parachain, as well as having access to its full state.
 
-### Fishermen
-
-They catch misbehaving validators in exchange for a bounty. Collators and validators can behave as fishermen.
 
 ## Summary View
 
