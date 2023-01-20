@@ -103,6 +103,14 @@ ensure that the proxy account has the appropriate permission to make that transa
 the cold account. For example, staking proxies have permission to do only staking-related
 transactions.
 
+:::tip Know how to check the calls and pallets accessible by proxies
+
+For the latest information on the calls and pallets that can be fully accessed by proxies, check the
+[source code in the runtime folder](https://github.com/paritytech/polkadot/blob/153543b0c8c582e73f520e5c08cbe33bddfb5f69/runtime/polkadot/src/lib.rs#L1158)
+on the [Polkadot repository](https://github.com/paritytech/polkadot)
+
+:::
+
 ### Any Proxy
 
 As implied by the name, a proxy type of **Any** allows the proxy account to make any transaction,
@@ -113,12 +121,13 @@ frequently than the cold account and is therefore less secure.
 
 Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
 [balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting)
-transfers).
+transfers). Hence, this proxy does not have permission to access calls in the Balances and XCM pallet.
 
 ### Governance Proxy
 
 The **Governance** type will allow proxies to make transactions related to governance (i.e., from
-the Democracy, Council, Treasury, Technical Committee, and Elections pallets).
+the Democracy, Council, Technical Committee, Phragmen Election, Treasury, Bounties, Tips, Utility and
+Child Bounties pallets).
 
 :::note Explainers on governance proxies
 
@@ -146,6 +155,8 @@ as bonding extra funds or designating a new controller account. A proxy doesn't 
 of stash and controller accounts but does allow the stash to be accessed even less frequently than
 using a controller account.
 
+The staking proxy can fully access Staking, Session, Utility and Fast Unstake pallets.
+
 :::caution Do not use Staking proxy for participating in Nomination Pools
 
 Use a [non-transfer](#non-transfer-proxy) instead of a staking proxy to participate in nomination
@@ -157,12 +168,13 @@ pools. The staking proxy is not enabled to make successful calls to the nominati
 
 The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an
 account's identity. If you are unfamiliar with judgment and identities on chain, please refer to
-[this page](learn-identity.md#judgements).
+[this page](learn-identity.md#judgements). This proxy can only access `provide_judgement` call 
+from the Identity pallet along with the calls from the Utility pallet.
 
 ### Cancel Proxy
 
 Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy
-announcements.
+announcements. This proxy can only access `reject_announcement` call from the Proxy pallet.
 
 ### Auction Proxy
 
@@ -171,7 +183,8 @@ parachain auctions and crowdloans. The Auction proxy account can sign those tran
 of an account in cold storage. If you already set up a Non-transfer proxy account, it can do
 everything an Auction proxy can do. Before participating in a crowdloan using an Auction proxy, it
 is recommended that you check with the respective parachain team for any possible issues pertaining
-to the crowdloan rewards distribution.
+to the crowdloan rewards distribution. Auction proxy can access Auctions, Crowdloan, Registrar and
+Slots pallets.
 
 ## Removing Proxy
 
