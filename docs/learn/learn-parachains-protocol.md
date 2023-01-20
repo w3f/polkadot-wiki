@@ -38,7 +38,7 @@ The figure below shows a representation of a parachain with collators and valida
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
-Negative statements will lead to a dispute, and if there are false negatives whoever will be on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen, those actors responsible for it will also be slashed and whoever reported the case will get a bounty. In order to detect false positives, PoV information must be available after the block has been added to the relay chain so that validators can check the work. PoVs are expected to be between 1 MB and 10 MB; as a consequence they are not included in blocks but they are part of the data availability scheme in which validators must prove that the inputs to their work will remain available.
+Negative statements will lead to a dispute, and if there are false negatives, whoever will be on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen; those actors responsible for it will also be slashed. To detect false positives, PoV information must be available after the block has been added to the relay chain so that validators can check the work. PoVs are typically between 1 MB and 10 MB in size and are not included in the relaychain blocks. However, as a part of the data availability scheme, they are made available on the network for a certain period so that the validators can perform the required checks.
 
 ## Inclusion Pipeline
 
