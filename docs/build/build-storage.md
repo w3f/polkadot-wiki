@@ -58,6 +58,8 @@ To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust
 integrating with Crust by following their
 [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
 
+:::
+
 ### Filebase
 
 [Filebase](https://filebase.com) is the first S3-compatible object storage platform that allows you to store data in a secure, redundant, and performant manner across multiple decentralized storage networks. 
@@ -69,7 +71,7 @@ Filebase acts as an easy on-ramp to IPFS and decentralized storage by offering a
 :::note Learn more about Filebase
 
 To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com), and specifically the documentation on [deploying Polkadot dApp on decentralized storage.](https://docs.filebase.com/web3-education/web3-tutorials/polkadot/polkadot-deploy-a-polkadot-dapp-on-decentralized-storage)
-. You can get started with Filebase by signing up [here.](https://filebase.com/signup)
+You can get started with Filebase by signing up [here.](https://filebase.com/signup)
 
 :::
 
