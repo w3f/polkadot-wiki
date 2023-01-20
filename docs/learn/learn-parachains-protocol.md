@@ -30,11 +30,11 @@ They create the PoV that validators know how to check. Creating PoV requires fam
 
 The parachains' protocol can be summarized into three main steps:
 
-1. Collators send to validators parachain blocks with their PoV for check.
-2. Validators validate the block using the PoV, signing statements that can have positive or negative.
-3. With enough positive statements the block can be added to the relay chain.
+1. Collators send the parachain block (parablock) with PoV to the set for Validators assigned to the parachain.
+2. Validators verify if the parablock follows the state transition rules of the parachain and sign statements that can have a positive or negative outcome.
+3. With enough positive statements, the block is added to the relay chain.
 
-The figure below shows a representation of a parachain with collators and validators. The figure also shows the journey of a block through the three main steps, as well as the sections where the [Inclusion Pipeline](#inclusion-pipeline) and the [Approval Process](#approval-process) take place (see next Sections).
+The figure below shows a representation of a parachain with collators and validators. The figure also shows the journey of a block through the three main steps, as well as the sections where the [Inclusion Pipeline](#inclusion-pipeline) and the [Approval Process](#approval-process) take place (see following Sections).
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
