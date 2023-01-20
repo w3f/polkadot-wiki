@@ -28,10 +28,10 @@ Treasury payout is an automatic process:
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
   percentage of its funds - thereby causing deflationary pressure. This encourages the spending of
   the funds in the Treasury by Polkadot's governance system.
-  {{ polkadot: This percentage is currently at 1%
-  on Polkadot :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
+  {{ polkadot: This percentage is currently at 1% on Polkadot. :polkadot }}
+  {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
   going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
-  burned :kusama }}.
+  burned. :kusama }}
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
 least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
@@ -105,12 +105,11 @@ takes place on the following platforms:
   vote.
 
 Spreading the word about the proposal's explanation is ultimately up to the proposer - the
-recommended way is using official Element channels like {{ polkadot: the
-[Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and
-[Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
-{{ kusama: the
-[Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) or the
-[Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders) :kusama }}.
+recommended way is using official Element channels like the
+{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+{{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
+{{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
 
 ### Creating the Proposal
 
@@ -175,10 +174,10 @@ There are two types of tips:
   which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
-:::info 
+:::info
 
 For information about how to submit a tip from the Treasury you can read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181971). 
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181971).
 
 :::
 
@@ -231,7 +230,8 @@ highly unlikely that a majority of members are capable in such diverse topics.
 Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts
 called Curators: They can be defined as addresses with agency over a portion of the Treasury with
 the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks
-related to a specific topic: all for the benefit of the Polkadot ecosystem.
+related to a specific topic: all for the benefit of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined later,
 whose background and expertise is such that they are capable of determining when the task is

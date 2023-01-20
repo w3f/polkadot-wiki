@@ -144,7 +144,7 @@ export default function Footer() {
                 id: "footer.body.general.grantsAndBounties",
                 description: "Grants and Bounties link in General column in Footer",
               })}
-              href="https://github.com/w3f/General-Grants-Program"
+              href="https://web3.foundation/grants/"
             />
             <FooterLink
               content={translate({

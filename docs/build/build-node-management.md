@@ -88,7 +88,7 @@ can set a custom path with `--base-path <path>`.
 
 The keystore stores session keys, which are important for validator operations.
 
-- [Polkadot documentation](../learn/learn-keys.md/#session-keys)
+- [Polkadot documentation](../learn/learn-cryptography.md)
 - [Substrate documentation](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#specialized-accounts)
 
 **`db`**

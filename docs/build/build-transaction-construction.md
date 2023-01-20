@@ -53,8 +53,8 @@ can be described as follows:
 
 - Compact encoded number of SCALE encoded bytes following this.
 - 1 bit: it is a 0 if no signature is present, or a 1 if it is.
-- 7 bits: the extrinsic version, it is equal to 4 in decimal.\- 4 bytes: Spec version of the
-  runtime.
+- 7 bits: the extrinsic version, it is equal to 4 in decimal.
+- 4 bytes: Spec version of the runtime.
 - 4 bytes: Transaction version of the runtime.
 - 32 bytes: Genesis hash of the chain.
 - 32 bytes: Block hash serving as the era reference. If the transaction is immortal, then this would
@@ -80,7 +80,8 @@ serialized call data specific to your transaction. You can read more about the m
 and how to get it in the
 [Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
-\* Polkadot supports sr25519, ed25519, and ECDSA as signing schemes.
+\* {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports sr25519, ed25519, and
+ECDSA as signing schemes.
 
 **Summary**
 
@@ -133,7 +134,7 @@ Save the output and bring it to the machine that you will broadcast from, enter 
 signature field, and send the transaction (or just return the serialized transaction if using
 `sendOffline`).
 
-## Tx Wrapper Polkadot
+## Tx Wrapper
 
 If you do not want to use the CLI for signing operations, Parity provides an SDK called
 [TxWrapper Core](https://github.com/paritytech/txwrapper-core) to generate and sign transactions

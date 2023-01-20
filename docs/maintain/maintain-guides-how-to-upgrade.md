@@ -38,7 +38,7 @@ Session keys are stored in the client and used to sign validator operations. The
 validator node to your Controller account. If you change them within a session you will have to wait
 for the current session to finish and a further two sessions to elapse before they are applied.
 
-[More info about keys in Polkadot.](../learn/learn-keys.md)
+[More info about keys in Polkadot.](../learn/learn-cryptography.md)
 
 ### Keystore
 

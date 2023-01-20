@@ -63,7 +63,8 @@ Here is a list of what you will need before using Polkadot with Ledger:
   under the "Manager" tab, you will need to allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
-- A Chromium-based web browser is installed that you can use to access the [Polkadot-JS UI][].
+- A Chromium-based web browser is installed that you can use to access the
+  [Polkadot-JS UI](https://www.ledger.com/).
 
 ## Using Ledger Live
 
@@ -86,10 +87,10 @@ using Polkadot JS. For more information about derived accounts and derivation pa
 
 ### Loading Your Account
 
-:::info 
+:::info
 
-Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with
-normal operation.
+Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with normal
+operation.
 
 :::
 
@@ -139,8 +140,8 @@ more information about signing transactions using your ledger.
 
 To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device).
-Here you can scroll through and make sure the address matches to what is displayed on [Polkadot-JS
-UI][].
+Here you can scroll through and make sure the address matches to what is displayed on
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 
 ### Checking the Balance of Your Account
 
@@ -191,19 +192,20 @@ Democracy extrinsics on the full ledger.
 
 :::warning
 
-This section is for developers only. It is recommended to install the
-application from Ledger Live unless you _know exactly what you're doing_.
+This section is for developers only. It is recommended to install the application from Ledger Live
+unless you _know exactly what you're doing_.
 
 :::
 
 ### Why you might need the Developer Release
 
 Ledger apps for the Polkadot and Kusama ecosystems are developed by [Zondax](https://zondax.ch/).
-When new functionalities are added to the Ledger apps, they are made available on a developer release for testing purposes. After a successful audit and review, the apps would be available for download and
-installation using [Ledger Live](https://www.ledger.com/ledger-live). As it takes some
-time for Ledger to audit and review the release, the app upgrade option may not be 
-available on Ledger Live when the new runtime is deployed on the network. If this happens, users cannot use Ledger
-devices with the Polkadot-JS UI, and while signing for a transaction, they will most likely
+When new functionalities are added to the Ledger apps, they are made available on a developer
+release for testing purposes. After a successful audit and review, the apps would be available for
+download and installation using [Ledger Live](https://www.ledger.com/ledger-live). As it takes some
+time for Ledger to audit and review the release, the app upgrade option may not be available on
+Ledger Live when the new runtime is deployed on the network. If this happens, users cannot use
+Ledger devices with the Polkadot-JS UI, and while signing for a transaction, they will most likely
 incur the error message "txn version not supported". Please do not panic if this happens, as there
 are solutions to this problem. If you cannot wait a couple of days until the app passes the Ledger
 audit, you can install the developer release from the shell using the latest version published on
@@ -213,7 +215,8 @@ audit, you can install the developer release from the shell using the latest ver
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer release of your ledger app.
+See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer
+release of your ledger app.
 
 :::
 
@@ -240,6 +243,3 @@ below:
 - If you wish to revert the version back to stable release just go to Ledger Live, the app will
   automatically detect the developer release and give the option to install the previous stable
   release.
-
-[ledger]: https://www.ledger.com/
-[polkadot-js ui]: https://polkadot.js.org/apps/#/explorer

@@ -9,10 +9,11 @@ slug: ../maintain-guides-how-to-use-polkadot-validator-setup
 
 # Polkadot Validator Setup
 
-The following guide will walk you through using Web3 Foundation's [polkadot validator setup][] to
-offer a potential setup for your validator that aims to prevent some types of potential attacks at
-the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and, if
-you're using another Substrate-based chain, it should work with some tweaks.
+The following guide will walk you through using Web3 Foundation's
+[polkadot validator setup](https://github.com/w3f/polkadot-validator-setup) to offer a potential
+setup for your validator that aims to prevent some types of potential attacks at the TCP layer and
+layers below. This will work for Polkadot and Kusama out of the box, and, if you're using another
+Substrate-based chain, it should work with some tweaks.
 
 :::tip This setup should not be assumed to include the best security practices
 
@@ -34,8 +35,8 @@ There are two ways that the setup can be configured:
    tool for setting up the VPN, Firewall, and the validator node. It supports a few different cloud
    providers such as AWS, Microsoft Azure, GCP, and Packet.
 
-   :::note Please file an [issue][] if you would like to make a feature request or report a bug for
-   this setup
+   :::note Please file an [issue](https://github.com/w3f/polkadot-validator-setup/issues) if you
+   would like to make a feature request or report a bug for this setup
 
    :::
 
@@ -51,7 +52,8 @@ system.
 
 ### NodeJS
 
-We recommend using [nvm][] as a tool to manage different NodeJS versions across projects.
+We recommend using [nvm](https://github.com/nvm-sh/nvm) as a tool to manage different NodeJS
+versions across projects.
 
 ```
 sudo apt-get install curl
@@ -105,8 +107,8 @@ machines.
 
 ### Step Two: Generate the SSH keys
 
-We will use [SSH][], a remote shell tool, to access our validator. You will first use the
-`ssh-keygen` command to generate a key for your validator.
+We will use [SSH](https://en.wikipedia.org/wiki/Secure_Shell), a remote shell tool, to access our
+validator. You will first use the `ssh-keygen` command to generate a key for your validator.
 
 ```zsh
 $ ssh-keygen -m pem -f id_rsa_validator
@@ -176,15 +178,17 @@ use them:
 In the `additionalFlags` option, configure any of the additional flags you want to run for your
 validator. If you want to run with a specific name, this is where you would enter it.
 
-Under the `polkadotBinary.url` field you can provide the release that is hosted in the [W3F
-repository][w3f polkadot] or use an alternate one that you build and publish yourself.
+Under the `polkadotBinary.url` field you can provide the release that is hosted in the
+[W3F repository](https://github.com/w3f/polkadot/releases) or use an alternate one that you build
+and publish yourself.
 
-By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter][], which will
-expose hardware-level metrics of your node in a format compatible with Prometheus.
+By enabling the `nodeExporter`, Ansible will install and configure the
+[node_exporter](https://github.com/prometheus/node_exporter), which will expose hardware-level
+metrics of your node in a format compatible with Prometheus.
 
 The field `machineType:` will configure the machine's hardware specifications, check
-[here][gcp machine types] for the configuration options for GCP. The other hosting providers should
-have similar pages in their documentation.
+[here](https://cloud.google.com/compute/docs/machine-types) for the configuration options for GCP.
+The other hosting providers should have similar pages in their documentation.
 
 Under `provider` the option are `gcp` (Google Cloud Provider), `aws` (AWS), `azure` (Microsoft
 Azure) and `packet` for Packet.
@@ -192,12 +196,14 @@ Azure) and `packet` for Packet.
 The field `count` is the number of instances you would like to create.
 
 The `location` and `zone` fields are for the location of the machine, for GCP check
-[here][gcp regions], other cloud providers will have similar documentation.
+[here](https://cloud.google.com/compute/docs/regions-zones/), other cloud providers will have
+similar documentation.
 
 The `telemetryUrl` field will send your node's information to a specific telemetry server. You could
 send all your nodes' data (e.g. IP address) to the public endpoint, but it is highly recommended
 that that you set up your own telemetry server to protect your validator’s data from being exposed
-to the public. If you want to do that, see [substrate telemetry source][].
+to the public. If you want to do that, see
+[substrate telemetry source](https://github.com/paritytech/substrate-telemetry).
 
 :::note
 
@@ -215,7 +221,8 @@ For different cloud providers, you need to set the corresponding credentials as 
 variables, for example, on GCP you only need to set `GOOGLE_APPLICATION_CREDENTIALS`. This variable
 is the path to the JSON file containing the credentials of the service account you wish to use; this
 service account needs to have write access to compute and network resources if you use GCP. For
-others, you can check that by referring to the [README][].
+others, you can check that by referring to the
+[README](https://github.com/w3f/polkadot-validator-setup#prerequisites).
 
 :::info Environment variables for Ansible
 
@@ -308,14 +315,3 @@ it.
 
 Congratulations! You have successfully deployed a secure validator. Free feel to open an issue if
 you have any suggestions.
-
-[polkadot validator setup]: https://github.com/w3f/polkadot-validator-setup
-[issue]: https://github.com/w3f/polkadot-validator-setup/issues
-[ssh]: https://en.wikipedia.org/wiki/Secure_Shell
-[nvm]: https://github.com/nvm-sh/nvm
-[w3f polkadot]: https://github.com/w3f/polkadot/releases
-[node_exporter]: https://github.com/prometheus/node_exporter
-[gcp machine types]: https://cloud.google.com/compute/docs/machine-types
-[gcp regions]: https://cloud.google.com/compute/docs/regions-zones/
-[substrate telemetry source]: https://github.com/paritytech/substrate-telemetry
-[readme]: https://github.com/w3f/polkadot-validator-setup#prerequisites

@@ -9,7 +9,8 @@ slug: ../learn-runtime-upgrades
 
 # Runtime Upgrades
 
-Runtime upgrades allow Polkadot to change the logic of the chain, without the need for a hard fork.
+Runtime upgrades allow {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to change the
+logic of the chain, without the need for a hard fork.
 
 ## Forkless Upgrades
 
@@ -19,14 +20,18 @@ able to remain in consensus with nodes that do. Such changes are backward incomp
 can be political due to the nature of the upgrades, as well as logistically onerous due to the
 number (potentially thousands) of nodes in the network that need to upgrade their software.
 
-Rather than encode the runtime (a chain's "business logic") in the nodes, Polkadot nodes contain a
-WebAssembly [execution host](learn-polkadot-host). They maintain consensus on a very low level and
-well-established instruction set. The Polkadot runtime is stored on the Polkadot blockchain itself.
+Rather than encode the runtime (a chain's "business logic") in the nodes,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
+[execution host](learn-polkadot-host). They maintain consensus on a very low level and
+well-established instruction set. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+runtime is stored on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain
+itself.
 
-As such, Polkadot can upgrade its runtime by upgrading the logic stored on-chain, and removes the
-coordination challenge of requiring thousands of node operators to upgrade in advance of a given
-block number. Polkadot stakeholders propose and approve upgrades through the
-[on-chain governance](learn-governance.md) system, which also enacts them autonomously.
+As such, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by
+upgrading the logic stored on-chain, and removes the coordination challenge of requiring thousands
+of node operators to upgrade in advance of a given block number. Polkadot stakeholders propose and
+approve upgrades through the [on-chain governance](learn-governance.md) system, which also enacts
+them autonomously.
 
 ## New [Client Releases](https://github.com/paritytech/polkadot/releases)
 
@@ -43,8 +48,8 @@ you don't think you can submit a transaction before the upgrade, it is better to
 it after the upgrade takes place.
 
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
-following the Polkadot releases and upgrading promptly, especially for high priority or critical
-releases.
+following the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading
+promptly, especially for high priority or critical releases.
 
 ## Runtime Upgrades for Various Users
 
@@ -63,13 +68,14 @@ to upgrade their clients within a specific time frame, for example if a release 
 changes to networking. It is essential to check the release notes, starting with the upgrade
 priority and acting accordingly.
 
-General infrastructure providers, aside from following the Polkadot releases and upgrading in a
-timely manner, should monitor changes to runtime events and auxiliary tooling, such as the
+General infrastructure providers, aside from following the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading in a timely
+manner, should monitor changes to runtime events and auxiliary tooling, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
-Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
-occurs before broadcasting a previously constructed transaction, you will need to reconstruct it
-with the appropriate runtime version and corresponding metadata.
+Transactions constructed for runtime `n` will not work for any other runtime `>n`. If a runtime
+upgrade occurs before broadcasting a previously constructed transaction, you will need to
+reconstruct it with the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 

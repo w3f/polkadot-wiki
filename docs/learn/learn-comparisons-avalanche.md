@@ -34,7 +34,7 @@ Ethereum. Smart contracts in Polkadot are implemented on
 [parachains](build-smart-contracts#parachains). Polkadot being a layer-0 blockchain, is not a smart
 contract platform and does not have plans to support them natively.
 
-![Avalanche Network](../assets/comparisons/avalanche/avalanche-network.png)
+![avalanche-network](../assets/comparisons/avalanche/avalanche-network.png)
 
 Image source: [Avalanche docs](https://docs.avax.network/).
 
@@ -75,7 +75,7 @@ Primary Network.
 
 ## Consensus
 
-![Avalanche Network](../assets/comparisons/avalanche/avalanche-consensus-protocols.png)
+![avalanche-consensus-protocols](../assets/comparisons/avalanche/avalanche-consensus-protocols.png)
 
 Image source:
 [gyuho.dev](https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols).

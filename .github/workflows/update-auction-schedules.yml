@@ -1,7 +1,7 @@
 name: Update Auction Schedules
 on:
   schedule:
-    - cron: '0 0 * * 1' # Once a week
+    - cron: '0 0 * * *' # At the end of every day (00:00)
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:
@@ -14,22 +14,33 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Update cache
+      - name: Set credentials
         run: |
           git config --global user.email "polkadot-kusama-automation-bot@users.noreply.github.com"
           git config --global user.name "Polkadot-Kusama Bot"
+      - name: Check for existing branch
+        run: |
+          if [[ $(git ls-remote --heads origin refs/heads/auction-schedule-update | wc -l) == "1" ]]; then
+            echo deleting existing branch
+            git push origin --delete auction-schedule-update
+          else 
+            echo no existing branch found
+          fi
+      - name: Update cache
+        run: |
           git branch auction-schedule-update
           git checkout auction-schedule-update
-          yarn && yarn update:auctions
-      - name: Commit and push changes
+          yarn
+          yarn get:auctions
+          yarn update:auctions
+      - name: Commit, push and open new PR with changes (if any)
         run: |
           if [[ `git status --porcelain` ]]; then
             git commit -a -m 'auction schedule update'
             git push --set-upstream origin auction-schedule-update
+            gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Automated Auction Schedule Update'
           else
             echo No auction changes detected, skipping update.
           fi
-      - name: create pull request
-        run: gh pr create -B master -H auction-schedule-update --title 'Automated auction schedule cache update' --body 'Automated Auction Schedule Update'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

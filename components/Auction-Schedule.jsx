@@ -58,7 +58,7 @@ async function SetCurrentBlockData() {
 // Loads drop-down selections
 async function LoadOptions(auctions, wsProvider) {
 	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{`Auction #${i + 1}`}</option>
+		const option = <option value={i} key={i}>{`Auction #${auctions[i].index + 1}`}</option>
 		Options.push(option);
 	}
 	API = await ApiPromise.create({ provider: wsProvider });
@@ -114,10 +114,10 @@ function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
 		}
 		if (auctions[i].biddingEndsBlock > currentBlock) {
 			if (auctions[i].startBlock > currentBlock) {
-				status = `Auction #${i + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				status = `Auction #${auctions[i].index + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
 				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
 			} else {
-				status = `Auction #${i + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
+				status = `Auction #${auctions[i].index + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
 				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
 			}
 			index = i;

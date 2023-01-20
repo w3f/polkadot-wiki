@@ -35,6 +35,18 @@ const KusamaAuctions = KsmAuctions;
 // A future block that does not yet have an associated hash
 const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
 
+// RPC variables for connecting to respective APIs
+const PolkadotParameters = {
+  name: "Polkadot",
+  cache: "PolkadotAuctions.json",
+  ws: "wss://rpc.polkadot.io"
+}
+const KusamaParameters = {
+  name: "Kusama",
+  cache: "KusamaAuctions.json",
+  ws: "wss://kusama-rpc.polkadot.io",
+}
+
 module.exports = {
   PolkadotSlotLeasePeriod,
   KusamaSlotLeasePeriod,
@@ -49,4 +61,6 @@ module.exports = {
   PolkadotAuctions,
   KusamaAuctions,
   FutureBlock,
+  PolkadotParameters,
+  KusamaParameters
 }

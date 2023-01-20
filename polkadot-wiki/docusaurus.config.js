@@ -1,9 +1,5 @@
-const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
 const i18n = require("./i18n");
-
-const isBuilding = process.env.BUILDING === "true";
-const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Polkadot Wiki",
@@ -23,7 +19,7 @@ module.exports = {
       defer: true,
     },
     {
-      src: "https://apisa.web3.foundation/latest.js",
+      src: "https://apisa.polkadot.network/latest.js",
       async: true,
       defer: true,
     },
@@ -85,6 +81,10 @@ module.exports = {
             from: ['/docs/learn-crosschain', '/docs/learn-cross-consensus']
           },
           {
+            to: '/docs/learn-parachains',
+            from: ['/docs/learn-security']
+          },
+          {
             to: '/docs/learn-account-advanced',
             from: ['/docs/learn-account-transfer']
           },
@@ -95,6 +95,18 @@ module.exports = {
           {
             to: '/docs/learn-staking-advanced',
             from: ['/docs/learn-simple-payouts']
+          },
+          {
+            to: '/docs/learn-account-generation',
+            from: ['/docs/learn-account-restore']
+          },
+          {
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/learn-system-chains',
+            from: ['/docs/learn-common-goods']
           }
         ],
         createRedirects: function (existingPath) {

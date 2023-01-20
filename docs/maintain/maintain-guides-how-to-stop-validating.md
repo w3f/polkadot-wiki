@@ -24,7 +24,7 @@ extrinsics.
 
 To chill your validator or nominator, call the `staking.chill()` extrinsic. See the
 [How to Chill](maintain-guides-how-to-chill.md) page for more information. You can also
-[claim your rewards](../learn/learn-simple-payouts.md#claiming-rewards) at this time.
+[claim your rewards](../learn/learn-staking-advanced.md) at this time.
 
 ## Purge validator session keys
 
@@ -48,7 +48,7 @@ that **cannot** be removed, and as a result that account cannot be reaped.
 to rebond, purge the session keys, unbond, and wait the unbonding period again before being able to
 transfer your tokens.
 
-See [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) for more details.
+See [Unbonding and Rebonding](maintain-guides-how-to-nominate-polkadot.md) for more details.
 
 :::
 

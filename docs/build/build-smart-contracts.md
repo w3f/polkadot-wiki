@@ -52,19 +52,23 @@ while smart contract platforms are event-driven.
 
 ## Building a Smart Contract
 
-The Polkadot relay chain itself will not support smart contracts. However, since the parachains that
-connect to Polkadot can support arbitrary state transitions, they can support smart contracts.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain itself will not
+support smart contracts. However, since the parachains that connect to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can support arbitrary state
+transitions, they can support smart contracts.
 
 Substrate presently supports smart contracts out-of-the-box in two ways:
 
-- The EVM pallet offered by [Frontier][].
-- The [Contracts pallet][] in the FRAME library for Wasm-based contracts.
+- The EVM pallet offered by [Frontier](https://github.com/paritytech/frontier).
+- The [Contracts pallet](https://github.com/paritytech/substrate/blob/master/frame/contracts/) in
+  the FRAME library for Wasm-based contracts.
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contracts (EVM)
-natively with the same API/RPC interface, Ethereum exposes on Substrate. Ethereum Addresses can also
-be mapped directly to and from Substrate's SS58 scheme from existing accounts.
+[Frontier](https://github.com/paritytech/frontier) is the suite of tools that enables a Substrate
+chain to run Ethereum contracts (EVM) natively with the same API/RPC interface, Ethereum exposes on
+Substrate. Ethereum Addresses can also be mapped directly to and from Substrate's SS58 scheme from
+existing accounts.
 
 ### Substrate Contracts
 
@@ -138,8 +142,8 @@ Some of these PSPs are targeting Substrate's `contracts` pallet:
 in Rust and compiles to Wasm code. As it states in its README, it is still in an experimental phase
 so brave developers should be aware that they might have a bumpy - but workable - development
 experience. There are some projects that have built projects in ink! with a decent level of
-complexity such as Plasm's [Plasma contracts][plasm plasma], so it is mature enough to start
-building interesting things.
+complexity such as Plasm's [Plasma contracts](https://github.com/staketechnologies/Plasm), so it is
+mature enough to start building interesting things.
 
 For interested developers, they can get started writing smart contracts using ink! by studying the
 [examples](https://github.com/paritytech/ink/tree/master/examples) that were already written. These
@@ -179,8 +183,9 @@ should also keep up to date with the following links:
 - [Phala](https://phala.network)
 
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
-created and maintained list of different smart contract platforms building on Polkadot can be found
-at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
+created and maintained list of different smart contract platforms building on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be found at
+[PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
 
@@ -195,7 +200,8 @@ launched as a parachain on Kusama. Parachain functionality is live, and features
 incrementally released. The final phase of the launch will include EVM functionality and balance
 transfers.
 
-Try deploying a smart contract to Moonbeam by following their [documentation][moonbeam docs].
+Try deploying a smart contract to Moonbeam by following their
+[documentation](https://docs.moonbeam.network/).
 
 #### Astar
 
@@ -240,30 +246,14 @@ Try deploying a confidential smart contract by following their
 Even though the tooling is still maturing, the advantage of being early will be the familiarity and
 head start on your project, allowing you to innovate and create something truly new.
 
-{{ polkadot: If you have interesting ideas for smart contracts on Polkadot, feel free to drop
-into the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) to talk
-about them. Developers may be interested in joining the
-[Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their questions.
-As always, keep up to date with Polkadot and Kusama by following the
-[social channels](../general/community.md). :polkadot }}
-
-{{ kusama: If you have interesting ideas for smart contracts on Kusama, feel free to drop into the
-[Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) to talk about them.
-Developers may be interested in joining the
-[Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their questions.
-As always, keep up to date with Polkadot and Kusama by following the
-[social channels](../general/community.md). :kusama }}
+If you have interesting ideas for smart contracts on
+{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} feel free to drop into the
+{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) :polkadot }}
+{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to
+talk about them. Developers may be interested in joining the
+[Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) :polkadot }} or
+[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their
+questions. As always, keep up to date with Polkadot and Kusama by following the
+[social channels](../general/community.md).
 
 All the best.
-
-[frontier]: https://github.com/paritytech/frontier
-[contracts pallet]: https://github.com/paritytech/substrate/blob/master/frame/contracts/
-[edgeware]: https://edgewa.re
-[edgeware documentation]: https://docs.edgewa.re/
-[edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts
-[plasm plasma]: https://github.com/staketechnologies/Plasm
-[moonbeam]: https://moonbeam.network
-[moonbeam docs]: https://docs.moonbeam.network/
-[frontier]: (https://github.com/paritytech/frontier)
