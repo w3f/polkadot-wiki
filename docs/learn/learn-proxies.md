@@ -121,13 +121,14 @@ frequently than the cold account and is therefore less secure.
 
 Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
 [balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting)
-transfers). Hence, this proxy does not have permission to access calls in the Balances and XCM pallet.
+transfers). Hence, this proxy does not have permission to access calls in the Balances and XCM
+pallet.
 
 ### Governance Proxy
 
 The **Governance** type will allow proxies to make transactions related to governance (i.e., from
-the Democracy, Council, Technical Committee, Phragmen Election, Treasury, Bounties, Tips, Utility and
-Child Bounties pallets).
+the Democracy, Council, Technical Committee, Phragmen Election, Treasury, Bounties, Tips, Utility
+and Child Bounties pallets).
 
 :::note Explainers on governance proxies
 
@@ -168,8 +169,8 @@ pools. The staking proxy is not enabled to make successful calls to the nominati
 
 The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an
 account's identity. If you are unfamiliar with judgment and identities on chain, please refer to
-[this page](learn-identity.md#judgements). This proxy can only access `provide_judgement` call 
-from the Identity pallet along with the calls from the Utility pallet.
+[this page](learn-identity.md#judgements). This proxy can only access `provide_judgement` call from
+the Identity pallet along with the calls from the Utility pallet.
 
 ### Cancel Proxy
 
