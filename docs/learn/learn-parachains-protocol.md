@@ -43,9 +43,9 @@ The parachains' protocol can be summarized into three main steps:
 3. With enough positive statements, the block is added to the Relay Chain.
 
 The figure below shows a representation of a parachain with collators and validators. The figure
-also shows the journey of a block through the three main steps, as well as the sections where the
-[Inclusion Pipeline](#inclusion-pipeline) and the [Approval Process](#approval-process) take place
-(see following Sections).
+also shows the journey of a block (white square) through the three main steps, as well as the
+sections where the [Inclusion Pipeline](#inclusion-pipeline) and the
+[Approval Process](#approval-process) take place (see following Sections).
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
