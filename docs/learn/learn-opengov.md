@@ -317,7 +317,7 @@ So for example, a voter could delegate one entity for managing a less potent ref
 a different delegate for a different class with more powerful consequences and still retain full
 voting power over any remaining classes.
 
-Occasional delegation and undelegation calls are fee-free: creating an incentivize token holders to
+Occasional delegation and undelegation calls are fee-free: creating incentive for token holders to
 use this feature and ensuring that wallets can do it “by default” without any cost to end-users. It
 is worth noting that a user delegating their voting power does not imply that the delegate will have
 control over the funds of the delegating account: they can vote with a user's voting power: but they
@@ -333,9 +333,8 @@ The following steps outline how to delegate voting power in OpenGov:
 1. Navigate to the [referenda tab](https://polkadot.js.org/apps/#/referenda)
 2. Click the `Delegate` icon in the top-right corner
    ![Delegate Window](./../assets/governance/Delegate-Window-Kusama.png)
-3. Ensure the `using the selected account` field lists the account you wish to apply delegation to
-4. Select `convictionVoting` from the `submit the following extrinsic` dropdown
-5. Next, select the appropriate `submission track` that you wish to delegate (or select the option
+3. Ensure the `delegate from account` field lists the account you wish to apply delegation over
+4. Next, select the appropriate `submission track` that you wish to delegate (or select the option
    `apply delegation to all tracks`)
 
    - `0` - Root
@@ -354,13 +353,14 @@ The following steps outline how to delegate voting power in OpenGov:
    - `33` - Medium Spender
    - `34` - Big Spender
 
-6. Specify the `delegate vote value`, which is the amount of DOT or KSM you wish to provide the
+5. Specify the `delegate vote value`, which is the amount of DOT or KSM you wish to provide the
    delegate with
-7. Provide a `conviction` multiplier determining how long the funds from the previous step are lock
+6. Provide a `conviction` multiplier determining how long the funds from the previous step are lock
    (for additional details see the section on[Voluntary Locking](#voluntary-locking)) and click
    `Next`
-8. The final step is to provide the account address that will be the delegate for the original
-   account you provided (this account will be receiving the voting power for the source account)
+7. The final step is to provide the account address that will be the delegate for the original
+   account you provided (this account will be receiving the voting power for the source account on
+   the specified track)
 
 ![Delegate](./../assets/governance/Delegate-Kusama.png)
 
