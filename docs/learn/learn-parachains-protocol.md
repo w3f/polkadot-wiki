@@ -15,7 +15,7 @@ This page is a summary of the
 :::
 
 The protocol aims to carry a parachain's block from authoring to inclusion through a process that
-can be carried out repeatedly and in parallel for each parachain connected to the relay chain.
+can be carried out repeatedly and in parallel for each parachain connected to the Relay Chain.
 
 ## Main Actors
 
@@ -37,10 +37,10 @@ its full state.
 The parachains' protocol can be summarized into three main steps:
 
 1. Collators send the parachain block (parablock) with PoV to the set of Validators assigned to the
-   parachain.
+   parachain (i.e. para-validators).
 2. Validators verify if the parablock follows the state transition rules of the parachain and sign
    statements that can have a positive or negative outcome.
-3. With enough positive statements, the block is added to the relay chain.
+3. With enough positive statements, the block is added to the Relay Chain.
 
 The figure below shows a representation of a parachain with collators and validators. The figure
 also shows the journey of a block through the three main steps, as well as the sections where the
@@ -49,18 +49,18 @@ also shows the journey of a block through the three main steps, as well as the s
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
-Negative statements will lead to a dispute, and if there are false negatives, whoever will be on the
-wrong side (once the dispute is resolved) will be slashed. False positives can also happen; those
-actors responsible for it will also be slashed. To detect false positives, PoV information must be
-available after the block has been added to the relay chain so that validators can check the work.
-PoVs are typically between 1 MB and 10 MB in size and are not included in the relaychain blocks.
-However, as a part of the data availability scheme, they are made available on the network for a
-certain period so that the validators can perform the required checks.
+Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
+on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
+those actors responsible for it will also be slashed. To detect false positives, PoV information
+must be available after the block has been added to the Relay Chain so that validators can check the
+work. PoVs are typically between 1 MB and 10 MB in size and are not included in the Relay Chain
+blocks. However, as a part of the data availability scheme, they are made available on the network
+for a certain period so that the validators can perform the required checks.
 
 ## Inclusion Pipeline
 
 The inclusion pipeline is the path of a parachain block (or parablock) from its creation ot its
-inclusion into the relay chain. Here below there are the checkpoints of that path.
+inclusion into the Relay Chain. Here below there are the checkpoints of that path.
 
 1. Validators are assigned to parachains by the **Validator Assignment** routine.
 2. A collator produces the parachain block (known as parachain candidate, or candidate) along with
@@ -71,9 +71,9 @@ inclusion into the relay chain. Here below there are the checkpoints of that pat
    Candidates that gather enough signed validity statement are considered **"backable"** and their
    backing is the set of signed statements.
 5. A relay chain block author (selected by [BABE][]) can note up to 1 backable candidate for each
-   parachain to be included in the relay chain block alongside its backing. Once included in the
-   relay chain the candidate is considered backable in the fork of the relay chain.
-6. Once backable in the relay chain, the candidate is considered to be "pending availability", i.e.
+   parachain to be included in the Relay Chain block alongside its backing. Once included in the
+   Relay Chain the candidate is considered backable in the fork of the Relay Chain.
+6. Once backable in the Relay Chain, the candidate is considered to be "pending availability", i.e.
    it is not considered to be part of the parachain until it is **proven available**.
 7. In the following relay chain blocks, the validators will participate to the **Availability
    Distribution** subsystem to ensure availability of the candidate. That is, information regarding
@@ -87,13 +87,24 @@ inclusion into the relay chain. Here below there are the checkpoints of that pat
 The figure above shows the path of a candidate block through the Inclusion pipeline. The block
 changes its status through this path as follows:
 
-- Candidate: A block is put forward by a collator to a validator (in this case V1).
-- Seconded: The block is put forward by V1 to other validators (in this case V2 and V3).
-- Backable: The block validity is attested by a majority of the validators.
-- Backed: The block is backed and noted in a fork on the relay chain by a relay chain block author
-  (in this case V4).
+- Candidate: A block is put forward by a collator to a validator (in this case V1). The candidate
+  block is shown as white square enclosing a question mark, with one white tick mark at the side.
+  The white tick mark is the PoV from the collator. The question mark shows how the candidate is not
+  valid yet and can still fail to be included in the Relay Chain.
+- Seconded: The block is put forward by V1 to other validators (in this case V2 and V3). The
+  seconded block is shown as white square inclosing a question mark, with a white tick mark and two
+  yellow tick marks on top of it. The yellow marks show the PoV from the para-validators.
+- Backable: The block validity is attested by a majority of the validators. The backable block is
+  shown as white square inclosing a question mark, with a white tick mark and three yellow tick
+  marks on top of it. The yellow marks show the PoV from the para-validators.
+- Backed: The block is backed and noted in a fork on the Relay Chain by a relay chain block author
+  (in this case V4). The backed block is shown as square with white background and yellow border
+  enclosing a question mark. The backed block can still fail to be included in the Relay Chain. Note
+  that for simplicity here the backed parachain block is represented as a block of the Relay Chain,
+  but in reality a relay chain block contains many parachian blocks.
 - Pending availability: The block is backed but not considered available yet.
-- Included: The block is backed and considered available (we have a parablock).
+- Included: The block is backed and considered available (we have a parablock). Parablocks are shown
+  as square with white background and yellow border enclosing a "P".
 
 Once the parablock is considered available and part of the parachain, it is still "pending
 approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
@@ -105,8 +116,8 @@ The candidate can fail to be included in the parachain in any of the following w
 - The collator is not able to propagate the block to any of the assigned validators.
 - The candidate is not backed by validators participating to the Candidate Backing subsystem.
 - The candidate is not selected by a relay chain block author.
-- The candidate's PoV is not considered available within a timeout, and it is discarded frm the
-  relay chain.
+- The candidate's PoV is not considered available within a timeout, and it is discarded from the
+  Relay Chain.
 
 ## Approval Process
 
@@ -137,7 +148,9 @@ The figure below shows the path of a parachain block when it exits the Inclusion
 enters the Approval Process. The parablock becomes accepted when it is backed, available and
 **undisputed**. Thr parablock is checked a second time by a subset of validators (V5, V6 and V7),
 and if there are no contradictory results the block is approved and gossiped to other relay chain
-validators.
+validators. Note the parablock after second checks is shown as a square with white background a
+yellow border enclosing a "P", and three white ticks (one for each second checker). Approved
+para-blocks are shown as yellow squares.
 
 ![parachain-approval-process](../assets/parachain-approval-process.png)
 
@@ -151,8 +164,8 @@ More information can be found in the dedicated sections about the
 
 ## Network Asynchrony
 
-We have mentioned how a relay chain block author must select the candidate and note it on the relay
-chain (we say the block is backed). The relay chain block author is selected by BABE, which is a
+We have mentioned how a relay chain block author must select the candidate and note it on the Relay
+Chain (we say the block is backed). The relay chain block author is selected by BABE, which is a
 forkful algorithm. This means that different block authors are chosen at the same time and they may
 not work on the same block parent (i.e. the representations in the previous figures are simplistic).
 Also, the sets of validators and parachains are not fixed, and the validators' assignments to
