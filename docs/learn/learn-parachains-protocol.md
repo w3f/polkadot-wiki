@@ -149,7 +149,7 @@ enters the Approval Process. The parablock becomes accepted when it is backed, a
 and if there are no contradictory results the block is approved and gossiped to other relay chain
 validators. Note the parablock after second checks is shown as a square with white background a
 yellow border enclosing a "P", and three white ticks (one for each second checker). Approved
-para-blocks are shown as yellow squares.
+para-blocks are shown as yellow squares the become grey.
 
 ![parachain-approval-process](../assets/parachain-approval-process.png)
 
