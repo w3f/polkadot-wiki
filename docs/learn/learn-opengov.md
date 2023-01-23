@@ -332,6 +332,7 @@ The following steps outline how to delegate voting power in OpenGov:
 
 1. Navigate to the [referenda tab](https://polkadot.js.org/apps/#/referenda)
 2. Click the `Delegate` icon in the top-right corner
+   ![Delegate Window](./../assets/governance/Delegate-Window-Kusama.png)
 3. Ensure the `using the selected account` field lists the account you wish to apply delegation to
 4. Select `convictionVoting` from the `submit the following extrinsic` dropdown
 5. Next, select the appropriate `submission track` that you wish to delegate (or select the option
@@ -361,6 +362,8 @@ The following steps outline how to delegate voting power in OpenGov:
 8. The final step is to provide the account address that will be the delegate for the original
    account you provided (this account will be receiving the voting power for the source account)
 
+![Delegate](./../assets/governance/Delegate-Kusama.png)
+
 When you are ready to undelegate:
 
 1. Navigate to the [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics)
@@ -370,6 +373,8 @@ When you are ready to undelegate:
    delegate from this page as an alternative to the solution provided above)
 5. Provide the `submission track` that was used when originally delegating from above
 6. Sign and submit the transaction to restore the voting power back to the original source address
+
+![Undelegate](./../assets/governance/Undelegate-Kusama.png)
 
 ### Canceling Referenda
 
