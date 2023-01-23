@@ -16,10 +16,10 @@ connection between the end user and the RPC server. This can be achieved by sett
 proxy. Many browsers such as Google Chrome will block non secure WS endpoints if they come from a
 different origin.
 
-:::note 
+:::note
 
-Enabling remote access to your validator node should not be necessary and is not suggested
-as it can often lead to security problems 
+Enabling remote access to your validator node should not be necessary and is not suggested as it can
+often lead to security problems
 
 :::
 
@@ -60,9 +60,9 @@ at 115 GB for a pruned node and 765 GB for an archive node. This value will incr
 an archive node you need the options `--state-pruning archive --blocks-pruning archive` in your
 startup settings.
 
-:::tip 
+:::tip
 
-Inclusion in the Polkadot.js UI requires an archive node. 
+Inclusion in the Polkadot.js UI requires an archive node.
 
 :::
 
@@ -170,7 +170,8 @@ ProxyPass / ws://localhost:9944
 ProxyPassReverse / ws://localhost:9944
 ```
 
-Older versions of mod_proxy_wstunnel do not upgrade the connection automatically and will need the following config added:
+Older versions of mod_proxy_wstunnel do not upgrade the connection automatically and will need the
+following config added:
 
 ```apacheconf
 RewriteEngine on
@@ -179,8 +180,7 @@ RewriteRule /(.*) ws://localhost:9944/$1 [P,L]
 RewriteRule /(.*) http://localhost:9944/$1 [P,L]
 ```
 
-Optionally some form of rate limiting can be introduced: 
-
+Optionally some form of rate limiting can be introduced:
 
 ```bash
 apt install libapache2-mod-qos
