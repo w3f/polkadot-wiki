@@ -88,20 +88,19 @@ The figure above shows the path of a candidate block through the Inclusion pipel
 changes its status through this path as follows:
 
 - Candidate: A block is put forward by a collator to a validator (in this case V1). The candidate
-  block is shown as white square enclosing a question mark, with one white tick mark at the side.
-  The white tick mark is the PoV from the collator. The question mark shows how the candidate is not
-  valid yet and can still fail to be included in the Relay Chain.
+  block is shown as white square with one white tick mark at the side (PoV from the collator). Note
+  the candidate is not valid yet and can still fail to be included in the Relay Chain.
 - Seconded: The block is put forward by V1 to other validators (in this case V2 and V3). The
-  seconded block is shown as white square inclosing a question mark, with a white tick mark and two
-  yellow tick marks on top of it. The yellow marks show the PoV from the para-validators.
+  seconded block is shown as white square with a white tick mark and two yellow tick marks on top of
+  it. The yellow marks show the PoV from the para-validators.
 - Backable: The block validity is attested by a majority of the validators. The backable block is
-  shown as white square inclosing a question mark, with a white tick mark and three yellow tick
-  marks on top of it. The yellow marks show the PoV from the para-validators.
+  shown as white square with a white tick mark and three yellow tick marks on top of it. The yellow
+  marks show the PoV from the para-validators.
 - Backed: The block is backed and noted in a fork on the Relay Chain by a relay chain block author
-  (in this case V4). The backed block is shown as square with white background and yellow border
-  enclosing a question mark. The backed block can still fail to be included in the Relay Chain. Note
-  that for simplicity here the backed parachain block is represented as a block of the Relay Chain,
-  but in reality a relay chain block contains many parachian blocks.
+  (in this case V4). The backed block is shown as square with white background and yellow border.
+  The backed block can still fail to be included in the Relay Chain. Note that for simplicity here
+  the backed parachain block is represented as a block of the Relay Chain, but in reality a relay
+  chain block contains many parachian blocks.
 - Pending availability: The block is backed but not considered available yet.
 - Included: The block is backed and considered available (we have a parablock). Parablocks are shown
   as square with white background and yellow border enclosing a "P".
