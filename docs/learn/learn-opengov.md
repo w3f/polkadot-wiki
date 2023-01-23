@@ -303,14 +303,73 @@ three tasks of governance:
 2. Cancelling dangerous or malicious referenda
 3. Electing the Technical Committee
 
+### Multirole Delegation
+
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
 body delegated by voters to compensate for the fact that many choose to not take part in day-to-day
 of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can choose to
 delegate their voting power to another voter in the system. It does so by improving a feature known
 as **Multirole Delegation**, where voters can specify a different delegate for every class of
-referendum in the system. So for example, a voter could delegate one entity for managing a less
-potent referenda class, choose a different delegate for a different class with more powerful
-consequences and still retain full voting power over any remaining classes.
+referendum in the system. Any delegation is done per track and accounts choose to select different
+delegates (or no delegation) for each track.
+
+So for example, a voter could delegate one entity for managing a less potent referenda class, choose
+a different delegate for a different class with more powerful consequences and still retain full
+voting power over any remaining classes.
+
+Occasional delegation and undelegation calls are fee-free: creating an incentivize token holders to
+use this feature and ensuring that wallets can do it “by default” without any cost to end-users. It
+is worth noting that a user delegating their voting power does not imply that the delegate will have
+control over the funds of the delegating account: they can vote with a user's voting power: but they
+won't be able to transfer your balance, nominate a different set of validators or execute any call
+other than voting on the defined call/s by the user.
+
+With the new delegation features, the goal is to ensure the required turnouts for proposals to be
+enacted are reached while maintaining the anonymity of voters and keeping the overall design
+censorship-free.
+
+The following steps outline how to delegate voting power in OpenGov:
+
+1. Navigate to the [referenda tab](https://polkadot.js.org/apps/#/referenda)
+2. Click the `Delegate` icon in the top-right corner
+3. Ensure the `using the selected account` field lists the account you wish to apply delegation to
+4. Select `convictionVoting` from the `submit the following extrinsic` dropdown
+5. Next, select the appropriate `submission track` that you wish to delegate (or select the option
+   `apply delegation to all tracks`)
+
+   - `0` - Root
+   - `1` - Whitelisted Caller
+   - `10` - Staking Admin
+   - `11` - Treasurer
+   - `12` - Lease Admin
+   - `13` - Fellowship Admin
+   - `14` - General Admin
+   - `15` - Auction Admin
+   - `20` - Referendum Canceller
+   - `21` - Referendum Killer
+   - `30` - Small Tipper
+   - `31` - Big Tipper
+   - `32` - Small Spender
+   - `33` - Medium Spender
+   - `34` - Big Spender
+
+6. Specify the `delegate vote value`, which is the amount of DOT or KSM you wish to provide the
+   delegate with
+7. Provide a `conviction` multiplier determining how long the funds from the previous step are lock
+   (for additional details see the section on[Voluntary Locking](#voluntary-locking)) and click
+   `Next`
+8. The final step is to provide the account address that will be the delegate for the original
+   account you provided (this account will be receiving the voting power for the source account)
+
+When you are ready to undelegate:
+
+1. Navigate to the [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics)
+2. Select a wallet address that is currently delegating to another account
+3. From the `submit the following extrinsic` dropdown, select `convictionVoting`
+4. Select `undelegate` from the next dropdown to the right of the previous step (note you can also
+   delegate from this page as an alternative to the solution provided above)
+5. Provide the `submission track` that was used when originally delegating from above
+6. Sign and submit the transaction to restore the voting power back to the original source address
 
 ### Canceling Referenda
 
