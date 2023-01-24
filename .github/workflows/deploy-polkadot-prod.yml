@@ -27,4 +27,4 @@ jobs:
           git checkout --track origin/prod
           git rebase master
           git push
-          yarn && yarn polkadot:build && GIT_USER=w3fdeploy PUBLISHING=true yarn run polkadot:publish-gh-pages
+          yarn && yarn polkadot:build && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=polkadot-wiki yarn run polkadot:publish-gh-pages
