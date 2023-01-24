@@ -122,7 +122,7 @@ The candidate can fail to be included in the parachain in any of the following w
 
 Once the parablock is considered available and part of the parachain, is still "pending approval".
 At this stage the parablock is tentatively included in the parachain, although more confirmation is
-necessary. In fact, the validators in the parachain (i.e. the parachain validators) are sampled from
+necessary. In fact, the validators assigned to the parachain (i.e. the parachain validators) are sampled from
 a validator set which is assumed to be 1/3 dishonest. This means that there is a chance to randomly
 sample parachain validators for a parachain that are majority or fully dishonest and can back a
 candidate wrongly. The **Approval Process** allows to detect misbehavior after-the-fact without
