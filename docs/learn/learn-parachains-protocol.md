@@ -59,27 +59,27 @@ for a certain period so that the validators can perform the required checks.
 
 ## Inclusion Pipeline
 
-The inclusion pipeline is the path of a parachain block (or parablock) from its creation ot its
-inclusion into the Relay Chain. Here below there are the checkpoints of that path.
+The inclusion pipeline is the path of a parachain block (or parablock) from its creation to its
+inclusion into the Relay Chain. The main checkpoints of that path are listed below.
 
 1. Validators are assigned to parachains by the **Validator Assignment** routine.
-2. A collator produces the parachain block (known as parachain candidate, or candidate) along with
+2. A collator produces the parachain block (known as parachain candidate or candidate) along with
    PoV.
 3. The collator forwards the candidate and PoV to validators assigned to the same parachain via the
    **Collator Distribution** subsystem.
-4. The validators assigned to the parachain participate to the **Candidate Backing** subsystem.
-   Candidates that gather enough signed validity statement are considered **"backable"** and their
+4. The validators assigned to the parachain participate in the **Candidate Backing** subsystem.
+   Candidates that gather enough signed validity statements are considered **"backable"** and their
    backing is the set of signed statements.
-5. A relay chain block author (selected by [BABE][]) can note up to 1 backable candidate for each
+5. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can note up to 1 backable candidate for each
    parachain to be included in the Relay Chain block alongside its backing. Once included in the
-   Relay Chain the candidate is considered backable in the fork of the Relay Chain.
-6. Once backable in the Relay Chain, the candidate is considered to be "pending availability", i.e.
-   it is not considered to be part of the parachain until it is **proven available**.
-7. In the following relay chain blocks, the validators will participate to the **Availability
-   Distribution** subsystem to ensure availability of the candidate. That is, information regarding
-   the availability of the candidate will be noted in the subsequent relay chain blocks.
+   Relay Chain the candidate is considered backable in that fork of the Relay Chain.
+6. Once backable in the Relay Chain, the candidate is considered to be in "pending availability" status.
+   It can only be considered a part of the parachain once it is **proven available**.
+7. In the following relay chain blocks, the validators will participate in the **Availability
+   Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain blocks will note information regarding
+      the candidate's availability.
 8. Once the relay chain state machine has enough information to consider the candidate's PoV as
-   being available, the candidate is considered to be part of the parachain and is graduated to
+   being available, the candidate is considered part of the parachain and is graduated to
    being a full parachain block.
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
