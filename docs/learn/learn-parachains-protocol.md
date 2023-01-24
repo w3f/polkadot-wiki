@@ -90,7 +90,7 @@ changes its status through this path as follows:
 - Candidate: A block is put forward by a collator to a validator (in this case V1). The candidate
   block is shown as white square with one white tick mark at the side (PoV from the collator). Note
   the candidate is not valid yet and can still fail to be included in the Relay Chain.
-- Seconded: The block is put forward by V1 to other validators (in this case V2 and V3). The
+- Seconded: The block is put forward by the validator V1 to other validators (in this case V2 and V3). The
   seconded block is shown as white square with a white tick mark and two yellow tick marks on top of
   it. The yellow marks show the PoV from the para-validators.
 - Backable: The block validity is attested by a majority of the validators. The backable block is
