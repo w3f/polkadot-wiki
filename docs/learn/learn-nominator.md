@@ -97,7 +97,9 @@ active validators. The bags-list can be previewed on
 
 :::info Minimum DOT required to earn staking rewards
 
-Minimum DOT required to submit intent to nominate is 10 DOT, but the minimum active nomination
+Minimum DOT required to submit intent to nominate is
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :polkadot }}
+, but the minimum active nomination
 required to earn staking rewards is dynamic and may be much higher, which can be viewed on
 [Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
 
