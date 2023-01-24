@@ -133,7 +133,7 @@ The approval pipeline can be divided into the following steps:
 1. Parablocks that have been included by the Inclusion Pipeline are pending approval for a time
    window known as the **secondary checking window**.
 2. During the secondary checking window, validators (secondary checkers) randomly self-select to
-   perform secondary checks on the parablock.
+   perform secondary checks on each of the parablock.
 3. Secondary checkers acquire the parablock with PoV and re-run the validation function.
 4. Secondary checkers gossip the results of their checks. Contradictory results lead to escalation
    in which all validators are required to check the block. The validators on the losing side will
