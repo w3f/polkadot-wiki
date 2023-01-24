@@ -123,13 +123,10 @@ The candidate can fail to be included in the parachain in any of the following w
 Once the parablock is considered available and part of the parachain, is still "pending approval".
 At this stage the parablock is tentatively included in the parachain, although more confirmation is
 necessary. In fact, the validators assigned to the parachain (i.e. the parachain validators) are sampled from
-a validator set which is assumed to be 1/3 dishonest. This means that there is a chance to randomly
-sample parachain validators for a parachain that are majority or fully dishonest and can back a
-candidate wrongly. The **Approval Process** allows to detect misbehavior after-the-fact without
-allocating more validators that would ultimately reduce the throughput of the system. Because after
-being considered available a parablock will accept children blocks, failure to pass the approval
-process will invalidate the parablock and its descendants. Only the validators who backed the block
-in question will be slashed, not the validators who backed the descendants.
+a validator set which is assumed to be 1/3 dishonest in the worst-case scenario. In this case, it is likely that the majority of the random para-validators sampled for a specific parachain are dishonest and can back a candidate wrongly.  To address this, the **Approval Process** allows detecting misbehavior after-the-fact without
+allocating more para-validators, which would ultimately reduce the system's throughput. As a parablock can accept children blocks after being considered available, failure to pass the approval
+process will invalidate the parablock as well as its descendants (children blocks). Only the validators who backed the block
+in question will be slashed, not those who backed the descendants.
 
 The approval pipeline can be divided into the following steps:
 
