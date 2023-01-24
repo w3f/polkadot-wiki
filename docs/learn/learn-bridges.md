@@ -95,10 +95,10 @@ it does not support smart-contracts and it's not based on Substrate.
 As explained by Dr. Gavin Wood in a
 [blog post](https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13) from
 late 2019, there are three ways that the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} and Substrate ecosystem can be
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate ecosystem can be
 bridged to the Ethereum ecosystem.
 
-1. {{ polkadot: Polkadot :polkadot }}{{ kusama: KUsama :kusama }} <-> Ethereum Public Bridge.
+1. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} <-> Ethereum Public Bridge.
 1. Substrate <-> Parity Ethereum (Openethereum) Bridge.
 1. The Substrate EVM module.
 
