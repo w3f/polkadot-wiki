@@ -1,9 +1,8 @@
 name: Polkadot Prod
 
 on:
-  push:
-    branches:
-      - prod
+  schedule:
+    - cron: "0 0 * * *" # At the end of every day (00:00)
   workflow_dispatch:
 
 jobs:
@@ -18,19 +17,15 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: prod
 
       - name: Publish
         run: |
           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
           git config --global user.name "Polkadot Wiki CI"
           echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
+
+          git branch
+          git rebase master
+          git push
           yarn && yarn polkadot:build && GIT_USER=w3fdeploy PUBLISHING=true yarn run polkadot:publish-gh-pages
-
-
-          # setup ipfs cluster tools
-
-          # wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.0/ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
-          # tar xf ./ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
-          # chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
-          # export PATH=$PATH:`pwd`/ipfs-cluster-ctl
-          # node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./polkadot-wiki/build --pinName polkadot-wiki
