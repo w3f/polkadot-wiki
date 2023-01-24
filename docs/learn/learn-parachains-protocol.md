@@ -70,32 +70,34 @@ inclusion into the Relay Chain. The main checkpoints of that path are listed bel
 4. The validators assigned to the parachain participate in the **Candidate Backing** subsystem.
    Candidates that gather enough signed validity statements are considered **"backable"** and their
    backing is the set of signed statements.
-5. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can note up to 1 backable candidate for each
-   parachain to be included in the Relay Chain block alongside its backing. Once included in the
-   Relay Chain the candidate is considered backable in that fork of the Relay Chain.
-6. Once backable in the Relay Chain, the candidate is considered to be in "pending availability" status.
-   It can only be considered a part of the parachain once it is **proven available**.
+5. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
+   note up to 1 backable candidate for each parachain to be included in the Relay Chain block
+   alongside its backing. Once included in the Relay Chain the candidate is considered backable in
+   that fork of the Relay Chain.
+6. Once backable in the Relay Chain, the candidate is considered to be in "pending availability"
+   status. It can only be considered a part of the parachain once it is **proven available**.
 7. In the following relay chain blocks, the validators will participate in the **Availability
-   Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain blocks will note information regarding
-      the candidate's availability.
+   Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
+   blocks will note information regarding the candidate's availability.
 8. Once the relay chain state machine has enough information to consider the candidate's PoV as
-   being available, the candidate is considered part of the parachain and is graduated to
-   being a full parachain block.
+   being available, the candidate is considered part of the parachain and is graduated to being a
+   full parachain block.
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
 
 The figure above shows the path of a candidate block through the Inclusion pipeline. The block
 changes its status through this path as follows:
 
-- Candidate: A block is put forward by a collator to a validator (in this case V1). The candidate
-  block is shown as white square with one white tick mark at the side (PoV from the collator). Note
-  the candidate is not valid yet and can still fail to be included in the Relay Chain.
-- Seconded: The block is put forward by the validator V1 to other validators (in this case V2 and V3). The
-  seconded block is shown as white square with a white tick mark and two yellow tick marks on top of
-  it. The yellow marks show the PoV from the para-validators.
-- Backable: The block validity is attested by a majority of the validators. The backable block is
-  shown as white square with a white tick mark and three yellow tick marks on top of it. The yellow
-  marks show the PoV from the para-validators.
+- Candidate: A block is put forward by a collator to a para-validator (in this case V1). The
+  candidate block is shown as white square with one white tick mark at the side (PoV from the
+  collator). Note the candidate is not valid yet and can still fail to be included in the Relay
+  Chain.
+- Seconded: The block is put forward by the para-validator V1 to other para-validators (in this case
+  V2 and V3). The seconded block is shown as white square with a white tick mark and two yellow tick
+  marks on top of it. The yellow marks show the PoV from the para-validators.
+- Backable: The block validity is attested by a majority of the para-validators. The backable block
+  is shown as white square with a white tick mark and three yellow tick marks on top of it. The
+  yellow marks show the PoV from the para-validators.
 - Backed: The block is backed and noted in a fork on the Relay Chain by a relay chain block author
   (in this case V4). The backed block is shown as square with white background and yellow border.
   The backed block can still fail to be included in the Relay Chain. Note that for simplicity here
@@ -122,11 +124,15 @@ The candidate can fail to be included in the parachain in any of the following w
 
 Once the parablock is considered available and part of the parachain, is still "pending approval".
 At this stage the parablock is tentatively included in the parachain, although more confirmation is
-necessary. In fact, the validators assigned to the parachain (i.e. the parachain validators) are sampled from
-a validator set which is assumed to be 1/3 dishonest in the worst-case scenario. In this case, it is likely that the majority of the random para-validators sampled for a specific parachain are dishonest and can back a candidate wrongly.  To address this, the **Approval Process** allows detecting misbehavior after-the-fact without
-allocating more para-validators, which would ultimately reduce the system's throughput. As a parablock can accept children blocks after being considered available, failure to pass the approval
-process will invalidate the parablock as well as its descendants (children blocks). Only the validators who backed the block
-in question will be slashed, not those who backed the descendants.
+necessary. In fact, the validators assigned to the parachain (i.e. the parachain validators) are
+sampled from a validator set which is assumed to be 1/3 dishonest in the worst-case scenario. In
+this case, it is likely that the majority of the random para-validators sampled for a specific
+parachain are dishonest and can back a candidate wrongly. To address this, the **Approval Process**
+allows detecting misbehavior after-the-fact without allocating more para-validators, which would
+ultimately reduce the system's throughput. As a parablock can accept children blocks after being
+considered available, failure to pass the approval process will invalidate the parablock as well as
+its descendants (children blocks). Only the validators who backed the block in question will be
+slashed, not those who backed the descendants.
 
 The approval pipeline can be divided into the following steps:
 
@@ -174,7 +180,9 @@ network asynchrony. Validators in Group 2 can build another block on top of B, c
 that afterwards, some validators become aware of both C and C' while others remain aware of one of
 them (_right_). Validators in Group 3 must be aware of the network state in each head (C and C') and
 they may contribute to some or full extent on both. It is possible that due to network asynchrony
-two forks may grow in parallel for some time.
+two forks may grow in parallel for some time, but eventually one fork will be chosen by the finality
+gadget. In the absence of an adversarial network it is unlikely that two forks will coexist for some
+time as there will be validators aware of both chain heads.
 
 ![parachain-forks](../assets/parachain-forks.png)
 
