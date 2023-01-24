@@ -144,7 +144,7 @@ The figure below shows the path of a parachain block when it exits the Inclusion
 enters the Approval Process. The parablock becomes accepted when it is backed, available and
 **undisputed**. Thr parablock is checked a second time by a subset of validators (V5, V6 and V7),
 and if there are no contradictory results the block is approved and gossiped to other relay chain
-validators. Note the parablock after second checks is shown as a square with white background a
+validators. Note the parablock after secondary checks is shown as a square with white background a
 yellow border enclosing a "P", and three white ticks (one for each second checker). Approved
 para-blocks are shown as yellow squares the become grey.
 
