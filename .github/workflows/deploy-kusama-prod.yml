@@ -2,7 +2,7 @@ name: Kusama Prod
 
 on:
   schedule:
-    - cron: "0 0 * * *" # At the end of every day (00:00)
+    - cron: "15 0 * * *" # At the end of every day, following Polkadot deployment (00:15)
   workflow_dispatch:
 
 jobs:
