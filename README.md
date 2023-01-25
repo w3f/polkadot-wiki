@@ -75,9 +75,6 @@ yarn install
 
 ### Build
 
-> The Wiki is currently in the process of being deployed onto IPFS and will follow the same
-> configuration to build the static files.
-
 :bird: Building the Kusama Guide:
 
 ```bash
