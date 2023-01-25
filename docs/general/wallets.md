@@ -1,24 +1,17 @@
 ---
-id: build-wallets
+id: wallets
 title: Wallets
 sidebar_label: Wallets
-description: An overview of the current supported wallets on Polkadot.
+description: An overview of wallets in Polkadot ecosystem.
 keywords: [wallets, account, signer, supported wallets, balance, token]
-slug: ../build-wallets
+slug: ../wallets
 ---
-
-The integration of a [wallet](../general/glossary.md#wallet) with {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} allows for simple and easy access to private keys and signing
-transactions. Multiple wallets are listed below, some developed by teams in the ecosystem with the
-help of on-chain treasury funding, and some developed by Parity. The target audience for Polkadot-JS
-is the developer community. Most community members use the more feature rich wallets with intuitive
-user interface supported by the treasury.
 
 :::tip Non-Custodial Wallets
 
 **All the wallets listed on this page are non-custodial wallets**. With non-custodial wallets, only
-you have access to your account's private key. With custodial wallets (like accounts on Central
-Exchanges), another party controls your private keys.
+you have access to your account's private key. With custodial wallets (like accounts eith Custodial
+services or Central Exchanges), another party controls your private keys.
 
 :::
 
