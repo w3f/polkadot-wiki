@@ -9,6 +9,7 @@ module.exports = {
         "general/redenomination",
         "general/research",
         "general/ens",
+        "general/wallets",
         "general/ledger",
         {
           type: "category",
@@ -39,7 +40,6 @@ module.exports = {
             "general/how-to-dyor",
           ],
         },
-        "general/wallets",
         "general/faq",
         "general/glossary",
       ],
