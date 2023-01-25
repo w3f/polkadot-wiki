@@ -28,18 +28,13 @@ async function GetTracks(network, wsUrl, setReturnValue) {
   const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
 
-  let chain = "";
-  if (network === "polkadot") {
-    chain = "Polkadot"
-  } else if (network === "kusama") {
-    chain = "Kusama"
-  } else {
+  if (network !== "polkadot" && network !== "kusama") {
     setReturnValue(<div></div>);
     return;
   }
 
   // Get current tracks
-  const rawTracksData = await api.consts.referenda.tracks;
+  const rawTracksData = api.consts.referenda.tracks;
 
   rawTracksData.forEach(track => {
     const trackData = track.toHuman();
