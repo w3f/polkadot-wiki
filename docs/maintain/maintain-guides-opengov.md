@@ -7,6 +7,8 @@ keywords: [democracy, council, action, proposal, referenda]
 slug: ../maintain-guides-opengov
 ---
 
+import Tracks from "./../../components/Referenda-Tracks";
+
 :::info OpenGov is live on Kusama Network
 
 OpenGov is yet to be deployed on Polkadot Network.
@@ -80,6 +82,8 @@ To remove the lock from votes you first need to call `removeVote` and then `unlo
 `convictionVoting` pallet.
 
 ## Origins and Tracks
+
+{{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }}
 
 Whitelist
 
