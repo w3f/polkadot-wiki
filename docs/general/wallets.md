@@ -83,29 +83,52 @@ Foundation.
 
 ### PolkaGate
 
-Proxy accounts and Social recovery.
+PolkaGate extension is a Kusama Treasury supported
+[[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
+polkadot js plus which completely re-developed, with a new look, smooth user experience, and many
+performance improvements. Supports Proxy accounts and Social recovery.
 
 ### SubWallet
 
-XCM Transfer, NFT Management, Parity Signer & Ledger Support, Light Clients Support, QR-code Account
-Import, Token Import, EVM DApp Support, MetaMask Compatibility, Custom Endpoint, Fiat On-ramp
+Web3 Multiverse Gateway for Polkadot & Kusama Ecosystem. Track, send, receive and monitor
+multi-chain assets with ease. XCM Transfer, NFT Management, Parity Signer & Ledger Support, Light
+Clients Support, QR-code Account Import, Token Import, EVM DApp Support, MetaMask Compatibility,
+Custom Endpoint, Fiat On-ramp. Subwallet received funding from Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/treasury/138),
+[2](https://polkadot.polkassembly.io/treasury/162)].
 
 ### Talisman
 
-NFT Management, Ledger Support, Fiat On-ramp, Portfolio tracking
+A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
+Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
+your accounts on over 150+ Substrate and EVM networks. NFT Management, Ledger Support, Fiat On-ramp,
+Portfolio tracking. Talisman received funding from Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/treasury/148)].
 
 ### Fearless Wallet
 
-Parachain Accounts, dApp signer (experimental), Scam addresses warning, Network issues warning
+The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
+ecosystem with emphasis on UX, performance, and security. Get access to charts to better understand
+your profits and how to maximize your staking performance. The goal of Fearless Wallet is to
+radically expand access to decentralized finance (DeFi) by making complex functions much easier to
+use and understand. Fearless Wallet received funding from Kusama Treasury
+[[1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34),
+[3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102),
+[5](https://kusama.polkassembly.io/treasury/178)].
 
 ### Nova Wallet
 
 OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with Polkadot JS
-and Metamask/EVM Integration.
+and Metamask/EVM Integration. Nova Wallet received funding from Kusama Treasury
+[[1](https://kusama.polkassembly.io/treasury/122),
+[2](https://kusama.polkassembly.io/treasury/158)].
 
 ### Polkawallet
 
-Cross-chain De-Fi.
+Polkawallet provides cross-chain asset one-stop management, convenient staking, governance, and
+multiple DeFi services, the private key is self-owned. Polkawallet received funding from Kusama
+Treasury [[1](https://kusama.polkassembly.io/treasury/32),
+[2](https://kusama.polkassembly.io/treasury/41)].
 
 ## Supported Wallets
 
