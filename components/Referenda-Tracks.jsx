@@ -76,7 +76,7 @@ async function GetTracks(network, wsUrl, setReturnValue) {
       <b>Current {network.charAt(0).toUpperCase() + network.slice(1)} Tracks ({tableData.length}):</b>
       <br /><br />
       <div style={{ border: "1px solid #dadde1" }}>
-        <table style={{ margin: 0, maxHeight: "800px", borderCollapse: "separate", borderSpacing: 0 }}>
+        <table style={{ margin: 0, maxHeight: "600px", borderCollapse: "separate", borderSpacing: 0 }}>
           <thead style={{ width: "100%", textAlign: "center", position: "sticky", top: 0, background: "#c1c1c1" }}>
             <tr>
               <th>ID</th>
@@ -96,6 +96,7 @@ async function GetTracks(network, wsUrl, setReturnValue) {
           </tbody>
         </table>
       </div>
+      <b>**Hover <span style={{color: "#e6007a", textDecoration: "underline"}}>underlined cell values</span> for additional info**</b>
     </div>
   );
 }
