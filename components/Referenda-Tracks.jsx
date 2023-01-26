@@ -32,13 +32,16 @@ async function GetTracks(network, wsUrl, setReturnValue) {
     setReturnValue(<div></div>);
     return;
   }
-  
+
   // Else grab the tracks value from on-chain and build the table
   let tableData = [];
 
+  // Define hover style
+  const hover = { color: "#e6007a", cursor: 'pointer', textDecoration: "underline" };
+
   // Get current tracks
   const rawTracksData = api.consts.referenda.tracks;
-  
+
   // Iterate all tracks
   rawTracksData.forEach(track => {
     const trackData = track.toHuman();
@@ -54,15 +57,15 @@ async function GetTracks(network, wsUrl, setReturnValue) {
     tableData.push(
       <tr key={trackData[0]}>
         <td><b>{trackData[0]}</b></td>
-        <td>{origin}</td>
+        <td><b>{origin}</b></td>
         <td>{trackData[1].maxDeciding}</td>
         <td>{HumanReadable(trackData[1].decisionDeposit, network)}</td>
-        <td>{trackData[1].preparePeriod}</td>
-        <td>{trackData[1].decisionPeriod}</td>
-        <td>{trackData[1].confirmPeriod}</td>
-        <td>{trackData[1].minEnactmentPeriod}</td>
-        <td>{minApproval}</td>
-        <td>{minSupport}</td>
+        <td style={hover} title={BlocksToTime(trackData[1].preparePeriod)}>{trackData[1].preparePeriod}</td>
+        <td style={hover} title={BlocksToTime(trackData[1].decisionPeriod)}>{trackData[1].decisionPeriod}</td>
+        <td style={hover} title={BlocksToTime(trackData[1].confirmPeriod)}>{trackData[1].confirmPeriod}</td>
+        <td style={hover} title={BlocksToTime(trackData[1].minEnactmentPeriod)}>{trackData[1].minEnactmentPeriod}</td>
+        <td style={hover}>{minApproval}</td>
+        <td style={hover}>{minSupport}</td>
       </tr>
     )
   });
@@ -102,25 +105,37 @@ function FormatObject(item) {
   if (item.hasOwnProperty("Reciprocal")) {
     const Reciprocal = item.Reciprocal;
     return (
-      <div>
-        <p style={{margin: 0}}>Reciprocal</p>
-        <p style={{fontSize: "10px", margin: 0}}>{`Factor: ${Reciprocal.factor}`}</p>
-        <p style={{fontSize: "10px", margin: 0}}>{`X-Offset: ${Reciprocal.xOffset}`}</p>
-        <p style={{fontSize: "10px", margin: 0}}>{`Y-Offset: ${Reciprocal.yOffset}`}</p>
-      </div>
+      <p title={`Factor: ${Reciprocal.factor}, X-Offset: ${Reciprocal.xOffset}, Y-Offset: ${Reciprocal.yOffset}`}>
+        Reciprocal
+      </p>
     );
   } else if (item.hasOwnProperty("LinearDecreasing")) {
     const LinearDecreasing = item.LinearDecreasing;
     return (
-      <div>
-        <p style={{margin: 0}}>Linear Decreasing</p>
-        <p style={{fontSize: "10px", margin: 0}}>{`Length: ${LinearDecreasing.length}`}</p>
-        <p style={{fontSize: "10px", margin: 0}}>{`Floor: ${LinearDecreasing.floor}`}</p>
-        <p style={{fontSize: "10px", margin: 0}}>{`Ceiling: ${LinearDecreasing.ceil}`}</p>
-      </div>
+      <p title={`Length: ${LinearDecreasing.length}, Floor: ${LinearDecreasing.floor}, Ceiling: ${LinearDecreasing.ceil}`}>
+        Linear Decreasing
+      </p>
     );
   } else {
     return "";
+  }
+}
+
+function BlocksToTime(blockString) {
+  // Remove commas
+  let value = blockString.replace(/\,/g, '');
+  // String to number
+  value = parseInt(value);
+  // Time in seconds
+  value = (value * 6)
+  if (value >= 86400) {
+    // Convert to days
+    value = value / 86400;
+    return `${value} Days`
+  } else {
+    // Convert to minutes
+    value = value / 60
+    return `${value} Minutes`
   }
 }
 
