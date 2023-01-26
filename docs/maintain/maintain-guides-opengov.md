@@ -83,38 +83,9 @@ To remove the lock from votes you first need to call `removeVote` and then `unlo
 
 ## Origins and Tracks
 
-{{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }}
+<!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
+<Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
 
-Whitelist
-
-| Origin              | ID  |
-| ------------------- | --- |
-| `WhitelistedCaller` | 1   |
-
-General administration
-
-| Origin            | ID  |
-| ----------------- | --- |
-| `StakingAdmin`    | 10  |
-| `Treasurer`       | 11  |
-| `LeaseAdmin`      | 12  |
-| `FellowshipAdmin` | 13  |
-| `GeneralAdmin`    | 14  |
-| `AuctionAdmin`    | 15  |
-
-Referendum adminstration
-
-| Origin                | ID  |
-| --------------------- | --- |
-| `ReferendumCanceller` | 20  |
-| `ReferendumKiller`    | 21  |
-
-Limited treasury spending
-
-| Origin          | ID  |
-| --------------- | --- |
-| `SmallTipper`   | 30  |
-| `BigTipper`     | 31  |
-| `SmallSpender`  | 32  |
-| `MediumSpender` | 33  |
-| `BigSpender`    | 34  |
+<!-- When OpenGov moves to Polkadot replace the above content with these condition statements -->
+<!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
+<!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
