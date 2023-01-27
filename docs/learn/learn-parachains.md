@@ -39,6 +39,18 @@ verification and inclusion in the shared state of
 node is an implementation detail of the parachain. They are not required to be staked on the Relay
 Chain or own the native token unless stipulated by the parachain implementation.
 
+### State Transitions
+
+Like other blockchains, parachains are deterministic state machines. That is, each parachain has a
+state, executes a batch of transactions grouped into a block, and achieves a new state. Joe
+Petrowski provided in [this article](https://polkadot.network/blog/the-path-of-a-parachain-block/) a
+good analogy of a state with a light switch that can be either on or off. Each parachain has its own
+state, and the Relay Chain links all those states into one state, i.e. a state of states. A
+multi-chain network like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be
+viewed like one computer's state with many light switches where a state transition function is the
+logic to decide which switches should be toggled. Parachains have their own transition rule,
+separate economies, governance mechanisms, and users.
+
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host requires that the state
 transitions performed on parachains be specified as a [Wasm](learn-wasm.md) executable. Proofs of
 new state transitions that occur on a parachain must be validated against the registered state
