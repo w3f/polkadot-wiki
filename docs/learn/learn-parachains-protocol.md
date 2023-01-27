@@ -204,10 +204,6 @@ blocks. If an honest validator detects an invalid block which was approved by on
 validators, the honest validator must issue a disputes which wil cause escalations, resulting in
 consequences for all malicious parties.
 
-When more than half of the parachain validators agree that a particular parachain block candidate is
-a valid state transition, they prepare a _candidate receipt_. The candidate receipt is what will
-eventually be included into the Relay Chain state. It includes:
-
 :::info The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline
 
 1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
@@ -327,7 +323,6 @@ time as there will be validators aware of both chain heads.
 
 For {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to scale to hundreds of
 parachains, PoV need to be represented by something smaller on the Relay Chain: candidate receipts.
-
 A para-validator constructs a candidate receipt for a parachain block by signing:
 
 - The parachain ID.
@@ -345,10 +340,18 @@ transition contained inside of it.
 
 ## Erasure Codes
 
-Erasure coding transforms a message into a longer _code_ that allows for the original message to be
-recovered from a subset of the code and in absence of some portion of the code. A code is the
-original message padded with some extra data that enables the reconstruction of the code in the case
-of erasures.
+Prior to sending the candidate receipt to the Relay Chain transaction queue, the para-validator who
+constructs the receipt must also construct an erasure coding of the parachain block.
+
+An erasure coding takes a message (in this case the parachain block and PoV) and creates a set of
+smaller messages such that you can reconstruct the original message by obtaining a fraction of the
+smaller messages. In the case of {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama }} the
+total number of smaller messages is equal to the total number of validators and the fraction is 1/3.
+
+The para-validator creates the erasure coding chunks, puts them into their own Merkle tree, and
+sends out each chunk (together with the candidate receipt) to a corresponding validator on the Relay
+Chain. Validators who receive the receipts with an erasure coding chunk will include the receipt in
+the Relay Chain queue, where an author can include it in a block.
 
 The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
 availability scheme are
