@@ -1212,14 +1212,14 @@
     "endPeriodBlock": 16292988,
     "endPeriodHash": "0x61df88d1934a4d3262f549ad152e4f871f151e151fa9e013de00709074fce5b5",
     "biddingEndsBlock": 16364988,
-    "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "biddingEndsHash": "0x21fcd26eae84c12a8248dc440c8fbce33933adde0a1a4d1f6e6cc999731766a8",
     "onboardStartBlock": 16329600,
     "onboardStartHash": "0x9a7bb945989b0ef3ea2b84413ab420e9ffb7fca4af03535dad7e6c3b70b9e0c4",
     "onboardEndBlock": 21168000,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "startDate": 1674176166001,
     "endPeriodDate": 1674339180001,
-    "biddingEndsDate": null,
+    "biddingEndsDate": 1674772722001,
     "onboardStartDate": 1674559770005,
     "onboardEndDate": null
   }
