@@ -16,9 +16,16 @@ and the
 
 :::
 
-The Parachains' Protocol aims to carry a parachain's block from authoring to inclusion through a
-process that can be carried out repeatedly and in parallel for each parachain connected to the Relay
-Chain.
+The Parachains' Protocol aims to carry a parachain's candidate block from authoring to inclusion
+through a process that can be carried out repeatedly and in parallel for each parachain connected to
+the Relay Chain.
+
+:::note Candidate block
+
+A candidate block is a new block from a parachain collator that may or may not be valid and must go
+through validity checks before being included into the Relay Chain.
+
+:::
 
 The Availability and Validity (AnV) Protocol allows the network to be efficiently sharded among
 parachains while maintaining strong security guarantees.
@@ -128,19 +135,12 @@ changes its status through this path as follows:
 
 ### Parachain Phase
 
-The parachain phase of AnV Protocol is when the _collator_ of a parachain proposes a _candidate
-block_ together with its PoV to the validators that are currently assigned to the parachain (i.e.
+The parachain phase of AnV Protocol is when the collator of a parachain proposes a candidate block
+together with its PoV to the validators that are currently assigned to the parachain (i.e.
 para-validators).
 
-:::note Candidate block
-
-A candidate block is a new block from a parachain collator that may or may not be valid and must go
-through validity checks before being included into the Relay Chain.
-
-:::
-
-The para-validators then check the candidate block against the PoV. If the verification succeeds,
-then the para-validators will pass the candidate block to the other para-validators. However, if the
+A para-validator checks the candidate block against the PoV. If the verification succeeds, then the
+para-validator will pass the candidate block to the other para-validators. However, if the
 verification fails, the para-validators immediately reject the candidate block as invalid.
 
 The Parachain Phase is made up by four phases of the Inclusion Pipeline:
