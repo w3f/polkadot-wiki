@@ -107,6 +107,10 @@ module.exports = {
           {
             to: '/docs/learn-system-chains',
             from: ['/docs/learn-common-goods']
+          },
+          {
+            to: '/docs/learn-parachains-protocol',
+            from: ['/docs/learn-availability']
           }
         ],
         createRedirects: function (existingPath) {
