@@ -23,6 +23,8 @@ Chain.
 The Availability and Validity (AnV) Protocol allows the network to be efficiently sharded among
 parachains while maintaining strong security guarantees.
 
+We will explain in-depth how the two protocols are interconnected in the following sections.
+
 ## Main Actors
 
 ### [Validators](../learn/learn-validator.md)
@@ -70,27 +72,26 @@ The parachain protocol is divided into three main phases:
 
 The figure below shows a representation of a parachain with collators and validators. The figure
 also shows the journey of a block (white square) through the three main steps of the parachain
-protocol, as well as the sections where the [Inclusion Pipeline](#inclusion-pipeline) and the
-[Approval Process](#approval-process) take place (see following Sections).
+protocol, as well as the sections where the [**Inclusion Pipeline**](#inclusion-pipeline) and the
+[**Approval Process**](#approval-process) take place (see following Sections).
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
 ### AnV Protocol
 
-The AnV Protocol is divided into five different phases, three within the Inclusion Pipeline and two
-within the Approval Process:
+The AnV Protocol is divided into five different phases, three within the
+[Inclusion Pipeline](#inclusion-pipeline) and two within the [Approval Process](#approval-process):
 
-- Inclusion Pipeline
-  1.  Parachain phase.
-  2.  Relay Chain submission phase.
-  3.  Availability and unavailability phase.
-- Approval Process
+- **Inclusion Pipeline**
+  1.  [Parachain phase](#parachain-phase)
+  2.  [Relay Chain submission phase](#relay-chain-submission-phase)
+  3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
+- **Approval Process**
   1.  Secondary GRANDPA approval validity checks.
   2.  Invocation of a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
 
 The two protocols are thus tightly connected: phases of the AnV protocol are essentially
-sub-sections of the Parachain Protocol. We will explain in-depth how the two protocols are
-interconnected in the following sections.
+sub-sections of the Parachain Protocol.
 
 ## Inclusion Pipeline
 
@@ -105,16 +106,17 @@ AnV Protocol.
 The figure above shows the path of a candidate block through the Inclusion pipeline. The block
 changes its status through this path as follows:
 
-- Candidate: A block is put forward by a collator to a para-validator (in this case V1). The
-  candidate block is shown as white square with one white tick mark at the side (PoV from the
-  collator). Note the candidate is not valid yet and can still fail to be included in the Relay
-  Chain.
+- Candidate: A block together with its PoV is put forward by a collator to a para-validator (in this
+  case V1). The candidate block is shown as white square with one white tick mark at the side (PoV
+  from the collator). Note the candidate is not valid yet and can still fail to be included in the
+  Relay Chain.
 - Seconded: The block is put forward by the para-validator V1 to other para-validators (in this case
   V2 and V3). The seconded block is shown as white square with a white tick mark and two yellow tick
   marks on top of it. The yellow marks show the PoV from the para-validators.
 - Backable: The block validity is attested by a majority of the para-validators. The backable block
   is shown as white square with a white tick mark and three yellow tick marks on top of it. The
-  yellow marks show the PoV from the para-validators.
+  yellow marks show the PoV from the para-validators, while the white mark the PoV from the
+  collator.
 - Backed: The block is backed and noted in a fork on the Relay Chain by a relay chain block author
   (in this case V4). The backed block is shown as square with white background and yellow border.
   The backed block can still fail to be included in the Relay Chain. Note that for simplicity here
