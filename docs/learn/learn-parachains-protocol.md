@@ -11,22 +11,28 @@ slug: ../learn-parachains-protocol
 
 This page is a summary of the
 [Protocol Overview chapter in **The Polkadot Parachain Host Implementer's Guide**](https://paritytech.github.io/polkadot/book/protocol-overview.html)
+and the
+[Availability and Validity (AnV) chapter in **The Polkadot Protocol Specification**](https://spec.polkadot.network/#chapter-anv).
 
 :::
 
-The protocol aims to carry a parachain's block from authoring to inclusion through a process that
-can be carried out repeatedly and in parallel for each parachain connected to the Relay Chain.
+The Parachains' Protocol aims to carry a parachain's block from authoring to inclusion through a
+process that can be carried out repeatedly and in parallel for each parachain connected to the Relay
+Chain.
+
+The Availability and Validity (AnV) Protocol allows the network to be efficiently sharded among
+parachains while maintaining strong security guarantees.
 
 ## Main Actors
 
-### Validators
+### [Validators](../learn/learn-validator.md)
 
 They are responsible for validating the proposed parachain's blocks by checking the
 **Proof-of-Validity** (PoV) of the blocks and ensuring the PoV remains available for a designated
 period. They have "skin in the game", meaning they have funds bonded on-chain that can be partially
 or fully confiscated by the network in case of misbehavior.
 
-### Collators
+### [Collators](../learn/learn-collator.md)
 
 They create the PoV that validators know how to check. Creating PoV requires familiarity with
 transaction format and block authoring rules of a specific parachain, as well as having access to
