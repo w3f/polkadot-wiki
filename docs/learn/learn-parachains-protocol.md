@@ -38,9 +38,17 @@ They create the PoV that validators know how to check. Creating PoV requires fam
 transaction format and block authoring rules of a specific parachain, as well as having access to
 its full state.
 
-## Parachains' Protocol Summary
+## Protocols' Summary
 
-The parachains' protocol can be summarized into three main steps:
+The two protocols can be divided into different phases. There are five phases of the AnV protocol:
+
+1. Parachain phase.
+2. Relay Chain submission phase.
+3. Availability and unavailability subprotocols.
+4. Secondary GRANDPA approval validity checks.
+5. Invocation of a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
+
+The parachain protocol is divided into three main phases:
 
 1. Collators send the parachain block (parablock) with PoV to the set of Validators assigned to the
    parachain (i.e. para-validators).
@@ -49,19 +57,14 @@ The parachains' protocol can be summarized into three main steps:
 3. With enough positive statements, the block is added to the Relay Chain.
 
 The figure below shows a representation of a parachain with collators and validators. The figure
-also shows the journey of a block (white square) through the three main steps, as well as the
-sections where the [Inclusion Pipeline](#inclusion-pipeline) and the
+also shows the journey of a block (white square) through the three main steps of the parachain
+protocol, as well as the sections where the [Inclusion Pipeline](#inclusion-pipeline) and the
 [Approval Process](#approval-process) take place (see following Sections).
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
-Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
-on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
-those actors responsible for it will also be slashed. To detect false positives, PoV information
-must be available after the block has been added to the Relay Chain so that validators can check the
-work. PoVs are typically between 1 MB and 10 MB in size and are not included in the Relay Chain
-blocks. However, as a part of the data availability scheme, they are made available on the network
-for a certain period so that the validators can perform the required checks.
+The two protocols are tightly connected: the parachain protocol is enclosed within the AnV protocol.
+We will explain in-depth how the two protocols are interconnected in the following sections.
 
 ## Inclusion Pipeline
 
@@ -125,6 +128,14 @@ The candidate can fail to be included in the parachain in any of the following w
 - The candidate is not selected by a relay chain block author.
 - The candidate's PoV is not considered available within a timeout, and it is discarded from the
   Relay Chain.
+
+Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
+on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
+those actors responsible for it will also be slashed. To detect false positives, PoV information
+must be available after the block has been added to the Relay Chain so that validators can check the
+work. PoVs are typically between 1 MB and 10 MB in size and are not included in the Relay Chain
+blocks. However, as a part of the data availability scheme, they are made available on the network
+for a certain period so that the validators can perform the required checks.
 
 ## Approval Process
 
