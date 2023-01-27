@@ -171,10 +171,10 @@ in a parachain's state, only those that are modified. This insures that the modi
 Once a para-validator has the PoV, it gossips this information to the other para-validators.
 Para-validator check the candidate block against the PoV. The verification succeeds when more than
 half of the para-validators agrees that the block represents a valid state transition. The
-para-validators can then start to construct the **candidate receipt** (this is what goes into the
-Relay Chain block) and an **erasure coding** that will be sent to all validators in the network.
-However, if the verification fails, the para-validators immediately reject the candidate block as
-invalid.
+para-validators can then start to construct the [**candidate receipt**](#candidate-receipts) (this
+is what goes into the Relay Chain block) and an [**erasure coding**](#erasure-codes) that will be
+sent to all validators in the network. However, if the verification fails, the para-validators
+immediately reject the candidate block as invalid.
 
 :::info The Parachain Phase is made up by four phases of the Inclusion Pipeline
 
@@ -207,19 +207,6 @@ consequences for all malicious parties.
 When more than half of the parachain validators agree that a particular parachain block candidate is
 a valid state transition, they prepare a _candidate receipt_. The candidate receipt is what will
 eventually be included into the Relay Chain state. It includes:
-
-- The parachain ID.
-- The collator's ID and signature.
-- A hash of the parent block's candidate receipt.
-- A Merkle root of the block's erasure-coded pieces.
-- A Merkle root of any outgoing messages.
-- A hash of the block.
-- The state root of the parachain before block execution.
-- The state root of the parachain after block execution.
-
-This information is **constant size** while the actual PoV block of the parachain can be variable
-length. It is enough information for anyone that obtains the full PoV block to verify the state
-transition contained inside of it.
 
 :::info The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline
 
@@ -335,6 +322,26 @@ gadget. In the absence of an adversarial network it is unlikely that two forks w
 time as there will be validators aware of both chain heads.
 
 ![parachain-forks](../assets/parachain-forks.png)
+
+## Candidate Receipts
+
+For {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to scale to hundreds of
+parachains, PoV need to be represented by something smaller on the Relay Chain: candidate receipts.
+
+A para-validator constructs a candidate receipt for a parachain block by signing:
+
+- The parachain ID.
+- The collator's ID and signature.
+- A hash of the parent block's candidate receipt.
+- A Merkle root of the block's erasure-coded pieces.
+- A Merkle root of any outgoing messages.
+- A hash of the block.
+- The state root of the parachain before block execution.
+- The state root of the parachain after block execution.
+
+This information is of constant size while the actual PoV block of the parachain can be variable
+length. It is enough information for anyone that obtains the full PoV block to verify the state
+transition contained inside of it.
 
 ## Erasure Codes
 
