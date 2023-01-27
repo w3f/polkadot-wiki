@@ -60,10 +60,10 @@ async function GetTracks(network, wsUrl, setReturnValue) {
         <td><b>{origin}</b></td>
         <td>{trackData[1].maxDeciding}</td>
         <td>{HumanReadable(trackData[1].decisionDeposit, network)}</td>
-        <td style={hover} title={BlocksToTime(trackData[1].preparePeriod)}>{trackData[1].preparePeriod}</td>
-        <td style={hover} title={BlocksToTime(trackData[1].decisionPeriod)}>{trackData[1].decisionPeriod}</td>
-        <td style={hover} title={BlocksToTime(trackData[1].confirmPeriod)}>{trackData[1].confirmPeriod}</td>
-        <td style={hover} title={BlocksToTime(trackData[1].minEnactmentPeriod)}>{trackData[1].minEnactmentPeriod}</td>
+        <td style={hover} title={`${trackData[1].preparePeriod} Blocks`}>{BlocksToTime(trackData[1].preparePeriod)}</td>
+        <td style={hover} title={`${trackData[1].decisionPeriod} Blocks`}>{BlocksToTime(trackData[1].decisionPeriod)}</td>
+        <td style={hover} title={`${trackData[1].confirmPeriod} Blocks`}>{BlocksToTime(trackData[1].confirmPeriod)}</td>
+        <td style={hover} title={`${trackData[1].minEnactmentPeriod} Blocks`}>{BlocksToTime(trackData[1].minEnactmentPeriod)}</td>
         <td style={hover}>{minApproval}</td>
         <td style={hover}>{minSupport}</td>
       </tr>
@@ -132,7 +132,11 @@ function BlocksToTime(blockString) {
   if (value >= 86400) {
     // Convert to days
     value = value / 86400;
-    return `${value} Days`
+    if (value > 1) {
+      return `${value} Days`
+    } else {
+      return `${value} Day`
+    }
   } else {
     // Convert to minutes
     value = value / 60
