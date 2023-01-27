@@ -40,13 +40,7 @@ its full state.
 
 ## Protocols' Summary
 
-The two protocols can be divided into different phases. There are five phases of the AnV protocol:
-
-1. Parachain phase.
-2. Relay Chain submission phase.
-3. Availability and unavailability subprotocols.
-4. Secondary GRANDPA approval validity checks.
-5. Invocation of a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
+### Parachain Protocol
 
 The parachain protocol is divided into three main phases:
 
@@ -63,34 +57,30 @@ protocol, as well as the sections where the [Inclusion Pipeline](#inclusion-pipe
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
-The two protocols are tightly connected: the parachain protocol is enclosed within the AnV protocol.
-We will explain in-depth how the two protocols are interconnected in the following sections.
+### AnV Protocol
+
+The AnV Protocol is divided into five different phases, three within the Inclusion Pipeline and two
+within the Approval Process:
+
+- Inclusion Pipeline
+  1.  Parachain phase.
+  2.  Relay Chain submission phase.
+  3.  Availability and unavailability phase.
+- Approval Process
+  1.  Secondary GRANDPA approval validity checks.
+  2.  Invocation of a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
+
+The two protocols are thus tightly connected: phases of the AnV protocol are essentially
+sub-sections of the Parachain Protocol. We will explain in-depth how the two protocols are
+interconnected in the following sections.
 
 ## Inclusion Pipeline
 
-The inclusion pipeline is the path of a parachain block (or parablock) from its creation to its
-inclusion into the Relay Chain. The main checkpoints of that path are listed below.
+### Overview
 
-1. Validators are assigned to parachains by the **Validator Assignment** routine.
-2. A collator produces the parachain block (known as parachain candidate or candidate) along with
-   PoV.
-3. The collator forwards the candidate and PoV to validators assigned to the same parachain via the
-   **Collator Distribution** subsystem.
-4. The validators assigned to the parachain participate in the **Candidate Backing** subsystem.
-   Candidates that gather enough signed validity statements are considered **"backable"** and their
-   backing is the set of signed statements.
-5. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
-   note up to 1 backable candidate for each parachain to be included in the Relay Chain block
-   alongside its backing. Once included in the Relay Chain the candidate is considered backable in
-   that fork of the Relay Chain.
-6. Once backable in the Relay Chain, the candidate is considered to be in "pending availability"
-   status. It can only be considered a part of the parachain once it is **proven available**.
-7. In the following relay chain blocks, the validators will participate in the **Availability
-   Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
-   blocks will note information regarding the candidate's availability.
-8. Once the relay chain state machine has enough information to consider the candidate's PoV as
-   being available, the candidate is considered part of the parachain and is graduated to being a
-   full parachain block.
+The inclusion pipeline of the Parachain Protocol is the path of a parachain block (or parablock)
+from its creation to its inclusion into the Relay Chain. This pipeline includes Phases 1-3 of the
+AnV Protocol.
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
 
@@ -115,6 +105,92 @@ changes its status through this path as follows:
 - Pending availability: The block is backed but not considered available yet.
 - Included: The block is backed and considered available (we have a parablock). Parablocks are shown
   as square with white background and yellow border enclosing a "P".
+
+### Parachain Phase
+
+The parachain phase of AnV Protocol is when the _collator_ of a parachain proposes a _candidate
+block_ together with its PoV to the validators that are currently assigned to the parachain (i.e.
+para-validators).
+
+:::note Candidate block
+
+A candidate block is a new block from a parachain collator that may or may not be valid and must go
+through validity checks before being included into the Relay Chain.
+
+:::
+
+The para-validators then check the candidate block against the PoV. If the verification succeeds,
+then the para-validators will pass the candidate block to the other para-validators. However, if the
+verification fails, the para-validators immediately reject the candidate block as invalid.
+
+The Parachain Phase is made up by four phases of the Inclusion Pipeline:
+
+1. Validators are assigned to parachains by the **Validator Assignment** routine.
+2. A collator produces the parachain block (known as parachain candidate or candidate) along with
+   PoV.
+3. The collator forwards the candidate and PoV to validators assigned to the same parachain via the
+   **Collator Distribution** subsystem.
+4. The validators assigned to the parachain participate in the **Candidate Backing** subsystem.
+   Candidates that gather enough signed validity statements are considered **"backable"** and their
+   backing is the set of signed statements.
+
+### Relay Chain Submission Phase
+
+The backable block is sent to the Relay Chain. The relay chain validators then check the candidate
+block against the PoV. If the verification succeeds, then the validators will pass the candidate
+block to the other validators in the gossip network. However, if the verification fails, the
+validators immediately reject the candidate block as invalid.
+
+Validators need to determine their assignments for each parachain and issue approvals for valid
+candidates, respectively disputes for invalid candidates. Since it cannot be expected that each
+validator verifies every single parachain candidate, this mechanism ensures that enough honest
+validators are selected to verify parachain candidates in order prevent the finalization of invalid
+blocks. If an honest validator detects an invalid block which was approved by one or more
+validators, the honest validator must issue a disputes which wil cause escalations, resulting in
+consequences for all malicious parties.
+
+When more than half of the parachain validators agree that a particular parachain block candidate is
+a valid state transition, they prepare a _candidate receipt_. The candidate receipt is what will
+eventually be included into the Relay Chain state. It includes:
+
+- The parachain ID.
+- The collator's ID and signature.
+- A hash of the parent block's candidate receipt.
+- A Merkle root of the block's erasure-coded pieces.
+- A Merkle root of any outgoing messages.
+- A hash of the block.
+- The state root of the parachain before block execution.
+- The state root of the parachain after block execution.
+
+This information is **constant size** while the actual PoV block of the parachain can be variable
+length. It is enough information for anyone that obtains the full PoV block to verify the state
+transition contained inside of it.
+
+The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline:
+
+1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
+   note up to 1 backable candidate for each parachain to be included in the Relay Chain block
+   alongside its backing. Once included in the Relay Chain the candidate is considered backable in
+   that fork of the Relay Chain.
+2. Once backable in the Relay Chain, the candidate is considered to be in "pending availability"
+   status. It can only be considered a part of the parachain once it is **proven available**.
+
+### Availability and Unavailability Phase
+
+During the availability and unavailability phases, the validators gossip the
+[erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1 validators must report
+that they possess their piece of the code word. Once this threshold of validators has been reached,
+the network can consider the PoV block of the parachain _available_.
+
+The Relay Chain Availability and Unavailability Phase is made up by two phases of the Inclusion
+Pipeline:
+
+1. In the following relay chain blocks, the validators will participate in the **Availability
+   Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
+   blocks will note information regarding the candidate's availability.
+2. Once the relay chain state machine has enough information to consider the candidate's PoV as
+   being available, the candidate is considered part of the parachain and is graduated to being a
+   full parachain block.
 
 Once the parablock is considered available and part of the parachain, it is still "pending
 approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
@@ -202,3 +278,30 @@ gadget. In the absence of an adversarial network it is unlikely that two forks w
 time as there will be validators aware of both chain heads.
 
 ![parachain-forks](../assets/parachain-forks.png)
+
+## Erasure Codes
+
+Erasure coding transforms a message into a longer _code_ that allows for the original message to be
+recovered from a subset of the code and in absence of some portion of the code. A code is the
+original message padded with some extra data that enables the reconstruction of the code in the case
+of erasures.
+
+The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
+availability scheme are
+[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction) codes, which
+already enjoys a battle-tested application in technology outside the blockchain industry. One
+example is found in the compact disk industry. CDs use Reed-Solomon codes to correct any missing
+data due to inconsistencies on the disk face such as dust particles or scratches.
+
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the erasure codes are used to
+keep parachain state available to the system without requiring all validators to keep tabs on all
+the parachains. Instead, validators share smaller pieces of the data and can later reconstruct the
+entire data under the assumption that 1/3+1 of the validators can provide their pieces of the data.
+
+:::note
+
+The 1/3+1 threshold of validators that must be responsive in order to construct the full parachain
+state data corresponds to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s security
+assumption in regard to Byzantine nodes.
+
+:::
