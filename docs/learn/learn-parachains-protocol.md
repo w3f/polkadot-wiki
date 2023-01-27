@@ -38,6 +38,24 @@ They create the PoV that validators know how to check. Creating PoV requires fam
 transaction format and block authoring rules of a specific parachain, as well as having access to
 its full state.
 
+### Fishermen: Deprecated
+
+The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a
+different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+network. Instead of packaging the state transitions and producing the next parachain blocks as
+collators do, fishermen will watch this process and ensure no invalid state transitions are
+included.
+
+**Fishermen are not available on Polkadot or Kusama and are not planned for formal implementation,
+despite previous proposals in the
+[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
+
+To address the motivation behind the Fishermen design consideration, the current secondary backing
+checkers perform a similar role in relation to the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security standpoint,
+security is based on having at least one honest validator either among parachain validators or
+secondary checker.
+
 ## Protocols' Summary
 
 ### Parachain Protocol
