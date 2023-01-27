@@ -135,15 +135,36 @@ changes its status through this path as follows:
 
 ### Parachain Phase
 
-The parachain phase of AnV Protocol is when the collator of a parachain proposes a candidate block
-together with its PoV to the validators that are currently assigned to the parachain (i.e.
-para-validators).
+The parachain phase of AnV Protocol is when a para-validator established connection with a collator,
+which proposes a candidate block together with its Proof.of-Validity (PoV) to that para-validator.
 
-A para-validator checks the candidate block against the PoV. If the verification succeeds, then the
-para-validator will pass the candidate block to the other para-validators. However, if the
-verification fails, the para-validators immediately reject the candidate block as invalid.
+A para-validator needs to check if the candidate block follows the
+[state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
+states are stored within Merke trees, a para-validator can verify state transitions without having
+access to the entire state, but it need:
 
-The Parachain Phase is made up by four phases of the Inclusion Pipeline:
+- The block candidate (list of state transitions)
+- The values in the parachain's database that the block modifies
+- The hashes of the unaffected points in the Merke tree
+
+This set of information is the proof-of-validity (PoV).
+
+:::info Polkadot guarantees valid state transitions, not valid states
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validators do not inspect every value
+in a parachain's state, only those that are modified. This insures that the modification is valid.
+
+:::
+
+Once a para-validator has the PoV, it gossips this information to the other para-validators.
+Para-validator check the candidate block against the PoV. The verification succeeds when more than
+half of the para-validators agrees that the block represents a valid state transition. The
+para-validators can then start to construct the **candidate receipt** (this is what goes into the
+Relay Chain block) and an **erasure coding** that will be sent to all validators in the network.
+However, if the verification fails, the para-validators immediately reject the candidate block as
+invalid.
+
+:::info The Parachain Phase is made up by four phases of the Inclusion Pipeline
 
 1. Validators are assigned to parachains by the **Validator Assignment** routine.
 2. A collator produces the parachain block (known as parachain candidate or candidate) along with
@@ -153,6 +174,8 @@ The Parachain Phase is made up by four phases of the Inclusion Pipeline:
 4. The validators assigned to the parachain participate in the **Candidate Backing** subsystem.
    Candidates that gather enough signed validity statements are considered **"backable"** and their
    backing is the set of signed statements.
+
+:::
 
 ### Relay Chain Submission Phase
 
@@ -186,7 +209,7 @@ This information is **constant size** while the actual PoV block of the parachai
 length. It is enough information for anyone that obtains the full PoV block to verify the state
 transition contained inside of it.
 
-The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline:
+:::info The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline
 
 1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
    note up to 1 backable candidate for each parachain to be included in the Relay Chain block
@@ -194,6 +217,8 @@ The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipel
    that fork of the Relay Chain.
 2. Once backable in the Relay Chain, the candidate is considered to be in "pending availability"
    status. It can only be considered a part of the parachain once it is **proven available**.
+
+:::
 
 ### Availability and Unavailability Phase
 

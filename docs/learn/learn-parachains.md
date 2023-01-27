@@ -41,15 +41,20 @@ Chain or own the native token unless stipulated by the parachain implementation.
 
 ### State Transitions
 
-Like other blockchains, parachains are deterministic state machines. That is, each parachain has a
-state, executes a batch of transactions grouped into a block, and achieves a new state. Joe
+Like other blockchains, parachains are **deterministic state machines**. That is, each parachain has
+a **state**, executes a batch of transactions grouped into a block, and achieves a new state. Joe
 Petrowski provided in [this article](https://polkadot.network/blog/the-path-of-a-parachain-block/) a
 good analogy of a state with a light switch that can be either on or off. Each parachain has its own
 state, and the Relay Chain links all those states into one state, i.e. a state of states. A
 multi-chain network like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be
-viewed like one computer's state with many light switches where a state transition function is the
-logic to decide which switches should be toggled. Parachains have their own transition rule,
+viewed like one computer's state with many light switches where a **state transition function** is
+the logic to decide which switches should be toggled. Parachains have their own transition rule,
 separate economies, governance mechanisms, and users.
+
+A parachain's state is stored in a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree). Merkle
+trees have the convenient property that if some values within the tree change, this will be
+reflected in the Merkle root (in this case the state root). One can verify the change by only
+looking at the new values and the paths that are affected within the tree.
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host requires that the state
 transitions performed on parachains be specified as a [Wasm](learn-wasm.md) executable. Proofs of
