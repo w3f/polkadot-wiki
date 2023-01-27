@@ -167,11 +167,11 @@ More information can be found in the dedicated sections about the
 ## Network Asynchrony
 
 We have mentioned how a relay chain block author must select the candidate and note it on the Relay
-Chain (we say the block is backed). The relay chain block author is selected by BABE, which is a
-forkful algorithm. This means that different block authors are chosen at the same time and they may
-not work on the same block parent (i.e. the representations in the previous figures are simplistic).
-Also, the sets of validators and parachains are not fixed, and the validators' assignments to
-parachains is also flexible.
+Chain (we say the block is backed). The relay chain block author is selected by
+[BABE](./learn-consensus.md#block-production-babe), which is a forkful algorithm. This means that
+different block authors are chosen at the same time and they may not work on the same block parent
+(i.e. the representations in the previous figures are simplistic). Also, the sets of validators and
+parachains are not fixed, and the validators' assignments to parachains is also flexible.
 
 We say that the network is **asynchronous** since there will be validators who have received a
 block, and other validators who did not. Thus, the network is variable and it exists in multiple
@@ -185,5 +185,3 @@ gadget. In the absence of an adversarial network it is unlikely that two forks w
 time as there will be validators aware of both chain heads.
 
 ![parachain-forks](../assets/parachain-forks.png)
-
-[babe]: ./learn-consensus.md#block-production-babe
