@@ -218,6 +218,8 @@ audit, you can install the developer release from the shell using the latest ver
 See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer
 release of your ledger app.
 
+Currently, the developer release can be installed only on the Nano S and S plus devices and can't be installed on the Nano X.
+
 :::
 
 To install the developer version make sure you have the latest `pip` version and follow the steps
