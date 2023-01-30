@@ -371,8 +371,9 @@ Data that includes information about other data, such as information about a spe
 
 ## Motion
 
-A motion is essentially a "referendum" or "decision" being considered by the Council. The Council 
-can vote on motions like approving Treasury Proposals or making proposals for the community to vote on.
+A motion is essentially a "referendum" or "decision" being considered by the Council. The Council
+can vote on motions like approving Treasury Proposals or making proposals for the community to vote
+on.
 
 ## Next Session
 
