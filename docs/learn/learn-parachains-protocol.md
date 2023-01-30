@@ -107,7 +107,7 @@ The AnV Protocol is divided into five different phases, three within the
   3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
 - **Approval Process**
   1.  [Assignments and secondary checks](#assignments--secondary-checks)
-  2.  Invocation of GRANDPA, a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
+  2.  [Chain Selection](#chain-selection)
 
 The two protocols are thus tightly connected: phases of the AnV protocol are essentially
 sub-sections of the Parachain Protocol.
@@ -174,7 +174,7 @@ para-validators can then start to construct the [**candidate receipt**](#candida
 is what goes into the Relay Chain block) and an [**erasure coding**](#erasure-codes) that will be
 sent to all validators in the network.
 
-:::info The Parachain Phase is made up by four phases of the Inclusion Pipeline
+:::info The Parachain Phase is made up by four steps of the Inclusion Pipeline
 
 1. Validators are assigned to parachains by the **Validator Assignment** routine.
 2. A collator produces the parachain block (known as parachain candidate or candidate) along with
@@ -196,7 +196,7 @@ validator wins [BABE](./learn-consensus.md#block-production-babe) slot leadershi
 candidate receipt to build a Relay Chain block. Remember, at this stage validators of the Relay
 Chain already received the [erasure coding information](#erasure-codes).
 
-:::info The Submission Phase is made up by two phases of the Inclusion Pipeline
+:::info The Submission Phase is made up by two steps of the Inclusion Pipeline
 
 1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
    note up to 1 backable candidate for each parachain to be included in the Relay Chain block
@@ -219,7 +219,7 @@ approval". The Inclusion Pipeline must conclude for a specific parachain before 
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts, and
 it can run for many parachain blocks at once.
 
-:::info The Availability and Unavailability Phase is made up by two phases of the Inclusion Pipeline
+:::info The Availability and Unavailability Phase is made up by two steps of the Inclusion Pipeline
 
 1. In the following relay chain blocks, the validators will participate in the **Availability
    Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
@@ -365,6 +365,22 @@ For detailed information about the approval process see dedicated section in
 
 Accepting a parablock is the end result of having passed through the detection stage without
 dispute, or having passed through and escalation/dispute stage with a positive outcome.
+
+### Chain Selection
+
+Chain selection is used to select blocks to build on and finalize. These processes need to
+consistent among nodes and resilient to a maximum proportion of malicious nodes. The parachain host
+uses a block authoring system and a finality gadget. The chain selection strategy involves a
+_[leaf-selection rule](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html)_
+and a set of
+_[finality constraints](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html#the-best-chain-containing-rule)_.
+
+:::info
+
+For detailed information about chain selection see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html).
+
+:::
 
 ## Candidate Receipts
 
