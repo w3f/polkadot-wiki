@@ -57,10 +57,10 @@ block authors, they are selected by [BABE](./learn-consensus.md/#block-productio
 up to one backable candidate for each parachain to include in the relay chain. A backable candidate
 included in the relay chain is considered _backed_ in that fork of the chain.
 
-Block authors will only include candidate receipts in the Relay Chain that have a parent candidate
-receipt in an earlier Relay Chain block. This ensures the parachain follows a valid chain. Also, the
-block authors will only include a receipt for which they have an erasure coding chunk, ensuring that
-the system can perform the next round of availability and validity checks.
+In a Relay Chain block, block authors will only include candidate receipts that have a parent
+candidate receipt in an earlier Relay Chain block. This ensures the parachain follows a valid chain.
+Also, the block authors will only include a receipt for which they have an erasure coding chunk,
+ensuring that the system can perform the next round of availability and validity checks.
 
 ### Other Relay Chain Validators
 
@@ -86,6 +86,9 @@ the wrong side by removing some or all their staked
 performance, however, will be rewarded, with validators receiving block rewards (including
 transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange
 for their activities.
+
+Finally, validators participate in the
+[chain selection within GRANDPA](./learn-parachains-protocol.md/#chain-selection).
 
 ## Further Readings
 

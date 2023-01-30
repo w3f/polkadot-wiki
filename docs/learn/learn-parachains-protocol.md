@@ -214,10 +214,19 @@ During the availability and unavailability phases, the validators gossip the
 that they possess their piece of the code word. Once this threshold of validators has been reached,
 the network can consider the parachain block available.
 
-Once the parablock is considered available and part of the parachain, it is still "pending
+The availability check by the block author ensures that
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will only include blocks for which
+the validators distributed their erasure coded chunks, but it does not guarantee their validity.
+Because the number of para-validators on each parachain is so low, collusion is a reasonable
+concern. By separating block production ([BABE](./learn-consensus.md#block-production-babe)) from
+finality ([GRANDPA](./learn-consensus.md/#finality-gadget-grandpa)),
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can perform extra validity checks
+after a block is produced but before it is finalized.
+
+Thus, once the parablock is considered available and part of the parachain, it is still "pending
 approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
-accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts, and
-it can run for many parachain blocks at once.
+accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts and it
+makes sure the block is valid, and it can run for many parachain blocks at once.
 
 :::info The Availability and Unavailability Phase is made up by two steps of the Inclusion Pipeline
 
@@ -367,6 +376,10 @@ Accepting a parablock is the end result of having passed through the detection s
 dispute, or having passed through and escalation/dispute stage with a positive outcome.
 
 ### Chain Selection
+
+After enough secondary checks have been performed on all candidate receipts within a block,
+validators can vote for that block (and all previous blocks) in GRANDPA. Once the block has more
+than 2/3 of positive votes, the block is finalized on chain.
 
 Chain selection is used to select blocks to build on and finalize. These processes need to
 consistent among nodes and resilient to a maximum proportion of malicious nodes. The parachain host
