@@ -366,28 +366,6 @@ For detailed information about the approval process see dedicated section in
 Accepting a parablock is the end result of having passed through the detection stage without
 dispute, or having passed through and escalation/dispute stage with a positive outcome.
 
-## Network Asynchrony
-
-We have mentioned how a relay chain block author must select the candidate and note it on the Relay
-Chain (we say the block is backed). The relay chain block author is selected by
-[BABE](./learn-consensus.md#block-production-babe), which is a forkful algorithm. This means that
-different block authors are chosen at the same time and they may not work on the same block parent
-(i.e. the representations in the previous figures are simplistic). Also, the sets of validators and
-parachains are not fixed, and the validators' assignments to parachains is also flexible.
-
-We say that the network is **asynchronous** since there will be validators who have received a
-block, and other validators who did not. Thus, the network is variable and it exists in multiple
-states. In the figure below (_left_) the Group 1 received block C while Group 2 did not due to
-network asynchrony. Validators in Group 2 can build another block on top of B, called C'. Assume
-that afterwards, some validators become aware of both C and C' while others remain aware of one of
-them (_right_). Validators in Group 3 must be aware of the network state in each head (C and C') and
-they may contribute to some or full extent on both. It is possible that due to network asynchrony
-two forks may grow in parallel for some time, but eventually one fork will be chosen by the finality
-gadget. In the absence of an adversarial network it is unlikely that two forks will coexist for some
-time as there will be validators aware of both chain heads.
-
-![parachain-forks](../assets/parachain-forks.png)
-
 ## Candidate Receipts
 
 PoV are typically between 1 MB and 10 MB in size and are not included in the Relay Chain blocks. For
@@ -506,6 +484,28 @@ In the Guide there are also more details about
 [disputes' flows](https://paritytech.github.io/polkadot/book/disputes-flow.html).
 
 :::
+
+## Network Asynchrony
+
+We have mentioned how a relay chain block author must select the candidate and note it on the Relay
+Chain (we say the block is backed). The relay chain block author is selected by
+[BABE](./learn-consensus.md#block-production-babe), which is a forkful algorithm. This means that
+different block authors are chosen at the same time and they may not work on the same block parent
+(i.e. the representations in the previous figures are simplistic). Also, the sets of validators and
+parachains are not fixed, and the validators' assignments to parachains is also flexible.
+
+We say that the network is **asynchronous** since there will be validators who have received a
+block, and other validators who did not. Thus, the network is variable and it exists in multiple
+states. In the figure below (_left_) the Group 1 received block C while Group 2 did not due to
+network asynchrony. Validators in Group 2 can build another block on top of B, called C'. Assume
+that afterwards, some validators become aware of both C and C' while others remain aware of one of
+them (_right_). Validators in Group 3 must be aware of the network state in each head (C and C') and
+they may contribute to some or full extent on both. It is possible that due to network asynchrony
+two forks may grow in parallel for some time, but eventually one fork will be chosen by the finality
+gadget. In the absence of an adversarial network it is unlikely that two forks will coexist for some
+time as there will be validators aware of both chain heads.
+
+![parachain-forks](../assets/parachain-forks.png)
 
 ## Further Resources
 
