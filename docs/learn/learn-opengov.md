@@ -139,6 +139,9 @@ ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefor
 are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be
 predetermined on the pallet.
 
+For additional details, see the
+[Origin and Tracks](./../maintain/maintain-guides-opengov.md#origins-and-tracks) section.
+
 ### Proposing a Referendum
 
 #### Public Referenda
