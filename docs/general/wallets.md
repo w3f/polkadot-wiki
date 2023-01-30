@@ -78,7 +78,7 @@ their official social media handles).
 A multichain crypto wallet - Bitcoin, Ethereum, Polkadot, Kusama and a few parachains.
 Non-custodial, private, hardware wallet support (Ledger and Trezor). Private and open source. Hold,
 send, and receive tokens and NFTs. Swap tokens and bridge assets between chains. Manage multiple
-accounts on multiple networks. Connect to web3 apps. Recepient of development grant from Web3
+accounts on multiple networks. Connect to web3 apps. Recipient of development grant from Web3
 Foundation.
 
 ### PolkaGate
