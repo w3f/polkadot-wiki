@@ -106,8 +106,8 @@ The AnV Protocol is divided into five different phases, three within the
   2.  [Relay Chain submission phase](#relay-chain-submission-phase)
   3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
 - **Approval Process**
-  1.  Secondary GRANDPA approval validity checks.
-  2.  Invocation of a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
+  1.  Secondary approval validity checks.
+  2.  Invocation of GRANDPA, a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
 
 The two protocols are thus tightly connected: phases of the AnV protocol are essentially
 sub-sections of the Parachain Protocol.
@@ -153,7 +153,7 @@ which proposes a candidate block together with its Proof.of-Validity (PoV) to th
 A para-validator needs to check if the candidate block follows the
 [state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
 states are stored within Merke trees, a para-validator can verify state transitions without having
-access to the entire state, but it need:
+access to the entire state, but it needs:
 
 - The block candidate (list of state transitions)
 - The values in the parachain's database that the block modifies
@@ -191,26 +191,20 @@ immediately reject the candidate block as invalid.
 
 ### Relay Chain Submission Phase
 
-The backable block is sent to the Relay Chain. The relay chain validators then check the candidate
-block against the PoV. If the verification succeeds, then the validators will pass the candidate
-block to the other validators in the gossip network. However, if the verification fails, the
-validators immediately reject the candidate block as invalid.
-
-Validators need to determine their assignments for each parachain and issue approvals for valid
-candidates, respectively disputes for invalid candidates. Since it cannot be expected that each
-validator verifies every single parachain candidate, this mechanism ensures that enough honest
-validators are selected to verify parachain candidates in order prevent the finalization of invalid
-blocks. If an honest validator detects an invalid block which was approved by one or more
-validators, the honest validator must issue a disputes which wil cause escalations, resulting in
-consequences for all malicious parties.
+When a candidate block receives enough signed validity statements, then it is considered backable.
+The backable block is then sent to the Relay Chain together with the receipt that is added to the
+Relay Chain transaction queue. The receipt is gossiped around and when a validator wins
+[BABE](./learn-consensus.md#block-production-babe) slot leadership, it will select a candidate
+receipt to build a Relay Chain block. Remember, at this stage validators of the Relay Chain already
+received the erasure coding information.
 
 :::info The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline
 
 1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
    note up to 1 backable candidate for each parachain to be included in the Relay Chain block
-   alongside its backing. Once included in the Relay Chain the candidate is considered backable in
+   alongside its backing. Once included in the Relay Chain the candidate is considered backed in
    that fork of the Relay Chain.
-2. Once backable in the Relay Chain, the candidate is considered to be in "pending availability"
+2. Once backed in the Relay Chain, the candidate is considered to be in "pending availability"
    status. It can only be considered a part of the parachain once it is **proven available**.
 
 :::
@@ -220,10 +214,15 @@ consequences for all malicious parties.
 During the availability and unavailability phases, the validators gossip the
 [erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1 validators must report
 that they possess their piece of the code word. Once this threshold of validators has been reached,
-the network can consider the PoV block of the parachain _available_.
+the network can consider the parachain block available.
 
-The Relay Chain Availability and Unavailability Phase is made up by two phases of the Inclusion
-Pipeline:
+Once the parablock is considered available and part of the parachain, it is still "pending
+approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
+accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts, and
+it can run for many parachain blocks at once.
+
+:::info The Relay Chain Availability and Unavailability Phase is made up by two phases of the
+Inclusion Pipeline:
 
 1. In the following relay chain blocks, the validators will participate in the **Availability
    Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
@@ -232,28 +231,28 @@ Pipeline:
    being available, the candidate is considered part of the parachain and is graduated to being a
    full parachain block.
 
-Once the parablock is considered available and part of the parachain, it is still "pending
-approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
-accepted on that parachain. After inclusion, the Approval Process starts, and it can run for many
-parachain blocks at once.
+:::
+
+### Failure to Inclusion
 
 The candidate can fail to be included in the parachain in any of the following ways:
 
 - The collator is not able to propagate the block to any of the assigned validators.
 - The candidate is not backed by validators participating to the Candidate Backing subsystem.
 - The candidate is not selected by a relay chain block author.
-- The candidate's PoV is not considered available within a timeout, and it is discarded from the
-  Relay Chain.
+- The candidate's PoV is not considered available within a timeout, and the block is discarded from
+  the Relay Chain.
 
 Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
 on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
 those actors responsible for it will also be slashed. To detect false positives, PoV information
 must be available after the block has been added to the Relay Chain so that validators can check the
-work. PoVs are typically between 1 MB and 10 MB in size and are not included in the Relay Chain
-blocks. However, as a part of the data availability scheme, they are made available on the network
-for a certain period so that the validators can perform the required checks.
+work. However, as a part of the data availability scheme, they are made available on the network for
+a certain period so that the validators can perform the required checks.
 
 ## Approval Process
+
+### Overview
 
 Once the parablock is considered available and part of the parachain, is still "pending approval".
 At this stage the parablock is tentatively included in the parachain, although more confirmation is
@@ -297,6 +296,86 @@ More information can be found in the dedicated sections about the
 
 :::
 
+### Assignments & Secondary Checks
+
+Having a bad parablock on the relay chain is not catastrophic as long as the block is not approved
+and finalized by the finality gadget [GRANDPA](./learn-consensus.md/#finality-gadget-grandpa). If
+the block is not finalized, the fork on the chain containing that block can be ignored in favor of
+another fork containing good blocks. Dealing with a bad parablock includes the following stages:
+
+- Detection: the bad block must be detected by honest validators.
+- Escalation: the honest validators must send that block for checks to all validators. A dispute
+  starts.
+- Consequences: the chain is reverted and all malicious validators are slashed.
+
+The result of the dispute must be transplantable to all other forks so that malicious validators are
+slashed in all possible histories and so that honest validators will ignore any forks containing
+that parablock.
+
+:::info Parablocks vs Relay-Chain blocks
+
+It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
+sense to think of relay-chain blocks as having been approvead instead of parablocks that have been
+approved. A relay-chain block containing a bad parablock must be reverted, while a relay-chain block
+containing only approved parablocks can be considered approved as long as its parent relay-chain
+block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
+ancestry.
+
+:::
+
+Validators perform two main actions in the Approval Process:
+
+- **[Assignments](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignments)**
+  determine which validators perform approval checks on which candidates, ensuring each candidate
+  receives enough random checkers. This stage tracks approval votes to identify when
+  [no-show](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows) approval
+  checks take suspiciously long. It also tracks relay chain
+  [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
+  determine when adversaries possibly gained foreknowledge about assignments and adding more checks
+  in those cases. Assignees determine their own assignments to check specific candidates using two
+  or three
+  [assignment criteria](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
+  which are based upon two possible
+  [stories](https://paritytech.github.io/polkadot/book/protocol-approval.html#stories) about the
+  relay chain block that included the candidate (i.e. declared the candidate available).
+  [Assignment notices](https://paritytech.github.io/polkadot/book/protocol-approval.html#announcements--notices)
+  are gossiped among nodes so that all validators know which validators should check which
+  candidates, and if any candidate requires more checkers.
+- **Approval checks** performs the checks by obtaining the candidate, verify its validity, and
+  sending out the approval vote or initiating a dispute. Approval checks have a no-show timeout
+  window (i.e. longer than one relay chain slot) to succeed in reconstructing the candidate block,
+  redo its erasure coding to check the candidate receipt, and recheck the candidate block itself. A
+  validator becomes tagged as no-show if does not approve or dispute within the no-show timeout
+  window. Because validators can be overloaded with assignments, they can intentionally delay
+  sending their assignment notice to avoid creating no-shows (see more in
+  [Assignment postponement](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-postponement)).
+
+These two steps first run as off-chain consensus protocols using messages gossiped among all
+validators, and then as on-chain record of those protocols' progress. The on-chain protocol is
+needed to provide rewards for the off-chain protocol. The
+[on-chain verification](https://paritytech.github.io/polkadot/book/protocol-approval.html#on-chain-verification)
+has two phases: a) assignments notices and approval votes are recorded in a relay chain block, and
+b) in another relay chain block notes are fed into the approval code.
+
+The gossiped messages are of two types, assignment notices and approval votes, and are singed with
+[approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
+Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) used by validators.
+Briefly, approval keys are:
+
+- **Approval assignment keys** that are sr25519 keys used only for assignment criteria
+  [VRF](./learn-randomness.md/#vrf).
+- **Approval vote keys** that are ed25519 and would only sign off on a candidate parablock validity.
+
+:::info
+
+For detailed information about the approval process see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
+
+:::
+
+Accepting a parablock is the end result of having passed through the detection stage without
+dispute, or having passed through and escalation/dispute stage with a positive outcome.
+
 ## Network Asynchrony
 
 We have mentioned how a relay chain block author must select the candidate and note it on the Relay
@@ -321,9 +400,10 @@ time as there will be validators aware of both chain heads.
 
 ## Candidate Receipts
 
-For {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to scale to hundreds of
-parachains, PoV need to be represented by something smaller on the Relay Chain: candidate receipts.
-A para-validator constructs a candidate receipt for a parachain block by signing:
+PoV are typically between 1 MB and 10 MB in size and are not included in the Relay Chain blocks. For
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to scale to hundreds of parachains,
+PoV need to be represented by something smaller on the Relay Chain: candidate receipts. A
+para-validator constructs a candidate receipt for a parachain block by signing:
 
 - The parachain ID.
 - The collator's ID and signature.
@@ -345,7 +425,7 @@ constructs the receipt must also construct an erasure coding of the parachain bl
 
 An erasure coding takes a message (in this case the parachain block and PoV) and creates a set of
 smaller messages such that you can reconstruct the original message by obtaining a fraction of the
-smaller messages. In the case of {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama }} the
+smaller messages. In the case of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 total number of smaller messages is equal to the total number of validators and the fraction is 1/3.
 
 The para-validator creates the erasure coding chunks, puts them into their own Merkle tree, and
@@ -370,6 +450,70 @@ entire data under the assumption that 1/3+1 of the validators can provide their 
 The 1/3+1 threshold of validators that must be responsive in order to construct the full parachain
 state data corresponds to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s security
 assumption in regard to Byzantine nodes.
+
+:::
+
+## Disputes
+
+All parachain blocks that are in the finalized relay chain should be valid. This, does not apply to
+backed blocks that are not included. To ensure nothing invalid ends up in the finalized relay chain
+there are approval checks (described above) and disputes. The latter ensures that each attempt to
+include something invalid is caught and the offending validators are punished.
+
+Disputes are _independent from a particular fork_, while backing and approval operate on particular
+forks. The approval voting stops if an alternative fork (which might not contain the
+currently-approved candidate) is finalized. In fact, the sole purpose of the approval process is to
+make sure invalid blocks are not finalized. However, even though the danger is past and the
+offending validators did not manage to get the invalid block approved, those validators need to get
+slashed for the attempt.
+
+A dispute stems from a disagreement between two or more validators. For this to happen, a bad actor
+needs to distribute an invalid block to honest validators. Scenarios leading to a dispute can be one
+of the followings (ordered from most to least important):
+
+- A parablock included on a branch of the relay chain is bad
+- A parablock backed on a branch of the relay chain is bad
+- A parablock seconded, but not backed on any branch of the relay chain, is bad
+
+Checking a parachain block requires 3 pieces of data: the parachain validator code, the availability
+of data, and the candidate receipt. The validator code is available on-chain and published ahead of
+time. Thus, a dispute process begins with the availability to ensure the availability of the data.
+Such process will conclude quickly if the data is already available, otherwise the initiator of the
+dispute must make it available.
+
+Disputes have both off- and on-chain components. Slashing is handled on-chain, so votes by
+validators on either sides of the dispute must be placed on-chain. Moreover, a dispute on one branch
+of the chain must be transposed to all active branches so that misbehavior can be punished in all
+possible histories. There is thus a distinction between _local_ (the one we are looking at) and
+_remote_ disputes relative to a particular branch of the relay chain.
+
+Disputes can be divided into three different phases:
+
+- [Dispute initiation](https://paritytech.github.io/polkadot/book/protocol-disputes.html#initiation):
+  Disputes are initiated by any validator who finds their opinion on the validity of a parablock in
+  opposition to another issued statement. The initiation begins off-chain by only nodes perceiving
+  that a parablock is bad. The validator can be one of the para-validators (i.e. one of the backers)
+  or one of the approval checkers. Note that, if the dispute occurs during the backing phase, the
+  initiator must make the data available while if the dispute occurs during the approval process the
+  data is already available.
+- [Dispute participation](https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-participation):
+  Once becoming aware of the dispute, all validators must participate.
+- [Dispute conclusion](https://paritytech.github.io/polkadot/book/protocol-disputes.html#dispute-conclusion):
+  Disputes conclude after 2/3 supermajority is reached on either side. Disputes may also conclude
+  after a timeout. This will only happen if the majority of validators are unable to vote for some
+  reason.
+
+The on-chain component of the dispute can be initiated by providing any two conflicting votes and it
+also waits for 2/3 supermajority on either side. The component also tracks which parablocks have
+already been disputed so that the same parablock can be disputed only once on any particular branch
+of the relay chain. Inclusion is halted for the parachain until the dispute resolves.
+
+:::info
+
+For detailed information about disputes see dedicated section in
+[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
+In the Guide there are also more details about
+[disputes' flows](https://paritytech.github.io/polkadot/book/disputes-flow.html).
 
 :::
 
