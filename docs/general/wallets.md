@@ -92,10 +92,10 @@ account(s).
 
 ### SubWallet
 
-Web3 Multiverse Gateway for Polkadot & Kusama Ecosystem. Track, send, receive and monitor
-multi-chain assets. XCM Transfer, NFT Management, Parity Signer & Ledger Support, Light
-Clients Support, QR-code Account Import, Token Import, EVM DApp Support, MetaMask Compatibility,
-Custom Endpoint, Fiat On-ramp. Subwallet received funding from Polkadot Treasury
+Web3 multiverse gateway for Polkadot & Kusama ecosystem. Track, send, receive and monitor
+multi-chain assets. XCM Transfer, NFT Management, Parity Signer & Ledger support, light
+clients support, QR-code account import, token import, EVM DApp support, MetaMask compatibility,
+custom endpoint, fiat on-ramp. Subwallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
 [2](https://polkadot.polkassembly.io/treasury/162)].
 
