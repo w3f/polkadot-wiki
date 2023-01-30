@@ -73,10 +73,10 @@ async function GetTracks(network, wsUrl, setReturnValue) {
   // Render Table
   setReturnValue(
     <div style={{ textAlign: "center" }}>
-      <b>Current {network.charAt(0).toUpperCase() + network.slice(1)} Tracks ({tableData.length}):</b>
-      <br /><br />
+      <b>{network.charAt(0).toUpperCase() + network.slice(1)} Tracks ({tableData.length}):</b>
+      <br />
       <div style={{ border: "1px solid #dadde1" }}>
-        <table style={{ margin: 0, maxHeight: "600px", borderCollapse: "separate", borderSpacing: 0 }}>
+        <table style={{ margin: 0, maxHeight: "600px", borderCollapse: "separate", borderSpacing: 0, whiteSpace: "nowrap" }}>
           <thead style={{ width: "100%", textAlign: "center", position: "sticky", top: 0, background: "#c1c1c1" }}>
             <tr>
               <th>ID</th>
@@ -96,7 +96,11 @@ async function GetTracks(network, wsUrl, setReturnValue) {
           </tbody>
         </table>
       </div>
-      <b>**Hover <span style={{color: "#e6007a", textDecoration: "underline"}}>underlined cell values</span> for additional info**</b>
+      <b style={{fontSize: "12px"}}>
+        **Hover&nbsp;
+        <span style={{color: "#e6007a", textDecoration: "underline"}}>underlined cell values</span>
+        &nbsp;for additional info**
+      </b>
     </div>
   );
 }
@@ -106,16 +110,16 @@ function FormatObject(item) {
   if (item.hasOwnProperty("Reciprocal")) {
     const Reciprocal = item.Reciprocal;
     return (
-      <p title={`Factor: ${Reciprocal.factor}, X-Offset: ${Reciprocal.xOffset}, Y-Offset: ${Reciprocal.yOffset}`}>
+      <div title={`Factor: ${Reciprocal.factor}, X-Offset: ${Reciprocal.xOffset}, Y-Offset: ${Reciprocal.yOffset}`}>
         Reciprocal
-      </p>
+      </div>
     );
   } else if (item.hasOwnProperty("LinearDecreasing")) {
     const LinearDecreasing = item.LinearDecreasing;
     return (
-      <p title={`Length: ${LinearDecreasing.length}, Floor: ${LinearDecreasing.floor}, Ceiling: ${LinearDecreasing.ceil}`}>
+      <div title={`Length: ${LinearDecreasing.length}, Floor: ${LinearDecreasing.floor}, Ceiling: ${LinearDecreasing.ceil}`}>
         Linear Decreasing
-      </p>
+      </div>
     );
   } else {
     return "";
