@@ -99,8 +99,8 @@ active validators. The bags-list can be previewed on
 
 Minimum DOT required to submit intent to nominate is
 {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>__ :polkadot }}
-, but the minimum active nomination
-required to earn staking rewards is dynamic and may be much higher, which can be viewed on
+, but the minimum active nomination required to earn staking rewards is dynamic and may be much
+higher, which can be viewed on
 [Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
 
 :::
@@ -163,7 +163,7 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
 
 ### Staking Election Stages
 
-The staking election system has 3 stages for both validators and nominators, namely "intention", 
+The staking election system has 3 stages for both validators and nominators, namely "intention",
 "electable/electing", and "active".
 
 - **intention to nominate:** an account that has stated the intention to nominate; also called
