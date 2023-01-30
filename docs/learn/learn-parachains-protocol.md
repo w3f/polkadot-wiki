@@ -61,21 +61,21 @@ its full state.
 
 ### Fishermen: Deprecated
 
+Fishermen are not available on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and
+are not planned for formal implementation, despite previous proposals in the
+[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).
+
 The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a
 different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 network. Instead of packaging the state transitions and producing the next parachain blocks as
 collators do, fishermen will watch this process and ensure no invalid state transitions are
 included.
 
-**Fishermen are not available on Polkadot or Kusama and are not planned for formal implementation,
-despite previous proposals in the
-[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
-
-To address the motivation behind the Fishermen design consideration, the current secondary backing
-checkers perform a similar role in relation to the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security standpoint,
-security is based on having at least one honest validator either among parachain validators or
-secondary checker.
+To address the motivation behind the Fishermen design consideration, the current
+[secondary backing checkers](#assignments--secondary-checks) perform a similar role in relation to
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security
+standpoint, security is based on having at least one honest validator either among parachain
+validators or secondary checker.
 
 ## Protocols' Summary
 
@@ -106,7 +106,7 @@ The AnV Protocol is divided into five different phases, three within the
   2.  [Relay Chain submission phase](#relay-chain-submission-phase)
   3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
 - **Approval Process**
-  1.  Secondary approval validity checks.
+  1.  [Assignments and secondary checks](#assignments--secondary-checks)
   2.  Invocation of GRANDPA, a Byzantine Fault Tolerant (BFT) _finality gadget_ to cement the chain.
 
 The two protocols are thus tightly connected: phases of the AnV protocol are essentially
@@ -117,8 +117,7 @@ sub-sections of the Parachain Protocol.
 ### Overview
 
 The inclusion pipeline of the Parachain Protocol is the path of a parachain block (or parablock)
-from its creation to its inclusion into the Relay Chain. This pipeline includes Phases 1-3 of the
-AnV Protocol.
+from its creation to its inclusion into the Relay Chain.
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
 
@@ -173,8 +172,7 @@ Para-validator check the candidate block against the PoV. The verification succe
 half of the para-validators agrees that the block represents a valid state transition. The
 para-validators can then start to construct the [**candidate receipt**](#candidate-receipts) (this
 is what goes into the Relay Chain block) and an [**erasure coding**](#erasure-codes) that will be
-sent to all validators in the network. However, if the verification fails, the para-validators
-immediately reject the candidate block as invalid.
+sent to all validators in the network.
 
 :::info The Parachain Phase is made up by four phases of the Inclusion Pipeline
 
@@ -192,13 +190,13 @@ immediately reject the candidate block as invalid.
 ### Relay Chain Submission Phase
 
 When a candidate block receives enough signed validity statements, then it is considered backable.
-The backable block is then sent to the Relay Chain together with the receipt that is added to the
-Relay Chain transaction queue. The receipt is gossiped around and when a validator wins
-[BABE](./learn-consensus.md#block-production-babe) slot leadership, it will select a candidate
-receipt to build a Relay Chain block. Remember, at this stage validators of the Relay Chain already
-received the erasure coding information.
+The backable block is then sent to the Relay Chain together with the [receipt](#candidate-receipts)
+that is added to the Relay Chain transaction queue. The receipt is gossiped around and when a
+validator wins [BABE](./learn-consensus.md#block-production-babe) slot leadership, it will select a
+candidate receipt to build a Relay Chain block. Remember, at this stage validators of the Relay
+Chain already received the [erasure coding information](#erasure-codes).
 
-:::info The Relay Chain Submission Phase is made up by two phases of the Inclusion Pipeline
+:::info The Submission Phase is made up by two phases of the Inclusion Pipeline
 
 1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
    note up to 1 backable candidate for each parachain to be included in the Relay Chain block
@@ -221,8 +219,7 @@ approval". The Inclusion Pipeline must conclude for a specific parachain before 
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts, and
 it can run for many parachain blocks at once.
 
-:::info The Relay Chain Availability and Unavailability Phase is made up by two phases of the
-Inclusion Pipeline:
+:::info The Availability and Unavailability Phase is made up by two phases of the Inclusion Pipeline
 
 1. In the following relay chain blocks, the validators will participate in the **Availability
    Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
@@ -243,12 +240,13 @@ The candidate can fail to be included in the parachain in any of the following w
 - The candidate's PoV is not considered available within a timeout, and the block is discarded from
   the Relay Chain.
 
-Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
-on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
-those actors responsible for it will also be slashed. To detect false positives, PoV information
-must be available after the block has been added to the Relay Chain so that validators can check the
-work. However, as a part of the data availability scheme, they are made available on the network for
-a certain period so that the validators can perform the required checks.
+Signed negative statements will lead to a [dispute](#disputes), and if there are false negatives,
+whoever will be on the wrong side (once the dispute is resolved) will be slashed. False positives
+can also happen; those actors responsible for it will also be slashed. To detect false positives,
+PoV information must be available after the block has been added to the Relay Chain so that
+validators can check the work. However, as a part of the data
+[availability scheme](#availability-and-unavailability-phase), they are made available on the
+network for a certain period so that the validators can perform the required checks.
 
 ## Approval Process
 
@@ -288,14 +286,6 @@ para-blocks are shown as yellow squares that become grey in color.
 
 ![parachain-approval-process](../assets/parachain-approval-process.png)
 
-:::info
-
-More information can be found in the dedicated sections about the
-[approval process](https://paritytech.github.io/polkadot/book/protocol-approval.html) and
-[disputes](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
-
-:::
-
 ### Assignments & Secondary Checks
 
 Having a bad parablock on the relay chain is not catastrophic as long as the block is not approved
@@ -304,8 +294,8 @@ the block is not finalized, the fork on the chain containing that block can be i
 another fork containing good blocks. Dealing with a bad parablock includes the following stages:
 
 - Detection: the bad block must be detected by honest validators.
-- Escalation: the honest validators must send that block for checks to all validators. A dispute
-  starts.
+- Escalation: the honest validators must send that block for checks to all validators. A
+  [dispute](#disputes) starts.
 - Consequences: the chain is reverted and all malicious validators are slashed.
 
 The result of the dispute must be transplantable to all other forks so that malicious validators are
