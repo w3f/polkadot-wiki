@@ -152,18 +152,42 @@ If you would like to access and modify this, you can re-submit the documentation
 [DocSearch Program](https://docsearch.algolia.com/apply/), where they will send a JavaScript snippet
 that you can re-integrate into the configuration, similar to the one shown above.
 
-### Automated Deployments
+### Automation
+
+#### Deployments
 
 The Polkadot Wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages. The
 Kusama Wiki is also deployed to GitHub Pages (via a separate repository).
 
 Development servers exist at `https://staging.polkadot.network` and
 `https://staging.kusama.network`. The servers will reflect the latest `master` commit or PR put up
-against the master branch by a member of the Technical Education team. The latest version of
-`master` is staged and checked by the team. If all is well, the new commits on `master` are
-transferred into the production branch,`prod`, by rebasing `master` on `prod`. The CICD production
-workflow will deploy `prod` to the public sites: [Polkadot Wiki](https://wiki.polkadot.network) and
+against the master branch by a member of the Technical Education team. A staging environment can be
+generated to reflect a specific branch by invoking the `workflow_dispatch` command via the GitHub UI
+and can then be reviewed by the team before proceeding to production. If all is well, the new
+commits on `master` are transferred into the production branch,`prod`, by rebasing `master` on
+`prod`. This is completed automatically every 24 hours or manually through a `workflow_dispatch`
+command. After these jobs are completed, the CICD production workflow will automatically deploy
+`prod` to the public sites: [Polkadot Wiki](https://wiki.polkadot.network) and
 [Kusama Guide](https://guide.kusama.network), respectively.
+
+#### GitHub Actions
+
+| Job                                                                                                                         | Description                                                                                                                                                                                                     | Frequency                                        |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [Audit Images](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/audit-images.yml)                         | Searches for unreferenced images in the docs repository and archives them into `/docs/assets/_legacy`.                                                                                                          | Monthly or Workflow Dispatch                     |
+| [Audit Links](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/audit-links.yml)                           | Test all links in the docs for broken references and opens a new issue displaying results if any are found.                                                                                                     | Monthly or Workflow Dispatch                     |
+| [Code QL Analysis](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/codeql-analysis.yml)                  | Tests for vulnerabilities across the codebase                                                                                                                                                                   | Weekly, Push to Master or Pull Request to Master |
+| [Dependabot]()                                                                                                              | Helps keep packages up-to-date with latest release.                                                                                                                                                             | Daily                                            |
+| [Deploy Kusama Prod](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/deploy-kusama-prod.yml)             | Deploy Kusama docs to GitHub Pages (production).                                                                                                                                                                | Daily or Workflow Dispatch                       |
+| [Deploy Kusama Staging](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/deploy-kusama-staging.yml)       | Deploy Kusama docs to staging environment.                                                                                                                                                                      | Workflow Dispatch                                |
+| [Deploy Polkadot Prod](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/deploy-polkadot-prod.yml)         | Deploy Polkadot docs to GitHub Pages (production).                                                                                                                                                              | Daily or Workflow Dispatch                       |
+| [Deploy Polkadot Staging](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/deploy-polkadot-staging.yml)   | Deploy Polkadot docs to staging environment.                                                                                                                                                                    | Workflow Dispatch                                |
+| [Generate PDF](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/generate-pdf.yml)                         | Generate a PDF for the docs and upload it to the static website.                                                                                                                                                | Weekly, Push to Master or Pull Request to Master |
+| [Greetings](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/greetings.yml)                               | Greet first time contributors.                                                                                                                                                                                  | First Time Pull Request or Issue Creation        |
+| [Jest Testing Coverage](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/jest-testing-coverage.yml)       | Run a series of Jest tests related to React functionality.                                                                                                                                                      | Weekly or Workflow Dispatch                      |
+| [Prettier All](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/prettier-all.yml)                         | Run prettier over all docs to maintain styling standards.                                                                                                                                                       | Weekly or Workflow Dispatch                      |
+| [Status Badges](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/status-badges.yml)                       | Update the commit history of various open source projects in the ecosystem.                                                                                                                                     | Weekly or Workflow Dispatch                      |
+| [Update Auction Schedules](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/update-auction-schedules.yml) | Fetch new auctions for Polkadot and Kusama from the scheduler queue, update existing finalized blocks and update the [local cache](https://github.com/w3f/polkadot-wiki/tree/master/components/utilities/data). | Daily or Workflow Dispatch                       |
 
 ### Conditional Rendering
 
