@@ -93,7 +93,7 @@ account(s).
 ### SubWallet
 
 Web3 Multiverse Gateway for Polkadot & Kusama Ecosystem. Track, send, receive and monitor
-multi-chain assets with ease. XCM Transfer, NFT Management, Parity Signer & Ledger Support, Light
+multi-chain assets. XCM Transfer, NFT Management, Parity Signer & Ledger Support, Light
 Clients Support, QR-code Account Import, Token Import, EVM DApp Support, MetaMask Compatibility,
 Custom Endpoint, Fiat On-ramp. Subwallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
@@ -103,8 +103,8 @@ Custom Endpoint, Fiat On-ramp. Subwallet received funding from Polkadot Treasury
 
 A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
 Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
-your accounts on over 150+ Substrate and EVM networks. NFT Management, Ledger Support, Fiat On-ramp,
-Portfolio tracking. Talisman received funding from Polkadot Treasury
+your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
+portfolio tracking. Talisman received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/148)].
 
 ### Fearless Wallet
@@ -120,8 +120,8 @@ use and understand. Fearless Wallet received funding from Kusama Treasury
 
 ### Nova Wallet
 
-OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with Polkadot JS
-and Metamask/EVM Integration. Nova Wallet received funding from Kusama Treasury
+Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with 
+Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/122),
 [2](https://kusama.polkassembly.io/treasury/158)].
 
@@ -136,8 +136,8 @@ Treasury [[1](https://kusama.polkassembly.io/treasury/32),
 
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
 Polkadot-JS UI, the Polkadot-JS extension, or Parity Signer. For other wallet software, you should
-contact the developers of that wallet. Please note that these wallets are quite bare bones and
-oriented towards power users.
+contact the developers of that wallet. Please note that these wallets are oriented towards developers 
+and power users.
 
 | Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                     |
 | ------------------------------------------------------------------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
