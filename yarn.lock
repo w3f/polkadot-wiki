@@ -1369,7 +1369,7 @@
     webpack-merge "^5.8.0"
     webpackbar "^5.0.2"
 
-"@docusaurus/core@2.3.0", "@docusaurus/core@^2.1.0":
+"@docusaurus/core@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.3.0.tgz#19f1b6261453a848c50213bbc22f7d06ab9046ac"
   integrity sha512-2AU5HfKyExO+/mi41SBnx5uY0aGZFXr3D93wntBY4lN1gsDKUpi7EE4lPBAXm9CoH4Pw6N24yDHy9CPR3sh/uA==
@@ -4039,10 +4039,10 @@ axios@^0.25.0:
   dependencies:
     follow-redirects "^1.14.7"
 
-axios@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.5.tgz#858c129d286e7ee3b1e970961cde410ba3ea3740"
-  integrity sha512-9pU/8mmjSSOb4CXVsvGIevN+MlO/t9OWtKadTaLuN85Gge3HGorUckgp8A/2FH4V4hJ7JuQ3LIeI7KAV9ITZrQ==
+axios@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.6.tgz#eacb6d065baa11bad5959e7ffa0cb6745c65f392"
+  integrity sha512-rC/7F08XxZwjMV4iuWv+JpD3E0Ksqg9nac4IIg6RwNuF0JTeWoCo/mBNG54+tNhhI11G3/VDRbdDQTs9hGp4pQ==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
