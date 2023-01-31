@@ -180,23 +180,17 @@ in a parachain's state, only those that are modified. This insures that the modi
 
 ### Relay Chain Submission Phase
 
-When a candidate block receives enough signed validity statements, then it is considered backable.
-The backable block is then sent to the Relay Chain together with the [receipt](#candidate-receipts)
-that is added to the Relay Chain transaction queue. The receipt is gossiped around and when a
-validator wins [BABE](./learn-consensus.md#block-production-babe) slot leadership, it will select a
-candidate receipt to build a Relay Chain block. Remember, at this stage validators of the Relay
-Chain already received the [erasure coding information](#erasure-codes).
+The [receipt](#candidate-receipts) of the backable parablock is added to the Relay Chain transaction
+queue. The receipt is gossiped around and when a relay chain block author wins
+[BABE](./learn-consensus.md#block-production-babe) slot leadership, it will select a candidate
+receipt to build a Relay Chain block.
 
-:::info Inclusion Pipeline steps of the submission phase
-
-1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
-   note up to 1 backable candidate for each parachain to be included in the Relay Chain block
-   alongside its backing. Once included in the Relay Chain the candidate is considered backed in
-   that fork of the Relay Chain.
-2. Once backed in the Relay Chain, the candidate is considered to be in "pending availability"
-   status. It can only be considered a part of the parachain once it is **proven available**.
-
-:::
+A block author can note up to 1 backable candidate for each parachain to be included in the Relay
+Chain block alongside its backing. Once included in the Relay Chain the candidate is considered
+backed in that fork of the Relay Chain. The candidate is considered to be in "pending availability"
+status, and it can only be considered a part of the parachain once it is **proven available**.
+Remember, at this stage validators of the Relay Chain already received the
+[erasure coding information](#erasure-codes).
 
 ### Availability and Unavailability Phase
 
