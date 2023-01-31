@@ -96,10 +96,10 @@ Process.
 
 ### AnV Protocol
 
-The AnV Protocol is way of looking at the Parachain Protocol from another perspective, emphasizing
-the importance of a parablock being available and valid before being included in the Relay Chain. It
-is divided into five different phases, three within the [Inclusion Pipeline](#inclusion-pipeline)
-and two within the [Approval Process](#approval-process):
+The Availability and Validity (AnV) Protocol is way of looking at the Parachain Protocol from
+another perspective, emphasizing the importance of a parablock being available and valid before
+being included in the Relay Chain. It is divided into five different phases, three within the
+[Inclusion Pipeline](#inclusion-pipeline) and two within the [Approval Process](#approval-process):
 
 - **Inclusion Pipeline**
   1.  [Parachain phase](#parachain-phase)
@@ -146,10 +146,13 @@ changes its status through this path as follows:
 
 ### Parachain Phase
 
-In the parachain phase a para-validator establishes connection with a collator, which proposes a
-candidate block together with its Proof.of-Validity (PoV) to that para-validator.
+In the parachain phase some validators are assigned to parachains by the **Validator Assignment**
+routine (these validators are called para-validators). Para-validators establish connection with
+collators, which propose candidate blocks together with Proof-of-Validity (PoV) to para-validators
+via the **Collator Distribution** subsystem.
 
-A para-validator needs to check if the candidate block follows the
+Para-validators participate in the **Candidate Backing** subsystem. A para-validator needs to check
+if the candidate block follows the
 [state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
 states are stored within Merke trees, a para-validator can verify state transitions without having
 access to the entire state, but it needs:
@@ -160,30 +163,18 @@ access to the entire state, but it needs:
 
 This set of information is the proof-of-validity (PoV).
 
+Once a para-validator has the PoV, it gossips this information to the other para-validators, who
+check the candidate block against the PoV. Candidates that gather more than half of signed validity
+statements are considered **backable** (i.e. they represent a valid state transition) and their
+backing is the set of signed statements. The para-validators can then start to construct the
+[**candidate receipt**](#candidate-receipts) (this is what goes into the Relay Chain block) and an
+[**erasure coding**](#erasure-codes) (this is what will make the parablock available, more on this
+later on) that will be sent to all validators in the network.
+
 :::info Polkadot guarantees valid state transitions, not valid states
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validators do not inspect every value
 in a parachain's state, only those that are modified. This insures that the modification is valid.
-
-:::
-
-Once a para-validator has the PoV, it gossips this information to the other para-validators.
-Para-validator check the candidate block against the PoV. The verification succeeds when more than
-half of the para-validators agrees that the block represents a valid state transition. The
-para-validators can then start to construct the [**candidate receipt**](#candidate-receipts) (this
-is what goes into the Relay Chain block) and an [**erasure coding**](#erasure-codes) that will be
-sent to all validators in the network.
-
-:::info Inclusion Pipeline steps of the parachain phase
-
-1. Validators are assigned to parachains by the **Validator Assignment** routine.
-2. A collator produces the parachain block (known as parachain candidate or candidate) along with
-   PoV.
-3. The collator forwards the candidate and PoV to validators assigned to the same parachain via the
-   **Collator Distribution** subsystem.
-4. The validators assigned to the parachain participate in the **Candidate Backing** subsystem.
-   Candidates that gather enough signed validity statements are considered **"backable"** and their
-   backing is the set of signed statements.
 
 :::
 
