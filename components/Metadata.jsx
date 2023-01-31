@@ -54,19 +54,24 @@ async function GetMetadata(network, wsUrl, setReturnValue) {
     let constants = [];
     pallet.constants.sort((a, b) => a.name.localeCompare(b.name));
     pallet.constants.forEach(constant => {
-      const item = (
-        <li key={constant.name}>
-          {constant.name}
-          <ul>
-            {/* TODO - Decode */}
-            <li>{`Endpoint: api.consts.${pallet.name.toLocaleLowerCase()}.${constant.name.toLocaleLowerCase()}`}</li>
-            <li>{`Type: ${constant.type}`}</li>
-            <li>{`Value: ${constant.value}`}</li>
-            <li>{`Docs: ${constant.docs.join(' ')}`}</li>
-          </ul>
-        </li>
-      )
-      constants.push(item);
+      let constObj = api["consts"][`${camel(pallet.name)}`][`${camel(constant.name)}`];
+      if (constObj !== undefined) {
+        const item = (
+          <li key={constant.name}>
+            {constant.name}
+            <ul>
+              <li>{`Docs: ${constant.docs.join(' ')}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${camel(pallet.name)}.${camel(constant.name)}`}</span></li>
+              <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
+              <li>{`Return Type: ${typeof constObj.toJSON()}`}</li>
+            </ul>
+          </li>
+        )
+        constants.push(item);
+      } else {
+        // TODO: These 2 edge-cases have to do w/ camel casing variants
+        console.log(`Excluding: ${camel(pallet.name)}.${camel(constant.name)}`)
+      }
     });
 
     // Pallet Errors
@@ -93,11 +98,11 @@ async function GetMetadata(network, wsUrl, setReturnValue) {
             {`${storagePrefix}.${item.name}`}
             <ul>
               {/* TODO - Decode */}
-              <li>{`Endpoint: api.query.${storagePrefix.toLocaleLowerCase()}.${item.name.toLocaleLowerCase()}`}</li>
-              <li>{`Type: ${JSON.stringify(item.type)}`}</li>
+              <li>{`Docs: ${item.docs.join(' ')}`}</li>
+              <li>{`API Endpoint: api.query.${camel(storagePrefix)}.${camel(item.name)}`}</li>
+              <li>{`Return Type: ${JSON.stringify(item.type)}`}</li>
               <li>{`Modifier: ${item.modifier}`}</li>
               <li>{`Fallback: ${item.fallback}`}</li>
-              <li>{`Docs: ${item.docs.join(' ')}`}</li>
             </ul>
           </li>
         )
@@ -132,6 +137,10 @@ async function GetMetadata(network, wsUrl, setReturnValue) {
       {palletData}
     </div>
   );
+}
+
+function camel(input) {
+  return input.charAt(0).toLowerCase() + input.slice(1);
 }
 
 export default Metadata;
