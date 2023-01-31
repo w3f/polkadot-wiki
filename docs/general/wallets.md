@@ -79,7 +79,7 @@ Foundation.
 
 PolkaGate extension is a Kusama Treasury supported
 [[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
-polkadot js plus which completely re-developed, with a new look, smooth user experience, and many
+Polkadot-JS Plus, completely re-developed, with a new look and many
 performance improvements. Supports proxy accounts and social recovery, address (watch-only) accounts, 
 parachain accounts, custom remote nodes, phishing detection, QR account import, export/import/derive 
 account(s). 
