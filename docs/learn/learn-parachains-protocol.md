@@ -30,7 +30,10 @@ and the
 
 The Parachains' Protocol aims to carry a parachain's candidate block from authoring to inclusion
 through a process that can be carried out repeatedly and in parallel for each parachain connected to
-the Relay Chain.
+the Relay Chain. The protocol allows the network to be efficiently sharded among parachains while
+maintaining strong security guarantees. The Availability and Validity (AnV) Protocol essentially
+describes the Parachain Protocol from another perspective (i.e. availability and validity; more
+about this later on).
 
 :::note Candidate block
 
@@ -38,11 +41,6 @@ A candidate block is a new block from a parachain collator that may or may not b
 through validity checks before being included into the Relay Chain.
 
 :::
-
-The Availability and Validity (AnV) Protocol allows the network to be efficiently sharded among
-parachains while maintaining strong security guarantees.
-
-We will explain in-depth how the two protocols are interconnected in the following sections.
 
 ## Main Actors
 
@@ -98,19 +96,21 @@ protocol, as well as the sections where the [**Inclusion Pipeline**](#inclusion-
 
 ### AnV Protocol
 
-The AnV Protocol is divided into five different phases, three within the
-[Inclusion Pipeline](#inclusion-pipeline) and two within the [Approval Process](#approval-process):
+The AnV Protocol is way of looking at the Parachain Protocol from another perspective, emphasizing
+the importance of a parablock being available and valid before being included in the Relay Chain. It
+is divided into five different phases, three within the [Inclusion Pipeline](#inclusion-pipeline)
+and two within the [Approval Process](#approval-process):
 
 - **Inclusion Pipeline**
   1.  [Parachain phase](#parachain-phase)
   2.  [Relay Chain submission phase](#relay-chain-submission-phase)
   3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
 - **Approval Process**
-  1.  [Assignments and secondary checks](#assignments--secondary-checks)
+  1.  [Assignments and secondary (validity) checks](#assignments--secondary-checks)
   2.  [Chain Selection](#chain-selection)
 
-The two protocols are thus tightly connected: phases of the AnV protocol are essentially
-sub-sections of the Parachain Protocol.
+In the Inclusion Pipeline a parablock is made available (or unavailable) while in the Approval
+Process a parablock is checked if it is valid or not.
 
 ## Inclusion Pipeline
 
@@ -146,8 +146,8 @@ changes its status through this path as follows:
 
 ### Parachain Phase
 
-The parachain phase of AnV Protocol is when a para-validator established connection with a collator,
-which proposes a candidate block together with its Proof.of-Validity (PoV) to that para-validator.
+In the parachain phase a para-validator establishes connection with a collator, which proposes a
+candidate block together with its Proof.of-Validity (PoV) to that para-validator.
 
 A para-validator needs to check if the candidate block follows the
 [state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
@@ -174,7 +174,7 @@ para-validators can then start to construct the [**candidate receipt**](#candida
 is what goes into the Relay Chain block) and an [**erasure coding**](#erasure-codes) that will be
 sent to all validators in the network.
 
-:::info The Parachain Phase is made up by four steps of the Inclusion Pipeline
+:::info Inclusion Pipeline steps of the parachain phase
 
 1. Validators are assigned to parachains by the **Validator Assignment** routine.
 2. A collator produces the parachain block (known as parachain candidate or candidate) along with
@@ -196,7 +196,7 @@ validator wins [BABE](./learn-consensus.md#block-production-babe) slot leadershi
 candidate receipt to build a Relay Chain block. Remember, at this stage validators of the Relay
 Chain already received the [erasure coding information](#erasure-codes).
 
-:::info The Submission Phase is made up by two steps of the Inclusion Pipeline
+:::info Inclusion Pipeline steps of the submission phase
 
 1. A relay chain block author (selected by [BABE](./learn-consensus.md#block-production-babe)) can
    note up to 1 backable candidate for each parachain to be included in the Relay Chain block
@@ -228,7 +228,7 @@ approval". The Inclusion Pipeline must conclude for a specific parachain before 
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts and it
 makes sure the block is valid, and it can run for many parachain blocks at once.
 
-:::info The Availability and Unavailability Phase is made up by two steps of the Inclusion Pipeline
+:::info Inclusion Pipeline steps of The Availability and Unavailability Phase
 
 1. In the following relay chain blocks, the validators will participate in the **Availability
    Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
@@ -297,15 +297,15 @@ para-blocks are shown as yellow squares that become grey in color.
 
 ### Assignments & Secondary Checks
 
-Having a bad parablock on the relay chain is not catastrophic as long as the block is not approved
-and finalized by the finality gadget [GRANDPA](./learn-consensus.md/#finality-gadget-grandpa). If
-the block is not finalized, the fork on the chain containing that block can be ignored in favor of
-another fork containing good blocks. Dealing with a bad parablock includes the following stages:
+Having a bad parablock on a fork of the relay chain is not catastrophic as long as the block is not
+approved and finalized by the finality gadget
+[GRANDPA](./learn-consensus.md/#finality-gadget-grandpa). If the block is not finalized, the fork on
+the chain containing that block can be ignored in favor of another fork containing good blocks.
+Dealing with a bad parablock includes the following stages:
 
 - Detection: the bad block must be detected by honest validators.
-- Escalation: the honest validators must send that block for checks to all validators. A
-  [dispute](#disputes) starts.
-- Consequences: the chain is reverted and all malicious validators are slashed.
+- Escalation: the honest validators must start a [dispute](#disputes).
+- Consequences: all involved malicious validators are slashed.
 
 The result of the dispute must be transplantable to all other forks so that malicious validators are
 slashed in all possible histories and so that honest validators will ignore any forks containing
