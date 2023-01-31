@@ -79,18 +79,18 @@ validators or secondary checker.
 
 ### Parachain Protocol
 
-The parachain protocol is divided into three main phases:
+The parachain protocol is divided into two main phases:
 
-1. Collators send the parachain block (parablock) with PoV to the set of Validators assigned to the
-   parachain (i.e. para-validators).
-2. Validators verify if the parablock follows the state transition rules of the parachain and sign
-   statements that can have a positive or negative outcome.
-3. With enough positive statements, the block is added to the Relay Chain.
+- [**Inclusion Pipeline**](#inclusion-pipeline): Collators send parachain blocks (parablocks) with
+  PoV to Validators. Validators verify if the parablocks follow the state transition rules of the
+  parachain and sign statements that can have a positive or negative outcome. With enough positive
+  statements, the block is added to the Relay Chain, but is still pending approval.
+- [**Approval Process**](#approval-process): Validators perform additional checks that, if positive,
+  allow the parablock to be approved.
 
 The figure below shows a representation of a parachain with collators and validators. The figure
-also shows the journey of a block (white square) through the three main steps of the parachain
-protocol, as well as the sections where the [**Inclusion Pipeline**](#inclusion-pipeline) and the
-[**Approval Process**](#approval-process) take place (see following Sections).
+also shows the journey of a block (white square) through the Inclusion Pipeline and the Approval
+Process.
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
