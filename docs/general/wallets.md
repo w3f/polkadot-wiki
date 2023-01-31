@@ -37,10 +37,7 @@ device or a hardware wallet (which considered as a cold wallets as they are offl
 
 ### Browser Wallets
 
-It is possible to use your browser to interact with your blockchain account through the wallets
-listed below. Typically, these wallets use the browser extension as a keystore for the blockchain
-accounts. Some of the browser extensions also allow interacting with airgapped devices and hardware
-wallets in a secure way.
+Browser extension wallets at bare minimum act as key storage and management solution, allowing you to use your accounts with apps in the Web3 space. The wallets listed below offer functionality beyond that, allowing the featured actions to be performed directly through the extension. Some of them also allow interaction with air-gapped wallets and hardware devices
 
 | Wallet                                | Browsers                                    | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
 | ------------------------------------- | ------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
@@ -51,10 +48,7 @@ wallets in a secure way.
 
 ### Mobile Wallets
 
-Mobile wallets are fully packaged apps with the key-store as well as functionalities unlike browser
-based wallets, which typically use a browser extension as a key-store (some wallets put a lot more
-functionality into the extensions) and the browser for interacting with the blockchain networks.
-Some mobile wallets also support hardware wallets which provide bluetooth connectivity.
+Mobile wallets are fully packaged apps that allow all the featured actions, as well as the storage and management of your accounts, through the mobile app. Contrary to browser extensions, mobile wallets usually can't connect to third-party web apps. Some mobile wallets provide support for hardware wallets through bluetooth connectivity.
 
 | Wallet                                        | Platforms                 | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | ------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
