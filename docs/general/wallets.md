@@ -35,7 +35,7 @@ Typically, the account keys are either stored and accessed through a browser ext
 smartphone app (which are considered as a hot wallets as they are exposed online) or an airgapped
 device or a hardware wallet (which considered as a cold wallets as they are offline).
 
-### Browser Wallets
+### Browser Extensions
 
 Browser extension wallets at bare minimum act as key storage and management solution, allowing you to use your accounts with apps in the Web3 space. The wallets listed below offer functionality beyond that, allowing the featured actions to be performed directly through the extension. Some of them also allow interaction with air-gapped wallets and hardware devices
 
