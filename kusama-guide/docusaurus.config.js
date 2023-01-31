@@ -66,6 +66,10 @@ module.exports = {
           {
             to: '/docs/learn-opengov',
             from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
           }
         ],
         createRedirects: function (existingPath) {
