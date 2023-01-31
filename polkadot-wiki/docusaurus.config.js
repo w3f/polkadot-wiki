@@ -100,6 +100,10 @@ module.exports = {
             from: ['/docs/learn-gov2']
           },
           {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
+          },
+          {
             to: '/docs/learn-system-chains',
             from: ['/docs/learn-common-goods']
           }
