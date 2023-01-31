@@ -139,6 +139,9 @@ ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefor
 are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be
 predetermined on the pallet.
 
+For additional details, see the
+[Origin and Tracks](./../maintain/maintain-guides-opengov.md#origins-and-tracks) section.
+
 ### Proposing a Referendum
 
 #### Public Referenda
@@ -232,7 +235,9 @@ against the total vote-weight (for both approval and rejection).
 compared to the total possible votes that could be made in the system.
 
 It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have
-different Confirmation Periods and requirements for approval and support. It is now possible to
+different Confirmation Periods and requirements for approval and support. For additional details on
+the various origins and tracks, check out
+[this table](./../maintain/maintain-guides-opengov.md#origins-and-tracks). It is now possible to
 configure the amount of support and overall approval required for it to pass. With proposals that
 use less privileged origins, it is far more reasonable to drop the required turnout to a more
 realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
