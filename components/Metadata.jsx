@@ -2,29 +2,50 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
-function Metadata({ network, defaultValue }) {
+const Networks = [
+  { name: "polkadot", rpc: "wss://rpc.polkadot.io" },
+  { name: "kusama", rpc: "wss://kusama-rpc.polkadot.io" },
+  { name: "statemine", rpc: "wss://statemine-rpc.polkadot.io" },
+  { name: "statemint", rpc: "wss://statemint-rpc.polkadot.io" },
+  { name: "westend", rpc: "wss://westend-rpc.polkadot.io" },
+  { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
+]
+
+function Metadata() {
   const [returnValue, setReturnValue] = useState('');
 
   useEffect(async () => {
-    // Set defaults based on network
-    let wsUrl = undefined;
-    if (network === "polkadot") { wsUrl = "wss://rpc.polkadot.io" }
-    else if (network === "kusama") { wsUrl = "wss://kusama-rpc.polkadot.io/" }
-    else { return (<div />) }
-    // Set default value to render on component
-    setReturnValue(
-      <div style={{ color: "#e6007a", textAlign: "center" }}>
-        <b>{defaultValue}</b>
-      </div>
-    );
+    // Load defaults
+    let wsUrl = Networks[0].rpc;
+
+    // Build selection dropdown
+    let options = [];
+    Networks.forEach(chain => {
+      const option = <option value={chain.rpc} key={chain.name}>{`${chain.name.charAt(0).toUpperCase() + chain.name.slice(1)}`}</option>
+      options.push(option);
+    });
+    const dropdown = (
+      <select
+        defaultValue={0}
+        onChange={(e) => GetMetadata(e.target.value, dropdown, setReturnValue)}
+        style={{ border: '2px solid #e6007a', width: '225px', height: '40px', fontSize: '16px', textAlign: "center", fontWeight: "bold" }}
+      >
+        {options.map((option) => (option))}
+      </select>
+    )
+
+    // Set loading status
+    setReturnValue(<div style={{ color: "#e6007a" }}><b>Loading Metadata...</b></div>);
+
     // Calculate a more accurate approximation using on-chain data
-    await GetMetadata(network, wsUrl, setReturnValue);
+    await GetMetadata(wsUrl, dropdown, setReturnValue);
   }, []);
 
   return (returnValue);
 }
 
-async function GetMetadata(network, wsUrl, setReturnValue) {
+async function GetMetadata(wsUrl, dropdown, setReturnValue) {
+  toggleLoading();
   const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
 
@@ -126,14 +147,16 @@ async function GetMetadata(network, wsUrl, setReturnValue) {
     )
   });
 
+  toggleLoading();
 
   // Render
   setReturnValue(
     <div>
-      <b>{`Chain: ${network.charAt(0).toUpperCase() + network.slice(1)}`}</b>
+      {dropdown}
       <br />
       <b>{`Magic Number: ${block}`}</b>
-      <br /><br />
+      <br />
+      <div id="metadataLoading" style={{color: "#e6007a", visibility: 'hidden'}}><b>Loading Metadata...</b></div>
       {palletData}
     </div>
   );
@@ -141,6 +164,14 @@ async function GetMetadata(network, wsUrl, setReturnValue) {
 
 function camel(input) {
   return input.charAt(0).toLowerCase() + input.slice(1);
+}
+
+function toggleLoading() {
+  const el = document.getElementById("metadataLoading");
+  if (el !== null) {
+    if (el.style.visibility === "hidden") { el.style.visibility = "visible"; }
+    else { el.style.visibility = "hidden" };
+  }
 }
 
 export default Metadata;

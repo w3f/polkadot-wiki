@@ -9,4 +9,4 @@ slug: ../metadata
 
 import Metadata from "./../../components/Metadata";
 
-<Metadata network="polkadot" defaultValue="Loading..."/>
+<Metadata />
