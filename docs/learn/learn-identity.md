@@ -39,13 +39,6 @@ The procedure to set and clear identities is explained in detail in this support
 
 :::
 
-:::note
-
-The Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a
-primary identity with an on-chain account and then using that primary identity, assign a
-[sub-identity](#sub-accounts) to the Ledger stash.
-
-:::
 
 ### Format Caveat
 
