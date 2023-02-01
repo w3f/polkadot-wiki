@@ -132,7 +132,7 @@ on the chain.
 ### Considerations
 
 For more user-friendly wallets, check out the supported and treasury-funded wallets on the
-[Wallets Page](../build/build-wallets.md)
+[Wallets Page](./../general/wallets.md)
 
 ## Resources
 
