@@ -188,13 +188,6 @@ functionalities on Polkadot.
   the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
 
-- **10 DOT**: the minimum stake required to submit your intent to directly nominate validators. But,
-  to increase the chance of earning staking rewards, your stake should not be less than the minimum
-  stake among the active nominators which is a dynamic threshold (around 210 DOT in era 911). If you
-  have lesser DOT than the minimum active nomination, please consider contributing to
-  [nomination pools](../learn/learn-nomination-pools.md). Learn more about
-  [becoming a nominator](../learn/learn-nominator.md).
-
 - **Around 20 DOT**:
 
   - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
@@ -203,6 +196,14 @@ functionalities on Polkadot.
     vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
   - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
     create a [proxy account](../learn/learn-proxies.md).
+
+- {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum stake required to submit your intent to directly nominate validators. But, to increase
+  the chance of earning staking rewards, your stake should not be less than the minimum stake among
+  the active nominators which is a dynamic threshold (around **264 DOT** in era 966). If you have
+  lesser DOT than the minimum active nomination, please consider contributing to
+  [nomination pools](../learn/learn-nomination-pools.md). Learn more about
+  [becoming a nominator](../learn/learn-nominator.md).
 
 - {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable"/>:__ :polkadot }}
   you can create your own [nomination pool](../learn/learn-nomination-pools.md).

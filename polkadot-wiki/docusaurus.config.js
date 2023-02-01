@@ -14,11 +14,6 @@ module.exports = {
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
     "https://unpkg.com/aos@next/dist/aos.js",
     {
-      src: "https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js",
-      onload: "addBackToTop()",
-      defer: true,
-    },
-    {
       src: "https://apisa.polkadot.network/latest.js",
       async: true,
       defer: true,
@@ -103,6 +98,10 @@ module.exports = {
           {
             to: '/docs/learn-opengov',
             from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
           },
           {
             to: '/docs/learn-system-chains',

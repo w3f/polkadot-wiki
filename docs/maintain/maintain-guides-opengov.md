@@ -7,6 +7,8 @@ keywords: [democracy, council, action, proposal, referenda]
 slug: ../maintain-guides-opengov
 ---
 
+import Tracks from "./../../components/Referenda-Tracks";
+
 :::info OpenGov is live on Kusama Network
 
 OpenGov is yet to be deployed on Polkadot Network.
@@ -81,39 +83,12 @@ To remove the lock from votes you first need to call `removeVote` and then `unlo
 
 ## Origins and Tracks
 
-Whitelist
+<!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
+<Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
 
-| Origin              | ID  |
-| ------------------- | --- |
-| `WhitelistedCaller` | 1   |
-
-General administration
-
-| Origin            | ID  |
-| ----------------- | --- |
-| `StakingAdmin`    | 10  |
-| `Treasurer`       | 11  |
-| `LeaseAdmin`      | 12  |
-| `FellowshipAdmin` | 13  |
-| `GeneralAdmin`    | 14  |
-| `AuctionAdmin`    | 15  |
-
-Referendum adminstration
-
-| Origin                | ID  |
-| --------------------- | --- |
-| `ReferendumCanceller` | 20  |
-| `ReferendumKiller`    | 21  |
-
-Limited treasury spending
-
-| Origin          | ID  |
-| --------------- | --- |
-| `SmallTipper`   | 30  |
-| `BigTipper`     | 31  |
-| `SmallSpender`  | 32  |
-| `MediumSpender` | 33  |
-| `BigSpender`    | 34  |
+<!-- When OpenGov moves to Polkadot replace the above content with these condition statements -->
+<!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
+<!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
 
 ## Delegating Voting Power
 
@@ -129,23 +104,6 @@ The following steps outline how to delegate voting power in OpenGov:
 3. Ensure the `delegate from account` field lists the account you wish to apply delegation over
 4. Next, select the appropriate `submission track` that you wish to delegate (or select the option
    `apply delegation to all tracks`)
-
-   - `0` - Root
-   - `1` - Whitelisted Caller
-   - `10` - Staking Admin
-   - `11` - Treasurer
-   - `12` - Lease Admin
-   - `13` - Fellowship Admin
-   - `14` - General Admin
-   - `15` - Auction Admin
-   - `20` - Referendum Canceller
-   - `21` - Referendum Killer
-   - `30` - Small Tipper
-   - `31` - Big Tipper
-   - `32` - Small Spender
-   - `33` - Medium Spender
-   - `34` - Big Spender
-
 5. Specify the `delegate vote value`, which is the amount of DOT or KSM you wish to provide the
    delegate with
 6. Provide a `conviction` multiplier determining how long the funds from the previous step are locked

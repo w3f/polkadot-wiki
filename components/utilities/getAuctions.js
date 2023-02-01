@@ -37,21 +37,15 @@ async function GetNewAuctions(chain) {
       if (values.toHuman()[0] !== null) {
         try {
           let isNewAuction = false;
-          // NOTE - this will likely need to align with Kusama's schema when OpenGov hits Polkadot
-          // Currently the Polkadot schema for identifying scheduled methods is different when compared w/ Kusama
-          if (chain.name === PolkadotParameters.name) {
-            isNewAuction = values.toHuman()[0].call.Value.method === "newAuction";
-          } else { // Kusama
-            const call = API.registry.createType('Call', values.toHuman()[0].call.Inline);
-            isNewAuction = call.toHuman().method === "newAuction";
-          }
+          const call = API.registry.createType('Call', values.toHuman()[0].call.Inline);
+          isNewAuction = call.toHuman().method === "newAuction";
           if (isNewAuction) {
             const blockString = blockNumber.replaceAll(",", "");
             const block = parseInt(blockString);
             futureStartingBlocks.push(block);
           }
         } catch (error) {
-          // Do nothing - this scheduled item is not a newly scheduled auction
+          console.log(error);
         }
       }
     });
@@ -59,6 +53,9 @@ async function GetNewAuctions(chain) {
     // If auctions are in scheduler check if they also exist in the cache, if not append
     if (futureStartingBlocks.length !== 0) {
       await AppendNewAuctions(chain, futureStartingBlocks);
+    } else if (chain.name === "Kusama") {
+      // Gracefully terminate process as no changes need to be cached
+      process.exit(0);
     }
     return resolve();
   });

@@ -9,6 +9,7 @@ module.exports = {
         "general/redenomination",
         "general/research",
         "general/ens",
+        "general/wallets",
         "general/ledger",
         {
           type: "category",
@@ -128,6 +129,7 @@ module.exports = {
               label: "Parachains",
               items: [
                 "learn/learn-parachains",
+                "learn/learn-parachains-protocol",
                 'learn/learn-availability',
                 "learn/learn-system-chains",
                 "learn/learn-auction",
@@ -170,7 +172,6 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-wallets",
             "build/build-substrate",
             "build/build-ss58-registry",
             "build/build-hrmp-channels",

@@ -369,6 +369,12 @@ is the list of messages waiting to be processed by a particular receiving parach
 
 Data that includes information about other data, such as information about a specific transaction.
 
+## Motion
+
+A motion is essentially a "referendum" or "decision" being considered by the Council. The Council
+can vote on motions like approving Treasury Proposals or making proposals for the community to vote
+on.
+
 ## Next Session
 
 This indicates that the validator will be a member of the active set in the next session.
