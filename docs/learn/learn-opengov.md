@@ -329,7 +329,7 @@ enacted are reached while maintaining the anonymity of voters and keeping the ov
 censorship-free.
 
 For a step-by-step outline of how to delegate voting power in OpenGov, check out the
-[Delegating Voting Power](./../maintain//maintain-guides-opengov.md#delegating-voting-power) section
+[Delegating Voting Power](./../maintain/maintain-guides-opengov.md#delegating-voting-power) section
 on the [OpenGov Maintenance](./../maintain//maintain-guides-opengov.md) page.
 
 ### Canceling Referenda
