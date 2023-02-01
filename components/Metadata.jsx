@@ -45,7 +45,7 @@ function Metadata() {
 }
 
 async function GetMetadata(wsUrl, dropdown, setReturnValue) {
-  toggleLoading();
+  ToggleLoading();
   const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
 
@@ -75,14 +75,14 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     let constants = [];
     pallet.constants.sort((a, b) => a.name.localeCompare(b.name));
     pallet.constants.forEach(constant => {
-      let constObj = api["consts"][`${camel(pallet.name)}`][`${camel(constant.name)}`];
+      let constObj = api["consts"][`${Camel(pallet.name)}`][`${Camel(constant.name)}`];
       if (constObj !== undefined) {
         const item = (
           <li key={constant.name}>
             {constant.name}
             <ul>
               <li>{`Docs: ${constant.docs.join(' ')}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${camel(pallet.name)}.${camel(constant.name)}`}</span></li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
               <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
               <li>{`Return Type: ${typeof constObj.toJSON()}`}</li>
             </ul>
@@ -90,8 +90,8 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
         )
         constants.push(item);
       } else {
-        // TODO: These 2 edge-cases have to do w/ camel casing variants
-        console.log(`Excluding: ${camel(pallet.name)}.${camel(constant.name)}`)
+        // TODO: These 2 edge-cases have to do w/ Camel casing variants
+        console.log(`Excluding: ${Camel(pallet.name)}.${Camel(constant.name)}`)
       }
     });
 
@@ -120,7 +120,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
             <ul>
               {/* TODO - Decode */}
               <li>{`Docs: ${item.docs.join(' ')}`}</li>
-              <li>{`API Endpoint: api.query.${camel(storagePrefix)}.${camel(item.name)}`}</li>
+              <li>{`API Endpoint: api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</li>
               <li>{`Return Type: ${JSON.stringify(item.type)}`}</li>
               <li>{`Modifier: ${item.modifier}`}</li>
               <li>{`Fallback: ${item.fallback}`}</li>
@@ -147,7 +147,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     )
   });
 
-  toggleLoading();
+  ToggleLoading();
 
   // Render
   setReturnValue(
@@ -162,11 +162,11 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
   );
 }
 
-function camel(input) {
+function Camel(input) {
   return input.charAt(0).toLowerCase() + input.slice(1);
 }
 
-function toggleLoading() {
+function ToggleLoading() {
   const el = document.getElementById("metadataLoading");
   if (el !== null) {
     if (el.style.visibility === "hidden") { el.style.visibility = "visible"; }
