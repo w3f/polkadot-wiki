@@ -192,7 +192,21 @@ integration of custom pallets into the runtime is still possible, making NFT spe
 at the chain runtime level a reliable way to keep EVM compatibility of tools while at the same time
 optimizing storage and interactions for rich NFTs.
 
-### Uniques
+### Basilisk
+
+[Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
+has a full-featured NFT platform based on the
+[Uniques pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques). One of the key
+features of Basilisk is that it allows minting NFTs with a royalty fee. This royalty fee is
+distributed to the original creator of the NFT via the runtime pallet. Additionally
+[Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)
+that allows creating a buy order for a specific NFT.
+
+These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
+
+![nft-basilisk](../assets/nft/nft-basilisk.png)
+
+### Uniques Pallet
 
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
 deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
@@ -213,21 +227,7 @@ The can also be interacted with directly through the
 
 ![uniques.png](../assets/nft/uniques.png)
 
-### Basilisk
-
-[Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
-has a full-featured NFT platform based on the
-[Uniques pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques). One of the key
-features of Basilisk is that it allows minting NFTs with a royalty fee. This royalty fee is
-distributed to the original creator of the NFT via the runtime pallet. Additionally
-[Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)
-that allows creating a buy order for a specific NFT.
-
-These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
-
-![nft-basilisk](../assets/nft/nft-basilisk.png)
-
----
+### NFTS Pallet
 
 ## Bridging
 
