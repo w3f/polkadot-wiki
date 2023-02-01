@@ -23,17 +23,20 @@ Validators secure the [relay chain](learn-architecture.md#relay-chain) by stakin
 participating in consensus with other validators.
 
 Validators play a crucial role in adding new blocks to the relay chain and, by extension, to all
-parachains. This allows parties to complete cross-chain transactions via the relay chain.
+parachains. This allows parties to complete cross-chain transactions via the relay chain. They
+guarantee that each parachain follows its unique rules and can pass messages between shards in a
+trust-free environment.
 
 ## Para-validators
 
 Parachain validators (i.e. para-validators) participate to the
 [Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md/#parachain-phase), and submit
 [candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the Relay Chain
-transaction queue for a block producer to include on-chain.
+transaction queue so that a block author can include information of the parablock in a fork of of
+the Relay Chain.
 
-Para-validators work in groups and are selected in every epoch to validate parachain blocks for all
-parachains connected to the relay chain. The selected para-validators are one of
+Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
+blocks for all parachains connected to the relay chain. The selected para-validators are one of
 {{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
 validators randomly selected (per epoch) to participate in the validation, creating a validator pool
@@ -41,15 +44,11 @@ of 200 para-validators.
 
 Para-validators verify that the information contained in an assigned set of parachain blocks is
 valid. They receive parachain block candidates from the [collators](./learn-collator.md) together
-with a Proof-of-Validity (PoV). The para-validators then check if the block candidates are valid.
-Candidates that gather enough signed validity statements are considered _backable_.
+with a Proof-of-Validity (PoV). The para-validators perform the first round of validity checks on
+the block candidates. Candidates that gather enough signed validity statements are considered
+_backable_.
 
-## Relay Chain Validators
-
-The relay chain validators guarantee that each parachain follows its unique rules and can pass
-messages between shards in a trust-free environment.
-
-### Block Authors
+## Block Authors
 
 There are validators on the Relay Chain who participate in the consensus mechanism to produce the
 relay chain blocks based on validity statements from other validators. These validators are called
@@ -57,18 +56,20 @@ block authors, they are selected by [BABE](./learn-consensus.md/#block-productio
 up to one backable candidate for each parachain to include in the relay chain. A backable candidate
 included in the relay chain is considered _backed_ in that fork of the chain.
 
-In a Relay Chain block, block authors will only include candidate receipts that have a parent
+In a Relay Chain block, block authors will only include
+[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) that have a parent
 candidate receipt in an earlier Relay Chain block. This ensures the parachain follows a valid chain.
 Also, the block authors will only include a receipt for which they have an erasure coding chunk,
 ensuring that the system can perform the next round of availability and validity checks.
 
-### Other Relay Chain Validators
+## Other Validators
 
 Validators also contribute to the so-called **availability distribution**. In fact, once the
 candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is not
-included as part of the parachain until it is proven avaialable (together with the PoV). Information
-regarding the availability of the candidate will be noted in the following relay chain blocks. Only
-when there is enough information, the candidate is considered a full parachain block or _parablock_.
+fully included (only tentative included) as part of the parachain until it is proven avaialable
+(together with the PoV). Information regarding the availability of the candidate will be noted in
+the following relay chain blocks. Only when there is enough information, the candidate is considered
+a full parachain block or _parablock_.
 
 Validators also participate in the the so-called
 [**approval process**](./learn-parachains-protocol.md/#approval-process). Once the parablock is
@@ -88,7 +89,15 @@ transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :ku
 for their activities.
 
 Finally, validators participate in the
-[chain selection within GRANDPA](./learn-parachains-protocol.md/#chain-selection).
+[chain selection within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring that
+only available and valid blocks end within the finalized Relay Chain.
+
+:::info Within an era roles can change
+
+Within the same era, a Validator can be para-validator, block author, and participate in the
+availability distribution or the approval process. Those roles can change between sessions.
+
+:::
 
 ## Further Readings
 
