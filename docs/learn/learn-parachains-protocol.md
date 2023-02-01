@@ -28,19 +28,12 @@ and the
 
 :::
 
-The Parachains' Protocol aims to carry a parachain's candidate block from authoring to inclusion
-through a process that can be carried out repeatedly and in parallel for each parachain connected to
-the Relay Chain. The protocol allows the network to be efficiently sharded among parachains while
-maintaining strong security guarantees. The Availability and Validity (AnV) Protocol essentially
-describes the Parachain Protocol from another perspective (i.e. availability and validity; more
-about this later on).
-
-:::note Candidate block
-
-A candidate block is a new block from a parachain collator that may or may not be valid and must go
-through validity checks before being included into the Relay Chain.
-
-:::
+The Parachains' Protocol aims to carry a parachain's block from authoring to inclusion through a
+process that can be carried out repeatedly and in parallel for each parachain connected to the Relay
+Chain. The protocol allows the network to be efficiently sharded among parachains while maintaining
+strong security guarantees. The Availability and Validity (AnV) Protocol essentially describes the
+Parachain Protocol from another perspective (i.e. availability and validity; more about this later
+on).
 
 ## Main Actors
 
@@ -63,7 +56,7 @@ Fishermen are not available on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusa
 are not planned for formal implementation, despite previous proposals in the
 [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).
 
-The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a
+The idea behind Fishermen is that they are full nodes of parachains, like collators, but perform a
 different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 network. Instead of packaging the state transitions and producing the next parachain blocks as
 collators do, fishermen will watch this process and ensure no invalid state transitions are
@@ -73,7 +66,7 @@ To address the motivation behind the Fishermen design consideration, the current
 [secondary backing checkers](#assignments--secondary-checks) perform a similar role in relation to
 the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security
 standpoint, security is based on having at least one honest validator either among parachain
-validators or secondary checker.
+validators or secondary checker (more about this later on).
 
 ## Protocols' Summary
 
@@ -89,8 +82,8 @@ The parachain protocol is divided into two main phases:
   allow the parablock to be approved.
 
 The figure below shows a representation of a parachain with collators and validators. The figure
-also shows the journey of a block (white square) through the Inclusion Pipeline and the Approval
-Process.
+also shows the journey of a parachain block (white square) through the Inclusion Pipeline and the
+Approval Process.
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
@@ -98,8 +91,9 @@ Process.
 
 The Availability and Validity (AnV) Protocol is way of looking at the Parachain Protocol from
 another perspective, emphasizing the importance of a parablock being available and valid before
-being included in the Relay Chain. It is divided into five different phases, three within the
-[Inclusion Pipeline](#inclusion-pipeline) and two within the [Approval Process](#approval-process):
+being included in the finalized Relay Chain. It is divided into five different phases, three within
+the [Inclusion Pipeline](#inclusion-pipeline) and two within the
+[Approval Process](#approval-process):
 
 - **Inclusion Pipeline**
   1.  [Parachain phase](#parachain-phase)
@@ -116,8 +110,8 @@ Process a parablock is checked if it is valid or not.
 
 ### Overview
 
-The inclusion pipeline of the Parachain Protocol is the path of a parachain block (or parablock)
-from its creation to its inclusion into the Relay Chain.
+The inclusion pipeline is the path of a parachain block (or parablock) from its creation to its
+inclusion into the non-finalized Relay Chain (i.e. in a fork of the Relay Chain).
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
 
@@ -146,12 +140,12 @@ changes its status through this path as follows:
 
 ### Parachain Phase
 
-In the parachain phase some validators are assigned to parachains by the **Validator Assignment**
-routine (these validators are called para-validators). Para-validators establish connection with
+In the parachain phase some validators are assigned to parachains by the **Validator Assignment
+Routine** (these validators are called para-validators). Para-validators establish connection with
 collators, which propose candidate blocks together with Proof-of-Validity (PoV) to para-validators
-via the **Collator Distribution** subsystem.
+via the **Collator Distribution Subsystem**.
 
-Para-validators participate in the **Candidate Backing** subsystem. A para-validator needs to check
+Para-validators participate in the **Candidate Backing Subsystem**. A para-validator needs to check
 if the candidate block follows the
 [state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
 states are stored within Merke trees, a para-validator can verify state transitions without having
@@ -165,8 +159,8 @@ This set of information is the proof-of-validity (PoV).
 
 Once a para-validator has the PoV, it gossips this information to the other para-validators, who
 check the candidate block against the PoV. Candidates that gather more than half of signed validity
-statements are considered **backable** (i.e. they represent a valid state transition) and their
-backing is the set of signed statements. The para-validators can then start to construct the
+statements are considered **backable** (i.e. they _seem_ to represent a valid state transition) and
+their backing is the set of signed statements. The para-validators can then start to construct the
 [**candidate receipt**](#candidate-receipts) (this is what goes into the Relay Chain block) and an
 [**erasure coding**](#erasure-codes) (this is what will make the parablock available, more on this
 later on) that will be sent to all validators in the network.
@@ -178,29 +172,34 @@ in a parachain's state, only those that are modified. This insures that the modi
 
 :::
 
+Previously, we said that backable blocks _seem_ to represent valid state transitions because
+para-validators are a small subset of all validators. Thus, it is possible to have the majority of
+them dishonest. Later on, we will see that more validators with come in to help to make sure the
+parablock is fully valid.
+
 ### Relay Chain Submission Phase
 
 The [receipt](#candidate-receipts) of the backable parablock is added to the Relay Chain transaction
-queue. The receipt is gossiped around and when a relay chain block author wins
-[BABE](./learn-consensus.md#block-production-babe) slot leadership, it will select a candidate
-receipt to build a Relay Chain block.
+queue together with other receipts from other parachains. Receipts are gossiped around and when a
+relay chain block author wins [BABE](./learn-consensus.md#block-production-babe) slot leadership, it
+will select a candidate receipt to include in a block on a fork of the Relay Chain.
 
 A block author can note up to 1 backable candidate for each parachain to be included in the Relay
 Chain block alongside its backing. Once included in a fork of the Relay Chain the candidate is
-considered backed in that fork. The candidate is considered to be in "pending availability" status,
-and it can only be considered a part of the parachain once it is **proven available**. Remember, at
-this stage validators of the Relay Chain already received the
-[erasure coding information](#erasure-codes).
+considered **backed** in that fork. The candidate is considered to be in **"pending availability"**
+status, and it can only be considered a part of the parachain once it is proven available. Remember,
+at this stage validators of the Relay Chain already received the
+[erasure coding information](#erasure-codes) of that specific parablock.
 
 ### Availability and Unavailability Phase
 
 During the availability and unavailability phases, the validators will participate to **Availability
-Distribution** subsystem to ensure availability of the candidate. They gossip the
+Distribution Subsystem** to ensure availability of the candidate. They gossip the
 [erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1 validators must report
 that they possess their piece of the code word. Once this threshold of validators has been reached,
-the network can consider the candidate block available, and that block is graduated to being a full
-parachain block. The information about the candidate availability is noted in the subsequent relay
-chain blocks of that fork.
+the network can consider the candidate block available. The block is graduated to being a full
+parachain block and its header will be included in that fork of the Relay Chain. The information
+about the candidate availability is noted in the subsequent relay chain blocks of that fork.
 
 The availability check by the block author ensures that
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will only include blocks for which
@@ -254,9 +253,11 @@ The approval pipeline can be divided into the following steps:
 
 1. Parablocks that have been included by the Inclusion Pipeline are pending approval for a time
    window known as the **secondary checking window**.
-2. During the secondary checking window, validators (secondary checkers) randomly self-select to
-   perform secondary checks on each of the parablock.
-3. Secondary checkers acquire the parablock with PoV and re-run the validation function.
+2. During the secondary checking window, validators (secondary checkers) randomly self-select based
+   on a [VRF](./learn-randomness.md/#vrf) lottery to perform secondary checks on each of the
+   parablock.
+3. Secondary checkers acquire the parablock with PoV (erasure codings are necessary to reconstruct
+   PoV) and re-run the validation function.
 4. Secondary checkers gossip the results of their checks. Contradictory results lead to escalation
    in which all validators are required to check the block. The validators on the losing side will
    be slashed.
@@ -290,11 +291,12 @@ that parablock.
 
 :::info Parablocks vs Relay-Chain blocks
 
-It is important to understand that a relay chain block contains many para-headers. Thus, it makes
-more sense to think of relay-chain blocks as having been approvead instead of parablocks that have
-been approved. A relay-chain block containing information about approved parablocks can be
-considered approved as long as its parent relay-chain block is also approved. Thus, the validity of
-a relay-chain block depends on the validity of its ancestry.
+It is important to understand that a relay chain block does not contain parablocks, but
+para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of
+relay-chain blocks as having been approvead instead of parablocks that have been approved. A
+relay-chain block containing information about approved parablocks can be considered approved as
+long as its parent relay-chain block is also approved. Thus, the validity of a relay-chain block
+depends on the validity of its ancestry.
 
 :::
 
