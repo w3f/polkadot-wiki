@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import React from "react";
+import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
 const Networks = [
@@ -9,10 +9,10 @@ const Networks = [
   { name: "statemint", rpc: "wss://statemint-rpc.polkadot.io" },
   { name: "westend", rpc: "wss://westend-rpc.polkadot.io" },
   { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
-]
+];
 
 function Metadata() {
-  const [returnValue, setReturnValue] = useState('');
+  const [returnValue, setReturnValue] = useState("");
 
   useEffect(async () => {
     // Load defaults
@@ -28,7 +28,7 @@ function Metadata() {
       <select
         defaultValue={0}
         onChange={(e) => GetMetadata(e.target.value, dropdown, setReturnValue)}
-        style={{ border: '2px solid #e6007a', width: '225px', height: '40px', fontSize: '16px', textAlign: "center", fontWeight: "bold" }}
+        style={{ border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" }}
       >
         {options.map((option) => (option))}
       </select>
@@ -37,7 +37,7 @@ function Metadata() {
     // Set loading status
     setReturnValue(<div style={{ color: "#e6007a" }}><b>Loading Metadata...</b></div>);
 
-    // Calculate a more accurate approximation using on-chain data
+    // Fetch metadata from the chain
     await GetMetadata(wsUrl, dropdown, setReturnValue);
   }, []);
 
@@ -46,6 +46,7 @@ function Metadata() {
 
 async function GetMetadata(wsUrl, dropdown, setReturnValue) {
   ToggleLoading();
+  // Load websocket
   const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
 
@@ -68,7 +69,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     // Pallet Calls
     let calls = pallet.calls;
     /* TODO - Decode */
-    if (calls !== null && calls.hasOwnProperty('type')) { calls = <li>{`Type: ${calls.type}`}</li>; }
+    if (calls !== null && calls.hasOwnProperty("type")) { calls = <li>{`Type: ${calls.type}`}</li>; }
     else { calls = <div /> }
 
     // Pallet Constants
@@ -81,7 +82,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
           <li key={constant.name}>
             {constant.name}
             <ul>
-              <li>{`Docs: ${constant.docs.join(' ')}`}</li>
+              <li>{`Docs: ${constant.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
               <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
               <li>{`Return Type: ${typeof constObj.toJSON()}`}</li>
@@ -104,14 +105,13 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     // Pallet Events
     let events = pallet.events;
     /* TODO - Decode */
-    if (events !== null && events.hasOwnProperty('type')) { events = <li>{`Type: ${events.type}`}</li>; }
+    if (events !== null && events.hasOwnProperty("type")) { events = <li>{`Type: ${events.type}`}</li>; }
     else { events = <div /> }
 
     // Pallet Storage
     let storage = [];
-    let storagePrefix = '';
-    if (pallet.storage !== null && pallet.storage.hasOwnProperty('items')) {
-      storagePrefix = pallet.storage.prefix;
+    if (pallet.storage !== null && pallet.storage.hasOwnProperty("items")) {
+      const storagePrefix = pallet.storage.prefix;
       pallet.storage.items.sort((a, b) => a.name.localeCompare(b.name));
       pallet.storage.items.forEach(item => {
         const storageItem = (
@@ -119,7 +119,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
             {`${storagePrefix}.${item.name}`}
             <ul>
               {/* TODO - Decode */}
-              <li>{`Docs: ${item.docs.join(' ')}`}</li>
+              <li>{`Docs: ${item.docs.join(" ")}`}</li>
               <li>{`API Endpoint: api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</li>
               <li>{`Return Type: ${JSON.stringify(item.type)}`}</li>
               <li>{`Modifier: ${item.modifier}`}</li>
@@ -156,7 +156,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
       <br />
       <b>{`Magic Number: ${block}`}</b>
       <br />
-      <div id="metadataLoading" style={{color: "#e6007a", visibility: 'hidden'}}><b>Loading Metadata...</b></div>
+      <div id="metadataLoading" style={{ color: "#e6007a", visibility: "hidden" }}><b>Loading Metadata...</b></div>
       {palletData}
     </div>
   );
