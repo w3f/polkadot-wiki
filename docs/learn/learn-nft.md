@@ -69,7 +69,7 @@ exclusively image-based collectibles of varying rarity.
 
 ---
 
-## NFTs 2.0: NFTs in Polkadot & Kusama
+## Substrate Pallets for NFTs
 
 This is where {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s technology shines and
 where NFTs 2.0 come into play. By allowing
@@ -77,25 +77,35 @@ where NFTs 2.0 come into play. By allowing
 optimize for complex NFT use cases without tradeoffs that would make interacting with the system
 prohibitively inefficient and expensive in other environments.
 
+Developers can benefit from substrate pallets and us them to build and optimize their NFT web3 dApp.
+
+### Uniques Pallet
+
+Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
+deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
+-- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
+and their classes (entities derived from) are mutable unless specifically made immutable by the
+issuer.
+
+Uniques takes a very bare-bones approach on purpose, to keep the Statemine / Statemint chain a
+simple balance-keeping chain for both fungible and non-fungibles.
+
+These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
+switching the top right menu from Kusama to Statemine or Statemint.
+
+![nft-statemine](../assets/nft/nft-statemine.png)
+
+The can also be interacted with directly through the
+[extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
+
+![uniques.png](../assets/nft/uniques.png)
+
+### NFTS Pallet
+
+## NFTs 2.0: NFTs in Polkadot & Kusama
+
 The following NFT solutions exist and are under development in the Polkadot and/or Kusama
 ecosystems:
-
-### Unique network
-
-[Unique network](https://unique.network/), an NFT-specific blockchain offering innovations such as
-sponsored transactions, bundling fungible tokens with non-fungibles, and splitting NFTs into
-fungible tokens for partial ownership.
-
-Unique Network have launched two NFT projects to date: Substrapunks as part of
-[Hackusama](https://hackusama.devpost.com/), and Chelobricks as a promotion during
-[Polkadot Decoded](https://decoded.polkadot.network/).
-
-Unique Network focuses on B2B use cases, aiming to be an infrastructure provider for others to build
-on, rather than entering the NFT space themselves as an end-product.
-
-Unique Network aims to make their marketplace technology open-source and whitelabel-friendly. In
-theory, it should be trivial to set up a new marketplace for your project using Unique's technology.
-Unique network aims to be a parachain on Polkadot, and Quartz is their Kusama counterpart.
 
 ### RMRK
 
@@ -145,6 +155,37 @@ Two marketplaces for RMRK-based NFTs exist with hundreds of projects already lau
 For a complete introduction into RMRK, see [this presentation](https://url.rmrk.app/wasmconf) or
 read [the non-technical docs](https://docs.rmrk.app).
 
+### Basilisk
+
+[Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
+has a full-featured NFT platform based on the
+[Uniques pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques). One of the key
+features of Basilisk is that it allows minting NFTs with a royalty fee. This royalty fee is
+distributed to the original creator of the NFT via the runtime pallet. Additionally
+[Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)
+that allows creating a buy order for a specific NFT.
+
+These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
+
+![nft-basilisk](../assets/nft/nft-basilisk.png)
+
+### Unique network
+
+[Unique network](https://unique.network/), an NFT-specific blockchain offering innovations such as
+sponsored transactions, bundling fungible tokens with non-fungibles, and splitting NFTs into
+fungible tokens for partial ownership.
+
+Unique Network have launched two NFT projects to date: Substrapunks as part of
+[Hackusama](https://hackusama.devpost.com/), and Chelobricks as a promotion during
+[Polkadot Decoded](https://decoded.polkadot.network/).
+
+Unique Network focuses on B2B use cases, aiming to be an infrastructure provider for others to build
+on, rather than entering the NFT space themselves as an end-product.
+
+Unique Network aims to make their marketplace technology open-source and whitelabel-friendly. In
+theory, it should be trivial to set up a new marketplace for your project using Unique's technology.
+Unique network aims to be a parachain on Polkadot, and Quartz is their Kusama counterpart.
+
 ### Efinity
 
 Spearheaded by [Enjin](https://enjin.io), the authors of Ethereum's ERC1155 standard and makers of
@@ -191,43 +232,6 @@ A notable advantage, however, is that Moonriver / Moonbeam is still a Substrate 
 integration of custom pallets into the runtime is still possible, making NFT specific optimizations
 at the chain runtime level a reliable way to keep EVM compatibility of tools while at the same time
 optimizing storage and interactions for rich NFTs.
-
-### Basilisk
-
-[Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
-has a full-featured NFT platform based on the
-[Uniques pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques). One of the key
-features of Basilisk is that it allows minting NFTs with a royalty fee. This royalty fee is
-distributed to the original creator of the NFT via the runtime pallet. Additionally
-[Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)
-that allows creating a buy order for a specific NFT.
-
-These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
-
-![nft-basilisk](../assets/nft/nft-basilisk.png)
-
-### Uniques Pallet
-
-Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
-deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
--- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
-and their classes (entities derived from) are mutable unless specifically made immutable by the
-issuer.
-
-Uniques takes a very bare-bones approach on purpose, to keep the Statemine / Statemint chain a
-simple balance-keeping chain for both fungible and non-fungibles.
-
-These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
-switching the top right menu from Kusama to Statemine or Statemint.
-
-![nft-statemine](../assets/nft/nft-statemine.png)
-
-The can also be interacted with directly through the
-[extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
-
-![uniques.png](../assets/nft/uniques.png)
-
-### NFTS Pallet
 
 ## Bridging
 
