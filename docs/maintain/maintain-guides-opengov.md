@@ -152,7 +152,7 @@ The following steps outline how to delegate voting power in OpenGov:
    (for additional details see the section on [Voluntary Locking](#voluntary-locking)) and click
    `Next`
 7. The final step is to provide the account address that will be the delegate for the original
-   account you provided (this account will be receiving the voting power for the source account on
+   account provided (this account will be receiving the voting power for the source account on
    the specified track)
 
 ![Delegate](./../assets/governance/Delegate-Kusama.png)
