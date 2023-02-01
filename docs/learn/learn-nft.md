@@ -123,7 +123,7 @@ There are features that common to the nft world such as:
 - Changing the owner of an item or a collection.
 - Transferring an item, as well as creating and canceling transfer approvals of a specific item, or
   an atomic swap.
-- Transferring ownership of an item
+- Transferring ownership of an item.
 
 :::info
 
@@ -140,7 +140,7 @@ Other features are less common and include:
   a delegated account.
 - One can also execute pending atomic swaps created by a counterpart.
 
-## NFTs 2.0: NFTs in Polkadot & Kusama
+## NFTs 2.0: NFTs in Kusama
 
 The following NFT solutions exist and are under development in the Polkadot and/or Kusama
 ecosystems.
@@ -206,6 +206,8 @@ that allows creating a buy order for a specific NFT.
 These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
 
 ![nft-basilisk](../assets/nft/nft-basilisk.png)
+
+## NFTs 2.0: NFTs in Polkadot
 
 ### Unique network
 
