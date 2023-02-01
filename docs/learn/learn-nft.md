@@ -3,12 +3,12 @@ id: learn-nft
 title: NFTs
 sidebar_label: NFTs
 description: An explanation of the NFT landscape in the Polkadot ecosystem.
-keywords: [NFT, non-fungible token, NFT 2.0]
+keywords: [NFT, non-fungible token, NFT 2.0, nfts]
 slug: ../learn-nft
 ---
 
-This page is a high-level overview of NFTs and the various approaches to NFTs within the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network.
+This page is a high-level overview of NFTs in the blockchain space and of the various approaches to
+NFTs within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network.
 
 ## Fungibility
 
