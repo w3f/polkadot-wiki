@@ -186,18 +186,21 @@ queue. The receipt is gossiped around and when a relay chain block author wins
 receipt to build a Relay Chain block.
 
 A block author can note up to 1 backable candidate for each parachain to be included in the Relay
-Chain block alongside its backing. Once included in the Relay Chain the candidate is considered
-backed in that fork of the Relay Chain. The candidate is considered to be in "pending availability"
-status, and it can only be considered a part of the parachain once it is **proven available**.
-Remember, at this stage validators of the Relay Chain already received the
+Chain block alongside its backing. Once included in a fork of the Relay Chain the candidate is
+considered backed in that fork. The candidate is considered to be in "pending availability" status,
+and it can only be considered a part of the parachain once it is **proven available**. Remember, at
+this stage validators of the Relay Chain already received the
 [erasure coding information](#erasure-codes).
 
 ### Availability and Unavailability Phase
 
-During the availability and unavailability phases, the validators gossip the
+During the availability and unavailability phases, the validators will participate to **Availability
+Distribution** subsystem to ensure availability of the candidate. They gossip the
 [erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1 validators must report
 that they possess their piece of the code word. Once this threshold of validators has been reached,
-the network can consider the parachain block available.
+the network can consider the candidate block available, and that block is graduated to being a full
+parachain block. The information about the candidate availability is noted in the subsequent relay
+chain blocks of that fork.
 
 The availability check by the block author ensures that
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will only include blocks for which
@@ -212,17 +215,6 @@ Thus, once the parablock is considered available and part of the parachain, it i
 approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts and it
 makes sure the block is valid, and it can run for many parachain blocks at once.
-
-:::info Inclusion Pipeline steps of The Availability and Unavailability Phase
-
-1. In the following relay chain blocks, the validators will participate in the **Availability
-   Distribution** subsystem to ensure availability of the candidate. The subsequent relay chain
-   blocks will note information regarding the candidate's availability.
-2. Once the relay chain state machine has enough information to consider the candidate's PoV as
-   being available, the candidate is considered part of the parachain and is graduated to being a
-   full parachain block.
-
-:::
 
 ### Failure to Inclusion
 
@@ -298,12 +290,11 @@ that parablock.
 
 :::info Parablocks vs Relay-Chain blocks
 
-It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
-sense to think of relay-chain blocks as having been approvead instead of parablocks that have been
-approved. A relay-chain block containing a bad parablock must be reverted, while a relay-chain block
-containing only approved parablocks can be considered approved as long as its parent relay-chain
-block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
-ancestry.
+It is important to understand that a relay chain block contains many para-headers. Thus, it makes
+more sense to think of relay-chain blocks as having been approvead instead of parablocks that have
+been approved. A relay-chain block containing information about approved parablocks can be
+considered approved as long as its parent relay-chain block is also approved. Thus, the validity of
+a relay-chain block depends on the validity of its ancestry.
 
 :::
 
