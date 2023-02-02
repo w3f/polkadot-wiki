@@ -32,7 +32,7 @@ trust-free environment.
 Parachain validators (i.e. para-validators) participate to the
 [Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md/#parachain-phase), and submit
 [candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the Relay Chain
-transaction queue so that a block author can include information of the parablock in a fork of of
+transaction queue so that a block author can include information on the parablock in a fork of of
 the Relay Chain.
 
 Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
@@ -71,7 +71,7 @@ fully included (only tentative included) as part of the parachain until it is pr
 the following relay chain blocks. Only when there is enough information, the candidate is considered
 a full parachain block or _parablock_.
 
-Validators also participate in the the so-called
+Validators also participate in the so-called
 [**approval process**](./learn-parachains-protocol.md/#approval-process). Once the parablock is
 considered available and part of the parachain, it is still _pending approval_. Because
 para-validators are a small subset of all validators, there is a risk that by chance the majority of
@@ -94,7 +94,7 @@ only available and valid blocks end within the finalized Relay Chain.
 
 :::info Within an era roles can change
 
-Within the same era, a Validator can be para-validator, block author, and participate in the
+Within the same era, a Validator can be a para-validator, block author, and participate in the
 availability distribution or the approval process. Those roles can change between sessions.
 
 :::
