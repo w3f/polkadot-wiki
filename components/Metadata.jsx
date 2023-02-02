@@ -11,7 +11,7 @@ const Networks = [
   { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
-function Metadata() {
+function Metadata({version}) {
   const [returnValue, setReturnValue] = useState("");
 
   useEffect(async () => {
@@ -27,7 +27,7 @@ function Metadata() {
     const dropdown = (
       <select
         defaultValue={0}
-        onChange={(e) => GetMetadata(e.target.value, dropdown, setReturnValue)}
+        onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}
         style={{ border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" }}
       >
         {options.map((option) => (option))}
@@ -38,13 +38,13 @@ function Metadata() {
     setReturnValue(<div style={{ color: "#e6007a" }}><b>Loading Metadata...</b></div>);
 
     // Fetch metadata from the chain
-    await GetMetadata(wsUrl, dropdown, setReturnValue);
+    await GetMetadata(version, wsUrl, dropdown, setReturnValue);
   }, []);
 
   return (returnValue);
 }
 
-async function GetMetadata(wsUrl, dropdown, setReturnValue) {
+async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   ToggleLoading();
   // Load websocket
   const wsProvider = new WsProvider(wsUrl);
@@ -55,9 +55,11 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
   const meta = rawMeta.toHuman();
   const block = meta.magicNumber;
 
+  // Set types for currently loaded metadata
+  const types = meta.metadata[version].lookup.types;
+
   // Pallets
-  // TODO - Add dropdown selection for version
-  const pallets = meta.metadata.V14.pallets;
+  const pallets = meta.metadata[version].pallets;
   pallets.sort((a, b) => a.name.localeCompare(b.name));
   let palletData = [];
   pallets.forEach(pallet => {
@@ -70,6 +72,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     pallet.constants.forEach(constant => {
       let constObj = api["consts"][`${Camel(pallet.name)}`][`${Camel(constant.name)}`];
       if (constObj !== undefined) {
+        const itemType = types[constant.type].type.def;
         const item = (
           <li key={constant.name}>
             {constant.name}
@@ -77,7 +80,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
               <li>{`Docs: ${constant.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
               <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
-              {/*<li>{`Return Type: ${typeof constObj.toJSON()}`}</li>*/}
+              <li>{`Return Type: ${Object.keys(itemType)[0]} - ${Object.values(itemType)[0]}`}</li>
             </ul>
           </li>
         )

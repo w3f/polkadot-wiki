@@ -9,4 +9,4 @@ slug: ../metadata
 
 import Metadata from "./../../components/Metadata";
 
-<Metadata />
+<Metadata version="V14"/>
