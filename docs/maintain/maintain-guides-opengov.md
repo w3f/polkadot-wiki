@@ -15,6 +15,53 @@ OpenGov is yet to be deployed on Polkadot Network.
 
 :::
 
+This guide will instruct token holders how to propose and vote on public referenda using the
+Referenda module (OpenGov). Below are a few links to stay informed and directly engage with the community.
+
+- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) - a place to
+  discuss governance and the future of Polkadot.
+- [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) - a place to discuss governance
+  and the future of Kusama.
+- [Polkadot](https://polkadot.polkassembly.io) and [Kusama](https://kusama.polkassembly.io)
+  Polkassembly - for current referenda, latest proposals, motions, treasury proposals, tips,
+  bounties, and more.
+- [Polkadot Daily Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is
+  happening in the Polkadot ecosystem, published every weekday except holidays.
+
+
+## Important Parameters
+
+The important parameters to be aware of when voting using the Referenda module are as follows:
+
+**Origin**
+
+**Max Deciding**
+
+**Decision Deposit**
+
+**Prepare Period**
+
+**Decision Period**
+
+**Confirm Period**
+
+**Min Enactment Period**
+
+**Min Approval**
+
+**Min Support**
+
+## Origins and Tracks
+
+<!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
+<Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
+
+<!-- When OpenGov moves to Polkadot replace the above content with these condition statements -->
+<!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
+<!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
+
+
+
 ## Create a Referenda Proposal using Polkadot-JS UI
 
 ### Submitting a Preimage
@@ -81,14 +128,6 @@ only works for old version of governance).
 To remove the lock from votes you first need to call `removeVote` and then `unlock` through the
 `convictionVoting` pallet.
 
-## Origins and Tracks
-
-<!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
-<Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
-
-<!-- When OpenGov moves to Polkadot replace the above content with these condition statements -->
-<!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
-<!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
 
 ## Delegating Voting Power
 
