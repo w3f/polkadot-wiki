@@ -64,9 +64,6 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     // Pallet Name
     const name = <b>{pallet.name}</b>;
 
-    // Pallet Index 
-    const index = pallet.index;
-
     // Pallet Runtime Calls
     let calls = pallet.calls;
     /* TODO - Decode */
@@ -98,10 +95,27 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     });
 
     // Pallet Errors
-    let errors = pallet.errors;
-    /* TODO - Decode */
-    if (errors !== null && errors.hasOwnProperty('type')) { errors = <li>{`Type: ${errors.type}`}</li>; }
-    else { errors = <div /> }
+    let errors = [];
+    let errorClass = api.errors[`${Camel(pallet.name)}`];
+    if (errorClass !== undefined) {
+      var errorNames = Object.keys(errorClass);
+      errorNames.sort((a, b) => a.localeCompare(b));
+      errorNames.forEach(errorName => {
+        const rawError = api.errors[`${Camel(pallet.name)}`][errorName];
+        const error = rawError.meta.toHuman();
+        console.log(error);
+        const item = (
+          <li key={`${pallet.name}.${error.name}`}>
+            {error.name}
+            <ul>
+              <li>{`Docs: ${error.docs.join(" ")}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
+            </ul>
+          </li>
+        )
+        errors.push(item);
+      });
+    }
 
     // Pallet Events
     let events = pallet.events;
@@ -136,8 +150,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
       <div key={pallet.name}>
         <span><button id={`${pallet.name}-button`} onClick={(e) => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
         <div id={pallet.name} style={{ maxHeight: "0px", overflow: "hidden" }}>
-          <ul><b>Index:</b> {index} </ul>
-          <ul><b>Calls:</b> <ul>{calls}</ul> </ul>
+          <ul><b>Runtime Calls:</b> <ul>{calls}</ul> </ul>
           <ul><b>Constants:</b> <ul>{constants}</ul> </ul>
           <ul><b>Errors:</b> <ul>{errors}</ul> </ul>
           <ul><b>Events:</b> <ul>{events}</ul> </ul>
@@ -178,7 +191,6 @@ function ToggleLoading() {
 function ToggleExpand(id) {
   const div = document.getElementById(id);
   const button = document.getElementById(`${id}-button`);
-  console.log(div.style.maxHeight);
   if (div.style.maxHeight === "0px") {
     div.style.maxHeight = "100%";
     button.innerText = "-";
