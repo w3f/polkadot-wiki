@@ -141,6 +141,10 @@ function BlocksToTime(blockString) {
     } else {
       return `${value} Day`
     }
+  } else if (value % 3600 === 0) {
+    // Convert to hours
+    value = value / 3600
+    return `${value} Hours`
   } else {
     // Convert to minutes
     value = value / 60
