@@ -36,17 +36,18 @@ The important parameters to be aware of when voting using the Referenda module a
 **Origin** - Each origin has a fixed set of privileges. It is important to choose the origin that has the 
 privilege to execute the referenda. 
 
-**Track** - Each track has its own dispatch origin and configuration which governs the voting process and parameters.
+**Track** - Each track has its own dispatch origin and a preset configuration which governs the voting process and parameters.
 
-**Submission Deposit** - The minimum amount to be used as a deposit for a public referendum proposal.
+**Submission Deposit** - The minimum amount to be used as a deposit to submit a public referendum proposal.
 
-**Prepare Period** - 
+**Prepare Period** - The minimum time the referendum needs to wait before it can progress to the next phase. Voting is enabled,
+but the votes do not count towards the outcome of the referendum yet.
 
-**Decision Deposit**
+**Decision Deposit** - The deposit needed for a referendum to progress to the decision phase after the end of prepare period. 
 
-**Decision Period** - Amount of time that a decision may take to be approved to move to Confirming Period prior to rejection.
+**Decision Period** - Amount of time that a decision may take to be approved to move to confirming period prior to rejection.
 
-**Max Deciding** - Number of referenda that can be in the decision period of a track.
+**Max Deciding** - The maximum number of referenda that can be in the decision period of a track all at once.
 
 **Confirm Period** - 
 
