@@ -46,3 +46,24 @@ Other features are less common and include:
   transfer an item. The owner of the item has always control and can decide to cancel approvals from
   a delegated account.
 - One can also execute pending atomic swaps created by a counterpart.
+
+### Uniques
+
+Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
+deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
+-- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
+and their classes (entities derived from) are mutable unless specifically made immutable by the
+issuer.
+
+Uniques takes a very bare-bones approach on purpose, to keep the Statemine / Statemint chain a
+simple balance-keeping chain for both fungible and non-fungibles.
+
+These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
+switching the top right menu from Kusama to Statemine or Statemint.
+
+![nft-statemine](../assets/nft/nft-statemine.png)
+
+The can also be interacted with directly through the
+[extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
+
+![uniques.png](../assets/nft/uniques.png)

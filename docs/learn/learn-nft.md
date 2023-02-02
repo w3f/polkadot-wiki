@@ -7,8 +7,8 @@ keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft
 ---
 
-This page is a high-level overview of NFTs and the various approaches to NFTs within the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network.
+This page is a high-level overview of NFTs in the blockchain space and the various approaches to
+NFTs within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network.
 
 ## Fungibility
 
@@ -192,27 +192,6 @@ integration of custom pallets into the runtime is still possible, making NFT spe
 at the chain runtime level a reliable way to keep EVM compatibility of tools while at the same time
 optimizing storage and interactions for rich NFTs.
 
-### Uniques
-
-Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
-deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
--- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
-and their classes (entities derived from) are mutable unless specifically made immutable by the
-issuer.
-
-Uniques takes a very bare-bones approach on purpose, to keep the Statemine / Statemint chain a
-simple balance-keeping chain for both fungible and non-fungibles.
-
-These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
-switching the top right menu from Kusama to Statemine or Statemint.
-
-![nft-statemine](../assets/nft/nft-statemine.png)
-
-The can also be interacted with directly through the
-[extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
-
-![uniques.png](../assets/nft/uniques.png)
-
 ### Basilisk
 
 [Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
@@ -226,6 +205,16 @@ that allows creating a buy order for a specific NFT.
 These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
 
 ![nft-basilisk](../assets/nft/nft-basilisk.png)
+
+### Statemint
+
+Statemint is a generic assets parachain which provides functionality for deploying and transferring
+assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
+be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
+parachain on Kusama). Statemint currently hosts [Uniques pallet](learn-nft-pallets.md#uniques)) and
+its functionalities. The [NFTs pallet](learn-nft-pallets.md#nfts-pallet)) with NFT 2.0
+functionalities is available for testing on Westmint, which is a system parachain on Polkadot's
+testnet Westmint.
 
 ---
 
