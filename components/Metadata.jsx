@@ -64,11 +64,34 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     // Pallet Name
     const name = <b>{pallet.name}</b>;
 
-    // Pallet Runtime Calls
-    let calls = pallet.calls;
-    /* TODO - Decode */
-    if (calls !== null && calls.hasOwnProperty("type")) { calls = <li>{`Type: ${calls.type}`}</li>; }
-    else { calls = <div /> }
+    // All Runtime Calls
+    /*
+    let calls = [];
+    const callsClass = api.call;
+    if (callsClass !== undefined) {
+      const callNames = Object.keys(callsClass);
+      callNames.sort((a, b) => a.localeCompare(b));
+      callNames.forEach(callName => {
+        const methods = api.call[callName];
+        const methodNames = Object.keys(methods);
+        methodNames.sort((a, b) => a.localeCompare(b));
+        methodNames.forEach(async method => {
+          const call = methods[method].meta;
+          console.log(meta);
+          const item = (
+            <li key={`${pallet.name}.call.${callName}.${method}`}>
+              {`${callName}.${method}`}
+              <ul>
+                <li>{`Docs: ${call.description}`}</li>
+                <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.call.${callName}.${method}`}</span></li>
+              </ul>
+            </li>
+          )
+          calls.push(item);
+        });
+      });
+    }
+    */
 
     // Pallet Constants
     let constants = [];
@@ -126,17 +149,16 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
         const rawEvent = api.events[`${Camel(pallet.name)}`][eventName];
         const event = rawEvent.meta.toHuman();
         let params = "(";
-        event.args.forEach(arg => {
-          params += `${arg}, `
-        });
-        params = `${params.slice(0, -2)})`; 
+        for (let i = 0; i < event.args.length; i++) {
+          params += `${event.fields[i].typeName}: ${event.args[i]}, `
+        }
+        params = `${params.slice(0, -2)})`;
         const item = (
           <li key={`${pallet.name}.${event.name}`}>
             {event.name}
             <ul>
               <li>{`Docs: ${event.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
-              <li>{`Input Parameters: ${params}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span>{params}</li>
             </ul>
           </li>
         )
@@ -171,7 +193,6 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
       <div key={pallet.name}>
         <span><button id={`${pallet.name}-button`} onClick={(e) => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
         <div id={pallet.name} style={{ maxHeight: "0px", overflow: "hidden" }}>
-          <ul><b>Runtime Calls:</b> <ul>{calls}</ul> </ul>
           <ul><b>Constants:</b> <ul>{constants}</ul> </ul>
           <ul><b>Errors:</b> <ul>{errors}</ul> </ul>
           <ul><b>Events:</b> <ul>{events}</ul> </ul>
