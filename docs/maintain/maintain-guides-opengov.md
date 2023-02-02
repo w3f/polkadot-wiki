@@ -33,25 +33,30 @@ Referenda module (OpenGov). Below are a few links to stay informed and directly 
 
 The important parameters to be aware of when voting using the Referenda module are as follows:
 
-**Origin**
+**Origin** - Each origin has a fixed set of privileges. It is important to choose the origin that has the 
+privilege to execute the referenda. 
 
-**Max Deciding**
+**Track** - Each track has its own dispatch origin and configuration which governs the voting process and parameters.
+
+**Submission Deposit** - The minimum amount to be used as a deposit for a public referendum proposal.
+
+**Prepare Period** - 
 
 **Decision Deposit**
 
-**Prepare Period**
+**Decision Period** - Amount of time that a decision may take to be approved to move to Confirming Period prior to rejection.
 
-**Decision Period**
+**Max Deciding** - Number of referenda that can be in the decision period of a track.
 
-**Confirm Period**
+**Confirm Period** - 
 
-**Min Enactment Period**
+**Min Enactment Period** - Minimum amount of time that an approved proposal must be in the dispatch queue after approval.
 
 **Min Approval**
 
 **Min Support**
 
-## Origins and Tracks
+## Origins and Tracks Info
 
 <!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
 <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
