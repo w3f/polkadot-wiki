@@ -22,13 +22,16 @@ help you get started.
 
 :::
 
-Nominators secure the Relay Chain by selecting good validators and staking DOT.
+Nominators secure the Relay Chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+and nominating validators.
 
-You may have an account with DOT and want to earn fresh DOT. You could do so as validator, which
-requires a node running 24/7. If you do not have such node or do not want to bother, you can still
-earn DOT by nominating one or more validators.
+You may have an account with {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn
+fresh {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as validator, which
+requires a node running 24/7 and experience in setting up, running and maintaining a node.
 
-By doing so, you become a nominator for the validator(s) of your choice. Pick your validators
+If you do not have such node or do not want to bother, you can still earn
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} by nominating one or more validators. By
+doing so, you become a nominator for the validator(s) of your choice. Pick your validators
 carefully - if they do not behave properly, they will get slashed and you will lose DOT as well.
 However, if they do follow the rules of the network, then you can share in staking rewards that they
 generate.
