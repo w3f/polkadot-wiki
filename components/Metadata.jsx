@@ -96,14 +96,13 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
 
     // Pallet Errors
     let errors = [];
-    let errorClass = api.errors[`${Camel(pallet.name)}`];
+    const errorClass = api.errors[`${Camel(pallet.name)}`];
     if (errorClass !== undefined) {
-      var errorNames = Object.keys(errorClass);
+      const errorNames = Object.keys(errorClass);
       errorNames.sort((a, b) => a.localeCompare(b));
       errorNames.forEach(errorName => {
         const rawError = api.errors[`${Camel(pallet.name)}`][errorName];
         const error = rawError.meta.toHuman();
-        console.log(error);
         const item = (
           <li key={`${pallet.name}.${error.name}`}>
             {error.name}
@@ -118,10 +117,32 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     }
 
     // Pallet Events
-    let events = pallet.events;
-    /* TODO - Decode */
-    if (events !== null && events.hasOwnProperty("type")) { events = <li>{`Type: ${events.type}`}</li>; }
-    else { events = <div /> }
+    let events = [];
+    const eventsClass = api.events[`${Camel(pallet.name)}`];
+    if (eventsClass !== undefined) {
+      const eventNames = Object.keys(eventsClass);
+      eventNames.sort((a, b) => a.localeCompare(b));
+      eventNames.forEach(eventName => {
+        const rawEvent = api.events[`${Camel(pallet.name)}`][eventName];
+        const event = rawEvent.meta.toHuman();
+        let params = "(";
+        event.args.forEach(arg => {
+          params += `${arg}, `
+        });
+        params = `${params.slice(0, -2)})`; 
+        const item = (
+          <li key={`${pallet.name}.${event.name}`}>
+            {event.name}
+            <ul>
+              <li>{`Docs: ${event.docs.join(" ")}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
+              <li>{`Input Parameters: ${params}`}</li>
+            </ul>
+          </li>
+        )
+        events.push(item);
+      });
+    }
 
     // Pallet Storage
     let storage = [];
@@ -135,7 +156,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
             <ul>
               {/* TODO - Decode */}
               <li>{`Docs: ${item.docs.join(" ")}`}</li>
-              <li>{`API Endpoint: api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
               <li>{`Return Type: ${JSON.stringify(item.type)}`}</li>
               <li>{`Modifier: ${item.modifier}`}</li>
               <li>{`Fallback: ${item.fallback}`}</li>
