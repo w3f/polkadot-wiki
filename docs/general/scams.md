@@ -87,7 +87,7 @@ be found below:
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
 anyone. If you are concerned a wallet could be fake, please check out our official list of supported
-[wallets](../build/build-wallets.md).
+[wallets](./../general/wallets.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 
