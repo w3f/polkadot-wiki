@@ -70,9 +70,16 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-nft",
                 "learn/learn-statemint",
                 "learn/learn-teleport",
+              ],
+            },
+            {
+              type: "category",
+              label: "NFTs",
+              items: [
+                "learn/learn-nft",
+                "learn/learn-nft-pallets",
               ],
             },
             {

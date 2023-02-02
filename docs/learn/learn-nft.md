@@ -1,7 +1,7 @@
 ---
 id: learn-nft
 title: NFTs
-sidebar_label: NFTs
+sidebar_label: Introduction to NFTs
 description: An explanation of the NFT landscape in the Polkadot ecosystem.
 keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft
