@@ -133,10 +133,10 @@ stays up to date. For more info, see the "Moving Assets between Chains in XCM" s
 
 ## Non-Fungible Assets
 
-Unlike fungible assets, the particular instance of a non-fungible asset (NFT) has meaning separate
-from another instance of the same class.
+Unlike fungible assets, the particular instance of a [non-fungible asset (NFT)](./learn-nft.md) has
+separate meaning from another instance of the same class.
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} represents NFTs in the
-[Uniques pallet](https://crates.parity.io/pallet_uniques/index.html).
+[Uniques and Nfts pallets](./learn-nft-pallets.md).
 
 Similar to the Assets pallet, this functionality is encoded into the chain. Operations are
 benchmarked prior to each release in lieu of any runtime metering, ensuring efficient execution and
