@@ -96,7 +96,7 @@ For an overview on how delegation works in OpenGov, check out the
 [Multirole Delegation](./../learn/learn-opengov.md#multirole-delegation) section on the
 [Learn OpenGov](./../learn/learn-opengov.md) page.
 
-The following steps outline how to delegate voting power in OpenGov:
+The following steps outline how to delegate voting power in OpenGov through Polkadot-JS UI:
 
 1. Navigate to the [referenda tab](https://polkadot.js.org/apps/#/referenda)
 2. Click the `Delegate` icon in the top-right corner
