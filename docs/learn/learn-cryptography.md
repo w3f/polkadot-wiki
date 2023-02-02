@@ -125,7 +125,7 @@ considered possibly _even more_ secure than this one and allows for easier imple
 signatures. A recent patent expiration on it has made it the preferred choice for use in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-The choice of using Schnorr signatures over using ECDSA is not so cut and dry. Jeff Burdges (a Web3
+The choice of using Schnorr signatures over using ECDSA is not so cut and dried. Jeff Burdges (a Web3
 researcher) provides additional details on the decision in this
 [research post](https://research.web3.foundation/en/latest/polkadot/keys/1-accounts.html) on the
 topic:
