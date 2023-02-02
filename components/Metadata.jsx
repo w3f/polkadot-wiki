@@ -64,35 +64,6 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     // Pallet Name
     const name = <b>{pallet.name}</b>;
 
-    // All Runtime Calls
-    /*
-    let calls = [];
-    const callsClass = api.call;
-    if (callsClass !== undefined) {
-      const callNames = Object.keys(callsClass);
-      callNames.sort((a, b) => a.localeCompare(b));
-      callNames.forEach(callName => {
-        const methods = api.call[callName];
-        const methodNames = Object.keys(methods);
-        methodNames.sort((a, b) => a.localeCompare(b));
-        methodNames.forEach(async method => {
-          const call = methods[method].meta;
-          console.log(meta);
-          const item = (
-            <li key={`${pallet.name}.call.${callName}.${method}`}>
-              {`${callName}.${method}`}
-              <ul>
-                <li>{`Docs: ${call.description}`}</li>
-                <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.call.${callName}.${method}`}</span></li>
-              </ul>
-            </li>
-          )
-          calls.push(item);
-        });
-      });
-    }
-    */
-
     // Pallet Constants
     let constants = [];
     pallet.constants.sort((a, b) => a.name.localeCompare(b.name));
@@ -202,6 +173,47 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
     )
   });
 
+  // Runtime
+  let calls = [];
+  const callsClass = api.call;
+  if (callsClass !== undefined) {
+    const callNames = Object.keys(callsClass);
+    callNames.sort((a, b) => a.localeCompare(b));
+    callNames.forEach(callName => {
+      let childCalls = [];
+      const methods = api.call[callName];
+      const methodNames = Object.keys(methods);
+      methodNames.sort((a, b) => a.localeCompare(b));
+      methodNames.forEach(async method => {
+        const call = methods[method].meta;
+        const item = (
+          <div key={`${callName}.${method}`}>
+            <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
+            <ul>
+              <li>{`Docs: ${call.description}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.call.${callName}.${method}`}</span></li>
+              <li>{`Type: ${call.type}`}</li>
+            </ul>
+          </div>
+        )
+        childCalls.push(item);
+      });
+
+      const header = callName.charAt(0).toUpperCase() + callName.slice(1);
+      const formattedCalls = (
+        <div key={callName}>
+          <span><button id={`${callName}-button`} onClick={(e) => { ToggleExpand(callName) }}>+</button>&nbsp;<b>{header}</b></span>
+          <div id={callName} style={{ maxHeight: "0px", overflow: "hidden" }}>
+            <ul>
+              {childCalls}
+            </ul>
+          </div>
+        </div >
+      )
+      calls.push(formattedCalls);
+    });
+  }
+
   ToggleLoading();
 
   // Render
@@ -213,7 +225,11 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
       <br />
       <div id="metadataLoading" style={{ color: "#e6007a", visibility: "hidden" }}><b>Loading Metadata...</b></div>
       {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
+      Pallets:
       {palletData}
+      <br />
+      Runtime:
+      {calls}
     </div>
   );
 }
