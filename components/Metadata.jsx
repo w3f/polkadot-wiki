@@ -157,6 +157,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
       <b>{`Magic Number: ${block}`}</b>
       <br />
       <div id="metadataLoading" style={{ color: "#e6007a", visibility: "hidden" }}><b>Loading Metadata...</b></div>
+      {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
       {palletData}
     </div>
   );
