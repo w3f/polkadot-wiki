@@ -56,17 +56,18 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
   const block = meta.magicNumber;
 
   // Pallets
+  // TODO - Add dropdown selection for version
   const pallets = meta.metadata.V14.pallets;
   pallets.sort((a, b) => a.name.localeCompare(b.name));
   let palletData = [];
   pallets.forEach(pallet => {
     // Pallet Name
-    const name = <b>{pallet.name}:</b>;
+    const name = <b>{pallet.name}</b>;
 
     // Pallet Index 
     const index = pallet.index;
 
-    // Pallet Calls
+    // Pallet Runtime Calls
     let calls = pallet.calls;
     /* TODO - Decode */
     if (calls !== null && calls.hasOwnProperty("type")) { calls = <li>{`Type: ${calls.type}`}</li>; }
@@ -85,7 +86,7 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
               <li>{`Docs: ${constant.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
               <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
-              <li>{`Return Type: ${typeof constObj.toJSON()}`}</li>
+              {/*<li>{`Return Type: ${typeof constObj.toJSON()}`}</li>*/}
             </ul>
           </li>
         )
@@ -133,15 +134,14 @@ async function GetMetadata(wsUrl, dropdown, setReturnValue) {
 
     palletData.push(
       <div key={pallet.name}>
-        <div>
-          {name}
-          <br />
-          <ul>Index: {index} </ul>
-          <ul>Calls: <ul>{calls}</ul> </ul>
-          <ul>Constants: <ul>{constants}</ul> </ul>
-          <ul>Errors: <ul>{errors}</ul> </ul>
-          <ul>Events: <ul>{events}</ul> </ul>
-          <ul>Storage: <ul>{storage}</ul> </ul>
+        <span><button id={`${pallet.name}-button`} onClick={(e) => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
+        <div id={pallet.name} style={{ maxHeight: "0px", overflow: "hidden" }}>
+          <ul><b>Index:</b> {index} </ul>
+          <ul><b>Calls:</b> <ul>{calls}</ul> </ul>
+          <ul><b>Constants:</b> <ul>{constants}</ul> </ul>
+          <ul><b>Errors:</b> <ul>{errors}</ul> </ul>
+          <ul><b>Events:</b> <ul>{events}</ul> </ul>
+          <ul><b>Storage:</b> <ul>{storage}</ul> </ul>
         </div>
       </div>
     )
@@ -171,6 +171,19 @@ function ToggleLoading() {
   if (el !== null) {
     if (el.style.visibility === "hidden") { el.style.visibility = "visible"; }
     else { el.style.visibility = "hidden" };
+  }
+}
+
+function ToggleExpand(id) {
+  const div = document.getElementById(id);
+  const button = document.getElementById(`${id}-button`);
+  console.log(div.style.maxHeight);
+  if (div.style.maxHeight === "0px") {
+    div.style.maxHeight = "100%";
+    button.innerText = "-";
+  } else {
+    div.style.maxHeight = "0px";
+    button.innerText = "+";
   }
 }
 
