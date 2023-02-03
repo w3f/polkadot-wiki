@@ -9,9 +9,9 @@ slug: ../maintain-guides-opengov
 
 import Tracks from "./../../components/Referenda-Tracks";
 
-:::info OpenGov is live on Kusama Network
+:::info OpenGov is not live on Polkadot yet
 
-OpenGov is yet to be deployed on Polkadot Network.
+OpenGov is already deployed on Kusama Network.
 
 :::
 
@@ -33,7 +33,7 @@ Referenda module (OpenGov). Below are a few links to stay informed and directly 
 
 The important parameters to be aware of when voting using the Referenda module are as follows:
 
-**Origin** - Each origin has a fixed set of privileges. It is important to choose the origin that has the 
+**Origin** - Each origin has a fixed set of privileges. When making a proposal, it is important to choose the origin that has the 
 privilege to execute the referenda. 
 
 **Track** - Each track has its own dispatch origin and a preset configuration which governs the voting process and parameters.
@@ -43,19 +43,27 @@ privilege to execute the referenda.
 **Prepare Period** - The minimum time the referendum needs to wait before it can progress to the next phase. Voting is enabled,
 but the votes do not count towards the outcome of the referendum yet.
 
-**Decision Deposit** - The deposit needed for a referendum to progress to the decision phase after the end of prepare period. 
+**Decision Deposit** - This deposit is required for a referendum to progress to the decision phase after the end of prepare period. 
 
-**Decision Period** - Amount of time that a decision may take to be approved to move to confirming period prior to rejection.
+**Decision Period** - Amount of time that a decision may take to be approved to move to confirming period. If the proposal is not
+approved by the end of the decision period, it gets rejected.
 
 **Max Deciding** - The maximum number of referenda that can be in the decision period of a track all at once.
 
-**Confirm Period** - 
+**Confirm Period** - The total time the referenda meets all of the the approval criteria during the decision period.
 
-**Min Enactment Period** - Minimum amount of time that an approved proposal must be in the dispatch queue after approval.
+**Min Enactment Period** - Minimum amount of time that an approved proposal must be in the dispatch queue after approval. The proposer
+has an option to set the enactment period to be of any value greater than the min enactment period.
 
-**Min Approval**
+**Conviction**: A multiplier to increase voting power.
 
-**Min Support**
+**Approval**: the share of the approval vote-weight after adjustments for conviction against the total number of vote-weight for both approval and rejection
+
+**Support**: The total number of votes in approval (ignoring adjustments for conviction) compared to the total possible amount of votes that could be made in the system. Support also takes into account abstained votes.
+
+**Min Approval** - The threshold of approval (along with the min support) needed for a proposal to meet the requirements of the confirm period.
+
+**Min Support** - The threshold of support (along with the min approval) needed for a proposal to meet the requirements of the confirm period.
 
 ## Origins and Tracks Info
 
