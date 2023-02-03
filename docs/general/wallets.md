@@ -41,10 +41,11 @@ Browser extension wallets at bare minimum act as key storage and management solu
 
 | Wallet                                | Browsers                                    | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
 | ------------------------------------- | ------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
-| [Enkrypt](https://www.enkrypt.com/)   | Brave, Chrome, Edge, Firefox, Opera, Safari | No, No                       | **Yes** | No         | **Yes**        | No         | [Enkrypt Features](#enkrypt)     |
-| [PolkaGate](https://polkagate.xyz/) | Chrome, Firefox                                     | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
 | [SubWallet](https://subwallet.app/)   | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 | [Talisman](https://www.talisman.xyz/) | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [Talisman features](#talisman)   |
+| [Enkrypt](https://www.enkrypt.com/)   | Brave, Chrome, Edge, Firefox, Opera, Safari | No, No                       | **Yes** | No         | **Yes**        | No         | [Enkrypt Features](#enkrypt)     |
+| [PolkaGate](https://polkagate.xyz/) | Chrome, Firefox                                     | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
+
 
 ### Mobile Wallets
 
@@ -52,10 +53,11 @@ Mobile wallets are fully packaged apps that allow all the featured actions, as w
 
 | Wallet                                        | Platforms                 | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | ------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
-| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android              | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
+| [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
 | [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
+| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android              | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | No         | **Yes**        | No         | [SubWallet features](#subwallet)             |
+
 
 :::caution \*Note about Nova wallet
 
@@ -86,12 +88,12 @@ account(s).
 
 ### SubWallet
 
-Web3 multiverse gateway for Polkadot & Kusama ecosystem. Track, send, receive and monitor
-multi-chain assets. XCM Transfer, NFT Management, Parity Signer & Ledger support, light
+A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive and monitor
+multi-chain assets on 150+ networks. XCM Transfer, NFT Management, Parity Signer & Ledger support, light
 clients support, QR-code account import, token import, EVM DApp support, MetaMask compatibility,
-custom endpoint, fiat on-ramp. Subwallet received funding from Polkadot Treasury
+custom endpoint, fiat on-ramp. SubWallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
-[2](https://polkadot.polkassembly.io/treasury/162)].
+[2](https://polkadot.polkassembly.io/treasury/162),[3](https://polkadot.polkassembly.io/treasury/218)].
 
 ### Talisman
 
