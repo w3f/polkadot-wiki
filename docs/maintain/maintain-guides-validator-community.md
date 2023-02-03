@@ -56,6 +56,7 @@ means of reaching out. Nominators may wish to know more about the Validator, the
 future staking plans, tooling used, or several additional topics. Having a dedicated website
 additionally to provide this sort of information is ideal.
 
+:::note Ledger app on **Nano S** doesn't support the extrinsic for setting identity yet
 
 
 ### Website
