@@ -69,30 +69,6 @@ their official social media handles).
 
 :::
 
-### SubWallet
-
-A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive and monitor
-multi-chain assets on 150+ networks. XCM Transfer, NFT Management, Parity Signer & Ledger support, light
-clients support, QR-code account import, token import, EVM DApp support, MetaMask compatibility,
-custom endpoint, fiat on-ramp. SubWallet received funding from Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/treasury/138),
-[2](https://polkadot.polkassembly.io/treasury/162),[3](https://polkadot.polkassembly.io/treasury/218)].
-
-### Nova Wallet
-
-Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with 
-Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusama Treasury
-[[1](https://kusama.polkassembly.io/treasury/122),
-[2](https://kusama.polkassembly.io/treasury/158)].
-
-### Talisman
-
-A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
-Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
-your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
-portfolio tracking. Talisman received funding from Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/treasury/148)].
-
 ### Enkrypt
 
 A multichain crypto wallet - Bitcoin, Ethereum, Polkadot, Kusama and a few parachains.
@@ -110,6 +86,23 @@ performance improvements. Supports proxy accounts and social recovery, address (
 parachain accounts, custom remote nodes, phishing detection, QR account import, export/import/derive 
 account(s). 
 
+### SubWallet
+
+A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive and monitor
+multi-chain assets on 150+ networks. XCM Transfer, NFT Management, Parity Signer & Ledger support, light
+clients support, QR-code account import, token import, EVM DApp support, MetaMask compatibility,
+custom endpoint, fiat on-ramp. SubWallet received funding from Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/treasury/138),
+[2](https://polkadot.polkassembly.io/treasury/162),[3](https://polkadot.polkassembly.io/treasury/218)].
+
+### Talisman
+
+A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
+Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
+your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
+portfolio tracking. Talisman received funding from Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/treasury/148)].
+
 ### Fearless Wallet
 
 The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
@@ -120,6 +113,13 @@ use and understand. Fearless Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34),
 [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102),
 [5](https://kusama.polkassembly.io/treasury/178)].
+
+### Nova Wallet
+
+Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with 
+Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusama Treasury
+[[1](https://kusama.polkassembly.io/treasury/122),
+[2](https://kusama.polkassembly.io/treasury/158)].
 
 ### Polkawallet
 
