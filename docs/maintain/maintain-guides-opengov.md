@@ -36,16 +36,16 @@ The important parameters to be aware of when voting using the Referenda module a
 **Origin** - Each origin has a fixed set of privileges. When making a proposal, it is important to choose the origin that has the 
 privilege to execute the referenda. 
 
-**Track** - Each track has its own dispatch origin and a preset configuration which governs the voting process and parameters.
+**Track** - Each track has its own dispatch origin and a preset configuration that governs the voting process and parameters.
 
-**Submission Deposit** - The minimum amount to be used as a deposit to submit a public referendum proposal.
+**Submission Deposit** - The minimum amount to be used as a (refundable) deposit to submit a public referendum proposal.
 
-**Prepare Period** - The minimum time the referendum needs to wait before it can progress to the next phase. Voting is enabled,
-but the votes do not count towards the outcome of the referendum yet.
+**Prepare Period** - The minimum time the referendum needs to wait before it can progress to the next phase after submission. Voting is enabled,
+but the votes do not count toward the outcome of the referendum yet.
 
 **Decision Deposit** - This deposit is required for a referendum to progress to the decision phase after the end of prepare period. 
 
-**Decision Period** - Amount of time that a decision may take to be approved to move to confirming period. If the proposal is not
+**Decision Period** - Amount of time a decision may take to be approved to move to the confirming period. If the proposal is not
 approved by the end of the decision period, it gets rejected.
 
 **Max Deciding** - The maximum number of referenda that can be in the decision period of a track all at once.
@@ -60,10 +60,10 @@ approved by the end of the decision period, it gets rejected.
 
 **Min Support** - The threshold of support (along with the min approval) needed for a proposal to meet the requirements of the confirm period.
 
-**Confirm Period** - The total time the referenda meets the min approval and support criteria during the decision period.
+**Confirm Period** - The total time the referenda meets both the min approval and support criteria during the decision period.
 
-**Min Enactment Period** - Minimum amount of time that an approved proposal must be in the dispatch queue after approval. The proposer
-has an option to set the enactment period to be of any value greater than the min enactment period.
+**Min Enactment Period** - Minimum time that an approved proposal must be in the dispatch queue after approval. The proposer
+has the option to set the enactment period to be of any value greater than the min enactment period.
 
 
 ## Origins and Tracks Info
