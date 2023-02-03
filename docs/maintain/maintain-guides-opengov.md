@@ -50,11 +50,6 @@ approved by the end of the decision period, it gets rejected.
 
 **Max Deciding** - The maximum number of referenda that can be in the decision period of a track all at once.
 
-**Confirm Period** - The total time the referenda meets all of the the approval criteria during the decision period.
-
-**Min Enactment Period** - Minimum amount of time that an approved proposal must be in the dispatch queue after approval. The proposer
-has an option to set the enactment period to be of any value greater than the min enactment period.
-
 **Conviction**: A multiplier to increase voting power.
 
 **Approval**: the share of the approval vote-weight after adjustments for conviction against the total number of vote-weight for both approval and rejection
@@ -64,6 +59,12 @@ has an option to set the enactment period to be of any value greater than the mi
 **Min Approval** - The threshold of approval (along with the min support) needed for a proposal to meet the requirements of the confirm period.
 
 **Min Support** - The threshold of support (along with the min approval) needed for a proposal to meet the requirements of the confirm period.
+
+**Confirm Period** - The total time the referenda meets the min approval and support criteria during the decision period.
+
+**Min Enactment Period** - Minimum amount of time that an approved proposal must be in the dispatch queue after approval. The proposer
+has an option to set the enactment period to be of any value greater than the min enactment period.
+
 
 ## Origins and Tracks Info
 
