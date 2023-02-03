@@ -76,8 +76,7 @@ multi-chain assets on 150+ networks. XCM Transfer, NFT Management, Parity Signer
 clients support, QR-code account import, token import, EVM DApp support, MetaMask compatibility,
 custom endpoint, fiat on-ramp. SubWallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
-[2](https://polkadot.polkassembly.io/treasury/162),
-[3](https://polkadot.polkassembly.io/treasury/218)].
+[2](https://polkadot.polkassembly.io/treasury/162),[3](https://polkadot.polkassembly.io/treasury/218)].
 
 ### Nova Wallet
 
