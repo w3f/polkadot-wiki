@@ -27,18 +27,20 @@ and nominating validators.
 
 You may have an account with {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn
 fresh {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as validator, which
-requires a node running 24/7 and experience in setting up, running and maintaining a node.
+requires experience in setting up a node, and running and maintaining it 24/7.
 
-If you do not have such node or do not want to bother, you can still earn
+If you do not want to bother with nodes, you can still earn
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} by nominating one or more validators. By
 doing so, you become a nominator for the validator(s) of your choice. Pick your validators
-carefully - if they do not behave properly, they will get slashed and you will lose DOT as well.
-However, if they do follow the rules of the network, then you can share in staking rewards that they
-generate.
+carefully - if they do not behave properly, they will get slashed and you will lose
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as well. However, if they do follow the rules
+of the network, then you can share staking rewards that they generate.
 
-While your DOT are staked by nominating a validator, they are 'locked' (bonded). You can receive new
-DOT in your account but you cannot stake as validator or transfer DOT away from your account. You
-can [un-nominate at any time](../maintain/maintain-guides-how-to-nominate-polkadot.md) to stop
+While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked by nominating a
+validator, they are 'locked' (bonded). You can receive new
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in your account but you cannot stake as
+validator or transfer {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} away from your account.
+You can [un-nominate at any time](../maintain/maintain-guides-how-to-nominate-polkadot.md) to stop
 staking your funds. Keep in mind that the un-nomination is effective in the next era, and that
 un-nominating does not automatically unbond your funds. There is an unbonding period of
 {{ polkadot: 28 days on Polkadot :polkadot }} {{ kusama: 7 days on Kusama :kusama }} before bonded
