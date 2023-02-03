@@ -1336,7 +1336,7 @@
     webpack-merge "^5.8.0"
     webpackbar "^5.0.2"
 
-"@docusaurus/core@^2.3.1":
+"@docusaurus/core@2.3.1", "@docusaurus/core@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.3.1.tgz#32849f2ffd2f086a4e55739af8c4195c5eb386f2"
   integrity sha512-0Jd4jtizqnRAr7svWaBbbrCCN8mzBNd2xFLoT/IM7bGfFie5y58oz97KzXliwiLY3zWjqMXjQcuP1a5VgCv2JA==
@@ -1509,17 +1509,17 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@5.5.2"
 
-"@docusaurus/plugin-client-redirects@^2.2.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.3.0.tgz#3583fe66d071459425212f4e52022e8bd77c4a4c"
-  integrity sha512-aJzRA/K4LVPBm1gzmawii6a9xCOBkMwf70eVpM7KlHGioDp5MnNygOpOyjPPTyjKMno45m3C6up2k8Ni95kCDQ==
+"@docusaurus/plugin-client-redirects@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.3.1.tgz#e75f373ef19032b0d059c0298f86d6cb18575ef6"
+  integrity sha512-Ye0z36/L8685ni0DIxHqPPaHIXFXiSF90QYiYfpODBX6NxvvveUTyylsDBU1GQhPXPn1bd39QgaOuZ+j9gfaog==
   dependencies:
-    "@docusaurus/core" "2.3.0"
-    "@docusaurus/logger" "2.3.0"
-    "@docusaurus/utils" "2.3.0"
-    "@docusaurus/utils-common" "2.3.0"
-    "@docusaurus/utils-validation" "2.3.0"
-    eta "^1.12.3"
+    "@docusaurus/core" "2.3.1"
+    "@docusaurus/logger" "2.3.1"
+    "@docusaurus/utils" "2.3.1"
+    "@docusaurus/utils-common" "2.3.1"
+    "@docusaurus/utils-validation" "2.3.1"
+    eta "^2.0.0"
     fs-extra "^10.1.0"
     lodash "^4.17.21"
     tslib "^2.4.0"
