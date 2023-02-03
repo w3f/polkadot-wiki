@@ -72,7 +72,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     pallet.constants.forEach(constant => {
       let constObj = api["consts"][`${Camel(pallet.name)}`][`${Camel(constant.name)}`];
       if (constObj !== undefined) {
-        const itemType = types[constant.type].type.def;
+        const constantType = types[constant.type].type.def;
         const item = (
           <li key={constant.name}>
             {constant.name}
@@ -80,7 +80,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
               <li>{`Docs: ${constant.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
               <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
-              <li>{`Return Type: ${Object.keys(itemType)[0]} - ${Object.values(itemType)[0]}`}</li>
+              <li>{`Return Type: ${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
             </ul>
           </li>
         )
@@ -95,6 +95,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     let errors = [];
     const errorClass = api.errors[`${Camel(pallet.name)}`];
     if (errorClass !== undefined) {
+      //const errorTypes = types[pallet.errors.type].type.def;
       const errorNames = Object.keys(errorClass);
       errorNames.sort((a, b) => a.localeCompare(b));
       errorNames.forEach(errorName => {
@@ -117,6 +118,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     let events = [];
     const eventsClass = api.events[`${Camel(pallet.name)}`];
     if (eventsClass !== undefined) {
+      //const eventTypes = types[pallet.events.type].type.def;
       const eventNames = Object.keys(eventsClass);
       eventNames.sort((a, b) => a.localeCompare(b));
       eventNames.forEach(eventName => {
@@ -146,14 +148,23 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const storagePrefix = pallet.storage.prefix;
       pallet.storage.items.sort((a, b) => a.name.localeCompare(b.name));
       pallet.storage.items.forEach(item => {
+        const typeKey = Object.keys(item.type)[0];
+        let storageType;
+        // TODO - this needs improvements to more efficiently unwrap types
+        if (typeKey === "Plain") {
+          storageType = types[item.type[typeKey]].type.def;
+        } else if (typeKey === "Map") {
+          storageType = types[item.type[typeKey].key].type.def;
+        } else {
+          console.log("Unknown Storage Type");
+        }
         const storageItem = (
           <li key={item.name}>
             {`${storagePrefix}.${item.name}`}
             <ul>
-              {/* TODO - Decode */}
               <li>{`Docs: ${item.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
-              <li>{`Return Type: ${JSON.stringify(item.type)}`}</li>
+              <li>{`Return Type: ${Object.keys(storageType)[0]} - ${Object.values(storageType)[0]}`}</li>
               <li>{`Modifier: ${item.modifier}`}</li>
               <li>{`Fallback: ${item.fallback}`}</li>
             </ul>
@@ -187,7 +198,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const methods = api.call[callName];
       const methodNames = Object.keys(methods);
       methodNames.sort((a, b) => a.localeCompare(b));
-      methodNames.forEach(async method => {
+      methodNames.forEach(method => {
         const call = methods[method].meta;
         const item = (
           <div key={`${callName}.${method}`}>
