@@ -29,7 +29,7 @@ Referenda module (OpenGov). Below are a few links to stay informed and directly 
   happening in the Polkadot ecosystem, published every weekday except holidays.
 
 
-## Important Parameters
+## OpenGov Terminology and Parameters
 
 The important parameters to be aware of when voting using the Referenda module are as follows:
 
