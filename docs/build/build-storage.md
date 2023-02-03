@@ -8,8 +8,9 @@ slug: ../build-storage
 ---
 
 Storage is an integral part of modern computer systems, and the same is true for distributed and
-decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it will be
-helpful if you familiarize yourself with the current Web3 approach towards decentralized storage.
+decentralized systems like a blockchain. When interacting with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem, it will be helpful if you
+familiarize yourself with the current Web3 approach towards decentralized storage.
 
 ## DCS (Decentralized Cloud Storage)
 
@@ -59,12 +60,37 @@ integrating with Crust by following their
 
 :::
 
+### Filebase
+
+[Filebase](https://filebase.com) is the first S3-compatible object storage platform that allows you
+to store data in a secure, redundant, and performant manner across multiple decentralized storage
+networks.
+
+Filebase offers a geo-redundant IPFS pinning service that allows you to pin files to IPFS across
+multiple diverse geographic locations. All files uploaded to IPFS through Filebase are automatically
+pinned to the Filebase infrastructure with 3x replication across the globe. This ensures that your
+data is globally available and redundant at all times.
+
+Filebase acts as an easy on-ramp to IPFS and decentralized storage by offering a user-friendly web
+console dashboard, making drag-and-dropping files onto Web3 simple and easy. Filebase also provides
+an S3-compatible API for widespread integrations and configurations in current workflows.
+
+:::note Learn more about Filebase
+
+To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com), and
+specifically the documentation on
+[deploying Polkadot dApp on decentralized storage.](https://docs.filebase.com/web3-education/web3-tutorials/polkadot/polkadot-deploy-a-polkadot-dapp-on-decentralized-storage)
+You can get started with Filebase by signing up [here.](https://filebase.com/signup)
+
+:::
+
 #### Using Polkadot-JS Files (IPFS) module
 
 Polkadot-JS UI includes a decentralized storage module that allows Substrate-based chain users to
-upload their files to an [IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW)
-and use the [IPFS W3Auth Pinning Service](https://wiki.crust.network/docs/en/buildIPFSW3AuthPin) to
-pin their files on Crust Network.
+upload their files to an
+[IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW) and use the
+[IPFS W3Auth Pinning Service](https://wiki.crust.network/docs/en/buildIPFSW3AuthPin) to pin their
+files on Crust Network.
 
 Start by uploading a single file or folder:
 

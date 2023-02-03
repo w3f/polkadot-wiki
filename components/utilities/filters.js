@@ -59,5 +59,12 @@ module.exports = {
     value = (value * 6) / 86400;
     // Update value
     setReturnValue(value.toString());
+  },
+
+  ArrayLength: function (value, setReturnValue) {
+    value = value.split(',').length;
+    // Update value
+    setReturnValue(value.toString());
   }
+
 }

@@ -203,8 +203,9 @@ valid. If the extrinsic is not included in a block within this validity window, 
 from the transaction queue.
 
 The chain only stores a limited number of prior block hashes as reference. You can query this
-parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to 2400
-blocks (about four hours) at genesis. If the validity period is larger than the number of blocks
+parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to
+{{ polkadot: <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> :polkadot }}
+blocks (about seven hours) at genesis. If the validity period is larger than the number of blocks
 stored on-chain, then the transaction will only be valid as long as there is a block to check it
 against, i.e. the minimum value of validity period and block hash count.
 
@@ -301,6 +302,24 @@ it after the upgrade takes place.
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
 following the Polkadot releases and upgrading in a timely manner, especially for high priority or
 critical releases.
+
+### Transaction Version Upgrades
+
+Apart the `runtime_version` there is also the `transaction_version` which denotes how to correctly
+encode/decode calls for a given runtime (useful for hardware wallets). The reason
+`transaction_version` is separate from `runtime_version` is that it explicitly notes that the call
+interface is broken/not compatible.
+
+The `transaction_version` is updated in the cases mentioned in the
+[Substrate docs](https://paritytech.github.io/substrate/master/sp_version/struct.RuntimeVersion.html#structfield.transaction_version).
+So when a new transaction version is introduced (during a runtime upgrade), it indicates a breaking
+change to transaction serialization. In that case, any custom application/tool that constructs &
+signs transactions should also be updated in order to be compatible with the new transaction
+version. It is the responsibility of the maintainers of the custom application/tool to keep up with
+the `transaction_version` updates. However, if you do not want to keep monitoring these changes
+yourself, you can also use the [txwrapper-core](https://github.com/paritytech/txwrapper-core) tool
+that handles these breaking changes for you and allows you to construct transactions using the
+function names and chain metadata.
 
 ## Smart Contracts
 

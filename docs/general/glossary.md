@@ -21,8 +21,9 @@ The fourth (now defunct) proof of concept (PoC-4) [testnet](#testnet) for Polkad
 
 ## Attestation
 
-In the Polkadot validity system, an _attestation_ is a type of message that validators broadcast
-that says whether they think a parachain candidate block is valid or invalid.
+In the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validity system, an
+_attestation_ is a type of message that validators broadcast that says whether they think a
+parachain candidate block is valid or invalid.
 
 ## Auction (Parachain)
 
@@ -33,7 +34,7 @@ Parachain auctions are how non-common-good parathreads win a slot to become a pa
 An authority is a generic term for the role in a blockchain that can participate in the consensus
 mechanisms. In [GRANDPA](#grandpa-finality-gadget), the authorities vote on chains they consider
 final. In BABE, the authorities are block producers. Authority sets can be chosen to be mechanisms
-such as Polkadot's NPoS algorithm.
+such as {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS algorithm.
 
 ## Availability Cores
 
@@ -43,7 +44,8 @@ appropriate Runtime API.
 
 ## BABE
 
-Blind Assignment for Blockchain Extension (BABE) is Polkadot's block production mechanism.
+Blind Assignment for Blockchain Extension (BABE) is
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s block production mechanism.
 
 ## Bitfield Array
 
@@ -81,16 +83,20 @@ also bond tokens in exchange for a parachain slot.
 
 ## Bounty
 
-A mechanism which works in some sense as the reverse of a Treasury Proposal, allowing the Polkadot
-Council to indicate that there is a need to do some task for the Polkadot network and allowing users
-to receive DOT in return for working on that task.
+A mechanism which works in some sense as the reverse of a Treasury Proposal, allowing the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Council to indicate that there is a
+need to do some task for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network
+and allowing users to receive DOT in return for working on that task.
 
 ## Bridge
 
-A parachain that acts as an intermediary between the Polkadot Relay Chain and an external chain, in
+A parachain that acts as an intermediary between the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain and an external chain, in
 such a way that it appears to the Relay Chain that the external chain is a parachain (i.e., meets
-the Polkadot Host's requirements of parachains). Bridges allow for interaction between other
-blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host's requirements of
+parachains). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin,
+that are not natively compatible with
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Byzantine Fault Tolerance
 
@@ -114,7 +120,8 @@ being referred to as a candidate as soon it has been finalized.
 
 ## Collations
 
-Parachain blocks or candidates that are being proposed to the Polkadot relay chain validators. More
+Parachain blocks or candidates that are being proposed to the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain validators. More
 specifically, a collation is a [data structure](https://spec.polkadot.network/#defn-collation) which
 contains the proposed parachain candidate, including an optional validation parachain Runtime update
 and upward messages.
@@ -123,6 +130,13 @@ and upward messages.
 
 A node that maintains a parachain by collecting parachain transactions and producing state
 transition proofs for the validators.
+
+## Collectives
+
+The Polkadot Collectives parachain was added in
+[Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
+there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
+Polkadot network, such as the [Fellowship](#fellowship) and [Polkadot Alliance](#polkadot-alliance).
 
 ## Commission
 
@@ -133,8 +147,8 @@ remaining rewards set out for the nominators that are backing that validator.
 
 ## Common Good (Parachain)
 
-A parachain which does not win a parachain slot due to winning a slot auction, but is allowed on due
-to providing a common good service for the network.
+See [System Parachains](#system-parachains), which is generally preferred over the term "common
+good".
 
 ## Community Queue
 
@@ -145,7 +159,8 @@ waiting to become referenda. Compare the External queue.
 
 The process of a group of entities to agree on a particular data value (such as the ordering and
 makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus.
-The consensus algorithm used by Polkadot is [GRANDPA](#grandpa-finality-gadget).
+The consensus algorithm used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
+[GRANDPA](#grandpa-finality-gadget).
 
 ## Crowdloan
 
@@ -195,8 +210,9 @@ conflicting chains.
 
 ## External Queue
 
-The queue for proposals originating with the Polkadot Council which are waiting to become referenda.
-Compare the Community queue.
+The queue for proposals originating with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Council which are waiting to become
+referenda. Compare the Community queue.
 
 ## Extrinsic
 
@@ -207,11 +223,17 @@ from the outside world, i.e. they are not part of the system itself. Extrinsics 
 "[inherents](#inherent)" and "[transactions](#transaction)". For more technical details see the
 [polkadot spec](https://spec.polkadot.network/#_extrinsics)
 
+## Fellowship
+
+A mostly self-governing expert body with a primary goal of representing humans who embody and
+contain the technical knowledge base of the Kusama and/or Polkadot networks and protocols.
+
 ## Finality
 
 The property of a block that cannot be reverted. Generally, created blocks are not final until some
-point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay
-Chain uses a deterministic finality gadget known as [GRANDPA](#grandpa-finality-gadget).
+point in the future - perhaps never, in the case of "probabilistic finality". The
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain uses a deterministic
+finality gadget known as [GRANDPA](#grandpa-finality-gadget).
 
 ## Finality Gadget
 
@@ -235,7 +257,8 @@ In the _genesis_ state Alice, Bob, and Charlie had 30 tokens each.
 ## Governance
 
 The process of determining what changes to the network are permissible, such as modifications to
-code or movement of funds. The governance system in Polkadot is on-chain and revolves around
+code or movement of funds. The governance system in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is on-chain and revolves around
 stakeholder voting.
 
 ## Governance Council
@@ -247,9 +270,9 @@ group to vote on and cancelling malicious referenda.
 
 ## GRANDPA Finality Gadget
 
-GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot,
-which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of
-GRANDPA, see
+GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for
+{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} which allows asynchronous,
+accountable, and safe finality to the blockchain. For an overview of GRANDPA, see
 [this Medium post](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## Hard Fork
@@ -333,18 +356,24 @@ Short for "main network": the fully functional and acting chain that runs its ow
 
 ## Message
 
-In Polkadot's XCMP protocol, a _message_ is arbitrary data that is sent from one parachain (the
-egress chain) to another (the ingress chain) through a channel and ensured delivery by the validator
-set.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s XCMP protocol, a _message_ is
+arbitrary data that is sent from one parachain (the egress chain) to another (the ingress chain)
+through a channel and ensured delivery by the validator set.
 
 ## Message Queue
 
-In Polkadot's XCMP protocol, a _message queue_ is the list of messages waiting to be processed by a
-particular receiving parachain over a channel.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s XCMP protocol, a _message queue_
+is the list of messages waiting to be processed by a particular receiving parachain over a channel.
 
 ## Metadata
 
 Data that includes information about other data, such as information about a specific transaction.
+
+## Motion
+
+A motion is essentially a "referendum" or "decision" being considered by the Council. The Council
+can vote on motions like approving Treasury Proposals or making proposals for the community to vote
+on.
 
 ## Next Session
 
@@ -362,7 +391,8 @@ the good behavior of the validator. Nominated Proof-of-Stake differs from the mo
 Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad
 validator; delegators are not subject to loss of stake based on the behavior of the validator. Note
 that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if
-delegators can be slashed. Polkadot uses the Phragmén method to allocate stake to nominees.
+delegators can be slashed. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses the
+Phragmén method to allocate stake to nominees.
 
 ## Nominator
 
@@ -389,11 +419,17 @@ This is a message that is broadcast by a validator to verify to the network that
 online, even if they haven't published a block this epoch. This is sometimes referred to as
 "ImOnline".
 
+## OpenGov
+
+Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov)
+serves as the current governance protocol for Kusama and will eventually be deployed on Polkadot.
+
 ## Origin
 
 The initiator of an extrinsic. A simple origin would be the account that is sending a token to
-another account. Polkadot also supports more complex origin types, such as the
-[root origin](#root-origin), from which privileged functions can be called.
+another account. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also supports more
+complex origin types, such as the [root origin](#root-origin), from which privileged functions can
+be called.
 
 ## Oversubscribed
 
@@ -401,8 +437,8 @@ If more than the maximum number of nominators nominate the same validator, it is
 and only the top staked nominators (ranked by the amount of stake, up to the maximum number of
 nominators) are paid rewards. Other nominators will receive no rewards for that era. The current
 maximum number of nominators is
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> on Kusama, :kusama }}
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> on Polkadot, :polkadot }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> on Polkadot, :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> on Kusama, :kusama }}
 but it can be modified via governance.
 
 ## Pallet
@@ -412,12 +448,14 @@ A [Substrate](#substrate) runtime module.
 ## Parachain
 
 A blockchain that meets several characteristics that allow it to work within the confines of the
-Polkadot Host. Also known as "parallelized chain."
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host. Also known as "parallelized
+chain."
 
 ## Parachain Development Kit (PDK)
 
 Similar to an [SDK](#sdk), parachain development kits (PDK) is a set of tools that make it easy for
-developers to create Polkadot compatible [parachains](#parachain).
+developers to create {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} compatible
+[parachains](#parachain).
 
 ## ParaID
 
@@ -425,9 +463,10 @@ A unique numeric (non-negative integer) identifier for a parathread.
 
 ## Parathread
 
-A blockchain that works within the confines of the Polkadot Host, thus allowing it to connect to the
-Polkadot Relay Chain. This can be done either by becoming a parachain or connecting on a "pay as you
-go" basis. All parachains start their life-cycle as a parathread.
+A blockchain that works within the confines of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host, thus allowing it to connect to
+the Polkadot Relay Chain. This can be done either by becoming a parachain or connecting on a "pay as
+you go" basis. All parachains start their life-cycle as a parathread.
 
 ## Parachain Registry
 
@@ -436,7 +475,7 @@ chain.
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate and
+A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate, Kusama and
 Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret
 Store.
 
@@ -445,15 +484,24 @@ Store.
 A heterogeneous, multi-chain network allowing various blockchains of different characteristics to
 perform arbitrary, cross-chain communication under shared security.
 
-## Polkadot Host
+## Polkadot Alliance
 
-The environment in which a runtime module can be executed. Parachains must support the Polkadot
-Host - external chains that do not will have to use a bridge. Previously known as the Polkadot
-Runtime Environment or PRE.
+The Polkadot Alliance is an [on-chain collective](#collectives) founded by Acala, Astar, Interlay,
+Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for open-source development in
+[referendum #94](https://polkadot.polkassembly.io/referendum/94). It aims to support development
+standards and expose bad actors within the ecosystems of Polkadot.
 
-## Polkadot Runtime Environment
+## Host
 
-The previous name for the [Polkadot Host](#polkadot-host).
+The environment in which a runtime module can be executed. Parachains must support the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host - external chains that do not
+will have to use a bridge. Previously known as the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Runtime Environment.
+
+## Runtime Environment
+
+The previous name for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+[Host](#polkadot-host).
 
 ## Preimage
 
@@ -483,7 +531,8 @@ Proof-of-Work system can have any number of participants.
 ## Proposal
 
 A potential function call to be voted on in a referendum. Proposals modify the behavior of the
-Polkadot network, from minor parameter tuning up to replacing the runtime code.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, from minor parameter tuning
+up to replacing the runtime code.
 
 ## Protocol
 
@@ -494,7 +543,8 @@ and possible recovery methods.
 ## Random Seed
 
 A random seed is a pseudo-random number available on-chain. It is used in various places of the
-Polkadot protocol, most prominently in [BABE](#babe) the block production mechanism.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol, most prominently in
+[BABE](#babe) the block production mechanism.
 
 ## Referendum
 
@@ -576,9 +626,11 @@ Hot keys that are used for performing network operations by validators, for exam
 
 ## Shared Security
 
-The security model that Polkadot uses whereby all chains are equally secured. This is achieved by
-placing proofs of the validity of parachain blocks into the Relay Chain such that, in order to
-revert finality of a single parachain, an attacker would need to attack the entire Polkadot system.
+The security model that {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses whereby
+all chains are equally secured. This is achieved by placing proofs of the validity of parachain
+blocks into the Relay Chain such that, in order to revert finality of a single parachain, an
+attacker would need to attack the entire
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system.
 
 ## Slashing
 
@@ -599,9 +651,10 @@ software.
 
 ## Staking
 
-The act of bonding tokens (for Polkadot, DOT) by putting them up as "collateral" for a chance to
-produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOT in
-order to secure the network.
+The act of bonding tokens for {{ polkadot: Polkadot (DOT) :polkadot }}
+{{ kusama: Kusama (KSM) :kusama }} by putting them up as "collateral" for a chance to produce a
+valid block (and thus obtain a block reward). Validators and nominators stake their
+{{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} in order to secure the network.
 
 ## State transition function
 
@@ -610,18 +663,25 @@ describe how tokens can be transferred from one account to another.
 
 ## Statemint
 
-A common good parachain is used for asset management. The Kusama version is called Statemine; the
-Westend version is called Westmint.
+A system parachain used for asset management. The Kusama version is called Statemine; the Westend
+version is called Westmint.
 
 ## Substrate
 
-A modular framework for building blockchains. Polkadot is built using Substrate. Chains built with
-Substrate will be easy to connect as parachains.
+A modular framework for building blockchains.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using Substrate. Chains
+built with Substrate will be easy to connect as parachains.
+
+## System Parachains
+
+Parachains that are part of the Polkadot core protocol. These are allocated a parachain execution
+core by governance rather than auction.
 
 ## Tabling
 
-In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British
-meaning of "tabling", which is different from the US version, which means "to postpone" a measure.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} governance, bringing a proposal to
+a vote via referendum. Note that this is the British meaning of "tabling", which is different from
+the US version, which means "to postpone" a measure.
 
 ## Teleport
 
@@ -636,6 +696,13 @@ Networks are often executed on a testnet before they are deployed to a [mainnet]
 ## Tokenization
 
 The process of replacing sensitive data with non-sensitive data.
+
+## Tracks
+
+Each [Origin](#origin) is associated with a single referendum class and each class is associated
+with a [Track](../maintain/maintain-guides-opengov#origins-and-tracks). The Track outlines the
+lifecycle for the proposal and is independent from other class's tracks. Having independent tracks
+allows the network to tailor the dynamics of referenda based upon their implied privilege level.
 
 ## Tranche
 
@@ -684,8 +751,8 @@ get into the active set in a future era, this may turn into an active or inactiv
 
 ## Wallet
 
-A program that allows one to store private keys and sign transactions for Polkadot or other
-blockchain networks.
+A program that allows one to store private keys and sign transactions for
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} or other blockchain networks.
 
 ## Wasm
 
@@ -705,7 +772,8 @@ methods to safeguard decentralization, to the benefit and for the stability of t
 
 ## WebAssembly
 
-An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to
+An instruction format for a virtual, stack-based machine.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Runtime Modules are compiled to
 WebAssembly. Also known as Wasm.
 
 ## Weights
@@ -722,3 +790,9 @@ execution. Checkout this section of the Substrate docs covering
 ## Witness
 
 Cryptographic proof statements of data validity.
+
+## Whitelist Pallet
+
+Allows one [Origin ](#origin) to escalate the privilege level of another Origin for a certain
+operation. In terms of OpenGov, it allows the [Fellowship](#fellowship) to authorise a new origin
+(which we will call Whitelisted-Root) to be executed with Root-level privileges.

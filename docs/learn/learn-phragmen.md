@@ -11,10 +11,11 @@ import RPC from "./../../components/RPC-Connection";
 
 ## NPoS Election Algorithms
 
-Since validators are paid almost equally in Polkadot in each era, it is important that the stake
-behind each validator is uniformly spread out. An election algorithm for Nominated Proof of Staking
-(NPoS) on Polkadot will try to optimize three metrics when computing a solution graph of nominators
-and validators:
+Since validators are paid almost equally in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in each era, it is important that the
+stake behind each validator is uniformly spread out. An election algorithm for Nominated Proof of
+Staking (NPoS) on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will try to
+optimize three metrics when computing a solution graph of nominators and validators:
 
 1. Maximize the total amount at stake.
 1. Maximize the stake behind the minimally staked validator.
@@ -53,14 +54,14 @@ also tries to equalize the weights between the validators after each election ro
 #### Off-Chain Phragmén
 
 Given the large set of nominators and validators, Phragmén's method is a difficult optimization
-problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to
-propose the set of winners. The reason for performing this computation off-chain is to keep a
-constant block time of six seconds and prevent long block times at the end of each era, when the
-validator election takes place. 
+problem. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses off-chain workers to
+compute the result off-chain and submit a transaction to propose the set of winners. The reason for
+performing this computation off-chain is to keep a constant block time of six seconds and prevent
+long block times at the end of each era, when the validator election takes place.
 
 :::info Staking Miners
 
-The process of computing the optimal solution for NPoS election can be delegated to 
+The process of computing the optimal solution for NPoS election can be delegated to
 [Staking Miners](learn-staking-miner).
 
 :::
@@ -115,8 +116,8 @@ their paper
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 
-1. Voters submit their ballots, marking which candidates they approve. Ballots will not be
-   modified after submission.
+1. Voters submit their ballots, marking which candidates they approve. Ballots will not be modified
+   after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters
    would have the _least average (mean) cost_ if that candidate wins.
@@ -224,13 +225,15 @@ is `2`, etc.
 
 ### Rationale
 
-While this method works well if all voters have equal weight, this is not the case in Polkadot.
-Elections for both validators and candidates for the Polkadot Council are weighted by the number of
-tokens held by the voters. This makes elections more similar to a corporate shareholder election
-than a traditional political election, where some members have more pull than others. Someone with a
-single token will have much less voting power than someone with 100. Although this may seem
-anti-democratic, in a pseudonymous system, it is trivial for someone with 100 tokens to create 100
-different accounts and spread their wealth to all of their pseudonyms.
+While this method works well if all voters have equal weight, this is not the case in
+{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} Elections for both validators and
+candidates for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Council are
+weighted by the number of tokens held by the voters. This makes elections more similar to a
+corporate shareholder election than a traditional political election, where some members have more
+pull than others. Someone with a single token will have much less voting power than someone
+with 100. Although this may seem anti-democratic, in a pseudonymous system, it is trivial for
+someone with 100 tokens to create 100 different accounts and spread their wealth to all of their
+pseudonyms.
 
 Therefore, not only do we want to allow voters to have their preferences expressed in the result,
 but do so while keeping as equal a distribution of their stake as possible and express the wishes of
@@ -615,13 +618,10 @@ Running the Phragmén algorithm is time-consuming, and often cannot be completed
 limits of production of a single block. Waiting for calculation to complete would jeopardize the
 constant block production time of the network. Therefore, as much computation as possible is moved
 to an off-chain worker, which validators can work on the problem without impacting block production
-time. By restricting the ability of users to make any modifications in the last 25% of an era, and
-running the selection of validators by nominators as an off-chain process, validators have a
-significant amount of time to calculate the new active validator set and allocate the nominators in
-an optimal manner.
+time.
 
-There are several further restrictions put in place to limit the complexity of the election and
-payout. As already mentioned, any given nominator can only select up to
+There are several restrictions put in place to limit the complexity of the election and payout. As
+already mentioned, any given nominator can only select up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 validators to nominate. Conversely, a single validator can have only
@@ -632,13 +632,14 @@ the number of validators is very low, that all available validators may be "over
 unable to accept more nominations. In this case, one may need a larger amount of stake to
 participate in staking, since nominations are priority-ranked in terms of amount of stake.
 
-### Phragmms (fka Balphragmms)
+### Phragmms (aka Balphragmms)
 
 `Phragmms`, formerly known as `Balphragmms`, is a new election rule inspired by Phragmén and
-developed in-house for Polkadot. In general, election rules on blockchains is an active topic of
-research. This is due to the conflicting requirements for election rules and blockchains: elections
-are computationally expensive, but blockchains are computationally limited. Thus, this work
-constitutes state of the art in terms of optimization.
+developed in-house for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In general,
+election rules on blockchains is an active topic of research. This is due to the conflicting
+requirements for election rules and blockchains: elections are computationally expensive, but
+blockchains are computationally limited. Thus, this work constitutes state of the art in terms of
+optimization.
 
 Proportional representation is a very important property for a decentralized network to have in
 order to maintain a sufficient level of decentralization. While this is already provided by the
@@ -647,10 +648,10 @@ security guarantee described below. As far as we can tell, at the time of writin
 Kusama are the only blockchain networks that implement an election rule that guarantees proportional
 representation.
 
-The security of a distributed and decentralized system such as Polkadot is directly related to the
-goal of avoiding _overrepresentation_ of any minority. This is a stark contrast to traditional
-approaches to proportional representation axioms, which typically only seek to avoid
-underrepresentation.
+The security of a distributed and decentralized system such as
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is directly related to the goal of
+avoiding _overrepresentation_ of any minority. This is a stark contrast to traditional approaches to
+proportional representation axioms, which typically only seek to avoid underrepresentation.
 
 #### Maximin Support Objective and PJR
 
@@ -673,10 +674,10 @@ strength deserve to have a number of representatives proportional to the group�
 _Sequential Phragmén_ (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve
 PJR.
 
-Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although
-`seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the
-maximin support problem. This is due to `seqPhramen` only performing an _approximate_ rebalancing of
-the distribution of stake.
+Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} employs the `seqPhragmen`
+method for validator and council elections. Although `seqPhramen` has a very fast runtime, it does
+not provide constant-factor approximation for the maximin support problem. This is due to
+`seqPhramen` only performing an _approximate_ rebalancing of the distribution of stake.
 
 In contrast, `MMS` is another standard greedy algorithm that simultaneously achieves the PJR
 property and provides a constant factor approximation for maximin support, although with a
@@ -705,7 +706,7 @@ solution needs to be tracked at any given time, and a block producer can submit 
 the block only if the block passes the verification test, consisting of checking:
 
 1. Feasibility,
-2. Balancedness, and
+2. Balance and
 3. Local Optimality - The least stake backing of _A_ is higher than the highest score among
    unelected candidates
 
@@ -728,9 +729,10 @@ inserts them with higher support values.
 - Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector _w_ is completely rebalanced after
   each iteration of the algorithm.
 
-The `Phragmms` election rule is currently being implemented on Polkadot. Once completed, it will
-become one of the most sophisticated election rules implemented on a blockchain. For the first time,
-this election rule will provide both fair representation (PJR) and security (constant-factor
+The `Phragmms` election rule is currently being implemented on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. Once completed, it will become one
+of the most sophisticated election rules implemented on a blockchain. For the first time, this
+election rule will provide both fair representation (PJR) and security (constant-factor
 approximation for the maximin support objection) to a blockchain network.
 
 #### Algorithm

@@ -1,9 +1,5 @@
-const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
 const i18n = require("./i18n");
-
-const isBuilding = process.env.BUILDING === "true";
-const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Polkadot Wiki",
@@ -18,12 +14,7 @@ module.exports = {
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
     "https://unpkg.com/aos@next/dist/aos.js",
     {
-      src: "https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js",
-      onload: "addBackToTop()",
-      defer: true,
-    },
-    {
-      src: "https://apisa.web3.foundation/latest.js",
+      src: "https://apisa.polkadot.network/latest.js",
       async: true,
       defer: true,
     },
@@ -105,8 +96,16 @@ module.exports = {
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/maintain-guides-how-to-nominate-polkadot',
-            from: ['/docs/maintain-guides-how-to-unbond']
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
+          },
+          {
+            to: '/docs/learn-system-chains',
+            from: ['/docs/learn-common-goods']
           }
         ],
         createRedirects: function (existingPath) {

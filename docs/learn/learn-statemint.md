@@ -9,11 +9,11 @@ slug: ../../learn-statemint
 import RPC from "./../../components/RPC-Connection";
 
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
-assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Polkadot
-(not to be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is
-a parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED), transfer
-fees, and the deposits for proxy/multisig operations on Statemint are about 1/10th of the values on
-the Relay chain. For example, the Existential Deposit of a Statemint account is
+assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
+be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
+parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED),
+transaction fees, and the deposits for proxy/multisig operations on Statemint are about 1/10th of
+the values on the Relay chain. For example, the Existential Deposit of a Statemint account is
 {{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :polkadot }}
 {{ kusama: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :kusama }}
 when compared to
@@ -54,7 +54,7 @@ account using the teleport functionality. For instructions on teleporting DOT, c
 Assuming you have the required DOT balance on your Statemint account, the following instructions
 should let you successfully create an asset on Statemint
 
-- Access Statemint through [Polkadot-JS UI][].
+- Access Statemint through [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 - Navigate to Network > Assets.
 
 ![Navigate to Assets page](../assets/statemint/Statemint-asset-0.png)
@@ -84,5 +84,3 @@ Network > Assets page on Statemint.
 Checkout
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine),
 for a step by step guide covering how to make a transfer on the Statemine and the risks associated.
-
-[polkadot-js ui]: https://polkadot.js.org/apps/#/explorer

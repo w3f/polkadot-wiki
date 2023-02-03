@@ -50,7 +50,7 @@ scammed, please get in contact via the [Polkadot Support page](https://support.p
   unblock transactions etc.
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of any of our teams.
 - Scammers will take official videos, add "giveaway" text around it so that it looks like the
-  giveaway is supported by Polkadot, Web3 Foundation, Parity, or another well-known entity.
+  giveaway is supported by Polkadot, Kusama, Web3 Foundation, Parity, or another well-known entity.
 - Many scammers will create nearly perfect imitations of sites - always triple-check the URL.
 - People offering to help you stake or get rewards.
 - People responding to questions that you asked publicly in a private chat.
@@ -87,7 +87,7 @@ be found below:
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
 anyone. If you are concerned a wallet could be fake, please check out our official list of supported
-[wallets](../build/build-wallets.md).
+[wallets](./../general/wallets.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 

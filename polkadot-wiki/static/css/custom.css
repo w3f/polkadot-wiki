@@ -81,19 +81,6 @@ h6 {
    General components
    ========================================================================== */
 
-/* Back to top button */
-#back-to-top {
-  left: 16px;
-  bottom: 26px;
-  background-color: #ebedf0;
-  color: #1c1e21;
-  height: 48px;
-  width: 48px;
-}
-
-#back-to-top svg {
-  margin-top: 12px;
-}
 
 /* Sidebar menu button */
 button.menu__button {

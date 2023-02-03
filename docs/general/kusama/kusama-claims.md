@@ -30,7 +30,7 @@ Another option you may consider using is the
 will allow you to take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](../../build/build-wallets.md) for more details. Many of these wallets
+[Polkadot Wiki Wallets page](./../../general/wallets.md) for more details. Many of these wallets
 support generating Kusama accounts as well.
 
 ### Using Kusama Ledger application
@@ -251,12 +251,12 @@ copy and paste the outputted sentence into the input box.
 
 When you click "Sign Message" you will get a JSON output like the below:
 
-![Claim Step 3](../../assets/kusama/claim/claim_3.png)
+![claim_3](../../assets/kusama/claim/claim_3.png)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
 Polkadot-JS UI and click "Confirm Claim."
 
-![Claim Step 3](../../assets/kusama/claim/claim-3.png)
+![claim-3](../../assets/kusama/claim/claim-3.png)
 
 At this point, you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama

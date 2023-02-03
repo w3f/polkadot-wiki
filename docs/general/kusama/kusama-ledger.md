@@ -16,9 +16,9 @@ like Brave and Chrome.
 
 :::
 
-Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
-devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
-device that does not get directly exposed to your computer or the internet.
+Kusama has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger Nano S
+and Ledger Nano X devices. The Ledger devices are hardware wallets that keep your private key
+secured on a physical device that does not get directly exposed to your computer or the internet.
 
 The Kusama application allows you to manage Kusama's native asset, KSM. It supports most of the
 transaction types of the network, including batch transactions from the Utility pallet.
@@ -41,7 +41,8 @@ Here is a list of what you will need before starting:
 - The latest firmware installed.
 - Ledger Live is installed and at version 2.19 or newer (see settings -> about to find out if you're
   up to date).
-- A web browser is installed that you can use to access [Polkadot-JS Apps UI][apps].
+- A web browser is installed that you can use to access
+  [Polkadot-JS Apps UI](https://kusama.dotapps.io).
 
 ## Installing the Ledger Application
 
@@ -64,11 +65,13 @@ application from Ledger Live unless you _know exactly what you're doing_.
 
 :::
 
-Instructions for downloading the pre-release binary from the GitHub releases is written [on the
-README][prerelease instructions] for the Kusama Ledger application GitHub repository.
+Instructions for downloading the pre-release binary from the GitHub releases is written
+[on the README](https://github.com/Zondax/ledger-kusama#download-and-install) for the Kusama Ledger
+application GitHub repository.
 
-On the [releases page][] you can download the shell script `install_app.sh` and then make it
-executable in your shell by typing the command `chmod +x install_app.sh`.
+On the [releases page](https://github.com/Zondax/ledger-kusama/releases) you can download the shell
+script `install_app.sh` and then make it executable in your shell by typing the command
+`chmod +x install_app.sh`.
 
 Using `install_app.sh` help command will show you the available options:
 
@@ -104,13 +107,14 @@ written format, read through this
 [article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
 For importing your account to the UI, read through the instructions below.
 
-[Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
-device will work with the browser interface after installation. The functionality is currently gated
-behind a feature setting that you will need to turn on.
+[Polkadot-JS Apps UI](https://kusama.dotapps.io) already has an integration with the Ledger
+application so that your device will work with the browser interface after installation. The
+functionality is currently gated behind a feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Kusama Ledger application, go to the "Settings"
-tab in [Polkadot-JS Apps UI][apps]. Find the option for attaching Ledger devices and switch the
-option from the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
+tab in [Polkadot-JS Apps UI](https://kusama.dotapps.io). Find the option for attaching Ledger
+devices and switch the option from the default "Do not attach Ledger devices" to "Attach Ledger via
+WebUSB".
 
 ![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](../../assets/ledger.png)
 
@@ -140,8 +144,9 @@ You should now be able to scroll down and find a new account on the page with th
 
 ![Displaying the Ledger account in the list](../../assets/ledger/ledger-balance.png)
 
-You can now use this account to interact with Kusama on [Polkadot-JS Apps UI][apps] and it will
-prompt your ledger for confirmation when you initiate a transaction.
+You can now use this account to interact with Kusama on
+[Polkadot-JS Apps UI](https://kusama.dotapps.io) and it will prompt your ledger for confirmation
+when you initiate a transaction.
 
 ### Confirming the Address on your Device
 
@@ -151,13 +156,14 @@ option to display the address on your device.
 
 ![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](../../assets/ledger-4.png)
 
-Here you can scroll through and make sure the address matches to what is displayed on [Polkadot-JS
-Apps UI][apps].
+Here you can scroll through and make sure the address matches to what is displayed on
+[Polkadot-JS Apps UI](https://kusama.dotapps.io).
 
 ### Checking the Balance of Your Account
 
 There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you
-can use a block explorer like [Polkascan][] or [Subscan][].
+can use a block explorer like [Polkascan](https://polkascan.io/kusama) or
+[Subscan](https://kusama.subscan.io/).
 
 #### Using Polkadot-JS Apps
 
@@ -170,7 +176,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 ### Sending a Transfer
 
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
-method is to use [Polkadot-JS Apps UI][apps].
+method is to use [Polkadot-JS Apps UI](https://kusama.dotapps.io).
 
 - Click on the "Transfer" button in "Accounts" dropdown in the top navigation menu.
 - In the top input, select "Ledger" as your sending account.
@@ -250,7 +256,8 @@ account stored on a Ledger device, as follows:
 
 Despite the Polkadot ledger application being compatible with both the Ledger Nano S and the Ledger
 Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are
-available in the light version. The following [repo by Zondax][] lists the currently supported
+available in the light version. The following
+[repo by Zondax](https://github.com/Zondax/ledger-polkadot#democracy) lists the currently supported
 Democracy extrinsics on the full ledger.
 
 :::
@@ -287,11 +294,3 @@ account.
 ## Support
 
 If you need support, please visit the [Polkadot Support page](https://support.polkadot.network).
-
-[ledger]: https://www.ledger.com/
-[repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy
-[apps]: https://kusama.dotapps.io
-[prerelease instructions]: https://github.com/Zondax/ledger-kusama#download-and-install
-[releases page]: https://github.com/Zondax/ledger-kusama/releases
-[polkascan]: https://polkascan.io/kusama
-[subscan]: https://kusama.subscan.io/

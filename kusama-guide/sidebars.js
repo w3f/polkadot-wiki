@@ -7,6 +7,7 @@ module.exports = {
         "general/kusama/kusama-getting-started",
         "general/kusama/kusama-coc",
         "general/kusama/kusama-claims",
+        "general/wallets",
         "learn/learn-polkadotjs",
         "learn/learn-balance-transfers",
         "learn/learn-auction",
@@ -87,6 +88,7 @@ module.exports = {
               label: "Governance",
               items: [
                 "learn/learn-governance",
+                "learn/learn-opengov",
                 "maintain/maintain-guides-how-to-join-council",
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
@@ -117,7 +119,6 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-wallets",
             "build/build-substrate",
             "build/build-ss58-registry",
           ],

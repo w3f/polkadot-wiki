@@ -35,10 +35,11 @@ Era points create a probabilistic component for staking rewards.
 
 If the _mean_ of staking rewards is the average rewards per era, then the _variance_ is the
 variability from the average staking rewards. The exact DOT value of each era point is not known in
-advance since it depends on the total number of points earned by all validators in a given era. This 
-is designed this way so that the total payout per era depends on Polkadot's 
-[inflation model](../learn/learn-staking-advanced.md#inflation), and not on the number of payable actions 
-(f.e., authoring a new block) executed. For more information, check [this stackexchange post](https://substrate.stackexchange.com/questions/5353/how-are-rewards-in-dot-calculated-from-the-era-points-earned-by-validators-in-po).
+advance since it depends on the total number of points earned by all validators in a given era. This
+is designed this way so that the total payout per era depends on Polkadot's
+[inflation model](../learn/learn-staking-advanced.md#inflation), and not on the number of payable
+actions (f.e., authoring a new block) executed. For more information, check
+[this stackexchange post](https://substrate.stackexchange.com/questions/5353/how-are-rewards-in-dot-calculated-from-the-era-points-earned-by-validators-in-po).
 
 With parachains now on Polkadot, a large percentage of era points will come from parachain
 validation, as a subset of validators are selected to para-validate for all parachains each epoch,
@@ -195,8 +196,8 @@ validator, then you will lose 1 DOT in each case.
 :::caution
 
 If a validator is oversubscribed in an era, staking rewards are distributed only to the the top
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators and the rest of the nominators do not receive any rewards. This is not the case for
 slashing! Every active nominator of the validator committing slashable offence will be slashed.
 
