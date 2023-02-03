@@ -120,6 +120,6 @@ you face any issues, join the rooms individually.
   dives deep into the growth of the whole ecosystem. Made by SubWallet with sections focused on Ecosystem Overview, DeFi, NFT & Web3.
 - [Polkadot Stack](../build/build-open-source.md) - if you're interested in seeing what's under
   development and where there's room for your contributions.
-  - [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
+- [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
   building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
-  unofficial)
+  unofficial).
