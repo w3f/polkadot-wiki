@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
+// Chains that will appear in the dropdown selection menu
 const Networks = [
   { name: "polkadot", rpc: "wss://rpc.polkadot.io" },
   { name: "kusama", rpc: "wss://kusama-rpc.polkadot.io" },
@@ -10,6 +11,9 @@ const Networks = [
   { name: "westend", rpc: "wss://westend-rpc.polkadot.io" },
   { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
+
+// Track all top-level containers for expand/collapse all functionality
+let Expandable = [];
 
 // Component
 function Metadata({ version }) {
@@ -51,6 +55,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Load websocket
   const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
+
+  // Clear any existing expandable containers
+  Expandable = [];
 
   // Fetch metadata from on-chain
   const rawMeta = await api.rpc.state.getMetadata();
@@ -205,6 +212,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         </div>
       </div>
     )
+
+    Expandable.push(pallet.name);
   });
 
   // Runtime
@@ -245,6 +254,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         </div >
       )
       calls.push(formattedCalls);
+      Expandable.push(callName);
     });
   }
 
@@ -259,6 +269,10 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       <br />
       <div id="metadataLoading" style={{ color: "#e6007a", visibility: "hidden" }}><b>Loading Metadata...</b></div>
       {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
+      <div id="buttonControls">
+        <button onClick={() => ExpandAll(true)}>Expand All</button>
+        <button onClick={() => ExpandAll(false)}>Collapse All</button>
+      </div>
       Pallets:
       {palletData}
       <br />
@@ -295,15 +309,24 @@ function ToggleExpand(id) {
   }
 }
 
+function ExpandAll(bool) {
+  Expandable.forEach(item => {
+    const div = document.getElementById(item);
+    const button = document.getElementById(`${item}-button`);
+    if (bool) {
+      div.style.maxHeight = "100%";
+      button.innerText = "-";
+    } else {
+      div.style.maxHeight = "0px";
+      button.innerText = "+";
+    }
+  })
+}
+
 // If any sub-sections (Constants, Errors, Events, Storage) contain no children display "None"
 function IsEmpty(result) {
-  if (result.length === 0) {
-    return (
-      <p>None</p>
-    )
-  } else {
-    return result;
-  }
+  if (result.length === 0) { return (<p>None</p>) }
+  else { return result; }
 }
 
 export default Metadata;
