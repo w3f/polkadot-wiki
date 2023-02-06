@@ -54,7 +54,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   ToggleLoading();
   // Load websocket
   const wsProvider = new WsProvider(wsUrl);
-  const api = await ApiPromise.create({ provider: wsProvider })
+  const api = await ApiPromise.create({ provider: wsProvider });
 
   // Clear any existing expandable containers
   Expandable = [];
@@ -191,8 +191,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
               <li>{`Docs: ${item.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
               <li>{`Return Type: ${Object.keys(storageType)[0]} - ${Object.values(storageType)[0]}`}</li>
-              <li>{`Modifier: ${item.modifier}`}</li>
-              <li>{`Fallback: ${item.fallback}`}</li>
             </ul>
           </li>
         )
@@ -258,6 +256,53 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     });
   }
 
+  // RPC Methods
+  const rpcKeys = Object.keys(api.rpc);
+  rpcKeys.sort((a, b) => a.localeCompare(b));
+  let rpcs = [];
+  rpcKeys.forEach(key => {
+    let methods = [];
+    const rpcMethods = Object.keys(api.rpc[key]);
+    rpcMethods.sort((a, b) => a.localeCompare(b));
+    rpcMethods.forEach(method => {
+      const rpc = api.rpc[key][method].meta;
+      let params = "(";
+      if (rpc.params.length > 0) {
+        rpc.params.forEach(param => {
+          params += `${param.name}: ${param.type}, `
+        })
+        params = `${params.slice(0, -2)})`;
+      }
+      if (params === "(") { params = "None"; }
+      const item = (
+        <div key={`${key}.${method}`}>
+          <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
+          <ul>
+            <li>{`Docs: ${rpc.description}`}</li>
+            <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.rpc.${key}.${method}`}</span></li>
+            <li>{`Return Type: ${rpc.type}`}</li>
+            <li>{`Parameters: ${params}`}</li>
+          </ul>
+        </div>
+      )
+      methods.push(item);
+    })
+    methods = IsEmpty(methods);
+    const header = key.charAt(0).toUpperCase() + key.slice(1);
+    const formattedRPC = (
+      <div key={key}>
+        <span><button id={`${key}-button`} onClick={(e) => { ToggleExpand(key) }}>+</button>&nbsp;<b>{header}</b></span>
+        <div id={key} style={{ maxHeight: "0px", overflow: "hidden" }}>
+          <ul>
+            {methods}
+          </ul>
+        </div>
+      </div >
+    )
+    rpcs.push(formattedRPC);
+    Expandable.push(key);
+  })
+
   ToggleLoading();
 
   // Render
@@ -278,6 +323,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       <br />
       Runtime:
       {calls}
+      <br />
+      RPC:
+      {rpcs}
     </div>
   );
 }
