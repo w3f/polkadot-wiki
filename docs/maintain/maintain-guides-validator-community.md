@@ -58,7 +58,6 @@ additionally to provide this sort of information is ideal.
 
 :::note Ledger app on **Nano S** doesn't support the extrinsic for setting identity yet
 
-
 ### Website
 
 One strategy for helping gain additional visibility is to set up a dedicated site for your

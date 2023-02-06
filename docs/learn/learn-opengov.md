@@ -315,15 +315,15 @@ body delegated by voters to compensate for the fact that many choose to not take
 of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can choose to
 delegate their voting power to another voter in the system. It does so by improving a feature known
 as **Multirole Delegation**, where voters can specify a different delegate for every class of
-referendum in the system. Delegation can be done per track, and accounts can choose to select different
-delegates (or no delegation) for each track.
+referendum in the system. Delegation can be done per track, and accounts can choose to select
+different delegates (or no delegation) for each track.
 
-For example, a voter could delegate one entity for managing a less potent referenda class, choose
-a different delegate for a different class with more powerful consequences and still retain full
+For example, a voter could delegate one entity for managing a less potent referenda class, choose a
+different delegate for a different class with more powerful consequences and still retain full
 voting power over any remaining classes.
 
-Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders to
-use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
+Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
+to use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
 is worth noting that a user delegating their voting power does not imply that the delegate will have
 control over the funds of the delegating account: they can vote with a user's voting power: but they
 won't be able to transfer your balance, nominate a different set of validators or execute any call
