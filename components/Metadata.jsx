@@ -11,6 +11,7 @@ const Networks = [
   { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
+// Component
 function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
 
@@ -44,6 +45,7 @@ function Metadata({ version }) {
   return (returnValue);
 }
 
+// Retrieve metadata from selected chain and render results
 async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   ToggleLoading();
   // Load websocket
@@ -91,6 +93,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         console.log(`Excluding: ${Camel(pallet.name)}.${Camel(constant.name)}`)
       }
     });
+    constants = IsEmpty(constants);
 
     // Pallet Errors
     let errors = [];
@@ -114,6 +117,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         errors.push(item);
       });
     }
+    errors = IsEmpty(errors);
 
     // Pallet Events
     let events = [];
@@ -143,6 +147,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         events.push(item);
       });
     }
+    events = IsEmpty(events);
 
     // Pallet Storage
     let storage = [];
@@ -187,6 +192,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         storage.push(storageItem);
       });
     }
+    storage = IsEmpty(storage);
 
     palletData.push(
       <div key={pallet.name}>
@@ -262,10 +268,12 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   );
 }
 
+// Enforce lower casings of first character on camel case api calls
 function Camel(input) {
   return input.charAt(0).toLowerCase() + input.slice(1);
 }
 
+// Display loading notification
 function ToggleLoading() {
   const el = document.getElementById("metadataLoading");
   if (el !== null) {
@@ -274,6 +282,7 @@ function ToggleLoading() {
   }
 }
 
+// Expand or collapse a div
 function ToggleExpand(id) {
   const div = document.getElementById(id);
   const button = document.getElementById(`${id}-button`);
@@ -283,6 +292,17 @@ function ToggleExpand(id) {
   } else {
     div.style.maxHeight = "0px";
     button.innerText = "+";
+  }
+}
+
+// If any sub-sections (Constants, Errors, Events, Storage) contain no children display "None"
+function IsEmpty(result) {
+  if (result.length === 0) {
+    return (
+      <p>None</p>
+    )
+  } else {
+    return result;
   }
 }
 
