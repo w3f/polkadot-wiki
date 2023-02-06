@@ -53,7 +53,7 @@ Mobile wallets are fully packaged apps that allow all the featured actions, as w
 | Wallet                                        | Platforms                 | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | ------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
 | [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android              | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
-| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
+| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | **Yes**      | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
 | [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | **Yes**         | **Yes**        | No         | [SubWallet features](#subwallet)             |
 
