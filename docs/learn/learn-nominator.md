@@ -34,7 +34,7 @@ If you do not want to bother with nodes, you can still earn
 doing so, you become a nominator for the validator(s) of your choice. Pick your validators
 carefully - if they do not behave properly, they will get slashed and you will lose
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as well. However, if they do follow the rules
-of the network, then you can share staking rewards that they generate.
+of the network, then you can share staking rewards they generate.
 
 While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked by nominating a
 validator, they are 'locked' (bonded). You can receive new
@@ -48,6 +48,41 @@ funds can be transferred after issuing an unbond transaction. This is calculated
 `bonding duration` (in eras), multiplying it by the `length of a single era` (in hours), and
 dividing by the `hours in a day` (24). Example:
 ({{ polkadot: 28 × 24 ÷ 24 = 28 days :polkadot }}{{ kusama: 28 × 6 ÷ 24 = 7 days :kusama }}).
+
+## Setting-up Accounts
+
+If you landed on this page it means that you decided to take a journey to understand how you can be
+a good nominator. Note, this page is not for nomination pool members, although pool members might
+gain some knowledge about how to select nomination pools.
+
+The first thing you need to do is to make sure you have a
+[**stash account** and a **controller account**](./learn-staking.md/#stash-and-controller-accounts-for-staking)
+or a [**staking proxy**](./learn-staking-advanced.md/#staking-proxies) (or both). Note that in the
+near future it is likely that the concept of controller account will be removed as staking proxies
+essentially are used for the same purpose (sign staking-related transaction on behalf of the stash).
+
+Without the controller,
+[the stash account will be able to perform all staking-related transactions](./learn-staking-advanced.md/#stash-is-also-controller).
+This means that the staking proxy of the stash will be able to sign for all staking-related
+transactions as well. The stash will be fully isolated (except if the user decides to change the
+staking proxy, or to attach different proxies to it).
+
+As a nominator you will be asked to chose an account where rewards will be received. You chose
+between:
+
+- back to staking: rewards are compounded to the bonded amount.
+- to stash: rewards are sent to the stash account as free balance.
+- to controller: rewards are sent to the controller account as a free balance.
+- to another account: rewards are sent to a user-defined account (not stash or controller)-
+
+:::info
+
+Being a nominator is made simpler using the
+[**Staking Dashboard**](https://staking.polkadot.network/#/overview) that will guide you step by
+step through creating a stash-controller relationship, specifying rewards destination and nominating
+validators (more on this below).
+
+:::
 
 ### Active vs. Inactive Nomination
 
