@@ -11,7 +11,7 @@ const Networks = [
   { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
-function Metadata({version}) {
+function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
 
   useEffect(async () => {
@@ -57,6 +57,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
   // Set types for currently loaded metadata
   const types = meta.metadata[version].lookup.types;
+  //console.log(api.runtimeMetadata.getUniqTypes(false));
 
   // Pallets
   const pallets = meta.metadata[version].pallets;
@@ -79,8 +80,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <ul>
               <li>{`Docs: ${constant.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
-              <li>Return Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
-              <li>{`Return Type: ${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
+              <li>Chain Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
+              <li>{`Chain Value Type: ${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
             </ul>
           </li>
         )
@@ -134,7 +135,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             {event.name}
             <ul>
               <li>{`Docs: ${event.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span>{params}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
+              <li>{`Fields: ${params}`}</li>
             </ul>
           </li>
         )
@@ -155,6 +157,18 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           storageType = types[item.type[typeKey]].type.def;
         } else if (typeKey === "Map") {
           storageType = types[item.type[typeKey].key].type.def;
+          /*
+          const { hashers, key, value } = item.type.Map;
+          if (hashers.length === 1) {
+            storageType = types[key].type.def;
+          } else {
+            storageType = "";
+            hashers.forEach(hasher => {
+              storageType += `${types[key].type.def}, `;
+            })
+            console.log(`${Camel(storagePrefix)}.${Camel(item.name)}`);
+          }
+          */
         } else {
           console.log("Unknown Storage Type");
         }
