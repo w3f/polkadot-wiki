@@ -88,7 +88,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         const constantType = types[constant.type].type.def;
         const item = (
           <li key={constant.name}>
-            {constant.name}
+            <b>{constant.name}</b>
             <ul>
               <li>{`Description: ${constant.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
@@ -118,7 +118,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         const error = rawError.meta.toHuman();
         const item = (
           <li key={`${pallet.name}.${error.name}`}>
-            {error.name}
+            <b>{error.name}</b>
             <ul>
               <li>{`Description: ${error.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
@@ -148,7 +148,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         if (params === "(") { params = "None"; }
         const item = (
           <li key={`${pallet.name}.${event.name}`}>
-            {event.name}
+            <b>{event.name}</b>
             <ul>
               <li>{`Description: ${event.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
@@ -178,7 +178,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         if (params === "(") { params = "None"; }
         const extrinsicItem = (
           <li key={`api.tx.${Camel(pallet.name)}.${Camel(key)}`}>
-            {key}
+            <b>{key.charAt(0).toUpperCase() + key.slice(1)}</b>
             <ul>
               <li>{`Description: ${meta.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
@@ -223,7 +223,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         }
         const storageItem = (
           <li key={item.name}>
-            {`${storagePrefix}.${item.name}`}
+            <b>{`${item.name}`}</b>
             <ul>
               <li>{`Description: ${item.docs.join(" ")}`}</li>
               <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
