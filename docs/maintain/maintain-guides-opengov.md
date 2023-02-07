@@ -79,12 +79,45 @@ than the min enactment period.
 
 ## Origins and Tracks Info
 
+
+
 <!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
 <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
 
 <!-- When OpenGov moves to Polkadot replace the above content with these condition statements -->
 <!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
 <!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
+
+### Root
+
+### Whitelisted Caller
+
+### Staking Admin
+
+### Treasurer
+
+### Lease Admin
+
+### Fellowship Admin
+
+### General Admin
+
+### Auction Admin
+
+### Referendum Canceller
+
+### Referendum Killer
+
+### Small Tipper
+
+### Big Tipper
+
+### Small Spender
+
+### Medium Spender
+
+### Big Spender
+
 
 ## Create a Referenda Proposal using Polkadot-JS UI
 
