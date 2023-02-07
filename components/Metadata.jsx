@@ -2,6 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
+// Load PolkadotJS version
+import Packages from "./../package.json";
+const PolkadotJSVersion = Packages.dependencies["@polkadot/api"].substring(1);
+
 // Chains that will appear in the dropdown selection menu
 const Networks = [
   { name: "polkadot", rpc: "wss://rpc.polkadot.io" },
@@ -142,6 +146,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           params += `${event.fields[i].typeName}: ${event.args[i]}, `
         }
         params = `${params.slice(0, -2)})`;
+        if (params === "(") { params = "None"; }
         const item = (
           <li key={`${pallet.name}.${event.name}`}>
             {event.name}
@@ -369,7 +374,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     <div>
       {dropdown}
       <br />
-      <b>{`Magic Number: ${block}`}</b>
+      <b>{`@polkadot/api: ${PolkadotJSVersion}`}</b>
       <br />
       <div id="metadataLoading" style={{ color: "#e6007a", visibility: "hidden" }}><b>Loading Metadata...</b></div>
       {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
@@ -432,7 +437,7 @@ function ExpandAll(bool) {
 
 // If any sub-sections (Constants, Errors, Events, Storage) contain no children display "None"
 function IsEmpty(result) {
-  if (result.length === 0) { return (<p>None</p>) }
+  if (result.length === 0) { return (<p stlye={{ margin:"0px"}}>None</p>) }
   else { return result; }
 }
 
