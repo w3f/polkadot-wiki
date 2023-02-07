@@ -56,9 +56,9 @@ Other features are less common and include:
 
 [NFTs fractionalization](https://github.com/paritytech/substrate/pull/12565) will allow the user to:
 
-- Take ownership of an NFT from the pallet-uniques
-- Create a new asset in pallet-assets
-- Mints the input amount to the previous owner of the NFT as the beneficiary
+- Take ownership of an NFT from the [pallet-uniques](#uniques-pallet)
+- Create a new asset in [pallet-assets](https://polkadot.js.org/docs/substrate/extrinsics#assets)
+- Mint the input amount to the previous owner of the NFT as the beneficiary
 
 ## Uniques Pallet
 
