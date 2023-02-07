@@ -17,6 +17,10 @@ developers to easily implement NFT-related actions within their dApp.
 Nfts is a [FRAME pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts) currently deployed
 on Westmint that provides a multitude of functions to interact with NFTs.
 
+The pallet comes with a new way to configure it, as well as configure collections and items.
+Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow to disable
+functionalities that are not needed in the runtime.
+
 There are features that common to the nft world such as:
 
 - Buying an item up for sale.
@@ -26,22 +30,39 @@ There are features that common to the nft world such as:
   of the item). The creation of a collection also involves the specification of the maximum number
   of items the collection has (an this also will drive the value of the collection's items in the
   future).
+
+  [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
+  collections:
+
+  - public mints: everyone can mint an asset (good for soul-bound collections)
+  - external mint: mint for holders of NFTs in another collection
+  - wave minting: mint X number of items that go to collection owners and Y number of items for the
+    public
+  - force mint: minting bypassing mint settings
+  - change max supply until it gets locked: possibility to change the supply for a limited amount of
+    times
+
+- [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
+  permission to other entities (another account, an application, etc.) to update attributes of an
+  NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
+  over time (sort of a rank) with consequent upgrade in membership permissions.
 - A collection is managed by the Issuer, the Admin and the Freezer. Those roles can be changed
-  anytime.
+  anytime, and there will be the option to attach
+  [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
 - Setting metadata for an item or collection (metadata includes all essential information about the
   item or the collection)
 - Setting or re-setting the price of an item.
 - Clearing attributes and metadata of a collection or an item.
 - Changing the owner of an item or a collection.
 - Transferring an item, as well as creating and canceling transfer approvals of a specific item, or
-  an atomic swap.
+  an [atomic swap](https://github.com/paritytech/substrate/pull/12285).
 - Transferring ownership of an item.
 
 :::info
 
-Metadata, attributes and settings of an item or collection can be locked. Also unauthorized and/or
-unprivileged transfers can be prevented by locking mechanism (unprivileged actions can be re-allowed
-anytime).
+Metadata, attributes and settings of an item or collection can be locked. The user can decide what
+to lock. Also unauthorized and/or unprivileged transfers can be prevented by locking mechanism
+(unprivileged actions can be re-allowed anytime).
 
 :::
 
