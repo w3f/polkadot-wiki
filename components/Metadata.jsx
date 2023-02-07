@@ -97,6 +97,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         constants.push(item);
       } else {
         // TODO: These 2 edge-cases have to do w/ Camel casing variants
+        // system.sS58Prefix &  utility.batched_calls_limit
         console.log(`Excluding: ${Camel(pallet.name)}.${Camel(constant.name)}`)
       }
     });
@@ -191,6 +192,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const storagePrefix = pallet.storage.prefix;
       pallet.storage.items.sort((a, b) => a.name.localeCompare(b.name));
       pallet.storage.items.forEach(item => {
+        //const test = api.query[Camel(storagePrefix)][Camel(item.name)];
+        //console.log(test.meta.toHuman());
         const typeKey = Object.keys(item.type)[0];
         let storageType;
         // TODO - this needs improvements to more efficiently unwrap types
