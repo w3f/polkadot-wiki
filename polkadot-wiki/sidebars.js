@@ -5,8 +5,6 @@ module.exports = {
       label: "General",
       items: [
         "general/getting-started",
-        "general/claims",
-        "general/redenomination",
         "general/research",
         "general/ens",
         "general/wallets",
