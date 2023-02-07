@@ -110,6 +110,10 @@ module.exports = {
           {
             to: '/docs/learn-launch',
             from: ['/docs/claims']
+          },
+          {
+            to: '/docs/learn-launch',
+            from: ['/docs/redenomination']
           }
         ],
         createRedirects: function (existingPath) {
