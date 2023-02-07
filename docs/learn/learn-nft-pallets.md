@@ -10,7 +10,7 @@ slug: ../learn-nft-pallets
 NFT [pallets](http://localhost:3000/docs/learn-extrinsics#pallets-and-extrinsics) allow substrate
 developers to easily implement NFT-related actions within their dApp.
 
-## NFTS Pallet
+## NFTs Pallet
 
 ### Current Implementations
 
