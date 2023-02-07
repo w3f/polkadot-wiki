@@ -86,6 +86,66 @@ than the min enactment period.
 <!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
 <!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
 
+### Root
+
+Origin with the highest level of privileges.
+
+### Whitelisted Caller
+
+Origin commanded by the Fellowship.
+
+### Staking Admin
+
+Origin for cancelling slashes.
+
+### Treasurer
+
+Origin for spending any amount of funds from the treasury (up to 333333.33 KSM).
+
+### Lease Admin
+
+Origin able to force slot leases.
+
+### Fellowship Admin
+
+Origin for managing the composition of the fellowship.
+
+### General Admin
+
+Origin for managing the registrar.
+
+### Auction Admin
+
+Origin for starting auctions.
+
+### Referendum Canceller
+
+Origin able to cancel referenda.
+
+### Referendum Killer
+
+Origin able to kill referenda.
+
+### Small Tipper
+
+Origin able to spend up to 8.25 KSM from the treasury at once.
+
+### Big Tipper
+
+Origin able to spend up to 33.33 KSM from the treasury at once.
+
+### Small Spender
+
+Origin able to spend up to 333.33 KSM from the treasury at once.
+
+### Medium Spender
+
+Origin able to spend up to 3333.33 KSM from the treasury at once.
+
+### Big Spender
+
+Origin able to spend up to 33333.33 KSM from the treasury at once.
+
 ## Create a Referenda Proposal using Polkadot-JS UI
 
 ### Submitting a Preimage
