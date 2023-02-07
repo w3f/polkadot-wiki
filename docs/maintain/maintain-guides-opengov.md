@@ -100,7 +100,7 @@ Origin for cancelling slashes.
 
 ### Treasurer
 
-Origin for spending any amount of funds from the treasury.
+Origin for spending any amount of funds from the treasury (up to 333333.33 KSM).
 
 ### Lease Admin
 
@@ -128,23 +128,23 @@ Origin able to kill referenda.
 
 ### Small Tipper
 
-Origin able to spend up to 1 KSM from the treasury at once.
+Origin able to spend up to 8.25 KSM from the treasury at once.
 
 ### Big Tipper
 
-Origin able to spend up to 5 KSM from the treasury at once.
+Origin able to spend up to 33.33 KSM from the treasury at once.
 
 ### Small Spender
 
-Origin able to spend up to 50 KSM from the treasury at once.
+Origin able to spend up to 333.33 KSM from the treasury at once.
 
 ### Medium Spender
 
-Origin able to spend up to 500 KSM from the treasury at once.
+Origin able to spend up to 3333.33 KSM from the treasury at once.
 
 ### Big Spender
 
-Origin able to spend up to 5000 KSM from the treasury at once.
+Origin able to spend up to 33333.33 KSM from the treasury at once.
 
 ## Create a Referenda Proposal using Polkadot-JS UI
 
