@@ -21,7 +21,7 @@ The pallet comes with a new way to configure NFTs, as well as configure collecti
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling
 functionalities that are not needed in the runtime.
 
-There are features that common to the nft world such as:
+Some features are common to the NFT world, such as:
 
 - Buying an item up for sale.
 - Creating (i.e. mint) and burn (i.e. destroy) a collection of items or a single item (burning must
