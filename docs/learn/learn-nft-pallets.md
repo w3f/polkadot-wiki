@@ -7,15 +7,15 @@ keywords: [NFT, non-fungible token, NFT 2.0, nfts, NFT pallets]
 slug: ../learn-nft-pallets
 ---
 
-NFT [pallets](learn-extrinsics.md#pallets-and-extrinsics) allow
-developers to easily implement NFT-related actions within their dApp.
+NFT [pallets](learn-extrinsics.md#pallets-and-extrinsics) allow developers to easily implement
+NFT-related actions within their dApp.
 
 ## NFTs Pallet
 
 ### Current Implementations
 
 NFTs is a [FRAME pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts) currently deployed
-on Westmint which provides a multitude of functions to interact with NFTs.
+on Westmint, which provides a multitude of functions to interact with NFTs.
 
 The pallet comes with a new way to configure NFTs, as well as configure collections and items.
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling
@@ -24,9 +24,10 @@ functionalities that are not needed in the runtime.
 Some features are common to the NFT world, such as:
 
 - Buying an item up for sale.
-- Creating (i.e., mint) and burning (i.e., destroy) a collection of items or a single item (burning must
-  be signed either by the admin of the collection or the owner). Creating an item usually
-    involves setting some attributes specific to that item. Creating a collection also requires the specification of the maximum number of items.
+- Creating (i.e., mint) and burning (i.e., destroy) a collection of items or a single item (burning
+  must be signed either by the admin of the collection or the owner). Creating an item usually
+  involves setting some attributes specific to that item. Creating a collection also requires the
+  specification of the maximum number of items.
 
   [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
   collections:
@@ -42,7 +43,7 @@ Some features are common to the NFT world, such as:
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
   NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
-  over time (sort of a rank) with consequent upgrade in membership permissions.
+  over time (sort of a rank) with a consequent upgrade in membership permissions.
 - A collection is managed by the Issuer, the Admin and the Freezer. Those roles can be changed
   anytime, and there will be the option to attach
   [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
@@ -57,17 +58,17 @@ Some features are common to the NFT world, such as:
 
 :::info
 
-Metadata, attributes and settings of an item or collection can be locked. The user can decide what
-to lock. Also unauthorized and/or unprivileged transfers can be prevented by locking mechanism
+Metadata, attributes, and settings of an item or collection can be locked. The user can decide what
+to lock. Also, unauthorized and/or unprivileged transfers can be prevented by locking mechanism
 (unprivileged actions can be re-allowed anytime).
 
 :::
 
 Other features are less common and include:
 
-- Delegating accounts: delegated accounts can approve changes to an item's attributes, and can
-  transfer an item. The owner of the item has always control and can decide to cancel approvals from
-  a delegated account.
+- Delegating accounts: delegated accounts can approve changes to an item's attributes and transfer
+  an item. The item owner always has control and can decide to cancel approvals from a delegated
+  account.
 - One can also execute pending atomic swaps created by a counterpart.
 
 ### Work in Progress
