@@ -10,7 +10,9 @@ slug: ../learn-nft-pallets
 NFT [pallets](http://localhost:3000/docs/learn-extrinsics#pallets-and-extrinsics) allow substrate
 developers to easily implement NFT-related actions within their dApp.
 
-### NFTS Pallet
+## NFTS Pallet
+
+### Current Implementations
 
 Nfts is a [FRAME pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts) currently deployed
 on Westmint that provides a multitude of functions to interact with NFTs.
@@ -50,7 +52,15 @@ Other features are less common and include:
   a delegated account.
 - One can also execute pending atomic swaps created by a counterpart.
 
-### Uniques
+### Work in Progress
+
+NFTs fractionalization will allow the user to:
+
+- Take ownership of an NFT from the pallet-uniques
+- Create a new asset in pallet-assets
+- Mints the input amount to the previous owner of the NFT as the beneficiary
+
+## Uniques Pallet
 
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
 deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
