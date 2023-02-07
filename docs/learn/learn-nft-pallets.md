@@ -24,12 +24,9 @@ functionalities that are not needed in the runtime.
 Some features are common to the NFT world, such as:
 
 - Buying an item up for sale.
-- Creating (i.e. mint) and burn (i.e. destroy) a collection of items or a single item (burning must
-  be signed either by the admin of the collection or the owner). The creation of an item usually
-  involves setting some attributes specific to that item (an this is actually what drives the value
-  of the item). The creation of a collection also involves the specification of the maximum number
-  of items the collection has (an this also will drive the value of the collection's items in the
-  future).
+- Creating (i.e., mint) and burning (i.e., destroy) a collection of items or a single item (burning must
+  be signed either by the admin of the collection or the owner). Creating an item usually
+    involves setting some attributes specific to that item. Creating a collection also requires the specification of the maximum number of items.
 
   [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
   collections:
