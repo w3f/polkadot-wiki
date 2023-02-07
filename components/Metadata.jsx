@@ -156,6 +156,35 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     }
     events = IsEmpty(events);
 
+    // Extrinsics
+    let extrinsics = [];
+    const palletExtrinsics = api.tx[Camel(pallet.name)];
+    if (palletExtrinsics !== undefined) {
+      const keys = Object.keys(palletExtrinsics);
+      keys.forEach(key => {
+        const meta = api.tx[Camel(pallet.name)][Camel(key)].meta.toHuman();
+        let params = "(";
+        if (meta.args.length > 0) {
+          meta.args.forEach(param => {
+            params += `${param.name}: ${param.type}, `
+          })
+          params = `${params.slice(0, -2)})`;
+        }
+        if (params === "(") { params = "None"; }
+        const extrinsicItem = (
+          <li key={`api.tx.${Camel(pallet.name)}.${Camel(key)}`}>
+            {key}
+            <ul>
+              <li>{`Docs: ${meta.docs.join(" ")}`}</li>
+              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li>{`Parameters: ${params}`}</li>
+            </ul>
+          </li>
+        )
+        extrinsics.push(extrinsicItem);
+      })
+    }
+
     // Pallet Storage
     let storage = [];
     if (pallet.storage !== null && pallet.storage.hasOwnProperty("items")) {
@@ -203,10 +232,11 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       <div key={pallet.name}>
         <span><button id={`${pallet.name}-button`} onClick={(e) => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
         <div id={pallet.name} style={{ maxHeight: "0px", overflow: "hidden" }}>
-          <ul><b>Constants:</b> <ul>{constants}</ul> </ul>
-          <ul><b>Errors:</b> <ul>{errors}</ul> </ul>
-          <ul><b>Events:</b> <ul>{events}</ul> </ul>
-          <ul><b>Storage:</b> <ul>{storage}</ul> </ul>
+          <ul> <b>Constants:</b> <ul>{constants}</ul> </ul>
+          <ul> <b>Errors:</b> <ul>{errors}</ul> </ul>
+          <ul> <b>Events:</b> <ul>{events}</ul> </ul>
+          <ul> <b>Extrinsics</b> <ul>{extrinsics}</ul> </ul>
+          <ul> <b>Storage:</b> <ul>{storage}</ul> </ul>
         </div>
       </div>
     )
@@ -321,11 +351,11 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       Pallets:
       {palletData}
       <br />
-      Runtime:
-      {calls}
-      <br />
       RPC:
       {rpcs}
+      <br />
+      Runtime:
+      {calls}
     </div>
   );
 }
