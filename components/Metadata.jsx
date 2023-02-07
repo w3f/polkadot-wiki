@@ -233,18 +233,44 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
     palletData.push(
       <div key={pallet.name}>
-        <span><button id={`${pallet.name}-button`} onClick={(e) => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
+        <span><button id={`${pallet.name}-button`} onClick={() => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
         <div id={pallet.name} style={{ maxHeight: "0px", overflow: "hidden" }}>
-          <ul> <b>Constants:</b> <ul>{constants}</ul> </ul>
-          <ul> <b>Errors:</b> <ul>{errors}</ul> </ul>
-          <ul> <b>Events:</b> <ul>{events}</ul> </ul>
-          <ul> <b>Extrinsics</b> <ul>{extrinsics}</ul> </ul>
-          <ul> <b>Storage:</b> <ul>{storage}</ul> </ul>
+          <ul>
+            <span><button id={`${pallet.name}-constants-button`} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</button>&nbsp;<b>Constants:</b></span>
+            <div id={`${pallet.name}-constants`} style={{ maxHeight: "0px", overflow: "hidden" }}>
+              <ul>{constants}</ul>
+            </div>
+          </ul>
+          <ul>
+            <span><button id={`${pallet.name}-errors-button`} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</button>&nbsp;<b>Errors:</b></span>
+            <div id={`${pallet.name}-errors`} style={{ maxHeight: "0px", overflow: "hidden" }}>
+              <ul>{errors}</ul>
+            </div>
+          </ul>
+          <ul>
+            <span><button id={`${pallet.name}-events-button`} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</button>&nbsp;<b>Events:</b></span>
+            <div id={`${pallet.name}-events`} style={{ maxHeight: "0px", overflow: "hidden" }}>
+              <ul>{events}</ul>
+            </div>
+          </ul>
+          <ul>
+            <span><button id={`${pallet.name}-extrinsics-button`} onClick={() => { ToggleExpand(`${pallet.name}-extrinsics`) }}>+</button>&nbsp;<b>Extrinsics:</b></span>
+            <div id={`${pallet.name}-extrinsics`} style={{ maxHeight: "0px", overflow: "hidden" }}>
+              <ul>{extrinsics}</ul>
+            </div>
+          </ul>
+          <ul>
+            <span><button id={`${pallet.name}-storage-button`} onClick={() => { ToggleExpand(`${pallet.name}-storage`) }}>+</button>&nbsp;<b>Storage:</b></span>
+            <div id={`${pallet.name}-storage`} style={{ maxHeight: "0px", overflow: "hidden" }}>
+              <ul>{storage}</ul>
+            </div>
+          </ul>
         </div>
       </div>
     )
 
     Expandable.push(pallet.name);
+    Expandable.push(`${pallet.name}-constants`, `${pallet.name}-errors`, `${pallet.name}-events`, `${pallet.name}-extrinsics`, `${pallet.name}-storage`);
   });
 
   // Runtime
@@ -351,13 +377,13 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         <button onClick={() => ExpandAll(true)}>Expand All</button>
         <button onClick={() => ExpandAll(false)}>Collapse All</button>
       </div>
-      Pallets:
+      <b>Pallets:</b>
       {palletData}
       <br />
-      RPC:
+      <b>RPC:</b>
       {rpcs}
       <br />
-      Runtime:
+      <b>Runtime:</b>
       {calls}
     </div>
   );
