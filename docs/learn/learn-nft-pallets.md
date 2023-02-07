@@ -54,7 +54,7 @@ Other features are less common and include:
 
 ### Work in Progress
 
-NFTs fractionalization will allow the user to:
+[NFTs fractionalization](https://github.com/paritytech/substrate/pull/12565) will allow the user to:
 
 - Take ownership of an NFT from the pallet-uniques
 - Create a new asset in pallet-assets
