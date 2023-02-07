@@ -90,34 +90,63 @@ than the min enactment period.
 
 ### Root
 
+Origin with the highest level of privileges.
+
 ### Whitelisted Caller
+
+Origin commanded by the Fellowship.
 
 ### Staking Admin
 
+Origin for cancelling slashes.
+
 ### Treasurer
+
+Origin for spending any amount of funds from the treasury.
 
 ### Lease Admin
 
+Origin able to force slot leases.
+
 ### Fellowship Admin
+
+Origin for managing the composition of the fellowship.
 
 ### General Admin
 
+Origin for managing the registrar.
+
 ### Auction Admin
+
+Origin for starting auctions.
 
 ### Referendum Canceller
 
+Origin able to cancel referenda.
+
 ### Referendum Killer
+
+Origin able to kill referenda.
 
 ### Small Tipper
 
+Origin able to spend up to 1 KSM from the treasury at once.
+
 ### Big Tipper
+
+Origin able to spend up to 5 KSM from the treasury at once.
 
 ### Small Spender
 
+Origin able to spend up to 50 KSM from the treasury at once.
+
 ### Medium Spender
+
+Origin able to spend up to 500 KSM from the treasury at once.
 
 ### Big Spender
 
+Origin able to spend up to 5000 KSM from the treasury at once.
 
 ## Create a Referenda Proposal using Polkadot-JS UI
 
