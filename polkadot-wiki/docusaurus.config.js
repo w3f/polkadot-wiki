@@ -114,6 +114,10 @@ module.exports = {
           {
             to: '/docs/learn-redenomination',
             from: ['/docs/redenomination']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
           }
         ],
         createRedirects: function (existingPath) {

@@ -68,11 +68,11 @@ network, it can be inferred that the staking system on
 stake. Only the nominator accounts which back the validators in the active set are eligible for
 receiving staking rewards. This leaves out nomination intents from the accounts with lower token
 balance than the min-active nomination and places them in a waiting queue to enter electing set.
-Nomination pools will be handy to the members who would like to participate in the staking system
-with a stake much lower than the dynamic min-active nomination threshold on the network. All
-operations are constant space and time complexity relative to the number of members, eliminating any
-theoretical upper bound on the quantity of members the system can handle and thus scaling the number
-of accounts that can participate and earn rewards in the staking system on
+Nomination pools will be handy for members who want to participate in the staking system with a
+stake much lower than the dynamic min-active nomination threshold on the network. All operations are
+constant space and time complexity relative to the number of members, eliminating any theoretical
+upper bound on the number of members the system can handle and thus scaling the number of accounts
+that can participate and earn rewards in the staking system on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In summary, each nomination pool is
 viewed as a single nominator from the NPoS system point of view.
 
@@ -81,14 +81,14 @@ viewed as a single nominator from the NPoS system point of view.
 The term `delegator` is associated too much with Delegated Proof of Staking (DPoS) and since
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements Nominated Proof of Staking
 (NPoS), naming them as delegators would be misleading. The term `member` is our generic replacement
-for `delegator`. In action, members are actually quite similar to delegators and do delegate their
-nomination power to the pool.
+for `delegator`. In action, members are quite similar to delegators and do delegate their nomination
+power to the pool.
 
 :::
 
-The earnings of the pool are split pro rata to a member's stake in the bonded pool (and thus the
-staking rewards for members will be the same as if they were a nominator). Importantly, slashes are
-also applied proportionally to members who may have been actively bonded.
+The pool’s earnings are split pro rata to a member's stake in the bonded pool (and thus, the staking
+rewards for members will be the same as if they were a nominator). Importantly, slashes are also
+applied proportionally to members who may have been actively bonded.
 
 ## Key Components
 
@@ -107,7 +107,7 @@ also applied proportionally to members who may have been actively bonded.
 
 A member delegates funds to a pool by transferring some amount to the pool’s bonded account with the
 `join` extrinsic. The pool then increases its bond with the new funds. A member is afforded the
-ability to bond additional funds, or re-stake rewards as long as they are already actively bonded.
+ability to bond additional funds or re-stake rewards as long as they are already actively bonded.
 Note that a member may only belong to one pool at a time.
 
 **The current minimum bond to join a pool on**
@@ -126,9 +126,9 @@ pool's internal logic can access the account.
 
 :::tip Use Non-Transfer Proxy Accounts to join Nomination Pools
 
-Currently, only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to
-participate in nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used as
-they are not enabled to make calls to the nomination pools pallet.
+Only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to participate in
+nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used as they cannot
+make calls to the nomination pools pallet.
 
 :::
 
@@ -174,8 +174,8 @@ balance.
 
 - A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This
   may be changed in the future once accounts are afforded the ability to split votes.
-- In order for a member to switch pools all funds from the account must be unbonded. This process
-  takes 28 eras.
+- For a member to switch pools, all funds from the account must be unbonded. This process takes 28
+  eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
 ## Pool Administration
@@ -184,8 +184,8 @@ balance.
 
 - Open: The pool is open to be joined by anyone.
 - Blocked: The pool is blocked; no joiners are permitted.
-- Destroying: The pool is in the process of being destroyed. Once in this state the pool may never
-  revert to any other state; it can only proceed to being destroyed. All members can be
+- Destroying: The pool is in the process of being destroyed. Once in this state, the pool may never
+  revert to any other state; it can only proceed to be destroyed. All members can be
   permissionlessly unbonded; this allows the pool to be dismantled regardless of any individual
   member’s proactivity.
 
@@ -205,10 +205,10 @@ balance.
 ### Creation
 
 The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
-funds to the pool in order to add themselves as the first member. As stated above, the depositor
-must always be a member as long as the pool exists; they will be the last member to leave, ensuring
-they always have some skin in the game. Significant stake from the depositor is always a good
-indicator for the pool's credibility.
+funds to the pool to add themselves as the first member. As stated above, the depositor must always
+be a member as long as the pool exists; they will be the last member to leave, ensuring they always
+have some skin in the game. A significant stake from the depositor is always a good indicator of the
+pool's credibility.
 
 **The current minimum bond to create a pool on**
 {{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
@@ -234,8 +234,8 @@ default. If any of these roles need to be assigned to a different account, creat
 ### Upkeep
 
 The `nominator` can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
-Network > Staking > Accounts page and click on Pooled button.If you have any pooled accounts with
-the role of `nominator`, you would notice the option to set nominees. Select the validators to
+Network > Staking > Accounts page and click on Pooled button. If you have any pooled accounts with
+the role of `nominator`, you will notice the option to set nominees. Select the validators to
 nominate like you would normally using a nominator account.
 
 ![Nominate validators](../assets/staking/Nomination-Pools-5.png)
@@ -250,26 +250,71 @@ A pool can be pushed into the “destroying” state via one of:
 
 - The state-toggler sets the pool to “destroying”.
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
-  been slashed. Dismantling a destroying pool
+  been slashed.
 - When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
   anyone can help all the members exit.
 - Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
-  wiped from state.
+  wiped from the state.
 
 ## Nomination Pools - Slashing
 
-If a pool’s underlying nomination account is slashed by the staking system, then the slash is
-distributed evenly across the bonded pool and the unbonding pools from slash era+1 through the slash
-apply era. Thus, any member who either a) was unbonding or b) was actively bonded in the
+Suppose the staking system slashes a pool’s underlying nomination account. In that case, the slash
+is distributed evenly across the bonded pool, and the unbonding pools from slash era+1 through the
+slash apply era. Thus, any member who either a) was unbonding or b) was actively bonded in the
 aforementioned range of eras will be affected by the slash. In other words, a member who may have
 been actively bonded during the offence is slashed pro rata based on its stake relative to the total
 slash amount.
 
 Unbonding pools need to be slashed to ensure all nominators who were in the bonded pool while it was
-backing a validator that committed an offence are punished. Without these measures a nominator could
+backing a validator that committed an offense are punished. Without these measures a nominator could
 unbond right after a validator equivocated with no consequences.
 
-This strategy is unfair to members who joined after the slash, because they get slashed as well, but
-spares members who unbond. The latter is much more important for security: if a pool's validators
-are attacking the network, their members need to unbond fast! Avoiding additional slashes gives them
-an incentive to do that if validators get repeatedly slashed.
+This strategy is unfair to members who joined after the slash because they get slashed as well but
+it spares members who unbond. The latter is much more important for security: if a pool's validators
+attack the network, their members need to unbond fast! Avoiding additional slashes gives them an
+incentive to do that if validators get repeatedly slashed.
+
+## Nominating vs Joining a Pool
+
+Nominating is the action of choosing validators. It does not simply involve bonding tokens.
+Nominating is an active task, which implies that you regularly monitor that your stake is backing an
+active validator in all the eras and check if you are receiving your staking rewards. More
+importantly, ensure that the validators you chose always act in the best interests of the network
+protocol and have less chance of getting slashed. To nominate, you need a minimum of
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
+and to receive rewards, you need at least a balance greater than the minimum active bond. Depending
+on your validators, if your active validator is oversubscribed, you will earn rewards only if your
+stake is within that of the top
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
+nominators. If the validator misbehaves, It is worth noting that your stake is subject to slashing,
+irrespective of whether you are in the top
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
+nominators or not.
+
+As the minimum active bond is a dynamic value, it can make your nomination inactive when the
+threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
+you would need to stake a much higher balance than the minimum active bond.
+
+Nomination pools are a way to participate in staking with as little as 1 DOT and earn staking
+rewards. Nomination pools differ from custodial solutions (like staking through central exchanges)
+because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run
+in a decentralized way by the community. Before joining a nomination pool, you must ensure that the
+pool is earning rewards and nominating the validators that match your preferences. Participating in
+pools is more of a set-and-forget action than nominating by yourself. The pool operator maintains
+the list of validators nominated by the pool, and so, in a way, you are trusting the pool operator
+to act in your best interests. However, it is advised to check the validators nominated by the pool
+from time to time and change the pool if necessary.
+
+|                                                                                                                                 Nominating                                                                                                                                  |                                                                                                    Joining a Pool                                                                                                     |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                        Minimum 100 DOT to nominate.                                                                                                                         |                                                                                             Minimum 1 DOT to be a member.                                                                                             |
+|                                                                                                       Rewards can be compounded automatically or sent to any account.                                                                                                       |                                                    Rewards can be manually claimed to the pool member's account and be bonded in the pool again to compound them.                                                     |
+|                                                      If the active validator gets slashed, all active nominators are subjected to slashing, also those that do not receive rewards due to the oversubscription issue.                                                       |                                                                   If the active validator gets slashed, all pool members are subjected to slashing.                                                                   |
+|                                                                                                                    Can bond and stake DOT indefinitely.                                                                                                                     |                                                                                     Can bond and stake DOT until the pool exists.                                                                                     |
+|                                                                                                    Unbonding period of 28 days. Can switch validators without unbonding.                                                                                                    |                                                                   Unbonding period of 28 days. Need to unbond before switching to a different pool.                                                                   |
+|                                                                                                                              Maximum uncapped.                                                                                                                              |                                                                                                   Maximum uncapped.                                                                                                   |
+| Should bond more than the [minimum active nomination](../learn/learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards) in an era to be eligible to earn staking rewards, although it can depend on multiple other factors outlined in the linked document. | A nomination pool earns rewards in an era if it satisfies all the conditions mentioned for the nominator (as the nomination pool is just a nominator from [the NPoS system](../learn/learn-phragmen.md) perspective). |
+|                                                                                                         Staked tokens can be used for participation in Governance.                                                                                                          |                                                                             Staked tokens cannot be used for participation in Governance.                                                                             |
+|                                                            [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).                                                             |                                                                                      Rewards must be claimed by the pool member.                                                                                      |
+|                                                                                                                    Bonded funds remain in your account.                                                                                                                     |                                          Bonded funds are transferred to a pool account which is administered by the network protocol and is not accessible to anyone else.                                           |
+|                                                                                                         Nominator manages the list of staked validators (up to 16).                                                                                                         |                                                                                       Nominations managed by the pool operator.                                                                                       |

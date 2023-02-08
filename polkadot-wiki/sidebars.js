@@ -6,7 +6,6 @@ module.exports = {
       items: [
         "general/getting-started",
         "general/research",
-        "general/ens",
         "general/wallets",
         "general/ledger",
         {
