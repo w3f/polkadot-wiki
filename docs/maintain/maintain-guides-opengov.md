@@ -88,43 +88,54 @@ than the min enactment period.
 
 ### Root
 
-Origin with the highest level of privileges.
+The origin with the highest level of privileges. This track requires extremely high levels of
+approval and support for early passing. The prepare and enactment periods are also large.
 
 ### Whitelisted Caller
 
-Origin commanded by the Fellowship.
+Origin commanded by the [Fellowship](../learn/learn-opengov.md#fellowship) whitelist some hash of a
+call and allow the call to be dispatched with the root origin (after the referendum passes). This
+track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent
+process for time-critical proposals.
 
 ### Staking Admin
 
-Origin for cancelling slashes.
+The origin for canceling slashes. This origin has the privilege to execute calls from the staking
+pallet and the Election Provider Multiphase Pallet.
 
 ### Treasurer
 
-Origin for spending any amount of funds from the treasury (up to 333333.33 KSM).
+The origin for spending funds from the treasury (up to 333333.33 KSM). This origin has the privilege
+to execute calls from the Treasury pallet.
 
 ### Lease Admin
 
-Origin able to force slot leases.
+Origin can force slot leases. This origin has the privilege to execute calls from the Slots pallet.
 
 ### Fellowship Admin
 
-Origin for managing the composition of the fellowship.
+The origin for managing the composition of the fellowship.
 
 ### General Admin
 
-Origin for managing the registrar.
+The origin for managing the registrar. This origin has the privilege of executing calls from the
+Identity pallet.
 
 ### Auction Admin
 
-Origin for starting auctions.
+The origin for starting auctions. This origin can execute calls from the Auctions pallet and the
+Scheduler Pallet.
 
 ### Referendum Canceller
 
-Origin able to cancel referenda.
+The origin can cancel referenda. This track has a low lead time and approval/support curves with
+slightly sharper reductions in their thresholds for passing.
 
 ### Referendum Killer
 
-Origin able to kill referenda.
+The origin can cancel an ongoing referendum and slash the deposits. This track also has a low
+lead-time and approval/support curves with slightly sharper reductions in their thresholds for
+passing.
 
 ### Small Tipper
 
