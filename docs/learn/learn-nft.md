@@ -211,10 +211,10 @@ These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.x
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
 be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
-parachain on Kusama). Statemint currently hosts [Uniques pallet](learn-nft-pallets.md#uniques)) and
-its functionalities. The [NFTs pallet](learn-nft-pallets.md#nfts-pallet)) with NFT 2.0
-functionalities is available for testing on Westmint, which is a system parachain on Polkadot's
-testnet Westmint.
+parachain on Kusama). Statemint currently hosts
+[Uniques pallet](./learn-nft-pallets.md/#uniques-pallet) and its functionalities. The
+[NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities is available for
+testing on Westmint, which is a system parachain on Polkadot's testnet Westmint.
 
 ---
 
