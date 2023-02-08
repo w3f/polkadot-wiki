@@ -11,7 +11,7 @@ The Polkadot network has a phased roll-out plan, with important milestones towar
 marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the
 [roadmap](https://polkadot.network/launch-roadmap/)
 
-**Current Phase: Parachain Rollout**
+**Current Phase: Post-launch Upgrades**
 
 :::info Claims
 
