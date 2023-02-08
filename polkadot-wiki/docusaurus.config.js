@@ -112,7 +112,7 @@ module.exports = {
             from: ['/docs/claims']
           },
           {
-            to: '/docs/learn-launch',
+            to: '/docs/learn-redenomination',
             from: ['/docs/redenomination']
           }
         ],
