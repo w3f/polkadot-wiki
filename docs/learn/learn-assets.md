@@ -161,5 +161,6 @@ does not have a smart contract interface, it contains the
 management needs.
 
 For example, if a team wants sign-off from two groups to perform a privileged operation, it could
-create a 2-of-2 multisig from two anonymous proxies, and then set members from each group as proxies
-to those two accounts.
+create a 2-of-2 [**multisig**](./learn-account-multisig.md) from two
+[**pure proxies**](./learn-proxies.md/#anonymous-proxy-pure-proxy), and then set members from each
+group as proxies to those two accounts.
