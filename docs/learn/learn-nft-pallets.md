@@ -32,8 +32,8 @@ Some features are common to the NFT world, such as:
   [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
   collections:
 
-  - public mints: everyone can mint an asset (good for soul-bound collections)
-  - external mint: mint for holders of NFTs in another collection
+  - public mints: everyone can mint an asset in your collection (good for soul-bound collections)
+  - external mint: only holders of NFTs in another collection can mint in your collection
   - wave minting: mint X number of items that go to collection owners and Y number of items for the
     public
   - force mint: minting bypassing mint settings
