@@ -8,7 +8,6 @@ module.exports = {
         "general/claims",
         "general/redenomination",
         "general/research",
-        "general/ens",
         "general/wallets",
         "general/ledger",
         {
