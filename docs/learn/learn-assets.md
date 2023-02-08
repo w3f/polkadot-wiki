@@ -62,17 +62,14 @@ creator must also specify a minimum balance, preventing accounts from having dus
 An asset class has several privileged roles. The creator of the asset automatically takes on all
 privileged roles, but can reassign them after creation. These roles are:
 
-- Owner
-- Issuer
-- Admin
-- Freezer
+- The **owner** can set the accounts responsible for the other three roles and set asset metadata
+  (e.g. name, symbol, decimals).
+- The **issuer** can mint and burn tokens to/from their chosen addresses.
+- The **admin** can make force transfers as well as unfreeze accounts of the asset class.
+- The **freezer** can freeze assets on target addresses or the entire asset class.
 
-The owner can set the accounts responsible for the other three roles and set asset metadata (e.g.
-name, symbol, decimals). The issuer can mint and burn tokens to/from their chosen addresses. The
-freezer can freeze assets on target addresses or the entire asset class. The admin can make force
-transfers as well as unfreeze accounts of the asset class. **Always refer to the
-[reference documentation](https://crates.parity.io/pallet_assets/index.html) for certainty on
-privileged roles.**
+Always refer to the [**reference documentation**](https://crates.parity.io/pallet_assets/index.html)
+for certainty on privileged roles.
 
 An asset's details contain one field not accessible to its owner or admin team, asset sufficiency.
 Only the network's governance mechanism can deem an asset as _sufficient_. A balance of a
