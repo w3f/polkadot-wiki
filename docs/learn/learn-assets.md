@@ -38,16 +38,7 @@ between itself and the Relay Chain. That is,
 See the [Advanced](#advanced-techniques) section at the bottom for discussion on using proxy and
 multisig accounts to replicate oft used contract logic.
 
-## Fungible Assets
-
-Fungible assets are those that are interchangeable, i.e. one unit is equivalent to any other unit to
-claim the underlying item. {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }}
-represents fungible assets in the Assets pallet. This pallet presents a similar interface for those
-familiar with the ERC20 standard. However, the logic is encoded directly in the chain's runtime. As
-such, operations are not gas-metered but benchmarked upon every release, leading to efficient
-execution and stable transaction fees.
-
-### Creation and Management
+## Creation and Management
 
 Anyone on the network can create assets on
 {{ polkadot: Statemint, :polkadot }}{{ kusama: Statemine, :kusama }} as long as they can reserve the
@@ -89,6 +80,15 @@ When using Polkadot-JS UI, transaction fee needs to be paid in
 {{ polkadot:  DOT :polkadot }}{{ kusama: KSM :kusama }}.
 
 :::
+
+## Fungible Assets
+
+Fungible assets are those that are interchangeable, i.e. one unit is equivalent to any other unit to
+claim the underlying item. {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }}
+represents fungible assets in the Assets pallet. This pallet presents a similar interface for those
+familiar with the ERC20 standard. However, the logic is encoded directly in the chain's runtime. As
+such, operations are not gas-metered but benchmarked upon every release, leading to efficient
+execution and stable transaction fees.
 
 ### Transferring Asset Balances
 
