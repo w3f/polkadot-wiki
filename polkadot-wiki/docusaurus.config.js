@@ -108,6 +108,14 @@ module.exports = {
             from: ['/docs/learn-common-goods']
           },
           {
+            to: '/docs/learn-launch',
+            from: ['/docs/claims']
+          },
+          {
+            to: '/docs/learn-redenomination',
+            from: ['/docs/redenomination']
+          },
+          {
             to: '/docs/learn-account-advanced',
             from: ['/docs/ens']
           }

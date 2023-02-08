@@ -33,8 +33,8 @@ equals to 10<sup>12</sup> Planck.
 :::note DOT was redenominated at block #1_248_328
 
 DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT
-(old)"), but went through a process of [redenomination](../general/redenomination.md) which
-increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
+(old)"), but went through a process of [redenomination](./learn-redenomination.md) which increased
+DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
 
 :::
 
