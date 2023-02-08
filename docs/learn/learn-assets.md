@@ -51,7 +51,7 @@ an asset, as the chain does not enforce the uniqueness of metadata like "name" a
 creator must also specify a minimum balance, preventing accounts from having dust balances.
 
 Asset classes and instances can have associated metadata. The metadata is an array of data that the
-class Owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
+class owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
 service. The [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) also supports setting key/value pairs as
 attributes to a class or instance.
 
