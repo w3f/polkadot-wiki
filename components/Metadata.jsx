@@ -238,34 +238,34 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
     palletData.push(
       <div key={pallet.name}>
-        <span><button id={`${pallet.name}-button`} onClick={() => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
+        <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;{name}</span>
         <div id={pallet.name} style={TopLevelDiv}>
           <ul style={NoMargin}>
-            <span><button id={`${pallet.name}-constants-button`} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</button>&nbsp;<b>Constants:</b></span>
+            <span><b id={`${pallet.name}-constants-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</b>&nbsp;<b>Constants:</b></span>
             <div id={`${pallet.name}-constants`} style={CollapsedDiv}>
               <ul>{constants}</ul>
             </div>
           </ul>
           <ul style={NoMargin}>
-            <span><button id={`${pallet.name}-errors-button`} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</button>&nbsp;<b>Errors:</b></span>
+            <span><b id={`${pallet.name}-errors-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</b>&nbsp;<b>Errors:</b></span>
             <div id={`${pallet.name}-errors`} style={CollapsedDiv}>
               <ul>{errors}</ul>
             </div>
           </ul>
           <ul style={NoMargin}>
-            <span><button id={`${pallet.name}-events-button`} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</button>&nbsp;<b>Events:</b></span>
+            <span><b id={`${pallet.name}-events-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</b>&nbsp;<b>Events:</b></span>
             <div id={`${pallet.name}-events`} style={CollapsedDiv}>
               <ul>{events}</ul>
             </div>
           </ul>
           <ul style={NoMargin}>
-            <span><button id={`${pallet.name}-extrinsics-button`} onClick={() => { ToggleExpand(`${pallet.name}-extrinsics`) }}>+</button>&nbsp;<b>Extrinsics:</b></span>
+            <span><b id={`${pallet.name}-extrinsics-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-extrinsics`) }}>+</b>&nbsp;<b>Extrinsics:</b></span>
             <div id={`${pallet.name}-extrinsics`} style={CollapsedDiv}>
               <ul>{extrinsics}</ul>
             </div>
           </ul>
           <ul style={NoMargin}>
-            <span><button id={`${pallet.name}-storage-button`} onClick={() => { ToggleExpand(`${pallet.name}-storage`) }}>+</button>&nbsp;<b>Storage:</b></span>
+            <span><b id={`${pallet.name}-storage-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-storage`) }}>+</b>&nbsp;<b>Storage:</b></span>
             <div id={`${pallet.name}-storage`} style={CollapsedDiv}>
               <ul>{storage}</ul>
             </div>
@@ -307,7 +307,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const header = callName.charAt(0).toUpperCase() + callName.slice(1);
       const formattedCalls = (
         <div key={callName}>
-          <span><button id={`${callName}-button`} onClick={(e) => { ToggleExpand(callName) }}>+</button>&nbsp;<b>{header}</b></span>
+          <span><b id={`${callName}-button`} style={TreeControl} onClick={() => { ToggleExpand(callName) }}>+</b>&nbsp;<b>{header}</b></span>
           <div id={callName} style={TopLevelDiv}>
             <ul style={NoMargin}>
               {childCalls}
@@ -355,7 +355,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     const header = key.charAt(0).toUpperCase() + key.slice(1);
     const formattedRPC = (
       <div key={key}>
-        <span><button id={`${key}-button`} onClick={(e) => { ToggleExpand(key) }}>+</button>&nbsp;<b>{header}</b></span>
+        <span><b id={`${key}-button`} style={TreeControl} onClick={() => { ToggleExpand(key) }}>+</b>&nbsp;<b>{header}</b></span>
         <div id={key} style={TopLevelDiv}>
           <ul style={NoMargin}>
             {methods}
@@ -448,5 +448,6 @@ const CollapsedDiv = { maxHeight: "0px", overflow: "hidden", margin: "0px" };
 const NoMargin = { margin: "0px" };
 const DropDownStyle = { border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" };
 const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
+const TreeControl = { margin: "0px", color: "#e6007a", cursor: "pointer" };
 
 export default Metadata;
