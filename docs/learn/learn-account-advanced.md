@@ -77,7 +77,7 @@ well-defined sequence (e.g. //0, //1, //2...) or be sure to write down any deriv
 
 :::info
 
-It is only possible to generate a derived account by also knowing the derivation path.
+It is only possible to generate a derived account by knowing the derivation path.
 
 :::
 
