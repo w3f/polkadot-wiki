@@ -106,6 +106,18 @@ module.exports = {
           {
             to: '/docs/learn-system-chains',
             from: ['/docs/learn-common-goods']
+          },
+          {
+            to: '/docs/learn-launch',
+            from: ['/docs/claims']
+          },
+          {
+            to: '/docs/learn-redenomination',
+            from: ['/docs/redenomination']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
           }
         ],
         createRedirects: function (existingPath) {

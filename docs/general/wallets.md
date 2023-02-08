@@ -37,25 +37,31 @@ device or a hardware wallet (which considered as a cold wallets as they are offl
 
 ### Browser Extensions
 
-Browser extension wallets at bare minimum act as key storage and management solution, allowing you to use your accounts with apps in the Web3 space. The wallets listed below offer functionality beyond that, allowing the featured actions to be performed directly through the extension. Some of them also allow interaction with air-gapped wallets and hardware devices
+Browser extension wallets at bare minimum act as key storage and management solution, allowing you
+to use your accounts with apps in the Web3 space. The wallets listed below offer functionality
+beyond that, allowing the featured actions to be performed directly through the extension. Some of
+them also allow interaction with air-gapped wallets and hardware devices
 
 | Wallet                                | Browsers                                    | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
 | ------------------------------------- | ------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
 | [Enkrypt](https://www.enkrypt.com/)   | Brave, Chrome, Edge, Firefox, Opera, Safari | No, No                       | **Yes** | No         | **Yes**        | No         | [Enkrypt Features](#enkrypt)     |
-| [PolkaGate](https://polkadotjs.plus/) | Firefox                                     | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
+| [PolkaGate](https://polkagate.xyz/)   | Chrome, Firefox                             | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
 | [SubWallet](https://subwallet.app/)   | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 | [Talisman](https://www.talisman.xyz/) | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [Talisman features](#talisman)   |
 
 ### Mobile Wallets
 
-Mobile wallets are fully packaged apps that allow all the featured actions, as well as the storage and management of your accounts, through the mobile app. Contrary to browser extensions, mobile wallets usually can't connect to third-party web apps. Some mobile wallets provide support for hardware wallets through bluetooth connectivity.
+Mobile wallets are fully packaged apps that allow all the featured actions, as well as the storage
+and management of your accounts, through the mobile app. Contrary to browser extensions, mobile
+wallets usually can't connect to third-party web apps. Some mobile wallets provide support for
+hardware wallets through bluetooth connectivity.
 
 | Wallet                                        | Platforms                 | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | ------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
 | [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android              | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
-| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
+| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | **Yes**      | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | No         | **Yes**        | No         | [SubWallet features](#subwallet)             |
+| [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
 
@@ -79,19 +85,19 @@ Foundation.
 
 PolkaGate extension is a Kusama Treasury supported
 [[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
-Polkadot-JS Plus, completely re-developed, with a new look and many
-performance improvements. Supports proxy accounts and social recovery, address (watch-only) accounts, 
-parachain accounts, custom remote nodes, phishing detection, QR account import, export/import/derive 
-account(s). 
+Polkadot-JS Plus, completely re-developed, with a new look and many performance improvements.
+Supports proxy accounts and social recovery, address (watch-only) accounts, parachain accounts,
+custom remote nodes, phishing detection, QR account import, export/import/derive account(s).
 
 ### SubWallet
 
-Web3 multiverse gateway for Polkadot & Kusama ecosystem. Track, send, receive and monitor
-multi-chain assets. XCM Transfer, NFT Management, Parity Signer & Ledger support, light
-clients support, QR-code account import, token import, EVM DApp support, MetaMask compatibility,
-custom endpoint, fiat on-ramp. Subwallet received funding from Polkadot Treasury
+A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive and monitor multi-chain
+assets on 150+ networks. XCM Transfer, NFT Management, Parity Signer & Ledger support, light clients
+support, QR-code account import, token import, EVM DApp support, MetaMask compatibility, custom
+endpoint, fiat on-ramp. SubWallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
-[2](https://polkadot.polkassembly.io/treasury/162)].
+[2](https://polkadot.polkassembly.io/treasury/162),
+[3](https://polkadot.polkassembly.io/treasury/218)].
 
 ### Talisman
 
@@ -114,7 +120,7 @@ use and understand. Fearless Wallet received funding from Kusama Treasury
 
 ### Nova Wallet
 
-Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with 
+Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with
 Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/122),
 [2](https://kusama.polkassembly.io/treasury/158)].
@@ -130,8 +136,8 @@ Treasury [[1](https://kusama.polkassembly.io/treasury/32),
 
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
 Polkadot-JS UI, the Polkadot-JS extension, or Parity Signer. For other wallet software, you should
-contact the developers of that wallet. Please note that these wallets are oriented towards developers 
-and power users.
+contact the developers of that wallet. Please note that these wallets are oriented towards
+developers and power users.
 
 | Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                     |
 | ------------------------------------------------------------------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |

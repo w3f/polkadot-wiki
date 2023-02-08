@@ -156,8 +156,8 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a type of
 sealed-bid auction where bids are hidden and only revealed at a later phase, have emerged as a
 well-regarded mechanic. For example, this mechanism is leveraged to auction human readable names on
-the [ENS](../general/ens.md). The Candle auction is another solution that does not require a
-two-step commit and reveal schemes (a main component of Vickrey auctions), which allows smart
+the [ENS](./learn-account-advanced.md). The Candle auction is another solution that does not require
+a two-step commit and reveal schemes (a main component of Vickrey auctions), which allows smart
 contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but they do not reveal when the

@@ -288,7 +288,7 @@ impacted by the locking period of the tokens.
 
 #### Adaptive Quorum Biasing
 
-Adaptive quorum biasing is longer used in OpenGov and is replaced by the Approval/Support system.
+Adaptive quorum biasing is no longer used in OpenGov and has been replaced with the Approval/Support system.
 
 ## Council
 
@@ -308,14 +308,34 @@ three tasks of governance:
 2. Cancelling dangerous or malicious referenda
 3. Electing the Technical Committee
 
+### Multirole Delegation
+
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
 body delegated by voters to compensate for the fact that many choose to not take part in day-to-day
 of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can choose to
 delegate their voting power to another voter in the system. It does so by improving a feature known
 as **Multirole Delegation**, where voters can specify a different delegate for every class of
-referendum in the system. So for example, a voter could delegate one entity for managing a less
-potent referenda class, choose a different delegate for a different class with more powerful
-consequences and still retain full voting power over any remaining classes.
+referendum in the system. Delegation can be done per track, and accounts can choose to select
+different delegates (or no delegation) for each track.
+
+For example, a voter could delegate one entity for managing a less potent referenda class, choose a
+different delegate for a different class with more powerful consequences and still retain full
+voting power over any remaining classes.
+
+Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
+to use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
+is worth noting that a user delegating their voting power does not imply that the delegate will have
+control over the funds of the delegating account: they can vote with a user's voting power: but they
+won't be able to transfer your balance, nominate a different set of validators or execute any call
+other than voting on the defined call/s by the user.
+
+With the new delegation features, the goal is to ensure the required turnouts for proposals to be
+enacted are reached while maintaining the anonymity of voters and keeping the overall design
+censorship-free.
+
+For a step-by-step outline of how to delegate voting power in OpenGov, check out the
+[Delegating Voting Power](./../maintain/maintain-guides-opengov.md#delegating-voting-power) section
+on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
 
 ### Canceling Referenda
 
