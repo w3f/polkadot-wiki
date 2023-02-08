@@ -7,8 +7,8 @@ keywords: [DOT, redenomination]
 slug: ../learn-redenomination
 ---
 
-On August 21, 2020, [redenomination](../general/redenomination.md) of DOT, the native token on
-Polkadot, occurred. From this date, one DOT (old) equals 100 new DOT.
+On August 21, 2020, the redenomination of DOT, the native token on Polkadot, occurred. From this
+date, one DOT (old) equals 100 new DOT.
 
 :::info Denomination Day
 
