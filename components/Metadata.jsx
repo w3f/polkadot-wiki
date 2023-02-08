@@ -37,14 +37,14 @@ function Metadata({ version }) {
       <select
         defaultValue={0}
         onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}
-        style={{ border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" }}
+        style={DropDownStyle}
       >
         {options.map((option) => (option))}
       </select>
     )
 
     // Set loading status
-    setReturnValue(<div style={{ color: "#e6007a" }}><b>Loading Metadata...</b></div>);
+    setReturnValue(<div style={PinkText}><b>Loading Metadata...</b></div>);
 
     // Fetch metadata from the chain
     await GetMetadata(version, wsUrl, dropdown, setReturnValue);
@@ -91,8 +91,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <b>{constant.name}</b>
             <ul>
               <li>{`Description: ${constant.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
-              <li>Chain Value: <span style={{ color: "#e6007a" }}>{`${JSON.stringify(constObj)}`}</span></li>
+              <li>API Endpoint: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
+              <li>Chain Value: <span style={PinkText}>{`${JSON.stringify(constObj)}`}</span></li>
               <li>{`Chain Value Type: ${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
             </ul>
           </li>
@@ -121,7 +121,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <b>{error.name}</b>
             <ul>
               <li>{`Description: ${error.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
+              <li>API Endpoint: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
             </ul>
           </li>
         )
@@ -151,7 +151,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <b>{event.name}</b>
             <ul>
               <li>{`Description: ${event.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
+              <li>API Endpoint: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
               <li>{`Fields: ${params}`}</li>
             </ul>
           </li>
@@ -181,7 +181,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <b>{key.charAt(0).toUpperCase() + key.slice(1)}</b>
             <ul>
               <li>{`Description: ${meta.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li>API Endpoint: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
               <li>{`Parameters: ${params}`}</li>
             </ul>
           </li>
@@ -226,7 +226,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <b>{`${item.name}`}</b>
             <ul>
               <li>{`Description: ${item.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
+              <li>API Endpoint: <span style={PinkText}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
               <li>{`Return Type: ${Object.keys(storageType)[0]} - ${Object.values(storageType)[0]}`}</li>
             </ul>
           </li>
@@ -239,34 +239,34 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     palletData.push(
       <div key={pallet.name}>
         <span><button id={`${pallet.name}-button`} onClick={() => { ToggleExpand(pallet.name) }}>+</button>&nbsp;{name}</span>
-        <div id={pallet.name} style={{ maxHeight: "0px", overflow: "hidden" }}>
-          <ul style={{ margin: "0px" }}>
+        <div id={pallet.name} style={TopLevelDiv}>
+          <ul style={NoMargin}>
             <span><button id={`${pallet.name}-constants-button`} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</button>&nbsp;<b>Constants:</b></span>
-            <div id={`${pallet.name}-constants`} style={{ maxHeight: "0px", overflow: "hidden", margin: "0px" }}>
+            <div id={`${pallet.name}-constants`} style={CollapsedDiv}>
               <ul>{constants}</ul>
             </div>
           </ul>
-          <ul style={{ margin: "0px" }}>
+          <ul style={NoMargin}>
             <span><button id={`${pallet.name}-errors-button`} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</button>&nbsp;<b>Errors:</b></span>
-            <div id={`${pallet.name}-errors`} style={{ maxHeight: "0px", overflow: "hidden", margin: "0px" }}>
+            <div id={`${pallet.name}-errors`} style={CollapsedDiv}>
               <ul>{errors}</ul>
             </div>
           </ul>
-          <ul style={{ margin: "0px" }}>
+          <ul style={NoMargin}>
             <span><button id={`${pallet.name}-events-button`} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</button>&nbsp;<b>Events:</b></span>
-            <div id={`${pallet.name}-events`} style={{ maxHeight: "0px", overflow: "hidden", margin: "0px" }}>
+            <div id={`${pallet.name}-events`} style={CollapsedDiv}>
               <ul>{events}</ul>
             </div>
           </ul>
-          <ul style={{ margin: "0px" }}>
+          <ul style={NoMargin}>
             <span><button id={`${pallet.name}-extrinsics-button`} onClick={() => { ToggleExpand(`${pallet.name}-extrinsics`) }}>+</button>&nbsp;<b>Extrinsics:</b></span>
-            <div id={`${pallet.name}-extrinsics`} style={{ maxHeight: "0px", overflow: "hidden", margin: "0px" }}>
+            <div id={`${pallet.name}-extrinsics`} style={CollapsedDiv}>
               <ul>{extrinsics}</ul>
             </div>
           </ul>
-          <ul style={{ margin: "0px" }}>
+          <ul style={NoMargin}>
             <span><button id={`${pallet.name}-storage-button`} onClick={() => { ToggleExpand(`${pallet.name}-storage`) }}>+</button>&nbsp;<b>Storage:</b></span>
-            <div id={`${pallet.name}-storage`} style={{ maxHeight: "0px", overflow: "hidden", margin: "0px" }}>
+            <div id={`${pallet.name}-storage`} style={CollapsedDiv}>
               <ul>{storage}</ul>
             </div>
           </ul>
@@ -294,9 +294,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         const item = (
           <div key={`${callName}.${method}`}>
             <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
-            <ul style={{ margin: "0px" }}>
+            <ul style={NoMargin}>
               <li>{`Description: ${call.description}`}</li>
-              <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.call.${callName}.${method}`}</span></li>
+              <li>API Endpoint: <span style={PinkText}>{`api.call.${callName}.${method}`}</span></li>
               <li>{`Type: ${call.type}`}</li>
             </ul>
           </div>
@@ -308,8 +308,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const formattedCalls = (
         <div key={callName}>
           <span><button id={`${callName}-button`} onClick={(e) => { ToggleExpand(callName) }}>+</button>&nbsp;<b>{header}</b></span>
-          <div id={callName} style={{ maxHeight: "0px", overflow: "hidden" }}>
-            <ul style={{ margin: "0px" }}>
+          <div id={callName} style={TopLevelDiv}>
+            <ul style={NoMargin}>
               {childCalls}
             </ul>
           </div>
@@ -341,9 +341,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const item = (
         <div key={`${key}.${method}`}>
           <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
-          <ul style={{ margin: "0px" }}>
+          <ul style={NoMargin}>
             <li>{`Description: ${rpc.description}`}</li>
-            <li>API Endpoint: <span style={{ color: "#e6007a" }}>{`api.rpc.${key}.${method}`}</span></li>
+            <li>API Endpoint: <span style={PinkText}>{`api.rpc.${key}.${method}`}</span></li>
             <li>{`Return Type: ${rpc.type}`}</li>
             <li>{`Parameters: ${params}`}</li>
           </ul>
@@ -356,8 +356,8 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     const formattedRPC = (
       <div key={key}>
         <span><button id={`${key}-button`} onClick={(e) => { ToggleExpand(key) }}>+</button>&nbsp;<b>{header}</b></span>
-        <div id={key} style={{ maxHeight: "0px", overflow: "hidden" }}>
-          <ul style={{ margin: "0px" }}>
+        <div id={key} style={TopLevelDiv}>
+          <ul style={NoMargin}>
             {methods}
           </ul>
         </div>
@@ -376,7 +376,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       <br />
       <b>{`@polkadot/api version ${PolkadotJSVersion}`}</b>
       <br />
-      <div id="metadataLoading" style={{ color: "#e6007a", visibility: "hidden" }}><b>Loading Metadata...</b></div>
+      <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b></div>
       {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
       <div id="buttonControls">
         <button onClick={() => ExpandAll(true)}>Expand All</button>
@@ -437,8 +437,16 @@ function ExpandAll(bool) {
 
 // If any sub-sections (Constants, Errors, Events, Storage) contain no children display "None"
 function IsEmpty(result) {
-  if (result.length === 0) { return (<p style={{ margin: "0px" }}>None</p>) }
+  if (result.length === 0) { return (<p style={NoMargin}>None</p>) }
   else { return result; }
 }
+
+// Styling
+const PinkText = { color: "#e6007a" };
+const TopLevelDiv = { maxHeight: "0px", overflow: "hidden" };
+const CollapsedDiv = { maxHeight: "0px", overflow: "hidden", margin: "0px" };
+const NoMargin = { margin: "0px" };
+const DropDownStyle = { border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" };
+const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
 
 export default Metadata;
