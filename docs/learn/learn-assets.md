@@ -50,6 +50,11 @@ integer of type `u32`, to identify the asset. The `AssetId` should be the canoni
 an asset, as the chain does not enforce the uniqueness of metadata like "name" and "symbol". The
 creator must also specify a minimum balance, preventing accounts from having dust balances.
 
+Asset classes and instances can have associated metadata. The metadata is an array of data that the
+class Owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
+service. The [Uniques pallet](./learn-nft-pallets.md) also supports setting key/value pairs as
+attributes to a class or instance.
+
 An asset class has several privileged roles. The creator of the asset automatically takes on all
 privileged roles, but can reassign them after creation. These roles are:
 
@@ -138,23 +143,6 @@ a separate meaning from another instance of the same class.
 Similar to the Assets pallet, this functionality is encoded into the chain. Operations are
 benchmarked before each release in lieu of any runtime metering, ensuring efficient execution and
 stable transaction fees.
-
-### Creation and Management
-
-Anyone on the network can create an asset class as long as they reserve the required deposit of
-{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> on Statemint. :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> on Statemine. :kusama }}
-Creating instances of a class also requires a per-instance deposit unless the chain's governance
-designates the class as "free holding", allowing the class to mint more instances without deposit.
-The creator must specify a `ClassId`, which, like its cousin `AssetId`, should be the canonical
-identifier for the class.
-
-The creator can also specify the same privileged roles of Owner, Admin, Issuer, and Freezer.
-
-Asset classes and instances can have associated metadata. The metadata is an array of data that the
-class Owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
-service. The Uniques pallet also supports setting key/value pairs as attributes to a class or
-instance.
 
 ### Transferring NFTs
 
