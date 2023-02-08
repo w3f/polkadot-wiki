@@ -122,7 +122,7 @@ Signer support custom derivation paths using the same syntax as Subkey.
 Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase.
 This will generate separate seeds for different paths, allowing separate signing keys with the same
 mnemonic, e.g. `<mnemonic phrase>//polkadot` and `<mnemonic phrase>//kusama`. Although you may
-correctly save the mnemonic phrase, using it in another wallet will only generate the same addresses
+correctly save the mnemonic phrase, using it in another wallet will generate the same addresses only 
 if both wallets use the same derivation paths.
 
 Polkadot and Kusama both have paths registered in the
