@@ -139,19 +139,13 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         const rawEvent = api.events[`${Camel(pallet.name)}`][eventName];
         const event = rawEvent.meta.toHuman();
         const eventDescription = FormatDescription(event.docs.join(" "));
-        let params = "(";
-        for (let i = 0; i < event.args.length; i++) {
-          params += `${event.fields[i].typeName}: ${event.args[i]}, `
-        }
-        params = `${params.slice(0, -2)})`;
-        if (params === "(") { params = "None"; }
         const item = (
           <li key={`${pallet.name}.${event.name}`}>
             <b>{event.name}</b>
             <ul>
               <li><u>Description</u>: {eventDescription}</li>
               <li><u>API Endpoint</u>: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
-              <li><u>Fields</u>: {params}</li>
+              <li><u>Fields</u>: {FormatArgs(event, "events")}</li>
             </ul>
           </li>
         )
@@ -170,21 +164,13 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       keys.forEach(key => {
         const meta = api.tx[Camel(pallet.name)][Camel(key)].meta.toHuman();
         const extrinsicDescription = FormatDescription(meta.docs.join(" "));
-        let params = "(";
-        if (meta.args.length > 0) {
-          meta.args.forEach(param => {
-            params += `${param.name}: ${param.type}, `
-          })
-          params = `${params.slice(0, -2)})`;
-        }
-        if (params === "(") { params = "None"; }
         const extrinsicItem = (
           <li key={`api.tx.${Camel(pallet.name)}.${Camel(key)}`}>
             <b>{key.charAt(0).toUpperCase() + key.slice(1)}</b>
             <ul>
               <li><u>Description</u>: {extrinsicDescription}</li>
               <li><u>API Endpoint</u>: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li><u>Parameters</u>: {params}</li>
+              <li><u>Parameters</u>: {FormatArgs(meta, "extrinsics")}</li>
             </ul>
           </li>
         )
@@ -318,14 +304,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     rpcMethods.forEach(method => {
       const rpc = api.rpc[key][method].meta;
       const rpcDescription = FormatDescription(rpc.description);
-      let params = "(";
-      if (rpc.params.length > 0) {
-        rpc.params.forEach(param => {
-          params += `${param.name}: ${param.type}, `;
-        })
-        params = `${params.slice(0, -2)})`;
-      }
-      if (params === "(") { params = "None"; }
       const item = (
         <div key={`${key}.${method}`}>
           <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
@@ -333,7 +311,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
             <li><u>Description</u>: {rpcDescription}</li>
             <li><u>API Endpoint</u>: <span style={PinkText}>{`api.rpc.${key}.${method}`}</span></li>
             <li><u>Return Type</u>: {rpc.type}</li>
-            <li><u>Parameters</u>: {params}</li>
+            <li><u>Parameters</u>: {FormatArgs(rpc, "rpc")}</li>
           </ul>
         </div>
       )
@@ -419,6 +397,27 @@ function FormatDescription(description) {
     }
   }
   return <span>{output}</span>;
+}
+
+// Extract and format arguments from metadata
+function FormatArgs(item, type) {
+  let params = "(";
+  if (type === "rpc") {
+    item.params.forEach(param => {
+      params += `${param.name}: ${param.type}, `;
+    })
+  } else if (type === "extrinsics") {
+    for (let i = 0; i < item.args.length; i++) {
+      params += `${item.args[i].name}: ${item.args[i].type}, `
+    }
+  } else if (type === "events") {
+    for (let i = 0; i < item.args.length; i++) {
+      params += `${item.fields[i].typeName}: ${item.args[i]}, `
+    }
+  }
+  params = `${params.slice(0, -2)})`;
+  if (params === "(" || params === ")") { params = "None"; }
+  return params;
 }
 
 // Display loading notification
