@@ -49,6 +49,13 @@ them also allow interaction with air-gapped wallets and hardware devices
 | [SubWallet](https://subwallet.app/)   | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 | [Talisman](https://www.talisman.xyz/) | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [Talisman features](#talisman)   |
 
+:::info Ledger support only for chromium-based browsers
+
+Currently, all browser extensions support Ledger devices only on chromium-based browsers (i.e.
+Chrome, Brave, Edge, Opera).
+
+:::
+
 ### Mobile Wallets
 
 Mobile wallets are fully packaged apps that allow all the featured actions, as well as the storage
@@ -59,7 +66,7 @@ hardware wallets through bluetooth connectivity.
 | Wallet                                        | Platforms                 | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | ------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
 | [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android              | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
-| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | **Yes**      | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
+| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
 | [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
 
