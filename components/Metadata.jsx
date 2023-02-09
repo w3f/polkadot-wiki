@@ -278,23 +278,22 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
   // Runtime
   let calls = [];
-  const callsClass = api.call;
-  const callNames = Object.keys(callsClass);
-  callNames.sort((a, b) => a.localeCompare(b));
-  callNames.forEach(callName => {
+  const callKeys = Object.keys(api.call);
+  callKeys.sort((a, b) => a.localeCompare(b));
+  callKeys.forEach(key => {
     let childCalls = [];
-    const methods = api.call[callName];
+    const methods = api.call[key];
     const methodNames = Object.keys(methods);
     methodNames.sort((a, b) => a.localeCompare(b));
     methodNames.forEach(method => {
       const call = methods[method].meta;
       const callDescription = FormatDescription(call.description);
       const item = (
-        <div key={`${callName}.${method}`}>
+        <div key={`${key}.${method}`}>
           <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
           <ul style={NoMargin}>
             <li><u>Description</u>: {callDescription}</li>
-            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${callName}.${method}`}</span></li>
+            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${key}.${method}`}</span></li>
             <li><u>Type</u>: {call.type}</li>
           </ul>
         </div>
@@ -302,11 +301,11 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       childCalls.push(item);
     });
     childCalls = IsEmpty(childCalls);
-    const header = callName.charAt(0).toUpperCase() + callName.slice(1);
+    const header = key.charAt(0).toUpperCase() + key.slice(1);
     const formattedCalls = (
-      <div key={callName}>
-        <span><b id={`${callName}-button`} style={TreeControl} onClick={() => { ToggleExpand(callName) }}>+</b>&nbsp;<b>{header}</b></span>
-        <div id={callName} style={TopLevelDiv}>
+      <div key={key}>
+        <span><b id={`${key}-button`} style={TreeControl} onClick={() => { ToggleExpand(key) }}>+</b>&nbsp;<b>{header}</b></span>
+        <div id={key} style={TopLevelDiv}>
           <ul style={NoMargin}>
             {childCalls}
           </ul>
@@ -314,7 +313,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       </div >
     )
     calls.push(formattedCalls);
-    Expandable.push(callName);
+    Expandable.push(key);
   });
 
   ToggleLoading();
