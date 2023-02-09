@@ -4,7 +4,7 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 import Packages from "./../package.json";
 
 // Load PolkadotJS version
-const PolkadotJSVersion = Packages.dependencies["@polkadot/api"].substring(1);
+const PolkadotJSVersion = Packages.devDependencies["@polkadot/api"].substring(1);
 
 // Chains that will appear in the dropdown selection menu
 const Networks = [
