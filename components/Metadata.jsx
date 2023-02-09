@@ -20,7 +20,7 @@ const Networks = [
 let Expandable = [];
 
 // Component
-function Metadata({ version }) {
+export default function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
 
   useEffect(async () => {
@@ -243,44 +243,26 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     }
     storage = IsEmpty(storage);
 
+    // Format sub-categories
+    const constantElements = BuildPalletSection(pallet.name, "constants", constants);
+    const errorElements = BuildPalletSection(pallet.name, "errors", errors);
+    const eventElements = BuildPalletSection(pallet.name, "event", events);
+    const extrinsicElements = BuildPalletSection(pallet.name, "extrinsics", extrinsics);
+    const storageElements = BuildPalletSection(pallet.name, "storage", storage);
+
+    // Compile all elements for the given pallet
     palletData.push(
       <div key={pallet.name}>
         <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;{name}</span>
         <div id={pallet.name} style={TopLevelDiv}>
-          <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-constants-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</b>&nbsp;<b>Constants</b></span>
-            <div id={`${pallet.name}-constants`} style={CollapsedDiv}>
-              <ul>{constants}</ul>
-            </div>
-          </ul>
-          <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-errors-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</b>&nbsp;<b>Errors</b></span>
-            <div id={`${pallet.name}-errors`} style={CollapsedDiv}>
-              <ul>{errors}</ul>
-            </div>
-          </ul>
-          <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-events-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</b>&nbsp;<b>Events</b></span>
-            <div id={`${pallet.name}-events`} style={CollapsedDiv}>
-              <ul>{events}</ul>
-            </div>
-          </ul>
-          <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-extrinsics-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-extrinsics`) }}>+</b>&nbsp;<b>Extrinsics:</b></span>
-            <div id={`${pallet.name}-extrinsics`} style={CollapsedDiv}>
-              <ul>{extrinsics}</ul>
-            </div>
-          </ul>
-          <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-storage-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-storage`) }}>+</b>&nbsp;<b>Storage:</b></span>
-            <div id={`${pallet.name}-storage`} style={CollapsedDiv}>
-              <ul>{storage}</ul>
-            </div>
-          </ul>
+          {constantElements}
+          {errorElements}
+          {eventElements}
+          {extrinsicElements}
+          {storageElements}
         </div>
       </div>
     )
-
     Expandable.push(pallet.name);
     Expandable.push(`${pallet.name}-constants`, `${pallet.name}-errors`, `${pallet.name}-events`, `${pallet.name}-extrinsics`, `${pallet.name}-storage`);
   });
@@ -383,7 +365,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       <b style={PinkText}>@polkadot/api</b><b>{` version ${PolkadotJSVersion}`}</b>
       <br />
       <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b></div>
-      {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
       <div id="buttonControls">
         <button onClick={() => ExpandAll(true)}>Expand All</button>
         <button onClick={() => ExpandAll(false)}>Collapse All</button>
@@ -409,6 +390,21 @@ function Camel(input) {
 function IsEmpty(result) {
   if (result.length === 0) { return (<p style={NoMargin}>None</p>) }
   else { return result; }
+}
+
+// Construction pallet sub-categories (constants, errors, events, extrinsics, storage)
+function BuildPalletSection(palletName, category, items) {
+  return (
+    <ul style={NoMargin}>
+      <span>
+        <b id={`${palletName}-${category}-button`} style={TreeControl} onClick={() => { ToggleExpand(`${palletName}-${category}`) }}>+</b>
+        &nbsp;<b>{category.charAt(0).toUpperCase() + category.slice(1)}</b>
+      </span>
+      <div id={`${palletName}-${category}`} style={CollapsedDiv}>
+        <ul>{items}</ul>
+      </div>
+    </ul>
+  )
 }
 
 // Format a description string
@@ -472,5 +468,3 @@ const NoMargin = { margin: "0px" };
 const DropDownStyle = { border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" };
 const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
 const TreeControl = { margin: "0px", color: "#e6007a", cursor: "pointer" };
-
-export default Metadata;
