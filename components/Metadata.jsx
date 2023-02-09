@@ -65,7 +65,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
   // Set types for currently loaded metadata
   const types = meta.metadata[version].lookup.types;
-  //console.log(api.runtimeMetadata.getUniqTypes(false));
 
   // Pallets
   const pallets = meta.metadata[version].pallets;
@@ -96,8 +95,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         )
         constants.push(item);
       } else {
-        // TODO: These 2 edge-cases have to do w/ Camel casing variants
-        // system.sS58Prefix &  utility.batched_calls_limit
         console.log(`Excluding: ${Camel(pallet.name)}.${Camel(constant.name)}`)
       }
     });
