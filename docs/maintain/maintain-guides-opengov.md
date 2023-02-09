@@ -128,24 +128,34 @@ to execute calls from the Treasury pallet.
 
 Origin can force slot leases. This origin has the privilege to execute calls from the Slots pallet.
 
+![Lease Support and Approval](./../assets/governance/support-approval-lease.png)
+
 ### Fellowship Admin
 
 The origin for managing the composition of the fellowship.
+
+![Fellowship Support and Approval](./../assets/governance/support-approval-fellowship.png)
 
 ### General Admin
 
 The origin for managing the registrar. This origin has the privilege of executing calls from the
 Identity pallet.
 
+![General Admin Support and Approval](./../assets/governance/support-approval-general.png)
+
 ### Auction Admin
 
 The origin for starting auctions. This origin can execute calls from the Auctions pallet and the
 Scheduler Pallet.
 
+![Auction Admin Support and Approval](./../assets/governance/support-approval-auction.png)
+
 ### Referendum Canceller
 
 The origin can cancel referenda. This track has a low lead time and approval/support curves with
 slightly sharper reductions in their thresholds for passing.
+
+![Referendum Canceller Support and Approval](./../assets/governance/support-approval-canceler.png)
 
 ### Referendum Killer
 
@@ -153,25 +163,37 @@ The origin can cancel an ongoing referendum and slash the deposits. This track a
 lead-time and approval/support curves with slightly sharper reductions in their thresholds for
 passing.
 
+![Referendum killer Support and Approval](./../assets/governance/support-approval-killer.png)
+
 ### Small Tipper
 
 Origin able to spend up to 8.25 KSM from the treasury at once.
+
+![Small Tipper Support and Approval](./../assets/governance/support-approval-small-tipper.png)
 
 ### Big Tipper
 
 Origin able to spend up to 33.33 KSM from the treasury at once.
 
+![Big Tipper Support and Approval](./../assets/governance/support-approval-big-tipper.png)
+
 ### Small Spender
 
 Origin able to spend up to 333.33 KSM from the treasury at once.
+
+![Small Spender Support and Approval](./../assets/governance/support-approval-small-spender.png)
 
 ### Medium Spender
 
 Origin able to spend up to 3333.33 KSM from the treasury at once.
 
+![Medium Spender Support and Approval](./../assets/governance/support-approval-medium-spender.png)
+
 ### Big Spender
 
 Origin able to spend up to 33333.33 KSM from the treasury at once.
+
+![Big Spender Support and Approval](./../assets/governance/support-approval-big-spender.png)
 
 ## Create a Referenda Proposal using Polkadot-JS UI
 
