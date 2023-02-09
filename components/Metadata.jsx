@@ -188,8 +188,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       pallet.storage.items.sort((a, b) => a.name.localeCompare(b.name));
       pallet.storage.items.forEach(item => {
         const storageDescription = FormatDescription(item.docs.join(" "));
-        //const test = api.query[Camel(storagePrefix)][Camel(item.name)];
-        //console.log(test.meta.toHuman());
         const typeKey = Object.keys(item.type)[0];
         let storageType;
         // TODO - this needs improvements to more efficiently unwrap types
@@ -197,18 +195,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           storageType = types[item.type[typeKey]].type.def;
         } else if (typeKey === "Map") {
           storageType = types[item.type[typeKey].key].type.def;
-          /*
-          const { hashers, key, value } = item.type.Map;
-          if (hashers.length === 1) {
-            storageType = types[key].type.def;
-          } else {
-            storageType = "";
-            hashers.forEach(hasher => {
-              storageType += `${types[key].type.def}, `;
-            })
-            console.log(`${Camel(storagePrefix)}.${Camel(item.name)}`);
-          }
-          */
         } else {
           console.log("Unknown Storage Type");
         }
@@ -253,46 +239,6 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     Expandable.push(`${pallet.name}-constants`, `${pallet.name}-errors`, `${pallet.name}-events`, `${pallet.name}-extrinsics`, `${pallet.name}-storage`);
   });
 
-  // Runtime
-  let calls = [];
-  const callsClass = api.call;
-  const callNames = Object.keys(callsClass);
-  callNames.sort((a, b) => a.localeCompare(b));
-  callNames.forEach(callName => {
-    let childCalls = [];
-    const methods = api.call[callName];
-    const methodNames = Object.keys(methods);
-    methodNames.sort((a, b) => a.localeCompare(b));
-    methodNames.forEach(method => {
-      const call = methods[method].meta;
-      const callDescription = FormatDescription(call.description);
-      const item = (
-        <div key={`${callName}.${method}`}>
-          <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
-          <ul style={NoMargin}>
-            <li><u>Description</u>: {callDescription}</li>
-            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${callName}.${method}`}</span></li>
-            <li><u>Type</u>: {call.type}</li>
-          </ul>
-        </div>
-      )
-      childCalls.push(item);
-    });
-    const header = callName.charAt(0).toUpperCase() + callName.slice(1);
-    const formattedCalls = (
-      <div key={callName}>
-        <span><b id={`${callName}-button`} style={TreeControl} onClick={() => { ToggleExpand(callName) }}>+</b>&nbsp;<b>{header}</b></span>
-        <div id={callName} style={TopLevelDiv}>
-          <ul style={NoMargin}>
-            {childCalls}
-          </ul>
-        </div>
-      </div >
-    )
-    calls.push(formattedCalls);
-    Expandable.push(callName);
-  });
-
   // RPC Methods
   const rpcKeys = Object.keys(api.rpc);
   rpcKeys.sort((a, b) => a.localeCompare(b));
@@ -331,7 +277,48 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     )
     rpcs.push(formattedRPC);
     Expandable.push(key);
-  })
+  });
+
+  // Runtime
+  let calls = [];
+  const callsClass = api.call;
+  const callNames = Object.keys(callsClass);
+  callNames.sort((a, b) => a.localeCompare(b));
+  callNames.forEach(callName => {
+    let childCalls = [];
+    const methods = api.call[callName];
+    const methodNames = Object.keys(methods);
+    methodNames.sort((a, b) => a.localeCompare(b));
+    methodNames.forEach(method => {
+      const call = methods[method].meta;
+      const callDescription = FormatDescription(call.description);
+      const item = (
+        <div key={`${callName}.${method}`}>
+          <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
+          <ul style={NoMargin}>
+            <li><u>Description</u>: {callDescription}</li>
+            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${callName}.${method}`}</span></li>
+            <li><u>Type</u>: {call.type}</li>
+          </ul>
+        </div>
+      )
+      childCalls.push(item);
+    });
+    childCalls = IsEmpty(childCalls);
+    const header = callName.charAt(0).toUpperCase() + callName.slice(1);
+    const formattedCalls = (
+      <div key={callName}>
+        <span><b id={`${callName}-button`} style={TreeControl} onClick={() => { ToggleExpand(callName) }}>+</b>&nbsp;<b>{header}</b></span>
+        <div id={callName} style={TopLevelDiv}>
+          <ul style={NoMargin}>
+            {childCalls}
+          </ul>
+        </div>
+      </div >
+    )
+    calls.push(formattedCalls);
+    Expandable.push(callName);
+  });
 
   ToggleLoading();
 
