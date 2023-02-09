@@ -89,24 +89,40 @@ than the min enactment period.
 ### Root
 
 The origin with the highest level of privileges. This track requires extremely high levels of
-approval and support for early passing. The prepare and enactment periods are also large.
+approval and support for early passing. The prepare and enactment periods are also large. For
+instance, a referendum proposed in this track needs to amass 47% support (total network issuance) by
+the end of the first day with over 88% approval to be considered to be part of the confirm period.
+The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of day 14.
+This ensures that the token holders receive ample time to vote on the proposal during the decision
+period.
+
+![Root Support and Approval](./../assets/governance/support-approval-root.png)
 
 ### Whitelisted Caller
 
 Origin commanded by the [Fellowship](../learn/learn-opengov.md#fellowship) whitelist some hash of a
 call and allow the call to be dispatched with the root origin (after the referendum passes). This
 track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent
-process for time-critical proposals.
+process for time-critical proposals. For instance, a referendum proposed in this track needs to
+amass 14% support (much lesser than the root) by the end of the first day with over 88% approval to
+be considered to be part of the confirm period. The support curve drops linearly to 6% by the end of
+day 7 and around 5% by the end of day 14.
+
+![Whitelist Support and Approval](./../assets/governance/support-approval-whitelist.png)
 
 ### Staking Admin
 
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
 pallet and the Election Provider Multiphase Pallet.
 
+![Staking Support and Approval](./../assets/governance/support-approval-staking.png)
+
 ### Treasurer
 
 The origin for spending funds from the treasury (up to 333333.33 KSM). This origin has the privilege
 to execute calls from the Treasury pallet.
+
+![Treasurer Support and Approval](./../assets/governance/support-approval-treasurer.png)
 
 ### Lease Admin
 
