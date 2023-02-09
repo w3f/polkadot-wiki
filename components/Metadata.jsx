@@ -34,11 +34,7 @@ function Metadata({ version }) {
       options.push(option);
     });
     const dropdown = (
-      <select
-        defaultValue={0}
-        onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}
-        style={DropDownStyle}
-      >
+      <select defaultValue={0} style={DropDownStyle} onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}>
         {options.map((option) => (option))}
       </select>
     )
@@ -86,14 +82,15 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       let constObj = api["consts"][`${Camel(pallet.name)}`][`${Camel(constant.name)}`];
       if (constObj !== undefined) {
         const constantType = types[constant.type].type.def;
+        const constantDescription = FormatDescription(constant.docs.join(" "));
         const item = (
           <li key={constant.name}>
             <b>{constant.name}</b>
             <ul>
-              <li>{`Description: ${constant.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
-              <li>Chain Value: <span style={PinkText}>{`${JSON.stringify(constObj)}`}</span></li>
-              <li>{`Chain Value Type: ${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
+              <li><u>Description</u>: {constantDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
+              <li><u>Chain Value</u>: <span style={PinkText}>{`${JSON.stringify(constObj)}`}</span></li>
+              <li><u>Chain Value Type</u>: {`${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
             </ul>
           </li>
         )
@@ -110,23 +107,25 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     let errors = [];
     const errorClass = api.errors[`${Camel(pallet.name)}`];
     if (errorClass !== undefined) {
-      //const errorTypes = types[pallet.errors.type].type.def;
       const errorNames = Object.keys(errorClass);
       errorNames.sort((a, b) => a.localeCompare(b));
       errorNames.forEach(errorName => {
         const rawError = api.errors[`${Camel(pallet.name)}`][errorName];
         const error = rawError.meta.toHuman();
+        const errorDescription = FormatDescription(error.docs.join(" "));
         const item = (
           <li key={`${pallet.name}.${error.name}`}>
             <b>{error.name}</b>
             <ul>
-              <li>{`Description: ${error.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
+              <li><u>Description</u>: {errorDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
             </ul>
           </li>
         )
         errors.push(item);
       });
+    } else {
+      console.log(`Excluding: api.errors.${Camel(pallet.name)}`)
     }
     errors = IsEmpty(errors);
 
@@ -134,12 +133,12 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     let events = [];
     const eventsClass = api.events[`${Camel(pallet.name)}`];
     if (eventsClass !== undefined) {
-      //const eventTypes = types[pallet.events.type].type.def;
       const eventNames = Object.keys(eventsClass);
       eventNames.sort((a, b) => a.localeCompare(b));
       eventNames.forEach(eventName => {
         const rawEvent = api.events[`${Camel(pallet.name)}`][eventName];
         const event = rawEvent.meta.toHuman();
+        const eventDescription = FormatDescription(event.docs.join(" "));
         let params = "(";
         for (let i = 0; i < event.args.length; i++) {
           params += `${event.fields[i].typeName}: ${event.args[i]}, `
@@ -150,14 +149,16 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           <li key={`${pallet.name}.${event.name}`}>
             <b>{event.name}</b>
             <ul>
-              <li>{`Description: ${event.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
-              <li>{`Fields: ${params}`}</li>
+              <li><u>Description</u>: {eventDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
+              <li><u>Fields</u>: {params}</li>
             </ul>
           </li>
         )
         events.push(item);
       });
+    } else {
+      console.log(`Excluding: api.events.${Camel(pallet.name)}`)
     }
     events = IsEmpty(events);
 
@@ -168,6 +169,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const keys = Object.keys(palletExtrinsics);
       keys.forEach(key => {
         const meta = api.tx[Camel(pallet.name)][Camel(key)].meta.toHuman();
+        const extrinsicDescription = FormatDescription(meta.docs.join(" "));
         let params = "(";
         if (meta.args.length > 0) {
           meta.args.forEach(param => {
@@ -180,14 +182,16 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           <li key={`api.tx.${Camel(pallet.name)}.${Camel(key)}`}>
             <b>{key.charAt(0).toUpperCase() + key.slice(1)}</b>
             <ul>
-              <li>{`Description: ${meta.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li>{`Parameters: ${params}`}</li>
+              <li><u>Description</u>: {extrinsicDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li><u>Parameters</u>: {params}</li>
             </ul>
           </li>
         )
         extrinsics.push(extrinsicItem);
       })
+    } else {
+      console.log(`Excluding: api.tx.${Camel(pallet.name)}`)
     }
     extrinsics = IsEmpty(extrinsics);
 
@@ -197,6 +201,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       const storagePrefix = pallet.storage.prefix;
       pallet.storage.items.sort((a, b) => a.name.localeCompare(b.name));
       pallet.storage.items.forEach(item => {
+        const storageDescription = FormatDescription(item.docs.join(" "));
         //const test = api.query[Camel(storagePrefix)][Camel(item.name)];
         //console.log(test.meta.toHuman());
         const typeKey = Object.keys(item.type)[0];
@@ -225,14 +230,16 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           <li key={item.name}>
             <b>{`${item.name}`}</b>
             <ul>
-              <li>{`Description: ${item.docs.join(" ")}`}</li>
-              <li>API Endpoint: <span style={PinkText}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
-              <li>{`Return Type: ${Object.keys(storageType)[0]} - ${Object.values(storageType)[0]}`}</li>
+              <li><u>Description</u>: {storageDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
+              <li><u>Return Type</u>: {`${Object.keys(storageType)[0]} - ${Object.values(storageType)[0]}`}</li>
             </ul>
           </li>
         )
         storage.push(storageItem);
       });
+    } else {
+      console.log(`Excluding: api.query.${Camel(pallet.name)}`)
     }
     storage = IsEmpty(storage);
 
@@ -241,19 +248,19 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;{name}</span>
         <div id={pallet.name} style={TopLevelDiv}>
           <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-constants-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</b>&nbsp;<b>Constants:</b></span>
+            <span><b id={`${pallet.name}-constants-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-constants`) }}>+</b>&nbsp;<b>Constants</b></span>
             <div id={`${pallet.name}-constants`} style={CollapsedDiv}>
               <ul>{constants}</ul>
             </div>
           </ul>
           <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-errors-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</b>&nbsp;<b>Errors:</b></span>
+            <span><b id={`${pallet.name}-errors-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-errors`) }}>+</b>&nbsp;<b>Errors</b></span>
             <div id={`${pallet.name}-errors`} style={CollapsedDiv}>
               <ul>{errors}</ul>
             </div>
           </ul>
           <ul style={NoMargin}>
-            <span><b id={`${pallet.name}-events-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</b>&nbsp;<b>Events:</b></span>
+            <span><b id={`${pallet.name}-events-button`} style={TreeControl} onClick={() => { ToggleExpand(`${pallet.name}-events`) }}>+</b>&nbsp;<b>Events</b></span>
             <div id={`${pallet.name}-events`} style={CollapsedDiv}>
               <ul>{events}</ul>
             </div>
@@ -281,44 +288,42 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Runtime
   let calls = [];
   const callsClass = api.call;
-  if (callsClass !== undefined) {
-    const callNames = Object.keys(callsClass);
-    callNames.sort((a, b) => a.localeCompare(b));
-    callNames.forEach(callName => {
-      let childCalls = [];
-      const methods = api.call[callName];
-      const methodNames = Object.keys(methods);
-      methodNames.sort((a, b) => a.localeCompare(b));
-      methodNames.forEach(method => {
-        const call = methods[method].meta;
-        const item = (
-          <div key={`${callName}.${method}`}>
-            <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
-            <ul style={NoMargin}>
-              <li>{`Description: ${call.description}`}</li>
-              <li>API Endpoint: <span style={PinkText}>{`api.call.${callName}.${method}`}</span></li>
-              <li>{`Type: ${call.type}`}</li>
-            </ul>
-          </div>
-        )
-        childCalls.push(item);
-      });
-
-      const header = callName.charAt(0).toUpperCase() + callName.slice(1);
-      const formattedCalls = (
-        <div key={callName}>
-          <span><b id={`${callName}-button`} style={TreeControl} onClick={() => { ToggleExpand(callName) }}>+</b>&nbsp;<b>{header}</b></span>
-          <div id={callName} style={TopLevelDiv}>
-            <ul style={NoMargin}>
-              {childCalls}
-            </ul>
-          </div>
-        </div >
+  const callNames = Object.keys(callsClass);
+  callNames.sort((a, b) => a.localeCompare(b));
+  callNames.forEach(callName => {
+    let childCalls = [];
+    const methods = api.call[callName];
+    const methodNames = Object.keys(methods);
+    methodNames.sort((a, b) => a.localeCompare(b));
+    methodNames.forEach(method => {
+      const call = methods[method].meta;
+      const callDescription = FormatDescription(call.description);
+      const item = (
+        <div key={`${callName}.${method}`}>
+          <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
+          <ul style={NoMargin}>
+            <li><u>Description</u>: {callDescription}</li>
+            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${callName}.${method}`}</span></li>
+            <li><u>Type</u>: {call.type}</li>
+          </ul>
+        </div>
       )
-      calls.push(formattedCalls);
-      Expandable.push(callName);
+      childCalls.push(item);
     });
-  }
+    const header = callName.charAt(0).toUpperCase() + callName.slice(1);
+    const formattedCalls = (
+      <div key={callName}>
+        <span><b id={`${callName}-button`} style={TreeControl} onClick={() => { ToggleExpand(callName) }}>+</b>&nbsp;<b>{header}</b></span>
+        <div id={callName} style={TopLevelDiv}>
+          <ul style={NoMargin}>
+            {childCalls}
+          </ul>
+        </div>
+      </div >
+    )
+    calls.push(formattedCalls);
+    Expandable.push(callName);
+  });
 
   // RPC Methods
   const rpcKeys = Object.keys(api.rpc);
@@ -330,10 +335,11 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     rpcMethods.sort((a, b) => a.localeCompare(b));
     rpcMethods.forEach(method => {
       const rpc = api.rpc[key][method].meta;
+      const rpcDescription = FormatDescription(rpc.description);
       let params = "(";
       if (rpc.params.length > 0) {
         rpc.params.forEach(param => {
-          params += `${param.name}: ${param.type}, `
+          params += `${param.name}: ${param.type}, `;
         })
         params = `${params.slice(0, -2)})`;
       }
@@ -342,10 +348,10 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
         <div key={`${key}.${method}`}>
           <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
           <ul style={NoMargin}>
-            <li>{`Description: ${rpc.description}`}</li>
-            <li>API Endpoint: <span style={PinkText}>{`api.rpc.${key}.${method}`}</span></li>
-            <li>{`Return Type: ${rpc.type}`}</li>
-            <li>{`Parameters: ${params}`}</li>
+            <li><u>Description</u>: {rpcDescription}</li>
+            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.rpc.${key}.${method}`}</span></li>
+            <li><u>Return Type</u>: {rpc.type}</li>
+            <li><u>Parameters</u>: {params}</li>
           </ul>
         </div>
       )
@@ -374,7 +380,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     <div>
       {dropdown}
       <br />
-      <b>{`@polkadot/api version ${PolkadotJSVersion}`}</b>
+      <b style={PinkText}>@polkadot/api</b><b>{` version ${PolkadotJSVersion}`}</b>
       <br />
       <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b></div>
       {/*<input type="text" placeholder="Search Metadata" style={{ border: "2px solid #000000", width: "225px", height: "40px", fontSize: "16px", textAlign: "center" }}/>*/}
@@ -399,6 +405,26 @@ function Camel(input) {
   return input.charAt(0).toLowerCase() + input.slice(1);
 }
 
+// If any sub-sections (Constants, Errors, Events, Storage) contain no children display "None"
+function IsEmpty(result) {
+  if (result.length === 0) { return (<p style={NoMargin}>None</p>) }
+  else { return result; }
+}
+
+// Format a description string
+function FormatDescription(description) {
+  let descriptionItems = description.split('`');
+  let output = [];
+  for (let i = 0; i < descriptionItems.length; i++) {
+    if (i % 2 === 0) {
+      output.push(<p key={i} style={DescriptionRegular}>{descriptionItems[i]}</p>)
+    } else {
+      output.push(<p key={i} style={DescriptionHighlighting}>{descriptionItems[i]}</p>)
+    }
+  }
+  return <span>{output}</span>;
+}
+
 // Display loading notification
 function ToggleLoading() {
   const el = document.getElementById("metadataLoading");
@@ -421,6 +447,7 @@ function ToggleExpand(id) {
   }
 }
 
+// Expand or collapse all divs
 function ExpandAll(bool) {
   Expandable.forEach(item => {
     const div = document.getElementById(item);
@@ -435,14 +462,10 @@ function ExpandAll(bool) {
   })
 }
 
-// If any sub-sections (Constants, Errors, Events, Storage) contain no children display "None"
-function IsEmpty(result) {
-  if (result.length === 0) { return (<p style={NoMargin}>None</p>) }
-  else { return result; }
-}
-
 // Styling
 const PinkText = { color: "#e6007a" };
+const DescriptionRegular = { margin: "0px", display: "inline" };
+const DescriptionHighlighting = { color: "#e6007a", margin: "0px", display: "inline", background: "#f0f0f0", paddingLeft: "5px", paddingRight: "5px" }
 const TopLevelDiv = { maxHeight: "0px", overflow: "hidden" };
 const CollapsedDiv = { maxHeight: "0px", overflow: "hidden", margin: "0px" };
 const NoMargin = { margin: "0px" };
