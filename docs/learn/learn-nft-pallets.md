@@ -12,8 +12,6 @@ NFT-related actions within their dApp.
 
 ## NFTs Pallet
 
-### Current Implementations
-
 NFTs is a [FRAME pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts) currently deployed
 on Westmint, which provides a multitude of functions to interact with NFTs.
 
@@ -21,13 +19,69 @@ The pallet comes with a new way to configure NFTs, as well as configure collecti
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling
 functionalities that are not needed in the runtime.
 
-Some features are common to the NFT world, such as:
+### Creating a Collection
+
+You can use the NFTs pallet to create NFTs collections. In the Polkadot-JS UI go to Developer >
+Extrinsic and select the `nfts.create` extrinsic.
+
+Under `config: PalletNftsCollectionConfig` you can configure your collection's specifying different
+settings in a bitflag-format (although Polkadot-JS UI does currently not support bitflags).
+
+- `maxSupply: Option` (toggle option) gives you the possibility to specify the maximum number of
+  items that can be minted.
+- `mintSettings: PalletNftsMintSettings` gives you the possibility to specify who can mint in your
+  collection:
+  - `Ìssuer`: only you can mint in your collection.
+  - `Public`: everyone can mint in your collection.
+  - `HoderOf`: only holders of items in another collection can mint in your collection. This
+    requires knowledge about the ID of the other collection. Collections IDs are auto-incremented.
+    This avoids to loop through all existing collections spamming RPC nodes with requests to find
+    out available IDs.
+- `price` (toggle option) gives you the possibility to specify the price of the items.
+- `startBlock`and `endBlock` give you the possibility to specify a time frame during which the
+  collection's configuration is valid (i.e. all option within `config: PalletNftsCollectionConfig`).
+
+With all these options, one can decide to modify the price of the collection's items as well as who
+can mint, receive or buy items in that collection. Time constraints are available with `startBlock`
+and `endBlock` parameters. It is thus possible, for example, to create a schedule in which holders
+of items in collection A (`HolderOf` parameter) will be able to claim for free a limited number of
+NFTs from Collection X (`maxSupply` parameter) only within a specific time frame. You can then
+modify the parameters so that anyone will be able to buy more NFTs from Collection X.
+
+This can be useful for events such as Hackathons where participant who bought a ticket receive the
+NFT ticket from Collection A. Then, to all holders of at least one item in Collection A (i.e. all
+ticket holders) will be given for free an avatar NFT from Collection X within the event time
+schedule. After the event, any additional remaining items in Collection X can be made available to
+the public through a marketplace.
+
+The requirement to get the free avatar is being holder of at least one NFT in Collection A. One can
+only claim the avatar specifying which NFT (i.e. the ID) owns in Collection A. The same NFT cannot
+be used twice, meaning that holders of multiple NFTs in Collection A (for example participants to
+multiple Hackathons) can claim multiple avatars specific to each event.
+
+:::warning Time frame must be updated
+
+Someone trying to mint an NFT outside the specified time frame will trigger a `NoConfig` error, as
+no configuration has been specified by the collection's admin after the time frame ends. The
+collection's admin must call the `updateMintSettings` extrinsic and add a new schedule or disable
+the block number option.
+
+:::
+
+After you minted an NFT, it is possible to check which NFT IDs you own under which collection. In
+the Polkadot-JS UI go to Developer > Chain State > Storage, select the `nfts.account` extrinsic,
+specify the account owning the NFT and the collection ID.
+
+### Minting an NFT
+
+### Other Actions
 
 - Buying an item up for sale.
-- Creating (i.e., mint) and burning (i.e., destroy) a collection of items or a single item (burning
-  must be signed either by the admin of the collection or the owner). Creating an item usually
-  involves setting some attributes specific to that item. Creating a collection also requires the
-  specification of the maximum number of items.
+
+- Creating (i.e., mint) and burning (i.e., destroy) items or a single item (burning must be signed
+  either by the admin of the collection or the owner). Creating an item usually involves setting
+  some attributes specific to that item. Creating a collection also requires the specification of
+  the maximum number of items.
 
   [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
   collections:
@@ -42,38 +96,6 @@ Some features are common to the NFT world, such as:
   - force mint: minting bypassing mint settings
   - change max supply until it gets locked: possibility to change the supply for a limited amount of
     times
-
-  When creating a collection through the `nfts.create` extrinsic, one can decide to modify the price
-  of the collection's items as well as who can mint, receive or buy items in that collection. Time
-  constraints are also available with `startBlock` and `endBlock` parameters. It is thus possible,
-  for example, to create a schedule in which holders of items in collection A (`HolderOf` parameter)
-  will be able to claim for free a limited number of NFTs from Collection X (`maxSupply` parameter)
-  only within a specific time frame. You can then modify the parameters so that anyone will be able
-  to buy more NFTs from Collection X.
-
-  This can be useful for events such as Hackathons where participant who bought a ticket receive the
-  NFT ticket from Collection A. Then, to all holders of at least one item in Collection A (i.e. all
-  ticket holders) will be given for free an avatar NFT from Collection X within the event time
-  schedule. After the event, any additional remaining items in Collection X can be made available to
-  the public through a marketplace.
-
-  The requirement to get the free avatar is being holder of at least one NFT in Collection A. One
-  can only claim the avatar specifying which NFT (i.e. the ID) owns in Collection A. The same NFT
-  cannot be used twice, meaning that holders of multiple NFTs in Collection A (for example
-  participants to multiple Hackathons) can claim multiple avatars specific to each event.
-
-  :::warning Time frame must be updated
-
-  Someone trying to mint an NFT outside the specified time frame will trigger a `NoConfig` error, as
-  no configuration has been specified by the collection's admin after the time frame ends. The
-  collection's admin must call the `updateMintSettings` extrinsic and add a new schedule or disable
-  the block number option.
-
-  :::
-
-  After you minted an NFT, it is possible to check which NFT IDs you own under which collection. In
-  the Polkadot-JS UIm go to Developer > Chain State > Storage, select the `nfts.account` extrinsic,
-  specify the account owning the NFT and the collection ID.
 
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
