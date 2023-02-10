@@ -71,158 +71,24 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   pallets.sort((a, b) => a.name.localeCompare(b.name));
   let palletData = [];
   pallets.forEach(pallet => {
-    // Pallet Name
-    const name = <b>{pallet.name}</b>;
+    // Pallet extractions
+    const constants = BuildPalletItems(pallet, api.consts[`${Camel(pallet.name)}`], "constants", types);
+    const errors = BuildPalletItems(pallet, api.errors[`${Camel(pallet.name)}`], "errors", types);
+    let events = BuildPalletItems(pallet, api.events[`${Camel(pallet.name)}`], "events", types);
+    let extrinsics = BuildPalletItems(pallet, api.tx[`${Camel(pallet.name)}`], "extrinsics", types);
+    let storage = BuildPalletItems(pallet, api.query[Camel(pallet.name)], "storage", types);
 
-    // Pallet Constants
-    let constants = [];
-    pallet.constants.sort((a, b) => a.name.localeCompare(b.name));
-    pallet.constants.forEach(constant => {
-      let constObj = api["consts"][`${Camel(pallet.name)}`][`${Camel(constant.name)}`];
-      if (constObj !== undefined) {
-        const constantType = types[constant.type].type.def;
-        const constantDescription = FormatDescription(constant.docs.join(" "));
-        const item = (
-          <li key={constant.name}>
-            <b>{constant.name}</b>
-            <ul>
-              <li><u>Description</u>: {constantDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(constant.name)}`}</span></li>
-              <li><u>Chain Value</u>: <span style={PinkText}>{`${JSON.stringify(constObj)}`}</span></li>
-              <li><u>Chain Value Type</u>: {`${Object.keys(constantType)[0]} - ${Object.values(constantType)[0]}`}</li>
-            </ul>
-          </li>
-        )
-        constants.push(item);
-      } else {
-        console.log(`Excluding: ${Camel(pallet.name)}.${Camel(constant.name)}`)
-      }
-    });
-    constants = IsEmpty(constants);
-
-    // Pallet Errors
-    let errors = [];
-    const errorClass = api.errors[`${Camel(pallet.name)}`];
-    if (errorClass !== undefined) {
-      const errorNames = Object.keys(errorClass);
-      errorNames.sort((a, b) => a.localeCompare(b));
-      errorNames.forEach(errorName => {
-        const rawError = api.errors[`${Camel(pallet.name)}`][errorName];
-        const error = rawError.meta.toHuman();
-        const errorDescription = FormatDescription(error.docs.join(" "));
-        const item = (
-          <li key={`${pallet.name}.${error.name}`}>
-            <b>{error.name}</b>
-            <ul>
-              <li><u>Description</u>: {errorDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${errorName}`}</span></li>
-            </ul>
-          </li>
-        )
-        errors.push(item);
-      });
-    } else {
-      console.log(`Excluding: api.errors.${Camel(pallet.name)}`)
-    }
-    errors = IsEmpty(errors);
-
-    // Pallet Events
-    let events = [];
-    const eventsClass = api.events[`${Camel(pallet.name)}`];
-    if (eventsClass !== undefined) {
-      const eventNames = Object.keys(eventsClass);
-      eventNames.sort((a, b) => a.localeCompare(b));
-      eventNames.forEach(eventName => {
-        const rawEvent = api.events[`${Camel(pallet.name)}`][eventName];
-        const event = rawEvent.meta.toHuman();
-        const eventDescription = FormatDescription(event.docs.join(" "));
-        const item = (
-          <li key={`${pallet.name}.${event.name}`}>
-            <b>{event.name}</b>
-            <ul>
-              <li><u>Description</u>: {eventDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${eventName}`}</span></li>
-              <li><u>Fields</u>: {FormatArgs(event, "events")}</li>
-            </ul>
-          </li>
-        )
-        events.push(item);
-      });
-    } else {
-      console.log(`Excluding: api.events.${Camel(pallet.name)}`)
-    }
-    events = IsEmpty(events);
-
-    // Extrinsics
-    let extrinsics = [];
-    const palletExtrinsics = api.tx[Camel(pallet.name)];
-    if (palletExtrinsics !== undefined) {
-      const keys = Object.keys(palletExtrinsics);
-      keys.forEach(key => {
-        const meta = api.tx[Camel(pallet.name)][Camel(key)].meta.toHuman();
-        const extrinsicDescription = FormatDescription(meta.docs.join(" "));
-        const extrinsicItem = (
-          <li key={`api.tx.${Camel(pallet.name)}.${Camel(key)}`}>
-            <b>{key.charAt(0).toUpperCase() + key.slice(1)}</b>
-            <ul>
-              <li><u>Description</u>: {extrinsicDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li><u>Parameters</u>: {FormatArgs(meta, "extrinsics")}</li>
-            </ul>
-          </li>
-        )
-        extrinsics.push(extrinsicItem);
-      })
-    } else {
-      console.log(`Excluding: api.tx.${Camel(pallet.name)}`)
-    }
-    extrinsics = IsEmpty(extrinsics);
-
-    // Pallet Storage
-    let storage = [];
-    if (pallet.storage !== null && pallet.storage.hasOwnProperty("items")) {
-      const storagePrefix = pallet.storage.prefix;
-      pallet.storage.items.sort((a, b) => a.name.localeCompare(b.name));
-      pallet.storage.items.forEach(item => {
-        const storageDescription = FormatDescription(item.docs.join(" "));
-        const typeKey = Object.keys(item.type)[0];
-        let storageType;
-        // TODO - this needs improvements to more efficiently unwrap types
-        if (typeKey === "Plain") {
-          storageType = types[item.type[typeKey]].type.def;
-        } else if (typeKey === "Map") {
-          storageType = types[item.type[typeKey].key].type.def;
-        } else {
-          console.log("Unknown Storage Type");
-        }
-        const storageItem = (
-          <li key={item.name}>
-            <b>{`${item.name}`}</b>
-            <ul>
-              <li><u>Description</u>: {storageDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.query.${Camel(storagePrefix)}.${Camel(item.name)}`}</span></li>
-              <li><u>Return Type</u>: {`${Object.keys(storageType)[0]} - ${Object.values(storageType)[0]}`}</li>
-            </ul>
-          </li>
-        )
-        storage.push(storageItem);
-      });
-    } else {
-      console.log(`Excluding: api.query.${Camel(pallet.name)}`)
-    }
-    storage = IsEmpty(storage);
-
-    // Format sub-categories
-    const constantElements = BuildPalletSection(pallet.name, "constants", constants);
-    const errorElements = BuildPalletSection(pallet.name, "errors", errors);
-    const eventElements = BuildPalletSection(pallet.name, "event", events);
-    const extrinsicElements = BuildPalletSection(pallet.name, "extrinsics", extrinsics);
-    const storageElements = BuildPalletSection(pallet.name, "storage", storage);
+    // Format pallet extractions for rendering
+    const constantElements = CompilePalletSection(pallet.name, "constants", constants);
+    const errorElements = CompilePalletSection(pallet.name, "errors", errors);
+    const eventElements = CompilePalletSection(pallet.name, "event", events);
+    const extrinsicElements = CompilePalletSection(pallet.name, "extrinsics", extrinsics);
+    const storageElements = CompilePalletSection(pallet.name, "storage", storage);
 
     // Compile all elements for the given pallet
     palletData.push(
       <div key={pallet.name}>
-        <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;{name}</span>
+        <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;<b>{pallet.name}</b></span>
         <div id={pallet.name} style={TopLevelDiv}>
           {constantElements}
           {errorElements}
@@ -236,12 +102,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     Expandable.push(`${pallet.name}-constants`, `${pallet.name}-errors`, `${pallet.name}-events`, `${pallet.name}-extrinsics`, `${pallet.name}-storage`);
   });
 
-  // RPC Methods
-  const rpcs = ConstructElements(api.rpc, "rpc");
-  console.log(rpcs);
-  // Runtime
-  const calls = ConstructElements(api.call, "runtime");
-  console.log(calls);
+  // Extract RPC and Runtime data
+  const rpcs = BuildRPCOrRuntime(api.rpc, "rpc");
+  const runtime = BuildRPCOrRuntime(api.call, "runtime");
 
   ToggleLoading();
 
@@ -264,12 +127,89 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       {rpcs}
       <br />
       <b>Runtime:</b>
-      {calls}
+      {runtime}
     </div>
   );
 }
 
-function ConstructElements(call, type) {
+// Format lists for a given pallet invocation
+function BuildPalletItems(pallet, call, type, types) {
+  let output = [];
+  if (call !== undefined && call !== null) {
+    const keys = Object.keys(call).sort((a, b) => a.localeCompare(b));
+    keys.forEach(key => {
+      const meta = call[key].meta.toHuman();
+      const description = FormatDescription(meta.docs.join(" "));
+      const keyUpper = key.charAt(0).toUpperCase() + key.slice(1);
+      let list;
+      switch (type) {
+        case "constants":
+          const constType = types[meta.type].type.def;
+          list = (
+            <ul>
+              <li><u>Description</u>: {description}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li><u>Chain Value</u>: <span style={PinkText}>{`${JSON.stringify(call[key])}`}</span></li>
+              <li><u>Chain Value Type</u>: {`${Object.keys(constType)[0]} - ${Object.values(constType)[0]}`}</li>
+            </ul>
+          )
+          break;
+        case "errors":
+          list = (
+            <ul>
+              <li><u>Description</u>: {description}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+            </ul>
+          )
+          break;
+        case "events":
+          list = (
+            <ul>
+              <li><u>Description</u>: {description}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li><u>Fields</u>: {FormatArgs(meta, "events")}</li>
+            </ul>
+          )
+          break;
+        case "extrinsics":
+          list = (
+            <ul>
+              <li><u>Description</u>: {description}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li><u>Parameters</u>: {FormatArgs(meta, "extrinsics")}</li>
+            </ul>
+          )
+          break;
+        case "storage":
+          list = (
+            <ul>
+              <li><u>Description</u>: {description}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.query.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li><u>Return Type</u>: {FormatArgs(meta, "storage", types)}</li>
+            </ul>
+          )
+          break;
+        default:
+          item = undefined;
+          break;
+      }
+      const item = (
+        <li key={key}>
+          <b>{keyUpper}</b>
+          {list}
+        </li>
+      )
+      output.push(item);
+    });
+  } else {
+    console.log(`No ${type} found for ${pallet.name}`);
+  }
+  output = IsEmpty(output);
+  return output;
+}
+
+// Format lists for a given RPC or runtime
+function BuildRPCOrRuntime(call, type) {
   let output = [];
   const keys = Object.keys(call);
   keys.sort((a, b) => a.localeCompare(b));
@@ -343,7 +283,7 @@ function IsEmpty(result) {
 }
 
 // Construction pallet sub-categories (constants, errors, events, extrinsics, storage)
-function BuildPalletSection(palletName, category, items) {
+function CompilePalletSection(palletName, category, items) {
   return (
     <ul style={NoMargin}>
       <span>
@@ -372,7 +312,7 @@ function FormatDescription(description) {
 }
 
 // Extract and format arguments from metadata
-function FormatArgs(item, type) {
+function FormatArgs(item, type, types=null) {
   let params = "(";
   if (type === "rpc") {
     item.params.forEach(param => {
@@ -385,6 +325,18 @@ function FormatArgs(item, type) {
   } else if (type === "events") {
     for (let i = 0; i < item.args.length; i++) {
       params += `${item.fields[i].typeName}: ${item.args[i]}, `
+    }
+  } else if (type === "storage") {
+    const key = Object.keys(item.type)[0];
+    // TODO - still need to further decode tuple types
+    if (key === "Plain") {
+      const type = types[item.type[key]].type.def;
+      params += `${Object.keys(type)[0]}: ${Object.values(type)[0]}, `
+    } else if (key === "Map") {
+      const type = types[item.type[key].key].type.def;
+      params += `${Object.keys(type)[0]}: ${Object.values(type)[0]}, `
+    } else {
+      console.log("Unknown Storage Type");
     }
   }
   params = `${params.slice(0, -2)})`;
