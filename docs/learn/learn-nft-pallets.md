@@ -45,9 +45,10 @@ Some features are common to the NFT world, such as:
 
   One can decide to modify the price of a collection's items as well as who can receive or buy those
   items. Time constraints are also available with `startBlock` and `endBlock` parameters. It is thus
-  possible, for example, to create an automatic schedule in which holders of items in collection A
-  will receive free NFTs from Collection X only within a specific time frame, after which holders of
-  collection B will be able to buy NFTs from Collection X.
+  possible, for example, to create a schedule in which holders of items in collection A (`HolderOf`
+  parameter) will receive free NFTs from Collection X only within a specific time frame. You can
+  then modify the parameters so that holders of collection B will be able to buy NFTs from
+  Collection X.
 
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
