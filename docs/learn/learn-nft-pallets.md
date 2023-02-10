@@ -34,7 +34,7 @@ specifying different settings:
     change the supply for a limited amount of times),
   - Deposit required.
 
-Everything is unlocked by default.
+Everything is unlocked by default (bitflag `0`).
 
 - `maxSupply: Option` (toggle option) gives you the possibility to specify the maximum number of
   items that can be minted.
@@ -93,20 +93,29 @@ the block number option.
 
 After you minted an NFT, it is possible to check which NFT IDs you own under which collection. In
 the Polkadot-JS UI go to Developer > Chain State > Storage, select the `nfts.account` extrinsic,
-specify the account owning the NFT and the collection ID.
+specify the account owning the NFT and the collection ID. You can also see all the collections you
+own by selecting the `collectionAccount` extrinsic.
 
 ### Minting an NFT
+
+You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the followings:
+
+- `collection`, the collection ID where you want to mint
+- `item`, the item ID (auto-incremented)
+- `mintTo`, the account
+- `witnessData` (toggle option), you can specify if you own an NFT in another collection
+
+Creating an item usually involves setting some attributes specific to that item.
 
 ### Other Actions
 
 - Buying an item up for sale
-- Creating (i.e., mint) and burning (i.e., destroy) items or a single item (burning must be signed
-  either by the admin of the collection or the owner). Creating an item usually involves setting
-  some attributes specific to that item.
+- Burning (i.e., destroy) items or a single item (burning must be signed either by the admin of the
+  collection or the owner).
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
-  permission to other entities (another account, an application, etc.) to update attributes of an
-  NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
-  over time (sort of a rank) with a consequent upgrade in membership permissions.
+  permission to other entities (another account, an application, an oracle, etc.) to update
+  attributes of an NFT. An example could be that all Polkadot fellowship members have an NFT badge
+  that gets updated over time (sort of a rank) with a consequent upgrade in membership permissions.
 - A collection is managed by the
   [Issuer, the Admin and the Freezer](./learn-assets.md#creation-and-management). Those roles can be
   changed anytime, and there will be the option to attach
