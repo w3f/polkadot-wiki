@@ -26,13 +26,13 @@ Extrinsic and select the `nfts.create` extrinsic. When you create a collection y
 is the admin. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection's
 specifying different settings:
 
-- `settings` you can specify (in a bitflag-format) settings for your collection
-  - Transferrable items: items can be non-transferrable (good for soul-bound NFTs)
-  - Unlocked metadata: metadata can be locked.
-  - Unlocked attributes: attributes can be locked.
+- `settings` you can specify (in a bitflag-format) settings for your collection:
+  - Transferrable items: items can be non-transferrable (good for soul-bound NFTs),
+  - Unlocked metadata: metadata can be locked,
+  - Unlocked attributes: attributes can be locked,
   - Unlocked max supply: allows to change the max supply until it gets locked (i.e. possibility to
-    change the supply for a limited amount of times)
-  - Deposit required
+    change the supply for a limited amount of times),
+  - Deposit required.
 
 Everything is unlocked by default.
 
@@ -51,6 +51,18 @@ Everything is unlocked by default.
   - `startBlock`and `endBlock` give you the possibility to specify a time frame during which the
     collection's configuration is valid (i.e. all option within
     `config: PalletNftsCollectionConfig`).
+  - [other mint settings](https://github.com/paritytech/substrate/pull/12483) include:
+    - wave minting, for example mint X number of items that go to collection owners and Y number of
+      items for the public
+    - force mint: minting bypassing mint settings
+
+:::info
+
+Metadata, attributes, and settings of an item or collection can be locked. The user can decide what
+to lock. Also, unauthorized and/or unprivileged transfers can be prevented by locking mechanism
+(unprivileged actions can be re-allowed anytime).
+
+:::
 
 With all these options, one can decide to modify the price of the collection's items as well as who
 can mint, receive or buy items in that collection. Time constraints are available with `startBlock`
@@ -87,20 +99,10 @@ specify the account owning the NFT and the collection ID.
 
 ### Other Actions
 
-- Buying an item up for sale.
-
+- Buying an item up for sale
 - Creating (i.e., mint) and burning (i.e., destroy) items or a single item (burning must be signed
   either by the admin of the collection or the owner). Creating an item usually involves setting
   some attributes specific to that item.
-
-  [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
-  collections:
-
-  - public mints: everyone can mint an asset in your collection (good for soul-bound collections)
-  - wave minting: mint X number of items that go to collection owners and Y number of items for the
-    public
-  - force mint: minting bypassing mint settings
-
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
   NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
@@ -117,14 +119,6 @@ specify the account owning the NFT and the collection ID.
 - Transferring an item, as well as creating and canceling transfer approvals of a specific item, or
   an [atomic swap](https://github.com/paritytech/substrate/pull/12285).
 - Transferring ownership of an item.
-
-:::info
-
-Metadata, attributes, and settings of an item or collection can be locked. The user can decide what
-to lock. Also, unauthorized and/or unprivileged transfers can be prevented by locking mechanism
-(unprivileged actions can be re-allowed anytime).
-
-:::
 
 Other features include:
 
