@@ -33,7 +33,9 @@ Some features are common to the NFT world, such as:
   collections:
 
   - public mints: everyone can mint an asset in your collection (good for soul-bound collections)
-  - external mint: only holders of NFTs in another collection can mint in your collection
+  - external mint: only holders of NFTs in another collection can mint in your collection. This
+    requires knowledge about the ID of the other collection. Collections IDs are auto-incremented.
+    This avoids to loop through all existing collections to find out available IDs.
   - wave minting: mint X number of items that go to collection owners and Y number of items for the
     public
   - force mint: minting bypassing mint settings
