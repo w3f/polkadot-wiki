@@ -69,6 +69,10 @@ Some features are common to the NFT world, such as:
 
   :::
 
+  After you minted an NFT, it is possible to check which NFT IDs you own under which collection. In
+  the Polkadot-JS UIm go to Developer > Chain State > Storage, select the `nfts.account` extrinsic,
+  specify the account owning the NFT and the collection ID.
+
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
   NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
