@@ -74,9 +74,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     // Pallet extractions
     const constants = BuildPalletItems(pallet, api.consts[`${Camel(pallet.name)}`], "constants", types);
     const errors = BuildPalletItems(pallet, api.errors[`${Camel(pallet.name)}`], "errors", types);
-    let events = BuildPalletItems(pallet, api.events[`${Camel(pallet.name)}`], "events", types);
-    let extrinsics = BuildPalletItems(pallet, api.tx[`${Camel(pallet.name)}`], "extrinsics", types);
-    let storage = BuildPalletItems(pallet, api.query[Camel(pallet.name)], "storage", types);
+    const events = BuildPalletItems(pallet, api.events[`${Camel(pallet.name)}`], "events", types);
+    const extrinsics = BuildPalletItems(pallet, api.tx[`${Camel(pallet.name)}`], "extrinsics", types);
+    const storage = BuildPalletItems(pallet, api.query[Camel(pallet.name)], "storage", types);
 
     // Format pallet extractions for rendering
     const constantElements = CompilePalletSection(pallet.name, "constants", constants);
