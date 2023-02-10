@@ -4,7 +4,7 @@
 
 <div align="Center">
 <h1>Polkadot Wiki</h1>
-<h3> The Source of Truth for Polkadot(El Código fuente de Polkadot) </h3>
+<h3> The Source of Truth for Polkadot.<br>(El Código fuente de Polkadot) </h3>
 <br>
   
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE)
