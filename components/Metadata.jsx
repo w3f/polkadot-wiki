@@ -299,7 +299,7 @@ function CompilePalletSection(palletName, category, items) {
 
 // Format a description string
 function FormatDescription(description) {
-  let descriptionItems = description.split('`');
+  let descriptionItems = description.split("`");
   let output = [];
   for (let i = 0; i < descriptionItems.length; i++) {
     if (i % 2 === 0) {
