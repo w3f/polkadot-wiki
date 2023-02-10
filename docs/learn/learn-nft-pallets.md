@@ -43,12 +43,19 @@ Some features are common to the NFT world, such as:
   - change max supply until it gets locked: possibility to change the supply for a limited amount of
     times
 
+  One can decide to modify the price of a collection's items as well as who can receive or buy those
+  items. Time constraints are also available with `startBlock` and `endBlock` parameters. It is thus
+  possible, for example, to create an automatic schedule in which holders of items in collection A
+  will receive free NFTs from Collection X only within a specific time frame, after which holders of
+  collection B will be able to buy NFTs from Collection X.
+
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
   NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
   over time (sort of a rank) with a consequent upgrade in membership permissions.
-- A collection is managed by the Issuer, the Admin and the Freezer. Those roles can be changed
-  anytime, and there will be the option to attach
+- A collection is managed by the
+  [Issuer, the Admin and the Freezer](./learn-assets.md#creation-and-management). Those roles can be
+  changed anytime, and there will be the option to attach
   [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
 - Setting metadata for an item or collection (metadata includes all essential information about the
   item or the collection)
