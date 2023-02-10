@@ -128,9 +128,6 @@ Creating an item usually involves setting some attributes specific to that item.
 - Transferring an item, as well as creating and canceling transfer approvals of a specific item, or
   an [atomic swap](https://github.com/paritytech/substrate/pull/12285).
 - Transferring ownership of an item.
-
-Other features include:
-
 - Delegating accounts: delegated accounts can approve changes to an item's attributes and transfer
   an item. The item owner always has control and can decide to cancel approvals from a delegated
   account.
