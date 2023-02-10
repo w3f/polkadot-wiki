@@ -21,6 +21,12 @@ functionalities that are not needed in the runtime.
 
 ### Creating a Collection
 
+:::info
+
+Walkthrough video tutorial about creating a collection.
+
+:::
+
 You can use the NFTs pallet to create NFTs collections. In the Polkadot-JS UI go to Developer >
 Extrinsic and select the `nfts.create` extrinsic. When you create a collection you must specify who
 is the admin. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection's
@@ -98,6 +104,12 @@ own by selecting the `collectionAccount` extrinsic.
 
 ### Minting an NFT
 
+:::info
+
+Walkthrough video tutorial about minting an NFT.
+
+:::
+
 You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the followings:
 
 - `collection`, the collection ID where you want to mint
@@ -106,6 +118,16 @@ You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the f
 - `witnessData` (toggle option), you can specify if you own an NFT in another collection
 
 Creating an item usually involves setting some attributes specific to that item.
+
+### Example `HolderOf` Minting
+
+:::info
+
+Walkthrough video tutorial about minting an NFT restricted to holders of a specific collection.
+
+:::
+
+Example description goes here.
 
 ### Other Actions
 
