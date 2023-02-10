@@ -89,7 +89,7 @@ than the min enactment period.
 For every referendum in each of these tracks, the Polkadot-JS UI displays interactive graphs of the
 support and approval.
 
-[UI Support and Approval](./../assets/governance/support-approval-polkadot-js-ui.png)
+![UI Support and Approval](./../assets/governance/support-approval-polkadot-js-ui.png)
 
 ### Root
 
