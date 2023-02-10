@@ -4,7 +4,7 @@
 
 <div align="Center">
 <h1>Polkadot Wiki</h1>
-<h3> The Source of Truth for Polkadot </h3>
+<h3> The Source of Truth for Polkadot(El Código fuente de Polkadot) </h3>
 <br>
   
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE)
@@ -36,6 +36,9 @@
 <img align="right" src="https://user-images.githubusercontent.com/25497083/147788625-14e67f76-c53c-4992-8e84-d23cd78e88bd.png" width="250">
 
 <p align="left">
+  La Wiki de Polkadot es el repositorio central del ecosistema Polkadot. Es una iniciativa de comunidades monitorizado 
+  por La Fundación Web3 para mantener actualizados los recuros para el mejor desarrollo, aprendizaje y mantenimiento
+  del ecosistema Polkadot.
   The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by 
   Web3 Foundation to keep an up-to-date resource on the best information for learning, building, or maintaining 
   on Polkadot. 
