@@ -62,6 +62,13 @@ Some features are common to the NFT world, such as:
   cannot be used twice, meaning that holders of multiple NFTs in Collection A (for example
   participants to multiple Hackathons) can claim multiple avatars specific to each event.
 
+  :::warning Time frame must be updated
+
+  Someone trying to mint an NFT outside the specified time frame will trigger a `NoConfig` error, as
+  no configuration has been specified by the collection admin after the time frame ends.
+
+  :::
+
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
   NFT. An example could be that all Polkadot fellowship members have an NFT badge that gets updated
