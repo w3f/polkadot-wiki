@@ -65,7 +65,7 @@ Some features are common to the NFT world, such as:
   :::warning Time frame must be updated
 
   Someone trying to mint an NFT outside the specified time frame will trigger a `NoConfig` error, as
-  no configuration has been specified by the collection admin after the time frame ends.
+  no configuration has been specified by the collection's admin after the time frame ends.
 
   :::
 
