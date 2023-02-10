@@ -45,8 +45,10 @@ pallet.
 Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of
 transactions supported. It could be possible that some transactions are supported only on a specific
 version of the app and some transactions are not supported at all by any version. For instance, the
-staking `rebag` extrinsic is supported on the XL version but not on the light version. The
-`setIdentity` extrinsic is not supported by any of the app versions.
+staking `rebag` extrinsic is supported on the XL version but not on the light version. Support for
+the XL version is limited to singe calls (not batch calls), meaning that you can rebag one account
+at a time. Also joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible
+with the XL version. The `setIdentity` extrinsic is not supported by any of the app versions.
 
 :::
 

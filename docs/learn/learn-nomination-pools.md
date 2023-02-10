@@ -39,7 +39,10 @@ system’s scalability. Now, anyone with as little as
 :::note
 
 Learn the key differences between
-[**Staking directly vs Joining a Nomination Pool**](../maintain/maintain-guides-how-to-nominate-polkadot.md#nominating-vs-joining-a-pool).
+[**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool).
+
+**For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot
+Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
 
 :::
 
