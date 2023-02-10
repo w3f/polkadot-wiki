@@ -48,7 +48,9 @@ Some features are common to the NFT world, such as:
   possible, for example, to create a schedule in which holders of items in collection A (`HolderOf`
   parameter) will receive free NFTs from Collection X only within a specific time frame. You can
   then modify the parameters so that holders of collection B will be able to buy NFTs from
-  Collection X.
+  Collection X. This can be useful for events such as Hackathons where NFTs can be be minted and
+  given for free to participants within the event time schedule, and then additional remaining items
+  can be made available to the public through a marketplace.
 
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
