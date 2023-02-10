@@ -22,24 +22,35 @@ functionalities that are not needed in the runtime.
 ### Creating a Collection
 
 You can use the NFTs pallet to create NFTs collections. In the Polkadot-JS UI go to Developer >
-Extrinsic and select the `nfts.create` extrinsic.
+Extrinsic and select the `nfts.create` extrinsic. When you create a collection you must specify who
+is the admin. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection's
+specifying different settings:
 
-Under `config: PalletNftsCollectionConfig` you can configure your collection's specifying different
-settings in a bitflag-format (although Polkadot-JS UI does currently not support bitflags).
+- `settings` you can specify (in a bitflag-format) settings for your collection
+  - Transferrable items: items can be non-transferrable (good for soul-bound NFTs)
+  - Unlocked metadata: metadata can be locked.
+  - Unlocked attributes: attributes can be locked.
+  - Unlocked max supply: allows to change the max supply until it gets locked (i.e. possibility to
+    change the supply for a limited amount of times)
+  - Deposit required
+
+Everything is unlocked by default.
 
 - `maxSupply: Option` (toggle option) gives you the possibility to specify the maximum number of
   items that can be minted.
-- `mintSettings: PalletNftsMintSettings` gives you the possibility to specify who can mint in your
-  collection:
-  - `Ìssuer`: only you can mint in your collection.
-  - `Public`: everyone can mint in your collection.
-  - `HoderOf`: only holders of items in another collection can mint in your collection. This
-    requires knowledge about the ID of the other collection. Collections IDs are auto-incremented.
-    This avoids to loop through all existing collections spamming RPC nodes with requests to find
-    out available IDs.
-- `price` (toggle option) gives you the possibility to specify the price of the items.
-- `startBlock`and `endBlock` give you the possibility to specify a time frame during which the
-  collection's configuration is valid (i.e. all option within `config: PalletNftsCollectionConfig`).
+- `mintSettings: PalletNftsMintSettings` gives you the possibility to specify different settings for
+  your collection.
+  - `mintType` gives you the possibility to specify who can mint in your collection:
+    - `Ìssuer`: only you can mint in your collection.
+    - `Public`: everyone can mint in your collection.
+    - `HoderOf`: only holders of items in another collection can mint in your collection. This
+      requires knowledge about the ID of the other collection. Collections IDs are auto-incremented.
+      This avoids to loop through all existing collections spamming RPC nodes with requests to find
+      out available IDs.
+  - `price` (toggle option) gives you the possibility to specify the price of the items.
+  - `startBlock`and `endBlock` give you the possibility to specify a time frame during which the
+    collection's configuration is valid (i.e. all option within
+    `config: PalletNftsCollectionConfig`).
 
 With all these options, one can decide to modify the price of the collection's items as well as who
 can mint, receive or buy items in that collection. Time constraints are available with `startBlock`
@@ -80,22 +91,15 @@ specify the account owning the NFT and the collection ID.
 
 - Creating (i.e., mint) and burning (i.e., destroy) items or a single item (burning must be signed
   either by the admin of the collection or the owner). Creating an item usually involves setting
-  some attributes specific to that item. Creating a collection also requires the specification of
-  the maximum number of items.
+  some attributes specific to that item.
 
   [Different settings](https://github.com/paritytech/substrate/pull/12483) are available for minting
   collections:
 
   - public mints: everyone can mint an asset in your collection (good for soul-bound collections)
-  - external mint: only holders of NFTs in another collection can mint in your collection. This
-    requires knowledge about the ID of the other collection. Collections IDs are auto-incremented.
-    This avoids to loop through all existing collections spamming RPC nodes with requests to find
-    out available IDs.
   - wave minting: mint X number of items that go to collection owners and Y number of items for the
     public
   - force mint: minting bypassing mint settings
-  - change max supply until it gets locked: possibility to change the supply for a limited amount of
-    times
 
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
@@ -122,7 +126,7 @@ to lock. Also, unauthorized and/or unprivileged transfers can be prevented by lo
 
 :::
 
-Other features are less common and include:
+Other features include:
 
 - Delegating accounts: delegated accounts can approve changes to an item's attributes and transfer
   an item. The item owner always has control and can decide to cancel approvals from a delegated
