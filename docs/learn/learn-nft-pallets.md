@@ -43,14 +43,24 @@ Some features are common to the NFT world, such as:
   - change max supply until it gets locked: possibility to change the supply for a limited amount of
     times
 
-  One can decide to modify the price of a collection's items as well as who can receive or buy those
-  items. Time constraints are also available with `startBlock` and `endBlock` parameters. It is thus
-  possible, for example, to create a schedule in which holders of items in collection A (`HolderOf`
-  parameter) will receive free NFTs from Collection X only within a specific time frame. You can
-  then modify the parameters so that holders of collection B will be able to buy NFTs from
-  Collection X. This can be useful for events such as Hackathons where NFTs can be be minted and
-  given for free to participants within the event time schedule, and then additional remaining items
-  can be made available to the public through a marketplace.
+  When creating a collection through the `nfts.create` extrinsic, one can decide to modify the price
+  of the collection's items as well as who can mint, receive or buy items in that collection. Time
+  constraints are also available with `startBlock` and `endBlock` parameters. It is thus possible,
+  for example, to create a schedule in which holders of items in collection A (`HolderOf` parameter)
+  will be able to claim for free a limited number of NFTs from Collection X (`maxSupply` parameter)
+  only within a specific time frame. You can then modify the parameters so that anyone will be able
+  to buy more NFTs from Collection X.
+
+  This can be useful for events such as Hackathons where participant who bought a ticket receive the
+  NFT ticket from Collection A. Then, to all holders of at least one item in Collection A (i.e. all
+  ticket holders) will be given for free an avatar NFT from Collection X within the event time
+  schedule. After the event, any additional remaining items in Collection X can be made available to
+  the public through a marketplace.
+
+  The requirement to get the free avatar is being holder of at least one NFT in Collection A. One
+  can only claim the avatar specifying which NFT (i.e. the ID) owns in Collection A. The same NFT
+  cannot be used twice, meaning that holders of multiple NFTs in Collection A (for example
+  participants to multiple Hackathons) can claim multiple avatars specific to each event.
 
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
   permission to other entities (another account, an application, etc.) to update attributes of an
