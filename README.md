@@ -45,7 +45,12 @@
 </p>
 
 ## Contributing to Documentation
-
+El equipo Tecnico Educativo de La Fundación Web3 maneja el mantenimiento primario de la Wiki
+y revisará todos los asuntos y solicitudes de cambios creados en este repositorio. Si notas
+erratas o errores gramaticales, puede por favor crear una solicitud de cambios con esas correcciones
+directamente. La mayoría de las contribuciones se inician como asuntos para comprobar el funcionamiento
+en las partes con los equipos de mantenimiento. Generalmente se prefire una solicitud de cambios sobre
+un aunto que propondr
 The Technical Education team at Web3 Foundation are the primary maintainers of the Wiki and will
 review all issues and pull requests created in this repository. If you notice typos or grammatical
 errors, please feel free to create pull requests with these corrections directly. Larger
