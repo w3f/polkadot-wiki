@@ -237,84 +237,11 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   });
 
   // RPC Methods
-  const rpcKeys = Object.keys(api.rpc);
-  rpcKeys.sort((a, b) => a.localeCompare(b));
-  let rpcs = [];
-  rpcKeys.forEach(key => {
-    let methods = [];
-    const rpcMethods = Object.keys(api.rpc[key]);
-    rpcMethods.sort((a, b) => a.localeCompare(b));
-    rpcMethods.forEach(method => {
-      const rpc = api.rpc[key][method].meta;
-      const rpcDescription = FormatDescription(rpc.description);
-      const item = (
-        <div key={`${key}.${method}`}>
-          <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
-          <ul style={NoMargin}>
-            <li><u>Description</u>: {rpcDescription}</li>
-            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.rpc.${key}.${method}`}</span></li>
-            <li><u>Return Type</u>: {rpc.type}</li>
-            <li><u>Parameters</u>: {FormatArgs(rpc, "rpc")}</li>
-          </ul>
-        </div>
-      )
-      methods.push(item);
-    })
-    methods = IsEmpty(methods);
-    const header = key.charAt(0).toUpperCase() + key.slice(1);
-    const formattedRPC = (
-      <div key={key}>
-        <span><b id={`${key}-button`} style={TreeControl} onClick={() => { ToggleExpand(key) }}>+</b>&nbsp;<b>{header}</b></span>
-        <div id={key} style={TopLevelDiv}>
-          <ul style={NoMargin}>
-            {methods}
-          </ul>
-        </div>
-      </div >
-    )
-    rpcs.push(formattedRPC);
-    Expandable.push(key);
-  });
-
+  const rpcs = ConstructElements(api.rpc, "rpc");
+  console.log(rpcs);
   // Runtime
-  let calls = [];
-  const callKeys = Object.keys(api.call);
-  callKeys.sort((a, b) => a.localeCompare(b));
-  callKeys.forEach(key => {
-    let childCalls = [];
-    const methods = api.call[key];
-    const methodNames = Object.keys(methods);
-    methodNames.sort((a, b) => a.localeCompare(b));
-    methodNames.forEach(method => {
-      const call = methods[method].meta;
-      const callDescription = FormatDescription(call.description);
-      const item = (
-        <div key={`${key}.${method}`}>
-          <b>{`${method.charAt(0).toUpperCase() + method.slice(1)}`}</b>
-          <ul style={NoMargin}>
-            <li><u>Description</u>: {callDescription}</li>
-            <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${key}.${method}`}</span></li>
-            <li><u>Type</u>: {call.type}</li>
-          </ul>
-        </div>
-      )
-      childCalls.push(item);
-    });
-    childCalls = IsEmpty(childCalls);
-    const header = key.charAt(0).toUpperCase() + key.slice(1);
-    const formattedCalls = (
-      <div key={key}>
-        <span><b id={`${key}-button`} style={TreeControl} onClick={() => { ToggleExpand(key) }}>+</b>&nbsp;<b>{header}</b></span>
-        <div id={key} style={TopLevelDiv}>
-          <ul style={NoMargin}>
-            {childCalls}
-          </ul>
-        </div>
-      </div >
-    )
-    calls.push(formattedCalls);
-    Expandable.push(key);
-  });
+  const calls = ConstructElements(api.call, "runtime");
+  console.log(calls);
 
   ToggleLoading();
 
@@ -340,6 +267,68 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
       {calls}
     </div>
   );
+}
+
+function ConstructElements(call, type) {
+  let output = [];
+  const keys = Object.keys(call);
+  keys.sort((a, b) => a.localeCompare(b));
+  keys.forEach(key => {
+    let children = [];
+    const methods = call[key];
+    const methodKeys = Object.keys(methods);
+    methodKeys.sort((a, b) => a.localeCompare(b));
+    methodKeys.forEach(methodKey => {
+      const childCall = methods[methodKey].meta;
+      const callDescription = FormatDescription(childCall.description);
+      let listItems;
+      switch (type) {
+        case "rpc":
+          listItems = (
+            <ul style={NoMargin}>
+              <li><u>Description</u>: {callDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.rpc.${key}.${methodKey}`}</span></li>
+              <li><u>Return Type</u>: {childCall.type}</li>
+              <li><u>Parameters</u>: {FormatArgs(childCall, "rpc")}</li>
+            </ul>
+          )
+          break;
+        case "runtime":
+          listItems = (
+            <ul style={NoMargin}>
+              <li><u>Description</u>: {callDescription}</li>
+              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${key}.${methodKey}`}</span></li>
+              <li><u>Type</u>: {childCall.type}</li>
+            </ul>
+          )
+          break;
+        default:
+          break;
+      }
+      const item = (
+        <div key={`${key}.${methodKey}`}>
+          <b>{`${methodKey.charAt(0).toUpperCase() + methodKey.slice(1)}`}</b>
+          {listItems}
+        </div>
+      )
+      children.push(item);
+    });
+    children = IsEmpty(children);
+    const header = key.charAt(0).toUpperCase() + key.slice(1);
+    const formattedCalls = (
+      <div key={key}>
+        <span><b id={`${key}-button`} style={TreeControl} onClick={() => { ToggleExpand(key) }}>+</b>&nbsp;<b>{header}</b></span>
+        <div id={key} style={TopLevelDiv}>
+          <ul style={NoMargin}>
+            {children}
+          </ul>
+        </div>
+      </div >
+    )
+    output.push(formattedCalls);
+    Expandable.push(key);
+  });
+  return output;
 }
 
 // Enforce lower casings of first character on camel case api calls
