@@ -46,7 +46,7 @@ them also allow interaction with air-gapped wallets and hardware devices
 | ------------------------------------- | ------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
 | [Enkrypt](https://www.enkrypt.com/)   | Brave, Chrome, Edge, Firefox, Opera, Safari | No, No                       | **Yes** | No         | **Yes**        | No         | [Enkrypt Features](#enkrypt)     |
 | [PolkaGate](https://polkagate.xyz/)   | [Chrome](https://chrome.google.com/webstore/detail/polkagate-the-gateway-to/ginchbkmljhldofnbjabmeophlhdldgp), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkagate), [Edge](https://microsoftedge.microsoft.com/addons/detail/polkagate-the-gateway-to/eakellaeidmgcpifaofebhpcjienkajp)                             | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
-| [SubWallet](https://subwallet.app/)   | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
+| [SubWallet](https://subwallet.app/)   | [Brave](https://chrome.google.com/webstore/detail/subwallet-polkadot-extens/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Chrome](https://chrome.google.com/webstore/detail/subwallet-polkadot-extens/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Edge](https://chrome.google.com/webstore/detail/subwallet-polkadot-extens/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/subwallet/)                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 | [Talisman](https://www.talisman.xyz/) | Brave, Chrome, Edge, Firefox                | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [Talisman features](#talisman)   |
 
 :::info Ledger support only for chromium-based browsers
@@ -68,7 +68,7 @@ hardware wallets through bluetooth connectivity.
 | [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android              | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
 | [Nova Wallet](https://novawallet.io/)\*       | iOS, Android              | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android              | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | iOS (Testflight), Android | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
+| [SubWallet](https://subwallet.app/)           | [iOS (Testflight)](apple.co/3WafLpm), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
 
