@@ -33,12 +33,12 @@ is the admin. Then, under `config: PalletNftsCollectionConfig`, you can configur
 specifying different settings:
 
 - `settings` you can specify (in a bitflag-format) settings for your collection:
-  - Transferrable items: items can be non-transferrable (good for soul-bound NFTs),
-  - Unlocked metadata: metadata can be locked,
-  - Unlocked attributes: attributes can be locked,
-  - Unlocked max supply: allows to change the max supply until it gets locked (i.e. possibility to
-    change the supply for a limited amount of times),
-  - Deposit required.
+  - `Transferrable items`: when disabled, the items will be non-transferrable (good for soul-bound NFTs),
+  - `Unlocked metadata`: when disabled, the metadata will be locked,
+  - `Unlocked attributes`: when disabled, the attributes in the `CollectionOwner` namespace will be locked,
+  - `Unlocked max supply`: allows to change the max supply until it gets locked (i.e. the possibility to
+    change the supply for a limited amount of time),
+  - `Deposit required`: when disabled, no mint deposit will be taken for items. This option can be set by a super-user only.
 
 Everything is unlocked by default (bitflag value `0`).
 
