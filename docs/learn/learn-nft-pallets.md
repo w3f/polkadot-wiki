@@ -78,10 +78,10 @@ ticket holders) will be given free avatar NFT from Collection X within the event
 event, any additional remaining items in Collection X can be made available to the public through a
 marketplace.
 
-The requirement to get the free avatar is being a holder of at least one NFT in Collection A. One
-can only claim the avatar specifying which NFT (i.e. the ID) owns in Collection A. The same NFT
-cannot be used twice, meaning that holders of multiple NFTs in Collection A (for example,
-participants to multiple Hackathons) can claim multiple avatars specific to each event.
+The requirement to get the free avatar is to hold at least one NFT in Collection A. One
+can only claim the avatar specifying which NFT (i.e. the ID) they own in Collection A. The same NFT
+cannot be used twice. Holders of multiple NFTs in Collection A (for example,
+participants in multiple Hackathons) can claim multiple avatars specific to each event.
 
 :::warning Time frame must be updated
 
