@@ -113,7 +113,7 @@ Creating an item usually involves setting some attributes specific to that item.
 
 ### Other Actions
 
-- Buying an item up for sale
+- Buying an item up for sale.
 - Burning (i.e., destroy) items or a single item (burning must be signed either by the admin of the
   collection or the owner).
 - [Smart attributes](https://github.com/paritytech/substrate/pull/12702) allow an NFT owner to grant
