@@ -42,7 +42,7 @@ specifying different settings:
 
 Everything is unlocked by default (bitflag value `0`).
 
-- `maxSupply: Option` (toggle option) gives you the possibility to specify the maximum number of
+- `maxSupply` (toggle option) gives you the possibility to specify the maximum number of
   items that can be minted.
 - `mintSettings: PalletNftsMintSettings` gives you the possibility to specify different settings for
   your collection.
