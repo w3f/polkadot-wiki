@@ -103,7 +103,7 @@ When a collection is destroyed, no one can pick up the collection ID again (incl
 
 ### Minting an NFT
 
-You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the followings:
+You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the following:
 
 - `collection`, the collection ID where you want to mint
 - `item`, the item ID
