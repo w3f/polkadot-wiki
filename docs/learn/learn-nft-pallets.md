@@ -97,8 +97,9 @@ go to Developer > Chain State > Storage, select the `nfts.account` extrinsic, an
 account owning the NFT and the collection ID. You can also see all your collections by selecting the
 `collectionAccount` extrinsic.
 
-When a collection is destroyed, no one can pick up the collection ID again (including the owner).
 When a new collection is created, a new ID will be generated and assigned to that collection.
+When a collection is destroyed, no one can pick up the collection ID again (including the owner).
+
 
 ### Minting an NFT
 
