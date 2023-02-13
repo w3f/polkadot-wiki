@@ -33,7 +33,7 @@ of node operators to upgrade in advance of a given block number. Polkadot stakeh
 approve upgrades through the [on-chain governance](learn-governance.md) system, which also enacts
 them autonomously.
 
-## New [Client Releases](https://github.com/paritytech/polkadot/releases)
+## Client Releases
 
 The existing runtime logic is followed to update the [Wasm](learn-wasm.md) runtime stored on the
 blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all
@@ -50,6 +50,15 @@ it after the upgrade takes place.
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
 following the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading
 promptly, especially for high priority or critical releases.
+
+:::info New Client Releases
+
+The details about the latest client releases can be found on the
+[releases section on the Polkadot repository](<(https://github.com/paritytech/polkadot/releases)>).
+A detailed analysis for client releases can be viewed on the
+[Polkadot Forum](https://forum.polkadot.network/tag/release-analysis).
+
+:::
 
 ### Runtime vs Client versions
 
