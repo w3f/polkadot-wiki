@@ -21,9 +21,9 @@ functionalities that are not needed in the runtime.
 
 ### Creating a Collection
 
-You can use the NFTs pallet to create NFTs collections. In the Polkadot-JS UI, go to Developer >
+You can use the NFTs pallet to create NFT collections. In the Polkadot-JS UI, go to Developer >
 Extrinsic and select the `nfts.create` extrinsic. When you create a collection, you must specify who
-the admin is. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection's
+the admin is. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection by 
 specifying different settings:
 
 - `settings` you can specify (in a bitflag-format) settings for your collection:
