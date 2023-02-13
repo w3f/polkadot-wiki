@@ -98,6 +98,10 @@ the Polkadot-JS UI go to Developer > Chain State > Storage, select the `nfts.acc
 specify the account owning the NFT and the collection ID. You can also see all the collections you
 own by selecting the `collectionAccount` extrinsic.
 
+When a collection is destroyed, no-one would be able to pick the collection ID again (including the
+owner). When a new collection is created, a new ID will be generated and assigned to that
+collection.
+
 ### Minting an NFT
 
 You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the followings:
@@ -123,7 +127,7 @@ Creating an item usually involves setting some attributes specific to that item.
   changed anytime, and there will be the option to attach
   [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
 - Setting metadata for an item or collection (metadata includes all essential information about the
-  item or the collection)
+  item or the collection). Metadata could consists in any arbitrary data like the IPFS hash.
 - Setting or re-setting the price of an item.
 - Clearing attributes and metadata of a collection or an item.
 - Changing the owner of an item or a collection.
