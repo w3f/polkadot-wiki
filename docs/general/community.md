@@ -20,6 +20,7 @@ contact and anyone doing so is likely trying to scam you.
 
 ## General
 
+- [Polkadot Forum](https://forum.polkadot.network/)
 - [Polkadot GitHub](https://github.com/paritytech/polkadot) - Parity maintained repository that
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
@@ -83,7 +84,7 @@ you face any issues, join the rooms individually.
 - [Polkadot Discord](https://dot.li/discord) (RECOMMENDED)
 - [Kusama Discord](https://kusa.ma/discord)
 
-### Social media and forums
+### Social media
 
 - [Polkadot Twitter](https://twitter.com/Polkadot)
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
@@ -95,9 +96,6 @@ you face any issues, join the rooms individually.
 - [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
-
-- [Polkadot Forum](https://matrix.to/#/#polkadot-watercooler:web3.foundation)
-- [Kusama Forum](https://matrix.to/#/#kusamawatercooler:web3.foundation)
 
 ### Blogs and tutorials
 
