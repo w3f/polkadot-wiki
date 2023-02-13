@@ -40,7 +40,7 @@ specifying different settings:
     change the supply for a limited amount of times),
   - Deposit required.
 
-Everything is unlocked by default (bitflag `0`).
+Everything is unlocked by default (bitflag value `0`).
 
 - `maxSupply: Option` (toggle option) gives you the possibility to specify the maximum number of
   items that can be minted.
