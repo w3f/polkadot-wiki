@@ -23,19 +23,19 @@ for single calls (i.e., bonding and nominating).
 
 :::
 
-The Polkadot [Ledger](https://www.ledger.com/) application is compatible with both the Ledger Nano S
-and the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret key secured
-on a physical device that does not expose it to your computer or the internet. That is, even if you
-connect your nano via USB to your computer, the private keys will not be leaked. Ledger devices are
-also hierarchical deterministic wallets (HD wallets), that is:
+The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S and
+the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret key secured on
+a physical device that does not expose it to your computer or the internet. Even if you connect your
+nano via USB to your computer, the private keys will not be leaked. Ledger devices are also
+hierarchical deterministic wallets (HD wallets), that is:
 
-- _Deterministic_ means that there is only one seed phrase to generate all the accounts for
-  different blockchain networks.
+- _Deterministic_ means that only one seed phrase generates all the accounts for different
+  blockchain networks.
 - _Hierarchical_ means that the accounts are generated in a tree-like structure for different
   purposes.
 
 Ledger devices can be equipped with applications that are blockchain-specific. Such applications are
-usually developed by third parties and they enable the user to transact securely on the blockchain
+usually developed by third parties, and they enable the user to transact securely on the blockchain
 network. The Polkadot Ledger application allows you to manage Polkadot's native token, DOT. It
 supports most of the transaction types of the network, including batch transactions from the Utility
 pallet.
@@ -43,12 +43,12 @@ pallet.
 :::note Ledger apps may not support all the transactions
 
 Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of
-transactions supported. It could be possible that some transactions are supported only on a specific
-version of the app and some transactions are not supported at all by any version. For instance, the
-staking `rebag` extrinsic is supported on the XL version but not on the light version. Support for
-the XL version is limited to singe calls (not batch calls), meaning that you can rebag one account
-at a time. Also joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible
-with the XL version. The `setIdentity` extrinsic is not supported by any of the app versions.
+transactions supported. Some transactions are supported only on a specific version of the app, and
+others are not supported at all by any version. For instance, the staking `rebag` extrinsic is
+supported on the XL version but not on the light version. Support for the XL version is limited to
+single calls (not batch calls), meaning you can rebag one account at a time. Also, joining a
+[nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version. The
+`setIdentity` extrinsic is not supported by any app versions.
 
 :::
 
@@ -78,9 +78,9 @@ to learn how to use Polkadot with ledger live.
 
 Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
 you create a [derived account using Polkadot JS](#using-on-polkadot-js-apps) with a derivation path
-44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. As a consequence it is not
-possible to transact with derived accounts using the Ledger Live App, but it is possible to do so
-using Polkadot JS. For more information about derived accounts and derivation paths check
+44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. Consequently, it is not possible
+to transact with derived accounts using the Ledger Live App, but it is possible to do so using
+Polkadot JS. For more information about derived accounts and derivation paths, check
 [the accounts page](../learn/learn-accounts.md).
 
 :::
@@ -110,7 +110,7 @@ When adding a Ledger account using the extension or the UI, you will be asked to
 you pick a derivation path from that account - think of it like a formula from which child accounts
 are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live
 with name `Polkadot 1`, this can be added to Polkadot JS using the 0/0 derivation path (i.e. account
-type = 0 and account index = 0). If then you add a second account called `Polkadot 2`, this will
+type = 0 and account index = 0). If you add a second account called `Polkadot 2`, this will
 correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that can be
 viewed and used in both Ledger Live and Polkadot JS. Additionally, we can use Polkadot-JS UI to
 created multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0
@@ -131,8 +131,8 @@ If you are adding your Ledger Nano for the first time, click on the "Unknown dev
 
 :::info Signature error message
 
-If you already connected your device but an error message appears before signing a transaction, make
-sure you have opened the Polkadot application on your Ledger Nano device. Visit
+If you have already connected your device, but an error message appears before signing a
+transaction, make sure you have opened the Polkadot application on your Ledger Nano device. Visit
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
 more information about signing transactions using your ledger.
 
@@ -142,7 +142,7 @@ more information about signing transactions using your ledger.
 
 To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device).
-Here you can scroll through and make sure the address matches to what is displayed on
+Here you can scroll through and make sure the address matches what is displayed on
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 
 ### Checking the Balance of Your Account
@@ -160,13 +160,13 @@ To sign transactions with your Ledger nano check
 
 ### Receiving a Transfer
 
-In order to receive a transfer on the accounts stored on your Ledger device, you will need to
-provide the sender (i.e. the payer) with your address. To do so follow the instructions on
+To receive a transfer on the accounts stored on your Ledger device, you will need to provide the
+sender (i.e. the payer) with your address. To do so, follow the instructions on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
 :::warning
 
-Before giving anyone your address, make sure it matches what's really on the Ledger by
+Before giving anyone your address, make sure it matches what's on the Ledger by
 [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
 intercept clicks and clipboard requests and can change your copied value in-flight, so being extra
 vigilant around copy-paste operations makes sense.
@@ -175,7 +175,7 @@ vigilant around copy-paste operations makes sense.
 
 ### Staking
 
-For staking using Ledger devices check the section "How to stake using your Ledger" on
+For staking using Ledger devices, check the section "How to stake using your Ledger" on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
 
 ### Removing Expired Democracy Locks
@@ -207,11 +207,11 @@ release for testing purposes. After a successful audit and review, the apps woul
 download and installation using [Ledger Live](https://www.ledger.com/ledger-live). As it takes some
 time for Ledger to audit and review the release, the app upgrade option may not be available on
 Ledger Live when the new runtime is deployed on the network. If this happens, users cannot use
-Ledger devices with the Polkadot-JS UI, and while signing for a transaction, they will most likely
-incur the error message "txn version not supported". Please do not panic if this happens, as there
-are solutions to this problem. If you cannot wait a couple of days until the app passes the Ledger
-audit, you can install the developer release from the shell using the latest version published on
-[the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
+Ledger devices with the Polkadot-JS UI, and while signing for a transaction, will most likely incur
+the error message "txn version not supported". Please do not panic if this happens, as there are
+solutions to this problem. Suppose you cannot wait a couple of days until the app passes the Ledger
+audit. In that case, you can install the developer release from the shell using the latest version
+published on [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
 ### Install the Developer Release
 
@@ -231,7 +231,7 @@ below:
 - Install _ledgerblue_ running the command `python3 -m pip install ledgerblue`.
 - Download the developer release from the
   [Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases). The file will be
-  named `installer_nanos_plus.sh`or something similar depending on the ledger device you are using.
+  named `installer_nanos_plus.sh` or something similar, depending on your ledger device.
 - Locate the downloaded shell script and make it executable in your shell by typing the command
   `chmod +x installer_nanos_plus.sh`.
 - You can now use the `./installer_nanos_plus.sh --help` command to visualize the available options
@@ -239,12 +239,12 @@ below:
 
 ![Dev Ledger Help Menu](../assets/ledger-help-menu.png)
 
-- Next attach your Ledger Nano (in this case Nano S Plus) to your computer, enter the PIN code and
+- Next, attach your Ledger Nano (in this case Nano S Plus) to your computer, enter the PIN code, and
   run the command `./installer_nanos_plus.sh load`. Scroll with the right button until you see
   "Allow unsafe manager", left and right press to confirm. You will be asked to confirm the action
-  of uninstalling the app, and subsequently installing the newer version. After confirming both
-  actions the shell script will proceed to install the version on your device. You will need to
-  insert the PIN code to use the device after the installation.
-- If you wish to revert the version back to stable release just go to Ledger Live, the app will
+  of uninstalling the app and subsequently installing the newer version. After confirming both
+  actions, the shell script will install the version on your device. You will need to insert the PIN
+  code to use the device after the installation.
+- If you wish to revert the version to the stable release, go to Ledger Live. The app will
   automatically detect the developer release and give the option to install the previous stable
   release.
