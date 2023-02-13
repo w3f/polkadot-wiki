@@ -33,26 +33,28 @@ is the admin. Then, under `config: PalletNftsCollectionConfig`, you can configur
 specifying different settings:
 
 - `settings` you can specify (in a bitflag-format) settings for your collection:
-  - `Transferrable items`: when disabled, the items will be non-transferrable (good for soul-bound NFTs),
+  - `Transferrable items`: when disabled, the items will be non-transferrable (good for soul-bound
+    NFTs),
   - `Unlocked metadata`: when disabled, the metadata will be locked,
-  - `Unlocked attributes`: when disabled, the attributes in the `CollectionOwner` namespace will be locked,
-  - `Unlocked max supply`: allows to change the max supply until it gets locked (i.e. the possibility to
-    change the supply for a limited amount of time),
-  - `Deposit required`: when disabled, no mint deposit will be taken for items. This option can be set by a super-user only.
+  - `Unlocked attributes`: when disabled, the attributes in the `CollectionOwner` namespace will be
+    locked,
+  - `Unlocked max supply`: allows to change the max supply until it gets locked (i.e. the
+    possibility to change the supply for a limited amount of time),
+  - `Deposit required`: when disabled, no mint deposit will be taken for items. This option can be
+    set by a super-user only.
 
 Everything is unlocked by default (bitflag value `0`).
 
-- `maxSupply` (toggle option) gives you the possibility to specify the maximum number of
-  items that can be minted.
+- `maxSupply` (toggle option) gives you the possibility to specify the maximum number of items that
+  can be minted.
 - `mintSettings: PalletNftsMintSettings` gives you the possibility to specify different settings for
   your collection.
   - `mintType` gives you the possibility to specify who can mint in your collection:
     - `Ìssuer`: only you can mint in your collection.
     - `Public`: everyone can mint in your collection.
     - `HoderOf`: only holders of items in another collection can mint in your collection. This
-      requires knowledge about the ID of the other collection. Collections IDs are auto-incremented.
-      This avoids to loop through all existing collections spamming RPC nodes with requests to find
-      out available IDs.
+      requires knowledge about the ID of the other collection. This avoids to loop through all
+      existing collections spamming RPC nodes with requests to find out available IDs.
   - `price` (toggle option) gives you the possibility to specify the price of the items.
   - `startBlock`and `endBlock` give you the possibility to specify a time frame during which the
     collection's configuration is valid (i.e. all option within
@@ -113,7 +115,7 @@ Walkthrough video tutorial about minting an NFT.
 You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the followings:
 
 - `collection`, the collection ID where you want to mint
-- `item`, the item ID (auto-incremented)
+- `item`, the item ID
 - `mintTo`, the account
 - `witnessData` (toggle option), you can specify if you own an NFT in another collection
 
