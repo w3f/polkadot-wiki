@@ -20,8 +20,8 @@ contact and anyone doing so is likely trying to scam you.
 
 ## General
 
-- [Polkadot Forum](https://forum.polkadot.network/) - A place for Polkadot Pioneers to discuss the 
-  future of the network and its ecosystem.
+- [Polkadot Forum](https://forum.polkadot.network/) -  a place for thoughtful comments and discussions 
+  on the future of Polkadot, and the steps we can take to get there together.
 - [Polkadot GitHub](https://github.com/paritytech/polkadot) - Parity maintained repository that
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
