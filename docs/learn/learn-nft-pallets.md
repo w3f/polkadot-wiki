@@ -21,16 +21,16 @@ functionalities that are not needed in the runtime.
 
 ### Creating a Collection
 
-You can use the NFTs pallet to create NFTs collections. In the Polkadot-JS UI go to Developer >
-Extrinsic and select the `nfts.create` extrinsic. When you create a collection you must specify who
-is the admin. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection's
+You can use the NFTs pallet to create NFTs collections. In the Polkadot-JS UI, go to Developer >
+Extrinsic and select the `nfts.create` extrinsic. When you create a collection, you must specify who
+the admin is. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection's
 specifying different settings:
 
 - `settings` you can specify (in a bitflag-format) settings for your collection:
-  - `Transferrable items`: when disabled, the items will be non-transferrable (good for soul-bound
+  - `Transferrable items`: When disabled, the items will be non-transferrable (good for soul-bound
     NFTs),
-  - `Unlocked metadata`: when disabled, the metadata will be locked,
-  - `Unlocked attributes`: when disabled, the attributes in the `CollectionOwner` namespace will be
+  - `Unlocked metadata`: When disabled, the metadata will be locked,
+  - `Unlocked attributes`: When disabled, the attributes in the `CollectionOwner` namespace will be
     locked,
   - `Unlocked max supply`: allows to change the max supply until it gets locked (i.e. the
     possibility to change the supply for a limited amount of time),
@@ -39,19 +39,18 @@ specifying different settings:
 
 Everything is unlocked by default (bitflag value `0`).
 
-- `maxSupply` (toggle option) gives you the possibility to specify the maximum number of items that
-  can be minted.
-- `mintSettings: PalletNftsMintSettings` gives you the possibility to specify different settings for
-  your collection.
+- `maxSupply` (toggle option) allows you to specify the maximum number of items that can be minted.
+- `mintSettings: PalletNftsMintSettings` allows you to specify different settings for your
+  collection.
   - `mintType` gives you the possibility to specify who can mint in your collection:
     - `Ìssuer`: only you can mint in your collection.
     - `Public`: everyone can mint in your collection.
     - `HoderOf`: only holders of items in another collection can mint in your collection. This
-      requires knowledge about the ID of the other collection. This avoids to loop through all
-      existing collections spamming RPC nodes with requests to find out available IDs.
-  - `price` (toggle option) gives you the possibility to specify the price of the items.
+      requires knowledge about the ID of the other collection. This avoids looping through all
+      existing collections and spamming RPC nodes with requests to find available IDs.
+  - `price` (toggle option) allows you to specify the price of the items.
   - `startBlock`and `endBlock` give you the possibility to specify a time frame during which the
-    collection's configuration is valid (i.e. all option within
+    collection's configuration is valid (i.e. all options within
     `config: PalletNftsCollectionConfig`).
   - [other mint settings](https://github.com/paritytech/substrate/pull/12483) include:
     - wave minting, for example mint X number of items that go to collection owners and Y number of
@@ -66,41 +65,40 @@ to lock. Also, unauthorized and/or unprivileged transfers can be prevented by lo
 
 :::
 
-With all these options, one can decide to modify the price of the collection's items as well as who
-can mint, receive or buy items in that collection. Time constraints are available with `startBlock`
-and `endBlock` parameters. It is thus possible, for example, to create a schedule in which holders
-of items in collection A (`HolderOf` parameter) will be able to claim for free a limited number of
-NFTs from Collection X (`maxSupply` parameter) only within a specific time frame. You can then
-modify the parameters so that anyone will be able to buy more NFTs from Collection X.
+With all these options, one can decide to modify the price of the collection's items and who can
+mint, receive or buy items in that collection. Time constraints are available with `startBlock` and
+`endBlock` parameters. It is thus possible, for example, to create a schedule in which holders of
+items in collection A (`HolderOf` parameter) will be able to claim for free a limited number of NFTs
+from Collection X (`maxSupply` parameter) only within a specific time frame. You can modify the
+parameters so anyone can buy more NFTs from Collection X.
 
-This can be useful for events such as Hackathons where participant who bought a ticket receive the
-NFT ticket from Collection A. Then, to all holders of at least one item in Collection A (i.e. all
-ticket holders) will be given for free an avatar NFT from Collection X within the event time
-schedule. After the event, any additional remaining items in Collection X can be made available to
-the public through a marketplace.
+This can be useful for events such as Hackathons where participants who bought a ticket receive the
+NFT ticket from Collection A. Then, all holders of at least one item in Collection A (i.e. all
+ticket holders) will be given free avatar NFT from Collection X within the event schedule. After the
+event, any additional remaining items in Collection X can be made available to the public through a
+marketplace.
 
-The requirement to get the free avatar is being holder of at least one NFT in Collection A. One can
-only claim the avatar specifying which NFT (i.e. the ID) owns in Collection A. The same NFT cannot
-be used twice, meaning that holders of multiple NFTs in Collection A (for example participants to
-multiple Hackathons) can claim multiple avatars specific to each event.
+The requirement to get the free avatar is being a holder of at least one NFT in Collection A. One
+can only claim the avatar specifying which NFT (i.e. the ID) owns in Collection A. The same NFT
+cannot be used twice, meaning that holders of multiple NFTs in Collection A (for example,
+participants to multiple Hackathons) can claim multiple avatars specific to each event.
 
 :::warning Time frame must be updated
 
 Someone trying to mint an NFT outside the specified time frame will trigger a `NoConfig` error, as
-no configuration has been specified by the collection's admin after the time frame ends. The
-collection's admin must call the `updateMintSettings` extrinsic and add a new schedule or disable
-the block number option.
+the collection’s admin has specified no configuration after the time frame ends. The collection's
+admin must call the `updateMintSettings` extrinsic and add a new schedule or disable the block
+number option.
 
 :::
 
-After you minted an NFT, it is possible to check which NFT IDs you own under which collection. In
-the Polkadot-JS UI go to Developer > Chain State > Storage, select the `nfts.account` extrinsic,
-specify the account owning the NFT and the collection ID. You can also see all the collections you
-own by selecting the `collectionAccount` extrinsic.
+After you minted an NFT, check which NFT IDs you own under which collection. In the Polkadot-JS UI
+go to Developer > Chain State > Storage, select the `nfts.account` extrinsic, and specify the
+account owning the NFT and the collection ID. You can also see all your collections by selecting the
+`collectionAccount` extrinsic.
 
-When a collection is destroyed, no-one would be able to pick the collection ID again (including the
-owner). When a new collection is created, a new ID will be generated and assigned to that
-collection.
+When a collection is destroyed, no one can pick up the collection ID again (including the owner).
+When a new collection is created, a new ID will be generated and assigned to that collection.
 
 ### Minting an NFT
 
@@ -127,14 +125,14 @@ Creating an item usually involves setting some attributes specific to that item.
   changed anytime, and there will be the option to attach
   [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
 - Setting metadata for an item or collection (metadata includes all essential information about the
-  item or the collection). Metadata could consists in any arbitrary data like the IPFS hash.
+  item or the collection). Metadata could consist of any arbitrary data like the IPFS hash.
 - Setting or re-setting the price of an item.
 - Clearing attributes and metadata of a collection or an item.
 - Changing the owner of an item or a collection.
 - Transferring an item, as well as creating and canceling transfer approvals of a specific item, or
   an [atomic swap](https://github.com/paritytech/substrate/pull/12285).
 - Transferring ownership of an item.
-- Delegating accounts: delegated accounts can approve changes to an item's attributes and transfer
+- Delegating accounts: Delegated accounts can approve changes to an item's attributes and transfer
   an item. The item owner always has control and can decide to cancel approvals from a delegated
   account.
 - One can also execute pending atomic swaps created by a counterpart.
@@ -155,15 +153,15 @@ deployed on the Statemint and Statemine system parachains. It implements the mos
 and their classes (entities derived from) are mutable unless specifically made immutable by the
 issuer.
 
-Uniques takes a very bare-bones approach on purpose, to keep the Statemine / Statemint chain a
-simple balance-keeping chain for both fungible and non-fungibles.
+Uniques takes a very bare-bones approach on purpose to keep the Statemine / Statemint chain a simple
+balance-keeping chain for both fungible and non-fungibles.
 
 These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
 switching the top right menu from Kusama to Statemine or Statemint.
 
 ![nft-statemine](../assets/nft/nft-statemine.png)
 
-The can also be interacted with directly through the
+They can also be interacted with directly through the
 [extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
 
 ![uniques.png](../assets/nft/uniques.png)
