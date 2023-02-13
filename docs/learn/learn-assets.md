@@ -52,8 +52,8 @@ creator must also specify a minimum balance, preventing accounts from having dus
 
 Asset classes and instances can have associated metadata. The metadata is an array of data that the
 class owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
-service. The [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) also supports setting key/value pairs as
-attributes to a class or instance.
+service. The [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) also supports setting key/value
+pairs as attributes to a class or instance.
 
 An asset class has several privileged roles. The creator of the asset automatically takes on all
 privileged roles, but can reassign them after creation. These roles are:

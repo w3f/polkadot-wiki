@@ -288,7 +288,8 @@ impacted by the locking period of the tokens.
 
 #### Adaptive Quorum Biasing
 
-Adaptive quorum biasing is no longer used in OpenGov and has been replaced with the Approval/Support system.
+Adaptive quorum biasing is no longer used in OpenGov and has been replaced with the Approval/Support
+system.
 
 ## Council
 
