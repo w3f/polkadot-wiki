@@ -54,9 +54,11 @@ promptly, especially for high priority or critical releases.
 :::info Runtime version vs Client version
 
 The runtime and client versions are distinct from each other. The runtime versioning typically looks
-like `network-xxxx` whereas the client versioning looks like `vx.x.xx`. For instance, the 
-rumtime version shown on the top left section of Polkadot-JS UI below is `kusama-9370` and the client
-(node) version is `v0.9.36`.
+like `network-xxxx` whereas the client versioning looks like `vx.x.xx`. For instance, the rumtime
+version shown on the top left section of Polkadot-JS UI below is `kusama-9370` and the client (node)
+version is `v0.9.36`.
+
+![Runtime vs Client versioning](./../assets/runtime-node-version.png)
 
 :::
 
