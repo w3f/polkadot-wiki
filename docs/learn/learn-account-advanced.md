@@ -140,9 +140,9 @@ Only use custom derivation paths if you are comfortable with your knowledge of t
 The [SS58 document](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>)
 states that:
 
-- Polkadot has an address type of `00000000b`, so `0` is in decimal.
-- Kusama (Polkadot Canary) has an address type of `00000010b`, so `2` is in decimal.
-- Generic Substrate has `00101010b` as the address type, `42` is in decimal.
+- Polkadot has an address type of `00000000b` (`0` in decimal).
+- Kusama (Polkadot Canary) has an address type of `00000010b` (`2` in decimal).
+- Generic Substrate has `00101010b` as the address type (`42` in decimal).
 
 Because the `Base58-check` alphabet has no number 0, the lowest value is indeed 1. So `00000000b` is
 1 in Base58-check. If we try to
