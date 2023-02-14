@@ -151,8 +151,9 @@ When you have a collection ID and an item ID you need to upload
 
 The collection can be created and its item minted before uploading the NFT file and related
 metadata. The minting process on chain will just assign a collection ID and item ID to your account.
-Those IDs will be populated with NFT file, metadata, attributes later on. Once you uploaded the NFT
-files and related data, the above-mentioned extrinsics can be used to update a collection or item.
+Those IDs will be populated with NFT files, metadata, and attributes later on. Once you uploaded the
+NFT files and related data, the above-mentioned extrinsics can be used to update a collection or
+item.
 
 :::info NFT/DEX/Asset Portal
 
