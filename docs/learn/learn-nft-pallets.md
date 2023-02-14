@@ -132,9 +132,10 @@ When you have a collection ID and an item ID you need to upload
 - Follow
   [these steps](https://docs.pinata.cloud/what-can-i-learn-here/pinning-your-first-file-with-pinata)
   to upload the file you want to mint.
-- After uploading your file, get the Content Identifier (CID). This is a unique string of letters
-  and numbers that will act as a marker to link the data uploaded onto IPFS to the collection or
-  item ID you own.
+- After uploading your file, get the
+  [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid).
+  This is a unique string of letters and numbers that will act as a marker to link the data uploaded
+  onto IPFS to the collection or item ID you own.
 - Prepare the metadata file and add your CID (see below):
 
 ```
