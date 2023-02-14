@@ -135,7 +135,7 @@ When you have a collection ID and an item ID you need to upload
 - After uploading your file, get the
   [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid).
   This is a unique string of letters and numbers that will act as a marker to link the data uploaded
-  onto IPFS to the collection or item ID you own.
+  onto [IPFS](https://ipfs.tech/#how) to the collection or item ID you own.
 - Prepare the metadata file and add your CID (see below):
 
 ```
