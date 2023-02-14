@@ -132,8 +132,8 @@ When you have a collection ID and an item ID you need to upload
 - Follow
   [these steps](https://docs.pinata.cloud/what-can-i-learn-here/pinning-your-first-file-with-pinata)
   to upload the file you want to mint.
-- After uploading your file get the Content Identifier (CID). This is a unique string of letters and
-  numbers proving that the NFT is yours.
+- After uploading your file, get the Content Identifier (CID). This is a unique string of letters
+  and numbers proving that the NFT is yours.
 - Prepare the metadata file and add your CID (see below):
 
 ```
@@ -149,8 +149,8 @@ When you have a collection ID and an item ID you need to upload
 
 :::info NFT/DEX/Asset Portal
 
-With the new NFT/DEX/Asset portal all the above steps will be executed "under-the-hood" and the user
-will not have to worry about all technicalities.
+With the new NFT/DEX/Asset portal, all the above steps will be executed "under-the-hood" and the
+user will not have to worry about all technicalities.
 
 :::
 
