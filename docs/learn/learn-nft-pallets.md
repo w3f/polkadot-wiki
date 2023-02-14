@@ -153,6 +153,13 @@ Creating an item usually involves setting some attributes specific to that item.
 
 ## Uniques Pallet
 
+:::info
+
+The Uniques Pallet is being decommissioned. Everything related to NFTs will be covered by the the
+[NFTs Pallet](#nfts-pallet).
+
+:::
+
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
 deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
 -- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
