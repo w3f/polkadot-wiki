@@ -187,6 +187,8 @@ will not have to worry about all technicalities.
 - Take ownership of an NFT from the [pallet-nfts](#nfts-pallet)
 - Create a new asset in [pallet-assets](https://polkadot.js.org/docs/substrate/extrinsics#assets)
 - Mint the input amount to the previous owner of the NFT as the beneficiary
+- Mass minting: Minting multiple items in one single transaction. Ths will require the user to
+  provide a .csv file with two columns: NFT ID and CID if metadata.
 
 ## Uniques Pallet
 
