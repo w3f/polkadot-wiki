@@ -145,7 +145,9 @@ When you have a collection ID and an item ID you need to upload
 ```
 
 - Upload the metadata file to Pinata and get the updated CID.
-- You can add the CID when minting your NFT on the Polkadot-JS UI.
+- You can add the CID when minting your NFT on the Polkadot-JS UI. Go to Developer > Extrinsics and
+  select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single NFTs)
+  extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
 
 :::info NFT/DEX/Asset Portal
 
