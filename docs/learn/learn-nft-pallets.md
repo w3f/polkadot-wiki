@@ -23,10 +23,11 @@ functionalities that are not needed in the runtime.
 
 You can use the NFTs pallet to create NFT collections. In the Polkadot-JS UI, go to Developer >
 Extrinsic and select the `nfts.create` extrinsic. When you create a collection, you must specify who
-the admin is. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection by 
+the admin is. Then, under `config: PalletNftsCollectionConfig`, you can configure your collection by
 specifying different settings:
 
 - `settings` you can specify (in a bitflag-format) settings for your collection:
+
   - `Transferrable items`: When disabled, the items will be non-transferrable (good for soul-bound
     NFTs),
   - `Unlocked metadata`: When disabled, the metadata will be locked,
@@ -37,7 +38,12 @@ specifying different settings:
   - `Deposit required`: when disabled, no mint deposit will be taken for items. This option can be
     set by a super-user only.
 
+:::info
+
+Note that currently Polkadot-JS does not support bitflags. Leave the settings field as it is.
 Everything is unlocked by default (bitflag value `0`).
+
+:::
 
 - `maxSupply` (toggle option) allows you to specify the maximum number of items that can be minted.
 - `mintSettings: PalletNftsMintSettings` allows you to specify different settings for your
@@ -78,10 +84,10 @@ ticket holders) will be given free avatar NFT from Collection X within the event
 event, any additional remaining items in Collection X can be made available to the public through a
 marketplace.
 
-The requirement to get the free avatar is to hold at least one NFT in Collection A. One
-can only claim the avatar specifying which NFT (i.e. the ID) they own in Collection A. The same NFT
-cannot be used twice. Holders of multiple NFTs in Collection A (for example,
-participants in multiple Hackathons) can claim multiple avatars specific to each event.
+The requirement to get the free avatar is to hold at least one NFT in Collection A. One can only
+claim the avatar specifying which NFT (i.e. the ID) they own in Collection A. The same NFT cannot be
+used twice. Holders of multiple NFTs in Collection A (for example, participants in multiple
+Hackathons) can claim multiple avatars specific to each event.
 
 :::warning Time frame must be updated
 
@@ -97,9 +103,8 @@ go to Developer > Chain State > Storage, select the `nfts.account` extrinsic, an
 account owning the NFT and the collection ID. You can also see all your collections by selecting the
 `collectionAccount` extrinsic.
 
-When a new collection is created, a new ID will be generated and assigned to that collection.
-When a collection is destroyed, no one can pick up the collection ID again (including the owner).
-
+When a new collection is created, a new ID will be generated and assigned to that collection. When a
+collection is destroyed, no one can pick up the collection ID again (including the owner).
 
 ### Minting an NFT
 
