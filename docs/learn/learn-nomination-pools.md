@@ -39,7 +39,10 @@ system’s scalability. Now, anyone with as little as
 :::note
 
 Learn the key differences between
-[**Staking directly vs Joining a Nomination Pool**](../maintain/maintain-guides-how-to-nominate-polkadot.md#nominating-vs-joining-a-pool).
+[**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool).
+
+**For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot
+Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
 
 :::
 
@@ -78,11 +81,11 @@ viewed as a single nominator from the NPoS system point of view.
 
 :::info Why aren't the members in the nomination pools called delegators?
 
-The term `delegator` is associated too much with Delegated Proof of Staking (DPoS) and since
+The term `delegator` is associated too much with Delegated Proof of Staking (DPoS), and since
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements Nominated Proof of Staking
-(NPoS), naming them as delegators would be misleading. The term `member` is our generic replacement
-for `delegator`. In action, members are quite similar to delegators and do delegate their nomination
-power to the pool.
+(NPoS), naming them delegators would be misleading. The term `member` is our generic replacement for
+`delegator`. In action, members are quite similar to delegators and delegate their nomination power
+to the pool.
 
 :::
 
@@ -186,8 +189,8 @@ balance.
 - Blocked: The pool is blocked; no joiners are permitted.
 - Destroying: The pool is in the process of being destroyed. Once in this state, the pool may never
   revert to any other state; it can only proceed to be destroyed. All members can be
-  permissionlessly unbonded; this allows the pool to be dismantled regardless of any individual
-  member’s proactivity.
+  permissionlessly unbonded; this allows the pool to be dismantled regardless of any member’s
+  proactivity.
 
 ### Roles
 
@@ -240,9 +243,8 @@ nominate like you would normally using a nominator account.
 
 ![Nominate validators](../assets/staking/Nomination-Pools-5.png)
 
-The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and then
-kick members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to
-open).
+The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and kick
+members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open).
 
 ### Destruction
 
@@ -269,7 +271,7 @@ Unbonding pools need to be slashed to ensure all nominators who were in the bond
 backing a validator that committed an offense are punished. Without these measures a nominator could
 unbond right after a validator equivocated with no consequences.
 
-This strategy is unfair to members who joined after the slash because they get slashed as well but
+This strategy is unfair to members who joined after the slash because they get slashed as well, but
 it spares members who unbond. The latter is much more important for security: if a pool's validators
 attack the network, their members need to unbond fast! Avoiding additional slashes gives them an
 incentive to do that if validators get repeatedly slashed.
@@ -287,7 +289,7 @@ on your validators, if your active validator is oversubscribed, you will earn re
 stake is within that of the top
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators. If the validator misbehaves, It is worth noting that your stake is subject to slashing,
-irrespective of whether you are in the top
+irrespective of whether you are at the top
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators or not.
 
@@ -315,6 +317,6 @@ from time to time and change the pool if necessary.
 |                                                                                                                              Maximum uncapped.                                                                                                                              |                                                                                                   Maximum uncapped.                                                                                                   |
 | Should bond more than the [minimum active nomination](../learn/learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards) in an era to be eligible to earn staking rewards, although it can depend on multiple other factors outlined in the linked document. | A nomination pool earns rewards in an era if it satisfies all the conditions mentioned for the nominator (as the nomination pool is just a nominator from [the NPoS system](../learn/learn-phragmen.md) perspective). |
 |                                                                                                         Staked tokens can be used for participation in Governance.                                                                                                          |                                                                             Staked tokens cannot be used for participation in Governance.                                                                             |
-|                                                            [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).                                                             |                                                                                      Rewards must be claimed by the pool member.                                                                                      |
+|                                                            [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).                                                             |                                                                                        The pool member must claim the rewards.                                                                                        |
 |                                                                                                                    Bonded funds remain in your account.                                                                                                                     |                                          Bonded funds are transferred to a pool account which is administered by the network protocol and is not accessible to anyone else.                                           |
 |                                                                                                         Nominator manages the list of staked validators (up to 16).                                                                                                         |                                                                                       Nominations managed by the pool operator.                                                                                       |
