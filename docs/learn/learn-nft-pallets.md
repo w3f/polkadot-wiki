@@ -124,6 +124,36 @@ You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the f
 
 Creating an item usually involves setting some attributes specific to that item.
 
+### Uploading Files
+
+When you have a collection ID and an item ID you need to upload
+
+- Open an account on [Pinata](https://www.pinata.cloud/).
+- Follow
+  [these steps](https://docs.pinata.cloud/what-can-i-learn-here/pinning-your-first-file-with-pinata)
+  to upload the file you want to mint.
+- After uploading your file get the Content Identifier (CID). This is a unique string of letters and
+  numbers proving that the NFT is yours.
+- Prepare the metadata file and add your CID (see below):
+
+```
+{
+    "name":"Your Collection Name",
+    "description":"Collection's Description",
+    "image":"Your Collection CID"
+}
+```
+
+- Upload the metadata file to Pinata and get the updated CID.
+- You can add the CID when minting your NFT on the Polkadot-JS UI.
+
+:::info NFT/DEX/Asset Portal
+
+With the new NFT/DEX/Asset portal all the above steps will be executed "under-the-hood" and the user
+will not have to worry about all technicalities.
+
+:::
+
 ### Other Actions
 
 - Buying an item up for sale.
