@@ -124,7 +124,7 @@ You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the f
 
 Creating an item usually involves setting some attributes specific to that item.
 
-### Uploading Files
+### Uploading Files and Metadata
 
 When you have a collection ID and an item ID you need to upload
 
