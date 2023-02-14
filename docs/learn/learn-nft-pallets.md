@@ -133,7 +133,8 @@ When you have a collection ID and an item ID you need to upload
   [these steps](https://docs.pinata.cloud/what-can-i-learn-here/pinning-your-first-file-with-pinata)
   to upload the file you want to mint.
 - After uploading your file, get the Content Identifier (CID). This is a unique string of letters
-  and numbers proving that the NFT is yours.
+  and numbers that will act as a marker to link the data uploaded onto IPFS to the collection or
+  item ID you own.
 - Prepare the metadata file and add your CID (see below):
 
 ```
@@ -145,7 +146,7 @@ When you have a collection ID and an item ID you need to upload
 ```
 
 - Upload the metadata file to Pinata and get the updated CID.
-- You can add the CID when minting your NFT on the Polkadot-JS UI. Go to Developer > Extrinsics and
+- You can add the CID after minting your NFT on the Polkadot-JS UI. Go to Developer > Extrinsics and
   select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single NFTs)
   extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
 
@@ -195,14 +196,14 @@ user will not have to worry about all technicalities.
 - Take ownership of an NFT from the [pallet-nfts](#nfts-pallet)
 - Create a new asset in [pallet-assets](https://polkadot.js.org/docs/substrate/extrinsics#assets)
 - Mint the input amount to the previous owner of the NFT as the beneficiary
-- Mass minting: Minting multiple items in one single transaction. Ths will require the user to
-  provide a .csv file with two columns: NFT ID and CID if metadata.
+- Mass minting: Minting multiple items in one single transaction. This will require the user to
+  provide a .csv file with two columns: NFT ID and CID of metadata.
 
 ## Uniques Pallet
 
 :::info
 
-The Uniques Pallet is being decommissioned. Everything related to NFTs will be covered by the the
+The Uniques Pallet is deprecated. Everything related to NFTs will be covered by the the
 [NFTs Pallet](#nfts-pallet).
 
 :::
