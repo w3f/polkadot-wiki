@@ -40,7 +40,7 @@ specifying different settings:
 
 :::info
 
-Note that currently Polkadot-JS does not support bitflags. Leave the settings field as it is.
+Note that currently, Polkadot-JS UI does not support bitflags. Leave the settings field as it is.
 Everything is unlocked by default (bitflag value `0`).
 
 :::
