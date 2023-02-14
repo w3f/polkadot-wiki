@@ -12,6 +12,13 @@ NFT-related actions within their dApp.
 
 ## NFTs Pallet
 
+:::info For Developers Only
+
+The information presented here below is for developers. A user-friendly portal for NFTs, DEX and
+Assets is under construction.
+
+:::
+
 NFTs is a [FRAME pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts) currently deployed
 on Westmint, which provides a multitude of functions to interact with NFTs.
 
