@@ -126,7 +126,7 @@ Creating an item usually involves setting some attributes specific to that item.
 
 ### Uploading Files and Metadata
 
-When you have a collection ID and an item ID you need to 
+When you have a collection ID and an item ID you need to:
 
 - Open an account on [Pinata](https://www.pinata.cloud/).
 - Follow
@@ -153,8 +153,8 @@ When you have a collection ID and an item ID you need to
 
 The collection can be created and its item minted before uploading the NFT file and related
 metadata. The minting process on-chain will assign a collection and item ID to your account. Those
-IDs will later be populated with NFT files, metadata, and attributes. Once you upload the NFT
-files and related data, the extrinsics mentioned above can be used to update a collection or item.
+IDs will later be populated with NFT files, metadata, and attributes. Once you upload the NFT files
+and related data, the extrinsics mentioned above can be used to update a collection or item.
 
 :::info NFT/DEX/Asset Portal
 
