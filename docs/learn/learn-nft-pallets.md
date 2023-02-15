@@ -126,7 +126,7 @@ Creating an item usually involves setting some attributes specific to that item.
 
 ### Uploading Files and Metadata
 
-When you have a collection ID and an item ID you need to upload
+When you have a collection ID and an item ID you need to 
 
 - Open an account on [Pinata](https://www.pinata.cloud/).
 - Follow
