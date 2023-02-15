@@ -12,6 +12,13 @@ NFT-related actions within their dApp.
 
 ## NFTs Pallet
 
+:::info For Developers Only
+
+The information presented here below is for developers. A user-friendly portal for NFTs, DEX and
+Assets is under construction.
+
+:::
+
 NFTs is a [FRAME pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts) currently deployed
 on Westmint, which provides a multitude of functions to interact with NFTs.
 
@@ -40,7 +47,7 @@ specifying different settings:
 
 :::info
 
-Note that currently Polkadot-JS does not support bitflags. Leave the settings field as it is.
+Note that currently, Polkadot-JS UI does not support bitflags. Leave the settings field as it is.
 Everything is unlocked by default (bitflag value `0`).
 
 :::
@@ -117,6 +124,45 @@ You can mint an NFT using the `nfts.mint` extrinsic. You must then specify the f
 
 Creating an item usually involves setting some attributes specific to that item.
 
+### Uploading Files and Metadata
+
+When you have a collection ID and an item ID you need to:
+
+- Open an account on [Pinata](https://www.pinata.cloud/).
+- Follow
+  [these steps](https://docs.pinata.cloud/what-can-i-learn-here/pinning-your-first-file-with-pinata)
+  to upload the file you want to mint.
+- After uploading your file, get the
+  [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid).
+  This is a unique string of letters and numbers that will act as a marker to link the data uploaded
+  onto [IPFS](https://ipfs.tech/#how) to the collection or item ID you own.
+- Prepare the metadata file and add your CID (see below):
+
+```
+{
+    "name":"Your Collection Name",
+    "description":"Collection's Description",
+    "image":"Your Collection CID"
+}
+```
+
+- Upload the metadata file to Pinata and get the updated CID.
+- You can add the CID after minting your NFT on the Polkadot-JS UI. Go to Developer > Extrinsics and
+  select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single NFTs)
+  extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
+
+The collection can be created and its item minted before uploading the NFT file and related
+metadata. The minting process on-chain will assign a collection and item ID to your account. Those
+IDs will later be populated with NFT files, metadata, and attributes. Once you upload the NFT files
+and related data, the extrinsics mentioned above can be used to update a collection or item.
+
+:::info NFT/DEX/Asset Portal
+
+With the new NFT/DEX/Asset portal, all the above steps will be executed "under the hood" and the
+user will not have to worry about all technicalities.
+
+:::
+
 ### Other Actions
 
 - Buying an item up for sale.
@@ -150,8 +196,17 @@ Creating an item usually involves setting some attributes specific to that item.
 - Take ownership of an NFT from the [pallet-nfts](#nfts-pallet)
 - Create a new asset in [pallet-assets](https://polkadot.js.org/docs/substrate/extrinsics#assets)
 - Mint the input amount to the previous owner of the NFT as the beneficiary
+- Mass minting: Minting multiple items in one single transaction. This will require the user to
+  provide a .csv file with two columns: NFT ID and CID of metadata.
 
 ## Uniques Pallet
+
+:::info
+
+The Uniques Pallet is deprecated. Everything related to NFTs will be covered by the the
+[NFTs Pallet](#nfts-pallet).
+
+:::
 
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
 deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
