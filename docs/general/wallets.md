@@ -65,7 +65,7 @@ hardware wallets through bluetooth connectivity.
 
 | Wallet                                        | Platforms                                                       | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | --------------------------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
-| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                    | **Yes**, **Yes**             | No      | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
+| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                    | **Yes**, **Yes**             | No      | **Yes**         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
 | [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                    | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                    | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
 | [SubWallet](https://subwallet.app/)           | [iOS (Testflight)](apple.co/3WafLpm), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
@@ -117,10 +117,9 @@ portfolio tracking. Talisman received funding from Polkadot Treasury
 ### Fearless Wallet
 
 The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
-ecosystem with emphasis on UX, performance, and security. Get access to charts to better understand
-your profits and how to maximize your staking performance. The goal of Fearless Wallet is to
+ecosystem with emphasis on UX, performance, and security. The goal of Fearless Wallet is to
 radically expand access to decentralized finance (DeFi) by making complex functions much easier to
-use and understand. Fearless Wallet received funding from Kusama Treasury
+use and understand. The App supports such features as follows: Staking, Crowdloans, Parachain Accounts, Nomination pools native staking, dApp signer (experimental), Scam addresses warning, Network issues warning. Fearless Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34),
 [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102),
 [5](https://kusama.polkassembly.io/treasury/178)].
