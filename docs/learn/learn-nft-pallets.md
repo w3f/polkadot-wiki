@@ -158,7 +158,7 @@ files and related data, the extrinsics mentioned above can be used to update a c
 
 :::info NFT/DEX/Asset Portal
 
-With the new NFT/DEX/Asset portal, all the above steps will be executed "under-the-hood" and the
+With the new NFT/DEX/Asset portal, all the above steps will be executed "under the hood" and the
 user will not have to worry about all technicalities.
 
 :::
