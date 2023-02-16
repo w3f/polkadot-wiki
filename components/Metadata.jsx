@@ -81,7 +81,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     // Format pallet extractions for rendering
     const constantElements = CompilePalletSection(pallet.name, "constants", constants);
     const errorElements = CompilePalletSection(pallet.name, "errors", errors);
-    const eventElements = CompilePalletSection(pallet.name, "event", events);
+    const eventElements = CompilePalletSection(pallet.name, "events", events);
     const extrinsicElements = CompilePalletSection(pallet.name, "extrinsics", extrinsics);
     const storageElements = CompilePalletSection(pallet.name, "storage", storage);
 
@@ -312,7 +312,7 @@ function FormatDescription(description) {
 }
 
 // Extract and format arguments from metadata
-function FormatArgs(item, type, types=null) {
+function FormatArgs(item, type, types = null) {
   let params = "(";
   if (type === "rpc") {
     item.params.forEach(param => {
