@@ -216,6 +216,9 @@ governance, acquisition of a parachain slot and for enabling several key functio
 - {{ kusama: __<RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :kusama }}
   you can create your own [nomination pool](../../learn/learn-nomination-pools.md).
 
+- {{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={0} filter="humanReadable"/>:__ :kusama }}
+  the minimum amount of KSM required to become an active nominator and earn rewards.
+
 KSM has utility in [Kusama's democracy](../../maintain/maintain-guides-democracy.md). Bonding KSM is
 a requirement to create proposals, to endorse them and to vote on them when they become referendums.
 Bonding
