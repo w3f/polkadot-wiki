@@ -174,8 +174,7 @@ user will not have to worry about all technicalities.
   that gets updated over time (sort of a rank) with a consequent upgrade in membership permissions.
 - A collection is managed by the
   [Issuer, the Admin and the Freezer](./learn-assets.md#creation-and-management). Those roles can be
-  changed anytime, and there will be the option to attach
-  [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
+  changed anytime.
 - Setting metadata for an item or collection (metadata includes all essential information about the
   item or the collection). Metadata could consist of any arbitrary data like the IPFS hash.
 - Setting or re-setting the price of an item.
