@@ -208,6 +208,9 @@ functionalities on Polkadot.
 - {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable"/>:__ :polkadot }}
   you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
+- {{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum amount of DOT required to become an active nominator and earn rewards.
+
 DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is
 a requirement to create proposals, to endorse them and to vote on them when they become referendums.
 Bonding
