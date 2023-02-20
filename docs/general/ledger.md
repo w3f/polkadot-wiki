@@ -47,7 +47,7 @@ transactions supported. Some transactions are supported only on a specific versi
 others are not supported at all by any version. For instance, the staking `rebag` extrinsic is
 supported on the XL version but not on the light version. Support for the XL version is limited to
 single calls (not batch calls), meaning you can rebag one account at a time. Also, joining a
-[nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version. 
+[nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version.
 
 :::
 
