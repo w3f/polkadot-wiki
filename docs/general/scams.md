@@ -86,8 +86,8 @@ be found below:
 ### Keep your data secure
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
-anyone. If you are concerned a wallet could be fake, please check out our list of well-known and officially supported
-[wallets](./../general/wallets.md).
+anyone. If you are concerned a wallet could be fake, please check out our list of well-known and
+officially supported [wallets](./../general/wallets.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 
@@ -148,8 +148,10 @@ tools.
 
 ## I Got Scammed - What Can I Do?
 
-In the unfortunate case of having fallen for a scam, there is likely nothing that can be done to 
-recover your funds. However, there is still help and support that you can receive. The Polkadot Support team
-stands ready to help you in this difficult situation. Please check this [Support article](https://support.polkadot.network/support/solutions/articles/65000182668-what-to-do-if-you-fell-victim-to-scam-or-hack) 
-for steps you should take to **prevent further loss** and contact Polkadot Support from the same page.
-Finally, make sure to read the present article carefully to learn how to avoid falling victim in the future.
+In the unfortunate case of having fallen for a scam, there is likely nothing that can be done to
+recover your funds. However, there is still help and support that you can receive. The Polkadot
+Support team stands ready to help you in this difficult situation. Please check this
+[Support article](https://support.polkadot.network/support/solutions/articles/65000182668-what-to-do-if-you-fell-victim-to-scam-or-hack)
+for steps you should take to **prevent further loss** and contact Polkadot Support from the same
+page. Finally, make sure to read the present article carefully to learn how to avoid falling victim
+in the future.
