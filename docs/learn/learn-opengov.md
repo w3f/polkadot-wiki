@@ -146,7 +146,7 @@ For additional details, see the
 
 #### Public Referenda
 
-Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
+In Governance V1, anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
 (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
 to show support
 
@@ -158,7 +158,7 @@ accounts bonding
 {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a single DOT each. :polkadot }}
 {{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. :kusama }}
 
-The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
+The bonded tokens will be released once the proposal is tabled (that is, when it is brought to a vote).
 
 For Governance v1, there can be a maximum of
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }}
@@ -166,25 +166,28 @@ For Governance v1, there can be a maximum of
 public proposals in the proposal queue.
 
 In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
-However, it is not in a state where it can end, or otherwise have its votes counted, be approved and
+However, it is not immediately in a state where it can end, or otherwise have its votes counted, be approved and
 summarily enacted. Instead, referenda must fulfil a number of criteria before they are moved into a
-state known as **Deciding**. Until they are in this state, they remain undecided.
+state known as **Deciding**. Until they are in the initial state, they remain undecided.
 
-The criteria for entering the Decided state is a follows:
+The criteria for entering the **Deciding** state is a follows:
 
 1. A **lead-in period** that outlines the amount of time that must elapse before deciding can begin.
-   This helps mitigate against the possibility of "decision snapping" where an attacker controlling
+   This helps mitigate against the possibility of "decision sniping" where an attacker controlling
    a substantial amount of voting power might seek to have a proposal passed immediately after
    proposing, not allowing the overall voting population adequate time to consider and participate.
 2. There must be room for the decision. All Tracks specify their own limit on the number of
    referenda which can be decided simultaneously. Tracks that have more potent abilities will have
    lower limits. For example, the Root level Origin has a limit of one, implying that only a single
-   über-dangerous proposal may be decided on at once.
-3. A **Decision Deposit** must be paid. Creating a referendum is cheap as the deposit value consists
+   proposal may be decided on at once.
+3. A **Decision Deposit** must be submitted. Creating a referendum is cheap as the deposit value consists
    of only the value required for the on-chain storage needed to track it. But, having a referendum
    reviewed and decided upon carries the risk of using up the limited spots available in the
    referenda queue. It makes sense to have a larger, but refundable deposit requirement to help
    mitigate spam.
+   
+Once the three criteria listed above are met, the referendum moves to the **Deciding** state. 
+The votes of the referendum are now counted towards the outcome.
 
 #### Council Referenda (v1)
 
