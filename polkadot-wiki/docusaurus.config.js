@@ -116,6 +116,10 @@ module.exports = {
             from: ['/docs/redenomination']
           },
           {
+            to: '/docs/maintain-guides-how-to-validate-polkadot',
+            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup','/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
+          },
+          {
             to: '/docs/learn-account-advanced',
             from: ['/docs/ens']
           }
