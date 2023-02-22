@@ -108,6 +108,14 @@ that will fail if execution kills the sending account.
 transfers. For example, if an asset has a minimum balance of 10 and an account has a balance of 25,
 then an attempt to transfer 20 units would transfer all 25.
 
+:::info
+
+Before transferring an asset make sure the receiver account has enough funds to cover for the
+existential deposit and transaction fees for future transfers. Failing to do so will cause the asset
+transfer to fail.
+
+:::
+
 ### Destroying an Asset
 
 To destroy an asset, go to the Polkadot-JS UI > Developer > Extrinsics. If you created an asset
