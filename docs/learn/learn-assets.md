@@ -118,10 +118,11 @@ transfer to fail.
 
 ### Destroying an Asset
 
-To destroy an asset, go to the Polkadot-JS UI > Developer > Extrinsics. If you created an asset
-without minting any unit, you can call `assets.startDestroy` and then the `assets.finishDestroy`
-extrinsics specifying the asset id you want to destroy. If you created an asset and minted units,
-follow the steps below:
+To destroy an asset, go to the Polkadot-JS UI on {{ polkadot: Statemint :polkadot }}
+{{ kusama: Statemine :kusama }} > Developer > Extrinsics. If you created an asset without minting
+any unit, you can call `assets.startDestroy` and then the `assets.finishDestroy` extrinsics
+specifying the asset id you want to destroy. If you created an asset and minted some units, follow
+the steps below:
 
 - `assets.freezeAsset` will freeze all assets on all accounts holding that asset id. Those accounts
   will no longer be able to transfer that asset.
