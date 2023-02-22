@@ -26,12 +26,16 @@ out-of-the-box, and can be further extended with custom GraphQL resolvers.
 
 ### SubQuery
 
-[SubQuery](https://subquery.network/) is an indexer that allows for the indexing, transforming, and
-querying of Substrate chain data to power applications. The decentralized network acts as a
-chain-agnostic data aggregation, indexing, and querying layer between blockchains and applications.
+[SubQuery](https://subquery.network/) is a fast, flexible, and reliable open-source data indexer that provides you with custom APIs for your Substrate/Polkadot project. We build the best, fully-featured indexer, so you don’t have to, with:
+- automatic support for any Substrate network
+- support for all Polkadot smart contract frameworks (FrontierEVM, Acala EVM+, and Wasm)
+- automated historical state tracking to enable faster partial re-indexing
+- a lightweight and portable design that doesn't require centralised archives
+- full support for GraphQL filtering, pagination, interfaces, subscriptions, and aggregations
+- a future decentralized network acts as chain-agnostic data aggregation, indexing, and querying layer between blockchains and applications that will not require centralised services.
 
-SubQuery abstracts away blockchain-specific data idiosyncrasies using the
-[SubQuery SDK](https://github.com/subquery/subql).
+To start building, head to the [SubQuery documentation](https://academy.subquery.network/) where you'll find quick start guides and walkthrough developer tutorials.
+
 
 ### Web3Go
 
