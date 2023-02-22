@@ -121,7 +121,7 @@ follow the steps below:
 - `assets.destroyApprovals` will destroy all approvals related to that asset id (if there are any
   approvals).
 - `assets.destroyAccounts` will destroy all accounts related to that asset id. All asset units will
-  be removed from all accounts.
+  be removed from those accounts.
 - `assets.finishDestroy` will finish the destroying process. The asset id will be removed, and that
   id will be available for another fungible token.
 
