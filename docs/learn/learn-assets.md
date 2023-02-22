@@ -110,8 +110,8 @@ then an attempt to transfer 20 units would transfer all 25.
 
 ### Destroying an Asset
 
-To destroy an asset go to the Polkadot-JS UI > Developer > Extrinsics. If you created an asset
-without minting any unit you can call `assets.startDestroy` and then the `assets.finishDestroy`
+To destroy an asset, go to the Polkadot-JS UI > Developer > Extrinsics. If you created an asset
+without minting any unit, you can call `assets.startDestroy` and then the `assets.finishDestroy`
 extrinsics specifying the asset id you want to destroy. If you created an asset and minted units,
 follow the steps below:
 
@@ -122,8 +122,8 @@ follow the steps below:
   approvals).
 - `assets.destroyAccounts` will destroy all accounts related to that asset id. All asset units will
   be removed from those accounts.
-- `assets.finishDestroy` will finish the destroying process. The asset id will be removed, and that
-  id will be available for another fungible token.
+- `assets.finishDestroy` will finish the destroying process. The asset id will be removed and
+  available for another fungible token.
 
 ### Application Development
 
