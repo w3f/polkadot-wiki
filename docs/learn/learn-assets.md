@@ -108,6 +108,19 @@ that will fail if execution kills the sending account.
 transfers. For example, if an asset has a minimum balance of 10 and an account has a balance of 25,
 then an attempt to transfer 20 units would transfer all 25.
 
+### Destroying an Asset
+
+To destroy an asset go to the Polkadot-JS UI > Developer > Extrinsics. If you created an asset
+without minting any unit you can call `assets.startDestroy` and then the `assets.finishDestroy`
+extrinsics specifying the asset id you want to destroy. If you created an asset and minted units,
+follow the step below:
+
+- `assets.freezeAsset` will freeze all assets on all accounts holding that asset id.
+- `assets.startDestroy` will start the destroying process.
+- `assets.destroyApprovals` will destroy all approvals related to that asset id.
+- `assets.destroyAccounts` will destroy all accounts related to that asset id.
+- `assets.finishDestroy` will finish the destroying process.
+
 ### Application Development
 
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} provides an `approve_transfer`,
