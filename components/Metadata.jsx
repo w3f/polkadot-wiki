@@ -114,14 +114,16 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Render
   setReturnValue(
     <div>
-      <b style={PinkText}>@polkadot/api</b><b>{` version ${PolkadotJSVersion}`}</b>
-      <br />
       {dropdown}
       <div id="buttonControls">
         <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
         <button style={ExpandCollapseButton} onClick={() => ExpandAll(false)}><span style={{ fontSize: "10px" }}>Collapse All</span></button>
       </div>
-      <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b></div>
+      <div style={{ fontSize: "10px" }}>
+        <b style={PinkText}>metadata</b><b>{` ${version}`}</b>&nbsp;
+        <b style={PinkText}>@polkadot/api</b><b>{` V${PolkadotJSVersion}`}</b>
+      </div>
+      <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b><br /></div>
       <b>Pallets:</b>
       {palletData}
       <br />
