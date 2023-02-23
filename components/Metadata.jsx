@@ -150,7 +150,7 @@ function BuildPalletItems(pallet, call, type, types) {
               <li><u>Description</u>: {description}</li>
               <li><u>API Endpoint</u>: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
               <li><u>Chain Value</u>: <span style={PinkText}>{`${JSON.stringify(call[key])}`}</span></li>
-              <li><u>Chain Value Type</u>: {`${Object.keys(constType)[0]} - ${Object.values(constType)[0]}`}</li>
+              <li><u>Chain Value Type</u>: {`(${Object.keys(constType)[0]}: ${Object.values(constType)[0]})`}</li>
             </ul>
           )
           break;
@@ -357,6 +357,9 @@ function StorageDecoder(def, types) {
       const typeDefValue = arrayTypeDef[typeDefKey];
       params += `Array[${length}]: ${typeDefKey} ${typeDefValue} )`;
       break;
+    case "Compact":
+      params = StorageDecoder(types[def.Compact.type].type.def, types);
+      break;
     case "Composite":
       def.Composite.fields.forEach((item) => {
         params = StorageDecoder(types[item.type].type.def, types);
@@ -364,10 +367,10 @@ function StorageDecoder(def, types) {
       break;
     case "Primitive":
       const primitiveType = def.Primitive;
-      params += `Primitive: ${primitiveType} )`;
+      params += `Primitive: ${primitiveType}) `;
       break;
     case "Sequence":
-      console.log("TODO");
+      params = StorageDecoder(types[def.Sequence.type].type.def, types);
       break;
     case "Tuple":
       params += "Tuple: ["
@@ -377,7 +380,15 @@ function StorageDecoder(def, types) {
       params = `${params.slice(0, -2)}]  `;
       break;
     case "Variant":
-      console.log("TODO");
+      params += "Variant: "
+      def.Variant.variants.forEach((variant) => {
+        let fieldNames = [];
+        variant.fields.forEach((field) => {
+          fieldNames.push(field.typeName);
+        })
+        params += `{${variant.name}: [${fieldNames.join(", ")}]}, `
+      });
+      params = `${params.slice(0, -2)}  `;
       break;
     default:
       console.log("Unknown Decoder Type");
