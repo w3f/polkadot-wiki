@@ -67,15 +67,15 @@ privileged roles, but can reassign them after creation. These roles are:
 Always refer to the [**reference documentation**](https://crates.parity.io/pallet_assets/index.html)
 for certainty on privileged roles.
 
-An asset's details contain one field not accessible to its owner or admin team, asset sufficiency.
-Only the network's governance mechanism can deem an asset as _sufficient_. A balance of a
-non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
-could not create a new account on-chain by transferring an insufficient asset to it; the account
-must already exist by having more than the existential deposit in
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset). However, assets
-deemed _sufficient_ can instantiate accounts and pay for transaction fees, such that users can
-transact on {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} without the need for
-{{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
+An asset's details contain one field not accessible to its owner or admin team, **asset
+sufficiency**. Only the network's governance mechanism can deem an asset as _sufficient_. A balance
+of a non-sufficient asset can only exist on accounts that are on-chain (i.e. accounts having the
+existential deposit of a sufficient asset). That is, a user could not keep account on-chain by
+transferring an insufficient asset to it; the account must already be on-chain by having more than
+the existential deposit in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient
+asset). However, assets deemed _sufficient_ can instantiate accounts and pay for transaction fees,
+such that users can transact on {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }}
+without the need for {{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
 
 :::info Transaction Fees on Polkadot-JS UI
 
