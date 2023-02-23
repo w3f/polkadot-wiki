@@ -24,8 +24,11 @@ export default function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
 
   useEffect(async () => {
-    // Load defaults
-    let wsUrl = Networks[0].rpc;
+    // Load default network
+    let defaultNetwork = "polkadot";
+    if (document.title === "Metadata Explorer · Guide") { defaultNetwork = "kusama"; }
+    const network = Networks.find(network => { return network.name === defaultNetwork });
+    const wsUrl = network.rpc;
 
     // Build selection dropdown
     let options = [];
@@ -34,7 +37,7 @@ export default function Metadata({ version }) {
       options.push(option);
     });
     const dropdown = (
-      <select defaultValue={0} style={DropDownStyle} onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}>
+      <select defaultValue={network.rpc} style={DropDownStyle} onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}>
         {options.map((option) => (option))}
       </select>
     )
