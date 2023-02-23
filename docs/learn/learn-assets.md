@@ -11,9 +11,8 @@ import RPC from "./../../components/RPC-Connection";
 
 Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
 represented on several chains. They can take many forms, from a parachain's native token to on-chain
-representations of off-chain reserves. This page focuses on the latter, namely assets that would be
-issued by a creator (e.g. rights to audited, off-chain reserves held by the creator, or art issued
-as an NFT).
+representations of off-chain reserves. This page focuses on the latter, namely assets issued by a
+creator (e.g. rights to audited, off-chain reserves held by the creator, or art issued as an NFT).
 
 The
 {{ polkadot: [Statemint parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/) :polkadot }}
@@ -25,8 +24,8 @@ parachains can host applications dealing with assets on
 thought of as the "home base" of assets in the network.
 
 {{ polkadot: Statemint uses DOT :polkadot }}{{ kusama: Statemine uses KSM :kusama }} as its native
-token. The chain yields its governance to its parent Relay Chain, and has no inflation or era-based
-rewards for collators (although collators do receive a portion of transaction fees). As a
+token. The chain yields its governance to its parent Relay Chain and has no inflation or era-based
+rewards for collators (although collators receive a portion of transaction fees). As a
 [system parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} has a trusted relationship with
 the Relay Chain, and as such, can teleport {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
@@ -35,8 +34,8 @@ between itself and the Relay Chain. That is,
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Relay Chain.
 
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart contracts.
-See the [Advanced](#advanced-techniques) section at the bottom for discussion on using proxy and
-multisig accounts to replicate oft used contract logic.
+See the [Advanced](#advanced-techniques) section at the bottom for a discussion on using proxy and
+multisig accounts to replicate oft-used contract logic.
 
 ## Creation and Management
 
@@ -55,8 +54,8 @@ class owner can add on-chain, for example, a link to an IPFS hash or other off-c
 service. The [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) also supports setting key/value
 pairs as attributes to a class or instance.
 
-An asset class has several privileged roles. The creator of the asset automatically takes on all
-privileged roles, but can reassign them after creation. These roles are:
+An asset class has several privileged roles. The asset creator automatically takes on all privileged
+roles but can reassign them after creation. These roles are:
 
 - The **owner** can set the accounts responsible for the other three roles and set asset metadata
   (e.g. name, symbol, decimals).
@@ -67,15 +66,15 @@ privileged roles, but can reassign them after creation. These roles are:
 Always refer to the [**reference documentation**](https://crates.parity.io/pallet_assets/index.html)
 for certainty on privileged roles.
 
-An asset's details contain one field not accessible to its owner or admin team, asset sufficiency.
-Only the network's governance mechanism can deem an asset as _sufficient_. A balance of a
-non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
-could not create a new account on-chain by transferring an insufficient asset to it; the account
-must already exist by having more than the existential deposit in
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset). However, assets
-deemed _sufficient_ can instantiate accounts and pay for transaction fees, such that users can
-transact on {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} without the need for
-{{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
+An asset's details contain one field not accessible to its owner or admin team, **asset
+sufficiency**. Only the network's governance mechanism can deem an asset as _sufficient_. A balance
+of a non-sufficient asset can only exist on accounts that are on-chain (i.e. accounts having the
+existential deposit of a sufficient asset). That is, a user could not keep an account on-chain by
+transferring an insufficient asset to it; the account must already be on-chain by having more than
+the existential deposit in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient
+asset). However, assets deemed _sufficient_ can instantiate accounts and pay for transaction fees,
+such that users can transact on {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }}
+without the need for {{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
 
 :::info Transaction Fees on Polkadot-JS UI
 
@@ -88,12 +87,12 @@ When using Polkadot-JS UI, transaction fee needs to be paid in
 
 ## Fungible Assets
 
-Fungible assets are those that are interchangeable, i.e. one unit is equivalent to any other unit to
-claim the underlying item. {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }}
-represents fungible assets in the Assets pallet. This pallet presents a similar interface for those
-familiar with the ERC20 standard. However, the logic is encoded directly in the chain's runtime. As
-such, operations are not gas-metered but benchmarked upon every release, leading to efficient
-execution and stable transaction fees.
+Fungible assets are interchangeable, i.e. one unit is equivalent to any other unit to claim the
+underlying item. {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} represents
+fungible assets in the Assets pallet. This pallet presents a similar interface for those familiar
+with the ERC20 standard. However, the logic is encoded directly in the chain's runtime. As such,
+operations are not gas-metered but benchmarked upon every release, leading to efficient execution
+and stable transaction fees.
 
 ### Transferring Asset Balances
 
@@ -107,6 +106,35 @@ that will fail if execution kills the sending account.
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} also sweeps dust balances into
 transfers. For example, if an asset has a minimum balance of 10 and an account has a balance of 25,
 then an attempt to transfer 20 units would transfer all 25.
+
+:::info
+
+Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover
+the existential deposit and transaction fees for future transfers. Failing to do so will cause the
+asset transfer to fail. The transfer will be successful for sufficient assets, but without
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens, you will not be able to transfer
+those assets from the receiver account through Polkadot-JS UI. The feature request to [enable
+sufficient assets for transaction fee payment on Polkadot-JS UI](https://github.com/polkadot-js/apps/issues/7812) is yet to be implemented.
+
+:::
+
+### Destroying an Asset
+
+To destroy an asset, go to the Polkadot-JS UI on {{ polkadot: Statemint :polkadot }}
+{{ kusama: Statemine :kusama }} > Developer > Extrinsics. If you created an asset without minting
+any unit, you could call `assets.startDestroy` and then the `assets.finishDestroy` extrinsics
+specifying the asset id you want to destroy. If you created an asset and minted some units, follow
+the steps below:
+
+- `assets.freezeAsset` will freeze all assets on all accounts holding that asset id. Those accounts
+  will no longer be able to transfer that asset.
+- `assets.startDestroy` will start the destroying process.
+- `assets.destroyApprovals` will destroy all approvals related to that asset id (if there are any
+  approvals).
+- `assets.destroyAccounts` will destroy all accounts related to that asset id. All asset units will
+  be removed from those accounts.
+- `assets.finishDestroy` will finish the destroying process. The asset id will be removed and
+  available for another fungible token.
 
 ### Application Development
 
@@ -141,7 +169,7 @@ a separate meaning from another instance of the same class.
 [Uniques and NFTs pallets](./learn-nft-pallets.md).
 
 Similar to the Assets pallet, this functionality is encoded into the chain. Operations are
-benchmarked before each release in lieu of any runtime metering, ensuring efficient execution and
+benchmarked before each release instead of any runtime metering, ensuring efficient execution and
 stable transaction fees.
 
 ### Transferring NFTs
