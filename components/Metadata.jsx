@@ -202,7 +202,7 @@ function BuildPalletItems(pallet, call, type, types) {
       output.push(item);
     });
   } else {
-    console.log(`No ${type} found for ${pallet.name}`);
+    //console.log(`No ${type} found for ${pallet.name}`);
   }
   output = IsEmpty(output);
   return output;
@@ -328,19 +328,75 @@ function FormatArgs(item, type, types = null) {
     }
   } else if (type === "storage") {
     const key = Object.keys(item.type)[0];
-    // TODO - still need to further decode tuple types
     if (key === "Plain") {
-      const type = types[item.type[key]].type.def;
-      params += `${Object.keys(type)[0]}: ${Object.values(type)[0]}, `
+      const typeKey = item.type.Plain;
+      const def = types[typeKey].type.def
+      params = Decoder(def, types);
     } else if (key === "Map") {
-      const type = types[item.type[key].key].type.def;
-      params += `${Object.keys(type)[0]}: ${Object.values(type)[0]}, `
+      const typeKey = item.type.Map.key;
+      const def = types[typeKey].type.def
+      params = Decoder(def, types);
     } else {
       console.log("Unknown Storage Type");
     }
   }
   params = `${params.slice(0, -2)})`;
   if (params === "(" || params === ")") { params = "None"; }
+  return params;
+}
+
+function Decoder(def, types) {
+  let params = "(";
+  const type = Object.keys(def)[0];
+  switch (type) {
+    case "Array":
+      const length = def.Array.len;
+      const arrayTypeDef = types[def.Array.type].type.def;
+      const typeDefKey = Object.keys(arrayTypeDef)[0];
+      const typeDefValue = arrayTypeDef[typeDefKey];
+      params += `${typeDefKey} Array: ${typeDefValue} w/ a length of ${length} )`;
+      break;
+    case "Composite":
+      def.Composite.fields.forEach((item) => {
+        params = Decoder(types[item.type].type.def, types);
+      })
+      break;
+    case "Primitive":
+      const primitiveType = def.Primitive;
+      params += `Primitive: ${primitiveType} )`;
+      break;
+    case "Sequence":
+      console.log("TODO");
+      break;
+    case "Tuple":
+      def.Tuple.forEach((item) => {
+        const itemLookup = Object.keys(types[item].type.def)[0];
+        // TODO - recursive calls
+        switch (itemLookup) {
+          case "Array":
+            break;
+          case "Composite":
+            break;
+          case "Primitive":
+            break;
+          case "Sequence":
+            break;
+          case "Variant":
+            break;
+          default:
+            console.log("Unknown Tuple Type");
+            break;
+        }
+        params += "TODO, ";
+      })
+      break;
+    case "Variant":
+      console.log("TODO");
+      break;
+    default:
+      console.log("Unknown Decoder Type");
+      break;
+  }
   return params;
 }
 
