@@ -441,6 +441,6 @@ const TopLevelDiv = { maxHeight: "0px", overflow: "hidden" };
 const CollapsedDiv = { maxHeight: "0px", overflow: "hidden", margin: "0px" };
 const NoMargin = { margin: "0px" };
 const DropDownStyle = { border: "1px solid #e6007a", width: "226px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold", margin: "1px" };
-const ExpandCollapseButton = { border: "1px solid #e6007a", width: "112px", margin: "1px", fontWeight: "bold" };
+const ExpandCollapseButton = { border: "1px solid #e6007a", width: "112px", height: "28px", margin: "1px", fontWeight: "bold" };
 const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
 const TreeControl = { margin: "0px", color: "#e6007a", cursor: "pointer" };
