@@ -6,7 +6,7 @@ import Packages from "./../package.json";
 // Load PolkadotJS version
 const PolkadotJSVersion = Packages.devDependencies["@polkadot/api"].substring(1);
 
-// Chains that will appear in the dropdown selection menu
+// Chains that will appear in the dropdown selection menu (add new parachains here)
 const Networks = [
   { name: "polkadot", rpc: "wss://rpc.polkadot.io" },
   { name: "kusama", rpc: "wss://kusama-rpc.polkadot.io" },
