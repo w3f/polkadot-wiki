@@ -373,7 +373,7 @@ function StorageDecoder(def, types) {
       params = StorageDecoder(types[def.Sequence.type].type.def, types);
       break;
     case "Tuple":
-      params += "Tuple: ["
+      params += "Tuple: [ "
       def.Tuple.forEach((item) => {
         params += `${StorageDecoder(types[item].type.def, types)}, `;
       })
