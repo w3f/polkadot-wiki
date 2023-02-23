@@ -111,15 +111,14 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Render
   setReturnValue(
     <div>
-      {dropdown}
-      <br />
       <b style={PinkText}>@polkadot/api</b><b>{` version ${PolkadotJSVersion}`}</b>
       <br />
-      <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b></div>
+      {dropdown}
       <div id="buttonControls">
-        <button onClick={() => ExpandAll(true)}>Expand All</button>
-        <button onClick={() => ExpandAll(false)}>Collapse All</button>
+        <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
+        <button style={ExpandCollapseButton} onClick={() => ExpandAll(false)}><span style={{ fontSize: "10px" }}>Collapse All</span></button>
       </div>
+      <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b></div>
       <b>Pallets:</b>
       {palletData}
       <br />
@@ -441,6 +440,7 @@ const DescriptionHighlighting = { color: "#e6007a", margin: "0px", display: "inl
 const TopLevelDiv = { maxHeight: "0px", overflow: "hidden" };
 const CollapsedDiv = { maxHeight: "0px", overflow: "hidden", margin: "0px" };
 const NoMargin = { margin: "0px" };
-const DropDownStyle = { border: "2px solid #e6007a", width: "225px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold" };
+const DropDownStyle = { border: "1px solid #e6007a", width: "226px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold", margin: "1px" };
+const ExpandCollapseButton = { border: "1px solid #e6007a", width: "112px", margin: "1px", fontWeight: "bold" };
 const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
 const TreeControl = { margin: "0px", color: "#e6007a", cursor: "pointer" };
