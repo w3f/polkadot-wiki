@@ -318,31 +318,38 @@ function FormatDescription(description) {
 // Extract and format arguments from metadata
 function FormatArgs(item, type, types = null) {
   let params = "(";
-  if (type === "rpc") {
-    item.params.forEach(param => {
-      params += `${param.name}: ${param.type}, `;
-    })
-  } else if (type === "extrinsics") {
-    for (let i = 0; i < item.args.length; i++) {
-      params += `${item.args[i].name}: ${item.args[i].type}, `
-    }
-  } else if (type === "events") {
-    for (let i = 0; i < item.args.length; i++) {
-      params += `${item.fields[i].typeName}: ${item.args[i]}, `
-    }
-  } else if (type === "storage") {
-    const key = Object.keys(item.type)[0];
-    if (key === "Plain") {
-      const typeKey = item.type.Plain;
-      const def = types[typeKey].type.def
-      params = StorageDecoder(def, types);
-    } else if (key === "Map") {
-      const typeKey = item.type.Map.key;
-      const def = types[typeKey].type.def
-      params = StorageDecoder(def, types);
-    } else {
-      console.log("Unknown Storage Type");
-    }
+  switch (type) {
+    case "rpc":
+      item.params.forEach(param => {
+        params += `${param.name}: ${param.type}, `;
+      })
+      break;
+    case "extrinsics":
+      for (let i = 0; i < item.args.length; i++) {
+        params += `${item.args[i].name}: ${item.args[i].type}, `
+      }
+      break;
+    case "events":
+      for (let i = 0; i < item.args.length; i++) {
+        params += `${item.fields[i].typeName}: ${item.args[i]}, `
+      }
+      break;
+    case "storage":
+      const key = Object.keys(item.type)[0];
+      if (key === "Plain") {
+        const typeKey = item.type.Plain;
+        const def = types[typeKey].type.def
+        params = StorageDecoder(def, types);
+      } else if (key === "Map") {
+        const typeKey = item.type.Map.key;
+        const def = types[typeKey].type.def
+        params = StorageDecoder(def, types);
+      } else {
+        console.log("Unknown Storage Type");
+      }
+      break;
+    default:
+      break;
   }
   params = `${params.slice(0, -2)})`;
   if (params === "(" || params === ")") { params = "None"; }
