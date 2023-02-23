@@ -102,10 +102,9 @@ takes place on the following platforms:
 {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
 {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
 - The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion platforms
-  that allow users to log in with
-  their Web3 address and automatically read proposals from the chain, turning them into discussion
-  threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
-  vote.
+  automatically read proposals from the chain, turning them into discussion
+  threads and allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel 
+  for a proposal before committing to a vote.
 
 Spreading the word about the proposal's explanation to the community is ultimately up to the proposer.
 
