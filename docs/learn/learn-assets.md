@@ -70,7 +70,7 @@ for certainty on privileged roles.
 An asset's details contain one field not accessible to its owner or admin team, **asset
 sufficiency**. Only the network's governance mechanism can deem an asset as _sufficient_. A balance
 of a non-sufficient asset can only exist on accounts that are on-chain (i.e. accounts having the
-existential deposit of a sufficient asset). That is, a user could not keep account on-chain by
+existential deposit of a sufficient asset). That is, a user could not keep an account on-chain by
 transferring an insufficient asset to it; the account must already be on-chain by having more than
 the existential deposit in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient
 asset). However, assets deemed _sufficient_ can instantiate accounts and pay for transaction fees,
@@ -110,9 +110,11 @@ then an attempt to transfer 20 units would transfer all 25.
 
 :::info
 
-Before transferring an asset make sure the receiver account has enough funds to cover for the
-existential deposit and transaction fees for future transfers. Failing to do so will cause the asset
-transfer to fail.
+Before transferring a non-sufficient asset make sure the receiver account has enough funds to cover
+for the existential deposit and transaction fees for future transfers. Failing to do so will cause
+the asset transfer to fail. The transfer will be successful for sufficient assets, but without
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens you will not be able to transfer those
+assets from the receiver account.
 
 :::
 
