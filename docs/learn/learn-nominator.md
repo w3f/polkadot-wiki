@@ -480,8 +480,16 @@ to reduce the risk of none of your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 
-To explore the possible reasons for not receiving staking rewards, check out the
-[Staking FAQ](learn-staking-faq#3-why-am-i-not-receiving-staking-rewards)
+To explore the possible reasons for not receiving staking rewards, check out the followings:
+
+- The
+  [Staking FAQ](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
+  on the Support Pages.
+- The
+  ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/)
+  Reddit article.
+- The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards)
+  section on the Staking Page.
 
 :::
 
@@ -492,11 +500,11 @@ for more information and instructions for claiming rewards.
 
 :::note Explainer videos on Nominating
 
-These concepts have been further explained in the
-[Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
-and
-[What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
-and [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+These concepts have been further explained in the:
+
+- [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
+- [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+- [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
 
 :::
 
