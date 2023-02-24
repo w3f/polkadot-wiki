@@ -100,7 +100,10 @@ two accounts.
 :::info
 
 On Polkadot and Kusama, the instance of the pallet
-[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as
+'voterList'.
+
+For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 :::
 
