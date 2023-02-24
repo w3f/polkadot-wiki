@@ -87,8 +87,7 @@ It serves two major purposes:
 
 Running a validator on the Kusama network is identical to running a Polkadot validator.
 
-Make sure to adjust the Polkadot guide to run a Kusama network validator (The instructions will also
-available in the Polkadot Validator guide):
+Make sure to adjust the Polkadot guide to run a Kusama network validator (the instructions will also be available in the Polkadot Validator guide):
 
 1. When starting the node pass `--chain=kusama` CLI flag:
 
