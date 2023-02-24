@@ -52,13 +52,13 @@ nominators. To understand how validators are elected, check the
 
 :::info On-Chain Data for Reference
 
-On Polkadot, the minimum stake backing a validator in the active set is
-<MinimumStake network="polkadot" defaultValue={18684315524834056}/> in the era
-<RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>.
-
 On Kusama, the minimum stake backing a validator in the active set is
 <MinimumStake network="kusama" defaultValue={5367388652143741} /> in the era
 <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>.
+
+On Polkadot, the minimum stake backing a validator in the active set is
+<MinimumStake network="polkadot" defaultValue={18684315524834056}/> in the era
+<RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>.
 
 :::
 
@@ -81,8 +81,7 @@ It serves two major purposes:
 
 ## Run a Kusama Validator
 
-Running a validator on the Kusama network is identical to running a Polkadot validator. Check out
-the [Polkadot guide](../maintain-guides-how-to-validate-polkadot.md) on how to setup a validator.
+Running a validator on the Kusama network is identical to running a Polkadot validator.
 
 Make sure to adjust the Polkadot guide to run a Kusama network validator (The instructions will also
 available in the Polkadot Validator guide):
@@ -90,3 +89,6 @@ available in the Polkadot Validator guide):
 1. When starting the node pass `--chain=kusama` CLI flag:
 
 2. Similar to Polkadot network Kusama has its own token called KSM
+
+Check out the [Polkadot guide](../maintain-guides-how-to-validate-polkadot.md) on how to setup a
+validator.
