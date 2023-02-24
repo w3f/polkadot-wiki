@@ -186,7 +186,7 @@ relevant metrics, followed by a brief description of each.
   number of bonded tokens). Note that, nominating those who have a higher yield does not guarantee
   similar future performance.
 
-![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
+![Staking Returns](../assets/nominators_target.png)
 
 On the Targets page you can use different filters to select validators with specific traits (where a
 trait is a combination of the metrics above). Available filters are:
