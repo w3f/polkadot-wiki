@@ -22,13 +22,39 @@ help you get started.
 
 :::
 
+If you landed on this page it means that you decided to take a journey to understand how you can be
+a good nominator. Note, this page is not for [nomination pool](./learn-nomination-pools.md) members,
+although pool members might gain essential knowledge about how to choose nomination pools.
+
+The information provided on this page is complementary to that on the
+[**Staking Page**](./learn-staking.md) and [**Advanced Staking Page**](./learn-staking-advanced.md).
+Make sure you read those pages as well before nominating.
+
+## Why Nominating?
+
+- You become part of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Movement, a
+  group of professionals and enthusiasts around the world aspiring to build and foster the next-gen
+  internet, Web 3.0: a decentralized, privacy-focused and trustless internet.
+- You are an essential piece of the puzzle, keeping
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure, deciding the future
+  direction of the project by voting in [OpenGov](./learn-opengov.md) and participating in parachain
+  [crowdloans](./learn-crowdloans.md).
+- You start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} works
+  at a technical-level. When you feel comfortable with your nomination skills and knowledge you can
+  open your [nomination pool](./learn-nomination-pools.md), help others securing the network and
+  earning rewards, and start building your reputation as a trusted nominator. If this is not enough
+  for you, next step is to become a [validator](./learn-validator.md).
+- By getting [staking](./learn-staking.md) rewards you fight
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation and (likely) your
+  currency inflation as well.
+
 Nominators secure the Relay Chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 and nominating validators. You may have an account with
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn fresh
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as a validator, which
 requires experience in setting up a node and running and maintaining it 24/7.
 
-If you do not want to bother with nodes, you can still earn
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can also earn
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} by nominating one or more validators. By
 doing so, you become a nominator for the validator(s) of your choice. Pick your validators
 carefully - if they do not behave properly, they will get slashed and you will lose
@@ -49,15 +75,26 @@ staking lock can be unlocked and the bonded funds become free balance you can tr
 
 ## Setting-up Accounts
 
-If you landed on this page it means that you decided to take a journey to understand how you can be
-a good nominator. Note, this page is not for [nomination pool](./learn-nomination-pools.md) members,
-although pool members might gain some knowledge about how to select nomination pools.
+The first thing you need to do before becoming a nominator is to make sure you have a
+[**stash account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) where you can
+transfer funds you want to use for staking. For this accounts it is recommended a "cold solution"
+such as [Ledger](../general/ledger.md) or
+[Parity Signer](./learn-account-generation.md#parity-signer).
 
-The first thing you need to do is to make sure you have a
-[**stash account** and a **controller account**](./learn-staking.md/#stash-and-controller-accounts-for-staking)
-or a [**staking proxy**](./learn-staking-advanced.md/#staking-proxies) (or both). Note that in the
-near future it is likely that the concept of controller account will be removed as staking proxies
-essentially are used for the same purpose (sign staking-related transaction on behalf of the stash).
+After setting up the stash account it is recommended to have a
+[**controller account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) or a
+[**staking proxy**](./learn-staking-advanced.md/#staking-proxies) (or both, controller and staking
+proxy). Although you can be a nominator with just a stash account, it is good practice to have at
+least a controller or a staking proxy for security reasons.
+
+:::info In the near future Controller Accounts will be deprecated
+
+The concept of controller account is very similar to that of a staking proxy: isolate the stash
+account but use its economic power, and sign staking-related transactions on behalf of it. This is
+why in the near future there will be only proxies as the controller is becoming redundant. Given
+this context, we recommend nominators to start understanding what proxies are and how to use them.
+
+:::
 
 Without the controller,
 [the stash account will be able to perform all staking-related transactions](./learn-staking-advanced.md/#stash-is-also-controller).
