@@ -228,6 +228,30 @@ location, owner, etc.).
 
 :::
 
+### Bags-list
+
+:::info
+
+On Polkadot and Kusama, the instance of the pallet
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
+
+:::
+
+Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
+extremely important for the
+[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
+staking/election system. Bags-list allows up to
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+nominators to set their intention to nominate, of which, the stake of the top
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
+nominators is considered for [electing set](#staking-election-stages) that eventually determines the
+active validators. The bags-list can be previewed on
+[Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
+
+![Bags list](../assets/staking/bags-list.png)
+
 ### Validator Stats
 
 How the validator acted in the past may be a good indicator of how they will act in the future. An
@@ -411,30 +435,6 @@ re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes i
 be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain.
 
 ![Rebag](../assets/staking/rebag.png)
-
-### Bags-list
-
-:::info
-
-On Polkadot and Kusama, the instance of the pallet
-[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
-
-:::
-
-Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
-extremely important for the
-[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system. Bags-list allows up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
-nominators to set their intention to nominate, of which, the stake of the top
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
-nominators is considered for [electing set](#staking-election-stages) that eventually determines the
-active validators. The bags-list can be previewed on
-[Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
-
-![Bags list](../assets/staking/bags-list.png)
 
 ## Staking Election Stages
 
