@@ -19,6 +19,9 @@ const Networks = [
 // Track all top-level containers for expand/collapse all functionality
 let Expandable = [];
 
+// Timeout for performing search requests
+let SearchThrottle;
+
 // Component
 export default function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
@@ -114,7 +117,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Render
   setReturnValue(
     <div>
-      <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onKeyUp={(e) => Search(e)} /><br />
+      <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onInput={() => Search()} /><br />
       {dropdown}
       <div id="buttonControls">
         <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
@@ -152,45 +155,45 @@ function BuildPalletItems(pallet, call, type, types) {
           const constType = types[meta.type].type.def;
           list = (
             <ul>
-              <li><u>Description</u>: {description}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li><u>Chain Value</u>: <span style={PinkText}>{`${JSON.stringify(call[key])}`}</span></li>
-              <li><u>Chain Value Type</u>: {`(${Object.keys(constType)[0]}: ${Object.values(constType)[0]})`}</li>
+              <li className="searchable"><u>Description</u>: {description}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.consts.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li className="searchable"><u>Chain Value</u>: <span style={PinkText}>{`${JSON.stringify(call[key])}`}</span></li>
+              <li className="searchable"><u>Chain Value Type</u>: {`(${Object.keys(constType)[0]}: ${Object.values(constType)[0]})`}</li>
             </ul>
           )
           break;
         case "errors":
           list = (
             <ul>
-              <li><u>Description</u>: {description}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li className="searchable"><u>Description</u>: {description}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.errors.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
             </ul>
           )
           break;
         case "events":
           list = (
             <ul>
-              <li><u>Description</u>: {description}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li><u>Fields</u>: {FormatArgs(meta, "events")}</li>
+              <li className="searchable"><u>Description</u>: {description}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.events.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li className="searchable"><u>Fields</u>: {FormatArgs(meta, "events")}</li>
             </ul>
           )
           break;
         case "extrinsics":
           list = (
             <ul>
-              <li><u>Description</u>: {description}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li><u>Parameters</u>: {FormatArgs(meta, "extrinsics")}</li>
+              <li className="searchable"><u>Description</u>: {description}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.tx.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li className="searchable"><u>Parameters</u>: {FormatArgs(meta, "extrinsics")}</li>
             </ul>
           )
           break;
         case "storage":
           list = (
             <ul>
-              <li><u>Description</u>: {description}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.query.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
-              <li><u>Return Type</u>: {FormatArgs(meta, "storage", types)}</li>
+              <li className="searchable"><u>Description</u>: {description}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.query.${Camel(pallet.name)}.${Camel(key)}`}</span></li>
+              <li className="searchable"><u>Return Type</u>: {FormatArgs(meta, "storage", types)}</li>
             </ul>
           )
           break;
@@ -231,19 +234,19 @@ function BuildRPCOrRuntime(call, type) {
         case "rpc":
           listItems = (
             <ul style={NoMargin}>
-              <li><u>Description</u>: {callDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.rpc.${key}.${methodKey}`}</span></li>
-              <li><u>Return Type</u>: {childCall.type}</li>
-              <li><u>Parameters</u>: {FormatArgs(childCall, "rpc")}</li>
+              <li className="searchable"><u>Description</u>: {callDescription}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.rpc.${key}.${methodKey}`}</span></li>
+              <li className="searchable"><u>Return Type</u>: {childCall.type}</li>
+              <li className="searchable"><u>Parameters</u>: {FormatArgs(childCall, "rpc")}</li>
             </ul>
           )
           break;
         case "runtime":
           listItems = (
             <ul style={NoMargin}>
-              <li><u>Description</u>: {callDescription}</li>
-              <li><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${key}.${methodKey}`}</span></li>
-              <li><u>Type</u>: {childCall.type}</li>
+              <li className="searchable"><u>Description</u>: {callDescription}</li>
+              <li className="searchable"><u>API Endpoint</u>: <span style={PinkText}>{`api.call.${key}.${methodKey}`}</span></li>
+              <li className="searchable"><u>Type</u>: {childCall.type}</li>
             </ul>
           )
           break;
@@ -447,24 +450,38 @@ function ExpandAll(bool) {
 }
 
 // Search content
-function Search(event) {
-  const query = document.getElementById("metaSearch").value;
-  if (query === "") {
-    ExpandAll(false);
-  } else {
-    const matcher = new RegExp(query, "gi");
-    Expandable.forEach((elementId) => {
-      const div = document.getElementById(elementId);
-      const button = document.getElementById(`${elementId}-button`);
-      if (matcher.test(div.innerHTML)) {
-        div.style.maxHeight = "100%";
-        button.innerText = "-";
-      } else {
-        div.style.maxHeight = "0px";
-        button.innerText = "+";
-      }
-    })
-  }
+function Search() {
+  clearTimeout(SearchThrottle);
+  SearchThrottle = setTimeout(function () {
+    const query = document.getElementById("metaSearch").value;
+    if (query.length < 2) {
+      ExpandAll(false);
+      Expandable.forEach((elementId) => {
+        const div = document.getElementById(elementId);
+        const searchable = div.getElementsByClassName("searchable");
+        for (let item of searchable) { item.style.background = "transparent"; }
+      })
+    } else {
+      const matcher = new RegExp(query, "gi");
+      Expandable.forEach((elementId) => {
+        const div = document.getElementById(elementId);
+        const searchable = div.getElementsByClassName("searchable");
+        const button = document.getElementById(`${elementId}-button`);
+        if (matcher.test(div.innerText)) {
+          for (let item of searchable) {
+            if (matcher.test(item.innerText)) { item.style.background = "#ffff00"; }
+            else { item.style.background = "transparent"; }
+          }
+          div.style.maxHeight = "100%";
+          button.innerText = "-";
+        } else {
+          for (let item of searchable) { item.style.background = "transparent"; }
+          div.style.maxHeight = "0px";
+          button.innerText = "+";
+        }
+      })
+    }
+  }, 200); // Perform search after 0.2s
 }
 
 // Styling
