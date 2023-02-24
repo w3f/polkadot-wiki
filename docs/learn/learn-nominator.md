@@ -358,6 +358,48 @@ that if you are staking with a small amount of DOT, you may not receive rewards.
 is dynamic based on the number of validators, number of nominators, amount nominated, and other
 factors.
 
+## Receiving Rewards
+
+As long as you have nominated more than one validator candidate, at least one of them got elected,
+and you are nominating with enough stake to get into the solution set, your bonded stake will be
+fully distributed to one or more validators. That being said, you may not receive rewards if you
+nominated very few validator candidates and no one got elected, or your stake is small and you only
+selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
+generally wise to choose as many trustworthy validators as you can (up to
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>) :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>) :kusama }}
+to reduce the risk of none of your nominated validators being elected.
+
+:::info Not receiving Staking Rewards?
+
+To explore the possible reasons for not receiving staking rewards, check out the followings:
+
+- The
+  [Staking FAQ](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
+  on the Support Pages.
+- The
+  ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/)
+  Reddit article.
+- The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards)
+  section on the Staking Page.
+
+:::
+
+Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go all of the
+validator's nominators. Any account can do this, although in practice validator operators often do
+this as a service to their nominators. See the page on [Simple Payouts](learn-staking-advanced.md)
+for more information and instructions for claiming rewards.
+
+:::note Explainer videos on Nominating
+
+These concepts have been further explained in the:
+
+- [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
+- [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+- [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+
+:::
+
 ## Good Practices
 
 ### Required Minimum Stake
@@ -465,48 +507,6 @@ higher, which can be viewed on
 :::
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
-
-## Receiving Rewards
-
-As long as you have nominated more than one validator candidate, at least one of them got elected,
-and you are nominating with enough stake to get into the solution set, your bonded stake will be
-fully distributed to one or more validators. That being said, you may not receive rewards if you
-nominated very few validator candidates and no one got elected, or your stake is small and you only
-selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
-generally wise to choose as many trustworthy validators as you can (up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>) :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>) :kusama }}
-to reduce the risk of none of your nominated validators being elected.
-
-:::info Not receiving Staking Rewards?
-
-To explore the possible reasons for not receiving staking rewards, check out the followings:
-
-- The
-  [Staking FAQ](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
-  on the Support Pages.
-- The
-  ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/)
-  Reddit article.
-- The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards)
-  section on the Staking Page.
-
-:::
-
-Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go all of the
-validator's nominators. Any account can do this, although in practice validator operators often do
-this as a service to their nominators. See the page on [Simple Payouts](learn-staking-advanced.md)
-for more information and instructions for claiming rewards.
-
-:::note Explainer videos on Nominating
-
-These concepts have been further explained in the:
-
-- [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
-- [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
-- [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
-
-:::
 
 ## Guides
 
