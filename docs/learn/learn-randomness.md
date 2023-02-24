@@ -24,7 +24,7 @@ blockchain randomness.
 
 There are two main approaches to blockchain randomness in production today: `RANDAO` and `VRF`.
 
-**{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses VRF.**
+{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }} **uses VRF.**
 
 ## VRF
 
