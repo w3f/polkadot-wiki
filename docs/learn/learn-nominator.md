@@ -257,8 +257,6 @@ nominators is considered for [electing set](#staking-election-stages) that event
 active validators. The bags-list can be previewed on
 [Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
 
-![Bags list](../assets/staking/bags-list.png)
-
 Bonding additional tokens or unbonding the staked tokens will automatically place the nominating
 account in the appropriate bag. While the system tries its best to ensure nominators are always
 represented in the correct bag, certain changes in bonded funds (e.g. a slash in the negative
