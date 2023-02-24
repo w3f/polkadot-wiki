@@ -233,7 +233,8 @@ location, owner, etc.).
 :::info
 
 On Polkadot and Kusama, the instance of the pallet
-[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
+[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as
+`voterList`.
 
 :::
 
@@ -251,6 +252,60 @@ active validators. The bags-list can be previewed on
 [Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
 
 ![Bags list](../assets/staking/bags-list.png)
+
+Bonding additional tokens or unbonding the staked tokens will automatically place the nominating
+account in the appropriate bag. While the system tries its best to ensure nominators are always
+represented in the correct bag, certain changes in bonded funds (e.g. a slash in the negative
+direction, or rewards in the positive direction) can cause an account to be in the wrong bag, and
+for scalability reasons the system will not automatically self-adjust.
+
+:::caution `voterList.putInFrontOf` and `voterList.rebag` extrinsics
+
+The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
+stake. `voterList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
+useful for the accounts in the last bag eligible for receiving staking rewards. Also, balance
+changes due to staking rewards or slashing do not automatically re-bag the account. Whenever
+applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the
+instructions are available in this
+[support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
+
+:::
+
+To demonstrate how bags-list works, let's imagine a simple bag system with 7 accounts and 3 bags:
+
+Alice: 10 DOT, Bob: 11 DOT, Charlie: 15 DOT, Dave: 20 DOT, Eve: 100 DOT, Frank 1000 DOT, Georgina:
+2000 DOT
+
+Bag1: Max 2000, Min 1000 - Frank, Georgina
+
+Bag2: Max 1000, Min 20 - Eve, Dave
+
+Bag3: Max 20, Min 10 - Alice, Bob, Charlie
+
+The bags are iterated based stake in decreasing order and within a bag, they are iterated on
+_insertion_ order, not _amount at stake_. So if only five nominating accounts are picked for the
+electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 DOT, she
+is first in line in Bag3.
+
+Charlie can put himself in front (move up in the bag) using the `voterList.putInFrontOf` extrinsic,
+since he has 15 DOT (more than Alice does at 10). Now if nothing changes for the next era, Frank,
+Georgina, Eve, Dave, and Charlie will get rewards. Bag3 now has: Charlie, Alice, Bob. The
+`voterList.putInFrontOf` extrinsic can be issued through Polkadot JS Apps UI by clicking on the Move
+up button.
+
+![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
+
+Alice gets upset, but she cannot move herself up, since Charlie has more DOT than her. Bob _could_
+move himself in front of Alice, since he has 11 DOT (> 10), but he still wouldn't get rewards.
+
+Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded
+automatically and Charlie's stash crosses 20 DOT after rewards from several staking eras. As changes
+in bonded balance due to staking rewards or slashing do not automatically re-bag the account,
+Charlie has to issue `voterList.rebag` extrinsic to place his nominator node in the right bag. The
+re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes in the bag needs to
+be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain.
+
+![Rebag](../assets/staking/rebag.png)
 
 ### Validator Stats
 
@@ -381,60 +436,6 @@ higher, which can be viewed on
 :::
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
-
-Bonding additional tokens or unbonding the staked tokens will automatically place the nominating
-account in the appropriate bag. While the system tries its best to ensure nominators are always
-represented in the correct bag, certain changes in bonded funds (e.g. a slash in the negative
-direction, or rewards in the positive direction) can cause an account to be in the wrong bag, and
-for scalability reasons the system will not automatically self-adjust.
-
-:::caution `voterList.putInFrontOf` and `voterList.rebag` extrinsics
-
-The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
-stake. `voterList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
-useful for the accounts in the last bag eligible for receiving staking rewards. Also, balance
-changes due to staking rewards or slashing do not automatically re-bag the account. Whenever
-applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the
-instructions are available in this
-[support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
-
-:::
-
-To demonstrate how bags-list works, let's imagine a simple bag system with 7 accounts and 3 bags:
-
-Alice: 10 DOT, Bob: 11 DOT, Charlie: 15 DOT, Dave: 20 DOT, Eve: 100 DOT, Frank 1000 DOT, Georgina:
-2000 DOT
-
-Bag1: Max 2000, Min 1000 - Frank, Georgina
-
-Bag2: Max 1000, Min 20 - Eve, Dave
-
-Bag3: Max 20, Min 10 - Alice, Bob, Charlie
-
-The bags are iterated based stake in decreasing order and within a bag, they are iterated on
-_insertion_ order, not _amount at stake_. So if only five nominating accounts are picked for the
-electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 DOT, she
-is first in line in Bag3.
-
-Charlie can put himself in front (move up in the bag) using the `voterList.putInFrontOf` extrinsic,
-since he has 15 DOT (more than Alice does at 10). Now if nothing changes for the next era, Frank,
-Georgina, Eve, Dave, and Charlie will get rewards. Bag3 now has: Charlie, Alice, Bob. The
-`voterList.putInFrontOf` extrinsic can be issued through Polkadot JS Apps UI by clicking on the Move
-up button.
-
-![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
-
-Alice gets upset, but she cannot move herself up, since Charlie has more DOT than her. Bob _could_
-move himself in front of Alice, since he has 11 DOT (> 10), but he still wouldn't get rewards.
-
-Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded
-automatically and Charlie's stash crosses 20 DOT after rewards from several staking eras. As changes
-in bonded balance due to staking rewards or slashing do not automatically re-bag the account,
-Charlie has to issue `voterList.rebag` extrinsic to place his nominator node in the right bag. The
-re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes in the bag needs to
-be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain.
-
-![Rebag](../assets/staking/rebag.png)
 
 ## Staking Election Stages
 
