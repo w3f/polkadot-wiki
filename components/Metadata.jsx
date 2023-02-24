@@ -213,8 +213,6 @@ function BuildPalletItems(pallet, call, type, types) {
       )
       output.push(item);
     });
-  } else {
-    //console.log(`No ${type} found for ${pallet.name}`);
   }
   output = IsEmpty(output);
   return output;
