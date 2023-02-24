@@ -239,9 +239,8 @@ On Polkadot and Kusama, the instance of the pallet
 :::
 
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
-extremely important for the
-[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system. Bags-list allows up to
+extremely important for the long-term improvements of the staking/election system. Bags-list allows
+up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 nominators to set their intention to nominate, of which, the stake of the top
@@ -309,20 +308,19 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
 
 ### Validator Stats
 
-How the validator acted in the past may be a good indicator of how they will act in the future. An
-example of problematic behavior would be if a validator is regularly offline, their nominators most
-likely would get fewer rewards than others. More importantly, when many validators are
-[unreachable](learn-staking.md#unresponsiveness), those nominators who staked with them will be
-slashed.
+Nominators can query [validator histories](https://polkadot.js.org/apps/#/staking/query/) to see
+statistics such as era points, rewards and slashes, total stake, and [identity](learn-identity.md)
+(if they have set one). It is good practice to do comprehensive research on validator candidates.
+This could include (but should not be limited to) going over the validators' websites to see who
+they are, what kind of infrastructure setup they are using, reputation, the vision behind the
+validator, and more.
+
+Any problematic behavior must be taken seriously. An example of problematic behavior would be if a
+validator is regularly offline. In this case nominators most likely would get fewer rewards. In the
+case of many validators being [unreachable](learn-staking.md#unresponsiveness), such validators and
+corresponding nominators will be slashed.
 
 ![Validator Stats](../assets/validator_stats.png)
-
-Thus, to be a smart nominator, it would be better to query their
-[histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks
-produced, rewards and slashes, and [identity](learn-identity.md) (if they have it set). Moreover, a
-nominator should do comprehensive research on their validator candidates - they should go over the
-validators' websites to see who they are, what kind of infrastructure setup they are using,
-reputation, the vision behind the validator, and more.
 
 ## Nominating with the Staking Dashboard
 
