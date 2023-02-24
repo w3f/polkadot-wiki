@@ -23,37 +23,35 @@ help you get started.
 :::
 
 Nominators secure the Relay Chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-and nominating validators.
-
-You may have an account with {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn
-fresh {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as validator, which
-requires experience in setting up a node, and running and maintaining it 24/7.
+and nominating validators. You may have an account with
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn fresh
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as a validator, which
+requires experience in setting up a node and running and maintaining it 24/7.
 
 If you do not want to bother with nodes, you can still earn
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} by nominating one or more validators. By
 doing so, you become a nominator for the validator(s) of your choice. Pick your validators
 carefully - if they do not behave properly, they will get slashed and you will lose
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as well. However, if they do follow the rules
-of the network, then you can share staking rewards they generate.
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. However, if they do follow the rules of the
+network you can share staking rewards they generate.
 
-While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked by nominating a
-validator, they are 'locked' (bonded). You can receive new
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in your account but you cannot stake as
-validator or transfer {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} away from your account.
-You can [un-nominate at any time](../maintain/maintain-guides-how-to-nominate-polkadot.md) to stop
-staking your funds. Keep in mind that the un-nomination is effective in the next era, and that
-un-nominating does not automatically unbond your funds. There is an unbonding period of
-{{ polkadot: 28 days on Polkadot :polkadot }} {{ kusama: 7 days on Kusama :kusama }} before bonded
-funds can be transferred after issuing an unbond transaction. This is calculated by taking the
-`bonding duration` (in eras), multiplying it by the `length of a single era` (in hours), and
-dividing by the `hours in a day` (24). Example:
-({{ polkadot: 28 × 24 ÷ 24 = 28 days :polkadot }}{{ kusama: 28 × 6 ÷ 24 = 7 days :kusama }}).
+While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked for nominations, they
+are 'locked' (bonded). You can
+[stop nominating at any time](../maintain/maintain-guides-how-to-nominate-polkadot.md), but keep in
+mind that the action is effective in the next era and that it does not automatically unbond your
+funds. Unbonding is a separate action and it takes effect after the unbonding period, which is
+{{ polkadot: 28-day long on Polkadot :polkadot }}{{ kusama: 7-day long on Kusama :kusama }}. This is
+calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+era** (in hours), and dividing by the **hours in a day** (24). Example:
+({{ polkadot: 28 × 24 ÷ 24 = 28 days :polkadot }}{{ kusama: 28 × 6 ÷ 24 = 7 days :kusama }}). A
+staking lock will be visible on the Polkadot-JS UI during the unbonding period, and after it, the
+staking lock can be unlocked and the bonded funds become free balance you can transfer.
 
 ## Setting-up Accounts
 
 If you landed on this page it means that you decided to take a journey to understand how you can be
-a good nominator. Note, this page is not for nomination pool members, although pool members might
-gain some knowledge about how to select nomination pools.
+a good nominator. Note, this page is not for [nomination pool](./learn-nomination-pools.md) members,
+although pool members might gain some knowledge about how to select nomination pools.
 
 The first thing you need to do is to make sure you have a
 [**stash account** and a **controller account**](./learn-staking.md/#stash-and-controller-accounts-for-staking)
