@@ -315,7 +315,7 @@ likely would get fewer rewards than others. More importantly, when many validato
 [unreachable](learn-staking.md#unresponsiveness), those nominators who staked with them will be
 slashed.
 
-![Validator Stats](../assets/staking/polkadotjs_validator_stats.png)
+![Validator Stats](../assets/validator_stats.png)
 
 Thus, to be a smart nominator, it would be better to query their
 [histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks
