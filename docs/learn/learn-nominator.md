@@ -75,6 +75,8 @@ staking lock can be unlocked and the bonded funds become free balance you can tr
 
 ## Setting-up Accounts
 
+### Stash, Controller & Staking Proxy
+
 The first thing you need to do before becoming a nominator is to make sure you have a
 [**stash account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) where you can
 transfer funds you want to use for staking. For this accounts it is recommended a "cold solution"
@@ -96,19 +98,21 @@ this context, we recommend nominators to start understanding what proxies are an
 
 :::
 
-Without the controller,
+If the future of nominating will be without a controller account,
 [the stash account will be able to perform all staking-related transactions](./learn-staking-advanced.md/#stash-is-also-controller).
 This means that the staking proxy of the stash will be able to sign for all staking-related
 transactions as well. The stash will be fully isolated (except if the user decides to change the
-staking proxy, or to attach different proxies to it).
+staking proxy of the stash, or to attach different proxies to the stash).
 
-As a nominator you will be asked to chose an account where rewards will be received. You chose
-between:
+### Rewards Payout Account
+
+As a nominator you will be asked to chose an account where rewards will be paid out. You can choose
+one of the following options:
 
 - back to staking: rewards are compounded to the bonded amount.
 - to stash: rewards are sent to the stash account as free balance.
 - to controller: rewards are sent to the controller account as a free balance.
-- to another account: rewards are sent to a user-defined account (not stash or controller)-
+- to another account: rewards are sent to a user-defined account (not stash or controller).
 
 :::info
 
