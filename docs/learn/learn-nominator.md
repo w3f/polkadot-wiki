@@ -119,18 +119,19 @@ one of the following options:
 Being a nominator is made simpler using the
 [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that will guide you step by
 step through creating a stash-controller relationship, specifying rewards destination and nominating
-validators (more on this below).
+validators (more on this below). Note that staking proxies are not currently supported on the
+dashboard.
 
 :::
 
-## Validator Selection
+## Nominating with the Polkadot-JS UI
 
-### Using the Polkadot-JS UI
+### Targets Page
 
-There are many factors to consider when deciding which validator's to nominate. One useful tool for
-assisting in this process is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets)
-table in the Polkadot-JS UI. This allows to sort validators using various metrics. Outlined below
-are the relevant metrics, followed by a brief description of each.
+There are many factors to consider when deciding which your nominations. One useful tool to choose
+validators is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets) table in the
+Polkadot-JS UI. This allows to sort validators using various metrics. Outlined below are the
+relevant metrics, followed by a brief description of each.
 
 | validator | payout   | nominators             | comm. | total stake | own stake | return |
 | --------- | -------- | ---------------------- | ----- | ----------- | --------- | ------ |
@@ -147,7 +148,7 @@ are the relevant metrics, followed by a brief description of each.
   considered oversubscribed when more than
   {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-  'active' nominators are assigned to the validator. In this scenario only the top
+  active nominators are assigned to the validator. In this scenario only the top
   {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
   nominators (sorted by stake) will receive rewards. The remaining nominators will not be rewarded,
@@ -158,7 +159,7 @@ are the relevant metrics, followed by a brief description of each.
   {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
   validators, which contributes towards maximizing the probability of having the nominators stake
   applied to the validators active set. Nominating too few validators could result in the nominators
-  losing their rewards when none of them make it to active set or when those Validator nodes stop
+  not receiving their rewards when none of them make it to active set or when those validators stop
   validating. The election algorithm attempts to maximize the overall network stake, while
   minimizing the variance of the active stake across the validators. For additional information on
   the election process checkout the research behind
@@ -167,13 +168,13 @@ are the relevant metrics, followed by a brief description of each.
 - **comm.**: Total commission kept by the validator (100% means the validator will keep all rewards
   and thus nominators will not receive them). A validator's commission is the percentage of the
   validator reward which is taken by the validator before the rewards are split among the
-  nominators. As a nominator, you may think that the lowest commission is best. However, this is not
-  always true. Validators must be able to run at break-even in order to sustainably continue
-  operation. Independent validators that rely on the commission to cover their server costs help to
-  keep the network decentralized. Some validators, operated by central exchanges etc., keep 100% of
-  the commission to payout their staking service clients and therefore do not provide any rewards to
-  external nominators. Commission is just one piece of the puzzle that you should consider when
-  picking validators to nominate.
+  nominators. As a nominator, you may think that the lowest commission is best. However, validators
+  must be able to run at break-even in order to sustainably continue operation. Independent
+  validators that rely on the commission to cover their server costs help to keep the network
+  decentralized. Some validators, operated by central exchanges etc., keep 100% of the commission to
+  payout their staking service clients and therefore do not provide any rewards to external
+  nominators. Commission is just one piece of the puzzle that you should consider when picking
+  validators to nominate.
 - **total stake**: The total amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :Kusama }} tokens
   staked by nominators and the validator (i.e. own stake, see below).
 - **own stake**: The amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :Kusama }} tokens the
@@ -182,7 +183,7 @@ are the relevant metrics, followed by a brief description of each.
   "own stake" is not automatically untrustworthy, as the validator could be nominating from a
   different address.
 - **return**: Average annual yield paid out to nominators (i.e. number of rewards divided by the
-  number of bonded tokens). Note that, nominate those who have a higher yield does not guarantee
+  number of bonded tokens). Note that, nominating those who have a higher yield does not guarantee
   similar future performance.
 
 ![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
@@ -190,7 +191,10 @@ are the relevant metrics, followed by a brief description of each.
 On the Targets page you can use different filters to select validators with specific traits (where a
 trait is a combination of the metrics above). Available filters are:
 
-- **one validator per operator**: Do not show groups of validators run by a single operator.
+- **one validator per operator**: Do not show groups of validators run by a single operator. It
+  shows small operators only who will likely have a higher commission and higher self-stake.
+  Nominating only small operators might not always guarantee staking rewards, but it helps to keep
+  the network more resilient to attacks.
 
 :::info Validator vs Operator
 
@@ -224,12 +228,7 @@ location, owner, etc.).
 
 :::
 
-### Using the Staking Dashboard
-
-The Staking Dashboard allows to choose pre-selected lists of validators based on user preference, or
-to manually select validators in a similar fashion as in the Polkadot-JS UI.
-
-### Review Your Validators' History
+### Validator Stats
 
 How the validator acted in the past may be a good indicator of how they will act in the future. An
 example of problematic behavior would be if a validator is regularly offline, their nominators most
@@ -245,6 +244,11 @@ produced, rewards and slashes, and [identity](learn-identity.md) (if they have i
 nominator should do comprehensive research on their validator candidates - they should go over the
 validators' websites to see who they are, what kind of infrastructure setup they are using,
 reputation, the vision behind the validator, and more.
+
+## Nominating with the Staking Dashboard
+
+The Staking Dashboard allows to choose pre-selected lists of validators based on user preference, or
+to manually select validators in a similar fashion as in the Polkadot-JS UI.
 
 ## Good Practices
 
