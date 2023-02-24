@@ -114,8 +114,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Render
   setReturnValue(
     <div>
-      {/* TODO - Use this input as a search by filtering child divs based on the query */}
-      {/* <input type="text" placeholder="Search Metadata" style={SearchStyle} /><br /> */}
+      <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onKeyUp={(e) => Search(e)} /><br />
       {dropdown}
       <div id="buttonControls">
         <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
@@ -447,6 +446,27 @@ function ExpandAll(bool) {
   })
 }
 
+// Search content
+function Search(event) {
+  const query = document.getElementById("metaSearch").value;
+  if (query === "") {
+    ExpandAll(false);
+  } else {
+    const matcher = new RegExp(query, "gi");
+    Expandable.forEach((elementId) => {
+      const div = document.getElementById(elementId);
+      const button = document.getElementById(`${elementId}-button`);
+      if (matcher.test(div.innerHTML)) {
+        div.style.maxHeight = "100%";
+        button.innerText = "-";
+      } else {
+        div.style.maxHeight = "0px";
+        button.innerText = "+";
+      }
+    })
+  }
+}
+
 // Styling
 const PinkText = { color: "#e6007a" };
 const DescriptionRegular = { margin: "0px", display: "inline" };
@@ -458,4 +478,4 @@ const DropDownStyle = { border: "1px solid #e6007a", width: "226px", height: "40
 const ExpandCollapseButton = { border: "1px solid #e6007a", width: "112px", height: "28px", margin: "1px", fontWeight: "bold", cursor: "pointer" };
 const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
 const TreeControl = { margin: "0px", color: "#e6007a", cursor: "pointer" };
-//const SearchStyle = { border: "1px solid #e6007a", width: "226px", height: "40px", fontSize: "16px", textAlign: "center", margin: "1px" }
+const SearchStyle = { border: "1px solid #e6007a", width: "226px", height: "40px", fontSize: "16px", textAlign: "center", margin: "1px" }
