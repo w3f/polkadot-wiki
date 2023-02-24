@@ -60,8 +60,7 @@ On Polkadot, the minimum stake backing a validator in the active set is
 On Kusama, the minimum stake backing a validator in the active set is
 {{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
 {{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
+era {{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
 {{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 
 :::
