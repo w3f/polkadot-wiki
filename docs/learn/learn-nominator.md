@@ -309,11 +309,11 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
 ### Validator Stats
 
 Nominators can query [validator histories](https://polkadot.js.org/apps/#/staking/query/) to see
-statistics such as era points, rewards and slashes, total stake, and [identity](learn-identity.md)
-(if they have set one). It is good practice to do comprehensive research on validator candidates.
-This could include (but should not be limited to) going over the validators' websites to see who
-they are, what kind of infrastructure setup they are using, reputation, the vision behind the
-validator, and more.
+statistics such as era points, elected stake, rewards and slashes, and commission. It is good
+practice to do comprehensive research on validator candidates. This could include (but should not be
+limited to) checking the validators' [identity](learn-identity.md) (if they have set one) and going
+over the validators' websites to see who they are, what kind of infrastructure setup they are using,
+reputation, the vision behind the validator, and more.
 
 Any problematic behavior must be taken seriously. An example of problematic behavior would be if a
 validator is regularly offline. In this case nominators most likely would get fewer rewards. In the
