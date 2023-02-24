@@ -11,20 +11,11 @@ import RPC from "./../../components/RPC-Connection";
 
 import MinimumStake from "./../../components/Minimum-Stake";
 
-:::info
-
-The following information applies to the Polkadot network. If you want to set up a validator on
-Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
-
-This guide will instruct you how to set up a validator node on the Polkadot network.
-
-:::
-
 ## Preliminaries
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
 only your own stake, but also the stake of your current nominators. If you make a mistake and get
-slashed, your money and your reputation will be at risk. However, running a validator can also be
+slashed, your tokens and your reputation will be at risk. However, running a validator can also be
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
@@ -40,16 +31,13 @@ tackle yourself. Being a validator involves more than just executing the Polkado
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator.md) information to make sure you understand the
-factors to consider when constructing your infrastructure. Web3 Foundation also maintains a
-[reference implementation for a validator set-up](https://github.com/w3f/polkadot-validator-setup)
-that you can use by deploying yourself (video walkthrough is available
-[here](https://www.youtube.com/watch?v=tTn8P6t7JYc)). As you progress in your journey as a
+factors to consider when constructing your infrastructure. As you progress in your journey as a
 validator, you will likely want to use this repository as a _starting point_ for your own
 modifications and customizations.
 
 If you need help, please reach out on the
-[Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
-on Riot. The team and other validators are there to help answer questions and provide tips from
+[Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) on
+Element. The team and other validators are there to help answer questions and provide tips from
 experience.
 
 ### How many DOT do I need?
