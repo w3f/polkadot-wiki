@@ -55,8 +55,7 @@ understand how validators are elected, check the
 
 On Polkadot, the minimum stake backing a validator in the active set is
 {{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era {{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
 {{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
 
 On Kusama, the minimum stake backing a validator in the active set is
