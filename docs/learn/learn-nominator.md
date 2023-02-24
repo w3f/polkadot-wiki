@@ -124,6 +124,35 @@ dashboard.
 
 :::
 
+## Staking Election Stages
+
+The staking election system has 3 stages for both validators and nominators, namely "intention",
+"electable/electing", and "active".
+
+- **intention to nominate:** an account that has stated the intention to nominate; also called
+  simply a "nominator".
+- **electing nominator:** a nominator who is selected to be a part of the input to the
+  [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
+  the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
+- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
+  validator. Staking rewards are received by top
+  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
+  nominators, but when slashing occurs, all the active nominators backing the validator get slashed.
+
+![Nominator Election](../assets/staking/nominator-election.png)
+
+### The Election Solution Set
+
+Determining which validators are in the active set and which nominators are nominating them creates
+a very large graph mapping nominators to their respective validators. This "solution set" is
+computed off-chain and submitted to the chain, which means it must fit in a single block. If there
+are a large number of nominators, this means that some nominators must be eliminated. Currently,
+nominators are sorted by amount of DOT staked and those with more DOT are prioritized. This means
+that if you are staking with a small amount of DOT, you may not receive rewards. This minimal amount
+is dynamic based on the number of validators, number of nominators, amount nominated, and other
+factors.
+
 ## Nominating with the Polkadot-JS UI
 
 ### Targets Page
@@ -436,35 +465,6 @@ higher, which can be viewed on
 :::
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
-
-## Staking Election Stages
-
-The staking election system has 3 stages for both validators and nominators, namely "intention",
-"electable/electing", and "active".
-
-- **intention to nominate:** an account that has stated the intention to nominate; also called
-  simply a "nominator".
-- **electing nominator:** a nominator who is selected to be a part of the input to the
-  [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
-  the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
-- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator. Staking rewards are received by top
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-  nominators, but when slashing occurs, all the active nominators backing the validator get slashed.
-
-![Nominator Election](../assets/staking/nominator-election.png)
-
-### The Election Solution Set
-
-Determining which validators are in the active set and which nominators are nominating them creates
-a very large graph mapping nominators to their respective validators. This "solution set" is
-computed off-chain and submitted to the chain, which means it must fit in a single block. If there
-are a large number of nominators, this means that some nominators must be eliminated. Currently,
-nominators are sorted by amount of DOT staked and those with more DOT are prioritized. This means
-that if you are staking with a small amount of DOT, you may not receive rewards. This minimal amount
-is dynamic based on the number of validators, number of nominators, amount nominated, and other
-factors.
 
 ## Receiving Rewards
 
