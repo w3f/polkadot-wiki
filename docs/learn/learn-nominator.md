@@ -236,12 +236,14 @@ On Polkadot and Kusama, the instance of the pallet
 [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as
 `voterList`.
 
-:::
+For guidelines about how to rebag or move your account within a bag see the followings:
 
-For guidelines about how to rebag or move your account within a bag see the Bags List section on
-[this Support Page](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards),
-visit the [dedicated Bags List Section](./learn-staking-advanced.md#bags-list), and watch the
-[dedicated technical explainer video](https://youtu.be/hIIZRJLrBZA).
+- The "Bags List" Section on
+  [this Support Page](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
+- The [Bags List Section](./learn-staking-advanced.md#bags-list) in Advanced Staking Concepts.
+- The [dedicated technical explainer video](https://youtu.be/hIIZRJLrBZA).
+
+:::
 
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the long-term improvements of the staking/election system. Bags-list allows
