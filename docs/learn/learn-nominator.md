@@ -329,6 +329,12 @@ reputation, the vision behind the validator, and more.
 The Staking Dashboard allows to choose pre-selected lists of validators based on user preference, or
 to manually select validators in a similar fashion as in the Polkadot-JS UI.
 
+Pre-selected choices are:
+
+- Optimal Selection: Selects a mix of majority active and inactive validators.
+- Active Low Commission: Gets a set of active validators with low commission.
+- From Favorites: Gets a set of your favorites validators.
+
 ## Staking Election Stages
 
 The staking election system has 3 stages for both validators and nominators, namely "intention",
@@ -338,12 +344,13 @@ The staking election system has 3 stages for both validators and nominators, nam
   simply a "nominator".
 - **electing nominator:** a nominator who is selected to be a part of the input to the
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
-  the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
+  the [bags-list](./learn-staking-advanced.md#bags-list).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator. Staking rewards are received by top
+  validator. Staking rewards are received by the top
   {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-  nominators, but when slashing occurs, all the active nominators backing the validator get slashed.
+  nominators ranked by stake. When slashing occurs, all the active nominators backing the validator
+  get slashed (also those who do not receive rewards due to oversubscription issue).
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
@@ -392,9 +399,9 @@ for more information and instructions for claiming rewards.
 
 :::note Explainer videos on Nominating
 
-These concepts have been further explained in the:
+These concepts have been further explained in the following videos:
 
-- [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
+- [Why Nominate on Polkadot & Kusama](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
 - [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
 - [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
 
