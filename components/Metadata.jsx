@@ -46,7 +46,7 @@ export default function Metadata({ version }) {
     )
 
     // Set loading status
-    setReturnValue(<div style={PinkText}><b>Loading Metadata...</b></div>);
+    setReturnValue(<div style={PinkText}><b>Loading Metadata Explorer...</b></div>);
 
     // Fetch metadata from the chain
     await GetMetadata(version, wsUrl, dropdown, setReturnValue);
@@ -57,7 +57,7 @@ export default function Metadata({ version }) {
 
 // Retrieve metadata from selected chain and render results
 async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
-  ToggleLoading();
+  ToggleLoading("metadataLoading", false);
   // Load websocket
   const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider });
@@ -93,7 +93,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
     // Compile all elements for the given pallet
     palletData.push(
-      <div key={pallet.name}>
+      <div key={pallet.name} style={SecondLevel}>
         <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;<b>{pallet.name}</b></span>
         <div id={pallet.name} style={TopLevelDiv}>
           {constantElements}
@@ -112,29 +112,33 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   const rpcs = BuildRPCOrRuntime(api.rpc, "rpc");
   const runtime = BuildRPCOrRuntime(api.call, "runtime");
 
-  ToggleLoading();
+  ToggleLoading("metadataLoading", true);
 
   // Render
   setReturnValue(
     <div>
-      <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onInput={() => Search()} /><br />
-      {dropdown}
-      <div id="buttonControls">
-        <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
-        <button style={ExpandCollapseButton} onClick={() => ExpandAll(false)}><span style={{ fontSize: "10px" }}>Collapse All</span></button>
+      <div style={ExplorerControls}>
+        <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onInput={() => Search()} /><br />
+        {dropdown}
+        <div id="buttonControls">
+          <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
+          <button style={ExpandCollapseButton} onClick={() => ExpandAll(false)}><span style={{ fontSize: "10px" }}>Collapse All</span></button>
+        </div>
+        <div style={{ fontSize: "10px" }}>
+          <b style={PinkText}>metadata</b><b>{` ${version}`}</b>&nbsp;
+          <b style={PinkText}>@polkadot/api</b><b>{` V${PolkadotJSVersion}`}</b>
+        </div>
+        <div id="metadataLoading" style={LoadingStatus}><b>{`Connecting to ${wsUrl}...`}</b></div>
+        <div id="searchLoading" style={LoadingStatus}><b>Searching...</b></div>
+        <div id="searchResults" style={LoadingStatus}><b>{`Matches: `}</b><b id="searchCount" style={PinkText}>0</b></div>
       </div>
-      <div style={{ fontSize: "10px" }}>
-        <b style={PinkText}>metadata</b><b>{` ${version}`}</b>&nbsp;
-        <b style={PinkText}>@polkadot/api</b><b>{` V${PolkadotJSVersion}`}</b>
-      </div>
-      <div id="metadataLoading" style={LoadingStatus}><b>Loading Metadata...</b><br /></div>
-      <b>Pallets:</b>
+      <b style={TopLevel}>Pallets:</b>
       {palletData}
       <br />
-      <b>RPC:</b>
+      <b style={TopLevel}>RPC:</b>
       {rpcs}
       <br />
-      <b>Runtime:</b>
+      <b style={TopLevel}>Runtime:</b>
       {runtime}
     </div>
   );
@@ -264,7 +268,7 @@ function BuildRPCOrRuntime(call, type) {
     children = IsEmpty(children);
     const header = key.charAt(0).toUpperCase() + key.slice(1);
     const formattedCalls = (
-      <div key={key}>
+      <div key={key} style={SecondLevel}>
         <span><b id={`${key}-button`} style={TreeControl} onClick={() => { ToggleExpand(key) }}>+</b>&nbsp;<b>{header}</b></span>
         <div id={key} style={TopLevelDiv}>
           <ul style={NoMargin}>
@@ -413,11 +417,11 @@ function StorageDecoder(def, types) {
 }
 
 // Display loading notification
-function ToggleLoading() {
-  const el = document.getElementById("metadataLoading");
+function ToggleLoading(id, hidden) {
+  const el = document.getElementById(id);
   if (el !== null) {
-    if (el.style.visibility === "hidden") { el.style.visibility = "visible"; }
-    else { el.style.visibility = "hidden" };
+    if (hidden === false) { el.style.display = "block"; }
+    else { el.style.display = "none" };
   }
 }
 
@@ -451,6 +455,7 @@ function ExpandAll(bool) {
 
 // Search content
 function Search() {
+  ToggleLoading("searchLoading", false);
   clearTimeout(SearchThrottle);
   SearchThrottle = setTimeout(function () {
     const query = document.getElementById("metaSearch").value;
@@ -461,17 +466,22 @@ function Search() {
         const searchable = div.getElementsByClassName("searchable");
         for (let item of searchable) { item.style.background = "transparent"; }
       })
+      ToggleLoading("searchResults", true);
     } else {
       const matcher = new RegExp(query, "gi");
+      let matchCount = 0;
       Expandable.forEach((elementId) => {
         const div = document.getElementById(elementId);
         const searchable = div.getElementsByClassName("searchable");
         const button = document.getElementById(`${elementId}-button`);
         if (matcher.test(div.innerText)) {
           for (let item of searchable) {
-            if (matcher.test(item.innerText)) { item.style.background = "#ffff00"; }
-            else { item.style.background = "transparent"; }
+            if (matcher.test(item.innerText)) {
+              item.style.background = "#ffff00";
+              matchCount += 1;
+            } else { item.style.background = "transparent"; }
           }
+          document.getElementById("searchCount").innerText = matchCount;
           div.style.maxHeight = "100%";
           button.innerText = "-";
         } else {
@@ -479,20 +489,25 @@ function Search() {
           div.style.maxHeight = "0px";
           button.innerText = "+";
         }
-      })
+      });
+      ToggleLoading("searchResults", false);
     }
+    ToggleLoading("searchLoading", true);
   }, 200); // Perform search after 0.2s
 }
 
 // Styling
 const PinkText = { color: "#e6007a" };
+const ExplorerControls = { textAlign: "center " };
 const DescriptionRegular = { margin: "0px", display: "inline" };
 const DescriptionHighlighting = { color: "#e6007a", margin: "0px", display: "inline", background: "#f0f0f0", paddingLeft: "5px", paddingRight: "5px" }
 const TopLevelDiv = { maxHeight: "0px", overflow: "hidden" };
 const CollapsedDiv = { maxHeight: "0px", overflow: "hidden", margin: "0px" };
 const NoMargin = { margin: "0px" };
-const DropDownStyle = { border: "1px solid #e6007a", width: "226px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold", margin: "1px", cursor: "pointer" };
-const ExpandCollapseButton = { border: "1px solid #e6007a", width: "112px", height: "28px", margin: "1px", fontWeight: "bold", cursor: "pointer" };
-const LoadingStatus = { color: "#e6007a", visibility: "hidden" };
+const DropDownStyle = { border: "1px solid #e6007a", width: "400px", height: "40px", fontSize: "16px", textAlign: "center", fontWeight: "bold", margin: "1px", cursor: "pointer" };
+const ExpandCollapseButton = { border: "1px solid #e6007a", width: "199px", height: "28px", margin: "1px", fontWeight: "bold", cursor: "pointer" };
+const LoadingStatus = { display: "none" };
 const TreeControl = { margin: "0px", color: "#e6007a", cursor: "pointer" };
-const SearchStyle = { border: "1px solid #e6007a", width: "226px", height: "40px", fontSize: "16px", textAlign: "center", margin: "1px" }
+const SearchStyle = { border: "1px solid #e6007a", width: "400px", height: "40px", fontSize: "16px", textAlign: "center", margin: "1px" }
+const TopLevel = { fontSize: "18px" }
+const SecondLevel = { paddingLeft: "16px" }
