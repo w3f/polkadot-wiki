@@ -361,6 +361,17 @@ validator mode right away:
 ./target/production/polkadot
 ```
 
+:::info
+
+If you want to run a validator on Kusama, you have an option to specify the chain. With no
+specification, this would default to Polkadot.
+
+```sh
+./target/production/polkadot --chain=kusama
+```
+
+:::
+
 ```
 2021-06-17 03:07:07 Parity Polkadot
 2021-06-17 03:07:07 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu
