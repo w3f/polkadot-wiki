@@ -41,6 +41,7 @@ module.exports = {
         },
         "general/faq",
         "general/glossary",
+        "general/metadata",
       ],
     },
     {

@@ -1,9 +1,9 @@
 ---
-id: Metadata
+id: metadata
 title: Metadata Explorer
-sidebar_label: Metadata and documentation for the Substrate ecosystem
-description: Visualize metadata and documentation for various Substrate chains.
-keywords: [docs, substrate, metadata]
+sidebar_label: Metadata Explorer
+description: Visualize metadata and documentation for various parachains.
+keywords: [docs, substrate, metadata, explorer, search, api, tools, js, javascript]
 slug: ../metadata
 ---
 
