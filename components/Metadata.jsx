@@ -480,7 +480,6 @@ function Search() {
               matchCount += 1;
             } else { item.style.background = "transparent"; }
           }
-          document.getElementById("searchCount").innerText = matchCount;
           div.style.maxHeight = "100%";
           button.innerText = "-";
         } else {
@@ -488,6 +487,7 @@ function Search() {
           div.style.maxHeight = "0px";
           button.innerText = "+";
         }
+        document.getElementById("searchCount").innerText = matchCount;
       });
       ToggleLoading("searchResults", false);
     }
