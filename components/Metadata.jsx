@@ -8,12 +8,13 @@ const PolkadotJSVersion = Packages.devDependencies["@polkadot/api"].substring(1)
 
 // Chains that will appear in the dropdown selection menu (add new parachains here)
 const Networks = [
-  { name: "polkadot", rpc: "wss://rpc.polkadot.io" },
-  { name: "kusama", rpc: "wss://kusama-rpc.polkadot.io" },
-  { name: "statemine", rpc: "wss://statemine-rpc.polkadot.io" },
-  { name: "statemint", rpc: "wss://statemint-rpc.polkadot.io" },
-  { name: "westend", rpc: "wss://westend-rpc.polkadot.io" },
-  { name: "rococo", rpc: "wss://rococo-rpc.polkadot.io" },
+  { name: "Polkadot", rpc: "wss://rpc.polkadot.io" },
+  { name: "Kusama", rpc: "wss://kusama-rpc.polkadot.io" },
+  { name: "Westend", rpc: "wss://westend-rpc.polkadot.io" },
+  { name: "Statemint", rpc: "wss://statemint-rpc.polkadot.io" },
+  { name: "Statemine", rpc: "wss://statemine-rpc.polkadot.io" },
+  { name: "Westmint", rpc: "wss://westmint-rpc.polkadot.io" },
+  { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
 // Track all top-level containers for expand/collapse all functionality
