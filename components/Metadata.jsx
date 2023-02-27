@@ -29,8 +29,8 @@ export default function Metadata({ version }) {
 
   useEffect(async () => {
     // Load default network
-    let defaultNetwork = "polkadot";
-    if (document.title === "Metadata Explorer · Guide") { defaultNetwork = "kusama"; }
+    let defaultNetwork = "Polkadot";
+    if (document.title === "Metadata Explorer · Guide") { defaultNetwork = "Kusama"; }
     const network = Networks.find(network => { return network.name === defaultNetwork });
     const wsUrl = network.rpc;
 
