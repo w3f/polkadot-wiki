@@ -722,19 +722,19 @@
   {
     "index": 40,
     "startBlock": 14411200,
-    "startHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "startHash": "0xf49d31a35c9db7ba87ecaea87777d00893df12ce16d92ac6dec0adeea4886589",
     "endPeriodBlock": 14438200,
     "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "biddingEndsBlock": 14510200,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardStartBlock": null,
-    "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "onboardEndBlock": null,
+    "onboardStartBlock": 14227200,
+    "onboardStartHash": "0x49c449d0184300a6e81a15c2c7124fa3d341b72d01ef56662ef24b922c970449",
+    "onboardEndBlock": 23904000,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "startDate": null,
+    "startDate": 1677380964000,
     "endPeriodDate": null,
     "biddingEndsDate": null,
-    "onboardStartDate": null,
+    "onboardStartDate": 1676275908000,
     "onboardEndDate": null
   }
 ]
