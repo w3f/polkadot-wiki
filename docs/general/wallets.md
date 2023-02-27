@@ -99,9 +99,10 @@ custom remote nodes, phishing detection, QR account import, export/import/derive
 ### SubWallet
 
 A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive and monitor multi-chain
-assets on 150+ networks. Import account with seedphrase, private key, QR-code, JSON file. Import token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger support, light clients
-support, EVM DApp support, MetaMask compatibility, custom
-endpoints, fiat on-ramp, phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
+assets on 150+ networks. Import account with seedphrase, private key, QR-code, JSON file. Import
+token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger support,
+light clients support, EVM DApp support, MetaMask compatibility, custom endpoints, fiat on-ramp,
+phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
 [2](https://polkadot.polkassembly.io/treasury/162),
 [3](https://polkadot.polkassembly.io/treasury/218)].

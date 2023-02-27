@@ -97,17 +97,17 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-{{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
-{{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
-{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
-- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion platforms
-  automatically read proposals from the chain, turning them into discussion
-  threads and allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel 
+  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
+  platforms automatically read proposals from the chain, turning them into discussion threads and
+  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
   for a proposal before committing to a vote.
 
-Spreading the word about the proposal's explanation to the community is ultimately up to the proposer.
-
+Spreading the word about the proposal's explanation to the community is ultimately up to the
+proposer.
 
 ### Creating the Proposal
 

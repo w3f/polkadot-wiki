@@ -113,8 +113,9 @@ Before transferring a non-sufficient asset, ensure the receiver account has enou
 the existential deposit and transaction fees for future transfers. Failing to do so will cause the
 asset transfer to fail. The transfer will be successful for sufficient assets, but without
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens, you will not be able to transfer
-those assets from the receiver account through Polkadot-JS UI. The feature request to [enable
-sufficient assets for transaction fee payment on Polkadot-JS UI](https://github.com/polkadot-js/apps/issues/7812) is yet to be implemented.
+those assets from the receiver account through Polkadot-JS UI. The feature request to
+[enable sufficient assets for transaction fee payment on Polkadot-JS UI](https://github.com/polkadot-js/apps/issues/7812)
+is yet to be implemented.
 
 :::
 
