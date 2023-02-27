@@ -12,6 +12,7 @@ module.exports = {
         "learn/learn-balance-transfers",
         "learn/learn-auction",
         "learn/learn-parachains",
+        "general/metadata",
         "learn/learn-parathreads",
         "learn/learn-bridges",
         "learn/learn-crowdloans",
