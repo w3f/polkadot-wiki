@@ -1,16 +1,17 @@
 # Auction Tool
 
-The auction tool tracks auctions for all the parachains on Polkadot and Kusama. This data is
+The auction tool tracks auctions for all the parachain slots on Polkadot and Kusama. This data is
 displayed here:
 
 - [Polkadot Auctions](https://wiki.polkadot.network/docs/learn-auction#auction-schedule)
 - [Kusama Auctions](https://guide.kusama.network/docs/learn-auction/#auction-schedule)
 
-The auction tool uses a cache that is tracked on the repo to save information about the auctions.
-For example, if an auction has been scheduled but has not yet begun there will be no `startHash`,
-just a `startBlock`. Once the block is created, the hash can be added to the cache for tracking. The
-cache is updated daily using
-[this GitHub Action](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/update-auction-schedules.yml).
+The auction tool uses a json
+[cache](https://github.com/w3f/polkadot-wiki/tree/master/components/utilities/data) to save
+information about the auctions. For example, if an auction has been scheduled but has not yet begun
+there will be no `startHash`, just a `startBlock`. Once the block is created, the hash can be added
+to the cache for tracking. The cache is updated daily using
+[this GitHub action](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/update-auction-schedules.yml).
 The action has 2 primary steps:
 
 1. [getAuctions.js](https://github.com/w3f/polkadot-wiki/blob/master/components/utilities/getAuctions.js) -
@@ -24,33 +25,34 @@ The action has 2 primary steps:
    `0xf34a77856ab1190ff207ddc2cf7f05dd5fe9760a24bf8a1631fb19f142858bc7` if that block was recently
    created.
 
-After these 2 scripts execute a new pull request will automatically be made to the repo if any
-changes are detected to either json cache file. The PR is only opened by the GitHub action so you
-can safely run these script locally if you want to see what updates are available or are debugging
-an issue. To run the scripts locally you can use the following commands:
+After these 2 scripts execute a new [pull request](https://github.com/w3f/polkadot-wiki/pull/4241)
+will automatically be made to the repo if any changes are detected to either json cache file. The PR
+is only opened by the GitHub action so you can safely run these script locally if you want to see
+what updates are available or are debugging an issue. To run the scripts locally you can use the
+following commands:
 
 1. `yarn get:auctions`
 2. `yarn update:auctions`
 
-Based on past behavior, it will sometime be required to modify the cache manually. The team has
+Based on past behavior, it will sometimes be required to modify the cache manually. The team has
 noticed that Kusama will occasionally introduce a breaking api change or modifications to the
 dispatch queue before the auctions begins. The `getAuctions.js` script will not attempt to monitor
 changes to an auction while in the dispatch queue if it has already been added to the cache. This
 means if a `startBlock` was incorrectly added, it will not update with the appropriate auction
-information as the block is likely not the start of an auction. If this issue is detected the
+information as the block is likely not the start of an auction. If this issue is detected, the
 automation routine will bail (displaying an error for the action) and not commit any changes until
 the discrepancy is resolved manually. New auctions can be added any time and changes can be manually
-made, but only to the following cache properties:
+appended. The following cache properties must be provided:
 
-1. `index` - auction number (-1 starts from 0)
+1. `index` - auction number (count starts at 0)
 2. `startBlock` - the block an auction is expected to become active
 
 **The remaining properties in the cache are auto-generate and should not be modified as running
-`yarn update:auctions` will overwrite those changes.** This means to manually add a new auction
-these are the only 2 properties that need to be accurate. The remaining properties should be `null`
-dates or blocks and `0x0000000000000000000000000000000000000000000000000000000000000000` for hashes.
-For example, if I wanted to manually add a new auction `(#41)` to the cache I would append the
-following object:
+`yarn update:auctions` will overwrite those changes.** This means when manually adding a new auction
+these are the only 2 properties that need to be specified. The remaining properties should still be
+including, providing `null` dates or blocks and
+`0x0000000000000000000000000000000000000000000000000000000000000000` for hash values. For example,
+if I wanted to manually add a new auction `(#41)` to the cache I would append the following object:
 
 ```json
   {
@@ -73,8 +75,10 @@ following object:
   },
 ```
 
-Once this info is added and saved to the json file, I can run `yarn update:auctions` which will
-attempt to see if any of the other properties can be updated. The final steps are to commit and push
-the changes to the json cache. Following automated scheduled runs of the
+Once this information is added and saved to the local json file, I can run `yarn update:auctions`
+which will attempt to see if any of the other properties can be updated. The final steps are to
+commit and push the changes to the main branch on the repo. This will ensure following automated
+scheduled runs of the
 [update-auction-schedules](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/update-auction-schedules.yml)
-GitHub Action will continue to check for future updates.
+GitHub action will detect the new auction and continue to check for future updates daily (or at the
+interval specified in the automation `.yml` file).
