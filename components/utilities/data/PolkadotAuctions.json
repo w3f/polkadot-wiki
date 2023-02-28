@@ -724,7 +724,7 @@
     "startBlock": 14411200,
     "startHash": "0xf49d31a35c9db7ba87ecaea87777d00893df12ce16d92ac6dec0adeea4886589",
     "endPeriodBlock": 14438200,
-    "endPeriodHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "endPeriodHash": "0x90ee8096609be752ebfcf884cfbef95cdb9c0ed6c76f541d2bc2bae1efb0e4b1",
     "biddingEndsBlock": 14510200,
     "biddingEndsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "onboardStartBlock": 14227200,
@@ -732,7 +732,7 @@
     "onboardEndBlock": 23904000,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "startDate": 1677380964000,
-    "endPeriodDate": null,
+    "endPeriodDate": 1677543126000,
     "biddingEndsDate": null,
     "onboardStartDate": 1676275908000,
     "onboardEndDate": null
