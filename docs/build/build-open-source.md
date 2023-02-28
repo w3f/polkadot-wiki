@@ -67,8 +67,8 @@ In the below sections you can find a list of different layers of the Polkadot St
 **Maintenance Status**:
 
 - 🟢 Actively maintained
-- 🟡 Stale (no activity for 1 month)
-- 🔴 Unmaintained (no activity for more than 3 months)
+- 🟡 Stale (no activity (on main branch) for 1 month)
+- 🔴 Unmaintained (no activity (on main branch) for more than 3 months)
 
 ### User Interface
 
