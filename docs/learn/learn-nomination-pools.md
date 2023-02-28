@@ -307,6 +307,27 @@ the list of validators nominated by the pool, and so, in a way, you are trusting
 to act in your best interests. However, it is advised to check the validators nominated by the pool
 from time to time and change the pool if necessary.
 
+
+:::info Minimum Active Nomination Value is Dynamic
+
+
+The minimum amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} required to become an active nominator and earn rewards is
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :kusama }}
+. If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active nomination and still want to participate in staking,
+you can join the nomination pools.
+you can now stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with
+just
+{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
+in the nomination pools and earn staking rewards. For additional information, check out
+[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
+
+:::
+
+
+
 |                                                                                                                                 Nominating                                                                                                                                  |                                                                                                    Joining a Pool                                                                                                     |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                        Minimum 100 DOT to nominate.                                                                                                                         |                                                                                             Minimum 1 DOT to be a member.                                                                                             |
