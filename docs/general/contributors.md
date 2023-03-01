@@ -49,18 +49,7 @@ Radha leads Technical Education at Web3 Foundation. Radha has a PhD in Computer 
 three years of experience teaching Computer Science courses. He also taught a Massively Open Online
 Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). Radha is excited
 to contribute to Web3 Foundation's vision by educating professionals and the general public about
-the WEB3 Technology Stack.
-
-### Emre Surmeli
-
-- email: [emre@web3.foundation](mailto:emre@web3.foundation)
-- matrix: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
-- twitter: [@semres8](https://twitter.com/semres8)
-
-Emre is a Technical Educator at Web3 Foundation. His background is in full-stack software
-development, education, and blockchain technology consulting. He is passionate about learning and
-teaching and has always kept a foot in education by designing and delivering software development
-and blockchain classes at General Assembly, Code Fellows, and Columbia University.
+the Web3 Technology Stack.
 
 ### Filippo Franchini
 
@@ -106,6 +95,16 @@ in Architecture (buildings not computers). It was during this time that he disco
 for computational design. He was previously employed in the CAD/3D graphics software development
 domains. Keith is passionate about learning, developing and sharing decentralized and peer-to-peer
 technologies.
+
+### Emre Surmeli
+
+- twitter: [@semres8](https://twitter.com/semres8)
+
+Emre was a Technical Educator at Web3 Foundation. His background is in full-stack software
+development, education, and blockchain technology consulting. He is passionate about learning and
+teaching and has always kept a foot in education by designing and delivering software development
+and blockchain classes at General Assembly, Code Fellows, and Columbia University.
+
 
 ### Danny Salman
 
