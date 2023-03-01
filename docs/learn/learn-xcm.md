@@ -8,38 +8,57 @@ slug: ../learn-xcm
 ---
 
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language that is used
-to define messages between ideas systems.
+to define messages between consensus systems.
 
-One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is that of
-interoperability, and XCM is the language in which complex cross-consensus conversations can occur
-in. This means that if two blockchains can "speak" XCM, they can seamlessly interact with each
-other. XCM is not meant to be only specific to
+One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
+interoperability amongst not only parachains, but also any other participating consensus-driven
+systems. XCM is the language in which complex, cross-consensus conversations can occur in. This
+means that if two blockchains can "speak" XCM, they can seamlessly interact with each other with a
+common messaging format.
+
+:::info
+
+Remember, a consensus system here means any system or protocol that derives consensus in order to
+agree on the latest and correct state. This could mean a Polkadot parachain, an EVM smart contract,
+or other bridged chain. Most of the time, we discuss XCM in the context of connecting parachains,
+but please bear this in mind!
+
+:::
+
+XCM is not meant to be only specific to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
-to define a generic and common language amongst different consensus systems.
+to define a **generic** and **common** format amongst different consensus systems to communicate.
 
-Simply put: XCM is a standard that allows protocol developers to define the data and origins which
-their chains can send and receive from. It's important to note that XCM itself is _not_ how messages
-are delivered, but rather how they look and act.
+It's important to note that XCM itself is _not_ how messages are delivered, but rather how they
+look, act, and contain relative instructions to whatever operation the message is intended to
+perform. [**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the
+actual networking-layer protocol to deliver XCM-formatted messages to other participating
+parachains.
 
-Out of the box, it comes with a VM that allows for customization of execution as well as the
-following properties:
+XCM has four, high-level core design principles in which it stands to follow:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
 2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
-   and in a timely fashion.
-3. **Asymmetric**: XCM messages out of the box do not have results that let the sender know that the
-   message was received. Any results must be separately communicated to the sender with an
-   additional message.
+   and in a timely fashion. Once a message is sent, one can be sure it will be processed as it was
+   intended to be.
+3. **Asymmetric**: XCM messages, by default, do not have results that let the sender know that the
+   message was received - they are 'fire and forget'. Any results must be separately communicated to
+   the sender with an additional message back to the origin.
 4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus Systems between which
-   the messages are being passed.
+   the messages are being passed. XCM as a message format should be usable in any system that
+   derives consensus.
+
+These four crucial design decisions allow for XCM messages to be a reliable, yet convenient way to
+properly convey the intentions from one consensus system to another without any compatibility
+limitations.
 
 :::note
 
 XCM is a work-in-progress - meaning the format is expected to change over time. XCM v2 is deployed
 on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and v3 is currently close to
 deployment. Learn more about XCM v3 and its new features in the [resources](#resources) and the
-[XCM v3 vs XCM v2](#xcmv3) sections!.
+[XCM v3 vs XCM v2](#xcm-v3-vs-xcm-v2) sections!
 
 :::
 
@@ -51,11 +70,12 @@ only conducted between chains, but also between smart contracts, pallets, bridge
 enclaves like [SPREE](learn-spree.md).
 
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
-performed, similar to how RESTful services use REST as an architectural style of development.
+performed, similar to how RESTful services use REST as an architectural style of development, where
+HTTP requests contain specific parameters to perform some action.
 
 Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a separate XCM
-message designed to be a response message which can be sent from the recipient to the sender. Any
-kind of error handling should also be done on the recipient side.
+message designed to be a response message which can be sent from the recipient to the sender. All
+error handling should also be done on the recipient side.
 
 :::info
 
@@ -65,7 +85,13 @@ not have reasonable interpretations under some systems or will be intentionally 
 
 :::
 
-## XCMv3
+Furthermore, it's important to realize that XCM themselves messages are _not_ transactions. They
+describe how to change the state of the target network, but the message itself doesn't actually
+perform the state change.
+
+This partly ties what is called **asynchronous composability**, which allows XCM messages to bypass
+the concept of time-constrained mechanisms, like on-chain scheduling, and execute over time in the
+correct order in which it was intended.
 
 ### Example Use-Cases
 
@@ -147,6 +173,8 @@ The destination deposits the derivative assets minted to the receiving account.
 
 XCM can be used to express the meaning of the messages over each of these three communication
 channels.
+
+## XCM v3 vs XCM v2
 
 ## XCVM (Cross-Consensus Virtual Machine)
 
