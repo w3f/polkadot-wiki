@@ -7,12 +7,22 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
-Cross-Consensus Message Format (XCM) aims to be a language to communicate ideas between consensus
-systems. One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
-that of interoperability, and XCM is the vehicle through which it will deliver this promise. Simply,
-it is a standard that allows protocol developers to define the data and origins which their chains
-can send and receive from. Out of the box, it comes with a VM that allows for customization of
-execution as well as the following properties:
+The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language that is used
+to define messages between ideas systems.
+
+One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is that of
+interoperability, and XCM is the language in which complex cross-consensus conversations can occur
+in. This means that if two blockchains can "speak" XCM, they can seamlessly interact with each
+other. XCM is not meant to be only specific to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
+to define a generic and common language amongst different consensus systems.
+
+Simply put: XCM is a standard that allows protocol developers to define the data and origins which
+their chains can send and receive from. It's important to note that XCM itself is _not_ how messages
+are delivered, but rather how they look and act.
+
+Out of the box, it comes with a VM that allows for customization of execution as well as the
+following properties:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
@@ -26,9 +36,10 @@ execution as well as the following properties:
 
 :::note
 
-XCM is a work-in-progress. XCM v2 is deployed on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and v3 is currently in development.
-Learn more about XCM v3 and its new features in the [resources](#resources) section.
+XCM is a work-in-progress - meaning the format is expected to change over time. XCM v2 is deployed
+on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and v3 is currently close to
+deployment. Learn more about XCM v3 and its new features in the [resources](#resources) and the
+[XCM v3 vs XCM v2](#xcmv3) sections!.
 
 :::
 
@@ -53,6 +64,8 @@ interpret any possible XCM message. Practically speaking, one can imagine that s
 not have reasonable interpretations under some systems or will be intentionally unsupported.
 
 :::
+
+## XCMv3
 
 ### Example Use-Cases
 
