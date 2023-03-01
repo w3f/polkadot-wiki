@@ -71,7 +71,7 @@ technology.
 - matrix: [@bader:web3.foundation](https://matrix.to/#/@bader:web3.foundation)
 - twitter: [@baderyo_o](https://twitter.com/baderyo_o)
 
-Bader is a Technical Educator at the Web3 Foundation. He is an avid blockchain and web3 advocate, fullstack software engineer, and technical writer for the past 4 years. He has used a multitude of technologies to create disruptive and unique applications, mostly centering around elimating intermediary servers in applications and creating trust-free digital interactions for the betterment of humanity.  Real technology needs to solve real problems, and Bader has a very strong position on creating practical solutions to those problems using web3.
+Bader is a Technical Educator at the Web3 Foundation. He has been an avid blockchain and web3 advocate, fullstack software engineer, and technical writer for the past 4 years. He has used a multitude of technologies to create disruptive and unique applications, mostly centering around elimating intermediary servers in applications and creating trust-free digital interactions for the betterment of humanity.  Real technology needs to solve real problems, and Bader has a very strong position on creating practical solutions to those problems using web3.
 
 Bader has a strong passion on ensuring that this technology can be understood and utilized to its fullest potential, and focuses on making it a simple and useful to digest as possible.  
 
