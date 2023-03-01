@@ -22,11 +22,17 @@ help you get started.
 
 :::info Stake through Nomination Pools
 
-You can now stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with
+
+The minimum amount required to become an active nominator and earn rewards is
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :kusama }}
+. If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active nomination and still want to participate in staking,
+you can join the nomination pools.
+you can now stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with
 just
-{{ polkadot: <RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
-and earn staking rewards. For additional information, check out
+{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
+in the nomination pools and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
