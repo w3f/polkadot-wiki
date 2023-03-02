@@ -63,10 +63,10 @@ interface with a local node.
 
 Among other things, Polkadot-JS Apps allows a user to:
 
-- [Staking](learn-staking.md)
-- [Governance](learn-governance.md)
-- [Crowdloans](learn-crowdloans.md)
-- [Auctions](learn-auction.md)
+- [Staking](../learn/learn-staking.md)
+- [Governance](../learn/learn-governance.md)
+- [Crowdloans](../learn/learn-crowdloans.md)
+- [Auctions](../learn/learn-auction.md)
 - Query chain metadata
 - Query on-chain data using RPC calls
 - Call extrinsics using your account

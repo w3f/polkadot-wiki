@@ -216,7 +216,8 @@ console.log(`
 `);
 ```
 
-For additional information on interacting with the API, checkout [Polkadot-JS](learn-polkadotjs.md).
+For additional information on interacting with the API, checkout
+[Polkadot-JS](../general/polkadotjs.md).
 
 ## Shard Transactions
 
