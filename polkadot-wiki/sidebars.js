@@ -6,8 +6,15 @@ module.exports = {
       items: [
         "general/getting-started",
         "general/research",
-        "general/wallets",
-        "general/ledger",
+        {
+          type: "category",
+          label: "Wallets",
+          items: [
+            "general/wallets",
+            "general/ledger",
+          ],
+        },
+        "learn/learn-polkadotjs",
         {
           type: "category",
           label: "Community & Contributors",
@@ -90,7 +97,6 @@ module.exports = {
                 "learn/learn-opengov",
                 "learn/learn-identity",
                 "learn/learn-polkadot-host",
-                "learn/learn-polkadotjs",
                 "learn/learn-registrar",
                 "learn/learn-runtime-upgrades",
                 "learn/learn-transaction-fees",
