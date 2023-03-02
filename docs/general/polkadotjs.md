@@ -1,5 +1,5 @@
 ---
-id: learn-polkadotjs
+id: polkadotjs
 title: PolkadotJS
 sidebar_label: Polkadot-JS
 description: Learn about PolkadotJS
