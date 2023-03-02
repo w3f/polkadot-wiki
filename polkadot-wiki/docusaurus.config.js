@@ -130,6 +130,10 @@ module.exports = {
           {
             to: '/docs/polkadotjs',
             from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
           }
         ],
         createRedirects: function (existingPath) {

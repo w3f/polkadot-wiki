@@ -1,10 +1,10 @@
 ---
-id: maintain-bug-bounty
+id: bug-bounty
 title: Bug Bounty Programme
 sidebar_label: Bug Bounty
 description: An overview of how you can help catch bugs.
 keywords: [bug, bug bounty, report]
-slug: ../../maintain-bug-bounty
+slug: ../bug-bounty
 ---
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it

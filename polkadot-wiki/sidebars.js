@@ -37,7 +37,7 @@ module.exports = {
           label: "Programmes",
           items: [
             "general/grants",
-            "maintain/maintain-bug-bounty",
+            "general/bug-bounty",
             "general/ambassadors",
             "general/builders-program",
             "general/doc-thousand-validators",
