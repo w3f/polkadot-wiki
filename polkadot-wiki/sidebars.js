@@ -14,7 +14,7 @@ module.exports = {
             "general/ledger",
           ],
         },
-        "learn/learn-polkadotjs",
+        "general/polkadotjs",
         {
           type: "category",
           label: "Community & Contributors",
