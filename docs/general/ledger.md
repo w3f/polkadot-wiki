@@ -4,7 +4,7 @@ title: Using the Polkadot Ledger Application
 sidebar_label: Ledger
 description: How to use the Polkadot application on Ledger.
 keywords: [ledger, staking, polkadot app]
-slug: ../learn-ledger
+slug: ../ledger
 ---
 
 :::info
