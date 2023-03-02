@@ -1,7 +1,7 @@
 ---
 id: builders-program
-title: Substrate Builders Program
-sidebar_label: Substrate Builders Program
+title: Substrate Builders Programme
+sidebar_label: Substrate Builders
 description:
   Learn about the Substrate Builders Program and how it can support your Substrate development.
 slug: ../builders-program

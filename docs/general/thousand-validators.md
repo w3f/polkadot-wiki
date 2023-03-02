@@ -1,7 +1,7 @@
 ---
 id: doc-thousand-validators
 title: Thousand Validators Programme
-sidebar_label: Thousand Validators Programme
+sidebar_label: Thousand Validators
 description:
   Learn about the Thousand Validators Programme and how it can support your validator endeavors.
 keywords: [thousand validators programme, validator, validate, maintain, TVP]
