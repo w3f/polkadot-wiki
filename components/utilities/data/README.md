@@ -25,8 +25,8 @@ The action has 2 primary steps:
    `0xf34a77856ab1190ff207ddc2cf7f05dd5fe9760a24bf8a1631fb19f142858bc7` if that block was recently
    created.
 
-After these 2 scripts execute a new [pull request](https://github.com/w3f/polkadot-wiki/pull/4241)
-will automatically be made to the repo if any changes are detected to either json cache file. The PR
+After these 2 scripts execute, a new [pull request](https://github.com/w3f/polkadot-wiki/pull/4241)
+will automatically be made to the repo if any changes are detected to the cache file. The PR
 is only opened by the GitHub action so you can safely run these script locally if you want to see
 what updates are available or are debugging an issue. To run the scripts locally you can use the
 following commands:
