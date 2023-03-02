@@ -212,6 +212,55 @@ bringing ecosystems together using a common communication abstraction.
 
 :::
 
+### XCM v3 Instruction Overview
+
+To reflect the functionality above, XCM v3 introduced many new instructions to include within its
+messages. This list isn't exhaustive, however contains the necessary instruction sets to showcase
+the previously explained concepts of XCM v3.
+
+:::note
+
+Note most of these instruction definitions came from the source code, of which you may
+[explore for more depth!](https://github.com/paritytech/polkadot/blob/master/xcm/src/v3/mod.rs)
+
+:::
+
+#### Programmability
+
+These are the primary instructions that enable programmability and branching to be possible.
+Branching in this context is the ability for errors and logic to be handled as needed when dealing
+with a message.
+
+- [`ExpectAsset(MultiAssets)`](https://github.com/paritytech/xcm-format/tree/master#expectassetmultiassets) -
+  Checks if the Holding register has a specific amount of assets, throws an error if it doesn't.
+- [`ExpectError(Option<(u32, Error)>)`](https://github.com/paritytech/xcm-format/tree/master#expecterroroptionu32-error) -
+  Ensures the Error register contains the given error, and throws an error if it doesn't.
+- [`ExpectOrigin(MultiLocation)`](https://github.com/paritytech/xcm-format/tree/master#expectoriginmultilocation) -
+  Ensures the Origin register contains the expected origin, and throws an error if it doesn't.
+- `QueryPallet` - Queries the existence of a particular pallet type.
+
+- `ExpectPallet` - Ensure that a particular pallet with a particular version exists.
+
+- `ReportTransactStatus(QueryResponseInfo)` - Send a `QueryResponse` message containing the value of
+  the Transact Status Register to some destination.
+
+- `ClearTransactStatus` - Set the Transact Status Register to its default, cleared, value.
+
+#### Functional Multichain Decomposition
+
+- `LockAsset(MultiAsset, MultiLocation)` - Lock the locally held asset and prevent further transfer
+  or withdrawal.
+
+- `UnlockAsset(MultiAsset, MultiLocation)` - Remove the lock over `asset` on this chain and (if
+  nothing else is preventing it) allow the asset to be transferred.
+
+- `NoteUnlockable(MultiAsset, MultiLocation)` - Asset (`asset`) has been locked on the `origin`
+  system and may not be transferred. It may only be unlocked with the receipt of the `UnlockAsset`
+  instruction from this chain.
+
+- `RequestUnlock(MultiAsset, MultiLocation)` - Send an `UnlockAsset` instruction to the `locker` for
+  the given `asset`.
+
 ## XCVM (Cross-Consensus Virtual Machine)
 
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
