@@ -179,34 +179,36 @@ channels.
 ## XCM v3 - What's new?
 
 [XCM v3](https://github.com/paritytech/polkadot/pull/4097/) is currently in the process of being
-approved and audited, but is merged in the Polkadot codebase.
+approved and audited but is merged in the Polkadot codebase. The upgrade to XCM v3 will open the
+doors to multi-hop, multi-network communications.
 
 XCM v3 introduces some key features and additions to cross-consensus messaging, including:
 
 1. Programmability - the ability to have **expectations** for messages, which allow for more
-   comprehensive use cases, safe dispatches, branching, as well as NFT & Asset support.
-2. Functional Multichain Decomposition - the ability to define mechanisms to cross-reference and
-   perform actions on other chains on behalf of the origin chain, context/id for these messages, and
-   asset namespacing.
+   comprehensive use cases, safe dispatches for version checking, branching, and NFT/Asset support.
 
-3. Advanced Bridging Capabilities - introduces the concept of a _universal location_, which allows
-   for a base reference for global consensus systems themselves for multi-hop setups. This location
-   goes above even that of the parent relay chain, or other consensus systems such as Ethereum or
-   Bitcoin.
+2. Functional Multichain Decomposition - the ability to define mechanisms to cross-reference and
+   perform actions on other chains on behalf of the origin chain (remote locking), context/id for
+   these messages, and asset namespacing.
+
+3. Bridging - introduces the concept of a universal location, which allows for a base reference for
+   global consensus systems for multi-hop setups. This location is above the parent relay chain or
+   other consensus systems like Ethereum or Bitcoin.
 
 ### Why does XCM v3 matter?
 
-A core part of the vision that XCM v3 provides is improving communication between the chains so that
-**system chains** become a reality. For example, the Polkadot relay chain handles a lot more than
-just parachain management and shared security - it handles user balances/assets, auctions,
-governance, staking etc. Ideally, the relay chain should _just_ be for what its intended to be - a
-place for shared security.
+A core part of the vision that XCM v3 provides is improving communication between the chains to make
+**system parachains** a reality. For example, the Polkadot relay chain handles more than just
+parachain management and shared security - it handles user balances/assets, auctions, governance,
+and staking. Ideally, the relay chain should be for what it's intended to be - a place for shared
+security. System parachains can alleviate these core responsibilities from the relay chain but only
+by using a standard format like XCM.
 
 This is where system parachains come in, where each of these core responsibilities can be delegated
 to a system parachain respectively.
 
-XCM v3's upgrades to bridging and functional multichain decomposition are crucial not only to within
-the ecosystem, but also bringing ecosystems together using a common communication abstraction.
+:::info XCM v3's bridging, functional multichain decomposition, and programmability upgrades are
+crucial to bringing ecosystems together using a common communication abstraction. :::
 
 ## XCVM (Cross-Consensus Virtual Machine)
 
