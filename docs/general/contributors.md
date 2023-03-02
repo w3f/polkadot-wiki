@@ -65,6 +65,18 @@ major blocking element behind mainstream adoption. Filippo is excited to contrib
 Foundation's vision by educating professionals and the general public about Web3 and blockchain
 technology.
 
+### Bader Youssef
+
+- email: [bader@web3.foundation](mailto:bader@web3.foundation)
+- matrix: [@bader:web3.foundation](https://matrix.to/#/@bader:web3.foundation)
+- twitter: [@baderyo_o](https://twitter.com/baderyo_o)
+
+Bader is a Technical Educator at the Web3 Foundation. He has been an avid blockchain and web3 advocate, full-stack software engineer, and technical writer for the past 4 years. He has used a multitude of technologies to create disruptive and unique applications, mostly centering around eliminating intermediary servers in applications and creating trust-free digital interactions for the betterment of humanity.  Real technology needs to solve real problems, and Bader is very strong on creating practical solutions to those problems using Web3.
+
+Bader has a strong passion for ensuring that this technology can be understood and utilized to its fullest potential and focuses on making it as simple and useful to digest as possible.  
+
+
+
 ## Technical Integrations
 
 ### Joe Petrowski
