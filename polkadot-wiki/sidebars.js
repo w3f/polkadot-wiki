@@ -12,6 +12,7 @@ module.exports = {
           items: [
             "general/wallets",
             "general/ledger",
+            "general/polkadotjs-wallets"
           ],
         },
         "general/polkadotjs",

@@ -1,10 +1,10 @@
 ---
 id: polkadotjs
-title: PolkadotJS
+title: Polkadot-JS
 sidebar_label: Polkadot-JS
 description: Learn about PolkadotJS
 keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
-slug: ../learn-polkadotjs
+slug: ../polkadotjs
 ---
 
 <!-- This page is a WIP -->
