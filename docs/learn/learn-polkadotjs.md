@@ -1,7 +1,7 @@
 ---
 id: learn-polkadotjs
 title: PolkadotJS
-sidebar_label: PolkadotJS
+sidebar_label: Polkadot-JS
 description: Learn about PolkadotJS
 keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../learn-polkadotjs
