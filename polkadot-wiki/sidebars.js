@@ -5,7 +5,14 @@ module.exports = {
       label: "General",
       items: [
         "general/getting-started",
-        "general/research",
+        {
+          type: "category",
+          label: "Stay Safe",
+          items: [
+            "general/scams",
+            "general/how-to-dyor",
+          ],
+        },
         {
           type: "category",
           label: "Wallets",
@@ -37,17 +44,10 @@ module.exports = {
             "general/doc-thousand-contributors",
           ],
         },
-        {
-          type: "category",
-          label: "Stay Safe",
-          items: [
-            "general/scams",
-            "general/how-to-dyor",
-          ],
-        },
         "general/faq",
         "general/glossary",
         "general/metadata",
+        "general/research",
       ],
     },
     {
