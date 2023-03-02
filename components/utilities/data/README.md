@@ -73,7 +73,7 @@ if I wanted to manually add a new auction `(#41)` to the cache I would append th
   },
 ```
 
-Once this information is added and saved to the local json file, I can run `yarn update:auctions`
+Once this information is added and saved to the local JSON file, I can run `yarn update:auctions`
 which will attempt to see if any of the other properties can be updated. The final steps are to
 commit and push the changes to the main branch on the repo. This will ensure the
 [update-auction-schedules](https://github.com/w3f/polkadot-wiki/blob/master/.github/workflows/update-auction-schedules.yml)
