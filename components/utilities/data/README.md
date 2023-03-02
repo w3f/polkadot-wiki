@@ -45,12 +45,12 @@ appended. The following cache properties must be provided:
 1. `index` - auction number (count starts at 0)
 2. `startBlock` - the block an auction is expected to become active
 
-**The remaining properties in the cache are auto-generate and should not be modified as running
-`yarn update:auctions` will overwrite those changes.** This means when manually adding a new auction
-these are the only 2 properties that need to be specified. The remaining properties should still be
-including, providing `null` dates or blocks and
+**The remaining properties in the cache are auto-generated and should not be modified. Running
+`yarn update:auctions` will overwrite those changes.** This means that when manually adding a new auction,
+these are the only two properties that need to be specified. The remaining properties should still be
+included, providing `null` dates or blocks and
 `0x0000000000000000000000000000000000000000000000000000000000000000` for hash values. For example,
-if I wanted to manually add a new auction `(#41)` to the cache I would append the following object:
+if I wanted to manually add a new auction `(#41)` to the cache, I would append the following object:
 
 ```json
   {
