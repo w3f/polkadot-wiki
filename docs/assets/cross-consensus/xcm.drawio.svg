@@ -1,0 +1,176 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="611px" height="396px" viewBox="-0.5 -0.5 611 396" content="&lt;mxfile&gt;&lt;diagram id=&quot;lUo25hXQMdMw5ZpTSU6G&quot; name=&quot;Page-1&quot;&gt;7Vlbb6M4FP41kXYfEgEOJHmENJlZaXpR6Gg6j04wYI3BWWOadH792sYmEEi33aGamVVTCXyO7+f7zkV0BJbZ8QOD+/SaRoiMHCs6jsDVyHEWYCqeUvFUKWzLtitNwnCkdSdFiL8jM1BrSxyhojWQU0o43reVO5rnaMdbOsgYPbSHxZS0d93DBHUU4Q6SrvYLjnhaaefO7KT/iHCSmp1tb1H1ZNAM1jcpUhjRQ0MFViOwZJTyqpUdl4hI4xm7VPPWF3rrgzGU85dMcPTBCv5kLocicVct5jQXryDlGRGSLZroiPlDo/1VtC3dvjo2hScj5Jw9PTQFNWfiGvE0TUlmXkxzvoYZJlLxOd/SMo9QpDtCWrKdPGHKuQDdcYEvHuKa8pFgnpbbyY5mSjyAWL3Leg0pbQndqkYGca4a9/fV9Hqv8QYlJYFswnls9q24aM+0vKSEMmU3YPvyT+gri0ozXgRFqwpzC6lyNJEhS5Ae5jg1JYQvIZohYSAxhiECOX5srw81qZN63Al30dDQ99MAaDo+QlLqVR+W10JxvQpD/8OqlySf4Fb4dYsdkOAkF+2duCkSdgkeEeNYOI6vOzIcRXKNgKECf4dbtZ5Ee09xztUN3GDkXl0w90U+XMZBngAd+8KC3v3kjE2EKsfoml6vNLYmNgAaMh3Gxlp8MTp69Tt59cYQGseFYMA5fPUhXoSooVMD0Tt/4y8/+n/dCLXdQZQZeyogDynmKNxDxc6DiOJtnGNMSMPkrusEgThrUHBGvyHTo6PHL+nIjdOv1e85wnRc9yIvXKtFCeBp+XBKE7YZkzZSxML6cSfuIr7c3IbheHl7E65uws9h05+t9e3m2r8XjT+Ep/85KB2iuWXNQNfQsfp1aCJ6fNeypr980J8PwxGvzRF71uWIu+jhyHwIjlwI9EMGA28NFv5vHAxm61lP+hk+OEx7goNn9wAPBgDeXjybD5z3fPA2+cD+mQnBHaK4rwr115b3/7Pivg4L/624N7m5WdzbFyrMwYt7Z/5e3J8V9+6/FffO3BTQAxX37UPqRWft6YMU/j1l4Gb1yf8qVDrYvwf680D/BrnembotqJ2ewF9zsxn4pwMEfmD3efzdoNBbVuCsf2fo36zMq+s1k/MXPdD35fwh6jwAOtCPHI9wCdQe5i38vb9L+Z1R2WBcKCP48tuAtz8qS1jCBnysw77sISjmqsfMFK1Evn25cJVUMlQU8vOpY20RzhNluaKQuFk8FYRLUtVCOpZKu+1ShaJlDrplrzrm+WHKotq3ory0ptmQM5gXe8pkQBZbIzYxWwqzVuapluh4irTE22VDWHJaaBKeeVrDnwxNvef8i8i8HcDdt0Q5t1kmQjEsCR+G4PM2v13b7fDb7eO3+3p+C/H0MbzKhqd/KYDVPw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <style type="text/css">
+            @font-face {font-family: "Unbounded";src: url("https://github.com/w3f/unbounded/blob/main/TTF/Unbounded-Regular.ttf")}
+        </style>
+    </defs>
+    <g>
+        <path d="M 150 190 L 191.88 115.55" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 194.45 110.97 L 194.07 118.79 L 191.88 115.55 L 187.97 115.36 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 157px; margin-left: 172px;">
+                        <div data-drawio-colors="color: #1A1A1A; background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 17px; font-family: Unbounded; color: rgb(26, 26, 26); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                XCM MESSAGE
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="172" y="162" fill="#1A1A1A" font-family="Unbounded" font-size="17px" text-anchor="middle">
+                    XCM MESSAGE
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="190" width="150" height="90" rx="13.5" ry="13.5" fill="#552bbf" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 235px; margin-left: 1px;">
+                        <div data-drawio-colors="color: #FFFFFF; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Unbounded; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                PARACHAIN 1
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="75" y="239" fill="#FFFFFF" font-family="Unbounded" font-size="12px" text-anchor="middle">
+                    PARACHAIN 1
+                </text>
+            </switch>
+        </g>
+        <rect x="10" y="0" width="590" height="80" rx="12" ry="12" fill="#d80073" stroke="#a50040" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 588px; height: 1px; padding-top: 40px; margin-left: 11px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 18px; font-family: Unbounded; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                CROSS-CONSENSUS MESSAGE FORMAT (XCM)
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="305" y="45" fill="#ffffff" font-family="Unbounded" font-size="18px" text-anchor="middle">
+                    CROSS-CONSENSUS MESSAGE FORMAT (XCM)
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="290" width="610" height="30" rx="4.5" ry="4.5" fill="#56f39a" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 608px; height: 1px; padding-top: 305px; margin-left: 1px;">
+                        <div data-drawio-colors="color: #FFF7F7; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 17px; font-family: Unbounded; color: rgb(255, 247, 247); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                XCM
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="305" y="310" fill="#FFF7F7" font-family="Unbounded" font-size="17px" text-anchor="middle">
+                    XCM
+                </text>
+            </switch>
+        </g>
+        <rect x="460" y="190" width="150" height="90" rx="13.5" ry="13.5" fill="#552bbf" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 235px; margin-left: 461px;">
+                        <div data-drawio-colors="color: #FFFFFF; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Unbounded; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                PARACHAIN 2
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="535" y="239" fill="#FFFFFF" font-family="Unbounded" font-size="12px" text-anchor="middle">
+                    PARACHAIN 2
+                </text>
+            </switch>
+        </g>
+        <path d="M 415 110 L 456.88 184.45" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 459.45 189.03 L 452.97 184.64 L 456.88 184.45 L 459.07 181.21 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 147px; margin-left: 431px;">
+                        <div data-drawio-colors="color: #1A1A1A; background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 17px; font-family: Unbounded; color: rgb(26, 26, 26); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                XCM MESSAGE
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="431" y="152" fill="#1A1A1A" font-family="Unbounded" font-size="17px" text-anchor="middle">
+                    XCM MESSAGE
+                </text>
+            </switch>
+        </g>
+        <rect x="195" y="90" width="220" height="40" rx="6" ry="6" fill="#552bbf" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 218px; height: 1px; padding-top: 110px; margin-left: 196px;">
+                        <div data-drawio-colors="color: #FFFFFF; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 17px; font-family: Unbounded; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                RELAY CHAIN
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="305" y="115" fill="#FFFFFF" font-family="Unbounded" font-size="17px" text-anchor="middle">
+                    RELAY CHAIN
+                </text>
+            </switch>
+        </g>
+        <rect x="180" y="220" width="250" height="30" rx="4.5" ry="4.5" fill="#00b2ff" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 248px; height: 1px; padding-top: 235px; margin-left: 181px;">
+                        <div data-drawio-colors="color: #FFF7F7; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 17px; font-family: Unbounded; color: rgb(255, 247, 247); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                XCMP
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="305" y="240" fill="#FFF7F7" font-family="Unbounded" font-size="17px" text-anchor="middle">
+                    XCMP
+                </text>
+            </switch>
+        </g>
+        <rect x="30" y="345" width="550" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 370px; margin-left: 305px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 16px; font-family: Unbounded; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 16px; text-align: left;">
+                                    An XCM message being passed through the relay chain
+                                    <br style="font-size: 16px;"/>
+                                    using XCMP as the transport layer.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="305" y="375" fill="rgb(0, 0, 0)" font-family="Unbounded" font-size="16px" text-anchor="middle">
+                    An XCM message being passed through the relay chain...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>

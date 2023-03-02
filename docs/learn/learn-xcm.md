@@ -16,6 +16,8 @@ systems. XCM is the language in which complex, cross-consensus conversations can
 means that if two blockchains can "speak" XCM, they can seamlessly interact with each other with a
 common messaging format.
 
+![xcm](../assets/cross-consensus/xcm.drawio.svg)
+
 :::info
 
 Remember, a consensus system here means any system or protocol that derives consensus in order to
