@@ -7,23 +7,22 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
-The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language that is used
-to define messages between consensus systems.
+The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
+define messages between consensus systems.
 
 One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
-interoperability amongst not only parachains, but also any other participating consensus-driven
-systems. XCM is the language in which complex, cross-consensus conversations can occur in. This
-means that if two blockchains can "speak" XCM, they can seamlessly interact with each other with a
-common messaging format.
+interoperability amongst parachains and any other participating consensus-driven systems. XCM is the
+language in which complex, cross-consensus conversations can occur. Two blockchains can "speak" XCM
+can seamlessly interact with each other with a standard messaging format.
 
 ![xcm](../assets/cross-consensus/xcm.drawio.svg)
 
 :::info
 
-Remember, a consensus system here means any system or protocol that derives consensus in order to
-agree on the latest and correct state. This could mean a Polkadot parachain, an EVM smart contract,
-or other bridged chain. Most of the time, we discuss XCM in the context of connecting parachains,
-but please bear this in mind!
+Remember, a consensus system here means any system or protocol that derives consensus to agree on
+the latest and correct state, whether it's a Polkadot parachain, an EVM smart contract, or other
+bridged consensus systems. We usually discuss XCM in the context of connecting parachains, but
+please bear this in mind!
 
 :::
 
@@ -31,11 +30,10 @@ XCM is not meant to be only specific to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
 to define a **generic** and **common** format amongst different consensus systems to communicate.
 
-It's important to note that XCM itself is _not_ how messages are delivered, but rather how they
-look, act, and contain relative instructions to whatever operation the message is intended to
-perform. [**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the
-actual networking-layer protocol to deliver XCM-formatted messages to other participating
-parachains.
+It's important to note that XCM itself is _not_ how messages are delivered but rather how they look,
+act, and contain relative instructions to whatever instructions the message is intended to perform.
+[**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
+networking-layer protocol to deliver XCM-formatted messages to other participating parachains.
 
 XCM has four, high-level core design principles in which it stands to follow:
 
@@ -87,9 +85,9 @@ not have reasonable interpretations under some systems or will be intentionally 
 
 :::
 
-Furthermore, it's important to realize that XCM themselves messages are _not_ transactions. They
-describe how to change the state of the target network, but the message itself doesn't actually
-perform the state change.
+Furthermore, it's essential to realize that XCM themselves messages are _not_ transactions. They
+describe how to change the state of the target network, but the message itself doesn't perform the
+state change.
 
 This partly ties what is called **asynchronous composability**, which allows XCM messages to bypass
 the concept of time-constrained mechanisms, like on-chain scheduling, and execute over time in the
@@ -184,16 +182,16 @@ doors to multi-hop, multi-network communications.
 
 XCM v3 introduces some key features and additions to cross-consensus messaging, including:
 
-1. Programmability - the ability to have **expectations** for messages, which allow for more
+1. **Programmability** - the ability to have **expectations** for messages, which allow for more
    comprehensive use cases, safe dispatches for version checking, branching, and NFT/Asset support.
 
-2. Functional Multichain Decomposition - the ability to define mechanisms to cross-reference and
+2. **Functional Multichain Decomposition** - the ability to define mechanisms to cross-reference and
    perform actions on other chains on behalf of the origin chain (remote locking), context/id for
    these messages, and asset namespacing.
 
-3. Bridging - introduces the concept of a universal location, which allows for a base reference for
-   global consensus systems for multi-hop setups. This location is above the parent relay chain or
-   other consensus systems like Ethereum or Bitcoin.
+3. **Bridging** - introduces the concept of a universal location, which allows for a base reference
+   for global consensus systems for multi-hop setups. This location is above the parent relay chain
+   or other consensus systems like Ethereum or Bitcoin.
 
 ### Why does XCM v3 matter?
 
@@ -207,8 +205,12 @@ by using a standard format like XCM.
 This is where system parachains come in, where each of these core responsibilities can be delegated
 to a system parachain respectively.
 
-:::info XCM v3's bridging, functional multichain decomposition, and programmability upgrades are
-crucial to bringing ecosystems together using a common communication abstraction. :::
+:::info
+
+XCM v3's bridging, functional multichain decomposition, and programmability upgrades are crucial to
+bringing ecosystems together using a common communication abstraction.
+
+:::
 
 ## XCVM (Cross-Consensus Virtual Machine)
 
