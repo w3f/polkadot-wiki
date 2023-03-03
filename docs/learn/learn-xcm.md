@@ -45,7 +45,7 @@ XCM has four high-level core design principles which it stands to follow:
    and in a timely fashion. Once a message is sent, one can be sure it will be processed as it was
    intended to be.
 3. **Asymmetric**: XCM messages, by default, do not have results that let the sender know that the
-   message was received - they are 'fire and forget'. Any results must be separately communicated to
+   message was received - they follow the 'fire and forget' paradigm. Any results must be separately communicated to
    the sender with an additional message back to the origin.
 4. **Agnostic**: XCM makes no assumptions about the nature of the consensus systems between which
    the messages are being passed. XCM as a message format should be usable in any system that
