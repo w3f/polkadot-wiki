@@ -250,6 +250,8 @@ with a message.
 
 #### Functional Multichain Decomposition
 
+These instructions highlight the key instructions focused on Functional Multichain Decomposition.
+
 - `LockAsset(MultiAsset, MultiLocation)` - Lock the locally held asset and prevent further transfer
   or withdrawal.
 
