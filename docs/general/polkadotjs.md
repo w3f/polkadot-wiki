@@ -50,15 +50,17 @@ update.
 
 ![update metadata](../assets/update-metadata.png)
 
-### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
+### Polkadot-JS Phishing List
 
-The phishing list website is a community-driven curation of less-than-honest operators. The
-Polkadot-JS extension uses this list to warn a user about suspicious URLs and addresses that are
-part of the list, and automatically blocks the account address.
+The [**Polkadot-JS phishing list**](https://polkadot.js.org/phishing/) website is a community-driven
+curation of less-than-honest operators. The Polkadot-JS extension uses this list to warn a user
+about suspicious URLs and addresses that are part of the list, and automatically blocks the account
+address.
 
-### [Polkadot-JS API](https://github.com/polkadot-js/api)
+### Polkadot-JS API
 
-A JavaScript API allowing for programs to interface with the functionality of
+The [**Polkadot-JS API**](https://github.com/polkadot-js/api) is a JavaScript API allowing for
+programs to interface with the functionality of
 {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}
 
 ## Polkadot-JS UI
