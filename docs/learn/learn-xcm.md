@@ -49,7 +49,7 @@ XCM has four high-level core design principles which it stands to follow:
    the sender with an additional message back to the origin.
 4. **Agnostic**: XCM makes no assumptions about the nature of the consensus systems between which
    the messages are being passed. XCM as a message format should be usable in any system that
-   derives consensus.
+   derives finality through consensus.
 
 These four crucial design decisions allow for XCM messages to be a reliable yet convenient way to
 properly convey the intentions from one consensus system to another without any compatibility
