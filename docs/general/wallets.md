@@ -7,17 +7,17 @@ keywords: [wallets, account, signer, supported wallets, balance, token]
 slug: ../wallets
 ---
 
-Navigating the space of wallets can be overwhelming, if you are new to blockchain technology. In
-general, an account on a typical blockchain network is a public-private key pair. Access to a
-private key gives full access to all the allowed transactions on that blockchain account. It is
-important to keep the private key secure.
+Navigating the space of wallets can be overwhelming if you are new to blockchain technology.
+Generally, a typical blockchain network account is a public-private key pair. Access to a private
+key gives full access to all the allowed transactions on that blockchain account. It is essential to
+keep the private key secure.
 
 :::tip Not your keys, not your coins!
 
 With **custodial wallets** (like accounts in centralized exchanges), another party controls your
 private keys. Private keys are used to access funds in your account, so you trust the exchange that
 your key will always be given to you whenever you need it. With **non-custodial wallets**, only you
-have access to your account's private key.
+can access your account's private key.
 
 :::
 
@@ -29,7 +29,7 @@ blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ec
 
 :::caution
 
-You should use your own due diligence in researching and using the wallets listed below. For any
+Using your due diligence in researching and using the wallets listed below would be best. For any
 issues related to these wallet, reach out to their support teams directly.
 [**Polkadot Support**](https://support.polkadot.network/support/home) can only be contacted for
 [**supported wallets**](#supported-wallets).
@@ -37,15 +37,15 @@ issues related to these wallet, reach out to their support teams directly.
 :::
 
 Typically, the account keys are either stored and accessed through a browser extension or a
-smartphone app (which are considered as a hot wallets as they are exposed online) or an airgapped
-device or a hardware wallet (which considered as a cold wallets as they are offline).
+smartphone app (which are considered as a hot wallets as they are online), or an air-gapped device
+or a hardware wallet (which considered as cold wallets as they are offline).
 
 ### Browser Extensions
 
-Browser extension wallets at bare minimum act as key storage and management solution, allowing you
-to use your accounts with apps in the Web3 space. The wallets listed below offer functionality
+At a bare minimum, browser extension wallets act as key storage and management solution, allowing
+you to use your accounts with apps in the Web3 space. The wallets listed below offer functionality
 beyond that, allowing the featured actions to be performed directly through the extension. Some of
-them also allow interaction with air-gapped wallets and hardware devices
+them also allow interaction with air-gapped wallets and hardware devices.
 
 | Wallet                                                                                     | Browsers                                                                                                                                                                                                                                                                                                                                                                                                          | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
 | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
@@ -64,9 +64,9 @@ Chrome, Brave, Edge, Opera).
 ### Mobile Wallets
 
 Mobile wallets are fully packaged apps that allow all the featured actions, as well as the storage
-and management of your accounts, through the mobile app. Contrary to browser extensions, mobile
-wallets usually can't connect to third-party web apps. Some mobile wallets provide support for
-hardware wallets through bluetooth connectivity.
+and management of your accounts, through the mobile app. Unlike browser extensions, mobile wallets
+usually can’t connect to third-party web apps. Some mobile wallets provide support for hardware
+wallets through Bluetooth connectivity.
 
 | Wallet                                        | Platforms                                                       | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
 | --------------------------------------------- | --------------------------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
@@ -90,7 +90,7 @@ their official social media handles).
 A multichain crypto wallet - Bitcoin, Ethereum, Polkadot, Kusama and a few parachains.
 Non-custodial, private, hardware wallet support (Ledger and Trezor). Private and open source. Hold,
 send, and receive tokens and NFTs. Swap tokens and bridge assets between chains. Manage multiple
-accounts on multiple networks. Connect to web3 apps. Recipient of development grant from Web3
+accounts on multiple networks. Connect to web3 apps. Recipient of a development grant from Web3
 Foundation.
 
 ### PolkaGate
@@ -103,11 +103,11 @@ custom remote nodes, phishing detection, QR account import, export/import/derive
 
 ### SubWallet
 
-A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive and monitor multi-chain
-assets on 150+ networks. Import account with seedphrase, private key, QR-code, JSON file. Import
-token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger support,
-light clients support, EVM DApp support, MetaMask compatibility, custom endpoints, fiat on-ramp,
-phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
+A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive, and monitor multi-chain
+assets on 150+ networks. Import account with seed phrase, private key, QR code, and JSON file.
+Import token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger
+support, light clients support, EVM DApp support, MetaMask compatibility, custom endpoints, fiat
+on-ramp, phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
 [2](https://polkadot.polkassembly.io/treasury/162),
 [3](https://polkadot.polkassembly.io/treasury/218)].
@@ -123,11 +123,11 @@ portfolio tracking. Talisman received funding from Polkadot Treasury
 ### Fearless Wallet
 
 The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
-ecosystem with emphasis on UX, performance, and security. The goal of Fearless Wallet is to
-radically expand access to decentralized finance (DeFi) by making complex functions much easier to
-use and understand. The App supports such features as follows: Staking, Crowdloans, Parachain
-Accounts, Nomination pools native staking, dApp signer (experimental), Scam addresses warning,
-Network issues warning. Fearless Wallet received funding from Kusama Treasury
+ecosystem with emphasis on UX, performance, and security. Fearless Wallet aims to radically expand
+access to decentralized finance (DeFi) by making complex functions much easier to use and
+understand. The App supports such features as follows: Staking, Crowdloans, Parachain Accounts,
+Nomination pools native staking, dApp signer (experimental), Scam addresses warning, Network issues
+warning. Fearless Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34),
 [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102),
 [5](https://kusama.polkassembly.io/treasury/178)].
@@ -142,7 +142,7 @@ Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusa
 ### Polkawallet
 
 Polkawallet provides cross-chain asset one-stop management, convenient staking, governance, and
-multiple DeFi services, the private key is self-owned. Polkawallet received funding from Kusama
+multiple DeFi services; the private key is self-owned. Polkawallet received funding from Kusama
 Treasury [[1](https://kusama.polkassembly.io/treasury/32),
 [2](https://kusama.polkassembly.io/treasury/41)].
 
@@ -151,7 +151,7 @@ Treasury [[1](https://kusama.polkassembly.io/treasury/32),
 The [**Polkadot Support**](https://support.polkadot.network/) can provide assistance with issues
 related to [Polkadot-JS Wallets](./polkadotjs-wallets.md) (i.e. Polkadot-JS UI and browser
 extension), Parity Signer or [Ledger](./ledger.md). For other wallet software, you should contact
-the developers of that wallet. Please note that these wallets are oriented towards developers and
+the developers of that wallet. Please note that these wallets are oriented toward developers and
 power users.
 
 | Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                     |
@@ -164,7 +164,7 @@ power users.
 ## Encryption Enhancement
 
 Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
-This is due to an enhanced encryption method, which is also noticeable in a slight delay when
-encrypting/decrypting your wallet. If you are unable to load a `JSON` file, please ensure that you
-are using the latest version of the wallet software. If you are still unable to load it, ensure that
-the wallet software is using the latest version of the [Polkadot API](https://polkadot.js.org/api/).
+This is due to an enhanced encryption method, noticeable in a slight delay when
+encrypting/decrypting your wallet. If you cannot load a `JSON` file, please ensure you use the
+latest version of the wallet software. If you cannot load it, ensure that the wallet software uses
+the newest version of the [Polkadot API](https://polkadot.js.org/api/).
