@@ -15,8 +15,6 @@ interoperability amongst parachains and any other participating consensus-driven
 language through which complex, cross-consensus interactions can occur. Two blockchains can "speak"
 XCM to seamlessly interact with each other using a standard messaging format.
 
-![xcm](../assets/cross-consensus/hrmp-ex.png)
-
 :::info
 
 We typically discuss XCM in the context of parachains, but please bear this in mind that it expands
@@ -379,6 +377,8 @@ While XCMP is still being implemented, a stop-gap protocol (see definition below
 and functionality as XCMP but is much more demanding on resources since it stores all messages in
 the Relay Chain storage. When XCMP has been implemented, HRMP is planned to be deprecated and phased
 out in favor of it.
+
+![xcm](../assets/cross-consensus/hrmp-ex.png)
 
 :::note
 
