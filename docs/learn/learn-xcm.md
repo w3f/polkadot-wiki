@@ -19,10 +19,10 @@ to seamlessly interact with each other using a standard messaging format.
 
 :::info
 
-Remember, a consensus system here means any system or protocol that derives consensus to agree on
+We typically discuss XCM in the context of parachains, but please bear this in mind that it expands to the domain of all consensus systems!
+Remember, a consensus system here means any system or protocol that achieves finality to agree on
 the latest and correct state, whether it's a Polkadot parachain, an EVM smart contract, or other
-bridged consensus systems. We usually discuss XCM in the context of connecting parachains, but
-please bear this in mind!
+bridged consensus systems. 
 
 :::
 
