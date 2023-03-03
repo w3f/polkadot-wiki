@@ -87,8 +87,8 @@ not have reasonable interpretations under some systems or will be intentionally 
 
 :::
 
-Furthermore, it's essential to realize that XCM themselves messages are _not_ transactions. XCM
-describes how to change the state of the target network, but the message itself doesn't perform the
+Furthermore, it's essential to realize that XCM messages by themselves are _not_ considered transactions. XCM
+describes how to change the state of the target network, but the message by itself doesn't perform the
 state change.
 
 This partly ties what is called **asynchronous composability**, which allows XCM messages to bypass
