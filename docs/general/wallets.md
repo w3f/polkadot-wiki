@@ -7,10 +7,9 @@ keywords: [wallets, account, signer, supported wallets, balance, token]
 slug: ../wallets
 ---
 
-Navigating the space of wallets can be overwhelming if you are new to blockchain technology.
-Generally, a typical blockchain network account is a public-private key pair. Access to a private
-key gives full access to all the allowed transactions on that blockchain account. It is essential to
-keep the private key secure.
+If you are new to blockchain technology, generally a typical blockchain network account is a
+public-private key pair. Access to a private key gives full access to all the allowed transactions
+on that blockchain account. It is essential to keep the private key secure.
 
 :::tip Not your keys, not your coins!
 
