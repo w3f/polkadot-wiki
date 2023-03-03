@@ -172,6 +172,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Rust           | [Substrate](https://github.com/paritytech/substrate) 🟢, [Cumulus](https://github.com/paritytech/cumulus) 🟢|
 | C++            | [Kagome](https://github.com/soramitsu/kagome) 🟢|
 | Go             | [Gossamer](https://github.com/ChainSafe/gossamer) 🟢|
+| Java             | [Java Host Research](https://github.com/LimeChain/java-host-research) 🟢|
 | AssemblyScript |
 | Light Client   | [smoldot](https://github.com/smol-dot/smoldot) 🟢, [Substrate Connect](https://github.com/paritytech/substrate-connect) 🟢, [C++ Polkadot Light Client](https://github.com/eqlabs/polkadot-light-client) 🔴|
 
