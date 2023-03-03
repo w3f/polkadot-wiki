@@ -76,8 +76,8 @@ validators in the community.
 :::
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an
-insecure or improper setup may result in loss of DOT tokens! If you are not confident in your
-ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node
+insecure or improper setup may result in loss of KSM tokens! If you are not confident in your
+ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node
 instead.
 
 ### Validator Rewards
@@ -86,9 +86,9 @@ On Kusama, one day is approximately four eras whereas on Polkadot, one era is ap
 In each era, the validators elected to the active set earn era points which correspond to the actual
 rewards earned that are distributed proportionally to the nominators after deducting the validator
 commission. Currently, the minimum validator commission is set to
-{{ kusama: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%. :polkadot }}
-For more information, check the [validator payout](../maintain-guides-validator-payout.md) document.
+{{ kusama: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>% :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>% :polkadot }}
+which can be set through on-chain governance. For more information rewards and payouts, check the [validator payout](../maintain-guides-validator-payout.md) document.
 
 ## Run a Kusama Validator
 
