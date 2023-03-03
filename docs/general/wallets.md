@@ -12,15 +12,18 @@ general, an account on a typical blockchain network is a public-private key pair
 private key gives full access to all the allowed transactions on that blockchain account. It is
 important to keep the private key secure.
 
-:::tip Not your keys, not your tokens!
+:::tip Not your keys, not your coins!
 
-With custodial wallets (like accounts central exchanges), another party controls your private keys.
-With non-custodial wallets, only you have access to your account's private key.
+With **custodial wallets** (like accounts in centralized exchanges), another party controls your
+private keys. Private keys are used to access funds in your account, so you trust the exchange that
+your key will always be given to you whenever you need it. With **non-custodial wallets**, only you
+have access to your account's private key.
 
 :::
 
-To realize the multichain vision of Polkadot, it is important to have non-custodial wallets that
-make it convenient to interact with multiple blockchains in Polkadot ecosystem.
+To realize the multichain vision of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
+it is important to have non-custodial wallets that make it convenient to interact with multiple
+blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 ## Non-Custodial Wallets
 
@@ -28,6 +31,8 @@ make it convenient to interact with multiple blockchains in Polkadot ecosystem.
 
 You should use your own due diligence in researching and using the wallets listed below. For any
 issues related to these wallet, reach out to their support teams directly.
+[**Polkadot Support**](https://support.polkadot.network/support/home) can only be contacted for
+[**supported wallets**](#supported-wallets).
 
 :::
 
@@ -143,10 +148,11 @@ Treasury [[1](https://kusama.polkassembly.io/treasury/32),
 
 ## Supported Wallets
 
-[Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
-Polkadot-JS UI, the Polkadot-JS extension, or Parity Signer. For other wallet software, you should
-contact the developers of that wallet. Please note that these wallets are oriented towards
-developers and power users.
+The [**Polkadot Support**](https://support.polkadot.network/) can provide assistance with issues
+related to [Polkadot-JS Wallets](./polkadotjs-wallets.md) (i.e. Polkadot-JS UI and browser
+extension), Parity Signer or [Ledger](./ledger.md). For other wallet software, you should contact
+the developers of that wallet. Please note that these wallets are oriented towards developers and
+power users.
 
 | Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                     |
 | ------------------------------------------------------------------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
