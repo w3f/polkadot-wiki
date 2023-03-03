@@ -51,9 +51,9 @@ XCM has four, high-level core design principles in which it stands to follow:
    the messages are being passed. XCM as a message format should be usable in any system that
    derives consensus.
 
-These four crucial design decisions allow for XCM messages to be a reliable, yet convenient way to
+These four crucial design decisions allow for XCM messages to be a reliable yet convenient way to
 properly convey the intentions from one consensus system to another without any compatibility
-limitations.
+issues.
 
 :::note
 
