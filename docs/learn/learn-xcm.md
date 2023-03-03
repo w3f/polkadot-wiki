@@ -34,7 +34,7 @@ It's important to note that XCM is not how messages are delivered but rather how
 contain relative instructions to whatever on-chain actions the message intends to perform.
 
 [**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
-networking-layer protocol to deliver XCM-formatted messages to other participating parachains. There
+network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
 are also other ways to define transport layer protocols for delivering XCM messages.
 
 XCM has four, high-level core design principles in which it stands to follow:
