@@ -216,7 +216,7 @@ bringing ecosystems together using a common communication abstraction.
 
 ### XCM v3 Instruction Overview
 
-To reflect the functionality above, XCM v3 introduced many new instructions to include within its
+To reflect the functionality above, XCM v3 introduced a multitude of new instructions to include within its
 messages. This list isn't exhaustive, however contains the necessary instruction sets to showcase
 the previously explained concepts of XCM v3.
 
