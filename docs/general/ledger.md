@@ -91,6 +91,8 @@ Polkadot-JS. For more information about derived accounts and derivation paths, c
 
 :::
 
+{{ kusama: Note that you will be not be able to import Kusama Ledger account in Ledger Live. To see Kusama account balances you will need to import your ledger account into a [**wallet**](./wallets.md). :kusama }}
+
 ## Using on Polkadot-JS Apps
 
 ### Loading Your Account
