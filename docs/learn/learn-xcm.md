@@ -30,7 +30,7 @@ XCM is not meant to be only specific to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
 to define a **generic** and **common** format amongst different consensus systems to communicate.
 
-It's important to note that XCM is not how messages are delivered but rather how they look, act, and
+It's important to note that XCM does not define how messages are delivered but rather define how they should look, act, and
 contain relative instructions to whatever on-chain actions the message intends to perform.
 
 [**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
