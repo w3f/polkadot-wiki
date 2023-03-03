@@ -7,34 +7,42 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs
 ---
 
-<!-- This page is a WIP -->
-<!-- The first version of this page takes motivation from Emre's ELI5 on Polkadot-JS -->
+[**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain in a granular way. Below
+we describe the different components of Polkadot-JS. For more information about Polkadot-JS you can
+consult the [**official documentation**](https://polkadot.js.org/docs/).
 
-Polkadot-JS is a collection of tools that interfaces with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain in a granular way.
+## Components
 
-## Primary Implementation
+### Polkadot-JS UI
 
-Polkadot-JS as a term has multiple moving parts that are worth mentioning.
-
-### [Polkadot-JS UI](https://polkadot.js.org/)
-
-The Polkadot-JS UI is a hosted application that loads in your browser. The UI has a standard DNS
-hosted version, which always has the latest features, and an IPFS version that is less frequently
-updated but is more decentralized. This is also often referred to as Polkadot-JS Apps, or the Apps
-UI.
+The Polkadot-JS UI is an application that loads in your browser. There is a standard DNS
+[**hosted version**](https://polkadot.js.org/), which always has the latest features, and an
+[**IPFS version**](https://dotapps.io/) that is less frequently updated but is more decentralized.
+This is also often referred to as Polkadot-JS Apps, UI or the Apps UI. In the Wiki pages we will
+always refer to Polkadot-JS UI.
 
 Polkadot-JS Apps has many capabilities that go beyond basic wallet functions such as account
 creation and sending or receiving transactions.
 
-### [Polkadot-JS Extension](https://polkadot.js.org/extension/)
+### Polkadot-JS Extension
 
-The extension is a simple tool for managing accounts in a browser extension and allowing the signing
-of extrinsics using these accounts. The Polkadot-JS extension is not made for users to interact with
-on-chain functions as one would find through a wallet app. The extension acts as a robust key-store
-and thus acts as an account manager for Substrate-based accounts.
+The [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/) is not a wallet _per se_
+but an account management tool. It allows you to create accounts and import accounts from
+[Ledger](./ledger.md) devices or Parity Signer, allowing the signing of
+[**extrinsics**](../learn/learn-extrinsics.md) using these accounts. It also allows you export
+existing accounts and restore lost accounts (given you have the information to restore them).
 
-However, it also provides a simple interface for interacting with extension-compliant dApps.
+The extension is not made for users to interact with on-chain functions as one would find through a
+wallet app, i.e. it does not allow you to transact or do anything else other than adding and
+managing accounts. However, it also provides a simple interface for interacting with
+extension-compliant dApps.
+
+The extension is a robust key-storage tool, i.e. if you clear the cache of your browser your
+accounts will be kept. This does not happen if you added an account directly to the Polkadot-JS UI.
+Also, the extension recognizes websites that have been flagged for malicious activity. Another
+security note, the extension will always ask you if you want a specific website to access the
+account information in it.
 
 Ensure that the Polkadot-JS Extension installed is updated with the latest metadata of the chain.
 You would notice these updates under Settings > Metadata. Click on Update metadata and approve the
@@ -42,19 +50,7 @@ update.
 
 ![update metadata](../assets/update-metadata.png)
 
-The Polkadot-JS Browser Extension is a tool under the [Polkadot-JS](./polkadotjs.md) umbrella. The
-extension is not a wallet _per se_ but more an account management tool. It allows you to create
-accounts and import accounts from [Ledger](./ledger.md) devices or Parity Signer. It also allows you
-restore lost accounts. The extension does not allow you to transact or do anything else other than
-adding accounts.
-
-The benefit of having your accounts in the extension is that if you clear the cache of your browser,
-your accounts will be kept. This does not happen if you added an account to the Polkadot-JS UI (see
-next Section). Also, the extension recognizes websites that have been flagged for malicious
-activity. Another security note, the extension will always ask you of you want a specific website to
-access account information in it.
-
-#### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
+### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
 
 The phishing list website is a community-driven curation of less-than-honest operators. The
 Polkadot-JS extension uses this list to warn a user about suspicious URLs and addresses that are
@@ -65,7 +61,7 @@ part of the list, and automatically blocks the account address.
 A JavaScript API allowing for programs to interface with the functionality of
 {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}
 
-## Polkadot-JS Apps
+## Polkadot-JS UI
 
 Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with a node, allowing
 access to all features available on Substrate chains. Polkadot-JS Apps also allows developers to to
