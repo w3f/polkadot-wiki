@@ -13,7 +13,7 @@ define messages between consensus systems.
 One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
 interoperability amongst parachains and any other participating consensus-driven systems. XCM is the
 language in which complex, cross-consensus conversations can occur. Two blockchains can "speak" XCM
-can seamlessly interact with each other with a standard messaging format.
+to seamlessly interact with each other using a standard messaging format.
 
 ![xcm](../assets/cross-consensus/xcm.drawio.svg)
 
@@ -30,10 +30,12 @@ XCM is not meant to be only specific to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
 to define a **generic** and **common** format amongst different consensus systems to communicate.
 
-It's important to note that XCM itself is _not_ how messages are delivered but rather how they look,
-act, and contain relative instructions to whatever instructions the message is intended to perform.
+It's important to note that XCM is not how messages are delivered but rather how they look, act, and
+contain relative instructions to whatever on-chain actions the message intends to perform.
+
 [**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
-networking-layer protocol to deliver XCM-formatted messages to other participating parachains.
+networking-layer protocol to deliver XCM-formatted messages to other participating parachains. There
+are also other ways to define transport layer protocols for delivering XCM messages.
 
 XCM has four, high-level core design principles in which it stands to follow:
 
@@ -85,8 +87,8 @@ not have reasonable interpretations under some systems or will be intentionally 
 
 :::
 
-Furthermore, it's essential to realize that XCM themselves messages are _not_ transactions. They
-describe how to change the state of the target network, but the message itself doesn't perform the
+Furthermore, it's essential to realize that XCM themselves messages are _not_ transactions. XCM
+describes how to change the state of the target network, but the message itself doesn't perform the
 state change.
 
 This partly ties what is called **asynchronous composability**, which allows XCM messages to bypass
