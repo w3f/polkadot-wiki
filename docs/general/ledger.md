@@ -26,18 +26,18 @@ for single calls (i.e., bonding and nominating).
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} [Ledger](https://www.ledger.com/)
 application is compatible with the Ledger Nano S and the Ledger Nano X devices. Ledger devices are
 hardware wallets that keep your secret key secured on a physical device that does not expose it to
-your computer or the internet. Even if you connect your nano via USB to your computer, the private
-keys will not be leaked. Ledger devices are also hierarchical deterministic wallets (HD wallets),
-that is:
+your computer or the internet. The private keys will not be leaked even if you connect your nano via
+USB to your computer. Ledger devices are also hierarchical deterministic wallets (HD wallets), that
+is:
 
 - _Deterministic_ means that only one seed phrase generates all the accounts for different
   blockchain networks.
 - _Hierarchical_ means that the accounts are generated in a tree-like structure for different
   purposes.
 
-Ledger devices can be equipped with applications that are blockchain-specific. Such applications are
-usually developed by third parties, and they enable the user to transact securely on the blockchain
-network. The Polkadot Ledger application allows you to manage
+Ledger devices can be equipped with applications that are blockchain-specific. Third parties usually
+develop such applications, enabling the user to transact securely on the blockchain network. The
+Polkadot Ledger application allows you to manage
 {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native token,
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. It supports most of the transaction types of
 the network, including batch transactions from the Utility pallet.
@@ -47,11 +47,11 @@ the network, including batch transactions from the Utility pallet.
 Check the
 {{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot }}{{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }}
 specification for the list of transactions supported. Some transactions are supported only on a
-specific version of the app, and others are not supported at all by any version. For instance, the
-staking `rebag` extrinsic is supported on the XL version but not on the light version. Support for
-the XL version is limited to single calls (not batch calls), meaning you can rebag one account at a
-time. Also, joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible with
-the XL version.
+specific app version, and others are not supported by any version. For instance, the staking `rebag`
+extrinsic is supported on the XL version but not on the light version. Support for the XL version is
+limited to single calls (not batch calls), meaning you can rebag one account at a time. Also,
+joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL
+version.
 
 :::
 
@@ -86,12 +86,12 @@ Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. T
 you import a [derived account using Polkadot-JS](#using-on-polkadot-js-apps) with a derivation path
 44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. Consequently, it is not possible
 to transact with derived accounts using the Ledger Live App, but it is possible to do so using
-Polkadot-JS. For more information about derived accounts and derivation paths, check
-[the accounts page](../learn/learn-accounts.md).
+Polkadot-JS. Check [the accounts page](../learn/learn-accounts.md) for more information about
+derived accounts and derivation paths.
 
 :::
 
-{{ kusama: Note that you will be not be able to import Kusama Ledger account in Ledger Live. To see Kusama account balances you will need to import your ledger account into a [**wallet**](./wallets.md). :kusama }}
+{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets.md). :kusama }}
 
 ## Using on Polkadot-JS Apps
 
@@ -123,13 +123,13 @@ can be added to Polkadot-JS using the 0/0 derivation path (i.e. account type = 0
 0). If you add a second account called
 {{ polkadot: `Polkadot 2` :polkadot }}{{ kusama: `Kusama 2` :kusama }}, this will correspond to the
 1/0 derivation path, and so on. We thus have multiple parent accounts that can be viewed and used in
-both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to created multiple
+both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to create multiple
 children accounts from each parent account. For example,
 {{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }} with 0/0 derivation path can
 have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be
-used in Ledger Live, as it only scans through the parent accounts. So, keep in mind that the
-balances on the children accounts cannot be viewed, and you will not be able to transact with those
-accounts on Ledger Live.
+used in Ledger Live, as it only scans through the parent accounts. So, remember that the balances on
+the children accounts cannot be viewed, and you will not be able to transact with those accounts on
+Ledger Live.
 
 #### Connecting your ledger device
 
@@ -155,7 +155,7 @@ more information about signing transactions using your ledger.
 ### Confirming the Address on your Device
 
 To display your {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account
-address on your Ledger Nano you can follow the guidelines on
+address on your Ledger Nano, you can follow the guidelines on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device).
 Here you can scroll through and make sure the address matches what is displayed on
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
@@ -175,13 +175,13 @@ To sign transactions with your Ledger nano check
 
 ### Receiving a Transfer
 
-To receive a transfer on the accounts stored on your Ledger device, you will need to provide the
-sender (i.e. the payer) with your address. To do so, follow the instructions on
+To receive a transfer on the accounts stored on your Ledger device, you must provide the sender
+(i.e. the payer) with your address. To do so, follow the instructions on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
 :::warning
 
-Before giving anyone your address, make sure it matches what's on the Ledger by
+Before giving anyone your address, ensure it matches what's on the Ledger by
 [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
 intercept clicks and clipboard requests and can change your copied value in-flight, so being extra
 vigilant around copy-paste operations makes sense.
@@ -210,7 +210,7 @@ Democracy extrinsics on the full ledger.
 :::warning
 
 This section is for developers only. It is recommended to install the application from Ledger Live
-unless you _know exactly what you're doing_.
+unless you _know precisely what you're doing_.
 
 :::
 
@@ -225,8 +225,8 @@ review the release, the app upgrade option may not be available on Ledger Live w
 is deployed on the network. If this happens, users cannot use Ledger devices with the Polkadot-JS
 UI, and while signing for a transaction, will most likely incur the error message "txn version not
 supported". Please do not panic if this happens, as there are solutions to this problem. Suppose you
-cannot wait a couple of days until the app passes the Ledger audit. In that case, you can install
-the developer release from the shell using the latest version published on
+cannot wait a few days until the app passes the Ledger audit. In that case, you can install the
+developer release from the shell using the latest version published on
 [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
 ### Install the Developer Release
@@ -241,7 +241,7 @@ installed on the Nano X.
 
 :::
 
-To install the developer version make sure you have the latest `pip` version and follow the steps
+To install the developer version, make sure you have the latest `pip` version and follow the steps
 below:
 
 - Install _ledgerblue_ running the command `python3 -m pip install ledgerblue`.
@@ -255,12 +255,12 @@ below:
 
 ![Dev Ledger Help Menu](../assets/ledger-help-menu.png)
 
-- Next, attach your Ledger Nano (in this case Nano S Plus) to your computer, enter the PIN code, and
-  run the command `./installer_nanos_plus.sh load`. Scroll with the right button until you see
-  "Allow unsafe manager", left and right press to confirm. You will be asked to confirm the action
-  of uninstalling the app and subsequently installing the newer version. After confirming both
-  actions, the shell script will install the version on your device. You will need to insert the PIN
-  code to use the device after the installation.
+- Attach your Ledger Nano (in this case Nano S Plus) to your computer, enter the PIN code, and run
+  the command `./installer_nanos_plus.sh load`. Scroll with the right button until you see "Allow
+  unsafe manager", left and right press to confirm. You will be asked to confirm the action of
+  uninstalling the app and subsequently installing the newer version. After confirming both actions,
+  the shell script will install the version on your device. You must insert the PIN code to use the
+  device after the installation.
 - If you wish to revert the version to the stable release, go to Ledger Live. The app will
   automatically detect the developer release and give the option to install the previous stable
   release.
