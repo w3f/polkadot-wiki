@@ -8,7 +8,7 @@ slug: ../learn-xcm
 ---
 
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
-define messages between consensus systems.
+communicate between consensus systems.
 
 One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
 interoperability amongst parachains and any other participating consensus-driven systems. XCM is the
