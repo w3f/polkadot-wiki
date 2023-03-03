@@ -23,11 +23,12 @@ for single calls (i.e., bonding and nominating).
 
 :::
 
-The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S and
-the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret key secured on
-a physical device that does not expose it to your computer or the internet. Even if you connect your
-nano via USB to your computer, the private keys will not be leaked. Ledger devices are also
-hierarchical deterministic wallets (HD wallets), that is:
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} [Ledger](https://www.ledger.com/)
+application is compatible with the Ledger Nano S and the Ledger Nano X devices. Ledger devices are
+hardware wallets that keep your secret key secured on a physical device that does not expose it to
+your computer or the internet. Even if you connect your nano via USB to your computer, the private
+keys will not be leaked. Ledger devices are also hierarchical deterministic wallets (HD wallets),
+that is:
 
 - _Deterministic_ means that only one seed phrase generates all the accounts for different
   blockchain networks.
@@ -36,18 +37,21 @@ hierarchical deterministic wallets (HD wallets), that is:
 
 Ledger devices can be equipped with applications that are blockchain-specific. Such applications are
 usually developed by third parties, and they enable the user to transact securely on the blockchain
-network. The Polkadot Ledger application allows you to manage Polkadot's native token, DOT. It
-supports most of the transaction types of the network, including batch transactions from the Utility
-pallet.
+network. The Polkadot Ledger application allows you to manage
+{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native token,
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. It supports most of the transaction types of
+the network, including batch transactions from the Utility pallet.
 
 :::note Ledger apps may not support all the transactions
 
-Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of
-transactions supported. Some transactions are supported only on a specific version of the app, and
-others are not supported at all by any version. For instance, the staking `rebag` extrinsic is
-supported on the XL version but not on the light version. Support for the XL version is limited to
-single calls (not batch calls), meaning you can rebag one account at a time. Also, joining a
-[nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version.
+Check the
+{{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot }}{{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }}
+specification for the list of transactions supported. Some transactions are supported only on a
+specific version of the app, and others are not supported at all by any version. For instance, the
+staking `rebag` extrinsic is supported on the XL version but not on the light version. Support for
+the XL version is limited to single calls (not batch calls), meaning you can rebag one account at a
+time. Also, joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible with
+the XL version.
 
 :::
 
@@ -56,12 +60,15 @@ issue on the [Polkadot support pages](https://support.polkadot.network/).
 
 ## Requirements
 
-Here is a list of what you will need before using Polkadot with Ledger:
+Here is a list of what you will need before using
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with Ledger:
 
-- A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements). The
+- A Ledger Nano X or Nano S plus (recommended for
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger App space requirements). The
   Ledger Nano S has limited memory and is no longer produced.
-- The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live
-  under the "Manager" tab, you will need to allow access with your nano).
+- The latest firmware of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger
+  App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to
+  allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
 - A Chromium-based web browser is installed that you can use to access the
@@ -71,15 +78,15 @@ Here is a list of what you will need before using Polkadot with Ledger:
 
 Check
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
-to learn how to use Polkadot with ledger live.
+to learn how to use {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with ledger live.
 
 :::info
 
 Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
-you create a [derived account using Polkadot JS](#using-on-polkadot-js-apps) with a derivation path
+you import a [derived account using Polkadot-JS](#using-on-polkadot-js-apps) with a derivation path
 44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. Consequently, it is not possible
 to transact with derived accounts using the Ledger Live App, but it is possible to do so using
-Polkadot JS. For more information about derived accounts and derivation paths, check
+Polkadot-JS. For more information about derived accounts and derivation paths, check
 [the accounts page](../learn/learn-accounts.md).
 
 :::
@@ -99,7 +106,7 @@ You can import your Ledger account to [Polkadot Extension](https://polkadot.js.o
 the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). For instructions on how to import
 Ledger accounts to the Polkadot Extension read through
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension),
-while if you want to import Ledger accounts to the Polkadot JS UI you can consult
+while if you want to import Ledger accounts to the Polkadot-JS UI you can consult
 [this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
 
 #### Derivation paths
@@ -107,16 +114,20 @@ while if you want to import Ledger accounts to the Polkadot JS UI you can consul
 When adding a Ledger account using the extension or the UI, you will be asked to select an
 `account type` and an `account index`. The first lets you select an account, while the second lets
 you pick a derivation path from that account - think of it like a formula from which child accounts
-are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live
-with name `Polkadot 1`, this can be added to Polkadot JS using the 0/0 derivation path (i.e. account
-type = 0 and account index = 0). If you add a second account called `Polkadot 2`, this will
-correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that can be
-viewed and used in both Ledger Live and Polkadot JS. Additionally, we can use Polkadot-JS UI to
-created multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0
-derivation path can have child 0/1, 0/2, etc. that can be used within the UI. However, such children
-accounts cannot be used in Ledger Live, as it only scans through the parent accounts. So, keep in
-mind that the balances on the children accounts cannot be viewed, and you will not be able to
-transact with those accounts on Ledger Live.
+are generated. When you are creating a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account for the first time on
+Ledger Live with name {{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }}, this
+can be added to Polkadot-JS using the 0/0 derivation path (i.e. account type = 0 and account index =
+0). If you add a second account called
+{{ polkadot: `Polkadot 2` :polkadot }}{{ kusama: `Kusama 2` :kusama }}, this will correspond to the
+1/0 derivation path, and so on. We thus have multiple parent accounts that can be viewed and used in
+both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to created multiple
+children accounts from each parent account. For example,
+{{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }} with 0/0 derivation path can
+have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be
+used in Ledger Live, as it only scans through the parent accounts. So, keep in mind that the
+balances on the children accounts cannot be viewed, and you will not be able to transact with those
+accounts on Ledger Live.
 
 #### Connecting your ledger device
 
@@ -131,7 +142,9 @@ If you are adding your Ledger Nano for the first time, click on the "Unknown dev
 :::info Signature error message
 
 If you have already connected your device, but an error message appears before signing a
-transaction, make sure you have opened the Polkadot application on your Ledger Nano device. Visit
+transaction, make sure you have opened the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} application on your Ledger Nano
+device. Visit
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
 more information about signing transactions using your ledger.
 
@@ -139,7 +152,8 @@ more information about signing transactions using your ledger.
 
 ### Confirming the Address on your Device
 
-To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on
+To display your {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account
+address on your Ledger Nano you can follow the guidelines on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device).
 Here you can scroll through and make sure the address matches what is displayed on
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
@@ -200,17 +214,18 @@ unless you _know exactly what you're doing_.
 
 ### Why you might need the Developer Release
 
-Ledger apps for the Polkadot and Kusama ecosystems are developed by [Zondax](https://zondax.ch/).
-When new functionalities are added to the Ledger apps, they are made available on a developer
-release for testing purposes. After a successful audit and review, the apps would be available for
-download and installation using [Ledger Live](https://www.ledger.com/ledger-live). As it takes some
-time for Ledger to audit and review the release, the app upgrade option may not be available on
-Ledger Live when the new runtime is deployed on the network. If this happens, users cannot use
-Ledger devices with the Polkadot-JS UI, and while signing for a transaction, will most likely incur
-the error message "txn version not supported". Please do not panic if this happens, as there are
-solutions to this problem. Suppose you cannot wait a couple of days until the app passes the Ledger
-audit. In that case, you can install the developer release from the shell using the latest version
-published on [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
+Ledger apps for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem are
+developed by [Zondax](https://zondax.ch/). When new functionalities are added to the Ledger apps,
+they are made available on a developer release for testing purposes. After a successful audit and
+review, the apps would be available for download and installation using
+[Ledger Live](https://www.ledger.com/ledger-live). As it takes some time for Ledger to audit and
+review the release, the app upgrade option may not be available on Ledger Live when the new runtime
+is deployed on the network. If this happens, users cannot use Ledger devices with the Polkadot-JS
+UI, and while signing for a transaction, will most likely incur the error message "txn version not
+supported". Please do not panic if this happens, as there are solutions to this problem. Suppose you
+cannot wait a couple of days until the app passes the Ledger audit. In that case, you can install
+the developer release from the shell using the latest version published on
+[the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
 ### Install the Developer Release
 
