@@ -37,7 +37,7 @@ contain relative instructions to the on-chain actions the message intends to per
 network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
 are also other ways to define transport layer protocols for delivering XCM messages.
 
-XCM has four, high-level core design principles in which it stands to follow:
+XCM has four high-level core design principles which it stands to follow:
 
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
