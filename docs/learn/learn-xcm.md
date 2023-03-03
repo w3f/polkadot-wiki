@@ -12,17 +12,17 @@ communicate between consensus systems.
 
 One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main functionalities is
 interoperability amongst parachains and any other participating consensus-driven systems. XCM is the
-language through which complex, cross-consensus interactions can occur. Two blockchains can "speak" XCM
-to seamlessly interact with each other using a standard messaging format.
+language through which complex, cross-consensus interactions can occur. Two blockchains can "speak"
+XCM to seamlessly interact with each other using a standard messaging format.
 
-![xcm](../assets/cross-consensus/xcm.drawio.svg)
+![xcm](../assets/cross-consensus/hrmp-ex.png)
 
 :::info
 
-We typically discuss XCM in the context of parachains, but please bear this in mind that it expands to the domain of all consensus systems!
-Remember, a consensus system here means any system or protocol that achieves finality to agree on
-the latest and correct state, whether it's a Polkadot parachain, an EVM smart contract, or other
-bridged consensus systems. 
+We typically discuss XCM in the context of parachains, but please bear this in mind that it expands
+to the domain of all consensus systems! Remember, a consensus system here means any system or
+protocol that achieves finality to agree on the latest and correct state, whether it's a Polkadot
+parachain, an EVM smart contract, or other bridged consensus systems.
 
 :::
 
@@ -30,8 +30,9 @@ XCM is not meant to be only specific to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
 to define a **generic** and **common** format amongst different consensus systems to communicate.
 
-It's important to note that XCM does not define how messages are delivered but rather define how they should look, act, and
-contain relative instructions to the on-chain actions the message intends to perform.
+It's important to note that XCM does not define how messages are delivered but rather define how
+they should look, act, and contain relative instructions to the on-chain actions the message intends
+to perform.
 
 [**XCMP**](#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
 network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
@@ -45,8 +46,8 @@ XCM has four high-level core design principles which it stands to follow:
    and in a timely fashion. Once a message is sent, one can be sure it will be processed as it was
    intended to be.
 3. **Asymmetric**: XCM messages, by default, do not have results that let the sender know that the
-   message was received - they follow the 'fire and forget' paradigm. Any results must be separately communicated to
-   the sender with an additional message back to the origin.
+   message was received - they follow the 'fire and forget' paradigm. Any results must be separately
+   communicated to the sender with an additional message back to the origin.
 4. **Agnostic**: XCM makes no assumptions about the nature of the consensus systems between which
    the messages are being passed. XCM as a message format should be usable in any system that
    derives finality through consensus.
@@ -87,13 +88,13 @@ not have reasonable interpretations under some systems or will be intentionally 
 
 :::
 
-Furthermore, it's essential to realize that XCM messages by themselves are _not_ considered transactions. XCM
-describes how to change the state of the target network, but the message by itself doesn't perform the
-state change.
+Furthermore, it's essential to realize that XCM messages by themselves are _not_ considered
+transactions. XCM describes how to change the state of the target network, but the message by itself
+doesn't perform the state change.
 
-This partly ties to what is called **asynchronous composability**, which allows XCM messages to bypass
-the concept of time-constrained mechanisms, like on-chain scheduling and execution over time in the
-correct order in which it was intended.
+This partly ties to what is called **asynchronous composability**, which allows XCM messages to
+bypass the concept of time-constrained mechanisms, like on-chain scheduling and execution over time
+in the correct order in which it was intended.
 
 ### Example Use-Cases
 
@@ -216,9 +217,9 @@ bringing ecosystems together using a common communication abstraction.
 
 ### XCM v3 Instruction Overview
 
-To reflect the functionality above, XCM v3 introduced a multitude of new instructions to include within its
-messages. This list isn't exhaustive, however contains the necessary instruction sets to showcase
-the previously explained concepts of XCM v3.
+To reflect the functionality above, XCM v3 introduced a multitude of new instructions to include
+within its messages. This list isn't exhaustive, however contains the necessary instruction sets to
+showcase the previously explained concepts of XCM v3.
 
 :::note
 
