@@ -10,9 +10,9 @@ slug: ../learn-xcm
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
 communicate between consensus systems.
 
-One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main initiatives is
+One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main functionalities is
 interoperability amongst parachains and any other participating consensus-driven systems. XCM is the
-language in which complex, cross-consensus conversations can occur. Two blockchains can "speak" XCM
+language through which complex, cross-consensus interactions can occur. Two blockchains can "speak" XCM
 to seamlessly interact with each other using a standard messaging format.
 
 ![xcm](../assets/cross-consensus/xcm.drawio.svg)
