@@ -11,6 +11,14 @@ import RPC from "./../../components/RPC-Connection";
 
 import MinimumStake from "./../../components/Minimum-Stake";
 
+:::tip
+
+If you are a beginner, it is recommended that you start your validator journey on Kusama network.
+Check the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) for details on how to get
+started.
+
+:::
+
 ## Preliminaries
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
@@ -40,7 +48,7 @@ If you need help, please reach out on the
 Element. The team and other validators are there to help answer questions and provide tips from
 experience.
 
-### How many DOT do I need?
+### How many DOT do I need to become an active Validator?
 
 You can have a rough estimate on that by using the methods listed
 [here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
@@ -55,7 +63,8 @@ understand how validators are elected, check the
 
 On Polkadot, the minimum stake backing a validator in the active set is
 {{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era {{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
 {{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
 
 On Kusama, the minimum stake backing a validator in the active set is

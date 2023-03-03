@@ -39,7 +39,7 @@ If you need help, please reach out on the
 [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders) on Element.
 The team and other validators are there to help answer questions and provide tips from experience.
 
-### How many KSM do I need?
+### How many KSM do I need to become an active Validator?
 
 You can have a rough estimate on that by using the methods listed
 [here](../../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
@@ -52,16 +52,26 @@ nominators. To understand how validators are elected, check the
 
 :::info On-Chain Data for Reference
 
-On Polkadot, the minimum stake backing a validator in the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era {{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
-
 On Kusama, the minimum stake backing a validator in the active set is
 {{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
 {{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era {{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
+era
+{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
 {{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
+
+On Polkadot, the minimum stake backing a validator in the active set is
+{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
+
+:::
+
+:::tip Join the Thousand Validator Programme
+
+[The Thousand Validator Programme](../../general/thousand-validators.md) is an initiative by Web3
+Foundation and Parity Technologies to use the funds held by both organizations to nominate
+validators in the community.
 
 :::
 
@@ -70,27 +80,22 @@ insecure or improper setup may result in loss of DOT tokens! If you are not conf
 ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node
 instead.
 
-## Thousand Validator Program on Kusama
+### Validator Rewards
 
-The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use
-the funds held by both organizations to nominate validators in the community.
-
-It serves two major purposes:
-
-1. Give validators a structured on-ramp to join the active set of validators on Kusama and Polkadot
-2. Further decentralize the validator active set.
-
-[Apply to Thousand Validator Program on Kusama](https://thousand-validators.kusama.network/#/)
+On Kusama, one day is approximately four eras whereas on Polkadot, one era is approximately a day.
+In each era, the validators elected to the active set earn era points which correspond to the actual
+rewards earned that are distributed proportionally to the nominators after deducting the validator
+commission. Currently, the minimum validator commission is set to
+{{ kusama: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%. :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%. :polkadot }}
+For more information, check the [validator payout](../maintain-guides-validator-payout.md) document.
 
 ## Run a Kusama Validator
 
-Running a validator on the Kusama network is identical to running a Polkadot validator.
+Running a validator on the Kusama network is identical to running a Polkadot validator. Check out
+the [Polkadot guide](../maintain-guides-how-to-validate-polkadot.md) on how to setup a validator.
 
-Make sure to adjust the Polkadot guide to run a Kusama network validator (the instructions will also be available in the Polkadot Validator guide):
+Make sure to adjust the Polkadot guide to run a Kusama network validator (the instructions will also
+be available in the Polkadot Validator guide):
 
-1. When starting the node pass `--chain=kusama` CLI flag:
-
-2. Similar to Polkadot network Kusama has its own token called KSM
-
-Check out the [Polkadot guide](../maintain-guides-how-to-validate-polkadot.md) on how to setup a
-validator.
+- When starting the node pass `--chain=kusama` CLI flag
