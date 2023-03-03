@@ -222,7 +222,7 @@ the previously explained concepts of XCM v3.
 
 :::note
 
-Note most of these instruction definitions came from the source code, of which you may
+Note that most of these instruction definitions came from the source code, which you may
 [explore for more depth!](https://github.com/paritytech/polkadot/blob/master/xcm/src/v3/mod.rs)
 
 :::
