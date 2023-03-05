@@ -95,6 +95,7 @@ proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama 
 - Governance
 - Staking
 - Identity Judgement
+- Cancel
 - Auction
 
 When a proxy account makes a transaction,
