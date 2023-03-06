@@ -22,6 +22,22 @@ help you get started.
 
 :::
 
+:::info Stake through Nomination Pools
+
+The minimum amount required to become an active nominator and earn rewards is
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :kusama }}
+If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
+nomination and still want to participate in staking, you can join the nomination pools. You can now
+stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
+{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
+in the nomination pools and earn staking rewards. For additional information, see
+[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
+
+:::
+
 If you landed on this page, you decided to understand how you can be a good nominator. Note, this
 page is not for [nomination pool](./learn-nomination-pools.md) members, although pool members might
 gain essential knowledge about how to choose nomination pools.
@@ -95,24 +111,6 @@ The concept of a controller account is very similar to that of a staking proxy: 
 account but use its economic power and sign staking-related transactions on behalf of it. This is
 why there will be only proxies in the near future, as the controller is becoming redundant. Given
 this context, we recommend nominators start understanding what proxies are and how to use them.
-
-:::info Stake through Nomination Pools
-
-The minimum amount required to become an active nominator and earn rewards is
-{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :kusama }}
-If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
-nomination and still want to participate in staking, you can join the nomination pools. You can now
-stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
-{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
-in the nomination pools and earn staking rewards. For additional information, see
-[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
-
-:::
-
-Nominators secure the Relay Chain by selecting good validators and staking DOT.
 
 :::
 
