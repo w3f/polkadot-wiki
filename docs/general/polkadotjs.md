@@ -23,14 +23,14 @@ This is also often referred to as Polkadot-JS Apps, UI or the Apps UI. In the Wi
 always refer to Polkadot-JS UI.
 
 Polkadot-JS Apps has many capabilities that go beyond basic wallet functions such as account
-creation and sending or receiving transactions. See the [dedicated section](./polkadotjs-ui.md) for
-more information about the UI.
+creation and sending or receiving transactions. See the [**dedicated section**](./polkadotjs-ui.md)
+for more information about the UI.
 
 ### Polkadot-JS Extension
 
 The [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/) is not a wallet _per se_
 but an account management tool. It allows you to create accounts and import accounts from
-[Ledger](./ledger.md) devices or Parity Signer, allowing the signing of
+[**Ledger**](./ledger.md) devices or Parity Signer, allowing the signing of
 [**extrinsics**](../learn/learn-extrinsics.md) using these accounts. It also allows you export
 existing accounts and restore lost accounts (given you have the information to restore them).
 
@@ -148,16 +148,3 @@ on the chain.
 
 For more user-friendly wallets, check out the supported and treasury-funded wallets on the
 [Wallets Page](./../general/wallets.md)
-
-## Resources
-
-### Beginner's Guide to Polkadot-JS
-
-- [Introduction to Polkadot-JS](https://www.youtube.com/watch?v=4EQqwGFV1D8)
-- [Create an account using Polkadot-JS](https://www.youtube.com/watch?v=sy7lvAqyzkY)
-- [Network Explorer on Polkadot-JS UI](https://www.youtube.com/watch?v=g4b4IWR6OrE)
-
-### Documentation
-
-- [Official polkadot{.js} docs](https://polkadot.js.org/docs/)
-- [Substrate docs on Polkadot-JS](https://docs.substrate.io/reference/command-line-tools/polkadot-apps/)
