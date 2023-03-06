@@ -7,9 +7,20 @@ keywords: [wallets, account, signer, supported wallets, balance, token]
 slug: ../wallets
 ---
 
+:::caution
+
+Using your due diligence in researching and using the wallets listed below would be best. For any
+issues related to these wallet, reach out to their support teams directly.
+
+:::
+
 If you are new to blockchain technology, generally a typical blockchain network account is a
 public-private key pair. Access to a private key gives full access to all the allowed transactions
 on that blockchain account. It is essential to keep the private key secure.
+
+Typically, the account keys are either stored and accessed through a browser extension or a
+smartphone app (which are considered as a hot wallets as they are online), or an air-gapped device
+or a hardware wallet (which are considered as cold wallets as they are offline).
 
 :::tip Not your keys, not your coins!
 
@@ -20,23 +31,12 @@ can access your account's private key.
 
 :::
 
-## Community Wallets
-
-:::caution
-
-Using your due diligence in researching and using the wallets listed below would be best. For any
-issues related to these wallet, reach out to their support teams directly.
-
-:::
-
-Typically, the account keys are either stored and accessed through a browser extension or a
-smartphone app (which are considered as a hot wallets as they are online), or an air-gapped device
-or a hardware wallet (which are considered as cold wallets as they are offline).
-
 To realize the multichain vision of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
 it is important to have non-custodial wallets that make it convenient to interact with multiple
 blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem. Below there
-is a list of all non-custodial wallets developed by the community.
+is a list of all non-custodial treasury-funded wallets developed by the community.
+
+## Overview
 
 ### Browser Extensions
 
@@ -83,7 +83,7 @@ their official social media handles).
 
 :::
 
-### Enkrypt
+## Enkrypt
 
 A multichain crypto wallet - Bitcoin, Ethereum, Polkadot, Kusama and a few parachains.
 Non-custodial, private, hardware wallet support (Ledger and Trezor). Private and open source. Hold,
@@ -91,7 +91,7 @@ send, and receive tokens and NFTs. Swap tokens and bridge assets between chains.
 accounts on multiple networks. Connect to web3 apps. Recipient of a development grant from Web3
 Foundation.
 
-### PolkaGate
+## PolkaGate
 
 PolkaGate extension is a Kusama Treasury supported
 [[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
@@ -99,7 +99,7 @@ Polkadot-JS Plus, completely re-developed, with a new look and many performance 
 Supports proxy accounts and social recovery, address (watch-only) accounts, parachain accounts,
 custom remote nodes, phishing detection, QR account import, export/import/derive account(s).
 
-### SubWallet
+## SubWallet
 
 A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive, and monitor multi-chain
 assets on 150+ networks. Import account with seed phrase, private key, QR code, and JSON file.
@@ -110,7 +110,7 @@ on-ramp, phishing detection, transaction history. SubWallet received funding fro
 [2](https://polkadot.polkassembly.io/treasury/162),
 [3](https://polkadot.polkassembly.io/treasury/218)].
 
-### Talisman
+## Talisman
 
 A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
 Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
@@ -118,7 +118,7 @@ your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Su
 portfolio tracking. Talisman received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/148)].
 
-### Fearless Wallet
+## Fearless Wallet
 
 The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
 ecosystem with emphasis on UX, performance, and security. Fearless Wallet aims to radically expand
@@ -130,14 +130,14 @@ warning. Fearless Wallet received funding from Kusama Treasury
 [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102),
 [5](https://kusama.polkassembly.io/treasury/178)].
 
-### Nova Wallet
+## Nova Wallet
 
 Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with
 Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/122),
 [2](https://kusama.polkassembly.io/treasury/158)].
 
-### Polkawallet
+## Polkawallet
 
 Polkawallet provides cross-chain asset one-stop management, convenient staking, governance, and
 multiple DeFi services; the private key is self-owned. Polkawallet received funding from Kusama
