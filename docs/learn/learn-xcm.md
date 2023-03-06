@@ -213,11 +213,20 @@ bringing ecosystems together using a common communication abstraction.
 
 :::
 
-### XCM v3 Instruction Overview
+### XCM v3 Instruction & Register Overview
 
 To reflect the functionality above, XCM v3 introduced a multitude of new instructions to include
 within its messages. This list isn't exhaustive, however contains the necessary instruction sets to
 showcase the previously explained concepts of XCM v3.
+
+New registers have been introduced in order to accommodate some of the new instructions:
+
+- `Transact Status Register` - A register that primarily handles the status when checking the
+  versions between the origin, destination chain, and the requested pallet located on the
+  destination chain.
+
+- `Topic Register` - A register that can set any value and is for use cases such as crafting IDs for
+  messages. A `Topic` is also part of `XcmContext`.
 
 :::note
 
