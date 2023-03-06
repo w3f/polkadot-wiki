@@ -21,6 +21,9 @@ accessing to all features available on Substrate chains such as Polkadot and Kus
 of the moving parts of [**Polkadot-JS tool collection**](./polkadotjs.md), and its functionalities
 go beyond normal wallet functionalities such as transfers.
 
+> Note that the UI may not precisely align with the functionality of individual parachains. For more
+> information see the [**Polkadot-JS Page**](./polkadotjs.md#polkadot-js-api).
+
 ## Main Functionalities
 
 Here we describe those functionalities that will likely be useful to most of the users. Those
@@ -39,33 +42,46 @@ balance details and see different
   JSON file.
 - Recover and account from JSON file.
 - Add an account from QR code.
-- Add an account from a Ledger device (this option must be enabled under [Settings](#settings)).
+- Add an account from a [**Ledger**](./ledger.md) device (this option must be enabled under
+  [Settings](#settings)).
 - Create a [**multi-signature account**](../learn/learn-account-multisig.md).
 - Add a proxied account (see
   [**Pure Proxies**](../learn/learn-proxies.md#anonymous-proxy-pure-proxy) for more information).
+
+For each account visible in the UI you can perform different actions including
+[**adding a proxy**](../learn/learn-proxies.md),
+[**setting an identity**](../learn/learn-identity.md), and
+[**sending tokens**](../learn/learn-balance-transfers.md).
 
 For more information about adding and recovering accounts see the
 [**Account Generation**](../learn/learn-account-generation.md) page.
 
 ### Network (Staking)
 
-In this section of the UI you can participate to [**staking**](../learn/learn-staking.md). The
-Staking menu is divided into eight tabs:
+In this section of the UI you can participate to [**staking**](../learn/learn-staking.md). In the
+Staking menu you can access:
 
-- The **Overview** tab shows active or waiting validators.
-- The **Accounts** (visible only if you added an account) tab shows accounts that are currently used
-  for staking, bonded amount, and nominations. In this tab you can do staking-related transactions
-  such as bonding more funds or changing nominations.
-- The **Payouts** (visible only if you added an account) tab shows any pending rewards that still
-  need to paid out to you.
-- The **Pool** tab shows all registered [**nomination pool**](../learn/learn-nomination-pools.md)
+- The **Overview** tab showing active or waiting validators.
+- The **Accounts** tab (visible only if you added an account) showing accounts that are currently
+  used for staking
+  ([**stash and controller**](../learn/learn-staking.md#stash-and-controller-accounts-for-staking)),
+  bonded amount, and nominations. In this tab you can do staking-related transactions such as
+  bonding more funds or changing nominations. If you have
+  [**staking proxies**](../learn/learn-staking-advanced.md#staking-proxies) here you will be able to
+  used them while signing for staking-related transactions.
+- The **Payouts** tab (visible only if you added an account) showing any pending rewards that still
+  need to be paid out to you.
+- The **Pool** tab showing all registered [**nomination pool**](../learn/learn-nomination-pools.md)
   with respective state (open, blocked or destroying). This tab can be also used to create and join
   a pool.
-- The **Targets** tab shows detailed statistics about validators. More information can be found
-  [**here**](../learn/learn-nominator.md).
-- The **Bags** (visible only if you added an account) tab shows
-- The **Slashes** tab shows
-- The **Validator stats** tab shows
+- The **Targets** tab showing detailed information about validators such as commission and return.
+  More information can be found in the [**Nominator Page**](../learn/learn-nominator.md).
+- The **Bags** tab (visible only if you added an account) showing the bag you are in ("My bags") and
+  all bags within the [**bags list**](../learn/learn-staking-advanced.md#bags-list). Here (if
+  applicable) you can rebag accounts that do not belong to the bag you are in, and you can move your
+  account in front of the account having less stake than you.
+- The **Slashes** tab showing if there are any global slashes.
+- The **Validator stats** tab showing statistics for a chosen validator.
 
 ### Settings
 
@@ -85,29 +101,34 @@ shown as a notification. For more information about metadata updates see the
 
 In this section we describe those functionalities that will less likely interest
 
-### Network (Other)
+### Network
+
+In addition to staking, in the Network section you can also:
+
+- See the Explorer with most recent blocks and events.
+- Inspect [**parachains**](../learn/learn-parachains.md), see parachain
+  [**auctions**](../learn/learn-auction.md) and participate to parachain
+  [**crowdloans**](../learn/learn-crowdloans.md).
 
 ### Governance
 
-In this section of the UI you can participate to governance.
+In this section of the UI you can participate to [**governance**](../learn/learn-opengov.md).
 
 ### Developer
 
-In this section of the UI you can access
+In this section of the UI you can access advanced features such as:
 
-Extrinsic tab provides a more such as Pure Proxies, Time-delayed proxies, etc.
+- [Query chain metadata](https://polkadot.js.org/apps/#/chainstate)
+- [Query on-chain data using RPC calls](https://polkadot.js.org/apps/#/rpc)
+- Call [**extrinsics**](../learn/learn-extrinsics.md) using your account (you are able to see this
+  option only if you have an account in the UI)
 
-> Note that the UI may not precisely align with the functionality of individual parachains.
-
-Among other things, Polkadot-JS Apps allows a user to:
-
-- [Staking](../learn/learn-staking.md)
-- [Governance](../learn/learn-governance.md)
-- [Crowdloans](../learn/learn-crowdloans.md)
-- [Auctions](../learn/learn-auction.md)
-- Query chain metadata
-- Query on-chain data using RPC calls
-- Call extrinsics using your account
+The [Extrinsic tab](https://polkadot.js.org/apps/#/extrinsics) provides the use to access more
+granular functions such as [**pure proxies**](../learn/learn-proxies#anonymous-proxy-pure-proxy) and
+[**time-delayed proxies**](../learn/learn-proxies.md#time-delayed-proxy), change
+[**nomination pool**](../learn/learn-nomination-pools.md) settings (nomination and roles) and use
+[**non-transfer proxies**](../learn/learn-proxies.md#non-transfer-proxy),
+[**destroy assets**](../learn/learn-assets.md#destroying-an-asset), and much more.
 
 ## Beginner's Guide to Polkadot-JS
 
