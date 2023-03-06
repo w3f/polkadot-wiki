@@ -339,3 +339,11 @@ To use a Ledger hardware wallet to create your address and keep your tokens in c
 the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
 
 :::
+
+## Encryption Enhancement
+
+Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
+This is due to an enhanced encryption method, noticeable in a slight delay when
+encrypting/decrypting your wallet. If you cannot load a `JSON` file, please ensure you use the
+latest version of the wallet software. If you cannot load it, ensure that the wallet software uses
+the newest version of the [Polkadot API](https://polkadot.js.org/api/).

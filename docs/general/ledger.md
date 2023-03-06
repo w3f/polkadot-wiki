@@ -7,19 +7,22 @@ keywords: [ledger, staking, polkadot app]
 slug: ../ledger
 ---
 
-:::info
+:::info Supported Wallet
 
-Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
-like Brave and Chrome.
+If you need help using Ledger you can contact the
+[**Polkadot Support Team**](https://support.polkadot.network/support/home).
 
 :::
 
-:::warning Ledger does not currently support batch transactions
+:::warning Please Note
 
-Ledger does not currently support batch calls; As a consequence, if you stake using the
-[staking dashboard](https://staking.polkadot.network/#/overview), you must use a hot wallet.
-Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that allows
-for single calls (i.e., bonding and nominating).
+- Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
+  like Google Chrome.
+
+- Ledger does not currently support batch calls; As a consequence, if you stake using the
+  [staking dashboard](https://staking.polkadot.network/#/overview), you must use a hot wallet.
+  Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that
+  allows for single calls (i.e., bonding and nominating).
 
 :::
 

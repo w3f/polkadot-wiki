@@ -14,6 +14,15 @@ consult the [**official documentation**](https://polkadot.js.org/docs/).
 
 ## Polkadot-JS UI
 
+:::info Supported Wallet
+
+If you need help using the Polkadot-JS UI you can contact the
+[**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
+wallet is oriented toward developers and power users. For more user-friendly wallets, check out the
+supported and treasury-funded wallets on the [Wallets Page](./../general/wallets.md).
+
+:::
+
 The Polkadot-JS UI is an application that loads in your browser. There is a standard DNS
 [**hosted version**](https://polkadot.js.org/), which always has the latest features, and an
 [**IPFS version**](https://dotapps.io/) that is less frequently updated but is more decentralized.
@@ -23,6 +32,23 @@ always refer to Polkadot-JS UI.
 Polkadot-JS Apps has many capabilities that go beyond basic wallet functions such as account
 creation and sending or receiving transactions. See the [**dedicated section**](./polkadotjs-ui.md)
 for more information about the UI.
+
+### Polkadot-JS UI Desktop
+
+The Polkadot-JS UI also exists as a desktop application for Windows, Mac and Linux. The main
+advantage of using it is that by default it stores encrypted accounts on the filesystem instead of
+browser's local storage. Local storage is susceptible to attacks using XSS (Cross-Site Scripting).
+There's no such risk when with files stored on disk.
+
+The desktop app uses the [Electron](https://www.electronjs.org/) framework. It provides the same
+features as web app, the only difference being different account storage.
+
+:::info Ledger not supported
+
+The desktop application does not support Ledger accounts. If you need a cold storage solution you
+can try Parity Signer (aka Polkadot Vault).
+
+:::
 
 ## Polkadot-JS Extension
 

@@ -20,24 +20,23 @@ can access your account's private key.
 
 :::
 
-To realize the multichain vision of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
-it is important to have non-custodial wallets that make it convenient to interact with multiple
-blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
-
-## Non-Custodial Wallets
+## Community Wallets
 
 :::caution
 
 Using your due diligence in researching and using the wallets listed below would be best. For any
 issues related to these wallet, reach out to their support teams directly.
-[**Polkadot Support**](https://support.polkadot.network/support/home) can only be contacted for
-[**supported wallets**](#supported-wallets).
 
 :::
 
 Typically, the account keys are either stored and accessed through a browser extension or a
 smartphone app (which are considered as a hot wallets as they are online), or an air-gapped device
-or a hardware wallet (which considered as cold wallets as they are offline).
+or a hardware wallet (which are considered as cold wallets as they are offline).
+
+To realize the multichain vision of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
+it is important to have non-custodial wallets that make it convenient to interact with multiple
+blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem. Below there
+is a list of all non-custodial wallets developed by the community.
 
 ### Browser Extensions
 
@@ -159,11 +158,3 @@ power users.
 | [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux                                                                                                                                                 |
 | [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts)           | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)                                                                |
 | [Ledger](https://github.com/Zondax/ledger-polkadot)                 | Live              | Zondax    | Hardware wallet app used with [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (and [Polkadot-JS Extension](https://github.com/polkadot-js/extension)) |
-
-## Encryption Enhancement
-
-Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
-This is due to an enhanced encryption method, noticeable in a slight delay when
-encrypting/decrypting your wallet. If you cannot load a `JSON` file, please ensure you use the
-latest version of the wallet software. If you cannot load it, ensure that the wallet software uses
-the newest version of the [Polkadot API](https://polkadot.js.org/api/).

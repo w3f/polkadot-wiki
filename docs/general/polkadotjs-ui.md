@@ -7,16 +7,29 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs-ui
 ---
 
-:::info
+:::info Supported Wallet
 
-For more user-friendly wallets, check out the supported and treasury-funded wallets on the
-[Wallets Page](./../general/wallets.md)
+If you need help using this wallet you can contact the
+[**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
+wallet is oriented toward developers and power users. For more user-friendly wallets, check out the
+supported and treasury-funded wallets on the [Wallets Page](./../general/wallets.md).
 
 :::
 
-Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with a node, allowing
-access to all features available on Substrate chains. Polkadot-JS Apps also allows developers to to
-interface with a local node.
+Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with an RPC node,
+allowing access to all features available on Substrate chains.
+
+## Accounts
+
+### Accounts
+
+## Network
+
+## Governance
+
+## Developer
+
+## Settings
 
 > Note that the UI may not precisely align with the functionality of individual parachains.
 
