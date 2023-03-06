@@ -70,22 +70,6 @@ programs to interface with the functionality of
 
 ## Polkadot-JS UI
 
-Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with a node, allowing
-access to all features available on Substrate chains. Polkadot-JS Apps also allows developers to to
-interface with a local node.
-
-> Note that the UI may not precisely align with the functionality of individual parachains.
-
-Among other things, Polkadot-JS Apps allows a user to:
-
-- [Staking](../learn/learn-staking.md)
-- [Governance](../learn/learn-governance.md)
-- [Crowdloans](../learn/learn-crowdloans.md)
-- [Auctions](../learn/learn-auction.md)
-- Query chain metadata
-- Query on-chain data using RPC calls
-- Call extrinsics using your account
-
 ### Developers
 
 A developer can utilize Polkadot-JS Apps to test your code's functionality. Interacting with the
