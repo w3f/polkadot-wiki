@@ -15,13 +15,14 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Wallets & Tools",
+          label: "Wallets",
           items: [
             "general/wallets",
             "general/ledger",
-            "general/polkadotjs",
+            "general/polkadotjs-ui",
           ],
         },
+        "general/polkadotjs",
         {
           type: "category",
           label: "Community & Contributors",

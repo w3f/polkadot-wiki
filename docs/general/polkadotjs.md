@@ -23,8 +23,8 @@ This is also often referred to as Polkadot-JS Apps, UI or the Apps UI. In the Wi
 always refer to Polkadot-JS UI.
 
 Polkadot-JS Apps has many capabilities that go beyond basic wallet functions such as account
-creation and sending or receiving transactions. See the [dedicated section](#) for more information
-about the UI.
+creation and sending or receiving transactions. See the [dedicated section](./polkadotjs-ui.md) for
+more information about the UI.
 
 ### Polkadot-JS Extension
 
