@@ -16,19 +16,38 @@ treasury-funded wallets on the [Wallets Page](./../general/wallets.md).
 
 :::
 
-The Polkadot-JS UI is the native application for accessing to all features available on Substrate
-chains such as Polkadot and Kusama. The UI is one of the moving parts of
-[**Polkadot-JS**](./polkadotjs.md), and its functionalities go beyond normal wallet functionalities
-such as transfers.
+The [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) is the native application for
+accessing to all features available on Substrate chains such as Polkadot and Kusama. The UI is one
+of the moving parts of [**Polkadot-JS tool collection**](./polkadotjs.md), and its functionalities
+go beyond normal wallet functionalities such as transfers.
 
 ## Main Functionalities
+
+Here we describe those functionalities that will likely be useful to most of the users. Those
+functionalities include account generation, balance transfers, and staking.
 
 ### Accounts
 
 In this section of the UI you can see accounts injected from a browser extension such as the
-Polkadot-JS Extension or .
+[**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or
+[**other in-browser wallets**](./wallets.md#browser-extensions). It is also possible to expand
+balance details and see different
+[**account balance types**](../learn/learn-accounts.md#account-balance-types). You can also:
 
-### Network
+- Add an account (this option must be enabled under [Settings](#settings)). Note that if you clear
+  the cache of your browser you will lose it, and you will need to recover it through seed phrase or
+  JSON file.
+- Recover and account from JSON file.
+- Add an account from QR code.
+- Add an account from a Ledger device (this option must be enabled under [Settings](#settings)).
+- Create a [**multi-signature account**](../learn/learn-account-multisig.md).
+- Add a proxied account (see
+  [**Pure Proxies**](../learn/learn-proxies.md#anonymous-proxy-pure-proxy) for more information).
+
+For more information about adding and recovering accounts see the
+[**Account Generation**](../learn/learn-account-generation.md) page.
+
+### Network (Staking)
 
 In this section of the UI you can participate to [**staking**](../learn/learn-staking.md). The
 Staking menu is divided into eight tabs:
@@ -50,11 +69,23 @@ Staking menu is divided into eight tabs:
 
 ### Settings
 
-In this section of the UI you can change appearance and language. You can also allow local
-in-browser account storage and choose to attach Ledger devices. Metadata updated will be shown as a
-notification here.
+In this section of the UI you can change general settings such as appearance and language. You can
+also:
+
+- Allow local in-browser account storage. This is used to add accounts directly in the UI (which is
+  different from having an account injected from a browser extension).
+- Choose to attach Ledger devices. This is used to add an account directly in the UI from a Ledger
+  device.
+
+Under Settings you can also do the metadata update. Usually, if there is an update, this will be
+shown as a notification. For more information about metadata updates see the
+[**dedicated section**](../learn/learn-extrinsics.md#metadata-updates).
 
 ## Other Functionalities
+
+In this section we describe those functionalities that will less likely interest
+
+### Network (Other)
 
 ### Governance
 

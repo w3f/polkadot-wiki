@@ -35,12 +35,13 @@ for more information about the UI.
 
 ### Polkadot-JS UI Desktop App
 
-The Polkadot-JS UI also exists as a desktop application for Windows, Mac and Linux. The main
-advantage of using it is that by default it stores encrypted accounts on the filesystem instead of
-browser's local storage. Local storage is susceptible to attacks using XSS (Cross-Site Scripting).
-There's no such risk when with files stored on disk.
+The Polkadot-JS UI also exists as a
+[**desktop application**](https://github.com/polkadot-js/apps/releases/) for Windows, Mac and Linux.
+The main advantage of using it is that by default it stores encrypted accounts on the filesystem
+instead of browser's local storage. Local storage is susceptible to attacks using XSS (Cross-Site
+Scripting). There's no such risk when with files stored on disk.
 
-The desktop app uses the [Electron](https://www.electronjs.org/) framework. It provides the same
+The desktop app uses the [**Electron**](https://www.electronjs.org/) framework. It provides the same
 features as web app, the only difference being different account storage.
 
 :::info Ledger not supported
