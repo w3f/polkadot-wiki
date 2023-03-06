@@ -23,7 +23,8 @@ This is also often referred to as Polkadot-JS Apps, UI or the Apps UI. In the Wi
 always refer to Polkadot-JS UI.
 
 Polkadot-JS Apps has many capabilities that go beyond basic wallet functions such as account
-creation and sending or receiving transactions.
+creation and sending or receiving transactions. See the [dedicated section](#) for more information
+about the UI.
 
 ### Polkadot-JS Extension
 
@@ -36,7 +37,8 @@ existing accounts and restore lost accounts (given you have the information to r
 The extension is not made for users to interact with on-chain functions as one would find through a
 wallet app, i.e. it does not allow you to transact or do anything else other than adding and
 managing accounts. However, it also provides a simple interface for interacting with
-extension-compliant dApps.
+extension-compliant dApps such as the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
+and the [**Polkadot Staking Dashboard**](https://staking.polkadot.network/#/overview).
 
 The extension is a robust key-storage tool, i.e. if you clear the cache of your browser your
 accounts will be kept. This does not happen if you added an account directly to the Polkadot-JS UI.
@@ -44,11 +46,14 @@ Also, the extension recognizes websites that have been flagged for malicious act
 security note, the extension will always ask you if you want a specific website to access the
 account information in it.
 
-Ensure that the Polkadot-JS Extension installed is updated with the latest metadata of the chain.
-You would notice these updates under Settings > Metadata. Click on Update metadata and approve the
-update.
+:::info Metadata Updates
 
-![update metadata](../assets/update-metadata.png)
+The browser extension is a tool that interacts with the Polkadot network, but it disconnected from
+it when you is not in use. Is is important you
+[**always check for metadata updates**](../learn/learn-extrinsics.md#metadata-updates) before using
+the extension other account management tools such as Parity Signer (aka Polkadot Vault).
+
+:::
 
 ### Polkadot-JS Phishing List
 

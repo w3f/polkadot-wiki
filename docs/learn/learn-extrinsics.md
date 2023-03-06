@@ -53,7 +53,8 @@ Here are some key differences between the different types of extrinsics:
 :::warning Always check for Metadata Updates
 
 Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Signer, always check for
-metadata updates. [**This video tutorial**](https://youtu.be/gbvrHzr4EDY) will explain how to do it.
+metadata updates. [**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to
+do it.
 
 :::
 
