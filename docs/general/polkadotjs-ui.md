@@ -11,25 +11,60 @@ slug: ../polkadotjs-ui
 
 If you need help using the Polkadot-JS UI you can contact the
 [**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
-wallet is oriented toward developers and power users. For more user-friendly wallets, check out the
-supported and treasury-funded wallets on the [Wallets Page](./../general/wallets.md).
+wallet is oriented toward developers and power users. For more user-friendly wallets, check out
+treasury-funded wallets on the [Wallets Page](./../general/wallets.md).
 
 :::
 
-Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with an RPC node,
-allowing access to all features available on Substrate chains.
+The Polkadot-JS UI is the native application for accessing to all features available on Substrate
+chains such as Polkadot and Kusama. The UI is one of the moving parts of
+[**Polkadot-JS**](./polkadotjs.md), and its functionalities go beyond normal wallet functionalities
+such as transfers.
 
-## Accounts
+## Main Functionalities
 
 ### Accounts
 
-## Network
+In this section of the UI you can see accounts injected from a browser extension such as the
+Polkadot-JS Extension or .
 
-## Governance
+### Network
 
-## Developer
+In this section of the UI you can participate to [**staking**](../learn/learn-staking.md). The
+Staking menu is divided into eight tabs:
 
-## Settings
+- The **Overview** tab shows active or waiting validators.
+- The **Accounts** (visible only if you added an account) tab shows accounts that are currently used
+  for staking, bonded amount, and nominations. In this tab you can do staking-related transactions
+  such as bonding more funds or changing nominations.
+- The **Payouts** (visible only if you added an account) tab shows any pending rewards that still
+  need to paid out to you.
+- The **Pool** tab shows all registered [**nomination pool**](../learn/learn-nomination-pools.md)
+  with respective state (open, blocked or destroying). This tab can be also used to create and join
+  a pool.
+- The **Targets** tab shows detailed statistics about validators. More information can be found
+  [**here**](../learn/learn-nominator.md).
+- The **Bags** (visible only if you added an account) tab shows
+- The **Slashes** tab shows
+- The **Validator stats** tab shows
+
+### Settings
+
+In this section of the UI you can change appearance and language. You can also allow local
+in-browser account storage and choose to attach Ledger devices. Metadata updated will be shown as a
+notification here.
+
+## Other Functionalities
+
+### Governance
+
+In this section of the UI you can participate to governance.
+
+### Developer
+
+In this section of the UI you can access
+
+Extrinsic tab provides a more such as Pure Proxies, Time-delayed proxies, etc.
 
 > Note that the UI may not precisely align with the functionality of individual parachains.
 
