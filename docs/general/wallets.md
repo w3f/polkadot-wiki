@@ -91,33 +91,6 @@ send, and receive tokens and NFTs. Swap tokens and bridge assets between chains.
 accounts on multiple networks. Connect to web3 apps. Recipient of a development grant from Web3
 Foundation.
 
-## PolkaGate
-
-PolkaGate extension is a Kusama Treasury supported
-[[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
-Polkadot-JS Plus, completely re-developed, with a new look and many performance improvements.
-Supports proxy accounts and social recovery, address (watch-only) accounts, parachain accounts,
-custom remote nodes, phishing detection, QR account import, export/import/derive account(s).
-
-## SubWallet
-
-A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive, and monitor multi-chain
-assets on 150+ networks. Import account with seed phrase, private key, QR code, and JSON file.
-Import token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger
-support, light clients support, EVM DApp support, MetaMask compatibility, custom endpoints, fiat
-on-ramp, phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/treasury/138),
-[2](https://polkadot.polkassembly.io/treasury/162),
-[3](https://polkadot.polkassembly.io/treasury/218)].
-
-## Talisman
-
-A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
-Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
-your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
-portfolio tracking. Talisman received funding from Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/treasury/148)].
-
 ## Fearless Wallet
 
 The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
@@ -137,12 +110,39 @@ Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusa
 [[1](https://kusama.polkassembly.io/treasury/122),
 [2](https://kusama.polkassembly.io/treasury/158)].
 
+## PolkaGate
+
+PolkaGate extension is a Kusama Treasury supported
+[[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
+Polkadot-JS Plus, completely re-developed, with a new look and many performance improvements.
+Supports proxy accounts and social recovery, address (watch-only) accounts, parachain accounts,
+custom remote nodes, phishing detection, QR account import, export/import/derive account(s).
+
 ## Polkawallet
 
 Polkawallet provides cross-chain asset one-stop management, convenient staking, governance, and
 multiple DeFi services; the private key is self-owned. Polkawallet received funding from Kusama
 Treasury [[1](https://kusama.polkassembly.io/treasury/32),
 [2](https://kusama.polkassembly.io/treasury/41)].
+
+## SubWallet
+
+A non-custodial Polkadot, Substrate & Ethereum wallet. Track, send, receive, and monitor multi-chain
+assets on 150+ networks. Import account with seed phrase, private key, QR code, and JSON file.
+Import token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger
+support, light clients support, EVM DApp support, MetaMask compatibility, custom endpoints, fiat
+on-ramp, phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/treasury/138),
+[2](https://polkadot.polkassembly.io/treasury/162),
+[3](https://polkadot.polkassembly.io/treasury/218)].
+
+## Talisman
+
+A better way to explore Web3. Keep your assets safe, manage your portfolio and explore Polkadot and
+Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
+your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
+portfolio tracking. Talisman received funding from Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/treasury/148)].
 
 ## Supported Wallets
 
