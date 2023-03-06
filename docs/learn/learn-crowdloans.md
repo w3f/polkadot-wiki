@@ -75,7 +75,7 @@ not need to restart the campaign just because they do not secure a slot on their
 :::info Crowdloan Submission Deposit Required
 
 In order to create a new crowdloan campaign, your account must have
-{{ polkadot: 500 DOT :polkadot }}{{ kusama: 10 KSM :kusama }} transferrable which will be reserved
+{{ polkadot: 500 DOT :polkadot }}{{ kusama: 100 KSM :kusama }} transferrable which will be reserved
 for the duration of the crowdloan
 
 :::

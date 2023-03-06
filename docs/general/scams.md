@@ -7,9 +7,9 @@ keywords: [scams, protect, official]
 slug: ../learn-scams
 ---
 
-Scams have unfortunately made an impact on our community. It's important to stay alert and protect
+Scams are an unfortuante reality of the crypto industry. It's important to stay alert and protect
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
-scammed, please get in contact via the [Polkadot Support page](https://support.polkadot.network).
+scammed, please get in contact with [Polkadot Support](https://support.polkadot.network).
 
 ## Essential rules:
 
@@ -86,8 +86,8 @@ be found below:
 ### Keep your data secure
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
-anyone. If you are concerned a wallet could be fake, please check out our official list of supported
-[wallets](./../general/wallets.md).
+anyone. If you are concerned a wallet could be fake, please check out our list of well-known and
+officially supported [wallets](./../general/wallets.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 
@@ -148,19 +148,10 @@ tools.
 
 ## I Got Scammed - What Can I Do?
 
-In the unfortunate case of having fallen for a scam, there is likely nothing anyone can do to help
-you restore your funds. Polkadot and Kusama are decentralized platforms and while we do have
-governance functionality that could technically allow for funds freezing or refunds, it is
-impossible to prove that you are the original owner, or that you did not sell the tokens and are
-trying to reclaim them. Additionally, even with addresses that are obviously in possession of a
-scammer, governance is a slow-moving process; even under ideal conditions, it would take over 56
-days to come into effect. The thief could easily monitor the network for governance proposals that
-would affect their ill-gotten gains and move them to a new address before the proposal is enacted.
-
-You could put together a full account of the transactions and chat messages accompanied by
-screenshots and explanations, but there are no guarantee stakeholders on the network will help you
-restore the funds as it would set a dangerous precedent. In fact, there have been several attempts
-on Polkadot in the past and none have been passed. It is safer for the network and for future users
-to consider the money lost. Still, your detailed account of the situation might help prevent others
-from falling for the same thing so we recommend retracing your steps and talking publicly about
-them, if it's not too private.
+In the unfortunate case of having fallen for a scam, there is likely nothing that can be done to
+recover your funds. However, there is still help and support that you can receive. The Polkadot
+Support team stands ready to help you in this difficult situation. Please check this
+[Support article](https://support.polkadot.network/support/solutions/articles/65000182668-what-to-do-if-you-fell-victim-to-scam-or-hack)
+for steps you should take to **prevent further loss** and contact Polkadot Support from the same
+page. Finally, make sure to read the present article carefully to learn how to avoid falling victim
+in the future.

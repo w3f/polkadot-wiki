@@ -97,19 +97,17 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-  [Kusama Element (previously Riot)](https://matrix.to/#/#kusama:matrix.parity.io) chat or
-  [Polkadot Element](https://matrix.to/#//#polkadot:matrix.parity.io).
-- The [Polkassembly](https://polkassembly.io) discussion platform that allows users to log in with
-  their Web3 address and automatically reads proposals from the chain, turning them into discussion
-  threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
-  vote.
+  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
+  platforms automatically read proposals from the chain, turning them into discussion threads and
+  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
+  for a proposal before committing to a vote.
 
-Spreading the word about the proposal's explanation is ultimately up to the proposer - the
-recommended way is using official Element channels like the
-{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-{{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
-{{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
-{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+Spreading the word about the proposal's explanation to the community is ultimately up to the
+proposer.
 
 ### Creating the Proposal
 

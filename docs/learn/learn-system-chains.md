@@ -50,8 +50,9 @@ network, including amounts that have been transferred to other parachains. It is
 where they can transact, to mint and burn, to manage the on-chain asset.
 
 {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} also supports non-fungible assets
-(NFTs) via the Uniques pallet, however a new NFT pallet is coming in 2023 with more advanced
-features.
+(NFTs) via the [Uniques pallet](https://polkadot.js.org/docs/substrate/extrinsics#uniques) and the
+new [nfts pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts). For more information
+about NFTs see the [dedicated wiki page](./learn-nft-pallets.md).
 
 This logic for asset management is not encoded in smart contracts, but rather directly in the
 runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and deposits
@@ -59,9 +60,7 @@ are about 1/10th of their respective value on the Relay Chain.
 
 These low fee levels mean that {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} is
 well suited for handling {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balances and
-transfers as well as managing on-chain assets.
-
-For example, the existential deposit for
+transfers as well as managing on-chain assets. For example, the existential deposit for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
 {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,  :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>,  :kusama }}

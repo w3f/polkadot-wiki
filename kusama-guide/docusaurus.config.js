@@ -68,6 +68,10 @@ module.exports = {
             from: ['/docs/learn-gov2']
           },
           {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
+          },
+          {
             to: '/docs/wallets',
             from: ['/docs/build-wallets']
           }

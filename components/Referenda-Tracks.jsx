@@ -57,7 +57,7 @@ async function GetTracks(network, wsUrl, setReturnValue) {
     tableData.push(
       <tr key={trackData[0]}>
         <td><b>{trackData[0]}</b></td>
-        <td><b>{origin}</b></td>
+        <td><a href={`#${origin.toLowerCase().replace(" ", "-")}`}><b>{origin}</b></a></td>
         <td>{trackData[1].maxDeciding}</td>
         <td>{HumanReadable(trackData[1].decisionDeposit, network)}</td>
         <td style={hover} title={`${trackData[1].preparePeriod} Blocks`}>{BlocksToTime(trackData[1].preparePeriod)}</td>

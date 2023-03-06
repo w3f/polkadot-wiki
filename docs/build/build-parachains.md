@@ -271,7 +271,7 @@ connected to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. Thi
 - An embedded full client of the Relay Chain
 - Block authorship compatibility
 
-Are you interested in building a PDK? See the [future PDKs](##future-pdks) section for details.
+Are you interested in building a PDK? See the [future PDKs](#future-pdks) section for details.
 
 ### How to set up your parachain
 

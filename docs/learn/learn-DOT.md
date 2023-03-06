@@ -33,8 +33,8 @@ equals to 10<sup>12</sup> Planck.
 :::note DOT was redenominated at block #1_248_328
 
 DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT
-(old)"), but went through a process of [redenomination](../general/redenomination.md) which
-increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
+(old)"), but went through a process of [redenomination](./learn-redenomination.md) which increased
+DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
 
 :::
 
@@ -140,7 +140,7 @@ Watch the video below on how to get started on Westend.
 | Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 WND |
 | MicroWND (uWND) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 WND |
 | MilliWND (mWND) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 WND |
-| KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 WND |
+| WND             | 12             | 10<sup>12</sup> Planck | 1.000000000000 WND |
 
 ### Getting Tokens on the Rococo Testnet
 

@@ -16,10 +16,10 @@ the {{ polkadot: [Polkadot newsletter](https://info.polkadot.network/subscribe).
 ## Host a Hackathon
 
 As one of our objectives in the Web3 Foundation is promoting the
-[Web3 technology stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md)
-, we would like to support any individual or team who wants to organize a hackathon that gets more
-developers to understand {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and
-Substrate in your city or online.
+[Web3 technology stack](https://wiki.polkadot.network/docs/build-open-source), we would like to
+support any individual or team who wants to organize a hackathon that gets more developers to
+understand {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate in your city
+or online.
 
 We are not only providing technical resources for you, but we can have someone from our team give a
 hands-on workshop/presentation about the technology to help participants get started hacking on it

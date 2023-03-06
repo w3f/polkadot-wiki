@@ -5,10 +5,7 @@ module.exports = {
       label: "General",
       items: [
         "general/getting-started",
-        "general/claims",
-        "general/redenomination",
         "general/research",
-        "general/ens",
         "general/wallets",
         "general/ledger",
         {
@@ -42,6 +39,7 @@ module.exports = {
         },
         "general/faq",
         "general/glossary",
+        "general/metadata",
       ],
     },
     {
@@ -70,9 +68,17 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-nft",
+                "learn/learn-redenomination",
                 "learn/learn-statemint",
                 "learn/learn-teleport",
+              ],
+            },
+            {
+              type: "category",
+              label: "NFTs",
+              items: [
+                "learn/learn-nft",
+                "learn/learn-nft-pallets",
               ],
             },
             {
@@ -227,8 +233,6 @@ module.exports = {
             "maintain/maintain-guides-validator-payout",
             "maintain/maintain-guides-how-to-systemd",
             "maintain/maintain-guides-secure-validator",
-            "maintain/maintain-guides-how-to-use-polkadot-validator-setup",
-            "maintain/maintain-guides-how-to-setup-a-validator-with-reverse-proxy",
             "maintain/maintain-guides-how-to-upgrade",
             "maintain/maintain-guides-how-to-monitor-your-node",
             "maintain/maintain-guides-how-to-chill",
