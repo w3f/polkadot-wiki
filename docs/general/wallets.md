@@ -147,10 +147,9 @@ portfolio tracking. Talisman received funding from Polkadot Treasury
 ## Supported Wallets
 
 The [**Polkadot Support**](https://support.polkadot.network/) can provide assistance with issues
-related to [Polkadot-JS Wallets](./polkadotjs-wallets.md) (i.e. Polkadot-JS UI and browser
-extension), Parity Signer or [Ledger](./ledger.md). For other wallet software, you should contact
-the developers of that wallet. Please note that these wallets are oriented toward developers and
-power users.
+related to [Polkadot-JS Wallets](./polkadotjs-ui.md) (i.e. Polkadot-JS UI and browser extension),
+Parity Signer or [Ledger](./ledger.md). For other wallet software, you should contact the developers
+of that wallet. Please note that these wallets are oriented toward developers and power users.
 
 | Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                     |
 | ------------------------------------------------------------------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
