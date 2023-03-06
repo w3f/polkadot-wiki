@@ -26,17 +26,19 @@ The action has 2 primary steps:
    created.
 
 After these 2 scripts execute, a new [pull request](https://github.com/w3f/polkadot-wiki/pull/4241)
-will automatically be made to the repo if any changes are detected to the cache file. The PR
-is only opened by the GitHub action so you can safely run these script locally if you want to see
-what updates are available or are debugging an issue. To run the scripts locally you can use the
+will automatically be made to the repo if any changes are detected to the cache file. The PR is only
+opened by the GitHub action so you can safely run these script locally if you want to see what
+updates are available or are debugging an issue. To run the scripts locally you can use the
 following commands:
 
 1. `yarn get:auctions`
 2. `yarn update:auctions`
 
-Based on past behavior, it will sometimes be required to modify the cache manually. It has been noticed that Kusama will occasionally introduce a breaking API change or modifications to the
+Based on past behavior, it will sometimes be required to modify the cache manually. It has been
+noticed that Kusama will occasionally introduce a breaking API change or modifications to the
 dispatch queue before the auctions begin. The `getAuctions.js` script will not attempt to monitor
-changes to an auction while in the dispatch queue if it has already been added to the cache. Thus, if a `startBlock` was incorrectly added, the cache will not update with the appropriate auction
+changes to an auction while in the dispatch queue if it has already been added to the cache. Thus,
+if a `startBlock` was incorrectly added, the cache will not update with the appropriate auction
 information as the block is likely not the start of an auction. If this issue is detected, the
 automation routine will bail (displaying an error for the action) and not commit any changes until
 the discrepancy is resolved manually. New auctions can be added anytime, and changes can be manually
@@ -46,9 +48,9 @@ appended. The following cache properties must be provided:
 2. `startBlock` - the block an auction is expected to become active
 
 **The remaining properties in the cache are auto-generated and should not be modified. Running
-`yarn update:auctions` will overwrite those changes.** This means that when manually adding a new auction,
-these are the only two properties that need to be specified. The remaining properties should still be
-included, providing `null` dates or blocks and
+`yarn update:auctions` will overwrite those changes.** This means that when manually adding a new
+auction, these are the only two properties that need to be specified. The remaining properties
+should still be included, providing `null` dates or blocks and
 `0x0000000000000000000000000000000000000000000000000000000000000000` for hash values. For example,
 if I wanted to manually add a new auction `(#41)` to the cache, I would append the following object:
 

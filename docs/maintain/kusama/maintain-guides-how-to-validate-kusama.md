@@ -88,7 +88,8 @@ rewards earned that are distributed proportionally to the nominators after deduc
 commission. Currently, the minimum validator commission is set to
 {{ kusama: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>% :kusama }}
 {{ polkadot: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>% :polkadot }}
-which can be set through on-chain governance. For more information rewards and payouts, check the [validator payout](../maintain-guides-validator-payout.md) document.
+which can be set through on-chain governance. For more information rewards and payouts, check the
+[validator payout](../maintain-guides-validator-payout.md) document.
 
 ## Run a Kusama Validator
 
