@@ -33,7 +33,7 @@ Polkadot-JS Apps has many capabilities that go beyond basic wallet functions suc
 creation and sending or receiving transactions. See the [**dedicated section**](./polkadotjs-ui.md)
 for more information about the UI.
 
-### Polkadot-JS UI Desktop
+### Polkadot-JS UI Desktop App
 
 The Polkadot-JS UI also exists as a desktop application for Windows, Mac and Linux. The main
 advantage of using it is that by default it stores encrypted accounts on the filesystem instead of

@@ -19,10 +19,11 @@ If you need help using Ledger you can contact the
 - Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
   like Google Chrome.
 
-- Ledger does not currently support batch calls; As a consequence, if you stake using the
+- Ledger does not currently support batch calls. As a consequence, if you nominate using the
   [staking dashboard](https://staking.polkadot.network/#/overview), you must use a hot wallet.
   Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that
-  allows for single calls (i.e., bonding and nominating).
+  allows for single calls (i.e., bonding and nominating). **Pool members are not affect by this
+  issue.**
 
 :::
 
@@ -63,12 +64,30 @@ issue on the [Polkadot support pages](https://support.polkadot.network/).
 
 ## Requirements
 
+:::info For Ledger Nano S users only
+
+The Ledger Nano S has limited memory and is no longer produced. The lite version of the Polkadot
+Ledger App that you can install by default in the Ledger Nano S has limited functionality. For
+example, it does not allow you to join a nomination pool. The limited memory of the Nano S is just
+right to accommodate the XL version of the Polkadot Ledger App, which gives the user more
+functionalities.
+
+If you do use a Nano S with the XL version you will not be able to:
+
+- Install any other Ledger application on your device
+- Add Polkadot accounts to the Ledger Live App, but will be able to add them to
+  [**community wallets**](./wallets.md#community-wallets) who support ledger devices or to the
+  [**browser extension**](./polkadotjs.md#polkadot-js-extension) and the
+  [**Polkadot-JS UI**](./polkadotjs-ui.md).
+
+:::
+
 Here is a list of what you will need before using
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with Ledger:
 
 - A Ledger Nano X or Nano S plus (recommended for
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger App space requirements). The
-  Ledger Nano S has limited memory and is no longer produced.
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger App space requirements and
+  functionalities).
 - The latest firmware of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger
   App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to
   allow access with your nano).
