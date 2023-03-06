@@ -12,9 +12,7 @@ slug: ../polkadotjs
 we describe the different components of Polkadot-JS. For more information about Polkadot-JS you can
 consult the [**official documentation**](https://polkadot.js.org/docs/).
 
-## Components
-
-### Polkadot-JS UI
+## Polkadot-JS UI
 
 The Polkadot-JS UI is an application that loads in your browser. There is a standard DNS
 [**hosted version**](https://polkadot.js.org/), which always has the latest features, and an
@@ -26,7 +24,7 @@ Polkadot-JS Apps has many capabilities that go beyond basic wallet functions suc
 creation and sending or receiving transactions. See the [**dedicated section**](./polkadotjs-ui.md)
 for more information about the UI.
 
-### Polkadot-JS Extension
+## Polkadot-JS Extension
 
 The [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/) is not a wallet _per se_
 but an account management tool. It allows you to create accounts and import accounts from
@@ -55,22 +53,18 @@ the extension other account management tools such as Parity Signer (aka Polkadot
 
 :::
 
-### Polkadot-JS Phishing List
+## Polkadot-JS Phishing List
 
 The [**Polkadot-JS phishing list**](https://polkadot.js.org/phishing/) website is a community-driven
 curation of less-than-honest operators. The Polkadot-JS extension uses this list to warn a user
 about suspicious URLs and addresses that are part of the list, and automatically blocks the account
 address.
 
-### Polkadot-JS API
+## Polkadot-JS API
 
 The [**Polkadot-JS API**](https://github.com/polkadot-js/api) is a JavaScript API allowing for
 programs to interface with the functionality of
 {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}
-
-## Polkadot-JS UI
-
-### Developers
 
 A developer can utilize Polkadot-JS Apps to test your code's functionality. Interacting with the
 Polkadot-JS comes down to either querying on-chain data or issuing an extrinsic.
@@ -99,7 +93,7 @@ metadata response and are therefore completely dynamic. This suggests that when 
 different parachains, the metadata and API decoration will change and provide varying interfaces
 based on the chain.
 
-#### Querying on-chain data
+### Querying On-chain Data
 
 To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node and uses JavaScript to return
@@ -114,7 +108,7 @@ below. You need to click on the plus button to execute the query. The value disp
 
 ![query chain state](../assets/chain-state-constant.png)
 
-#### Issuing an extrinsic
+### Issuing Extrinsics
 
 Extrinsics are pieces of information that come from outside the chain and are included in a block.
 Extrinsics can be one of three types: inherents, signed, and unsigned transactions.
@@ -127,8 +121,3 @@ Unsigned transactions are information that does not require a signature but will
 of spam prevention, whereas signed transactions are issued by the originator account of a
 transaction which contains a signature of that account, which will be subject to a fee to include it
 on the chain.
-
-### Considerations
-
-For more user-friendly wallets, check out the supported and treasury-funded wallets on the
-[Wallets Page](./../general/wallets.md)
