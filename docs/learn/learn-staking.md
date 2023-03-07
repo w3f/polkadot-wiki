@@ -523,6 +523,21 @@ re-garner support from nominators.
 For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
 this wiki.
 
+### Fast Unstake
+
+:::info Fast Unstaking is live on Kusama
+
+Fast unstaking will be added to Polkadot soon.
+
+:::
+
+If your bonded balance did not back any validators in the last
+{{ polkadot: 28 days on Polkadot (when the feature goes live) :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
+you are eligible to perform fast unstaking. The
+[staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
+qualify. For more information, visit the
+["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
+
 ## Why and Why not to Stake?
 
 ### Pros of Staking
@@ -555,16 +570,6 @@ users to withdraw. For in-depth understanding, check the
 - Tokens will be locked for about {{ polkadot: 28 :polkadot }}{{ kusama: 7 :kusama }} days on
   {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during
   the unbonding period.
-
-  :::info Fast Unstake
-
-  If your bonded balance did not back up any validators in the last
-  {{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }}, you are
-  eligible to fast unstaking. The [staking dashboard](https://staking.polkadot.network/#/overview)
-  will automatically check if you qualify. For more information, visit the
-  ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
-
-  :::
 
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](#slashing)).
