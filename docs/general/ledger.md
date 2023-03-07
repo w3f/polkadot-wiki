@@ -16,14 +16,8 @@ If you need help using Ledger you can contact the
 
 :::warning Please Note
 
-- Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
-  like Google Chrome.
-
-- Ledger does not currently support batch calls. As a consequence, if you nominate using the
-  [staking dashboard](https://staking.polkadot.network/#/overview), you must use a hot wallet.
-  Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that
-  allows for single calls (i.e., bonding and nominating). **Pool members are not affected by this
-  issue.**
+Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
+like Google Chrome.
 
 :::
 
@@ -52,10 +46,8 @@ Check the
 {{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot }}{{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }}
 specification for the list of transactions supported. Some transactions are supported only on a
 specific app version, and others are not supported by any version. For instance, the staking `rebag`
-extrinsic is supported on the XL version but not on the light version. Support for the XL version is
-limited to single calls (not batch calls), meaning you can rebag one account at a time. Also,
-joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL
-version.
+extrinsic is supported on the XL version but not on the lite version. Also, joining a
+[nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version.
 
 :::
 
@@ -247,8 +239,8 @@ review the release, the app upgrade option may not be available on Ledger Live w
 is deployed on the network. If this happens, users cannot use Ledger devices with the Polkadot-JS
 UI, and while signing for a transaction, will most likely incur the error message "txn version not
 supported". Please do not panic if this happens, as there are solutions to this problem. Suppose you
-cannot wait a few days until the app passes the Ledger audit, you can install the
-developer release from the shell using the latest version published on
+cannot wait a few days until the app passes the Ledger audit, you can install the developer release
+from the shell using the latest version published on
 [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
 ### Install the Developer Release
