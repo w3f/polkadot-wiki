@@ -81,8 +81,8 @@ However, it is good to understand how it works since it means that not all the s
 nominated will end up on your validator after an election. Nominators are likely to nominate a few
 different validators that they trust to do a good job operating their nodes.
 
-You can use the [offline-phragmén](https://github.com/kianenigma/offline-phragmen) script for
-predicting the outcome of a validator election ahead of a new election.
+You can use the [offline-phragmén](https://gist.github.com/tugytur/3531cc618bfbb42f1a6cfb44d9906197)
+script for predicting the outcome of a validator election ahead of a new election.
 
 ## Understanding Phragmén
 
