@@ -46,7 +46,7 @@ Check the
 {{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot }}{{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }}
 specification for the list of transactions supported. Some transactions are supported only on a
 specific app version, and others are not supported by any version. For instance, the staking `rebag`
-extrinsic is supported on the XL version but not on the lite version. Also, joining a
+extrinsic is supported on the **XL version** but not on the **lite version**. Also, joining a
 [nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version.
 
 :::
@@ -58,16 +58,15 @@ issue on the [Polkadot support pages](https://support.polkadot.network/).
 
 :::info For Ledger Nano S users only
 
-The Ledger Nano S has limited memory and is no longer produced. The lite version of the Polkadot
-Ledger App that you can install by default in the Ledger Nano S has limited functionality. For
-example, it does not allow you to join a nomination pool. The limited memory of the Nano S is just
+The lite version of the Polkadot Ledger App that you can install by default in the Ledger Nano S has
+limited functionality. The Ledger Nano S is no longer produced and has limited memory that is just
 right to accommodate the XL version of the Polkadot Ledger App, which gives the user more
 functionalities.
 
 If you do use a Nano S with the XL version you will not be able to:
 
 - Install any other Ledger application on your device
-- Add Polkadot accounts to the Ledger Live App, but will be able to add them to
+- Add Polkadot accounts to the Ledger Live App, but you will be able to add them to
   [**treasury-funded wallets**](./wallets.md#community-wallets) who support ledger devices or to the
   [**browser extension**](./polkadotjs.md#polkadot-js-extension) and the
   [**Polkadot-JS UI**](./polkadotjs-ui.md).
