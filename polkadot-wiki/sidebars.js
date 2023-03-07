@@ -145,7 +145,18 @@ module.exports = {
             },
             "learn/learn-parathreads",
             "learn/learn-bridges",
-            'learn/learn-xcm',
+            {
+              type: "category",
+              label: "Cross Consensus Messaging (XCM)",
+              items: [
+                'learn/learn-xcm',
+                'learn/learn-xcm-pallet',
+                'learn/learn-xcm-usecases',
+                'learn/learn-xcm-transport',
+                'learn/learn-xcvm',
+                'learn/learn-xcm-instructions',
+              ],
+            },
           ],
         },
         {
