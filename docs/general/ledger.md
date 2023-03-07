@@ -22,7 +22,7 @@ If you need help using Ledger you can contact the
 - Ledger does not currently support batch calls. As a consequence, if you nominate using the
   [staking dashboard](https://staking.polkadot.network/#/overview), you must use a hot wallet.
   Alternatively, you can use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) that
-  allows for single calls (i.e., bonding and nominating). **Pool members are not affect by this
+  allows for single calls (i.e., bonding and nominating). **Pool members are not affected by this
   issue.**
 
 :::
