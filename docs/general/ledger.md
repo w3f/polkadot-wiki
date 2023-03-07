@@ -7,7 +7,7 @@ keywords: [ledger, staking, polkadot app]
 slug: ../ledger
 ---
 
-:::info Supported Wallet
+:::info Need support with your Ledger Wallet?
 
 If you need help using Ledger you can contact the
 [**Polkadot Support Team**](https://support.polkadot.network/support/home).
