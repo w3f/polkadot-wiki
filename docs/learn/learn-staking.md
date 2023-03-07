@@ -558,9 +558,9 @@ users to withdraw. For in-depth understanding, check the
 
   :::info Fast Unstake
 
-  Note that if your bonded balance did not back up any validators in the last 28 eras, you are
-  eligible to fast unstaking. The [staking dashboard](https://staking.polkadot.network/#/overview)
-  will automatically check if you are eligible. For more information visit the
+  If your bonded balance did not back up any validators in the last 28 eras, you are eligible to
+  fast unstaking. The [staking dashboard](https://staking.polkadot.network/#/overview) will
+  automatically check if you qualify. For more information, visit the
   ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
 
   :::
