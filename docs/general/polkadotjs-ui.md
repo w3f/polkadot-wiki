@@ -7,7 +7,7 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs-ui
 ---
 
-:::info Supported Wallet
+:::info A Wallet for Developers and Power Users
 
 If you need help using the Polkadot-JS UI, you can contact the
 [**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
