@@ -247,7 +247,7 @@ review the release, the app upgrade option may not be available on Ledger Live w
 is deployed on the network. If this happens, users cannot use Ledger devices with the Polkadot-JS
 UI, and while signing for a transaction, will most likely incur the error message "txn version not
 supported". Please do not panic if this happens, as there are solutions to this problem. Suppose you
-cannot wait a few days until the app passes the Ledger audit. In that case, you can install the
+cannot wait a few days until the app passes the Ledger audit, you can install the
 developer release from the shell using the latest version published on
 [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
