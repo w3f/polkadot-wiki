@@ -49,18 +49,18 @@ Make sure you read those pages as well before nominating.
 ## Why Nominate?
 
 - You become part of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} movement, a
-  group of diverse professionals and enthusiasts around the world aspiring to build and foster the next-gen
-  Internet, Web3: a decentralized, privacy-focused, and trustless internet.
+  group of diverse professionals and enthusiasts around the world aspiring to build and foster the
+  next-gen Internet, Web3: a decentralized, privacy-focused, and trustless internet.
 - You are an essential piece of the puzzle, keeping
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure, deciding the future
-  direction of the project by voting in [OpenGov](./learn-opengov.md) and participating in parachain
-  [crowdloans](./learn-crowdloans.md).
-- You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} works
-  at a technical-level. When you feel comfortable with your nomination skills and knowledge, you can
-  open your [nomination pool](./learn-nomination-pools.md), help others secure the network and earn
-  rewards, and build your reputation as a trusted nomination pool operator. If you like to be more involved, the next
-  step is to become a [validator](./learn-validator.md).
-- By getting [staking](./learn-staking.md) rewards you keep up with or (likely) stay ahead of 
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure. The bonded balance can be
+  used to vote in [OpenGov](./learn-opengov.md) and shape the future direction of
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+- You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+  works at a technical-level. When you feel comfortable with your nomination skills and knowledge,
+  you can open your [nomination pool](./learn-nomination-pools.md), help others secure the network
+  and earn rewards, and build your reputation as a trusted nomination pool operator. If you like to
+  be more involved, the next step is to become a [validator](./learn-validator.md).
+- By getting [staking](./learn-staking.md) rewards you keep up with or (likely) stay ahead of
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation.
 
 Nominators secure the Relay Chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
@@ -94,8 +94,8 @@ staking lock can be unlocked, and the bonded funds become free balance you can t
 
 The first thing you need to do before becoming a nominator is to make sure you have a
 [**stash account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) where you can
-transfer funds you want to use for staking. For these accounts, it is recommended to use a "cold wallet" solution 
-such as [Ledger](../general/ledger.md) or
+transfer funds you want to use for staking. For these accounts, it is recommended to use a "cold
+wallet" solution such as [Ledger](../general/ledger.md) or
 [Parity Signer](./learn-account-generation.md#parity-signer).
 
 After setting up the stash account, it is recommended to have a
@@ -107,9 +107,9 @@ staking proxy is good practice for security reasons.
 :::info In the near future, Controller Accounts will be deprecated
 
 The concept of a controller account is very similar to that of a staking proxy: isolate the stash
-account but sign staking-related transactions on behalf of it. This is
-why there will be only proxies in the near future, as the controller is becoming redundant. Given
-this context, we recommend nominators start understanding what proxies are and how to use them.
+account but sign staking-related transactions on behalf of it. This is why there will be only
+proxies in the near future, as the controller is becoming redundant. Given this context, we
+recommend nominators start understanding what proxies are and how to use them.
 
 :::
 
@@ -198,8 +198,8 @@ metrics shown as an example, followed by a brief description of each.
   "own stake" is not automatically untrustworthy, as the validator could nominate from a different
   address.
 - **return**: Average annual yield paid out to nominators (i.e. number of rewards divided by the
-  number of bonded tokens). Note that nominating those with a higher yield may not guarantee
-  similar future performance.
+  number of bonded tokens). Note that nominating those with a higher yield may not guarantee similar
+  future performance.
 
 ![Staking Returns](../assets/nominators_target.png)
 
@@ -436,10 +436,11 @@ calculate if the validator selected will be oversubscribed in the next session; 
 choosing potentially oversubscribed validators is to filter out any that are
 [at capacity](../general/glossary.md#capacity) on the Targets page.
 
-Finally, if you have a minimal amount of DOTs close to the value of `minActiveNomination`, you may need to stake more DOT to get into
-the election set. The nominator-to-validator mapping solution needs to be evaluated within a single block duration, and if there are
-too many nominators, the lowest-staked nominations will be dropped from even being considered to be part of the electing set. This `minActiveNomination` value is dynamic and will
-vary over time. You can read the blog post
+Finally, if you have a minimal amount of DOTs close to the value of `minActiveNomination`, you may
+need to stake more DOT to get into the election set. The nominator-to-validator mapping solution
+needs to be evaluated within a single block duration, and if there are too many nominators, the
+lowest-staked nominations will be dropped from even being considered to be part of the electing set.
+This `minActiveNomination` value is dynamic and will vary over time. You can read the blog post
 ["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
 details.
 
