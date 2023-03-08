@@ -55,7 +55,7 @@ Make sure you read those pages as well before nominating.
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure, deciding the future
   direction of the project by voting in [OpenGov](./learn-opengov.md) and participating in parachain
   [crowdloans](./learn-crowdloans.md).
-- You start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} works
+- You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} works
   at a technical-level. When you feel comfortable with your nomination skills and knowledge, you can
   open your [nomination pool](./learn-nomination-pools.md), help others secure the network and earn
   rewards, and build your reputation as a trusted nominator. If you need more than this, the next
