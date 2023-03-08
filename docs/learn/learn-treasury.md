@@ -9,6 +9,15 @@ slug: ../learn-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
+{{ kusama:
+
+:::caution Use OpenGov for Kusama Treasury
+
+OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
+[OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)
+
+::: :kusama }}
+
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
 
@@ -76,6 +85,16 @@ The Treasury is funded from different sources:
    to the Treasury.
 
 ## Creating a Treasury Proposal
+
+{{ kusama:
+
+:::caution Use OpenGov to submit Treasury Proposals
+
+Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
+Check the instructions on
+[how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).
+
+::: :kusama }}
 
 The proposer has to deposit a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
