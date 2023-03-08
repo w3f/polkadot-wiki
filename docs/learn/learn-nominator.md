@@ -60,9 +60,8 @@ Make sure you read those pages as well before nominating.
   open your [nomination pool](./learn-nomination-pools.md), help others secure the network and earn
   rewards, and build your reputation as a trusted nomination pool operator. If you like to be more involved, the next
   step is to become a [validator](./learn-validator.md).
-- By getting [staking](./learn-staking.md) rewards you fight
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation and (likely) your
-  currency inflation as well.
+- By getting [staking](./learn-staking.md) rewards you keep up with or (likely) stay ahead of 
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation.
 
 Nominators secure the Relay Chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 and nominating validators. You may have an account with
