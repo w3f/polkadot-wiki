@@ -45,7 +45,7 @@ block-production and finality. The Polkadot Host must run these procedures if (a
 running on a validator node.
 
 Additional information on each of these requirements can be found
-[here](https://spec.polkadot.network/#chapter-bootstrapping).
+[here](https://spec.polkadot.network/#sect-node-full).
 
 ## Diagram
 

@@ -221,7 +221,7 @@ number, signature, and varying data types indicating the resulting runtime funct
 including the parameters required for that function to be executed. These state changes are invoked
 from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms,
 "[inherents](#inherent)" and "[transactions](#transaction)". For more technical details see the
-[polkadot spec](https://spec.polkadot.network/#_extrinsics)
+[polkadot spec](https://spec.polkadot.network/#id-extrinsics)
 
 ## Fellowship
 
