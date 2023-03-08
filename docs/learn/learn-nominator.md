@@ -88,6 +88,19 @@ era** (in hours), and dividing by the **hours in a day** (24). Example:
 staking lock will be visible on the Polkadot-JS UI during the unbonding period, and after it, the
 staking lock can be unlocked, and the bonded funds become free balance you can transfer.
 
+:::info Fast Unstaking is live on Kusama
+
+Fast unstaking will be added to Polkadot soon.
+
+:::
+
+If your bonded balance did not back any validators in the last
+{{ polkadot: 28 days on Polkadot (when the feature goes live) :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
+you are eligible to perform fast unstaking. The
+[staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
+qualify. For more information, visit the
+["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
+
 ## Setting-up Accounts
 
 ### Stash, Controller & Staking Proxy
