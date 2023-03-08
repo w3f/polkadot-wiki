@@ -11,10 +11,14 @@ import RPC from "./../../components/RPC-Connection";
 
 :::info Nomination Pools are live on Polkadot!
 
-Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their DOT
-tokens together on-chain to nominate validators and receive rewards, significantly improving the
-system’s scalability. Now, anyone with as little as
+Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens together on-chain to nominate
+validators and receive rewards, significantly improving the system’s scalability. Now, anyone with
+as little as
 [1 DOT can receive rewards for staking natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+Note that rewards are not guaranteed for those pools that do not have enough bonded funds to be
+included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active
+pools will receive rewards.**
 
 - There are currently
   {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
