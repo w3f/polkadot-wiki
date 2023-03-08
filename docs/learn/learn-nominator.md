@@ -376,7 +376,7 @@ These concepts have been further explained in the following videos:
 
 :::
 
-## Good Practices
+## Good Nominator Practices
 
 ### Required Minimum Stake
 
