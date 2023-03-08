@@ -198,7 +198,7 @@ metrics shown as an example, followed by a brief description of each.
   "own stake" is not automatically untrustworthy, as the validator could nominate from a different
   address.
 - **return**: Average annual yield paid out to nominators (i.e. number of rewards divided by the
-  number of bonded tokens). Note that nominating those with a higher yield does not guarantee
+  number of bonded tokens). Note that nominating those with a higher yield may not guarantee
   similar future performance.
 
 ![Staking Returns](../assets/nominators_target.png)
