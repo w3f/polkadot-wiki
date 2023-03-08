@@ -108,7 +108,7 @@ staking proxy is good practice for security reasons.
 :::info In the near future, Controller Accounts will be deprecated
 
 The concept of a controller account is very similar to that of a staking proxy: isolate the stash
-account but use its economic power and sign staking-related transactions on behalf of it. This is
+account but sign staking-related transactions on behalf of it. This is
 why there will be only proxies in the near future, as the controller is becoming redundant. Given
 this context, we recommend nominators start understanding what proxies are and how to use them.
 
