@@ -146,7 +146,7 @@ the dashboard.
 There are many factors to consider when deciding which of your nominations. One helpful tool to
 choose validators is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets) table in
 the Polkadot-JS UI. This allows sorting validators using various metrics. Below are the relevant
-metrics, followed by a brief description of each.
+metrics shown as an example, followed by a brief description of each.
 
 | validator | payout   | nominators             | comm. | total stake | own stake | return |
 | --------- | -------- | ---------------------- | ----- | ----------- | --------- | ------ |
