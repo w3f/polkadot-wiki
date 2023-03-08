@@ -94,7 +94,7 @@ staking lock can be unlocked, and the bonded funds become free balance you can t
 
 The first thing you need to do before becoming a nominator is to make sure you have a
 [**stash account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) where you can
-transfer funds you want to use for staking. For these accounts, it is recommended a "cold solution"
+transfer funds you want to use for staking. For these accounts, it is recommended to use a "cold wallet" solution 
 such as [Ledger](../general/ledger.md) or
 [Parity Signer](./learn-account-generation.md#parity-signer).
 
