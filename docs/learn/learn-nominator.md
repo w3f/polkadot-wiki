@@ -46,7 +46,7 @@ The information provided on this page is complementary to that on the
 [**Staking Page**](./learn-staking.md) and [**Advanced Staking Page**](./learn-staking-advanced.md).
 Make sure you read those pages as well before nominating.
 
-## Why Nominating?
+## Why Nominate?
 
 - You become part of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Movement, a
   group of professionals and enthusiasts around the world aspiring to build and foster the next-gen
