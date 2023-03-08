@@ -58,7 +58,7 @@ Make sure you read those pages as well before nominating.
 - You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} works
   at a technical-level. When you feel comfortable with your nomination skills and knowledge, you can
   open your [nomination pool](./learn-nomination-pools.md), help others secure the network and earn
-  rewards, and build your reputation as a trusted nominator. If you need more than this, the next
+  rewards, and build your reputation as a trusted nomination pool operator. If you like to be more involved, the next
   step is to become a [validator](./learn-validator.md).
 - By getting [staking](./learn-staking.md) rewards you fight
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation and (likely) your
