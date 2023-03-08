@@ -436,9 +436,9 @@ calculate if the validator selected will be oversubscribed in the next session; 
 choosing potentially oversubscribed validators is to filter out any that are
 [at capacity](../general/glossary.md#capacity) on the Targets page.
 
-Finally, if you have a minimal amount of DOTs, you may need more time to fit your nomination into
-the election set. The nominator-to-validator mapping has to fit in a single block, and if there are
-too many nominators, the lowest-staked nominations will be dropped. This value is dynamic and will
+Finally, if you have a minimal amount of DOTs close to the value of `minActiveNomination`, you may need to stake more DOT to get into
+the election set. The nominator-to-validator mapping solution needs to be evaluated within a single block duration, and if there are
+too many nominators, the lowest-staked nominations will be dropped from even being considered to be part of the electing set. This `minActiveNomination` value is dynamic and will
 vary over time. You can read the blog post
 ["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
 details.
