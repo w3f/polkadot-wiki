@@ -9,9 +9,7 @@ slug: ../learn-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ kusama:
-
-:::caution Use OpenGov for Kusama Treasury
+{{ kusama: :::caution Use OpenGov for Kusama Treasury
 
 OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
 [OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)
@@ -86,9 +84,7 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
-{{ kusama:
-
-:::caution Use OpenGov to submit Treasury Proposals
+{{ kusama: :::caution Use OpenGov to submit Treasury Proposals
 
 Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
 Check the instructions on
