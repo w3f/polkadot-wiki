@@ -165,6 +165,7 @@ WebAssembly related tools and projects.
   Substrate, abstracting some complex RPC calls into simple REST calls.
 - [Subxt](https://github.com/paritytech/substrate-subxt) - A Rust library to submit extrinsics to a
   Substrate node via RPC.
+- [GetBlock](https://getblock.io/nodes/dot/) - An RPC provider offering ready Polkadot endpoints for instant connection to Polkadot Blockchain and fast response time
 
 ### SCALE Codec
 
