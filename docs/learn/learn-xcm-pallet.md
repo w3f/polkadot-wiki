@@ -13,7 +13,7 @@ provides a developer-friendly interface for most of the common XCM messages.
 This pallet provides default implementations for many traits required by `XcmConfig`, which is
 highly useful for configuration.
 
-It defines a set of ten extrinsics that can be utilized to build XCVM programs, either to target the
+It defines a set of extrinsics that can be utilized to build XCVM programs, either to target the
 local or external chains. Pallet-xcm's functionality is separated into three categories:
 
 1. Primitive, dispatchable functions to locally execute an XCM message.
