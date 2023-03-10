@@ -90,7 +90,7 @@ address.
 ## Polkadot-JS API
 
 The [**Polkadot-JS API**](https://github.com/polkadot-js/api) is a JavaScript API allowing for
-programs to interface with the functionality of
+programs to interface with the functionalities of
 {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}
 
 While interacting with the underlying
