@@ -8,7 +8,7 @@ slug: ../learn-xcm-pallet
 ---
 
 The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm))
-provides a developer-friendly interface for more of the common XCM messages.
+provides a developer-friendly interface for most of the common XCM messages.
 
 This pallet provides default implementations for many traits required by `XcmConfig`, which is
 highly useful for configuration.
