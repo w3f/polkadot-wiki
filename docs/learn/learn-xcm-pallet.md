@@ -19,9 +19,3 @@ target the local chain or an external chain, which can be broken down into three
 1. Primitive, dispatchable functions to locally execute or send an XCM message.
 2. High-level, dispatchable functions for asset transfers.
 3. Version negotiation-specific dispatchable functions.
-
-## Primitive Extrinsic Overview
-
-## Asset Transfer Extrinsic Overview
-
-## Version Negotiation Extrinsic Overview
