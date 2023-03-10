@@ -21,7 +21,7 @@ There are three primary methods for message passing, one of which is under devel
 
 :::caution
 
-XCMP is currently under development and most cross-chain message passing uses HRMP channels for the
+XCMP is currently under development, and most of the cross-chain messages pass through HRMP channels for the
 time being.
 
 :::
