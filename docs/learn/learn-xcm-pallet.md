@@ -16,6 +16,6 @@ highly useful for configuration.
 It defines a set of ten extrinsics that can be utilized to build XCVM programs, either to target the
 local or external chains. Pallet-xcm's functionality is separated into three categories:
 
-1. Primitive, dispatchable functions to locally execute or send an XCM message.
+1. Primitive, dispatchable functions to locally execute an XCM message.
 2. High-level, dispatchable functions for asset transfers.
 3. Version negotiation-specific dispatchable functions.

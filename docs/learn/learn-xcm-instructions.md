@@ -8,7 +8,7 @@ slug: ../learn-xcm-instructions
 ---
 
 This page can also be viewed at the [`xcm-format`](https://github.com/paritytech/xcm-format)
-repository, where each instruction and register is explained in depth.
+repository, where each instruction and register is explained in-depth.
 
 ## XCVM Registers
 
