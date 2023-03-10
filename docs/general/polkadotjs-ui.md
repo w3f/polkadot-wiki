@@ -116,7 +116,7 @@ In this section of the UI, you can participate in [**governance**](../learn/lear
 
 In this section of the UI, you can access advanced features such as:
 
-- [Query chain metadata](https://polkadot.js.org/apps/#/chainstate)
+- [Query on-chain data](https://polkadot.js.org/apps/#/chainstate)
 - [Query on-chain data using RPC calls](https://polkadot.js.org/apps/#/rpc)
 - Call [**extrinsics**](../learn/learn-extrinsics.md) using your account (you are able to see this
   option only if you have an account in the UI)
