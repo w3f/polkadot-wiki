@@ -22,7 +22,7 @@ Typically, the account keys are either stored and accessed through a browser ext
 smartphone app (which are considered as a hot wallets as they are online), or an air-gapped device
 or a hardware wallet (which are considered as cold wallets as they are offline).
 
-:::tip Not your keys, not your coins!
+:::tip Not your keys, not your tokens!
 
 With **custodial wallets** (like accounts in centralized exchanges), another party controls your
 private keys. Private keys are used to access funds in your account, so you trust the exchange that
