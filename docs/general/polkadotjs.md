@@ -73,8 +73,8 @@ account information in it.
 
 :::info Metadata Updates
 
-The browser extension is a tool that interacts with the Polkadot network, but it disconnected from
-it when you is not in use. Is is important you
+The browser extension is a tool that interacts with the Polkadot network, but it is disconnected from
+it when it is not in use. It is important you
 [**always check for metadata updates**](../learn/learn-extrinsics.md#metadata-updates) before using
 the extension other account management tools such as Parity Signer (aka Polkadot Vault).
 
