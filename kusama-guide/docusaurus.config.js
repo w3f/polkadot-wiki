@@ -74,6 +74,14 @@ module.exports = {
           {
             to: '/docs/wallets',
             from: ['/docs/build-wallets']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
           }
         ],
         createRedirects: function (existingPath) {

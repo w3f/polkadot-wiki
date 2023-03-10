@@ -8,7 +8,7 @@ module.exports = {
         "general/kusama/kusama-coc",
         "general/kusama/kusama-claims",
         "general/wallets",
-        "learn/learn-polkadotjs",
+        "general/polkadotjs",
         "learn/learn-balance-transfers",
         "learn/learn-auction",
         "learn/learn-parachains",

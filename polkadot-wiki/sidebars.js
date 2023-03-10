@@ -5,9 +5,24 @@ module.exports = {
       label: "General",
       items: [
         "general/getting-started",
-        "general/research",
-        "general/wallets",
-        "general/ledger",
+        {
+          type: "category",
+          label: "Stay Safe",
+          items: [
+            "general/scams",
+            "general/how-to-dyor",
+          ],
+        },
+        {
+          type: "category",
+          label: "Wallets",
+          items: [
+            "general/wallets",
+            "general/ledger",
+            "general/polkadotjs-ui",
+          ],
+        },
+        "general/polkadotjs",
         {
           type: "category",
           label: "Community & Contributors",
@@ -22,24 +37,17 @@ module.exports = {
           label: "Programmes",
           items: [
             "general/grants",
-            "maintain/maintain-bug-bounty",
+            "general/bug-bounty",
             "general/ambassadors",
             "general/builders-program",
             "general/doc-thousand-validators",
             "general/doc-thousand-contributors",
           ],
         },
-        {
-          type: "category",
-          label: "Stay Safe",
-          items: [
-            "general/scams",
-            "general/how-to-dyor",
-          ],
-        },
+        "general/research",
+        "general/metadata",
         "general/faq",
         "general/glossary",
-        "general/metadata",
       ],
     },
     {
@@ -90,7 +98,6 @@ module.exports = {
                 "learn/learn-opengov",
                 "learn/learn-identity",
                 "learn/learn-polkadot-host",
-                "learn/learn-polkadotjs",
                 "learn/learn-registrar",
                 "learn/learn-runtime-upgrades",
                 "learn/learn-transaction-fees",

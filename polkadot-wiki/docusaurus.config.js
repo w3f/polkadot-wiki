@@ -122,6 +122,18 @@ module.exports = {
           {
             to: '/docs/learn-account-advanced',
             from: ['/docs/ens']
+          },
+          {
+            to: '/docs/ledger',
+            from: ['/docs/learn-ledger']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
           }
         ],
         createRedirects: function (existingPath) {
