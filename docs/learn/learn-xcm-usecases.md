@@ -8,7 +8,8 @@ slug: ../learn-xcm-usecases
 ---
 
 XCM has a multitude of various use cases. While the wiki covers some of the more commonplace
-interactions, XCM can be used to construct many more combinations.
+interactions, the XCM format can be used to construct many more combinations to suit the use case at
+hand.
 
 ### Example Use-Cases
 

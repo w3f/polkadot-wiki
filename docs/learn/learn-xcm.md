@@ -273,3 +273,6 @@ doesn't support embedded videos. </video>
 
 - [XCM pallet code](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs) -
   The pallet that contains XCM logic from the Polkadot code repository
+
+- [XCM Config & Pallet-XCM | Polkadot Deep Dives](https://www.youtube.com/watch?v=bFMvWmU1pYI) - A
+  technical deep dive into `pallet-xcm` and the XCM configuration.
