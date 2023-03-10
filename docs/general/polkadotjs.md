@@ -83,7 +83,7 @@ the extension or other account management tools such as Parity Signer (aka Polka
 ## Polkadot-JS Phishing List
 
 The [**Polkadot-JS phishing list**](https://polkadot.js.org/phishing/) website is a community-driven
-curation of less-than-honest operators. The Polkadot-JS extension uses this list to warn a user
+curation of malicious actors and operators. The Polkadot-JS extension uses this list to warn a user
 about suspicious URLs and addresses that are part of the list, and automatically blocks the account
 address.
 
