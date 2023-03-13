@@ -9,6 +9,13 @@ slug: ../learn-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
+{{ kusama: :::caution Use OpenGov for Kusama Treasury
+
+OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
+[OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)
+
+::: :kusama }}
+
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
 
@@ -77,6 +84,14 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
+{{ kusama: :::caution Use OpenGov to submit Treasury Proposals
+
+Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
+Check the instructions on
+[how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).
+
+::: :kusama }}
+
 The proposer has to deposit a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
@@ -97,19 +112,17 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-  [Kusama Element (previously Riot)](https://matrix.to/#/#kusama:matrix.parity.io) chat or
-  [Polkadot Element](https://matrix.to/#//#polkadot:matrix.parity.io).
-- The [Polkassembly](https://polkassembly.io) discussion platform that allows users to log in with
-  their Web3 address and automatically reads proposals from the chain, turning them into discussion
-  threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
-  vote.
+  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
+  platforms automatically read proposals from the chain, turning them into discussion threads and
+  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
+  for a proposal before committing to a vote.
 
-Spreading the word about the proposal's explanation is ultimately up to the proposer - the
-recommended way is using official Element channels like the
-{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-{{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
-{{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
-{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+Spreading the word about the proposal's explanation to the community is ultimately up to the
+proposer.
 
 ### Creating the Proposal
 

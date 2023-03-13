@@ -60,6 +60,7 @@ const paths = [
 	{ path: 'query.nominationPools.maxPools', network: 'kusama' },
 	{ path: 'query.nominationPools.maxPoolMembersPerPool', network: 'kusama' },
 	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
+	{ path: 'query.staking.minimumActiveStake', network: 'polkadot' },
 	{ path: 'consts.assets.assetDeposit', network: 'statemint' },
 ]
 

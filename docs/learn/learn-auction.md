@@ -13,13 +13,13 @@ import AuctionSchedule from "./../../components/Auction-Schedule";
 
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
-parachain slots. A parachain slot is a scarce resource on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as only a limited number are
-available. As parachains ramp up, there may only be a few slots unlocked every few months. The goal
-is to eventually have 100 parachain slots available on {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} (these will be split between parachains and the
-[parathread pool](learn-parathreads.md)). If a parachain wants to have guaranteed block inclusion at
-every Relay Chain block, it must acquire a parachain slot.
+parachain slots. The number of parachain slots is are not unbounded on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, as only a limited number are
+available. A limited number of slots are unlocked every few months through on-chain governance. If a
+parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a
+parachain slot. The development of
+[on-demand parachains](https://forum.polkadot.network/t/on-demand-parachains/2208) (previously
+referred to as parathreads) is in progress.
 
 The parachain slots will be leased according to an unpermissioned
 [candle auction](https://en.wikipedia.org/wiki/Candle_auction), with several alterations related to

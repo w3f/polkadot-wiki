@@ -1,7 +1,7 @@
 ---
 id: doc-thousand-validators
 title: Thousand Validators Programme
-sidebar_label: Thousand Validators Programme
+sidebar_label: Thousand Validators
 description:
   Learn about the Thousand Validators Programme and how it can support your validator endeavors.
 keywords: [thousand validators programme, validator, validate, maintain, TVP]
@@ -133,11 +133,11 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 {{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
 Attaining a rank of 25 usually takes around two months. The leaderboard is available
 [here](https://thousand-validators.kusama.network/#/leaderboard).
-In order to apply to the Polkadot programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). You will hear back from the team shortly. :polkadot }}
+In order to apply to the Polkadot programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
+and fill in the [application form](https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform?ref=polkadot-network). You will hear back from the team shortly. :polkadot }}
 
 {{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6).  The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
+and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
 
 #### Requirements
 

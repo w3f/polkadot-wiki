@@ -74,6 +74,14 @@ module.exports = {
           {
             to: '/docs/wallets',
             from: ['/docs/build-wallets']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
           }
         ],
         createRedirects: function (existingPath) {
@@ -148,13 +156,13 @@ module.exports = {
       contextualSearch: true,
     },
     /* Banner / Announcement bar */
-    // announcementBar: {
-    //   id: "banner",
-    //   content:
-    //     '<b>Sub0 is coming to Lisbon!</b> Join the Polkadot developer conference, November 28th-29th 👉 <a href="https://sub0.polkadot.network/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20guide%20kusama" target="_blank" rel="noopener nofollow noreferrer">SIGN UP</a>',
-    //   backgroundColor: '#e6007a',
-    //   textColor: 'white',
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: "banner",
+      content:
+        'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
   },
 };
