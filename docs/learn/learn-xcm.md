@@ -147,9 +147,8 @@ showcase the previously explained concepts of XCM v3.
 
 New registers have been introduced in order to accommodate some of the new instructions:
 
-- `Transact Status Register` - A register that primarily handles the status when checking the
-  versions between the origin, destination chain, and the requested pallet located on the
-  destination chain.
+- `Transact Status Register` - A register that expresses the result of the encoded call within a
+  `Transact` instruction that has been dispatched.
 
 - `Topic Register` - A register that can set any value and is for use cases such as crafting IDs for
   messages. A `Topic` is also part of `XcmContext`.
