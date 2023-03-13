@@ -7,9 +7,8 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-usecases
 ---
 
-XCM has a multitude of use cases. While the wiki covers some of the key commonplace
-interactions, the XCM format can be used to construct many more combinations to suit the use case at
-hand.
+XCM has a multitude of use cases. While the wiki covers some of the key commonplace interactions,
+the XCM format can be used to construct many more combinations to suit the use case at hand.
 
 ### Example Use-Cases
 

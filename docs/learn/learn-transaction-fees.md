@@ -97,8 +97,8 @@ Checkout some examples of how various weights are gauged in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime for several different types
 of operations:
 
-- [request_judgement](https://spec.polkadot.network/#id-practical-example-1-request_judgement) - from the identity
-  pallet, allows users to request judgement from a specific registrar
+- [request_judgement](https://spec.polkadot.network/#id-practical-example-1-request_judgement) -
+  from the identity pallet, allows users to request judgement from a specific registrar
 - [payout_stakers](https://spec.polkadot.network/#sect-practical-example-payout-stakers) - from the
   staking Pallet, is invoked by a single account in order to payout the reward for all nominators
   who back a particular validator
