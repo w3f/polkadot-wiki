@@ -86,7 +86,8 @@ The Treasury is funded from different sources:
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-proposal.md) for more information about how to create a treasury proposal.
+See [this page](./learn-treasury-guides.md#creating-a-treasury-proposal.md) for more information
+about how to create a treasury proposal.
 
 :::
 

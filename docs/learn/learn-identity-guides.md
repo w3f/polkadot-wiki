@@ -1,11 +1,13 @@
 ---
-id: learn-registrar
-title: Becoming a Registrar
-sidebar_label: Registrar
-description: How to become a Registrar
+id: learn-identity-guides
+title: Identity How-to Guides
+sidebar_label: Identity
+description: Advanced How-to Guides about Identity.
 keywords: [registrar, identity]
-slug: ../learn-registrar
+slug: ../learn-identity-guides
 ---
+
+## Becoming a Registrar
 
 To become a registrar, submit a pre-image and proposal into
 [Democracy](../maintain/maintain-guides-democracy.md), then wait for people to vote on it. For best

@@ -1,12 +1,14 @@
 ---
-id: learn-statemint
-title: Statemint
-sidebar_label: Statemint
-description: Statemint and its features
-slug: ../../learn-statemint
+id: learn-assets-guides
+title: Assets How-to Guides
+sidebar_label: Assets
+description: Advanced How-to Guides about Assets.
+slug: ../learn-assets-guides
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+## Statemint
 
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
@@ -29,7 +31,7 @@ categorized as
 For additional background on Statemint and Statemine check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
 
-## Creating Assets on Statemint
+### Creating Assets on Statemint
 
 :::info
 

@@ -135,7 +135,8 @@ willing to pay and only registrars below this amount would provide judgement.
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-registrar.md) to learn how to become a Registrar.
+See [this page](./learn-identity-guides.md#becoming-a-registrar.md) to learn how to become a
+Registrar.
 
 :::
 

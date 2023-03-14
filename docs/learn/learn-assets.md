@@ -51,8 +51,8 @@ creator must also specify a minimum balance, preventing accounts from having dus
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-statemint.md#creating-assets-on-statemint) to learn more about creating
-assets using {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
+See [this page](./learn-assets-guides.md#statemint) to learn more about creating assets using
+{{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
 
 :::
 

@@ -1,15 +1,17 @@
 ---
-id: learn-nomination-pool-lifecycle
-title: Nomination Pools' Lifecycle
-sidebar_label: Pools Lifecycle
-description: Learn about the lifecycle of a nomination pool.
-keyword: [nominate, stake, staking, pools, create, destroy]
-slug: ../learn-nomination-pool-lifecycle
+id: learn-staking-guides
+title: Staking How-to Guides
+sidebar_label: Staking
+description: Advanced How-to Guides about Staking.
+keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
+slug: ../learn-staking-guides
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-## Creation
+## Nomination Pools
+
+### Creation
 
 The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
 funds to the pool to add themselves as the first member. As stated above, the depositor must always
@@ -38,7 +40,7 @@ default. If any of these roles need to be assigned to a different account, creat
 
 ![Nomination Pool Roles](../assets/staking/Nomination-Pools-7.png)
 
-## Upkeep
+### Upkeep
 
 The `nominator` can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
 Network > Staking > Accounts page and click on Pooled button. If you have any pooled accounts with
@@ -50,7 +52,7 @@ nominate like you would normally using a nominator account.
 The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and kick
 members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open).
 
-## Destruction
+### Destruction
 
 A pool can be pushed into the “destroying” state via one of:
 

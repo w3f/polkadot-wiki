@@ -1,10 +1,10 @@
 ---
-id: learn-proposal
-title: Treasury Proposals
-sidebar_label: Treasury Proposals
-description: Learn how to submit a proposal to the treasury.
+id: learn-treasury-guides
+title: Treasury How-to Guides
+sidebar_label: Treasury
+description: Advanced How-to Guides about Treasury.
 keywords: [treasury, proposal, treasury proposals, polkadot-js]
-slug: ../learn-proposal
+slug: ../learn-treasury-guides
 ---
 
 ## Creating a Treasury Proposal
