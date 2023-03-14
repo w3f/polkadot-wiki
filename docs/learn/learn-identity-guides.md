@@ -7,7 +7,9 @@ keywords: [registrar, identity]
 slug: ../learn-identity-guides
 ---
 
-## Becoming a Registrar
+## Registrars
+
+### Becoming a Registrar
 
 To become a registrar, submit a pre-image and proposal into
 [Democracy](../maintain/maintain-guides-democracy.md), then wait for people to vote on it. For best

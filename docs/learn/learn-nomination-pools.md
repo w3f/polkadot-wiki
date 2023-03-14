@@ -211,8 +211,8 @@ balance.
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-staking-guides.md#nomination-pools.md) for more information about the
-lifecycle of nomination pools. The cycle includes creation, upkeep and destruction.
+See [this page](./learn-staking-guides.md#nomination-pools) for more information about the lifecycle
+of nomination pools. The cycle includes creation, upkeep and destruction.
 
 :::
 

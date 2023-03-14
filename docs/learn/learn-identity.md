@@ -133,10 +133,11 @@ verify one's legal name, email, and GPG key. When a user requests judgement, the
 to the registrar who provides the judgement on those claims. Users set a maximum fee they are
 willing to pay and only registrars below this amount would provide judgement.
 
+### Becoming a Registrar
+
 :::info Advanced How-to Guides
 
-See [this page](./learn-identity-guides.md#becoming-a-registrar.md) to learn how to become a
-Registrar.
+See [this page](./learn-identity-guides.md#registrars) to learn how to become a Registrar.
 
 :::
 
