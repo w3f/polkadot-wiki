@@ -26,6 +26,46 @@ The pallet comes with a new way to configure NFTs, as well as configure collecti
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling
 functionalities that are not needed in the runtime.
 
+### Roles
+
+Setting up a collection implies different roles with different permissions:
+
+- Owner:
+
+  - destroy collection (to destroy the collection, there should be 0 items left)
+  - redeposit
+  - set_team:
+  - set_collection_max_supply
+  - lock_collection - (make non-transferable, fix max supply, lock collection metadata/attributes)
+    -> one time call
+
+- Admin:
+  - set_attribute/set_metadata (in the CollectionOwner namespace)
+  - set_attributes_pre_signed
+  - lock_item_properties - (lock item metadata/attributes) -> one time call
+
+Note that an Admin account cannot burn or transfer items it does not own.
+
+- Freezer:
+
+  - lock_item_transfer
+  - unlock_item_transfer
+
+- Issuer
+  - mint
+  - force_mint (with custom item config)
+  - mint_pre_signed
+  - update_mint_settings
+
+For simple collections, the same account has all the roles by default, but for complex collections
+each role can be taken by separate accounts with their own responsibilities (e.g. items issuance).
+Key can be simply rotated for those roles. The owner's account is used to setup the collection, and
+its private key is kept in cold storage.
+
+Those roles can also be set to `none` without the ability to change them back. This is useful when a
+collection is created and all the items are minted without the possibility to mint any more items,
+or change the metadata, or disable some item's transfer.
+
 ### Creating a Collection
 
 You can use the NFTs pallet to create NFT collections. In the Polkadot-JS UI, go to Developer >
