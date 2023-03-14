@@ -77,7 +77,6 @@ module.exports = {
                 "learn/learn-assets",
                 "learn/learn-DOT",
                 "learn/learn-redenomination",
-                "learn/learn-statemint",
                 "learn/learn-teleport",
               ],
             },
@@ -127,6 +126,13 @@ module.exports = {
             'learn/learn-spree',
             'learn/learn-staking-miner',
             'learn/learn-wasm',
+            {
+              type: "category",
+              label: "How-to Guides",
+              items: [
+                "learn/learn-statemint",
+              ],
+            },
           ],
         },
         {
