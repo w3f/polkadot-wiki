@@ -122,7 +122,6 @@ module.exports = {
             'learn/learn-phragmen',
             'learn/learn-randomness',
             'learn/learn-spree',
-            'learn/learn-staking-miner',
             'learn/learn-wasm',
             {
               type: "category",

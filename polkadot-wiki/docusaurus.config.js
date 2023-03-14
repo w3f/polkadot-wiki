@@ -138,6 +138,10 @@ module.exports = {
           {
             to: '/docs/learn-staking',
             from: ['/docs/learn-staking-faq']
+          },
+          {
+            to: '/docs/learn-staking-advanced',
+            from: ['/docs/learn-staking-miner']
           }
         ],
         createRedirects: function (existingPath) {
