@@ -108,7 +108,6 @@ module.exports = {
               items: [
                 "learn/learn-staking",
                 "learn/learn-nomination-pools",
-                "learn/learn-staking-faq"
               ],
             },
           ],
