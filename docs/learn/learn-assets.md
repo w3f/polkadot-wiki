@@ -103,13 +103,6 @@ and stable transaction fees.
 
 ### Transferring Asset Balances
 
-:::info Advanced How-to Guides
-
-See [this page](./learn-statemint.md#transferring-assets-on-statemint) to learn more about
-transferring assets using {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
-
-:::
-
 Users have a simple interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not _sufficient_, then the destination account must
 already exist for the transfer to succeed.
@@ -130,6 +123,15 @@ asset transfer to fail. The transfer will be successful for sufficient assets, b
 those assets from the receiver account through Polkadot-JS UI. The feature request to
 [enable sufficient assets for transaction fee payment on Polkadot-JS UI](https://github.com/polkadot-js/apps/issues/7812)
 is yet to be implemented.
+
+:::
+
+:::info
+
+See
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine)
+to learn more about transferring assets using
+{{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
 
 :::
 

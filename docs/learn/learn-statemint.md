@@ -78,9 +78,3 @@ should let you successfully create an asset on Statemint
 
 If the transaction is successful, you should see the asset and its details displayed in the
 Network > Assets page on Statemint.
-
-## Transferring Assets on Statemint
-
-Checkout
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine),
-for a step by step guide covering how to make a transfer on the Statemine and the risks associated.
