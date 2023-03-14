@@ -49,6 +49,13 @@ integer of type `u32`, to identify the asset. The `AssetId` should be the canoni
 an asset, as the chain does not enforce the uniqueness of metadata like "name" and "symbol". The
 creator must also specify a minimum balance, preventing accounts from having dust balances.
 
+:::info Advanced How-to Guides
+
+See [this page](./learn-statemint.md#creating-assets-on-statemint) to learn more about creating
+assets using {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
+
+:::
+
 Asset classes and instances can have associated metadata. The metadata is an array of data that the
 class owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
 service. The [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) also supports setting key/value
@@ -96,6 +103,13 @@ and stable transaction fees.
 
 ### Transferring Asset Balances
 
+:::info Advanced How-to Guides
+
+See [this page](./learn-statemint.md#transferring-assets-on-statemint) to learn more about
+transferring assets using {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
+
+:::
+
 Users have a simple interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not _sufficient_, then the destination account must
 already exist for the transfer to succeed.
@@ -107,7 +121,7 @@ that will fail if execution kills the sending account.
 transfers. For example, if an asset has a minimum balance of 10 and an account has a balance of 25,
 then an attempt to transfer 20 units would transfer all 25.
 
-:::info
+:::warning Non-sufficient assets
 
 Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover
 the existential deposit and transaction fees for future transfers. Failing to do so will cause the
