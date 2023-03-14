@@ -129,9 +129,10 @@ module.exports = {
               type: "category",
               label: "How-to Guides",
               items: [
-                "learn/learn-proposal",
+                "learn/learn-nomination-pool-lifecycle",
                 "learn/learn-registrar",
                 "learn/learn-statemint",
+                "learn/learn-proposal",
               ],
             },
           ],
