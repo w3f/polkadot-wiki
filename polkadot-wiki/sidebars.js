@@ -97,7 +97,6 @@ module.exports = {
                 "learn/learn-opengov",
                 "learn/learn-identity",
                 "learn/learn-polkadot-host",
-                "learn/learn-registrar",
                 "learn/learn-runtime-upgrades",
                 "learn/learn-transaction-fees",
                 "learn/learn-treasury",
@@ -130,6 +129,7 @@ module.exports = {
               type: "category",
               label: "How-to Guides",
               items: [
+                "learn/learn-registrar",
                 "learn/learn-statemint",
               ],
             },
