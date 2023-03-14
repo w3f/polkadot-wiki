@@ -129,6 +129,7 @@ module.exports = {
               type: "category",
               label: "How-to Guides",
               items: [
+                "learn/learn-proposal",
                 "learn/learn-registrar",
                 "learn/learn-statemint",
               ],
