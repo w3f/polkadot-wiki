@@ -8,14 +8,19 @@ slug: ../learn-xcvm
 ---
 
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
-program. The XCVM is a state machine, state is kept track in Registers.
+program. The XCVM is a register-based state machine, state is kept track in domain-specific
+registers. The majority of the XCM format comprises of these registers, and the instructions that
+used to create XCVM programs.
 
 It’s an ultra-high level non-Turing-complete computer whose instructions are designed to be roughly
 at the same level as transactions. Messages are one or more XCM instructions. The program executes
-until it either runs to the end or hits an error, at which point it finishes up and halts. An XCM
-executor following the XCVM specification is provided by Parity, and it can be extended or
-customized, or even ignored altogether and users can create their own construct that follows the
-XCVM spec.
+until it either runs to the end or hits an error, at which point it finishes up and halts.
+
+The primary implementation of the XCVM is the XCM executor. It follows the XCVM specification
+provided by Parity, and can be extended or customized, or even ignored altogether and users can
+create their own construct that follows the XCVM spec.
+
+## XCM Messages are XCVM Programs
 
 A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more
 XCM instructions. To learn more about the XCVM and the XCM Format, see the latest
@@ -24,6 +29,12 @@ by Dr. Gavin Wood.
 
 XCM instructions might change a register, they might change the state of the consensus system or
 both.
+
+## A Deeper Dive: XCM Executor Implementation
+
+The XCM Executor, and XCVM in general, is very much analogous to a CPU.
+
+## XCM Message Anatomy
 
 One example of such an instruction would be `TransferAsset` which is used to transfer an asset to
 some other address on the remote system. It needs to be told which asset(s) to transfer and to
@@ -48,3 +59,5 @@ like a relative file-system path will first begin with any "../" components used
 the containing directory, followed by the directory names into which to descend, a `MultiLocation`
 has two main parts to it: the number of times to ascend into the outer consensus from the local and
 then an interior location within that outer consensus.
+
+## Simulating XCVM using the xcm-simulator
