@@ -137,7 +137,7 @@ Only use custom derivation paths if you are comfortable with your knowledge of t
 
 ## For the Curious: How Prefixes Work
 
-The [SS58 document](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>)
+The [SS58 registry](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
 states that:
 
 - Polkadot has an address type of `00000000b` (`0` in decimal).
