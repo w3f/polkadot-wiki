@@ -24,7 +24,52 @@ on Westmint, which provides a multitude of functions to interact with NFTs.
 
 The pallet comes with a new way to configure NFTs, as well as configure collections and items.
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling
-functionalities that are not needed in the runtime.
+functionalities not needed in the runtime.
+
+### Roles
+
+Setting up a collection implies different roles with different permissions:
+
+- Owner:
+
+  - destroy collection (to destroy the collection, there should be 0 items left).
+  - redeposit: re-evaluate the deposit on some items.
+  - set team: change the collection’s Issuer, Admin, Freezer.
+  - set collection max supply: set the maximum number of items for a collection.
+  - lock collection: this can include making a collection’s items non-transferable, fixing its max
+    supply, and locking collection metadata and attributes.
+
+- Admin:
+  - set attribute and metadata of a collection.
+  - set attributes pre-signed: set attributes for an item by providing the pre-signed approval.
+  - lock item properties: lock item metadata and attributes.
+
+:::info
+
+Note that an Admin account cannot burn or transfer items it does not own.
+
+:::
+
+- Freezer:
+
+  - lock item transfer: lock all holders from the possibility of transferring an item.
+  - unlock item transfer: lift a previous lock to transfer an item for all holders.
+
+- Issuer
+  - mint
+  - force mint (with custom item configuration): mint an item of a particular collection from a
+    privileged origin.
+  - mint pre-signed: mint an item by providing the pre-signed approval.
+  - update mint settings.
+
+For simple collections, the same account has all the roles by default. Still, for complex
+collections separate accounts can take each role with their responsibilities (e.g. items issuance).
+The key can be rotated for those roles. The owner's account is used to setup the collection, and its
+private key is kept in cold storage.
+
+Those roles can also be set to `none` without the ability to change them back. This is useful when a
+collection is created, and all the items are minted without the possibility of minting any more
+items, or change the metadata, or disable some item's transfer.
 
 ### Creating a Collection
 
@@ -72,9 +117,8 @@ Everything is unlocked by default (bitflag value `0`).
 
 :::info
 
-Metadata, attributes, and settings of an item or collection can be locked. The user can decide what
-to lock. Also, unauthorized and/or unprivileged transfers can be prevented by locking mechanism
-(unprivileged actions can be re-allowed anytime).
+ The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged
+actions can be re-allowed anytime).
 
 :::
 
@@ -110,8 +154,8 @@ go to Developer > Chain State > Storage, select the `nfts.account` extrinsic, an
 account owning the NFT and the collection ID. You can also see all your collections by selecting the
 `collectionAccount` extrinsic.
 
-When a new collection is created, a new ID will be generated and assigned to that collection. When a
-collection is destroyed, no one can pick up the collection ID again (including the owner).
+When a new collection is created, a new ID will be generated and assigned to it. When a collection
+is destroyed, and no one can pick up the collection ID again (including the owner).
 
 ### Minting an NFT
 
@@ -134,8 +178,8 @@ When you have a collection ID and an item ID you need to:
   to upload the file you want to mint.
 - After uploading your file, get the
   [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid).
-  This is a unique string of letters and numbers that will act as a marker to link the data uploaded
-  onto [IPFS](https://ipfs.tech/#how) to the collection or item ID you own.
+  This unique string of letters and numbers will act as a marker to link the data uploaded onto
+  [IPFS](https://ipfs.tech/#how) to the collection or item ID you own.
 - Prepare the metadata file and add your CID (see below):
 
 ```
@@ -147,14 +191,14 @@ When you have a collection ID and an item ID you need to:
 ```
 
 - Upload the metadata file to Pinata and get the updated CID.
-- You can add the CID after minting your NFT on the Polkadot-JS UI. Go to Developer > Extrinsics and
-  select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single NFTs)
-  extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
+- After minting your NFT on the Polkadot-JS UI, you can add the CID. Go to Developer > Extrinsics
+  and select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single
+  NFTs) extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
 
 The collection can be created and its item minted before uploading the NFT file and related
 metadata. The minting process on-chain will assign a collection and item ID to your account. Those
 IDs will later be populated with NFT files, metadata, and attributes. Once you upload the NFT files
-and related data, the extrinsics mentioned above can be used to update a collection or item.
+and related data, the above-mentioned extrinsics can be used to update a collection or item.
 
 :::info NFT/DEX/Asset Portal
 
@@ -173,9 +217,8 @@ user will not have to worry about all technicalities.
   attributes of an NFT. An example could be that all Polkadot fellowship members have an NFT badge
   that gets updated over time (sort of a rank) with a consequent upgrade in membership permissions.
 - A collection is managed by the
-  [Issuer, the Admin and the Freezer](./learn-assets.md#creation-and-management). Those roles can be
-  changed anytime, and there will be the option to attach
-  [multiple accounts per role](https://github.com/paritytech/substrate/pull/12437).
+  [Issuer, the Admin, and the Freezer](./learn-assets.md#creation-and-management). Those roles can
+  be changed anytime.
 - Setting metadata for an item or collection (metadata includes all essential information about the
   item or the collection). Metadata could consist of any arbitrary data like the IPFS hash.
 - Setting or re-setting the price of an item.
