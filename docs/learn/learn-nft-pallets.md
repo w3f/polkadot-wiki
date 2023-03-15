@@ -32,30 +32,31 @@ Setting up a collection implies different roles with different permissions:
 
 - Owner:
 
-  - destroy collection (to destroy the collection, there should be 0 items left)
-  - redeposit
-  - set_team:
-  - set_collection_max_supply
-  - lock_collection - (make non-transferable, fix max supply, lock collection metadata/attributes)
-    -> one time call
+  - destroy collection (to destroy the collection, there should be 0 items left).
+  - redeposit: re-evaluate the deposit on some items.
+  - set team: change the Issuer, Admin, Freezer of a collection.
+  - set collection max supply: set the maximum number of items for a collection.
+  - lock collection: this can include making the items of a collection non-transferable, fix its max
+    supply, lock collection metadata and attributes.
 
 - Admin:
-  - set_attribute/set_metadata (in the CollectionOwner namespace)
-  - set_attributes_pre_signed
-  - lock_item_properties - (lock item metadata/attributes) -> one time call
+  - set attribute and metadata of a collection.
+  - set attributes pre-signed: set attributes for an item by providing the pre-signed approval.
+  - lock item properties: lock item metadata and/or attributes.
 
 Note that an Admin account cannot burn or transfer items it does not own.
 
 - Freezer:
 
-  - lock_item_transfer
-  - unlock_item_transfer
+  - lock item transfer: lock the possibility to transfer an item for all holders.
+  - unlock item transfer: lift a previous lock to transfer an item for all holders.
 
 - Issuer
   - mint
-  - force_mint (with custom item config)
-  - mint_pre_signed
-  - update_mint_settings
+  - force mint (with custom item config): mint an item of a particular collection from a privileged
+    origin.
+  - mint pre-signed: mint an item by providing the pre-signed approval.
+  - update mint settings.
 
 For simple collections, the same account has all the roles by default, but for complex collections
 each role can be taken by separate accounts with their own responsibilities (e.g. items issuance).
