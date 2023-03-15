@@ -44,7 +44,11 @@ Setting up a collection implies different roles with different permissions:
   - set attributes pre-signed: set attributes for an item by providing the pre-signed approval.
   - lock item properties: lock item metadata and attributes.
 
-:::info Note that an Admin account cannot burn or transfer items it does not own. :::
+:::info
+
+Note that an Admin account cannot burn or transfer items it does not own.
+
+:::
 
 - Freezer:
 
