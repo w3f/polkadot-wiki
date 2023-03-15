@@ -52,7 +52,7 @@ Note that an Admin account cannot burn or transfer items it does not own.
 
 - Freezer:
 
-  - lock item transfer: lock the possibility of transferring an item for all holders.
+  - lock item transfer: lock all holders from the possibility of transferring an item.
   - unlock item transfer: lift a previous lock to transfer an item for all holders.
 
 - Issuer
