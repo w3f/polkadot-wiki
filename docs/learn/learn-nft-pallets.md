@@ -40,36 +40,26 @@ Setting up a collection implies different roles with different permissions:
     supply, and locking collection metadata and attributes.
 
 - Admin:
-  - set attribute and metadata of a collection.
-  - set attributes pre-signed: set attributes for an item by providing the pre-signed approval.
+
+  - set attributes and metadata of a collection.
+  - set attributes pre-signed: set attributes for an item by providing the Admin pre-signed
+    approval.
   - lock item properties: lock item metadata and attributes.
-
-:::info
-
-Note that an Admin account cannot burn or transfer items it does not own.
-
-:::
 
 - Freezer:
 
-  - lock item transfer: lock all holders from the possibility of transferring an item.
-  - unlock item transfer: lift a previous lock to transfer an item for all holders.
+  - lock item transfer: disallow further item transfers.
+  - unlock item transfer: lift a previous lock to transfer an item.
 
 - Issuer
   - mint
-  - force mint (with custom item configuration): mint an item of a particular collection from a
-    privileged origin.
-  - mint pre-signed: mint an item by providing the pre-signed approval.
+  - force mint (with custom item configuration).
+  - mint pre-signed: mint an item by providing the Issuer pre-signed approval.
   - update mint settings.
 
-For simple collections, the same account has all the roles by default. Still, for complex
-collections separate accounts can take each role with their responsibilities (e.g. items issuance).
-The key can be rotated for those roles. The owner's account is used to setup the collection, and its
-private key is kept in cold storage.
-
 Those roles can also be set to `none` without the ability to change them back. This is useful when a
-collection is created, and all the items are minted without the possibility of minting any more
-items, or change the metadata, or disable some item's transfer.
+collection is created and all the items are minted. Now, by setting roles to `none` we remove the
+possibility of minting any more items, changing the metadata, or disallowing some item's transfer.
 
 ### Creating a Collection
 
@@ -117,8 +107,9 @@ Everything is unlocked by default (bitflag value `0`).
 
 :::info
 
- The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged
-actions can be re-allowed anytime).
+The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a
+locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged actions can be
+re-allowed anytime).
 
 :::
 
@@ -155,7 +146,7 @@ account owning the NFT and the collection ID. You can also see all your collecti
 `collectionAccount` extrinsic.
 
 When a new collection is created, a new ID will be generated and assigned to it. When a collection
-is destroyed, and no one can pick up the collection ID again (including the owner).
+is destroyed, no one can pick up the collection ID again (including the owner).
 
 ### Minting an NFT
 
