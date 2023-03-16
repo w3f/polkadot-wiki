@@ -94,7 +94,6 @@ They change any relevant storage aspects that enforce anything to do with XCM ve
 
 ## Fees in the XCM Pallet
 
-Fees for messages are only paid if given interior location is **not** equal to the interpreting
-consensus system (known as `Here` in the context of an XCM Multilocation). Otherwise, the chain
-bears the fees. Fees are withdrawn from the assets from the specified `MultiLocation`, if
-applicable.
+Message fees are only paid if the interior location is **not** equal to the interpreting consensus
+system (known as `Here` in the context of an XCM Multilocation). Otherwise, the chain bears the
+fees. If applicable, fees are withdrawn from the assets from the specified `MultiLocation`.
