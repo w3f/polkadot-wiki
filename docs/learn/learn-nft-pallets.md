@@ -61,6 +61,14 @@ Those roles can also be set to `none` without the ability to change them back. T
 collection is created and all the items are minted. Now, by setting roles to `none` we remove the
 possibility of minting any more items, changing the metadata, or disallowing some item's transfer.
 
+:::info
+
+The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a
+locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged actions can be
+re-allowed anytime).
+
+:::
+
 ### Creating a Collection
 
 You can use the NFTs pallet to create NFT collections. In the Polkadot-JS UI, go to Developer >
@@ -104,14 +112,6 @@ Everything is unlocked by default (bitflag value `0`).
     - wave minting, for example mint X number of items that go to collection owners and Y number of
       items for the public
     - force mint: minting bypassing mint settings
-
-:::info
-
-The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a
-locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged actions can be
-re-allowed anytime).
-
-:::
 
 With all these options, one can decide to modify the price of the collection's items and who can
 mint, receive or buy items in that collection. Time constraints are available with `startBlock` and
