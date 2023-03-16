@@ -41,8 +41,7 @@ programs as dispatchable functions within the pallet.
    for only a partial execution to occur.
 2. `send` - This call specifies where a message should be sent externally to a particular
    destination, i.e., another parachain. It checks the origin, destination, and message and is then
-   sent to the `XcmRouter`. Fees are withdrawn from the assets from the specified `MultiLocation`,
-   if applicable.
+   sent to the `XcmRouter`.
 
 :::info
 
@@ -67,6 +66,18 @@ Otherwise, the fee is taken as needed from the asset being transferred.
    a destination chain and forward a notification XCM.
 2. `teleport_assets` - Teleport some assets from the local chain to some destination chain.
 
+### Transfer Reserve vs Teleport
+
+While both extrinsics deal with transferring assets, they exhibit fundamentally different behavior.
+
+- **Teleporting** an asset implies a two-step process: the asset is burned/destroyed in the origin
+  chain and re-minted to whatever account is specified at the destination. Teleporting should only
+  occur if there is an inherent and bilateral trust between the two chains, as the tokens destroyed
+  _could not_ necessarily be guaranteed to have the same properties when minted at the destination.
+- **Transferring** or **reserving** an asset implies the movement of funds from one authority to
+  another, in this case, from the Origin of the sender's chain and into the sovereign account (who
+  will ultimately benefit from the assets) on the destination chain.
+
 ## Version Negotiation Extrinsics
 
 The following extrinsics require root, as they are only used when bypassing XCM version negotiation.
@@ -80,3 +91,10 @@ They change any relevant storage aspects that enforce anything to do with XCM ve
    a destination.
 4. `force_unsubscribe_version_notify` - Sends an XCM message with a `UnsubscribeVersion` instruction
    to a destination.
+
+## Fees in the XCM Pallet
+
+Fees for messages are only paid if given interior location is **not** equal to the interpreting
+consensus system (known as `Here` in the context of an XCM Multilocation). Otherwise, the chain
+bears the fees. Fees are withdrawn from the assets from the specified `MultiLocation`, if
+applicable.
