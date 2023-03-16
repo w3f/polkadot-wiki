@@ -130,7 +130,6 @@ module.exports = {
                 "learn/learn-staking-guides",
                 "learn/learn-identity-guides",
                 "learn/learn-assets-guides",
-                "learn/learn-treasury-guides",
               ],
             },
           ],
