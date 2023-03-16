@@ -13,7 +13,7 @@ provides a developer-friendly interface for most of the common XCM messages.
 This pallet provides some default implementations for some traits required by `XcmConfig`, as well
 as an instance of the XCM Executor provided as a trait within the pallet's own configuration.
 `pallet-xcm` provides a default interface in the form of a pallet, that can manage and deal with
-XCM-related storage and dispatchable functions.
+XCM-related storage and higher-level dispatchable functions.
 
 It defines a set of extrinsics that can be utilized to build XCVM programs, either to target the
 local or external chains. `pallet-xcm`'s functionality is separated into three categories:
@@ -41,7 +41,19 @@ programs as dispatchable functions within the pallet.
    for only a partial execution to occur.
 2. `send` - This call specifies where a message should be sent externally to a particular
    destination, i.e., another parachain. It checks the origin, destination, and message and is then
-   sent to the `XcmRouter`.
+   sent to the `XcmRouter`. Fees are withdrawn from the assets from the specified `MultiLocation`,
+   if applicable.
+
+:::info
+
+The XCM pallet needs the `XcmRouter` to send messages. It is used to dictate where messages are
+allowed to be sent, and which XCM transport protocol to use. For example, Kusama, the canary
+network, uses the `ChildParachainRoute` which only allows for Downward Message Passing from the
+relay to parachains to occur.
+
+You can read more about [XCM transport methods here.](./learn-xcm-transport.md)
+
+:::
 
 ## Asset Transfer Extrinsics
 
