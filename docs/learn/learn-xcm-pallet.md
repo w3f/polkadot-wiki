@@ -11,11 +11,19 @@ The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/maste
 provides a developer-friendly interface for most of the common XCM messages.
 
 This pallet provides some default implementations for some traits required by `XcmConfig`, as well
-as an instance of the XCM Executor. `pallet-xcm` provides a default interface in the form of a
-pallet, that can manage and deal with XCM-related storage and dispatchable functions.
+as an instance of the XCM Executor provided as a trait within the pallet's own configuration.
+`pallet-xcm` provides a default interface in the form of a pallet, that can manage and deal with
+XCM-related storage and dispatchable functions.
 
 It defines a set of extrinsics that can be utilized to build XCVM programs, either to target the
 local or external chains. `pallet-xcm`'s functionality is separated into three categories:
+
+:::note
+
+Remember, all XCM messages are effectively XCVM programs that contain a set of instructions. It is
+the job of the XCM exector to handle these programs, and their subsequent instructions as needed.
+
+:::
 
 1. Primitive, dispatchable functions to locally execute an XCM message.
 2. High-level, dispatchable functions for asset transfers.
@@ -29,7 +37,8 @@ programs as dispatchable functions within the pallet.
 1. `execute` - This call is direct access to the XCM executor. It checks the origin and message and
    ensures that no barrier/filter will block the execution of the XCM message. Once it is deemed
    valid, the message will then be _locally_ executed, therein returning the outcome as an event.
-   This operation is executed on behalf of whichever account has signed the extrinsic.
+   This operation is executed on behalf of whichever account has signed the extrinsic. It's possible
+   for only a partial execution to occur.
 2. `send` - This call specifies where a message should be sent externally to a particular
    destination, i.e., another parachain. It checks the origin, destination, and message and is then
    sent to the `XcmRouter`.
