@@ -40,6 +40,12 @@ One example of such an instruction would be `TransferAsset` which is used to tra
 some other address on the remote system. It needs to be told which asset(s) to transfer and to
 whom/where the asset is to be transferred.
 
+1. **Instruction** - Results in a state change in the local consensus system, or some state change.
+2. **Trusted Indication** - Tells the XCVM, or the executor, that some action has been done before
+   already - meaning, this action is now trusted and can be acted on, i.e in a teleport scenario.
+3. **Information**
+4. **System Notification**
+
 ```
 enum Instruction {
     TransferAsset {
@@ -61,3 +67,6 @@ has two main parts to it: the number of times to ascend into the outer consensus
 then an interior location within that outer consensus.
 
 ## Simulating XCVM using the xcm-simulator
+
+A repository exists for experimenting with building XCM messages. The `xcm-simulator` allows
+developers to experiment with building, executing, and simulating various XCM use scenarios.
