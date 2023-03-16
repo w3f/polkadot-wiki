@@ -222,8 +222,8 @@ emergency referendum occurring at the same time as a regular referendum (either 
 council-proposed) is the only time that multiple referenda will be able to be voted on
 simultaneously.
 
-OpenGov's deciding period is when the proposal is eligible to get approved. If not 
-approved by then end of this period, the proposal is automatically rejected.
+The proposal is eligible to get approved during OpenGov's track specific [decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). 
+If not approved by then end of this period, the proposal is automatically rejected.
 
 #### Voting on a referendum (OpenGov)
 
@@ -245,7 +245,7 @@ use less privileged origins, it is far more reasonable to drop the required turn
 realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
 more political significance can be made to require a higher approval early on, to avoid controversy.
 
-In OpenGov, proposals that are not approved after the deciding period are considered rejected by default 
+In OpenGov, proposals that are not approved after the decision period are considered rejected by default 
 and the Decision Deposit is refunded. If the proposal
 manages to stay passing until the end of the Confirmation Period, it is considered approved and is
 scheduled to execute from the proposed origin but after the Enactment Period. The Enactment Period
