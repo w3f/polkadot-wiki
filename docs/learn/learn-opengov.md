@@ -222,7 +222,7 @@ emergency referendum occurring at the same time as a regular referendum (either 
 council-proposed) is the only time that multiple referenda will be able to be voted on
 simultaneously.
 
-OpenGov shares has the deciding period when the proposal is eligible to get approved. If not 
+OpenGov's deciding period is when the proposal is eligible to get approved. If not 
 approved by then end of this period, the proposal is automatically rejected.
 
 #### Voting on a referendum (OpenGov)
