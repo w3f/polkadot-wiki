@@ -62,7 +62,6 @@ module.exports = {
               label: "Identity",
               items: [
                 "learn/learn-identity",
-                "learn/learn-registrar",
               ],
         },
         {
