@@ -3,7 +3,7 @@ id: learn-staking
 title: Introduction to Staking
 sidebar_label: Introduction to Staking
 description: A high level introduction to Staking on Polkadot and NPoS model
-keywords: [staking, stake, nominate, nominating, NPoS]
+keywords: [staking, stake, nominate, nominating, NPoS, faq]
 slug: ../learn-staking
 ---
 
@@ -617,6 +617,16 @@ is receiving rewards.
 
 You can find information about why you might not receive staking rewards on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-).
+
+:::
+
+## Staking FAQ
+
+:::info
+
+See
+[this support page](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
+for the FAQs about staking.
 
 :::
 

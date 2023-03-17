@@ -134,6 +134,18 @@ module.exports = {
           {
             to: '/docs/bug-bounty',
             from: ['/docs/maintain-bug-bounty']
+          },
+          {
+            to: '/docs/learn-staking',
+            from: ['/docs/learn-staking-faq']
+          },
+          {
+            to: '/docs/learn-staking-advanced',
+            from: ['/docs/learn-staking-miner']
+          },
+          {
+            to: '/docs/learn-assets-guides',
+            from: ['/docs/learn-statemint']
           }
         ],
         createRedirects: function (existingPath) {
