@@ -61,14 +61,6 @@ Those roles can also be set to `none` without the ability to change them back. T
 collection is created and all the items are minted. Now, by setting roles to `none` we remove the
 possibility of minting any more items, changing the metadata, or disallowing some item's transfer.
 
-:::info
-
-The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a
-locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged actions can be
-re-allowed anytime).
-
-:::
-
 ### Creating a Collection
 
 You can use the NFTs pallet to create NFT collections. In the Polkadot-JS UI, go to Developer >
@@ -116,9 +108,10 @@ Everything is unlocked by default (bitflag value `0`).
 With all these options, one can decide to modify the price of the collection's items and who can
 mint, receive or buy items in that collection. Time constraints are available with `startBlock` and
 `endBlock` parameters. It is thus possible, for example, to create a schedule in which holders of
-items in collection A (`HolderOf` parameter) will be able to claim for free a limited number of NFTs
-from Collection X (`maxSupply` parameter) only within a specific time frame. You can modify the
-parameters so anyone can buy more NFTs from Collection X.
+items in collection A (`HolderOf` parameter) will be able to claim a limited number of NFTs from
+Collection X (`maxSupply` parameter) only within a specific time frame. You can modify the
+parameters so anyone can buy more NFTs from Collection X. Note that items are never free as even if
+they could not have a price, transaction fees always apply.
 
 This can be useful for events such as Hackathons where participants who bought a ticket receive the
 NFT ticket from Collection A. Then, all holders of at least one item in Collection A (i.e. all
