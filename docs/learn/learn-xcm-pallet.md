@@ -10,8 +10,8 @@ slug: ../learn-xcm-pallet
 The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm))
 provides a developer-friendly interface for most of the common XCM messages.
 
-This pallet provides some default implementations for some traits required by `XcmConfig`, as well
-as an instance of the XCM Executor provided as a trait within the pallet's own configuration.
+This pallet provides some default implementations for traits required by `XcmConfig`, as well the
+`ExecuteXcm` trait over the pallet's own configuration.  
 `pallet-xcm` provides a default interface in the form of a pallet, that can manage and deal with
 XCM-related storage and higher-level dispatchable functions.
 
@@ -21,7 +21,7 @@ local or external chains. `pallet-xcm`'s functionality is separated into three c
 :::note
 
 Remember, all XCM messages are effectively XCVM programs that contain a set of instructions. It is
-the job of the XCM exector to handle these programs, and their subsequent instructions as needed.
+the job of the XCM executor is to handle and execute these programs.
 
 :::
 
