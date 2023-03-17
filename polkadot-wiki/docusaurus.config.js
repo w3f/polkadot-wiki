@@ -244,13 +244,13 @@ module.exports = {
     },
     docsSideNavCollapsible: true,
     /* Banner / Announcement bar */
-    announcementBar: {
-      id: "banner",
-      content:
-      'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
-      backgroundColor: '#e6007a',
-      textColor: 'white',
-      isCloseable: true,
-    },
+    // announcementBar: {
+    //   id: "banner",
+    //   content:
+    //   'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
+    //   backgroundColor: '#e6007a',
+    //   textColor: 'white',
+    //   isCloseable: true,
+    // },
   },
 };
