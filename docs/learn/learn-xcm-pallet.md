@@ -8,20 +8,19 @@ slug: ../learn-xcm-pallet
 ---
 
 The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm))
-provides a developer-friendly interface for most of the common XCMs.
+provides a set of pre-defined, commonly used XCVM programs in the form of a set of extrinsics.
 
 This pallet provides some default implementations for traits required by `XcmConfig`, as well the
-`ExecuteXcm` trait over the pallet's own configuration.  
-`pallet-xcm` provides a default interface in the form of a pallet, that can manage and deal with
-XCM-related storage and higher-level dispatchable functions.
-
-It defines a set of extrinsics that can be utilized to build XCVM programs, either to target the
-local or external chains. `pallet-xcm`'s functionality is separated into three categories:
+`ExecuteXcm` trait over the pallet's own configuration. Where the XCM format defines a set of
+instructions used to construct XCVM programs, `pallet-xcm` defines a set of extrinsics that can be
+utilized to build XCVM programs, either to target the local or external chains. `pallet-xcm`'s
+functionality is separated into three categories:
 
 :::note
 
-Remember, all XCMs are effectively XCVM programs that contain a set of instructions. It is the job
-of the XCM executor is to handle and execute these programs.
+Remember, all XCMs are XCVM programs that follow
+[the XCM format](https://github.com/paritytech/xcm-format). It is the job of the XCM executor is to
+handle and execute these programs.
 
 :::
 
@@ -34,23 +33,24 @@ of the XCM executor is to handle and execute these programs.
 There are two primary primitive extrinsics. These extrinsics handle sending and executing XCVM
 programs as dispatchable functions within the pallet.
 
-1. `execute` - This call is direct access to the XCM executor. It checks the origin and message and
-   ensures that no barrier/filter will block the execution of the XCM. Once it is deemed valid, the
-   message will then be _locally_ executed, therein returning the outcome as an event. This
-   operation is executed on behalf of whichever account has signed the extrinsic. It's possible for
-   only a partial execution to occur.
+1. `execute` - This call contains direct access to the XCM executor. It is tje job of the executor
+   to check the message and ensure that no barrier/filter will block the execution of the XCM. Once
+   it is deemed valid, the message will then be _locally_ executed, therein returning the outcome as
+   an event. This operation is executed on behalf of whichever account has signed the extrinsic.
+   It's possible for only a partial execution to occur.
 2. `send` - This call specifies where a message should be sent externally to a particular
-   destination, i.e., another parachain. It checks the origin, destination, and message and is then
-   sent to the `XcmRouter`.
+   destination, i.e. a parachain, smart contract, or any system which is governed by consensus. As
+   before with `execute`, the Executor checks the origin, destination, and message and is then sent
+   to the `XcmRouter`.
 
 :::info
 
 The XCM pallet needs the `XcmRouter` to send XCMs. It is used to dictate where XCMs are allowed to
 be sent, and which XCM transport protocol to use. For example, Kusama, the canary network, uses the
-`ChildParachainRoute` which only allows for Downward Message Passing from the relay to parachains to
-occur.
+`ChildParachainRouter` which only allows for Downward Message Passing from the relay to parachains
+to occur.
 
-You can read more about [XCM transport methods here.](./learn-xcm-transport.md)
+You can read more about [XCM transport methods here](./learn-xcm-transport.md).
 
 :::
 
@@ -63,20 +63,34 @@ instructions for sending and executing XCMs. Two variants of these functions are
 Otherwise, the fee is taken as needed from the asset being transferred.
 
 1. `reserve_transfer_assets` - Transfer some assets from the local chain to the sovereign account of
-   a destination chain and forward a notification XCM.
+   a destination chain and forward an XCM containing a `ReserveAssetDeposited` instruction, which
+   serves as a notification.
 2. `teleport_assets` - Teleport some assets from the local chain to some destination chain.
 
-### Transfer Reserve vs Teleport
+### Transfer Reserve vs. Teleport
 
 While both extrinsics deal with transferring assets, they exhibit fundamentally different behavior.
 
 - **Teleporting** an asset implies a two-step process: the asset is burned/destroyed in the origin
   chain and re-minted to whatever account is specified at the destination. Teleporting should only
   occur if there is an inherent and bilateral trust between the two chains, as the tokens destroyed
-  _could not_ necessarily be guaranteed to have the same properties when minted at the destination.
-- **Transferring** or **reserving** an asset implies the movement of funds from one authority to
-  another, in this case, from the Origin of the sender's chain and into the sovereign account (who
-  will ultimately benefit from the assets) on the destination chain.
+  _could not_ necessarily be guaranteed to have the same properties when minted at the destination,
+  as well as that there has to be **trust** that the a particular chain burned, or re-minted the
+  assets.
+- **Transferring** or **reserving** an asset implies that **equivalent** assets (i.e, native
+  currency, like `DOT` or `KSM`) are withdrawn from _sovereign account_ of the origin chain and
+  deposited into the sovereign account on the destination chain. Unlike teleporting an asset, it is
+  not destroyed and re-minted, rather a trusted, 3rd entity is used (i.e., Statemint on Polkadot) to
+  **reserve** the assets, wherein the sovereign account on the destination chain obtains ownership
+  of these assets.
+
+:::info
+
+A sovereign account refers to an account within a particular consensus system. Even though accounts
+may be different in terms of factors such as address, XCM agnostic nature enables for communication
+between these sovereign accounts that are in different consensus systems.
+
+:::
 
 ## Version Negotiation Extrinsics
 
