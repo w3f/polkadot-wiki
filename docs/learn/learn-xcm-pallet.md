@@ -10,11 +10,12 @@ slug: ../learn-xcm-pallet
 The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm))
 provides a set of pre-defined, commonly used XCVM programs in the form of a set of extrinsics.
 
-This pallet provides some default implementations for traits required by `XcmConfig`, as well the
-`ExecuteXcm` trait over the pallet's own configuration. Where the XCM format defines a set of
-instructions used to construct XCVM programs, `pallet-xcm` defines a set of extrinsics that can be
-utilized to build XCVM programs, either to target the local or external chains. `pallet-xcm`'s
-functionality is separated into three categories:
+This pallet provides some default implementations for traits required by `XcmConfig`. The XCM
+executor is also included as an associated type within the pallet's configuration.
+
+Where the XCM format defines a set of instructions used to construct XCVM programs, `pallet-xcm`
+defines a set of extrinsics that can be utilized to build XCVM programs, either to target the local
+or external chains. `pallet-xcm`'s functionality is separated into three categories:
 
 :::note
 
@@ -108,6 +109,18 @@ They change any relevant storage aspects that enforce anything to do with XCM ve
 
 ## Fees in the XCM Pallet
 
-Message fees are only paid if the interior location is **not** equal to the interpreting consensus
-system (known as `Here` in the context of an XCM Multilocation). Otherwise, the chain bears the
-fees. If applicable, fees are withdrawn from the assets from the specified `MultiLocation`.
+Message fees are only paid if the interior location does not equal the interpreting consensus system
+(known as Here in the context of an XCM `Multilocation`). Otherwise, the chain bears the fees. If
+applicable, fees are withdrawn from the assets from the specified `MultiLocation` and used as
+payment to execute any subsequent instructions within the XCM.
+
+Fees are generally dependent on several factors within the `XcmConfig`. For example, the barrier may
+negate any fees be paid at all.
+
+Before any XCM is sent, and if the destination chain’s barrier requires it, a `BuyExecution`
+instruction is used to buy the necessary weight for the XCM. XCM fee calculation is handled by the
+Trader, which iteratively calculates the total fee based on the number of instructions.
+
+The Trader used to calculate the weight (time for computation in consensus) to include in the
+message. Fee calculation in XCM is highly configurable and, for this reason, subjective to whichever
+configuration is in place.
