@@ -88,7 +88,7 @@ While both extrinsics deal with transferring assets, they exhibit fundamentally 
   chain obtains ownership of these assets.
 
   It's worth noting that this means that some other mechanism is needed to ensure that the balance
-  on the destination does not exceed the reserve amount being held in this 3rd party.
+  on the destination does not exceed the amount being held in reserve chain.
 
 :::info
 
