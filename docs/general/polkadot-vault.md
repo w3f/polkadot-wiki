@@ -47,6 +47,12 @@ impossible to find out the private key of your account only with that QR code.
 
 ## Update the Vault App
 
+:::danger
+
+Make sure you always have your mnemonic seed phrase secure and available to you.
+
+:::
+
 To securely update the Polkadot Vault App follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Upgrading.html).
 
