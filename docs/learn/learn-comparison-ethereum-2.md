@@ -112,7 +112,7 @@ There are two main differences between Ethereum 2.0 and
    validators distribute an [erasure coding](./learn-availability.md#erasure-codes) to all
    validators in the system, such that anyone - not only the shard's validators - can reconstruct a
    parachain's block and test its validity. The random parachain-validator assignments and secondary
-   checks performed by randomly selected validators make it impossible for the small set of
+   checks performed by randomly selected validators make it less likely for the small set of
    validators on each parachain to collude.
 
 ## Staking Mechanics
