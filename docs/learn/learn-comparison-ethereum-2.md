@@ -7,26 +7,28 @@ keywords: [ethereum, ethereum 2.0, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---
 
-Polkadot and Ethereum 2.0 are both sharded blockchain protocols. As such, they provide both a)
-scalability by executing transactions in separate shards and b) a protocol to send messages between
-shards.
+Polkadot and Ethereum 2.0 are sharded blockchains as they provide both a) scalability by executing
+transactions in separate shards and b) a protocol to send messages between shards.
 
 ## Model
 
-The shards in Ethereum 2.0 all have the same state transition function (STF), as in the rules
-governing how the blockchain can change state with each block. This STF provides an interface for
-smart contract execution. Contracts exist on a single shard and can send asynchronous messages
-between shards.
+The shards in Ethereum 2.0 have the same state transition function (STF), as the rules governing how
+the blockchain can change state with each block are the same for all shards. Essentially, all shards
+are identical copies. The STF provides an interface for smart contract execution, where contracts
+exist on a single shard and can send asynchronous messages between shards.
 
-Likewise, in Polkadot, each shard hosts core logic, the shards are executed in parallel, and
-Polkadot can send cross-shard asynchronous messages. However, each Polkadot shard (in Polkadot
-terminology, "[parachain](learn-parachains.md)") has a unique STF. Applications can exist either
-within a single shard or across shards by composing logic. Polkadot uses WebAssembly (Wasm) as a
-"meta-protocol". A shard's STF can be abstract as long as the validators on Polkadot can execute it
-within a Wasm environment. Polkadot will support smart contracts through parachains. To offer some
-perspective, on Ethereum, smart contracts can call each other synchronously in the same shard and
-asynchronously between shards. On Polkadot, smart contracts can call each other synchronously in the
-same parachain and asynchronously across parachains.
+Likewise, on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core
+logic, the shards are executed in parallel, and can send cross-shard asynchronous messages. However,
+each shard (i.e. [parachain](learn-parachains.md)) has a unique STF. Applications can exist either
+within a single shard or across shards by composing logic.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
+([Wasm](./learn-wasm.md)) as a "meta-protocol". A shard's STF can be abstract as long as the
+validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can execute it within a
+Wasm environment. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart
+contracts through parachains. To offer some perspective, on Ethereum, smart contracts can call each
+other synchronously in the same shard and asynchronously between shards. On Polkadot, smart
+contracts can call each other synchronously in the same parachain and asynchronously across
+parachains.
 
 ## Architecture
 
