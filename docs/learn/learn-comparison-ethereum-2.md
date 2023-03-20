@@ -262,35 +262,42 @@ SPREE carry additional guarantees about provenance and interpretation by the rec
 ## Governance
 
 Ethereum 2.0 governance is still unresolved. Ethereum uses off-chain governance procedures like
-GitHub discussions, All Core Devs calls, and Ethereum Magicians to make decisions about the
-protocol. See
-[Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium) for
-more information.
+GitHub discussions, Core Devs Meetings, and Ethereum Magicians to make decisions about the protocol.
+See [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
+for more information.
 
-Polkadot uses on-chain [governance](learn-governance.md) with a multicameral system. There are
-several avenues to issue proposals, e.g. from the on-chain Council, the Technical Committee, or the
-public. All proposals ultimately pass through a public referendum, where the majority of tokens can
-always control the outcome. Polkadot uses adaptive quorum biasing to set the passing threshold for
-low-turnout referenda. Referenda can cover various topics, including fund allocation from an
-on-chain [Treasury](learn-treasury.md) or modifying the underlying runtime code of the chain.
-Decisions get enacted on-chain and are binding and autonomous.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
+[governance](./learn-opengov.md) with a multicameral system. There are several avenues to issue
+proposals, e.g. from the on-chain Council, the Technical Committee, or the public. All proposals
+ultimately pass through a public referendum, where the majority of tokens can always control the
+outcome. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses adaptive quorum biasing
+to set the passing threshold for low-turnout referenda. Referenda can cover various topics,
+including fund allocation from an on-chain [Treasury](./learn-treasury.md) or modifying the
+underlying runtime code of the chain. Decisions get enacted on-chain and are binding and autonomous.
 
 ## Upgrades
 
 Upgrades on Ethereum 2.0 will follow the standard hard-fork procedure, requiring validators to
 upgrade their nodes to implement protocol changes.
 
-Polkadot can enact chain upgrades and successful proposals using the Wasm meta-protocol without a
-hard fork. Anything within the STF, the transaction queue, or off-chain workers can be upgraded
-without forking the chain.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact chain upgrades and
+successful proposals using the Wasm meta-protocol without a hard fork. Anything within the STF, the
+transaction queue, or off-chain workers can be upgraded without forking the chain.
 
 ## Conclusion
 
-Ethereum 2.0 and Polkadot both use a sharded model where shard chains ("shards" in Ethereum 2.0 and
-"parachains/parathreads" in Polkadot) are secured by a main chain by linking shard state in the
-blocks of the main chains. The two protocols differ in a few main areas. First, all shards in
-Ethereum 2.0 has the same STF, while Polkadot lets shards have an abstract STF. Second, governance
-processes in Ethereum 2.0 are planned to be off-chain and thus require coordination for a hard fork
-to enact governance decisions. In contrast, in Polkadot, the decisions are on-chain and enacted
-autonomously. Third, the validator selection mechanisms differ because Polkadot can provide strong
-availability and validity guarantees with fewer validators per shard.
+Ethereum 2.0 and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded
+model where shard chains ("shards" in Ethereum 2.0 and parachains in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}) are secured by a main chain by
+linking shard state in the blocks of the main chains. Main differences between the two protocols
+are:
+
+- All shards in Ethereum 2.0 have the same STF, while
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lets shards have an abstract STF.
+- Governance processes in Ethereum 2.0 are planned to be off-chain and thus require coordination for
+  a hard fork to enact governance decisions. In contrast, in
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
+  enacted autonomously.
+- Validator selection mechanisms differ as
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong availability and
+  validity guarantees with fewer validators per shard.
