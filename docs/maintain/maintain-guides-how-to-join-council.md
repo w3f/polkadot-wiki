@@ -10,8 +10,8 @@ slug: ../maintain-guides-how-to-join-council
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
-[governance page](../learn/learn-governance.md#council). This guide will walk you through entering your
-candidacy to the council.
+[governance page](../learn/learn-governance.md#council). This guide will walk you through entering
+your candidacy to the council.
 
 ## Submit Candidacy
 
@@ -49,10 +49,10 @@ to make a vote for yourself (optional).
 
 ![voting button on UI](../assets/council/polkadotjs_vote_button.png)
 
-The council uses [Phragmén](../learn/learn-phragmen.md) approval voting, which is also used in the validator
-elections. This means that you can choose up to 16 distinct candidates to vote for and your stake
-will equalize between them. For this guide, choose to approve your own candidacy by clicking on the
-switch next to your account and changing it to say "Aye."
+The council uses [Phragmén](../learn/learn-phragmen.md) approval voting, which is also used in the
+validator elections. This means that you can choose up to 16 distinct candidates to vote for and
+your stake will equalize between them. For this guide, choose to approve your own candidacy by
+clicking on the switch next to your account and changing it to say "Aye."
 
 ![voting pop up on UI](../assets/council/polkadotjs_voting.png)
 

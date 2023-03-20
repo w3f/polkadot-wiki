@@ -8,6 +8,7 @@ slug: ../maintain-sync
 ---
 
 import Tabs from "@theme/Tabs";
+
 import TabItem from "@theme/TabItem";
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom
@@ -16,8 +17,8 @@ always better to rely on your own infrastructure than on a third-party-hosted on
 decentralized world.
 
 This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
-same process applies to any other [Substrate](https://substrate.io)-based chain. First,
-let's clarify the term _full node_.
+same process applies to any other [Substrate](https://substrate.io)-based chain. First, let's
+clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -28,16 +29,16 @@ pending changes on top of it, and emits the events that are the result of these 
 state of the chain at block 1 is used in the same way to build the state of the chain at block 2,
 and so on. Once two thirds of the validators agree on a specific block being valid, it is finalized.
 
-An **archive node** keeps all the past blocks. An archive node makes it convenient to query the past
-state of the chain at any point in time. Finding out what an account's balance at a certain block
-was, or which extrinsics resulted in a certain state change are fast operations when using an
-archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth
-block this was around 660 GB.
+An **archive node** keeps all the past blocks and their states. An archive node makes it convenient
+to query the past state of the chain at any point in time. Finding out what an account's balance at
+a certain block was, or which extrinsics resulted in a certain state change are fast operations when
+using an archive node. However, an archive node takes up a lot of disk space - around Kusama's 12
+millionth block this was around 660 GB.
 
-:::tip 
+:::tip
 
-The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama nodes
-in real-time.
+The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama
+nodes in real-time.
 
 :::
 
@@ -45,15 +46,16 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** is _pruned_: it discards all finalized blocks older than a configurable number
-except the genesis block: This is 256 blocks from the last finalized one, by default. A node that is
-pruned this way requires much less space than an archive node.
+A **full node** prunes historical states: all finalized blocks' states older than a configurable
+number except the genesis block's state. This is 256 blocks from the last finalized one, by default.
+A node that is pruned this way requires much less space than an archive node.
 
-A full node may eventually be able to rebuild the entire chain with no additional information, and
-become an archive node, but at the time of writing, this is not implemented. If you need to query
-historical blocks past what you pruned, you need to purge your database and resync your node
-starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to
-avoid needing to sync from genesis with the network, and only need the blocks past that snapshot.
+A full node may eventually be able to rebuild every block's state with no additional information,
+and become an archive node, but at the time of writing, this is not implemented. If you need to
+query historical blocks' states past what you pruned, you need to purge your database and resync
+your node starting in archive mode. Alternatively you can use a backup or snapshot of a trusted
+source to avoid needing to sync from genesis with the network, and only need the states of blocks
+past that snapshot.
 
 Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
 directly on the network without relying on a centralized infrastructure provider.
@@ -62,20 +64,19 @@ Another type of node is a **light node**. A light node has only the runtime and 
 but does not store past blocks and so cannot read historical data without requesting it from a node
 that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
 light nodes is a browser extension, which is a node in its own right, running the runtime in WASM
-format as well as a full or light node that is completely encapsulated in WASM and can be integrated 
+format as well as a full or light node that is completely encapsulated in WASM and can be integrated
 into webapps: https://github.com/paritytech/smoldot#wasm-light-node
 
 :::note Substrate Connect
 
-[Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with 
-substrate based blockchains in the browser without using an RPC server. It is a light node that runs 
-entirely in Javascript. Substrate Connect uses a 
-[smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the  blockchain network without relying on specific 
-3rd parties. Substrate Connect is available as a 
+[Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with
+substrate based blockchains in the browser without using an RPC server. It is a light node that runs
+entirely in Javascript. Substrate Connect uses a
+[smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the
+blockchain network without relying on specific 3rd parties. Substrate Connect is available as a
 [browser extension](https://substrate.io/developers/substrate-connect/) on both Chrome and Firefox.
 
 :::
-
 
 <!--seperates content from instructions-->
 
@@ -88,12 +89,11 @@ entirely in Javascript. Substrate Connect uses a
 This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
-:::note The bash commands that are provided to run against **your node** use
-`Polkadot` as the default chain
+:::note The bash commands that are provided to run against **your node** use `Polkadot` as the
+default chain
 
-Use the `--chain` flag if you are
-following the setup instructions to setup a `Kusama` node.
-For example:
+Use the `--chain` flag if you are following the setup instructions to setup a `Kusama` node. For
+example:
 
 ```bash
 ./target/release/polkadot --name "Your Node's Name" --chain kusama
@@ -101,13 +101,10 @@ For example:
 
 :::
 
-<Tabs
-groupId="operating-systems"
-values={[
-{label: 'macOS', value: 'mac'},
-{label: 'Windows', value: 'win'},
-{label: 'Linux', value: 'linux'},
-]}>
+<Tabs groupId="operating-systems" values={[ {label: 'macOS', value: 'mac'}, {label: 'Windows',
+value: 'win'}, {label: 'Linux (standalone)', value: 'linux-standalone'}, {label: 'Linux (package)',
+value: 'linux-package'} ]}>
+
 <TabItem value="mac">
 
 - Install Homebrew within the terminal by running:
@@ -145,7 +142,8 @@ values={[
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 - Install [Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (same webpage).
 
-- Determine the latest version of the [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+- Determine the latest version of the
+  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
 - Download the correct Polkadot binary within Ubuntu by running the following command. Replace
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
@@ -166,16 +164,17 @@ values={[
 - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
 
 </TabItem>
-<TabItem value="linux">
+<TabItem value="linux-standalone">
 
-- Determine the latest version of the [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+- Determine the latest version of the
+  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
 
   :::info
 
-  The nature of pre-built binaries means that they may not work on your particular architecture 
-  or Linux distribution. If you see an error like `cannot execute binary file: Exec format error` 
-  it likely means the binary is not compatible with your system. You will either need to compile 
-  the [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
+  The nature of pre-built binaries means that they may not work on your particular architecture or
+  Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it
+  likely means the binary is not compatible with your system. You will either need to compile the
+  [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
 
   :::
 
@@ -196,13 +195,96 @@ values={[
 - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
 
 </TabItem>
+<TabItem value="linux-package">
+
+You can also install Polkadot from one of our package repositories.
+
+Installation from the Debian or rpm repositories will create a `systemd` service that can be used to
+run a Polkadot node. The service is disabled by default, and can be started by running
+`systemctl start polkadot` on demand (use `systemctl enable polkadot` to make it auto-start after
+reboot). By default, it will run as the `polkadot` user. Command-line flags passed to the binary can
+be customized by editing `/etc/default/polkadot`. This file will not be overwritten on updating
+polkadot.
+
+### Debian-based (Debian, Ubuntu)
+
+Currently supports Debian 10 (Buster) and Ubuntu 20.04 (Focal), and derivatives. Run the following
+commands as the `root` user.
+
+```bash
+# Import the security@parity.io GPG key
+gpg --recv-keys --keyserver hkps://keys.mailvelope.com 9D4B2B6EB8F97156D19669A9FF0812D491B96798
+gpg --export 9D4B2B6EB8F97156D19669A9FF0812D491B96798 > /usr/share/keyrings/parity.gpg
+# Add the Parity repository and update the package index
+echo 'deb [signed-by=/usr/share/keyrings/parity.gpg] https://releases.parity.io/deb release main' > /etc/apt/sources.list.d/parity.list
+apt update
+# Install the `parity-keyring` package - This will ensure the GPG key
+# used by APT remains up-to-date
+apt install parity-keyring
+# Install polkadot
+apt install polkadot
+
+```
+
+If you don't want polkadot package to be automatically updated when you update packages on your
+server, you can issue the following command:
+
+```bash
+sudo apt-mark hold polkadot
+```
+
+### RPM-based (Fedora, CentOS)
+
+Currently supports Fedora 32 and CentOS 8, and derivatives.
+
+```bash
+# Install dnf-plugins-core (This might already be installed)
+dnf install dnf-plugins-core
+# Add the repository and enable it
+dnf config-manager --add-repo https://releases.parity.io/rpm/polkadot.repo
+dnf config-manager --set-enabled polkadot
+# Install polkadot (You may have to confirm the import of the GPG key, which
+# should have the following fingerprint: 9D4B2B6EB8F97156D19669A9FF0812D491B96798)
+dnf install polkadot
+```
+
+:::info
+
+If you choose to use a custom folder for the polkadot home by passing `--base-path '/custom-path'`,
+you will need to issue following command:
+
+```bash
+sudo mkdir /etc/systemd/system/polkadot.service.d
+```
+
+And create a new file inside this folder:
+
+```bash
+sudo -e /etc/systemd/system/polkadot.service.d/custom.conf
+```
+
+With the following content:
+
+```
+[Service]
+ReadWritePaths=/custom-path
+```
+
+And finally issue a reload to have your modifications applied by systemd:
+
+```bash
+systemctl daemon-reload
+```
+
+:::
+
+</TabItem>
 </Tabs>
 
 ## Get Substrate
 
-Follow instructions as outlined
-[here](https://docs.substrate.io/quick-start/) - note that Windows users will
-have their work cut out for them. It's better to use a virtual machine instead.
+Follow instructions as outlined [here](https://docs.substrate.io/quick-start/) - note that Windows
+users will have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
 
@@ -274,10 +356,10 @@ after the node is in sync.
 
 Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so
 it's best left up to those that either already have familiarity with docker, or have completed the
-other set-up instructions in this guide.
-Be aware that when you run polkadot in docker the process only listen on localhost by default. 
-If you would like to connect to your node's services (rpc, websockets, and prometheus) you need to ensure
-that you run you node with the `--rpc-external`, `--ws-external`, and `--prometheus-external` commands.
+other set-up instructions in this guide. Be aware that when you run polkadot in docker the process
+only listen on localhost by default. If you would like to connect to your node's services (rpc,
+websockets, and prometheus) you need to ensure that you run you node with the `--rpc-external`,
+`--ws-external`, and `--prometheus-external` commands.
 
 ```zsh
 docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external

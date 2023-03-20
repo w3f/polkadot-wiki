@@ -7,7 +7,7 @@ keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
 for their parachain bids in a decentralised crowdloan.
@@ -25,24 +25,57 @@ this
 :::note Testing on Rococo
 
 For information on how to participate in the crowdloan and parachain auction testing on Rococo,
-please see the
-{{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
+please see the [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
 
 :::
+
+## Crowdloan Campaigns vs Parachain Auctions
+
+It is important to recognize that starting a crowdloan campaign is **optional** for participating in
+a parachain slot auction. The parachain slot auction can also be won directly through self-funding
+without community involvement. To reiterate, crowdloan campaigns are just one of the means to win
+auctions, which allow the community to participate in a trustless and permissionless way.
+
+Let's look at a scenario where Project A is hoping to gain a parachain slot on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but they don't have enough tokens to
+bid directly to win the parachain auction. Project A could benefit from starting a new crowdloan
+campaign to help secure a parachian slot. Crowdloans are trustless and are supported natively on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, allowing the community to bond their
+tokens on Project A's behalf for the entire parachain lease duration. This will allow Project A to
+compete with projects that may have access to greater capital, given the project has sufficient
+community support. In return, the community contributors are rewarded by the projects that win the
+parachain slot, which would typically compensate for the opportunity cost of bonding their tokens
+for the lease duration.
+
+On the other hand, let's say Project B, which is more established and has access to capital, is
+hoping to secure a parachain slot through self-funding. Project B is not relying on any community
+funding (at least via the crowdloan mechanism), so they will have to determine how much funding they
+can allocate towards winning a slot.
+
+Project B is in full control of how much they are ultimately willing to contribute towards their
+goal of gaining a parachain slot. Project B need not work on coming up with a rewards model for
+community contributors like Project A. In contrast, crowdloan campaigns are beneficial for projects
+that have access to limited capital but have strong community support. They are also beneficial for
+projects that are able to successfully bid to win the auction with self-funding, but are looking for
+a mechanism to bootstrap their community and get noticed by the key actors in the ecosystem.
+
+It is publicly visible on-chain whether or not a project is bidding directly or through a crowdloan
+campaign. More details regarding the process of creating and executing a crowdloan campaign are
+provided below.
 
 ## Starting a Crowdloan Campaign
 
 Anyone who has registered a parachain can create a new crowdloan campaign for a slot by depositing a
 specified number of tokens. A campaign is configured as a range of slots (i.e. the duration of the
-{{ polkadot: [parachain](learn-parachains.md) :polkadot }}
-{{ kusama: [parachain](learn-parachains.md) :kusama }} will bid for), a cap, and a duration. The
-duration can last over several auctions, meaning that the team will not need to restart the campaign
-just because they do not secure a slot on their first attempt.
+[parachain](learn-parachains.md) will bid for), a cap, and a duration. The duration can last over
+several auctions as long as the range of slots matches those of the auction (i.e. the first lease
+period of the crowdloan is the same or bigger than that of the auction). This means that a team will
+not need to restart the campaign just because they do not secure a slot on their first attempt.
 
 :::info Crowdloan Submission Deposit Required
 
 In order to create a new crowdloan campaign, your account must have
-{{ polkadot: 500 DOT :polkadot }}{{ kusama: 10 KSM :kusama }} transferrable which will be reserved
+{{ polkadot: 500 DOT :polkadot }}{{ kusama: 100 KSM :kusama }} transferrable which will be reserved
 for the duration of the crowdloan
 
 :::

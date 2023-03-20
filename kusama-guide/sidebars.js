@@ -7,14 +7,15 @@ module.exports = {
         "general/kusama/kusama-getting-started",
         "general/kusama/kusama-coc",
         "general/kusama/kusama-claims",
-        "learn/learn-polkadotjs",
+        "general/wallets",
+        "general/polkadotjs",
         "learn/learn-balance-transfers",
         "learn/learn-auction",
         "learn/learn-parachains",
+        "general/metadata",
         "learn/learn-parathreads",
         "learn/learn-bridges",
         "learn/learn-crowdloans",
-        "general/ens",
         "general/kusama/kusama-parameters",
         "general/kusama/kusama-timeline",
         "general/kusama/kusama-community",
@@ -42,7 +43,6 @@ module.exports = {
               label: "Accounts",
               items: [
                 "learn/learn-account-generation",
-                "learn/learn-account-restore",
                 "general/kusama/kusama-social-recovery",
                 "learn/learn-proxies",
               ],
@@ -62,7 +62,6 @@ module.exports = {
               label: "Identity",
               items: [
                 "learn/learn-identity",
-                "learn/learn-registrar",
               ],
         },
         {
@@ -70,6 +69,7 @@ module.exports = {
               label: "Nominate",
               items: [
                 "learn/learn-staking",
+                "learn/learn-staking-advanced",
                 "maintain/kusama/maintain-guides-how-to-nominate-kusama",
               ],
         },
@@ -87,6 +87,7 @@ module.exports = {
               label: "Governance",
               items: [
                 "learn/learn-governance",
+                "learn/learn-opengov",
                 "maintain/maintain-guides-how-to-join-council",
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
@@ -117,7 +118,6 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-wallets",
             "build/build-substrate",
             "build/build-ss58-registry",
           ],

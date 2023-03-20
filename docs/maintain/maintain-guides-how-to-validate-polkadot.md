@@ -7,16 +7,15 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
-import MinimumStake from "./../../components/Minimum-Stake"
+import MinimumStake from "./../../components/Minimum-Stake";
 
-:::info
+:::tip
 
-The following information applies to the Polkadot network. If you want to set up a validator on
-Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
-
-This guide will instruct you how to set up a validator node on the Polkadot network.
+If you are a beginner, it is recommended that you start your validator journey on Kusama network.
+Check the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) for details on how to get
+started.
 
 :::
 
@@ -24,7 +23,7 @@ This guide will instruct you how to set up a validator node on the Polkadot netw
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
 only your own stake, but also the stake of your current nominators. If you make a mistake and get
-slashed, your money and your reputation will be at risk. However, running a validator can also be
+slashed, your tokens and your reputation will be at risk. However, running a validator can also be
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
@@ -40,25 +39,22 @@ tackle yourself. Being a validator involves more than just executing the Polkado
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator.md) information to make sure you understand the
-factors to consider when constructing your infrastructure. Web3 Foundation also maintains a
-[reference implementation for a validator set-up](https://github.com/w3f/polkadot-validator-setup)
-that you can use by deploying yourself (video walkthrough is available
-[here](https://www.youtube.com/watch?v=tTn8P6t7JYc)). As you progress in your journey as a
+factors to consider when constructing your infrastructure. As you progress in your journey as a
 validator, you will likely want to use this repository as a _starting point_ for your own
 modifications and customizations.
 
 If you need help, please reach out on the
-[Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
-on Riot. The team and other validators are there to help answer questions and provide tips from
+[Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) on
+Element. The team and other validators are there to help answer questions and provide tips from
 experience.
 
-### How many DOT do I need?
+### How many DOT do I need to become an active Validator?
 
 You can have a rough estimate on that by using the methods listed
 [here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
 To be elected into the set, you need a minimum stake behind your validator. This stake can come from
 yourself or from [nominators](../learn/learn-nominator.md). This means that as a minimum, you will
-need enough DOT to set up Stash and Controller [accounts](../learn/learn-keys.md) with the
+need enough DOT to set up Stash and Controller [accounts](../learn/learn-cryptography.md) with the
 existential deposit, plus a little extra for transaction fees. The rest can come from nominators. To
 understand how validators are elected, check the
 [NPoS Election algorithms](../learn/learn-phragmen.md) page.
@@ -66,17 +62,17 @@ understand how validators are elected, check the
 :::info On-Chain Data for Reference
 
 On Polkadot, the minimum stake backing a validator in the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={18684315524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={18684315524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>. :kusama }}
+{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
 
 On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5367388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5367388652143741} /> :polkadot }} in the
+{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
+{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
 era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 :::
 
 **Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
@@ -154,6 +150,10 @@ If you do not have "curl" installed, run:
 ```bash
 sudo apt install curl
 ```
+
+It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
+RPC interactions. Installation instructions for various operating systems can be found
+[here](https://github.com/vi/websocat#installation).
 
 :::
 
@@ -362,20 +362,23 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-:::info By default, Validator nodes are in archive mode
-
-If you've already synced the chain not in archive mode, you must first remove the database with
-`polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
-
-:::
-
-You can begin syncing your node by running the following command:
+You can begin syncing your node by running the following command if you do not want to start in
+validator mode right away:
 
 ```sh
-./target/release/polkadot --pruning=archive
+./target/production/polkadot
 ```
 
-if you do not want to start in validator mode right away.
+:::info
+
+If you want to run a validator on Kusama, you have an option to specify the chain. With no
+specification, this would default to Polkadot.
+
+```sh
+./target/production/polkadot --chain=kusama
+```
+
+:::
 
 ```
 2021-06-17 03:07:07 Parity Polkadot
@@ -392,7 +395,7 @@ if you do not want to start in validator mode right away.
 2021-06-17 03:07:10 Listening for new connections on 127.0.0.1:9944.
 ```
 
-:::note Example of node sync
+:::info Example of node sync
 
 ```
 2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u
@@ -405,10 +408,28 @@ if you do not want to start in validator mode right away.
 
 :::
 
-The `--pruning=archive` flag is implied by the `--validator` flag, so it is only required explicitly
-if you start your node without one of these two options. If you do not set your pruning to archive
-node, even when not running in validator mode, you will need to re-sync your database when you
-switch.
+:::tip Use Warp sync for faster syncing
+
+By default, the node performs `full` sync, which downloads and validates the full blockchain
+history. Full sync works by listening to announced blocks and requesting the blocks from the
+announcing peers, or just the block headers in case of light clients.
+
+`Fast` sync is another option that works by downloading the block header history and validating the
+authority set changes in order to arrive at a specific (usually the most recent) header. After the
+desired header has been reached and verified, the state can be downloaded and imported. Once this
+process has been completed, the node can proceed with a full sync.
+
+`./target/production/polkadot --sync warp`
+
+`Warp sync` initially downloads and validates the finality proofs from
+[GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa) and then downloads the state of the
+latest finalized block. After the warp sync, the node is ready to import the latest blocks from the
+network and can be used as a Validator. The blocks from genesis will be downloaded in the
+background. Check
+[this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
+for more information about the different sync options available.
+
+:::
 
 :::note Validators should sync using the RocksDb backend
 
@@ -438,7 +459,7 @@ Snapshots are compressed backups of the database directory of Polkadot/Kusama no
 whole chain (or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed
 below are a few public snapshot providers for Polkadot and Kusama.
 
-- [STAKEWORLD](https://stakeworld.nl/docs/snapshot)
+- [Stakeworld](https://stakeworld.io/snapshot)
 - [Polkachu](https://polkachu.com/snapshots)
 - [Polkashots](https://polkashots.io/)
 
@@ -518,7 +539,7 @@ Once your node is fully synced, stop the process by pressing Ctrl-C. At your ter
 will now start running the node.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/production/polkadot --validator --name "name on telemetry"
 ```
 
 Similarly:
@@ -555,8 +576,8 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps
-RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+You can generate your [Session keys](../learn/learn-cryptography.md) in the client via the apps RPC.
+If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
 validator node. You can configure the apps dashboard to connect to the endpoint of your validator in
 the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
 you will not be able to use this method since making RPC requests to this node would effect the
@@ -573,10 +594,10 @@ and remember to save the output that you get back for a later step.
 #### Option 2: CLI
 
 If you are on a remote server, it is easier to run this command on the same machine (while the node
-is running with the default HTTP RPC port configured):
+is running with the default WS RPC port configured):
 
 ```sh
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
+echo '{"id":1,"jsonrpc":"2.0","method":"author_rotateKeys","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9944
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
@@ -606,11 +627,11 @@ will show all nodes on the Polkadot network, which is why it is important to sel
 
 In this example, we used the name `techedtest` and have successfully located it upon searching:
 
-![dashboard validate](../assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
+![polkadot-dashboard-telemetry](../assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
 
 ### Setup via Validator Tab
 
-![dashboard validate](../assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
+![polkadot-dashboard-validate-1](../assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
 
 Here you will need to input the Keys from `rotateKeys`, which is the Hex output from
 `author_rotateKeys`. The keys will show as pending until applied at the start of a new session.
@@ -670,7 +691,7 @@ other peers over the network.
 ### How do I clear all my chain data?
 
 ```sh
-./target/release/polkadot purge-chain
+./target/production/polkadot purge-chain
 ```
 
 :::info

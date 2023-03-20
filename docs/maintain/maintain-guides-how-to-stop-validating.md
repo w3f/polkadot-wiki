@@ -24,7 +24,7 @@ extrinsics.
 
 To chill your validator or nominator, call the `staking.chill()` extrinsic. See the
 [How to Chill](maintain-guides-how-to-chill.md) page for more information. You can also
-[claim your rewards](../learn/learn-simple-payouts.md#claiming-rewards) at this time.
+[claim your rewards](../learn/learn-staking-advanced.md) at this time.
 
 ## Purge validator session keys
 
@@ -35,10 +35,10 @@ were set).
 
 :::caution Purge keys using the same account that set the keys
 
-Make sure to call the session.purge_keys() extrinsic from the same account that set the keys in the 
-first place in order for the correct reference to be removed. Calling the `session.purge_keys()` from 
-the wrong account, although it may succeed, will result in a reference on the other account that
-**cannot** be removed, and as a result that account cannot be reaped.
+Make sure to call the session.purge_keys() extrinsic from the same account that set the keys in the
+first place in order for the correct reference to be removed. Calling the `session.purge_keys()`
+from the wrong account, although it may succeed, will result in a reference on the other account
+that **cannot** be removed, and as a result that account cannot be reaped.
 
 :::
 
@@ -48,7 +48,7 @@ the wrong account, although it may succeed, will result in a reference on the ot
 to rebond, purge the session keys, unbond, and wait the unbonding period again before being able to
 transfer your tokens.
 
-See [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) for more details.
+See [Unbonding and Rebonding](maintain-guides-how-to-nominate-polkadot.md) for more details.
 
 :::
 

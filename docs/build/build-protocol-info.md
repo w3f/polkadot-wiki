@@ -41,13 +41,14 @@ Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-form
 handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
 Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
-See the [SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses) in the Substrate documentation for
-encoding information and a more comprehensive list of network prefixes.
+See the
+[SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses)
+in the Substrate documentation for encoding information and a more comprehensive list of network
+prefixes.
 
 :::warning Do not use regular expressions (regex) to validate addresses
 
-Always verify using the
-prefix and checksum of the address. Substrate API Sidecar provides an
+Always verify using the prefix and checksum of the address. Substrate API Sidecar provides an
 `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
 address.
 
@@ -91,17 +92,17 @@ make the transfer if doing so would result in reaping the sender's account.
 
 :::info The existential deposit is a property of the Relay Chain
 
-Your account on the Relay Chain has no direct impact on parachains as you have seperate accounts 
-on each parachain. Still, parachains are able to define an existential deposit of their own, but this 
+Your account on the Relay Chain has no direct impact on parachains as you have seperate accounts on
+each parachain. Still, parachains are able to define an existential deposit of their own, but this
 is seperate to that of the Relay Chain ED.
 
 :::
 
 :::note Existential deposit for Statemint
 
-The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT)
- as well as lower transaction fees. It is highly recommended to handle balance
-transfers on Statemint. Statemint integration is discussed in the next page of the guide.
+The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT) as
+well as lower transaction fees. It is highly recommended to handle balance transfers on Statemint.
+Statemint integration is discussed in the next page of the guide.
 
 :::
 
@@ -136,7 +137,34 @@ More info:
 
 ## Extrinsics and Events
 
+### Block Format
+
+A Polkadot block consists of a block header and a block body. The block body is made up of
+extrinsics representing the generalization of the concept of transactions. Extrinsics can contain
+any external data the underlying chain wishes to validate and track.
+
+The block header is a 5-tuple containing the following elements:
+
+- `parent_hash`: a 32-byte Blake2b hash of the SCALE encoded parent block header.
+- `number`: an integer representing the index of the current block in the chain. It is equal to the
+  number of the ancestor blocks. The genesis state has number 0.
+- `state_root`: the root of the Merkle tree, used as storage for the system.
+- `extrinsics_root`: field which is reserved for the Runtime to validate the integrity of the
+  extrinsics composing the block body.
+- `digest`: field used to store any chain-specific auxiliary data, which could help the light
+  clients interact with the block without the need of accessing the full storage as well as
+  consensus-related data including the block signature.
+
+A node creating or receiving a block must gossip that block to the network (i.e. to the other
+nodes). Other nodes within the network will track this announcement and can request information
+about the block. Additional details on the process are outlined
+[here](https://spec.polkadot.network/#sect-msg-block-announce) in the Polkadot Spec.
+
 ### Extrinsics
+
+An extrinsic is a [SCALE encoded](https://docs.substrate.io/reference/scale-codec/) array consisting
+of a `version number`, `signature`, and varying `data` types indicating the resulting runtime
+function to be called, including the parameters required for that function to be executed.
 
 Extrinsics constitute information from the outside world and take on three forms:
 
@@ -148,10 +176,10 @@ As an infrastructure provider, you will deal almost exclusively with signed tran
 however, see other extrinsics within the blocks that you decode. Find more information in the
 [Substrate documentation](https://docs.substrate.io/main-docs/build/tx-weights-fees/).
 
-Inherents contain information that is not provably true, but validators agree on based on some
-measure of reasonability. For example, a timestamp cannot be proved, but validators can agree that
-it is within some delta of their system clock. Inherents are not gossiped on the network, and only
-block authors insert them into blocks.
+Inherent extrinsics are unsigned and contain information that is not provably true, but validators
+agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but
+validators can agree that it is within some time difference on their system clock. Inherents are
+broadcasted as part of the produced blocks rather than being gossiped as individual extrinsics.
 
 Signed transactions contain a signature of the account that issued the transaction and stands to pay
 a fee to have the transaction included on chain. Because the value of including signed transactions
@@ -163,6 +191,9 @@ Some transactions cannot be signed by a fee-paying account and use unsigned tran
 example, when a user claims their DOT from the Ethereum DOT indicator contract to a new DOT address,
 the new address doesn't yet have any funds with which to pay fees.
 
+The Polkadot Host does not specify or limit the internals of each extrinsics and those are defined
+and dealt with by the Runtime.
+
 ### Transaction Mortality
 
 Extrinsics can be mortal or immortal. The transaction payload includes a block number and block hash
@@ -172,8 +203,9 @@ valid. If the extrinsic is not included in a block within this validity window, 
 from the transaction queue.
 
 The chain only stores a limited number of prior block hashes as reference. You can query this
-parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to 2400
-blocks (about four hours) at genesis. If the validity period is larger than the number of blocks
+parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to
+{{ polkadot: <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> :polkadot }}
+blocks (about seven hours) at genesis. If the validity period is larger than the number of blocks
 stored on-chain, then the transaction will only be valid as long as there is a block to check it
 against, i.e. the minimum value of validity period and block hash count.
 
@@ -185,11 +217,11 @@ immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
 
-:::caution 
+:::caution
 
-The assumption that a transaction's hash is a unique identifier is the number one mistake
-that indexing services and custodians make. This error will cause major issues for your users.
-Make sure that you read this section carefully.
+The assumption that a transaction's hash is a unique identifier is the number one mistake that
+indexing services and custodians make. This error will cause major issues for your users. Make sure
+that you read this section carefully.
 
 :::
 
@@ -271,6 +303,24 @@ Although upgrading your nodes is generally not necessary to follow an upgrade, w
 following the Polkadot releases and upgrading in a timely manner, especially for high priority or
 critical releases.
 
+### Transaction Version Upgrades
+
+Apart the `runtime_version` there is also the `transaction_version` which denotes how to correctly
+encode/decode calls for a given runtime (useful for hardware wallets). The reason
+`transaction_version` is separate from `runtime_version` is that it explicitly notes that the call
+interface is broken/not compatible.
+
+The `transaction_version` is updated in the cases mentioned in the
+[Substrate docs](https://paritytech.github.io/substrate/master/sp_version/struct.RuntimeVersion.html#structfield.transaction_version).
+So when a new transaction version is introduced (during a runtime upgrade), it indicates a breaking
+change to transaction serialization. In that case, any custom application/tool that constructs &
+signs transactions should also be updated in order to be compatible with the new transaction
+version. It is the responsibility of the maintainers of the custom application/tool to keep up with
+the `transaction_version` updates. However, if you do not want to keep monitoring these changes
+yourself, you can also use the [txwrapper-core](https://github.com/paritytech/txwrapper-core) tool
+that handles these breaking changes for you and allows you to construct transactions using the
+function names and chain metadata.
+
 ## Smart Contracts
 
 The Polkadot Relay Chain does not support smart contracts.
@@ -316,3 +366,4 @@ like locking or reserving tokens for operations that utilize state.
 
 - [Polkadot-JS explorer](https://polkadot.js.org/apps/#/explorer)
 - [Polkascan block explorer](https://polkascan.io/)
+- [Subscan block explorer](https://www.subscan.io/)

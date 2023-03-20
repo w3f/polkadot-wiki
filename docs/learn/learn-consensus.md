@@ -48,14 +48,15 @@ equipment) is limited; this can directly increase operational costs as well. Sys
 number of validators tend to form pools to decrease the variance of their revenue and profit from
 economies of scale. These pools are often off-chain.
 
-A way to alleviate this is to implement pool formation on-chain and allow token holders to vote
-[with their stake] for validators to represent them.
+A way to alleviate this is to implement pool formation on-chain and allow token holders to vote with
+their stake for validators to represent them.
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
-is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
-who are interested in maintaining the network can run a validator node.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
+as its mechanism for selecting the validator set. It is designed with the roles of **validators**
+and **nominators**, to maximize chain security. Actors who are interested in maintaining the network
+can run a validator node.
 
-Validators assume the role of producing new blocks in [BABE](learn-consensus.md/#babe), validating
+Validators assume the role of producing new blocks in [BABE](#block-production-babe), validating
 parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
 their stake. Nominators can approve candidates that they trust and back them with their tokens.
 
@@ -76,7 +77,7 @@ _provable finality._
 In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf), it is phrased
 in this way:
 
-:::note 
+:::note
 
 We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
 participants after some unspecified time.
@@ -85,18 +86,21 @@ participants after some unspecified time.
 
 ## Hybrid Consensus
 
-There are two protocols we use when we talk about the consensus protocol of Polkadot, GRANDPA and
-BABE (Blind Assignment for Blockchain Extension). We talk about both of these because Polkadot uses
-what is known as _hybrid consensus_. Hybrid consensus splits up the finality gadget from the block
-production mechanism.
+There are two protocols we use when we talk about the consensus protocol of
+{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} GRANDPA and BABE (Blind Assignment
+for Blockchain Extension). We talk about both of these because
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses what is known as _hybrid
+consensus_. Hybrid consensus splits up the finality gadget from the block production mechanism.
 
 This is a way of getting the benefits of probabilistic finality (the ability to always produce new
 blocks) and provable finality (having a universal agreement on the canonical chain with no chance
-for reversion) in Polkadot. It also avoids the corresponding drawbacks of each mechanism (the chance
-of unknowingly following the wrong fork in probabilistic finality, and a chance for "stalling" - not
-being able to produce new blocks - in provable finality). By combining these two mechanisms,
-Polkadot allows for blocks to be rapidly produced, and the slower finality mechanism to run in a
-separate process to finalize blocks without risking slower transaction processing or stalling.
+for reversion) in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It also avoids the
+corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong fork in
+probabilistic finality, and a chance for "stalling" - not being able to produce new blocks - in
+provable finality). By combining these two mechanisms,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows for blocks to be rapidly
+produced, and the slower finality mechanism to run in a separate process to finalize blocks without
+risking slower transaction processing or stalling.
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in
 Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
@@ -108,12 +112,22 @@ BABE (Blind Assignment for Blockchain Extension) is the block production mechani
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
-according to stake and using the Polkadot [randomness cycle](learn-randomness.md).
+according to stake and using the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+[randomness cycle](learn-randomness.md). The chains runtime is required to provide the BABE
+authority list and randomness to the host via a consensus message in the header of the first block
+of each epoch.
 
-Validators in Polkadot will participate in a lottery in every slot that will tell them whether or
-not they are the block producer candidate for that slot. Slots are discrete units of time, nominally
-6 seconds in length. Because of this randomness mechanism, multiple validators could be candidates
-for the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
+BABE execution happens in sequential non-overlapping phases known as epochs. Each epoch is divided
+into a predefined number of slots. All slots in each epoch are sequentially indexed starting from 0
+(slot number). At the beginning of each epoch, the BABE node needs to run the
+[Block-Production-Lottery algorithm](https://spec.polkadot.network/#algo-block-production-lottery)
+to find out in which slots it should produce a block and gossip to the other block producers.
+
+Validators participate in a lottery for every slot, which will inform whether or not they are the
+block producer candidate for that slot. Slots are discrete units of time of approximately 6 seconds
+in length. Because the mechanism of allocating slots to validators is based on a randomized design,
+multiple validators could be candidates for the same slot. Other times, a slot could be empty,
+resulting in inconsistent block time.
 
 ### Multiple Validators per Slot
 
@@ -146,7 +160,12 @@ construct a ring-VRF and is a work in progress. This section will be updated as 
 ## Finality Gadget: GRANDPA
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
-implemented for the Polkadot Relay Chain.
+implemented for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain.
+
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host uses the GRANDPA Finality
+protocol to finalize blocks. Finality is obtained by consecutive rounds of voting by the validator
+nodes. Validators execute GRANDPA finality process in parallel to Block Production as an independent
+service.
 
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope
 with 1/5 Byzantine nodes in an asynchronous setting.
@@ -169,11 +188,31 @@ The
 [Substrate implementation of GRANDPA](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)
 is part of Substrate Frame.
 
+## Bridging: BEEFY
+
+The BEEFY (Bridge Efficiency Enabling Finality Yielder) is a secondary protocol to GRANDPA to
+support efficient bridging between the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network (relay chain) and remote,
+segregated blockchains, such as Ethereum, which were not built with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} interchain operability in mind. The
+protocol allows participants of the remote network to verify finality proofs created by the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain validators. In other
+words: clients in the Ethereum network should able to verify that the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network is at a specific state.
+
+Storing all the information necessary to verify the state of the remote chain, such as the block
+headers, is too expensive. BEEFY stores the information in a space-efficient way and clients can
+request additional information over the protocol.
+
+For additional implementation details, check out
+[this](https://spec.polkadot.network/#sect-grandpa-beefy) section of the Polkadot Spec.
+
 ## Fork Choice
 
-Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always
-build on the chain that has been finalized by GRANDPA. When there are forks after the finalized
-head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
+Bringing BABE and GRANDPA together, the fork choice of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} becomes clear. BABE must always build
+on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE
+provides probabilistic finality by building on the chain with the most primary blocks.
 
 ![Best chain choice](../assets/best_chain.png)
 

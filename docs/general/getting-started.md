@@ -7,26 +7,28 @@ keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 :::info Welcome to the Polkadot Wiki
 
-The Polkadot Wiki serves as the central source of truth for Polkadot. 
-It is a community-focused initiative led by Web3 Foundation to keep an up-to-date resource on 
-the best information for learning, building, and maintaining on Polkadot.
+The Polkadot Wiki serves as the central source of truth for Polkadot. It is a community-focused
+initiative led by Web3 Foundation to keep an up-to-date resource on the best information for
+learning, building, and maintaining on Polkadot.
 
-The Wiki has three main sections: Learn (for learners), Build (for people that want to build on Polkadot), and Maintain (for people that want to maintain the network).
+The Wiki has three main sections: **Learn** (for learners), **Build** (for people that want to build
+on Polkadot), and **Maintain** (for people that want to maintain the network).
 
 :::
 
 ## What is Polkadot?
 
-Polkadot is the first fully-sharded blockchain.
-
-Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a
-secure, trust-free environment.
+Polkadot is the first fully-sharded blockchain, i.e. it is a multi-chain environment. Polkadot
+enables scalability by allowing specialized blockchains to communicate with each other in a secure,
+trust-free environment.
 
 Polkadot is built to connect and secure unique blockchains, whether they be public, permissionless
-networks, private consortium chains, or other Web3 technologies. It enables an internet
-where independent blockchains can exchange information under common security guarantees.
+networks, private consortium chains, or other Web3 technologies. It enables an internet where
+independent blockchains can exchange information under common security guarantees.
 
 Polkadot is a living network with the core pillars of governance and upgradability. The network has
 an advanced suite of governance tools and, using the [WebAssembly](https://webassembly.org/)
@@ -35,16 +37,15 @@ growing needs without the risks of network forks.
 
 :::note Learn more about Governance
 
-If you haven't heard of Governance before, a great place to start is 
-the [Governance page](../learn/learn-governance.md)
+If you haven't heard of Governance before, a great place to start is the
+[Governance page](../learn/learn-governance.md)
 
 :::
-By connecting these dots, Polkadot serves as a foundational layer of a decentralized web, where users
-control their data and are not limited by trust bounds within the network.
 
-"What is Polkadot?" Parachains, Parathreads, and the Polkadot Ecosystem explained in simple terms by
-[DeFi Teller](https://defiteller.guru/)
+Polkadot serves as a foundational layer of a decentralized web, where users control their data and
+are not limited by trust bounds within the network.
 
+See the video below made by [DeFi Teller](https://defiteller.guru/) to know more about Polkadot.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -168,32 +169,55 @@ control their data and are not limited by trust bounds within the network.
 
 ### What can I do with my DOT?
 
-[DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for transaction 
-fees, staking, governance, acquisition of a parachain slot and for enabling several key functionalities 
-on Polkadot.
+[DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for
+transaction fees, staking, governance, acquisition of a parachain slot and for enabling several key
+functionalities on Polkadot.
 
-- **1 DOT**: the minimum balance required to have an active account on Polkadot Network. If your account
-  balance drops below 1 DOT, your account will be reaped. Learn more about [Accounts](../learn/learn-accounts.md)
-  and the [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+- {{ polkadot: __<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum balance required to have an active account on Polkadot Network. If your account
+  balance drops below the minimum, your account will be reaped. Learn more about
+  [Accounts](../learn/learn-accounts.md) and the
+  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
 
-- **5 DOT**: the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
-  for [parachain slot auctions](../learn/learn-auction.md).
+- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
+  and earn staking rewards for contributing to the security of the network. Learn more about
+  [nomination pools](../learn/learn-nomination-pools.md).
 
-- **10 DOT**: the minimum stake required to submit your intent to nominate validators. But, to earn staking 
-  rewards, your stake should not be less than the minimum stake among the active nominators which is a dynamic
-  threshold. Learn more about [becoming a nominator](../learn/learn-nominator.md).
+- {{ polkadot: __<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md) for
+  [parachain slot auctions](../learn/learn-auction.md).
 
-- **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md) or vote for
-  [council](../maintain/maintain-guides-how-to-vote-councillor.md).
+- **Around 20 DOT**:
 
+  - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
+    register an [on-chain identity](../learn/learn-identity.md)
+  - {{ polkadot: __<RPC network="polkadot" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter="humanReadable"/>:__ :polkadot }}
+    vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
+  - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
+    create a [proxy account](../learn/learn-proxies.md).
 
-DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md).
-Bonding DOT is a requirement to create proposals, to endorse them and to vote on them when they
-become referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a
+- {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum stake required to submit your intent to directly nominate validators.
+- {{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum amount of DOT required to become an active nominator and earn rewards, i.e. the
+  minimum active bond. To increase the chance of earning staking rewards, your stake should not be
+  less than the minimum stake among the active nominators, which is a dynamic threshold. If you have
+  lesser DOT than the minimum active nomination, please consider contributing to
+  [nomination pools](../learn/learn-nomination-pools.md). Learn more about
+  [becoming a nominator](../learn/learn-nominator.md).
+
+- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable"/>:__ :polkadot }}
+  you can create your own [nomination pool](../learn/learn-nomination-pools.md).
+
+DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is
+a requirement to create proposals, to endorse them and to vote on them when they become referendums.
+Bonding
+{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
+or 5% of requested funding is a requirement to make a
 [treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). DOT can also enable
 you to participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).
-
 
 ### Polkadot Gifts
 
@@ -219,18 +243,18 @@ Web 1.0.
 As social media platforms and online businesses began to emerge, the internet transformed into the
 Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive web pages,
 where users can read and write information plus publish their own for others to see. However, this
-version of the web comes with downsides, dealing with data control, privacy issues, and the consequences 
-of trust. This is where the WEB3 comes into the picture.
+version of the web comes with downsides, dealing with data control, privacy issues, and the
+consequences of trust. This is where the WEB3 comes into the picture.
 
-The WEB3 is taking centralized infrastructure and applications and turning them into decentralized, 
-trust-free protocols. The goal is to transform the internet into a decentralized web, where users control 
-their own data and identity in a trust-free environment. The Web3 movement aims to remove
-intermediaries and build trustless infrastructure.
+The Web 3.0 is taking centralized infrastructure and applications and turning them into
+decentralized, trust-free protocols. The goal is to transform the internet into a decentralized web,
+where users control their own data and identity in a trust-free environment. The Web3 movement aims
+to remove intermediaries and build trustless infrastructure.
 
 :::note The Web3 Movement
 
-To learn more of the Web3 movement, check out this video from 
-the [Web3 Summit](https://youtu.be/l44z35vabvA)
+To learn more of the Web3 movement, check out this video from the
+[Web3 Summit](https://youtu.be/l44z35vabvA)
 
 :::
 
@@ -257,8 +281,8 @@ In order to interact with chains that want to use their own finalization process
 Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility,
 meaning that transactions can be made between different parachains.
 
-The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to
-send messages of any type to each other. The shared security and validation logic of the Relay Chain
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-xcm.md) allows parachains to send
+messages of any type to each other. The shared security and validation logic of the Relay Chain
 provide the environment for trust-free message passing that opens up true interoperability.
 
 :::note Polkadot Primer
@@ -279,38 +303,48 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 
 For brand-new learners of Blockchain technology:
 
-- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing
-  yourself with blockchain concepts such as cryptography and networks, and how these play into
-  things like decentralization and cryptocurrency.
+- The
+  [Blockchain Fundamentals MOOC course](https://mooc.web3.foundation/course/blockchain-fundamentals/)
+  is a great introduction to start familiarizing yourself with blockchain concepts such as
+  cryptography and networks, and how these play into things like decentralization and
+  cryptocurrency.
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
-### Brand-New Polkadot learners:
+### Brand-New Polkadot learners
 
-- [Polkadot's original white paper][white-paper] is a technical summary around one possible
-  direction of implementing the Polkadot network. This paper uses rationale and technical details to
-  support why this direction is beneficial. This original white paper also explains how Polkadot's
-  core components work together to build this decentralized network.
-- [Polkadot's overview paper][overview-paper] is an updated version of the white paper that
-  describes the protocol in more technical terms. We would recommend reading this overview paper if
-  you are interested in digging more into the protocol itself.
-- [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
-  into its blockchain technology. This paper dives into the components of Polkadot but is
-  understandable for both a non-technical and technical reader.
-- [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot][book] -
+- [Polkadot's original white paper](https://polkadot.network/PolkaDotPaper.pdf) is a technical
+  summary around one possible direction of implementing the Polkadot network. This paper uses
+  rationale and technical details to support why this direction is beneficial. This original white
+  paper also explains how Polkadot's core components work together to build this decentralized
+  network.
+- [Polkadot's overview paper](https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf)
+  is an updated version of the white paper that describes the protocol in more technical terms. We
+  would recommend reading this overview paper if you are interested in digging more into the
+  protocol itself.
+- [Polkadot's light paper](https://polkadot.network/Polkadot-lightpaper.pdf) is a visual, easy to
+  read, and less technical introduction into its blockchain technology. This paper dives into the
+  components of Polkadot but is understandable for both a non-technical and technical reader.
+- [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot](https://linktr.ee/polkadotbook) -
   a book funded by the Polkadot Treasury
-- [Polkadot's specification][spec] is a GitHub repository that holds the latest Polkadot Host
-  protocol specification, Polkadot's specification tests of the many components of the network, and
-  the Polkadot Runtime specification. This repo holds algorithms and explores how various processes
-  function in the Polkadot network. The Polkadot specification takes Polkadot's ideas and concepts
-  from the light and the white paper but focuses on the technical specs of the technology.
-- [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Polkadot and its [User Interface][ui].
-- Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
-  articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
+- [Polkadot's specification](https://github.com/w3f/polkadot-spec) is a GitHub repository that holds
+  the latest Polkadot Host protocol specification, Polkadot's specification tests of the many
+  components of the network, and the Polkadot Runtime specification. This repo holds algorithms and
+  explores how various processes function in the Polkadot network. The Polkadot specification takes
+  Polkadot's ideas and concepts from the light and the white paper but focuses on the technical
+  specs of the technology.
+- [Watching the Technical Explainer Videos](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8):
+  These are great introductory videos that explain and demonstrate how to use Polkadot and its
+  [User Interface](https://polkadot.js.org/apps/).
+- Reading
+  [What is Polkadot? A Brief Introduction](https://medium.com/polkadot-network/what-is-polkadot-a-brief-introduction-ca3eac9ddca5)
+  on Medium. There are also other great articles to read on
+  [Polkadot's Medium](https://medium.com/polkadot-network) or
+  [Web3 Foundation's Medium](https://medium.com/web3foundation).
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
-and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
+and maintain on the Kusama network, please head over to our
+[Kusama Guide](https://guide.kusama.network/).
 
 ## Resources
 
@@ -335,26 +369,3 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 - [Contributing Guide](contributing.md) - Rules for contributing to the wiki.
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
   specific errors and problems.
-
-[mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
-[white-paper]: https://polkadot.network/PolkaDotPaper.pdf
-[overview-paper]: https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf
-[light-paper]: https://polkadot.network/Polkadot-lightpaper.pdf
-[spec]: https://github.com/w3f/polkadot-spec
-[teched videos]: https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8
-[article]: https://medium.com/polkadot-network/what-is-polkadot-a-brief-introduction-ca3eac9ddca5
-[p medium]: https://medium.com/polkadot-network
-[w medium]: https://medium.com/web3foundation
-[ui]: https://polkadot.js.org/apps/
-[account generation]: ../learn/learn-account-generation.md
-[transfer]: ../learn/learn-balance-transfers.md
-[nominator]: ../maintain/maintain-guides-how-to-nominate-polkadot.md
-[validator]: ../maintain/maintain-guides-how-to-validate-polkadot.md
-[identity]: ../learn/learn-identity.md
-[proxy]: ../learn/learn-proxies.md
-[democracy]: ../maintain/maintain-guides-democracy.md
-[council]: ../maintain/maintain-guides-how-to-join-council.md
-[council voting]: ../maintain/maintain-guides-how-to-vote-councillor.md
-[treasury]: ../learn/learn-treasury.md
-[kusama guide]: https://guide.kusama.network/
-[book]: https://linktr.ee/polkadotbook

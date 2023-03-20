@@ -9,8 +9,8 @@ slug: ../../kusama-community
 
 The following is a list of official chats, forums, and social channels for the Kusama community.
 
-**No admin or moderator will ever DM you for any reason whatsoever without prior
-public contact and anyone doing so is likely trying to scam you.**
+**No admin or moderator will ever DM you for any reason whatsoever without prior public contact and
+anyone doing so is likely trying to scam you.**
 
 ## General
 
@@ -21,13 +21,13 @@ public contact and anyone doing so is likely trying to scam you.**
   Information on hosting meetups, applying for funding, and materials for running it.
 - [Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/) - also applies
-  to Kusama.
+- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html) -
+  also applies to Kusama.
 
 ### Events
 
-Web3 Foundation hosts many events online and in-person. To check out our current and past
-events, please refer to our public
+Web3 Foundation hosts many events online and in-person. To check out our current and past events,
+please refer to our public
 [Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
 
 ## Matrix Chats
@@ -46,12 +46,12 @@ application we use most often to interact with the Matrix protocol is the
   happening in the Polkadot ecosystem, published every weekday except holidays, includes Kusama.
 - To join the Chinese Validator chat, message
   [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
-- [Kusama Discord](https://discord.com/invite/9AWjTf8wSk)
+- [Kusama Discord](https://kusa.ma/discord)
 
 ### Technical
 
-- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More
-  advanced room for technical questions on building with Substrate.
+- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More advanced
+  room for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A room to discuss developing Substrate smart contracts using Parity Ink!
 
@@ -66,7 +66,6 @@ application we use most often to interact with the Matrix protocol is the
 - [Web3 Medium Blog](https://medium.com/@web3)
 - [Polkadot Blog](https://polkadot.network/blog/)
 - [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-- [Dotleap.com Tutorials](https://dotleap.com)
 
 ## Newsletters
 

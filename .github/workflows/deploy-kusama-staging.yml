@@ -1,9 +1,6 @@
 name: Kusama Staging
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
@@ -19,34 +16,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # - name: Clone and run the site
-      #   run: |
-      #     sudo apt-get install netcat
-      #     yarn
-      #     yarn kusama:start &
-      #     while ! nc -z localhost 3000; do
-      #         sleep 1
-      #         echo waiting for website up...
-      #     done
-      #     yarn kusama:pdf
-
-      # - name: Upload PDF
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: kusama-wiki
-      #     path: kusama-guide/static/kusama-wiki.pdf
-
-      # - name: Build
-      #   run: yarn; yarn kusama:build
-      #   env:
-      #     BUILDING: true
-
-      # - name: Upload to IPFS
-      #   uses: aquiladev/ipfs-action@v0.1.4
-      #   with:
-      #     path: ./kusama-guide/build
-      #     timeout: 120000
-
       - name: Publish
         run: |
           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
@@ -55,12 +24,3 @@ jobs:
 
           yarn && yarn kusama:build && echo "staging.kusama.network" > kusama-guide/static/CNAME && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=kusama-guide-staging yarn run kusama:publish-gh-pages
 
-
-          # setup ipfs cluster tools
-
-          # wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.0/ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
-          # tar xf ./ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
-          # chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
-          # export PATH=$PATH:`pwd`/ipfs-cluster-ctl
-          # which ipfs-cluster-ctl
-          # node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER }}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD }} --websiteDir ./kusama-guide/build  --pinName kusama-guide-staging

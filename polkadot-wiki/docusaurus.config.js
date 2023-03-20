@@ -1,9 +1,5 @@
-const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
 const i18n = require("./i18n");
-
-const isBuilding = process.env.BUILDING === "true";
-const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Polkadot Wiki",
@@ -18,12 +14,7 @@ module.exports = {
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
     "https://unpkg.com/aos@next/dist/aos.js",
     {
-      src: "https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js",
-      onload: "addBackToTop()",
-      defer: true,
-    },
-    {
-      src: "https://apisa.web3.foundation/latest.js",
+      src: "https://apisa.polkadot.network/latest.js",
       async: true,
       defer: true,
     },
@@ -78,7 +69,84 @@ module.exports = {
             to: "/",
 
             from: ["/en/latest", "/en/"],
+
           },
+          {
+            to: '/docs/learn-xcm',
+            from: ['/docs/learn-crosschain', '/docs/learn-cross-consensus']
+          },
+          {
+            to: '/docs/learn-parachains',
+            from: ['/docs/learn-security']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/learn-account-transfer']
+          },
+          {
+            to: '/docs/learn-cryptography',
+            from: ['/docs/learn-keys']
+          },
+          {
+            to: '/docs/learn-staking-advanced',
+            from: ['/docs/learn-simple-payouts']
+          },
+          {
+            to: '/docs/learn-account-generation',
+            from: ['/docs/learn-account-restore']
+          },
+          {
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
+          },
+          {
+            to: '/docs/learn-system-chains',
+            from: ['/docs/learn-common-goods']
+          },
+          {
+            to: '/docs/learn-launch',
+            from: ['/docs/claims']
+          },
+          {
+            to: '/docs/learn-redenomination',
+            from: ['/docs/redenomination']
+          },
+          {
+            to: '/docs/maintain-guides-how-to-validate-polkadot',
+            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup','/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
+          },
+          {
+            to: '/docs/ledger',
+            from: ['/docs/learn-ledger']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
+          },
+          {
+            to: '/docs/learn-staking',
+            from: ['/docs/learn-staking-faq']
+          },
+          {
+            to: '/docs/learn-staking-advanced',
+            from: ['/docs/learn-staking-miner']
+          },
+          {
+            to: '/docs/learn-assets-guides',
+            from: ['/docs/learn-statemint']
+          }
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
@@ -175,5 +243,14 @@ module.exports = {
       contextualSearch: true,
     },
     docsSideNavCollapsible: true,
+    /* Banner / Announcement bar */
+    // announcementBar: {
+    //   id: "banner",
+    //   content:
+    //   'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
+    //   backgroundColor: '#e6007a',
+    //   textColor: 'white',
+    //   isCloseable: true,
+    // },
   },
 };

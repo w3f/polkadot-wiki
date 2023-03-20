@@ -3,7 +3,7 @@ id: learn-launch
 title: Polkadot Launch Phases
 sidebar_label: Polkadot Launch Phases
 description: An explanation of Polkadot's launch process and its individual phases.
-keyword: [launch, phases, polkadot 2.0]
+keyword: [launch, phases, polkadot 2.0, DOT, claim, token sale, redenomination]
 slug: ../learn-launch
 ---
 
@@ -11,7 +11,19 @@ The Polkadot network has a phased roll-out plan, with important milestones towar
 marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the
 [roadmap](https://polkadot.network/launch-roadmap/)
 
-**Current Phase: Parachain Rollout**
+**Current Phase: Post-launch Upgrades**
+
+:::info Claims
+
+For the most update-to-date information on DOT claims (if you bought your DOTs before Polkadot went
+live), check out the following claiming resources and tutorials:
+
+- [Why do I need to claim my DOT tokens, and is there a deadline?](https://support.polkadot.network/support/solutions/articles/65000063553-why-do-i-need-to-claim-my-dot-tokens-and-is-there-a-deadline-)
+- [I claimed my DOT before Polkadot went live, but still see zero balance!](https://support.polkadot.network/support/solutions/articles/65000063667-i-claimed-my-dot-before-polkadot-went-live-but-still-see-zero-balance-)
+- [How to claim your DOT - Tutorial](https://support.polkadot.network/support/solutions/articles/65000138217-how-to-claim-your-dot-tutorial)
+- [How do I know my claim worked?](https://support.polkadot.network/support/solutions/articles/65000103605-how-do-i-know-my-claim-worked-)
+
+:::
 
 ## The PoA Launch
 
@@ -47,34 +59,31 @@ under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community [made a public proposal](../maintain/maintain-guides-democracy.md)
-for a runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
-subsequently enabled on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39 UTC.
-
-## Redenomination
-
-On August 21, 2020, [redenomination](../general/redenomination.md) of DOT, the native token on Polkadot,
-occurred. From this date, one DOT (old) equals 100 new DOT.
+To enable balance transfers, the community
+[made a public proposal](../maintain/maintain-guides-democracy.md) for a runtime upgrade that lifted
+the restriction on balance transfers. Transfer functionality was subsequently enabled on Polkadot at
+block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Core Functionality
 
-After 5 years of research and development, and a multi-stage launch that began in May of 2020, Polkadot launch 
-is completed on December 18, 2021, with all auction-winning  parachains producing blocks on the network. 
+After five years of research and development and a multi-stage launch that began in May 2020,
+Polkadot launch was completed on December 18, 2021, with all auction-winning parachains producing
+blocks on the network.
 
 Check out these resources for further information:
+
 - [Polkadot Network blog](https://polkadot.network/blog/parachains-are-live-polkadot-launch-is-now-complete/).
 - [Polkadot A to Z: L for Polkadot Launch](https://www.reddit.com/r/Polkadot/comments/s3yb3d/l_for_polkadot_launch_polkadot_a_to_z/).
 
-
 ## Polkadot 2.0
 
-Researchers are in the midst of research for the next version of the Polkadot network. With many 
-questions yet to be answered, as of now, some big areas of research will be in:
+Researchers are proposing the next version of the Polkadot network. With many questions yet to be
+answered, as of now, some big areas of research will be in:
 
 - Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
 - Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of
   parachains built with horizontal scalability?
 - Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
   tiers of Relay Chains can be nested? How will validators work together to validate blocks on
-  various Relay Chains? How does [XCM](learn-cross-consensus.md) work in the nested setup? How is
+  various Relay Chains? How does [XCM](learn-xcm.md) work in the nested setup? How is
   [AnV](learn-availability.md) going to work there?

@@ -7,7 +7,14 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
+
+{{ kusama: :::caution Use OpenGov for Kusama Treasury
+
+OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
+[OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)
+
+::: :kusama }}
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
@@ -28,10 +35,10 @@ Treasury payout is an automatic process:
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
   percentage of its funds - thereby causing deflationary pressure. This encourages the spending of
   the funds in the Treasury by Polkadot's governance system.
-  {{ polkadot: This percentage is currently at 1%
-  on Polkadot :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
+  {{ polkadot: This percentage is currently at 1% on Polkadot. :polkadot }}
+  {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
   going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
-  burned :kusama }}.
+  burned. :kusama }}
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
 least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
@@ -77,6 +84,14 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
+{{ kusama: :::caution Use OpenGov to submit Treasury Proposals
+
+Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
+Check the instructions on
+[how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).
+
+::: :kusama }}
+
 The proposer has to deposit a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
@@ -97,20 +112,17 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-  [Kusama Element (previously Riot)](https://matrix.to/#/#kusama:matrix.parity.io) chat or
-  [Polkadot Element](https://matrix.to/#//#polkadot:matrix.parity.io).
-- The [Polkassembly](https://polkassembly.io) discussion platform that allows users to log in with
-  their Web3 address and automatically reads proposals from the chain, turning them into discussion
-  threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
-  vote.
+  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
+  platforms automatically read proposals from the chain, turning them into discussion threads and
+  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
+  for a proposal before committing to a vote.
 
-Spreading the word about the proposal's explanation is ultimately up to the proposer - the
-recommended way is using official Element channels like {{ polkadot: the
-[Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and
-[Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
-{{ kusama: the
-[Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) or the
-[Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders) :kusama }}.
+Spreading the word about the proposal's explanation to the community is ultimately up to the
+proposer.
 
 ### Creating the Proposal
 
@@ -175,8 +187,12 @@ There are two types of tips:
   which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
-:::info For information about how to submit a tip from the Treasury you can read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181971). :::
+:::info
+
+For information about how to submit a tip from the Treasury you can read
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181971).
+
+:::
 
 To better understand the process a tip goes through until it is paid out, let's consider the example
 below.
@@ -227,7 +243,8 @@ highly unlikely that a majority of members are capable in such diverse topics.
 Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts
 called Curators: They can be defined as addresses with agency over a portion of the Treasury with
 the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks
-related to a specific topic: all for the benefit of the Polkadot ecosystem.
+related to a specific topic: all for the benefit of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined later,
 whose background and expertise is such that they are capable of determining when the task is

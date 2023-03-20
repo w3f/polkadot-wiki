@@ -13,10 +13,10 @@ guide will always refer to the executable as `polkadot`.
 
 **Always refer to the client's help `polkadot --help` for the most up-to-date information.**
 
-:::note 
+:::note
 
-Other client implementation teams: Feel free to make a PR to this page with instructions (or a
-link to instructions) for your client.
+Other client implementation teams: Feel free to make a PR to this page with instructions (or a link
+to instructions) for your client.
 
 :::
 
@@ -64,10 +64,10 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 
 **Execution**
 
-The Parity Polkadot client implements a [Polkadot Host](../learn/learn-polkadot-host.md) and a native
-runtime. The runtime must compile to WebAssembly and is stored on-chain. If the client's runtime is
-the same spec as the runtime that is stored on-chain, then the client will execute blocks using the
-client binary. Otherwise, the client will execute the Wasm runtime from the chain.
+The Parity Polkadot client implements a [Polkadot Host](../learn/learn-polkadot-host.md) and a
+native runtime. The runtime must compile to WebAssembly and is stored on-chain. If the client's
+runtime is the same spec as the runtime that is stored on-chain, then the client will execute blocks
+using the client binary. Otherwise, the client will execute the Wasm runtime from the chain.
 
 Therefore, when syncing the chain, the client will execute blocks from past runtimes using their
 associated Wasm binary. This feature also allows forkless upgrades: the client can execute a new
@@ -88,16 +88,16 @@ can set a custom path with `--base-path <path>`.
 
 The keystore stores session keys, which are important for validator operations.
 
-- [Polkadot documentation](../learn/learn-keys.md/#session-keys)
+- [Polkadot documentation](../learn/learn-cryptography.md)
 - [Substrate documentation](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#specialized-accounts)
 
 **`db`**
 
 The database stores blocks and the state trie. If you are running a validator node, it also stores
 GRANDPA pre-votes and pre-commits and the offchain-worker DB. Use caution when
-[migrating validator nodes](../maintain/maintain-guides-how-to-upgrade.md) to avoid equivocation. If you want to
-start a new machine without resyncing, you can stop your node, back up the DB, and move it to a new
-machine.
+[migrating validator nodes](../maintain/maintain-guides-how-to-upgrade.md) to avoid equivocation. If
+you want to start a new machine without resyncing, you can stop your node, back up the DB, and move
+it to a new machine.
 
 To delete your DB and re-sync from genesis, run:
 
@@ -107,31 +107,25 @@ polkadot purge-chain
 
 :::note Validators should sync using the RocksDb backend
 
-This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. 
-In the future, it is recommended to switch to using the faster and more efficient ParityDb 
-option. Switching between database backends will require a resync.
+This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the
+future, it is recommended to switch to using the faster and more efficient ParityDb option.
+Switching between database backends will require a resync.
 
 If you want to test out ParityDB you can add the flag `--database paritydb`.
 
 :::
 
-## Deployment Tools
-
-Web3 Foundation maintains [Polkadot Deployer](https://github.com/w3f/polkadot-deployer), which
-allows you to create local or remote cloud deployments of Polkadot nodes. See the README for
-instructions.
-
-Validators, see the [validator setup guide](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md)
-for information specific to deploying validator nodes.
-
 ## Monitoring and Telemetry
 
 **Node status**
 
-You can check the node's health via RPC with:
+You can check the node's health via RPC with
+[websocat](https://github.com/vi/websocat#installation):
 
 ```bash
-curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933 
+echo '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9944
+
+{"jsonrpc":"2.0","result":{"peers":50,"isSyncing":false,"shouldHavePeers":true},"id":1}
 ```
 
 **Logs**
@@ -170,5 +164,5 @@ puts your node at higher risk of attack. You can run your own, private
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). Substrate
 has a
-[monitor node metrics tutorial](https://docs.substrate.io/tutorials/get-started/node-metrics/)
+[monitor node metrics tutorial](https://docs.substrate.io/tutorials/get-started/monitor-node-metrics/)
 which uses this endpoint.

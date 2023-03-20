@@ -7,7 +7,7 @@ keywords: [parameters, kusama, on-chain]
 slug: ../../kusama-parameters
 ---
 
-import RPC from "./../../../components/RPC-Connection"
+import RPC from "./../../../components/RPC-Connection";
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -39,8 +39,8 @@ a block in the chain. Thus, the times given are *estimates*. See
 ### Accounts, Identity and Crowdloans
 
 - The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is
-  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/> :kusama }}
+  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :kusama }}
 - The deposit required to set an Identity is
   {{ polkadot: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>  :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>  :kusama }}

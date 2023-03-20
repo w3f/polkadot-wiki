@@ -7,7 +7,7 @@ keywords: [council, vote, councillors]
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
@@ -70,7 +70,7 @@ Go to the "Governance" > "Council" tab on the
 
 Under the "Council overview" tab, click on "Vote".
 
-![](../assets/council/polkadotjs_removeVoter.png)
+![polkadotjs_removeVoter](../assets/council/polkadotjs_removeVoter.png)
 
 Issue the "Unvote all" option.
 

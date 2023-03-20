@@ -1,13 +1,13 @@
 ---
 id: faq
 title: Frequently Asked Questions (FAQs)
-sidebar_label: Frequently Asked Questions (FAQs)
+sidebar_label: FAQ
 description: Some FAQs to help you conquer your experience with Polkadot.
 keywords: [FAQ, questions]
 slug: ../faq
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 :::info
 
@@ -168,7 +168,7 @@ there will be bridges between Polkadot and most of the other major chains.
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
 August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
 ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
-[redenomination](redenomination.md), the new DOT is called DOT.
+[redenomination](../learn/learn-redenomination.md), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
 

@@ -35,8 +35,8 @@ Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Be
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
 shard in Ethereum 2 is simply a blockchain with the Ethereum Wasm (eWasm) interface.
 
-Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operating in parallel to the
-legacy Ethereum 1.0 chain:
+Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operating in parallel to
+the legacy Ethereum 1.0 chain:
 
 - **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing
   proof-of-stake consensus, eventually among many shards.
@@ -102,7 +102,7 @@ These validators get assigned to "committees", randomly selected groups to valid
 in the network. Ethereum 2.0 relies on having a large validator set to provide availability and
 validity guarantees: They need at least 111 validators per shard to run the network and 256
 validators per shard to finalize all shards within one epoch. With 64 shards, that's 16_384
-validators (given 256 validators per shard). [4][5]
+validators (given 256 validators per shard). `[4][5]`
 
 Polkadot can provide strong finality and availability guarantees with much fewer validators.
 Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a
@@ -113,10 +113,10 @@ parachain in the network.
 
 ## Shards
 
-Every shard in Ethereum 2.0 has the same STF. Each shard will submit "crosslinks" to the beacon chain
-and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for contracts in
-Ethereum. The eWasm interface provides a set of methods available to contracts. There should be a
-similar set of development tools like Truffle and Ganache to develop for eWasm. [7]
+Every shard in Ethereum 2.0 has the same STF. Each shard will submit "crosslinks" to the beacon
+chain and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for
+contracts in Ethereum. The eWasm interface provides a set of methods available to contracts. There
+should be a similar set of development tools like Truffle and Ganache to develop for eWasm. [7]
 
 Every shard in Polkadot has an abstract STF based on Wasm. Each shard can expose a custom interface
 as long as the logic compiles to Wasm and the shard provides an "execute block" function to Polkadot
@@ -161,13 +161,13 @@ In the model of Ethereum 2.0 with 64 shards, each one posts a crosslink in the B
 every block, [4] meaning that shards could contain logic that executes based on some light client
 proof of a transaction on another shard. [8] Ethereum 2.0 has yet to release a specification for nodes passing messages between shards.
 
-Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-cross-consensus.md) for
-parachains to send arbitrary messages to each other. Parachains open connections with each other
-and can send messages via their established channels. Given that collators will also need to be full
-nodes of the Relay Chain, they will be connected. They can relay messages from
-parachain A to parachain B. Messages do not pass through the Relay Chain; only proofs of post and
-channel operations (open, close, etc.) go into the Relay Chain. This enhances scalability by keeping
-data on the edges of the system.
+Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-cross-consensus.md) for parachains to send
+arbitrary messages to each other. Parachains open connections with each other and can send messages
+via their established channels. Given that collators will need to be full nodes of the Relay Chain
+as well, they will be connected and will be able to relay messages from parachain A to parachain B..
+Messages do not pass through the Relay Chain, only proofs of post and channel operations (open,
+close, etc.) go into the Relay Chain. This enhances scalability by keeping data on the edges of the
+system.
 
 Polkadot will add a protocol called [SPREE](learn-spree.md) that provides shared logic for
 cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and

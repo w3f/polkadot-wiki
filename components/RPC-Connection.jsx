@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { HumanReadable, BlocksToDays} from "./utilities/filters";
+import { HumanReadable, Precise, BlocksToDays, Percentage, ArrayLength } from "./utilities/filters";
 
 /*
 This component connects to the Polkadot/Kusama APIs and renders the response data.
 It can be used in Docusaurus markdown by adding the following lines anywhere within the file.
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 <RPC network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>
 */
 
@@ -135,10 +135,19 @@ async function syncData(network, path, setReturnValue) {
 function applyFilter(value, filter, network, setReturnValue) {
 	switch (filter) {
 		case "humanReadable":
-			HumanReadable(value, network, setReturnValue)
+			HumanReadable(value, network, setReturnValue);
     	break;
+		case "precise":
+			Precise(value, network, setReturnValue);
+			break;
 		case "blocksToDays":
 			BlocksToDays(value, setReturnValue);
+			break;
+		case "percentage":
+			Percentage(value, setReturnValue);
+			break;
+		case "arrayLength":
+			ArrayLength(value, setReturnValue);
 			break;
 		default:
 			console.log("Ignoring unknown filter type");

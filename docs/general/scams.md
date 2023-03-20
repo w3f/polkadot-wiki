@@ -1,15 +1,15 @@
 ---
 id: scams
 title: How to Protect Yourself from Scams
-sidebar_label: How to Protect Yourself from Scams
+sidebar_label: Scam Protection
 description: Learn about the essentials in protecting yourself against scams.
 keywords: [scams, protect, official]
 slug: ../learn-scams
 ---
 
-Scams have unfortunately made an impact on our community. It's important to stay alert and protect
+Scams are an unfortuante reality of the crypto industry. It's important to stay alert and protect
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
-scammed, please get in contact via the [Polkadot Support page](https://support.polkadot.network).
+scammed, please get in contact with [Polkadot Support](https://support.polkadot.network).
 
 ## Essential rules:
 
@@ -25,19 +25,19 @@ scammed, please get in contact via the [Polkadot Support page](https://support.p
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
 6. If you can, try to always verify new information that you see with an official source, such as
-   [Polkadot network's official blog](../general/community.md) or 
-   [Polkadot's Official Support](https://support.polkadot.network). 
-   Often scammers will fake a website or a blog post, but if you check it against a secondary source 
-   you will reduce the chances of being scammed.
+   [Polkadot network's official blog](../general/community.md) or
+   [Polkadot's Official Support](https://support.polkadot.network). Often scammers will fake a
+   website or a blog post, but if you check it against a secondary source you will reduce the
+   chances of being scammed.
 
    :::caution
 
-   With crowdloans active on the network, it is very important to know how to safely
-   participate. Fake crowdloan campaigns may present an attractive target for scammers. If you are
-   participating in a network-native crowdloan, **never send your tokens to an address.** Native
-   crowdloan contributions are made with a special transaction using a campaign index, where the
-   contributed assets remain locked until the end of the lease period. Legitimate teams will not
-   ask you to send your assets to an address to participate in a network-native crowdloan.
+   With crowdloans active on the network, it is very important to know how to safely participate.
+   Fake crowdloan campaigns may present an attractive target for scammers. If you are participating
+   in a network-native crowdloan, **never send your tokens to an address.** Native crowdloan
+   contributions are made with a special transaction using a campaign index, where the contributed
+   assets remain locked until the end of the lease period. Legitimate teams will not ask you to send
+   your assets to an address to participate in a network-native crowdloan.
 
    :::
 
@@ -50,7 +50,7 @@ scammed, please get in contact via the [Polkadot Support page](https://support.p
   unblock transactions etc.
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of any of our teams.
 - Scammers will take official videos, add "giveaway" text around it so that it looks like the
-  giveaway is supported by Polkadot, Web3 Foundation, Parity, or another well-known entity.
+  giveaway is supported by Polkadot, Kusama, Web3 Foundation, Parity, or another well-known entity.
 - Many scammers will create nearly perfect imitations of sites - always triple-check the URL.
 - People offering to help you stake or get rewards.
 - People responding to questions that you asked publicly in a private chat.
@@ -77,17 +77,17 @@ be found below:
 
 - [Twitter](https://twitter.com/Polkadot)
 - [Reddit](https://www.reddit.com/r/polkadot)
-- [Discord](https://discord.gg/polkadot)
+- [Discord](https://dot.li/discord)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Polkadot Medium](https://medium.com/polkadot-network)
-- [Our Community Page](../general/community.md) also lists more social media accounts that Web3 Foundation,
-  Polkadot, and Kusama have.
+- [Our Community Page](../general/community.md) also lists more social media accounts that Web3
+  Foundation, Polkadot, and Kusama have.
 
 ### Keep your data secure
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
-anyone. If you are concerned a wallet could be fake, please check out our official list of supported
-[wallets](../build/build-wallets.md).
+anyone. If you are concerned a wallet could be fake, please check out our list of well-known and
+officially supported [wallets](./../general/wallets.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 
@@ -148,19 +148,10 @@ tools.
 
 ## I Got Scammed - What Can I Do?
 
-In the unfortunate case of having fallen for a scam, there is likely nothing anyone can do to help
-you restore your funds. Polkadot and Kusama are decentralized platforms and while we do have
-governance functionality that could technically allow for funds freezing or refunds, it is
-impossible to prove that you are the original owner, or that you did not sell the tokens and are
-trying to reclaim them. Additionally, even with addresses that are obviously in possession of a
-scammer, governance is a slow-moving process; even under ideal conditions, it would take over 56
-days to come into effect. The thief could easily monitor the network for governance proposals that
-would affect their ill-gotten gains and move them to a new address before the proposal is enacted.
-
-You could put together a full account of the transactions and chat messages accompanied by
-screenshots and explanations, but there are no guarantee stakeholders on the network will help you
-restore the funds as it would set a dangerous precedent. In fact, there have been several attempts
-on Polkadot in the past and none have been passed. It is safer for the network and for future users
-to consider the money lost. Still, your detailed account of the situation might help prevent others
-from falling for the same thing so we recommend retracing your steps and talking publicly about
-them, if it's not too private.
+In the unfortunate case of having fallen for a scam, there is likely nothing that can be done to
+recover your funds. However, there is still help and support that you can receive. The Polkadot
+Support team stands ready to help you in this difficult situation. Please check this
+[Support article](https://support.polkadot.network/support/solutions/articles/65000182668-what-to-do-if-you-fell-victim-to-scam-or-hack)
+for steps you should take to **prevent further loss** and contact Polkadot Support from the same
+page. Finally, make sure to read the present article carefully to learn how to avoid falling victim
+in the future.

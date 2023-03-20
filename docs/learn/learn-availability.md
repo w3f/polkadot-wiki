@@ -7,8 +7,9 @@ keywords: [availability, validity, sharding, AnV]
 slug: ../learn-availability
 ---
 
-The Availability and Validity (AnV) protocol of Polkadot is what allows for the network to be
-efficiently sharded among parachains while maintaining strong security guarantees.
+The [Availability and Validity](https://spec.polkadot.network/#chapter-anv) (AnV) protocol of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows the network to be efficiently
+sharded among parachains while maintaining strong security guarantees.
 
 ## Phases of the AnV protocol
 
@@ -27,8 +28,8 @@ validators that are currently assigned to the parachain.
 
 :::note Candidate block
 
-A candidate block is a new block from a parachain collator that may or may not be valid and
-must go through validity checks before being included into the Relay Chain.
+A candidate block is a new block from a parachain collator that may or may not be valid and must go
+through validity checks before being included into the Relay Chain.
 
 :::
 
@@ -38,6 +39,14 @@ The validators then check the candidate block against the verification function 
 parachain's registered code. If the verification succeeds, then the validators will pass the
 candidate block to the other validators in the gossip network. However, if the verification fails,
 the validators immediately reject the candidate block as invalid.
+
+Validators need to determine their assignments for each parachain and issue approvals for valid
+candidates, respectively disputes for invalid candidates. Since it cannot be expected that each
+validator verifies every single parachain candidate, this mechanism ensures that enough honest
+validators are selected to verify parachain candidates in order prevent the finalization of invalid
+blocks. If an honest validator detects an invalid block which was approved by one or more
+validators, the honest validator must issue a disputes which wil cause escalations, resulting in
+consequences for all malicious parties.
 
 When more than half of the parachain validators agree that a particular parachain block candidate is
 a valid state transition, they prepare a _candidate receipt_. The candidate receipt is what will
@@ -70,39 +79,48 @@ recovered from a subset of the code and in absence of some portion of the code. 
 original message padded with some extra data that enables the reconstruction of the code in the case
 of erasures.
 
-The type of erasure codes used by Polkadot's availability scheme are [Reed-Solomon][reed solomon]
-codes, which already enjoys a battle-tested application in technology outside the blockchain
-industry. One example is found in the compact disk industry. CDs use Reed-Solomon codes to correct
-any missing data due to inconsistencies on the disk face such as dust particles or scratches.
+The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
+availability scheme are
+[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction) codes, which
+already enjoys a battle-tested application in technology outside the blockchain industry. One
+example is found in the compact disk industry. CDs use Reed-Solomon codes to correct any missing
+data due to inconsistencies on the disk face such as dust particles or scratches.
 
-In Polkadot, the erasure codes are used to keep parachain state available to the system without
-requiring all validators to keep tabs on all the parachains. Instead, validators share smaller
-pieces of the data and can later reconstruct the entire data under the assumption that 1/3+1 of the
-validators can provide their pieces of the data.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the erasure codes are used to
+keep parachain state available to the system without requiring all validators to keep tabs on all
+the parachains. Instead, validators share smaller pieces of the data and can later reconstruct the
+entire data under the assumption that 1/3+1 of the validators can provide their pieces of the data.
 
 :::note
 
-The 1/3+1 threshold of validators that must be responsive in order to construct the full
-parachain state data corresponds to Polkadot's security assumption in regard to Byzantine nodes.
+The 1/3+1 threshold of validators that must be responsive in order to construct the full parachain
+state data corresponds to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s security
+assumption in regard to Byzantine nodes.
 
 :::
 
 ## Fishermen: Deprecated
 
-The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a different role in relation to the Polkadot network. Instead of packaging the state transitions and producing the next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state transitions are included.
+The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a
+different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+network. Instead of packaging the state transitions and producing the next parachain blocks as
+collators do, fishermen will watch this process and ensure no invalid state transitions are
+included.
 
-**Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation, despite previous proposals in the [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
+**Fishermen are not available on Polkadot or Kusama and are not planned for formal implementation,
+despite previous proposals in the
+[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
 
-To address the motivation behind the Fishermen design consideration, the current secondary backing checkers perform a similar role in relation to the Polkadot network. From a security standpoint, security is based on having at least one honest validator either among parachain validators or secondary checker.
+To address the motivation behind the Fishermen design consideration, the current secondary backing
+checkers perform a similar role in relation to the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security standpoint,
+security is based on having at least one honest validator either among parachain validators or
+secondary checker.
 
 ## Further Resources
 
-- [Path of a Parachain Block][life of] - Article by Parity analyst Joe Petrowski expounding on the
-  validity checks that a parachain block must pass in order to progress the parachain.
-- [Availability and Validity][anv paper] - Paper by the W3F Research Team that specifies the
-  availability and validity protocol in detail.
-
-[reed solomon]: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
-[pruning]: https://example.org
-[life of]: https://polkadot.network/the-path-of-a-parachain-block/
-[anv paper]: https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV
+- [Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - Article by
+  Parity analyst Joe Petrowski expounding on the validity checks that a parachain block must pass in
+  order to progress the parachain.
+- [Availability and Validity](https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV) -
+  Paper by the W3F Research Team that specifies the availability and validity protocol in detail.

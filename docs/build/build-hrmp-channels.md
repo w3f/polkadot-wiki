@@ -7,14 +7,14 @@ keywords: [HRMP, parachain, Statemint, proposal]
 slug: ../build-hrmp-channels
 ---
 
-[HRMP](../learn/learn-cross-consensus.md#xcmp-lite-hrmp) has the same interface and functionality as
-[XCMP](../learn/learn-cross-consensus.md#xcmp-cross-chain-message-passing) but is much more
-demanding on resources since it passes all messages via the Relay Chain. When XCMP is implemented on
-Polkadot, HRMP is planned to be deprecated and phased out in favor of it.
+[HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) has the same interface and functionality as
+[XCMP](../learn/learn-xcm.md#xcmp-cross-chain-message-passing) but is much more demanding on
+resources since it passes all messages via the Relay Chain. When XCMP is implemented on Polkadot,
+HRMP is planned to be deprecated and phased out in favor of it.
 
 ## Opening HRMP channel: parachain to parachain
 
-To open a channel from one parachain to another that are not common good chains on Polkadot, the
+To open a channel from one parachain to another that are not system chains on Polkadot, the
 governance of each parachain needs to declare its intent to open a channel on the Relay Chain, and
 the second chain needs to accept and do the same.
 
@@ -28,23 +28,24 @@ In order to do this, the calls to be dispatched from both chains are:
 Each parachain is to use its own governance process to execute this. The call will be executed on
 the Relay Chain.
 
-## Opening HRMP channel to Statemint
+## Opening HRMP Channels with System Parachains
 
-In order to provide complete contextual information and transparency to the community, which is the
-ultimate decision maker of the proposals, we encourage following the process implemented on Kusama.
+Opening an HRMP channel with a system parachain requires a referendum. Like all other governance
+proposals, proposers should follow best practices like opening a discussion on
+[Polkassembly](https://polkadot.polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/) and
+then submitting the proposal on-chain.
 
-In general, a governance proposal process includes 4 steps:
+Proposals should generally be a `batch_all` call containing:
 
-1. Publication on [Polkassembly](https://polkadot.polkassembly.io/discussions) for discussion and
-   feedback;
-2. Preimage submission on democracy tab (Polkadot JS Apps);
-3. Submission of the proposal as an external motion to Council;
-4. Vote by the community in Democracy module.
+1. A `force_transfer` of the channel deposit from the Treasury to the System parachain's sovereign
+   account. Remember that a bi-direction channel is _two_ channels so will need double the amount.
+1. A `force_open_hrmp_channel` from your chain to the system chain.
+1. A `force_open_hrmp_channel` from the system chain to your chain.
 
 :::caution
 
-Please note your parachain must make a channel request with Statemint before this proposal enacts,
-in order for the proposal to be enacted successfully.
+Please ensure that you use the new `force_open_hrmp_channel` directly on the Relay Chain, rather
+than the old two-phase channel request/accept method.
 
 :::
 
@@ -63,10 +64,12 @@ review and ultimately vote:
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls) :
 
-     - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP channel with your chain;
-     - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
+    - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP
+      channel with your chain;
+    - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
 
-    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT, the first transaction should not be necessary (these guidelines will be updated accordingly).
+    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
+    the first transaction should not be necessary (these guidelines will be updated accordingly).
 
 4.  The XCM message to Statemint, which can be decoded on the network;
 5.  The call data to verify on
@@ -93,9 +96,10 @@ the same as in the post.
 
 ## Submission of the proposal as an external motion to Council
 
-A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in order to be able to submit an external motion: they will
-use the proposal hash for your preimage and submit it to Council vote. The same contextual
-information you used in the discussion post will be used for the motion post on Polkassembly.
+A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in
+order to be able to submit an external motion: they will use the proposal hash for your preimage and
+submit it to Council vote. The same contextual information you used in the discussion post will be
+used for the motion post on Polkassembly.
 
 Once the Council approves your proposal, this will move to the external queue - and soon after to be
 voted by the community in the Referenda queue: make sure to discuss the proposal with your parachain

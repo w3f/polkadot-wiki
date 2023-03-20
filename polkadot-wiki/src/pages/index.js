@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from "react";
+import React from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -106,38 +106,6 @@ function HomeNav() {
     </NavContainer>
   );
 }
-
-// Used for advertising events, conferences, etc
-// To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
-/*
-function Banner() {
-  const FixedBanner = ({ children }) => (
-    <div className="fixed-banner">
-      <div className="fixed-banner-text-container col-12 col-md-8 col-lg-10 text-center text-md-left mb-2 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
-        <p className="banner-text">
-         <span class="font-weight-bolder">POLKADOT DECODED </span>
-           June 29th-30th, 2022
-          <span class="d-flex d-lg-inline-block pl-lg-3">Join 100+ talks, live streamed from 4 locations worldwide.</span>
-        </p>
-        <a href="https://decoded.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=decoded%202022&utm_content=notification%20banner5">
-          <button className="banner-button btn btn-md btn-primary btn-bg-primary mr-3">
-            <Translate
-              id="homepage.homeFooter.improveWiki.contributeButton"
-              description="Contribute Button Label of Improve Wiki Footer Section in Home page"
-            >
-              Sign Up
-            </Translate>
-          </button>
-        </a>
-      </div>
-    </div>
-  )
-
-  return (
-    <FixedBanner />
-  )
-}
-*/
 
 function HomeFooter() {
   const FooterContainer = ({ children }) => (

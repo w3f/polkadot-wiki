@@ -7,7 +7,7 @@ keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
 
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../components/RPC-Connection";
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -107,5 +107,5 @@ Burn percentage is currently `1.00%`.
 DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
 Plancks make up a DOT.
 
-The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
-known as \_Denomination Day*. See [Redenomination](../general/redenomination.md) for details.
+The denomination of DOT was changed from 12 decimals of precision at block #1,248,328 in an event
+known as _Denomination Day_. See [Redenomination](../learn/learn-redenomination.md) for details.

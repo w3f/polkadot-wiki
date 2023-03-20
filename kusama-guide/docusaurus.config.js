@@ -1,9 +1,5 @@
-const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
-
 const i18n = require("./i18n");
-
-const isBuilding = process.env.BUILDING === "true";
 const isPub = process.env.PUBLISHING === "true";
 
 module.exports = {
@@ -24,7 +20,7 @@ module.exports = {
       defer: true,
     },
 	{
-      src: "https://apisa.web3.foundation/latest.js",
+      src: "https://apisa.kusama.network/latest.js",
       async: true,
       defer: true,
     },
@@ -66,6 +62,28 @@ module.exports = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+       redirects: [
+          {
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
+          },
+          {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
+          }
+        ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {
             return [existingPath.replace('/docs/', '/docs/en/')];
@@ -137,5 +155,14 @@ module.exports = {
       indexName: 'kusama_guide',
       contextualSearch: true,
     },
+    /* Banner / Announcement bar */
+    // announcementBar: {
+    //   id: "banner",
+    //   content:
+    //     'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
+    //   backgroundColor: '#e6007a',
+    //   textColor: 'white',
+    //   isCloseable: true,
+    // },
   },
 };

@@ -7,7 +7,7 @@ keywords: [nominate, nominator, kusama, stake, staking]
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
-import RPC from "./../../../components/RPC-Connection"
+import RPC from "./../../../components/RPC-Connection";
 
 :::info
 
@@ -21,12 +21,13 @@ appointing their stake to the validators who are the second type of participant.
 stake, they are able to elect the active set of validators and share in the rewards that are paid
 out.
 
-While the [validators][] are active participants in the network that engage in the block production
-and finality mechanisms, nominators take a slightly more passive role. Being a nominator does not
-require running a node of your own or worrying about online uptime. However, a good nominator
-performs due diligence on the validators that they elect. When looking for validators to nominate, a
-nominator should pay attention to their own reward percentage for nominating a specific validator -
-as well as the risk that they bear of being slashed if the validator gets slashed.
+While the [validators](maintain-guides-how-to-validate-kusama.md) are active participants in the
+network that engage in the block production and finality mechanisms, nominators take a slightly more
+passive role. Being a nominator does not require running a node of your own or worrying about online
+uptime. However, a good nominator performs due diligence on the validators that they elect. When
+looking for validators to nominate, a nominator should pay attention to their own reward percentage
+for nominating a specific validator - as well as the risk that they bear of being slashed if the
+validator gets slashed.
 
 :::note Explainer videos on staking
 
@@ -41,11 +42,11 @@ are available:
 ## Setting up Stash and Controller keys
 
 Nominators are recommended to set up two separate stash and controller accounts. Explanation and
-reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
-the Wiki.
+reasoning for generating distinct accounts for this purpose is elaborated in the
+[keys](../../learn/learn-cryptography.md) section of the Wiki.
 
 You can generate your stash and controller account via any of the recommended methods that are
-detailed on the [account generation][] page.
+detailed on the [account generation](../../learn/learn-account-generation.md) page.
 
 Starting with runtime version v2023 natively included in client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
@@ -145,7 +146,7 @@ page for more details.
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](../maintain-guides-how-to-unbond.md).
+are available [here](../maintain-guides-how-to-nominate-polkadot.md).
 
 ## Using Command-Line Interface (CLI)
 
@@ -220,7 +221,3 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
 nomination status, you can check that on the Polkadot-JS UI as well.
-
-[validators]: maintain-guides-how-to-validate-kusama.md
-[keys]: ../../learn/learn-keys.md###"controller"-and-"stash"-keys
-[account generation]: ../../learn/learn-account-generation.md
