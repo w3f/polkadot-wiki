@@ -159,7 +159,14 @@ Rollups are a layer-2 scaling solution. A layer-2 network of nodes would be resp
 up" transactions by batching them before publishing them to the main Ethereum chain. A rolled-up
 transaction could include thousands of transactions. Rollups increase TPS and can reduce transaction
 fees significantly. Rollups are a broad category of solutions encompassing many possible
-architectures and implementations.
+architectures and implementations. Rollups on Ethereum are similar to
+{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains, where you prove some
+set of transactions happened on another "mini-chain".
+
+Note that the bitcoin Lightning Network at a high levels allows to achieve similar goals (i.e.
+unload unnecessary storage on chain), but it is not a rollup. The Lightning Network lets you lock
+bitcoin up on-chain, then puts it in channels, that are all shared between different nodes. Bitcoin
+can then be routed across these channels. There's no "lightning blockchain".
 
 ### Optimistic Rollups
 
@@ -213,7 +220,7 @@ to a target of ~1MB and a limit of ~2MB, which the rollup transactions can utili
 [EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com) for more
 information.
 
-### Rollups in Polkadot
+### Polkadot and Kusama
 
 In Polkadot, the Parachains can be considered as a different way to achieve what rollups do. The
 sharding model already exists as the Relay-chain being the beacon chain and Parachains being the
