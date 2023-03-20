@@ -92,8 +92,8 @@ While both extrinsics deal with transferring assets, they exhibit fundamentally 
 :::info
 
 A sovereign account refers to an account within a particular consensus system. Even though accounts
-may be different in terms of factors such as address, XCM agnostic nature enables for communication
-between these sovereign accounts that are in different consensus systems.
+may be different in terms of factors such as an address format, XCM agnostic nature enables
+communication between these sovereign accounts that are in other consensus systems.
 
 :::
 
@@ -119,7 +119,7 @@ applicable, fees are withdrawn from the assets from the specified `MultiLocation
 payment to execute any subsequent instructions within the XCM.
 
 Fees are generally dependent on several factors within the `XcmConfig`. For example, the barrier may
-negate any fees be paid at all.
+negate any fees to be paid at all.
 
 Before any XCM is sent, and if the destination chain’s barrier requires it, a `BuyExecution`
 instruction is used to buy the necessary weight for the XCM. XCM fee calculation is handled by the
