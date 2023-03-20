@@ -222,17 +222,18 @@ information.
 
 ### Polkadot and Kusama
 
-In Polkadot, the Parachains can be considered as a different way to achieve what rollups do. The
-sharding model already exists as the Relay-chain being the beacon chain and Parachains being the
-shards. Parachains have a similar implementation of an Optimistic rollup and a similar architecture
-to a ZK-rollup. Parachain logic runs a validity proof. The proof (the approvals protocol) is
-interactive, unlike ZK-rollups, which are non-interactive. Additionally, unlike ZK-rollups, there
-are no difficulties in creating parachains with Turing-complete logic. This is a fundamental
-weakness of ZK rollups, as Turing completeness within ZK circuits takes work. In addition,
-Optimistic rollups are required by architecture to have their 'sequencer selection' logic live in
-their host contract. This is because the smart contract needs to accept blocks that may be bad and
-may not be executed and needs to filter out spam. Parachains, like ZK rollups, can encapsulate the
-sequencer-selection logic within their validation code.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains can be considered as a
+different way to achieve what rollups do. The sharding model already exists as the Relay-chain being
+the beacon chain and parachains being the shards. Parachains have a similar implementation of an
+Optimistic rollup and a similar architecture to a ZK-rollup. Parachain logic runs a validity proof.
+The proof (the Approval Protocol) is interactive, unlike ZK-rollups, which are non-interactive.
+Additionally, unlike ZK-rollups, there are no difficulties in creating parachains with
+Turing-complete logic. This is a fundamental weakness of ZK rollups, as Turing completeness within
+ZK circuits is difficult (if not impossible) to achieve. In addition, Optimistic rollups are
+required by architecture to have their 'sequencer selection' logic live in their host contract. This
+is because the smart contract needs to accept blocks that may be bad and may not be executed and
+needs to filter out spam. Parachains, like ZK rollups, can encapsulate the sequencer-selection logic
+within their validation code.
 
 ## Message Passing
 
@@ -246,17 +247,17 @@ and
 [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
 for more information.
 
-Polkadot uses [Cross-Consensus Message Passing Format (XCM)](./learn-xcm.md) for parachains to send
-arbitrary messages to each other. Parachains open connections with each other and can send messages
-via their established channels. Given that collators will need to be full nodes of the Relay Chain
-as well, they will be connected and will be able to relay messages from parachain A to parachain B.
-Messages do not pass through the Relay Chain, only proofs of post and channel operations (open,
-close, etc.) go into the Relay Chain. This enhances scalability by keeping data on the edges of the
-system.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
+[Cross-Consensus Message Passing Format (XCM)](./learn-xcm.md) for parachains to send arbitrary
+messages to each other. Parachains open connections with each other and can send messages via their
+established channels. Given that collators will need to be full nodes of the Relay-Chain as well,
+they will be connected and will be able to relay messages from parachain A to parachain B. Messages
+do not pass through the Relay-Chain, only validity proofs and channel operations do (open, close,
+etc.). This enhances scalability by keeping data on the edges of the system.
 
-Polkadot will add a protocol called [SPREE](learn-spree.md) that provides shared logic for
-cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and
-interpretation by the receiving chain.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will add a protocol called
+[SPREE](learn-spree.md) that provides shared logic for cross-chain messages. Messages sent with
+SPREE carry additional guarantees about provenance and interpretation by the receiving chain.
 
 ## Governance
 
