@@ -19,6 +19,7 @@ module.exports = {
           items: [
             "general/wallets",
             "general/ledger",
+            "general/polkadot-vault",
             "general/polkadotjs-ui",
           ],
         },
