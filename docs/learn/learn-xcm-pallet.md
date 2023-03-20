@@ -34,15 +34,16 @@ handle and execute these programs.
 There are two primary primitive extrinsics. These extrinsics handle sending and executing XCVM
 programs as dispatchable functions within the pallet.
 
-1. `execute` - This call contains direct access to the XCM executor. It is tje job of the executor
+1. `execute` - This call contains direct access to the XCM executor. It is the job of the executor
    to check the message and ensure that no barrier/filter will block the execution of the XCM. Once
    it is deemed valid, the message will then be _locally_ executed, therein returning the outcome as
    an event. This operation is executed on behalf of whichever account has signed the extrinsic.
    It's possible for only a partial execution to occur.
-2. `send` - This call specifies where a message should be sent externally to a particular
-   destination, i.e. a parachain, smart contract, or any system which is governed by consensus. As
-   before with `execute`, the Executor checks the origin, destination, and message and is then sent
-   to the `XcmRouter`.
+2. `send` - This call specifies where a message should be sent
+   ([via a transport method](./learn-xcm-transport.md)) externally to a particular destination, i.e.
+   a parachain, smart contract, or any system which is governed by consensus. In contrast to
+   `execute`, the executor is not called locally, as the execution will occur on the destination
+   chain.
 
 :::info
 
@@ -72,18 +73,21 @@ Otherwise, the fee is taken as needed from the asset being transferred.
 
 While both extrinsics deal with transferring assets, they exhibit fundamentally different behavior.
 
-- **Teleporting** an asset implies a two-step process: the asset is burned/destroyed in the origin
-  chain and re-minted to whatever account is specified at the destination. Teleporting should only
-  occur if there is an inherent and bilateral trust between the two chains, as the tokens destroyed
-  _could not_ necessarily be guaranteed to have the same properties when minted at the destination,
-  as well as that there has to be **trust** that the a particular chain burned, or re-minted the
-  assets.
+- **Teleporting** an asset implies a two-step process: the assets are taken out of circulating
+  supply (typically by burning/destroying) in the origin chain and re-minted to whatever account is
+  specified at the destination. Teleporting should only occur if there is an inherent and bilateral
+  trust between the two chains, as the tokens destroyed _could not_ necessarily be guaranteed to
+  have the same properties when minted at the destination, as well as that there has to be **trust**
+  that the a particular chain burned, or re-minted the assets.
 - **Transferring** or **reserving** an asset implies that **equivalent** assets (i.e, native
   currency, like `DOT` or `KSM`) are withdrawn from _sovereign account_ of the origin chain and
   deposited into the sovereign account on the destination chain. Unlike teleporting an asset, it is
   not destroyed and re-minted, rather a trusted, 3rd entity is used (i.e., Statemint on Polkadot) to
-  **reserve** the assets, wherein the sovereign account on the destination chain obtains ownership
-  of these assets.
+  **reserve** the assets, wherein the sovereign account of the destination chain on the reserve
+  chain obtains ownership of these assets.
+
+  It's worth noting that this means that some other mechanism is needed to ensure that the balance
+  on the destination does not exceed the reserve amount being held in this 3rd party.
 
 :::info
 
@@ -100,8 +104,8 @@ They change any relevant storage aspects that enforce anything to do with XCM ve
 
 1. `force_xcm_version` - Modifies the `SupportedVersion` storage to change a particular
    destination's stated XCM version.
-2. `force_default_xcm_version` - Modifies the `SafeXcmVersion` storage, which stores the default
-   version when the destination's version is unknown.
+2. `force_default_xcm_version` - Modifies the `SafeXcmVersion` storage, which stores the default XCM
+   version to use when the destination's version is unknown.
 3. `force_subscribe_version_notify` - Sends an XCM with a `SubscribeVersion` instruction to a
    destination.
 4. `force_unsubscribe_version_notify` - Sends an XCM with a `UnsubscribeVersion` instruction to a
