@@ -13,11 +13,19 @@ not technically a wallet as it does not allow to transfer funds. It is more a ke
 you the create, manage and restore accounts. It also allows you to sign
 [extrinsics](../learn/learn-extrinsics.md) via a system of QR codes.
 
+## Vault vs. Ledger
+
+The Polkadot Vault and [Ledger](./ledger.md) are both cold storage solutions in a sense that private
+keys of accounts created on the Vault App or Ledger are not stored on your computer or more in
+general on a device that has internet connection.
+
+> Comparison table
+
 ## Create and Import Accounts
 
-You can import a signer account into the Polkadot-JS Browser Extension (recommended) or directly
-into the Polkadot-JS UI. See the instructions in [this video tutorial](https://youtu.be/hgv1R9mPEXw)
-to learn more about creating and importing Vault accounts.
+You can import a Vault account into the Polkadot-JS Browser Extension (recommended) or directly into
+the Polkadot-JS UI. See the instructions in [this video tutorial](https://youtu.be/hgv1R9mPEXw) to
+learn more about creating and importing Vault accounts.
 
 ## Signing Extrinsics
 
@@ -69,6 +77,12 @@ Spec and Metadata into a portal).
 
 ### Chain Spec
 
-To add more chains on the Vault app you can follow the
+To add more chains on the Vault app you can follow the instructions
+[here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-specs).
+Briefly,
 
 ### Metadata Updates
+
+To update chain metadata on the Vault app you can follow the instructions
+[here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-metadata).
+Briefly,
