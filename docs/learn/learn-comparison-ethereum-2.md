@@ -75,32 +75,45 @@ shards per block. Besides parachains, which are scheduled for execution every bl
 allows chains to share the sharded slots, much like multiple small airlines might share a gate at an
 airport.
 
-To interact with chains that want to use their finalization process (e.g. Bitcoin), Polkadot has
+To interact with chains that want to use their finalization process (e.g. Bitcoin),
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has
 [bridge parachains](learn-bridges.md) that offer two-way compatibility.
 
 ## Consensus
 
-Ethereum 2.0 and Polkadot use hybrid consensus models where block production and finality have their
-protocols. The finality protocols - Casper FFG for Ethereum 2.0 and GRANDPA for Polkadot - are both
-GHOST-based and can both finalize batches of blocks in one round. For block production, both
-protocols use slot-based protocols that randomly assign validators to a slot and provide a fork
-choice rule for unfinalized blocks - RandDAO/LMD for Ethereum 2.0 and BABE for Polkadot.
+Ethereum 2.0 and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid consensus
+models where block production and finality have their protocols. The finality protocols - Casper FFG
+for Ethereum 2.0 and [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} - are both GHOST-based and can both
+finalize batches of blocks in one round. For block production, both protocols use slot-based
+protocols that randomly assign validators to a slot and provide a fork choice rule for unfinalized
+blocks - RandDAO/LMD for Ethereum 2.0 and [BABE](./learn-consensus.md#badass-babe-sassafras) for
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-There are two main differences between Ethereum 2.0 and Polkadot consensus:
+There are two main differences between Ethereum 2.0 and
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus:
 
 1. Ethereum 2.0 finalizes batches of blocks according to periods called "epochs". The current plan
    is to have 32 blocks per epoch and finalize them all in one round. With a predicted block time of
-   12 seconds, the expected time to finality is 6 minutes (12 minutes maximum). [3] Polkadot's
-   finality protocol, GRANDPA, finalizes batches of blocks based on availability and validity checks
+   12 seconds, the expected time to finality is 6 minutes (12 minutes maximum). See
+   [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
+   for more information.
+
+   {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} finality protocol, GRANDPA,
+   finalizes batches of blocks based on [availability and validity checks](./learn-availability.md)
    that happen as the proposed chain grows. The time to finality varies with the number of checks
    that need to be performed (and invalidity reports cause the protocol to require extra checks).
    The expected time to finality is 12-60 seconds.
-2. Ethereum 2.0 requires many validators per shard to provide strong validity guarantees. Polkadot
-   can provide stronger guarantees with fewer validators per shard. Polkadot achieves this by making
-   validators distribute an erasure coding to all validators in the system, such that anyone - not
-   only the shard's validators - can reconstruct a parachain's block and test its validity. The
-   random parachain-validator assignments and secondary checks performed by randomly selected
-   validators make it impossible for the small set of validators on each parachain to collude.
+
+2. Ethereum 2.0 requires many validators per shard to provide strong validity guarantees while
+   {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} can provide stronger
+   guarantees with fewer validators per shard.
+   {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} achieves this by making
+   validators distribute an [erasure coding](./learn-availability.md#erasure-codes) to all
+   validators in the system, such that anyone - not only the shard's validators - can reconstruct a
+   parachain's block and test its validity. The random parachain-validator assignments and secondary
+   checks performed by randomly selected validators make it impossible for the small set of
+   validators on each parachain to collude.
 
 ## Staking Mechanics
 
