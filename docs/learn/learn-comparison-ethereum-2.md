@@ -106,14 +106,14 @@ There are two main differences between Ethereum 2.0 and
    The expected time to finality is 12-60 seconds.
 
 2. Ethereum 2.0 requires many validators per shard to provide strong validity guarantees while
-   {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} can provide stronger
-   guarantees with fewer validators per shard.
-   {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} achieves this by making
-   validators distribute an [erasure coding](./learn-availability.md#erasure-codes) to all
-   validators in the system, such that anyone - not only the shard's validators - can reconstruct a
-   parachain's block and test its validity. The random parachain-validator assignments and secondary
-   checks performed by randomly selected validators make it less likely for the small set of
-   validators on each parachain to collude.
+   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide stronger guarantees
+   with fewer validators per shard. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+   achieves this by making validators distribute an
+   [erasure coding](./learn-availability.md#erasure-codes) to all validators in the system, such
+   that anyone - not only the shard's validators - can reconstruct a parachain's block and test its
+   validity. The random parachain-validator assignments and secondary checks performed by randomly
+   selected validators make it less likely for the small set of validators on each parachain to
+   collude.
 
 ## Staking Mechanics
 
@@ -123,13 +123,17 @@ These validators get assigned to "committees", randomly selected groups to valid
 network. Ethereum 2.0 relies on having a large validator set to provide availability and validity
 guarantees: They need at least 111 validators per shard to run the network and 256 validators per
 shard to finalize all shards within one epoch. With 64 shards, that's 16_384 validators (given 256
-validators per shard). `[4][5]`
+validators per shard). See
+[Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
+and [Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS) for
+more information.
 
-Polkadot can provide strong finality and availability guarantees with much fewer validators.
-Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a
-smaller set, letting smaller holders nominate validators to run infrastructure while still claiming
-the rewards of the system without running a node of their own. Polkadot plans to have 1_000
-validators by the end of its first year of operation, and needs about ten validators for each
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong finality and
+availability guarantees with much fewer validators. It uses
+[Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a smaller set, letting
+smaller holders nominate validators to run infrastructure while still claiming the rewards of the
+system without running a node of their own.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} needs about ten validators for each
 parachain in the network.
 
 ## Shards
@@ -137,11 +141,14 @@ parachain in the network.
 Every shard in Ethereum 2.0 has the same STF. Each shard will submit "crosslinks" to the beacon
 chain and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for
 contracts in Ethereum. The eWasm interface provides a set of methods available to contracts. There
-should be a similar set of development tools like Truffle and Ganache to develop for eWasm. [7]
+should be a similar set of development tools like Truffle and Ganache to develop for eWasm. See
+[eWasm Design](https://github.com/ewasm/design) for more information.
 
-Every shard in Polkadot has an abstract STF based on Wasm. Each shard can expose a custom interface
-as long as the logic compiles to Wasm and the shard provides an "execute block" function to Polkadot
-validators. Polkadot’s Substrate development framework allows full spectrum composability with a
+Every shard in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has an abstract STF
+based on Wasm. Each shard can expose a custom interface as long as the logic compiles to Wasm and
+the shard provides an "execute block" function to
+{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} validators. Polkadot’s
+[Substrate](https://substrate.io/) development framework allows full spectrum composability with a
 suite of modules that can be configured, composed, and extended to develop a chain's STF.
 
 ## Rollups
