@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-cosmos
-title: Polkadot and Cosmos
+title: Polkadot vs. Cosmos
 sidebar_label: Cosmos
 description: Learn about the differences between Polkadot and Cosmos.
 keywords: [cosmos, polkadot, interoperability, interoperability hub]
