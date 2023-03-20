@@ -36,38 +36,44 @@ parachains.
 
 Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Beacon Chain is
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
-shard in Ethereum 2 is simply a blockchain with the Ethereum Wasm (eWasm) interface.
+shard is a blockchain with the Ethereum Wasm (eWasm) interface.
 
-Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operating in parallel to
-the legacy Ethereum 1.0 chain:
+The initial plan prioritized the rollout of shards. Ethereum 2.0 launched Phase 0 of a multi-phase
+rollout in December 2020, operating in parallel to the legacy Ethereum 1.0 chain:
 
 - **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing
   proof-of-stake consensus, eventually among many shards.
 - **Phase 1** launches 64 shards as simple chains to test the Beacon Chain's finality. Each shard
   submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data.
-- **Phase 1.5** integrates Eth 1 as a shard to finalize the proof-of-work chain's blocks.
+- **Phase 1.5** integrates Ethereum 1.0 as a shard to finalize the proof-of-work chain's blocks.
 - **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system
-  usable to end-users. [1]
+  usable to end-users. See
+  [Ethereum 2.0 Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) for
+  more information.
 
-After the launch of the Beacon Chain in phase 0, the roadmap was altered to prioritize the
+After the launch of the Beacon Chain in Phase 0, the roadmap was altered to prioritize the
 transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum 2.0's Proof-of-Stake
-consensus, preceding the rollout of shards on the network. [2]
+consensus, preceding the rollout of shards on the network. See
+[Ethereum 2.0 Merge](https://ethereum.org/en/eth2/merge/) for more information.
 
 The network will also have "side chains" to interact with chains that are not under the finality
 protocol of Ethereum 2.0.
 
-### Polkadot
+### Polkadot and Kusama
 
-Like Ethereum 2.0, Polkadot also has a main chain, called the Relay Chain, with several shards
-called [parachains](learn-parachains.md). Parachains are not restricted to a single interface like
-eWasm. Instead, they can define their logic and interface as long as they provide their STF to the
-Relay Chain validators so that they can execute it.
+Like Ethereum 2.0, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also has a main
+chain, called the [Relay Chain](./learn-architecture.md#relay-chain), with several shards called
+[parachains](./learn-parachains.md). Parachains are not restricted to a single interface like eWasm.
+Instead, they can define their logic and interface as long as they provide their STF to the Relay
+Chain validators so that they can execute it.
 
-Polkadot, now live as a Relay Chain, only plans to launch the ability to validate up to 20 shards
-per block, gradually scaling up to 100 shards per block. Besides parachains, which are scheduled for
-execution every block, Polkadot also has [parathreads](learn-parathreads.md), which are scheduled
-dynamically. This allows chains to share the sharded slots, much like multiple small airlines might
-share a gate at an airport.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, now live as a Relay Chain, only
+plans to launch the ability to validate up to 20 shards per block, gradually scaling up to 100
+shards per block. Besides parachains, which are scheduled for execution every block,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also has
+[parathreads](learn-parathreads.md) (or on-demand parachains), which are scheduled dynamically. This
+allows chains to share the sharded slots, much like multiple small airlines might share a gate at an
+airport.
 
 To interact with chains that want to use their finalization process (e.g. Bitcoin), Polkadot has
 [bridge parachains](learn-bridges.md) that offer two-way compatibility.
