@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-ethereum-2
-title: Polkadot and Ethereum 2.0
+title: Polkadot vs. Ethereum 2.0
 sidebar_label: Ethereum 2.0
 description: A high-level comparison between Polkadot and Ethereum 2.0.
 keywords: [ethereum, ethereum 2.0, proof of stake, sharding]
@@ -185,12 +185,23 @@ for more information.
 
 ### Zero-knowledge Rollups
 
-:::note
+To reach consensus on a traditional block execution, blockchains rely on re-execution of every
+transaction. We do not want to allow malicious transactions that cause an endless loop, as it would
+compromise every validator's resources and the liveness of the chain. Therefore chains like Ethereum
+have the concept of gas, so the amount of computation per block is bounded. So even though you might
+have a notion of Turing completeness, there is actually a limit on how many operations you can
+perform. In addition, as the number of validators scales, the amount of redundant computation scales
+linearly as well, which is inconvenient.
 
-Currently, Turing completeness is difficult in ZK rollups, a trusted setup is required to run the ZK
-Proofs, and the soundness of the cryptography used needs to meet specific standards.
-
-:::
+The redundant execution of all transactions can be avoided. The majority of the network only runs a
+`verify` operation (that should be sublinear in the size of the original transaction) while the
+block producer incurs heavy computation to produce the proof. The challenge for any proof system
+architect is expressing the (arbitrary) computation as a circuit. For a number of reasons (e.g.
+calculations need to be done over a finite field), the circuits that the proof systems "accept" are
+fairly large and are slower to work with, than executing the computation directly (i.e. natively),
+requiring up to 1,000,000x work for the prover. If you want to execute an extremely complicated
+program, you might run into circuits which are simply too large for the prover to handle, or take
+too long.
 
 [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as a "proof"
 of valid transactions when batching, effectively reducing the transaction payload to be the size of
@@ -205,20 +216,28 @@ contract verifies the new state as valid, then provided root hash becomes the ne
 [ETH Docs: ZK Rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/) for more
 information.
 
-#### EIP 4844
+:::note
 
-"Introduce a new transaction format for “blob-carrying transactions” which contain a large amount of
-data that cannot be accessed by EVM execution but whose commitment can be accessed. The format is
-intended to be fully compatible with the format used in full sharding."
+Currently, Turing completeness is difficult in ZK rollups, as a trusted setup can be a requirement
+to run the ZK Proofs and the soundness of the cryptography used needs to meet specific standards.
+Note that, depending on which type of a ZK is used, a trusted setup is not necessarily required (see
+see
+[STARK vs SNARK](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)).
+See
+[this article](https://a16zcrypto.com/measuring-snark-performance-frontends-backends-and-the-future/)
+to learn more about the current limitations of ZK rollups.
 
-Until the full spec of ETH 2.0 sharding is implemented, this stopgap introduces the
-"blob-transactions" transaction format like they would be designed with sharding but without
-sharding those transactions. Blob transactions carry a large amount of data that the EVM cannot
-access but whose commitment can be accessed. Compared to full sharding, where the space allocated
-for this additional transaction data will be ~16MB, this EIP allows for a reduced cap corresponding
-to a target of ~1MB and a limit of ~2MB, which the rollup transactions can utilize. See
-[EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com) for more
-information.
+:::
+
+### Blob Transactions
+
+Until the full spec of ETH 2.0 sharding is implemented, "blob-transactions" would be designed with
+sharding but without being sharded transactions. Blob transactions carry a large amount of data that
+the EVM cannot access but whose commitment can be accessed. Compared to full sharding, where the
+space allocated for this additional transaction data will be ~16MB, this EIP allows for a reduced
+cap corresponding to a target of ~1MB and a limit of ~2MB, which the rollup transactions can
+utilize. See [EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com) for
+more information.
 
 ### Polkadot and Kusama
 
