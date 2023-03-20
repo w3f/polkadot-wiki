@@ -12,91 +12,102 @@ page (to create the Chain Spec QR code and the metadata QR code fountain) and
 [Metadata Portal](https://github.com/paritytech/metadata-portal) Github page (to embed the Chain
 Spec and Metadata into a portal).
 
-### Chain Spec
+## Chain Specification
+
+### Chain Spec QR
 
 To add more chains on the Vault app you can follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-specs).
-In this example we will add the Statemine parachain. Briefly, fork the Parity Signer GitHub
-repository
-
-RPC endpoint for Statemine:
-
-folder `/generate_message`
+In this example we will add the [Statemine](../learn/learn-assets.md) system parachain. Briefly,
+fork the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
+terminal within the `/generate_message` folder and type the following:
 
 `cargo run add-specs -d -u wss://statemine.api.onfinality.io/public-ws --encryption sr25519`
 
-this will create the file `sign_me_add_specs_statemine_sr25510` under the `files/in_progress` folder
+where `wss://statemine.api.onfinality.io/public-ws` is the OnFinality RPC endpoint for Statemine.
+This will create the file `sign_me_add_specs_statemine_sr25510` under the `files/in_progress`
+folder.
 
-Sign the chain spec
+### Generating Signature
 
-folder `files/in_progress`
+Start the terminal within the `files/in_progress` folder and type the following:
 
 `cat sign_me_add_specs_statemine_sr25519 | subkey sign --suri "YOUR SEED PHRASE"`
 
-where "YOUR SEED PHRASE" is the seed phrase of the account that will be used to sign and
-authenticate the chain spec and later on the metadata
-
-running the code above will return the signature below
+where `"YOUR SEED PHRASE"` is the seed phrase of the account that will be used to sign and
+authenticate both the chain spec and later on the metadata. Running the code above will return the
+signature below:
 
 `0xc4ce72db959000b6166af96d3bda55a927fd837747bf1bf1ae8a69e57c9ef37c25a88707c47b105a9eb1fbcf9345680eff57eb978cf73919506f6c738834e78a`
 
-go back to the folder `/generate_message`
+### Signing Chain Spec
 
-`cargo run --release make --goal qr --crypto sr25519 --msg add-specs --payload sign_me_add_specs_statemine_sr25519 --verifier-hex 6adee55cc1c1946db8d0a6ef14389c39db04935a70086a8a93c4d8535d92b07a --signature-hex 0xc4ce72db959000b6166af96d3bda55a927fd837747bf1bf1ae8a69e57c9ef37c25a88707c47b105a9eb1fbcf9345680eff57eb978cf73919506f6c738834e78a`
+Now, go back to the `/generate_message` folder and type the following:
 
-running the code above will create the file `add_specs_statemine-sr25519` under the
-`files/completed` folder
+`cargo run --release make --goal qr --crypto sr25519 --msg add-specs --payload sign_me_add_specs_statemine_sr25519 --verifier-hex PUBLIC KEY --signature-hex SIGNATURE`
 
-### Metadata Updates
+where `PUBLIC KEY` is the public key of the account with seed `"YOUR SEED PHRASE"`, and `SIGNATURE`
+is the signature generated in the previous step. Running the code above will create the file
+`add_specs_statemine-sr25519` under the `files/completed` folder.
 
-To update chain metadata on the Vault app you can follow the instructions
+## Metadata Updates
+
+Similarly to what we did for the chain specification, we now generate and sign the statemine
+metadata.
+
+### Metadata QR Fountain
+
+To update the chain metadata for statemine on the Vault app you can follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-metadata).
-Briefly,
-
-folder `/generate_message`
+Briefly, in the Parity Signer repository, start the terminal within the `/generate_message` folder
+and type the following:
 
 `cargo run load-metadata -d -u wss://statemine.api.onfinality.io/public-ws`
 
-this will create the file `sign_me_load_metadata_statemineV9370` under the `files/in_progress`
-folder
+where `wss://statemine.api.onfinality.io/public-ws` is the OnFinality RPC endpoint for Statemine.
+This will create the file `sign_me_load_metadata_statemineV9370` under the `files/in_progress`
+folder.
 
-Sign the metadata
+### Generating Signature
 
-We will follow the same procedure we used to sign the chain spec, to sign the metadata file
-
-folder `files/in_progress`
+Start the terminal within the `files/in_progress` folder and type the following:
 
 `cat sign_me_load_metadata_statemineV9370 | subkey sign --suri "YOUR SEED PHRASE"`
 
-running the code above will return the signature below
+where `"YOUR SEED PHRASE"` is the seed phrase of the account you used to sign the chain
+specification. Running the code above will return the signature below:
 
 `0xde1ad7aeb252acb3cf42a522dcc8dc3f317a49be2ed636836dd6df8f7e47135f2c712480055822eba87e9ea5ac7d3bba96045992ae795856fdf4eea09a411f85`
 
-go back to the folder `/generate_message`
+### Signing Metadata
 
-`cargo run --release make --goal qr --crypto sr25519 --msg load-metadata --payload sign_me_load_metadata_statemineV9370 --verifier-hex 6adee55cc1c1946db8d0a6ef14389c39db04935a70086a8a93c4d8535d92b07a --signature-hex 0xde1ad7aeb252acb3cf42a522dcc8dc3f317a49be2ed636836dd6df8f7e47135f2c712480055822eba87e9ea5ac7d3bba96045992ae795856fdf4eea09a411f85`
+Now, go back to the `/generate_message` folder and type the following:
 
-running the code above will create the file `load_metadata_statemineV9370` under the
-`files/completed` folder
+`cargo run --release make --goal qr --crypto sr25519 --msg load-metadata --payload sign_me_load_metadata_statemineV9370 --verifier-hex PUBLIC KEY --signature-hex SIGNATURE`
 
-### Metadata Portal
+where `PUBLIC KEY` is the public key of the account with seed `"YOUR SEED PHRASE"`, and `SIGNATURE`
+is the signature generated in the previous step. Running the code above will create the file
+`load_metadata_statemineV9370` under the `files/completed` folder.
+
+## Add Chain & Update Metadata
 
 You can open `add_specs_statemine-sr25519` on your browser (just drag the file on an open tab). This
-is a .png file containing the QR code to add statemine into the Vault App. You can do the same thing
-with the `load_metadata_statemineV9370`. This is a .apng file containing the QR code fountain to do
-the metadata update for statemine.
+is a .png file containing the QR code to add statemine chain specification into the Vault App. You
+can do the same with the `load_metadata_statemineV9370`. This is a .apng file containing the QR code
+fountain to do the metadata update for statemine.
 
-Alternatively, you can add the chain spec and the metadata QR code fountain in a portal. See below
+## Metadata Portal
 
-fork the metadata portal GitHub Repository
+### Modify `config` File
 
-modify the coinfig.toml file
+Alternatively, you can add the chain specification and the metadata QR code fountain in a metadata
+portal. Briefly, fork the
+[Parity's Metadata Portal GitHub repository](https://github.com/paritytech/metadata-portal). You can
+modify the following fields of the `config.toml` file:
 
-`name`
-
-`public_key`
-
-add info about the chain
+- `name`: your name / institution
+- `public_key`: the public key of the account you use to sign the chain spec and the metadata.
+- then at the bottom of the file add the following information:
 
 ```
 [[chains]]
@@ -110,19 +121,21 @@ repo = "statemint"
 genesis_hash = "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda771a"
 ```
 
-the information about the genesis hash can be found
+For reach additional chain you need to add the respective information. Information about the genesis
+hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State..
 
-Renaming files
+### Rename Chain's Files
+
+Rename the singed chain spec and metadata files as follow:
 
 `add_specs_statemine-sr25519` --> `statemine_specs.png`
 
 `load_metadata_statemineV9370`--> `statemine_metadata_9370.apng`
 
-and add those to the `/public/qr folder`
+Add the renamed files to the `/public/qr folder` within the Metadata Portal repository.
 
-run `make updater`
+### Run Portal
 
-`make collector` --> this will create the \_latest.apng files for each of the chains (removed by
-`make cleaner`)
-
-`yarn start` to load the portal on your localhost
+Open the terminal within the Metadata Portal repository and run `make updater`. Then run
+`make collector`; this will create the `_latest.apng` files for each of the chains (removed by
+`make cleaner`). Finally, run `yarn start` to load the metadata portal on your localhost.
