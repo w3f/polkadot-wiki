@@ -27,7 +27,7 @@ updates using the Vault App.
 
 The procedure to sign transactions with the Vault App is as follow:
 
-- The Wallet or browser extension will show a QR code encoding the information about what your are
+- The wallet or browser extension will show a QR code encoding the information about what your are
   going to sign.
 - After scanning the QR code with the Vault App, you will be presented with decoded information
   about what you are going to sign. Make sure the information matches what you asked to sign in the
@@ -58,10 +58,17 @@ To securely update the Polkadot Vault App follow the instructions
 
 ## Advanced
 
-It is possible to add more chains to Parity Signer via QR-code, and to update their metadata by
-generating your own QR-code fountain in a metadata portal similarly to that
-[signed by Parity](https://metadata.parity.io/#/polkadot).
+By default the Vault App contains chain specs for Polkadot, Kusama and Westend. It is possible to
+add more chains via QR-code, and to update their metadata by generating your own QR-code fountain in
+a metadata portal similarly to that [signed by Parity](https://metadata.parity.io/#/polkadot).
+
+The following guide bases on the [Parity Signer](https://github.com/paritytech/parity-signer) Github
+page (to create the Chain Spec QR code and the metadata QR code fountain) and
+[Metadata Portal](https://github.com/paritytech/metadata-portal) Github page (to embed the Chain
+Spec and Metadata into a portal).
 
 ### Chain Spec
+
+To add more chains on the Vault app you can follow the
 
 ### Metadata Updates
