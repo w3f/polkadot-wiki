@@ -231,9 +231,13 @@ sequencer-selection logic within their validation code.
 
 Shards in Ethereum 2.0 will access each other's states via their crosslinks and state proofs. In the
 model of Ethereum 2.0 with 64 shards, each one posts a crosslink in the Beacon Chain for every
-block, [4] meaning that shards could contain logic that executes based on some light client proof of
-a transaction on another shard. [8] Ethereum 2.0 has yet to release a specification for nodes
-passing messages between shards.
+block, meaning that shards could contain logic that executes based on some light client proof of a
+transaction on another shard. Ethereum 2.0 has yet to release a specification for nodes passing
+messages between shards. See
+[Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
+and
+[Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
+for more information.
 
 Polkadot uses [Cross-Consensus Message Passing Format (XCM)](./learn-xcm.md) for parachains to send
 arbitrary messages to each other. Parachains open connections with each other and can send messages
@@ -282,9 +286,3 @@ processes in Ethereum 2.0 are planned to be off-chain and thus require coordinat
 to enact governance decisions. In contrast, in Polkadot, the decisions are on-chain and enacted
 autonomously. Third, the validator selection mechanisms differ because Polkadot can provide strong
 availability and validity guarantees with fewer validators per shard.
-
-## References
-
-6. [Messari Crypto Theses for 2020](https://messari.io/report/crypto-theses-for-2020)s
-
-7. [Scaling Public Blockchains by Tobias Schaffner](https://wwz.unibas.ch/fileadmin/user_upload/wwz/00_Professuren/Schaer_DLTFintech/Lehre/Tobias_Schaffner_Masterthesis.pdf?ref=hackernoon.com)
