@@ -117,8 +117,9 @@ Everything is unlocked by default (bitflag value `0`).
 
 :::info
 
- The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged
-actions can be re-allowed anytime).
+The user can decide to lock an item or collection’s metadata, attributes, and settings. Also, a
+locking mechanism can prevent unauthorized and unprivileged transfers (unprivileged actions can be
+re-allowed anytime).
 
 :::
 
