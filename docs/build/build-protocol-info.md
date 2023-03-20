@@ -74,6 +74,8 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 ## Existential Deposit
 
+The Existential Deposit (ED) is a minimum amount that an account must hold on most Substrate-based chains such as Polkadot and Kusama.
+
 Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust
 accounts from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e.
 completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is
