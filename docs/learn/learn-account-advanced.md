@@ -17,14 +17,13 @@ You can view system accounts on [Subscan](https://polkadot.subscan.io/account_li
 
 :::
 
-Questions
+System accounts are used by the system, and they do not have users. They are used for example as
+storage of crowdloan funds, treasury, and nomination pools.
 
-- What is the role of those accounts? Why do they such a large volume of tokens? Those accounts are
-  used by the system, and they do not have users. THey are used for example as storage of crowdloan
-  funds, treasury, and nomination pools.
-- Why there is no activity for such accounts? Those accounts do not use the normal transfer process,
-  and they will never issue an [extrinsic](./learn-extrinsics.md) since they are not "real" accounts
-  held by users.
+Those accounts do not use the normal transfer process, and they will never issue an
+[extrinsic](./learn-extrinsics.md) since they are not "real" accounts held by users.
+
+There are different types of system accounts:
 
 ## Address Format
 
