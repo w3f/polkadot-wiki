@@ -142,7 +142,9 @@ Every shard in Ethereum 2.0 has the same STF. Each shard will submit "crosslinks
 chain and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for
 contracts in Ethereum. The eWasm interface provides a set of methods available to contracts. There
 should be a similar set of development tools like Truffle and Ganache to develop for eWasm. See
-[eWasm Design](https://github.com/ewasm/design) for more information.
+[eWasm Design](https://github.com/ewasm/design) for more information. See
+[Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
+for more information.
 
 Every shard in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has an abstract STF
 based on Wasm. Each shard can expose a custom interface as long as the logic compiles to Wasm and
@@ -153,12 +155,11 @@ suite of modules that can be configured, composed, and extended to develop a cha
 
 ## Rollups
 
-Rollups, a layer-2 scaling solution, has been talked about for some time, and their potential to
-scale Ethereum. A layer-2 network of nodes would be responsible for "rolling up" transactions by
-batching them before publishing them to the main Ethereum chain. A rolled-up transaction could
-include thousands of transactions. Rollups increase TPS and can reduce transaction fees
-significantly. Rollups are a broad category of solutions encompassing many possible architectures
-and implementations.
+Rollups are a layer-2 scaling solution. A layer-2 network of nodes would be responsible for "rolling
+up" transactions by batching them before publishing them to the main Ethereum chain. A rolled-up
+transaction could include thousands of transactions. Rollups increase TPS and can reduce transaction
+fees significantly. Rollups are a broad category of solutions encompassing many possible
+architectures and implementations.
 
 ### Optimistic Rollups
 
@@ -169,10 +170,11 @@ reject fraudulent transactions. This way, transaction results and proofs can be 
 network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction
 scalability 10-100x and write transactions to Ethereum as
 [`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata), reducing gas fees
-significantly.
-
-Examples of optimistic rollup solutions include [Optimisim](https://www.optimism.io/),
-[Arbitrum](https://bridge.arbitrum.io/) and [Unipig](https://unipig.exchange/welcome).
+significantly. Examples of optimistic rollup solutions include
+[Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and
+[Unipig](https://unipig.exchange/welcome). See
+[ETH Docs: Optimistic Rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/)
+for more information.
 
 ### Zero-knowledge Rollups
 
@@ -189,10 +191,12 @@ a zk-proof. This, similar to the optimistic approach, allows transaction data to
 and reduced significantly in size before being committed to the main chain. Similar to most on-chain
 transactions and states, a ZK-rollup's state is represented as a
 [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), and the cryptographic hash of the tree's
-root(Merkle root) is what is stored on-chain. This allows for efficient batching and tracking of
-changes to the transaction states. Any changes to the state will require the operator who initiated
-the changes to compute a new state root and commit it to the on-chain contract. If the contract
-verifies the new state as valid, then provided root hash becomes the new state root.
+root (i.e. the Merkle root) is what is stored on-chain. This allows for efficient batching and
+tracking of changes to the transaction states. Any changes to the state will require the operator
+who initiated the changes to compute a new state root and commit it to the on-chain contract. If the
+contract verifies the new state as valid, then provided root hash becomes the new state root. See
+[ETH Docs: ZK Rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/) for more
+information.
 
 #### EIP 4844
 
@@ -205,7 +209,9 @@ Until the full spec of ETH 2.0 sharding is implemented, this stopgap introduces 
 sharding those transactions. Blob transactions carry a large amount of data that the EVM cannot
 access but whose commitment can be accessed. Compared to full sharding, where the space allocated
 for this additional transaction data will be ~16MB, this EIP allows for a reduced cap corresponding
-to a target of ~1MB and a limit of ~2MB, which the rollup transactions can utilize.
+to a target of ~1MB and a limit of ~2MB, which the rollup transactions can utilize. See
+[EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com) for more
+information.
 
 ### Rollups in Polkadot
 
@@ -245,7 +251,9 @@ interpretation by the receiving chain.
 
 Ethereum 2.0 governance is still unresolved. Ethereum uses off-chain governance procedures like
 GitHub discussions, All Core Devs calls, and Ethereum Magicians to make decisions about the
-protocol. [9]
+protocol. See
+[Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium) for
+more information.
 
 Polkadot uses on-chain [governance](learn-governance.md) with a multicameral system. There are
 several avenues to issue proposals, e.g. from the on-chain Council, the Technical Committee, or the
@@ -277,16 +285,6 @@ availability and validity guarantees with fewer validators per shard.
 
 ## References
 
-1. [Ethereum 2.0 Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/)
-2. [Ethereum 2.0 Merge](https://ethereum.org/en/eth2/merge/)
-3. [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
-4. [Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
-5. [Buterin, Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS)
-6. [Messari Crypto Theses for 2020](https://messari.io/report/crypto-theses-for-2020)
-7. [eWasm Design](https://github.com/ewasm/design)
-8. [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
-9. [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
-10. [ETH Docs: ZK Rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)
-11. [ETH Docs: Optimistic Rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/)
-12. [EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com)
-13. [Scaling Public Blockchains by Tobias Schaffner](https://wwz.unibas.ch/fileadmin/user_upload/wwz/00_Professuren/Schaer_DLTFintech/Lehre/Tobias_Schaffner_Masterthesis.pdf?ref=hackernoon.com)
+6. [Messari Crypto Theses for 2020](https://messari.io/report/crypto-theses-for-2020)s
+
+7. [Scaling Public Blockchains by Tobias Schaffner](https://wwz.unibas.ch/fileadmin/user_upload/wwz/00_Professuren/Schaer_DLTFintech/Lehre/Tobias_Schaffner_Masterthesis.pdf?ref=hackernoon.com)
