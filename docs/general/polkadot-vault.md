@@ -71,6 +71,22 @@ To securely update the Polkadot Vault App follow the instructions
 - go offline (airplane mode, no wifi),
 - recover your accounts (Add Key Set > Recover Key Set).
 
+## Security Notes
+
+The Vault App has a Log that will tell you all activities performed with it. It is important to mark
+down the last activity you did so that you can do a security check next time you use the app. Also,
+the Vault App will always tell you if the phone has been (even briefly) connected to the internet.
+In case of unrecognized connection it is recommended to:
+
+- Backup your accounts (i.e. make sure you have the mnemonic seed phrases)
+- Follow the steps in [Update the Vault App](#update-the-vault-app)
+- Once offline, create a new account on the Vault App
+- Import the compromised accounts and transfer the funds on the new non-compromised account.
+
+If an account's private key has been exported from the Vault App, the public key will be marked as
+"hot" and the following message will be displayed _This key is marked hot because its root private
+key has been exported_.
+
 ## Advanced
 
 By default the Vault App contains chain specs for Polkadot, Kusama and Westend. It is possible to
