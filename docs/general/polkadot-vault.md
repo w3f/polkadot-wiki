@@ -62,7 +62,14 @@ Make sure you always have your mnemonic seed phrase secure and available to you.
 :::
 
 To securely update the Polkadot Vault App follow the instructions
-[here](https://paritytech.github.io/parity-signer/tutorials/Upgrading.html).
+[here](https://paritytech.github.io/parity-signer/tutorials/Upgrading.html). Briefly,
+
+- backup your accounts (Backup key Set > write down the mnemonic seed phrase),
+- factory reset your Vault App (Settings > Wipe all Data),
+- factory reset your phone,
+- re-install the Vault App,
+- go offline (airplane mode, no wifi),
+- recover your accounts (Add Key Set > Recover Key Set).
 
 ## Advanced
 
