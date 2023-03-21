@@ -68,7 +68,7 @@ transition contained inside of it.
 ### Availability and unavailability subprotocols
 
 During the availability and unavailability phases, the validators gossip the
-[erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1 validators must report
+[erasure coded](#erasure-codes) pieces among the network. At least 2/3 + 1 validators must report
 that they possess their piece of the code word. Once this threshold of validators has been reached,
 the network can consider the PoV block of the parachain _available_.
 
