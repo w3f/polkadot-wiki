@@ -53,7 +53,7 @@ be sent, and which XCM transport protocol to use. For example, Kusama, the canar
 `ChildParachainRouter` which only allows for Downward Message Passing from the relay to parachains
 to occur.
 
-You can read more about [XCM transport methods here](./learn-xcm-transport.md).
+You can read more about [XCM transport protocols here](./learn-xcm-transport.md).
 
 :::
 
