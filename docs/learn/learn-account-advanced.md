@@ -23,7 +23,29 @@ storage of crowdloan funds, treasury, and nomination pools.
 Those accounts do not use the normal transfer process, and they will never issue an
 [extrinsic](./learn-extrinsics.md) since they are not "real" accounts held by users.
 
-There are different types of system accounts:
+The `Account` column in the
+[list of system accounts](https://polkadot.subscan.io/account_list?role=module) lists the substrate
+pallet ID for each system account. For example, the treasury pallet id is
+[`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
+
+It is possible to derive account IDs/addresses from these pallet IDs, much in the same way parachain
+IDs can also be represented as addresses. For example converting `py/trsry -> address` will return
+the substrate address for the treasury:
+
+`5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z`
+
+This acts as a container for funds but has no actual power over them due to a lack of a
+corresponding key pair. Given the multi-chain property of the ecosystem, such address can be
+mirrored to all parachains so that each parachain has its own treasury. At the time of writing, on
+Subscan the treasury address has assets or on-chain data on 29 networks.
+
+Different type of system accounts include:
+
+- `py/cfund` crowdloans where X is the crowdloan number
+
+- `para:X` for parathreads where X is the parathread number
+
+- `Pool#X` for nomination pools where X is pool ID
 
 ## Address Format
 
