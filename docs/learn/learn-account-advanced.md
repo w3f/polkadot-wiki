@@ -17,7 +17,7 @@ You can view system accounts on [Subscan](https://polkadot.subscan.io/account_li
 
 :::
 
-As the word suggests, system accounts are used by the system and do not have users. They are used,
+As the word suggests, system accounts are used by the system. They are used,
 for example, for the treasury, as storage of crowdloan funds, and nomination pools. Those accounts
 do not use the normal transfer process, and they will never issue an
 [extrinsic](./learn-extrinsics.md) since they are not "real" accounts held by users.
