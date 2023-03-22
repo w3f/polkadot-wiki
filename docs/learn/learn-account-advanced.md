@@ -17,9 +17,9 @@ You can view system accounts on [Subscan](https://polkadot.subscan.io/account_li
 
 :::
 
-As the word suggests, system accounts are used by the system, and they do not have users. They are
-used for example for the treasury, as storage of crowdloan funds, and nomination pools. Those
-accounts do not use the normal transfer process, and they will never issue an
+As the word suggests, system accounts are used by the system and do not have users. They are used,
+for example, for the treasury, as storage of crowdloan funds, and nomination pools. Those accounts
+do not use the normal transfer process, and they will never issue an
 [extrinsic](./learn-extrinsics.md) since they are not "real" accounts held by users.
 
 The `Account` column in the list of system accounts on
@@ -36,10 +36,10 @@ converting `py/trsry -> address` will return the substrate address for the treas
 
 This acts as a container for funds but has no actual power over them due to a lack of a
 corresponding key pair. Given the multi-chain property of the ecosystem, such address can be
-mirrored to all parachains so that each parachain has its own treasury. At the time of writing, on
+mirrored to all parachains so that each parachain has its treasury. At the time of writing, on
 Subscan the treasury address has assets or on-chain data on 29 networks.
 
-Different type of system accounts also include:
+Different types of system accounts also include:
 
 - `py/cfund` for crowdloans
 
