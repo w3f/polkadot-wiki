@@ -30,7 +30,7 @@ each system account. For example, the treasury pallet id is
 It is possible to derive account IDs/addresses from these pallet IDs in the same way parachain IDs
 can also be represented as addresses. For example, using the
 [Substrate JS Utilities tool](https://www.shawntabrizi.com/substrate-js-utilities/) by Shawn Tabrizi,
-converting `py/trsry -> address` will return the substrate address for the treasury:
+converting `py/trsry -> address` will return the Substrate address for the treasury:
 
 `5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z`
 
