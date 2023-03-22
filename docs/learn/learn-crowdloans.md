@@ -125,7 +125,7 @@ Each created campaign will have an index. Once a crowdloan campaign is open, any
 by sending a special transaction that references the campaign's index. Tokens used to participate
 must be transferable &mdash; that is, not locked for any reason, including staking, vesting, and
 governance &mdash; because they will be moved into a module-controlled account that was generated
-uniquely for this campaign. See s[ystem accounts](./learn-account-advanced.md#system-accounts) for
+uniquely for this campaign. See [system accounts](./learn-account-advanced.md#system-accounts) for
 more information.
 
 :::caution Do not send Crowdloan contributions directly to the Parachain address
