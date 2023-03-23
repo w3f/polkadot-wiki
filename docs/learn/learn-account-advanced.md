@@ -23,7 +23,7 @@ do not use the normal transfer process, and they will never issue an
 [extrinsic](./learn-extrinsics.md) since they are not "real" accounts held by users.
 
 The `Account` column in the list of system accounts on
-[Subscan](https://polkadot.subscan.io/account_list?role=module) shows the substrate pallet ID for
+[Subscan](https://polkadot.subscan.io/account_list?role=module) shows the Substrate pallet ID for
 each system account. For example, the treasury pallet id is
 [`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
 
