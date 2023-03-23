@@ -27,7 +27,7 @@ The `Account` column in the table of system accounts on
 account. Some of those IDs are Substrate pallet IDs. For example, the treasury pallet ID is
 [`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
 
-It is possible to derive account addresses from these pallet IDs in the same way parachain IDs can
+It is possible to derive account addresses from these pallet IDs. In the same way, parachain IDs can
 also be represented as addresses. For example, using the
 [Substrate JS Utilities tool](https://www.shawntabrizi.com/substrate-js-utilities/) by Shawn
 Tabrizi, converting `py/trsry -> address` will return the Substrate address for the treasury:
