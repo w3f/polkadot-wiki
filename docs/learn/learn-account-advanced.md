@@ -17,31 +17,31 @@ You can view system accounts on [Subscan](https://polkadot.subscan.io/account_li
 
 :::
 
-As the word suggests, system accounts are used by the system. They are used,
-for example, for the treasury, as storage of crowdloan funds, and nomination pools. Those accounts
-do not use the normal transfer process, and they will never issue an
-[extrinsic](./learn-extrinsics.md) since they are not "real" accounts held by users.
+As the word suggests, system accounts are used by the system. They are used, for example, for the
+treasury, as storage of crowdloan funds, and nomination pools. Those accounts they will never issue
+an [extrinsic](./learn-extrinsics.md) since they are not accounts held by users and thus do not have
+key pair.
 
 The `Account` column in the list of system accounts on
-[Subscan](https://polkadot.subscan.io/account_list?role=module) shows the Substrate pallet ID for
-each system account. For example, the treasury pallet id is
+[Subscan](https://polkadot.subscan.io/account_list?role=module) shows the ID for each system
+account. Some of those ID are Substrate pallet IDs. For example, the treasury pallet id is
 [`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
 
-It is possible to derive account IDs/addresses from these pallet IDs in the same way parachain IDs
-can also be represented as addresses. For example, using the
-[Substrate JS Utilities tool](https://www.shawntabrizi.com/substrate-js-utilities/) by Shawn Tabrizi,
-converting `py/trsry -> address` will return the Substrate address for the treasury:
+It is possible to derive account addresses from these pallet IDs in the same way parachain IDs can
+also be represented as addresses. For example, using the
+[Substrate JS Utilities tool](https://www.shawntabrizi.com/substrate-js-utilities/) by Shawn
+Tabrizi, converting `py/trsry -> address` will return the Substrate address for the treasury:
 
 `5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z`
 
-This acts as a container for funds but has no actual power over them due to a lack of a
-corresponding key pair. Given the multi-chain property of the ecosystem, such address can be
-mirrored to all parachains so that each parachain has its treasury. At the time of writing, on
-Subscan the treasury address has assets or on-chain data on 29 networks.
+Given the multi-chain property of the ecosystem, such address can be mirrored to all parachains. At
+the time of writing, on Subscan the treasury address has assets or on-chain data on 29 networks.
+Note there is no inherent reason that the mirrored address will have treasury logic associated with
+it on those networks.
 
 Different types of system accounts also include:
 
-- `py/cfund` for crowdloans
+- `py/cfund` for crowdloans (Substrate pallet ID)
 
 - `X` for parathreads where X is the parathread number
 
