@@ -18,7 +18,7 @@ You can view system accounts on [Subscan](https://polkadot.subscan.io/account_li
 :::
 
 As the word suggests, system accounts are used by the system. They are used, for example, for the
-treasury, as storage of crowdloan funds, and nomination pools. Those accounts they will never issue
+treasury, as storage of crowdloan funds, and nomination pools. These accounts will never issue
 an [extrinsic](./learn-extrinsics.md) since they are not accounts held by users and thus do not have
 key pair.
 
