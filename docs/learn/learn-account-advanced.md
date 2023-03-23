@@ -22,7 +22,7 @@ treasury, as storage of crowdloan funds, and nomination pools. These accounts wi
 an [extrinsic](./learn-extrinsics.md) since they are not accounts held by users and thus do not have
 key pair.
 
-The `Account` column in the list of system accounts on
+The `Account` column in the table of system accounts on
 [Subscan](https://polkadot.subscan.io/account_list?role=module) shows the ID for each system
 account. Some of those ID are Substrate pallet IDs. For example, the treasury pallet id is
 [`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
