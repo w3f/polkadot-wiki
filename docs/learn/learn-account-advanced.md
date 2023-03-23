@@ -24,7 +24,7 @@ key pair.
 
 The `Account` column in the table of system accounts on
 [Subscan](https://polkadot.subscan.io/account_list?role=module) shows the ID for each system
-account. Some of those ID are Substrate pallet IDs. For example, the treasury pallet id is
+account. Some of those IDs are Substrate pallet IDs. For example, the treasury pallet ID is
 [`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
 
 It is possible to derive account addresses from these pallet IDs in the same way parachain IDs can
