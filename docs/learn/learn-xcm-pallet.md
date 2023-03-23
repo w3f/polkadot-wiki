@@ -35,12 +35,14 @@ handle and execute these programs.
 There are two primary primitive extrinsics. These extrinsics handle sending and executing XCVM
 programs as dispatchable functions within the pallet.
 
-1. `execute` - This call contains direct access to the XCM executor. It is the job of the executor
-   to check the message and ensure that no barrier/filter will block the execution of the XCM. Once
-   it is deemed valid, the message will then be _locally_ executed, therein returning the outcome as
-   an event. This operation is executed on behalf of whichever account has signed the extrinsic.
-   It's possible for only a partial execution to occur.
-2. `send` - This call specifies where a message should be sent
+1. [`execute`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L871) -
+   This call contains direct access to the XCM executor. It is the job of the executor to check the
+   message and ensure that no barrier/filter will block the execution of the XCM. Once it is deemed
+   valid, the message will then be _locally_ executed, therein returning the outcome as an event.
+   This operation is executed on behalf of whichever account has signed the extrinsic. It's possible
+   for only a partial execution to occur.
+2. [`send`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L761) -
+   This call specifies where a message should be sent
    ([via a transport method](./learn-xcm-transport.md)) externally to a particular destination, i.e.
    a parachain, smart contract, or any system which is governed by consensus. In contrast to
    `execute`, the executor is not called locally, as the execution will occur on the destination
@@ -65,10 +67,14 @@ instructions for sending and executing XCMs. Two variants of these functions are
 
 Otherwise, the fee is taken as needed from the asset being transferred.
 
-1. `reserve_transfer_assets` - Transfer some assets from the local chain to the sovereign account of
-   a destination chain and forward an XCM containing a `ReserveAssetDeposited` instruction, which
-   serves as a notification.
-2. `teleport_assets` - Teleport some assets from the local chain to some destination chain.
+1. [`reserve_transfer_assets`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L823) -
+   Transfer some assets from the local chain to the sovereign account of a destination chain and
+   forward an XCM containing a
+   [`ReserveAssetDeposited`](https://github.com/paritytech/xcm-format#reserveassetdeposited)
+   instruction, which serves as a notification.
+
+2. [`teleport_assets`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L777) -
+   Teleport some assets from the local chain to some destination chain.
 
 ### Transfer Reserve vs. Teleport
 
@@ -77,14 +83,14 @@ While both extrinsics deal with transferring assets, they exhibit fundamentally 
 - **Teleporting** an asset implies a two-step process: the assets are taken out of circulating
   supply (typically by burning/destroying) in the origin chain and re-minted to whatever account is
   specified at the destination. Teleporting should only occur if there is an inherent and bilateral
-  trust between the two chains, as the tokens destroyed _could not_ necessarily be guaranteed to
-  have the same properties when minted at the destination, as well as that there has to be **trust**
+  trust between the two chains, as the tokens destroyed at the origin _could not_ necessarily be
+  guaranteed to have the same properties when minted at the destination. There has to be **trust**
   that the a particular chain burned, or re-minted the assets.
 - **Transferring** or **reserving** an asset implies that **equivalent** assets (i.e, native
   currency, like `DOT` or `KSM`) are withdrawn from _sovereign account_ of the origin chain and
   deposited into the sovereign account on the destination chain. Unlike teleporting an asset, it is
-  not destroyed and re-minted, rather a trusted, 3rd entity is used (i.e., Statemint on Polkadot) to
-  **reserve** the assets, wherein the sovereign account of the destination chain on the reserve
+  not destroyed and re-minted, rather a trusted, third entity is used (i.e., Statemint on Polkadot)
+  to **reserve** the assets, wherein the sovereign account of the destination chain on the reserve
   chain obtains ownership of these assets.
 
   It's worth noting that this means that some other mechanism is needed to ensure that the balance
@@ -103,14 +109,19 @@ communication between these sovereign accounts that are in other consensus syste
 The following extrinsics require root, as they are only used when bypassing XCM version negotiation.
 They change any relevant storage aspects that enforce anything to do with XCM version negotiations.
 
-1. `force_xcm_version` - Modifies the `SupportedVersion` storage to change a particular
-   destination's stated XCM version.
-2. `force_default_xcm_version` - Modifies the `SafeXcmVersion` storage, which stores the default XCM
-   version to use when the destination's version is unknown.
-3. `force_subscribe_version_notify` - Sends an XCM with a `SubscribeVersion` instruction to a
+1. [`force_xcm_version`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L908) -
+   Modifies the `SupportedVersion` storage to change a particular destination's stated XCM version.
+2. [`force_default_xcm_version`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L932) -
+   Modifies the `SafeXcmVersion` storage, which stores the default XCM version to use when the
+   destination's version is unknown.
+3. [`force_subscribe_version_notify`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L948) -
+   Sends an XCM with a
+   [`SubscribeVersion`](https://github.com/paritytech/xcm-format#subscribeversion) instruction to a
    destination.
-4. `force_unsubscribe_version_notify` - Sends an XCM with a `UnsubscribeVersion` instruction to a
-   destination.
+4. [`force_unsubscribe_version_notify`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L970) -
+   Sends an XCM with a
+   [`UnsubscribeVersion`](https://github.com/paritytech/xcm-format#unsubscribeversion) instruction
+   to a destination.
 
 ## Fees in the XCM Pallet
 
@@ -122,9 +133,10 @@ payment to execute any subsequent instructions within the XCM.
 Fees are generally dependent on several factors within the `XcmConfig`. For example, the barrier may
 negate any fees to be paid at all.
 
-Before any XCM is sent, and if the destination chain’s barrier requires it, a `BuyExecution`
-instruction is used to buy the necessary weight for the XCM. XCM fee calculation is handled by the
-Trader, which iteratively calculates the total fee based on the number of instructions.
+Before any XCM is sent, and if the destination chain’s barrier requires it, a
+[`BuyExecution`](https://github.com/paritytech/xcm-format#buyexecution) instruction is used to buy
+the necessary weight for the XCM. XCM fee calculation is handled by the Trader, which iteratively
+calculates the total fee based on the number of instructions.
 
 The Trader used to calculate the weight (time for computation in consensus) to include in the
 message. Fee calculation in XCM is highly configurable and, for this reason, subjective to whichever
