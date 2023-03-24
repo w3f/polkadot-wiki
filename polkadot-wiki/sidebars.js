@@ -13,6 +13,7 @@ module.exports = {
             "general/how-to-dyor",
           ],
         },
+        "general/staking-dashboard",
         {
           type: "category",
           label: "Wallets",
