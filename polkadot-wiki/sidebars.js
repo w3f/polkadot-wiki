@@ -77,7 +77,6 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-redenomination",
                 "learn/learn-teleport",
               ],
             },
@@ -188,6 +187,7 @@ module.exports = {
           label: "Archive",
           items: [
             "learn/learn-governance",
+            "learn/learn-redenomination",
           ],
         },
       ],
