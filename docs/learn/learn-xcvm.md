@@ -8,9 +8,10 @@ slug: ../learn-xcvm
 ---
 
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
-program. The XCVM is a register-based state machine, state is kept track in domain-specific
-registers. The majority of the XCM format comprises of these registers, and the instructions that
-are used to compose XCVM programs.
+program, referred to as an **"XCM"** or **"XCMs"** for multiple messages. The XCVM is a
+register-based state machine, state is kept track in domain-specific registers that can hold
+information regarding the temporary state of a particular message. The majority of the XCM format
+comprises of these registers, and the instructions that are used to compose XCVM programs.
 
 The XCVM is an ultra-high level non-Turing-complete computer whose instructions are designed to be
 roughly at the same level as transactions in terms of definition. Messages are one or more XCM
@@ -25,9 +26,9 @@ it's entirely possible to create another implementation if desired.
 
 ## XCMs are XCVM Programs
 
-A cross consensus message, (XCM), is simply just a programme that runs on the `XCVM`: in other
-words, one or more XCM instructions that are executed by the `xcm-executor`. To learn more about the
-XCVM and the XCM Format, see the latest
+A cross consensus message, (XCM), is simply just a program that runs on the `XCVM`: in other words,
+one or more XCM instructions that are executed by the `xcm-executor`. To learn more about the XCVM
+and the XCM Format, see the latest
 [blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
 by Dr. Gavin Wood.
 
@@ -43,11 +44,7 @@ of the executor must have a valid configuration, which specifies a multitude of 
 chain may treat incoming messages, calculate fees, where to route messages, how to convert origins,
 and more.
 
-## XCM Message Anatomy & Flow
-
-One example of such an instruction would be `TransferAsset` which is used to transfer an asset to
-some other address on the remote system. It needs to be told which asset(s) to transfer and to
-whom/where the asset is to be transferred.
+## Cross Consensus Message (XCM) Anatomy & Flow
 
 There are four different kinds of XCM instructions:
 
@@ -71,6 +68,8 @@ Typically, an XCM takes the following path:
    instructions into FRAME compatible origins, which enable for the actual state changes to take
    place.
 
+### Example: TransferAsset
+
 An example below illustrates how a chain may transfer assets locally using an XCM. In this message,
 the `TransferAsset` instruction is defined with two parameters: `assets`, which are the assets to be
 transferred, and the `beneficiary`, whomever will be the sole beneficiary of these assets.
@@ -85,18 +84,42 @@ enum Instruction {
 }
 ```
 
-### Key XCM Terminology
-
 - A `MultiAsset` is a general identifier for an asset. It may represent both fungible and
   non-fungible assets, and in the case of a fungible asset, it represents some defined amount of the
   asset.
 
 - A `MultiLocation` is a relative identifier, meaning that it can only be used to define the
   relative path between two locations, and cannot generally be used to refer to a location
-  universally. Much like a relative file-system path will first begin with any "../" components used
-  to ascend into to the containing directory, followed by the directory names into which to descend,
-  a `MultiLocation` has two main parts to it: the number of times to ascend into the outer consensus
-  from the local and then an interior location within that outer consensus.
+  universally.
+
+`TransferAsset` is one of the many instructions that can be executed within an XCM. For more
+information, please read [XCM Instructions in the wiki](./learn-xcm-instructions.md).
+
+## Locations in XCM
+
+XCM's abstract nature allows for locations to be relatively abstract notions that point to where,
+but also _who_ a particular action may affect. Whether it this locations should specify a location,
+or The `MulitLocation` type is what XCM uses to define these locations. A `MultiLocation` is a
+relative identifier that defines a **relative** path into some state-bearing consensus system.
+
+It is used to define the relative path between two locations, and cannot generally be used to refer
+to a location universally. It is very much akin to how a **relative** filesystem path works and is
+dependent on the context on which consensus system the message is being sent from, and what
+consensus system it is being sent to be executed.
+
+![XCM MultiLocation](../assets/cross-consensus/multilocation.png)
+
+`MultiLocation` has two primary fields:
+
+- A series of paths, called `Junctions`, which define an interior portion of state to descend into
+  it (sometimes called a "sub-consensus" system, such as a smart contract or pallet). An interior
+  location may also be used to refer to a Junction, used in the context of "a parachain is an
+  interior location of the relay chain", or how a UTXO is interior to Bitcoin's consensus.
+- The number of parent junctions at the beginning of a `MultiLocation`'s formation - in other words,
+  the number of parent consensus systems above it.
+
+There are a number of various `Junction` variants that may be used to describe a particular
+location - whether it's a 32 byte account, a Substrate pallet, or a pluralistic body.
 
 ## Simulating XCVM using the xcm-simulator
 
