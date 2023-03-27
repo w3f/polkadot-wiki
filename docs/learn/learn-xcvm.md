@@ -9,13 +9,13 @@ slug: ../learn-xcvm
 
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
 program, referred to as an **"XCM"** or **"XCMs"** for multiple messages. The XCVM is a
-register-based state machine, state is kept track in domain-specific registers that can hold
-information regarding the temporary state of a particular message. The majority of the XCM format
-comprises of these registers, and the instructions that are used to compose XCVM programs.
+register-based state machine. The state is tracked in domain-specific registers that can hold
+information regarding the temporary state of a particular message. Most of the XCM format comprises
+these registers and the instructions used to compose XCVM programs.
 
-The XCVM is an ultra-high level non-Turing-complete computer whose instructions are designed to be
+The XCVM is an ultra-high-level non-Turing-complete computer whose instructions are designed to be
 roughly at the same level as transactions in terms of definition. Messages are one or more XCM
-instructions, executed in order by the XCVM. An XCM is executed until it either runs to the end or
+instructions executed in order by the XCVM. An XCM is executed until it either runs to the end or
 hits an error, at which point it finishes up and halts.
 
 The primary implementation of the XCVM is the
@@ -26,53 +26,62 @@ it's entirely possible to create another implementation if desired.
 
 ## XCMs are XCVM Programs
 
-A cross consensus message, (XCM), is simply just a program that runs on the `XCVM`: in other words,
-one or more XCM instructions that are executed by the `xcm-executor`. To learn more about the XCVM
-and the XCM Format, see the latest
-[blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
+A cross consensus message (XCM) is just a program that runs on the `XCVM`: in other words, one or
+more XCM instructions that are executed by the `xcm-executor`. To learn more about the XCVM and the
+XCM format, see the latest
+[blog post on XCM v3](https://medium.com/polkadot-network/xcm-part-iii-execution-and-error-management-ceb8155dd166)
 by Dr. Gavin Wood.
 
-XCM instructions might change a register, they might change the state of the consensus system or
-both. Depending on the goal of the program, whether it is to teleport assets from one chain to
-another, or call a smart contract on another chain, XCMs usually require changes to the registers
-before any changes to the consensus system can be made.
+XCM instructions might change a register, the state of the consensus system, or both. Depending on
+the program's goal, whether it is to teleport assets from one chain to another or call a smart
+contract on another chain, XCMs usually require changes to the registers before any changes to the
+consensus system can be made.
 
 ## XCM Executor & Configuration
 
 The XCM Executor's implementation centers around a core piece: the XCM configuration. Each instance
-of the executor must have a valid configuration, which specifies a multitude of options on how a
-chain may treat incoming messages via Barriers, calculate weight for a message via the Weigher, how
-much weight to purchase via the Trader, where to route messages, how to convert origins, and more.
+of the Executor must have a valid configuration, which specifies a multitude of options on how a
+chain may treat incoming messages via
+[Barriers](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L52),
+calculate weight for a message via the
+[Weigher](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L55),
+how much weight to purchase via the
+[Trader](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L58),
+[configure fees](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L89),
+how to
+[convert origins](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L40),
+and more.
 
 ## Cross Consensus Message (XCM) Anatomy & Flow
 
-There are four different kinds of XCM instructions:
+An XCM is made up of a list of instructions that are executed in order. There are four different
+kinds of XCM instructions:
 
-1. **Instruction** - Results in a state change in the local consensus system, or some state change.
-2. **Trusted Indication** - Tells the XCVM, or the executor, that some action has been done before
-   already - meaning, this action is now trusted and can be acted on, i.e in a teleport scenario.
+1. **Instruction** - Results in a state change in the local consensus system or some state change.
+2. **Trusted Indication** - Tells the XCVM, or the Executor, that some action has been done before
+   already - meaning, this action is now trusted and can be acted on, i.e., in a teleport scenario.
 3. **Information** - Provides additional information about a particular origin, usually the result
-   of a query, i.e a `QueryResponse` instruction.
+   of a query, i.e., a `QueryResponse` instruction.
 4. **System Notification** - Typically used in the context of when an HRMP channel is being opened,
    closed, or accepted.
 
 Typically, an XCM takes the following path:
 
-1. The XCM Executor, and XCVM in general, is very much analogous to a CPU. It has various registers,
-   which instructions usually modify as needed.
-2. The resulting values from these registers are used later in the transfer. An example of a common
-   register used in many instructions is the `Holding` register, which places assets in a holding
-   until fulfilled on the destination chain.
-3. The resulting instructions modify the holding register as needed and execute extrinsics on the
-   destination chain to perform the state change. The executor is able to convert incoming
-   instructions into FRAME compatible origins, which enable for the actual state changes to take
-   place.
+1.  The XCM Executor, and XCVM in general, is very much analogous to a CPU. It has various
+    registers, which instructions usually modify as needed.
+2.  The resulting values from these registers are used later in the transfer. An example of a common
+    register used in many instructions is the `Holding` register, which places assets in a holding
+    until fulfilled on the destination chain.
+3.  The resulting instructions modify the Holding register as needed and execute extrinsics on the
+    destination chain to perform the state change. The Executor is able to convert incoming
+    instructions into FRAME-compatible origins, which enables the actual state changes to take
+    place.
 
 ### Example Register: The Holding Register
 
 There are many instructions that depend on the Holding register. The Holding register is an XCM
 register that provides a place for any assets that are in an intermediary state to be held until
-they are withdrawn to a beneficiary. They require an instruction to place assets within, and another
+they are withdrawn to a beneficiary. They require an instruction to place assets within and another
 to withdraw them. The simplest example of this occurring is the `DepositAsset` instruction, which in
 its Rust form looks like this:
 
@@ -96,11 +105,11 @@ transacting between chains.
 
 An example below illustrates how a chain may transfer assets locally using an XCM. In this message,
 the `TransferAsset` instruction is defined with two parameters: `assets`, which are the assets to be
-transferred, and the `beneficiary`, whomever will be the sole beneficiary of these assets. More
+transferred, and the `beneficiary`, whoever will be the sole beneficiary of these assets. More
 complex instructions, especially those which perform actions that target a location other than the
 interpreting consensus system may make use of XCVM registers.
 
-```
+```rust
 enum Instruction {
     TransferAsset {
         assets: MultiAssets,
@@ -114,7 +123,7 @@ enum Instruction {
   non-fungible assets, and in the case of a fungible asset, it represents some defined amount of the
   asset.
 
-- A `MultiLocation` is a relative identifier, meaning that it can only be used to define the
+- A `MultiLocation` is a relative identifier, meaning that it can only be used to define the the
   relative path between two locations, and cannot generally be used to refer to a location
   universally.
 
@@ -123,10 +132,10 @@ information, please read [XCM Instructions in the wiki](./learn-xcm-instructions
 
 ## Locations in XCM
 
-XCM's abstract nature allows for locations to be relatively abstract notions that point to where,
-but also _who_ a particular action may affect. Whether it this locations should specify a location,
-or The `MulitLocation` type is what XCM uses to define these locations. A `MultiLocation` is a
-relative identifier that defines a **relative** path into some state-bearing consensus system.
+XCM's abstract nature allows for locations to be relatively abstract notions that point to where but
+also _to who_ a particular action may affect. The `MulitLocation` type is what XCM uses to define
+these locations. A `MultiLocation` is a relative identifier that defines a **relative** path into
+some state-bearing consensus system.
 
 It is used to define the relative path between two locations, and cannot generally be used to refer
 to a location universally. It is very much akin to how a **relative** filesystem path works and is
@@ -151,4 +160,4 @@ location - whether it's a 32 byte account, a Substrate pallet, or a pluralistic 
 
 Within the Polkadot repository exists the
 [`xcm-simulator`](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-simulator), which
-allows developers to experiment with building, executing, and simulate various XCM use scenarios.
+allows developers to experiment with building, executing, and simulating various XCM use scenarios.
