@@ -41,8 +41,8 @@ before any changes to the consensus system can be made.
 
 The XCM Executor's implementation centers around a core piece: the XCM configuration. Each instance
 of the executor must have a valid configuration, which specifies a multitude of options on how a
-chain may treat incoming messages, calculate fees, where to route messages, how to convert origins,
-and more.
+chain may treat incoming messages via Barriers, calculate weight for a message via the Weigher, how
+much weight to purchase via the Trader, where to route messages, how to convert origins, and more.
 
 ## Cross Consensus Message (XCM) Anatomy & Flow
 
@@ -59,7 +59,7 @@ There are four different kinds of XCM instructions:
 Typically, an XCM takes the following path:
 
 1. The XCM Executor, and XCVM in general, is very much analogous to a CPU. It has various registers,
-   which instructions usually modify.
+   which instructions usually modify as needed.
 2. The resulting values from these registers are used later in the transfer. An example of a common
    register used in many instructions is the `Holding` register, which places assets in a holding
    until fulfilled on the destination chain.
@@ -68,11 +68,37 @@ Typically, an XCM takes the following path:
    instructions into FRAME compatible origins, which enable for the actual state changes to take
    place.
 
+### Example Register: The Holding Register
+
+There are many instructions that depend on the Holding register. The Holding register is an XCM
+register that provides a place for any assets that are in an intermediary state to be held until
+they are withdrawn to a beneficiary. They require an instruction to place assets within, and another
+to withdraw them. The simplest example of this occurring is the `DepositAsset` instruction, which in
+its Rust form looks like this:
+
+```rust
+enum Instruction {
+    DepositAsset {
+        assets: MultiAssetFilter,
+        max_assets: u32,
+        beneficiary: MultiLocation,
+    },
+    /* snip */
+}
+```
+
+This instruction specifies how many assets are going to be withdrawn (useful for fee calculation),
+which assets to filter from the Holding register, and the beneficiary (the recipient of) the assets.
+It is very common for instructions to remove and place assets into the Holding register when
+transacting between chains.
+
 ### Example: TransferAsset
 
 An example below illustrates how a chain may transfer assets locally using an XCM. In this message,
 the `TransferAsset` instruction is defined with two parameters: `assets`, which are the assets to be
-transferred, and the `beneficiary`, whomever will be the sole beneficiary of these assets.
+transferred, and the `beneficiary`, whomever will be the sole beneficiary of these assets. More
+complex instructions, especially those which perform actions that target a location other than the
+interpreting consensus system may make use of XCVM registers.
 
 ```
 enum Instruction {
