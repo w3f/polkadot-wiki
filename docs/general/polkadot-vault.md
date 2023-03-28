@@ -14,7 +14,7 @@ using [Ledger](./ledger.md) devices.
 
 :::
 
-[Parity Signer](https://www.parity.io/technologies/signer) (aka Polkadot Vault) is a cold storage
+[Polkadot Vault](https://www.parity.io/technologies/signer) (aka Parity Signer) is a cold storage
 solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault App is
 not technically a wallet as it does not allow to transfer funds. It is more of a key-chain tool that
 will enable you the create, manage, and restore accounts.
