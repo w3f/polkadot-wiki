@@ -19,7 +19,7 @@ instructions executed in order by the XCVM. An XCM is executed until it either r
 hits an error, at which point it finishes up and halts.
 
 The primary implementation of the XCVM is the
-[`xcm-executor](https://github.com/paritytech/polkadot/tree/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor).
+[`xcm-executor`](https://github.com/paritytech/polkadot/tree/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor).
 It follows the XCVM specification provided by Parity. It's engineered to be extendable, providing
 maximum customizability when configuring XCM. Because the `xcm-executor` is just an implementation
 of XCVM, it's entirely possible to create another implementation if desired.
