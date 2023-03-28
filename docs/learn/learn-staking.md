@@ -525,7 +525,7 @@ this wiki.
 
 ### Fast Unstake
 
-:::info Fast Unstaking is live on Polkadot
+:::info Fast Unstaking feature is live!
 
 If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your bonded
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you can now
