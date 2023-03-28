@@ -128,12 +128,12 @@ repo = "statemint"
 genesis_hash = "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda771a"
 ```
 
-For reach additional chain you need to add the respective information. Information about the genesis
-hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State..
+For each additional chain, you need to add the respective information. Information about the genesis
+hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State.
 
 ### Rename Chain's Files
 
-Rename the singed chain spec and metadata files as follow:
+Rename the signed chain spec and metadata files as follow:
 
 `add_specs_statemine-sr25519` --> `statemine_specs.png`
 
