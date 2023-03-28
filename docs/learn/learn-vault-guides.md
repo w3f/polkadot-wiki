@@ -129,7 +129,7 @@ genesis_hash = "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda77
 ```
 
 For each additional chain, you need to add the respective information. Information about the genesis
-hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State..
+hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State.
 
 ### Rename Chain's Files
 
