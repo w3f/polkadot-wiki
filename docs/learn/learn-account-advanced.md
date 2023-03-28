@@ -9,43 +9,6 @@ slug: ../learn-account-advanced
 
 import RPC from "./../../components/RPC-Connection";
 
-## System Accounts
-
-:::info
-
-You can view system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
-
-:::
-
-As the word suggests, system accounts are used by the system. They are used, for example, for the
-treasury, as storage of crowdloan funds, and nomination pools. These accounts will never issue
-an [extrinsic](./learn-extrinsics.md) since they are not accounts held by users and thus do not have
-key pair.
-
-The `Account` column in the table of system accounts on
-[Subscan](https://polkadot.subscan.io/account_list?role=module) shows the ID for each system
-account. Some of those IDs are Substrate pallet IDs. For example, the treasury pallet ID is
-[`py/trsry`](https://github.com/paritytech/polkadot/blob/6282def1bb053858522cf551b86b2d07aad04f29/runtime/polkadot/src/lib.rs#L818).
-
-It is possible to derive account addresses from these pallet IDs. In the same way, parachain IDs can
-also be represented as addresses. For example, using the
-[Substrate JS Utilities tool](https://www.shawntabrizi.com/substrate-js-utilities/) by Shawn
-Tabrizi, converting `py/trsry -> address` will return the Substrate address for the treasury:
-
-`5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z`
-
-Given the multi-chain property of the ecosystem, such address can be mirrored to all parachains. At
-the time of writing, on Subscan the treasury address has assets or on-chain data on 29 networks.
-Note there is no inherent reason that the mirrored address will have treasury logic associated with
-it on those networks.
-
-Different types of system accounts also include:
-
-- `py/cfund` for crowdloans (Substrate pallet ID)
-
-- `X` for parathreads where X is the parathread number
-
-- `Pool#X` for nomination pools where X is pool ID
 
 ## Address Format
 
@@ -204,6 +167,53 @@ different letter, like `J4iggBtsWsb61RemU2TDWDXTNHqHNfBSAkGvVZBtn1AJV1a`, we sti
 first byte: `02f2d606a67f58fa0b3ad2b556195a0ef905676efd4e3ec62f8fa1b8461355f1142509`. It seems
 counterintuitive that some addresses always have the same prefix and others like Kusama can vary
 wildly, but it's just a quirk of Base58-check encoding.
+
+## System Accounts
+
+
+As the word suggests, system accounts are used by the system. They are used, for example, for the
+treasury, crowdloans, and nomination pools. From the point of view of the runtime, these accounts 
+are like any other account on-chain. These special system accounts are just public keys, with the 
+private key being unknown (and unattainable). So, that means that only the pallet itself can interact 
+with this account. These accounts can never issue a signed [extrinsic](./learn-extrinsics.md) since they 
+do not have a private key.
+
+:::info
+
+You can view system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
+
+:::
+
+For instance, let us take a look at how treasury accounts are created and used under the hood. 
+To generate the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined
+to create the `AccountID`
+
+```
+as_bytes("modl") = 0x6d6f646c
+as_bytes("py/trsry") = 0x70792f7472737279
+```
+
+Then the rest of the account address is filled with 0s till it reaches the expected account encoded length.
+
+```
+0x6d6f646c70792f74727372790000000000000000000000000000000000000000
+```
+
+Which maps to Substrate Address:
+
+
+```
+5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z
+```
+
+For more information, check the post on Substrate StackExchange on [Treasury accounts](https://substrate.stackexchange.com/questions/536/how-do-treasury-accounts-compare-to-end-user-accounts-in-frame).
+
+Similarly, the crowdloan system accounts are derived from the pallet ID as well as the fund account index.
+To generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund" along with the fund index
+are combined to create the `AccountID`. For instance, "modlpy/cfund:0" represents the first ever crowdloan account
+created. For all the subsequent crowdloans, the index keeps incrementing. Similar logic applies to Nomination Pools
+and Parachain accounts as well.
+
 
 ## Portability
 
