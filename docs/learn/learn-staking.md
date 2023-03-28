@@ -525,14 +525,16 @@ this wiki.
 
 ### Fast Unstake
 
-:::info Fast Unstaking is live on Kusama
+:::info Fast Unstaking feature is live!
 
-Fast unstaking will be added to Polkadot soon.
+If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your bonded
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you can now
+unbond them immediately.
 
 :::
 
 If your bonded balance did not back any validators in the last
-{{ polkadot: 28 days on Polkadot (when the feature goes live) :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
+{{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
 you are eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
 qualify. For more information, visit the
