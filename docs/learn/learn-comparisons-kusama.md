@@ -1,10 +1,10 @@
 ---
-id: learn-kusama-vs-polkadot
+id: learn-comparisons-kusama
 title: Polkadot vs. Kusama
 sidebar_label: Kusama
 description: Comparing the cousins.
 keywords: [polkadot, kusama, polkadot vs kusama, canary]
-slug: ../learn-kusama-vs-polkadot
+slug: ../learn-comparisons-kusama
 ---
 
 import RPC from "./../../components/RPC-Connection";

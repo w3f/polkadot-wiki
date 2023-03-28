@@ -146,6 +146,10 @@ module.exports = {
           {
             to: '/docs/learn-assets-guides',
             from: ['/docs/learn-statemint']
+          },
+          {
+            to: '/docs/learn-comparisons-kusama',
+            from: ['/docs/learn-kusama-vs-polkadot']
           }
         ],
         createRedirects: function (existingPath) {
