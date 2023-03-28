@@ -170,7 +170,6 @@ wildly, but it's just a quirk of Base58-check encoding.
 
 ## System Accounts
 
-
 As the word suggests, system accounts are used by the system. They are used, for example, for the
 treasury, crowdloans, and nomination pools. From the point of view of the runtime, these accounts 
 are like any other account on-chain. These special system accounts are just public keys, with the 
