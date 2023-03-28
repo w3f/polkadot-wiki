@@ -88,7 +88,7 @@ era** (in hours), and dividing by the **hours in a day** (24). Example:
 staking lock will be visible on the Polkadot-JS UI during the unbonding period, and after it, the
 staking lock can be unlocked, and the bonded funds become free balance you can transfer.
 
-:::info Fast Unstaking is live on Polkadot
+:::info Fast Unstaking feature is live!
 
 If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your bonded
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you can now
