@@ -193,7 +193,7 @@ as_bytes("modl") = 0x6d6f646c
 as_bytes("py/trsry") = 0x70792f7472737279
 ```
 
-Then the rest of the account address is filled with 0s till it reaches the expected account encoded length.
+Then the rest of the account address is filled with zeros until it reaches the expected account encoded length.
 
 ```
 0x6d6f646c70792f74727372790000000000000000000000000000000000000000
