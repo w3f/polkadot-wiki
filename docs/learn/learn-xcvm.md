@@ -19,10 +19,10 @@ instructions executed in order by the XCVM. An XCM is executed until it either r
 hits an error, at which point it finishes up and halts.
 
 The primary implementation of the XCVM is the
-[`xcm-executor](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-executor). It follows the
-XCVM specification provided by Parity. It's engineered to be extendable, providing maximum
-customizability when configuring XCM. Because the `xcm-executor` is just an implementation of XCVM,
-it's entirely possible to create another implementation if desired.
+[`xcm-executor](https://github.com/paritytech/polkadot/tree/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor).
+It follows the XCVM specification provided by Parity. It's engineered to be extendable, providing
+maximum customizability when configuring XCM. Because the `xcm-executor` is just an implementation
+of XCVM, it's entirely possible to create another implementation if desired.
 
 ## XCMs are XCVM Programs
 
@@ -42,14 +42,14 @@ consensus system can be made.
 The XCM Executor's implementation centers around a core piece: the XCM configuration. Each instance
 of the Executor must have a valid configuration, which specifies a multitude of options on how a
 chain may treat incoming messages via
-[Barriers](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L52),
+[Barriers](https://github.com/paritytech/polkadot/blob/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor/src/config.rs#L52),
 calculate weight for a message via the
-[Weigher](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L55),
+[Weigher](https://github.com/paritytech/polkadot/blob/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor/src/config.rs#L55),
 how much weight to purchase via the
-[Trader](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L58),
-[configure fees](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L89),
+[Trader](https://github.com/paritytech/polkadot/blob/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor/src/config.rs#L58),
+[configure fees](https://github.com/paritytech/polkadot/blob/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor/src/config.rs#L89),
 how to
-[convert origins](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-executor/src/config.rs#L40),
+[convert origins](https://github.com/paritytech/polkadot/blob/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor/src/config.rs#L40),
 and more.
 
 ## Cross Consensus Message (XCM) Anatomy & Flow
