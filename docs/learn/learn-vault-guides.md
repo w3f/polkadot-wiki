@@ -42,8 +42,8 @@ Start the terminal within the `files/in_progress` folder and type the following:
 `cat sign_me_add_specs_statemine_sr25519 | subkey sign --suri "YOUR SEED PHRASE"`
 
 where `"YOUR SEED PHRASE"` is the seed phrase of the account that will be used to sign and
-authenticate both the chain spec and later on the metadata. Running the code above will return the
-signature below:
+authenticate both the chain spec and later on the metadata. Running the code above will return a
+signature similar to that below:
 
 `0xc4ce72db959000b6166af96d3bda55a927fd837747bf1bf1ae8a69e57c9ef37c25a88707c47b105a9eb1fbcf9345680eff57eb978cf73919506f6c738834e78a`
 
@@ -73,7 +73,8 @@ and type the following:
 
 where `wss://statemine.api.onfinality.io/public-ws` is the OnFinality RPC endpoint for Statemine.
 This will create the file `sign_me_load_metadata_statemineV9370` under the `files/in_progress`
-folder.
+folder. Note that for future metadata updates the file name will change as the version at the time
+of writing was `V9370`.
 
 ### Generating Signature
 
@@ -82,7 +83,7 @@ Start the terminal within the `files/in_progress` folder and type the following:
 `cat sign_me_load_metadata_statemineV9370 | subkey sign --suri "YOUR SEED PHRASE"`
 
 where `"YOUR SEED PHRASE"` is the seed phrase of the account you used to sign the chain
-specification. Running the code above will return the signature below:
+specification. Running the code above will return a signature similar to that below:
 
 `0xde1ad7aeb252acb3cf42a522dcc8dc3f317a49be2ed636836dd6df8f7e47135f2c712480055822eba87e9ea5ac7d3bba96045992ae795856fdf4eea09a411f85`
 
@@ -107,14 +108,14 @@ fountain to do the metadata update for statemine.
 
 ### Modify `config` File
 
-Alternatively, you can add the chain specification and the metadata QR code fountain in a metadata
-portal. Briefly, fork the
+Alternatively, you can add the chain specification QR code and the metadata QR code fountain in a
+metadata portal. Briefly, fork the
 [Parity's Metadata Portal GitHub repository](https://github.com/paritytech/metadata-portal). You can
 modify the following fields of the `config.toml` file:
 
 - `name`: your name / institution
 - `public_key`: the public key of the account you use to sign the chain spec and the metadata.
-- then at the bottom of the file add the following information:
+- At the bottom of the file add the following information:
 
 ```
 [[chains]]
@@ -133,16 +134,20 @@ hash can be found on the Polkadot-JS UI > connect to the relevant chain > Develo
 
 ### Rename Chain's Files
 
-Rename the signed chain spec and metadata files as follow:
+Rename the signed chain specification and metadata files as follow:
 
-`add_specs_statemine-sr25519` --> `statemine_specs.png`
+- Chain specification: `add_specs_statemine-sr25519` --> `statemine_specs.png`
 
-`load_metadata_statemineV9370`--> `statemine_metadata_9370.apng`
+- Metadata updates: `load_metadata_statemineV9370`--> `statemine_metadata_9370.apng`
+
+Thus, for chain specification the file must be renamed to `chainName_specs.png` while for metadata
+the file must be renamed to `chainName_metadata_version.apng` where `chainName` is the name of the
+chain and `version` is the version of the metadata.
 
 Add the renamed files to the `/public/qr folder` within the Metadata Portal repository.
 
 ### Run Portal
 
 Open the terminal within the Metadata Portal repository and run `make updater`. Then run
-`make collector`; this will create the `_latest.apng` files for each of the chains (removed by
-`make cleaner`). Finally, run `yarn start` to load the metadata portal on your localhost.
+`make collector`; this will create the `_latest.apng` files for each of the chains (removed by the
+command `make cleaner`). Finally, run `yarn start` to load the metadata portal on your localhost.
