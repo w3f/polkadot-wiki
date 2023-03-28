@@ -77,7 +77,6 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-redenomination",
                 "learn/learn-teleport",
               ],
             },
@@ -94,7 +93,6 @@ module.exports = {
               label: "Components",
               items: [
                 "learn/learn-consensus",
-                "learn/learn-governance",
                 "learn/learn-opengov",
                 "learn/learn-polkadot-host",
                 "learn/learn-runtime-upgrades",
@@ -182,8 +180,16 @@ module.exports = {
             'learn/learn-comparisons-avalanche'
           ],
         },
-        "learn/learn-launch",
         "learn/learn-video-tutorials",
+        {
+          type: "category",
+          label: "Archive",
+          items: [
+            "learn/learn-governance",
+            "learn/learn-launch",
+            "learn/learn-redenomination",
+          ],
+        },
       ],
     },
     {
