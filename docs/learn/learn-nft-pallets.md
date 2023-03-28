@@ -109,9 +109,17 @@ With all these options, one can decide to modify the price of the collection's i
 mint, receive or buy items in that collection. Time constraints are available with `startBlock` and
 `endBlock` parameters. It is thus possible, for example, to create a schedule in which holders of
 items in collection A (`HolderOf` parameter) will be able to claim a limited number of NFTs from
-Collection X (`maxSupply` parameter) only within a specific time frame. You can modify the
-parameters so anyone can buy more NFTs from Collection X. Note that items are never free as even if
-they could not have a price, transaction fees always apply.
+Collection X (`maxSupply` parameter) only within a specific time frame.
+
+In Collection X, people will be able to mint the exact number of NFTs they have in Collection A.
+It's a one to one ratio. So if they have 3 nfts in collection A, they can mint 3 nfts in collection
+X. Each time they "use" one nft in Collection A, the said NFT will have an attribute that will block
+its further use to mint in Collection X. But it will be possible to mint in another collection Y if
+it also uses collection A as a `HolderOf`.
+
+You can modify the parameters so anyone can buy more NFTs from Collection X. To buy a NFT you will
+need to pay the item price + transaction fee. Even if the item is free, the transaction fee always
+apply.
 
 This can be useful for events such as Hackathons where participants who bought a ticket receive the
 NFT ticket from Collection A. Then, all holders of at least one item in Collection A (i.e. all
