@@ -40,36 +40,26 @@ Setting up a collection implies different roles with different permissions:
     supply, and locking collection metadata and attributes.
 
 - Admin:
-  - set attribute and metadata of a collection.
-  - set attributes pre-signed: set attributes for an item by providing the pre-signed approval.
+
+  - set attributes and metadata of a collection.
+  - set attributes pre-signed: set attributes for an item by providing the Admin pre-signed
+    approval.
   - lock item properties: lock item metadata and attributes.
-
-:::info
-
-Note that an Admin account cannot burn or transfer items it does not own.
-
-:::
 
 - Freezer:
 
-  - lock item transfer: lock all holders from the possibility of transferring an item.
-  - unlock item transfer: lift a previous lock to transfer an item for all holders.
+  - lock item transfer: disallow further item transfers.
+  - unlock item transfer: lift a previous lock to transfer an item.
 
 - Issuer
   - mint
-  - force mint (with custom item configuration): mint an item of a particular collection from a
-    privileged origin.
-  - mint pre-signed: mint an item by providing the pre-signed approval.
+  - force mint (with custom item configuration).
+  - mint pre-signed: mint an item by providing the Issuer pre-signed approval.
   - update mint settings.
 
-For simple collections, the same account has all the roles by default. Still, for complex
-collections separate accounts can take each role with their responsibilities (e.g. items issuance).
-The key can be rotated for those roles. The owner's account is used to setup the collection, and its
-private key is kept in cold storage.
-
 Those roles can also be set to `none` without the ability to change them back. This is useful when a
-collection is created, and all the items are minted without the possibility of minting any more
-items, or change the metadata, or disable some item's transfer.
+collection is created and all the items are minted. Now, by setting roles to `none` we remove the
+possibility of minting any more items, changing the metadata, or disallowing some item's transfer.
 
 ### Creating a Collection
 
@@ -126,9 +116,17 @@ re-allowed anytime).
 With all these options, one can decide to modify the price of the collection's items and who can
 mint, receive or buy items in that collection. Time constraints are available with `startBlock` and
 `endBlock` parameters. It is thus possible, for example, to create a schedule in which holders of
-items in collection A (`HolderOf` parameter) will be able to claim for free a limited number of NFTs
-from Collection X (`maxSupply` parameter) only within a specific time frame. You can modify the
-parameters so anyone can buy more NFTs from Collection X.
+items in collection A (`HolderOf` parameter) will be able to claim a limited number of NFTs from
+Collection X (`maxSupply` parameter) only within a specific time frame.
+
+In Collection X, people can mint the number of NFTs they have in Collection A. It's a one-to-one
+ratio. So if they have 3 nfts in collection A, they can mint 3 nfts in collection X. Each time they
+use one nft in Collection A, the said NFT will have an attribute that will block its further use to
+mint in Collection X. But it will be possible to mint in another collection Y if it also uses
+collection A as a `HolderOf`.
+
+You can modify the parameters, so anyone can buy more NFTs from Collection X. To buy an NFT you must
+pay the item price + transaction fee. Even if the item is free, the transaction fee always apply.
 
 This can be useful for events such as Hackathons where participants who bought a ticket receive the
 NFT ticket from Collection A. Then, all holders of at least one item in Collection A (i.e. all
@@ -156,7 +154,7 @@ account owning the NFT and the collection ID. You can also see all your collecti
 `collectionAccount` extrinsic.
 
 When a new collection is created, a new ID will be generated and assigned to it. When a collection
-is destroyed, and no one can pick up the collection ID again (including the owner).
+is destroyed, no one can pick up the collection ID again (including the owner).
 
 ### Minting an NFT
 
