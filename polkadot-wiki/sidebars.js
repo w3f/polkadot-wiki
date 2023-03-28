@@ -66,6 +66,7 @@ module.exports = {
                 "learn/learn-account-generation",
                 "learn/learn-balance-transfers",
                 "learn/learn-extrinsics",
+                "learn/learn-identity",
                 "learn/learn-account-multisig",
                 'learn/learn-proxies',
               ],
@@ -76,8 +77,6 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-redenomination",
-                "learn/learn-statemint",
                 "learn/learn-teleport",
               ],
             },
@@ -94,11 +93,8 @@ module.exports = {
               label: "Components",
               items: [
                 "learn/learn-consensus",
-                "learn/learn-governance",
                 "learn/learn-opengov",
-                "learn/learn-identity",
                 "learn/learn-polkadot-host",
-                "learn/learn-registrar",
                 "learn/learn-runtime-upgrades",
                 "learn/learn-transaction-fees",
                 "learn/learn-treasury",
@@ -110,7 +106,6 @@ module.exports = {
               items: [
                 "learn/learn-staking",
                 "learn/learn-nomination-pools",
-                "learn/learn-staking-faq"
               ],
             },
           ],
@@ -125,8 +120,16 @@ module.exports = {
             'learn/learn-phragmen',
             'learn/learn-randomness',
             'learn/learn-spree',
-            'learn/learn-staking-miner',
             'learn/learn-wasm',
+            {
+              type: "category",
+              label: "How-to Guides",
+              items: [
+                "learn/learn-staking-guides",
+                "learn/learn-identity-guides",
+                "learn/learn-assets-guides",
+              ],
+            },
           ],
         },
         {
@@ -177,8 +180,16 @@ module.exports = {
             'learn/learn-comparisons-avalanche'
           ],
         },
-        "learn/learn-launch",
         "learn/learn-video-tutorials",
+        {
+          type: "category",
+          label: "Archive",
+          items: [
+            "learn/learn-governance",
+            "learn/learn-launch",
+            "learn/learn-redenomination",
+          ],
+        },
       ],
     },
     {

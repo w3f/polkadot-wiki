@@ -222,11 +222,9 @@ emergency referendum occurring at the same time as a regular referendum (either 
 council-proposed) is the only time that multiple referenda will be able to be voted on
 simultaneously.
 
-OpenGov shares the same
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
-day eligibility period when the proposal can get approved. If not approved by then end of this
-period, the proposal is automatically rejected.
+The proposal is eligible to get approved during OpenGov's track specific
+[decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). If not approved by
+then end of this period, the proposal is automatically rejected.
 
 #### Voting on a referendum (OpenGov)
 
@@ -248,15 +246,13 @@ use less privileged origins, it is far more reasonable to drop the required turn
 realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
 more political significance can be made to require a higher approval early on, to avoid controversy.
 
-In OpenGov, proposals that are not approved after
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
-days are considered rejected by default and the Decision Deposit is refunded. If the proposal
-manages to stay passing until the end of the Confirmation Period, it is considered approved and is
-scheduled to execute from the proposed origin but after the Enactment Period. The Enactment Period
-is specified when the referendum is proposed but is also subject to a minimum value based on the
-Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time
-to prepare for any changes the proposal may bring.
+In OpenGov, proposals that are not approved after the decision period are considered rejected by
+default and the Decision Deposit is refunded. If the proposal manages to stay passing until the end
+of the Confirmation Period, it is considered approved and is scheduled to execute from the proposed
+origin but after the Enactment Period. The Enactment Period is specified when the referendum is
+proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a
+larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal
+may bring.
 
 #### Voluntary Locking
 

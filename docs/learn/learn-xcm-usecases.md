@@ -13,7 +13,8 @@ the XCM format can be used to construct many more combinations to suit the use c
 ### Example Use-Cases
 
 - Request for specific operations to occur on the recipient system such as governance voting.
-- Enables single use-case chains e.g. [Statemint/e](learn-statemint.md) as asset parachains
+- Enables single use-case chains e.g. [Statemint/e](./learn-assets-guides.md#statemint) as asset
+  parachains
 - Optionally include payment of fees on a target network for requested operation.
 - Provide methods for various asset transfer models:
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an

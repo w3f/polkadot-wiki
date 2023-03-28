@@ -122,6 +122,9 @@ function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
 			}
 			index = i;
 			return [index, status];
+		} else {
+			status = `There are currently no pending or ongoing auctions.`;
+			return [index, status];
 		}
 	}
 }

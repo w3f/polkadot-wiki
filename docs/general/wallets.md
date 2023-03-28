@@ -48,9 +48,10 @@ them also allow interaction with air-gapped wallets and hardware devices.
 | Wallet                                                                                     | Browsers                                                                                                                                                                                                                                                                                                                                                                                                          | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
 | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
 | [Enkrypt](https://www.enkrypt.com/?mtm_campaign=Polkadot%20Wiki%20-%20Supported%20Wallets) | Brave, Chrome, Edge, Firefox, Opera, Safari                                                                                                                                                                                                                                                                                                                                                                       | No, No                       | **Yes** | No         | **Yes**        | No         | [Enkrypt Features](#enkrypt)     |
-| [PolkaGate](https://polkagate.xyz/)                                                        | [Chrome](https://chrome.google.com/webstore/detail/polkagate-the-gateway-to/ginchbkmljhldofnbjabmeophlhdldgp), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkagate), [Edge](https://microsoftedge.microsoft.com/addons/detail/polkagate-the-gateway-to/eakellaeidmgcpifaofebhpcjienkajp)                                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
+| [PolkaGate](https://polkagate.xyz/)                                                        | [Brave](https://chrome.google.com/webstore/detail/polkagate-the-gateway-to/ginchbkmljhldofnbjabmeophlhdldgp), [Chrome](https://chrome.google.com/webstore/detail/polkagate-the-gateway-to/ginchbkmljhldofnbjabmeophlhdldgp), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkagate), [Edge](https://chrome.google.com/webstore/detail/polkagate-the-gateway-to/ginchbkmljhldofnbjabmeophlhdldgp)     | **Yes**, **Yes**             | No      | **Yes**    | **Yes**        | No         | [PolkaGate features](#polkagate) |
 | [SubWallet](https://subwallet.app/)                                                        | [Brave](https://chrome.google.com/webstore/detail/subwallet-polkadot-extens/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Chrome](https://chrome.google.com/webstore/detail/subwallet-polkadot-extens/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Edge](https://chrome.google.com/webstore/detail/subwallet-polkadot-extens/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/subwallet/) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 | [Talisman](https://www.talisman.xyz/)                                                      | Brave, Chrome, Edge, Firefox                                                                                                                                                                                                                                                                                                                                                                                      | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [Talisman features](#talisman)   |
+| [Fearless Wallet](https://fearlesswallet.io/) | [Brave](https://chrome.google.com/webstore/detail/fearless-wallet/nhlnehondigmgckngjomcpcefcdplmgc), [Chrome](https://chrome.google.com/webstore/detail/fearless-wallet/nhlnehondigmgckngjomcpcefcdplmgc)                                                                                                                                                                                                                                                                                                                                                                       | No, No                       | No | No         | No        | No         | [Fearless Wallet Features](#fearless-wallet)     |
 
 :::info Ledger support only for chromium-based browsers
 
@@ -105,18 +106,23 @@ warning. Fearless Wallet received funding from Kusama Treasury
 
 ## Nova Wallet
 
-Supports OpenGov, Governance v1, XCM Transfers, Parity Signer & Ledger Support, DApp Support with
-Polkadot JS and MetaMask/EVM Integration. Nova Wallet received funding from Kusama Treasury
-[[1](https://kusama.polkassembly.io/treasury/122),
-[2](https://kusama.polkassembly.io/treasury/158)].
+A user-friendly wallet for the Polkadot & Kusama ecosystems, providing a smooth web3 experience on
+both iOS and Android. Nova Wallet supports OpenGov (including agile delegations), Governance v1
+(including support for parachain governance), Staking, NFT management, XCM Transfers, Parity Signer
+& Ledger Support, DApp Support with Polkadot JS and Metamask/EVM Integration and crowdloans. Nova
+Wallet received funding from Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/122),
+[2](https://kusama.polkassembly.io/treasury/158)], as well as funding from the Polkadot Treasury
+[[1](https://polkadot.polkassembly.io/motion/314)].
 
 ## PolkaGate
 
 PolkaGate extension is a Kusama Treasury supported
 [[1](https://kusama.polkassembly.io/treasury/205)] extension/wallet. It is the next version of
 Polkadot-JS Plus, completely re-developed, with a new look and many performance improvements.
-Supports proxy accounts and social recovery, address (watch-only) accounts, parachain accounts,
-custom remote nodes, phishing detection, QR account import, export/import/derive account(s).
+Supports address only accounts, crowdloans, export/import/derive account(s), ledger support, pool
+staking, parachain accounts, phishing website detection, proxy management, QR account import, solo
+staking, support different remote nodes, transfer funds, view balances (Crypto/USD), view
+transaction history, view an address as QR code.
 
 ## Polkawallet
 

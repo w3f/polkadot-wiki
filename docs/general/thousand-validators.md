@@ -149,7 +149,7 @@ and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The pro
 - {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on the latest release
-- {{ polkadot: Reward destination 'Staked' :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
+- {{ polkadot: Maximum one node per applicant :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
 - Validators must operate nodes themselves, they may not be operated by third parties or staking
   providers.
 
