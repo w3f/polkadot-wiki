@@ -9,8 +9,8 @@ slug: ../polkadot-vault
 
 :::info
 
-The Polkadot Vault app is an air-gapped cold storage solution for power users. For other users, we recommend
-using [Ledger](./ledger.md) devices.
+The Polkadot Vault app is an air-gapped cold storage solution for all users including developers and
+power users. For other cold storage solutions see [Ledger](./ledger.md) devices.
 
 :::
 
@@ -20,9 +20,10 @@ not technically a wallet as it does not allow to transfer funds. It is more of a
 will enable you the create, manage, and restore accounts.
 
 By default, the Vault app contains chain specifications for Polkadot, Kusama, and Westend. Metadata
-updates are possible via a QR code fountain. It is also possible to add other Substrate based chains and do metadata
-updates for those. The app allows you to securely sign [extrinsics](../learn/learn-extrinsics.md)
-via QR codes without exposing your private keys to the internet.
+updates are possible via a [QR code fountain](https://metadata.parity.io/#/polkadot). It is also
+possible to [add other Substrate based chains and do metadata updates](#add-chains) for those. The
+app allows you to securely sign [extrinsics](../learn/learn-extrinsics.md) via QR codes without
+exposing your private keys to the internet.
 
 ## Vault vs. Ledger
 
