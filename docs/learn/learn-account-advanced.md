@@ -183,35 +183,12 @@ You can view system accounts on [Subscan](https://polkadot.subscan.io/account_li
 
 :::
 
-For instance, let us take a look at how treasury accounts are created and used under the hood. 
-To generate the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined
-to create the `AccountID`
-
-```
-as_bytes("modl") = 0x6d6f646c
-as_bytes("py/trsry") = 0x70792f7472737279
-```
-
-Then the rest of the account address is filled with zeros until it reaches the expected account encoded length.
-
-```
-0x6d6f646c70792f74727372790000000000000000000000000000000000000000
-```
-
-Which maps to Substrate Address:
-
-
-```
-5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z
-```
-
-For more information, check the post on Substrate StackExchange on [Treasury accounts](https://substrate.stackexchange.com/questions/536/how-do-treasury-accounts-compare-to-end-user-accounts-in-frame).
-
-Similarly, the crowdloan system accounts are derived from the pallet ID as well as the fund account index.
-To generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund" along with the fund index
-are combined to create the `AccountID`. For instance, "modlpy/cfund:0" represents the first ever crowdloan account
-created. For all the subsequent crowdloans, the index keeps incrementing. Similar logic applies to nomination pool
-and parachain accounts as well.
+Let us take a look at how system accounts are generated under the hood. For instance, 
+to generate the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined
+to create the `AccountID`. For more information, check the post on Substrate StackExchange on [Treasury accounts](https://substrate.stackexchange.com/questions/536/how-do-treasury-accounts-compare-to-end-user-accounts-in-frame).
+Similarly, to generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund" along with the 
+fund index are combined to create the `AccountID`. Similar logic applies to nomination pool and parachain accounts 
+as well.
 
 
 ## Portability
