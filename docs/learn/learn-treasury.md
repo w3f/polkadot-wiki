@@ -20,7 +20,7 @@ The Treasury is a pot of funds collected through a portion of block production r
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
 
 The Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) not
-accessible by anyone and only the system internal logic can access it. Funds can be spent by making
+accessible by anyone; only the system internal logic can access it. Funds can be spent by making
 a spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
 waiting period before distribution. This waiting period is known as the _spend period_, and its
 duration is subject to [governance](learn-governance.md), with the current default set to
