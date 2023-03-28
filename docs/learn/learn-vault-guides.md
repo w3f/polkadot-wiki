@@ -7,6 +7,13 @@ keywords: [parity signer, signer, polkadot vault]
 slug: ../learn-vault-guides
 ---
 
+:::danger This page is for developers and power users only
+
+By requesting the chain specification and metadata you trust the specific endpoint you are using
+(unless you are using you own node).
+
+:::
+
 The following guide bases on the [Parity Signer](https://github.com/paritytech/parity-signer) Github
 page (to create the Chain Spec QR code and the metadata QR code fountain) and
 [Metadata Portal](https://github.com/paritytech/metadata-portal) Github page (to embed the Chain
