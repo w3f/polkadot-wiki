@@ -94,15 +94,12 @@ Foundation.
 
 ## Fearless Wallet
 
-The DeFi Wallet for the Future Android and iOS native mobile Polkadot/Kusama wallet for the Dotsama
-ecosystem with emphasis on UX, performance, and security. Fearless Wallet aims to radically expand
-access to decentralized finance (DeFi) by making complex functions much easier to use and
-understand. The App supports such features as follows: Staking, Crowdloans, Parachain Accounts,
-Nomination pools native staking, dApp signer (experimental), Scam addresses warning, Network issues
-warning. Fearless Wallet received funding from Kusama Treasury
-[[1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34),
+The Fearless DeFi Wallet for the Future. Simply, intuitively, and fearlessly interact with Web3. 
+Currently supports Staking, Crowdloans, Parachain Accounts, Nomination Pools Native Staking, dApp Signer on desktop through your mobile phone (experimental), Chromium-based browser extension. 
+Safety features such as Scam Address Warning and Network Failure Warnings help fearlessly navigate web3. 
+Formerly funded and supported by Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34),
 [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102),
-[5](https://kusama.polkassembly.io/treasury/178)].
+[5](https://kusama.polkassembly.io/treasury/178)], developed with <3 by SORAMITSU. Stay Fearless!
 
 ## Nova Wallet
 
