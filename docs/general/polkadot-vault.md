@@ -9,7 +9,7 @@ slug: ../polkadot-vault
 
 :::info
 
-The Polkadot Vault app is a cold storage solution for power users. For other users, we recommend
+The Polkadot Vault app is an air-gapped cold storage solution for power users. For other users, we recommend
 using [Ledger](./ledger.md) devices.
 
 :::
