@@ -173,11 +173,11 @@ module.exports = {
           type: "category",
           label: "Polkadot Comparisons",
           items: [
-            'learn/learn-kusama-vs-polkadot',
-            'learn/learn-comparisons',
+            'learn/learn-comparisons-kusama',
             'learn/learn-comparisons-ethereum-2',
             'learn/learn-comparisons-cosmos',
-            'learn/learn-comparisons-avalanche'
+            'learn/learn-comparisons-avalanche',
+            'learn/learn-comparisons',
           ],
         },
         "learn/learn-video-tutorials",

@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-avalanche
-title: Polkadot and Avalanche
+title: Polkadot vs. Avalanche
 sidebar_label: Avalanche
 description: A high-level comparison between Polkadot and Avalanche.
 keywords: [avalance, proof of stake, comparison]
