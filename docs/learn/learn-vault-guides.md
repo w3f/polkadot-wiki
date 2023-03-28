@@ -133,7 +133,7 @@ hash can be found on the Polkadot-JS UI > connect to the relevant chain > Develo
 
 ### Rename Chain's Files
 
-Rename the singed chain spec and metadata files as follow:
+Rename the signed chain spec and metadata files as follow:
 
 `add_specs_statemine-sr25519` --> `statemine_specs.png`
 
