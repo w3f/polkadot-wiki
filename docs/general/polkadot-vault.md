@@ -1,6 +1,6 @@
 ---
 id: polkadot-vault
-title: Parity Signer (aka Polkadot Vault)
+title: Polkadot Vault (formerly Parity Signer)
 sidebar_label: Polkadot Vault
 description: Learn about the Polkadot Vault
 keywords: [parity signer, signer, polkadot vault]
