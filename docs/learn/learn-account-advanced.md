@@ -211,8 +211,8 @@ For more information, check the post on Substrate StackExchange on [Treasury acc
 Similarly, the crowdloan system accounts are derived from the pallet ID as well as the fund account index.
 To generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund" along with the fund index
 are combined to create the `AccountID`. For instance, "modlpy/cfund:0" represents the first ever crowdloan account
-created. For all the subsequent crowdloans, the index keeps incrementing. Similar logic applies to Nomination Pools
-and Parachain accounts as well.
+created. For all the subsequent crowdloans, the index keeps incrementing. Similar logic applies to nomination pool
+and parachain accounts as well.
 
 
 ## Portability
