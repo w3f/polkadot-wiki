@@ -7,19 +7,39 @@ keywords: [parity signer, signer, polkadot vault]
 slug: ../polkadot-vault
 ---
 
+:::info
+
+The Polkadot Vault app is cold storage solution for power users. For other users we recommend to use
+[Ledger](./ledger.md) devices.
+
+:::
+
 [Parity Signer](https://www.parity.io/technologies/signer) (aka Polkadot Vault) is a cold storage
 solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault App is
-not technically a wallet as it does not allow to transfer funds. It is more a key-chain that allows
-you the create, manage and restore accounts. It also allows you to sign
-[extrinsics](../learn/learn-extrinsics.md) via a system of QR codes.
+not technically a wallet as it does not allow to transfer funds. It is more a key-chain tool that
+allows you the create, manage and restore accounts.
+
+By default the Vault app contains chain specification for Polkadot, Kusama and Westend. Metadata
+updates are possible via a QR code fountain. It is also possible to add additional chains and do
+metadata updates for those too. The app allows you to securely sign
+[extrinsics](../learn/learn-extrinsics.md) via a system of QR codes, without exposing your private
+keys to the internet.
 
 ## Vault vs. Ledger
 
 The Polkadot Vault and [Ledger](./ledger.md) are both cold storage solutions in a sense that private
-keys of accounts created on the Vault App or Ledger are not stored on your computer or more in
-general on a device that has internet connection.
+keys of accounts created on the Vault app or Ledger device are not stored on your computer or more
+in general on a device that has internet connection. However, the two solutions differ and you might
+want to consider one or the other depending on the type of user you are.
 
-> Comparison table
+|                                                                                               Ledger                                                                                                |                                                                                                                      Polkadot Vault                                                                                                                       |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Hardware designed to stay offline and be secure. Certified by French cybersecurity agency [ANSSI](https://www.ssi.gouv.fr/en/cybersecurity-in-france/the-national-cybersecurity-agency-of-france/). |                                                         Hardware not designed to stay offline. The user needs to switch off all inbound and outbound connections (network, wifi, bluetooth, NFC).                                                         |
+|                     Hardware resistent to side-channel attacks via [Secure Element](https://www.ledger.com/academy/security/the-secure-element-whistanding-security-attacks/).                      |                                                                                          If there is no wired connection, side-channel attacks are not possible.                                                                                          |
+|                                                                One mnemonic seed phrase for all intra- and inter-currency accounts.                                                                 | One mnemonic for each account or one mnemonic for multiple accounts via account derivation. For `n` chains a minimum of `n` mnemonics are required (i.e. not possible to have one mnemonic seed for inter-currency accounts such as Polkadot and Kusama). |
+|                                                             Easy firmware and application upgrades through the Ledger Live application.                                                             |                                         For app upgrades users need to factory reset the phone and recover all accounts through seed phrases. Metadata updates for each chain must be done via QR code fountain.                                          |
+|                                                                             Currently not all parachains are supported.                                                                             |                                                               Users can add all parachains as long as they have the wss endpoint know how to extract the chain specifications and metadata.                                                               |
+|        Ledger app updates on Ledger Live sometimes lag behind chain updates resulting in users not being able to transact unless they install developer versions (only for advanced users).         |                                                                                      Metadata updates are always available to install as soon as they are released.                                                                                       |
 
 ## Create and Import Accounts
 
