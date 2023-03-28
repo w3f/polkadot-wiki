@@ -19,10 +19,11 @@ OpenGov is live on Kusama and all treasury proposals need to be submitted throug
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
 
-The funds held in the Treasury can be spent by making a spending proposal that, if approved by the
-[Council](learn-governance.md#council), will enter a waiting period before distribution. This
-waiting period is known as the _spend period_, and its duration is subject to
-[governance](learn-governance.md), with the current default set to
+The Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) not
+accessible by anyone; only the system internal logic can access it. Funds can be spent by making
+a spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
+waiting period before distribution. This waiting period is known as the _spend period_, and its
+duration is subject to [governance](learn-governance.md), with the current default set to
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
 days. The Treasury attempts to spend as many proposals in the queue as it can without running out of

@@ -9,6 +9,7 @@ slug: ../learn-account-advanced
 
 import RPC from "./../../components/RPC-Connection";
 
+
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
@@ -166,6 +167,29 @@ different letter, like `J4iggBtsWsb61RemU2TDWDXTNHqHNfBSAkGvVZBtn1AJV1a`, we sti
 first byte: `02f2d606a67f58fa0b3ad2b556195a0ef905676efd4e3ec62f8fa1b8461355f1142509`. It seems
 counterintuitive that some addresses always have the same prefix and others like Kusama can vary
 wildly, but it's just a quirk of Base58-check encoding.
+
+## System Accounts
+
+As the word suggests, system accounts are used by the system. They are used, for example, for the
+treasury, crowdloans, and nomination pools. From the point of view of the runtime, these accounts 
+are like any other account on-chain. These special system accounts are just public keys, with the 
+private key being unknown (and unattainable). So, that means that only the pallet itself can interact 
+with this account. These accounts can never issue a signed [extrinsic](./learn-extrinsics.md) since they 
+do not have a private key.
+
+:::info
+
+You can view system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
+
+:::
+
+Let us take a look at how system accounts are generated under the hood. For instance, 
+to generate the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined
+to create the `AccountID`. For more information, check the post on Substrate StackExchange on [Treasury accounts](https://substrate.stackexchange.com/questions/536/how-do-treasury-accounts-compare-to-end-user-accounts-in-frame).
+Similarly, to generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund" along with the 
+fund index are combined to create the `AccountID`. Similar logic applies to nomination pool and parachain accounts 
+as well.
+
 
 ## Portability
 
