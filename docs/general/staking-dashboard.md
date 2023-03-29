@@ -9,16 +9,20 @@ slug: ../staking-dashboard
 
 :::info Preliminary Notes
 
-The Polkadot Staking Dashboard has **native [Ledger](./ledger.md) support**, meaning that you do not
-need an extension or a wallet to use it, just your Ledger device.
+The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) has **native
+[Ledger](./ledger.md) support**, meaning that you do not need an extension or a wallet to use it,
+just your Ledger device. Extension [metadata updates](../learn/learn-extrinsics.md#metadata-updates)
+are thus not necessary, you just need to keep your Ledger apps up-to-date.
 
 Before using the dashboard make sure you have a Polkadot account in a Ledger device or a browser
 extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extension) or
 [other third-party extensions](./wallets.md#browser-extensions). Remember to send funds to that
-account. On top of the existential deposit, you need some free balance to pay for transaction fees
-and the minimum amount to place your nominations (for nominators) or join a nomination pool (for
-pool members). Note, staking rewards are not guaranteed, for more information visit the
-[staking page](../learn/learn-staking.md) and
+account. On top of the
+[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you need some
+free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the minimum
+amount to place your nominations (only for nominators, currently ...) or join a nomination pool
+(only for pool members, currently ...). Note, staking rewards are not guaranteed, for more
+information visit the [staking page](../learn/learn-staking.md) and
 [advanced staking page](../learn/learn-staking-advanced.md).
 
 :::
