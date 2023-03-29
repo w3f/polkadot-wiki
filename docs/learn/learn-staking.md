@@ -23,10 +23,10 @@ help you get started.
 :::info Stake through Nomination Pools
 
 The minimum amount required to become an active nominator and earn rewards is
-{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :kusama }}
-. If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
-nomination and still want to participate in staking, you can join the nomination pools. you can now
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__. :kusama }}
+If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
+nomination and still want to participate in staking, you can join the nomination pools. You can now
 stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
 {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
 {{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
@@ -527,15 +527,15 @@ this wiki.
 
 :::info Fast Unstaking feature is live!
 
-If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your bonded
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you can now
-unbond them immediately.
+If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
+bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
+can now unbond them immediately.
 
 :::
 
 If your bonded balance did not back any validators in the last
-{{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
-you are eligible to perform fast unstaking. The
+{{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }}, you are
+eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
