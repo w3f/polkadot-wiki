@@ -65,31 +65,29 @@ kinds of XCM instructions:
 4. **System Notification** - Typically used in the context of when an HRMP channel is being opened,
    closed, or accepted.
 
-Typically, an XCM takes the following path:
+Typically, an XCM takes the following path through the XCVM:
 
-1.  The XCM Executor, and XCVM in general, is very much analogous to a CPU. It has various
-    registers, which instructions usually modify as needed.
-2.  The resulting values from these registers are used later in the transfer. An example of a common
-    register used in many instructions is the `Holding` register, which places assets in a holding
-    until fulfilled on the destination chain.
-3.  The resulting instructions modify the Holding register as needed and execute extrinsics on the
-    destination chain to perform the state change. The Executor is able to convert incoming
-    instructions into FRAME-compatible origins, which enables the actual state changes to take
-    place.
+1.  Instructions within an XCM are read one-by-one by the XCVM. An XCM may old one or more
+    instructions.
+2.  The instruction is executed. This means that the current values of the _XCVM registers_, the
+    _instruction type_, and the _instruction operands_ are all used to execute some operation, which
+    might result in some registers changing their value, or in an error being thrown, which would
+    halt execution.
+3.  Each subsequent instruction within the XCM is read until the end of the message has been
+    reached.
 
 ### Example Register: The Holding Register
 
-There are many instructions that depend on the Holding register. The Holding register is an XCM
+There are many instructions that depend on the Holding register. The Holding register is an XCVM
 register that provides a place for any assets that are in an intermediary state to be held until
-they are withdrawn to a beneficiary. They require an instruction to place assets within and another
-to withdraw them. The simplest example of this occurring is the `DepositAsset` instruction, which in
-its Rust form looks like this:
+they are deposited to the beneficiary. They require an instruction to place assets within and
+another to withdraw them. The simplest example of this occurring is the `DepositAsset` instruction,
+which in its Rust form looks like this:
 
 ```rust
 enum Instruction {
     DepositAsset {
         assets: MultiAssetFilter,
-        max_assets: u32,
         beneficiary: MultiLocation,
     },
     /* snip */
@@ -103,11 +101,12 @@ transacting between chains.
 
 ### Example: TransferAsset
 
-An example below illustrates how a chain may transfer assets locally using an XCM. In this message,
-the `TransferAsset` instruction is defined with two parameters: `assets`, which are the assets to be
-transferred, and the `beneficiary`, whoever will be the sole beneficiary of these assets. More
-complex instructions, especially those which perform actions that target a location other than the
-interpreting consensus system may make use of XCVM registers.
+An example below illustrates how a chain may transfer assets locally, or locally on a remote chain
+(as part of another instruction) using an XCM. In this message, the `TransferAsset` instruction is
+defined with two parameters: `assets`, which are the assets to be transferred, and the
+`beneficiary`, whoever will be the sole beneficiary of these assets. More complex instructions,
+especially those which perform actions that target a location other than the interpreting consensus
+system may make use of XCVM registers.
 
 ```rust
 enum Instruction {
