@@ -28,6 +28,7 @@ apologize if we missed your project!
   - [Signatures](#signatures)
   - [Consensus](#consensus)
   - [Networking](#networking)
+  - [Primitives](#primitives)
 - [Contributing](#contributing)
 
 ## About
@@ -216,6 +217,11 @@ In the below sections you can find a list of different layers of the Polkadot St
 | DHT crawler         | [Go](https://github.com/atredispartners/dht-crawler-polkadot) 🔴, [Kotlin](https://github.com/emeraldpay/polkabot) 🔴|                                  |
 | RPC Tor-like access | [WhiteNoise](https://github.com/Evanesco-Labs/WhiteNoise.rs) 🔴|                                  |
 
+### Primitives
+
+| Components          | Existing projects                                                                                                     | Potentially interesting projects |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Storage             | [Merkle Tree DB]([https://github.com/atredispartners/dht-crawler-polkadot](https://github.com/frisitano/merkle-tree-db)) 🟢 |                                  |
 ## Contributing
 
 Pull requests, issues, or other contributions from the community are encouraged! You can not only
