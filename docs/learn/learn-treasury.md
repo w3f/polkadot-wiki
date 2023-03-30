@@ -20,8 +20,8 @@ The Treasury is a pot of funds collected through a portion of block production r
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
 
 The Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) not
-accessible by anyone; only the system internal logic can access it. Funds can be spent by making
-a spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
+accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
+spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
 waiting period before distribution. This waiting period is known as the _spend period_, and its
 duration is subject to [governance](learn-governance.md), with the current default set to
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
@@ -100,6 +100,8 @@ or 5% of the requested amount with a maximum cap of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
 as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise.
+If the treasury proposal does not pass due to a lack of votes from the councillors, the proposal
+goes back in queue and the proposer does not immediately lose their deposit.  
 These values are subject to [governance](learn-governance.md) so they may change in the future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been
