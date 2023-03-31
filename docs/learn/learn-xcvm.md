@@ -126,7 +126,7 @@ enum Instruction {
   relative path between two locations, and cannot generally be used to refer to a location
   universally.
 
-`TransferAsset` is one of the many instructions that can be executed within an XCM. For more
+`TransferAsset` is one of the many instructions that can be contained within an XCM. For more
 information, please read [XCM Instructions in the wiki](./learn-xcm-instructions.md).
 
 ## Locations in XCM
