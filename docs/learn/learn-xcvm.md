@@ -9,8 +9,8 @@ slug: ../learn-xcvm
 
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
 program, referred to as an **"XCM"** or **"XCMs"** for multiple messages. The XCVM is a
-register-based state machine. The state is tracked in domain-specific registers that can hold
-information regarding the temporary state of a particular message. Most of the XCM format comprises
+register-based state machine. The state is tracked in domain-specific registers that hold
+information that is used and mutated along the execution of a particular message. Most of the XCM format comprises
 these registers and the instructions used to compose XCVM programs.
 
 The XCVM is an ultra-high-level non-Turing-complete computer whose instructions are designed to be
