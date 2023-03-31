@@ -80,7 +80,7 @@ Typically, an XCM takes the following path through the XCVM:
 
 There are many instructions that depend on the Holding register. The Holding register is an XCVM
 register that provides a place for any assets that are in an intermediary state to be held until
-they are deposited to the beneficiary. They require an instruction to place assets within and
+they are deposited to some beneficiary. It requires an instruction to place assets within it and
 another to withdraw them. The simplest example of this occurring is the `DepositAsset` instruction,
 which in its Rust form looks like this:
 
