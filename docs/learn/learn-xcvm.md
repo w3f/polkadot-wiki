@@ -67,7 +67,7 @@ kinds of XCM instructions:
 
 Typically, an XCM takes the following path through the XCVM:
 
-1.  Instructions within an XCM are read one-by-one by the XCVM. An XCM may old one or more
+1.  Instructions within an XCM are read one-by-one by the XCVM. An XCM may contain one or more
     instructions.
 2.  The instruction is executed. This means that the current values of the _XCVM registers_, the
     _instruction type_, and the _instruction operands_ are all used to execute some operation, which
