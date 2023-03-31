@@ -10,8 +10,8 @@ slug: ../learn-xcvm
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
 program, referred to as an **"XCM"** or **"XCMs"** for multiple messages. The XCVM is a
 register-based state machine. The state is tracked in domain-specific registers that hold
-information that is used and mutated along the execution of a particular message. Most of the XCM format comprises
-these registers and the instructions used to compose XCVM programs.
+information that is used and mutated along the execution of a particular message. Most of the XCM
+format comprises these registers and the instructions used to compose XCVM programs.
 
 The XCVM is an ultra-high-level non-Turing-complete computer whose instructions are designed to be
 roughly at the same level as transactions in terms of definition. Messages are one or more XCM
@@ -27,8 +27,8 @@ of XCVM, it's entirely possible to create another implementation if desired.
 ## XCMs are XCVM Programs
 
 A cross consensus message (XCM) is just a program that runs on the `XCVM`: in other words, one or
-more XCM instructions that are executed by an XCVM implementation, such as the `xcm-executor`. To learn more about the XCVM and the
-XCM format, see the latest
+more XCM instructions that are executed by an XCVM implementation, such as the `xcm-executor`. To
+learn more about the XCVM and the XCM format, see the latest
 [blog post on XCM v3](https://medium.com/polkadot-network/xcm-part-iii-execution-and-error-management-ceb8155dd166)
 by Dr. Gavin Wood.
 
@@ -78,9 +78,9 @@ Typically, an XCM takes the following path through the XCVM:
 
 ### Example Register: The Holding Register
 
-There are many instructions that depend on the Holding register. The Holding register is an XCVM
+There are many instructions that depend on the _Holding register_. The _Holding register_ is an XCVM
 register that provides a place for any assets that are in an intermediary state to be held until
-they are deposited to some beneficiary. It requires an instruction to place assets within it and
+they are taken out of the Holding register. It requires an instruction to place assets within it and
 another to withdraw them. The simplest example of this occurring is the `DepositAsset` instruction,
 which in its Rust form looks like this:
 
@@ -94,9 +94,9 @@ enum Instruction {
 }
 ```
 
-This instruction specifies how many assets are going to be withdrawn (useful for fee calculation),
-which assets to filter from the Holding register, and the beneficiary (the recipient of) the assets.
-It is very common for instructions to remove and place assets into the Holding register when
+This instruction specifies which assets (asset type and amount), already present in the Holding
+register, are going to be taken from it and deposited to the specified beneficiary (recipient). It
+is very common for instructions to remove and place assets into the Holding register when
 transacting between chains.
 
 ### Example: TransferAsset
@@ -131,10 +131,11 @@ information, please read [XCM Instructions in the wiki](./learn-xcm-instructions
 
 ## Locations in XCM
 
-XCM's abstract nature allows for locations to be relatively abstract notions that point to where but
-also _to who_ a particular action may affect. The `MulitLocation` type is what XCM uses to define
-these locations. A `MultiLocation` is a relative identifier that defines a **relative** path into
-some state-bearing consensus system.
+XCM's generic nature involves specifying a wide array of "locations", or any body that is governed
+by consensus (parachains, solochains, smart contracts, accounts, etc). These are relatively abstract
+notions that point to _where_ but also _to who_ a particular action may affect. The `MulitLocation`
+type is what XCM uses to define these locations. A `MultiLocation` is a relative identifier that
+defines a **relative** path into some state-bearing consensus system.
 
 It is used to define the relative path between two locations, and cannot generally be used to refer
 to a location universally. It is very much akin to how a **relative** filesystem path works and is
@@ -154,6 +155,37 @@ consensus system it is being sent to be executed.
 
 There are a number of various `Junction` variants that may be used to describe a particular
 location - whether it's a 32 byte account, a Substrate pallet, or a pluralistic body.
+
+### MultiLocation Scenario Example
+
+In this scenario, assume an XCM is to be sent from our parachain to Statemint (`Parachain 1000`).
+This XCM references an account on Statemint. As a general path, the `MultiLocation` would look like
+this:
+
+```
+../Parachain(1000)/AccountId32(<some_account_id>)
+```
+
+Or, as a Rust enum:
+
+```rust
+MultiLocation {
+  parents: 1,
+  interior: X2(Parachain(1000), <some_account_id>.into())
+}
+```
+
+- In the first field, `parents`, there is a parent of `1`. This is because our parachain has the
+  relay chain as a parent - in other words, it will go **up** by one consensus system to the relay
+  chain. This is also illustrated by the `../` of the "file path" representation.
+
+- The second field, `interior`, defines where to go after the relay chain. In this case, from the
+  relay chain this message will go to Statemint (`Parachain 1000`), then reference the account
+  (`some_account_id`) located within.
+
+Keep in mind that this location is specific to this interaction. The identities may need to change
+if this location was defined on another consensus system, such as Kusama. On other consensus
+systems, such as Ethereum, it won't be able to interpret it.
 
 ## Simulating XCVM using the xcm-simulator
 
