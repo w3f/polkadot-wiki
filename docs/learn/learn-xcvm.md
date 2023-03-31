@@ -27,7 +27,7 @@ of XCVM, it's entirely possible to create another implementation if desired.
 ## XCMs are XCVM Programs
 
 A cross consensus message (XCM) is just a program that runs on the `XCVM`: in other words, one or
-more XCM instructions that are executed by the `xcm-executor`. To learn more about the XCVM and the
+more XCM instructions that are executed by an XCVM implementation, such as the `xcm-executor`. To learn more about the XCVM and the
 XCM format, see the latest
 [blog post on XCM v3](https://medium.com/polkadot-network/xcm-part-iii-execution-and-error-management-ceb8155dd166)
 by Dr. Gavin Wood.
