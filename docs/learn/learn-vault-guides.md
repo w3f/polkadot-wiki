@@ -14,6 +14,12 @@ By requesting the chain specification and metadata you trust the specific endpoi
 
 :::
 
+:::info
+
+These guides apply to both Parity Signer and Polkadot Vault apps.
+
+:::
+
 The following guide bases on the [Parity Signer](https://github.com/paritytech/parity-signer) Github
 page (to create the Chain Spec QR code and the metadata QR code fountain) and
 [Metadata Portal](https://github.com/paritytech/metadata-portal) Github page (to embed the Chain
@@ -59,12 +65,12 @@ is the signature generated in the previous step. Running the code above will cre
 
 ## Metadata Updates
 
-Similarly to what we did for the chain specification, we now generate and sign the statemine
+Similarly to what we did for the chain specification, we now generate and sign the Statemine
 metadata.
 
 ### Metadata QR Fountain
 
-To update the chain metadata for statemine on the Vault app you can follow the instructions
+To update the chain metadata for Statemine on the Vault app you can follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-metadata).
 Briefly, in the Parity Signer repository, start the terminal within the `/generate_message` folder
 and type the following:
@@ -102,7 +108,7 @@ is the signature generated in the previous step. Running the code above will cre
 You can open `add_specs_statemine-sr25519` on your browser (just drag the file on an open tab). This
 is a .png file containing the QR code to add statemine chain specification into the Vault App. You
 can do the same with the `load_metadata_statemineV9370`. This is a .apng file containing the QR code
-fountain to do the metadata update for statemine.
+fountain to do the metadata update for Statemine.
 
 ## Metadata Portal
 
@@ -119,7 +125,7 @@ modify the following fields of the `config.toml` file:
 
 ```
 [[chains]]
-name = "statemine"
+name = "Statemine"
 rpc_endpoint = "wss://statemine.api.onfinality.io/public-ws"
 color = "#f27230"
 
