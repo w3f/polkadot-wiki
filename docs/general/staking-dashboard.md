@@ -11,8 +11,8 @@ slug: ../staking-dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) has **native
 [Ledger](./ledger.md) support**, meaning that you do not need an extension or a wallet to use it,
-just your Ledger device. Extension [metadata updates](../learn/learn-extrinsics.md#metadata-updates)
-are thus not necessary, you just need to keep your Ledger apps up-to-date.
+just your Ledger device. [Metadata updates](../learn/learn-extrinsics.md#metadata-updates) are thus
+not necessary, you just need to keep your Ledger apps up-to-date.
 
 Before using the dashboard make sure you have a Polkadot account in a Ledger device or a browser
 extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extension) or
@@ -27,7 +27,7 @@ information visit the [staking page](../learn/learn-staking.md) and
 
 :::
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a tool that is only
+The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a tool only
 dedicated to [staking](../learn/learn-staking.md) on Polkadot,
 [Kusama](../learn/learn-kusama-vs-polkadot.md) (Polkadot's canary network) and
 [Westend](../maintain/maintain-networks.md#westend-test-network) (Polkadot's test network).
@@ -37,8 +37,18 @@ accounts you can use [third-party wallets](./wallets.md) or the
 [Polkadot-JS UI](./polkadotjs-ui.md). You can participate to staking by being a
 [nominator](../learn/learn-nominator.md) or a
 [nomination pool member](../learn/learn-nomination-pools.md). Once you have an account with enough
-funds you need to connect (connect button on the top-right corner) it to the dashboard, this will
+funds you need to connect it to the dashboard (connect button on the top-right corner), this will
 allow you to interact with Polkadot's native staking.
+
+:::info The dashboard is a Web3 dApp
+
+The dashboard is a decentralized application (dApp), meaning that under the hood there are no
+centralized servers but a network of nodes storing information about the Polkadot blockchain and
+validating transactions, including everything you decide to do on the dashboard. To login into the
+dashboard you do not need emails and passwords but just your public address. From now on you are in
+charge of your data, you will authorize anything you want to do. Welcome to Web3!
+
+:::
 
 ## Overview
 
