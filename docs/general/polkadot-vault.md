@@ -16,10 +16,10 @@ power users. For other cold storage solutions see [Ledger](./ledger.md) devices.
 
 :::
 
-[Polkadot Vault](https://www.parity.io/technologies/signer) (aka Parity Signer) is a cold storage
-solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault App is
-not technically a wallet as it does not allow to transfer funds. It is more of a key-chain tool that
-will enable you the create, manage, and restore accounts.
+[Polkadot Vault](https://www.parity.io/technologies/signer) (formerly Parity Signer) is a cold
+storage solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault
+app is not technically a wallet as it does not allow to transfer funds. It is more of a key-chain
+tool that will enable you the create, manage, and restore accounts.
 
 By default, the Vault app contains chain specifications for Polkadot, Kusama, and Westend. Metadata
 updates are possible via a [QR code fountain](https://metadata.parity.io/#/polkadot). It is also
@@ -64,16 +64,16 @@ to learn how to sign transactions and
 [this article](https://support.polkadot.network/support/solutions/articles/65000184128-polkadot-vault-how-to-add-a-new-chain-and-update-the-metadata)
 on how to easily add new chains and do metadata updates using the Vault app.
 
-The procedure to sign transactions with the Vault App is as follows:
+The procedure to sign transactions with the Vault app is as follows:
 
 - The wallet or browser extension will show a QR code encoding the information about what you are
   going to sign.
-- After scanning the QR code with the Vault App, you will be presented with decoded information
+- After scanning the QR code with the Vault app, you will be presented with decoded information
   about what you will sign. Make sure the information matches what you intended to sign in the first
   place. If something does not feel right, do not sign. Check
   [this page](../learn/learn-extrinsics.md#corrupted-qr-code-parity-signer) for more information and
   contact [the Polkadot Support Team](https://support.polkadot.network/support/home).
-- If the information shown by the Vault App is correct, you can present the QR code (signature) to
+- If the information shown by the Vault app is correct, you can present the QR code (signature) to
   the camera on your laptop to sign for the transaction.
 
 :::info QR codes are signature-specific
@@ -92,35 +92,35 @@ Ensure you always have your mnemonic seed phrase secure and available.
 
 :::
 
-To securely update the Polkadot Vault App follow the instructions
+To securely update the Polkadot Vault app follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Upgrading.html). Briefly,
 
 - backup your accounts (Backup key Set > write down the mnemonic seed phrase),
-- factory reset your Vault App (Settings > Wipe all Data),
+- factory reset your Vault app (Settings > Wipe all Data),
 - factory reset your phone,
-- re-install the Vault App,
+- re-install the Vault app,
 - go offline (airplane mode, no wifi),
 - recover your accounts (Add Key Set > Recover Key Set).
 
 ## Security Notes
 
-The Vault App has a Log that will tell you all activities performed with it. It is important to mark
+The Vault app has a Log that will tell you all activities performed with it. It is important to mark
 down the last action you did so that you can do a security check the next time you use the app.
-Also, the Vault App will always tell you if the phone has been (even briefly) connected to the
+Also, the Vault app will always tell you if the phone has been (even briefly) connected to the
 internet. In case of an unrecognized connection it is recommended to:
 
 - Backup your accounts (i.e. make sure you have the mnemonic seed phrases)
-- Follow the steps in [Update the Vault App](#update-the-vault-app)
-- Once offline, create a new account on the Vault App
+- Follow the steps in [Update the Vault app](#update-the-vault-app)
+- Once offline, create a new account on the Vault app
 - Import the compromised accounts and transfer the funds to the new non-compromised account.
 
-If an account's private key has been exported from the Vault App, the public key will be marked as
+If an account's private key has been exported from the Vault app, the public key will be marked as
 "hot" and the following message will be displayed _This key is marked hot because its root private
 key has been exported_.
 
 ## Add Chains
 
-The Vault App contains chain specs for Polkadot, Kusama, and Westend by default. It is possible to
+The Vault app contains chain specs for Polkadot, Kusama, and Westend by default. It is possible to
 add more chains via QR-code, and update their metadata by generating your own QR-code fountain in a
 metadata portal similar to that [signed by Parity](https://metadata.parity.io/#/polkadot).
 Alternatively you can use a third-party provider to add chains and their metadata. Check
