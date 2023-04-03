@@ -90,9 +90,9 @@ staking lock can be unlocked, and the bonded funds become free balance you can t
 
 :::info Fast Unstaking feature is live!
 
-If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your bonded
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you can now
-unbond them immediately.
+If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
+bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
+can now unbond them immediately.
 
 :::
 
