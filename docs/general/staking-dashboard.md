@@ -22,9 +22,12 @@ extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extens
 account. On top of the
 [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you need some
 free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the minimum
-amount to place your nominations (only for nominators, currently ...) or join a nomination pool
-(only for pool members, currently ...). Note, staking rewards are not guaranteed, for more
-information visit the [staking page](../learn/learn-staking.md) and
+amount to place your nominations (only for nominators, currently
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__ :kusama }})
+or join a nomination pool (only for pool members, currently
+{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>__ :kusama }}).
+For more information about staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+visit the [staking page](../learn/learn-staking.md) and
 [advanced staking page](../learn/learn-staking-advanced.md).
 
 :::
