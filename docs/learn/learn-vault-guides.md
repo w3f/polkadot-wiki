@@ -39,8 +39,7 @@ terminal within the `/generate_message` folder and type the following:
 
 where `wss://statemine-rpc.polkadot.io` is the Parity RPC endpoint for Statemine. This will create
 the file `sign_me_add_specs_statemine_sr25510` under the `files/in_progress` folder. See
-{{ polkadot: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts) :polkadot }}{{ kusama: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts) :kusama}}
-for a list of all endpoints listed in the Polkadot-JS UI.
+{{ polkadot: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts) for a list of all endpoints listed in the Polkadot-JS UI. :polkadot }}{{ kusama: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts) for a list of all endpoints listed in the Polkadot-JS UI. :kusama}}
 
 ### Generating Signature
 
