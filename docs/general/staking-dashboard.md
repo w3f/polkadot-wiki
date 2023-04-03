@@ -7,6 +7,8 @@ keywords: [ledger, staking, polkadot, dashboard]
 slug: ../staking-dashboard
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 :::info Preliminary Notes
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) has **native
