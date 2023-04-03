@@ -43,6 +43,14 @@ folder.
 
 ### Generating Signature
 
+:::danger Use a hot account
+
+Make sure that the account used to sign the chain specification is a hot account. Never use a cold
+account from the Vault app or Ledger, as after typing the seed phrase into the terminal that account
+will be considered hot.
+
+:::
+
 Start the terminal within the `files/in_progress` folder and type the following:
 
 `cat sign_me_add_specs_statemine_sr25519 | subkey sign --suri "YOUR SEED PHRASE"`
@@ -83,6 +91,14 @@ folder. Note that for future metadata updates the file name will change as the v
 of writing was `V9370`.
 
 ### Generating Signature
+
+:::danger Use a hot account
+
+Make sure that the account used to sign the metadata is a hot account. Never use a cold account from
+the Vault app or Ledger, as after typing the seed phrase into the terminal that account will be
+considered hot.
+
+:::
 
 Start the terminal within the `files/in_progress` folder and type the following:
 
