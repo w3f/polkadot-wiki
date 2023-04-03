@@ -117,6 +117,17 @@ usage instructions are provided at [Polkadot-JS API Documentation](https://polka
 - [@polkadot/util-crypto](https://polkadot.js.org/docs/util-crypto/) Useful cryptographic utilities
   for developing with Polkadot.
 
+### Alternative Libraries
+
+The following libraries/SDKs allow for interfacing with a Substrate node in other languages:
+
+- [Python Library by Polkascan](https://github.com/polkascan/py-substrate-interface)
+- [Go Library by Centrifuge](https://github.com/centrifuge/go-substrate-rpc-client)
+- [Java Library by StrategyObject](https://github.com/strategyobject/substrate-client-java)
+- [Fearless Utils iOS Swift SDK](https://github.com/soramitsu/fearless-utils-iOS)
+- [Nova Wallet iOS/Swift Substrate SDK](https://github.com/nova-wallet/substrate-sdk-ios)
+- [Kotlin SDK](https://github.com/soramitsu/fearless-utils-Android)
+
 ### CLI Tools
 
 - [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Command
