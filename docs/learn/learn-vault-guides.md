@@ -35,11 +35,10 @@ In this example we will add the [Statemine](../learn/learn-assets.md) system par
 fork the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
 terminal within the `/generate_message` folder and type the following:
 
-`cargo run add-specs -d -u wss://statemine.api.onfinality.io/public-ws --encryption sr25519`
+`cargo run add-specs -d -u wss://statemine-rpc.polkadot.io --encryption sr25519`
 
-where `wss://statemine.api.onfinality.io/public-ws` is the OnFinality RPC endpoint for Statemine.
-This will create the file `sign_me_add_specs_statemine_sr25510` under the `files/in_progress`
-folder.
+where `wss://statemine-rpc.polkadot.io` is the Parity RPC endpoint for Statemine. This will create
+the file `sign_me_add_specs_statemine_sr25510` under the `files/in_progress` folder.
 
 ### Generating Signature
 
@@ -83,12 +82,11 @@ To update the chain metadata for Statemine on the Vault app you can follow the i
 Briefly, in the Parity Signer repository, start the terminal within the `/generate_message` folder
 and type the following:
 
-`cargo run load-metadata -d -u wss://statemine.api.onfinality.io/public-ws`
+`cargo run load-metadata -d -u wss://statemine-rpc.polkadot.io`
 
-where `wss://statemine.api.onfinality.io/public-ws` is the OnFinality RPC endpoint for Statemine.
-This will create the file `sign_me_load_metadata_statemineV9370` under the `files/in_progress`
-folder. Note that for future metadata updates the file name will change as the version at the time
-of writing was `V9370`.
+where `wss://statemine-rpc.polkadot.io` is the Parity RPC endpoint for Statemine. This will create
+the file `sign_me_load_metadata_statemineV9370` under the `files/in_progress` folder. Note that for
+future metadata updates the file name will change as the version at the time of writing was `V9370`.
 
 ### Generating Signature
 
@@ -142,7 +140,7 @@ modify the following fields of the `config.toml` file:
 ```
 [[chains]]
 name = "Statemine"
-rpc_endpoint = "wss://statemine.api.onfinality.io/public-ws"
+rpc_endpoint = "wss://statemine-rpc.polkadot.io"
 color = "#f27230"
 
 [chains.github_release]
