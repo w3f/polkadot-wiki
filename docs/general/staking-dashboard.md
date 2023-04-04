@@ -97,7 +97,7 @@ This section of the dashboard has six main sections:
   [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)). In this case
   0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are not used for
   staking. Of the non-staking balance 0.144 KSM are free while
-  {{ polkadot: __<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>__ :polkadot }}
+  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}
   are reserved for the existential deposit.
 
 - **Section F: The Recent Payouts Panel** shows a bar chart with the rewards that have been paid out
@@ -106,7 +106,17 @@ This section of the dashboard has six main sections:
   payout (for nominators only). Below the bar chart there is a line chart showing then 10-day moving
   average.
 
-Additional statistics can be found at the bottom of the overview page.
+Additional statistics can be found at the bottom of the overview page. Note also the current
+exchange rate for the native token {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} at the
+footer of the dashboard. This information is used to estimate how much your balance is worth.
+
+:::info Pool funds are in system accounts
+
+Remember that funds bonded in a pool are transferred the pool's system accounts that is not
+accessible to anybody. Some wallets might not display balance that is bonded in pools, but the
+dashboard will always show it to you.
+
+:::
 
 ## Stake
 
