@@ -75,11 +75,13 @@ This section of the dashboard has six main sections:
   [Nominate](#nominate)). You can also change the [network](#network) (currently on Kusama).
 
 - **Section B: The Accounts Panel** allows you to connect one account to the dashboard. Once
-  connected, the account will show up next to the "Accounts" button. If you are active as a
+  connected, the account will show up next to the `Accounts` button. If you are active as a
   nominator and/or a pool member you will be able to see it here. In this case the account KSM Stash
   is a nominator (with no controller) and a member of the pool Insight Finance. Controller accounts
   are also shown here if applicable. Note that the dashboard will automatically fetch the stash or
   the controller as read-only account if you connect one or the other.
+
+Note that Sections A and B will always be visible while you use the dashboard.
 
 - **Section C: The Stats Panel** shows the general view about current staking metrics including the
   historical reward rate (including after
@@ -88,8 +90,9 @@ This section of the dashboard has six main sections:
 
 - **Section D: The Summary Panel** shows your current situation and gives you general tips about
   staking. In this case the KSM Stash account is a nominator and a pool member, and by clicking on
-  "Manage" you can go directly to the [Nominate](#nominate) and [Pools](#pools) pages, respectively.
-  There you can take actions such as changing staking preferences, bonding more funds, etc.
+  `Manage >` you can go directly to the [Nominate](#nominate) and [Pools](#pools) pages,
+  respectively. There you can take actions such as changing staking preferences, bonding more funds,
+  etc.
 
 - **Section E: The Balance Panel** shows the bonded amount distinguishing between "Nominating", "In
   a Pool", and "Not Staking". The amount that is not staking is further divided into "Free" (balance
@@ -121,17 +124,58 @@ dashboard will always show it to you.
 ## Stake
 
 In this category you can access all functionalities that will allow to stake your tokens as
-nominator, a member of a nomination pool, or both.
+nominator, a member of a nomination pool, or both. They payout section allows you to inspect the
+most recent received rewards.
+
+### Pools
+
+![dashboard pools](../assets/dashboard-pools.png)
+
+This section of the dashboard has four main sections (Sidebar and Accounts Panels excluded):
+
+- **Section A: The Stats Panel** shows the number of active pools, the minimum number of tokens
+  needed to join a pool and/or create one.
+- **Section B: The Balance Panel** shows the number of tokens bonded in pools and those that are
+  free. In this case we have 0.3 KSM bonded and 0.144 KSM free. In this panel you can bond more
+  funds (`+` button) or unbond some funds (`-` button). Unbonding will withdraw unclaimed rewards
+  and funds will be locked for 28 eras
+  ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed you
+  will be able to unlock the locked funds (button with lock icon) that will we available as a free
+  balance.
+- **Section C: The Pool Panel** shows the pool id where you have membership (in this case Pool 82),
+  the name of the pool and next to it a `Leave` button to unbond all the funds in the pool. If there
+  any unclaimed rewards you will be able to see it in the middle of the panel. You can decide to
+  claim the rewards and bond them (`+ Bond` button) or withdraw them as a free balance (`Withdraw`
+  button). In this case there are approximately 0.0012 KSM that can be claimed. At the bottom of the
+  panel you can see the Pool Status: Nominating and Earning Rewards.
+
+:::info
+
+For pool members rewards must be manually claimed. This is different from being a nominator where
+usually one nominator or the specific validator can trigger a payout for all nominators.
+
+:::
+
+- **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
+  highlighting the validator that is active and will pay rewards to the pool at the end of the era
+  (in this case `ParaNodes.io/11`).
+
+If you scroll down the page there two additional panels:
+
+- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, State Toggler. The same
+  account can cover all the roles.
+- **Pool Stats** showing the Pool State (either Active, Closed or Destroying), Pool Members (number
+  of members in the pool), and Total Bonded (total number of bonded tokens).
 
 ### Nominate
+
+![dashboard nominate](../assets/dashboard-nominate.png)
 
 Similarly to the Overview section, at the top of this section you can access relevant information
 such as the number of active nominators, the minimum amount needed to place your nomination intents,
 and the
 [minimum active bond](../learn/learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards)
 of the current era.
-
-### Pools
 
 ### Payout
 
