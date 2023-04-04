@@ -13,21 +13,24 @@ import RPC from "./../../components/RPC-Connection";
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) has **native
 [Ledger](./ledger.md) support**, meaning that you do not need an extension or a wallet to use it,
-just your Ledger device. [Metadata updates](../learn/learn-extrinsics.md#metadata-updates) are thus
-not necessary, you just need to keep your Ledger apps up-to-date.
+you just need your Ledger device. [Metadata updates](../learn/learn-extrinsics.md#metadata-updates)
+are thus not necessary as you only need to keep your Ledger apps up-to-date.
 
-Before using the dashboard make sure you have a Polkadot account in a Ledger device or a browser
+Before using the dashboard make sure you have a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account in a Ledger device with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger app installed, or a browser
 extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extension) or
-[other third-party extensions](./wallets.md#browser-extensions). Remember to send funds to that
-account. On top of the
-[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you need some
-free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the minimum
-amount to place your nominations (only for nominators, currently
+[other third-party extensions](./wallets.md#browser-extensions) with a funded
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account.
+
+On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
+need some free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the
+minimum amount to place your nominations (only for nominators, currently
 {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__ :kusama }})
 or join a nomination pool (only for pool members, currently
 {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>__ :kusama }}).
 For more information about staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-visit the [staking page](../learn/learn-staking.md) and
+visit the [staking page](../learn/learn-staking.md) and the
 [advanced staking page](../learn/learn-staking-advanced.md).
 
 :::
@@ -40,10 +43,11 @@ dedicated to [staking](../learn/learn-staking.md) on Polkadot,
 The dashboard is not a wallet, meaning that you cannot transfer funds between accounts. To fund
 accounts you can use [third-party wallets](./wallets.md) or the
 [Polkadot-JS UI](./polkadotjs-ui.md). You can participate to staking by being a
-[nominator](../learn/learn-nominator.md) or a
-[nomination pool member](../learn/learn-nomination-pools.md). Once you have an account with enough
-funds you need to connect it to the dashboard (connect button on the top-right corner), this will
-allow you to interact with Polkadot's native staking.
+[nominator](../learn/learn-nominator.md) or a member of a
+[nomination pool](../learn/learn-nomination-pools.md). Once you have a funded account with enough
+you need to connect it to the dashboard (connect button on the top-right corner), this will allow
+you to interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native
+staking.
 
 :::info The dashboard is a Web3 dApp
 
@@ -51,7 +55,7 @@ The dashboard is a decentralized application (dApp), meaning that under the hood
 centralized servers but a network of nodes storing information about the Polkadot blockchain and
 validating transactions, including everything you decide to do on the dashboard. To login into the
 dashboard you do not need emails and passwords but just your public address. From now on you are in
-charge of your data, you will authorize anything you want to do. Welcome to Web3!
+charge of your data, and you will need to authorize anything you want to do. Welcome to Web3!
 
 :::
 
@@ -63,14 +67,14 @@ staking situation. These metrics include the **historical reward rate**, the **s
 
 Additionally, you will be able to see the followings:
 
-- Balance Panel: The panel shows the bonded amount distinguishing between **nominating**, **in a
+- The Balance Panel: The panel shows the bonded amount distinguishing between **nominating**, **in a
   pool**, and **not staking**. The amount that is not staking is further divided into **free**
   (balance that can be transferred) and **reserve** (balance that is needed the keep the account
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
 
-- Recent Payouts Panel: The panel shows a bar chart with the rewards that have been paid out to you
-  in the past 15 days either as a nominator or a pool member (manually claimed). Below the bar chart
-  there is a line chart showing then 10-day moving average.
+- The Recent Payouts Panel: The panel shows a bar chart with the rewards that have been paid out to
+  you in the past 15 days either as a nominator or a pool member (manually claimed). Below the bar
+  chart there is a line chart showing then 10-day moving average.
 
 Additional statistics can be found at the bottom of the overview page.
 
