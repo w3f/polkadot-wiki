@@ -68,7 +68,7 @@ the main features of the dashboard. If you need more information see the
 
 ![dashboard overview](../assets/dashboard-overview.png)
 
-This section of the dashboard has six main sections:
+This page of the dashboard has six main panels:
 
 - **Section A: The Sidebar** shows in which page your are (in this case the Overview). It will also
   show the role you currently have in staking (in this case active in both [Pools](#pools) and
@@ -131,7 +131,7 @@ most recent received rewards.
 
 ![dashboard pools](../assets/dashboard-pools.png)
 
-This section of the dashboard has four main sections (Sidebar and Accounts Panels excluded):
+This page of the dashboard has four main panels (Sidebar and Accounts Panels excluded):
 
 - **Section A: The Stats Panel** shows the number of active pools, the minimum number of tokens
   needed to join a pool and/or create one.
@@ -142,14 +142,22 @@ This section of the dashboard has four main sections (Sidebar and Accounts Panel
   ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed you
   will be able to unlock the locked funds (button with lock icon) that will we available as a free
   balance.
+
+:::info No fast unstake and pool swap for pool members
+
+Note that the option to fast unstake is only available to nominators. Also, to change pool you
+cannot simply swap membership. You will need to unbond and go through the whole unbonding period.
+
+:::
+
 - **Section C: The Pool Panel** shows the pool id where you have membership (in this case Pool 82),
   the name of the pool and next to it a `Leave` button to unbond all the funds in the pool. If there
   any unclaimed rewards you will be able to see it in the middle of the panel. You can decide to
   claim the rewards and bond them (`+ Bond` button) or withdraw them as a free balance (`Withdraw`
   button). In this case there are approximately 0.0012 KSM that can be claimed. At the bottom of the
-  panel you can see the Pool Status: Nominating and Earning Rewards.
+  panel you can see the Pool Status, currently set to "Nominating and Earning Rewards".
 
-:::info
+:::info Pool members must claim their rewards, nobody will do it for them
 
 For pool members rewards must be manually claimed. This is different from being a nominator where
 usually one nominator or the specific validator can trigger a payout for all nominators.
@@ -167,20 +175,68 @@ If you scroll down the page there two additional panels:
 - **Pool Stats** showing the Pool State (either Active, Closed or Destroying), Pool Members (number
   of members in the pool), and Total Bonded (total number of bonded tokens).
 
+The Pools page is divided into four parts: the Overview is basically what we talked about until now,
+the Members section will show all accounts of the pool members, the All Pools section will show all
+pools (you can filter Active, Locked, and Destroying pools), and the Favorites section shows all
+pools that you liked (you can like a pool in the All Pools section by clicking on the heart icons).
+
 ### Nominate
 
 ![dashboard nominate](../assets/dashboard-nominate.png)
 
-Similarly to the Overview section, at the top of this section you can access relevant information
-such as the number of active nominators, the minimum amount needed to place your nomination intents,
-and the
-[minimum active bond](../learn/learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards)
-of the current era.
+This page of the dashboard has four main panels (Sidebar and Accounts Panels excluded):
+
+- **Section A: The Stats Panel** shows the number of active nominators, the minimum number of tokens
+  to nominate (currently
+  <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>)
+  and the minimum active bond (currently
+  <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>).
+  The system keeps 12500 nomination intents and puts them into the
+  [bags list](../learn/learn-staking-advanced.md#bags-list). The fact that active nominators are not
+  12500 is because there are nominators that have no active validator.
+- **Section B: The Balance Panel** shows shows the number of tokens bonded in nominations and those
+  that are free. In this case we have 0.301 KSM bonded and 0.144 KSM free. In this panel you can
+  bond more funds (`+` button) or unbond some funds (`-` button). Unbonding will withdraw unclaimed
+  rewards and funds will be locked for 28 eras
+  ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed you
+  will be able to unlock the locked funds (button with lock icon) that will we available as a free
+  balance.
+
+:::info Fast unstake
+
+Note that if your account did not receive rewards in the past 28 eras, you will be eligible for fast
+unstake. The dashboard will automatically check this for you and prompt a banner.
+
+:::
+
+- **Section C: The Nominator Panel** shows the current status of the nominator, currently set to
+  "Nominating and Earning Rewards", and next to it the `Unstake` button allows you to unstake the
+  whole bonded amount and stop nominating. In the middle of the panel there is the payout
+  destination currently set to "Compounding" (i.e. rewards are added to the bonded funds). The
+  `Update` button will allow you to change the destination to "To Your Account" (to the stash
+  account as a free balance), "To Another Account" (an account that is not the stash or controller),
+  "To Controller Account", or "None" (no payout destination). The bottom part of the panel shows the
+  controller account, currently set to KSM Stash (the stash is also the controller). The `Change`
+  button allows you to set a controller.
+- **Section D: The Nominations panel** shows your nominations and allows you to stop all nomination
+  with the `Stop` button or to select specific validators (`Select` button) and stop nominating only
+  those.
 
 ### Payout
+
+This page is an expanded version pf Panel F in the [Overview](#overview) page. It also shows all
+validators that paid out rewards to your accounts in the past few months.
 
 ## Validators
 
 ## Support
 
+Resources page provides a glossary with main definitions and links to support pages.
+
+Feedback page you can send us feedback through
+[Canny.io](https://polkadot-staking-dashboard.canny.io/feedback). This can be a bug report or a
+feature request. We take your feedback seriously, do not hesitate to contact us.
+
 ## Network
+
+Light client support for a true Web3 experience. For more information about light clients see ...
