@@ -59,22 +59,52 @@ charge of your data, and you will need to authorize anything you want to do. Wel
 
 :::
 
+{{ polkadot: Note the pictures on this page refer to Kusama but the same applies to Polkadot and Westend. :polkadot }}
+The structure of this page follows the sidebar of the staking dashboard. Here you will learn about
+the main features of the dashboard. If you need more information see the
+[Walkthrough Tutorial](https://youtu.be/hvXLc4H7rA4).
+
 ## Overview
 
-This section of the dashboard will give you the general view about current staking metrics and your
-staking situation. These metrics include the **historical reward rate**, the **supply staked** and
-**time remaining in the current era**.
+![dashboard overview](../assets/dashboard-overview.png)
 
-Additionally, you will be able to see the followings:
+This section of the dashboard has six main sections:
 
-- The Balance Panel: The panel shows the bonded amount distinguishing between **nominating**, **in a
-  pool**, and **not staking**. The amount that is not staking is further divided into **free**
-  (balance that can be transferred) and **reserve** (balance that is needed the keep the account
-  on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
+- **Section A: The Sidebar** shows in which page your are (in this case the Overview). It will also
+  show the role you currently have in staking (in this case active in both [Pools](#pools) and
+  [Nominate](#nominate)). You can also change the [network](#network) (currently on Kusama).
 
-- The Recent Payouts Panel: The panel shows a bar chart with the rewards that have been paid out to
-  you in the past 15 days either as a nominator or a pool member (manually claimed). Below the bar
-  chart there is a line chart showing then 10-day moving average.
+- **Section B: The Accounts Panel** allows you to connect one account to the dashboard. Once
+  connected, the account will show up next to the "Accounts" button. If you are active as a
+  nominator and/or a pool member you will be able to see it here. In this case the account KSM Stash
+  is a nominator (with no controller) and a member of the pool Insight Finance. Controller accounts
+  are also shown here if applicable. Note that the dashboard will automatically fetch the stash or
+  the controller as read-only account if you connect one or the other.
+
+- **Section C: The Stats Panel** shows the general view about current staking metrics including the
+  historical reward rate (including after
+  [inflation](../learn/learn-staking-advanced.md#inflation)), the supply staked and time remaining
+  in the current era.
+
+- **Section D: The Summary Panel** shows your current situation and gives you general tips about
+  staking. In this case the KSM Stash account is a nominator and a pool member, and by clicking on
+  "Manage" you can go directly to the [Nominate](#nominate) and [Pools](#pools) pages, respectively.
+  There you can take actions such as changing staking preferences, bonding more funds, etc.
+
+- **Section E: The Balance Panel** shows the bonded amount distinguishing between "Nominating", "In
+  a Pool", and "Not Staking". The amount that is not staking is further divided into "Free" (balance
+  that can be transferred) and "Reserve" (balance that is needed the keep the account on-chain, see
+  [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)). In this case
+  0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are not used for
+  staking. Of the non-staking balance 0.144 KSM are free while
+  {{ polkadot: __<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>__ :polkadot }}
+  are reserved for the existential deposit.
+
+- **Section F: The Recent Payouts Panel** shows a bar chart with the rewards that have been paid out
+  to you in the past 15 days either as a nominator or a pool member (manually claimed). Note how the
+  bar of the 4th of April has the tip that is jot filled with color. This is to show a pending
+  payout (for nominators only). Below the bar chart there is a line chart showing then 10-day moving
+  average.
 
 Additional statistics can be found at the bottom of the overview page.
 
@@ -96,3 +126,7 @@ of the current era.
 ### Payout
 
 ## Validators
+
+## Support
+
+## Network
