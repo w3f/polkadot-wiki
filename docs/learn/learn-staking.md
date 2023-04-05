@@ -16,8 +16,7 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. The dashboard has native [Ledger](../general/ledger.md) support, meaning that
-you do not need an extension or a wallet to use it, just your ledger device.
+help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
 
 :::
 
