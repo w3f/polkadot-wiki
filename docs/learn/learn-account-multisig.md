@@ -185,7 +185,7 @@ multisigs. The tool is part of
 Besides being user-friendly, Multix provides several benefits compared to the Polkadot-JS UI:
 
 - When one person creates the multisig account, all the signatories see the multisig account on their interface.
-- To confirm a transaction there is no need to pass around the call data. Such information is
+- There is no need to pass around the call data to confirm a transaction. Such information is
   retrieved from the chain and displayed to the users.
 - Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
   adding and removing signatories or adjusting the threshold is now possible without creating new
