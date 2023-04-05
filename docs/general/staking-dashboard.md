@@ -235,8 +235,8 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 
 - **Panel A: The Stats Panel** shows the total number of active validators, all validators currently
   registered (active and inactive), and average commission across all validators.
-- **Panel B: The Validators Panel** shows all validators and you can order them by low/high
-  commission or apply the following filters:
+- **Panel B: The Validators Panel** shows all validators. You can order them by low/high commission
+  or apply the following filters:
   - Include only active validators
   - Exclude validators that are oversubscribed, have 100% commission, blocked nominations, have
     missing identity.
