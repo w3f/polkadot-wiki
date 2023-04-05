@@ -252,8 +252,8 @@ If you have interesting ideas for smart contracts on
 {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to
 talk about them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) :polkadot }} or
-[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their
-questions. As always, keep up to date with Polkadot and Kusama by following the
+[Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) to ask their questions.
+As always, keep up to date with Polkadot and Kusama by following the
 [social channels](../general/community.md).
 
 All the best.
