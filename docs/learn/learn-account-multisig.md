@@ -176,6 +176,9 @@ for more information about using [Multix](https://multix.chainsafe.io/) for mult
 
 :::
 
+> Note that Multix is currently only available on Rococo (Polkadot's Testnet). Soon it will be
+> available on Westend, Kusama and Polkadot.
+
 The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex
 multisigs. Besides being user-friendly, the tool provides several benefits compared to the
 Polkadot-JS UI:
