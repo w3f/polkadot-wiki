@@ -225,7 +225,7 @@ unstake. The dashboard will automatically check this for you and prompt a banner
 ### Payouts
 
 This page is an expanded version of Panel F in the [Overview](#overview) page. It also shows all
-validators that paid out rewards to your accounts in the past few months.
+validators and / or nomination pools that paid out rewards to your accounts in the past few months.
 
 ## Validators
 
