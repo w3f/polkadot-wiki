@@ -231,6 +231,16 @@ validators that paid out rewards to your accounts in the past few months.
 
 ![dashboard nominate](../assets/dashboard-validators.png)
 
+This page of the dashboard has two main panels (Sidebar and Accounts Panels excluded):
+
+- **Panel A: The Stats Panel** shows the total number of active validators, all validators currently
+  registered (active and inactive), and average commission across all validators.
+- **Panel B: The Validators Panel** shows all validators and you can order them by low/high
+  commission or apply the following filters:
+  - Include only active validators
+  - Exclude validators that are oversubscribed, have 100% commission, blocked nominations, have
+    missing identity.
+
 ## Support
 
 The Support pages are:
