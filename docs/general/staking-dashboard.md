@@ -224,10 +224,12 @@ unstake. The dashboard will automatically check this for you and prompt a banner
 
 ### Payout
 
-This page is an expanded version pf Panel F in the [Overview](#overview) page. It also shows all
+This page is an expanded version of Panel F in the [Overview](#overview) page. It also shows all
 validators that paid out rewards to your accounts in the past few months.
 
 ## Validators
+
+![dashboard nominate](../assets/dashboard-validators.png)
 
 ## Support
 
