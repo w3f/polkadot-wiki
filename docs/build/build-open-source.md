@@ -9,9 +9,9 @@ slug: ../build-open-source
 
 # Open Source Polkadot Stack <!-- omit in toc -->
 
-:::danger Always do your own research before using open-source tools
+:::caution Do your research before using open-source tools
 
-The tools listed here are open-source. Always [do your own research](../general/how-to-dyor.md) before using these tools, especially before creating accounts and transferring funds. For extensions and wallets, make sure the tool has the option to [recover](../learn/learn-account-generation.md#restore-account-on-the-polkadot-js-browser-extension) an account or make it recoverable in case you lose the seed phrase by, for example, exporting a [backup file](../learn/learn-account-generation.md#backing-up-accounts). In any case, [always keep your seed phrase secure](../general/scams.md) and be aware of scams.
+The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
 
 :::
 
