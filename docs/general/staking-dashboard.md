@@ -109,9 +109,7 @@ Note that Sections A and B will always be visible while you use the dashboard.
   payout (for nominators only). Below the bar chart there is a line chart showing then 10-day moving
   average.
 
-Additional statistics can be found at the bottom of the overview page. Note also the current
-exchange rate for the native token {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} at the
-footer of the dashboard. This information is used to estimate how much your balance is worth.
+Additional statistics can be found at the bottom of the overview page.
 
 :::info Pool funds are in system accounts
 
