@@ -180,8 +180,9 @@ for more information about using [Multix](https://multix.chainsafe.io/) for mult
 > available on Westend, Kusama and Polkadot.
 
 The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex
-multisigs. Besides being user-friendly, the tool provides several benefits compared to the
-Polkadot-JS UI:
+multisigs. The tool is part of
+[the open-source Polkadot/Kusama Tech Stack](https://wiki.polkadot.network/docs/build-open-source#user-interface).
+Besides being user-friendly, Multix provides several benefits compared to the Polkadot-JS UI:
 
 - When one person creates the multisig all the signatories see the multisig in their interface.
 - To confirm a transaction there is no need to pass around the call data. Such information is
