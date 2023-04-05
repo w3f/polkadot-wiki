@@ -187,7 +187,7 @@ Besides being user-friendly, Multix provides several benefits compared to the Po
   retrieved from the chain and displayed to the users.
 - Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
   adding and removing signatories or adjusting the threshold is now possible without creating new
-  multisigs or understand how pure proxies work.
+  multisigs and Multix provides an intuitive interface to work with pure proxies.
 
 ## Decoding Multisig Call Data
 
