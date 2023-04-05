@@ -11,7 +11,7 @@ slug: ../build-open-source
 
 :::danger ALways do your own research before using open-source tools
 
-The tools listed here are open-source. Remember to always [do your own reserach](../general/how-to-dyor.md) before using these tools, especially before creating accounts and transferring funds.
+The tools listed here are open-source. Remember to always [do your own reserach](../general/how-to-dyor.md) before using these tools, especially before creating accounts and transferring funds. For extensions and wallets make sure the tool has the option to [recover](../learn/learn-account-generation.md#restore-account-on-the-polkadot-js-browser-extension) an account or make it recoverable in case you loose the seed phrase by, for example, exporting a [backup file](../learn/learn-account-generation.md#backing-up-accounts).
 
 :::
 
