@@ -9,6 +9,12 @@ slug: ../build-open-source
 
 # Open Source Polkadot Stack <!-- omit in toc -->
 
+:::danger ALways do your own research before using open-source tools
+
+The tools listed here are open-source. Remember to always [do your own reserach](../general/how-to-dyor.md) before using these tools, especially before creating accounts and transferring funds.
+
+:::
+
 The goal of this page is to provide an overview of the open-source Polkadot/Kusama Tech Stack.
 
 This is a living document and we are relying on our community to contribute to it and help maintain
