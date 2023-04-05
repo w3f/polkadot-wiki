@@ -233,12 +233,15 @@ validators that paid out rewards to your accounts in the past few months.
 
 ## Support
 
-Resources page provides a glossary with main definitions and links to support pages.
+The Support pages are:
 
-Feedback page you can send us feedback through
-[Canny.io](https://polkadot-staking-dashboard.canny.io/feedback). This can be a bug report or a
-feature request. We take your feedback seriously, do not hesitate to contact us.
+- The Resources page provides a glossary with main definitions and links to support pages.
+- The Feedback page can be used to senf feedback through
+  [Canny.io](https://polkadot-staking-dashboard.canny.io/feedback). This can be a bug report or a
+  feature request. We take your feedback seriously, do not hesitate to contact us.
 
 ## Network
 
-Light client support for a true Web3 experience. For more information about light clients see ...
+Under Network you can decide to connect to either Polkadot, Kusama or Westend through public RPC
+nodes or light clients for a true Web3 experience. For more information about light clients see
+[this page](../build/build-substrate.md#replacing-rpc-node-reliance-with-light-clients).
