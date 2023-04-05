@@ -166,6 +166,27 @@ video tutorials for more information about creating multisig accounts and transa
 using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the
 [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
 
+## Multisig with Multix Tool
+
+:::info Walk-Through Video Tutorial
+
+See [this video tutorial](https://www.youtube.com/watch?v=APxPsawebJw) and
+[this article](https://blog.chainsafe.io/multix-a-simple-interface-to-manage-complex-multisigs-on-polkadot-97328be26f9d)
+for more information about using [Multix](https://multix.chainsafe.io/) for multisig accounts.
+
+:::
+
+The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex
+multisigs. Besides being user-friendly, the tool provides several benefits compared to the
+Polkadot-JS UI:
+
+- When one person creates the multisig all the signatories see the multisig in their interface.
+- To confirm a transaction there is no need to pass around the call data. Such information is
+  retrieved from the chain and displayed to the users.
+- Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
+  adding and removing signatories or adjusting the threshold is now possible without creating new
+  multisigs or understand how pure proxies work.
+
 ## Decoding Multisig Call Data
 
 :::info
