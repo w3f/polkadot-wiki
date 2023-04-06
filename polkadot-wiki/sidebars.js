@@ -19,6 +19,7 @@ module.exports = {
           items: [
             "general/wallets",
             "general/ledger",
+            "general/polkadot-vault",
             "general/polkadotjs-ui",
           ],
         },
@@ -128,6 +129,7 @@ module.exports = {
                 "learn/learn-staking-guides",
                 "learn/learn-identity-guides",
                 "learn/learn-assets-guides",
+                "learn/learn-vault-guides",
               ],
             },
           ],
