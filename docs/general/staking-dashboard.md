@@ -106,8 +106,8 @@ Additional statistics can be found at the bottom of the overview page.
 
 :::info Pool funds are in system accounts
 
-Remember that funds bonded in a pool are transferred to the pool's system account, which is not
-accessible to anybody. Some wallets might not display the balance bonded in pools, but the dashboard
+Remember that funds bonded in a pool are transferred to the pool's system account, which can only be 
+accessed by the protocol, and not by any individual user. Some wallets might not display the balance bonded in pools, but the dashboard
 will always show it.
 
 :::
