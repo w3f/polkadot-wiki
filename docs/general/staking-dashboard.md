@@ -50,11 +50,11 @@ interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }}
 
 :::info The dashboard is a Web3 dApp
 
-The dashboard is a decentralized application (dApp), meaning that under the hood there are no
+The dashboard is a decentralized application (dApp), meaning that under the hood, there are no
 centralized servers but a network of nodes storing information about the Polkadot blockchain and
 validating transactions, including everything you decide to do on the dashboard. To login into the
-dashboard you do not need emails and passwords but just your public address. From now on, you are in
-charge of your data and will need to authorize anything you want to do. Welcome to Web3!
+dashboard, you do not need emails and passwords but just your public address. From now on, you are
+in charge of your data and will need to authorize anything you want to do. Welcome to Web3!
 
 :::
 
@@ -74,8 +74,8 @@ This page of the dashboard has six main panels:
   [Nominate](#nominate)). You can also change the [network](#network) (currently on Kusama).
 
 - **Section B: The Accounts Panel** allows you to connect one account to the dashboard. Once
-  connected, the account will appear next to the `Accounts` button. If you are active as a nominator
-  and/or a pool member, you can see it here. In this case, the account KSM Stash is a nominator
+  connected, the account will appear next to the `Accounts` button. You can see it here if you are
+  active as a nominator and/or a pool member. In this case, the account KSM Stash is a nominator
   (with no controller) and a member of the pool Insight Finance. Controller accounts are also shown
   here if applicable. Note that the dashboard will automatically fetch the stash or the controller
   as a read-only account if you connect one or the other.
@@ -96,7 +96,7 @@ Note that Sections A and B will always be visible while you use the dashboard.
   a Pool", and "Not Staking". The amount that is not staking is further divided into "Free" (a
   balance that can be transferred) and "Reserve" (a balance that is needed the keep the account
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
-  In this case 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
+  In this case, 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
   not used for staking. Of the non-staking balance, 0.144 KSM are free while
   {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}
   are reserved for the existential deposit.
@@ -145,11 +145,11 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 :::
 
 - **Section C: The Pool Panel** shows the pool id where you have membership (in this case, Pool 82),
-  the pool name, and next to it, a `Leave` button to unbond all the funds in the pool. You will be
-  able to see any unclaimed rewards in the middle of the panel. You can decide to claim the rewards
-  and bond them (`+ Bond` button) or withdraw them as a free balance (`Withdraw` button). In this
-  case, there are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the
-  bottom of the panel, currently set to "Nominating and Earning Rewards".
+  the pool name, and next to it, a `Leave` button to unbond all the funds in the pool. You can see
+  any unclaimed rewards in the middle of the panel. You can claim and bond the rewards (`+ Bond`
+  button) or withdraw them as a free balance (`Withdraw` button). In this case, there are
+  approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
+  panel, currently set to "Nominating and Earning Rewards".
 
 :::info Pool members must claim their rewards; nobody will do it for them
 
@@ -218,7 +218,7 @@ The dashboard will automatically check this for you and prompt a banner.
 ### Payouts
 
 This page is an expanded version of Panel F on the [Overview](#overview) page. It also shows all
-validators and / or nomination pools that paid out rewards to your accounts in the past few months.
+validators and/or nomination pools that paid out rewards to your accounts in the past few months.
 
 ## Validators
 
