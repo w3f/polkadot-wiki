@@ -50,11 +50,11 @@ interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }}
 
 :::info The dashboard is a Web3 dApp
 
-The dashboard is a decentralized application (dApp) and to login, you do not need to sign up with an
-email and password, but just need an account created on the supported non-custodial wallets. Any
-transaction to be submitted, needs to be signed by you. Also, if you use the light client which is
-resistant to censorship, you are interacting trustlessly with the network without any
-intermediaries. Welcome to the world of true Web3!
+The dashboard is a decentralized application (dApp), and to login you do not need to sign up with an
+email and password but just need an account created on the supported non-custodial wallets. Any
+transaction to be submitted needs to be signed by you. Also, if you use light clients, which are
+resistant to censorship, you interact trustlessly with the network without intermediaries. Welcome
+to the world of true Web3!
 
 :::
 
