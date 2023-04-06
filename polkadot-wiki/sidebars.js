@@ -23,6 +23,7 @@ module.exports = {
             "general/polkadotjs-ui",
           ],
         },
+        "general/staking-dashboard",
         "general/polkadotjs",
         {
           type: "category",
