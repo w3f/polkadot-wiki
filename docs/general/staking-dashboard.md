@@ -50,11 +50,11 @@ interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }}
 
 :::info The dashboard is a Web3 dApp
 
-The dashboard is a decentralized application (dApp), meaning that under the hood, there are no
-centralized servers but a network of nodes storing information about the Polkadot blockchain and
-validating transactions, including everything you decide to do on the dashboard. To login into the
-dashboard, you do not need emails and passwords but just your public address. From now on, you are
-in charge of your data and will need to authorize anything you want to do. Welcome to Web3!
+The dashboard is a decentralized application (dApp) and to login, you do not need to sign up with an
+email and password, but just need an account created on the supported non-custodial wallets. Any
+transaction to be submitted, needs to be signed by you. Also, if you use the light client which is
+resistant to censorship, you are interacting trustlessly with the network without any
+intermediaries. Welcome to the world of true Web3!
 
 :::
 
@@ -110,9 +110,9 @@ Additional statistics can be found at the bottom of the overview page.
 
 :::info Pool funds are in system accounts
 
-Remember that funds bonded in a pool are transferred to the pool's system account, which is not
-accessible to anybody. Some wallets might not display the balance bonded in pools, but the dashboard
-will always show it.
+Remember that funds bonded in a pool are transferred to the pool's system account, which can only be
+accessed by the protocol, and not by any individual user. Some wallets might not display the balance
+bonded in pools, but the dashboard will always show it.
 
 :::
 
