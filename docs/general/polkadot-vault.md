@@ -7,9 +7,9 @@ keywords: [parity signer, signer, polkadot vault]
 slug: ../polkadot-vault
 ---
 
-:::info
+:::info Rebranding of Parity Signer to Polkadot Vault
 
-The Polkadot Vault app is currently available only for iOS.
+The Polkadot Vault app rebranding is currently live only on iOS.
 
 The Polkadot Vault app is an air-gapped cold storage solution for all users, including developers
 and power users. See [Ledger](./ledger.md) devices for other cold storage solutions.
