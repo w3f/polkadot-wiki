@@ -187,6 +187,19 @@ Keep in mind that this location is specific to this interaction. The identities 
 if this location was defined on another consensus system, such as Kusama. On other consensus
 systems, such as Ethereum, it won't be able to interpret it.
 
+### UniversalLocation in XCM
+
+While a `MultiLocation` may handle relative paths in _local_ consensus, a `UniversalLocation` refers
+to any global consensus system. A global consensus system is an entity like another relay chain,
+Bitcoin, or Ethereum. A body of global governance capable of externalizing its consensus can be
+referred to as a `UniversalLocation`.
+
+The `GlobalConsensus` junction refers to a global consensus system, and takes a `NetworkId` that
+specifies a particular remote network. A `UniversalLocation` allows for overarching consensus
+systems to communicate using this junction. Sub-consensus systems (i.e., a parachain on Polkadot)
+may refer to other sub-consensus systems (a parachain on Kusama) using a combination of
+`UniversialLocation` and `MultiLocation` declarations.
+
 ## Simulating XCVM using the xcm-simulator
 
 Within the Polkadot repository exists the
