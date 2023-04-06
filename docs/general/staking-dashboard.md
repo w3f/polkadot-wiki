@@ -37,7 +37,7 @@ visit the [staking page](../learn/learn-staking.md) and the
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a tool only
 dedicated to [staking](../learn/learn-staking.md) on Polkadot,
-[Kusama](../learn/learn-kusama-vs-polkadot.md) (Polkadot's canary network) and
+[Kusama](../learn/learn-comparisons-kusama.md) (Polkadot's canary network) and
 [Westend](../maintain/maintain-networks.md#westend-test-network) (Polkadot's test network).
 
 The dashboard is not a wallet, meaning that you cannot transfer funds between accounts. To fund
