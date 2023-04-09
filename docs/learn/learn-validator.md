@@ -54,7 +54,7 @@ Validators perform two main functions:
 
 Validators also contribute to the so-called **availability distribution**. In fact, once the
 candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is not
-included as part of the parachain until it is proven avaialable (together with the PoV). Information
+included as part of the parachain until it is proven available (together with the PoV). Information
 regarding the availability of the candidate will be noted in the following relay chain blocks. Only
 when there is enough information, the candidate is considered a full parachain block or _parablock_.
 
