@@ -176,13 +176,13 @@ for more information about using [Multix](https://multix.chainsafe.io/) for mult
 
 :::
 
-
 The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex
 multisigs. The tool is part of
 [the open-source Polkadot/Kusama Tech Stack](https://wiki.polkadot.network/docs/build-open-source#user-interface).
 Besides being user-friendly, Multix provides several benefits compared to the Polkadot-JS UI:
 
-- When one person creates the multisig account, all the signatories see the multisig account on their interface.
+- When one person creates the multisig account, all the signatories see the multisig account on
+  their interface.
 - There is no need to pass around the call data to confirm a transaction. Such information is
   retrieved from the chain and displayed to the users.
 - Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
