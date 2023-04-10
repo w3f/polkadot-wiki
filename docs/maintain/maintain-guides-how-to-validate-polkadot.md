@@ -82,6 +82,13 @@ instead.
 
 ## Initial Set-up
 
+:::tip
+
+If you wish to use **Docker** to setup your validator, please refer to the
+[last section of this guide](#using-docker).
+
+:::
+
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
