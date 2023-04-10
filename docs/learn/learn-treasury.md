@@ -99,10 +99,11 @@ The proposer has to deposit a minimum of
 or 5% of the requested amount with a maximum cap of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
-as an anti-spam measure.  If the treasury proposal does not pass due to lack of votes from the council members, 
-the proposal goes back to the waiting queue and the deposit amount will stay locked. If the treasury proposal passes
-successfully, the deposit amount is refunded. If the proposal is explicitly rejected by the council through "Nay" votes, 
-then the deposit amount is burned.
+as an anti-spam measure. If the treasury proposal does not pass due to lack of votes from the
+council members, the proposal goes back to the waiting queue and the deposit amount will stay
+locked. If the treasury proposal passes successfully, the deposit amount is refunded. If the
+proposal is explicitly rejected by the council through "Nay" votes, then the deposit amount is
+burned.
 
 These values are subject to [governance](learn-governance.md) so they may change in the future.
 
