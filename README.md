@@ -67,13 +67,16 @@ Both the Polkadot Wiki and the Kusama Guide are built from the source files in t
 After cloning the source locally, you can start the websites with each of these respective commands
 (ensure you run `yarn` at the root of the repository first to install dependencies).
 
-The Wiki uses Algolia search, which can be accessed locally by providing the correct App ID and API key.
-The `app_id` and `api_key` environment variables are needed for the Wiki to be built successfully.
-If you are an external contributor, set the variables with some values like shown below.
+The Wiki uses Algolia search, which can be accessed locally by providing the correct App ID and API
+key. The `app_id` and `api_key` environment variables are needed for the Wiki to be built
+successfully. If you are an external contributor, set the variables with some values like shown
+below.
 
 ```bash
 export app_id="xxxxxx" api_key="xxxxxxx"
 ```
+
+Note that, by doing so, the search bar will be disabled.
 
 Using yarn, run:
 
