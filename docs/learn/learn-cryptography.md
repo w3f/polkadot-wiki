@@ -104,8 +104,8 @@ broadcast this certificate via an extrinsic.
 - Parachain Assignment: sr25519
 - Parachain Validator: ed25519
 
-BABE requires keys suitable for use in a [Verifiable Random Function](learn-randomness.md/#vrfs) as
-well as for digital signatures. Sr25519 keys have both capabilities and so are used for BABE.
+BABE requires keys suitable for use in a [Verifiable Random Function](#vrf) as well as for digital
+signatures. Sr25519 keys have both capabilities and so are used for BABE.
 
 In the future, we plan to use a BLS key for GRANDPA because it allows for more efficient signature
 aggregation.
