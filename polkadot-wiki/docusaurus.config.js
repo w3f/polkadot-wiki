@@ -241,8 +241,8 @@ module.exports = {
       },
     },
     algolia: {
-      appId: process.env.ALGOLIA_POLKADOT_APPID,
-      apiKey: process.env.ALGOLIA_POLKADOT_API,
+      appId: process.env.app_id,
+      apiKey: process.env.api_key,
       indexName: "polkadot",
       contextualSearch: true,
     },
