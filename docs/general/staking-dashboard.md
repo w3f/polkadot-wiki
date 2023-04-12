@@ -65,6 +65,13 @@ the main features of the dashboard. If you need more information, see the
 
 ## Overview
 
+:::info Walk-through video tutorial
+
+[This video tutorial](https://youtu.be/hvXLc4H7rA4) shows you everything you can do with the Staking
+Dashboard.
+
+:::
+
 ![dashboard overview](../assets/dashboard-overview.png)
 
 This page of the dashboard has six main panels:
@@ -124,6 +131,13 @@ most recently received rewards.
 
 ### Pools
 
+:::info Walk-through video tutorial
+
+[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a nomination pool with the
+Staking Dashboard.
+
+:::
+
 ![dashboard pools](../assets/dashboard-pools.png)
 
 This page of the dashboard has four main panels (Sidebar and Accounts Panels excluded):
@@ -176,6 +190,13 @@ pools that you liked (you can like a pool in the All Pools section by clicking o
 
 ### Nominate
 
+:::info Walk-through video tutorial
+
+[This video tutorial](https://youtu.be/F59N3YKYCRs) shows you how to become a nominator with the
+Staking Dashboard.
+
+:::
+
 ![dashboard nominate](../assets/dashboard-nominate.png)
 
 This page of the dashboard has four main panels (Sidebar and Accounts Panels excluded):
@@ -219,6 +240,15 @@ The dashboard will automatically check this for you and prompt a banner.
 
 This page is an expanded version of Panel F on the [Overview](#overview) page. It also shows all
 validators and/or nomination pools that paid out rewards to your accounts in the past few months.
+
+### After Staking
+
+:::info Walk-through video tutorial
+
+[This video tutorial](https://youtu.be/F59N3YKYCRs) shows you how to what you can do after staking
+with the Staking Dashboard.
+
+:::
 
 ## Validators
 
