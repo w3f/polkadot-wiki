@@ -17,6 +17,9 @@ jobs:
           fetch-depth: 0
 
       - name: Publish
+        env: 
+          app_id: ${{ secrets.ALGOLIA_KUSAMA_APPID }}
+          api_key: ${{ secrets.ALGOLIA_KUSAMA_API }}
         run: |
           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
           git config --global user.name "Polkadot Wiki CI"
