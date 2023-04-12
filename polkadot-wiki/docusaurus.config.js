@@ -150,6 +150,10 @@ module.exports = {
           {
             to: '/docs/learn-comparisons-kusama',
             from: ['/docs/learn-kusama-vs-polkadot']
+          },
+          {
+            to: '/docs/learn-cryptography',
+            from: ['/docs/learn-randomness']
           }
         ],
         createRedirects: function (existingPath) {
