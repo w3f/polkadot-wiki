@@ -91,6 +91,10 @@ Legacy Instructions below will be removed when Governance V1 is completely remov
 Check the instructions on
 [how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).
 
+Your proposal should address a problem, outline a goal, give a detailed account of how you will reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize the tasks to be completed so fees can be evaluated and milestones can be followed. You can check 
+the [guidelines for a successful proposal](https://ipfs.io/ipfs/QmXHwouq6dfjC3AqkYbwJe92pTQhrWgJxLAcffoPtvSni6/kusama_treasury_project_propsal.pdf) and 
+fill out the Treasury proposal template provided for Kusama.
+
 ::: :kusama }}
 
 The proposer has to deposit a minimum of
