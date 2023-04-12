@@ -241,8 +241,8 @@ module.exports = {
       },
     },
     algolia: {
-      appId: "BEUYRRAUZN",
-      apiKey: "e472cf1f938eb8c46dd952ff22332538",
+      appId: process.env.app_id,
+      apiKey: process.env.api_key,
       indexName: "polkadot",
       contextualSearch: true,
     },
