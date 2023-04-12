@@ -11,7 +11,9 @@ slug: ../polkadot-vault
 
 The Polkadot Vault app rebranding is live on
 [iOS](https://apps.apple.com/us/app/parity-signer/id1218174838) and
-[Android](https://play.google.com/store/apps/details?id=io.parity.signer) devices.
+[Android](https://play.google.com/store/apps/details?id=io.parity.signer) devices. The source code
+of all version can be downloaded on
+[the GitHub repo](https://github.com/paritytech/parity-signer/releases).
 
 The Polkadot Vault app is an air-gapped cold storage solution for all users, including developers
 and power users. See [Ledger](./ledger.md) devices for other cold storage solutions.
