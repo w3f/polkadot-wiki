@@ -87,7 +87,6 @@ module.exports = {
               label: "NFTs",
               items: [
                 "learn/learn-nft",
-                "learn/learn-nft-pallets",
               ],
             },
             {
@@ -118,6 +117,7 @@ module.exports = {
           items: [
             'learn/learn-account-advanced',
             "learn/learn-staking-advanced",
+            "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
             'learn/learn-randomness',
