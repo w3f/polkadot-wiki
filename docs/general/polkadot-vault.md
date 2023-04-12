@@ -12,7 +12,7 @@ slug: ../polkadot-vault
 The Polkadot Vault app rebranding is live on
 [iOS](https://apps.apple.com/us/app/parity-signer/id1218174838) and
 [Android](https://play.google.com/store/apps/details?id=io.parity.signer) devices. The source code
-of all version can be downloaded on
+of all versions can be downloaded on
 [the GitHub repo](https://github.com/paritytech/parity-signer/releases).
 
 The Polkadot Vault app is an air-gapped cold storage solution for all users, including developers
@@ -59,6 +59,12 @@ imported into an extension). See the instructions in
 to learn more about creating Vault accounts, and
 [this article](https://support.polkadot.network/support/solutions/articles/65000184118-polkadot-vault-how-to-add-your-account-on-polkadot-js-ui)
 on how to import them to the Polkadot extension or Polkadot-JS UI.
+
+:::info
+
+Importing an account into an extension will not import its private key.
+
+:::
 
 ## Signing Extrinsics
 
@@ -118,9 +124,13 @@ Internet. In case of an unrecognized connection, it is recommended to:
 - Once offline, create a new account on the Vault app
 - Import the compromised accounts and transfer the funds to the new non-compromised account.
 
+:::danger The Vault App has the option to export private keys
+
 If an account's private key has been exported from the Vault app, the public key will be marked as
 "hot" and the following message will be displayed _This key is marked hot because its root private
 key has been exported_.
+
+:::
 
 ## Add Chains
 
