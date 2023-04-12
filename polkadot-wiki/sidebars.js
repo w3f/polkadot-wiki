@@ -121,7 +121,6 @@ module.exports = {
             "learn/learn-cryptography",
             'learn/learn-phragmen',
             'learn/learn-randomness',
-            'learn/learn-spree',
             'learn/learn-wasm',
             {
               type: "category",
@@ -170,6 +169,7 @@ module.exports = {
                 'learn/learn-xcm-instructions',
               ],
             },
+            'learn/learn-spree',
           ],
         },
         {
