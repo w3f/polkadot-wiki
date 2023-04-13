@@ -49,30 +49,7 @@ Radha leads Technical Education at Web3 Foundation. Radha has a PhD in Computer 
 three years of experience teaching Computer Science courses. He also taught a Massively Open Online
 Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). Radha is excited
 to contribute to Web3 Foundation's vision by educating professionals and the general public about
-the WEB3 Technology Stack.
-
-### Emre Surmeli
-
-- email: [emre@web3.foundation](mailto:emre@web3.foundation)
-- matrix: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
-- twitter: [@semres8](https://twitter.com/semres8)
-
-Emre is a Technical Educator at Web3 Foundation. His background is in full-stack software
-development, education, and blockchain technology consulting. He is passionate about learning and
-teaching and has always kept a foot in education by designing and delivering software development
-and blockchain classes at General Assembly, Code Fellows, and Columbia University.
-
-### Keith Alfaro
-
-- email: [keith@web3.foundation](mailto:keith@web3.foundation)
-- matrix: [@keith:web3.foundation](https://matrix.to/#/@keith:web3.foundation)
-
-Keith is a member of the TechEd team at the Web3 Foundation. He has been working professionally as a
-software engineer since completing his graduate studies. Keith holds bachelor's and master's degrees
-in Architecture (buildings not computers). It was during this time that he discovered his passion
-for computational design. He was previously employed in the CAD/3D graphics software development
-domains. Keith is passionate about learning, developing and sharing decentralized solutions that
-help aid an anti-authoritarian future.
+the Web3 Technology Stack.
 
 ### Filippo Franchini
 
@@ -87,6 +64,22 @@ given back to the users. The complexity of Web3 technology can be intimidating a
 major blocking element behind mainstream adoption. Filippo is excited to contribute to Web3
 Foundation's vision by educating professionals and the general public about Web3 and blockchain
 technology.
+
+### Bader Youssef
+
+- email: [bader@web3.foundation](mailto:bader@web3.foundation)
+- matrix: [@bader:web3.foundation](https://matrix.to/#/@bader:web3.foundation)
+- twitter: [@baderyo_o](https://twitter.com/baderyo_o)
+
+Bader is a Technical Educator at the Web3 Foundation. He has been an avid blockchain and web3
+advocate, full-stack software engineer, and technical writer for the past 4 years. He has used a
+multitude of technologies to create disruptive and unique applications, mostly centering around
+eliminating intermediary servers in applications and creating trust-free digital interactions for
+the betterment of humanity. Real technology needs to solve real problems, and Bader is very strong
+on creating practical solutions to those problems using Web3.
+
+Bader has a strong passion for ensuring that this technology can be understood and utilized to its
+fullest potential and focuses on making it as simple and useful to digest as possible.
 
 ## Technical Integrations
 
@@ -109,6 +102,24 @@ Mechanical Engineering.
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
+
+### Keith Alfaro
+
+Keith was a member of the TechEd team at the Web3 Foundation. He has worked professionally as a
+software engineer since completing his graduate studies. Keith holds bachelor's and master's degrees
+in Architecture (buildings not computers). It was during this time that he discovered his passion
+for computational design. He was previously employed in the CAD/3D graphics software development
+domains. Keith is passionate about learning, developing and sharing decentralized and peer-to-peer
+technologies.
+
+### Emre Surmeli
+
+- twitter: [@semres8](https://twitter.com/semres8)
+
+Emre was a Technical Educator at Web3 Foundation. His background is in full-stack software
+development, education, and blockchain technology consulting. He is passionate about learning and
+teaching and has always kept a foot in education by designing and delivering software development
+and blockchain classes at General Assembly, Code Fellows, and Columbia University.
 
 ### Danny Salman
 

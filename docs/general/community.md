@@ -20,6 +20,8 @@ contact and anyone doing so is likely trying to scam you.
 
 ## General
 
+- [Polkadot Forum](https://forum.polkadot.network/) - a place for thoughtful comments and
+  discussions on the future of Polkadot, and the steps we can take to get there together.
 - [Polkadot GitHub](https://github.com/paritytech/polkadot) - Parity maintained repository that
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
@@ -71,8 +73,8 @@ you face any issues, join the rooms individually.
 
 - [**Substrate Developers Public Space**](https://matrix.to/#/#substrate-builders-space:matrix.parity.io) -
   Curated collection of rooms around all things Substrate. Contains the two below and many others.
-- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More advanced
-  room for technical questions on building with Substrate.
+- [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
+  for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:matrix.parity.io) - A room to discuss
   developing Substrate smart contracts using Parity Ink!
 
@@ -83,7 +85,7 @@ you face any issues, join the rooms individually.
 - [Polkadot Discord](https://dot.li/discord) (RECOMMENDED)
 - [Kusama Discord](https://kusa.ma/discord)
 
-### Social media and forums
+### Social media
 
 - [Polkadot Twitter](https://twitter.com/Polkadot)
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
@@ -95,9 +97,6 @@ you face any issues, join the rooms individually.
 - [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
-
-- [Polkadot Forum](https://matrix.to/#/#polkadot-watercooler:web3.foundation)
-- [Kusama Forum](https://matrix.to/#/#kusamawatercooler:web3.foundation)
 
 ### Blogs and tutorials
 
@@ -114,8 +113,13 @@ you face any issues, join the rooms individually.
 
 ## Ecosystem
 
-- [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
-  building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
-  unofficial)
+- [Polkadot & Kusama Ecosystem Map](https://dotinsights.subwallet.app/) - Comprehensive list of
+  projects building in the ecosystem made by SubWallet with support from Parity Technologies.
+- [Polkadot Deep Dive Quarterly Report](https://dotinsights.subwallet.app/polkadot-report-q4-2022-en/) -
+  A quarterly report series that dives deep into the growth of the whole ecosystem. Made by
+  SubWallet with sections focused on Ecosystem Overview, DeFi, NFT & Web3.
 - [Polkadot Stack](../build/build-open-source.md) - if you're interested in seeing what's under
   development and where there's room for your contributions.
+- [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
+  building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
+  unofficial).

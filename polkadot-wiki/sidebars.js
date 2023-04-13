@@ -5,11 +5,26 @@ module.exports = {
       label: "General",
       items: [
         "general/getting-started",
-        "general/claims",
-        "general/redenomination",
-        "general/research",
-        "general/ens",
-        "general/ledger",
+        {
+          type: "category",
+          label: "Stay Safe",
+          items: [
+            "general/scams",
+            "general/how-to-dyor",
+          ],
+        },
+        {
+          type: "category",
+          label: "Wallets",
+          items: [
+            "general/wallets",
+            "general/ledger",
+            "general/polkadot-vault",
+            "general/polkadotjs-ui",
+          ],
+        },
+        "general/staking-dashboard",
+        "general/polkadotjs",
         {
           type: "category",
           label: "Community & Contributors",
@@ -24,21 +39,15 @@ module.exports = {
           label: "Programmes",
           items: [
             "general/grants",
-            "maintain/maintain-bug-bounty",
+            "general/bug-bounty",
             "general/ambassadors",
             "general/builders-program",
             "general/doc-thousand-validators",
             "general/doc-thousand-contributors",
           ],
         },
-        {
-          type: "category",
-          label: "Stay Safe",
-          items: [
-            "general/scams",
-            "general/how-to-dyor",
-          ],
-        },
+        "general/research",
+        "general/metadata",
         "general/faq",
         "general/glossary",
       ],
@@ -57,10 +66,18 @@ module.exports = {
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
-                "learn/learn-balance-transfers",
-                "learn/learn-extrinsics",
+                "learn/learn-identity",
                 "learn/learn-account-multisig",
                 'learn/learn-proxies',
+              ],
+            },
+            {
+              type: "category",
+              label: "Transactions",
+              items: [
+                "learn/learn-extrinsics",
+                "learn/learn-balance-transfers",
+                "learn/learn-transaction-fees",
               ],
             },
             {
@@ -69,9 +86,14 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-nft",
-                "learn/learn-statemint",
                 "learn/learn-teleport",
+              ],
+            },
+            {
+              type: "category",
+              label: "NFTs",
+              items: [
+                "learn/learn-nft",
               ],
             },
             {
@@ -79,14 +101,9 @@ module.exports = {
               label: "Components",
               items: [
                 "learn/learn-consensus",
-                "learn/learn-governance",
                 "learn/learn-opengov",
-                "learn/learn-identity",
                 "learn/learn-polkadot-host",
-                "learn/learn-polkadotjs",
-                "learn/learn-registrar",
                 "learn/learn-runtime-upgrades",
-                "learn/learn-transaction-fees",
                 "learn/learn-treasury",
               ],
             },
@@ -96,7 +113,6 @@ module.exports = {
               items: [
                 "learn/learn-staking",
                 "learn/learn-nomination-pools",
-                "learn/learn-staking-faq"
               ],
             },
           ],
@@ -107,12 +123,21 @@ module.exports = {
           items: [
             'learn/learn-account-advanced',
             "learn/learn-staking-advanced",
+            "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
             'learn/learn-randomness',
-            'learn/learn-spree',
-            'learn/learn-staking-miner',
             'learn/learn-wasm',
+            {
+              type: "category",
+              label: "How-to Guides",
+              items: [
+                "learn/learn-staking-guides",
+                "learn/learn-identity-guides",
+                "learn/learn-assets-guides",
+                "learn/learn-vault-guides",
+              ],
+            },
           ],
         },
         {
@@ -138,22 +163,42 @@ module.exports = {
             },
             "learn/learn-parathreads",
             "learn/learn-bridges",
-            'learn/learn-xcm',
+            {
+              type: "category",
+              label: "Cross Consensus Messaging (XCM)",
+              items: [
+                'learn/learn-xcm',
+                'learn/learn-xcm-pallet',
+                'learn/learn-xcm-usecases',
+                'learn/learn-xcm-transport',
+                'learn/learn-xcvm',
+                'learn/learn-xcm-instructions',
+              ],
+            },
+            'learn/learn-spree',
           ],
         },
         {
           type: "category",
           label: "Polkadot Comparisons",
           items: [
-            'learn/learn-kusama-vs-polkadot',
-            'learn/learn-comparisons',
+            'learn/learn-comparisons-kusama',
             'learn/learn-comparisons-ethereum-2',
             'learn/learn-comparisons-cosmos',
-            'learn/learn-comparisons-avalanche'
+            'learn/learn-comparisons-avalanche',
+            'learn/learn-comparisons',
           ],
         },
-        "learn/learn-launch",
         "learn/learn-video-tutorials",
+        {
+          type: "category",
+          label: "Archive",
+          items: [
+            "learn/learn-governance",
+            "learn/learn-launch",
+            "learn/learn-redenomination",
+          ],
+        },
       ],
     },
     {
@@ -171,7 +216,6 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-wallets",
             "build/build-substrate",
             "build/build-ss58-registry",
             "build/build-hrmp-channels",
@@ -227,8 +271,6 @@ module.exports = {
             "maintain/maintain-guides-validator-payout",
             "maintain/maintain-guides-how-to-systemd",
             "maintain/maintain-guides-secure-validator",
-            "maintain/maintain-guides-how-to-use-polkadot-validator-setup",
-            "maintain/maintain-guides-how-to-setup-a-validator-with-reverse-proxy",
             "maintain/maintain-guides-how-to-upgrade",
             "maintain/maintain-guides-how-to-monitor-your-node",
             "maintain/maintain-guides-how-to-chill",

@@ -1,7 +1,7 @@
 ---
 id: doc-thousand-validators
 title: Thousand Validators Programme
-sidebar_label: Thousand Validators Programme
+sidebar_label: Thousand Validators
 description:
   Learn about the Thousand Validators Programme and how it can support your validator endeavors.
 keywords: [thousand validators programme, validator, validate, maintain, TVP]
@@ -133,11 +133,11 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 {{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
 Attaining a rank of 25 usually takes around two months. The leaderboard is available
 [here](https://thousand-validators.kusama.network/#/leaderboard).
-In order to apply to the Polkadot programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). You will hear back from the team shortly. :polkadot }}
+In order to apply to the Polkadot programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
+and fill in the [application form](https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform?ref=polkadot-network). You will hear back from the team shortly. :polkadot }}
 
 {{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6).  The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
+and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
 
 #### Requirements
 
@@ -149,7 +149,7 @@ and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6).  The pr
 - {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on the latest release
-- {{ polkadot: Reward destination 'Staked' :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
+- {{ polkadot: Maximum one node per applicant :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
 - Validators must operate nodes themselves, they may not be operated by third parties or staking
   providers.
 

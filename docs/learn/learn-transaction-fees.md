@@ -97,14 +97,14 @@ Checkout some examples of how various weights are gauged in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime for several different types
 of operations:
 
-- [request_judgement](https://spec.polkadot.network/#sect-practical-examples) - from the identity
-  pallet, allows users to request judgement from a specific registrar
+- [request_judgement](https://spec.polkadot.network/#id-practical-example-1-request_judgement) -
+  from the identity pallet, allows users to request judgement from a specific registrar
 - [payout_stakers](https://spec.polkadot.network/#sect-practical-example-payout-stakers) - from the
   staking Pallet, is invoked by a single account in order to payout the reward for all nominators
   who back a particular validator
-- [transfer](https://spec.polkadot.network/#_practical_example_3_transfer) - from the balances
+- [transfer](https://spec.polkadot.network/#id-practical-example-3-transfer) - from the balances
   module, is designed to move the specified balance by the sender to the receiver
-- [withdraw_unbounded](https://spec.polkadot.network/#_practical_example_4_withdraw_unbounded) -
+- [withdraw_unbounded](https://spec.polkadot.network/#id-practical-example-4-withdraw_unbounded) -
   from the staking module, is designed to move any unlocked funds from the staking management system
   to be ready for transfer
 
@@ -196,7 +196,7 @@ The `Update Multiplier` defines how the multiplier can change. Each runtime has 
 define this behavior accordingly. For example, the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime internally updates the
 multiplier after each block according to a custom formula defined
-[here](https://spec.polkadot.network/#_update_multiplier).
+[here](https://spec.polkadot.network/#id-update-multiplier).
 
 ## Calcuating Fees with Polkadot-JS
 
@@ -216,7 +216,8 @@ console.log(`
 `);
 ```
 
-For additional information on interacting with the API, checkout [Polkadot-JS](learn-polkadotjs.md).
+For additional information on interacting with the API, checkout
+[Polkadot-JS](../general/polkadotjs.md).
 
 ## Shard Transactions
 

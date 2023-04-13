@@ -1,7 +1,7 @@
 ---
 id: doc-thousand-contributors
 title: Thousand Contributors Programme
-sidebar_label: Thousand Contributors Programme
+sidebar_label: Thousand Contributors
 description:
   Learn about the Thousand Contributors Programme and how it can support your contributions.
 slug: ../thousand-contributors

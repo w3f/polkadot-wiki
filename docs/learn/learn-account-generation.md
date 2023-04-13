@@ -75,10 +75,10 @@ phone that you are comfortable using only for Parity Signer.
 Hardware wallet integration is possible with Ledger. A full guide is available
 [here](../general/ledger.md).
 
-Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but
-bear in mind that some of these are **unaudited** and are not officially affiliated with Web3
-Foundation or the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless
-otherwise stated.
+Alternatively, you might find other wallets on the [Wallet](./../general/wallets.md) page, but bear
+in mind that some of these are **unaudited** and are not officially affiliated with Web3 Foundation
+or the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless otherwise
+stated.
 
 :::info How-to guides to generate an account
 
@@ -339,3 +339,11 @@ To use a Ledger hardware wallet to create your address and keep your tokens in c
 the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
 
 :::
+
+## Encryption Enhancement
+
+Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
+This is due to an enhanced encryption method, noticeable in a slight delay when
+encrypting/decrypting your wallet. If you cannot load a `JSON` file, please ensure you use the
+latest version of the wallet software. If you cannot load it, ensure that the wallet software uses
+the newest version of the [Polkadot API](https://polkadot.js.org/api/).

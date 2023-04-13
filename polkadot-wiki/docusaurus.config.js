@@ -14,11 +14,6 @@ module.exports = {
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
     "https://unpkg.com/aos@next/dist/aos.js",
     {
-      src: "https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js",
-      onload: "addBackToTop()",
-      defer: true,
-    },
-    {
       src: "https://apisa.polkadot.network/latest.js",
       async: true,
       defer: true,
@@ -105,8 +100,56 @@ module.exports = {
             from: ['/docs/learn-gov2']
           },
           {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
+          },
+          {
             to: '/docs/learn-system-chains',
             from: ['/docs/learn-common-goods']
+          },
+          {
+            to: '/docs/learn-launch',
+            from: ['/docs/claims']
+          },
+          {
+            to: '/docs/learn-redenomination',
+            from: ['/docs/redenomination']
+          },
+          {
+            to: '/docs/maintain-guides-how-to-validate-polkadot',
+            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup','/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
+          },
+          {
+            to: '/docs/ledger',
+            from: ['/docs/learn-ledger']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
+          },
+          {
+            to: '/docs/learn-staking',
+            from: ['/docs/learn-staking-faq']
+          },
+          {
+            to: '/docs/learn-staking-advanced',
+            from: ['/docs/learn-staking-miner']
+          },
+          {
+            to: '/docs/learn-assets-guides',
+            from: ['/docs/learn-statemint']
+          },
+          {
+            to: '/docs/learn-comparisons-kusama',
+            from: ['/docs/learn-kusama-vs-polkadot']
           }
         ],
         createRedirects: function (existingPath) {
@@ -198,8 +241,8 @@ module.exports = {
       },
     },
     algolia: {
-      appId: "BEUYRRAUZN",
-      apiKey: "e472cf1f938eb8c46dd952ff22332538",
+      appId: process.env.app_id,
+      apiKey: process.env.api_key,
       indexName: "polkadot",
       contextualSearch: true,
     },

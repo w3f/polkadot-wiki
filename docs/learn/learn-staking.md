@@ -3,7 +3,7 @@ id: learn-staking
 title: Introduction to Staking
 sidebar_label: Introduction to Staking
 description: A high level introduction to Staking on Polkadot and NPoS model
-keywords: [staking, stake, nominate, nominating, NPoS]
+keywords: [staking, stake, nominate, nominating, NPoS, faq]
 slug: ../learn-staking
 ---
 
@@ -16,17 +16,22 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started.
+help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and
+does not require an extension or wallet as an interface.
 
 :::
 
 :::info Stake through Nomination Pools
 
-You can now stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with
-just
-{{ polkadot: <RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
-and earn staking rewards. For additional information, check out
+The minimum amount required to become an active nominator and earn rewards is
+{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__. :kusama }}
+If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
+nomination and still want to participate in staking, you can join the nomination pools. You can now
+stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
+{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
+{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
+in the nomination pools and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
@@ -376,7 +381,7 @@ controller too.
 Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import
 their Ledger accounts in the extension and use them as a stash and controller. You can find more
 information about Talisman and other third-party wallets that officially secured funding from the
-treasury [here](..//build/build-wallets.md/#treasury-funded-wallets).
+treasury [here](./../general/wallets.md).
 
 :::
 
@@ -519,6 +524,23 @@ re-garner support from nominators.
 For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
 this wiki.
 
+### Fast Unstake
+
+:::info Fast Unstaking feature is live!
+
+If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
+bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
+can now unbond them immediately.
+
+:::
+
+If your bonded balance did not back any validators in the last
+{{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }}, you are
+eligible to perform fast unstaking. The
+[staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
+qualify. For more information, visit the
+["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
+
 ## Why and Why not to Stake?
 
 ### Pros of Staking
@@ -551,6 +573,7 @@ users to withdraw. For in-depth understanding, check the
 - Tokens will be locked for about {{ polkadot: 28 :polkadot }}{{ kusama: 7 :kusama }} days on
   {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during
   the unbonding period.
+
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](#slashing)).
 - Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
@@ -597,6 +620,16 @@ is receiving rewards.
 
 You can find information about why you might not receive staking rewards on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-).
+
+:::
+
+## Staking FAQ
+
+:::info
+
+See
+[this support page](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
+for the FAQs about staking.
 
 :::
 

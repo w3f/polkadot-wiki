@@ -11,12 +11,11 @@ import RPC from "./../../components/RPC-Connection";
 
 import MinimumStake from "./../../components/Minimum-Stake";
 
-:::info
+:::tip
 
-The following information applies to the Polkadot network. If you want to set up a validator on
-Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
-
-This guide will instruct you how to set up a validator node on the Polkadot network.
+If you are a beginner, it is recommended that you start your validator journey on Kusama network.
+Check the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) for details on how to get
+started.
 
 :::
 
@@ -24,7 +23,7 @@ This guide will instruct you how to set up a validator node on the Polkadot netw
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
 only your own stake, but also the stake of your current nominators. If you make a mistake and get
-slashed, your money and your reputation will be at risk. However, running a validator can also be
+slashed, your tokens and your reputation will be at risk. However, running a validator can also be
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
@@ -40,19 +39,16 @@ tackle yourself. Being a validator involves more than just executing the Polkado
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator.md) information to make sure you understand the
-factors to consider when constructing your infrastructure. Web3 Foundation also maintains a
-[reference implementation for a validator set-up](https://github.com/w3f/polkadot-validator-setup)
-that you can use by deploying yourself (video walkthrough is available
-[here](https://www.youtube.com/watch?v=tTn8P6t7JYc)). As you progress in your journey as a
+factors to consider when constructing your infrastructure. As you progress in your journey as a
 validator, you will likely want to use this repository as a _starting point_ for your own
 modifications and customizations.
 
 If you need help, please reach out on the
-[Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
-on Riot. The team and other validators are there to help answer questions and provide tips from
+[Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) on
+Element. The team and other validators are there to help answer questions and provide tips from
 experience.
 
-### How many DOT do I need?
+### How many DOT do I need to become an active Validator?
 
 You can have a rough estimate on that by using the methods listed
 [here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
@@ -66,17 +62,17 @@ understand how validators are elected, check the
 :::info On-Chain Data for Reference
 
 On Polkadot, the minimum stake backing a validator in the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={18684315524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={18684315524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/>. :kusama }}
+{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
 
 On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5367388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5367388652143741} /> :polkadot }} in the
+{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
+{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
 era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 :::
 
 **Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
@@ -85,6 +81,13 @@ ability to run a validator node, it is recommended to nominate your DOT to a tru
 instead.
 
 ## Initial Set-up
+
+:::tip
+
+If you wish to use **Docker** to setup your validator, please refer to the
+[last section of this guide](#using-docker).
+
+:::
 
 ### Requirements
 
@@ -372,6 +375,17 @@ validator mode right away:
 ```sh
 ./target/production/polkadot
 ```
+
+:::info
+
+If you want to run a validator on Kusama, you have an option to specify the chain. With no
+specification, this would default to Polkadot.
+
+```sh
+./target/production/polkadot --chain=kusama
+```
+
+:::
 
 ```
 2021-06-17 03:07:07 Parity Polkadot

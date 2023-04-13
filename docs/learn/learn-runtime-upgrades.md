@@ -33,7 +33,7 @@ of node operators to upgrade in advance of a given block number. Polkadot stakeh
 approve upgrades through the [on-chain governance](learn-governance.md) system, which also enacts
 them autonomously.
 
-## New [Client Releases](https://github.com/paritytech/polkadot/releases)
+## Client Releases
 
 The existing runtime logic is followed to update the [Wasm](learn-wasm.md) runtime stored on the
 blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all
@@ -51,6 +51,34 @@ Although upgrading your nodes is generally not necessary to follow an upgrade, w
 following the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading
 promptly, especially for high priority or critical releases.
 
+:::info New Client Releases
+
+The details about the latest client releases can be found on the
+[releases section on the Polkadot repository](https://github.com/paritytech/polkadot/releases). A
+detailed analysis for client releases can be viewed on the
+[Polkadot Forum](https://forum.polkadot.network/tag/release-analysis).
+
+:::
+
+### Runtime vs Client versions
+
+The runtime and client versions are distinct from each other. The runtime versioning typically looks
+like `network-xxxx`, whereas the client versioning looks like `vx.x.xx`. For instance, the runtime
+version shown on the top left section of Polkadot-JS UI below is `kusama-9370`, and the client
+(node) version shown on the top right section is `v0.9.36`.
+
+![Runtime vs Client versioning](./../assets/runtime-node-version.png)
+
+:::info Querying runtime and client versions
+
+The runtime version can be queried on-chain through Polkadot-JS UI by navigating to Developer tab >
+Chain State > Storage > system and query `lastRuntimeUpgrade()`.
+
+The node version can be queried by navigating to Developer tab > RPC calls > system and query
+`version()`.
+
+:::
+
 ## Runtime Upgrades for Various Users
 
 ### For Infrastructure Providers
@@ -61,7 +89,7 @@ Infrastructure services include but are not limited to the following:
 - API services
 - Node-as-a-Service (NaaS)
 - General infrastructure management (e.g. block explorers, custodians)
-- [Wallets](../build/build-wallets.md)
+- [Wallets](./../general/wallets.md)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
 to upgrade their clients within a specific time frame, for example if a release includes breaking

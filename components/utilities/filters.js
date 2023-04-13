@@ -61,6 +61,12 @@ module.exports = {
     setReturnValue(value.toString());
   },
 
+  Percentage: function (value, setReturnValue) {
+    value = (value) / 10000000;
+    // Update value
+    setReturnValue(value.toString());
+  },
+
   ArrayLength: function (value, setReturnValue) {
     value = value.split(',').length;
     // Update value

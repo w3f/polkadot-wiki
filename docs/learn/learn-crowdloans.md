@@ -75,7 +75,7 @@ not need to restart the campaign just because they do not secure a slot on their
 :::info Crowdloan Submission Deposit Required
 
 In order to create a new crowdloan campaign, your account must have
-{{ polkadot: 500 DOT :polkadot }}{{ kusama: 10 KSM :kusama }} transferrable which will be reserved
+{{ polkadot: 500 DOT :polkadot }}{{ kusama: 100 KSM :kusama }} transferrable which will be reserved
 for the duration of the crowdloan
 
 :::
@@ -125,13 +125,14 @@ Each created campaign will have an index. Once a crowdloan campaign is open, any
 by sending a special transaction that references the campaign's index. Tokens used to participate
 must be transferable &mdash; that is, not locked for any reason, including staking, vesting, and
 governance &mdash; because they will be moved into a module-controlled account that was generated
-uniquely for this campaign.
+uniquely for this campaign. See [system accounts](./learn-account-advanced.md#system-accounts) for
+more information.
 
 :::caution Do not send Crowdloan contributions directly to the Parachain address
 
 All crowdloan contributions are handled by the Crowdloan module’s logic where a campaign is
-identified by an index, not by address. \*\*Never transfer tokens to an address in support of a
-campaign.
+identified by an index, not by address. **Never transfer tokens to an address in support of a
+campaign**.
 
 :::
 

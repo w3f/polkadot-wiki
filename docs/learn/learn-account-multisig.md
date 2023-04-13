@@ -20,15 +20,7 @@ Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie an
 any call without Alice. A threshold is typically a number smaller than the total number of members
 but can also be equal to it, which means they all have to agree.
 
-:::note Explainer on multisig accounts
-
-Learn more about using multisig accounts with the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) from our
-[technical explainer video](https://www.youtube.com/watch?v=-cPiKMslZqI).
-
-:::
-
-:::info
+:::info Learn more about multisig accounts
 
 Check the "How to create a multisig account" section on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
@@ -56,7 +48,24 @@ account existing yet. This means one can send tokens to an address that does not
 the entities designated as the recipients come together in a new multisig under a matching
 threshold, they will immediately have access to these tokens.
 
-### Making Transactions with a Multisig Account
+## Multisig Accounts with the Polkadot-JS UI
+
+### Multisig Transactions with Accounts Tab
+
+:::info Waltkthrough Video Tutorial
+
+See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with
+a multisig account using the Accounts Tab in the
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
+
+:::
+
+You can create a multisig account directly on the Accounts Tab of the
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts), and use this account to send funds. See
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account)
+for more information.
+
+### Multisig Transactions with Extrinsic Tab
 
 There are three types of actions you can take with a multisig account:
 
@@ -104,14 +113,13 @@ and the deposit factor equals
 {{ polkadot: <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>. :kusama }}
 
-### Example using Multisig Accounts
+#### Example using Multisig Accounts
 
 :::info Walk-through video tutorial
 
-You can also see [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) for more
-information about transacting with multisigs using the Accounts Tab, or
-[this other video](https://www.youtube.com/watch?v=T0vIuJcTJeQ) using the Extrinsic Tab in the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
+See [this video tutorial](https://www.youtube.com/watch?v=T0vIuJcTJeQ) to learn how to transact with
+a multisig account using the Extrinsic Tab in the
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 
 :::
 
@@ -158,6 +166,29 @@ video tutorials for more information about creating multisig accounts and transa
 using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the
 [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
 
+## Multisig with Multix Tool
+
+:::info Walk-Through Video Tutorial
+
+See [this video tutorial](https://www.youtube.com/watch?v=APxPsawebJw) and
+[this article](https://blog.chainsafe.io/multix-a-simple-interface-to-manage-complex-multisigs-on-polkadot-97328be26f9d)
+for more information about using [Multix](https://multix.chainsafe.io/) for multisig accounts.
+
+:::
+
+The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex
+multisigs. The tool is part of
+[the open-source Polkadot/Kusama Tech Stack](https://wiki.polkadot.network/docs/build-open-source#user-interface).
+Besides being user-friendly, Multix provides several benefits compared to the Polkadot-JS UI:
+
+- When one person creates the multisig account, all the signatories see the multisig account on
+  their interface.
+- There is no need to pass around the call data to confirm a transaction. Such information is
+  retrieved from the chain and displayed to the users.
+- Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
+  adding and removing signatories or adjusting the threshold is now possible without creating new
+  multisigs and Multix provides an intuitive interface to work with pure proxies.
+
 ## Decoding Multisig Call Data
 
 :::info
@@ -165,6 +196,6 @@ using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and t
 Before signing a transaction, it is important to know the exact specifics of what is being signed.
 Check the
 ["How to use a multisig account"](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account)
-in the support docs on how to decode the multisig call data
+in the support docs on how to decode the multisig call data.
 
 :::

@@ -50,8 +50,8 @@ application we use most often to interact with the Matrix protocol is the
 
 ### Technical
 
-- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More advanced
-  room for technical questions on building with Substrate.
+- [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
+  for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A room to discuss developing Substrate smart contracts using Parity Ink!
 

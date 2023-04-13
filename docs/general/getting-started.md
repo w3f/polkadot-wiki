@@ -197,15 +197,17 @@ functionalities on Polkadot.
   - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
     create a [proxy account](../learn/learn-proxies.md).
 
-- {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :polkadot }}
-  the minimum stake required to submit your intent to directly nominate validators. But, to increase
-  the chance of earning staking rewards, your stake should not be less than the minimum stake among
-  the active nominators which is a dynamic threshold (around **264 DOT** in era 966). If you have
+- {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum stake required to submit your intent to directly nominate validators.
+- {{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
+  the minimum amount of DOT required to become an active nominator and earn rewards, i.e. the
+  minimum active bond. To increase the chance of earning staking rewards, your stake should not be
+  less than the minimum stake among the active nominators, which is a dynamic threshold. If you have
   lesser DOT than the minimum active nomination, please consider contributing to
   [nomination pools](../learn/learn-nomination-pools.md). Learn more about
   [becoming a nominator](../learn/learn-nominator.md).
 
-- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable"/>:__ :polkadot }}
+- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable"/>:__ :polkadot }}
   you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
 DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is

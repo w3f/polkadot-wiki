@@ -13,13 +13,13 @@ import AuctionSchedule from "./../../components/Auction-Schedule";
 
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
-parachain slots. A parachain slot is a scarce resource on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as only a limited number are
-available. As parachains ramp up, there may only be a few slots unlocked every few months. The goal
-is to eventually have 100 parachain slots available on {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} (these will be split between parachains and the
-[parathread pool](learn-parathreads.md)). If a parachain wants to have guaranteed block inclusion at
-every Relay Chain block, it must acquire a parachain slot.
+parachain slots. The number of parachain slots is are not unbounded on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, as only a limited number are
+available. A limited number of slots are unlocked every few months through on-chain governance. If a
+parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a
+parachain slot. The development of
+[on-demand parachains](https://forum.polkadot.network/t/on-demand-parachains/2208) (previously
+referred to as parathreads) is in progress.
 
 The parachain slots will be leased according to an unpermissioned
 [candle auction](https://en.wikipedia.org/wiki/Candle_auction), with several alterations related to
@@ -156,8 +156,8 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a type of
 sealed-bid auction where bids are hidden and only revealed at a later phase, have emerged as a
 well-regarded mechanic. For example, this mechanism is leveraged to auction human readable names on
-the [ENS](../general/ens.md). The Candle auction is another solution that does not require a
-two-step commit and reveal schemes (a main component of Vickrey auctions), which allows smart
+the [ENS](./learn-account-advanced.md). The Candle auction is another solution that does not require
+a two-step commit and reveal schemes (a main component of Vickrey auctions), which allows smart
 contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but they do not reveal when the

@@ -10,17 +10,14 @@ slug: ../learn-comparisons
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain technology but makes
 some innovations that sets it apart from other popular chains.
 
-## In-Depth Comparisons
+:::info In-depth Comparisons for multi-chain ecosystems
 
-- [vs Ethereum 2.0](learn-comparison-ethereum-2.md)
+See the in-depth comparisons for [Ethereum 2.0](./learn-comparison-ethereum-2.md),
+[Cosmos](./learn-comparisons-cosmos.md) and [Avalanche](./learn-comparisons-avalanche.md).
 
-- [vs Cosmos](learn-comparisons-cosmos.md)
+:::
 
-- [vs Avalanche](learn-comparisons-avalanche.md)
-
-## Other Comparisons
-
-### Ethereum 1.x
+## Ethereum 1.x
 
 [Ethereum](https://ethereum.org) is a smart contract blockchain that allows for general computation
 to be deployed on-chain and operated across the p2p network. Ethereum 1.x refers to the current

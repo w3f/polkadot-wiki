@@ -66,6 +66,22 @@ module.exports = {
           {
             to: '/docs/learn-opengov',
             from: ['/docs/learn-gov2']
+          },
+          {
+            to: '/docs/learn-account-advanced',
+            from: ['/docs/ens']
+          },
+          {
+            to: '/docs/wallets',
+            from: ['/docs/build-wallets']
+          },
+          {
+            to: '/docs/polkadotjs',
+            from: ['/docs/learn-polkadotjs']
+          },
+          {
+            to: '/docs/bug-bounty',
+            from: ['/docs/maintain-bug-bounty']
           }
         ],
         createRedirects: function (existingPath) {
@@ -134,8 +150,8 @@ module.exports = {
       },
     },
     algolia: {
-      appId: '33KMAMG2DG',
-      apiKey: '14a71704b6c2407ab9b374aafffc85e5',
+      appId: process.env.app_id,
+      apiKey: process.env.api_key,
       indexName: 'kusama_guide',
       contextualSearch: true,
     },
@@ -143,7 +159,7 @@ module.exports = {
     // announcementBar: {
     //   id: "banner",
     //   content:
-    //     '<b>Sub0 is coming to Lisbon!</b> Join the Polkadot developer conference, November 28th-29th 👉 <a href="https://sub0.polkadot.network/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20guide%20kusama" target="_blank" rel="noopener nofollow noreferrer">SIGN UP</a>',
+    //     'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
     //   backgroundColor: '#e6007a',
     //   textColor: 'white',
     //   isCloseable: true,

@@ -9,13 +9,17 @@ slug: ../learn-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
+{{ kusama: **OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
+[OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)** :kusama }}
+
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
 
-The funds held in the Treasury can be spent by making a spending proposal that, if approved by the
-[Council](learn-governance.md#council), will enter a waiting period before distribution. This
-waiting period is known as the _spend period_, and its duration is subject to
-[governance](learn-governance.md), with the current default set to
+The Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) not
+accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
+spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
+waiting period before distribution. This waiting period is known as the _spend period_, and its
+duration is subject to [governance](learn-governance.md), with the current default set to
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
 days. The Treasury attempts to spend as many proposals in the queue as it can without running out of
@@ -77,13 +81,28 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
+{{ kusama: **Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
+Check the instructions on
+[how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).** :kusama }}
+
+{{ kusama: **Your proposal should address a problem, outline a goal, give a detailed account of how you will
+reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
+the tasks to be completed so fees can be evaluated and milestones can be followed. You can check the
+[guidelines for a successful proposal](https://ipfs.io/ipfs/QmXHwouq6dfjC3AqkYbwJe92pTQhrWgJxLAcffoPtvSni6/kusama_treasury_project_propsal.pdf)
+and fill out the Treasury proposal template provided for Kusama.** :kusama }}
+
 The proposer has to deposit a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
 or 5% of the requested amount with a maximum cap of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
-as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise.
+as an anti-spam measure. If the treasury proposal does not pass due to lack of votes from the
+council members, the proposal goes back to the waiting queue and the deposit amount will stay
+locked. If the treasury proposal passes successfully, the deposit amount is refunded. If the
+proposal is explicitly rejected by the council through "Nay" votes, then the deposit amount is
+burned.
+
 These values are subject to [governance](learn-governance.md) so they may change in the future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been
@@ -97,19 +116,17 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-  [Kusama Element (previously Riot)](https://matrix.to/#/#kusama:matrix.parity.io) chat or
-  [Polkadot Element](https://matrix.to/#//#polkadot:matrix.parity.io).
-- The [Polkassembly](https://polkassembly.io) discussion platform that allows users to log in with
-  their Web3 address and automatically reads proposals from the chain, turning them into discussion
-  threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
-  vote.
+  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
+  platforms automatically read proposals from the chain, turning them into discussion threads and
+  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
+  for a proposal before committing to a vote.
 
-Spreading the word about the proposal's explanation is ultimately up to the proposer - the
-recommended way is using official Element channels like the
-{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-{{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
-{{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
-{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+Spreading the word about the proposal's explanation to the community is ultimately up to the
+proposer.
 
 ### Creating the Proposal
 

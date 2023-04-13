@@ -54,7 +54,7 @@ Validators perform two main functions:
 
 Validators also contribute to the so-called **availability distribution**. In fact, once the
 candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is not
-included as part of the parachain until it is proven avaialable (together with the PoV). Information
+included as part of the parachain until it is proven available (together with the PoV). Information
 regarding the availability of the candidate will be noted in the following relay chain blocks. Only
 when there is enough information, the candidate is considered a full parachain block or _parablock_.
 
@@ -92,7 +92,7 @@ that parablock.
 :::info Parablocks vs Relay-Chain blocks
 
 It is important to understand that a relay chain block contains many parablocks. Thus, it makes more
-sense to think of relay-chain blocks as having been approvead instead of parablocks that have been
+sense to think of relay-chain blocks as having been approved instead of parablocks that have been
 approved. A relay-chain block containing a bad parablock must be reverted, while a relay-chain block
 containing only approved parablocks can be considered approved as long as its parent relay-chain
 block is also approved. Thus, the validity of a relay-chain block depends on the validity of its
@@ -247,8 +247,6 @@ For detailed information about chain selection see dedicated section in
 - [How to Upgrade your Validator](../maintain/maintain-guides-how-to-upgrade.md) - Guide for
   securely upgrading your validator when you want to switch to a different machine or begin running
   the latest version of client code.
-- [How to Use Validator Setup](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md) -
-  Guide on how to use Polkadot / Kusama validator setup.
 
 ### Other References
 

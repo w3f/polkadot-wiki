@@ -1,10 +1,10 @@
 ---
-id: learn-kusama-vs-polkadot
-title: What is the difference between Polkadot and Kusama?
-sidebar_label: Comparing Polkadot and Kusama
+id: learn-comparisons-kusama
+title: Polkadot vs. Kusama
+sidebar_label: Kusama
 description: Comparing the cousins.
 keywords: [polkadot, kusama, polkadot vs kusama, canary]
-slug: ../learn-kusama-vs-polkadot
+slug: ../learn-comparisons-kusama
 ---
 
 import RPC from "./../../components/RPC-Connection";

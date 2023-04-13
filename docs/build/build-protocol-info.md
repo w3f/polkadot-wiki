@@ -30,7 +30,8 @@ decided to redenominate the DOT token. The redenomination does not change the nu
 [results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
 
 The redenomination took effect 72 hours after transfers were enabled, at block 1_248_326, which
-occurred at approximately 16:50 UTC on 21 Aug 2020.
+occurred at approximately 16:50 UTC on 21 Aug 2020. You can find more information about the
+redenomination [here](../learn/learn-redenomination.md).
 
 ## Addresses
 
@@ -80,6 +81,14 @@ completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, whi
 33.3333 microKSM (0.0000333333 KSM). You can always verify the existential deposit by checking the
 [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
 `balances.existentialDeposit`.
+
+:::info
+
+For more information about the existential deposit visit the
+[dedicated section](../learn/learn-accounts.md#existential-deposit-and-reaping) in the Accounts
+page.
+
+:::
 
 Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial
 wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful
@@ -366,3 +375,4 @@ like locking or reserving tokens for operations that utilize state.
 
 - [Polkadot-JS explorer](https://polkadot.js.org/apps/#/explorer)
 - [Polkascan block explorer](https://polkascan.io/)
+- [Subscan block explorer](https://www.subscan.io/)
