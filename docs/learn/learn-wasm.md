@@ -32,38 +32,35 @@ logic of the chain, without the need for a hard fork.
 
 ### Forkless Upgrades
 
-By using Wasm in Substrate, the framework powering Polkadot, Kusama, and many connecting chains, the
-chains are given the ability to upgrade their runtime logic without hard forking. Hard forking is a
-standard method of upgrading a blockchain that is slow, inefficient, and error prone due to the
-levels of offline coordination required, and thus, the propensity to bundle many upgrades into one
-large-scale event. By deploying Wasm on-chain and having nodes auto-enact the new logic at a certain
-block height, upgrades can be small, isolated, and very specific.
-
-As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
-sensitive and calls to Runtime can change the Runtime code itself. Therefore the Polkadot Host needs
-to always make sure it provides the Runtime corresponding to the state in which the entrypoint has
-been called.
-
-### Forkless Upgrades
-
 You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs
 when a blockchain's logic changes such that nodes that do not include the new changes will not be
 able to remain in consensus with nodes that do. Such changes are backward incompatible. Hard forks
 can be political due to the nature of the upgrades, as well as logistically onerous due to the
-number (potentially thousands) of nodes in the network that need to upgrade their software.
+number (potentially thousands) of nodes in the network that need to upgrade their software. Thus,
+hard forking is slow, inefficient, and error prone due to the levels of offline coordination
+required, and thus, the propensity to bundle many upgrades into one large-scale event.
+
+By using Wasm in Substrate, the framework powering Polkadot, Kusama, and many connecting chains, the
+chains are given the ability to upgrade their runtime logic without hard forking.
 
 Rather than encode the runtime (a chain's "business logic") in the nodes,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
 [execution host](learn-polkadot-host). They maintain consensus on a very low level and
 well-established instruction set. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 runtime is stored on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain
-itself.
+itself. By deploying Wasm on-chain and having nodes auto-enact the new logic at a certain block
+height, upgrades can be small, isolated, and very specific.
 
-As such, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by
-upgrading the logic stored on-chain, and removes the coordination challenge of requiring thousands
-of node operators to upgrade in advance of a given block number. Polkadot stakeholders propose and
-approve upgrades through the [on-chain governance](learn-governance.md) system, which also enacts
-them autonomously.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by upgrading
+the logic stored on-chain, and removes the coordination challenge of requiring thousands of node
+operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
+upgrades through the [on-chain governance](learn-governance.md) system, which also enacts them
+autonomously.
+
+As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
+sensitive and calls to Runtime can change the Runtime code itself. Therefore the Polkadot Host needs
+to always make sure it provides the Runtime corresponding to the state in which the entrypoint has
+been called.
 
 ### Client Releases
 
@@ -143,7 +140,7 @@ Runtime upgrades don't require any actions by a nominator, though it is always e
 up-to-date and participate with the latest runtime upgrade motions and releases, while keeping an
 eye on how the nodes on the network are reacting to a new upgrade.
 
-## Monitoring Changes
+## Monitoring Runtime Changes
 
 You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
 proposals related to any on-chain upgrades for easy matching. Monitor the chain for:
