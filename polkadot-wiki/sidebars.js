@@ -66,11 +66,18 @@ module.exports = {
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
-                "learn/learn-balance-transfers",
-                "learn/learn-extrinsics",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
                 'learn/learn-proxies',
+              ],
+            },
+            {
+              type: "category",
+              label: "Transactions",
+              items: [
+                "learn/learn-extrinsics",
+                "learn/learn-balance-transfers",
+                "learn/learn-transaction-fees",
               ],
             },
             {
@@ -96,7 +103,6 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-opengov",
-                "learn/learn-transaction-fees",
                 "learn/learn-treasury",
                 "learn/learn-consensus",
               ],
@@ -121,7 +127,6 @@ module.exports = {
             "learn/learn-cryptography",
             'learn/learn-phragmen',
             'learn/learn-randomness',
-            'learn/learn-spree',
             {
               type: "category",
               label: "How-to Guides",
@@ -169,6 +174,7 @@ module.exports = {
                 'learn/learn-xcm-instructions',
               ],
             },
+            'learn/learn-spree',
           ],
         },
         {

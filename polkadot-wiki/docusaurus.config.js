@@ -260,5 +260,6 @@ module.exports = {
     //   textColor: 'white',
     //   isCloseable: true,
     // },
+    image: 'img/og-polkadot.png'
   },
 };
