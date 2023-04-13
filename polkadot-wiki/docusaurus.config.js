@@ -205,13 +205,14 @@ module.exports = {
     },
     docsSideNavCollapsible: true,
     /* Banner / Announcement bar */
-    // announcementBar: {
-    //   id: "banner",
-    //   content:
-    //     '<b>Sub0 is coming to Lisbon!</b> Join the Polkadot developer conference, November 28th-29th 👉 <a href="https://sub0.polkadot.network/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20wiki" target="_blank" rel="noopener nofollow noreferrer">SIGN UP</a>',
-    //   backgroundColor: '#e6007a',
-    //   textColor: 'white',
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: "banner",
+      content:
+        'Join Polkadot @ Consensus 2023. Meet the largest multichain ecosystem in Web3. <a href="https://polkadot.network/ecosystem/events/consensus-2023/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=consensus%202023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn more 👉</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
   },
 };
+
