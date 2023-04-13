@@ -71,7 +71,7 @@ parachain to share in that pooled security.
 Most governance systems in blockchains use an off-chain governance mechanism.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain governance encourages
 maximum participation of token holders and is frictionless and transparent. It also enables
-[forkless upgrades](../learn/learn-runtime-upgrades.md).
+[forkless upgrades](../learn/learn-wasm.md#runtime-upgrades).
 
 #### Scalability
 
