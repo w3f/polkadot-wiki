@@ -73,7 +73,7 @@ module.exports = {
             },
             {
               type: "category",
-              label: "Transfers",
+              label: "Transactions",
               items: [
                 "learn/learn-extrinsics",
                 "learn/learn-balance-transfers",
