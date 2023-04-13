@@ -1,6 +1,6 @@
 ---
 id: learn-extrinsics
-title: Extrinsics
+title: Extrinsics (a.k.a. Types of Transactions)
 sidebar_label: Extrinsics
 description: Learn about Transaction Types (i.e. Extrinsics)
 keywords: [transaction, DOT, extrinsics, KSM]
@@ -25,7 +25,7 @@ all functions related to staking. A nominator can bond funds and nominate valida
 respective extrinsics. Some extrinsics might also trigger an event on the chain such as a reward
 payout to the nominators.
 
-## Extrinsics (a.k.a. Types of Transactions)
+## Types of Extrinsics
 
 Now that we introduced the term _extrinsic_, let us dive deeper and understand what extrinsics
 really are. Extrinsics can be one of 3 distinct types:
