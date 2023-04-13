@@ -50,10 +50,10 @@ should consider one or the other depending on your user type.
 ## Create and Import Accounts
 
 You can create a new account directly within the Vault app (Add Key Set > Add new Key Set). This
-will generate a new mnemonic seed phrase on the app. Alternatively, you can import in the app a new
-account using a seed phrase that has been generated on a cold device elsewhere. For example, you can
-have an air-gapped laptop with the Subkey tool installed and you can generate a new account there.
-The seed phrase of that account can be imported into the Vault App (Add Key Set > Recover Key Set).
+will generate a new mnemonic seed phrase on the app. Alternatively, you can import a new account in
+the app using a seed phrase generated on a cold device elsewhere. For example, you can have an
+air-gapped laptop with the Subkey tool installed and generate a new account there. The seed phrase
+of that account can be imported into the Vault App (Add Key Set > Recover Key Set).
 
 We recommend importing a Vault account into the
 [Polkadot-JS Browser Extension](./polkadotjs.md#polkadot-js-extension) or
@@ -69,7 +69,7 @@ on how to import them to the Polkadot extension or Polkadot-JS UI.
 :::info
 
 Importing an account into an extension will not import its private key. Only the public key will be
-importet and you will need to sign using your air-capped phone (as the private key is there).
+imported and you must sign using your air-capped phone (as the private key is there).
 
 :::
 
@@ -139,12 +139,12 @@ key has been exported_.
 
 :::
 
-You might consider to export the private key if you are switching air-gapped phone. If you choose to
-export your private key avoid the follwoings:
+You might consider exporting the private key if you are switching air-gapped phone. If you choose to
+export your private key, avoid the following:
 
-- Do not export your private key to a device that is connected to the internet as your key will not
+- Do not export your private key to a device that is connected to the internet, as your key will not
   be "cold" anymore.
-- Do not print private keys QR codes over interent connection.
+- Do not print private keys QR codes over an internet connection.
 
 ## Add Chains
 
