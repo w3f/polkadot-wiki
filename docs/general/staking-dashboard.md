@@ -243,7 +243,7 @@ validators and/or nomination pools that paid out rewards to your accounts in the
 
 ### After Staking
 
-:::info Walk-through video tutorial
+:::info Walk-through video tutorial - What to do after Staking
 
 [This video tutorial](https://youtu.be/F59N3YKYCRs) shows you how to what you can do after staking
 with the Staking Dashboard.
