@@ -229,7 +229,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 
 | Components          | Existing projects                                                                                                     | Potentially interesting projects |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| Storage             | [Merkle Tree DB](https://github.com/frisitano/merkle-tree-db)  |                                  |
+| Storage             | [Merkle Tree DB](https://github.com/frisitano/merkle-tree-db)  🟢 |                                  |
 
 ## Contributing
 
