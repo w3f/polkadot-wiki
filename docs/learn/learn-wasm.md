@@ -3,7 +3,7 @@ id: learn-wasm
 title: WebAssembly (Wasm)
 sidebar_label: WebAssembly (Wasm)
 description: Learn how Wasm plays a role in Polkadot's runtime.
-keywords: [webassembly, wasm, runtime]
+keywords: [webassembly, wasm, runtime, upgrades, releases, forkless]
 slug: ../learn-wasm
 ---
 
