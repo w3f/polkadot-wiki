@@ -131,7 +131,7 @@ most recently received rewards.
 
 ### Pools
 
-:::info Walk-through video tutorial
+:::info Joining a Nomination Pool - Walk-through video tutorial
 
 [This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a nomination pool with the
 Staking Dashboard.
