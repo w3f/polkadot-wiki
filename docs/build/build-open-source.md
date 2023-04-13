@@ -180,7 +180,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Components     | Existing projects                                                                                            | Potentially interesting projects |
 | -------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------- |
 | Rust           | [Substrate](https://github.com/paritytech/substrate) 🟢, [Cumulus](https://github.com/paritytech/cumulus) 🟢|
-| C++            | [Kagome](https://github.com/soramitsu/kagome) 🟢|
+| C++            | [Kagome](https://github.com/soramitsu/kagome) 🟢, [Mayon](https://github.com/Zondax/mayon) |
 | Go             | [Gossamer](https://github.com/ChainSafe/gossamer) 🟢|
 | Java             | [Java Host Research](https://github.com/LimeChain/java-host-research) 🟡|
 | AssemblyScript |
