@@ -70,13 +70,13 @@ After cloning the source locally, you can start the websites with each of these 
 The Wiki uses Algolia search, which can be accessed locally by providing the correct App ID and API
 key. The `app_id` and `api_key` environment variables are needed for the Wiki to be built
 successfully. If you are an external contributor, set the variables with some values like shown
-below.
+below, which lets the Wiki repo build successfully (but disables the search bar).
 
 ```bash
 export app_id="xxxxxx" api_key="xxxxxxx"
 ```
 
-Note that, by doing so, the search bar will be disabled.
+
 
 Using yarn, run:
 
