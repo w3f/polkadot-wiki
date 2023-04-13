@@ -13,7 +13,6 @@ module.exports = {
             "general/how-to-dyor",
           ],
         },
-        "learn/learn-extrinsics",
         {
           type: "category",
           label: "Wallets",
@@ -76,6 +75,7 @@ module.exports = {
               type: "category",
               label: "Transactions",
               items: [
+                "learn/learn-extrinsics",
                 "learn/learn-balance-transfers",
                 "learn/learn-transaction-fees",
               ],
