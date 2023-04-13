@@ -65,7 +65,7 @@ the main features of the dashboard. If you need more information, see the
 
 ## Overview
 
-:::info Walk-through video tutorial
+:::info Staking Dashboard Walk-through video tutorial
 
 [This video tutorial](https://youtu.be/hvXLc4H7rA4) shows you everything you can do with the Staking
 Dashboard.
