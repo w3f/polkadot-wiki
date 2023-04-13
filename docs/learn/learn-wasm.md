@@ -40,17 +40,18 @@ number (potentially thousands) of nodes in the network that need to upgrade thei
 hard forking is slow, inefficient, and error prone due to the levels of offline coordination
 required, and thus, the propensity to bundle many upgrades into one large-scale event.
 
-By using Wasm in Substrate, the framework powering Polkadot, Kusama, and many connecting chains, the
-chains are given the ability to upgrade their runtime logic without hard forking.
+By using Wasm in Substrate (the framework powering Polkadot, Kusama, and many connecting chains),
+parachains are given the ability to upgrade their runtime (a chain's "business logic") without hard
+forking.
 
-Rather than encode the runtime (a chain's "business logic") in the nodes,
+Rather than encoding the runtime in the nodes,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
 [execution host](learn-polkadot-host). They maintain consensus on a very low level and
-well-established instruction set. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-runtime is stored on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain
-itself. By deploying Wasm on-chain and having nodes auto-enact the new logic at a certain block
-height, upgrades can be small, isolated, and very specific.
+well-established instruction set. By deploying Wasm on-chain and having nodes auto-enact the new
+logic at a certain block height, upgrades can be small, isolated, and very specific.
 
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is stored on the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain itself.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by upgrading
 the logic stored on-chain, and removes the coordination challenge of requiring thousands of node
 operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
