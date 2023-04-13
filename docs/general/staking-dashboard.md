@@ -190,7 +190,7 @@ pools that you liked (you can like a pool in the All Pools section by clicking o
 
 ### Nominate
 
-:::info Walk-through video tutorial
+:::info Walk-through video tutorial of How to Nominate
 
 [This video tutorial](https://youtu.be/F59N3YKYCRs) shows you how to become a nominator with the
 Staking Dashboard.
