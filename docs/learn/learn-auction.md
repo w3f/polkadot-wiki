@@ -32,7 +32,9 @@ details.
 
 :::info
 
-<AuctionSchedule />
+The auction schedule and the details of ongoing actions are available on 
+{{ polkadot: [Parachains info](https://parachains.info/auctions/polkadot) :polkadot }}{{ kusama: [Kusama](https://parachains.info/auctions/kusama) :kusama }} 
+website.
 
 :::
 
