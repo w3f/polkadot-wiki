@@ -18,7 +18,7 @@ roughly at the same level as transactions in terms of definition. Messages are o
 instructions executed in order by the XCVM. An XCM is executed until it either runs to the end or
 hits an error, at which point it finishes up and halts.
 
-The primary implementation of the XCVM is the
+The first implementation of the XCVM is the
 [`xcm-executor`](https://github.com/paritytech/polkadot/tree/26b0c4f6273190f4538b24939a56b6a0b51a344c/xcm/xcm-executor).
 It follows the XCVM specification provided by Parity. It's engineered to be extendable, providing
 maximum customizability when configuring XCM. Because the `xcm-executor` is just an implementation
@@ -134,8 +134,10 @@ information, please read [XCM Instructions in the wiki](./learn-xcm-instructions
 XCM's generic nature involves specifying a wide array of "locations", or any body that is governed
 by consensus (parachains, solochains, smart contracts, accounts, etc). These are relatively abstract
 notions that point to _where_ but also _to who_ a particular action may affect. The `MulitLocation`
-type is what XCM uses to define these locations. A `MultiLocation` is a relative identifier that
-defines a **relative** path into some state-bearing consensus system.
+type is what XCM uses to define these locations.
+
+A `MultiLocation` is a relative identifier that defines a **relative** path into some state-bearing
+consensus system.
 
 It is used to define the relative path between two locations, and cannot generally be used to refer
 to a location universally. It is very much akin to how a **relative** filesystem path works and is
@@ -149,7 +151,7 @@ consensus system it is being sent to be executed.
 - A series of paths, called `Junctions`, which define an interior portion of state to descend into
   it (sometimes called a "sub-consensus" system, such as a smart contract or pallet). An interior
   location may also be used to refer to a Junction, used in the context of "a parachain is an
-  interior location of the relay chain", or how a UTXO is interior to Bitcoin's consensus.
+  **interior location** of the relay chain", or how a UTXO is interior to Bitcoin's consensus.
 - The number of parent junctions at the beginning of a `MultiLocation`'s formation - in other words,
   the number of parent consensus systems above it.
 
@@ -189,16 +191,17 @@ systems, such as Ethereum, it won't be able to interpret it.
 
 ### UniversalLocation in XCM
 
-While a `MultiLocation` may handle relative paths in _local_ consensus, a `UniversalLocation` refers
-to any global consensus system. A global consensus system is an entity like another relay chain,
-Bitcoin, or Ethereum. A body of global governance capable of externalizing its consensus can be
-referred to as a `UniversalLocation`.
+A `UniversalLocation` refers to any global consensus system. A global consensus system is an entity
+that provides its top-level consensus through some non-derivative consensus algorithm that can exist
+without reference to any other singleton data system. Such global consensus systems include Polkadot
+(or other relay chains), Bitcoin, or Ethereum. It provides a point of reference for overarching
+consensus systems.
 
-The `GlobalConsensus` junction refers to a global consensus system, and takes a `NetworkId` that
-specifies a particular remote network. A `UniversalLocation` allows for overarching consensus
-systems to communicate using this junction. Sub-consensus systems (i.e., a parachain on Polkadot)
-may refer to other sub-consensus systems (a parachain on Kusama) using a combination of
-`UniversialLocation` and `MultiLocation` declarations.
+The `GlobalConsensus` junction refers to a global consensus system and takes a `NetworkId` that
+specifies a particular remote network. A `UniversalLocation` allows overarching consensus systems to
+communicate using this junction. Sub-consensus systems (i.e., a parachain on Polkadot) may refer to
+other _remote_ sub-consensus systems (i.e., a parachain on Kusama) using a relative path defined via
+a `MultiLocation`.
 
 ## Simulating XCVM using the xcm-simulator
 
