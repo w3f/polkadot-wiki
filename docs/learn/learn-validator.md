@@ -140,7 +140,7 @@ Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) 
 Briefly, approval keys are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria
-  [VRF](./learn-randomness.md/#vrf).
+  [VRF](./learn-cryptography.md#vrf).
 - **Approval vote keys** that are ed25519 and would only sign off on a candidate parablock validity.
 
 :::info

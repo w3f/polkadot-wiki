@@ -67,7 +67,7 @@ two parts:
    subject to end based on the candle auction mechanism.
 
 The auction’s ending time can occur any time within the ending period. This time is automatically
-and randomly chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The
+and randomly chosen by the [Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The
 probability of winning the auction is equal to the number of blocks that contain a winning bid,
 divided by the total number of blocks in the ending period. The random ending is managed by
 propagating through the entire ending period, where a snapshot is taken at each block within the
@@ -94,7 +94,7 @@ during these six hours when the winning block for the auction is being determine
 
 More details on this are available in the [Network Implementation](#network-implementation) section.
 
-### [Randomness](learn-randomness.md) in action
+### [Randomness](./learn-cryptography.md#randomness) in action
 
 The following example will showcase the randomness mechanics of the candle auction for the ninth
 auction on Kusama. Keep in mind that the candle phase has a uniform termination profile and has an
@@ -170,8 +170,8 @@ ended before having an opportunity to bid.
 ## Network Implementation
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use a _random beacon_ based on
-the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The VRF will provide the base of
-the randomness, which will retroactively determine the end-time of the auction.
+the [Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The VRF will provide the base
+of the randomness, which will retroactively determine the end-time of the auction.
 
 The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods. :polkadot }}
 {{ kusama: 1 year and divided into 6-week periods. :kusama }} Parachains may lease a slot for any
@@ -253,7 +253,7 @@ amount of tokens held over the entire lease duration of the parachain slot. This
 highest bidder for any given slot lease period might not always win (see the
 [example below](#examples)).
 
-A random number, which is based on the [VRF](learn-randomness.md##vrf) used by
+A random number, which is based on the [VRF](./learn-cryptography.md#vrf) used by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, is determined at each block.
 Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random
 number produced by the VRF is examined next to the threshold to determine if that block is the end

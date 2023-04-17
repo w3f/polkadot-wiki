@@ -113,9 +113,9 @@ the validator nodes and determines the authors of new blocks. BABE is comparable
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
 according to stake and using the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-[randomness cycle](learn-randomness.md). The chains runtime is required to provide the BABE
-authority list and randomness to the host via a consensus message in the header of the first block
-of each epoch.
+[randomness cycle](./learn-cryptography.md#randomness). The chains runtime is required to provide
+the BABE authority list and randomness to the host via a consensus message in the header of the
+first block of each epoch.
 
 BABE execution happens in sequential non-overlapping phases known as epochs. Each epoch is divided
 into a predefined number of slots. All slots in each epoch are sequentially indexed starting from 0
@@ -143,8 +143,8 @@ When no validators have rolled low enough in the randomness lottery to qualify f
 a slot can remain seemingly blockless. We avoid this by running a secondary, round-robin style
 validator selection algorithm in the background. The validators selected to produce blocks through
 this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also
-produces a primary block from a [VRF-selected](learn-randomness.md) validator. Thus, a slot can have
-either a _primary_ or a _secondary_ block, and no slots are ever skipped.
+produces a primary block from a [VRF-selected](./learn-cryptography.md#randomness) validator. Thus,
+a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
 [BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
