@@ -150,19 +150,19 @@ module.exports = {
       },
     },
     algolia: {
-      appId: '33KMAMG2DG',
-      apiKey: '14a71704b6c2407ab9b374aafffc85e5',
+      appId: process.env.app_id,
+      apiKey: process.env.api_key,
       indexName: 'kusama_guide',
       contextualSearch: true,
     },
     /* Banner / Announcement bar */
-    // announcementBar: {
-    //   id: "banner",
-    //   content:
-    //     'Join Polkadot at <strong>SXSW</strong> to discover the true potential of Web3. <a href="https://polkadot.network/ecosystem/events/sxsw-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sxsw%2023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn More &rarr;</a>',
-    //   backgroundColor: '#e6007a',
-    //   textColor: 'white',
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: "banner",
+      content:
+        'Join Polkadot @ Consensus 2023. Meet the largest multichain ecosystem in Web3. <a href="https://polkadot.network/ecosystem/events/consensus-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=consensus%202023&utm_content=notification">Learn more 👉</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
   },
 };
