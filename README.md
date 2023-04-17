@@ -76,8 +76,6 @@ below, which lets the Wiki repo build successfully (but disables the search bar)
 export app_id="xxxxxx" api_key="xxxxxxx"
 ```
 
-
-
 Using yarn, run:
 
 ```bash
