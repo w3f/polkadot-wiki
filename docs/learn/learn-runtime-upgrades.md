@@ -7,53 +7,62 @@ keywords: [runtime, upgrades, releases, forkless]
 slug: ../learn-runtime-upgrades
 ---
 
-# Runtime Upgrades
-
 Runtime upgrades allow {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to change the
-logic of the chain, without the need for a hard fork.
+logic of the chain without the need for a hard fork.
 
 ## Forkless Upgrades
 
-You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs
-when a blockchain's logic changes such that nodes that do not include the new changes will not be
-able to remain in consensus with nodes that do. Such changes are backward incompatible. Hard forks
-can be political due to the nature of the upgrades, as well as logistically onerous due to the
-number (potentially thousands) of nodes in the network that need to upgrade their software.
+You may have encountered the term "hard fork" before in the blockchain space. A **hard fork** occurs
+when a blockchain's logic changes such that nodes that do not include the new changes cannot remain
+in consensus with nodes that do. Such changes are backward incompatible. Hard forks can be political
+due to the nature of the upgrades and logistically demanding due to the number (potentially
+thousands) of nodes in the network that need to upgrade their software. Thus, hard forking is slow,
+inefficient, and error-prone due to the levels of offline coordination required and, therefore, the
+propensity to bundle many upgrades into one large-scale event.
 
-Rather than encode the runtime (a chain's "business logic") in the nodes,
+By using Wasm in Substrate (the framework powering Polkadot, Kusama, and many connecting chains),
+parachains are given the ability to upgrade their runtime (a chain's "business logic") without hard
+forking.
+
+Rather than encoding the runtime in the nodes,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
-[execution host](learn-polkadot-host). They maintain consensus on a very low level and
-well-established instruction set. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-runtime is stored on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain
-itself.
+[execution host](learn-polkadot-host). They maintain consensus on a very low-level and
+well-established instruction set. Upgrades can be small, isolated, and very specific by deploying
+Wasm on-chain and having nodes auto-enact the new logic at a particular block height.
 
-As such, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by
-upgrading the logic stored on-chain, and removes the coordination challenge of requiring thousands
-of node operators to upgrade in advance of a given block number. Polkadot stakeholders propose and
-approve upgrades through the [on-chain governance](learn-governance.md) system, which also enacts
-them autonomously.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is stored on the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain itself.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by upgrading
+the logic stored on-chain and removes the coordination challenge of requiring thousands of node
+operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
+upgrades through the [on-chain governance](learn-governance.md) system, which also enacts them
+autonomously.
+
+As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
+sensitive, and calls to Runtime can change the Runtime code itself. Therefore, the Polkadot Host
+must always ensure it provides the Runtime corresponding to the state in which the entry point has
+been called.
 
 ## Client Releases
 
-The existing runtime logic is followed to update the [Wasm](learn-wasm.md) runtime stored on the
+The existing runtime logic is followed to update the [Wasm](./learn-wasm.md) runtime stored on the
 blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all
 the nodes on the network execute it. Generally, there is no need to upgrade your nodes manually
-before the runtime upgrade as they will automatically start to follow the new logic of the chain.
-Nodes only need to be updated when the runtime requires new host functions or there is a change in
+before the runtime upgrade, as they will automatically start to follow the new logic of the chain.
+Nodes only need to be updated when the runtime requires new host functions, or there is a change in
 networking or consensus.
 
 Transactions constructed for a given runtime version will not work on later versions. Therefore, a
 transaction constructed based on a runtime version will not be valid in later runtime versions. If
-you don't think you can submit a transaction before the upgrade, it is better to wait and construct
-it after the upgrade takes place.
+you can’t submit a transaction before the upgrade, it is better to wait and construct it afterward.
 
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
 following the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading
-promptly, especially for high priority or critical releases.
+promptly, especially for high-priority or critical releases.
 
 :::info New Client Releases
 
-The details about the latest client releases can be found on the
+The details about the latest client releases can be found in the
 [releases section on the Polkadot repository](https://github.com/paritytech/polkadot/releases). A
 detailed analysis for client releases can be viewed on the
 [Polkadot Forum](https://forum.polkadot.network/tag/release-analysis).
@@ -71,10 +80,10 @@ version shown on the top left section of Polkadot-JS UI below is `kusama-9370`, 
 
 :::info Querying runtime and client versions
 
-The runtime version can be queried on-chain through Polkadot-JS UI by navigating to Developer tab >
-Chain State > Storage > system and query `lastRuntimeUpgrade()`.
+The runtime version can be queried on-chain through Polkadot-JS UI by navigating to the Developer
+tab > Chain State > Storage > system and query `lastRuntimeUpgrade()`.
 
-The node version can be queried by navigating to Developer tab > RPC calls > system and query
+The node version can be queried by navigating to the Developer tab > RPC calls > system and query
 `version()`.
 
 :::
@@ -92,7 +101,7 @@ Infrastructure services include but are not limited to the following:
 - [Wallets](./../general/wallets.md)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
-to upgrade their clients within a specific time frame, for example if a release includes breaking
+to upgrade their clients within a specific time frame, for example, if a release includes breaking
 changes to networking. It is essential to check the release notes, starting with the upgrade
 priority and acting accordingly.
 
@@ -108,16 +117,16 @@ reconstruct it with the appropriate runtime version and corresponding metadata.
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
 Runtime upgrades don't require any actions by a nominator, though it is always encouraged to keep
-up-to-date and participate with the latest runtime upgrade motions and releases, while keeping an
-eye on how the nodes on the network are reacting to a new upgrade.
+up-to-date and participate with the latest runtime upgrade motions and releases while keeping an eye
+on how the nodes on the network are reacting to a new upgrade.
 
-## Monitoring Changes
+## Monitoring Runtime Changes
 
 You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
 proposals related to any on-chain upgrades for easy matching. Monitor the chain for:
 
 1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
-   referendum has started (although does not mean that it is a runtime upgrade). Get the referendum
+   referendum has started (although it does not mean it is a runtime upgrade). Get the referendum
    info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
    enactment `delay` (delay). If the referendum passes, it will execute on block number
    `end + delay`.

@@ -100,11 +100,12 @@ module.exports = {
               type: "category",
               label: "Components",
               items: [
-                "learn/learn-consensus",
-                "learn/learn-opengov",
                 "learn/learn-polkadot-host",
+                'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
+                "learn/learn-opengov",
                 "learn/learn-treasury",
+                "learn/learn-consensus",
               ],
             },
             {
@@ -126,7 +127,6 @@ module.exports = {
             "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
-            'learn/learn-wasm',
             {
               type: "category",
               label: "How-to Guides",
