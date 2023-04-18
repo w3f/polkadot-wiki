@@ -102,6 +102,7 @@ module.exports = {
               items: [
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
+                "learn/learn-runtime-upgrades",
                 "learn/learn-opengov",
                 "learn/learn-treasury",
                 "learn/learn-consensus",
