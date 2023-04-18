@@ -7,10 +7,10 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain will not natively
-support smart contracts, however, parachains on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  
-will support smart contracts.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain which is a layer 0 blockchain,
+does not support smart contracts natively. However, parachains which are layer 1 blockchains on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the functionality to
+support smart contracts.
 
 ## Difference between developing a smart contract and a parachain
 
@@ -19,7 +19,7 @@ will support smart contracts.
 When you write a smart contract, you are creating the instructions that associate with and deploy on
 a specific chain address.
 
-In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a
+In comparison, a runtime module on a parachain is the entire logic of a chain's state transitions (what's called a
 state transition function).
 
 Smart contracts must consciously implement upgradeability while parachains have the ability to
