@@ -45,7 +45,7 @@ been called.
 
 ## Client Releases
 
-The existing runtime logic is followed to update the [Wasm](learn-wasm.md) runtime stored on the
+The existing runtime logic is followed to update the [Wasm](./learn-wasm.md) runtime stored on the
 blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all
 the nodes on the network execute it. Generally, there is no need to upgrade your nodes manually
 before the runtime upgrade, as they will automatically start to follow the new logic of the chain.
