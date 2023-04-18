@@ -126,7 +126,6 @@ module.exports = {
             "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
-            'learn/learn-randomness',
             'learn/learn-wasm',
             {
               type: "category",
