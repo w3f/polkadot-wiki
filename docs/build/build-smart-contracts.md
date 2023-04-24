@@ -7,10 +7,10 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain which is a layer 0 blockchain,
-does not support smart contracts natively. However, parachains which are layer 1 blockchains on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the functionality to
-support smart contracts.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain which is a layer 0
+blockchain, does not support smart contracts natively. However, parachains which are layer 1
+blockchains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the
+functionality to support smart contracts.
 
 ## Difference between developing a smart contract and a parachain
 
@@ -19,11 +19,11 @@ support smart contracts.
 When you write a smart contract, you are creating the instructions that associate with and deploy on
 a specific chain address.
 
-In comparison, a runtime module on a parachain is the entire logic of a chain's state transitions (what's called a
-state transition function).
+In comparison, a runtime module on a parachain is the entire logic of a chain's state transitions
+(what's called a state transition function).
 
-Smart contracts must consciously implement upgradeability while parachains have the ability to
-swap out their code entirely through a root command or via the governance pallet.
+Smart contracts must consciously implement upgradeability while parachains have the ability to swap
+out their code entirely through a root command or via the governance pallet.
 
 When you build a smart contract, it will eventually be deployed to a target chain with its own
 environment. Parachains allow the developer to declare the environment of their own chain, even
@@ -34,13 +34,13 @@ allowing others to write smart contracts for it.
 Smart contracts must find a way to limit their own execution, or else full nodes are vulnerable to
 DOS attacks. An infinite loop in a smart contract, for example, could consume the computational
 resources of an entire chain, preventing others from using it. The
-[halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that even with a powerful enough
-language, it is impossible to know ahead of time whether or not a program will ever cease execution.
-Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting
-language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute
-their code. If a smart contract does get into a state where execution will never halt, it eventually
-runs out of gas, ceases execution, and any state transition that the smart contract would have made
-is rolled back.
+[halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that even with a powerful
+enough language, it is impossible to know ahead of time whether or not a program will ever cease
+execution. Some platforms, such as Bitcoin, get around this constraint by providing a very
+restricted scripting language. Others, such as Ethereum, "charge" the smart contract "gas" for the
+rights to execute their code. If a smart contract does get into a state where execution will never
+halt, it eventually runs out of gas, ceases execution, and any state transition that the smart
+contract would have made is rolled back.
 
 Parachains can implement arbitrarily powerful programming languages and contain no gas notion for
 their own native logic. This means that some functionality is easier to implement for the developer,
@@ -49,8 +49,8 @@ Leaving certain logic, such as complex loops that could run indefinitely, to a n
 layer, or even trying to eliminate it, will often be a wiser choice. Parachains try to be proactive,
 while smart contract platforms are event-driven.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and parachians typically use the _weight-fee
-model_ and not a _gas-metering model_.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and parachians typically use the
+_weight-fee model_ and not a _gas-metering model_.
 
 ## Building a Smart Contract
 
@@ -75,12 +75,11 @@ existing accounts.
 ### Substrate Contracts
 
 Substrate offers a built-in
-[contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html); parachains 
-can also support [WebAssembly](../learn/learn-wasm.md) smart contracts.
-Additionally, there is the
-[EVM Pallet](https://github.com/paritytech/frontier/tree/master/frame/evm#evm-module), which allows
-a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
-Ethereum contracts.
+[contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html);
+parachains can also support [WebAssembly](../learn/learn-wasm.md) smart contracts. Additionally,
+there is the [EVM Pallet](https://github.com/paritytech/frontier/tree/master/frame/evm#evm-module),
+which allows a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct
+ports of Ethereum contracts.
 
 A video version of the recap of the smart contract situation is available on the
 [Polkadot YouTube channel](https://www.youtube.com/watch?v=fKHkFBXaUxQ).

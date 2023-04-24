@@ -23,7 +23,8 @@ does not require an extension or wallet as an interface.
 
 :::info Stake through Nomination Pools
 
-The minimum amount required to become an active nominator and earn rewards may change from era to era. 
+The minimum amount required to become an active nominator and earn rewards may change from era to
+era.
 {{ polkadot: It is currently __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={3269785922095} filter="humanReadable"/>__. :polkadot }}
 {{ kusama: It is currently __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__. :kusama }}
 If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
