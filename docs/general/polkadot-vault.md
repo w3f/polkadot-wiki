@@ -69,7 +69,7 @@ on how to import them to the Polkadot extension or Polkadot-JS UI.
 :::info
 
 Importing an account into an extension will not import its private key. Only the public key will be
-imported and you must sign using your air-capped phone (as the private key is there).
+imported and you must sign using your air-gapped phone which holds the private key.
 
 :::
 
