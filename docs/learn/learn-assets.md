@@ -39,6 +39,14 @@ multisig accounts to replicate oft-used contract logic.
 
 ## Creation and Management
 
+:::info Walk-through video tutorial about creating assets
+
+See
+[this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=63)
+to learn how to create fungible assets on Statemine. The same procedure applies to Statemint.
+
+:::
+
 Anyone on the network can create assets on
 {{ polkadot: Statemint, :polkadot }}{{ kusama: Statemine, :kusama }} as long as they can reserve the
 required deposit of
@@ -103,6 +111,17 @@ and stable transaction fees.
 
 ### Transferring Asset Balances
 
+:::info Walk-through video tutorial about transferring assets
+
+See
+[this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=326)
+to learn how to transfer assets on Statemine. The same procedure applies to Statemint.
+
+For Ledger users see [this video tutorial](https://youtu.be/j0O-KziV9iw) to learn how to use the
+Statemine Ledger app and what its current limitations are.
+
+:::
+
 Users have a simple interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not _sufficient_, then the destination account must
 already exist for the transfer to succeed.
@@ -136,6 +155,14 @@ to learn more about transferring assets using
 :::
 
 ### Destroying an Asset
+
+:::info Walk-through video tutorial about destroying assets
+
+See
+[this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=422)
+to learn how to destroy assets on Statemine. The same procedure applies to Statemint.
+
+:::
 
 To destroy an asset, go to the Polkadot-JS UI on {{ polkadot: Statemint :polkadot }}
 {{ kusama: Statemine :kusama }} > Developer > Extrinsics. If you created an asset without minting
