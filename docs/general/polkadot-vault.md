@@ -51,7 +51,7 @@ should consider one or the other depending on your user type.
 
 You can create a new account directly within the Vault app (Add Key Set > Add new Key Set). This
 will generate a new mnemonic seed phrase on the app. Alternatively, you can import a new account in
-the app using a seed phrase generated on a cold device elsewhere. For example, you can have an
+the app using a seed phrase generated elsewhere with a compatible account generation scheme. For example, you can have an
 air-gapped laptop with the Subkey tool installed and generate a new account there. The seed phrase
 of that account can be imported into the Vault App (Add Key Set > Recover Key Set).
 
