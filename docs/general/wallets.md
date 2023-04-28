@@ -100,7 +100,7 @@ Signer on desktop through your mobile phone (experimental), Chromium-based brows
 features such as Scam Address Warning and Network Failure Warnings help fearlessly navigate web3.
 Formerly funded and supported by Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/23),
 [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74),
-[4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178)],
+[4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178)], and the SORA community [[1](https://sora.subscan.io/referenda/193?tab=votes)],
 developed with <3 by SORAMITSU. Stay Fearless!
 
 ## Nova Wallet
