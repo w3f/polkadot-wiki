@@ -7,32 +7,36 @@ keywords: [ethereum, ethereum 2.0, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---
 
-Polkadot and Ethereum 2.0 are sharded blockchains as they provide both a) scalability by executing
-transactions in separate shards and b) a protocol to send messages between shards.
+Polkadot and Ethereum 2.0 are both **sharded** protocols. While Ethereum 2.0 is not yet released at
+the time of this writing, it has goals of being a multi-sharded network, much like Polkadot and its
+parachains. When a network is **sharded**, this implies that it is capable of executing multiple
+(and often many) state transitions in parallel.
 
-## Model
+Both protocols share roughly the same goals:
 
-The shards in Ethereum 2.0 have the same state transition function (STF), as the rules governing how
-the blockchain can change state with each block are the same for all shards. Essentially, all shards
-are identical copies. The STF provides an interface for smart contract execution, where contracts
-exist on a single shard and can send asynchronous messages between shards.
+1. Scalability by executing transactions in separate shards.
+2. Defining methods for cross-chain and consensus interactions to take place between shards.
+3. Increased security and upgradeability for its components
 
-Likewise, on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core
-logic, the shards are executed in parallel, and can send cross-shard asynchronous messages. However,
-each shard (i.e. [parachain](learn-parachains.md)) has a unique STF. Applications can exist either
-within a single shard or across shards by composing logic.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
-([Wasm](./learn-wasm.md)) as a "meta-protocol". A shard's STF can be abstract as long as the
-validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can execute it within a
-Wasm environment. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart
-contracts through parachains. To offer some perspective, on Ethereum, smart contracts can call each
-other synchronously in the same shard and asynchronously between shards. On Polkadot, smart
-contracts can call each other synchronously in the same parachain and asynchronously across
+## Scalability: Sharding vs Rollups
+
+As part of Ethereum's roadmap, shards have been forgone in favor of rollup-based approach for
+scaling transaction throughput.
+
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core logic, the
+shards are executed in parallel, and can send cross-shard asynchronous messages. However, each shard
+(i.e. [parachain](learn-parachains.md)) has a unique state transition function (sometimes called a
+**runtime**). Applications can exist either within a single shard or across shards by composing
+logic. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
+([Wasm](./learn-wasm.md)) as a "meta-protocol". A shard's state transition function can be abstract
+as long as the validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can
+execute it within a Wasm environment. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+supports smart contracts through parachains. To offer some perspective, on Ethereum, smart contracts
+can call each other synchronously in the same shard and asynchronously between shards. On Polkadot,
+smart contracts can call each other synchronously in the same parachain and asynchronously across
 parachains.
 
-## Architecture
-
-### Ethereum 2.0
+## Architectural Differences: Polkadot & Ethereum
 
 Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Beacon Chain is
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
@@ -64,8 +68,8 @@ protocol of Ethereum 2.0.
 Like Ethereum 2.0, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also has a main
 chain, called the [Relay Chain](./learn-architecture.md#relay-chain), with several shards called
 [parachains](./learn-parachains.md). Parachains are not restricted to a single interface like eWasm.
-Instead, they can define their logic and interface as long as they provide their STF to the Relay
-Chain validators so that they can execute it.
+Instead, they can define their logic and interface as long as they provide their state transition
+function to the Relay Chain validators so that they can execute it.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, now live as a Relay Chain, only
 plans to launch the ability to validate up to 20 shards per block, gradually scaling up to 100
@@ -136,125 +140,7 @@ system without running a node of their own.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} needs about ten validators for each
 parachain in the network.
 
-## Shards
-
-Every shard in Ethereum 2.0 has the same STF. Each shard will submit "crosslinks" to the beacon
-chain and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for
-contracts in Ethereum. The eWasm interface provides a set of methods available to contracts. There
-should be a similar set of development tools like Truffle and Ganache to develop for eWasm. See
-[eWasm Design](https://github.com/ewasm/design) for more information. See
-[Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
-for more information.
-
-Every shard in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has an abstract STF
-based on Wasm. Each shard can expose a custom interface as long as the logic compiles to Wasm and
-the shard provides an "execute block" function to
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} validators. Polkadot’s
-[Substrate](https://substrate.io/) development framework allows full spectrum composability with a
-suite of modules that can be configured, composed, and extended to develop a chain's STF.
-
-## Rollups
-
-Rollups are a layer-2 scaling solution. A layer-2 network of nodes would be responsible for "rolling
-up" transactions by batching them before publishing them to the main Ethereum chain. A rolled-up
-transaction could include thousands of transactions. Rollups increase TPS and can reduce transaction
-fees significantly. Rollups are a broad category of solutions encompassing many possible
-architectures and implementations. Rollups on Ethereum are similar to
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains, where you prove some
-set of transactions happened on another "mini-chain".
-
-Note that the bitcoin Lightning Network at a high levels allows to achieve similar goals (i.e.
-unload unnecessary storage on chain), but it is not a rollup. The Lightning Network lets you lock
-bitcoin up on-chain, then puts it in channels, that are all shared between different nodes. Bitcoin
-can then be routed across these channels. There's no "lightning blockchain".
-
-### Optimistic Rollups
-
-Using an "innocent until proven guilty" approach, optimistic rollups will accept transaction
-commitments to the network while validating for errors and security issues. If something is invalid,
-validators can submit fraudulent commitment proof (fraud-proofs). These proofs will be used to
-reject fraudulent transactions. This way, transaction results and proofs can be stored on the main
-network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction
-scalability 10-100x and write transactions to Ethereum as
-[`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata), reducing gas fees
-significantly. Examples of optimistic rollup solutions include
-[Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and
-[Unipig](https://unipig.exchange/welcome). See
-[ETH Docs: Optimistic Rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/)
-for more information.
-
-### Zero-knowledge Rollups
-
-To reach consensus on a traditional block execution, blockchains rely on re-execution of every
-transaction. We do not want to allow malicious transactions that cause an endless loop, as it would
-compromise every validator's resources and the liveness of the chain. Therefore chains like Ethereum
-have the concept of gas, so the amount of computation per block is bounded. So even though you might
-have a notion of Turing completeness, there is actually a limit on how many operations you can
-perform. In addition, as the number of validators scales, the amount of redundant computation scales
-linearly as well, which is inconvenient.
-
-The redundant execution of all transactions can be avoided. The majority of the network only runs a
-`verify` operation (that should be sublinear in the size of the original transaction) while the
-block producer incurs heavy computation to produce the proof. The challenge for any proof system
-architect is expressing the (arbitrary) computation as a circuit. For a number of reasons (e.g.
-calculations need to be done over a finite field), the circuits that the proof systems "accept" are
-fairly large and are slower to work with, than executing the computation directly (i.e. natively),
-requiring up to 1,000,000x work for the prover. If you want to execute an extremely complicated
-program, you might run into circuits which are simply too large for the prover to handle, or take
-too long.
-
-[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as a "proof"
-of valid transactions when batching, effectively reducing the transaction payload to be the size of
-a zk-proof. This, similar to the optimistic approach, allows transaction data to be abstracted away
-and reduced significantly in size before being committed to the main chain. Similar to most on-chain
-transactions and states, a ZK-rollup's state is represented as a
-[merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), and the cryptographic hash of the tree's
-root (i.e. the Merkle root) is what is stored on-chain. This allows for efficient batching and
-tracking of changes to the transaction states. Any changes to the state will require the operator
-who initiated the changes to compute a new state root and commit it to the on-chain contract. If the
-contract verifies the new state as valid, then provided root hash becomes the new state root. See
-[ETH Docs: ZK Rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/) for more
-information.
-
-:::note
-
-Currently, Turing completeness is difficult in ZK rollups, as a trusted setup can be a requirement
-to run the ZK Proofs and the soundness of the cryptography used needs to meet specific standards.
-Note that, depending on which type of a ZK is used, a trusted setup is not necessarily required (see
-see
-[STARK vs SNARK](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)).
-See
-[this article](https://a16zcrypto.com/measuring-snark-performance-frontends-backends-and-the-future/)
-to learn more about the current limitations of ZK rollups.
-
-:::
-
-### Blob Transactions
-
-Until the full spec of ETH 2.0 sharding is implemented, "blob-transactions" would be designed with
-sharding but without being sharded transactions. Blob transactions carry a large amount of data that
-the EVM cannot access but whose commitment can be accessed. Compared to full sharding, where the
-space allocated for this additional transaction data will be ~16MB, this EIP allows for a reduced
-cap corresponding to a target of ~1MB and a limit of ~2MB, which the rollup transactions can
-utilize. See [EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com) for
-more information.
-
-### Polkadot and Kusama
-
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains can be considered as a
-different way to achieve what rollups do. The sharding model already exists as the Relay-chain being
-the beacon chain and parachains being the shards. Parachains have a similar implementation of an
-Optimistic rollup and a similar architecture to a ZK-rollup. Parachain logic runs a validity proof.
-The proof (the Approval Protocol) is interactive, unlike ZK-rollups, which are non-interactive.
-Additionally, unlike ZK-rollups, there are no difficulties in creating parachains with
-Turing-complete logic. This is a fundamental weakness of ZK rollups, as Turing completeness within
-ZK circuits is difficult (if not impossible) to achieve. In addition, Optimistic rollups are
-required by architecture to have their 'sequencer selection' logic live in their host contract. This
-is because the smart contract needs to accept blocks that may be bad and may not be executed and
-needs to filter out spam. Parachains, like ZK rollups, can encapsulate the sequencer-selection logic
-within their validation code.
-
-## Message Passing
+## Interoperability & Message Passing
 
 Shards in Ethereum 2.0 will access each other's states via their crosslinks and state proofs. In the
 model of Ethereum 2.0 with 64 shards, each one posts a crosslink in the Beacon Chain for every
@@ -300,8 +186,9 @@ Upgrades on Ethereum 2.0 will follow the standard hard-fork procedure, requiring
 upgrade their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact chain upgrades and
-successful proposals using the Wasm meta-protocol without a hard fork. Anything within the STF, the
-transaction queue, or off-chain workers can be upgraded without forking the chain.
+successful proposals using the Wasm meta-protocol without a hard fork. Anything within the state
+transition function, the transaction queue, or off-chain workers can be upgraded without forking the
+chain.
 
 ## Conclusion
 
@@ -311,8 +198,9 @@ model where shard chains ("shards" in Ethereum 2.0 and parachains in
 linking shard state in the blocks of the main chains. Main differences between the two protocols
 are:
 
-- All shards in Ethereum 2.0 have the same STF, while
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lets shards have an abstract STF.
+- All shards in Ethereum 2.0 have the same state transition function, while
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lets shards have an abstract state
+  transition function.
 - Governance processes in Ethereum 2.0 are planned to be off-chain and thus require coordination for
   a hard fork to enact governance decisions. In contrast, in
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
