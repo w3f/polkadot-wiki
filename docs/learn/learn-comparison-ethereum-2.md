@@ -1,14 +1,14 @@
 ---
 id: learn-comparisons-ethereum-2
-title: Polkadot vs. Ethereum 2.0
-sidebar_label: Ethereum 2.0
-description: A high-level comparison between Polkadot and Ethereum 2.0.
-keywords: [ethereum, ethereum 2.0, proof of stake, sharding]
+title: Polkadot vs. Ethereum
+sidebar_label: Ethereum
+description: A high-level comparison between Polkadot and Ethereum.
+keywords: [ethereum, Ethereum, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---
 
-Polkadot and Ethereum 2.0 are both **sharded** protocols. While Ethereum 2.0 is not yet released at
-the time of this writing, it has goals of being a multi-sharded network, much like Polkadot and its
+Polkadot and Ethereum are both **sharded** protocols. While Ethereum is not yet released at the time
+of this writing, it has goals of being a multi-sharded network, much like Polkadot and its
 parachains. When a network is **sharded**, this implies that it is capable of executing multiple
 (and often many) state transitions in parallel.
 
@@ -38,11 +38,11 @@ parachains.
 
 ## Architectural Differences: Polkadot & Ethereum
 
-Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Beacon Chain is
+Ethereum's main chain is called the Beacon Chain. The primary load on the Beacon Chain is
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
 shard is a blockchain with the Ethereum Wasm (eWasm) interface.
 
-The initial plan prioritized the rollout of shards. Ethereum 2.0 launched Phase 0 of a multi-phase
+The initial plan prioritized the rollout of shards. Ethereum launched Phase 0 of a multi-phase
 rollout in December 2020, operating in parallel to the legacy Ethereum 1.0 chain:
 
 - **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing
@@ -51,22 +51,20 @@ rollout in December 2020, operating in parallel to the legacy Ethereum 1.0 chain
   submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data.
 - **Phase 1.5** integrates Ethereum 1.0 as a shard to finalize the proof-of-work chain's blocks.
 - **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system
-  usable to end-users. See
-  [Ethereum 2.0 Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) for
-  more information.
+  usable to end-users. See [Ethereum Phases](https://ethereum.org/en/roadmap/) for more information.
 
 After the launch of the Beacon Chain in Phase 0, the roadmap was altered to prioritize the
-transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum 2.0's Proof-of-Stake
+transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum's Proof-of-Stake
 consensus, preceding the rollout of shards on the network. See
-[Ethereum 2.0 Merge](https://ethereum.org/en/eth2/merge/) for more information.
+[Ethereum Merge](https://ethereum.org/en/roadmap/merge/) for more information.
 
 The network will also have "side chains" to interact with chains that are not under the finality
-protocol of Ethereum 2.0.
+protocol of Ethereum.
 
 ### Polkadot and Kusama
 
-Like Ethereum 2.0, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also has a main
-chain, called the [Relay Chain](./learn-architecture.md#relay-chain), with several shards called
+Like Ethereum, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also has a main chain,
+called the [Relay Chain](./learn-architecture.md#relay-chain), with several shards called
 [parachains](./learn-parachains.md). Parachains are not restricted to a single interface like eWasm.
 Instead, they can define their logic and interface as long as they provide their state transition
 function to the Relay Chain validators so that they can execute it.
@@ -83,23 +81,23 @@ To interact with chains that want to use their finalization process (e.g. Bitcoi
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has
 [bridge parachains](learn-bridges.md) that offer two-way compatibility.
 
-## Consensus
+## Consensus & Finalization
 
-Ethereum 2.0 and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid consensus
+Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid consensus
 models where block production and finality have their protocols. The finality protocols - Casper FFG
-for Ethereum 2.0 and [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for
+for Ethereum and [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} - are both GHOST-based and can both
 finalize batches of blocks in one round. For block production, both protocols use slot-based
 protocols that randomly assign validators to a slot and provide a fork choice rule for unfinalized
-blocks - RandDAO/LMD for Ethereum 2.0 and [BABE](./learn-consensus.md#badass-babe-sassafras) for
+blocks - RandDAO/LMD for Ethereum and [BABE](./learn-consensus.md#badass-babe-sassafras) for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-There are two main differences between Ethereum 2.0 and
+There are two main differences between Ethereum and
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus:
 
-1. Ethereum 2.0 finalizes batches of blocks according to periods called "epochs". The current plan
-   is to have 32 blocks per epoch and finalize them all in one round. With a predicted block time of
-   12 seconds, the expected time to finality is 6 minutes (12 minutes maximum). See
+1. Ethereum finalizes batches of blocks according to periods called "epochs". The current plan is to
+   have 32 blocks per epoch and finalize them all in one round. With a predicted block time of 12
+   seconds, the expected time to finality is 6 minutes (12 minutes maximum). See
    [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
    for more information.
 
@@ -109,7 +107,7 @@ There are two main differences between Ethereum 2.0 and
    that need to be performed (and invalidity reports cause the protocol to require extra checks).
    The expected time to finality is 12-60 seconds.
 
-2. Ethereum 2.0 requires many validators per shard to provide strong validity guarantees while
+2. Ethereum requires many validators per shard to provide strong validity guarantees while
    {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide stronger guarantees
    with fewer validators per shard. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
    achieves this by making validators distribute an
@@ -121,16 +119,16 @@ There are two main differences between Ethereum 2.0 and
 
 ## Staking Mechanics
 
-Ethereum 2.0 is a proof-of-stake network that requires 32 ETH to stake for each validator instance.
+Ethereum is a proof-of-stake network that requires 32 ETH to stake for each validator instance.
 Validators run a primary Beacon Chain node and multiple validator clients - one for each 32 ETH.
 These validators get assigned to "committees", randomly selected groups to validate shards in the
-network. Ethereum 2.0 relies on having a large validator set to provide availability and validity
+network. Ethereum relies on having a large validator set to provide availability and validity
 guarantees: They need at least 111 validators per shard to run the network and 256 validators per
 shard to finalize all shards within one epoch. With 64 shards, that's 16_384 validators (given 256
 validators per shard). See
-[Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
-and [Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS) for
-more information.
+[Ethereum Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/) and
+[Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS) for more
+information.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong finality and
 availability guarantees with much fewer validators. It uses
@@ -142,13 +140,12 @@ parachain in the network.
 
 ## Interoperability & Message Passing
 
-Shards in Ethereum 2.0 will access each other's states via their crosslinks and state proofs. In the
-model of Ethereum 2.0 with 64 shards, each one posts a crosslink in the Beacon Chain for every
-block, meaning that shards could contain logic that executes based on some light client proof of a
-transaction on another shard. Ethereum 2.0 has yet to release a specification for nodes passing
-messages between shards. See
-[Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
-and
+Shards in Ethereum will access each other's states via their crosslinks and state proofs. In the
+model of Ethereum with 64 shards, each one posts a crosslink in the Beacon Chain for every block,
+meaning that shards could contain logic that executes based on some light client proof of a
+transaction on another shard. Ethereum has yet to release a specification for nodes passing messages
+between shards. See
+[Ethereum Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/) and
 [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
 for more information.
 
@@ -164,12 +161,12 @@ etc.). This enhances scalability by keeping data on the edges of the system.
 [SPREE](learn-spree.md) that provides shared logic for cross-chain messages. Messages sent with
 SPREE carry additional guarantees about provenance and interpretation by the receiving chain.
 
-## Governance
+## Governance & Protocol Upgradeability
 
-Ethereum 2.0 governance is still unresolved. Ethereum uses off-chain governance procedures like
-GitHub discussions, Core Devs Meetings, and Ethereum Magicians to make decisions about the protocol.
-See [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
-for more information.
+Ethereum governance is still unresolved. Ethereum uses off-chain governance procedures like GitHub
+discussions, Core Devs Meetings, and Ethereum Magicians to make decisions about the protocol. See
+[Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium) for
+more information.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
 [governance](./learn-opengov.md) with a multicameral system. There are several avenues to issue
@@ -180,10 +177,8 @@ to set the passing threshold for low-turnout referenda. Referenda can cover vari
 including fund allocation from an on-chain [Treasury](./learn-treasury.md) or modifying the
 underlying runtime code of the chain. Decisions get enacted on-chain and are binding and autonomous.
 
-## Upgrades
-
-Upgrades on Ethereum 2.0 will follow the standard hard-fork procedure, requiring validators to
-upgrade their nodes to implement protocol changes.
+Upgrades on Ethereum will follow the standard hard-fork procedure, requiring validators to upgrade
+their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact chain upgrades and
 successful proposals using the Wasm meta-protocol without a hard fork. Anything within the state
@@ -192,17 +187,17 @@ chain.
 
 ## Conclusion
 
-Ethereum 2.0 and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded
-model where shard chains ("shards" in Ethereum 2.0 and parachains in
+Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded model
+where shard chains ("shards" in Ethereum and parachains in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}) are secured by a main chain by
 linking shard state in the blocks of the main chains. Main differences between the two protocols
 are:
 
-- All shards in Ethereum 2.0 have the same state transition function, while
+- All shards in Ethereum have the same state transition function, while
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lets shards have an abstract state
   transition function.
-- Governance processes in Ethereum 2.0 are planned to be off-chain and thus require coordination for
-  a hard fork to enact governance decisions. In contrast, in
+- Governance processes in Ethereum are planned to be off-chain and thus require coordination for a
+  hard fork to enact governance decisions. In contrast, in
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
   enacted autonomously.
 - Validator selection mechanisms differ as
