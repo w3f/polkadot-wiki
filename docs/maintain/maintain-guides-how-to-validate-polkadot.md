@@ -100,7 +100,7 @@ similar for other platforms.
 
 The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on
 VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services
-(AWS). To be specific, we used `c2d-highcpu-8` VM instance on GCP and `c6id.2xlarge` on AWS. It is
+(AWS). To be specific, we used `n2-standard-8` VM instance on GCP and `c6id.2xlarge` on AWS. It is
 recommended that the hardware used to run the validators at least matches the specs of the reference
 hardware in order to ensure they are able to process all blocks in time. If you use subpar hardware
 you will possibly run into performance issues, get less era points, and potentially even get
@@ -118,7 +118,7 @@ slashed.
     estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In
     general, the latency is more important than the throughput.
 - **Memory**
-  - 16GB DDR4 ECC.
+  - 32 GB DDR4 ECC.
 - **System**
   - Linux Kernel 5.16 or newer.
 - **Network**
