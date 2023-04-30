@@ -37,8 +37,8 @@ millionth block this was around 660 GB.
 
 :::tip
 
-The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama
-nodes in real-time.
+On the [Paranodes](https://paranodes.io/DBSize) or [Stakeworld](https://stakeworld.io/docs/dbsize)
+websites you can find lists of the database sizes of Polkadot and Kusama nodes.
 
 :::
 
