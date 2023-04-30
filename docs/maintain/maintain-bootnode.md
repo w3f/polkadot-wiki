@@ -7,7 +7,8 @@ keywords: [bootnode, web socket, remote, connection, secure websocket]
 slug: ../maintain-bootnode
 ---
 
-:::tip When you first start a node it has to find a way to find other nodes in the network. For that
+:::tip 
+When you first start a node it has to find a way to find other nodes in the network. For that
 purpose you need "bootnodes". After the first bootnode is found it can use the connections of that
 node to continue expanding its network and be able to play its role in the network, like participate
 as a validator. 
@@ -73,7 +74,8 @@ If we have above node running with dns name `dot-bootnode.stakeworld.io`, proxie
 certificate and node-id `12D3KooWAb5MyC1UJiEQJk4Hg4B2Vi3AJdqSUhTGYUqSnEqCFMFg` then the following
 commands should give you a: "syncing 1 peers".
 
-:::tip You can add `-lsub-libp2p=trace` on the end to get libp2p trace logging for debugging
+:::tip 
+You can add `-lsub-libp2p=trace` on the end to get libp2p trace logging for debugging
 purposes. 
 :::
 
