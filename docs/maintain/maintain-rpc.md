@@ -11,9 +11,9 @@ The substrate node RPC server can be accessed over the websocket protocol, which
 way to access the underlying network and/or validator node. By default you can access your node's
 RPC server from localhost (for example to rotate keys or do other maintenance). To access it from
 another server or from an applications UI (such as [Polkadot-JS UI](https://polkadot.js.org/apps))
-it is recommended to enable access to the RPC node over an TLS connection and as such encrypting the
+it is recommended to enable access to the RPC node over an SSL connection and as such encrypting the
 connection between the end user and the RPC server. This can be achieved by setting up a secure
-proxy. Many browsers such as Google Chrome will block non secure WS endpoints if they come from a
+proxy. Many browsers such as Google Chrome will block non secure ws endpoints if they come from a
 different origin.
 
 :::note
@@ -44,7 +44,7 @@ Or for a polkadot pruned RPC node:
 polkadot --chain polkadot --name myrpc --state-pruning 1000 --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
 ```
 
-The specified flag option are outlined in greater detail below.
+The specified flag options are outlined in greater detail below.
 
 ### Archive Node vs Pruned Node
 
@@ -55,10 +55,10 @@ full history (database) of the network and can be queried in all kind of ways, s
 historical information regarding transfers, balance histories, and more advanced queries involving
 past events, etc.
 
-An archive node requires a lot more diskspace. At the start of January 2023, polkadot disk usage was
-at 115 GB for a pruned node and 765 GB for an archive node. This value will increase with time. For
-an archive node you need the options `--state-pruning archive --blocks-pruning archive` in your
-startup settings.
+An archive node requires a lot more diskspace. At the start of April 2023, polkadot disk usage was
+at 160 GB for a pruned node and 1 TB for an archive node. This value will increase with time. For an
+archive node you need the options `--state-pruning archive --blocks-pruning archive` in your startup
+settings.
 
 :::tip
 
@@ -82,9 +82,9 @@ mode is `--rpc-methods Safe`
 
 ### Secure the ws port
 
-To safely access your ws connection over a ssl enabled connection (need for polkadot.js) you have to
-convert the ws connection to a secure (wss) connection by using a proxy and a ssl certificate, you
-can find instructions on securing the ws port [here](/docs/maintain-wss).
+To safely access your ws connection over a ssl enabled connection (needed for polkadot.js) you have
+to convert the ws connection to a secure (wss) connection by using a proxy and a ssl certificate,
+you can find instructions on securing the ws port [here](/docs/maintain-wss).
 
 ## Connecting to the Node
 
