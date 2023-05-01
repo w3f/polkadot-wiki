@@ -7,13 +7,13 @@ keywords: [web socket, remote, connection, secure websocket]
 slug: ../maintain-wss
 ---
 
-## Secure a ws port
+## Secure a WS Port
 
-A non secure ws port can be converted to a secure wss port by placing it behind an SSL enabled
+A non-secure ws port can be converted to a secure wss port by placing it behind an SSL-enabled
 proxy. This can be used to secure a [bootnode](/docs/maintain-bootnode) or secure a
-[RPC server](/docs/maintain-rpc). The SSL enabled apache2/nginx/other proxy server redirects
-requests to the internal ws and converts it so a secure (wss) connection. For this you will need an
-SSL certificate for which you can use a service like letsencrypt or self signing.
+[RPC server](/docs/maintain-rpc). The SSL-enabled apache2/nginx/other proxy server redirects
+requests to the internal ws and converts it to a secure (wss) connection. For this, you will need an
+SSL certificate for which you can use a service like letsencrypt or self-signing.
 
 ### Obtaining an SSL Certificate
 
@@ -21,9 +21,9 @@ One easy way to get a free SSL certificate can be achieved by following the Lets
 ([nginx](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)/[apache](https://certbot.eff.org/instructions?ws=apache&os=ubuntufocal)).
 This will auto-generate an SSL certificate and include it in your configuration.
 
-Alternatively you can generate a self-signed certificate and rely on the raw IP address of your node
-when connecting to it. This is not preferable since you will have to whitelist the certificate to
-access it from a browser.
+Alternatively, you can generate a self-signed certificate and rely on the raw IP address of your
+node when connecting to it. This is not preferable since you will have to whitelist the certificate
+to access it from a browser.
 
 ```bash
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt
@@ -32,7 +32,7 @@ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
 ## Installing a Proxy Server
 
-There are a lot of different implementations of a websocket proxy, some of the more widely used are
+There are a lot of different implementations of a WebSocket proxy, some of the more widely used are
 [nginx](https://www.nginx.com/) and [apache2](https://httpd.apache.org/), for which configuration
 examples provided below.
 
@@ -42,7 +42,7 @@ examples provided below.
 apt install nginx
 ```
 
-In a SSL enabled virtualhost add:
+In an SSL-enabled virtual host add:
 
 ```conf
 server {
@@ -75,7 +75,7 @@ location / {
 
 ### Apache2
 
-You can run it in different modes such as prefork, worker or event. In this example, we use
+You can run it in different modes such as prefork, worker, or event. In this example, we use
 [event](https://httpd.apache.org/docs/2.4/mod/event.html) which works well on higher load
 environments but other modes are also useful given the requirements.
 
@@ -86,8 +86,8 @@ a2enmod mpm_event proxy proxy_html proxy_http proxy_wstunnel rewrite ssl
 ```
 
 The [mod_proxy_wstunnel](https://httpd.apache.org/docs/2.4/mod/mod_proxy_wstunnel.html) provides
-_support for the tunnelling of web socket connections to a backend websockets server. The connection
-is automatically upgraded to a websocket connection_. In a SSL enabled virtualhost add:
+_support for the tunneling of web socket connections to a backend websockets server. The connection
+is automatically upgraded to a WebSocket connection_. In an SSL-enabled virtualhost add:
 
 ```apacheconf
 (...)
