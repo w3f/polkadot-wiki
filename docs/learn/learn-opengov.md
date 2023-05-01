@@ -13,6 +13,12 @@ import VLTable from "./../../components/Voluntary-Locking";
 
 import Fellowship from "./../../components/Fellowship";
 
+:::info Participating to OpenGov
+
+For participating to OpenGov see the [dedicated pages](../maintain/maintain-guides-opengov.md).
+
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
