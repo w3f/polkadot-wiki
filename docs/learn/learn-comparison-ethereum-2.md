@@ -12,54 +12,60 @@ of this writing, it has goals of being a multi-sharded network, much like Polkad
 parachains. When a network is **sharded**, this implies that it is capable of executing multiple
 (and often many) state transitions in parallel.
 
-Both protocols share roughly the same goals:
+Both protocols share the same goals, but fundamentally accomplish them in a different manner:
 
-1. Scalability by executing transactions in separate shards.
+1. Scalability by executing state changes in a sustainable way (mostly through sharding).
 2. Defining methods for cross-chain and consensus interactions to take place between shards.
 3. Increased security and upgradeability for its components
 
-## Scalability: Sharding vs Rollups
+:::warning
+
+It's important to note that the "Ethereum" here refers what was previously known as "Eth2" or
+"Ethereum 2.0". For more concrete details regarding the next iterations of Ethereum, please refer to
+the [Ethereum Roadmap](https://ethereum.org/en/roadmap/).
+
+It's relevant to mention that some upgrades may not be active for Ethereum, but are described as a
+part of this comparison to Polkadot.
+
+At the time of this writing, the following are not implemented in Ethereum:
+
+- Danksharding
+
+:::
+
+## Scalability: Sharding vs Danksharding
 
 As part of Ethereum's roadmap, shards have been forgone in favor of rollup-based approach for
-scaling transaction throughput.
+scaling transaction throughput. [**Danksharding**](https://ethereum.org/en/roadmap/danksharding/) is
+how Ethereum plans to create a scalable environment for an acclaimed >100,000 transactions per
+second. Danksharding was the chosen alternative over "shard chains".
+
+Danksharding will allow for much more space to be utilized per block on Ethereum, where blobs of
+data will be verifiable for an amount of time before being pruned from the network. These blobs will
+have to be held for an amount of time, implying a level of data availability that validators must
+have. Essentially, this approach will further enable data availability at layer 1, and further
+enable layer 2 protocols on Ethereum to flourish.
+
+In contrast, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} already prioritizes data
+availability at as integral part of the block validation process. Parallelized interactions between
+parachains, which are the **shards** of the Polkadot network also take advantage of this factor.
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core logic, the
-shards are executed in parallel, and can send cross-shard asynchronous messages. However, each shard
-(i.e. [parachain](learn-parachains.md)) has a unique state transition function (sometimes called a
-**runtime**). Applications can exist either within a single shard or across shards by composing
-logic. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
+shards are executed in parallel. However, each shard (i.e. [parachain](learn-parachains.md)) has a
+unique state transition function (sometimes called a **runtime**). Applications can exist either
+within a single shard or across shards by composing logic.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
 ([Wasm](./learn-wasm.md)) as a "meta-protocol". A shard's state transition function can be abstract
 as long as the validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can
-execute it within a Wasm environment. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-supports smart contracts through parachains. To offer some perspective, on Ethereum, smart contracts
-can call each other synchronously in the same shard and asynchronously between shards. On Polkadot,
-smart contracts can call each other synchronously in the same parachain and asynchronously across
-parachains.
+execute it within a Wasm environment.
 
-## Architectural Differences: Polkadot & Ethereum
+## Architectural Differences: Polkadot and Ethereum
 
 Ethereum's main chain is called the Beacon Chain. The primary load on the Beacon Chain is
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
 shard is a blockchain with the Ethereum Wasm (eWasm) interface.
 
-The initial plan prioritized the rollout of shards. Ethereum launched Phase 0 of a multi-phase
-rollout in December 2020, operating in parallel to the legacy Ethereum 1.0 chain:
-
-- **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing
-  proof-of-stake consensus, eventually among many shards.
-- **Phase 1** launches 64 shards as simple chains to test the Beacon Chain's finality. Each shard
-  submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data.
-- **Phase 1.5** integrates Ethereum 1.0 as a shard to finalize the proof-of-work chain's blocks.
-- **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system
-  usable to end-users. See [Ethereum Phases](https://ethereum.org/en/roadmap/) for more information.
-
-After the launch of the Beacon Chain in Phase 0, the roadmap was altered to prioritize the
-transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum's Proof-of-Stake
-consensus, preceding the rollout of shards on the network. See
-[Ethereum Merge](https://ethereum.org/en/roadmap/merge/) for more information.
-
-The network will also have "side chains" to interact with chains that are not under the finality
-protocol of Ethereum.
+Similarly, both separate the client and consensus layers of the protocol.
 
 ### Polkadot and Kusama
 
@@ -81,7 +87,7 @@ To interact with chains that want to use their finalization process (e.g. Bitcoi
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has
 [bridge parachains](learn-bridges.md) that offer two-way compatibility.
 
-## Consensus & Finalization
+## Consensus and Finalization
 
 Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid consensus
 models where block production and finality have their protocols. The finality protocols - Casper FFG
@@ -138,7 +144,7 @@ system without running a node of their own.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} needs about ten validators for each
 parachain in the network.
 
-## Interoperability & Message Passing
+## Interoperability and Message Passing
 
 Shards in Ethereum will access each other's states via their crosslinks and state proofs. In the
 model of Ethereum with 64 shards, each one posts a crosslink in the Beacon Chain for every block,
@@ -161,7 +167,7 @@ etc.). This enhances scalability by keeping data on the edges of the system.
 [SPREE](learn-spree.md) that provides shared logic for cross-chain messages. Messages sent with
 SPREE carry additional guarantees about provenance and interpretation by the receiving chain.
 
-## Governance & Protocol Upgradeability
+## Governance and Protocol Upgradeability
 
 Ethereum governance is still unresolved. Ethereum uses off-chain governance procedures like GitHub
 discussions, Core Devs Meetings, and Ethereum Magicians to make decisions about the protocol. See
@@ -184,6 +190,13 @@ their nodes to implement protocol changes.
 successful proposals using the Wasm meta-protocol without a hard fork. Anything within the state
 transition function, the transaction queue, or off-chain workers can be upgraded without forking the
 chain.
+
+## DApp Support and Development
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart contracts through
+parachains. To offer some perspective, on Ethereum, smart contracts can call each other
+synchronously in the same shard and asynchronously between shards. On Polkadot, smart contracts can
+call each other synchronously in the same parachain and asynchronously across parachains.
 
 ## Conclusion
 
