@@ -11,10 +11,10 @@ import Tabs from "@theme/Tabs";
 
 import TabItem from "@theme/TabItem";
 
-If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom
-Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's
-always better to rely on your own infrastructure than on a third-party-hosted one in this brave new
-decentralized world.
+If you're building dApps or products on a Substrate-based chain like Polkadot, Kusama, or a custom
+Substrate implementation, you want the ability to run a node-as-a-back-end. After all, relying on
+your infrastructure is always better than a third-party-hosted one in this brave new decentralized
+world.
 
 This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
 same process applies to any other [Substrate](https://substrate.io)-based chain. First, let's
@@ -25,20 +25,20 @@ clarify the term _full node_.
 A blockchain's growth comes from a _genesis block_, _extrinsics_, and _events_.
 
 When a validator seals block 1, it takes the blockchain's state at block 0. It then applies all
-pending changes on top of it, and emits the events that are the result of these changes. Later, the
-state of the chain at block 1 is used in the same way to build the state of the chain at block 2,
-and so on. Once two thirds of the validators agree on a specific block being valid, it is finalized.
+pending changes on top of it and emits the events resulting from these changes. Later, the chain’s
+state at block one is used the same way to build the chain’s state at block 2, and so on. Once
+two-thirds of the validators agree on a specific block being valid, it is finalized.
 
 An **archive node** keeps all the past blocks and their states. An archive node makes it convenient
 to query the past state of the chain at any point in time. Finding out what an account's balance at
-a certain block was, or which extrinsics resulted in a certain state change are fast operations when
-using an archive node. However, an archive node takes up a lot of disk space - around Kusama's 12
-millionth block this was around 660 GB.
+a particular block was or which extrinsics resulted in a specific state change are fast operations
+when using an archive node. However, an archive node takes up a lot of disk space - around Kusama's
+12 millionth block, this was around 660 GB.
 
 :::tip
 
 On the [Paranodes](https://paranodes.io/DBSize) or [Stakeworld](https://stakeworld.io/docs/dbsize)
-websites you can find lists of the database sizes of Polkadot and Kusama nodes.
+websites, you can find lists of the database sizes of Polkadot and Kusama nodes.
 
 :::
 
@@ -47,34 +47,34 @@ scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and
 to be able to look at past on-chain data.
 
 A **full node** prunes historical states: all finalized blocks' states older than a configurable
-number except the genesis block's state. This is 256 blocks from the last finalized one, by default.
-A node that is pruned this way requires much less space than an archive node.
+number except the genesis block's state. This is 256 blocks from the last finalized one by default.
+A pruned node this way requires much less space than an archive node.
 
-A full node may eventually be able to rebuild every block's state with no additional information,
-and become an archive node, but at the time of writing, this is not implemented. If you need to
-query historical blocks' states past what you pruned, you need to purge your database and resync
-your node starting in archive mode. Alternatively you can use a backup or snapshot of a trusted
-source to avoid needing to sync from genesis with the network, and only need the states of blocks
-past that snapshot.
+A full node could eventually rebuild every block's state without additional information and become
+an archive node. This still needs to be implemented at the time of writing. If you need to query
+historical blocks' states past what you pruned, you must purge your database and resync your node,
+starting in archive mode. Alternatively, you can use a backup or snapshot of a trusted source to
+avoid needing to sync from genesis with the network and only need the states of blocks past that
+snapshot.
 
 Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
 directly on the network without relying on a centralized infrastructure provider.
 
-Another type of node is a **light node**. A light node has only the runtime and the current state,
+Another type of node is a **light node**. A light node has only the runtime and the current state
 but does not store past blocks and so cannot read historical data without requesting it from a node
-that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
+that has it. Light nodes are useful for resource-restricted devices. An interesting use-case of
 light nodes is a browser extension, which is a node in its own right, running the runtime in WASM
-format as well as a full or light node that is completely encapsulated in WASM and can be integrated
-into webapps: https://github.com/paritytech/smoldot#wasm-light-node
+format, as well as a full or light node that is completely encapsulated in WASM and can be
+integrated into web apps: https://github.com/paritytech/smoldot#wasm-light-node.
 
 :::note Substrate Connect
 
 [Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with
-substrate based blockchains in the browser without using an RPC server. It is a light node that runs
+substrate-based blockchains in the browser without using an RPC server. It is a light node that runs
 entirely in Javascript. Substrate Connect uses a
 [smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the
-blockchain network without relying on specific 3rd parties. Substrate Connect is available as a
-[browser extension](https://substrate.io/developers/substrate-connect/) on both Chrome and Firefox.
+blockchain network without relying on specific 3rd parties. Substrate Connect is available on Chrome
+and Firefox as a [browser extension](https://substrate.io/developers/substrate-connect/).
 
 :::
 
@@ -92,8 +92,7 @@ This is not recommended if you're a validator. Please see the
 :::note The bash commands that are provided to run against **your node** use `Polkadot` as the
 default chain
 
-Use the `--chain` flag if you are following the setup instructions to setup a `Kusama` node. For
-example:
+Use the `--chain` flag if you follow the setup instructions to setup a `Kusama` node. For example:
 
 ```bash
 ./target/release/polkadot --name "Your Node's Name" --chain kusama
@@ -326,11 +325,11 @@ The built binary will be in the `target/release` folder, called `polkadot`.
 ./target/release/polkadot --name "Your Node's Name"
 ```
 
-Use the `--help` flag to find out which flags you can use when running the node. For example, if
+Use the `--help` flag to determine which flags you can use when running the node. For example, if
 [connecting to your node remotely](maintain-wss.md), you'll probably want to use `--ws-external` and
 `--rpc-cors all`.
 
-The syncing process will take a while depending on your bandwidth, processing power, disk speed and
+The syncing process will take a while, depending on your capacity, processing power, disk speed and
 RAM. On a \$10 DigitalOcean droplet, the process can complete in some 36 hours.
 
 Congratulations, you're now syncing with Polkadot. Keep in mind that the process is identical when
@@ -338,8 +337,8 @@ using any other Substrate chain.
 
 ## Running an Archive Node
 
-When running as a simple sync node (above), only the state of the past 256 blocks will be kept. When
-validating, it defaults to [archive mode](#types-of-nodes). To keep the full state use the
+When running as a simple sync node (above), only the state of the past 256 blocks will be kept. It
+defaults to [archive mode](#types-of-nodes) when validating. To support the full state, use the
 `--pruning` flag:
 
 **Polkadot**:
@@ -350,16 +349,16 @@ validating, it defaults to [archive mode](#types-of-nodes). To keep the full sta
 
 It is possible to almost quadruple synchronization speed by using an additional flag:
 `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off
-after the node is in sync.
+after the node syncs.
 
 ## Using Docker
 
-Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so
-it's best left up to those that either already have familiarity with docker, or have completed the
-other set-up instructions in this guide. Be aware that when you run polkadot in docker the process
-only listen on localhost by default. If you would like to connect to your node's services (rpc,
-websockets, and prometheus) you need to ensure that you run you node with the `--rpc-external`,
-`--ws-external`, and `--prometheus-external` commands.
+Finally, you can use Docker to run your node in a container. Doing this is more advanced, so it's
+best left up to those already familiar with docker or who have completed the other set-up
+instructions in this guide. Be aware that when you run polkadot in docker, the process only listens
+on localhost by default. If you would like to connect to your node's services (rpc, websockets, and
+prometheus) you need to ensure that you run you node with the `--rpc-external`, `--ws-external`, and
+`--prometheus-external` commands.
 
 ```zsh
 docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external
