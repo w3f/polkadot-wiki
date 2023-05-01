@@ -52,6 +52,7 @@ module.exports = {
               label: "Assets",
               items: [
                 "learn/learn-treasury",
+                "learn/learn-opengov-treasury",
                 "learn/learn-assets",
                 "general/kusama/kusama-statemine",
                 "learn/learn-teleport",

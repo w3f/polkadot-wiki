@@ -105,6 +105,7 @@ module.exports = {
                 "learn/learn-runtime-upgrades",
                 "learn/learn-opengov",
                 "learn/learn-treasury",
+                "learn/learn-opengov-treasury",
                 "learn/learn-consensus",
               ],
             },
