@@ -85,7 +85,7 @@ parachain represents a shard in the Polkadot network.
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core logic.
 However, each shard (i.e. [parachain](learn-parachains.md)) has a unique state transition function
 (sometimes called a **runtime**). Applications can exist either within a single shard or across
-shards by composing logic to create [cross-consensus](learn-xcm.md) interactions..
+shards by composing logic to create [cross-consensus (XCM)](learn-xcm.md) interactions.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
 ([Wasm](./learn-wasm.md)) as a "meta-protocol". A shard's state transition function can be abstract
@@ -94,23 +94,27 @@ execute it within a Wasm environment.
 
 ## Architectural Differences: Polkadot and Ethereum
 
-As previously mentioned, Ethereum is a **general-purpose** chain, whereas Polkadot is a host for
-other parachains.
+As previously mentioned, Ethereum is a **general-purpose** virtual machine that is able to run
+sandboxed programs written in Solidity, whereas Polkadot is a meta-protocol for other parachains to
+connect and interact with each other.
 
-Ethereum operates as a single chain, with two notable layers: the **consensus** and **execution**
-layer.
+Ethereum operates as a single chain, homogenous chain. Each Ethereum node is divided into two
+layers: the **consensus** and **execution** layer. Each layer is respectively responsible for
+handling the block validation information, peer discovery, and Proof-of-Stake (if applicable) of the
+Ethereum client.
 
-Polkadot's primary component is the **relay chain**. The relay chain aggregates information from
-parachains, where consensus and finality are agreed upon by Polkadot validators. In essence, one can
-look at Polkadot as a series of **runtimes**, which are state transition functions used to describe
-parachains (shards), as well as Polkadot itself.
+Polkadot's primary component is the **relay chain**, which is a homogenous **sharded** network. The
+relay chain aggregates information from its shards, parachains, where consensus and finality are
+agreed upon by Polkadot validators. In essence, one can look at Polkadot as a series of
+**runtimes**, which are state transition functions used to describe parachains (shards), as well as
+Polkadot itself. Like Ethereum, Polkadot clients abstract away many of their responsibilities into
+various components, built using Substrate.
 
 ### Forks, Upgrades, and Governance
 
-Ethereum governance is still unresolved. Ethereum uses off-chain governance procedures like GitHub
-discussions, Core Devs Meetings, and Ethereum Magicians to make decisions about the protocol. See
-[Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium) for
-more information.
+Ethereum governance is done off-chain, where a variety of stakeholders come to consensus through
+some other medium other than the protocol itself. Upgrades on Ethereum will follow the standard
+hard-fork procedure, requiring validators to upgrade their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
 [governance](./learn-opengov.md) with a multicameral system. There are several avenues to issue
@@ -120,9 +124,6 @@ outcome. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses ada
 to set the passing threshold for low-turnout referenda. Referenda can cover various topics,
 including fund allocation from an on-chain [Treasury](./learn-treasury.md) or modifying the
 underlying runtime code of the chain. Decisions get enacted on-chain and are binding and autonomous.
-
-Upgrades on Ethereum will follow the standard hard-fork procedure, requiring validators to upgrade
-their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact chain upgrades and
 successful proposals using the Wasm meta-protocol without a hard fork. Anything within the state
@@ -191,10 +192,12 @@ parachain in the network.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
 [Cross-Consensus Message Passing Format (XCM)](./learn-xcm.md) for parachains to send arbitrary
 messages to each other. Parachains open connections with each other and can send messages via their
-established channels. Given that collators will need to be full nodes of the relay chain as well,
-they will be connected and will be able to relay messages from parachain A to parachain B. Messages
-do not pass through the Relay-Chain, only validity proofs and channel operations do (open, close,
-etc.). This enhances scalability by keeping data on the edges of the system.
+established channels. Given that [collators](./learn-collator.md) will need to be full nodes of the
+relay chain as well, they will be connected and will be able to relay messages from parachain A to
+parachain B.
+
+Messages do not pass through the relay chain, only validity proofs and channel operations do (open,
+close, etc.). This enhances scalability by keeping data on the edges of the system.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will add a protocol called
 [SPREE](learn-spree.md) that provides shared logic for cross-chain messages. Messages sent with
@@ -202,26 +205,37 @@ SPREE carry additional guarantees about provenance and interpretation by the rec
 
 ## DApp Support and Development
 
+Ethereum mostly supports a form of smart contract development using Solidity. These contracts are
+immutable, and cannot be changed once published on-chain.
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart contracts through
-parachains. To offer some perspective, on Ethereum, smart contracts can call each other
-synchronously in the same shard and asynchronously between shards. On Polkadot, smart contracts can
-call each other synchronously in the same parachain and asynchronously across parachains.
+parachains, usually using the ink! smart contract language. On Ethereum, smart contracts can call
+each other, however are fixed on-chain to the domain of Ethereum. On Polkadot, smart contracts can
+call each other in the same parachain and across parachains.
+
+On Polkadot, developers have the option of either using smart contracts, calling extrinsics from
+pallets which modify the chain's state in some particular way, or merely using Polkadot's RPC to
+directly retrieve and act on chain information. DApps on Polkadot are often composed of these
+multiple components working together to modify, retrieve, and watch state changes live as they
+happen.
 
 ## Conclusion
 
-Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded model
-where shard chains ("shards" in Ethereum and parachains in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}) are secured by a main chain by
-linking shard state in the blocks of the main chains. Main differences between the two protocols
-are:
+Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded
+model. Danksharding plans to utilize a rollup-centric approach by focusing on data availability.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are secured by a main chain, called
+the "relay chain", which in turn manages and connects its shards ("parachains/parathreads") into a
+single, homogenous solution.
 
-- All shards in Ethereum have the same state transition function, while
+The primary differences between the two protocols are:
+
+- All shards in Ethereum represent the same state transitions, while
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lets shards have an abstract state
   transition function.
 - Governance processes in Ethereum are planned to be off-chain and thus require coordination for a
   hard fork to enact governance decisions. In contrast, in
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
-  enacted autonomously.
+  enacted autonomously via forkless upgrades.
 - Validator selection mechanisms differ as
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong availability and
   validity guarantees with fewer validators per shard.
