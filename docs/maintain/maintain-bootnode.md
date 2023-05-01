@@ -9,39 +9,38 @@ slug: ../maintain-bootnode
 
 :::note
 
-When you first start a node it has to find a way to find other nodes in the network. For that
-purpose you need "bootnodes". After the first bootnode is found it can use the connections of that
-node to continue expanding its network and be able to play its role in the network, like participate
-as a validator.
+When you first start a node, it has to find a way to find other nodes in the network. For that
+purpose, you need "bootnodes". After the first bootnode is found, it can use that node’s connections
+to continue expanding and play its role in the network, like participating as a validator.
 
 :::
 
-## Accessing the bootnode
+## Accessing the Bootnode
 
 The consensus is that bootnodes have to be accessible in three ways:
 
 - **p2p**: the p2p port, which can be set by `--listen-addr /ip4/0.0.0.0/tcp/<port>`. This port is
-  not automatically set on a non validator node (for example an archive rpc node).
-- **p2p/ws**: the websocket version, which can be set by `--listen-addr /ip4/0.0.0.0/tcp/<port>/ws`.
-- **p2p/wss**: the _secure_ websocket version. A ssl secured connection to the p2p/ws port which
-  will have to be achieved by a proxy since the node itself has no way to include certificates. It
-  is needed for light clients. See [here](/docs/maintain-wss) for info about setting this up.
+  not automatically set on a non-validator node (for example, an archive RPC node).
+- **p2p/ws**: the WebSocket version, which can be set by `--listen-addr /ip4/0.0.0.0/tcp/<port>/ws`.
+- **p2p/wss**: the _secure_ websocket version. An SSL-secured connection to the p2p/ws port must be
+  achieved by a proxy since the node cannot include certificates. It is needed for light clients.
+  See [here](/docs/maintain-wss) for info about setting this up.
 
-## Your network key
+## Network Key
 
-When you startup a node it creates its node-key in the `chains/<chain>/network/secret_ed25519` file.
-You can also create a node-key by `polkadot key generate-node-key` and use that node-key in the
-startup command line.
+Starting a node creates its node key in the `chains/<chain>/network/secret_ed25519` file. You can
+also create a node-key by `polkadot key generate-node-key` and use that node-key in the startup
+command line.
 
-It is essential you backup the node-key, especially if it gets included in the polkadot binary
+It is essential you backup the node key, especially if it gets included in the polkadot binary
 because it gets hardcoded in the binary and needs to be recompiled to change.
 
-## Running the bootnode
+## Running the Bootnode
 
 Say we are running a polkadot node with
 `polkadot --chain polkadot --name dot-bootnode --listen-addr /ip4/0.0.0.0/tcp/30310 --listen-addr /ip4/0.0.0.0/tcp/30311/ws`
-then we would have the p2p on port 30310 and p2p/ws on port 30311. For the p2p/wss port we need to
-setup a proxy, a dns name and a corresponding certificate. These concepts and example setups are
+then we would have the p2p on port 30310 and p2p/ws on port 30311. For the p2p/wss port, we need to
+set up a proxy, a DNS name, and a corresponding certificate. These concepts and example setups are
 described [here](https://wiki.polkadot.network/docs/maintain-wss#secure-the-ws-port). The following
 example is for the popular nginx server and enables p2p/wss on port 30312 by proxying the p2p/ws
 port 30311:
@@ -70,9 +69,9 @@ server {
 }
 ```
 
-## Testing the bootnode connection
+## Testing Bootnode Connection
 
-If we have above node running with dns name `dot-bootnode.stakeworld.io`, proxied with a valid
+If we have the above node running with DNS name `dot-bootnode.stakeworld.io`, proxied with a valid
 certificate and node-id `12D3KooWAb5MyC1UJiEQJk4Hg4B2Vi3AJdqSUhTGYUqSnEqCFMFg` then the following
 commands should give you a: "syncing 1 peers".
 
