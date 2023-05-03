@@ -1,11 +1,13 @@
 ---
 id: learn-comparisons-rollups
-title: Learn Rollups
-sidebar_label: Learn Rollups
+title: Layer 2 / Rollups
+sidebar_label: Layer 2 / Rollups
 description: Comparisons between various rollup/L2 protocols and how they relate to Polkadot.
 keywords: [rollups, polkadot, scalability]
 slug: ../learn-comparisons-rollups
 ---
+
+Layer 2 networks are notorious as being the way forward for blockchain scalability.
 
 Rollups are a layer-2 scaling solution. A layer-2 network of nodes would be responsible for "rolling
 up" transactions by batching them before publishing them to the main Ethereum chain. A rolled-up
