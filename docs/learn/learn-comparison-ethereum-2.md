@@ -83,7 +83,7 @@ parachain represents a shard in the Polkadot network.
 :::
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core logic.
-However, each shard (i.e., [parachain](learn-parachains.md)) has a unique state transition function
+As mentioned earlier, each shard (i.e., [parachain](learn-parachains.md)) has a unique state transition function
 (sometimes called a **runtime**). Applications can exist either within a single shard or across
 shards by composing logic to create [cross-consensus (XCM)](learn-xcm.md) interactions.
 
