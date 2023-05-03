@@ -8,7 +8,7 @@ slug: ../learn-comparisons-ethereum-2
 ---
 
 Polkadot is the first fully sharded production-grade blockchain protocol.
-([although Ethereum is still in the process of becoming a sharded network](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq#What-is-Danksharding)).
+The current protocol of Ethereum does not implement sharding and it is the main focus of [the next major upgrade](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq#What-is-Danksharding).
 Similar to Polkadot and its parachains, Ethereum has goals of being a multi-sharded network. When a
 network is **sharded**, this implies that it is capable of executing multiple (and often many) state
 transitions in parallel in a scalable manner.
