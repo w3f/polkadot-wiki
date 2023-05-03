@@ -117,12 +117,13 @@ procedure, requiring validators to upgrade their nodes to implement protocol cha
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
 [governance](./learn-opengov.md) with a multicameral system. There are several avenues to issue
-proposals, e.g., from the on-chain Council, the Technical Committee, or the public. All proposals
-ultimately pass through a public referendum, where the majority of tokens can always control the
-outcome. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses adaptive quorum biasing
-to set the passing threshold for low-turnout referenda. Referenda can cover various topics,
-including fund allocation from an on-chain [Treasury](./learn-treasury.md) or modifying the
-underlying runtime code of the chain. Decisions get enacted on-chain and are binding and autonomous.
+proposals, and all proposals ultimately pass through a public referendum, where the majority of
+tokens can always control the outcome.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
+[adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) to set the passing
+threshold for low-turnout referenda. Referenda can cover various topics, including fund allocation
+from an on-chain [Treasury](./learn-treasury.md) or modifying the underlying runtime code of the
+chain. Decisions get enacted on-chain and are binding and autonomous.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact chain upgrades and
 successful proposals using the Wasm meta-protocol without a hard fork. Anything within the state
@@ -207,9 +208,9 @@ Ethereum mainly supports a form of smart contract development using Solidity. Th
 immutable, and cannot be changed once published on-chain.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart contracts through
-parachains, usually using the ink! smart contract language. On Ethereum, smart contracts can call
-each other; however, they are fixed on-chain to the domain of Ethereum. On Polkadot, smart contracts
-can call each other in the same parachain and across parachains.
+parachains, usually using the [ink! smart contract language](https://use.ink/). On Ethereum, smart
+contracts can call each other; however, they are fixed on-chain to the domain of Ethereum. On
+Polkadot, smart contracts can call each other in the same parachain and across parachains.
 
 On Polkadot, developers have the option of either using smart contracts, calling extrinsics from
 pallets that modify the chain's state in some particular way or merely use Polkadot's RPC to
@@ -220,10 +221,10 @@ happen.
 ## Conclusion
 
 Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded
-model. Danksharding plans to utilize a rollup-centric approach by focusing on data availability.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are secured by a main chain, called
-the "relay chain," which in turn manages and connects its shards ("parachains/parathreads") into a
-single, homogenous solution.
+model. Danksharding plans to utilize a rollup-centric approach by focusing on data availability. The
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem is secured by a main chain,
+called the "relay chain," which in turn manages and connects its shards ("parachains/parathreads")
+into a single, homogenous solution.
 
 The primary differences between the two protocols are:
 
