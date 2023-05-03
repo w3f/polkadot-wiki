@@ -102,7 +102,7 @@ Ethereum operates as a single chain, homogenous chain. Each Ethereum node is div
 layers: the **consensus** and **execution** layers. Each layer handles the block validation
 information, peer discovery, and Proof-of-Stake of the Ethereum client.
 
-Polkadot's primary component is the **relay chain**, which is a homogenous **sharded** network. The
+Polkadot's primary component is the **relay chain**, which hosts heterogeneous **shards** called parachains. The
 relay chain aggregates information from its shards, the parachains, where Polkadot validators agree
 upon consensus and finality. In essence, one can look at Polkadot as a series of **runtimes**, which
 are state transition functions used to describe parachains (shards), as well as Polkadot itself.
