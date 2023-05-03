@@ -11,7 +11,7 @@ Polkadot is the first fully sharded production-grade blockchain protocol.
 The current protocol of Ethereum does not implement sharding and it is the main focus of [the next major upgrade](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq#What-is-Danksharding).
 Similar to Polkadot and its parachains, Ethereum has goals of being a multi-sharded network. When a
 network is **sharded**, this implies that it is capable of executing multiple (and often many) state
-transitions in parallel in a scalable manner.
+transitions in parallel in a scalable manner. One key difference is that Polkadot parachains are heterogeneous shards while Ethereum will have homogeneous shards. In other words, each parachain can have its own state transition logic whereas on Ethereum, all the shards use the same state transition logic.
 
 Both protocols are blockchains but serve fundamentally different roles in how they are utilized:
 
