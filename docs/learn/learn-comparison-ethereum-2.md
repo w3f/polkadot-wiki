@@ -21,7 +21,7 @@ Both protocols are blockchains but serve fundamentally different roles in how th
   to partake in a shared security model. Polkadot acts as a **meta-protocol** that allows for
   multiple protocols to coexist and work together.
 
-:::warning
+:::info
 
 It's important to note that the "Ethereum" here refers to what was previously known as "Eth2" or
 "Ethereum 2.0". For more concrete details regarding the subsequent iterations of Ethereum, please
