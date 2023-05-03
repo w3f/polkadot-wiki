@@ -17,7 +17,7 @@ Both protocols are blockchains but serve fundamentally different roles in how th
 
 - Ethereum is a general-purpose blockchain that hosts the Ethereum Virtual Machine, an environment
   for executing smart contracts.
-- Polkadot is a sharded, multi-chain protocol that hosts multiple chains and provides a way for them
+- Polkadot is a heterogeneous sharded, multi-chain protocol that hosts multiple chains and provides a way for them
   to partake in a shared security model. Polkadot acts as a **meta-protocol** that allows for
   multiple protocols to coexist and work together.
 
