@@ -7,19 +7,23 @@ keywords: [ethereum, Ethereum, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---
 
-Polkadot is the first fully sharded production-grade blockchain protocol.
-The current protocol of Ethereum does not implement sharding and it is the main focus of [the next major upgrade](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq#What-is-Danksharding).
+Polkadot is the first fully sharded production-grade blockchain protocol. The current protocol of
+Ethereum does not implement sharding and it is the main focus of
+[the next major upgrade](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq#What-is-Danksharding).
 Similar to Polkadot and its parachains, Ethereum has goals of being a multi-sharded network. When a
 network is **sharded**, this implies that it is capable of executing multiple (and often many) state
-transitions in parallel in a scalable manner. One key difference is that Polkadot parachains are heterogeneous shards while Ethereum will have homogeneous shards. In other words, each parachain can have its own state transition logic whereas on Ethereum, all the shards use the same state transition logic.
+transitions in parallel in a scalable manner. One key difference is that Polkadot parachains are
+heterogeneous shards while Ethereum will have homogeneous shards. In other words, each parachain can
+have its own state transition logic whereas on Ethereum, all the shards use the same state
+transition logic.
 
 Both protocols are blockchains but serve fundamentally different roles in how they are utilized:
 
 - Ethereum is a general-purpose blockchain that hosts the Ethereum Virtual Machine, an environment
   for executing smart contracts.
-- Polkadot is a heterogeneous sharded, multi-chain protocol that hosts multiple chains and provides a way for them
-  to partake in a shared security model. Polkadot acts as a **meta-protocol** that allows for
-  multiple protocols to coexist and work together.
+- Polkadot is a heterogeneous sharded, multi-chain protocol that hosts multiple chains and provides
+  a way for them to partake in a shared security model. Polkadot acts as a **meta-protocol** that
+  allows for multiple protocols to coexist and work together.
 
 :::info
 
@@ -82,10 +86,10 @@ parachain represents a shard in the Polkadot network.
 
 :::
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core logic.
-As mentioned earlier, each shard (i.e., [parachain](learn-parachains.md)) has a unique state transition function
-(sometimes called a **runtime**). Applications can exist either within a single shard or across
-shards by composing logic to create [cross-consensus (XCM)](learn-xcm.md) interactions.
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each shard hosts core logic. As
+mentioned earlier, each shard (i.e., [parachain](learn-parachains.md)) has a unique state transition
+function (sometimes called a **runtime**). Applications can exist either within a single shard or
+across shards by composing logic to create [cross-consensus (XCM)](learn-xcm.md) interactions.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
 ([Wasm](./learn-wasm.md)) as a "meta-protocol". A shard's state transition function can be abstract
@@ -98,16 +102,16 @@ As previously mentioned, Ethereum is a **general-purpose** virtual machine that 
 programs are written in Solidity, whereas Polkadot is a meta-protocol for other parachains to
 connect and interact with each other.
 
-Ethereum operates as a single chain, homogenous chain. Each Ethereum node is divided into two
-layers: the **consensus** and **execution** layers. Each layer handles the block validation
-information, peer discovery, and Proof-of-Stake of the Ethereum client.
+Ethereum operates as a single, homogeneous chain. Each Ethereum node is divided into two layers: the
+**consensus** and **execution** layers. Each layer handles the block validation information, peer
+discovery, and Proof-of-Stake of the Ethereum client.
 
-Polkadot's primary component is the **relay chain**, which hosts heterogeneous **shards** called parachains. The
-relay chain aggregates information from its shards, the parachains, where Polkadot validators agree
-upon consensus and finality. In essence, one can look at Polkadot as a series of **runtimes**, which
-are state transition functions used to describe parachains (shards), as well as Polkadot itself.
-Like Ethereum, Polkadot clients abstract away many of their responsibilities into various components
-built using Substrate.
+Polkadot's primary component is the **relay chain**, which hosts heterogeneous **shards** called
+parachains. The relay chain aggregates information from its shards, the parachains, where Polkadot
+validators agree upon consensus and finality. In essence, one can look at Polkadot as a series of
+**runtimes**, which are state transition functions used to describe parachains (shards), as well as
+Polkadot itself. Like Ethereum, Polkadot clients abstract away many of their responsibilities into
+various components built using Substrate.
 
 ### Forks, Upgrades, and Governance
 
