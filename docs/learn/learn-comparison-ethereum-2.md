@@ -230,7 +230,7 @@ The primary differences between the two protocols are:
 
 - All shards in Ethereum represent the same state transitions, while
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lets shards have an abstract state
-  transition function.
+  transition function implementation.
 - Governance processes in Ethereum are planned to be off-chain and thus require coordination for a
   hard fork to enact governance decisions. In contrast, in
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
