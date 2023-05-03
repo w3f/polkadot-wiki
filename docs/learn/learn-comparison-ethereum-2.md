@@ -15,21 +15,21 @@ transitions in parallel in a scalable manner.
 
 Both protocols are blockchains but serve fundamentally different roles in how they are utilized:
 
-- Ethereum is a general-purpose blockchain that serves as the host of the Ethereum Virtual Machine,
-  an environment for executing smart contracts.
-- Polkadot is a sharded, multi-chain protocol that serves as the host for multiple chains and
-  provides a way for them to partake in a shared security model. Polkadot acts as a
-  **meta-protocol** that allows for multiple protocols to coexist and work together.
+- Ethereum is a general-purpose blockchain that hosts the Ethereum Virtual Machine, an environment
+  for executing smart contracts.
+- Polkadot is a sharded, multi-chain protocol that hosts multiple chains and provides a way for them
+  to partake in a shared security model. Polkadot acts as a **meta-protocol** that allows for
+  multiple protocols to coexist and work together.
 
 :::warning
 
 It's important to note that the "Ethereum" here refers to what was previously known as "Eth2" or
-"Ethereum 2.0". For more concrete details regarding the next iterations of Ethereum, please refer to
-the [Ethereum Roadmap](https://ethereum.org/en/roadmap/).
+"Ethereum 2.0". For more concrete details regarding the subsequent iterations of Ethereum, please
+refer to the [Ethereum Roadmap](https://ethereum.org/en/roadmap/).
 
-It's relevant to mention that some upgrades may not be active for Ethereum, but are described as a
-part of this comparison to Polkadot. It is possible that some of these goals/upgrades may change to
-reflect the general direction of Ethereum.
+It's relevant to mention that some upgrades may not be active for Ethereum but are described as a
+part of this comparison to Polkadot. Some of these goals/upgrades may change to reflect the general
+direction of Ethereum.
 
 :::
 
@@ -48,7 +48,7 @@ architecture:
 
 Polkadot can't and does not directly run something like a virtual machine for smart contracts.
 However, several of its parachains can (and does). Parachains on Polkadot can even run an EVM for
-executing smart contracts are written in Solidity, Ethereum's native smart contract language.
+executing smart contracts written in Solidity, Ethereum's native smart contract language.
 
 In the context of blockchain, "sharding" refers to the parallelization of state transition
 (transaction) execution. The way Ethereum and Polkadot deal with scalability and sharding is quite
@@ -65,15 +65,15 @@ alternative over "shard chains" and works by storing blobs.
 Danksharding will allow for much more space to be utilized per block on Ethereum, where blobs of
 data will be verifiable for an amount of time before being pruned from the network. These blobs will
 have to be held for an amount of time, implying a level of data availability that validators must
-have. Essentially, this approach will further enable data availability at layer one and further
-enable layer two protocols on Ethereum to flourish.
+have. This approach will enable data availability at layer one and further enable layer two
+protocols on Ethereum to flourish.
 
 In contrast, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a purely sharded
 network. It prioritizes data availability as an integral part of the block validation process.
-Parallelized interactions between parachains, which are the **shards** of the Polkadot network, also
-take advantage of this factor. Whereas Ethereum primarily focuses on making large amounts of data
-available for validation for an amount of time, Polkadot's parallelization factor allows for
-verification to happen on the protocol level without the need for a layer two solution.
+Parallelized interactions between parachains, the **shards** of the Polkadot network, also take
+advantage of this factor. Whereas Ethereum primarily focuses on making large amounts of data
+available for validation for a portion of time, Polkadot's parallelization factor allows
+verification to happen on the protocol level without needing a layer two solution.
 
 :::note
 
@@ -94,27 +94,26 @@ execute it within a Wasm environment.
 
 ## Architectural Differences: Polkadot and Ethereum
 
-As previously mentioned, Ethereum is a **general-purpose** virtual machine that is able to run
-sandboxed programs are written in Solidity, whereas Polkadot is a meta-protocol for other parachains
-to connect and interact with each other.
+As previously mentioned, Ethereum is a **general-purpose** virtual machine that can run sandboxed
+programs are written in Solidity, whereas Polkadot is a meta-protocol for other parachains to
+connect and interact with each other.
 
 Ethereum operates as a single chain, homogenous chain. Each Ethereum node is divided into two
-layers: the **consensus** and **execution** layers. Each layer is respectively responsible for
-handling the block validation information, peer discovery, and Proof-of-Stake of the Ethereum
-client.
+layers: the **consensus** and **execution** layers. Each layer handles the block validation
+information, peer discovery, and Proof-of-Stake of the Ethereum client.
 
 Polkadot's primary component is the **relay chain**, which is a homogenous **sharded** network. The
-relay chain aggregates information from its shards, the parachains, where consensus and finality are
-agreed upon by Polkadot validators. In essence, one can look at Polkadot as a series of
-**runtimes**, which are state transition functions used to describe parachains (shards), as well as
-Polkadot itself. Like Ethereum, Polkadot clients abstract away many of their responsibilities into
-various components built using Substrate.
+relay chain aggregates information from its shards, the parachains, where Polkadot validators agree
+upon consensus and finality. In essence, one can look at Polkadot as a series of **runtimes**, which
+are state transition functions used to describe parachains (shards), as well as Polkadot itself.
+Like Ethereum, Polkadot clients abstract away many of their responsibilities into various components
+built using Substrate.
 
 ### Forks, Upgrades, and Governance
 
-Ethereum governance is done off-chain, where a variety of stakeholders come to a consensus through
-some other medium other than the protocol itself. Upgrades on Ethereum will follow the standard
-hard-fork procedure, requiring validators to upgrade their nodes to implement protocol changes.
+Ethereum governance is done off-chain, where various stakeholders come to a consensus through some
+medium other than the protocol itself. Upgrades on Ethereum will follow the standard hard-fork
+procedure, requiring validators to upgrade their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
 [governance](./learn-opengov.md) with a multicameral system. There are several avenues to issue
@@ -193,8 +192,7 @@ parachain in the network.
 [Cross-Consensus Message Passing Format (XCM)](./learn-xcm.md) for parachains to send arbitrary
 messages to each other. Parachains open connections with each other and can send messages via their
 established channels. Given that [collators](./learn-collator.md) will need to be full nodes of the
-relay chain as well, they will be connected and will be able to relay messages from parachain A to
-parachain B.
+relay chain as well, they will be connected and can relay messages from parachain A to parachain B.
 
 Messages do not pass through the relay chain. Only validity proofs and channel operations do (open,
 close, etc.). This enhances scalability by keeping data on the edges of the system.
@@ -205,7 +203,7 @@ SPREE carries additional guarantees about provenance and interpretation by the r
 
 ## DApp Support and Development
 
-Ethereum mostly supports a form of smart contract development using Solidity. These contracts are
+Ethereum mainly supports a form of smart contract development using Solidity. These contracts are
 immutable, and cannot be changed once published on-chain.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart contracts through
