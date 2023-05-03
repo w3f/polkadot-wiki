@@ -144,7 +144,7 @@ blocks - RandDAO/LMD for Ethereum and [BABE](./learn-consensus.md#badass-babe-sa
 There are two main differences between Ethereum and
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus:
 
-1.  Ethereum finalizes batches of blocks according to periods called "epochs ."The current plan is
+1.  Ethereum finalizes batches of blocks according to periods called "epochs". The current plan is
     to have 32 blocks per epoch and finalize them all in one round. With a predicted block time of
     12 seconds, the expected time to finality is 6 minutes (12 minutes maximum). See
     [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
