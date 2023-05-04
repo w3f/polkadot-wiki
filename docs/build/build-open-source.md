@@ -197,7 +197,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Validator monitoring        | [ONE-T](https://github.com/turboflakes/one-t) 🟡, [SubVT](https://github.com/helikon-labs/subvt) 🔴, [P.A.N.I.C.](https://github.com/SimplyVC/panic) 🔴, [Polkalert](https://github.com/galacticcouncil/polkalert) 🔴, [B-Harvest](https://github.com/nodebreaker0-0/substrate/tree/prometheus_v0.3) 🔴, [nmonpolkadot](https://github.com/stakezone/nmonpolkadot) 🔴, [Polkadot-K8s-Monitor](https://github.com/ironoa/polkadot-k8s-monitor) 🟡, [Polkadot-Watcher](https://github.com/w3f/polkadot-watcher) 🟡, [1KV Telegram Bot](https://github.com/helikon-labs/polkadot-kusama-1kv-telegram-bot) 🔴|
 | Validator payout management | [Substrate validator auto payout](https://github.com/Colm3na/substrate-auto-payout) 🔴, [Polkadot Payouts](https://github.com/w3f/polkadot-payouts) 🔴, [staking-payouts CLI](https://github.com/emostov/staking-payouts) 🟡, [Payctl](https://github.com/stakelink/substrate-payctl) 🔴, [crunch](https://github.com/turboflakes/crunch) 🟡|
 | Staking Miner | [Staking Miner v2](https://github.com/paritytech/staking-miner-v2) 🟢|
-| Nominator Tools | [Validator Selection](https://github.com/miepsik/validators_selection) 🟡|
+| Nominator Tools | [Validator Selection](https://github.com/miepsik/validators_selection) 🟡, [Polkanalyzer](https://github.com/filippoweb3/polkanalyzer) 🟡|
 
 ### Signatures
 
