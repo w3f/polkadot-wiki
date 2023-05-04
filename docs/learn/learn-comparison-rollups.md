@@ -7,37 +7,61 @@ keywords: [rollups, polkadot, scalability]
 slug: ../learn-comparisons-rollups
 ---
 
-Layer 2 networks are notorious as being the way forward for blockchain scalability.
+Layer 2 networks are notorious as being the way forward for blockchain scalability. Often, layer 2
+solutions are needed to scale an existing layer 1 blockchain. They take advantage of the layer 1's
+security and functionality to build an additional layer that is often faster, reduces fees, and
+solves other platform-specific issues.
 
 Rollups are a layer-2 scaling solution. A layer-2 network of nodes would be responsible for "rolling
-up" transactions by batching them before publishing them to the main Ethereum chain. A rolled-up
-transaction could include thousands of transactions. Rollups increase TPS and can reduce transaction
-fees significantly. Rollups are a broad category of solutions encompassing many possible
-architectures and implementations. Rollups on Ethereum are similar to
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains, where you prove some
-set of transactions happened on another "mini-chain".
+up" transactions by batching them before publishing them to the main Ethereum chain, usually through
+a network of sequencers. This mechanism could include thousands of transactions. Rollups increase
+TPS and can reduce transaction fees significantly. Rollups are a broad category of solutions
+encompassing many possible architectures and implementations.
 
-Note that the bitcoin Lightning Network at a high levels allows to achieve similar goals (i.e.
-unload unnecessary storage on chain), but it is not a rollup. The Lightning Network lets you lock
-bitcoin up on-chain, then puts it in channels, that are all shared between different nodes. Bitcoin
-can then be routed across these channels. There's no "lightning blockchain".
+Polkadot implements this functionality at the native level, allowing for shared security and
+scalability of for the relay chain and respective parachains. Shared security is the equivalent to
+EVM-based optimistic and zero-knowledge rollups, but instead of it being implemented as a secondary
+layer, Polkadot guarantees native security and scalability for each of its parachains. In some ways,
+the way Polkadot handles the coordination of data from parachains into an aggregated, representative
+state is somewhat similar to how layer 2 rollups function.
 
-### Optimistic Rollups
+## Optimistic Rollups
 
-Using an "innocent until proven guilty" approach, optimistic rollups will accept transaction
-commitments to the network while validating for errors and security issues. If something is invalid,
-validators can submit fraudulent commitment proof (fraud-proofs). These proofs will be used to
-reject fraudulent transactions. This way, transaction results and proofs can be stored on the main
-network, but transaction data can be stored elsewhere. Optimistic rollups can improve transaction
-scalability 10-100x and write transactions to Ethereum as
-[`calldata`](https://ethereum.stackexchange.com/questions/52989/what-is-calldata), reducing gas fees
-significantly. Examples of optimistic rollup solutions include
-[Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and
-[Unipig](https://unipig.exchange/welcome). See
-[ETH Docs: Optimistic Rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/)
-for more information.
+Optimistic rollups are an (often) interactive scaling method for layer one blockchains. Optimistic
+rollups assume _optimisically_ that every proposed transaction is valid by default (unless
+challenged).
 
-### Zero-knowledge Rollups
+In order to mitigate potentially invalid transactions, optimistic rollups introduce a _challenge
+period_ in which participants may challenge a suspect rollup. A fraud-proving scheme is in place to
+allow for a number of _fraud proofs_ to be submitted, rendering the rollup as valid. During the
+challenge period, a set of state changes may be disputed, come to a resolution, or merely be
+included if no challenge is presented (and the required proofs are in place).
+
+While optimistic rollups provide scalability, they have both pros and cons to their approach:
+
+**Pros:**
+
+- They aren't limited by the type of state change - any state change can be included, meaning
+  existing apps do not have to account for it.
+- They can be parallelized for scalability.
+- A substantial amount of data can fit within a single rollup
+  ([in the case of Ethereum, for example](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/#scaling-ethereum-with-optimistic-rollups),
+  tens of thousands of transactions in a single state transition).
+
+**Cons:**
+
+- Transaction censorship and centralization are concerns - sequencers / layer two nodes can be
+  compromised in this regard.
+- Challenge periods could take a substantial amount of time to pass, increasing time for the rollup
+  to finalize onto the layer one network.
+- Due to their generalist nature of including any state change for their parent network, optimistic
+  rollups can run into gas limitations on Ethereum, or network congestion.
+
+Optimistic rollups are often used in the Ethereum ecosystem. Examples of optimistic EVM-based rollup
+solutions include [Optimisim](https://www.optimism.io/), [Arbitrum](https://bridge.arbitrum.io/) and
+[Unipig](https://unipig.exchange/welcome).
+
+## Zero-knowledge Rollups
 
 To reach consensus on a traditional block execution, blockchains rely on re-execution of every
 transaction. We do not want to allow malicious transactions that cause an endless loop, as it would
@@ -83,17 +107,7 @@ to learn more about the current limitations of ZK rollups.
 
 :::
 
-### Blob Transactions
-
-Until the full spec of ETH 2.0 sharding is implemented, "blob-transactions" would be designed with
-sharding but without being sharded transactions. Blob transactions carry a large amount of data that
-the EVM cannot access but whose commitment can be accessed. Compared to full sharding, where the
-space allocated for this additional transaction data will be ~16MB, this EIP allows for a reduced
-cap corresponding to a target of ~1MB and a limit of ~2MB, which the rollup transactions can
-utilize. See [EIP-4844 definition](https://eips.ethereum.org/EIPS/eip-4844?ref=hackernoon.com) for
-more information.
-
-### Polkadot and Kusama
+## Polkadot - Native Shared Security
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains can be considered as a
 different way to achieve what rollups do. The sharding model already exists as the Relay-chain being
