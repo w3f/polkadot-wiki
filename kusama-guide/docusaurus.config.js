@@ -156,13 +156,13 @@ module.exports = {
       contextualSearch: true,
     },
     /* Banner / Announcement bar */
-    // announcementBar: {
-    //   id: "banner",
-    //   content:
-    //     'Join Polkadot @ Consensus 2023. Meet the largest multichain ecosystem in Web3. <a href="https://polkadot.network/ecosystem/events/consensus-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=consensus%202023&utm_content=notification">Learn more 👉</a>',
-    //   backgroundColor: '#e6007a',
-    //   textColor: 'white',
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: "banner",
+      content:
+        'Registration for Polkadot Decoded 2023 is now open! Join Polkadot’s flagship conference on June 28-29.  <a href="https://polkadot.network/ecosystem/events/decoded-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=decoded23&utm_content=notification" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
   },
 };
