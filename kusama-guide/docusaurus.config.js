@@ -159,7 +159,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'Polkadot Decoded 2023 registration is open! Join June 28-29.  <a href="https://polkadot.network/ecosystem/events/decoded-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=decoded23&utm_content=notification" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
+        'Polkadot Decoded 2023 registration is open! Join June 28-29. <a href="https://polkadot.network/ecosystem/events/decoded-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=decoded23&utm_content=notification" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,
