@@ -64,9 +64,9 @@ you face any issues, join the rooms individually.
 
 - [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:web3.foundation) - General room for
   talk about Kusama.
-- [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders) - Room for
+- [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:parity.io) - Room for
   validators learning about setting up a node.
-- [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) - Governance, and a place to
+- [Kusama Direction](https://matrix.to/#/#kusama:parity.io) - Governance, and a place to
   discuss the future of Kusama.
 
 ### Technical
