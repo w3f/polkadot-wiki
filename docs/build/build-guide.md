@@ -155,6 +155,11 @@ platform you use, so it is necessary to keep as much data off-chain as possible.
 using the listed options on the [decentralized storage](build-storage.md) page to keep the data and
 submitting only the content address on chain.
 
+#### Building a smart contract
+
+Please see the [smart contracts guide](build-smart-contracts.md) for how to get started on building
+a smart contract.
+
 ---
 
 ### Building a parachain or parathread
@@ -162,7 +167,3 @@ submitting only the content address on chain.
 Please see the [parachain development guide](build-parachains.md) for how to get started on building
 a parachain or parathread.
 
-### Building a smart contract
-
-Please see the [smart contracts guide](build-smart-contracts.md) for how to get started on building
-a smart contract.
