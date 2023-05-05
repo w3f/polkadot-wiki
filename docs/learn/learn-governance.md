@@ -318,65 +318,49 @@ Let's use the image below as an example.
 ![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
 
 If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
-for it to pass since we applied **Positive Turnout Bias**.
-
-In contrast, when it has a 75% turnout, the tally of _aye_ votes has to reach 54%, which means that
-the super-majority required decreases as the turnout increases.
+for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
+the tally of _aye_ votes has to reach 54%, which means that the super-majority required decreases as
+the turnout increases.
 
 When the council proposes a new proposal through unanimous consent, the referendum would be put to a
-vote using **Negative Turnout Bias**. In this case, it is easier to pass this proposal with low
-turnout and requires a super-majority to reject. As more token holders participate in voting, the
-bias approaches a plain majority carries.
+vote using **Negative Turnout Bias**. Referring to the above image, when a Council referendum only
+has 25% turnout, the tally of _aye_ votes has to reach 34% for it to pass, while if the turnout
+increases to 75% the tally of _aye_ votes has to reach 46%. In short, when the turnout rate is low,
+a super-majority is required to reject the proposal, which means a lower threshold of _aye_ votes
+must be reached. As turnout increases towards 100%, it becomes a simple majority.
 
-Referring to the above image, when a referendum only has 25% turnout, the tally of _aye_ votes has
-to reach 34% for it to pass, while if the turnout increases to 75% the tally of _aye_ votes has to
-reach 46%. In short, when the turnout rate is low, a super-majority is required to reject the
-proposal, which means a lower threshold of _aye_ votes have to be reached, but as turnout increases
-towards 100%, it becomes a simple majority.
-
-Also, we need the following information and apply one of the formulas listed below to calculate the
-voting result. For example, let's use the public proposal as an example, so the
-`Super-Majority Approve` formula will be applied. There is no strict quorum, but the super-majority
-required increases with lower turnout.
-
-```
-approve - the number of aye votes
-
-against - the number of nay votes
-
-turnout - the total number of voting tokens (does not include conviction)
-
-electorate - the total number of tokens issued in the network
-```
+Here below we provide the formulas for calculating voting results.
 
 ### Super-Majority Approve
 
-A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low
+A **positive turnout bias**, whereby a heavy super-majority of aye votes is required to carry at low
 turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
+Where `approve` is the number of _aye_ votes, `against` is the number of _nay_ votes, `turnout` is
+the total number of voting tokens excluding [voluntary locking](#voluntary-locking), and
+`electorate` is the total number of token issued in the network.
+
 ### Super-Majority Against
 
-A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low
-turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
+A **negative turnout bias**, whereby a heavy super-majority of _nay_ votes is required to reject at
+low turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
 
 ### Simple-Majority
 
-Majority-carries, a simple comparison of votes; if there are more aye votes than nay, then the
+Majority-carries, a simple comparison of votes. If there are more _aye_ votes than _nay_, then the
 proposal is carried, no matter how much stake votes on the proposal.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
-_To know more about where these above formulas come from, please read the
-[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs)_.
+To know more about where these above formulas come from, please read the
+[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
 
-Example:
-
-Assume we only have {{ polkadot: 1_500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in total
-and that this is a public proposal.
+Let's assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in
+total and that this is a public proposal.
 
 - John: {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
 - Peter: {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}
@@ -402,13 +386,17 @@ JJ: Votes `No` for a 16 week lock period =>
 
 ![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
 
-Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate
-the result. `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout
-is low, therefore, based on the above result, the referendum will be rejected. In addition, only the
-winning voter's tokens are locked. If the voters on the losing side of the referendum believe that
-the outcome will have negative effects, their tokens are transferrable so they will not be locked
-into the decision. Moreover, winning proposals are autonomously enacted only after some enactment
-period.
+Since the above example is a public referendum, **Super-Majority Approve** would be used to
+calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
+turnout is low, therefore, based on the above result, the referendum will be rejected.
+
+:::info only the winning voter's tokens are locked.
+
+If the voters on the losing side of the referendum believe that the outcome will have negative
+effects, their tokens are transferrable so they will not be locked into the decision. Winning
+proposals are autonomously enacted after the [enactment period](#enactment).
+
+:::
 
 ## Frequently Asked Questions
 
