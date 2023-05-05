@@ -302,8 +302,8 @@ Quorum Biasing**, which is used to alter the effective super-majority required t
 more difficult for a proposal to pass depending on voting power (turnout) and origin (Council or
 public).
 
-Adaptive Quorum Biasing creates three tallying mechanisms: majority carries, super-majority approve,
-and super-majority against. They all equate to a simple majority-carries system at 100% turnout, and
+Adaptive Quorum Biasing creates three tallying mechanisms: majority carry, super-majority approve,
+and super-majority against. They all equate to a simple majority-carry system at 100% turnout, and
 their selection depends on which entity proposed the proposal and whether all Council members voted
 yes (in the case of Council Referenda).
 
