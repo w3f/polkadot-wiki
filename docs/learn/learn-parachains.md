@@ -166,7 +166,7 @@ maintain the stronger property of single block composability.
 ## Parachain Slot Acquisition
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports a limited number of
-parachains, currently estimated to be about 100. As the number of slots is limited, there are
+parachains, currently estimated to be at least 100. As the number of slots is limited, there are
 several ways to allocate them:
 
 - Governance granted parachains, or "system parachains"
