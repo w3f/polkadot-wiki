@@ -230,6 +230,71 @@ For the third type (i.e. proposals submitted as part of the enactment of a prior
 be set as desired. Emergency proposals deal with major problems with the network and need to be
 "fast-tracked". These will have a shorter enactment period.
 
+## Council
+
+To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+introduces the idea of a "council". The council is an on-chain entity comprising several actors,
+each represented as an on-chain account. On
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
+{{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
+
+Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
+three tasks of governance:
+
+- Proposing sensible referenda
+- Cancelling uncontroversially dangerous or malicious referenda
+- Electing the [Technical Committee](#technical-committee).
+
+For a referendum to be proposed by the council, a strict majority of members must be in favor, with
+no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal.
+If, after a cool-down period, the proposal is resubmitted, they may not veto it a second time.
+
+Council motions which pass with a 3/5 (60%) super-majority - but without reaching unanimous
+support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
+case that all members of the council vote in favor of a motion, the vote is considered unanimous and
+becomes a referendum with [negative quorum biasing](#adaptive-quorum-biasing).
+
+:::note Explainer video on the Council
+
+For more information, check out our
+[video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
+
+:::
+
+### Prime Members
+
+The council, being an instantiation of
+[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
+implements what's called a _prime member_ whose vote acts as the default for other members that fail
+to vote before the timeout.
+
+The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
+
+The purpose of having a prime member of the council is to ensure a quorum, even when several members
+abstain from a vote. Council members might be tempted to vote a "soft rejection" or a "soft
+approval" by not voting and letting the others vote. With the existence of a prime member, it forces
+councillors to be explicit in their votes or have their vote counted for whatever is voted on by the
+prime.
+
+## Technical Committee
+
+The Technical Committee(TC) was introduced in the
+[Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
+of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
+TC is composed of the teams that have successfully implemented or specified either a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
+added or removed from the TC via a simple majority vote of the [Council](#council).
+
+The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
+faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
+proposals by using the Democracy pallet, and is the only origin that is able to trigger the
+fast-tracking functionality. We can think of the TC as a "unique origin" that cannot generate
+proposals, but are able to fast track existing proposals.
+
+Fast-tracked referenda are the only type of referenda that can be active alongside another active
+referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
+same time. Voting on one does not prevent a user from voting on the other.
+
 ## Adaptive Quorum Biasing
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of **Adaptive
@@ -344,71 +409,6 @@ winning voter's tokens are locked. If the voters on the losing side of the refer
 the outcome will have negative effects, their tokens are transferrable so they will not be locked
 into the decision. Moreover, winning proposals are autonomously enacted only after some enactment
 period.
-
-## Council
-
-To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-introduces the idea of a "council". The council is an on-chain entity comprising several actors,
-each represented as an on-chain account. On
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
-{{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
-
-Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
-three tasks of governance:
-
-- Proposing sensible referenda
-- Cancelling uncontroversially dangerous or malicious referenda
-- Electing the [Technical Committee](#technical-committee).
-
-For a referendum to be proposed by the council, a strict majority of members must be in favor, with
-no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal.
-If, after a cool-down period, the proposal is resubmitted, they may not veto it a second time.
-
-Council motions which pass with a 3/5 (60%) super-majority - but without reaching unanimous
-support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
-case that all members of the council vote in favor of a motion, the vote is considered unanimous and
-becomes a referendum with [negative quorum biasing](#adaptive-quorum-biasing).
-
-:::note Explainer video on the Council
-
-For more information, check out our
-[video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
-
-:::
-
-### Prime Members
-
-The council, being an instantiation of
-[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
-implements what's called a _prime member_ whose vote acts as the default for other members that fail
-to vote before the timeout.
-
-The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
-
-The purpose of having a prime member of the council is to ensure a quorum, even when several members
-abstain from a vote. Council members might be tempted to vote a "soft rejection" or a "soft
-approval" by not voting and letting the others vote. With the existence of a prime member, it forces
-councillors to be explicit in their votes or have their vote counted for whatever is voted on by the
-prime.
-
-## Technical Committee
-
-The Technical Committee(TC) was introduced in the
-[Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
-of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
-TC is composed of the teams that have successfully implemented or specified either a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
-added or removed from the TC via a simple majority vote of the [Council](#council).
-
-The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
-faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
-proposals by using the Democracy pallet, and is the only origin that is able to trigger the
-fast-tracking functionality. We can think of the TC as a "unique origin" that cannot generate
-proposals, but are able to fast track existing proposals.
-
-Fast-tracked referenda are the only type of referenda that can be active alongside another active
-referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
-same time. Voting on one does not prevent a user from voting on the other.
 
 ## Frequently Asked Questions
 
