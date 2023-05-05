@@ -24,14 +24,6 @@ Learn about the upcoming changes to the governance on
 
 :::
 
-:::caution Upcoming governance changes
-
-The contents in this guide are subject to change as per the recent efforts to modify
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Governance. See this
-[pull request](https://github.com/paritytech/substrate/pull/10195) for more details\*\*.
-
-:::
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) state-transition function stored on-chain defined in a
 platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for several on-chain
