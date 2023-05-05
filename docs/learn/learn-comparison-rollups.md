@@ -1,16 +1,17 @@
 ---
 id: learn-comparisons-rollups
-title: Layer 2 / Rollups
-sidebar_label: Layer 2 / Rollups
-description: Comparisons between various rollup/L2 protocols and how they relate to Polkadot.
+title: Layer Two and Rollups
+sidebar_label: Layer Two and Rollups
+description:
+  Comparisons between various rollup and layer two protocols and how they relate to Polkadot.
 keywords: [rollups, polkadot, scalability]
 slug: ../learn-comparisons-rollups
 ---
 
-Layer 2 networks are notorious as being the way forward for blockchain scalability. Often, layer 2
-solutions are needed to scale an existing layer 1 blockchain. They take advantage of the layer 1's
-security and functionality to build an additional layer that is often faster, reduces fees, and
-solves other platform-specific issues.
+layer two networks are notorious as being the way forward for blockchain scalability by off-loading
+the majority of computation off-chain. Often, layer two solutions are needed to scale an existing
+layer one blockchain. They take advantage of the layer one's security and functionality to build an
+additional layer that is often faster, reduces fees, and solves other platform-specific issues.
 
 Rollups are a layer-2 scaling solution. A layer-2 network of nodes would be responsible for "rolling
 up" transactions by batching them before publishing them to the main Ethereum chain, usually through
@@ -23,7 +24,7 @@ scalability of for the relay chain and respective parachains. Shared security is
 EVM-based optimistic and zero-knowledge rollups, but instead of it being implemented as a secondary
 layer, Polkadot guarantees native security and scalability for each of its parachains. In some ways,
 the way Polkadot handles the coordination of data from parachains into an aggregated, representative
-state is somewhat similar to how layer 2 rollups function.
+state is somewhat similar to how layer two rollups function.
 
 ## Optimistic Rollups
 
@@ -63,49 +64,30 @@ solutions include [Optimisim](https://www.optimism.io/), [Arbitrum](https://brid
 
 ## Zero-knowledge Rollups
 
-To reach consensus on a traditional block execution, blockchains rely on re-execution of every
-transaction. We do not want to allow malicious transactions that cause an endless loop, as it would
-compromise every validator's resources and the liveness of the chain. Therefore chains like Ethereum
-have the concept of gas, so the amount of computation per block is bounded. So even though you might
-have a notion of Turing completeness, there is actually a limit on how many operations you can
-perform. In addition, as the number of validators scales, the amount of redundant computation scales
-linearly as well, which is inconvenient.
+Zero-knowledge, or ZK rollups are a non-interactive method that utilizes zero-knowledge proofs to
+compute the validity of a particular set of state changes. Whereas optimistic rollups relied on
+fraud proofs, ZK rollups rely on cryptographic validation in the form of ZK proofs.
 
-The redundant execution of all transactions can be avoided. The majority of the network only runs a
-`verify` operation (that should be sublinear in the size of the original transaction) while the
-block producer incurs heavy computation to produce the proof. The challenge for any proof system
-architect is expressing the (arbitrary) computation as a circuit. For a number of reasons (e.g.
-calculations need to be done over a finite field), the circuits that the proof systems "accept" are
-fairly large and are slower to work with, than executing the computation directly (i.e. natively),
-requiring up to 1,000,000x work for the prover. If you want to execute an extremely complicated
-program, you might run into circuits which are simply too large for the prover to handle, or take
-too long.
+Zero-knowledge rollups are significantly faster in terms of finalization, as the validity proof
+handles the nuance of ensuring a rollup is valid or not. However, they ZK rollups often suffer from
+performance due to their complexity, and are hard to integrate in resource constrained environments.
+Because Turing-completeness is also difficult to achieve due to this computational overhead, their
+ability to be generalized is reduced. However, they have an extremely promising future in solving
+some of the problems of optimistic rollups.
 
-[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) can be used as a "proof"
-of valid transactions when batching, effectively reducing the transaction payload to be the size of
-a zk-proof. This, similar to the optimistic approach, allows transaction data to be abstracted away
-and reduced significantly in size before being committed to the main chain. Similar to most on-chain
-transactions and states, a ZK-rollup's state is represented as a
-[merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), and the cryptographic hash of the tree's
-root (i.e. the Merkle root) is what is stored on-chain. This allows for efficient batching and
-tracking of changes to the transaction states. Any changes to the state will require the operator
-who initiated the changes to compute a new state root and commit it to the on-chain contract. If the
-contract verifies the new state as valid, then provided root hash becomes the new state root. See
-[ETH Docs: ZK Rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/) for more
-information.
+**Pros:**
 
-:::note
+- They don't require a large amount of data availability. Often, the proof is enough to ensure
+  validity.
+- Because the proof is immediately available, finality is also instantaneous.
+- They overall have a very promising future, as they haven't reached their full potential yet.
 
-Currently, Turing completeness is difficult in ZK rollups, as a trusted setup can be a requirement
-to run the ZK Proofs and the soundness of the cryptography used needs to meet specific standards.
-Note that, depending on which type of a ZK is used, a trusted setup is not necessarily required (see
-see
-[STARK vs SNARK](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)).
-See
-[this article](https://a16zcrypto.com/measuring-snark-performance-frontends-backends-and-the-future/)
-to learn more about the current limitations of ZK rollups.
+**Cons:**
 
-:::
+- Suffer from the same problems that other layer two solutions face in terms of centralization of
+  layer two operators.
+- They are computationally expensive and ZK circuits are difficult to implement.
+- The potential for congestion is still a factor, as the amount of data could still be problematic.
 
 ## Polkadot - Native Shared Security
 
