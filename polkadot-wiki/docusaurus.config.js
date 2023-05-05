@@ -154,6 +154,10 @@ module.exports = {
           {
             to: '/docs/learn-cryptography',
             from: ['/docs/learn-randomness']
+          },
+          {
+            to: '/docs/build-guide',
+            from: ['/docs/build-build-with-polkadot']
           }
         ],
         createRedirects: function (existingPath) {

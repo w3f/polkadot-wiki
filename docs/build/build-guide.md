@@ -4,7 +4,7 @@ title: Builders Starter's Guide
 sidebar_label: Builders Starter's Guide
 description: Start building with Polkadot/Kusama.
 keywords: [build, how to build, develop, parachain, smart contract]
-slug: ../build-build-with-polkadot
+slug: ../build-guide
 ---
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
@@ -155,14 +155,16 @@ platform you use, so it is necessary to keep as much data off-chain as possible.
 using the listed options on the [decentralized storage](build-storage.md) page to keep the data and
 submitting only the content address on chain.
 
+:::info Building a smart contract
+
+Please see the [smart contracts guide](build-smart-contracts.md) for how to get started on building
+a smart contract.
+
+:::
+
 ---
 
 ### Building a parachain or parathread
 
 Please see the [parachain development guide](build-parachains.md) for how to get started on building
 a parachain or parathread.
-
-### Building a smart contract
-
-Please see the [smart contracts guide](build-smart-contracts.md) for how to get started on building
-a smart contract.
