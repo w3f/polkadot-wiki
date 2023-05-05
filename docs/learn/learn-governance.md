@@ -36,39 +36,52 @@ together to administrate a network upgrade decision. No matter whether the propo
 the public (token holders) or the [Council](#council), it finally will have to go through a
 referendum to let all holders, weighted by stake, make the decision.
 
+## Proposals
+
+Referenda can be started in different ways:
+
+- Publicly submitted proposals
+- Proposals submitted by the council, either through a majority or unanimously
+- Proposals submitted as part of the [enactment](#enactment) of a prior referendum
+- Emergency proposals submitted by the [Technical Committee](#technical-committee) and approved by
+  the [Council](#council)
+
+### Cancelling
+
+A proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
+do so, or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
+burned.
+
+Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
+last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of
+the runtime that the proposal would institute.
+
+If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
+it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
+
+### Blacklisting
+
+A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
+referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
+proposals that could be submitted with the same hash.
+
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
+system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
+re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
+proposals from being submitted - a single changed character in a proposal's text will also change
+the hash of the proposal, rendering the per-hash blacklist invalid.
+
 ## Referenda
 
-Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
-_proposal_ associated with it that takes the form of a **privileged function** call in the runtime.
-That function includes the most powerful **call**: `set_code`, which can switch out the entire code
-of the runtime, achieving what would otherwise require a "hard fork".
+Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific proposal
+associated with it that takes the form of a **privileged function** call in the runtime. That
+function includes the most powerful **call**: `set_code`, which can switch out the entire code of
+the runtime, achieving what would otherwise require a "hard fork".
 
 Referenda are discrete events, have a fixed period where voting happens, and then are tallied and
-the function call is executed if the vote is approved. Referenda are always binary; your only
+the function call is executed if the vote is approved. Referenda are always binary: your only
 options in voting are "aye", "nay", or abstaining entirely.
-
-## Proposals and Enactment
-
-Referenda can be started in one of several ways:
-
-- Publicly submitted proposals;
-- Proposals submitted by the council, either through a majority or unanimously;
-- Proposals submitted as part of the enactment of a prior referendum;
-- Emergency proposals submitted by the [Technical Committee](#technical-committee) and approved by
-  the [Council](#council).
-
-Referenda is considered _baked_ if it is closed and tallied. Again, assuming the proposal was
-approved, it would be scheduled for **enactment**. Referenda is considered _unbaked_ if it is
-pending an outcome, i.e. being voted on.
-
-All referenda have an enactment delay or **enactment period** associated with them. This is the
-period between the referendum ending and (assuming the proposal was approved) the changes being
-enacted.
-
-For the first two ways that a referendum is launched, the enactment period is a fixed time of
-{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For the third type, it can be set as
-desired. Emergency proposals deal with major problems with the network and need to be
-"fast-tracked". These will have a shorter enactment period.
 
 ### Public Referenda
 
@@ -81,23 +94,29 @@ Note that this may be different from the absolute number of endorsements; for in
 accounts bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a
 single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}.
 
-Public referenda will have a **positive turnout bias**, meaning that they will require a heavy
-supermajority of _aye_ votes to pass at low turnouts, but as turnout increases towards 100% it will
-require a simple majority of _aye_ votes to pass (i.e. 51% wins) - see
-[Adaptive Quorum Biasing](#adaptive-quorum-biasing).
+Public referenda will have a [**positive turnout bias**](#adaptive-quorum-biasing), meaning that
+they will require a heavy supermajority of _aye_ votes to pass at low turnouts, but as turnout
+increases towards 100% it will require a simple majority of _aye_ votes to pass (i.e. 51% wins).
 
 Note that the bonded tokens will be released once the proposal is tabled (that is, brought to a
 vote), and that there can be a maximum of 100 public proposals in the proposal queue.
 
+:::info turnout
+
+The total number of voting tokens excluding conviction or [voluntary locking](#voluntary-locking).
+
+:::
+
 ### Council Referenda
 
 Unanimous Council - When all members of the council agree on a proposal, it can be moved to a
-referendum that will have a **negative turnout bias**. Briefly, it will require heavy supermajority
-of _nay_ votes to reject at low turnouts, but as turnout increases towards 100% it will require a
-simple majority of _nay_ votes to fail (i.e. 51% wins).
+referendum that will have a [**negative turnout bias**](#adaptive-quorum-biasing). Briefly, it will
+require heavy supermajority of _nay_ votes to reject at low turnouts, but as turnout increases
+towards 100% it will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the
-referendum will have a **neutral turnout bias** with simple majority-carries (51% wins).
+referendum will have a [**neutral turnout bias**](#adaptive-quorum-biasing) with simple
+majority-carries (51% wins).
 
 There can only be one active referendum at any given time, except when there is also an emergency
 referendum in progress.
@@ -196,15 +215,42 @@ Even though combined both Logan and Kevin vote with more
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
 is less than Peter, leading to their voting power counting as less.
 
+## Enactment
+
+Referenda are considered _baked_ if they are closed and tallied. Assuming a referendum is approved,
+it will be scheduled for **enactment**. Referenda are considered _unbaked_ if they are pending an
+outcome, i.e. being voted on.
+
+All referenda have an enactment delay or **enactment period** associated with them. This is the
+period between a referendum ending and (assuming it was approved) the changes being enacted.
+
+For the first two ways that a referendum is launched (i.e. public and council referenda), the
+enactment period is a fixed time of {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}.
+For the third type (i.e. proposals submitted as part of the enactment of a prior referendum), it can
+be set as desired. Emergency proposals deal with major problems with the network and need to be
+"fast-tracked". These will have a shorter enactment period.
+
 ## Adaptive Quorum Biasing
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of **Adaptive
 Quorum Biasing**, which is used to alter the effective super-majority required to make it easier or
-more difficult for a proposal to pass depending on voting power (turnout) and origin.
+more difficult for a proposal to pass depending on voting power (turnout) and origin (Council or
+public).
+
+Adaptive Quorum Biasing creates essentially three tallying mechanisms: majority carries,
+super-majority approve, and super-majority against. They all equate to a simple majority-carries
+system at 100% turnout, and their selection depends on which entity proposed the proposal and
+whether all Council members voted yes (in the case of Council Referenda).
+
+|          **Entity**          |                   **Metric**                   |
+| :--------------------------: | :--------------------------------------------: |
+|            Public            | Positive Turnout Bias (Super-Majority Approve) |
+| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
+| Council (Majority agreement) |                Simple Majority                 |
+
+Let's use the image below as an example.
 
 ![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
-
-Let's use the above image as an example.
 
 If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
 for it to pass since we applied **Positive Turnout Bias**.
@@ -222,18 +268,6 @@ to reach 34% for it to pass, while if the turnout increases to 75% the tally of 
 reach 46%. In short, when the turnout rate is low, a super-majority is required to reject the
 proposal, which means a lower threshold of _aye_ votes have to be reached, but as turnout increases
 towards 100%, it becomes a simple majority.
-
-All three tallying mechanisms - majority carries, super-majority approve, and super-majority
-against - equate to a simple majority-carries system at 100% turnout.
-
-Depending on which entity proposed the proposal and whether all council members voted yes, there are
-three different scenarios. We can use the following table for reference.
-
-|          **Entity**          |                   **Metric**                   |
-| :--------------------------: | :--------------------------------------------: |
-|            Public            | Positive Turnout Bias (Super-Majority Approve) |
-| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
-| Council (Majority agreement) |                Simple Majority                 |
 
 Also, we need the following information and apply one of the formulas listed below to calculate the
 voting result. For example, let's use the public proposal as an example, so the
@@ -342,31 +376,41 @@ For more information, check out our
 
 :::
 
-### Canceling
+### Prime Members
 
-A proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
-do so, or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
-burned.
+The council, being an instantiation of
+[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
+implements what's called a _prime member_ whose vote acts as the default for other members that fail
+to vote before the timeout.
 
-Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
-last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of
-the runtime that the proposal would institute.
+The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
 
-If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
-it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
+The purpose of having a prime member of the council is to ensure a quorum, even when several members
+abstain from a vote. Council members might be tempted to vote a "soft rejection" or a "soft
+approval" by not voting and letting the others vote. With the existence of a prime member, it forces
+councillors to be explicit in their votes or have their vote counted for whatever is voted on by the
+prime.
 
-### Blacklisting
+## Technical Committee
 
-A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
-hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
-proposals that could be submitted with the same hash.
+The Technical Committee(TC) was introduced in the
+[Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
+of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
+TC is composed of the teams that have successfully implemented or specified either a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
+added or removed from the TC via a simple majority vote of the [Council](#council).
 
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
-system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
-re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
-proposals from being submitted - a single changed character in a proposal's text will also change
-the hash of the proposal, rendering the per-hash blacklist invalid.
+The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
+faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
+proposals by using the Democracy pallet, and is the only origin that is able to trigger the
+fast-tracking functionality. We can think of the TC as a "unique origin" that cannot generate
+proposals, but are able to fast track existing proposals.
+
+Fast-tracked referenda are the only type of referenda that can be active alongside another active
+referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
+same time. Voting on one does not prevent a user from voting on the other.
+
+## Frequently Asked Questions
 
 ### How to be a council member?
 
@@ -420,42 +464,6 @@ For the top-N (say 4 in this example) runners-up, they can remain and their vote
 next election. After round 2, even though candidates A & B get the same number of votes in this
 round, candidate A gets elected because after adding the older unused approvals, it is higher than
 B.
-
-### Prime Members
-
-The council, being an instantiation of
-[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
-implements what's called a _prime member_ whose vote acts as the default for other members that fail
-to vote before the timeout.
-
-The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
-
-The purpose of having a prime member of the council is to ensure a quorum, even when several members
-abstain from a vote. Council members might be tempted to vote a "soft rejection" or a "soft
-approval" by not voting and letting the others vote. With the existence of a prime member, it forces
-councillors to be explicit in their votes or have their vote counted for whatever is voted on by the
-prime.
-
-## Technical Committee
-
-The Technical Committee(TC) was introduced in the
-[Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
-of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
-TC is composed of the teams that have successfully implemented or specified either a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
-added or removed from the TC via a simple majority vote of the [Council](#council).
-
-The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
-faulty runtime updates, or add new but battle-tested features. The TC has the power to fast-track
-proposals by using the Democracy pallet, and is the only origin that is able to trigger the
-fast-tracking functionality. We can think of the TC as a "unique origin" that cannot generate
-proposals, but are able to fast track existing proposals.
-
-Fast-tracked referenda are the only type of referenda that can be active alongside another active
-referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
-same time. Voting on one does not prevent a user from voting on the other.
-
-## Frequently Asked Questions
 
 ### How can I appeal to the council to enact a change on my behalf?
 
