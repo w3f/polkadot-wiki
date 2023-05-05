@@ -35,17 +35,16 @@ The contents in this guide are subject to change as per the recent efforts to mo
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) state-transition function stored on-chain defined in a
 platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for several on-chain
-voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval
-voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
+voting mechanisms such as referenda with the novel concept of
+[Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
+protocol must be agreed upon by stake-weighted referenda.
 
 ## Mechanism
 
 To make any changes to the network, the idea is to compose active token holders and the council
 together to administrate a network upgrade decision. No matter whether the proposal is proposed by
-the public (token holders) or the council, it finally will have to go through a referendum to let
-all holders, weighted by stake, make the decision.
-
-To better understand how the council is formed, please read [this section](#council).
+the public (token holders) or the [Council](#council), it finally will have to go through a
+referendum to let all holders, weighted by stake, make the decision.
 
 ## Referenda
 
