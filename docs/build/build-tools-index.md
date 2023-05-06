@@ -27,7 +27,7 @@ Please see the [Wallets](./../general/wallets.md) page.
 - [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain
   explorer.
 - [3xpl.com](https://3xpl.com/polkadot) - Fastest ad-free universal block explorer and JSON API with Polkadot support.
-- [Blockchair.com](https://blockchair.com/bitcoin) - Universal blockchain explorer and search engine with Polkadot support.
+- [Blockchair.com](https://blockchair.com/polkadot) - Universal blockchain explorer and search engine with Polkadot support.
 - [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi
   support across 40+ parachains.
 
