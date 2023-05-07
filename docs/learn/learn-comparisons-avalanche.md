@@ -97,7 +97,7 @@ hierarchical collection of systems used to reach finality on Avalanche:
 Compared to Polkadot, Avalanche uses an asynchronous hybrid system that is based on a classical and
 Nakomoto approach. Polkadot uses a synchronous hybrid model that combines
 [BABE](learn-consensus#block-production-babe) and
-[GRADNPA](learn-consensus#finality-gadget-grandpa), where BABE is the algorithm used to build blocks
+[GRANDPA](learn-consensus#finality-gadget-grandpa), where BABE is the algorithm used to build blocks
 in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to
 adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single
 new blocks.
