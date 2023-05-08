@@ -77,15 +77,15 @@ better understand the direction of OpenGov.
 
 ## Mechanism
 
-In Governance v1, active token holders and the council together administrate a network upgrade
-decision. No matter whether the proposal is proposed by the public (token holders) or the council,
-it will eventually have to go through a referendum to let all holders, weighted by stake and
-conviction, make the decision.
+In Governance v1, active token holders (public) and the council together administrate a network
+upgrade decision. No matter whether the proposal is proposed by the public or the council, it will
+eventually have to go through a referendum to let all holders, weighted by stake and conviction,
+make the decision.
 
-The Council has fulfilled its role as the representative of passive token holders (public), guardian
-of the treasury and initiator of legislation, but is often seen as a centralized entity. To further
-decentralize {{ pokadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes to
-return the responsibilities of the council back to the community.
+The Council has fulfilled its role as the representative of the public, guardian of the treasury and
+initiator of legislation, but is often seen as a centralized entity. To further decentralize
+{{ pokadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes to return the
+responsibilities of the council back to the public.
 
 OpenGov reflects its decentralised character is by:
 
@@ -93,16 +93,7 @@ OpenGov reflects its decentralised character is by:
 - Dissolving the current Council collective
 - Allowing users to delegate voting power in more ways to community members
 
-## Referenda
-
-Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
-_proposal_ associated with it that takes the form of a privileged function call in the runtime (that
-includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
-achieving what would otherwise require a "[hard fork](./../general/glossary#hard-fork)").
-
-Referenda are discrete events that have a fixed voting period. When the voting period ends and the
-votes are tallied, the function call (`set_code`) is made if the vote is approved. Referenda are
-always binary; your only options in voting are "aye", "nay", or abstaining entirely.
+## Proposals
 
 In Governance v1, referenda can be started in one of several ways:
 
@@ -146,9 +137,52 @@ predetermined on the pallet.
 For additional details, see the
 [Origin and Tracks](./../maintain/maintain-guides-opengov.md#origins-and-tracks) section.
 
-### Proposing a Referendum
+### Cancelling
 
-#### Public Referenda
+:::info Cancelling Referende in Governace v1
+
+See [this page](./learn-governance.md#cancelling) for more information about cancelling referenda in
+Governance v1.
+
+:::
+
+In OpenGov, there is a special operation called **Cancelation** for intervening with a proposal that
+is already being voted on. The operation will immediately reject an ongoing referendum regardless of
+its status. There is also a provision to ensure the deposit of the proposer is slashed, if the
+proposal is malicious or spam.
+
+Cancelation itself is a governance operation which must be voted upon by the network in order to be
+executed. Cancelation comes with its own Origin and Track which has a low lead-time and
+Approval/Support curves with slightly sharper reductions in their thresholds for passing, given that
+it is invoked with a sense of urgency.
+
+### Blacklisting
+
+A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
+referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
+proposals that could be submitted with the same hash, i.e.
+[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
+text to make a suggestion.
+
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
+system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
+re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
+proposals from being submitted - a single changed character in a proposal's text will also change
+the hash of the proposal, rendering the per-hash blacklist invalid.
+
+## Referenda
+
+Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
+_proposal_ associated with it that takes the form of a privileged function call in the runtime (that
+includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
+achieving what would otherwise require a "[hard fork](./../general/glossary#hard-fork)").
+
+Referenda are discrete events that have a fixed voting period. When the voting period ends and the
+votes are tallied, the function call (`set_code`) is made if the vote is approved. Referenda are
+always binary; your only options in voting are "aye", "nay", or abstaining entirely.
+
+### Public Referenda
 
 In Governance V1, anyone can propose a referendum by depositing the minimum amount of tokens for a
 certain period (number of blocks). If someone agrees with the proposal, they may deposit the same
@@ -195,7 +229,7 @@ The criteria for entering the **Deciding** state is a follows:
 Once the three criteria listed above are met, the referendum moves to the **Deciding** state. The
 votes of the referendum are now counted towards the outcome.
 
-#### Council Referenda (v1)
+### Council Referenda (v1)
 
 Unanimous Council - When all members of the council agree on a proposal, it can be moved to a
 referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of
@@ -208,7 +242,7 @@ referendum can also be voted upon, but it will be majority-carries (51% wins).
 There can only be one active referendum at any given time, except when there is also an emergency
 referendum in progress.
 
-#### Voting Timetable
+## Voting Timetable
 
 In Governance v1, every
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
@@ -230,7 +264,7 @@ The proposal is eligible to get approved during OpenGov's track specific
 [decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). If not approved by
 then end of this period, the proposal is automatically rejected.
 
-#### Voting on a referendum (OpenGov)
+## Voting on a referendum (OpenGov)
 
 In OpenGov, a proposal is approved if it meets the requirements for **approval** and **support**,
 removing the adaptive quorum biasing system.
@@ -258,7 +292,7 @@ proposed but is also subject to a minimum value based on the Track. More powerfu
 larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal
 may bring.
 
-#### Voluntary Locking
+### Voluntary Locking
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes a concept called
 `Voluntary Locking` which allows token holders to increase their voting power by declaring how long
@@ -291,12 +325,12 @@ transferring these tokens to another account.
 Votes are always "counted" at the same time, which is at the end of the voting period. This is not
 impacted by the locking period of the tokens.
 
-#### Adaptive Quorum Biasing
+## Adaptive Quorum Biasing
 
 Adaptive quorum biasing is no longer used in OpenGov and has been replaced with the Approval/Support
 system.
 
-### Multirole Delegation
+## Multirole Delegation
 
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
 body delegated by voters to compensate for the fact that many choose to not take part in day-to-day
@@ -324,29 +358,6 @@ censorship-free.
 For a step-by-step outline of how to delegate voting power in OpenGov, check out the
 [Delegating Voting Power](./../maintain/maintain-guides-opengov.md#delegating-voting-power) section
 on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
-
-### Canceling Referenda
-
-In Governance v1, a proposal can be canceled if the [Technical Committee](#technical-committee)
-unanimously agrees to do so, or if Root origin (e.g. sudo) triggers this functionality. A canceled
-proposal's deposit is burned.
-
-Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
-last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of
-the runtime that the proposal would institute.
-
-If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
-it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
-
-In OpenGov, there is a special operation called **Cancelation** for intervening with a proposal that
-is already being voted on. The operation will immediately reject an ongoing referendum regardless of
-its status. There is also a provision to ensure the deposit of the proposer is slashed, if the
-proposal is malicious or spam.
-
-Cancelation itself is a governance operation which must be voted upon by the network in order to be
-executed. Cancelation comes with its own Origin and Track which has a low lead-time and
-Approval/Support curves with slightly sharper reductions in their thresholds for passing, given that
-it is invoked with a sense of urgency.
 
 ## Technical Committee
 
@@ -441,21 +452,6 @@ This system enables the ability to have a new parallel Track (Whitelisted-Root O
 parameters allow for a shorter voting turnaround. Through an open and transparent process, a body of
 global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have
 determined that the action is both safe and time-critical.
-
-### Blacklisting
-
-A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
-hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
-proposals that could be submitted with the same hash, i.e.
-[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
-text to make a suggestion.
-
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
-system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
-re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
-proposals from being submitted - a single changed character in a proposal's text will also change
-the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ## Resources
 
