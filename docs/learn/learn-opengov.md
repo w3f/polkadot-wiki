@@ -215,32 +215,23 @@ more present in OpenGov.
 
 ## Voting Timetable
 
-In Governance v1, every
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
-days, a new referendum will be up for a vote, assuming there is at least one proposal in one of the
-queues. There is a queue for Council-approved proposals and a queue for publicly submitted
-proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
+:::info Voting timetable in Governace v1
 
-The "top" proposal is determined by the amount of stake bonded behind it. If the current queue
-selection attempts to create a referendum with no proposals (it is empty) and proposals are waiting
-in the other queue, the top proposal in the other queue will become a referendum.
+See [this page](./learn-governance.md#voting-timetable) for more information about the voting
+timetable in Governance v1.
 
-Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
-emergency referendum occurring at the same time as a regular referendum (either public or
-council-proposed) is the only time that multiple referenda will be able to be voted on
-simultaneously.
+:::
 
 The proposal is eligible to get approved during OpenGov's track specific
 [decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). If not approved by
 then end of this period, the proposal is automatically rejected.
 
-## Voting on a referendum (OpenGov)
+## Voting on a Referendum
 
 :::info Adaptive Quorum Biasing is deprecated
 
-[Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) is no longer used in
-OpenGov and has been replaced with the Approval/Support system.
+In OpenGov, [Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) has been
+replaced with the Approval/Support system.
 
 :::
 

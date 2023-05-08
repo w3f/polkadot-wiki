@@ -132,10 +132,12 @@ system, and we assume solid justifications back changes proposed by the council.
 
 ## Voting Timetable
 
-Every {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, a new referendum will come up
-for a vote, assuming there is at least one proposal in one of the queues. There is a queue for
-Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted
-upon alternates between the top proposal in the two queues.
+Every
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+days, a new referendum will come up for a vote, assuming there is at least one proposal in one of
+the queues. There is a queue for Council-approved proposals and a queue for publicly submitted
+proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
 
 The "top" proposal is determined by the amount of stake bonded behind it. If the given queue, whose
 turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in the
