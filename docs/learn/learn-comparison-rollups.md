@@ -8,7 +8,14 @@ keywords: [rollups, polkadot, scalability]
 slug: ../learn-comparisons-rollups
 ---
 
-layer two networks are notorious as being the way forward for blockchain scalability by off-loading
+:::note
+
+This comparison covers general information regarding two popular rollup mechanisms that are used to
+scale blockchains, and how Polkadot deals with scalability.
+
+:::
+
+Layer two networks are notorious as being the way forward for blockchain scalability by off-loading
 the majority of computation off-chain. Often, layer two solutions are needed to scale an existing
 layer one blockchain. They take advantage of the layer one's security and functionality to build an
 additional layer that is often faster, reduces fees, and solves other platform-specific issues.
@@ -91,15 +98,44 @@ some of the problems of optimistic rollups.
 
 ## Polkadot - Native Shared Security
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains can be considered as a
-different way to achieve what rollups do. The sharding model already exists as the Relay-chain being
-the beacon chain and parachains being the shards. Parachains have a similar implementation of an
-Optimistic rollup and a similar architecture to a ZK-rollup. Parachain logic runs a validity proof.
-The proof (the Approval Protocol) is interactive, unlike ZK-rollups, which are non-interactive.
-Additionally, unlike ZK-rollups, there are no difficulties in creating parachains with
-Turing-complete logic. This is a fundamental weakness of ZK rollups, as Turing completeness within
-ZK circuits is difficult (if not impossible) to achieve. In addition, Optimistic rollups are
-required by architecture to have their 'sequencer selection' logic live in their host contract. This
-is because the smart contract needs to accept blocks that may be bad and may not be executed and
-needs to filter out spam. Parachains, like ZK rollups, can encapsulate the sequencer-selection logic
-within their validation code.
+Whereas rollups are considered solutions for layer two protocols,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} include this functionality natively
+through its Parachains Protocol. The Parachains Protocol, which is how Polkadot handles the
+**sharding** of its network is meant to accomplish the combined goals of providing security,
+scalability, and availability.
+
+The sharding model already exists as the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain providing a mechanism for
+its parachains to verify their collective state and communicate with one another. Parachains have
+similarities to aspects of optimistic and zero-knowledge rollups.
+
+Each shard, or parachain, is equipped with a unique state transition function. This function ensures
+that communication to the relay chain remains valid. Each state transition function, also referred
+to as a runtime, is written in Wasm. Any state transition function is valid so long as it abides by
+the Polkadot protocol.
+
+Each STF runs a validity proof. The proof (the Approval Protocol) is interactive, unlike ZK-rollups,
+which are non-interactive. Additionally, unlike ZK-rollups, there are no difficulties in creating
+parachains with Turing-complete logic, as each parachain is also a full-fledged blockchain.
+
+In addition, Optimistic rollups are required by architecture to have their 'sequencer selection'
+logic live in their host contract. This is because the smart contract needs to accept blocks that
+may be bad and may not be executed and needs to filter out spam. Parachains, like ZK rollups, can
+encapsulate the sequencer-selection logic within their validation code.
+
+**Pros:**
+
+- Protocol level sharding, shared security, and interoperability.
+- Each shard has a low-barrier of entry in terms of development, as anything that compiles to Wasm
+  is a valid target.
+- Finality is usually under a minute.
+- Data availability is built-in through validators.
+- No layer two implies less of a risk as far as the centralization of sequencers or other layer two
+  operators.
+
+**Cons:**
+
+- Wasm could be a performance bottleneck, as it's slower than making native calls.
+- A considerable amount of data is required in the PoV (proof of validity) function for proving
+  parachain state.
+- Other limitations within the Parachains Protocol to keep parachains compatible.
