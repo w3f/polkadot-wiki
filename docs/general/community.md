@@ -47,12 +47,12 @@ community members. The application we use most often to interact with the Matrix
 rooms below. Note that this is a newer feature and may not be supported by your Matrix client. If
 you face any issues, join the rooms individually.
 
-- [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) - General room
-  for talk about Polkadot.
+- [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) - General room for
+  talk about Polkadot.
 - [Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) - Room
   for validators learning about setting up a node.
-- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:parity.io) - Governance, and a
-  place to discuss the future of Polkadot.
+- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:parity.io) - Governance, and a place
+  to discuss the future of Polkadot.
 - [Polkadot Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is happening
   in the Polkadot ecosystem, published every weekday except holidays
 
@@ -66,8 +66,8 @@ you face any issues, join the rooms individually.
   talk about Kusama.
 - [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:parity.io) - Room for
   validators learning about setting up a node.
-- [Kusama Direction](https://matrix.to/#/#kusama:parity.io) - Governance, and a place to
-  discuss the future of Kusama.
+- [Kusama Direction](https://matrix.to/#/#kusama:parity.io) - Governance, and a place to discuss the
+  future of Kusama.
 
 ### Technical
 

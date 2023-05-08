@@ -11,8 +11,8 @@ import Tracks from "./../../components/Referenda-Tracks";
 
 :::info OpenGov is not live on Polkadot yet
 
-OpenGov is already deployed on Kusama Network. For background information about OpenGov, please refer to this
-[dedicated Wiki document](../learn/learn-opengov.md).
+OpenGov is already deployed on Kusama Network. For background information about OpenGov, please
+refer to this [dedicated Wiki document](../learn/learn-opengov.md).
 
 :::
 

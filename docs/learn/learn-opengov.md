@@ -15,7 +15,8 @@ import Fellowship from "./../../components/Fellowship";
 
 :::info Participating to OpenGov
 
-For participating in OpenGov, please refer to this [dedicated Wiki page](../maintain/maintain-guides-opengov.md).
+For participating in OpenGov, please refer to this
+[dedicated Wiki page](../maintain/maintain-guides-opengov.md).
 
 :::
 
