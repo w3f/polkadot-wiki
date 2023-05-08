@@ -13,6 +13,13 @@ import VLTable from "./../../components/Voluntary-Locking";
 
 import Fellowship from "./../../components/Fellowship";
 
+:::caution The contents in this document are subject to change
+
+The governance protocol has already undergone a couple iterations (see
+[Governance V1](./learn-governance.md)) with more changes in the pipeline.
+
+:::
+
 :::info Participating to OpenGov
 
 For participating in OpenGov, please refer to this
@@ -24,13 +31,6 @@ For participating in OpenGov, please refer to this
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
-
-:::caution The contents in this document are subject to change
-
-The governance protocol has already undergone a couple iterations (v1 and v2) with more changes in
-the pipeline (v2.5).
-
-:::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralised governance
 system (v1) was comprised of three main components.
