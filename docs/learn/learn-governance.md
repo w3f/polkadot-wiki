@@ -196,8 +196,8 @@ only prohibited from transferring these tokens to another account.
 
 :::
 
-Votes are still "counted" at the same time (at the end of the voting period), no matter for how long
-the tokens are locked.
+Votes are always "counted" at the same time (at the end of the voting period), no matter for how
+long the tokens are locked.
 
 See below an example that shows how voluntary locking works.
 

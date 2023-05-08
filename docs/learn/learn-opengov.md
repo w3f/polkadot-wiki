@@ -121,7 +121,7 @@ ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefor
 are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be
 predetermined on the pallet.
 
-### Cancelling
+### Cancelling and Blacklisting
 
 :::info Cancelling Referenda in Governace v1
 
@@ -141,10 +141,12 @@ executed. Cancelation comes with
 low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for
 passing, given that it is invoked with a sense of urgency.
 
-### Blacklisting
+:::info Blacklisting
 
 Blacklisting referenda in OpenGov is
 [the same as in Governance v1](./learn-governance.md#blacklisting).
+
+:::
 
 ## Referenda
 
@@ -204,18 +206,12 @@ The criteria for entering the **Deciding** state is a follows:
 Once the three criteria listed above are met, the referendum moves to the **Deciding** state. The
 votes of the referendum are now counted towards the outcome.
 
-### Council Referenda (v1)
+:::info Council Referenda
 
-Unanimous Council - When all members of the council agree on a proposal, it can be moved to a
-referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of
-stake voting, the smaller the amount necessary for it to pass - see
-[Adaptive Quorum Biasing](#adaptive-quorum-biasing)).
+With the Council's dissolution, [council referenda](./learn-governance.md#council-referenda) are no
+more present in OpenGov.
 
-Majority Council - When agreement from only a simple majority of council members occurs, the
-referendum can also be voted upon, but it will be majority-carries (51% wins).
-
-There can only be one active referendum at any given time, except when there is also an emergency
-referendum in progress.
+:::
 
 ## Voting Timetable
 
@@ -274,38 +270,12 @@ proposed but is also subject to a minimum value based on the Track. More powerfu
 larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal
 may bring.
 
-### Voluntary Locking
+:::info Voluntary Locking
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes a concept called
-`Voluntary Locking` which allows token holders to increase their voting power by declaring how long
-they are willing to lock up their tokens, hence, the number of votes for each token holder will be
-calculated using the following formula:
+Voluntary locking in OpenGov is
+[the same as in Governance v1](./learn-governance.md#voluntary-locking).
 
-```
-votes = tokens * conviction_multiplier
-```
-
-The `conviction multiplier` increases the vote multiplier by one every time the number of lock
-periods double.
-
-{{ polkadot: <VLTable network="polkadot"/> :polkadot }}
-{{ kusama: <VLTable network="kusama"/> :kusama }}
-
-The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.voteLockingPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }}
-days. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction
-by 5.5. For additional information regarding the timeline of governance events, check out the
-governance section on the
-{{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance). :polkadot }}
-{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance). :kusama }}
-
-While a token is locked, you can still use it for voting and staking; you are only prohibited from
-transferring these tokens to another account.
-
-Votes are always "counted" at the same time, which is at the end of the voting period. This is not
-impacted by the locking period of the tokens.
+:::
 
 ## Enactment
 
