@@ -25,16 +25,16 @@ Learn about the upcoming changes to the governance on
 :::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
-mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain defined in a
-platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for several on-chain
-voting mechanisms such as referenda with the novel concept of
+mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
+defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for
+several on-chain voting mechanisms such as referenda with the novel concept of
 [Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
 protocol must be agreed upon by stake-weighted referenda.
 
 To make any changes to the network, the idea is to compose active token holders and the council
 together to administrate a network upgrade decision. No matter whether the proposal is proposed by
-the public (token holders) or the [Council](#council), it finally will have to go through a vote on a
-referendum to let all holders, weighted by stake, make the decision.
+the public (token holders) or the [Council](#council), it finally will have to go through a vote on
+a referendum to let all holders, weighted by stake, make the decision.
 
 ## Proposals
 
@@ -115,8 +115,7 @@ supermajority of _nay_ votes to reject at low turnouts, but as turnout increases
 will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the
-referendum will have a [**neutral turnout bias**](#adaptive-quorum-biasing) with simple
-majority-carries (51% wins).
+referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 
 There can only be one active referendum at any given time, except when there is also an emergency
 referendum in progress.
