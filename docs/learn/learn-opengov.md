@@ -15,8 +15,10 @@ import Fellowship from "./../../components/Fellowship";
 
 :::caution The contents in this document are subject to change
 
-The governance protocol has already undergone a couple iterations (see
-[Governance V1](./learn-governance.md)) with more changes in the pipeline.
+The governance protocol has already undergone iterations (see
+[Governance V1](./learn-governance.md)). Governance is a constantly evolving protocol at this stage
+in its lifecycle. As updates for OpenGov are making their way to the networks, plans for future
+updates are already in development.
 
 :::
 
@@ -25,6 +27,8 @@ The governance protocol has already undergone a couple iterations (see
 For participating in OpenGov, please refer to this
 [dedicated Wiki page](../maintain/maintain-guides-opengov.md).
 
+**OpenGov is live on Kusama and, once rigorously tested, it will be deployed on Polkadot.**
+
 :::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
@@ -32,39 +36,31 @@ mechanism that allows it to evolve gracefully overtime at the ultimate behest of
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralised governance
-system (v1) was comprised of three main components.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first governance system
+([Governance V1](./learn-governance.md)) included three main components.
 
-1. Technical Committee - A technocratic committee to manage upgrade timelines.
-2. Council - An approval-voted, elected executive "government" to manage parameters, admin and
-   spending proposals.
-3. Referenda - A general voting system for everything else which rewarded long-term stakeholders
-   with increased influence.
+- The [Technical Committee](./learn-governance.md#technical-committee): A technocratic committee to
+  manage upgrade timelines.
+- The [Council](./learn-governance.md#council): An approval-voted, elected executive "government" to
+  manage parameters, admin and spending proposals.
+- The Public: All token holders who are not part of the Council or the Technical Committee.
 
 This system has functioned well over the first few years of operation, helping ensure appropriate
 usage of treasury funds and enabling timely upgrades and fixes. Like most early technologies, the
 systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with
 modern advancements. For example, in Governance v1 all referenda carry the same weight as only one
-referenda can be voted on at a time and the voting period can last multiple weeks. This results in
+referenda can be voted on at a time and the voting period can last multiple weeks. This resulted in
 the system favoring careful consideration of very few proposals, as opposed to broad consideration
-of many. With that being said, OpenGov (previously referred to as Governance v2 while in
-development) is here!
+of many.
 
 OpenGov changes how the practical means of day-to-day decisions are made, making the repercussions
-of referenda better scoped and agile in order to dramatically increase the number of collective
-decisions the system is able to make.
-
-**OpenGov is launched on Kusama. Once it is rigorously tested on Kusama, a proposal will be made for
-it to be deployed on Polkadot.**
+of referenda better scoped and agile in order to increase the number of collective decisions the
+system is able to make.
 
 The following content will begin by walking through many of the core principles of governance on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to
-understand the roots of governance v1 to better understand the direction of the second iteration.
-These deltas and distinctions will be highlighted throughout the various sub-topics.
-
-This being said, it is also important to remember that governance is a constantly evolving protocol
-at this stage in its lifecycle. As updates for OpenGov are making their way to the networks, plans
-for future updates are already in development.
+understand the roots of [Governance v1](./learn-governance.md) to better understand the direction of
+OpenGov.
 
 ## Premise
 
