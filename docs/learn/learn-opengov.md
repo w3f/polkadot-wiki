@@ -161,25 +161,12 @@ always binary; your only options in voting are "aye", "nay", or abstaining entir
 
 ### Public Referenda
 
-In Governance V1, anyone can propose a referendum by depositing the minimum amount of tokens for a
-certain period (number of blocks). If someone agrees with the proposal, they may deposit the same
-amount of tokens to show support
+:::info Public Referenda in Governance v1
 
-- this action is called _endorsing_. The proposal with the highest amount of bonded support will be
-  selected to be a referendum in the next voting cycle.
+See [this page](./learn-governance.md#public-referenda) for more information about public referenda
+in Governance v1.
 
-Note that this may be different from the absolute number of endorsements; for instance, three
-accounts bonding
-{{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a single DOT each. :polkadot }}
-{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. :kusama }}
-
-The bonded tokens will be released once the proposal is tabled (that is, when it is brought to a
-vote).
-
-For Governance v1, there can be a maximum of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
-public proposals in the proposal queue.
+:::
 
 In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not immediately in a state where it can end, or otherwise have its votes counted, be

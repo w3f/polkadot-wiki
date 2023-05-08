@@ -99,7 +99,10 @@ they will require a heavy supermajority of _aye_ votes to pass at low turnouts b
 increases towards 100%, it will require a simple majority of _aye_ votes to pass (i.e. 51% wins).
 
 Note that the bonded tokens will be released once the proposal is tabled (that is, brought to a
-vote), and a maximum of 100 public proposals can be in the proposal queue.
+vote), and a maximum of
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
+public proposals can be in the proposal queue.
 
 :::info turnout
 
