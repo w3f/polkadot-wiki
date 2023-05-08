@@ -33,7 +33,7 @@ protocol must be agreed upon by stake-weighted referenda.
 
 To make any changes to the network, the idea is to compose active token holders and the council
 together to administrate a network upgrade decision. No matter whether the proposal is proposed by
-the public (token holders) or the [Council](#council), it finally will have to go through a
+the public (token holders) or the [Council](#council), it finally will have to go through a vote on a
 referendum to let all holders, weighted by stake, make the decision.
 
 ## Proposals
