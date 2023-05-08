@@ -31,10 +31,18 @@ For participating in OpenGov, please refer to this
 
 :::
 
+## Premise
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
+mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
+defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)), and several on-chain
+voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval
+voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first governance system
 ([Governance V1](./learn-governance.md)) included three main components.
@@ -61,15 +69,6 @@ The following content will begin by walking through many of the core principles 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to
 understand the roots of [Governance v1](./learn-governance.md) to better understand the direction of
 OpenGov.
-
-## Premise
-
-At a high level, the network brings together various novel mechanisms, including an amorphous
-state-transition function stored on-chain and defined in a platform-neutral intermediate language
-(i.e. [WebAssembly](learn-wasm.md)) and several on-chain voting mechanisms such as referenda with
-adaptive super-majority thresholds and batch approval voting.
-
-All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## Mechanism
 
