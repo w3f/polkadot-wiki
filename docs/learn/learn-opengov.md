@@ -77,19 +77,16 @@ decision. No matter whether the proposal is proposed by the public (token holder
 it will eventually have to go through a referendum to let all holders, weighted by stake and
 conviction, make the decision.
 
-To better understand how the council is formed, please read [this section](#council).
-
-There are several changes here with OpenGov. The way the new governance model reflects its
-decentralised character is by:
-
-1. Migrating all responsibilities of Council to token holders via democracy votes
-2. Dissolving the current Council collective
-3. Allowing users to delegate voting power in more ways to community members
-
-The Council in Gov1 has fulfilled its role as the representative of passive token holders, guardian
+The Council has fulfilled its role as the representative of passive token holders (public), guardian
 of the treasury and initiator of legislation, but is often seen as a centralized entity. To further
-decentralize Polkadot and Kusama networks, OpenGov proposes to return the responsibilities of the
-council back to the community.
+decentralize {{ pokadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes to
+return the responsibilities of the council back to the community.
+
+OpenGov reflects its decentralised character is by:
+
+- Migrating all responsibilities of Council to token holders via democracy votes
+- Dissolving the current Council collective
+- Allowing users to delegate voting power in more ways to community members
 
 ## Referenda
 
