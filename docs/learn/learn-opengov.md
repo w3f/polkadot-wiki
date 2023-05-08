@@ -95,30 +95,17 @@ OpenGov reflects its decentralised character is by:
 
 ## Proposals
 
-In Governance v1, referenda can be started in one of several ways:
+:::info Starting Referenda in Governace v1
 
-1. Publicly submitted proposals;
-2. Proposals submitted by the council, either through a majority or unanimously;
-3. Proposals submitted as part of the enactment of a prior referendum;
-4. Emergency proposals submitted by the Technical Committee and approved by the Council.
+See [this page](./learn-governance.md#proposals) for more information about starting referenda in
+Governance v1.
 
-All referenda have an _enactment delay_ associated with them. This is the period between the
-referendum ending and, assuming the proposal was approved, the changes being enacted.
-
-Referenda is considered _baked_ if it is closed and tallied. Again, assuming the proposal was
-approved, it would be scheduled for enactment. Referenda is considered _unbaked_ if it is pending an
-outcome, i.e. being voted on.
-
-If a proposal is submitted by the public or council there is a fixed enactment delay period of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}
-days. Proposals submitted as part of the enactment of a prior referendum can set the enactment delay
-period as desired. Emergency proposals deal with major problems with the network that need to be
-"fast-tracked", which leads to shorter enactment times.
+:::
 
 In OpenGov, anyone is able to start a referendum at any time and they can do so as many times as
-they wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the
-flow and processing of the referenda protocol.
+they wish. Several new features, known as
+[**Origins and Tracks**](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), are
+introduced to help aid in the flow and processing of the referenda protocol.
 
 An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the
 referenda now selects an appropriate Origin for their request based on the requirements of the
@@ -134,12 +121,9 @@ ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefor
 are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be
 predetermined on the pallet.
 
-For additional details, see the
-[Origin and Tracks](./../maintain/maintain-guides-opengov.md#origins-and-tracks) section.
-
 ### Cancelling
 
-:::info Cancelling Referende in Governace v1
+:::info Cancelling Referenda in Governace v1
 
 See [this page](./learn-governance.md#cancelling) for more information about cancelling referenda in
 Governance v1.
@@ -324,6 +308,22 @@ transferring these tokens to another account.
 
 Votes are always "counted" at the same time, which is at the end of the voting period. This is not
 impacted by the locking period of the tokens.
+
+## Enactment
+
+All referenda have an _enactment delay_ associated with them. This is the period between the
+referendum ending and, assuming the proposal was approved, the changes being enacted.
+
+Referenda is considered _baked_ if it is closed and tallied. Again, assuming the proposal was
+approved, it would be scheduled for enactment. Referenda is considered _unbaked_ if it is pending an
+outcome, i.e. being voted on.
+
+If a proposal is submitted by the public or council there is a fixed enactment delay period of
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}
+days. Proposals submitted as part of the enactment of a prior referendum can set the enactment delay
+period as desired. Emergency proposals deal with major problems with the network that need to be
+"fast-tracked", which leads to shorter enactment times.
 
 ## Adaptive Quorum Biasing
 
