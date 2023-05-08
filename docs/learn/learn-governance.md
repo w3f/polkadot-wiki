@@ -25,7 +25,7 @@ Learn about the upcoming changes to the governance on
 :::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
-mechanisms, including an amorphous (abstract) state-transition function stored on-chain defined in a
+mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain defined in a
 platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for several on-chain
 voting mechanisms such as referenda with the novel concept of
 [Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
