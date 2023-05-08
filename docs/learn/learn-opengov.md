@@ -13,7 +13,7 @@ import VLTable from "./../../components/Voluntary-Locking";
 
 import Fellowship from "./../../components/Fellowship";
 
-:::caution The contents in this document are subject to change
+:::caution The content in this document is subject to change
 
 The governance protocol has already undergone iterations (see
 [Governance V1](./learn-governance.md)). Governance is a constantly evolving protocol at this stage
@@ -69,6 +69,11 @@ The following content will begin by walking through many of the core principles 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to
 understand the roots of [Governance v1](./learn-governance.md) to better understand the direction of
 OpenGov.
+
+The following content is focused on what the new OpenGov version brings to the governance on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and on the main differences with
+previous governance versions. We recommend to learn about [Governance v1](./learn-governance.md) to
+better understand the direction of OpenGov.
 
 ## Mechanism
 
