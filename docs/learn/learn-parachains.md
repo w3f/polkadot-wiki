@@ -26,18 +26,35 @@ but there is no specific need for them to be actual blockchains.
 
 ![One parachain](../assets/one-parachain.png)
 
-Due to their parallel nature, they are able to parallelize transaction processing and achieve
-scalability of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
+Due to their parallel nature, they can parallelize transaction processing and achieve scalability of
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
 [inherit the security](#shared-security) of the entire network and can communicate with other
 parachains through the [XCM](learn-xcm.md) format.
 
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
 of the collator node is to maintain a full node of the parachain, retain all necessary information
-of the parachain, and produce new block candidates to pass to the Relay Chain validators for
+about the parachain, and produce new block candidates to pass to the Relay Chain validators for
 verification and inclusion in the shared state of
-{{ polkadot: Polkadot :polkadot. }}{{ kusama: Kusama. :kusama }} The incentivization of a collator
+{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} The incentivization of a collator
 node is an implementation detail of the parachain. They are not required to be staked on the Relay
 Chain or own the native token unless stipulated by the parachain implementation.
+
+### State Transitions
+
+Like other blockchains, parachains are **deterministic state machines**. Each parachain has a
+**state**, executes a batch of transactions grouped into a block, and achieves a new state. Joe
+Petrowski provided in [this article](https://polkadot.network/blog/the-path-of-a-parachain-block/) a
+good analogy of a state with a light switch that can be either on or off. Each parachain has its own
+state, and the Relay Chain links all those states into one state, i.e. a state of states. A
+multi-chain network like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be
+viewed like one computer's state with many light switches where a **state transition function** is
+the logic to decide which switches should be toggled. Parachains have their own transition rule,
+separate economies, governance mechanisms, and users.
+
+A parachain's state is stored in a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree). Merkle
+trees have the convenient property that if some values within the tree change, this will be
+reflected in the Merkle root (in this case, the state root). One can verify the change by only
+looking at the new values and the paths that are affected within the tree.
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host requires that the state
 transitions performed on parachains be specified as a [Wasm](learn-wasm.md) executable. Proofs of
@@ -46,26 +63,26 @@ transition function (STF) that is stored on the Relay Chain by the validators be
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} acknowledges a state transition has
 occurred on a parachain. The key constraint regarding the logic of a parachain is that it must be
 verifiable by the Relay Chain validators. Verification most commonly takes the form of a bundled
-proof of a state transition known as a Proof-of-Verification (PoV) block, which is submitted to the
-validators from one or more of the parachain collators to be checked.
+proof of a state transition known as a Proof-of-Verification (PoV) block, which is submitted for
+checking to the validators from one or more parachain collators.
 
 ## Why Parachains?
 
 Parachains are a solution to two fundamental problems in blockchains:
 
 - **Scalability**: Having one blockchain for many purposes makes it difficult to scale as future
-  implementations and upgrades will likely advantage some purposes and disadvantage others. On the
-  other hand, having different blockchains will allow them to implement features themselves without
-  affecting other chains.
-- **Flexibility**: It is reasonable to state a blockchain either will be really good in solving one
-  problem or not so good trying to solve many problems. A blockchain able to specialize in solving a
-  specific problem has more leverage towards itself and its users. Parachains are purpose-built
-  blockchains highly specialized and able to take advantage from each other by cooperation.
+  implementations and upgrades will likely advantage some purposes and disadvantage others.
+  Conversely, having different blockchains will allow them to implement features without affecting
+  other chains.
+- **Flexibility**: It is reasonable to state a blockchain will either be really good at solving one
+  problem or not so good at trying to solve many problems. A blockchain specializing in solving a
+  specific problem has more leverage toward itself and its users. Parachains are purpose-built
+  blockchains are highly specialized and can take advantage of each other through cooperation.
 
 ### Shared Security
 
-Shared security, sometimes referred in documentation as _pooled security_, is one of the unique
-value propositions for chains considering to become a [parachain](learn-parachains.md) and join the
+Shared security, sometimes referred as _pooled security_, is one of the unique value propositions
+for chains considering becoming a [parachain](learn-parachains.md) and joining the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. On a high level, shared
 security means that all parachains that are connected to the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain by leasing a parachain
@@ -74,11 +91,11 @@ slot will benefit from the economic security provided by the Relay Chain
 
 The notion of shared security is different from inter-chain protocols that build on an architecture
 of bridges. For bridge protocols, each chain is considered sovereign and must maintain its own
-validator set and economic security. One concern in these protocols is on the point of scalability
-of security. For example, one suggestion to scale blockchains is that of _scale by altcoins,_ which
+validator set and economic security. One concern in these protocols is the point of scalability of
+security. For example, one suggestion to scale blockchains is that of _scale by altcoins,_ which
 suggests that transaction volumes will filter down to lower market cap altcoins as the bigger ones
 fill their blocks. A major flaw in this idea is that the lower market cap coins will have less
-economic security attached, and be easier to attack. A real life example of a 51% attack occurred
+economic security attached and be easier to attack. A real-life example of a 51% attack occurred
 recently (
 [Ethereum Classic attack on January 10, 2019](https://cointelegraph.com/news/ethereum-classic-51-attack-the-reality-of-proof-of-work)
 ), in which an unknown attacker double spent 219_500 ETC (~1.1 million USD). This was followed by
@@ -93,11 +110,11 @@ to grow the value of their coin so that it is sufficiently secure against well-f
 
 Let's compare the standard sovereign security model that exists on current proof-of-work (PoW)
 chains to that of the shared security of
-{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} Chains that are secured by their
-own security model like Bitcoin, Zcash, and their derivatives all must bootstrap their own
-independent network of miners and maintain a competitive portion of honest hashing power. Since
-mining is becoming a larger industry that increasingly centralizes on key players, it is becoming
-more real that a single actor may control enough hash power to attack a chain.
+{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} Chains secured by their security
+models, like Bitcoin, Zcash, and their derivatives, must bootstrap their independent network of
+miners and maintain a competitive portion of honest hashing power. Since mining is becoming a larger
+industry that increasingly centralizes key players, it is becoming more real that a single actor may
+control enough hash power to attack a chain.
 
 This means that smaller chains that cannot maintain a secure amount of hash power on their networks
 could potentially be attacked by a large mining cartel at the simple whim of redirecting its hash
@@ -111,33 +128,32 @@ On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, this disparit
 security will not be present. When a parachain connects to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the relay chain validators become
 the securers of that parachain's state transitions. The parachain will only have the overhead of
-needing to run a few collator nodes to keep the validators informed with the latest state
-transitions and proofs/witness. Validators will then check these for the parachains to which they
-are assigned. In this way, new parachains instantly benefit from the overall security of
+running a few collator nodes to keep the validators informed with the latest state transitions and
+proofs/witness. Validators will then check these for the parachains to which they are assigned. In
+this way, new parachains instantly benefit from the overall security of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} even if they have just been launched.
 
 ## Parachain Economies
 
-Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake
-are usually used to select the validator set to handle validation and finalization; parachains will
-not be required to do either of those things. However, since
+Parachains may have their economies with their native tokens. Schemes such as Proof-of-Stake are
+usually used to select the validator set to handle validation and finalization; parachains will not
+be required to do either of those things. However, since
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not overly particular about what
 the parachain can implement, it may be the choice of the parachain to implement a staking token, but
 it's not generally necessary.
 
-Collators may be incentivized through inflation of a native parachain token. There may be other ways
-to incentivize the collator nodes that do not involve inflating the native parachain token.
+Collators may be incentivized through the inflation of a native parachain token. There may be other
+ways to incentivize the collator nodes that do not involve inflating the native parachain token.
 
 Transaction fees in a native parachain token can also be an implementation choice of parachains.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes no hard and fast rules for how
-the parachains decide on original validity of transactions. For example, a parachain may be
+the parachains decide on the original validity of transactions. For example, a parachain may be
 implemented so that transactions must pay a minimum fee to collators to be valid. The Relay Chain
 will enforce this validity. Similarly, a parachain could not include that in their implementation,
 and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} would still enforce its validity.
 
-Parachains are not required to have their own token. If they do, it is up to the parachain to make
-the economic case for their token, not
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Parachains are not required to have their token. If they do, it is up to the parachain to make the
+economic case for their token, not {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Parachain Hubs
 
@@ -147,16 +163,16 @@ dispatch of a message from one parachain until the destination parachain receive
 the optimistic scenario, the latency for this message should be at least two blocks - one block for
 the message to be dispatched and one block for the receiving parachain to process and produce a
 block that acts upon the message. However, in some cases, we may see that the latency for messages
-is higher if many messages are in queue to be processed or if no nodes are running both of the
-parachain networks that can quickly gossip the message across the networks.
+is higher if many messages are in queue to be processed or if no nodes are running both parachain
+networks that can quickly gossip the message across the networks.
 
-Due to the necessary latency involved in sending crosschain messages, some parachains plan to become
-_hubs_ for an entire industry. For example, a parachain project [Acala](https://acala.network) is
-planning to become a hub for decentralized finance (DeFi) applications. Many DeFi applications take
-advantage of a property known as _composability_ which means that functions of one application can
-be synergistically composed with others to create new applications. One example of this includes
-flash loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the
-end of the transaction.
+Due to the necessary latency in sending crosschain messages, some parachains plan to become _hubs_
+for an entire industry. For example, a parachain project [Acala](https://acala.network) is planning
+to become a hub for decentralized finance (DeFi) applications. Many DeFi applications take advantage
+of a property known as _composability_ which means that functions of one application can be
+synergistically composed with others to create new applications. One example of this includes flash
+loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the end of
+the transaction.
 
 An issue with crosschain latency means that composability property weakens among parachains compared
 to a single blockchain. **This implication is common to all sharded blockchain designs, including
@@ -166,19 +182,18 @@ maintain the stronger property of single block composability.
 ## Parachain Slot Acquisition
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports a limited number of
-parachains, currently estimated to be at least 100. As the number of slots is limited, there are
+parachains, currently estimated to be about 100. As the number of slots is limited, there are
 several ways to allocate them:
 
 - Governance granted parachains, or "system parachains"
 - Auction granted parachains
 - Parathreads
 
-["System" parachains](#system-parachains) are allocated by
+[System parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
-[governance](learn-governance.md) system, and are deemed as part of the network's protocol, such as
-bridges to other networks or chains. These typically do not have an economic model and help remove
-
-transactions from the Relay Chain, allowing for more efficient parachain processing.
+[governance](learn-governance.md) system, and are part of the network's protocol, such as bridges to
+other networks or chains. These typically do not have an economic model and help remove transactions
+from the Relay Chain, allowing for more efficient parachain processing.
 
 [Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
 teams can either bid with their own {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens,
@@ -189,17 +204,17 @@ on a pay-as-you-go basis with an auction for each block.
 
 ### Parachain Lease Expiration
 
-When a parachain wins an auction, the tokens that it bids get reserved until the lease's end.
-Reserved balances are non-transferrable and cannot be used for staking. At the end of the lease, the
-tokens are unreserved. Parachains that have not secured a new lease to extend their slot will
-automatically become parathreads.
+When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
+balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
+are unreserved. Parachains that have not secured a new lease to extend their slot will automatically
+become parathreads.
 
 ## System Parachains
 
 System parachains are parachains that use execution cores allocated by the network's governance.
-These chains remove transactions from the Relay Chain, allowing network validators to allocate their
-resources to validating parachains. System chains are Polkadot using its own scaling technology to
-host itself.
+These chains remove transactions from the Relay Chain, allowing network validators to allocate
+resources to validating parachains. System chains are Polkadot using its scaling technology to host
+itself.
 
 See the
 [Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
@@ -213,14 +228,14 @@ Note that we still have to see the true potential of parachains and what it is l
 a few examples.
 
 - **Encrypted Consortium Chains**: These are possibly private chains that do not leak any
-  information to the public, but still can be interacted with trustlessly due to the nature of the
+  information to the public but still can be interacted with trustlessly due to the nature of the
   XCMP protocol.
-- **High-Frequency Chains**: These are chains that can compute many transactions in a short amount
-  of time by taking certain trade-offs or making optimizations.
-- **Privacy Chains**: These are chains that do not leak any information to the public through use of
-  novel cryptography.
-- **Smart Contract Chains**: These are chains that can have additional logic implemented on them
-  through the deployment of code known as _smart contracts_.
+- **High-Frequency Chains**: These chains can compute many transactions in a short amount of time by
+  taking certain trade-offs or making optimizations.
+- **Privacy Chains**: These chains do not leak any information to the public through novel
+  cryptography.
+- **Smart Contract Chains**: These chains can have additional logic implemented through the
+  deployment of code known as _smart contracts_.
 
 ## Parachain Host
 
@@ -228,10 +243,10 @@ a few examples.
 chain. A blockchain is a
 [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (DAG) of state
 transitions, where every added block can be viewed as the head of the chain or fork with cumulative
-state. All paths through the DAG terminate at the Genesis Block. A blockchain is a tree as each
+state. All paths through the DAG terminate at the Genesis Block. A blockchain is a tree, as each
 block can have only one parent.
 
-A blockchain network is made of nodes that have a view of many forks of the chain, and must decide
+A blockchain network is made of nodes that have a view of many forks of the chain and must decide
 which fork to follow. To construct the parachain host we need to answer two categories of questions
 addressed by two different components:
 
@@ -240,10 +255,10 @@ addressed by two different components:
 
   - **Modules** encapsulate particular behavior of the system and consist of:
     - Storage
-    - Routines are invoked by entry points, other modules, upon block initialization or closing.
+    - Routines are invoked by entry points and other modules upon block initialization or closing.
       Routines can alter the storage of a module.
-    - The entry point defines the means by which new information is introduced to a module and can
-      limit the origin from which they are called (user, root, parachain).
+    - The entry point defines how new information is introduced to a module and can limit the origin
+      from which they are called (user, root, parachain).
   - **API** provides means for the node-side behavior to extract meaningful information from the
     state of a single fork.
 
@@ -255,18 +270,17 @@ addressed by two different components:
 
   :::
 
-- Being aware of various forks of the blockchain, what behaviors should a node take? What
-  information should a node extract from the state of which forks, and how should that information
-  be used? This is handled by the **Node-side behavior**, which defines all activities that a node
-  undertakes given its view of the blockchain. The node-side behavior can be divided into two
-  categories:
+- Knowing various forks of the blockchain, what behaviors should a node take? What information
+  should a node extract from the state of which forks, and how should that information be used? This
+  is handled by the **Node-side behavior**, which defines all activities a node undertakes given its
+  view of the blockchain. The node-side behavior can be divided into two categories:
 
-  - **Networking behaviors**, these relate to how information is distributed between nodes, but not
-    how the information is used afterwards.
-  - **Core behaviors**, these relate to internal work that a specific node does. Such behavior cares
-    about that information is _distributed_ and _received_, but not how these two are achieved.
+  - **Networking behaviors**, relate to how information is distributed between nodes but not how the
+    information is used afterward.
+  - **Core behaviors**, relate to internal work that a specific node does. Such behavior cares about
+    that information is _distributed_ and _received_, but not how these two are achieved.
 
-  These two categories often interact but they can be heavily abstracted from each other. The
+  These two categories often interact, but they can be heavily abstracted from each other. The
   node-side behavior is split into various **subsystems**, which perform a particular category of
   work. Subsystems can communicate with each other through an
   [Overseer](https://paritytech.github.io/polkadot/book/node/overseer.html) that prevents race
@@ -287,7 +301,7 @@ addressed by two different components:
 
   :::
 
-The Runtime and Node-side behavior are dependent from each other. The Runtime depends on Node-side
+The Runtime and Node-side behavior are dependent on each other. The Runtime depends on Node-side
 behavior to author blocks, and to include [extrinsics](./learn-extrinsics.md) which trigger the
 correct entry points. The Node-side behavior relies on the Runtime APIs to extract information
 necessary to determine which action to take.
