@@ -235,7 +235,9 @@ To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: 
 introduces the idea of a "council". The council is an on-chain entity comprising several actors,
 each represented as an on-chain account. On
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
-{{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" /> :kusama }}
+members.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance:
@@ -413,7 +415,7 @@ councilors are isolated from any nominations they may have on validators. Counci
 At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
 the result will choose the new councilors based on the vote configurations of all voters. The
 election also chooses a set number of runners-up, which is currently
-({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
+{{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
 intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
