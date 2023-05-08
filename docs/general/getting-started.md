@@ -269,8 +269,8 @@ long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, 
 to the Polkadot network as a parachain.
 
 Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](../learn/learn-availability.md) checks before being added to
-the finalized chain. As the Relay Chain provides the security guarantees,
+rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
+added to the finalized chain. As the Relay Chain provides the security guarantees,
 [collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
 stays up to date with the many transactions that take place.

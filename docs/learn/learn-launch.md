@@ -86,4 +86,4 @@ answered, as of now, some big areas of research will be in:
 - Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
   tiers of Relay Chains can be nested? How will validators work together to validate blocks on
   various Relay Chains? How does [XCM](learn-xcm.md) work in the nested setup? How is
-  [AnV](learn-availability.md) going to work there?
+  [AnV](./learn-parachains-protocol.md#anv-protocol) going to work there?

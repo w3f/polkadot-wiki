@@ -254,7 +254,7 @@ The approval pipeline can be divided into the following steps:
 1. Parablocks included by the Inclusion Pipeline are pending approval for a time window known as the
    **secondary checking window**.
 2. During the secondary checking window, validators (secondary checkers) randomly self-select based
-   on a [VRF](./learn-randomness.md/#vrf) lottery to perform secondary checks on each of the
+   on a [VRF](./learn-cryptography#vrf) lottery to perform secondary checks on each of the
    parablock.
 3. Secondary checkers acquire the parablock with PoV (erasure codings are necessary to reconstruct
    PoV) and re-run the validation function.
@@ -340,7 +340,7 @@ Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) 
 Briefly, approval keys are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria
-  [VRF](./learn-randomness.md/#vrf).
+  [VRF](./learn-cryptography.md#vrf).
 - **Approval vote keys** that are ed25519 and would only sign off on a candidate parablock validity.
 
 :::info
