@@ -86,6 +86,7 @@ some of the problems of optimistic rollups.
 
 - They don't require a large amount of data availability. Often, the proof is enough to ensure
   validity.
+- Rollups able to be proven trustlessly.
 - Because the proof is immediately available, finality is also instantaneous.
 - They overall have a very promising future, as they haven't reached their full potential yet.
 
@@ -100,28 +101,24 @@ some of the problems of optimistic rollups.
 
 Whereas rollups are considered solutions for layer two protocols,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} include this functionality natively
-through its Parachains Protocol. The Parachains Protocol, which is how Polkadot handles the
+through its [Parachains Protocol](). The Parachains Protocol, which is how Polkadot handles the
 **sharding** of its network is meant to accomplish the combined goals of providing security,
-scalability, and availability.
-
-The sharding model already exists as the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain providing a mechanism for
-its parachains to verify their collective state and communicate with one another. Parachains have
-similarities to aspects of optimistic and zero-knowledge rollups.
+scalability, and availability. It's what enables parachains to verify their collective state and
+communicate with one another. Parachains have similarities to aspects of optimistic and
+zero-knowledge rollups, which are reflected in how Polkadot handles the validity and availability of
+parachain state.
 
 Each shard, or parachain, is equipped with a unique state transition function. This function ensures
 that communication to the relay chain remains valid. Each state transition function, also referred
-to as a runtime, is written in Wasm. Any state transition function is valid so long as it abides by
-the Polkadot protocol.
+to as a runtime, is written in [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state
+transition function is valid so long compiles to Wasm and abides by the parachains protocol.
 
-Each STF runs a validity proof. The proof (the Approval Protocol) is interactive, unlike ZK-rollups,
-which are non-interactive. Additionally, unlike ZK-rollups, there are no difficulties in creating
-parachains with Turing-complete logic, as each parachain is also a full-fledged blockchain.
-
-In addition, Optimistic rollups are required by architecture to have their 'sequencer selection'
-logic live in their host contract. This is because the smart contract needs to accept blocks that
-may be bad and may not be executed and needs to filter out spam. Parachains, like ZK rollups, can
-encapsulate the sequencer-selection logic within their validation code.
+Each STF runs a validity proof. The proof ([the Approval Protocol]()) is interactive, unlike
+zero-knowledge rollups, which are non-interactive. Additionally, unlike ZK-rollups, there are no
+difficulties in creating parachains with Turing-complete logic, as each parachain is also a
+full-fledged blockchain. Similarly to optimistic rollups, the Parachain Protocol also has cases
+where disputes and resolutions of potentially bad parablocks can take place, in which case
+validators are slashed.
 
 **Pros:**
 
@@ -138,4 +135,8 @@ encapsulate the sequencer-selection logic within their validation code.
 - Wasm could be a performance bottleneck, as it's slower than making native calls.
 - A considerable amount of data is required in the PoV (proof of validity) function for proving
   parachain state.
-- Other limitations within the Parachains Protocol to keep parachains compatible.
+- Other limitations within the Parachains Protocol to keep parachains compatible with the entire
+  orchestration.
+
+Despite these cons, Polkadot remains upgradable through forkless upgrades, which open the protocol
+through any improvements or changes in the future.
