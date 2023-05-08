@@ -309,19 +309,12 @@ impacted by the locking period of the tokens.
 
 ## Enactment
 
-All referenda have an _enactment delay_ associated with them. This is the period between the
-referendum ending and, assuming the proposal was approved, the changes being enacted.
+:::info Enactment in Governace v1
 
-Referenda is considered _baked_ if it is closed and tallied. Again, assuming the proposal was
-approved, it would be scheduled for enactment. Referenda is considered _unbaked_ if it is pending an
-outcome, i.e. being voted on.
+See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
+v1.
 
-If a proposal is submitted by the public or council there is a fixed enactment delay period of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}
-days. Proposals submitted as part of the enactment of a prior referendum can set the enactment delay
-period as desired. Emergency proposals deal with major problems with the network that need to be
-"fast-tracked", which leads to shorter enactment times.
+:::
 
 ## Multirole Delegation
 

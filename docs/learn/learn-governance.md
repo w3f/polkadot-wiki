@@ -224,7 +224,8 @@ All referenda are associated with an enactment delay or **enactment period**. Th
 between a referendum ending and (assuming it was approved) the changes being enacted.
 
 For the first two ways that a referendum is launched (i.e. public and council referenda), the
-enactment period is a fixed time of {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}.
+enactment period is a fixed time of
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
 For the third type (i.e. proposals submitted as part of the enactment of a prior referendum), it can
 be set as desired. Emergency proposals deal with major problems with the network and need to be
 "fast-tracked". These will have a shorter enactment period.
