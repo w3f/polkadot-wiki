@@ -316,6 +316,10 @@ v1.
 
 :::
 
+In OpenGov the enactment period is suggested by the proposer, but there are also minimums set for
+each Origin Track. For example, root Origin approvals require a longer period because of the
+importance of the changes they bring to the network.
+
 ## Multirole Delegation
 
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
