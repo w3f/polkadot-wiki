@@ -113,8 +113,8 @@ availability distribution or the approval process. Those roles can change betwee
 - [How to Upgrade your Validator](../maintain/maintain-guides-how-to-upgrade.md) - Guide for
   securely upgrading your validator when you want to switch to a different machine or begin running
   the latest version of client code.
-- [How to Use Validator Setup](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md) -
-  Guide on how to use Polkadot / Kusama validator setup.
+- [How to Use Validator Setup](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on
+  how to use Polkadot / Kusama validator setup.
 
 ### Other References
 
