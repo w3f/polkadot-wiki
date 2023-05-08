@@ -136,24 +136,15 @@ its status. There is also a provision to ensure the deposit of the proposer is s
 proposal is malicious or spam.
 
 Cancelation itself is a governance operation which must be voted upon by the network in order to be
-executed. Cancelation comes with its own Origin and Track which has a low lead-time and
-Approval/Support curves with slightly sharper reductions in their thresholds for passing, given that
-it is invoked with a sense of urgency.
+executed. Cancelation comes with
+[its own Origin and Track](../maintain/maintain-guides-opengov.md#referendum-canceller) which has a
+low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for
+passing, given that it is invoked with a sense of urgency.
 
 ### Blacklisting
 
-A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
-hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
-proposals that could be submitted with the same hash, i.e.
-[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
-text to make a suggestion.
-
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
-system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
-re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
-proposals from being submitted - a single changed character in a proposal's text will also change
-the hash of the proposal, rendering the per-hash blacklist invalid.
+Blacklisting referenda in OpenGov is
+[the same as in Governance v1](./learn-governance.md#blacklisting).
 
 ## Referenda
 
@@ -250,6 +241,13 @@ then end of this period, the proposal is automatically rejected.
 
 ## Voting on a referendum (OpenGov)
 
+:::info Adaptive Quorum Biasing is deprecated
+
+[Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) is no longer used in
+OpenGov and has been replaced with the Approval/Support system.
+
+:::
+
 In OpenGov, a proposal is approved if it meets the requirements for **approval** and **support**,
 removing the adaptive quorum biasing system.
 
@@ -324,11 +322,6 @@ If a proposal is submitted by the public or council there is a fixed enactment d
 days. Proposals submitted as part of the enactment of a prior referendum can set the enactment delay
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
-
-## Adaptive Quorum Biasing
-
-Adaptive quorum biasing is no longer used in OpenGov and has been replaced with the Approval/Support
-system.
 
 ## Multirole Delegation
 
