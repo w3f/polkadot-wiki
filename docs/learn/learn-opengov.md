@@ -294,24 +294,6 @@ impacted by the locking period of the tokens.
 Adaptive quorum biasing is no longer used in OpenGov and has been replaced with the Approval/Support
 system.
 
-## Council
-
-In Governance v1, passive stakeholders are represented on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} via a governing body known as the
-"council". The council is an on-chain entity comprising several actors, each represented as an
-on-chain account. On {{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} the council
-currently consists of
-{{ polkadot: <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" /> :kusama }}
-members.
-
-Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
-three tasks of governance:
-
-1. Proposing sensible referenda
-2. Cancelling dangerous or malicious referenda
-3. Electing the Technical Committee
-
 ### Multirole Delegation
 
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
