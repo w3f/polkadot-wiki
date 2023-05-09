@@ -111,8 +111,8 @@ implied privilege level.
 
 So for example, a runtime upgrade (`set_code` call) does not have the same implications for the
 ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins
-are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be
-predetermined on the pallet.
+are needed in which different turnouts, approvals, deposits and a minimum [enactment](#enactment)
+periods will be predetermined on the pallet.
 
 ### Cancelling and Blacklisting
 
@@ -210,16 +210,13 @@ then end of this period, the proposal is automatically rejected.
 
 :::info Adaptive Quorum Biasing is deprecated
 
-In OpenGov, [Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) has been
-replaced with the Approval/Support system.
+In OpenGov, [Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) used in
+Governance V1 has been replaced with the **Approval and Support system**.
 
 :::
 
-In OpenGov, a proposal is approved if it meets the requirements for **approval** and **support**,
-removing the adaptive quorum biasing system.
-
-**Approval** is defined as the share of approval vote-weight (after adjustment for conviction)
-against the total vote-weight (for both approval and rejection).
+**Approval** is defined as the share of approval vote-weight (after adjustment for
+[conviction](#voluntary-locking)) against the total vote-weight (for both approval and rejection).
 
 **Support** is the total number of votes in the approval (ignoring any adjustment for conviction)
 compared to the total possible votes that could be made in the system.
@@ -240,6 +237,8 @@ origin but after the Enactment Period. The Enactment Period is specified when th
 proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a
 larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal
 may bring.
+
+### Voluntary Locking
 
 :::info Voluntary Locking
 
