@@ -156,15 +156,6 @@ in Governance v1.
 
 :::
 
-Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
-_proposal_ associated with it that takes the form of a privileged function call in the runtime (that
-includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
-achieving what would otherwise require a "[hard fork](./../general/glossary#hard-fork)").
-
-Referenda are discrete events that have a fixed voting period. When the voting period ends and the
-votes are tallied, the function call (`set_code`) is made if the vote is approved. Referenda are
-always binary; your only options in voting are "aye", "nay", or abstaining entirely.
-
 In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not immediately in a state where it can end, or otherwise have its votes counted, be
 approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are
