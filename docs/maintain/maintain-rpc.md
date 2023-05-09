@@ -54,7 +54,7 @@ balances, making transfers, setting up session keys, staking, etc. An archive no
 history (database) of the network. It can be queried in various ways, such as providing historical
 information regarding transfers, balance histories, and more advanced queries involving past events.
 
-An archive node requires a lot more disk space. At the start of April 2023, polkadot disk usage was
+An archive node requires a lot more disk space. At the start of April 2023, Polkadot disk usage was
 160 GB for a pruned node and 1 TB for an archive node. This value will increase with time. For an
 archive node, you need the options `--state-pruning archive --blocks-pruning archive` in your
 startup settings.
