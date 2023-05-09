@@ -87,8 +87,9 @@ options in voting are "aye", "nay", or abstaining entirely.
 
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
 (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it - this action is called _endorsing_. The proposal with the highest amount of bonded
-support will be selected to be a referendum in the next voting cycle.
+to support it - this action is called
+[_endorsing_](../maintain/maintain-guides-democracy.md#endorsing-a-proposal). The proposal with the
+highest amount of bonded support will be selected to be a referendum in the next voting cycle.
 
 Note that this may be different from the absolute number of endorsements; for instance, three
 accounts bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a
@@ -218,6 +219,16 @@ lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3
 Even though combined both Logan and Kevin vote with more
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
 is less than Peter, leading to their voting power counting as less.
+
+### Delegations
+
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
+[delegate your vote](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another account
+you trust, if you are not willing to stay up-to-date with all referenda.
+
+You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
+stash account. The proxy can be yours or you can authorize a third-party governance proxy to vote
+with your stash. See more about proxies on the [dedicated page](./learn-proxies.md).
 
 ## Enactment
 
