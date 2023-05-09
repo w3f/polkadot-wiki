@@ -143,6 +143,16 @@ Blacklisting referenda in OpenGov is
 
 ## Referenda
 
+:::info Public and Council Referenda in Governance v1
+
+With the Council's dissolution, [council referenda](./learn-governance.md#council-referenda) are no
+more present in OpenGov.
+
+See [this page](./learn-governance.md#public-referenda) for more information about public referenda
+in Governance v1. **In OpenGov all referenda are public.**
+
+:::
+
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
 _proposal_ associated with it that takes the form of a privileged function call in the runtime (that
 includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
@@ -152,15 +162,6 @@ Referenda are discrete events that have a fixed voting period. When the voting p
 votes are tallied, the function call (`set_code`) is made if the vote is approved. Referenda are
 always binary; your only options in voting are "aye", "nay", or abstaining entirely.
 
-### Public Referenda
-
-:::info Public Referenda in Governance v1
-
-See [this page](./learn-governance.md#public-referenda) for more information about public referenda
-in Governance v1.
-
-:::
-
 In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not immediately in a state where it can end, or otherwise have its votes counted, be
 approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are
@@ -169,29 +170,22 @@ undecided.
 
 The criteria for entering the **Deciding** state is a follows:
 
-1. A **lead-in period** that outlines the amount of time that must elapse before deciding can begin.
-   This helps mitigate against the possibility of "decision sniping" where an attacker controlling a
-   substantial amount of voting power might seek to have a proposal passed immediately after
-   proposing, not allowing the overall voting population adequate time to consider and participate.
-2. There must be room for the decision. All Tracks specify their own limit on the number of
-   referenda which can be decided simultaneously. Tracks that have more potent abilities will have
-   lower limits. For example, the Root level Origin has a limit of one, implying that only a single
-   proposal may be decided on at once.
-3. A **Decision Deposit** must be submitted. Creating a referendum is cheap as the deposit value
-   consists of only the value required for the on-chain storage needed to track it. But, having a
-   referendum reviewed and decided upon carries the risk of using up the limited spots available in
-   the referenda queue. It makes sense to have a larger, but refundable deposit requirement to help
-   mitigate spam.
+- A **lead-in period** that outlines the amount of time that must elapse before deciding can begin.
+  This helps mitigate against the possibility of "decision sniping" where an attacker controlling a
+  substantial amount of voting power might seek to have a proposal passed immediately after
+  proposing, not allowing the overall voting population adequate time to consider and participate.
+- There must be room for the decision. All Tracks specify their own limit on the number of referenda
+  which can be decided simultaneously. Tracks that have more potent abilities will have lower
+  limits. For example, the Root level Origin has a limit of one, implying that only a single
+  proposal may be decided on at once.
+- A **Decision Deposit** must be submitted. Creating a referendum is cheap as the deposit value
+  consists of only the value required for the on-chain storage needed to track it. But, having a
+  referendum reviewed and decided upon carries the risk of using up the limited spots available in
+  the referenda queue. It makes sense to have a larger, but refundable deposit requirement to help
+  mitigate spam.
 
 Once the three criteria listed above are met, the referendum moves to the **Deciding** state. The
 votes of the referendum are now counted towards the outcome.
-
-:::info Council Referenda
-
-With the Council's dissolution, [council referenda](./learn-governance.md#council-referenda) are no
-more present in OpenGov.
-
-:::
 
 ## Voting Timetable
 
