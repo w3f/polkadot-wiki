@@ -27,7 +27,7 @@ but there is no specific need for them to be actual blockchains.
 ![One parachain](../assets/one-parachain.png)
 
 Due to their parallel nature, they can parallelize transaction processing and achieve scalability of
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol. They
 [inherit the security](#shared-security) of the entire network and can communicate with other
 parachains through the [XCM](learn-xcm.md) format.
 
@@ -44,12 +44,13 @@ Chain or own the native token unless stipulated by the parachain implementation.
 Like other blockchains, parachains are **deterministic state machines**. Each parachain has a
 **state**, executes a batch of transactions grouped into a block, and achieves a new state. Joe
 Petrowski provided in [this article](https://polkadot.network/blog/the-path-of-a-parachain-block/) a
-good analogy of a state with a light switch that can be either on or off, which is one of the simplest examples of how a state machine functions. Each parachain has its own
-state, and the Relay Chain links all those states into one state, i.e. a state of states. A
-multi-chain network like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be
-viewed like one computer's state with many light switches where a **state transition function** is
-the logic to decide which switches should be toggled. Parachains have their own transition rule,
-separate economies, governance mechanisms, and users.
+good analogy of a state with a light switch that can be either on or off, which is one of the
+simplest examples of how a state machine functions. Each parachain has its own state, and the Relay
+Chain links all those states into one state, i.e. a state of states. A multi-chain network like
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be viewed like one computer's
+state with many light switches where a **state transition function** is the logic to decide which
+switches should be toggled. Parachains have their own transition rule, separate economies,
+governance mechanisms, and users.
 
 A parachain's state is stored in a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree). Merkle
 trees have the convenient property that if some values within the tree change, this will be
@@ -187,13 +188,13 @@ several ways to allocate them:
 
 - Governance granted parachains, or "system parachains"
 - Auction granted parachains
-- Parathreads
+- [Parathreads](./learn-parathreads.md)
 
 [System parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
-[governance](learn-governance.md) system, and are part of the network's protocol, such as bridges to
-other networks or chains. These typically do not have an economic model and help remove transactions
-from the Relay Chain, allowing for more efficient parachain processing.
+[governance](learn-governance.md) and are part of the network's protocol, such as bridges to other
+networks or chains. These typically do not have an economic model and help remove transactions from
+the Relay Chain, allowing for more efficient parachain processing.
 
 [Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
 teams can either bid with their own {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens,
@@ -207,7 +208,7 @@ on a pay-as-you-go basis with an auction for each block.
 When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
 balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
 are unreserved. Parachains that have not secured a new lease to extend their slot will automatically
-become parathreads.
+become [parathreads](./learn-parathreads.md).
 
 ## System Parachains
 
@@ -253,7 +254,7 @@ addressed by two different components:
 - What is the state transition function of the blockchain? This is handled by the **Runtime**, which
   defines the state transition logic of the chain. The Runtime logic is divided into:
 
-  - **Modules** encapsulate particular behavior of the system and consist of:
+  - **Modules** encapsulate particular behavior of the protocol and consist of:
     - Storage
     - Routines are invoked by entry points and other modules upon block initialization or closing.
       Routines can alter the storage of a module.
