@@ -87,7 +87,7 @@ Approval Process.
 
 ![parachain-protocol-summary](../assets/parachain-protocol-summary.png)
 
-### AnV Protocol
+### Availability and Validity (AnV) Protocol
 
 The Availability and Validity (AnV) Protocol is a way of looking at the Parachain Protocol from
 another perspective, emphasizing the importance of a parablock being available and valid before
