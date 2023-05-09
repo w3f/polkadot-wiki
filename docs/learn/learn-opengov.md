@@ -149,7 +149,10 @@ With the Council's dissolution, [council referenda](./learn-governance.md#counci
 more present in OpenGov.
 
 See [this page](./learn-governance.md#public-referenda) for more information about public referenda
-in Governance v1. **In OpenGov all referenda are public.**
+in Governance v1.
+
+**In OpenGov all referenda are public.** The [Fellowship](#fellowship) has the option to
+[whitelist](#whitelisting) referenda that can be then proposed in the track with whitelist origin.
 
 :::
 
