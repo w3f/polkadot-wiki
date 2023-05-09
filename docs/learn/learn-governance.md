@@ -46,6 +46,13 @@ Referenda can be started in different ways:
 - Emergency proposals submitted by the [Technical Committee](#technical-committee) and approved by
   the [Council](#council)
 
+:::info Starting a proposal in Governance V1
+
+For more information about how to start a proposal see the
+[dedicated page](../maintain/maintain-guides-democracy.md#proposing-an-action).
+
+:::
+
 ### Cancelling
 
 A proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
