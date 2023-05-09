@@ -41,8 +41,8 @@ network.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
 defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)), and several on-chain
-voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval
-voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
+voting mechanisms such as referenda and batch approval voting. All changes to the protocol must be
+agreed upon by stake-weighted referenda.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first governance system
 ([Governance V1](./learn-governance.md)) included three main components.
@@ -53,22 +53,16 @@ voting. All changes to the protocol must be agreed upon by stake-weighted refere
   manage parameters, admin and spending proposals.
 - The Public: All token holders who are not part of the Council or the Technical Committee.
 
-This system has functioned well over the first few years of operation, helping ensure appropriate
-usage of treasury funds and enabling timely upgrades and fixes. Like most early technologies, the
-systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with
-modern advancements. For example, in Governance v1 all referenda carry the same weight as only one
-referenda can be voted on at a time and the voting period can last multiple weeks. This resulted in
-the system favoring careful consideration of very few proposals, as opposed to broad consideration
-of many.
+Over the first few years of operation, Governance V1 ensured appropriate usage of treasury funds and
+enabled timely upgrades and fixes. Like most early technologies, protocols must evolve as they
+mature to improve upon their shortcomings and keep up with modern advancements. In Governance V1 all
+referenda carried the same weight as only one referenda could be voted on at a time and the voting
+period could last multiple weeks. This resulted in the system favoring careful consideration of very
+few proposals, as opposed to broad consideration of many.
 
 OpenGov changes how the practical means of day-to-day decisions are made, making the repercussions
 of referenda better scoped and agile in order to increase the number of collective decisions the
 system is able to make.
-
-The following content will begin by walking through many of the core principles of governance on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to
-understand the roots of [Governance v1](./learn-governance.md) to better understand the direction of
-OpenGov.
 
 The following content is focused on what the new OpenGov version brings to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and on the main differences with
