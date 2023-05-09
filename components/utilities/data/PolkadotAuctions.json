@@ -746,13 +746,13 @@
     "biddingEndsBlock": 14898467,
     "biddingEndsHash": "0x5ce80f0279f437026f4e043752236d2ab4c9613d38cba6d929bf0c8f6b617c2e",
     "onboardStartBlock": 15436800,
-    "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "onboardStartHash": "0x1e44fa15ba5f2fa05d7df11569a282a55edf5583058e418d6f20e9d826bef8ad",
     "onboardEndBlock": 25113600,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "startDate": 1679750610000,
     "endPeriodDate": 1679912928001,
     "biddingEndsDate": 1680345306000,
-    "onboardStartDate": null,
+    "onboardStartDate": 1683578544001,
     "onboardEndDate": null
   },
   {
@@ -818,13 +818,13 @@
     "biddingEndsBlock": 15385734,
     "biddingEndsHash": "0x61c15a417230f45efb8d86c1a3776edc27401dccf50bda9848e4526c74f7062a",
     "onboardStartBlock": 15436800,
-    "onboardStartHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "onboardStartHash": "0x1e44fa15ba5f2fa05d7df11569a282a55edf5583058e418d6f20e9d826bef8ad",
     "onboardEndBlock": 25113600,
     "onboardEndHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "startDate": 1682676348000,
     "endPeriodDate": 1682838504000,
     "biddingEndsDate": 1683271824001,
-    "onboardStartDate": null,
+    "onboardStartDate": 1683578544001,
     "onboardEndDate": null
   }
 ]
