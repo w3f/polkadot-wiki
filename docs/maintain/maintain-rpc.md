@@ -27,7 +27,7 @@ can often lead to security problems
 
 Setting up any Substrate-based node relies on a similar process. For example, by default, they will
 all share the same WebSocket connection at port 9944 on localhost. In this example, we'll set up a
-polkadot sync node on a Debian-flavoured server (such as Ubuntu 22.04). Create a new server on your
+Polkadot sync node on a Debian-flavoured server (such as Ubuntu 22.04). Create a new server on your
 provider of choice or locally at home. See [Set up a Full Node](./maintain-sync) for additional
 instructions. You can install from the default apt repository or build from scratch. The startup
 options in the setup process provide various settings that can be modified.
