@@ -38,7 +38,7 @@ A typical setting for an externally accessible polkadot archive RPC node would b
 polkadot --chain polkadot --name myrpc --state-pruning archive --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
 ```
 
-Or for a polkadot pruned RPC node:
+Or for a Polkadot pruned RPC node:
 
 ```config
 polkadot --chain polkadot --name myrpc --state-pruning 1000 --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
