@@ -324,15 +324,15 @@ So how exactly does this ranking system work?
 To prevent a small group of participants from gaining effective control over the network, this
 system will adhere to three main principles:
 
-1. The Fellowship must never have hard power over the network: it cannot change the parameters,
-   conduct rescues or move assets. Their only power in governance resides in the ability to reduce
-   the effective timeline on which a referendum takes place.
-2. The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight
-   should not be so high as to make a small number of higher members’ opinions be insurmountable
-   when compared to a coherent opinion coming from lower-ranked membership.
-3. The Fellowship should be designed to grow and develop its membership and their aggregate levels
-   of expertise and in doing so ensure that its overall decision-making capacity gets stronger over
-   time.
+- The Fellowship must never have hard power over the network: it cannot change the parameters,
+  conduct rescues or move assets. Their only power in governance resides in the ability to reduce
+  the effective timeline on which a referendum takes place.
+- The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight
+  should not be so high as to make a small number of higher members’ opinions be insurmountable when
+  compared to a coherent opinion coming from lower-ranked membership.
+- The Fellowship should be designed to grow and develop its membership and their aggregate levels of
+  expertise and in doing so ensure that its overall decision-making capacity gets stronger over
+  time.
 
 To support these conditions, the Fellowship will have a constitution which outlines the requirements
 and expectations for individuals to attain and retain any given rank. Higher ranks are able to vote
@@ -357,8 +357,8 @@ In OpenGov, it allows the Fellowship to authorise a new origin (known as Whiteli
 executed with Root-level privileges and will only work with certain specified commands that have
 been authorised by the Fellowship. The Whitelist pallet verifies two things:
 
-1. The origin really is the Whitelisted-Root (i.e. that the referendum passed on this track)
-2. The proposal has indeed been whitelisted by the Fellowship.
+- The origin really is the Whitelisted-Root (i.e. that the referendum passed on this track)
+- The proposal has indeed been whitelisted by the Fellowship.
 
 If both conditions are true, the operation executes with Root-level privileges.
 

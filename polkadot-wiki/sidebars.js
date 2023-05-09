@@ -193,7 +193,13 @@ module.exports = {
           type: "category",
           label: "Archive",
           items: [
-            "learn/learn-governance",
+            {
+              type: "category",
+              label: "Governance",
+              items: [
+                "learn/learn-governance",
+              ],
+            },
             "learn/learn-launch",
             "learn/learn-redenomination",
           ],
