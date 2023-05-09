@@ -235,20 +235,7 @@ Voluntary locking in OpenGov is
 
 :::
 
-## Enactment
-
-:::info Enactment in Governace v1
-
-See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
-v1.
-
-:::
-
-In OpenGov the enactment period is suggested by the proposer, but there are also minimums set for
-each Origin Track. For example, root Origin approvals require a longer period because of the
-importance of the changes they bring to the network.
-
-## Multirole Delegation
+### Multirole Delegation
 
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
 body delegated by voters to compensate for the fact that many choose to not take part in day-to-day
@@ -276,6 +263,19 @@ censorship-free.
 For a step-by-step outline of how to delegate voting power in OpenGov, check out the
 [Delegating Voting Power](./../maintain/maintain-guides-opengov.md#delegating-voting-power) section
 on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
+
+## Enactment
+
+:::info Enactment in Governace v1
+
+See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
+v1.
+
+:::
+
+In OpenGov the enactment period is suggested by the proposer, but there are also minimums set for
+each Origin Track. For example, root Origin approvals require a longer period because of the
+importance of the changes they bring to the network.
 
 ## Fellowship
 
