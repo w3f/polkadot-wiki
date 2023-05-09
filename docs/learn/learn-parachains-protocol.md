@@ -24,7 +24,7 @@ slug: ../learn-parachains-protocol
 This page is a summary of the
 [Protocol Overview chapter in **The Polkadot Parachain Host Implementer's Guide**](https://paritytech.github.io/polkadot/book/protocol-overview.html)
 and the
-[Availability and Validity (AnV) chapter in **The Polkadot Protocol Specification**](https://spec.polkadot.network/#chapter-anv).
+[Availability and Validity (AnV) chapter in **The Polkadot Protocol Specification**](https://spec.polkadot.network/chapter-anv).
 
 :::
 
