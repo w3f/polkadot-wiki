@@ -71,21 +71,20 @@ better understand the direction of OpenGov.
 
 ## Mechanism
 
-In Governance v1, active token holders (public) and the council together administrate a network
-upgrade decision. No matter whether the proposal is proposed by the public or the council, it will
-eventually have to go through a referendum to let all holders, weighted by stake and conviction,
-make the decision.
+In Governance v1, active token holders (public) and the council together administrated network's
+upgrade decisions. No matter whether the proposal was proposed by the public or the council, it
+would eventually had to go through a referendum to let all holders (weighted by stake and
+conviction) make the decision.
 
-The Council has fulfilled its role as the representative of the public, guardian of the treasury and
-initiator of legislation, but is often seen as a centralized entity. To further decentralize
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes to return the
-responsibilities of the council back to the public.
+The Council fulfilled its role as the representative of the public, guardian of the treasury and
+initiator of legislation, but it was often seen as a centralized entity. To further decentralize
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes the following
+changes:
 
-OpenGov reflects its decentralised character is by:
-
-- Migrating all responsibilities of Council to token holders via democracy votes
+- Migrating all responsibilities of Council to the public via democracy votes
 - Dissolving the current Council collective
 - Allowing users to delegate voting power in more ways to community members
+- Dissolving the Technical Committee and establishing the Fellowship
 
 ## Proposals
 
