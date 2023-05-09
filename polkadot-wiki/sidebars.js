@@ -256,8 +256,10 @@ module.exports = {
           label: "Nodes and Dapps",
           items: [
             "maintain/maintain-sync",
-            "maintain/maintain-networks",
+            "maintain/maintain-bootnode",
+            "maintain/maintain-rpc",
             "maintain/maintain-wss",
+            "maintain/maintain-networks",
             "maintain/maintain-errors",
           ],
         },
