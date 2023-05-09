@@ -289,7 +289,7 @@ The result of the dispute must be transplantable to all other forks so that mali
 slashed in all possible histories and so that honest validators will ignore any forks containing
 that parablock.
 
-:::info Parablocks vs Relay-Chain blocks
+:::info Parablocks vs. Relay Chain Blocks
 
 It is important to understand that a relay chain block does not contain parablocks, but
 para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of
