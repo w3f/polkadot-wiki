@@ -239,11 +239,12 @@ Voluntary locking in OpenGov is
 
 In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
 body delegated by voters to compensate for the fact that many choose to not take part in day-to-day
-of governance. OpenGov builds on the **Vote Delegation** feature from v1 where a voter can choose to
-delegate their voting power to another voter in the system. It does so by improving a feature known
-as **Multirole Delegation**, where voters can specify a different delegate for every class of
-referendum in the system. Delegation can be done per track, and accounts can choose to select
-different delegates (or no delegation) for each track.
+of governance. OpenGov builds on the
+[vote delegation feature from Governance v1](./learn-governance.md#delegations) where a voter can
+choose to delegate their voting power to another voter in the system. It does so by introducing a
+feature known as **multirole delegation**, where voters can specify a different delegate for every
+class of referendum in the system. Delegation can be done per track, and accounts can choose to
+select different delegates (or no delegation) for each track.
 
 For example, a voter could delegate one entity for managing a less potent referenda class, choose a
 different delegate for a different class with more powerful consequences and still retain full
