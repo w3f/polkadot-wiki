@@ -128,8 +128,7 @@ pallet.
 ### Governance Proxy
 
 The **Governance** type will allow proxies to make transactions related to governance (i.e., from
-the Democracy, Council, Technical Committee, Phragmen Election, Treasury, Bounties, Tips, Utility
-and Child Bounties pallets).
+the Democracy, Phragmen Election, Treasury, Bounties, Tips, Utility and Child Bounties pallets).
 
 :::note Explainers on governance proxies
 
