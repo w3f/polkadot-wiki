@@ -99,6 +99,35 @@ Referenda are discrete events, have a fixed period where voting happens, and the
 the function call is executed if the vote is approved. Referenda are always binary: your only
 options in voting are "aye", "nay", or abstaining entirely.
 
+### Referenda Timeline
+
+The structure of the timeline for all referenda is the same regardless who initiates the proposal,
+although the timeline length can vary (see below).
+
+![gov1-timeline](../assets/gov1-timeline.png)
+
+The figure above provides a summary view of the referenda timeline for Governance V1.
+
+In (1) the proposal is submitted and the Launch Period starts. During this period of indefinite
+length the voters can [endorse](#endorsing-proposals) proposals by bonding the same amount of tokens
+used by the depositor. Deposited tokens for endorsement will be returned once the proposal will
+become a referendum. During this period the proposal will compete with other proposals, and the one
+that gets to the top will be selected for referendum when the next voting period starts.
+
+In (2) the proposal is selected for referendum. Proposals initiated by the public will become a
+[public referendum](#public-referenda) while those initiated by the council will become
+[council referenda](#council-referenda) or motions. The voting period lasts
+{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, after which if the proposal is
+approved it will go through an enactment period. Rejected proposals will need to be start from (1).
+Note that Governance V1 uses an [alternating voting timeline](#alternating-voting-timetable) where
+voters can vote either for a public proposal or a council motion every
+{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}.
+
+In (3) the proposal is approved and moves through the [enactment period](#enactment) that can be of
+different lengths depending on who initiated the proposal in the first place, with emergency
+proposals being the fastest ones and the only ones that can be voted simultaneously with other
+proposals.
+
 ### Public Referenda
 
 Public referenda will have a [**positive turnout bias**](#adaptive-quorum-biasing), meaning that
@@ -142,9 +171,10 @@ system, and we assume solid justifications back changes proposed by the council.
 
 ### Alternating Voting Timetable
 
-Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
-emergency referendum occurring at the same time as a regular referendum (either public- or
-council-proposed) is the only time multiple referenda can be voted on.
+All referenda are executed by Root Origin. It follows that multiple referenda cannot be voted upon
+in the same period, excluding emergency referenda. An emergency referendum occurring at the same
+time as a regular referendum (either public- or council-proposed) is the only time multiple
+referenda can be voted on.
 
 Every
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
