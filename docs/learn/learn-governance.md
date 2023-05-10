@@ -154,6 +154,101 @@ the queues. There is a queue for Council-approved proposals and a queue for publ
 proposals. The referendum to be voted upon alternates between the top proposal in the two queues,
 where the proposals' rank is based on [endorsement](#endorsing-proposals) (i.e. bonded tokens).
 
+### Adaptive Quorum Biasing
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of **Adaptive
+Quorum Biasing**, which is used to alter the effective super-majority required to make it easier or
+more difficult for a proposal to pass depending on voting power (turnout) and origin (Council or
+public).
+
+Adaptive Quorum Biasing creates three tallying mechanisms: majority carry, super-majority approve,
+and super-majority against. They all equate to a simple majority-carry system at 100% turnout, and
+their selection depends on which entity proposed the proposal and whether all Council members voted
+yes (in the case of Council Referenda).
+
+|          **Entity**          |                   **Metric**                   |
+| :--------------------------: | :--------------------------------------------: |
+|            Public            | Positive Turnout Bias (Super-Majority Approve) |
+| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
+| Council (Majority agreement) |                Simple Majority                 |
+
+Let's use the image below as an example.
+
+![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
+
+If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
+for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
+the tally of _aye_ votes has to reach 54%, which means that the super-majority required decreases as
+the turnout increases. A positive turnout bias, whereby a heavy super-majority of aye votes is
+required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple
+majority carry as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
+
+Where `approve` is the number of _aye_ votes, `against` is the number of _nay_ votes, `turnout` is
+the total number of voting tokens excluding [voluntary locking](#voluntary-locking), and
+`electorate` is the total number of tokens issued in the network.
+
+When the council proposes a new proposal through unanimous consent, the referendum would be put to
+the vote using **Negative Turnout Bias**. Referring to the above image, when a Council referendum
+only has a 25% turnout, the tally of _aye_ votes has to reach 34% for it to pass, while if the
+turnout increases to 75%, the tally of _aye_ votes has to reach 46%. A negative turnout bias,
+whereby a heavy super-majority of _nay_ votes is required to reject at low turnouts, but as turnout
+increases towards 100%, it becomes a simple majority carry as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
+
+In short, when the turnout rate is low, a super-majority is required to reject the proposal, which
+means a lower threshold of _aye_ votes must be reached. As turnout increases toward 100%, it becomes
+a simple majority, a simple comparison of votes. If there are more _aye_ votes than _nay_, then the
+proposal is carried, no matter how much stake votes on the proposal.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
+
+To know more about where these above formulas come from, please read the
+[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
+
+#### Example Adaptive Quorum Biasing
+
+Let's assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in
+total and that this is a public proposal.
+
+- John: {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
+- Peter: {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}
+- Lilly: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
+- JJ: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
+- Ken: {{ polkadot: 600 DOT :polkadot }}{{ kusama: 60 KSM :kusama }}
+
+John: Votes `Yes` for a 4 week lock period =>
+{{ polkadot: 500 x 1 = 500 Votes :polkadot }}{{ kusama: 50 x 1 = 50 Votes :kusama }}
+
+Peter: Votes `Yes` for a 4 week lock period =>
+{{ polkadot: 100 x 1 = 100 Votes :polkadot }}{{ kusama: 10 x 1 = 10 Votes :kusama }}
+
+JJ: Votes `No` for a 16 week lock period =>
+{{ polkadot: 150 x 3 = 450 Votes :polkadot }}{{ kusama: 150 x 3 = 450 Votes :kusama }}
+
+- approve = {{ polkadot: 600 :polkadot }}{{ kusama: 60 :kusama }}
+- against = {{ polkadot: 450 :polkadot }}{{ kusama: 45 :kusama }}
+- turnout = {{ polkadot: 750 :polkadot }}{{ kusama: 75 :kusama }}
+- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }}
+
+![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
+
+![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
+
+Since the above example is a public referendum, **Super-Majority Approve** would be used to
+calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
+turnout is low; therefore, based on the above result, the referendum will be rejected.
+
+:::info only the winning voter's tokens are locked.
+
+If the voters on the losing side of the referendum believe that the outcome will have adverse
+effects, their tokens are transferrable, so they will not be locked into the decision. Winning
+proposals are autonomously enacted after the [enactment period](#enactment).
+
+:::
+
 ### Enactment
 
 Referenda are considered _baked_ if they are closed and tallied. Assuming a referendum is approved,
@@ -314,109 +409,6 @@ ones.
 Fast-tracked referenda are the only referenda that can be active alongside another active
 referendum. Thus, with fast-tracked referenda, it is possible to have two active referendums
 simultaneously. Voting on one does not prevent a user from voting on the other.
-
-## Adaptive Quorum Biasing
-
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of **Adaptive
-Quorum Biasing**, which is used to alter the effective super-majority required to make it easier or
-more difficult for a proposal to pass depending on voting power (turnout) and origin (Council or
-public).
-
-Adaptive Quorum Biasing creates three tallying mechanisms: majority carry, super-majority approve,
-and super-majority against. They all equate to a simple majority-carry system at 100% turnout, and
-their selection depends on which entity proposed the proposal and whether all Council members voted
-yes (in the case of Council Referenda).
-
-|          **Entity**          |                   **Metric**                   |
-| :--------------------------: | :--------------------------------------------: |
-|            Public            | Positive Turnout Bias (Super-Majority Approve) |
-| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
-| Council (Majority agreement) |                Simple Majority                 |
-
-Let's use the image below as an example.
-
-![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
-
-If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
-for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
-the tally of _aye_ votes has to reach 54%, which means that the super-majority required decreases as
-the turnout increases.
-
-When the council proposes a new proposal through unanimous consent, the referendum would be put to
-the vote using **Negative Turnout Bias**. Referring to the above image, when a Council referendum
-only has a 25% turnout, the tally of _aye_ votes has to reach 34% for it to pass, while if the
-turnout increases to 75%, the tally of _aye_ votes has to reach 46%. In short, when the turnout rate
-is low, a super-majority is required to reject the proposal, which means a lower threshold of _aye_
-votes must be reached. As turnout increases toward 100%, it becomes a simple majority.
-
-Here below, we provide the formulas for calculating voting results.
-
-### Super-Majority Approve
-
-A **positive turnout bias**, whereby a heavy super-majority of aye votes is required to carry at low
-turnouts, but as turnout increases towards 100%, it becomes a simple majority carry as below.
-
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
-
-Where `approve` is the number of _aye_ votes, `against` is the number of _nay_ votes, `turnout` is
-the total number of voting tokens excluding [voluntary locking](#voluntary-locking), and
-`electorate` is the total number of tokens issued in the network.
-
-### Super-Majority Against
-
-A **negative turnout bias**, whereby a heavy super-majority of _nay_ votes is required to reject at
-low turnouts, but as turnout increases towards 100%, it becomes a simple majority carry as below.
-
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
-
-### Simple-Majority
-
-Majority-carries, a simple comparison of votes. If there are more _aye_ votes than _nay_, then the
-proposal is carried, no matter how much stake votes on the proposal.
-
-![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
-
-To know more about where these above formulas come from, please read the
-[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
-
-Let's assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in
-total and that this is a public proposal.
-
-- John: {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
-- Peter: {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}
-- Lilly: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
-- JJ: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
-- Ken: {{ polkadot: 600 DOT :polkadot }}{{ kusama: 60 KSM :kusama }}
-
-John: Votes `Yes` for a 4 week lock period =>
-{{ polkadot: 500 x 1 = 500 Votes :polkadot }}{{ kusama: 50 x 1 = 50 Votes :kusama }}
-
-Peter: Votes `Yes` for a 4 week lock period =>
-{{ polkadot: 100 x 1 = 100 Votes :polkadot }}{{ kusama: 10 x 1 = 10 Votes :kusama }}
-
-JJ: Votes `No` for a 16 week lock period =>
-{{ polkadot: 150 x 3 = 450 Votes :polkadot }}{{ kusama: 150 x 3 = 450 Votes :kusama }}
-
-- approve = {{ polkadot: 600 :polkadot }}{{ kusama: 60 :kusama }}
-- against = {{ polkadot: 450 :polkadot }}{{ kusama: 45 :kusama }}
-- turnout = {{ polkadot: 750 :polkadot }}{{ kusama: 75 :kusama }}
-- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }}
-
-![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
-
-![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
-
-Since the above example is a public referendum, **Super-Majority Approve** would be used to
-calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
-turnout is low; therefore, based on the above result, the referendum will be rejected.
-
-:::info only the winning voter's tokens are locked.
-
-If the voters on the losing side of the referendum believe that the outcome will have adverse
-effects, their tokens are transferrable, so they will not be locked into the decision. Winning
-proposals are autonomously enacted after the [enactment period](#enactment).
-
-:::
 
 ## Frequently Asked Questions
 
