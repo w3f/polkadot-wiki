@@ -69,7 +69,7 @@ The following content is focused on what the new OpenGov version brings to the g
 previous governance versions. We recommend to learn about [Governance v1](./learn-governance.md) to
 better understand the direction of OpenGov.
 
-## Mechanism
+## Summary
 
 In Governance v1, active token holders (public) and the council together administrated network's
 upgrade decisions. No matter whether the proposal was proposed by the public or the council, it
@@ -82,13 +82,16 @@ initiator of legislation, but it was often seen as a centralized entity. To furt
 changes:
 
 - Migrating all responsibilities of Council to the public via democracy votes
-- Dissolving the current Council collective
+- Dissolving the current [Council](./learn-governance.md#council) collective
 - Allowing users to delegate voting power in more ways to community members
-- Dissolving the Technical Committee and establishing the Fellowship
+- Dissolving the [Technical Committee](./learn-governance.md#technical-committee) and establishing
+  the [Fellowship](#fellowship)
+
+### Comparison Table
 
 ## Proposals
 
-:::info Starting Referenda in Governace v1
+:::info Starting a proposal in Governace v1
 
 See [this page](./learn-governance.md#proposals) for more information about starting referenda in
 Governance v1.
@@ -100,19 +103,38 @@ they wish. Several new features, known as
 [**Origins and Tracks**](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), are
 introduced to help aid in the flow and processing of the referenda protocol.
 
-An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the
-referenda now selects an appropriate Origin for their request based on the requirements of the
-proposal.
+An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
+originating from that origin. The track outlines the lifecycle for the proposal and is independent
+from other origins' tracks. The proposer of the referenda now selects an appropriate Origin for
+their request based on the requirements of the proposal.
 
-Each Origin is associated with a single referendum class and each class is associated with a Track.
-The Track outlines the lifecycle for the proposal and is independent from other class's tracks.
-Having independent tracks allows the network to tailor the dynamics of referenda based upon their
-implied privilege level.
+Although the track structure is the same for all origins, track parameters are not. Such parameters
+include:
+
+- **Maximum Deciding or Capacity**: the limit for the number of referenda that can be decided at
+  once.
+- **Decision deposit**: the amount of funds that must be placed on deposit in order to enter the
+  Decision Period (note that more requirements must be met to enter the Decision Period).
+- **Preparation Period**: the minimum amount of voting time needed before entering the Decision
+  Period (given capacity and deposit are met).
+- **Decision Period**: the maximum amount of time to approve a proposal. If not approved by the end
+  of the period, the proposal will be rejected.
+- **Confirmation Period**: the minimum amount of time (within the Decision Period) the approval and
+  support criteria must hold before the proposal is approved and moved to the enactment period.
+- **Minimum Enactment Period**: the minimum amount of waiting time before the proposed changes are
+  applied
+- **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
+  the Decision Period. The approval % is defined as the portion of _aye_ votes (adjusted for
+  conviction) over the total votes.
+- **Support Curve**: the curve describing the minimum % of all votes as a function of time within
+  the Decision Period. The support % is defined as the portion of all votes without conviction (i.e.
+  _aye_, _nay_ and _abstained_) over the total possible amount of votes. Support is a measure of
+  turnout.
 
 So for example, a runtime upgrade (`set_code` call) does not have the same implications for the
 ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins
-are needed in which different turnouts, approvals, deposits and a minimum [enactment](#enactment)
-periods will be predetermined on the pallet.
+are needed in which different deposits, turnouts (i.e. support), approvals, and a minimum
+[enactment](#enactment) periods will be predetermined on the pallet.
 
 ### Cancelling and Blacklisting
 
