@@ -53,7 +53,16 @@ For more information about how to start a proposal see the
 
 :::
 
-### Cancelling
+### Endorsing Proposals
+
+Anyone can submit a proposal by depositing the minimum amount of tokens for a certain period (number
+of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to
+support it - this action is called
+[_endorsing_](../maintain/maintain-guides-democracy.md#endorsing-a-proposal). The proposal with the
+highest amount of bonded support will be selected to be a referendum in the next voting cycle based
+on an [alternating voting timetable](#alternating-voting-timetable).
+
+### Cancelling Proposals
 
 A proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
 do so or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
@@ -66,7 +75,7 @@ the runtime that the proposal would institute.
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders _en masse_ to determine the proposal’s fate.
 
-### Blacklisting
+### Blacklisting Proposals
 
 A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
 referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
@@ -91,16 +100,6 @@ the function call is executed if the vote is approved. Referenda are always bina
 options in voting are "aye", "nay", or abstaining entirely.
 
 ### Public Referenda
-
-Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
-(number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it - this action is called
-[_endorsing_](../maintain/maintain-guides-democracy.md#endorsing-a-proposal). The proposal with the
-highest amount of bonded support will be selected to be a referendum in the next voting cycle.
-
-Note that this may be different from the absolute number of endorsements; for instance, three
-accounts bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a
-single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}.
 
 Public referenda will have a [**positive turnout bias**](#adaptive-quorum-biasing), meaning that
 they will require a heavy supermajority of _aye_ votes to pass at low turnouts but as turnout
@@ -141,22 +140,34 @@ system, and we assume solid justifications back changes proposed by the council.
 
 :::
 
-## Voting Timetable
+### Alternating Voting Timetable
+
+Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
+emergency referendum occurring at the same time as a regular referendum (either public- or
+council-proposed) is the only time multiple referenda can be voted on.
 
 Every
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 days, a new referendum will come up for a vote, assuming there is at least one proposal in one of
-the queues. There is a queue for Council-approved proposals and a queue for publicly submitted
-proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
+the queues. There is a queue for Council-approved proposals and a queue for publicly-submitted
+proposals. The referendum to be voted upon alternates between the top proposal in the two queues,
+where the proposals' rank is based on [endorsement](#endorsing-proposals) (i.e. bonded tokens).
 
-The "top" proposal is determined by the amount of stake bonded behind it. If the given queue, whose
-turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in the
-other queue, the top proposal in the other queue will become a referendum.
+### Enactment
 
-Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
-emergency referendum occurring at the same time as a regular referendum (either public- or
-council-proposed) is the only time multiple referenda can be voted on.
+Referenda are considered _baked_ if they are closed and tallied. Assuming a referendum is approved,
+it will be scheduled for **enactment**. Referenda are considered _unbaked_ if they are pending an
+outcome, i.e. being voted on.
+
+All referenda are associated with an enactment delay or **enactment period**. This is the period
+between a referendum ending and (assuming it was approved) the changes being enacted.
+
+Fot Public and Council referenda the enactment period is a fixed time of
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
+For proposals submitted as part of the enactment of a prior referendum, it can be set as desired.
+Emergency proposals deal with major problems with the network and need to be "fast-tracked". These
+will have a shorter enactment period.
 
 ## Voting on a Referendum
 
@@ -236,21 +247,6 @@ you trust, if you are not willing to stay up-to-date with all referenda.
 You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
 stash account. The proxy can be yours or you can authorize a third-party governance proxy to vote
 with your stash. See more about proxies on the [dedicated page](./learn-proxies.md).
-
-## Enactment
-
-Referenda are considered _baked_ if they are closed and tallied. Assuming a referendum is approved,
-it will be scheduled for **enactment**. Referenda are considered _unbaked_ if they are pending an
-outcome, i.e. being voted on.
-
-All referenda are associated with an enactment delay or **enactment period**. This is the period
-between a referendum ending and (assuming it was approved) the changes being enacted.
-
-Fot Public and Council referenda the enactment period is a fixed time of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
-For proposals submitted as part of the enactment of a prior referendum, it can be set as desired.
-Emergency proposals deal with major problems with the network and need to be "fast-tracked". These
-will have a shorter enactment period.
 
 ## Council
 
