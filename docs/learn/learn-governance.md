@@ -246,12 +246,11 @@ outcome, i.e. being voted on.
 All referenda are associated with an enactment delay or **enactment period**. This is the period
 between a referendum ending and (assuming it was approved) the changes being enacted.
 
-For the first two ways that a referendum is launched (i.e. public and council referenda), the
-enactment period is a fixed time of
+Fot Public and Council referenda the enactment period is a fixed time of
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
-For the third type (i.e. proposals submitted as part of the enactment of a prior referendum), it can
-be set as desired. Emergency proposals deal with major problems with the network and need to be
-"fast-tracked". These will have a shorter enactment period.
+For proposals submitted as part of the enactment of a prior referendum, it can be set as desired.
+Emergency proposals deal with major problems with the network and need to be "fast-tracked". These
+will have a shorter enactment period.
 
 ## Council
 
@@ -277,7 +276,7 @@ If the proposal is resubmitted after a cool-down period, they may not veto it a 
 Council motions that pass with a 3/5 (60%) super-majority - but without reaching unanimous support -
 will move to a public referendum under a neutral, majority-carries voting scheme. In the case that
 all members of the council vote in favor of a motion, the vote is considered unanimous and becomes a
-referendum with [negative quorum biasing](#adaptive-quorum-biasing).
+referendum with [negative turnout bias](#adaptive-quorum-biasing).
 
 :::note Explainer video on the Council
 

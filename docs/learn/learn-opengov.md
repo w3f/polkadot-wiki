@@ -125,11 +125,11 @@ include:
   applied
 - **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
   the Decision Period. The approval % is defined as the portion of _aye_ votes (adjusted for
-  conviction) over the total votes.
+  conviction) over the total votes (_aye_, _nay_, and _abstained_).
 - **Support Curve**: the curve describing the minimum % of all votes as a function of time within
   the Decision Period. The support % is defined as the portion of all votes without conviction (i.e.
-  _aye_, _nay_ and _abstained_) over the total possible amount of votes. Support is a measure of
-  turnout.
+  _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
+  measure of turnout.
 
 So for example, a runtime upgrade (`set_code` call) does not have the same implications for the
 ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins
@@ -225,11 +225,12 @@ Governance V1 has been replaced with the **Approval and Support system**.
 
 :::
 
-**Approval** is defined as the share of approval vote-weight (after adjustment for
-[conviction](#voluntary-locking)) against the total vote-weight (for both approval and rejection).
+**Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
+[conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
+abstained).
 
-**Support** is the total number of votes in the approval (ignoring any adjustment for conviction)
-compared to the total possible votes that could be made in the system.
+**Support** is the total number of votes (ignoring any adjustment for conviction) compared to the
+total possible votes that could be made in the system.
 
 It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have
 different Confirmation Periods and requirements for approval and support. For additional details on
