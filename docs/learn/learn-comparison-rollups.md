@@ -139,7 +139,7 @@ if a bad para block is found.
   is a valid target.
 - Finality is usually under a minute.
 - Data availability is built-in through validators and mechanisms like
-  [erasure coding](https://wiki.polkadot.network/docs/learn-availability#erasure-codes).
+  [erasure coding](./learn-availability#erasure-codes).
 - No layer two implies less of a risk as far as the centralization of sequencers or other layer two
   operators.
 
