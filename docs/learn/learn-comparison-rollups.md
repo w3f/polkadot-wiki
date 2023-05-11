@@ -11,17 +11,17 @@ slug: ../learn-comparisons-rollups
 :::note
 
 This comparison covers general information regarding two widely used rollup mechanisms that are used
-to scale (usually EVM based) blockchains, and compares and contrasts how Polkadot deals with
+to scale (usually EVM-based) blockchains and compares and contrasts how Polkadot deals with
 scalability.
 
 :::
 
 Layer two networks are notorious as being the way forward for blockchain scalability by off-loading
 the majority of computation off-chain. Often, layer two solutions are needed to scale an existing
-layer one blockchain. They take advantage of the layer one's security and functionality to build an
+layer one blockchain. They utilize the layer one network's security and functionality to build an
 additional layer that is often faster, reduces fees, and solves other platform-specific issues. In
-many cases, layer 2 solutions focus on capitalizing the use of blockspace within a particular
-blockchain, so that it is less costly and more efficient to utilize.
+many cases, layer two solutions focus on capitalizing the use of blockspace within a particular
+blockchain to make it less costly and more efficient.
 
 **Rollups** are a layer-2 scaling solution. At the most basic level, a layer two solution is
 responsible for "rolling up" transactions by batching them before publishing them to the layer one
@@ -29,21 +29,21 @@ chain, usually through a network of **sequencers**. This mechanism could include
 transactions in a single rollup.
 
 Polkadot implements this functionality at the native level, allowing for shared security and
-scalability of for the relay chain and respective parachains. Shared security is a concept which has
-similar goals to EVM-based optimistic and zero-knowledge rollups, but instead of it being
+scalability of the relay chain and respective parachains. Shared security is a concept that has
+similar goals to EVM-based optimistic and zero-knowledge rollups. Still, instead of being
 implemented as a secondary layer, Polkadot guarantees native security and scalability for each of
-its parachains through the [Parachains Protocol](./learn-parachains-protocol.md). The way Polkadot
-handles the coordination of data from parachains into an aggregated, representative state is
-somewhat similar to how layer two rollups function.
+its parachains through the [Parachains Protocol](./learn-parachains-protocol.md). Polkadot handles
+the coordination of data from parachains into an aggregated, representative state, somewhat similar
+to how to layer two rollups function.
 
 ## Optimistic Rollups
 
-Optimistic rollups are an interactive scaling method for layer one blockchains. Optimistic rollups
+Optimistic rollups are an interactive scaling method for layer-one blockchains. Optimistic rollups
 assume _optimisically_ that every proposed transaction is valid by default.
 
-In order to mitigate potentially invalid transactions, optimistic rollups introduce a _challenge
-period_ in which participants may challenge a suspect rollup. A fraud-proving scheme is in place to
-allow for a number of _fraud proofs_ to be submitted, rendering the rollup as valid. During the
+In the case of mitigating potentially invalid transactions, optimistic rollups introduce a
+_challenge period_ in which participants may challenge a suspect rollup. A fraud-proving scheme is
+in place to allow for several _fraud proofs_ to be submitted, rendering the rollup valid. During the
 challenge period, a set of state changes may be disputed, come to a resolution, or merely be
 included if no challenge is presented (and the required proofs are in place).
 
@@ -60,7 +60,7 @@ While optimistic rollups provide scalability, they have both pros and cons to th
 
 **Cons:**
 
-- Transaction censorship and centralization are concerns - sequencers / layer two nodes can be
+- Transaction censorship and centralization are concerns - sequencers/layer two nodes can be
   compromised in this regard.
 - Challenge periods could take a substantial amount of time to pass, increasing time for the rollup
   to finalize onto the layer one network.
@@ -76,18 +76,18 @@ solutions include:
 
 ## Zero-knowledge Rollups
 
-Zero-knowledge rollups (often referred to as ZK rollups) are a non-interactive method that utilizes
+Zero-knowledge rollups (often called ZK rollups) are a non-interactive method that utilizes
 zero-knowledge proofs to compute the validity of a particular set of state changes. Whereas
 optimistic rollups relied on fraud proofs, ZK rollups rely on cryptographic validation in the form
 of ZK proofs.
 
-Zero-knowledge rollups are significantly faster in terms of finalization, as the cryptographic
-validity proof handles the nuance of ensuring a rollup is valid or not. However, they ZK rollups
-often suffer from performance due to their complexity, and are hard to integrate in resource
-constrained environments. Because Turing-completeness is also difficult to achieve due to this
-computational overhead, their ability to be generalized is reduced. However, they have an extremely
-promising future in solving some of the problems of optimistic rollups, and addressing secure
-scalability as a whole.
+Zero-knowledge rollups are significantly faster in finalization, as the cryptographic validity proof
+handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from
+performance due to their complexity and are hard to integrate into resource-constrained
+environments. Because Turing completeness is also difficult to achieve due to this computational
+overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have an
+extremely promising future in solving some of the problems of optimistic rollups and addressing
+secure scalability.
 
 **Pros:**
 
@@ -95,13 +95,13 @@ scalability as a whole.
   validity.
 - Rollups able to be proven trustlessly.
 - Because the proof is immediately available, finality is also instantaneous.
-- They overall have a very promising future, as they haven't reached their full potential yet.
+- They have a promising future overall, as they haven't reached their full potential yet.
 
 **Cons:**
 
-- Suffer from the same problems that other layer two solutions face in terms of centralization of
+- Suffer from the same problems that other layer two solutions face regarding centralization of
   layer two operators.
-- They are computationally expensive and ZK circuits are difficult to implement.
+- They are computationally expensive, and ZK circuits are difficult to implement.
 - The potential for congestion is still a factor, as the amount of data could still be problematic.
 
 ## Polkadot - Native Shared Security
@@ -114,28 +114,28 @@ providing security, scalability, and availability.
 
 It's what enables parachains to verify their collective state and communicate with one another.
 Parachains have similarities to aspects of optimistic and zero-knowledge rollups, which are
-reflected in how Polkadot handles the validity and availability of parachain state.
+reflected in how Polkadot handles the validity and availability of the parachain state.
 [Collators](./learn-collator.md), a key part of Polkadot's architecture, is in principle similar to
-a sequencer, as collators pass data with a proof-of-validity (PoV) function for the purpose of
-liveness and communication with the relay chain.
+a sequencer, as collators pass data with a proof-of-validity (PoV) function for liveness and
+communication with the relay chain.
 
 Each shard, or parachain, is equipped with a unique state transition function. This function ensures
-that communication to the relay chain remains valid. Each state transition function, also referred
-to as a runtime, is written in [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state
-transition function is valid so long compiles to Wasm and abides by the Parachains Protocol.
+that communication to the relay chain remains valid. Each state transition function, called a
+runtime, is written in [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition
+function is valid so long compiles to Wasm and abides by the Parachains Protocol.
 
 Each STF runs a validity proof. The proof ([the Approval Protocol](./learn-availability.md)) is
 interactive, unlike zero-knowledge rollups, which are non-interactive. Additionally, unlike ZK
-rollups, there are no difficulties in creating parachains with Turing-complete logic, as each
-parachain is also a full-fledged state machine (usually in the form of a blockchain). Similarly to
-optimistic rollups, the Parachain Protocol also has cases where disputes and resolutions of
-potentially bad parablocks (blocks representing the parachain) can take place, in which case
-validators are slashed if a bad parablock is found.
+rollups, there are no difficulties in creating parachains with Turing-complete logic. Each parachain
+is also a full-fledged state machine (usually in the form of a blockchain). Similarly to optimistic
+rollups, the Parachain Protocol also has cases where disputes and resolutions of potentially bad
+para blocks (blocks representing the parachain) can take place, in which case validators are slashed
+if a bad para block is found.
 
 **Pros:**
 
 - Protocol level sharding, shared security, and interoperability.
-- Each shard has a low-barrier of entry in terms of development, as anything that compiles to Wasm
+- Each shard has a low barrier of entry in terms of development, as anything that compiles to Wasm
   is a valid target.
 - Finality is usually under a minute.
 - Data availability is built-in through validators and mechanisms like
@@ -146,9 +146,9 @@ validators are slashed if a bad parablock is found.
 **Cons:**
 
 - Wasm could be a performance bottleneck, as it's slower than making native calls.
-- A considerable amount of data is required in the PoV (proof of validity) function for proving
+- A considerable amount of data is required in the PoV (proof of validity) function for proving the
   parachain state.
-- Other limitations within the Parachains Protocol to keep parachains compatible with the entire
+- Other limitations within the Parachains Protocol to keeping parachains compatible with the entire
   orchestration of the relay and parachains.
 
 Despite these cons, Polkadot remains upgradable through forkless upgrades, which open the protocol
