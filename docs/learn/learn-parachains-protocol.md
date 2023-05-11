@@ -31,9 +31,8 @@ and the
 The Parachains' Protocol aims to carry a parachain's block from authoring to inclusion through a
 process that can be carried out repeatedly and in parallel for each parachain connected to the Relay
 Chain. The protocol allows the network to be efficiently sharded among parachains while maintaining
-strong security guarantees. The Availability and Validity (AnV) Protocol describes the
-Parachain Protocol from the perspective of availability and validity.
-on).
+strong security guarantees. The Availability and Validity (AnV) Protocol describes the Parachain
+Protocol from the perspective of availability and validity. on).
 
 ## Main Actors
 
@@ -190,6 +189,8 @@ considered **backed** in that fork. The candidate is considered to be in **"pend
 status, and it can only be considered a part of the parachain once proven available. Remember, at
 this stage validators of the Relay Chain already received the
 [erasure coding information](#erasure-codes) of that specific parablock.
+
+### Asynchronous Backing
 
 ### Availability and Unavailability Phase
 
