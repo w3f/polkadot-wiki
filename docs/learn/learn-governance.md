@@ -110,9 +110,14 @@ The figure above provides a summary view of the referenda timeline for Governanc
 
 In (1) the proposal is submitted and the Launch Period starts. During this period of indefinite
 length the voters can [endorse](#endorsing-proposals) proposals by bonding the same amount of tokens
-used by the depositor. Deposited tokens for endorsement will be returned once the proposal will
-become a referendum. During this period the proposal will compete with other proposals, and the one
+used by the depositor. Deposited tokens for endorsement will be returned once the proposal becomes a
+referendum. During the launch period the proposal will compete with other proposals, and the one
 that gets to the top will be selected for referendum when the next voting period starts.
+
+Note in the figure that the launch period is shown with fixed length but in reality it varies
+depending on who initiated the proposal and how many proposals there are in the pipeline. Council
+motions will likely have short launch period overall due to their importance while some low-priority
+public referenda might take a longer period unless they are the only ones in the pipeline.
 
 In (2) the proposal is selected for referendum. Proposals initiated by the public will become a
 [public referendum](#public-referenda) while those initiated by the council will become
@@ -155,9 +160,6 @@ will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
-
-There can only be one active referendum at any given time, except when there is also an emergency
-referendum in progress.
 
 :::info Public vs. Council
 
