@@ -319,12 +319,11 @@ The Fellowship is a mostly self-governing expert body with a primary goal of rep
 embody and contain the technical knowledge base of the Kusama and/or Polkadot networks and
 protocols. This is accomplished by associating a rank with members to categorize the degree to which
 the system expects their opinion to be well-informed, of a sound technical basis and in line with
-the interests of Polkadot and Kusama.
+the interests of Polkadot and/or Kusama.
 
-Unlike the current Technical Collective, it is designed to be far broader in membership (i.e. to
-work well with even tens of thousands of members) and with far lower barrier to entry (both in terms
-of administrative process flow and expectations of expertise). Becoming a candidate member in the
-Fellowship is as easy as placing a small deposit.
+Unlike the Technical Committee in Governance V1, the Fellowship is designed to be far broader in
+membership (i.e. to work well with even tens of thousands of members) and with far lower barrier to
+entry (both in terms of administrative process flow and expectations of expertise).
 
 The mechanism by which the Fellowship votes is the same as what is used for Polkadot and Kusama
 stakeholder voting for a proposed referendum. Members of the Fellowship can vote on any given
@@ -335,14 +334,12 @@ the Fellowship's considered opinion.
 
 ### Ranking System
 
-So how exactly does this ranking system work?
-
 To prevent a small group of participants from gaining effective control over the network, this
 system will adhere to three main principles:
 
 - The Fellowship must never have hard power over the network: it cannot change the parameters,
   conduct rescues or move assets. Their only power in governance resides in the ability to reduce
-  the effective timeline on which a referendum takes place.
+  the effective timeline on which a referendum takes place through [whitelisting](#whitelisting).
 - The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight
   should not be so high as to make a small number of higher members’ opinions be insurmountable when
   compared to a coherent opinion coming from lower-ranked membership.
@@ -366,12 +363,12 @@ referendum.
 
 ### Whitelisting
 
-The Whitelist pallet does one thing: it allows one Origin to escalate the privilege level of another
-Origin for a certain operation.
-
 In OpenGov, it allows the Fellowship to authorise a new origin (known as Whitelisted-Root) to be
 executed with Root-level privileges and will only work with certain specified commands that have
-been authorised by the Fellowship. The Whitelist pallet verifies two things:
+been authorised by the Fellowship.
+
+The Whitelist pallet allows one Origin to escalate the privilege level of another Origin for a
+certain operation. The pallet verifies two things:
 
 - The origin really is the Whitelisted-Root (i.e. that the referendum passed on this track)
 - The proposal has indeed been whitelisted by the Fellowship.
@@ -389,6 +386,10 @@ Currently the only way to become a member of the fellowship is through an existi
 submits a `fellowshipCollective.addMember` extrinsic. See more information on
 [this Kusama SubSquare discussion](https://kusama.subsquare.io/post/6), which points to
 [these guidelines](https://docs.google.com/document/d/1nHa-7Na4u52CTZzq87HaKNptGjyQDWm9H7s7GRjJpMU/edit).
+
+Future plans include that member of the public can apply to become a Fellowship candidate by placing
+a small deposit (which will be returned once they become members). Their candidacy will go through a
+referendum that will need to be approved to become a member.
 
 ## Resources
 
