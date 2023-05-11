@@ -113,14 +113,61 @@ value: 'linux-package'} ]}>
 - Then, run:
 
   ```bash
-  brew install openssl cmake llvm
+  brew install openssl cmake llvm protobuf
   ```
 
-- Install Rust in your terminal by running:
+- Install Rust by running:
   ```bash
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
-- Once Rust is installed, run the following command to clone and build the polkadot code:
+- After Rust is installed, update and add the nightly version:
+
+  ```bash
+  # Ensure the current shell has cargo
+  source ~/.cargo/env
+
+  # Update the Rust toolchain
+  rustup default stable
+  rustup update
+
+  # Add the nightly and WebAssembly targets:
+  rustup update nightly
+  rustup target add wasm32-unknown-unknown --toolchain nightly
+  ```
+
+- Verify your installation by running the following:
+
+  ```bash
+  rustup show
+
+  # You should see output similar to:
+
+  active toolchain
+  ----------------
+
+  stable-aarch64-apple-darwin (default)
+  rustc 1.68.1 (8460ca823 2023-03-20)
+  ```
+
+  ```bash
+  rustup +nightly show
+
+  # You should see output similar to:
+
+  installed targets for active toolchain
+  --------------------------------------
+
+  aarch64-apple-darwin
+  wasm32-unknown-unknown
+
+  active toolchain
+  ----------------
+
+  nightly-aarch64-apple-darwin (overridden by +toolchain on the command line)
+  rustc 1.71.0-nightly (9ecda8de8 2023-04-30)
+  ```
+
+- Once Rust is configured, run the following command to clone and build the Polkadot code:
   ```bash
   git clone https://github.com/paritytech/polkadot polkadot
   cd polkadot
