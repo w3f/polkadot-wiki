@@ -56,9 +56,12 @@ agreed upon by stake-weighted referenda.
 Over the first few years of operation, Governance V1 ensured appropriate usage of treasury funds and
 enabled timely upgrades and fixes. Like most early technologies, protocols must evolve as they
 mature to improve upon their shortcomings and keep up with modern advancements. In Governance V1 all
-referenda carried the same weight as only one referenda could be voted on at a time and the voting
-period could last multiple weeks. This resulted in the system favoring careful consideration of very
-few proposals, as opposed to broad consideration of many.
+referenda carried the same weight as only one referenda could be voted on at a time (with the only
+exception of emergency proposals) and the voting period could last multiple weeks. Also, an
+[alternating voting timetable](./learn-governance.md#alternating-voting-timetable) allowed to vote
+either for a public referendum or a council motion every
+{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}. This resulted in the system favoring
+careful consideration of very few proposals, as opposed to broad consideration of many.
 
 OpenGov changes how the practical means of day-to-day decisions are made, making the repercussions
 of referenda better scoped and agile in order to increase the number of collective decisions the
@@ -67,7 +70,7 @@ system is able to make.
 The following content is focused on what the new OpenGov version brings to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and on the main differences with
 previous governance versions. We recommend to learn about [Governance v1](./learn-governance.md) to
-better understand the direction of OpenGov.
+better understand the need for and the direction of OpenGov.
 
 ## Summary
 
@@ -78,7 +81,7 @@ conviction) make the decision.
 
 The Council fulfilled its role as the representative of the public, guardian of the treasury and
 initiator of legislation, but it was often seen as a centralized entity. To further decentralize
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes the following
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes the following main
 changes:
 
 - Migrating all responsibilities of Council to the public via democracy votes
@@ -381,12 +384,7 @@ determined that the action is both safe and time-critical.
 
 ## Resources
 
-- [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
-- [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr.
-  Gavin Wood presents the initial governance structure for Polkadot. (Video)
-- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
-  explaining how governance works in Polkadot and Kusama.
 - [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
 - [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io)
 - [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io)
