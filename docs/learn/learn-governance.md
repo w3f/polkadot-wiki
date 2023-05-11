@@ -27,7 +27,7 @@ Learn about the upcoming changes to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
 defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for
-several on-chain voting mechanisms such as referenda with the novel concept of
+several on-chain voting mechanisms, such as referenda with the novel concept of
 [Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
 protocol must be agreed upon by stake-weighted referenda.
 
@@ -48,7 +48,7 @@ Referenda can be started in different ways:
 
 :::info Starting a proposal in Governance V1
 
-For more information about how to start a proposal see the
+For more information about how to start a proposal, see the
 [dedicated page](../maintain/maintain-guides-democracy.md#proposing-an-action).
 
 :::
@@ -65,7 +65,7 @@ on an [alternating voting timetable](#alternating-voting-timetable).
 ### Cancelling Proposals
 
 A proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
-do so or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
+do so or if Root Origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
 burned.
 
 Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
@@ -77,7 +77,7 @@ it will be left to the stakeholders _en masse_ to determine the proposal’s fat
 
 ### Blacklisting Proposals
 
-A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
+A proposal can be blacklisted by Root Origin (e.g. sudo). A blacklisted proposal and its related
 referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
 hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
 proposals that could be submitted with the same hash.
@@ -101,34 +101,34 @@ options in voting are "aye", "nay", or abstaining entirely.
 
 ### Referenda Timeline
 
-The structure of the timeline for all referenda is the same regardless who initiates the proposal,
-although the timeline length can vary (see below).
+The structure of the timeline for all referenda is the same regardless of who initiates the
+proposal, although the timeline length can vary (see below).
 
 ![gov1-timeline](../assets/gov1-timeline.png)
 
 The figure above provides a summary view of the referenda timeline for Governance V1.
 
-In (1) the proposal is submitted and the Launch Period starts. During this period of indefinite
+In (1), the proposal is submitted, and the Launch Period starts. During this period of indefinite
 length the voters can [endorse](#endorsing-proposals) proposals by bonding the same amount of tokens
 used by the depositor. Deposited tokens for endorsement will be returned once the proposal becomes a
-referendum. During the launch period the proposal will compete with other proposals, and the one
-that gets to the top will be selected for referendum when the next voting period starts.
+referendum. During the launch period, the proposal will compete with other proposals, and the one
+that gets to the top will be selected for a referendum when the next voting period starts.
 
-Note in the figure that the launch period is shown with fixed length but in reality it varies
-depending on who initiated the proposal and how many proposals there are in the pipeline. Council
-motions will likely have short launch period overall due to their importance while some low-priority
-public referenda might take a longer period unless they are the only ones in the pipeline.
+The figure shows that the launch period is shown with a fixed length. Still, it varies depending on
+who initiated the proposal and how many proposals there are in the pipeline. Council motions will
+likely have a short launch period overall due to their importance, while some low-priority public
+referenda might take longer unless they are the only ones in the pipeline.
 
-In (2) the proposal is selected for referendum. Proposals initiated by the public will become a
-[public referendum](#public-referenda) while those initiated by the council will become
+In (2), the proposal is selected for a referendum. Proposals initiated by the public will become a
+[public referendum](#public-referenda), while those initiated by the council will become
 [council referenda](#council-referenda) or motions. The voting period lasts
-{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, after which if the proposal is
-approved it will go through an enactment period. Rejected proposals will need to be start from (1).
+{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, after which, if the proposal is
+approved, it will go through an enactment period. Rejected proposals will need to start from (1).
 Note that Governance V1 uses an [alternating voting timeline](#alternating-voting-timetable) where
 voters can vote either for a public proposal or a council motion every
 {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}.
 
-In (3) the proposal is approved and moves through the [enactment period](#enactment) that can be of
+In (3), the proposal is approved and moves through the [enactment period](#enactment) that can be of
 different lengths depending on who initiated the proposal in the first place, with emergency
 proposals being the fastest ones and the only ones that can be voted simultaneously with other
 proposals.
@@ -165,9 +165,9 @@ referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 
 Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or
 ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council,
-it benefits from using the negative bias. Here we assume that low turnout is less problematic if the
-council proposes a referendum. Also, the council members have strong technical knowledge about the
-system, and we assume solid justifications back changes proposed by the council.
+it benefits from using the negative bias. We assume low turnout is less problematic if the council
+proposes a referendum. Also, the council members have strong technical knowledge about the system,
+and we assume solid justifications back changes proposed by the council.
 
 :::
 
@@ -194,9 +194,9 @@ more difficult for a proposal to pass depending on voting power (turnout) and or
 public).
 
 Adaptive Quorum Biasing creates three tallying mechanisms: majority carry, super-majority approve,
-and super-majority against. They all equate to a simple majority-carry system at 100% turnout, and
-their selection depends on which entity proposed the proposal and whether all Council members voted
-yes (in the case of Council Referenda).
+and super-majority against. They all equate to a simple majority-carry system at 100% turnout. Their
+selection depends on which entity proposed the proposal and whether all Council members voted yes
+(in the case of Council Referenda).
 
 |          **Entity**          |                   **Metric**                   |
 | :--------------------------: | :--------------------------------------------: |
@@ -212,7 +212,7 @@ If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ vo
 for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
 the tally of _aye_ votes has to reach 54%, which means that the super-majority required decreases as
 the turnout increases. A positive turnout bias, whereby a heavy super-majority of aye votes is
-required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple
+required to carry at low turnouts. However, as turnout increases towards 100%, it becomes a simple
 majority carry as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
@@ -224,8 +224,8 @@ the total number of voting tokens excluding [voluntary locking](#voluntary-locki
 When the council proposes a new proposal through unanimous consent, the referendum would be put to
 the vote using **Negative Turnout Bias**. Referring to the above image, when a Council referendum
 only has a 25% turnout, the tally of _aye_ votes has to reach 34% for it to pass, while if the
-turnout increases to 75%, the tally of _aye_ votes has to reach 46%. A negative turnout bias,
-whereby a heavy super-majority of _nay_ votes is required to reject at low turnouts, but as turnout
+turnout increases to 75%, the tally of _aye_ votes has to reach 46%. A negative turnout bias
+requires a heavy super-majority of _nay_ votes to reject at low turnouts. However, as turnout
 increases towards 100%, it becomes a simple majority carry as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
@@ -290,7 +290,7 @@ outcome, i.e. being voted on.
 All referenda are associated with an enactment delay or **enactment period**. This is the period
 between a referendum ending and (assuming it was approved) the changes being enacted.
 
-Fot Public and Council referenda the enactment period is a fixed time of
+For public and Council referenda, the enactment period is a fixed time of
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
 For proposals submitted as part of the enactment of a prior referendum, it can be set as desired.
 Emergency proposals deal with major problems with the network and need to be "fast-tracked". These
@@ -369,10 +369,10 @@ is less than Peter, leading to their voting power counting as less.
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
 [delegate your vote](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another account
-you trust, if you are not willing to stay up-to-date with all referenda.
+you trust if you are not willing to stay up-to-date with all referenda.
 
 You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
-stash account. The proxy can be yours or you can authorize a third-party governance proxy to vote
+stash account. The proxy can be yours, or you can authorize a third-party governance proxy to vote
 with your stash. See more about proxies on the [dedicated page](./learn-proxies.md).
 
 ## Council
@@ -433,10 +433,9 @@ TC is composed of the teams that have successfully implemented or specified eith
 added or removed from the TC via a simple majority vote of the [Council](#council).
 
 The TC aims to safeguard against malicious referenda, implement bug fixes, reverse faulty runtime
-updates, or add new but battle-tested features. The TC has the power to fast-track proposals by
-using the Democracy pallet, and is the only origin that can trigger the fast-tracking functionality.
-We can think of the TC as a "unique origin" that cannot generate proposals but fast-track existing
-ones.
+updates, or add new but battle-tested features. The TC can fast-track proposals using the Democracy
+pallet and is the only origin that can trigger the fast-tracking functionality. We can think of the
+TC as a "unique origin" that cannot generate proposals but fast-track existing ones.
 
 Fast-tracked referenda are the only referenda that can be active alongside another active
 referendum. Thus, with fast-tracked referenda, it is possible to have two active referendums
