@@ -383,6 +383,13 @@ parameters allow for a shorter voting turnaround. Through an open and transparen
 global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have
 determined that the action is both safe and time-critical.
 
+### Becoming a Fellowship Member
+
+Currently the only way to become a member of the fellowship is through an existing member who
+submits a `fellowshipCollective.addMember` extrinsic. See more information on
+[this Kusama SubSquare discussion](https://kusama.subsquare.io/post/6), which points to
+[these guidelines](https://docs.google.com/document/d/1nHa-7Na4u52CTZzq87HaKNptGjyQDWm9H7s7GRjJpMU/edit).
+
 ## Resources
 
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
