@@ -88,7 +88,7 @@ changes:
 - Dissolving the current [Council](./learn-governance.md#council) collective
 - Allowing users to delegate voting power in more ways to community members
 - Dissolving the [Technical Committee](./learn-governance.md#technical-committee) and establishing
-  the [Fellowship](#fellowship)
+  the broader [Fellowship](#fellowship)
 
 ### Comparison Table
 
@@ -235,14 +235,15 @@ abstained).
 **Support** is the total number of votes (ignoring any adjustment for conviction) compared to the
 total possible votes that could be made in the system.
 
-It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have
-different Confirmation Periods and requirements for approval and support. For additional details on
-the various origins and tracks, check out
-[this table](./../maintain/maintain-guides-opengov.md#origins-and-tracks). It is now possible to
-configure the amount of support and overall approval required for it to pass. With proposals that
-use less privileged origins, it is far more reasonable to drop the required turnout to a more
-realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
-more political significance can be made to require a higher approval early on, to avoid controversy.
+In order for a proposal to be approved, it must fulfill the approval and support criteria for the
+minimum of the **Confirmation Period**. Different Origins' tracks have different Confirmation
+Periods and requirements for approval and support. For additional details on the various origins and
+tracks, check out [this table](./../maintain/maintain-guides-opengov.md#origins-and-tracks). It is
+now possible to configure the amount of support and overall approval required for it to pass. With
+proposals that use less privileged origins, it is far more reasonable to drop the required support
+(i.e. turnout) to a more realistic amount earlier than those which use highly privileged classes
+such as `Root`. Classes with more political significance can be made to require a higher approval
+early on, to avoid controversy.
 
 In OpenGov, proposals that are not approved after the decision period are considered rejected by
 default and the Decision Deposit is refunded. If the proposal manages to stay passing until the end
