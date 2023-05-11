@@ -158,6 +158,10 @@ module.exports = {
           {
             to: '/docs/build-guide',
             from: ['/docs/build-build-with-polkadot']
+          },
+          {
+            to: '/docs/learn-parachains-protocol',
+            from: ['/docs/learn-availability']
           }
         ],
         createRedirects: function (existingPath) {

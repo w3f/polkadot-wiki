@@ -155,7 +155,8 @@ There are two main differences between Ethereum and
     for more information.
 
 {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} finality protocol, GRANDPA,
-finalizes batches of blocks based on [availability and validity checks](./learn-availability.md)
+finalizes batches of blocks based on
+[availability and validity checks](./learn-parachains-protocol.md#availability-and-unavailability-phase)
 that happen as the proposed chain grows. The time to finality varies with the number of checks that
 need to be performed (and invalidity reports cause the protocol to require extra checks). The
 expected time to finality is 12-60 seconds.
@@ -164,11 +165,11 @@ expected time to finality is 12-60 seconds.
     {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide stronger guarantees
     with fewer validators per shard. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
     achieves this by making validators distribute an
-    [erasure coding](./learn-availability.md#erasure-codes) to all validators in the system, such
-    that anyone - not only the shard's validators - can reconstruct a parachain's block and test its
-    validity. The random parachain-validator assignments and secondary checks were performed
-    randomly selected validators make it less likely for the small set of validators on each
-    parachain to collude.
+    [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all validators in the system,
+    such that anyone - not only the shard's validators - can reconstruct a parachain's block and
+    test its validity. The random parachain-validator assignments and secondary checks were
+    performed randomly selected validators make it less likely for the small set of validators on
+    each parachain to collude.
 
 ### Staking Mechanics
 
