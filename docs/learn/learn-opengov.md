@@ -102,7 +102,7 @@ OpenGov. More details for each comparison can be found in the subsequent section
 | Proposals can be submitted by either the Council or the Public.                                                                                                                                                                                                                                                                               | Proposals are submitted by the public.                                                                                                                                                                                                                                     | More democratic.                                                                                                                                            |
 | Uses [Adaptive Quorum Biasing](./learn-governance.md#adaptive-quorum-biasing) to define the approval threshold based on turnout. Given the same turnout, council motions require less approvals to pass.                                                                                                                                      | Uses origin-specific approval and support curves defining the amount of approval and support (i.e. turnout) needed as a function of time. The same curves are applied to all tracks within the same origin.                                                                | Referenda timeline depends on the origin and not on who submitted the proposal (i.e. Council or Public). This is a more democratic and equalitarian system. |
 | Uses [alternating voting timetable](./learn-governance.md#alternating-voting-timetable) allowing voters to cast votes for either council motions or public referenda every 28 eras.                                                                                                                                                           | Multiple referenda can be voted at the same time.                                                                                                                                                                                                                          | More flexible and agile governance system.                                                                                                                  |
-| Except for emergency proposals, all referenda have fixed voting and enactment periods of 28 eras.                                                                                                                                                                                                                                             | Periods' length is customizable and have pre-defined limits for each origin. The same limits apply to all tracks with the same origin. For example, tracks in origin Root will be longer than those under the Small Tipper origin.                                         | Referenda timeline is tailored to their importance and urgency. Flexible enactment period based on origin.                                                  |
+| Except for emergency proposals, all referenda have fixed voting and enactment periods of 28 eras.                                                                                                                                                                                                                                             | Periods' length is customizable and have pre-defined limits for each origin. The same limits apply to all tracks with the same origin. For example, the track in origin Root will be longer than the tracks within the Small Tipper origin.                                | Referenda timeline is tailored to their importance and urgency. Flexible enactment period based on origin.                                                  |
 | Emergency proposals can be simultaneously executed with other proposals, have shorter enactment period, but need to be proposed by the the Technical Committee and approved by the Council.                                                                                                                                                   | No emergency proposals. The Fellowship can whitelist proposals that will have their own origin with shorter lead-in, confirmation and enactment periods.                                                                                                                   | Reduced complexity for urgencies.                                                                                                                           |
 | Only the [most-endorsed proposal](./learn-governance.md#endorsing-proposals) is able to transit from Launch to Voting period. The time for the transition is indeterminate, and (with no possibility of cancelling endorsements) proposer and endorsers might wait a long time before a referendum is tabled and getting their deposits back. | All proposals will eventually be voted on (given track capacity and deposit are met, and the Lead-in period has ended).                                                                                                                                                    | It allows all proposals to get a chance to be voted on, in a predictive timely manner.                                                                      |
 | Only _aye_ or _nay_ votes possible.                                                                                                                                                                                                                                                                                                           | Voters can have the additional voting options of abstaining or splitting votes.                                                                                                                                                                                            | More ways to engage in voting and increase turnout.                                                                                                         |
@@ -173,34 +173,53 @@ timetable in Governance v1.
 
 :::
 
-In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
+![opengov-timeline](../assets/opengov-timeline.png)
+
+The figure above provides a summary view of the referenda timeline for OpenGov.
+
+In (1), when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not immediately in a state where it can end, or otherwise have its votes counted, be
-approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are
-moved into a state known as **Deciding**. Until they are in the initial state, they remain
-undecided.
+approved and summarily enacted. Instead, the proposal will stay within a **Lead-in** period until it
+fulfills three criteria:
 
-The criteria for entering the **Deciding** state is a follows:
-
-- A **lead-in period** that outlines the amount of time that must elapse before deciding can begin.
-  This helps mitigate against the possibility of "decision sniping" where an attacker controlling a
-  substantial amount of voting power might seek to have a proposal passed immediately after
-  proposing, not allowing the overall voting population adequate time to consider and participate.
-- There must be room for the decision. All Tracks specify their own limit on the number of referenda
-  which can be decided simultaneously. Tracks that have more potent abilities will have lower
-  limits. For example, the Root level Origin has a limit of one, implying that only a single
-  proposal may be decided on at once.
-- A **Decision Deposit** must be submitted. Creating a referendum is cheap as the deposit value
-  consists of only the value required for the on-chain storage needed to track it. But, having a
-  referendum reviewed and decided upon carries the risk of using up the limited spots available in
-  the referenda queue. It makes sense to have a larger, but refundable deposit requirement to help
+- Proposals must stay within the lead-in period at least for a minimum amount of time. This helps
+  mitigate against the possibility of "decision sniping" where an attacker controlling a substantial
+  amount of voting power might seek to have a proposal passed immediately after proposing, not
+  allowing the overall voting population adequate time to consider and participate.
+- There must be enough room for the decision within the origin. Different origins have their own
+  limit on the number of proposals which can be decided simultaneously. Tracks that have more potent
+  abilities will have lower limits. For example, the Root level Origin has a limit of one, implying
+  that only a single proposal may be decided on at once.
+- A decision deposit must be submitted. Creating a referendum is cheap as the deposit value consists
+  of only the value required for the on-chain storage needed to track it. But, having a referendum
+  reviewed and decided upon carries the risk of using up the limited spots available in the
+  referenda queue. It makes sense to have a larger, but refundable deposit requirement to help
   mitigate spam.
 
-Once the three criteria listed above are met, the referendum moves to the **Deciding** state. The
-votes of the referendum are now counted towards the outcome.
+Until they are in the lead-in period, proposals remain undecided. Once the three criteria listed
+above are met, the referendum moves to the **Deciding** state. The votes of the referendum are now
+counted towards the outcome.
 
-The proposal is eligible to get approved during OpenGov's track specific
-[decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). If not approved by
-then end of this period, the proposal is automatically rejected.
+In (2), the proposal enters the Deciding Period where votes can be casted. In order for a proposal
+to be approved, votes must satisfy the approval and support criteria for at least the Confirmation
+Period, otherwise the proposal is automatically rejected. A rejected proposal can be submitted
+anytime and as many times.
+
+In (3), approved proposals will enter the enactment period, after which proposed changes will be
+executed.
+
+Note how the length of the lead-in, deciding, confirmation and enactment periods vary depending on
+the origin. Root origin has overall longer periods than the other origins such as the Small Tipper
+ones. Also, the number of tracks within each origin differs with Root origin being the only one
+accepting on proposal at a time (see below).
+
+![opengov-track-capacity](../assets/opengov-track-capacity.png)
+
+This has direct implications on the number of proposals that can be voted on and executed
+simultaneously. Continuing the comparison between Root and Small Tipper, Small Tipper will allow
+many proposals on different tracks to be executed simultaneously, while Root will allow only one
+proposal in one track. Once the track capacity is filled, additional proposals in the lead-in period
+will queue until place is available.
 
 ### Origins and Tracks
 
@@ -213,7 +232,7 @@ Although the track structure is the same for all origins, track parameters are n
 include:
 
 - **Maximum Deciding or Capacity**: the limit for the number of referenda that can be decided at
-  once.
+  once (i.e. the number of tracks within each origin).
 - **Decision deposit**: the amount of funds that must be placed on deposit in order to enter the
   Decision Period (note that more requirements must be met to enter the Decision Period).
 - **Preparation Period**: the minimum amount of voting time needed before entering the Decision
@@ -232,10 +251,10 @@ include:
   _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
   measure of turnout.
 
-So for example, a runtime upgrade (`set_code` call) does not have the same implications for the
-ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins
-are needed in which different deposits, turnouts (i.e. support), approvals, and a minimum
-[enactment](#enactment) periods will be predetermined on the pallet.
+So for example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
+implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
+therefore different Origins are needed in which different deposits, turnouts (i.e. support),
+approvals, and a minimum [enactment](#enactment) periods will be predetermined on the pallet.
 
 For detailed information about origin and tracks, and parameter values in Kusama see
 [this page](../maintain/maintain-guides-opengov.md#origins-and-tracks-info).
