@@ -179,7 +179,7 @@ The figure above provides a summary view of the referenda timeline for OpenGov.
 
 In (1), when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not immediately in a state where it can end, or otherwise have its votes counted, be
-approved and summarily enacted. Instead, the proposal will stay within a **Lead-in** period until it
+approved and summarily enacted. Instead, the proposal will stay within a **Lead-in Period** until it
 fulfills three criteria:
 
 - Proposals must stay within the lead-in period at least for a minimum amount of time. This helps
@@ -197,15 +197,15 @@ fulfills three criteria:
   mitigate spam.
 
 Until they are in the lead-in period, proposals remain undecided. Once the three criteria listed
-above are met, the referendum moves to the **Deciding** state. The votes of the referendum are now
+above are met, the referendum moves to the _deciding_ state. The votes of the referendum are now
 counted towards the outcome.
 
-In (2), the proposal enters the Deciding Period where votes can be casted. In order for a proposal
-to be approved, votes must satisfy the approval and support criteria for at least the Confirmation
-Period, otherwise the proposal is automatically rejected. A rejected proposal can be submitted
-anytime and as many times.
+In (2), the proposal enters the **Deciding Period** where votes can be casted. In order for a
+proposal to be approved, votes must satisfy the approval and support criteria for at least the
+**Confirmation Period**, otherwise the proposal is automatically rejected. A rejected proposal can
+be submitted anytime and as many times.
 
-In (3), approved proposals will enter the enactment period, after which proposed changes will be
+In (3), approved proposals will enter the **Enactment Period**, after which proposed changes will be
 executed.
 
 Note how the length of the lead-in, deciding, confirmation and enactment periods vary depending on
