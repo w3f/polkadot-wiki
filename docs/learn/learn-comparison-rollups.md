@@ -81,24 +81,23 @@ of ZK proofs.
 
 Zero-knowledge rollups are significantly faster in finalization, as the cryptographic validity proof
 handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from
-performance due to their complexity and are hard to integrate into resource-constrained
-environments. Because Turing completeness is also difficult to achieve due to this computational
-overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have an
-extremely promising future in solving some of the problems of optimistic rollups and addressing
+performance due to their complexity and difficult implementation into resource-constrained
+environments. Because Turing completeness is also challenging to achieve due to this computational
+overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have a promising future in solving some of the problems of optimistic rollups and addressing
 secure scalability.
 
 **Pros:**
 
-- They don't require a large amount of data availability. Often, the proof is enough to ensure
+- They only require a small amount of data availability. Often, the proof is enough to ensure
   validity.
-- Rollups able to be proven trustlessly.
+- They can be proven trustlessly.
 - Because the proof is immediately available, finality is also instantaneous.
-- They have a promising future overall, as they haven't reached their full potential yet.
+- They have a promising future overall, as they have not reached maturity yet.
 
 **Cons:**
 
-- Suffer from the same problems that other layer two solutions face regarding centralization of
-  layer two operators.
+- They suffer from the same problems that other L2 solutions have regarding the centralization of
+  L2 operators.
 - They are computationally expensive, and ZK circuits are difficult to implement.
 - The potential for congestion is still a factor, as the amount of data could still be problematic.
 
