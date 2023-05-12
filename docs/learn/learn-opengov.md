@@ -270,30 +270,34 @@ Governance V1 has been replaced with the **Approval and Support system**.
 
 ![opengov-approval-support](../assets/opengov-approval-support.png)
 
-**Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
-[conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
-abstained).
+The figure above provides a summary view of how the approval and support system works during the
+Decision Period.
 
-**Support** is the total number of votes (ignoring any adjustment for conviction) compared to the
-total possible votes that could be made in the system.
+Ones the proposal exits the Lead-in Period and enters the Voting Period, to be approved it must
+satisfy the approval and support criteria for the minimum of the **Confirmation Period**.
 
-In order for a proposal to be approved, it must fulfill the approval and support criteria for the
-minimum of the **Confirmation Period**. Different Origins' tracks have different Confirmation
-Periods and requirements for approval and support. For additional details on the various origins and
-tracks, check out [this table](./../maintain/maintain-guides-opengov.md#origins-and-tracks). It is
-now possible to configure the amount of support and overall approval required for it to pass. With
-proposals that use less privileged origins, it is far more reasonable to drop the required support
-(i.e. turnout) to a more realistic amount earlier than those which use highly privileged classes
-such as `Root`. Classes with more political significance can be made to require a higher approval
-early on, to avoid controversy.
+- **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
+  [conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
+  abstained).
+- **Support** is the total number of votes (ignoring any adjustment for conviction) compared to the
+  total possible votes that could be made in the system.
 
-In OpenGov, proposals that are not approved after the decision period are considered rejected by
-default and the Decision Deposit is refunded. If the proposal manages to stay passing until the end
-of the Confirmation Period, it is considered approved and is scheduled to execute from the proposed
-origin but after the Enactment Period. The Enactment Period is specified when the referendum is
-proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a
-larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal
-may bring.
+The figure shows how even if the the approval criteria is satisfied (i.e. % approval is greater than
+the approval curve), the proposal does not enter the confirmation period until the support criteria
+is also satisfied (i.e. % support is greater than the support curve). If the referendum maintains
+such criteria satisfied for the minimum confirmation period, then the proposal is approved and
+scheduled for enactment. The Enactment Period is specified when the referendum is proposed but is
+also subject to a minimum value based on the Track. More powerful Tracks enforce a larger Enactment
+Period to ensure the network has ample time to prepare for any changes the proposal may bring.
+
+Different Origins' tracks have different Confirmation Periods and requirements for approval and
+support. For additional details on the various origins and tracks, check out
+[this table](./../maintain/maintain-guides-opengov.md#origins-and-tracks). It is now possible to
+configure the amount of support and overall approval required for it to pass. With proposals that
+use less privileged origins, it is far more reasonable to drop the required support (i.e. turnout)
+to a more realistic amount earlier than those which use highly privileged classes such as `Root`.
+Classes with more political significance can be made to require a higher approval early on, to avoid
+controversy.
 
 ### Enactment
 
