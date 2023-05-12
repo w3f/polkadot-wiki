@@ -22,18 +22,18 @@ additional layer that is often faster, reduces fees, and solves other platform-s
 many cases, L2 solutions focus on capitalizing on using blockspace within a particular
 blockchain to make it less costly and more efficient.
 
-**Rollups** are a layer-2 scaling solution. At the most basic level, a layer two solution is
-responsible for "rolling up" transactions by batching them before publishing them to the layer one
+**Rollups** are a L2 scaling solution. At the most basic level, a rollup L2 solution is
+responsible for "rolling up" transactions by batching them before publishing them to the L1
 chain, usually through a network of **sequencers**. This mechanism could include thousands of
 transactions in a single rollup.
 
-Polkadot implements this functionality at the native level, allowing for shared security and
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements this functionality at the native level (i.e. without using L2 scaling solutions), allowing for shared security and
 scalability of the relay chain and respective parachains. Shared security is a concept that has
 similar goals to EVM-based optimistic and zero-knowledge rollups. Still, instead of being
-implemented as a secondary layer, Polkadot guarantees native security and scalability for each of
-its parachains through the [Parachains Protocol](./learn-parachains-protocol.md). Polkadot handles
+implemented as a secondary layer, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} guarantees native security and scalability for each of
+its parachains through the [Parachains Protocol](./learn-parachains-protocol.md). {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles
 the coordination of data from parachains into an aggregated, representative state, somewhat similar
-to how to layer two rollups function.
+to L2 rollups.
 
 ## Optimistic Rollups
 
