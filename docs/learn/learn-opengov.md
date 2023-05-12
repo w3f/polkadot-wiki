@@ -219,7 +219,7 @@ This has direct implications on the number of proposals that can be voted on and
 simultaneously. Continuing the comparison between Root and Small Tipper, Small Tipper will allow
 many proposals on different tracks to be executed simultaneously, while Root will allow only one
 proposal in one track. Once the track capacity is filled, additional proposals in the lead-in period
-will queue until place is available.
+will queue until place is available to enter the deciding period.
 
 ### Origins and Tracks
 
@@ -267,6 +267,8 @@ In OpenGov, [Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-bias
 Governance V1 has been replaced with the **Approval and Support system**.
 
 :::
+
+![opengov-approval-support](../assets/opengov-approval-support.png)
 
 **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
 [conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
