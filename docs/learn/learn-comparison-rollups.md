@@ -16,11 +16,10 @@ scalability.
 
 :::
 
-Layer two networks are notorious as being the way forward for blockchain scalability by off-loading
-the majority of computation off-chain. Often, layer two solutions are needed to scale an existing
-layer one blockchain. They utilize the layer one network's security and functionality to build an
+Layer two (L2) networks are notorious as being the way forward for blockchain scalability by off-loading
+the majority of computation from layer one (L1) networks. L2 solutions utilize the L1 network's security and functionality to build an
 additional layer that is often faster, reduces fees, and solves other platform-specific issues. In
-many cases, layer two solutions focus on capitalizing the use of blockspace within a particular
+many cases, L2 solutions focus on capitalizing on using blockspace within a particular
 blockchain to make it less costly and more efficient.
 
 **Rollups** are a layer-2 scaling solution. At the most basic level, a layer two solution is
