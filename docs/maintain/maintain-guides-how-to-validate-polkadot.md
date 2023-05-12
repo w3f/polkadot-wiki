@@ -686,6 +686,23 @@ The Thousand Validators Programme is a joint initiative by Web3 Foundation and P
 to provide support for community validators. If you are interested in applying for the programme,
 you can find more information [on the wiki page](../general/thousand-validators.md).
 
+## Running a validator on a testnet
+
+To verify your validator set up, it is possible to run it against a PoS test network such as Westend
+or Wococo. However, validator slots are intentionally limited on Westend to ensure the stability and
+availability of the testnet for the Polkadot release process. As such it is advised for node
+operators wishing to run testnet validators to join the Wococo network. You can obtain WOOK tokens
+[here](../learn/learn-DOT.md#getting-tokens-on-the-wococo-testnet).
+
+Here is a small comparison of each network characteristics as relevant to validators:
+
+| Network           | Polkadot | Westend    | Wococo      |
+| ----------------- | -------- | ---------- | ----------- |
+| epoch             | 4h       | 1h         | 10m         |
+| era               | 1d       | 6h         | 1h          |
+| token             | DOT      | WND (test) | WOOK (test) |
+| active validators | ~300     | ~20        | 10<x<100    |
+
 ## FAQ
 
 ### Why am I unable to synchronize the chain with 0 peers?

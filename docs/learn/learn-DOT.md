@@ -150,6 +150,11 @@ obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org). Learn more about Rococo
 on its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
+### Getting Tokens on the Wococo Testnet
+
+Wococo is a bridge testnet. General users can obtain WOOK by posting `!drip <WOCOCO_ADDRESS>` in the
+Matrix chatroom [#wococo-faucet:matrix.org](https://matrix.to/#/#wococo-faucet:matrix.org).
+
 ## Kusama Tokens
 
 Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are available via the
