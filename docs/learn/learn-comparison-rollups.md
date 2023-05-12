@@ -103,31 +103,30 @@ secure scalability.
 
 ## Polkadot - Native Shared Security
 
-Whereas rollups are considered solutions for layer two protocols,
+Whereas rollups are considered solutions for L2 protocols,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} include this functionality natively
 through its [Parachains Protocol](./learn-parachains-protocol.md). The Parachains Protocol, which is
-how Polkadot handles the **sharding** of its network is meant to accomplish the combined goals of
+how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles network's **sharding** is meant to accomplish the combined goals of
 providing security, scalability, and availability.
 
-It's what enables parachains to verify their collective state and communicate with one another.
-Parachains have similarities to aspects of optimistic and zero-knowledge rollups, which are
-reflected in how Polkadot handles the validity and availability of the parachain state.
-[Collators](./learn-collator.md), a key part of Polkadot's architecture, is in principle similar to
+It enables parachains to verify their collective state and communicate with one another.
+Parachains have similarities to aspects of optimistic and ZK rollups, which are
+reflected in how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles the validity and availability of the parachain state.
+[Collators](./learn-collator.md), a key part of {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} architecture, is in principle similar to
 a sequencer, as collators pass data with a proof-of-validity (PoV) function for liveness and
 communication with the relay chain.
 
-Each shard, or parachain, is equipped with a unique state transition function. This function ensures
-that communication to the relay chain remains valid. Each state transition function, called a
-runtime, is written in [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition
-function is valid so long compiles to Wasm and abides by the Parachains Protocol.
+Each shard, or parachain, is equipped with a unique state transition function (STF). This function ensures
+that communication to the relay chain remains valid. Each STF, called runtime, is written in [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition
+function is valid if it compiles to Wasm and abides by the Parachains Protocol.
 
 Each STF runs a validity proof. The proof ([the Approval Protocol](./learn-availability.md)) is
-interactive, unlike zero-knowledge rollups, which are non-interactive. Additionally, unlike ZK
+interactive, unlike ZK rollups, which are non-interactive. Additionally, unlike ZK
 rollups, there are no difficulties in creating parachains with Turing-complete logic. Each parachain
 is also a full-fledged state machine (usually in the form of a blockchain). Similarly to optimistic
-rollups, the Parachain Protocol also has cases where disputes and resolutions of potentially bad
+rollups, the Parachain Protocol also has cases where disputes and resolutions of potentially harmful
 para blocks (blocks representing the parachain) can take place, in which case validators are slashed
-if a bad para block is found.
+if a bad parablock is found.
 
 **Pros:**
 
@@ -137,16 +136,15 @@ if a bad para block is found.
 - Finality is usually under a minute.
 - Data availability is built-in through validators and mechanisms like
   [erasure coding](./learn-availability#erasure-codes).
-- No layer two implies less of a risk as far as the centralization of sequencers or other layer two
+- No L2 implies less of a risk of incurring centralization issues for sequencers or other L2
   operators.
 
 **Cons:**
 
-- Wasm could be a performance bottleneck, as it's slower than making native calls.
+- Wasm could be a performance bottleneck, as it is slower than making native calls.
 - A considerable amount of data is required in the PoV (proof of validity) function for proving the
   parachain state.
 - Other limitations within the Parachains Protocol to keeping parachains compatible with the entire
   orchestration of the relay and parachains.
 
-Despite these cons, Polkadot remains upgradable through forkless upgrades, which open the protocol
-through any improvements or changes in the future.
+Despite these cons, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} remains upgradable through forkless upgrades, which allows the protocol to be easily upgradable to stay in line with future technological advances.
