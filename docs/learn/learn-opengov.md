@@ -122,39 +122,6 @@ they wish. Several new features, known as
 [**Origins and Tracks**](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), are
 introduced to help aid in the flow and processing of the referenda protocol.
 
-An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
-originating from that origin. The track outlines the lifecycle for the proposal and is independent
-from other origins' tracks. The proposer of the referenda now selects an appropriate Origin for
-their request based on the requirements of the proposal.
-
-Although the track structure is the same for all origins, track parameters are not. Such parameters
-include:
-
-- **Maximum Deciding or Capacity**: the limit for the number of referenda that can be decided at
-  once.
-- **Decision deposit**: the amount of funds that must be placed on deposit in order to enter the
-  Decision Period (note that more requirements must be met to enter the Decision Period).
-- **Preparation Period**: the minimum amount of voting time needed before entering the Decision
-  Period (given capacity and deposit are met).
-- **Decision Period**: the maximum amount of time to approve a proposal. If not approved by the end
-  of the period, the proposal will be rejected.
-- **Confirmation Period**: the minimum amount of time (within the Decision Period) the approval and
-  support criteria must hold before the proposal is approved and moved to the enactment period.
-- **Minimum Enactment Period**: the minimum amount of waiting time before the proposed changes are
-  applied
-- **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
-  the Decision Period. The approval % is defined as the portion of _aye_ votes (adjusted for
-  conviction) over the total votes (_aye_, _nay_, and _abstained_).
-- **Support Curve**: the curve describing the minimum % of all votes as a function of time within
-  the Decision Period. The support % is defined as the portion of all votes without conviction (i.e.
-  _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
-  measure of turnout.
-
-So for example, a runtime upgrade (`set_code` call) does not have the same implications for the
-ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins
-are needed in which different deposits, turnouts (i.e. support), approvals, and a minimum
-[enactment](#enactment) periods will be predetermined on the pallet.
-
 ### Cancelling and Blacklisting
 
 :::info Cancelling Referenda in Governace v1
@@ -197,6 +164,19 @@ in Governance v1.
 
 :::
 
+### Referenda Timeline
+
+:::info Voting timetable in Governace v1
+
+See [this page](./learn-governance.md#referenda-timeline) for more information about the voting
+timetable in Governance v1.
+
+:::
+
+The proposal is eligible to get approved during OpenGov's track specific
+[decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). If not approved by
+then end of this period, the proposal is automatically rejected.
+
 In OpenGov, when a referendum is initially created, it can be immediately voted on by the community.
 However, it is not immediately in a state where it can end, or otherwise have its votes counted, be
 approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are
@@ -222,20 +202,42 @@ The criteria for entering the **Deciding** state is a follows:
 Once the three criteria listed above are met, the referendum moves to the **Deciding** state. The
 votes of the referendum are now counted towards the outcome.
 
-## Voting Timetable
+### Origins and Tracks
 
-:::info Voting timetable in Governace v1
+An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
+originating from that origin. The track outlines the lifecycle for the proposal and is independent
+from other origins' tracks. The proposer of the referenda now selects an appropriate Origin for
+their request based on the requirements of the proposal.
 
-See [this page](./learn-governance.md#voting-timetable) for more information about the voting
-timetable in Governance v1.
+Although the track structure is the same for all origins, track parameters are not. Such parameters
+include:
 
-:::
+- **Maximum Deciding or Capacity**: the limit for the number of referenda that can be decided at
+  once.
+- **Decision deposit**: the amount of funds that must be placed on deposit in order to enter the
+  Decision Period (note that more requirements must be met to enter the Decision Period).
+- **Preparation Period**: the minimum amount of voting time needed before entering the Decision
+  Period (given capacity and deposit are met).
+- **Decision Period**: the maximum amount of time to approve a proposal. If not approved by the end
+  of the period, the proposal will be rejected.
+- **Confirmation Period**: the minimum amount of time (within the Decision Period) the approval and
+  support criteria must hold before the proposal is approved and moved to the enactment period.
+- **Minimum Enactment Period**: the minimum amount of waiting time before the proposed changes are
+  applied
+- **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
+  the Decision Period. The approval % is defined as the portion of _aye_ votes (adjusted for
+  conviction) over the total votes (_aye_, _nay_, and _abstained_).
+- **Support Curve**: the curve describing the minimum % of all votes as a function of time within
+  the Decision Period. The support % is defined as the portion of all votes without conviction (i.e.
+  _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
+  measure of turnout.
 
-The proposal is eligible to get approved during OpenGov's track specific
-[decision period](./../maintain/maintain-guides-opengov.md#origins-and-tracks). If not approved by
-then end of this period, the proposal is automatically rejected.
+So for example, a runtime upgrade (`set_code` call) does not have the same implications for the
+ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins
+are needed in which different deposits, turnouts (i.e. support), approvals, and a minimum
+[enactment](#enactment) periods will be predetermined on the pallet.
 
-## Voting on a Referendum
+### Approval and Support
 
 :::info Adaptive Quorum Biasing is deprecated
 
@@ -268,6 +270,26 @@ origin but after the Enactment Period. The Enactment Period is specified when th
 proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a
 larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal
 may bring.
+
+### Enactment
+
+:::info Enactment in Governace v1
+
+See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
+v1.
+
+:::
+
+In OpenGov the enactment period is suggested by the proposer, but there are also minimums set for
+each Origin Track. For example, root Origin approvals require a longer period because of the
+importance of the changes they bring to the network.
+
+## Voting on a Referendum
+
+In Governance V1 voters could case only a _aye_ or _nay_ vote. In OpenGov voters can additionally
+cast a _abstain_ and _split_ votes.
+[Vote splitting](../maintain/maintain-guides-opengov.md#voting-on-referenda) allows voters to
+allocate different votes for _aye_, _nay_, and _abstain_.
 
 ### Voluntary Locking
 
@@ -307,19 +329,6 @@ censorship-free.
 For a step-by-step outline of how to delegate voting power in OpenGov, check out the
 [Delegating Voting Power](./../maintain/maintain-guides-opengov.md#delegating-voting-power) section
 on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
-
-## Enactment
-
-:::info Enactment in Governace v1
-
-See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
-v1.
-
-:::
-
-In OpenGov the enactment period is suggested by the proposer, but there are also minimums set for
-each Origin Track. For example, root Origin approvals require a longer period because of the
-importance of the changes they bring to the network.
 
 ## Fellowship
 
