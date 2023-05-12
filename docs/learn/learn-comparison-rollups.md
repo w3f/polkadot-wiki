@@ -37,20 +37,20 @@ to L2 rollups.
 
 ## Optimistic Rollups
 
-Optimistic rollups are an interactive scaling method for layer-one blockchains. Optimistic rollups
+Optimistic rollups are an interactive scaling method for L1 blockchains. They
 assume _optimisically_ that every proposed transaction is valid by default.
 
 In the case of mitigating potentially invalid transactions, optimistic rollups introduce a
-_challenge period_ in which participants may challenge a suspect rollup. A fraud-proving scheme is
-in place to allow for several _fraud proofs_ to be submitted, rendering the rollup valid. During the
-challenge period, a set of state changes may be disputed, come to a resolution, or merely be
+_challenge period_ during which participants may challenge a suspect rollup. A fraud-proving scheme is
+in place to allow for several _fraud proofs_ to be submitted. Those proofs could make the rollup valid or invalid. During the
+challenge period, state changes may be disputed, resolved, or
 included if no challenge is presented (and the required proofs are in place).
 
 While optimistic rollups provide scalability, they have both pros and cons to their approach:
 
 **Pros:**
 
-- They aren't limited by the type of state change - any state change can be included, meaning
+- They are not limited by the type of state change - any state change can be included, meaning
   existing apps do not have to account for it.
 - They can be parallelized for scalability.
 - A substantial amount of data can fit within a single rollup
@@ -59,10 +59,10 @@ While optimistic rollups provide scalability, they have both pros and cons to th
 
 **Cons:**
 
-- Transaction censorship and centralization are concerns - sequencers/layer two nodes can be
-  compromised in this regard.
+- Transaction censorship and centralization are of concern, where sequencers/L2 nodes can be
+  compromised.
 - Challenge periods could take a substantial amount of time to pass, increasing time for the rollup
-  to finalize onto the layer one network.
+  to finalize onto the L1 network.
 - Due to their generalist nature of including any state change for their parent network, optimistic
   rollups can run into gas limitations or cause network congestion in the case of Ethereum.
 
@@ -72,7 +72,6 @@ solutions include:
 - [Optimisim](https://www.optimism.io/)
 - [Arbitrum](https://bridge.arbitrum.io/)
 - [Unipig](https://unipig.exchange/welcome)
-
 ## Zero-knowledge Rollups
 
 Zero-knowledge rollups (often called ZK rollups) are a non-interactive method that utilizes
