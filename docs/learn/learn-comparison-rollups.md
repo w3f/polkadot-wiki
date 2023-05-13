@@ -16,7 +16,7 @@ scalability.
 
 :::
 
-Layer two (L2) networks are notorious as being the way forward for blockchain scalability by off-loading
+Layer two (L2) networks are popular as being the way forward for blockchain scalability by off-loading
 the majority of computation from layer one (L1) networks. L2 solutions utilize the L1 network's security and functionality to build an
 additional layer that is often faster, reduces fees, and solves other platform-specific issues. In
 many cases, L2 solutions focus on capitalizing on using blockspace within a particular
