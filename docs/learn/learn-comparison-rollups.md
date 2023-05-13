@@ -133,7 +133,7 @@ if a bad parablock is found.
 - Protocol level sharding, shared security, and interoperability.
 - Each shard has a low barrier of entry in terms of development, as anything that compiles to Wasm
   is a valid target.
-- Finality is usually under a minute.
+- Fast Finality (usually under a minute on Polkadot).
 - Data availability is built-in through validators and mechanisms like
   [erasure coding](./learn-availability#erasure-codes).
 - No L2 implies less of a risk of incurring centralization issues for sequencers or other L2
