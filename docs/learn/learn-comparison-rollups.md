@@ -71,6 +71,7 @@ solutions include:
 - [Optimisim](https://www.optimism.io/)
 - [Arbitrum](https://bridge.arbitrum.io/)
 - [Unipig](https://unipig.exchange/welcome)
+
 ## Zero-knowledge Rollups
 
 Zero-knowledge rollups (often called ZK rollups) are a non-interactive method that utilizes
