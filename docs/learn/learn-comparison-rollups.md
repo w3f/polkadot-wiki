@@ -11,7 +11,7 @@ slug: ../learn-comparisons-rollups
 :::note
 
 This comparison covers general information regarding two widely used rollup mechanisms that are used
-to scale (usually EVM-based) blockchains and compares and contrasts how Polkadot deals with
+to scale (usually EVM-based) blockchains and compares and contrasts how Polkadot achieves
 scalability.
 
 :::
