@@ -21,7 +21,7 @@ the majority of computation from layer one (L1) networks. L2 solutions utilize t
 additional layer that is often faster, reduces fees, and solves other platform-specific issues. In
 many cases, L2 solutions focus on utilizing block space on a particular blockchain efficiently and cost-effectively.
 
-**Rollups** are a L2 scaling solution. At the most basic level, a rollup L2 solution is
+**Rollups** are an L2 scaling solution. At the most basic level, a rollup L2 solution is
 responsible for "rolling up" transactions by batching them before publishing them to the L1
 chain, usually through a network of **sequencers**. This mechanism could include thousands of
 transactions in a single rollup.
