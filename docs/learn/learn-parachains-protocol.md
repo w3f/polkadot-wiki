@@ -31,9 +31,8 @@ and the
 The Parachains' Protocol aims to carry a parachain's block from authoring to inclusion through a
 process that can be carried out repeatedly and in parallel for each parachain connected to the Relay
 Chain. The protocol allows the network to be efficiently sharded among parachains while maintaining
-strong security guarantees. The Availability and Validity (AnV) Protocol describes the
-Parachain Protocol from the perspective of availability and validity.
-on).
+strong security guarantees. The Availability and Validity (AnV) Protocol describes the Parachain
+Protocol from the perspective of availability and validity. on).
 
 ## Main Actors
 

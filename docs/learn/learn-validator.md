@@ -89,8 +89,8 @@ transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :ku
 for their activities.
 
 Finally, validators participate in the
-[chain selection process within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring that
-only available and valid blocks end within the finalized Relay Chain.
+[chain selection process within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring
+that only available and valid blocks end within the finalized Relay Chain.
 
 :::info Within an era roles can change
 
