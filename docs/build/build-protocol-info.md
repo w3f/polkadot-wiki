@@ -226,7 +226,6 @@ immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
 
-
 :::caution Transaction Hash is not a unique identifier
 
 The assumption that a transaction's hash is a unique identifier is the number one mistake that
@@ -234,7 +233,6 @@ indexing services and custodians make. This error will cause major issues for yo
 that you read this section carefully.
 
 :::
-
 
 Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a transaction's hash
 as a unique identifier. In Substrate-based chains like Polkadot, a transaction's hash only serves as
