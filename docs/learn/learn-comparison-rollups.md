@@ -39,8 +39,8 @@ parachains into an aggregated, representative state, somewhat similar to L2 roll
 
 ## Optimistic Rollups
 
-Optimistic rollups are an interactive scaling method for L1 blockchains. They assume _optimisically_
-that every proposed transaction is valid by default.
+Optimistic rollups are an interactive scaling method for L1 blockchains. They assume
+_optimistically_ that every proposed transaction is valid by default.
 
 In the case of mitigating potentially invalid transactions, optimistic rollups introduce a
 _challenge period_ during which participants may challenge a suspect rollup. A fraud-proving scheme
