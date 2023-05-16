@@ -202,7 +202,7 @@ the outcome.
 
 In (2), the proposal enters the **Deciding Period** where votes can be cast. For a proposal to be
 approved, votes must satisfy the approval and support criteria for at least the **Confirmation
-Period**; otherwise, the proposal is automatically rejected. A rejected proposal can be submitted
+Period**; otherwise, the proposal is automatically rejected. A rejected proposal can be resubmitted
 anytime and as many times as possible.
 
 In (3), approved proposals will enter the **Enactment Period**, after which proposed changes will be
