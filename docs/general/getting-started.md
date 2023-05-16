@@ -98,39 +98,10 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-vote-councillor">
-      <img class="guide-image" src="/img/polkadot-guide/Voting.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Vote for Councilors</h5>
-              </div>
-    </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-  <a class="guide-link" href="../docs/learn-treasury#creating-the-proposal">
-    <img class="guide-image" src="/img/polkadot-guide/Proposal.jpg" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Make Proposals</h5>
-            </div>
-  </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-join-council#submit-candidacy">  
+    <a class="guide-link" href="../docs/learn-governance">  
       <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
-                  <h5 class="cards-title">Council Candidacy</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-treasury">  
-      <img class="guide-image" src="/img/polkadot-guide/Treasury.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Treasury</h5>
+                  <h5 class="cards-title">Governance</h5>
               </div>
     </a>
   </td>
