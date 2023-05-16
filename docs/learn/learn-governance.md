@@ -166,7 +166,7 @@ referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or
 ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council,
 it benefits from using the negative bias. We assume low turnout is less problematic if the council
-proposes a referendum. Also, the council members have strong technical knowledge about the system,
+proposes a referendum. Also, the council members are elected by the community and have strong technical as well as functional knowledge about the system,
 and we assume solid justifications back changes proposed by the council.
 
 :::
