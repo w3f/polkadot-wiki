@@ -398,7 +398,7 @@ If the proposal is resubmitted after a cool-down period, they may not veto it a 
 
 Council motion that pass with a 3/5 (60%) super-majority - but without reaching unanimous
 support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
-case that all members of the council vote in favor of a motion, the vote is considered unanimous and
+case that all members of the council that voted are in favor of a motion, the vote is considered unanimous and
 becomes a referendum with [negative turnout bias](#adaptive-quorum-biasing).
 
 :::note Explainer video on the Council
