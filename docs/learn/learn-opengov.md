@@ -135,8 +135,8 @@ already being voted on. The operation will immediately reject an ongoing referen
 its status. There is also a provision to ensure the deposit of the proposer is slashed if the
 proposal is malicious or spam.
 
-Cancelation itself is a governance operation that the network must vote upon to be executed.
-Cancelation comes with
+Cancellation is a governance operation the network must vote on to be executed.
+Cancellation comes with
 [its own Origin and Track](../maintain/maintain-guides-opengov.md#referendum-canceller) which has a
 low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for
 passing, given that it is invoked with a sense of urgency.
