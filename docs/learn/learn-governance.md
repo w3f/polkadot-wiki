@@ -240,7 +240,7 @@ proposal is carried, no matter how much stake votes on the proposal.
 To know more about where these above formulas come from, please read the
 [democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
 
-#### Example Adaptive Quorum Biasing
+#### Example of Adaptive Quorum Biasing
 
 Let's assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in
 total and that this is a public proposal.
