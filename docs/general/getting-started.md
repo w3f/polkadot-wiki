@@ -101,7 +101,7 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
     <a class="guide-link" href="../docs/learn-nft">
       <img class="guide-image" src="/img/polkadot-guide/Voting.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
-                  <h5 class="cards-title">NFT</h5>
+                  <h5 class="cards-title">NFTs</h5>
               </div>
     </a>
   </td>
