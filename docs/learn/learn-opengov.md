@@ -117,9 +117,7 @@ Governance v1.
 
 :::
 
-In OpenGov, anyone can start a referendum at any time and do so as often as they wish. New features,
-known as [**Origins and Tracks**](#origins-and-tracks), are introduced to help aid in the flow and
-processing of the referenda protocol.
+In OpenGov, anyone can start a referendum at any time and do so as often as they wish.  Previous features were expanded and improved, most notably [**Origins and Tracks**](#origins-and-tracks) help aid in the flow and processing of the referenda protocol.
 
 ### Cancelling and Blacklisting
 
