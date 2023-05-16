@@ -418,7 +418,7 @@ In OpenGov, it allows the Fellowship to authorize a new origin (known as Whiteli
 executed with Root-level privileges and will only work with specified commands that have been
 approved by the Fellowship.
 
-The Whitelist pallet allows one Origin to escalate the privilege level of another Origin for a
+The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one Origin to escalate the privilege level of another Origin for a
 certain operation. The pallet verifies two things:
 
 - The origin is the Whitelisted-Root (i.e. that the referendum passed on this track)
