@@ -84,7 +84,7 @@ initiator of legislation, but it was often seen as a centralized entity. To furt
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, OpenGov proposes the following main
 changes:
 
-- Migrating all responsibilities of the Council to the public via democracy votes
+- Migrating all responsibilities of the Council to the public via a direct democracy voting system.
 - Dissolving the current [Council](./learn-governance.md#council) collective
 - Allowing users to delegate voting power in more ways to community members
 - Dissolving the [Technical Committee](./learn-governance.md#technical-committee) and establishing
