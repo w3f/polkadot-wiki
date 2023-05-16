@@ -373,7 +373,7 @@ you trust if you are not willing to stay up-to-date with all referenda.
 
 You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
 stash account. The proxy can be yours, or you can authorize a third-party governance proxy to vote
-with your stash. See more about proxies on the [dedicated page](./learn-proxies.md).
+with your stash. Learn more from the [dedicated page on Proxy Accounts](./learn-proxies.md).
 
 ## Council
 
