@@ -80,6 +80,30 @@ prohibitively inefficient and expensive in other environments.
 The following NFT solutions exist and are under development in the Polkadot and/or Kusama
 ecosystems:
 
+### KodaDOT
+
+KodaDot has started as first [unofficial explorer for RMRKv0.0.1] with [contributions to protocol].
+Then successfully [received Kusama Treasury funding](STATEMINE proposal) to spearheading best end
+user experience on Statemine. In summer 2022 KodaDot has [won first prize at Polkadot North
+American](MENTION DEVPOST HACKATHON) for implementing MoonBeam and MoonRiver NFT EVM smart contracts
+and enabled read-only to existing components for seamless end-user interaction. Next frontier was
+[launching with Basilisk NFT Marketplace pallet in Fall 2022](LINK TO SOME pull request or PROOF)
+where nowadays are growing amount of artist collections offering artists to receive offers on
+unlisted NFTs and royalties on-chain.  
+Upcoming integrations are with Astar is based
+on [PSP-34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) leveraging [smart contracts written with ink!](https://use.ink/).
+
+KodaDot
+ecosystem [offers currently rich API interface for builders in Polkadot ecosystem](https://github.com/kodadot/uniquery) which
+is based on SubSquid indexer.
+
+Currently KodaDot
+is [ranked by Github in Polkadot ecosystem as number one dapp](https://github.com/topics/polkadot) by
+developer contributions with over 90 contributors.
+
+For end-user experience KodaDot offers searchable items, collections and translates to end-user in
+easy way on-chain transactions into deep insights of collection ownership dynamics.
+
 ### Unique network
 
 [Unique network](https://unique.network/), an NFT-specific blockchain offering innovations such as
