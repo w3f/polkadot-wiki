@@ -368,7 +368,7 @@ is less than Peter, leading to their voting power counting as less.
 ### Delegations
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
-[delegate your vote](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another account
+[delegate your voting power](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another account
 you trust if you are not willing to stay up-to-date with all referenda.
 
 You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
