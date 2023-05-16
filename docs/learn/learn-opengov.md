@@ -223,7 +223,7 @@ until place is available to enter the deciding period.
 ### Origins and Tracks
 
 An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
-originating from that origin. The track outlines the lifecycle of the proposal and is independent
+executed with that origin. The track is basically a pipeline in which the proposal lives and proceeds and is independent 
 from other origins' tracks. The proposer of the referenda now selects an appropriate Origin for
 their request based on the proposal’s requirements.
 
