@@ -117,7 +117,9 @@ Governance v1.
 
 :::
 
-In OpenGov, anyone can start a referendum at any time and do so as often as they wish.  Previous features were expanded and improved, most notably [**Origins and Tracks**](#origins-and-tracks) help aid in the flow and processing of the referenda protocol.
+In OpenGov, anyone can start a referendum at any time and do so as often as they wish. Previous
+features were expanded and improved, most notably [**Origins and Tracks**](#origins-and-tracks) help
+aid in the flow and processing of the referenda protocol.
 
 ### Cancelling and Blacklisting
 
@@ -177,8 +179,8 @@ The figure above provides a summary view of the referenda timeline for OpenGov.
 
 In (1), when a referendum is initially created, the community can immediately vote on it. However,
 it is not immediately in a state where it can end or otherwise have its votes counted, be approved,
-and ultimately enacted. Instead, the proposal will stay within a **Lead-in Period** until it fulfills
-three criteria:
+and ultimately enacted. Instead, the proposal will stay within a **Lead-in Period** until it
+fulfills three criteria:
 
 - Proposals must stay within the lead-in period for a pre-defined minimum amount of time. This helps
   mitigate against the possibility of "decision sniping" where an attacker controlling a substantial
@@ -251,8 +253,9 @@ include:
 
 For example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
 implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
-therefore different Origins are needed in which different deposits, turnouts (i.e. support),
-approvals, and a minimum [enactment](#enactment) periods will be predetermined on the pallet.
+therefore different Origins for these two actions are needed in which different deposits, turnouts
+(i.e. support), approvals, and a minimum [enactment](#enactment) periods will be predetermined on
+the pallet.
 
 For detailed information about origin and tracks, and parameter values in Kusama, see
 [this page](../maintain/maintain-guides-opengov.md#origins-and-tracks-info).
@@ -416,8 +419,9 @@ In OpenGov, it allows the Fellowship to authorize a new origin (known as Whiteli
 executed with Root-level privileges and will only work with specified commands that have been
 approved by the Fellowship.
 
-The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one Origin to escalate the privilege level of another Origin for a
-certain operation. The pallet verifies two things:
+The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
+Origin to escalate the privilege level of another Origin for a certain operation. The pallet
+verifies two things:
 
 - The origin is the Whitelisted-Root (i.e. that the referendum passed on this track)
 - The Fellowship has indeed whitelisted the proposal.
