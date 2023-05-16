@@ -179,7 +179,7 @@ The figure above provides a summary view of the referenda timeline for OpenGov.
 
 In (1), when a referendum is initially created, the community can immediately vote on it. However,
 it is not immediately in a state where it can end or otherwise have its votes counted, be approved,
-and summarily enacted. Instead, the proposal will stay within a **Lead-in Period** until it fulfills
+and ultimately enacted. Instead, the proposal will stay within a **Lead-in Period** until it fulfills
 three criteria:
 
 - Proposals must stay within the lead-in period for a pre-defined minimum amount of time. This helps
