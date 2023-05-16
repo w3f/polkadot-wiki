@@ -130,7 +130,7 @@ referenda in Governance v1.
 
 :::
 
-In OpenGov, there is a special operation called **Cancelation** for intervening with a proposal
+In OpenGov, there is a special operation called **Cancellation** for intervening with a proposal
 already being voted on. The operation will immediately reject an ongoing referendum regardless of
 its status. There is also a provision to ensure the deposit of the proposer is slashed if the
 proposal is malicious or spam.
