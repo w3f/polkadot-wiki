@@ -251,7 +251,7 @@ include:
   _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
   measure of turnout.
 
-So, for example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
+For example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
 implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
 therefore different Origins are needed in which different deposits, turnouts (i.e. support),
 approvals, and a minimum [enactment](#enactment) periods will be predetermined on the pallet.
