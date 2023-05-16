@@ -116,8 +116,8 @@ that gets to the top will be selected for a referendum when the next voting peri
 
 The figure shows that the launch period is shown with a fixed length. Still, it varies depending on
 who initiated the proposal and how many proposals there are in the pipeline. Council motions will
-likely have a short launch period when compared to the public
-referenda which might take longer unless they are the only ones in the pipeline.
+likely have a short launch period when compared to the public referenda which might take longer
+unless they are the only ones in the pipeline.
 
 In (2), the proposal is selected for a referendum. Proposals initiated by the public will become a
 [public referendum](#public-referenda), while those initiated by the council will become
@@ -161,13 +161,14 @@ will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 
-:::info Public vs. Council initiated Referenda
+:::info Public- vs. Council-initiated Referenda
 
 Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or
 ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council,
 it benefits from using the negative bias. We assume low turnout is less problematic if the council
-proposes a referendum. Also, the council members are elected by the community and have strong technical as well as functional knowledge about the system,
-and we assume solid justifications back changes proposed by the council.
+proposes a referendum. Also, the council members are elected by the community and have strong
+technical as well as functional knowledge about the system, and we assume solid justifications back
+changes proposed by the council.
 
 :::
 
@@ -368,8 +369,8 @@ is less than Peter, leading to their voting power counting as less.
 ### Delegations
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
-[delegate your voting power](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another account
-you trust if you are not willing to stay up-to-date with all referenda.
+[delegate your voting power](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another
+account you trust if you are not willing to stay up-to-date with all referenda.
 
 You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
 stash account. The proxy can be yours, or you can authorize a third-party governance proxy to vote
@@ -396,9 +397,9 @@ For a referendum to be proposed by the council, a strict majority of members mus
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal.
 If the proposal is resubmitted after a cool-down period, they may not veto it a second time.
 
-Council motion that pass with a 3/5 (60%) super-majority - but without reaching unanimous
-support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
-case that all members of the council that voted are in favor of a motion, the vote is considered unanimous and
+Council motion that pass with a 3/5 (60%) super-majority - but without reaching unanimous support -
+will move to a public referendum under a neutral, majority-carries voting scheme. In the case that
+all members of the council that voted are in favor of a motion, the vote is considered unanimous and
 becomes a referendum with [negative turnout bias](#adaptive-quorum-biasing).
 
 :::note Explainer video on the Council
