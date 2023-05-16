@@ -116,7 +116,7 @@ that gets to the top will be selected for a referendum when the next voting peri
 
 The figure shows that the launch period is shown with a fixed length. Still, it varies depending on
 who initiated the proposal and how many proposals there are in the pipeline. Council motions will
-likely have a short launch period overall due to their importance, while some low-priority public
+likely have a short launch period when compared to the public
 referenda might take longer unless they are the only ones in the pipeline.
 
 In (2), the proposal is selected for a referendum. Proposals initiated by the public will become a
