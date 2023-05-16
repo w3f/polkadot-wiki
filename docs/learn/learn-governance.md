@@ -121,7 +121,7 @@ referenda might take longer unless they are the only ones in the pipeline.
 
 In (2), the proposal is selected for a referendum. Proposals initiated by the public will become a
 [public referendum](#public-referenda), while those initiated by the council will become
-[council referenda](#council-referenda) or motions. The voting period lasts
+[council referenda](#council-referenda). The voting period lasts
 {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, after which, if the proposal is
 approved, it will go through an enactment period. Rejected proposals will need to start from (1).
 Note that Governance V1 uses an [alternating voting timeline](#alternating-voting-timetable) where
@@ -396,10 +396,10 @@ For a referendum to be proposed by the council, a strict majority of members mus
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal.
 If the proposal is resubmitted after a cool-down period, they may not veto it a second time.
 
-Council motions that pass with a 3/5 (60%) super-majority - but without reaching unanimous support -
-will move to a public referendum under a neutral, majority-carries voting scheme. In the case that
-all members of the council vote in favor of a motion, the vote is considered unanimous and becomes a
-referendum with [negative turnout bias](#adaptive-quorum-biasing).
+Council referenda that pass with a 3/5 (60%) super-majority - but without reaching unanimous
+support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
+case that all members of the council vote in favor of a motion, the vote is considered unanimous and
+becomes a referendum with [negative turnout bias](#adaptive-quorum-biasing).
 
 :::note Explainer video on the Council
 
