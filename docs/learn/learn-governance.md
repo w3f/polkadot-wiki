@@ -131,7 +131,7 @@ voters can vote either for a public proposal or a council motion every
 In (3), the proposal is approved and moves through the [enactment period](#enactment) that can be of
 different lengths depending on who initiated the proposal in the first place, with emergency
 proposals being the fastest ones and the only ones that can be voted simultaneously with other
-proposals.
+referenda.
 
 ### Public Referenda
 
