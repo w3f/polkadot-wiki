@@ -36,12 +36,12 @@ We primarily use Matrix across the organization and to communicate with communit
 application we use most often to interact with the Matrix protocol is the
 [Element](https://app.element.io) messenger.
 
-- [Kusama Watercooler Chat](https://app.element.io/#/room/%23kusamawatercooler:polkadot.builders) -
-  General room for talk about Kusama.
-- [Kusama Validator Lounge](https://app.element.io/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
-  Room for validators learning about setting up a node.
-- [Kusama Direction](https://app.element.io/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
-  Governance, and a place to discuss the future of Kusama.
+- [Kusama Watercooler Chat](https://matrix.to/#/#kusamawatercooler:web3.foundation) - General room
+  for talk about Kusama.
+- [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:parity.io) - Room for
+  validators learning about setting up a node.
+- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) - Governance, and a place to
+  discuss the future of Kusama.
 - [Polkadot Digest](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - News about what is
   happening in the Polkadot ecosystem, published every weekday except holidays, includes Kusama.
 - To join the Chinese Validator chat, message

@@ -117,8 +117,8 @@ takes place on the following platforms:
 
 - Many community members participate in discussion in the
   {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
-  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
   {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
 - The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
   platforms automatically read proposals from the chain, turning them into discussion threads and
@@ -302,7 +302,7 @@ requested allocation (including curator's fee) and confirm the call.
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
 motion. You can contact the Council by joining the
 {{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
-{{ kusama: Kusama Direction [channel](https://matrix.to/#/#kusama:matrix.parity.io) :kusama }} in
+{{ kusama: Kusama Direction [channel](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} in
 Element or joining our
 {{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot }}
 {{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and publishing a
