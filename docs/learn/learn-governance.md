@@ -1,6 +1,6 @@
 ---
 id: learn-governance
-title: Governance
+title: Governance V1
 sidebar_label: Governance V1
 description: Learn about Polkadot's thought-through governance model.
 keywords: [governance, referenda, proposal, voting, endorse]
@@ -27,7 +27,7 @@ Learn about the upcoming changes to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
 defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for
-several on-chain voting mechanisms such as referenda with the novel concept of
+several on-chain voting mechanisms, such as referenda with the novel concept of
 [Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
 protocol must be agreed upon by stake-weighted referenda.
 
@@ -46,10 +46,26 @@ Referenda can be started in different ways:
 - Emergency proposals submitted by the [Technical Committee](#technical-committee) and approved by
   the [Council](#council)
 
-### Cancelling
+:::info Starting a proposal in Governance V1
+
+For more information about how to start a proposal, see the
+[dedicated page](../maintain/maintain-guides-democracy.md#proposing-an-action).
+
+:::
+
+### Endorsing Proposals
+
+Anyone can submit a proposal by depositing the minimum amount of tokens for a certain period (number
+of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to
+support it - this action is called
+[_endorsing_](../maintain/maintain-guides-democracy.md#endorsing-a-proposal). The proposal with the
+highest amount of bonded support will be selected to be a referendum in the next voting cycle based
+on an [alternating voting timetable](#alternating-voting-timetable).
+
+### Cancelling Proposals
 
 A proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
-do so or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
+do so or if Root Origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
 burned.
 
 Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
@@ -59,9 +75,9 @@ the runtime that the proposal would institute.
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders _en masse_ to determine the proposal’s fate.
 
-### Blacklisting
+### Blacklisting Proposals
 
-A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
+A proposal can be blacklisted by Root Origin (e.g. sudo). A blacklisted proposal and its related
 referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
 hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
 proposals that could be submitted with the same hash.
@@ -83,23 +99,51 @@ Referenda are discrete events, have a fixed period where voting happens, and the
 the function call is executed if the vote is approved. Referenda are always binary: your only
 options in voting are "aye", "nay", or abstaining entirely.
 
+### Referenda Timeline
+
+The structure of the timeline for all referenda is the same regardless of who initiates the
+proposal, although the timeline length can vary (see below).
+
+![gov1-timeline](../assets/gov1-timeline.png)
+
+The figure above provides a summary view of the referenda timeline for Governance V1.
+
+In (1), the proposal is submitted, and the Launch Period starts. During this period of indefinite
+length the voters can [endorse](#endorsing-proposals) proposals by bonding the same amount of tokens
+used by the depositor. Deposited tokens for endorsement will be returned once the proposal becomes a
+referendum. During the launch period, the proposal will compete with other proposals, and the one
+that gets to the top will be selected for a referendum when the next voting period starts.
+
+The figure shows that the launch period is shown with a fixed length. Still, it varies depending on
+who initiated the proposal and how many proposals there are in the pipeline. Council motions will
+likely have a short launch period when compared to the public referenda which might take longer
+unless they are the only ones in the pipeline.
+
+In (2), the proposal is selected for a referendum. Proposals initiated by the public will become a
+[public referendum](#public-referenda), while those initiated by the council will become
+[council referenda](#council-referenda). The voting period lasts
+{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, after which, if the proposal is
+approved, it will go through an enactment period. Rejected proposals will need to start from (1).
+Note that Governance V1 uses an [alternating voting timeline](#alternating-voting-timetable) where
+voters can vote either for a public proposal or a council motion every
+{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}.
+
+In (3), the proposal is approved and moves through the [enactment period](#enactment) that can be of
+different lengths depending on who initiated the proposal in the first place, with emergency
+proposals being the fastest ones and the only ones that can be voted simultaneously with other
+referenda.
+
 ### Public Referenda
-
-Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
-(number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it - this action is called _endorsing_. The proposal with the highest amount of bonded
-support will be selected to be a referendum in the next voting cycle.
-
-Note that this may be different from the absolute number of endorsements; for instance, three
-accounts bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a
-single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}.
 
 Public referenda will have a [**positive turnout bias**](#adaptive-quorum-biasing), meaning that
 they will require a heavy supermajority of _aye_ votes to pass at low turnouts but as turnout
 increases towards 100%, it will require a simple majority of _aye_ votes to pass (i.e. 51% wins).
 
 Note that the bonded tokens will be released once the proposal is tabled (that is, brought to a
-vote), and a maximum of 100 public proposals can be in the proposal queue.
+vote), and a maximum of
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
+public proposals can be in the proposal queue.
 
 :::info turnout
 
@@ -117,33 +161,141 @@ will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 
-There can only be one active referendum at any given time, except when there is also an emergency
-referendum in progress.
-
-:::info Public vs. Council
+:::info Public- vs. Council-initiated Referenda
 
 Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or
 ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council,
-it benefits from using the negative bias. Here we assume that low turnout is less problematic if the
-council proposes a referendum. Also, the council members have strong technical knowledge about the
-system, and we assume solid justifications back changes proposed by the council.
+it benefits from using the negative bias. We assume low turnout is less problematic if the council
+proposes a referendum. Also, the council members are elected by the community and have strong
+technical as well as functional knowledge about the system, and we assume solid justifications back
+changes proposed by the council.
 
 :::
 
-## Voting Timetable
+### Alternating Voting Timetable
 
-Every {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, a new referendum will come up
-for a vote, assuming there is at least one proposal in one of the queues. There is a queue for
-Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted
-upon alternates between the top proposal in the two queues.
+All referenda are executed by Root Origin. It follows that multiple referenda cannot be voted upon
+in the same period, excluding emergency referenda. An emergency referendum occurring at the same
+time as a regular referendum (either public- or council-proposed) is the only time multiple
+referenda can be voted on.
 
-The "top" proposal is determined by the amount of stake bonded behind it. If the given queue, whose
-turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in the
-other queue, the top proposal in the other queue will become a referendum.
+Every
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+days, a new referendum will come up for a vote, assuming there is at least one proposal in one of
+the queues. There is a queue for Council-approved proposals and a queue for publicly-submitted
+proposals. The referendum to be voted upon alternates between the top proposal in the two queues,
+where the proposals' rank is based on [endorsement](#endorsing-proposals) (i.e. bonded tokens).
 
-Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
-emergency referendum occurring at the same time as a regular referendum (either public- or
-council-proposed) is the only time multiple referenda can be voted on.
+### Adaptive Quorum Biasing
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of **Adaptive
+Quorum Biasing**, which is used to alter the effective super-majority required to make it easier or
+more difficult for a proposal to pass depending on voting power (turnout) and origin (Council or
+public).
+
+Adaptive Quorum Biasing creates three tallying mechanisms: majority carry, super-majority approve,
+and super-majority against. They all equate to a simple majority-carry system at 100% turnout. Their
+selection depends on which entity proposed the proposal and whether all Council members voted yes
+(in the case of Council Referenda).
+
+|          **Entity**          |                   **Metric**                   |
+| :--------------------------: | :--------------------------------------------: |
+|            Public            | Positive Turnout Bias (Super-Majority Approve) |
+| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
+| Council (Majority agreement) |                Simple Majority                 |
+
+Let's use the image below as an example.
+
+![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
+
+If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
+for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
+the tally of _aye_ votes has to reach 54%, which means that the super-majority required decreases as
+the turnout increases. A positive turnout bias, whereby a heavy super-majority of aye votes is
+required to carry at low turnouts. However, as turnout increases towards 100%, it becomes a simple
+majority carry as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
+
+Where `approve` is the number of _aye_ votes, `against` is the number of _nay_ votes, `turnout` is
+the total number of voting tokens excluding [voluntary locking](#voluntary-locking), and
+`electorate` is the total number of tokens issued in the network.
+
+When the council proposes a new proposal through unanimous consent, the referendum would be put to
+the vote using **Negative Turnout Bias**. Referring to the above image, when a Council referendum
+only has a 25% turnout, the tally of _aye_ votes has to reach 34% for it to pass, while if the
+turnout increases to 75%, the tally of _aye_ votes has to reach 46%. A negative turnout bias
+requires a heavy super-majority of _nay_ votes to reject at low turnouts. However, as turnout
+increases towards 100%, it becomes a simple majority carry as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
+
+In short, when the turnout rate is low, a super-majority is required to reject the proposal, which
+means a lower threshold of _aye_ votes must be reached. As turnout increases toward 100%, it becomes
+a simple majority, a simple comparison of votes. If there are more _aye_ votes than _nay_, then the
+proposal is carried, no matter how much stake votes on the proposal.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
+
+To know more about where these above formulas come from, please read the
+[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
+
+#### Example of Adaptive Quorum Biasing
+
+Let's assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in
+total and that this is a public proposal.
+
+- John: {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
+- Peter: {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}
+- Lilly: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
+- JJ: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
+- Ken: {{ polkadot: 600 DOT :polkadot }}{{ kusama: 60 KSM :kusama }}
+
+John: Votes `Yes` for a 4 week lock period =>
+{{ polkadot: 500 x 1 = 500 Votes :polkadot }}{{ kusama: 50 x 1 = 50 Votes :kusama }}
+
+Peter: Votes `Yes` for a 4 week lock period =>
+{{ polkadot: 100 x 1 = 100 Votes :polkadot }}{{ kusama: 10 x 1 = 10 Votes :kusama }}
+
+JJ: Votes `No` for a 16 week lock period =>
+{{ polkadot: 150 x 3 = 450 Votes :polkadot }}{{ kusama: 150 x 3 = 450 Votes :kusama }}
+
+- approve = {{ polkadot: 600 :polkadot }}{{ kusama: 60 :kusama }}
+- against = {{ polkadot: 450 :polkadot }}{{ kusama: 45 :kusama }}
+- turnout = {{ polkadot: 750 :polkadot }}{{ kusama: 75 :kusama }}
+- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }}
+
+![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
+
+![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
+
+Since the above example is a public referendum, **Super-Majority Approve** would be used to
+calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
+turnout is low; therefore, based on the above result, the referendum will be rejected.
+
+:::info only the winning voter's tokens are locked.
+
+If the voters on the losing side of the referendum believe that the outcome will have adverse
+effects, their tokens are transferrable, so they will not be locked into the decision. Winning
+proposals are autonomously enacted after the [enactment period](#enactment).
+
+:::
+
+### Enactment
+
+Referenda are considered _baked_ if they are closed and tallied. Assuming a referendum is approved,
+it will be scheduled for **enactment**. Referenda are considered _unbaked_ if they are pending an
+outcome, i.e. being voted on.
+
+All referenda are associated with an enactment delay or **enactment period**. This is the period
+between a referendum ending and (assuming it was approved) the changes being enacted.
+
+For public and Council referenda, the enactment period is a fixed time of
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
+For proposals submitted as part of the enactment of a prior referendum, it can be set as desired.
+Emergency proposals deal with major problems with the network and need to be "fast-tracked". These
+will have a shorter enactment period.
 
 ## Voting on a Referendum
 
@@ -196,8 +348,8 @@ only prohibited from transferring these tokens to another account.
 
 :::
 
-Votes are still "counted" at the same time (at the end of the voting period), no matter for how long
-the tokens are locked.
+Votes are always "counted" at the same time (at the end of the voting period), no matter for how
+long the tokens are locked.
 
 See below an example that shows how voluntary locking works.
 
@@ -214,20 +366,15 @@ Even though combined both Logan and Kevin vote with more
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
 is less than Peter, leading to their voting power counting as less.
 
-## Enactment
+### Delegations
 
-Referenda are considered _baked_ if they are closed and tallied. Assuming a referendum is approved,
-it will be scheduled for **enactment**. Referenda are considered _unbaked_ if they are pending an
-outcome, i.e. being voted on.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
+[delegate your voting power](../maintain/maintain-guides-democracy.md#delegate-a-vote) to another
+account you trust if you are not willing to stay up-to-date with all referenda.
 
-All referenda are associated with an enactment delay or **enactment period**. This is the period
-between a referendum ending and (assuming it was approved) the changes being enacted.
-
-For the first two ways that a referendum is launched (i.e. public and council referenda), the
-enactment period is a fixed time of {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}.
-For the third type (i.e. proposals submitted as part of the enactment of a prior referendum), it can
-be set as desired. Emergency proposals deal with major problems with the network and need to be
-"fast-tracked". These will have a shorter enactment period.
+You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
+stash account. The proxy can be yours, or you can authorize a third-party governance proxy to vote
+with your stash. Learn more from the [dedicated page on Proxy Accounts](./learn-proxies.md).
 
 ## Council
 
@@ -235,7 +382,9 @@ To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: 
 introduces the idea of a "council". The council is an on-chain entity comprising several actors,
 each represented as an on-chain account. On
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
-{{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" /> :kusama }}
+members.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance:
@@ -248,10 +397,10 @@ For a referendum to be proposed by the council, a strict majority of members mus
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal.
 If the proposal is resubmitted after a cool-down period, they may not veto it a second time.
 
-Council motions that pass with a 3/5 (60%) super-majority - but without reaching unanimous support -
+Council motion that pass with a 3/5 (60%) super-majority - but without reaching unanimous support -
 will move to a public referendum under a neutral, majority-carries voting scheme. In the case that
-all members of the council vote in favor of a motion, the vote is considered unanimous and becomes a
-referendum with [negative quorum biasing](#adaptive-quorum-biasing).
+all members of the council that voted are in favor of a motion, the vote is considered unanimous and
+becomes a referendum with [negative turnout bias](#adaptive-quorum-biasing).
 
 :::note Explainer video on the Council
 
@@ -285,117 +434,13 @@ TC is composed of the teams that have successfully implemented or specified eith
 added or removed from the TC via a simple majority vote of the [Council](#council).
 
 The TC aims to safeguard against malicious referenda, implement bug fixes, reverse faulty runtime
-updates, or add new but battle-tested features. The TC has the power to fast-track proposals by
-using the Democracy pallet, and is the only origin that can trigger the fast-tracking functionality.
-We can think of the TC as a "unique origin" that cannot generate proposals but fast-track existing
-ones.
+updates, or add new but battle-tested features. The TC can fast-track proposals using the Democracy
+pallet and is the only origin that can trigger the fast-tracking functionality. We can think of the
+TC as a "unique origin" that cannot generate proposals but fast-track existing ones.
 
 Fast-tracked referenda are the only referenda that can be active alongside another active
 referendum. Thus, with fast-tracked referenda, it is possible to have two active referendums
 simultaneously. Voting on one does not prevent a user from voting on the other.
-
-## Adaptive Quorum Biasing
-
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of **Adaptive
-Quorum Biasing**, which is used to alter the effective super-majority required to make it easier or
-more difficult for a proposal to pass depending on voting power (turnout) and origin (Council or
-public).
-
-Adaptive Quorum Biasing creates three tallying mechanisms: majority carry, super-majority approve,
-and super-majority against. They all equate to a simple majority-carry system at 100% turnout, and
-their selection depends on which entity proposed the proposal and whether all Council members voted
-yes (in the case of Council Referenda).
-
-|          **Entity**          |                   **Metric**                   |
-| :--------------------------: | :--------------------------------------------: |
-|            Public            | Positive Turnout Bias (Super-Majority Approve) |
-| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
-| Council (Majority agreement) |                Simple Majority                 |
-
-Let's use the image below as an example.
-
-![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
-
-If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
-for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
-the tally of _aye_ votes has to reach 54%, which means that the super-majority required decreases as
-the turnout increases.
-
-When the council proposes a new proposal through unanimous consent, the referendum would be put to
-the vote using **Negative Turnout Bias**. Referring to the above image, when a Council referendum
-only has a 25% turnout, the tally of _aye_ votes has to reach 34% for it to pass, while if the
-turnout increases to 75%, the tally of _aye_ votes has to reach 46%. In short, when the turnout rate
-is low, a super-majority is required to reject the proposal, which means a lower threshold of _aye_
-votes must be reached. As turnout increases toward 100%, it becomes a simple majority.
-
-Here below, we provide the formulas for calculating voting results.
-
-### Super-Majority Approve
-
-A **positive turnout bias**, whereby a heavy super-majority of aye votes is required to carry at low
-turnouts, but as turnout increases towards 100%, it becomes a simple majority carry as below.
-
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
-
-Where `approve` is the number of _aye_ votes, `against` is the number of _nay_ votes, `turnout` is
-the total number of voting tokens excluding [voluntary locking](#voluntary-locking), and
-`electorate` is the total number of tokens issued in the network.
-
-### Super-Majority Against
-
-A **negative turnout bias**, whereby a heavy super-majority of _nay_ votes is required to reject at
-low turnouts, but as turnout increases towards 100%, it becomes a simple majority carry as below.
-
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
-
-### Simple-Majority
-
-Majority-carries, a simple comparison of votes. If there are more _aye_ votes than _nay_, then the
-proposal is carried, no matter how much stake votes on the proposal.
-
-![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
-
-To know more about where these above formulas come from, please read the
-[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
-
-Let's assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in
-total and that this is a public proposal.
-
-- John: {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
-- Peter: {{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}
-- Lilly: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
-- JJ: {{ polkadot: 150 DOT :polkadot }}{{ kusama: 15 KSM :kusama }}
-- Ken: {{ polkadot: 600 DOT :polkadot }}{{ kusama: 60 KSM :kusama }}
-
-John: Votes `Yes` for a 4 week lock period =>
-{{ polkadot: 500 x 1 = 500 Votes :polkadot }}{{ kusama: 50 x 1 = 50 Votes :kusama }}
-
-Peter: Votes `Yes` for a 4 week lock period =>
-{{ polkadot: 100 x 1 = 100 Votes :polkadot }}{{ kusama: 10 x 1 = 10 Votes :kusama }}
-
-JJ: Votes `No` for a 16 week lock period =>
-{{ polkadot: 150 x 3 = 450 Votes :polkadot }}{{ kusama: 150 x 3 = 450 Votes :kusama }}
-
-- approve = {{ polkadot: 600 :polkadot }}{{ kusama: 60 :kusama }}
-- against = {{ polkadot: 450 :polkadot }}{{ kusama: 45 :kusama }}
-- turnout = {{ polkadot: 750 :polkadot }}{{ kusama: 75 :kusama }}
-- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }}
-
-![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
-
-![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
-
-Since the above example is a public referendum, **Super-Majority Approve** would be used to
-calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
-turnout is low; therefore, based on the above result, the referendum will be rejected.
-
-:::info only the winning voter's tokens are locked.
-
-If the voters on the losing side of the referendum believe that the outcome will have adverse
-effects, their tokens are transferrable, so they will not be locked into the decision. Winning
-proposals are autonomously enacted after the [enactment period](#enactment).
-
-:::
 
 ## Frequently Asked Questions
 
@@ -413,7 +458,7 @@ councilors are isolated from any nominations they may have on validators. Counci
 At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
 the result will choose the new councilors based on the vote configurations of all voters. The
 election also chooses a set number of runners-up, which is currently
-({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
+{{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
 intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
