@@ -286,7 +286,7 @@ satisfy the approval and support criteria for the **Confirmation Period**.
 The figure shows that even if the approval criteria are satisfied (i.e. % approval is greater than
 the approval curve), the proposal only enters the confirmation period once the support criteria are
 satisfied (i.e. % support is greater than the support curve). If the referendum meets the criteria
-for at least the minimum confirmation period, then the proposal is approved and scheduled for
+for the confirmation period, then the proposal is approved and scheduled for
 enactment. The Enactment Period is specified when the referendum is proposed but is also subject to
 a minimum value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure
 the network has ample time to prepare for any changes the proposal may bring.
