@@ -161,7 +161,7 @@ will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 
-:::info Public vs. Council
+:::info Public vs. Council initiated Referenda
 
 Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or
 ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council,
