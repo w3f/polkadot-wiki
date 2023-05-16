@@ -275,7 +275,7 @@ The figure above provides a summary view of how the approval and support system 
 Decision Period.
 
 Once the proposal exits the Lead-in Period and enters the Voting Period, to be approved, it must
-satisfy the approval and support criteria for the minimum **Confirmation Period**.
+satisfy the approval and support criteria for the **Confirmation Period**.
 
 - **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
   [conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
