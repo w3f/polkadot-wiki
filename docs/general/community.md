@@ -51,7 +51,7 @@ you face any issues, join the rooms individually.
   talk about Polkadot.
 - [Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) - Room
   for validators learning about setting up a node.
-- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:parity.io) - Governance, and a place
+- [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) - Governance, and a place
   to discuss the future of Polkadot.
 - [Polkadot Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is happening
   in the Polkadot ecosystem, published every weekday except holidays
@@ -66,8 +66,8 @@ you face any issues, join the rooms individually.
   talk about Kusama.
 - [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:parity.io) - Room for
   validators learning about setting up a node.
-- [Kusama Direction](https://matrix.to/#/#kusama:parity.io) - Governance, and a place to discuss the
-  future of Kusama.
+- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) - Governance, and a place to
+  discuss the future of Kusama.
 
 ### Technical
 

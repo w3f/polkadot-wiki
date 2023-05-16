@@ -508,9 +508,9 @@ be an error, the council _may_ consider a governance motion to correct it.
 The first step to appeal to the council is to contact the councilors. There is no singular place
 where you are guaranteed to grab every councilor’s ear with your message. However, there are a
 handful of good places to start where you can get the attention of some of them. The
-{{ polkadot: [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
-{{ kusama: [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) :kusama }} matrix room
-is one such place. After creating an account and joining this room, you can post a
+{{ polkadot: [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}
+{{ kusama: [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} matrix
+room is one such place. After creating an account and joining this room, you can post a
 well-thought-through message here that lays down your case and justifies why you think the council
 should consider enacting a change to the protocol on your behalf.
 

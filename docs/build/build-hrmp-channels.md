@@ -104,7 +104,7 @@ used for the motion post on Polkassembly.
 Once the Council approves your proposal, this will move to the external queue - and soon after to be
 voted by the community in the Referenda queue: make sure to discuss the proposal with your parachain
 community and encourage them to vote. You can follow all announcements on these submissions in the
-[Polkadot Direction channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io).
+[Polkadot Direction channel](https://matrix.to/#/#Polkadot-Direction:parity.io).
 
 ## Vote by the community
 
