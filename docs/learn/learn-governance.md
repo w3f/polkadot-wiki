@@ -396,7 +396,7 @@ For a referendum to be proposed by the council, a strict majority of members mus
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal.
 If the proposal is resubmitted after a cool-down period, they may not veto it a second time.
 
-Council referenda that pass with a 3/5 (60%) super-majority - but without reaching unanimous
+Council motion that pass with a 3/5 (60%) super-majority - but without reaching unanimous
 support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
 case that all members of the council vote in favor of a motion, the vote is considered unanimous and
 becomes a referendum with [negative turnout bias](#adaptive-quorum-biasing).
