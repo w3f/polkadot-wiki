@@ -35,3 +35,9 @@ In addition to the NFT there is also a fungible counterpart that will be given a
 of the total issuance that was locked in the first place. This opens up a new asset that when
 combined with an appropriate receipt can be tradable for a percentage of the total issuance of
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+
+## Bidding
+
+## Queues
+
+## Bid Consolidation
