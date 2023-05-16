@@ -209,8 +209,7 @@ In (3), approved proposals will enter the **Enactment Period**, after which prop
 executed.
 
 Note how the length of the lead-in, deciding, confirmation, and enactment periods vary depending on
-the origin. Root origin has more extended periods than the other origins, such as the Small Tipper
-ones. Also, the number of tracks within each origin differs, with Root origin only accepting one
+the origin. Root origin has more extended periods than the other origins. Also, the number of referenda within each track differs, with the Root origin track only accepting one.
 proposal at a time (see below).
 
 ![opengov-track-capacity](../assets/opengov-track-capacity.png)
