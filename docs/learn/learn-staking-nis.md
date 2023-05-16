@@ -14,9 +14,10 @@ use it with caution.
 
 :::
 
-Non-interactive staking (NIS) provides a solution for token holders to withstand
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} inflation without being a nominator or a
-nomination pool member.
+Non-interactive staking (NIS) provides a [staking](./learn-staking.md) solution for token holders to
+withstand {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+[inflation](./learn-staking-advanced.md#inflation) without being a [nominator](./learn-nominator.md)
+or a [nomination pool](./learn-nomination-pools.md) member.
 
 Nominating and being a pool member will always provide higher returns, in the sense that stakers
 will receive beyond-inflation staking rewards. NIS offers zero beyond-inflation rewards but it does
