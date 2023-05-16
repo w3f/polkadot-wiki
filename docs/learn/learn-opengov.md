@@ -297,7 +297,7 @@ support. For additional details on the various origins and tracks, check out
 support and overall approval required for it to pass is now possible. With proposals that use less
 privileged origins, it is far more reasonable to drop the required support (i.e. turnout) to a more
 realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
-more political significance can be made to require higher approval early on, to avoid controversy.
+more significance can be made to require higher approval early on, to avoid controversy.
 
 ### Enactment
 
