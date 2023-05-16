@@ -153,7 +153,7 @@ Blacklisting referenda in OpenGov is
 :::info Public and Council Referenda in Governance v1
 
 With the Council's dissolution, [council referenda](./learn-governance.md#council-referenda) are no
-more present in OpenGov.
+longer present in OpenGov.
 
 See [this page](./learn-governance.md#public-referenda) for more information about public referenda
 in Governance v1.
