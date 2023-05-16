@@ -65,7 +65,7 @@ careful consideration of very few proposals instead of broad consideration of ma
 
 OpenGov changes how the practical means of day-to-day decisions are made, making the repercussions
 of referenda better scoped and agile to increase the number of collective decisions the system can
-make.
+make at any given time.
 
 The following content is focused on what the new OpenGov version brings to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and on the main differences with
