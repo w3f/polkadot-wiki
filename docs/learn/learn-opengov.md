@@ -216,7 +216,7 @@ proposal at a time (see below).
 
 This directly affects the number of proposals that can be voted on and executed simultaneously.
 Continuing the comparison between Root and Small Tipper, Small Tipper will allow many proposals on
-different tracks to be executed simultaneously. In contrast, Root will allow only one proposal in
+its track to be executed simultaneously. In contrast, Root will allow only one proposal in
 one track. Once the track capacity is filled, additional proposals in the lead-in period will queue
 until place is available to enter the deciding period.
 
