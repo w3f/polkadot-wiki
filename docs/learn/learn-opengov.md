@@ -51,7 +51,7 @@ agreed upon by stake-weighted referenda.
   manage upgrade timelines.
 - The [Council](./learn-governance.md#council): An approval-voted, elected executive "government" to
   manage parameters, admin, and spending proposals.
-- The Public: All token holders not part of the Council or the Technical Committee.
+- The Public: All token holders.
 
 Over the first few years of operation, Governance V1 ensured the appropriate usage of treasury funds
 and enabled timely upgrades and fixes. Like most early technologies, protocols must evolve as they
