@@ -43,9 +43,9 @@
     "@crowdin/cli": "^3.11.1",
     "@docusaurus/core": "^2.4.1",
     "@docusaurus/module-type-aliases": "^2.4.1",
-    "@octokit/rest": "^19.0.8",
-    "@docusaurus/preset-classic": "^2.4.1",
     "@docusaurus/plugin-client-redirects": "^2.4.1",
+    "@docusaurus/preset-classic": "^2.4.1",
+    "@octokit/rest": "^19.0.8",
     "@polkadot/api": "^10.7.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.0.4",
@@ -69,8 +69,9 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.16.0",
-    "@mdx-js/runtime": "^1.6.22",
+    "chart.js": "^4.3.0",
     "crowdin-cli": "^0.3.0",
+    "react-chartjs-2": "^5.2.0",
     "react-treebeard": "^3.2.4",
     "remark-docusaurus-tabs": "^0.2.0"
   },
