@@ -17,16 +17,19 @@ to launch a new chain, now it may only take weeks or even days depending on your
 
 This guide will walk you through the steps you can take today to get started building your vision
 with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will explain the difference
-between a parachain and a smart contract (and why one may be better suited for your application over
-the other).
+between a [parachain](../learn/learn-parachains.md) and a smart contract (and why one may be better
+suited for your application over the other).
 
 ## Development Ecosystem Overview
+
+<< Insert Graphic Here >>
 
 Before diving into the various paths one can take in developing on
 {{ polkadot: Polkadot :polkadot }}, it's important to realize and know key terms that make up the
 following sections. Even prior to considering what kind of application you want to build, it's
 prudent to understand what {{ polkadot: Polkadot :polkadot }} _is_ and how
-{{ kusama: Kusama :kusama }} relates to it.
+{{ kusama: Kusama :kusama }} relates to it, and how what each developmental component can do for you
+within the Polkadot ecosystem.
 
 ### Polkadot Ecosystem Networks
 
@@ -50,10 +53,10 @@ the Substrate framework.
 :::info
 
 As mentioned, Polkadot is the **mainnet**, but it is more accurately referred to as a relay chain.
-It is also considered a layer zero protocol, as it enables for the interoperability and shared
-security of multiple parachains. While it is possible to develop applications on Polkadot, it is
-important to realize that usually a developer could utilize any number of parachains, functionality
-from Polkadot, or smart contracts to build an application.
+It is also considered a _layer zero_ protocol, as it enables for the interoperability and shared
+security of multiple parachains. While it is possible to develop applications using just Polkadot,
+it is important to realize that usually a developer could utilize any number of parachains,
+functionality from Polkadot, or smart contracts to build an application.
 
 :::
 
@@ -65,34 +68,48 @@ to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ### Constructing FRAME Runtimes with Substrate
 
-Polkadot is built using the Substrate framework. Substrate is a highly configurable and dynamic
-framework that is used for building blockchains. At a lower level, Substrate provides a set of tools
-and libraries ranging from block production, finality gadgets, to peer-to-peer networking. Both
-Polkadot and Kusama, as well as most parachains are built using Substrate. In essence, Substrate can
-break down a blockchain's development process into it's bare and primary parts, removing the need
-for re-engineering complex mechanisms that usually are involved when developing a blockchain.
+Polkadot is built using the [Substrate](https://substrate.io/) framework.
+[Substrate](https://substrate.io/) is a highly configurable and dynamic framework that is used for
+building blockchains. At a lower level, Substrate provides a set of tools and libraries ranging from
+[block production, finality gadgets, to peer-to-peer networking](https://docs.substrate.io/reference/rust-api/).
+Both Polkadot and Kusama, as well as most parachains are built using Substrate.
+
+In essence, Substrate can break down a blockchain's development process by providing crucial
+building blocks of functionality, removing the need for re-engineering complex mechanisms that
+usually are involved when developing a blockchain.
 
 Substrate can be used as a basis for a parachain to connect to a relay chain like Polkadot or
-Kusama, or even as a basis to form a conventional "layer one" network.
+Kusama, or even as a basis to form a conventional layer one solo network.
 
-The most streamlined implementation of Substrate is FRAME, which conveniently allows for a runtime
-to be generated. Runtimes in Substrate are built using WebAssembly, and represent the state
-transition function for a network. FRAME allows for a collection of business logic-oriented modules,
-called pallets, to be put together to construct a runtime and define how exactly the blockchain is
-supposed to behave.
+The most streamlined implementation of Substrate is
+[FRAME](https://docs.substrate.io/learn/runtime-development/#frame), which conveniently allows for a
+runtime to be generated from a set of modules.
+[Runtimes](https://docs.substrate.io/learn/architecture/#runtime) in Substrate are built using
+WebAssembly, and represent the state transition function for a network. FRAME allows for a
+collection of business logic-oriented modules, called
+[pallets](https://docs.substrate.io/reference/frame-pallets/), to construct a runtime and define how
+exactly the blockchain is supposed to behave. Ranging from
+[identity](https://paritytech.github.io/substrate/master/pallet_identity/index.html) to
+[smart contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html),
+pallets can be quite extensive in providing on-chain functionality.
 
-Even though FRAME is heavily used, it is not the only way to create a blockchain using Substrate.
-Substrate as a whole can be used to create new paradigms, abstractions, and technologies that build
-on the concept of web3.
+Even though FRAME is heavily used, it is not the only way to create a valid runtime using Substrate.
+Substrate as a whole can be used to create new paradigms and abstractions that build on the concept
+of web3.
 
 #### Building Parachains with Cumulus
 
-Diving further into building parachains, Cumulus is yet another set of tools aid in the process of
-building a parachain-ready blockchain for Polkadot or Kusama. Cumulus utilizes FRAME and Substrate
-heavily to create a easy way to build your first parachain.
+Diving further into building parachains, [Cumulus](https://github.com/paritytech/cumulus) is yet
+another set of tools that aid in the process of building a parachain-ready blockchain for Polkadot
+or Kusama. Cumulus utilizes FRAME and Substrate heavily to create a easy way to build your first
+parachain.
+
+:::info
 
 _Cumulus clouds are shaped sort of like dots; together they form a system that is intricate,
 beautiful and functional._
+
+:::
 
 For most developers, the best place to start is to first get familiar with Substrate on its own,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
@@ -105,37 +122,30 @@ a parachain or parathread.
 ### ink! and EVM-based Smart Contracts
 
 At a high level, a _smart contract_ is simply some code that exists at an address on a chain and is
-callable by external actors. The key part is that you actually have to put the code on chain before
-anyone can start executing it!
+callable by external actors. Whether it's
+[EVM-based](https://docs.substrate.io/tutorials/integrate-with-tools/evm-integration/), or written
+using [ink!](https://use.ink/), smart contracts sandboxed, executable programs that live on-chain.
+
+:::note
+
+The Polkadot relay chain does not support smart contracts, however a number of parachains do.
+
+:::
 
 Deploying your smart contract on chain will vary slightly for whichever specific parachain you will
 use, but generally you will send a special transaction that will create the smart contract on the
 ledger. You will likely need to pay an associated fee for the initialization logic and any storage
 that your contract consumes.
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there will be parachains that act
-as smart contract platforms. Smart contracts are executable programs that exist on only a single
-chain and are limited in complexity. Because they exist on a single chain, they can have smooth
-interoperability with other smart contracts on the same chain. However, they will always be
-constrained and limited by the inherent characteristics of their host chain.
+A popular choice for smart contracts is [ink!](https://use.ink/), however on other parachains,
+EVM-based contracts written in Solidity are also available!
 
-If there is a need to have a large amount of control over the design and features of your
-application, a parachain is a better choice. Keep in mind, smart contracts can be used as a testing
-ground before later being turned into full-fledged parachains. Smart contract platforms will usually
-have convenient tooling like IDEs to facilitate quick iterations. A smart contract MVP could be
-created to gauge user interest before putting in the work to build out a parachain.
+Because smart contracts exist on a single chain at a time, they can have smooth interoperability
+with other smart contracts on the same chain. However, they will always be constrained and limited
+by the inherent characteristics of their host chain.
 
 Each platform will have a different way of paying for and maintaining the state of your smart
-contract. The different patterns you may see for paying for your smart contract include:
-
-- A transaction fee associated with deploying each transaction.
-- A subscription model in which you pay some chain entity routinely for the usage of the platform.
-- An access token model for which you need to hold a threshold of native tokens to use the platform
-  (EOS has something similar). Storage rent.
-- Free trial or developer promotion.
-- Most smart contract platforms use some form of gas to limit the number of operations a user can
-  perform. Users will be required to pay for the gas upfront and will be refunded for what they
-  don’t use.
+contract.
 
 You will need to consider the storage and complexity of your smart contract to ensure that gas usage
 stays within reasonable bounds. Storage will likely be expensive for whichever smart contract
@@ -152,25 +162,43 @@ a smart contract.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
+![build 2](../assets/build-2.png)
+
+:::note The image above does not include parathreads
+
+As we mentioned before, all the benefits of parachains apply just as well to parathreads.
+Parathreads, however, _are_ cheaper to deploy and maintain. So if they had a column on the table
+above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead"
+changed to `+`.
+
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides several ways for you to
 deploy your application: as a smart contract on an existing parachain, as your own parachain, or as
 a parathread. There are trade-offs when working with each of these and reading this section will
 help you understand them.
 
+If there is a need to have a large amount of control over the design and features of your
+application, a parachain is a better choice. Keep in mind, smart contracts can be used as a testing
+ground before later being turned into full-fledged parachains. Smart contract platforms will usually
+have convenient tooling like IDEs to facilitate quick iterations. A smart contract MVP could be
+created to gauge user interest before putting in the work to build out a parachain.
+
 ### Parachains & Parathreads
 
-Parachains are _parallel_ chains containing their own runtime logic and benefit from the shared
-security and the cross-chain messaging provided by the {{ polkadot: Polkadot :polkadot }}{{ kusama:
-Kusama :kusama }} Relay Chain. Parachains permit a high degree of flexibility and customization but require
-more effort to create and maintain over time.
+Parachains contain their own runtime logic and benefit from the shared security and the cross-chain
+messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains permit a high
+degree of flexibility and customization but require more effort to create and maintain over time. A
+production-grade parachain is typcially are more involved to create due the complexity that is
+involved in technical and economic aspects of blockchain networks.
 
-Parathreads are like parachains and enable the developer to have lower-level control of the logic of
-their application. The main difference between the two is economic since parathreads will be much
-less expensive to secure than a parachain. The lower costs of parathreads are due to the fact that
-parathreads will only produce a block when they need to, unlike parachains, which have secured a
-slot to produce a block at every block of the Relay Chain. When building a parathread, you will use
-the same tools (like PDKs) and you get all of the benefits of building a parachain, without the
-drawback of the cost.
+Parathreads, or "on-demand parachains", are like parachains and enable the developer to have
+lower-level control of the logic of their application. The main difference between the two is
+economic since parathreads will be much less expensive to secure than a parachain, and is a
+"pay-as-you-go" model. The lower costs of parathreads are due to the fact that parathreads will only
+produce a block when they need to, unlike parachains, which have secured a slot to produce a block
+at every block of the Relay Chain. When building a parathread, you will use the same tools (like
+PDKs) and you get all of the benefits of building a parachain, without the drawback of the cost.
 
 Parachains grant the creators more space to build the monetary system and other aspects of the chain
 from the ground up. They will allow for more succinct and efficient execution of complex logic than
@@ -202,18 +230,3 @@ handle all complex logic and the smart contract to call iteration. If you requir
 from an oracle, you may want to use a parathread as an oracle feed that only triggers once every 24
 hours (this makes the most sense if the data is useful to other players in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem too).
-
-Most likely you’ve already realized that your application is better suited to be one or the other
-(or a hybrid of them both), but if you need a quick recap to digest the information, you can use
-this comparison chart as a cheat sheet:
-
-![build 2](../assets/build-2.png)
-
-:::note The image above does not include parathreads
-
-As we mentioned before, all the benefits of parachains apply just as well to parathreads.
-Parathreads, however, _are_ cheaper to deploy and maintain. So if they had a column on the table
-above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead"
-changed to `+`.
-
-:::
