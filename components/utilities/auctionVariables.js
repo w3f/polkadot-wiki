@@ -7,7 +7,6 @@ A regularly scheduled GitHub action will be used to cache future auction blocks 
 
 const DotAuctions = require("./data/PolkadotAuctions.json");
 const KsmAuctions = require("./data/KusamaAuctions.json");
-const opengov = require("./data/opengov_root.json");
 
 // consts.slots.leasePeriod
 const PolkadotSlotLeasePeriod = 1209600;
@@ -32,7 +31,6 @@ const KusamaEndingPeriod = 72000;
 // GetAuctionBlocks() in Auction-Schedule.jsx can generate all these values from a starting block number
 const PolkadotAuctions = DotAuctions;
 const KusamaAuctions = KsmAuctions;
-const OpenGov = opengov;
 
 // A future block that does not yet have an associated hash
 const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";

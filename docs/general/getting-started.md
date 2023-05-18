@@ -7,7 +7,7 @@ keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Chart from "./../../components/Chart";
+import RPC from "./../../components/RPC-Connection";
 
 :::info Welcome to the Polkadot Wiki
 
@@ -21,8 +21,6 @@ on Polkadot), and **Maintain** (for people that want to maintain the network).
 :::
 
 ## What is Polkadot?
-
-<Chart title="OpenGov Stats" type="scatter"/>
 
 Polkadot is the first fully-sharded blockchain, i.e. it is a multi-chain environment. Polkadot
 enables scalability by allowing specialized blockchains to communicate with each other in a secure,

@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 import React from "react";
-import { ApiPromise, WsProvider } from "@polkadot/api";
 import { Line, Scatter } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -13,10 +11,10 @@ import {
     Legend,
 } from 'chart.js';
 
-let gov = require('./utilities/data/opengov_root.json');
+import openGovVariables from "./utilities/openGovVariables";
 
 // Maps a type and props to a JSX charts.js component
-function mapTypeToComponent(type, props) {
+function mapTypeToComponent(type, key) {
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -26,22 +24,23 @@ function mapTypeToComponent(type, props) {
         Tooltip,
         Legend
     );
+    // Configure props using data
+    let props = configureProps(key);
     switch (type) {
         case 'line':
-            return <Line datasetIdKey={props.datasetIdKey} data={props.data} />
+            return <Line datasetIdKey={props.datasetIdKey} data={props.data} options={props.options} />
         case 'scatter':
-            return <Scatter datasetIdKey={props.datasetIdKey} data={props.data} />
+            return <Scatter datasetIdKey={props.datasetIdKey} data={props.data} options={props.options} />
     }
 }
 
-function Chart({ title, type }) {
+function configureProps(key) {
+    let govData = openGovVariables[key];
 
-    // Root Data
-    const approvals = gov.map((_) => { return {x: _.time_hours, y: _.approval } });
-    const support = gov.map((_) => { return { x: _.time_hours, y: _.support } });
+    const approvals = govData.map((_) => { return { x: _.time_hours, y: _.approval } });
+    const support = govData.map((_) => { return { x: _.time_hours, y: _.support } });
 
-
-    let props = {
+    const props = {
         data: {
             labels: ['Approval', 'Support'],
             datasets: [{
@@ -56,15 +55,37 @@ function Chart({ title, type }) {
             }
             ],
         },
+        options: {
+            animation: false,
+            normalized: true,
+            parsing: false,
+            scales: {
+                y: {
+                    type: 'linear',
+                    min: 0,
+                    max: 100
+                },
+                x: {
+                    type: 'linear',
+                    min: 0,
+                    max: 300
+                }
+            }
+        }
     };
 
-    let chart = mapTypeToComponent(type, props);
+    // Return props
+    return props;
+}
+
+function Chart({ title, type, dataId }) {
+    let chart = mapTypeToComponent(type, dataId);
     return (
         <div className="App">
             <header className="App-header">
-                <h2>
+                <h3>
                     {title}
-                </h2>
+                </h3>
             </header>
             {chart}
         </div>
