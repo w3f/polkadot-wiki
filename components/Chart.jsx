@@ -46,12 +46,12 @@ function configureProps(key) {
             datasets: [{
                 label: "Approval",
                 data: approvals,
-                backgroundColor: 'blue'
+                backgroundColor: '#D3FF33'
             },
             {
                 label: "Support",
                 data: support,
-                backgroundColor: 'red'
+                backgroundColor: '#56F39A'
             }
             ],
         },
@@ -63,12 +63,39 @@ function configureProps(key) {
                 y: {
                     type: 'linear',
                     min: 0,
-                    max: 100
+                    max: 100,
+                    ticks: {
+                        font: {
+                            size: 18
+                        }
+                    }
                 },
                 x: {
                     type: 'linear',
                     min: 0,
-                    max: 300
+                    max: 300,
+                    title: {
+                        display: true,
+                        text: "Hours",
+                        font: {
+                            size: 18
+                        }
+
+                    },
+                    ticks: {
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 18
+                        }
+                    }
                 }
             }
         }

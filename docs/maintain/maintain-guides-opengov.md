@@ -107,7 +107,7 @@ The support curve drops linearly to 25% by the end of day 7 and almost to 0% by 
 This ensures that the token holders receive ample time to vote on the proposal during the decision
 period.
 
-<Chart title="Root" type="scatter" dataId="Root" />
+<Chart title="Root" type="line" dataId="Root" />
 
 ### Whitelisted Caller
 
@@ -119,54 +119,54 @@ amass 14% support (much lesser than the root) by the end of the first day with o
 be considered to be part of the confirm period. The support curve drops linearly to 6% by the end of
 day 7 and around 5% by the end of day 14.
 
-<Chart title="" type="scatter" dataId="Whitelist" />
+<Chart title="" type="line" dataId="Whitelist" />
 
 ### Staking Admin
 
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
 pallet and the Election Provider Multiphase Pallet.
 
-<Chart title="" type="scatter" dataId="AdminStaking" />
+<Chart title="Staking Admin" type="line" dataId="AdminStaking" />
 
 ### Treasurer
 
 The origin for spending funds from the treasury (up to 333333.33 KSM). This origin has the privilege
 to execute calls from the Treasury pallet.
 
-<Chart title="" type="scatter" dataId="Treasurer" />
+<Chart title="" type="line" dataId="Treasurer" />
 
 ### Lease Admin
 
 Origin can force slot leases. This origin has the privilege to execute calls from the Slots pallet.
 
-<Chart title="" type="scatter" dataId="AdminLease" />
+<Chart title="" type="line" dataId="AdminLease" />
 
 ### Fellowship Admin
 
 The origin for managing the composition of the fellowship.
 
-<Chart title="" type="scatter" dataId="AdminFellowship" />
+<Chart title="" type="line" dataId="AdminFellowship" />
 
 ### General Admin
 
 The origin for managing the registrar. This origin has the privilege of executing calls from the
 Identity pallet.
 
-<Chart title="" type="scatter" dataId="AdminGeneral" />
+<Chart title="" type="line" dataId="AdminGeneral" />
 
 ### Auction Admin
 
 The origin for starting auctions. This origin can execute calls from the Auctions pallet and the
 Scheduler Pallet.
 
-<Chart title="" type="scatter" dataId="AdminAuction" />
+<Chart title="" type="line" dataId="AdminAuction" />
 
 ### Referendum Canceller
 
 The origin can cancel referenda. This track has a low lead time and approval/support curves with
 slightly sharper reductions in their thresholds for passing.
 
-<Chart title="" type="scatter" dataId="RefCanceller" />
+<Chart title="" type="line" dataId="RefCanceller" />
 
 ### Referendum Killer
 
@@ -174,37 +174,37 @@ The origin can cancel an ongoing referendum and slash the deposits. This track a
 lead-time and approval/support curves with slightly sharper reductions in their thresholds for
 passing.
 
-<Chart title="" type="scatter" dataId="RefKiller" />
+<Chart title="" type="line" dataId="RefKiller" />
 
 ### Small Tipper
 
 Origin able to spend up to 8.25 KSM from the treasury at once.
 
-<Chart title="" type="scatter" dataId="SmallTipper" />
+<Chart title="" type="line" dataId="SmallTipper" />
 
 ### Big Tipper
 
 Origin able to spend up to 33.33 KSM from the treasury at once.
 
-<Chart title="" type="scatter" dataId="BigTipper" />
+<Chart title="" type="line" dataId="BigTipper" />
 
 ### Small Spender
 
 Origin able to spend up to 333.33 KSM from the treasury at once.
 
-<Chart title="" type="scatter" dataId="SmallSpender" />
+<Chart title="" type="line" dataId="SmallSpender" />
 
 ### Medium Spender
 
 Origin able to spend up to 3333.33 KSM from the treasury at once.
 
-<Chart title="" type="scatter" dataId="MediumSpender" />
+<Chart title="" type="line" dataId="MediumSpender" />
 
 ### Big Spender
 
 Origin able to spend up to 33333.33 KSM from the treasury at once.
 
-<Chart title="" type="scatter" dataId="BigSpender" />
+<Chart title="" type="line" dataId="BigSpender" />
 
 ## Create a Referenda Proposal using Polkadot-JS UI
 
