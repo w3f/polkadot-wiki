@@ -65,6 +65,12 @@ function configureProps(key) {
                     type: 'linear',
                     min: 0,
                     max: 100,
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, ticks) {
+                            return  `${value}%`;
+                        }
+                    }
 
                 },
                 x: {
@@ -82,6 +88,9 @@ function configureProps(key) {
                     callbacks: {
                         title: function (context) {
                             return `Hour: ${context[0].label}`;
+                        },
+                        label: function (context) {
+                            return `${context.dataset.label}: ${context.parsed.y}%`;
                         }
                     }
                 }
