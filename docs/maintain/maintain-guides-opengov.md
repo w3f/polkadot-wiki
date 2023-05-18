@@ -107,7 +107,7 @@ The support curve drops linearly to 25% by the end of day 7 and almost to 0% by 
 This ensures that the token holders receive ample time to vote on the proposal during the decision
 period.
 
-<Chart title="Root" type="line" dataId="Root" />
+<Chart title="" type="line" dataId="Root" />
 
 ### Whitelisted Caller
 
@@ -126,7 +126,7 @@ day 7 and around 5% by the end of day 14.
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
 pallet and the Election Provider Multiphase Pallet.
 
-<Chart title="Staking Admin" type="line" dataId="AdminStaking" />
+<Chart title="" type="line" dataId="AdminStaking" />
 
 ### Treasurer
 

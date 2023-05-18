@@ -26,6 +26,7 @@ function mapTypeToComponent(type, key) {
     );
     // Configure props using data
     let props = configureProps(key);
+    ChartJS.defaults.font.size = 18;
     switch (type) {
         case 'line':
             return <Line datasetIdKey={props.datasetIdKey} data={props.data} options={props.options} />
@@ -64,11 +65,7 @@ function configureProps(key) {
                     type: 'linear',
                     min: 0,
                     max: 100,
-                    ticks: {
-                        font: {
-                            size: 18
-                        }
-                    }
+
                 },
                 x: {
                     type: 'linear',
@@ -77,23 +74,14 @@ function configureProps(key) {
                     title: {
                         display: true,
                         text: "Hours",
-                        font: {
-                            size: 18
-                        }
-
                     },
-                    ticks: {
-                        font: {
-                            size: 18
-                        }
-                    }
                 }
             },
             plugins: {
-                legend: {
-                    labels: {
-                        font: {
-                            size: 18
+                tooltip: {
+                    callbacks: {
+                        title: function (context) {
+                            return `Hour: ${context[0].label}`;
                         }
                     }
                 }
