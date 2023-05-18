@@ -214,6 +214,16 @@ Some examples of features you can have on a parachain or parathread:
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
   treasury.
 
+:::info What's the difference between a smart contract and a pallet?
+
+If you recall, a parachain is made up of a runtime that is usually built on Substrate. These
+runtimes often utilize FRAME, which is subsequently made up of pallets. Pallets are part of a
+Substrate runtime, whereas smart contracts are a product of a pallet (see:
+[pallet_contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html)).
+Pallets require more engineering and thought, as they can directly affect the chain's state.
+
+:::
+
 ![build 1](../assets/build-1.png)
 
 Parachains open possibilities to construct complex runtime logic that would be too expensive to
