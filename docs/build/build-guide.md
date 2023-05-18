@@ -22,7 +22,7 @@ suited for your application over the other).
 
 ## Development Ecosystem Overview
 
-<< Insert Graphic Here >>
+![Path to Building a Parachain](../assets/parachain-development.png)
 
 Before diving into the various paths one can take in developing on
 {{ polkadot: Polkadot :polkadot }}, it's important to realize and know key terms that make up the
