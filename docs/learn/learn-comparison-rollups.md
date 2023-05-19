@@ -148,9 +148,11 @@ bad parablock is found.
 
 **Drawbacks:**
 
-- Execution of code in Wasm could be a performance bottleneck, as it is slower than making native calls.
-- A considerable amount of data is required in the PoV (proof of validity) function for proving the
-  parachain state.
+- Execution of code in Wasm could be a performance bottleneck, as it is slower than making native
+  calls.
+- A
+  [considerable amount of data is required](https://paritytech.github.io/polkadot/book/protocol-overview.html?highlight=10#protocol-overview)
+  in the PoV (proof of validity) function for proving the parachain state.
 
 Despite these drawbacks, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} remains
 upgradable through forkless upgrades, which allows the protocol to be easily upgradable to stay in
