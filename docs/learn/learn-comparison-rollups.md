@@ -150,9 +150,10 @@ bad parablock is found.
 
 - Execution of code in Wasm could be a performance bottleneck, as it is slower than making native
   calls.
-- A
-  [considerable amount of data is required](https://paritytech.github.io/polkadot/book/protocol-overview.html?highlight=10#protocol-overview)
-  in the PoV (proof of validity) function for proving the parachain state.
+- The relay chain sets a
+  [hard limit](https://paritytech.github.io/polkadot/book/protocol-overview.html?highlight=10#protocol-overview)
+  on the size and weights of the PoV (Proof of Validity) blocks which contain the parachain state
+  transition data.
 
 Despite these drawbacks, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} remains
 upgradable through forkless upgrades, which allows the protocol to be easily upgradable to stay in
