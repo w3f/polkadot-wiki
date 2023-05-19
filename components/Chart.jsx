@@ -47,7 +47,7 @@ function configureProps(key) {
             datasets: [{
                 label: "Approval",
                 data: approvals,
-                backgroundColor: '#D3FF33'
+                backgroundColor: '#00B2FF'
             },
             {
                 label: "Support",
@@ -66,12 +66,10 @@ function configureProps(key) {
                     min: 0,
                     max: 100,
                     ticks: {
-                        // Include a dollar sign in the ticks
                         callback: function(value, index, ticks) {
                             return  `${value}%`;
                         }
                     }
-
                 },
                 x: {
                     type: 'linear',
