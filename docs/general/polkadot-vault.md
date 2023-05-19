@@ -138,7 +138,7 @@ To securely update the Polkadot Vault app follow the instructions
 :::info Remove SIM cards and Forget Networks
 
 To avoid unintended connection of your phone to the Internet, remove SIM cards, reset eSIM settings,
-and forget any WiFi network. In this way, the only possibility to have an intended internet
+and forget any added WiFi networks. In this way, the only possibility of having an unintended internet
 connection is either through the cellular network or through WiFi connection.
 
 :::
