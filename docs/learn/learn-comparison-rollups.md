@@ -151,8 +151,6 @@ bad parablock is found.
 - Execution of code in Wasm could be a performance bottleneck, as it is slower than making native calls.
 - A considerable amount of data is required in the PoV (proof of validity) function for proving the
   parachain state.
-- Other limitations within the Parachains Protocol to keeping parachains compatible with the entire
-  orchestration of the relay and parachains.
 
 Despite these drawbacks, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} remains
 upgradable through forkless upgrades, which allows the protocol to be easily upgradable to stay in
