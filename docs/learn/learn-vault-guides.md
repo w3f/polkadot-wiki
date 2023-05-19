@@ -89,6 +89,13 @@ where `wss://statemine-rpc.polkadot.io` is the Parity RPC endpoint for Statemine
 the file `sign_me_load_metadata_statemineV9370` under the `files/in_progress` folder. Note that for
 future metadata updates the file name will change as the version at the time of writing was `V9370`.
 
+:::info
+
+Note that the name of the file changes according to the network version. That is, `????` in
+`sign_me_load_metadata_statemineV????` will be the latest version at fetch time.
+
+:::
+
 ### Generating Signature
 
 :::danger Use a hot account
@@ -107,6 +114,15 @@ where `"YOUR SEED PHRASE"` is the seed phrase of the account you used to sign th
 specification. Running the code above will return a signature similar to that below:
 
 `0xde1ad7aeb252acb3cf42a522dcc8dc3f317a49be2ed636836dd6df8f7e47135f2c712480055822eba87e9ea5ac7d3bba96045992ae795856fdf4eea09a411f85`
+
+:::info Do not copy the code lines above
+
+Note that the name of the file changes according to the network version. That is, `????` in
+`sign_me_load_metadata_statemineV????` will be the latest version at fetch time. So, do not copy the
+code line above, but change the version with the appropriate one saved under the `files/in_progress`
+folder. The signature changes as well.
+
+:::
 
 ### Signing Metadata
 
