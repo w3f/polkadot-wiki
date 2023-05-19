@@ -20,6 +20,19 @@ and power users. See [Ledger](./ledger.md) devices for other cold storage soluti
 
 :::
 
+
+:::warning Smartphone compatibility with Polkadot Vault
+
+Note that although the Vault app is available for old smartphones, different versions will be
+installed according to the phone's hardware. For example, smartphones like iPhone 6 will install Parity Signer
+(the old brand name of the Vault app) with limited capabilities. There will be no log or warning if
+the phone was connected to the internet while not using the app. Also, no metadata updates are possible, and no option to add
+new networks. This would not be as secure as the latest version of the app. We would recommend that you use smartphones compatible with the latest Polkadot Vault app.
+
+:::
+
+<iframe width="560" height="315" src="https://youtube.com/embed/IG_RGLsb2g0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+
 [Polkadot Vault](https://www.parity.io/technologies/signer) (formerly Parity Signer) is a cold
 storage solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault
 app is not technically a wallet, as it does not allow to transfer funds. It is more of a key-chain
@@ -121,6 +134,14 @@ To securely update the Polkadot Vault app follow the instructions
 - recover your accounts (Add Key Set > Recover Key Set).
 
 ## Security Notes
+
+:::info Remove SIM cards and Forget Networks
+
+To avoid unintended connection of your phone to the Internet, remove SIM cards, reset eSIM settings,
+and forget any added WiFi networks. In this way, the only possibility of having an unintended internet
+connection is either through the cellular network or through WiFi connection.
+
+:::
 
 The Vault app has a Log that will tell you all activities performed with it. It is important to mark
 down the last action, you did so that you can do a security check the next time you use the app.
