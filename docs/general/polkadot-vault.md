@@ -20,14 +20,14 @@ and power users. See [Ledger](./ledger.md) devices for other cold storage soluti
 
 :::
 
-:::warning Use a smartphone that is no more than 2-3 years old
+
+:::warning Smartphone compatibility with Polkadot Vault
 
 Note that although the Vault app is available for old smartphones, different versions will be
-installed according to the phone's hardware. Old phones like iPhone 6 will install Parity Signer
-(the old brand name of the Vault app) with limited capabilities. There will be no log, no warning if
-the phone was connected while not using the app, no metadata updates possible, and no option to add
-new networks. This would not be as secure as the latest version of the app. We recommend using a
-smartphone that is no more than 2-3 years old.
+installed according to the phone's hardware. For example, smartphones like iPhone 6 will install Parity Signer
+(the old brand name of the Vault app) with limited capabilities. There will be no log or warning if
+the phone was connected to the internet while not using the app. Also, no metadata updates are possible, and no option to add
+new networks. This would not be as secure as the latest version of the app. We would recommend that you use smartphones compatible with the latest Polkadot Vault app.
 
 :::
 
