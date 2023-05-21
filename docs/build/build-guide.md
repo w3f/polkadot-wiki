@@ -17,8 +17,8 @@ to launch a new chain, now it may only take weeks or even days depending on your
 
 This guide will walk you through the steps you can take today to get started building your vision
 with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will explain the difference
-between a [parachain](../learn/learn-parachains.md) and a smart contract (and why one may be better
-suited for your application over the other).
+between a [parachain](../learn/learn-parachains.md) and a smart contract in terms of deciding which
+best fits your architectural needs.
 
 ## Development Ecosystem Overview
 
@@ -41,7 +41,8 @@ within the Polkadot ecosystem.
   - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet
     (is not reset back to genesis block).
-  - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for `ink!` development.
+  - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for [`ink!`](https://use.ink/)
+    development.
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new
     genesis block).
 
@@ -83,7 +84,8 @@ Kusama, or even as a basis to form a conventional layer one solo network.
 
 The most streamlined implementation of Substrate is
 [FRAME](https://docs.substrate.io/learn/runtime-development/#frame), which conveniently allows for a
-runtime to be generated from a set of modules.
+runtime to be generated from a set of modules (called
+[pallets](https://docs.substrate.io/reference/frame-pallets/)).
 [Runtimes](https://docs.substrate.io/learn/architecture/#runtime) in Substrate are built using
 WebAssembly, and represent the state transition function for a network. FRAME allows for a
 collection of business logic-oriented modules, called
