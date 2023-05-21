@@ -185,6 +185,7 @@ module.exports = {
             'learn/learn-comparisons-cosmos',
             'learn/learn-comparisons-avalanche',
             'learn/learn-comparisons',
+            'learn/learn-comparisons-rollups'
           ],
         },
         "learn/learn-video-tutorials",
