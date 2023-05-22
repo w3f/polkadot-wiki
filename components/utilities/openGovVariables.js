@@ -1,8 +1,4 @@
-
-
 // POLKADOT 
-const POLKADOT_HOURS = 672;
-
 const openGovPolkadotRoot = require('./charts_data/polkadot/opengov_root.json');
 
 const openGovPolkadotAdminAuction = require('./charts_data/polkadot/opengov_admin_auction.json');
@@ -25,8 +21,6 @@ const openGovPolkadotTreasurer = require('./charts_data/polkadot/opengov_treasur
 const openGovPolkadotWhitelist = require('./charts_data/polkadot/opengov_whitelist.json');
 
 // KUSAMA
-const KUSAMA_HOURS = 336;
-
 const openGovKusamaRoot = require('./charts_data/kusama/opengov_root.json');
 
 const openGovKusamaAdminAuction = require('./charts_data/kusama/opengov_admin_auction.json');
@@ -83,5 +77,4 @@ module.exports = {
     PolkadotAdminGeneral: openGovPolkadotAdminGeneral,
     PolkadotAdminLease: openGovPolkadotAdminLease,
     PolkadotAdminStaking: openGovPolkadotAdminStaking,
-    POLKADOT_HOURS
 };
