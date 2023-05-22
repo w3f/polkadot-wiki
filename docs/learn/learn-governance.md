@@ -52,7 +52,7 @@ top of the queue, ready to enter a referendum.
 
 The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
 which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
-the treasury proposal can be directly executed and go through a spending period, or go to the
+the treasury proposal can be directly executed and go through a spending period or go to the
 external queue where it will be voted on through a [Council Referendum](#council-referenda). See the
 green horizontal path from the Public (green) to the Council (yellow) in the figure. Since the
 Council can also submit proposals, there are two vertical yellow paths: solid arrows for
@@ -71,7 +71,7 @@ The Council can also submit proposals that will end in the external queue. Votin
 Public proposals are not simultaneous and are subjected to an
 [alternating timetable](#alternating-voting-timetable). See in the figure the "on" and "off" toggles
 on the external and proposal queue. In this example, Council Proposal 4 will be voted on together
-with Fast-tracked Proposals 1-3. Voting on Public Proposal will be blocked until the alternating
+with Fast-tracked Proposals 1-3. Voting on Public Proposals will be blocked until the alternating
 timetable switches the toggles, blocking votes on Council Proposals.
 
 Referenda will follow an [adaptive quorum bias](#adaptive-quorum-biasing) mechanism and (if passed)
