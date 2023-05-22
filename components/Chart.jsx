@@ -74,7 +74,7 @@ function configureProps(key) {
                 x: {
                     type: 'linear',
                     min: 0,
-                    max: 300,
+                    max: 672,
                     title: {
                         display: true,
                         text: "Hours",
