@@ -1,41 +1,87 @@
 
 
-const openGovRoot = require('./charts_data/opengov_root.json');
+// POLKADOT 
+const POLKADOT_HOURS = 672;
 
-const openGovAdminAuction = require('./charts_data/opengov_admin_auction.json');
-const openGovAdminFellowship = require('./charts_data/opengov_admin_fellowship.json');
-const openGovAdminGeneral = require('./charts_data/opengov_admin_general.json');
-const openGovAdminLease = require('./charts_data/opengov_admin_lease.json');
-const openGovAdminStaking = require('./charts_data/opengov_admin_staking.json');
+const openGovPolkadotRoot = require('./charts_data/polkadot/opengov_root.json');
 
-const openGovBigSpender = require('./charts_data/opengov_big_spender.json');
-const openGovMediumSpender = require('./charts_data/opengov_medium_spender.json');
-const openGovSmallSpender = require('./charts_data/opengov_small_spender.json');
+const openGovPolkadotAdminAuction = require('./charts_data/polkadot/opengov_admin_auction.json');
+const openGovPolkadotAdminFellowship = require('./charts_data/polkadot/opengov_admin_fellowship.json');
+const openGovPolkadotAdminGeneral = require('./charts_data/polkadot/opengov_admin_general.json');
+const openGovPolkadotAdminLease = require('./charts_data/polkadot/opengov_admin_lease.json');
+const openGovPolkadotAdminStaking = require('./charts_data/polkadot/opengov_admin_staking.json');
 
-const openGovBigTipper = require('./charts_data/opengov_big_tipper.json');
-const openGovSmallTipper = require('./charts_data/opengov_small_tipper.json');
+const openGovPolkadotBigSpender = require('./charts_data/polkadot/opengov_big_spender.json');
+const openGovPolkadotMediumSpender = require('./charts_data/polkadot/opengov_medium_spender.json');
+const openGovPolkadotSmallSpender = require('./charts_data/polkadot/opengov_small_spender.json');
 
-const openGovRefCanceller = require('./charts_data/opengov_ref_canceller.json');
-const openGovRefKiller = require('./charts_data/opengov_ref_killer.json');
+const openGovPolkadotBigTipper = require('./charts_data/polkadot/opengov_big_tipper.json');
+const openGovPolkadotSmallTipper = require('./charts_data/polkadot/opengov_small_tipper.json');
 
-const openGovTreasurer = require('./charts_data/opengov_treasurer.json');
-const openGovWhitelist = require('./charts_data/opengov_whitelist.json');
+const openGovPolkadotRefCanceller = require('./charts_data/polkadot/opengov_ref_canceller.json');
+const openGovPolkadotRefKiller = require('./charts_data/polkadot/opengov_ref_killer.json');
+
+const openGovPolkadotTreasurer = require('./charts_data/polkadot/opengov_treasurer.json');
+const openGovPolkadotWhitelist = require('./charts_data/polkadot/opengov_whitelist.json');
+
+// KUSAMA
+const KUSAMA_HOURS = 336;
+
+const openGovKusamaRoot = require('./charts_data/kusama/opengov_root.json');
+
+const openGovKusamaAdminAuction = require('./charts_data/kusama/opengov_admin_auction.json');
+const openGovKusamaAdminFellowship = require('./charts_data/kusama/opengov_admin_fellowship.json');
+const openGovKusamaAdminGeneral = require('./charts_data/kusama/opengov_admin_general.json');
+const openGovKusamaAdminLease = require('./charts_data/kusama/opengov_admin_lease.json');
+const openGovKusamaAdminStaking = require('./charts_data/kusama/opengov_admin_staking.json');
+
+const openGovKusamaBigSpender = require('./charts_data/kusama/opengov_big_spender.json');
+const openGovKusamaMediumSpender = require('./charts_data/kusama/opengov_medium_spender.json');
+const openGovKusamaSmallSpender = require('./charts_data/kusama/opengov_small_spender.json');
+
+const openGovKusamaBigTipper = require('./charts_data/kusama/opengov_big_tipper.json');
+const openGovKusamaSmallTipper = require('./charts_data/kusama/opengov_small_tipper.json');
+
+const openGovKusamaRefCanceller = require('./charts_data/kusama/opengov_ref_canceller.json');
+const openGovKusamaRefKiller = require('./charts_data/kusama/opengov_ref_killer.json');
+
+const openGovKusamaTreasurer = require('./charts_data/kusama/opengov_treasurer.json');
+const openGovKusamaWhitelist = require('./charts_data/kusama/opengov_whitelist.json');
+
+
 
 
 module.exports = {
-    Root: openGovRoot,
-    Whitelist: openGovWhitelist,
-    Treasurer: openGovTreasurer,
-    BigTipper: openGovBigTipper,
-    SmallTipper: openGovSmallTipper,
-    RefKiller: openGovRefKiller,
-    RefCanceller: openGovRefCanceller,
-    BigSpender: openGovBigSpender,
-    MediumSpender: openGovMediumSpender,
-    SmallSpender: openGovSmallSpender,
-    AdminAuction: openGovAdminAuction,
-    AdminFellowship: openGovAdminFellowship,
-    AdminGeneral: openGovAdminGeneral,
-    AdminLease: openGovAdminLease,
-    AdminStaking: openGovAdminStaking
+    KusamaRoot: openGovKusamaRoot,
+    KusamaWhitelist: openGovKusamaWhitelist,
+    KusamaTreasurer: openGovKusamaTreasurer,
+    KusamaBigTipper: openGovKusamaBigTipper,
+    KusamaSmallTipper: openGovKusamaSmallTipper,
+    KusamaRefKiller: openGovKusamaRefKiller,
+    KusamaRefCanceller: openGovKusamaRefCanceller,
+    KusamaBigSpender: openGovKusamaBigSpender,
+    KusamaMediumSpender: openGovKusamaMediumSpender,
+    KusamaSmallSpender: openGovKusamaSmallSpender,
+    KusamaAdminAuction: openGovKusamaAdminAuction,
+    KusamaAdminFellowship: openGovKusamaAdminFellowship,
+    KusamaAdminGeneral: openGovKusamaAdminGeneral,
+    KusamaAdminLease: openGovKusamaAdminLease,
+    KusamaAdminStaking: openGovKusamaAdminStaking,
+
+    PolkadotRoot: openGovPolkadotRoot,
+    PolkadotWhitelist: openGovPolkadotWhitelist,
+    PolkadotTreasurer: openGovPolkadotTreasurer,
+    PolkadotBigTipper: openGovPolkadotBigTipper,
+    PolkadotSmallTipper: openGovPolkadotSmallTipper,
+    PolkadotRefKiller: openGovPolkadotRefKiller,
+    PolkadotRefCanceller: openGovPolkadotRefCanceller,
+    PolkadotBigSpender: openGovPolkadotBigSpender,
+    PolkadotMediumSpender: openGovPolkadotMediumSpender,
+    PolkadotSmallSpender: openGovPolkadotSmallSpender,
+    PolkadotAdminAuction: openGovPolkadotAdminAuction,
+    PolkadotAdminFellowship: openGovPolkadotAdminFellowship,
+    PolkadotAdminGeneral: openGovPolkadotAdminGeneral,
+    PolkadotAdminLease: openGovPolkadotAdminLease,
+    PolkadotAdminStaking: openGovPolkadotAdminStaking,
+    POLKADOT_HOURS
 };
