@@ -42,9 +42,6 @@ const openGovKusamaRefKiller = require('./charts_data/kusama/opengov_ref_killer.
 const openGovKusamaTreasurer = require('./charts_data/kusama/opengov_treasurer.json');
 const openGovKusamaWhitelist = require('./charts_data/kusama/opengov_whitelist.json');
 
-
-
-
 module.exports = {
     KusamaRoot: openGovKusamaRoot,
     KusamaWhitelist: openGovKusamaWhitelist,
