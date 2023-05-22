@@ -101,8 +101,9 @@ support and approval.
 
 The origin with the highest level of privileges. This track requires extremely high levels of
 approval and support for early passing. The prepare and enactment periods are also large. For
-instance, a referendum proposed in this track needs to amass 47% support (total network issuance) by
-the end of the first day with over 88% approval to be considered to be part of the confirm period.
+instance, a referendum proposed in this track needs to amass {{ polkadot: 48.2% :polkadot }}{{ kusama:  46.8%  :kusama }} 
+support (total network issuance) by
+the end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }}  approval to be considered to be part of the confirm period.
 The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of day 14.
 This ensures that the token holders receive ample time to vote on the proposal during the decision
 period.
@@ -115,9 +116,9 @@ Origin commanded by the [Fellowship](../learn/learn-opengov.md#fellowship) white
 call and allow the call to be dispatched with the root origin (after the referendum passes). This
 track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent
 process for time-critical proposals. For instance, a referendum proposed in this track needs to
-amass 14% support (much lesser than the root) by the end of the first day with over 88% approval to
-be considered to be part of the confirm period. The support curve drops linearly to 6% by the end of
-day 7 and around 5% by the end of day 14.
+amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser than the root) 
+by the end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }}  approval to
+be considered to be part of the confirm period.
 
 <Chart title="" type="line" dataId="Whitelist" />
 
@@ -130,7 +131,7 @@ pallet and the Election Provider Multiphase Pallet.
 
 ### Treasurer
 
-The origin for spending funds from the treasury (up to 333333.33 KSM). This origin has the privilege
+The origin for spending funds from the treasury (up to {{ polkadot: 10M DOT :polkadot }}{{ kusama:  333333.33 KSM  :kusama }}). This origin has the privilege
 to execute calls from the Treasury pallet.
 
 <Chart title="" type="line" dataId="Treasurer" />
@@ -178,31 +179,31 @@ passing.
 
 ### Small Tipper
 
-Origin able to spend up to 8.25 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 250 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} from the treasury at once.
 
 <Chart title="" type="line" dataId="SmallTipper" />
 
 ### Big Tipper
 
-Origin able to spend up to 33.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }} from the treasury at once.
 
 <Chart title="" type="line" dataId="BigTipper" />
 
 ### Small Spender
 
-Origin able to spend up to 333.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 10000 DOT :polkadot }}{{ kusama:  333.33 KSM  :kusama }} from the treasury at once.
 
 <Chart title="" type="line" dataId="SmallSpender" />
 
 ### Medium Spender
 
-Origin able to spend up to 3333.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 100000 DOT :polkadot }}{{ kusama:  3333.33 KSM  :kusama }} from the treasury at once.
 
 <Chart title="" type="line" dataId="MediumSpender" />
 
 ### Big Spender
 
-Origin able to spend up to 33333.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 1000000 DOT :polkadot }}{{ kusama:  33333.33 KSM  :kusama }} from the treasury at once.
 
 <Chart title="" type="line" dataId="BigSpender" />
 
