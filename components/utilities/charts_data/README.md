@@ -18,7 +18,7 @@ import Chart from "./../../components/Chart";
 // The title can be left empty, type refers to the type of chart or graph, and dataId should refer to
 // a dataset within openGovVariables.js
 
-<Chart title="" type="line" dataId="Whitelist" />;
+<Chart title="" type="line" dataId="Whitelist" maxX="" maxY="" network="Polkadot" />;
 ```
 
 ## Adding new datasets
