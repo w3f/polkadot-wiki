@@ -45,7 +45,7 @@
     "@docusaurus/module-type-aliases": "^2.4.1",
     "@docusaurus/plugin-client-redirects": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",
-    "@octokit/rest": "^19.0.8",
+    "@octokit/rest": "^19.0.11",
     "@polkadot/api": "^10.7.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.0.4",
