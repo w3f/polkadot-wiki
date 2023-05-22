@@ -128,7 +128,13 @@ pallet.
 ### Governance Proxy
 
 The **Governance** type will allow proxies to make transactions related to governance (i.e., from
-the [Democracy](https://paritytech.github.io/substrate/master/pallet_democracy), [Phragmen Election](https://paritytech.github.io/substrate/master/pallet_elections_phragmen/), [Treasury](https://paritytech.github.io/substrate/master/pallet_treasury/), [Bounties](https://paritytech.github.io/substrate/master/pallet_bounties/), [Tips](https://paritytech.github.io/substrate/master/pallet_tips/), [Utility](https://paritytech.github.io/substrate/master/pallet_utility/) and [Child Bounties](https://paritytech.github.io/substrate/master/pallet_child_bounties/) pallets).
+the [Democracy](https://paritytech.github.io/substrate/master/pallet_democracy),
+[Phragmen Election](https://paritytech.github.io/substrate/master/pallet_elections_phragmen/),
+[Treasury](https://paritytech.github.io/substrate/master/pallet_treasury/),
+[Bounties](https://paritytech.github.io/substrate/master/pallet_bounties/),
+[Tips](https://paritytech.github.io/substrate/master/pallet_tips/),
+[Utility](https://paritytech.github.io/substrate/master/pallet_utility/) and
+[Child Bounties](https://paritytech.github.io/substrate/master/pallet_child_bounties/) pallets).
 
 :::note Explainers on governance proxies
 
