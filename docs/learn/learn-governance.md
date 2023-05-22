@@ -36,6 +36,10 @@ together to administrate a network upgrade decision. No matter whether the propo
 the public (token holders) or the [Council](#council), it finally will have to go through a vote on
 a referendum to let all holders, weighted by stake, make the decision.
 
+## Summary
+
+Governance V1
+
 ## Proposals
 
 Referenda can be started in different ways:
