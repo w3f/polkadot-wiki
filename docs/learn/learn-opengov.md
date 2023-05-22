@@ -31,8 +31,6 @@ For participating in OpenGov, please refer to this
 
 :::
 
-## Premise
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
@@ -43,6 +41,8 @@ mechanisms, including an amorphous (abstract) form of state-transition function 
 defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)), and several on-chain
 voting mechanisms such as referenda and batch approval voting. All changes to the protocol must be
 agreed upon by stake-weighted referenda.
+
+## Premise
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first governance system
 ([Governance V1](./learn-governance.md)) included three main components.
@@ -74,7 +74,7 @@ better understand the need for and the direction of OpenGov.
 
 ## Summary
 
-In Governance v1, active token holders (public) and the council together administrated network's
+In Governance v1, active token holders (public) and the Council together administrated network's
 upgrade decisions. Whether the public or the council initiated the proposal, it would eventually
 have to go through a referendum to let all holders (weighted by stake and conviction) make the
 decision.
@@ -90,10 +90,35 @@ changes:
 - Dissolving the [Technical Committee](./learn-governance.md#technical-committee) and establishing
   the broader [Fellowship](#fellowship)
 
-In the next section, you can find a summary table with the main differences between Governance V1
-and OpenGov. More details for each comparison can be found in the subsequent sections of this page.
+The figure below shows an overview of OpenGov's structure.
 
-### Comparison Table
+:::info
+
+See [this page](./learn-governance.md#summary) for a comparison with the structure of Governance V1.
+
+:::
+
+![opengov-overview](../assets/opengov-overview.png)
+
+In OpenGov a proposal can be only submitted by the Public. The proposal will enter a Lead-in period
+(for more information see [Referenda Timeline](#referenda-timeline)), after which it will follow a
+specific [Track](#origins-and-tracks) depending on its Origin. There are 15 Origins, each with a
+different track. For example, a treasury proposal can now have different origins depending on the
+amount to be spent and type of proposal. A small tip of 5 KSM will use the Small Tipper origin while
+funding for a conference requiring 20,000 KSM with use the Big Spender origin.
+
+The [Fellowship](#fellowship) can decide to [whitelist](#whitelisting) a proposal that will end in
+the Whitelist Caller origin. Those proposals will have shorter Lead-in, Confirmation and Enactment
+period.
+
+Voting will be following an [Approval and Support](#approval-and-support) curve that will differ
+depending on the origin. Within the voting period there a confirmation period during which approval
+and support criteria must be held. If the proposal passes, it will go through an enactment period.
+
+All proposals within each origin can be voted on simultaneously (assuming track maximum capacity is
+not reached).
+
+## Gov1 vs. OpenGov
 
 | Governance V1                                                                                                                                                                                                                                                                                                                                  | OpenGov                                                                                                                                                                                                                                                   | OpenGov Benefit                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
