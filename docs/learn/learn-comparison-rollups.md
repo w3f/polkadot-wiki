@@ -127,8 +127,8 @@ ensures that communication to the relay chain remains valid. Each STF, called ru
 [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition function is valid if it
 compiles to Wasm and abides by the Parachains Protocol.
 
-Each STF runs a validity proof. The proof ([the Approval Protocol](./learn-availability.md)) is
-interactive, unlike ZK rollups, which are non-interactive. Additionally, unlike ZK rollups, there
+Each STF runs a validity proof. The proof ([the Approval Protocol](./learn-parachains-protocol.md))
+is interactive, unlike ZK rollups, which are non-interactive. Additionally, unlike ZK rollups, there
 are no difficulties in creating parachains with Turing-complete logic. Each parachain is also a
 full-fledged state machine (usually in the form of a blockchain). Similarly to optimistic rollups,
 the Parachain Protocol also has cases where disputes and resolutions of potentially harmful para
@@ -142,7 +142,7 @@ bad parablock is found.
   is a valid target.
 - Fast Finality (usually under a minute on Polkadot).
 - Data availability is built-in through validators and mechanisms like
-  [erasure coding](./learn-availability#erasure-codes).
+  [erasure coding](./learn-parachains-protocol.md#erasure-codes).
 - No L2 implies less of a risk of incurring centralization issues for sequencers or other L2
   operators.
 
