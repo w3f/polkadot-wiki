@@ -43,6 +43,38 @@ submitting proposal to voting on referenda.
 
 ![gov1-overview](../assets/gov1-overview.png)
 
+The public (i.e. token holders) can submit a proposal that will end the the proposal queue. Here,
+proposal are [endorsed](#endorsing-proposals) and the ones that get most of the support will climb
+position in the queue. The proposal on the top of the queue will become a
+[Public Referendum](#public-referenda). See in the figure the vertical green path ending with the
+proposals inside a cylinder (i.e. the proposal queue). The proposal with 11 endorsements is at the
+top of the queue ready to enter a referendum.
+
+The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
+which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
+the treasury proposal can be directly executed and go through a spend period, or go to the external
+queue where it will be voted on through a [Council Referendum](#council-referenda). See in the
+figure the green horizontal path that goes from the Public (green) to the Council (yellow). Since
+the Council can also submit proposals, there are two vertical yellow paths: solid arrows for
+Council-native proposals and dashed arrows for treasury proposals.
+
+Note that the external queue always consists of
+[a single proposal](https://github.com/paritytech/substrate/blob/f4a2e84ee5974b219f2a03cd195105060c41e3cd/frame/democracy/src/lib.rs#LL29C8-L31C4).
+A proposal in the external queue can be fast-tracked by the
+[Technical Committee](#technical-committee) (light-blue). The fast track can contain as many
+proposals as possible (also called emergency proposals) that can be voted on simultaneously with
+Council or Public proposals. See in the figure the light-blue circle (i.e. Council proposal 3)
+exiting the external queue and being fast-tracked by the Technical committee (TC). The fast track
+already contains two Council proposals. The external queue is filled with Council proposal 4.
+
+The Council can also submit proposals that will end in the external queue. Voting on Council and
+Public proposals is not simultaneous and is subjected to an
+[alternating timetable](#alternating-voting-timetable). See in the figure the "on" and "off" toggles
+on the external and proposal queue, respectively.
+
+Referenda will follow an [adaptive quorum bias](#adaptive-quorum-biasing) mechanism and (if passed)
+an [enactment period](#enactment).
+
 ## Proposals
 
 Referenda can be started in different ways:
