@@ -81,6 +81,8 @@ than the min enactment period.
 
 ## Origins and Tracks Info
 
+{{ polkadot: The tracks info of Kusama network is  shown below for reference. This table will be updated with Polkadot tracks when OpenGov is live on Polkadot network. :polkadot }}
+
 <!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
 <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
 
