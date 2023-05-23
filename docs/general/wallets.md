@@ -72,7 +72,7 @@ wallets through Bluetooth connectivity.
 | [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                    | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
 | [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                    | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                    | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | [iOS (Testflight)](apple.co/3WafLpm), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
+| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
 
@@ -140,7 +140,8 @@ support, light clients support, EVM DApp support, MetaMask compatibility, custom
 on-ramp, phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/138),
 [2](https://polkadot.polkassembly.io/treasury/162),
-[3](https://polkadot.polkassembly.io/treasury/218)].
+[3](https://polkadot.polkassembly.io/treasury/218),
+[4](https://polkadot.polkassembly.io/treasury/272)].
 
 ## Talisman
 
