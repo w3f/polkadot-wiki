@@ -216,6 +216,52 @@ parachain on Kusama). Statemint currently hosts
 [NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities is available for
 testing on Westmint, which is a system parachain on Polkadot's testnet Westmint.
 
+### [KodaDot](https://kodadot.xyz)
+
+[KodaDot](https://kodadot.xyz) is an open-source NFT marketplace that operates on the Dotsama
+(Kusama/Polkadot) network, striving to aggregate various NFT standards (Kusama, RMRK, Statemine,
+Basilisk, etc.) in the Dotsama ecosystem, enhancing user experience by abstracting these standards.
+
+KodaDot's strength lies in its commitment to open-source collaboration. It has transformed into a
+collaborative hub where creators, developers, and community members work collectively for decision
+making, amassing an extensive network of over
+[90 open-source contributors](https://hello.kodadot.xyz/about-us/who-are-we/achievements). This
+robust collaboration has earned KodaDot the
+[number one rank as a dapp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
+
+![kodadot.png](../assets/nft/kodadot.png)
+
+#### The Team Behind KodaDot
+
+KodaDot began as the first
+[unofficial explorer for RMRKv0.0.1](https://kusama.polkassembly.io/motion/256)
+[contributing to RMRK protocol](https://github.com/rmrk-team/rmrk-spec/issues/10). It later
+[received Kusama Treasury funding](https://kusama.polkassembly.io/motion/349), which propelled the
+team to create the
+[best end-user experience on Statemine](https://kusama.polkassembly.io/motion/349).
+
+In the summer of 2022, KodaDot won the first prize at the
+[Polkadot North American event](https://devpost.com/software/kodadot-moonsama) for implementing
+MoonBeam and MoonRiver NFT EVM smart contracts and enabling read-only access to existing components
+for seamless end-user interaction.
+
+The team successfully
+[launched with Basilisk NFT Marketplace pallet in Fall 2022](https://github.com/kodadot/nft-gallery/issues/660),
+where an increasing number of artist collections are emerging, providing artists the opportunity to
+receive offers on unlisted NFTs and earn on-chain royalties.
+
+KodaDot's upcoming integrations are based on
+[PSP-34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md), leveraging
+[smart contracts written with ink!](https://use.ink/).
+
+#### Ecosystem Tools by KodaDot
+
+KodaDot has enriched the Polkadot ecosystem by
+[offering a comprehensive API interface for builders](https://github.com/kodadot/uniquery), based on
+the SubSquid indexer. This platform also presents searchable items and collections, translating
+on-chain transactions into deep insights about collection ownership dynamics for end-users. For more
+info about KodaDot check out [link](https://hello.kodadot.xyz/).
+
 ---
 
 ## Bridging
