@@ -14,7 +14,7 @@ import {
 import openGovVariables from "./utilities/openGovVariables";
 
 // Maps a type and props to a JSX charts.js component
-function mapTypeToComponent(type, key) {
+function mapTypeToComponent(type, key, network, maxY, maxX) {
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -25,7 +25,7 @@ function mapTypeToComponent(type, key) {
         Legend
     );
     // Configure props using data
-    let props = configureProps(key);
+    let props = configureProps(key, network, maxY, maxX);
     ChartJS.defaults.font.size = 18;
     switch (type) {
         case 'line':
@@ -35,8 +35,9 @@ function mapTypeToComponent(type, key) {
     }
 }
 
-function configureProps(key) {
-    let govData = openGovVariables[key];
+function configureProps(key, network, maxY, maxX) {
+    console.log(`${network}${key}`);
+    let govData = openGovVariables[`${network}${key}`];
 
     const approvals = govData.map((_) => { return { x: _.time_hours, y: _.approval } });
     const support = govData.map((_) => { return { x: _.time_hours, y: _.support } });
@@ -64,21 +65,26 @@ function configureProps(key) {
                 y: {
                     type: 'linear',
                     min: 0,
-                    max: 100,
+                    max: maxY,
                     ticks: {
-                        callback: function(value, index, ticks) {
-                            return  `${value}%`;
+                        callback: function (value) {
+                            return `${value}%`;
                         }
                     }
                 },
                 x: {
                     type: 'linear',
                     min: 0,
-                    max: 672,
+                    max: maxX,
                     title: {
                         display: true,
                         text: "Hours",
                     },
+                    ticks: {
+                        callback: function (value) {
+                            return `${value}`;
+                        }
+                    }
                 }
             },
             plugins: {
@@ -100,8 +106,8 @@ function configureProps(key) {
     return props;
 }
 
-function Chart({ title, type, dataId }) {
-    let chart = mapTypeToComponent(type, dataId);
+function Chart({ title, type, dataId, network, maxY, maxX}) {
+    let chart = mapTypeToComponent(type, dataId, network, maxY, maxX);
     return (
         <div className="App">
             <header className="App-header">

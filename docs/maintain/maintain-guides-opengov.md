@@ -81,6 +81,8 @@ than the min enactment period.
 
 ## Origins and Tracks Info
 
+{{ polkadot: The tracks info of Kusama network is  shown below for reference. This table will be updated with Polkadot tracks when OpenGov is live on Polkadot network. :polkadot }}
+
 <!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
 <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
 
@@ -101,13 +103,16 @@ support and approval.
 
 The origin with the highest level of privileges. This track requires extremely high levels of
 approval and support for early passing. The prepare and enactment periods are also large. For
-instance, a referendum proposed in this track needs to amass 47% support (total network issuance) by
-the end of the first day with over 88% approval to be considered to be part of the confirm period.
-The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of day 14.
-This ensures that the token holders receive ample time to vote on the proposal during the decision
-period.
+instance, a referendum proposed in this track needs to amass
+{{ polkadot: 48.2% :polkadot }}{{ kusama:  46.8%  :kusama }} support (total network issuance) by the
+end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval
+to be considered to be part of the confirm period. The support curve drops linearly to 25% by the
+end of day {{ polkadot: 14 :polkadot }}{{ kusama:  7  :kusama }} and almost to 0% by the end of day
+{{ polkadot: 28 :polkadot }}{{ kusama:  14  :kusama }}. This ensures that the token holders receive
+ample time to vote on the proposal during the decision period.
 
-<Chart title="" type="line" dataId="Root" />
+{{ polkadot: <Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Whitelisted Caller
 
@@ -115,58 +120,67 @@ Origin commanded by the [Fellowship](../learn/learn-opengov.md#fellowship) white
 call and allow the call to be dispatched with the root origin (after the referendum passes). This
 track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent
 process for time-critical proposals. For instance, a referendum proposed in this track needs to
-amass 14% support (much lesser than the root) by the end of the first day with over 88% approval to
-be considered to be part of the confirm period. The support curve drops linearly to 6% by the end of
-day 7 and around 5% by the end of day 14.
+amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser than the root)
+by the end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }}
+approval to be considered to be part of the confirm period.
 
-<Chart title="" type="line" dataId="Whitelist" />
+{{ polkadot: <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Staking Admin
 
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
 pallet and the Election Provider Multiphase Pallet.
 
-<Chart title="" type="line" dataId="AdminStaking" />
+{{ polkadot: <Chart title="" type="line" dataId="AdminStaking" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="AdminStaking" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Treasurer
 
-The origin for spending funds from the treasury (up to 333333.33 KSM). This origin has the privilege
-to execute calls from the Treasury pallet.
+The origin for spending funds from the treasury (up to
+{{ polkadot: 10M DOT :polkadot }}{{ kusama:  333333.33 KSM  :kusama }}). This origin has the
+privilege to execute calls from the Treasury pallet.
 
-<Chart title="" type="line" dataId="Treasurer" />
+{{ polkadot: <Chart title="" type="line" dataId="Treasurer" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="Treasurer" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Lease Admin
 
 Origin can force slot leases. This origin has the privilege to execute calls from the Slots pallet.
 
-<Chart title="" type="line" dataId="AdminLease" />
+{{ polkadot: <Chart title="" type="line" dataId="AdminLease" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="AdminLease" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Fellowship Admin
 
 The origin for managing the composition of the fellowship.
 
-<Chart title="" type="line" dataId="AdminFellowship" />
+{{ polkadot: <Chart title="" type="line" dataId="AdminFellowship" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="AdminFellowship" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### General Admin
 
 The origin for managing the registrar. This origin has the privilege of executing calls from the
 Identity pallet.
 
-<Chart title="" type="line" dataId="AdminGeneral" />
+{{ polkadot: <Chart title="" type="line" dataId="AdminGeneral" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="AdminGeneral" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Auction Admin
 
 The origin for starting auctions. This origin can execute calls from the Auctions pallet and the
 Scheduler Pallet.
 
-<Chart title="" type="line" dataId="AdminAuction" />
+{{ polkadot: <Chart title="" type="line" dataId="AdminAuction" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="AdminAuction" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Referendum Canceller
 
 The origin can cancel referenda. This track has a low lead time and approval/support curves with
 slightly sharper reductions in their thresholds for passing.
 
-<Chart title="" type="line" dataId="RefCanceller" />
+{{ polkadot: <Chart title="" type="line" dataId="RefCanceller" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="RefCanceller" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Referendum Killer
 
@@ -174,37 +188,48 @@ The origin can cancel an ongoing referendum and slash the deposits. This track a
 lead-time and approval/support curves with slightly sharper reductions in their thresholds for
 passing.
 
-<Chart title="" type="line" dataId="RefKiller" />
+{{ polkadot: <Chart title="" type="line" dataId="RefKiller" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="RefKiller" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Small Tipper
 
-Origin able to spend up to 8.25 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 250 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} from
+the treasury at once.
 
-<Chart title="" type="line" dataId="SmallTipper" />
+{{ polkadot: <Chart title="" type="line" dataId="SmallTipper" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="SmallTipper" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Big Tipper
 
-Origin able to spend up to 33.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }} from
+the treasury at once.
 
-<Chart title="" type="line" dataId="BigTipper" />
+{{ polkadot: <Chart title="" type="line" dataId="BigTipper" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="BigTipper" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Small Spender
 
-Origin able to spend up to 333.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 10000 DOT :polkadot }}{{ kusama:  333.33 KSM  :kusama }}
+from the treasury at once.
 
-<Chart title="" type="line" dataId="SmallSpender" />
+{{ polkadot: <Chart title="" type="line" dataId="SmallSpender" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="SmallSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Medium Spender
 
-Origin able to spend up to 3333.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 100000 DOT :polkadot }}{{ kusama:  3333.33 KSM  :kusama }}
+from the treasury at once.
 
-<Chart title="" type="line" dataId="MediumSpender" />
+{{ polkadot: <Chart title="" type="line" dataId="MediumSpender" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="MediumSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Big Spender
 
-Origin able to spend up to 33333.33 KSM from the treasury at once.
+Origin able to spend up to {{ polkadot: 1000000 DOT :polkadot }}{{ kusama:  33333.33 KSM  :kusama }}
+from the treasury at once.
 
-<Chart title="" type="line" dataId="BigSpender" />
+{{ polkadot: <Chart title="" type="line" dataId="BigSpender" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="BigSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ## Create a Referenda Proposal using Polkadot-JS UI
 
