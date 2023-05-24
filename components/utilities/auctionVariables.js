@@ -5,8 +5,6 @@ to change w/ time or are derived from blocks that have already reach finality.
 A regularly scheduled GitHub action will be used to cache future auction blocks data.
 */
 
-const DotAuctions = require("./data/PolkadotAuctions.json");
-const KsmAuctions = require("./data/KusamaAuctions.json");
 
 // consts.slots.leasePeriod
 const PolkadotSlotLeasePeriod = 1209600;
@@ -27,10 +25,6 @@ const KusamaStartingPhase = 27000;
 // const.auctions.endingPeriod (5 days)
 const PolkadotEndingPeriod = 72000;
 const KusamaEndingPeriod = 72000;
-
-// GetAuctionBlocks() in Auction-Schedule.jsx can generate all these values from a starting block number
-const PolkadotAuctions = DotAuctions;
-const KusamaAuctions = KsmAuctions;
 
 // A future block that does not yet have an associated hash
 const FutureBlock = "0x0000000000000000000000000000000000000000000000000000000000000000";
@@ -58,8 +52,6 @@ module.exports = {
   KusamaStartingPhase,
   PolkadotEndingPeriod,
   KusamaEndingPeriod,
-  PolkadotAuctions,
-  KusamaAuctions,
   FutureBlock,
   PolkadotParameters,
   KusamaParameters
