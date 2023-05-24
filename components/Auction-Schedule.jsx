@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { PolkadotAuctions, KusamaAuctions, FutureBlock } from './utilities/auctionVariables';
+import { ApolloClient, ApolloLink, HttpLink, InMemoryCache, gql } from '@apollo/client/core';
 
 let API = undefined;
-let ChainState =  {
+let ChainState = {
 	Header: undefined,
 	BlockNumber: undefined,
 	BlockDate: undefined,
@@ -20,19 +21,44 @@ function AuctionSchedule() {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
 			const chain = "Polkadot";
-			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
-			await LoadOptions(PolkadotAuctions, wsProvider);
-			await SetCurrentBlockData();
-			[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, PolkadotAuctions, ChainState.BlockNumber);
-			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: ChainState.AuctionIndex } });
 		}
 		else if (title === "Parachain Slot Auctions · Guide") {
 			const chain = "Kusama";
-			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
-			await LoadOptions(KusamaAuctions, wsProvider);
-			await SetCurrentBlockData();
-			[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, KusamaAuctions, ChainState.BlockNumber);
-			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: ChainState.AuctionIndex } });
+
+			const httpLink = new HttpLink({
+				uri: "http://localhost:4350/graphql",
+			});
+
+			const AUCTIONS = gql`
+				query AUCTION {
+					squidStatus {
+						height
+					}
+					auctions {
+						biddingEndsBlock
+						endPeriodBlock
+						id
+						onboardEndBlock
+						onboardStartBlock
+						startBlock
+					}
+					}`;
+
+			const client = new ApolloClient({
+				cache: new InMemoryCache(),
+				link: ApolloLink.from([httpLink]),
+			});
+
+
+			const res = await client.query({
+				query: AUCTIONS
+			  });
+
+			let height = res.data.squidStatus.height;
+			let squidAuctions = res.data.auctions;
+			await LoadOptions(squidAuctions);
+			let id = parseInt(squidAuctions[squidAuctions.length-1].id) - 1;
+			Render(chain, squidAuctions, setAuctions, id);
 		}
 		else {
 			console.log("Unknown wiki/guide type");
@@ -56,42 +82,11 @@ async function SetCurrentBlockData() {
 }
 
 // Loads drop-down selections
-async function LoadOptions(auctions, wsProvider) {
+async function LoadOptions(auctions) {
 	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{`Auction #${auctions[i].index + 1}`}</option>
+		const option = <option value={i} key={i}>{`Auction #${auctions[i].id}`}</option>
 		Options.push(option);
 	}
-	API = await ApiPromise.create({ provider: wsProvider });
-}
-
-// Renders default value prior to initializing on-chain retrieval
-async function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
-	const index = e.target.value;
-	const auctions = Render(chain, defaultAuctions, setAuctions, index);
-	await GetChainData(chain, auctions, setAuctions, index)
-}
-
-// Connect to a chain, retrieve required values, re-render
-async function GetChainData(chain, auctions, setAuctions, index) {
-	const selection = auctions[index];
-	const selectedBlocks = {
-		startDate: [selection.startBlock, selection.startHash],
-		endPeriodDate: [selection.endPeriodBlock, selection.endPeriodHash],
-		biddingEndsDate: [selection.biddingEndsBlock, selection.biddingEndsHash],
-		onboardStartDate: [selection.onboardStartBlock, selection.onboardStartHash],
-		onboardEndDate: [selection.onboardEndBlock, selection.onboardEndHash]
-	}
-
-	for (const [key, value] of Object.entries(selectedBlocks)) {
-		// Estimate block date for future blocks
-		if (value[1] === FutureBlock) {
-			auctions[index][key] = EstimateBlockDate(ChainState.BlockDate, ChainState.BlockNumber, value[0]);
-		} else {
-			auctions[index][key] = new Date(auctions[index][key]).toDateString();
-		}
-	}
-
-	Render(chain, auctions, setAuctions, index);
 }
 
 // Estimate a future blocks date based on 6 second block times
@@ -103,29 +98,9 @@ function EstimateBlockDate(date, currentBlock, estimatedBlock) {
 	return dateCopy.toDateString();
 }
 
-// Calculate the current or next upcoming auction based on the current block
-function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
-	let index = 0;
-	let status = "";
-	for (let i = 0; i < auctions.length; i++) {
-		if (currentBlock === null) {
-			status = "Current block is still loading...";
-			return [index, status];
-		}
-		if (auctions[i].biddingEndsBlock > currentBlock) {
-			if (auctions[i].startBlock > currentBlock) {
-				status = `Auction #${auctions[i].index + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
-			} else {
-				status = `Auction #${auctions[i].index + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
-			}
-			index = i;
-			return [index, status];
-		}
-	}
-	status = `There are currently no pending or ongoing auctions.  Auction #${auctions.length} was the last active auction.`
-	return [auctions.length - 1, status];
+
+function switchAuctions(chain, auctions, setAuctions, e) {
+	Render(chain, auctions, setAuctions, e.target.value)
 }
 
 // Update JSX
@@ -136,7 +111,6 @@ function Render(chain, auctions, setAuctions, index) {
 	} else if (chain === "Kusama") {
 		explorerUrl = "https://kusama.subscan.io/block/";
 	}
-
 	// Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
 	let currentBlockDate = ChainState.BlockDate;
@@ -146,65 +120,62 @@ function Render(chain, auctions, setAuctions, index) {
 		currentBlockNumber = null;
 		currentBlockDate = "Connecting...";
 	}
-	
-	// On-boarding range
-	let onboarding = <div>
-		{`${auctions[index].onboardStartDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
-			Block #{auctions[index].onboardStartBlock}
-		</a>
-		{` to `}
-		{`${auctions[index].onboardEndDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
-			Block #{auctions[index].onboardEndBlock}
-		</a>
-	</div>
-	// If onboarding is too far in the future to calculate
-	if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
-		onboarding = <div>
-			On-boarding cannot yet be determined for this future event.
-		</div>
-	}
 
-	// Set dates for current auction in status
-	[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, auctions, ChainState.BlockNumber);
+	// // On-boarding range
+	// let onboarding = <div>
+	// 	{`${auctions[index].onboardStartDate} - `}
+	// 	<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
+	// 		Block #{auctions[index].onboardStartBlock}
+	// 	</a>
+	// 	{` to `}
+	// 	{`${auctions[index].onboardEndDate} - `}
+	// 	<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
+	// 		Block #{auctions[index].onboardEndBlock}
+	// 	</a>
+	// </div>
+	// If onboarding is too far in the future to calculate
+	// if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
+	// 	onboarding = <div>
+	// 		On-boarding cannot yet be determined for this future event.
+	// 	</div>
+	// }
 
 	const content = <div>
 		<div>{ChainState.AuctionStatus}</div>
 		<br />
-		<select 
-			id = "AuctionSelector"
-			defaultValue = {ChainState.AuctionIndex}
-			onChange = {(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)}
-			style = {{ border: '2px solid #e6007a', height: '40px' }}
+		<select
+			id="AuctionSelector"
+			defaultValue={ChainState.AuctionIndex}
+			onChange={(e) => switchAuctions(chain, auctions, setAuctions, e)}
+			style={{ border: '2px solid #e6007a', height: '40px' }}
 		>
 			{Options.map((option) => (option))}
 		</select>
 		<hr />
 		<b>Auction Starts:</b>
 		<br />
-		{`${auctions[index].startDate} - `}
+		{/* {`${auctions[index].startDate} - `} */}
 		<a href={`${explorerUrl}${auctions[index].startBlock}`}>
 			Block #{auctions[index].startBlock}
 		</a>
 		<hr />
 		<b>Bidding Starts:</b>
 		<br />
-		{`${auctions[index].endPeriodDate} - `}
+		{/* {`${auctions[index].endPeriodDate} - `} */}
 		<a href={`${explorerUrl}${auctions[index].endPeriodBlock}`}>
 			Block #{auctions[index].endPeriodBlock}
 		</a>
 		<hr />
 		<b>Bidding Ends:</b>
 		<br />
-		{`${auctions[index].biddingEndsDate} - `}
+		{/* {`${auctions[index].biddingEndsDate} - `} */}
 		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock}`}>
 			Block #{auctions[index].biddingEndsBlock}
 		</a>
 		<hr />
 		<b>Lease Period:</b>
 		<br />
-		{onboarding}
+		{/* {onboarding} */}
 		<hr />
 		<p style={{ color: "#6c757d" }}>
 			The dates and block numbers listed above can change based on network block production and the potential for skipped blocks.

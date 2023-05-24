@@ -30,13 +30,7 @@ details.
 
 ## Auction Schedule
 
-:::info
-
-The auction schedule and the details of ongoing actions are available on the
-{{ polkadot: [Parachains info](https://parachains.info/auctions/polkadot) :polkadot }}{{ kusama: [Parachains info](https://parachains.info/auctions/kusama) :kusama }}
-website.
-
-:::
+<AuctionSchedule />
 
 ## Mechanics of a Candle Auction
 
