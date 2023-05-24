@@ -192,6 +192,43 @@ this stage validators of the Relay Chain already received the
 
 ### Asynchronous Backing
 
+Asynchronous backing is a mechanism that introduces a _pipeline_ for parachain <-> relay chain
+communication. This pipeline will allow collators to include more data in parachain blocks while
+reducing latency (from 12 to 6 seconds). Where Ethereum is looking to increase blocksize as a means
+for rollup solutions, asynchronous backing builds on the existing parachains protocol to provide a
+way to further parallelize the processing of parachain blocks, increasing scalability and throughput
+in a single go.
+
+It has three overarching goals:
+
+1. Decrease parablock validation time to 6 seconds from 12 seconds
+2. Increase the amount of blockspace by a factor of 5-10, meaning more state changes allowed per
+   block.
+3. Allow for parachain blocks (parablocks) to be re-proposed to the network in the event that they
+   aren't included initially on the first attempt.
+
+:::info
+
+One can think of asynchronous as the Polkadot equivalent to Ethereum's Danksharding. Where Ethereum
+merely increases the amount of space per block for rollup related solutions, asynchronous backing
+provides a way for collators to build blocks with the intent of publishing asynchronously them later
+on.
+
+:::
+
+This combination of lower latency, higher storage per block, and logical pipeline spanning
+Polkadot's networking, runtime, and collator aspects will allow for higher, more robust throughput.
+The speed is doubled while block storage is significantly increased, allowing the network to become
+increasingly powerful.
+
+A current limitation to scaling throughput in terms of speed is that parablock validation is tightly
+coupled to the relay chain's progression. Parablocks are very much dependent on being in sync with
+the relay chain, which reduces the amount of data that can be put into the block. Essentially, it's
+rushing to be a part of the relay chain due to this synchrony.
+
+By making this process of backing para blocks more asynchronous, they get the chance to not only
+include more data, but also "retry" at a later time to be included in the relay chain.
+
 ### Availability and Unavailability Phase
 
 During the availability and unavailability phases, the validators will participate to **Availability
