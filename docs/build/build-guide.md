@@ -284,17 +284,16 @@ For front end applications, there are several options for interfacing with Subst
 (parachains, relay chains etc) and smart contracts:
 
 <Tabs groupId="client-libraries" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'CAPI',
-value: 'capi'}, {label: 'Subxt', value: 'subxt'}, {label: 'Ink! React Hooks', value: 'ink'} ]}>
-<TabItem value="pjs"> <a href="https://github.com/polkadot-js/api" blank="">Promise and RxJS APIs
-around Polkadot and Substrate based chains via RPC calls. It is dynamically generated based on what
-the Substrate runtime provides in terms of metadata. Full documentation & examples available.</a>
-</TabItem> <TabItem value="capi"> <a href="https://github.com/paritytech/capi" blank="">Capi is a
+value: 'capi'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink', value: 'ink'} ]}>
+<TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate based chains via RPC
+calls. It is dynamically generated based on what the Substrate runtime provides in terms of
+metadata. Full documentation & examples available. </TabItem> <TabItem value="capi"> Capi is a
 framework (based on Typescript) for crafting interactions with Substrate chains. It consists of a
 development server and fluent API, which facilitates multichain interactions without compromising
-either performance or ease of use.</a> </TabItem> <TabItem value="subxt">
-<a href="https://github.com/paritytech/subxt" blank="">Submit extrinsics (transactions) to a
-Substrate node via RPC using Rust. Also referred to as Rust Parity.</a> </TabItem>
-<TabItem value="ink"> <a href="https://github.com/paritytech/useink" blank="">A React hooks library
-for ink!</a> </TabItem> </Tabs>
+either performance or ease of use. </TabItem> <TabItem value="subxt"> Submit extrinsics
+(transactions) to a Substrate node via RPC using Rust. Also referred to as Rust Parity. </TabItem>
+<TabItem value="subxt"> Submit extrinsics (transactions) to a Substrate node via RPC using Rust.
+Also referred to as Rust Parity. </TabItem> <TabItem value="ink"> A React hooks library for ink!
+</TabItem> </Tabs>
 
 For a full list of tools please take a look here: [Tools, APIs and Languages](build-open-source.md)
