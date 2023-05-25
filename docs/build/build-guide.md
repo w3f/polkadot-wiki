@@ -86,10 +86,20 @@ connect to a relay chain using the [Parachains Protocol](../learn/learn-parachai
 
 ![build 1](../assets/build-1.png)
 
-Parachains open possibilities to construct complex runtime logic that would be too expensive to
-execute with smart contracts. However, unlike smart contracts, parachains lack a mandatory gas
-metering system entirely and could potentially be vulnerable to bugs that cause infinite loops
-(something that is prevented by design in smart contracts). This vulnerability is mitigated by the
+:::info
+
+Throughout this document, you will encounter the term **runtime** or **STF (State Transition
+Function)**. Both refer to the same concept, as they both define how exactly a particular system,
+i.e., a blockchain, should deal with state changes both externally and internally. Both of these
+terms are used extensively in Polkadot, and by association, Substrate contexts.
+
+:::
+
+Parachains open possibilities to construct complex **runtime**, or **STF** (state transition
+function) logic that would be too expensive to execute with smart contracts. However, unlike smart
+contracts, parachains lack a mandatory gas metering system entirely and could potentially be
+vulnerable to bugs that cause infinite loops (something that is prevented by design in smart
+contracts). This vulnerability is mitigated by the
 [weight system](https://docs.substrate.io/build/tx-weights-fees/) that is implemented in Substrate
 -- although it places more of a burden on the developer of the parachain to properly perform
 benchmarks.
@@ -107,10 +117,10 @@ PDKs) and you get all of the benefits of building a parachain, without the drawb
 :::
 
 You may also decide to harness a combination of parachain, parathread, and smart contract. If you
-have certain logic that requires loops and it cannot be removed, use the native parachain runtime to
-handle all complex logic and the smart contract to call iteration. If you require off-chain data
-from an oracle, you may want to use a parathread as an oracle feed that only triggers once every 24
-hours (this makes the most sense if the data is useful to other players in the
+have certain logic that requires loops and it cannot be removed, use the native parachain
+runtime/STF to handle all complex logic and the smart contract to call iteration. If you require
+off-chain data from an oracle, you may want to use a parathread as an oracle feed that only triggers
+once every 24 hours (this makes the most sense if the data is useful to other players in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem too).
 
 ### Constructing FRAME Runtimes with Substrate
@@ -130,26 +140,26 @@ Kusama, or even as a basis to form a conventional layer one solo chain.
 
 Currently, the most streamlined way of utilizing Substrate is
 [FRAME](https://docs.substrate.io/learn/runtime-development/#frame), which conveniently allows for a
-runtime to be generated from a set of modules (called
+runtime/STF to be generated from a set of modules (called
 [pallets](https://docs.substrate.io/reference/frame-pallets/)).
 [Runtimes](https://docs.substrate.io/learn/architecture/#runtime) in Substrate are built using
 [WebAssembly](../learn/learn-wasm.md) (Wasm), and represent the state transition function for a
 network. FRAME allows for a collection of business logic-oriented modules, called
-[pallets](https://docs.substrate.io/reference/frame-pallets/), to construct a runtime and define how
-exactly the blockchain is supposed to behave. Ranging from
+[pallets](https://docs.substrate.io/reference/frame-pallets/), to construct a runtime/STF and define
+how exactly the blockchain is supposed to behave. Ranging from
 [identity](https://paritytech.github.io/substrate/master/pallet_identity/index.html) to
 [smart contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html),
 pallets can be quite extensive in providing on-chain functionality.
 
-Even though FRAME is heavily used, it is not the only way to create a valid runtime using Substrate.
-Substrate as a whole can be used to create new paradigms and abstractions that build on the concept
-of web3.
+Even though FRAME is heavily used, it is not the only way to create a valid runtime/STF using
+Substrate. Substrate as a whole can be used to create new paradigms and abstractions that build on
+the concept of web3.
 
 :::note
 
-Although most parachains utilize FRAME and Substrate to build runtimes for connecting to the relay
-chain, it is not contigent. It is entirely possible to build a parachain using other tools, so long
-as they follow the [Parachains Protocol](../learn/learn-parachains-protocol.md).
+Although most parachains utilize FRAME and Substrate to build runtime/STFs for connecting to the
+relay chain, it is not contigent. It is entirely possible to build a parachain using other tools, so
+long as they follow the [Parachains Protocol](../learn/learn-parachains-protocol.md).
 
 As a general rule of thumb, Substrate provides the means for this to become possible through
 comparably minimal effort.
@@ -180,11 +190,11 @@ a parachain or parathread.
 
 #### Parachains Benefits
 
-Parachains contain their own runtime logic and benefit from the shared security and the cross-chain
-messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains permit a high
-degree of flexibility and customization but require more effort to create and maintain over time. A
-production-grade parachain is typcially are more involved to create due the complexity that is
-involved in technical and economic aspects of blockchain networks.
+Parachains contain their own runtime/STF logic and benefit from the shared security and the
+cross-chain messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
+permit a high degree of flexibility and customization but require more effort to create and maintain
+over time. A production-grade parachain is typcially are more involved to create due the complexity
+that is involved in technical and economic aspects of blockchain networks.
 
 Parachains grant the creators more space to build the monetary system and other aspects of the chain
 from the ground up. They will allow for more succinct and efficient execution of complex logic than
@@ -217,9 +227,9 @@ Smart contracts are another option which enable for an often times simpler devel
 
 :::info What's the difference between a smart contract and a pallet?
 
-If you recall, a parachain is made up of a runtime that is usually built on Substrate. These
-runtimes often utilize FRAME, which is subsequently made up of pallets. Pallets are part of a
-Substrate runtime, whereas smart contracts are a product of a pallet (see:
+If you recall, a parachain is made up of a runtime/STF that is usually built on Substrate. These
+runtime/STFs often utilize FRAME, which is subsequently made up of pallets. Pallets are part of a
+Substrate runtime/STF, whereas smart contracts are a product of a pallet (see:
 [pallet_contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html)).
 Pallets require more engineering and thought, as they can directly affect the chain's state.
 
