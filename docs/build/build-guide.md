@@ -7,6 +7,10 @@ keywords: [build, how to build, develop, parachain, smart contract]
 slug: ../build-guide
 ---
 
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
+
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
 [XCM](../learn/learn-xcm.md). With the advent of
@@ -275,3 +279,22 @@ a smart contract.
 If one simply wishes to develop a dApp, it is most likely that learning how the RPC interfaces of
 Substrate work. The Polkadot ecosystem contains a wide variety of SDKs to tap into both the relay
 chain and parachains.
+
+For front end applications, there are several options for interfacing with Substrate-based chains
+(parachains, relay chains etc) and smart contracts:
+
+<Tabs groupId="client-libraries" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'CAPI',
+value: 'capi'}, {label: 'Subxt', value: 'subxt'}, {label: 'Ink! React Hooks', value: 'ink'} ]}>
+<TabItem value="pjs"> <a href="https://github.com/polkadot-js/api" blank="">Promise and RxJS APIs
+around Polkadot and Substrate based chains via RPC calls. It is dynamically generated based on what
+the Substrate runtime provides in terms of metadata. Full documentation & examples available.</a>
+</TabItem> <TabItem value="capi"> <a href="https://github.com/paritytech/capi" blank="">Capi is a
+framework (based on Typescript) for crafting interactions with Substrate chains. It consists of a
+development server and fluent API, which facilitates multichain interactions without compromising
+either performance or ease of use.</a> </TabItem> <TabItem value="subxt">
+<a href="https://github.com/paritytech/subxt" blank="">Submit extrinsics (transactions) to a
+Substrate node via RPC using Rust. Also referred to as Rust Parity.</a> </TabItem>
+<TabItem value="ink"> <a href="https://github.com/paritytech/useink" blank="">A React hooks library
+for ink!</a> </TabItem> </Tabs>
+
+For a full list of tools please take a look here: [Tools, APIs and Languages](build-open-source.md)
