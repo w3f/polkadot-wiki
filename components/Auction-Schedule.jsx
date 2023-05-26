@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ApiPromise, WsProvider } from "@polkadot/api";
-import { PolkadotAuctions, KusamaAuctions, FutureBlock } from './utilities/auctionVariables';
 import { ApolloClient, ApolloLink, HttpLink, InMemoryCache, gql } from '@apollo/client/core';
 
-let API = undefined;
 let ChainState = {
 	Header: undefined,
 	BlockNumber: undefined,
@@ -55,6 +52,7 @@ function AuctionSchedule() {
 			  });
 
 			let height = res.data.squidStatus.height;
+			ChainState.BlockNumber = height;
 			let squidAuctions = res.data.auctions;
 			await LoadOptions(squidAuctions);
 			let id = parseInt(squidAuctions[squidAuctions.length-1].id) - 1;
@@ -71,14 +69,6 @@ function AuctionSchedule() {
 	} else {
 		return (<div>Loading auction data...</div>)
 	}
-}
-
-// Set current chain block data
-async function SetCurrentBlockData() {
-	ChainState.Header = await API.rpc.chain.getHeader();
-	ChainState.BlockNumber = ChainState.Header.number.toPrimitive();
-	const timestamp = (await API.query.timestamp.now()).toPrimitive();
-	ChainState.BlockDate = new Date(timestamp)
 }
 
 // Loads drop-down selections
@@ -111,37 +101,45 @@ function Render(chain, auctions, setAuctions, index) {
 	} else if (chain === "Kusama") {
 		explorerUrl = "https://kusama.subscan.io/block/";
 	}
-	// Current block information
+	// // Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
-	let currentBlockDate = ChainState.BlockDate;
-	if (currentBlockNumber !== undefined) {
-		currentBlockDate = currentBlockDate.toDateString();
-	} else {
-		currentBlockNumber = null;
-		currentBlockDate = "Connecting...";
-	}
-
-	// // On-boarding range
-	// let onboarding = <div>
-	// 	{`${auctions[index].onboardStartDate} - `}
-	// 	<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
-	// 		Block #{auctions[index].onboardStartBlock}
-	// 	</a>
-	// 	{` to `}
-	// 	{`${auctions[index].onboardEndDate} - `}
-	// 	<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
-	// 		Block #{auctions[index].onboardEndBlock}
-	// 	</a>
-	// </div>
-	// If onboarding is too far in the future to calculate
-	// if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
-	// 	onboarding = <div>
-	// 		On-boarding cannot yet be determined for this future event.
-	// 	</div>
+	// let currentBlockDate = ChainState.BlockDate;
+	// if (currentBlockNumber !== undefined) {
+	// 	currentBlockDate = currentBlockDate.toDateString();
+	// } else {
+	// 	currentBlockNumber = null;
+	// 	currentBlockDate = "Connecting...";
 	// }
 
+	const onboardStartDate = auctions[index].onboardStartBlock;
+	const onboardEndDate= auctions[index].onboardEndBlock;
+
+	// On-boarding range
+	let onboarding = <div>
+		{`${onboardStartDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
+			Block #{auctions[index].onboardStartBlock}
+		</a>
+		{` to `}
+		{`${onboardEndDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
+			Block #{auctions[index].onboardEndBlock}
+		</a>
+	</div>
+	// If onboarding is too far in the future to calculate
+	if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
+		onboarding = <div>
+			On-boarding cannot yet be determined for this future event.
+		</div>
+	}
+	
+	let active = 'Complete';
+	if (ChainState.BlockNumber < auctions[index].endPeriodBlock) {
+		active = 'Ongoing';
+	}
+
 	const content = <div>
-		<div>{ChainState.AuctionStatus}</div>
+		<div>Auction #{parseInt(index) + 1} is {active}</div>
 		<br />
 		<select
 			id="AuctionSelector"
@@ -175,7 +173,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<hr />
 		<b>Lease Period:</b>
 		<br />
-		{/* {onboarding} */}
+		{onboarding}
 		<hr />
 		<p style={{ color: "#6c757d" }}>
 			The dates and block numbers listed above can change based on network block production and the potential for skipped blocks.
