@@ -28,16 +28,36 @@ function AuctionSchedule() {
 
 			const AUCTIONS = gql`
 				query AUCTION {
+					auctions(orderBy: biddingStartBlock_height_ASC) {
+						id
+						status
+						biddingEndsBlock {
+						height
+						timestamp
+						}
+						biddingStartBlock {
+						height
+						timestamp
+						}
+						endPeriodBlock {
+						height
+						timestamp
+						}
+						onboardEndBlock {
+						height
+						timestamp
+						}
+						onboardStartBlock {
+						height
+						timestamp
+						}
+						startBlock {
+						timestamp
+						height
+						}
+					}
 					squidStatus {
 						height
-					}
-					auctions {
-						biddingEndsBlock
-						endPeriodBlock
-						id
-						onboardEndBlock
-						onboardStartBlock
-						startBlock
 					}
 					}`;
 
@@ -49,13 +69,15 @@ function AuctionSchedule() {
 
 			const res = await client.query({
 				query: AUCTIONS
-			  });
+			});
+
+			console.log(res);
 
 			let height = res.data.squidStatus.height;
 			ChainState.BlockNumber = height;
 			let squidAuctions = res.data.auctions;
 			await LoadOptions(squidAuctions);
-			let id = parseInt(squidAuctions[squidAuctions.length-1].id) - 1;
+			let id = parseInt(squidAuctions[squidAuctions.length - 1].id) - 1;
 			Render(chain, squidAuctions, setAuctions, id);
 		}
 		else {
@@ -79,15 +101,6 @@ async function LoadOptions(auctions) {
 	}
 }
 
-// Estimate a future blocks date based on 6 second block times
-function EstimateBlockDate(date, currentBlock, estimatedBlock) {
-	const blockDifference = estimatedBlock - currentBlock;
-	const seconds = blockDifference * 6;
-	const dateCopy = new Date(date.valueOf())
-	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
-	return dateCopy.toDateString();
-}
-
 
 function switchAuctions(chain, auctions, setAuctions, e) {
 	Render(chain, auctions, setAuctions, e.target.value)
@@ -103,43 +116,27 @@ function Render(chain, auctions, setAuctions, index) {
 	}
 	// // Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
-	// let currentBlockDate = ChainState.BlockDate;
-	// if (currentBlockNumber !== undefined) {
-	// 	currentBlockDate = currentBlockDate.toDateString();
-	// } else {
-	// 	currentBlockNumber = null;
-	// 	currentBlockDate = "Connecting...";
-	// }
 
-	const onboardStartDate = auctions[index].onboardStartBlock;
-	const onboardEndDate= auctions[index].onboardEndBlock;
+	const onboardStartDate = new Date(parseInt(auctions[index].onboardStartBlock.timestamp)).toDateString();
+	const onboardEndDate =  new Date(parseInt(auctions[index].onboardEndBlock.timestamp)).toDateString();
+	const biddingStartsDate = new Date(parseInt(auctions[index].biddingStartBlock.timestamp)).toDateString();
+	const biddingEndsDate = new Date(parseInt(auctions[index].biddingEndsBlock.timestamp)).toDateString();
 
 	// On-boarding range
 	let onboarding = <div>
 		{`${onboardStartDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
-			Block #{auctions[index].onboardStartBlock}
+		<a href={`${explorerUrl}${auctions[index].onboardStartBlock.height}`}>
+			Block #{auctions[index].onboardStartBlock.height}
 		</a>
 		{` to `}
 		{`${onboardEndDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
-			Block #{auctions[index].onboardEndBlock}
+		<a href={`${explorerUrl}${auctions[index].onboardEndBlock.height}`}>
+			Block #{auctions[index].onboardEndBlock.height}
 		</a>
 	</div>
-	// If onboarding is too far in the future to calculate
-	if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
-		onboarding = <div>
-			On-boarding cannot yet be determined for this future event.
-		</div>
-	}
-	
-	let active = 'Complete';
-	if (ChainState.BlockNumber < auctions[index].endPeriodBlock) {
-		active = 'Ongoing';
-	}
 
 	const content = <div>
-		<div>Auction #{parseInt(index) + 1} is {active}</div>
+		<div>Auction #{parseInt(index) + 1} is {auctions[index].status}</div>
 		<br />
 		<select
 			id="AuctionSelector"
@@ -152,23 +149,23 @@ function Render(chain, auctions, setAuctions, index) {
 		<hr />
 		<b>Auction Starts:</b>
 		<br />
-		{/* {`${auctions[index].startDate} - `} */}
-		<a href={`${explorerUrl}${auctions[index].startBlock}`}>
-			Block #{auctions[index].startBlock}
+		{`${new Date(parseInt(auctions[index].startBlock.timestamp)).toDateString()} - `}
+		<a href={`${explorerUrl}${auctions[index].startBlock.height}`}>
+			Block #{auctions[index].startBlock.height}
 		</a>
 		<hr />
 		<b>Bidding Starts:</b>
 		<br />
-		{/* {`${auctions[index].endPeriodDate} - `} */}
-		<a href={`${explorerUrl}${auctions[index].endPeriodBlock}`}>
-			Block #{auctions[index].endPeriodBlock}
+		{`${biddingStartsDate} - `}
+		<a href={`${explorerUrl}${auctions[index].biddingStartBlock.height}`}>
+			Block #{auctions[index].biddingStartBlock.height}
 		</a>
 		<hr />
 		<b>Bidding Ends:</b>
 		<br />
-		{/* {`${auctions[index].biddingEndsDate} - `} */}
-		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock}`}>
-			Block #{auctions[index].biddingEndsBlock}
+		{`${biddingEndsDate} - `}
+		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock.height}`}>
+			Block #{auctions[index].biddingEndsBlock.height}
 		</a>
 		<hr />
 		<b>Lease Period:</b>
