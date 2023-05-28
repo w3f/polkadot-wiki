@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { ApolloClient, ApolloLink, HttpLink, InMemoryCache, gql } from '@apollo/client/core';
+import { ApolloClient, ApolloLink, HttpLink, InMemoryCache } from '@apollo/client/core';
+import { AUCTIONS } from './utilities/auctionVariables';
 
 let ChainState = {
-	Header: undefined,
 	BlockNumber: undefined,
-	BlockDate: undefined,
-	AuctionStatus: undefined,
-	AuctionIndex: undefined,
 }
 let Options = [];
 
 // Component for displaying auction data
 function AuctionSchedule() {
 	const [auctions, setAuctions] = useState("Loading Auctions...");
-
 	useEffect(async () => {
 		const title = document.title;
 		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
@@ -26,46 +22,10 @@ function AuctionSchedule() {
 				uri: "http://localhost:4350/graphql",
 			});
 
-			const AUCTIONS = gql`
-				query AUCTION {
-					auctions(orderBy: biddingStartBlock_height_ASC) {
-						id
-						status
-						biddingEndsBlock {
-						height
-						timestamp
-						}
-						biddingStartBlock {
-						height
-						timestamp
-						}
-						endPeriodBlock {
-						height
-						timestamp
-						}
-						onboardEndBlock {
-						height
-						timestamp
-						}
-						onboardStartBlock {
-						height
-						timestamp
-						}
-						startBlock {
-						timestamp
-						height
-						}
-					}
-					squidStatus {
-						height
-					}
-					}`;
-
 			const client = new ApolloClient({
 				cache: new InMemoryCache(),
 				link: ApolloLink.from([httpLink]),
 			});
-
 
 			const res = await client.query({
 				query: AUCTIONS
@@ -113,7 +73,7 @@ function Render(chain, auctions, setAuctions, index) {
 		explorerUrl = "https://kusama.subscan.io/block/";
 	}
 
-	console.log(index)
+	console.log(ChainState)
 	// // Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
 
@@ -140,7 +100,6 @@ function Render(chain, auctions, setAuctions, index) {
 		<br />
 		<select
 			id="AuctionSelector"
-			defaultValue={ChainState.AuctionIndex}
 			onChange={(e) => switchAuctions(chain, auctions, setAuctions, e)}
 			style={{ border: '2px solid #e6007a', height: '40px' }}
 		>
