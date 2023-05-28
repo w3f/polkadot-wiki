@@ -1,46 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { ApolloClient, ApolloLink, HttpLink, InMemoryCache } from '@apollo/client/core';
-import { AUCTIONS } from './utilities/auctionVariables';
+import { AUCTIONS, supportedNetworks } from './utilities/auctionVariables';
 
 let ChainState = {
 	BlockNumber: undefined,
 }
+
 let Options = [];
 
 // Component for displaying auction data
-function AuctionSchedule() {
+function AuctionSchedule({ network }) {
 	const [auctions, setAuctions] = useState("Loading Auctions...");
 	useEffect(async () => {
-		const title = document.title;
-		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			const chain = "Polkadot";
-		}
-		else if (title === "Parachain Slot Auctions · Guide") {
-			const chain = "Kusama";
 
-			const httpLink = new HttpLink({
-				uri: "http://localhost:4350/graphql",
-			});
+		const networkInfo = setHttpLinkAndExplorer(network);
+		const client = new ApolloClient({
+			cache: new InMemoryCache(),
+			link: ApolloLink.from([networkInfo.httpLink]),
+		});
 
-			const client = new ApolloClient({
-				cache: new InMemoryCache(),
-				link: ApolloLink.from([httpLink]),
-			});
+		const res = await client.query({
+			query: AUCTIONS
+		});
 
-			const res = await client.query({
-				query: AUCTIONS
-			});
-
-			let height = res.data.squidStatus.height;
-			ChainState.BlockNumber = height;
-			let squidAuctions = res.data.auctions;
-			await LoadOptions(squidAuctions);
-			let id = parseInt(squidAuctions[squidAuctions.length - 1].id) - 1;
-			Render(chain, squidAuctions, setAuctions, id);
-		}
-		else {
-			console.log("Unknown wiki/guide type");
-		}
+		let height = res.data.squidStatus.height;
+		ChainState.BlockNumber = height;
+		let squidAuctions = res.data.auctions;
+		await LoadOptions(squidAuctions);
+		let id = parseInt(squidAuctions[squidAuctions.length - 1].id) - 1;
+		Render(networkInfo.explorer, squidAuctions, setAuctions, id);
 	}, []);
 
 	// Render
@@ -48,6 +36,25 @@ function AuctionSchedule() {
 		return auctions;
 	} else {
 		return (<div>Loading auction data...</div>)
+	}
+}
+
+function setHttpLinkAndExplorer(network) {
+	switch (network) {
+		case supportedNetworks.POLKADOT:
+			return {
+				httpLink: new HttpLink({
+					uri: "http://localhost:4350/graphql",
+				}),
+				explorer: "https://polkadot.subscan.io/block/"
+			};
+		case supportedNetworks.KUSAMA:
+			return {
+				httpLink: new HttpLink({
+					uri: "http://localhost:4350/graphql",
+				}),
+				explorer: "https://kusama.subscan.io/block/"
+			};
 	}
 }
 
@@ -65,16 +72,8 @@ function switchAuctions(chain, auctions, setAuctions, e) {
 }
 
 // Update JSX
-function Render(chain, auctions, setAuctions, index) {
-	let explorerUrl = undefined;
-	if (chain === "Polkadot") {
-		explorerUrl = "https://polkadot.subscan.io/block/";
-	} else if (chain === "Kusama") {
-		explorerUrl = "https://kusama.subscan.io/block/";
-	}
-
-	console.log(ChainState)
-	// // Current block information
+function Render(explorerUrl, auctions, setAuctions, index) {
+	// Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
 
 	const onboardStartDate = new Date(parseInt(auctions[index].onboardStartBlock.timestamp)).toDateString();
@@ -100,7 +99,7 @@ function Render(chain, auctions, setAuctions, index) {
 		<br />
 		<select
 			id="AuctionSelector"
-			onChange={(e) => switchAuctions(chain, auctions, setAuctions, e)}
+			onChange={(e) => switchAuctions(explorerUrl, auctions, setAuctions, e)}
 			style={{ border: '2px solid #e6007a', height: '40px' }}
 		>
 			{Options.map((option) => (option))}

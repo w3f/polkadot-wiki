@@ -43,3 +43,12 @@ query AUCTION {
   }
 }`;
 
+/**
+ * @constant supportedNetworks - networks supported by the Auctions component
+ */
+export const supportedNetworks = {
+	POLKADOT: "polkadot",
+	KUSAMA: "kusama"
+};
+
+

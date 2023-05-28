@@ -30,7 +30,7 @@ details.
 
 ## Auction Schedule
 
-<AuctionSchedule />
+<AuctionSchedule network="kusama" />
 
 ## Mechanics of a Candle Auction
 
