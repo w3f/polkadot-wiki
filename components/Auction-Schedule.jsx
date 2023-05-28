@@ -71,8 +71,6 @@ function AuctionSchedule() {
 				query: AUCTIONS
 			});
 
-			console.log(res);
-
 			let height = res.data.squidStatus.height;
 			ChainState.BlockNumber = height;
 			let squidAuctions = res.data.auctions;
@@ -95,15 +93,15 @@ function AuctionSchedule() {
 
 // Loads drop-down selections
 async function LoadOptions(auctions) {
-	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{`Auction #${auctions[i].id}`}</option>
+	auctions.map((a) => parseInt(a.id)).reverse().forEach((id) => {
+		const option = <option value={id} key={id}>{`Auction #${id}`}</option>
 		Options.push(option);
-	}
+	})
 }
 
 
 function switchAuctions(chain, auctions, setAuctions, e) {
-	Render(chain, auctions, setAuctions, e.target.value)
+	Render(chain, auctions, setAuctions, parseInt(e.target.value) - 1)
 }
 
 // Update JSX
@@ -114,11 +112,13 @@ function Render(chain, auctions, setAuctions, index) {
 	} else if (chain === "Kusama") {
 		explorerUrl = "https://kusama.subscan.io/block/";
 	}
+
+	console.log(index)
 	// // Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
 
 	const onboardStartDate = new Date(parseInt(auctions[index].onboardStartBlock.timestamp)).toDateString();
-	const onboardEndDate =  new Date(parseInt(auctions[index].onboardEndBlock.timestamp)).toDateString();
+	const onboardEndDate = new Date(parseInt(auctions[index].onboardEndBlock.timestamp)).toDateString();
 	const biddingStartsDate = new Date(parseInt(auctions[index].biddingStartBlock.timestamp)).toDateString();
 	const biddingEndsDate = new Date(parseInt(auctions[index].biddingEndsBlock.timestamp)).toDateString();
 
