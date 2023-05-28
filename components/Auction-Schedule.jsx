@@ -19,28 +19,46 @@ function AuctionSchedule({ network }) {
 			cache: new InMemoryCache(),
 			link: ApolloLink.from([networkInfo.httpLink]),
 		});
-
 		const res = await client.query({
 			query: AUCTIONS
-		});
+		}).catch(e => handleAndRenderError(e, setAuctions));
 
-		let height = res.data.squidStatus.height;
-		let squidAuctions = res.data.auctions;
-		ChainState.BlockNumber = height;
-		// Populate options from latest to oldest auction
-		await LoadOptions(squidAuctions);
-		// Get the initial index for the latest auction
-		let id = squidAuctions.length - 1;
-		// Render component with the auctions, starting from the latest
-		Render(networkInfo.explorer, squidAuctions, setAuctions, id);
+		if (res !== undefined) {
+			let height = res.data.squidStatus.height;
+			let squidAuctions = res.data.auctions;
+			// If the network has no auctions to report
+			if (squidAuctions.length == 0) {
+				setAuctions(<div>No auctions found on this network.</div>)
+			} else {
+				ChainState.BlockNumber = height;
+				// Populate options from latest to oldest auction
+				await LoadOptions(squidAuctions);
+				// Get the initial index for the latest auction
+				let id = squidAuctions.length - 1;
+				// Render component with the auctions, starting from the latest
+				Render(networkInfo.explorer, squidAuctions, setAuctions, id);
+			}
+		}
 	}, []);
 
 	// Render
 	if (auctions !== undefined) {
 		return auctions;
-	} else {
+	}
+	else {
 		return (<div>Loading auction data...</div>)
 	}
+}
+
+// This is meant to handle the case where there is an error fetching data from the indexer API
+// The error is logged in the console.
+function handleAndRenderError(e, setAuctions) {
+	console.log("There was a problem fetching from with your query: ", e);
+	setAuctions(
+		<div>There was a problem with the query used to fetch auction data.
+			If this issue persists, please submit an issue at the 
+			<a href="https://github.com/w3f/polkadot-wiki/" target="_blank">Polkadot Wiki repository on Github</a>
+		</div>)
 }
 
 // Sets initial network info for the component based on the network supplied
