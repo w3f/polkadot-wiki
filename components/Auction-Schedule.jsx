@@ -12,8 +12,9 @@ let Options = [];
 function AuctionSchedule({ network }) {
 	const [auctions, setAuctions] = useState("Loading Auctions...");
 	useEffect(async () => {
-
+		// Set http link for indexer, as well as the explorer based on network
 		const networkInfo = setHttpLinkAndExplorer(network);
+		// The indexer utilizes a GraphQL Api
 		const client = new ApolloClient({
 			cache: new InMemoryCache(),
 			link: ApolloLink.from([networkInfo.httpLink]),
@@ -24,10 +25,13 @@ function AuctionSchedule({ network }) {
 		});
 
 		let height = res.data.squidStatus.height;
-		ChainState.BlockNumber = height;
 		let squidAuctions = res.data.auctions;
+		ChainState.BlockNumber = height;
+		// Populate options from latest to oldest auction
 		await LoadOptions(squidAuctions);
-		let id = parseInt(squidAuctions[squidAuctions.length - 1].id) - 1;
+		// Get the initial index for the latest auction
+		let id = squidAuctions.length - 1;
+		// Render component with the auctions, starting from the latest
 		Render(networkInfo.explorer, squidAuctions, setAuctions, id);
 	}, []);
 
@@ -39,6 +43,7 @@ function AuctionSchedule({ network }) {
 	}
 }
 
+// Sets initial network info for the component based on the network supplied
 function setHttpLinkAndExplorer(network) {
 	switch (network) {
 		case supportedNetworks.POLKADOT:
@@ -66,7 +71,7 @@ async function LoadOptions(auctions) {
 	})
 }
 
-
+// Re-renders component based on the selected information - used for the <select> element
 function switchAuctions(chain, auctions, setAuctions, e) {
 	Render(chain, auctions, setAuctions, parseInt(e.target.value) - 1)
 }
