@@ -30,7 +30,8 @@ details.
 
 ## Auction Schedule
 
-<AuctionSchedule network="kusama" />
+{{ polkadot: <AuctionSchedule network="polkadot" /> :polkadot }}
+{{ kusama: <AuctionSchedule network="kusama" /> :kusama }}
 
 ## Mechanics of a Candle Auction
 

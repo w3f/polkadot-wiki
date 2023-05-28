@@ -136,7 +136,6 @@ function Render(explorerUrl, auctions, setAuctions, index) {
 			The current block is <a href={`${explorerUrl}${currentBlockNumber}`}> Block #{currentBlockNumber}</a>.
 		</p>
 	</div>
-
 	setAuctions(content);
 	return auctions;
 }
