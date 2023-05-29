@@ -57,7 +57,7 @@ function handleAndRenderError(e, setAuctions) {
 	setAuctions(
 		<div>There was a problem with the query used to fetch auction data.
 			If this issue persists, please submit an issue at the 
-			<a href="https://github.com/w3f/polkadot-wiki/" target="_blank">Polkadot Wiki repository on Github</a>
+			<a href="https://github.com/w3f/polkadot-wiki/" target="_blank"> Polkadot Wiki repository on Github</a>
 		</div>)
 }
 
@@ -67,14 +67,14 @@ function setHttpLinkAndExplorer(network) {
 		case supportedNetworks.POLKADOT:
 			return {
 				httpLink: new HttpLink({
-					uri: "http://localhost:4350/graphql",
+					uri: "squid.subsquid.io/wiki-squid/v/v2/graphql",
 				}),
 				explorer: "https://polkadot.subscan.io/block/"
 			};
 		case supportedNetworks.KUSAMA:
 			return {
 				httpLink: new HttpLink({
-					uri: "http://localhost:4350/graphql",
+					uri: "https://squid.subsquid.io/wiki-squid/v/v2/graphql",
 				}),
 				explorer: "https://kusama.subscan.io/block/"
 			};
