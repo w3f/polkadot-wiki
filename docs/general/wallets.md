@@ -67,11 +67,11 @@ and management of your accounts, through the mobile app. Unlike browser extensio
 usually can’t connect to third-party web apps. Some mobile wallets provide support for hardware
 wallets through Bluetooth connectivity.
 
-| Wallet                                        | Platforms                                                       | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
-| --------------------------------------------- | --------------------------------------------------------------- | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
-| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                    | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
-| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                    | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
-| [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                    | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
+| Wallet                                        | Platforms                                                                                              | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
+| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
+| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                                                           | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
+| [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
 | [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
