@@ -182,6 +182,7 @@ should also keep up to date with the following links:
 - [Astar](https://astar.network/)
 - [Acala](https://acala.network/)
 - [Phala](https://phala.network)
+- [Darwinia](https://darwinia.network/)
 
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
 created and maintained list of different smart contract platforms building on
@@ -241,6 +242,9 @@ Kusama.
 
 Try deploying a confidential smart contract by following their
 [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
+
+#### Darwinia
+
 
 ## Keep In Touch
 
