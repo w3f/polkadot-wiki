@@ -294,7 +294,7 @@ either performance or ease of use. </TabItem> <TabItem value="subxt"> Submit ext
 (transactions) to a Substrate node via RPC using Rust. Also referred to as Rust Parity. </TabItem> </Tabs> -->
 
 <Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'Subxt', value:
-'subxt'}, {label: 'CAPI', value: 'capi'}, {label: 'React Hooks for ink', value: 'ink'} ]}>
+'subxt'}, {label: 'CAPI', value: 'capi'}, {label: 'React Hooks for ink!', value: 'ink'} ]}>
 
 <TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate based chains via RPC
 calls. It is dynamically generated based on what the Substrate runtime provides in terms of
