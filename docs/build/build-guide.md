@@ -283,7 +283,7 @@ chain and parachains.
 For front end applications, there are several options for interfacing with Substrate-based chains
 (parachains, relay chains etc) and smart contracts:
 
-<Tabs groupId="client-libraries" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'CAPI',
+<!-- <Tabs groupId="client-libraries" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'CAPI',
 value: 'capi'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink', value: 'ink'} ]}>
 <TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate based chains via RPC
 calls. It is dynamically generated based on what the Substrate runtime provides in terms of
@@ -291,9 +291,24 @@ metadata. Full documentation & examples available. </TabItem> <TabItem value="ca
 framework (based on Typescript) for crafting interactions with Substrate chains. It consists of a
 development server and fluent API, which facilitates multichain interactions without compromising
 either performance or ease of use. </TabItem> <TabItem value="subxt"> Submit extrinsics
-(transactions) to a Substrate node via RPC using Rust. Also referred to as Rust Parity. </TabItem>
+(transactions) to a Substrate node via RPC using Rust. Also referred to as Rust Parity. </TabItem> </Tabs> -->
+
+<Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'Subxt', value:
+'subxt'}, {label: 'CAPI', value: 'capi'}, {label: 'React Hooks for ink', value: 'ink'} ]}>
+
+<TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate based chains via RPC
+calls. It is dynamically generated based on what the Substrate runtime provides in terms of
+metadata. Full documentation & examples available. </TabItem>
+
+<TabItem value="capi"> Capi is a framework (based on Typescript) for crafting interactions with
+Substrate chains. It consists of a development server and fluent API, which facilitates multichain
+interactions without compromising either performance or ease of use. </TabItem>
+
 <TabItem value="subxt"> Submit extrinsics (transactions) to a Substrate node via RPC using Rust.
-Also referred to as Rust Parity. </TabItem> <TabItem value="ink"> A React hooks library for ink!
-</TabItem> </Tabs>
+Also referred to as Rust Parity. </TabItem>
+
+<TabItem value="ink"> React hooks for ink! smart contracts </TabItem>
+
+</Tabs>
 
 For a full list of tools please take a look here: [Tools, APIs and Languages](build-open-source.md)
