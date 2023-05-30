@@ -182,6 +182,7 @@ should also keep up to date with the following links:
 - [Astar](https://astar.network/)
 - [Acala](https://acala.network/)
 - [Phala](https://phala.network)
+- [Darwinia](https://darwinia.network/)
 
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
 created and maintained list of different smart contract platforms building on
@@ -241,6 +242,13 @@ Kusama.
 
 Try deploying a confidential smart contract by following their
 [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
+
+#### Darwinia
+
+[Darwinia](https://darwinia.network/) is a cross-chain programmable network that provides two essential solutions: `Darwinia Chain` and `Darwinia Msgport`. `Darwinia Chain` is a smart contract platform compatible with the EVM and shares the robust security of Polkadot. On the other hand, `Darwinia Msgport` acts as a crucial infrastructure enabling Dapps to seamlessly communicate and exchange messages across different blockchain networks, facilitating efficient interchain operations.
+
+Try deploying a smart contract to Darwinia by following their
+[documentation](https://docs.darwinia.network/dapp-development-4b021f21c52d474aa08a8109eb55bbd1).
 
 ## Keep In Touch
 
