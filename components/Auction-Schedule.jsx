@@ -67,14 +67,14 @@ function setHttpLinkAndExplorer(network) {
 		case supportedNetworks.POLKADOT:
 			return {
 				httpLink: new HttpLink({
-					uri: "squid.subsquid.io/wiki-squid/v/v2/graphql",
+					uri: "https://squid.subsquid.io/wiki-squid/v/v3/graphql",
 				}),
 				explorer: "https://polkadot.subscan.io/block/"
 			};
 		case supportedNetworks.KUSAMA:
 			return {
 				httpLink: new HttpLink({
-					uri: "https://squid.subsquid.io/wiki-squid/v/v2/graphql",
+					uri: "https://squid.subsquid.io/wiki-squid/v/v3/graphql",
 				}),
 				explorer: "https://kusama.subscan.io/block/"
 			};
