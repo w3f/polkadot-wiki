@@ -248,7 +248,7 @@ Try deploying a confidential smart contract by following their
 [Darwinia](https://darwinia.network/) is a cross-chain programmable network that provides two essential solutions: `Darwinia Chain` and `Darwinia Msgport`. `Darwinia Chain` is a smart contract platform compatible with the EVM and shares the robust security of Polkadot. On the other hand, `Darwinia Msgport` acts as a crucial infrastructure enabling Dapps to seamlessly communicate and exchange messages across different blockchain networks, facilitating efficient interchain operations.
 
 Try deploying a smart contract to Darwinia by following their
-[documentation](https://docs.darwinia.network/).
+[documentation](https://docs.darwinia.network/dapp-development-4b021f21c52d474aa08a8109eb55bbd1).
 
 ## Keep In Touch
 
