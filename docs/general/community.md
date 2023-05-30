@@ -71,12 +71,12 @@ you face any issues, join the rooms individually.
 
 ### Technical
 
-- [**Substrate Developers Public Space**](https://matrix.to/#/#substrate-builders-space:matrix.parity.io) -
-  Curated collection of rooms around all things Substrate. Contains the two below and many others.
+- [Substrate Developers Chat](https://matrix.to/#/#substratedevs:matrix.org) - A Matrix chat room
+  for Substrate development.
 - [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
   for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:matrix.parity.io) - A room to discuss
-  developing Substrate smart contracts using Parity Ink!
+- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:parity.io) - A room to discuss developing
+  Substrate smart contracts using Parity Ink!
 
 ## Socials
 
