@@ -75,11 +75,11 @@ export default function Footer() {
               <FooterLegalLink content={footer.copyright} href="https://web3.foundation" />
               <FooterLegalLink
                 content={translate({
-                  message: "Impressum",
-                  id: "footer.footerLegal.impressum",
-                  description: "Impressum Button Label in Footer Legal",
+                  message: "Legal Disclosures",
+                  id: "footer.footerLegal.legal-diclosures",
+                  description: "Legal Disclosures Button Label in Footer Legal",
                 })}
-                href="https://polkadot.network/impressum"
+                href="https://polkadot.network/legal-disclosures"
               />
               <FooterLegalLink
                 content={translate({
