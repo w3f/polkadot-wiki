@@ -398,6 +398,8 @@ It should return:
 /usr/bin/polkadot-prepare-worker
 ```
 
+If not, make sure that all the binaries are somewhere in your `$PATH`.
+
 ### Synchronize Chain Data
 
 You can begin syncing your node by running the following command if you do not want to start in
