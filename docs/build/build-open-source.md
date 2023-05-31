@@ -135,7 +135,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | DAO             | [subDAO](https://github.com/w3f-grants-archive/subDAO-contracts) ⚪, [RainbowDAO](https://github.com/RainbowcityFoundation/RainbowDAO-Protocol-Ink-milestone_1) ⚪, [MangoBox](https://github.com/Mangoboxlabs/Mangoboxink) ⚪|                                    |
 | Spam Protection | [Prosopo](https://github.com/prosopo-io/integration) ⚪|                                    |
 | Tooling         | [OpenBrush](https://github.com/727-Ventures/openbrush-contracts) 🟢|                                    |
-| Other           | [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) ⚪, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) ⚪, [OCEX](https://github.com/bsn-si/ocex-cli) ⚪, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) ⚪, [MangoSale](https://github.com/Mangoboxlabs/MangoSale) 🟡, [ArtZero](https://github.com/ArtZero-io/Contracts) 🟡|                                    |
+| Other           | [AZERO.ID](https://github.com/azero-id/contracts), [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) ⚪, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) ⚪, [OCEX](https://github.com/bsn-si/ocex-cli) ⚪, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) ⚪, [MangoSale](https://github.com/Mangoboxlabs/MangoSale) 🟡, [ArtZero](https://github.com/ArtZero-io/Contracts) 🟡|                                    |
 
 ### Chains and Pallets
 
