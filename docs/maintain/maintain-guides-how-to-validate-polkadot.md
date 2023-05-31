@@ -82,12 +82,10 @@ instead.
 
 ## Initial Set-up
 
-:::
-
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is best to use a recent
+choose whatever [VPS](#note-about-vps) provider that you prefer. As OS it is best to use a recent
 Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
@@ -162,17 +160,19 @@ making it on chain.
 
 :::
 
-### Installing the `polkadot` binary
+### Installing the Polkadot binaries
 
 #### Installation from official releases
 
-The official `polkadot` binaries can be downloaded from the
+The official binaries can be downloaded from the
 [Github Releases](https://github.com/paritytech/polkadot/releases). You should download the latest
-available version. You can also download the binary by using the following direct link (replace
+available version. You can also download the binaries by using the following direct links (replace
 X.Y.Z by the appropriate version):
 
 ```sh
 https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot
+https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot-execute-worker
+https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot-prepare-worker
 ```
 
 #### Optional: Installation with Package Managers
@@ -213,17 +213,7 @@ dnf config-manager --set-enabled polkadot
 dnf install polkadot
 ```
 
-After installing Polkadot, you can verify the installation by running
-
-```bash
-which polkadot
-```
-
-It should return
-
-```bash
-/usr/bin/polkadot
-```
+Make sure you verify the installation (see the "Verify the installation" section).
 
 :::note By default, the Polkadot systemd service is disabled
 
@@ -232,6 +222,8 @@ To start the service, run:
 ```bash
 sudo systemctl start polkadot.service
 ```
+
+:::
 
 #### Optional: Installation with Ansible
 
@@ -248,9 +240,7 @@ Hub (replace X.Y.Z by the appropriate version):
 docker.io/parity/polkadot:vX.Y.Z
 ```
 
-:::
-
-### Building the `polkadot` binary from sources
+### Optional: Building the Polkadot binaries from sources
 
 #### Prerequisites: Install Rust and Dependencies
 
@@ -302,16 +292,20 @@ Polkadot node software.
 sudo apt install make clang pkg-config libssl-dev build-essential
 ```
 
-Note - if you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the
-following equivalent command INSTEAD of the previous one:
+:::note
+
+If you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the following
+equivalent command INSTEAD of the previous one:
 
 ```sh
 brew install cmake pkg-config openssl git llvm
 ```
 
-### Build the Polkadot Binary from sources
+:::
 
-You can build the `polkadot` binary from the
+#### Building the binaries
+
+You can build the Polkadot binaries from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub.
 
 You should generally use the latest **X.Y.Z** tag. You should either review the output from the "git
@@ -347,10 +341,11 @@ git checkout VERSION
 ./scripts/init.sh
 ```
 
-Build native code with the production profile.
+Build native code with the production profile. The following will make sure that the binaries are
+all in your `$PATH`.
 
 ```sh
-cargo build --profile production
+cargo install --force --path . --profile production
 ```
 
 **_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
@@ -383,6 +378,24 @@ machine for extra security.
 
 ```sh
 cargo install --force --git https://github.com/paritytech/substrate subkey
+```
+
+### Verify the installation
+
+After installing Polkadot, you can verify the installation by running
+
+```bash
+which polkadot
+which polkadot-execute-worker
+which polkadot-prepare-worker
+```
+
+It should return:
+
+```bash
+/usr/bin/polkadot
+/usr/bin/polkadot-execute-worker
+/usr/bin/polkadot-prepare-worker
 ```
 
 ### Synchronize Chain Data
