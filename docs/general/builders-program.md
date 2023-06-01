@@ -30,13 +30,16 @@ committed to building on Polkadot.
 
 The objective of Square One is threefold:
 
-To accelerate the development of teams in the Polkadot ecosystem. Identify needs & blockers that
-teams face and address them accordingly in the most efficient manner. Create a dedicated pathway for
-each individual team based of their needs and track them accordingly. There are many ways to build
-on Substrate, and the ecosystem comprises numerous toolkits and resources for education,
-development, and funding. The initiative guides teams down the most appropriate path of tools and
-support resources, enabling them to accomplish their goals and launch new products with minimum
-friction.
+- To accelerate the development of teams in the Polkadot ecosystem.
+- Identify needs & blockers that teams face and address them accordingly in the most efficient
+  manner.
+- Create a dedicated pathway for each individual team based of their needs and track them
+  accordingly.
+
+There are many ways to build on Substrate, and the ecosystem comprises numerous toolkits and
+resources for education, development, and funding. The initiative guides teams down the most
+appropriate path of tools and support resources, enabling them to accomplish their goals and launch
+new products with minimum friction.
 
 The resources available through Square One can be grouped into various categories:
 
