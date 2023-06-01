@@ -159,7 +159,6 @@ module.exports = {
                 "learn/learn-parachains-faq",
               ],
             },
-            "learn/learn-parathreads",
             "learn/learn-bridges",
             {
               type: "category",
@@ -189,6 +188,13 @@ module.exports = {
           ],
         },
         "learn/learn-video-tutorials",
+        {
+          type: "category",
+          label: "Future Implementations",
+          items: [
+            "learn/learn-parathreads",
+          ],
+        },
         {
           type: "category",
           label: "Archive",
