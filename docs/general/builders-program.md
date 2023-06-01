@@ -28,7 +28,6 @@ Substrate Builders Programme that will be accessible to teams once they are read
 One. More information about the initiative can be found in
 [this blog post](https://www.parity.io/blog/introducing-square-one).
 
-:::
 
 ## Tracks
 
