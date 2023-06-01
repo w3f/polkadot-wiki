@@ -21,11 +21,11 @@ experience and resources.
 :::info Square one initiative
 
 The [Square One initiative](https://substrate.io/ecosystem/square-one/) is a step behind the
-Substrate Builders Program as it helps early stage teams who are committed to build on
+Substrate Builders Program as it helps early-stage teams who are committed to building on
 {{ polkadot: polkadot :polkadot }}{{ kusama: kusama :kusama }} find their feet in the ecosystem.
 Teams will navigate through the resources available in Substrate, and one of those resources is the
-Substrate Builders Programme that will be accessible to teams once the are ready to leave Square
-One. More information about the initiative can be be found on
+Substrate Builders Programme that will be accessible to teams once they are ready to leave Square
+One. More information about the initiative can be found in
 [this blog post](https://www.parity.io/blog/introducing-square-one).
 
 :::
