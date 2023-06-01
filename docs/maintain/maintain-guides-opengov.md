@@ -72,8 +72,8 @@ meet the requirements of the confirm period.
 **Min Support** - The threshold of support (along with the min approval) needed for a proposal to
 meet the requirements of the confirm period.
 
-**Confirm Period** - The total time the referenda meets both the min approval and support criteria
-during the decision period.
+**Confirmation Period** - The total time the referenda must meet both the min approval and support
+criteria during the decision period in order to pass and enter the enactment period.
 
 **Min Enactment Period** - Minimum time that an approved proposal must be in the dispatch queue
 after approval. The proposer has the option to set the enactment period to be of any value greater
