@@ -30,18 +30,20 @@ committed to building on Polkadot.
 
 The objective of Square One is threefold:
 
-To accelerate the development of teams in the Polkadot ecosystem. Identify needs & blockers that
-teams face and address them accordingly in the most efficient manner. Create a dedicated pathway for
-each individual team based of their needs and track them accordingly. There are many ways to build
-on Substrate, and the ecosystem comprises numerous toolkits and resources for education,
-development, and funding. The initiative guides teams down the most appropriate path of tools and
-support resources, enabling them to accomplish their goals and launch new products with minimum
-friction.
+- To accelerate the development of teams in the Polkadot ecosystem.
+- Identify needs & blockers that teams face and address them accordingly in the most efficient
+  manner.
+- Create a dedicated pathway for each team based on their needs and track them accordingly.
+
+There are many ways to build on Substrate, and the ecosystem comprises numerous toolkits and
+resources for education, development, and funding. The initiative guides teams down the most
+appropriate path of tools and support resources, enabling them to accomplish their goals and launch
+new products with minimum friction.
 
 The resources available through Square One can be grouped into various categories:
 
 - **Funding** - Apply for grants, including access to education and support on how to access funding
-  through the Polkadot Treasury and/or the Web3 Foundation Grants Program, Accelerators & VCs.
+  through the Polkadot Treasury and the Web3 Foundation Grants Program, Accelerators & VCs.
 
 - **Education** - Gain recognized certifications, join Hackathons, apply for the Polkadot Blockchain
   Academy to expand one’s programming expertise to develop a project’s POC/MVP.
@@ -51,8 +53,8 @@ The resources available through Square One can be grouped into various categorie
 - **Product development** - Get directed towards external parties interested in Substrate
   development projects.
 
-- **Development support** - Completely bespoke development resources are available to aid project
-  development and growth.
+- **Development support** - Completely bespoke development resources are available to aid the
+  project development and growth.
 
 ## Tracks
 
@@ -65,8 +67,8 @@ parathreads and independent chains too.
 
 ### Infrastructure track
 
-This track supports builders who are building ecosystem-based infrastructure, which may in the form
-of tooling, UI, middleware, bridges, and more.
+This track supports builders who are building ecosystem-based infrastructure, which may be in the
+form of tooling, UI, middleware, bridges, and more.
 
 ### Application track
 
