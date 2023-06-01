@@ -60,7 +60,7 @@ Ethereum - profile pictures, generative "look once and then put away" art, [ENS]
 [proof of attendance badges](https://poap.xyz/) (which have since moved to the xDAI chain to save on
 gas fees).
 
-#### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
+### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
 ![samurai nft](../assets/nft/samurai.png)
 
@@ -96,7 +96,7 @@ and Efinity (Paratoken), the following efforts are underway:
   [RMRK hackathon](https://rmrk.devpost.com) for porting RMRK NFTs into simplified IOUs on EVM
   chains
 
-### References
+## References
 
 - [1]: [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
 - [2]:
