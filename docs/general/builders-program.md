@@ -18,7 +18,7 @@ Projects building Substrate-based blockchains, applications, or ecosystem compon
 support for technical challenges, strategy, and ecosystem building from Parity’s extensive
 experience and resources.
 
-:::info Square one initiative
+## Square One Initiative
 
 The [Square One initiative](https://substrate.io/ecosystem/square-one/) is a step behind the
 Substrate Builders Program as it helps early-stage teams who are committed to building on
