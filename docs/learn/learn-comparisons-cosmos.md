@@ -203,4 +203,7 @@ logic and security processes across chains so that they can interact knowing tha
 interlocutors execute within the same security context.
 
 The Cosmos network uses a bridge-hub model to connect chains with independent security guarantees,
-meaning that when data is sent from one chain to another (inter-chain communication), the receiving chain must trust the sending chain. Each blockchain in the Cosmos network has its own security mechanisms, they're independently secured and do not rely on the security of other blockchains or the hub. This allows each chain to function independently while still being part of the Cosmos ecosystem.
+meaning that when data is sent from one chain to another (inter-chain communication), the receiving
+chain must trust the sending chain. Thus, each blockchain in the Cosmos network has its independent
+security mechanisms. They're independently secured and do not rely on the security of other
+blockchains or the hub.
