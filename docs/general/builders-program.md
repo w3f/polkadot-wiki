@@ -20,31 +20,39 @@ experience and resources.
 
 ## Square One Initiative
 
-
 The [Square One initiative](https://substrate.io/ecosystem/square-one/) is a step behind the
 Substrate Builders Program as it helps early-stage teams who are committed to building on
 {{ polkadot: polkadot :polkadot }}{{ kusama: kusama :kusama }} find their feet in the ecosystem.
 
-Square One's primary purpose as a program is to help tailor a specific pathway across our substrate resources that acts as a lighthouse for new and early-stage projects, developers & builders that are committed to build on Polkadot.
+Square One's primary purpose as a program is to help tailor a specific pathway across our Substrate
+resources that act as a lighthouse for new and early-stage projects, developers & builders that are
+committed to building on Polkadot.
 
-The Objective of Square One is threefold:
+The objective of Square One is threefold:
 
-To accelerate the development of teams in the Polkadot ecosystem.
-Identify needs & blockers that teams face and address them accordingly in the most efficient manner.
-Create a dedicated pathway for each individual team based of their needs and track them accordingly.
-There are many ways to build on Substrate, and the ecosystem comprises numerous toolkits and resources for education, development, and funding. The initiative guides teams down the most appropriate path of tools and support resources, enabling them to accomplish their goals and launch new products with minimum friction along the way.
+To accelerate the development of teams in the Polkadot ecosystem. Identify needs & blockers that
+teams face and address them accordingly in the most efficient manner. Create a dedicated pathway for
+each individual team based of their needs and track them accordingly. There are many ways to build
+on Substrate, and the ecosystem comprises numerous toolkits and resources for education,
+development, and funding. The initiative guides teams down the most appropriate path of tools and
+support resources, enabling them to accomplish their goals and launch new products with minimum
+friction.
 
 The resources available through Square One can be grouped into various categories:
 
-- **Funding** - Apply for grants, including access to education and support on how to access funding through the Polkadot Treasury and/or the Web3 Foundation Grants Program, Accelerators & VCs.
+- **Funding** - Apply for grants, including access to education and support on how to access funding
+  through the Polkadot Treasury and/or the Web3 Foundation Grants Program, Accelerators & VCs.
 
-- **Education** - Gain recognized certifications, join Hackathons, apply for the Polkadot Blockchain Academy to expand one’s programming expertise to develop a project’s POC/MVP.
+- **Education** - Gain recognized certifications, join Hackathons, apply for the Polkadot Blockchain
+  Academy to expand one’s programming expertise to develop a project’s POC/MVP.
 
 - **Tech mentoring** - Access mentorship groups to help make your development market fit.
 
-- **Product development** - Get directed towards external parties interested in Substrate development projects.
+- **Product development** - Get directed towards external parties interested in Substrate
+  development projects.
 
-- **Development support** - Completely bespoke development resources are available to aid project development and growth.
+- **Development support** - Completely bespoke development resources are available to aid project
+  development and growth.
 
 ## Tracks
 
