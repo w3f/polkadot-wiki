@@ -194,6 +194,7 @@ module.exports = {
           label: "Future Implementations",
           items: [
             "learn/learn-parathreads",
+            "learn/learn-async",
           ],
         },
         {
