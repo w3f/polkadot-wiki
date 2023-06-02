@@ -164,7 +164,7 @@ smart contract example? Ask us to add it to this page!**
 - [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by
   [Patract Labs](https://github.com/patractlabs).
 
-## Smart Contract Environments are still Maturing
+## Smart Contract Environments
 
 It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} and the development is only now stabilizing. We are actively producing
