@@ -39,7 +39,7 @@ Substrate, and their various developmental components. For more inspiration, tak
 
 :::
 
-Before diving into any one of these tracks, it is encouraged to read about Polkadot and its networks
+Before diving into any one of these tracks, it is encouraged to read about {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks
 in order to gain context about the application you could make.
 
 ## Development Ecosystem Overview
