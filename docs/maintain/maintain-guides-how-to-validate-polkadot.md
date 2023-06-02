@@ -162,6 +162,25 @@ making it on chain.
 
 :::
 
+### Make Sure Landlock is Enabled
+
+[Landlock](https://docs.kernel.org/userspace-api/landlock.html) is a Linux security feature used in
+Polkadot:
+
+> Landlock empowers any process, including unprivileged ones, to securely restrict themselves.
+
+To make use of landlock, make sure you are on the reference kernel version or newer. Most Linux
+distributions should already have landlock enabled, but you can check by running the following as
+root:
+
+```sh
+dmesg | grep landlock || journalctl -kg landlock
+```
+
+If it is not enabled, please see the
+[official docs ("Kernel support")](https://docs.kernel.org/userspace-api/landlock.html#kernel-support)
+if you would like to build Linux with landlock enabled.
+
 ### Installing the `polkadot` binary
 
 #### Installation from official releases
