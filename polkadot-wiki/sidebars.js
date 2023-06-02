@@ -94,6 +94,7 @@ module.exports = {
               label: "NFTs",
               items: [
                 "learn/learn-nft",
+                "learn/learn-nft-projects",
               ],
             },
             {
