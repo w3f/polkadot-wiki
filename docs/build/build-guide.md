@@ -11,7 +11,7 @@ import Tabs from "@theme/Tabs";
 
 import TabItem from "@theme/TabItem";
 
-Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
 [XCM](../learn/learn-xcm.md). With the advent of
 [PDKs](../build/build-parachains.md#parachain-development-kit) like
