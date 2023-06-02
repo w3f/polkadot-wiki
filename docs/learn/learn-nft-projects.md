@@ -6,9 +6,17 @@ description: Introductions to the NFT projects in the ecosystem.
 keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft-projects
 ---
+
 ## List of NFT Projects
 
 - [Astar](#Astar)
+- [Basilisk](#basilisk)
+- [Efinity](#efinity)
+- [Kodadot](#kodadot)
+- [Moonbeam](#moonbeam)
+- [RMRK](#rmrk)
+- [Statemint](#statemint)
+- [Unique](#unique-network)
 
 ## Astar
 
@@ -175,7 +183,7 @@ parachain on Kusama). Statemint currently hosts
 [NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities is available for
 testing on Westmint, which is a system parachain on Polkadot's testnet Westmint.
 
-## Unique network
+## Unique Network
 
 [Unique network](https://unique.network/), an NFT-specific blockchain offering innovations such as
 sponsored transactions, bundling fungible tokens with non-fungibles, and splitting NFTs into
