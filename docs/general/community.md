@@ -33,7 +33,7 @@ contact and anyone doing so is likely trying to scam you.
 [Polkadot Meetup Platform](https://www.meetup.com/pro/polkadot) - Information on hosting meetups,
 applying for funding, and materials for running it.
 
-[Community Events](https://www.notion.so/web3foundation/Community-Events-Track-15aebfe73e934ff9991a5464ac10ba8e) -
+[Community Events](https://web3foundation.notion.site/Community-Events-Introduction-05199fe6556b41f48a3390b1868c9ae7) -
 Information on events organized by the Polkadot community (candidates or ambassadors) focused on
 promoting Polkadot, Kusama, and related technologies. The events are educational and informative,
 and their goal is to create an impact in the community.
