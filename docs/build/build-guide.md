@@ -95,7 +95,7 @@ connect to a relay chain using the [Parachains Protocol](../learn/learn-parachai
 Throughout this document, you will encounter the term **runtime** or **STF (State Transition
 Function)**. Both refer to the same concept, as they both define how exactly a particular system,
 i.e., a blockchain, should deal with state changes both externally and internally. Both of these
-terms are used extensively in Polkadot, and by association, Substrate contexts.
+terms are used extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and by association, Substrate contexts.
 
 :::
 
