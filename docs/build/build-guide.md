@@ -33,7 +33,7 @@ This build guide provides four different tracks:
 
 :::info
 
-Keep in mind that these tracks are merely suggestive, and there are many ways to utilize Polkadot,
+Keep in mind that these tracks are merely suggestive, and there are many ways to utilize {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
 Substrate, and their various developmental components. For more inspiration, take a look at the
 [open source projects](./build-open-source.md) featured here in the wiki!
 
