@@ -33,6 +33,11 @@ contact and anyone doing so is likely trying to scam you.
 [Polkadot Meetup Platform](https://www.meetup.com/pro/polkadot) - Information on hosting meetups,
 applying for funding, and materials for running it.
 
+[Community Events](https://web3foundation.notion.site/Community-Events-Introduction-05199fe6556b41f48a3390b1868c9ae7) -
+Information on events funded by the [Treasury](https://polkadot.polkassembly.io/bounty/17) and organized by the Polkadot community (candidates or ambassadors) focused on
+promoting Polkadot, Kusama, and related technologies. The events are educational and informative,
+and their goal is to create an impact in the community.
+
 ## Matrix Chats
 
 We primarily use [Matrix](https://matrix.org) across the organization and to communicate with
