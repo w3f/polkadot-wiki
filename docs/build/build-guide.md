@@ -83,7 +83,7 @@ to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ![build 2](../assets/build-2.png)
 
-As mentioned, Polkadot is the **mainnet**, but is canonically referred to as the Relay Chain. It is
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the Relay Chain. It is
 also considered a _layer zero_ protocol, as it enables for the interoperability and shared security
 of multiple [parachains](../learn/learn-parachains.md), which are _layer one_ protocols. Parachains
 connect to a relay chain using the [Parachains Protocol](../learn/learn-parachains-protocol.md).
