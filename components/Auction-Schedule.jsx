@@ -56,7 +56,7 @@ function handleAndRenderError(e, setAuctions) {
 	console.log("There was a problem fetching from with your query: ", e);
 	setAuctions(
 		<div>There was a problem with the query used to fetch auction data.
-			If this issue persists, please submit an issue at the 
+			If this issue persists, please submit an issue at the
 			<a href="https://github.com/w3f/polkadot-wiki/" target="_blank"> Polkadot Wiki repository on Github</a>
 		</div>)
 }
@@ -117,8 +117,10 @@ function Render(explorerUrl, auctions, setAuctions, index) {
 		</a>
 	</div>
 
+	const auctionNumber = parseInt(index) + 1;
+
 	const content = <div>
-		<div>Auction #{parseInt(index) + 1} is {auctions[index].status}</div>
+		<div><a target="_blank" href={`https://kusama.subscan.io/auction/${auctionNumber}`}>Auction #{auctionNumber} is {auctions[index].status}</a></div>
 		<br />
 		<select
 			id="AuctionSelector"
