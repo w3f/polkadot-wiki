@@ -67,14 +67,14 @@ function setHttpLinkAndExplorer(network) {
 		case supportedNetworks.POLKADOT:
 			return {
 				httpLink: new HttpLink({
-					uri: "https://squid.subsquid.io/wiki-squid/v/v4/graphql",
+					uri: "https://squid.subsquid.io/polkadot-wiki-squid/v/v1/graphql",
 				}),
 				explorer: "https://polkadot.subscan.io/block/"
 			};
 		case supportedNetworks.KUSAMA:
 			return {
 				httpLink: new HttpLink({
-					uri: "https://squid.subsquid.io/wiki-squid/v/v4/graphql",
+					uri: "https://squid.subsquid.io/kusama-guide-squid/v/v1/graphql",
 				}),
 				explorer: "https://kusama.subscan.io/block/"
 			};
@@ -119,8 +119,9 @@ function Render(explorerUrl, auctions, setAuctions, index) {
 
 	const auctionNumber = parseInt(index) + 1;
 
+	let auctionsUrl = explorerUrl.startsWith("https://polkadot") ? "https://polkadot.subscan.io/auction/" : "https://kusama.subscan.io/auction/"
 	const content = <div>
-		<div><a target="_blank" href={`https://kusama.subscan.io/auction/${auctionNumber}`}>Auction #{auctionNumber} is {auctions[index].status}</a></div>
+		<div><a target="_blank" href={`${auctionsUrl}${auctionNumber}`}>Auction #{auctionNumber} is {auctions[index].status}</a></div>
 		<br />
 		<select
 			id="AuctionSelector"
