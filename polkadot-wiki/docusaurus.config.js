@@ -9,6 +9,10 @@ module.exports = {
   baseUrl: "/",
   projectName: "polkadot-wiki",
   organizationName: "w3f",
+  markdown: {
+    mermaid: true
+  },
+  themes: ["@docusaurus/theme-mermaid"],
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
@@ -117,7 +121,7 @@ module.exports = {
           },
           {
             to: '/docs/maintain-guides-how-to-validate-polkadot',
-            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup','/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
+            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup', '/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
           },
           {
             to: '/docs/learn-account-advanced',

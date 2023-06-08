@@ -11,6 +11,16 @@ Asynchronous backing is a mechanism that introduces a _pipeline_ for parachain *
 communication. This pipeline will allow collators to include more data in parachain blocks while
 reducing latency (from 12 to 6 seconds for parablock validation).
 
+```mermaid
+timeline
+    title Async Backing Example
+    R1 : P1(C)
+    R2 : P1(B) : P2(C)
+    R3 : P1(I) : P2(B) : P3(C)
+    R4 :  : P2(I) : P3(B)
+    R5 :  :  : P3(I)
+```
+
 It has three overarching goals:
 
 1. Decrease parablock validation time to **6 seconds** from **12 seconds**
@@ -22,8 +32,6 @@ It has three overarching goals:
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
 time for parachain collators to fit more transactions and ready block candidates for backing and
 inclusion.
-
-![async-backing](../assets/async-backing.png)
 
 _Notice that blocks can be prepared for longer, meaning more transactions per block. Due to the
 asynchrony, these blocks can be prepared in anticipation of being included later, rather than
