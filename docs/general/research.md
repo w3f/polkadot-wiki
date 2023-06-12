@@ -7,7 +7,7 @@ keywords: [research, development]
 slug: ../research
 ---
 
-The Polkadot [research pages](https://w3f-research.readthedocs.io/en/latest/Publications.html) are
+The Web3 Foundation [research page](https://research.web3.foundation/) is
 edited directly by the researchers at W3F and contain papers, articles and documents that are
 sources for the information on the wiki.
 
