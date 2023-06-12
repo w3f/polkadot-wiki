@@ -329,8 +329,7 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-{{ polkadot: <VLTable network="polkadot"/> :polkadot }}
-{{ kusama: <VLTable network="kusama"/> :kusama }}
+<VLTable />
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals
