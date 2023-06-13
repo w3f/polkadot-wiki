@@ -569,7 +569,7 @@ the
 or the `seqPhragménwithpostprocessing` method in the
 [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would
 like to dive even more deeply, you can review the
-[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=Phragm%C3%A9n#the-election-process).
+[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview#the-election-process).
 
 ### Rationale for Minimizing the Number of Validators Per Nominator
 
@@ -754,7 +754,7 @@ size _k_:
 
 - [Phragmms](https://arxiv.org/pdf/2004.12990.pdf) - W3F research paper that expands on the
   sequential Phragmén method.
-- [W3F Research Page on NPoS](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html) -
+- [W3F Research Page on NPoS](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) -
   An overview of Nominated Proof of Stake as its applied to Polkadot.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
   implementations of Simple and Complicated Phragmén methods.

@@ -258,8 +258,8 @@ doesn't support embedded videos. </video>
 - [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) -
   High level overview of XCM and specifically the new features available in XCM v3.
 
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
-  description of cross-chain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://medium.com/web3foundation/polkadots-messaging-scheme-b1ec560908b7) - An
+  overall overview of XCMP describing a number of design decisions.
 
 - [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An overview
   of the messaging schemes from the Polkadot Parachain Host Implementor's guide.

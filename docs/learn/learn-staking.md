@@ -99,14 +99,14 @@ validators in an even manner so that the economic security is maximized. In the 
 number of validators having the most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing
 get elected and become active. For more information about the election algorithm go to
 [this](learn-phragmen.md) page on the wiki or
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
-research article. As a nominator, a minimum of
+[this](https://research.web3.foundation/Polkadot/protocols/NPoS/Paper) research article. As a
+nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 is required to submit an intention to nominate, which can be thought of as registering to be a
 nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
 in-depth review of NPoS see
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
+[this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
@@ -155,8 +155,7 @@ that offers fair representation and security, thus avoiding uneven power and inf
 validators. The election algorithms used by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are based on the Proportional
 Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information
-about PJR methods visit
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
+about PJR methods visit [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview)
 research article.
 
 ### Eras and Sessions
@@ -206,10 +205,10 @@ lead to centralization.
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and contribute to the economic security of
 the network will be nominators, thus here we focus on the role of nominators. However, it is worth
 mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
-[session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys),
-produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to
-consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition
-function of parachains, and possibly some other responsibilities regarding data availability and
+[session keys](https://research.web3.foundation/Polkadot/security/keys/session), produce new block
+candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in
+[GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition function of
+parachains, and possibly some other responsibilities regarding data availability and
 [XCM](learn-xcm.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
 to become a validator you can consult
@@ -481,7 +480,7 @@ unapplied, a governance proposal can be made to reverse it during this period (7
 days on Polkadot). After the grace period, the slashes are applied.
 
 The following levels of offense are
-[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html). However, these
+[defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
 particular levels are not implemented or referred to in the code or in the system; they are meant as
 guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
@@ -498,7 +497,7 @@ calculated, see the equations in the section below.
   Slashes all or most of the stake behind the validator and chills.
 
 If you want to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
+[research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
 
 ### Chilling
 

@@ -26,7 +26,7 @@ contact and anyone doing so is likely trying to scam you.
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html)
+- [Polkadot's Latest Research (news)](https://research.web3.foundation/news)
 
 ### Events
 
