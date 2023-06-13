@@ -68,7 +68,7 @@ A collection can hold the following types of attributes:
 - **System attributes.** These attributes can only be set or unset by the pallet. Examples include
   locking an item for runtimes that use the fractionalization pallet. This is also how users can
   mint from a collection if they hold a valid item from another collection (the system attribute
-  UsedToClaim is set).
+  `UsedToClaim` is set).
 - **Collection owner’s attributes.** These are attributes that can only be set or unset by the
   collection's admin.
 - **User attributes.** These are attributes used to store various user-defined settings/values that
