@@ -329,9 +329,10 @@ demonstrates how a single public key interprets a Polkadot, Substrate, or Kusama
 
 ## Indices
 
-A Kusama or Polkadot address can have an index. An index is like a short and easy-to-remember
-version of an address. Claiming an index requires a deposit that is released when the index is
-cleared. Any index can be claimed as long as it is not taken by someone else.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
+is like a short and easy-to-remember version of an address. Claiming an index requires a deposit
+that is released when the index is cleared. Any index can be claimed as long as it is not taken by
+someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_
