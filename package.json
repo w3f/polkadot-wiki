@@ -31,8 +31,6 @@
     "crowdin": "crowdin",
     "docusaurus": "docusaurus",
     "prepare": "husky install",
-    "update:auctions": "node ./components/utilities/updateAuctions.js",
-    "get:auctions": "node ./components/utilities/getAuctions.js",
     "audit:links": "python ./scripts/auditLinks.py",
     "audit:images": "python ./scripts/auditImages.py",
     "prettier:all": "npx prettier --write ."
@@ -69,8 +67,11 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.17.2",
+    "@apollo/client": "^3.7.14",
     "chart.js": "^4.3.0",
     "crowdin-cli": "^0.3.0",
+    "graphql": "^16.6.0",
+    "graphql-ws": "^5.13.1",
     "react-chartjs-2": "^5.2.0",
     "react-treebeard": "^3.2.4",
     "remark-docusaurus-tabs": "^0.2.0"
