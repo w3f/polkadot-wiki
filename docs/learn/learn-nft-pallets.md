@@ -65,13 +65,13 @@ possibility of minting any more items, changing the metadata, or disallowing som
 
 A collection can hold the following types of attributes:
 
-- **System attributes.** These are attributes that can only be set or unset by the pallet. Examples
-  include locking an item for runtimes that use the fractionalization pallet. This is also how users
-  are able to mint from a collection if they hold a valid item from another collection (the system
-  attribute UsedToClaim is set).
+- **System attributes.** These attributes can only be set or unset by the pallet. Examples include
+  locking an item for runtimes that use the fractionalization pallet. This is also how users can
+  mint from a collection if they hold a valid item from another collection (the system attribute
+  UsedToClaim is set).
 - **Collection owner’s attributes.** These are attributes that can only be set or unset by the
   collection's admin.
-- **User attributes.** These are attributes used to store various user defined settings/values those
+- **User attributes.** These are attributes used to store various user-defined settings/values that
   can only be changed by the NFT's owner. No other account can restrict modifying those attributes.
 - **External attributes.** These are attributes that an NFT owner can use to allow external services
   (e.g. oracles, smart contracts on another chain, etc..) to set or modify.
