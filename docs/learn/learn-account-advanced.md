@@ -331,12 +331,11 @@ demonstrates how a single public key interprets a Polkadot, Substrate, or Kusama
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
 is like a short and easy-to-remember version of an address. Claiming an index requires a deposit
-that is released when the index is cleared. Any index can be claimed as long as it is not taken by
-someone else.
+released when the index is cleared. Any index can be claimed if it is not taken by someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_
-an index and permanently assign it to an address. **This action consumes a deposit and the index
+an index and permanently assign it to an address. **This action consumes a deposit, and the index
 will be permanently bound to the address with no option to release it.**
 
 :::note Lookup Account Index on-chain
@@ -350,12 +349,12 @@ pallet for the account corresponding to the index.
 Here is an example snapshot that shows how to lookup the corresponding account address of the
 account index 1988 on
 [Westend network (Polkadot Test Network)](../maintain/maintain-networks.md#westend-test-network),
-using Polkadot-JS Apps UI. The output shows the account address, its deposit amount and a boolean
-flag which indicates whether this is claimed permanently.
+using Polkadot-JS Apps UI. The output shows the account address, deposit amount, and a boolean flag
+indicating whether this is claimed permanently.
 
 ![query account index](../assets/accounts/query-index.png)
 
-To register an index, submit a `claim` extrinsic to the `indices` pallet. The easiest way to do this
+Submit a `claim` extrinsic to the `indices` pallet to register an index. The easiest way to do this
 is via Polkadot-JS UI through the _Developer -> Extrinsics_ menu:
 
 ![Indices extrinsics](../assets/accounts/index.png)
@@ -363,7 +362,7 @@ is via Polkadot-JS UI through the _Developer -> Extrinsics_ menu:
 To find available indices to claim on Polkadot or Kusama,
 [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
 
-For keeping the index permanently you can follow up with a `freeze` extrinsic.
+For keeping the index permanently, you can follow up with a `freeze` extrinsic.
 
 ## Using ENS with DOT/KSM accounts
 
