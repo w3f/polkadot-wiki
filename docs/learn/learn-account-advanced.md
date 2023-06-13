@@ -362,7 +362,7 @@ is via Polkadot-JS UI through the _Developer -> Extrinsics_ menu:
 To find available indices to claim on Polkadot or Kusama,
 [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
 
-For keeping the index permanently, you can follow up with a `freeze` extrinsic.
+For keeping the index permanently, you can follow up with a `freeze` extrinsic as mentioned above.
 
 ## Using ENS with DOT/KSM accounts
 
