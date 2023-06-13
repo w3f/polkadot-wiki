@@ -336,8 +336,8 @@ someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_
-an index and permanently assign it to an address. This action consumes a deposit but ensures that
-the index can only be reclaimed if released by the holding account.
+an index and permanently assign it to an address. **This action consumes a deposit and the index
+will be permanently bound to the address with no option to release it.**
 
 :::note Lookup Account Index on-chain
 
@@ -355,14 +355,15 @@ flag which indicates whether this is claimed permanently.
 
 ![query account index](../assets/accounts/query-index.png)
 
-To register an index, submit a `claim` extrinsic to the `indices` pallet, and follow up with a
-`freeze` extrinsic. The easiest way to do this is via PolkadotJS UI through the _Developer ->
-Extrinsics_ menu:
+To register an index, submit a `claim` extrinsic to the `indices` pallet. The easiest way to do this
+is via Polkadot-JS UI through the _Developer -> Extrinsics_ menu:
 
 ![Indices extrinsics](../assets/accounts/index.png)
 
 To find available indices to claim on Polkadot or Kusama,
 [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
+
+For keeping the index permanently you can follow up with a `freeze` extrinsic.
 
 ## Using ENS with DOT/KSM accounts
 
