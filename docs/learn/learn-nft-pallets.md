@@ -63,7 +63,7 @@ possibility of minting any more items, changing the metadata, or disallowing som
 
 ### Attributes
 
-A collection can hold the following types of attributes:
+An item can hold the following types of attributes:
 
 - **System attributes.** These attributes can only be set or unset by the pallet. Examples include
   locking an item for runtimes that use the fractionalization pallet. This is also how users can
