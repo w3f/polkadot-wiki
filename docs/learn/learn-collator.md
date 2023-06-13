@@ -84,7 +84,7 @@ the [Cumulus section](../build/build-parachains.md###cumulus) on the build parac
 
 ## Guides and Tools
 
-- [Tutorial covering Cumulus and Collators](https://docs.substrate.io/tutorials/connect-other-chains/)
+- [Tutorial covering Cumulus and Collators](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
 - [Rococo testnet guide](../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.
