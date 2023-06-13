@@ -21,8 +21,8 @@ anyone doing so is likely trying to scam you.**
   Information on hosting meetups, applying for funding, and materials for running it.
 - [Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html) -
-  also applies to Kusama.
+- [Polkadot's Latest Research (news)](https://research.web3.foundation/news) - also applies to
+  Kusama.
 
 ### Events
 
@@ -52,8 +52,8 @@ application we use most often to interact with the Matrix protocol is the
 
 - [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
   for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
-  A room to discuss developing Substrate smart contracts using Parity Ink!
+- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:parity.io) - A room to discuss developing
+  Substrate smart contracts using Parity Ink!
 
 ## Social
 

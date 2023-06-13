@@ -576,8 +576,7 @@ validators/nominators if 50% of all KSM / DOT are staked. Any deviation from the
 negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
 
 For those who are interested in knowing more about the design of the inflation model for the
-network, please see
-[here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).
+network, please see [here](https://research.web3.foundation/Polkadot/overview/token-economics).
 
 ## Staking Miner
 

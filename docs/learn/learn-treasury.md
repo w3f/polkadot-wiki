@@ -301,7 +301,7 @@ requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
 motion. You can contact the Council by joining the
-{{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
+{{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}
 {{ kusama: Kusama Direction [channel](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} in
 Element or joining our
 {{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot }}

@@ -292,5 +292,5 @@ range of their own system clocks.
 
 ## Learn More
 
-- [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/overview/2-token-economics.html)
+- [Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics)
 - [Substrate Extrinsics, Weights & Fees](https://docs.substrate.io/main-docs/build/tx-weights-fees/)

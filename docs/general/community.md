@@ -26,12 +26,18 @@ contact and anyone doing so is likely trying to scam you.
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html)
+- [Polkadot's Latest Research (news)](https://research.web3.foundation/news)
 
 ### Events
 
 [Polkadot Meetup Platform](https://www.meetup.com/pro/polkadot) - Information on hosting meetups,
 applying for funding, and materials for running it.
+
+[Community Events](https://web3foundation.notion.site/Community-Events-Introduction-05199fe6556b41f48a3390b1868c9ae7) -
+Information on events funded by the [Treasury](https://polkadot.polkassembly.io/bounty/17) and
+organized by the Polkadot community (candidates or ambassadors) focused on promoting Polkadot,
+Kusama, and related technologies. The events are educational and informative, and their goal is to
+create an impact in the community.
 
 ## Matrix Chats
 
@@ -71,12 +77,12 @@ you face any issues, join the rooms individually.
 
 ### Technical
 
-- [**Substrate Developers Public Space**](https://matrix.to/#/#substrate-builders-space:matrix.parity.io) -
-  Curated collection of rooms around all things Substrate. Contains the two below and many others.
+- [Substrate Developers Chat](https://matrix.to/#/#substratedevs:matrix.org) - A Matrix chat room
+  for Substrate development.
 - [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
   for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:matrix.parity.io) - A room to discuss
-  developing Substrate smart contracts using Parity Ink!
+- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:parity.io) - A room to discuss developing
+  Substrate smart contracts using Parity Ink!
 
 ## Socials
 
