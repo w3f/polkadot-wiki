@@ -126,6 +126,15 @@ different entities they trust and that might be expert in judging proposals with
 only. In this way token holders do not need to be up-to-date with governance matters, and can still
 make their vote count through delegates.
 
+:::info Delegation Dashboard
+
+To easily delegate your votes you can use the
+[Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
+[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to know more about the dashboard
+and learn how to use it.
+
+:::
+
 ## Gov1 vs. OpenGov
 
 | Governance V1                                                                                                                                                                                                                                                                                                                                  | OpenGov                                                                                                                                                                                                                                                   | OpenGov Benefit                                                                                                                                                  |
