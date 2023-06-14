@@ -20,14 +20,18 @@ The governance protocol has already undergone iterations (see
 in its lifecycle. As updates for OpenGov are making their way to the networks, plans for future
 updates are already in development.
 
-:::
-
-:::info Participating in OpenGov
-
-For participating in OpenGov, please refer to this
+For technical information about OpenGov and how to interact with it, please refer to this
 [dedicated Wiki page](../maintain/maintain-guides-opengov.md).
 
-**OpenGov is live on Kusama, and once rigorously tested, it will be deployed on Polkadot.**
+:::
+
+:::info Delegate your votes!
+
+In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
+easily delegate your votes using the
+[**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
+[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn everything about the
+dashboard.
 
 :::
 

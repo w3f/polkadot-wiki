@@ -9,10 +9,10 @@ slug: ../maintain-guides-opengov
 
 import Tracks from "./../../components/Referenda-Tracks";
 
-:::info OpenGov is not live on Polkadot yet
+:::info Learn more about OpenGov
 
-OpenGov is already deployed on Kusama Network. For background information about OpenGov, please
-refer to this [dedicated Wiki document](../learn/learn-opengov.md).
+For background information about OpenGov, please refer to this
+[dedicated Wiki document](../learn/learn-opengov.md).
 
 :::
 
