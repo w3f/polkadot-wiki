@@ -54,9 +54,9 @@ The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-
 which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
 the treasury proposal can be directly executed or go to the external queue, which will be voted on
 through a [Council Referendum](#council-referenda). See the figure's green horizontal path from the
-Public (green) to the Council (yellow). Treasury proposals and Council proposals originate from the
-Council. Proposals can be directly executed (horizontal yellow arrows) or go to the external queue,
-where they will become a referendum.
+Public (green) to the Council (yellow). Treasury proposals and Council proposals can be directly
+executed (horizontal yellow arrows) or go to the external queue, where they will become a referendum
+(vertical yellow arrows).
 
 Note that the external queue always consists of
 [a single proposal](https://github.com/paritytech/substrate/blob/f4a2e84ee5974b219f2a03cd195105060c41e3cd/frame/democracy/src/lib.rs#LL29C8-L31C4).
