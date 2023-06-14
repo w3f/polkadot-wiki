@@ -102,10 +102,13 @@ See [this page](./learn-governance.md#summary) for a comparison with the structu
 
 In OpenGov, a proposal can only be submitted by the Public. The proposal will enter a Lead-in period
 (for more information, see [Referenda Timeline](#referenda-timeline)), after which it will follow a
-specific [Track](#origins-and-tracks) depending on its Origin. There are 15 Origins, each with a
-different track. For example, a treasury proposal can now have different origins depending on the
-amount to be spent and the type of proposal. A small tip of 5 KSM will use the Small Tipper origin,
-while funding for a conference requiring 20,000 KSM with use the Big Spender origin.
+specific [Track](#origins-and-tracks) depending on its Origin. There are
+[15 Origins](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), each with a different
+track. Different origins shape the duration of a referendum as well as how many referenda can be
+voted on simultaneously. For example, a treasury proposal can now have different origins depending
+on the amount to be spent and the type of proposal. A small tip will use the Small Tipper origin,
+while funding for a conference requiring substantial funds will use the Medium or Big Spender
+origin.
 
 The [Fellowship](#fellowship) can decide to [whitelist](#whitelisting) a proposal that will end in
 the Whitelist Caller origin. Those proposals will have a shorter Lead-in, Confirmation, and
@@ -115,8 +118,13 @@ Voting will follow an [Approval and Support](#approval-and-support) curve that w
 on the origin. There is a confirmation period during which approval and support criteria must be
 held within the voting period. If the proposal passes, it will go through an enactment period.
 
-All proposals within each origin can be voted on simultaneously (assuming track maximum capacity is
-not reached).
+All proposals within each origin and across origins can be voted on simultaneously (assuming track
+maximum capacity is not reached).
+
+OpenGov comes also with multi-role delegations where token holder can assign different tracks to
+different entities they trust and that might be expert in judging proposals within specific origins
+only. In this way token holders do not need to be up-to-date with governance matters, and can still
+make their vote count through delegates.
 
 ## Gov1 vs. OpenGov
 
