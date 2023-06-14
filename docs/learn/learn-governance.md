@@ -78,6 +78,10 @@ until the alternating timetable switches the toggles, blocking votes on Public p
 Referenda will follow an [adaptive quorum bias](#adaptive-quorum-biasing) mechanism and (if passed)
 an [enactment period](#enactment).
 
+Token holders can delegate their votes to another account that can belong to a trusted entity voting
+on their behalf. In this way, token holders can still make their vote count without staying
+up-to-date with governance matters.
+
 ## Proposals
 
 Referenda can be started in different ways:
