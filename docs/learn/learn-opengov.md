@@ -208,11 +208,11 @@ longer present in OpenGov.
 See [this page](./learn-governance.md#public-referenda) for more information about public referenda
 in Governance v1.
 
+:::
+
 **In OpenGov all referenda are public.** The [Fellowship](#the-technical-fellowship) has the option
 to [whitelist](#whitelisting) referenda that can be then proposed in the track with
 [whitelist origin](../maintain/maintain-guides-opengov.md#whitelisted-caller).
-
-:::
 
 ### Referenda Timeline
 
@@ -410,11 +410,12 @@ on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
 
 ## The Technical Fellowship
 
-:::info From Technical Committee to the Fellowship
+:::info From Technical Committee to the Technical Fellowship
 
-In OpenGov, the Fellowship replaces the
-[Technical Committee](./learn-governance.md#technical-committee). It will serve both the Polkadot
-and Kusama networks.
+The Polkadot Technical Fellowship is a collection of Substrate experts. The Fellowship was
+established in 2022. In OpenGov, the Fellowship replaces the
+[Technical Committee](./learn-governance.md#technical-committee) in Governance v1, and will serve
+both the Polkadot and Kusama networks.
 
 :::
 
