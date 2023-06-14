@@ -422,7 +422,7 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 ## OpenGov
 
 Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov)
-serves as the current governance protocol for Kusama and will eventually be deployed on Polkadot.
+serves as the current governance protocol for both Kusama and Polkadot.
 
 ## Origin
 
