@@ -25,13 +25,18 @@ For technical information about OpenGov and how to interact with it, please refe
 
 :::
 
-:::info Delegate your votes!
+:::info Delegate your votes and make your voice count!
 
 In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
 easily delegate your votes using the
 [**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
 [this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn everything about the
 dashboard.
+
+If you are already staking, you can use bonded tokens for voting. Note that if you are voting with
+conviction (not possible with the Delegation Dashboard), your tokens will have a democracy lock in
+addition to the staking lock. For more information about locks, see
+[this page](./learn-accounts.md/#unlocking-locks).
 
 :::
 
