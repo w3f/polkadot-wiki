@@ -52,27 +52,28 @@ top of the queue, ready to enter a referendum.
 
 The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
 which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
-the treasury proposal can be directly executed and go through a spending period or go to the
-external queue where it will be voted on through a [Council Referendum](#council-referenda). See the
-green horizontal path from the Public (green) to the Council (yellow) in the figure. Since the
-Council can also submit proposals, there are two vertical yellow paths: solid arrows for
-Council-native proposals and dashed arrows for treasury proposals.
+the treasury proposal can be directly executed or go to the external queue where it will be voted on
+through a [Council Referendum](#council-referenda). See the green horizontal path from the Public
+(green) to the Council (yellow) in the figure. Treasury proposal and Council proposals originates
+from the Council. Proposals can be directly executed (horizontal yellow arrows) or go to the
+external queue where they will become a referendum.
 
 Note that the external queue always consists of
 [a single proposal](https://github.com/paritytech/substrate/blob/f4a2e84ee5974b219f2a03cd195105060c41e3cd/frame/democracy/src/lib.rs#LL29C8-L31C4).
 A proposal in the external queue can be fast-tracked by the
 [Technical Committee](#technical-committee) (light blue). The fast track can contain as many
 proposals as possible (also called emergency proposals) that can be voted on simultaneously with
-Council or Public Proposals. See in the figure the light-blue circle (i.e. Council Proposal 3)
-exiting the external queue and being fast-tracked by the Technical Committee (TC). The fast track
-already contains two Council proposals. The external queue is filled with Council proposal 4.
+Council or Public Proposals. See in the figure the yellow circle (i.e. Council Proposal) exiting the
+external queue, and the yellow circle with light-blue border also exiting the queue and being
+fast-tracked by the Technical Committee (TC). Once empty, the external queue can be filled with
+another Council proposal.
 
 The Council can also submit proposals that will end in the external queue. Voting on Council and
 Public proposals are not simultaneous and are subjected to an
 [alternating timetable](#alternating-voting-timetable). See in the figure the "on" and "off" toggles
-on the external and proposal queue. In this example, Council Proposal 4 will be voted on together
-with Fast-tracked Proposals 1-3. Voting on Public Proposals will be blocked until the alternating
-timetable switches the toggles, blocking votes on Council Proposals.
+on the external and proposal queue. In this example, the Public proposal will be voted on together
+with fast-tracked Council Proposal. Voting on non-fast-tracked Council Proposals will be blocked
+until the alternating timetable switches the toggles, blocking votes on Public proposals.
 
 Referenda will follow an [adaptive quorum bias](#adaptive-quorum-biasing) mechanism and (if passed)
 an [enactment period](#enactment).
