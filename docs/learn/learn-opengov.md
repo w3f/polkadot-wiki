@@ -97,7 +97,7 @@ changes:
 - Dissolving the current [Council](./learn-governance.md#council) collective
 - Allowing users to delegate voting power in more ways to community members
 - Dissolving the [Technical Committee](./learn-governance.md#technical-committee) and establishing
-  the broader [Fellowship](#fellowship)
+  the broader [Polkadot Technical Fellowship](#the-technical-fellowship)
 
 The figure below shows an overview of OpenGov's structure.
 
@@ -119,9 +119,9 @@ on the amount to be spent and the type of proposal. A small tip will use the Sma
 while funding for a conference requiring substantial funds will use the Medium or Big Spender
 origin.
 
-The [Fellowship](#fellowship) can decide to [whitelist](#whitelisting) a proposal that will end in
-the Whitelist Caller origin. Those proposals will have a shorter Lead-in, Confirmation, and
-Enactment period.
+The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
+[whitelist](#whitelisting) a proposal that will end in the Whitelist Caller origin. Those proposals
+will have a shorter Lead-in, Confirmation, and Enactment period.
 
 Voting will follow an [Approval and Support](#approval-and-support) curve that will differ depending
 on the origin. There is a confirmation period during which approval and support criteria must be
@@ -148,7 +148,7 @@ and learn how to use it.
 
 | Governance V1                                                                                                                                                                                                                                                                                                                                  | OpenGov                                                                                                                                                                                                                                                   | OpenGov Benefit                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Includes the [Council](./learn-governance.md#council), the [Technical Committee](./learn-governance.md#technical-committee), and the Public (i.e. token holders).                                                                                                                                                                              | Includes the Public and the [Fellowship](#fellowship).                                                                                                                                                                                                    | Simpler and more decentralized structure.                                                                                                                        |
+| Includes the [Council](./learn-governance.md#council), the [Technical Committee](./learn-governance.md#technical-committee), and the Public (i.e. token holders).                                                                                                                                                                              | Includes the Public and the [Fellowship](#the-technical-fellowship).                                                                                                                                                                                      | Simpler and more decentralized structure.                                                                                                                        |
 | Referenda executed only from one origin (Root). Referenda in this origin must be carefully scrutinized. Therefore, there is only one track (i.e. only one referendum at a time can be executed).                                                                                                                                               | Referenda executed from [multiple origins](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), each with a different track that shapes proposals’ timelines. Depending on the origin, multiple referenda within the same track are possible. | Possibility to categorize proposals (based on importance and urgency) and execute them simultaneously within and between origin tracks.                          |
 | Proposals can be submitted by either the Council or the Public.                                                                                                                                                                                                                                                                                | The public submits proposals.                                                                                                                                                                                                                             | More democratic.                                                                                                                                                 |
 | Uses [Adaptive Quorum Biasing](./learn-governance.md#adaptive-quorum-biasing) to define the approval threshold based on turnout. Given the same turnout, council-initiated referenda require fewer Aye votes to pass compared to public referenda.                                                                                             | Uses origin-specific approval and support curves defining the amount of approval and support (i.e. turnout) needed as a function of time. The same curves are applied to all referenda within the same origin track.                                      | Referenda timeline depends on the origin and not on who submitted the proposal (i.e. Council or Public). This is a more democratic and equalitarian system.      |
@@ -208,8 +208,8 @@ longer present in OpenGov.
 See [this page](./learn-governance.md#public-referenda) for more information about public referenda
 in Governance v1.
 
-**In OpenGov all referenda are public.** The [Fellowship](#fellowship) has the option to
-[whitelist](#whitelisting) referenda that can be then proposed in the track with
+**In OpenGov all referenda are public.** The [Fellowship](#the-technical-fellowship) has the option
+to [whitelist](#whitelisting) referenda that can be then proposed in the track with
 [whitelist origin](../maintain/maintain-guides-opengov.md#whitelisted-caller).
 
 :::
@@ -408,7 +408,7 @@ For a step-by-step outline of how to delegate voting power in OpenGov, check out
 [Delegating Voting Power](./../maintain/maintain-guides-opengov.md#delegating-voting-power) section
 on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
 
-## Fellowship
+## The Technical Fellowship
 
 :::info From Technical Committee to the Fellowship
 
