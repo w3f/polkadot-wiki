@@ -130,10 +130,9 @@ satisfied for a specific period (called the confirmation period), the referenda 
 All referenda within each track and across tracks can be voted on simultaneously (assuming track
 maximum capacity is not reached).
 
-OpenGov comes also with multi-role delegations where token holder can assign different tracks to
-different entities they trust and that might be expert in judging proposals within specific origins
-only. In this way token holders do not need to be up-to-date with governance matters, and can still
-make their vote count through delegates.
+OpenGov also comes with multi-role delegations where the token holder can assign voting power on different tracks to
+different entities who are experts in judging the referenda submitted to those tracks. For example, suppose a token holder does not have the technical background to consider the merits and vote on the referenda submitted to the Root track. In that case, they can delegate their voting power just for the Root track to a trusted expert who (according to them) acts in the best interest of the network protocol. In this way, token holders do not need to be up-to-date with governance matters and can still
+make their votes count through delegates.
 
 :::info Delegation Dashboard
 
