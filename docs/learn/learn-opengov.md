@@ -120,7 +120,7 @@ while funding for a conference requiring substantial funds will use the Medium o
 origin.
 
 The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
-[whitelist](#whitelisting) a proposal that will end in the Whitelist Caller origin. Those proposals
+[whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin. Those proposals
 will have a shorter Lead-in, Confirmation, and Enactment period when compared to the Root Origin track.
 
 Voting will follow an [Approval and Support](#approval-and-support) curve that will differ depending
