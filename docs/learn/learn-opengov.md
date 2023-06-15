@@ -127,7 +127,7 @@ Each track has its own preset [Approval and Support](#approval-and-support) curv
 on the origin's privileges. When both the approval and support criteria are
 satisfied for a specific period (called the confirmation period), the referenda passes and will be executed after the enactment period.
 
-All proposals within each origin and across origins can be voted on simultaneously (assuming track
+All referenda within each track and across tracks can be voted on simultaneously (assuming track
 maximum capacity is not reached).
 
 OpenGov comes also with multi-role delegations where token holder can assign different tracks to
