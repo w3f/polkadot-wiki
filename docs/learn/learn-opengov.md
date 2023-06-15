@@ -121,7 +121,7 @@ origin.
 
 The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
 [whitelist](#whitelisting) a proposal that will end in the Whitelist Caller origin. Those proposals
-will have a shorter Lead-in, Confirmation, and Enactment period.
+will have a shorter Lead-in, Confirmation, and Enactment period when compared to the Root Origin track.
 
 Voting will follow an [Approval and Support](#approval-and-support) curve that will differ depending
 on the origin. There is a confirmation period during which approval and support criteria must be
