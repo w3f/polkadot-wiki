@@ -17,26 +17,10 @@ import Fellowship from "./../../components/Fellowship";
 
 The governance protocol has already undergone iterations (see
 [Governance V1](./learn-governance.md)). Governance is a constantly evolving protocol at this stage
-in its lifecycle. As updates for OpenGov are making their way to the networks, plans for future
-updates are already in development.
+in its lifecycle.
 
 For technical information about OpenGov and how to interact with it, please refer to this
 [dedicated Wiki page](../maintain/maintain-guides-opengov.md).
-
-:::
-
-:::info Delegate your votes
-
-In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
-delegate your votes using the
-[**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn about the features of the
-dashboard.
-
-If you are staking directly and not through a nomination pool, you can use bonded tokens for voting. Note that if you are voting with
-conviction, your tokens will have a democracy lock in
-addition to the staking lock. For more information about locks, see
-[this page](./learn-accounts.md/#unlocking-locks).
 
 :::
 
@@ -379,9 +363,7 @@ Voluntary locking in OpenGov is
 
 ### Multirole Delegation
 
-In OpenGov, an alternate strategy was required to replace the Council in its previous duties as a
-body delegated by voters to compensate for the fact that many choose not to take part in day-to-day
-of governance. OpenGov builds on the
+OpenGov builds on the
 [vote delegation feature from Governance v1](./learn-governance.md#delegations) where a voter can
 delegate their voting power to another voter. It does so by introducing a feature known as
 **multirole delegation**, where voters can specify a different delegate for every class of
@@ -391,6 +373,23 @@ different delegates (or no delegation) for each track.
 For example, a voter could delegate one entity for managing a less potent referenda class, choose a
 different delegate for another class with more powerful consequences and still retain full voting
 power over any remaining classes.
+
+
+:::info Delegate your votes
+
+In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
+delegate your votes using the
+[**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
+[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn about the features of the
+dashboard.
+
+If you are staking directly and not through a nomination pool, you can use bonded tokens for voting. Note that if you are voting with
+conviction, your tokens will have a democracy lock in
+addition to the staking lock. For more information about locks, see
+[this page](./learn-accounts.md/#unlocking-locks).
+
+:::
+
 
 Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
 to use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
