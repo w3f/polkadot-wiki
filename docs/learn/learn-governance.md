@@ -66,7 +66,7 @@ external queue, and the yellow circle with a light-blue border also leaving the 
 fast-tracked by the Technical Committee (TC). Once empty, the external queue can be filled with
 another Council proposal.
 
-The Council can also submit proposals that will end in the external queue. Voting on Council and
+The Council can also submit proposals that will end up in the external queue. Voting on Council and
 Public proposals are not simultaneous and are subjected to an
 [alternating timetable](#alternating-voting-timetable). See in the figure the "on" and "off" toggles
 on the external and proposal queue. In this example, the Public proposal will be voted on together
