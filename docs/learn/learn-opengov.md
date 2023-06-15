@@ -117,7 +117,7 @@ track. The origins and tracks parameters are preset values that set the duration
 voted on simultaneously. For example, a treasury proposal can now be submitted in different tackss depending
 on the amount requested. A proposal for a small tip will need to be submitted in the Small Tipper track,
 while a proposal requiring substantial funds will need to be submitted to the Medium or Big Spender
-origin.
+track.
 
 The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
 [whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin. Those proposals
