@@ -111,7 +111,7 @@ See [this page](./learn-governance.md#summary) for a comparison with the structu
 
 In OpenGov, all the proposals are initiated by the public. The proposal will enter a Lead-in period
 (for more information, see [Referenda Timeline](#referenda-timeline)), after which it will follow a
-specific [Track](#origins-and-tracks) depending on its Origin. There are
+specific [Track](#origins-and-tracks) which has a dedicated Origin. There are
 [15 Origins](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), each with a different
 track. Different origins shape the duration of a referendum as well as how many referenda can be
 voted on simultaneously. For example, a treasury proposal can now have different origins depending
