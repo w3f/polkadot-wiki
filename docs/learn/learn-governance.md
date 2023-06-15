@@ -38,8 +38,8 @@ a referendum to let all holders, weighted by stake, make the decision.
 
 ## Summary
 
-The figure below shows an overview of Governance V1 with main players and different paths from
-submitting proposal to voting on referenda.
+The figure below shows an overview of Governance V1 with the key actors and different paths for
+submitting a proposal that can potentially be voted on as a referendum.
 
 ![gov1-overview](../assets/gov1-overview.png)
 
