@@ -67,7 +67,7 @@ fast-tracked by the Technical Committee (TC). Once empty, the external queue can
 another Council proposal.
 
 The Council can also submit proposals that will end up in the external queue. Voting on Council and
-Public proposals are not simultaneous and are subjected to an
+Public proposals subject to an
 [alternating timetable](#alternating-voting-timetable). See in the figure the "on" and "off" toggles
 on the external and proposal queue. In this example, the Public proposal will be voted on together
 with the fast-tracked Council Proposal. Voting on non-fast-tracked Council Proposals will be blocked
