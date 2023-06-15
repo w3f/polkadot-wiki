@@ -412,7 +412,7 @@ on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
 
 :::info From Technical Committee to the Technical Fellowship
 
-The Polkadot Technical Fellowship is a collection of Substrate experts. The Fellowship was
+The Polkadot Technical Fellowship is a collection of Substrate experts.  This fellowship was
 established in 2022. In OpenGov, the Fellowship replaces the
 [Technical Committee](./learn-governance.md#technical-committee) in Governance v1, and will serve
 both the Polkadot and Kusama networks.
