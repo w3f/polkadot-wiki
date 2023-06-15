@@ -76,9 +76,7 @@ until the alternating timetable switches the toggles, which stops Public proposa
 Referenda will follow an [adaptive quorum biasing](#adaptive-quorum-biasing) mechanism for deciding whether they get enacted, and if they do, they will be executed after
 an [enactment period](#enactment).
 
-Token holders can delegate their votes to another account that can belong to a trusted entity voting
-on their behalf. In this way, token holders can still make their vote count without staying
-up-to-date with governance matters.
+Token holders can delegate their votes (with a conviction multiplier) to another account belonging to a trusted entity voting on their behalf.
 
 ## Proposals
 
