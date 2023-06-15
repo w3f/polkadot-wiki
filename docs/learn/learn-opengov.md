@@ -25,7 +25,7 @@ For technical information about OpenGov and how to interact with it, please refe
 
 :::
 
-:::info Delegate your votes and make your voice count!
+:::info Delegate your votes
 
 In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
 easily delegate your votes using the
