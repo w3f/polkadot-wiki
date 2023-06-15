@@ -71,7 +71,7 @@ Public proposals subject to an
 [alternating timetable](#alternating-voting-timetable), shown in the figure as the "on" and "off" toggles
 on the external and proposal queues. In this example, the Public proposal will be voted on together
 with the fast-tracked Council Proposal. Voting on non-fast-tracked Council Proposals will be blocked
-until the alternating timetable switches the toggles, blocking votes on Public proposals.
+until the alternating timetable switches the toggles, which stops Public proposals from becoming a referenda.
 
 Referenda will follow an [adaptive quorum bias](#adaptive-quorum-biasing) mechanism and (if passed)
 an [enactment period](#enactment).
