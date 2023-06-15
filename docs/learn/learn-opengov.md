@@ -116,7 +116,7 @@ specific [Track](#origins-and-tracks) which has a dedicated Origin. There are
 track. The origins and tracks parameters are preset values that set the duration of a referendum as well as how many referenda can be
 voted on simultaneously. For example, a treasury proposal can now be submitted in different tackss depending
 on the amount requested. A proposal for a small tip will need to be submitted in the Small Tipper track,
-while funding for a conference requiring substantial funds will use the Medium or Big Spender
+while a proposal requiring substantial funds will need to be submitted to the Medium or Big Spender
 origin.
 
 The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
