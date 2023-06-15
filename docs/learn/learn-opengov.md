@@ -114,8 +114,8 @@ In OpenGov, all the proposals are initiated by the public. The proposal will ent
 specific [Track](#origins-and-tracks) which has a dedicated Origin. There are
 [15 Origins](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), each with a different
 track. The origins and tracks parameters are preset values that set the duration of a referendum as well as how many referenda can be
-voted on simultaneously. For example, a treasury proposal can now have different origins depending
-on the amount to be spent and the type of proposal. A small tip will use the Small Tipper origin,
+voted on simultaneously. For example, a treasury proposal can now be submitted in different tackss depending
+on the amount requested. A proposal for a small tip will need to be submitted in the Small Tipper track,
 while funding for a conference requiring substantial funds will use the Medium or Big Spender
 origin.
 
