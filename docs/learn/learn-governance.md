@@ -73,7 +73,7 @@ on the external and proposal queues. In this example, the Public proposal will b
 with the fast-tracked Council Proposal. Voting on non-fast-tracked Council Proposals will be blocked
 until the alternating timetable switches the toggles, which stops Public proposals from becoming a referenda.
 
-Referenda will follow an [adaptive quorum bias](#adaptive-quorum-biasing) mechanism and (if passed)
+Referenda will follow an [adaptive quorum biasing](#adaptive-quorum-biasing) mechanism for deciding whether they get enacted, and if they do, they will be executed after
 an [enactment period](#enactment).
 
 Token holders can delegate their votes to another account that can belong to a trusted entity voting
