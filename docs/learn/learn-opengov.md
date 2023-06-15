@@ -30,7 +30,7 @@ For technical information about OpenGov and how to interact with it, please refe
 In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
 delegate your votes using the
 [**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn everything about the
+[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn about the features of the
 dashboard.
 
 If you are already staking, you can use bonded tokens for voting. Note that if you are voting with
