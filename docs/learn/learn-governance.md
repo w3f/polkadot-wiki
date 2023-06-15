@@ -44,8 +44,8 @@ submitting a proposal that can potentially be voted on as a referendum.
 ![gov1-overview](../assets/gov1-overview.png)
 
 The public (i.e. token holders) can submit a proposal that gets added to the proposal queue. Here,
-proposals are [endorsed](#endorsing-proposals), and the ones that get the most support will climb in
-the queue. The proposal at the top of the queue will become a
+proposals are [endorsed](#endorsing-proposals), and the one that gets the most support will climb to the top of
+the queue. When it is time, the proposal at the top of the queue will become a
 [Public Referendum](#public-referenda). See in the figure the vertical green path ending with the
 proposals inside a cylinder (i.e. the proposal queue). The proposal with 11 endorsements is at the
 top of the queue, ready to enter a referendum.
