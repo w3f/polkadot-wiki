@@ -262,9 +262,7 @@ locked for the referendum duration.
 
 ## Voting on Referenda
 
-To vote on a referendum, navigate to the "Referenda" tab of Polkadot-JS UI. All the active referenda
-will be shown in their respective track sections. Click the "Vote" button to cast a vote for the
-corresponding referendum. As OpenGov takes both the approval and support into account, there are
+As OpenGov takes both the approval and support into account, there are
 four options to choose from when voting on a referendum:
 
 - Aye
@@ -276,53 +274,38 @@ Also, you have to specify the conviction multiplier for this vote. The longer yo
 lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means
 that your vote only counts for 10% of the tokens that you hold.
 
-![vote on referendum](../assets/governance/opengov-vote-referendum.png)
+For detailed instructions on how to vote on OpenGov referenda, check 
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184120-polkadot-opengov-how-to-vote)
+
 
 :::caution OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
 
 Use `convictionVoting.vote` for voting on Referenda in OpenGov instead of `democracy.vote` (which
-only works for old version of governance).
+only works for the old version of governance).
 
 :::
 
 ### Removing expired voting locks
 
-To remove the lock from votes you first need to call `removeVote` and then `unlock` through the
-`convictionVoting` pallet.
+To remove the lock from votes, you first need to call `removeVote` and then `unlock` through the
+`convictionVoting` pallet. For detailed instructions, check 
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184129-polkadot-js-ui-how-to-remove-expired-referenda-locks)
 
 ## Delegating Voting Power
 
-For an overview on how delegation works in OpenGov, check out the
+For an overview of how delegation works in OpenGov, check out the
 [Multirole Delegation](./../learn/learn-opengov.md#multirole-delegation) section on the
 [Learn OpenGov](./../learn/learn-opengov.md) page.
 
-The following steps outline how to delegate voting power in OpenGov through Polkadot-JS UI:
+### Delegation Dashboard
 
-1. Navigate to the [referenda tab](https://polkadot.js.org/apps/#/referenda)
-2. Click the `Delegate` icon in the top-right corner
-   ![Delegate Window](./../assets/governance/Delegate-Window-Kusama.png)
-3. Ensure the `delegate from account` field lists the account you wish to apply delegation over
-4. Next, select the appropriate `submission track` that you wish to delegate (or select the option
-   `apply delegation to all tracks`)
-5. Specify the `delegate vote value`, which is the amount of DOT or KSM you wish to provide the
-   delegate with
-6. Provide a `conviction` multiplier determining how long the funds from the previous step are
-   locked (for additional details see the section on [Voluntary Locking](#voluntary-locking)) and
-   click `Next`
-7. The final step is to provide the account address that will be the delegate for the original
-   account provided (this account will be receiving the voting power for the source account on the
-   specified track)
+To make multi-role delegation easy and intuitive, [Delegation Dashboard](https://delegation.polkadot.network/)
+provides an interactive interface that displays the list of delegates and their details. The video tutorial below
+walks through the features of the Delegation Dashboard and shows how to perform multi-role delegation.
 
-![Delegate](./../assets/governance/Delegate-Kusama.png)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/59RGjVc2N40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-When you are ready to undelegate:
+For detailed instructions on how to delegate your voting power using dashboard, check
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power) If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions
+are available [here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
 
-1. Navigate to the [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics)
-2. Select a wallet address that is currently delegating to another account
-3. From the `submit the following extrinsic` dropdown, select `convictionVoting`
-4. Select `undelegate` from the next dropdown to the right of the previous step (note you can also
-   delegate from this page as an alternative to the solution provided above)
-5. Provide the `submission track` that was used when originally delegating from above
-6. Sign and submit the transaction to restore the voting power back to the original source address
-
-![Undelegate](./../assets/governance/Undelegate-Kusama.png)
