@@ -33,8 +33,8 @@ delegate your votes using the
 [this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn about the features of the
 dashboard.
 
-If you are already staking, you can use bonded tokens for voting. Note that if you are voting with
-conviction (not possible with the Delegation Dashboard), your tokens will have a democracy lock in
+If you are staking directly and not through a nomination pool, you can use bonded tokens for voting. Note that if you are voting with
+conviction, your tokens will have a democracy lock in
 addition to the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
 
