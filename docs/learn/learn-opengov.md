@@ -123,9 +123,9 @@ The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
 [whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin. Those proposals
 will have a shorter Lead-in, Confirmation, and Enactment period when compared to the Root Origin track.
 
-Voting will follow an [Approval and Support](#approval-and-support) curve that will differ depending
-on the origin. There is a confirmation period during which approval and support criteria must be
-held within the voting period. If the proposal passes, it will go through an enactment period.
+Each track has its own preset [Approval and Support](#approval-and-support) curves which are based
+on the origin's privileges. When both the approval and support criteria are
+satisfied for a specific period (called the confirmation period), the referenda passes and will be executed after the enactment period.
 
 All proposals within each origin and across origins can be voted on simultaneously (assuming track
 maximum capacity is not reached).
