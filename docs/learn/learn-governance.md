@@ -46,9 +46,8 @@ submitting a proposal that can potentially be voted on as a referendum.
 The public (i.e. token holders) can submit a proposal that gets added to the proposal queue. Here,
 proposals are [endorsed](#endorsing-proposals), and the one that gets the most support will climb to the top of
 the queue. When it is time, the proposal at the top of the queue will become a
-[Public Referendum](#public-referenda). See in the figure the vertical green path ending with the
-proposals inside a cylinder (i.e. the proposal queue). The proposal with 11 endorsements is at the
-top of the queue, ready to enter a referendum.
+[Public Referendum](#public-referenda). For instance, the proposal with 11 endorsements is shown at the
+top of the queue in the figure, which is ready to become a referendum.
 
 The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
 which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
