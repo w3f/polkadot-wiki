@@ -36,7 +36,7 @@ together to administrate a network upgrade decision. No matter whether the propo
 the public (token holders) or the [Council](#council), it finally will have to go through a vote on
 a referendum to let all holders, weighted by stake, make the decision.
 
-## Summary
+## Governance Summary
 
 The figure below shows an overview of Governance V1 with the key actors and different paths for
 submitting a proposal that can potentially be voted on as a referendum.
