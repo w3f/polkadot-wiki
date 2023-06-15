@@ -63,7 +63,7 @@ Note that the external queue always consists of
 A proposal in the external queue can be fast-tracked by the
 [Technical Committee](#technical-committee) (light blue). The fast track can contain as many
 proposals as possible (also called emergency proposals) that can be voted on simultaneously with
-Council or Public Proposals. See in the figure the yellow circle (i.e. Council Proposal) exiting the
+with the referenda introduced either by the Council or the Public. See in the figure the yellow circle (i.e. Council Proposal) exiting the
 external queue, and the yellow circle with a light-blue border also leaving the queue and being
 fast-tracked by the Technical Committee (TC). Once empty, the external queue can be filled with
 another Council proposal.
