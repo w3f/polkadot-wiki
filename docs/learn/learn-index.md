@@ -22,6 +22,13 @@ There are a series of video tutorials which are also provided, which you may
 Learn the basics of transactions ([extrinsics](./learn-extrinsics)), accounts, staking
 [here](./learn-accounts).
 
+- [Accounts](./learn-accounts.md) -
+- [Transactions (extrinsics)](./learn-extrinsics.md) -
+- [Tokens and Assets](./learn-extrinsics.md) -
+- [NFTs](./learn-nft.md) -
+- [Architectural Components](./learn-polkadot-host) -
+- [Staking](./learn-staking.md) -
+
 ## Advanced Concepts
 
 Learn more advanced concepts of the Polkadot network, as well as numerous
