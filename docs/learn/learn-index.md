@@ -25,7 +25,7 @@ Learn the basics of transactions ([extrinsics](./learn-extrinsics)), accounts, s
 ## Advanced Concepts
 
 Learn more advanced concepts of the Polkadot network, as well as numerous
-[how-to guides](./learn-staking-guides):
+[how-to guides for staking](./learn-staking-guides):
 
 - [Accounts - In Depth](./learn-account-advanced)
 - [Advanced Staking Concepts](./learn-staking-advanced.md)
