@@ -47,7 +47,7 @@ running on a validator node.
 Additional information on each of these requirements can be found
 [here](https://spec.polkadot.network/#sect-node-full).
 
-## Diagram
+## Polkadot Runtime
 
 Below is a diagram that displays the Polkadot host surrounding the Polkadot runtime. Think of the
 runtime (in white) as a component that can be inserted, swapped out, or removed entirely. While the
