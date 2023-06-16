@@ -163,9 +163,13 @@ there will be bridges between Polkadot and most of the other major chains.
 
 ### What is Polkadot's Transactions Per Second (TPS)?
 
+Polkadot's TPS is currently around the range of 1,000 TPS, and is **anticipated** to range from
+[100,000 to 1,000,000 transactions per second.](https://polkadot.network/blog/polkadot-roadmap-roundup).
+This is mostly due to the pending [asynchronous backing upgrade](../learn/learn-async-backing).
+
 It is important to realize that TPS is inherently a very subjective measurement that has numerous
-factors that can contribute to. It's hard to gauge the usefulness of the metric in isolation, as
-it's highly dependent on what a transaction does for a particular network.
+factors that can contribute to it. It's hard to gauge the usefulness of TPS in isolation, as it's
+highly dependent on what a transaction does for a particular network.
 
 Furthermore, there is no industry standard for measuring TPS in a non-biased way.
 
