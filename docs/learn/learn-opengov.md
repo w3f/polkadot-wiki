@@ -27,6 +27,15 @@ For additional support about OpenGov see the
 
 :::
 
+:::info Polkadot Delegation Dashboard
+
+You can easily delegate your votes to somebody else using the
+[Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
+[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to learn how to use the
+dashboard.
+
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
