@@ -161,6 +161,17 @@ imposes economic costs on the operators of the bridge, and therefore makes it ec
 Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually,
 there will be bridges between Polkadot and most of the other major chains.
 
+### What is Polkadot's Transactions Per Second (TPS)?
+
+It is important to realize that TPS is inherently a very subjective measurement that has numerous
+factors that can contribute to. It's hard to gauge the usefulness of the metric in isolation, as
+it's highly dependent on what a transaction does for a particular network.
+
+Furthermore, there is no industry standard for measuring TPS in a non-biased way.
+
+In the case of Polkadot, the TPS can be very high due to the parallelization of its network. Because
+it is effectively finalizing the state of many parachains at once.
+
 ## DOT
 
 ### What is the difference between DOT (old) and new DOT?
