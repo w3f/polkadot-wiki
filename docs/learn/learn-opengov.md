@@ -22,7 +22,8 @@ in its lifecycle.
 For technical information about OpenGov and how to interact with it, please refer to this
 [dedicated Wiki page](../maintain/maintain-guides-opengov.md).
 
-F
+For additional support about OpenGov see the
+[dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
 
 :::
 
