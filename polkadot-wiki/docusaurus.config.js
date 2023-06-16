@@ -210,7 +210,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/learn-launch",
+          to: "docs/learn-index",
           label: "Learn",
           position: "right",
         },
