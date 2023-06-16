@@ -22,6 +22,18 @@ in its lifecycle.
 For technical information about OpenGov and how to interact with it, please refer to this
 [dedicated Wiki page](../maintain/maintain-guides-opengov.md).
 
+For additional support about OpenGov see the
+[dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
+
+:::
+
+:::info Polkadot Delegation Dashboard
+
+You can easily delegate your votes to somebody else using the
+[Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
+[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to learn how to use the
+dashboard.
+
 :::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
@@ -97,32 +109,38 @@ In OpenGov, all the proposals are initiated by the public. The proposal will ent
 (for more information, see [Referenda Timeline](#referenda-timeline)), after which it will follow a
 specific [Track](#origins-and-tracks) which has a dedicated Origin. There are
 [15 Origins](../maintain/maintain-guides-opengov.md#origins-and-tracks-info), each with a different
-track. The origins and tracks parameters are preset values that set the duration of a referendum as well as how many referenda can be
-voted on simultaneously. For example, a treasury proposal can now be submitted in different tackss depending
-on the amount requested. A proposal for a small tip will need to be submitted in the Small Tipper track,
-while a proposal requiring substantial funds will need to be submitted to the Medium or Big Spender
-track.
+track. The origins and tracks parameters are preset values that set the duration of a referendum as
+well as how many referenda can be voted on simultaneously. For example, a treasury proposal can now
+be submitted in different tracks depending on the amount requested. A proposal for a small tip will
+need to be submitted in the Small Tipper track, while a proposal requiring substantial funds will
+need to be submitted to the Medium or Big Spender track.
 
 The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
-[whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin. Those proposals
-will have a shorter Lead-in, Confirmation, and Enactment period when compared to the Root Origin track.
+[whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin.
+Those proposals will have a shorter Lead-in, Confirmation, and Enactment period when compared to the
+Root Origin track.
 
 Each track has its own preset [Approval and Support](#approval-and-support) curves which are based
-on the origin's privileges. When both the approval and support criteria are
-satisfied for a specific period (called the confirmation period), the referenda passes and will be executed after the enactment period.
+on the origin's privileges. When both the approval and support criteria are satisfied for a specific
+period (called the confirmation period), the referenda passes and will be executed after the
+enactment period.
 
 All referenda within each track and across tracks can be voted on simultaneously (assuming track
 maximum capacity is not reached).
 
-OpenGov also comes with multi-role delegations where the token holder can assign voting power on different tracks to
-different entities who are experts in judging the referenda submitted to those tracks. For example, suppose a token holder does not have the technical background to consider the merits and vote on the referenda submitted to the Root track. In that case, they can delegate their voting power just for the Root track to a trusted expert who (according to them) acts in the best interest of the network protocol. In this way, token holders do not need to be up-to-date with governance matters and can still
-make their votes count through delegates.
+OpenGov also comes with multi-role delegations where the token holder can assign voting power on
+different tracks to different entities who are experts in judging the referenda submitted to those
+tracks. For example, suppose a token holder does not have the technical background to consider the
+merits and vote on the referenda submitted to the Root track. In that case, they can delegate their
+voting power just for the Root track to a trusted expert who (according to them) acts in the best
+interest of the network protocol. In this way, token holders do not need to be up-to-date with
+governance matters and can still make their votes count through delegates.
 
 :::info Delegation Dashboard
 
 To easily delegate your votes you can use the
 [Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to know more about the dashboard
+[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to know more about the dashboard
 and learn how to use it.
 
 :::
@@ -374,22 +392,20 @@ For example, a voter could delegate one entity for managing a less potent refere
 different delegate for another class with more powerful consequences and still retain full voting
 power over any remaining classes.
 
-
 :::info Delegate your votes
 
 In OpenGov you can delegate your votes to different entities, who will vote on your behalf. You can
 delegate your votes using the
 [**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn about the features of the
-dashboard.
+[this video tutorial](https://www.youtube.com/watch?v=tlh_KmWQiSQ) to learn about the features of
+the dashboard.
 
-If you are staking directly and not through a nomination pool, you can use bonded tokens for voting. Note that if you are voting with
-conviction, your tokens will have a democracy lock in
-addition to the staking lock. For more information about locks, see
+If you are staking directly and not through a nomination pool, you can use bonded tokens for voting.
+Note that if you are voting with conviction, your tokens will have a democracy lock in addition to
+the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
 
 :::
-
 
 Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
 to use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
@@ -410,7 +426,7 @@ on the [OpenGov Maintenance](./../maintain/maintain-guides-opengov.md) page.
 
 :::info From Technical Committee to the Technical Fellowship
 
-The Polkadot Technical Fellowship is a collection of Substrate experts.  This fellowship was
+The Polkadot Technical Fellowship is a collection of Substrate experts. This fellowship was
 established in 2022. In OpenGov, this fellowship replaces the
 [Technical Committee](./learn-governance.md#technical-committee) in Governance v1, and will serve
 both the Polkadot and Kusama networks.
