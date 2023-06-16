@@ -48,7 +48,7 @@ class HomeNav extends React.Component {
           aosDelay="0"
         />
         <NavItem
-          href={this.props.docUrl("learn-launch")}
+          href={this.props.docUrl("learn-DOT")}
           content="Polkadot is a sharded protocol that enables blockchain networks to operate together seamlessly."
           title="Learn"
           aosDelay="300"
