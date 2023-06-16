@@ -56,6 +56,7 @@ module.exports = {
       type: "category",
       label: "Learn",
       items: [
+        "learn/learn-index",
         {
           type: "category",
           label: "Basics",
