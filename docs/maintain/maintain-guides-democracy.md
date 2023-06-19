@@ -9,9 +9,9 @@ slug: ../maintain-guides-democracy
 
 :::caution OpenGov is Live! This document will soon be archived.
 
-OpenGov: Polkadot’s next generation of decentralized governance is live on Polkadot and Kusama. Check
-[OpenGov page](../learn/learn-opengov.md) for a detailed explanation of the latest features of Polkadot governance.
-The democracy pallet (Gov1) will soon be deprecated.
+OpenGov: Polkadot’s next generation of decentralized governance is live on Polkadot and Kusama.
+Check [OpenGov page](../learn/learn-opengov.md) for a detailed explanation of the latest features of
+Polkadot governance. The democracy pallet (Gov1) will soon be deprecated.
 
 :::
 
