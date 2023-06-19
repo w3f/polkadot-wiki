@@ -31,8 +31,7 @@ Learn the basics of transactions, accounts, staking, NFTs, and more.
 
 ## Advanced Concepts
 
-Learn more advanced concepts of the Polkadot network, as well as numerous
-[how-to guides for staking](./learn-staking-guides):
+Learn more advanced concepts of the Polkadot network.
 
 - [Accounts - Advanced](./learn-account-advanced) - Learn how accounts work on a finer, more
   advanced level.
