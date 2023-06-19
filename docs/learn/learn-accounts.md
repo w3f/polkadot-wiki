@@ -90,8 +90,9 @@ To learn more about generating accounts on
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below we give an example of different balance types on Kusama (note that on Polkadot the situation
-will look the same).
+Below we give an example of different balance types on Kusama displayed on the
+[Accounts tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (note that on Polkadot
+the situation will look the same).
 
 ![account_balance_types](../assets/account-balance-types.png)
 
@@ -129,7 +130,7 @@ will look the same).
 
 ### Query Account Data in Polkadot-JS
 
-In the Polkadot-JS UI you can query account data under
+In the Polkadot-JS UI you can also query account data under
 [Developer > Chain state](https://polkadot.js.org/apps/#/chainstate). Under `selected state query`
 choose the balances pallet, under `Option` choose an account, and then click on the "+" button on
 the right.
