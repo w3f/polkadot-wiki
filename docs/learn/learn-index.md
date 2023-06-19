@@ -16,8 +16,7 @@ If you want to learn more about how to use different tools on Polkadot, you can 
 
 ## The Basics: DOT, Accounts, & Staking
 
-Learn the basics of transactions ([extrinsics](./learn-extrinsics)), accounts, staking
-[here](./learn-accounts).
+Learn the basics of transactions, accounts, staking, NFTs, and more.
 
 - [Accounts](./learn-accounts.md) - How accounts work on Polkadot.
 - [Transactions (extrinsics)](./learn-extrinsics.md) - The role of extrinsics, and how they define
