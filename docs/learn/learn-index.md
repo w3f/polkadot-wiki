@@ -76,7 +76,7 @@ Learn how Polkadot compares to other similar technologies.
 
 ## Future Implementations & Upcoming Features
 
-Learn upcoming innovations for the Polkadot network that are not yet released:
+Learn about upcoming innovations for the Polkadot network that are not yet implemented.
 
 [Parathreads](./learn-parathreads.md) - An introductory guide to parathreads - the mechanism for
 pay-as-you-go blockspace.
