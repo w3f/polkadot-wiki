@@ -44,10 +44,10 @@ submitting a proposal that can potentially be voted on as a referendum.
 ![gov1-overview](../assets/gov1-overview.png)
 
 The public (i.e. token holders) can submit a proposal that gets added to the proposal queue. Here,
-proposals are [endorsed](#endorsing-proposals), and the one that gets the most support will climb to the top of
-the queue. When it is time, the proposal at the top of the queue will become a
-[Public Referendum](#public-referenda). For instance, the proposal with 11 endorsements is shown at the
-top of the queue in the figure, which is ready to become a referendum.
+proposals are [endorsed](#endorsing-proposals), and the one that gets the most support will climb to
+the top of the queue. When it is time, the proposal at the top of the queue will become a
+[Public Referendum](#public-referenda). For instance, the proposal with 11 endorsements is shown at
+the top of the queue in the figure, which is ready to become a referendum.
 
 The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
 which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
@@ -61,22 +61,24 @@ Note that the external queue always consists of
 A proposal in the external queue can be fast-tracked by the
 [Technical Committee](#technical-committee) (light blue). The fast track can contain as many
 proposals as possible (also called emergency proposals) that can be voted on simultaneously with
-with the referenda introduced either by the Council or the Public. See in the figure the yellow circle (i.e. Council Proposal) exiting the
-external queue, and the yellow circle with a light-blue border also leaving the queue and being
-fast-tracked by the Technical Committee (TC). Once empty, the external queue can be filled with
-another Council proposal.
+with the referenda introduced either by the Council or the Public. See in the figure the yellow
+circle (i.e. Council Proposal) exiting the external queue, and the yellow circle with a light-blue
+border also leaving the queue and being fast-tracked by the Technical Committee (TC). Once empty,
+the external queue can be filled with another Council proposal.
 
 The Council can also submit proposals that will end up in the external queue. Voting on Council and
-Public proposals subject to an
-[alternating timetable](#alternating-voting-timetable), shown in the figure as the "on" and "off" toggles
-on the external and proposal queues. In this example, the Public proposal will be voted on together
-with the fast-tracked Council Proposal. Voting on non-fast-tracked Council Proposals will be blocked
-until the alternating timetable switches the toggles, which stops Public proposals from becoming a referenda.
+Public proposals subject to an [alternating timetable](#alternating-voting-timetable), shown in the
+figure as the "on" and "off" toggles on the external and proposal queues. In this example, the
+Public proposal will be voted on together with the fast-tracked Council Proposal. Voting on
+non-fast-tracked Council Proposals will be blocked until the alternating timetable switches the
+toggles, which stops Public proposals from becoming a referenda.
 
-Referenda will follow an [adaptive quorum biasing](#adaptive-quorum-biasing) mechanism for deciding whether they get enacted, and if they do, they will be executed after
-an [enactment period](#enactment).
+Referenda will follow an [adaptive quorum biasing](#adaptive-quorum-biasing) mechanism for deciding
+whether they get enacted, and if they do, they will be executed after an
+[enactment period](#enactment).
 
-Token holders can delegate their votes (with a conviction multiplier) to another account belonging to a trusted entity voting on their behalf.
+Token holders can delegate their votes (with a conviction multiplier) to another account belonging
+to a trusted entity voting on their behalf.
 
 ## Proposals
 

@@ -262,8 +262,8 @@ locked for the referendum duration.
 
 ## Voting on Referenda
 
-As OpenGov takes both the approval and support into account, there are
-four options to choose from when voting on a referendum:
+As OpenGov takes both the approval and support into account, there are four options to choose from
+when voting on a referendum:
 
 - Aye
 - Nay
@@ -274,9 +274,8 @@ Also, you have to specify the conviction multiplier for this vote. The longer yo
 lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means
 that your vote only counts for 10% of the tokens that you hold.
 
-For detailed instructions on how to vote on OpenGov referenda, check 
+For detailed instructions on how to vote on OpenGov referenda, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184120-polkadot-opengov-how-to-vote)
-
 
 :::caution OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
 
@@ -288,7 +287,7 @@ only works for the old version of governance).
 ### Removing expired voting locks
 
 To remove the lock from votes, you first need to call `removeVote` and then `unlock` through the
-`convictionVoting` pallet. For detailed instructions, check 
+`convictionVoting` pallet. For detailed instructions, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184129-polkadot-js-ui-how-to-remove-expired-referenda-locks)
 
 ## Delegating Voting Power
@@ -299,13 +298,15 @@ For an overview of how delegation works in OpenGov, check out the
 
 ### Delegation Dashboard
 
-To make multi-role delegation easy and intuitive, [Delegation Dashboard](https://delegation.polkadot.network/)
-provides an interactive interface that displays the list of delegates and their details. The video tutorial below
-walks through the features of the Delegation Dashboard and shows how to perform multi-role delegation.
+To make multi-role delegation easy and intuitive,
+[Delegation Dashboard](https://delegation.polkadot.network/) provides an interactive interface that
+displays the list of delegates and their details. The video tutorial below walks through the
+features of the Delegation Dashboard and shows how to perform multi-role delegation.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RapBYZc5ZPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For detailed instructions on how to delegate your voting power using dashboard, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power) If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions
-are available [here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
-
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power)
+If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions are
+available
+[here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
