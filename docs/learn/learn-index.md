@@ -1,6 +1,6 @@
 ---
 id: learn-index
-title: Learn Polkadot
+title: Learn about Polkadot
 sidebar_label: Learn Polkadot
 description: Learn how the Polkadot network works, from the ground up.
 keywords: [learn, index, tools, resources]
