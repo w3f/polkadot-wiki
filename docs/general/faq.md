@@ -179,12 +179,11 @@ tenfold to 1,000,000. Polkadot's TPS is currently around the range of 1,000 TPS 
 This is primarily due to the pending [asynchronous backing upgrade](../learn/learn-async-backing).
 
 It is essential to realize that TPS is inherently a subjective measurement with numerous factors
-that can contribute to it. It's hard to gauge the usefulness of TPS in isolation (when comparing to
-other chains), as it's highly dependent on what a transaction does for a particular network. To view
-how Polkadot measures TPS, take a look at the
-[Polkadot sTPS](https://github.com/paritytech/polkadot-stps)
+that can contribute to it. It's hard to gauge the usefulness of TPS in isolation (when compared to
+other chains), as it depends on what a transaction does for a particular network. To view how
+Polkadot measures TPS, look at the [Polkadot sTPS](https://github.com/paritytech/polkadot-stps)
 ([Standard Transaction Per Second](https://github.com/paritytech/polkadot-stps/blob/main/docs/introduction.md))
-to view exactly how benchmarking was performed for Polkadot.
+to consider precisely how benchmarking was performed for Polkadot.
 
 ## DOT
 
