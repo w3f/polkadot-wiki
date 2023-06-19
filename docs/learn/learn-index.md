@@ -45,7 +45,7 @@ Learn more advanced concepts of the Polkadot network.
 
 ## Network Architecture
 
-Learn more about Polkadot's network architecture in depth:
+Learn more about Polkadot's network architecture in depth.
 
 - [Architecture](./learn-architecture.md) - Learn about the key components to Polkadot's
   Architecture.
