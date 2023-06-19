@@ -7,6 +7,8 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-instructions
 ---
 
+import Tabs from "@theme/Tabs";
+
 This page can also be viewed at the [`xcm-format`](https://github.com/paritytech/xcm-format)
 repository, where each instruction and register is explained in-depth.
 
@@ -74,11 +76,10 @@ repository, where each instruction and register is explained in-depth.
 The following presents the practical mapping of instructions to some of the core functionality to
 XCM [[sdf](./learn-xcm.md/#core-functionality-of-xcm)](./learn-xcm.md/#core-functionality-of-xcm).
 
-### Programmability
-
-These are the primary instructions that enable programmability and branching to be possible.
-Branching in this context is the ability for errors and logic to be handled as needed when dealing
-with a message.
+<Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'}, {label:
+'Functional Multichain Decomposition', value: 'fmd'} ]}> <TabItem value="program"> These are the
+primary instructions that enable programmability and branching to be possible. Branching in this
+context is the ability for errors and logic to be handled as needed when dealing with a message.
 
 - [`ExpectAsset(MultiAssets)`](https://github.com/paritytech/xcm-format/tree/master#expectassetmultiassets) -
   Checks if the Holding register has a specific amount of assets, throws an error if it doesn't.
@@ -95,7 +96,9 @@ with a message.
 
 - `ClearTransactStatus` - Set the Transact Status Register to its default, cleared, value.
 
-### Functional Multichain Decomposition
+</TabItem>
+
+<TabItem value="fmd">
 
 These instructions highlight the key instructions focused on Functional Multichain Decomposition.
 
@@ -111,3 +114,6 @@ These instructions highlight the key instructions focused on Functional Multicha
 
 - `RequestUnlock(MultiAsset, MultiLocation)` - Send an `UnlockAsset` instruction to the `locker` for
   the given `asset`.
+
+</TabItem>
+</Tabs>
