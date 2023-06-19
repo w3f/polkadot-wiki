@@ -61,7 +61,7 @@ Learn more about Polkadot's network architecture in depth.
 
 ## Polkadot Comparisons
 
-Learn how Polkadot compares to other similar technologies:
+Learn how Polkadot compares to other similar technologies.
 
 - [Kusama](./learn-comparisons-kusama.md) - How the canary network, Kusama, differs to Polkadot.
 - [Ethereum](./learn-comparison-ethereum-2.md) - A high-level comparison between Polkadot and
