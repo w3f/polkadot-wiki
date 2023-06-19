@@ -265,6 +265,19 @@ time-delayed proxies. The video goes through the example below.
 
 :::
 
+Announcing `n` calls using a time-delayed proxy also requires a deposit of the form:
+
+`announcementDepositBase` + `announcementDepositFactor` \* `n`
+
+where the `announcementDepositBase` is the required amount to be reserved for an account to announce
+a proxy call. For every proxy call the account has, an additional amount defined by the
+`announcementDepositFactor` is reserved as well. The `announcementDepositBase` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
+and the `announcementDepositFactor` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
+
 Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
 fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
 Charly submits an extrinsic to change the controller to Bob, such extrinsic can be rejected by
