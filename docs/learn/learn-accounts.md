@@ -130,17 +130,17 @@ the situation will look the same).
 
 ### Query Account Data in Polkadot-JS
 
-In the Polkadot-JS UI you can also query account data under
+In the Polkadot-JS UI, you can also query account data under
 [Developer > Chain state](https://polkadot.js.org/apps/#/chainstate). Under `selected state query`
-choose the balances pallet, under `Option` choose an account, and then click on the "+" button on
-the right.
+choose the system pallet followed by `account(AccountId32): FrameSystemAccountInfo`, under `Option`
+choose an account, and then click on the "+" button on the right.
 
 ![account_balance_types](../assets/AccountData-struct.png)
 
 The `AccountData` structure defines the balance types in Substrate. The four types of balances
 include `free`, `reserved`, and `frozen`. The **usable** balance of the account is the amount that
-is `free` minus any funds that are considered `frozen`, while the **total** balance of the account
-is the sum of `free` and`reserved` funds.
+is `free` minus any funds considered `frozen`, while the **total** balance of the account is the sum
+of `free` and`reserved` funds.
 
 ### Unlocking Locks
 
