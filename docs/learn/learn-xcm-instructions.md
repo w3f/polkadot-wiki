@@ -23,6 +23,8 @@ repository, where each instruction and register is explained in-depth.
 - _Refunded Weight_
 - _Transact Status_
 - _Topic_
+- _Transact Status Register_
+- _Topic Register_
 
 ## XCVM Instruction Set
 
