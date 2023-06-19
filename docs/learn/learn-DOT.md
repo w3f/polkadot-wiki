@@ -147,8 +147,10 @@ Watch the video below on how to get started on Westend.
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
 the [cross consensus](learn-xcm.md) message passing aspects of this testnet. General users can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
-[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org). Learn more about Rococo
-on its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
+[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org) or by visiting the
+[testnet faucet page](https://paritytech.github.io/polkadot-testnet-faucet/). Learn more about
+Rococo on its
+[dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
 ### Getting Tokens on the Wococo Testnet
 
