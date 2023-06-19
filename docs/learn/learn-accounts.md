@@ -129,6 +129,11 @@ will look the same).
 
 ### Query Account Data in Polkadot-JS
 
+In the Polkadot-JS UI you can query account data under
+[Developer > Chain state](https://polkadot.js.org/apps/#/chainstate). Under `selected state query`
+choose the balances pallet, under `Option` choose an account, and then click on the "+" button on
+the right.
+
 The `AccountData` structure defines the balance types in Substrate. The four types of balances
 include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen`
 (`feeFrozen` in camel-case).
