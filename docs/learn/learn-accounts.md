@@ -135,20 +135,20 @@ In the Polkadot-JS UI you can also query account data under
 choose the balances pallet, under `Option` choose an account, and then click on the "+" button on
 the right.
 
+![account_balance_types](../assets/AccountData-struct.png)
+
 The `AccountData` structure defines the balance types in Substrate. The four types of balances
 include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen`
 (`feeFrozen` in camel-case).
 
-In general, the **usable** balance of the account is the amount that is `free` minus any funds that
-are considered frozen (either `misc_frozen` or `fee_frozen`) and depend on the reason for which the
-funds are to be used. If the funds are to be used for transfers, then the usable amount is the
-_free_ amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction
-fees, the usable amount would be the _free_ funds minus `fee_frozen`.
+The **usable** balance of the account is the amount that is `free` minus any funds that are
+considered `frozen` (either `misc_frozen` or `fee_frozen`) and reserved, and depend on the reason
+for which the funds are to be used. If the funds are to be used for transfers, then the usable
+amount is the _free_ amount minus any `misc_frozen` funds. However, if the funds are to be used to
+pay transaction fees, the usable amount would be the _free_ funds minus `fee_frozen`.
 
-The **total** balance of the account is considered to be the sum of `free` and `reserved` funds in
-the account. Reserved funds are held due to on-chain requirements and can usually be freed by taking
-some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
-is registered, but by clearing the identity, you can unreserve the funds and make them free again.
+The **total** balance of the account is considered to be the sum of `free`, `reserved` and `frozen`
+funds in the account.
 
 ### Unlocking Locks
 
