@@ -12,8 +12,7 @@ Welcome to the learner's section of the Polkadot Wiki.
 Whether you are a developer or someone just getting started with
 blockchain, here you will learn how the Polkadot network works from the ground up - from accounts to the protocols that power the Polkadot network.
 
-There are a series of video tutorials which are also provided, which you may
-[find here](./learn-video-tutorials.md).
+If you want to learn more about how to use different tools on Polkadot, you can visit the [Polkadot Technical Explainers playlist](https://youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8) on YouTube.
 
 ## The Basics: DOT, Accounts, & Staking
 
