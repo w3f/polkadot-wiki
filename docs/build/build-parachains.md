@@ -344,7 +344,7 @@ proposed parachains is available
 
 ### Obtaining ROC
 
-Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
+Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
 ROCs tokens.
 
 ### Build and Register a Rococo Parathread
