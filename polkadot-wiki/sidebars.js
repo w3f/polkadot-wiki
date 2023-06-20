@@ -105,7 +105,7 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-opengov",
+                "learn/learn-polkadot-opengov",
                 "learn/learn-treasury",
                 "learn/learn-consensus",
               ],
