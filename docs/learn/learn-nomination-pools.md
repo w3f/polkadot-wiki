@@ -48,8 +48,9 @@ Learn the key differences between
 **For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot
 Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
 
-**If you become a nomination pool member, you cannot participate in Governance, nor does the pool
-admin as funds are held in a [system account](./learn-account-advanced.md#system-accounts).**
+**If you become a nomination pool member, you cannot participate in Governance with bonded tokens,
+nor does the pool admin as funds are held in a
+[system account](./learn-account-advanced.md#system-accounts).**
 
 :::
 
