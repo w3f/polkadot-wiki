@@ -1,10 +1,10 @@
 ---
 id: learn-opengov
-title: OpenGov
-sidebar_label: OpenGov
+title: Polkadot OpenGov
+sidebar_label: Polkadot OpenGov
 description: Learn about Polkadot’s next generation of decentralised governance.
 keywords: [governance, referenda, proposal, voting, endorse]
-slug: ../learn-opengov
+slug: ../learn-polkadot-opengov
 ---
 
 import RPC from "./../../components/RPC-Connection";
@@ -32,7 +32,8 @@ For additional support about OpenGov see the
 You can easily delegate your votes to somebody else using the
 [Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
 [this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to learn how to use the
-dashboard. **If you become a nomination pool member or a pool admin, you cannot participate in Governance with the bonded tokens in the pool, as they are held in a
+dashboard. **If you become a nomination pool member or a pool admin, you cannot participate in
+Governance with the bonded tokens in the pool, as they are held in a
 [system account](./learn-account-advanced.md#system-accounts).**
 
 :::

@@ -100,7 +100,7 @@ module.exports = {
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/learn-opengov',
+            to: '/docs/learn-polkadot-opengov',
             from: ['/docs/learn-gov2']
           },
           {
@@ -166,6 +166,10 @@ module.exports = {
           {
             to: '/docs/learn-parachains-protocol',
             from: ['/docs/learn-availability']
+          },
+          {
+            to: '/docs/learn-polkadot-opengov',
+            from: ['/docs/learn-opengov']
           }
         ],
         createRedirects: function (existingPath) {
