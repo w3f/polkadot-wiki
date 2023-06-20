@@ -1,10 +1,10 @@
 ---
-id: maintain-guides-opengov
-title: Participate in OpenGov
-sidebar_label: Participate in OpenGov
+id: maintain-guides-polkadot-opengov
+title: Participate in Polkadot OpenGov
+sidebar_label: Participate in Polkadot OpenGov
 description: Steps on how to participate in OpenGov.
 keywords: [democracy, council, action, proposal, referenda]
-slug: ../maintain-guides-opengov
+slug: ../maintain-guides-polkadot-opengov
 ---
 
 import Tracks from "./../../components/Referenda-Tracks"; import Chart from

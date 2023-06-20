@@ -101,7 +101,7 @@ module.exports = {
           },
           {
             to: '/docs/learn-polkadot-opengov',
-            from: ['/docs/learn-gov2']
+            from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
             to: '/docs/wallets',
@@ -168,8 +168,8 @@ module.exports = {
             from: ['/docs/learn-availability']
           },
           {
-            to: '/docs/learn-polkadot-opengov',
-            from: ['/docs/learn-opengov']
+            to: '/docs/maintain-guides-polkadot-opengov',
+            from: ['/docs/maintain-guides-opengov']
           }
         ],
         createRedirects: function (existingPath) {
