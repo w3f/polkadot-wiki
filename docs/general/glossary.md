@@ -419,10 +419,11 @@ This is a message that is broadcast by a validator to verify to the network that
 online, even if they haven't published a block this epoch. This is sometimes referred to as
 "ImOnline".
 
-## OpenGov
+## Polkadot OpenGov
 
-Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov)
-serves as the current governance protocol for both Kusama and Polkadot.
+Previously known as Governance v2 (Gov2) during early development,
+[Polkadot OpenGov](../learn/learn-polkadot-opengov) serves as the current governance protocol for
+both Kusama and Polkadot.
 
 ## Origin
 
@@ -700,9 +701,10 @@ The process of replacing sensitive data with non-sensitive data.
 ## Tracks
 
 Each [Origin](#origin) is associated with a single referendum class and each class is associated
-with a [Track](../maintain/maintain-guides-opengov#origins-and-tracks). The Track outlines the
-lifecycle for the proposal and is independent from other class's tracks. Having independent tracks
-allows the network to tailor the dynamics of referenda based upon their implied privilege level.
+with a [Track](../maintain/maintain-guides-polkadot-opengov#origins-and-tracks). The Track outlines
+the lifecycle for the proposal and is independent from other class's tracks. Having independent
+tracks allows the network to tailor the dynamics of referenda based upon their implied privilege
+level.
 
 ## Tranche
 
