@@ -68,9 +68,15 @@ The process of computing the optimal solution for NPoS election can be delegated
 
 ### Council Elections
 
-The Phragmén method is also used in the council election mechanism. When you vote for council
-members, you can select up to 16 different candidates, and then place a reserved bond as the weight
-of your vote. Phragmén will run once on every election to determine the top candidates to assume
+:::info Deprecated in OpenGov
+
+Phragmen was used for Council elections in [Governance v1](./learn-governance.md).
+
+:::
+
+The Phragmén method was also used in the council election mechanism. When you voted for council
+members, you could select up to 16 different candidates and then place a reserved bond as the weight
+of your vote. Phragmén would run once on every election to determine the top candidates to assume
 council positions and then again amongst the top candidates to equalize the weight of the votes
 behind them as much as possible.
 
