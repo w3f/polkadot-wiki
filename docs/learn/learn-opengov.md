@@ -503,7 +503,9 @@ determined that the action is both safe and time-critical.
 Let's take the example that you would like to increase the active validator count to 1000.
 
 - You [submit a preimage](../maintain/maintain-guides-opengov.md#submitting-a-preimage) with the
-  call that sets number of validators to 1000.
+  call that sets number of validators to 1000. Note that the call must be of the form
+  `whitelist.dispatchWhitelistedCallWhithPreimage(call)`. Failing to do so will result in your
+  whitelisted call being rejected.
 - You could directly submit this to Root track or go through the whitelisting process with the
   Technical Fellowship. If whitelisted your proposal will take less time to be voted on and enacted,
   than choosing thr Root track.
@@ -511,7 +513,9 @@ Let's take the example that you would like to increase the active validator coun
   of the call for your proposal.
 - Someone from the fellowship will create a fellowship referendum to whitelist that call and it will
   be voted on by the fellowship members only.
-- Once the call is whitelisted, you can submit a referenda proposal with whitelist origin.
+- Once the call is whitelisted, you can
+  [submit a referenda proposal](../maintain/maintain-guides-opengov.md#submitting-a-proposal) with
+  whitelist origin.
 - The public now votes on the referendum after a decision deposit has been placed.
 - Once it is successfully passed, it gets enacted successfully as the call has been whitelisted.
 
