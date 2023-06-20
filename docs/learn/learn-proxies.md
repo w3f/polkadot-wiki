@@ -239,10 +239,10 @@ list (creates one new item in storage). For every proxy the account has, an addi
 defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location). The
 `ProxyDepositBase` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
 and the `ProxyDepositFactor` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/>. :kusama }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/>. :kusama }}
 
 ## Time-delayed Proxy
 
@@ -264,6 +264,19 @@ See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can set
 time-delayed proxies. The video goes through the example below.
 
 :::
+
+Announcing `n` calls using a time-delayed proxy also requires a deposit of the form:
+
+`announcementDepositBase` + `announcementDepositFactor` \* `n`
+
+where the `announcementDepositBase` is the required amount to be reserved for an account to announce
+a proxy call. For every proxy call the account has, an additional amount defined by the
+`announcementDepositFactor` is reserved as well. The `announcementDepositBase` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
+and the `announcementDepositFactor` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
 
 Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
 fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
