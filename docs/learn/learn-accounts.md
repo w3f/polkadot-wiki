@@ -157,7 +157,7 @@ is `free` minus any funds considered `frozen`, while the **total** balance of th
 of `free` and`reserved` funds. The `flags` describe extra information about the account.
 
 More in-depth information about the above data can be found in the
-[substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).
+[balances pallet in the Substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).
 
 ### Unlocking Locks
 
