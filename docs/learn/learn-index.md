@@ -74,7 +74,7 @@ Learn how Polkadot compares to other similar technologies.
 - [Layer Two and Rollups](./learn-comparison-rollups.md) - Comparisons between various rollup and
   layer two protocols and how they relate to Polkadot.
 
-## Future Implementations & Upcoming Features
+## Future Implementations
 
 Learn about upcoming innovations for the Polkadot network that are not yet implemented.
 
