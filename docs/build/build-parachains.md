@@ -344,12 +344,8 @@ proposed parachains is available
 
 ### Obtaining ROC
 
-ROC are available in the [Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org)
-channel on Matrix. To receive ROC tokens, use the command:
-
-```
-!drip YOUR_ROCOCO_ADDRESS
-```
+Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
+ROCs tokens.
 
 ### Build and Register a Rococo Parathread
 
