@@ -64,8 +64,8 @@ module.exports = {
       {
        redirects: [
           {
-            to: '/docs/learn-opengov',
-            from: ['/docs/learn-gov2']
+            to: '/docs/learn-polkadot-opengov',
+            from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
             to: '/docs/learn-account-advanced',
@@ -82,6 +82,10 @@ module.exports = {
           {
             to: '/docs/bug-bounty',
             from: ['/docs/maintain-bug-bounty']
+          },
+          {
+            to: '/docs/maintain-guides-polkadot-opengov',
+            from: ['/docs/maintain-guides-opengov']
           }
         ],
         createRedirects: function (existingPath) {

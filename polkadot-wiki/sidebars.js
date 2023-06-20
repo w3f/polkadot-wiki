@@ -105,7 +105,7 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-opengov",
+                "learn/learn-polkadot-opengov",
                 "learn/learn-treasury",
                 "learn/learn-consensus",
               ],
@@ -293,7 +293,7 @@ module.exports = {
           label: "Governance Guides",
           items: [
             "maintain/maintain-guides-democracy",
-            "maintain/maintain-guides-opengov",
+            "maintain/maintain-guides-polkadot-opengov",
             "maintain/maintain-guides-how-to-join-council",
             "maintain/maintain-guides-how-to-vote-councillor",
           ],

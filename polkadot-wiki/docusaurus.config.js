@@ -100,8 +100,8 @@ module.exports = {
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/learn-opengov',
-            from: ['/docs/learn-gov2']
+            to: '/docs/learn-polkadot-opengov',
+            from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
             to: '/docs/wallets',
@@ -166,6 +166,10 @@ module.exports = {
           {
             to: '/docs/learn-parachains-protocol',
             from: ['/docs/learn-availability']
+          },
+          {
+            to: '/docs/maintain-guides-polkadot-opengov',
+            from: ['/docs/maintain-guides-opengov']
           }
         ],
         createRedirects: function (existingPath) {
