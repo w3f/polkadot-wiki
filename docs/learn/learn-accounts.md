@@ -143,7 +143,7 @@ Account information include:
   account cannot be reaped until this is zero.
 - `providers`, the number of other modules that allow this account to exist. The account may not be
   reaped until this and `sufficients` are both zero.
-- `sufficients`, the number of modules that allow this account to exist for their own purposes only.
+- `sufficients`, the number of modules that allow this account to exist for their own purposes.
   The account may not be reaped until this and `providers` are both zero.
 - `data`, the additional data that belongs to this account. Used to store the balance(s) in a lot of
   chains.
