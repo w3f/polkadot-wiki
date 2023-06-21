@@ -82,7 +82,7 @@ development.
 ## Instructions Application Example
 
 The following presents the practical mapping of instructions to some
-[core functionality to XCM](./learn-xcm.md/#core-functionality-of-xcm).
+[core functionality in XCM](./learn-xcm.md/#core-functionality-of-xcm).
 
 <Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'}, {label:
 'Functional Multichain Decomposition', value: 'fmd'} ]}>
