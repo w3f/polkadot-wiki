@@ -75,7 +75,7 @@ the Polkadot platform.
 
 Polkadot will enable any holder of DOT to participate in governance. For details on how holders can
 participate in governance, as well as their rights and responsibilities, see the
-[governance page](learn-opengov.md).
+[governance page](./learn-polkadot-opengov.md).
 
 ### DOT for Consensus
 

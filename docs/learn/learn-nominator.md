@@ -54,7 +54,7 @@ Make sure you read those pages as well before nominating.
   next-gen Internet, Web3: a decentralized, privacy-focused, and trustless internet.
 - You are an essential piece of the puzzle, keeping
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure. The bonded balance can be
-  used to vote in [OpenGov](./learn-opengov.md) and shape the future direction of
+  used to vote in [Polkadot OpenGov](./learn-polkadot-opengov.md) and shape the future direction of
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 - You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
   works at a technical-level. When you feel comfortable with your nomination skills and knowledge,

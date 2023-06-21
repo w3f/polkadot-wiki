@@ -68,7 +68,7 @@ The process of computing the optimal solution for NPoS election can be delegated
 
 ### Council Elections
 
-:::info Deprecated in OpenGov
+:::info Deprecated in Polkadot OpenGov
 
 Phragmen was used for Council elections in [Governance v1](./learn-governance.md).
 

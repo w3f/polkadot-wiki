@@ -122,8 +122,8 @@ Polkadot network.
 
 Some of these collectives are the
 [Polkadot Alliance](https://polkadot.polkassembly.io/referendum/94) and the Polkadot Technical
-[Fellowship](./learn-opengov.md#fellowship). These on-chain collectives will play important roles in
-the future of network stewardship and decentralized governance.
+[Fellowship](./learn-polkadot-opengov.md#the-technical-fellowship). These on-chain collectives will
+play important roles in the future of network stewardship and decentralized governance.
 
 Networks themselves can act as collectives and express their legislative voices as single opinions
 within other networks. This is achieved with the assistance from a [bridge hub](#bridge-hubs).

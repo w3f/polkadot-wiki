@@ -7,11 +7,12 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
-:::caution OpenGov is Live! This document will soon be archived.
+:::caution Polkadot OpenGov is Live! This document will soon be archived.
 
-OpenGov: Polkadot’s next generation of decentralized governance is live on Polkadot and Kusama.
-Check [OpenGov page](../learn/learn-opengov.md) for a detailed explanation of the latest features of
-Polkadot governance. The democracy pallet (Gov1) will soon be deprecated.
+Polkadot OpenGov: Polkadot’s next generation of decentralized governance is live on Polkadot and
+Kusama. Check the [Polkadot OpenGov page](../learn/learn-polkadot-opengov.md) for a detailed
+explanation of the latest features of Polkadot governance. The democracy pallet (Gov1) will soon be
+deprecated.
 
 :::
 
