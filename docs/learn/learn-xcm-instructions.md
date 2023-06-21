@@ -15,8 +15,8 @@ repository, where each instruction and register is explained in-depth.
 :::caution
 
 For a more practical approach to utilizing XCM registers and instructions, refer to the
-[XCM Docs](https://paritytech.github.io/xcm-docs/). Please keep in mind that XCM is
-under active development.
+[XCM Docs](https://paritytech.github.io/xcm-docs/). Please keep in mind that XCM is under active
+development.
 
 :::
 
@@ -81,8 +81,8 @@ under active development.
 
 ## Instructions Application Example
 
-The following presents the practical mapping of instructions to some of the core functionality to
-XCM [sdf](./learn-xcm.md/#core-functionality-of-xcm).
+The following presents the practical mapping of instructions to some
+[core functionality to XCM](./learn-xcm.md/#core-functionality-of-xcm).
 
 <Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'}, {label:
 'Functional Multichain Decomposition', value: 'fmd'} ]}>
