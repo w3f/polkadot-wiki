@@ -110,7 +110,8 @@ In addition to staking, in the Network section, you can also:
 
 ### Governance
 
-In this section of the UI, you can participate in [**governance**](../learn/learn-opengov.md).
+In this section of the UI, you can participate in
+[**governance**](../learn/learn-polkadot-opengov.md).
 
 ### Developer
 
