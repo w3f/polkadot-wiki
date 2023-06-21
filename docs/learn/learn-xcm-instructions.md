@@ -82,7 +82,7 @@ under active development.
 ## Instructions Application Example
 
 The following presents the practical mapping of instructions to some of the core functionality to
-XCM [[sdf](./learn-xcm.md/#core-functionality-of-xcm)](./learn-xcm.md/#core-functionality-of-xcm).
+XCM [sdf](./learn-xcm.md/#core-functionality-of-xcm).
 
 <Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'}, {label:
 'Functional Multichain Decomposition', value: 'fmd'} ]}>
