@@ -15,8 +15,8 @@ repository, where each instruction and register is explained in-depth.
 :::caution
 
 For a more practical approach to utilizing XCM registers and instructions, refer to the
-[XCM Docs](https://paritytech.github.io/xcm-docs/). Please keep in mind that these are currently
-under development.
+[XCM Docs](https://paritytech.github.io/xcm-docs/). Please keep in mind that XCM is
+under active development.
 
 :::
 
