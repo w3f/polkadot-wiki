@@ -9,8 +9,8 @@ slug: ../learn-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ kusama: **OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
-[OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)** :kusama }}
+{{ kusama: **Polkadot OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
+[OpenGov tracks.](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info)** :kusama }}
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
@@ -83,7 +83,7 @@ The Treasury is funded from different sources:
 
 {{ kusama: **Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
 Check the instructions on
-[how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).** :kusama }}
+[how to submit a proposal through Polkadot OpenGov](../maintain/maintain-guides-polkadot-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).** :kusama }}
 
 {{ kusama: **Your proposal should address a problem, outline a goal, give a detailed account of how you will
 reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize

@@ -120,9 +120,9 @@ medium other than the protocol itself. Upgrades on Ethereum will follow the stan
 procedure, requiring validators to upgrade their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
-[governance](./learn-opengov.md) with a multicameral system. There are several avenues to issue
-proposals, and all proposals ultimately pass through a public referendum, where the majority of
-tokens can always control the outcome.
+[governance](./learn-polkadot-opengov.md) with a multicameral system. There are several avenues to
+issue proposals, and all proposals ultimately pass through a public referendum, where the majority
+of tokens can always control the outcome.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
 [adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) to set the passing
 threshold for low-turnout referenda. Referenda can cover various topics, including fund allocation
