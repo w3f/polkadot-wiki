@@ -172,7 +172,7 @@ module.exports = {
             from: ['/docs/maintain-guides-opengov']
           },
           {
-            to: '/general/third-party-wallets',
+            to: '/general/wallets-and-extensions',
             from: ['/general/wallets']
           }
         ],

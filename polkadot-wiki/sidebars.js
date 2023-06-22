@@ -23,7 +23,7 @@ module.exports = {
             slug: '/wallets',
           },
           items: [
-            "general/third-party-wallets",
+            "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
             "general/polkadotjs-ui",
