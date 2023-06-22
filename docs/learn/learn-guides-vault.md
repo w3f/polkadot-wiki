@@ -1,10 +1,10 @@
 ---
-id: learn-vault-guides
+id: learn-guides-vault
 title: Vault How-to Guides
 sidebar_label: Polkadot Vault
 description: Learn about the Polkadot Vault
 keywords: [parity signer, signer, polkadot vault]
-slug: ../learn-vault-guides
+slug: ../learn-guides-vault
 ---
 
 :::danger This page is for developers and power users only

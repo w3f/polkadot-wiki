@@ -1,10 +1,10 @@
 ---
-id: learn-identity-guides
+id: learn-guides-identity
 title: Identity How-to Guides
 sidebar_label: Identity
 description: Advanced How-to Guides about Identity.
 keywords: [registrar, identity]
-slug: ../learn-identity-guides
+slug: ../learn-guides-identity
 ---
 
 ## Registrars
