@@ -1,10 +1,10 @@
 ---
-id: wallets
-title: Wallets
-sidebar_label: Wallets
+id: wallets-and-extensions
+title: Wallets and Extensions
+sidebar_label: Wallets and Extensions
 description: An overview of wallets in Polkadot ecosystem.
 keywords: [wallets, account, signer, supported wallets, balance, token]
-slug: ../wallets
+slug: ../wallets-and-extensions
 ---
 
 :::caution

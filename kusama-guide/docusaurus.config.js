@@ -88,7 +88,11 @@ module.exports = {
             from: ['/docs/maintain-guides-opengov']
           },
           {
-            to: '/general/ledger',
+            to: '/general/wallets-and-extensions',
+            from: ['/general/wallets']
+          },
+          {
+            to: '/docs/learn-guides-assets-ledger',
             from: ['/general/kusama/kusama-statemine-ledger']
           }
         ],
