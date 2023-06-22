@@ -63,7 +63,7 @@ having dust balances.
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-assets-guides.md#statemint) to learn more about creating assets using
+See [this page](./learn-guides-assets-create.md) to learn more about creating assets using
 {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
 
 :::
