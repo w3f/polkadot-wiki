@@ -16,8 +16,14 @@ module.exports = {
         {
           type: "category",
           label: "Wallets",
+          link: {
+            type: 'generated-index',
+            title: 'Wallets',
+            description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
+            slug: '/wallets',
+          },
           items: [
-            "general/wallets",
+            "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
             "general/polkadotjs-ui",

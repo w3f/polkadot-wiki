@@ -94,6 +94,10 @@ module.exports = {
           {
             to: '/docs/learn-guides-assets-ledger',
             from: ['/general/kusama/kusama-statemine-ledger']
+          },
+          {
+            to: '/general/wallets-and-extensions',
+            from: ['/general/wallets']
           }
         ],
         createRedirects: function (existingPath) {

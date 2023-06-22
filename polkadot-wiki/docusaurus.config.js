@@ -182,6 +182,10 @@ module.exports = {
           {
             to: '/docs/learn-guides-vault',
             from: ['/docs/learn-vault-guides']
+          },
+          {
+            to: '/general/wallets-and-extensions',
+            from: ['/general/wallets']
           }
         ],
         createRedirects: function (existingPath) {
