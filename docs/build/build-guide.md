@@ -106,8 +106,6 @@ to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Building Parachains
 
-![build 2](../assets/build-2.png)
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
 Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
 shared security of multiple [parachains](../learn/learn-parachains.md), which are _layer one_
@@ -248,7 +246,19 @@ To learn how to build a pallet, follow the
 
 ## Developing Smart Contracts
 
-Smart contracts are another option that enables for an often simpler developer experience.
+Smart contracts are another option that enables for an often simpler developer experience. Below is
+a quick comparison of how building a smart contract compares to building a parachain:
+
+|                         | Parachains | Smart Contracts |
+| ----------------------- | ---------- | --------------- |
+| Speed of Development    | -          | +               |
+| Ease of Deployment      | -          | +               |
+| Complexity of logic     | +          | -               |
+| Maintenance overhead    | -          | +               |
+| Level of customization  | +          | -               |
+| Strict resource control | -          | +               |
+| Native chain features   | +          | -               |
+| Scalability             | +          | -               |
 
 :::info What's the difference between a smart contract and a pallet?
 
