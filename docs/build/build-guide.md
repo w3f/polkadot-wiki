@@ -148,13 +148,6 @@ PDKs) and you get all of the benefits of building a parachain, without the drawb
 
 :::
 
-You may also decide to harness a combination of parachain, parathread, and smart contract. If you
-have certain logic that requires loops and it cannot be removed, use the native parachain
-runtime/STF to handle all complex logic and the smart contract to call iteration. If you require
-off-chain data from an oracle, you may want to use a parathread as an oracle feed that only triggers
-once every 24 hours (this makes the most sense if the data is useful to other players in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem too).
-
 ### Constructing FRAME Runtimes with Substrate
 
 Polkadot is built using the [Substrate](https://substrate.io/) framework.
@@ -237,6 +230,7 @@ process of hard-forks.
 Some examples of features you can have on a parachain or parathread:
 
 - Custom fee structure (for example, pay a flat fee for transactions or pay per byte).
+- Shared security and finalization via the relay chain (Polkadot or Kusama).
 - Custom monetary policy for the native token and local economy.
 - Treasury to be funded through transitions in your state function.
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
@@ -283,17 +277,16 @@ for more information about the environments provided.
 :::
 
 A popular choice for smart contracts is [ink!](https://use.ink/), however on other parachains,
-EVM-based contracts written in Solidity are also available!
+EVM-based contracts written in Solidity [are also available](./build-smart-contracts#parachains).
 
 Because smart contracts exist on a single chain at a time, they can have smooth interoperability
 with other smart contracts on the same chain. However, they will always be constrained and limited
 by the inherent characteristics of their host chain.
 
 As a developer, you will need to consider the storage and complexity of your smart contract to
-ensure that gas usage stays within reasonable bounds. Storage will likely be expensive for whichever
-smart contract platform you use, so it is necessary to keep as much data off-chain as possible. You
-may consider using the listed options on the [decentralized storage](build-storage.md) page to keep
-the data and submitting only the content address on chain.
+ensure that gas usage stays within reasonable bounds. You may consider using the listed options on
+the [decentralized storage](build-storage.md) page to keep the data and submitting only the content
+address on chain.
 
 :::info Building a smart contract
 
@@ -302,24 +295,14 @@ a smart contract.
 
 :::
 
-## Developing a dApp
+## Developing a dApp/uApp
 
-If one simply wishes to develop a dApp, it is most likely that learning how the RPC interfaces of
-Substrate work. The Polkadot ecosystem contains a wide variety of SDKs to tap into both the relay
-chain and parachains.
+If one's goal is to develop a **dApp** (Decentralized App), or **uApp** (Unstoppable App) it is most
+likely that learning how the RPC interfaces of Substrate work. The Polkadot ecosystem contains a
+wide variety of SDKs to tap into both the relay chain and parachains.
 
 For front end applications, there are several options for interfacing with Substrate-based chains
 (parachains, relay chains etc) and smart contracts:
-
-<!-- <Tabs groupId="client-libraries" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'CAPI',
-value: 'capi'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink', value: 'ink'} ]}>
-<TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate based chains via RPC
-calls. It is dynamically generated based on what the Substrate runtime provides in terms of
-metadata. Full documentation & examples available. </TabItem> <TabItem value="capi"> Capi is a
-framework (based on Typescript) for crafting interactions with Substrate chains. It consists of a
-development server and fluent API, which facilitates multichain interactions without compromising
-either performance or ease of use. </TabItem> <TabItem value="subxt"> Submit extrinsics
-(transactions) to a Substrate node via RPC using Rust. Also referred to as Rust Parity. </TabItem> </Tabs> -->
 
 <Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'Subxt', value:
 'subxt'}, {label: 'CAPI', value: 'capi'}, {label: 'React Hooks for ink!', value: 'ink'} ]}>
