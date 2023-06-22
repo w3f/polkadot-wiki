@@ -148,8 +148,8 @@ module.exports = {
             from: ['/docs/learn-staking-miner']
           },
           {
-            to: '/docs/learn-assets-guides',
-            from: ['/docs/learn-statemint']
+            to: '/docs/learn-guides-assets-create',
+            from: ['/docs/learn-statemint', '/docs/learn-assets-guides']
           },
           {
             to: '/docs/learn-comparisons-kusama',
