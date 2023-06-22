@@ -53,7 +53,7 @@ module.exports = {
               items: [
                 "learn/learn-treasury",
                 "learn/learn-assets",
-                "learn/learn-assets-guides,
+                "learn/learn-guides-assets-create",
                 "learn/learn-teleport",
               ],
         },
@@ -98,7 +98,7 @@ module.exports = {
               label: "Ledger",
               items: [
                 "general/kusama/kusama-ledger",
-                "general/kusama/kusama-statemine-ledger",
+                "learn/learn-guides-assets-ledger",
               ],
         },
       ],

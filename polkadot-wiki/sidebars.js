@@ -135,7 +135,14 @@ module.exports = {
               items: [
                 "learn/learn-staking-guides",
                 "learn/learn-identity-guides",
-                "learn/learn-assets-guides",
+                {
+                  type: "category",
+                  label: "Asset Hub",
+                  items: [
+                    "learn/learn-guides-assets-create",
+                    "learn/learn-guides-assets-ledger"
+                  ],
+                },
                 "learn/learn-vault-guides",
               ],
             },
