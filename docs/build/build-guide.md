@@ -47,9 +47,21 @@ context about the application you could make.
 ## Development Ecosystem Overview
 
 ```mermaid
----
-title: Polkadot Development Paths
----
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'fontFamily': 'Unbounded',
+      'primaryColor': '#E6007A',
+      'fontSize': '18px',
+      'primaryTextColor': '#fff',
+      'primaryBorderColor': '#7C0000',
+      'lineColor': '#140523',
+      'secondaryColor': '#552BBF',
+      'tertiaryColor': '#fff'
+    }
+  }
+}%%
 flowchart TB
     subgraph PL ["Protocol Side (Parachains, Smart Contracts)"]
         ST[Build a Blockchain]
@@ -61,7 +73,7 @@ flowchart TB
         R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
     end
 
-    CS-->|Develop apps| PL
+    CS-->| Develop apps| PL
 
     subgraph CS ["Client Side (dApps/uApps)"]
         UA[UApp - Smoldot]
