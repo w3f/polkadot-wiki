@@ -53,7 +53,7 @@ module.exports = {
               items: [
                 "learn/learn-treasury",
                 "learn/learn-assets",
-                "general/kusama/kusama-statemine",
+                "learn/learn-assets-guides,
                 "learn/learn-teleport",
               ],
         },
