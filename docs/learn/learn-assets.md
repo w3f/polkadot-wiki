@@ -48,7 +48,7 @@ to learn how to create fungible assets on Statemine. The same procedure applies 
 :::
 
 Anyone on the network can create assets on
-{{ polkadot: Statemint, :polkadot }}{{ kusama: Statemine, :kusama }} as long as they can reserve the
+Asset Hub as long as they can reserve the
 required deposit of
 {{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
