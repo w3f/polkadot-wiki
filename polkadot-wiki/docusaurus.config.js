@@ -170,6 +170,18 @@ module.exports = {
           {
             to: '/docs/maintain-guides-polkadot-opengov',
             from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/docs/learn-guides-staking',
+            from: ['/docs/learn-staking-guides']
+          },
+          {
+            to: '/docs/learn-guides-identity',
+            from: ['/docs/learn-identity-guides']
+          },
+          {
+            to: '/docs/learn-guides-vault',
+            from: ['/docs/learn-vault-guides']
           }
         ],
         createRedirects: function (existingPath) {
