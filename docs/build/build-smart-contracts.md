@@ -12,6 +12,9 @@ blockchain, does not support smart contracts natively. However, parachains which
 blockchains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the
 functionality to support smart contracts.
 
+The two primary, supported smart contract environments that [ink!](#ink) and EVM. There are multiple
+[parachains that support both environments](#parachains).
+
 ## Difference between developing a smart contract and a parachain
 
 ### Layer of Abstraction
@@ -191,6 +194,9 @@ created and maintained list of different smart contract platforms building on
 
 #### Moonbeam
 
+- ink! Support: **Unsupported**
+- EVM (Solidity) Support: **Supported**
+
 [Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
 parachain and will support Ethereum compatible smart contracts. Since Moonbeam uses
 [Frontier](https://github.com/paritytech/frontier), an interoperability layer with existing Ethereum
@@ -206,6 +212,9 @@ Try deploying a smart contract to Moonbeam by following their
 [documentation](https://docs.moonbeam.network/).
 
 #### Astar
+
+- ink! Support: **Supported**
+- EVM (Solidity) Support: **Supported**
 
 [Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart
 contracts and offers developers true interoperability. True interoperability with cross-consensus
@@ -223,6 +232,9 @@ Try deploying an Ethereum or ink! smart contract by following their
 
 #### Acala
 
+- ink! Support: **Unsupported**
+- EVM (Solidity) Support: **Supported**
+
 [Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
 delivering a set of protocols to serve as the DeFi hub on Polkadot.
 [Karura](https://acala.network/karura), Acala's canary network is live as a parachain on Kusama.
@@ -234,6 +246,9 @@ Try deploying an Acala EVM smart contract by following their
 
 #### Phala
 
+- ink! Support: **Unsupported**
+- EVM (Solidity) Support: **Not supported**
+
 [Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
 strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala
 will enable the use of confidential smart contracts on Polkadot.
@@ -244,6 +259,9 @@ Try deploying a confidential smart contract by following their
 [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
 
 #### Darwinia
+
+- ink! Support: **Unsupported**
+- EVM (Solidity) Support: **Supported**
 
 [Darwinia](https://darwinia.network/) is a cross-chain programmable network that provides two
 essential solutions: `Darwinia Chain` and `Darwinia Msgport`. `Darwinia Chain` is a smart contract
@@ -269,5 +287,3 @@ talk about them. Developers may be interested in joining the
 [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
 [social channels](../general/community.md).
-
-All the best.
