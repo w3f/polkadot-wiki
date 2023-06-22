@@ -86,6 +86,10 @@ module.exports = {
           {
             to: '/docs/maintain-guides-polkadot-opengov',
             from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/general/wallets-and-extensions',
+            from: ['/general/wallets']
           }
         ],
         createRedirects: function (existingPath) {
