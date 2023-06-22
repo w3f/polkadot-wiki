@@ -11,9 +11,9 @@ import Tabs from "@theme/Tabs";
 
 import TabItem from "@theme/TabItem";
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol with two goals: providing **shared security** among all connected
-parachains and allowing all connected chains to **interoperate** by using
-[XCM](../learn/learn-xcm.md). With the advent of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol with two
+goals: providing **shared security** among all connected parachains and allowing all connected
+chains to **interoperate** by using [XCM](../learn/learn-xcm.md). With the advent of
 [PDKs](../build/build-parachains.md#parachain-development-kit) like
 [Substrate](https://substrate.io/) and [Cumulus](https://github.com/paritytech/cumulus), the time it
 takes to develop and launch a new chain has dropped significantly. While before it would take years
@@ -33,18 +33,44 @@ This build guide provides four different tracks:
 
 :::info
 
-Keep in mind that these tracks are merely suggestive, and there are many ways to utilize {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
-Substrate, and their various developmental components. For more inspiration, take a look at the
+Keep in mind that these tracks are merely suggestive, and there are many ways to utilize
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, Substrate, and their various
+developmental components. For more inspiration, take a look at the
 [open source projects](./build-open-source.md) featured here in the wiki!
 
 :::
 
-Before diving into any one of these tracks, it is encouraged to read about {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks
-in order to gain context about the application you could make.
+Before diving into any one of these tracks, it is encouraged to read about
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
+context about the application you could make.
 
 ## Development Ecosystem Overview
 
-![Path to Building a Parachain](../assets/parachain-development.png)
+```mermaid
+---
+title: Polkadot Development Paths
+---
+flowchart TB
+    subgraph PL ["Protocol Side (Parachains, Smart Contracts)"]
+        ST[Build a Blockchain]
+        BSC[Develop a Smart Contract] --> SC[Smart Contract Parachain]
+        SC --> ink!
+        SC --> Solidity
+        ST --> R[WASM Runtime - FRAME]
+        R -->Parachain["Parachain"]-->SSC["Shared Security - Cumulus"]
+        R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
+    end
+
+    CS-->|Develop apps| PL
+
+    subgraph CS ["Client Side (dApps/uApps)"]
+        UA[UApp - Smoldot]
+        UA --> CAPI
+        UA --> PJS[Polkadot JS]
+        UA --> SubXT
+        SubXT
+    end
+```
 
 Before diving into the various paths one can take in developing on
 {{ polkadot: Polkadot :polkadot }}, it's important to realize and know key terms that make up the
@@ -83,10 +109,11 @@ to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ![build 2](../assets/build-2.png)
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the Relay Chain. It is
-also considered a _layer zero_ protocol, as it enables for the interoperability and shared security
-of multiple [parachains](../learn/learn-parachains.md), which are _layer one_ protocols. Parachains
-connect to a relay chain using the [Parachains Protocol](../learn/learn-parachains-protocol.md).
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
+Relay Chain. It is also considered a _layer zero_ protocol, as it enables for the interoperability
+and shared security of multiple [parachains](../learn/learn-parachains.md), which are _layer one_
+protocols. Parachains connect to a relay chain using the
+[Parachains Protocol](../learn/learn-parachains-protocol.md).
 
 ![build 1](../assets/build-1.png)
 
@@ -95,7 +122,8 @@ connect to a relay chain using the [Parachains Protocol](../learn/learn-parachai
 Throughout this document, you will encounter the term **runtime** or **STF (State Transition
 Function)**. Both refer to the same concept, as they both define how exactly a particular system,
 i.e., a blockchain, should deal with state changes both externally and internally. Both of these
-terms are used extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and by association, Substrate contexts.
+terms are used extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and by
+association, Substrate contexts.
 
 :::
 
