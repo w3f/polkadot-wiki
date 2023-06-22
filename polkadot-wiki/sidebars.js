@@ -20,10 +20,10 @@ module.exports = {
             type: 'generated-index',
             title: 'Wallets in the Polkadot & Kusama Ecosystems',
             description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
-            slug: '/polkadot-wallets',
+            slug: '/wallets',
           },
           items: [
-            "general/wallets",
+            "general/third-party-wallets",
             "general/ledger",
             "general/polkadot-vault",
             "general/polkadotjs-ui",

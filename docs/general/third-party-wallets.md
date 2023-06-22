@@ -1,10 +1,10 @@
 ---
-id: wallets
-title: Wallets
-sidebar_label: Wallets
+id: third-party-wallets
+title: Third-party Wallets
+sidebar_label: Third-party Wallets
 description: An overview of wallets in Polkadot ecosystem.
 keywords: [wallets, account, signer, supported wallets, balance, token]
-slug: ../wallets
+slug: ../third-party-wallets
 ---
 
 :::caution
