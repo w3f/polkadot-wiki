@@ -104,7 +104,7 @@ derived accounts and derivation paths.
 
 :::
 
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets.md). :kusama }}
+{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
 
 ## Using on Polkadot-JS Apps
 
