@@ -2,7 +2,7 @@
 id: ledger
 title: Using the Polkadot & Kusama Ledger Applications
 sidebar_label: Ledger
-description: How to use the Polkadot and Kusama applications on Ledger.
+description: How to use the Ledger application for Polkadot and Kusama.
 keywords: [ledger, staking, polkadot app]
 slug: ../ledger
 ---

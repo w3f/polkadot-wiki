@@ -2,7 +2,7 @@
 id: polkadot-vault
 title: Polkadot Vault (formerly Parity Signer)
 sidebar_label: Polkadot Vault
-description: Learn about the Polkadot Vault
+description: Use your old phone as an air-gapped wallet.
 keywords: [parity signer, signer, polkadot vault]
 slug: ../polkadot-vault
 ---
