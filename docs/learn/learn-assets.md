@@ -1,6 +1,6 @@
 ---
 id: learn-assets
-title: Polkadot Asset Hub
+title: Asset Hub
 sidebar_label: Asset Hub
 description: Learn about fungible and non-fungible assets in the Polkadot network.
 keywords: [assets, fungible, non-fungible, asset hub, statemine, statemint]
