@@ -86,6 +86,10 @@ module.exports = {
           {
             to: '/docs/maintain-guides-polkadot-opengov',
             from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/general/ledger',
+            from: ['/general/kusama/kusama-statemine-ledger']
           }
         ],
         createRedirects: function (existingPath) {
