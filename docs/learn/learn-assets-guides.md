@@ -39,6 +39,8 @@ Before minting assets on Statemint, we recommend that you try out this tutorial 
 is a parachain on Westend. The WND tokens (Westies) are free and are available through a
 [faucet](https://wiki.polkadot.network/docs/learn-DOT#getting-westies).
 
+**The images in the guides below are for Polkadot, but they also apply to Kusama.**
+
 :::
 
 To create an asset on Statemint, you would need a deposit of
