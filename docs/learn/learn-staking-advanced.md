@@ -471,7 +471,7 @@ reward would no longer be claimable.
 
 In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout
 before 28 eras have passed. See
-[this page](./learn-staking-guides.md#claiming-rewards-with-the-polkadot-js-ui) for more information
+[this page](./learn-guides-staking.md#claiming-rewards-with-the-polkadot-js-ui) for more information
 about how to claim rewards using the Polkadot-JS UI.
 
 :::
