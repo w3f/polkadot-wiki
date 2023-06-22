@@ -18,7 +18,7 @@ module.exports = {
           label: "Wallets",
           link: {
             type: 'generated-index',
-            title: 'Wallets in the Polkadot & Kusama Ecosystems',
+            title: 'Wallets',
             description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
             slug: '/wallets',
           },
