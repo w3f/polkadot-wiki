@@ -90,6 +90,10 @@ module.exports = {
           {
             to: '/general/wallets-and-extensions',
             from: ['/general/wallets']
+          },
+          {
+            to: '/docs/learn-guides-assets-ledger',
+            from: ['/general/kusama/kusama-statemine-ledger']
           }
         ],
         createRedirects: function (existingPath) {
