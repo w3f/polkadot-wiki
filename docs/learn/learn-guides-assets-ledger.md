@@ -129,7 +129,7 @@ You can now use this account to interact with Statemine on
 [Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer)
 and it will prompt your ledger for confirmation when you initiate a transaction.
 
-### Working on both Kusama and Statemine
+### Working on Relay Chains and Asset Hubs
 
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
