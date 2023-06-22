@@ -97,7 +97,7 @@ module.exports = {
           type: "category",
               label: "Ledger",
               items: [
-                "general/kusama/kusama-ledger",
+                "general/ledger",
                 "general/kusama/kusama-statemine-ledger",
               ],
         },
