@@ -226,7 +226,7 @@ module.exports = {
       items: [
         {
           to: "/docs/general",
-          label: "Get Started",
+          label: "General",
           position: "right",
         },
         {
