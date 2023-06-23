@@ -89,15 +89,15 @@ module.exports = {
           },
           {
             to: '/docs/learn-guides-assets-create',
-            from: ['/general/kusama/kusama-statemine']
+            from: ['/docs/kusama-statemine']
           },
           {
             to: '/docs/learn-guides-assets-ledger',
-            from: ['/general/kusama/kusama-statemine-ledger']
+            from: ['/docs/kusama-statemine-ledger']
           },
           {
-            to: '/general/wallets-and-extensions',
-            from: ['/general/wallets']
+            to: '/docs/wallets-and-extensions',
+            from: ['/docs/wallets']
           }
         ],
         createRedirects: function (existingPath) {
