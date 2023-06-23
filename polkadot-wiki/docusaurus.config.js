@@ -104,7 +104,7 @@ module.exports = {
             from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
-            to: '/docs/wallets',
+            to: '/docs/wallets-and-extensions',
             from: ['/docs/build-wallets']
           },
           {
