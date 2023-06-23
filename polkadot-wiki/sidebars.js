@@ -43,7 +43,20 @@ module.exports = {
             "general/polkadotjs-ui",
           ],
         },
-        "general/staking-dashboard",
+        {
+          type: "category",
+          label: "Dashboards",
+          description: 'Dashboards in the Polkadot and Kusama ecosystems.',
+          link: {
+            type: 'generated-index',
+            title: 'Dashboards',
+            description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
+            slug: '/dashboards',
+          },
+          items: [
+            "general/staking-dashboard",
+          ],
+        },
         "general/polkadotjs",
         {
           type: "category",
