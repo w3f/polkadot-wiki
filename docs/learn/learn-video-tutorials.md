@@ -1,13 +1,13 @@
 ---
 id: learn-video-tutorials
-title: Video Tutorials
-sidebar_label: Video Tutorials
+title: Videos about Polkadot
+sidebar_label: Videos
 description: Links to useful tutorial videos for Polkadot related topics.
 keywords: [learn, video, tutorials, explainers]
 slug: ../learn-video-tutorials
 ---
 
-:::info
+:::info Visit the Polkadot YouTube Channel
 
 For more videos see all playlists on the
 [Polkadot YouTube channel](https://www.youtube.com/@PolkadotNetwork/playlists).
