@@ -195,7 +195,7 @@ created and maintained list of different smart contract platforms building on
 #### Moonbeam
 
 - ink! Support: **Unsupported**
-- EVM (Solidity) Support: **Supported**
+- EVM (Solidity) Support: [**Supported**](https://moonbeam.network/networks/moonbeam/)
 
 [Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
 parachain and will support Ethereum compatible smart contracts. Since Moonbeam uses
@@ -213,8 +213,9 @@ Try deploying a smart contract to Moonbeam by following their
 
 #### Astar
 
-- ink! Support: **Supported**
-- EVM (Solidity) Support: **Supported**
+- ink!/Wasm Support: [**Supported**](https://docs.astar.network/docs/build/#wasm-smart-contracts)
+- EVM (Solidity)
+  Support:[ **Supported**](https://docs.astar.network/docs/build/#evm-smart-contracts)
 
 [Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart
 contracts and offers developers true interoperability. True interoperability with cross-consensus
@@ -233,7 +234,7 @@ Try deploying an Ethereum or ink! smart contract by following their
 #### Acala
 
 - ink! Support: **Unsupported**
-- EVM (Solidity) Support: **Supported**
+- EVM (Solidity) Support: [**Supported**](https://wiki.acala.network/build/development-guide)
 
 [Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
 delivering a set of protocols to serve as the DeFi hub on Polkadot.
@@ -247,7 +248,8 @@ Try deploying an Acala EVM smart contract by following their
 #### Phala
 
 - ink! Support: **Unsupported**
-- EVM (Solidity) Support: **Not supported**
+- EVM (Solidity) Support: **Unsupported**
+- See: [**Phat Contracts**](https://docs.phala.network/developers/phat-contract)
 
 [Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
 strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala
@@ -261,7 +263,8 @@ Try deploying a confidential smart contract by following their
 #### Darwinia
 
 - ink! Support: **Unsupported**
-- EVM (Solidity) Support: **Supported**
+- EVM (Solidity) Support:
+  [**Supported**](https://docs.darwinia.network/libraries-4a4ce70014ba43b7977aeb16ce9634ab)
 
 [Darwinia](https://darwinia.network/) is a cross-chain programmable network that provides two
 essential solutions: `Darwinia Chain` and `Darwinia Msgport`. `Darwinia Chain` is a smart contract
