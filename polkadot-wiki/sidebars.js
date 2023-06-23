@@ -3,11 +3,24 @@ module.exports = {
     {
       type: "category",
       label: "General",
+      link: {
+        type: 'generated-index',
+        title: 'General Information',
+        description: 'General Information to get started with Polkadot & Web3.',
+        slug: '/general',
+      },
       items: [
         "general/getting-started",
         {
           type: "category",
           label: "Stay Safe",
+          description: 'Good-practices to stay safe while surfing in Web3.',
+          link: {
+            type: 'generated-index',
+            title: 'Stay Safe',
+            description: 'Learn about good-practices to stay safe while surfing in Web3.',
+            slug: '/stay-safe',
+          },
           items: [
             "general/scams",
             "general/how-to-dyor",
@@ -16,6 +29,7 @@ module.exports = {
         {
           type: "category",
           label: "Wallets",
+          description: 'Wallet options in the Polkadot and Kusama ecosystems.',
           link: {
             type: 'generated-index',
             title: 'Wallets',
@@ -34,6 +48,13 @@ module.exports = {
         {
           type: "category",
           label: "Community & Contributors",
+          description: 'Participate in the Polkadot community and contribute to the Wiki.',
+          link: {
+            type: 'generated-index',
+            title: 'Community & Contributors',
+            description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
+            slug: '/community-and-contributors',
+          },
           items: [
             "general/community",
             "general/contributing",
@@ -43,6 +64,13 @@ module.exports = {
         {
           type: "category",
           label: "Programmes",
+          description: 'Programmes and initiatives within the Polkadot ecosystem.',
+          link: {
+            type: 'generated-index',
+            title: 'Programmes',
+            description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
+            slug: '/programmes',
+          },
           items: [
             "general/grants",
             "general/bug-bounty",

@@ -2,7 +2,7 @@
 id: staking-dashboard
 title: Polkadot Staking Dashboard
 sidebar_label: Staking Dashboard
-description: Everything about the Polkadot Staking Dashboard
+description: Everything about the Polkadot Staking Dashboard.
 keywords: [ledger, staking, polkadot, dashboard]
 slug: ../staking-dashboard
 ---
