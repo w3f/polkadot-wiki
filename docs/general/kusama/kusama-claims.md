@@ -30,8 +30,8 @@ Another option you may consider using is the
 will allow you to take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](./../../general/wallets.md) for more details. Many of these wallets
-support generating Kusama accounts as well.
+[Polkadot Wiki Wallets page](./wallets) for more details. Many of these wallets support generating
+Kusama accounts as well.
 
 ### Using Kusama Ledger application
 

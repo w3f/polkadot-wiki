@@ -1,9 +1,9 @@
 ---
 id: learn-assets
-title: Assets
-sidebar_label: Assets
+title: Asset Hub
+sidebar_label: Asset Hub
 description: Learn about fungible and non-fungible assets in the Polkadot network.
-keywords: [assets, fungible, non-fungible]
+keywords: [assets, fungible, non-fungible, asset hub, statemine, statemint]
 slug: ../learn-assets
 ---
 
@@ -48,18 +48,22 @@ to learn how to create fungible assets on Statemine. The same procedure applies 
 :::
 
 Anyone on the network can create assets on
-{{ polkadot: Statemint, :polkadot }}{{ kusama: Statemine, :kusama }} as long as they can reserve the
+Asset Hub as long as they can reserve the
 required deposit of
-{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
-The network reserves the deposit on creation. The creator also must specify a unique `AssetId`, an
-integer of type `u32`, to identify the asset. The `AssetId` should be the canonical identifier for
-an asset, as the chain does not enforce the uniqueness of metadata like "name" and "symbol". The
-creator must also specify a minimum balance, preventing accounts from having dust balances.
+{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+and around
+{{ polkadot: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :kusama }}
+for the metadata. The network reserves the deposit on creation. The creator also must specify a
+unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId` should be the
+canonical identifier for an asset, as the chain does not enforce the uniqueness of metadata like
+"name" and "symbol". The creator must also specify a minimum balance, preventing accounts from
+having dust balances.
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-assets-guides.md#statemint) to learn more about creating assets using
+See [this page](./learn-guides-assets-create.md) to learn more about creating assets using
 {{ polkadot: Statemint. :polkadot }}{{ kusama: Statemine. :kusama }}
 
 :::

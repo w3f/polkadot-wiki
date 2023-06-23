@@ -88,12 +88,16 @@ module.exports = {
             from: ['/docs/maintain-guides-opengov']
           },
           {
-            to: '/general/wallets-and-extensions',
-            from: ['/general/wallets']
+            to: '/docs/learn-guides-assets-create',
+            from: ['/general/kusama/kusama-statemine']
           },
           {
             to: '/docs/learn-guides-assets-ledger',
             from: ['/general/kusama/kusama-statemine-ledger']
+          },
+          {
+            to: '/general/wallets-and-extensions',
+            from: ['/general/wallets']
           }
         ],
         createRedirects: function (existingPath) {

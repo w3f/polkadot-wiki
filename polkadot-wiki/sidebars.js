@@ -139,10 +139,17 @@ module.exports = {
               type: "category",
               label: "How-to Guides",
               items: [
-                "learn/learn-staking-guides",
-                "learn/learn-identity-guides",
-                "learn/learn-assets-guides",
-                "learn/learn-vault-guides",
+                "learn/learn-guides-staking",
+                "learn/learn-guides-identity",
+                {
+                  type: "category",
+                  label: "Asset Hub",
+                  items: [
+                    "learn/learn-guides-assets-create",
+                    "learn/learn-guides-assets-ledger"
+                  ],
+                },
+                "learn/learn-guides-vault",
               ],
             },
           ],

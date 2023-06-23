@@ -148,8 +148,8 @@ module.exports = {
             from: ['/docs/learn-staking-miner']
           },
           {
-            to: '/docs/learn-assets-guides',
-            from: ['/docs/learn-statemint']
+            to: '/docs/learn-guides-assets-create',
+            from: ['/docs/learn-statemint', '/docs/learn-assets-guides']
           },
           {
             to: '/docs/learn-comparisons-kusama',
@@ -170,6 +170,18 @@ module.exports = {
           {
             to: '/docs/maintain-guides-polkadot-opengov',
             from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/docs/learn-guides-staking',
+            from: ['/docs/learn-staking-guides']
+          },
+          {
+            to: '/docs/learn-guides-identity',
+            from: ['/docs/learn-identity-guides']
+          },
+          {
+            to: '/docs/learn-guides-vault',
+            from: ['/docs/learn-vault-guides']
           },
           {
             to: '/general/wallets-and-extensions',

@@ -1,14 +1,13 @@
 ---
-id: learn-assets-guides
-title: Assets How-to Guides
-sidebar_label: Assets
-description: Advanced How-to Guides about Assets.
-slug: ../learn-assets-guides
+id: learn-guides-assets-create
+title: Creating Assets with the Asset Hub
+sidebar_label: Creating Assets
+description: Advanced How-to Guides about creating assets.
+keywords: [asset hub, assets, statemine, statemint]
+slug: ../learn-guides-assets-create
 ---
 
 import RPC from "./../../components/RPC-Connection";
-
-## Statemint
 
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
@@ -31,13 +30,15 @@ categorized as
 For additional background on Statemint and Statemine check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
 
-### Creating Assets on Statemint
+## Creating Assets on Asset Hub
 
 :::info
 
 Before minting assets on Statemint, we recommend that you try out this tutorial on Westmint, which
 is a parachain on Westend. The WND tokens (Westies) are free and are available through a
 [faucet](https://wiki.polkadot.network/docs/learn-DOT#getting-westies).
+
+**The images in the guides below are for Polkadot, but they also apply to Kusama.**
 
 :::
 
