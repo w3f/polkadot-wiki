@@ -104,7 +104,7 @@ module.exports = {
             from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
-            to: '/docs/wallets',
+            to: '/docs/wallets-and-extensions',
             from: ['/docs/build-wallets']
           },
           {
@@ -184,8 +184,8 @@ module.exports = {
             from: ['/docs/learn-vault-guides']
           },
           {
-            to: '/general/wallets-and-extensions',
-            from: ['/general/wallets']
+            to: '/docs/wallets-and-extensions',
+            from: ['/docs/wallets']
           }
         ],
         createRedirects: function (existingPath) {
