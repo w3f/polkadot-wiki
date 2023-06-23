@@ -72,7 +72,7 @@ module.exports = {
             from: ['/docs/ens']
           },
           {
-            to: '/docs/wallets',
+            to: '/docs/wallets-and-extensions',
             from: ['/docs/build-wallets']
           },
           {
