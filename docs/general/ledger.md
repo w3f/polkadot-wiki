@@ -67,8 +67,8 @@ If you do use a Nano S with the XL version you will not be able to:
 
 - Install any other Ledger application on your device
 - Add Polkadot accounts to the Ledger Live App, but you will be able to add them to
-  [**treasury-funded wallets**](../general/wallets-and-extensions.md) who support ledger devices or
-  to the [**browser extension**](./polkadotjs.md#polkadot-js-extension) and the
+  [**treasury-funded wallets**](./wallets-and-extensions.md) who support ledger devices or to the
+  [**browser extension**](./polkadotjs.md#polkadot-js-extension) and the
   [**Polkadot-JS UI**](./polkadotjs-ui.md).
 
 :::
