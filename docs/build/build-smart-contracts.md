@@ -12,7 +12,7 @@ blockchain, does not support smart contracts natively. However, parachains which
 blockchains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the
 functionality to support smart contracts.
 
-The two primary, supported smart contract environments that [ink!](#ink) and EVM. There are multiple
+The two primary supported smart contract environments are [ink!](#ink) and EVM. There are multiple
 [parachains that support both environments](#parachains).
 
 ## Difference between developing a smart contract and a parachain
