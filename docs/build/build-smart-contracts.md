@@ -247,7 +247,7 @@ Try deploying an Acala EVM smart contract by following their
 #### Phala
 
 - ink! Support: **Unsupported**
-- EVM (Solidity) Support: **Unsupported**
+- EVM (Solidity): **Unsupported**
 - See: [**Phat Contracts**](https://docs.phala.network/developers/phat-contract)
 
 [Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
