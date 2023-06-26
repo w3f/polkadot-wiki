@@ -214,8 +214,7 @@ Try deploying a smart contract to Moonbeam by following their
 #### Astar
 
 - ink!/Wasm: [**Supported**](https://docs.astar.network/docs/build/#wasm-smart-contracts)
-- EVM (Solidity)
-  Support:[ **Supported**](https://docs.astar.network/docs/build/#evm-smart-contracts)
+- EVM (Solidity): [ **Supported**](https://docs.astar.network/docs/build/#evm-smart-contracts)
 
 [Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart
 contracts and offers developers true interoperability. True interoperability with cross-consensus
