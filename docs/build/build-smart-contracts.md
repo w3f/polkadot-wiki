@@ -213,7 +213,7 @@ Try deploying a smart contract to Moonbeam by following their
 
 #### Astar
 
-- ink!/Wasm Support: [**Supported**](https://docs.astar.network/docs/build/#wasm-smart-contracts)
+- ink!/Wasm: [**Supported**](https://docs.astar.network/docs/build/#wasm-smart-contracts)
 - EVM (Solidity)
   Support:[ **Supported**](https://docs.astar.network/docs/build/#evm-smart-contracts)
 
