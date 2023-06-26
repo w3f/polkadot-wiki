@@ -86,19 +86,9 @@ a GitHub issue so a developer can help.
 
 Using the Asset Hub will require running a parachain node to sync the chain. This is very similar to
 running a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node, with the addition of
-some extra flags. The basic format looks like this:
-
-```bash
-./statemint $STATEMINT_CLI_ARGS --collator -- $POLKADOT_CLI_ARGS
-```
-
-where both `$STATEMINT_CLI_ARGS` and `$POLKADOT_CLI_ARGS` consist of regular Polkadot node flags.
-Flags can be used twice, one for the collating component and one for the Relay Chain component.
-Additional ports that will be used are (by default) 9934, 9616, and 30334 (Relay Chain RPC,
-Prometheus endpoint, and libp2p respectively). As usual, any of these ports can be adjusted through
-flags. To deploy an Asset Hub RPC node, one would use the same flags as a Polkadot RPC node in place
-of `$STATEMINT_CLI_ARGS`. The node will keep both the database for Polkadot and for the Asset Hub in
-its database directory, so provision disks accordingly.
+some extra flags. You can follow
+[these guidelines](https://github.com/paritytech/cumulus/blob/master/README.md#asset-hub-) to set up
+an Asset Hub node.
 
 ### Sidecar
 
