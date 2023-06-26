@@ -225,8 +225,8 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/getting-started",
-          label: "Get Started",
+          to: "/docs/general",
+          label: "General",
           position: "right",
         },
         {
