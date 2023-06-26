@@ -79,6 +79,8 @@ you face any issues, join the rooms individually.
 
 - [Substrate Developers Chat](https://matrix.to/#/#substratedevs:matrix.org) - A Matrix chat room
   for Substrate development.
+- [Substrate Developers Telegram Chat](https://t.me/substratedevs) - A Telegram chat room
+  for Substrate development.
 - [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
   for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:parity.io) - A room to discuss developing
