@@ -246,7 +246,7 @@ Try deploying an Acala EVM smart contract by following their
 
 #### Phala
 
-- ink! Support: **Unsupported**
+- ink!: **Unsupported**
 - EVM (Solidity): **Unsupported**
 - See: [**Phat Contracts**](https://docs.phala.network/developers/phat-contract)
 
