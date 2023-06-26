@@ -150,7 +150,6 @@ module.exports = {
                   ],
                 },
                 "learn/learn-guides-vault",
-                "learn/learn-guides-polkadot-opengov",
               ],
             },
           ],
