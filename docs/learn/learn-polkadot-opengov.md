@@ -507,7 +507,7 @@ determined that the action is both safe and time-critical.
 :::info Submitting Whitelisted Proposals
 
 For more information about how to submit a whitelisted proposal see the
-[dedicated advanced how-to guides](../maintain/maintain-guides-polkadot-opengov.md#submitting-preimage-to-whitelist).
+[dedicated advanced how-to guides](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-preimage-to-whitelist).
 
 :::
 
