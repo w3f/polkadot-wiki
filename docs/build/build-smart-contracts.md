@@ -194,8 +194,8 @@ created and maintained list of different smart contract platforms building on
 
 #### Moonbeam
 
-- ink! : **Unsupported**
-- EVM (Solidity) : [**Supported**](https://moonbeam.network/networks/moonbeam/)
+- ink!: **Unsupported**
+- EVM (Solidity): [**Supported**](https://moonbeam.network/networks/moonbeam/)
 
 [Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
 parachain and will support Ethereum compatible smart contracts. Since Moonbeam uses
