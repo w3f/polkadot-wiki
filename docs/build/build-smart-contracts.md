@@ -194,7 +194,7 @@ created and maintained list of different smart contract platforms building on
 
 #### Moonbeam
 
-- ink! Support: **Unsupported**
+- ink! : **Unsupported**
 - EVM (Solidity) Support: [**Supported**](https://moonbeam.network/networks/moonbeam/)
 
 [Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
