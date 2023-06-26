@@ -244,14 +244,17 @@ Governance > Preimages.
 
 ![preimage](../assets/governance/opengov-preimage-submitted.png)
 
-### Submitting Preimage to Whitelist
+### Submitting a Preimage to Whitelist
 
 Let's take the example that you would like to increase the active validator count to 1000.
 
-- You [submit a preimage](../maintain/maintain-guides-opengov.md#submitting-a-preimage) with the
-  call that sets the number of validators to 1000. Note that the call must be of the form
+- You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators
+  to 1000. Note that the call must be of the form
   `whitelist.dispatchWhitelistedCallWhithPreimage(call)`. Failing to do so will result in your
   whitelisted call being rejected.
+
+![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
+
 - You could directly submit this to Root track or go through the whitelisting process with the
   Technical Fellowship. If whitelisted, your proposal will take less time to be voted on and enacted
   than choosing the Root track.
