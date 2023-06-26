@@ -16,8 +16,14 @@ module.exports = {
         {
           type: "category",
           label: "Wallets",
+          link: {
+            type: 'generated-index',
+            title: 'Wallets',
+            description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
+            slug: '/wallets',
+          },
           items: [
-            "general/wallets",
+            "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
             "general/polkadotjs-ui",
@@ -105,7 +111,7 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-opengov",
+                "learn/learn-polkadot-opengov",
                 "learn/learn-treasury",
                 "learn/learn-consensus",
               ],
@@ -133,10 +139,17 @@ module.exports = {
               type: "category",
               label: "How-to Guides",
               items: [
-                "learn/learn-staking-guides",
-                "learn/learn-identity-guides",
-                "learn/learn-assets-guides",
-                "learn/learn-vault-guides",
+                "learn/learn-guides-staking",
+                "learn/learn-guides-identity",
+                {
+                  type: "category",
+                  label: "Asset Hub",
+                  items: [
+                    "learn/learn-guides-assets-create",
+                    "learn/learn-guides-assets-ledger"
+                  ],
+                },
+                "learn/learn-guides-vault",
               ],
             },
           ],
@@ -293,7 +306,7 @@ module.exports = {
           label: "Governance Guides",
           items: [
             "maintain/maintain-guides-democracy",
-            "maintain/maintain-guides-opengov",
+            "maintain/maintain-guides-polkadot-opengov",
             "maintain/maintain-guides-how-to-join-council",
             "maintain/maintain-guides-how-to-vote-councillor",
           ],

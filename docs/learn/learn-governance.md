@@ -16,11 +16,11 @@ mechanism that allows it to evolve gracefully overtime at the ultimate behest of
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
 
-:::info OpenGov is live on Kusama Network
+:::info Polkadot OpenGov is live on Kusama Network
 
 Learn about the upcoming changes to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
-[Wiki doc on OpenGov](learn-opengov.md).
+[Wiki doc on Polkadot OpenGov](./learn-polkadot-opengov.md).
 
 :::
 

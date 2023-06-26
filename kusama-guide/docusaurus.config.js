@@ -64,15 +64,15 @@ module.exports = {
       {
        redirects: [
           {
-            to: '/docs/learn-opengov',
-            from: ['/docs/learn-gov2']
+            to: '/docs/learn-polkadot-opengov',
+            from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
             to: '/docs/learn-account-advanced',
             from: ['/docs/ens']
           },
           {
-            to: '/docs/wallets',
+            to: '/docs/wallets-and-extensions',
             from: ['/docs/build-wallets']
           },
           {
@@ -82,6 +82,18 @@ module.exports = {
           {
             to: '/docs/bug-bounty',
             from: ['/docs/maintain-bug-bounty']
+          },
+          {
+            to: '/docs/maintain-guides-polkadot-opengov',
+            from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/docs/learn-guides-assets-create',
+            from: ['/docs/kusama-statemine']
+          },
+          {
+            to: '/docs/learn-guides-assets-ledger',
+            from: ['/docs/kusama-statemine-ledger']
           }
         ],
         createRedirects: function (existingPath) {

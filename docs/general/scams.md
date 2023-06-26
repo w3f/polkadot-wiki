@@ -86,8 +86,8 @@ be found below:
 ### Keep your data secure
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
-anyone. If you are concerned a wallet could be fake, please check out our list of well-known and
-officially supported [wallets](./../general/wallets.md).
+anyone. If you are concerned a wallet could be fake, please check out our list of well-known
+[wallets](./wallets).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 

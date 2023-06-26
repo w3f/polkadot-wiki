@@ -1,10 +1,10 @@
 ---
-id: kusama-statemine-ledger
-title: Using Ledger Devices with Statemine
-sidebar_label: Ledger Devices with Statemine
-description: Learn how to use Ledger with Statemine.
-keywords: [statemine, ledger, kusama, assets]
-slug: ../../kusama-statemine-ledger
+id: learn-guides-assets-ledger
+title: Using the Asset Hub Ledger App
+sidebar_label: Asset Hub Ledger App
+description: Learn how to use Ledger with Asset Hub.
+keywords: [asset hub, ledger, assets, statemine, statemint]
+slug: ../learn-guides-assets-ledger
 ---
 
 :::info
@@ -96,7 +96,7 @@ tab in
 Find the option for attaching Ledger devices and switch the option from the default "Do not attach
 Ledger devices" to "Attach Ledger via WebUSB" (**but see note above**).
 
-![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](../../assets/ledger.png)
+![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](../assets/ledger.png)
 
 Click "Save" to keep your settings.
 
@@ -105,11 +105,11 @@ that your Ledger device is unlocked, Ledger Live is **closed** and you have
 [switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes)
 to the Statemine application, then click this button.
 
-![Add Ledger button in Polkadot-JS Apps UI](../../assets/ledger/query-ledger.png)
+![Add Ledger button in Polkadot-JS Apps UI](../assets/ledger/query-ledger.png)
 
 A popup will appear asking you to select an account and derivation path.
 
-![Picking an account and derivation path](../../assets/ledger/add-account.png)
+![Picking an account and derivation path](../assets/ledger/add-account.png)
 
 The first option lets you select an account. You can have multiple accounts on a single Ledger
 device. The second dropdown lets you pick a derivation path - think of it like a formula from which
@@ -119,17 +119,17 @@ Once you confirm your selection, depending on your browser and its security sett
 to confirm the USB connection through a popup like the one below when adding the Ledger device for
 the first time:
 
-![Display the device connection popup](../../assets/ledger/query-device.png)
+![Display the device connection popup](../assets/ledger/query-device.png)
 
 You should now be able to scroll down and find a new account on the page with the type "ledger".
 
-![Displaying the Ledger account in the list](../../assets/ledger/ledger-balance.png)
+![Displaying the Ledger account in the list](../assets/ledger/ledger-balance.png)
 
 You can now use this account to interact with Statemine on
 [Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer)
 and it will prompt your ledger for confirmation when you initiate a transaction.
 
-### Working on both Kusama and Statemine
+### Working on Relay Chains and Asset Hubs
 
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
@@ -169,7 +169,7 @@ On the "Accounts" tab, find your Ledger-connected account. Click on the three ve
 end of the row. This will open a new menu, here you can click the "Show address on hardware device"
 option to display the address on your device.
 
-![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](../../assets/ledger-4.png)
+![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](../assets/ledger-4.png)
 
 Here you can scroll through and make sure the address matches to what is displayed on
 [Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer).
@@ -180,7 +180,7 @@ Once you have your account loaded on the "Accounts" tab it should show a row wit
 account. At the far right of the row is located your account's DOT balance. If you expand the
 balance arrow, it will show details of your balance such as locks or reserved amounts.
 
-![Account row showing empty balance](../../assets/ledger/ledger-balance.png)
+![Account row showing empty balance](../assets/ledger/ledger-balance.png)
 
 ### Sending a Transfer
 
@@ -212,7 +212,7 @@ be able to go below existential deposit balance, causing your account to be dele
 amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this might
 be the reason.
 
-A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
+A detailed guide on doing transfers is available [here](../learn/learn-balance-transfers.md).
 
 :::
 
@@ -252,12 +252,11 @@ account needs to be created first.
 To teleport KSM to the Relay Chain follow these steps:
 
 - Create an account outside your Ledger. Instructions can be found
-  [here](../../learn/learn-account-generation.md).
+  [here](../learn/learn-account-generation.md).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
   the amount you want to teleport, don't forget take into account the fees for teleporting that will
   be deducted in the next step.
-- Teleport your tokens following the instructions you will find
-  [here](../../learn/learn-teleport.md).
+- Teleport your tokens following the instructions you will find [here](../learn/learn-teleport.md).
 
 Teleporting **to** a Ledger account from a non-Ledger account doesn't require these extra steps.
 

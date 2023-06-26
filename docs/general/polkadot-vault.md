@@ -2,7 +2,7 @@
 id: polkadot-vault
 title: Polkadot Vault (formerly Parity Signer)
 sidebar_label: Polkadot Vault
-description: Learn about the Polkadot Vault
+description: Use your old phone as an air-gapped wallet.
 keywords: [parity signer, signer, polkadot vault]
 slug: ../polkadot-vault
 ---
@@ -180,7 +180,7 @@ for detailed instructions. If you choose this approach, you should trust the pro
 
 :::info Advanced How-to Guides
 
-See the [advanced guides](../learn/learn-vault-guides.md) for more information about how to add
+See the [advanced guides](../learn/learn-guides-vault.md) for more information about how to add
 chain specification and do metadata updates yourself.
 
 :::

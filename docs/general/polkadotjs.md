@@ -19,7 +19,7 @@ consult the [**official documentation**](https://polkadot.js.org/docs/).
 If you need help using the Polkadot-JS UI you can contact the
 [**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
 wallet is oriented toward developers and power users. For more user-friendly wallets, check out the
-supported and treasury-funded wallets on the [Wallets Page](./../general/wallets.md).
+supported and treasury-funded wallets on the [Wallets Page](../general/wallets-and-extensions.md).
 
 :::
 

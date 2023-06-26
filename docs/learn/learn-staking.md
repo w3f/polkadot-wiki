@@ -380,8 +380,8 @@ controller too.
 
 Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import
 their Ledger accounts in the extension and use them as a stash and controller. You can find more
-information about Talisman and other third-party wallets that officially secured funding from the
-treasury [here](./../general/wallets.md).
+information about Talisman and other wallets that officially secured funding from the treasury
+[here](../general/wallets-and-extensions.md).
 
 :::
 

@@ -1,19 +1,19 @@
 ---
-id: maintain-guides-opengov
-title: Participate in OpenGov
-sidebar_label: Participate in OpenGov
+id: maintain-guides-polkadot-opengov
+title: Participate in Polkadot OpenGov
+sidebar_label: Participate in Polkadot OpenGov
 description: Steps on how to participate in OpenGov.
 keywords: [democracy, council, action, proposal, referenda]
-slug: ../maintain-guides-opengov
+slug: ../maintain-guides-polkadot-opengov
 ---
 
 import Tracks from "./../../components/Referenda-Tracks"; import Chart from
 "./../../components/Chart";
 
-:::info Learn more about OpenGov
+:::info Learn more about Polkadot OpenGov
 
-For background information about OpenGov, please refer to this
-[dedicated Wiki document](../learn/learn-opengov.md).
+For background information about Polkadot OpenGov, please refer to this
+[dedicated Wiki document](../learn/learn-polkadot-opengov.md).
 
 :::
 
@@ -31,7 +31,7 @@ community.
 - [Polkadot Daily Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is
   happening in the Polkadot ecosystem, published every weekday except holidays.
 
-## OpenGov Terminology and Parameters
+## Polkadot OpenGov Terminology and Parameters
 
 The important parameters to be aware of when voting using the Referenda module are as follows:
 
@@ -109,13 +109,14 @@ ample time to vote on the proposal during the decision period.
 
 ### Whitelisted Caller
 
-Origin commanded by the [Fellowship](../learn/learn-opengov.md#fellowship) whitelist some hash of a
-call and allow the call to be dispatched with the root origin (after the referendum passes). This
-track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent
-process for time-critical proposals. For instance, a referendum proposed in this track needs to
-amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser than the root)
-by the end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }}
-approval to be considered to be part of the confirm period.
+Origin commanded by the [Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship)
+whitelist some hash of a call and allow the call to be dispatched with the root origin (after the
+referendum passes). This track allows for a shorter voting turnaround, safe in the knowledge through
+an open and transparent process for time-critical proposals. For instance, a referendum proposed in
+this track needs to amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much
+lesser than the root) by the end of the first day with over
+{{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval to be considered to be part of
+the confirm period.
 
 {{ polkadot: <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}
@@ -232,8 +233,8 @@ The act of making a proposal is split from submitting the preimage for the propo
 storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage
 submission to come as a separate transaction means that another account could submit the preimage
 for you and pay the fee for it. The example below demonstrates the creation of a preimage on Kusama
-(**the same procedure applies when OpenGov is live on Polkadot**). To propose that a remark "Expect
-Chaos!" be added to the blockchain, the preimage hash would be
+(**the same procedure applies to Polkadot**). To propose that a remark "Expect Chaos!" be added to
+the blockchain, the preimage hash would be
 `0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`.
 
 ![submit preimage](../assets/governance/opengov-submit-preimage.png)
@@ -262,8 +263,8 @@ locked for the referendum duration.
 
 ## Voting on Referenda
 
-As OpenGov takes both the approval and support into account, there are four options to choose from
-when voting on a referendum:
+As Polkadot OpenGov takes both the approval and support into account, there are four options to
+choose from when voting on a referendum:
 
 - Aye
 - Nay
@@ -274,13 +275,13 @@ Also, you have to specify the conviction multiplier for this vote. The longer yo
 lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means
 that your vote only counts for 10% of the tokens that you hold.
 
-For detailed instructions on how to vote on OpenGov referenda, check
+For detailed instructions on how to vote on Polkadot OpenGov referenda, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184120-polkadot-opengov-how-to-vote)
 
-:::caution OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
+:::caution Polkadot OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
 
-Use `convictionVoting.vote` for voting on Referenda in OpenGov instead of `democracy.vote` (which
-only works for the old version of governance).
+Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead of `democracy.vote`
+(which only works for the old version of governance).
 
 :::
 
@@ -292,9 +293,9 @@ To remove the lock from votes, you first need to call `removeVote` and then `unl
 
 ## Delegating Voting Power
 
-For an overview of how delegation works in OpenGov, check out the
-[Multirole Delegation](./../learn/learn-opengov.md#multirole-delegation) section on the
-[Learn OpenGov](./../learn/learn-opengov.md) page.
+For an overview of how delegation works in Polkadot OpenGov, check out the
+[Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
+[Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
 ### Delegation Dashboard
 
