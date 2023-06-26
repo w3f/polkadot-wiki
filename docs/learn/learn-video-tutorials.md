@@ -66,7 +66,7 @@ For more videos see all playlists on the
     <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGthz-1qCz9RozF9N2ywyb4V">
       <img src="/img/polkadot-guide/PBA-23.png" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
-            <h5 class="cards-title">PBA 2023</h5>
+            <h5 class="cards-title">Polkadot Blockchain Academy</h5>
         </div>
     </a>
   </td>
