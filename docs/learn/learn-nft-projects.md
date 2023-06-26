@@ -15,7 +15,7 @@ slug: ../learn-nft-projects
 - [Kodadot](#kodadot)
 - [Moonbeam](#moonbeam)
 - [RMRK](#rmrk)
-- [Statemint](#statemint)
+- [Asset Hub](#asset-hub)
 - [Unique](#unique-network)
 
 ## Astar
@@ -63,7 +63,7 @@ parachains in the Polkadot ecosystem, but also into and out of Ethereum and othe
 ## [KodaDot](https://kodadot.xyz)
 
 [KodaDot](https://kodadot.xyz) is an open-source NFT marketplace that operates on the Dotsama
-(Kusama/Polkadot) network, striving to aggregate various NFT standards (Kusama, RMRK, Statemine,
+(Kusama/Polkadot) network, striving to aggregate various NFT standards (Kusama, RMRK, Asset Hub,
 Basilisk, etc.) in the Dotsama ecosystem, enhancing user experience by abstracting these standards.
 
 KodaDot's strength lies in its commitment to open-source collaboration. It has transformed into a
@@ -82,7 +82,7 @@ KodaDot began as the first
 [contributing to RMRK protocol](https://github.com/rmrk-team/rmrk-spec/issues/10). It later
 [received Kusama Treasury funding](https://kusama.polkassembly.io/motion/349), which propelled the
 team to create the
-[best end-user experience on Statemine](https://kusama.polkassembly.io/motion/349).
+[best end-user experience on the Asset hub](https://kusama.polkassembly.io/motion/349).
 
 In the summer of 2022, KodaDot won the first prize at the
 [Polkadot North American event](https://devpost.com/software/kodadot-moonsama) for implementing
@@ -173,15 +173,12 @@ Two marketplaces for RMRK-based NFTs exist with hundreds of projects already lau
 For a complete introduction into RMRK, see [this presentation](https://url.rmrk.app/wasmconf) or
 read [the non-technical docs](https://docs.rmrk.app).
 
-## Statemint
+## Asset Hub
 
-Statemint is a generic assets parachain which provides functionality for deploying and transferring
-assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
-be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
-parachain on Kusama). Statemint currently hosts
-[Uniques pallet](./learn-nft-pallets.md/#uniques-pallet) and its functionalities. The
-[NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities is available for
-testing on Westmint, which is a system parachain on Polkadot's testnet Westmint.
+The Asset Hub is a generic assets parachain which provides functionality for deploying and
+transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently hosts
+[Uniques pallet](./learn-nft-pallets.md/#uniques-pallet) and the
+[NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities.
 
 ## Unique Network
 

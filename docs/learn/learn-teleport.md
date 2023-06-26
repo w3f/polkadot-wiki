@@ -19,8 +19,8 @@ multiple chain.
 :::info Walk-through video tutorial about teleporting assets
 
 See [this technical explainer video](https://youtu.be/3tE9ouub5Tg) to learn how to teleport assets
-from Kusama to Statemine. The same procedure applies to teleporting between Polkadot and Statemint,
-or between any other parachain.
+from Kusama to the Asset Hub. The same procedure applies to teleporting between Polkadot and the
+Polkadot Asset Hub, or between any other parachain.
 
 :::
 

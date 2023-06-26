@@ -266,20 +266,19 @@ The Uniques Pallet is deprecated. Everything related to NFTs will be covered by 
 :::
 
 Uniques is a [FRAME pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques)
-deployed on the Statemint and Statemine system parachains. It implements the most basic kind of NFT
--- a data record referencing some metadata. This metadata reference is mutable until frozen, so NFTs
-and their classes (entities derived from) are mutable unless specifically made immutable by the
-issuer.
+deployed on the Asset Hub system parachain. It implements the most basic kind of NFT -- a data
+record referencing some metadata. This metadata reference is mutable until frozen, so NFTs and their
+classes (entities derived from) are mutable unless specifically made immutable by the issuer.
 
-Uniques takes a very bare-bones approach on purpose to keep the Statemine / Statemint chain a simple
+Uniques takes a very bare-bones approach on purpose to keep the Asset Hub chain a simple
 balance-keeping chain for both fungible and non-fungibles.
 
 These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
-switching the top right menu from Kusama to Statemine or Statemint.
+switching the top right menu from Kusama to the Asset Hub.
 
 ![nft-statemine](../assets/nft/nft-statemine.png)
 
 They can also be interacted with directly through the
-[extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
+[extrinsics tab of the Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics):
 
 ![uniques.png](../assets/nft/uniques.png)

@@ -3,70 +3,73 @@ id: learn-guides-assets-create
 title: Creating Assets with the Asset Hub
 sidebar_label: Creating Assets
 description: Advanced How-to Guides about creating assets.
-keywords: [asset hub, assets, statemine, statemint]
+keywords: [asset hub, assets, statemine, statemint, Asset Hub]
 slug: ../learn-guides-assets-create
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-Statemint is a generic assets parachain which provides functionality for deploying and transferring
-assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
-be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
-parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED),
-transaction fees, and the deposits for proxy/multisig operations on Statemint are about 1/10th of
-the values on the Relay chain. For example, the Existential Deposit of a Statemint account is
+The Asset Hub is a generic assets system parachain which provides functionality for deploying and
+transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
+hub is {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. The Existential Deposit (ED),
+transaction fees, and the deposits for proxy/multisig operations are about 1/10th of the values on
+the Relay chains. For example, the Existential Deposit of an Asset Hub account is
 {{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :polkadot }}
 {{ kusama: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :kusama }}
 when compared to
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama:  <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :kusama }}
-on Polkadot. Apart from the core protocol token DOT, the assets held on Statemint can be broadly
-categorized as
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> on Polkadot :polkadot }}
+{{ kusama:  <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> on Kusama :kusama }}.
+Apart from the core protocol token {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, the
+assets held on the Asset Hub can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility
 - Assets with off-chain backing
 - Assets without any backing
 
-For additional background on Statemint and Statemine check out
+For additional background on the Asset Hub check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
 
 ## Creating Assets on Asset Hub
 
 :::info
 
-Before minting assets on Statemint, we recommend that you try out this tutorial on Westmint, which
-is a parachain on Westend. The WND tokens (Westies) are free and are available through a
+Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westmint,
+which is a parachain on Westend. The WND tokens (Westies) are free and are available through a
 [faucet](https://wiki.polkadot.network/docs/learn-DOT#getting-westies).
 
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**
 
 :::
 
-To create an asset on Statemint, you would need a deposit of
+To create an asset on the Asset Hub, you would need a deposit of
 {{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 and around
 {{ polkadot: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :kusama }}
-for the metadata . Before you create an asset on Statemint, ensure that your Statemint account
+for the metadata. Before you create an asset on the Asset Hub, ensure that your Asset Hub account
 balance is a bit more than the sum of those two deposits, which should seamlessly account for the
-required deposits and transaction fees. You can send DOT from a Polkadot account to a Statemint
-account using the teleport functionality. For instructions on teleporting DOT, check this
+required deposits and transaction fees. You can send
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from a
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account to a the Asset Hub account
+using the teleport functionality. For instructions on teleporting
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, check this
 [tutorial on Teleports](../learn/learn-teleport.md).
 
-Assuming you have the required DOT balance on your Statemint account, the following instructions
-should let you successfully create an asset on Statemint
+Assuming you have the required {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balance on
+your Asset Hub account, the following instructions should let you successfully create an asset on
+the Asset Hub
 
-- Access Statemint through [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
+- Access the Asset Hub through [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 - Navigate to Network > Assets.
 
 ![Navigate to Assets page](../assets/statemint/Statemint-asset-0.png)
 
 - Click on the create button and you will be presented with a pop-up window. Choose the creator
-  account, name of the asset to be displayed on Statemint, the asset's symbol, number of decimals
-  for the asset, the minimum balance required to hold this asset on a Statemint account and the most
-  important field of your asset - the unique asset ID. The UI would not let you enter an ID that has
-  already been taken. After all the details are entered, click on the next button.
+  account, name of the asset to be displayed on the Asset Hub, the asset's symbol, number of
+  decimals for the asset, the minimum balance required to hold this asset on an Asset Hub account
+  and the most important field of your asset - the unique asset ID. The UI would not let you enter
+  an ID that has already been taken. After all the details are entered, click on the next button.
 
 ![Add Asset Metadata](../assets/statemint/Statemint-asset-1.png)
 
@@ -80,4 +83,4 @@ should let you successfully create an asset on Statemint
 ![Sign asset creating transaction](../assets/statemint/Statemint-asset-3.png)
 
 If the transaction is successful, you should see the asset and its details displayed in the
-Network > Assets page on Statemint.
+Network > Assets page on the Asset Hub.
