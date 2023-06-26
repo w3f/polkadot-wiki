@@ -246,24 +246,15 @@ Governance > Preimages.
 
 ### Submitting a Preimage to Whitelist
 
-Let's take the example that you would like to increase the active validator count to 1000.
-
-- You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators
-  to 1000. Note that the call must be of the form
-  `whitelist.dispatchWhitelistedCallWhithPreimage(call)`. Failing to do so will result in your
-  whitelisted call being rejected.
+Let's take the example where you would like to change the network protocol, like increasing the active validator count. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1000 and submit a referenda proposal to the Root track directly, or if the Polkadot Technical Fellowship is on board with the proposal, the call could be whitelisted and then be submitted to the Whitelist track in Polkadot OpenGov. Below are the steps to follow when submitting a proposal to the Whitelist track. You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators encapsulated this way - 
+  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` and obtain preimage hash. If the call is submitted directly, it will not be successfully executed by the Whitelist origin.
 
 ![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
 
-- You could directly submit this to Root track or go through the whitelisting process with the
-  Technical Fellowship. If whitelisted, your proposal will take less time to be voted on and enacted
-  than choosing the Root track.
-- If you go through the fellowship, you will need to provide them with the preimage and hash details
-  of the call for your proposal.
-- Someone from the fellowship will create a fellowship referendum to whitelist that call, and it
-  will be voted on by the fellowship members only.
+- The Polkadot fellowship needs to start a fellowship referendum to whitelist the call with `whitelist.whitelistCall(callHash)`
+-  The fellowship referendum gets voted on by the Polkadot fellowship members only.
 - Once the call is whitelisted, you can [submit a referenda proposal](#submitting-a-proposal) with
-  whitelist origin.
+  whitelist origin with  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` .
 - The public now votes on the referendum after placing a decision deposit.
 - Once passed, it gets enacted successfully as the call has been whitelisted.
 
