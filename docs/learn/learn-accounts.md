@@ -91,7 +91,8 @@ In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are diff
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
 Below is an example that displays different balance types of a Kusama account in the
-[Accounts tab of the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (note that the balance types are the same for a Polkadot account). 
+[Accounts tab of the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (note that the balance
+types are the same for a Polkadot account).
 
 ![account_balance_types](../assets/account-balance-types.png)
 
@@ -143,8 +144,8 @@ Account information include:
   account cannot be reaped until this is zero.
 - `providers`, the number of other modules that allow this account to exist. The account may not be
   reaped until this and `sufficients` are both zero.
-- `sufficients`, the number of modules that allow this account to exist for their own purposes.
-  The account may not be reaped until this and `providers` are both zero.
+- `sufficients`, the number of modules that allow this account to exist for their own purposes. The
+  account may not be reaped until this and `providers` are both zero.
 - `data`, the additional data that belongs to this account. Used to store the balance(s) in a lot of
   chains.
 
