@@ -43,8 +43,9 @@ you'll find quick start guides and walkthrough developer tutorials.
 
 ### Dolpha Analytics
 
-[Dolpha Analytics](https://dolpha.com/) is a onchain data analytics and insights platform for the Polkadot ecosystem.
-Dolpha empowers both casual and power users to get a pulse on the polkadot ecosystem, perform due deligence, surface signals, discover investing  opportunities and make informed data-driven decisions.
+[Dolpha Analytics](https://dolpha.com/) is an on-chain data analytics and insights platform for the
+Polkadot and Kusama ecosystems. Dolpha empowers casual and power users to get a pulse on the
+ecosystems, perform due diligence, surface signals, and make informed data-driven decisions.
 
 ### Web3Go
 
