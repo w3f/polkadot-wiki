@@ -14,7 +14,10 @@ For more videos see all playlists on the
 
 :::
 
-## Trending Videos
+## Ongoing Series
+
+Learn about Polkadot and Substrate at a deeper level with these ongoing deep dives, technical seminars, and initiatives within the ecosystem.
+
 
 <tr class="cards-container">
   <td>
