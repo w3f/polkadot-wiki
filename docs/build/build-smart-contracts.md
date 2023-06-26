@@ -261,7 +261,7 @@ Try deploying a confidential smart contract by following their
 
 #### Darwinia
 
-- ink! Support: **Unsupported**
+- ink!: **Unsupported**
 - EVM (Solidity) Support:
   [**Supported**](https://docs.darwinia.network/libraries-4a4ce70014ba43b7977aeb16ce9634ab)
 
