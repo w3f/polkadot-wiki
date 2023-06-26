@@ -232,7 +232,7 @@ Try deploying an Ethereum or ink! smart contract by following their
 
 #### Acala
 
-- ink! Support: **Unsupported**
+- ink!: **Unsupported**
 - EVM (Solidity) Support: [**Supported**](https://wiki.acala.network/build/development-guide)
 
 [Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
