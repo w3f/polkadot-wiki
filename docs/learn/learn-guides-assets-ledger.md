@@ -3,7 +3,7 @@ id: learn-guides-assets-ledger
 title: Using the Asset Hub Ledger App
 sidebar_label: Asset Hub Ledger App
 description: Learn how to use Ledger with Asset Hub.
-keywords: [asset hub, ledger, assets, statemine, statemint]
+keywords: [asset hub, ledger, assets, statemine, statemint, asset hub]
 slug: ../learn-guides-assets-ledger
 ---
 

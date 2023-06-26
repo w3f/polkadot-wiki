@@ -3,7 +3,7 @@ id: learn-nft-pallets
 title: NFT Pallets
 sidebar_label: NFT Pallets
 description: An overview of the functionalities of NFT Pallets in Polkadot Ecosystem.
-keywords: [NFT, non-fungible token, NFT 2.0, nfts, NFT pallets]
+keywords: [NFT, non-fungible token, NFT 2.0, nfts, NFT pallets, asset hub, statemine, statemint]
 slug: ../learn-nft-pallets
 ---
 
