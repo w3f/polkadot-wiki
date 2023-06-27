@@ -261,7 +261,7 @@ automatically populated. The enactment delay can be specified either as a block 
 specific number of blocks after the referendum is approved. The deposit for this proposal will be
 locked for the referendum duration.
 
-### Submitting a Preimage and Proposals to the Whitelist Track
+### Submitting a Proposal to the Whitelist Track
 
 The procedure to submit a proposal to the whitelist track differs from the abovementioned procedure.
 Let's take the example where you would like to change the network protocol, like increasing the number of validators participating in para-validation. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1000 and submit a referenda proposal to the Root track directly, or if the Polkadot Technical Fellowship is on board with the proposal, the call could be whitelisted and then be submitted to the Whitelist track in Polkadot OpenGov. Below are the steps to follow when submitting a proposal to the Whitelist track. You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators encapsulated this way - 
