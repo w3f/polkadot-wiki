@@ -291,6 +291,9 @@ Below are the steps to follow when submitting a proposal to the Whitelist track.
 - Obtain the hash of `call`. The Polkadot Fellowship needs to start a Fellowship referendum to
   whitelist the call with `whitelist.whitelistCall(callHash)`. The Fellowship referendum gets voted
   on by the Polkadot Fellowship members only.
+  
+  ![call-hash](../assets/governance/encoded-call-hash.png)
+  
 - The public now votes on the referendum. Someone must place a decision deposit to go into the
   deciding phase.
 - Once passed, it gets enacted successfully as long as the call has been whitelisted by the
