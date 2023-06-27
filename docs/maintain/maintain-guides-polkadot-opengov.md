@@ -295,7 +295,8 @@ Below are the steps to follow when submitting a proposal to the Whitelist track.
   [submit your proposal](#submitting-a-proposal) for public referendum to the Whitelist Caller Track
   (if you still did not do it).
 - The public votes on the referendum. Someone must place a decision deposit to go into the deciding
-  phase.
+  phase. Failing to fulfill this requirement can lead to
+  [timeout](../learn/learn-polkadot-opengov.md#referenda-timeline).
 - Once passed, it gets enacted successfully as long as the call has been whitelisted by the
   Fellowship.
 

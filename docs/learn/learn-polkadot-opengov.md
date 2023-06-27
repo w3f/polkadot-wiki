@@ -250,7 +250,7 @@ fulfills three criteria:
   of only the value required for the on-chain storage needed to track it. But, having a referendum
   reviewed and decided upon carries the risk of using up the limited spots available in the
   referenda queue. Having a more significant but refundable deposit requirement makes sense to help
-  mitigate spam.
+  mitigate spam. Failing to make the decision deposit will lead to a _timeout_.
 
 Until they are in the lead-in period, proposals remain undecided. Once the criteria above are met,
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
