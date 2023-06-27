@@ -3,7 +3,7 @@ id: learn-balance-transfers
 title: Balance Transfers
 sidebar_label: Balances Transfers
 keywords: [balance, transfers, transaction, signing]
-description: Steps on how to perform balance transfers.
+description: Steps to Perform Balances Transfers.
 slug: ../learn-balance-transfers
 ---
 

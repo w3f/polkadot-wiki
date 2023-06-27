@@ -5,7 +5,7 @@ module.exports = {
       label: "General",
       link: {
         type: 'generated-index',
-        title: 'General Information',
+        title: 'General',
         description: 'General Information to get started with Polkadot & Web3.',
         slug: '/general',
       },
@@ -127,7 +127,7 @@ module.exports = {
               description: 'Everything about Accounts on Polkadot.',
               link: {
                 type: 'generated-index',
-                title: 'Polkadot Accounts',
+                title: 'Accounts',
                 description: 'Everything about accounts & native account abstraction on Polkadot.',
                 slug: '/accounts',
               },
@@ -142,6 +142,13 @@ module.exports = {
             {
               type: "category",
               label: "Transactions",
+              description: 'Everything about Transactions between Polkadot Accounts.',
+              link: {
+                type: 'generated-index',
+                title: 'Transactions',
+                description: 'Everything about transactions between Polkadot accounts.',
+                slug: '/transactions',
+              },
               items: [
                 "learn/learn-extrinsics",
                 "learn/learn-balance-transfers",

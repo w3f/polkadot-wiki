@@ -2,7 +2,7 @@
 id: learn-transaction-fees
 title: Transaction Fees
 sidebar_label: Transaction Fees
-description: How transaction fees are calculated and handled.
+description: How Transaction Fees are Calculated and Handled.
 keywords: [transaction, fees]
 slug: ../learn-transaction-fees
 ---

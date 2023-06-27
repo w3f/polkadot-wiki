@@ -2,7 +2,7 @@
 id: learn-extrinsics
 title: Extrinsics (a.k.a. Types of Transactions)
 sidebar_label: Extrinsics
-description: Learn about Transaction Types (i.e. Extrinsics)
+description: Types of Transactions on Polkadot (i.e. Extrinsics).
 keywords: [transaction, DOT, extrinsics, KSM]
 slug: ../learn-extrinsics
 ---
