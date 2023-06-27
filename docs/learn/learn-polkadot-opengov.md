@@ -486,8 +486,8 @@ referendum.
 
 ### Whitelisting
 
-Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller")
-to execute with Root-level privileges for call that have been approved by the Fellowship.
+Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
+execute with Root-level privileges for call that have been approved by the Fellowship.
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet
@@ -495,21 +495,20 @@ verifies two things:
 
 - The origin of the escalation is the Whitelisted-Root (i.e. that the referendum passed on this
   track), and
-- The whitelist contains the given proposal (in the configuration of Polkadot OpenGov, it gets
-  there via a separate Fellowship referendum).
+- The whitelist contains the given proposal (in the configuration of Polkadot OpenGov, it gets there
+  via a separate Fellowship referendum).
 
 If both conditions are true, the operation executes with Root-level privileges.
 
 This system enables a new parallel Track (Whitelisted-Caller), whose parameters have less
-restrictive passing parameters than Root in the short term. Through an open and transparent
-process, a body of global experts on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have determined that the
-action is both safe and time-critical.
+restrictive passing parameters than Root in the short term. Through an open and transparent process,
+a body of global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+protocol have determined that the action is both safe and time-critical.
 
 :::info Submitting Whitelisted Proposals
 
 For more information about how to submit a whitelisted proposal see the
-[dedicated advanced how-to guides](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-preimage-to-whitelist).
+[dedicated advanced how-to guides](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
 
 :::
 

@@ -230,12 +230,11 @@ from the treasury at once.
 ### Submitting a Preimage
 
 The act of creating a proposal is split from submitting the preimage for the proposal since the
-storage cost of submitting a large preimage could be expensive. Allowing the preimage
-submission to come as a separate transaction means that another account could submit the preimage
-for you and pay the fee. The example below demonstrates the creation of a preimage on Kusama
-(**the same procedure applies to Polkadot**). To propose that a remark "Expect Chaos!" be added to
-the blockchain, the preimage hash would be
-`0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`.
+storage cost of submitting a large preimage could be expensive. Allowing the preimage submission to
+come as a separate transaction means that another account could submit the preimage for you and pay
+the fee. The example below demonstrates the creation of a preimage on Kusama (**the same procedure
+applies to Polkadot**). To propose that a remark "Expect Chaos!" be added to the blockchain, the
+preimage hash would be `0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`.
 
 ![submit preimage](../assets/governance/opengov-submit-preimage.png)
 
@@ -263,7 +262,11 @@ locked for the referendum duration.
 
 ### Submitting a Referendum on the Whitelisted Caller Track
 
-Let's take the example of increasing the active validator count, an operation that requires Root origin. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1,000 and submit a referendum to the Root track directly. However, this requires a large decision deposit and has very conservative passing parameters such that it will probably require the full 28 day voting period to pass.
+Let's take the example of increasing the active validator count, an operation that requires Root
+origin. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of
+validators to 1,000 and submit a referendum to the Root track directly. However, this requires a
+large decision deposit and has very conservative passing parameters such that it will probably
+require the full 28 day voting period to pass.
 
 Operations that are deemed safe or time critical by the Polkadot Technical Fellowship can use the
 Whitelisted Caller track. This track requires less turnout in the first half of the decision period
@@ -274,21 +277,31 @@ configuration.
 Using the Whitelisted Caller track requires some special calls. Submitting a referendum in the same
 form as other tracks will not work. Namely, rather than voting on a particular `proposal`, the
 Whitelisted Caller track requires a vote to `dispatch` the `proposal` via the Whitelist pallet.
-Before opening a referendum on this track, you should also attempt to get a positive signal from
-the Fellowship that they will whitelist the proposal. If they do not, then even if the public
-referendum passes, it will not execute.
+Before opening a referendum on this track, you should also attempt to get a positive signal from the
+Fellowship that they will whitelist the proposal. If they do not, then even if the public referendum
+passes, it will not execute.
 
 Below are the steps to follow when submitting a proposal to the Whitelist track.
 
-- [submit a preimage](#submitting-a-preimage) with the call to _dispatch_ the proposal (`call`) you want to submit -- `whitelist.dispatchWhitelistedCallWhithPreimage(call)` -- and obtain the preimage hash. This is the preimage for the _public referendum_ on the Whitelisted Caller track.
+- [submit a preimage](#submitting-a-preimage) with the call to _dispatch_ the proposal (`call`) you
+  want to submit -- `whitelist.dispatchWhitelistedCallWhithPreimage(call)` -- and obtain the
+  preimage hash. This is the preimage for the _public referendum_ on the Whitelisted Caller track.
 
 ![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
 
-- Obtain the hash of `call`. The Polkadot Fellowship needs to start a Fellowship referendum to whitelist the call with `whitelist.whitelistCall(callHash)`. The Fellowship referendum gets voted on by the Polkadot Fellowship members only.
-- The public now votes on the referendum. Someone must place a decision deposit to go into the deciding phase.
-- Once passed, it gets enacted successfully as long as the call has been whitelisted by the Fellowship.
+- Obtain the hash of `call`. The Polkadot Fellowship needs to start a Fellowship referendum to
+  whitelist the call with `whitelist.whitelistCall(callHash)`. The Fellowship referendum gets voted
+  on by the Polkadot Fellowship members only.
+- If the Polkadot Fellowship whitelists the call, you can
+  [submit your proposal](#submitting-a-proposal) for public referendum to the Whitelist Caller Track
+  (if you still did not do it).
+- The public votes on the referendum. Someone must place a decision deposit to go into the deciding
+  phase.
+- Once passed, it gets enacted successfully as long as the call has been whitelisted by the
+  Fellowship.
 
-Note that the public referendum and Fellowship referendum can happen simultaneously. However, if the Fellowship does not whitelist the call, you must submit it directly to the Root origin.
+Note that the public referendum and Fellowship referendum can happen simultaneously. However, if the
+Fellowship does not whitelist the call, you must submit it directly to the Root origin.
 
 ## Voting on Referenda
 
