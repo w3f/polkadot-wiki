@@ -2,7 +2,7 @@
 id: learn-staking
 title: Introduction to Staking
 sidebar_label: Introduction to Staking
-description: A high level introduction to Staking on Polkadot and NPoS model
+description: High-level Overview of Staking and NPoS on Polkadot.
 keywords: [staking, stake, nominate, nominating, NPoS, faq]
 slug: ../learn-staking
 ---

@@ -208,6 +208,13 @@ module.exports = {
             {
               type: "category",
               label: "Staking",
+              description: 'Staking Philosophy and Mechanics on Polkadot.',
+              link: {
+                type: 'generated-index',
+                title: 'Staking on Polkadot',
+                description: 'Staking Philosophy and Mechanics on Polkadot.',
+                slug: '/staking',
+              },
               items: [
                 "learn/learn-staking",
                 "learn/learn-nomination-pools",
