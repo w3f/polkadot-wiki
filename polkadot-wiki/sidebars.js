@@ -365,6 +365,13 @@ module.exports = {
         {
           type: "category",
           label: "Archive",
+          description: "Implementations no longer live on Polkadot.",
+          link: {
+            type: 'generated-index',
+            title: "Archive",
+            description: "Implementations no longer live on Polkadot.",
+            slug: '/archive',
+          },
           items: [
             "learn/learn-governance",
             "learn/learn-launch",
