@@ -262,7 +262,7 @@ locked for the referendum duration.
 
 ### Submitting a Referendum on the Whitelisted Caller Track
 
-Let's consider increasing the active validator count. You could
+Let's consider increasing the number of validators participating in parachain consensus. You could
 [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to
 1,000 and submit a referendum to the Root track directly. However, this requires a large decision
 deposit and has very conservative passing parameters such that it will probably need the entire
