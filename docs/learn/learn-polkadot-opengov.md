@@ -486,23 +486,25 @@ referendum.
 
 ### Whitelisting
 
-In Polkadot OpenGov, it allows the Fellowship to authorize a new origin (known as Whitelisted-Root)
-to be executed with Root-level privileges and will only work with specified commands that have been
-approved by the Fellowship.
+Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller")
+to execute with Root-level privileges for call that have been approved by the Fellowship.
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet
 verifies two things:
 
-- The origin is the Whitelisted-Root (i.e. that the referendum passed on this track)
-- The Fellowship has indeed whitelisted the proposal.
+- The origin of the escalation is the Whitelisted-Root (i.e. that the referendum passed on this
+  track), and
+- The whitelist contains the given proposal (in the configuration of Polkadot OpenGov, it gets
+  there via a separate Fellowship referendum).
 
 If both conditions are true, the operation executes with Root-level privileges.
 
-This system enables the ability to have a new parallel Track (Whitelisted-Root Origin), whose
-parameters allow for a shorter voting turnaround. Through an open and transparent process, a body of
-global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have
-determined that the action is both safe and time-critical.
+This system enables a new parallel Track (Whitelisted-Caller), whose parameters have less
+restrictive passing parameters than Root in the short term. Through an open and transparent
+process, a body of global experts on the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have determined that the
+action is both safe and time-critical.
 
 :::info Submitting Whitelisted Proposals
 
@@ -513,7 +515,7 @@ For more information about how to submit a whitelisted proposal see the
 
 ### Becoming a Fellowship Member
 
-Currently, the only way to become a fellowship member is through an existing member who submits a
+Currently, the only way to become a Fellowship member is through an existing member who submits a
 `fellowshipCollective.addMember` extrinsic. See more information on
 [this Kusama SubSquare discussion](https://kusama.subsquare.io/post/6), which points to
 [these guidelines](https://docs.google.com/document/d/1nHa-7Na4u52CTZzq87HaKNptGjyQDWm9H7s7GRjJpMU/edit).
