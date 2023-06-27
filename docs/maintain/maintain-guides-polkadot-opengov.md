@@ -262,7 +262,7 @@ locked for the referendum duration.
 
 ### Submitting a Referendum on the Whitelisted Caller Track
 
-Let's consider increasing the active validator count, which requires Root origin. You could
+Let's consider increasing the active validator count. You could
 [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to
 1,000 and submit a referendum to the Root track directly. However, this requires a large decision
 deposit and has very conservative passing parameters such that it will probably need the entire
@@ -291,17 +291,13 @@ Below are the steps to follow when submitting a proposal to the Whitelist track.
 - Obtain the hash of `call`. The Polkadot Fellowship needs to start a Fellowship referendum to
   whitelist the call with `whitelist.whitelistCall(callHash)`. The Fellowship referendum gets voted
   on by the Polkadot Fellowship members only.
-- If the Polkadot Fellowship whitelists the call, you can
-  [submit your proposal](#submitting-a-proposal) for public referendum to the Whitelist Caller Track
-  (if you still did not do it).
-- The public votes on the referendum. Someone must place a decision deposit to go into the deciding
-  phase. Failing to fulfill this requirement can lead to
-  [timeout](../learn/learn-polkadot-opengov.md#referenda-timeline).
+- The public now votes on the referendum. Someone must place a decision deposit to go into the
+  deciding phase.
 - Once passed, it gets enacted successfully as long as the call has been whitelisted by the
   Fellowship.
 
 Note that the public referendum and Fellowship referendum can happen simultaneously. However, if the
-Fellowship does not whitelist the call; you must submit it directly to the Root origin.
+Fellowship does not whitelist the call, you must submit it directly to the Root origin.
 
 ## Voting on Referenda
 
