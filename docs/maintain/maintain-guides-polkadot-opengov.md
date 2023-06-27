@@ -262,17 +262,16 @@ locked for the referendum duration.
 
 ### Submitting a Referendum on the Whitelisted Caller Track
 
-Let's take the example of increasing the active validator count, an operation that requires Root
-origin. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of
-validators to 1,000 and submit a referendum to the Root track directly. However, this requires a
-large decision deposit and has very conservative passing parameters such that it will probably
-require the full 28 day voting period to pass.
+Let's consider increasing the active validator count, which requires Root origin. You could
+[submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to
+1,000 and submit a referendum to the Root track directly. However, this requires a large decision
+deposit and has very conservative passing parameters such that it will probably need the entire
+28-day voting period to pass.
 
 Operations that are deemed safe or time critical by the Polkadot Technical Fellowship can use the
 Whitelisted Caller track. This track requires less turnout in the first half of the decision period
-such that it can pass in a more timely manner. This track is typically used for more neutral,
-technical proposals like runtime upgrades or changing the system's parachain validation
-configuration.
+so that it can pass more quickly. This track is typically used for more neutral, technical proposals
+like runtime upgrades or changing the system's parachain validation configuration.
 
 Using the Whitelisted Caller track requires some special calls. Submitting a referendum in the same
 form as other tracks will not work. Namely, rather than voting on a particular `proposal`, the
@@ -283,7 +282,7 @@ passes, it will not execute.
 
 Below are the steps to follow when submitting a proposal to the Whitelist track.
 
-- [submit a preimage](#submitting-a-preimage) with the call to _dispatch_ the proposal (`call`) you
+- [Submit a preimage](#submitting-a-preimage) with the call to _dispatch_ the proposal (`call`) you
   want to submit -- `whitelist.dispatchWhitelistedCallWhithPreimage(call)` -- and obtain the
   preimage hash. This is the preimage for the _public referendum_ on the Whitelisted Caller track.
 
@@ -301,7 +300,7 @@ Below are the steps to follow when submitting a proposal to the Whitelist track.
   Fellowship.
 
 Note that the public referendum and Fellowship referendum can happen simultaneously. However, if the
-Fellowship does not whitelist the call, you must submit it directly to the Root origin.
+Fellowship does not whitelist the call; you must submit it directly to the Root origin.
 
 ## Voting on Referenda
 
