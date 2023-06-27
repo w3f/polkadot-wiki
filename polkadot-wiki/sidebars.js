@@ -331,6 +331,13 @@ module.exports = {
         {
           type: "category",
           label: "Polkadot Comparisons",
+          description: "Comparison between Polkadot and other Networks. ",
+          link: {
+            type: 'generated-index',
+            title: "Polkadot Comparisons",
+            description: "Comparison between Polkadot and other Networks. ",
+            slug: '/comparisons',
+          },
           items: [
             'learn/learn-comparisons-kusama',
             'learn/learn-comparisons-ethereum-2',

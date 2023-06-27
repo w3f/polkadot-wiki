@@ -1,8 +1,8 @@
 ---
 id: learn-comparisons
 title: Polkadot Comparisons
-sidebar_label: Other comparisons
-description: Learn how Polkadot compares to Ethereum 2, Cosmos, and other chains.
+sidebar_label: Other Comparisons
+description: A High-level Comparison between Polkadot and ETH 1.0 and BSC.
 keywords: [comparisons, polkadot, blockchain]
 slug: ../learn-comparisons
 ---

@@ -2,8 +2,7 @@
 id: learn-comparisons-rollups
 title: Layer Two and Rollups
 sidebar_label: Layer Two and Rollups
-description:
-  Comparisons between various rollup and layer two protocols and how they relate to Polkadot.
+description: A High-level Comparison between various Rollup and L2 Protocols.
 keywords: [rollups, polkadot, scalability, shared, security, parachain, ethereum]
 slug: ../learn-comparisons-rollups
 ---
