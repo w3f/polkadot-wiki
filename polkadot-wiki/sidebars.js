@@ -102,15 +102,35 @@ module.exports = {
     {
       type: "category",
       label: "Learn",
+      link: {
+        type: 'generated-index',
+        title: 'Learn about Polkadot',
+        description: 'Learn about the technology behind the Polkadot ecosystem, and the tools you can use to become a participant of Web3.',
+        slug: '/learn',
+      },
       items: [
         "learn/learn-index",
         {
           type: "category",
           label: "Basics",
+          description: 'Everything about Staking, Accounts, Transactions, Tokens and NFTs.',
+          link: {
+            type: 'generated-index',
+            title: 'Basic concepts about Polkadot',
+            description: 'Everything about staking, accounts, transactions, tokens and NFTs.',
+            slug: '/basics',
+          },
           items: [
             {
               type: "category",
               label: "Accounts",
+              description: 'Everything about Accounts on Polkadot.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot Accounts',
+                description: 'Everything about accounts & native account abstraction on Polkadot.',
+                slug: '/accounts',
+              },
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
