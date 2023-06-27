@@ -2,7 +2,7 @@
 id: learn-account-advanced
 title: Polkadot Accounts In-Depth
 sidebar_label: Accounts
-description: Advanced information about Polkadot accounts
+description: Advanced Concepts about Polkadot's Accounts.
 keywords: [account, polkadot account, polkadotjs, indices, identity, reaping, ENS, domain, ETH]
 slug: ../learn-account-advanced
 ---

@@ -2,7 +2,7 @@
 id: learn-staking-advanced
 title: Advanced Staking Concepts
 sidebar_label: Advanced Staking Concepts
-description: Advanced staking information
+description: Advanced Concepts about Staking on Polkadot.
 
 keywords:
   [

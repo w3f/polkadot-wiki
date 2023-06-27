@@ -225,6 +225,13 @@ module.exports = {
         {
           type: "category",
           label: "Advanced",
+          description: 'Advanced Concepts on Polkadot.',
+          link: {
+            type: 'generated-index',
+            title: 'Advanced Concepts',
+            description: 'Advanced concepts to better understand Polkadot.',
+            slug: '/advanced',
+          },
           items: [
             'learn/learn-account-advanced',
             "learn/learn-staking-advanced",
@@ -234,12 +241,26 @@ module.exports = {
             {
               type: "category",
               label: "How-to Guides",
+              description: 'Advanced How-to Guides.',
+              link: {
+                type: 'generated-index',
+                title: 'Advanced Guides',
+                description: 'Advanced how-to guides.',
+                slug: '/guides-advanced',
+              },
               items: [
                 "learn/learn-guides-staking",
                 "learn/learn-guides-identity",
                 {
                   type: "category",
                   label: "Asset Hub",
+                  description: 'Advanced How-to Guides about the Asset Hub.',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Advanced Guides for Asset Hub',
+                    description: 'Advanced how-to guides about the Asset Hub.',
+                    slug: '/guides-advanced-assets',
+                  },
                   items: [
                     "learn/learn-guides-assets-create",
                     "learn/learn-guides-assets-ledger"
