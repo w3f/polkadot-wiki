@@ -229,10 +229,10 @@ from the treasury at once.
 
 ### Submitting a Preimage
 
-The act of making a proposal is split from submitting the preimage for the proposal since the
-storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage
+The act of creating a proposal is split from submitting the preimage for the proposal since the
+storage cost of submitting a large preimage could be expensive. Allowing the preimage
 submission to come as a separate transaction means that another account could submit the preimage
-for you and pay the fee for it. The example below demonstrates the creation of a preimage on Kusama
+for you and pay the fee. The example below demonstrates the creation of a preimage on Kusama
 (**the same procedure applies to Polkadot**). To propose that a remark "Expect Chaos!" be added to
 the blockchain, the preimage hash would be
 `0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`.
@@ -246,12 +246,15 @@ Governance > Preimages.
 
 ### Submitting a Preimage to Whitelist
 
-Let's take the example where you would like to change the network protocol, like increasing the active validator count. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1000 and submit a referenda proposal to the Root track directly, or if the Polkadot Technical Fellowship is on board with the proposal, the call could be whitelisted and then be submitted to the Whitelist track in Polkadot OpenGov. Below are the steps to follow when submitting a proposal to the Whitelist track. You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators encapsulated this way - 
-  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` and obtain preimage hash. If the call is submitted directly, it will not be successfully executed by the Whitelist origin.
+Let's take the example where you would like to change the network protocol, like increasing the number of validators participating in para-validation. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1000 and submit a referenda proposal to the Root track directly, or if the Polkadot Technical Fellowship is on board with the proposal, the call could be whitelisted and then be submitted to the Whitelist track in Polkadot OpenGov. Below are the steps to follow when submitting a proposal to the Whitelist track. You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators encapsulated this way - 
+  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` and obtain preimage hash that can be used to [submit a referenda proposal](#submitting-a-proposal) in the whitelist track later. If the call is submitted directly, it will not be executed successfully by the Whitelist origin. 
 
 ![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
 
-- The Polkadot fellowship needs to start a fellowship referendum to whitelist the call with `whitelist.whitelistCall(callHash)`
+- The Polkadot fellowship needs to start a fellowship referendum to whitelist the call with `whitelist.whitelistCall(callHash)`. This `callHash` is the hash of the actual call that can be obtained from the [Polkadot-JS UI Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics).
+
+![call-hash](../assets/governance/encoded-call-hash.png)
+  
 -  The fellowship referendum gets voted on by the Polkadot fellowship members only.
 - Once the call is whitelisted, you can [submit a referenda proposal](#submitting-a-proposal) with
   whitelist origin with  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` .
