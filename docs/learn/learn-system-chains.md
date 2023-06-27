@@ -2,7 +2,7 @@
 id: learn-system-chains
 title: System Parachains
 sidebar_label: System Parachains
-description: Learn about System Parachains and ones currently on the network.
+description: System Parachains currently deployed on Polkadot.
 keywords: [common good, system, parachains, system level, public utility]
 slug: ../learn-system-chains
 ---

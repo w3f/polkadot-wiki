@@ -2,7 +2,7 @@
 id: learn-xcm-instructions
 title: XCM Instructions & Register Specification
 sidebar_label: XCM Instructions
-description: View the specification for instructions and registers for the XCM messaging format.
+description: Specification for Instructions and Registers for the XCM Format.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-instructions
 ---

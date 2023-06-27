@@ -2,7 +2,7 @@
 id: learn-xcm-pallet
 title: XCM FRAME Pallet Overview
 sidebar_label: XCM Pallet
-description: Learn how the XCM pallet works, and its place in the ecosystem.
+description: Mechanics of the XCM Pallet and its role in Polkadot's Ecosystem.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-pallet
 ---

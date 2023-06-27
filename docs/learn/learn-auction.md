@@ -2,7 +2,7 @@
 id: learn-auction
 title: Parachain Slot Auctions
 sidebar_label: Parachain Slot Auctions
-description: Learn about slot auctions.
+description: Polkadot's Parachain Slot Auction Mechanism.
 keywords: [auction, slot auctions, parachain, bidding]
 slug: ../learn-auction
 ---

@@ -2,7 +2,7 @@
 id: learn-collator
 title: Collator
 sidebar_label: Collator
-description: Learn about how collators maintain the network.
+description: Role of Collators within the Polkadot Ecosystem.
 keywords: [collator, maintain, full node, block candidate]
 slug: ../learn-collator
 ---

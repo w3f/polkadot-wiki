@@ -274,6 +274,13 @@ module.exports = {
         {
           type: "category",
           label: "Architecture",
+          description: "Everything about Polkadot's Architecture.",
+          link: {
+            type: 'generated-index',
+            title: "Polkadot's Architecture",
+            description: "Everything about Polkadot's Architecture.",
+            slug: '/architecture',
+          },
           items: [
             "learn/learn-architecture",
             "learn/learn-nominator",
@@ -282,6 +289,13 @@ module.exports = {
             {
               type: "category",
               label: "Parachains",
+              description: "Everything about Polkadot's Parachains.",
+              link: {
+                type: 'generated-index',
+                title: "Polkadot's Parachains",
+                description: "Everything about Polkadot's Parachains.",
+                slug: '/parachains',
+              },
               items: [
                 "learn/learn-parachains",
                 "learn/learn-parachains-protocol",
@@ -295,6 +309,13 @@ module.exports = {
             {
               type: "category",
               label: "Cross Consensus Messaging (XCM)",
+              description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
+              link: {
+                type: 'generated-index',
+                title: "Polkadot's XCM",
+                description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
+                slug: '/xcm',
+              },
               items: [
                 'learn/learn-xcm',
                 'learn/learn-xcm-pallet',
