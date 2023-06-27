@@ -1,7 +1,7 @@
 ---
 id: contributing
-title: Contributing
-sidebar_label: Contributing
+title: Contributing to the Polkadot Wiki
+sidebar_label: Contributing to the Wiki
 description:
   Steps on how to contribute to the Polkadot Wiki and the code of conduct to keep in mind.
 keywords: [contributing, contributions, translations]

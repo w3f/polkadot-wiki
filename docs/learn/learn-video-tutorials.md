@@ -1,60 +1,163 @@
 ---
 id: learn-video-tutorials
-title: Video Tutorials
-sidebar_label: Video Tutorials
+title: Videos about Polkadot
+sidebar_label: Videos
 description: Links to useful tutorial videos for Polkadot related topics.
 keywords: [learn, video, tutorials, explainers]
 slug: ../learn-video-tutorials
 ---
 
-## Getting Started
+:::info Visit the Polkadot YouTube Channel
 
-- [Polkadot for Beginners](https://www.youtube.com/watch?v=kw8eu2VadFA&list=PLOyWqupZ-WGt-V6azbEcVuuIL_MbmgKhy)
-- [A Walkthrough of Polkadot's UI](https://www.youtube.com/watch?v=mNStMPZjiHM)
-- [Polkadot Webinars](https://www.youtube.com/watch?v=9B10wX9Mphc&list=PLOyWqupZ-WGsLEJq0sRyvUD-pWuVwA5yg)
-- [How to protect yourself from scams](https://www.youtube.com/watch?v=WqDlG4sy_i4)
+For more videos see all playlists on the
+[Polkadot YouTube channel](https://www.youtube.com/@PolkadotNetwork/playlists).
 
-## Tutorials
+:::
 
-### Accounts, Transfers & Staking
+## Ongoing Series
 
-- [How to create Polkadot account](https://www.youtube.com/watch?v=sy7lvAqyzkY)
-- [Understanding Accounts and Keys](https://www.youtube.com/watch?v=zhfccevPqWI)
-- [How to Stake DOT/KSM on Polkadot JS](https://www.youtube.com/watch?v=FCXC0CDhyS4)
-- [Using Polkadot with Ledger live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
-- [Connect Ledger to Polkadot-JS Apps](https://www.youtube.com/watch?v=7VlTncHCGPc)
-- [Why do transfers fail?](https://www.youtube.com/watch?v=Wzqi8-WXiK8)
-- [Existential Deposit and Keep-Alive Checks](https://www.youtube.com/watch?v=ZjKpTgxDp_4)
-- [Why should you Nominate on Polkadot and Kusama?](https://youtu.be/weG_uzdSs1E)
-- [Picking validators to Nominate (Stake)](https://youtu.be/ZMzhM1m4I-k)
+Learn about Polkadot and Substrate at a deeper level with these ongoing deep dives, technical seminars, and initiatives within the ecosystem.
 
-### Parachain Auctions and Crowdloans
 
-- [Contribute to Crowdloans using Polkadot JS](https://www.youtube.com/watch?v=AA9mPANmzmU)
-- [Introduction to Parachain Slot auctions and Crowdloans](https://www.youtube.com/watch?v=i5-Rw2Sf7-w)
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8">
+      <img src="/img/polkadot-guide/tech-explainers.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Technical Explainers</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGsfgxkwTdMOwnbRW4nx_T-i">
+      <img src="/img/polkadot-guide/substrate-seminars.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Substrate Seminars</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGsfnlpkk0KWX3uS4yg6ZztG">
+      <img class="guide-image" src="/img/polkadot-guide/deep-dives.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Polkadot Deep Dives</h5>
+              </div>
+    </a>
+  </td>
+</tr>
 
-### Governance
+<br />
 
-- [Voting on Referenda on Polkadot and Kusama](https://www.youtube.com/watch?v=BkbhhlsezGA)
-- [Voting for Polkadot and Kusama council](https://www.youtube.com/watch?v=837Vv3gdRzI)
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGvJuOchUyo6eFB_RA76mv3h">
+      <img src="/img/polkadot-guide/community-calls.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Polkadot Community Calls</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGtxijJor37g5GmUqVgUvGDt">
+      <img src="/img/polkadot-guide/decoded-23.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Polkadot Decoded 2023</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGthz-1qCz9RozF9N2ywyb4V">
+      <img src="/img/polkadot-guide/PBA-23.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Polkadot Blockchain Academy</h5>
+        </div>
+    </a>
+  </td>
+</tr>
 
-### For validators
+## Past Events
 
-- [Validator Resources](https://www.youtube.com/playlist?list=PLOyWqupZ-WGsM3O0t5iWgvMkivHnwE1C_)
-- [Why should you become a Validator?](https://youtu.be/0EmP0s6JOW4)
-- [How to upgrade your node](https://youtu.be/5LtcdBR9F40)
-- [Roles and Responsibilities of a Validator](https://youtu.be/riVg_Up_fCg)
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGsnACsCmWH7PO-0paz9zlQ8">
+      <img class="guide-image" src="/img/polkadot-guide/beginners.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Polkadot for Beginners</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGsbca2vOnkS3l6j53G6ZS_E">
+      <img src="/img/polkadot-guide/eth-denver-23.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">ETH Denver 2023</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGvgdDcF-dW4RVEoeFZiZmQc">
+      <img class="guide-image" src="/img/polkadot-guide/encode-club.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Encode Polkadot Club</h5>
+              </div>
+    </a>
+  </td>
+</tr>
 
-### Technical Content
+<br />
 
-- [Rust, Substrate and Polkadot](https://youtu.be/aVW_eG-IH7o)
-- [Introduction to Substrate](https://youtu.be/-6BBIr-DmI4)
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGvywLqJDsMIYdCn8QEa2ShQ">
+      <img src="/img/polkadot-guide/sub0.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Sub0 2022</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGvcE0HKKnORiFqWNv5onxCf">
+      <img src="/img/polkadot-guide/decoded-22.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Polkadot Decoded 2022</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGuA9BWEP4_zRiLwHzXb1zE9">
+      <img class="guide-image" src="/img/polkadot-guide/davos-22.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Polkadot in Davos 2022</h5>
+              </div>
+    </a>
+  </td>
+</tr>
 
-## Past and Ongoing Events
+<br />
 
-- [Encode Polkadot Club 2021](https://www.youtube.com/playlist?list=PLOyWqupZ-WGvgdDcF-dW4RVEoeFZiZmQc)
-- [Polkadot Decoded 2021](https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAB8z_PkZD6f-IA6CUONFb)
-- [Polkadot Buildathon India 2021](https://www.youtube.com/playlist?list=PLOyWqupZ-WGtnuyctbnGPPyt6DSSXH1h3)
-- [Polkadot Decoded 2020](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt4LvKE0n66rw_R5c3Qju5f)
-- [Hackusama Webinar Series 2020](https://www.youtube.com/playlist?list=PLOyWqupZ-WGsAB7lMLn_Q7c3tbESTzXg7)
-- [Web3 Builders Series 2020](https://www.youtube.com/playlist?list=PLOyWqupZ-WGve_wS2thJp34cWm_SpNNYf)
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGsLEJq0sRyvUD-pWuVwA5yg">
+      <img src="/img/polkadot-guide/webinars.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Polkadot Webinars</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGsFyiLL4AOn24obxfZzXTFO">
+      <img src="/img/polkadot-guide/polkadot-NA.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Hackathon North America</h5>
+        </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="https://youtube.com/playlist?list=PLOyWqupZ-WGve3__mfw7wX4tY1pWj8ExG">
+      <img class="guide-image" src="/img/polkadot-guide/global-series.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Hackathon Global Series</h5>
+              </div>
+    </a>
+  </td>
+</tr>
