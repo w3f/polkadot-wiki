@@ -244,27 +244,6 @@ Governance > Preimages.
 
 ![preimage](../assets/governance/opengov-preimage-submitted.png)
 
-### Submitting a Preimage to Whitelist
-
-Let's take the example where you would like to change the network protocol, like increasing the number of validators participating in para-validation. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1000 and submit a referenda proposal to the Root track directly, or if the Polkadot Technical Fellowship is on board with the proposal, the call could be whitelisted and then be submitted to the Whitelist track in Polkadot OpenGov. Below are the steps to follow when submitting a proposal to the Whitelist track. You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators encapsulated this way - 
-  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` and obtain preimage hash that can be used to [submit a referenda proposal](#submitting-a-proposal) in the whitelist track later. If the call is submitted directly, it will not be executed successfully by the Whitelist origin. 
-
-![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
-
-- The Polkadot fellowship needs to start a fellowship referendum to whitelist the call with `whitelist.whitelistCall(callHash)`. This `callHash` is the hash of the actual call that can be obtained from the [Polkadot-JS UI Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics).
-
-![call-hash](../assets/governance/encoded-call-hash.png)
-  
--  The fellowship referendum gets voted on by the Polkadot fellowship members only.
-- Once the call is whitelisted, you can [submit a referenda proposal](#submitting-a-proposal) with
-  whitelist origin with  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` .
-- The public now votes on the referendum after placing a decision deposit.
-- Once passed, it gets enacted successfully as the call has been whitelisted.
-
-Note that you can also submit the public referendum while the fellowship is voting on the fellowship
-referendum to whitelist your call. This comes with the risk that if the fellowship declines to
-whitelist the call, your referenda will fail to get enacted.
-
 ### Submitting a Proposal
 
 Submitting a proposal requires you to bond some tokens. On Polkadot-JS UI, you can navigate to the
@@ -281,6 +260,29 @@ criteria. After entering the hash of the preimage for the proposal, the preimage
 automatically populated. The enactment delay can be specified either as a block number, or as a
 specific number of blocks after the referendum is approved. The deposit for this proposal will be
 locked for the referendum duration.
+
+### Submitting a Preimage and Proposals to the Whitelist Track
+
+The procedure to submit a proposal to the whitelist track differs from the abovementioned procedure.
+Let's take the example where you would like to change the network protocol, like increasing the number of validators participating in para-validation. You could [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to 1000 and submit a referenda proposal to the Root track directly, or if the Polkadot Technical Fellowship is on board with the proposal, the call could be whitelisted and then be submitted to the Whitelist track in Polkadot OpenGov. Below are the steps to follow when submitting a proposal to the Whitelist track. You [submit a preimage](#submitting-a-preimage) with the call that sets the number of validators encapsulated this way - 
+  `whitelist.dispatchWhitelistedCallWhithPreimage(call)` and obtain preimage hash that can be used to [submit a referenda proposal](#submitting-a-proposal) in the whitelist track later. If the call is submitted directly, it will not be executed successfully by the Whitelist origin. 
+
+![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
+
+- The Polkadot fellowship needs to start a fellowship referendum to whitelist the call with `whitelist.whitelistCall(callHash)`. This `callHash` is the hash of the actual call that can be obtained from the [Polkadot-JS UI Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics).
+
+![call-hash](../assets/governance/encoded-call-hash.png)
+  
+-  The fellowship referendum gets voted on by the Polkadot fellowship members only.
+- Once the call is whitelisted, you can [submit a referenda proposal](#submitting-a-proposal) with
+  whitelist origin with the preimage hash of `whitelist.dispatchWhitelistedCallWhithPreimage(call)`.
+- The public now votes on the referendum after placing a decision deposit.
+- Once passed, it gets enacted successfully as the call has been whitelisted.
+
+Note that you can also submit the public referendum while the fellowship is voting on the fellowship
+referendum to whitelist your call. This comes with the risk that if the fellowship declines to
+whitelist the call, your referenda will fail to get enacted.
+
 
 ## Voting on Referenda
 
