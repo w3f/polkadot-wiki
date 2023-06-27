@@ -263,7 +263,7 @@ Let's take the example where you would like to change the network protocol, like
 
 Note that you can also submit the public referendum while the fellowship is voting on the fellowship
 referendum to whitelist your call. This comes with the risk that if the fellowship declines to
-whitelist the call, you must submit it directly to the Root origin.
+whitelist the call, your referenda will fail to get enacted.
 
 ### Submitting a Proposal
 
