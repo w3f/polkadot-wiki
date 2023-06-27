@@ -41,6 +41,12 @@ fully-featured indexer, so you don’t have to, with:
 To start building, head to the [SubQuery documentation](https://academy.subquery.network/) where
 you'll find quick start guides and walkthrough developer tutorials.
 
+### Dolpha Analytics
+
+[Dolpha Analytics](https://dolpha.com/) is an on-chain data analytics and insights platform for the
+Polkadot and Kusama ecosystems. Dolpha empowers casual and power users to get a pulse on the
+ecosystems, perform due diligence, surface signals, and make informed data-driven decisions.
+
 ### Web3Go
 
 [Web3GO](https://web3go.xyz/) is a Polkadot-based open data analytics platform that provides
