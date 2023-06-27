@@ -74,7 +74,7 @@ is the signature generated in the previous step. Running the code above will cre
 
 ## Metadata Updates
 
-Similarly to what we did for the chain specification, we now generate and sign the Statemine
+Similarly to what we did for the chain specification, we now generate and sign the Asset Hub
 metadata.
 
 ### Metadata QR Fountain
@@ -159,7 +159,8 @@ modify the following fields of the `config.toml` file:
 
 ```
 [[chains]]
-name = "Asset Hub"
+name = "Statemine"
+title = "Kusama Asset Hub"
 rpc_endpoint = "wss://kusama-asset-hub-rpc.polkadot.io"
 color = "#f27230"
 
