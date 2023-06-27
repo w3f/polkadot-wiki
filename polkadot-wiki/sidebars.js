@@ -351,6 +351,13 @@ module.exports = {
         {
           type: "category",
           label: "Future Implementations",
+          description: "Implementations that will be deployed on Polkadot.",
+          link: {
+            type: 'generated-index',
+            title: "Future Implementations",
+            description: "Implementations that will be deployed on Polkadot.",
+            slug: '/future-implementations',
+          },
           items: [
             "learn/learn-parathreads",
           ],
