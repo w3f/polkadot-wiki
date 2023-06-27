@@ -174,6 +174,13 @@ module.exports = {
             {
               type: "category",
               label: "NFTs",
+              description: 'Everything about NFTs on Polkadot.',
+              link: {
+                type: 'generated-index',
+                title: 'NFTs',
+                description: 'Everything about NFTs on Polkadot.',
+                slug: '/nft',
+              },
               items: [
                 "learn/learn-nft",
                 "learn/learn-nft-projects",

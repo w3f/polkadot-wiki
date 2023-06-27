@@ -2,7 +2,7 @@
 id: learn-nft-projects
 title: NFT projects on Polkadot and Kusama
 sidebar_label: NFT Projects
-description: Introductions to the NFT projects in the ecosystem.
+description: NFT Projects in the Polkadot Ecosystem.
 keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft-projects
 ---
