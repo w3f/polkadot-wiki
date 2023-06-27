@@ -2,7 +2,7 @@
 id: learn-DOT
 title: DOT
 sidebar_label: DOT
-description: Learn about the tokenomics of the Polkadot ecosystem.
+description: Tokenomics of Polkadot's Native Token DOT.
 keywords: [token, DOT, what are the uses of DOT, KSM, faucet]
 slug: ../learn-DOT
 ---

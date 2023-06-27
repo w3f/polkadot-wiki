@@ -158,6 +158,13 @@ module.exports = {
             {
               type: "category",
               label: "Tokens and Assets",
+              description: 'Everything about Tokens and Assets on Polkadot.',
+              link: {
+                type: 'generated-index',
+                title: 'Tokens and Assets',
+                description: 'Everything about tokens and assets on Polkadot.',
+                slug: '/tokens-and-assets',
+              },
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
