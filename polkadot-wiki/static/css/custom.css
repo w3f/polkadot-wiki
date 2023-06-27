@@ -752,3 +752,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     max-width: 1140px;
   }
 }
+
+.docusaurus-mermaid-container {
+  text-align: center;
+}

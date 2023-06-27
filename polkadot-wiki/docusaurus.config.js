@@ -197,6 +197,20 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    mermaid: {
+      theme: { light: 'base', dark: 'base' },
+      options: {
+        themeVariables: {
+          fontFamily: 'Unbounded',
+          primaryColor: '#E6007A',
+          primaryTextColor: '#fff',
+          primaryBorderColor: '#E6007A',
+          lineColor: '#140523',
+          secondaryColor: '#552BBF',
+          tertiaryColor: '#00B2FF'
+          }
+        },
+      },
     colorMode: {
       disableSwitch: true,
     },
