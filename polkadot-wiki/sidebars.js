@@ -109,7 +109,6 @@ module.exports = {
         slug: '/learn',
       },
       items: [
-        "learn/learn-index",
         {
           type: "category",
           label: "Basics",

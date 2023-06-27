@@ -230,7 +230,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/learn-index",
+          to: "docs/learn",
           label: "Learn",
           position: "right",
         },
