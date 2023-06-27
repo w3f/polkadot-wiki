@@ -2,7 +2,7 @@
 id: learn-polkadot-host
 title: Polkadot Host (PH)
 sidebar_label: Polkadot Host
-description: Learn about the components of the Polkadot host.
+description: The Polkadot Host and its Components.
 keywords: [polkadot host, runtime]
 slug: ../learn-polkadot-host
 ---

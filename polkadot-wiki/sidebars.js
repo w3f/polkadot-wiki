@@ -189,6 +189,13 @@ module.exports = {
             {
               type: "category",
               label: "Components",
+              description: 'Key Components of the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Components',
+                description: 'Key components of the Polkadot ecosystem.',
+                slug: '/components',
+              },
               items: [
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
