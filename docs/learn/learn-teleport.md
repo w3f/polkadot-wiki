@@ -26,7 +26,7 @@ Polkadot Asset Hub, or between any other parachain.
 
 ## How Teleports work
 
-![teleport](../assets/statemint/teleport-asset.png)
+![teleport](../assets/asset-hub/teleport-asset.png)
 
 As you can see from the diagram above, there are only 2 actors within this model: the source and the
 destination. The way in which we transfer assets between the source and the destination are briefly

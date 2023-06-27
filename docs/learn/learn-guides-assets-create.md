@@ -63,7 +63,7 @@ the Asset Hub
 - Access the Asset Hub through [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 - Navigate to Network > Assets.
 
-![Navigate to Assets page](../assets/statemint/Statemint-asset-0.png)
+![Navigate to Assets page](../assets/asset-hub/hub-asset-0.png)
 
 - Click on the create button and you will be presented with a pop-up window. Choose the creator
   account, name of the asset to be displayed on the Asset Hub, the asset's symbol, number of
@@ -71,16 +71,16 @@ the Asset Hub
   and the most important field of your asset - the unique asset ID. The UI would not let you enter
   an ID that has already been taken. After all the details are entered, click on the next button.
 
-![Add Asset Metadata](../assets/statemint/Statemint-asset-1.png)
+![Add Asset Metadata](../assets/asset-hub/hub-asset-1.png)
 
 - Choose the admin, issuer and the freezer accounts for your asset and click on the create button.
 
-![Asset managing accounts](../assets/statemint/Statemint-asset-2.png)
+![Asset managing accounts](../assets/asset-hub/hub-asset-2.png)
 
 - Sign and submit the transaction (If you like to verify the transaction details before signing, you
   can click on the dropdown button pointed by the arrow in the snapshot below).
 
-![Sign asset creating transaction](../assets/statemint/Statemint-asset-3.png)
+![Sign asset creating transaction](../assets/asset-hub/hub-asset-3.png)
 
 If the transaction is successful, you should see the asset and its details displayed in the
 Network > Assets page on the Asset Hub.

@@ -276,7 +276,7 @@ balance-keeping chain for both fungible and non-fungibles.
 These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
 switching the top right menu from Kusama to the Asset Hub.
 
-![nft-statemine](../assets/nft/nft-statemine.png)
+![nft-hub](../assets/asset-hub/hub-nft.png)
 
 They can also be interacted with directly through the
 [extrinsics tab of the Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics):

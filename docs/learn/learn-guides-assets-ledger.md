@@ -14,7 +14,7 @@ like Brave, Chrome or Edge.
 
 :::
 
-Statemine has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
+The Asset Hub has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
 Nano S and Ledger Nano X devices. The Ledger devices are hardware wallets that keep your private key
 secured on a physical device that does not get directly exposed to your computer or the internet.
 
