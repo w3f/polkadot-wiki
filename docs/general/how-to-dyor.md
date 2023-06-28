@@ -2,7 +2,7 @@
 id: how-to-dyor
 title: How to Do Your Own Research (DYOR)
 sidebar_label: Do Your Own Research
-description: It goes without saying, always DYOR. We hope this guide can help you do so.
+description: Importance of Doing Your Own Research (DYOR).
 keywords: [dyor, research, scams, protect]
 slug: ../how-to-dyor
 ---

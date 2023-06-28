@@ -6,7 +6,7 @@ module.exports = {
       link: {
         type: 'generated-index',
         title: 'General',
-        description: 'General Information to get started with Polkadot & Web3.',
+        description: 'General Information to get started with Polkadot and Web3.',
         slug: '/general',
       },
       items: [
@@ -14,7 +14,7 @@ module.exports = {
         {
           type: "category",
           label: "Stay Safe",
-          description: 'Good-practices to stay safe while surfing in Web3.',
+          description: 'Good-practices to Stay Safe while Surfing in Web3.',
           link: {
             type: 'generated-index',
             title: 'Stay Safe',
@@ -29,7 +29,7 @@ module.exports = {
         {
           type: "category",
           label: "Wallets",
-          description: 'Wallet options in the Polkadot and Kusama ecosystems.',
+          description: 'Wallet Options in the Polkadot Ecosystem.',
           link: {
             type: 'generated-index',
             title: 'Wallets',
@@ -46,7 +46,7 @@ module.exports = {
         {
           type: "category",
           label: "Dashboards",
-          description: 'Dashboards in the Polkadot and Kusama ecosystems.',
+          description: 'Dashboards in the Polkadot Ecosystem.',
           link: {
             type: 'generated-index',
             title: 'Dashboards',
@@ -61,7 +61,7 @@ module.exports = {
         {
           type: "category",
           label: "Community & Contributors",
-          description: 'Participate in the Polkadot community and contribute to the Wiki.',
+          description: 'Polkadot Community and Wiki Contributors.',
           link: {
             type: 'generated-index',
             title: 'Community & Contributors',
@@ -77,7 +77,7 @@ module.exports = {
         {
           type: "category",
           label: "Programmes",
-          description: 'Programmes and initiatives within the Polkadot ecosystem.',
+          description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
           link: {
             type: 'generated-index',
             title: 'Programmes',

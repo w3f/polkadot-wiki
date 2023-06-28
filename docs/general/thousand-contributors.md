@@ -2,8 +2,7 @@
 id: doc-thousand-contributors
 title: Thousand Contributors Programme
 sidebar_label: Thousand Contributors
-description:
-  Learn about the Thousand Contributors Programme and how it can support your contributions.
+description: The Thousand Contributors Program and How it can Support your Contributions.
 slug: ../thousand-contributors
 ---
 

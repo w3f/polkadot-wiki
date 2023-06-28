@@ -2,7 +2,7 @@
 id: wallets-and-extensions
 title: Wallets and Extensions
 sidebar_label: Wallets and Extensions
-description: An overview of wallets and browser extensions in the Polkadot ecosystem.
+description: An Overview of Wallets and Browser Extensions in the Polkadot Ecosystem.
 keywords: [wallets, account, signer, supported wallets, balance, token]
 slug: ../wallets-and-extensions
 ---

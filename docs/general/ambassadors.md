@@ -2,7 +2,7 @@
 id: ambassadors
 title: Polkadot Ambassador Programme
 sidebar_label: Polkadot Ambassadors
-description: Simple user guide on Polkadot's Ambassador Programme and how to participate.
+description: The Polkadot's Ambassador Program and How you can Participate in It.
 keywords: [ambassadors, contribute, contributions, program]
 slug: ../ambassadors
 ---
