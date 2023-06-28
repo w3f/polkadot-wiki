@@ -283,17 +283,17 @@ passes, it will not execute.
 Below are the steps to follow when submitting a proposal to the Whitelist track.
 
 - [Submit a preimage](#submitting-a-preimage) with the call to _dispatch_ the proposal (`call`) you
-  want to submit -- `whitelist.dispatchWhitelistedCallWhithPreimage(call)` -- and obtain the
-  preimage hash. This is the preimage for the _public referendum_ on the Whitelisted Caller track.
+  want to submit -- `whitelist.dispatchWhitelistedCallWithPreimage(call)` -- and obtain the preimage
+  hash. This is the preimage for the _public referendum_ on the Whitelisted Caller track.
 
 ![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
 
 - Obtain the hash of `call`. The Polkadot Fellowship needs to start a Fellowship referendum to
   whitelist the call with `whitelist.whitelistCall(callHash)`. The Fellowship referendum gets voted
   on by the Polkadot Fellowship members only.
-  
+
   ![call-hash](../assets/governance/encoded-call-hash.png)
-  
+
 - The public now votes on the referendum. Someone must place a decision deposit to go into the
   deciding phase.
 - Once passed, it gets enacted successfully as long as the call has been whitelisted by the
