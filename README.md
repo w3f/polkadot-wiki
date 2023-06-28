@@ -28,6 +28,7 @@
     - [Deployments](#deployments)
     - [GitHub Actions](#github-actions)
   - [Conditional Rendering](#conditional-rendering)
+  - [Mermaid JS Diagrams](#mermaid-js-diagrams)
   - [Inline React Components](#inline-react-components)
 - [Internationalization](#internationalization)
 - [License](#license)
@@ -233,6 +234,29 @@ To verify the appropriate values have been substituted in each scenario, run `po
 `[WARNING] Something is already running on port 3000. Would you like to run the app on another port instead?`,
 proceed with `yes`. This will likely launch one project on port 3000 and the other on 3001, allowing
 you to compare the rendered outputs for both projects locally and simultaneously.
+
+### Mermaid JS Diagrams
+
+This repository supports [Mermaid.js diagrams](https://mermaid.js.org/). Most graph types are
+supported, except for the asynchronous graphs which may be unstable at this time.
+
+Example:
+
+```mermaid
+---
+title: Staking Proxies
+---
+flowchart LR
+    subgraph PT1[Staking Proxies]
+        direction LR
+        dan[Dan's Proxy] ==> charly[Charly]
+    end
+    subgraph PT2[Dan's Proxy]
+        dan2[Dan] ==> pure[Pure Proxy]
+    end
+    PT2== Proxy-based Staking ==>PT1
+
+```
 
 ### Inline React Components
 

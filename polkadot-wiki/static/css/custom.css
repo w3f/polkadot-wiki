@@ -755,4 +755,15 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 .docusaurus-mermaid-container {
   text-align: center;
+  background-color: #e6007a;
+}
+
+.docusaurus-mermaid-container svg {
+  width: 100%;
+}
+
+.docusaurus-mermaid-container .edgeLabel {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
 }

@@ -201,13 +201,17 @@ module.exports = {
       theme: { light: 'base', dark: 'base' },
       options: {
         themeVariables: {
+          htmlLabels: false,
           fontFamily: 'Unbounded',
-          primaryColor: '#E6007A',
+          fontSize: '20px',
+          primaryColor: '#321D48',
+          background: '#321D48',
           primaryTextColor: '#fff',
           primaryBorderColor: '#E6007A',
           lineColor: '#140523',
-          secondaryColor: '#552BBF',
-          tertiaryColor: '#00B2FF'
+          titleColor: "#fff",
+          secondaryColor: '#321D48',
+          tertiaryColor: '#E6007A'
           }
         },
       },
