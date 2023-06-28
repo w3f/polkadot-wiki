@@ -112,7 +112,7 @@ module.exports = {
         {
           type: "category",
           label: "Basics",
-          description: 'Everything about Staking, Accounts, Transactions, Tokens and NFTs.',
+          description: 'Staking, Accounts, Transactions, Tokens and NFTs, and Governance.',
           link: {
             type: 'generated-index',
             title: 'Basic concepts about Polkadot',
@@ -123,11 +123,11 @@ module.exports = {
             {
               type: "category",
               label: "Accounts",
-              description: 'Everything about Accounts on Polkadot.',
+              description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
               link: {
                 type: 'generated-index',
                 title: 'Accounts',
-                description: 'Everything about accounts & native account abstraction on Polkadot.',
+                description: 'Everything about accounts and native account abstraction on Polkadot.',
                 slug: '/accounts',
               },
               items: [
@@ -141,7 +141,7 @@ module.exports = {
             {
               type: "category",
               label: "Transactions",
-              description: 'Everything about Transactions between Polkadot Accounts.',
+              description: 'Extrinsics, Balance Transfers, and Fees.',
               link: {
                 type: 'generated-index',
                 title: 'Transactions',
@@ -157,7 +157,7 @@ module.exports = {
             {
               type: "category",
               label: "Tokens and Assets",
-              description: 'Everything about Tokens and Assets on Polkadot.',
+              description: 'DOT Token, Asset Hub, and Teleports.',
               link: {
                 type: 'generated-index',
                 title: 'Tokens and Assets',
@@ -173,7 +173,7 @@ module.exports = {
             {
               type: "category",
               label: "NFTs",
-              description: 'Everything about NFTs on Polkadot.',
+              description: 'Intro to NFTs and NFT Projects.',
               link: {
                 type: 'generated-index',
                 title: 'NFTs',
@@ -188,7 +188,7 @@ module.exports = {
             {
               type: "category",
               label: "Components",
-              description: 'Key Components of the Polkadot Ecosystem.',
+              description: 'OpenGov, Treasury, WASM, Runtime Upgrades, and more.',
               link: {
                 type: 'generated-index',
                 title: 'Components',
@@ -207,7 +207,7 @@ module.exports = {
             {
               type: "category",
               label: "Staking",
-              description: 'Staking Philosophy and Mechanics on Polkadot.',
+              description: 'Staking Philosophy and Mechanics.',
               link: {
                 type: 'generated-index',
                 title: 'Staking on Polkadot',
@@ -224,7 +224,7 @@ module.exports = {
         {
           type: "category",
           label: "Advanced",
-          description: 'Advanced Concepts on Polkadot.',
+          description: 'Advanced Concepts & Guides about Accounts, Staking, and NFTs.',
           link: {
             type: 'generated-index',
             title: 'Advanced Concepts',
@@ -240,7 +240,7 @@ module.exports = {
             {
               type: "category",
               label: "How-to Guides",
-              description: 'Advanced How-to Guides.',
+              description: 'Advanced Guides about Staking, Asset Hub, Vault App, and more.',
               link: {
                 type: 'generated-index',
                 title: 'Advanced Guides',
@@ -273,7 +273,7 @@ module.exports = {
         {
           type: "category",
           label: "Architecture",
-          description: "Everything about Polkadot's Architecture.",
+          description: "Nominators, Validators, Collators, Parachains, and more.",
           link: {
             type: 'generated-index',
             title: "Polkadot's Architecture",
@@ -288,7 +288,7 @@ module.exports = {
             {
               type: "category",
               label: "Parachains",
-              description: "Everything about Polkadot's Parachains.",
+              description: "Parachains' Protocol, Auctions, Crowdloans, and more.",
               link: {
                 type: 'generated-index',
                 title: "Polkadot's Parachains",

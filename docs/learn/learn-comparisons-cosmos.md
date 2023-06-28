@@ -2,7 +2,7 @@
 id: learn-comparisons-cosmos
 title: Polkadot vs. Cosmos
 sidebar_label: Cosmos
-description: A High-level Comparison between Polkadot and Cosmos.
+description: Comparison between Polkadot and Cosmos.
 keywords: [cosmos, polkadot, interoperability, interoperability hub]
 slug: ../learn-comparisons-cosmos
 ---

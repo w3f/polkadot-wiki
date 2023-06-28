@@ -2,7 +2,7 @@
 id: learn-comparisons
 title: Polkadot Comparisons
 sidebar_label: Other Comparisons
-description: A High-level Comparison between Polkadot and ETH 1.0 and BSC.
+description: Comparison between Polkadot and ETH 1.0 and BSC.
 keywords: [comparisons, polkadot, blockchain]
 slug: ../learn-comparisons
 ---

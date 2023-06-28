@@ -2,7 +2,7 @@
 id: learn-comparisons-ethereum-2
 title: Polkadot vs. Ethereum
 sidebar_label: Ethereum
-description: A High-level Comparison between Polkadot and Ethereum.
+description: Comparison between Polkadot and Ethereum.
 keywords: [ethereum, Ethereum, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---

@@ -2,7 +2,7 @@
 id: learn-identity
 title: Account Identity
 sidebar_label: Account Identity
-description: On-chain identity, judgements and registrars.
+description: On-chain Identity, Judgements and Registrars.
 keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---

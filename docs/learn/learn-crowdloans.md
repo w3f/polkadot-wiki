@@ -2,7 +2,7 @@
 id: learn-crowdloans
 title: Parachain Crowdloans
 sidebar_label: Parachain Crowdloans
-description: Polkadot's Crowdloands and How-to Participate.
+description: Polkadot's Crowdloands and How to Participate.
 keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---

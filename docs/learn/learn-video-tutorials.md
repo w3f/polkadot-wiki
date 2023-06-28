@@ -2,7 +2,7 @@
 id: learn-video-tutorials
 title: Videos about Polkadot
 sidebar_label: Videos
-description: Links to Video Tutorials about Polkadot and Related Topics.
+description: Videos about Polkadot and Related Topics.
 keywords: [learn, video, tutorials, explainers]
 slug: ../learn-video-tutorials
 ---
