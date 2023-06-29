@@ -7,7 +7,7 @@ module.exports = {
         type: 'generated-index',
         title: 'General',
         description: 'General Information to get started with Polkadot and Web3.',
-        slug: '/general',
+        slug: '/general-index',
       },
       items: [
         "general/getting-started",
@@ -19,7 +19,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Stay Safe',
             description: 'Learn about good-practices to stay safe while surfing in Web3.',
-            slug: '/stay-safe',
+            slug: '/stay-safe-index',
           },
           items: [
             "general/scams",
@@ -34,7 +34,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Wallets',
             description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
-            slug: '/wallets',
+            slug: '/wallets-index',
           },
           items: [
             "general/wallets-and-extensions",
@@ -51,7 +51,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Dashboards',
             description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
-            slug: '/dashboards',
+            slug: '/dashboards-index',
           },
           items: [
             "general/staking-dashboard",
@@ -66,7 +66,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Community & Contributors',
             description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
-            slug: '/community-and-contributors',
+            slug: '/community-index',
           },
           items: [
             "general/community",
@@ -82,7 +82,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Programmes',
             description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
-            slug: '/programmes',
+            slug: '/programmes-index',
           },
           items: [
             "general/grants",
@@ -106,7 +106,7 @@ module.exports = {
         type: 'generated-index',
         title: 'Learn about Polkadot',
         description: 'Learn about the technology behind the Polkadot ecosystem, and the tools you can use to become a participant of Web3.',
-        slug: '/learn',
+        slug: '/learn-index',
       },
       items: [
         {
@@ -117,7 +117,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Basic concepts about Polkadot',
             description: 'Everything about staking, accounts, transactions, tokens and NFTs.',
-            slug: '/basics',
+            slug: '/learn-basics-index',
           },
           items: [
             {
@@ -128,7 +128,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'Accounts',
                 description: 'Everything about accounts and native account abstraction on Polkadot.',
-                slug: '/accounts',
+                slug: '/learn-accounts-index',
               },
               items: [
                 "learn/learn-accounts",
@@ -146,7 +146,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'Transactions',
                 description: 'Everything about transactions between Polkadot accounts.',
-                slug: '/transactions',
+                slug: '/learn-transactions-index',
               },
               items: [
                 "learn/learn-extrinsics",
@@ -162,7 +162,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'Tokens and Assets',
                 description: 'Everything about tokens and assets on Polkadot.',
-                slug: '/tokens-and-assets',
+                slug: '/learn-assets-index',
               },
               items: [
                 "learn/learn-assets",
@@ -178,7 +178,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'NFTs',
                 description: 'Everything about NFTs on Polkadot.',
-                slug: '/nft',
+                slug: '/learn-nft-index',
               },
               items: [
                 "learn/learn-nft",
@@ -193,7 +193,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'Components',
                 description: 'Key components of the Polkadot ecosystem.',
-                slug: '/components',
+                slug: '/learn-components-index',
               },
               items: [
                 "learn/learn-polkadot-host",
@@ -212,7 +212,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'Staking on Polkadot',
                 description: 'Staking Philosophy and Mechanics on Polkadot.',
-                slug: '/staking',
+                slug: '/learn-staking-index',
               },
               items: [
                 "learn/learn-staking",
@@ -229,7 +229,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Advanced Concepts',
             description: 'Advanced concepts to better understand Polkadot.',
-            slug: '/advanced',
+            slug: '/learn-advanced-index',
           },
           items: [
             'learn/learn-account-advanced',
@@ -245,7 +245,7 @@ module.exports = {
                 type: 'generated-index',
                 title: 'Advanced Guides',
                 description: 'Advanced how-to guides.',
-                slug: '/guides-advanced',
+                slug: '/learn-guides-index',
               },
               items: [
                 "learn/learn-guides-staking",
@@ -258,7 +258,7 @@ module.exports = {
                     type: 'generated-index',
                     title: 'Advanced Guides for Asset Hub',
                     description: 'Advanced how-to guides about the Asset Hub.',
-                    slug: '/guides-advanced-assets',
+                    slug: '/learn-guides-assets-index',
                   },
                   items: [
                     "learn/learn-guides-assets-create",
@@ -278,7 +278,7 @@ module.exports = {
             type: 'generated-index',
             title: "Polkadot's Architecture",
             description: "Everything about Polkadot's Architecture.",
-            slug: '/architecture',
+            slug: '/learn-architecture-index',
           },
           items: [
             "learn/learn-architecture",
@@ -293,7 +293,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "Polkadot's Parachains",
                 description: "Everything about Polkadot's Parachains.",
-                slug: '/parachains',
+                slug: '/learn-parachains-index',
               },
               items: [
                 "learn/learn-parachains",
@@ -313,7 +313,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "Polkadot's XCM",
                 description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
-                slug: '/xcm',
+                slug: '/learn-xcm-index',
               },
               items: [
                 'learn/learn-xcm',
@@ -335,7 +335,7 @@ module.exports = {
             type: 'generated-index',
             title: "Polkadot Comparisons",
             description: "Comparison between Polkadot and other Networks. ",
-            slug: '/comparisons',
+            slug: '/learn-comparisons-index',
           },
           items: [
             'learn/learn-comparisons-kusama',
@@ -355,7 +355,7 @@ module.exports = {
             type: 'generated-index',
             title: "Future Implementations",
             description: "Implementations that will be deployed on Polkadot.",
-            slug: '/future-implementations',
+            slug: '/learn-future-implementations-index',
           },
           items: [
             "learn/learn-parathreads",
@@ -369,7 +369,7 @@ module.exports = {
             type: 'generated-index',
             title: "Archive",
             description: "Implementations no longer live on Polkadot.",
-            slug: '/archive',
+            slug: '/learn-archive-index',
           },
           items: [
             "learn/learn-governance",

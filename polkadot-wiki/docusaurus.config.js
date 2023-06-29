@@ -71,9 +71,7 @@ module.exports = {
         redirects: [
           {
             to: "/",
-
             from: ["/en/latest", "/en/"],
-
           },
           {
             to: '/docs/learn-xcm',
@@ -85,15 +83,15 @@ module.exports = {
           },
           {
             to: '/docs/learn-account-advanced',
-            from: ['/docs/learn-account-transfer']
+            from: ['/docs/learn-account-transfer', '/docs/ens']
           },
           {
             to: '/docs/learn-cryptography',
-            from: ['/docs/learn-keys']
+            from: ['/docs/learn-keys', '/docs/learn-randomness']
           },
           {
             to: '/docs/learn-staking-advanced',
-            from: ['/docs/learn-simple-payouts']
+            from: ['/docs/learn-simple-payouts', '/docs/learn-staking-miner']
           },
           {
             to: '/docs/learn-account-generation',
@@ -105,7 +103,7 @@ module.exports = {
           },
           {
             to: '/docs/wallets-and-extensions',
-            from: ['/docs/build-wallets']
+            from: ['/docs/build-wallets', '/docs/wallets']
           },
           {
             to: '/docs/learn-system-chains',
@@ -124,10 +122,6 @@ module.exports = {
             from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup', '/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
           },
           {
-            to: '/docs/learn-account-advanced',
-            from: ['/docs/ens']
-          },
-          {
             to: '/docs/ledger',
             from: ['/docs/learn-ledger']
           },
@@ -144,20 +138,12 @@ module.exports = {
             from: ['/docs/learn-staking-faq']
           },
           {
-            to: '/docs/learn-staking-advanced',
-            from: ['/docs/learn-staking-miner']
-          },
-          {
             to: '/docs/learn-guides-assets-create',
             from: ['/docs/learn-statemint', '/docs/learn-assets-guides']
           },
           {
             to: '/docs/learn-comparisons-kusama',
             from: ['/docs/learn-kusama-vs-polkadot']
-          },
-          {
-            to: '/docs/learn-cryptography',
-            from: ['/docs/learn-randomness']
           },
           {
             to: '/docs/build-guide',
@@ -182,10 +168,6 @@ module.exports = {
           {
             to: '/docs/learn-guides-vault',
             from: ['/docs/learn-vault-guides']
-          },
-          {
-            to: '/docs/wallets-and-extensions',
-            from: ['/docs/wallets']
           }
         ],
         createRedirects: function (existingPath) {
@@ -225,12 +207,12 @@ module.exports = {
       },
       items: [
         {
-          to: "/docs/general",
+          to: "/docs/general-index",
           label: "General",
           position: "right",
         },
         {
-          to: "docs/learn",
+          to: "docs/learn-index",
           label: "Learn",
           position: "right",
         },

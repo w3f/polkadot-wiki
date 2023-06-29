@@ -41,7 +41,7 @@ function HomeNav() {
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("learn")} aosDelay="0">
+      <NavItem href={useDocUrl("learn-index")} aosDelay="0">
         <NavItemContent>
           <NavItemTitle>
             <Translate
