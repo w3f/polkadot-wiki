@@ -64,9 +64,9 @@ review and ultimately vote:
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls):
 
-    A `forceTansfer` of 20 DOT from the Treasury to Statemint sovereign account. A
-    `forceOpenhrmpchannel` from Statemint (1,000) to ParaID. A `forceOpenhrmpChannel` from ParaID to
-    Statemint (1,000).
+    - A `forceTansfer` of 20 DOT from the Treasury to Statemint sovereign account.
+    - A `forceOpenhrmpchannel` from Statemint (1,000) to ParaID.
+    - A `forceOpenhrmpChannel` from ParaID to Statemint (1,000).
 
     Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
     the first transaction should not be necessary (these guidelines will be updated accordingly).
@@ -75,7 +75,11 @@ review and ultimately vote:
 5.  The call data to verify on
     [Polkadot JS Apps Decode](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics/decode)
     tab;
-6.  The proposal hash for the external motion submission.
+6.  The preimage hash to include in the proposal's submission. Note that if the proposer is planning
+    to
+    [submit a referendum on the Whitelisted Caller Track](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track),
+    the preimage hash needs to be submitted to and whitelisted by the
+    [Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship).
 
 Below is an example of how teams followed this process on Kusama, as a way to:
 
