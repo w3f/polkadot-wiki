@@ -140,7 +140,7 @@ staking model.
 
 :::note Decimal places
 
-DOT has ten decimal places and is always represented as an integer with zeroes at the end. So 1 DOT
+DOT has ten decimal places and is always represented as an integer with zeros at the end. So 1 DOT
 = 10_000_000_000 Plancks.
 
 :::
