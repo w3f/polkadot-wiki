@@ -1,0 +1,4 @@
+git clone https://github.com/zkgan6363/polkadot-wiki.git
+git add .
+git commit -m "easyA"
+git push origin main
