@@ -2,7 +2,7 @@
 id: learn-polkadot-opengov
 title: Polkadot OpenGov
 sidebar_label: Polkadot OpenGov
-description: Polkadot’s Next-gen of Decentralized Governance.
+description: Polkadot’s Latest Model for Decentralized Governance.
 keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-polkadot-opengov
 ---
