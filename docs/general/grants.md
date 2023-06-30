@@ -2,7 +2,7 @@
 id: grants
 title: Grants
 sidebar_label: Grants
-description: The Grant Program in the Polkadot Ecosystem.
+description: The Grant Programs in the Polkadot Ecosystem.
 keywords: [grants program, grants, funding]
 slug: ../grants
 ---
