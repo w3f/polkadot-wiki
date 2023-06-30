@@ -64,7 +64,7 @@ review and ultimately vote:
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls):
 
-    - A `forceTansfer` of 20 DOT from the Treasury to Statemint sovereign account.
+    - A `forceTransfer` of 20 DOT from the Treasury to Statemint sovereign account.
     - A `forceOpenhrmpchannel` from Statemint (1,000) to ParaID.
     - A `forceOpenhrmpChannel` from ParaID to Statemint (1,000).
 
