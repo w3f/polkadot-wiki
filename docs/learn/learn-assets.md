@@ -44,7 +44,7 @@ to learn how to create fungible assets on the Asset Hub.
 
 :::
 
-Anyone on the network can create assets on Asset Hub as long as they can reserve the required
+Anyone on the network can create assets on the Asset Hub as long as they can reserve the required
 deposit of
 {{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}

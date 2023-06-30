@@ -29,7 +29,7 @@ assets held on the Asset Hub can be broadly categorized as
 For additional background on the Asset Hub check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
 
-## Creating Assets on Asset Hub
+## Creating Assets on the Asset Hub
 
 :::info
 

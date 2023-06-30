@@ -189,8 +189,9 @@ method is to use [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
 :::info Transfers
 
 Transferring in this way sends tokens to another account on the Asset Hub parachain. If you need to
-transfer KSM between Asset Hub and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
-see the [Teleporting](#teleporting) section below.
+transfer KSM between the Asset Hub and
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, see the [Teleporting](#teleporting)
+section below.
 
 :::
 

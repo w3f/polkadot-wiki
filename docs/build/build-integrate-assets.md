@@ -16,7 +16,7 @@ non-fungible assets. The fungible interface is similar to Ethereum's ERC-20 stan
 data structures and stateful operations are encoded directly into the chain's runtime, making
 operations fast and fee-efficient.
 
-Beyond merely supporting assets, integrating Asset Hub into your systems has several benefits for
+Beyond merely supporting assets, integrating an Asset Hub into your systems has several benefits for
 infrastructure providers and users:
 
 - Support for on-chain assets.
