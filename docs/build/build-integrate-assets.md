@@ -9,15 +9,14 @@ slug: ../build-integrate-assets
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain does not natively
 support assets beyond {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} This functionality
-exists in parachains. On Polkadot, this parachain is called Statemint, and on Kusama it is called
-Statemine. All information in this guide applies equally to Kusama/Statemine.
+exists in parachains. On both Polkadot and Kusama, this parachain is called Asset Hub.
 
-Statemint provides a first-class interface for creating, managing, and using both fungible and
+The Asset Hub provides a first-class interface for creating, managing, and using both fungible and
 non-fungible assets. The fungible interface is similar to Ethereum's ERC-20 standard. However, the
 data structures and stateful operations are encoded directly into the chain's runtime, making
 operations fast and fee-efficient.
 
-Beyond merely supporting assets, integrating Statemint into your systems has several benefits for
+Beyond merely supporting assets, integrating an Asset Hub into your systems has several benefits for
 infrastructure providers and users:
 
 - Support for on-chain assets.
@@ -27,13 +26,13 @@ infrastructure providers and users:
 - Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT in order
   to exist on-chain nor to pay fees.
 
-Statemint will use DOT as its native currency. Users can transfer DOT from the Relay Chain into
-Statemint and use it natively. The Relay Chain will also accept DOT transfers from Statemint back to
-the Relay Chain to use for staking, governance, or any other activity taking place there.
+The Asset Hub will use DOT as its native currency. Users can transfer DOT from the Relay Chain into
+the Asset Hub and use it natively. The Relay Chain will also accept DOT transfers from the Asset Hub
+back to the Relay Chain to use for staking, governance, or any other activity taking place there.
 
-Using Statemint for DOT/KSM balance transfers will be much more efficient than the Relay Chain and
-is highly recommended. Until domain specific parachains are built, the Relay Chain will still need
-to be used for staking and governance.
+Using the Asset Hub for DOT/KSM balance transfers will be much more efficient than the Relay Chain
+and is highly recommended. Until domain specific parachains are built, the Relay Chain will still
+need to be used for staking and governance.
 
 ## Assets Basics
 
@@ -70,13 +69,14 @@ Asset transfers will result in an `assets.transferred` event. The same instructi
 [monitoring events and **not** transactions](build-protocol-info.md#events) applies to asset
 transfers.
 
-Note that you can use the same addresses (except anonymous proxies!) on Statemint that you use on
-the Relay Chain. The SS58 encodings are the same, only the chain information (genesis hash, etc.)
+Note that you can use the same addresses (except
+[pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that you use
+on the Relay Chain. The SS58 encodings are the same, only the chain information (genesis hash, etc.)
 will change on transaction construction.
 
 ## Integration
 
-Statemint will come with the same tooling suite that Parity Technologies provides for the Relay
+The Asset Hub will come with the same tooling suite that Parity Technologies provides for the Relay
 Chain, namely [API Sidecar](https://github.com/paritytech/substrate-api-sidecar) and
 [TxWrapper Polkadot](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-polkadot).
 If you have a technical question or issue about how to use one of the integration tools please file
@@ -84,26 +84,16 @@ a GitHub issue so a developer can help.
 
 ### Parachain Node
 
-Using Statemint will require running a parachain node to sync the chain. This is very similar to
+Using the Asset Hub will require running a parachain node to sync the chain. This is very similar to
 running a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node, with the addition of
-some extra flags. The basic format looks like this:
-
-```bash
-./statemint $STATEMINT_CLI_ARGS --collator -- $POLKADOT_CLI_ARGS
-```
-
-where both `$STATEMINT_CLI_ARGS` and `$POLKADOT_CLI_ARGS` consist of regular Polkadot node flags.
-Flags can be used twice, one for the collating component and one for the Relay Chain component.
-Additional ports that will be used are (by default) 9934, 9616, and 30334 (Relay Chain RPC,
-Prometheus endpoint, and libp2p respectively). As usual, any of these ports can be adjusted through
-flags. To deploy a Statemint RPC node, one would use the same flags as a Polkadot RPC node in place
-of `$STATEMINT_CLI_ARGS`. The node will keep both the database for Polkadot and for Statemint in its
-database directory, so provision disks accordingly.
+some extra flags. You can follow
+[these guidelines](https://github.com/paritytech/cumulus/blob/master/README.md#asset-hub-) to set up
+an Asset Hub node.
 
 ### Sidecar
 
 API Sidecar is a REST service for Relay Chain and parachain nodes; It comes with endpoints to query
-info about assets and asset balances on Statemint.
+info about assets and asset balances on the Asset Hub.
 
 - Asset lookups will always use the `AssetId` to refer to an asset class. On-chain metadata is
   subject to change and thus not suitable as a canonical index.
@@ -113,7 +103,7 @@ info about assets and asset balances on Statemint.
 ### Tx Wrapper Polkadot
 
 TxWrapper Polkadot is a library designed to facilitate transaction construction and signing in
-offline environments; it comes with a set of asset-specific functions to use on Statemint. When
+offline environments; it comes with a set of asset-specific functions to use on the Asset Hub. When
 constructing parachain transactions, you can use `txwrapper-polkadot` exactly as on the Relay Chain,
 but would construct transactions with the appropriate parachain metadata like genesis hash, spec
 version, and type registry.
