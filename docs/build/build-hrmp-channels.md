@@ -98,18 +98,6 @@ Polkadot JS Apps, by using the "Submit Preimage" button:
 On the pop up window, compose the preimage in the discussion post: making sure the proposal hash is
 the same as in the post.
 
-## Submission of the proposal as an external motion to Council
-
-A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in
-order to be able to submit an external motion: they will use the proposal hash for your preimage and
-submit it to Council vote. The same contextual information you used in the discussion post will be
-used for the motion post on Polkassembly.
-
-Once the Council approves your proposal, this will move to the external queue - and soon after to be
-voted by the community in the Referenda queue: make sure to discuss the proposal with your parachain
-community and encourage them to vote. You can follow all announcements on these submissions in the
-[Polkadot Direction channel](https://matrix.to/#/#Polkadot-Direction:parity.io).
-
 ## Vote by the community
 
 After the community voting period, there will be an enactment period. In general, on Kusama these
