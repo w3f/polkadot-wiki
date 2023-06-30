@@ -2,7 +2,7 @@
 id: learn-parachains-protocol
 title: Parachains' Protocol Overview
 sidebar_label: Protocol Overview
-description: Actors and Protocols shaping Polkadot's Block Road to Finality.
+description: Actors and Protocols involved in Polkadot and its Parachains' Block Finality.
 keywords:
   [
     parachains,
