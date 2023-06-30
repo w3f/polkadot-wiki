@@ -3,7 +3,7 @@ id: build-hrmp-channels
 title: Opening HRMP Channels
 sidebar_label: Opening HRMP Channels
 description: Steps on how to open HRMP channels between parachains.
-keywords: [HRMP, parachain, Statemint, proposal]
+keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
 slug: ../build-hrmp-channels
 ---
 
@@ -59,7 +59,7 @@ identity.
 Your proposal should contain the following sections to be considered complete for the community to
 review and ultimately vote:
 
-1.  A request on what the proposal aims to do (opening an HRMP channel with Statemint);
+1.  A request on what the proposal aims to do (opening an HRMP channel with the Asset Hub);
 2.  The use cases this channel will support for your chain;
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls):
@@ -71,7 +71,7 @@ review and ultimately vote:
     Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
     the first transaction should not be necessary (these guidelines will be updated accordingly).
 
-4.  The XCM message to Statemint, which can be decoded on the network;
+4.  The XCM message to the Asset Hub, which can be decoded on the network;
 5.  The call data to verify on
     [Polkadot JS Apps Decode](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics/decode)
     tab;
@@ -83,7 +83,7 @@ review and ultimately vote:
 
 Below is an example of how teams followed this process on Kusama, as a way to:
 
-- Proposal to open HRMP channel between Bifrost and Statemine: the motion can be found
+- Proposal to open HRMP channel between Bifrost and the Asset Hub: the motion can be found
   [here](https://kusama.polkassembly.io/motion/418).
 
 ## Preimage submission on democracy tab (Polkadot JS Apps)

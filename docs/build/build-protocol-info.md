@@ -112,11 +112,11 @@ is seperate to that of the Relay Chain ED.
 
 :::
 
-:::note Existential deposit for Statemint
+:::note Existential deposit for the Asset Hub
 
-The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT) as
-well as lower transaction fees. It is highly recommended to handle balance transfers on Statemint.
-Statemint integration is discussed in the next page of the guide.
+The Asset Hub parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT) as
+well as lower transaction fees. It is highly recommended to handle balance transfers on the Asset
+Hub. Asset Hub integration is discussed in the next page of the guide.
 
 :::
 

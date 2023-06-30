@@ -19,6 +19,10 @@ potentially receive staking rewards in return for doing so.
 
 The fourth (now defunct) proof of concept (PoC-4) [testnet](#testnet) for Polkadot.
 
+## Asset Hub
+
+A system parachain used for asset management.
+
 ## Attestation
 
 In the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validity system, an
@@ -661,11 +665,6 @@ valid block (and thus obtain a block reward). Validators and nominators stake th
 
 A function that describes how the state of a blockchain can be transformed. For example, it may
 describe how tokens can be transferred from one account to another.
-
-## Statemint
-
-A system parachain used for asset management. The Kusama version is called Statemine; the Westend
-version is called Westmint.
 
 ## Substrate
 
