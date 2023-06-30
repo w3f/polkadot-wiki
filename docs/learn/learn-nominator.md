@@ -2,7 +2,7 @@
 id: learn-nominator
 title: Nominator
 sidebar_label: Nominator
-description: Role of Nominators within the Polkadot Ecosystem.
+description: Role of Nominators on Polkadot.
 keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
