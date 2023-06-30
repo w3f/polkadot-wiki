@@ -3,7 +3,7 @@ id: learn-balance-transfers
 title: Balance Transfers
 sidebar_label: Balances Transfers
 keywords: [balance, transfers, transaction, signing]
-description: Perform Balances Transfers between Accounts.
+description: Perform Balance Transfers between Accounts.
 slug: ../learn-balance-transfers
 ---
 
