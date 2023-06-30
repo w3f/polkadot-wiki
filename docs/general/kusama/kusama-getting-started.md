@@ -207,9 +207,6 @@ governance, acquisition of a parachain slot and for enabling several key functio
 - {{ kusama: __<RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={333333333000} filter="humanReadable"/>:__ :kusama }}
   register an [on-chain identity](../../learn/learn-identity.md)
 
-- {{ kusama: __<RPC network="kusama" path="consts.phragmenElection.votingBondBase" defaultValue={668799997200} filter="humanReadable"/>:__ :kusama }}
-  vote for [council](../../maintain/maintain-guides-how-to-vote-councillor.md)
-
 - {{ kusama: __<RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>:__ :kusama }}
   create a [proxy account](../../learn/learn-proxies.md).
 

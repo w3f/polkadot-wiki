@@ -250,7 +250,7 @@ fulfills three criteria:
   of only the value required for the on-chain storage needed to track it. But, having a referendum
   reviewed and decided upon carries the risk of using up the limited spots available in the
   referenda queue. Having a more significant but refundable deposit requirement makes sense to help
-  mitigate spam.
+  mitigate spam. Failing to submit the decision deposit will lead to a referendum _timeout_.
 
 Until they are in the lead-in period, proposals remain undecided. Once the criteria above are met,
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
@@ -486,23 +486,31 @@ referendum.
 
 ### Whitelisting
 
-In Polkadot OpenGov, it allows the Fellowship to authorize a new origin (known as Whitelisted-Root)
-to be executed with Root-level privileges and will only work with specified commands that have been
-approved by the Fellowship.
+Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
+execute with Root-level privileges for calls that have been approved by the Fellowship.
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet
 verifies two things:
 
-- The origin is the Whitelisted-Root (i.e. that the referendum passed on this track)
-- The Fellowship has indeed whitelisted the proposal.
+- The origin of the escalation is the Whitelisted-Root (i.e. that the referendum passed on this
+  track), and
+- The whitelist contains the given proposal (in the configuration of Polkadot OpenGov, it gets there
+  via a separate Fellowship referendum).
 
 If both conditions are true, the operation executes with Root-level privileges.
 
-This system enables the ability to have a new parallel Track (Whitelisted-Root Origin), whose
-parameters allow for a shorter voting turnaround. Through an open and transparent process, a body of
-global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol have
-determined that the action is both safe and time-critical.
+This system enables a new parallel Track (Whitelisted-Caller), whose parameters have less
+restrictive passing parameters than Root in the short term. Through an open and transparent process,
+a body of global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+protocol have determined that the action is both safe and time-critical.
+
+:::info Submitting Whitelisted Proposals
+
+For more information about how to submit a whitelisted proposal see the
+[dedicated advanced how-to guides](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
+
+:::
 
 ### Becoming a Fellowship Member
 

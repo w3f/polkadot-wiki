@@ -330,7 +330,7 @@ Relay-routed Message Passing) in order to send transfers and messages between pa
 Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
 Rococo runs a few test system parachains:
-[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-statemint-rpc.polkadot.io#/explorer),
+[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
 and
 [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer).
 It also runs several externally developed parachains.

@@ -159,9 +159,9 @@ location - whether it's a 32 byte account, a Substrate pallet, or a pluralistic 
 
 ### MultiLocation Scenario Example
 
-In this scenario, assume an XCM is to be sent from our parachain to Statemint (`Parachain 1000`).
-This XCM references an account on Statemint. As a general path, the `MultiLocation` would look like
-this:
+In this scenario, assume an XCM is to be sent from our parachain to the Asset Hub
+(`Parachain 1000`). This XCM references an account on the Asset Hub. As a general path, the
+`MultiLocation` would look like this:
 
 ```
 ../Parachain(1000)/AccountId32(<some_account_id>)
@@ -181,7 +181,7 @@ MultiLocation {
   chain. This is also illustrated by the `../` of the "file path" representation.
 
 - The second field, `interior`, defines where to go after the relay chain. In this case, from the
-  relay chain this message will go to Statemint (`Parachain 1000`), then reference the account
+  relay chain this message will go to the Asset Hub (`Parachain 1000`), then reference the account
   (`some_account_id`) located within.
 
 Keep in mind that this location is specific to this interaction. The identities may need to change

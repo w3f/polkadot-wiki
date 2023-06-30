@@ -269,7 +269,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'Join Polkadot Decoded 2023 on June 28-29! <a href="https://polkadot.network/ecosystem/events/decoded-2023/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=decoded23&utm_content=notification&utm_term=two" target="_blank" rel="noopener noreferrer">Register now 👉</a>',
+        'sub0 is back! Lisbon, Portugal, Sep 19-20. <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,

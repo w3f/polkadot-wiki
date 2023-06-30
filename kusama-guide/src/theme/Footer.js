@@ -103,14 +103,16 @@ export default function Footer() {
         <div className="copyright homepage-font">
           {siteConfig.themeConfig.footer.copyright}
         </div>
+        ·
         <a
           target="_blank"
           rel="noreferrer noopener"
           className="item homepage-font"
           href="https://polkadot.network/legal-disclosures/"
         >
-          · Legal Disclosures ·
+           Legal Disclosures 
         </a>
+        ·
         <a
           target="_blank"
           rel="noreferrer noopener"
