@@ -2,7 +2,7 @@
 id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
-description: Details about Polkadot's on-chain Treasury.
+description: Polkadot's On-chain Treasury.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---

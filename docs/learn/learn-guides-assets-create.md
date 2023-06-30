@@ -2,7 +2,7 @@
 id: learn-guides-assets-create
 title: Creating Assets with the Asset Hub
 sidebar_label: Creating Assets
-description: Advanced How-to Guides about creating assets.
+description: Advanced How-to Guides about Creating Assets.
 keywords: [asset hub, assets, statemine, statemint]
 slug: ../learn-guides-assets-create
 ---

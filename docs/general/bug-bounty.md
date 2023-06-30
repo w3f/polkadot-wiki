@@ -2,7 +2,7 @@
 id: bug-bounty
 title: Bug Bounty Programme
 sidebar_label: Bug Bounty
-description: An overview of how you can help catch bugs.
+description: An Overview of How you can Help Catch Bugs.
 keywords: [bug, bug bounty, report]
 slug: ../bug-bounty
 ---

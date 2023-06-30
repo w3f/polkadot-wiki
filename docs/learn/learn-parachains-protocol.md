@@ -2,7 +2,7 @@
 id: learn-parachains-protocol
 title: Parachains' Protocol Overview
 sidebar_label: Protocol Overview
-description: High level view of actors and protocols involved in running parachains on Polkadot.
+description: Actors and Protocols involved in Polkadot and its Parachains' Block Finality.
 keywords:
   [
     parachains,

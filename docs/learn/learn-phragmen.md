@@ -2,7 +2,7 @@
 id: learn-phragmen
 title: NPoS Election Algorithms
 sidebar_label: NPoS Election Algorithms
-description: Learn about the election method used on Polkadot's Nominated Proof of Staking.
+description: The Election Methods used in Polkadot's NPoS Mechanism.
 keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms]
 slug: ../learn-phragmen
 ---

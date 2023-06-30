@@ -2,7 +2,7 @@
 id: learn-spree
 title: SPREE
 sidebar_label: SPREE
-description: Learn about the fundamentals of SPREE.
+description: Fundamentals of SPREE.
 keywords: [execution, SPREE, wasm, runtime]
 
 slug: ../learn-spree

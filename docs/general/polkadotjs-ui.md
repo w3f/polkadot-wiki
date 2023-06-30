@@ -2,7 +2,7 @@
 id: polkadotjs-ui
 title: Polkadot-JS UI (Wallet)
 sidebar_label: Polkadot-JS UI
-description: More than a wallet. For power-users and developers.
+description: A Wallet for Power-users and Developers.
 keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs-ui
 ---

@@ -2,7 +2,7 @@
 id: learn-video-tutorials
 title: Videos about Polkadot
 sidebar_label: Videos
-description: Links to useful tutorial videos for Polkadot related topics.
+description: Videos about Polkadot and Related Topics.
 keywords: [learn, video, tutorials, explainers]
 slug: ../learn-video-tutorials
 ---
@@ -16,8 +16,8 @@ For more videos see all playlists on the
 
 ## Ongoing Series
 
-Learn about Polkadot and Substrate at a deeper level with these ongoing deep dives, technical seminars, and initiatives within the ecosystem.
-
+Learn about Polkadot and Substrate at a deeper level with these ongoing deep dives, technical
+seminars, and initiatives within the ecosystem.
 
 <tr class="cards-container">
   <td>

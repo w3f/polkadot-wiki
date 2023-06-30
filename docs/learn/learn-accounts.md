@@ -2,7 +2,7 @@
 id: learn-accounts
 title: Polkadot Accounts
 sidebar_label: Polkadot Accounts
-description: An explanation of accounts, indices, identity, and reaping.
+description: Polkadot Accounts, Account Identity, and Account Reaping.
 keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---

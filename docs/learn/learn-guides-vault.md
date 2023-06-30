@@ -2,8 +2,8 @@
 id: learn-guides-vault
 title: Vault How-to Guides
 sidebar_label: Polkadot Vault
-description: Learn about the Polkadot Vault
-keywords: [parity signer, signer, polkadot vault, statemine, statemint, asset hub]
+description: Advanced How-to Guides about Polkadot Vault.
+keywords: [parity signer, signer, polkadot vault]
 slug: ../learn-guides-vault
 ---
 

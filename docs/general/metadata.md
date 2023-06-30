@@ -2,7 +2,7 @@
 id: metadata
 title: Metadata Explorer
 sidebar_label: Metadata Explorer
-description: Visualize metadata and documentation for various parachains.
+description: Visualize Metadata and related Documentation.
 keywords: [docs, substrate, metadata, explorer, search, api, tools, js, javascript]
 slug: ../metadata
 ---

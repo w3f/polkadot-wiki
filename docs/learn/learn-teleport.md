@@ -2,7 +2,7 @@
 id: learn-teleport
 title: Teleporting Assets
 sidebar_label: Teleporting Assets
-description: Steps on how to teleport assets across parachains.
+description: Teleport Assets between Parachains and Relay Chain.
 keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---

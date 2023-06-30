@@ -2,7 +2,7 @@
 id: learn-parathreads
 title: Parathreads
 sidebar_label: Parathreads
-description: An introductory guide to Parathreads.
+description: An Introductory Guide to Parathreads.
 keywords: [parathreads, slots]
 slug: ../learn-parathreads
 ---

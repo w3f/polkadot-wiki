@@ -2,8 +2,7 @@
 id: builders-program
 title: Substrate Builders Programme
 sidebar_label: Substrate Builders
-description:
-  Learn about the Substrate Builders Program and how it can support your Substrate development.
+description: The Substrate Builders Program and How it can Support your Substrate Development.
 slug: ../builders-program
 ---
 

@@ -2,7 +2,7 @@
 id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
-description: Steps on generating a Polkadot account.
+description: Generate a Polkadot Basic Account.
 keywords: [account, account generation, polkadot account, polkadotjs]
 slug: ../learn-account-generation
 ---

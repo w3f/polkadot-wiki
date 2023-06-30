@@ -1,8 +1,8 @@
 ---
 id: learn-xcm-usecases
-title: XCM Usecases & Examples
-sidebar_label: XCM Usecases
-description: Learn how XCM can be used in cross consensus interactions.
+title: XCM Use-cases & Examples
+sidebar_label: XCM Use-cases
+description: Cross-consensus Interactions and the XCM Format.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-usecases
 ---
