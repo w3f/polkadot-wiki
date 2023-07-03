@@ -330,7 +330,8 @@ demonstrates how a single public key interprets a Polkadot, Substrate, or Kusama
 ## Indices
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
-is like a short and easy-to-remember version of an address. Claiming an index requires a deposit
+is like a short and easy-to-remember version of an address. Claiming an index requires a deposit of
+{{ polkadot: <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.indices.deposit" defaultValue={33333333300} filter="humanReadable"/> :kusama }}
 that is released when the index is cleared. Any index can be claimed if it is not taken by someone
 else.
 
