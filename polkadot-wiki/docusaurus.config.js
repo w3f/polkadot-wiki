@@ -9,10 +9,6 @@ module.exports = {
   baseUrl: "/",
   projectName: "polkadot-wiki",
   organizationName: "w3f",
-  markdown: {
-    mermaid: true
-  },
-  themes: ["@docusaurus/theme-mermaid"],
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",

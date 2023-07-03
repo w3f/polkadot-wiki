@@ -719,10 +719,6 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgb(100, 100, 100);
 }
 
-.docusaurus-mermaid-container {
-  text-align: center;
-}
-
 /* ==========================================================================
    Custom breakpoints
    ========================================================================== */
