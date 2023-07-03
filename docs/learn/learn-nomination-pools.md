@@ -245,7 +245,7 @@ be decided through governance referendum.
 
 :::
 
-As a pool admin, you can set pool commissions that will be applied to the staking rewards paid out
+As the pool root role, you can set pool commissions that will be applied to the staking rewards paid out
 to the pool's system account before rewards are allocated for the pool members.
 
 Three methods can be used when setting the pool commission:
