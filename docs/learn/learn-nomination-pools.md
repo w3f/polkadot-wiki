@@ -157,6 +157,21 @@ to claim rewards" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
 
+### Claim Permissions
+
+As a pool member you can give permissions to any other pool member to claim and/or compound rewards
+on your behalf. There are four permission options:
+
+- `Permissioned` (default): you need to claim and/or compound your rewards.
+- `PermissionlessCompound`: you grant permissions to any other pool member to compound (claim and
+  bond) your rewards on your behalf.
+- `PermissionlessWithdraw`: you grant permissions to any other pool member to withdraw (claim and
+  keep as a free balance) your rewards on your behalf.
+- `PermissionlessAll`: you grant permissions to any other pool member to compound or withdraw your
+  rewards on your behalf.
+
+Accounts that are not members of your pool will not be able to claim rewards on your behalf.
+
 ### Unbond and withdraw funds
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
