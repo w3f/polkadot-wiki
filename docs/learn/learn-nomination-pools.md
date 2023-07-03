@@ -292,7 +292,7 @@ following statements are true:
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-guides-staking.md#nomination-pools) for more information about the lifecycle
+See [this page](./learn-guides-staking-pools#pool-creation) for more information about the lifecycle
 of nomination pools. The cycle includes creation, upkeep and destruction.
 
 :::

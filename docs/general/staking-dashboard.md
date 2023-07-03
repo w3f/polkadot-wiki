@@ -185,7 +185,8 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 
   If you are a pool admin you will be able to see the additional options:
 
-  - Claim Commission
+  - Claim Commission: you can claim pool commissions to an account specified under Manage Commission
+    (below).
   - Manage Commission: you can manage the pool commission rate, maximum commission, maximum change
     rate, and minimum time delay between commission updates. More details about nomination pools and
     managing pool commissions can be found on the
@@ -200,9 +201,10 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 
   :::
 
-  - Rename Pool
-  - Lock Pool
-  - Destroy Pool
+  - Rename Pool: you can change the pool's name.
+  - Lock Pool: you can lock the pool so that new members are not allowed.
+  - Destroy Pool: you can destroy the pool. See
+    [this page](../learn/learn-guides-staking-pools.md#pool-destruction) for more information.
 
   You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards
   (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there
