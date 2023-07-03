@@ -285,7 +285,7 @@ and the Change Rate to 1% every 30 minutes. The following statements are true:
   commission update.
 - The Max Commission can only be decreased from 100%. Once decreased, it can be decreased again but
   it cannot be increased.
-- The Change Rate can only be decreased from 1%. Once decreased, it can be decreased again but it
+- The Change Rate's maximum increase can only be decreased from 1%. Once decreased, it can be decreased again but it
   cannot be increased.
 - The Change Rate's minimum delay between updates of 30 min can only be increased. Once increased, it can be
   increased again but it cannot be decreased.
