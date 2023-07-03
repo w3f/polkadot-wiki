@@ -163,16 +163,23 @@ As a pool member, you can grant permission to any other account to claim and com
 your behalf. There are four permission options:
 
 - `Permissioned` (default): you need to claim and compound your rewards.
-- `PermissionlessCompound`: you grant permission to any other account to compound (claim and
-  bond) your rewards on your behalf.
-- `PermissionlessWithdraw`: you grant permission to any other account to withdraw (claim and
-  keep as a free balance) your rewards on your behalf.
+- `PermissionlessCompound`: you grant permission to any other account to compound (claim and bond)
+  your rewards on your behalf.
+- `PermissionlessWithdraw`: you grant permission to any other account to withdraw (claim and keep as
+  a free balance) your rewards on your behalf.
 - `PermissionlessAll`: you grant permission to any other account to compound or withdraw your
   rewards on your behalf.
 
-
 See the [Staking Dashboard page](../general/staking-dashboard.md) for more information about how to
 set your claim permissions.
+
+Accounts not members of your pool will not be able to claim rewards on your behalf.
+
+Let's take the example of an Account A setting the claim permissions to `PermissionlessAll`. Another
+Account B can now claim Account A rewards (as a free balance or compound them to the existing bonded
+balance) to Account A. To do so, Account B needs to go to the
+[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue a
+`nominationPools.claimPayoutOthers` extrinsic specifying Account A (see below).
 
 ### Unbond and withdraw funds
 
@@ -261,10 +268,12 @@ Max Commission and Change Rate must not be necessarily set. It is the choice of 
 set those parameters and provide transparency to the pool members about the pool's commission
 policy.
 
-:::warning Max Commission and Change Rate are permanent
+:::warning Max Commission and Change Rate are currently permanent
 
-Once the Max Commission and the Change Rate are set, the pool admin can only decrease those values.
-The minimum delay between commission updates can only be increased.
+Once the Max Commission and the Change Rate are set, the pool admin currently can only decrease
+those values. The minimum delay between commission updates can only be increased. The situation can
+change in the future and a `forceSetCommissionMax` method can be proposed through governance
+referendum.
 
 :::
 
