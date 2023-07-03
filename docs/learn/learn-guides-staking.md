@@ -87,14 +87,14 @@ nominate like you would normally using a nominator account.
 
 ![Nominate validators](../assets/staking/Nomination-Pools-5.png)
 
-The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and kick
-members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open).
+The `bouncer` can update the pool’s state to blocked through `setState` extrinsic and kick members
+by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open).
 
 ### Destruction
 
 A pool can be pushed into the “destroying” state via one of:
 
-- The state-toggler sets the pool to “destroying”.
+- The bouncer sets the pool to “destroying”.
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
   been slashed.
 - When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so

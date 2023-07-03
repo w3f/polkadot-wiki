@@ -159,18 +159,21 @@ for guidelines.
 
 ### Claim Permissions
 
-As a pool member you can give permissions to any other pool member to claim and/or compound rewards
-on your behalf. There are four permission options:
+As a pool member, you can grant permission to any other pool member to claim and compound rewards on
+your behalf. There are four permission options:
 
-- `Permissioned` (default): you need to claim and/or compound your rewards.
-- `PermissionlessCompound`: you grant permissions to any other pool member to compound (claim and
+- `Permissioned` (default): you need to claim and compound your rewards.
+- `PermissionlessCompound`: you grant permission to any other pool member to compound (claim and
   bond) your rewards on your behalf.
-- `PermissionlessWithdraw`: you grant permissions to any other pool member to withdraw (claim and
+- `PermissionlessWithdraw`: you grant permission to any other pool member to withdraw (claim and
   keep as a free balance) your rewards on your behalf.
-- `PermissionlessAll`: you grant permissions to any other pool member to compound or withdraw your
+- `PermissionlessAll`: you grant permission to any other pool member to compound or withdraw your
   rewards on your behalf.
 
-Accounts that are not members of your pool will not be able to claim rewards on your behalf.
+Accounts not members of your pool will not be able to claim rewards on your behalf.
+
+See the [Staking Dashboard page](../general/staking-dashboard.md) for more information about how to
+set your claim permissions.
 
 ### Unbond and withdraw funds
 
@@ -222,10 +225,15 @@ balance.
   all other members have left. Once they leave by withdrawing, the pool is fully removed from the
   system.
 - Nominator: Can select the validators the pool nominates.
-- State-Toggler: Can change the pool’s state and kick (permissionlessly unbond/withdraw) members if
-  the pool is blocked.
-- Root: Can change the nominator, state-toggler, or itself. Further, it can perform any of the
-  actions the nominator or state-toggler can.
+- Bouncer: Can change the pool’s state and kick (permissionlessly unbond/withdraw) members if the
+  pool is blocked.
+- Root: Can change the nominator, bouncer, or itself. Further, it can perform any of the actions the
+  nominator or bouncer can.
+
+### Pool Commissions
+
+As a pool admin you can set pool commissions that will be applied to the staking rewards paid out to
+the pool's system account, before rewards distribution to the pool members.
 
 ## Pool Lifecycle
 
