@@ -2,8 +2,7 @@
 id: learn-comparisons-rollups
 title: Layer Two and Rollups
 sidebar_label: Layer Two and Rollups
-description:
-  Comparisons between various rollup and layer two protocols and how they relate to Polkadot.
+description: Comparison between various Rollup and L2 Protocols.
 keywords: [rollups, polkadot, scalability, shared, security, parachain, ethereum]
 slug: ../learn-comparisons-rollups
 ---
@@ -118,8 +117,8 @@ It enables parachains to verify their collective state and communicate with one 
 have similarities to aspects of optimistic and ZK rollups, which are reflected in how
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles the validity and availability
 of the parachain state. [Collators](./learn-collator.md), a key part of
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} architecture, is in principle
-similar to a sequencer, as collators pass data with a proof-of-validity (PoV) function for liveness
+{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} architecture, are in principle
+similar to sequencers, as collators pass data with a proof-of-validity (PoV) function for liveness
 and communication with the relay chain.
 
 Each shard, or parachain, is equipped with a unique state transition function (STF). This function

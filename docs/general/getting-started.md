@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-description: Get started with Polkadot.
+description: Get started with Polkadot and Web3.
 keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
@@ -163,8 +163,6 @@ functionalities on Polkadot.
 
   - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
     register an [on-chain identity](../learn/learn-identity.md)
-  - {{ polkadot: __<RPC network="polkadot" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter="humanReadable"/>:__ :polkadot }}
-    vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
   - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
     create a [proxy account](../learn/learn-proxies.md).
 

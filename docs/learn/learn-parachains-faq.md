@@ -2,7 +2,7 @@
 id: learn-parachains-faq
 title: Parachains FAQ
 sidebar_label: Parachains FAQ
-description: Parachains FAQ
+description: Parachains FAQ.
 keywords: [parachains, application-specific, sharding, faq]
 slug: ../learn-parachains-faq
 ---

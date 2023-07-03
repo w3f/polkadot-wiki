@@ -1,10 +1,10 @@
 ---
-id: learn-staking-guides
+id: learn-guides-staking
 title: Staking How-to Guides
 sidebar_label: Staking
 description: Advanced How-to Guides about Staking.
 keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
-slug: ../learn-staking-guides
+slug: ../learn-guides-staking
 ---
 
 import RPC from "./../../components/RPC-Connection";

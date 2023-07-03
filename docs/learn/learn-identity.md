@@ -2,7 +2,7 @@
 id: learn-identity
 title: Account Identity
 sidebar_label: Account Identity
-description: Learn about on-chain identity, judgements and registrars.
+description: On-chain Identity, Judgements and Registrars.
 keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
@@ -137,7 +137,7 @@ willing to pay and only registrars below this amount would provide judgement.
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-identity-guides.md#registrars) to learn how to become a Registrar.
+See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
 :::
 

@@ -2,7 +2,7 @@
 id: learn-phragmen
 title: NPoS Election Algorithms
 sidebar_label: NPoS Election Algorithms
-description: Learn about the election method used on Polkadot's Nominated Proof of Staking.
+description: The Election Methods used in Polkadot's NPoS Mechanism.
 keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms]
 slug: ../learn-phragmen
 ---
@@ -68,9 +68,15 @@ The process of computing the optimal solution for NPoS election can be delegated
 
 ### Council Elections
 
-The Phragmén method is also used in the council election mechanism. When you vote for council
-members, you can select up to 16 different candidates, and then place a reserved bond as the weight
-of your vote. Phragmén will run once on every election to determine the top candidates to assume
+:::info Deprecated in Polkadot OpenGov
+
+Phragmen was used for Council elections in [Governance v1](./learn-governance.md).
+
+:::
+
+The Phragmén method was also used in the council election mechanism. When you voted for council
+members, you could select up to 16 different candidates and then place a reserved bond as the weight
+of your vote. Phragmén would run once on every election to determine the top candidates to assume
 council positions and then again amongst the top candidates to equalize the weight of the votes
 behind them as much as possible.
 
@@ -569,7 +575,7 @@ the
 or the `seqPhragménwithpostprocessing` method in the
 [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would
 like to dive even more deeply, you can review the
-[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=Phragm%C3%A9n#the-election-process).
+[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview#the-election-process).
 
 ### Rationale for Minimizing the Number of Validators Per Nominator
 
@@ -754,7 +760,7 @@ size _k_:
 
 - [Phragmms](https://arxiv.org/pdf/2004.12990.pdf) - W3F research paper that expands on the
   sequential Phragmén method.
-- [W3F Research Page on NPoS](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html) -
+- [W3F Research Page on NPoS](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) -
   An overview of Nominated Proof of Stake as its applied to Polkadot.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
   implementations of Simple and Complicated Phragmén methods.

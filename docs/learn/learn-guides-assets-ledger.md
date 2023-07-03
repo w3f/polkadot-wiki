@@ -1,10 +1,10 @@
 ---
-id: kusama-statemine-ledger
-title: Using Ledger Devices with Statemine
-sidebar_label: Ledger Devices with Statemine
-description: Learn how to use Ledger with Statemine.
-keywords: [statemine, ledger, kusama, assets]
-slug: ../../kusama-statemine-ledger
+id: learn-guides-assets-ledger
+title: Using the Asset Hub Ledger App
+sidebar_label: Asset Hub Ledger App
+description: Advanced How-to Guides about Ledger and the Asset Hub.
+keywords: [asset hub, ledger, assets, statemine, statemint]
+slug: ../learn-guides-assets-ledger
 ---
 
 :::info
@@ -14,11 +14,11 @@ like Brave, Chrome or Edge.
 
 :::
 
-Statemine has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
+The Asset Hub has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
 Nano S and Ledger Nano X devices. The Ledger devices are hardware wallets that keep your private key
 secured on a physical device that does not get directly exposed to your computer or the internet.
 
-The Statemine application allows you to manage your KSM and other tokens on the Statemine parachain.
+The Statemine application allows you to manage your KSM and other tokens on the Asset Hub parachain.
 It supports most of the available transaction types of the network in the XL version of the app
 (details [below](#installing-the-ledger-application)).
 
@@ -41,7 +41,7 @@ Here is a list of what you will need before starting:
 - Ledger Live is installed and at version 2.29 or newer (see settings -> about to find out if you're
   up to date).
 - A web browser is installed that you can use to access
-  [Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer).
+  [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
 
 ## Installing the Ledger Application
 
@@ -79,24 +79,23 @@ your account on Polkadot-JS UI as described below.
 
 :::note
 
-These instructions will guide you on how to add a Ledger account that's **only** available on
-Statemine. If you want to use the same Ledger account on both Kusama **and** Statemine check the
-instructions [below](#working-on-both-kusama-and-statemine).
+These instructions will guide you on how to add a Ledger account that's **only** available on the
+Asset Hub. If you want to use the same Ledger account on both
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} **and** the Asset Hub check the
+instructions [below](#working-on-relay-chains-and-asset-hubs).
 
 :::
 
-[Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer)
-already has an integration with the Ledger application so that your device will work with the
-browser interface after installation. The functionality is currently gated behind a feature setting
-that you will need to turn on.
+[Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer) already has an integration with the
+Ledger application so that your device will work with the browser interface after installation. The
+functionality is currently gated behind a feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Statemine Ledger application, go to the "Settings"
-tab in
-[Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer).
-Find the option for attaching Ledger devices and switch the option from the default "Do not attach
-Ledger devices" to "Attach Ledger via WebUSB" (**but see note above**).
+tab in [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer). Find the option for attaching
+Ledger devices and switch the option from the default "Do not attach Ledger devices" to "Attach
+Ledger via WebUSB" (**but see note above**).
 
-![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](../../assets/ledger.png)
+![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](../assets/ledger.png)
 
 Click "Save" to keep your settings.
 
@@ -105,11 +104,11 @@ that your Ledger device is unlocked, Ledger Live is **closed** and you have
 [switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes)
 to the Statemine application, then click this button.
 
-![Add Ledger button in Polkadot-JS Apps UI](../../assets/ledger/query-ledger.png)
+![Add Ledger button in Polkadot-JS Apps UI](../assets/ledger/query-ledger.png)
 
 A popup will appear asking you to select an account and derivation path.
 
-![Picking an account and derivation path](../../assets/ledger/add-account.png)
+![Picking an account and derivation path](../assets/ledger/add-account.png)
 
 The first option lets you select an account. You can have multiple accounts on a single Ledger
 device. The second dropdown lets you pick a derivation path - think of it like a formula from which
@@ -119,27 +118,28 @@ Once you confirm your selection, depending on your browser and its security sett
 to confirm the USB connection through a popup like the one below when adding the Ledger device for
 the first time:
 
-![Display the device connection popup](../../assets/ledger/query-device.png)
+![Display the device connection popup](../assets/ledger/query-device.png)
 
 You should now be able to scroll down and find a new account on the page with the type "ledger".
 
-![Displaying the Ledger account in the list](../../assets/ledger/ledger-balance.png)
+![Displaying the Ledger account in the list](../assets/ledger/ledger-balance.png)
 
-You can now use this account to interact with Statemine on
-[Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer)
-and it will prompt your ledger for confirmation when you initiate a transaction.
+You can now use this account to interact with the Asset Hub on
+[Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer) and it will prompt your ledger for
+confirmation when you initiate a transaction.
 
-### Working on both Kusama and Statemine
+### Working on Relay Chains and Asset Hubs
 
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
-will show up in Statemint and Statemine respectively, even if they're not set to be used on all
-chains. Statemint and Statemine, which are system parachains on Polkadot and Kusama respectively,
-are part of the core protocols and use DOT/KSM as their native tokens. Hence, accounts on a Relay
+will show up in the Asset Hub, even if they're not set to be used on all chains. The Asset Hub is a
+system parachains on {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} and uses
+{{ polkadot: DOT :polkadot}}{{ kusama: KSM :kusama}} as native token. Hence, accounts on a Relay
 Chain are also available on each Relay's system chains. What this means is that if you already have
-a Kusama Ledger account configured on the extension, that account will also be available on
-Statemine. But the opposite is not the case: an account created specifically on Statemine or
-Statemint won't show up on Kusama or Polkadot respectively.
+a {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} Ledger account configured on the
+extension, that account will also be available on the Asset Hub. But the opposite is not the case:
+an account created specifically on the Asset Hub won't show up on
+{{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}}.
 
 **However**, as mentioned above, the
 [Polkadot extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
@@ -155,11 +155,10 @@ To remove an account from the Polkadot extension:
 2. Click on the three dots next to the account
 3. Select "Forget account".
 
-:::warning
+:::info
 
-As mentioned above, a Polkadot Ledger account will also be available on Statemint.
-
-**DO NOT** send funds to it. They will be inaccessible until a Statemint Ledger app is released.
+As mentioned above, a {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} Ledger account
+will also be available on the Asset Hub.
 
 :::
 
@@ -169,10 +168,10 @@ On the "Accounts" tab, find your Ledger-connected account. Click on the three ve
 end of the row. This will open a new menu, here you can click the "Show address on hardware device"
 option to display the address on your device.
 
-![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](../../assets/ledger-4.png)
+![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](../assets/ledger-4.png)
 
 Here you can scroll through and make sure the address matches to what is displayed on
-[Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer).
+[Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
 
 #### Using Polkadot-JS Apps
 
@@ -180,18 +179,19 @@ Once you have your account loaded on the "Accounts" tab it should show a row wit
 account. At the far right of the row is located your account's DOT balance. If you expand the
 balance arrow, it will show details of your balance such as locks or reserved amounts.
 
-![Account row showing empty balance](../../assets/ledger/ledger-balance.png)
+![Account row showing empty balance](../assets/ledger/ledger-balance.png)
 
 ### Sending a Transfer
 
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
-method is to use
-[Polkadot-JS Apps UI](https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer).
+method is to use [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
 
 :::info Transfers
 
-Transferring in this way sends tokens to another account on the Statemine parachain. If you need to
-transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting) section below.
+Transferring in this way sends tokens to another account on the Asset Hub parachain. If you need to
+transfer KSM between the Asset Hub and
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, see the [Teleporting](#teleporting)
+section below.
 
 :::
 
@@ -212,7 +212,7 @@ be able to go below existential deposit balance, causing your account to be dele
 amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this might
 be the reason.
 
-A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
+A detailed guide on doing transfers is available [here](../learn/learn-balance-transfers.md).
 
 :::
 
@@ -225,10 +225,12 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-:::note Your Statemine address is the same as your Kusama address
+:::note Your Asset Hub address is the same as your Relay Chain address
 
-Make sure that you clarify to the sender that you wish to receive your tokens on the Statemine
-parachain, otherwise (if you're receiving KSM tokens) they could be sent on the Kusama chain.
+Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub
+parachain, otherwise (if you're receiving {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+tokens) they could be sent on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+chain.
 
 :::
 
@@ -252,12 +254,11 @@ account needs to be created first.
 To teleport KSM to the Relay Chain follow these steps:
 
 - Create an account outside your Ledger. Instructions can be found
-  [here](../../learn/learn-account-generation.md).
+  [here](../learn/learn-account-generation.md).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
   the amount you want to teleport, don't forget take into account the fees for teleporting that will
   be deducted in the next step.
-- Teleport your tokens following the instructions you will find
-  [here](../../learn/learn-teleport.md).
+- Teleport your tokens following the instructions you will find [here](../learn/learn-teleport.md).
 
 Teleporting **to** a Ledger account from a non-Ledger account doesn't require these extra steps.
 

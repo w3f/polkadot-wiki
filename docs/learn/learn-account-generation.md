@@ -2,7 +2,7 @@
 id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
-description: Steps on generating a Polkadot account.
+description: Generate a Polkadot Basic Account.
 keywords: [account, account generation, polkadot account, polkadotjs]
 slug: ../learn-account-generation
 ---
@@ -75,10 +75,10 @@ phone that you are comfortable using only for Parity Signer.
 Hardware wallet integration is possible with Ledger. A full guide is available
 [here](../general/ledger.md).
 
-Alternatively, you might find other wallets on the [Wallet](./../general/wallets.md) page, but bear
-in mind that some of these are **unaudited** and are not officially affiliated with Web3 Foundation
-or the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless otherwise
-stated.
+Alternatively, you might find other wallets on the [Wallet](../general/wallets-and-extensions.md)
+page, but bear in mind that some of these are **unaudited** and are not officially affiliated with
+Web3 Foundation or the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless
+otherwise stated.
 
 :::info How-to guides to generate an account
 

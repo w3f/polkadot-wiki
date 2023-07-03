@@ -2,7 +2,7 @@
 id: learn-nominator
 title: Nominator
 sidebar_label: Nominator
-description: Learn about what it means to be a nominator.
+description: Role of Nominators on Polkadot.
 keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
@@ -54,7 +54,7 @@ Make sure you read those pages as well before nominating.
   next-gen Internet, Web3: a decentralized, privacy-focused, and trustless internet.
 - You are an essential piece of the puzzle, keeping
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure. The bonded balance can be
-  used to vote in [OpenGov](./learn-opengov.md) and shape the future direction of
+  used to vote in [Polkadot OpenGov](./learn-polkadot-opengov.md) and shape the future direction of
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 - You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
   works at a technical-level. When you feel comfortable with your nomination skills and knowledge,
@@ -194,7 +194,7 @@ metrics shown as an example, followed by a brief description of each.
   stop validating. The election algorithm attempts to maximize the overall network stake while
   minimizing the variance of the active stake across the validators. For additional information on
   the election process, check out the research behind
-  [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
+  [nominated proof-of-stake](https://research.web3.foundation/Polkadot/protocols/NPoS).
 
 - **comm.**: Total commission kept by the validator (100% means the validator will keep all rewards
   , and thus nominators will not receive them). A validator's commission is the percentage of the

@@ -2,7 +2,7 @@
 id: learn-redenomination
 title: Redenomination of DOT
 sidebar_label: Redenomination of DOT
-description: Learn about the DOT token Redenomination.
+description: Everything about the DOT Token Redenomination.
 keywords: [DOT, redenomination]
 slug: ../learn-redenomination
 ---

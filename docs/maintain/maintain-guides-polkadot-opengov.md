@@ -1,19 +1,19 @@
 ---
-id: maintain-guides-opengov
-title: Participate in OpenGov
-sidebar_label: Participate in OpenGov
+id: maintain-guides-polkadot-opengov
+title: Participate in Polkadot OpenGov
+sidebar_label: Participate in Polkadot OpenGov
 description: Steps on how to participate in OpenGov.
 keywords: [democracy, council, action, proposal, referenda]
-slug: ../maintain-guides-opengov
+slug: ../maintain-guides-polkadot-opengov
 ---
 
 import Tracks from "./../../components/Referenda-Tracks"; import Chart from
 "./../../components/Chart";
 
-:::info OpenGov is not live on Polkadot yet
+:::info Learn more about Polkadot OpenGov
 
-OpenGov is already deployed on Kusama Network. For background information about OpenGov, please
-refer to this [dedicated Wiki document](../learn/learn-opengov.md).
+For background information about Polkadot OpenGov, please refer to this
+[dedicated Wiki document](../learn/learn-polkadot-opengov.md).
 
 :::
 
@@ -31,7 +31,7 @@ community.
 - [Polkadot Daily Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is
   happening in the Polkadot ecosystem, published every weekday except holidays.
 
-## OpenGov Terminology and Parameters
+## Polkadot OpenGov Terminology and Parameters
 
 The important parameters to be aware of when voting using the Referenda module are as follows:
 
@@ -81,14 +81,7 @@ than the min enactment period.
 
 ## Origins and Tracks Info
 
-{{ polkadot: The tracks info of Kusama network is  shown below for reference. This table will be updated with Polkadot tracks when OpenGov is live on Polkadot network. :polkadot }}
-
-<!-- Show only Kusama as OpenGov is not yet available on Polkadot -->
-<Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
-
-<!-- When OpenGov moves to Polkadot replace the above content with these condition statements -->
-<!-- {{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }} -->
-<!-- {{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }} -->
+{{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }}{{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }}
 
 :::info
 
@@ -116,13 +109,14 @@ ample time to vote on the proposal during the decision period.
 
 ### Whitelisted Caller
 
-Origin commanded by the [Fellowship](../learn/learn-opengov.md#fellowship) whitelist some hash of a
-call and allow the call to be dispatched with the root origin (after the referendum passes). This
-track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent
-process for time-critical proposals. For instance, a referendum proposed in this track needs to
-amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser than the root)
-by the end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }}
-approval to be considered to be part of the confirm period.
+Origin commanded by the [Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship)
+whitelist some hash of a call and allow the call to be dispatched with the root origin (after the
+referendum passes). This track allows for a shorter voting turnaround, safe in the knowledge through
+an open and transparent process for time-critical proposals. For instance, a referendum proposed in
+this track needs to amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much
+lesser than the root) by the end of the first day with over
+{{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval to be considered to be part of
+the confirm period.
 
 {{ polkadot: <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}
@@ -235,13 +229,12 @@ from the treasury at once.
 
 ### Submitting a Preimage
 
-The act of making a proposal is split from submitting the preimage for the proposal since the
-storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage
-submission to come as a separate transaction means that another account could submit the preimage
-for you and pay the fee for it. The example below demonstrates the creation of a preimage on Kusama
-(**the same procedure applies when OpenGov is live on Polkadot**). To propose that a remark "Expect
-Chaos!" be added to the blockchain, the preimage hash would be
-`0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`.
+The act of creating a proposal is split from submitting the preimage for the proposal since the
+storage cost of submitting a large preimage could be expensive. Allowing the preimage submission to
+come as a separate transaction means that another account could submit the preimage for you and pay
+the fee. The example below demonstrates the creation of a preimage on Kusama (**the same procedure
+applies to Polkadot**). To propose that a remark "Expect Chaos!" be added to the blockchain, the
+preimage hash would be `0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`.
 
 ![submit preimage](../assets/governance/opengov-submit-preimage.png)
 
@@ -267,12 +260,52 @@ automatically populated. The enactment delay can be specified either as a block 
 specific number of blocks after the referendum is approved. The deposit for this proposal will be
 locked for the referendum duration.
 
+### Submitting a Referendum on the Whitelisted Caller Track
+
+Let's consider increasing the number of validators participating in parachain consensus. You could
+[submit a preimage](#submitting-a-preimage) with the call that sets the number of validators to
+1,000 and submit a referendum to the Root track directly. However, this requires a large decision
+deposit and has very conservative passing parameters such that it will probably need the entire
+28-day voting period to pass.
+
+Operations that are deemed safe or time critical by the Polkadot Technical Fellowship can use the
+Whitelisted Caller track. This track requires less turnout in the first half of the decision period
+so that it can pass more quickly. This track is typically used for more neutral, technical proposals
+like runtime upgrades or changing the system's parachain validation configuration.
+
+Using the Whitelisted Caller track requires some special calls. Submitting a referendum in the same
+form as other tracks will not work. Namely, rather than voting on a particular `proposal`, the
+Whitelisted Caller track requires a vote to `dispatch` the `proposal` via the Whitelist pallet.
+Before opening a referendum on this track, you should also attempt to get a positive signal from the
+Fellowship that they will whitelist the proposal. If they do not, then even if the public referendum
+passes, it will not execute.
+
+Below are the steps to follow when submitting a proposal to the Whitelist track.
+
+- [Submit a preimage](#submitting-a-preimage) with the call to _dispatch_ the proposal (`call`) you
+  want to submit -- `whitelist.dispatchWhitelistedCallWithPreimage(call)` -- and obtain the preimage
+  hash. This is the preimage for the _public referendum_ on the Whitelisted Caller track.
+
+![preimage-whitelist](../assets/governance/opengov-submit-preimage-whitelist.png)
+
+- Obtain the hash of `call`. The Polkadot Fellowship needs to start a Fellowship referendum to
+  whitelist the call with `whitelist.whitelistCall(callHash)`. The Fellowship referendum gets voted
+  on by the Polkadot Fellowship members only.
+
+  ![call-hash](../assets/governance/encoded-call-hash.png)
+
+- The public now votes on the referendum. Someone must place a decision deposit to go into the
+  deciding phase.
+- Once passed, it gets enacted successfully as long as the call has been whitelisted by the
+  Fellowship.
+
+Note that the public referendum and Fellowship referendum can happen simultaneously. However, if the
+Fellowship does not whitelist the call, you must submit it directly to the Root origin.
+
 ## Voting on Referenda
 
-To vote on a referendum, navigate to the "Referenda" tab of Polkadot-JS UI. All the active referenda
-will be shown in their respective track sections. Click the "Vote" button to cast a vote for the
-corresponding referendum. As OpenGov takes both the approval and support into account, there are
-four options to choose from when voting on a referendum:
+As Polkadot OpenGov takes both the approval and support into account, there are four options to
+choose from when voting on a referendum:
 
 - Aye
 - Nay
@@ -283,53 +316,39 @@ Also, you have to specify the conviction multiplier for this vote. The longer yo
 lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means
 that your vote only counts for 10% of the tokens that you hold.
 
-![vote on referendum](../assets/governance/opengov-vote-referendum.png)
+For detailed instructions on how to vote on Polkadot OpenGov referenda, check
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184120-polkadot-opengov-how-to-vote)
 
-:::caution OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
+:::caution Polkadot OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
 
-Use `convictionVoting.vote` for voting on Referenda in OpenGov instead of `democracy.vote` (which
-only works for old version of governance).
+Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead of `democracy.vote`
+(which only works for the old version of governance).
 
 :::
 
 ### Removing expired voting locks
 
-To remove the lock from votes you first need to call `removeVote` and then `unlock` through the
-`convictionVoting` pallet.
+To remove the lock from votes, you first need to call `removeVote` and then `unlock` through the
+`convictionVoting` pallet. For detailed instructions, check
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184129-polkadot-js-ui-how-to-remove-expired-referenda-locks)
 
 ## Delegating Voting Power
 
-For an overview on how delegation works in OpenGov, check out the
-[Multirole Delegation](./../learn/learn-opengov.md#multirole-delegation) section on the
-[Learn OpenGov](./../learn/learn-opengov.md) page.
+For an overview of how delegation works in Polkadot OpenGov, check out the
+[Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
+[Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
-The following steps outline how to delegate voting power in OpenGov through Polkadot-JS UI:
+### Delegation Dashboard
 
-1. Navigate to the [referenda tab](https://polkadot.js.org/apps/#/referenda)
-2. Click the `Delegate` icon in the top-right corner
-   ![Delegate Window](./../assets/governance/Delegate-Window-Kusama.png)
-3. Ensure the `delegate from account` field lists the account you wish to apply delegation over
-4. Next, select the appropriate `submission track` that you wish to delegate (or select the option
-   `apply delegation to all tracks`)
-5. Specify the `delegate vote value`, which is the amount of DOT or KSM you wish to provide the
-   delegate with
-6. Provide a `conviction` multiplier determining how long the funds from the previous step are
-   locked (for additional details see the section on [Voluntary Locking](#voluntary-locking)) and
-   click `Next`
-7. The final step is to provide the account address that will be the delegate for the original
-   account provided (this account will be receiving the voting power for the source account on the
-   specified track)
+To make multi-role delegation easy and intuitive,
+[Delegation Dashboard](https://delegation.polkadot.network/) provides an interactive interface that
+displays the list of delegates and their details. The video tutorial below walks through the
+features of the Delegation Dashboard and shows how to perform multi-role delegation.
 
-![Delegate](./../assets/governance/Delegate-Kusama.png)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RapBYZc5ZPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-When you are ready to undelegate:
-
-1. Navigate to the [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics)
-2. Select a wallet address that is currently delegating to another account
-3. From the `submit the following extrinsic` dropdown, select `convictionVoting`
-4. Select `undelegate` from the next dropdown to the right of the previous step (note you can also
-   delegate from this page as an alternative to the solution provided above)
-5. Provide the `submission track` that was used when originally delegating from above
-6. Sign and submit the transaction to restore the voting power back to the original source address
-
-![Undelegate](./../assets/governance/Undelegate-Kusama.png)
+For detailed instructions on how to delegate your voting power using dashboard, check
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power)
+If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions are
+available
+[here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).

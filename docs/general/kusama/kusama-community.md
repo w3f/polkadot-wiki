@@ -21,8 +21,8 @@ anyone doing so is likely trying to scam you.**
   Information on hosting meetups, applying for funding, and materials for running it.
 - [Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html) -
-  also applies to Kusama.
+- [Polkadot's Latest Research (news)](https://research.web3.foundation/news) - also applies to
+  Kusama.
 
 ### Events
 

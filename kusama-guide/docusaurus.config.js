@@ -64,15 +64,15 @@ module.exports = {
       {
        redirects: [
           {
-            to: '/docs/learn-opengov',
-            from: ['/docs/learn-gov2']
+            to: '/docs/learn-polkadot-opengov',
+            from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
             to: '/docs/learn-account-advanced',
             from: ['/docs/ens']
           },
           {
-            to: '/docs/wallets',
+            to: '/docs/wallets-and-extensions',
             from: ['/docs/build-wallets']
           },
           {
@@ -82,6 +82,18 @@ module.exports = {
           {
             to: '/docs/bug-bounty',
             from: ['/docs/maintain-bug-bounty']
+          },
+          {
+            to: '/docs/maintain-guides-polkadot-opengov',
+            from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/docs/learn-guides-assets-create',
+            from: ['/docs/kusama-statemine']
+          },
+          {
+            to: '/docs/learn-guides-assets-ledger',
+            from: ['/docs/kusama-statemine-ledger']
           }
         ],
         createRedirects: function (existingPath) {
@@ -159,7 +171,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'Join Polkadot Decoded 2023 on June 28-29! <a href="https://polkadot.network/ecosystem/events/decoded-2023/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=decoded23&utm_content=notification&utm_term=two" target="_blank" rel="noopener noreferrer">Register now 👉</a>',
+        'sub0 is back! Lisbon, Portugal, Sep 19-20. <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,

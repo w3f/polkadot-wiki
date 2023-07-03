@@ -91,7 +91,7 @@ choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is be
 Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
-#### Reference Hardware
+#### Reference Hardware {#standard-hardware}
 
 The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on
 VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services
@@ -161,6 +161,25 @@ the network. This will result in `ImOnline` heartbeats making it on chain, but z
 making it on chain.
 
 :::
+
+### Make Sure Landlock is Enabled
+
+[Landlock](https://docs.kernel.org/userspace-api/landlock.html) is a Linux security feature used in
+Polkadot:
+
+> Landlock empowers any process, including unprivileged ones, to securely restrict themselves.
+
+To make use of landlock, make sure you are on the reference kernel version or newer. Most Linux
+distributions should already have landlock enabled, but you can check by running the following as
+root:
+
+```sh
+dmesg | grep landlock || journalctl -kg landlock
+```
+
+If it is not enabled, please see the
+[official docs ("Kernel support")](https://docs.kernel.org/userspace-api/landlock.html#kernel-support)
+if you would like to build Linux with landlock enabled.
 
 ### Installing the `polkadot` binary
 
@@ -705,6 +724,23 @@ validator set, you are now running a Polkadot validator! If you need help, reach
 The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
 to provide support for community validators. If you are interested in applying for the programme,
 you can find more information [on the wiki page](../general/thousand-validators.md).
+
+## Running a validator on a testnet
+
+To verify your validator set up, it is possible to run it against a PoS test network such as Westend
+or Wococo. However, validator slots are intentionally limited on Westend to ensure the stability and
+availability of the testnet for the Polkadot release process. As such it is advised for node
+operators wishing to run testnet validators to join the Wococo network. You can obtain WOOK tokens
+[here](../learn/learn-DOT.md#getting-tokens-on-the-wococo-testnet).
+
+Here is a small comparison of each network characteristics as relevant to validators:
+
+| Network           | Polkadot | Westend    | Wococo      |
+| ----------------- | -------- | ---------- | ----------- |
+| epoch             | 4h       | 1h         | 10m         |
+| era               | 1d       | 6h         | 1h          |
+| token             | DOT      | WND (test) | WOOK (test) |
+| active validators | ~300     | ~20        | 10<x<100    |
 
 ## FAQ
 

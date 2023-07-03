@@ -1,10 +1,10 @@
 ---
-id: learn-identity-guides
+id: learn-guides-identity
 title: Identity How-to Guides
 sidebar_label: Identity
 description: Advanced How-to Guides about Identity.
 keywords: [registrar, identity]
-slug: ../learn-identity-guides
+slug: ../learn-guides-identity
 ---
 
 ## Registrars
@@ -40,3 +40,31 @@ minimumDeposit.
 At this point, DOT holders can endorse the motion. With enough endorsements, the motion will become
 a referendum, which is then voted on. If it passes, users will be able to request judgement from
 this registrar.
+
+## Setting Sub-Identity (Sub-ID) for your Ledger Account
+
+Setting an Identity is not possible on Ledger app yet, but as a workaround, you can
+[set the identity for an on-chain account ](../learn/learn-identity.md#setting-an-identity) and then
+use it to set a sub-identity to your Ledger account.
+
+- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to
+  the account to which you already set identity. You should see an option to set onchain
+  sub-identities. Click on it.
+
+  ![Add sub-identity in PolkadotJS](../assets/identity/sub-id-1.png)
+
+- In the pop-up window, select your Ledger account from the dropdown and enter text in sub name
+  field. Then, click on set subs button.
+  ![Set sub-identity in PolkadotJS](../assets/identity/sub-id-2.png)
+- Sign and submit the transaction from the parent account with the identity
+
+You should now see the sub-identity displayed on-chain. You need to be aware that
+{{ polkadot: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+is reserved for setting identity and
+{{ polkadot: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+for each sub-identity. This reserved account balance is freed once you
+[clear the identities](../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
+
+![Sub-identity example](../assets/identity/sub-id-3.png)

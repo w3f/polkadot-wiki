@@ -2,7 +2,7 @@
 id: learn-nomination-pools
 title: Nomination Pools
 sidebar_label: Nomination Pools
-description: Learn about Nomination Pools and their features
+description: Staking through Polkadot's Nomination Pools.
 keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
@@ -47,6 +47,10 @@ Learn the key differences between
 
 **For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot
 Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
+
+**If you become a nomination pool member or a pool admin, you cannot participate in Governance with
+the bonded tokens in the pool, as they are held in a
+[system account](./learn-account-advanced.md#system-accounts).**
 
 :::
 
@@ -212,7 +216,7 @@ balance.
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-staking-guides.md#nomination-pools) for more information about the lifecycle
+See [this page](./learn-guides-staking.md#nomination-pools) for more information about the lifecycle
 of nomination pools. The cycle includes creation, upkeep and destruction.
 
 :::

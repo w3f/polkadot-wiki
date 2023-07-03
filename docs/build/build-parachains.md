@@ -330,7 +330,7 @@ Relay-routed Message Passing) in order to send transfers and messages between pa
 Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
 
 Rococo runs a few test system parachains:
-[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-statemint-rpc.polkadot.io#/explorer),
+[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
 and
 [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer).
 It also runs several externally developed parachains.
@@ -344,12 +344,8 @@ proposed parachains is available
 
 ### Obtaining ROC
 
-ROC are available in the [Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org)
-channel on Matrix. To receive ROC tokens, use the command:
-
-```
-!drip YOUR_ROCOCO_ADDRESS
-```
+Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
+ROCs tokens.
 
 ### Build and Register a Rococo Parathread
 
