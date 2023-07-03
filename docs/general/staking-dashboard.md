@@ -164,18 +164,24 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 :::
 
 - **Section C: The Pool Panel** shows the pool id where you have membership (in this case, Pool 82),
-  the pool name, and next to it, a `Leave` button to unbond all the funds in the pool. You can see
-  any unclaimed rewards in the middle of the panel. You can claim and bond the rewards (`+ Bond`
-  button) or withdraw them as a free balance (`Withdraw` button). In this case, there are
-  approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
+  the pool name, and next to it, a `Manage` button that will allow to choose between different
+  options:
+
+  - Update Claim Permissions
+  - Leave the pool and unbond all the funds in the pool.
+
+  If you are a pool admin you will be able to see the additional options:
+
+  - Claim Commission
+  - Manage Commission
+  - Rename Pool
+  - Lock Pool
+  - Destroy Pool
+
+  You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards
+  (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there
+  are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
   panel, currently set to "Nominating and Earning Rewards".
-
-:::info Pool members must claim their rewards; nobody will do it for them
-
-For pool members, rewards must be manually claimed. This is different from being a nominator where
-usually, one nominator or the specific validator can trigger a payout for all nominators.
-
-:::
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
   highlighting the validator that is active and will pay rewards to the pool at the end of the era
@@ -183,8 +189,8 @@ usually, one nominator or the specific validator can trigger a payout for all no
 
 If you scroll down the page, there are two additional panels:
 
-- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, and State Toggler. The
-  same account can cover all the roles.
+- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, and Bouncer. The same
+  account can cover all the roles.
 - **Pool Stats** showing the Pool State (either Active, Closed, or Destroying), Pool Members (number
   of members in the pool), and Total Bonded (total number of bonded tokens).
 
