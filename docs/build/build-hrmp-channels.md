@@ -56,17 +56,20 @@ place to share the reasoning behind your proposal: make sure to log in with the 
 possible) before publishing yours, and if you can do this also make sure the address has an on-chain
 identity.
 
-Your proposal should contain the following sections to be considered complete for the community to
-review and ultimately vote:
+### Example: Opening an HRMP Channel with the AssetHub
 
-1.  A request on what the proposal aims to do (opening an HRMP channel with the Asset Hub);
+The following highlights the steps required to submit a proposal for opening an HRMP channel with
+the AssetHub. Your submission should contain the following sections to be considered complete for
+the community to review and ultimately vote on:
+
+1.  A request on what the proposal aims to do (opening an HRMP channel with the AssetHub);
 2.  The use cases this channel will support for your chain;
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls):
 
-    - A `forceTransfer` of 20 DOT from the Treasury to Statemint sovereign account.
-    - A `forceOpenhrmpchannel` from Statemint (1,000) to ParaID.
-    - A `forceOpenhrmpChannel` from ParaID to Statemint (1,000).
+    - A `forceTransfer` of 20 DOT from the Treasury to AssetHub sovereign account.
+    - A `forceOpenhrmpchannel` from AssetHub (1,000) to ParaID.
+    - A `forceOpenhrmpChannel` from ParaID to AssetHub (1,000).
 
     Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
     the first transaction should not be necessary (these guidelines will be updated accordingly).
