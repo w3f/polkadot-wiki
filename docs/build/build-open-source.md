@@ -186,6 +186,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Java             | [Java Host Research](https://github.com/LimeChain/java-host-research) ⚪|
 | AssemblyScript |
 | Light Client   | [smoldot](https://github.com/smol-dot/smoldot) 🟢, [Substrate Connect](https://github.com/paritytech/substrate-connect) 🟢, [C++ Polkadot Light Client](https://github.com/eqlabs/polkadot-light-client) ⚪|
+| Testing             | [Polkadot Conformance](https://github.com/LimeChain/polkadot-conformance) |
 
 ### Network Maintenance Tools
 
