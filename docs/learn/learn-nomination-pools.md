@@ -232,45 +232,55 @@ balance.
 
 ### Pool Commissions
 
-As a pool admin you can set pool commissions that will be applied to the staking rewards paid out to
-the pool's system account, before rewards are allocated for the pool members.
+:::info Live on Kusama
 
-There are three methods that can be used when setting the pool commission:
-
-- The commission rate (`nominationPools.setCommission` extrinsic): the start or new commission rate
-  (`newCommission` parameter) that can be set between 0% and the Max Commission (decided through
-  [governance referendum](./learn-polkadot-opengov.md)). You will need to specify an Input Payee
-  Account, i.e. the account that will receive the commission.
-- Max Commission (`nominationPools.setCommissionMax` extrinsic): the maximum commission
-  (`maxCommission` parameter) the pool will apply to its members (between 0% and Max Commission).
-  Note that once set, **the pool admin will only be able to lower it**.
-- Change Rate (`nominationPools.setCommissionChangeRate` extrinsic): the maximum rate increase
-  (`maxIncrease` parameter) allowed for a single update. Note that once set, **the pool admin will
-  only be able to lower it**. When setting the Change Rate, it will also be possible to set a
-  `minDelay` quantified as the number of blocks after which it is possible to change the commission
-  (i.e. the minimum delay between commission updates). Note that once set, **the pool admin will
-  only be able to increase it**.
-
-Max Commission and Change Rate must not be set. It is the choice of the pool admin to set those
-parameters and provide transparency to the pool members about the commission policy.
-
-:::warning Max Commission and Change Rate are permanent
-
-Once the Max Commission and the Change Rate are set, those values can be only decreased by the pool
-admin. The minimum delay between commission updates can be only increased.
+Pool commissions are currently live on Kusama. On Polkadot will be live once the Max Commission will
+be decided through governance referendum.
 
 :::
 
-Let's take for example Pool A that sets the Commission Rate to 10%, the Max Commission to 100% and
-the Change Rate to 1% every 30 minutes. The following statements are true:
+As a pool admin, you can set pool commissions that will be applied to the staking rewards paid out
+to the pool's system account before rewards are allocated for the pool members.
+
+Three methods can be used when setting the pool commission:
+
+- **Commission Rate** (`nominationPools.setCommission` extrinsic): the start or new commission rate
+  (`newCommission` parameter) that can be set between 0% and the Max Commission (decided through
+  [governance referendum](./learn-polkadot-opengov.md)). You will need to specify an Input Payee
+  Account, i.e. the account that will receive the commission.
+- **Max Commission** (`nominationPools.setCommissionMax` extrinsic): the maximum commission
+  (`maxCommission` parameter) the pool will apply to its members (between 0% and Max Commission).
+  Note that once set, **the pool admin can only lower it**.
+- **Change Rate** (`nominationPools.setCommissionChangeRate` extrinsic): the maximum rate increase
+  (`maxIncrease` parameter) allowed for a single commission update. Note that once set, **the pool
+  admin can only lower it**. When setting the Change Rate, it will also be possible to set a
+  `minDelay` quantified as the number of blocks (since last commission update) after which it is
+  possible to change the commission (i.e. the minimum delay between commission updates). Note that
+  once set, **the pool admin can only increase it**.
+
+Max Commission and Change Rate must not be necessarily set. It is the choice of the pool admin to
+set those parameters and provide transparency to the pool members about the pool's commission
+policy.
+
+:::warning Max Commission and Change Rate are permanent
+
+Once the Max Commission and the Change Rate are set, the pool admin can only decrease those values.
+The minimum delay between commission updates can only be increased.
+
+:::
+
+Let's take, for example, Pool A, which sets the Commission Rate to 10%, the Max Commission to 100%,
+and the Change Rate to 1% every 30 minutes. The following statements are true:
 
 - The pool commission can be increased by 1% every 30 minutes. Bigger increases are not allowed.
   Increases of less than or equal to 1% are not allowed sooner than 30 minutes since the last
   commission update.
-- The Max Commission can be only decreased from 100%. Once decreased, it cannot be increased.
-- The Change Rate can only be decreased from 1%. Once decreased, it cannot be increased.
-- The minimum delay between updates of 30 min can only be increased. Once increased, it cannot be
-  decreased.
+- The Max Commission can only be decreased from 100%. Once decreased, it can be decreased again but
+  it cannot be increased.
+- The Change Rate can only be decreased from 1%. Once decreased, it can be decreased again but it
+  cannot be increased.
+- The minimum delay between updates of 30 min can only be increased. Once increased, it can be
+  increased again but it cannot be decreased.
 
 ## Pool Lifecycle
 
