@@ -159,7 +159,7 @@ for guidelines.
 
 ### Claim Permissions
 
-As a pool member, you can grant permission to any other pool member to claim and compound rewards on
+As a pool member, you can grant permission to any other account to claim and compound rewards on
 your behalf. There are four permission options:
 
 - `Permissioned` (default): you need to claim and compound your rewards.
