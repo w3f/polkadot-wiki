@@ -170,8 +170,8 @@ your behalf. There are four permission options:
 - `PermissionlessAll`: you grant permission to any other account to compound or withdraw your
   rewards on your behalf.
 
-See the [Staking Dashboard page](../general/staking-dashboard.md) for more information about how to
-set your claim permissions.
+See the [Staking Dashboard page](../general/staking-dashboard.md#pools) for more information about
+how to set your claim permissions.
 
 See the [advanced guides](./learn-guides-staking-pools.md#claim-rewards-for-other-pool-members) to
 learn how to claim rewards for another pool member.
@@ -242,7 +242,8 @@ of 10% on Polkadot and enable pool commission.
 :::
 
 As the pool root role, you can set pool commissions that will be applied to the staking rewards paid
-out to the pool's system account before rewards are allocated for the pool members.
+out to the pool's system account before rewards are allocated for the pool members. You can set pool
+commissions through the [Polkadot Staking Dashboard](../general/staking-dashboard.md#pools).
 
 Three methods can be used when setting the pool commission:
 
