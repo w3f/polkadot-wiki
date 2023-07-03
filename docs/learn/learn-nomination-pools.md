@@ -170,7 +170,6 @@ your behalf. There are four permission options:
 - `PermissionlessAll`: you grant permission to any other account to compound or withdraw your
   rewards on your behalf.
 
-Accounts not members of your pool will not be able to claim rewards on your behalf.
 
 See the [Staking Dashboard page](../general/staking-dashboard.md) for more information about how to
 set your claim permissions.
