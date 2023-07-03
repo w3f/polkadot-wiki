@@ -167,20 +167,38 @@ cannot simply swap memberships. You will need to unbond and go through the whole
   the pool name, and next to it, a `Manage` button that will allow to choose between different
   options:
 
-  - Update Claim Permissions, you can allow other pool members to compound your rewards, withdraw
-    your rewards as a free balance, or both.
+  - Update Claim Permissions: you can allow other pool members to compound your rewards, withdraw
+    your rewards as a free balance, or both. More details about nomination pools and updating claim
+    permissions can be found on the
+    [dedicated wiki page](../learn/learn-nomination-pools.md#claim-permissions).
 
   ![dashboard-permissionlessPoolClaims](../assets/dashboard-permissionlessPoolClaims.png)
+
+  :::info
+
+  For more information about how-to update your claim permissions with the staking dashboard see
+  this support article.
+
+  :::
 
   - Leave the pool and unbond all the funds in the pool.
 
   If you are a pool admin you will be able to see the additional options:
 
   - Claim Commission
-  - Manage Commission, you can manage the pool commission rate, maximum commission, maximum change
-    rate, and minimum time delay between commission updates.
+  - Manage Commission: you can manage the pool commission rate, maximum commission, maximum change
+    rate, and minimum time delay between commission updates. More details about nomination pools and
+    managing pool commissions can be found on the
+    [dedicated wiki page](../learn/learn-nomination-pools.md#pool-commissions).
 
   ![dashboard-manage-commission](../assets/dashboard-managePoolCommission.png)
+
+  :::info
+
+  For more information about how-to manage commission of your nomination pool with the staking
+  dashboard see this support article.
+
+  :::
 
   - Rename Pool
   - Lock Pool
