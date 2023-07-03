@@ -17,10 +17,10 @@ and import your [staking proxy](../learn/learn-staking-advanced.md#staking-proxi
 or [non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins
 and members).
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) also has **native
-[Ledger](./ledger.md) support**, meaning that you do not need an extension or a wallet to use it;
-you just need your Ledger device. [Metadata updates](../learn/learn-extrinsics.md#metadata-updates)
-are thus not necessary, as you only need to keep your Ledger apps up-to-date.
+The dashboard also has **native [Ledger](./ledger.md) support**, meaning that you do not need an
+extension or a wallet to use it; you just need your Ledger device.
+[Metadata updates](../learn/learn-extrinsics.md#metadata-updates) are thus not necessary, as you
+only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account in a Ledger device with the
@@ -138,8 +138,8 @@ most recently received rewards.
 
 :::info Joining a Nomination Pool - Walk-through video tutorial
 
-[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a nomination pool with the
-Staking Dashboard.
+[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a
+[nomination pool](../learn/learn-nomination-pools.md) with the Staking Dashboard.
 
 :::
 
@@ -167,13 +167,21 @@ cannot simply swap memberships. You will need to unbond and go through the whole
   the pool name, and next to it, a `Manage` button that will allow to choose between different
   options:
 
-  - Update Claim Permissions
+  - Update Claim Permissions, you can allow other pool members to compound your rewards, withdraw
+    your rewards as a free balance, or both.
+
+  ![dashboard-permissionlessPoolClaims](../assets/dashboard-permissionlessPoolClaims.png)
+
   - Leave the pool and unbond all the funds in the pool.
 
   If you are a pool admin you will be able to see the additional options:
 
   - Claim Commission
-  - Manage Commission
+  - Manage Commission, you can manage the pool commission rate, maximum commission, maximum change
+    rate, and minimum time delay between commission updates.
+
+  ![dashboard-manage-commission](../assets/dashboard-managePoolCommission.png)
+
   - Rename Pool
   - Lock Pool
   - Destroy Pool
