@@ -163,11 +163,11 @@ As a pool member, you can grant permission to any other account to claim and com
 your behalf. There are four permission options:
 
 - `Permissioned` (default): you need to claim and compound your rewards.
-- `PermissionlessCompound`: you grant permission to any other pool member to compound (claim and
+- `PermissionlessCompound`: you grant permission to any other account to compound (claim and
   bond) your rewards on your behalf.
-- `PermissionlessWithdraw`: you grant permission to any other pool member to withdraw (claim and
+- `PermissionlessWithdraw`: you grant permission to any other account to withdraw (claim and
   keep as a free balance) your rewards on your behalf.
-- `PermissionlessAll`: you grant permission to any other pool member to compound or withdraw your
+- `PermissionlessAll`: you grant permission to any other account to compound or withdraw your
   rewards on your behalf.
 
 Accounts not members of your pool will not be able to claim rewards on your behalf.
