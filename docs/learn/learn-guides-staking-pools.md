@@ -62,12 +62,23 @@ A pool can be pushed into the “destroying” state via one of:
 
 ## Claim Rewards for Other Pool Members
 
-As a pool member you can claim rewards for other members within the same pools who set their
+As a pool member you can claim rewards for any other members who set their
 [claim permissions](./learn-nomination-pools.md#claim-permissions) to one of the _permissionless_
 options.
 
-Let's take the example of an Account A setting the claim permissions to `PermissionlessAll`. Another
-Account B can now claim Account A rewards (as a free balance or compound them to the existing bonded
-balance) to Account A. To do so, Account B needs to go to the
-[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue a
-`nominationPools.claimPayoutOthers` extrinsic specifying Account A (see below).
+Let's take the example of ALICE setting the claim permissions to `PermissionlessAll`. Another
+account STASH can now claim ALICE's rewards (as a free balance or compound them to the existing
+bonded balance). To do so, STASH can go to the
+[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue the following
+extrisics:
+
+- `nominationPools.claimPayoutOthers` extrinsic specifying ALICE's account. This will claim the
+  rewards as a free balance on ALICE's account.
+
+![pools-payoutOthers](../assets/nomination-pools-payoutOthers.png)
+
+- `nominationPools.bondExtraOthers` extrinsic specifying ALICE's account and the option to bond:
+  - the free balance currently available in ALICE's account (`FreeBalance`) or
+  - the pool rewards (`Rewards`) unclaimed by ALICE.
+
+![pools-bondExtraOthers](../assets/nomination-pools-bondExtraOthers.png)

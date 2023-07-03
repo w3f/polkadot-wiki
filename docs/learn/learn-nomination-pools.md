@@ -173,13 +173,8 @@ your behalf. There are four permission options:
 See the [Staking Dashboard page](../general/staking-dashboard.md) for more information about how to
 set your claim permissions.
 
-Accounts not members of your pool will not be able to claim rewards on your behalf.
-
-Let's take the example of an Account A setting the claim permissions to `PermissionlessAll`. Another
-Account B can now claim Account A rewards (as a free balance or compound them to the existing bonded
-balance) to Account A. To do so, Account B needs to go to the
-[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue a
-`nominationPools.claimPayoutOthers` extrinsic specifying Account A (see below).
+See the [advanced guides](./learn-guides-staking-pools.md#claim-rewards-for-other-pool-members) to
+learn how to claim rewards for another pool member.
 
 ### Unbond and withdraw funds
 
@@ -240,13 +235,14 @@ balance.
 
 :::info Live on Kusama
 
-Pool commissions are currently live on Kusama. On Polkadot will be live once the Max Commission will
-be decided through governance referendum.
+Pool commissions are currently live on Kusama. On Polkadot
+[Referendum 55](https://polkadot.polkassembly.io/referenda/55) will enable a `globalMaxCommission`
+of 10% on Polkadot and enable pool commission.
 
 :::
 
-As the pool root role, you can set pool commissions that will be applied to the staking rewards paid out
-to the pool's system account before rewards are allocated for the pool members.
+As the pool root role, you can set pool commissions that will be applied to the staking rewards paid
+out to the pool's system account before rewards are allocated for the pool members.
 
 Three methods can be used when setting the pool commission:
 
@@ -278,17 +274,18 @@ referendum.
 :::
 
 Let's take, for example, Pool A, which sets the Commission Rate to 10%, the Max Commission to 100%,
-and the Change Rate to 1% every 30 minutes. The following statements are true:
+and the Change Rate to 1% every 300 blocks (which equates to approximately 30 minutes). The
+following statements are true:
 
 - The pool commission can be increased by 1% every 30 minutes. Bigger increases are not allowed.
   Increases of less than or equal to 1% are not allowed sooner than 30 minutes since the last
   commission update.
 - The Max Commission can only be decreased from 100%. Once decreased, it can be decreased again but
   it cannot be increased.
-- The Change Rate's maximum increase can only be decreased from 1%. Once decreased, it can be decreased again but it
-  cannot be increased.
-- The Change Rate's minimum delay between updates of 30 min can only be increased. Once increased, it can be
-  increased again but it cannot be decreased.
+- The Change Rate's maximum increase can only be decreased from 1%. Once decreased, it can be
+  decreased again but it cannot be increased.
+- The Change Rate's minimum delay between updates of 30 min can only be increased. Once increased,
+  it can be increased again but it cannot be decreased.
 
 ## Pool Lifecycle
 
