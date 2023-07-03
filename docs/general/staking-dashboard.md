@@ -110,7 +110,7 @@ Note that Sections A and B will always be visible while you use the dashboard.
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
   In this case, 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
   not used for staking. Of the non-staking balance, 0.144 KSM are free while
-  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}
+  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :kusama }}
   are reserved for the existential deposit.
 
 - **Section F: The Recent Payouts Panel** shows a bar chart with the rewards paid out to you in the
@@ -208,9 +208,9 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
 
 - **Section A: The Stats Panel** shows the number of active nominators, the minimum number of tokens
   to nominate (currently
-  <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>)
+  {{ polkadot: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }})
   and the minimum active bond (currently
-  <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>).
+  {{ polkadot: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :kusama }}).
   The system keeps 12500 nomination intents and puts them into the
   [bags list](../learn/learn-staking-advanced.md#bags-list). The fact that active nominators are not
   12500 is because there are nominators that have no active validator.
