@@ -15,7 +15,7 @@ fees, slashing, and [staking inefficiencies](learn-staking.md#inflation).
 Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) that
 cannot be controlled by any external account; only the system internal logic can access it.
 
-## Treasury Inflow and Outflows
+## Treasury Inflow and Outflow
 
 Tokens that are deposited into the Treasury (i.e. the inflow) is determined by the following
 mechanisms:
