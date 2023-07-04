@@ -9,11 +9,8 @@ slug: ../learn-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ kusama: **Polkadot OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
-[OpenGov tracks.](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info)** :kusama }}
-
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
-fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
+fees, slashing, [staking inefficiencies](learn-staking.md#inflation).
 
 The Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) not
 accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
