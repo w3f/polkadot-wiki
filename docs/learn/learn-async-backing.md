@@ -3,7 +3,7 @@ id: learn-async
 title: Asynchronous Backing
 sidebar_label: Asynchronous Backing
 description: How Asynchronous Backing improves Polkadot's Scalability.
-keywords: [parachains, slots, backing, parablock]
+keywords: [parachains, slots, backing, parablock, asynchronous backing]
 slug: ../learn-async
 ---
 
