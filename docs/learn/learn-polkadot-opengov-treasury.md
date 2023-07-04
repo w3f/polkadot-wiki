@@ -24,9 +24,10 @@ mechanisms:
   Treasury, while 20% is given to the block producers.
 - **Staking inefficiencies:** the network knows an exogenously determined parameter called ideal
   staking rate. The APY for stakers (nominators & validators) decreases whenever the actual staking
-  rate is not equal to that value. To keep inflation constant at 10%, the system does not print less
-  tokens, rather some share of the overall reward for stakers is diverted to the Treasury (more
-  information here).
+  rate is not equal to the ideal staking rate. To keep inflation constant at 10%, the system does
+  not creates less tokens, rather some share of the overall reward for stakers is diverted to the
+  Treasury (more information
+  [here](https://research.web3.foundation/Polkadot/overview/token-economics)).
 - **Slashes:** whenever validators and nominators are slashed, a share of the slashed tokens are
   diverted to Treasury. This is a rare and unpredictable event.
 - **Transfers:** everyone can send funds to the Treasury directly. This is a rare event and mostly
@@ -34,12 +35,13 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each spending period (24 days on Polkadot and 6 days on Kusama)
-  1% and 0.2% of the available funds are burned, respectively.
-- **Treasury proposals & Bounties:** make up the largest share of outflow tokens to the community
-  and need to be approved by governance. Then, payouts occur at the end of a spending period.
-- **Tips:** smaller (almost insignificant) payouts directly to grantees that can happen within a
-  spending period.
+- **Burned tokens:** at the end of each spending period lasting
+  {{ polkadot: 4 days on Polkadot, 1% :polkadot }}{{ kusama: 6 days on Kusama, 0.2% :kusama }} of
+  the available funds are burned, respectively.
+- **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
+  community and need to be approved by governance. Then, payouts occur at the end of a spending
+  period.
+- **Tips:** smaller payouts directly to grantees that can happen within a spending period.
 
 ## Treasury Tracks
 
