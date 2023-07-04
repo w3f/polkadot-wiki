@@ -11,6 +11,7 @@ module.exports = {
       },
       items: [
         "general/getting-started",
+        "general/polkadot-vision",
         {
           type: "category",
           label: "Stay Safe",
