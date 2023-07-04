@@ -52,6 +52,7 @@ module.exports = {
               label: "Assets",
               items: [
                 "learn/learn-treasury",
+                "learn/learn-polkadot-opengov-treasury",
                 "learn/learn-assets",
                 "learn/learn-guides-assets-create",
                 "learn/learn-teleport",

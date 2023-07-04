@@ -201,7 +201,7 @@ module.exports = {
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
                 "learn/learn-polkadot-opengov",
-                "learn/learn-treasury",
+                "learn/learn-polkadot-opengov-treasury",
                 "learn/learn-consensus",
               ],
             },
@@ -374,6 +374,7 @@ module.exports = {
           },
           items: [
             "learn/learn-governance",
+            "learn/learn-treasury",
             "learn/learn-launch",
             "learn/learn-redenomination",
           ],
