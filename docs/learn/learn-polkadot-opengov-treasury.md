@@ -30,7 +30,7 @@ mechanisms:
   [here](https://research.web3.foundation/Polkadot/overview/token-economics)).
 - **Slashes:** whenever validators and nominators are slashed, a share of the slashed tokens are
   diverted to Treasury. They are typically rare and unpredictable events.
-- **Transfers:** everyone can send funds to the Treasury directly. This is a rare event and mostly
+- **Transfers:** everyone can send funds to the Treasury directly. This is a rare event and typically
   due to grantees reimbursing some of the amount they got allocated for various reasons.
 
 The outflow is determined by the following mechanisms:
