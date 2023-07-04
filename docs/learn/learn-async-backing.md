@@ -47,8 +47,7 @@ It has three overarching goals:
    included initially on the first attempt.
 
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
-time for parachain collators to fit more transactions and ready block candidates for backing and
-inclusion.
+time for parachain collators to fit more transactions and make block candidates ready for the [inclusion pipeline](./learn-parachains-protocol#inclusion-pipeline).
 
 _Notice that blocks can be prepared for longer, meaning more transactions per block. Due to the
 asynchrony, these blocks can be prepared in anticipation of being included later rather than keeping
