@@ -74,7 +74,7 @@ increasingly more scalable and robust.
 ## What was wrong with the previous architecture?
 
 A current limitation to scaling throughput in terms of speed is that parablock validation is tightly
-coupled to the relay chain's progression on a 1-1 basis. Parablocks depend very much on being in
+coupled to the relay chain's progression on a 1-1 basis. Parablocks depend on being in
 sync with the relay chain, which reduces the amount of data that can be put into the block.
 Essentially, it's rushing to be a part of the relay chain due to this synchrony.
 
