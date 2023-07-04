@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-description: Get started with Polkadot.
+description: Get started with Polkadot and Web3.
 keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
@@ -98,39 +98,10 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-vote-councillor">
-      <img class="guide-image" src="/img/polkadot-guide/Voting.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Vote for Councilors</h5>
-              </div>
-    </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-  <a class="guide-link" href="../docs/learn-treasury#creating-the-proposal">
-    <img class="guide-image" src="/img/polkadot-guide/Proposal.jpg" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Make Proposals</h5>
-            </div>
-  </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-join-council#submit-candidacy">  
+    <a class="guide-link" href="../docs/learn-governance">  
       <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
-                  <h5 class="cards-title">Council Candidacy</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-treasury">  
-      <img class="guide-image" src="/img/polkadot-guide/Treasury.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Treasury</h5>
+                  <h5 class="cards-title">Governance</h5>
               </div>
     </a>
   </td>
@@ -192,8 +163,6 @@ functionalities on Polkadot.
 
   - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
     register an [on-chain identity](../learn/learn-identity.md)
-  - {{ polkadot: __<RPC network="polkadot" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter="humanReadable"/>:__ :polkadot }}
-    vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
   - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
     create a [proxy account](../learn/learn-proxies.md).
 
@@ -269,8 +238,8 @@ long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, 
 to the Polkadot network as a parachain.
 
 Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](../learn/learn-availability.md) checks before being added to
-the finalized chain. As the Relay Chain provides the security guarantees,
+rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
+added to the finalized chain. As the Relay Chain provides the security guarantees,
 [collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
 stays up to date with the many transactions that take place.

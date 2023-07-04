@@ -2,7 +2,7 @@
 id: learn-xcm-pallet
 title: XCM FRAME Pallet Overview
 sidebar_label: XCM Pallet
-description: Learn how the XCM pallet works, and its place in the ecosystem.
+description: Mechanics of the XCM Pallet and its role in Polkadot's Ecosystem.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-pallet
 ---
@@ -89,8 +89,8 @@ While both extrinsics deal with transferring assets, they exhibit fundamentally 
 - **Transferring** or **reserving** an asset implies that **equivalent** assets (i.e, native
   currency, like `DOT` or `KSM`) are withdrawn from _sovereign account_ of the origin chain and
   deposited into the sovereign account on the destination chain. Unlike teleporting an asset, it is
-  not destroyed and re-minted, rather a trusted, third entity is used (i.e., Statemint on Polkadot)
-  to **reserve** the assets, wherein the sovereign account of the destination chain on the reserve
+  not destroyed and re-minted, rather a trusted, third entity is used (i.e., Asset Hub) to
+  **reserve** the assets, wherein the sovereign account of the destination chain on the reserve
   chain obtains ownership of these assets.
 
   It's worth noting that this means that some other mechanism is needed to ensure that the balance

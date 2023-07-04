@@ -82,11 +82,6 @@ instead.
 
 ## Initial Set-up
 
-:::tip
-
-If you wish to use **Docker** to setup your validator, please refer to the
-[last section of this guide](#using-docker).
-
 :::
 
 ### Requirements
@@ -96,11 +91,11 @@ choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is be
 Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
-#### Reference Hardware
+#### Reference Hardware {#standard-hardware}
 
 The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on
 VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services
-(AWS). To be specific, we used `c2d-highcpu-8` VM instance on GCP and `c6id.2xlarge` on AWS. It is
+(AWS). To be specific, we used `n2-standard-8` VM instance on GCP and `c6i.4xlarge` on AWS. It is
 recommended that the hardware used to run the validators at least matches the specs of the reference
 hardware in order to ensure they are able to process all blocks in time. If you use subpar hardware
 you will possibly run into performance issues, get less era points, and potentially even get
@@ -118,7 +113,7 @@ slashed.
     estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In
     general, the latency is more important than the throughput.
 - **Memory**
-  - 16GB DDR4 ECC.
+  - 32 GB DDR4 ECC.
 - **System**
   - Linux Kernel 5.16 or newer.
 - **Network**
@@ -129,66 +124,6 @@ slashed.
 The specs posted above are not a _hard_ requirement to run a validator, but are considered best
 practice. Running a validator is a responsible task; using professional hardware is a must in any
 way.
-
-### Node Prerequisites: Install Rust and Dependencies
-
-Once you choose your cloud service provider and set-up your new server, the first thing you will do
-is install Rust.
-
-If you have never installed Rust, you should do this first.
-
-If you have already installed Rust, run the following command to make sure you are using the latest
-version.
-
-```sh
-rustup update
-```
-
-If not, this command will fetch the latest version of Rust and install it.
-
-```sh
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-```
-
-:::note
-
-If you do not have "curl" installed, run:
-
-```bash
-sudo apt install curl
-```
-
-It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
-RPC interactions. Installation instructions for various operating systems can be found
-[here](https://github.com/vi/websocat#installation).
-
-:::
-
-To configure your shell, run the following command.
-
-```sh
-source $HOME/.cargo/env
-```
-
-Verify your installation.
-
-```sh
-rustc --version
-```
-
-Finally, run this command to install the necessary dependencies for compiling and running the
-Polkadot node software.
-
-```sh
-sudo apt install make clang pkg-config libssl-dev build-essential
-```
-
-Note - if you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the
-following equivalent command INSTEAD of the previous one:
-
-```sh
-brew install cmake pkg-config openssl git llvm
-```
 
 ### Install & Configure Network Time Protocol (NTP) Client
 
@@ -227,9 +162,39 @@ making it on chain.
 
 :::
 
-### Building and Installing the `polkadot` binary
+### Make Sure Landlock is Enabled
 
-#### Optional: Installation via Package Managers
+[Landlock](https://docs.kernel.org/userspace-api/landlock.html) is a Linux security feature used in
+Polkadot:
+
+> Landlock empowers any process, including unprivileged ones, to securely restrict themselves.
+
+To make use of landlock, make sure you are on the reference kernel version or newer. Most Linux
+distributions should already have landlock enabled, but you can check by running the following as
+root:
+
+```sh
+dmesg | grep landlock || journalctl -kg landlock
+```
+
+If it is not enabled, please see the
+[official docs ("Kernel support")](https://docs.kernel.org/userspace-api/landlock.html#kernel-support)
+if you would like to build Linux with landlock enabled.
+
+### Installing the `polkadot` binary
+
+#### Installation from official releases
+
+The official `polkadot` binaries can be downloaded from the
+[Github Releases](https://github.com/paritytech/polkadot/releases). You should download the latest
+available version. You can also download the binary by using the following direct link (replace
+X.Y.Z by the appropriate version):
+
+```sh
+https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot
+```
+
+#### Optional: Installation with Package Managers
 
 The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and
 `RPM-based` distros (i.e. **Fedora**, **CentOS**).
@@ -287,19 +252,91 @@ To start the service, run:
 sudo systemctl start polkadot.service
 ```
 
+#### Optional: Installation with Ansible
+
+To manage Polkadot installation with Ansible, you can use the **Substrate node role** distributed on
+the [Parity chain operations Ansible collection](https://github.com/paritytech/ansible-galaxy/)
+
+#### Optional: Installation with Docker
+
+To run Polkadot on a Docker or an OCI compatible container runtime, you can use the official
+[parity/polkadot docker image](https://hub.docker.com/r/parity/polkadot/tags), available on Docker
+Hub (replace X.Y.Z by the appropriate version):
+
+```sh
+docker.io/parity/polkadot:vX.Y.Z
+```
+
 :::
 
-### Polkadot Binary
+### Building the `polkadot` binary from sources
 
-You will need to build the `polkadot` binary from the
-[paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
-code available in the **v0.9** branch.
+#### Prerequisites: Install Rust and Dependencies
 
-You should generally use the latest **0.9.x** tag. You should either review the output from the "git
-tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list
-of all the potential 0.9 releases. You should replace `VERSION` below with the latest build (i.e.,
-the highest number). You can also find the latest Kusama version on the
-[release](https://github.com/paritytech/polkadot/releases) tab.
+If you have never installed Rust, you should do this first.
+
+If you have already installed Rust, run the following command to make sure you are using the latest
+version.
+
+```sh
+rustup update
+```
+
+If not, this command will fetch the latest version of Rust and install it.
+
+```sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+```
+
+:::note
+
+If you do not have "curl" installed, run:
+
+```bash
+sudo apt install curl
+```
+
+It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
+RPC interactions. Installation instructions for various operating systems can be found
+[here](https://github.com/vi/websocat#installation).
+
+:::
+
+To configure your shell, run the following command.
+
+```sh
+source $HOME/.cargo/env
+```
+
+Verify your installation.
+
+```sh
+rustc --version
+```
+
+Finally, run this command to install the necessary dependencies for compiling and running the
+Polkadot node software.
+
+```sh
+sudo apt install make clang pkg-config libssl-dev build-essential
+```
+
+Note - if you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the
+following equivalent command INSTEAD of the previous one:
+
+```sh
+brew install cmake pkg-config openssl git llvm
+```
+
+### Build the Polkadot Binary from sources
+
+You can build the `polkadot` binary from the
+[paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub.
+
+You should generally use the latest **X.Y.Z** tag. You should either review the output from the "git
+tag" command or view the [Polkadot Github tags](https://github.com/paritytech/polkadot/tags) to see
+a list of all the available release versions. You should replace `VERSION` below with the latest
+build (i.e., the highest number).
 
 :::note
 
@@ -373,7 +410,7 @@ You can begin syncing your node by running the following command if you do not w
 validator mode right away:
 
 ```sh
-./target/production/polkadot
+polkadot
 ```
 
 :::info
@@ -382,7 +419,7 @@ If you want to run a validator on Kusama, you have an option to specify the chai
 specification, this would default to Polkadot.
 
 ```sh
-./target/production/polkadot --chain=kusama
+polkadot --chain=kusama
 ```
 
 :::
@@ -426,7 +463,9 @@ authority set changes in order to arrive at a specific (usually the most recent)
 desired header has been reached and verified, the state can be downloaded and imported. Once this
 process has been completed, the node can proceed with a full sync.
 
-`./target/production/polkadot --sync warp`
+```sh
+polkadot --sync warp
+```
 
 `Warp sync` initially downloads and validates the finality proofs from
 [GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa) and then downloads the state of the
@@ -546,7 +585,7 @@ Once your node is fully synced, stop the process by pressing Ctrl-C. At your ter
 will now start running the node.
 
 ```sh
-./target/production/polkadot --validator --name "name on telemetry"
+polkadot --validator --name "name on telemetry"
 ```
 
 Similarly:
@@ -686,6 +725,23 @@ The Thousand Validators Programme is a joint initiative by Web3 Foundation and P
 to provide support for community validators. If you are interested in applying for the programme,
 you can find more information [on the wiki page](../general/thousand-validators.md).
 
+## Running a validator on a testnet
+
+To verify your validator set up, it is possible to run it against a PoS test network such as Westend
+or Wococo. However, validator slots are intentionally limited on Westend to ensure the stability and
+availability of the testnet for the Polkadot release process. As such it is advised for node
+operators wishing to run testnet validators to join the Wococo network. You can obtain WOOK tokens
+[here](../learn/learn-DOT.md#getting-tokens-on-the-wococo-testnet).
+
+Here is a small comparison of each network characteristics as relevant to validators:
+
+| Network           | Polkadot | Westend    | Wococo      |
+| ----------------- | -------- | ---------- | ----------- |
+| epoch             | 4h       | 1h         | 10m         |
+| era               | 1d       | 6h         | 1h          |
+| token             | DOT      | WND (test) | WOOK (test) |
+| active validators | ~300     | ~20        | 10<x<100    |
+
 ## FAQ
 
 ### Why am I unable to synchronize the chain with 0 peers?
@@ -698,7 +754,7 @@ other peers over the network.
 ### How do I clear all my chain data?
 
 ```sh
-./target/production/polkadot purge-chain
+polkadot purge-chain
 ```
 
 :::info
@@ -840,12 +896,3 @@ instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abu
 explicit permission to do so. This may extend to other cryptocurrency activity.
 
 :::
-
-## Using Docker
-
-If you have Docker installed, you can use it to start your validator node without needing to build
-the binary. You can do this with a simple one line command:
-
-```sh
-$ docker run parity/polkadot:latest --validator --name "name on telemetry"
-```

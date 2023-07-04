@@ -2,7 +2,7 @@
 id: learn-teleport
 title: Teleporting Assets
 sidebar_label: Teleporting Assets
-description: Steps on how to teleport assets across parachains.
+description: Teleport Assets between Parachains and Relay Chain.
 keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---
@@ -19,14 +19,14 @@ multiple chain.
 :::info Walk-through video tutorial about teleporting assets
 
 See [this technical explainer video](https://youtu.be/3tE9ouub5Tg) to learn how to teleport assets
-from Kusama to Statemine. The same procedure applies to teleporting between Polkadot and Statemint,
-or between any other parachain.
+from Kusama to the Asset Hub. The same procedure applies to teleporting between Polkadot and the
+Polkadot Asset Hub, or between any other parachain.
 
 :::
 
 ## How Teleports work
 
-![teleport](../assets/statemint/teleport-asset.png)
+![teleport](../assets/asset-hub/teleport-asset.png)
 
 As you can see from the diagram above, there are only 2 actors within this model: the source and the
 destination. The way in which we transfer assets between the source and the destination are briefly

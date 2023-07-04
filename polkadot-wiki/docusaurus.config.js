@@ -9,6 +9,10 @@ module.exports = {
   baseUrl: "/",
   projectName: "polkadot-wiki",
   organizationName: "w3f",
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
@@ -67,9 +71,7 @@ module.exports = {
         redirects: [
           {
             to: "/",
-
             from: ["/en/latest", "/en/"],
-
           },
           {
             to: '/docs/learn-xcm',
@@ -81,27 +83,27 @@ module.exports = {
           },
           {
             to: '/docs/learn-account-advanced',
-            from: ['/docs/learn-account-transfer']
+            from: ['/docs/learn-account-transfer', '/docs/ens']
           },
           {
             to: '/docs/learn-cryptography',
-            from: ['/docs/learn-keys']
+            from: ['/docs/learn-keys', '/docs/learn-randomness']
           },
           {
             to: '/docs/learn-staking-advanced',
-            from: ['/docs/learn-simple-payouts']
+            from: ['/docs/learn-simple-payouts', '/docs/learn-staking-miner']
           },
           {
             to: '/docs/learn-account-generation',
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/learn-opengov',
-            from: ['/docs/learn-gov2']
+            to: '/docs/learn-polkadot-opengov',
+            from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
           {
-            to: '/docs/wallets',
-            from: ['/docs/build-wallets']
+            to: '/docs/wallets-and-extensions',
+            from: ['/docs/build-wallets', '/docs/wallets']
           },
           {
             to: '/docs/learn-system-chains',
@@ -117,11 +119,7 @@ module.exports = {
           },
           {
             to: '/docs/maintain-guides-how-to-validate-polkadot',
-            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup','/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
-          },
-          {
-            to: '/docs/learn-account-advanced',
-            from: ['/docs/ens']
+            from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup', '/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
           },
           {
             to: '/docs/ledger',
@@ -140,20 +138,36 @@ module.exports = {
             from: ['/docs/learn-staking-faq']
           },
           {
-            to: '/docs/learn-staking-advanced',
-            from: ['/docs/learn-staking-miner']
-          },
-          {
-            to: '/docs/learn-assets-guides',
-            from: ['/docs/learn-statemint']
+            to: '/docs/learn-guides-assets-create',
+            from: ['/docs/learn-statemint', '/docs/learn-assets-guides']
           },
           {
             to: '/docs/learn-comparisons-kusama',
             from: ['/docs/learn-kusama-vs-polkadot']
           },
           {
-            to: '/docs/learn-cryptography',
-            from: ['/docs/learn-randomness']
+            to: '/docs/build-guide',
+            from: ['/docs/build-build-with-polkadot']
+          },
+          {
+            to: '/docs/learn-parachains-protocol',
+            from: ['/docs/learn-availability']
+          },
+          {
+            to: '/docs/maintain-guides-polkadot-opengov',
+            from: ['/docs/maintain-guides-opengov']
+          },
+          {
+            to: '/docs/learn-guides-staking',
+            from: ['/docs/learn-staking-guides']
+          },
+          {
+            to: '/docs/learn-guides-identity',
+            from: ['/docs/learn-identity-guides']
+          },
+          {
+            to: '/docs/learn-guides-vault',
+            from: ['/docs/learn-vault-guides']
           }
         ],
         createRedirects: function (existingPath) {
@@ -193,12 +207,12 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/getting-started",
-          label: "Get Started",
+          to: "/docs/general-index",
+          label: "General",
           position: "right",
         },
         {
-          to: "docs/learn-launch",
+          to: "docs/learn-index",
           label: "Learn",
           position: "right",
         },
@@ -252,14 +266,14 @@ module.exports = {
     },
     docsSideNavCollapsible: true,
     /* Banner / Announcement bar */
-    // announcementBar: {
-    //   id: "banner",
-    //   content:
-    //     'Join Polkadot @ Consensus 2023. Meet the largest multichain ecosystem in Web3. <a href="https://polkadot.network/ecosystem/events/consensus-2023/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=consensus%202023&utm_content=notification" target="_blank" rel="noopener nofollow noreferrer">Learn more 👉</a>',
-    //   backgroundColor: '#e6007a',
-    //   textColor: 'white',
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: "banner",
+      content:
+        'sub0 is back! Lisbon, Portugal, Sep 19-20. <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
+      backgroundColor: '#e6007a',
+      textColor: 'white',
+      isCloseable: true,
+    },
     image: 'img/og-polkadot.png'
   },
 };

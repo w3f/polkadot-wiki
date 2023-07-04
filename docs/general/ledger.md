@@ -1,8 +1,8 @@
 ---
 id: ledger
-title: Using the Polkadot Ledger Application
+title: Using the Polkadot & Kusama Ledger Applications
 sidebar_label: Ledger
-description: How to use the Polkadot application on Ledger.
+description: Use the Polkadot Ledger Application.
 keywords: [ledger, staking, polkadot app]
 slug: ../ledger
 ---
@@ -67,7 +67,7 @@ If you do use a Nano S with the XL version you will not be able to:
 
 - Install any other Ledger application on your device
 - Add Polkadot accounts to the Ledger Live App, but you will be able to add them to
-  [**treasury-funded wallets**](./wallets.md#community-wallets) who support ledger devices or to the
+  [**treasury-funded wallets**](./wallets-and-extensions.md) who support ledger devices or to the
   [**browser extension**](./polkadotjs.md#polkadot-js-extension) and the
   [**Polkadot-JS UI**](./polkadotjs-ui.md).
 
@@ -104,7 +104,7 @@ derived accounts and derivation paths.
 
 :::
 
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets.md). :kusama }}
+{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
 
 ## Using on Polkadot-JS Apps
 

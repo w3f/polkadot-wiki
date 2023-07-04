@@ -2,7 +2,7 @@
 id: glossary
 title: Glossary
 sidebar_label: Glossary
-description: Common terms and concepts you may come across in the Polkadot ecosystem.
+description: Common Terms and Concepts in the Polkadot Ecosystem.
 keywords: [glossary, questions, definitions]
 slug: ../glossary
 ---
@@ -18,6 +18,10 @@ potentially receive staking rewards in return for doing so.
 ## Alexander
 
 The fourth (now defunct) proof of concept (PoC-4) [testnet](#testnet) for Polkadot.
+
+## Asset Hub
+
+A system parachain used for asset management.
 
 ## Attestation
 
@@ -419,10 +423,11 @@ This is a message that is broadcast by a validator to verify to the network that
 online, even if they haven't published a block this epoch. This is sometimes referred to as
 "ImOnline".
 
-## OpenGov
+## Polkadot OpenGov
 
-Previously known as Governance v2 (Gov2) during early development, [OpenGov](../learn/learn-opengov)
-serves as the current governance protocol for Kusama and will eventually be deployed on Polkadot.
+Previously known as Governance v2 (Gov2) during early development,
+[Polkadot OpenGov](../learn/learn-polkadot-opengov) serves as the current governance protocol for
+both Kusama and Polkadot.
 
 ## Origin
 
@@ -661,16 +666,13 @@ valid block (and thus obtain a block reward). Validators and nominators stake th
 A function that describes how the state of a blockchain can be transformed. For example, it may
 describe how tokens can be transferred from one account to another.
 
-## Statemint
-
-A system parachain used for asset management. The Kusama version is called Statemine; the Westend
-version is called Westmint.
-
 ## Substrate
 
 A modular framework for building blockchains.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using Substrate. Chains
-built with Substrate will be easy to connect as parachains.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
+[Substrate](https://substrate.io/). Chains built with Substrate will be easy to connect as
+parachains. For developers, see the
+[Substrate GitHub repository](https://github.com/paritytech/substrate).
 
 ## System Parachains
 
@@ -700,9 +702,10 @@ The process of replacing sensitive data with non-sensitive data.
 ## Tracks
 
 Each [Origin](#origin) is associated with a single referendum class and each class is associated
-with a [Track](../maintain/maintain-guides-opengov#origins-and-tracks). The Track outlines the
-lifecycle for the proposal and is independent from other class's tracks. Having independent tracks
-allows the network to tailor the dynamics of referenda based upon their implied privilege level.
+with a [Track](../maintain/maintain-guides-polkadot-opengov#origins-and-tracks). The Track outlines
+the lifecycle for the proposal and is independent from other class's tracks. Having independent
+tracks allows the network to tailor the dynamics of referenda based upon their implied privilege
+level.
 
 ## Tranche
 

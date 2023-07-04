@@ -1,205 +1,155 @@
 import React, { useEffect, useState } from 'react';
-import { ApiPromise, WsProvider } from "@polkadot/api";
-import { PolkadotAuctions, KusamaAuctions, FutureBlock } from './utilities/auctionVariables';
+import { ApolloClient, ApolloLink, HttpLink, InMemoryCache } from '@apollo/client/core';
+import { AUCTIONS, supportedNetworks } from './utilities/auctionVariables';
 
-let API = undefined;
-let ChainState =  {
-	Header: undefined,
+let ChainState = {
 	BlockNumber: undefined,
-	BlockDate: undefined,
-	AuctionStatus: undefined,
-	AuctionIndex: undefined,
 }
+
 let Options = [];
 
 // Component for displaying auction data
-function AuctionSchedule() {
+function AuctionSchedule({ network }) {
 	const [auctions, setAuctions] = useState("Loading Auctions...");
-
 	useEffect(async () => {
-		const title = document.title;
-		if (title === "Parachain Slot Auctions · Polkadot Wiki") {
-			const chain = "Polkadot";
-			const wsProvider = new WsProvider("wss://rpc.polkadot.io");
-			await LoadOptions(PolkadotAuctions, wsProvider);
-			await SetCurrentBlockData();
-			[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, PolkadotAuctions, ChainState.BlockNumber);
-			await LoadBlockCacheThenUpdate(chain, PolkadotAuctions, setAuctions, { target: { value: ChainState.AuctionIndex } });
-		}
-		else if (title === "Parachain Slot Auctions · Guide") {
-			const chain = "Kusama";
-			const wsProvider = new WsProvider("wss://kusama-rpc.polkadot.io");
-			await LoadOptions(KusamaAuctions, wsProvider);
-			await SetCurrentBlockData();
-			[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, KusamaAuctions, ChainState.BlockNumber);
-			await LoadBlockCacheThenUpdate(chain, KusamaAuctions, setAuctions, { target: { value: ChainState.AuctionIndex } });
-		}
-		else {
-			console.log("Unknown wiki/guide type");
+		// Set http link for indexer, as well as the explorer based on network
+		const networkInfo = setHttpLinkAndExplorer(network);
+		// The indexer utilizes a GraphQL Api
+		const client = new ApolloClient({
+			cache: new InMemoryCache(),
+			link: ApolloLink.from([networkInfo.httpLink]),
+		});
+		const res = await client.query({
+			query: AUCTIONS
+		}).catch(e => handleAndRenderError(e, setAuctions));
+
+		if (res !== undefined) {
+			let height = res.data.squidStatus.height;
+			let squidAuctions = res.data.auctions;
+			// If the network has no auctions to report
+			if (squidAuctions.length == 0) {
+				setAuctions(<div>No auctions found on this network.</div>)
+			} else {
+				ChainState.BlockNumber = height;
+				// Populate options from latest to oldest auction
+				await LoadOptions(squidAuctions);
+				// Get the initial index for the latest auction
+				let id = squidAuctions.length - 1;
+				// Render component with the auctions, starting from the latest
+				Render(networkInfo.explorer, squidAuctions, setAuctions, id);
+			}
 		}
 	}, []);
 
 	// Render
 	if (auctions !== undefined) {
 		return auctions;
-	} else {
+	}
+	else {
 		return (<div>Loading auction data...</div>)
 	}
 }
 
-// Set current chain block data
-async function SetCurrentBlockData() {
-	ChainState.Header = await API.rpc.chain.getHeader();
-	ChainState.BlockNumber = ChainState.Header.number.toPrimitive();
-	const timestamp = (await API.query.timestamp.now()).toPrimitive();
-	ChainState.BlockDate = new Date(timestamp)
+// This is meant to handle the case where there is an error fetching data from the indexer API
+// The error is logged in the console.
+function handleAndRenderError(e, setAuctions) {
+	console.log("There was a problem fetching from with your query: ", e);
+	setAuctions(
+		<div>There was a problem with the query used to fetch auction data.
+			If this issue persists, please submit an issue at the
+			<a href="https://github.com/w3f/polkadot-wiki/" target="_blank"> Polkadot Wiki repository on Github</a>
+		</div>)
+}
+
+// Sets initial network info for the component based on the network supplied
+function setHttpLinkAndExplorer(network) {
+	switch (network) {
+		case supportedNetworks.POLKADOT:
+			return {
+				httpLink: new HttpLink({
+					uri: "https://squid.subsquid.io/polkadot-wiki-squid/v/v1/graphql",
+				}),
+				explorer: "https://polkadot.subscan.io/block/"
+			};
+		case supportedNetworks.KUSAMA:
+			return {
+				httpLink: new HttpLink({
+					uri: "https://squid.subsquid.io/kusama-guide-squid/v/v1/graphql",
+				}),
+				explorer: "https://kusama.subscan.io/block/"
+			};
+	}
 }
 
 // Loads drop-down selections
-async function LoadOptions(auctions, wsProvider) {
-	for (let i = 0; i < auctions.length; i++) {
-		const option = <option value={i} key={i}>{`Auction #${auctions[i].index + 1}`}</option>
+async function LoadOptions(auctions) {
+	auctions.map((a) => parseInt(a.id)).reverse().forEach((id) => {
+		const option = <option value={id} key={id}>{`Auction #${id}`}</option>
 		Options.push(option);
-	}
-	API = await ApiPromise.create({ provider: wsProvider });
+	})
 }
 
-// Renders default value prior to initializing on-chain retrieval
-async function LoadBlockCacheThenUpdate(chain, defaultAuctions, setAuctions, e) {
-	const index = e.target.value;
-	const auctions = Render(chain, defaultAuctions, setAuctions, index);
-	await GetChainData(chain, auctions, setAuctions, index)
-}
-
-// Connect to a chain, retrieve required values, re-render
-async function GetChainData(chain, auctions, setAuctions, index) {
-	const selection = auctions[index];
-	const selectedBlocks = {
-		startDate: [selection.startBlock, selection.startHash],
-		endPeriodDate: [selection.endPeriodBlock, selection.endPeriodHash],
-		biddingEndsDate: [selection.biddingEndsBlock, selection.biddingEndsHash],
-		onboardStartDate: [selection.onboardStartBlock, selection.onboardStartHash],
-		onboardEndDate: [selection.onboardEndBlock, selection.onboardEndHash]
-	}
-
-	for (const [key, value] of Object.entries(selectedBlocks)) {
-		// Estimate block date for future blocks
-		if (value[1] === FutureBlock) {
-			auctions[index][key] = EstimateBlockDate(ChainState.BlockDate, ChainState.BlockNumber, value[0]);
-		} else {
-			auctions[index][key] = new Date(auctions[index][key]).toDateString();
-		}
-	}
-
-	Render(chain, auctions, setAuctions, index);
-}
-
-// Estimate a future blocks date based on 6 second block times
-function EstimateBlockDate(date, currentBlock, estimatedBlock) {
-	const blockDifference = estimatedBlock - currentBlock;
-	const seconds = blockDifference * 6;
-	const dateCopy = new Date(date.valueOf())
-	dateCopy.setSeconds(dateCopy.getSeconds() + seconds);
-	return dateCopy.toDateString();
-}
-
-// Calculate the current or next upcoming auction based on the current block
-function GetCurrentOrNextAuction(chain, auctions, currentBlock) {
-	let index = 0;
-	let status = "";
-	for (let i = 0; i < auctions.length; i++) {
-		if (currentBlock === null) {
-			status = "Current block is still loading...";
-			return [index, status];
-		}
-		if (auctions[i].biddingEndsBlock > currentBlock) {
-			if (auctions[i].startBlock > currentBlock) {
-				status = `Auction #${auctions[i].index + 1} on ${chain} will start on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below.`;
-			} else {
-				status = `Auction #${auctions[i].index + 1} is in progress on ${chain}, which started on ${auctions[i].startDate} and ends on ${auctions[i].biddingEndsDate}.
-				For the full schedule of the auctions on ${chain}, use the dropdown below:`;
-			}
-			index = i;
-			return [index, status];
-		}
-	}
-	status = `There are currently no pending or ongoing auctions.  Auction #${auctions.length} was the last active auction.`
-	return [auctions.length - 1, status];
+// Re-renders component based on the selected information - used for the <select> element
+function switchAuctions(chain, auctions, setAuctions, e) {
+	Render(chain, auctions, setAuctions, parseInt(e.target.value) - 1)
 }
 
 // Update JSX
-function Render(chain, auctions, setAuctions, index) {
-	let explorerUrl = undefined;
-	if (chain === "Polkadot") {
-		explorerUrl = "https://polkadot.subscan.io/block/";
-	} else if (chain === "Kusama") {
-		explorerUrl = "https://kusama.subscan.io/block/";
-	}
-
+function Render(explorerUrl, auctions, setAuctions, index) {
 	// Current block information
 	let currentBlockNumber = ChainState.BlockNumber;
-	let currentBlockDate = ChainState.BlockDate;
-	if (currentBlockNumber !== undefined) {
-		currentBlockDate = currentBlockDate.toDateString();
-	} else {
-		currentBlockNumber = null;
-		currentBlockDate = "Connecting...";
-	}
-	
+
+	const onboardStartDate = new Date(parseInt(auctions[index].onboardStartBlock.timestamp)).toDateString();
+	const onboardEndDate = new Date(parseInt(auctions[index].onboardEndBlock.timestamp)).toDateString();
+	const biddingStartsDate = new Date(parseInt(auctions[index].biddingStartBlock.timestamp)).toDateString();
+	const biddingEndsDate = new Date(parseInt(auctions[index].biddingEndsBlock.timestamp)).toDateString();
+
 	// On-boarding range
 	let onboarding = <div>
-		{`${auctions[index].onboardStartDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardStartBlock}`}>
-			Block #{auctions[index].onboardStartBlock}
+		{`${onboardStartDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardStartBlock.height}`}>
+			Block #{auctions[index].onboardStartBlock.height}
 		</a>
 		{` to `}
-		{`${auctions[index].onboardEndDate} - `}
-		<a href={`${explorerUrl}${auctions[index].onboardEndBlock}`}>
-			Block #{auctions[index].onboardEndBlock}
+		{`${onboardEndDate} - `}
+		<a href={`${explorerUrl}${auctions[index].onboardEndBlock.height}`}>
+			Block #{auctions[index].onboardEndBlock.height}
 		</a>
 	</div>
-	// If onboarding is too far in the future to calculate
-	if (auctions[index]["onboardStartBlock"] === null || auctions[index]["onboardEndBlock"] === null) {
-		onboarding = <div>
-			On-boarding cannot yet be determined for this future event.
-		</div>
-	}
 
-	// Set dates for current auction in status
-	[ChainState.AuctionIndex, ChainState.AuctionStatus] = GetCurrentOrNextAuction(chain, auctions, ChainState.BlockNumber);
+	const auctionNumber = parseInt(index) + 1;
 
+	let auctionsUrl = explorerUrl.startsWith("https://polkadot") ? "https://polkadot.subscan.io/auction/" : "https://kusama.subscan.io/auction/"
 	const content = <div>
-		<div>{ChainState.AuctionStatus}</div>
+		<div><a target="_blank" href={`${auctionsUrl}${auctionNumber}`}>Auction #{auctionNumber} is {auctions[index].status}</a></div>
 		<br />
-		<select 
-			id = "AuctionSelector"
-			defaultValue = {ChainState.AuctionIndex}
-			onChange = {(e) => LoadBlockCacheThenUpdate(chain, auctions, setAuctions, e)}
-			style = {{ border: '2px solid #e6007a', height: '40px' }}
+		<select
+			id="AuctionSelector"
+			onChange={(e) => switchAuctions(explorerUrl, auctions, setAuctions, e)}
+			style={{ border: '2px solid #e6007a', height: '40px' }}
 		>
 			{Options.map((option) => (option))}
 		</select>
 		<hr />
 		<b>Auction Starts:</b>
 		<br />
-		{`${auctions[index].startDate} - `}
-		<a href={`${explorerUrl}${auctions[index].startBlock}`}>
-			Block #{auctions[index].startBlock}
+		{`${new Date(parseInt(auctions[index].startBlock.timestamp)).toDateString()} - `}
+		<a href={`${explorerUrl}${auctions[index].startBlock.height}`}>
+			Block #{auctions[index].startBlock.height}
 		</a>
 		<hr />
 		<b>Bidding Starts:</b>
 		<br />
-		{`${auctions[index].endPeriodDate} - `}
-		<a href={`${explorerUrl}${auctions[index].endPeriodBlock}`}>
-			Block #{auctions[index].endPeriodBlock}
+		{`${biddingStartsDate} - `}
+		<a href={`${explorerUrl}${auctions[index].biddingStartBlock.height}`}>
+			Block #{auctions[index].biddingStartBlock.height}
 		</a>
 		<hr />
 		<b>Bidding Ends:</b>
 		<br />
-		{`${auctions[index].biddingEndsDate} - `}
-		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock}`}>
-			Block #{auctions[index].biddingEndsBlock}
+		{`${biddingEndsDate} - `}
+		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock.height}`}>
+			Block #{auctions[index].biddingEndsBlock.height}
 		</a>
 		<hr />
 		<b>Lease Period:</b>
@@ -212,7 +162,6 @@ function Render(chain, auctions, setAuctions, index) {
 			The current block is <a href={`${explorerUrl}${currentBlockNumber}`}> Block #{currentBlockNumber}</a>.
 		</p>
 	</div>
-
 	setAuctions(content);
 	return auctions;
 }

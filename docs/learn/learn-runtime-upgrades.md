@@ -2,7 +2,7 @@
 id: learn-runtime-upgrades
 title: Runtime Upgrades
 sidebar_label: Runtime Upgrades
-description: Learn about how runtime upgrades work on Polkadot.
+description: Forkless Runtime Upgrades on Polkadot.
 keywords: [runtime, upgrades, releases, forkless]
 slug: ../learn-runtime-upgrades
 ---
@@ -98,7 +98,7 @@ Infrastructure services include but are not limited to the following:
 - API services
 - Node-as-a-Service (NaaS)
 - General infrastructure management (e.g. block explorers, custodians)
-- [Wallets](./../general/wallets.md)
+- [Wallets](./wallets)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
 to upgrade their clients within a specific time frame, for example, if a release includes breaking

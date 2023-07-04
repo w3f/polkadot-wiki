@@ -2,7 +2,7 @@
 id: learn-comparisons-cosmos
 title: Polkadot vs. Cosmos
 sidebar_label: Cosmos
-description: Learn about the differences between Polkadot and Cosmos.
+description: Comparison between Polkadot and Cosmos.
 keywords: [cosmos, polkadot, interoperability, interoperability hub]
 slug: ../learn-comparisons-cosmos
 ---
@@ -203,5 +203,7 @@ logic and security processes across chains so that they can interact knowing tha
 interlocutors execute within the same security context.
 
 The Cosmos network uses a bridge-hub model to connect chains with independent security guarantees,
-meaning that inter-chain communication is still bounded by the trust that the receiving chain has in
-the sending chain.
+meaning that when data is sent from one chain to another (inter-chain communication), the receiving
+chain must trust the sending chain. Thus, each blockchain in the Cosmos network has its independent
+security mechanisms. They're independently secured and do not rely on the security of other
+blockchains or the hub.

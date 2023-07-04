@@ -2,7 +2,7 @@
 id: learn-cryptography
 title: Cryptography on Polkadot
 sidebar_label: Cryptography
-description: An overview of the cryptographic functions used in Polkadot.
+description: Cryptographic Functions used in Polkadot.
 keywords:
   [cryptography, hashing, keypair, signing, keys, randomness, verifiable random function, VDF]
 slug: ../learn-cryptography
@@ -128,8 +128,7 @@ signatures. A recent patent expiration on it has made it the preferred choice fo
 
 The choice of using Schnorr signatures over using ECDSA is not so cut and dried. Jeff Burdges (a
 Web3 researcher) provides additional details on the decision in this
-[research post](https://research.web3.foundation/en/latest/polkadot/keys/1-accounts.html) on the
-topic:
+[research post](https://research.web3.foundation/Polkadot/security/keys) on the topic:
 
 :::info Choosing Schnorr signatures over ECDSA signatures
 
@@ -289,7 +288,7 @@ unnecessary friction for users of the blockchains opting for this method.
 - [Key discovery attack on BIP32-Ed25519](https://web.archive.org/web/20210513183118/https://forum.w3f.community/t/key-recovery-attack-on-bip32-ed25519/44) -
   Archive of forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition
   to the sr25519 variant.
-- [Account signatures and keys in Polkadot](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
+- [Account signatures and keys in Polkadot](https://research.web3.foundation/Polkadot/security/keys) -
   Research post by Web3 researcher Jeff Burdges.
 - [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 - [Polkadot's research on blockchain randomness and sortition](https://w3f-research.readthedocs.io/en/latest/polkadot/block-production/Babe.html) -

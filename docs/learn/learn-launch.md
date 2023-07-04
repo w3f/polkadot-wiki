@@ -2,7 +2,7 @@
 id: learn-launch
 title: Polkadot Launch Phases
 sidebar_label: Polkadot Launch Phases
-description: An explanation of Polkadot's launch process and its individual phases.
+description: Polkadot's Launch Process and its Individual Phases.
 keyword: [launch, phases, polkadot 2.0, DOT, claim, token sale, redenomination]
 slug: ../learn-launch
 ---
@@ -86,4 +86,4 @@ answered, as of now, some big areas of research will be in:
 - Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
   tiers of Relay Chains can be nested? How will validators work together to validate blocks on
   various Relay Chains? How does [XCM](learn-xcm.md) work in the nested setup? How is
-  [AnV](learn-availability.md) going to work there?
+  [AnV](./learn-parachains-protocol.md#anv-protocol) going to work there?

@@ -2,7 +2,7 @@
 id: learn-staking-advanced
 title: Advanced Staking Concepts
 sidebar_label: Advanced Staking Concepts
-description: Advanced staking information
+description: Advanced Concepts about Staking on Polkadot.
 
 keywords:
   [
@@ -471,7 +471,7 @@ reward would no longer be claimable.
 
 In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout
 before 28 eras have passed. See
-[this page](./learn-staking-guides.md#claiming-rewards-with-the-polkadot-js-ui) for more information
+[this page](./learn-guides-staking.md#claiming-rewards-with-the-polkadot-js-ui) for more information
 about how to claim rewards using the Polkadot-JS UI.
 
 :::
@@ -576,8 +576,7 @@ validators/nominators if 50% of all KSM / DOT are staked. Any deviation from the
 negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
 
 For those who are interested in knowing more about the design of the inflation model for the
-network, please see
-[here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).
+network, please see [here](https://research.web3.foundation/Polkadot/overview/token-economics).
 
 ## Staking Miner
 

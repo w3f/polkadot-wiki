@@ -2,7 +2,7 @@
 id: learn-xcvm
 title: XCM Virtual Machine (XCVM) & XCM Executor
 sidebar_label: XCM Virtual Machine (XCVM)
-description: Learn about the design of the XCM executor, and how the XCM Virtual machine works.
+description: Design of the XCM Executor and Mechanics of the XCM Virtual Machine.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcvm
 ---
@@ -29,7 +29,7 @@ of XCVM, it's entirely possible to create another implementation if desired.
 A cross consensus message (XCM) is just a program that runs on the `XCVM`: in other words, one or
 more XCM instructions that are executed by an XCVM implementation, such as the `xcm-executor`. To
 learn more about the XCVM and the XCM format, see the latest
-[blog post on XCM v3](https://medium.com/polkadot-network/xcm-part-iii-execution-and-error-management-ceb8155dd166)
+[blog post on XCM](https://medium.com/polkadot-network/xcm-part-iii-execution-and-error-management-ceb8155dd166)
 by Dr. Gavin Wood.
 
 XCM instructions might change a register, the state of the consensus system, or both. Depending on
@@ -159,9 +159,9 @@ location - whether it's a 32 byte account, a Substrate pallet, or a pluralistic 
 
 ### MultiLocation Scenario Example
 
-In this scenario, assume an XCM is to be sent from our parachain to Statemint (`Parachain 1000`).
-This XCM references an account on Statemint. As a general path, the `MultiLocation` would look like
-this:
+In this scenario, assume an XCM is to be sent from our parachain to the Asset Hub
+(`Parachain 1000`). This XCM references an account on the Asset Hub. As a general path, the
+`MultiLocation` would look like this:
 
 ```
 ../Parachain(1000)/AccountId32(<some_account_id>)
@@ -181,7 +181,7 @@ MultiLocation {
   chain. This is also illustrated by the `../` of the "file path" representation.
 
 - The second field, `interior`, defines where to go after the relay chain. In this case, from the
-  relay chain this message will go to Statemint (`Parachain 1000`), then reference the account
+  relay chain this message will go to the Asset Hub (`Parachain 1000`), then reference the account
   (`some_account_id`) located within.
 
 Keep in mind that this location is specific to this interaction. The identities may need to change

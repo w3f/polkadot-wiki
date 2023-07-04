@@ -2,15 +2,15 @@
 id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
-description: Details about Polkadot's on-chain Treasury.
+description: Polkadot's On-chain Treasury.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ kusama: **OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
-[OpenGov tracks.](../maintain/maintain-guides-opengov.md#origins-and-tracks-info)** :kusama }}
+{{ kusama: **Polkadot OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
+[OpenGov tracks.](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info)** :kusama }}
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
@@ -83,7 +83,7 @@ The Treasury is funded from different sources:
 
 {{ kusama: **Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
 Check the instructions on
-[how to submit a proposal through OpenGov](../maintain/maintain-guides-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).** :kusama }}
+[how to submit a proposal through Polkadot OpenGov](../maintain/maintain-guides-polkadot-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).** :kusama }}
 
 {{ kusama: **Your proposal should address a problem, outline a goal, give a detailed account of how you will
 reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
@@ -117,8 +117,8 @@ takes place on the following platforms:
 
 - Many community members participate in discussion in the
   {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-  {{ kusama: [Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) and the :kusama }}
-  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io). :polkadot }}
+  {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
+  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
   {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
 - The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
   platforms automatically read proposals from the chain, turning them into discussion threads and
@@ -301,8 +301,8 @@ requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
 motion. You can contact the Council by joining the
-{{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
-{{ kusama: Kusama Direction [channel](https://matrix.to/#/#kusama:matrix.parity.io) :kusama }} in
+{{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}
+{{ kusama: Kusama Direction [channel](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} in
 Element or joining our
 {{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot }}
 {{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and publishing a

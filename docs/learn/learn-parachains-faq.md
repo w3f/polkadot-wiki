@@ -2,7 +2,7 @@
 id: learn-parachains-faq
 title: Parachains FAQ
 sidebar_label: Parachains FAQ
-description: Parachains FAQ
+description: Parachains FAQ.
 keywords: [parachains, application-specific, sharding, faq]
 slug: ../learn-parachains-faq
 ---
@@ -48,9 +48,10 @@ blockchains that can be supported by {{ polkadot: Polkadot :polkadot }}
 
 The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
-[availability and validity](learn-availability.md) will make sure security is on-par. However,
-should there be a big outage of a popular cloud provider or another network connectivity
-catastrophe, it is reasonable to expect that the number of validators per chain will drop.
+[availability and validity](./learn-parachains-protocol.md#anv-protocol) will make sure security is
+on-par. However, should there be a big outage of a popular cloud provider or another network
+connectivity catastrophe, it is reasonable to expect that the number of validators per chain will
+drop.
 
 Depending on how many validators went offline, the outcome differs.
 

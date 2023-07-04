@@ -2,7 +2,7 @@
 id: learn-bridges
 title: Bridges
 sidebar_label: Bridges
-description: Learn about bridges and common bridge examples.
+description: Bridges and Examples of Common Bridges.
 keywords: [bridges, cross-chain, bridge methods]
 slug: ../learn-bridges
 ---

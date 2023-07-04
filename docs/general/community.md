@@ -2,8 +2,7 @@
 id: community
 title: Community
 sidebar_label: Community
-description:
-  Stay in-touch and keep up-to-date by interacting and engaging in the Polkadot community.
+description: Connect and stay updated with the Polkadot Community.
 keywords: [community, events, socials, chat, blogs, ecosystem]
 slug: ../community
 ---
@@ -26,12 +25,18 @@ contact and anyone doing so is likely trying to scam you.
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html)
+- [Polkadot's Latest Research (news)](https://research.web3.foundation/news)
 
 ### Events
 
 [Polkadot Meetup Platform](https://www.meetup.com/pro/polkadot) - Information on hosting meetups,
 applying for funding, and materials for running it.
+
+[Community Events](https://web3foundation.notion.site/Community-Events-Introduction-05199fe6556b41f48a3390b1868c9ae7) -
+Information on events funded by the [Treasury](https://polkadot.polkassembly.io/bounty/17) and
+organized by the Polkadot community (candidates or ambassadors) focused on promoting Polkadot,
+Kusama, and related technologies. The events are educational and informative, and their goal is to
+create an impact in the community.
 
 ## Matrix Chats
 
@@ -47,12 +52,12 @@ community members. The application we use most often to interact with the Matrix
 rooms below. Note that this is a newer feature and may not be supported by your Matrix client. If
 you face any issues, join the rooms individually.
 
-- [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) - General room
-  for talk about Polkadot.
+- [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) - General room for
+  talk about Polkadot.
 - [Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) - Room
   for validators learning about setting up a node.
-- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) - Governance, and a
-  place to discuss the future of Polkadot.
+- [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) - Governance, and a place
+  to discuss the future of Polkadot.
 - [Polkadot Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is happening
   in the Polkadot ecosystem, published every weekday except holidays
 
@@ -64,19 +69,21 @@ you face any issues, join the rooms individually.
 
 - [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:web3.foundation) - General room for
   talk about Kusama.
-- [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders) - Room for
+- [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:parity.io) - Room for
   validators learning about setting up a node.
-- [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) - Governance, and a place to
+- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) - Governance, and a place to
   discuss the future of Kusama.
 
 ### Technical
 
-- [**Substrate Developers Public Space**](https://matrix.to/#/#substrate-builders-space:matrix.parity.io) -
-  Curated collection of rooms around all things Substrate. Contains the two below and many others.
+- [Substrate Developers Chat](https://matrix.to/#/#substratedevs:matrix.org) - A Matrix chat room
+  for Substrate development.
+- [Substrate Developers Telegram Chat](https://t.me/substratedevs) - A Telegram chat room for
+  Substrate development, bridged to Matrix Substrate Developers Chat linked above.
 - [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
   for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:matrix.parity.io) - A room to discuss
-  developing Substrate smart contracts using Parity Ink!
+- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:parity.io) - A room to discuss developing
+  Substrate smart contracts using Parity Ink!
 
 ## Socials
 

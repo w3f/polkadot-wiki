@@ -7,11 +7,12 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
-:::caution The contents in this guide are subject to change
+:::caution Polkadot OpenGov is Live! This document will soon be archived.
 
-OpenGov: Polkadot’s next generation of decentralized governance is now live on Kusama network. Check
-[OpenGov page](../learn/learn-opengov.md) for a detailed explanation on the upcoming changes to the
-Polkadot governance.
+Polkadot OpenGov: Polkadot’s next generation of decentralized governance is live on Polkadot and
+Kusama. Check the [Polkadot OpenGov page](../learn/learn-polkadot-opengov.md) for a detailed
+explanation of the latest features of Polkadot governance. The democracy pallet (Gov1) will soon be
+deprecated.
 
 :::
 
@@ -30,10 +31,10 @@ details on the governance system please see [here](../learn/learn-governance.md)
 This guide will instruct token holders how to propose and vote on public referenda using the
 Democracy module. Below are a few links to stay informed and directly engage with the community.
 
-- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) - a place to
-  discuss governance and the future of Polkadot.
-- [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) - a place to discuss governance
-  and the future of Kusama.
+- [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) - a place to discuss
+  governance and the future of Polkadot.
+- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) - a place to discuss
+  governance and the future of Kusama.
 - [Polkadot](https://polkadot.polkassembly.io) and [Kusama](https://kusama.polkassembly.io)
   Polkassembly - for current referenda, latest proposals, motions, treasury proposals, tips,
   bounties, and more.

@@ -1,7 +1,7 @@
 name: Audit Wiki Links
 on:
   schedule:
-    - cron: '0 0 1 * * ' # Once a month
+    - cron: '0 0 * * * ' # At the end of everyday
   workflow_dispatch: # Or manually from GitHub UI
 
 jobs:

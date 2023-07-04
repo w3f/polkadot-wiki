@@ -2,7 +2,7 @@
 id: learn-nft
 title: NFTs
 sidebar_label: Introduction to NFTs
-description: An explanation of the NFT landscape in the Polkadot ecosystem.
+description: The NFT Landscape of the Polkadot Ecosystem.
 keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft
 ---
@@ -60,16 +60,14 @@ Ethereum - profile pictures, generative "look once and then put away" art, [ENS]
 [proof of attendance badges](https://poap.xyz/) (which have since moved to the xDAI chain to save on
 gas fees).
 
-#### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
+### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
 ![samurai nft](../assets/nft/samurai.png)
 
 For the sake of comparison, we can refer to these as NFTs 1.0: static NFTs that are almost
 exclusively image-based collectibles of varying rarity.
 
----
-
-## NFTs 2.0: NFTs in Polkadot & Kusama
+## NFTs in Polkadot & Kusama
 
 This is where {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s technology shines and
 where NFTs 2.0 come into play. By allowing
@@ -77,146 +75,12 @@ where NFTs 2.0 come into play. By allowing
 optimize for complex NFT use cases without tradeoffs that would make interacting with the system
 prohibitively inefficient and expensive in other environments.
 
-The following NFT solutions exist and are under development in the Polkadot and/or Kusama
-ecosystems:
+:::info
 
-### Unique network
-
-[Unique network](https://unique.network/), an NFT-specific blockchain offering innovations such as
-sponsored transactions, bundling fungible tokens with non-fungibles, and splitting NFTs into
-fungible tokens for partial ownership.
-
-Unique Network have launched two NFT projects to date: Substrapunks as part of
-[Hackusama](https://hackusama.devpost.com/), and Chelobricks as a promotion during
-[Polkadot Decoded](https://decoded.polkadot.network/).
-
-Unique Network focuses on B2B use cases, aiming to be an infrastructure provider for others to build
-on, rather than entering the NFT space themselves as an end-product.
-
-Unique Network aims to make their marketplace technology open-source and whitelabel-friendly. In
-theory, it should be trivial to set up a new marketplace for your project using Unique's technology.
-Unique network aims to be a parachain on Polkadot, and Quartz is their Kusama counterpart.
-
-### RMRK
-
-[RMRK](https://rmrk.app) is a set of NFT 2.0 standards developed in three distinct code flavors:
-
-1. ["Colored coins"](https://en.bitcoin.it/wiki/Colored_Coins) approach, as on Bitcoin, originally
-   developed as a "hack" on the Kusama chain. This is now deprecated, and it is recommended
-   implementers use any of the other options.
-2. Solidity contracts, compatible with any EVM blockchain in and outside the Polkadot ecosystem.
-   Documented [here](https://evm.rmrk.app)
-3. Rust code (Substrate pallets), compatible with any Substrate chain. Code is available
-   [here](https://github.com/rmrk-team/rmrk-substrate).
-
-Additionally, two more flavors are in development:
-
-1. [Astar](https://astar.network/) are developing the ink! version of RMRK:
-   [code here](https://github.com/rmrk-team/rmrk-ink).
-2. [Gear Technologies](https://www.gear-tech.io/) are developing the Gear implementation:
-   [code and docs here](https://wiki.gear-tech.io/docs/examples/rmrk/).
-
-The RMRK NFT 2.0 standards are a set of "NFT legos", primitives that, when put together, allow a
-builder to compose an NFT system of arbitrary complexity without smart contracts.
-
-#### NFT Legos
-
-1. NFTs can own other NFTs, NFTs can equip other NFTs for visual change
-2. NFTs can have multiple resources (different outputs based on context and resource priority)
-3. NFTs can have on-chain emotes (reactions) for price discovery and social mechanics
-4. NFTs have conditional rendering (e.g. show Mona Lisa as blushing if she got 50 kissy 😘 emoji)
-5. NFTs can be governed by the community via fungible shareholder-tokens (fractionalization of NFTs)
-
-#### NFT from [Kanaria](https://kanaria.rmrk.app)
-
-![kanaria.png](../assets/nft/kanaria.png)
-
-:::note Multi-resource NFTs
-
-A multi-resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can also equip
-other NFTs from within its "inventory".
+See [this page](./learn-nft-projects.md) for more information about specific NFT project on Polkadot
+and Kusama.
 
 :::
-
-Two marketplaces for RMRK-based NFTs exist with hundreds of projects already launched:
-
-- [Singular](https://singular.rmrk.app), the official marketplace
-
-For a complete introduction into RMRK, see [this presentation](https://url.rmrk.app/wasmconf) or
-read [the non-technical docs](https://docs.rmrk.app).
-
-### Efinity
-
-Spearheaded by [Enjin](https://enjin.io), the authors of Ethereum's ERC1155 standard and makers of
-the Enjin wallet and Unity plugin, which allows easy implementation of NFTs into 3D games, Efinity
-is an NFT bridging chain coming to Kusama and Polkadot in 2022.
-
-They plan to build a _paratoken_ which would be a standard for token migration across different
-parachains in the Polkadot ecosystem, but also into and out of Ethereum and other EVM systems.
-
-### Astar
-
-[Astar Network](https://astar.network) and its sister network
-[Shiden Network](https://shiden.astar.network) are the smart contract infrastructure in the Polkadot
-Ecosystem. Astar Ecosystem ("Astar") supports NFTs developed with EVM smart contracts and WASM smart
-contracts.
-
-Astar has all toolings available that every EVM NFT developer knows. The availability of those
-toolings makes the onboarding to Astar networks very attractive to any developer looking to explore
-the Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides
-supporting all EVM toolings, Astar also bootstrapped the WASM smart contract environment for NFT
-developers writing smart contracts with [ink!](https://use.ink) based on
-[PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals).
-
-The main advantage of having a multi-virtual machine environment for NFT developers is that it will
-give more possibilities to the builders for the use case they are developing. With the support of
-WASM smart contracts, developers can develop solutions like [RMRK](./learn-nft#rmrk) with smart
-contracts.
-
-### Moonbeam
-
-[Moonbeam](https://moonbeam.network) and its Kusama counterpart Moonriver are full EVM deployments
-with Ethereum RPC endpoints.
-
-This means that the entire toolkit offered to other EVM chains (stacks like Hardhat, Remix, Truffle,
-Metamask, etc.) are available to Moonriver / Moonbeam users and developers, giving it a noticeable
-head start in attracting existing userbases.
-
-Several dozen high profile teams are launching their products (or re-launching) on Moonriver /
-Moonbeam, however, it is essential to note that Moonbeam is an EVM chain and will therefore suffer
-from the same limitations as any other EVM chain in regards to customization and feature-richness of
-NFTs.
-
-A notable advantage, however, is that Moonriver / Moonbeam is still a Substrate chain, meaning
-integration of custom pallets into the runtime is still possible, making NFT specific optimizations
-at the chain runtime level a reliable way to keep EVM compatibility of tools while at the same time
-optimizing storage and interactions for rich NFTs.
-
-### Basilisk
-
-[Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
-has a full-featured NFT platform based on the
-[Uniques pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques). One of the key
-features of Basilisk is that it allows minting NFTs with a royalty fee. This royalty fee is
-distributed to the original creator of the NFT via the runtime pallet. Additionally
-[Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)
-that allows creating a buy order for a specific NFT.
-
-These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
-
-![nft-basilisk](../assets/nft/nft-basilisk.png)
-
-### Statemint
-
-Statemint is a generic assets parachain which provides functionality for deploying and transferring
-assets — both Fungible and Non-Fungible Tokens (NFTs). It is a system parachain on Polkadot (not to
-be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is a
-parachain on Kusama). Statemint currently hosts
-[Uniques pallet](./learn-nft-pallets.md/#uniques-pallet) and its functionalities. The
-[NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities is available for
-testing on Westmint, which is a system parachain on Polkadot's testnet Westmint.
-
----
 
 ## Bridging
 
@@ -232,7 +96,7 @@ and Efinity (Paratoken), the following efforts are underway:
   [RMRK hackathon](https://rmrk.devpost.com) for porting RMRK NFTs into simplified IOUs on EVM
   chains
 
-### References
+## References
 
 - [1]: [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
 - [2]:

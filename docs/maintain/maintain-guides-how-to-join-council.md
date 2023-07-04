@@ -65,4 +65,4 @@ the row "Members".
 
 Now you are able to participate on the council by making motions or voting proposals. To join in on
 the active discussions, join the
-[Polkadot Direction channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io).
+[Polkadot Direction channel](https://matrix.to/#/#Polkadot-Direction:parity.io).

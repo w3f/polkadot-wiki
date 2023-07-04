@@ -3,7 +3,7 @@ id: build-hrmp-channels
 title: Opening HRMP Channels
 sidebar_label: Opening HRMP Channels
 description: Steps on how to open HRMP channels between parachains.
-keywords: [HRMP, parachain, Statemint, proposal]
+keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
 slug: ../build-hrmp-channels
 ---
 
@@ -56,30 +56,37 @@ place to share the reasoning behind your proposal: make sure to log in with the 
 possible) before publishing yours, and if you can do this also make sure the address has an on-chain
 identity.
 
-Your proposal should contain the following sections to be considered complete for the community to
-review and ultimately vote:
+### Example: Opening an HRMP Channel with the AssetHub
 
-1.  A request on what the proposal aims to do (opening an HRMP channel with Statemint);
+The following highlights the steps required to submit a proposal for opening an HRMP channel with
+the AssetHub. Your submission should contain the following sections to be considered complete for
+the community to review and ultimately vote on:
+
+1.  A request on what the proposal aims to do (opening an HRMP channel with the AssetHub);
 2.  The use cases this channel will support for your chain;
 3.  Technical details of the proposal, including proposal parameters and technical details of this
-    call (On Kusama, most proposals were designed as a batchAll calls) :
+    call (On Kusama, most proposals were designed as a batchAll calls):
 
-    - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP
-      channel with your chain;
-    - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
+    - A `forceTransfer` of 20 DOT from the Treasury to AssetHub sovereign account.
+    - A `forceOpenhrmpchannel` from AssetHub (1,000) to ParaID.
+    - A `forceOpenhrmpChannel` from ParaID to AssetHub (1,000).
 
     Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
     the first transaction should not be necessary (these guidelines will be updated accordingly).
 
-4.  The XCM message to Statemint, which can be decoded on the network;
+4.  The XCM message to the Asset Hub, which can be decoded on the network;
 5.  The call data to verify on
     [Polkadot JS Apps Decode](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics/decode)
     tab;
-6.  The proposal hash for the external motion submission.
+6.  The preimage hash to include in the proposal's submission. Note that if the proposer is planning
+    to
+    [submit a referendum on the Whitelisted Caller Track](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track),
+    the preimage hash needs to be submitted to and whitelisted by the
+    [Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship).
 
 Below is an example of how teams followed this process on Kusama, as a way to:
 
-- Proposal to open HRMP channel between Bifrost and Statemine: the motion can be found
+- Proposal to open HRMP channel between Bifrost and the Asset Hub: the motion can be found
   [here](https://kusama.polkassembly.io/motion/418).
 
 ## Preimage submission on democracy tab (Polkadot JS Apps)
@@ -93,18 +100,6 @@ Polkadot JS Apps, by using the "Submit Preimage" button:
 
 On the pop up window, compose the preimage in the discussion post: making sure the proposal hash is
 the same as in the post.
-
-## Submission of the proposal as an external motion to Council
-
-A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in
-order to be able to submit an external motion: they will use the proposal hash for your preimage and
-submit it to Council vote. The same contextual information you used in the discussion post will be
-used for the motion post on Polkassembly.
-
-Once the Council approves your proposal, this will move to the external queue - and soon after to be
-voted by the community in the Referenda queue: make sure to discuss the proposal with your parachain
-community and encourage them to vote. You can follow all announcements on these submissions in the
-[Polkadot Direction channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io).
 
 ## Vote by the community
 

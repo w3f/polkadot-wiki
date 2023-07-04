@@ -2,7 +2,7 @@
 id: learn-auction
 title: Parachain Slot Auctions
 sidebar_label: Parachain Slot Auctions
-description: Learn about slot auctions.
+description: Polkadot's Parachain Slot Auction Mechanism.
 keywords: [auction, slot auctions, parachain, bidding]
 slug: ../learn-auction
 ---
@@ -30,13 +30,8 @@ details.
 
 ## Auction Schedule
 
-:::info
-
-The auction schedule and the details of ongoing actions are available on the
-{{ polkadot: [Parachains info](https://parachains.info/auctions/polkadot) :polkadot }}{{ kusama: [Parachains info](https://parachains.info/auctions/kusama) :kusama }}
-website.
-
-:::
+{{ polkadot: <AuctionSchedule network="polkadot" /> :polkadot }}
+{{ kusama: <AuctionSchedule network="kusama" /> :kusama }}
 
 ## Mechanics of a Candle Auction
 

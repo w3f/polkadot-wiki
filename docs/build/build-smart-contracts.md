@@ -12,6 +12,9 @@ blockchain, does not support smart contracts natively. However, parachains which
 blockchains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the
 functionality to support smart contracts.
 
+The two primary supported smart contract environments are [ink!](#ink) and EVM. There are multiple
+[parachains that support both environments](#parachains).
+
 ## Difference between developing a smart contract and a parachain
 
 ### Layer of Abstraction
@@ -164,7 +167,7 @@ smart contract example? Ask us to add it to this page!**
 - [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by
   [Patract Labs](https://github.com/patractlabs).
 
-## Smart Contract Environments are still Maturing
+## Smart Contract Environments
 
 It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} and the development is only now stabilizing. We are actively producing
@@ -182,6 +185,7 @@ should also keep up to date with the following links:
 - [Astar](https://astar.network/)
 - [Acala](https://acala.network/)
 - [Phala](https://phala.network)
+- [Darwinia](https://darwinia.network/)
 
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
 created and maintained list of different smart contract platforms building on
@@ -189,6 +193,9 @@ created and maintained list of different smart contract platforms building on
 [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
+
+- ink!: **Unsupported**
+- EVM (Solidity): [**Supported**](https://moonbeam.network/networks/moonbeam/)
 
 [Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
 parachain and will support Ethereum compatible smart contracts. Since Moonbeam uses
@@ -206,6 +213,9 @@ Try deploying a smart contract to Moonbeam by following their
 
 #### Astar
 
+- ink!/Wasm: [**Supported**](https://docs.astar.network/docs/build/#wasm-smart-contracts)
+- EVM (Solidity): [ **Supported**](https://docs.astar.network/docs/build/#evm-smart-contracts)
+
 [Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart
 contracts and offers developers true interoperability. True interoperability with cross-consensus
 messaging [XCM](https://wiki.polkadot.network/docs/learn-xcm) and cross-virtual machine
@@ -222,6 +232,9 @@ Try deploying an Ethereum or ink! smart contract by following their
 
 #### Acala
 
+- ink!: **Unsupported**
+- EVM (Solidity): [**Supported**](https://wiki.acala.network/build/development-guide)
+
 [Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
 delivering a set of protocols to serve as the DeFi hub on Polkadot.
 [Karura](https://acala.network/karura), Acala's canary network is live as a parachain on Kusama.
@@ -233,6 +246,10 @@ Try deploying an Acala EVM smart contract by following their
 
 #### Phala
 
+- ink!: **Unsupported**
+- EVM (Solidity): **Unsupported**
+- See: [**Phat Contracts**](https://docs.phala.network/developers/phat-contract)
+
 [Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
 strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala
 will enable the use of confidential smart contracts on Polkadot.
@@ -241,6 +258,22 @@ Kusama.
 
 Try deploying a confidential smart contract by following their
 [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
+
+#### Darwinia
+
+- ink!: **Unsupported**
+- EVM (Solidity) Support:
+  [**Supported**](https://docs.darwinia.network/libraries-4a4ce70014ba43b7977aeb16ce9634ab)
+
+[Darwinia](https://darwinia.network/) is a cross-chain programmable network that provides two
+essential solutions: `Darwinia Chain` and `Darwinia Msgport`. `Darwinia Chain` is a smart contract
+platform compatible with the EVM and shares the robust security of Polkadot. On the other hand,
+`Darwinia Msgport` acts as a crucial infrastructure enabling Dapps to seamlessly communicate and
+exchange messages across different blockchain networks, facilitating efficient interchain
+operations.
+
+Try deploying a smart contract to Darwinia by following their
+[documentation](https://docs.darwinia.network/dapp-development-4b021f21c52d474aa08a8109eb55bbd1).
 
 ## Keep In Touch
 
@@ -256,5 +289,3 @@ talk about them. Developers may be interested in joining the
 [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
 [social channels](../general/community.md).
-
-All the best.
