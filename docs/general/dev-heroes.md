@@ -28,15 +28,20 @@ The program provides:
 - Resources and support to boost the growth and evolution of developers.
 - Chance to showcase and enhance skills.
 - Establish yourself as a valued contributor to the Polkadot ecosystem and pull someone else up on
-  stage at the same time.
+  stage at the same time. Each one, teach one!
 
 ## Rookies and Heroes
+
+A rookie is a beginner or first-timer developer. Someone who has previous experience in programming,
+but does not necessarily know about the Polkadot technology. Rookies will need to learn about the
+Polkadot protocol, the Polkadot technology stack, Rust and Substrate, etc. so that they will be able
+to deliver the tasks required to be a Hero.
 
 A rookie becomes a hero by continuously advocating for the technology used in the Polkadot ecosystem
 as well as spreading awareness and educating a broader audience about the technology.
 
-The technology includes but is not limited to independent Substrate chains and ink! development, and
-Polkadot-related tooling.
+The technology includes but is not limited to independent [Substrate](./glossary.md#substrate)
+chains and [ink! development](../build/build-smart-contracts.md#ink), and Polkadot-related tooling.
 
 Depending on what you enjoy doing, you can become a hero by doing some of the following things:
 
@@ -46,8 +51,9 @@ Depending on what you enjoy doing, you can become a hero by doing some of the fo
   [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/?ref=cms.polkadot.network)
   or on the [Polkadot Forum](https://forum.polkadot.network/?ref=cms.polkadot.network).
 
-- **Contribute to the Polkadot stack**: Have a look at the open source technology stack list and
-  contribute with a pull request, an issue, or find and fix bugs.
+- **Contribute to the Polkadot stack**: Have a look at the
+  [open source technology stack list](../build/build-open-source.md) and contribute with a pull
+  request, an issue, or find and fix bugs.
 
 - **Create content**: Write a blog post, record a video tutorial, and write a Twitter thread. Share
   about your latest coding success, something you learned and are excited about.
