@@ -83,7 +83,7 @@ include more data, but also "retry" later to be included in the relay chain.
 
 ## Learn More
 
-This topic is evolving and being implemented at the moment, keep up to date using the following
+This topic is evolving and being implemented, for more information see the following
 resources:
 
 - [Polkadot Roadmap Roundup](https://polkadot.network/blog/polkadot-roadmap-roundup) - Article by
