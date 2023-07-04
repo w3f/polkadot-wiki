@@ -11,6 +11,33 @@ Asynchronous backing is a mechanism that introduces a _pipeline_ for parachain *
 communication. This pipeline will allow collators to include more data in parachain blocks while
 reducing latency (from 12 to 6 seconds for parablock validation).
 
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
+      gitGraph
+        commit id:"R1"
+        branch Parachain_1 order: 2
+        commit id:"P1(C)"
+        commit id:"P1(B)"
+        branch Parachain_2 order: 3
+        checkout "Relay Chain"
+        merge Parachain_1 tag:"Parablock Backed" type:HIGHLIGHT
+        commit id:"R2"
+        checkout Parachain_2
+        commit id:"P2(C)"
+        commit id:"P2(B)"
+        checkout "Relay Chain"
+        merge Parachain_2 tag:"Parablock Backed" type:HIGHLIGHT
+        checkout Parachain_1
+        commit id:"P1(I)"
+        checkout "Relay Chain"
+        merge Parachain_1 tag:"Parablock Included" id:"R3"
+        commit id:"R4"
+        checkout Parachain_2
+        commit id:"P2(I)"
+        checkout "Relay Chain"
+        merge Parachain_2 tag:"Parablock Included" id:"R5"
+```
+
 It has three overarching goals:
 
 1. Decrease parablock validation time to **6 seconds** from **12 seconds**
