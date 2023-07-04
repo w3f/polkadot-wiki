@@ -386,7 +386,7 @@ Voluntary locking in Polkadot OpenGov is
 :::
 
 Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction in
-OpenGov will create a new lock (this will use the `convictionVoting` pallet), while any existing
+OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any existing
 lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
 Delegations under Governance v1 will need to be re-issued under OpenGov.
 
