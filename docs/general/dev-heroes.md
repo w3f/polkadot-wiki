@@ -33,7 +33,7 @@ The program provides:
 ## Rookies and Heroes
 
 A rookie is a beginner or first-timer developer. Someone who has previous experience in programming
-but does not necessarily know about the Polkadot technology.
+but needs to gain in-depth knowledge about the Polkadot technology.
 
 The technology includes but is not limited to independent [Substrate](./glossary.md#substrate)
 chains and [ink! development](../build/build-smart-contracts.md#ink), and Polkadot-related tooling.
