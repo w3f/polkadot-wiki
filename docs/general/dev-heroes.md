@@ -32,16 +32,16 @@ The program provides:
 
 ## Rookies and Heroes
 
-A rookie is a beginner or first-timer developer. Someone who has previous experience in programming,
-but does not necessarily know about the Polkadot technology. Rookies will need to learn about the
-Polkadot protocol, the Polkadot technology stack, Rust and Substrate, etc. so that they will be able
-to deliver the tasks required to be a Hero.
-
-A rookie becomes a hero by continuously advocating for the technology used in the Polkadot ecosystem
-as well as spreading awareness and educating a broader audience about the technology.
+A rookie is a beginner or first-timer developer. Someone who has previous experience in programming
+but does not necessarily know about the Polkadot technology.
 
 The technology includes but is not limited to independent [Substrate](./glossary.md#substrate)
 chains and [ink! development](../build/build-smart-contracts.md#ink), and Polkadot-related tooling.
+Rookies will need to learn these concepts and tools so that they can deliver the tasks required to
+be a Hero.
+
+A rookie becomes a hero by continuously advocating for the technology used in the Polkadot ecosystem
+as well as spreading awareness and educating a broader audience about the technology.
 
 Depending on what you enjoy doing, you can become a hero by doing some of the following things:
 
