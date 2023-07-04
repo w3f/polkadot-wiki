@@ -669,8 +669,10 @@ describe how tokens can be transferred from one account to another.
 ## Substrate
 
 A modular framework for building blockchains.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using Substrate. Chains
-built with Substrate will be easy to connect as parachains.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
+[Substrate](https://substrate.io/). Chains built with Substrate will be easy to connect as
+parachains. For developers, see the
+[Substrate GitHub repository](https://github.com/paritytech/substrate).
 
 ## System Parachains
 

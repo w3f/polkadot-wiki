@@ -91,6 +91,7 @@ module.exports = {
             "general/builders-program",
             "general/doc-thousand-validators",
             "general/doc-thousand-contributors",
+            "general/dev-heroes",
           ],
         },
         "general/research",
