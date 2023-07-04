@@ -51,6 +51,7 @@ module.exports = {
           type: "category",
               label: "Assets",
               items: [
+                "learn/learn-treasury",
                 "learn/learn-polkadot-opengov-treasury",
                 "learn/learn-assets",
                 "general/kusama/kusama-statemine",
