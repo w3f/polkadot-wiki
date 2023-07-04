@@ -2,7 +2,7 @@
 id: learn-treasury
 title: Governance v1 Treasury
 sidebar_label: Gov1 Treasury
-description: The Polkadot's On-chain Treasury.
+description: The Polkadot's On-chain Treasury during Gov1.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
