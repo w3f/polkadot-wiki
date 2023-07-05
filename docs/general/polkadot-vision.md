@@ -30,13 +30,14 @@ concepts and initiatives:
 - **Secure interoperability.** Any L1 chain attached to a Polkadot core will benefit from Polkadot's
   native interoperability, and will thus be able to communicate and exchange value and information
   with other parachains.
-- **Truly unstoppable infrastructure.** This is achieved through on-chain treasury funds that can be
+- **Truly unstoppable infrastructure.** This is achieved by keeping the network decentralized
+  without compromising scalability and throughput, and through on-chain treasury funds that can be
   accessed through governance referendum. Those funds guarantee constant sponsorship for events,
   initiatives, educational material, software development, etc., without any central entity being
   able to interfere.
 - **Fast deployment of L1 chains.** This is achieved through the modular and flexible
   [Polkadot SDK Substrate](./glossary.md#substrate).
-- **Fostering next-gen of web3 core developers.** This is achieved through different initiatives
+- **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
   such as:
   - [The Polkadot Blockchain Academy](https://polkadot.network/development/academy/)
   - [Substrate Builders Program](./builders-program.md)
@@ -61,8 +62,8 @@ what your project is about and what you actually have built. This allows you to 
 and achieve more than what was originally planned.
 
 The quote below by [Marcel Proust](https://en.wikipedia.org/wiki/Marcel_Proust) must remind us that
-sometimes a perspective shift is crucial in understanding the world, and perhaps it is more
-important than seeing more of the world.
+sometimes a perspective shift is crucial in _understanding_ the world, and perhaps it is more
+important than _seeing more_ of the world.
 
 _The only true voyage of discovery, the only fountain of Eternal Youth, would be not to visit
 strange lands but to possess other eyes._
@@ -91,7 +92,7 @@ intermediaries or centralized entities being able to stop the network's progress
 The design and realization of Polkadot 1.0 allowed its creators to truly realize the importance of
 blockspace.
 
-A blockchain is a way to store data. The storage unit is the blocks, and once a block is finalized
+A blockchain is a way to store data. The storage unit is the block, and once a block is finalized
 onto the chain, it is practically impossible to modify the data within that block. In addition to
 being tamper-proof, public permissionless blockchains like Polkadot store data that are visible to
 everybody (i.e. public), and anybody can become a network participant (i.e. permissionless).
