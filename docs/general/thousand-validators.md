@@ -34,10 +34,92 @@ descending order.
 The backend nominates as many validators as it reasonably can in such a manner to allow each nominee
 an opportunity to be elected into the active set.
 
-### Weights
+## Frequently asked questions
 
-Each candidate is assessed by on-chain parameters to produce a weighted score. In this section,
-we'll briefly review the weights of each metric and how they contribute to the total score.
+* *How do I apply?* See [here](#how-to-apply)
+* *How long does it take for the application to process?* Usually a few weeks, sometimes a little longer. You can follow the candidate files [here](https://github.com/w3f/1k-validators-be/tree/master/candidates) and see if your info shows up. Also you will get invited in a dedicated matrix room after being accepted.
+* *I'm in the program and am getting nominated but don't get active?* The system tries to optimize the nominations to give as much validators as possible a chance for getting active. Sometimes the nomination is not heigh enough to get you elected by the polkadot election mechanism. You have more chance of getting active when you already have some nominations on youw own.
+* *My scoring doesn't update*, *I haven't been elected for a while*? Sometimes its best to give things some time to resolve, if they don't  and something really seems stuck/broken leave a message in the dedicated matrix room or make an issue on github.
+* *The 1000 validators website is not up to date?* See [these resources](#resources) for more up to date information.
+
+## Resources   
+
+| Resource      |  Github source  | Info    |
+| --------------| --------------- | ------- |
+| [Main 1kv site](https://thousand-validators.kusama.network/#/leaderboard) | [github](https://github.com/w3f/1k-validators-be) | Main site and 1kv backend, source for endpoints but overview not so up to date due to various updates |
+| SubVT telegram bot [polkadot](https://t.me/subvt_polkadot_bot) / [kusama](https://t.me/subvt_kusama_bot) | [github](https://github.com/helikon-labs/subvt-backend/tree/development/subvt-telegram-bot) | Excellent telegram bot with overviews and alerts for various polkadot and kusama related events, including 1kv events |
+| SubVT [ios and android app](https://subvt.io/) | [github](https://github.com/helikon-labs/subvt-web) | SubVT app version for mobile phones |
+| [Validator earnings overview](https://richvalidator.me/) | [github](https://github.com/helikon-labs) | Overview of earning of validators in a time period |
+| [Math Crypto's Insights](https://insights.math-crypto.com/) | [github](https://github.com/MathCryptoDoc) | 1KV oriented scoring overview of Kusama and Polkadot, similarities with polkachu's overviews but much more up to date |
+| One-t [polkadot](https://matrix.to/#/%23polkadot-one-t-bot:matrix.org) / [kusama](https://matrix.to/#/%23kusama-one-t-bot:matrix.org) | [github](https://github.com/turboflakes/one-t) | A performance report bot for the Polkadot and Kusama network with special focus on the One Thousand validator programme |
+| One-t [parachains overview](https://apps.turboflakes.io/#/one-t/kusama/parachains/overview) | [github](https://github.com/turboflakes/one-t) | One-T's parachain overview |
+| [Metaspan's 1kv overview](https://metaspan.io/kusama/candidate) | [github](https://github.com/metaspan/metaspan.io) | Up to date overview including the newly introduced endpoints, see [here](https://metaspan.io/) for available endpoints |
+| [Decentradot's 1kv overview](https://1kv.decentradot.com/) | [github](https://github.com/ccris02/1KV_API) | Up to date overview including the newly introduced endpoints |
+| [Hirish 1kv overview](https://1k.hirish.net/polkadot) | [github?](https://github.com/) | 1KV overview |
+
+## Setting up a Validator
+
+Please see the guide on how to
+[set up a validator](../maintain/maintain-guides-how-to-validate-polkadot.md) as well as additional
+information on how to [secure a validator](../maintain/maintain-guides-secure-validator.md).
+
+## How to Apply
+
+{{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
+Attaining a rank of 25 usually takes around two months. The leaderboard is available
+[here](https://thousand-validators.kusama.network/#/leaderboard).
+In order to apply to the Polkadot programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
+and fill in the [application form](https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform?ref=polkadot-network). You will hear back from the team shortly. :polkadot }}
+
+{{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
+and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
+
+#### Requirements
+
+- Verified identity (see [here](../learn/learn-identity.md#setting-an-identity) for instructions)
+- Connect to dedicated telemetry (use
+  `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
+- {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
+  (exceptions by approval for good intentions)
+- {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
+- Separate controller and stash (or have a Staking proxy set up)
+- Must be on the latest release
+- {{ polkadot: Maximum one node per applicant :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
+- Validators must operate nodes themselves, they may not be operated by third parties or staking
+  providers.
+
+#### Nominators
+
+The below addresses are the stash / controller pairs for the primary nominators involved in the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators programme. They
+are formatted like "`stash` / `controller`".
+
+{{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw` :polkadot }}
+{{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq` :kusama }}
+
+{{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU` :polkadot }}
+{{ kusama: - `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ` :kusama }}
+
+{{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd` :polkadot }}
+{{ kusama: - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V` :kusama }}
+
+{{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `1324GSzD4bfBYj6ZnJjvMzWCjCJqwdVRNyyzgcncyX8C1VEN` :polkadot }}
+
+A time delay proxy is used as the interaction method for some of these accounts.
+
+{{ kusama: Within the Kusama programme, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
+
+Since approximately early January 2021, the nominators will select an automatic number of validators
+to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
+can be anywhere from a few validators receiving nomination from a single nominator, to the max of
+{{ polkadot: 16 :polkadot }}{{ kusama: 24 :kusama }} nominators on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+
+## Selection
+
+Each candidate is assessed by on-chain parameters to produce a weighted score. It is a changing system in which sometimes new endpoint or scores are introduced. To extract and display these score's there are various overviews build by various kusama/polkadot enthousiasts, which sometimes give a better overview then the original website. Below some of the original weighting:
+
+### Weights
 
 #### Inclusion
 
@@ -121,60 +203,4 @@ of 100 points. Scores are based on votes for referendum
 * Bonded is measured against low and high percentiles of 5 and 85%, respectively.
 * Finally, location is measured against low and high percentiles of 10 and 95%, respectively.
 
-## Setting up a Validator
 
-Please see the guide on how to
-[set up a validator](../maintain/maintain-guides-how-to-validate-polkadot.md) as well as additional
-information on how to [secure a validator](../maintain/maintain-guides-secure-validator.md).
-
-## How to Apply
-
-{{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
-Attaining a rank of 25 usually takes around two months. The leaderboard is available
-[here](https://thousand-validators.kusama.network/#/leaderboard).
-In order to apply to the Polkadot programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
-and fill in the [application form](https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform?ref=polkadot-network). You will hear back from the team shortly. :polkadot }}
-
-{{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leader board, if accepted. :kusama }}
-
-#### Requirements
-
-- Verified identity (see [here](../learn/learn-identity.md#setting-an-identity) for instructions)
-- Connect to dedicated telemetry (use
-  `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
-- {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
-  (exceptions by approval for good intentions)
-- {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
-- Separate controller and stash (or have a Staking proxy set up)
-- Must be on the latest release
-- {{ polkadot: Maximum one node per applicant :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
-- Validators must operate nodes themselves, they may not be operated by third parties or staking
-  providers.
-
-#### Nominators
-
-The below addresses are the stash / controller pairs for the primary nominators involved in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators programme. They
-are formatted like "`stash` / `controller`".
-
-{{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw` :polkadot }}
-{{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq` :kusama }}
-
-{{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU` :polkadot }}
-{{ kusama: - `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ` :kusama }}
-
-{{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd` :polkadot }}
-{{ kusama: - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V` :kusama }}
-
-{{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `1324GSzD4bfBYj6ZnJjvMzWCjCJqwdVRNyyzgcncyX8C1VEN` :polkadot }}
-
-A time delay proxy is used as the interaction method for some of these accounts.
-
-{{ kusama: Within the Kusama programme, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
-
-Since approximately early January 2021, the nominators will select an automatic number of validators
-to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
-can be anywhere from a few validators receiving nomination from a single nominator, to the max of
-{{ polkadot: 16 :polkadot }}{{ kusama: 24 :kusama }} nominators on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
