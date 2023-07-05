@@ -34,29 +34,6 @@ descending order.
 The backend nominates as many validators as it reasonably can in such a manner to allow each nominee
 an opportunity to be elected into the active set.
 
-## Frequently asked questions
-
-* *How do I apply?* See [here](#how-to-apply)
-* *How long does it take for the application to process?* Usually a few weeks, sometimes a little longer. You can follow the candidate files [here](https://github.com/w3f/1k-validators-be/tree/master/candidates) and see if your info shows up. Also you will get invited in a dedicated matrix room after being accepted.
-* *I'm in the program and am getting nominated but don't get active?* The system tries to optimize the nominations to give as much validators as possible a chance for getting active. Sometimes the nomination is not heigh enough to get you elected by the polkadot election mechanism. You have more chance of getting active when you already have some nominations on youw own.
-* *My scoring doesn't update*, *I haven't been elected for a while*? Sometimes its best to give things some time to resolve, if they don't  and something really seems stuck/broken leave a message in the dedicated matrix room or make an issue on github.
-* *The 1000 validators website is not up to date?* See [these resources](#resources) for more up to date information.
-
-## Resources   
-
-| Resource      |  Github source  | Info    |
-| --------------| --------------- | ------- |
-| [Main 1kv site](https://thousand-validators.kusama.network/#/leaderboard) | [github](https://github.com/w3f/1k-validators-be) | Main site and 1kv backend, source for endpoints but overview not so up to date due to various updates |
-| SubVT telegram bot [polkadot](https://t.me/subvt_polkadot_bot) / [kusama](https://t.me/subvt_kusama_bot) | [github](https://github.com/helikon-labs/subvt-backend/tree/development/subvt-telegram-bot) | Excellent telegram bot with overviews and alerts for various polkadot and kusama related events, including 1kv events |
-| SubVT [ios and android app](https://subvt.io/) | [github](https://github.com/helikon-labs/subvt-web) | SubVT app version for mobile phones |
-| [Validator earnings overview](https://richvalidator.me/) | [github](https://github.com/helikon-labs) | Overview of earning of validators in a time period |
-| [Math Crypto's Insights](https://insights.math-crypto.com/) | [github](https://github.com/MathCryptoDoc) | 1KV oriented scoring overview of Kusama and Polkadot, similarities with polkachu's overviews but much more up to date |
-| One-t [polkadot](https://matrix.to/#/%23polkadot-one-t-bot:matrix.org) / [kusama](https://matrix.to/#/%23kusama-one-t-bot:matrix.org) | [github](https://github.com/turboflakes/one-t) | A performance report bot for the Polkadot and Kusama network with special focus on the One Thousand validator programme |
-| One-t [parachains overview](https://apps.turboflakes.io/#/one-t/kusama/parachains/overview) | [github](https://github.com/turboflakes/one-t) | One-T's parachain overview |
-| [Metaspan's 1kv overview](https://metaspan.io/kusama/candidate) | [github](https://github.com/metaspan/metaspan.io) | Up to date overview including the newly introduced endpoints, see [here](https://metaspan.io/) for available endpoints |
-| [Decentradot's 1kv overview](https://1kv.decentradot.com/) | [github](https://github.com/ccris02/1KV_API) | Up to date overview including the newly introduced endpoints |
-| [Hirish 1kv overview](https://1k.hirish.net/polkadot) | [github?](https://github.com/) | 1KV overview |
-
 ## Setting up a Validator
 
 Please see the guide on how to
@@ -117,7 +94,8 @@ can be anywhere from a few validators receiving nomination from a single nominat
 
 ## Selection
 
-Each candidate is assessed by on-chain parameters to produce a weighted score. It is a changing system in which sometimes new endpoint or scores are introduced. To extract and display these score's there are various overviews build by various kusama/polkadot enthousiasts, which sometimes give a better overview then the original website. Below some of the original weighting:
+On-chain parameters assess each candidate to produce a weighted score. It is a changing system in
+which new endpoints or scores are sometimes introduced. Below are some of the original weights.
 
 ### Weights
 
@@ -203,4 +181,36 @@ of 100 points. Scores are based on votes for referendum
 * Bonded is measured against low and high percentiles of 5 and 85%, respectively.
 * Finally, location is measured against low and high percentiles of 10 and 95%, respectively.
 
+## Frequently asked questions
 
+- _How do I apply?_ See [here](#how-to-apply).
+- _How long does it take for the application to process?_ Usually a few weeks. Sometimes a little
+  longer. You can inspect the candidate files
+  [here](https://github.com/w3f/1k-validators-be/tree/master/candidates) and see if your info shows
+  up. Also, you will get invited to a dedicated matrix room after being accepted.
+- _I'm in the program and am getting nominated but don't get active?_ The system optimizes the
+  nominations to maximize the stake on active validators and minimize the stake variance across
+  them. Also keep in mind that getting nominated does not mean all the nominations are with you.
+  Nominators can choose up to 16 validators.
+- _My scoring doesn't update_, _I haven't been elected for a while_? Sometimes it’s best to give
+  things time to resolve; if they don't, leave a message in the dedicated matrix room or open an
+  issue on GitHub.
+- _The 1000 validators website is not up to date?_ See [these resources](#resources) for more
+  up-to-date information.
+
+## Resources
+
+To extract and display the 1KV Program scores there are various tools listed below.
+
+| Resource                                                                                                                                    | Github source                                                                               | Info                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [Main 1KV site](https://thousand-validators.kusama.network/#/leaderboard)                                                                   | [github](https://github.com/w3f/1k-validators-be)                                           | Main site and 1KV backend.                                                                                                     |
+| SubVT telegram bot for [polkadot](https://t.me/subvt_polkadot_bot) and [kusama](https://t.me/subvt_kusama_bot)                              | [github](https://github.com/helikon-labs/subvt-backend/tree/development/subvt-telegram-bot) | Telegram bot with overviews and alerts for various polkadot and kusama related events, including 1KV events.                   |
+| [SubVT ios and android app](https://subvt.io/)                                                                                              | [github](https://github.com/helikon-labs/subvt-web)                                         | SubVT app version for mobile phones.                                                                                           |
+| [Validator earnings overview](https://richvalidator.me/)                                                                                    | [github](https://github.com/helikon-labs)                                                   | Overview of validators' earnings.                                                                                              |
+| [Math Crypto's Insights](https://insights.math-crypto.com/)                                                                                 | [github](https://github.com/MathCryptoDoc)                                                  | 1KV-oriented scoring overview of Kusama and Polkadot.                                                                          |
+| One-T for [polkadot](https://matrix.to/#/%23polkadot-one-t-bot:matrix.org) and [kusama](https://matrix.to/#/%23kusama-one-t-bot:matrix.org) | [github](https://github.com/turboflakes/one-t)                                              | A performance report bot for the Polkadot and Kusama network with special focus on the 1KV programme.                          |
+| [One-T parachains overview](https://apps.turboflakes.io/#/one-t/kusama/parachains/overview)                                                 | [github](https://github.com/turboflakes/one-t)                                              | One-T's parachain overview.                                                                                                    |
+| [Metaspan's 1KV overview](https://metaspan.io/kusama/candidate)                                                                             | [github](https://github.com/metaspan/metaspan.io)                                           | Overview of 1KV programme, including the newly introduced endpoints, see [here](https://metaspan.io/) for available endpoints. |
+| [Decentradot's 1KV overview](https://1kv.decentradot.com/)                                                                                  | [github](https://github.com/ccris02/1KV_API)                                                | Overview of the 1KV programme, including the newly introduced endpoints.                                                       |
+| [Hirish 1KV overview](https://1k.hirish.net/polkadot)                                                                                       | [github?](https://github.com/)                                                              | Overview of the 1KV Programme.                                                                                                 |
