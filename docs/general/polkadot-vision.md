@@ -72,6 +72,39 @@ could become.
 
 ### Decentralization as a Tool not a Goal
 
+Decentralization is a crucial aspect when building a blockchain, but there must be a trade-off
+between having a over-decentralized network
+
 ### Blockspace
+
+The design and realization of Polkadot 1.0 allowed its creators to truly realize the importance of
+blockspace.
+
+A blockchain is essentially a way to store data. The storage unit are the blocks and once a block is
+finalized onto the chain it is practically impossible to modify the data within that block. In
+addition of being tamper-proof, public permissionless blockchains like Polkadot store data that are
+visible to everybody (i.e. public), and anybody can become a network participant (i.e.
+permissionless).
+
+So, the raw material produced by blockchains is blockspace; and how blockspace is organized,
+accessed and used will eventually shape the degree of scalability of the network. There are three
+distinctive blockspace features:
+
+- **security**, intended as how secure the blockspace is. In Proof-of-Stake networks this is
+  directly related to how much stake is locked on validator nodes, how much variance in stake there
+  is between validators (i.e. how easy is to spot and attack single validators), and how many
+  validators there are securing the network (i.e. how easy it is to collude validators and stop the
+  network). Additionally, it is also important to look at how many validators are owned by single
+  operators (this will determine the degree of social centralization of the network), and how many
+  validators run on the same service provider (this will determine the degree of physical
+  centralization of the network).
+- **flexibility**, intended as how flexible the blockspace is, what can be done with it and what
+  type of data can be stored. Data quality plays an important role depending on the type of network.
+  One might avoid having situations in which poor quality data flood blockspace hindering the prompt
+  execution of vital processes.
+- **availability**, intended as how available blockspace is, how difficult it is to access it. It
+  should not be too difficult to get your hands on it, so that any type of business model (not only
+  DeFi) can thrive using it. Ideally, there must be a marketplace driving the blockspace price based
+  on demand, with secondary market options to ensure usage of "second-hand" blockspace.
 
 ## Polkadot 2.0
