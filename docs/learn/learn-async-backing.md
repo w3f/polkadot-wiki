@@ -22,8 +22,8 @@ It has three overarching goals:
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
 time for parachain collators to fit more transactions and ready block candidates for backing and
 inclusion. Because asynchronous relies on the current context of a relay chain block, **contextual
-execution** refers to how a parablock can begin being built earlier through the context of the
-previous block(s).
+execution** refers to how a parablock can begin being built earlier through the context of future
+relay chain block(s).
 
 ## What was wrong with the previous architecture?
 
