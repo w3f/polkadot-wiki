@@ -16,24 +16,23 @@ collaborations and leverage each other strengths.
 
 ## Polkadot 1.0
 
-Polkadot 1.0 is a Layer-0 blockchain that brings to the multi-chain vision the followings innovative
+Polkadot 1.0 is a Layer-0 blockchain that brings to the multi-chain vision the following innovative
 concepts and initiatives:
 
-- **Application specific Layer-1 blockchains (or parachains).** Polkadot is a sharded network where
-  data are processed in parallel within each shard. Differently from Ethereum shards, Polkadot
-  shards can be heterogenous (i.e. they do not need to be the same copy of the original shards).
-  This allows to build L1 chain that are specifically designed around their application and value
-  proposition.
+- **Application-specific Layer-1 blockchains (or parachains).** Polkadot is a sharded network where
+  data are processed in parallel within each shard. Unlike Ethereum shards, Polkadot shards can be
+  heterogenous (i.e. they do not need to be the exact copy of the original shards). This allows to
+  build L1 chains that are specifically designed around their application and value proposition.
 - **Shared security and financial scalability of L1 chains**. Any L1 chain attached to a Polkadot
   core (and any other L2 solution to scale that L1) will benefit from Polkadot shared security
-  model. This means that L1 and L2 chains will be secured by the Polkadot NPoS mechanism, and will
-  not need to worry about proof-of-stake.
+  model. This means that the Polkadot NPoS mechanism will secure L1 and L2 chains without worrying
+  about proof-of-stake.
 - **Secure interoperability.** Any L1 chain attached to a Polkadot core will benefit from Polkadot's
   native interoperability, and will thus be able to communicate and exchange value and information
   with other parachains.
 - **Truly unstoppable infrastructure.** This is achieved through on-chain treasury funds that can be
-  accessed through governance referendum. Those funds gurantee constant sponsorship for events,
-  initiatives, educational material, software development, etc. without any central entity being
+  accessed through governance referendum. Those funds guarantee constant sponsorship for events,
+  initiatives, educational material, software development, etc., without any central entity being
   able to interfere.
 - **Enable fast deployment of parachains.** This is achieved through the modular and flexible
   [Polkadot SDK Substrate](./glossary.md#substrate).
