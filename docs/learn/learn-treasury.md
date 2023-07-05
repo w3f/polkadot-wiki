@@ -1,16 +1,22 @@
 ---
 id: learn-treasury
-title: Treasury
-sidebar_label: Treasury
-description: Polkadot's On-chain Treasury.
+title: Governance v1 Treasury
+sidebar_label: Gov1 Treasury
+description: The Polkadot's On-chain Treasury during Gov1.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ kusama: **Polkadot OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
-[OpenGov tracks.](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info)** :kusama }}
+:::info Use OpenGov to access treasury funds
+
+Governance v1 is deprecated. To access
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury funds use
+[OpenGov](./learn-polkadot-opengov.md). For more information about OpenGov Treasury see the
+[dedicated wiki page](./learn-polkadot-opengov-treasury.md).
+
+:::
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
