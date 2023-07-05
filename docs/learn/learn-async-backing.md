@@ -2,52 +2,114 @@
 id: learn-async
 title: Asynchronous Backing
 sidebar_label: Asynchronous Backing
-description: How Asynchronous Backing improves Polkadot's Scalability.
-keywords: [parachains, slots, backing, parablock, asynchronous backing]
+description: A brief overview of asynchronous backing, and how it affects Polkadot's scalability.
+keywords: [parachains, slots, backing, parablock]
 slug: ../learn-async
 ---
 
 Asynchronous backing is a mechanism that introduces a _pipeline_ for parachain **<->** relay chain
-communication. This pipeline will allow collators to include more data in parachain blocks (parablocks) while
+communication. This pipeline will allow collators to include more data in parachain blocks while
 reducing latency (from 12 to 6 seconds for parablock validation).
-
-```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
-      gitGraph
-        commit id:"R1"
-        branch Parachain_1 order: 2
-        commit id:"P1(C)"
-        commit id:"P1(B)"
-        branch Parachain_2 order: 3
-        checkout "Relay Chain"
-        merge Parachain_1 tag:"Parablock Backed" type:HIGHLIGHT
-        commit id:"R2"
-        checkout Parachain_2
-        commit id:"P2(C)"
-        commit id:"P2(B)"
-        checkout "Relay Chain"
-        merge Parachain_2 tag:"Parablock Backed" type:HIGHLIGHT
-        checkout Parachain_1
-        commit id:"P1(I)"
-        checkout "Relay Chain"
-        merge Parachain_1 tag:"Parablock Included" id:"R3"
-        commit id:"R4"
-        checkout Parachain_2
-        commit id:"P2(I)"
-        checkout "Relay Chain"
-        merge Parachain_2 tag:"Parablock Included" id:"R5"
-```
 
 It has three overarching goals:
 
 1. Decrease parablock validation time to **6 seconds** from **12 seconds**
 2. Increase the amount of usable blockspace by a factor of 5-10, meaning more state changes are
    allowed per block.
-3. Allow for parablocks to be re-proposed to the network if they should be
+3. Allow for parachain blocks (parablocks) to be re-proposed to the network if they should be
    included initially on the first attempt.
 
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
-time for parachain collators to fit more transactions and make block candidates ready for the [inclusion pipeline](./learn-parachains-protocol#inclusion-pipeline).
+time for parachain collators to fit more transactions and ready block candidates for backing and
+inclusion.
+
+:::info What is contextual executation?
+
+:::
+
+## What was wrong with the previous architecture?
+
+A current limitation to scaling throughput in terms of speed is that parablock validation is tightly
+coupled to the relay chain's progression on a 1-1 basis. Parablocks depend very much on being in
+sync with the relay chain, which reduces the amount of data that can be put into the block.
+Essentially, it's rushing to be a part of the relay chain due to this synchrony.
+
+By making this process of backing para blocks more asynchronous, they get the chance to not only
+include more data, but also "retry" later to be included in the relay chain.
+
+## Visuals: Before and After
+
+Before comparing the two models, there are a several terms which are crucial to define:
+
+- Candidate Parablock, "**C**" - A block that is created by the parachain collator.
+- Backed Parablock, "**B**" - A block that is backed by paravalidators on the relay chain.
+- Included Parablock, "**I**" - A block that is validated and included into the relay chain.
+- Relay Chain Block, "**R**" - A block on the relay chain.
+
+Within these diagrams, there will be two parachains for the purpose of example: **Parachain 1 (P1)**
+and **Parachain 2 (P2)**.
+
+### Before: _Asynchronous Backing on Polkadot_
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
+gitGraph
+commit id:"R1"
+branch Parachain_1 order: 2
+commit id:"P1(C)"
+commit id:"P1(B)"
+checkout "Relay Chain"
+merge Parachain_1 tag:"P1 Backed" type:HIGHLIGHT
+branch Parachain_2 order: 3
+checkout "Relay Chain"
+commit id:"R2"
+checkout "Relay Chain"
+merge Parachain_2 tag:"P2 Backed" type:HIGHLIGHT
+checkout Parachain_1
+commit id:"P1(I)"
+checkout "Relay Chain"
+merge Parachain_1 tag:"P1 Included" id:"R3"
+checkout Parachain_2
+commit id:"P2(C)"
+commit id:"P2(B)"
+
+
+checkout "Relay Chain"
+commit id:"R4"
+checkout Parachain_2
+commit id:"P2(I)"
+checkout "Relay Chain"
+merge Parachain_2 tag:"P2 Included" id:"R5"
+```
+
+### After: _Asynchronous Backing on Polkadot_
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
+gitGraph
+commit id:"R1"
+branch Parachain_1 order: 2
+commit id:"P1(C)"
+commit id:"P1(B)"
+branch Parachain_2 order: 3
+checkout "Relay Chain"
+merge Parachain_1 tag:"P1 Backed" type:HIGHLIGHT
+commit id:"R2"
+checkout Parachain_2
+commit id:"P2(C)"
+commit id:"P2(B)"
+checkout "Relay Chain"
+merge Parachain_2 tag:"P2 Backed" type:HIGHLIGHT
+checkout Parachain_1
+commit id:"P1(I)"
+checkout "Relay Chain"
+merge Parachain_1 tag:"P1 Included" id:"R3"
+commit id:"R4"
+checkout Parachain_2
+commit id:"P2(I)"
+checkout "Relay Chain"
+merge Parachain_2 tag:"P2 Included" id:"R5"
+```
 
 _Notice that blocks can be prepared for longer, meaning more transactions per block. Due to the
 asynchrony, these blocks can be prepared in anticipation of being included later rather than keeping
@@ -67,23 +129,11 @@ go.
 :::
 
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
-Polkadot's networking, runtime, and collator aspects will allow for higher, more robust throughput.
-The speed is doubled while block storage is significantly increased, allowing the network to become
-increasingly more scalable and robust.
-
-## What was wrong with the previous architecture?
-
-A current limitation to scaling throughput in terms of speed is that parablock validation is tightly
-coupled to the relay chain's progression on a 1-1 basis. Parablocks depend on being in
-sync with the relay chain, which reduces the amount of data that can be put into the block.
-Essentially, it's rushing to be a part of the relay chain due to this synchrony.
-
-By making this process of backing para blocks more asynchronous, they get the chance to not only
-include more data, but also "retry" later to be included in the relay chain.
+Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
 
 ## Learn More
 
-This topic is evolving and being implemented, for more information see the following
+This topic is evolving and being implemented at the moment, keep up to date using the following
 resources:
 
 - [Polkadot Roadmap Roundup](https://polkadot.network/blog/polkadot-roadmap-roundup) - Article by
