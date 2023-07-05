@@ -70,10 +70,21 @@ strange lands but to possess other eyes._
 Thus, if we start to see Polkadot with _other eyes_ we can truly envision its potential and what it
 could become.
 
-### Decentralization as a Tool not a Goal
+### Decentralization as a Tool
 
 Decentralization is a crucial aspect when building a blockchain, but there must be a trade-off
-between having a over-decentralized network
+between:
+
+- having an over-decentralized network that struggles to reach finality and consumes a lot of energy
+  just to stay online, and
+- having an under-decentralized network that reaches consensus fast at the expense of being
+  centralized.
+
+Ideally, a network should be decentralized enough to make it practically impossible for someone to
+stop all nodes and take the network down. So, decentralization is a tool while the goal is
+unstoppability, which is achieved by additionally providing on-chain treasury and governance
+mechanism allowing continuous financial incentives for network's participants without intermediaries
+or centralized entities being able to stop network's progress.
 
 ### Blockspace
 
