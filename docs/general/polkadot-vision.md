@@ -34,9 +34,9 @@ concepts and initiatives:
   accessed through governance referendum. Those funds guarantee constant sponsorship for events,
   initiatives, educational material, software development, etc., without any central entity being
   able to interfere.
-- **Enable fast deployment of parachains.** This is achieved through the modular and flexible
+- **Fast deployment of L1 chains.** This is achieved through the modular and flexible
   [Polkadot SDK Substrate](./glossary.md#substrate).
-- **Creating the next-gen of web3 core developers.** This is achieved through different initiatives
+- **Fostering next-gen of web3 core developers.** This is achieved through different initiatives
   such as:
   - [The Polkadot Blockchain Academy](https://polkadot.network/development/academy/)
   - [Substrate Builders Program](./builders-program.md)
@@ -55,18 +55,23 @@ The Polkadot realy-chain has been represented as a central ring surrounded by mu
 attached its cores. Parachains can communicate with each other using a ubiquitous
 [cross-chain messaging format (XCM)](./learn-xcm-index).
 
-But as with many projects across different fields before Polkadot, at some point in time, after
-achieving the goals initially planned at launch, a perspective shift allows you to better understand
-what your project is about, run the extra mile, and achieve more than what was planned at the
-inception.
+But, as with many other projects before Polkadot across different fields, at some point in time
+after achieving the initially-planned goals, a perspective shift allows you to better understand
+what your project is about and what you actually have built. This allows you to "run the extra mile"
+and achieve more than what it was originally planned.
 
-The quote below by Marcel Proust must remind us that sometimes a perspective shift is crucial in
-understanding the world and perhaps more important than seeing more of the world.
+The quote below by [Marcel Proust](https://en.wikipedia.org/wiki/Marcel_Proust) must remind us that
+sometimes a perspective shift is crucial in understanding the world and perhaps it is more important
+than seeing more of the world.
 
 _The only true voyage of discovery, the only fountain of Eternal Youth, would be not to visit
 strange lands but to possess other eyes._
 
 Thus, if we start to see Polkadot with _other eyes_ we can truly envision its potential and what it
 could become.
+
+### Decentralization as a Tool not a Goal
+
+### Blockspace
 
 ## Polkadot 2.0
