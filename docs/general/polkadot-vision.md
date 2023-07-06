@@ -53,8 +53,9 @@ chunks for a maximum of two years, and crowdloans allow users to trustlessly loa
 lease deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
 
 The Polkadot realy-chain has been represented as a central ring surrounded by multiple parachains
-attached to its cores. Parachains can communicate with each other using a ubiquitous
-[cross-chain messaging format (XCM)](./learn-xcm-index).
+attached to its cores. Parachains can communicate with each other using a generalized
+[cross-chain messaging format (XCM)](./learn-xcm-index) allowing messages to be delivered across
+chains having different logic.
 
 But, as with many other projects before Polkadot, at some point in time after achieving the
 initially-planned goals, a perspective shift allows you to understand better what your project is
@@ -87,6 +88,17 @@ resilience, which is achieved by additionally providing on-chain treasury and go
 allowing continuous financial incentives for the network's participants without intermediaries or
 centralized entities being able to stop the network's progress.
 
+Currently, Polkadot 1.0 has a good degree of resilience because:
+
+- The stake per validator is maximized and evenly distributed across validators.
+- Physical (how many validator nodes per service provider) and social decentralization (how many
+  validator nodes per operator) are satisfactory and they can be explored with the
+  [Polkawatch App](https://polkadot.polkawatch.app/). The [1KV program](./thousand-validators.md)
+  aims to incentivize new operators to become network participants and further increase
+  decentralization.
+- On-chain treasury is in place together with the Polkadot OpenGov where every decision goes though
+  public referenda and any toke holder can vote on them.
+
 ### Blockspace
 
 The design and realization of Polkadot 1.0 allowed its creators to truly realize the importance of
@@ -101,7 +113,7 @@ So, the raw material produced by blockchains is blockspace; and how blockspace i
 accessed, and used will eventually shape the degree of scalability of the network. There are three
 distinctive blockspace features:
 
-- **security**, intended as how secure the blockspace is. In Proof-of-Stake networks, this is
+- **security**, intended as how secure the blockspace is. In Proof-of-Stake (PoS) networks, this is
   directly related to how much stake is locked on validator nodes, how much variance in stake there
   is between validators (i.e. how easy it is to spot and attack single validators), and how many
   validators there are securing the network (i.e. how easy it is to collude validators and stop the
@@ -118,4 +130,22 @@ distinctive blockspace features:
   thrive using it. Ideally, a marketplace must drive the blockspace price based on demand, with
   secondary market options to ensure the usage of "second-hand" blockspace.
 
+| Security | Flexibility | Availability |
+| :------: | :---------: | :----------: |
+|  **+**   |   **++**    |    **+**     |
+
+Polkadot's blockspace security is somewhat satisfactory but as secure as other PoS networks like
+Ethereum. Blockspace flexibility is good but can be improved as tasks such as balances transfers,
+staking, governance, etc. can be delegated to [system parachains](../learn/learn-system-chains.md).
+Availability is limited as blockspace is only accessible through slot auctions. Still, on the other
+hand, an auction winner has access to a "freighter of blocks" regardless it is needed or not. This
+can lead to waste of energy and resources.
+
+For more information about blockspace the [this interview](https://youtu.be/e1vISppPwe4) to Robert
+Habermeier as well as [this article](https://www.rob.tech/polkadot-blockspace-over-blockchains/) by
+him.
+
 ## Polkadot 2.0
+
+Understanding what Polkadot 1.0 is about, and the philosophy behind it, will help us to envision the
+future direction of the ecosystem.
