@@ -16,7 +16,11 @@ collaborations and leveraging each other strengths.
 
 ## Polkadot 1.0
 
-Polkadot 1.0 is a Layer-0 blockchain that brings to the multi-chain vision the following innovative
+Polkadot 1.0 reflects the status of Polkadot in 2023 at time of the release of the Polkadot runtime
+v1.0. This sections focuses on Polkadot 1.0 and some philosophical digressions about network
+resilience and blockspace.
+
+Polkadot is a Layer-0 blockchain that brings to the multi-chain vision the following innovative
 concepts and initiatives:
 
 - **Application-specific Layer-1 (L1) blockchains (or parachains).** Polkadot is a sharded network
@@ -134,7 +138,7 @@ distinctive blockspace features:
 | :------: | :---------: | :----------: |
 |  **+**   |   **++**    |    **+**     |
 
-Polkadot's blockspace security is somewhat satisfactory but as secure as other PoS networks like
+Polkadot's blockspace security is somewhat satisfactory but not as secure as other PoS networks like
 Ethereum. Blockspace flexibility is good but can be improved as tasks such as balances transfers,
 staking, governance, etc. can be delegated to [system parachains](../learn/learn-system-chains.md).
 Availability is limited as blockspace is only accessible through slot auctions. Still, on the other
