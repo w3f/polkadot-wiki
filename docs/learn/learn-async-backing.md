@@ -13,11 +13,11 @@ reducing latency (from 12 to 6 seconds for parablock validation).
 
 It has three overarching goals:
 
-1. Decrease parablock validation time to **6 seconds** from **12 seconds**
+1. Decrease parachain blocks (parablock) validation time to **6 seconds** from **12 seconds**
 2. Increase the amount of usable blockspace by a factor of 5-10, meaning more state changes are
    allowed per relay chain block.
-3. Allow for parachain blocks (parablocks) to be re-proposed to the network if they should be
-   included initially on the first attempt.
+3. Allow for parablocks to be re-proposed to the network if they should be included initially on the
+   first attempt.
 
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
 time for parachain collators to fit more transactions and ready block candidates for backing and
@@ -25,31 +25,7 @@ inclusion. Because asynchronous relies on the current context of a relay chain b
 execution** refers to how a parablock can begin being built earlier through the context of future
 relay chain block(s).
 
-## What was wrong with the previous architecture?
-
-A current limitation to scaling throughput regarding speed is that parablock validation is tightly
-coupled to the relay chain's progression on a 1-1 basis, meaning every parablock must be built,
-backed, and included within six seconds. Parablocks depend on being in sync with the relay chain,
-reducing the amount of data in the block.
-
-Essentially, it's rushing to be a part of the relay chain due to this synchrony.
-
-By making this process of backing para blocks more asynchronous, they get the chance to not only
-include more data, but also "retry" later to be included in the relay chain.
-
-## Visuals: Before and After
-
-Before comparing the two models, several terms are crucial to define:
-
-- Candidate Parablock, "**C**" - A block created by the parachain collator.
-- Backed Parablock, "**B**" - A block backed by paravalidators on the relay chain.
-- Included Parablock, "**I**" - A block validated and included in the relay chain.
-- Relay Chain Block, "**R**" - A block on the relay chain.
-
-Within these diagrams, there will be one parachain for example, that displays two blocks, referred
-to as the following: **Parachain 1 (P1)**.
-
-### Before: _Synchronous Backing on Polkadot_
+## Synchronous Backing on Polkadot
 
 With synchronous backing, there was only about a single block, or 6-second window, to complete the
 parablock inclusion process. This was tightly coupled to the relay chain's progress, where blocks
@@ -76,7 +52,29 @@ checkout "Relay Chain"
 merge "Parachain 1, Block 2" tag:"P2 Included" id:"R3"
 ```
 
-### After: _Asynchronous Backing on Polkadot_
+where **P1** and **P2** are two parablocks, and **R1** and **R2** are two relay-chain blocks. The
+letters within the parentheses represent the state of a parachain block. Hence **C** (candidate,
+created by collators), **B** (backed, by para-validators), and **I** (included, by block authors in
+the relay-chain). For more information about parablock validation see the
+[parachain protocol page](./learn-parachains-protocol.md).
+
+In the diagram there are three relay-chain blocks being finalized (**R1-2**) and a parachain
+(**Parachain 1**) proposing two parablocks (**P1** and **P2**). Each parablock's lifecycle, from
+being candidate (**P(C)**) to being backed and included (**P(B)** and **P(I)**, respectively), must
+fit within the relay-chain block lifetime.
+
+Thus, the main limitation of synchronous backing is that parablock validation is tightly coupled to
+the relay chain's progression on a 1-1 basis, meaning every parablock must be built, backed, and
+included within six seconds. Parablocks depend on being in sync with the relay chain, reducing the
+amount of data in the block.
+
+Essentially, a parablock is rushing to being validated by the relay-chain due to this synchrony.
+
+By making this process of backing parablocks more asynchronous, parachains get the chance to not
+only include more data within each parablock, but also retry to include parablocks that failed
+inclusion.
+
+## Asynchronous Backing on Polkadot
 
 With asynchronous backing, the window is more than the span of around two blocks, or a ~12-second
 window. This enables more computational and storage time per block, as the context of the next relay
