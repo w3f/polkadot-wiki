@@ -16,7 +16,7 @@ It has three overarching goals:
 1. Decrease parachain blocks (parablock) validation time to **6 seconds** from **12 seconds**
 2. Increase the amount of usable blockspace by a factor of 5-10, meaning more state changes are
    allowed per relay chain block.
-3. Allow for parablocks to be re-proposed to the network if they should be included initially on the
+3. Allow for parablocks to be re-proposed to the network if they are not included initially on the
    first attempt.
 
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
