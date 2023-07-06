@@ -8,8 +8,9 @@ slug: ../learn-async
 ---
 
 Asynchronous backing is a mechanism that introduces a _pipeline_ for parachain **<->** relay chain
-communication. This pipeline will allow collators to include more transactions/data in parachain blocks while
-reducing parablock validation times from around 12 to 6 seconds. In short, Asynchronous backing will speed up the parachain performance multifold.
+communication. This pipeline will allow collators to include more transactions/data in parachain
+blocks while reducing parablock validation times from around 12 to 6 seconds. In short, Asynchronous
+backing will speed up the parachain performance multifold.
 
 It has three overarching goals:
 
@@ -27,27 +28,27 @@ relay chain block(s).
 
 ## Synchronous Backing on Polkadot
 
-With synchronous backing, there was only about a single relaychain block, or 6-second window, to complete the
-parablock inclusion process. This was tightly coupled to the relay chain's progress, where blocks
-had to be created within this window:
+With synchronous backing, there was only about a single relaychain block, or 6-second window, to
+complete the parablock inclusion process. This was tightly coupled to the relay chain's progress,
+where blocks had to be created within this window:
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
 gitGraph
 commit id:"R1"
 branch "Parachain 1, Block 1" order: 2
-commit id:"P1(C)"
-commit id:"P1(B)"
+commit id:"Block 1 (Candidate)"
+commit id:"Block 1 (Backed)"
 checkout "Parachain 1, Block 1"
-commit id:"P1(I)"
+commit id:"Block 1 (Included)"
 branch "Parachain 1, Block 2" order: 3
 checkout "Relay Chain"
 merge "Parachain 1, Block 1" tag:"P1 Included" id:"R2"
 checkout "Parachain 1, Block 2"
-commit id:"P2(C)"
-commit id:"P2(B)"
+commit id:"Block 2 (Candidate)"
+commit id:"Block 2 (Backed)"
 checkout "Parachain 1, Block 2"
-commit id:"P2(I)"
+commit id:"Block 2 (Included)"
 checkout "Relay Chain"
 merge "Parachain 1, Block 2" tag:"P2 Included" id:"R3"
 ```
@@ -80,49 +81,36 @@ With asynchronous backing, the window is more than the span of around two blocks
 window. This enables more computational and storage time per block, as the context of the next relay
 chain block can kickstart the process of the next parablock.
 
-Notice that blocks can be bigger compared to what we have in synchronous backing, meaning more transactions per block. Due to the
-asynchrony, these blocks can be prepared in anticipation of being included later rather than keeping
-in sync with the relay chain's progress 1-1:
+Notice that blocks can be bigger compared to what we have in synchronous backing, meaning more
+transactions per block. Due to the asynchrony, these blocks can be prepared in anticipation of being
+included later rather than keeping in sync with the relay chain's progress 1-1:
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
 gitGraph
 commit id:"R1"
 branch "Parachain 1, Block 1" order: 2
-commit id:"P1(C)"
-commit id:"P1(B)"
+commit id:"Block 1 (Candidate)"
+commit id:"Block 1 (Backed)"
 branch "Parachain 1, Block 2" order: 3
 checkout "Relay Chain"
 merge "Parachain 1, Block 1" tag:"P1 Backed" type:HIGHLIGHT
 commit id:"R2"
 checkout "Parachain 1, Block 2"
-commit id:"P2(C)"
-commit id:"P2(B)"
+commit id:"Block 2 (Candidate)"
+commit id:"Block 2 (Backed)"
 checkout "Relay Chain"
 merge "Parachain 1, Block 2" tag:"P2 Backed" type:HIGHLIGHT
 checkout "Parachain 1, Block 1"
-commit id:"P1(I)"
+commit id:"Block 1 (Included)"
 checkout "Relay Chain"
 merge "Parachain 1, Block 1" tag:"P1 Included" id:"R3"
 commit id:"R4"
 checkout "Parachain 1, Block 2"
-commit id:"P2(I)"
+commit id:"Block 2 (Included)"
 checkout "Relay Chain"
 merge "Parachain 1, Block 2" tag:"P2 Included" id:"R5"
 ```
-
-:::info How does this compare to Ethereum's Danksharding?
-
-Asynchronous backing is the Polkadot equivalent to Ethereum's Danksharding. Where Ethereum merely
-increases the amount of space per block for rollup-related solutions, asynchronous backing provides
-a way for collators to build blocks with the intent of publishing them asynchronously later on.
-
-Where Ethereum is looking to increase the size of each block as a means for rollup solutions,
-asynchronous backing builds on the existing parachains protocol to provide a way to further
-parallelize the processing of parachain blocks, increasing scalability and throughput in a single
-go.
-
-:::
 
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
 Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
