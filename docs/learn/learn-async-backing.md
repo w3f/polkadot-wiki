@@ -86,30 +86,34 @@ transactions per block. Due to the asynchrony, these blocks can be prepared in a
 included later rather than keeping in sync with the relay chain's progress 1-1:
 
 ```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
+%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '14px', 'tagLabelFontSize': '10px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
 gitGraph
 commit id:"R1"
-branch "Parachain 1, Block 1" order: 2
+branch "Block 1" order: 2
+checkout "Block 1"
 commit id:"Block 1 (Candidate)"
-commit id:"Block 1 (Backed)"
-branch "Parachain 1, Block 2" order: 3
 checkout "Relay Chain"
-merge "Parachain 1, Block 1" tag:"P1 Backed" type:HIGHLIGHT
+merge "Block 1" tag:"Collator Provides Block"
+checkout "Block 1"
+commit id:"Block 1 (Backed)"
+branch "Block 2" order: 3
+checkout "Relay Chain"
+merge "Block 1" tag:"Block 1 Backed" type:HIGHLIGHT
 commit id:"R2"
-checkout "Parachain 1, Block 2"
+checkout "Block 2"
 commit id:"Block 2 (Candidate)"
 commit id:"Block 2 (Backed)"
 checkout "Relay Chain"
-merge "Parachain 1, Block 2" tag:"P2 Backed" type:HIGHLIGHT
-checkout "Parachain 1, Block 1"
+merge "Block 2" tag:"Block 2 Backed" type:HIGHLIGHT
+checkout "Block 1"
 commit id:"Block 1 (Included)"
 checkout "Relay Chain"
-merge "Parachain 1, Block 1" tag:"P1 Included" id:"R3"
+merge "Block 1" tag:"Block 1 Included" id:"R3"
 commit id:"R4"
-checkout "Parachain 1, Block 2"
+checkout "Block 2"
 commit id:"Block 2 (Included)"
 checkout "Relay Chain"
-merge "Parachain 1, Block 2" tag:"P2 Included" id:"R5"
+merge "Block 2" tag:"Block 2 Included" id:"R5"
 ```
 
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
