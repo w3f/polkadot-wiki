@@ -80,7 +80,7 @@ With asynchronous backing, the window is more than the span of around two blocks
 window. This enables more computational and storage time per block, as the context of the next relay
 chain block can kickstart the process of the next parablock.
 
-Notice that blocks can be prepared longer, meaning more transactions per block. Due to the
+Notice that blocks can be bigger compared to what we have in synchronous backing, meaning more transactions per block. Due to the
 asynchrony, these blocks can be prepared in anticipation of being included later rather than keeping
 in sync with the relay chain's progress 1-1:
 
