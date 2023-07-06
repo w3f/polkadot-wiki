@@ -19,10 +19,10 @@ collaborations and leveraging each other strengths.
 Polkadot 1.0 is a Layer-0 blockchain that brings to the multi-chain vision the following innovative
 concepts and initiatives:
 
-- **Application-specific Layer-1 blockchains (or parachains).** Polkadot is a sharded network where
-  data are processed in parallel within each shard. Unlike Ethereum shards, Polkadot shards can be
-  heterogenous (i.e. they do not need to be the exact copy of the original shards). This allows to
-  build L1 chains designed explicitly around their application and value proposition.
+- **Application-specific Layer-1 (L1) blockchains (or parachains).** Polkadot is a sharded network
+  where data are processed in parallel within each shard. Polkadot shards can be heterogenous (i.e.
+  they do not need to be the exact copy of the original shards, like in Ethereum shards). This
+  allows to build L1 chains designed explicitly around their application and value proposition.
 - **Shared security and financial scalability of L1 chains**. Any L1 chain attached to a Polkadot
   core (and any other L2 solution to scale that L1) will benefit from Polkadot shared security
   model. This means the Polkadot NPoS mechanism will secure L1 and L2 chains without worrying about
@@ -30,11 +30,11 @@ concepts and initiatives:
 - **Secure interoperability.** Any L1 chain attached to a Polkadot core will benefit from Polkadot's
   native interoperability, and will thus be able to communicate and exchange value and information
   with other parachains.
-- **Truly unstoppable infrastructure.** This is achieved by keeping the network decentralized
-  without compromising scalability and throughput, and through on-chain treasury funds that can be
-  accessed through governance referendum. Those funds guarantee constant sponsorship for events,
-  initiatives, educational material, software development, etc., without any central entity being
-  able to interfere.
+- **Truly resilient infrastructure.** This is achieved by keeping the network decentralized without
+  compromising scalability and throughput, and through on-chain treasury funds that can be accessed
+  through governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
+  educational material, software development, etc., without any central entity being able to
+  interfere.
 - **Fast deployment of L1 chains.** This is achieved through the modular and flexible
   [Polkadot SDK Substrate](./glossary.md#substrate).
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
@@ -56,10 +56,10 @@ The Polkadot realy-chain has been represented as a central ring surrounded by mu
 attached to its cores. Parachains can communicate with each other using a ubiquitous
 [cross-chain messaging format (XCM)](./learn-xcm-index).
 
-But, as with many other projects before Polkadot across different fields, at some point in time
-after achieving the initially-planned goals, a perspective shift allows you to understand better
-what your project is about and what you actually have built. This allows you to "run the extra mile"
-and achieve more than what was originally planned.
+But, as with many other projects before Polkadot, at some point in time after achieving the
+initially-planned goals, a perspective shift allows you to understand better what your project is
+about and what you actually have built. This allows you to "run the extra mile" and achieve more
+than what was originally planned.
 
 The quote below by [Marcel Proust](https://en.wikipedia.org/wiki/Marcel_Proust) must remind us that
 sometimes a perspective shift is crucial in _understanding_ the world, and perhaps it is more
@@ -76,16 +76,16 @@ could become.
 Decentralization is a crucial aspect when building a blockchain, but there must be a trade-off
 between:
 
-- having an over-decentralized network that struggles to reach finality and consumes a lot of energy
-  to stay online, and
+- having an over-decentralized network that struggles to reach consensus and consumes a lot of
+  energy to stay online, and
 - having an under-decentralized network that reaches consensus fast at the expense of being
-  centralized.
+  centralized and trivial to attack.
 
 Ideally, a network should be decentralized enough to make it practically impossible for someone to
 stop all nodes and take the network down. So, decentralization is a tool while the goal is
-unstoppability, which is achieved by additionally providing on-chain treasury and governance
-mechanism allowing continuous financial incentives for the network's participants without
-intermediaries or centralized entities being able to stop the network's progress.
+resilience, which is achieved by additionally providing on-chain treasury and governance mechanism
+allowing continuous financial incentives for the network's participants without intermediaries or
+centralized entities being able to stop the network's progress.
 
 ### Blockspace
 
