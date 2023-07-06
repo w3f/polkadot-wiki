@@ -29,7 +29,7 @@ relay chain block(s).
 
 With synchronous backing, there was only about a single block, or 6-second window, to complete the
 parablock inclusion process. This was tightly coupled to the relay chain's progress, where blocks
-had to be completed within this window:
+had to be created within this window:
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
