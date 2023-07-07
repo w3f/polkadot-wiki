@@ -172,7 +172,7 @@ the image below). Take a note of this preimage hash, which is required to submit
 
 The example below shows how to submit a Treasury track referendum.
 
-- Navigate to Polkadot-JS UI > Governance > Referenda and then click on Submit proposal.
+- Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and then click on Submit proposal.
 - Select the account which will be used to submit the proposal.
 - Choose the appropriate submission track (The example below selected Small Spender track).
 - Enter the preimage hash of the treasury spend transaction.(If the preimage exists on-chain, the
