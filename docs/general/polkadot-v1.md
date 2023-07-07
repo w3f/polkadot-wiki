@@ -101,7 +101,7 @@ onto the chain, it is practically impossible to modify the data within that bloc
 being tamper-proof, public permissionless blockchains like Polkadot store data that are visible to
 everybody (i.e. public), and anybody can become a network participant (i.e. permissionless).
 
-So, the raw material produced by blockchains is blockspace; and how blockspace is organized,
+The raw material produced by blockchains is **blockspace**; and how blockspace is organized,
 accessed, and used will eventually shape the degree of scalability of the network. There are three
 distinctive blockspace features:
 
