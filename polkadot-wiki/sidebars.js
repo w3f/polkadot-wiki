@@ -11,7 +11,20 @@ module.exports = {
       },
       items: [
         "general/getting-started",
-        "general/polkadot-vision",
+        {
+          type: "category",
+          label: "Polkadot Vision",
+          description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+          link: {
+            type: 'generated-index',
+            title: 'Polkadot Vision',
+            description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+            slug: '/polkadot-vision-index',
+          },
+          items: [
+            "general/polkadot-v1",
+          ],
+        },
         {
           type: "category",
           label: "Stay Safe",
