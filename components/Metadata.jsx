@@ -12,7 +12,7 @@ const Networks = [
   { name: "Kusama", rpc: "wss://kusama-rpc.polkadot.io" },
   { name: "Westend", rpc: "wss://westend-rpc.polkadot.io" },
   { name: "Polkadot Asset Hub", rpc: "wss://polkadot-asset-hub-rpc.polkadot.io" },
-  { name: "Kusama Assset Hub", rpc: "wss://kusama-asset-hub-rpc.polkadot.io" },
+  { name: "Kusama Asset Hub", rpc: "wss://kusama-asset-hub-rpc.polkadot.io" },
   { name: "Westmint", rpc: "wss://westmint-rpc.polkadot.io" },
   { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
