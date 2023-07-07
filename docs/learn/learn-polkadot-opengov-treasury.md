@@ -119,7 +119,7 @@ proposal, they will need to find an off-chain way to explain the proposal:
   {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
   {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
   {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
-- Use platforms like [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) to initiate discussion with the community.
+- Use platforms like [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) to initiate discussion with the community. They also offer a gauge poll to capture the community sentiment before submitting an on-chain referendum.
 
 Spreading the word about the proposal's explanation to the community is ultimately up to the
 proposer.
