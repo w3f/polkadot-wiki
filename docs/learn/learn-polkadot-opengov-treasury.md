@@ -113,7 +113,7 @@ well.
 ### Announcing the Proposal
 
 To minimize storage on chain, proposals don't contain contextual information. When a user submits a
-proposal, they will probably need to find an off-chain way to explain the proposal. Most discussion
+proposal, they will need to find an off-chain way to explain the proposal. Most discussion
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
