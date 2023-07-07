@@ -105,7 +105,7 @@ The raw material produced by blockchains is **blockspace**; and how blockspace i
 accessed, and used will eventually shape the degree of scalability of the network. There are three
 distinctive blockspace features:
 
-- **security**, intended as how secure the blockspace is. In Proof-of-Stake (PoS) networks, this is
+- **Security**, intended as how secure the blockspace is. In Proof-of-Stake (PoS) networks, this is
   directly related to how much stake is locked on validator nodes, how much variance in stake there
   is between validators (i.e. how easy it is to spot and attack single validators), and how many
   validators there are securing the network (i.e. how easy it is to collude validators and stop the
