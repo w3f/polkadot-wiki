@@ -136,10 +136,11 @@ account.
 
 :::
 
-:::tip Use Non-Transfer Proxy Accounts to join Nomination Pools
+:::tip Use Non-Transfer or Nomination Pools Proxy Accounts to join Nomination Pools
 
-Only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to participate in
-nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used as they cannot
+Only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) and
+[nomination pools proxy](./learn-proxies.md#nomination-pools-proxy) can be used to participate in
+nomination pools. [Staking proxies](learn-proxies.md#staking-proxy) cannot be used as they cannot
 make calls to the nomination pools pallet.
 
 :::
