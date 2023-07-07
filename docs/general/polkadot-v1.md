@@ -113,7 +113,7 @@ distinctive blockspace features:
   operators (this will determine the degree of social centralization of the network), and how many
   validators run on the same service provider (this will determine the degree of physical
   centralization of the network).
-- **flexibility**, intended as how flexible the blockspace is, what can be done with it, and what
+- **Flexibility**, intended as how flexible the blockspace is, what can be done with it, and what
   type of data can be stored. Data quality plays an important role depending on the type of network.
   One might avoid having situations in which poor quality data flood blockspace hindering the prompt
   execution of vital processes.
