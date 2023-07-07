@@ -183,7 +183,7 @@ The example below shows how to submit a Treasury track referendum.
 ![Submit Treasury Proposal](../assets/treasury/submit-proposal-treasury.png)
 
 Once your submission is executed, your referendum will appear under your chosen track on the
-Polkadot-JS UI referenda page.
+Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
 
 ### Place a Decision Deposit for the Treasury Track Referendum
 
