@@ -193,6 +193,11 @@ is recommended that you check with the respective parachain team for any possibl
 to the crowdloan rewards distribution. Auction proxy can access Auctions, Crowdloan, Registrar and
 Slots pallets.
 
+### Nomination Pools Proxy
+
+Proxies that are of the type **Nomination Pools** are accounts that allow transactions pertaining to
+[Nomination Pools](./learn-nomination-pools.md).
+
 ## Removing Proxy
 
 :::info Removing proxies
