@@ -123,7 +123,7 @@ distinctive blockspace features:
   secondary market options to ensure the usage of "second-hand" blockspace.
 
 Polkadot's has been designed around those core blockspace principles. However, its design can be
-further improved. Tasks such as balances transfers, staking, governance, etc. can be delegated to
+further improved. Tasks which are currently managed on the relay chain, such as balances transfers, staking, and governance, can be delegated to
 [system parachains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
 the relay-chain to provide shared security and interoperability. Blockspace is only accessible
 through slot auctions, but an auction winner has access to a "freighter of blocks" regardless it is
