@@ -140,7 +140,7 @@ and is
 
 ### Submit Treasury Proposal Preimage
 
-The example below shows how to create a preimage for a transaction that requests 100 DOT from
+The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction that requests 100 DOT from
 Treasury.
 
 - Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and then click on Add Preimage.
