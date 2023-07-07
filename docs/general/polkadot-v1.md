@@ -24,7 +24,7 @@ Polkadot is a Layer-0 blockchain that brings to the multi-chain vision the follo
 initiatives:
 
 - **Application-specific Layer-1 (L1) blockchains (or parachains).** Polkadot is a sharded network
-  where transactions are processed parallelly within each shard. Polkadot shards can be heterogenous
+  where transactions are processed in parallel with each shard. Polkadot shards can be heterogenous
   (i.e. they do not need the same state transition function as in the proposed Ethereum sharding
   architecture). This allows to build L1 chains designed explicitly around their application and
   value proposition.
