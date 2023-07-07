@@ -141,7 +141,7 @@ account.
 Only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) and
 [nomination pools proxy](./learn-proxies.md#nomination-pools-proxy) can be used to participate in
 nomination pools. [Staking proxies](learn-proxies.md#staking-proxy) cannot be used as they cannot
-make calls to the nomination pools pallet.
+make calls to the nomination pools pallet. (The nomination pools will be supported through a staking proxy when the changes made in [this PR](https://github.com/paritytech/polkadot/pull/7448) are released on the network.
 
 :::
 
