@@ -106,9 +106,8 @@ requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 
 Your proposal should address a problem, outline a goal, give a detailed account of how you will
 reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
 the tasks to be completed so fees can be evaluated and milestones can be followed. You can check the
-[guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)
-and fill out the Treasury proposal template provided for Kusama, which is applicable for Polkadot as
-well.
+{{ polkadot: [guidelines for a successful proposal](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w) :polkadot }}{{ kusama:  [guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)  :kusama }}
+and fill out the {{ polkadot: [Treasury proposal template](https://docs.google.com/document/d/1O_84mXYFERCavmnJyxbIPKFkG0bVBySRjCVy-d-VKcc) :polkadot }}{{ kusama:  Treasury proposal template :kusama }} provided.
 
 ### Announcing the Proposal
 
