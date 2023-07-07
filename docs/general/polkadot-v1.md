@@ -65,10 +65,10 @@ The Polkadot relay-chain also manges [crowdloans](../learn/learn-crowdloans.md),
 chunks for a maximum of two years, and crowdloans allow users to trustlessly loan funds to teams for
 lease deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
 
-### Decentralization as a Tool
+### Polkadot's Resilience
 
-Decentralization is a crucial aspect when building a blockchain, but there must be a trade-off
-between:
+Network decentralization is a crucial aspect when building a blockchain, but there must be a
+trade-off between:
 
 - having an over-decentralized network that struggles to reach consensus and consumes a lot of
   energy to stay online, and
@@ -76,8 +76,8 @@ between:
   centralized and trivial to attack.
 
 Ideally, a network should be decentralized enough to make it practically impossible for someone to
-stop all nodes and take the network down. So, decentralization is a tool while the goal is
-resilience, which is achieved by additionally providing on-chain treasury and governance mechanism
+stop all nodes and take the network down. So, **decentralization is a tool while the goal is
+resilience**, which is achieved by additionally providing on-chain treasury and governance mechanism
 allowing continuous financial incentives for the network's participants without intermediaries or
 centralized entities being able to stop the network's progress.
 
@@ -91,7 +91,7 @@ Currently, Polkadot 1.0 achieve resilience through the followings:
 - An on-chain treasury and governance where every decision goes though public referenda and any
   token holder can cast a vote.
 
-### Blockspace
+### Polkadot's Blockspace
 
 The design and realization of Polkadot 1.0 allowed its creators to truly realize the importance of
 blockspace.
@@ -133,7 +133,7 @@ For more information about blockspace the [this interview](https://youtu.be/e1vI
 Habermeier as well as [this article](https://www.rob.tech/polkadot-blockspace-over-blockchains/) by
 him.
 
-### Perspective Shift
+### A Perspective Shift
 
 As with many other projects before Polkadot, at some point in time after achieving the
 initially-planned goals, a perspective shift allows you to understand better what your project is
