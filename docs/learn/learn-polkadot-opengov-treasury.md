@@ -112,18 +112,14 @@ and fill out the {{ polkadot: [Treasury proposal template](https://docs.google.c
 ### Announcing the Proposal
 
 To minimize storage on chain, proposals don't contain contextual information. When a user submits a
-proposal, they will need to find an off-chain way to explain the proposal. Most discussion
-takes place on the following platforms:
+proposal, they will need to find an off-chain way to explain the proposal:
 
 - Many community members participate in discussion in the
   {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
   {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
   {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
   {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
-- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
-  platforms automatically read proposals from the chain, turning them into discussion threads and
-  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
-  for a proposal before committing to a vote.
+- Use platforms like [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) to initiate discussion with the community.
 
 Spreading the word about the proposal's explanation to the community is ultimately up to the
 proposer.
