@@ -117,7 +117,7 @@ distinctive blockspace features:
   type of data can be stored. Data quality plays an important role depending on the type of network.
   One might avoid having situations in which poor quality data flood blockspace hindering the prompt
   execution of vital processes.
-- **availability**, intended as how available blockspace is and how difficult it is to access it. It
+- **Availability**, intended as how available blockspace is and how difficult it is to access it. It
   should not be too difficult to get your hands on it so that any business model (not only DeFi) can
   thrive using it. Ideally, a marketplace must drive the blockspace price based on demand, with
   secondary market options to ensure the usage of "second-hand" blockspace.
