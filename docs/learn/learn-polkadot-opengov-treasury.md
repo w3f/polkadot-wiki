@@ -106,25 +106,20 @@ requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 
 Your proposal should address a problem, outline a goal, give a detailed account of how you will
 reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
 the tasks to be completed so fees can be evaluated and milestones can be followed. You can check the
-[guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)
-and fill out the Treasury proposal template provided for Kusama, which is applicable for Polkadot as
-well.
+{{ polkadot: [guidelines for a successful proposal](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w) :polkadot }}{{ kusama:  [guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)  :kusama }}
+and fill out the {{ polkadot: [Treasury proposal template](https://docs.google.com/document/d/1O_84mXYFERCavmnJyxbIPKFkG0bVBySRjCVy-d-VKcc) :polkadot }}{{ kusama:  Treasury proposal template :kusama }} provided.
 
 ### Announcing the Proposal
 
 To minimize storage on chain, proposals don't contain contextual information. When a user submits a
-proposal, they will need to find an off-chain way to explain the proposal. Most discussion
-takes place on the following platforms:
+proposal, they will need to find an off-chain way to explain the proposal:
 
 - Many community members participate in discussion in the
   {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
   {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
   {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
   {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
-- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
-  platforms automatically read proposals from the chain, turning them into discussion threads and
-  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
-  for a proposal before committing to a vote.
+- Use platforms like [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) to initiate discussion with the community. They also offer a gauge poll to capture the community sentiment before submitting an on-chain referendum.
 
 Spreading the word about the proposal's explanation to the community is ultimately up to the
 proposer.
