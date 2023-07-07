@@ -143,7 +143,7 @@ and is
 The example below shows how to create a preimage for a transaction that requests 100 DOT from
 Treasury.
 
-- Navigate to Polkadot-JS UI > Governance > Preimages and then click on Add Preimage.
+- Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
 - Choose `treasury` pallet in the "propose" dropdown and the `spend(amount, beneficiary)`call
 - Enter the DOT amount.
