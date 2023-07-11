@@ -172,7 +172,7 @@ use TPS as a measure for the network performance if all the transactions carry t
 [Performance benchmark tests](https://twitter.com/gavofyork/status/1270025498580656134) show that
 Substrate-based blockchains can achieve over 1000 TPS for balance transfer transactions. Assuming
 Polkadot is running over 100 parachains; the projected TPS is well over 100,000. With
-[asynchronous backing upgrade](../learn/learn-async-backing), the TPS is expected to increase
+[asynchronous backing upgrade](../learn/learn-async-backing.md), the TPS is expected to increase
 tenfold to 1,000,000.
 
 It is essential to realize that TPS is inherently a subjective measurement with numerous factors
