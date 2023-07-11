@@ -78,8 +78,8 @@ A pool can be pushed into the “destroying” state via one of:
 - The root and bouncer set the pool to “destroying”. This can be done by submitting the
   `nominationPools.setState(poolId, state)` extrinsic using the
   [Polkadot-JS UI extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
-  specific ID of the pool and `state` must be set to "destroying". Other possible states are "open"
-  and "blocked".
+  specific ID of the pool and `state` is the pool's state that must be set to "destroying". Other
+  possible states are "open" and "blocked".
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
   been slashed.
 
