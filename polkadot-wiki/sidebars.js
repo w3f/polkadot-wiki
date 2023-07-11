@@ -249,7 +249,21 @@ module.exports = {
                 slug: '/learn-guides-index',
               },
               items: [
-                "learn/learn-guides-staking",
+                {
+                  type: "category",
+                  label: "Staking",
+                  description: 'Advanced How-to Guides about Staking.',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Advanced Guides for Staking',
+                    description: 'Advanced how-to guides about Staking.',
+                    slug: '/learn-guides-staking-index',
+                  },
+                  items: [
+                    "learn/learn-guides-staking",
+                    "learn/learn-guides-staking-pools",
+                  ],
+                },
                 "learn/learn-guides-identity",
                 {
                   type: "category",
@@ -263,7 +277,7 @@ module.exports = {
                   },
                   items: [
                     "learn/learn-guides-assets-create",
-                    "learn/learn-guides-assets-ledger"
+                    "learn/learn-guides-assets-ledger",
                   ],
                 },
                 "learn/learn-guides-vault",

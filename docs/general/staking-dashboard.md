@@ -17,10 +17,10 @@ and import your [staking proxy](../learn/learn-staking-advanced.md#staking-proxi
 or [non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins
 and members).
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) also has **native
-[Ledger](./ledger.md) support**, meaning that you do not need an extension or a wallet to use it;
-you just need your Ledger device. [Metadata updates](../learn/learn-extrinsics.md#metadata-updates)
-are thus not necessary, as you only need to keep your Ledger apps up-to-date.
+The dashboard also has **native [Ledger](./ledger.md) support**, meaning that you do not need an
+extension or a wallet to use it; you just need your Ledger device.
+[Metadata updates](../learn/learn-extrinsics.md#metadata-updates) are thus not necessary, as you
+only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account in a Ledger device with the
@@ -110,7 +110,7 @@ Note that Sections A and B will always be visible while you use the dashboard.
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
   In this case, 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
   not used for staking. Of the non-staking balance, 0.144 KSM are free while
-  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}
+  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :kusama }}
   are reserved for the existential deposit.
 
 - **Section F: The Recent Payouts Panel** shows a bar chart with the rewards paid out to you in the
@@ -138,8 +138,11 @@ most recently received rewards.
 
 :::info Joining a Nomination Pool - Walk-through video tutorial
 
-[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a nomination pool with the
-Staking Dashboard.
+[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a
+[nomination pool](../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read
+the
+[dedicated support article](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
+about joining a pool.
 
 :::
 
@@ -164,18 +167,60 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 :::
 
 - **Section C: The Pool Panel** shows the pool id where you have membership (in this case, Pool 82),
-  the pool name, and next to it, a `Leave` button to unbond all the funds in the pool. You can see
-  any unclaimed rewards in the middle of the panel. You can claim and bond the rewards (`+ Bond`
-  button) or withdraw them as a free balance (`Withdraw` button). In this case, there are
-  approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
+  the pool name, and next to it, a `Manage` button that will allow to choose between different
+  options:
+
+  - Update Claim Permissions: you can allow other pool members to compound your rewards, withdraw
+    your rewards as a free balance, or both. More details about nomination pools and updating claim
+    permissions can be found on the
+    [dedicated wiki page](../learn/learn-nomination-pools.md#claim-permissions).
+
+  ![dashboard-permissionlessPoolClaims](../assets/dashboard-permissionlessPoolClaims.png)
+
+  :::info
+
+  For more information about how-to update your claim permissions with the staking dashboard see
+  [this support article](https://support.polkadot.network/support/solutions/articles/65000182399-staking-dashboard-how-to-claim-nomination-pool-rewards#Permissionless-claiming).
+
+  :::
+
+  - Leave the pool and unbond all the funds in the pool.
+
+  If you are a pool admin you will be able to see the additional options:
+
+  - Claim Commission: you can claim pool commissions to an account specified under Manage Commission
+    (below).
+  - Manage Commission: you can manage the pool commission rate, maximum commission, maximum change
+    rate, and minimum time delay between commission updates. More details about nomination pools and
+    managing pool commissions can be found on the
+    [dedicated wiki page](../learn/learn-nomination-pools.md#pool-commissions).
+
+  ![dashboard-manage-commission](../assets/dashboard-managePoolCommission.png)
+
+  :::info
+
+  For more information about how-to manage commission of your nomination pool with the staking
+  dashboard see
+  [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#Pool-management-options).
+
+  :::
+
+  - Rename Pool: you can change the pool's name.
+  - Lock Pool: you can lock the pool so that new members are not allowed.
+  - Destroy Pool: you can destroy the pool. See
+    [this wiki page](../learn/learn-guides-staking-pools.md#pool-destruction) and
+    [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
+    for more information.
+
+  You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards
+  (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there
+  are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
   panel, currently set to "Nominating and Earning Rewards".
 
-:::info Pool members must claim their rewards; nobody will do it for them
-
-For pool members, rewards must be manually claimed. This is different from being a nominator where
-usually, one nominator or the specific validator can trigger a payout for all nominators.
-
-:::
+Note that if it is the first time you log in to the dashboard, you will see two
+buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a
+nomination pool, see
+[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool).
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
   highlighting the validator that is active and will pay rewards to the pool at the end of the era
@@ -183,8 +228,8 @@ usually, one nominator or the specific validator can trigger a payout for all no
 
 If you scroll down the page, there are two additional panels:
 
-- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, and State Toggler. The
-  same account can cover all the roles.
+- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, and Bouncer. The same
+  account can cover all the roles.
 - **Pool Stats** showing the Pool State (either Active, Closed, or Destroying), Pool Members (number
   of members in the pool), and Total Bonded (total number of bonded tokens).
 
@@ -208,9 +253,9 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
 
 - **Section A: The Stats Panel** shows the number of active nominators, the minimum number of tokens
   to nominate (currently
-  <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>)
+  {{ polkadot: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }})
   and the minimum active bond (currently
-  <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>).
+  {{ polkadot: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :kusama }}).
   The system keeps 12500 nomination intents and puts them into the
   [bags list](../learn/learn-staking-advanced.md#bags-list). The fact that active nominators are not
   12500 is because there are nominators that have no active validator.
