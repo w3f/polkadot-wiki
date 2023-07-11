@@ -325,7 +325,6 @@ module.exports = {
                 'learn/learn-xcm-instructions',
               ],
             },
-            'learn/learn-spree',
           ],
         },
         {
@@ -359,6 +358,7 @@ module.exports = {
             slug: '/learn-future-implementations-index',
           },
           items: [
+            'learn/learn-spree',
             "learn/learn-parathreads",
           ],
         },
