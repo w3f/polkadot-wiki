@@ -283,9 +283,22 @@ module.exports = {
           },
           items: [
             "learn/learn-architecture",
-            "learn/learn-nominator",
-            "learn/learn-validator",
-            "learn/learn-collator",
+            {
+              type: "category",
+              label: "Network Participants",
+              description: "Participants in the Polkadot Ecosystem.",
+              link: {
+                type: 'generated-index',
+                title: "Participants in the Polkadot Ecosystem",
+                description: "Learn about collators, nominators and validators.",
+                slug: '/learn-participants-index',
+              },
+              items: [
+                "learn/learn-collator",
+                "learn/learn-nominator",
+                "learn/learn-validator",
+              ],
+            },
             {
               type: "category",
               label: "Parachains",
