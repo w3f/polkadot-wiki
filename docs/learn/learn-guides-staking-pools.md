@@ -55,10 +55,12 @@ A pool can be pushed into the “destroying” state via one of:
 - The root and bouncer set the pool to “destroying”.
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
   been slashed.
-- When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
-  anyone can help all the members exit.
-- Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
-  wiped from the state.
+
+When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
+anyone can help all the members exit.
+
+The pool is destroyed once the depositor withdraws, no members belong to the pool, and all the
+pool’s resources are wiped from the state.
 
 ## Claim Rewards for Other Pool Members
 

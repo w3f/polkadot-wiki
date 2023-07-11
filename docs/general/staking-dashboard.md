@@ -139,7 +139,10 @@ most recently received rewards.
 :::info Joining a Nomination Pool - Walk-through video tutorial
 
 [This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a
-[nomination pool](../learn/learn-nomination-pools.md) with the Staking Dashboard.
+[nomination pool](../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read
+the
+[dedicated support article](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
+about joining a pool.
 
 :::
 
@@ -177,7 +180,7 @@ cannot simply swap memberships. You will need to unbond and go through the whole
   :::info
 
   For more information about how-to update your claim permissions with the staking dashboard see
-  this support article.
+  [this support article](https://support.polkadot.network/support/solutions/articles/65000182399-staking-dashboard-how-to-claim-nomination-pool-rewards#Permissionless-claiming).
 
   :::
 
@@ -197,19 +200,27 @@ cannot simply swap memberships. You will need to unbond and go through the whole
   :::info
 
   For more information about how-to manage commission of your nomination pool with the staking
-  dashboard see this support article.
+  dashboard see
+  [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#Pool-management-options).
 
   :::
 
   - Rename Pool: you can change the pool's name.
   - Lock Pool: you can lock the pool so that new members are not allowed.
   - Destroy Pool: you can destroy the pool. See
-    [this page](../learn/learn-guides-staking-pools.md#pool-destruction) for more information.
+    [this wiki page](../learn/learn-guides-staking-pools.md#pool-destruction) and
+    [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
+    for more information.
 
   You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards
   (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there
   are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
   panel, currently set to "Nominating and Earning Rewards".
+
+Note that if it is the first time you log in to the dashboard, you will see two
+buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a
+nomination poo, see
+[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool).
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
   highlighting the validator that is active and will pay rewards to the pool at the end of the era
