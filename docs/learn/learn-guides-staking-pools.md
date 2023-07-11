@@ -66,7 +66,7 @@ members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggl
 
 :::info
 
-You can easily destroy a pool using the
+As a pool admin, you can easily destroy a pool and permissionlessly remove all members using the
 [Polkadot Staking Dashboard](../general/staking-dashboard.md#pools). See
 [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
 for more information.
