@@ -32,7 +32,7 @@ the deposit to be bonded.
 
 When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the Depositor account by
 default. If any of these roles need to be assigned to a different account, create the pool using
-`create` extrinsic available on Developer > Extrinsics > nominationPools on Polkadot JS Apps UI.
+`create` extrinsic available in[ Developer > Extrinsics > nominationPools](https://polkadot.js.org/apps/#/extrinsics) on Polkadot JS Apps UI.
 
 ![Nomination Pool Roles](../assets/staking/Nomination-Pools-7.png)
 
