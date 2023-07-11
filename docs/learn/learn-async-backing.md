@@ -7,10 +7,10 @@ keywords: [parachains, slots, backing, parablock]
 slug: ../learn-async
 ---
 
-Asynchronous backing is a mechanism that introduces a _pipeline_ for parachain **<->** relay chain
-communication. This pipeline will allow collators to include more transactions/data in parachain
-blocks while reducing parablock validation times from around 12 to 6 seconds. In short, Asynchronous
-backing will speed up the parachain performance multifold.
+Asynchronous backing is a mechanism that introduces an enhancement to the block validation pipeline
+for parachain **<->** relay chain communication. This pipeline will allow collators to include more
+transactions/data in parablocks while reducing parablock validation times from around 12 to 6
+seconds. In short, asynchronous backing will speed up the parachain performance multifold.
 
 It has three overarching goals:
 
@@ -22,13 +22,29 @@ It has three overarching goals:
 
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
 time for parachain collators to fit more transactions and ready block candidates for backing and
-inclusion. Because asynchronous relies on the current context of a relay chain block, **contextual
-execution** refers to how a parablock can begin being built earlier through the context of future
-relay chain block(s).
+inclusion. **Contextual execution** refers to how a parablock can begin being built earlier through
+the context of future relay chain block(s).
+
+Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
+block, as the parablock anchors itself to it). This means that each parablock is limited to the
+window of the relay chain's block time.
+
+:::info
+
+It is important to note two following clarifications:
+
+1. The parablock is itself within the relay chain, but rather the **paraheader**
+2. The relay chain does not validate the entire state of a parachain, but only the state transitions
+   within that block.
+
+:::
+
+For more information on the validity and availability process, be sure to visit the
+[parachain protocol](../learn/learn-parachains-protocol.md) page.
 
 ## Synchronous Backing on Polkadot
 
-With synchronous backing, there was only about a single relaychain block, or 6-second window, to
+With synchronous backing, there was only about a single relay chain block, or 6-second window, to
 complete the parablock inclusion process. This was tightly coupled to the relay chain's progress,
 where blocks had to be created within this window:
 
@@ -79,11 +95,11 @@ inclusion.
 
 With asynchronous backing, the window is more than the span of around two blocks, or a ~12-second
 window. This enables more computational and storage time per block, as the context of the next relay
-chain block can kickstart the process of the next parablock.
+chain block can kickstart the process of validating next parablock.
 
-Notice that blocks can be bigger compared to what we have in synchronous backing, meaning more
-transactions per block. Due to the asynchrony, these blocks can be prepared in anticipation of being
-included later rather than keeping in sync with the relay chain's progress 1-1:
+Notice that blocks can contain more state transitions compared to synchronous backing, meaning more
+transactions per block. These blocks can be prepared in anticipation of being included later rather
+than keeping in sync with the relay chain's progress 1-1:
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '14px', 'tagLabelFontSize': '10px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
