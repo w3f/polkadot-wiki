@@ -25,7 +25,7 @@ navigate to Network > Staking > Pools and click on Add Pool button.
 
 ![Create Nomination Pools](../assets/staking/Nomination-Pools-1.png)
 
-The UI automatically assigns ID to the pool and allows for entering the name of the pools as well as
+The UI automatically assigns an ID to the pool and allows for entering the name of the pools and
 the deposit to be bonded.
 
 ![Create Nomination Pools - deposit](../assets/staking/Nomination-Pools-2.png)
