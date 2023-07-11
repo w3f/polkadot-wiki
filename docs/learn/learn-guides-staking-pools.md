@@ -6,8 +6,19 @@ description: Advanced How-to Guides about Nomination Pools.
 keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
 slug: ../learn-guides-staking-pools
 ---
+
 import RPC from "./../../components/RPC-Connection";
+
 ## Pool Creation
+
+:::info
+
+You easily create a pool using the
+[Polkadot Staking Dashboard](../general/staking-dashboard.md#pools). See
+[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool)
+for more information.
+
+:::
 
 The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
 funds to the pool to add themselves as the first member. As stated above, the depositor must always
@@ -25,23 +36,26 @@ navigate to Network > Staking > Pools and click on Add Pool button.
 
 ![Create Nomination Pools](../assets/staking/Nomination-Pools-1.png)
 
-The UI automatically assigns an ID to the pool and allows for entering the name of the pools and
-the deposit to be bonded.
+The UI automatically assigns an ID to the pool and allows for entering the name of the pools and the
+deposit to be bonded.
 
 ![Create Nomination Pools - deposit](../assets/staking/Nomination-Pools-2.png)
 
 When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the Depositor account by
 default. If any of these roles need to be assigned to a different account, create the pool using
-`create` extrinsic available in[ Developer > Extrinsics > nominationPools](https://polkadot.js.org/apps/#/extrinsics) on Polkadot JS Apps UI.
+`create` extrinsic available in
+[Developer > Extrinsics > nominationPools](https://polkadot.js.org/apps/#/extrinsics) on Polkadot JS
+Apps UI.
 
 ![Nomination Pool Roles](../assets/staking/Nomination-Pools-7.png)
 
 ## Pool Upkeep
 
 The nominator can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
-[Network > Staking > Accounts page](https://polkadot.js.org/apps/#/staking/actions) and click on Pooled button. If you have any pooled accounts with
-the role of nominator, you will notice the option to set nominees. Select the validators to nominate
-like you would normally using a nominator account.
+[Network > Staking > Accounts page](https://polkadot.js.org/apps/#/staking/actions) and click on
+Pooled button. If you have any pooled accounts with the role of nominator, you will notice the
+option to set nominees. Select the validators to nominate like you would normally using a nominator
+account.
 
 ![Nominate validators](../assets/staking/Nomination-Pools-5.png)
 
@@ -50,9 +64,22 @@ members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggl
 
 ## Pool Destruction
 
+:::info
+
+You can easily destroy a pool using the
+[Polkadot Staking Dashboard](../general/staking-dashboard.md#pools). See
+[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
+for more information.
+
+:::
+
 A pool can be pushed into the “destroying” state via one of:
 
-- The root and bouncer set the pool to “destroying”.
+- The root and bouncer set the pool to “destroying”. This can be done by submitting the
+  `nominationPools.setState(poolId, state)` extrinsic using the
+  [Polkadot-JS UI extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
+  specific ID of the pool and `state` must be set to "destroying". Other possible states are "open"
+  and "blocked".
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
   been slashed.
 
