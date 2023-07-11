@@ -219,7 +219,7 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 
 Note that if it is the first time you log in to the dashboard, you will see two
 buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a
-nomination poo, see
+nomination pool, see
 [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool).
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
