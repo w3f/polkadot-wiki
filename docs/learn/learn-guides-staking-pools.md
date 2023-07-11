@@ -6,7 +6,7 @@ description: Advanced How-to Guides about Nomination Pools.
 keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
 slug: ../learn-guides-staking-pools
 ---
-
+import RPC from "./../../components/RPC-Connection";
 ## Pool Creation
 
 The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
