@@ -39,7 +39,7 @@ default. If any of these roles need to be assigned to a different account, creat
 ## Pool Upkeep
 
 The nominator can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
-Network > Staking > Accounts page and click on Pooled button. If you have any pooled accounts with
+[Network > Staking > Accounts page](https://polkadot.js.org/apps/#/staking/actions) and click on Pooled button. If you have any pooled accounts with
 the role of nominator, you will notice the option to set nominees. Select the validators to nominate
 like you would normally using a nominator account.
 
