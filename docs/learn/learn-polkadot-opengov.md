@@ -362,8 +362,8 @@ The figure above shows the followings:
 - A referendum may exit the confirmation period when the thresholds are no longer met, due to new _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the confirmation
   period resets. For example, if the confirmation period is 20 minutes and a referendum enters it
   just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
-- If a referendum fails to be confirmed for at least the confirmation period, it fails, it does not
-  go to the enactment period, and it must be resubmitted (see below).
+- During the decision period, if a referendum fails to meet the approval and support thresholds for the duration of the track-specific confirmation period, it fails and does not
+  go to the enactment period. (it may have to be resubmitted, see below).
 - The current approval must be above 50% for a referendum to pass, and the approval curve never goes
   below 50%.
 
