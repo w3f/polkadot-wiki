@@ -256,7 +256,7 @@ Until they are in the lead-in period, proposals remain undecided. Once the crite
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
 the outcome.
 
-In (2), the proposal enters the **Deciding Period** where votes can be cast. For a proposal to be
+In (2), the proposal enters the **Decision Period** where votes can be cast. For a proposal to be
 approved, votes must satisfy the approval and support criteria for at least the **Confirmation
 Period**; otherwise, the proposal is automatically rejected. A rejected proposal can be resubmitted
 anytime and as many times as needed.
@@ -264,7 +264,7 @@ anytime and as many times as needed.
 In (3), approved proposals will enter the **Enactment Period**, after which proposed changes will be
 executed.
 
-Note how the length of the lead-in, deciding, confirmation, and enactment periods vary depending on
+Note how the length of the lead-in, decision, confirmation, and enactment periods vary depending on
 the origin. Root origin has more extended periods than the other origins. Also, the number of
 referenda within each track differs, with the Root origin track only accepting one. proposal at a
 time (see below).
@@ -275,7 +275,7 @@ This directly affects the number of proposals that can be voted on and executed 
 Continuing the comparison between Root and Small Tipper, Small Tipper will allow many proposals on
 its track to be executed simultaneously. In contrast, Root will allow only one proposal in its
 track. Once the track capacity is filled, additional proposals in the lead-in period will queue
-until place is available to enter the deciding period.
+until place is available to enter the decision period.
 
 ### Origins and Tracks
 
