@@ -87,10 +87,9 @@ This page of the dashboard has six main panels:
 
 - **Section B: The Accounts Panel** allows you to connect one account to the dashboard. Once
   connected, the account will appear next to the `Accounts` button. You can see it here if you are
-  active as a nominator and/or a pool member. In this case, the account KSM Stash is a nominator
-  (with no controller) and a member of the pool Insight Finance. Controller accounts are also shown
-  here if applicable. Note that the dashboard will automatically fetch the stash or the controller
-  as a read-only account if you connect one or the other.
+  active as a nominator and/or a pool member. In this case, the account KSM Stash is a nominator and
+  a member of the pool Insight Finance. Proxy accounts are also shown here if applicable. Note that
+  the dashboard will automatically fetch the stash and the proxy.
 
 Note that Sections A and B will always be visible while you use the dashboard.
 
@@ -278,10 +277,8 @@ The dashboard will automatically check this for you and prompt a banner.
   whole bonded amount and stop nominating. In the middle of the panel, the payout destination is
   currently set to "Compounding" (i.e. rewards are added to the bonded funds). The `Update` button
   will allow you to change the destination to "To Your Account" (to the stash account as a free
-  balance), "To Another Account" (an account that is not the stash or controller), "To Controller
-  Account" or "None" (no payout destination). The bottom part of the panel shows the controller
-  account, currently set to KSM Stash (the stash is also the controller). The `Change` button allows
-  you to set a controller.
+  balance), "To Another Account" (an account that is not the stash), or "None" (no payout
+  destination).
 - **Section D: The Nominations panel** shows your nominations and allows you to stop all nomination
   with the `Stop` button or to select specific validators (`Select` button) and stop nominating only
   those.

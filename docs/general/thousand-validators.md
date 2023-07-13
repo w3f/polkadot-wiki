@@ -59,7 +59,7 @@ and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The pro
 - {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
   (exceptions by approval for good intentions)
 - {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
-- Separate controller and stash (or have a Staking proxy set up)
+- Have a staking proxy set up
 - Must be on the latest release
 - {{ polkadot: Maximum one node per applicant :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
 - Validators must operate nodes themselves, they may not be operated by third parties or staking
@@ -67,20 +67,20 @@ and fill in the [application form](https://forms.gle/xqYLoceTwg1qvc9i6). The pro
 
 #### Nominators
 
-The below addresses are the stash / controller pairs for the primary nominators involved in the
+The below addresses are the stash / staking proxy pairs for the primary nominators involved in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators programme. They
-are formatted like "`stash` / `controller`".
+are formatted like "`stash` / `staking proxy`".
 
-{{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw` :polkadot }}
-{{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq` :kusama }}
+{{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
+{{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 
-{{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU` :polkadot }}
-{{ kusama: - `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ` :kusama }}
+{{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
+{{ kusama: - `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 
-{{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd` :polkadot }}
-{{ kusama: - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V` :kusama }}
+{{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
+{{ kusama: - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 
-{{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `1324GSzD4bfBYj6ZnJjvMzWCjCJqwdVRNyyzgcncyX8C1VEN` :polkadot }}
+{{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
 
 A time delay proxy is used as the interaction method for some of these accounts.
 

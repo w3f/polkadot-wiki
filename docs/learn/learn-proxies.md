@@ -21,13 +21,11 @@ testnet, you can comfortably replicate the procedure on the main networks.
 
 :::
 
-Much like controller accounts in
-[staking](learn-staking.md#stash-and-controller-accounts-for-staking), proxies allow users to use an
-account (it can be in cold storage or a hot wallet) less frequently but actively participate in the
-network with the weight of the tokens in that account. Proxies can be viewed as a more powerful and
-flexible version of a controller account, i.e. proxies are allowed to perform a limited amount of
-actions related to specific [substrate pallets](https://docs.substrate.io/reference/frame-pallets/)
-on behalf of another account. The video below contains more information about using proxies.
+Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
+but actively participate in the network with the weight of the tokens in that account. Proxies are
+allowed to perform a limited amount of actions related to specific
+[substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another
+account. The video below contains more information about using proxies.
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
@@ -51,28 +49,28 @@ the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as
 your primary token-holding account and don't want to access it very often, but you want to
 participate in staking to earn staking rewards. You could set one of your existing accounts as a
-staking proxy for that stash account. The stash account is also the controller here, but it does not
-matter because you will always use your staking proxy to sign staking-related transactions.
+staking proxy for that stash account, and use your staking proxy to sign all staking-related
+transactions.
 
 ![proxies](../assets/controller-vs-staking-proxy.png)
 
-If you just use a controller that is not a staking proxy, the stash account will still have to sign
-for some staking-related transactions such as _bond more funds_ and _change controller account_
-(Figure _left_). But if you have a staking proxy, everything will be signed by the proxy, making the
-stash account even more isolated (Figure _right_). In other words, the account assigned as a staking
-proxy of the stash can participate in staking on behalf of that stash. If the proxy is compromised,
-it doesn't have access to transfer-related transactions, so the stash account could just set a new
-proxy to replace it.
+Having a staking proxy will make the stash account isolated within the staking context. In other
+words, the account assigned as a staking proxy can participate in staking on behalf of that stash.
+If the proxy is compromised, it doesn't have access to transfer-related transactions, so the stash
+account could just set a new proxy to replace it. You can also monitor proxies by
+[setting a time-delay](#time-delayed-proxy).
 
 Creating multiple proxy accounts that act for a single account, lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
-participate in a network.
+participate in the network.
 
 :::info
 
 The **maximum number of proxies** allowed for a single account is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }}
+
+You can have the same proxy for multiple accounts.
 
 :::
 
@@ -153,14 +151,9 @@ detailed information about staking proxies.
 
 :::
 
-The **Staking** type allows staking-related transactions. Do not confuse a staking proxy with the
-controller account. Within the staking pallet, some transactions must come from the stash account,
-while others must come from the controller account. The stash account is meant to stay in cold
-storage, while the controller account makes day-to-day transactions like setting session keys or
-deciding which validators to nominate. The stash account still needs to make some transactions such
-as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_
-of stash and controller accounts but does allow the stash to be accessed even less frequently than
-using a controller account.
+The **Staking** type allows all staking-related transactions. The stash account is meant to stay in
+cold storage, while the staking proxy account makes day-to-day transactions like setting session
+keys or deciding which validators to nominate.
 
 The staking proxy can fully access Staking, Session, Utility and Fast Unstake pallets.
 

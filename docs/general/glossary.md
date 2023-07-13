@@ -621,8 +621,7 @@ Validators can only join or exit the validator set at a session change.
 
 ## Session Certificate
 
-A message containing a signature on the concatenation of all the Session keys. Signed by the
-Controller.
+A message containing a signature on the concatenation of all the Session keys.
 
 ## Session Key
 

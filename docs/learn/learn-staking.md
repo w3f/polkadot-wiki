@@ -335,36 +335,39 @@ for the health of the network and increased staking rewards. See
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 support article to understand in detail how to select the set of validators to nominate.
 
-### Stash and Controller Accounts for Staking
+### Stash Account and Staking Proxy
 
 Two different accounts can be used to securely manage your funds while staking.
 
-- **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  controller account. As a result, you may actively participate in staking with a stash private key
-  kept in a cold wallet like Ledger, meaning it stays offline all the time. Stash account keys are
-  used to sign staking actions such as bonding additional funds.
+- **Stash:** This account holds funds bonded for staking, but delegates all staking functions to a
+  staking proxy account. You may actively participate in staking with a stash private key kept in a
+  cold wallet like Ledger, meaning it stays offline all the time. Having a staking proxy will allow
+  you to sign all staking-related transactions with the proxy instead of using your Ledger device.
+  This will allow you:
 
-- **Controller:** This account acts on behalf of the stash account, signaling decisions about
+  - to avoid carrying around your Ledger device just to sign staking-related transactions, and
+  - to and to keep the transaction history of your stash clean
+
+- **Staking Proxy:** This account acts on behalf of the stash account, signaling decisions about
   nominating and validating. It can set preferences like commission (for validators) and the staking
   rewards payout account. The earned rewards can be bonded (locked) immediately for bonding on your
   stash account, which would effectively compound the rewards you receive over time. You could also
-  choose to have them deposited to your controller account or a different account as a free
-  (transferable) balance. If you are a validator, it can also be used to set your
-  [session keys](learn-cryptography.md). Controller accounts only need sufficient funds to pay for
-  the transaction fees.
+  choose to have them deposited to a different account as a free (transferable) balance. If you are
+  a validator, it can also be used to set your [session keys](learn-cryptography.md). Staking
+  proxies only need sufficient funds to pay for the transaction fees.
 
 :::warning
 
-Never leave a high balance on a controller account which are usually "hot" as their private key is
-stored on the device (PC, phone) and it is always exposed to the internet for potential hacks and
-scams. It is good practice to deposit rewards on the stash account or to send them to another
-account on a cold wallet.
+Never leave a high balance on a proxy account which are usually "hot" as their private key is stored
+on the device (PC, phone) and it is always exposed to the internet for potential hacks and scams. It
+is good practice to deposit rewards on the stash account or to send them to another account on a
+cold wallet.
 
 :::
 
 ![staking](../assets/stash-controller.png)
 
-This hierarchy of separate keys for stash and controller accounts was designed to add a layer of
+This hierarchy of separate keys for stash and staking accounts was designed to add a layer of
 protection to nominators and validator operators. The more often one exposes and uses a private key,
 the higher its vulnerability for hacks or scams. So, if one uses a key for multiple roles on a
 blockchain network, it is likely that the account can get compromised. Note that the damage linked
@@ -375,11 +378,10 @@ found [here](../learn/learn-accounts.md/#derivation-paths).
 :::info
 
 For Ledger users staking directly on Ledger Live, currently, there is no option to use separate
-stash and controller accounts. That is if you stake on Ledger Live your stash account will be your
-controller too.
+stash and staking proxy accounts.
 
 Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import
-their Ledger accounts in the extension and use them as a stash and controller. You can find more
+their Ledger accounts in the extension and use them as a stash in staking. You can find more
 information about Talisman and other wallets that officially secured funding from the treasury
 [here](../general/wallets-and-extensions.md).
 
@@ -433,10 +435,9 @@ days, nominators should check if they have pending payouts at least this often.
 
 :::
 
-Rewards can be directed to the same account used to sign the payout (controller), or to the stash
-account (and either increasing the staked value or not increasing the staked value), or to a
-completely unrelated account. It is also possible to top-up / withdraw some bonded tokens without
-having to un-stake all staked tokens.
+Rewards can be directed to the same account used to sign the payout or to a completely unrelated
+account. It is also possible to top-up / withdraw some bonded tokens without having to un-stake all
+staked tokens.
 
 If you wish to know if you received a payout, you will have to check via a block explorer. See
 [the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
