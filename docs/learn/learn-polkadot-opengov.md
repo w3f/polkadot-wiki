@@ -343,12 +343,6 @@ The figure above shows the followings:
 - Even if the approval threshold is reached (i.e. % of current approval is greater than the
   approval curve), the proposal only enters the confirmation period once the support threshold is
   also reached (i.e. % current support is greater than the underlying support curve).
-- Decreasing in % of current approval does not translate into increasing support because support
-  does not consider _nay_ votes. This avoids edge situations where _nay_ votes could push a
-  referendum into confirming state. For example, imagine current approval is high (near 100%, way
-  above the approval curve), and current support is just below the support curve. A _nay_ could bump
-  support above the support curve but not reduce approval below the approval curve. Therefore
-  someone voting against a proposal would make it pass.
 - If the referendum meets the criteria for the confirmation period, then the proposal is approved
   and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
   but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
