@@ -340,30 +340,34 @@ satisfy the approval and support criteria for the **Confirmation Period**.
 
 :::info Nay votes are not counted towards Support
 
-  Support is a measure of voters who turned out either in favor of the referenda and who consciously abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_ votes could push a
-  referendum into confirming state. For example, imagine current approval is high (near 100%, way
-  above the approval curve), and current support is just below the support curve. A _nay_ could bump
-  support above the support curve but not reduce approval below the approval curve. Therefore
-  someone voting against a proposal would make it pass. Hence, a decrease in % of current approval through new 
- votes does not directly translate into increasing support because Support needs to consider _nay_ votes. 
+Support is a measure of voters who turned out either in favor of the referenda and who consciously
+abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_
+votes could push a referendum into confirming state. For example, imagine current approval is high
+(near 100%, way above the approval curve), and current support is just below the support curve. A
+_nay_ could bump support above the support curve but not reduce approval below the approval curve.
+Therefore someone voting against a proposal would make it pass. Hence, a decrease in % of current
+approval through new votes does not directly translate into increasing support because Support needs
+to consider _nay_ votes.
 
 :::
 
 The figure above shows the followings:
 
-- Even if the approval threshold is reached (i.e. % of current approval is greater than the
-  approval curve), the proposal only enters the confirmation period once the support threshold is
-  also reached (i.e. % current support is greater than the underlying support curve).
+- Even if the approval threshold is reached (i.e. % of current approval is greater than the approval
+  curve), the proposal only enters the confirmation period once the support threshold is also
+  reached (i.e. % current support is greater than the underlying support curve).
 - If the referendum meets the criteria for the confirmation period, then the proposal is approved
   and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
   but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
   Enactment Period to ensure the network has ample time to prepare for any changes the proposal may
   bring.
-- A referendum may exit the confirmation period when the thresholds are no longer met, due to new _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the confirmation
-  period resets. For example, if the confirmation period is 20 minutes and a referendum enters it
-  just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
-- During the decision period, if a referendum fails to meet the approval and support thresholds for the duration of the track-specific confirmation period, it fails and does not
-  go to the enactment period. (it may have to be resubmitted, see below).
+- A referendum may exit the confirmation period when the thresholds are no longer met, due to new
+  _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the
+  confirmation period resets. For example, if the confirmation period is 20 minutes and a referendum
+  enters it just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
+- During the decision period, if a referendum fails to meet the approval and support thresholds for
+  the duration of the track-specific confirmation period, it fails and does not go to the enactment
+  period (it may have to be resubmitted, see below).
 - The current approval must be above 50% for a referendum to pass, and the approval curve never goes
   below 50%.
 
