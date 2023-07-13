@@ -340,9 +340,9 @@ satisfy the approval and support criteria for the **Confirmation Period**.
 
 The figure above shows the followings:
 
-- Even if the approval criteria are satisfied (i.e. % of current approval is greater than the
-  approval curve), the proposal only enters the confirmation period once the support criteria are
-  also satisfied (i.e. % current support is greater than the support curve).
+- Even if the approval threshold is reached (i.e. % of current approval is greater than the
+  approval curve), the proposal only enters the confirmation period once the support threshold is
+  also reached (i.e. % current support is greater than the underlying support curve).
 - Decreasing in % of current approval does not translate into increasing support because support
   does not consider _nay_ votes. This avoids edge situations where _nay_ votes could push a
   referendum into confirming state. For example, imagine current approval is high (near 100%, way
