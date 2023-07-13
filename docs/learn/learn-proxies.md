@@ -52,12 +52,13 @@ participate in staking to earn staking rewards. You could set one of your existi
 staking proxy for that stash account, and use your staking proxy to sign all staking-related
 transactions.
 
-![proxies](../assets/controller-vs-staking-proxy.png)
+![proxies](../assets/stash-vs-stash-and-staking-proxy.png)
 
 Having a staking proxy will make the stash account isolated within the staking context. In other
 words, the account assigned as a staking proxy can participate in staking on behalf of that stash.
-If the proxy is compromised, it doesn't have access to transfer-related transactions, so the stash
-account could just set a new proxy to replace it. You can also monitor proxies by
+Without the proxy you will need to sign all the staking-related transactions with the stash. If the
+proxy is compromised, it doesn't have access to transfer-related transactions, so the stash account
+could just set a new proxy to replace it. You can also monitor proxies by
 [setting a time-delay](#time-delayed-proxy).
 
 Creating multiple proxy accounts that act for a single account, lets you come up with more granular
@@ -88,13 +89,14 @@ To create a **proxy account** read
 You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
 proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
 
-- Any
-- Non-transfer
-- Governance
-- Staking
-- Identity Judgement
-- Cancel
-- Auction
+- [Any](#any-proxy)
+- [Non-transfer](#non-transfer-proxy)
+- [Governance](#governance-proxy)
+- [Staking](#staking-proxy)
+- [Identity Judgement](#identity-judgement-proxy)
+- [Cancel](#cancel-proxy)
+- [Auction](#auction-proxy)
+- [Nomination pool](#nomination-pools-proxy)
 
 When a proxy account makes a transaction,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
@@ -276,13 +278,10 @@ and the `announcementDepositFactor` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
 
-Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
-fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
-Charly submits an extrinsic to change the controller to Bob, such extrinsic can be rejected by
-Eleanor. Bob can be even more malicious than Charly and change the reward destination to another
-account he only controls. Remember that Eleanor added Charly as proxy, but she might not want to add
-Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
-can spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
+Let's take for example the stash account Eleanor setting Bob as a time-delayed staking proxy. In
+this way, if Bob submits an extrinsic to change the reward destination, such extrinsic can be
+rejected by Eleanor. This implies that Eleanor monitors Bob, and that within the time-delay she can
+spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
 account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
 check the hashes for the calls made by the proxy accounts and the block height at which they are
 enabled for execution.
@@ -293,8 +292,8 @@ enabled for execution.
 
 If you try to use `proxy.proxyAnnounced` to execute the call within the time-delay window you will
 get an error "Proxy unannounced" since the announcement will be done after the time delay. Also note
-that regular `proxy.proxy`calls do not work with time-delayed proxies, you need to announce the call
-first and then execute the announced call on a separate transaction.
+that regular `proxy.proxy` calls do not work with time-delayed proxies, you need to announce the
+call first and then execute the announced call on a separate transaction.
 
 :::
 

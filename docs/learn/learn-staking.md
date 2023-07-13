@@ -365,7 +365,7 @@ cold wallet.
 
 :::
 
-![staking](../assets/stash-controller.png)
+![staking](../assets/stash-and-staking-proxy.png)
 
 This hierarchy of separate keys for stash and staking accounts was designed to add a layer of
 protection to nominators and validator operators. The more often one exposes and uses a private key,
