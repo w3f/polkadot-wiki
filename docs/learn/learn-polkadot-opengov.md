@@ -335,7 +335,8 @@ satisfy the approval and support criteria for the **Confirmation Period**.
 - **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
   [conviction](#voluntary-locking)) against the total vote-weight (_aye_, _nay_, and _abstained_).
 - **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
-  conviction) compared to the total possible votes that could be made in the system.
+  conviction) compared to the total possible votes that could be made in the system. In case of
+  _split_ votes, only _aye_ and _abstain_ will count.
 
 The figure above shows the followings:
 
@@ -358,8 +359,13 @@ The figure above shows the followings:
   just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
 - If a referendum fails to be confirmed for at least the confirmation period, it fails, it does not
   go to the enactment period, and it must be resubmitted (see below).
+- The current approval must be above 50% for a referendum to pass, and the approval curve never goes
+  below 50%.
 
 ![opengov-curves-pass](../assets/opengov-curves-nopass.png)
+
+Note that support may not increase monotonically as shown in the figure, as people might switch
+votes.
 
 Different Origins' tracks have different Confirmation Periods and requirements for approval and
 support. For additional details on the various origins and tracks, check out
