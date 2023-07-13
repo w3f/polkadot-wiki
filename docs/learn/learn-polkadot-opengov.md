@@ -256,7 +256,7 @@ Until they are in the lead-in period, proposals remain undecided. Once the crite
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
 the outcome.
 
-In (2), the proposal enters the **Deciding Period** where votes can be cast. For a proposal to be
+In (2), the proposal enters the **Decision Period** where votes can be cast. For a proposal to be
 approved, votes must satisfy the approval and support criteria for at least the **Confirmation
 Period**; otherwise, the proposal is automatically rejected. A rejected proposal can be resubmitted
 anytime and as many times as needed.
@@ -264,7 +264,7 @@ anytime and as many times as needed.
 In (3), approved proposals will enter the **Enactment Period**, after which proposed changes will be
 executed.
 
-Note how the length of the lead-in, deciding, confirmation, and enactment periods vary depending on
+Note how the length of the lead-in, decision, confirmation, and enactment periods vary depending on
 the origin. Root origin has more extended periods than the other origins. Also, the number of
 referenda within each track differs, with the Root origin track only accepting one. proposal at a
 time (see below).
@@ -275,7 +275,7 @@ This directly affects the number of proposals that can be voted on and executed 
 Continuing the comparison between Root and Small Tipper, Small Tipper will allow many proposals on
 its track to be executed simultaneously. In contrast, Root will allow only one proposal in its
 track. Once the track capacity is filled, additional proposals in the lead-in period will queue
-until place is available to enter the deciding period.
+until place is available to enter the decision period.
 
 ### Origins and Tracks
 
@@ -302,16 +302,15 @@ include:
 - **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
   the Decision Period. The approval % is the portion of _aye_ votes (adjusted for conviction) over
   the total votes (_aye_, _nay_, and _abstained_).
-- **Support Curve**: the curve describing the minimum % of all votes as a function of time within
-  the Decision Period. The support % is defined as the portion of all votes without conviction (i.e.
-  _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
-  measure of turnout.
+- **Support Curve**: the curve describing the minimum % of all votes in support of a proposal as a
+  function of time within the Decision Period. The support % is defined as the portion of all votes
+  (_aye_ and _abstained_) without conviction over the total possible amount of votes in the system
+  (i.e. the total issuance).
 
 For example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
 implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
-therefore different Origins for these two actions are needed in which different deposits, turnouts
-(i.e. support), approvals, and a minimum [enactment](#enactment) periods will be predetermined on
-the pallet.
+therefore different Origins for these two actions are needed in which different deposits, support,
+approval, and a minimum [enactment](#enactment) periods will be predetermined on the pallet.
 
 For detailed information about origin and tracks, and parameter values in Kusama, see
 [this page](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info).
@@ -325,7 +324,7 @@ in Governance V1 has been replaced with the **Approval and Support system**.
 
 :::
 
-![opengov-approval-support](../assets/opengov-approval-support.png)
+![opengov-curves-pass](../assets/opengov-curves-pass.png)
 
 The figure above provides a summary view of how the approval and support system works during the
 Decision Period.
@@ -334,27 +333,56 @@ Once the proposal exits the Lead-in Period and enters the Voting Period, to be a
 satisfy the approval and support criteria for the **Confirmation Period**.
 
 - **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
-  [conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
-  abstained).
-- **Support** is the total number of votes (ignoring any adjustment for conviction) compared to the
-  total possible votes that could be made in the system.
+  [conviction](#voluntary-locking)) against the total vote-weight (_aye_, _nay_, and _abstained_).
+- **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
+  conviction) compared to the total possible votes that could be made in the system. In case of
+  _split_ votes, only _aye_ and _abstain_ will count.
 
-The figure shows that even if the approval criteria are satisfied (i.e. % approval is greater than
-the approval curve), the proposal only enters the confirmation period once the support criteria are
-satisfied (i.e. % support is greater than the support curve). If the referendum meets the criteria
-for the confirmation period, then the proposal is approved and scheduled for enactment. The
-Enactment Period can be specified when the referendum is proposed but is also subject to a minimum
-value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the
-network has ample time to prepare for any changes the proposal may bring.
+:::info Nay votes are not counted towards Support
+
+Support is a measure of voters who turned out either in favor of the referenda and who consciously
+abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_
+votes could push a referendum into confirming state. For example, imagine current approval is high
+(near 100%, way above the approval curve), and current support is just below the support curve. A
+_nay_ could bump support above the support curve but not reduce approval below the approval curve.
+Therefore someone voting against a proposal would make it pass. Hence, a decrease in % of current
+approval through new votes does not directly translate into increasing support because Support needs
+to consider _nay_ votes.
+
+:::
+
+The figure above shows the followings:
+
+- Even if the approval threshold is reached (i.e. % of current approval is greater than the approval
+  curve), the proposal only enters the confirmation period once the support threshold is also
+  reached (i.e. % current support is greater than the underlying support curve).
+- If the referendum meets the criteria for the confirmation period, then the proposal is approved
+  and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
+  but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
+  Enactment Period to ensure the network has ample time to prepare for any changes the proposal may
+  bring.
+- A referendum may exit the confirmation period when the thresholds are no longer met, due to new
+  _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the
+  confirmation period resets. For example, if the confirmation period is 20 minutes and a referendum
+  enters it just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
+- During the decision period, if a referendum fails to meet the approval and support thresholds for
+  the duration of the track-specific confirmation period, it fails and does not go to the enactment
+  period (it may have to be resubmitted, see below).
+- The current approval must be above 50% for a referendum to pass, and the approval curve never goes
+  below 50%.
+
+![opengov-curves-pass](../assets/opengov-curves-nopass.png)
+
+Note that support may not increase monotonically as shown in the figure, as people might switch
+votes.
 
 Different Origins' tracks have different Confirmation Periods and requirements for approval and
 support. For additional details on the various origins and tracks, check out
 [this table](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info). Configuring
 the amount of support and overall approval required for it to pass is now possible. With proposals
-that use less privileged origins, it is far more reasonable to drop the required support (i.e.
-turnout) to a more realistic amount earlier than those which use highly privileged classes such as
-`Root`. Classes with more significance can be made to require higher approval early on, to avoid
-controversy.
+that use less privileged origins, it is far more reasonable to drop the required support to a more
+realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
+more significance can be made to require higher approval early on, to avoid controversy.
 
 ### Enactment
 
@@ -425,8 +453,8 @@ control over the funds of the delegating account: they can vote with a user's vo
 won't be able to transfer your balance, nominate a different set of validators or execute any call
 other than voting on the defined call/s by the user.
 
-With the new delegation features, the goal is to ensure the required turnouts for proposals to be
-enacted are reached while maintaining the anonymity of voters and keeping the overall design
+With the new delegation features, the goal is to ensure the required support for proposals to be
+enacted is reached while maintaining the anonymity of voters and keeping the overall design
 censorship-free.
 
 For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, check out the
