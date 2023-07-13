@@ -338,6 +338,17 @@ satisfy the approval and support criteria for the **Confirmation Period**.
   conviction) compared to the total possible votes that could be made in the system. In case of
   _split_ votes, only _aye_ and _abstain_ will count.
 
+:::info Nay votes are not counted towards Support
+
+  Support is a measure of voters who turned out either in favor of the referenda and who consciously abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_ votes could push a
+  referendum into confirming state. For example, imagine current approval is high (near 100%, way
+  above the approval curve), and current support is just below the support curve. A _nay_ could bump
+  support above the support curve but not reduce approval below the approval curve. Therefore
+  someone voting against a proposal would make it pass. Hence, a decrease in % of current approval through new 
+ votes does not directly translate into increasing support because Support needs to consider _nay_ votes. 
+
+:::
+
 The figure above shows the followings:
 
 - Even if the approval threshold is reached (i.e. % of current approval is greater than the
