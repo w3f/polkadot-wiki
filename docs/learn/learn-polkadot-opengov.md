@@ -342,12 +342,12 @@ The figure above shows the followings:
 - Even if the approval criteria are satisfied (i.e. % of current approval is greater than the
   approval curve), the proposal only enters the confirmation period once the support criteria are
   also satisfied (i.e. % current support is greater than the support curve).
-- Decreasing in % of current approval does not translates into increasing support because support
-  does not consider _nay_ votes. This is to avoid edge situations where _nay_ votes could push a
+- Decreasing in % of current approval does not translate into increasing support because support
+  does not consider _nay_ votes. This avoids edge situations where _nay_ votes could push a
   referendum into confirming state. For example, imagine current approval is high (near 100%, way
-  above the approval curve) and current support is just below the support curve. A _nay_ could bump
-  support above the support curve, but not reduce approval below the approval curve. Therefore
-  someone voting against a proposal would actually make it pass.
+  above the approval curve), and current support is just below the support curve. A _nay_ could bump
+  support above the support curve but not reduce approval below the approval curve. Therefore
+  someone voting against a proposal would make it pass.
 - If the referendum meets the criteria for the confirmation period, then the proposal is approved
   and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
   but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
@@ -355,7 +355,7 @@ The figure above shows the followings:
   bring.
 - A referendum can enter and exit the confirmation period. Each time it exits, the confirmation
   period resets. For example, if the confirmation period is 20 minutes and a referendum enters it
-  just for 5 min, next time it enters, it must stay for 20 minutes (not 15 minutes).
+  just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
 - If a referendum fails to be confirmed for at least the confirmation period, it fails, it does not
   go to the enactment period, and it must be resubmitted (see below).
 
