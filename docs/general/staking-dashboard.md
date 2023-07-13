@@ -12,10 +12,11 @@ import RPC from "./../../components/RPC-Connection";
 :::info Preliminary Notes
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) supports
-[**proxy accounts**](../learn/learn-proxies.md). You can set your stash to controller with one click
-and import your [staking proxy](../learn/learn-staking-advanced.md#staking-proxies) (for nominators)
-or [non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins
-and members).
+[**proxy accounts**](../learn/learn-proxies.md). You can set your stash to
+[controller](../learn/learn-controller.md) with one click and import your
+[staking proxy](../learn/learn-staking-advanced.md#staking-proxies) (for nominators) or
+[non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins and
+members).
 
 The dashboard also has **native [Ledger](./ledger.md) support**, meaning that you do not need an
 extension or a wallet to use it; you just need your Ledger device.
