@@ -54,9 +54,9 @@ You can have a rough estimate on that by using the methods listed
 [here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
 To be elected into the set, you need a minimum stake behind your validator. This stake can come from
 yourself or from [nominators](../learn/learn-nominator.md). This means that as a minimum, you will
-need enough DOT to set up Stash and Controller [accounts](../learn/learn-cryptography.md) with the
-existential deposit, plus a little extra for transaction fees. The rest can come from nominators. To
-understand how validators are elected, check the
+need enough DOT to set up stash and staking proxy [accounts](../learn/learn-cryptography.md) with
+the existential deposit, plus a little extra for transaction fees. The rest can come from
+nominators. To understand how validators are elected, check the
 [NPoS Election algorithms](../learn/learn-phragmen.md) page.
 
 :::info On-Chain Data for Reference
@@ -520,10 +520,10 @@ a non-canonical chain.
 
 ## Bond DOT
 
-It is highly recommended that you make your controller and stash accounts be two separate accounts.
-For this, you will create two accounts and make sure each of them have at least enough funds to pay
-the fees for making transactions. Keep most of your funds in the stash account since it is meant to
-be the custodian of your staking funds.
+It is highly recommended that you set a stash account and a staking proxy. For this, you will create
+two accounts and make sure each of them have at least enough funds to pay the fees for making
+transactions. Keep most of your funds in the stash account since it is meant to be the custodian of
+your staking funds.
 
 Make sure not to bond all your DOT balance since you will be unable to pay transaction fees from
 your bonded balance.
@@ -532,7 +532,7 @@ It is now time to set up our validator. We will do the following:
 
 - Bond the DOT of the Stash account. These DOT will be put at stake for the security of the network
   and can be slashed.
-- Select the Controller. This is the account that will decide when to start or stop validating.
+- Select the staking proxy. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "+ Stash" button.
@@ -542,8 +542,8 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 - **Stash account** - Select your Stash account. In this example, we will bond 1 DOT, where the
   minimum bonding amount is 1. Make sure that your Stash account contains _at least_ this much. You
   can, of course, stake more than this.
-- **Controller account** - Select the Controller account created earlier. This account will also
-  need a small amount of DOT in order to start and stop validating.
+- **Staking proxy account** - Select the staking proxy account created earlier. This account will
+  also need a small amount of DOT in order to start and stop validating.
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
@@ -552,8 +552,8 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   [here](../learn/learn-staking.md/#reward-distribution). Starting with runtime version v23 natively
   included in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3),
   payouts can go to any custom address. If you'd like to redirect payments to an account that is
-  neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set
-  an exchange address as the recipient of the staking rewards.
+  neither the staking proxy nor the stash account, set one up. Note that it is extremely unsafe to
+  set an exchange address as the recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
@@ -618,7 +618,7 @@ people are using telemetry, it is recommended that you choose something likely t
 ### Generating the Session Keys
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
-associates your validator node with your Controller account on Polkadot.
+associates your validator node with your stash account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
@@ -654,7 +654,7 @@ You can restart your node at this point.
 ### Submitting the `setKeys` Transaction
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
-associates your validator with your Controller account.
+associates your validator with your staking proxy.
 
 Go to [Staking > Account Actions](https://polkadot.js.org/apps/#/staking/actions), and click "Set
 Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys`

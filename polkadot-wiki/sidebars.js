@@ -404,6 +404,7 @@ module.exports = {
             "learn/learn-treasury",
             "learn/learn-launch",
             "learn/learn-redenomination",
+            "learn/learn-controller",
           ],
         },
       ],

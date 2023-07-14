@@ -47,18 +47,18 @@ If you are a beginner, please watch the video below for detailed instructions.
 
 <iframe width="560" height="315" src="https://youtube.com/embed/F59N3YKYCRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-## Setting up Stash and Controller Accounts
+## Setting up Stash and Staking Proxy Accounts
 
-Nominators are recommended to set up separate stash and controller accounts. Explanation and the
+Nominators are recommended to set up separate stash and staking proxy accounts. Explanation and the
 reasoning for generating distinct accounts for this purpose is elaborated in the
 [keys](../learn/learn-cryptography.md#keys) section of the Wiki.
 
-You can generate your stash and controller account via any of the recommended methods, which are
+You can generate your stash and staking proxy account via any of the recommended methods, which are
 detailed on the [account generation](../learn/learn-account-generation.md) page.
 
 Starting with runtime version v23 natively included in the client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
-address. If you'd like to redirect payments to an account that is neither the controller nor the
+address. If you'd like to redirect payments to an account that is neither the staking proxy nor the
 stash account, set one up. Note that setting an exchange address as the recipient of the staking
 rewards is extremely unsafe.
 
