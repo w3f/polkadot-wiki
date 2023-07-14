@@ -618,7 +618,7 @@ people are using telemetry, it is recommended that you choose something likely t
 ### Generating the Session Keys
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
-associates your validator node with your account on Polkadot.
+associates your validator node with your stash account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
