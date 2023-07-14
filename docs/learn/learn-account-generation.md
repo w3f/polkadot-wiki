@@ -3,7 +3,7 @@ id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
 description: Generate a Polkadot Basic Account.
-keywords: [account, account generation, polkadot account, polkadotjs]
+keywords: [account, account generation, polkadot account, polkadotjs, polkadot vault, ledger]
 slug: ../learn-account-generation
 ---
 
@@ -27,83 +27,51 @@ for more information about key security.
 
 ## Ways to Generate an Account
 
-<iframe width="560" height="315" src="https://youtube.com/embed/DNU0p5G0Gqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+:::info Treasury-funded Wallets and Browser Extensions
 
-The **most user-friendly** way to create a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} address is through the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
-to generate your account - the accounts are stored only in your browser, so purging the cache will
-also wipe your accounts. You would then have to recreate them using the seed phrase given to you by
-the UI - this will also restore all your previously held balances.
-
-:::info local in-browser account storage is disabled by default on the Polkadot-JS UI
-
-To create an account using the Polkadot-JS UI, navigate to settings > account options and click on
-allow local in-browser account storage in the drop-down menu.
+You can create accounts using treasury-funded
+[wallets and extensions](../general/wallets-and-extensions.md). Bear in mind that some of these are
+**unaudited** and are not officially affiliated with Web3 Foundation or the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless otherwise stated.
 
 :::
 
-A **more convenient and recommended** method of keeping the accounts stored on your computer is
-using the [Polkadot browser extension](https://github.com/polkadot-js/extension). This extension
-remembers your accounts and allows you to clear your browser cache without fear. Remember to back up
-your seed phrase - if you lose access to this computer or the extension somehow crashes beyond
-repair, the seed phrase will come in handy.
+You can also create accounts using the Polkadot-JS browser extension. This extension remembers your
+accounts and allows you to clear your browser cache without fear. Remember to back up your seed
+phrase - if you lose access to this computer or the extension somehow crashes beyond repair, the
+seed phrase will come in handy. Alternatively, you can create accounts using the Polkadot-JS UI,
+although this option is disabled by default.
 
 Please note that as this keeps your accounts in the browser extension, it is unsafe to hold
 significant funds on them. By definition, a browser is a "hot wallet" and is susceptible to a wide
-range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. For
-improved security, you securely stash away the seed phrase for your accounts and remove all traces
-of the accounts from your computer after creating them.
+range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts.
 
-Besides the extension and the default UI,
+Current popular cold storage solutions include [Ledger](../general/ledger.md) and
+[Polkadot Vault](../general/polkadot-vault.md). The latter keeps your keys on an air-gapped mobile
+phone. However, it does require obtaining an old Android or iOS-compatible phone that you are
+comfortable using only for Polkadot Vault.
+
+Besides the Polkadot-JS browser extension and the Polkadot-JS UI,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can also be created with
 the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
 intended for users comfortable using the command line and can seem intimidating, but it is quite
 approachable. Follow the instructions in the
-[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/). When used
-properly, Subkey is the **most secure** available method of creating an account.
-
-There is also the very secure [Parity Signer](https://www.parity.io/signer/). This keeps your keys
-on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible
-phone that you are comfortable using only for Parity Signer.
-
-Hardware wallet integration is possible with Ledger. A full guide is available
-[here](../general/ledger.md).
-
-Alternatively, you might find other wallets on the [Wallet](../general/wallets-and-extensions.md)
-page, but bear in mind that some of these are **unaudited** and are not officially affiliated with
-Web3 Foundation or the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless
-otherwise stated.
+[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/).
 
 :::info How-to guides to generate an account
 
 See our Support Articles for more information about how to create an account using the tools below.
 
-- [Polkadot-JS Browser Extension](#polkadot-js-browser-extension) **RECOMMENDED FOR MOST USERS**
-- [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Polkadot-JS UI](#polkadot-js-apps)
-- [Parity Signer](#parity-signer)
-- [Vanity Generator](#vanity-generator)
 - [Ledger Hardware Wallet](#ledger-hardware-wallet)
+- [Polkadot Vault](#polkadot-vault)
+- [Polkadot-JS Browser Extension](#polkadot-js-browser-extension)
+- [Polkadot-JS UI](#polkadot-js-ui)
+- [Subkey](#subkey)
+- [Vanity Generator](#vanity-generator)
 
 :::
 
-:::note
-
-If you prefer video instructions for creating an account using Polkadot JS, see
-[**this video tutorial**](https://www.youtube.com/watch?v=sy7lvAqyzkY).
-
-:::
-
-### Backing Up Accounts
-
-:::info
-
-See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
-to know how to backup your account.
-
-:::
+## Backing Up Accounts
 
 Depending on what software you are using to access your account, there are various ways to back up
 and restore your account. It is a good idea to back your information up and keep it in a secure
@@ -111,7 +79,30 @@ place. In general, as long as you know how you created your account, and have th
 ([mnemonic phrase](learn-accounts#portability)) or JSON file (and password) stored securely, you
 will be able to restore your account.
 
+## Ledger Hardware Wallet
+
+To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
+the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
+
+## Polkadot Vault
+
+Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
+that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
+installing it.
+
+For guidelines about how to create an account using Parity Signer, see
+[**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+
+### Restore Account on Polkadot Vault
+
+See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
+to learn how to restore your account on the Polkadot-JS UI.
+
 ## Polkadot-JS Browser Extension
+
+<iframe width="560" height="315" src="https://youtube.com/embed/DNU0p5G0Gqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
 :::info
 
@@ -132,7 +123,17 @@ similar functionality.
 It is still running on the same computer you use to connect to the internet and thus is less secure
 than using Parity Signer or other air-gapped approaches.
 
-### Reset Password using the Browser Extension
+### Account Backup using the Polkadot-JS Browser Extension
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
+to know how to backup your account.
+
+:::
+
+### Reset Password using the Polkadot-JS Browser Extension
 
 :::info
 
@@ -208,9 +209,21 @@ Polkadot{.js} browser extension. Learn more about account backup and restoration
 
 :::
 
-Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least
-secure way of generating an account. It should only be used if all of the other methods are not
-feasible in your situation.
+Local in-browser account storage is disabled by default on the Polkadot-JS UI. To create an account
+using the Polkadot-JS UI, navigate to settings > account options and click on allow local in-browser
+account storage in the drop-down menu. Using the Polkadot-JS user interface without a browser
+extension is **not recommended**. It is the least secure way of generating an account. It should
+only be used if all of the other methods are not feasible in your situation.
+
+### Account Backup using the Polkadot-JS UI
+
+:::info
+
+See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
+to know how to backup your account.
+
+:::
 
 ### Reset password using the Polkadot-JS UI
 
@@ -218,12 +231,8 @@ To reset the password of an account created with Polkadot-JS Apps UI you need to
 "Accounts" tab, click the icon with three vertical dots on your account and select "Change this
 account's password".
 
-:::info
-
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the
 password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
-
-:::
 
 :::note
 
@@ -236,48 +245,16 @@ the password of such an account.
 
 ### Restore Account on the Polkadot-JS UI
 
-:::info
-
 See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui)
 to learn how to restore your account on the Polkadot-JS UI.
 
-:::
-
-## Ledger Hardware Wallet
-
-:::info
-
-To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
-
-:::
-
-## Parity Signer
-
-:::info
-
-For guidelines about how to create an account using Parity Signer, see
-[**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
-
-:::
-
-Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
-that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it.
-
-### Restore Account on Parity Signer
-
-:::info
-
-See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
-to learn how to restore your account on the Polkadot-JS UI.
-
-:::
-
 ## Subkey
+
+Subkey is recommended for technically advanced users comfortable with the command line and compiling
+Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may
+also be useful for automated account generation using an air-gapped device. It is not recommended
+for general users.
 
 :::info
 
@@ -287,10 +264,12 @@ For guidelines about how to create an account using Subkey, see
 
 :::
 
-Subkey is recommended for technically advanced users comfortable with the command line and compiling
-Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may
-also be useful for automated account generation using an air-gapped device. It is not recommended
-for general users.
+## Vanity Generator
+
+The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
+that lets you generate addresses that contain a specific substring. For the tutorial on how to
+create an account using Vanity Generator, visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
 
 ## Account Address Format
 
@@ -326,13 +305,6 @@ desired chain format is active. E.g. selecting "Substrate" as the format will ch
 and clicking the colorful icon of your account will copy it in that format. While in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} mode, that address format will be
 copied, and so on.
-
-## Vanity Generator
-
-The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
-that lets you generate addresses that contain a specific substring. For the tutorial on how to
-create an account using Vanity Generator, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
 
 ## Encryption Enhancement
 
