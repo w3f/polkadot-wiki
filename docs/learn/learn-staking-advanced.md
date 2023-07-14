@@ -52,7 +52,7 @@ visit the [dedicated page](./learn-proxies.md) on this wiki.
 Proxy accounts are special accounts which can sign
 [**extrinsic calls**](./learn-extrinsics.md/#pallets-and-extrinsics) made to specific **pallets** on
 behalf of the proxied account. There is thus the possibility to create staking proxy accounts that
-can be used to sign only extrinsic calls to staking, session and utility pallets.
+can be used to sign extrinsic calls specific to the staking, session and utility pallets.
 
 Staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
 action, as a nominator you will need to monitor the performance of your validators and make changes
