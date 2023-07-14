@@ -9,10 +9,10 @@ slug: ../learn-account-generation
 
 ## DISCLAIMER: Key Security
 
-The _only_ ways to get access to your account are via your secret seed or your account's JSON file
-in combination with a password. Keep them offline in a secure and private location. If you share
-these with anyone, they can access your account, including all of your funds. This information is
-always a target for hackers and malicious actors. Check out the wiki doc on
+The _only_ ways to access your account are via your secret seed or your account's JSON file in
+combination with a password. Keep them offline in a secure and private location. If you share these
+with anyone, they can access your account, including your funds. This information is always a target
+for hackers and malicious actors. Check out the wiki doc on
 [how to recognize scams](../general/scams.md).
 
 <iframe width="560" height="315" src="https://youtube.com/embed/ARsdXZycJAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
@@ -37,14 +37,14 @@ You can create accounts using treasury-funded
 :::
 
 You can also create accounts using the Polkadot-JS browser extension. This extension remembers your
-accounts and allows you to clear your browser cache without fear. Remember to back up your seed
-phrase - if you lose access to this computer or the extension somehow crashes beyond repair, the
-seed phrase will come in handy. Alternatively, you can create accounts using the Polkadot-JS UI,
-although this option is disabled by default.
+accounts and lets you clear your browser cache without fear. Remember to back up your seed phrase -
+if you lose access to this computer or the extension somehow crashes beyond repair, the seed phrase
+will come in handy. Alternatively, you can create accounts using the Polkadot-JS UI, although this
+option is disabled by default.
 
-Please note that as this keeps your accounts in the browser extension, it is unsafe to hold
-significant funds on them. By definition, a browser is a "hot wallet" and is susceptible to a wide
-range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts.
+Please note that as this keeps your accounts in the browser extension, holding significant funds on
+them is unsafe. By definition, a browser is a "hot wallet" susceptible to a wide range of attacks,
+so keep your funds in cold storage when dealing with non-trivial amounts.
 
 Current popular cold storage solutions include [Ledger](../general/ledger.md) and
 [Polkadot Vault](../general/polkadot-vault.md). The latter keeps your keys on an air-gapped mobile
@@ -73,11 +73,11 @@ See our Support Articles for more information about how to create an account usi
 
 ## Backing Up Accounts
 
-Depending on what software you are using to access your account, there are various ways to back up
-and restore your account. It is a good idea to back your information up and keep it in a secure
-place. In general, as long as you know how you created your account, and have the seed phrase
-([mnemonic phrase](learn-accounts#portability)) or JSON file (and password) stored securely, you
-will be able to restore your account.
+Depending on what software you use to access your account, there are various ways to back up and
+restore your account. It is a good idea to back your information up and keep it secure. In general,
+as long as you know how you created your account and have the seed phrase
+([mnemonic phrase](learn-accounts#portability)) or JSON file (and password) stored securely, you can
+restore your account.
 
 ## Ledger Hardware Wallet
 
@@ -112,9 +112,9 @@ For guidelines about how to create an account using the Polkadot Extension, see
 
 :::
 
-The Polkadot-JS Browser Extension (referred to as the Polkadot Extension) provides a reasonable
-balance of security and usability. It provides a separate local mechanism to generate your address
-and interact with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+The Polkadot-JS Browser Extension (the Polkadot Extension) provides a reasonable balance of security
+and usability. It provides a separate local mechanism to generate your address and interact with
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 This method involves installing the Polkadot Extension and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows the signing of transactions and
@@ -129,7 +129,7 @@ than using Parity Signer or other air-gapped approaches.
 
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
-to know how to backup your account.
+to know how to back up your account.
 
 :::
 
@@ -153,8 +153,8 @@ place accessible to you.
 Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the password of your
 `ACCOUNT 1` using the browser extension, you must follow the following steps:
 
-- On the browser extension, go to `ACCOUNT 1` and click "Forget account". This action will delete
-  the access to your account. Note that your tokens are still in your account on the
+- Go to `ACCOUNT 1` on the browser extension and click "Forget account". This action will delete the
+  access to your account. Note that your tokens are still in your account on the
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain network.
 - On the browser extension click the "+" button in the top right corner and select the option
   "Import account from pre-existing seed". After entering the mnemonic phrase, you can choose a new
@@ -163,7 +163,7 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
 :::info JSON files do not allow changing account passwords
 
 If you add the account to the extension using the option "Restore account from backup JSON file",
-this will allow you to restore access to your account using JSON file protected by the password
+this will allow you to restore access to your account using a JSON file protected by the password
 `PSW 1`, but does not let you set a new password. Thus, `PSW 1` will become the account password by
 default.
 
@@ -175,7 +175,7 @@ For hardware wallets such as [Ledger](https://www.ledger.com/), you may have to 
 accessing the accounts on the device, but you do not need to set a password for every individual
 account. When you need to make transactions with your account, you are required to sign using your
 Ledger device. Also, Ledger wallets let you generate multiple accounts for multiple blockchain
-networks without having to set different passwords to access such accounts.
+networks without setting different passwords to access such accounts.
 
 :::
 
@@ -213,7 +213,7 @@ Local in-browser account storage is disabled by default on the Polkadot-JS UI. T
 using the Polkadot-JS UI, navigate to settings > account options and click on allow local in-browser
 account storage in the drop-down menu. Using the Polkadot-JS user interface without a browser
 extension is **not recommended**. It is the least secure way of generating an account. It should
-only be used if all of the other methods are not feasible in your situation.
+only be used if all other methods are not feasible.
 
 ### Account Backup using the Polkadot-JS UI
 
@@ -221,22 +221,22 @@ only be used if all of the other methods are not feasible in your situation.
 
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
-to know how to backup your account.
+to know how to back up your account.
 
 :::
 
 ### Reset password using the Polkadot-JS UI
 
-To reset the password of an account created with Polkadot-JS Apps UI you need to go to the
+To reset the password of an account created with Polkadot-JS Apps UI, you need to go to the
 "Accounts" tab, click the icon with three vertical dots on your account and select "Change this
 account's password".
 
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the
-password for an account that has been created on the Polkadot-JS UI (i.e. a non-injected account).
+password for an account created on the Polkadot-JS UI (i.e. a non-injected account).
 
 :::note
 
-If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension,
+If you create an account first using Polkadot-JS Apps UI and then add it to the browser extension,
 you need to follow the
 [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
 the password of such an account.
@@ -252,9 +252,9 @@ to learn how to restore your account on the Polkadot-JS UI.
 ## Subkey
 
 Subkey is recommended for technically advanced users comfortable with the command line and compiling
-Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may
-also be useful for automated account generation using an air-gapped device. It is not recommended
-for general users.
+Rust code. Subkey lets you generate keys on any device that can compile the code. Subkey may also be
+useful for automated account generation using an air-gapped device. It is not recommended for
+general users.
 
 :::info
 
@@ -293,16 +293,16 @@ phrases or private keys. But, if your account gets compromised on one chain, the
 full access to the accounts on all other chains. This also has implications for the account holder's
 privacy, as knowing the identity of an account on one chain can expose the account holder's identity
 on all the chains. In the Accounts tab, the Polkadot-JS UI displays a warning message next to each
-Account that you are using on multiple chains, and recommends to use different Accounts on different
-chains (see below).
+Account you are using on multiple chains and recommends using different Accounts on different chains
+(see below).
 
 ![warning multiple chains](../assets/warning-multichain-account.png)
 
 :::
 
-On Polkadot-JS Extension, you can copy your address by clicking on the account's icon while the
-desired chain format is active. E.g. selecting "Substrate" as the format will change your address,
-and clicking the colorful icon of your account will copy it in that format. While in
+On Polkadot-JS Extension, you can copy your address by clicking the account's icon while the desired
+chain format is active. E.g. selecting "Substrate" as the format will change your address, and
+clicking the colorful icon of your account will copy it in that format. While in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} mode, that address format will be
 copied, and so on.
 
@@ -310,6 +310,6 @@ copied, and so on.
 
 Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
 This is due to an enhanced encryption method, noticeable in a slight delay when
-encrypting/decrypting your wallet. If you cannot load a `JSON` file, please ensure you use the
-latest version of the wallet software. If you cannot load it, ensure that the wallet software uses
-the newest version of the [Polkadot API](https://polkadot.js.org/api/).
+encrypting/decrypting your wallet. If you cannot load a `JSON` file, please use the latest version
+of the wallet software. If you cannot load it, ensure that the wallet software uses the newest
+version of the [Polkadot API](https://polkadot.js.org/api/).
