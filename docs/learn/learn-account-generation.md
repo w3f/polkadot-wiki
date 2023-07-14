@@ -17,11 +17,6 @@ always a target for hackers and malicious actors. Check out the wiki doc on
 
 <iframe width="560" height="315" src="https://youtube.com/embed/ARsdXZycJAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
-On this page, we recommend various account generation methods with different levels of convenience
-vs. security trade-offs. Please review this page carefully before creating your account to
-understand the potential risks of the account generation method and how to mitigate them to keep
-your funds safe.<br/><br/>
-
 :::info
 
 Visit
@@ -100,41 +95,6 @@ If you prefer video instructions for creating an account using Polkadot JS, see
 
 :::
 
-### Account Address Format
-
-An account created for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can also be
-used on multiple chains in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-ecosystem. More specifically, the account of a chain that uses the `*25519` account address format
-(the latest list can be accessed on the
-[ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
-is cross-compatible with all the chains that use the similar format. To switch between the accounts
-on different chains, you can follow the guidelines in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
-[Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert your
-address between the different chain formats.
-
-:::info Using the same account on multiple chains - Pros and Cons
-
-The address format differs from chain to chain, but that difference is only visual. The same private
-key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using
-a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic
-phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain
-full access to the accounts on all other chains. This also has implications for the account holder's
-privacy, as knowing the identity of an account on one chain can expose the account holder's identity
-on all the chains. In the Accounts tab, the Polkadot-JS UI displays a warning message next to each
-Account that you are using on multiple chains, and recommends to use different Accounts on different
-chains (see below).
-
-![warning multiple chains](../assets/warning-multichain-account.png)
-
-:::
-
-On Polkadot-JS Extension, you can copy your address by clicking on the account's icon while the
-desired chain format is active. E.g. selecting "Substrate" as the format will change your address,
-and clicking the colorful icon of your account will copy it in that format. While in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} mode, that address format will be
-copied, and so on.
-
 ### Backing Up Accounts
 
 :::info
@@ -147,10 +107,9 @@ to know how to backup your account.
 
 Depending on what software you are using to access your account, there are various ways to back up
 and restore your account. It is a good idea to back your information up and keep it in a secure
-place. Note that in order to recover an account, you should create your account according to the
-instructions [here](learn-account-generation.md). In general, as long as you know how you created
-your account, and have the seed phrase ([mnemonic phrase](learn-accounts#portability)) or JSON file
-(and password) stored securely, you will be able to restore your account.
+place. In general, as long as you know how you created your account, and have the seed phrase
+([mnemonic phrase](learn-accounts#portability)) or JSON file (and password) stored securely, you
+will be able to restore your account.
 
 ## Polkadot-JS Browser Extension
 
@@ -229,21 +188,6 @@ to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 
-## Subkey
-
-:::info
-
-For guidelines about how to create an account using Subkey, see
-[**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
-
-:::
-
-Subkey is recommended for technically advanced users comfortable with the command line and compiling
-Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may
-also be useful for automated account generation using an air-gapped device. It is not recommended
-for general users.
-
 ## Polkadot-JS UI
 
 :::info
@@ -300,6 +244,15 @@ to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 
+## Ledger Hardware Wallet
+
+:::info
+
+To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
+the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
+
+:::
+
 ## Parity Signer
 
 :::info
@@ -324,21 +277,62 @@ to learn how to restore your account on the Polkadot-JS UI.
 
 :::
 
+## Subkey
+
+:::info
+
+For guidelines about how to create an account using Subkey, see
+[**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+
+:::
+
+Subkey is recommended for technically advanced users comfortable with the command line and compiling
+Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may
+also be useful for automated account generation using an air-gapped device. It is not recommended
+for general users.
+
+## Account Address Format
+
+An account created for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can also be
+used on multiple chains in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+ecosystem. More specifically, the account of a chain that uses the `*25519` account address format
+(the latest list can be accessed on the
+[ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
+is cross-compatible with all the chains that use the similar format. To switch between the accounts
+on different chains, you can follow the guidelines in
+[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
+[Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert your
+address between the different chain formats.
+
+:::info Using the same account on multiple chains - Pros and Cons
+
+The address format differs from chain to chain, but that difference is only visual. The same private
+key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using
+a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic
+phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain
+full access to the accounts on all other chains. This also has implications for the account holder's
+privacy, as knowing the identity of an account on one chain can expose the account holder's identity
+on all the chains. In the Accounts tab, the Polkadot-JS UI displays a warning message next to each
+Account that you are using on multiple chains, and recommends to use different Accounts on different
+chains (see below).
+
+![warning multiple chains](../assets/warning-multichain-account.png)
+
+:::
+
+On Polkadot-JS Extension, you can copy your address by clicking on the account's icon while the
+desired chain format is active. E.g. selecting "Substrate" as the format will change your address,
+and clicking the colorful icon of your account will copy it in that format. While in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} mode, that address format will be
+copied, and so on.
+
 ## Vanity Generator
 
 The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
 that lets you generate addresses that contain a specific substring. For the tutorial on how to
 create an account using Vanity Generator, visit
 [this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
-
-## Ledger Hardware Wallet
-
-:::info
-
-To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
-
-:::
 
 ## Encryption Enhancement
 
