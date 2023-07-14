@@ -36,20 +36,23 @@ You can create accounts using treasury-funded
 
 :::
 
-You can also create accounts using the Polkadot-JS browser extension. This extension remembers your
+You can also create accounts using
+[the Polkadot-JS browser extension](#polkadot-js-browser-extension). This extension remembers your
 accounts and lets you clear your browser cache without fear. Remember to back up your seed phrase -
 if you lose access to this computer or the extension somehow crashes beyond repair, the seed phrase
-will come in handy. Alternatively, you can create accounts using the Polkadot-JS UI, although this
-option is disabled by default.
+will come in handy. Alternatively, you can create accounts using the
+[Polkadot-JS UI](#polkadot-js-ui), although this option is disabled by default. More info about the
+Polkadot-JS UI can be found on [the dedicated page](../general/polkadotjs-ui.md).
 
 Please note that as this keeps your accounts in the browser extension, holding significant funds on
 them is unsafe. By definition, a browser is a "hot wallet" susceptible to a wide range of attacks,
 so keep your funds in cold storage when dealing with non-trivial amounts.
 
-Current popular cold storage solutions include [Ledger](../general/ledger.md) and
-[Polkadot Vault](../general/polkadot-vault.md). The latter keeps your keys on an air-gapped mobile
-phone. However, it does require obtaining an old Android or iOS-compatible phone that you are
-comfortable using only for Polkadot Vault.
+Current popular cold storage solutions within the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem include
+[Ledger](../general/ledger.md) and [Polkadot Vault](../general/polkadot-vault.md). The latter keeps
+your keys on an air-gapped mobile phone. However, it does require obtaining an old Android or
+iOS-compatible phone that you are comfortable using only for Polkadot Vault.
 
 Besides the Polkadot-JS browser extension and the Polkadot-JS UI,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can also be created with
