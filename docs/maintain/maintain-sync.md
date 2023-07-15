@@ -204,7 +204,7 @@ value: 'linux-package'} ]}>
 - Start your node:
 
   ```bash
-  ./target/release/polkadot --name "Your Node's Name"
+  ./polkadot --name "Your Node's Name"
   ```
 
 - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
