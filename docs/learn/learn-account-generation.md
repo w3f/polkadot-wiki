@@ -29,10 +29,8 @@ for more information about key security.
 
 :::info Treasury-funded Wallets and Browser Extensions
 
-You can create accounts using treasury-funded
-[wallets and extensions](../general/wallets-and-extensions.md). Bear in mind that some of these are
-**unaudited** and are not officially affiliated with Web3 Foundation or the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} project unless otherwise stated.
+If you are a general user, you are recommended to create accounts using any of the
+[wallets and extensions](../general/wallets-and-extensions.md) funded by the Treasury or Grants. If you are a power user or a developer, you can use [Polkadot-JS Extension](../polkadotjs.md#polkadot-js-extension).
 
 :::
 
