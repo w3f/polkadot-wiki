@@ -48,7 +48,7 @@ so it is recommended to use cold storage when dealing with non-trivial amounts.
 Current popular cold storage solutions within the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem include
 [Ledger](../general/ledger.md) and [Polkadot Vault](../general/polkadot-vault.md). The latter keeps
-your keys on an air-gapped mobile phone. However, it does require obtaining an old Android or
+your keys on an air-gapped mobile phone. However, it does require obtaining a dedicated Android or
 iOS-compatible phone that you are comfortable using only for Polkadot Vault.
 
 Besides the Polkadot-JS browser extension and the Polkadot-JS UI,
