@@ -42,9 +42,8 @@ will come in handy. Alternatively, you can create accounts using the
 [Polkadot-JS UI](#polkadot-js-ui), although this option is disabled by default. More info about the
 Polkadot-JS UI can be found on [the dedicated page](../general/polkadotjs-ui.md).
 
-Please note that as this keeps your accounts in the browser extension, holding significant funds on
-them is unsafe. By definition, a browser is a "hot wallet" susceptible to a wide range of attacks,
-so keep your funds in cold storage when dealing with non-trivial amounts.
+Please note that all wallets that are connected to the internet are considered "hot wallets" that are susceptible to a wide range of attacks,
+so it is recommended to use cold storage when dealing with non-trivial amounts.
 
 Current popular cold storage solutions within the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem include
