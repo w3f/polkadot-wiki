@@ -36,7 +36,7 @@ If you are a general user, you are recommended to create accounts using any of t
 
 When you create accounts using browser extensions like
 [the Polkadot-JS extension](#polkadot-js-browser-extension), it stores your
-accounts and lets you clear your browser cache without fear. Remember to back up your seed phrase -
+accounts in a private vault and lets you clear your browser cache without fear. Remember to back up your seed phrase -
 if you lose access to this computer or the extension somehow crashes beyond repair, the seed phrase
 will come in handy. Alternatively, you can create accounts using the
 [Polkadot-JS UI](#polkadot-js-ui), although this option is disabled by default. More info about the
