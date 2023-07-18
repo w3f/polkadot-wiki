@@ -30,20 +30,23 @@ for more information about key security.
 :::info Treasury-funded Wallets and Browser Extensions
 
 If you are a general user, you are recommended to create accounts using any of the
-[wallets and extensions](../general/wallets-and-extensions.md) funded by the Treasury or Grants. If you are a power user or a developer, you can use [Polkadot-JS Extension](../polkadotjs.md#polkadot-js-extension).
+[wallets and extensions](../general/wallets-and-extensions.md) funded by the Treasury or Grants. If
+you are a power user or a developer, you can use
+[Polkadot-JS Extension](../general/polkadotjs.md#polkadot-js-extension).
 
 :::
 
 When you create accounts using browser extensions like
-[the Polkadot-JS extension](#polkadot-js-browser-extension), it stores your
-accounts in a private vault and lets you clear your browser cache without fear. Remember to back up your seed phrase -
-if you lose access to this computer or the extension somehow crashes beyond repair, the seed phrase
+[the Polkadot-JS extension](#polkadot-js-browser-extension), it stores your accounts in a private
+vault and lets you clear your browser cache without fear. Remember to back up your seed phrase - if
+you lose access to this computer or the extension somehow crashes beyond repair, the seed phrase
 will come in handy. Alternatively, you can create accounts using the
 [Polkadot-JS UI](#polkadot-js-ui), although this option is disabled by default. More info about the
 Polkadot-JS UI can be found on [the dedicated page](../general/polkadotjs-ui.md).
 
-Please note that all wallets that are connected to the internet are considered "hot wallets" that are susceptible to a wide range of attacks,
-so it is recommended to use cold storage when dealing with non-trivial amounts.
+Please note that all wallets that are connected to the internet are considered "hot wallets" that
+are susceptible to a wide range of attacks, so it is recommended to use cold storage when dealing
+with non-trivial amounts.
 
 Current popular cold storage solutions within the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem include
