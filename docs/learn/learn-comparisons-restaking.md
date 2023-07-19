@@ -26,8 +26,8 @@ When a new decentralized protocol is created, it often requires some unit of exc
 the form of a token) to deter adversaries from attempting to attack, as the cost of attacking the
 protocol outweighs any potential gain.
 
-However, creating and managing a new token comes with a set of challenges - both technical and
-legal, which is why having an available pool of economic security is appealing to new protocols.
+Creating and managing a new token comes with a set of challenges - both technical and legal, which
+is why having an available pool of economic security is appealing to new protocols.
 
 :::
 
@@ -43,9 +43,12 @@ system, or other (decentralized) layer that requires economic security.
 ### Restaking vs. Liquid Staking
 
 Liquid Staking preserve liquidity through an LP token (liquidity provider). This LP token is
-exchangeable one-to-one to the native token, but is usable for DeFi purposes. For example, a user
-may stake 10 DOT natively, and the liquid staking protocol returns 10 lpDOT in return. The 10 lpDOT
-can be used while my 10 DOT is staked. The conversation only occurs once.
+exchangeable one-to-one to the native token, but is usable for DeFi purposes (usually in a
+decentralized exchange, or DEX).
+
+The conversion for liquid staking can only occur once. For example,a user may stake 10 DOT natively,
+and the liquid staking protocol returns 10 lpDOT in return. The 10 lpDOT can be used while my 10 DOT
+is staked.
 
 Restaking can occur twice - firstly with staked ETH, for example, then secondly to whichever service
 it chooses to secure.
@@ -61,3 +64,7 @@ slot on Polkadot.
 flowchart LR
 a["Stake(DOT)"] --> b["Secure X Services"]
 ```
+
+Polkadot also has a series of secondary availability and validity checks on candidate blocks before
+going through the finality process with [GRANDPA](../general/glossary.md#grandpa-finality-gadget).
+These checks contribute in ensuring that validators are behaving, and are slashed accordingly.
