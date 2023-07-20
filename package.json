@@ -66,7 +66,7 @@
     "yargs": "^17.7.2"
   },
   "dependencies": {
-    "@algolia/client-search": "^4.19.0",
+    "@algolia/client-search": "^4.19.1",
     "@apollo/client": "^3.7.17",
     "@docusaurus/theme-mermaid": "^2.4.1",
     "chart.js": "^4.3.0",
