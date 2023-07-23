@@ -13,7 +13,7 @@ protocols for acting on XCM messages between its constituent parachains.
 
 There are three primary methods for message passing, one of which is under development:
 
-1. XCMP (Cross-Chain Message Passing)
+1. XCMP (Cross-Consensus Message Passing)
 2. Horizontal Relay-routed Message Passing (HRMP/XCMP-lite)
 3. VMP (Vertical Message Passing)
 
@@ -28,7 +28,7 @@ for the time being.
 
 XCM is related to XCMP in the same way that REST is related to RESTful.
 
-_Cross-Chain Message Passing_ secure message passing between parachains. There are two variants:
+_Cross-Consensus Message Passing_ secure message passing between parachains. There are two variants:
 _Direct_ and _Relayed_.
 
 - With _Direct_, message data goes direct between parachains and is O(1) on the side of the
@@ -93,7 +93,14 @@ While XCMP proper is still in development, HRMP is a working replacement.
 A tutorial on how to open an HRMP channel on a parachain can be found
 [here](../build/build-hrmp-channels.md).
 
-#### XCMP Design
+### XCMP (Cross Consensus Message Passing) Design Summary
+
+:::note
+
+XCMP is not yet implemented. The following illustrates the overall design goals and expectations for
+XCMP.
+
+:::
 
 - Cross-chain messages will _not_ be delivered to the Relay Chain.
 - Cross-chain messages will be constrained to a maximum size specified in bytes.
