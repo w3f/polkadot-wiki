@@ -32,9 +32,11 @@ It's important to note that XCM does not define how messages are delivered but r
 they should look, act, and contain relative instructions to the on-chain actions the message intends
 to perform.
 
-[**XCMP**](./learn-xcm-transport.md), or Cross Chain Message Passing, is the actual network-layer
-protocol to deliver XCM-formatted messages to other participating parachains. There are also other
-ways to define transport layer protocols for delivering XCM messages.
+[**XCMP**](./learn-xcm-transport.md#xcmp-design), or Cross Chain Message Passing, is the actual
+network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
+are other ways to define transport layer protocols for delivering XCM messages(see:
+[HRMP](./learn-xcm-transport.md#hrmp-xcmp-lite) and
+[VMP](./learn-xcm-transport.md#vmp-vertical-message-passing)).
 
 XCM has four high-level core design principles which it stands to follow:
 
@@ -139,51 +141,10 @@ bringing ecosystems together using a common communication abstraction.
 For more information on the specific intructions used for these key features, head over to the
 [instructions and registers page](./learn-xcm-instructions.md).
 
-#### Cross-Consensus Message Format (XCM)
+#### Cross-Consensus Message Format (XCM Format)
 
 For an updated and complete description of the cross-consensus message format please see the
 [xcm-format repository on GitHub](https://github.com/paritytech/xcm-format).
-
-#### The Anatomy of an XCMP Interaction
-
-A smart contract that exists on parachain `A` will route a message to parachain `B` in which another
-smart contract is called that makes a transfer of some assets within that chain.
-
-Charlie executes the smart contract on parachain `A`, which initiates a new cross-chain message for
-the destination of a smart contract on parachain `B`.
-
-The collator node of parachain `A` will place this new cross-chain message into its outbound
-messages queue, along with a `destination` and a `timestamp`.
-
-The collator node of parachain `B` routinely pings all other collator nodes asking for new messages
-(filtering by the `destination` field). When the collator of parachain `B` makes its next ping, it
-will see this new message on parachain `A` and add it into its own inbound queue for processing into
-the next block.
-
-Validators for parachain `A` will also read the outbound queue and know the message. Validators for
-parachain `B` will do the same. This is so that they will be able to verify the message transmission
-happened.
-
-When the collator of parachain `B` is building the next block in its chain, it will process the new
-message in its inbound queue as well as any other messages it may have found/received.
-
-During processing, the message will execute the smart contract on parachain `B` and complete the
-asset transfer as intended.
-
-The collator now hands this block to the validator, which itself will verify that this message was
-processed. If the message was processed and all other aspects of the block are valid, the validator
-will include this block for parachain `B` into the Relay Chain.
-
-Check out our animated video below that explores how XCMP works.
-
-<!-- Made with Adobe Animate and Canvas -->
-
-<video
-      controls="controls"  
-      name="XCMP Animated Video" 
-      width="560" height="315"
-      src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
-doesn't support embedded videos. </video>
 
 ## Resources
 
