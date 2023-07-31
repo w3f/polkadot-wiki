@@ -432,7 +432,7 @@ proxy is a multi-signature account.
 
 #### Simplified and Secure Account Management at an Organization Level
 
-:::info Walk-through tutorial video
+:::info Walk-through tutorial video of Account Management
 
 You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through
 this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
