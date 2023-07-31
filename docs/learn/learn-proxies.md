@@ -317,7 +317,7 @@ account we will need to submit all three proxy calls.
 
 ## Anonymous Proxy (Pure Proxy)
 
-:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
+:::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
 
 The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
 -> a pure proxy which is part of another multisig). These complex setups must be done using
@@ -430,7 +430,7 @@ _Pure_ proxies cannot be stolen because they do not have private keys. The only 
 full access to the _pure_ proxies are _any_ proxies. Security can be further increased if the _any_
 proxy is a multi-signature account.
 
-#### Simplified and Secure Account Management at a Corporate Level
+#### Simplified and Secure Account Management at an Organization Level
 
 :::info Walk-through tutorial video
 
