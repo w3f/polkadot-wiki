@@ -84,7 +84,7 @@ the relay chain's progression on a 1-1 basis, meaning every parablock must be bu
 included within six seconds. Parablocks depend on being in sync with the relay chain, reducing the
 amount of data in the block.
 
-Essentially, a parablock is rushing to being validated by the relay-chain due to this synchrony.
+Essentially, a parablock is rushing to being backed by the relay-chain due to this synchrony.
 
 By making this process of backing parablocks more asynchronous, parachains get the chance to not
 only include more data within each parablock, but also retry to include parablocks that failed
