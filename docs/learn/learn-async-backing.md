@@ -33,7 +33,7 @@ window of the relay chain's block time.
 
 It is important to note two following clarifications:
 
-1. The parablock is itself within the relay chain, but rather the **paraheader**
+1. The parablock is not placed on the relay chain in its entirety, but rather the **paraheader**
 2. The relay chain does not validate the entire state of a parachain, but only the state transitions
    within that block.
 
