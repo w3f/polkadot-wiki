@@ -45,7 +45,7 @@ For more information on the validity and availability process, be sure to visit 
 ## Synchronous Backing on Polkadot
 
 With synchronous backing, there was only about a single relay chain block, or 6-second window, to
-complete the parablock inclusion process. This was tightly coupled to the relay chain's progress,
+complete the parablock generation and backing process. This was tightly coupled to the relay chain's progress,
 where blocks had to be created within this window:
 
 ```mermaid
