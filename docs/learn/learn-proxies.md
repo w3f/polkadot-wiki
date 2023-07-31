@@ -9,18 +9,6 @@ slug: ../learn-proxies
 
 import RPC from "./../../components/RPC-Connection";
 
-:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
-
-The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
--> an anonymous proxy which is part of another multisig). These complex setups must be done using
-the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
-you are testing features for the first time.** By performing the complex proxy setups on the
-testnet, you can comfortably replicate the procedure on the main networks.
-
-:::
-
 Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
 but actively participate in the network with the weight of the tokens in that account. Proxies are
 allowed to perform a limited amount of actions related to specific
@@ -328,6 +316,18 @@ Charly's is the only _any_ proxy of P-C, and P-C cannot sign anything. While if 
 account we will need to submit all three proxy calls.
 
 ## Anonymous Proxy (Pure Proxy)
+
+:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
+
+The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
+-> a pure proxy which is part of another multisig). These complex setups must be done using
+the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
+you are testing features for the first time.** By performing the complex proxy setups on the
+testnet, you can comfortably replicate the procedure on the main networks.
+
+:::
 
 :::danger Risk of loss of funds
 
