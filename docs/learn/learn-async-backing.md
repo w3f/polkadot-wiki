@@ -82,7 +82,7 @@ fit within the relay-chain block lifetime.
 Thus, the main limitation of synchronous backing is that parablock validation is tightly coupled to
 the relay chain's progression on a 1-1 basis, meaning every parablock must be generated and backed
 within six seconds. This time limit reduces the
-amount of data in the block.
+amount of data a collator has time to add to each block.
 
 Essentially, a parablock is rushing to being backed by the relay-chain due to this synchrony.
 
