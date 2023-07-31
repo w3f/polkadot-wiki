@@ -9,7 +9,7 @@ slug: ../learn-async
 
 Asynchronous backing is a mechanism that introduces an enhancement to the block validation pipeline
 for parachain **<->** relay chain communication. This pipeline will allow collators to include more
-transactions/data in parablocks while reducing parablock validation times from around 12 to 6
+transactions/data in parablocks while speeding up parachain block times from 12 to 6
 seconds. In short, asynchronous backing will speed up the parachain performance multifold.
 
 It has three overarching goals:
