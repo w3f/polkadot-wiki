@@ -27,7 +27,6 @@ the context of future relay chain block(s).
 
 Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
 block, as the parablock anchors itself to it). This means that each parablock must be generated and go through the entire backing process in the span of a single relay block. It then proceeds through availability + inclusion during the next block.
-window of the relay chain's block time.
 
 :::info
 
