@@ -136,7 +136,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Identity/DID | [Dotflow](https://github.com/TheDotflow) 🟢| |
 | Spam Protection | [Prosopo](https://github.com/prosopo-io/integration) ⚪|                                    |
 | Tooling         | [OpenBrush](https://github.com/727-Ventures/openbrush-contracts) 🟢|                                    |
-| Other           | [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) ⚪, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) ⚪, [OCEX](https://github.com/bsn-si/ocex-cli) ⚪, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) ⚪, [MangoSale](https://github.com/Mangoboxlabs/MangoSale) ⚪, [ArtZero](https://github.com/ArtZero-io/Contracts) ⚪|                                    |
+| Other           | [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) ⚪, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) ⚪, [OCEX](https://github.com/bsn-si/ocex-cli) ⚪, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) ⚪, [MangoSale](https://github.com/Mangoboxlabs/MangoSale) ⚪, [ArtZero](https://github.com/ArtZero-io/Contracts) ⚪, [OpenPayroll](https://github.com/polkadrys/openPayroll) 🟢|                                    |
 
 ### Chains and Pallets
 
