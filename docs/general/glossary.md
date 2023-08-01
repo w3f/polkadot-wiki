@@ -63,6 +63,15 @@ in the given order.
 A collection of data, such as transactions, that together indicate a state transition of the
 blockchain.
 
+## Blockspace
+
+[Blockspace](https://polkadot.network/blog/blockspace-blockspace-ecosystems-how-polkadot-is-unlocking-the-full-potential-of-web3)
+represents a blockchain's security, computing, and storage capability as an end product. In the more
+primitive sense, it realizes the ability of a
+[blockchain to finalize and commit state transitions](https://www.rob.tech/polkadot-blockspace-over-blockchains/).
+Blockspace may have several properties that make it desirable, such as security, availability, and
+flexibility.
+
 ## Block Explorer
 
 An application that allows a user to explore the different blocks on a blockchain.
