@@ -9,18 +9,6 @@ slug: ../learn-proxies
 
 import RPC from "./../../components/RPC-Connection";
 
-:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
-
-The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
--> an anonymous proxy which is part of another multisig). These complex setups must be done using
-the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
-you are testing features for the first time.** By performing the complex proxy setups on the
-testnet, you can comfortably replicate the procedure on the main networks.
-
-:::
-
 Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
 but actively participate in the network with the weight of the tokens in that account. Proxies are
 allowed to perform a limited amount of actions related to specific
@@ -329,6 +317,18 @@ account we will need to submit all three proxy calls.
 
 ## Anonymous Proxy (Pure Proxy)
 
+:::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
+
+The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
+-> a pure proxy which is part of another multisig). These complex setups must be done using
+the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
+you are testing features for the first time.** By performing the complex proxy setups on the
+testnet, you can comfortably replicate the procedure on the main networks.
+
+:::
+
 :::danger Risk of loss of funds
 
 Read carefully the text below and before performing any action using anonymous proxies on
@@ -430,9 +430,9 @@ _Pure_ proxies cannot be stolen because they do not have private keys. The only 
 full access to the _pure_ proxies are _any_ proxies. Security can be further increased if the _any_
 proxy is a multi-signature account.
 
-#### Simplified and Secure Account Management at a Corporate Level
+#### Simplified and Secure Account Management at an Organization Level
 
-:::info Walk-through tutorial video
+:::info Walk-through tutorial video of Account Management
 
 You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through
 this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
