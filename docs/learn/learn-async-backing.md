@@ -7,10 +7,20 @@ keywords: [parachains, slots, backing, parablock]
 slug: ../learn-async
 ---
 
-Asynchronous backing is a mechanism that introduces an enhancement to the block validation pipeline
-for parachain **<->** relay chain communication. This pipeline will allow collators to include more
-transactions/data in parablocks while speeding up parachain block times from 12 to 6
-seconds. In short, asynchronous backing will speed up the parachain performance multifold.
+Asynchronous backing is a feature which introduces pipelining to parachain block validation. It is
+analogous to the logical pipelining of processor instruction in "traditional" architectures, where
+some instructions may be executed before others are complete. Instructions may also be executed in
+parallel, enabling for multiple parts of the processor to be working on potentially different
+instructions at the same time.
+
+Asynchronous backing aims to add this logical pipeline to the parablock generation, backing, and
+inclusion processes. A parablock may be at different stages, but multiple blocks should be able to
+processed at the same time in parallel if needed. Most notably, block candidate generation and
+backing processes can now occur while their ancestors are being included on the relay chain.
+
+This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include 5-10x more
+transactions/data while speeding up parachain block times from 12 to 6 seconds. In short,
+asynchronous backing will 10-20x the blockspace provided to Polkadot parachains.
 
 It has three overarching goals:
 
@@ -22,11 +32,19 @@ It has three overarching goals:
 
 Asynchronous backing works by providing a form of **contextual execution**, which allows for more
 time for parachain collators to fit more transactions and ready block candidates for backing and
-inclusion. **Contextual execution** refers to how a parablock can begin being built earlier using the context provided by an unincluded segment of recent parablock ancestors. 
-the context of future relay chain block(s).
+inclusion. **Contextual execution** refers to how a parablock can begin being built earlier using
+the context provided by an _unincluded_ segment of recent block ancestors.
+
+**Unincluded segments** are chains of blocks which are not yet included in the relay chain.
+Parablocks can be added to this unincluded segment, and no longer have to await for the latest,
+included parent block of the relay chain. The core functionality that asynchronous backing brings is
+the ability to build on these unincluded segments of block ancestors, rather than the finalized
+relay chain state.
 
 Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
-block, as the parablock anchors itself to it). This means that each parablock must be generated and go through the entire backing process in the span of a single relay block. It then proceeds through availability + inclusion during the next block.
+block, as the parablock anchors itself to it). This means that each parablock must be generated and
+go through the entire backing process in the span of a single relay block. It then proceeds through
+availability + inclusion during the next block.
 
 :::info
 
@@ -44,92 +62,30 @@ For more information on the validity and availability process, be sure to visit 
 ## Synchronous Backing on Polkadot
 
 With synchronous backing, there was only about a single relay chain block, or 6-second window, to
-complete the parablock generation and backing process. This was tightly coupled to the relay chain's progress,
-where blocks had to be created within this window:
+complete the parablock generation and backing process. This was tightly coupled to the relay chain's
+progress, where blocks had to be created within this window.
 
-```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '16px', 'tagLabelFontSize': '16px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
-gitGraph
-commit id:"R1"
-branch "Parachain 1, Block 1" order: 2
-commit id:"Block 1 (Candidate)"
-commit id:"Block 1 (Backed)"
-checkout "Parachain 1, Block 1"
-commit id:"Block 1 (Included)"
-branch "Parachain 1, Block 2" order: 3
-checkout "Relay Chain"
-merge "Parachain 1, Block 1" tag:"P1 Included" id:"R2"
-checkout "Parachain 1, Block 2"
-commit id:"Block 2 (Candidate)"
-commit id:"Block 2 (Backed)"
-checkout "Parachain 1, Block 2"
-commit id:"Block 2 (Included)"
-checkout "Relay Chain"
-merge "Parachain 1, Block 2" tag:"P2 Included" id:"R3"
-```
+The main limitation of synchronous backing is that parablock validation is tightly coupled to the
+relay chain's progression on a 1-1 basis, meaning every parablock must be generated and backed
+within six seconds. This time limit reduces the amount of data a collator has time to add to each
+block.
 
-where **P1** and **P2** are two parablocks, and **R1** and **R2** are two relay-chain blocks. The
-letters within the parentheses represent the state of a parachain block. Hence **C** (candidate,
-created by collators), **B** (backed, by para-validators), and **I** (included, by block authors in
-the relay-chain). For more information about parablock validation see the
-[parachain protocol page](./learn-parachains-protocol.md).
-
-In the diagram there are three relay-chain blocks being finalized (**R1-2**) and a parachain
-(**Parachain 1**) proposing two parablocks (**P1** and **P2**). Each parablock's lifecycle, from
-being candidate (**P(C)**) to being backed and included (**P(B)** and **P(I)**, respectively), must
-fit within the relay-chain block lifetime.
-
-Thus, the main limitation of synchronous backing is that parablock validation is tightly coupled to
-the relay chain's progression on a 1-1 basis, meaning every parablock must be generated and backed
-within six seconds. This time limit reduces the
-amount of data a collator has time to add to each block.
-
-Essentially, a parablock is rushing to being backed by the relay-chain due to this synchrony.
-
-By making this process of backing parablocks more asynchronous, parachains get the chance to not
-only include more data within each parablock, but also retry to include parablocks that failed
-inclusion.
+A particular parablock, `P1`, would **only** be valid for backing at relay chain parent `R1 + 1`,
+and subsequently be included at `R1 + 2` should it be backed successfully. Essentially, a parablock
+is rushing to being backed and included within this two block window due to the inherent synchrony
+between the parachain and relay chain.
 
 ## Asynchronous Backing on Polkadot
 
-With asynchronous backing, the window is more than the span of around two blocks, or a ~12-second
-window. This enables more computational and storage time per block, as the context of the next relay
-chain block can kickstart the process of validating next parablock.
+With asynchronous backing, the window of time is customizable, and will most likely sit around the
+6-18 second range. window. It also introduces a parameter to aid in defining the maximum amount of
+ancestor blocks, which allow for a parablock to be backed later in the future, enabling more
+computational and storage time per block. The context for the latest parablock is derived from the
+unincluded segment of block ancestors, of which the latest parablock is built upon.
 
-Notice that blocks can contain more state transitions compared to synchronous backing, meaning more
-transactions per block. These blocks can be prepared in anticipation of being included later rather
-than keeping in sync with the relay chain's progress 1-1:
-
-```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'commitLabelFontSize': '14px', 'tagLabelFontSize': '10px' }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Relay Chain'}} }%%
-gitGraph
-commit id:"R1"
-branch "Block 1" order: 2
-checkout "Block 1"
-commit id:"Block 1 (Candidate)"
-checkout "Relay Chain"
-merge "Block 1" tag:"Collator Provides Block"
-checkout "Block 1"
-commit id:"Block 1 (Backed)"
-branch "Block 2" order: 3
-checkout "Relay Chain"
-merge "Block 1" tag:"Block 1 Backed" type:HIGHLIGHT
-commit id:"R2"
-checkout "Block 2"
-commit id:"Block 2 (Candidate)"
-commit id:"Block 2 (Backed)"
-checkout "Relay Chain"
-merge "Block 2" tag:"Block 2 Backed" type:HIGHLIGHT
-checkout "Block 1"
-commit id:"Block 1 (Included)"
-checkout "Relay Chain"
-merge "Block 1" tag:"Block 1 Included" id:"R3"
-commit id:"R4"
-checkout "Block 2"
-commit id:"Block 2 (Included)"
-checkout "Relay Chain"
-merge "Block 2" tag:"Block 2 Included" id:"R5"
-```
+Blocks can contain more state transitions compared to synchronous backing, meaning more transactions
+per block. These blocks can be prepared in anticipation of being included later rather than keeping
+in sync with the relay chain's progress 1-1.
 
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
 Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
