@@ -48,6 +48,17 @@ Here are some key differences between the different types of extrinsics:
 - Inherents exist to address the need of adding some data to a block, whereas signed or unsigned
   transactions exist to potentially change the state of the blockchain.
 
+### Mortal and Immortal Extrinsics
+
+Extrinsics can be mortal (i.e. valid within a defined block interval) or immortal (i.e. always
+valid). By default and for security reasons, all extrinsics submitted using the Polkadot-JS UI and
+browser extension will be mortal. This will avoid the chance of being a victim of replay attacks
+after [reaping an account](./learn-accounts.md#existential-deposit-and-reaping). Reaping an account
+resets the nonce value, meaning that all transactions signed until the nonce before the reaping
+event can be replayed since the information about the signatures already exists on-chain. There is
+no need for the attacker to know your private key. Making a transaction mortal will ensure that
+replay attacks are not valid outside the transaction’s block interval.
+
 ## Metadata Updates
 
 :::warning Always check for Metadata Updates
