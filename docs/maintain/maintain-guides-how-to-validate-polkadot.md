@@ -19,12 +19,6 @@ started.
 
 :::
 
-:::info Controller accounts are deprecated
-
-Controller accounts are deprecated, for more information see
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
-
-:::
 
 ## Preliminaries
 
@@ -531,6 +525,13 @@ It is highly recommended that you set a stash account and a staking proxy. For t
 two accounts and make sure each of them have at least enough funds to pay the fees for making
 transactions. Keep most of your funds in the stash account since it is meant to be the custodian of
 your staking funds.
+
+:::info Controller accounts are deprecated
+
+Controller accounts are deprecated, for more information see
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+
+:::
 
 Make sure not to bond all your DOT balance since you will be unable to pay transaction fees from
 your bonded balance.
