@@ -404,6 +404,16 @@ additionally cast a _abstain_ and _split_ votes.
 [Vote splitting](../maintain/maintain-guides-polkadot-opengov.md#voting-on-referenda) allows voters
 to allocate different votes for _aye_, _nay_, and _abstain_.
 
+:::info Only the last vote counts
+
+Voting a second time replaces your original vote, e.g. voting with 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, means that you are voting with 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, not 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+
+:::
+
 ### Voluntary Locking
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
