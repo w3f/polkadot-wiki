@@ -406,12 +406,53 @@ to allocate different votes for _aye_, _nay_, and _abstain_.
 
 ### Voluntary Locking
 
-:::info Voluntary Locking
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
+locking that allows token holders to increase their voting power by declaring how long they are
+willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
+by the following formula:
 
-Voluntary locking in Polkadot OpenGov is
-[the same as in Governance v1](./learn-governance.md#voluntary-locking).
+```
+votes = tokens * conviction_multiplier
+```
+
+The conviction multiplier increases the vote multiplier by one every time the number of lock periods
+double.
+
+<VLTable />
+
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
+total), and one lock period equals
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.voteLockingPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }}
+days. Only doublings are allowed; you cannot lock for 24 periods and increase your conviction by
+5.5. For additional information regarding the timeline of governance events, check out the
+governance section on the
+{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
+
+:::info Staked tokens can be used in governance
+
+While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
+only prohibited from transferring these tokens to another account.
 
 :::
+
+Votes are always "counted" at the same time (at the end of the voting period), no matter for how
+long the tokens are locked.
+
+See below an example that shows how voluntary locking works.
+
+Peter: Votes `No` with {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} for a 128 week
+lock period => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+
+Logan: Votes `Yes` with {{ polkadot: 20 DOT :polkadot }}{{ kusama: 2 KSM :kusama }} for a 4 week
+lock period => {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+
+Kevin: Votes `Yes` with {{ polkadot: 15 DOT :polkadot }}{{ kusama: 1.5 KSM :kusama }} for a 8 week
+lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+
+Even though combined both Logan and Kevin vote with more
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
+is less than Peter, leading to their voting power counting as less.
 
 Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
 in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
