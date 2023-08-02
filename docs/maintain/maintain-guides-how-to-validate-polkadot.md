@@ -19,6 +19,13 @@ started.
 
 :::
 
+:::info Controller accounts are deprecated
+
+Controller accounts are deprecated, for more information see
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+
+:::
+
 ## Preliminaries
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
