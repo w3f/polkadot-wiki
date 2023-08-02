@@ -55,11 +55,17 @@ valid). By default and for security reasons, all extrinsics submitted using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md) and
 [browser extension](../general/polkadotjs.md#polkadot-js-extension) will be mortal. This will avoid
 the chance of being a victim of replay attacks after
-[reaping an account](./learn-accounts.md#existential-deposit-and-reaping). Reaping an account resets
-the nonce value, meaning that all transactions signed until the nonce before the reaping event can
-be replayed since the information about the signatures already exists on-chain. There is no need for
-the attacker to know your private key. Making a transaction mortal will ensure that replay attacks
-are not valid outside the transaction’s block interval.
+[reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
+
+Reaping an account resets the nonce value. If all transactions signed until the nonce before the
+reaping event were immortal, once the account is refunded all transactions can be replayed because
+the information about the signatures for the transactions already exists on-chain and the refunded
+account will look like new to the present chain state. There is no need for the attacker to know
+your private key.
+
+Making a transaction mortal will (almost) ensure that replay attacks are not valid outside the
+transaction’s block interval. The only special cases is if the account gets reaped immediately after
+submitting the transaction and (still within the mortal window)
 
 ## Metadata Updates
 
