@@ -51,21 +51,22 @@ Here are some key differences between the different types of extrinsics:
 ### Mortal and Immortal Extrinsics
 
 Extrinsics can be mortal (i.e. valid within a defined block interval) or immortal (i.e. always
-valid). By default and for security reasons, all extrinsics submitted using the
-[Polkadot-JS UI](../general/polkadotjs-ui.md) and
-[browser extension](../general/polkadotjs.md#polkadot-js-extension) will be mortal. This will avoid
-the chance of being a victim of a replay attack after
-[reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
+valid). By default and for security reasons, all extrinsics will be mortal, but always checking
+before signing is a good practice. This will avoid the chance of being a victim of a replay attack
+after [reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
 
-Reaping an account resets the nonce value. If all signed transactions until the nonce before the
-reaping event were immortal, once the account is refunded, all transactions can be replayed because
-a valid transaction for that account and nonce already exists and has been signed. 
-There is no need for the attacker to know
-your private key.
+A replay attack is where past transactions can be replayed (same balance, receiver account, etc.)
+without knowing private keys. This could happen in the context of reaping accounts because the
+reaping process resets the nonce value. If all signed transactions until the nonce before the
+reaping event were immortal, all past transactions can be replayed once the account is refunded.
+There is no need for the attacker to know your private key, valid signatures for those past
+transactions and nonces already exist and are stored on-chain (meaning the private key was already
+used to generate those signatures).
 
-Making a transaction mortal will almost certainly ensure that replay attacks are not possible, with the only
-exception being if the account is reaped and then re-funded shortly after submitting a mortal transaction, and
-then an attacker replays that transaction within the mortality window (i.e., the specified the block interval).
+Making a transaction mortal will almost certainly ensure that replay attacks are not possible, with
+the only exception being if the account is reaped and then re-funded shortly after submitting a
+mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
+the specified block interval).
 
 ## Metadata Updates
 
