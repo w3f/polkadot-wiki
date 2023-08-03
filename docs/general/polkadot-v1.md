@@ -32,10 +32,10 @@ initiatives:
   Nominated-Proof-of-Stake (NPoS) mechanism along with its consensus mechanism, will secure L1
   chains out-of-the-box without having to bootstrap security on their own.
 - **Secure interoperability.** Any L1 chain attached to Polkadot (as well as L2 chains built on top
-  of them) can benefit from Polkadot's native interoperability, and will thus be able to communicate
+  of them) can benefit from Polkadot's native interoperability and will thus be able to communicate
   and exchange value and information with other parachains.
 - **Truly resilient infrastructure.** This is achieved by keeping the network decentralized without
-  compromising scalability and throughput, and through on-chain treasury funds that can be accessed
+  compromising scalability and throughput and through on-chain treasury funds that can be accessed
   through governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
   educational material, education, software development, etc.
 - **Fast development and deployment of L1 chains.** This is achieved through the modular and
@@ -52,7 +52,7 @@ initiatives:
 
 The Polkadot realy-chain has been represented as a relay chain surrounded by multiple parachains
 attached to it. Parachains can communicate with each other using a generalized
-[cross-chain messaging format (XCM)](./learn-xcm-index) allowing messages to be delivered across
+[cross-chain messaging format (XCM)](./learn-xcm-index), allowing messages to be delivered across
 chains having different logic.
 
 ### Polkadot's Additional Functionalities
@@ -92,23 +92,22 @@ Currently, Polkadot 1.0 achieve resilience through the following strategies:
 
 ### Polkadot's Blockspace
 
-The design and realization of Polkadot 1.0 allowed its creators to truly realize the importance of
-blockspace.
+The design and realization of Polkadot 1.0 allowed its creators to enable commoditization of blockspace.
 
 A blockchain is a way to store data. The storage unit is the block, and once a block is finalized
 onto the chain, it is practically impossible to modify the data within that block. In addition to
 being tamper-proof, public permissionless blockchains like Polkadot store data that are visible to
-everybody (i.e. public), and anybody can become a network participant (i.e. permissionless).
+everybody (i.e. public), and anybody can become a network participant permissionlessly.
 
-The raw material produced by blockchains is **blockspace**; and how blockspace is organized,
-accessed, and used will eventually shape the degree of scalability of the network. There are three
-distinctive blockspace features:
+**Blockspace** is the capacity of a blockchain to finalize and commit operations. It represents a 
+blockchain's security, computing, and storage capability as an end product. Blockspace produced by 
+different blockchains can vary in security, flexibility, and availability. 
 
 - **Security**, intended as how secure the blockspace is. In Proof-of-Stake (PoS) networks, this is
   directly related to how much stake is locked on validator nodes, how much variance in stake there
-  is between validators (i.e. how easy it is to spot and attack single validators), and how many
-  validators there are securing the network (i.e. how easy it is to collude validators and stop the
-  network). Additionally, it is also important to look at how many validators are owned by single
+  is between validators (i.e. how easy it is to attack a single validator), and how many
+  validators there are securing the network (i.e. how easy it is for colluding validators to exert
+  influence on the network). Additionally, it is also important to look at how many validators are owned by single
   operators (this will determine the degree of social centralization of the network), and how many
   validators run on the same service provider (this will determine the degree of physical
   centralization of the network).
