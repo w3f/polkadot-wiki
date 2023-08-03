@@ -59,7 +59,7 @@ the chance of being a victim of a replay attack after
 
 Reaping an account resets the nonce value. If all signed transactions until the nonce before the
 reaping event were immortal, once the account is refunded, all transactions can be replayed because
-the information about the signatures for those transactions already exists on-chain, and the
+a valid transaction for that account and nonce already exists and has been signed. 
 refunded account will look new to the present chain state. There is no need for the attacker to know
 your private key.
 
