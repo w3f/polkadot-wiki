@@ -7,7 +7,6 @@ keywords: [polkadot vison, polkadot 1.0, Blockspace, Resilience, Decentralizatio
 slug: ../polkadot-v1
 ---
 
-## A Multi-chain Future
 
 Since the release of Bitcoin in 2009, blockchain projects increased exponentially to the order of
 tens of thousands. Different projects have different value propositions, suggesting that the future
