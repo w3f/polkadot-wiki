@@ -132,7 +132,7 @@ For more information about blockspace the [this interview](https://youtu.be/e1vI
 Habermeier as well as [this article](https://www.rob.tech/polkadot-blockspace-over-blockchains/) by
 him.
 
-### A Perspective Shift: Polkadot 2.0
+### A Perspective Shift: Upcoming Polkadot Feature Developments
 
 As with many other projects before Polkadot, at some point in time after achieving the
 initially-planned goals, a perspective shift allows you to understand better what your project is
@@ -149,5 +149,5 @@ strange lands but to possess other eyes._
 Thus, if we start to see Polkadot with _other eyes_ we can truly envision its potential and what it
 could become.
 
-Enter Polkadot 2.0, a long-term vision looking at Polkadot as a decentralized, secure, ubiquitous
-computing engine to power the next-generation of Web3 application.
+Polkadot is perfecting its implementation through [RFCs](https://github.com/polkadot-fellows/RFCs) 
+to continue being a decentralized, secure, ubiquitous computing engine to power the next generation of Web3 applications.
