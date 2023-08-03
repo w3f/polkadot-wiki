@@ -120,7 +120,7 @@ different blockchains can vary in security, flexibility, and availability.
   thrive using it. Ideally, a marketplace must drive the blockspace price based on demand, with
   secondary market options to ensure the usage of "second-hand" blockspace.
 
-Polkadot's has been designed around those core blockspace principles. However, its design can be
+Polkadot has been designed around those core blockspace principles. However, its design can be
 further improved. Tasks which are currently managed on the relay chain, such as balances transfers, staking, and governance, can be delegated to
 [system parachains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
 the relay-chain to provide shared security and interoperability. Blockspace is only accessible
