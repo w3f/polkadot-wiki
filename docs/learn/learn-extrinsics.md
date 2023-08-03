@@ -54,7 +54,7 @@ Extrinsics can be mortal (i.e. valid within a defined block interval) or immorta
 valid). By default and for security reasons, all extrinsics submitted using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md) and
 [browser extension](../general/polkadotjs.md#polkadot-js-extension) will be mortal. This will avoid
-the chance of being a victim of replay attacks after
+the chance of being a victim of a replay attack after
 [reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
 
 Reaping an account resets the nonce value. If all signed transactions until the nonce before the
