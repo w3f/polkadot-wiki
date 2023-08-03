@@ -13,6 +13,16 @@ some instructions may be executed before others are complete. Instructions may a
 parallel, enabling multiple parts of the processor to be working on potentially different
 instructions at the same time.
 
+Bundles of state transitions represented as blocks may be processed similarly. In the context of
+Polkadot, it aims to overall increase the throughput of the entire network.
+
+:::info
+
+In order to realize what this upgrade changes, it is recommended to be familiar with the stages of a
+parablock, which you may [read here](./learn-parachains-protocol.md).
+
+:::
+
 Asynchronous backing aims to add this logical pipeline to the parablock generation, backing, and
 inclusion processes. A parablock may be at different stages, but multiple blocks should be able to
 process simultaneously (in parallel) if needed. Most notably, block candidate generation and backing
@@ -30,12 +40,12 @@ It has three overarching goals:
 3. Allow for parablocks to be re-proposed to the network if they are not included initially on the
    first attempt.
 
-Asynchronous backing works by providing a form of **contextual execution**, which allows for more
-time for parachain collators to fit more transactions and ready block candidates for backing and
-inclusion. **Contextual execution** refers to how a parablock can begin being built earlier using
-the context provided by an _unincluded_ segment of recent block ancestors.
+Asynchronous backing provides a form of **contextual execution**, which allows for more time for
+parachain collators to fit more transactions and ready block candidates for backing and inclusion.
+**Contextual execution** refers to how a parablock can begin being built earlier using the context
+provided by an _unincluded segment_ of recent block ancestors.
 
-**Unincluded segments** are chains of blocks that are not yet included in the relay chain.
+**Unincluded segments** are chains of candidate blocks that are not yet included in the relay chain.
 Parablocks can be added to this unincluded segment and no longer have to wait for the latest
 included parent block of the relay chain. The core functionality that asynchronous backing brings is
 the ability to build on these unincluded segments of block ancestors rather than the finalized relay
@@ -44,7 +54,7 @@ chain state.
 Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
 block, as the parablock anchors itself to it). Each parablock must be generated and go through the
 entire backing process in a single relay block. It then proceeds through availability + inclusion
-during the next block.
+process during the next block.
 
 :::info
 
@@ -62,8 +72,8 @@ For more information on the validity and availability process, be sure to visit 
 ## Synchronous Backing on Polkadot
 
 With synchronous backing, there was only about a single relay chain block, or 6-second window, to
-complete the parablock generation and backing process. This was tightly coupled to the relay chain's
-progress, where blocks had to be created within this window.
+complete the parablock candidate generation and backing process. This was tightly coupled to the
+relay chain's progress, where blocks had to be created within this window.
 
 The main limitation of synchronous backing is that parablock validation is tightly coupled to the
 relay chain's progression on a 1-1 basis, meaning every parablock must be generated and backed
@@ -84,7 +94,8 @@ and storage time per block. The context for the latest parablock is derived from
 segment of block ancestors upon which the newest parablock is built.
 
 These blocks can be prepared in anticipation of being included later rather than keeping in sync
-with the relay chain's progress 1-1.
+with the relay chain's progress 1-1. The block can be in a different stage from another block being
+built, as long as it abides by the parameters set forth by the asynchronous backing configuration.
 
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
 Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
