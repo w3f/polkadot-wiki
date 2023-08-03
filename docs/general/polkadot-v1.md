@@ -116,7 +116,7 @@ different blockchains can vary in security, flexibility, and availability.
   One might avoid having situations in which poor quality data flood blockspace hindering the prompt
   execution of vital processes.
 - **Availability**, intended as how available blockspace is and how difficult it is to access it. It
-  should not be too difficult to get your hands on it so that any business model (not only DeFi) can
+  should not be too difficult to get your hands on it so that any business model  can
   thrive using it. Ideally, a marketplace must drive the blockspace price based on demand, with
   secondary market options to ensure the usage of "second-hand" blockspace.
 
