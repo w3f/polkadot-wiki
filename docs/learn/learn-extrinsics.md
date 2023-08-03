@@ -64,7 +64,7 @@ There is no need for the attacker to know
 your private key.
 
 Making a transaction mortal will almost certainly ensure that replay attacks are not possible, with the only
-particular case is if the account gets reaped immediately after submitting a mortal transaction, and
+exception being if the account is reaped and then re-funded shortly after submitting a mortal transaction, and
 within the mortal window (i.e. the block interval), an attacker replays that transaction.
 
 ## Metadata Updates
