@@ -430,9 +430,10 @@ double.
 
 <VLTable />
 
+{{ polkadot: **The table above shows the correct duration values. However, the current values for Polkadot are the same as those for Kusama by mistake. This is going to be fixed. For more information, see [this GitHub issue](https://github.com/paritytech/polkadot/issues/7394).** :polkadot }}
+
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals
-{{ polkadot: <RPC network="polkadot" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
+total), and one lock period equals {{ polkadot: 28 :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
 days. For additional information regarding the timeline of governance events, check out the
 governance section on the
@@ -450,14 +451,17 @@ long the tokens are locked.
 
 See below an example that shows how voluntary locking works.
 
-Peter: Votes `No` with {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} for a 32-week
-lock period => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+Peter: Votes `No` with
+{{ polkadot: 10 DOT for a 128-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
+=> {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
 
-Logan: Votes `Yes` with {{ polkadot: 20 DOT :polkadot }}{{ kusama: 2 KSM :kusama }} for one week
-lock period => {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+Logan: Votes `Yes` with
+{{ polkadot: 20 DOT for a 4-week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
+{{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
 
-Kevin: Votes `Yes` with {{ polkadot: 15 DOT :polkadot }}{{ kusama: 1.5 KSM :kusama }} for a 2-week
-lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+Kevin: Votes `Yes` with
+{{ polkadot: 15 DOT for a 8-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
+=> {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
 
 Even though combined both Logan and Kevin vote with more
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
