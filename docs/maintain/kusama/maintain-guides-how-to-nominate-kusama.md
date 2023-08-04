@@ -171,9 +171,8 @@ Executing the following command:
 polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
 ```
 
-`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. Stash and Controller
-can be the same address but it is not recommended since it defeats the security of the two-account
-staking model.
+`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. (Controller accounts are now deprecated. Refer to 
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748) for additional context)
 
 `NUMBER_OF_TOKENS`: The number of KSM / DOT you would like to stake to the network. **Note**: KSM
 has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
