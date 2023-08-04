@@ -404,20 +404,22 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 After installing Polkadot, you can verify the installation by running
 
 ```bash
-which polkadot
-which polkadot-execute-worker
-which polkadot-prepare-worker
+polkadot --version
+polkadot-execute-worker --version
+polkadot-prepare-worker --version
 ```
 
-It should return:
+It should return something like this (the exact versions don't matter, but they must all be the
+same):
 
 ```bash
-/usr/bin/polkadot
-/usr/bin/polkadot-execute-worker
-/usr/bin/polkadot-prepare-worker
+0.9.43-36264cb36db
+0.9.43-36264cb36db
+0.9.43-36264cb36db
 ```
 
-If not, make sure that all the binaries are somewhere in your `$PATH`.
+If not, make sure that you installed all the binaries, all the binaries are somewhere in your
+`$PATH` and they are all in the same folder.
 
 ### Synchronize Chain Data
 
