@@ -2,7 +2,7 @@
 id: learn-consensus
 title: Polkadot Consensus
 sidebar_label: Consensus
-description: An explanation of the consensus model used in Polkadot.
+description: The Consensus Mechanism of Polkadot.
 keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus, finality]
 slug: ../learn-consensus
 ---
@@ -147,7 +147,7 @@ produces a primary block from a [VRF-selected](./learn-cryptography.md#randomnes
 a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
-[BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
+[BABE paper](https://research.web3.foundation/Polkadot/protocols/block-production/Babe).
 
 ### BADASS BABE: SASSAFRAS
 
@@ -253,7 +253,7 @@ The two main differences between GRANDPA and Casper FFG are:
 
 # Resources
 
-- [BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html) - The
+- [BABE paper](https://research.web3.foundation/Polkadot/protocols/block-production/Babe) - The
   academic description of the BABE protocol.
 - [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - The academic
   description of the GRANDPA finality gadget. Contains formal proofs of the algorithm.

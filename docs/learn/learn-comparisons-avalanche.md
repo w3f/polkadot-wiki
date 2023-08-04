@@ -2,7 +2,7 @@
 id: learn-comparisons-avalanche
 title: Polkadot vs. Avalanche
 sidebar_label: Avalanche
-description: A high-level comparison between Polkadot and Avalanche.
+description: Comparison between Polkadot and Avalanche.
 keywords: [avalance, proof of stake, comparison]
 slug: ../learn-comparisons-avalanche
 ---
@@ -128,9 +128,8 @@ It is not clear from the Avalanche documentation what happens after a year, it i
 validators will have to re-stake and start a new period. Validators acquire points for uptime and
 correctness of their work, and the remuneration of rewards depends on that.
 
-In Polkadot the minimum stake for needed to be a validator is variable, same for being a nominator
-even though it takes 10 DOT to setup a stash and controller account to start nominating. The true
-minimum need to be competitive enough to be included in the active set for validators, or
+In Polkadot the minimum stake needed to be a validator is variable, same for being a nominator. The
+true minimum need to be competitive enough to be included in the active set for validators, or
 successfully being chosen as a nominator depends on the minimum staked amounts on the network at a
 given time. Read more about this in the [staking page](learn-staking).
 

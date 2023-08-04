@@ -30,7 +30,7 @@ To chill your validator or nominator, call the `staking.chill()` extrinsic. See 
 
 Purging the validator's session keys removes the key reference. This can be done through the
 `session.purgeKeys()` extrinsic. The key reference exists on the account that originally called the
-`session.set_keys()` extrinsic, which could be the stash or the controller (at the time the keys
+`session.set_keys()` extrinsic, which could be the stash or the staking proxy (at the time the keys
 were set).
 
 :::caution Purge keys using the same account that set the keys
@@ -56,4 +56,4 @@ See [Unbonding and Rebonding](maintain-guides-how-to-nominate-polkadot.md) for m
 
 Unbonding your tokens can be done through the `Network > Staking > Account actions` page in
 PolkadotJS Apps by clicking the corresponding stash account dropdown and selecting "Unbond funds".
-This can also be done through the `staking.unbond()` extrinsic with the controller account.
+This can also be done through the `staking.unbond()` extrinsic with the staking proxy account.

@@ -22,21 +22,21 @@ For most users, we recommend using the
 [Polkadot{.js} browser extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
 since it will allow you to store your encrypted keystore locally.
 
-In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger.md),
-or [Parity Signer](../../learn/learn-account-generation.md#parity-signer).
+In terms of hardware wallet support, you can use the [Kusama Ledger application](../ledger.md), or
+[Parity Signer](../../learn/learn-account-generation.md#parity-signer).
 
 Another option you may consider using is the
 [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) command-line utility, which
 will allow you to take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](./../../general/wallets.md) for more details. Many of these wallets
-support generating Kusama accounts as well.
+[Polkadot Wiki Wallets page](./wallets) for more details. Many of these wallets support generating
+Kusama accounts as well.
 
 ### Using Kusama Ledger application
 
-Please follow the instructions for [installing the Kusama Ledger application](kusama-ledger.md) and
-then proceed to step 2 below.
+Please follow the instructions for [installing the Kusama Ledger application](../ledger.md) and then
+proceed to step 2 below.
 
 ### Using Polkadot{.js} extension (Chrome/Brave or Firefox)
 

@@ -2,7 +2,7 @@
 id: learn-transaction-fees
 title: Transaction Fees
 sidebar_label: Transaction Fees
-description: How transaction fees are calculated and handled.
+description: How Transaction Fees are Calculated and Handled.
 keywords: [transaction, fees]
 slug: ../learn-transaction-fees
 ---
@@ -13,7 +13,7 @@ Transaction fees prevent individual users from consuming too many resources.
 opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the
 fee is paid, nodes will execute the transaction.
 
-[Web3 Foundation Research](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html?highlight=transaction%20fee)
+[Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics#2-slow-adjusting-mechanism)
 designed the Polkadot fee system with the following objectives:
 
 - Each Relay Chain block should be processed efficiently to avoid delays in block production.
@@ -292,5 +292,5 @@ range of their own system clocks.
 
 ## Learn More
 
-- [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/overview/2-token-economics.html)
+- [Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics)
 - [Substrate Extrinsics, Weights & Fees](https://docs.substrate.io/main-docs/build/tx-weights-fees/)

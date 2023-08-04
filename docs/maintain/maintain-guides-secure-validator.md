@@ -46,7 +46,7 @@ Session keys are generated inside the node via RPC call. See the
 [How to Validate guide](maintain-guides-how-to-validate-polkadot.md#set-session-keys) for
 instructions on setting Session keys. These should be generated and kept within your client. When
 you generate new Session keys, you must submit an extrinsic (a Session certificate) from your
-Controller key telling the chain your new Session keys.
+staking proxy key telling the chain your new Session keys.
 
 :::info Generating session keys
 

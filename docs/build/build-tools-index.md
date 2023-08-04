@@ -13,7 +13,7 @@ developers, feel free to [add it in](../general/contributing.md).
 
 ## Wallets
 
-Please see the [Wallets](./../general/wallets.md) page.
+Please see the [Wallets](./wallets) page.
 
 ## Block Explorers
 

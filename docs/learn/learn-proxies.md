@@ -2,32 +2,18 @@
 id: learn-proxies
 title: Proxy Accounts
 sidebar_label: Proxy Accounts
-description: Learn about account proxies and how they can benefit your account(s).
+description: Proxy Accounts on Polkadot.
 keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-:::caution The Account Tab in the Polkadot-JS UI cannot handle complicated proxy setups
-
-The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
--> an anonymous proxy which is part of another multisig). These complex setups must be done using
-the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
-you are testing features for the first time.** By performing the complex proxy setups on the
-testnet, you can comfortably replicate the procedure on the main networks.
-
-:::
-
-Much like controller accounts in
-[staking](learn-staking.md#stash-and-controller-accounts-for-staking), proxies allow users to use an
-account (it can be in cold storage or a hot wallet) less frequently but actively participate in the
-network with the weight of the tokens in that account. Proxies can be viewed as a more powerful and
-flexible version of a controller account, i.e. proxies are allowed to perform a limited amount of
-actions related to specific [substrate pallets](https://docs.substrate.io/reference/frame-pallets/)
-on behalf of another account. The video below contains more information about using proxies.
+Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
+but actively participate in the network with the weight of the tokens in that account. Proxies are
+allowed to perform a limited amount of actions related to specific
+[substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another
+account. The video below contains more information about using proxies.
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
@@ -51,28 +37,29 @@ the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as
 your primary token-holding account and don't want to access it very often, but you want to
 participate in staking to earn staking rewards. You could set one of your existing accounts as a
-staking proxy for that stash account. The stash account is also the controller here, but it does not
-matter because you will always use your staking proxy to sign staking-related transactions.
+staking proxy for that stash account, and use your staking proxy to sign all staking-related
+transactions.
 
-![proxies](../assets/controller-vs-staking-proxy.png)
+![proxies](../assets/stash-vs-stash-and-staking-proxy.png)
 
-If you just use a controller that is not a staking proxy, the stash account will still have to sign
-for some staking-related transactions such as _bond more funds_ and _change controller account_
-(Figure _left_). But if you have a staking proxy, everything will be signed by the proxy, making the
-stash account even more isolated (Figure _right_). In other words, the account assigned as a staking
-proxy of the stash can participate in staking on behalf of that stash. If the proxy is compromised,
-it doesn't have access to transfer-related transactions, so the stash account could just set a new
-proxy to replace it.
+Having a staking proxy will make the stash account isolated within the staking context. In other
+words, the account assigned as a staking proxy can participate in staking on behalf of that stash.
+Without the proxy you will need to sign all the staking-related transactions with the stash. If the
+proxy is compromised, it doesn't have access to transfer-related transactions, so the stash account
+could just set a new proxy to replace it. You can also monitor proxies by
+[setting a time-delay](#time-delayed-proxy).
 
 Creating multiple proxy accounts that act for a single account, lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
-participate in a network.
+participate in the network.
 
 :::info
 
 The **maximum number of proxies** allowed for a single account is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }}
+
+You can have the same proxy for multiple accounts.
 
 :::
 
@@ -90,13 +77,14 @@ To create a **proxy account** read
 You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
 proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
 
-- Any
-- Non-transfer
-- Governance
-- Staking
-- Identity Judgement
-- Cancel
-- Auction
+- [Any](#any-proxy)
+- [Non-transfer](#non-transfer-proxy)
+- [Governance](#governance-proxy)
+- [Staking](#staking-proxy)
+- [Identity Judgement](#identity-judgement-proxy)
+- [Cancel](#cancel-proxy)
+- [Auction](#auction-proxy)
+- [Nomination pool](#nomination-pools-proxy)
 
 When a proxy account makes a transaction,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
@@ -153,14 +141,9 @@ detailed information about staking proxies.
 
 :::
 
-The **Staking** type allows staking-related transactions. Do not confuse a staking proxy with the
-controller account. Within the staking pallet, some transactions must come from the stash account,
-while others must come from the controller account. The stash account is meant to stay in cold
-storage, while the controller account makes day-to-day transactions like setting session keys or
-deciding which validators to nominate. The stash account still needs to make some transactions such
-as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_
-of stash and controller accounts but does allow the stash to be accessed even less frequently than
-using a controller account.
+The **Staking** type allows all staking-related transactions. The stash account is meant to stay in
+cold storage, while the staking proxy account makes day-to-day transactions like setting session
+keys or deciding which validators to nominate.
 
 The staking proxy can fully access Staking, Session, Utility and Fast Unstake pallets.
 
@@ -192,6 +175,11 @@ everything an Auction proxy can do. Before participating in a crowdloan using an
 is recommended that you check with the respective parachain team for any possible issues pertaining
 to the crowdloan rewards distribution. Auction proxy can access Auctions, Crowdloan, Registrar and
 Slots pallets.
+
+### Nomination Pools Proxy
+
+Proxies that are of the type **Nomination Pools** are accounts that allow transactions pertaining to
+[Nomination Pools](./learn-nomination-pools.md).
 
 ## Removing Proxy
 
@@ -239,10 +227,10 @@ list (creates one new item in storage). For every proxy the account has, an addi
 defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location). The
 `ProxyDepositBase` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
 and the `ProxyDepositFactor` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/>. :kusama }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/>. :kusama }}
 
 ## Time-delayed Proxy
 
@@ -265,13 +253,23 @@ time-delayed proxies. The video goes through the example below.
 
 :::
 
-Let's take for example the stash account Eleanor that has a controller Charly. Eleanor does not
-fully trust Charly, and as a consequence sets him as a time-delayed staking proxy. In this way, if
-Charly submits an extrinsic to change the controller to Bob, such extrinsic can be rejected by
-Eleanor. Bob can be even more malicious than Charly and change the reward destination to another
-account he only controls. Remember that Eleanor added Charly as proxy, but she might not want to add
-Bob as a controller. This implies that Eleanor monitors Charly, and that within the time-delay she
-can spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
+Announcing `n` calls using a time-delayed proxy also requires a deposit of the form:
+
+`announcementDepositBase` + `announcementDepositFactor` \* `n`
+
+where the `announcementDepositBase` is the required amount to be reserved for an account to announce
+a proxy call. For every proxy call the account has, an additional amount defined by the
+`announcementDepositFactor` is reserved as well. The `announcementDepositBase` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
+and the `announcementDepositFactor` is
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
+
+Let's take for example the stash account Eleanor setting Bob as a time-delayed staking proxy. In
+this way, if Bob submits an extrinsic to change the reward destination, such extrinsic can be
+rejected by Eleanor. This implies that Eleanor monitors Bob, and that within the time-delay she can
+spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
 account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
 check the hashes for the calls made by the proxy accounts and the block height at which they are
 enabled for execution.
@@ -282,8 +280,8 @@ enabled for execution.
 
 If you try to use `proxy.proxyAnnounced` to execute the call within the time-delay window you will
 get an error "Proxy unannounced" since the announcement will be done after the time delay. Also note
-that regular `proxy.proxy`calls do not work with time-delayed proxies, you need to announce the call
-first and then execute the announced call on a separate transaction.
+that regular `proxy.proxy` calls do not work with time-delayed proxies, you need to announce the
+call first and then execute the announced call on a separate transaction.
 
 :::
 
@@ -318,6 +316,18 @@ Charly's is the only _any_ proxy of P-C, and P-C cannot sign anything. While if 
 account we will need to submit all three proxy calls.
 
 ## Anonymous Proxy (Pure Proxy)
+
+:::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
+
+The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
+-> a pure proxy which is part of another multisig). These complex setups must be done using the
+[Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+
+**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
+you are testing features for the first time.** By performing the complex proxy setups on the
+testnet, you can comfortably replicate the procedure on the main networks.
+
+:::
 
 :::danger Risk of loss of funds
 
@@ -420,9 +430,9 @@ _Pure_ proxies cannot be stolen because they do not have private keys. The only 
 full access to the _pure_ proxies are _any_ proxies. Security can be further increased if the _any_
 proxy is a multi-signature account.
 
-#### Simplified and Secure Account Management at a Corporate Level
+#### Simplified and Secure Account Management at an Organization Level
 
-:::info Walk-through tutorial video
+:::info Walk-through tutorial video of Account Management
 
 You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through
 this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.

@@ -2,7 +2,7 @@
 id: learn-launch
 title: Polkadot Launch Phases
 sidebar_label: Polkadot Launch Phases
-description: An explanation of Polkadot's launch process and its individual phases.
+description: Polkadot's Launch Process and its Individual Phases.
 keyword: [launch, phases, polkadot 2.0, DOT, claim, token sale, redenomination]
 slug: ../learn-launch
 ---
@@ -74,16 +74,3 @@ Check out these resources for further information:
 
 - [Polkadot Network blog](https://polkadot.network/blog/parachains-are-live-polkadot-launch-is-now-complete/).
 - [Polkadot A to Z: L for Polkadot Launch](https://www.reddit.com/r/Polkadot/comments/s3yb3d/l_for_polkadot_launch_polkadot_a_to_z/).
-
-## Polkadot 2.0
-
-Researchers are proposing the next version of the Polkadot network. With many questions yet to be
-answered, as of now, some big areas of research will be in:
-
-- Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
-- Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of
-  parachains built with horizontal scalability?
-- Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
-  tiers of Relay Chains can be nested? How will validators work together to validate blocks on
-  various Relay Chains? How does [XCM](learn-xcm.md) work in the nested setup? How is
-  [AnV](./learn-parachains-protocol.md#anv-protocol) going to work there?

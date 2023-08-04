@@ -2,7 +2,7 @@
 id: learn-governance
 title: Governance V1
 sidebar_label: Governance V1
-description: Learn about Polkadot's thought-through governance model.
+description: Polkadot's First Governance Model.
 keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
@@ -16,11 +16,11 @@ mechanism that allows it to evolve gracefully overtime at the ultimate behest of
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
 
-:::info OpenGov is live on Kusama Network
+:::info Polkadot OpenGov is live on Kusama Network
 
 Learn about the upcoming changes to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
-[Wiki doc on OpenGov](learn-opengov.md).
+[Wiki doc on Polkadot OpenGov](./learn-polkadot-opengov.md).
 
 :::
 
@@ -35,6 +35,50 @@ To make any changes to the network, the idea is to compose active token holders 
 together to administrate a network upgrade decision. No matter whether the proposal is proposed by
 the public (token holders) or the [Council](#council), it finally will have to go through a vote on
 a referendum to let all holders, weighted by stake, make the decision.
+
+## Governance Summary
+
+The figure below shows an overview of Governance V1 with the key actors and different paths for
+submitting a proposal that can potentially be voted on as a referendum.
+
+![gov1-overview](../assets/gov1-overview.png)
+
+The public (i.e. token holders) can submit a proposal that gets added to the proposal queue. Here,
+proposals are [endorsed](#endorsing-proposals), and the one that gets the most support will climb to
+the top of the queue. When it is time, the proposal at the top of the queue will become a
+[Public Referendum](#public-referenda). For instance, the proposal with 11 endorsements is shown at
+the top of the queue in the figure, which is ready to become a referendum.
+
+The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
+which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
+the treasury proposal can be directly executed or go to the external queue, which will be voted on
+through a [Council Referendum](#council-referenda). See the figure's green horizontal path from the
+Public (green) to the Council (yellow). Treasury proposals and Council proposals can be directly
+executed (horizontal yellow arrows) or go to the external queue, where they will become a referendum
+
+Note that the external queue always consists of
+[a single proposal](https://github.com/paritytech/substrate/blob/f4a2e84ee5974b219f2a03cd195105060c41e3cd/frame/democracy/src/lib.rs#LL29C8-L31C4).
+A proposal in the external queue can be fast-tracked by the
+[Technical Committee](#technical-committee) (light blue). The fast track can contain as many
+proposals as possible (also called emergency proposals) that can be voted on simultaneously with
+with the referenda introduced either by the Council or the Public. See in the figure the yellow
+circle (i.e. Council Proposal) exiting the external queue, and the yellow circle with a light-blue
+border also leaving the queue and being fast-tracked by the Technical Committee (TC). Once empty,
+the external queue can be filled with another Council proposal.
+
+The Council can also submit proposals that will end up in the external queue. Voting on Council and
+Public proposals subject to an [alternating timetable](#alternating-voting-timetable), shown in the
+figure as the "on" and "off" toggles on the external and proposal queues. In this example, the
+Public proposal will be voted on together with the fast-tracked Council Proposal. Voting on
+non-fast-tracked Council Proposals will be blocked until the alternating timetable switches the
+toggles, which stops Public proposals from becoming a referenda.
+
+Referenda will follow an [adaptive quorum biasing](#adaptive-quorum-biasing) mechanism for deciding
+whether they get enacted, and if they do, they will be executed after an
+[enactment period](#enactment).
+
+Token holders can delegate their votes (with a conviction multiplier) to another account belonging
+to a trusted entity voting on their behalf.
 
 ## Proposals
 
@@ -329,8 +373,7 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-{{ polkadot: <VLTable network="polkadot"/> :polkadot }}
-{{ kusama: <VLTable network="kusama"/> :kusama }}
+<VLTable />
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals

@@ -2,8 +2,8 @@
 id: learn-DOT
 title: DOT
 sidebar_label: DOT
-description: Learn about the tokenomics of the Polkadot ecosystem.
-keywords: [token, DOT, what are the uses of DOT, KSM]
+description: Tokenomics of Polkadot's Native Token DOT.
+keywords: [token, DOT, what are the uses of DOT, KSM, faucet]
 slug: ../learn-DOT
 ---
 
@@ -75,7 +75,7 @@ the Polkadot platform.
 
 Polkadot will enable any holder of DOT to participate in governance. For details on how holders can
 participate in governance, as well as their rights and responsibilities, see the
-[governance page](learn-governance.md).
+[governance page](./learn-polkadot-opengov.md).
 
 ### DOT for Consensus
 
@@ -129,6 +129,9 @@ Matrix chatroom [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet
 account will be credited with 1 WND by default. You can also specify to get more tokens by
 `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
 
+Another way is to use our web-based
+[Westend faucet](https://paritytech.github.io/polkadot-testnet-faucet/westend).
+
 You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network.
 Watch the video below on how to get started on Westend.
 
@@ -145,10 +148,23 @@ Watch the video below on how to get started on Westend.
 ### Getting Tokens on the Rococo Testnet
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
-the [cross consensus](learn-xcm.md) message passing aspects of this testnet. General users can
+the [cross consensus](learn-xcm.md) message-passing aspects of this testnet. General users can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
-[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org). Learn more about Rococo
-on its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
+[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org) or through the web-based
+[Rococo faucet](https://paritytech.github.io/polkadot-testnet-faucet/). Learn more about Rococo on
+its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
+
+### Getting Tokens on the Wococo Testnet
+
+Wococo is a bridge testnet. General users can obtain WOOK by posting `!drip <WOCOCO_ADDRESS>` in the
+Matrix chatroom [#wococo-faucet:matrix.org](https://matrix.to/#/#wococo-faucet:matrix.org).
+
+### Faucets support
+
+If you require help with using faucets, or wish to report an issue, there is a support chat
+[#faucets-support:matrix.org](https://matrix.to/#/#faucets-support:matrix.org), or you can
+[create an issue](https://github.com/paritytech/polkadot-testnet-faucet/issues/new/choose) directly
+in the faucets repo
 
 ## Kusama Tokens
 

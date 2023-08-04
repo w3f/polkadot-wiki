@@ -2,7 +2,7 @@
 id: learn-cryptography
 title: Cryptography on Polkadot
 sidebar_label: Cryptography
-description: An overview of the cryptographic functions used in Polkadot.
+description: Cryptographic Functions used in Polkadot.
 keywords:
   [cryptography, hashing, keypair, signing, keys, randomness, verifiable random function, VDF]
 slug: ../learn-cryptography
@@ -57,18 +57,18 @@ expect `ed25519` to be much better supported by commercial HSMs for the foreseea
 same time, `sr25519` makes implementing more complex protocols safer. In particular, `sr25519` comes
 with safer version of many protocols like HDKD common in the Bitcoin and Ethereum ecosystem.
 
-### "Controller" and "Stash" Keys
+### Stash and Staking Proxy Keys
 
-When we talk about "controller" and "stash" keys, we usually talk about them in the context of
+When we talk about stash and staking proxy keys, we usually talk about them in the context of
 running a validator or nominating, but they are useful concepts for all users to know. Both keys are
 types of account keys. They are distinguished by their intended use, not by an underlying
 cryptographic difference. All the info mentioned in the parent section applies to these keys. When
-creating new controller or stash keys, all cryptography supported by account keys are an available
-option.
+creating new staking proxy or stash keys, all cryptography supported by account keys are an
+available option.
 
-The controller key is a semi-online key that will be in the direct control of a user, and used to
-submit manual extrinsics. For validators or nominators, this means that the controller key will be
-used to start or stop validating or nominating. Controller keys should hold some
+The staking proxy key is a semi-online key that will be in the direct control of a user, and used to
+submit manual extrinsics. For validators or nominators, this means that the proxy key will be used
+to start or stop validating or nominating. Proxy keys should hold some
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to pay for fees, but they should not be used
 to hold huge amounts or life savings. Since they will be exposed to the internet with relative
 frequency, they should be treated carefully and occasionally replaced with new ones.
@@ -80,19 +80,19 @@ should be thought of as a saving's account at a bank, which ideally is only ever
 conditions. Or, perhaps a more apt metaphor is to think of it as buried treasure, hidden on some
 random island and only known by the pirate who originally hid it.
 
-Since the stash key is kept offline, it must be set to have its funds bonded to a particular
-controller. For non-spending actions, the controller has the funds of the stash behind it. For
-example, in nominating, staking, or voting, the controller can indicate its preference with the
-weight of the stash. It will never be able to actually move or claim the funds in the stash key.
-However, if someone does obtain your controller key, they could use it for slashable behavior, so
-you should still protect it and change it regularly.
+Since the stash key is kept offline, it must be set to have its funds bonded to a particular staking
+proxy. For non-spending actions, the staking proxy has the funds of the stash behind it. For
+example, in nominating, staking, or voting, the proxy can indicate its preference with the weight of
+the stash. It will never be able to actually move or claim the funds in the stash key. However, if
+someone does obtain your proxy key, they could use it for slashable behavior, so you should still
+protect it and change it regularly.
 
 ### Session Keys
 
 Session keys are hot keys that must be kept online by a validator to perform network operations.
 Session keys are typically generated in the client, although they don't have to be. They are _not_
 meant to control funds and should only be used for their intended purpose. They can be changed
-regularly; your controller only need create a certificate by signing a session public key and
+regularly; your staking proxy only need create a certificate by signing a session public key and
 broadcast this certificate via an extrinsic.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses six session keys:
@@ -128,8 +128,7 @@ signatures. A recent patent expiration on it has made it the preferred choice fo
 
 The choice of using Schnorr signatures over using ECDSA is not so cut and dried. Jeff Burdges (a
 Web3 researcher) provides additional details on the decision in this
-[research post](https://research.web3.foundation/en/latest/polkadot/keys/1-accounts.html) on the
-topic:
+[research post](https://research.web3.foundation/Polkadot/security/keys) on the topic:
 
 :::info Choosing Schnorr signatures over ECDSA signatures
 
@@ -289,7 +288,7 @@ unnecessary friction for users of the blockchains opting for this method.
 - [Key discovery attack on BIP32-Ed25519](https://web.archive.org/web/20210513183118/https://forum.w3f.community/t/key-recovery-attack-on-bip32-ed25519/44) -
   Archive of forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition
   to the sr25519 variant.
-- [Account signatures and keys in Polkadot](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
+- [Account signatures and keys in Polkadot](https://research.web3.foundation/Polkadot/security/keys) -
   Research post by Web3 researcher Jeff Burdges.
 - [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 - [Polkadot's research on blockchain randomness and sortition](https://w3f-research.readthedocs.io/en/latest/polkadot/block-production/Babe.html) -

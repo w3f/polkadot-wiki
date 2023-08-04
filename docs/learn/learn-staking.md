@@ -2,7 +2,7 @@
 id: learn-staking
 title: Introduction to Staking
 sidebar_label: Introduction to Staking
-description: A high level introduction to Staking on Polkadot and NPoS model
+description: Overview of Staking and NPoS on Polkadot.
 keywords: [staking, stake, nominate, nominating, NPoS, faq]
 slug: ../learn-staking
 ---
@@ -99,14 +99,14 @@ validators in an even manner so that the economic security is maximized. In the 
 number of validators having the most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing
 get elected and become active. For more information about the election algorithm go to
 [this](learn-phragmen.md) page on the wiki or
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
-research article. As a nominator, a minimum of
+[this](https://research.web3.foundation/Polkadot/protocols/NPoS/Paper) research article. As a
+nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 is required to submit an intention to nominate, which can be thought of as registering to be a
 nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
 in-depth review of NPoS see
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
+[this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
@@ -155,8 +155,7 @@ that offers fair representation and security, thus avoiding uneven power and inf
 validators. The election algorithms used by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are based on the Proportional
 Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information
-about PJR methods visit
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
+about PJR methods visit [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview)
 research article.
 
 ### Eras and Sessions
@@ -206,10 +205,10 @@ lead to centralization.
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and contribute to the economic security of
 the network will be nominators, thus here we focus on the role of nominators. However, it is worth
 mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
-[session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys),
-produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to
-consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition
-function of parachains, and possibly some other responsibilities regarding data availability and
+[session keys](https://research.web3.foundation/Polkadot/security/keys/session), produce new block
+candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in
+[GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition function of
+parachains, and possibly some other responsibilities regarding data availability and
 [XCM](learn-xcm.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
 to become a validator you can consult
@@ -336,36 +335,39 @@ for the health of the network and increased staking rewards. See
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 support article to understand in detail how to select the set of validators to nominate.
 
-### Stash and Controller Accounts for Staking
+### Stash Account and Staking Proxy
 
 Two different accounts can be used to securely manage your funds while staking.
 
-- **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  controller account. As a result, you may actively participate in staking with a stash private key
-  kept in a cold wallet like Ledger, meaning it stays offline all the time. Stash account keys are
-  used to sign staking actions such as bonding additional funds.
+- **Stash:** This account holds funds bonded for staking, but delegates all staking functions to a
+  staking proxy account. You may actively participate in staking with a stash private key kept in a
+  cold wallet like Ledger, meaning it stays offline all the time. Having a staking proxy will allow
+  you to sign all staking-related transactions with the proxy instead of using your Ledger device.
+  This will allow you:
 
-- **Controller:** This account acts on behalf of the stash account, signaling decisions about
+  - to avoid carrying around your Ledger device just to sign staking-related transactions, and
+  - to and to keep the transaction history of your stash clean
+
+- **Staking Proxy:** This account acts on behalf of the stash account, signaling decisions about
   nominating and validating. It can set preferences like commission (for validators) and the staking
   rewards payout account. The earned rewards can be bonded (locked) immediately for bonding on your
   stash account, which would effectively compound the rewards you receive over time. You could also
-  choose to have them deposited to your controller account or a different account as a free
-  (transferable) balance. If you are a validator, it can also be used to set your
-  [session keys](learn-cryptography.md). Controller accounts only need sufficient funds to pay for
-  the transaction fees.
+  choose to have them deposited to a different account as a free (transferable) balance. If you are
+  a validator, it can also be used to set your [session keys](learn-cryptography.md). Staking
+  proxies only need sufficient funds to pay for the transaction fees.
 
 :::warning
 
-Never leave a high balance on a controller account which are usually "hot" as their private key is
-stored on the device (PC, phone) and it is always exposed to the internet for potential hacks and
-scams. It is good practice to deposit rewards on the stash account or to send them to another
-account on a cold wallet.
+Never leave a high balance on a proxy account which are usually "hot" as their private key is stored
+on the device (PC, phone) and it is always exposed to the internet for potential hacks and scams. It
+is good practice to deposit rewards on the stash account or to send them to another account on a
+cold wallet.
 
 :::
 
-![staking](../assets/stash-controller.png)
+![staking](../assets/stash-and-staking-proxy.png)
 
-This hierarchy of separate keys for stash and controller accounts was designed to add a layer of
+This hierarchy of separate keys for stash and staking accounts was designed to add a layer of
 protection to nominators and validator operators. The more often one exposes and uses a private key,
 the higher its vulnerability for hacks or scams. So, if one uses a key for multiple roles on a
 blockchain network, it is likely that the account can get compromised. Note that the damage linked
@@ -376,13 +378,12 @@ found [here](../learn/learn-accounts.md/#derivation-paths).
 :::info
 
 For Ledger users staking directly on Ledger Live, currently, there is no option to use separate
-stash and controller accounts. That is if you stake on Ledger Live your stash account will be your
-controller too.
+stash and staking proxy accounts.
 
 Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import
-their Ledger accounts in the extension and use them as a stash and controller. You can find more
-information about Talisman and other third-party wallets that officially secured funding from the
-treasury [here](./../general/wallets.md).
+their Ledger accounts in the extension and use them as a stash in staking. You can find more
+information about Talisman and other wallets that officially secured funding from the treasury
+[here](../general/wallets-and-extensions.md).
 
 :::
 
@@ -434,10 +435,9 @@ days, nominators should check if they have pending payouts at least this often.
 
 :::
 
-Rewards can be directed to the same account used to sign the payout (controller), or to the stash
-account (and either increasing the staked value or not increasing the staked value), or to a
-completely unrelated account. It is also possible to top-up / withdraw some bonded tokens without
-having to un-stake all staked tokens.
+Rewards can be directed to the same account used to sign the payout or to a completely unrelated
+account. It is also possible to top-up / withdraw some bonded tokens without having to un-stake all
+staked tokens.
 
 If you wish to know if you received a payout, you will have to check via a block explorer. See
 [the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
@@ -481,7 +481,7 @@ unapplied, a governance proposal can be made to reverse it during this period (7
 days on Polkadot). After the grace period, the slashes are applied.
 
 The following levels of offense are
-[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html). However, these
+[defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
 particular levels are not implemented or referred to in the code or in the system; they are meant as
 guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
@@ -498,7 +498,7 @@ calculated, see the equations in the section below.
   Slashes all or most of the stake behind the validator and chills.
 
 If you want to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
+[research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
 
 ### Chilling
 

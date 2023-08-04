@@ -2,7 +2,7 @@
 id: learn-accounts
 title: Polkadot Accounts
 sidebar_label: Polkadot Accounts
-description: An explanation of accounts, indices, identity, and reaping.
+description: Polkadot Accounts, Account Identity, and Account Reaping.
 keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
@@ -90,8 +90,9 @@ To learn more about generating accounts on
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below we give an example of different balance types on Kusama (note that on Polkadot the situation
-will look the same).
+Below is an example that displays different balance types of a Kusama account in the
+[Accounts tab of the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (note that the balance
+types are the same for a Polkadot account).
 
 ![account_balance_types](../assets/account-balance-types.png)
 
@@ -126,6 +127,38 @@ will look the same).
   The same applies to proxies. The idea is that those actions require some network memory usage that
   is not given for free. In the example we created a governance proxy and the reserved funds for
   this are 0.0668 KSM.
+
+### Query Account Data in Polkadot-JS
+
+In the Polkadot-JS UI, you can also query account data under
+[Developer > Chain state](https://polkadot.js.org/apps/#/chainstate). Under `selected state query`
+choose the system pallet followed by `account(AccountId32): FrameSystemAccountInfo`, under `Option`
+choose an account, and then click on the "+" button on the right.
+
+![account_balance_types](../assets/AccountData-struct.png)
+
+Account information include:
+
+- `nonce`, the number of transactions the account sent.
+- `consumers`, the number of other modules that currently depend on this account's existence. The
+  account cannot be reaped until this is zero.
+- `providers`, the number of other modules that allow this account to exist. The account may not be
+  reaped until this and `sufficients` are both zero.
+- `sufficients`, the number of modules that allow this account to exist for their own purposes. The
+  account may not be reaped until this and `providers` are both zero.
+- `data`, the additional data that belongs to this account. Used to store the balance(s) in a lot of
+  chains.
+
+More in-depth information about the above data can be found in the
+[substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/system/src/lib.rs#LL767C1-L781C24).
+
+The `AccountData` structure defines the balance types in Substrate. The three types of balances
+include `free`, `reserved`, and `frozen`. The **usable** balance of the account is the amount that
+is `free` minus any funds considered `frozen`, while the **total** balance of the account is the sum
+of `free` and`reserved` funds. The `flags` describe extra information about the account.
+
+More in-depth information about the above data can be found in the
+[balances pallet in the Substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).
 
 ### Unlocking Locks
 

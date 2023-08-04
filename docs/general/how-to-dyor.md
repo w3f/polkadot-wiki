@@ -2,7 +2,7 @@
 id: how-to-dyor
 title: How to Do Your Own Research (DYOR)
 sidebar_label: Do Your Own Research
-description: It goes without saying, always DYOR. We hope this guide can help you do so.
+description: Importance of Doing Your Own Research (DYOR).
 keywords: [dyor, research, scams, protect]
 slug: ../how-to-dyor
 ---
@@ -205,9 +205,9 @@ Kusama or directly on Polkadot.
 
 However, building a potential parachain is not the only way to build on
 {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} and expand its ecosystem. A project
-might aim to build a DeFi platform on a parachain, launch a stablecoin or other token on Statemint,
-build a decentralized exchange, or any other dApp that one might think of, without ever touching the
-Relay Chain. And that's the beauty of
+might aim to build a DeFi platform on a parachain, launch a stablecoin or other token on the Asset
+Hub, build a decentralized exchange, or any other dApp that one might think of, without ever
+touching the Relay Chain. And that's the beauty of
 {{ polkadot: Polkadot! :Polkadot }}{{ kusama: Kusama! :kusama }}
 
 But in all of those cases, their plans to build on

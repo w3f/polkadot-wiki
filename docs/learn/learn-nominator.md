@@ -2,7 +2,7 @@
 id: learn-nominator
 title: Nominator
 sidebar_label: Nominator
-description: Learn about what it means to be a nominator.
+description: Role of Nominators in the Polkadot Ecosystem.
 keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
@@ -54,7 +54,7 @@ Make sure you read those pages as well before nominating.
   next-gen Internet, Web3: a decentralized, privacy-focused, and trustless internet.
 - You are an essential piece of the puzzle, keeping
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure. The bonded balance can be
-  used to vote in [OpenGov](./learn-opengov.md) and shape the future direction of
+  used to vote in [Polkadot OpenGov](./learn-polkadot-opengov.md) and shape the future direction of
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 - You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
   works at a technical-level. When you feel comfortable with your nomination skills and knowledge,
@@ -106,34 +106,21 @@ qualify. For more information, visit the
 
 ## Setting-up Accounts
 
-### Stash, Controller & Staking Proxy
+### Stash & Staking Proxy
 
 The first thing you need to do before becoming a nominator is to make sure you have a
-[**stash account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) where you can
-transfer funds you want to use for staking. For these accounts, it is recommended to use a "cold
-wallet" solution such as [Ledger](../general/ledger.md) or
+[**stash account**](./learn-staking.md/#stash-account-and-staking-proxy) where you can transfer
+funds you want to use for staking. For these accounts, it is recommended to use a "cold wallet"
+solution such as [Ledger](../general/ledger.md) or
 [Parity Signer](./learn-account-generation.md#parity-signer).
 
 After setting up the stash account, it is recommended to have a
-[**controller account**](./learn-staking.md/#stash-and-controller-accounts-for-staking) or a
-[**staking proxy**](./learn-staking-advanced.md/#staking-proxies) (or both, controller and staking
-proxy). Although you can be a nominator with just a stash account, having at least a controller or a
-staking proxy is good practice for security reasons.
+[**staking proxy**](./learn-staking-advanced.md/#staking-proxies). Although you can be a nominator
+with just a stash account, having a staking proxy is good practice for security reasons.
 
-:::info In the near future, Controller Accounts will be deprecated
-
-The concept of a controller account is very similar to that of a staking proxy: isolate the stash
-account but sign staking-related transactions on behalf of it. This is why there will be only
-proxies in the near future, as the controller is becoming redundant. Given this context, we
-recommend nominators start understanding what proxies are and how to use them.
-
-:::
-
-If the future of nominating will be without a controller account,
-[the stash account will be able to perform all staking-related transactions](./learn-staking-advanced.md/#stash-is-also-controller).
-This means that the staking proxy of the stash will be able to sign for all staking-related
-transactions as well. The stash will be fully isolated (except if the user decides to change the
-staking proxy of the stash or to attach different proxies to the stash).
+A staking proxy of the stash will be able to sign for all staking-related transactions as well. The
+stash will be fully isolated (except if the user decides to change the staking proxy of the stash or
+to attach different proxies to the stash).
 
 ### Rewards Payout Account
 
@@ -142,16 +129,14 @@ one of the following options:
 
 - back to staking: rewards are compounded to the bonded amount.
 - to stash: rewards are sent to the stash account as a free balance.
-- to the controller: rewards are sent to the controller account as a free balance.
-- to another account: rewards are sent to a user-defined account (not stash or controller).
+- to another account: rewards are sent to a user-defined account (not stash).
 
 :::info
 
 Being a nominator is made simpler by using the
 [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that will guide you step by
-step through creating a stash-controller relationship, specifying rewards destination, and
-nominating validators (more on this below). Note that staking proxies are not currently supported on
-the dashboard.
+step through specifying rewards destination and bonded amount, and nominating validators (more on
+this below). Note that staking proxies are not currently supported on the dashboard.
 
 :::
 
@@ -194,7 +179,7 @@ metrics shown as an example, followed by a brief description of each.
   stop validating. The election algorithm attempts to maximize the overall network stake while
   minimizing the variance of the active stake across the validators. For additional information on
   the election process, check out the research behind
-  [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
+  [nominated proof-of-stake](https://research.web3.foundation/Polkadot/protocols/NPoS).
 
 - **comm.**: Total commission kept by the validator (100% means the validator will keep all rewards
   , and thus nominators will not receive them). A validator's commission is the percentage of the

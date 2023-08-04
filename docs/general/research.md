@@ -2,14 +2,14 @@
 id: research
 title: Research Pages
 sidebar_label: Research Pages
-description: Keep up-to-date with the latest research developments related to Polkadot.
+description: Latest Research Developments on Polkadot.
 keywords: [research, development]
 slug: ../research
 ---
 
-The Polkadot [research pages](https://w3f-research.readthedocs.io/en/latest/Publications.html) are
-edited directly by the researchers at W3F and contain papers, articles and documents that are
-sources for the information on the wiki.
+The Web3 Foundation [research page](https://research.web3.foundation/) is edited directly by the
+researchers at W3F and contain papers, articles and documents that are sources for the information
+on the wiki.
 
 The following papers and articles may be of special interest for those interested in exploring
 Polkadot from a research or academic perspective.
@@ -29,8 +29,8 @@ Polkadot from a research or academic perspective.
   broad overview of the design of Polkadot. Authors: Jeff Burdges, Alfonso Cevallos, Peter Czaban,
   Rob Habermeier, Syed Hosseini, Fabio Lama, Handan Kılınç Alper, Ximin Luo, Fatemeh Shirazi,
   Alistair Stewart, Gavin Wood
-- [Intro to Nominated Proof of Stake](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) -
-  A description of the NPoS scheme which selects which validators are allowed to participate in the
+- [Intro to Nominated Proof of Stake](https://research.web3.foundation/Polkadot/protocols/NPoS) - A
+  description of the NPoS scheme which selects which validators are allowed to participate in the
   consensus protocol of Polkadot. Author: Alfonso Cevallos
 - [GRANDPA: A Byzantine Finality Gadget](https://arxiv.org/abs/2007.01560) - GHOST-based Recursive
   Ancestor Deriving Prefix Agreement, Polkadot's finality gadget. Authors: Alistair Stewart and

@@ -2,7 +2,7 @@
 id: staking-dashboard
 title: Polkadot Staking Dashboard
 sidebar_label: Staking Dashboard
-description: Everything about the Polkadot Staking Dashboard
+description: Everything about the Polkadot Staking Dashboard.
 keywords: [ledger, staking, polkadot, dashboard]
 slug: ../staking-dashboard
 ---
@@ -12,21 +12,22 @@ import RPC from "./../../components/RPC-Connection";
 :::info Preliminary Notes
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) supports
-[**proxy accounts**](../learn/learn-proxies.md). You can set your stash to controller with one click
-and import your [staking proxy](../learn/learn-staking-advanced.md#staking-proxies) (for nominators)
-or [non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins
-and members).
+[**proxy accounts**](../learn/learn-proxies.md). You can set your stash to
+[controller](../learn/learn-controller.md) with one click and import your
+[staking proxy](../learn/learn-staking-advanced.md#staking-proxies) (for nominators) or
+[non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins and
+members).
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) also has **native
-[Ledger](./ledger.md) support**, meaning that you do not need an extension or a wallet to use it;
-you just need your Ledger device. [Metadata updates](../learn/learn-extrinsics.md#metadata-updates)
-are thus not necessary, as you only need to keep your Ledger apps up-to-date.
+The dashboard also has **native [Ledger](./ledger.md) support**, meaning that you do not need an
+extension or a wallet to use it; you just need your Ledger device.
+[Metadata updates](../learn/learn-extrinsics.md#metadata-updates) are thus not necessary, as you
+only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account in a Ledger device with the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger app installed, or a browser
 extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extension) or
-[other third-party extensions](./wallets.md#browser-extensions) with a funded
+[other third-party extensions](./wallets-and-extensions.md#browser-extensions) with a funded
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account.
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
@@ -47,9 +48,8 @@ dedicated to [staking](../learn/learn-staking.md) on Polkadot,
 [Westend](../maintain/maintain-networks.md#westend-test-network) (Polkadot's test network).
 
 The dashboard is not a wallet, meaning that you cannot transfer funds between accounts. To fund
-accounts, you can use [third-party wallets](./wallets.md) or the
-[Polkadot-JS UI](./polkadotjs-ui.md). You can participate in staking by being a
-[nominator](../learn/learn-nominator.md) or a member of a
+accounts, you can use [supported wallets](./wallets) or the [Polkadot-JS UI](./polkadotjs-ui.md).
+You can participate in staking by being a [nominator](../learn/learn-nominator.md) or a member of a
 [nomination pool](../learn/learn-nomination-pools.md). Once you have a funded account, you need to
 connect it to the dashboard (connect button on the top-right corner), this will allow you to
 interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native staking.
@@ -88,10 +88,9 @@ This page of the dashboard has six main panels:
 
 - **Section B: The Accounts Panel** allows you to connect one account to the dashboard. Once
   connected, the account will appear next to the `Accounts` button. You can see it here if you are
-  active as a nominator and/or a pool member. In this case, the account KSM Stash is a nominator
-  (with no controller) and a member of the pool Insight Finance. Controller accounts are also shown
-  here if applicable. Note that the dashboard will automatically fetch the stash or the controller
-  as a read-only account if you connect one or the other.
+  active as a nominator and/or a pool member. In this case, the account KSM Stash is a nominator and
+  a member of the pool Insight Finance. Proxy accounts are also shown here if applicable. Note that
+  the dashboard will automatically fetch the stash and the proxy.
 
 Note that Sections A and B will always be visible while you use the dashboard.
 
@@ -111,7 +110,7 @@ Note that Sections A and B will always be visible while you use the dashboard.
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
   In this case, 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
   not used for staking. Of the non-staking balance, 0.144 KSM are free while
-  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}
+  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :kusama }}
   are reserved for the existential deposit.
 
 - **Section F: The Recent Payouts Panel** shows a bar chart with the rewards paid out to you in the
@@ -139,8 +138,11 @@ most recently received rewards.
 
 :::info Joining a Nomination Pool - Walk-through video tutorial
 
-[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a nomination pool with the
-Staking Dashboard.
+[This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a
+[nomination pool](../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read
+the
+[dedicated support article](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
+about joining a pool.
 
 :::
 
@@ -165,18 +167,60 @@ cannot simply swap memberships. You will need to unbond and go through the whole
 :::
 
 - **Section C: The Pool Panel** shows the pool id where you have membership (in this case, Pool 82),
-  the pool name, and next to it, a `Leave` button to unbond all the funds in the pool. You can see
-  any unclaimed rewards in the middle of the panel. You can claim and bond the rewards (`+ Bond`
-  button) or withdraw them as a free balance (`Withdraw` button). In this case, there are
-  approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
+  the pool name, and next to it, a `Manage` button that will allow to choose between different
+  options:
+
+  - Update Claim Permissions: you can allow other pool members to compound your rewards, withdraw
+    your rewards as a free balance, or both. More details about nomination pools and updating claim
+    permissions can be found on the
+    [dedicated wiki page](../learn/learn-nomination-pools.md#claim-permissions).
+
+  ![dashboard-permissionlessPoolClaims](../assets/dashboard-permissionlessPoolClaims.png)
+
+  :::info
+
+  For more information about how-to update your claim permissions with the staking dashboard see
+  [this support article](https://support.polkadot.network/support/solutions/articles/65000182399-staking-dashboard-how-to-claim-nomination-pool-rewards#Permissionless-claiming).
+
+  :::
+
+  - Leave the pool and unbond all the funds in the pool.
+
+  If you are a pool admin you will be able to see the additional options:
+
+  - Claim Commission: you can claim pool commissions to an account specified under Manage Commission
+    (below).
+  - Manage Commission: you can manage the pool commission rate, maximum commission, maximum change
+    rate, and minimum time delay between commission updates. More details about nomination pools and
+    managing pool commissions can be found on the
+    [dedicated wiki page](../learn/learn-nomination-pools.md#pool-commissions).
+
+  ![dashboard-manage-commission](../assets/dashboard-managePoolCommission.png)
+
+  :::info
+
+  For more information about how-to manage commission of your nomination pool with the staking
+  dashboard see
+  [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#Pool-management-options).
+
+  :::
+
+  - Rename Pool: you can change the pool's name.
+  - Lock Pool: you can lock the pool so that new members are not allowed.
+  - Destroy Pool: you can destroy the pool. See
+    [this wiki page](../learn/learn-guides-staking-pools.md#pool-destruction) and
+    [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
+    for more information.
+
+  You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards
+  (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there
+  are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the
   panel, currently set to "Nominating and Earning Rewards".
 
-:::info Pool members must claim their rewards; nobody will do it for them
-
-For pool members, rewards must be manually claimed. This is different from being a nominator where
-usually, one nominator or the specific validator can trigger a payout for all nominators.
-
-:::
+Note that if it is the first time you log in to the dashboard, you will see two
+buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a
+nomination pool, see
+[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool).
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
   highlighting the validator that is active and will pay rewards to the pool at the end of the era
@@ -184,8 +228,8 @@ usually, one nominator or the specific validator can trigger a payout for all no
 
 If you scroll down the page, there are two additional panels:
 
-- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, and State Toggler. The
-  same account can cover all the roles.
+- **Roles** showing the accounts of the pool's Depositor, Root, Nominator, and Bouncer. The same
+  account can cover all the roles.
 - **Pool Stats** showing the Pool State (either Active, Closed, or Destroying), Pool Members (number
   of members in the pool), and Total Bonded (total number of bonded tokens).
 
@@ -209,9 +253,9 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
 
 - **Section A: The Stats Panel** shows the number of active nominators, the minimum number of tokens
   to nominate (currently
-  <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>)
+  {{ polkadot: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }})
   and the minimum active bond (currently
-  <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>).
+  {{ polkadot: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :kusama }}).
   The system keeps 12500 nomination intents and puts them into the
   [bags list](../learn/learn-staking-advanced.md#bags-list). The fact that active nominators are not
   12500 is because there are nominators that have no active validator.
@@ -234,10 +278,8 @@ The dashboard will automatically check this for you and prompt a banner.
   whole bonded amount and stop nominating. In the middle of the panel, the payout destination is
   currently set to "Compounding" (i.e. rewards are added to the bonded funds). The `Update` button
   will allow you to change the destination to "To Your Account" (to the stash account as a free
-  balance), "To Another Account" (an account that is not the stash or controller), "To Controller
-  Account" or "None" (no payout destination). The bottom part of the panel shows the controller
-  account, currently set to KSM Stash (the stash is also the controller). The `Change` button allows
-  you to set a controller.
+  balance), "To Another Account" (an account that is not the stash), or "None" (no payout
+  destination).
 - **Section D: The Nominations panel** shows your nominations and allows you to stop all nomination
   with the `Stop` button or to select specific validators (`Select` button) and stop nominating only
   those.

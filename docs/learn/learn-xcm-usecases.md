@@ -1,8 +1,8 @@
 ---
 id: learn-xcm-usecases
-title: XCM Usecases & Examples
-sidebar_label: XCM Usecases
-description: Learn how XCM can be used in cross consensus interactions.
+title: XCM Use-cases & Examples
+sidebar_label: XCM Use-cases
+description: Cross-consensus Interactions and the XCM Format.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-usecases
 ---
@@ -13,7 +13,7 @@ the XCM format can be used to construct many more combinations to suit the use c
 ### Example Use-Cases
 
 - Request for specific operations to occur on the recipient system such as governance voting.
-- Enables single use-case chains e.g. [Statemint/e](./learn-assets-guides.md#statemint) as asset
+- Enables single use-case chains e.g. the [Asset Hub](./learn-guides-assets-create.md) as asset
   parachains
 - Optionally include payment of fees on a target network for requested operation.
 - Provide methods for various asset transfer models:

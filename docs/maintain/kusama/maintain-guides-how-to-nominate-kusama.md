@@ -39,18 +39,18 @@ are available:
 
 :::
 
-## Setting up Stash and Controller keys
+## Setting up Stash and Staking Proxy Keys
 
-Nominators are recommended to set up two separate stash and controller accounts. Explanation and
+Nominators are recommended to set up two separate stash and staking proxy accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the
-[keys](../../learn/learn-cryptography.md) section of the Wiki.
+[keys](../../learn/learn-cryptography.md) section.
 
-You can generate your stash and controller account via any of the recommended methods that are
+You can generate your stash and staking proxy account via any of the recommended methods that are
 detailed on the [account generation](../../learn/learn-account-generation.md) page.
 
 Starting with runtime version v2023 natively included in client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
-address. If you'd like to redirect payments to an account that is neither the controller nor the
+address. If you'd like to redirect payments to an account that is neither the staking proxy nor the
 stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
 recipient of the staking rewards.
 

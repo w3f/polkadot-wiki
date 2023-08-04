@@ -2,7 +2,7 @@
 id: learn-nomination-pools
 title: Nomination Pools
 sidebar_label: Nomination Pools
-description: Learn about Nomination Pools and their features
+description: Staking through Polkadot's Nomination Pools.
 keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
@@ -47,6 +47,10 @@ Learn the key differences between
 
 **For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot
 Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
+
+**If you become a nomination pool member or a pool admin, you cannot participate in Governance with
+the bonded tokens in the pool, as they are held in a
+[system account](./learn-account-advanced.md#system-accounts).**
 
 :::
 
@@ -132,11 +136,18 @@ account.
 
 :::
 
-:::tip Use Non-Transfer Proxy Accounts to join Nomination Pools
+:::tip Use Non-Transfer or Nomination Pools Proxy Accounts to join Nomination Pools
 
-Only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) can be used to participate in
-nomination pools. [staking proxies](learn-proxies.md#staking-proxy) cannot be used as they cannot
-make calls to the nomination pools pallet.
+Only [non-transfer proxies](learn-proxies.md#non-transfer-proxy) and
+[nomination pools proxy](./learn-proxies.md#nomination-pools-proxy) can be used to participate in
+nomination pools. [Staking proxies](learn-proxies.md#staking-proxy) cannot be used as they cannot
+make calls to the nomination pools pallet. (The nomination pools will be supported through a staking
+proxy when the changes made in [this PR](https://github.com/paritytech/polkadot/pull/7448) are
+released on the network.
+
+Thus, depending on how much control you want to give your proxy, you might choose between
+non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions
+related to the `NominationPool` pallet.
 
 :::
 
@@ -152,6 +163,25 @@ era after they joined). Rewards are split pro rata among the actively bonded mem
 to claim rewards" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
+
+### Claim Permissions
+
+As a pool member, you can grant permission to any other account to claim and compound rewards on
+your behalf. There are four permission options:
+
+- `Permissioned` (default): you need to claim and compound your rewards.
+- `PermissionlessCompound`: you grant permission to any other account to compound (claim and bond)
+  your rewards on your behalf.
+- `PermissionlessWithdraw`: you grant permission to any other account to withdraw (claim and keep as
+  a free balance) your rewards on your behalf.
+- `PermissionlessAll`: you grant permission to any other account to compound or withdraw your
+  rewards on your behalf.
+
+See the [Staking Dashboard page](../general/staking-dashboard.md#pools) for more information about
+how to set your claim permissions.
+
+See the [advanced guides](./learn-guides-staking-pools.md#claim-rewards-for-other-pool-members) to
+learn how to claim rewards for another pool member.
 
 ### Unbond and withdraw funds
 
@@ -203,16 +233,73 @@ balance.
   all other members have left. Once they leave by withdrawing, the pool is fully removed from the
   system.
 - Nominator: Can select the validators the pool nominates.
-- State-Toggler: Can change the pool’s state and kick (permissionlessly unbond/withdraw) members if
-  the pool is blocked.
-- Root: Can change the nominator, state-toggler, or itself. Further, it can perform any of the
-  actions the nominator or state-toggler can.
+- Bouncer: Can change the pool’s state and kick (permissionlessly unbond/withdraw) members if the
+  pool is blocked.
+- Root: Can change the nominator, bouncer, or itself. Further, it can perform any of the actions the
+  nominator or bouncer can.
+
+### Pool Commissions
+
+:::info Live on Kusama
+
+Pool commissions are currently live on Kusama. On Polkadot
+[Referendum 55](https://polkadot.polkassembly.io/referenda/55) will enable a `globalMaxCommission`
+of 10% on Polkadot and enable pool commission.
+
+:::
+
+As the pool root role, you can set pool commissions that will be applied to the staking rewards paid
+out to the pool's system account before rewards are allocated for the pool members. You can set pool
+commissions through the [Polkadot Staking Dashboard](../general/staking-dashboard.md#pools).
+
+Three methods can be used when setting the pool commission:
+
+- **Commission Rate** (`nominationPools.setCommission` extrinsic): the start or new commission rate
+  (`newCommission` parameter) that can be set between 0% and the Max Commission (decided through
+  [governance referendum](./learn-polkadot-opengov.md)). You will need to specify an Input Payee
+  Account, i.e. the account that will receive the commission.
+- **Max Commission** (`nominationPools.setCommissionMax` extrinsic): the maximum commission
+  (`maxCommission` parameter) the pool will apply to its members (between 0% and Max Commission).
+  Note that once set, **the pool admin can only lower it**.
+- **Change Rate** (`nominationPools.setCommissionChangeRate` extrinsic): the maximum rate increase
+  (`maxIncrease` parameter) allowed for a single commission update. Note that once set, **the pool
+  admin can only lower it**. When setting the Change Rate, it will also be possible to set a
+  `minDelay` quantified as the number of blocks (since last commission update) after which it is
+  possible to change the commission (i.e. the minimum delay between commission updates). Note that
+  once set, **the pool admin can only increase it**.
+
+Max Commission and Change Rate must not be necessarily set. It is the choice of the pool admin to
+set those parameters and provide transparency to the pool members about the pool's commission
+policy.
+
+:::warning Max Commission and Change Rate are currently permanent
+
+Once the Max Commission and the Change Rate are set, the pool admin currently can only decrease
+those values. The minimum delay between commission updates can only be increased. The situation can
+change in the future and a `forceSetCommissionMax` method can be proposed through governance
+referendum.
+
+:::
+
+Let's take, for example, Pool A, which sets the Commission Rate to 10%, the Max Commission to 100%,
+and the Change Rate to 1% every 300 blocks (which equates to approximately 30 minutes). The
+following statements are true:
+
+- The pool commission can be increased by 1% every 30 minutes. Bigger increases are not allowed.
+  Increases of less than or equal to 1% are not allowed sooner than 30 minutes since the last
+  commission update.
+- The Max Commission can only be decreased from 100%. Once decreased, it can be decreased again but
+  it cannot be increased.
+- The Change Rate's maximum increase can only be decreased from 1%. Once decreased, it can be
+  decreased again but it cannot be increased.
+- The Change Rate's minimum delay between updates of 30 min can only be increased. Once increased,
+  it can be increased again but it cannot be decreased.
 
 ## Pool Lifecycle
 
 :::info Advanced How-to Guides
 
-See [this page](./learn-staking-guides.md#nomination-pools) for more information about the lifecycle
+See [this page](./learn-guides-staking-pools#pool-creation) for more information about the lifecycle
 of nomination pools. The cycle includes creation, upkeep and destruction.
 
 :::
@@ -246,10 +333,10 @@ protocol and have less chance of getting slashed. To nominate, you need a minimu
 and to receive rewards, you need at least a balance greater than the minimum active bond. Depending
 on your validators, if your active validator is oversubscribed, you will earn rewards only if your
 stake is within that of the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators. If the validator misbehaves, It is worth noting that your stake is subject to slashing,
 irrespective of whether you are at the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the

@@ -2,7 +2,7 @@
 id: polkadotjs-ui
 title: Polkadot-JS UI (Wallet)
 sidebar_label: Polkadot-JS UI
-description: Learn about PolkadotJS
+description: A Wallet for Power-users and Developers.
 keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs-ui
 ---
@@ -12,7 +12,7 @@ slug: ../polkadotjs-ui
 If you need help using the Polkadot-JS UI, you can contact the
 [**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
 wallet is oriented toward developers and power users. Check out treasury-funded wallets on the
-[Wallets Page](./../general/wallets.md) for more user-friendly wallets.
+[Wallets Page](./wallets-and-extensions.md) for more user-friendly wallets.
 
 :::
 
@@ -33,8 +33,8 @@ functionalities include account generation, balance transfers, and staking.
 
 In this section of the UI, you can see accounts injected from a browser extension, such as the
 [**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or
-[**other in-browser wallets**](./wallets.md#browser-extensions). It is also possible to expand
-balance details and see different
+[**other in-browser wallets**](./wallets-and-extensions.md#browser-extensions). It is also possible
+to expand balance details and see different
 [**account balance types**](../learn/learn-accounts.md#account-balance-types). You can also:
 
 - Add an account (this option must be enabled under [Settings](#settings)). Note that if you clear
@@ -64,9 +64,9 @@ Staking menu you can access:
 - The **Overview** tab showing active or waiting validators.
 - The **Accounts** tab (visible only if you added an account) showing accounts that are currently
   used for staking
-  ([**stash and controller**](../learn/learn-staking.md#stash-and-controller-accounts-for-staking)),
-  bonded amount, and nominations. In this tab, you can do staking-related transactions such as
-  bonding more funds or changing nominations. If you have
+  ([**stash and staking proxy**](../learn/learn-staking.md#stash-account-and-staking-proxy)), bonded
+  amount, and nominations. In this tab, you can do staking-related transactions such as bonding more
+  funds or changing nominations. If you have
   [**staking proxies**](../learn/learn-staking-advanced.md#staking-proxies) here, you can use them
   while signing for staking-related transactions.
 - The **Payouts** tab (visible only if you added an account) showing any pending rewards that still
@@ -110,7 +110,8 @@ In addition to staking, in the Network section, you can also:
 
 ### Governance
 
-In this section of the UI, you can participate in [**governance**](../learn/learn-opengov.md).
+In this section of the UI, you can participate in
+[**governance**](../learn/learn-polkadot-opengov.md).
 
 ### Developer
 

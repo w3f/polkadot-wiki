@@ -2,7 +2,7 @@
 id: learn-xcm
 title: Introduction to Cross-Consensus Message Format (XCM)
 sidebar_label: Cross-Consensus Message Format (XCM)
-description: Learn about the messaging format at the forefront of interoperability.
+description: XCM, The Messaging Format at the Forefront of Interoperability.
 keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
@@ -32,9 +32,11 @@ It's important to note that XCM does not define how messages are delivered but r
 they should look, act, and contain relative instructions to the on-chain actions the message intends
 to perform.
 
-[**XCMP**](./learn-xcm-transport.md), or Cross Chain Message Passing, is the actual network-layer
-protocol to deliver XCM-formatted messages to other participating parachains. There are also other
-ways to define transport layer protocols for delivering XCM messages.
+[**XCMP**](./learn-xcm-transport.md#xcmp-design), or Cross Chain Message Passing, is the actual
+network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
+are other ways to define transport layer protocols for delivering XCM messages(see:
+[HRMP](./learn-xcm-transport.md#hrmp-xcmp-lite) and
+[VMP](./learn-xcm-transport.md#vmp-vertical-message-passing)).
 
 XCM has four high-level core design principles which it stands to follow:
 
@@ -56,10 +58,11 @@ issues.
 
 :::note
 
-XCM is a work-in-progress - meaning the format is expected to change over time. XCM v2 is deployed
-on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and v3 is currently close to
-deployment. Learn more about XCM v3 and its new features in the [resources](#resources) and the
-[XCM v3](#xcm-v3---whats-new) sections!
+XCM is constantly in development - meaning the format is expected to change over time. XCM v3 is the
+latest version, and is deployed on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+To view updates on the XCM format, visit the
+[xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been
+submitted that would contribute to the next release.
 
 :::
 
@@ -101,13 +104,11 @@ in the correct order in which it was intended.
 XCM can be used to express the meaning of the messages over each of these three communication
 channels.
 
-## XCM v3 - What's new?
+## Core Functionality of XCM
 
-[XCM v3](https://github.com/paritytech/polkadot/pull/4097/) is currently in the process of being
-approved and audited but is merged in the Polkadot codebase. The upgrade to XCM v3 will open the
-doors to multi-hop, multi-network communications.
+XCM opens the doors to a multi-hop, multi-network communications.
 
-XCM v3 introduces some key features and additions to cross-consensus messaging, including:
+XCM introduces some key features and additions to cross-consensus messaging, including:
 
 1. **Programmability** - the ability to have **expectations** for messages, which allow for more
    comprehensive use cases, safe dispatches for version checking, branching, and NFT/Asset support.
@@ -120,9 +121,7 @@ XCM v3 introduces some key features and additions to cross-consensus messaging, 
    for global consensus systems for multi-hop setups. This location is above the parent relay chain
    or other consensus systems like Ethereum or Bitcoin.
 
-### Why does XCM v3 matter?
-
-A core part of the vision that XCM v3 provides is improving communication between the chains to make
+A core part of the vision that XCM provides is improving communication between the chains to make
 **system parachains** a reality. For example, the Polkadot relay chain handles more than just
 parachain management and shared security - it handles user balances/assets, auctions, governance,
 and staking. Ideally, the relay chain should be for what it's intended to be - a place for shared
@@ -134,115 +133,18 @@ to a system parachain respectively.
 
 :::info
 
-XCM v3's bridging, functional multichain decomposition, and programmability upgrades are crucial to
+XCM bridging, functional multichain decomposition, and programmability upgrades are crucial to
 bringing ecosystems together using a common communication abstraction.
 
 :::
 
-### XCM v3 Instruction & Register Overview
+For more information on the specific intructions used for these key features, head over to the
+[instructions and registers page](./learn-xcm-instructions.md).
 
-To reflect the functionality above, XCM v3 introduced a multitude of new instructions to include
-within its messages. This list isn't exhaustive, however contains the necessary instruction sets to
-showcase the previously explained concepts of XCM v3.
-
-New registers have been introduced in order to accommodate some of the new instructions:
-
-- `Transact Status Register` - A register that expresses the result of the encoded call within a
-  `Transact` instruction that has been dispatched.
-
-- `Topic Register` - A register that can set any value and is for use cases such as crafting IDs for
-  messages. A `Topic` is also part of `XcmContext`.
-
-:::note
-
-Note that most of these instruction definitions came from the source code, which you may
-[explore for more depth!](https://github.com/paritytech/polkadot/blob/master/xcm/src/v3/mod.rs)
-
-:::
-
-#### Programmability
-
-These are the primary instructions that enable programmability and branching to be possible.
-Branching in this context is the ability for errors and logic to be handled as needed when dealing
-with a message.
-
-- [`ExpectAsset(MultiAssets)`](https://github.com/paritytech/xcm-format/tree/master#expectassetmultiassets) -
-  Checks if the Holding register has a specific amount of assets, throws an error if it doesn't.
-- [`ExpectError(Option<(u32, Error)>)`](https://github.com/paritytech/xcm-format/tree/master#expecterroroptionu32-error) -
-  Ensures the Error register contains the given error, and throws an error if it doesn't.
-- [`ExpectOrigin(MultiLocation)`](https://github.com/paritytech/xcm-format/tree/master#expectoriginmultilocation) -
-  Ensures the Origin register contains the expected origin, and throws an error if it doesn't.
-- `QueryPallet` - Queries the existence of a particular pallet type.
-
-- `ExpectPallet` - Ensure that a particular pallet with a particular version exists.
-
-- `ReportTransactStatus(QueryResponseInfo)` - Send a `QueryResponse` message containing the value of
-  the Transact Status Register to some destination.
-
-- `ClearTransactStatus` - Set the Transact Status Register to its default, cleared, value.
-
-#### Functional Multichain Decomposition
-
-These instructions highlight the key instructions focused on Functional Multichain Decomposition.
-
-- `LockAsset(MultiAsset, MultiLocation)` - Lock the locally held asset and prevent further transfer
-  or withdrawal.
-
-- `UnlockAsset(MultiAsset, MultiLocation)` - Remove the lock over `asset` on this chain and (if
-  nothing else is preventing it) allow the asset to be transferred.
-
-- `NoteUnlockable(MultiAsset, MultiLocation)` - Asset (`asset`) has been locked on the `origin`
-  system and may not be transferred. It may only be unlocked with the receipt of the `UnlockAsset`
-  instruction from this chain.
-
-- `RequestUnlock(MultiAsset, MultiLocation)` - Send an `UnlockAsset` instruction to the `locker` for
-  the given `asset`.
-
-#### Cross-Consensus Message Format (XCM)
+#### Cross-Consensus Message Format (XCM Format)
 
 For an updated and complete description of the cross-consensus message format please see the
 [xcm-format repository on GitHub](https://github.com/paritytech/xcm-format).
-
-#### The Anatomy of an XCMP Interaction
-
-A smart contract that exists on parachain `A` will route a message to parachain `B` in which another
-smart contract is called that makes a transfer of some assets within that chain.
-
-Charlie executes the smart contract on parachain `A`, which initiates a new cross-chain message for
-the destination of a smart contract on parachain `B`.
-
-The collator node of parachain `A` will place this new cross-chain message into its outbound
-messages queue, along with a `destination` and a `timestamp`.
-
-The collator node of parachain `B` routinely pings all other collator nodes asking for new messages
-(filtering by the `destination` field). When the collator of parachain `B` makes its next ping, it
-will see this new message on parachain `A` and add it into its own inbound queue for processing into
-the next block.
-
-Validators for parachain `A` will also read the outbound queue and know the message. Validators for
-parachain `B` will do the same. This is so that they will be able to verify the message transmission
-happened.
-
-When the collator of parachain `B` is building the next block in its chain, it will process the new
-message in its inbound queue as well as any other messages it may have found/received.
-
-During processing, the message will execute the smart contract on parachain `B` and complete the
-asset transfer as intended.
-
-The collator now hands this block to the validator, which itself will verify that this message was
-processed. If the message was processed and all other aspects of the block are valid, the validator
-will include this block for parachain `B` into the Relay Chain.
-
-Check out our animated video below that explores how XCMP works.
-
-<!-- Made with Adobe Animate and Canvas -->
-
-<video
-      controls="controls"  
-      name="XCMP Animated Video" 
-      width="560" height="315"
-      src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
-doesn't support embedded videos. </video>
 
 ## Resources
 
@@ -258,8 +160,8 @@ doesn't support embedded videos. </video>
 - [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) -
   High level overview of XCM and specifically the new features available in XCM v3.
 
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
-  description of cross-chain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://medium.com/web3foundation/polkadots-messaging-scheme-b1ec560908b7) - An
+  overall overview of XCMP describing a number of design decisions.
 
 - [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An overview
   of the messaging schemes from the Polkadot Parachain Host Implementor's guide.

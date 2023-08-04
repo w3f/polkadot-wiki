@@ -12,14 +12,14 @@ is to allow for connection to different networks using a single executable and c
 start-up flag. Here are some of the networks associated with Polkadot or Substrate that you may want
 to connect to and join.
 
-## Polkadot networks
+## Main networks
 
 To connect to a Polkadot network please follow the [instructions](maintain-sync.md) for installing
 the Polkadot executable.
 
 ### Polkadot Mainnet
 
-Currently Polkadot is built from the tip of master and is the default option when starting a node.
+Connecting to the Polkadot network is the default option when starting a node.
 
 To start a Polkadot node, run the Polkadot binary:
 
@@ -30,8 +30,8 @@ polkadot
 and you will connect and start syncing to Polkadot.
 
 Check your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#/Polkadot%20CC3) (you can set a custom name by specifying
-`--name "my custom name"`)
+[Telemetry](https://telemetry.polkadot.io/#list/0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3)
+(you can set a custom node name by specifying `--name "my-custom-node-name"`)
 
 ### Kusama Canary Network
 
@@ -46,13 +46,15 @@ polkadot --chain=kusama
 and you will connect and start syncing to Kusama.
 
 Check your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) (you can set a custom name by specifying
-`--name "my custom name"`)
+[Kusama Telemetry](https://telemetry.polkadot.io/#list/0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe)
+(you can set a custom node name by specifying `--name "my-custom-node-name"`)
+
+## Test Networks
 
 ### Westend Test Network
 
-Westend is the latest test network for Polkadot. The tokens on this network are called _Westies_ and
-they purposefully hold no economic value.
+Westend is the primary test network of Polkadot. The tokens on this network are called _Westies_
+(WND) and they purposefully hold no economic value.
 
 Run the Polkadot binary and specify `westend` as the chain:
 
@@ -63,15 +65,59 @@ polkadot --chain=westend
 and you will connect and start syncing to Westend.
 
 Check that your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#list/Westend) (you can set a custom name by specifying
-`--name "my custom name"`).
+[Westend Telemetry](https://telemetry.polkadot.io/#list/0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e)
+(you can set a custom node name by specifying `--name "my-custom-node-name"`).
 
 #### Westend Faucet
 
-Follow the instruction [here](../learn/learn-DOT.md#getting-westies) for instructions on acquiring
-Westies.
+Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-westend-testnet) to get
+Westies (WND) tokens.
 
-### Differences
+### Rococo Test Network
+
+[Rococo](https://substrate.io/developers/rococo-network/) is a test network built for parachains.
+The native token of this network (ROC) holds no economic value.
+
+Run the Polkadot binary and specify `rococo` as the chain:
+
+```bash
+polkadot --chain=rococo
+```
+
+and you will connect and start syncing to Rococo.
+
+Check that your node is connected by viewing it on
+[Rococo Telemetry](https://telemetry.polkadot.io/#list/0x6408de7737c59c238890533af25896a2c20608d8b380bb01029acb392781063e)
+(you can set a custom node name by specifying `--name "my-custom-node-name"`).
+
+#### Rococo Faucet
+
+Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
+ROCs tokens.
+
+### Wococo Test Network
+
+Wococo is a test network of Polkadot built for bridges. The native token of this network (WOOK)
+holds no economic value.
+
+Run the Polkadot binary and specify `rococo` as the chain:
+
+```bash
+polkadot --chain=wococo
+```
+
+and you will connect and start syncing to Wococo.
+
+Check that your node is connected by viewing it on
+[Wococo Telemetry](https://telemetry.polkadot.io/#list/0xdb4fd29dd914017e9dda3b751d6a4e0c5ca28cce7b6260cb063936633cc8175c)
+(you can set a custom node name by specifying `--name "my-custom-node-name"`).
+
+#### Wococo Faucet
+
+Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-wococo-testnet) to get
+WOOKs tokens.
+
+## Differences
 
 Runtime differences (e.g. existential and multisignature deposit sizes) between the different
 networks can be found by doing a `diff` between the `src/lib.rs` of the repositories. For example,
@@ -86,28 +132,6 @@ You can also paste the runtimes
 [Westend](https://github.com/paritytech/polkadot/blob/master/runtime/westend/src/lib.rs)) into a
 web-based diff tool like [Diffchecker](https://www.diffchecker.com/) if you're not comfortable with
 the CLI.
-
-## Substrate Networks
-
-To connect to a Substrate public network, follow the
-[instructions](https://docs.substrate.io/v3/getting-started/overview/) for installing the Substrate
-executable first.
-
-### Flaming Fir
-
-Flaming Fir is the public Substrate test network. It contains some pallets that will not be included
-in the Polkadot runtime.
-
-Flaming Fir is built from the tip of master and is the default option when running the Substrate
-executable.
-
-Run Substrate without a flag or explicitly state `fir`:
-
-```bash
-substrate --chain fir
-```
-
-and you will connect and start syncing Flaming Fir.
 
 ## Telemetry Dashboard
 

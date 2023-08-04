@@ -2,7 +2,7 @@
 id: learn-validator
 title: Validator
 sidebar_label: Validator
-description: An introduction about validators.
+description: Role of Validators within the Polkadot Ecosystem.
 keywords: [validate, validator, maintain, NPoS, stake]
 slug: ../learn-validator
 ---

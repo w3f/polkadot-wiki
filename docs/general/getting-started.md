@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-description: Get started with Polkadot.
+description: Get started with Polkadot and Web3.
 keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
@@ -98,10 +98,10 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-governance">  
+    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
       <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
-                  <h5 class="cards-title">Governance</h5>
+                  <h5 class="cards-title">Polkadot OpenGov</h5>
               </div>
     </a>
   </td>
@@ -163,8 +163,6 @@ functionalities on Polkadot.
 
   - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
     register an [on-chain identity](../learn/learn-identity.md)
-  - {{ polkadot: __<RPC network="polkadot" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter="humanReadable"/>:__ :polkadot }}
-    vote for [council](../maintain/maintain-guides-how-to-vote-councillor.md)
   - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
     create a [proxy account](../learn/learn-proxies.md).
 

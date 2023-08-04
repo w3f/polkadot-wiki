@@ -2,7 +2,7 @@
 id: contributors
 title: Contributors
 sidebar_label: Contributors
-description: Get to know your wiki-slayers.
+description: Get to know your Wiki-slayers.
 slug: ../contributors
 ---
 
