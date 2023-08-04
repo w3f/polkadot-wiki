@@ -19,7 +19,6 @@ started.
 
 :::
 
-
 ## Preliminaries
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
@@ -545,7 +544,7 @@ It is now time to set up our validator. We will do the following:
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "+ Stash" button.
 
-![dashboard bonding](../assets/guides/how-to-validate/polkadot-dashboard-bonding.png)
+![bonding-JS-UI](../assets/JS-UI-bond.png)
 
 - **Stash account** - Select your Stash account. In this example, we will bond 1 DOT, where the
   minimum bonding amount is 1. Make sure that your Stash account contains _at least_ this much. You
@@ -566,7 +565,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
 
-![sign transaction](../assets/guides/how-to-validate/polkadot-authorize-transaction-stash.png)
+![sign transaction](../assets/JS-UI-sign-transaction.png)
 
 After a few seconds, you should see an `ExtrinsicSuccess` message.
 
@@ -574,7 +573,7 @@ Your bonded account will available under `Stashes`. You should now see a new car
 accounts (note: you may need to refresh the screen). The bonded amount on the right corresponds to
 the funds bonded by the Stash account.
 
-![stash overview](../assets/guides/how-to-validate/polkadot-stash-overview.png)
+![stash overview](../assets/JS-UI-stash-overview.png)
 
 ## Set Session Keys
 
