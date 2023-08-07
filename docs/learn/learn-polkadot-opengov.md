@@ -430,7 +430,7 @@ double.
 
 <VLTable />
 
-{{ polkadot: **The table above shows the correct duration values. However, the current values for Polkadot are the same as those for Kusama by mistake. This is going to be fixed. For more information, see [this GitHub issue](https://github.com/paritytech/polkadot/issues/7394).** :polkadot }}
+{{ polkadot: **The table above shows the correct duration values. However, the current values for Polkadot are the same as those for Kusama. This is going to be fixed. For more information, see [this GitHub issue](https://github.com/paritytech/polkadot/issues/7394).** :polkadot }}
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals {{ polkadot: 28 :polkadot }}
