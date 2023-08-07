@@ -527,7 +527,7 @@ your staking funds.
 
 :::info Controller accounts are deprecated
 
-Controller accounts are deprecated, for more information see
+Controller accounts are deprecated. For more information, see
 [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
 
 :::
