@@ -1,10 +1,10 @@
 ---
-id: polkadot-v2
+id: polkadot-uc
 title: The Polkadot Ubiquitous Computer
 sidebar_label: Ubiquitous Computer
 description: Polkadot as a Decentralized and Secure Ubiquitous Computer.
 keywords: [polkadot vison, polkadot 2.0, Decentralization, Ubiquitous Computer, Coretime]
-slug: ../polkadot-v2
+slug: ../polkadot-uc
 ---
 
 Understanding what Polkadot 1.0 is about, and the philosophy behind it, will help us to envision the
