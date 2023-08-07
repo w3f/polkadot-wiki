@@ -41,6 +41,13 @@ The team and other validators are there to help answer questions and provide tip
 
 ### How many KSM do I need to become an active Validator?
 
+:::info Controller accounts are deprecated
+
+Controller accounts are deprecated. For more information, see
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+
+:::
+
 You can have a rough estimate on that by using the methods listed
 [here](../../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
 To be elected into the set, you need a minimum stake behind your validator. This stake can come from

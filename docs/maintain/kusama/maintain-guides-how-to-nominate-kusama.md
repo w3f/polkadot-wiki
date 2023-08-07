@@ -165,14 +165,23 @@ npm install -g @polkadot/api-cli
 
 ### Step 2. Bond your KSM
 
+:::info Controller accounts are deprecated
+
+Controller accounts are deprecated. For more information, see
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+
+:::
+
 Executing the following command:
 
 ```bash
 polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
 ```
 
-`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. (Controller accounts are now deprecated. Refer to 
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748) for additional context)
+`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. (Controller accounts
+are now deprecated. Refer to
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)
+for additional context)
 
 `NUMBER_OF_TOKENS`: The number of KSM / DOT you would like to stake to the network. **Note**: KSM
 has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
