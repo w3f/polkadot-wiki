@@ -12,8 +12,7 @@ import RPC from "./../../components/RPC-Connection";
 :::info Preliminary Notes
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) supports
-[**proxy accounts**](../learn/learn-proxies.md). You can set your stash to
-[controller](../learn/learn-controller.md) with one click and import your
+[**proxy accounts**](../learn/learn-proxies.md) and you can import your
 [staking proxy](../learn/learn-staking-advanced.md#staking-proxies) (for nominators) or
 [non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins and
 members).
