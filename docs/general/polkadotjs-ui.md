@@ -64,9 +64,9 @@ Staking menu you can access:
 - The **Overview** tab showing active or waiting validators.
 - The **Accounts** tab (visible only if you added an account) showing accounts that are currently
   used for staking
-  ([**stash and controller**](../learn/learn-staking.md#stash-and-controller-accounts-for-staking)),
-  bonded amount, and nominations. In this tab, you can do staking-related transactions such as
-  bonding more funds or changing nominations. If you have
+  ([**stash and staking proxy**](../learn/learn-staking.md#stash-account-and-staking-proxy)), bonded
+  amount, and nominations. In this tab, you can do staking-related transactions such as bonding more
+  funds or changing nominations. If you have
   [**staking proxies**](../learn/learn-staking-advanced.md#staking-proxies) here, you can use them
   while signing for staking-related transactions.
 - The **Payouts** tab (visible only if you added an account) showing any pending rewards that still

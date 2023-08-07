@@ -45,68 +45,40 @@ checkout the [Introduction to Staking](./learn-staking.md) page.
 
 ## Staking Proxies
 
-:::info Walk-through video tutorial
-
-In this section, we go through a couple of scenarios that show how the permissions to sign for
-staking-related actions by stash account, controller account, and staking proxy change according to
-their relationship. [This video tutorial](https://www.youtube.com/watch?v=WarVBPBPh0A) goes through
-those scenarios using the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
-
-:::
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes it possible to create accounts
 having special permissions also called **proxy accounts**. For mode details about proxy accounts
 visit the [dedicated page](./learn-proxies.md) on this wiki.
 
 Proxy accounts are special accounts which can sign
-[**extrinsic calls**](./learn-extrinsics.md/#pallets-and-extrinsics) made to specific
-[**pallets**](./learn-extrinsics.md/#pallets-and-extrinsics) on behalf of the proxied account. There
-is thus the possibility to create staking proxy accounts that can be used to sign only extrinsic
-calls to staking, session and utility pallets.
+[**extrinsic calls**](./learn-extrinsics.md/#pallets-and-extrinsics) made to specific **pallets** on
+behalf of the proxied account. There is thus the possibility to create staking proxy accounts that
+can be used to sign extrinsic calls specific to the staking, session and utility pallets.
 
-![stash-controller](../assets/stash-controller.png)
+Staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
+action, as a nominator you will need to monitor the performance of your validators and make changes
+if needed. There will be this transactions such as nominating that will be needed to regularly
+signed. Each time you sign with an account, in the case of hot accounts, you expose the private key
+of that account to the internet with consequent risk of attack. A hot stash will be exposed all the
+time a transaction is signed. Even in the case of a cold stash created with a Ledger device, signing
+with the stash will build a transaction history that might tell something about your habits and
+preferences, or even your location.
 
-Usually, with the stash-controller setup, the stash still needs to sign for actions that are
-performed less often, i.e. bonding more funds and changing the controller (see figure above). The
-controller is used to sign for those staking actions that are performed more often such as
-nominating. Remember, staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
-not a set-and-forget action, as a nominator you will need to monitor the performance of your
-validators and make changes if needed. Also, each time you sign with an account, you expose the
-private key of that account to the internet with consequent risk of attack. Ideally, accounts with
-high economic power like the stash must be and remain as isolated as possible. With a staking proxy,
-the stash account is even more isolated than when using a controller. This does not necessarily mean
-that the staking proxy can sign for all staking-related transactions. Below we show two main
-configurations that affect a staking proxy's permissions.
+Ideally, accounts with high economic power like the stash must be and remain as isolated as
+possible. With a staking proxy, the stash account is fully isolated when signing for staking-related
+transactions. The proxy private key will be used to sign staking-related transactions, the stash
+private key will stay isolated and the staking transaction history will be built by the proxy.
 
-### Stash is also Controller
+![stash-stakingProxy](../assets/stash-vs-stash-and-staking-proxy.png)
 
-It is not necessary to have a controller if you have a staking proxy: the stash can also be the
-controller, and the account security will not be compromised. In this case, the staking proxy will
-be used to sign all staking-relate transactions. Note that to change the staking proxy you will need
-to sign with the stash.
-
-![stash-stakingProxy](../assets/stash-stakingProxy.png)
-
-This situation is similar to having the controller as a staking proxy. For a practical perspective
-we need to use only one account and remember one password to sign for all staking-related
-transactions. From a security perspective who controls the staking proxy controls our staking
-actions.
+For a practical perspective we need to use only one account and remember one password to sign for
+all staking-related transactions. From a security perspective who controls the staking proxy
+controls our staking actions.
 
 It is important to remember that actions that can be performed by the proxy accounts are limited,
 and in the case of staking proxy, extrinsic calls to the balances pallet cannot be signed. This
 means it is not possible to do balance transfers on the proxied account through a staking proxy.
 
-### Stash is not Controller
-
-If the stash and controller are different accounts, the staking proxy will just be used to bond more
-funds and change the controller. Thus the staking proxy will be used to sign for those transactions
-that are used less often and that are usually signed by the stash.
-
-![stash-controller-stakingProxy](../assets/stash-controller-stakingProxy.png)
-
-From a practical perspective, we now have two accounts and we need to remember two passwords. From a
-security perspective, the party who wants to fully control our staking actions must have access to
-two accounts.
+Note that to change the staking proxy you will need to sign with the stash or an _any_ proxy.
 
 ## Bags List
 

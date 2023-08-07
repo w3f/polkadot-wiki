@@ -58,7 +58,6 @@ let table = <table>
 const lockPeriods = ["p0", "p1", "p2", "p4", "p8", "p16", "p32"]
 
 const dotLocking = {
-	p0: 0,
 	p1: 28,
 	p2: 56,
 	p4: 112,
@@ -69,12 +68,12 @@ const dotLocking = {
 
 const ksmLocking = {
 	p0: 0,
-	p1: 8,
-	p2: 16,
-	p4: 32,
-	p8: 64,
-	p16: 128,
-	p32: 256
+	p1: 7,
+	p2: 14,
+	p4: 28,
+	p8: 56,
+	p16: 112,
+	p32: 224
 }
 
 function VoluntaryLocking() {

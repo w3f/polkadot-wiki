@@ -13,6 +13,20 @@ module.exports = {
         "general/getting-started",
         {
           type: "category",
+          label: "Polkadot Vision",
+          description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+          link: {
+            type: 'generated-index',
+            title: 'Polkadot Vision',
+            description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+            slug: '/polkadot-vision-index',
+          },
+          items: [
+            "general/polkadot-v1",
+          ],
+        },
+        {
+          type: "category",
           label: "Stay Safe",
           description: 'Good-practices to Stay Safe while Surfing in Web3.',
           link: {
@@ -249,7 +263,21 @@ module.exports = {
                 slug: '/learn-guides-index',
               },
               items: [
-                "learn/learn-guides-staking",
+                {
+                  type: "category",
+                  label: "Staking",
+                  description: 'Advanced How-to Guides about Staking.',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Advanced Guides for Staking',
+                    description: 'Advanced how-to guides about Staking.',
+                    slug: '/learn-guides-staking-index',
+                  },
+                  items: [
+                    "learn/learn-guides-staking",
+                    "learn/learn-guides-staking-pools",
+                  ],
+                },
                 "learn/learn-guides-identity",
                 {
                   type: "category",
@@ -263,7 +291,7 @@ module.exports = {
                   },
                   items: [
                     "learn/learn-guides-assets-create",
-                    "learn/learn-guides-assets-ledger"
+                    "learn/learn-guides-assets-ledger",
                   ],
                 },
                 "learn/learn-guides-vault",
@@ -283,9 +311,22 @@ module.exports = {
           },
           items: [
             "learn/learn-architecture",
-            "learn/learn-nominator",
-            "learn/learn-validator",
-            "learn/learn-collator",
+            {
+              type: "category",
+              label: "Network Participants",
+              description: "Participants in the Polkadot Ecosystem.",
+              link: {
+                type: 'generated-index',
+                title: "Participants in the Polkadot Ecosystem",
+                description: "Learn about collators, nominators and validators.",
+                slug: '/learn-participants-index',
+              },
+              items: [
+                "learn/learn-collator",
+                "learn/learn-nominator",
+                "learn/learn-validator",
+              ],
+            },
             {
               type: "category",
               label: "Parachains",
@@ -325,7 +366,6 @@ module.exports = {
                 'learn/learn-xcm-instructions',
               ],
             },
-            'learn/learn-spree',
           ],
         },
         {
@@ -359,6 +399,7 @@ module.exports = {
             slug: '/learn-future-implementations-index',
           },
           items: [
+            'learn/learn-spree',
             "learn/learn-parathreads",
           ],
         },
@@ -377,6 +418,7 @@ module.exports = {
             "learn/learn-treasury",
             "learn/learn-launch",
             "learn/learn-redenomination",
+            "learn/learn-controller",
           ],
         },
       ],

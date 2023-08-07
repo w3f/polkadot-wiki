@@ -39,18 +39,18 @@ are available:
 
 :::
 
-## Setting up Stash and Controller keys
+## Setting up Stash and Staking Proxy Keys
 
-Nominators are recommended to set up two separate stash and controller accounts. Explanation and
+Nominators are recommended to set up two separate stash and staking proxy accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the
-[keys](../../learn/learn-cryptography.md) section of the Wiki.
+[keys](../../learn/learn-cryptography.md) section.
 
-You can generate your stash and controller account via any of the recommended methods that are
+You can generate your stash and staking proxy account via any of the recommended methods that are
 detailed on the [account generation](../../learn/learn-account-generation.md) page.
 
 Starting with runtime version v2023 natively included in client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
-address. If you'd like to redirect payments to an account that is neither the controller nor the
+address. If you'd like to redirect payments to an account that is neither the staking proxy nor the
 stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
 recipient of the staking rewards.
 
@@ -165,15 +165,23 @@ npm install -g @polkadot/api-cli
 
 ### Step 2. Bond your KSM
 
+:::info Controller accounts are deprecated
+
+Controller accounts are deprecated. For more information, see
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+
+:::
+
 Executing the following command:
 
 ```bash
 polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
 ```
 
-`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. Stash and Controller
-can be the same address but it is not recommended since it defeats the security of the two-account
-staking model.
+`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. (Controller accounts
+are now deprecated. Refer to
+[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)
+for additional context)
 
 `NUMBER_OF_TOKENS`: The number of KSM / DOT you would like to stake to the network. **Note**: KSM
 has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
