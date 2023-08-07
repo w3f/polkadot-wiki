@@ -17,7 +17,7 @@ The tools listed here are open-source and are linked directly to their source co
 
 The goal of this page is to provide an overview of the open-source Polkadot/Kusama Tech Stack.
 
-This is a living document and we are relying on our community to contribute to it and help maintain
+This is a living document, and we are relying on our community to contribute to it and help maintain
 it. [**Please feel free to make edits and additions via pull requests**](#contributing). We
 apologize if we missed your project!
 
@@ -42,7 +42,7 @@ apologize if we missed your project!
 The Polkadot Tech Stack is a subset of the Web 3.0 Tech Stack, which consists of the **open-source**
 technologies contributing to and relying on [Polkadot](https://polkadot.network/),
 [Kusama](https://kusama.network/) and [Substrate](https://substrate.dev/). It is meant to be used
-for decentralized application (Dapp) development within numerous verticals including DeFi, Gaming,
+for decentralized application (Dapp) development within numerous verticals, including DeFi, Gaming,
 Provenance and many others not pictured below.
 
 <!-- markdownlint-disable MD040 -->
@@ -69,7 +69,7 @@ Provenance and many others not pictured below.
 
 ## Layers of Polkadot Stack
 
-In the below sections you can find a list of different layers of the Polkadot Stack.
+In the below sections, you can find a list of different layers of the Polkadot Stack.
 
 **Maintenance Status**:
 
@@ -117,7 +117,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Static Analysis                         | [Substrace](https://github.com/KaiserKarel/substrace) ⚪, [Static analyzer for Substrate FRAME's pallets](https://github.com/simon-perriard/saft) ⚪, [CoinFabrik Scout](https://github.com/CoinFabrik/scout) 🟢, [Ink! Analyzer](https://github.com/ink-analyzer/ink-analyzer) 🟢|
 | Testnet                         | [Zombienet](https://github.com/paritytech/zombienet) 🟢, [Chopsticks](https://github.com/AcalaNetwork/chopsticks) 🟢, [Polkadot Launch](https://github.com/paritytech/polkadot-launch) ⚪, [polkadot-starship](https://github.com/koute/polkadot-starship) ⚪, [Fork off Substrate](https://github.com/maxsam4/fork-off-substrate) ⚪, [try-runtime-cli](https://github.com/paritytech/try-runtime-cli) 🟡, [Parachain Launch](https://github.com/open-web3-stack/parachain-launch) 🟢|
 | Benchmarking                    | [Clockchain](https://github.com/0xekez/clockchain) ⚪, [Substrate Graph Benchmarks](https://github.com/shawntabrizi/substrate-graph-benchmarks) ⚪, [ink! & pallet benchmarking template](https://github.com/Nikhil-Desai-Talentica/substrate-node-template-benchmarking) ⚪, [smart-bench](https://github.com/paritytech/smart-bench) 🟢|
-| Blockchain Indexing Engine      | [Substrate Archive](https://github.com/paritytech/substrate-archive) ⚪, [PSQL Indexer](https://github.com/usetech-llc/polkadot_psql_indexer) ⚪, [Substrate Graph](https://github.com/playzero/substrate-graph) ⚪, [Hydra](https://github.com/subsquid/hydra) ⚪, [Subquery](https://github.com/OnFinality-io/subql) 🟢, [Polkadot Profit Transformer](https://github.com/p2p-org/polkadot-profit-transformer) ⚪|
+| Blockchain Indexing Engine      | [Substrate Archive](https://github.com/paritytech/substrate-archive) ⚪, [PSQL Indexer](https://github.com/usetech-llc/polkadot_psql_indexer) ⚪, [Substrate Graph](https://github.com/playzero/substrate-graph) ⚪, [Hydra](https://github.com/subsquid/hydra) ⚪, [Subquery](https://github.com/OnFinality-io/subql) 🟢, [Polkadot Profit Transformer](https://github.com/p2p-org/polkadot-profit-transformer) ⚪, [stick](https://github.com/kodadot/stick) |
 | Blockchain/Event Monitoring     | [Web3 Guardian](https://github.com/open-web3-stack/guardian) ⚪, [Aurras Event Manager](https://github.com/HugoByte/aurras-event-manager) 🟢, [@commonwealth/chain-events](https://github.com/hicommonwealth/chain-events) ⚪, [Massbit](https://github.com/w3f-grants-archive/massbitchain) ⚪, [Polkadot Basic Notifications](https://github.com/kianenigma/polkadot-basic-notification) ⚪, [Ocelloids](https://github.com/sodazone/ocelloids) 🟢|
 | Gaming                          | [Crossbow](https://github.com/dodorare/crossbow) ⚪| [Amethyst](https://amethyst.rs/) + [Substrate](https://substrate.dev/)                                           |
 | No-code Platforms               | [EzCode's Polkadot.js plugin on Bubble.io](https://github.com/NovaBloq/Bubble-Plugin-Polkadot.js) ⚪, [Blackprint Visual Programming Polkadot.js module](https://github.com/Blackprint/nodes-polkadot.js) 🟡, [SubRelay](https://github.com/subrelay/interface) 🟡|                                                                                                                  |
