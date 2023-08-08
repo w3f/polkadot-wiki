@@ -7,6 +7,13 @@ keywords: [polkadot vison, polkadot 2.0, Decentralization, Ubiquitous Computer, 
 slug: ../polkadot-uc
 ---
 
+:::info
+
+Material on this page is based on
+[Gavin Wood's talk at Polkadot Decoded 2023](https://www.youtube.com/watch?v=GIB1WeVuJD0).
+
+:::
+
 Understanding what [Polkadot 1.0](./polkadot-v1.md) is about, and the philosophy behind it, will
 help us to envision the future direction of the Polkadot ecosystem toward abstraction and
 generalization.
@@ -51,6 +58,9 @@ run applications that can be deployed using:
   contracts with constrained state and I/O (i.e. 2.5 MB), and heavy compute requirements. Such
   contracts will benefit from a secure and wide message passing environment as well.
 
+From now _application_ will be used as a general term to describe anything that can use a core to
+access secure, decentralized and ubiquitous computation.
+
 ## From Slot Auctions to Coretime Marketplace
 
 The final end product of blockchains is [**Blockspace**](./polkadot-v1.md#polkadots-blockspace).
@@ -60,35 +70,33 @@ Polkadot's secure blockspace and interoperability.
 
 Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
 that the procurement of those cores must be agile as well. The current slot auction mechanism is not
-agile, creates high entry barriers, and it is designed for long-running single chains (i.e. the
-original vision proposed in the whitepaper).
+agile, creates high entry barriers, and it is designed for long-running single applications (i.e.
+the original Polkadot vision proposed in the whitepaper).
 
 Here below we propose two Polkadot-native sale options of Coretime: **bulk** and **instantaneous**.
 This setup maximizes the agility of Polkadot and lets the market figure out the best solution needed
-for the users.
+for the applications.
 
 ### Bulk Coretime Rental
 
-Primary market
-
-Bulk Coretime rental is a monthly sale of 4 weeks Coretime at a fixed price with a target of e.g.
-75% of the available cores. The price will change depending on the deviation from the target value,
-and unrented cores go to instantaneous market. Special considerations might be necessary for
-pre-existing tenants.
+Bulk Coretime rental (primary market) is a monthly sale of 4 weeks Coretime at a fixed price with a
+target of e.g. 75% of the available cores. The price will change depending on the deviation from the
+target value, and unrented cores go to instantaneous market. Special considerations might be
+necessary for pre-existing applications.
 
 Bulk Coretime does not need to be directly deployed because it is an asset, more precisely a
 non-fungible assets (unless it is for the same time period). Coretime tokens are sold in a 4-week
-period and they can be split into multiple NFTs of smaller period. Those Coretime NFTs can be
-exposed by brokerage system parachains via XCM NFT interface to other parachains that want to allow
-for these NFTs to be exchanged and traded on their market. Coretime NFTs are consumed by the broker
-parachain in order to allow the owner to allocate computation on a Polkadot core.
+period and they can be split into multiple NFTs of smaller periods. Coretime NFTs are consumed by
+the a broker system parachain in order to allow the owner application to allocate computation on a
+Polkadot core. In general, bulk Coretime NFTs can be:
 
-Bulk Coretime can be:
-
-- assigned to one parachain (similar to the lease auctions in Polkadot 1.0)
-- assigned to a number of parachains taking turns on a core
+- sold to one application (similar to the lease auctions in Polkadot 1.0, with the difference that
+  Coretime in Polkadot 1.0 is not sold but applications need to lock their DOT tokens)
+- sold to a number of applications taking turns on a core
 - placed on the instantaneous market
-- carved up and sold separately on a separate parachain through the NFT XCM interface
+- exposed and sold by a broker system parachains via [XCM](./learn-xcm-index) NFT interface to
+  Polkadot-powered applications that want to allow for these NFTs to be exchanged and traded on
+  their market.
 
 ### Instantaneous Coretime Rental
 
@@ -96,5 +104,5 @@ Instantaneous Coretime rental is the ongoing sale of Coretime for immediate use 
 where an AMM regulates the price targeting 100% usage. Bulk Coretime can be placed in this market,
 and sale revenues are split between Coretime providers (i.e. validators).
 
-Instantaneous Coretime is Purchased by parachains though collators to boost throughput and/or reduce
-latency with extra cores, and power core contracts.
+Instantaneous Coretime is purchased by applications though collators to boost throughput and/or
+reduce latency with extra cores, and power more exotic core contracts.
