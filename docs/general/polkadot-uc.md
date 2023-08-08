@@ -16,14 +16,15 @@ generalization.
 Polkadot has been abstracted and generalized beyond what it was originally proposed and envisioned
 in the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
 
-- About space (the underlying resources that chains need) not chains.
-- A platform to build applications rather than chains, and for people to use those applications.
+- About [**Blockspace**](./polkadot-v1.md#polkadots-blockspace) (the underlying resources that
+  chains need) not chains.
+- **A platform to build applications** rather than chains, and for people to use those applications.
   Fundamentally, Polkadot is not a platform to host chains, and so far chains happened to be one way
   to build applications and grow Polkadot's utility.
-- A provider of resilient general-purpose continuation computation, where the term _continuation_
-  refers to a broad long-running task that can do something, pause, and do some more (or something
-  else) later on.
-- A multicore computer where chains that continuously operate in parallel on different cores are
+- **A provider of resilient general-purpose continuation computation**, where the term
+  _continuation_ refers to a broad long-running task that can do something, pause, and do some more
+  (or something else) later on.
+- **A multicore computer** where chains that continuously operate in parallel on different cores are
   called parachains. Currently, one core is reserved to one chain through
   [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved on-demand
   to multiple chains at different time periods (see [parathreads](../learn/learn-parathreads.md)).
@@ -43,7 +44,7 @@ These rating will likely increase over time.
 ## Contracts on Cores
 
 If we follow this line of Polkadot being a global unbiquitous supercomputer, cores can be used to
-run:
+run applications that can be deployed using:
 
 - parachains and
 - smart contracts, avoiding the need of custom chain infrastructure. This would be effective for
@@ -52,14 +53,19 @@ run:
 
 ## From Slot Auctions to Coretime Marketplace
 
+The final end product of blockchains is [**Blockspace**](./polkadot-v1.md#polkadots-blockspace).
+Applications need to access Polkadot's blockspace, and the entry points to blockspace are the cores.
+Thus, applications run on cores and will need to reserve some **Coretime** to make sure they access
+Polkadot's secure blockspace and interoperability.
+
 Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
 that the procurement of those cores must be agile as well. The current slot auction mechanism is not
 agile, creates high entry barriers, and it is designed for long-running single chains (i.e. the
 original vision proposed in the whitepaper).
 
-Here below we propose two Polkadot-native sale options of Coretime: bulk and instantaneous. This
-setup maximizes the agility of Polkadot and lets the market figure out the best solution needed for
-the users.
+Here below we propose two Polkadot-native sale options of Coretime: **bulk** and **instantaneous**.
+This setup maximizes the agility of Polkadot and lets the market figure out the best solution needed
+for the users.
 
 ### Bulk Coretime Rental
 
