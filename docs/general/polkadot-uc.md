@@ -3,7 +3,8 @@ id: polkadot-uc
 title: The Polkadot Ubiquitous Computer
 sidebar_label: Ubiquitous Computer
 description: Polkadot as a Decentralized and Secure Ubiquitous Computer.
-keywords: [polkadot vison, polkadot 2.0, Decentralization, Ubiquitous Computer, Coretime]
+keywords:
+  [polkadot vison, polkadot 2.0, Decentralization, ubiquitous computer, coretime, blockspace]
 slug: ../polkadot-uc
 ---
 
@@ -86,9 +87,14 @@ necessary for pre-existing applications.
 
 Bulk Coretime does not need to be directly deployed because it is an asset, more precisely a
 non-fungible assets (unless it is for the same time period). Coretime tokens are sold in a 4-week
-period and they can be split into multiple NFTs of smaller periods. Coretime NFTs are consumed by
-the a broker system parachain in order to allow the owner application to allocate computation on a
-Polkadot core. In general, bulk Coretime NFTs can be:
+period and they can be split into multiple NFTs of smaller periods. Coretime NFTs are sold and
+assigned by the a broker system parachain to the application now owning the NFTs, which must be
+consumed to allocate computation on a Polkadot core. The broker parachain records the price and the
+assignment, and the Coretime can always be purchased next month for the same assignment (i.e. same
+application) with a capped price change. This rent control allows applications to have certainty and
+predictability about Coretime prices. The process of assigning Coretime is irreversible.
+
+In general, bulk Coretime NFTs can be:
 
 - sold to one application (similar to the lease auctions in Polkadot 1.0, with the difference that
   Coretime in Polkadot 1.0 is not sold but applications need to lock their DOT tokens)
