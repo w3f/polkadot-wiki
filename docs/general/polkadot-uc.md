@@ -91,8 +91,9 @@ period and they can be split into multiple NFTs of smaller periods. Coretime NFT
 assigned by the a broker system parachain to the application now owning the NFTs, which must be
 consumed to allocate computation on a Polkadot core. The broker parachain records the price and the
 assignment, and the Coretime can always be purchased next month for the same assignment (i.e. same
-application) with a capped price change. This rent control allows applications to have certainty and
-predictability about Coretime prices. The process of assigning Coretime is irreversible.
+application) with a capped price change. This rent control allows long-running applications to have
+certainty and predictability about Coretime costs (not possible with lease auctions). The process of
+assigning Coretime is irreversible.
 
 In general, bulk Coretime NFTs can be:
 
@@ -103,6 +104,10 @@ In general, bulk Coretime NFTs can be:
 - exposed and sold by a broker system parachains via [XCM](./learn-xcm-index) NFT interface to
   Polkadot-powered applications that want to allow for these NFTs to be exchanged and traded on
   their market.
+
+Bulk Coretime pricing will be initialized through Polkadot OpenGov and will likely start low to
+minimize the entry barrier. Floor price, rent control and right-of-first-refusal will give long-term
+guarantees on the price paid and core availability.
 
 ### Instantaneous Coretime Rental
 
