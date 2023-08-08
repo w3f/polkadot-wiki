@@ -502,6 +502,10 @@ Note that if you are voting with conviction, your tokens will have a democracy l
 the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
 
+Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
+after a referendum ends. In the case of delegations, the unlocking period countdown starts after the
+account undelegates all tracks.
+
 :::
 
 Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
