@@ -503,8 +503,14 @@ the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
 
 Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
-after a referendum ends. In the case of delegations, the unlocking period countdown starts after the
-account undelegates all tracks.
+after a referendum ends, provided you voted with the winning side. In the case of delegations, the
+unlocking period countdown begins after the account undelegates. There can be different scenarios:
+
+- if the account delegated votes to one delegate, then after undelegating, there will be one
+  unlocking period with length dependent on the conviction multiplier.
+- if the account delegated votes to different delegates using different convictions, then after
+  undelegating those delegates, there will be different unlocking periods with lengths dependent on
+  the conviction multipliers.
 
 :::
 
