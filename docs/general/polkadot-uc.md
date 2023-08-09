@@ -124,3 +124,30 @@ Revenues from Coretime sales can be burnt, used to fund the Treasury, split betw
 providers (i.e. validators), or used for a mix of those options. The topic is currently under
 discussion. For more information see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
 and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
+
+### Coretime Allocation
+
+In Polkadot 1.0 applications where producing blocks at a fixed rate of 12 seconds whether it was
+needed or not. This led to inefficient allocation of energy and economic incentives for producing
+full blocks under heavy workload and empty blocks under light workload. Ideally, blocks are produced
+when needed and then system targets full block capacity lowering the probability to produce blocks
+half full or worse, empty.
+
+We mentioned how the instantaneous Cortime rental targets 100% usage, and how bulk Coretime is sold
+on a monthly basis maximizing agility and letting the market figuring out the best solution for
+applications.
+
+The new vision of Polkadot will also make the ecosystem more agile and allow applications to tweak
+how often they produce blocks based on their needs. An application can decide for example between
+the following strategies strategies:
+
+- Share: sharing cores with other applications and having blocks avery 18 seconds, for example
+- Compress: combine multiple application blocks in the same relay chain core to reduce latency but
+  increased bandwidth for the fixed price of opening and closing a block
+- Combine: buying Coretime on additional cores on the instantaneous market and send multiple blocks
+  to multiple cores at the same time slot to reduce latency from 12 seconds to 6 seconds, or even
+  lower than that.
+- Do nothing: do not buy Coretime when there is a period with no need for block production
+
+[Cumulus](../build/build-parachains.md#cumulus) will make sure that Coretime sales are adequately
+utilized and optimized in an automatic fashion.
