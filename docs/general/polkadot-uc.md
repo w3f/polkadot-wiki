@@ -40,8 +40,8 @@ in the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   parallel. Prediction models show that the number of cores can increase to 500-1000 in the
   following few years.
 
-As a computational resource, Polkadot can be described as a traditional CPU, and it has the
-following benchmarking features:
+As a computational resource, Polkadot can be described as a traditional CPU, and a the time of
+writing it has the following benchmarking features:
 
 - Bandwidth: ~1MB/s
 - Compute: Geekbench 5 SC score ~380
@@ -59,24 +59,25 @@ run applications that can be deployed using:
   contracts with constrained state and I/O (i.e. 2.5 MB), and heavy compute requirements. Such
   contracts will benefit from a secure and wide message passing environment as well.
 
-From now _application_ will be used as a general term to describe anything that can use a core to
-access secure, decentralized and ubiquitous computation.
+From now _application_ will be used as a general term to describe anything that can use a Polkadot
+core to access secure, decentralized and ubiquitous computation.
 
 ## From Slot Auctions to Coretime Marketplace
 
 The final end product of blockchains is [**Blockspace**](./polkadot-v1.md#polkadots-blockspace).
 Applications need to access Polkadot's blockspace, and the entry points to blockspace are the cores.
-Thus, applications run on cores and will need to reserve some **Coretime** to make sure they access
-Polkadot's secure blockspace and interoperability.
+Thus, applications will need to reserve some time on cores or **Coretime** to gain the right to
+access Polkadot's secure blockspace and interoperability for a definite time period.
 
 Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
 that the procurement of those cores must be agile as well. The current slot auction mechanism is not
 agile, creates high entry barriers, and it is designed for long-running single applications (i.e.
 the original Polkadot vision proposed in the whitepaper).
 
-Here below we propose two Polkadot-native sale options of Coretime: **bulk** and **instantaneous**.
-This setup maximizes the agility of Polkadot and lets the market figure out the best solution needed
-for the applications.
+We depart from the classic lease auctions and propose an agile marketplace for Coretime where two
+Polkadot-native sale options of Coretime are possible: **bulk** and **instantaneous**. This setup
+maximizes the agility of Polkadot and lets the market figure out the best solution needed for the
+applications do be successful.
 
 ### Bulk Coretime Rental
 
@@ -88,12 +89,12 @@ necessary for pre-existing applications.
 Bulk Coretime does not need to be directly deployed because it is an asset, more precisely a
 non-fungible assets (unless it is for the same time period). Coretime tokens are sold in a 4-week
 period and they can be split into multiple NFTs of smaller periods. Coretime NFTs are sold and
-assigned by the a broker system parachain to the application now owning the NFTs, which must be
+assigned by a broker system parachain to the applications now owning the NFTs, which must be
 consumed to allocate computation on a Polkadot core. The broker parachain records the price and the
-assignment, and the Coretime can always be purchased next month for the same assignment (i.e. same
-application) with a capped price change. This rent control allows long-running applications to have
-certainty and predictability about Coretime costs (not possible with lease auctions). The process of
-assigning Coretime is irreversible.
+assignment, and the Coretime can always be purchased the following month for the same assignment
+(i.e. same application) with a capped price change. This rent control allows long-running
+applications to have certainty and predictability about Coretime costs (not possible with lease
+auctions). The process of assigning Coretime is irreversible.
 
 In general, bulk Coretime NFTs can be:
 
@@ -112,8 +113,14 @@ guarantees on the price paid and core availability.
 ### Instantaneous Coretime Rental
 
 Instantaneous Coretime rental is the ongoing sale of Coretime for immediate use at a spot price
-where an AMM regulates the price targeting 100% usage. Bulk Coretime can be placed in this market,
-and sale revenues are split between Coretime providers (i.e. validators).
+where an AMM regulates the price targeting 100% usage. Bulk Coretime can be placed in this market.
 
 Instantaneous Coretime is purchased by applications though collators to boost throughput and/or
 reduce latency with extra cores, and power more exotic core contracts.
+
+### Coretime Revenues
+
+Revenues from Coretime sales can be burnt, used to fund the Treasury, split between Coretime
+providers (i.e. validators), or used for a mix of those options. The topic is currently under
+discussion. For more information see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
+and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
