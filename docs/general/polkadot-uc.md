@@ -203,3 +203,11 @@ All the above options can be composable and enable the creation of an extremely 
 computing system.
 
 ![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
+
+##
+
+Providing cores
+
+Chain centric paradigm
+
+Application centric
