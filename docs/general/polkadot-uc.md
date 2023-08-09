@@ -133,7 +133,7 @@ full blocks under heavy workload and empty blocks under light workload. Ideally,
 when needed and then system targets full block capacity lowering the probability to produce blocks
 half full or worse, empty.
 
-We mentioned how the instantaneous Cortime rental targets 100% usage, and how bulk Coretime is sold
+We mentioned how the instantaneous Coretime rental targets 100% usage, and how bulk Coretime is sold
 on a monthly basis maximizing agility and letting the market figuring out the best solution for
 applications.
 
@@ -151,3 +151,28 @@ the following strategies strategies:
 
 [Cumulus](../build/build-parachains.md#cumulus) will make sure that Coretime sales are adequately
 utilized and optimized in an automatic fashion.
+
+## Core Usage
+
+To allow Coretime to be shared and combined, cores need to be split Strided Sliced
+
+### Long-term Core Usage
+
+The figure below shows the core usage for Polkadot 1.0, where the y-axis is time and each row
+represents a core. Different colors show five different parachains, each one using one core (i.e.
+one parachain one core formula).
+
+![core-usage-dumb](../assets/core-usage-dumb.png)
+
+Core affinity (i.e. which application operates on which core) is not important (see below). Cores do
+not have any grater friendliness to one application than another.
+
+![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
+
+### Agile Core Usage
+
+Owners of a range can split and trade
+
+some stop and carry on later
+
+Ranges can be strided (i.e. taking turn on a core) to share costs
