@@ -58,7 +58,7 @@ will be reserved for submitting the proposal.
 
 Once the proposal has been submitted it will stay in the Lead-in period until there is enough space
 within the track, and a
-[track-dependent decision deposit](../maintain/maintain-guides-polkadot-opengov.md#polkadot-opengov-terminology-and-parameters)
-has been submitted. Failing to submit the decision deposit within a
+[track-dependent preparation period and decision deposit](../maintain/maintain-guides-polkadot-opengov.md#polkadot-opengov-terminology-and-parameters)
+have been met. Failing to submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
