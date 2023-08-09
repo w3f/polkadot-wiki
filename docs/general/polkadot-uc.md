@@ -118,6 +118,9 @@ where an AMM regulates the price targeting 100% usage. Bulk Coretime can be plac
 Instantaneous Coretime is purchased by applications though collators to boost throughput and/or
 reduce latency with extra cores, and power more exotic core contracts.
 
+[Cumulus](../build/build-parachains.md#cumulus) will make sure that Coretime sales are adequately
+utilized and optimized in an automatic fashion.
+
 ### Coretime Revenues
 
 Revenues from Coretime sales can be burnt, used to fund the Treasury, split between Coretime
@@ -135,32 +138,14 @@ half full or worse, empty.
 
 We mentioned how the instantaneous Coretime rental targets 100% usage, and how bulk Coretime is sold
 on a monthly basis maximizing agility and letting the market figuring out the best solution for
-applications.
+applications. The new vision of Polkadot will make the ecosystem even more agile and allow
+applications to tweak how often they produce blocks based on their needs.
 
-The new vision of Polkadot will also make the ecosystem more agile and allow applications to tweak
-how often they produce blocks based on their needs. An application can decide for example between
-the following strategies strategies:
+## Core Usage in Polkadot 1.0
 
-- Share: sharing cores with other applications and having blocks avery 18 seconds, for example
-- Compress: combine multiple application blocks in the same relay chain core to reduce latency but
-  increased bandwidth for the fixed price of opening and closing a block
-- Combine: buying Coretime on additional cores on the instantaneous market and send multiple blocks
-  to multiple cores at the same time slot to reduce latency from 12 seconds to 6 seconds, or even
-  lower than that.
-- Do nothing: do not buy Coretime when there is a period with no need for block production
-
-[Cumulus](../build/build-parachains.md#cumulus) will make sure that Coretime sales are adequately
-utilized and optimized in an automatic fashion.
-
-## Core Usage
-
-To allow Coretime to be shared and combined, cores need to be split Strided Sliced
-
-### Long-term Core Usage
-
-The figure below shows the core usage for Polkadot 1.0, where the y-axis is time and each row
-represents a core. Different colors show five different parachains, each one using one core (i.e.
-one parachain one core formula).
+The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time and each
+row represents a core. Different colors show five different parachains, each one using one core
+(i.e. one parachain one core formula).
 
 ![core-usage-dumb](../assets/core-usage-dumb.png)
 
@@ -169,10 +154,52 @@ not have any grater friendliness to one application than another.
 
 ![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
 
-### Agile Core Usage
+## Agile Core Usage
 
-Owners of a range can split and trade
+### Split Coretime
 
-some stop and carry on later
+Owners of Cortime can split or trade it. An application A1 can run on core C1 for a finite defined
+period and then another application A2 can run on that core, or application A1 can continue running
+on another core C2. Some applications might even stop running for some time and resume later on.
 
-Ranges can be strided (i.e. taking turn on a core) to share costs
+![core-usage-agile-rangeSplit](../assets/core-usage-agile-rangeSplit.png)
+
+### Strided Coretime
+
+Ranges can be strided (i.e. applications can take turns on a core) to share costs or decrease block
+production rate for example.
+
+![core-usage-agile-rangeStrided](../assets/core-usage-agile-rangeStrided.png)
+
+### Compressed Cores
+
+The same core can secure multiple blocks of the same application at the same time. Combining
+multiple application blocks in the same relay chain core will reduce latency at the expense of
+increased bandwidth for the fixed price of opening and closing a block.
+
+![core-usage-agile-compressed](../assets/core-usage-agile-compressed.png)
+
+### Combined Cores
+
+An application's task can be assigned to multiple cores at the same time. Some application can have
+a permanent core assignment and an intermittent one, for example in period of high demand.
+
+![core-usage-agile-combined](../assets/core-usage-agile-combined.png)
+
+Coretime on additional cores can be bought on the instantaneous market and send multiple blocks to
+multiple cores at the same time slot to reduce latency.
+
+### Shared Cores
+
+Sharing cores with other applications to share costs but with no reduction in latency. Note that
+this is different from the [split coretime](#split-coretime) where one core is used by multiple
+application at different times to share costs at the expense of higher latency.
+
+![core-usage-agile-shared](../assets/core-usage-agile-shared.png)
+
+### Composable Cores
+
+All the above options can be composable and enable the creation of an extremely agile ubiquitous
+computing system.
+
+![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
