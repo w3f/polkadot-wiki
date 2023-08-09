@@ -28,7 +28,7 @@ pool's credibility.
 
 **The current minimum bond to create a pool on**
 {{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
-{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={2000000000000} filter="humanReadable" />.** :polkadot }}
+{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable" />.** :polkadot }}
 {{ kusama: **is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
 
 The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
