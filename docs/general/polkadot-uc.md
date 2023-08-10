@@ -116,7 +116,7 @@ Instantaneous Coretime rental is the ongoing sale of Coretime for immediate use 
 where an AMM regulates the price targeting 100% usage. Bulk Coretime can be placed in this market.
 
 Instantaneous Coretime is purchased by applications though collators to boost throughput and/or
-reduce latency with extra cores, and power more exotic core contracts.
+reduce latency with extra cores, and power more exotic [core contracts](#contracts-on-cores).
 
 [Cumulus](../build/build-parachains.md#cumulus) will make sure that Coretime sales are adequately
 utilized and optimized in an automatic fashion.
@@ -224,14 +224,24 @@ on chain-centric application and UX.
 The true value of Polkadot is about leveraging the unique value proposition offered by different
 chains, and use the collaborative potential of those chains to build inter-chain applications to
 solve real-world problems. Those applications will thus need to span across chains, and have a
-seamless UX so that users are not aware and do not need to understand how actions are performed by a
-mosaic of cross-chain transactions.
+seamless UX. Users will not need to be aware or understand how messages are delivered by a mosaic of
+cross-chain transactions.
 
-Increasingly fewer tasks will be handled by the relay-chain, which will focus efforts only on
-securing the network and providing secure message-passing capability. System parachains will be used
-for tasks such as staking, governance, etc.
+Increasingly fewer tasks will be handled by the relay-chain that will focus efforts only on primary
+tasks: securing the network and providing secure message-passing capability.
+[System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay-chain
+tasks such as staking, governance, etc.
 
 ### Agile Polkadot Representation
 
-Polkadot 1.0 was represented with the relay-chain surrounded by parachains. Following the new
-application-centric vision, Polkadot can be better represented
+Polkadot 1.0 was represented with the
+[relay-chain surrounded by parachains](./polkadot-v1.md#polkadots-representation). Following the new
+application-centric vision, Polkadot can be better represented using the figure below.
+
+![agile-polkadot](../assets/agile-polkadot.png)
+
+Polkadot should be an integrated system (big circle), a single computer on which many applications
+run (dots). There are boundaries between business logic components of Polkadot (dashed lines). Those
+boundaries can enclose parachains or core contracts. Applications should be able to communicate with
+each other within and across those boundaries. Last but not least, similarly to a laptop, how
+Polkadot works must not be important to the users who just need it to use applications.
