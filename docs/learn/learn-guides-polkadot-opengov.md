@@ -18,7 +18,7 @@ voting/confirmation period). For more information about referenda timeline in Po
 the [dedicated page](../learn/learn-polkadot-opengov.md#referenda-timeline).
 
 To successfully cancel a referendum through the track `20 / Referendum Canceller`, you will need to
-get a
+attain
 [specific approval and support levels](../maintain/maintain-guides-polkadot-opengov.md#referendum-canceller).
 
 :::
