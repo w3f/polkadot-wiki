@@ -128,20 +128,11 @@ providers (i.e. validators), or used for a mix of those options. The topic is cu
 discussion. For more information see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
 and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
 
-### Coretime Allocation
+## Core Usage in Polkadot 1.0
 
 In Polkadot 1.0 applications where producing blocks at a fixed rate of 12 seconds whether it was
 needed or not. This led to inefficient allocation of energy and economic incentives for producing
-full blocks under heavy workload and empty blocks under light workload. Ideally, blocks are produced
-when needed and then system targets full block capacity lowering the probability to produce blocks
-half full or worse, empty.
-
-We mentioned how the instantaneous Coretime rental targets 100% usage, and how bulk Coretime is sold
-on a monthly basis maximizing agility and letting the market figuring out the best solution for
-applications. The new vision of Polkadot will make the ecosystem even more agile and allow
-applications to tweak how often they produce blocks based on their needs.
-
-## Core Usage in Polkadot 1.0
+full blocks under heavy workload and empty blocks under light workload.
 
 The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time and each
 row represents a core. Different colors show five different parachains, each one using one core
@@ -154,7 +145,15 @@ not have any grater friendliness to one application than another.
 
 ![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
 
-## Agile Core Usage
+Ideally, blocks are produced when needed and the system targets full block capacity lowering the
+probability to produce blocks half full or worse, empty.
+
+We mentioned how the instantaneous Coretime rental targets 100% usage, and how bulk Coretime is sold
+on a monthly basis maximizing agility and letting the market figuring out the best solution for
+applications. The new vision of Polkadot will make the ecosystem even more agile and allow
+applications to tweak how often they produce blocks based on their needs.
+
+## Agile Coretime Allocation
 
 ### Split Coretime
 
@@ -171,15 +170,7 @@ production rate for example.
 
 ![core-usage-agile-rangeStrided](../assets/core-usage-agile-rangeStrided.png)
 
-### Compressed Cores
-
-The same core can secure multiple blocks of the same application at the same time. Combining
-multiple application blocks in the same relay chain core will reduce latency at the expense of
-increased bandwidth for the fixed price of opening and closing a block.
-
-![core-usage-agile-compressed](../assets/core-usage-agile-compressed.png)
-
-### Combined Cores
+### Combined Coretime
 
 An application's task can be assigned to multiple cores at the same time. Some application can have
 a permanent core assignment and an intermittent one, for example in period of high demand.
@@ -189,6 +180,16 @@ a permanent core assignment and an intermittent one, for example in period of hi
 Coretime on additional cores can be bought on the instantaneous market and send multiple blocks to
 multiple cores at the same time slot to reduce latency.
 
+## Agile Core Usage
+
+### Compressed Cores
+
+The same core can secure multiple blocks of the same application at the same time. Combining
+multiple application blocks in the same relay chain core will reduce latency at the expense of
+increased bandwidth for the fixed price of opening and closing a block.
+
+![core-usage-agile-compressed](../assets/core-usage-agile-compressed.png)
+
 ### Shared Cores
 
 Sharing cores with other applications to share costs but with no reduction in latency. Note that
@@ -197,10 +198,11 @@ application at different times to share costs at the expense of higher latency.
 
 ![core-usage-agile-shared](../assets/core-usage-agile-shared.png)
 
-### Composable Cores
+## Agile Ubiquitous Computer
 
-All the above options can be composable and enable the creation of an extremely agile ubiquitous
-computing system.
+All the above options of agile [Coretime allocation](#agile-coretime-allocation) and
+[core usage](#agile-core-usage) can be composable and enable the creation of an extremely agile
+ubiquitous computing system.
 
 ![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
 
