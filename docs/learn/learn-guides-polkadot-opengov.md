@@ -9,6 +9,8 @@ slug: ../learn-guides-polkadot-opengov
 
 import RPC from "./../../components/RPC-Connection";
 
+## Cancel or Kill a Referendum
+
 :::info
 
 Anybody can cancel an ongoing referendum (i.e., a referendum within the Lead-in or

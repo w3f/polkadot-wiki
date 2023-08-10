@@ -197,7 +197,7 @@ which has a low lead-time and Approval/Support curves with slightly sharper redu
 thresholds for passing, given that it is invoked with a sense of urgency.
 
 For more information about how to cancel a referendum see the
-[advanced how-to guides](./learn-guides-polkadot-opengov).
+[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
 
 :::info Blacklisting
 
