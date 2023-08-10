@@ -196,6 +196,9 @@ with
 which has a low lead-time and Approval/Support curves with slightly sharper reductions in their
 thresholds for passing, given that it is invoked with a sense of urgency.
 
+For more information about how to cancel a referendum see the
+[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
+
 :::info Blacklisting
 
 Blacklisting referenda in Polkadot OpenGov is
@@ -501,6 +504,16 @@ If you are staking directly and not through a nomination pool, you can use bonde
 Note that if you are voting with conviction, your tokens will have a democracy lock in addition to
 the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
+
+Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
+after a referendum ends, provided you voted with the winning side. In the case of delegations, the
+unlocking period countdown begins after the account undelegates. There can be different scenarios:
+
+- if the account delegated votes to one delegate, then after undelegating, there will be one
+  unlocking period with length dependent on the conviction multiplier.
+- if the account delegated votes to different delegates using different convictions, then after
+  undelegating those delegates, there will be different unlocking periods with lengths dependent on
+  the conviction multipliers.
 
 :::
 

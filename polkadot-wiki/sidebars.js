@@ -278,6 +278,7 @@ module.exports = {
                     "learn/learn-guides-staking-pools",
                   ],
                 },
+                "learn/learn-guides-polkadot-opengov",
                 "learn/learn-guides-identity",
                 {
                   type: "category",
