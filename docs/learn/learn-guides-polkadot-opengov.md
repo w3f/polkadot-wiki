@@ -19,7 +19,7 @@ the [dedicated page](../learn/learn-polkadot-opengov.md#referenda-timeline).
 
 To successfully cancel a referendum through the track `20 / Referendum Canceller`, you will need to
 get a
-[specific approval and support](../maintain/maintain-guides-polkadot-opengov.md#referendum-canceller).
+[specific approval and support levels](../maintain/maintain-guides-polkadot-opengov.md#referendum-canceller).
 
 :::
 
