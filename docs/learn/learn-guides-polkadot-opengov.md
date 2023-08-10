@@ -13,7 +13,7 @@ import RPC from "./../../components/RPC-Connection";
 
 :::info
 
-Anybody can cancel a referendum, given the referendum is ongoing (i.e., anywhere between Lead-in and
+Anybody can cancel an ongoing referendum (i.e., a referendum that is either within the Lead-in or
 voting/confirmation period). For more information about referenda timeline in Polkadot OpenGov see
 the [dedicated page](../learn/learn-polkadot-opengov.md#referenda-timeline).
 
@@ -25,9 +25,8 @@ attain
 
 To cancel a referendum, you need to first to submit a preimage. Go to the
 [Polkadot-JS UI > Governace > Referenda](https://polkadot.js.org/apps/#/referenda) and click on the
-"Add Preimage" button. You must specify the specific call enacted if the proposal passes. In this
-case, we want to cancel a referendum, and we will need to specify the `referenda.cancel` extrinsic
-of referendum `249`.
+"Add Preimage" button. You must specify the specific call enacted if the proposal passes. To cancel
+a referendum you will need to specify the `referenda.cancel` extrinsic of referendum `249`.
 
 ![cancel-referenda-preimage-creation](../assets/cancel-referenda-preimage-creation.png)
 
