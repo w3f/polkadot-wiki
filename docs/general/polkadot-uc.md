@@ -206,10 +206,32 @@ ubiquitous computing system.
 
 ![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
 
-##
+Thus, this new vision is focused on the resource that Polkadot provides, which is secure, flexible
+and available blockspace that can be accessed by reserving some time on a core. Agility in
+allocation of Coretime and use of cores allow to maximize network efficiency.
 
-Providing cores
+## From Chain- to Application-centricity
 
-Chain centric paradigm
+Polkadot 1.0 was a chain-centric paradigm consisting in isolated chains able to exchange messages.
+This was not fundamentally different form having completely different chains connected to bridges,
+with the only difference of having the relay-chain securing the network, providing message-passing
+capability, and doing some extra tasks such as [crowdloans](../learn/learn-crowdloans.md),
+[auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
+[accounts](./learn-accounts-index), [balances](../learn/learn-balance-transfers.md), and
+[governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately end
+on chain-centric application and UX.
 
-Application centric
+The true value of Polkadot is about leveraging the unique value proposition offered by different
+chains, and use the collaborative potential of those chains to build inter-chain applications to
+solve real-world problems. Those applications will thus need to span across chains, and have a
+seamless UX so that users are not aware and do not need to understand how actions are performed by a
+mosaic of cross-chain transactions.
+
+Increasingly fewer tasks will be handled by the relay-chain, which will focus efforts only on
+securing the network and providing secure message-passing capability. System parachains will be used
+for tasks such as staking, governance, etc.
+
+### Agile Polkadot Representation
+
+Polkadot 1.0 was represented with the relay-chain surrounded by parachains. Following the new
+application-centric vision, Polkadot can be better represented
