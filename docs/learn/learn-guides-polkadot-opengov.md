@@ -43,7 +43,7 @@ Once a preimage is submitted, it can be checked under
 ![cancel-referenda-preimage-check](../assets/cancel-referenda-preimage-check.png)
 
 You must copy the preimage to use it when you submit your proposal. To submit the proposal to cancel
-referendum 249, we need to go under
+referendum 249, for example, you need to go under
 [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and click the "Submit Proposal"
 button.
 
