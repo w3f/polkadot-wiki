@@ -196,6 +196,9 @@ with
 which has a low lead-time and Approval/Support curves with slightly sharper reductions in their
 thresholds for passing, given that it is invoked with a sense of urgency.
 
+For more information about how to cancel a referendum see the
+[advanced how-to guides](./learn-guides-polkadot-opengov).
+
 :::info Blacklisting
 
 Blacklisting referenda in Polkadot OpenGov is
