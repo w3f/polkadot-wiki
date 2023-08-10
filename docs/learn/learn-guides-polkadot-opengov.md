@@ -23,7 +23,7 @@ attain
 
 :::
 
-To cancel a referenda, you need first to submit a preimage. Go to the
+To cancel a referendum, you need to first to submit a preimage. Go to the
 [Polkadot-JS UI > Governace > Referenda](https://polkadot.js.org/apps/#/referenda) and click on the
 "Add Preimage" button. You must specify the specific call enacted if the proposal passes. In this
 case, we want to cancel a referendum, and we will need to specify the `referenda.cancel` extrinsic
