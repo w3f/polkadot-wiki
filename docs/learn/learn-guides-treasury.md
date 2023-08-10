@@ -47,8 +47,8 @@ and is
 
 ### Submit Treasury Proposal Preimage
 
-The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
-that requests 100 DOT from Treasury.
+The example below shows how to create a [preimage](../general/glossary.md#preimage) for a
+transaction that requests 100 DOT from Treasury.
 
 - Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
@@ -97,8 +97,8 @@ Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
 ### Place a Decision Deposit for the Treasury Track Referendum
 
 For the referendum to move from preparing phase to the deciding phase, a decision deposit needs to
-be placed. The decision deposit values for each individual [Treasury Tracks](#treasury-tracks) are
-listed in a section above in this document.
+be placed. The decision deposit values for each individual treasury track are listed
+[here](./learn-polkadot-opengov-treasury.md#treasury-tracks).
 
 ![Submit Treasury Proposal Decision Deposit](../assets/treasury/treasury-proposal-decision-deposit.png)
 
@@ -109,3 +109,18 @@ deposits can be claimed. For claiming the preimage deposit, navigate to Polkadot
 Governance > Preimages and click on unnote button shown on the preimage you submitted. Similarly, to
 claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and scroll down to
 the end of the page to click on the referenda with the decision depoit and claim it.
+
+## Requesting Tips from the Treasury
+
+To request a tip funded by the treasury you can follow the above steps for
+[creating a treasury proposal](#creating-a-treasury-proposal) but instead of submitting the proposal
+to the `32 / Small Spender` track you will need to submit it to the `30 / Small Tipper` or
+`31 / Big Tipper` tracks depending on the number of tokens to be requested.
+
+Briefly, you will need to:
+
+- Create a preimage using the `treasury.Spend` extrinsic and specifying the number of tokens and the
+  beneficiary of the tip, and
+- Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash.
+
+## Propose a Bounty

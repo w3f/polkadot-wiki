@@ -59,7 +59,7 @@ OpenGov allows for managing funds through six tracks, each with its own
 
 Access to Treasury funds requires successful enactment of referendum in the respective treasury
 track on-chain. Learn how to submit a treasury proposal for referendum
-[here](./learn-guides-treasury.md#creating-a-treasury-proposal).
+[here](./learn-guides-treasury#creating-a-treasury-proposal).
 
 :::
 
