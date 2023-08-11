@@ -107,7 +107,9 @@ Your proposal should address a problem, outline a goal, give a detailed account 
 reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
 the tasks to be completed so fees can be evaluated and milestones can be followed. You can check the
 {{ polkadot: [guidelines for a successful proposal](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w) :polkadot }}{{ kusama:  [guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)  :kusama }}
-and fill out the {{ polkadot: [Treasury proposal template](https://docs.google.com/document/d/1O_84mXYFERCavmnJyxbIPKFkG0bVBySRjCVy-d-VKcc) :polkadot }}{{ kusama:  Treasury proposal template :kusama }} provided.
+and fill out the
+{{ polkadot: [Treasury proposal template](https://docs.google.com/document/d/1O_84mXYFERCavmnJyxbIPKFkG0bVBySRjCVy-d-VKcc) :polkadot }}{{ kusama:  Treasury proposal template :kusama }}
+provided.
 
 ### Announcing the Proposal
 
@@ -119,7 +121,9 @@ proposal, they will need to find an off-chain way to explain the proposal:
   {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
   {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
   {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
-- Use platforms like [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) to initiate discussion with the community. They also offer a gauge poll to capture the community sentiment before submitting an on-chain referendum.
+- Use platforms like [Polkassembly](https://polkassembly.io) and
+  [SubSquare](https://www.subsquare.io/) to initiate discussion with the community. They also offer
+  a gauge poll to capture the community sentiment before submitting an on-chain referendum.
 
 Spreading the word about the proposal's explanation to the community is ultimately up to the
 proposer.
@@ -135,10 +139,11 @@ and is
 
 ### Submit Treasury Proposal Preimage
 
-The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction that requests 100 DOT from
-Treasury.
+The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
+that requests 100 DOT from Treasury.
 
-- Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and then click on Add Preimage.
+- Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
+  and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
 - Choose `treasury` pallet in the "propose" dropdown and the `spend(amount, beneficiary)`call
 - Enter the DOT amount.
@@ -167,7 +172,8 @@ the image below). Take a note of this preimage hash, which is required to submit
 
 The example below shows how to submit a Treasury track referendum.
 
-- Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and then click on Submit proposal.
+- Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda)
+  and then click on Submit proposal.
 - Select the account which will be used to submit the proposal.
 - Choose the appropriate submission track (The example below selected Small Spender track).
 - Enter the preimage hash of the treasury spend transaction.(If the preimage exists on-chain, the
