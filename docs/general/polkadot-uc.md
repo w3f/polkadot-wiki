@@ -30,7 +30,7 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   way to build applications and grow Polkadot's utility.
 - **A provider of resilient general-purpose continuation computation**, where the term
   _continuation_ refers to a broad long-running task that can do something, pause, continue (or do
-  something else) later on.
+  something else) later.
 - **A multicore computer** where chains that continuously operate in parallel on different cores are
   called [parachains](../learn/learn-parachains.md). Currently, one core is reserved for one chain
   through [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved
@@ -70,7 +70,7 @@ access Polkadot's secure blockspace and interoperability for a finite period.
 
 Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
 that the procurement of those cores must be agile as well. The current slot auction mechanism is not
-agile, creates high entry barriers, and is designed for long-running single applications (i.e. the
+agile, creates high entry barriers, and is designed for long-running single applications (i.e., the
 original Polkadot vision proposed in the whitepaper).
 
 We depart from the classic lease auctions and propose an agile marketplace for coretime where two
@@ -87,10 +87,10 @@ necessary for pre-existing applications.
 
 Bulk coretime does not need to be directly deployed because it is an asset, more precisely, a
 non-fungible asset (unless it is for the same period). Coretime tokens are sold in a 4-week period
-and they can be split into multiple NFTs of smaller periods. Coretime NFTs are sold and assigned by
-a broker system parachain to the applications now owning the NFTs, which must be consumed to
-allocate computation on a Polkadot core. The broker parachain records the price and the assignment,
-and the coretime can always be purchased the following month for the same assignment (i.e., same
+and can be split into multiple NFTs of smaller periods. Coretime NFTs are sold and assigned by a
+broker system parachain to the applications now owning the NFTs, which must be consumed to allocate
+computation on a Polkadot core. The broker parachain records the price and the assignment, and the
+coretime can always be purchased the following month for the same assignment (i.e., same
 application) with a capped price change. This rent control allows long-running applications to have
 certainty and predictability about coretime costs (not possible with lease auctions). The process of
 assigning coretime is irreversible.
@@ -242,8 +242,8 @@ application-centric vision, Polkadot can be better represented using the figure 
 Polkadot should be an integrated system (big circle), a single computer on which many applications
 run (open circles). There are boundaries between business logic components of Polkadot (dashed
 lines). Those boundaries can enclose parachains or core contracts. Applications should be able to
-communicate with each other within and across those boundaries. Last but not least, similar to a
-laptop, how Polkadot works must not be necessary for the users who need it to use applications.
+communicate with each other within and across those boundaries. Last but not least, like a laptop,
+knowing how Polkadot works must be optional for the users who just need it to use applications.
 
 ### XCM and Accords
 
@@ -323,9 +323,9 @@ Polkadot is basing its resilience on different pillars:
   the system and coming to decisions through on-chain governance. Involving as many people as
   possible ensures resilience against spending becoming systemically misjudged and appropriately
   directs wealth for spending treasury funds, salaries, and grants. Another crucial way of
-  decentralizing the network is ensuring experts, on which the maintenance of the system relies
-  upon, are incentivized and recruited over time by the Polkadot network and not by organizations
-  within the Polkadot ecosystem. There are important elements that can be improved by having many
+  decentralizing the network is ensuring experts on which the maintenance of the system relies upon
+  are incentivized and recruited over time by the Polkadot network and not by organizations within
+  the Polkadot ecosystem. There are important elements that can be improved by having many
   individuals involved, such as oraclisation and administrative affairs.
 
 ## So, Why Polkadot?
