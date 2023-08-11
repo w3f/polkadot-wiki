@@ -47,8 +47,8 @@ and is
 
 ### Submit Treasury Proposal Preimage
 
-The example below shows how to create a [preimage](../general/glossary.md#preimage) for a
-transaction that requests 100 DOT from Treasury.
+The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
+that requests 100 DOT from Treasury.
 
 - Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
@@ -97,8 +97,9 @@ Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
 ### Place a Decision Deposit for the Treasury Track Referendum
 
 For the referendum to move from preparing phase to the deciding phase, a decision deposit needs to
-be placed. The decision deposit values for each individual treasury track are listed
-[here](./learn-polkadot-opengov-treasury.md#treasury-tracks).
+be placed. The decision deposit values for each individual
+[Treasury Tracks](./learn-polkadot-opengov-treasury#treasury-tracks) are listed in a section above
+in this document.
 
 ![Submit Treasury Proposal Decision Deposit](../assets/treasury/treasury-proposal-decision-deposit.png)
 
