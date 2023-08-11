@@ -300,8 +300,39 @@ Systems, that have been not engineered with decentralization, cryptography and g
 are breakable and prone to cyber attacks. This costs people time, stress, energy, and money.
 Polkadot
 
-- Preponderance of light-client usage: Centralized RPCs are common but susceptible
-- Zero-Knowledge Primitives
-- Sassafras consensus
-- Mixnet/Onion Routing
-- Social Decentralization
+- **Preponderance of light-client usage:** Centralized RPCs are common but susceptible to attack and
+  not trustless entry points to using blockchain-based applications. Light client usage is possible,
+  practical and preferable
+- **Zero-Knowledge (ZK) Primitives:** They can have a problematic effect on censorship and
+  centralization as having big state transition function boiled down to a single proof of correct
+  execution is not currently a scaling solution to build resilient systems. However, a library of
+  richly featured and high-performance ZK primitives that are ready for specific use-cases is being
+  built. The first use-case will be used to improve privacy for on-chain collectives such as
+  [the Polkadot Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship).
+- **Sassafras consensus:** New forkless block-production consensus algorithm replacing
+  [BABE](../learn/learn-consensus.md#block-production-babe) and where block are not produced unless
+  they are expected to be finalized. This will provide several benefits such as:
+  - Improved security, parachain performance and UX from being forkless
+  - Preventing front-running attacks through high-performance transaction routing where transactions
+    are included in blocks in one hop instead of being gossiped, and transaction encryption.
+- **Internode Mixnet:** Shielded transport for short messages that
+  - avoids leaking IP information for transactions, and
+  - introduces a general messaging system allowing users, chains and off-chain workers, smart
+    contracts, pallets, and anything else existing within a chain to exchange messages containing
+    signatures, intentions, etc.
+- **Social Decentralization:** Resilience is achieved by including many participants contributing to
+  the system and coming to decisions through on-chain governance. Involving as many people as
+  possible ensures resilience against spending becoming systemically misjudged, and appropriately
+  direct wealth for spending treasury funds, salaries, and grants. Another crucial way of
+  decentralizing the network is ensuring experts, that the maintenance of the system relies upon,
+  are incentivized and recruited over time by the Polkadot network and not by organization within
+  the Polkadot ecosystem. There are important elements that can be improved by having many
+  individuals involved, such as oraclisation and administrative affairs.
+
+## So, Why Polkadot?
+
+Polkadot is not here for one specific application, but to provide a platform of means of deploying
+multiple applications within the same environment, and having those applications being able to
+utilize each other for the overall benefit of the users. Resiliency is about being able to adapt to
+changes in the world's alternatives of doing similar things or existential threats from organization
+that are not in-line with a trust-free world.
