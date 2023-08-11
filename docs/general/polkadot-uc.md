@@ -248,19 +248,24 @@ Polkadot works must not be important to the users who just need it to use applic
 
 ### XCM and Accords
 
-XCM is a format, a language of intention abstract over functionality that is common within chains.
-It creates an expressive language of what you intend to do or want to happen. There are no
-guarantees that chains faithfully interpret XCM messages, and thus XCM is not ideal if we are in a
-trustless environment.
+[XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstract over
+functionality that is common within chains. It creates an expressive language of what you intend to
+do or want to happen. There are no guarantees that chains faithfully interpret XCM messages, and
+thus XCM is not ideal if we are in a trustless environment.
 
-XCMP is the transport layer for delivering XCM messages, delivers the message, it give the
-transportation method, a secure route but not a framework for binding agreements.
+[XCMP](../learn/learn-xcm.md) is the transport layer for delivering XCM messages. It gives the
+transportation method and a secure route but not a framework for binding agreements.
 
 An **Accord** is an _opt-in_ treaty across many chains, where treaty logic cannot be changed or
 undermined by one or more of those chains and Polkadot guarantees faithful execution of this logic.
 Accords will be specific to a particular function, and any chain that enters the accord will be held
 to it and will service that particular function. To lower the entry barrier, accords can be proposed
 permissionlessly but, because they are opt-in, the accord proposal will not affect anyone until
-chains agree and sign up.
+chains agree and sign up. Taking the
+[previous representation of Polkadot](#agile-polkadot-representation), if we look at Polkadot no
+more from the top but from the side, accords come off and provide a separate mechanism that
+overrules the local chain sovreignty, this is the **accord space**.
 
 ![agile-polkadot-accords](../assets/agile-polkadot-accords.png)
+
+Accords cannot exist on any kind of system.
