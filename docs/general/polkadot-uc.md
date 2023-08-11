@@ -268,4 +268,28 @@ overrules the local chain sovreignty, this is the **accord space**.
 
 ![agile-polkadot-accords](../assets/agile-polkadot-accords.png)
 
-Accords cannot exist on any kind of system.
+The above figure shows two accords (white and green) between different logic components.
+
+Accords cannot exist on any kind of system, and Polkadot is the only ecosystem where accords can
+properly exist on because it is the only system having an homogenous security layer that also
+provides a specific state transition function for each of its logic components.
+
+This allow patterns of cooperation between multiple logic components (i.e. trans-applications) that
+would not be possible to achieve over bridges.
+
+Accords will be implement using [SPREE technology](../learn/learn-spree.md).
+
+#### Accords Use-cases
+
+In Polkadot 1.0, if two parachains want to have **asset interactions** they need to go though a
+third chain, the asset hub chain. Accords remove that third path, they are something that exists
+within the general process space, scheduled at the same core at the same time as the parachain but
+are not part of the parachain's business logic.
+
+Like embassies have their own law that is in line with the country they are embassies of but they
+sit physically in the local country; accords are business logic that is foreign to the member
+parachains but agreed upon and exists locally in those parachains.
+
+Accords can allow also **multicast XCM**, the ability to send a single message across multiple
+chains in an ordered fashion, or having a DEX with across different chains that can be used locally
+on those chains without having a bidirectional channel opened.
