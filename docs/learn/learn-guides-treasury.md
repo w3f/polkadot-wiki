@@ -3,7 +3,7 @@ id: learn-guides-treasury
 title: Polkadot Treasury How-to Guides
 sidebar_label: Treasury
 description: Advanced How-to Guides about requesting funds from the Polkadot Treasury.
-keywords: [opengov, polkadot opengov, referenda, treasury, tips, bounties]
+keywords: [opengov, polkadot opengov, referenda, treasury, tipps, bounties]
 slug: ../learn-guides-treasury
 ---
 
@@ -111,9 +111,9 @@ Governance > Preimages and click on unnote button shown on the preimage you subm
 claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and scroll down to
 the end of the page to click on the referenda with the decision depoit and claim it.
 
-## Requesting Tips from the Treasury
+## Requesting Tipps from the Treasury
 
-To request a tip funded by the treasury you can follow the above steps for
+To request a tipp funded by the treasury you can follow the above steps for
 [creating a treasury proposal](#creating-a-treasury-proposal) but instead of submitting the proposal
 to the `32 / Small Spender` track you will need to submit it to the `30 / Small Tipper` or
 `31 / Big Tipper` tracks depending on the number of tokens to be requested.
@@ -121,5 +121,5 @@ to the `32 / Small Spender` track you will need to submit it to the `30 / Small 
 Briefly, you will need to:
 
 - Create a preimage using the `treasury.Spend` extrinsic and specifying the number of tokens and the
-  beneficiary of the tip, and
+  beneficiary of the tipp, and
 - Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash.
