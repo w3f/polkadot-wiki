@@ -291,5 +291,17 @@ sit physically in the local country; accords are business logic that is foreign 
 parachains but agreed upon and exists locally in those parachains.
 
 Accords can allow also **multicast XCM**, the ability to send a single message across multiple
-chains in an ordered fashion, or having a DEX with across different chains that can be used locally
-on those chains without having a bidirectional channel opened.
+chains in an ordered fashion, or having a **trustless multi-chain DEX** across different chains that
+can be used locally on those chains without having a bidirectional channel open.
+
+## Polkadot's Resilience
+
+Systems, that have been not engineered with decentralization, cryptography and game theory in mind,
+are breakable and prone to cyber attacks. This costs people time, stress, energy, and money.
+Polkadot
+
+- Preponderance of light-client usage: Centralized RPCs are common but susceptible
+- Zero-Knowledge Primitives
+- Sassafras consensus
+- Mixnet/Onion Routing
+- Social Decentralization
