@@ -122,5 +122,3 @@ Briefly, you will need to:
 - Create a preimage using the `treasury.Spend` extrinsic and specifying the number of tokens and the
   beneficiary of the tip, and
 - Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash.
-
-## Propose a Bounty
