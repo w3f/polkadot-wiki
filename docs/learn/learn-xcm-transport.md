@@ -97,7 +97,6 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tOnzk4AROUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
 :::note
 
 XCMP is not yet implemented. The following illustrates the overall design goals and expectations for
