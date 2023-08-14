@@ -8,7 +8,7 @@ slug: ../contributing
 ---
 
 The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims to
-be the most extensive resource of knowledge on Polkadot and Kusama the ecosystem. A large part of
+be the most extensive resource of knowledge on the Polkadot and Kusama ecosystem. A large part of
 the material currently focuses on Polkadot and Kusama directly but it is not opposed to covering
 informational material for community projects.
 
