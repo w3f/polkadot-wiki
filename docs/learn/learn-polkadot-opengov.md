@@ -442,6 +442,12 @@ days. For additional information regarding the timeline of governance events, ch
 governance section on the
 {{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
+:::do votes stack?
+
+You can use the same dot to vote on many different referendums at once. The dot will be locked up only for whatever the longest conviction period you picked. E.g. if you had 50 dot and voted on A, B and C with 2x conviction you would only have the 50 dot locked up for the 2x conviction period (i.e. not a day longer than if you had only voted once - so please feel free to vote on many things).
+
+If you vote with a 6x conviction on A, and then a week later vote on B with 6x conviction then the lock on your dot will only be extended by a week (I.e. your dot will never be locked up for 12x).
+
 :::info Staked tokens can be used in governance
 
 While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
