@@ -591,7 +591,8 @@ referendum.
 ### Whitelisting
 
 Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
-execute with Root-level privileges for calls that have been approved by the Fellowship.
+execute with Root-level privileges for calls that have been approved by the Fellowship. (At the moment
+only fellows level 3 and above can vote to whitelist calls).
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet
