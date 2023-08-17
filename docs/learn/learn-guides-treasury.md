@@ -113,9 +113,9 @@ the end of the page to click on the referenda with the decision depoit and claim
 
 ## Requesting Tipps from the Treasury
 
-To request a tipp funded by the treasury you can follow the above steps for
+To request a tip funded by the treasury, you can follow the above steps for
 [creating a treasury proposal](#creating-a-treasury-proposal) but instead of submitting the proposal
-to the `32 / Small Spender` track you will need to submit it to the `30 / Small Tipper` or
+to the `32 / Small Spender` track, you will need to submit it to the `30 / Small Tipper` or
 `31 / Big Tipper` tracks depending on the number of tokens to be requested.
 
 Briefly, you will need to:
