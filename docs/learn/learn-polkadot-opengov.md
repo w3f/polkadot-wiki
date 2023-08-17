@@ -442,6 +442,20 @@ days. For additional information regarding the timeline of governance events, ch
 governance section on the
 {{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
+:::info do votes stack?
+
+You can use the same number of tokens to vote on different referenda. Votes with conviction do not
+stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
+and C with 2x conviction you would have 10 votes on all those referenda and 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
+(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+countdown starting when the last referendum you voted on ends (assuming you are on the winning
+side). If you voted with conviction on referendum and then a week later voted on another one with
+the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+extended by a week (always assuming you are on the winning side).
+
+:::
+
 :::info Staked tokens can be used in governance
 
 While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
