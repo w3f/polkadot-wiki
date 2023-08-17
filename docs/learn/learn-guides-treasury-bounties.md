@@ -6,3 +6,5 @@ description: Advanced How-to Guides for Creating Bounties
 keyword: [treasury, bounties, guides]
 slug: ../learn-guides-treasury-bounties
 ---
+
+## How to Submit a Bounty Proposal
