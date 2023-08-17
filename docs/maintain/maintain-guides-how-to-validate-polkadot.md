@@ -180,11 +180,16 @@ If it is not enabled, please see the
 if you would like to build Linux with landlock enabled.
 
 ### Installing the Polkadot binaries
+
 :::info Multiple Validator Binaries
 
-In addition to the `polkadot` binary, recent changes have separated out functionality into two additional needed binaries, `polkadot-prepare-worker`, and `polkadot-execute-worker`.  All three binaries are needed to properly run a validator node. More context on these changes can be found [here](https://github.com/paritytech/polkadot/pull/7337)
+In addition to the `polkadot` binary, recent changes have separated out functionality into two
+additional needed binaries, `polkadot-prepare-worker`, and `polkadot-execute-worker`. All three
+binaries are needed to properly run a validator node. More context on these changes can be found
+[here](https://github.com/paritytech/polkadot/pull/7337)
 
 :::
+
 #### Installation from official releases
 
 The official binaries can be downloaded from the
