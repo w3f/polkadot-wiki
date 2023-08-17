@@ -21,7 +21,7 @@ provided.
 
 ### Announcing the Proposal
 
-To minimize storage on chain, proposals don't contain contextual information. When a user submits a
+To minimize storage on-chain, proposals don't contain contextual information. When a user submits a
 proposal, they will need to find an off-chain way to explain the proposal:
 
 - Many community members participate in discussion in the
