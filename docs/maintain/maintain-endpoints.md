@@ -33,7 +33,6 @@ tables below list these endpoints.
 | Rococo  | wss://rococo-rpc.polkadot.io  |
 | Wococo  | wss://wococo-rpc.polkadot.io  |
 
-
 #### Example usage with Polkadot-JS API
 
 To connect to the Parity node, use the endpoint in your JavaScript apps like so:
