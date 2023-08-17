@@ -111,7 +111,7 @@ Governance > Preimages and click on unnote button shown on the preimage you subm
 claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and scroll down to
 the end of the page to click on the referenda with the decision depoit and claim it.
 
-## Requesting Tipps from the Treasury
+## Requesting Tips from the Treasury
 
 To request a tip funded by the treasury, you can follow the above steps for
 [creating a treasury proposal](#creating-a-treasury-proposal) but instead of submitting the proposal
