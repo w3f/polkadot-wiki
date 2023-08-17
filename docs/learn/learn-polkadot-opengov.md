@@ -444,16 +444,15 @@ governance section on the
 
 :::info do votes stack?
 
-You can simultaneously use the same number of tokens to vote on different referendums. The tokens
-will be locked up only for the longest conviction period. If you had 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and voted on Referenda A, B and C with 2x
-conviction you would only have 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up
-for the 2x conviction period, with unlocking countdown starting when the last referendum you voted
-on ends, a and you are on the winning side.
-
-If you vote with a 6x conviction on Referendum A, and then a week later vote on Referendum B with 6x
-conviction, then the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
-extended by a week assuming you are on the winning side.
+You can use the same number of tokens to vote on different referenda. Votes with conviction do not
+stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
+and C with 2x conviction you would have 10 votes on all those referenda and 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
+(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+countdown starting when the last referendum you voted on ends (assuming you are on the winning
+side). If you voted with conviction on referendum and then a week later voted on another one with
+the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+extended by a week (always assuming you are on the winning side).
 
 :::
 
