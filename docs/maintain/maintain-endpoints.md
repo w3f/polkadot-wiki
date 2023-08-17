@@ -31,6 +31,8 @@ tables below list these endpoints.
 | ------- | ----------------------------- |
 | Westend | wss://westend-rpc.polkadot.io |
 | Rococo  | wss://rococo-rpc.polkadot.io  |
+| Wococo  | wss://wococo-rpc.polkadot.io  |
+
 
 #### Example usage with Polkadot-JS API
 
