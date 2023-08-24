@@ -144,6 +144,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Oracle | [DIA WASM Oracle](https://github.com/diadata-org/dia-wasm-oracle) | |
 | Spam Protection | [Prosopo](https://github.com/prosopo-io/integration) ⚪|                                    |
 | Tooling         | [OpenBrush](https://github.com/Brushfam/openbrush-contracts) 🟢|                                    |
+| Governance         | [Abax Governance](https://github.com/AbaxFinance/Governance) |                                    |
 | Other           | [ink-test-contracts](https://github.com/AstarNetwork/ink-test-contracts), [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) ⚪, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) ⚪, [OCEX](https://github.com/bsn-si/ocex-cli) 🟢, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) ⚪, [MangoSale](https://github.com/Mangoboxlabs/MangoSaleV2) 🟢, [ArtZero](https://github.com/ArtZero-io/Contracts) ⚪, [OpenPayroll](https://github.com/polkadrys/openPayroll) 🟢|                                    |
 
 ### Chains and Pallets
