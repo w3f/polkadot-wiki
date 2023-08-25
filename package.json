@@ -69,7 +69,7 @@
     "@algolia/client-search": "^4.19.1",
     "@apollo/client": "^3.8.1",
     "@docusaurus/theme-mermaid": "^2.4.1",
-    "chart.js": "^4.3.3",
+    "chart.js": "^4.4.0",
     "crowdin-cli": "^0.3.0",
     "graphql": "^16.8.0",
     "graphql-ws": "^5.13.1",
