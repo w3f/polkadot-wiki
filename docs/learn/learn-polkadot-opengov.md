@@ -196,6 +196,9 @@ with
 which has a low lead-time and Approval/Support curves with slightly sharper reductions in their
 thresholds for passing, given that it is invoked with a sense of urgency.
 
+For more information about how to cancel a referendum see the
+[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
+
 :::info Blacklisting
 
 Blacklisting referenda in Polkadot OpenGov is
@@ -256,7 +259,7 @@ Until they are in the lead-in period, proposals remain undecided. Once the crite
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
 the outcome.
 
-In (2), the proposal enters the **Deciding Period** where votes can be cast. For a proposal to be
+In (2), the proposal enters the **Decision Period** where votes can be cast. For a proposal to be
 approved, votes must satisfy the approval and support criteria for at least the **Confirmation
 Period**; otherwise, the proposal is automatically rejected. A rejected proposal can be resubmitted
 anytime and as many times as needed.
@@ -264,7 +267,7 @@ anytime and as many times as needed.
 In (3), approved proposals will enter the **Enactment Period**, after which proposed changes will be
 executed.
 
-Note how the length of the lead-in, deciding, confirmation, and enactment periods vary depending on
+Note how the length of the lead-in, decision, confirmation, and enactment periods vary depending on
 the origin. Root origin has more extended periods than the other origins. Also, the number of
 referenda within each track differs, with the Root origin track only accepting one. proposal at a
 time (see below).
@@ -275,7 +278,7 @@ This directly affects the number of proposals that can be voted on and executed 
 Continuing the comparison between Root and Small Tipper, Small Tipper will allow many proposals on
 its track to be executed simultaneously. In contrast, Root will allow only one proposal in its
 track. Once the track capacity is filled, additional proposals in the lead-in period will queue
-until place is available to enter the deciding period.
+until place is available to enter the decision period.
 
 ### Origins and Tracks
 
@@ -302,16 +305,15 @@ include:
 - **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
   the Decision Period. The approval % is the portion of _aye_ votes (adjusted for conviction) over
   the total votes (_aye_, _nay_, and _abstained_).
-- **Support Curve**: the curve describing the minimum % of all votes as a function of time within
-  the Decision Period. The support % is defined as the portion of all votes without conviction (i.e.
-  _aye_, _nay_ and _abstained_) over the total possible amount of votes in the system. Support is a
-  measure of turnout.
+- **Support Curve**: the curve describing the minimum % of all votes in support of a proposal as a
+  function of time within the Decision Period. The support % is defined as the portion of all votes
+  (_aye_ and _abstained_) without conviction over the total possible amount of votes in the system
+  (i.e. the total issuance).
 
 For example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
 implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
-therefore different Origins for these two actions are needed in which different deposits, turnouts
-(i.e. support), approvals, and a minimum [enactment](#enactment) periods will be predetermined on
-the pallet.
+therefore different Origins for these two actions are needed in which different deposits, support,
+approval, and a minimum [enactment](#enactment) periods will be predetermined on the pallet.
 
 For detailed information about origin and tracks, and parameter values in Kusama, see
 [this page](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info).
@@ -325,7 +327,7 @@ in Governance V1 has been replaced with the **Approval and Support system**.
 
 :::
 
-![opengov-approval-support](../assets/opengov-approval-support.png)
+![opengov-curves-pass](../assets/opengov-curves-pass.png)
 
 The figure above provides a summary view of how the approval and support system works during the
 Decision Period.
@@ -334,27 +336,56 @@ Once the proposal exits the Lead-in Period and enters the Voting Period, to be a
 satisfy the approval and support criteria for the **Confirmation Period**.
 
 - **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
-  [conviction](#voluntary-locking)) against the total vote-weight (for all approval, rejection, and
-  abstained).
-- **Support** is the total number of votes (ignoring any adjustment for conviction) compared to the
-  total possible votes that could be made in the system.
+  [conviction](#voluntary-locking)) against the total vote-weight (_aye_, _nay_, and _abstained_).
+- **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
+  conviction) compared to the total possible votes that could be made in the system. In case of
+  _split_ votes, only _aye_ and _abstain_ will count.
 
-The figure shows that even if the approval criteria are satisfied (i.e. % approval is greater than
-the approval curve), the proposal only enters the confirmation period once the support criteria are
-satisfied (i.e. % support is greater than the support curve). If the referendum meets the criteria
-for the confirmation period, then the proposal is approved and scheduled for enactment. The
-Enactment Period can be specified when the referendum is proposed but is also subject to a minimum
-value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the
-network has ample time to prepare for any changes the proposal may bring.
+:::info Nay votes are not counted towards Support
+
+Support is a measure of voters who turned out either in favor of the referenda and who consciously
+abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_
+votes could push a referendum into confirming state. For example, imagine current approval is high
+(near 100%, way above the approval curve), and current support is just below the support curve. A
+_nay_ could bump support above the support curve but not reduce approval below the approval curve.
+Therefore someone voting against a proposal would make it pass. Hence, a decrease in % of current
+approval through new votes does not directly translate into increasing support because Support needs
+to consider _nay_ votes.
+
+:::
+
+The figure above shows the followings:
+
+- Even if the approval threshold is reached (i.e. % of current approval is greater than the approval
+  curve), the proposal only enters the confirmation period once the support threshold is also
+  reached (i.e. % current support is greater than the underlying support curve).
+- If the referendum meets the criteria for the confirmation period, then the proposal is approved
+  and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
+  but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
+  Enactment Period to ensure the network has ample time to prepare for any changes the proposal may
+  bring.
+- A referendum may exit the confirmation period when the thresholds are no longer met, due to new
+  _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the
+  confirmation period resets. For example, if the confirmation period is 20 minutes and a referendum
+  enters it just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
+- During the decision period, if a referendum fails to meet the approval and support thresholds for
+  the duration of the track-specific confirmation period, it fails and does not go to the enactment
+  period (it may have to be resubmitted, see below).
+- The current approval must be above 50% for a referendum to pass, and the approval curve never goes
+  below 50%.
+
+![opengov-curves-pass](../assets/opengov-curves-nopass.png)
+
+Note that support may not increase monotonically as shown in the figure, as people might switch
+votes.
 
 Different Origins' tracks have different Confirmation Periods and requirements for approval and
 support. For additional details on the various origins and tracks, check out
 [this table](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info). Configuring
 the amount of support and overall approval required for it to pass is now possible. With proposals
-that use less privileged origins, it is far more reasonable to drop the required support (i.e.
-turnout) to a more realistic amount earlier than those which use highly privileged classes such as
-`Root`. Classes with more significance can be made to require higher approval early on, to avoid
-controversy.
+that use less privileged origins, it is far more reasonable to drop the required support to a more
+realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with
+more significance can be made to require higher approval early on, to avoid controversy.
 
 ### Enactment
 
@@ -376,12 +407,89 @@ additionally cast a _abstain_ and _split_ votes.
 [Vote splitting](../maintain/maintain-guides-polkadot-opengov.md#voting-on-referenda) allows voters
 to allocate different votes for _aye_, _nay_, and _abstain_.
 
+:::info Only the last vote counts
+
+Voting a second time replaces your original vote, e.g. voting with 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, means that you are voting with 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, not 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+
+:::
+
 ### Voluntary Locking
 
-:::info Voluntary Locking
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
+locking that allows token holders to increase their voting power by declaring how long they are
+willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
+by the following formula:
 
-Voluntary locking in Polkadot OpenGov is
-[the same as in Governance v1](./learn-governance.md#voluntary-locking).
+```
+votes = tokens * conviction_multiplier
+```
+
+The conviction multiplier increases the vote multiplier by one every time the number of lock periods
+double.
+
+<VLTable />
+
+{{ polkadot: **The table above shows the correct duration values. However, the current values for Polkadot are the same as those for Kusama. This is going to be fixed. For more information, see [this GitHub issue](https://github.com/paritytech/polkadot/issues/7394).** :polkadot }}
+
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
+total), and one lock period equals {{ polkadot: 28 :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
+days. For additional information regarding the timeline of governance events, check out the
+governance section on the
+{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
+
+:::info do votes stack?
+
+You can use the same number of tokens to vote on different referenda. Votes with conviction do not
+stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
+and C with 2x conviction you would have 10 votes on all those referenda and 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
+(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+countdown starting when the last referendum you voted on ends (assuming you are on the winning
+side). If you voted with conviction on referendum and then a week later voted on another one with
+the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+extended by a week (always assuming you are on the winning side).
+
+:::
+
+:::info Staked tokens can be used in governance
+
+While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
+only prohibited from transferring these tokens to another account.
+
+:::
+
+Votes are always "counted" at the same time (at the end of the voting period), no matter for how
+long the tokens are locked.
+
+See below an example that shows how voluntary locking works.
+
+Peter: Votes `No` with
+{{ polkadot: 10 DOT for a 128-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
+=> {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+
+Logan: Votes `Yes` with
+{{ polkadot: 20 DOT for a 4-week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
+{{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+
+Kevin: Votes `Yes` with
+{{ polkadot: 15 DOT for a 8-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
+=> {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+
+Even though combined both Logan and Kevin vote with more
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
+is less than Peter, leading to their voting power counting as less.
+
+:::info Conviction Voting Locks created during Gov 1
+
+Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
+in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
+existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
+Delegations under Governance v1 will need to be re-issued under OpenGov.
 
 :::
 
@@ -411,6 +519,16 @@ Note that if you are voting with conviction, your tokens will have a democracy l
 the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
 
+Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
+after a referendum ends, provided you voted with the winning side. In the case of delegations, the
+unlocking period countdown begins after the account undelegates. There can be different scenarios:
+
+- if the account delegated votes to one delegate, then after undelegating, there will be one
+  unlocking period with length dependent on the conviction multiplier.
+- if the account delegated votes to different delegates using different convictions, then after
+  undelegating those delegates, there will be different unlocking periods with lengths dependent on
+  the conviction multipliers.
+
 :::
 
 Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
@@ -420,8 +538,8 @@ control over the funds of the delegating account: they can vote with a user's vo
 won't be able to transfer your balance, nominate a different set of validators or execute any call
 other than voting on the defined call/s by the user.
 
-With the new delegation features, the goal is to ensure the required turnouts for proposals to be
-enacted are reached while maintaining the anonymity of voters and keeping the overall design
+With the new delegation features, the goal is to ensure the required support for proposals to be
+enacted is reached while maintaining the anonymity of voters and keeping the overall design
 censorship-free.
 
 For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, check out the
@@ -487,7 +605,8 @@ referendum.
 ### Whitelisting
 
 Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
-execute with Root-level privileges for calls that have been approved by the Fellowship.
+execute with Root-level privileges for calls that have been approved by the Fellowship (currently
+only level-three fellows and above can vote for whitelist calls).
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet

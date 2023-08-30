@@ -19,17 +19,17 @@ Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps
 `chill` extrinsic in the
 [staking pallet](https://paritytech.github.io/substrate/master/pallet_staking/pallet/enum.Call.html#variant.chill).
 When an account chooses to chill, it becomes inactive in the next era. The call must be signed by
-the _controller_ account, not the _stash_.
+the _staking proxy_ account, not the _stash_.
 
-:::note Primer on stash and controller accounts
+:::note Primer on stash and staking proxy accounts
 
-If you need a refresher on the different responsibilities of the stash and controller account when
-staking, take a look at the [accounts](../learn/learn-staking.md#accounts) section in the general
-staking guide.
+If you need a refresher on the different responsibilities of the stash and staking proxy account
+when staking, take a look at the [accounts](../learn/learn-staking.md#accounts) section in the
+general staking guide.
 
 :::
 
-![staking](../assets/NPoS/staking-keys_stash_controller.png)
+![staking](../assets/NPoS/staking-keys-stash-proxy.png)
 
 ## Consideration for Staking Election
 

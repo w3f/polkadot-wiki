@@ -63,6 +63,14 @@ in the given order.
 A collection of data, such as transactions, that together indicate a state transition of the
 blockchain.
 
+## Blockspace
+
+[Blockspace](https://polkadot.network/blog/blockspace-blockspace-ecosystems-how-polkadot-is-unlocking-the-full-potential-of-web3)
+is the capacity of a blockchain to finalize and commit operations. It represents a blockchain's
+security, computing, and storage capability as an end product. Blockspace produced by different
+blockchains can vary in quality, availability, and flexibility. Polkadot has a
+[blockspace-centric architecture](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/).
+
 ## Block Explorer
 
 An application that allows a user to explore the different blocks on a blockchain.
@@ -621,8 +629,7 @@ Validators can only join or exit the validator set at a session change.
 
 ## Session Certificate
 
-A message containing a signature on the concatenation of all the Session keys. Signed by the
-Controller.
+A message containing a signature on the concatenation of all the Session keys.
 
 ## Session Key
 
@@ -669,8 +676,10 @@ describe how tokens can be transferred from one account to another.
 ## Substrate
 
 A modular framework for building blockchains.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using Substrate. Chains
-built with Substrate will be easy to connect as parachains.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
+[Substrate](https://substrate.io/). Chains built with Substrate will be easy to connect as
+parachains. For developers, see the
+[Substrate GitHub repository](https://github.com/paritytech/substrate).
 
 ## System Parachains
 

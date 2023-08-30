@@ -98,10 +98,10 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-governance">  
+    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
       <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
-                  <h5 class="cards-title">Governance</h5>
+                  <h5 class="cards-title">Polkadot OpenGov</h5>
               </div>
     </a>
   </td>

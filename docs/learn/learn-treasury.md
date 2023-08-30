@@ -1,16 +1,22 @@
 ---
 id: learn-treasury
-title: Treasury
-sidebar_label: Treasury
-description: Polkadot's On-chain Treasury.
+title: Governance v1 Treasury
+sidebar_label: Gov1 Treasury
+description: The Polkadot's On-chain Treasury during Gov1.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ kusama: **Polkadot OpenGov is live on Kusama and all treasury proposals need to be submitted through the respective
-[OpenGov tracks.](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info)** :kusama }}
+:::info Use OpenGov to access treasury funds
+
+Governance v1 is deprecated. To access
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury funds use
+[OpenGov](./learn-polkadot-opengov.md). For more information about OpenGov Treasury see the
+[dedicated wiki page](./learn-polkadot-opengov-treasury.md).
+
+:::
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
@@ -78,90 +84,6 @@ The Treasury is funded from different sources:
 4. Parathreads: [Parathreads](learn-parathreads.md) participate in a per-block auction for block
    inclusion. Part of this bid goes to the validator that accepts the block and the remainder goes
    to the Treasury.
-
-## Creating a Treasury Proposal
-
-{{ kusama: **Legacy Instructions below will be removed when Governance V1 is completely removed from Kusama.
-Check the instructions on
-[how to submit a proposal through Polkadot OpenGov](../maintain/maintain-guides-polkadot-opengov.md#create-a-referenda-proposal-using-polkadot-js-ui).** :kusama }}
-
-{{ kusama: **Your proposal should address a problem, outline a goal, give a detailed account of how you will
-reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
-the tasks to be completed so fees can be evaluated and milestones can be followed. You can check the
-[guidelines for a successful proposal](https://ipfs.io/ipfs/QmXHwouq6dfjC3AqkYbwJe92pTQhrWgJxLAcffoPtvSni6/kusama_treasury_project_propsal.pdf)
-and fill out the Treasury proposal template provided for Kusama.** :kusama }}
-
-The proposer has to deposit a minimum of
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
-or 5% of the requested amount with a maximum cap of
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
-as an anti-spam measure. If the treasury proposal does not pass due to lack of votes from the
-council members, the proposal goes back to the waiting queue and the deposit amount will stay
-locked. If the treasury proposal passes successfully, the deposit amount is refunded. If the
-proposal is explicitly rejected by the council through "Nay" votes, then the deposit amount is
-burned.
-
-These values are subject to [governance](learn-governance.md) so they may change in the future.
-
-Please note that there is no way for a user to revoke a treasury proposal after it has been
-submitted. The Council will either accept or reject the proposal, and if the proposal is rejected,
-the bonded funds are burned.
-
-### Announcing the Proposal
-
-To minimize storage on chain, proposals don't contain contextual information. When a user submits a
-proposal, they will probably need to find an off-chain way to explain the proposal. Most discussion
-takes place on the following platforms:
-
-- Many community members participate in discussion in the
-  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-  {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
-  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
-  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
-- The [Polkassembly](https://polkassembly.io) and [SubSquare](https://www.subsquare.io/) discussion
-  platforms automatically read proposals from the chain, turning them into discussion threads and
-  allow users to log in with their Web3 address. It also offers a sentiment gauge poll to get a feel
-  for a proposal before committing to a vote.
-
-Spreading the word about the proposal's explanation to the community is ultimately up to the
-proposer.
-
-### Creating the Proposal
-
-One way to create the proposal is to use the Polkadot-JS Apps
-[website](https://polkadot.js.org/apps). From the website, use either the
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and select the Treasury pallet, then
-`proposeSpend` and enter the desired amount and recipient, or use the
-[Treasury tab](https://polkadot.js.org/apps/#/treasury) and its dedicated Submit Proposal button:
-
-![A proposal being created](../assets/treasury/submit-new.png)
-
-The system will automatically take the required deposit, picking the higher of the two values
-mentioned [above](#creating-a-treasury-proposal).
-
-Once created, your proposal will become visible in the Treasury screen and the Council can start
-voting on it.
-
-![Pending proposals](../assets/treasury/proposals.png)
-
-Remember that the proposal has no metadata, so it's up to the proposer to create a description and
-purpose that the Council could study and base their votes on.
-
-At this point, a Council member can create a motion to accept or to reject the treasury proposal. It
-is possible that one motion to accept and another motion to reject are both created. The proportions
-to accept and reject Council proposals vary between accept or reject, and possibly depend on which
-network the Treasury is implemented.
-
-The threshold for accepting a treasury proposal is at least three-fifths of the Council. On the
-other hand, the threshold for rejecting a proposal is at least one-half of the Council.
-
-![Motions in action](../assets/treasury/motion.png)
-
-You will notice the "spend period" at the top of the Treasury UI.
-
-![Proposal Spend Period](../assets/treasury/spend-period.png)
 
 ## Tipping
 

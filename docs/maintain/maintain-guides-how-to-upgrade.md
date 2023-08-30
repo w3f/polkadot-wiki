@@ -35,8 +35,8 @@ Upgrade or downgrade accordingly.
 ### Session Keys
 
 Session keys are stored in the client and used to sign validator operations. They are what link your
-validator node to your Controller account. If you change them within a session you will have to wait
-for the current session to finish and a further two sessions to elapse before they are applied.
+validator node to your staking proxy. If you change them within a session you will have to wait for
+the current session to finish and a further two sessions to elapse before they are applied.
 
 [More info about keys in Polkadot.](../learn/learn-cryptography.md)
 
@@ -61,7 +61,7 @@ original server that is in the active set will be referred to as `Validator A`.
 
 1. Start a second node. Once it is synced, use the `--validator` flag. This is now "Validator B."
 2. Generate Session keys for **Validator B**.
-3. Submit a `set_key` extrinsic from your Controller account with the session key generated from
+3. Submit a `set_key` extrinsic from your staking proxy with the session key generated from
    **Validator B**.
 4. Take note of the Session that this extrinsic was executed in.
 5. Allow the current session to elapse and then wait for two full sessions.
@@ -81,7 +81,7 @@ When you are ready to restore **Validator A**:
 1. Start **Validator A**, sync the database and ensure that it is operating with the `--validator`
    flag.
 2. Generate new Session keys for **Validator A**.
-3. Submit a `set_key` extrinsic from your Controller account with the session key generated from
+3. Submit a `set_key` extrinsic from your staking proxy with the session key generated from
    **Validator A**.
 4. Take note of the Session that this extrinsic was executed in.
 

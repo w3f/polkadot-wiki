@@ -100,6 +100,22 @@ info about assets and asset balances on the Asset Hub.
 - Please refer to [docs](https://paritytech.github.io/substrate-api-sidecar/dist/) for full usage
   information. Details on options like how to make a historical query are not included here.
 
+Here are the available public instances:
+
+- [Sidecar connected to Polkadot Asset Hub](https://polkadot-asset-hub-public-sidecar.parity-chains.parity.io)
+  and
+- [Sidecar connected to Kusama Asset Hub](https://kusama-asset-hub-public-sidecar.parity-chains.parity.io)
+
+The purpose of these instances is to allow anyone to check and get a quick overview of the info that
+the asset-related endpoints provide.
+
+:::caution
+
+These instances should only be used for ad-hoc checks or tests and not for production, heavy testing
+or any other critical purpose.
+
+:::
+
 ### Tx Wrapper Polkadot
 
 TxWrapper Polkadot is a library designed to facilitate transaction construction and signing in
