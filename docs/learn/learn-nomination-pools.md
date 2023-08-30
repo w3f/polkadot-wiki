@@ -247,9 +247,12 @@ commissions through the [Polkadot Staking Dashboard](../general/staking-dashboar
 Three methods can be used when setting the pool commission:
 
 - **Commission Rate** (`nominationPools.setCommission` extrinsic): the start or new commission rate
-  (`newCommission` parameter) that can be set between 0% and the Max Commission (decided through
-  [governance referendum](./learn-polkadot-opengov.md)). You will need to specify an Input Payee
-  Account, i.e. the account that will receive the commission.
+  (`newCommission` parameter) that can be set between 0% and
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/> :polkadot }}%
+  (decided through [governance referendum](./learn-polkadot-opengov.md)) via the
+  [`globalMaxCommission`](https://paritytech.github.io/substrate/master/pallet_nomination_pools/pallet/type.GlobalMaxCommission.html)
+  parameter. You will need to specify an Input Payee Account, i.e. the account that will receive the
+  commission.
 - **Max Commission** (`nominationPools.setCommissionMax` extrinsic): the maximum commission
   (`maxCommission` parameter) the pool will apply to its members (between 0% and Max Commission).
   Note that once set, **the pool admin can only lower it**.
