@@ -60,7 +60,7 @@ but an account management tool. It allows you to create accounts and also import
 existing accounts and restore accounts (given you have the required information to restore them).
 
 The extension is a robust key storage tool, i.e. even if you clear the cache of your browser your
-accounts will be retained. Also, the extension recognizes websites that have been flagged for malicious activity. 
+accounts will be retained.  The extension will recognize any websites that have been flagged for malicious activity. 
 For additional security, the extension will always ask if you want a specific website to access the
 account information on it.
 
