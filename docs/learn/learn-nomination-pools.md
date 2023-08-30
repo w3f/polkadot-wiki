@@ -240,14 +240,6 @@ balance.
 
 ### Pool Commissions
 
-:::info Live on Kusama
-
-Pool commissions are currently live on Kusama. On Polkadot
-[Referendum 55](https://polkadot.polkassembly.io/referenda/55) will enable a `globalMaxCommission`
-of 10% on Polkadot and enable pool commission.
-
-:::
-
 As the pool root role, you can set pool commissions that will be applied to the staking rewards paid
 out to the pool's system account before rewards are allocated for the pool members. You can set pool
 commissions through the [Polkadot Staking Dashboard](../general/staking-dashboard.md#pools).
