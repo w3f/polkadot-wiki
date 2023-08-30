@@ -7,36 +7,41 @@ keywords: [parachains, slots, backing, parablock]
 slug: ../learn-async
 ---
 
-Asynchronous backing is a feature that introduces pipelining to parachain block validation. It is
-analogous to the logical pipelining of processor instruction in "traditional" architectures, where
-some instructions may be executed before others are complete. Instructions may also be executed in
-parallel, enabling multiple parts of the processor to be working on potentially different
-instructions at the same time.
+Asynchronous backing is a feature that introduces
+[pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
+generation and validation process. It is analogous to the logical pipelining of processor
+instruction in "traditional" architectures, where some instructions may be executed before others
+are complete. Instructions may also be executed in parallel, enabling multiple parts of the
+processor to be working on potentially different instructions at the same time.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
 Polkadot, it aims to overall increase the throughput of the entire network.
 
 :::info
 
-In order to realize what this upgrade changes, it is recommended to be familiar with the stages of a
-parablock, which you may [read here](./learn-parachains-protocol.md).
+In order to realize which exact processes this upgrade improves, it is recommended to be familiar
+with the stages of a parablock, which you may [read here](./learn-parachains-protocol.md).
 
 :::
 
-Asynchronous backing aims to add this logical pipeline to the parablock generation, backing, and
-inclusion processes. A parablock may be at different stages, but multiple blocks should be able to
-process simultaneously (in parallel) if needed. Most notably, block candidate generation and backing
+Asynchronous backing adds this logical pipeline to the parablock
+[**generation**](https://wiki.polkadot.network/docs/learn-parachains-protocol#collators),
+[**backing**](https://wiki.polkadot.network/docs/learn-parachains-protocol#parachain-phase), and
+[**inclusion**](https://wiki.polkadot.network/docs/learn-parachains-protocol#inclusion-pipeline)
+processes. A parablock may be at different stages, but multiple blocks should be able to process
+simultaneously (in parallel) if needed. Most notably, block candidate generation and backing
 processes can occur while their ancestors are included on the relay chain.
 
-This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include 5-10x more
-transactions/data while speeding up parachain block times from 12 to 6 seconds. In short,
-asynchronous backing will be 10-20x the blockspace provided to Polkadot parachains.
+This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
+estimated ~3-5x more transactions/data while speeding up parachain block times from 12 to 6 seconds.
+In short, asynchronous backing will enable for an estimated ~6-10x more blockspace to be to provided
+to Polkadot parachains.
 
 It has three overarching goals:
 
 1. Decrease parachain blocks (parablock) validation time to **6 seconds** from **12 seconds**
-2. Increase the amount of usable blockspace by a factor of 5-10, meaning more state changes are
-   allowed per relay chain block.
+2. Increase the amount of usable blockspace as per above, meaning more state changes are allowed per
+   relay chain block.
 3. Allow for parablocks to be re-proposed to the network if they are not included initially on the
    first attempt.
 
