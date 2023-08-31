@@ -571,8 +571,8 @@ algorithms (as of now, sequential Phragmén or PhragMMS, subject to change if im
 introduced) to produce results, which are then sent as a transaction to the relay chain via a normal
 signed extrinsic. The transaction requires a bond and a transaction fee. The best solution is
 rewarded, which the least covers the transaction fee, and the bond is returned to the account.
-[The bond and the fee](learn-staking-miner#deposit-and-reward-mechanics) are lost if the solution is
-invalid.
+[The bond and the fee](./learn-staking-advanced.md#deposit-and-reward-mechanics) are lost if the
+solution is invalid.
 
 Staking miner uses a pallet called `pallet_election_provider_multi_phase` and can only produce
 solutions during the
