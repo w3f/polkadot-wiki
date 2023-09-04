@@ -379,8 +379,8 @@ module.exports = {
                 slug: '/learn-xcm-docs',
               },
               items: [
-                "learn/xcm-docs/learn-xcm-docs-summary",
-                "learn/xcm-docs/learn-xcm-docs-info"
+                "learn/xcm-docs/src/learn-xcm-docs-summary",
+                "learn/xcm-docs/src/learn-xcm-docs-info"
               ],
             },
           ],
