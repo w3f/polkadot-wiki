@@ -380,7 +380,7 @@ module.exports = {
               },
               items: [
                 "learn/xcm-docs/learn-xcm-docs-summary",
-                "learn/xcm-docs/learn-xcm-docs-info"
+                "learn/xcm-docs/learn-xcm-docs-info",
               ],
             },
           ],
