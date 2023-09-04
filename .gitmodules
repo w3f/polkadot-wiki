@@ -1,0 +1,3 @@
+[submodule "docs/learn/xcm-docs"]
+	path = docs/learn/xcm-docs
+	url = https://github.com/paritytech/xcm-docs
