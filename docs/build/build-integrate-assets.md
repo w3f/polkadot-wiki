@@ -106,8 +106,8 @@ Here are the available public instances:
   and
 - [Sidecar connected to Kusama Asset Hub](https://kusama-asset-hub-public-sidecar.parity-chains.parity.io)
 
-The purpose of these instances is to allow anyone to check and get a quick
-overview of the info that the asset-related endpoints provide.
+The purpose of these instances is to allow anyone to check and get a quick overview of the info that
+the asset-related endpoints provide.
 
 :::caution
 

@@ -182,7 +182,8 @@ maintain the stronger property of single block composability.
 
 ## Parachain Slot Acquisition
 
-There are several ways to allocate parachain slots on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}:
+There are several ways to allocate parachain slots on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}:
 
 - Governance granted parachains, or "system parachains"
 - Auction granted parachains
