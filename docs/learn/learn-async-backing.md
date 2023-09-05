@@ -87,7 +87,7 @@ block.
 
 A particular parablock, `P1`, would **only** be valid for backing at relay chain parent `R1 + 1` and
 subsequently, be included at `R1 + 2` should it be backed successfully. Essentially, a parablock is
-rushing to be backed and included within this two-block window due to the inherent synchrony between
+rushing to be backed and included within this two-block window due to the inherent requirement for synchrony between
 the parachain and relay chain.
 
 ## Asynchronous Backing on Polkadot
