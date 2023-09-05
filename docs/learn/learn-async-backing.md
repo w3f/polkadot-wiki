@@ -53,7 +53,7 @@ provided by an _unincluded segment_ of recent block ancestors.
 **Unincluded segments** are chains of candidate blocks that are not yet included in the relay chain.
 Parablocks can be added to this unincluded segment and no longer have to wait for the latest
 included parent block of the relay chain. The core functionality that asynchronous backing brings is
-the ability to build on these unincluded segments of block ancestors rather than the finalized relay
+the ability to build on these unincluded segments of block ancestors rather than ancestors included in the relay
 chain state.
 
 Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
