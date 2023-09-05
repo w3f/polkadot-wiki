@@ -132,7 +132,7 @@ For more information about blockspace the [this interview](https://youtu.be/e1vI
 Habermeier as well as [this article](https://www.rob.tech/polkadot-blockspace-over-blockchains/) by
 him.
 
-### A Perspective Shift: Upcoming Polkadot Features Development
+### A Perspective Shift: Upcoming Polkadot Features
 
 As with many other projects before Polkadot, at some point in time after achieving the
 initially-planned goals, a perspective shift allows you to understand better what your project is
