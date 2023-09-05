@@ -66,8 +66,7 @@ process during the next block.
 It is important to note two following clarifications:
 
 1. The parablock is not placed on the relay chain in its entirety, but rather the **paraheader**
-2. The relay chain does not validate the entire state of a parachain, but only the state transitions
-   within that block.
+2. The relay chain does not access the entire state of a parachain but only the values that changed during that block and the merkelized hashes of the unchanged values.
 
 :::
 
