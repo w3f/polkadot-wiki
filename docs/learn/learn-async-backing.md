@@ -24,7 +24,7 @@ with the stages of parablock validation, which you may [read here](./learn-parac
 
 :::
 
-Asynchronous backing adds this logical pipeline to the parablock
+Asynchronous backing enables logical pipelining over the parablock 
 [**generation**](https://wiki.polkadot.network/docs/learn-parachains-protocol#collators),
 [**backing**](https://wiki.polkadot.network/docs/learn-parachains-protocol#parachain-phase), and
 [**inclusion**](https://wiki.polkadot.network/docs/learn-parachains-protocol#inclusion-pipeline)
