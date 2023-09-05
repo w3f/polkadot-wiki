@@ -30,7 +30,7 @@ Asynchronous backing enables logical pipelining over the parablock
 [**inclusion**](https://wiki.polkadot.network/docs/learn-parachains-protocol#inclusion-pipeline)
 processes. A parablock may be at different stages, but multiple blocks should be able to process them
 simultaneously (in parallel) if needed. Most notably, parablock N + 1 can be generated and backed while its predecessor, parablock N, is undergoing inclusion on the relay chain.
-processes can occur while their ancestors are included on the relay chain.
+Processes can occur while their ancestors are included on the relay chain.
 
 This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
 estimated ~3-5x more transactions/data while speeding up parachain block times from 12 to 6 seconds.
