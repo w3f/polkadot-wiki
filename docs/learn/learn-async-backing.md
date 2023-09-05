@@ -57,7 +57,7 @@ chain state.
 
 Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
 block, as the parablock anchors itself to it). Each parablock must be generated and go through the
-entire backing process in a single relay block. It then proceeds through availability + inclusion
+entire backing process in a single relay block. It then proceeds to the availability + inclusion
 process during the next block.
 
 :::info
