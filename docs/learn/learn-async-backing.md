@@ -39,7 +39,7 @@ In short, Polkadot with asynchronous backing will deliver an estimated ~6-10x mo
 Asynchronous Backing has three overarching goals:
 
 1. Decrease parachain block (parablock) validation time to **6 seconds** from **12 seconds**
-2. Increase the amount of usable blockspace as per above, meaning more state changes are allowed per
+2. Increase the amount of usable blockspace, allowing more state changes per
    relay chain block.
 3. Allow for parablocks to be re-proposed to the network if they are not included successfully on the
    first attempt.
