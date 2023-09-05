@@ -20,7 +20,7 @@ Polkadot, it aims to overall increase the throughput of the entire network.
 :::info
 
 In order to realize which exact processes this upgrade improves, it is recommended to be familiar
-with the stages of a parablock, which you may [read here](./learn-parachains-protocol.md).
+with the stages of parablock validation, which you may [read here](./learn-parachains-protocol.md).
 
 :::
 
