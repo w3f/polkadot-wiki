@@ -35,7 +35,6 @@ processes can occur while their ancestors are included on the relay chain.
 This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
 estimated ~3-5x more transactions/data while speeding up parachain block times from 12 to 6 seconds.
 In short, Polkadot with asynchronous backing will deliver an estimated ~6-10x more blockspace to its parachains.
-to Polkadot parachains.
 
 Asynchronous Backing has three overarching goals:
 
