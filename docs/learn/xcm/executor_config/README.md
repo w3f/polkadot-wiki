@@ -75,7 +75,7 @@ impl xcm_executor::Config for XcmConfig {
 ```
 
 In the above example, when checking the barrier, we'll first check the TakeWeightCredit type. If it
-fails, we'll go on to check the AllowTopLevelPaidExecutionFrom<Everything> and so on until one of
+fails, we'll go on to check the `AllowTopLevelPaidExecutionFrom<Everything>` and so on until one of
 them gives a positive. If they all fail, a `Barrier` error is thrown.
 
 ## Config Items

@@ -33,7 +33,7 @@ the following sections we will go over each instruction.
 WithdrawAsset((Here, amount).into())
 ```
 
-The first instruction takes as an input the [MultiAsset]() that should be withdrawn. The MultiAsset
+The first instruction takes as an input the MultiAsset that should be withdrawn. The MultiAsset
 describes the native parachain token with the `Here` keyword. The `amount` parameter is the number
 of tokens that are transferred. The withdrawal account depends on the origin of the message. In this
 example the origin of the message is Alice. The WithdrawAsset instruction moves `amount` number of

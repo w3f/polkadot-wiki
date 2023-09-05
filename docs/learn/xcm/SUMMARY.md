@@ -1,3 +1,9 @@
+---
+id: learn-xcm-docs-summary
+sidebar_label: XCM Docs Summary
+slug: ../learn-xcm-docs-summary
+---
+
 # Summary
 
 [XCM: Cross-Consensus Messaging](xcm.md)

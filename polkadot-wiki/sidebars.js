@@ -368,6 +368,21 @@ module.exports = {
                 'learn/learn-xcm-instructions',
               ],
             },
+            {
+              type: "category",
+              label: "XCM Documentation",
+              description: "In-depth documentation about XCM.",
+              link: {
+                type: 'generated-index',
+                title: "XCM Documentation",
+                description: "In-depth documentation about XCM.",
+                slug: '/learn-xcm-docs-index',
+              },
+              items: [
+                "learn/xcm/learn-xcm-docs-summary",
+                "learn/xcm/learn-xcm-docs-info",
+              ],
+            },
           ],
         },
         {

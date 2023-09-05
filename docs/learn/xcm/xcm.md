@@ -1,3 +1,9 @@
+---
+id: learn-xcm-docs-info
+sidebar_label: XCM Docs Info
+slug: ../learn-xcm-docs-info
+---
+
 # XCM: Cross-Consensus Messaging
 
 Welcome to the Cross-Consensus Messaging (XCM) documentation! XCM is a **language** for
