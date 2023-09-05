@@ -39,7 +39,7 @@ to Polkadot parachains.
 
 It has three overarching goals:
 
-1. Decrease parachain blocks (parablock) validation time to **6 seconds** from **12 seconds**
+1. Decrease parachain block (parablock) validation time to **6 seconds** from **12 seconds**
 2. Increase the amount of usable blockspace as per above, meaning more state changes are allowed per
    relay chain block.
 3. Allow for parablocks to be re-proposed to the network if they are not included successfully on the
