@@ -45,7 +45,7 @@ Asynchronous Backing has three overarching goals:
    first attempt.
 
 Asynchronous backing provides a form of **contextual execution**, which allows for more time for
-parachain collators to fit more transactions and ready block candidates for backing and inclusion.
+parachain collators to fit more transactions and prepare block candidates for backing and inclusion.
 **Contextual execution** refers to how a parablock can begin being built earlier using the context
 provided by an _unincluded segment_ of recent block ancestors.
 
