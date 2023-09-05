@@ -15,7 +15,7 @@ are complete. Instructions may also be executed in parallel, enabling multiple p
 processor to be working on potentially different instructions at the same time.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
-Polkadot, it aims to overall increase the throughput of the entire network.
+Polkadot, it aims to increase the throughput of the entire network.
 
 :::info
 
