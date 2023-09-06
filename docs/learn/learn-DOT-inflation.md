@@ -13,7 +13,8 @@ import RPC from "./../../components/RPC-Connection";
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, inflation is
 {{ polkadot: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), :polkadot }}
 {{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), :kusama }}
-which is distributed as staking rewards based on the amount staked vs. ideal staking rate, and the remainder goes to the treasury.
+which is distributed as staking rewards based on the amount staked vs. ideal staking rate, and the
+remainder goes to the treasury.
 
 :::info
 
@@ -26,11 +27,19 @@ The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama 
 
 :::
 
-It is essential to understand that the primary objective of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} inflation is to incentivize network participants through Nominated Proof of Staking (NPoS) and to grow
-the network through funding the on-chain treasury. There is an opportunity cost of keeping the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens idle with the current inflation model as the tokens get diluted over time. Economics and game theory suggest that setting an ideal inflation rate is essential for incentivizing the network participants as well as the growth of the network, and any deviation from it can have negative effects.  Reducing the inflation rate could limit growth while
-increasing the inflation rate could break the incentive model of the token. Hence,
-**token inflation rate is not a forever fixed value, and inflation can be updated in the future through [on-chain governance](./learn-polkadot-opengov.md)** based on thorough tokenomics research.
-
+It is essential to understand that the primary objective of
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} inflation is to incentivize network
+participants through
+[Nominated Proof of Stake (NPoS)](./learn-consensus.md#nominated-proof-of-stake) and to grow the
+network through funding the on-chain treasury. There is an opportunity cost of keeping the
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens idle with the current inflation model
+as the tokens get diluted over time. Economics and game theory suggest that setting an ideal
+inflation rate is essential for incentivizing the network participants as well as the growth of the
+network, and any deviation from it can have negative effects. Reducing the inflation rate could
+limit growth while increasing the inflation rate could break the incentive model of the token.
+Hence, **token inflation rate is not a forever fixed value, and inflation can be updated in the
+future through [on-chain governance](./learn-polkadot-opengov.md)** based on thorough tokenomics
+research.
 
 ## Inflation Model
 
