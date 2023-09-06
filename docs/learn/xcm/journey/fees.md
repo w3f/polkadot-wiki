@@ -1,6 +1,15 @@
+---
+id: learn-xcm-docs-journey-fees
+title: Fee Handling
+sidebar_label: Fee Handling
+description: Fee Handling.
+keywords: [xcm, cross-consensus messaging, transfers, fees]
+slug: ../journey-fees
+---
+
 # Fee handling
 
-Like we learnt in the [weight and fees](../../fundamentals/weight_and_fees.md) chapter, the XCM
+Like we learnt in the [weight and fees](../fundamentals/weight_and_fees.md) chapter, the XCM
 operations our messages perform need to be paid for. To accomplish this, we'll make use of different
 instructions in this chapter.
 
@@ -16,7 +25,7 @@ instruction. There's a predefined [barrier](../../executor_config/index.md#barri
 `AllowTopLevelPaidExecutionFrom<T>`, that explicitly drops messages that do not include this
 instruction.
 
-Let's grab the teleport message from the [transfers chapter](../transfers/teleports.md) and add fee
+Let's grab the teleport message from the [transfers chapter](./transfers/teleports.md) and add fee
 payment.
 
 ```rust,noplayground
@@ -41,7 +50,7 @@ let message = Xcm(vec![
 ```
 
 `fee_estimation` and `weight_estimation` are values that can be calculated from the configuration of
-the receiving chain. As mentioned in the [weight and fees](../../fundamentals/weight_and_fees.md)
+the receiving chain. As mentioned in the [weight and fees](../fundamentals/weight_and_fees.md)
 chapter of the fundamentals, XCMs instructions are usually assigned weights separately, so, in order
 to estimate the weight, you need to estimate the weight of every instruction and add them together.
 By using `WeightLimit::Limited()`, you guarantee the message will error if it tries to use more
@@ -99,7 +108,7 @@ Refunds any surplus weight previously bought with `BuyExecution`. This is useful
   get executed
 - When you set an error handler, buy weight for it, but in the end there's no error so it doesn't
   get called
-- When you use the [`Transact` instruction](../transact.md) and the call takes less weight than
+- When you use the [`Transact` instruction](./transact.md) and the call takes less weight than
   expected
 
 ### Example

@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-queries
+title: Queries
+sidebar_label: Queries
+description: Queries
+keywords: [xcm, cross-consensus messaging, queries]
+slug: ../journey-queries
+---
+
 # Queries
 
 XCM contains query instructions that can be used to query information from another consensus system:

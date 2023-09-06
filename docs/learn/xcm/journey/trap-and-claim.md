@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-assets
+title: Trap and Claim Assets
+sidebar_label: Trap and Claim Assets
+description: Trap and Claim Assets.
+keywords: [xcm, cross-consensus messaging, trap, claim, assets]
+slug: ../journey-assets
+---
+
 # Trapping and Claiming assets.
 
 When we reach the end of the execution of the XCM there can still be assets in the Holding Register.

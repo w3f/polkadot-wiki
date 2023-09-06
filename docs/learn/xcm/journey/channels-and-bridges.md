@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-channels
+title: Channels and Bridges
+sidebar_label: Channels and Bridges
+description: Channels and Bridges.
+keywords: [xcm, cross-consensus messaging, channels, bridges]
+slug: ../journey-channels
+---
+
 # Channels
 
 XCM has instructions that aid in the establishment of a HRMP channel between parachains. HRMP

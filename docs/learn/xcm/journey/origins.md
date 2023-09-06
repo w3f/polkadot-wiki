@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-origin
+title: Origin Manipulation
+sidebar_label: Origin Manipulation
+description: Origin Manipulation.
+keywords: [xcm, cross-consensus messaging, origin]
+slug: ../journey-origin
+---
+
 # Origin manipulation
 
 An XCVM contains contextual information while executing XCM instructions. It uses the `XcmContext`

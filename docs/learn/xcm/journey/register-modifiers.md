@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-register
+title: Register Modifiers
+sidebar_label: More Register Modifiers
+description: Register Modifiers.
+keywords: [xcm, cross-consensus messaging, register]
+slug: ../journey-register
+---
+
 # Register Modifiers
 
 In the previous chapters we already saw instructions that modified the XCVM registers. This chapter

@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-version
+title: XCM Version
+sidebar_label: XCM Version
+description: XCM Version.
+keywords: [xcm, cross-consensus messaging, version]
+slug: ../journey-version
+---
+
 # Version Subscription
 
 XCM is a versioned messaging format. One version may contain more or different instructions than

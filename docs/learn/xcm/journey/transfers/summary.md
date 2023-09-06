@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-transfers-summary
+title: Transfers
+sidebar_label: Summary
+description: Summary about XCM Transfers.
+keywords: [xcm, cross-consensus messaging, transfers]
+slug: ../transfers-summary
+---
+
 # Transfers
 
 The first feature you'll be interested in when dealing with XCM is being able to transfer assets

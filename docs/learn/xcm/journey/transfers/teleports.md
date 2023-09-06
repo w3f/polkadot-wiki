@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-transfers-teleport
+title: Asset Teleportation
+sidebar_label: Asset Teleportation
+description: Asset Teleportation.
+keywords: [xcm, cross-consensus messaging, transfers, teleport]
+slug: ../transfers-teleport
+---
+
 # Asset teleportation
 
 Asset teleportation is the simpler method of the two for sending assets from one chain to another.

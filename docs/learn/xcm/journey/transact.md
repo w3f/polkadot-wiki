@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-transact
+title: Transact
+sidebar_label: "Transact: A General Solution"
+description: "Transact: A General Solution."
+keywords: [xcm, cross-consensus messaging, transact]
+slug: ../journey-transact
+---
+
 # Transact
 
 XCM contains an instruction that allows for the execution of calls (from a `RuntimeCall` in a

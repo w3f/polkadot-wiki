@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-holding
+title: More Holding Modifiers
+sidebar_label: More Holding Modifiers
+description: More Holding Modifiers.
+keywords: [xcm, cross-consensus messaging, transfers, holding]
+slug: ../journey-holding
+---
+
 # Holding Register Modifiers
 
 Most of the XCM instructions alter the Holding Register. We already have seen instructions that

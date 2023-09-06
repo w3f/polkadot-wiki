@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-locks
+title: Locks
+sidebar_label: Locks
+description: Locks.
+keywords: [xcm, cross-consensus messaging, locks]
+slug: ../journey-locks
+---
+
 # Locking
 
 Assets can be locked via XCM, meaning, the transfer or withdrawal of assets can be restricted via

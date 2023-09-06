@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-journey-expectations
+title: Expectations
+sidebar_label: Expectations
+description: Expectations.
+keywords: [xcm, cross-consensus messaging, expectations]
+slug: ../journey-expectations
+---
+
 # Expects
 
 XCM contains instructions to check for specific conditions during the execution of the message.
