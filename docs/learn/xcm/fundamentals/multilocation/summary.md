@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-multilocation-summary
+title: MultiLocation
+sidebar_label: Summary
+description: Learn about XCM fundamentals.
+keywords: [xcm, cross-consensus messaging, multilocation]
+slug: ../multilocation-summary
+---
+
 # MultiLocation
 
 The [MultiLocation](https://paritytech.github.io/polkadot/doc/xcm/v3/struct.MultiLocation.html) type

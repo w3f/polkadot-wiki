@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-multilocation-junctions
+title: Junction(s)
+sidebar_label: Junction(s)
+description: The Junction Type in a MultiLocation Struct.
+keywords: [xcm, cross-consensus messaging, multilocation, junctions]
+slug: ../multilocation-junctions
+---
+
 # Junction(s)
 
 In the section on [MultiLocations](index.html), we looked at the MultiLocation struct. We talked

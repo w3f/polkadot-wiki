@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-fundamentals-multiasset
+title: MultiAsset
+sidebar_label: MultiAsset
+description: The MultiAsset Datatype.
+keywords: [xcm, cross-consensus messaging, multilocation]
+slug: ../fundamentals-multiasset
+---
+
 # MultiAsset
 
 When working with XCM, it is often needed to represent an asset of some sort. This is because

@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-multilocation-example
+title: Example
+sidebar_label: Example
+description: A MultiLocation Example.
+keywords: [xcm, cross-consensus messaging, multilocation]
+slug: ../multilocation-example
+---
+
 # Example
 
 In this example we show different `MultiLocation`s for the system hierarchy in the image below.

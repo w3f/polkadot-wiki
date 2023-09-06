@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-fundamentals-fees
+title: Weight and Fees
+sidebar_label: Weight and Fees
+description: Weight and Fees in XCM.
+keywords: [xcm, cross-consensus messaging, weight, fees]
+slug: ../fundamentals-fees
+---
+
 # Weight and fees
 
 The resources available to a blockchain are limited, so it's important to manage how operations
