@@ -372,59 +372,6 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Polkadot Comparisons",
-          description: "Comparison between Polkadot and other Networks. ",
-          link: {
-            type: 'generated-index',
-            title: "Polkadot Comparisons",
-            description: "Comparison between Polkadot and other Networks. ",
-            slug: '/learn-comparisons-index',
-          },
-          items: [
-            'learn/learn-comparisons-kusama',
-            'learn/learn-comparisons-ethereum-2',
-            'learn/learn-comparisons-cosmos',
-            'learn/learn-comparisons-avalanche',
-            'learn/learn-comparisons',
-            'learn/learn-comparisons-rollups'
-          ],
-        },
-        "learn/learn-video-tutorials",
-        {
-          type: "category",
-          label: "Future Implementations",
-          description: "Implementations that will be deployed on Polkadot.",
-          link: {
-            type: 'generated-index',
-            title: "Future Implementations",
-            description: "Implementations that will be deployed on Polkadot.",
-            slug: '/learn-future-implementations-index',
-          },
-          items: [
-            'learn/learn-spree',
-            "learn/learn-parathreads",
-          ],
-        },
-        {
-          type: "category",
-          label: "Archive",
-          description: "Implementations no longer live on Polkadot.",
-          link: {
-            type: 'generated-index',
-            title: "Archive",
-            description: "Implementations no longer live on Polkadot.",
-            slug: '/learn-archive-index',
-          },
-          items: [
-            "learn/learn-governance",
-            "learn/learn-treasury",
-            "learn/learn-launch",
-            "learn/learn-redenomination",
-            "learn/learn-controller",
-          ],
-        },
-        {
-          type: "category",
           label: "XCM Docs",
           description: "In-depth documentation about Cross-Chain Messaging (XCM) on Polkadot.",
           link: {
@@ -560,6 +507,59 @@ module.exports = {
                 "learn/xcm/reference/learn-xcm-docs-reference-glossary",
               ],
             },
+          ],
+        },
+        {
+          type: "category",
+          label: "Polkadot Comparisons",
+          description: "Comparison between Polkadot and other Networks. ",
+          link: {
+            type: 'generated-index',
+            title: "Polkadot Comparisons",
+            description: "Comparison between Polkadot and other Networks. ",
+            slug: '/learn-comparisons-index',
+          },
+          items: [
+            'learn/learn-comparisons-kusama',
+            'learn/learn-comparisons-ethereum-2',
+            'learn/learn-comparisons-cosmos',
+            'learn/learn-comparisons-avalanche',
+            'learn/learn-comparisons',
+            'learn/learn-comparisons-rollups'
+          ],
+        },
+        "learn/learn-video-tutorials",
+        {
+          type: "category",
+          label: "Future Implementations",
+          description: "Implementations that will be deployed on Polkadot.",
+          link: {
+            type: 'generated-index',
+            title: "Future Implementations",
+            description: "Implementations that will be deployed on Polkadot.",
+            slug: '/learn-future-implementations-index',
+          },
+          items: [
+            'learn/learn-spree',
+            "learn/learn-parathreads",
+          ],
+        },
+        {
+          type: "category",
+          label: "Archive",
+          description: "Implementations no longer live on Polkadot.",
+          link: {
+            type: 'generated-index',
+            title: "Archive",
+            description: "Implementations no longer live on Polkadot.",
+            slug: '/learn-archive-index',
+          },
+          items: [
+            "learn/learn-governance",
+            "learn/learn-treasury",
+            "learn/learn-launch",
+            "learn/learn-redenomination",
+            "learn/learn-controller",
           ],
         },
       ],
