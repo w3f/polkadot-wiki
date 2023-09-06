@@ -494,7 +494,7 @@ module.exports = {
             "learn/xcm/learn-xcm-docs-testing",
             {
               type: "category",
-              label: "Reference",
+              label: "References",
               description: "XCVM Registers and Glossary",
               link: {
                 type: 'generated-index',
