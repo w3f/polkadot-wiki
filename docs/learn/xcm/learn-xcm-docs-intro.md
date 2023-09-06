@@ -16,7 +16,7 @@ easy-to-understand and comprehensive introduction to XCM.
 
 ## Getting started
 
-Head over to the [overview](overview/README.md) to begin your journey with XCM.
+Head over to the [overview](./overview/summary.md) to begin your journey with XCM.
 
 ## Configuration
 
