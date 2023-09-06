@@ -456,7 +456,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: "A Journey through XCM",
-                description: "A Journey through XCM.",
+                description: "A practical introduction to the XCM features.",
                 slug: '/learn/xcm/journey',
               },
               items: [
