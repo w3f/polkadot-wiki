@@ -498,7 +498,7 @@ module.exports = {
               description: "XCVM Registers and Glossary",
               link: {
                 type: 'generated-index',
-                title: "Reference",
+                title: "References",
                 description: "References.",
                 slug: '/learn/xcm/reference',
               },
