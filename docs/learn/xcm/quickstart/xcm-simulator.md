@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-quickstart-simulator
+title: XCM Simulator
+sidebar_label: XCM Simulator
+description: Test XCM using a Simulated Environment.
+keywords: [xcm, cross-consensus messaging, simulator]
+slug: ../quickstart-simulator
+---
+
 # XCM Simulator
 
 Setting up a live network with multiple connected parachains for testing XCM is not straight

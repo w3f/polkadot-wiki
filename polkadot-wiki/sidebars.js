@@ -453,6 +453,22 @@ module.exports = {
                 "learn/xcm/overview/learn-xcm-docs-overview-architecture",
               ],
             },
+            {
+              type: "category",
+              label: "Quickstart",
+              description: "Start Diving into XCM.",
+              link: {
+                type: 'generated-index',
+                title: "Quickstart",
+                description: "Start Diving into XCM.",
+                slug: '/learn-xcm-docs-quickstart-index',
+              },
+              items: [
+                "learn/xcm/quickstart/learn-xcm-docs-quickstart-summary",
+                "learn/xcm/quickstart/learn-xcm-docs-quickstart-simulator",
+                "learn/xcm/quickstart/learn-xcm-docs-quickstart-first-look",
+              ],
+            },
           ],
         },
       ],

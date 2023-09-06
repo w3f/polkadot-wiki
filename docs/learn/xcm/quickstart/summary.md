@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-quickstart-summary
+title: Quickstart
+sidebar_label: Summary
+description: Start Diving into XCM.
+keywords: [xcm, cross-consensus messaging]
+slug: ../quickstart-summary
+---
+
 # Quickstart
 
 The XCM code can be found in

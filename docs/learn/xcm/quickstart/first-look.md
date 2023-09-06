@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-quickstart-first-look
+title: First Look at an XCM
+sidebar_label: First Look at an XCM
+description: First Look at an XCM.
+keywords: [xcm, cross-consensus messaging]
+slug: ../quickstart-first-look
+---
+
 # First Look
 
 In this section, we take you through a simple example of an XCM. In this example, we withdraw the
