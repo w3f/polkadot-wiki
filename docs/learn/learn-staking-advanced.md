@@ -502,21 +502,10 @@ According to the inflation model, this would suggest that if you do not use your
 
 :::
 
-The ideal staking rate on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also varies
-with the number of parachains (50% is the current estimation of all
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} that should be staked, per parachain slot).
-
 :::info The ideal staking rate varies based on the number of parachains
 
-The current staking rate on
-{{ polkadot: Polkadot still assumes the absence of parachains, with the suggested ideal staking rate of 75%. :polkadot }}
-{{ polkadot: You can track the progress on the issue to adjust it [here](https://github.com/paritytech/polkadot/pull/5872). :polkadot }}
-{{ kusama: Kusama has an ideal staking rate of approximately 50% with 50 parachains. :kusama }}
-{{ kusama: When the number of slots reaches 60, the ideal staking rate is 45%. [Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the code for reference. :kusama }}
-This code assumes that the number of slots auctioned correspond to the number of parachains on the
-relaychain, which may not be true as new slots can be occupied by old parachains that are renewing
-their lease. You can also track the progress on resolving this specific issue
-[here](https://github.com/paritytech/polkadot/pull/5872).
+The ideal staking rate varies between 45% to 75% based on the number of parachains that acquired lease
+through an auction (this excludes the System parachains), based on the implementation [here](https://github.com/paritytech/polkadot-sdk/blob/cd901764a52edc04a6d22bea3a526def593ab2a7/polkadot/runtime/common/src/impls.rs#L80)
 
 :::
 
