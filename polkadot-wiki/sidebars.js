@@ -500,7 +500,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "References",
                 description: "References.",
-                slug: '/learn/xcm/reference',
+                slug: '/learn/xcm/references',
               },
               items: [
                 "learn/xcm/reference/learn-xcm-docs-reference-xcvm-registers",
