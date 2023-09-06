@@ -37,19 +37,22 @@ It is important to understand that inflation is used to incentivize network part
 the network, especially in the early phases. Ending inflation too soon could limit growth while
 ending inflation too late (after the ecosystem has reached a mature stage) could dilute the value of
 your currency with no further growth for the ecosystem.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a young network, and it is
+currently in a growing stage and has yet to reach maturity.
 
 ## Inflation Model
 
 The chart below shows the inflation model of the network. Depending on the number of staked tokens,
-the distribution of the inflation to validators/nominators versus the treasury will change
+the distribution of the inflation to validators and nominators versus the treasury will change
 dynamically to provide incentives to participate (or not participate) in staking.
 
-There is an _ideal staking rate_ (in the figure set to 0.5 or 50%) that the network tries to
-maintain. The goal is to have the _system staking rate_ meet the _ideal staking rate_. The system
-staking rate would be the total amount staked over the total token supply, where the total amount
-staked is the stake of all validators and nominators on the network. The ideal staking rate accounts
-for having sufficient backing of {{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} to prevent
-the possible compromise of security while keeping the native token liquid.
+There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.5 or 50%)
+that the network tries to maintain. The goal is to have the _system staking rate_ meet the _ideal
+staking rate_. The system staking rate would be the total amount staked over the total token supply,
+where the total amount staked is the stake of all validators and nominators on the network. The
+ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
+{{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
+token liquid.
 
 ![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
@@ -64,11 +67,11 @@ the possible compromise of security while keeping the native token liquid.
   at the top bar of the staking overview on
   [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking).
 
-For instance, assuming that the ideal staking rate is 50%, all of the inflation would go to the
-validators/nominators if 50% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are
-staked. Any deviation from the 50% - positive or negative - sends the proportional remainder to the
-treasury. Deviation from the ideal staking rate are referred to as _staking inefficiencies_. Thus,
-the treasury does not currently receive a substantial inflow of funds at the ideal staking rate. See
+Assuming that the ideal staking rate is 50%, all of the inflation would go to the validators and
+nominators if 50% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked. Any
+deviation from the 50% - positive or negative - sends the proportional remainder to the treasury.
+Deviation from the ideal staking rate are referred to as _staking inefficiencies_. Thus, the
+treasury does not currently receive a substantial inflow of funds at the ideal staking rate. See
 [this page](./learn-polkadot-opengov-treasury.md) for more information about treasury inflow
 sources.
 
