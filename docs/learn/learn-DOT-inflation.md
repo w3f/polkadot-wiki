@@ -9,8 +9,7 @@ slug: ../learn-DOT-inflation
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is an inflationary token. There is no maximum
-number of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. On the
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is an inflationary token. On the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, inflation is
 {{ polkadot: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), :polkadot }}
 {{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), :kusama }}
