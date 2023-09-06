@@ -93,6 +93,6 @@ of Bob.
 Now that we have taken a first look at an XCM, we can dive deeper into all the XCM instructions, to
 be able to build more complex XCVM programs. For an overview of the instructions check out the
 [xcm-format repo](https://github.com/paritytech/xcm-format#5-the-xcvm-instruction-set). We'll show
-examples for every instruction in the [journey through XCM](../journey/index.md) chapter. First,
+examples for every instruction in the [journey through XCM](../journey/summary.md) chapter. First,
 it's important to learn the fundamentals, `MultiLocation`, `MultiAsset`, and other concepts in XCM.
 We'll talk about those next.

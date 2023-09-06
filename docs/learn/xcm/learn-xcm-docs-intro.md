@@ -20,7 +20,7 @@ Head over to the [overview](./overview/summary.md) to begin your journey with XC
 
 ## Configuration
 
-Head over to the [configuration section](executor_config/README.md) if you want to learn how to
+Head over to the [configuration section](executor_config/config.md) if you want to learn how to
 configure your project to use XCM.
 
 ## Glossary

@@ -43,7 +43,7 @@ XCVM spec.
 
 The XCM executor is highly configurable. XCM builder provides building blocks people can use to
 configure their executor according to their needs. Many of these building blocks will be explained
-in the [Config Deep Dive](../executor_config/index.md) chapter. They cover common use-cases but are
+in the [Config Deep Dive](../executor_config/config.md) chapter. They cover common use-cases but are
 not meant to be exhaustive. It's very easy to build your own building blocks for your specific
 configuration when needed, using these as examples.
 

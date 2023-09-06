@@ -108,7 +108,7 @@ increase/decrease in circulating supply of an asset, or a duplication/loss of an
 is not trusted for this purpose.
 
 You can set which origins are allowed to act as teleporters by configuring the
-[IsTeleporter](../../executor_config/index.md#isteleporter) type in the XCM executor. If the origin
+[IsTeleporter](../../executor_config/config.md#isteleporter) type in the XCM executor. If the origin
 is not allowed to teleport assets to this system, an `UntrustedTeleportLocation` error is returned.
 
 This instruction will populate the holding register with the teleported assets, which can be used by

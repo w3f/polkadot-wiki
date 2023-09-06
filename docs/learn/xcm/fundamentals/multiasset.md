@@ -137,7 +137,7 @@ pub enum MultiAssetFilter {
 ### MultiAsset
 
 For more information about the MultiLocations used to define concrete assets, see
-[MultiLocation](multilocation/README.md) and [Junction](multilocation/junction.md).
+[MultiLocation](multilocation/summary.md) and [Junction](multilocation/junction.md).
 
 ```rust,noplayground
 // Location Relay Chain

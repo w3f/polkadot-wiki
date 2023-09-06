@@ -18,7 +18,7 @@ to get notified of version updates. XCM has two instructions to enable this:
 - `UnsubscribeVersion`
 
 The version subscription model can differ per XCVM implementation. The `xcm-executor` has a
-`SubscriptionService` [config item](../executor_config/index.md#subscriptionservice). Any type
+`SubscriptionService` [config item](../executor_config/config.md#subscriptionservice). Any type
 specified as the `SubscriptionService` must implement the `VersionChangeNotifier` trait. The XCM
 pallet is one such implementor. When the `SubscribeVersion` instruction is sent to a consensus
 system that uses the XCM pallet as the `SubscriptionService` in the XCM executor, the system will

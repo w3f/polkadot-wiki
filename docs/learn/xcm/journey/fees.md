@@ -21,7 +21,7 @@ BuyExecution { fees: MultiAsset, weight_limit: WeightLimit }
 
 This instruction is used to buy weight using fees. While in some cases there's no need to pay for
 execution (if you control both systems for example), in most cases you'll need to add this
-instruction. There's a predefined [barrier](../../executor_config/index.md#barrier),
+instruction. There's a predefined [barrier](../executor_config/config.md#barrier),
 `AllowTopLevelPaidExecutionFrom<T>`, that explicitly drops messages that do not include this
 instruction.
 
@@ -86,11 +86,10 @@ UnpaidExecution { weight_limit: WeightLimit, check_origin: Option<MultiLocation>
 
 This instruction is used for explicitly stating this message shouldn't be paid for. It can be used
 as a way of identifying certain priviledged messages that don't pay fees, coming from a particular
-system. This instruction can be searched for in [barriers](../../executor_config/index.md#barrier)
-to allow this. Make sure you trust the origin system because it won't be paying fees. There's
-already a predefined barrier in xcm-builder, `AllowExplicitUnpaidExecutionFrom<T>`, that makes sure
-this is the first instruction in the message. As always, you can build your own for your own
-use-cases.
+system. This instruction can be searched for in [barriers](../executor_config/config.md#barrier) to
+allow this. Make sure you trust the origin system because it won't be paying fees. There's already a
+predefined barrier in xcm-builder, `AllowExplicitUnpaidExecutionFrom<T>`, that makes sure this is
+the first instruction in the message. As always, you can build your own for your own use-cases.
 
 This is safer than allowing all messages from a particular system to not pay fees, as it's an
 exception to the rule and not the default. Extra measures can be taken to limit who can use this

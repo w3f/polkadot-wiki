@@ -20,7 +20,7 @@ Like XCM, the XCVM is also a specification. The implementation that will be used
 documentation is the
 [xcm-executor](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-executor), provided by
 Parity. The executor is highly configurable. For more information on the extensive configuration
-options available, see the [Config Deep Dive](../executor_config/index.md) chapter.
+options available, see the [Config Deep Dive](../executor_config/config.md) chapter.
 
 Anyone can create an implementation of the XCVM. As long as they follow the standard, they'll be
 able to send XCMs to systems using other implementations.
