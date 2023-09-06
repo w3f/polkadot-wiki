@@ -452,7 +452,7 @@ module.exports = {
             {
               type: "category",
               label: "A Journey through XCM",
-              description: "A Journey through XCM.",
+              description: "A practical introduction to the XCM features",
               link: {
                 type: 'generated-index',
                 title: "A Journey through XCM",
