@@ -2,7 +2,7 @@
 id: learn-xcm-docs-overview-summary
 title: "XCM: Cross-Consensus Messaging"
 sidebar_label: Summary
-description: Summary of the Overview XCM Chapter.
+description: Summary of the chapter.
 keywords: [xcm, cross-consensus messaging]
 slug: ../overview-summary
 ---

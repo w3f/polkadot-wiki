@@ -373,11 +373,11 @@ module.exports = {
         {
           type: "category",
           label: "XCM Docs",
-          description: "In-depth documentation about Cross-Chain Messaging (XCM) on Polkadot.",
+          description: "In-depth documentation about the Polkadot's Cross-Chain Messaging (XCM).",
           link: {
             type: 'generated-index',
             title: "XCM Documentation",
-            description: "In-depth documentation about Cross-Chain Messaging (XCM) on Polkadot.",
+            description: "In-depth documentation about the Polkadot's Cross-Chain Messaging (XCM).",
             slug: 'learn/xcm',
           },
           items: [
@@ -385,11 +385,11 @@ module.exports = {
             {
               type: "category",
               label: "Overview",
-              description: "Overview to the XCM Documentation.",
+              description: "Overview of the XCM Documentation.",
               link: {
                 type: 'generated-index',
                 title: "Overview",
-                description: "Overview to the XCM Documentation.",
+                description: "Overview of the XCM Documentation.",
                 slug: '/learn/xcm/overview',
               },
               items: [
@@ -419,11 +419,11 @@ module.exports = {
             {
               type: "category",
               label: "Fundamentals",
-              description: "Learn about XCM Fundamentals.",
+              description: "Fundamental Concepts about XCM.",
               link: {
                 type: 'generated-index',
                 title: "Fundamentals",
-                description: "Learn about XCM Fundamentals.",
+                description: "Fundamental Concepts about XCM.",
                 slug: '/learn/xcm/fundamentals',
               },
               items: [
@@ -456,7 +456,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: "A Journey through XCM",
-                description: "A Journey through XCM",
+                description: "A Journey through XCM.",
                 slug: '/learn/xcm/journey',
               },
               items: [

@@ -2,7 +2,7 @@
 id: learn-xcm-docs-overview-intro
 title: Introduction
 sidebar_label: Introduction
-description: Introduction to XCM.
+description: An Introduction to XCM.
 keywords: [xcm, cross-consensus messaging]
 slug: ../overview-intro
 ---
