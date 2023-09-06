@@ -543,6 +543,23 @@ module.exports = {
                 "learn/xcm/journey/learn-xcm-docs-journey-channels",
               ],
             },
+            "learn/xcm/executor_config/learn-xcm-docs-config-deep-dive",
+            "learn/xcm/learn-xcm-docs-testing",
+            {
+              type: "category",
+              label: "Reference",
+              description: "References.",
+              link: {
+                type: 'generated-index',
+                title: "Reference",
+                description: "References.",
+                slug: '/learn-xcm-docs-reference',
+              },
+              items: [
+                "learn/xcm/reference/learn-xcm-docs-reference-xcvm-registers",
+                "learn/xcm/reference/learn-xcm-docs-reference-glossary",
+              ],
+            },
           ],
         },
       ],

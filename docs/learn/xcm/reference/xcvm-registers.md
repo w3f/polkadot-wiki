@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-reference-xcvm-registers
+title: All XCVM Registers
+sidebar_label: All XCVM Registers
+description: All XCVM Registers.
+keywords: [xcm, cross-consensus messaging, xcvm, registers, reference]
+slug: ../xcvm-registers
+---
+
 # XCVM Registers
 
 Each implementation of an XCVM contains several registers which cannot generally be set at will, but

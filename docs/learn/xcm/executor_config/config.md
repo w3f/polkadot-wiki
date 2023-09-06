@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-config-deep-dive
+title: Config Deep Dive
+sidebar_label: Config Deep Dive
+description: Config Deep Dive.
+keywords: [xcm, cross-consensus messaging, config]
+slug: ../config-deep-dive
+---
+
 # Executor Config
 
 As previously mentioned, the xcm-executor is a Cross-Consensus Virtual Machine(XCVM) implementation.

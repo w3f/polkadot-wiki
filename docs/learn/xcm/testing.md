@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-testing
+title: Testing
+sidebar_label: Testing
+description: Testing.
+keywords: [xcm, cross-consensus messaging, config]
+slug: ../testing
+---
+
 # Testing
 
 Before deploying your XCM-powered solution to production, it's paramount to test it thoroughly.
