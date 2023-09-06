@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-overview-xcvm
+title: The XCVM
+sidebar_label: The XCVM
+description: The Cross-Consensus Virtual Machine.
+keywords: [xcm, cross-consensus messaging, xcvm]
+slug: ../overview-xcvm
+---
+
 # The XCVM
 
 At the core of XCM lies the XCVM (Cross-Consensus Virtual Machine). A message in XCM (referred to as

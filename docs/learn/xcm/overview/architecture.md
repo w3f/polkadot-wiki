@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-overview-architecture
+title: The XCM Architecture
+sidebar_label: Architecture
+description: The XCM Architecture.
+keywords: [xcm, cross-consensus messaging, xcvm, architecture]
+slug: ../overview-architecture
+---
+
 # Architecture
 
 XCM is a [format](https://github.com/paritytech/xcm-format). Anyone can create an implementation of

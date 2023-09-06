@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-overview-format
+title: XCM is a Format, not a Protocol
+sidebar_label: A Format, not a Protocol
+description: XCM is a Format, not a Protocol.
+keywords: [xcm, cross-consensus messaging, format]
+slug: ../overview-format
+---
+
 # A Format, Not a Protocol
 
 It's essential to understand that XCM is a format, not a protocol. It describes how messages should

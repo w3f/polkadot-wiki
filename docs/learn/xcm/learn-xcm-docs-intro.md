@@ -1,7 +1,10 @@
 ---
-id: learn-xcm-docs-info
-sidebar_label: XCM Docs Info
-slug: ../learn-xcm-docs-info
+id: learn-xcm-docs-intro
+title: "XCM: Cross-Consensus Messaging"
+sidebar_label: "XCM: Cross-Consensus Messaging"
+description: Introduction to the XCM Documentation.
+keywords: [xcm, cross-consensus messaging]
+slug: ../learn-xcm-docs-intro
 ---
 
 # XCM: Cross-Consensus Messaging

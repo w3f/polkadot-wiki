@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-overview-intro
+title: Introduction
+sidebar_label: Introduction
+description: Introduction to XCM.
+keywords: [xcm, cross-consensus messaging]
+slug: ../overview-intro
+---
+
 # Introduction
 
 XCM is a **language** for communicating **intentions** between **consensus systems**. Concretely,

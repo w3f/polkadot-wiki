@@ -1,3 +1,12 @@
+---
+id: learn-xcm-docs-overview-summary
+title: "XCM: Cross-Consensus Messaging"
+sidebar_label: Summary
+description: Summary of the Overview XCM Chapter.
+keywords: [xcm, cross-consensus messaging]
+slug: ../overview-summary
+---
+
 # Overview
 
 XCM enables different consensus systems to communicate with each other. Common cross-consensus

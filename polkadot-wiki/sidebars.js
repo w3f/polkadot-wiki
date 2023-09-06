@@ -426,16 +426,33 @@ module.exports = {
         {
           type: "category",
           label: "XCM Docs",
-          description: "In-depth documentation about XCM.",
+          description: "In-depth documentation about Cross-Chain Messaging (XCM) on Polkadot.",
           link: {
             type: 'generated-index',
             title: "XCM Documentation",
-            description: "In-depth documentation about XCM.",
+            description: "In-depth documentation about Cross-Chain Messaging (XCM) on Polkadot.",
             slug: '/learn-xcm-docs-index',
           },
           items: [
-            "learn/xcm/learn-xcm-docs-summary",
-            "learn/xcm/learn-xcm-docs-info",
+            "learn/xcm/learn-xcm-docs-intro",
+            {
+              type: "category",
+              label: "Overview",
+              description: "Overview to the XCM Documentation.",
+              link: {
+                type: 'generated-index',
+                title: "Overview",
+                description: "Overview to the XCM Documentation.",
+                slug: '/learn-xcm-docs-overview-index',
+              },
+              items: [
+                "learn/xcm/overview/learn-xcm-docs-overview-summary",
+                "learn/xcm/overview/learn-xcm-docs-overview-intro",
+                "learn/xcm/overview/learn-xcm-docs-overview-format",
+                "learn/xcm/overview/learn-xcm-docs-overview-xcvm",
+                "learn/xcm/overview/learn-xcm-docs-overview-architecture",
+              ],
+            },
           ],
         },
       ],
