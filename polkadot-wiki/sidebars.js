@@ -495,7 +495,7 @@ module.exports = {
             {
               type: "category",
               label: "Reference",
-              description: "References.",
+              description: "XCVM Registers and Glossary",
               link: {
                 type: 'generated-index',
                 title: "Reference",
