@@ -431,7 +431,7 @@ module.exports = {
             type: 'generated-index',
             title: "XCM Documentation",
             description: "In-depth documentation about Cross-Chain Messaging (XCM) on Polkadot.",
-            slug: '/learn-xcm-docs-index',
+            slug: 'learn/xcm',
           },
           items: [
             "learn/xcm/learn-xcm-docs-intro",
@@ -443,7 +443,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "Overview",
                 description: "Overview to the XCM Documentation.",
-                slug: '/learn-xcm-docs-overview-index',
+                slug: '/learn/xcm/overview',
               },
               items: [
                 "learn/xcm/overview/learn-xcm-docs-overview-summary",
@@ -461,7 +461,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "Quickstart",
                 description: "Start Diving into XCM.",
-                slug: '/learn-xcm-docs-quickstart-index',
+                slug: '/learn/xcm/quickstart',
               },
               items: [
                 "learn/xcm/quickstart/learn-xcm-docs-quickstart-summary",
@@ -477,7 +477,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "Fundamentals",
                 description: "Learn about XCM Fundamentals.",
-                slug: '/learn-xcm-docs-fundamentals-index',
+                slug: '/learn/xcm/fundamentals',
               },
               items: [
                 "learn/xcm/fundamentals/learn-xcm-docs-fundamentals-summary",
@@ -489,7 +489,7 @@ module.exports = {
                     type: 'generated-index',
                     title: "MultiLocation",
                     description: "The MultiLocation Type.",
-                    slug: '/learn-xcm-docs-multilocation-index',
+                    slug: '/learn/xcm/fundamentals/multilocation',
                   },
                   items: [
                     "learn/xcm/fundamentals/multilocation/learn-xcm-docs-multilocation-summary",
@@ -510,7 +510,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "A Journey through XCM",
                 description: "A Journey through XCM",
-                slug: '/learn-xcm-docs-journey-index',
+                slug: '/learn/xcm/journey',
               },
               items: [
                 "learn/xcm/journey/learn-xcm-docs-journey-summary",
@@ -522,7 +522,7 @@ module.exports = {
                     type: 'generated-index',
                     title: "Transfers",
                     description: "Transferring Assets between Consensus Systems with XCM.",
-                    slug: '/learn-xcm-docs-transfers-index',
+                    slug: '/learn/xcm/journey/transfers',
                   },
                   items: [
                     "learn/xcm/journey/transfers/learn-xcm-docs-transfers-summary",
@@ -553,7 +553,7 @@ module.exports = {
                 type: 'generated-index',
                 title: "Reference",
                 description: "References.",
-                slug: '/learn-xcm-docs-reference',
+                slug: '/learn/xcm/reference',
               },
               items: [
                 "learn/xcm/reference/learn-xcm-docs-reference-xcvm-registers",

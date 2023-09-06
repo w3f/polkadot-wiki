@@ -4,7 +4,7 @@ title: Locks
 sidebar_label: Locks
 description: Locks.
 keywords: [xcm, cross-consensus messaging, locks]
-slug: ../journey-locks
+slug: ../../journey-locks
 ---
 
 # Locking

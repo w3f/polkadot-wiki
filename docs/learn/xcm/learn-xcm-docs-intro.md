@@ -4,7 +4,7 @@ title: "XCM: Cross-Consensus Messaging"
 sidebar_label: "XCM: Cross-Consensus Messaging"
 description: Introduction to the XCM Documentation.
 keywords: [xcm, cross-consensus messaging]
-slug: ../learn-xcm-docs-intro
+slug: ../xcm/introduction
 ---
 
 # XCM: Cross-Consensus Messaging

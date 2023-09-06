@@ -4,7 +4,7 @@ title: All XCVM Registers
 sidebar_label: All XCVM Registers
 description: All XCVM Registers.
 keywords: [xcm, cross-consensus messaging, xcvm, registers, reference]
-slug: ../xcvm-registers
+slug: ../reference-xcvm-registers
 ---
 
 # XCVM Registers

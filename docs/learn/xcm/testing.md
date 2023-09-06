@@ -4,7 +4,7 @@ title: Testing
 sidebar_label: Testing
 description: Testing.
 keywords: [xcm, cross-consensus messaging, config]
-slug: ../testing
+slug: ./testing
 ---
 
 # Testing
