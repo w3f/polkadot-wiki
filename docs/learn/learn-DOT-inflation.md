@@ -26,17 +26,11 @@ The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama 
 
 :::
 
-According to the inflation model, this would suggest that if you do not use your
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for staking, your tokens currently dilute
-over time. **Token inflation is not a forever fixed value, and inflation can be set lower in the
-future through [on-chain governance](./learn-polkadot-opengov.md).**
+It is essential to understand that the primary objective of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} inflation is to incentivize network participants through Nominated Proof of Staking (NPoS) and to grow
+the network through funding the on-chain treasury. There is an opportunity cost of keeping the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens idle with the current inflation model as the tokens get diluted over time. Economics and game theory suggest that setting an ideal inflation rate is essential for incentivizing the network participants as well as the growth of the network, and any deviation from it can have negative effects.  Reducing the inflation rate could limit growth while
+increasing the inflation rate could break the incentive model of the token. Hence,
+**token inflation rate is not a forever fixed value, and inflation can be updated in the future through [on-chain governance](./learn-polkadot-opengov.md)** based on thorough tokenomics research.
 
-It is important to understand that inflation is used to incentivize network participants and to grow
-the network, especially in the early phases. Ending inflation too soon could limit growth while
-ending inflation too late (after the ecosystem has reached a mature stage) could dilute the value of
-your currency with no further growth for the ecosystem.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a young network, and it is
-currently in a growing stage and has yet to reach maturity.
 
 ## Inflation Model
 
