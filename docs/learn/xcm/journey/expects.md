@@ -25,7 +25,7 @@ executing specific instructions. XCM contains the following expect instructions:
 The `ExpectAsset` instruction throws an `ExpectationFalse` error if the holding register does not
 contain at least the given assets.
 
-```rust,noplayground
+```rust
 ExpectAsset(MultiAssets)
 ```
 
@@ -55,7 +55,7 @@ ExpectAsset((Here, AMOUNT + 10).into()),
 The `ExpectOrigin` instruction throws an `ExpectationFalse` error if the origin register does not
 equal the expected origin.
 
-```rust,noplayground
+```rust
 ExpectOrigin(Option<MultiLocation>)
 ```
 
@@ -65,7 +65,7 @@ For the full example, check [here](https://github.com/paritytech/xcm-docs/tree/m
 `ExpectOrigin` instruction errors because the `ClearOrigin` clears the origin register and we expect
 it to be equal to `Parachain(1)`.
 
-```rust,noplayground
+```rust
 // Set the instructions that are executed when ExpectOrigin does not pass.
 // In this case, reporting back an error to the Parachain.
 SetErrorHandler(Xcm(vec![ReportError(QueryResponseInfo {
@@ -88,7 +88,7 @@ index. It throws a `NameMismatch` error is the `name` or `module_name` mismatch 
 and 'pallet_balances'). Consensus systems that are not substrate-based may throw an `Unimplemented`
 error for this instruction.
 
-```rust,noplayground
+```rust
 ExpectPallet {
     #[codec(compact)]
     index: u32,
@@ -133,7 +133,7 @@ handler execution to halt the error handler if the error that started the execut
 handler is not as expected. The `ExpectError` instruction allows to only execute the instructions in
 the error handler, when a specific error is thrown.
 
-```rust,noplayground
+```rust
 	ExpectError(Option<(u32, Error)>)
 ```
 
@@ -141,7 +141,7 @@ the error handler, when a specific error is thrown.
 
 For the full example, check [here](https://github.com/paritytech/xcm-docs/tree/main/examples).
 
-```rust,noplayground
+```rust
 SetErrorHandler(Xcm(vec![
     ExpectError(Some((1, XcmError::VersionIncompatible))),
     ReportError(QueryResponseInfo {
@@ -170,7 +170,7 @@ register does not equal the expected transact status.
 For the full example, check [here](https://github.com/paritytech/xcm-docs/tree/main/examples). The
 transact status is reported to `Parachain(1)` if the call in the `Transact` errors.
 
-```rust,noplayground
+```rust
 SetErrorHandler(Xcm(vec![ReportTransactStatus(QueryResponseInfo {
     destination: Parachain(1).into(),
     query_id: QUERY_ID,

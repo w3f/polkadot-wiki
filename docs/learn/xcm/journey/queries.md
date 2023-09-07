@@ -36,7 +36,7 @@ When a query instruction is executed correctly, it sends a `QueryResponse` instr
 location defined in the previously described `destination` field. The `QueryResponse` looks like
 this:
 
-```rust,noplayground
+```rust
 QueryResponse {
     #[codec(compact)]
     query_id: QueryId,
@@ -117,7 +117,7 @@ QueryPallet { module_name: Vec<u8>, response_info: QueryResponseInfo }
 
 The destination responds with a vec of `PalletInfo`s if the pallet exists.
 
-```rust,noplayground
+```rust
 pub struct PalletInfo {
 	#[codec(compact)]
 	index: u32,
@@ -156,7 +156,7 @@ The `ReportError` instruction report the contents of the Error Register to the g
 This instruction is useful in combination with the `SetErrorHandler` instruction. It then only
 reports an error if an error is thrown.
 
-```rust,noplayground
+```rust
 ReportError(QueryResponseInfo)
 ```
 
@@ -186,7 +186,7 @@ Xcm(vec![
 The `ReportTransactStatus` instruction report the value of the Transact Status Register to the
 specified destination.
 
-```rust,noplayground
+```rust
 ReportTransactStatus(QueryResponseInfo)
 ```
 
@@ -196,7 +196,7 @@ For the full example, check [here](https://github.com/paritytech/xcm-docs/tree/m
 Dispatches a call on the consensus system receiving this Xcm and reports back the status of the
 Transact Status Register.
 
-```rust,noplayground
+```rust
 Xcm(vec![
     Transact {
         origin_kind: OriginKind::SovereignAccount,

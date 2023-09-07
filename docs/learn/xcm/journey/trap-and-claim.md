@@ -20,7 +20,7 @@ assets:
 
 ## Trap
 
-```rust,noplayground
+```rust
 Trap(#[codec(compact)] u64)
 ```
 
@@ -32,7 +32,7 @@ assets in the Holding Register, these assets can be trapped.
 
 ## ClaimAsset
 
-```rust,noplayground
+```rust
 ClaimAsset { assets: MultiAssets, ticket: MultiLocation }
 ```
 
