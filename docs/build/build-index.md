@@ -12,15 +12,15 @@ Welcome to the builder's section of the {{ polkadot: Polkadot Wiki. :polkadot }}
 
 Here, you will discover many development tools and resources in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem. We are always adding new
-tools and frameworks as we learn about them so if you are working on something that should be
-included please reach out to us on
+tools and frameworks as we learn about them, so if you are working on something that should be
+included, please reach out to us on
 {{ polkadot: [Element](https://matrix.to/#/#polkadot-watercooler:matrix.org). :polkadot }}
 {{ kusama: [Element](https://matrix.to/#/#kusama-watercooler:matrix.org). :kusama }} This section of
 the wiki is divided into the following parts:
 
 ## Development Guide
 
-- [Starter's Guide](build-guide.md) - High level overview on choosing a parachain, parathread, or
+- [Starter's Guide](build-guide.md) - High-level overview on choosing a parachain, parathread, or
   smart contract for your project and how to get started.
 - [Parachain Development](build-parachains.md) - Tools for building parachains and parathreads.
 - [Smart Contracts](build-smart-contracts.md) - Tools to deploy contracts to a
@@ -33,8 +33,6 @@ the wiki is divided into the following parts:
   for generating and inspecting key pairs.
 - [JS tools](https://github.com/polkadot-js/tools) - TypeScript tools for offline signing of
   transactions, RPC calls, and more.
-- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Polkadot Standards Proposals (PSPs) are
-  standards for the Polkadot ecosystem.
 - [Examples](build-open-source.md) - Example projects sourced from the community -- see what others
   are building.
 
@@ -43,11 +41,11 @@ the wiki is divided into the following parts:
 - [Grants](../general/grants.md) - Information regarding grants and funding sources available in the
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
-### PSPs
+### PCPs
 
-Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
+Polkadot Contracts Proposals (PCPs) are standards for smart contracts in the Polkadot ecosystem.
 
-- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and
+- [PCP GitHub Repository](https://github.com/w3f/PCPs) - Read, create, or discuss standards and
   proposals.
 
 ### Hackathon
