@@ -26,7 +26,7 @@ send back its currently `AdvertisedVersion` and will keep the subscribed locatio
 the version changes. The subscribed location can unsubscribe to version changes by sending the
 `UnsubscribeVersion` instruction.
 
-```rust,noplayground
+```rust
 SubscribeVersion {
     #[codec(compact)]
     query_id: QueryId,

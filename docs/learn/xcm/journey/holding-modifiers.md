@@ -18,7 +18,7 @@ we go over more instructions that alter the holding register, namely:
 
 ## BurnAsset
 
-```rust,noplayground
+```rust
 BurnAsset(MultiAssets)
 ```
 
@@ -35,7 +35,7 @@ Register to Parachain A. We expect the Holding Register to hold 6 units. Note: I
 added more then 10 units worth of assets in the `BurnAsset` instruction, we would have burned all
 assets in the Holding Register and the execution would succeed.
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
     WithdrawAsset((Here, 10 * CENTS).into()),
     BuyExecution { fees: (Here, CENTS).into(), weight_limit: WeightLimit::Unlimited },
@@ -52,13 +52,13 @@ let message = Xcm(vec![
 
 We expect the following response:
 
-```rust,noplayground
+```rust
 Response::Assets((Parent, 6 * CENTS).into())
 ```
 
 ## ExchangeAsset
 
-```rust,noplayground
+```rust
 ExchangeAsset { give: MultiAssetFilter, want: MultiAssets, maximal: bool }
 ```
 
@@ -92,14 +92,14 @@ results could differ.
 The Assets in the exchange in Parachain(1). This is a custom exchange implementation just for
 testing purposes.
 
-```rust,noplayground
+```rust
 let assets_in_exchange = vec![(Parent, 10 * CENTS).into()];
 parachain::set_exchange_assets(assets_in_exchange);
 ```
 
 The message that is send:
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
     WithdrawAsset((Here, 10 * CENTS).into()),
     BuyExecution { fees: (Here, CENTS).into(), weight_limit: WeightLimit::Unlimited },

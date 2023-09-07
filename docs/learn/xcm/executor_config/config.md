@@ -67,7 +67,7 @@ next item is checked, and so on. The execution is halted when one of these items
 (Ok or true, etc.). The next example of the Barrier type shows how the grouping works (understanding
 each item in the tuple is not necessary).
 
-```rust,noplayground
+```rust
 pub type Barrier = (
 	TakeWeightCredit,
 	AllowTopLevelPaidExecutionFrom<Everything>,
@@ -106,7 +106,7 @@ The `XcmSender` type implements the `SendXcm` trait, and defines how the xcm_exe
 more [transport layer(s)](https://wiki.polkadot.network/docs/learn-xcm-transport). For example a
 parachain can implement the XcmSender as:
 
-```rust,noplayground
+```rust
  (
 	// Two routers - use UMP to communicate with the relay chain:
 	cumulus_primitives_utility::ParentAsUmp<ParachainSystem, PolkadotXcm, ()>,
@@ -138,7 +138,7 @@ multiple `OriginConverter`s conflict, the
 to the `convert_origin` function is used to distingues which `OriginConverter` to use. There are
 four different `OriginKind`s :
 
-```rust,noplayground
+```rust
 pub enum OriginKind {
 	Native,
 	SovereignAccount,
@@ -152,7 +152,7 @@ An example of the use of `OriginKind`s are the `SovereignSignedViaLocation` and
 sovereign account into a `Signed` RuntimeOrigin (uses `SovereignAccount` OriginKind) while the
 second converts a local native account into a `Signed` RuntimeOrigin (uses `Native` OriginKind).
 
-```rust,noplayground
+```rust
 pub type SovereignAccountOf = AccountId32Aliases<ThisNetwork, AccountId>;
 (
 	// A `Signed` origin of the sovereign account that the original location controls.
@@ -182,7 +182,7 @@ a native asset.
 The `UniversalLocation` type describes the location of the runtime implementing the xcm-executor in
 the consensus universe. Below we give some examples of `UniversalLocation` implementations.
 
-```rust,noplayground
+```rust
 //Polkadot
 X1(GlobalConsensus(NetworkId::Polkadot))
 //Kusama
@@ -212,7 +212,7 @@ each `Barrier`, as certain barriers execute weight-based checks. After the execu
 unused weight is refunded (if possible). There are pre-defined `Weigher` solutions in the
 xcm-builder. The most used is the `FixedWeightBounds`:
 
-```rust,noplayground
+```rust
 // BaseXcmWeight is a const weight.
 FixedWeightBounds<BaseXcmWeight, RuntimeCall, MaxInstructions>;
 ```

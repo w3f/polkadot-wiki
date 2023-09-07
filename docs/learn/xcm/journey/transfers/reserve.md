@@ -78,7 +78,7 @@ chain and both source and destination are parachains 1 and 2 respectively. Let's
 account ALICE in parachain 1 wants to transfer the relay chain's native token to their other account
 (also ALICE) on parachain 2. The program might look like this:
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((Parent, amount).into()),
   InitiateReserveWithdraw {
@@ -102,7 +102,7 @@ means we'll be gathering the derivative on this chain.
 
 ### InitiateReserveWithdraw
 
-```rust,noplayground
+```rust
 InitiateReserveWithdraw { assets: MultiAssetFilter, reserve: MultiLocation, xcm: Xcm<()> }
 ```
 
@@ -122,7 +122,7 @@ Upon receiving this XCM, the reserve will withdraw the asset from parachain 1's 
 
 ### DepositReserveAsset
 
-```rust,noplayground
+```rust
 DepositReserveAsset { assets: MultiAssetFilter, dest: MultiLocation, xcm: Xcm<()> }
 ```
 
@@ -136,7 +136,7 @@ parachain 2. This new XCM has the following instructions:
 
 ### ReserveAssetDeposited
 
-```rust,noplayground
+```rust
 ReserveAssetDeposited(MultiAssets)
 ```
 
@@ -157,7 +157,7 @@ as in the following diagram.
 
 In this case the message is the following:
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((Parent, amount).into()),
   DepositReserveAsset {
@@ -179,7 +179,7 @@ This simplifies the reserve-backed transfer. However, the destination still need
 It's also possible to skip the `WithdrawAsset` instruction. The `TransferReserveAsset` instruction
 handles the withdrawal already. It can be called like so:
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   TransferReserveAsset {
     assets: (Parent, amount).into(),

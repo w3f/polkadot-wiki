@@ -37,7 +37,7 @@ There are multiple instructions in XCM that can alter the XcmContext origin fiel
 
 ## ClearOrigin
 
-```rust,noplayground
+```rust
 ClearOrigin
 ```
 
@@ -47,7 +47,7 @@ use the privilege level of the cleared origin to execute operations.
 
 ## DescendOrigin
 
-```rust,noplayground
+```rust
 DescendOrigin(InteriorMultiLocation),
 ```
 
@@ -64,7 +64,7 @@ instructions which would result in an `InteriorMultiLocation` containing more th
 
 ## UniversalOrigin
 
-```rust,noplayground
+```rust
 UniversalOrigin(Junction)
 ```
 
@@ -80,7 +80,7 @@ systems.
 
 ## AliasOrigin
 
-```rust,noplayground
+```rust
 AliasOrigin(MultiLocation)
 ```
 

@@ -58,7 +58,7 @@ a complete loss/duplication of an NFT.
 
 The following is an example XCM program that achieves the process described above.
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((Here, teleport_amount).into()),
   InitiateTeleport {
@@ -79,7 +79,7 @@ Let's discuss how the new instructions work.
 
 ### InitiateTeleport
 
-```rust,noplayground
+```rust
 InitiateTeleport { assets: MultiAssetFilter, dest: MultiLocation, xcm: Xcm<()> }
 ```
 
@@ -97,7 +97,7 @@ specify them.
 
 ### ReceiveTeleportedAsset
 
-```rust,noplayground
+```rust
 ReceiveTeleportedAssets(MultiAssets)
 ```
 
@@ -117,7 +117,7 @@ the receiving account.
 
 ### ClearOrigin
 
-```rust,noplayground
+```rust
 ClearOrigin
 ```
 
@@ -130,7 +130,7 @@ to the destination system with freshly minted assets and immediately clears the 
 Let's say we want to teleport an NFT (Non-Fungible Token) this time, instead of a fungible token, to
 another system. We could do so with the following program:
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((GeneralIndex(1), 42u32).into()),
   InitiateTeleport {

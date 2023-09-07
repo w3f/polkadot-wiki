@@ -17,7 +17,7 @@ instructions once again.
 
 ## WithdrawAsset
 
-```rust,noplayground
+```rust
 WithdrawAsset(MultiAssets),
 ```
 
@@ -28,7 +28,7 @@ instructions. As we've seen, we can use the expression `(Here, amount).into()` t
 
 ## BuyExecution
 
-```rust,noplayground
+```rust
 BuyExecution { fees: MultiAssets, weight_limit: WeightLimit },
 ```
 
@@ -40,7 +40,7 @@ the first ones to pay for all future ones.
 
 ## DepositAsset
 
-```rust,noplayground
+```rust
 DepositAsset { assets: MultiAssetFilter, beneficiary: MultiLocation },
 ```
 
@@ -51,7 +51,7 @@ to, e.g. it doesn't make sense to deposit assets to `../AccountId32(0x0)`.
 
 ## Example
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((Here, amount).into()),
   BuyExecution { fees: (Here, amount).into(), weight_limit: Unlimited },

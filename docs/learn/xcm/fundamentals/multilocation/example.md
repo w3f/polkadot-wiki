@@ -14,7 +14,7 @@ In this example we show different `MultiLocation`s for the system hierarchy in t
 
 From the perspective of RelayA
 
-```rust,noplayground
+```rust
 // ParaA
 let _: MultiLocation = Parachain(1000).into();
 // AccountId32 in Parachain A
@@ -33,7 +33,7 @@ let _: MultiLocation = (Parent, GlobalConsensus(RELAY_B_NETWORK), Parachain(1000
 
 From the perspective of Parachain C
 
-```rust,noplayground
+```rust
 // Relay A
 let _: MultiLocation = Parent.into();
 // Plurality Example. Many more BodyId/BodyPart combos imaginable
@@ -44,7 +44,7 @@ let _: MultiLocation = (Parent, AccountId32 { network: None, id: [0u8; 32] }).in
 
 From the perspective of the Smart Contract
 
-```rust,noplayground
+```rust
 // Asset in Parachain A
 let _: MultiLocation = (Parent, Parent, Parachain(1000), PalletInstance(1), GeneralIndex(1)).into();
 
