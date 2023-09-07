@@ -196,6 +196,9 @@ with
 which has a low lead-time and Approval/Support curves with slightly sharper reductions in their
 thresholds for passing, given that it is invoked with a sense of urgency.
 
+For more information about how to cancel a referendum see the
+[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
+
 :::info Blacklisting
 
 Blacklisting referenda in Polkadot OpenGov is
@@ -439,6 +442,20 @@ days. For additional information regarding the timeline of governance events, ch
 governance section on the
 {{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
+:::info do votes stack?
+
+You can use the same number of tokens to vote on different referenda. Votes with conviction do not
+stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
+and C with 2x conviction you would have 10 votes on all those referenda and 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
+(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+countdown starting when the last referendum you voted on ends (assuming you are on the winning
+side). If you voted with conviction on referendum and then a week later voted on another one with
+the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+extended by a week (always assuming you are on the winning side).
+
+:::
+
 :::info Staked tokens can be used in governance
 
 While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
@@ -501,6 +518,16 @@ If you are staking directly and not through a nomination pool, you can use bonde
 Note that if you are voting with conviction, your tokens will have a democracy lock in addition to
 the staking lock. For more information about locks, see
 [this page](./learn-accounts.md/#unlocking-locks).
+
+Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
+after a referendum ends, provided you voted with the winning side. In the case of delegations, the
+unlocking period countdown begins after the account undelegates. There can be different scenarios:
+
+- if the account delegated votes to one delegate, then after undelegating, there will be one
+  unlocking period with length dependent on the conviction multiplier.
+- if the account delegated votes to different delegates using different convictions, then after
+  undelegating those delegates, there will be different unlocking periods with lengths dependent on
+  the conviction multipliers.
 
 :::
 
@@ -578,7 +605,8 @@ referendum.
 ### Whitelisting
 
 Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
-execute with Root-level privileges for calls that have been approved by the Fellowship.
+execute with Root-level privileges for calls that have been approved by the Fellowship (currently
+only level-three fellows and above can vote for whitelist calls).
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet

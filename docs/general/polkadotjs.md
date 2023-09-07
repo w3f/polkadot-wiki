@@ -54,22 +54,23 @@ can try Parity Signer (aka Polkadot Vault).
 ## Polkadot-JS Extension
 
 The [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/) is not a wallet _per se_
-but an account management tool. It allows you to create accounts and import accounts from
+but an account management tool. It allows you to create accounts and also import accounts from
 [**Ledger**](./ledger.md) devices or Parity Signer, allowing the signing of
 [**extrinsics**](../learn/learn-extrinsics.md) using these accounts. It also allows you export
-existing accounts and restore lost accounts (given you have the information to restore them).
+existing accounts and restore accounts (given you have the required information to restore them).
 
-The extension is not made for users to interact with on-chain functions as one would find through a
-wallet app, i.e. it does not allow you to transact or do anything else other than adding and
-managing accounts. However, it also provides a simple interface for interacting with
+The extension is a robust key storage tool, i.e. even if you clear the cache of your browser your
+accounts will be retained. The extension will recognize any websites that have been flagged for
+malicious activity. For additional security, the extension will always ask if you want a specific
+website to access the account information on it.
+
+The extension does not let users interact directly with on-chain functions as one would find on a
+wallet app like Metamask, i.e. it does not allow you to transact or do anything else other than
+adding and managing accounts. However, it provides a simple interface for interacting with
 extension-compliant dApps such as the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
-and the [**Polkadot Staking Dashboard**](https://staking.polkadot.network/#/overview).
-
-The extension is a robust key-storage tool, i.e. if you clear the cache of your browser your
-accounts will be kept. This does not happen if you added an account directly to the Polkadot-JS UI.
-Also, the extension recognizes websites that have been flagged for malicious activity. Another
-security note, the extension will always ask you if you want a specific website to access the
-account information in it.
+and the [**Polkadot Staking Dashboard**](https://staking.polkadot.network/#/overview). Check
+[wallets and extensions](./wallets-and-extensions.md) page for wallets that are capable of
+transacting on-chain directly.
 
 :::info Metadata Updates
 
