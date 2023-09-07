@@ -9,8 +9,8 @@ slug: ../learn-account-abstraction
 
 ## Your Keys, Your Responsibility
 
-Account abstraction addresses the challenges associated with managing cryptographic keys that on
-blockchains represent accounts and, more generally, your digital identity. In Web3, you digitally
+Account abstraction addresses the challenges of managing cryptographic keys representing accounts on
+blockchains and, more generally, your digital identity. In Web3, you digitally
 sign any transaction or, more generally, any message using your private key. Data are recorded on a
 public ledger (blockchain) whose multiple copies of it are stored in computers participating in a
 P2P network. Assuming the network is sufficiently decentralized (meaning that those computers do not
