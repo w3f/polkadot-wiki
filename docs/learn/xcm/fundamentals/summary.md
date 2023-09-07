@@ -2,7 +2,7 @@
 id: learn-xcm-docs-fundamentals-summary
 title: Fundamentals
 sidebar_label: Summary
-description: Learn about XCM fundamentals.
+description: Summary of the Chapter.
 keywords: [xcm, cross-consensus messaging]
 slug: ../fundamentals-summary
 ---

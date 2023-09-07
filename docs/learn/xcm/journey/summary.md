@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-summary
 title: A Journey through XCM
 sidebar_label: Summary
-description: A Journey through XCM.
+description: Summary of the Chapter.
 keywords: [xcm, cross-consensus messaging]
 slug: ../journey-summary
 ---

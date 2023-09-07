@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-fees
 title: Fee Handling
 sidebar_label: Fee Handling
-description: Fee Handling.
+description: How Fees for XCM Transfers are Handled.
 keywords: [xcm, cross-consensus messaging, transfers, fees]
 slug: ../journey-fees
 ---

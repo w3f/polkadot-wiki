@@ -1,17 +1,17 @@
 ---
 id: learn-xcm-docs-config-deep-dive
-title: Config Deep Dive
-sidebar_label: Config Deep Dive
-description: Config Deep Dive.
+title: Executor Configuration
+sidebar_label: Executor Configuration
+description: Deep Dive into the Configuration of the XCM-Executor.
 keywords: [xcm, cross-consensus messaging, config]
 slug: ../config-deep-dive
 ---
 
 # Executor Config
 
-As previously mentioned, the xcm-executor is a Cross-Consensus Virtual Machine(XCVM) implementation.
-It provides an opinionated interpretation and execution of XCMs. Each chain that uses the
-xcm-executor, can configure it for their use case. In this chapter we will go over this
+As previously mentioned, the xcm-executor is a Cross-Consensus Virtual Machine (XCVM)
+implementation. It provides an opinionated interpretation and execution of XCMs. Each chain that
+uses the xcm-executor, can configure it for their use case. In this chapter we will go over this
 configuration, explain each config item and give some examples of the tools and types that can be
 used to configure these items.
 

@@ -2,7 +2,7 @@
 id: learn-xcm-docs-transfers-reserve
 title: Reserve-backed Transfers
 sidebar_label: Reserve-backed Transfers
-description: Reserve-backed Transfers.
+description: "Reserve-backed Transfers: Third-party Reserve to store Assets."
 keywords: [xcm, cross-consensus messaging, transfers, reserve]
 slug: ../transfers-reserve
 ---

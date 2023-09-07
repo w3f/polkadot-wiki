@@ -452,11 +452,11 @@ module.exports = {
             {
               type: "category",
               label: "A Journey through XCM",
-              description: "A practical introduction to the XCM features",
+              description: "A Practical Introduction to the XCM Features",
               link: {
                 type: 'generated-index',
                 title: "A Journey through XCM",
-                description: "A practical introduction to the XCM features.",
+                description: "A Practical Introduction to the XCM Features.",
                 slug: '/learn/xcm/journey',
               },
               items: [
@@ -464,7 +464,7 @@ module.exports = {
                 {
                   type: "category",
                   label: "Transfers",
-                  description: "A Journey through XCM.",
+                  description: "Transferring Assets between Consensus Systems with XCM.",
                   link: {
                     type: 'generated-index',
                     title: "Transfers",

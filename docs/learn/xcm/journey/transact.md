@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-transact
 title: Transact
 sidebar_label: "Transact: A General Solution"
-description: "Transact: A General Solution."
+description: "The Transact Instruction to Execute XCM Calls."
 keywords: [xcm, cross-consensus messaging, transact]
 slug: ../journey-transact
 ---

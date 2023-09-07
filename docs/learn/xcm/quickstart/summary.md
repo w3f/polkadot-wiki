@@ -2,7 +2,7 @@
 id: learn-xcm-docs-quickstart-summary
 title: Quickstart
 sidebar_label: Summary
-description: Start Diving into XCM.
+description: Summary of the Chapter.
 keywords: [xcm, cross-consensus messaging]
 slug: ../quickstart-summary
 ---

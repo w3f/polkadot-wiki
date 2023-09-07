@@ -2,7 +2,7 @@
 id: learn-xcm-docs-testing
 title: Testing
 sidebar_label: Testing
-description: Testing.
+description: Testing XCM-powered Solutions.
 keywords: [xcm, cross-consensus messaging, config]
 slug: ./testing
 ---

@@ -2,7 +2,7 @@
 id: learn-xcm-docs-transfers-teleport
 title: Asset Teleportation
 sidebar_label: Asset Teleportation
-description: Asset Teleportation.
+description: "Teleportation: Sending Assets Across Chains."
 keywords: [xcm, cross-consensus messaging, transfers, teleport]
 slug: ../transfers-teleport
 ---
