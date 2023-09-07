@@ -54,7 +54,7 @@ Both chains are built with Cosmos SDK and therefore are a part of the
 [Cosmos](learn-comparisons-cosmos.md) ecosystem. Due to specifics of the Cosmos architecture,
 interoperability of Binance Smart Chain is based on bridges. This means all validators of both
 chains are also bridge operators, therefore the security of the system relies on trusting
-validators. At the moment, there are 21 Binance Smart Chain validator nodes.
+validators. At the moment, there are 29 active Binance Smart Chain validator nodes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has an entirely different purpose, as
 it was built to connect and secure unique blockchains. It is a protocol on which single blockchains
