@@ -1,10 +1,10 @@
 ---
-id: learn-DOT-inflation
-title: DOT Inflation
-sidebar_label: DOT Inflation
-description: Tokenomics of Polkadot's Native Token DOT.
-keywords: [token, DOT, inflation]
-slug: ../learn-DOT-inflation
+id: learn-inflation
+title: Token Inflation
+sidebar_label: Token Inflation
+description: Explanation of Token's Inflation in the Polkadot Ecosystem.
+keywords: [token, DOT, KSM, inflation]
+slug: ../learn-inflation
 ---
 
 import RPC from "./../../components/RPC-Connection";

@@ -182,7 +182,7 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
-                "learn/learn-DOT-inflation",
+                "learn/learn-inflation",
                 "learn/learn-teleport",
               ],
             },
