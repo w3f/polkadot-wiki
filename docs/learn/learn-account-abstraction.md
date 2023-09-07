@@ -36,7 +36,7 @@ and abstract without the direct need for smart contracts.
 
 ## Account Abstraction in Polkadot
 
-While the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) doesn't have a single pallet
+While the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) does not have a single pallet
 (module) for complete account abstraction, it incorporates various pallets that collectively achieve
 similar functionalities. These include:
 
@@ -57,3 +57,8 @@ Additionally, developers have the flexibility to design their own rules for abst
 Adopting a generic design is crucial in scaling Web3 technologies. Abstraction and generalization
 like account abstraction are crucial steps towards improving user experience and security in
 blockchain adoption.
+
+## Further Readings
+
+- [Hackernoon Article](https://hackernoon.com/abstracting-away-account-abstraction-on-polkadot) by
+  [Bader Youssef](../general/contributors.md#bader-youssef)
