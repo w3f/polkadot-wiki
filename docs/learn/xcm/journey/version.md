@@ -1,8 +1,8 @@
 ---
 id: learn-xcm-docs-journey-version
-title: XCM Version
-sidebar_label: XCM Version
-description: XCM Version.
+title: Version Subscription
+sidebar_label: Version Subscription
+description: Get Notified about XCM Version Updates.
 keywords: [xcm, cross-consensus messaging, version]
 slug: ../journey-version
 ---

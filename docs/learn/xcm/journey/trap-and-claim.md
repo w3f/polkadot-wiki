@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-assets
 title: Trap and Claim Assets
 sidebar_label: Trap and Claim Assets
-description: Trap and Claim Assets.
+description: Instructions to Trap and Claim Assets.
 keywords: [xcm, cross-consensus messaging, trap, claim, assets]
 slug: ../journey-assets
 ---

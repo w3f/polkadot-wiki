@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-expectations
 title: Expectations
 sidebar_label: Expectations
-description: Expectations.
+description: Expect Instructions to Check if a Condition is Valid.
 keywords: [xcm, cross-consensus messaging, expectations]
 slug: ../journey-expectations
 ---

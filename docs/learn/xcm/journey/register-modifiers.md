@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-register
 title: Register Modifiers
 sidebar_label: More Register Modifiers
-description: Register Modifiers.
+description: More Instructions to Change the XCVM Registers.
 keywords: [xcm, cross-consensus messaging, register]
 slug: ../journey-register
 ---

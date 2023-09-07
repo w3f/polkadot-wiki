@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-queries
 title: Queries
 sidebar_label: Queries
-description: Queries
+description: Query Information from another Consensus System.
 keywords: [xcm, cross-consensus messaging, queries]
 slug: ../journey-queries
 ---

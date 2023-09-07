@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-locks
 title: Locks
 sidebar_label: Locks
-description: Locks.
+description: Restrict Transfer or Withdrawal of Assets.
 keywords: [xcm, cross-consensus messaging, locks]
 slug: ../../journey-locks
 ---

@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-channels
 title: Channels and Bridges
 sidebar_label: Channels and Bridges
-description: Channels and Bridges.
+description: Establishment of HRMP Channels between Parachains.
 keywords: [xcm, cross-consensus messaging, channels, bridges]
 slug: ../journey-channels
 ---

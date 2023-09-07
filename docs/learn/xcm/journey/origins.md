@@ -2,7 +2,7 @@
 id: learn-xcm-docs-journey-origin
 title: Origin Manipulation
 sidebar_label: Origin Manipulation
-description: Origin Manipulation.
+description: Manipulating the Origin of XCM.
 keywords: [xcm, cross-consensus messaging, origin]
 slug: ../journey-origin
 ---
