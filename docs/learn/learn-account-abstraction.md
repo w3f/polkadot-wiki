@@ -11,11 +11,9 @@ slug: ../learn-account-abstraction
 
 Account abstraction addresses the challenges of managing cryptographic keys representing accounts on
 blockchains and, more generally, your digital identity. In Web3, you digitally
-sign any transaction or, more generally, any message using your private key. Data are recorded on a
+sign any transaction or, more generally, any message using your private key. Data is recorded on a
 public ledger (blockchain) whose multiple copies of it are stored in computers participating in a
-P2P network. Assuming the network is sufficiently decentralized (meaning that those computers do not
-belong to a few operators), those computers do not own your data, you do since you can verify you
-signed them with your key.
+P2P network.
 
 While they grant users control and ownership, losing keys results in a loss of digital assets and a
 loss and fragmentation of your digital identity since you will need to create a new account with a
