@@ -15,9 +15,8 @@ sign any transaction or, more generally, any message using your private key. Dat
 public ledger (blockchain) whose multiple copies of it are stored in computers participating in a
 P2P network.
 
-While they grant users control and ownership, losing keys results in a loss of digital assets and a
-loss and fragmentation of your digital identity since you will need to create a new account with a
-new key after losing a key. This poses a hurdle for both users and developers regarding security and
+While the account keys grant users control and ownership, losing them results in losing access to digital assets and fragmentation of your digital identity since you will need to create a new account with a
+new set of keys. This poses a hurdle for both users and developers regarding security and
 adoption.
 
 ## Definition of Account Abstraction
