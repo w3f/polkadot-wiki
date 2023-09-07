@@ -10,28 +10,35 @@ slug: ../learn-account-abstraction
 ## Your Keys, Your Responsibility
 
 Account abstraction addresses the challenges of managing cryptographic keys representing accounts on
-blockchains and, more generally, your digital identity. In Web3, you digitally
-sign any transaction or, more generally, any message using your private key. Data is recorded on a
-public ledger (blockchain) whose multiple copies of it are stored in computers participating in a
-P2P network.
+blockchains and, more generally, your digital identity. In Web3, you digitally sign any transaction
+or, more generally, any message using your private key. Data is recorded on a public ledger (usually
+blockchain-based) whose multiple copies of it are stored in computers participating in a P2P
+network.
 
-While the account keys grant users control and ownership, losing them results in losing access to digital assets and fragmentation of your digital identity since you will need to create a new account with a
-new set of keys. This poses a hurdle for both users and developers regarding security and
-adoption.
+While the account private keys grant users control and ownership, losing them results in losing
+access to digital assets and fragmentation of your digital identity since you will need to create a
+new account with a new set of keys. This poses a hurdle for both users and developers regarding
+security and adoption.
 
 ## Definition of Account Abstraction
 
-Account abstraction introduces a layer of on-chain logic that controls an account, typically in the
-form of a smart contract. This abstracts some key management complexities, reducing the likelihood
-of compromise. It allows for dynamic changes in an account’s operation without altering the core
-protocol.
-
 The term _abstraction_ refers to separating the user experience from the private key, enabling a
-piece of code to dictate account behavior. In Ethereum, this is achieved through smart contracts,
-while the highly generic codebase of Polkadot's architecture makes accounts natively more flexible
-and abstract without the direct need for smart contracts.
+piece of code to dictate account behavior. This allows for increased flexibility of accounts that
+originally were not engineered to be flexible, and decreased chances of key mismanagement.
+
+Account abstraction introduces a layer of on-chain logic that controls an account, typically in the
+form of a smart contract. Without a smart contract abstracting accounts would require changes in the
+core architecture of the protocol.
+
+The highly generic codebase of Polkadot's architecture makes accounts natively flexible and abstract
+without the direct need for smart contracts.
 
 ## Account Abstraction in Polkadot
+
+In Substrate functions come from Origins. For example OpenGov in Polkadot has diferent origins with
+different privileges such as allocating treasury funds, etc. Custom origins can be created while
+designing you own chain using the Polkadot SDK. Accounts happen to be one variant of Substrate
+origin.
 
 While the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) does not have a single pallet
 (module) for complete account abstraction, it incorporates various pallets that collectively achieve
@@ -58,4 +65,7 @@ blockchain adoption.
 ## Further Readings
 
 - [Hackernoon Article](https://hackernoon.com/abstracting-away-account-abstraction-on-polkadot) by
-  [Bader Youssef](../general/contributors.md#bader-youssef)
+  [Bader Youssef](../general/contributors.md#bader-youssef) - "Abstracting Away Account Abstraction
+  on Polkadot"
+- [Parity Blog Post](https://www.parity.io/blog/building-a-hot-wallet-with-substrate-primitives/) by
+  Joe Petrowski - "Building a Hot Wallet with Substrate Primitives"
