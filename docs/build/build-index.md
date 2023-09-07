@@ -33,8 +33,6 @@ the wiki is divided into the following parts:
   for generating and inspecting key pairs.
 - [JS tools](https://github.com/polkadot-js/tools) - TypeScript tools for offline signing of
   transactions, RPC calls, and more.
-- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Polkadot Standards Proposals (PSPs) are
-  standards for the Polkadot ecosystem.
 - [Examples](build-open-source.md) - Example projects sourced from the community -- see what others
   are building.
 
