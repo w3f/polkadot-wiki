@@ -1,5 +1,5 @@
 ---
-id: learn-async
+id: learn-async-backing
 title: Asynchronous Backing
 sidebar_label: Asynchronous Backing
 description: A brief overview of asynchronous backing, and how it affects Polkadot's scalability.
