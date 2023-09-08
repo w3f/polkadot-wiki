@@ -134,6 +134,9 @@ Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
 
 ## Agile Coretime Allocation
 
+In Polkadot 1.0 coretime is a fixed two-year period on one specific core. Here we remove this
+limitation and generalize coretime usage to meet different application needs.
+
 ### Split Coretime
 
 Owners of coretime can split or trade it. An application A1 can run on core C1 for a finite period
