@@ -36,7 +36,7 @@ core architecture of the protocol.
 The highly generic codebase of Polkadot's architecture makes accounts natively flexible and abstract
 without the direct need for smart contracts.
 
-## Account Abstraction in Polkadot
+## Origin Abstraction in Polkadot
 
 Adopting a generic design is crucial in scaling Web3 technologies. Abstraction and generalization of
 protocols are crucial towards improving user experience and security in blockchain adoption.
@@ -46,24 +46,43 @@ something. Because those functions are called from the outside of the blockchain
 Polkadot's terms any action that involves a dispatchable function is an
 [extrinsic](./learn-extrinsics.md). Extrinsics are calls coming from the _outside_ of the blockchain
 interface, that (if successfully executed) invoke some changes in the _inside_ of a blockchain, the
-blockchain's state.
+blockchain's state. An extrinsic is always directed to a specific function within a specific pallet
+(or module).
 
-In [Substrate](../general/glossary.md#substrate) functions are not necessarily called by accounts.
-Functions can be called by any origin. For example the Polkadot
-[OpenGov](./learn-polkadot-opengov.md) has different origins with different privileges such as
-allocating treasury funds, cancelling a referendum, etc. Custom origins can be created while
-designing your own chain using the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk).
-Accounts happen to be one variant of Substrate's possible origins.
+For example, the `balances.transferKeepAlive` extrinsic is directed to the `transferKeepAlive`
+function within the `balances` pallet. If successful, the execution of that function will transfer
+funds between two accounts changing the balances of those accounts and thus the chain state (as
+accounts hold some state within the blockchain).
+
+In [Substrate](../general/glossary.md#substrate)'s FRAME, functions are not necessarily called by
+accounts. Functions can be called by any origin, where origins are caller-personas associated with
+privilege levels. For example the Polkadot [OpenGov](./learn-polkadot-opengov.md) has different
+origins with different privileges such as allocating treasury funds, cancelling a referendum, etc.
+Neither of those origins are subservient to the concept of an account or assume anything about state
+or associated data. Custom origins can be created while designing your own chain using the
+[Polkadot SDK](https://github.com/paritytech/polkadot-sdk).
+
+**Accounts happen to be just one variant (or corner case) of Substrate's FRAME possible origins, the
+`frame_system::RawOrigin::Signed`.** In Substrate the concept of account is completely
+deprioritized. Substrate itself remains indifferent to an account's balance and nonce. While FRAME
+can support their presence, it fundamentally does not need to rely on them.
+
+On a lower level the [Cross-Consensus Messaging (XCM)](./learn-xcm-index) format provides a much
+powerful abstraction that allows calling personas which are so abstract to not necessarily have
+direct representation on the local chain within its FRAME Origin.
 
 ### Protocol-level Account Abstraction
 
-While the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) does not have a single pallet
-(module) for complete account abstraction, it incorporates various pallets that collectively achieve
-similar functionalities. These include:
+While the [Substrate FRAME system](https://docs.substrate.io/reference/frame-pallets/) does not have
+a single pallet (module) for complete account abstraction, it incorporates various pallets that
+collectively achieve similar functionalities. Polkadot's native account abstraction functionalities
+include:
 
+- [multi-signature accounts](./learn-account-multisig.md) to control an account using different ones
 - [proxy accounts](./learn-proxies.md) for role-based representation, and ownership representation
   through [pure proxies](./learn-proxies.md#anonymous-proxy-pure-proxy)
-- [multi-signature accounts](./learn-account-multisig.md) to control an account using different ones
+- [derivative accounts](./learn-account-advanced.md#derivation-paths) for using the same _parent_
+  private key on multiple _children_ accounts
 - account recovery mechanisms such as social recovery to help regain access to your key using
   trusted third-party accounts
 - [batching functionality](./learn-balance-transfers.md#batch-transfers) to submit multiple calls in
@@ -77,8 +96,8 @@ Additionally, developers have the flexibility to design their own rules for abst
 
 ### Smart-contract Level Account Abstraction
 
-Account abstraction can be implemented in parachains also with traditional smart-contracts through
-[ink!](../build/build-smart-contracts.md#ink).
+Account abstraction can be implemented in parachains also with traditional smart-contracts for
+example using the [ink!](../build/build-smart-contracts.md#ink) smart contract language.
 
 ## Further Readings
 
