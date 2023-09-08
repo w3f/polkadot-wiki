@@ -73,8 +73,6 @@ making, amassing an extensive network of over
 robust collaboration has earned KodaDot the
 [number one rank as a dapp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
 
-![kodadot.png](../assets/nft/kodadot.png)
-
 ### The Team Behind KodaDot
 
 KodaDot began as the first
