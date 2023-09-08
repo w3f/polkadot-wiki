@@ -7,6 +7,13 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
+:::info XCM Documentation
+
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
+
+:::
+
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
 communicate between consensus systems.
 
