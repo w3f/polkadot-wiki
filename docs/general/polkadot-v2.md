@@ -108,20 +108,6 @@ primary tasks: securing the network and providing secure message-passing capabil
 [System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay-chain
 tasks such as staking, governance, etc.
 
-### Agile Polkadot Representation
-
-Polkadot 1.0 was represented with the
-[relay-chain surrounded by parachains](./polkadot-v1.md#polkadots-representation). Following the new
-application-centric vision, Polkadot can be better represented using the figure below.
-
-![agile-polkadot](../assets/agile-polkadot.png)
-
-Polkadot should be an integrated system (big circle), a single computer on which many applications
-run (open circles). There are boundaries between business logic components of Polkadot (dashed
-lines). Those boundaries can enclose parachains or core contracts. Applications should be able to
-communicate with each other within and across those boundaries. Last but not least, like a laptop,
-knowing how Polkadot works must be optional for the users who just need it to use applications.
-
 ### XCM and Accords
 
 [XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstract over
@@ -137,20 +123,12 @@ undermined by one or more of those chains, and Polkadot guarantees faithful exec
 Accords will be specific to a particular function, and any chain that enters the accord will be held
 to it and will service that particular function. To lower the entry barrier, accords can be proposed
 permissionlessly, but because they are opt-in, the accord proposal will take effect until chains
-agree and sign up. Taking the [previous representation of Polkadot](#agile-polkadot-representation),
-if we look at Polkadot no more from the top but from the side, accords come off and provide a
-separate mechanism that overrules the local chain sovereignty, this is the **accord space**.
+agree and sign up.
 
-![agile-polkadot-accords](../assets/agile-polkadot-accords.png)
-
-The above figure shows two accords (white and green) between different logic components.
-
-Accords cannot exist on any system, and Polkadot is the only ecosystem where accords can properly
-exist because it is the only system having a homogenous security layer that also provides a specific
-state transition function for each of its logic components.
-
-This allows patterns of cooperation between multiple logic components (i.e., trans-applications)
-that would not be possible to achieve over bridges.
+Polkadot is the only ecosystem where accords can properly exist because it has an homogenous
+security layer that also provides a specific state transition function for each of its logic
+components. This allows patterns of cooperation between multiple logic components (i.e.,
+trans-applications) that would not be possible to achieve over bridges.
 
 Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
 
@@ -187,6 +165,9 @@ parachain). Ideally, core affinity (i.e., which application operates on which co
 
 ![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
 
+**Here we remove the assumption that each application owns a core, and instead that all cores are a
+resource to be consumed and used as needed by all applications in the ecosystem.**
+
 ### Compressed Cores
 
 The same core can secure multiple blocks of the same application simultaneously. Combining multiple
@@ -206,8 +187,8 @@ application at different times to share costs at the expense of higher latency.
 ## Agile Composable Computer
 
 All the above options of agile [coretime allocation](#agile-coretime-allocation) and
-[core usage](#agile-core-usage) can be composable and enable the creation of an agile global
-computing system.
+[core usage](#agile-core-usage) can be composable and enable the creation of an agile decentralized
+global computing system.
 
 ![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
 
