@@ -4,7 +4,7 @@ title: Asynchronous Backing
 sidebar_label: Asynchronous Backing
 description: A brief overview of asynchronous backing, and how it affects Polkadot's scalability.
 keywords: [parachains, slots, backing, parablock]
-slug: ../learn-async
+slug: ../learn-async-backing
 ---
 
 Asynchronous backing is a feature that introduces
