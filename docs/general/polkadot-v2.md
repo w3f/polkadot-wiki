@@ -1,11 +1,11 @@
 ---
-id: polkadot-uc
-title: The Polkadot Ubiquitous Computer
-sidebar_label: Ubiquitous Computer
+id: polkadot-v2
+title: Potential Changes to Polkadot
+sidebar_label: Potential Changes to Polkadot
 description: Polkadot as a Decentralized and Secure Ubiquitous Computer.
 keywords:
   [polkadot vison, polkadot 2.0, Decentralization, ubiquitous computer, coretime, blockspace]
-slug: ../polkadot-uc
+slug: ../polkadot-v2
 ---
 
 :::info
@@ -36,97 +36,16 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   through [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved
   on-demand to multiple chains at different periods (see
   [parathreads](../learn/learn-parathreads.md)). At the time of writing (mid 2023), on Polkadot,
-  there are around 50 cores independently operating in parallel. Prediction models show that cores
-  can increase to 500-1000 in the following few years.
-
-As a computational resource, Polkadot can be described as a traditional CPU, and at the time of
-writing it has the following benchmarking features:
-
-- Bandwidth: ~1MB/s
-- Compute: Geekbench 5 SC score ~380
-- Latency: 6s (time between two consecutive tasks)
-
-These ratings will likely increase over time.
+  there are around 50 cores independently operating in parallel.
 
 ## Contracts on Cores
 
-If we follow this line of Polkadot being a global ubiquitous supercomputer, cores can be used to run
-applications that can be deployed using:
-
-- parachains and
-- smart contracts, avoiding the need for custom chain infrastructure. This would be effective for
-  contracts with constrained state and I/O (i.e., 2.5 MB) and heavy computing requirements. Such
-  contracts will also benefit from a secure and broad message-passing environment.
+If we follow this line of Polkadot being a a global supercomputer, cores can be used to run
+applications that can be deployed using parachains and core smart contracts, avoiding the need for
+custom chain infrastructure.
 
 From now _application_ will be used as a general term to describe anything that can use a Polkadot
-core to access secure, decentralized, and ubiquitous computation.
-
-## From Slot Auctions to Coretime Marketplace
-
-The end product of blockchains is [**Blockspace**](./polkadot-v1.md#polkadots-blockspace).
-Applications need to access Polkadot's blockspace, and the entry points to blockspace are the cores.
-Thus, applications will need to reserve some time on cores or **Coretime** to gain the right to
-access Polkadot's secure blockspace and interoperability for a finite period.
-
-Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
-that the procurement of those cores must be agile as well. The current slot auction mechanism is not
-agile, creates high entry barriers, and is designed for long-running single applications (i.e., the
-original Polkadot vision proposed in the whitepaper).
-
-We depart from the classic lease auctions and propose an agile marketplace for coretime where two
-Polkadot-native sale options of coretime are possible: **bulk** and **instantaneous**. This setup
-maximizes the agility of Polkadot and lets the market figure out the best solution needed for the
-applications to be successful.
-
-### Bulk Coretime Rental
-
-Bulk coretime rental (primary market) is a monthly sale of 4 weeks of coretime at a fixed price with
-a target of, e.g., 75% of the available cores. The price will change depending on the deviation from
-the target value, and unrented cores go to the instantaneous market. Special considerations might be
-necessary for pre-existing applications.
-
-Bulk coretime does not need to be directly deployed because it is an asset, more precisely, a
-non-fungible asset (unless it is for the same period). Coretime tokens are sold in a 4-week period
-and can be split into multiple NFTs of smaller periods. Coretime NFTs are sold and assigned by a
-broker system parachain to the applications now owning the NFTs, which must be consumed to allocate
-computation on a Polkadot core. The broker parachain records the price and the assignment, and the
-coretime can always be purchased the following month for the same assignment (i.e., same
-application) with a capped price change. This rent control allows long-running applications to have
-certainty and predictability about coretime costs (not possible with lease auctions). The process of
-assigning coretime is irreversible.
-
-In general, bulk coretime NFTs can be:
-
-- sold to one application (similar to the lease auctions in Polkadot 1.0, with the difference that
-  coretime in Polkadot 1.0 is not sold, but applications need to lock their DOT tokens)
-- sold to several applications taking turns on a core
-- placed on the instantaneous market
-- exposed and sold by a broker system parachains via [XCM](./learn-xcm-index) NFT interface to
-  Polkadot-powered applications that want to allow for these NFTs to be exchanged and traded on
-  their market.
-
-Bulk coretime pricing will be initialized through
-[Polkadot OpenGov](../learn/learn-polkadot-opengov.md) and will likely start low to minimize the
-entry barrier. Floor price, rent control, and right-of-first-refusal will give long-term guarantees
-on the price paid and core availability.
-
-### Instantaneous Coretime Rental
-
-Instantaneous coretime rental is the ongoing sale of coretime for immediate use at a spot price
-where an AMM regulates the price targeting 100% usage. Bulk coretime can be placed in this market.
-
-Instantaneous coretime is purchased by applications through collators to boost throughput and/or
-reduce latency with extra cores, and power more exotic [core contracts](#contracts-on-cores).
-
-[Cumulus](../build/build-parachains.md#cumulus) will make sure that coretime sales are adequately
-utilized and optimized automatically.
-
-### Coretime Revenues
-
-Revenues from coretime sales can be burnt, used to fund the Treasury, split between coretime
-providers (i.e., validators), or used for a mix of those options. The topic is currently under
-discussion. For more information, see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
-and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
+core to access secure and decentralized computation.
 
 ## Core Usage in Polkadot 1.0
 
@@ -152,6 +71,29 @@ We mentioned how the instantaneous coretime rental targets 100% usage, and how b
 monthly, maximizing agility and letting the market figure out the best solution for applications.
 The new vision of Polkadot will make the ecosystem even more agile and allow applications to tweak
 how often they produce blocks based on their needs.
+
+## From Slot Auctions to Coretime Marketplace
+
+The end product of blockchains is [**Blockspace**](./polkadot-v1.md#polkadots-blockspace).
+Applications need to access Polkadot's blockspace, and the entry points to blockspace are the cores.
+Thus, applications will need to reserve some time on cores or **Coretime** to gain the right to
+access Polkadot's secure blockspace and interoperability for a finite period.
+
+Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
+that the procurement of those cores must be agile as well.
+
+The slot auction mechanism is not agile, creates high entry barriers, and is designed for
+long-running single applications (i.e., the original Polkadot vision proposed in the whitepaper).
+
+We depart from the classic lease auctions and propose an agile marketplace for coretime, where
+essentially coretime becomes a commodity that can be tokenized and traded. This setup maximizes the
+agility of Polkadot and lets the market figure out the best solution needed for applications to be
+successful.
+
+Revenues from coretime sales can be burnt, used to fund the Treasury, split between coretime
+providers (i.e., validators), or used for a mix of those options. The topic is currently under
+discussion. For more information, see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
+and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
 
 ## Agile Coretime Allocation
 

@@ -23,7 +23,7 @@ module.exports = {
           },
           items: [
             "general/polkadot-v1",
-            "general/polkadot-uc",
+            "general/polkadot-v2",
           ],
         },
         {
