@@ -40,9 +40,9 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
 
 ## Contracts on Cores
 
-If we follow this line of Polkadot being a a global supercomputer, cores can be used to run
-applications that can be deployed using parachains and core smart contracts, avoiding the need for
-custom chain infrastructure.
+If we treat Polkadot as a global supercomputer, cores can be used to run applications that can be
+deployed using parachains and core smart contracts, avoiding the need for custom chain
+infrastructure.
 
 From now _application_ will be used as a general term to describe anything that can use a Polkadot
 core to access secure and decentralized computation.
@@ -59,18 +59,11 @@ one core formula).
 
 ![core-usage-dumb](../assets/core-usage-dumb.png)
 
-Core affinity (i.e., which application operates on which core) is unimportant (see below). Cores do
-not have any higher friendliness to one application than another.
+The above setup allowed a **simple and secure, sharded execution environment**.
 
-![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
-
-Ideally, blocks are produced when needed, and the system targets full block capacity lowering the
-probability of building blocks half full or, worse, empty.
-
-We mentioned how the instantaneous coretime rental targets 100% usage, and how bulk coretime is sold
-monthly, maximizing agility and letting the market figure out the best solution for applications.
-The new vision of Polkadot will make the ecosystem even more agile and allow applications to tweak
-how often they produce blocks based on their needs.
+However, to achieve full efficiency blocks must be produced when needed, and the system must target
+full block capacity lowering the probability of incentivizing validators to build blocks half full
+or, worse, empty.
 
 ## From Slot Auctions to Coretime Marketplace
 
@@ -79,78 +72,21 @@ Applications need to access Polkadot's blockspace, and the entry points to block
 Thus, applications will need to reserve some time on cores or **Coretime** to gain the right to
 access Polkadot's secure blockspace and interoperability for a finite period.
 
-Cores are agile and general: they can change what job they run as easily as a modern CPU. It follows
-that the procurement of those cores must be agile as well.
+Cores must be agile and general: they can change what job they run as easily as a modern CPU. It
+follows that the procurement of those cores must be agile as well.
 
 The slot auction mechanism is not agile, creates high entry barriers, and is designed for
 long-running single applications (i.e., the original Polkadot vision proposed in the whitepaper).
 
 We depart from the classic lease auctions and propose an agile marketplace for coretime, where
-essentially coretime becomes a commodity that can be tokenized and traded. This setup maximizes the
-agility of Polkadot and lets the market figure out the best solution needed for applications to be
-successful.
+essentially **coretime becomes a commodity that can be tokenized, sold and traded**. This setup
+maximizes the agility of Polkadot and lets the market figure out the best solution needed for
+applications to be successful.
 
 Revenues from coretime sales can be burnt, used to fund the Treasury, split between coretime
 providers (i.e., validators), or used for a mix of those options. The topic is currently under
 discussion. For more information, see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
 and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
-
-## Agile Coretime Allocation
-
-### Split Coretime
-
-Owners of coretime can split or trade it. An application A1 can run on core C1 for a finite period
-and then another application A2 can run on that core, or application A1 can continue running on
-another core C2. Some applications might stop running for some time and resume later on.
-
-![core-usage-agile-rangeSplit](../assets/core-usage-agile-rangeSplit.png)
-
-### Strided Coretime
-
-Ranges can be strided (i.e., applications can take turns on a core) to share costs or decrease block
-production rate, for example.
-
-![core-usage-agile-rangeStrided](../assets/core-usage-agile-rangeStrided.png)
-
-### Combined Coretime
-
-An application's task can be assigned to multiple cores simultaneously. Some applications can have a
-permanent core assignment and an intermittent one, for example, in a period of high demand.
-
-![core-usage-agile-combined](../assets/core-usage-agile-combined.png)
-
-Coretime on additional cores can be bought on the instantaneous market to send multiple blocks to
-multiple cores at the same time slot to reduce latency.
-
-## Agile Core Usage
-
-### Compressed Cores
-
-The same core can secure multiple blocks of the same application simultaneously. Combining multiple
-application blocks in the same relay chain core will reduce latency at the expense of increased
-bandwidth for the fixed price of opening and closing a block.
-
-![core-usage-agile-compressed](../assets/core-usage-agile-compressed.png)
-
-### Shared Cores
-
-Sharing cores with other applications to share costs but with no reduction in latency. Note that
-this is different from the [split coretime](#split-coretime) where one core is used by multiple
-application at different times to share costs at the expense of higher latency.
-
-![core-usage-agile-shared](../assets/core-usage-agile-shared.png)
-
-## Agile Ubiquitous Computer
-
-All the above options of agile [coretime allocation](#agile-coretime-allocation) and
-[core usage](#agile-core-usage) can be composable and enable the creation of a highly agile
-ubiquitous computing system.
-
-![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
-
-Thus, this new vision is focused on Polkadot’s resource, which is secure, flexible and available
-blockspace that can be accessed by reserving some time on a core. Agility in allocation of coretime
-and use of cores allow for maximized network efficiency and blockspace usage.
 
 ## From Chain- to Application-centricity
 
@@ -165,11 +101,10 @@ in chain-centric application and UX.
 
 The true innovation of Polkadot is about leveraging the unique value proposition offered by
 different chains and using those chains’ collaborative potential to build inter-chain applications
-to solve real-world problems. Those applications will thus need to span across chains and have a
-seamless UX. Users will not need to understand how messages are delivered.
+to solve real-world problems. Those applications will thus need to span across chains.
 
-Increasingly fewer tasks will be handled by the relay-chain that will focus efforts only on primary
-tasks: securing the network and providing secure message-passing capability.
+**Increasingly fewer tasks will be handled by the relay-chain** that will focus efforts only on
+primary tasks: securing the network and providing secure message-passing capability.
 [System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay-chain
 tasks such as staking, governance, etc.
 
@@ -219,31 +154,76 @@ that would not be possible to achieve over bridges.
 
 Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
 
-#### Accords Use-cases
+## Agile Coretime Allocation
 
-In Polkadot 1.0, if two parachains want to have **asset interactions**, they must go through a third
-chain, the asset hub chain. Accords remove that third path, they exist within the general process
-space, scheduled at the same core at the same time as the parachain but are not part of the
-parachain's business logic.
+### Split Coretime
 
-Like embassies have their law that is in line with the country they are embassies of, but they sit
-physically in the local country; accords are business logic that is foreign to the member parachains
-but agreed upon and exist locally in those parachains.
+Owners of coretime can split or trade it. An application A1 can run on core C1 for a finite period
+and then another application A2 can run on that core, or application A1 can continue running on
+another core C2. Some applications might stop running for some time and resume later on.
 
-Accords can also allow **multicast XCM**, the ability to send a single message across multiple
-chains in an ordered fashion, or having a **trustless multi-chain DEX** across different chains that
-can be used locally on those chains without having a bidirectional channel open.
+![core-usage-agile-rangeSplit](../assets/core-usage-agile-rangeSplit.png)
+
+### Strided Coretime
+
+Ranges can be strided (i.e., applications can take turns on a core) to share costs or decrease block
+production rate, for example.
+
+![core-usage-agile-rangeStrided](../assets/core-usage-agile-rangeStrided.png)
+
+### Combined Coretime
+
+An application's task can be assigned to multiple cores simultaneously. Some applications can have a
+permanent core assignment and an intermittent one, for example, in a period of high demand to send
+multiple blocks to multiple cores at the same time slot to reduce latency.
+
+![core-usage-agile-combined](../assets/core-usage-agile-combined.png)
+
+## Agile Core Usage
+
+In Polkadot 1.0 the one core is assigned to one application (in this case equivalent to a
+parachain). Ideally, core affinity (i.e., which application operates on which core) is unimportant
+(see below). Cores do not have any higher friendliness to one application than another.
+
+![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
+
+### Compressed Cores
+
+The same core can secure multiple blocks of the same application simultaneously. Combining multiple
+application blocks in the same relay chain core will reduce latency at the expense of increased
+bandwidth for the fixed price of opening and closing a block.
+
+![core-usage-agile-compressed](../assets/core-usage-agile-compressed.png)
+
+### Shared Cores
+
+Sharing cores with other applications to share costs but with no reduction in latency. Note that
+this is different from the [split coretime](#split-coretime) where one core is used by multiple
+application at different times to share costs at the expense of higher latency.
+
+![core-usage-agile-shared](../assets/core-usage-agile-shared.png)
+
+## Agile Composable Computer
+
+All the above options of agile [coretime allocation](#agile-coretime-allocation) and
+[core usage](#agile-core-usage) can be composable and enable the creation of an agile global
+computing system.
+
+![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
+
+Thus, this new vision is focused on Polkadot’s resource, which is secure, flexible and available
+blockspace that can be accessed by reserving some time on a core. Agility in allocation of coretime
+and use of cores allow for maximized network efficiency and blockspace usage.
 
 ## Polkadot's Resilience
 
 Systems that have yet to be engineered with decentralization, cryptography, and game theory in mind,
-are breakable and prone to cyber-attacks. This costs people time, stress, energy, and money.
-Polkadot is basing its resilience on different pillars:
+are breakable and prone to cyber-attacks. Polkadot is basing its resilience on different pillars:
 
-- **Preponderance of light-client usage:** Centralized RPCs are common but susceptible to attack and
-  not trustless entry points to using blockchain-based applications. Light client usage on Polkadot
-  is possible through [Smoldot](../build/build-substrate.md#how-to-use-substrate-connect), and it
-  will eventually be practical and preferable.
+- **Preponderance of light-client usage:** Centralized RPC servers are common but susceptible to
+  attack and not trustless decentralized entry points to using blockchain-based applications. Light
+  client usage on Polkadot is possible through
+  [Smoldot](../build/build-substrate.md#how-to-use-substrate-connect).
 - **Zero-Knowledge (ZK) Primitives:** They can have a problematic effect on censorship and
   centralization as having a big state transition function boiled down to a single proof of correct
   execution is not currently a scaling solution to build resilient systems. However, a library of
@@ -267,13 +247,4 @@ Polkadot is basing its resilience on different pillars:
   directs wealth for spending treasury funds, salaries, and grants. Another crucial way of
   decentralizing the network is ensuring experts on which the maintenance of the system relies upon
   are incentivized and recruited over time by the Polkadot network and not by organizations within
-  the Polkadot ecosystem. There are important elements that can be improved by having many
-  individuals involved, such as oraclisation and administrative affairs.
-
-## So, Why Polkadot?
-
-Polkadot is not here for one specific application but to provide a platform of means of deploying
-multiple applications within the same environment, and having those applications be able to utilize
-each other for the overall benefit of the users. Resiliency is about being able to adapt to changes
-in the world's alternatives of doing similar things or existential threats from organizations that
-are not in line with a trust-free world.
+  the Polkadot ecosystem.
