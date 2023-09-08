@@ -10,10 +10,10 @@ slug: ../learn-account-abstraction
 ## Your Keys, Your Responsibility
 
 Account abstraction addresses the challenges of managing cryptographic keys representing accounts on
-blockchains and, more generally, your digital identity. In Web3, you digitally sign any transaction
-or, more generally, any message using your private key. Data is recorded on a public ledger (usually
-blockchain-based) whose multiple copies of it are stored in computers participating in a P2P
-network.
+blockchains. Accounts on blockchains represent entities, from an individual's identity, to an
+institution. In Web3, you digitally sign any transaction or, more generally, any message using your
+private key. Data is recorded on a public ledger (usually blockchain-based) whose multiple copies of
+it are stored in computers participating in a P2P network.
 
 While the account private keys grant users control and ownership, losing them results in losing
 access to digital assets and fragmentation of your digital identity since you will need to create a
@@ -26,6 +26,9 @@ The term _abstraction_ refers to separating the user experience from the private
 piece of code to dictate account behavior. This allows for increased flexibility of accounts that
 originally were not engineered to be flexible, and decreased chances of key mismanagement.
 
+Users are still responsible for their keys, but through account abstraction they can take
+precautions to ensure they do not end up losing their accounts.
+
 Account abstraction introduces a layer of on-chain logic that controls an account, typically in the
 form of a smart contract. Without a smart contract abstracting accounts would require changes in the
 core architecture of the protocol.
@@ -35,10 +38,24 @@ without the direct need for smart contracts.
 
 ## Account Abstraction in Polkadot
 
-In Substrate functions come from Origins. For example OpenGov in Polkadot has diferent origins with
-different privileges such as allocating treasury funds, etc. Custom origins can be created while
-designing you own chain using the Polkadot SDK. Accounts happen to be one variant of Substrate
-origin.
+Adopting a generic design is crucial in scaling Web3 technologies. Abstraction and generalization of
+protocols are crucial towards improving user experience and security in blockchain adoption.
+
+When users interact with a blockchain they essentially call _dispatchable_ functions to do
+something. Because those functions are called from the outside of the blockchain interface, in
+Polkadot's terms any action that involves a dispatchable function is an
+[extrinsic](./learn-extrinsics.md). Extrinsics are calls coming from the _outside_ of the blockchain
+interface, that (if successfully executed) invoke some changes in the _inside_ of a blockchain, the
+blockchain's state.
+
+In [Substrate](../general/glossary.md#substrate) functions are not necessarily called by accounts.
+Functions can be called by any origin. For example the Polkadot
+[OpenGov](./learn-polkadot-opengov.md) has different origins with different privileges such as
+allocating treasury funds, cancelling a referendum, etc. Custom origins can be created while
+designing your own chain using the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk).
+Accounts happen to be one variant of Substrate's possible origins.
+
+### Protocol-level Account Abstraction
 
 While the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) does not have a single pallet
 (module) for complete account abstraction, it incorporates various pallets that collectively achieve
@@ -58,9 +75,10 @@ account of pure proxies to keep the same multi-signature account when signatorie
 
 Additionally, developers have the flexibility to design their own rules for abstraction.
 
-Adopting a generic design is crucial in scaling Web3 technologies. Abstraction and generalization
-like account abstraction are crucial steps towards improving user experience and security in
-blockchain adoption.
+### Smart-contract Level Account Abstraction
+
+Account abstraction can be implemented in parachains also with traditional smart-contracts through
+[ink!](../build/build-smart-contracts.md#ink).
 
 ## Further Readings
 
