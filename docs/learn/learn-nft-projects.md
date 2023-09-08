@@ -73,6 +73,11 @@ making, amassing an extensive network of over
 robust collaboration has earned KodaDot the
 [number one rank as a dapp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
 
+See below a video tutorial about how to mint your NFT on [the Polkadot Asset Hub](#asset-hub) using
+KodaDot.
+
+<iframe width="560" height="315" src="https://youtube.com/embed/SKdx4pTgL04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+
 ### The Team Behind KodaDot
 
 KodaDot began as the first
