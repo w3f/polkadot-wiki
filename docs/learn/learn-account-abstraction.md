@@ -68,8 +68,8 @@ deprioritized. Substrate itself remains indifferent to an account's balance and 
 can support their presence, it fundamentally does not need to rely on them.
 
 On a lower level the [Cross-Consensus Messaging (XCM)](./learn-xcm-index) format provides a much
-powerful abstraction that allows calling personas which are so abstract to not necessarily have
-direct representation on the local chain within its FRAME Origin.
+powerful origin abstraction that allows calling personas which are so abstract to not necessarily
+have direct representation on the local chain within its FRAME system origin.
 
 ### Protocol-level Account Abstraction
 
@@ -90,9 +90,16 @@ include:
 - payments with non-native tokens
 
 All the above can be used together, meaning that, for example, you can create a multi-signature
-account of pure proxies to keep the same multi-signature account when signatories change.
+account of pure proxies to keep the same multi-signature account when signatories change. A more
+complex combination to build a hot wallet can be found in this
+[blog post](https://www.parity.io/blog/building-a-hot-wallet-with-substrate-primitives/).
 
 Additionally, developers have the flexibility to design their own rules for abstraction.
+
+In Substrate FRAME system, accounts are represented by Accounts IDs. Such unique identifiers can be
+any 32-byte number and are no limited to be just a public key (with corresponding private key). For
+example, multi-signature accounts do not have a private key and their Account ID is built hashing
+information from signatories public keys and the multisig threshold.
 
 ### Smart-contract Level Account Abstraction
 
