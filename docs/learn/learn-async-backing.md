@@ -24,35 +24,36 @@ with the stages of parablock validation, which you may [read here](./learn-parac
 
 :::
 
-Asynchronous backing enables logical pipelining over the parablock 
+Asynchronous backing enables logical pipelining over the parablock
 [**generation**](https://wiki.polkadot.network/docs/learn-parachains-protocol#collators),
 [**backing**](https://wiki.polkadot.network/docs/learn-parachains-protocol#parachain-phase), and
 [**inclusion**](https://wiki.polkadot.network/docs/learn-parachains-protocol#inclusion-pipeline)
-processes. A parablock may be at different stages, but multiple blocks should be able to process them
-simultaneously (in parallel) if needed. Most notably, parablock N + 1 can be generated and backed while its predecessor, parablock N, is undergoing inclusion on the relay chain.
-Processes can occur while their ancestors are included on the relay chain.
+processes. A parablock may be at different stages, but multiple parablocks can be processed
+simultaneously (in parallel) if needed. Most notably, parablock N + 1 can be generated and backed
+while its predecessor, parablock N, is undergoing inclusion on the relay chain. Processes can occur
+while their ancestors are included on the relay chain.
 
 This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
 estimated ~3-5x more transactions/data while speeding up parachain block times from 12 to 6 seconds.
-In short, Polkadot with asynchronous backing will deliver an estimated ~6-10x more blockspace to its parachains.
+In short, Polkadot with asynchronous backing will deliver an estimated ~6-10x more blockspace to its
+parachains.
 
 Asynchronous Backing has three overarching goals:
 
 1. Decrease parachain block (parablock) validation time to **6 seconds** from **12 seconds**
-2. Increase the amount of usable blockspace, allowing more state changes per
-   relay chain block.
-3. Allow for parablocks to be re-proposed to the network if they are not included successfully on the
-   first attempt.
+2. Increase the amount of usable blockspace, allowing more state changes per relay chain block.
+3. Allow for parablocks to be re-proposed to the network if they are not included successfully on
+   the first attempt.
 
 Asynchronous backing provides a form of **contextual execution**, which allows for more time for
 parachain collators to fit more transactions and prepare block candidates for backing and inclusion.
-**Contextual execution** refers to how a parablock can be built earlier using the context
-provided by an _unincluded segment_ of recent block ancestors.
+**Contextual execution** refers to how a parablock can be built earlier using the context provided
+by an _unincluded segment_ of recent block ancestors.
 
 **Unincluded segments** are chains of candidate blocks that are not yet included in the relay chain.
-Parablocks can be added to this unincluded segment without waiting for the latest
-included parent block of the relay chain. The core functionality that asynchronous backing brings is
-the ability to build on these unincluded segments of block ancestors rather than ancestors included in the relay
+Parablocks can be added to this unincluded segment without waiting for the latest included parent
+block of the relay chain. The core functionality that asynchronous backing brings is the ability to
+build on these unincluded segments of block ancestors rather than ancestors included in the relay
 chain state.
 
 Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
@@ -65,7 +66,8 @@ process during the next block.
 It is important to note the following clarifications:
 
 1. The parablock is not placed on the relay chain in its entirety, but rather the **paraheader**
-2. The relay chain does not access the entire state of a parachain but only the values that changed during that block and the merkelized hashes of the unchanged values.
+2. The relay chain does not access the entire state of a parachain but only the values that changed
+   during that block and the merkelized hashes of the unchanged values.
 
 :::
 
@@ -85,8 +87,8 @@ block.
 
 A particular parablock, `P1`, would **only** be valid for backing at relay chain parent `R1 + 1` and
 subsequently, be included at `R1 + 2` should it be backed successfully. Essentially, a parablock is
-rushing to be backed and included within this two-block window due to the inherent requirement for synchrony between
-the parachain and relay chain.
+rushing to be backed and included within this two-block window due to the inherent requirement for
+synchrony between the parachain and relay chain.
 
 ## Asynchronous Backing on Polkadot
 
