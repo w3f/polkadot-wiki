@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection";
 :::info Learn about the Parachain Consensus
 
 To fully follow the material in this page it is recommended to be familiar with the main stages of
-the [Paracahin Protocol](./learn-parachains-protocol.md).
+the [Parachain Protocol](./learn-parachains-protocol.md).
 
 :::
 
@@ -55,17 +55,6 @@ parablock.
 
 ## Asynchronous Backing on Polkadot
 
-Compared to synchronous backing, in asynchronous backing a parablock may be at different stages
-between generation and inclusion, and multiple parablocks can be processed simultaneously (in
-parallel) if needed. Most notably, parablock N + 1 can be generated and backed while its
-predecessor, parablock N, is undergoing inclusion on the relay chain. Processes can occur while
-their ancestors are included on the relay chain.
-
-This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
-estimated ~3-5x more transactions/data while speeding up parachain block times from 12 to 6 seconds.
-In short, Polkadot with asynchronous backing will deliver an estimated ~6-10x more blockspace to its
-parachains.
-
 Asynchronous Backing has three overarching goals:
 
 1. Decrease parachain block (parablock) validation time to **6 seconds** from **12 seconds**
@@ -73,34 +62,44 @@ Asynchronous Backing has three overarching goals:
 3. Allow for parablocks to be re-proposed to the network if they are not included successfully on
    the first attempt.
 
-Asynchronous backing provides a form of **contextual execution**, which allows for more time for
-parachain collators to fit more transactions and prepare block candidates for backing and inclusion.
-**Contextual execution** refers to how a parablock can be built earlier using the context provided
-by an _unincluded segment_ of recent block ancestors.
+In synchronous backing parablocks rely on the most recent relay-chain block (often referred to as
+the **parent** block, as the parablock anchors itself to it). Each parablock must be generated and
+go through the entire backing process in a single relay block. It then proceeds to the inclusion
+process during the generation of the next realy-chain block.
 
-**Unincluded segments** are chains of candidate blocks that are not yet included in the relay chain.
-Parablocks can be added to this unincluded segment without waiting for the latest included parent
-block of the relay chain. The core functionality that asynchronous backing brings is the ability to
-build on these unincluded segments of block ancestors rather than ancestors included in the relay
-chain state.
+:::info It is important to note the clarification below
 
-Currently, parablocks rely on the most recent relay chain block (often referred to as the **parent**
-block, as the parablock anchors itself to it). Each parablock must be generated and go through the
-entire backing process in a single relay block. It then proceeds to the availability + inclusion
-process during the next block.
-
-:::info
-
-It is important to note the following clarifications:
-
-1. The parablock is not placed on the relay chain in its entirety, but rather the **paraheader**
-2. The relay chain does not access the entire state of a parachain but only the values that changed
-   during that block and the merkelized hashes of the unchanged values.
+- Not the entire parablock, but the **paraheader** is placed on the parent block on the relay-chain.
+- The relay chain does not access the entire state of a parachain but only the values that changed
+  during that block and the merkelized hashes of the unchanged values.
 
 :::
 
-For more information on the validity and availability process, be sure to visit the
-[parachain protocol](../learn/learn-parachains-protocol.md) page.
+Asynchronous backing brings the following changes to the parachain protocol:
+
+- parablock generation is decoupled from the backing process, this avoids rushing through the
+  backing process in six seconds and gives more time to collators to properly use blockspace,
+  decreasing the probability to generate empty parablocks
+- parachains can generate blocks and have them cashed (or stacked) into **unincluded segments** of
+  parablock ancestors (i.e. parablocks that are seconded but not yet backed by paravalidators and
+  included into the relay chain) rather than ancestors included in the relay chain state.
+
+These changes allow to generate parablock `P + 1` soon after parablock `P` has been generated and
+cashed into the unicluded segment within the first six-second time window. At the same time
+parablock ancestor `P - 1`, pushed to the unincluded segment before `P`, is backed and included into
+the relay chain.
+
+The **contextual execution** (which is the context built by block ancestors used by the parachains
+to generate new parablocks) shifts from being the the latest included parent block in the relay
+chain, to being the latest ancestor parablock pushed into the unincluded segment. This allows to
+start building parablocks earlier, giving plenty of time to parachain collators to fit more
+transactions and prepare block candidates for backing and inclusion.
+
+This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
+estimated ~3-5x more data into parablocks while speeding up parachain block times from 12 to 6
+seconds. Due to the 2x decrease in block time and the possibility to build blocks in advance to fit
+more data, Polkadot with asynchronous backing will deliver an estimated ~6-10x more blockspace to
+its parachains.
 
 ---
 
