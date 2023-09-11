@@ -36,11 +36,11 @@ For more information about building on Polkadot see [the Builder's Guide](../bui
 
 :::
 
-The [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) includes all tools needed to build on
-the Polkadot ecosystem. The main repositories include:
+The [Polkadot Software Development Kit (SDK)](https://github.com/paritytech/polkadot-sdk) includes
+all tools needed to build on the Polkadot ecosystem. The main repositories include:
 
-- The Polkadot relay chain codebase
-- [Substrate](https://substrate.io/)
+- Implementation of node for the Polkadot network in Rust, using the Substrate framework
+- The [Substrate SDK](https://substrate.io/)
 - [Parachain Development Kit (PDK) Cumulus](../build/build-parachains.md#cumulus)
 
 The used programming language is [Rust](https://www.rust-lang.org/).
