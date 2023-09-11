@@ -20,12 +20,37 @@ Bundles of state transitions represented as blocks may be processed similarly. I
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
 throughput of the entire network.
 
-:::info
+:::info Learn about the Parachain Consensus
 
-In order to realize which exact processes this upgrade improves, it is recommended to be familiar
-with the stages of parablock validation, which you may [read here](./learn-parachains-protocol.md).
+To fully follow the material in this page it is recommended to be familiar with the main stages of
+the [Paracahin Protocol](./learn-parachains-protocol.md).
 
 :::
+
+## Synchronous Backing on Polkadot
+
+Before diving into asynchronous backing it is important to understand what synchronous backing is
+and what its main limitations are.
+
+In synchronous backing, parablock validation is tightly coupled to the relay chain's progression on
+a 1-1 basis. Every parablock must be generated and backed within a relay-chain block (six-second
+window), and (if successfully backed) it will be included in a relay-chain block after an additional
+six seconds. Thus, a parablock can be produced every 12 seconds because a new parablock can be
+produced after the inclusion of the previous one.
+
+The parablock generation and backing are bound together within a six-second window that sets a limit
+to the amount of data a collator can add to each parablock. Essentially, a parablock is rushing to
+be backed in six seconds, leaving little time for its generation and its blockspace to be properly
+filled.
+
+FIGURE HERE
+
+A particular parablock, `P`, would **only** be valid for backing at relay chain parent `R` and
+subsequently, be included at `R + 1` should it be backed successfully. Thus, a parablock is rushing
+to be backed and included within a two-relay-chain-blocks window due to the inherent requirement for
+synchrony between the parachain and relay chain.
+
+## Asynchronous Backing on Polkadot
 
 Asynchronous backing enables logical pipelining over the parablock
 [**generation**](https://wiki.polkadot.network/docs/learn-parachains-protocol#collators),
@@ -77,23 +102,7 @@ It is important to note the following clarifications:
 For more information on the validity and availability process, be sure to visit the
 [parachain protocol](../learn/learn-parachains-protocol.md) page.
 
-## Synchronous Backing on Polkadot
-
-With synchronous backing, there was only about a single relay chain block (6-second window), to
-complete the parablock candidate generation and backing process. This was tightly coupled to the
-relay chain's progress, where blocks had to be created within this window.
-
-The main limitation of synchronous backing is that parablock validation is tightly coupled to the
-relay chain's progression on a 1-1 basis, meaning every parablock must be generated and backed
-within six seconds. This time limit reduces the amount of data a collator has time to add to each
-block.
-
-A particular parablock, `P1`, would **only** be valid for backing at relay chain parent `R1 + 1` and
-subsequently, be included at `R1 + 2` should it be backed successfully. Essentially, a parablock is
-rushing to be backed and included within this two-block window due to the inherent requirement for
-synchrony between the parachain and relay chain.
-
-## Asynchronous Backing on Polkadot
+---
 
 With asynchronous backing, the window of time is customizable and will most likely sit around the
 6-18 second range. It also introduces a parameter to aid in defining the maximum amount of ancestor
