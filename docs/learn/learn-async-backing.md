@@ -28,7 +28,7 @@ Bundles of state transitions represented as blocks may be processed similarly. I
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
 throughput of the entire network.
 
-## Synchronous Backing on Polkadot
+## Synchronous Backing
 
 Before diving into asynchronous backing it is important to understand what synchronous backing is
 and what its main limitations are.
@@ -44,7 +44,7 @@ to the amount of data a collator can add to each parablock. Essentially, a parab
 be backed in six seconds, leaving little time for its generation and its blockspace to be properly
 filled.
 
-FIGURE HERE
+FIGURE HERE?
 
 A particular parablock, `P`, would only be valid for backing at relay chain parent `R` and
 subsequently, be included at `R + 1` should it be backed successfully. Thus, a parablock is rushing
@@ -53,7 +53,7 @@ synchrony between the parachain and relay chain. The next parablock `P + 1` will
 backing at realy-chain block `R + 2`, i.e. two relay-chain blocks after the previous included
 parablock.
 
-## Asynchronous Backing on Polkadot
+## Asynchronous Backing
 
 Asynchronous Backing has three overarching goals:
 
@@ -89,29 +89,29 @@ cashed into the unicluded segment within the first six-second time window. At th
 parablock ancestor `P - 1`, pushed to the unincluded segment before `P`, is backed and included into
 the relay chain.
 
+FIGURE HERE?
+
 The **contextual execution** (which is the context built by block ancestors used by the parachains
 to generate new parablocks) shifts from being the the latest included parent block in the relay
 chain, to being the latest ancestor parablock pushed into the unincluded segment. This allows to
 start building parablocks earlier, giving plenty of time to parachain collators to fit more
 transactions and prepare block candidates for backing and inclusion.
 
-This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
+The execution context for the latest parablock is thus derived from the unincluded segment of block
+ancestors upon which the newest parablock is built. These blocks can be prepared in anticipation of
+being included later rather than keeping in sync with the relay chain's progress 1-1. A parablock
+can be in a different stage from another one being built, as long as it abides by the parameters set
+forth by the asynchronous backing configuration.
+
+Asynchronous backing also introduces a parameter to aid in defining the maximum number of ancestor
+blocks within the unincluded segment. This allows for a parablock to be backed later in the future,
+enabling more computational and storage time per block.
+
+Asynchronous backing will allow [collators](./learn-parachains-protocol.md#collators) to include an
 estimated ~3-5x more data into parablocks while speeding up parachain block times from 12 to 6
 seconds. Due to the 2x decrease in block time and the possibility to build blocks in advance to fit
 more data, Polkadot with asynchronous backing will deliver an estimated ~6-10x more blockspace to
 its parachains.
-
----
-
-With asynchronous backing, the window of time is customizable and will most likely sit around the
-6-18 second range. It also introduces a parameter to aid in defining the maximum amount of ancestor
-blocks, which allows for a parablock to be backed later in the future, enabling more computational
-and storage time per block. The context for the latest parablock is derived from the unincluded
-segment of block ancestors upon which the newest parablock is built.
-
-These blocks can be prepared in anticipation of being included later rather than keeping in sync
-with the relay chain's progress 1-1. The block can be in a different stage from another block being
-built, as long as it abides by the parameters set forth by the asynchronous backing configuration.
 
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
 Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
