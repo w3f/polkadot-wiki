@@ -9,9 +9,17 @@ slug: ../learn-async-backing
 
 import RPC from "./../../components/RPC-Connection";
 
+:::info Learn about the Parachain Consensus
+
+To fully follow the material in this page it is recommended to be familiar with the main stages of
+the [Paracahin Protocol](./learn-parachains-protocol.md).
+
+:::
+
 Asynchronous backing is a feature that introduces
 [pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-generation and validation process. It is analogous to the logical pipelining of processor
+[generation](./learn-parachains-protocol.md), [backing](./learn-parachains-protocol.md) and
+[inclusion](./learn-parachains-protocol.md). It is analogous to the logical pipelining of processor
 instruction in "traditional" architectures, where some instructions may be executed before others
 are complete. Instructions may also be executed in parallel, enabling multiple parts of the
 processor to be working on potentially different instructions at the same time.
@@ -19,13 +27,6 @@ processor to be working on potentially different instructions at the same time.
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
 throughput of the entire network.
-
-:::info Learn about the Parachain Consensus
-
-To fully follow the material in this page it is recommended to be familiar with the main stages of
-the [Paracahin Protocol](./learn-parachains-protocol.md).
-
-:::
 
 ## Synchronous Backing on Polkadot
 
@@ -45,21 +46,20 @@ filled.
 
 FIGURE HERE
 
-A particular parablock, `P`, would **only** be valid for backing at relay chain parent `R` and
+A particular parablock, `P`, would only be valid for backing at relay chain parent `R` and
 subsequently, be included at `R + 1` should it be backed successfully. Thus, a parablock is rushing
 to be backed and included within a two-relay-chain-blocks window due to the inherent requirement for
-synchrony between the parachain and relay chain.
+synchrony between the parachain and relay chain. The next parablock `P + 1` will be valid for
+backing at realy-chain block `R + 2`, i.e. two relay-chain blocks after the previous included
+parablock.
 
 ## Asynchronous Backing on Polkadot
 
-Asynchronous backing enables logical pipelining over the parablock
-[**generation**](https://wiki.polkadot.network/docs/learn-parachains-protocol#collators),
-[**backing**](https://wiki.polkadot.network/docs/learn-parachains-protocol#parachain-phase), and
-[**inclusion**](https://wiki.polkadot.network/docs/learn-parachains-protocol#inclusion-pipeline)
-processes. A parablock may be at different stages, but multiple parablocks can be processed
-simultaneously (in parallel) if needed. Most notably, parablock N + 1 can be generated and backed
-while its predecessor, parablock N, is undergoing inclusion on the relay chain. Processes can occur
-while their ancestors are included on the relay chain.
+Compared to synchronous backing, in asynchronous backing a parablock may be at different stages
+between generation and inclusion, and multiple parablocks can be processed simultaneously (in
+parallel) if needed. Most notably, parablock N + 1 can be generated and backed while its
+predecessor, parablock N, is undergoing inclusion on the relay chain. Processes can occur while
+their ancestors are included on the relay chain.
 
 This pipeline will allow [collators](./learn-parachains-protocol.md#collators) to include an
 estimated ~3-5x more transactions/data while speeding up parachain block times from 12 to 6 seconds.
