@@ -79,7 +79,7 @@ Asynchronous backing brings the following changes to the parachain protocol:
 
 - Parablock generation is now decoupled from the backing process, avoiding the previous 6-second deadline through the backing process. This gives more time to collators to properly use blockspace,
   decreasing the probability of generating empty parablocks.
-- parachains can generate blocks and have them cashed (or stacked) into **unincluded segments** of
+- Parachains can generate blocks and have them placed into **unincluded segments** of
   parablock ancestors (i.e. parablocks that are seconded but not yet backed by paravalidators and
   included in the relay chain) rather than ancestors included in the relay chain state.
 
