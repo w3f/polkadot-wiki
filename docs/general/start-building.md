@@ -25,10 +25,16 @@ on-chain voting mechanism. Definitive approval or rejection is done by issuing t
 For example, the first RFC [RFC-1](https://github.com/polkadot-fellows/RFCs/pull/1) about Agile
 Coretime was proposed by Gavin Wood on the 30th June 2023 and merged on the 12th Aug 2023.
 Subsequently, the
-[code for Agile Coretime Broker pallet](https://github.com/paritytech/substrate/pull/14568) was
+[code for the Agile Coretime Broker pallet](https://github.com/paritytech/substrate/pull/14568) was
 added to the Substrate FRAME system.
 
 ## Polkadot SDK
+
+:::info
+
+For more information about building on Polkadot see [the Builder's Guide](../build/build-index.md).
+
+:::
 
 The [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) includes all tools needed to build on
 the Polkadot ecosystem. The main repositories include:
