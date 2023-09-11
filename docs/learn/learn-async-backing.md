@@ -7,6 +7,8 @@ keywords: [parachains, slots, backing, parablock]
 slug: ../learn-async-backing
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 Asynchronous backing is a feature that introduces
 [pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
 generation and validation process. It is analogous to the logical pipelining of processor
@@ -15,7 +17,8 @@ are complete. Instructions may also be executed in parallel, enabling multiple p
 processor to be working on potentially different instructions at the same time.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
-Polkadot, it aims to increase the throughput of the entire network.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
+throughput of the entire network.
 
 :::info
 
