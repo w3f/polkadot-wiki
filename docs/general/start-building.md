@@ -6,6 +6,8 @@ description: Start Building with the Polkadot SDK.
 slug: ../start-building
 ---
 
+## Request of Commit (RFC)
+
 With the release of [Polkadot runtime 1.0](./polkadot-v1.md), Polkadot's codebase is in the hands of
 the community. Anyone can open a
 [Request For Commit (RFC)](https://github.com/polkadot-fellows/RFCs) to propose and discuss changes
