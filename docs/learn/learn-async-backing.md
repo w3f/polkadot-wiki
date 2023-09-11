@@ -9,9 +9,9 @@ slug: ../learn-async-backing
 
 import RPC from "./../../components/RPC-Connection";
 
-:::info Learn about the Parachain Consensus
+:::info Learn about Parachain Consensus
 
-To fully follow the material on this page, it is recommended to be familiar with the main stages of
+To fully follow the material on this page, it is recommended to be familiar with the primary stages of
 the [Parachain Protocol](./learn-parachains-protocol.md).
 
 :::
