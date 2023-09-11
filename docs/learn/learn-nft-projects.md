@@ -78,6 +78,9 @@ KodaDot.
 
 <iframe width="560" height="315" src="https://youtube.com/embed/SKdx4pTgL04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
 
+For more information about minting using KodaDot see
+[this step-by-step tutorial](https://hello.kodadot.xyz/tutorial/minting/how-to-mint-nfts-on-polkadot-asset-hub-using-kodadot).
+
 ### The Team Behind KodaDot
 
 KodaDot began as the first
