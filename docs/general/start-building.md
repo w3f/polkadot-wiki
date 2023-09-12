@@ -1,7 +1,7 @@
 ---
 id: start-building
 title: Build on Polkadot
-sidebar_label: Start Building
+sidebar_label: Build on Polkadot
 description: Start Building with the Polkadot SDK.
 slug: ../start-building
 ---
