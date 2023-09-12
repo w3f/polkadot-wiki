@@ -28,21 +28,38 @@ Bundles of state transitions represented as blocks may be processed similarly. I
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
 throughput of the entire network.
 
+:::warning Disclaimer: Performance Measurements
+
+Due to asynchronous backing not being fully implemented in a running production network, each
+performance metric is not fully tested.
+
+:::
+
 ## Synchronous Backing
 
 Before diving into asynchronous backing it is important to understand what synchronous backing is
 and what its main limitations are.
 
+:::info What is backing?
+
+**Backing** refers to the process in which a parablock is verified by a subset of validators who
+determine the blocks validity. It is an important step in the validation process for parablocks, as
+it is the first line of defense in ensuring valid state transitions are taking place. Validators who
+back the parablock put their stake at risk, and if the block is found to be malicious, those
+validators are slashed.
+
+:::
+
 In synchronous backing, parablock validation is tightly coupled to the relay chain's progression on
-a 1-1 basis. Every parablock must be generated and backed within a relay-chain block (six-second
-window), and (if successfully backed) it will be included in a relay-chain block after an additional
-six seconds. Thus, a parablock can be produced every 12 seconds because a new parablock can be
-produced after the inclusion of the previous one.
+a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
+(six-second window), and (if successfully backed) it will be included in a relay-chain block after
+an additional six seconds. Thus, a parablock can be produced every 12 seconds because a new
+parablock can be produced after the inclusion of the previous one.
 
 The parablock generation and backing are bound together within a six-second window that limits the
-amount of data a collator can add to each parablock. Essentially, a parablock is rushing to be
-backed in six seconds, leaving little time for its generation and its blockspace to be properly
-filled.
+amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
+requirement of being backed in six seconds, leaving little time for its generation and its
+blockspace to be properly filled.
 
 FIGURE HERE?
 
@@ -78,11 +95,33 @@ inclusion process during the generation of the next relay-chain block.
 Asynchronous backing brings the following changes to the parachain protocol:
 
 - Parablock generation is now decoupled from the backing process, avoiding the previous 6-second
-  deadline through the backing process. This gives more time to collators to properly use
+  deadline through the backing process. This gives more time for collators to properly use
   blockspace, decreasing the probability of generating empty parablocks.
 - Parachains can generate blocks and have them placed into **unincluded segments** of parablock
   ancestors (i.e. parablocks that are seconded but not yet backed by paravalidators and included in
   the relay chain) rather than ancestors included in the relay chain state.
+
+Unincluded segments are chains of candidate blocks that are not yet included in the relay chain.
+Parablocks can be added to this unincluded segment without waiting for the latest included parent
+block of the relay chain. The core functionality that asynchronous backing brings is the ability to
+build on these unincluded segments of block ancestors rather than ancestors included in the relay
+chain state.
+
+### Prospective Parachains
+
+This functionality is driven by the
+[Prospective Parachains subsystem](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html),
+which is responsible for coordinating the state of various prospective parachain fragments. A
+fragment is a prospective/potential parablock. More than one of these make up a
+[**fragment tree**](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html#fragment-trees),
+and represent the potential states of a parachain. Each of these fragments are anchored to a past
+relay chain parent. This does not have to be the latest parent, as was before, but can be one in the
+past.
+
+This subsystem also communicates with other subsystems in the validation process, such as the
+Backing subsystem, once a candidate block has been seconded.
+
+FIGURE HERE?
 
 These changes allow for a parablock `P + 1`, to begin the generation process soon after parablock
 `P` has been generated and appended into the unincluded segment within the first six-second time
@@ -90,13 +129,14 @@ window (the span of one relay chain block). At the same time, parablock ancestor
 the unincluded segment before `P`, is pulled off the unincluded segment and backed and included in
 the relay chain.
 
-FIGURE HERE?
+### Contextual Execution & Unincluded Segments
 
-The **contextual execution** (which is the context built by block ancestors used by the parachains
-to generate new parablocks) shifts from being the latest included parent block in the relay chain,
-to being the latest ancestor parablock pushed into the unincluded segment. This allows to start
-building parablocks earlier, giving plenty of time to parachain collators to fit more transactions
-and prepare block candidates for backing and inclusion.
+The **contextual execution** refers is the context built by block ancestors used by the parachains
+to generate new parablocks. As opposed to having the most recent relay parent as the context for a
+single parablock, it shifts to being the latest ancestor parablock pushed into the unincluded
+segment. This allows to start building parablocks earlier, giving plenty of time to parachain
+collators to fit more transactions and prepare block candidates for backing and eventually
+inclusion.
 
 The execution context for the latest parablock is thus derived from the unincluded segment of block
 ancestors upon which the newest parablock is built. These blocks can be prepared in anticipation of
@@ -117,7 +157,15 @@ Polkadot's networking, runtime, and collation aspects will allow for higher, mor
 
 Asynchronous backing also introduces a parameter to define the maximum number of ancestor blocks
 within the unincluded segment. This allows for a parablock to be backed later, enabling more
-computational and storage time per block.
+computational and storage time per block. The decoupling of collation (candidate generation) and
+backing also allows for more execution time, while citing a lower validation time.
+
+There are two parameters that are controlled can be controlled by governance:
+
+- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49)
+  -How many ancestors of a relay parent are allowed to build candidates on top of.
+- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49) -
+  The maximum amount of candidates between the latest parablock and relay parent ancestor.
 
 ## Learn More
 
@@ -128,3 +176,4 @@ resources:
   Rob Habermeier, Polkadot founder, details the plans for Polkadot for 2023.
 - [Asynchronous Backing Spec & Tracking Issue](https://github.com/paritytech/polkadot/issues/3779) -
   The implementation tracking issue for asynchronous backing
+- [Prospective Parachains Subsystem - The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html)
