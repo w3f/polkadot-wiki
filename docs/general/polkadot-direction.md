@@ -38,8 +38,7 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   there are around 50 cores independently operating in parallel.
 
 From now _application_ will be used as a general term to describe anything that can use a Polkadot
-core to access secure and decentralized computation. Applications can be anything from parachains to
-parathreads and core contracts.
+core to access secure and decentralized computation.
 
 ## From Slot Auctions to Coretime Marketplace
 
@@ -129,12 +128,6 @@ The above setup allowed a **simple and secure, sharded execution environment**.
 However, to achieve full efficiency blocks must be produced when needed, and the system must target
 full block capacity lowering the probability of incentivizing validators to build blocks half full
 or, worse, empty.
-
-## Contracts on Cores
-
-If we treat Polkadot as a global supercomputer, cores can be used to run applications that can be
-deployed using parachains and core smart contracts, avoiding the need for custom chain
-infrastructure.
 
 ## Agile Coretime Allocation
 
