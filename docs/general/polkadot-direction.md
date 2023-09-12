@@ -40,6 +40,34 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
 From now _application_ will be used as a general term to describe anything that can use a Polkadot
 core to access secure and decentralized computation.
 
+## Summary
+
+If we see Polkadot as a service provider of trustless and resilient computation through cores as
+well as secure interoperability between core-powered applications, the future development of
+Polkadot can be directed towards the following main changes.
+
+A paradigm shift from:
+
+- being a parachain-focused ecosystem where each parachain owned an execution core at all times
+  (acquired through fixed parachain slots), which allowed a simple and secure, sharded execution
+  environment
+- to being an application-focused ecosystem where where we remove the assumption that each
+  application owns a core, and instead that all cores are a resource to be consumed and used as
+  needed by all applications.
+
+Previously, securing a parachain slot was a competitive process through an
+[auction mechanism](../learn/learn-auction.md). With coretime rental, there is no need for slot
+auctions anymore. Teams can either purchase some instantaneous coretime, or reserve bulk coretime as
+required. This greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
+
+On top of those main changes, [agile core usage](#agile-core-usage) and
+[coretime allocation](#agile-coretime-allocation) will allow any application to access Polkadot's
+computation based on their needs without wasting valuable blockspace. [Accords](#xcm-and-accords)
+will improve cross-chain communication and the security guarantees of XCM messages. Finally,
+Polkadot itself will scale by moving on-chian logic into its own system parachains, allowing it to
+have more bandwidth for the [parachains protocol](../learn/learn-parachains-protocol.md) and
+accords.
+
 ## From Slot Auctions to Coretime Marketplace
 
 The end product of blockchains is [**Blockspace**](./polkadot-v1.md#polkadots-blockspace).
@@ -57,6 +85,12 @@ We depart from the classic lease auctions and propose an agile marketplace for c
 essentially **coretime becomes a commodity that can be tokenized, sold and traded**. This setup
 maximizes the agility of Polkadot and lets the market figure out the best solution needed for
 applications to be successful.
+
+Applications will be able to reserve **bulk coretime** and **instantaneous coretime** depending on
+their needs. Bulk coretime rental will be a standard rental of coretime through a broker system
+parachain at fixed price for a fixed period of time. Instantaneous coretime rental will be available
+through ongoing sale of coretime for immediate use at a spot price. This system will lowers the
+barrier-to-entry for prospective builders.
 
 Revenues from coretime sales can for example be burnt, used to fund the Treasury, or used for a mix
 of those options. The topic is currently under discussion. For more information, see
