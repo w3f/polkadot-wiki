@@ -329,7 +329,7 @@ until it wins a new slot.
 ## Resources
 
 - [How do Parachain Slot Auctions Work](https://support.polkadot.network/support/solutions/articles/65000182287-how-does-a-parachain-slots-auction-work-)
-- [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
+- [Parachain Allocation](https://research.web3.foundation/Polkadot/overview/parachain-allocation) -
   W3F research page on parachain allocation that goes more in depth to the mechanism
 - [Research Update: The Case for Candle Auctions](https://polkadot.network/blog/research-update-the-case-for-candle-auctions/) -
   W3F breakdown and research update about candle auctions
