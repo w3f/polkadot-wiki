@@ -41,6 +41,6 @@ all the tools needed to build on the Polkadot ecosystem. The main repositories i
 
 - Implementation of a node for the Polkadot network in Rust, using the Substrate framework
 - The [Substrate SDK](https://substrate.io/)
-- [Parachain Development Kit (PDK) Cumulus](../build/build-parachains.md#cumulus)
+- [Cumulus - Parachain Development Kit](../build/build-parachains.md#cumulus)
 
 The used programming language is [Rust](https://www.rust-lang.org/).
