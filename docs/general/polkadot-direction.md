@@ -1,11 +1,10 @@
 ---
-id: polkadot-v2
-title: Potential Changes to Polkadot
-sidebar_label: Potential Changes to Polkadot
+id: polkadot-direction
+title: Polkadot Direction
+sidebar_label: Polkadot Direction
 description: Polkadot as a Decentralized and Secure Ubiquitous Computer.
-keywords:
-  [polkadot vison, polkadot 2.0, Decentralization, ubiquitous computer, coretime, blockspace]
-slug: ../polkadot-v2
+keywords: [polkadot vison, decentralization, ubiquitous computer, coretime, blockspace, cores]
+slug: ../polkadot-direction
 ---
 
 :::info
@@ -83,10 +82,10 @@ essentially **coretime becomes a commodity that can be tokenized, sold and trade
 maximizes the agility of Polkadot and lets the market figure out the best solution needed for
 applications to be successful.
 
-Revenues from coretime sales can be burnt, used to fund the Treasury, split between coretime
-providers (i.e., validators), or used for a mix of those options. The topic is currently under
-discussion. For more information, see [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10)
-and [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
+Revenues from coretime sales can for example be burnt, used to fund the Treasury, or used for a mix
+of those options. The topic is currently under discussion. For more information, see
+[RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10) and
+[RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
 
 ## From Chain- to Application-centricity
 
@@ -125,6 +124,9 @@ to it and will service that particular function. To lower the entry barrier, acc
 permissionlessly, but because they are opt-in, the accord proposal will take effect until chains
 agree and sign up.
 
+To sum up, accords ensure that XCM messages securely sent via XCMP channels are faithfully
+interpreted by the receiver.
+
 Polkadot is the only ecosystem where accords can properly exist because it has an homogenous
 security layer that also provides a specific state transition function for each of its logic
 components. This allows patterns of cooperation between multiple logic components (i.e.,
@@ -134,7 +136,7 @@ Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
 
 ## Agile Coretime Allocation
 
-In Polkadot 1.0 coretime is a fixed two-year period on one specific core. Here we remove this
+In Polkadot 1.0, coretime is a fixed two-year period on one specific core. Here we remove this
 limitation and generalize coretime usage to meet different application needs.
 
 ### Split Coretime
@@ -154,7 +156,7 @@ production rate, for example.
 
 ### Combined Coretime
 
-An application's task can be assigned to multiple cores simultaneously. Some applications can have a
+An application can be assigned to multiple cores simultaneously. Some applications can have a
 permanent core assignment and an intermittent one, for example, in a period of high demand to send
 multiple blocks to multiple cores at the same time slot to reduce latency.
 
