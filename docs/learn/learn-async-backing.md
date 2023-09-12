@@ -83,10 +83,7 @@ Asynchronous backing brings the following changes to the parachain protocol:
   parablock ancestors (i.e. parablocks that are seconded but not yet backed by paravalidators and
   included in the relay chain) rather than ancestors included in the relay chain state.
 
-These changes allow to generate parablock `P + 1` soon after parablock `P` has been generated and
-cashed into the unicluded segment within the first six-second time window. At the same time,
-parablock ancestor `P - 1`, pushed to the unincluded segment before `P`, is backed and included in
-the relay chain.
+These changes allow for a parablock `P + 1`, to begin the generation process soon after parablock `P` has been generated and appended into the unincluded segment within the first six-second time window (the span of one relay chain block). At the same time, parablock ancestor `P - 1`, could be pushed to the unincluded segment before `P`, is backed and included in the relay chain.
 
 FIGURE HERE?
 
