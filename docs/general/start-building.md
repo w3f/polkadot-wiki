@@ -12,7 +12,7 @@ With the release of [Polkadot runtime 1.0](./polkadot-v1.md), Polkadot's codebas
 the community. Anyone can open a
 [Request For Commit (RFC)](https://github.com/polkadot-fellows/RFCs) to propose and discuss changes
 to the network protocol, runtime logic, and public interfaces,
-[inherents](../learn/learn-extrinsics.md#types-of-extrinsics), transaction formats, and other
+ and other
 technical matters.
 
 To submit an RFC, follow the instructions [here](https://github.com/polkadot-fellows/RFCs#process).
