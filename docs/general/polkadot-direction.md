@@ -37,32 +37,9 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   [parathreads](../learn/learn-parathreads.md)). At the time of writing (mid 2023), on Polkadot,
   there are around 50 cores independently operating in parallel.
 
-## Contracts on Cores
-
-If we treat Polkadot as a global supercomputer, cores can be used to run applications that can be
-deployed using parachains and core smart contracts, avoiding the need for custom chain
-infrastructure.
-
 From now _application_ will be used as a general term to describe anything that can use a Polkadot
-core to access secure and decentralized computation.
-
-## Core Usage in Polkadot 1.0
-
-In Polkadot 1.0, applications produced blocks at a fixed rate of 12 seconds, whether needed or not.
-This led to inefficient energy allocation and economic incentives for producing full blocks under
-heavy traffic and empty blocks under light traffic.
-
-The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time, and each
-row represents a core. Colors show different parachains, each using one core (i.e., one parachain,
-one core formula).
-
-![core-usage-dumb](../assets/core-usage-dumb.png)
-
-The above setup allowed a **simple and secure, sharded execution environment**.
-
-However, to achieve full efficiency blocks must be produced when needed, and the system must target
-full block capacity lowering the probability of incentivizing validators to build blocks half full
-or, worse, empty.
+core to access secure and decentralized computation. Applications can be anything from parachains to
+parathreads and core contracts.
 
 ## From Slot Auctions to Coretime Marketplace
 
@@ -125,7 +102,8 @@ permissionlessly, but because they are opt-in, the accord proposal will take eff
 agree and sign up.
 
 To sum up, accords ensure that XCM messages securely sent via XCMP channels are faithfully
-interpreted by the receiver.
+interpreted by the receiver. Accords are the missing piece of the puzzle to achieve a fully
+trustless and collaborative environment between applications.
 
 Polkadot is the only ecosystem where accords can properly exist because it has an homogenous
 security layer that also provides a specific state transition function for each of its logic
@@ -133,6 +111,30 @@ components. This allows patterns of cooperation between multiple logic component
 trans-applications) that would not be possible to achieve over bridges.
 
 Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
+
+## Core Usage in Polkadot 1.0
+
+In Polkadot 1.0, applications produced blocks at a fixed rate of 12 seconds, whether needed or not.
+This led to inefficient energy allocation and economic incentives for producing full blocks under
+heavy traffic and empty blocks under light traffic.
+
+The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time, and each
+row represents a core. Colors show different parachains, each using one core (i.e., one parachain,
+one core formula).
+
+![core-usage-dumb](../assets/core-usage-dumb.png)
+
+The above setup allowed a **simple and secure, sharded execution environment**.
+
+However, to achieve full efficiency blocks must be produced when needed, and the system must target
+full block capacity lowering the probability of incentivizing validators to build blocks half full
+or, worse, empty.
+
+## Contracts on Cores
+
+If we treat Polkadot as a global supercomputer, cores can be used to run applications that can be
+deployed using parachains and core smart contracts, avoiding the need for custom chain
+infrastructure.
 
 ## Agile Coretime Allocation
 
