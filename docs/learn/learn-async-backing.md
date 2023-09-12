@@ -95,7 +95,7 @@ and prepare block candidates for backing and inclusion.
 
 The execution context for the latest parablock is thus derived from the unincluded segment of block
 ancestors upon which the newest parablock is built. These blocks can be prepared in anticipation of
-being included later rather than keeping in sync with the relay chain's progress 1-1. A parablock
+being included later rather than keeping in sync with the relay chain's progress one-to-one. A parablock
 can be in a different stage from another one being built if it abides by the parameters set forth by
 the asynchronous backing configuration.
 
