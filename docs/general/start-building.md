@@ -43,4 +43,4 @@ all the tools needed to build on the Polkadot ecosystem. The main repositories i
 - The [Substrate SDK](https://substrate.io/)
 - [Cumulus - Parachain Development Kit](../build/build-parachains.md#cumulus)
 
-The used programming language is [Rust](https://www.rust-lang.org/).
+The programming language used for development is [Rust](https://www.rust-lang.org/).
