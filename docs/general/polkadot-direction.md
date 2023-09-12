@@ -48,7 +48,7 @@ Polkadot can be directed towards the following main changes.
 
 A paradigm shift from:
 
-- being a parachain-focused ecosystem where each parachain owned an execution core at all times
+- being a chain-focused ecosystem where each parachain owned an execution core at all times
   (acquired through fixed parachain slots), which allowed a simple and secure, sharded execution
   environment
 - to being an application-focused ecosystem where where we remove the assumption that each
@@ -199,8 +199,8 @@ parachain). Ideally, core affinity (i.e., which application operates on which co
 
 ![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
 
-**Here we remove the assumption that each application owns a core, and instead that all cores are a
-resource to be consumed and used as needed by all applications in the ecosystem.**
+Here we remove the assumption that each application owns a core, and instead that all cores are a
+resource to be consumed and used as needed by all applications in the ecosystem.
 
 ### Compressed Cores
 
