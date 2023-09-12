@@ -555,6 +555,9 @@ established in 2022. In Polkadot OpenGov, this fellowship replaces the
 [Technical Committee](./learn-governance.md#technical-committee) in Governance v1, and will serve
 both the Polkadot and Kusama networks.
 
+For more information about the Fellowship see the
+[Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
+
 :::
 
 The Technical Fellowship is a mostly self-governing expert body with a primary goal of representing
