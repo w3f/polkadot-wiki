@@ -73,3 +73,12 @@ multiple independent identities increases network resiliency, and thus data avai
 addition to node decentralization, resiliency is also ensured by economic incentives that
 incentivize good behavior through game theory, and an on-chain treasury together with an open
 governance model that allow to access funds in a fully decentralized manner.
+
+What keeps the network running following its consensus? The network can be stopped from external
+forces but also from internal ones. --> economic incentives and game theory
+
+trustless consensus, homogenous stake across nodes to avoid targeted attacks, etc.
+
+## Decentralized Access Points
+
+Light clients
