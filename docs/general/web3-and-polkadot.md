@@ -38,8 +38,34 @@ whenever you need.
 
 To sum up, data ownership comes from the fact that any message you sign with your private key comes
 from your digital identity, and the signature proof can be cryptographically verified. Unless
-someone else stole your identity, you and only you signed that message.
+someone else stole your identity, you and only you signed that message and own or are responsible
+for the information in it. Transferring an [NFT](./learn-nft-index) between two accounts is
+essentially a transfer of ownership, while
 
-## Blockchain
+## Data Immutability
 
-But what if we own our data
+But what if the data we own can be easily modified or tampered after they have been singed and
+stored?
+
+Here is where blockchain plays and important role. In fact, blockchains are essentially databases
+where data are stored within blocks. Because blocks are concatenated using hash functions., where
+for example the hash of block `N + 1` contains data of that block together with the hash of the
+previous block `N`. This creates the situation where if you modify the content of block `N` you will
+change the hash of block `N + 1`, `N + 2`, etc. You will need to modify quite a lot of data and in
+proof-of-stake blockchains like Polkadot such attack is financially expensive, and attempting doing
+it will get you slashed and lose your stake.
+
+So, with blockchain as a mean of storing data permanently without any option to modify them we can
+make sure that what we sign with out digital identity will not be modified in the future.
+
+## Data Availability
+
+But what if our data are stored into a blockchain, but that blockchain is run on a centralized
+server or by different computers belonging to the same operator?
+
+That server or those computers can be easily shut down, the blockchain can be stopped from running
+and its data wiped out. So, we would own our data, those data would be immutable because stored on a
+blockchain, but that blockchain would be easily stopped. There would little sense in owning
+something that in the future can easily cease to exist.
+
+### Network Decentralization
