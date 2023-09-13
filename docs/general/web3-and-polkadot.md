@@ -47,18 +47,18 @@ essentially a transfer of ownership, while
 But what if the data we own can be easily modified or tampered after they have been singed and
 stored?
 
-Here is where blockchain plays and important role. In fact, blockchains are essentially databases
-where data are stored within blocks. Because blocks are concatenated using hash functions., where
-for example the hash of block `N + 1` contains data of that block together with the hash of the
-previous block `N`. This creates the situation where if you modify the content of block `N` you will
-change the hash of block `N + 1`, `N + 2`, etc. You will need to modify quite a lot of data and in
+Here is where **blockchain** plays and important role. In fact, blockchains are essentially
+databases where data are stored within blocks concatenated using hash functions, where for example
+the hash of block `N + 1` contains data of that block together with the hash of the previous block
+`N`. This creates the situation where if you modify the content of block `N` you will change the
+hash of block `N + 1`, `N + 2`, etc. You will need to modify quite a lot of data and in
 proof-of-stake blockchains like Polkadot such attack is financially expensive, and attempting doing
 it will get you slashed and lose your stake.
 
 So, with blockchain as a mean of storing data permanently without any option to modify them we can
-make sure that what we sign with out digital identity will not be modified in the future.
+make sure that what we sign with our digital identity will not be modified in the future.
 
-## Data Availability
+## Permanent Data Availability
 
 But what if our data are stored into a blockchain, but that blockchain is run on a centralized
 server or by different computers belonging to the same operator?
@@ -68,4 +68,8 @@ and its data wiped out. So, we would own our data, those data would be immutable
 blockchain, but that blockchain would be easily stopped. There would little sense in owning
 something that in the future can easily cease to exist.
 
-### Network Decentralization
+Here is where **decentralization** of the P2P network comes in. Having multiple nodes belonging to
+multiple independent identities increases network resiliency, and thus data availability. In
+addition to node decentralization, resiliency is also ensured by economic incentives that
+incentivize good behavior through game theory, and an on-chain treasury together with an open
+governance model that allow to access funds in a fully decentralized manner.
