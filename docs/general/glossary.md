@@ -33,6 +33,11 @@ parachain candidate block is valid or invalid.
 
 Parachain auctions are how non-common-good parathreads win a slot to become a parachain.
 
+## Aura
+
+Authority-based round-robin scheduling (AURA) provides a slot-based block authoring mechanism,
+where a known set of authorities take turns producing blocks.
+
 ## Authority
 
 An authority is a generic term for the role in a blockchain that can participate in the consensus
