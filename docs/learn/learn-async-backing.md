@@ -113,11 +113,11 @@ Asynchronous backing brings the following changes to the parachain protocol:
 
 ### Unincluded Segments
 
-Unincluded segments are chains of candidate blocks that are not yet included in the relay chain.
-Parablocks can be added to this unincluded segment without waiting for the latest included parent
-block of the relay chain. The core functionality that asynchronous backing brings is the ability to
-build on these unincluded segments of block ancestors rather than ancestors included in the relay
-chain state.
+Unincluded segments are chains of candidate parablocks that are seconded but not yet backed and
+included in the relay chain. Parablocks can be added to this unincluded segment without waiting for
+the latest included parent block of the relay chain. The core functionality that asynchronous
+backing brings is the ability to build on these unincluded segments of block ancestors rather than
+ancestors included in the relay chain state.
 
 Compared to synchronous backing, contextual execution shift from being the parablock ancestors
 included in the relay chain, to being being the latest ancestor parablock pushed into the unincluded
