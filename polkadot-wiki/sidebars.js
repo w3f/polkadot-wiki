@@ -11,6 +11,7 @@ module.exports = {
       },
       items: [
         "general/getting-started",
+        "general/web3-and-polkadot",
         {
           type: "category",
           label: "Polkadot Vision",
