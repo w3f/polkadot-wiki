@@ -44,9 +44,10 @@ ancestors used by the parachains to generate new parablocks.
 
 :::info Candidate Recepts
 
-- Not the entire parablock, but the **paraheader** is placed on the parent block on the relay chain.
+- Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock, state roots and ID info is placed on the parent block on the relay chain.
 - The relay chain does not access the entire state of a parachain but only the values that changed
   during that block and the merkelized hashes of the unchanged values.
+  
 
 :::
 
