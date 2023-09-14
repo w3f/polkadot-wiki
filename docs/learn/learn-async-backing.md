@@ -44,14 +44,14 @@ ancestors used by the parachains to generate new parablocks.
 
 :::info Candidate Recepts
 
-- Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock, state roots and ID info is placed on the parent block on the relay chain.
+- Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock,
+  state roots and ID info is placed on the parent block on the relay chain.
 - The relay chain does not access the entire state of a parachain but only the values that changed
   during that block and the merkelized hashes of the unchanged values.
-  
 
 :::
 
-### Synchronous Backing
+### Synchronous Backing Mechanics
 
 FIGURE HERE?
 
@@ -80,10 +80,10 @@ performance metric is not fully tested.
 
 Asynchronous backing is a feature that introduces
 [pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical pipelining of processor
-instruction in "traditional" architectures, where some instructions may be executed before others
-are complete. Instructions may also be executed in parallel, enabling multiple parts of the
-processor to work on potentially different instructions simultaneously.
+[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
+pipelining of processor instruction in "traditional" architectures, where some instructions may be
+executed before others are complete. Instructions may also be executed in parallel, enabling
+multiple parts of the processor to work on potentially different instructions simultaneously.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
@@ -125,7 +125,7 @@ segment. This allows to start building parablocks earlier, giving plenty of time
 collators to fit more transactions and prepare block candidates for backing and eventually
 inclusion.
 
-### Asynchronous Backing Diagram
+### Asynchronous Backing Mechanics
 
 FIGURE HERE?
 
