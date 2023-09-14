@@ -51,7 +51,7 @@ ancestors used by the parachains to generate new parablocks.
 
 :::
 
-### Synchronous Backing Diagram
+### Synchronous Backing
 
 FIGURE HERE?
 
