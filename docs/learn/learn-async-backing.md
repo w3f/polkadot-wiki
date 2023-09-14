@@ -26,7 +26,7 @@ and what its main limitations are.
 **Backing** refers to the process in which a parablock is verified by a subset of validators who
 determine the blocks validity. It is an important step in the validation process for parablocks, as
 it is the first line of defense in ensuring valid state transitions are taking place. Validators who
-back the parablock put their stake at risk, and if the block is found to be malicious, those
+back the parablock put their stake at risk, and if the block is later found to be invalid, those
 validators are slashed.
 
 :::
