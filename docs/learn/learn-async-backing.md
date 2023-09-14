@@ -42,7 +42,7 @@ The **contextual execution** of new parablocks are parablock ancestors included 
 after 12 seconds, where contextual execution refers to the context built by included parablock
 ancestors used by the parachains to generate new parablocks.
 
-:::info It is important to note the clarification below
+:::info Candidate Recepts
 
 - Not the entire parablock, but the **paraheader** is placed on the parent block on the relay chain.
 - The relay chain does not access the entire state of a parachain but only the values that changed
