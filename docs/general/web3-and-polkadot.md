@@ -40,7 +40,15 @@ To sum up, data ownership comes from the fact that any message you sign with you
 from your digital identity, and the signature proof can be cryptographically verified. Unless
 someone else stole your identity, you and only you signed that message and own or are responsible
 for the information in it. Transferring an [NFT](./learn-nft-index) between two accounts is
-essentially a transfer of ownership, while
+essentially a transfer of ownership.
+
+## Trustless Environment
+
+Cryptography also bring the possibility to build a trustless environment where we do not have to
+trust third parties, or have any kind of relationship between the sender and receiver of a message.
+Since we can verify who wrote the message and who owns what just using cryptography, we do not need
+trust centralized entities. The trust is essentially embedded in the code. Well-audited and reviewed
+code will ultimately provide a solid trustless environment.
 
 ## Data Immutability
 
@@ -58,27 +66,53 @@ it will get you slashed and lose your stake.
 So, with blockchain as a mean of storing data permanently without any option to modify them we can
 make sure that what we sign with our digital identity will not be modified in the future.
 
-## Permanent Data Availability
+## Data Availability
 
 But what if our data are stored into a blockchain, but that blockchain is run on a centralized
 server or by different computers belonging to the same operator?
 
 That server or those computers can be easily shut down, the blockchain can be stopped from running
-and its data wiped out. So, we would own our data, those data would be immutable because stored on a
-blockchain, but that blockchain would be easily stopped. There would little sense in owning
-something that in the future can easily cease to exist.
+(from the inside by the malicious network participants or from the outside by regulatory rules and
+other forces) and its data wiped out. So, we would own our data, those data would be immutable
+because stored on a blockchain, but that blockchain would be easily stopped. There would little
+sense in owning something that in the future can easily cease to exist.
 
-Here is where **decentralization** of the P2P network comes in. Having multiple nodes belonging to
-multiple independent identities increases network resiliency, and thus data availability. In
-addition to node decentralization, resiliency is also ensured by economic incentives that
-incentivize good behavior through game theory, and an on-chain treasury together with an open
-governance model that allow to access funds in a fully decentralized manner.
+Data availability is dependent on how resilient the blockchain is. Resiliency is only partly
+achieved with decentralization. Having multiple nodes belonging to multiple independent identities
+increases network resiliency, and thus data availability.
 
-What keeps the network running following its consensus? The network can be stopped from external
-forces but also from internal ones. --> economic incentives and game theory
+Blockchain is a state machine and ultimately consensus must be achieved on one and only one possible
+state transition. Having an overly decentralized network will creates the situation in which
+consensus achieved after a long period of time, and energy might be wasted to unnecessarily run
+nodes that add little resiliency and slow down network throughput. A trade-off between few
+centralized nodes and too many of them must be considered. But this is only a small piece of the
+puzzle.
 
-trustless consensus, homogenous stake across nodes to avoid targeted attacks, etc.
+Strong economic incentives promote good behavior and punish malicious one through game theory.
+Strong incentives are possible because blockchain is a trustless system where there are no
+intermediaries between who sends a message and who receives it. Such incentives ensures that most of
+the participants make the interest of the network and work together to improve it.
+
+An on-chain [treasury](../learn/learn-polkadot-opengov-treasury.md) together with an
+[open governance](../learn/learn-polkadot-opengov.md) model allow to access funds in a fully
+decentralized manner without any bank transaction whatsoever. This opens up the possibility to come
+to a decision through on-chain voting mechanism, promoting a sense of community and creating an
+independent socio-economical environment.
+
+In Proof-of-Stake blockchains security is dictated by how much stake is locked on-chain (financial
+security). In a decentralized network you want to make sure that the level of difficulty for a
+financial attack to happen is equal across all nodes. This implies that all nodes have similar
+locked stake to avoid targeted attacks or collusion of multiple nodes that are financially weak.
+
+Nowadays, most of the nodes are not run at people's homes. Equipment is rented through service
+providers. Resiliency is also achieved by making sure nodes runs on as many different providers as
+possible, and avoid that a big share of the nodes is run under the same provider, maybe in the same
+country. A legislation change could undermine a big fraction of the nodes, and potentially stop the
+network.
 
 ## Decentralized Access Points
 
-Light clients
+But what if we have data we own stored on a resilient blockchain, but the only way to access the
+blockchain is through an RPC server?
+
+## Conclusions
