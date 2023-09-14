@@ -80,8 +80,7 @@ performance metric is not fully tested.
 
 Asynchronous backing is a feature that introduces
 [pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-[generation](./learn-parachains-protocol.md), [backing](./learn-parachains-protocol.md) and
-[inclusion](./learn-parachains-protocol.md). It is analogous to the logical pipelining of processor
+[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical pipelining of processor
 instruction in "traditional" architectures, where some instructions may be executed before others
 are complete. Instructions may also be executed in parallel, enabling multiple parts of the
 processor to work on potentially different instructions simultaneously.
