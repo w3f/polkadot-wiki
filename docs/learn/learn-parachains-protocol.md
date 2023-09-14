@@ -53,7 +53,7 @@ its full state.
 
 Fishermen are not available on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and
 are not planned for formal implementation, despite previous proposals in the
-[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).
+[AnV protocol](./learn-parachains-protocol.md#availability-and-validity-anv-protocol).
 
 The idea behind Fishermen is that they are full nodes of parachains, like collators, but perform a
 different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}

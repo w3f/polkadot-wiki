@@ -9,16 +9,15 @@ slug: ../learn-xcm-instructions
 
 import Tabs from "@theme/Tabs";
 
-This page can also be viewed at the [`xcm-format`](https://github.com/paritytech/xcm-format)
-repository, where each instruction and register is explained in-depth.
+:::info XCM Documentation
 
-:::caution
-
-For a more practical approach to utilizing XCM registers and instructions, refer to the
-[XCM Docs](https://paritytech.github.io/xcm-docs/). Please keep in mind that XCM is under active
-development.
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
 
 :::
+
+This page can also be viewed at the [`xcm-format`](https://github.com/paritytech/xcm-format)
+repository, where each instruction and register is explained in-depth.
 
 ## XCVM Registers
 

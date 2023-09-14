@@ -7,6 +7,13 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcvm
 ---
 
+:::info XCM Documentation
+
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
+
+:::
+
 At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM
 program, referred to as an **"XCM"** or **"XCMs"** for multiple messages. The XCVM is a
 register-based state machine. The state is tracked in domain-specific registers that hold
