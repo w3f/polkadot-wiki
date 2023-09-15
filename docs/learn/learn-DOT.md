@@ -7,6 +7,8 @@ keywords: [token, DOT, what are the uses of DOT, KSM, faucet]
 slug: ../learn-DOT
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 ## What is DOT?
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
@@ -114,6 +116,43 @@ the future).
 4. You will have to calculate the result into “human time". To do this, remember that there are
    approximately 14’400 blocks per day, and you can see what the latest block is shown on the
    [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
+
+### Token Issuance
+
+#### Total Issuance
+
+It is the total number of token units in existence on the network.
+
+:::info On-chain data for reference
+
+The total issuance is 
+{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="13557639805348170350"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="14017001595616667835"/>. :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="5649"/>. :kusama }}
+
+:::
+
+#### Inactive Issuance
+
+It is the total units of outstanding deactivated balance on the network that cannot be used for participation in governance.
+This comprises tokens locked away in crowdloans and nomination pools. 
+
+:::info On-chain data for reference
+
+The inactive issuance is 
+{{ polkadot: <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="1784854324418488473"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="320302796457002024"/>. :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="5649"/>. :kusama }}
+
+:::
+
+#### Active Issuance
+
+Active issuance = Total issuance - Inactive issuance
+
+All the tokens under active issuance are can be used to participate in the governance on-chain.
 
 ## Obtaining Testnet Tokens
 
