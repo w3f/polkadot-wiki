@@ -193,14 +193,14 @@ binaries are needed to properly run a validator node. More context on these chan
 #### Installation from official releases
 
 The official binaries can be downloaded from the
-[Github Releases](https://github.com/paritytech/polkadot/releases). You should download the latest
+[Github Releases](https://github.com/paritytech/polkadot-sdk/releases). You should download the latest
 available version. You can also download the binaries by using the following direct links (replace
 X.Y.Z by the appropriate version):
 
 ```sh
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot-execute-worker
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot-prepare-worker
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot-execute-worker
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot-prepare-worker
 ```
 
 #### Optional: Installation with Package Managers
