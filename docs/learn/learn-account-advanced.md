@@ -176,9 +176,11 @@ private key being unknown (and unattainable). So, that means that only the palle
 interact with this account. These accounts can never issue a signed
 [extrinsic](./learn-extrinsics.md) since they do not have a private key.
 
-:::info
+:::info Explore System Accounts
 
-You can view system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
+Treasury account address - {{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+
+You can view the existing system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
 
 :::
 
