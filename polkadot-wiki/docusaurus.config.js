@@ -270,7 +270,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'sub0 is back! Lisbon, Portugal & online, Sep 19-20. <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification%20three" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
+        'sub0 Europe 2023 is happening now! <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification%20live-event" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,
