@@ -57,10 +57,9 @@ polkadot export-blocks --from 0 <output_file>
 
 **RPC ports**
 
-Use the `--rpc-external` flag to expose RPC ports. Not all
-RPC calls are safe to allow and you should use an RPC proxy to filter unsafe calls. Select ports
-with the `--rpc-port` option. To limit the hosts who can access, use the
-`--rpc-cors` option.
+Use the `--rpc-external` flag to expose RPC ports. Not all RPC calls are safe to allow and you
+should use an RPC proxy to filter unsafe calls. Select ports with the `--rpc-port` option. To limit
+the hosts who can access, use the `--rpc-cors` option.
 
 **Execution**
 

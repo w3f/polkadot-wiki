@@ -178,9 +178,11 @@ interact with this account. These accounts can never issue a signed
 
 :::info Explore System Accounts
 
-Treasury account address - {{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+Treasury account address -
+{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
 
-You can view the existing system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
+You can view the existing system accounts on
+[Subscan](https://polkadot.subscan.io/account_list?role=module).
 
 :::
 

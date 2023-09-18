@@ -35,8 +35,8 @@ Parachain auctions are how non-common-good parathreads win a slot to become a pa
 
 ## Aura
 
-Authority-based round-robin scheduling (AURA) provides a slot-based block authoring mechanism,
-where a known set of authorities take turns producing blocks.
+Authority-based round-robin scheduling (AURA) provides a slot-based block authoring mechanism, where
+a known set of authorities take turns producing blocks.
 
 ## Authority
 
