@@ -15,41 +15,16 @@ The Polkadot Wiki serves as the central source of truth for Polkadot. It is a co
 initiative led by Web3 Foundation to keep an up-to-date resource on the best information for
 learning, building, and maintaining on Polkadot.
 
-The Wiki has three main sections: **Learn** (for learners), **Build** (for people that want to build
-on Polkadot), and **Maintain** (for people that want to maintain the network).
+The Wiki has three main sections:
+
+- [**Learn**](./learn-index) (for people who want to learn about Polkadot)
+- [**Build**](../build/build-index.md) (for people who want to build on Polkadot)
+- [**Maintain**](../maintain/maintain-index.md) (for people who want to maintain the Polkadot
+  network).
 
 :::
 
-## What is Polkadot?
-
-Polkadot is the first fully-sharded blockchain, i.e. it is a multi-chain environment. Polkadot
-enables scalability by allowing specialized blockchains to communicate with each other in a secure,
-trust-free environment.
-
-Polkadot is built to connect and secure unique blockchains, whether they be public, permissionless
-networks, private consortium chains, or other Web3 technologies. It enables an internet where
-independent blockchains can exchange information under common security guarantees.
-
-Polkadot is a living network with the core pillars of governance and upgradability. The network has
-an advanced suite of governance tools and, using the [WebAssembly](https://webassembly.org/)
-standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your
-growing needs without the risks of network forks.
-
-:::note Learn more about Governance
-
-If you haven't heard of Governance before, a great place to start is the
-[Governance page](../learn/learn-governance.md)
-
-:::
-
-Polkadot serves as a foundational layer of a decentralized web, where users control their data and
-are not limited by trust bounds within the network.
-
-See the video below made by [DeFi Teller](https://defiteller.guru/) to know more about Polkadot.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Interact with Polkadot
+## Interact with Polkadot
 
 <tr class="cards-container">
   <td>
@@ -81,6 +56,35 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
 <br />
 
 <tr class="cards-container">
+<td>
+    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
+      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Polkadot OpenGov</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-proxies">
+      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Proxy Accounts</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-identity">
+      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                 <h5 class="cards-title">Set an Identity</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-parachains">  
       <img class="guide-image" src="/img/polkadot-guide/Parachain.jpg" alt="Drawing" width="250" height="150"/>
@@ -98,35 +102,6 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
-      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Polkadot OpenGov</h5>
-              </div>
-    </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                 <h5 class="cards-title">Set an Identity</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Proxy Accounts</h5>
-              </div>
-    </a>
-  </td>
-  <td>
   <a class="guide-link" href="../docs/ambassadors">  
     <img class="guide-image" src="/img/polkadot-guide/Ambassadors.jpg" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
@@ -138,7 +113,35 @@ See the video below made by [DeFi Teller](https://defiteller.guru/) to know more
 
 <br />
 
-### What can I do with my DOT?
+## What is Polkadot?
+
+Polkadot is the first layer-0 (L0) blockchain that provides shared security and secure
+interoperability to layer-1 (L1) blockchains. Those L1 blockchain attached to Polkadot are also
+called [parachains](../learn/learn-parachains.md) as their transactions are processed in parallel by
+Polkadot. For more information about Polkadot see the dedicated page about the state of
+[Polkadot 1.0](./polkadot-v1.md) released in mid 2023.
+
+Polkadot has an on-chain [open governance](../learn/learn-polkadot-opengov.md) (also called Polkadot
+OpenGov) to orchestrate decisions, including accessing funds from the
+[treasury](../learn/learn-polkadot-opengov-treasury.md).
+
+The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov,
+[staking](../learn/learn-staking.md), and [parachains' crowdloans](../learn/learn-crowdloans.md).
+
+The level of abstraction and generalization of Polkadot allows to build applications that are
+specific to their use cases, and for those applications to communicate securely leveraging each
+other value proposition. The trustless cooperation between applications is what makes Polkadot an
+ideal ecosystem to build a web3 future.
+
+See the videos below to know more about Polkadot.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_-k0xkooSlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## What can I do with my DOT?
 
 [DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for
 transaction fees, staking, governance, acquisition of a parachain slot and for enabling several key
@@ -188,7 +191,7 @@ or 5% of requested funding is a requirement to make a
 you to participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).
 
-### Polkadot Gifts
+## Polkadot Gifts
 
 <img align="right" src="/img/polkadot-gift.png" width="210" height="200"/>
 
@@ -202,65 +205,6 @@ Polkadot Gifts provide an easy way to:
 Learn more about how you can create and send Polkadot Gifts
 [here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
 
-## Why Polkadot?
-
-Back in the early 2000's, when the internet was gaining popularity for the first time, the internet
-featured read-only, static, basic web pages. The online connected world at the time was only the
-beginning of virtual data, identities, and more. The internet during this time was also called the
-Web 1.0.
-
-As social media platforms and online businesses began to emerge, the internet transformed into the
-Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive web pages,
-where users can read and write information plus publish their own for others to see. However, this
-version of the web comes with downsides, dealing with data control, privacy issues, and the
-consequences of trust. This is where the WEB3 comes into the picture.
-
-The Web 3.0 is taking centralized infrastructure and applications and turning them into
-decentralized, trust-free protocols. The goal is to transform the internet into a decentralized web,
-where users control their own data and identity in a trust-free environment. The Web3 movement aims
-to remove intermediaries and build trustless infrastructure.
-
-:::note The Web3 Movement
-
-To learn more of the Web3 movement, check out this video from the
-[Web3 Summit](https://youtu.be/l44z35vabvA)
-
-:::
-
-## How does Polkadot Work?
-
-The Polkadot network uses a
-[sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
-"[parachains](../learn/learn-parachains.md)", allow transactions to be processed in parallel instead
-of sequentially. Each parachain in the network has a unique state transition function (STF).
-Polkadot has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as
-long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect
-to the Polkadot network as a parachain.
-
-Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
-added to the finalized chain. As the Relay Chain provides the security guarantees,
-[collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
-responsibilities, and thus do not require a robust incentive system. This is how the entire network
-stays up to date with the many transactions that take place.
-
-![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
-
-In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility,
-meaning that transactions can be made between different parachains.
-
-The [Cross-Consensus Messaging Format (XCM)](../learn/learn-xcm.md) allows parachains to send
-messages of any type to each other. The shared security and validation logic of the Relay Chain
-provide the environment for trust-free message passing that opens up true interoperability.
-
-:::note Polkadot Primer
-
-To watch a short, beginner-friendly animation on Polkadot, check out our
-[Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
-
-:::
-
 ## Why should you use Polkadot?
 
 Whether you're a blockchain developer or if you're interested in taking part of
@@ -270,13 +214,10 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 
 ## Where to start learning?
 
-For brand-new learners of Blockchain technology:
-
-- The
-  [Blockchain Fundamentals MOOC course](https://mooc.web3.foundation/course/blockchain-fundamentals/)
-  is a great introduction to start familiarizing yourself with blockchain concepts such as
-  cryptography and networks, and how these play into things like decentralization and
-  cryptocurrency.
+The
+[Blockchain Fundamentals MOOC course](https://mooc.web3.foundation/course/blockchain-fundamentals/)
+is a great introduction to start familiarizing yourself with blockchain concepts such as
+cryptography and networks, and how these play into things like decentralization and cryptocurrency.
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 

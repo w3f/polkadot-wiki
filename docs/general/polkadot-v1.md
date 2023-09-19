@@ -49,10 +49,27 @@ initiatives:
 
 ### Polkadot's Representation
 
-The Polkadot realy-chain has been represented as a relay chain surrounded by multiple parachains
-attached to it. Parachains can communicate with each other using a generalized
-[cross-chain messaging format (XCM)](./learn-xcm-index), allowing messages to be delivered across
-chains having different logic.
+Polkadot has a Relay Chain acting as the main chain of the system. The Polkadot relay chain has been
+represented as a ring surrounded by multiple parachains attached to it. Based on Polkadot's design,
+as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can
+connect to the Polkadot network as a parachain.
+
+![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
+
+Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
+rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
+added to the finalized chain. As the Relay Chain provides the security guarantees,
+[collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
+responsibilities, and thus do not require a robust incentive system. This is how the entire network
+stays up to date with the many transactions that take place.
+
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-xcm.md) allows parachains to send
+messages of any type to each other. The shared security and validation logic of the Relay Chain
+provide the environment for trust-free message passing that opens up true interoperability.
+
+In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
+Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility,
+meaning that transactions can be made between different parachains.
 
 ### Polkadot's Additional Functionalities
 
