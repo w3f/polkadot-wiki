@@ -7,36 +7,6 @@ keywords: [proxy, proxies, proxy accounts, pure proxy]
 slug: ../learn-proxies-pure
 ---
 
-## Proxy calls
-
-Proxy calls are used by proxies to call proxied accounts. These calls are important for example in
-the case of _pure_ proxies, as any attempt to sign transactions with a _pure_ proxy will fail. For
-more details see the [dedicated section about anonymous proxies](#anonymous-proxy-pure-proxy).
-
-### Nested Proxy Calls
-
-As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed
-if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a
-stash account that has a _staking_ proxy account, P-C. P-C is a _pure_ proxy, a proxied account
-originally spawned by Charly that is now an _any_ proxy of P-C and signs everything on its behalf.
-
-![nested proxy calls](../assets/nested-proxy-calls.png)
-
-For example, to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to P-C, which in
-turn submits a `proxy.proxy` extrinsic to Alice including for example a `staking.bondExtra`
-extrinsic, specifying the number of extra tokens that need to be bounded. If Charly wants to leave,
-a new account can take his place as any proxy (before Charly leaves!). There is no need to change
-the staking proxy account. Also, Alice is the only one who can remove P-C as a staking proxy, and
-P-C can only perform staking-related tasks. For example, P-C cannot send funds out from Alice's
-account.
-
-Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be
-done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last
-`proxy.proxy` extrinsic. In the diagram above, submitting the proxy call from P-C to Alice will
-automatically ask for Charly's signature. Thus one proxy call will trigger the second one because
-Charly's is the only _any_ proxy of P-C, and P-C cannot sign anything. While if we want to use Bob's
-account we will need to submit all three proxy calls.
-
 ## Anonymous Proxy (Pure Proxy)
 
 :::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
@@ -92,7 +62,7 @@ the discussion on
 
 From now on we will thus use the term pure proxy instead of anonymous proxy.
 
-### Create and Remove Pure Proxy
+## Create and Remove Pure Proxy
 
 :::info
 
@@ -118,7 +88,7 @@ Learn more about pure proxies from our
 
 :::
 
-### Use of Pure Proxy
+## Use of Pure Proxy
 
 The use of the _pure proxy_ is strictly bound to the relationship between the _pure proxy_ and the
 _any_ proxy. Note that the _any_ proxy does not necessarily be the one who created the _pure proxy_
@@ -141,18 +111,18 @@ _pure_ proxies cannot sign for anything.
 
 :::
 
-### Why Pure Proxy?
+## Why Pure Proxy?
 
 Despite their complexity and associated dangers, _pure_ proxies have important benefits that we
 discuss below.
 
-#### Enhanced Security
+### Enhanced Security
 
 _Pure_ proxies cannot be stolen because they do not have private keys. The only accounts that have
 full access to the _pure_ proxies are _any_ proxies. Security can be further increased if the _any_
 proxy is a multi-signature account.
 
-#### Simplified and Secure Account Management at an Organization Level
+### Simplified and Secure Account Management
 
 :::info Walk-through tutorial video of Account Management
 
@@ -190,7 +160,7 @@ below).
 
 ![anon vs stash plot](../assets/anon-vs-stash-plot.png)
 
-#### Multi-signature Account Management
+### Multi-signature Account Management
 
 _Pure_ proxies are useful to efficiently manage multi-signature (multisigs) accounts. In fact,
 multisigs are deterministic, which means that once a multisig is created the signatories cannot be
@@ -256,3 +226,33 @@ In the diagram above, Alice submits the `proxy.proxy` extrinsic to P-A, which in
 transfer of some tokens from ABC to Dan. Then, Charly does the same to confirm the transaction. Note
 that Charly will need to pay for some weight, for the computation that is necessary to execute the
 transaction.
+
+## Proxy calls
+
+Proxy calls are used by proxies to call proxied accounts. These calls are important for example in
+the case of _pure_ proxies, as any attempt to sign transactions with a _pure_ proxy will fail. For
+more details see the [dedicated section about anonymous proxies](#anonymous-proxy-pure-proxy).
+
+### Nested Proxy Calls
+
+As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed
+if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a
+stash account that has a _staking_ proxy account, P-C. P-C is a _pure_ proxy, a proxied account
+originally spawned by Charly that is now an _any_ proxy of P-C and signs everything on its behalf.
+
+![nested proxy calls](../assets/nested-proxy-calls.png)
+
+For example, to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to P-C, which in
+turn submits a `proxy.proxy` extrinsic to Alice including for example a `staking.bondExtra`
+extrinsic, specifying the number of extra tokens that need to be bounded. If Charly wants to leave,
+a new account can take his place as any proxy (before Charly leaves!). There is no need to change
+the staking proxy account. Also, Alice is the only one who can remove P-C as a staking proxy, and
+P-C can only perform staking-related tasks. For example, P-C cannot send funds out from Alice's
+account.
+
+Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be
+done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last
+`proxy.proxy` extrinsic. In the diagram above, submitting the proxy call from P-C to Alice will
+automatically ask for Charly's signature. Thus one proxy call will trigger the second one because
+Charly's is the only _any_ proxy of P-C, and P-C cannot sign anything. While if we want to use Bob's
+account we will need to submit all three proxy calls.
