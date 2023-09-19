@@ -3,7 +3,7 @@ id: learn-proxies-pure
 title: Pure Proxy Accounts
 sidebar_label: Pure Proxy Accounts
 description: Pure Proxy Accounts on Polkadot.
-keywords: [proxy, proxies, proxy accounts, pure proxy]
+keywords: [proxy, proxies, proxy accounts, pure proxy, anonymous proxy]
 slug: ../learn-proxies-pure
 ---
 
@@ -28,21 +28,21 @@ Read carefully the text below and before performing any action using anonymous p
 
 :::
 
-Anonymous proxies are very different from other proxy types. The proxies we described so far are
-_existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the
-primary account, reducing the exposure of the primary account's private key. Remember, the more
-often we use an account's private key to sign transactions, the more we expose that key to the
+Anonymous proxies (pure proxies) are very different from other proxy types. The proxies we described
+so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf
+of the primary account, reducing the exposure of the primary account's private key. Remember, the
+more often we use an account's private key to sign transactions, the more we expose that key to the
 internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the
 attention of potential attackers away from the primary account, as proxies' private keys will be
 used most of the time to perform actions on behalf of the primary account.
 
 ![anonymous proxies](../assets/proxy-vs-anon.png)
 
-Anonymous proxies are new accounts that are _created_ (not assigned) by a primary account. That
-primary account then acts as _any_ proxy on behalf of the anonymous proxy. Anonymous proxies are
-**keyless non-deterministic accounts** as they do not have a private key but they have an address
-that is randomly generated. Also, in some sense, nobody owns an anonymous proxy as nobody has a
-private key to control them.
+Anonymous proxies (pure proxies) are new accounts that are _created_ (not assigned) by a primary
+account. That primary account then acts as _any_ proxy on behalf of the anonymous proxy. Anonymous
+proxies are **keyless non-deterministic accounts** as they do not have a private key but they have
+an address that is randomly generated. Also, in some sense, nobody owns an anonymous proxy as nobody
+has a private key to control them.
 
 :::info Renaming Anonymous Proxies as **Pure Proxies**
 
@@ -162,12 +162,12 @@ below).
 
 ### Multi-signature Account Management
 
-_Pure_ proxies are useful to efficiently manage multi-signature (multisigs) accounts. In fact,
-multisigs are deterministic, which means that once a multisig is created the signatories cannot be
-changed. If one of the signatories wants to leave the multisig, a new multisig must be created. This
-is inconvenient, especially at corporate-level management where the chance of replacing someone
-within a multisig can be high. _Pure_ proxies allow keeping the same multisig when the signatories
-change.
+_Pure_ proxies are useful to efficiently manage multi-signature (multisig) accounts. In fact,
+multi-signature accounts are deterministic, which means that once a multisig is created the
+signatories cannot be changed. If one of the signatories wants to leave the multisig, a new multisig
+must be created. This is inconvenient, especially at corporate-level management where the chance of
+replacing someone within a multisig can be high. _Pure_ proxies allow keeping the same multisig when
+the signatories change.
 
 #### Scenario One: One Anonymous Proxy within a Multisig
 
