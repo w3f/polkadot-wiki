@@ -15,9 +15,11 @@ The Polkadot Wiki serves as the central source of truth for Polkadot. It is a co
 initiative led by Web3 Foundation to keep an up-to-date resource on the best information for
 learning, building, and maintaining on Polkadot.
 
-The Wiki has three main sections: [**Learn**](./learn-index) (for learners),
-[**Build**](../build/build-index.md) (for people that want to build on Polkadot), and
-[**Maintain**](../maintain/maintain-index.md) (for people that want to maintain the network).
+The Wiki has three main sections:
+
+- [**Learn**](./learn-index) (for learners)
+- [**Build**](../build/build-index.md) (for people that want to build on Polkadot)
+- [**Maintain**](../maintain/maintain-index.md) (for people that want to maintain the network).
 
 :::
 
@@ -211,13 +213,10 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 
 ## Where to start learning?
 
-For brand-new learners of Blockchain technology:
-
-- The
-  [Blockchain Fundamentals MOOC course](https://mooc.web3.foundation/course/blockchain-fundamentals/)
-  is a great introduction to start familiarizing yourself with blockchain concepts such as
-  cryptography and networks, and how these play into things like decentralization and
-  cryptocurrency.
+The
+[Blockchain Fundamentals MOOC course](https://mooc.web3.foundation/course/blockchain-fundamentals/)
+is a great introduction to start familiarizing yourself with blockchain concepts such as
+cryptography and networks, and how these play into things like decentralization and cryptocurrency.
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
