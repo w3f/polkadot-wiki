@@ -189,7 +189,7 @@ Besides being user-friendly, Multix provides several benefits compared to the Po
   their interface.
 - There is no need to pass around the call data to confirm a transaction. Such information is
   retrieved from the chain and displayed to the users.
-- Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
+- Thanks to the power of [pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy),
   adding and removing signatories or adjusting the threshold is now possible without creating new
   multisigs and Multix provides an intuitive interface to work with pure proxies.
 

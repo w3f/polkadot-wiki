@@ -151,7 +151,8 @@ module.exports = {
                 "learn/learn-account-generation",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
-                'learn/learn-proxies',
+                "learn/learn-proxies",
+                "learn/learn-proxies-pure",
               ],
             },
             {

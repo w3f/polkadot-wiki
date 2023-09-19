@@ -36,8 +36,8 @@ private key an account cannot sign anything. In
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
 that do not have private keys (i.e. key-less accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md) and
-[anonymous proxies](./learn-proxies.md/#anonymous-proxies) that are not discussed here and are meant
-for an advanced audience.
+[anonymous proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy) that are not discussed here
+and are meant for an advanced audience.
 
 Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private
 key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to
