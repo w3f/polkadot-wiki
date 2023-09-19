@@ -70,9 +70,9 @@ Asset transfers will result in an `assets.transferred` event. The same instructi
 transfers.
 
 Note that you can use the same addresses (except
-[pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that you use
-on the Relay Chain. The SS58 encodings are the same, only the chain information (genesis hash, etc.)
-will change on transaction construction.
+[pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that
+you use on the Relay Chain. The SS58 encodings are the same, only the chain information (genesis
+hash, etc.) will change on transaction construction.
 
 ## Integration
 
