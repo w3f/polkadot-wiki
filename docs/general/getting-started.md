@@ -56,6 +56,35 @@ The Wiki has three main sections:
 <br />
 
 <tr class="cards-container">
+<td>
+    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
+      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Polkadot OpenGov</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-proxies">
+      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Proxy Accounts</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-identity">
+      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                 <h5 class="cards-title">Set an Identity</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-parachains">  
       <img class="guide-image" src="/img/polkadot-guide/Parachain.jpg" alt="Drawing" width="250" height="150"/>
@@ -69,35 +98,6 @@ The Wiki has three main sections:
       <img class="guide-image" src="/img/polkadot-guide/Bridges.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Bridges</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
-      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Polkadot OpenGov</h5>
-              </div>
-    </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                 <h5 class="cards-title">Set an Identity</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Proxy Accounts</h5>
               </div>
     </a>
   </td>
@@ -125,7 +125,7 @@ Polkadot has an on-chain [open governance](../learn/learn-polkadot-opengov.md) (
 OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md).
 
-The DOT token gives you the power to participate in Polkadot OpenGov,
+The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov,
 [staking](../learn/learn-staking.md), and [parachains' crowdloans](../learn/learn-crowdloans.md).
 
 The level of abstraction and generalization of Polkadot allows to build applications that are
