@@ -15,8 +15,9 @@ The Polkadot Wiki serves as the central source of truth for Polkadot. It is a co
 initiative led by Web3 Foundation to keep an up-to-date resource on the best information for
 learning, building, and maintaining on Polkadot.
 
-The Wiki has three main sections: **Learn** (for learners), **Build** (for people that want to build
-on Polkadot), and **Maintain** (for people that want to maintain the network).
+The Wiki has three main sections: [**Learn**](./learn-index) (for learners),
+[**Build**](../build/build-index.md) (for people that want to build on Polkadot), and
+[**Maintain**](../maintain/maintain-index.md) (for people that want to maintain the network).
 
 :::
 
