@@ -7,6 +7,13 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-pallet
 ---
 
+:::info XCM Documentation
+
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
+
+:::
+
 The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm))
 provides a set of pre-defined, commonly used XCVM programs in the form of a set of extrinsics using
 [FRAME](https://docs.substrate.io/reference/frame-pallets/).

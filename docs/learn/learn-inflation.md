@@ -57,7 +57,7 @@ token liquid.
 
 ![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
-<p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
+<p style={{textAlign:"center"}}>Source: <a href="https://research.web3.foundation/Polkadot/overview/token-economics">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage

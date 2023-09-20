@@ -108,6 +108,7 @@ module.exports = {
             "general/dev-heroes",
           ],
         },
+        "general/start-building",
         "general/research",
         "general/metadata",
         "general/faq",

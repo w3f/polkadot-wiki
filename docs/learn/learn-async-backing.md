@@ -3,7 +3,7 @@ id: learn-async-backing
 title: Asynchronous Backing
 sidebar_label: Asynchronous Backing
 description: A brief overview of asynchronous backing, and how it affects Polkadot's scalability.
-keywords: [parachains, slots, backing, parablock]
+keywords: [parachains, backing, parablock, perspective parachains, unincluded segments]
 slug: ../learn-async-backing
 ---
 
@@ -26,7 +26,7 @@ and what its main limitations are.
 **Backing** refers to the process in which a parablock is verified by a subset of validators who
 determine the blocks validity. It is an important step in the validation process for parablocks, as
 it is the first line of defense in ensuring valid state transitions are taking place. Validators who
-back the parablock put their stake at risk, and if the block is found to be malicious, those
+back the parablock put their stake at risk, and if the block is later found to be invalid, those
 validators are slashed.
 
 :::
@@ -42,15 +42,16 @@ The **contextual execution** of new parablocks are parablock ancestors included 
 after 12 seconds, where contextual execution refers to the context built by included parablock
 ancestors used by the parachains to generate new parablocks.
 
-:::info It is important to note the clarification below
+:::info Candidate Recepts
 
-- Not the entire parablock, but the **paraheader** is placed on the parent block on the relay chain.
+- Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock,
+  state roots and ID info is placed on the parent block on the relay chain.
 - The relay chain does not access the entire state of a parachain but only the values that changed
   during that block and the merkelized hashes of the unchanged values.
 
 :::
 
-### Synchronous Backing Diagram
+### Synchronous Backing Mechanics
 
 FIGURE HERE?
 
@@ -79,11 +80,10 @@ performance metric is not fully tested nor is guaranteed until proper benchmarki
 
 Asynchronous backing is a feature that introduces
 [pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-[generation](./learn-parachains-protocol.md), [backing](./learn-parachains-protocol.md) and
-[inclusion](./learn-parachains-protocol.md). It is analogous to the logical pipelining of processor
-instruction in "traditional" architectures, where some instructions may be executed before others
-are complete. Instructions may also be executed in parallel, enabling multiple parts of the
-processor to work on potentially different instructions simultaneously.
+[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
+pipelining of processor instruction in "traditional" architectures, where some instructions may be
+executed before others are complete. Instructions may also be executed in parallel, enabling
+multiple parts of the processor to work on potentially different instructions simultaneously.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
@@ -134,7 +134,7 @@ segment. This allows to start building parablocks earlier, giving plenty of time
 collators to fit more transactions and prepare block candidates for backing and eventually
 inclusion.
 
-### Asynchronous Backing Diagram
+### Asynchronous Backing Mechanics
 
 FIGURE HERE?
 
