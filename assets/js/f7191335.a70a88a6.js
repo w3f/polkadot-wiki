@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[1686],{1691:e=>{e.exports=JSON.parse('{"title":"General","description":"General Information to get started with Polkadot and Web3.","slug":"/general-index","permalink":"/docs/general-index","navigation":{"next":{"title":"Getting Started","permalink":"/docs/getting-started"}}}')}}]);
