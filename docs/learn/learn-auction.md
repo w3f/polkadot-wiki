@@ -13,7 +13,7 @@ import AuctionSchedule from "./../../components/Auction-Schedule";
 
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
-parachain slots. The number of parachain slots is are not unbounded on
+parachain slots. The number of parachain slots is not unbounded on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, as only a limited number are
 available. A limited number of slots are unlocked every few months through on-chain governance. If a
 parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a
