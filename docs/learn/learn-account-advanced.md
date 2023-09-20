@@ -244,7 +244,7 @@ This is to showcase that the **SS58 address is based on the public key (aka "Acc
 
 The Subkey Tool's The
 [Inspecting Keys](https://docs.substrate.io/reference/command-line-tools/subkey/#inspecting-keys)
-the section explains how to use the `inspect` command to recalculate your key pair's public key and
+section explains how to use the `inspect` command to recalculate your key pair's public key and
 address.
 
 Start by inspecting your account's Polkadot address by running the inspect command against your
