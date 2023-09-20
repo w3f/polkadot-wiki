@@ -71,7 +71,7 @@ blockspace to be properly filled.
 :::warning Disclaimer: Performance Measurements
 
 Due to asynchronous backing not being fully implemented in a running production network, each
-performance metric is not fully tested.
+performance metric is not fully tested nor is guaranteed until proper benchmarking has taken place.
 
 :::
 
@@ -105,8 +105,10 @@ then proceeds to the inclusion process during the generation of the next relay-c
 Asynchronous backing brings the following changes to the parachain protocol:
 
 - Parablock generation is now decoupled from the backing process, avoiding the previous 6-second
-  deadline through the backing process. This gives more time for collators to properly use
-  blockspace, decreasing the probability of generating empty parablocks.
+  deadline through the backing process. This enables for more involved scaling approaches, such as
+  giving more time for collators to properly use blockspace or increasing block velocity based on
+  demand.
+
 - Parachains can generate blocks and have them placed into **unincluded segments** of parablock
   ancestors (i.e. parablocks that are seconded but not yet backed by paravalidators and included in
   the relay chain) rather than ancestors included in the relay chain state.
@@ -118,6 +120,13 @@ included in the relay chain. Parablocks can be added to this unincluded segment 
 the latest included parent block of the relay chain. The core functionality that asynchronous
 backing brings is the ability to build on these unincluded segments of block ancestors rather than
 ancestors included in the relay chain state.
+
+:::info Unincluded segments happen on the collator portion
+
+**Unincluded** segments are block that are seconded, but not yet backed. The backing process occurs
+on the relay chain, whereas unincluded segments are moreso held in the collator.
+
+:::
 
 Compared to synchronous backing, contextual execution shift from being the parablock ancestors
 included in the relay chain, to being being the latest ancestor parablock pushed into the unincluded
@@ -153,10 +162,10 @@ Polkadot's networking, runtime, and collation aspects will allow for higher, mor
 
 ### Prospective Parachains
 
-Prospective parachains are essentially all unincluded segments from all parachains.
+Prospective parachains manage and represent all unincluded segments from all parachains.
 
 The
-[prospective Parachains subsystem](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html),
+[Prospective Parachains subsystem](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html),
 is responsible for coordinating the state of various prospective parachain fragments. A fragment is
 a prospective/potential parablock. More than one of these make up a
 [**fragment tree**](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html#fragment-trees),
@@ -174,12 +183,15 @@ within the unincluded segment. This allows for a parablock to be backed later, e
 computational and storage time per block. The decoupling of collation (candidate generation) and
 backing also allows for more execution time, while citing a lower validation time.
 
-There are two parameters that are controlled can be controlled by governance:
+There are two parameters that can be controlled by governance:
 
 - [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54) -
-  How many ancestors of a relay parent are allowed to build candidates on top of.
+  How many ancestors of a relay parent are allowed to build candidates on top of. When building a
+  new parablock for the unincluded segment, this is how the parablock decides which relay parent to
+  derive context from.
 - [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49) -
-  The maximum amount of candidates between the latest parablock and relay parent ancestor.
+  The maximum amount of candidates between the latest parablock and relay parent ancestor. Any
+  blocks that exceed this limit will be ignored by the validators.
 
 ## Learn More
 
