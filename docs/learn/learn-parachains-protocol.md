@@ -76,9 +76,10 @@ The parachain protocol is divided into two main phases:
 - [**Inclusion Pipeline**](#inclusion-pipeline): Collators send parachain blocks (parablocks) with
   PoV to Validators. Validators verify if the parablocks follow the state transition rules of the
   parachain and sign statements that can have a positive or negative outcome. With enough positive
-  statements, the block is added to the Relay Chain, but is still pending approval.
+  statements, the block is **backed** and **included** in the Relay Chain, but is still pending
+  approval.
 - [**Approval Process**](#approval-process): Validators perform additional checks that, if positive,
-  allow the parablock to be approved.
+  allow the parablock to be **approved**.
 
 The figure below shows a representation of a parachain with collators and validators. The figure
 also shows the journey of a parachain block (white square) through the Inclusion Pipeline and the
@@ -129,13 +130,13 @@ changes its status through this path as follows:
   yellow marks show the PoV from the para-validators, while the white mark the PoV from the
   collator.
 - Backed: The block is backed and noted in a fork on the Relay Chain by a relay chain block author
-  (in this case V4). The backed block is shown as a square with white background and yellow border.
-  The backed block can still fail to be included in the Relay Chain. Note that for simplicity here
-  the backed parachain block is represented as a block of the Relay Chain, but in reality a relay
-  chain block contains many parachian blocks.
+  (in this case V4). The backed block is shown as a square with white background and yellow border
+  enclosing a "B". The backed block can still fail to be included in the Relay Chain. Note that for
+  simplicity here the backed parachain block is represented within the Relay Chain block, but in
+  reality a relay chain block does not contain the parablocks themselves (more about this later).
 - Pending availability: The block is backed but not considered available yet.
-- Included: The block is backed and considered available (we have a parablock). Parablocks are shown
-  as square with white background and yellow border enclosing a "P".
+- Included: The block is backed and considered available (we have a parablock). Included parablocks
+  are shown as square with white background and yellow border enclosing an "I".
 
 ### Parachain Phase
 
@@ -267,8 +268,8 @@ enters the Approval Process. The parablock becomes accepted when it is backed, a
 **undisputed**. The parablock is checked a second time by a subset of validators (V5, V6 and V7),
 and if there are no contradictory results the block is approved and gossiped to other relay chain
 validators. Note the parablock after secondary checks is shown as a square with a white background a
-yellow border enclosing a "P", and three white ticks (one for each secondary check). Approved
-para-blocks are shown as yellow squares that become grey.
+yellow border enclosing an "I" (stands for _included_), and three white ticks (one for each
+secondary check). Approved para-blocks are shown as yellow squares.
 
 ![parachain-approval-process](../assets/parachain-approval-process.png)
 
