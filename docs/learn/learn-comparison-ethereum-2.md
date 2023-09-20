@@ -51,7 +51,7 @@ architecture:
   relay chain.
 
 Polkadot can't and does not directly run something like a virtual machine for smart contracts.
-However, several of its parachains can (and does). Parachains on Polkadot can even run an EVM for
+However, several of its parachains can (and do). Parachains on Polkadot can even run an EVM for
 executing smart contracts written in Solidity, Ethereum's native smart contract language.
 
 In the context of blockchain, "sharding" refers to the parallelization of state transition
@@ -99,8 +99,8 @@ execute it within a Wasm environment.
 ## Architectural Differences: Polkadot and Ethereum
 
 As previously mentioned, Ethereum is a **general-purpose** virtual machine that can run sandboxed
-programs are written in Solidity, whereas Polkadot is a meta-protocol for other parachains to
-connect and interact with each other.
+programs written in Solidity, whereas Polkadot is a meta-protocol for other parachains to connect 
+and interact with each other.
 
 Ethereum operates as a single, homogeneous chain. Each Ethereum node is divided into two layers: the
 **consensus** and **execution** layers. Each layer handles the block validation information, peer
@@ -168,8 +168,8 @@ expected time to finality is 12-60 seconds.
     [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all validators in the system,
     such that anyone - not only the shard's validators - can reconstruct a parachain's block and
     test its validity. The random parachain-validator assignments and secondary checks were
-    performed randomly selected validators make it less likely for the small set of validators on
-    each parachain to collude.
+    performed by randomly selected validators making it less likely for the small set of validators 
+    on each parachain to collude.
 
 ### Staking Mechanics
 
