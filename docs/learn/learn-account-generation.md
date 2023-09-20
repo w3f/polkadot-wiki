@@ -242,7 +242,7 @@ password for an account created on the Polkadot-JS UI (i.e. a non-injected accou
 If you create an account first using Polkadot-JS Apps UI and then add it to the browser extension,
 you need to follow the
 [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
-the password of such an account.
+password of such an account.
 
 :::
 
