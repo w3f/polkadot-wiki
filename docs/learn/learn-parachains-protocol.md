@@ -138,6 +138,15 @@ changes its status through this path as follows:
 - Included: The block is backed and considered available (we have a parablock). Included parablocks
   are shown as square with white background and yellow border enclosing an "I".
 
+:::info Asynchronous Backing
+
+Parablocks' backing and inclusion take 12 seconds to be recorded on the relay chain, i.e. backing
+happens in one relay chain block (6 seconds) and inclusion in another relay chain block (additional
+6 seconds). With [**asynchronous backing**](./learn-async-backing.md), backing and inclusion can be
+recorded in just one relay chain block.
+
+:::
+
 ### Parachain Phase
 
 In the parachain phase, some validators are assigned to parachains by the **Validator Assignment
