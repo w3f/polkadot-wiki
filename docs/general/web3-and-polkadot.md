@@ -7,6 +7,29 @@ keywords: [web3, polkadot, light clients, decentralization]
 slug: ../web3-and-polkadot
 ---
 
+Back in the early 2000's, when the internet was gaining popularity for the first time, the internet
+featured read-only, static, basic web pages. The online connected world at the time was only the
+beginning of virtual data, identities, and more. The internet during this time was also called the
+Web 1.0.
+
+As social media platforms and online businesses began to emerge, the internet transformed into the
+Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive web pages,
+where users can read and write information plus publish their own for others to see. However, this
+version of the web comes with downsides, dealing with data control, privacy issues, and the
+consequences of trust. This is where the WEB3 comes into the picture.
+
+The Web 3.0 is taking centralized infrastructure and applications and turning them into
+decentralized, trust-free protocols. The goal is to transform the internet into a decentralized web,
+where users control their own data and identity in a trust-free environment. The Web3 movement aims
+to remove intermediaries and build trustless infrastructure.
+
+:::note The Web3 Movement
+
+To learn more of the Web3 movement, check out this video from the
+[Web3 Summit](https://youtu.be/l44z35vabvA)
+
+:::
+
 Web3 is an interactive and collaborative web where users can read, write and **own** data.
 
 ## Data Ownership
