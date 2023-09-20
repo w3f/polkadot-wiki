@@ -142,8 +142,8 @@ changes its status through this path as follows:
 
 Parablocks' backing and inclusion take 12 seconds to be recorded on the relay chain, i.e. backing
 happens in one relay chain block (6 seconds) and inclusion in another relay chain block (additional
-6 seconds). With [**asynchronous backing**](./learn-async-backing.md), backing and inclusion can be
-recorded in just one relay chain block.
+6 seconds, see Figure above). With [**asynchronous backing**](./learn-async-backing.md), backing and
+inclusion can be recorded in just one relay chain block.
 
 :::
 
