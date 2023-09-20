@@ -208,11 +208,6 @@ module.exports = {
       },
       items: [
         {
-          to: "/docs/general-index",
-          label: "General",
-          position: "right",
-        },
-        {
           to: "docs/learn-index",
           label: "Learn",
           position: "right",
