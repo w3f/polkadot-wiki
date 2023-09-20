@@ -171,7 +171,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'sub0 Europe 2023 is happening now! <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification%20live-event" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
+        'The Polkadot Blockchain Academy is coming to Asia! <a href="https://www.polkadot.network/development/academy/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=pba%204%205&utm_content=notification" target="_blank" rel="noopener noreferrer">Find out more 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,
