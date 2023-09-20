@@ -52,7 +52,7 @@ threshold, they will immediately have access to these tokens.
 
 ### Multisig Transactions with Accounts Tab
 
-:::info Waltkthrough Video Tutorial
+:::info Walkthrough Video Tutorial
 
 See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with
 a multisig account using the Accounts Tab in the
