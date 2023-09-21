@@ -1676,16 +1676,16 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@5.5.2"
 
-"@docusaurus/plugin-client-redirects@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.4.1.tgz"
-  integrity sha512-tp0j16gaLIJ4p+IR0P6KDOFsTOGGMY54MNPnmM61Vaqqt5omLqsuKUO8UlCGU1oW/4EIQOhXYy99XYY5MjE+7A==
+"@docusaurus/plugin-client-redirects@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.4.3.tgz#0da7e6facadbca3bd7cb8d0453f21bea7f4f1721"
+  integrity sha512-iCwc/zH8X6eNtLYdyUJFY6+GbsbRgMgvAC/TmSmCYTmwnoN5Y1Bc5OwUkdtoch0XKizotJMRAmGIAhP8sAetdQ==
   dependencies:
-    "@docusaurus/core" "2.4.1"
-    "@docusaurus/logger" "2.4.1"
-    "@docusaurus/utils" "2.4.1"
-    "@docusaurus/utils-common" "2.4.1"
-    "@docusaurus/utils-validation" "2.4.1"
+    "@docusaurus/core" "2.4.3"
+    "@docusaurus/logger" "2.4.3"
+    "@docusaurus/utils" "2.4.3"
+    "@docusaurus/utils-common" "2.4.3"
+    "@docusaurus/utils-validation" "2.4.3"
     eta "^2.0.0"
     fs-extra "^10.1.0"
     lodash "^4.17.21"
