@@ -31,7 +31,7 @@ slashed.
 
 :::
 
-In synchronous backing, parablock validation is tightly coupled to the relay chain's progression on
+In synchronous backing, parablock generation is tightly coupled to the relay chain's progression on
 a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
 (six-second window), and (if successfully backed) it will be included in a relay-chain block (often
 referred to as the **parent** block, as the parablock anchors itself to it) after an additional six
@@ -55,9 +55,9 @@ ancestors used by the parachains to generate new parablocks.
 
 In synchronous backing we can imagine parablocks on a conveyor belt with the following properties:
 
-- the belt is synched with the relay chain, every parablock is backed every 6 seconds and included
-  every 12 seconds, and
-- the belt can carry only one parablock at a time (no [pipelining](#pipelining)).
+- the belt is synched with the relay chain: every parablock is generated and backed every 6 seconds,
+  and included every 12 seconds
+- the belt can carry only one parablock at a time (no [pipelining](#pipelining))
 
 The diagram below shows parablocks on their way from being generated to being backed and included
 into the relay chain in the context of synchronous backing.
@@ -70,7 +70,7 @@ included, Parablock 2 (P2) can be filled using the included P1 as execution cont
 is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5 - 1 seconds) to
 fill it. In this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3, Parablock 3
 (P3) will be generated, filled to 50%, and backed into R4 in 6 seconds. After 24 seconds, two
-parablocks, P1 and P2, have been included in the relay chain.
+parablocks, P1 and P2, have been included in the relay chain, and P3 has been backed.
 
 The parablock generation and backing are bound together within a six-second window that limits the
 amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
@@ -169,20 +169,25 @@ into the relay chain in the context of asynchronous backing.
 Parablock 1 (P1) is included, and P2 is backed within R1. In the meantime, the unincluded segment is
 full and contains P3-5. Because P6 is not rushing to be backed, it can be filled in 6s while P2 is
 included and P3 is backed in R2. This is possible because the context execution shifted from being
-the latest included parablock to being the latest ancestor in the unincluded segment (i.e. P5). In
-this scenario, blockspace demand decreases, and P6 is filled only 50% using 6 seconds. Next block P7
-can be filled in 12 seconds while the unincluded segment is emptied. While filling up P7, P3 and P4
-are included in R3 and R4, respectively. In 24 seconds, four parablocks, P1 to P4, have been
-included in the relay chain, and two more blocks have been filled and pushed to the unincluded
-segment, ready to be backed. The collators were able to make better use of blockspace, including 2x
-more data, by doubling block generation time in a period of lower demand. With an unincluded segment
-carrying a maximum of three parablocks, the collators could wait an additional 6 seconds if needed
-(i.e. make sure in the unincluded segment there is at least one parablock to build a new one).
+the latest included parablock to being the latest ancestor in the unincluded segment (i.e. P5).
+
+In this scenario, blockspace demand decreases and as a consequence P6 is filled only 50% using 6
+seconds. Next block P7 can be filled in 12 seconds while the unincluded segment is emptied. While
+filling up P7, P3 and P4 are included in R3 and R4, respectively. In 24 seconds, four parablocks, P1
+to P4, have been included in the relay chain, P5 has been backed, and two more blocks have been
+filled and pushed to the unincluded segment, ready to be backed. The unincluded segment is now 2/3
+filled.
+
+Collators were able to make better use of blockspace, including 2x more data, by doubling block
+generation time from 6 to 12 seconds in a period of lower demand. This was possible due to the
+asynchrony between block generation and backing. With an unincluded segment carrying a maximum of
+three parablocks, the collators could wait an additional 6 seconds if needed (i.e. make sure in the
+unincluded segment there is at least one parablock to build a new one).
 
 In case blockspace demand increases after the generation of P7, collators can generate P8 and P9 is
-6 seconds (i.e. 3 seconds per block) due to the unincluded segment not being filled up (see below).
-However, if demand stays high after P9 collators will only be able to generate parablocks every 6
-seconds as the unincluded segment is emptied every 6 seconds, and the maximum capacity of three
+6 seconds (i.e. 3 seconds per block) due to the unincluded segment being 2/3 filled (see below).
+However, if demand stays high after P9, collators will only be able to generate parablocks every 6
+seconds as the unincluded segment is emptied every 6 seconds and its maximum capacity of 3/3
 parablocks has been reached.
 
 ![async-backing-3s](../assets/async-backing-3s.png)
