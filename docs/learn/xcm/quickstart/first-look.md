@@ -16,7 +16,7 @@ complete code example [in the repo](https://github.com/paritytech/xcm-docs/tree/
 
 ## Message
 
-```rust,noplayground
+```rust
  let message = Xcm(vec![
     WithdrawAsset((Here, amount).into()),
     BuyExecution{ fees: (Here, amount).into(), weight_limit: WeightLimit::Unlimited },

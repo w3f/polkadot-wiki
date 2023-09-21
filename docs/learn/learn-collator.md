@@ -38,13 +38,13 @@ The validator must successfully verify the following conditions in the following
 3. Validate the candidate by executing the parachain Runtime.
 
 Once a candidate meets a specified criteria for inclusion, the selected relay chain block author
-then choses any of the backable candidates for each parachain and includes those into the relay
+then chooses any of the backable candidates for each parachain and includes those into the relay
 chain block. We say the candidate blocks are _backed_.
 
 The assumption that having more collators is better or more secure is not correct. On the contrary,
 too many collators may slow down the network. The only nefarious power collators have is transaction
 censorship. To prevent censorship, a parachain only needs to ensure that there are some neutral
-collators - but not necessarily a majority. Theoretically, the censorship problem is solved with
+collators - but not necessarily a majority. Theoretically, the censorship problem is solved by
 having just one honest collator.
 
 ## XCM

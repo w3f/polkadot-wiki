@@ -183,6 +183,7 @@ module.exports = {
       disableSwitch: true,
     },
     prism: {
+      additionalLanguages: ["rust"],
       theme: require("prism-react-renderer/themes/github"),
     },
     /*
@@ -206,11 +207,6 @@ module.exports = {
         src: "img/Polkadot_Logo_Horizontal_Pink-Black.svg",
       },
       items: [
-        {
-          to: "/docs/general-index",
-          label: "General",
-          position: "right",
-        },
         {
           to: "docs/learn-index",
           label: "Learn",
@@ -269,7 +265,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'sub0 is back! Lisbon, Portugal & online, Sep 19-20. <a href="https://polkadot.network/ecosystem/events/sub0/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=sub023&utm_content=notification%20three" target="_blank" rel="noopener noreferrer">Learn more 👉</a>',
+        'The Polkadot Blockchain Academy is coming to Asia! <a href="https://www.polkadot.network/development/academy/?utm_source=wiki.polkadot.network&utm_medium=referral&utm_campaign=pba%204%205&utm_content=notification" target="_blank" rel="noopener noreferrer">Find out more 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,

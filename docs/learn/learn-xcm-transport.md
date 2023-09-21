@@ -7,6 +7,13 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-transport
 ---
 
+:::info XCM Documentation
+
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
+
+:::
+
 With the XCM format established, common patterns for protocols of these messages are needed.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements two message passing
 protocols for acting on XCM messages between its constituent parachains.
@@ -95,7 +102,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 
 ### XCMP (Cross Consensus Message Passing) Design Summary
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tOnzk4AROUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![XCMP explained](https://img.youtube.com/vi/tOnzk4AROUY/0.jpg)](https://www.youtube.com/watch?v=tOnzk4AROUY)
 
 :::note
 

@@ -22,7 +22,7 @@ list them, as they are part of XCM:
 
 ## HrmpNewChannelOpenRequest
 
-```rust,noplayground
+```rust
 HrmpNewChannelOpenRequest {
     #[codec(compact)]
     sender: u32,
@@ -46,7 +46,7 @@ The `max_capacity` is the maximum number of messages that can be queued in the c
 
 ## HrmpChannelAccepted
 
-```rust,noplayground
+```rust
 HrmpChannelAccepted {
     #[codec(compact)]
     recipient: u32,
@@ -62,7 +62,7 @@ equals the `sender` field in the preceding `HrmpNewChannelOpenRequest` instructi
 
 ## HrmpChannelClosing
 
-```rust,noplayground
+```rust
 HrmpChannelClosing {
     #[codec(compact)]
     initiator: u32,
@@ -98,7 +98,7 @@ one being a bridge. The instruction to export an XCM is called `ExportMessage`.
 
 ## ExportMessage
 
-```rust,noplayground
+```rust
 ExportMessage { network: NetworkId, destination: InteriorMultiLocation, xcm: Xcm<()> },
 ```
 

@@ -15,7 +15,7 @@ messages. The XCM locking mechanism consists of four instructions: `LockAsset`, 
 
 ## LockAsset
 
-```rust,noplayground
+```rust
 LockAsset { asset: MultiAsset, unlocker: MultiLocation }
 ```
 
@@ -31,7 +31,7 @@ instruction serves as a notification that the asset is now unlockable.
 
 ## UnlockAsset
 
-```rust,noplayground
+```rust
 UnlockAsset { asset: MultiAsset, target: MultiLocation }
 ```
 
@@ -43,7 +43,7 @@ to be transferred if there are no other restrictions. The following parameters a
 
 ## NoteUnlockable
 
-```rust,noplayground
+```rust
 NoteUnlockable { asset: MultiAsset, owner: MultiLocation }
 ```
 
@@ -95,7 +95,7 @@ Parachain B responds by sending an UnlockAssets instruction to the relay chain.
 
 1. send `LockAsset` instruction from ParaA to relay.
 
-```rust,noplayground
+```rust
 ParaA::execute_with(|| {
     let message = Xcm(vec![LockAsset {
         asset: (Here, CENTS * 5).into(),
@@ -107,7 +107,7 @@ ParaA::execute_with(|| {
 
 2. Parachain B receives this `NoteUnlockable` instruction from the relay chain.
 
-```rust,noplayground
+```rust
 NoteUnlockable {
     owner: (Parent, Parachain(1)).into(),
     asset: (Parent, CENTS * 5).into()
@@ -116,7 +116,7 @@ NoteUnlockable {
 
 3. Parachain A sends `RequestUnlock` instruction to Parachain B
 
-```rust,noplayground
+```rust
 ParaA::execute_with(|| {
     let message = Xcm(vec![RequestUnlock {
         asset: (Parent, 3 * CENTS).into(),
@@ -129,7 +129,7 @@ ParaA::execute_with(|| {
 4. Parachain B sends an `UnlockAsset` instruction to the relay chain. We check if the lock is
    updated accordingly:
 
-```rust,noplayground
+```rust
 assert_eq!(
     relay_chain::Balances::locks(&parachain_sovereign_account_id(1)),
     vec![BalanceLock { id: *b"py/xcmlk", amount: 2 * CENTS, reasons: Reasons::All }]
@@ -211,7 +211,7 @@ ParaA::execute_with(|| {
    the lock in the balances-pallet. Unlockers: B, C; Funds registered in pallet-xcm: 2, 5. Lock set
    in pallet-balances: 5.
 
-```rust,noplayground
+```rust
 Relay::execute_with(|| {
     assert_eq!(
         relay_chain::Balances::locks(&parachain_sovereign_account_id(1)),

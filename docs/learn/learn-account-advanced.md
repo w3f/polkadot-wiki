@@ -176,9 +176,13 @@ private key being unknown (and unattainable). So, that means that only the palle
 interact with this account. These accounts can never issue a signed
 [extrinsic](./learn-extrinsics.md) since they do not have a private key.
 
-:::info
+:::info Explore System Accounts
 
-You can view system accounts on [Subscan](https://polkadot.subscan.io/account_list?role=module).
+Treasury account address -
+{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+
+You can view the existing system accounts on
+[Subscan](https://polkadot.subscan.io/account_list?role=module).
 
 :::
 
@@ -240,7 +244,7 @@ This is to showcase that the **SS58 address is based on the public key (aka "Acc
 
 The Subkey Tool's The
 [Inspecting Keys](https://docs.substrate.io/reference/command-line-tools/subkey/#inspecting-keys)
-the section explains how to use the `inspect` command to recalculate your key pair's public key and
+section explains how to use the `inspect` command to recalculate your key pair's public key and
 address.
 
 Start by inspecting your account's Polkadot address by running the inspect command against your

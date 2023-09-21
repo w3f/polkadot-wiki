@@ -36,8 +36,8 @@ private key an account cannot sign anything. In
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
 that do not have private keys (i.e. key-less accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md) and
-[anonymous proxies](./learn-proxies.md/#anonymous-proxies) that are not discussed here and are meant
-for an advanced audience.
+[anonymous proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy) that are not discussed here
+and are meant for an advanced audience.
 
 Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private
 key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to
@@ -155,7 +155,7 @@ More in-depth information about the above data can be found in the
 The `AccountData` structure defines the balance types in Substrate. The three types of balances
 include `free`, `reserved`, and `frozen`. The **usable** balance of the account is the amount that
 is `free` minus any funds considered `frozen`, while the **total** balance of the account is the sum
-of `free` and`reserved` funds. The `flags` describe extra information about the account.
+of `free` and `reserved` funds. The `flags` describe extra information about the account.
 
 More in-depth information about the above data can be found in the
 [balances pallet in the Substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).

@@ -15,7 +15,7 @@ instructions in this chapter.
 
 ## BuyExecution
 
-```rust,noplayground
+```rust
 BuyExecution { fees: MultiAsset, weight_limit: WeightLimit }
 ```
 
@@ -28,7 +28,7 @@ instruction.
 Let's grab the teleport message from the [transfers chapter](./transfers/teleports.md) and add fee
 payment.
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((Here, withdraw_amount + fee_estimation).into()),
   BuyExecution { // <-- Added here
@@ -67,7 +67,7 @@ of instructions in each message.
 
 ## SetFeesMode
 
-```rust,noplayground
+```rust
 SetFeesMode { jit_withdraw: bool }
 ```
 
@@ -80,7 +80,7 @@ congestion.
 
 ## UnpaidExecution
 
-```rust,noplayground
+```rust
 UnpaidExecution { weight_limit: WeightLimit, check_origin: Option<MultiLocation> }
 ```
 
@@ -97,7 +97,7 @@ instruction.
 
 ## RefundSurplus
 
-```rust,noplayground
+```rust
 RefundSurplus
 ```
 
@@ -112,7 +112,7 @@ Refunds any surplus weight previously bought with `BuyExecution`. This is useful
 
 ### Example
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
   WithdrawAsset((Parent, message_fee).into()),
   BuyExecution {

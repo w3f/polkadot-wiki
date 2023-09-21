@@ -373,8 +373,8 @@ The built binary will be in the `target/release` folder, called `polkadot`.
 ```
 
 Use the `--help` flag to determine which flags you can use when running the node. For example, if
-[connecting to your node remotely](maintain-wss.md), you'll probably want to use `--ws-external` and
-`--rpc-cors all`.
+[connecting to your node remotely](maintain-wss.md), you'll probably want to use `--rpc-external`
+and `--rpc-cors all`.
 
 The syncing process will take a while, depending on your capacity, processing power, disk speed and
 RAM. On a \$10 DigitalOcean droplet, the process can complete in some 36 hours.
@@ -403,10 +403,10 @@ after the node syncs.
 Finally, you can use Docker to run your node in a container. Doing this is more advanced, so it's
 best left up to those already familiar with docker or who have completed the other set-up
 instructions in this guide. Be aware that when you run polkadot in docker, the process only listens
-on localhost by default. If you would like to connect to your node's services (rpc, websockets, and
-prometheus) you need to ensure that you run you node with the `--rpc-external`, `--ws-external`, and
-`--prometheus-external` commands.
+on localhost by default. If you would like to connect to your node's services (rpc, and prometheus)
+you need to ensure that you run you node with the `--rpc-external`, and `--prometheus-external`
+commands.
 
 ```zsh
-docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external
+docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --prometheus-external
 ```

@@ -15,7 +15,7 @@ another. The `parents` parameter expresses the number of steps up in the hierarc
 we dive further into the MultiLocation struct and explain how we can use the Junctions type to
 describe steps in the system hierarchy. Take a look at the MultiLocation struct again:
 
-```rust,noplayground
+```rust
 pub struct MultiLocation {
     pub parents: u8,
     pub interior: Junctions,
@@ -31,7 +31,7 @@ multiple parachains). So to describe the correct steps down the hierarchy, we us
 
 ## Junctions Type
 
-```rust,noplayground
+```rust
 pub enum Junctions {
     /// The interpreting consensus system.
     Here,
@@ -54,7 +54,7 @@ a Junction.
 A [Junction](https://paritytech.github.io/polkadot/doc/xcm/v3/enum.Junction.html) describes a step
 down in the Hierarchy. The `Junction`s are defined as follows:
 
-```rust,noplayground
+```rust
 pub enum Junction {
     Parachain(u32),
     AccountId32 {
@@ -140,7 +140,7 @@ global consensus networks using bridges.
 
 ## Multiple ways to create a MultiLocation
 
-```rust,noplayground
+```rust
 // Current Location
 MultiLocation {parents: 0, interior: Here};
 MultiLocation::new(0, Here);

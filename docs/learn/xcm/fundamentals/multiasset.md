@@ -27,7 +27,7 @@ and `MultiAssetFilter`.
 
 Let's take a look at the MultiAsset struct:
 
-```rust,noplayground
+```rust
 pub struct MultiAsset {
     pub id: AssetId,
     pub fun: Fungibility,
@@ -39,7 +39,7 @@ assets. Firstly, an overall asset identity must be provided. For fungible assets
 symbol that identifies the asset. For NFTs this identifies the overall asset “class” — different
 asset instances may be within this class.
 
-```rust,noplayground
+```rust
 enum AssetId {
    Concrete(MultiLocation),
    Abstract([u8; 32]),
@@ -57,7 +57,7 @@ identified by a `GeneralIndex` junction. Depending on the implementation of the 
 consensus system, the exact location may differ (e.g. `GeneralIndex(AssetID)` or
 `PalletInstance(PalletID)/GeneralIndex(AssetID)` can both be valid asset identities).
 
-```rust,noplayground
+```rust
 enum Fungibility {
    // Fungible cannot be 0
    Fungible(u128),
@@ -80,7 +80,7 @@ There are multiple ways to group Assets. In this section, we go over these metho
 One way to group a set of `MultiAsset` items is the
 [MultiAssets](https://paritytech.github.io/polkadot/doc/xcm/v3/struct.MultiAssets.html) type.
 
-```rust,noplayground
+```rust
 struct MultiAssets(Vec<MultiAsset>);
 ```
 
@@ -97,7 +97,7 @@ Then we have WildMultiAsset; this is a wildcard that can be used to match agains
 MultiAsset items. All the WildMultiAsset wildcards can be used to select/filter assets in the
 [Holding register](../overview/xcvm.md).
 
-```rust,noplayground
+```rust
 pub enum WildMultiAsset {
     /// All assets in Holding.
     All,
@@ -123,7 +123,7 @@ Finally, there is `MultiAssetFilter`. This is used most often and is just a comb
 MultiAssets and WildMultiAsset allowing either a wildcard or a list of definite (i.e. not wildcard)
 assets to be specified.
 
-```rust,noplayground
+```rust
 pub enum MultiAssetFilter {
     /// Specify the filter as being everything contained by the given `MultiAssets` inner.
     Definite(MultiAssets),
@@ -139,7 +139,7 @@ pub enum MultiAssetFilter {
 For more information about the MultiLocations used to define concrete assets, see
 [MultiLocation](multilocation/summary.md) and [Junction](multilocation/junction.md).
 
-```rust,noplayground
+```rust
 // Location Relay Chain
 // 100 Native Asset (three ways)
 MultiAsset {id: Concrete(MultiLocation {parents: 0, interior: Here}), fun: Fungible(100u128)};
@@ -158,7 +158,7 @@ let _: MultiAsset = (X2(Parachain(1000), GeneralIndex(1234)), Index(1)).into();
 
 ### MultiAssetFilter
 
-```rust,noplayground
+```rust
 let a1: MultiAssets = MultiAssets::from(vec![MultiAsset {id: Here.into(), fun: 100u128.into()}]);
 let b1: MultiAssets = (Here, 100u128).into();
 assert_eq!(a1, b1);

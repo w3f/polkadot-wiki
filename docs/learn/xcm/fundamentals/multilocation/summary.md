@@ -44,7 +44,7 @@ A quick summary of the previous points:
 
 Now take a look at the MultiLocation struct:
 
-```rust,noplayground
+```rust
 pub struct MultiLocation {
     pub parents: u8,
     pub interior: Junctions,
@@ -73,7 +73,7 @@ a step up in the hierarchical structure (the “parent” or the encapsulating c
 `X2` variants are expressing the number of `Junction`s that we step down in the hierarchical
 structure (see [Junctions](junction.md) for an explanation).
 
-```rust,noplayground
+```rust
 // From: RelayA
 // To: ParaB
 // Location: Parachain(2000)

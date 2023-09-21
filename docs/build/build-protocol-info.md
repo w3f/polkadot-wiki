@@ -80,9 +80,11 @@ order to reduce the public key from 33 bytes to 32 bytes.
 Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust
 accounts from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e.
 completely removed from storage and the nonce reset. Polkadot's ED is
-<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>, :polkadot }}
+{{ kusama: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>, :kusama }}
 while Kusama's is
-<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>.
+{{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
 You can always verify the existential deposit by checking the
 [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
 `balances.existentialDeposit`.

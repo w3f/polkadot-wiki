@@ -13,7 +13,7 @@ XCM contains an instruction that allows for the execution of calls (from a `Runt
 FRAME-based system, to a smart contract function call in an EVM-based system) in a consensus system.
 It is the `Transact` instruction and it looks like this:
 
-```rust,noplayground
+```rust
 Transact {
     origin_kind: OriginKind,
     require_weight_at_most: Weight,
@@ -33,7 +33,7 @@ specified `require_weight_at_most`, the execution of the call fails.
 
 The `call` field is of type `DoubleEncoded<Call>`.
 
-```rust,noplayground
+```rust
 pub struct DoubleEncoded<T> {
     encoded: Vec<u8>,
     #[codec(skip)]
@@ -58,7 +58,7 @@ The status is described by the `MaybeErrorCode` enum, and can either be a Succes
 TruncatedError if the length of the error exceeds the MaxDispatchErrorLen. For pallet-based calls,
 the Error is represented as the scale encoded `Error` enum of the called pallet.
 
-```rust,noplayground
+```rust
 ExpectTransactStatus(MaybeErrorCode)
 
 pub enum MaybeErrorCode {
@@ -92,7 +92,7 @@ In this example, the relay chain executes the `set_balance` function of `pallet_
 `Parachain(1)`. This function requires the origin to be root. We enable the root origin for the
 relay chain by setting `ParentAsSuperuser` for the `OriginConverter` config type.
 
-```rust,noplayground
+```rust
 let call = parachain::RuntimeCall::Balances(
     pallet_balances::Call::<parachain::Runtime>::set_balance {
         who: ALICE,
@@ -119,7 +119,7 @@ For the full example, check [the repo](https://github.com/paritytech/xcm-docs/tr
 In this example, as Parachain(1), we create an NFT collection on the relay chain and we then mint an
 NFT with ID 1. The admin for the nft collection is parachain(1). The call looks as follows:
 
-```rust,noplayground
+```rust
 let create_collection = relay_chain::RuntimeCall::Uniques(
     pallet_uniques::Call::<relay_chain::Runtime>::create {
         collection: 1u32,
@@ -130,7 +130,7 @@ let create_collection = relay_chain::RuntimeCall::Uniques(
 
 The owner of the NFT is Alice. The nft mint call looks as follows:
 
-```rust,noplayground
+```rust
 let mint = relay_chain::RuntimeCall::Uniques(
     pallet_uniques::Call::<relay_chain::Runtime>::mint {
         collection: 1u32,
@@ -147,7 +147,7 @@ The xcm message contains the following instructions:
 3. Create a collection with as admin and owner the sovereign account of `Parachain(1)`.
 4. Mints an NFT in the collection with item ID 1 and as owner Alice.
 
-```rust,noplayground
+```rust
 let message = Xcm(vec![
     WithdrawAsset((Here, AMOUNT).into()),
     BuyExecution { fees: (Here, AMOUNT).into(), weight_limit: WeightLimit::Unlimited },

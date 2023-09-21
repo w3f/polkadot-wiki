@@ -226,5 +226,5 @@ management needs.
 
 For example, if a team wants sign-off from two groups to perform a privileged operation, it could
 create a 2-of-2 [**multisig**](./learn-account-multisig.md) from two
-[**pure proxies**](./learn-proxies.md/#anonymous-proxy-pure-proxy), and then set members from each
-group as proxies to those two accounts.
+[**pure proxies**](./learn-proxies-pure.md#anonymous-proxy-pure-proxy), and then set members from
+each group as proxies to those two accounts.
