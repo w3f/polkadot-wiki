@@ -123,8 +123,8 @@ changes its status through this path as follows:
   the collator). Note the candidate is not valid yet and can still fail to be included in the Relay
   Chain.
 - Seconded: The block is put forward by the para-validator V1 to other para-validators (in this case
-  V2 and V3). The seconded block is shown as a white square with a white tick mark and two yellow
-  tick marks on top of it. The yellow marks show the PoV from the para-validators.
+  V2 and V3). The seconded block is shown as a white square with a white tick mark and a yellow tick
+  mark on top of it. The yellow mark show the PoV from para-validator V1.
 - Backable: The block validity is attested by a majority of the para-validators. The backable block
   is shown as white square with a white tick mark and three yellow tick marks on top of it. The
   yellow marks show the PoV from the para-validators, while the white mark the PoV from the
