@@ -193,14 +193,14 @@ binaries are needed to properly run a validator node. More context on these chan
 #### Installation from official releases
 
 The official binaries can be downloaded from the
-[Github Releases](https://github.com/paritytech/polkadot/releases). You should download the latest
-available version. You can also download the binaries by using the following direct links (replace
-X.Y.Z by the appropriate version):
+[Github Releases](https://github.com/paritytech/polkadot-sdk/releases). You should download the
+latest available version. You can also download the binaries by using the following direct links
+(replace X.Y.Z by the appropriate version):
 
 ```sh
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot-execute-worker
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot-prepare-worker
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot-execute-worker
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot-prepare-worker
 ```
 
 #### Optional: Installation with Package Managers
@@ -334,26 +334,26 @@ brew install cmake pkg-config openssl git llvm
 #### Building the binaries
 
 You can build the Polkadot binaries from the
-[paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub.
+[paritytech/polkadot-sdk](https://github.com/paritytech/polkadot-sdk) repository on GitHub.
 
 You should generally use the latest **X.Y.Z** tag. You should either review the output from the "git
-tag" command or view the [Polkadot Github tags](https://github.com/paritytech/polkadot/tags) to see
-a list of all the available release versions. You should replace `VERSION` below with the latest
-build (i.e., the highest number).
+tag" command or view the [Polkadot SDK Github tags](https://github.com/paritytech/polkadot-sdk/tags)
+to see a list of all the available release versions. You should replace `VERSION` below with the
+latest build (i.e., the highest number).
 
 :::note
 
 If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 
 ```sh
-git clone git@github.com:paritytech/polkadot.git
+git clone git@github.com:paritytech/polkadot-sdk.git
 ```
 
 :::
 
 ```sh
-git clone https://github.com/paritytech/polkadot.git
-cd polkadot
+git clone https://github.com/paritytech/polkadot-sdk.git
+cd polkadot-sdk/polkadot
 ```
 
 Run the following command to find the latest version.
@@ -405,7 +405,7 @@ directory. You may then take the generated `subkey` executable and transfer it t
 machine for extra security.
 
 ```sh
-cargo install --force --git https://github.com/paritytech/substrate subkey
+cargo install --force --git https://github.com/paritytech/polkadot-sdk subkey
 ```
 
 ### Verify the installation

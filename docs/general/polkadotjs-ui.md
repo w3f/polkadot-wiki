@@ -46,7 +46,8 @@ to expand balance details and see different
   [Settings](#settings)).
 - Create a [**multi-signature account**](../learn/learn-account-multisig.md).
 - Add a proxied account (see
-  [**Pure Proxies**](../learn/learn-proxies.md#anonymous-proxy-pure-proxy) for more information).
+  [**Pure Proxies**](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy) for more
+  information).
 
 For each account visible in the UI, you can perform different actions, including
 [**adding a proxy**](../learn/learn-proxies.md),
@@ -123,7 +124,8 @@ In this section of the UI, you can access advanced features such as:
   option only if you have an account in the UI)
 
 The [Extrinsic tab](https://polkadot.js.org/apps/#/extrinsics) provides the use to access more
-granular functions such as [**pure proxies**](../learn/learn-proxies#anonymous-proxy-pure-proxy) and
+granular functions such as
+[**pure proxies**](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy) and
 [**time-delayed proxies**](../learn/learn-proxies.md#time-delayed-proxy), change
 [**nomination pool**](../learn/learn-nomination-pools.md) settings (nomination and roles) and use
 [**non-transfer proxies**](../learn/learn-proxies.md#non-transfer-proxy),
