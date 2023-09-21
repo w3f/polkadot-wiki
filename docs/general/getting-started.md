@@ -135,11 +135,9 @@ ideal ecosystem to build a web3 future.
 
 See the videos below to know more about Polkadot.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_-k0xkooSlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Polkadot](https://img.youtube.com/vi/_-k0xkooSlA/0.jpg)](https://www.youtube.com/watch?v=_-k0xkooSlA)
 
-<br />
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Introduction to Polkadot](https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg)](https://www.youtube.com/watch?v=BQ60bTU1bPg)
 
 ## What can I do with my DOT?
 

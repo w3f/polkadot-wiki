@@ -76,7 +76,7 @@ robust collaboration has earned KodaDot the
 See below a video tutorial about how to mint your NFT on [the Polkadot Asset Hub](#asset-hub) using
 KodaDot.
 
-<iframe width="560" height="315" src="https://youtube.com/embed/SKdx4pTgL04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+[![KodaDot Tutorial on Minting NFTs](https://img.youtube.com/vi/SKdx4pTgL04/0.jpg)](https://www.youtube.com/watch?v=SKdx4pTgL04)
 
 For more information about minting using KodaDot see
 [this step-by-step tutorial](https://hello.kodadot.xyz/tutorial/minting/how-to-mint-nfts-on-polkadot-asset-hub-using-kodadot).
