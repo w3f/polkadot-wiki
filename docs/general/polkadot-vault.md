@@ -32,7 +32,7 @@ Vault app.
 
 :::
 
-<iframe width="560" height="315" src="https://youtube.com/embed/IG_RGLsb2g0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+[![Polkadot Vault Tutorial](https://img.youtube.com/vi/IG_RGLsb2g0/0.jpg)](https://www.youtube.com/watch?v=IG_RGLsb2g0)
 
 [Polkadot Vault](https://www.parity.io/technologies/signer) (formerly Parity Signer) is a cold
 storage solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault

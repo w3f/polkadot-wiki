@@ -102,7 +102,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 
 ### XCMP (Cross Consensus Message Passing) Design Summary
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tOnzk4AROUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![XCMP explained](https://img.youtube.com/vi/tOnzk4AROUY/0.jpg)](https://www.youtube.com/watch?v=tOnzk4AROUY)
 
 :::note
 
