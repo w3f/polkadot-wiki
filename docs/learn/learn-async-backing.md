@@ -53,17 +53,17 @@ ancestors used by the parachains to generate new parablocks.
 
 ### Synchronous Backing Mechanics
 
-![async-backing](../assets/sync-backing.png)
-
-![async-backing-legend](../assets/sync-backing-legend.png)
-
-The diagram above shows parablocks on their way from being generated to being backed and included
-into the relay chain. In synchronous backing we can imagine parablock on a conveyor belt with the
-following properties:
+In synchronous backing we can imagine parablock on a conveyor belt with the following properties:
 
 - the belt in synched with the relay chain, every parablock is backed every 6 seconds and included
   every 12 seconds, and
 - the belt can carry only one parablock at a time (no [pipelining](#pipelining)).
+
+The diagram below shows parablocks on their way from being generated to being backed and included
+into the relay chain in the context of synchronous backing.
+
+![sync-backing](../assets/sync-backing.png)
+![sync-backing-legend](../assets/sync-backing-legend.png)
 
 Parablock 1 (P1) is included (I) in the relay chain block 1 (R1) afters 6 seconds. Once P1 is
 included, Parablock 2 (P2) can be filled using the included P1 as execution context. But because P2
@@ -146,14 +146,25 @@ inclusion.
 
 ### Asynchronous Backing Mechanics
 
-FIGURE HERE?
+In asynchronous backing parablock generation is decoupled from backing and inclusion. Compared to
+[synchronous backing](#synchronous-backing-mechanics):
 
-In asynchronous backing, parablock `P + 1` can begin the generation process soon after parablock `P`
-has been generated and appended into the [unincluded segment](#unincluded-segments). Backing of
-parablock ancestor `P - 1` (pushed to the unincluded segment before `P`) can happen as soon as `P`
-is in the unincluded segment, available as execution context for the generation of parablock
-`P + 1`. Inclusion of `P - 1` and backing of `P` can happen within the span of one relay chain block
-(i.e. six-second time window) thanks to [pipelining](#pipelining).
+- Parablocks are not rushing to being backed, they are not placed on the conveyor belt when they are
+  generated
+- Filled blocks are placed in the unincluded segment, and from there they are injected onto the
+  conveyor belt that now can carry multiple parablocks ([pipelining](#pipelining))
+- Backing and inclusion events can happen within the same relay chain block (i.e. in 6 seconds)
+- The last parablock in the unincluded segment is used as execution context to generate a new
+  parablock and, because the unincluded segment can carry multiple parablocks, parachains can take
+  more time to fill new blocks while the segment is emptied.
+
+The diagram below shows parablocks on their way from being generated to being backed and included
+into the relay chain in the context of asynchronous backing.
+
+![async-backing](../assets/async-backing.png)
+![async-backing-legend](../assets/async-backing-legend.png)
+
+Parablock 1 (P1) and P2 are included and backed within R1, respectively.
 
 The execution context for the latest parablock is derived from the unincluded segment of block
 ancestors upon which the newest parablock is built. These blocks can be prepared in anticipation of
