@@ -53,14 +53,24 @@ ancestors used by the parachains to generate new parablocks.
 
 ### Synchronous Backing Mechanics
 
-FIGURE HERE?
+![async-backing](../assets/sync-backing.png)
 
-A particular parablock, `P`, would only be valid for backing at relay chain parent `R` and
-subsequently included at `R + 1` should it be backed successfully. Thus, a parablock is rushing to
-be backed and included within a two-relay-chain-blocks window due to the inherent requirement for
-synchrony between the parachain and relay chain. The next parablock `P + 1` will be valid for
-backing at realy-chain block `R + 2`, i.e. two relay-chain blocks after the previously included
-parablock.
+![async-backing-legend](../assets/sync-backing-legend.png)
+
+The diagram above shows parablocks on their way from being generated to being backed and included
+into the relay chain. In synchronous backing we can imagine parablock on a conveyor belt with the
+following properties:
+
+- the belt in synched with the relay chain, every parablock is backed every 6 seconds and included
+  every 12 seconds, and
+- the belt can carry only one parablock at a time (no [pipelining](#pipelining)).
+
+Parablock 1 (P1) is included (I) in the relay chain block 1 (R1) afters 6 seconds. Once P1 is
+included, Parablock 2 (P2) can be filled using the included P1 as execution context. But because P2
+is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5 - 1 seconds) to
+fill it. In this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3, Parablock 3
+(P3) will be generated, filled up to 50%, and backed into R4 in 6 seconds. After 24 seconds two
+parablocks, P1 and P2, have been included into the relay chain.
 
 The parablock generation and backing are bound together within a six-second window that limits the
 amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
