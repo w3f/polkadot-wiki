@@ -180,6 +180,14 @@ doubling block generation time in a period of lower demand. With an unincluded s
 maximum of three parablocks, the collators could wait an additional 6 seconds if needed (i.e. make
 sure in the unincluded segment there is at least one parablock to build a new one).
 
+In case blockspace demand increases after the generation of P7, collators can generate P8 and P9 is
+6 seconds (i.e. 3 seconds per block) due to the unincluded segment not being filled up (see below).
+However, if demand stays high collators will only be able to generate blocks every 6 seconds as the
+unincluded segment is emptied every 6 seconds and the maximum capacity of three parablocks has been
+reached.
+
+![async-backing-3s](../assets/async-backing-3s.png)
+
 In general, asynchronous backing will allow [collators](./learn-parachains-protocol.md#collators) to
 include an estimated ~3-5x more data into parablocks while speeding up parachain block times from 12
 to 6 seconds. Due to the 2x decrease in block time to inclusion, and the possibility of building
