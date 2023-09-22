@@ -22,9 +22,12 @@ security and adoption.
 
 ## Definition of Account Abstraction
 
-The term _abstraction_ refers to separating the user experience from the private key, enabling a
-piece of code to dictate account behavior. This allows for increased flexibility of accounts that
-originally were not engineered to be flexible and decreased chances of key mismanagement.
+The concept of account _abstraction_ was first mentioned via Ethereum concept
+[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337) focused on allowing users to flexibly program
+more security and better user experiences into their accounts. The idea also aims to separate the
+user experience from the private key, enabling a piece of code to dictate account behavior. This
+allows for increased flexibility of accounts that originally were not engineered to be flexible and
+decreased chances of key mismanagement.
 
 Users are still responsible for their keys, but through account abstraction, they can take
 precautions to ensure they do not end up losing their accounts.
@@ -33,8 +36,8 @@ Account abstraction introduces a layer of on-chain logic that controls an accoun
 form of a smart contract. Without a smart contract, abstracting accounts would require changes in
 the core architecture of the protocol.
 
-Polkadot's generic codebase makes the concept of an account natively flexible and abstract
-without the direct need for smart contracts.
+Polkadot's generic codebase makes the concept of an account natively flexible and abstract without
+the direct need for smart contracts.
 
 ## Origin Abstraction in Polkadot
 
@@ -45,8 +48,8 @@ When users interact with a blockchain they call _dispatchable_ functions to do s
 those functions are called from the outside of the blockchain interface, in Polkadot's terms any
 action that involves a dispatchable function is an [extrinsic](./learn-extrinsics.md). Extrinsics
 are calls coming from the _outside_ of the blockchain interface that (if successfully executed)
-invoke some changes in the _inside_ of the blockchain's state. An extrinsic is always
-directed to a specific function within a particular [pallet](../general/glossary.md#pallet).
+invoke some changes in the _inside_ of the blockchain's state. An extrinsic is always directed to a
+specific function within a particular [pallet](../general/glossary.md#pallet).
 
 For example, the `balances.transferKeepAlive` extrinsic is directed to the `transferKeepAlive`
 function within the `balances` pallet. If successful, the execution of that function will transfer
@@ -58,17 +61,22 @@ accounts. Functions can be called by any origin, where origins are caller-person
 privilege levels. For example, the Polkadot [OpenGov](./learn-polkadot-opengov.md) has different
 origins with different privileges, such as allocating treasury funds, cancelling a referendum, etc.
 Neither of those origins is subservient to the concept of an account or assume anything about state
-or associated data. Custom origins can be created while designing your chain using the
-[Polkadot SDK](https://github.com/paritytech/polkadot-sdk).
+or associated data. Custom origins can be created while designing your chain using the Substrate
+(which is part of the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk)).
 
 **Accounts happen to be just one variant (or corner case) of Substrate's FRAME possible origins, the
 `frame_system::RawOrigin::Signed`.** In Substrate, the concept of account is completely
 deprioritized. Substrate itself remains indifferent to an account's balance and nonce. While FRAME
 can support their presence, it fundamentally does not need to rely on them.
 
-On a lower level, the [Cross-Consensus Messaging (XCM)](./learn-xcm-index) format provides a much
-powerful origin abstraction that allows calling personas that are so abstract to not necessarily
-have direct representation on the local chain within its FRAME system origin.
+The [Cross-Consensus Messaging (XCM)](./learn-xcm-index) format can take advantage of origin
+abstraction for cross-consensus communications by specifying the context for a particular message.
+Origins in this case imply the authority under which a message is being sent (and thereby,
+executed).
+
+On a lower level, the XCM format also provides a much powerful origin abstraction that allows
+calling personas that are so abstract to not necessarily have direct representation on the local
+chain within its FRAME system origin.
 
 ### Protocol-level Account Abstraction
 
