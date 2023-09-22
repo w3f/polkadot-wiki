@@ -22,7 +22,7 @@ security and adoption.
 
 ## Definition of Account Abstraction
 
-The concept of account _abstraction_ was first mentioned via Ethereum concept
+The concept of account _abstraction_ was first mentioned via Ethereum's
 [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337) focused on allowing users to flexibly program
 more security and better user experiences into their accounts. The idea also aims to separate the
 user experience from the private key, enabling a piece of code to dictate account behavior. This
@@ -33,8 +33,9 @@ Users are still responsible for their keys, but through account abstraction, the
 precautions to ensure they do not end up losing their accounts.
 
 Account abstraction introduces a layer of on-chain logic that controls an account, typically in the
-form of a smart contract. Without a smart contract, abstracting accounts would require changes in
-the core architecture of the protocol.
+form of a smart contract, that completely avoids the need for consensus-layer protocol changes.
+Without a smart contract, abstracting accounts would require changes in the core architecture of the
+protocol.
 
 Polkadot's generic codebase makes the concept of an account natively flexible and abstract without
 the direct need for smart contracts.
@@ -64,10 +65,10 @@ Neither of those origins is subservient to the concept of an account or assume a
 or associated data. Custom origins can be created while designing your chain using the Substrate
 (which is part of the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk)).
 
-**Accounts happen to be just one variant (or corner case) of Substrate's FRAME possible origins, the
-`frame_system::RawOrigin::Signed`.** In Substrate, the concept of account is completely
-deprioritized. Substrate itself remains indifferent to an account's balance and nonce. While FRAME
-can support their presence, it fundamentally does not need to rely on them.
+Accounts happen to be just one variant (or corner case) of Substrate's FRAME possible origins, the
+`frame_system::RawOrigin::Signed`. In Substrate, the concept of account is completely deprioritized.
+Substrate itself remains indifferent to an account's balance and nonce. While FRAME can support
+their presence, it fundamentally does not need to rely on them.
 
 The [Cross-Consensus Messaging (XCM)](./learn-xcm-index) format can take advantage of origin
 abstraction for cross-consensus communications by specifying the context for a particular message.
