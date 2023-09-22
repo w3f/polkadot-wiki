@@ -45,7 +45,7 @@ When users interact with a blockchain they call _dispatchable_ functions to do s
 those functions are called from the outside of the blockchain interface, in Polkadot's terms any
 action that involves a dispatchable function is an [extrinsic](./learn-extrinsics.md). Extrinsics
 are calls coming from the _outside_ of the blockchain interface that (if successfully executed)
-invoke some changes in the _inside_ of a blockchain, the blockchain's state. An extrinsic is always
+invoke some changes in the _inside_ of the blockchain's state. An extrinsic is always
 directed to a specific function within a particular pallet (or module).
 
 For example, the `balances.transferKeepAlive` extrinsic is directed to the `transferKeepAlive`
