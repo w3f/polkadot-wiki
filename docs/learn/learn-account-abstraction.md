@@ -33,7 +33,7 @@ Account abstraction introduces a layer of on-chain logic that controls an accoun
 form of a smart contract. Without a smart contract, abstracting accounts would require changes in
 the core architecture of the protocol.
 
-The highly generic codebase of Polkadot's architecture makes accounts natively flexible and abstract
+Polkadot's generic codebase makes the concept of an account natively flexible and abstract
 without the direct need for smart contracts.
 
 ## Origin Abstraction in Polkadot
