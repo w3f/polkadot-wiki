@@ -115,21 +115,29 @@ Nowadays, most of the nodes are not run at people's homes. Equipment is rented t
 providers. Resiliency is also achieved by making sure nodes runs on as many different providers as
 possible, and avoid that a big share of the nodes is run under the same provider, maybe in the same
 country. A legislation change could undermine a big fraction of the nodes, and potentially stop the
-network.
+network. {{ polkadot: Pokadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can
+be explored through the [Polkawatch app](https://polkawatch.app/).
+
+The [One Thousand Validator Programme](./thousand-validators.md) aims to incentivize the creation of
+new validator nodes to increase the level of node decentralization.
 
 ### Stake Allocation
 
 In Proof-of-Stake blockchains security is dictated by how much stake is locked on-chain (financial
 security). In a decentralized network you want to make sure that the level of difficulty for a
-financial attack to happen is equal across all nodes. This implies that all nodes have similar
-locked stake to avoid targeted attacks or collusion of multiple nodes that are financially weak.
+financial attack to happen is equal across all nodes.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
+[election algorithm](../learn/learn-phragmen.md) makes sure that the stake is maximized across all
+active validators, and the variance in stake across validators is minimized as much as possible.
 
 ### Economic Incentives
 
 Strong economic incentives promote good behavior and punish malicious one through game theory.
-Strong incentives are possible because blockchain is a trustless system where there are no
-intermediaries between who sends a message and who receives it. Such incentives ensures that most of
-the participants make the interest of the network and work together to improve it.
+Strong incentives are important to avoid spam attacks and to incentivize network participants for
+running nodes and securing the network. Strong incentives are possible because blockchain is a
+trustless system where there are no intermediaries between who sends a message and who receives it.
+Such incentives coupled with punishment for bad behaviour ensure that most of the participants make
+the interest of the network and work together to improve it.
 
 ### Governance and Treasury
 
@@ -142,6 +150,19 @@ independent socio-economical environment.
 ## Decentralized Access Points
 
 But what if we have data we own stored on a resilient blockchain, but the only way to access the
-blockchain is through an RPC server?
+blockchain is through an RPC server? Whoever is behind the server or an attacker could present us
+data that are not the truth. We put trust in the server provider that the data we see are the truth.
+How can we verify that the data are indeed the truth without trusting anybody?
+
+Here is where light clients play a key role. Light clients are clients that can sit on a web browser
+and are able to fetch data directly from blockchain nodes.
+
+![light-clients](../assets/light-clients.png)
+
+## Interoperability
+
+But what if we create our identity
+
+Cooperation
 
 ## Conclusions
