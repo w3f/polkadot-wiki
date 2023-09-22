@@ -46,7 +46,7 @@ those functions are called from the outside of the blockchain interface, in Polk
 action that involves a dispatchable function is an [extrinsic](./learn-extrinsics.md). Extrinsics
 are calls coming from the _outside_ of the blockchain interface that (if successfully executed)
 invoke some changes in the _inside_ of the blockchain's state. An extrinsic is always
-directed to a specific function within a particular pallet (or module).
+directed to a specific function within a particular [pallet](../general/glossary.md#pallet).
 
 For example, the `balances.transferKeepAlive` extrinsic is directed to the `transferKeepAlive`
 function within the `balances` pallet. If successful, the execution of that function will transfer
