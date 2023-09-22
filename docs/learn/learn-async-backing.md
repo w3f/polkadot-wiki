@@ -133,7 +133,7 @@ ancestors included in the relay chain state.
 
 :::info Unincluded segments happen on the collator portion
 
-**Unincluded** segments are blocks that are seconded but still need to be backed. The backing
+**Unincluded** segments are generated blocks that still need to be backed. The backing
 process occurs on the relay chain, whereas unincluded segments are moreso held in the collator.
 
 :::
