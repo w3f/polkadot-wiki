@@ -77,16 +77,16 @@ a single pallet (module) for complete account abstraction, it incorporates vario
 collectively achieve similar functionalities. Polkadot's native account abstraction functionalities
 include:
 
-- [multi-signature accounts](./learn-account-multisig.md) to control an account using different ones
-- [proxy accounts](./learn-proxies.md) for role-based representation, and ownership representation
+- [Multi-signature accounts](./learn-account-multisig.md) to control an account using different ones
+- [Proxy accounts](./learn-proxies.md) for role-based representation, and ownership representation
   through [pure proxies](./learn-proxies.md#anonymous-proxy-pure-proxy)
-- [derivative accounts](./learn-account-advanced.md#derivation-paths) for using the same _parent_
+- [Derivative accounts](./learn-account-advanced.md#derivation-paths) for using the same _parent_
   private key on multiple _children_ accounts
-- account recovery mechanisms such as social recovery to help regain access to your key using
+- Account recovery mechanisms such as social recovery to help regain access to your key using
   trusted third-party accounts
-- [batching functionality](./learn-balance-transfers.md#batch-transfers) to submit multiple calls in
+- [Batching functionality](./learn-balance-transfers.md#batch-transfers) to submit multiple calls in
   one single transaction
-- payments with non-native tokens
+- Payments with non-native tokens
 
 All the above can be used together, meaning that, for example, you can create a multi-signature
 account of pure proxies to keep the same multi-signature account when signatories change. A more
