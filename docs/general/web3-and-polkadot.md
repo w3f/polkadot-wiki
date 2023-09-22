@@ -132,16 +132,21 @@ active validators, and the variance in stake across validators is minimized as m
 
 ### Economic Incentives
 
-Strong economic incentives promote good behavior and punish malicious one through game theory.
-Strong incentives are important to avoid spam attacks and to incentivize network participants for
+Strong incentives are important to avoid spam attacks and incentivize network participants for
 running nodes and securing the network. Strong incentives are possible because blockchain is a
 trustless system where there are no intermediaries between who sends a message and who receives it.
 Such incentives coupled with punishment for bad behaviour ensure that most of the participants make
 the interest of the network and work together to improve it.
 
+But from where are those incentives coming from? Polkadot's native token
+[DOT is inflationary](../learn/learn-inflation.md). Inflation is used to pay validators for running
+node and reward nominators for providing the necessary stake to secure the network. Depending on the
+staking rate, part of the inflation is diverted to the treasury.
+
 ### Governance and Treasury
 
-An on-chain [treasury](../learn/learn-polkadot-opengov-treasury.md) together with an
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} an on-chain
+[treasury](../learn/learn-polkadot-opengov-treasury.md) together with an
 [open governance](../learn/learn-polkadot-opengov.md) model allow to access funds in a fully
 decentralized manner without any bank transaction whatsoever. This opens up the possibility to come
 to a decision through on-chain voting mechanism, promoting a sense of community and creating an
@@ -155,14 +160,26 @@ data that are not the truth. We put trust in the server provider that the data w
 How can we verify that the data are indeed the truth without trusting anybody?
 
 Here is where light clients play a key role. Light clients are clients that can sit on a web browser
-and are able to fetch data directly from blockchain nodes.
+and are able to fetch data directly from blockchain full nodes, and verify such data using other
+nodes.
+
+The figure below shows the architectural difference between web2 and web3 applications.
 
 ![light-clients](../assets/light-clients.png)
 
+In web2 application data are stored on a centralized server, while on web3 application data (or
+better data proofs) are stored on the blockchain. With light clients we can access blockchain data
+through a full node, and we can verify the proof of validity of such data by synching to other
+nodes. In this way we can always verify that data we see is the truth and this is done automatically
+by the light client. Polkadot has a browser-embedded light client
+[Substrate connect](../build/build-substrate.md) that uses the
+[smoldot](https://github.com/smol-dot/smoldot) codebase. Most of the web3 applications today access
+blockchain data through a centralized RPC server.
+
 ## Interoperability
 
-But what if we create our identity
-
-Cooperation
-
-## Conclusions
+But what if we create our identity under one blockchain, one specific consensus? Wouldn't be useful
+to use that identity under different consensuses? Transfer information and economic value is key to
+achieve the web3 vision of having a collaborative and trustless internet. Polkadot provides secure
+interoperability through [XCM](../learn/learn-xcm.md) and [XCMP](../learn/learn-xcm-transport.md) to
+all blockchains attached to it. For more information see the [Polkadot 1.0 page](./polkadot-v1.md).
