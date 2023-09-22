@@ -34,7 +34,7 @@ slashed.
 In synchronous backing, parablock generation is tightly coupled to the relay chain's progression on
 a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
 (six-second window), and (if successfully backed) it will be included in a relay-chain block (often
-referred to as the **parent** block, as the parablock anchors itself to it) after an additional six
+referred to as the **relay parent**, or latest block on the relay chain, as the parablock anchors itself to it) after an additional six
 seconds. Thus, a parablock can be produced every 12 seconds because a new parablock can be produced
 after including the previous one.
 
