@@ -55,7 +55,7 @@ ancestors used by the parachains to generate new parablocks.
 
 In synchronous backing we can imagine parablocks on a conveyor belt with the following properties:
 
-- the belt is synched with the relay chain: every parablock is generated and backed every 6 seconds,
+- The belt is in sync with the relay chain - every parablock is generated and backed every 6 seconds,
   and included every 12 seconds
 - the belt can carry only one parablock at a time (no [pipelining](#pipelining))
 
