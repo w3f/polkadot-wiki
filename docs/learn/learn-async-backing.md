@@ -57,7 +57,7 @@ In synchronous backing we can imagine parablocks on a conveyor belt with the fol
 
 - The belt is in sync with the relay chain - every parablock is generated and backed every 6 seconds,
   and included every 12 seconds
-- the belt can carry only one parablock at a time (no [pipelining](#pipelining))
+- The belt can carry only one parablock at a time (no [pipelining](#pipelining)) and it has to wait for it to be fully processed before another can be put on the belt.
 
 The diagram below shows parablocks on their way from being generated to being backed and included
 into the relay chain in the context of synchronous backing.
