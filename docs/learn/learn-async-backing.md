@@ -120,8 +120,7 @@ Asynchronous backing brings the following changes to the parachain protocol:
   demand.
 
 - Parachains can generate blocks and have them placed into **unincluded segments** of parablock
-  ancestors (i.e. parablocks that are seconded but not yet backed by paravalidators and included in
-  the relay chain) rather than ancestors included in the relay chain state.
+  ancestors rather than the latest, included relay chain parent.
 
 ### Unincluded Segments
 
