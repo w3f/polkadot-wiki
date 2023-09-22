@@ -121,6 +121,18 @@ be explored through the [Polkawatch app](https://polkawatch.app/).
 The [One Thousand Validator Programme](./thousand-validators.md) aims to incentivize the creation of
 new validator nodes to increase the level of node decentralization.
 
+### Decentralized Storage
+
+Blockspace is limited and valuable. Not all data we have can be stored on the blockchain. Large
+files like pictures, music, movies, etc. will never be stored on the blockchain. But where can we
+stored those files? In order to stick to the web3 vision we need a resilient and decentralized
+storage solution.
+
+The most important thing is that the proof of ownership is stored on the blockchain.
+
+On the other side large files and their metadata can be uploaded on decentralized storage network
+such as IPFS. The Polkadot parachain Crust also provided a similar storage solution.
+
 ### Stake Allocation
 
 In Proof-of-Stake blockchains security is dictated by how much stake is locked on-chain (financial
@@ -169,9 +181,9 @@ The figure below shows the architectural difference between web2 and web3 applic
 
 In web2 application data are stored on a centralized server, while on web3 application data (or
 better data proofs) are stored on the blockchain. With light clients we can access blockchain data
-through a full node, and we can verify the proof of validity of such data by synching to other
-nodes. In this way we can always verify that data we see is the truth and this is done automatically
-by the light client. Polkadot has a browser-embedded light client
+through a full node, and we can verify the validity of such data by synching to other nodes. In this
+way we can always verify that data we see is the truth and this is done automatically by the light
+client. Polkadot has a browser-embedded light client
 [Substrate connect](../build/build-substrate.md) that uses the
 [smoldot](https://github.com/smol-dot/smoldot) codebase. Most of the web3 applications today access
 blockchain data through a centralized RPC server.
