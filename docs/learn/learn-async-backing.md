@@ -213,6 +213,25 @@ any fork from any parachain.
 The Prospective Parachains subsystem communicates with other subsystems in the validation process,
 such as the Backing subsystem, once a candidate block has been seconded.
 
+The purpose of prospective parachains is also two fold:
+
+- Keep track of parablocks which have been submitted to backers but not yet included. This includes
+  tracking the full unincluded ancestry of each parablock, without which it wouldn't be possible to
+  verify their legitimacy.
+
+- Look up and provide candidates which are children of the most recently included parablock for each
+  parachain. These are taken as inputs to the availability process. Prospective parachains is all
+  about tracking, storing, and providing candidates to the availability/inclusion step.
+
+The unincluded segment lives in the parachain runtime, so it doesn't know or care about forks/other
+parachains. Prospective parachains lives in the relay chain client. So it has to fold all unincluded
+segments from all forks of all parachains into a single giant structure.
+
+A parablock stops being a prospective parablock at the moment when it is included on chain. At that
+point prospective parachains doesn't have to care about it anymore. Alternatively a parablock's
+relay parent can get too old before that parablock is included, in which case prospective parachains
+can throw away the candidate.
+
 ### Synchronous Backing as corner case of Asynchronous Backing
 
 Two parameters of asynchronous backing can be controlled by
@@ -283,6 +302,13 @@ Compared to synchronous backing, contextual execution shifts from being the para
 included in the relay chain to being the latest ancestor parablock pushed into the unincluded
 segment. This allows collators to build parablocks earlier, giving them plenty of time to fit more
 transactions and prepare block candidates for backing and inclusion.
+
+The purpose of each unincluded segment is two fold:
+
+- Make each parachain aware of when and at what depth it can build blocks that won't be rejected by
+  the relay chain
+- Provide critical context necessary to build parablocks with parent blocks that have yet to be
+  included The unincluded segment is all about building parablocks.
 
 ## Learn More
 
