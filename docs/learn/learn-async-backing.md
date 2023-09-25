@@ -173,6 +173,8 @@ P4).
 In this scenario, blockspace demand decreases from P3 to P5. In theory, the next block P6 can be
 filled in >2s seconds while P4 is included and P5 is backed. Collators could make better use of
 blockspace, including more data by increasing block generation time in a period of lower demand.
+Note that even if a collator has >2 seconds to produce a block, the validator will still have less
+than 6 seconds (~2 seconds) to check it.
 
 In case blockspace demand increases after the generation of P6, collators could generate P7 and P8
 within a 6-second window due to the unincluded segment being 2/3 filled (see below). However, if
@@ -193,19 +195,21 @@ Polkadot's networking, runtime, and collation aspects will allow for higher, mor
 
 ### Prospective Parachains
 
-Prospective parachains manage and represent all unincluded segments from all parachains.
+[Prospective parachains](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html)
+is the relay chain's record of all parablock candidates undergoing the backing and inclusion
+process. It simultaniously keeps track of candidates from all forks of all parachains.
 
-The
-[Prospective Parachains subsystem](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html),
-is responsible for coordinating the state of various prospective parachain fragments. A fragment is
-a prospective/potential parablock. More than one of these make up a
-[**fragment tree**](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html#fragment-trees),
-and represent the potential states of a parachain. Each of these fragments is anchored to a past
-relay chain parent. This does not have to be the latest parent, as was before, but it can be one in
-the past.
+It is as if you folded the unincluded segments from every fork of every parachain into one giant
+data structure. When you fold unincluded segments representing different chain forks together, they
+create a tree structure. Hence the term
+[**fragment tree**](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html#fragment-trees).
 
-This subsystem also communicates with other subsystems in the validation process, such as the
-Backing subsystem, once a candidate block has been seconded.
+A single unincluded segment tells a collator whether it can build on top of one fork of one
+parachain. Prospective parachains tells a validator whether it should accept blocks built on top of
+any fork from any parachain.
+
+The Prospective Parachains subsystem communicates with other subsystems in the validation process,
+such as the Backing subsystem, once a candidate block has been seconded.
 
 ### Further Benefits of Async Backing
 
