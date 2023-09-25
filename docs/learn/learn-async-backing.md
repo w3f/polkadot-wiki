@@ -40,40 +40,48 @@ because a new parablock can be produced after including the previous one.
 
 ### Synchronous Backing Mechanics
 
-In synchronous backing we can imagine parablocks on a conveyor belt. The belt is synched with the
-relay chain: It takes six seconds (one relay block) to generate and back a parablock. It then takes
-another six seconds to make that parablock available and mark it as included on the relay chain. The
-full process, from one end of the belt to the other, takes twelve seconds, and cannot be started for
-parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
-
 The diagram below shows the pipelining table for synchronous backing.
 
 ![sync-backing-pipeline](../assets/sync-backing-pipeline.png)
 
-Backing and inclusion of each parablock happen on different relay chain blocks, and new parablocks
-are generated once the previous parablock has been included. Contextual execution is driven by the
-latest included parablock in the most recent relay parent.
+Backing (B) and inclusion (I) of each parablock happen on different relay chain blocks, and new
+parablocks are generated once the previous parablock has been included.
+[Contextual execution](#contextual-execution) is driven by the latest included parablock in the most
+recent relay parent. After 24 seconds, two parablocks, P1 and P2, have been included in the relay
+chain, and P3 has been backed.
 
-parablocks on their way from being generated to being backed and included into the relay chain in
-the context of synchronous backing.
+In synchronous backing we can imagine parablocks on a conveyor belt. The belt is synched with the
+relay chain: It takes six seconds (one relay block) to generate and back a parablock. It then takes
+another six seconds to make that parablock available and mark it as included on the relay parent.
+The full process, from one end of the belt to the other, takes twelve seconds, and cannot be started
+for parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
+
+The diagram below shows parablocks on their way from being generated to being backed and included
+into the relay parent.
 
 ![sync-backing-belt](../assets/sync-backing-belt.png)
 ![sync-backing-legend1](../assets/sync-backing-legend1.png)
 
-Parablock 1 (P1) is included (I) in the relay chain block 1 (R1) after 6 seconds. Once P1 is
-included, Parablock 2 (P2) can be filled using the included P1 as execution context. But because P2
-is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5 - 1 seconds) to
-fill it. In this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3, Parablock 3
-(P3) will be generated, filled to 50%, and backed into R4 in 6 seconds. After 24 seconds, two
-parablocks, P1 and P2, have been included in the relay chain, and P3 has been backed.
+Parablock 1 (P1) is included in the relay chain block 1 (R1) after 6 seconds. Once P1 is included,
+Parablock 2 (P2) can be generated using the included P1 in R1 as execution context. The next
+parablock P3 can be generated after P2 is backed into R2 and included into R3, i.e. after 12
+seconds.
+
+The diagram below combines the previous diagrams and adds some context about blockspace.
+
+![sync-backing-all](../assets/sync-backing-all.png)
+![sync-backing-legend2](../assets/sync-backing-legend2.png)
+
+Because P2 is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5
+seconds) to fill it. In this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3,
+Parablock 3 (P3) will be generated, filled to 50%, and backed into R4 in 6 seconds. This shows that,
+if blockspace demand decreases, collators will always have 0.5 seconds to fill up blocks, leading to
+blocks that contain less and less data.
 
 The parablock generation and backing are bound together within a six-second window that limits the
 amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
 requirement of being backed in six seconds, leaving little time for its generation and its
 blockspace to be properly filled.
-
-![sync-backing-all](../assets/sync-backing-belt.png)
-![sync-backing-legend2](../assets/sync-backing-legend1.png)
 
 ## Asynchronous Backing
 
