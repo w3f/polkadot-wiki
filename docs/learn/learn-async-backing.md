@@ -110,7 +110,7 @@ Asynchronous Backing has three overarching goals:
 
 In synchronous backing, parablock generation relies on the most recent relay-chain block. Each
 parablock must be generated and go through the entire backing process in a single relay block. It
-then proceeds to the inclusion process while generating the next relay-chain block.
+then proceeds be made available and marked as included in the next relay block.
 
 Asynchronous backing brings the following changes to the parachain protocol:
 
