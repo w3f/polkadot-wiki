@@ -104,7 +104,7 @@ throughput of the entire network.
 Asynchronous Backing has three overarching goals:
 
 1. Decrease parachain block (parablock) validation time to **6 seconds** from **12 seconds**
-2. **Increase the usable blockspace**, allowing more state changes per relay chain block.
+2. **Increase usable blockspace**, allowing more state changes per relay chain block.
 3. **Allow parablocks to be re-proposed** to the network if they are not included successfully on
    the first attempt.
 
