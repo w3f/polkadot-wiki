@@ -73,10 +73,11 @@ The diagram below combines the previous diagrams and adds some context about blo
 ![sync-backing-fill-legend](../assets/sync-backing-fill-legend.png)
 
 Because P2 is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5
-seconds) to fill it. In this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3,
-Parablock 3 (P3) will be generated, filled to 50%, and backed into R4 in 6 seconds. This shows that,
-if blockspace demand decreases, collators will always have 0.5 seconds to fill up blocks, leading to
-blocks that contain less and less data.
+seconds) to fill it, since the other 5.5 seconds are needed to get the block backed on chain. In
+this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3, Parablock 3 (P3) will be
+generated, filled to 50%, and backed into R4 in 6 seconds. This shows that, if blockspace demand
+decreases, collators will always have 0.5 seconds to fill up blocks, leading to blocks that contain
+less and less data.
 
 The parablock generation and backing are bound together within a six-second window that limits the
 amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
@@ -142,8 +143,7 @@ new parablocks are generated before the previous parablock has been included.
 [Contextual execution](#contextual-execution) is obtained by a relay parent (not necessarily the
 latest block) and the latest included parablock ancestor in the
 [unincluded segment](#unincluded-segments). In 24 seconds, four parablocks, P1 to P4, have been
-included in the relay chain, P5 has been backed, and two more blocks have been filled and pushed to
-the unincluded segment, ready to be backed. The unincluded segment is now 2/3 filled.
+included in the relay chain, and P5 has been backed.
 
 The diagram below shows parablocks on their way from being generated to being backed and included
 into the relay chain in the context of asynchronous backing.
@@ -174,13 +174,15 @@ In this scenario, blockspace demand decreases from P3 to P5. In theory, the next
 filled in >2s seconds while P4 is included and P5 is backed. Collators could make better use of
 blockspace, including more data by increasing block generation time in a period of lower demand.
 Note that even if a collator has >2 seconds to produce a block, the validator will still have less
-than 6 seconds (~2 seconds) to check it.
+than 6 seconds (~2 seconds) to check it. So, if collators take >2 seconds to generate blocks the
+unincluded segment will shrink (and there will be less parablocks in the pipeline), while if they
+take <2 seconds the segment will elongate until it reaches the `maximum capacity` (and there will be
+less parablocks in the pipeline).
 
-In case blockspace demand increases after the generation of P6, collators could generate P7 and P8
-within a 6-second window due to the unincluded segment being 2/3 filled (see below). However, if
-demand stays high after P8, collators will only be able to generate parablocks every 6 seconds as
-the unincluded segment is emptied every 6 seconds and its maximum capacity of 3/3 parablocks has
-been reached.
+For example, in case increased blockspace demand after the generation of P6, collators could
+generate P7 and P8 within a 6-second window due to the unincluded segment being 2/3 filled (see
+below). However, if demand stays high after P8, collators will only be able to generate parablocks
+every 6 seconds as validators can back parablocks every 6 seconds.
 
 ![async-backing-fill-scenario2](../assets/async-backing-fill-scenario2.png)
 
@@ -211,22 +213,21 @@ any fork from any parachain.
 The Prospective Parachains subsystem communicates with other subsystems in the validation process,
 such as the Backing subsystem, once a candidate block has been seconded.
 
-### Further Benefits of Async Backing
+### Synchronous Backing as corner case of Asynchronous Backing
 
-Asynchronous backing also introduces a parameter to define the maximum number of ancestor blocks
-within the unincluded segment. This allows for a parablock to be backed later, enabling more
-computational and storage time per block. Decoupling collation (candidate generation) and backing
-also allows for more execution time while citing a lower validation time.
+Two parameters of asynchronous backing can be controlled by
+[Governance](./learn-polkadot-opengov.md):
 
-Two parameters can be controlled by governance:
+- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54):
+  the number of parachain blocks a collator can produce that are not yet included in the relay
+  chain.
+- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49):
+  the oldest relay chain parent a parachain block can be built on top of.
 
-- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54) -
-  How many ancestors of a relay parent are allowed to build candidates on top of. When building a
-  new parablock for the unincluded segment, this is how the parablock decides which relay parent to
-  derive context from.
-- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49) -
-  The maximum amount of candidates between the latest parablock and relay parent ancestor. Any
-  blocks that exceed this limit will be ignored by the validators.
+Values of zero for both correspond to synchronous backing: `allowed_ancestry_len = 0` means there
+can be only 1 parablock at a time on the conveyor belt, `max_candidate_depth = 0` means a parachain
+block can be built only on the latest relay parent for that parachain. Those two parameters will be
+initially set to 3 and 2, respectively.
 
 ## Terminology
 
