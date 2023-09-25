@@ -34,36 +34,31 @@ slashed.
 In synchronous backing, parablock generation is tightly coupled to the relay chain's progression on
 a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
 (six-second window), and (if successfully backed) it will be included in a relay-chain block (often
-referred to as the **relay parent**, or latest block on the relay chain, as the parablock anchors itself to it) after an additional six
-seconds. Thus, a parablock can be produced every 12 seconds because a new parablock can be produced
-after including the previous one.
-
-The **contextual execution** of new parablocks are parablock ancestors included in the relay chain
-after 12 seconds, where contextual execution refers to the context built by included parablock
-ancestors used by the parachains to generate new parablocks.
-
-:::info Candidate Recepts
-
-- Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock,
-  state roots and ID info is placed on the parent block on the relay chain.
-- The relay chain does not access the entire state of a parachain but only the values that changed
-  during that block and the merkelized hashes of the unchanged values.
-
-:::
+referred to as the **relay parent**, or latest block on the relay chain, as the parablock anchors
+itself to it) after an additional six seconds. Thus, a parablock can be produced every 12 seconds
+because a new parablock can be produced after including the previous one.
 
 ### Synchronous Backing Mechanics
 
-In synchronous backing we can imagine parablocks on a conveyor belt with the following properties:
+In synchronous backing we can imagine parablocks on a conveyor belt. The belt is synched with the
+relay chain: It takes six seconds (one relay block) to generate and back a parablock. It then takes
+another six seconds to make that parablock available and mark it as included on the relay chain. The
+full process, from one end of the belt to the other, takes twelve seconds, and cannot be started for
+parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
 
-- The belt is in sync with the relay chain - every parablock is generated and backed every 6 seconds,
-  and included every 12 seconds
-- The belt can carry only one parablock at a time (no [pipelining](#pipelining)) and it has to wait for it to be fully processed before another can be put on the belt.
+The diagram below shows the pipelining table for synchronous backing.
 
-The diagram below shows parablocks on their way from being generated to being backed and included
-into the relay chain in the context of synchronous backing.
+![sync-backing-pipeline](../assets/sync-backing-pipeline.png)
 
-![sync-backing](../assets/sync-backing.png)
-![sync-backing-legend](../assets/sync-backing-legend.png)
+Backing and inclusion of each parablock happen on different relay chain blocks, and new parablocks
+are generated once the previous parablock has been included. Contextual execution is driven by the
+latest included parablock in the most recent relay parent.
+
+parablocks on their way from being generated to being backed and included into the relay chain in
+the context of synchronous backing.
+
+![sync-backing-belt](../assets/sync-backing-belt.png)
+![sync-backing-legend1](../assets/sync-backing-legend1.png)
 
 Parablock 1 (P1) is included (I) in the relay chain block 1 (R1) after 6 seconds. Once P1 is
 included, Parablock 2 (P2) can be filled using the included P1 as execution context. But because P2
@@ -77,6 +72,9 @@ amount of data a collator can add to each parablock. Essentially, a parablock is
 requirement of being backed in six seconds, leaving little time for its generation and its
 blockspace to be properly filled.
 
+![sync-backing-all](../assets/sync-backing-belt.png)
+![sync-backing-legend2](../assets/sync-backing-legend1.png)
+
 ## Asynchronous Backing
 
 :::warning Disclaimer: Performance Measurements
@@ -85,19 +83,6 @@ Due to asynchronous backing not being fully implemented in a running production 
 performance metric is not thoroughly tested nor guaranteed until proper benchmarking has occurred.
 
 :::
-
-### Pipelining
-
-Asynchronous backing is a feature that introduces
-[pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
-pipelining of processor instruction in "traditional" architectures, where some instructions may be
-executed before others are complete. Instructions may also be executed in parallel, enabling
-multiple processor parts to work on potentially different instructions simultaneously.
-
-Bundles of state transitions represented as blocks may be processed similarly. In the context of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
-throughput of the entire network.
 
 ### Synchronous vs. Asynchronous Backing
 
@@ -121,26 +106,6 @@ Asynchronous backing brings the following changes to the parachain protocol:
 
 - Parachains can generate blocks and have them placed into **unincluded segments** of parablock
   ancestors rather than the latest, included relay chain parent.
-
-### Unincluded Segments
-
-Unincluded segments are chains of candidate parablocks that still need to be backed
-and included in the relay chain. Parablocks can be added to this unincluded segment without waiting
-for the latest included parent block of the relay chain. The core functionality that asynchronous
-backing brings is the ability to build on these unincluded segments of block ancestors rather than
-ancestors included in the relay chain state.
-
-:::info Unincluded segments happen on the collator portion
-
-**Unincluded** segments are generated blocks that still need to be backed. The backing
-process occurs on the relay chain, whereas unincluded segments live in the runtimes of parachain collators.
-
-:::
-
-Compared to synchronous backing, contextual execution shifts from being the parablock ancestors
-included in the relay chain to being the latest ancestor parablock pushed into the unincluded
-segment. This allows collators to build parablocks earlier, giving them plenty of time to fit more
-transactions and prepare block candidates for backing and inclusion.
 
 ### Asynchronous Backing Mechanics
 
@@ -232,6 +197,61 @@ Two parameters can be controlled by governance:
 - [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49) -
   The maximum amount of candidates between the latest parablock and relay parent ancestor. Any
   blocks that exceed this limit will be ignored by the validators.
+
+## Terminology
+
+### Candidate Receipt
+
+Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock,
+state roots and ID info is placed on the parent block on the relay chain. The relay chain does not
+access the entire state of a parachain but only the values that changed during that block and the
+merkelized hashes of the unchanged values.
+
+### Contextual Execution
+
+Contextual execution refers to the context built by parablock ancestors used by collators to
+generate new parablocks. The difference in execution context between synchronous and asynchronous
+backing is as follows:
+
+Synchronous - The entire execution context comes from the latest relay block and most recently
+included parablock from the same parachain.
+
+Asynchronous - A baseline execution context is first set up using a parablock's relay parent and the
+most recently included parablock as of that relay parent. The relay parent need not be the most
+recent relay block. Predecessors of the block under construction live in the unincluded segment.
+
+Synchronous backing uses execution context entirely pulled from the relay chain. While asynchronous
+backing augments this with off-chain context from the unincluded segment.
+
+### Pipelining
+
+Asynchronous backing is a feature that introduces
+[pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
+[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
+pipelining of processor instruction in "traditional" architectures, where some instructions may be
+executed before others are complete. Instructions may also be executed in parallel, enabling
+multiple processor parts to work on potentially different instructions simultaneously.
+
+Bundles of state transitions represented as blocks may be processed similarly. In the context of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
+throughput of the entire network by completing the backing and inclusion steps for different blocks
+at the same time. Asynchronous backing does not just allow for pipelining within a single pipe (or
+core). It lays the foundation for a large number of pipes (~10 cores) to run for the same parachain
+at the same time. In that way we have two distinct new forms of parallel computation: pipelining and
+multiple pipes.
+
+### Unincluded Segments
+
+Unincluded segments are chains of candidate parablocks that have yet to be included in the relay
+chain, i.e. they can contain parablocks at any stage pre-inclusion. The backing process occurs on
+the relay chain, whereas unincluded segments live in the runtimes of parachain collators. The core
+functionality that asynchronous backing brings is the ability to build on these unincluded segments
+of block ancestors rather than ancestors included in the relay chain state.
+
+Compared to synchronous backing, contextual execution shifts from being the parablock ancestors
+included in the relay chain to being the latest ancestor parablock pushed into the unincluded
+segment. This allows collators to build parablocks earlier, giving them plenty of time to fit more
+transactions and prepare block candidates for backing and inclusion.
 
 ## Learn More
 
