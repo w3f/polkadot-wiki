@@ -9,8 +9,9 @@ slug: ../learn-guides-polkadot-opengov
 
 import RPC from "./../../components/RPC-Connection";
 
-This page is for advanced users of Polkadot OpenGov. If you would learn about and participate in OpenGov, please navigate
-to the page on [participating in Polkadot Opengov.](https://wiki.polkadot.network/docs/maintain-guides-polkadot-opengov)
+This page is for advanced users of Polkadot OpenGov. If you would learn about and participate in
+OpenGov, please navigate to the page on
+[participating in Polkadot Opengov.](https://wiki.polkadot.network/docs/maintain-guides-polkadot-opengov)
 
 ## Cancel or Kill a Referendum
 
