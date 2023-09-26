@@ -135,3 +135,33 @@ offline environments. It comes with asset-specific functions to use on the Asset
 constructing parachain transactions, you can use `txwrapper-polkadot` exactly as on the Relay Chain,
 but construct transactions with the appropriate parachain metadata like genesis hash, spec version,
 and type registry.
+
+### Monitoring of XCM deposits
+
+Thanks to XCM and a growing number of parachains,
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can exist across several blockchains, which
+means the providers need to monitor cross-chain transfers on top of local transfers and
+corresponding `balances.transfer` events.
+
+Currently {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can be sent and received in the
+Relay Chain either with a [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
+[system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a
+[Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport)
+from any other parachain. In both cases, the event emitted when processing the transfer is the
+`balances.deposit` event. Hence, providers should listen to these events, pointing to an address in
+their system. For this, the service provider must query every new block created, loop through the
+events array, filter for any `balances.deposit` event, and apply the appropriate business logic.
+
+#### Tracking back XCM information
+
+What has been mentioned earlier should be sufficient to confirm that
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} has arrived in a given account via XCM.
+However, in some cases, it may be interesting to identify the cross-chain message that emitted the
+relevant `balances.deposit` event. This can be done as follows:
+
+1. Query the Relay Chain `at` the block the `balances.deposit` event was emitted.
+2. Filter for a `messageQueue(Processed)` event, also emitted during block initialization. This
+   event has a parameter `Id`. The value of `Id` identifies the cross-chain message received in the
+   Relay Chain. It can be used to track back the message in the origin parachain if needed. Note
+   that a block may contain several `messageQueue(Processed)` events corresponding to several
+   cross-chain messages processed for this block.
