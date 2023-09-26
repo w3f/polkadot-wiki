@@ -46,12 +46,12 @@ who attempt to do so will likely try to steal your digital identity and anything
 it.
 
 To mitigate risks of key mismanagement (for **non-custodial** accounts, i.e. when you have custody
-of your keys) there are [account abstraction](../learn/learn-account-abstraction) solutions that separate the key management from the user
-experience. To mitigate key hacks, there are cold wallet solutions where the private key is
-generated on dedicated devices that cannot connect to the internet (see [Ledger](./ledger.md)), or
-dedicated applications that can be installed on air-gapped devices such as phones (see
-[Polkadot Vault](./polkadot-vault.md)). For **custodial** accounts, you trust third parties to
-manage your keys and give you access whenever needed.
+of your keys) there are [account abstraction](../learn/learn-account-abstraction.md) solutions that
+separate the key management from the user experience. To mitigate key hacks, there are cold wallet
+solutions where the private key is generated on dedicated devices that cannot connect to the
+internet (see [Ledger](./ledger.md)), or dedicated applications that can be installed on air-gapped
+devices such as phones (see [Polkadot Vault](./polkadot-vault.md)). For **custodial** accounts, you
+trust third parties to manage your keys and give you access whenever needed.
 
 To sum up, data ownership comes from the fact that any message you sign with your private key comes
 from your digital identity, and the signature proof can be cryptographically verified. Unless
@@ -72,12 +72,13 @@ ultimately provide a solid, trustless environment.
 But what if the data we own can be easily modified or tampered with after they have been signed and
 stored?
 
-Here is where **blockchain** plays an important role. Blockchains are distributed state machines where increments of data are stored within blocks that build on each other using hash functions. For example, the hash of
-block `N + 1` contains data of that block together with the hash of the previous block `N`. This
-creates the situation where if you modify the content of block `N` you will change the hash of block
-`N + 1`, `N + 2`, etc. You will need to modify quite a lot of data, and in proof-of-stake
-blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attack is
-financially expensive, and attempting to do it will get you
+Here is where **blockchain** plays an important role. Blockchains are distributed state machines
+where increments of data are stored within blocks that build on each other using hash functions. For
+example, the hash of block `N + 1` contains data of that block together with the hash of the
+previous block `N`. This creates the situation where if you modify the content of block `N` you will
+change the hash of block `N + 1`, `N + 2`, etc. You will need to modify quite a lot of data, and in
+proof-of-stake blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such
+attack is financially expensive, and attempting to do it will get you
 [slashed](../learn/learn-staking-advanced.md#slashing).
 
 So, with blockchain as a means of storing data permanently without any option to modify them, we can
@@ -95,8 +96,8 @@ immutable because stored on a blockchain, but that blockchain would be easily st
 be little sense in owning something that can easily cease to exist in the future.
 
 Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
-decentralization, economic incentives, and on-chain governance to ensure
-the network can run and upgrade on its own.
+elements such as decentralization, economic incentives, and on-chain governance to ensure the
+network can run and upgrade on its own.
 
 ### Decentralization
 
@@ -121,10 +122,10 @@ new validator nodes to increase the level of node decentralization.
 
 ### Decentralized Storage
 
-[Blockspace](./glossary/#blockspace) is limited and valuable. Not all data we have can be stored on the blockchain. Large
-files like pictures, music, movies, etc., will never be held on the blockchain. But where can we
-stored those files? To stick to the web3 vision, we need a resilient and decentralized storage
-solution.
+[Blockspace](./glossary/#blockspace) is limited and valuable. Not all data we have can be stored on
+the blockchain. Large files like pictures, music, movies, etc., will never be held on the
+blockchain. But where can we stored those files? To stick to the web3 vision, we need a resilient
+and decentralized storage solution.
 
 The most important thing is that the proof of ownership is stored on the blockchain.
 
