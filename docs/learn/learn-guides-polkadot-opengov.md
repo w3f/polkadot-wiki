@@ -73,12 +73,17 @@ submission and decision deposits back by issuing the `refundSubmissionDeposit` a
 `refundDecisionDeposit` extrinsics, respectively. Those calls will succeed if the proposal is
 completed as passing or failing.
 
-Users can not refund their deposit while the referendum is `Ongoing`. Similarly, users cannot refund
-their deposit if the proposal has `TimedOut` (see timeout conditions). This behavior exists so that
-users can refrain from spamming the chain with proposals that have no interest from the community.
-If a proposal is in the `TimedOut` state, any user can call `slash_proposal_deposit`, which will move
-the funds from the user to a runtime-configured account, like the treasury.
+Users can not refund their submission deposit while the referendum is `Ongoing`. Similarly, users
+cannot refund their submission deposit if the proposal has `TimedOut` (failing to submit the
+decision deposit within a 14-day period will lead to a referendum timeout). This behavior exists so
+that users can refrain from spamming the chain with proposals that have no interest from the
+community. If a proposal is in the `TimedOut` state, any user can call `slash_proposal_deposit`,
+which will move the funds from the user to a runtime-configured account, like the treasury.
 
-If you submitted a proposal and no decision deposit has been placed on that referenda, the submission deposit will not be
-claimable using the `refundSubmissionDeposit` extrinsic. To refund your deposit, you can start a new
-referendum and specifically request a refund from the treasury.
+If you submitted a proposal and no decision deposit has been placed on that referenda, the
+submission deposit will not be claimable using the `refundSubmissionDeposit` extrinsic. To refund
+your deposit, you can start a new referendum and specifically request a refund from the treasury.
+You need to make sure you have enough balance for a new submission deposit and you will need to
+select the right track to ask for the refund. In any case, the
+[Small Tipper Track](../maintain/maintain-guides-polkadot-opengov.md#small-tipper) would be fine for
+any kind of deposit.
