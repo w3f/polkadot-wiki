@@ -84,6 +84,7 @@ If you submitted a proposal and no decision deposit has been placed on that refe
 submission deposit will not be claimable using the `refundSubmissionDeposit` extrinsic. To refund
 your deposit, you can start a new referendum and specifically request a refund from the treasury.
 You need to make sure you have enough balance for a new submission deposit and you will need to
-select the right track to ask for the refund. In any case, the
+select the right track to ask for the refund. For example, the
 [Small Tipper Track](../maintain/maintain-guides-polkadot-opengov.md#small-tipper) would be fine for
-any kind of deposit.
+any kind of deposit refund up to
+{{ polkadot: 250 DOT :polkadot }}{{ kusama: 8.25 KSM KSM :kusama }}.
