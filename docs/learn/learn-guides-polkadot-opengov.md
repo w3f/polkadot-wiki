@@ -73,7 +73,7 @@ submission and decision deposits back by issuing the `refundSubmissionDeposit` a
 `refundDecisionDeposit` extrinsics, respectively. Those calls will succeed if the proposal is
 completed as passing or failing.
 
-Users can not refund their deposit while the proposal is Ongoing. Similarly, users cannot refund
+Users can not refund their deposit while the referendum is `Ongoing`. Similarly, users cannot refund
 their deposit if the proposal has TimedOut (see timeout conditions). This behavior exists so that
 users can refrain from spamming the chain with proposals that have no interest from the community.
 If a proposal is in the TimedOut state, any user can call `slash_proposal_deposit`, which will move
