@@ -11,7 +11,7 @@ The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain d
 support assets beyond {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. This functionality
 exists in parachains. On both Polkadot and Kusama, this parachain is called Asset Hub.
 
-The Asset Hub provides a first-class interface for creating, managing, and using both fungible and
+The Asset Hub provides a first-class interface for creating, managing, and using fungible and
 non-fungible assets. The fungible interface is similar to Ethereum's ERC-20 standard. However, the
 data structures and stateful operations are encoded directly into the chain's runtime, making
 operations fast and fee-efficient.
@@ -23,21 +23,22 @@ infrastructure providers and users:
 - Significantly lower transaction fees (about 1/10) than the Relay Chain.
 - Significantly lower deposits (1/10) than the Relay Chain. This includes the existential deposit
   and deposits for proxy/multisig operations.
-- Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT in order
-  to exist on-chain nor to pay fees.
+- Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT to exist
+  on-chain or pay fees.
 
 The Asset Hub will use DOT as its native currency. Users can transfer DOT from the Relay Chain into
 the Asset Hub and use it natively. The Relay Chain will also accept DOT transfers from the Asset Hub
-back to the Relay Chain to use for staking, governance, or any other activity taking place there.
+back to the Relay Chain for staking, governance, or any other activity.
 
 Using the Asset Hub for DOT/KSM balance transfers will be much more efficient than the Relay Chain
-and is highly recommended. Until domain specific parachains are built, the Relay Chain will still
+and is highly recommended. Until domain-specific parachains are built, the Relay Chain will still
 need to be used for staking and governance.
 
 ## Assets Basics
 
-See the [Assets pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/assets)
-for the most up-to-date info and reference documentation.
+See the
+[Assets pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/assets) for
+the most up-to-date info and reference documentation.
 
 Assets are stored as a map from an ID to information about the asset, including a management team,
 total supply, total number of accounts, its sufficiency for account existence, and more.
@@ -55,7 +56,7 @@ the dust is lost.
 
 ### Asset Operations
 
-The Assets pallet has its own interface for dealing with assets. See the [Integration](#integration)
+The Assets pallet has its interface for dealing with assets. See the [Integration](#integration)
 section below for how to fetch information and construct transactions.
 
 The main functions you will probably interact with are `transfer` and `transfer_keep_alive`. These
@@ -71,7 +72,7 @@ transfers.
 
 Note that you can use the same addresses (except
 [pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that
-you use on the Relay Chain. The SS58 encodings are the same, only the chain information (genesis
+you use on the Relay Chain. The SS58 encodings are the same; only the chain information (genesis
 hash, etc.) will change on transaction construction.
 
 ## Integration
@@ -79,34 +80,35 @@ hash, etc.) will change on transaction construction.
 The Asset Hub will come with the same tooling suite that Parity Technologies provides for the Relay
 Chain, namely [API Sidecar](https://github.com/paritytech/substrate-api-sidecar) and
 [TxWrapper Polkadot](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-polkadot),
-as well as the [Asset Transfer API](https://github.com/paritytech/asset-transfer-api).
-If you have a technical question or issue about how to use one of the integration tools please file
-a GitHub issue so a developer can help.
+as well as the [Asset Transfer API](https://github.com/paritytech/asset-transfer-api). If you have a
+technical question or issue about how to use one of the integration tools, please file a GitHub
+issue so a developer can help.
 
 ### Parachain Node
 
 Using the Asset Hub will require running a parachain node to sync the chain. This is very similar to
 running a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node, with the addition of
 some extra flags. You can follow
-[these guidelines](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) to set up
-an Asset Hub node.
+[these guidelines](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) to set
+up an Asset Hub node.
 
 ### Asset Transfer API
 
-Asset-transfer-api is a library focused on simplifying the construction of asset transfers for Substrate 
-based chains that involves system parachains like Asset Hub (Polkadot and Kusama). It exposes a reduced 
-set of methods which facilitates users to send transfers to other (para) chains or locally. You can refer
-to [this table](https://github.com/paritytech/asset-transfer-api/tree/main#current-cross-chain-support)
-for the current cross-chain support and [here](https://paritytech.github.io/asset-transfer-api/) for the
-full documentation, including installation guide and usage examples.
+Asset-transfer-api is a library focused on simplifying the construction of asset transfers for
+Substrate-based chains that involve system parachains like Asset Hub (Polkadot and Kusama). It
+exposes a reduced set of methods that facilitate users to send transfers to other (para) chains or
+locally. You can refer to
+[this table](https://github.com/paritytech/asset-transfer-api/tree/main#current-cross-chain-support)
+for the current cross-chain support and [here](https://paritytech.github.io/asset-transfer-api/) for
+the complete documentation, including installation guide and usage examples.
 
 ### Sidecar
 
 API Sidecar is a REST service for Relay Chain and parachain nodes. It comes with endpoints to query
 information about assets and asset balances on the Asset Hub.
 
-- Asset lookups will always use the `AssetId` to refer to an asset class. On-chain metadata is
-  subject to change and thus not suitable as a canonical index.
+- Asset lookups always use the `AssetId` to refer to an asset class. On-chain metadata is subject to
+  change and thus unsuitable as a canonical index.
 - Please refer to [docs](https://paritytech.github.io/substrate-api-sidecar/dist/) for full usage
   information. Details on options like how to make a historical query are not included here.
 
@@ -129,7 +131,7 @@ or any other critical purpose.
 ### Tx Wrapper Polkadot
 
 TxWrapper Polkadot is a library designed to facilitate transaction construction and signing in
-offline environments. It comes with a set of asset-specific functions to use on the Asset Hub. When
+offline environments. It comes with asset-specific functions to use on the Asset Hub. When
 constructing parachain transactions, you can use `txwrapper-polkadot` exactly as on the Relay Chain,
-but construct transactions with the appropriate parachain metadata like genesis hash, spec
-version, and type registry.
+but construct transactions with the appropriate parachain metadata like genesis hash, spec version,
+and type registry.
