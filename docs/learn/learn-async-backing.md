@@ -195,6 +195,85 @@ blocks in advance to fit more data, Polkadot with asynchronous backing can deliv
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
 Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
 
+### Synchronous Backing as corner case of Asynchronous Backing
+
+Two parameters of asynchronous backing can be controlled by
+[Governance](./learn-polkadot-opengov.md):
+
+- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54):
+  the number of parachain blocks a collator can produce that are not yet included in the relay
+  chain.
+- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49):
+  the oldest relay chain parent a parachain block can be built on top of.
+
+Values of zero for both correspond to synchronous backing: `allowed_ancestry_len = 0` means there
+can be only 1 parablock at a time on the conveyor belt, `max_candidate_depth = 0` means a parachain
+block can be built only on the latest relay parent for that parachain. Those two parameters will be
+initially set to 3 and 2, respectively.
+
+## Terminology
+
+### Candidate Receipt
+
+Saying that a parablock has been included in a realy chain parent does not mean that the entire
+parablock is in the relay chain block. **Candidate receipt** consisting of the hash of the
+parablock, state roots and ID info is placed on the parent block on the relay chain. The relay chain
+does not access the entire state of a parachain but only the values that changed during that block
+and the merkelized hashes of the unchanged values.
+
+### Pipelining
+
+Asynchronous backing is a feature that introduces
+[pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
+[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
+pipelining of processor instruction in "traditional" architectures, where some instructions may be
+executed before others are complete. Instructions may also be executed in parallel, enabling
+multiple processor parts to work on potentially different instructions simultaneously.
+
+Bundles of state transitions represented as blocks may be processed similarly. In the context of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
+throughput of the entire network by completing the backing and inclusion steps for different blocks
+at the same time. Asynchronous backing does not just allow for pipelining within a single pipe (or
+core). It lays the foundation for a large number of pipes (~10 cores) to run for the same parachain
+at the same time. In that way we have two distinct new forms of parallel computation: pipelining and
+multiple pipes.
+
+### Contextual Execution
+
+Contextual execution refers to the context built by parablock ancestors used by collators to
+generate new parablocks. The difference in execution context between synchronous and asynchronous
+backing is as follows:
+
+Synchronous - The entire execution context comes from the latest relay block and most recently
+included parablock from the same parachain.
+
+Asynchronous - A baseline execution context is first set up using a parablock's relay parent and the
+most recently included parablock as of that relay parent. The relay parent need not be the most
+recent relay block. Predecessors of the block under construction live in the unincluded segment.
+
+Synchronous backing uses execution context entirely pulled from the relay chain. While asynchronous
+backing augments this with off-chain context from the unincluded segment.
+
+### Unincluded Segments
+
+Unincluded segments are chains of candidate parablocks that have yet to be included in the relay
+chain, i.e. they can contain parablocks at any stage pre-inclusion. The backing process occurs on
+the relay chain, whereas unincluded segments live in the runtimes of parachain collators. The core
+functionality that asynchronous backing brings is the ability to build on these unincluded segments
+of block ancestors rather than ancestors included in the relay chain state.
+
+Compared to synchronous backing, contextual execution shifts from being the parablock ancestors
+included in the relay chain to being the latest ancestor parablock pushed into the unincluded
+segment. This allows collators to build parablocks earlier, giving them plenty of time to fit more
+transactions and prepare block candidates for backing and inclusion.
+
+The purpose of each unincluded segment is two fold:
+
+- Make each parachain aware of when and at what depth it can build blocks that won't be rejected by
+  the relay chain
+- Provide critical context necessary to build parablocks with parent blocks that have yet to be
+  included The unincluded segment is all about building parablocks.
+
 ### Prospective Parachains
 
 [Prospective parachains](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html)
@@ -232,83 +311,11 @@ point prospective parachains doesn't have to care about it anymore. Alternativel
 relay parent can get too old before that parablock is included, in which case prospective parachains
 can throw away the candidate.
 
-### Synchronous Backing as corner case of Asynchronous Backing
-
-Two parameters of asynchronous backing can be controlled by
-[Governance](./learn-polkadot-opengov.md):
-
-- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54):
-  the number of parachain blocks a collator can produce that are not yet included in the relay
-  chain.
-- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49):
-  the oldest relay chain parent a parachain block can be built on top of.
-
-Values of zero for both correspond to synchronous backing: `allowed_ancestry_len = 0` means there
-can be only 1 parablock at a time on the conveyor belt, `max_candidate_depth = 0` means a parachain
-block can be built only on the latest relay parent for that parachain. Those two parameters will be
-initially set to 3 and 2, respectively.
-
-## Terminology
-
-### Candidate Receipt
-
-Not the entire parablock, but the **candidate receipt** consisting of the hash of the parablock,
-state roots and ID info is placed on the parent block on the relay chain. The relay chain does not
-access the entire state of a parachain but only the values that changed during that block and the
-merkelized hashes of the unchanged values.
-
-### Contextual Execution
-
-Contextual execution refers to the context built by parablock ancestors used by collators to
-generate new parablocks. The difference in execution context between synchronous and asynchronous
-backing is as follows:
-
-Synchronous - The entire execution context comes from the latest relay block and most recently
-included parablock from the same parachain.
-
-Asynchronous - A baseline execution context is first set up using a parablock's relay parent and the
-most recently included parablock as of that relay parent. The relay parent need not be the most
-recent relay block. Predecessors of the block under construction live in the unincluded segment.
-
-Synchronous backing uses execution context entirely pulled from the relay chain. While asynchronous
-backing augments this with off-chain context from the unincluded segment.
-
-### Pipelining
-
-Asynchronous backing is a feature that introduces
-[pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
-pipelining of processor instruction in "traditional" architectures, where some instructions may be
-executed before others are complete. Instructions may also be executed in parallel, enabling
-multiple processor parts to work on potentially different instructions simultaneously.
-
-Bundles of state transitions represented as blocks may be processed similarly. In the context of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
-throughput of the entire network by completing the backing and inclusion steps for different blocks
-at the same time. Asynchronous backing does not just allow for pipelining within a single pipe (or
-core). It lays the foundation for a large number of pipes (~10 cores) to run for the same parachain
-at the same time. In that way we have two distinct new forms of parallel computation: pipelining and
-multiple pipes.
-
-### Unincluded Segments
-
-Unincluded segments are chains of candidate parablocks that have yet to be included in the relay
-chain, i.e. they can contain parablocks at any stage pre-inclusion. The backing process occurs on
-the relay chain, whereas unincluded segments live in the runtimes of parachain collators. The core
-functionality that asynchronous backing brings is the ability to build on these unincluded segments
-of block ancestors rather than ancestors included in the relay chain state.
-
-Compared to synchronous backing, contextual execution shifts from being the parablock ancestors
-included in the relay chain to being the latest ancestor parablock pushed into the unincluded
-segment. This allows collators to build parablocks earlier, giving them plenty of time to fit more
-transactions and prepare block candidates for backing and inclusion.
-
-The purpose of each unincluded segment is two fold:
-
-- Make each parachain aware of when and at what depth it can build blocks that won't be rejected by
-  the relay chain
-- Provide critical context necessary to build parablocks with parent blocks that have yet to be
-  included The unincluded segment is all about building parablocks.
+Prospective parachains essentially repeats the work each unincluded segment does in tracking
+candidates. Validator's can't simply trust the availability or validity of records kept on
+parachains. In this way, prospective parachains is the authoritative gate keeper for parablock
+validity. Whereas the unincluded segment is a local record which allows parachains to produce blocks
+which comply with the rules prospective parachains later enforces.
 
 ## Learn More
 
