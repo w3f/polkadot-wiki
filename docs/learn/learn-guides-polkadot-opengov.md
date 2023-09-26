@@ -65,3 +65,20 @@ within the track, and a
 have been met. Failing to submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
+
+## Request Submission and Decision Deposit Back
+
+If you submitted a proposal and a referendum for such proposal has ended, you can claim your
+submission and decision deposits back by issuing the `refundSubmissionDeposit` and the
+`refundDecisionDeposit` extrinsics, respectively. Those functions will succeed if the proposal is
+completed as passing or failing.
+
+Users can not refund their deposit while the proposal is Ongoing. Similarly, users cannot refund
+their deposit if the proposal has TimedOut (see timeout conditions). This behavior exists so that
+users can refrain from spamming the chain with proposals that have no interest from the community.
+If a proposal is in the TimedOut state, any user can call `slash_proposal_deposit`, which will move
+the funds from the user to a runtime-configured account, like the treasury.
+
+If you submitted a proposal and did not place a decision deposit, the submission deposit will not be
+claimable using the `refundSubmissionDeposit` extrinsic. To refund your deposit, you can start a new
+referendum and specifically request a refund from the treasury.
