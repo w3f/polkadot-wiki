@@ -46,7 +46,7 @@ who attempt to do so will likely try to steal your digital identity and anything
 it.
 
 To mitigate risks of key mismanagement (for **non-custodial** accounts, i.e. when you have custody
-of your keys) there are account abstraction solutions that separate the key management from the user
+of your keys) there are [account abstraction](../learn/learn-account-abstraction) solutions that separate the key management from the user
 experience. To mitigate key hacks, there are cold wallet solutions where the private key is
 generated on dedicated devices that cannot connect to the internet (see [Ledger](./ledger.md)), or
 dedicated applications that can be installed on air-gapped devices such as phones (see
