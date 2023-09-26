@@ -70,7 +70,7 @@ period will lead to a referendum timeout.
 
 If you submitted a proposal and a referendum for such proposal has ended, you can claim your
 submission and decision deposits back by issuing the `refundSubmissionDeposit` and the
-`refundDecisionDeposit` extrinsics, respectively. Those functions will succeed if the proposal is
+`refundDecisionDeposit` extrinsics, respectively. Those calls will succeed if the proposal is
 completed as passing or failing.
 
 Users can not refund their deposit while the proposal is Ongoing. Similarly, users cannot refund
