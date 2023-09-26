@@ -153,7 +153,7 @@ filter for any `balances.deposit` event and apply the appropriate business logic
 
 #### Tracking back XCM information
 
-What's previously stated will be sufficient to ensure {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
+What has been mentioned earlier should be sufficient to confirm that {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
 has arrived in a given account via XCM. However, in some cases it may be interesting to identify the cross-chain 
 message that emitted the relevant `balances.deposit` event. This can be done as follows:
 
