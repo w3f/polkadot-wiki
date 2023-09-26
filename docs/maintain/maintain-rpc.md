@@ -35,13 +35,13 @@ options in the setup process provide various settings that can be modified.
 A typical setting for an externally accessible polkadot archive RPC node would be:
 
 ```config
-polkadot --chain polkadot --name myrpc --state-pruning archive --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
+polkadot --chain polkadot --name myrpc --state-pruning archive --blocks-pruning archive --rpc-max-connections 100 --rpc-cors all --rpc-methods Safe --rpc-port 9944
 ```
 
 Or for a Polkadot pruned RPC node:
 
 ```config
-polkadot --chain polkadot --name myrpc --state-pruning 1000 --blocks-pruning archive --ws-max-connections 100 --rpc-cors all --rpc-methods Safe --ws-port 9944
+polkadot --chain polkadot --name myrpc --state-pruning 1000 --blocks-pruning archive --rpc-max-connections 100 --rpc-cors all --rpc-methods Safe --rpc-port 9944
 ```
 
 The specified flag options are outlined in greater detail below.
@@ -70,8 +70,8 @@ Inclusion in the Polkadot.js UI requires an archive node.
 The node startup settings allow you to choose **what** to expose, **how many** connections to expose
 and **from where** access should be granted through the RPC server.
 
-_How many_: You can set your maximum connections through `--ws-max-connections`, for example
-`--ws-max-connections 100`
+_How many_: You can set your maximum connections through `--rpc-max-connections`, for example
+`--rpc-max-connections 100`
 
 _From where_: by default localhost and the polkadot.js are allowed to access the RPC server; you can
 change this by setting `--rpc-cors`, to allow access from everywhere you need `--rpc-cors all`

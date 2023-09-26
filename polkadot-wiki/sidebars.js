@@ -2,121 +2,6 @@ module.exports = {
   docs: [
     {
       type: "category",
-      label: "General",
-      link: {
-        type: 'generated-index',
-        title: 'General',
-        description: 'General Information to get started with Polkadot and Web3.',
-        slug: '/general-index',
-      },
-      items: [
-        "general/getting-started",
-        {
-          type: "category",
-          label: "Polkadot Vision",
-          description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
-          link: {
-            type: 'generated-index',
-            title: 'Polkadot Vision',
-            description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
-            slug: '/polkadot-vision-index',
-          },
-          items: [
-            "general/polkadot-v1",
-          ],
-        },
-        {
-          type: "category",
-          label: "Stay Safe",
-          description: 'Good-practices to Stay Safe while Surfing in Web3.',
-          link: {
-            type: 'generated-index',
-            title: 'Stay Safe',
-            description: 'Learn about good-practices to stay safe while surfing in Web3.',
-            slug: '/stay-safe-index',
-          },
-          items: [
-            "general/scams",
-            "general/how-to-dyor",
-          ],
-        },
-        {
-          type: "category",
-          label: "Wallets",
-          description: 'Wallet Options in the Polkadot Ecosystem.',
-          link: {
-            type: 'generated-index',
-            title: 'Wallets',
-            description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
-            slug: '/wallets-index',
-          },
-          items: [
-            "general/wallets-and-extensions",
-            "general/ledger",
-            "general/polkadot-vault",
-            "general/polkadotjs-ui",
-          ],
-        },
-        {
-          type: "category",
-          label: "Dashboards",
-          description: 'Dashboards in the Polkadot Ecosystem.',
-          link: {
-            type: 'generated-index',
-            title: 'Dashboards',
-            description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
-            slug: '/dashboards-index',
-          },
-          items: [
-            "general/staking-dashboard",
-          ],
-        },
-        "general/polkadotjs",
-        {
-          type: "category",
-          label: "Community & Contributors",
-          description: 'Polkadot Community and Wiki Contributors.',
-          link: {
-            type: 'generated-index',
-            title: 'Community & Contributors',
-            description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
-            slug: '/community-index',
-          },
-          items: [
-            "general/community",
-            "general/contributing",
-            "general/contributors",
-          ],
-        },
-        {
-          type: "category",
-          label: "Programmes",
-          description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
-          link: {
-            type: 'generated-index',
-            title: 'Programmes',
-            description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
-            slug: '/programmes-index',
-          },
-          items: [
-            "general/grants",
-            "general/bug-bounty",
-            "general/ambassadors",
-            "general/builders-program",
-            "general/doc-thousand-validators",
-            "general/doc-thousand-contributors",
-            "general/dev-heroes",
-          ],
-        },
-        "general/start-building",
-        "general/research",
-        "general/metadata",
-        "general/faq",
-        "general/glossary",
-      ],
-    },
-    {
-      type: "category",
       label: "Learn",
       link: {
         type: 'generated-index',
@@ -125,6 +10,122 @@ module.exports = {
         slug: '/learn-index',
       },
       items: [
+        {
+          type: "category",
+          label: "General",
+          description: 'General Information to get started with Polkadot and Web3.',
+          link: {
+            type: 'generated-index',
+            title: 'General',
+            description: 'General Information to get started with Polkadot and Web3.',
+            slug: '/general-index',
+          },
+          items: [
+            "general/getting-started",
+            {
+              type: "category",
+              label: "Polkadot Vision",
+              description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot Vision',
+                description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+                slug: '/polkadot-vision-index',
+              },
+              items: [
+                "general/polkadot-v1",
+              ],
+            },
+            {
+              type: "category",
+              label: "Stay Safe",
+              description: 'Good-practices to Stay Safe while Surfing in Web3.',
+              link: {
+                type: 'generated-index',
+                title: 'Stay Safe',
+                description: 'Learn about good-practices to stay safe while surfing in Web3.',
+                slug: '/stay-safe-index',
+              },
+              items: [
+                "general/scams",
+                "general/how-to-dyor",
+              ],
+            },
+            {
+              type: "category",
+              label: "Wallets",
+              description: 'Wallet Options in the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Wallets',
+                description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
+                slug: '/wallets-index',
+              },
+              items: [
+                "general/wallets-and-extensions",
+                "general/ledger",
+                "general/polkadot-vault",
+                "general/polkadotjs-ui",
+              ],
+            },
+            {
+              type: "category",
+              label: "Dashboards",
+              description: 'Dashboards in the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Dashboards',
+                description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
+                slug: '/dashboards-index',
+              },
+              items: [
+                "general/staking-dashboard",
+              ],
+            },
+            "general/polkadotjs",
+            {
+              type: "category",
+              label: "Community & Contributors",
+              description: 'Polkadot Community and Wiki Contributors.',
+              link: {
+                type: 'generated-index',
+                title: 'Community & Contributors',
+                description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
+                slug: '/community-index',
+              },
+              items: [
+                "general/community",
+                "general/contributing",
+                "general/contributors",
+              ],
+            },
+            {
+              type: "category",
+              label: "Programmes",
+              description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Programmes',
+                description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
+                slug: '/programmes-index',
+              },
+              items: [
+                "general/grants",
+                "general/bug-bounty",
+                "general/ambassadors",
+                "general/builders-program",
+                "general/doc-thousand-validators",
+                "general/doc-thousand-contributors",
+                "general/dev-heroes",
+              ],
+            },
+            "general/start-building",
+            "general/research",
+            "general/metadata",
+            "general/faq",
+            "general/glossary",
+          ],
+        },
         {
           type: "category",
           label: "Basics",
@@ -149,9 +150,11 @@ module.exports = {
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
+                "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
-                'learn/learn-proxies',
+                "learn/learn-proxies",
+                "learn/learn-proxies-pure",
               ],
             },
             {
