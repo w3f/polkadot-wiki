@@ -95,7 +95,7 @@ immutable because stored on a blockchain, but that blockchain would be easily st
 be little sense in owning something that can easily cease to exist in the future.
 
 Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
-decentralization, economic incentives, on-chain governance, and on-chain treasury funds to ensure
+decentralization, economic incentives, and on-chain governance to ensure
 the network can run and upgrade on its own.
 
 ### Decentralization
