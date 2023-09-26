@@ -136,7 +136,7 @@ constructing parachain transactions, you can use `txwrapper-polkadot` exactly as
 but construct transactions with the appropriate parachain metadata like genesis hash, spec version,
 and type registry.
 
-### XCM Transfer Monitoring
+### Monitoring of XCM deposits
 
 Thanks to XCM and a growing number of parachains, {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
 can exist across several blockchains, which means the providers need to monitor cross-chain transfers 
