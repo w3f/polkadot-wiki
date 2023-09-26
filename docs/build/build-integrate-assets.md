@@ -146,7 +146,7 @@ Currently {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can be sent and
 Chain either with a [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from 
 [system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a 
 [Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport) 
-from any other parachain. In both cases, the event emitted when processing the transfer is the `balances.desposited` 
+from any other parachain. In both cases, the event emitted when processing the transfer is the `balances.deposit` 
 event. Hence providers should listent for these events pointing to an addresss in their system. For this, 
 the service provider will need to query every new block that is created, loop through the events array, 
 filter for any `balances.deposit` event and apply the appropriate business logic.
