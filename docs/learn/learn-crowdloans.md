@@ -53,10 +53,10 @@ allocate towards winning a slot.
 
 Project B fully controls how much they are willing to contribute to gaining a parachain slot.
 Project B need not work on creating a reward model for community contributors like Project A. In
-contrast, crowdloan campaigns benefit projects with access to limited capital but strong community
-support. They are also beneficial for projects that can successfully bid to win the auction with
-self-funding but are looking for a mechanism to bootstrap their community and get noticed by the key
-actors in the ecosystem.
+contrast, crowdloan campaigns benefit projects with access to limited capital but have strong
+community support. They are also beneficial for projects that can successfully bid to win the
+auction with self-funding but are looking for a mechanism to bootstrap their community and get
+noticed by the key actors in the ecosystem.
 
 It is publicly visible on-chain whether or not a project is bidding directly or through a crowdloan
 campaign. More details regarding creating and executing a crowdloan campaign are provided below.
