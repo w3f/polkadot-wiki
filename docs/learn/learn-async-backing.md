@@ -34,11 +34,12 @@ slashed.
 In synchronous backing, parablock generation is tightly coupled to the relay chain's progression on
 a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
 (six-second window), and (if successfully backed) it will be included in a relay-chain block (often
-referred to as the **relay parent**, or latest block on the relay chain, as the parablock anchors
-itself to it) after an additional six seconds. Thus, a parablock can be produced every 12 seconds
-because a new parablock can be produced after including the previous one.
+referred to as the **relay parent** as the parablock anchors itself to it) after an additional six
+seconds. Thus, a parablock can be produced every 12 seconds because a new parablock can be produced
+after including the previous one. Note [candidate receipts](#candidate-receipt) and not the
+parablocks themselves are included in relay parents.
 
-### Synchronous Backing Mechanics
+### Sync Backing Mechanics
 
 The diagram below shows the pipelining table for synchronous backing.
 
@@ -93,7 +94,7 @@ performance metric is not thoroughly tested nor guaranteed until proper benchmar
 
 :::
 
-### Synchronous vs. Asynchronous Backing
+### Sync vs. Async Backing
 
 Asynchronous Backing has three overarching goals:
 
@@ -116,7 +117,7 @@ Asynchronous backing brings the following changes to the parachain protocol:
 - Parachains can generate blocks and have them placed into **unincluded segments** of parablock
   ancestors rather than the latest, included relay chain parent.
 
-### Asynchronous Backing Mechanics
+### Async Backing Mechanics
 
 Compared to [synchronous backing](#synchronous-backing-mechanics), in asynchronous backing:
 
@@ -195,7 +196,7 @@ blocks in advance to fit more data, Polkadot with asynchronous backing can deliv
 This combination of lower latency, higher storage per block, and a logical pipeline spanning
 Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
 
-### Synchronous Backing as corner case of Asynchronous Backing
+### Sync Backing as corner case of Async Backing
 
 Two parameters of asynchronous backing can be controlled by
 [Governance](./learn-polkadot-opengov.md):
@@ -327,3 +328,7 @@ resources:
 - [Asynchronous Backing Spec & Tracking Issue](https://github.com/paritytech/polkadot/issues/3779) -
   The implementation tracking issue for asynchronous backing
 - [Prospective Parachains Subsystem - The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html)
+- Chapter 6.11. from Polkadot Blockchain Academy (PBA) lecture material:
+  [Asynchronous Backing (Shallow)](https://polkadot-blockchain-academy.github.io/pba-book/polkadot/async-backing-shallow/page.html)
+- Chapter 6.15. from PBA lecture material:
+  [Asynchronous Backing (Deep)](https://polkadot-blockchain-academy.github.io/pba-book/polkadot/async-backing-deep/page.html)
