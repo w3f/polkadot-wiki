@@ -79,6 +79,6 @@ users can refrain from spamming the chain with proposals that have no interest f
 If a proposal is in the `TimedOut` state, any user can call `slash_proposal_deposit`, which will move
 the funds from the user to a runtime-configured account, like the treasury.
 
-If you submitted a proposal and did not place a decision deposit, the submission deposit will not be
+If you submitted a proposal and no decision deposit has been placed on that referenda, the submission deposit will not be
 claimable using the `refundSubmissionDeposit` extrinsic. To refund your deposit, you can start a new
 referendum and specifically request a refund from the treasury.
