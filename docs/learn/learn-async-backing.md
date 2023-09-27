@@ -255,7 +255,7 @@ be the most recent relay block. Predecessors of the block under construction liv
 [unincluded segment](#unincluded-segments) placed directly in the runtime of parachain collators
 
 Synchronous backing uses execution context entirely pulled from the relay chain. While asynchronous
-backing augments this with off-chain context from the unincluded segment.
+backing augments this with additional context from the unincluded segment.
 
 ### Unincluded Segments
 
