@@ -125,7 +125,7 @@ Compared to [synchronous backing](#synchronous-backing-mechanics), in asynchrono
   locally on the parachain side.
 - Every parablock candidate recorded in the unincluded segment is immediately advertised to
   validators to begin the backing process. And the unincluded segment keeps record of all candidates
-  in the backing process right up until they are included (in the unincluded segments there
+  in the backing process right up until they are included. An unincluded segment may include candidates that are seconded, backable, or backed.
   parablocks that are seconded, backable, and backed).
 - A relay parent (not necessarily the latest block) and the parablock ancestors in the unincluded
   segment are used as execution context to generate a new parablock and, because the unincluded
