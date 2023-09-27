@@ -121,7 +121,7 @@ Asynchronous backing brings the following changes to the parachain protocol:
 
 Compared to [synchronous backing](#synchronous-backing-mechanics), in asynchronous backing:
 
-- Filled blocks are placed in the unincluded segment, a record of yet not included parablocks stored
+- Filled blocks are placed in the unincluded segment, a record of not yet included parablocks stored
   locally on the parachain side.
 - Every parablock candidate recorded in the unincluded segment is immediately advertised to
   validators to begin the backing process. And the unincluded segment keeps record of all candidates
