@@ -53,9 +53,9 @@ chain, and P3 has been backed.
 
 In synchronous backing we can imagine parablocks on a conveyor belt. The belt is synched with the
 relay chain: It takes six seconds (one relay block) to generate and back a parablock. It then takes
-another six seconds to make that parablock available and mark it as included in a relay block.
-The full process, from one end of the belt to the other, takes twelve seconds, and cannot be started
-for parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
+another six seconds to make that parablock available and mark it as included in a relay block. The
+full process, from one end of the belt to the other, takes twelve seconds, and cannot be started for
+parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
 
 The diagram below shows parablocks on the conveyor belt, on their way from being generated to being
 backed and included into the relay parent.
@@ -125,11 +125,12 @@ Compared to [synchronous backing](#synchronous-backing-mechanics), in asynchrono
   locally on the parachain side.
 - Every parablock candidate recorded in the unincluded segment is immediately advertised to
   validators to begin the backing process. And the unincluded segment keeps record of all candidates
-  in the backing process right up until they are included. An unincluded segment may include candidates that are seconded, backable, or backed.
-  parablocks that are seconded, backable, and backed).
+  in the backing process right up until they are included. An unincluded segment may include
+  candidates that are seconded, backable, or backed. parablocks that are seconded, backable, and
+  backed).
 - A relay parent (not necessarily the latest block) and the parablock ancestors in the unincluded
-  segment are used as execution context to generate a new parablock. Because the unincluded
-  segment can carry multiple parablocks, parachains can take more time to fill new blocks.
+  segment are used as execution context to generate a new parablock. Because the unincluded segment
+  can carry multiple parablocks, parachains can take more time to fill new blocks.
 - The conveyor belt can carry multiple parablocks ([pipelining](#pipelining)), and a parablock can
   be in a different stage from another one being built if it abides by the parameters set forth by
   the asynchronous backing configuration.
@@ -259,23 +260,18 @@ backing augments this with additional context from the unincluded segment.
 
 ### Unincluded Segments
 
-The purpose of each unincluded segment is two fold:
-
-- Make each parachain aware of when and at what depth it can build blocks that won't be rejected by
-  the relay chain
-- Provide critical context necessary to build parablocks with parent blocks that have yet to be
-  included. The unincluded segment is all about building parablocks.
-
 Unincluded segments are chains of candidate parablocks that have yet to be included in the relay
 chain, i.e. they can contain parablocks at any stage pre-inclusion. The backing process occurs on
 the relay chain, whereas unincluded segments live in the runtimes of parachain collators. The core
 functionality that asynchronous backing brings is the ability to build on these unincluded segments
 of block ancestors rather than ancestors included in the relay chain state.
 
-Compared to synchronous backing, contextual execution shifts from being the parablock ancestors
-included in the latest relay parent to being the latest ancestor parablock pushed into the
-unincluded segment. This allows collators to build parablocks earlier, giving them plenty of time to
-fit more transactions and prepare block candidates for backing and inclusion.
+The purpose of each unincluded segment is two fold:
+
+- Make each parachain aware of when and at what depth it can build blocks that won't be rejected by
+  the relay chain
+- Provide critical context necessary to build parablocks with parent blocks that have yet to be
+  included. The unincluded segment is all about building parablocks.
 
 ### Prospective Parachains
 
