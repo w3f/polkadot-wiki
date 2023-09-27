@@ -281,7 +281,7 @@ fit more transactions and prepare block candidates for backing and inclusion.
 
 The purpose of
 [prospective parachains](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html)
-is also two fold:
+is two fold:
 
 - Keep track of parablocks which have been submitted to backers but not yet included. This includes
   tracking the full unincluded ancestry of each parablock, without which it wouldn't be possible to
