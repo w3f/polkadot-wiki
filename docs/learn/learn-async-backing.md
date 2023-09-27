@@ -253,7 +253,6 @@ In asynchronous backing, a baseline execution context is first set up using a pa
 parent and the most recently included parablock as of that relay parent. The relay parent need not
 be the most recent relay block. Predecessors of the block under construction live in the
 [unincluded segment](#unincluded-segments) placed directly in the runtime of parachain collators
-(i.e. off-chain).
 
 Synchronous backing uses execution context entirely pulled from the relay chain. While asynchronous
 backing augments this with off-chain context from the unincluded segment.
