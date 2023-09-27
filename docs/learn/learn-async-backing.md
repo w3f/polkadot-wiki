@@ -126,11 +126,11 @@ Compared to [synchronous backing](#synchronous-backing-mechanics), in asynchrono
 - Every parablock candidate recorded in the unincluded segment is immediately advertised to
   validators to begin the backing process. And the unincluded segment keeps record of all candidates
   in the backing process right up until they are included. An unincluded segment may include
-  candidates that are seconded, backable, or backed. parablocks that are seconded, backable, and
-  backed).
-- A relay parent (not necessarily the latest block) and the parablock ancestors in the unincluded
-  segment are used as execution context to generate a new parablock. Because the unincluded segment
-  can carry multiple parablocks, parachains can take more time to fill new blocks.
+  candidates that are seconded, backable, or backed.
+- A relay parent (not necessarily the latest relay block) and the parablock ancestors in the
+  unincluded segment are used as execution context to generate a new parablock. Because the
+  unincluded segment can carry multiple parablocks, parachains can take more time to fill new
+  blocks.
 - The conveyor belt can carry multiple parablocks ([pipelining](#pipelining)), and a parablock can
   be in a different stage from another one being built if it abides by the parameters set forth by
   the asynchronous backing configuration.
