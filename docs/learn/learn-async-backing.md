@@ -53,7 +53,7 @@ chain, and P3 has been backed.
 
 In synchronous backing we can imagine parablocks on a conveyor belt. The belt is synched with the
 relay chain: It takes six seconds (one relay block) to generate and back a parablock. It then takes
-another six seconds to make that parablock available and mark it as included on the relay parent.
+another six seconds to make that parablock available and mark it as included in a relay block.
 The full process, from one end of the belt to the other, takes twelve seconds, and cannot be started
 for parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
 
