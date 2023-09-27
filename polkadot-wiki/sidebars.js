@@ -548,6 +548,7 @@ module.exports = {
             'learn/learn-spree',
             "learn/learn-parathreads",
             "learn/learn-async-backing",
+            "learn/learn-sassafras",
           ],
         },
         {
