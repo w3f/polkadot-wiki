@@ -23,11 +23,10 @@ and what its main limitations are.
 
 :::info What is backing?
 
-**Backing** refers to the process in which a parablock is verified by a subset of validators who
-determine the block’s validity. It is an important step in the validation process for parablocks, as
-it is the first line of defense in ensuring valid state transitions. Validators who back the
-parablock put their stake at risk, and if the block is later found invalid, those validators are
-slashed.
+**Backing** refers to the process in which parablocks are verified by a subset of validators or
+backing groups. It is an important step in the validation process for parablocks, as it is the first
+line of defense in ensuring censorship resistance. Parablocks only need to be backed by one
+validator, and as a consequence backing does not ensure parablock validity.
 
 :::
 
@@ -35,8 +34,10 @@ In synchronous backing, parablock generation is tightly coupled to the relay cha
 a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
 (six-second window), and (if successfully backed) it will be included in a relay-chain block (often
 referred to as the **relay parent** as the parablock anchors itself to it) after an additional six
-seconds. Thus, a parablock can be produced every 12 seconds because a new parablock can be produced
-after including the previous one. Note [candidate receipts](#candidate-receipt) and not the
+seconds. Inclusion means that other validators have attested to having received
+[erasure coded chunks](./learn-parachains-protocol.md#erasure-codes) of the parablock data. Thus, in
+synchronous backing a parablock can be produced every 12 seconds because a new parablock can be
+produced after including the previous one. Note [candidate receipts](#candidate-receipt) and not the
 parablocks themselves are included in relay parents.
 
 ### Sync Backing Mechanics
@@ -51,39 +52,28 @@ parablocks are generated once the previous parablock has been included.
 recent relay parent. After 24 seconds, two parablocks, P1 and P2, have been included in the relay
 chain, and P3 has been backed.
 
-In synchronous backing we can imagine parablocks on a conveyor belt. The belt is synched with the
-relay chain: It takes six seconds (one relay block) to generate and back a parablock. It then takes
-another six seconds to make that parablock available and mark it as included in a relay block. The
-full process, from one end of the belt to the other, takes twelve seconds, and cannot be started for
-parablock N + 1 until it is fully complete for parablock N (no [pipelining](#pipelining)).
+In synchronous backing it takes six seconds (one relay block) to generate and back a parablock. It
+then takes another six seconds to make that parablock available and mark it as included in a relay
+block. The full process, from parablock generation to its inclusion, takes twelve seconds, and
+cannot be started for parablock N + 1 until it is fully complete for parablock N (no
+[pipelining](#pipelining)).
 
-The diagram below shows parablocks on the conveyor belt, on their way from being generated to being
-backed and included into the relay parent.
+The diagram below shows parablocks on their way from being generated to being backed and included
+into the relay chain.
 
 ![sync-backing-nofill](../assets/sync-backing-nofill.png)
 ![sync-backing-nofill-legend](../assets/sync-backing-nofill-legend.png)
 
 Parablock 1 (P1) is included in the latest relay chain parent 1 (R1) after 6 seconds. Once P1 is
-included, Parablock 2 (P2) can be generated using the included P1 in R1 as execution context. The
+included, Parablock 2 (P2) can be generated using the included P1 in R1 as execution context.
+Because P2 is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5
+seconds) to fill it, since the other 5.5 seconds are needed to get the block backed on chain. The
 next parablock P3 can be generated after P2 is backed into R2 and included into R3, i.e. after 12
 seconds.
 
-The diagram below combines the previous diagrams and adds some context about blockspace.
-
-![sync-backing-fill](../assets/sync-backing-fill.png)
-![sync-backing-fill-legend](../assets/sync-backing-fill-legend.png)
-
-Because P2 is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5
-seconds) to fill it, since the other 5.5 seconds are needed to get the block backed on chain. In
-this scenario, P2 is filled up to 70%. After the inclusion of P2 into R3, Parablock 3 (P3) will be
-generated, filled to 50%, and backed into R4 in 6 seconds. This shows that, if blockspace demand
-decreases, collators will always have 0.5 seconds to fill up blocks, leading to blocks that contain
-less and less data.
-
 The parablock generation and backing are bound together within a six-second window that limits the
 amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
-requirement of being backed in six seconds, leaving little time for its generation and its
-blockspace to be properly filled.
+requirement of being backed in six seconds, leaving little time for its generation.
 
 ## Asynchronous Backing
 
@@ -131,9 +121,8 @@ Compared to [synchronous backing](#synchronous-backing-mechanics), in asynchrono
   unincluded segment are used as execution context to generate a new parablock. Because the
   unincluded segment can carry multiple parablocks, parachains can take more time to fill new
   blocks.
-- The conveyor belt can carry multiple parablocks ([pipelining](#pipelining)), and a parablock can
-  be in a different stage from another one being built if it abides by the parameters set forth by
-  the asynchronous backing configuration.
+- A parablock can be in a different stage from another one being built ([pipelining](#pipelining)),
+  if it abides by the parameters set forth by the asynchronous backing configuration.
 - Backing and inclusion events can happen within the same relay chain block (i.e. in 6 seconds)
 
 The diagram below shows the pipelining table for asynchronous backing.
@@ -160,11 +149,6 @@ segment), P3 is backed in R2, and P5 has been added to the segment and pushed to
 be backed. The segment now contains P3-5. Once a parablock has been included, there is no need to
 keep it in the segment.
 
-The diagram below combines the previous diagrams and adds some context about blockspace.
-
-![async-backing-fill](../assets/async-backing-fill.png)
-![async-backing-fill-legend](../assets/async-backing-fill-legend.png)
-
 In synchronous backing collators generated parablocks in 0.5 seconds, since the other 5.5 seconds
 were needed to get the block backed on chain. In asynchronous backing, because P5 is not rushing to
 be backed (P3-4 are in the backing process), it can be filled in 2s while P2 is included and P3 is
@@ -172,32 +156,16 @@ backed in R2. This is possible because the context execution shifted from being 
 parablock in the latest relay parent, to being the latest ancestor in the unincluded segment (i.e.
 P4).
 
-In this scenario, blockspace demand decreases from P3 to P5. In theory, the next block P6 can be
-filled in >2s seconds while P4 is included and P5 is backed. Collators could make better use of
-blockspace, including more data by increasing block generation time in a period of lower demand.
 Note that even if a collator has >2 seconds to produce a block, the validator will still have less
-than 6 seconds (~2 seconds) to check it. So, if collators take >2 seconds to generate blocks the
-unincluded segment will shrink (and there will be less parablocks in the pipeline), while if they
-take <2 seconds the segment will elongate until it reaches the `maximum capacity` (and there will be
-less parablocks in the pipeline).
-
-For example, in case increased blockspace demand after the generation of P6, collators could
-generate P7 and P8 within a 6-second window due to the unincluded segment being 2/3 filled (see
-below). However, if demand stays high after P8, collators will only be able to generate parablocks
-every 6 seconds as validators can back parablocks every 6 seconds.
-
-![async-backing-fill-scenario2](../assets/async-backing-fill-scenario2.png)
+than 6 seconds (~2 seconds) to check it. Collating on top of unincluded parents means the only time
+limit to generate a parablock is how long it takes to back it (2s). The 6s relay chain block delay
+includes this backing execution timeout (2s) and some time for network latency (time it takes to
+gossip messages across the entire network).
 
 In general, asynchronous backing will allow [collators](./learn-parachains-protocol.md#collators) to
-include an estimated ~3-5x more data into parablocks while speeding up parachain block times from 12
-to 6 seconds. Due to the 2x decrease in block time to inclusion and the possibility of building
-blocks in advance to fit more data, Polkadot with asynchronous backing can deliver an estimated
-~6-10x more blockspace to its parachains.
+include more data into parablocks while speeding up parachain block times from 12 to 6 seconds.
 
-This combination of lower latency, higher storage per block, and a logical pipeline spanning
-Polkadot's networking, runtime, and collation aspects will allow for higher, more robust throughput.
-
-### Sync Backing as corner case of Async Backing
+### Sync Backing as special case of Async Backing
 
 Two parameters of asynchronous backing can be controlled by
 [Governance](./learn-polkadot-opengov.md):
