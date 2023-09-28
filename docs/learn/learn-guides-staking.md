@@ -9,8 +9,9 @@ slug: ../learn-guides-staking
 
 import RPC from "./../../components/RPC-Connection";
 
-This page focuses on the advanced staking features of the network. If you like to learn about staking,
-check this page on the [introduction to staking.](https://wiki.polkadot.network/docs/learn-staking)
+This page focuses on the advanced staking features of the network. If you like to learn about
+staking, check this page on the
+[introduction to staking.](https://wiki.polkadot.network/docs/learn-staking)
 
 ## Claiming Rewards with the Polkadot-JS UI
 

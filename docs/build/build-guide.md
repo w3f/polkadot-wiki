@@ -29,7 +29,7 @@ This build guide provides four different tracks:
 1.  [Building Parachains](#building-parachains)
 2.  [Building a Pallet](#building-a-pallet)
 3.  [Developing Smart Contracts](#developing-smart-contracts)
-4.  [Developing a dApp](#developing-a-dapp)
+4.  [Developing a dApp](#developing-a-dappuapp)
 
 :::info
 

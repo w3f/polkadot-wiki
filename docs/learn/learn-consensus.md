@@ -149,14 +149,6 @@ a slot can have either a _primary_ or a _secondary_ block, and no slots are ever
 For more details on BABE, please see the
 [BABE paper](https://research.web3.foundation/Polkadot/protocols/block-production/Babe).
 
-### BADASS BABE: SASSAFRAS
-
-SASSAFRAS (Semi Anonymous Sortition of Staked Assignees For Fixed-time Rhythmic Assignment of Slots)
-(aka SASSY BABE or BADASS BABE), is an extension of BABE and acts as a constant-time block
-production protocol. This approach tries to address the shortcomings of BABE by ensuring that
-exactly one block is produced with time-constant intervals. The protocol utilizes zk-SNARKs to
-construct a ring-VRF and is a work in progress. This section will be updated as progress ensues.
-
 ## Finality Gadget: GRANDPA
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is

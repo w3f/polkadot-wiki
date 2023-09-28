@@ -9,8 +9,9 @@ slug: ../learn-guides-staking-pools
 
 import RPC from "./../../components/RPC-Connection";
 
-This page is for pool creators and maintainers. If you like to participate in staking through nomination pools,
-please navigate to this page on [how to join a nomination pool.](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
+This page is for pool creators and maintainers. If you like to participate in staking through
+nomination pools, please navigate to this page on
+[how to join a nomination pool.](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
 
 ## Pool Creation
 
