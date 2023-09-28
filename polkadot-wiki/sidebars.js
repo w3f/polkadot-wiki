@@ -34,6 +34,7 @@ module.exports = {
               },
               items: [
                 "general/polkadot-v1",
+                "general/polkadot-direction",
               ],
             },
             {

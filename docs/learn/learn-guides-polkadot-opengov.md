@@ -74,7 +74,8 @@ submission and decision deposits back by issuing the `refundSubmissionDeposit` a
 completed as passing or failing.
 
 Users can not refund their submission deposit while the referendum is `Ongoing`. Similarly, users
-cannot refund their submission deposit if the proposal has `TimedOut` (failing to submit the decision deposit within a
+cannot refund their submission deposit if the proposal has `TimedOut` (failing to submit the
+decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout). This behavior exists so that users can refrain from
 spamming the chain with proposals that have no interest from the community. If a proposal is in the
@@ -83,6 +84,7 @@ user to a runtime-configured account, like the treasury.
 
 To refund your slashed deposit, you can start a new referendum and specifically request a refund
 from the treasury. You need to make sure you have enough balance for a new submission and decision
-deposit, and you will need to select the right track to ask for a refund. For example, the [Small Tipper Track](../maintain/maintain-guides-polkadot-opengov.md#small-tipper) would be fine for
+deposit, and you will need to select the right track to ask for a refund. For example, the
+[Small Tipper Track](../maintain/maintain-guides-polkadot-opengov.md#small-tipper) would be fine for
 any kind of deposit refund up to
 {{ polkadot: 250 DOT :polkadot }}{{ kusama: 8.25 KSM KSM :kusama }}.
