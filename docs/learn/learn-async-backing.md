@@ -103,23 +103,24 @@ backing is expected to deliver 8x more blockspace to parachains.
 Two parameters of asynchronous backing can be controlled by
 [Governance](./learn-polkadot-opengov.md):
 
-- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54):
+- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49):
   the number of parachain blocks a collator can produce that are not yet included in the relay
   chain.
-- [`max_candidate_depth`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L49):
+
+- [`allowed_ancestry_len`](https://github.com/paritytech/polkadot-sdk/blob/f204e3264f945c33b4cea18a49f7232c180b07c5/polkadot/primitives/src/vstaging/mod.rs#L54):
   the oldest relay chain parent a parachain block can be built on top of.
 
-Values of zero for both correspond to synchronous backing: `allowed_ancestry_len = 0` means there
-can be only one unincluded parablock at all times, `max_candidate_depth = 0` means a parablock can
+Values of zero for both correspond to synchronous backing: `max_candidate_depth = 0` means there can
+be only one unincluded parablock at all times, and `allowed_ancestry_len = 0` means a parablock can
 be built only on the latest relay parent for that parachain.
 
 ### Async Backing Diagram
 
 The diagram below shows the pipelining table for asynchronous backing. The diagram assumes:
 
-- `allowed_ancestry_len = 1`, meaning that there can be a maximum of two unincluded parablocks at
-  all times
-- `max_candidate_depth = 1`, meaning parablocks can be anchored to the last or second-last relay
+- `max_candidate_depth = 1`, meaning that there can be a maximum of two unincluded parablocks at all
+  times
+- `allowed_ancestry_len = 1`, meaning parablocks can be anchored to the last or second-last relay
   parent
 
 ![async-backing](../assets/async-backing.png)
@@ -138,10 +139,10 @@ For example, when P1 is included, P2 and P3 are not included yet. Collators were
 multiple unincluded parablocks because on their end they have the
 [unincluded segment](#unincluded-segments), a local storage of not included parablocks. Collating on
 top of unincluded parents means the only time limit to generate a parablock is how long it takes to
-back it (2s). The 6s relay chain block delay includes this backing execution timeout (2s) and some
-time for network latency (time it takes to gossip messages across the entire network). Thus, even if
-a collator has >2 seconds to produce a block, the validators will still have less than 6 seconds (~2
-seconds) to check it.
+back it (2 seconds). The 6-second relay chain block delay includes this backing execution timeout (2
+seconds) and some time for network latency (time it takes to gossip messages across the entire
+network). Thus, even if a collator has >2 seconds to produce a block, the validators will still have
+~2 seconds to check it.
 
 ## Terminology
 
