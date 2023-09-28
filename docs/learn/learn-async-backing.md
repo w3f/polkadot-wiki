@@ -32,13 +32,15 @@ validator, and as a consequence backing does not ensure parablock validity.
 
 In synchronous backing, parablock generation is tightly coupled to the relay chain's progression on
 a one-to-one basis. Every parablock must be generated and backed within a relay-chain block
-(six-second window), and (if successfully backed) it will be included in a relay-chain block (often
-referred to as the **relay parent** as the parablock anchors itself to it) after an additional six
-seconds. Inclusion means that other validators have attested to having received
-[erasure coded chunks](./learn-parachains-protocol.md#erasure-codes) of the parablock data. Thus, in
-synchronous backing a parablock can be produced every 12 seconds because a new parablock can be
-produced after including the previous one. Note [candidate receipts](#candidate-receipt) and not the
-parablocks themselves are included in relay parents.
+(six-second window), and (if successfully backed) it will be included in a relay-chain block after
+an additional six seconds. When a parablock is sent to the relay chain for backing, it must be
+anchored to a relay chain block, also called **relay parent**. The relay parent of a parablock and
+the relay block including that parablock are always different. Inclusion means that other validators
+have attested to having received
+[erasure coded chunks](./learn-parachains-protocol.md#erasure-codes) of the parablock data. In
+synchronous backing a new parablock can be produced after including the previous one (i.e. every 12
+seconds). Note [candidate receipts](#candidate-receipt) and not the parablocks themselves are
+included in relay blocks.
 
 ### Sync Backing Mechanics
 
@@ -49,8 +51,8 @@ The diagram below shows the pipelining table for synchronous backing.
 Backing (B) and inclusion (I) of each parablock happen on different relay chain blocks, and new
 parablocks are generated once the previous parablock has been included.
 [Contextual execution](#contextual-execution) is driven by the latest included parablock in the most
-recent relay parent. After 24 seconds, two parablocks, P1 and P2, have been included in the relay
-chain, and P3 has been backed.
+recent relay parent. R1 is the relay parent of P2 (event marked with the X). After 12 seconds, P2
+has been included in the relay chain. R3 will be the relay parent for P3.
 
 In synchronous backing it takes six seconds (one relay block) to generate and back a parablock. It
 then takes another six seconds to make that parablock available and mark it as included in a relay
@@ -64,12 +66,12 @@ into the relay chain.
 ![sync-backing-nofill](../assets/sync-backing-nofill.png)
 ![sync-backing-nofill-legend](../assets/sync-backing-nofill-legend.png)
 
-Parablock 1 (P1) is included in the latest relay chain parent 1 (R1) after 6 seconds. Once P1 is
-included, Parablock 2 (P2) can be generated using the included P1 in R1 as execution context.
-Because P2 is rushing to be backed into R2 in 6 seconds, there are less than 6 seconds (~ 0.5
-seconds) to fill it, since the other 5.5 seconds are needed to get the block backed on chain. The
-next parablock P3 can be generated after P2 is backed into R2 and included into R3, i.e. after 12
-seconds.
+Parablock 1 (P1) is included in the latest relay chain block, R1. Once P1 is included, P2 can be
+generated using the included P1 as execution context, and anchored to its relay parent R1 once it
+enters the relay chain. Because P2 is rushing to be backed into R2 in 6 seconds, there are less than
+6 seconds (~ 0.5 seconds) to fill it, since the other 5.5 seconds are needed to get the block
+backed. The next parablock P3 can be generated after P2 is backed into R2 and included into R3, i.e.
+after 12 seconds, and its relay parent will be R3.
 
 The parablock generation and backing are bound together within a six-second window that limits the
 amount of data a collator can add to each parablock. Essentially, a parablock is limited to the
@@ -131,10 +133,10 @@ The diagram below shows the pipelining table for asynchronous backing.
 
 Backing (B) of block N + 1 and inclusion (I) of block N happen on the same relay chain block, and
 new parablocks are generated before the previous parablock has been included.
-[Contextual execution](#contextual-execution) is obtained by a relay parent (not necessarily the
-latest block) and the latest included parablock ancestor in the
-[unincluded segment](#unincluded-segments). In 24 seconds, four parablocks, P1 to P4, have been
-included in the relay chain, and P5 has been backed.
+[Contextual execution](#contextual-execution) is obtained by a relay parent (marked with an X, not
+necessarily the latest block) and the latest included parablock ancestor in the
+[unincluded segment](#unincluded-segments). In 12 seconds, two parablocks, P2 and P3, have been
+included in the relay chain, and P4 has been backed.
 
 The diagram below shows parablocks on their way from being generated to being backed and included
 into the relay chain in the context of asynchronous backing.
@@ -143,15 +145,13 @@ into the relay chain in the context of asynchronous backing.
 ![async-backing-nofill-legend](../assets/async-backing-nofill-legend.png)
 
 Parablock 1 (P1) is included, and P2 is backed within R1. In the meantime, the unincluded segment is
-full and contains P2-4. After P4 is added to the segment and pushed to the relay chain to begin the
-backing process, P5 can be generated. After 6 seconds, P2 is included (and deleted from the
-segment), P3 is backed in R2, and P5 has been added to the segment and pushed to the relay chain to
-be backed. The segment now contains P3-5. Once a parablock has been included, there is no need to
-keep it in the segment.
+full and contains P2 and P3. After 6 seconds, P2 is included (and deleted from the segment), P3 is
+backed in R2, and P4 has been generated, added to the segment and pushed to the relay chain to be
+backed. The segment now contains P3 and P4.
 
 In synchronous backing collators generated parablocks in 0.5 seconds, since the other 5.5 seconds
-were needed to get the block backed on chain. In asynchronous backing, because P5 is not rushing to
-be backed (P3-4 are in the backing process), it can be filled in 2s while P2 is included and P3 is
+were needed to get the block backed on chain. In asynchronous backing, because P4 is not rushing to
+be backed (P3 is in the backing process), it can be filled in 2s while P2 is included and P3 is
 backed in R2. This is possible because the context execution shifted from being the latest included
 parablock in the latest relay parent, to being the latest ancestor in the unincluded segment (i.e.
 P4).
