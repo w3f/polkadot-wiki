@@ -143,7 +143,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Identity/DID | [Dotflow](https://github.com/TheDotflow) 🟢| |
 | Oracle | [DIA WASM Oracle](https://github.com/diadata-org/dia-wasm-oracle) ⚪| |
 | Spam Protection | [Prosopo](https://github.com/prosopo-io/integration) ⚪|                                    |
-| Tooling         | [OpenBrush](https://github.com/h4nsu/openbrush-contracts) :grey_question:|                                    |
+| Tooling         | [OpenBrush](https://github.com/h4nsu/openbrush-contracts) :grey_question:, [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) 🟢|                                    |
 | Governance         | [Abax Governance](https://github.com/AbaxFinance/Governance) 🟢|                                    |
 | NFT         | [ArtZero](https://github.com/ArtZero-io/Contracts) ⚪|                                    |
 | Other           | [Polkadot Smart Account](https://github.com/pnsproject/ink-aa), [magink](https://github.com/swankyhub/magink-dapp) 🟡, [ink-test-contracts](https://github.com/AstarNetwork/ink-test-contracts) 🟡, [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) ⚪, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) ⚪, [OCEX](https://github.com/bsn-si/ocex-cli) 🟡, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) ⚪, [OpenPayroll](https://github.com/polkadrys/openPayroll) 🟡, [BlockchainFoodOrder](https://github.com/InkSmartContract/BlockchainFoodOrder) 🟢|                                    |
