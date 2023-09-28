@@ -119,13 +119,15 @@ tasks such as staking, governance, etc.
 
 ### XCM and Accords
 
-[XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstract over
-functionality common within chains. It creates an expressive language of what you intend to do or
-want to happen. There are no guarantees that chains faithfully interpret XCM messages; thus, XCM is
-not ideal if we are in a trustless environment.
-
 [XCMP](../learn/learn-xcm.md) is the transport layer for delivering XCM messages. It gives the
 transportation method and a secure route but not a framework for binding agreements.
+
+[XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstract over
+functionality common within chains. It creates an expressive language of what you intend to do or
+want to happen. XCM messages are transported between different chains using XCMP. Ideally, in a
+fully trustless environment, strong guarantees ensure chains faithfully interpret XCM messages. We
+can have a secure mode of delivering messages that can be interpreted across protocols, but still
+messages might be misinterpreted. These guarantees can be achieved with accords.
 
 An **Accord** is an _opt-in_ treaty across many chains, where treaty logic cannot be changed or
 undermined by one or more of those chains, and Polkadot guarantees faithful execution of this logic.
