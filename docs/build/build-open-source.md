@@ -28,7 +28,7 @@ apologize if we missed your project!
   - [Wallets](#wallets)  
   - [User Interface](#user-interface)
   - [Tools, APIs, and Languages](#tools-apis-and-languages)
-  - [ink Smart Contracts](#ink-smart-contracts)
+  - [ink! Smart Contracts](#ink-smart-contracts)
   - [Chains and Pallets](#chains-and-pallets)
   - [Host](#host)
   - [Network Maintenance Tools](#network-maintenance-tools)
@@ -132,7 +132,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | XCM                             | [Trappist](https://github.com/paritytech/trappist) 🟢, [XCM-tools](https://github.com/PureStake/xcm-tools) 🟡, [XCM-tools Golang](https://github.com/itering/substrate-api-rpc) 🟢,[ParaSpell](https://github.com/paraspell/ui-v2) 🟡, [XBI](https://github.com/t3rn/xbi) 🟡, [XCM TS/JS SDK](https://github.com/blockcoders/xcm-sdk) ⚪|                                                                                                                  |
 | Other                           | [asset-transfer-api](https://github.com/paritytech/asset-transfer-api) 🟢, [txwrapper-core](https://github.com/paritytech/txwrapper-core) 🟢, [open-web3 JS library](https://github.com/open-web3-stack/open-web3.js) ⚪, [VM-Bridge](https://github.com/CycanTech/GVM-Bridge) ⚪, [srtool](https://github.com/paritytech/srtool) 🟢, [srtool-cli](https://github.com/chevdor/srtool-cli) 🟢, [Substrate Tip Bot](https://github.com/paritytech/substrate-tip-bot) 🟢, [ORI (Onchain Risk Intelligence)](https://github.com/syntifi/ori) ⚪, [PolkaTools](https://github.com/albertov19/PolkaTools) ⚪, [polkadot-scripts](https://github.com/paritytech/polkadot-scripts) ⚪, [Sube](https://github.com/virto-network/sube) ⚪, [data-store-sidecar](https://github.com/CESSProject/data-store-sidecar) ⚪, [SugarFunge](https://github.com/SugarFunge/sugarfunge-node) 🟡, [substrate-wasmedge](https://github.com/second-state/substrate-wasmedge) ⚪, [EightFish](https://github.com/eightfish-org/eightfish) 🟡, [Sandox](https://github.com/sandoxio/sandox) 🟢, [APK verifier](https://github.com/darwinia-network/apk-verifier/) 🟢|
 
-### ink Smart Contracts
+### ink! Smart Contracts
 
 | Components      | Existing projects                                                                                                                                                                                                                                                                                                                                                                                                                          | Potentially interesting projects   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
