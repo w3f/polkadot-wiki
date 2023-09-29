@@ -32,42 +32,46 @@ Backed parablocks are sent to other validators for inclusion into the relay chai
 included when validators have attested to having received
 [erasure coded chunks](./learn-parachains-protocol.md#erasure-codes) of the parablock data. Note
 [candidate receipts](#candidate-receipt) and not the parablocks themselves are included in relay
-blocks. Immediately after their generation and as soon as they enter the relay chain side,
-parablocks must be anchored to a relay chain block called **relay parent**. Note that the relay
-parent of a parablock and the relay block including that parablock are always different.
+blocks (but for simplicity we just refer to parablocks as being included). From the time they are
+generated, parablocks must be anchored to a relay chain block called **relay parent**. The relay
+parent is an input to parablock candidate generation. It provides necessary context to build the
+next parablock. Note that the relay parent of a parablock and the relay block including that
+parablock are always different.
 
 ## Synchronous Backing
 
 Before diving into asynchronous backing, it is important to understand what synchronous backing is
-and what its main limitations are.
-
-In synchronous backing, parablock generation is tightly coupled to the relay chain's progression on
-a one-to-one basis. The following conditions must apply to get parablocks included into the relay
-chains:
+and what its main limitations are. In synchronous backing, parablock generation is tightly coupled
+to the relay chain's progression:
 
 1. A new parablock can be produced after including the previous one (i.e. every 12 seconds).
-2. The relay parent must be the latest relay chain block.
-3. Every parablock is backed in 6 seconds (one relay chain block), and included in the next 6
-   seconds (next relay chain block). Time from generation to inclusion is 12 seconds. This limits
-   the amount of data a collator can add to each parablock.
+2. Context to build the next parablock is drawn from the latest included parablock ancestor
+3. The relay parent must be the latest relay chain block.
 
 Because of (1) parablocks can be generated every other relay chain block (i.e. every 12 seconds).
-Because of (2) generation of parablock `N + 1` can only start when `N` is included (there is no
+Because of (2) generation of parablock `P` can only start when `P - 1` is included (there is no
 [pipelining](#pipelining)). Because of (3) execution time can take maximum 0.5 seconds as parablock
-`N + 1` is rushing to be backed in the next 5.5 seconds.
+`P` is rushing to be backed in the next 5.5 seconds (2 seconds needed for backing and the rest for
+gossiping). Every parablock is backed in 6 seconds (one relay chain block), and included in the next
+6 seconds (next relay chain block). Time from generation to inclusion is 12 seconds. This limits the
+amount of data a collator can add to each parablock.
 
-The diagram below shows the pipelining table for asynchronous backing.
+Note that parablock generation will choose the most recently received relay block as a relay parent,
+although with imperfect network that may not be the same as the true most recent relay block. So, in
+general, if relay block `R` is the relay parent of parablock `P`, then `P` could be backed in
+`R + 1` and included in `R + 2`.
 
 ![sync-backing](../assets/sync-backing.png)
 
 From left to right, parablock P1 is anchored to the relay parent R0, backed into the relay chain
 block R1, and included in R2. After the inclusion of P1, collators can start generating P2 that must
-to be anchored to the relay parent R2 (showed with an `x`). Because P2 is rushing to be backed in 6
-seconds into R3, collators have only 0.5 seconds to generate it and present it to backing groups on
-the relay chain (tick mark `|` on the horizontal line after the `x` shows the deadline for parablock
-generation). P2 is included in R4, which will be used as a relay parent for P3 (not shown). After 24
-seconds P1 and P2 are included into the relay chain. Note how collators can start new parablocks
-every 12 seconds, but only have 0.5 seconds to generate them.
+to be anchored to the relay parent R2 (showed with an `x`). Note that R2 will be the relay parent of
+P2 if P1 is included on the relay chain and gossiped to the collator producing P2. Because P2 is
+rushing to be backed in 6 seconds into R3, collators have only 0.5 seconds to generate it and
+present it to backing groups on the relay chain (tick mark `|` on the horizontal line after the `x`
+shows the deadline for parablock generation). P2 is included in R4, which will be used as a relay
+parent for P3 (not shown). After 24 seconds P1 and P2 are included into the relay chain. Note how
+collators can start new parablocks every 12 seconds, but only have 0.5 seconds to generate them.
 
 ## Asynchronous Backing
 
@@ -82,21 +86,26 @@ performance metric is not thoroughly tested nor guaranteed until proper benchmar
 
 Below, a table showing the main differences between synchronous and asynchronous backing.
 
-|                                                                |            Sync Backing             |                                                                                         Async Backing                                                                                          |                   Async Backing Advantage                    |
-| :------------------------------------------------------------- | :---------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------: |
-| **Parablocks included every**                                  |             12 seconds              |                                                                                           6 seconds                                                                                            |                        2x throughput                         |
-| **Relay parent**                                               |   Is the latest relay chain block   |                                                                        Is not necessarily the latest relay chain block                                                                         | Collators can submit parablocks to backing groups in advance |
-| **Collators can build on the most recent parablock ancestors** | Included in the latest relay parent | Included in a relay parent (not necessarily the latest), with augmented information from the latest ancestor in the [unincluded segment](#unincluded-segments) living in the parachain runtime |      Collators can start building parablocks in advance      |
-| **Number of unincluded parablocks**                            |              Only one               |                                                                  One, or more than one (depends on configuration parameters)                                                                   |               More efficiency and scalability                |
-| **Parablock generation can take up to**                        |             0.5 seconds             |                                                                                           2 seconds                                                                                            |                 4x more data in a parablock                  |
-| **Unincluded parablocks**                                      |        Cannot be re-proposed        |                                                              Can be re-proposed if not successfully included in the first attempt                                                              |            Decrease wastage of unused blockspace             |
+|                                                                |               Sync Backing               |                                                                                            Async Backing                                                                                            |                   Async Backing Advantage                    |
+| :------------------------------------------------------------- | :--------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------: |
+| **Parablocks included every**                                  |                12 seconds                |                                                                                              6 seconds                                                                                              |            2x more throughput or 2x less latency             |
+| **Parablock's Backing-to-inclusion time**                      |                12 seconds                |                                                                                             12 seconds                                                                                              |                          No change                           |
+| **Parablock's Inclusion-to-finality time**                     |                30 seconds                |                                                                                             30 seconds                                                                                              |                          No change                           |
+| **Parablock's generation time**                                |               0.5 seconds                |                                                                                              2 seconds                                                                                              |                 4x more data in a parablock                  |
+| **Relay parent**                                               |     Is the latest relay chain block      |                                                                           Is not necessarily the latest relay chain block                                                                           | Collators can submit parablocks to backing groups in advance |
+| **Collators can build on the most recent parablock ancestors** | Included in the latest relay chain block | Included in a relay chain block (not necessarily the latest), with augmented information from the latest ancestor in the [unincluded segment](#unincluded-segments) living in the parachain runtime |      Collators can start building parablocks in advance      |
+| **Number of unincluded parablocks**                            |                 Only one                 |                                                                     One, or more than one (depends on configuration parameters)                                                                     |               More efficiency and scalability                |
+| **Unincluded parablocks**                                      |          Cannot be re-proposed           |                                                                Can be re-proposed if not successfully included in the first attempt                                                                 |            Decrease wastage of unused blockspace             |
 
 In synchronous backing collators generate parablocks using context entirely pulled from the relay
 chain. While in asynchronous backing collators use additional context from the unincluded segment.
 Parablocks are included every 6 seconds because backing of parablock `N + 1` and inclusion of
-parablock `N` happen on the same relay chain bock ([pipelining](#pipelining)). Because the
-throughput is increased by 2x and parachains have 4x more time to generate blocks, asynchronous
-backing is expected to deliver 8x more blockspace to parachains.
+parablock `N` happen on the same relay chain bock ([pipelining](#pipelining)). However, as for
+synchronous backing, a parablock takes 12 seconds to get backed and included, and from inclusion to
+finality there is an additional 30-second time window.
+
+Because the throughput is increased by 2x and parachains have 4x more time to generate blocks,
+asynchronous backing is expected to deliver 8x more blockspace to parachains.
 
 ### Sync Backing as special case of Async Backing
 
@@ -116,14 +125,14 @@ be built only on the latest relay parent for that parachain.
 
 ### Async Backing Diagram
 
-The diagram below shows the pipelining table for asynchronous backing. The diagram assumes:
+![async-backing](../assets/async-backing.png)
+
+The diagram assumes:
 
 - `max_candidate_depth = 1`, meaning that there can be a maximum of two unincluded parablocks at all
   times
 - `allowed_ancestry_len = 1`, meaning parablocks can be anchored to the last or second-last relay
   parent
-
-![async-backing](../assets/async-backing.png)
 
 From left to right, parablock P1 is backed into the relay chain block R1 and included into R2. While
 P1 undergoes backing, collators can already start to generate P2, which will have R0 as a relay
@@ -137,12 +146,14 @@ Note how at each inclusion event there are always two unincluded parablocks, i.e
 synchronous backing there can be multiple unincluded parablocks (i.e. [pipelining](#pipelining)).
 For example, when P1 is included, P2 and P3 are not included yet. Collators were able to generate
 multiple unincluded parablocks because on their end they have the
-[unincluded segment](#unincluded-segments), a local storage of not included parablocks. Collating on
-top of unincluded parents means the only time limit to generate a parablock is how long it takes to
-back it (2 seconds). The 6-second relay chain block delay includes this backing execution timeout (2
-seconds) and some time for network latency (time it takes to gossip messages across the entire
-network). Thus, even if a collator has >2 seconds to produce a block, the validators will still have
-~2 seconds to check it.
+[unincluded segment](#unincluded-segments), a local storage of not included parablocks. On the relay
+chain side [perspective parachains](#prospective-parachains) repeats the work each unincluded
+segment does in tracking candidates (as validators cannot simply trust the record kept on
+parachains). Collating on top of unincluded parents means the only time limit to generate a
+parablock is how long it takes to back it (2 seconds). The 6-second relay chain block delay includes
+this backing execution timeout (2 seconds) and some time for network latency (time it takes to
+gossip messages across the entire network). Thus, even if a collator has >2 seconds to produce a
+block, the validators will still have ~2 seconds to check it.
 
 ## Terminology
 
