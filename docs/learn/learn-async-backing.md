@@ -145,7 +145,7 @@ The diagram assumes:
 - `max_candidate_depth = 2`, meaning that there can be a maximum of three unincluded parablocks at
   all times
 - `allowed_ancestry_len = 1`, meaning parablocks can be anchored to the last or second-last relay
-  parent
+  parent (i.e. collators can start preparing parablocks 6 seconds in advance)
 
 From left to right, parablock P1 is backed into the relay chain block R1 and included into R2. While
 P1 undergoes backing, collators can already start to generate P2, which will have R0 as a relay
