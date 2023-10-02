@@ -127,7 +127,7 @@ The most important thing is that the proof of ownership is stored on the blockch
 
 In Proof-of-Stake blockchains, security is dictated by how much stake is locked on-chain (financial
 security). In a decentralized network, you want to ensure that the difficulty level for a financial
-attack to happen is equal across all nodes.
+attack to happen is equally difficult across all nodes.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
 [election algorithm](../learn/learn-phragmen.md) makes sure that the stake is maximized across all
 active validators, and the variance in stake across validators is minimized as much as possible.
