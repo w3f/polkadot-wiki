@@ -15,7 +15,7 @@ As social media platforms and online businesses began to emerge, the internet tr
 Web2. This upgraded internet, which we use today, features dynamic, interactive web pages,
 where users can read and write information and publish their own for others to see. However, this
 version of the web comes with downsides, dealing with data control, privacy issues, and the
-consequences of trusting centralized entities storing our data in their servers. This is where Web3
+consequences of trusting centralized entities storing our data on their servers. This is where Web3
 comes into the picture.
 
 Web3 is turning centralized infrastructure and applications into decentralized, trust-free
