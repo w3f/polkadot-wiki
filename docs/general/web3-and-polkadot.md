@@ -37,12 +37,12 @@ In web3, ownership is achieved and validated through cryptography. Each user has
 of cryptographic keys usually based on the public key cryptographic scheme, i.e., the famous **public
 and private key pair**.
 
-Users onboarding into the web3 must generate a key pair. The public key is the identity that can be
-shared with anybody to send you messages, while the private key is used to access your account, sign
+Unlike Web2 which is driven by email IDs, phone numbers, and passwords, users onboarding to Web3 just need to generate a key pair. The public key can be the identity that can be
+shared with anybody to send you messages or assets, while the private key is used to access your account, sign
 messages, transfer funds, edit identity details, etc. [Keeping your private key secure](./scams.md)
-from third parties is essential to avoid identity theft with consequent loss of funds, and it is one
-of the main factors hindering web3 adoption. Nobody will ever ask you to share your private key, and
-who attempt to do so will likely try to steal your digital identity and anything you own related to
+is essential to avoid identity theft or consequent loss of funds. Currently, It is one
+of the main factors hindering web3 adoption. No legitimate person or entity will ever ask you to share your private key, and
+those who attempt to do so are likely trying to steal your digital identity and anything you own related to
 it.
 
 To mitigate risks of key mismanagement (for **non-custodial** accounts, i.e. when you have custody
