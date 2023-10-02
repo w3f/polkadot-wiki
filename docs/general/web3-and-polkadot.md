@@ -134,7 +134,7 @@ active validators, and the variance in stake across validators is minimized as m
 
 ### Economic Incentives
 
-Strong incentives are essential to avoid spam attacks and incentivize network participants to run
+Strong incentives are essential to incentivize network participants to run
 nodes and secure the network. Strong incentives are possible because blockchain is a trustless
 system where there are no intermediaries between who sends a message and who receives it. Such
 incentives, coupled with punishment for bad behavior, ensure that most of the participants make the
