@@ -107,7 +107,7 @@ consensus by allowing only a limited number of privileged nodes to produce block
 Nowadays, most of the nodes cannot be run on consumer-grade hardware. Node running equipment is typically rented through service
 providers. Resiliency is also achieved by ensuring nodes run on as many different providers as
 possible and avoiding a significant share of the nodes being run under the same provider in the same
-country. A legislation change could undermine a big fraction of the nodes and potentially stop the
+geographic region. A legislation change or a natural disaster could impact a considerable fraction of the nodes and potentially stop the
 network. {{ polkadot: Pokadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can
 be explored through the [Polkawatch app](https://polkawatch.app/).
 
