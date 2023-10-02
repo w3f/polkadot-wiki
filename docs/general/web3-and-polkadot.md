@@ -48,7 +48,7 @@ it.
 To mitigate risks of key mismanagement (for **non-custodial** accounts, i.e. when you have custody
 of your keys) there are [account abstraction](../learn/learn-account-abstraction.md) solutions that
 separate the key management from the user experience. To mitigate key hacks, there are cold wallet
-solutions where the private key is generated on dedicated devices that cannot connect to the
+solutions where the private key is generated and stored on dedicated devices with secure elements that are not exposed to the
 internet (see [Ledger](./ledger.md)), or dedicated applications that can be installed on air-gapped
 devices such as phones (see [Polkadot Vault](./polkadot-vault.md)). For **custodial** accounts, you
 trust third parties to manage your keys and give you access whenever needed.
