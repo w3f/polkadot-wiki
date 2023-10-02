@@ -93,7 +93,7 @@ be little sense in using a centralized blockchain to prove ownership as it can p
 
 Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
-network can run and upgrade on its own.
+network can sustain on its own.
 
 ### Decentralization
 
