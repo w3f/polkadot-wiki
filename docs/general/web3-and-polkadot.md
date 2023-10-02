@@ -100,11 +100,9 @@ network can sustain on its own.
 Having multiple nodes belonging to numerous independent identities increases network resiliency and
 thus data availability.
 
-Blockchain is a state machine, and consensus must be achieved on one and only one possible state
-transition. Having an overly decentralized network will create a situation in which consensus is
-reached after an extended period, and energy might be wasted to unnecessarily run nodes that add
-little resiliency and slow down network throughput. A trade-off between a few centralized nodes and
-too many of them must be considered.
+Blockchain is a state machine, and consensus must be achieved on every single state
+transition by every node on the blockchain network. In Proof of Work (PoW) based blockchains, which let any node in the network produce a block, consensus is achieved probabilistically by building on the longest chain (at the cost of energy-intensive computations). Proof of Stake (PoS) based blockchains like Polkadot enable deterministic
+consensus by allowing only a limited number of privileged nodes to produce blocks. A PoW blockchain can be considered centralized if a single entity can capture 51% of network nodes. Similarly, a PoS blockchain can be considered centralized if a single entity controls more than one-third of nodes, as a two-thirds majority is required to arrive at a deterministic consensus. Different blockchains have different levels of decentralization.
 
 Nowadays, most of the nodes are not run at people's homes. Equipment is rented through service
 providers. Resiliency is also achieved by ensuring nodes run on as many different providers as
