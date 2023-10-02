@@ -167,8 +167,7 @@ independent socio-economical environment.
 
 But what if we have data we own stored on a resilient blockchain, but the only way to access the
 blockchain is through an RPC server? Whoever is behind the server or an attacker could present us
-data that is not the truth. We trust the server provider that the data we see is the truth. How can
-we verify that the data are true without trusting anybody?
+data that is not the truth. How can we trustlessly verify that the data is true?
 
 Here is where light clients play a key role. Light clients are clients that can sit on a web browser
 and can fetch data directly from blockchain full nodes and verify such data using other nodes.
