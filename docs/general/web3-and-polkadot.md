@@ -63,8 +63,8 @@ essentially a transfer of ownership.
 Cryptography also brings the possibility of building a trustless environment where we do not have to
 trust third parties, or have any relationship between the sender and receiver of a message. We do
 not need to trust centralized entities since we can verify who wrote the message and who owns what
-just by using cryptography. Trust is embedded in the code. Well-audited and reviewed code will
-ultimately provide a solid, trustless environment.
+just by using cryptography. Trust is embedded in the code. Well-audited and reviewed code
+ultimately provides a solid, trustless environment.
 
 ## Data Immutability
 
