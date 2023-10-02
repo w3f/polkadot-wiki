@@ -72,6 +72,13 @@ implementing a full parachain or parathread.
 Covalent captures the entire history of blockchains and offers a way to zoom into data points
 recorded in smart contracts that are often not accessible.
 
+### BigQuery by Google Cloud
+
+[BigQuery](https://cloud.google.com/bigquery) makes Polkadot blockchain data available for Google
+Cloud users. Check this
+[announcement](https://cloud.google.com/blog/products/data-analytics/data-for-11-more-blockchains-in-bigquery-public-datasets)
+for details on how to access the data.
+
 ### Polkadot-based Explorers
 
 As you can imagine, blockchain explorers also offer data analytics through an interface where users

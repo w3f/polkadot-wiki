@@ -84,7 +84,8 @@ Referenda can be started in different ways:
 
 - Publicly submitted proposals
 - Proposals submitted by the council, either through a majority or unanimously
-- Proposals submitted as part of the [enactment](#enactment) of a prior referendum
+- Proposals submitted as part of the [enactment](#enactment) of a prior referendum (i.e. making a
+  referendum to start a new referendum)
 - Emergency proposals submitted by the [Technical Committee](#technical-committee) and approved by
   the [Council](#council)
 
