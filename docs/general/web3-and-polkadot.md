@@ -33,8 +33,8 @@ To learn more about the Web3 movement, check out this video from the
 
 ## Data Ownership
 
-In web3, ownership is achieved through cryptography. Each user has a digital identity bound to a set
-of cryptographic keys usually based on the public key cryptographic scheme, i.e. the famous **public
+In web3, ownership is achieved and validated through cryptography. Each user has a digital identity bound to a set
+of cryptographic keys usually based on the public key cryptographic scheme, i.e., the famous **public
 and private key pair**.
 
 Users onboarding into the web3 must generate a key pair. The public key is the identity that can be
