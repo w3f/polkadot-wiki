@@ -71,7 +71,7 @@ ultimately provides a solid, trustless environment.
 But what if the data we own can be easily modified or tampered with after they have been signed and
 stored?
 
-Here is where **blockchain** plays an important role. Blockchains are distributed state machines
+Here is where **blockchain** technology plays an important role. Blockchain networks comprise of distributed state machines
 where increments of data are stored within blocks that build on each other using hash functions. For
 example, the hash of block `N + 1` contains data of that block together with the hash of the
 previous block `N`. This creates the situation where if you modify the content of block `N` you will
