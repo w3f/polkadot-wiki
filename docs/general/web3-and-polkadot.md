@@ -11,8 +11,8 @@ Back in the early 2000's the internet featured read-only, static, basic web page
 connected world at the time was only the beginning of virtual data, identities, and more. The
 internet during this time can be viewed as its first version (Web1).
 
-As social media platforms and online businesses began to emerge, the internet transformed into the
-Web2. This upgraded internet, which we still use today, features dynamic, interactive web pages,
+As social media platforms and online businesses began to emerge, the internet transformed into its next iteration - the
+Web2. This upgraded internet, which we use today, features dynamic, interactive web pages,
 where users can read and write information and publish their own for others to see. However, this
 version of the web comes with downsides, dealing with data control, privacy issues, and the
 consequences of trusting centralized entities storing our data in their servers. This is where Web3
