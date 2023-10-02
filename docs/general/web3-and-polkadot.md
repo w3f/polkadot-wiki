@@ -88,9 +88,8 @@ or by different computers belonging to the same operator?
 
 That server or those computers can be easily shut down, the blockchain can be stopped from running
 and its data wiped out. This can be achieved from the inside by the malicious network participants
-or from the outside by regulatory rules and other forces. So, we would own our data, which would be
-immutable because stored on a blockchain, but that blockchain would be easily stopped. There would
-be little sense in owning something that can easily cease to exist in the future.
+or from the outside by regulatory rules and other forces. Though blockchain offers immutability, there would
+be little sense in using a centralized blockchain to prove ownership as it can possibly cease to exist in the future.
 
 Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
