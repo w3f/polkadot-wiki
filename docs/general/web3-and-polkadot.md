@@ -117,7 +117,7 @@ new validator nodes to increase the level of node decentralization.
 ### Decentralized Storage
 
 [Blockspace](./glossary/#blockspace) is limited and valuable. Not all data we have can be stored on
-the blockchain. Large files like pictures, music, movies, etc., will never be held on the
+the blockchain. Large files like pictures, music, movies, etc., typically will never be held on the
 blockchain. But where can we stored those files? To stick to the web3 vision, we need a resilient
 and decentralized storage solution.
 
