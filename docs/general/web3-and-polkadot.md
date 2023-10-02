@@ -121,10 +121,7 @@ the blockchain. Large files like pictures, music, movies, etc., typically will n
 blockchain. But where can we stored those files? To stick to the web3 vision, we need a resilient
 and decentralized storage solution.
 
-The most important thing is that the proof of ownership is stored on the blockchain.
-
-Conversely, large files and their metadata can be uploaded on decentralized storage networks such as
-IPFS. The Polkadot parachain Crust also provided a similar storage solution.
+The most important thing is that the proof of ownership is stored on the blockchain through the hashes of data and metadata. The files are uploaded on decentralized storage networks hosting protocols like IPFS. 
 
 ### Stake Allocation
 
