@@ -53,7 +53,7 @@ internet (see [Ledger](./ledger.md)), or dedicated applications that can be inst
 devices such as phones (see [Polkadot Vault](./polkadot-vault.md)). For **custodial** accounts, you
 trust third parties to manage your keys and give you access whenever needed.
 
-To sum up, data ownership comes from the fact that any message you sign with your private key comes
+To summarize, data ownership comes from the fact that any message you sign with your private key comes
 from your digital identity, and the signature proof can be cryptographically verified. Unless
 someone else stole your identity, you and only you signed that message and own or are responsible
 for the information in it. Transferring an [NFT](./learn-nft-index) between two accounts is
