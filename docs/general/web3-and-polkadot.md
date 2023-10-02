@@ -18,7 +18,7 @@ version of the web comes with downsides, dealing with data control, privacy issu
 consequences of trusting centralized entities storing our data on their servers. This is where Web3
 comes into the picture.
 
-Web3 is turning centralized infrastructure and applications into decentralized, trust-free
+Web3 is transforming applications hosted on centralized infrastructure into decentralized applications (dApps) powered by trust-free blockchain
 protocols. The goal is to transform the internet into a decentralized web, where users control their
 data and identity in a trust-free environment. The Web3 movement aims to remove intermediaries and
 build trustless infrastructure. Web3 is an interactive and collaborative web where users can read,
