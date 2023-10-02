@@ -55,8 +55,7 @@ trust third parties to manage your keys and give you access whenever needed.
 
 To summarize, data ownership comes from the fact that any message you sign with your private key comes
 from your digital identity, and the signature proof can be cryptographically verified. Unless
-someone else stole your identity, you and only you signed that message and own or are responsible
-for the information in it. Transferring an [NFT](./learn-nft-index) between two accounts is
+someone else stole your keys, you and only you are held accountable for signing the messages and are responsible for the information on your account. Transferring an [NFT](./learn-nft-index) between two accounts is
 essentially a transfer of ownership.
 
 ## Trustless Environment
