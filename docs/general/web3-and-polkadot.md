@@ -75,9 +75,7 @@ Here is where **blockchain** technology plays an important role. Blockchain netw
 where increments of data are stored within blocks that build on each other using hash functions. For
 example, the hash of block `N + 1` contains data of that block together with the hash of the
 previous block `N`. This creates the situation where if you modify the content of block `N` you will
-change the hash of block `N + 1`, `N + 2`, etc. You will need to modify quite a lot of data, and in
-proof-of-stake blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such
-attack is financially expensive, and attempting to do it will get you
+change the hash of block `N + 1`, `N + 2`, etc. essentially breaking the chain. Although it can be possible to add an invalid block (a block with invalid transactions) or censor certain transactions, if the blockchain network is nor sufficiently decentralized. In decentralized proof-of-stake blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially expensive, and attempting to do it can get you
 [slashed](../learn/learn-staking-advanced.md#slashing).
 
 So, with blockchain as a means of storing data permanently without any option to modify them, we can
