@@ -140,7 +140,7 @@ and decentralized storage solution.
 
 The most important thing is that the proof of ownership is stored on the blockchain through the
 hashes of data and metadata. The files are uploaded on decentralized storage networks hosting
-protocols like IPFS.
+protocols like [IPFS](https://ipfs.tech/).
 
 ### Stake Allocation
 
