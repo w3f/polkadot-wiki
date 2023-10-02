@@ -217,4 +217,5 @@ Interoperability between chains having different consensus has been a challengin
 hacks have exploited vulnerabilities in interoperability protocols. Polkadot provides secure
 interoperability through [XCM](../learn/learn-xcm.md) and [XCMP](../learn/learn-xcm-transport.md) to
 all blockchains attached to it. For more information, see the [Polkadot 1.0 page](./polkadot-v1.md)
-and the Polkadot Direction page.
+and
+[the section about XCM and Accords in Polkadot Direction page](./polkadot-direction.md#xcm-and-accords).
