@@ -198,7 +198,23 @@ blockchain data through a centralized RPC server.
 
 ## Interoperability
 
-Transferring information and economic value is key to achieving the web3 vision of having a
-collaborative and trustless internet. Polkadot provides secure interoperability through
-[XCM](../learn/learn-xcm.md) and [XCMP](../learn/learn-xcm-transport.md) to all blockchains attached
-to it. For more information, see the [Polkadot 1.0 page](./polkadot-v1.md).
+The Web3 landscape's expansion into a multi-layered ecosystem highlights the need for
+interoperability. Blockchains compete and differentiate themselves based on decentralization,
+throughput, and specific use case focus. Some aim for a single high-performance base-layer
+blockchain, while others focus on decentralization through layer-2 networks. With such diverse
+approaches, it's crucial for distinct on-chain environments to interoperate, especially for
+developers building cross-chain applications and traditional systems interacting with multiple
+blockchains.
+
+Various cross-chain interactions are employed to achieve interoperability, including token swaps,
+token bridges, native payments, contract calls, and programmable token bridges. Each mechanism
+serves specific functions, such as facilitating the exchange of tokens between different blockchains
+or enabling smart contract interactions across chains. Other interoperability solutions validate the
+state of a source blockchain and relay transactions to the destination blockchain, which is
+essential for completing cross-chain interactions.
+
+Interoperability between chains having different consensus has been a challenging task. Most of
+hacks have exploited vulnerabilities in interoperability protocols. Polkadot provides secure
+interoperability through [XCM](../learn/learn-xcm.md) and [XCMP](../learn/learn-xcm-transport.md) to
+all blockchains attached to it. For more information, see the [Polkadot 1.0 page](./polkadot-v1.md)
+and the Polkadot Direction page.
