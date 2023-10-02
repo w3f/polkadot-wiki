@@ -131,7 +131,7 @@ The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Pol
 The level of abstraction and generalization of Polkadot allows to build applications that are
 specific to their use cases, and for those applications to communicate securely leveraging each
 other value proposition. The trustless cooperation between applications is what makes Polkadot an
-ideal ecosystem to build a web3 future.
+ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
 
 See the videos below to know more about Polkadot.
 

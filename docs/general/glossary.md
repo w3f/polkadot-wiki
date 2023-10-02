@@ -783,7 +783,8 @@ before the watermark are guaranteed to be processed.
 
 A Switzerland-based foundation that nurtures and stewards technologies and applications in the
 fields of decentralized web software protocols, particularly those that utilize modern cryptographic
-methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
+methods to safeguard decentralization, to the benefit and for the stability of the
+[Web3 ecosystem](./web3-and-polkadot.md).
 
 ## WebAssembly
 

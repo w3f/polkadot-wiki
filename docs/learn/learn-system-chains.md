@@ -72,7 +72,7 @@ on the Asset Hub.
 Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With
 [referendum 158](https://kusama.polkassembly.io/referendum/158) Encointer was registered as the
 second system parachain on Kusama's network. The functionality of Encointer adds logic to the Relay
-Chain that aims to bring financial inclusivity to WEB3 and mitigate Sybil attacks with a novel Proof
+Chain that aims to bring financial inclusivity to Web3 and mitigate Sybil attacks with a novel Proof
 of Personhood (PoP) system for unique identity.
 
 Encointer offers a framework that, in principle, allows for any group of real people to create,

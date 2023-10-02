@@ -11,9 +11,10 @@ slug: ../learn-account-abstraction
 
 Account abstraction addresses the challenges of managing cryptographic keys representing accounts on
 blockchains. Accounts on blockchains represent entities, from an individual's identity to an
-institution. In Web3, you digitally sign any transaction or, more generally, any message using your
-private key. Data is recorded on a public ledger (usually blockchain-based) whose multiple copies of
-it are stored in computers participating in a P2P network.
+institution. In [Web3](../general/web3-and-polkadot.md), you digitally sign any transaction or, more
+generally, any message using your private key. Data is recorded on a public ledger (usually
+blockchain-based) whose multiple copies of it are stored in computers participating in a P2P
+network.
 
 While the account’s private keys grant users control and ownership, losing them results in losing
 access to digital assets and fragmentation of your digital identity since you will need to create a
@@ -42,8 +43,9 @@ the direct need for smart contracts.
 
 ## Origin Abstraction in Polkadot
 
-Adopting a generic design is crucial in scaling Web3 technologies. Abstraction and generalization of
-protocols are essential to improving user experience and security in blockchain adoption.
+Adopting a generic design is crucial in scaling [Web3](../general/web3-and-polkadot.md)
+technologies. Abstraction and generalization of protocols are essential to improving user experience
+and security in blockchain adoption.
 
 When users interact with a blockchain they call _dispatchable_ functions to do something. Because
 those functions are called from the outside of the blockchain interface, in Polkadot's terms any
