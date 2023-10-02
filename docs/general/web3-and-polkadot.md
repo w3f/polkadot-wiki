@@ -9,7 +9,7 @@ slug: ../web3-and-polkadot
 
 Back in the early 2000's the internet featured read-only, static, basic web pages. The online
 connected world at the time was only the beginning of virtual data, identities, and more. The
-internet during this time was also called the Web1.
+internet during this time can be viewed as its first version (Web1).
 
 As social media platforms and online businesses began to emerge, the internet transformed into the
 Web2. This upgraded internet, which we still use today, features dynamic, interactive web pages,
