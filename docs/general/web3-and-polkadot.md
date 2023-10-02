@@ -169,7 +169,7 @@ The figure below shows the architectural difference between web2 and web3 applic
 
 In web2 applications, data are stored on a centralized server, while in web3 applications, data (or
 better data proofs) are stored on the blockchain. With light clients, we can access blockchain data
-through a full node and verify the validity of such data by synching to other nodes. In this way, we
+through a full node and verify the validity. In this way, we
 can always verify that the data we see is the truth, which is done automatically by the light
 client. Polkadot has a browser-embedded light client
 [Substrate connect](../build/build-substrate.md) that uses the
