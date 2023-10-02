@@ -178,8 +178,7 @@ blockchain data through a centralized RPC server.
 
 ## Interoperability
 
-But what if we create our identity under one blockchain, one specific consensus? Wouldn't it be
-helpful to use that identity under different consensuses? Transferring information and economic
+Transferring information and economic
 value is key to achieving the web3 vision of having a collaborative and trustless internet. Polkadot
 provides secure interoperability through [XCM](../learn/learn-xcm.md) and
 [XCMP](../learn/learn-xcm-transport.md) to all blockchains attached to it. For more information, see
