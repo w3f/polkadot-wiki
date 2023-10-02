@@ -78,8 +78,8 @@ previous block `N`. This creates the situation where if you modify the content o
 change the hash of block `N + 1`, `N + 2`, etc. essentially breaking the chain. Although it can be possible to add an invalid block (a block with invalid transactions) or censor certain transactions, if the blockchain network is nor sufficiently decentralized. In decentralized proof-of-stake blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially expensive, and attempting to do it can get you
 [slashed](../learn/learn-staking-advanced.md#slashing).
 
-So, with blockchain as a means of storing data permanently without any option to modify them, we can
-ensure that what we sign with our digital identity will not be modified.
+So, with blockchain as a means of storing data and transactions permanently without an option to modify them, we can
+ensure what we cryptographically sign with our digital identity is set in stone digitally.
 
 ## Data Availability
 
