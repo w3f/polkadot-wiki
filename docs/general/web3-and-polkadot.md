@@ -11,18 +11,18 @@ Back in the early 2000's the internet featured read-only, static, basic web page
 connected world at the time was only the beginning of virtual data, identities, and more. The
 internet during this time can be viewed as its first version (Web1).
 
-As social media platforms and online businesses began to emerge, the internet transformed into its next iteration - the
-Web2. This upgraded internet, which we use today, features dynamic, interactive web pages,
-where users can read and write information and publish their own for others to see. However, this
-version of the web comes with downsides, dealing with data control, privacy issues, and the
-consequences of trusting centralized entities storing our data on their servers. This is where Web3
-comes into the picture.
+As social media platforms and online businesses began to emerge, the internet transformed into its
+next iteration - the Web2. This upgraded internet, which we use today, features dynamic, interactive
+web pages, where users can read and write information and publish their own for others to see.
+However, this version of the web comes with downsides, dealing with data control, privacy issues,
+and the consequences of trusting centralized entities storing our data on their servers. This is
+where Web3 comes into the picture.
 
-Web3 is transforming applications hosted on centralized infrastructure into decentralized applications (dApps) powered by trust-free blockchain
-protocols. The goal is to transform the internet into a decentralized web, where users control their
-data and identity in a trust-free environment. The Web3 movement aims to remove intermediaries and
-build trustless infrastructure. Web3 is an interactive and collaborative web where users can read,
-write, and **own** data.
+Web3 is transforming applications hosted on centralized infrastructure into decentralized
+applications (dApps) powered by trust-free blockchain protocols. The goal is to transform the
+internet into a decentralized web, where users control their data and identity in a trust-free
+environment. The Web3 movement aims to remove intermediaries and build trustless infrastructure.
+Web3 is an interactive and collaborative web where users can read, write, and **own** data.
 
 :::note The Web3 Movement
 
@@ -33,53 +33,62 @@ To learn more about the Web3 movement, check out this video from the
 
 ## Data Ownership
 
-In web3, ownership is achieved and validated through cryptography. Each user has a digital identity bound to a set
-of cryptographic keys usually based on the public key cryptographic scheme, i.e., the famous **public
-and private key pair**.
+In web3, ownership is achieved and validated through cryptography. Each user has a digital identity
+bound to a set of cryptographic keys usually based on the public key cryptographic scheme, i.e., the
+famous **public and private key pair**.
 
-Unlike Web2 which is driven by email IDs, phone numbers, and passwords, users onboarding to Web3 just need to generate a key pair. The public key can be the identity that can be
-shared with anybody to send you messages or assets, while the private key is used to access your account, sign
-messages, transfer funds, edit identity details, etc. [Keeping your private key secure](./scams.md)
-is essential to avoid identity theft or consequent loss of funds. Currently, It is one
-of the main factors hindering web3 adoption. No legitimate person or entity will ever ask you to share your private key, and
-those who attempt to do so are likely trying to steal your digital identity and anything you own related to
-it.
+Unlike Web2 which is driven by email IDs, phone numbers, and passwords, users onboarding to Web3
+just need to generate a key pair. The public key can be the identity that can be shared with anybody
+to send you messages or assets, while the private key is used to access your account, sign messages,
+transfer funds, edit identity details, etc. [Keeping your private key secure](./scams.md) is
+essential to avoid identity theft or consequent loss of funds. Currently, It is one of the main
+factors hindering web3 adoption. No legitimate person or entity will ever ask you to share your
+private key, and those who attempt to do so are likely trying to steal your digital identity and
+anything you own related to it.
 
 To mitigate risks of key mismanagement (for **non-custodial** accounts, i.e. when you have custody
 of your keys) there are [account abstraction](../learn/learn-account-abstraction.md) solutions that
 separate the key management from the user experience. To mitigate key hacks, there are cold wallet
-solutions where the private key is generated and stored on dedicated devices with secure elements that are not exposed to the
-internet (see [Ledger](./ledger.md)), or dedicated applications that can be installed on air-gapped
-devices such as phones (see [Polkadot Vault](./polkadot-vault.md)). For **custodial** accounts, you
-trust third parties to manage your keys and give you access whenever needed.
+solutions where the private key is generated and stored on dedicated devices with secure elements
+that are not exposed to the internet (see [Ledger](./ledger.md)), or dedicated applications that can
+be installed on air-gapped devices such as phones (see [Polkadot Vault](./polkadot-vault.md)). For
+**custodial** accounts, you trust third parties to manage your keys and give you access whenever
+needed.
 
-To summarize, data ownership comes from the fact that any message you sign with your private key comes
-from your digital identity, and the signature proof can be cryptographically verified. Unless
-someone else stole your keys, you and only you are held accountable for signing the messages and are responsible for the information on your account. Transferring an [NFT](./learn-nft-index) between two accounts is
-essentially a transfer of ownership.
+To summarize, data ownership comes from the fact that any message you sign with your private key
+comes from your digital identity, and the signature proof can be cryptographically verified. Unless
+someone else stole your keys, you and only you are held accountable for signing the messages and are
+responsible for the information on your account. Transferring an [NFT](./learn-nft-index) between
+two accounts is essentially a transfer of ownership.
 
 ## Trustless Environment
 
 Cryptography also brings the possibility of building a trustless environment where we do not have to
 trust third parties, or have any relationship between the sender and receiver of a message. We do
 not need to trust centralized entities since we can verify who wrote the message and who owns what
-just by using cryptography. Trust is embedded in the code. Well-audited and reviewed code
-ultimately provides a solid, trustless environment.
+just by using cryptography. Trust is embedded in the code. Well-audited and reviewed code ultimately
+provides a solid, trustless environment.
 
 ## Data Immutability
 
 But what if the data we own can be easily modified or tampered with after they have been signed and
 stored?
 
-Here is where **blockchain** technology plays an important role. Blockchain networks comprise of distributed state machines
-where increments of data are stored within blocks that build on each other using hash functions. For
-example, the hash of block `N + 1` contains data of that block together with the hash of the
-previous block `N`. This creates the situation where if you modify the content of block `N` you will
-change the hash of block `N + 1`, `N + 2`, etc. essentially breaking the chain. Although it can be possible to add an invalid block (a block with invalid transactions) or censor certain transactions, if the blockchain network is nor sufficiently decentralized. In decentralized proof-of-stake blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially expensive, and attempting to do it can get you
+Here is where **blockchain** technology plays an important role. Blockchain networks comprise of
+distributed state machines where increments of data are stored within blocks that build on each
+other using hash functions. For example, the hash of block `N + 1` contains data of that block
+together with the hash of the previous block `N`. This creates the situation where if you modify the
+content of block `N` you will change the hash of block `N + 1`, `N + 2`, etc. essentially breaking
+the chain. Although it can be possible to add an invalid block (a block with invalid transactions)
+or censor certain transactions, if the blockchain network is nor sufficiently decentralized. In
+decentralized proof-of-stake blockchains like
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially
+expensive, and attempting to do it can get you
 [slashed](../learn/learn-staking-advanced.md#slashing).
 
-So, with blockchain as a means of storing data and transactions permanently without an option to modify them, we can
-ensure what we cryptographically sign with our digital identity is set in stone digitally.
+So, with blockchain as a means of storing data and transactions permanently without an option to
+modify them, we can ensure what we cryptographically sign with our digital identity is set in stone
+digitally.
 
 ## Data Availability
 
@@ -88,8 +97,9 @@ or by different computers belonging to the same operator?
 
 That server or those computers can be easily shut down, the blockchain can be stopped from running
 and its data wiped out. This can be achieved from the inside by the malicious network participants
-or from the outside by regulatory rules and other forces. Though blockchain offers immutability, there would
-be little sense in using a centralized blockchain to prove ownership as it can possibly cease to exist in the future.
+or from the outside by regulatory rules and other forces. Though blockchain offers immutability,
+there would be little sense in using a centralized blockchain to prove ownership as it can possibly
+cease to exist in the future.
 
 Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
@@ -100,16 +110,23 @@ network can sustain on its own.
 Having multiple nodes belonging to numerous independent identities increases network resiliency and
 thus data availability.
 
-Blockchain is a state machine, and consensus must be achieved on every single state
-transition by every node on the blockchain network. In Proof of Work (PoW) based blockchains, which let any node in the network produce a block, consensus is achieved probabilistically by building on the longest chain (at the cost of energy-intensive computations). Proof of Stake (PoS) based blockchains like Polkadot enable deterministic
-consensus by allowing only a limited number of privileged nodes to produce blocks. A PoW blockchain can be considered centralized if a single entity can capture 51% of network nodes. Similarly, a PoS blockchain can be considered centralized if a single entity controls more than one-third of nodes, as a two-thirds majority is required to arrive at a deterministic consensus. Different blockchains have different levels of decentralization.
+Blockchain is a state machine, and consensus must be achieved on every single state transition by
+every node on the blockchain network. In Proof of Work (PoW) based blockchains, which let any node
+in the network produce a block, consensus is achieved probabilistically by building on the longest
+chain (at the cost of energy-intensive computations). Proof of Stake (PoS) based blockchains like
+Polkadot enable deterministic consensus by allowing only a limited number of privileged nodes to
+produce blocks. A PoW blockchain can be considered centralized if a single entity can capture 51% of
+network nodes. Similarly, a PoS blockchain can be considered centralized if a single entity controls
+more than one-third of nodes, as a two-thirds majority is required to arrive at a deterministic
+consensus. Different blockchains have different levels of decentralization.
 
-Nowadays, most of the nodes cannot be run on consumer-grade hardware. Node running equipment is typically rented through service
-providers. Resiliency is also achieved by ensuring nodes run on as many different providers as
-possible and avoiding a significant share of the nodes being run under the same provider in the same
-geographic region. A legislation change or a natural disaster could impact a considerable fraction of the nodes and potentially stop the
-network. {{ polkadot: Pokadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can
-be explored through the [Polkawatch app](https://polkawatch.app/).
+Nowadays, most of the nodes cannot be run on consumer-grade hardware. Node running equipment is
+typically rented through service providers. Resiliency is also achieved by ensuring nodes run on as
+many different providers as possible and avoiding a significant share of the nodes being run under
+the same provider in the same geographic region. A legislation change or a natural disaster could
+impact a considerable fraction of the nodes and potentially stop the network.
+{{ polkadot: Pokadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can be
+explored through the [Polkawatch app](https://polkawatch.app/).
 
 The [One Thousand Validator Programme](./thousand-validators.md) aims to incentivize the creation of
 new validator nodes to increase the level of node decentralization.
@@ -121,7 +138,9 @@ the blockchain. Large files like pictures, music, movies, etc., typically will n
 blockchain. But where can we stored those files? To stick to the web3 vision, we need a resilient
 and decentralized storage solution.
 
-The most important thing is that the proof of ownership is stored on the blockchain through the hashes of data and metadata. The files are uploaded on decentralized storage networks hosting protocols like IPFS. 
+The most important thing is that the proof of ownership is stored on the blockchain through the
+hashes of data and metadata. The files are uploaded on decentralized storage networks hosting
+protocols like IPFS.
 
 ### Stake Allocation
 
@@ -134,11 +153,11 @@ active validators, and the variance in stake across validators is minimized as m
 
 ### Economic Incentives
 
-Strong incentives are essential to incentivize network participants to run
-nodes and secure the network. Strong incentives are possible because blockchain is a trustless
-system where there are no intermediaries between who sends a message and who receives it. Such
-incentives, coupled with punishment for bad behavior, ensure that most of the participants make the
-interest of the network and work together to improve it.
+Strong incentives are essential to incentivize network participants to run nodes and secure the
+network. Strong incentives are possible because blockchain is a trustless system where there are no
+intermediaries between who sends a message and who receives it. Such incentives, coupled with
+punishment for bad behavior, ensure that most of the participants make the interest of the network
+and work together to improve it.
 
 But from where are those incentives coming from? Polkadot's native token
 [DOT is inflationary](../learn/learn-inflation.md). Inflation is used to pay validators for running
@@ -161,25 +180,25 @@ blockchain is through an RPC server? Whoever is behind the server or an attacker
 data that is not the truth. How can we trustlessly verify that the data is true?
 
 Here is where light clients play a key role. Light clients are clients that can sit on a web browser
-and can fetch data directly from blockchain full nodes and verify such data using other nodes.
-
-The figure below shows the architectural difference between web2 and web3 applications.
+and can fetch data directly from blockchain. The figure below shows the architectural difference
+between web2 and web3 applications.
 
 ![light-clients](../assets/light-clients.png)
 
 In web2 applications, data are stored on a centralized server, while in web3 applications, data (or
-better data proofs) are stored on the blockchain. With light clients, we can access blockchain data
-through a full node and verify the validity. In this way, we
-can always verify that the data we see is the truth, which is done automatically by the light
-client. Polkadot has a browser-embedded light client
+better data proofs) are stored on the blockchain. With light clients, it is possible to access
+blockchain data through a full node and verify the validity of such data. They efficiently
+synchronize (_warp sync_ in case of Polkadot) with a full node to obtain (Merkle Root) commitment of
+the latest chain state, and hence can trustlessly verify any response by full node against the
+commitment. In this way, we can always verify that the data we see is the truth, which is done
+automatically by the light client. Polkadot has a browser-embedded light client
 [Substrate connect](../build/build-substrate.md) that uses the
 [smoldot](https://github.com/smol-dot/smoldot) codebase. Most web3 applications today access
 blockchain data through a centralized RPC server.
 
 ## Interoperability
 
-Transferring information and economic
-value is key to achieving the web3 vision of having a collaborative and trustless internet. Polkadot
-provides secure interoperability through [XCM](../learn/learn-xcm.md) and
-[XCMP](../learn/learn-xcm-transport.md) to all blockchains attached to it. For more information, see
-the [Polkadot 1.0 page](./polkadot-v1.md).
+Transferring information and economic value is key to achieving the web3 vision of having a
+collaborative and trustless internet. Polkadot provides secure interoperability through
+[XCM](../learn/learn-xcm.md) and [XCMP](../learn/learn-xcm-transport.md) to all blockchains attached
+to it. For more information, see the [Polkadot 1.0 page](./polkadot-v1.md).
