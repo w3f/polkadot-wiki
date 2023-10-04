@@ -96,7 +96,7 @@ auction on Kusama. Keep in mind that the candle phase has a uniform termination 
 equal probability of ending at any given block, and the termination block cannot be predicted before
 or during the auction.
 
-- Auction 9 starts at
+- The ending period of auction 9 starts at
   [`block 9362014`](https://kusama.subscan.io/extrinsic/0x7b67d653c9522b623a97e20a967b83a8517fe3821370475ddb6611cd37c29a03?event=9335014-26).
 
   :::note The auction has a full duration equal to `block 9362014` + `72000`
