@@ -93,6 +93,11 @@ performance metric is not thoroughly tested nor guaranteed until proper benchmar
 
 :::
 
+![sync-vs-async-backing](../assets/sync-vs-async-backing.png)
+
+In asynchronous backing parablocks (P) are included every 6 seconds, and backing (B) and inclusion
+(I) can happen within the same relay chain block (R).
+
 ### Synchronous vs. Asynchronous Backing
 
 Below, a table showing the main differences between synchronous and asynchronous backing.
@@ -172,7 +177,9 @@ check it. The limit collators have to generate parablocks is thus how long it ta
 seconds). This means that if block generation takes >2 seconds the unincluded segment will shrink
 (less unincluded parablocks) while if it takes <2 seconds the segment will grow (more unincluded
 parablocks). Such flexibility from the parachain side will be enabled on the relay chain side with
-agile core allocation and coretime usage (so called elastic scaling).
+[agile core usage](../general/polkadot-direction.md#agile-core-usage) and
+[coretime allocation](../general/polkadot-direction.md#agile-coretime-allocation) (so called elastic
+scaling).
 
 ## Terminology
 
