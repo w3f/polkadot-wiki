@@ -22,6 +22,7 @@ module.exports = {
           },
           items: [
             "general/getting-started",
+            "general/web3-and-polkadot",
             {
               type: "category",
               label: "Polkadot Vision",
@@ -34,6 +35,7 @@ module.exports = {
               },
               items: [
                 "general/polkadot-v1",
+                "general/polkadot-direction",
               ],
             },
             {
@@ -548,6 +550,7 @@ module.exports = {
             'learn/learn-spree',
             "learn/learn-parathreads",
             "learn/learn-async-backing",
+            "learn/learn-sassafras",
           ],
         },
         {
