@@ -72,7 +72,7 @@ P2 if R2 is included on the relay chain and gossiped to the collator producing P
 
 The attached relay node receives relay blocks via gossip. Then the relay node talks to the parachain
 node through the `CollationGeneration` subsystem. R2 is gossiped to the relay full node attached to
-the collator producing P2. Then CollationGeneration passes information about R2 to the collator
+the collator producing P2. Then `CollationGeneration` passes information about R2 to the collator
 node. Finally, relay parent information from R2 informs the generation of candidate P2.
 
 :::
