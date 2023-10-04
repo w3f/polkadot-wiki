@@ -308,7 +308,7 @@ include:
 - **Support Curve**: the curve describing the minimum % of all votes in support of a proposal as a
   function of time within the Decision Period. The support % is defined as the portion of all votes
   (_aye_ and _abstained_) without conviction over the total possible amount of votes in the system
-  (i.e. the total issuance).
+  (i.e. the total active issuance).
 
 For example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
 implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
