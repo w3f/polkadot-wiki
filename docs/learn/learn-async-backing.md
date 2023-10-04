@@ -165,11 +165,14 @@ they can use to fetch information to build new parablocks. On the relay chain si
 [perspective parachains](#prospective-parachains) repeats the work each unincluded segment does in
 tracking candidates (as validators cannot trust the record kept on parachains).
 
-Collating on top of unincluded parents means the only time limit to generate a parablock is how long
-it takes to back it (2 seconds). The 6-second relay chain block delay includes a backing execution
-timeout (2 seconds) and some time for network latency (time it takes to gossip messages across the
-entire network). Thus, even if a collator has >2 seconds to produce a block, the validators will
-still have ~2 seconds to check it.
+The 6-second relay chain block delay includes a backing execution timeout (2 seconds) and some time
+for network latency (time it takes to gossip messages across the entire network). Even if a collator
+can theoretically have >2 seconds to produce a block, the validators will still have ~2 seconds to
+check it. The limit collators have to generate parablocks is thus how long it takes to back it (2
+seconds). This means that if block generation takes >2 seconds the unincluded segment will shrink
+(less unincluded parablocks) while if it takes <2 seconds the segment will grow (more unincluded
+parablocks). Such flexibility from the parachain side will be enabled on the relay chain side with
+agile core allocation and coretime usage (so called elastic scaling).
 
 ## Terminology
 
@@ -194,10 +197,8 @@ Bundles of state transitions represented as blocks may be processed similarly. I
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
 throughput of the entire network by completing the backing and inclusion steps for different blocks
 at the same time. Asynchronous backing does not just allow for pipelining within a single pipe (or
-core). It lays the foundation for a large number of pipes (~10 cores) to run for the same parachain
-at the same time. In that way we have two distinct new forms of parallel computation: having one
-block backed and one included simultaneously using one core, and having having `n` blocks backed and
-`n` blocks included simultaneously using `n` cores.
+core). It lays the foundation for a large number of pipes (or cores) to run for the same parachain
+at the same time. In that way we have two distinct new forms of parallel computation.
 
 ### Unincluded Segments
 
