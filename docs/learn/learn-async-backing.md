@@ -171,15 +171,21 @@ they can use to fetch information to build new parablocks. On the relay chain si
 tracking candidates (as validators cannot trust the record kept on parachains).
 
 The 6-second relay chain block delay includes a backing execution timeout (2 seconds) and some time
-for network latency (time it takes to gossip messages across the entire network). Even if a collator
-can theoretically have >2 seconds to produce a block, the validators will still have ~2 seconds to
-check it. The limit collators have to generate parablocks is thus how long it takes to back it (2
-seconds). This means that if block generation takes >2 seconds the unincluded segment will shrink
-(less unincluded parablocks) while if it takes <2 seconds the segment will grow (more unincluded
-parablocks). Such flexibility from the parachain side will be enabled on the relay chain side with
+for network latency (the time it takes to gossip messages across the entire network). The limit
+collators have to generate parablocks is how long it takes to back it (i.e., 2 seconds). Collation
+generation conservatively always gives itself the same time limits. If there is extra time for
+collation generation and backing (i.e., more than 2s + 6s), then all that extra time is allocated to
+backing (see figure). This could result in backable blocks waiting their turn at the end of the
+backing step for a few extra seconds until a core frees up to back that block as of the next relay
+block or some later relay block. Note a core is occupied after backing and before inclusion.
+
+The 2-second block generation time is thus a limiter, not a system limitation. If block generation
+takes >2 seconds, the unincluded segment will shrink (less unincluded parablocks), while if it takes
+<2 seconds, the segment will grow (more unincluded parablocks that will need to be backed and
+included). Such flexibility from the parachain side will be possible when, on the relay chain side,
+there will be elastic scaling (i.e.,
 [agile core usage](../general/polkadot-direction.md#agile-core-usage) and
-[coretime allocation](../general/polkadot-direction.md#agile-coretime-allocation) (so called elastic
-scaling).
+[coretime allocation](../general/polkadot-direction.md#agile-coretime-allocation)).
 
 ## Terminology
 
