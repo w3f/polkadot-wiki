@@ -170,40 +170,71 @@ relevant `balances.deposit` event. This can be done as follows:
 
 #### Additional Examples of Monitoring XCM Transfers
 
-The two previous sections outline the process of monitoring XCM deposits to specific account(s) and then tracing back the origin of these deposits. However, the process of tracking an XCM transfer (hence the events to look for) may vary based on the direction of the XCM message. Here are some examples to showcase the slight differences:
+The two previous sections outline the process of monitoring XCM deposits to specific account(s) and
+then tracing back the origin of these deposits. However, the process of tracking an XCM transfer
+(hence the events to look for) may vary based on the direction of the XCM message. Here are some
+examples to showcase the slight differences:
 
-1. For an XCM transfer from a Parachain to a Relay chain _([example](https://polkadot.subscan.io/xcm_message/polkadot-2f4138e73affe763bebbefa82ee2eb2633425541))_:
+1. For an XCM transfer from a Parachain to a Relay chain
+   _([example](https://polkadot.subscan.io/xcm_message/polkadot-2f4138e73affe763bebbefa82ee2eb2633425541))_:
 
-    - The [event](https://moonbeam.subscan.io/extrinsic/4531955-6?event=4531955-29) to look for in the Parachain side is called `parachainsystem (UpwardMessageSent)`, and the parameter `message_hash` in this event identifies the XCM transfer.
-    - The [event](https://polkadot.subscan.io/extrinsic/17487547-0?event=17487547-3) to track in the Relay chain side is called `messagequeue (Processed)`, and the parameter `id` of the event should be the same as the `message_hash` found in the Parachain event.
+   - The [event](https://moonbeam.subscan.io/extrinsic/4531955-6?event=4531955-29) to look for in
+     the Parachain side is called `parachainsystem (UpwardMessageSent)`, and the parameter
+     `message_hash` in this event identifies the XCM transfer.
+   - The [event](https://polkadot.subscan.io/extrinsic/17487547-0?event=17487547-3) to track in the
+     Relay chain side is called `messagequeue (Processed)`, and the parameter `id` of the event
+     should be the same as the `message_hash` found in the Parachain event.
 
-2. For an XCM transfer from a Relay chain to a Parachain _([example](https://polkadot.subscan.io/xcm_message/polkadot-9b01c2916c4d3c5ad01ee350bdda13059358981f))_:
+2. For an XCM transfer from a Relay chain to a Parachain
+   _([example](https://polkadot.subscan.io/xcm_message/polkadot-9b01c2916c4d3c5ad01ee350bdda13059358981f))_:
 
-    - The [XCM Transfer Hash](https://polkadot.subscan.io/extrinsic/17487930-2?tab=xcm_transfer) is what we need to check on the Relay chain side.
-    - The [event](https://acala.subscan.io/extrinsic/4553422-1?event=4553422-5) to look for in the Parachain side is called `dmpqueue (ExecutedDownward)`, and the parameter that identifies the XCM message is either called `message_hash` or `message_id`.
+   - The [XCM Transfer Hash](https://polkadot.subscan.io/extrinsic/17487930-2?tab=xcm_transfer) is
+     what we need to check on the Relay chain side.
+   - The [event](https://acala.subscan.io/extrinsic/4553422-1?event=4553422-5) to look for in the
+     Parachain side is called `dmpqueue (ExecutedDownward)`, and the parameter that identifies the
+     XCM message is either called `message_hash` or `message_id`.
 
-3. For an XCM transfer from a System Parachain to a Parachain _([example](https://polkadot.subscan.io/xcm_message/polkadot-7a1c6fd86e290680f8ee48cee8a64df8e75f7040))_:
+3. For an XCM transfer from a System Parachain to a Parachain
+   _([example](https://polkadot.subscan.io/xcm_message/polkadot-7a1c6fd86e290680f8ee48cee8a64df8e75f7040))_:
 
-    - The [event](https://assethub-polkadot.subscan.io/extrinsic/4677169-2?event=4677169-4) to look for in the System Parachain side is called `xcmpqueue (XcmpMessageSent)`, and again the `message_hash` is one of the parameters of the event.
-    - The corresponding [event](https://astar.subscan.io/extrinsic/4540721-1?event=4540721-7) in the Parachain side is the `xcmpqueue (Success)` and the `message_hash` found in that event should have the same value as the one in the System parachain.
+   - The [event](https://assethub-polkadot.subscan.io/extrinsic/4677169-2?event=4677169-4) to look
+     for in the System Parachain side is called `xcmpqueue (XcmpMessageSent)`, and again the
+     `message_hash` is one of the parameters of the event.
+   - The corresponding [event](https://astar.subscan.io/extrinsic/4540721-1?event=4540721-7) in the
+     Parachain side is the `xcmpqueue (Success)` and the `message_hash` found in that event should
+     have the same value as the one in the System parachain.
 
-More examples with different directions and their corresponding events, can be found in this ["How to trace XCM Transfers"](https://hackmd.io/@LwMsxe3-SFmNXxugAXOKgg/SJrREymlp) page.
+More examples with different directions and their corresponding events, can be found in this
+["How to trace XCM Transfers"](https://hackmd.io/@LwMsxe3-SFmNXxugAXOKgg/SJrREymlp) page.
 
 #### Monitoring of Failed XCM Transfers
-In case that an XCM transfer fails to complete successfully, then we will notice some different parameters in the events emitted or different events. Below are some examples:
 
-1. From a Relay chain to a System Parachain _([example](https://polkadot.subscan.io/xcm_message/polkadot-c8d7186edb43a592d65b3b5a87c4ecaac38c5aa2))_:
+In case that an XCM transfer fails to complete successfully, then we will notice some different
+parameters in the events emitted or different events. Below are some examples:
 
-    - We will see the [event](https://assethub-polkadot.subscan.io/extrinsic/4671081-0?event=4671081-1) **`dmpqueue (ExecutedDownward)`** in the System Parachain side with the following parameters:
-        - **`outcome`** with value **`Incomplete`** and with the type of error which in this example is [UntrustedReserveLocation](https://github.com/paritytech/polkadot-sdk/blob/c54ea64af43b522d23bfabb8d917a490c0f23217/polkadot/xcm/src/v2/traits.rs#L43).
-        - **`message_id`** which shows the hash of the XCM Transfer.
+1. From a Relay chain to a System Parachain
+   _([example](https://polkadot.subscan.io/xcm_message/polkadot-c8d7186edb43a592d65b3b5a87c4ecaac38c5aa2))_:
 
+   - We will see the
+     [event](https://assethub-polkadot.subscan.io/extrinsic/4671081-0?event=4671081-1)
+     **`dmpqueue (ExecutedDownward)`** in the System Parachain side with the following parameters:
+     - **`outcome`** with value **`Incomplete`** and with the type of error which in this example is
+       [UntrustedReserveLocation](https://github.com/paritytech/polkadot-sdk/blob/c54ea64af43b522d23bfabb8d917a490c0f23217/polkadot/xcm/src/v2/traits.rs#L43).
+     - **`message_id`** which shows the hash of the XCM Transfer.
 
-2. From a Parachain to another Parachain _([example](https://polkadot.subscan.io/xcm_message/polkadot-3e74e95204faa6ecf3c81f5129b85f498b89cff2))_:
+2. From a Parachain to another Parachain
+   _([example](https://polkadot.subscan.io/xcm_message/polkadot-3e74e95204faa6ecf3c81f5129b85f498b89cff2))_:
 
-    - We will see the [event](https://interlay.subscan.io/extrinsic/3627057-1?event=3627057-8) **`xcmpqueue (Fail)`** in the destination Parachain with the following parameters:
-        - **`error`** which in this example is [TooExpensive](https://github.com/paritytech/polkadot-sdk/blob/c54ea64af43b522d23bfabb8d917a490c0f23217/polkadot/xcm/src/v2/traits.rs#L98).
-        - **`message_hash`** which identifies the XCM Transfer.
-    - **Note** : there might be another [event](https://interlay.subscan.io/extrinsic/3627057-1?event=3627057-7) called **`polkadotxcm (AssetsTrapped)`** which indicates that some assets have been trapped (and hence can be claimed).
+   - We will see the [event](https://interlay.subscan.io/extrinsic/3627057-1?event=3627057-8)
+     **`xcmpqueue (Fail)`** in the destination Parachain with the following parameters:
+     - **`error`** which in this example is
+       [TooExpensive](https://github.com/paritytech/polkadot-sdk/blob/c54ea64af43b522d23bfabb8d917a490c0f23217/polkadot/xcm/src/v2/traits.rs#L98).
+     - **`message_hash`** which identifies the XCM Transfer.
+   - **Note** : there might be another
+     [event](https://interlay.subscan.io/extrinsic/3627057-1?event=3627057-7) called
+     **`polkadotxcm (AssetsTrapped)`** which indicates that some assets have been trapped (and hence
+     can be claimed).
 
-A great resource to learn more about Error Management in XCM is the Polkadot blog post from Gavin Wood, [XCM Part III: Execution and Error Management](https://www.polkadot.network/blog/xcm-part-three-execution-and-error-management).
+A great resource to learn more about Error Management in XCM is the Polkadot blog post from Gavin
+Wood,
+[XCM Part III: Execution and Error Management](https://www.polkadot.network/blog/xcm-part-three-execution-and-error-management).
