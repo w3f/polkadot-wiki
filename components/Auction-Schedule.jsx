@@ -138,14 +138,14 @@ function Render(explorerUrl, auctions, setAuctions, index) {
 			Block #{auctions[index].startBlock.height}
 		</a>
 		<hr />
-		<b>Bidding Starts:</b>
+		<b>Ending Period Starts:</b>
 		<br />
 		{`${biddingStartsDate} - `}
 		<a href={`${explorerUrl}${auctions[index].biddingStartBlock.height}`}>
 			Block #{auctions[index].biddingStartBlock.height}
 		</a>
 		<hr />
-		<b>Bidding Ends:</b>
+		<b>Auction Ends:</b>
 		<br />
 		{`${biddingEndsDate} - `}
 		<a href={`${explorerUrl}${auctions[index].biddingEndsBlock.height}`}>
