@@ -168,4 +168,4 @@ could become.
 
 Polkadot is perfecting its implementation through [RFCs](https://github.com/polkadot-fellows/RFCs)
 to continue being a decentralized, secure, ubiquitous computing engine to power the next generation
-of Web3 applications.
+of [Web3](./web3-and-polkadot.md) applications.

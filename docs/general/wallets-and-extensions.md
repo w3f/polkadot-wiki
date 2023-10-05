@@ -94,11 +94,12 @@ Foundation.
 
 ## Fearless Wallet
 
-The Fearless DeFi Wallet for the Future. Simply, intuitively, and fearlessly interact with Web3.
-Currently supports Staking, Crowdloans, Parachain Accounts, Nomination Pools Native Staking, dApp
-Signer on desktop through your mobile phone (experimental), Chromium-based browser extension. Safety
-features such as Scam Address Warning and Network Failure Warnings help fearlessly navigate web3.
-Formerly funded and supported by Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/23),
+The Fearless DeFi Wallet for the Future. Simply, intuitively, and fearlessly interact with
+[Web3](./web3-and-polkadot.md). Currently supports Staking, Crowdloans, Parachain Accounts,
+Nomination Pools Native Staking, dApp Signer on desktop through your mobile phone (experimental),
+Chromium-based browser extension. Safety features such as Scam Address Warning and Network Failure
+Warnings help fearlessly navigate [web3](./web3-and-polkadot.md). Formerly funded and supported by
+Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/23),
 [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74),
 [4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178)],
 and the SORA community [[1](https://sora.subscan.io/referenda/193?tab=votes)], developed with <3 by
