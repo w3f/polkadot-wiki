@@ -49,7 +49,7 @@ programs as dispatchable functions within the pallet.
    valid, the message will then be _locally_ executed, therein returning the outcome as an event.
    This operation is executed on behalf of whichever account has signed the extrinsic. It's possible
    for only a partial execution to occur.
-2. [`send`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs#L769) -
+2. [`send`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L769) -
    This call specifies where a message should be sent
    ([via a transport method](./learn-xcm-transport.md)) externally to a particular destination, i.e.
    a parachain, smart contract, or any system which is governed by consensus. In contrast to
