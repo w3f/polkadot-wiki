@@ -43,7 +43,7 @@ handle and execute these programs.
 There are two primary primitive extrinsics. These extrinsics handle sending and executing XCVM
 programs as dispatchable functions within the pallet.
 
-1. [`execute`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs#L902) -
+1. [`execute`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L902) -
    This call contains direct access to the XCM executor. It is the job of the executor to check the
    message and ensure that no barrier/filter will block the execution of the XCM. Once it is deemed
    valid, the message will then be _locally_ executed, therein returning the outcome as an event.
