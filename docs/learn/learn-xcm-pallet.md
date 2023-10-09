@@ -126,7 +126,7 @@ They change any relevant storage aspects that enforce anything to do with XCM ve
    Sends an XCM with a
    [`SubscribeVersion`](https://github.com/paritytech/xcm-format#subscribeversion) instruction to a
    destination.
-4. [`force_unsubscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs#L996) -
+4. [`force_unsubscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L996) -
    Sends an XCM with a
    [`UnsubscribeVersion`](https://github.com/paritytech/xcm-format#unsubscribeversion) instruction
    to a destination.
