@@ -81,7 +81,7 @@ Otherwise, the fee is taken as needed from the asset being transferred.
    [`ReserveAssetDeposited`](https://github.com/paritytech/xcm-format#reserveassetdeposited)
    instruction, which serves as a notification.
 
-2. [`teleport_assets`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs#L827) -
+2. [`teleport_assets`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L827) -
    Teleport some assets from the local chain to some destination chain.
 
 ### Transfer Reserve vs. Teleport
