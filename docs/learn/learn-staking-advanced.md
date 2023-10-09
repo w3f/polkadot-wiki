@@ -539,10 +539,10 @@ pub struct RawSolution<S> {
 }
 ```
 
-A maximum of `pallet::Config::MaxSignedSubmissions` will be stored on-chain and they will be sorted
+A maximum of `pallet::Config::SignedMaxSubmissions` will be stored on-chain and they will be sorted
 based on score. Higher the score the more optimal the election solution is. On both Polkadot and
 Kusama the
-['MaxSignedSubmissions'](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L446)
+['SignedMaxSubmissions'](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L390)
 is set to
 {{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :kusama }}
@@ -619,4 +619,4 @@ resources section below.
 
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
-- [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
+- [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
