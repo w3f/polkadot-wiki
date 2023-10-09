@@ -122,7 +122,7 @@ They change any relevant storage aspects that enforce anything to do with XCM ve
 2. [`force_default_xcm_version`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L957) -
    Modifies the `SafeXcmVersion` storage, which stores the default XCM version to use when the
    destination's version is unknown.
-3. [`force_subscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs#L972) -
+3. [`force_subscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L972) -
    Sends an XCM with a
    [`SubscribeVersion`](https://github.com/paritytech/xcm-format#subscribeversion) instruction to a
    destination.
