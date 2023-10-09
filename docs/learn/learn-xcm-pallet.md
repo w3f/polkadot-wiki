@@ -75,7 +75,7 @@ instructions for sending and executing XCMs. Two variants of these functions are
 
 Otherwise, the fee is taken as needed from the asset being transferred.
 
-1. [`reserve_transfer_assets`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs#L872) -
+1. [`reserve_transfer_assets`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L872) -
    Transfer some assets from the local chain to the sovereign account of a destination chain and
    forward an XCM containing a
    [`ReserveAssetDeposited`](https://github.com/paritytech/xcm-format#reserveassetdeposited)
