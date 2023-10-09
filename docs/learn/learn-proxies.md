@@ -3,7 +3,7 @@ id: learn-proxies
 title: Proxy Accounts
 sidebar_label: Proxy Accounts
 description: Proxy Accounts on Polkadot.
-keywords: [proxy, proxies, proxy accounts, proxy types]
+keywords: [proxy, proxies, proxy accounts, proxy types, staking proxy]
 slug: ../learn-proxies
 ---
 
@@ -201,11 +201,12 @@ you will be presented with a list of all proxies for that account.
 
 Additionally, you can head over to the _Chain State_ tab (underneath the _Developer_ menu) on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
-you've created your proxy on a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account, it is required to change your network accordingly
-using the top left navigation button. On this page, the proxy pallet should be selected, returning
-the announcements and proxies functions. The proxies function will allow you to see your created
-proxies for either one account or for all accounts (using the toggle will enable this). Proxy
-announcements are what time lock proxies do to announce they are going to conduct an action.
+you've created your proxy on a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+account, it is required to change your network accordingly using the top left navigation button. On
+this page, the proxy pallet should be selected, returning the announcements and proxies functions.
+The proxies function will allow you to see your created proxies for either one account or for all
+accounts (using the toggle will enable this). Proxy announcements are what time lock proxies do to
+announce they are going to conduct an action.
 
 ![polkadot_view_proxies_dev](../assets/polkadot_view_proxies_dev.png)
 
