@@ -546,37 +546,43 @@ a non-canonical chain.
 
 ## Bond DOT
 
-It is highly recommended that you set a stash account and a staking proxy. For this, you will create
-two accounts and make sure each of them have at least enough funds to pay the fees for making
-transactions. Keep most of your funds in the stash account since it is meant to be the custodian of
-your staking funds.
+To start a validator instance on Polkadot or Kusama, the minimum bond required is 0 DOT/KSM. But to
+enter the active validator set and be eligible to earn rewards, your validator node should be
+nominated by a minimum number of DOT/KSM tokens. On Polkadot, the minimum stake backing a validator
+in the active set is
+{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
+
+On Kusama, the minimum stake backing a validator in the active set is
+{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
+{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
+era
+{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
+
+If you are validator who intends to get DOT/KSM nominations from the community, you will need to
+show some skin in the game. For that, you need to bond some DOT/KSM as own stake.
 
 :::info Controller accounts are deprecated
 
 Controller accounts are deprecated. For more information, see
 [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+It is highly recommended that you setup an account with a staking proxy, which can be used for
+issuing start and stop validating calls.
 
 :::
 
 Make sure not to bond all your DOT balance since you will be unable to pay transaction fees from
 your bonded balance.
 
-It is now time to set up our validator. We will do the following:
-
-- Bond the DOT of the Stash account. These DOT will be put at stake for the security of the network
-  and can be slashed.
-- Select the staking proxy. This is the account that will decide when to start or stop validating.
-
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "+ Stash" button.
 
 ![bonding-JS-UI](../assets/JS-UI-bond.png)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 1 DOT, where the
-  minimum bonding amount is 1. Make sure that your Stash account contains _at least_ this much. You
-  can, of course, stake more than this.
-- **Staking proxy account** - Select the staking proxy account created earlier. This account will
-  also need a small amount of DOT in order to start and stop validating.
+- **Stash account** - Select your Stash account (which is the acocunt with the DOT/KSM balance)
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
@@ -584,8 +590,8 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](../learn/learn-staking.md/#reward-distribution). Starting with runtime version v23 natively
   included in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3),
-  payouts can go to any custom address. If you'd like to redirect payments to an account that is
-  neither the staking proxy nor the stash account, set one up. Note that it is extremely unsafe to
+  payouts can go to any custom address. If you'd like to redirect payments to an account that is not
+  the stash account, you can do it by entering the address here. Note that it is extremely unsafe to
   set an exchange address as the recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
@@ -598,8 +604,6 @@ After a few seconds, you should see an `ExtrinsicSuccess` message.
 Your bonded account will available under `Stashes`. You should now see a new card with all your
 accounts (note: you may need to refresh the screen). The bonded amount on the right corresponds to
 the funds bonded by the Stash account.
-
-![stash overview](../assets/JS-UI-stash-overview.png)
 
 ## Set Session Keys
 
