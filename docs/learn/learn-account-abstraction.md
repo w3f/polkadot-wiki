@@ -67,6 +67,8 @@ Neither of those origins is subservient to the concept of an account or assume a
 or associated data. Custom origins can be created while designing your chain using the Substrate
 (which is part of the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk)).
 
+![origin-abstraction](../assets/origin-abstraction.png)
+
 Accounts happen to be just one variant (or corner case) of Substrate's FRAME possible origins, the
 `frame_system::RawOrigin::Signed`. In Substrate, the concept of account is completely deprioritized.
 Substrate itself remains indifferent to an account's balance and nonce. While FRAME can support
