@@ -63,8 +63,8 @@ promptly, especially for high-priority or critical releases.
 :::info New Client Releases
 
 The details about the latest client releases can be found in the
-[releases section on the Polkadot repository](https://github.com/paritytech/polkadot/releases). A
-detailed analysis for client releases can be viewed on the
+[releases section on the Polkadot repository](https://github.com/paritytech/polkadot-sdk/releases).
+A detailed analysis for client releases can be viewed on the
 [Polkadot Forum](https://forum.polkadot.network/tag/release-analysis).
 
 :::

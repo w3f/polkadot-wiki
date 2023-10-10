@@ -11,8 +11,8 @@ import RPC from "./../../components/RPC-Connection";
 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is an inflationary token. On the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, inflation is
-{{ polkadot: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), :polkadot }}
-{{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), :kusama }}
+{{ polkadot: [set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), :polkadot }}
+{{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), :kusama }}
 which is distributed as staking rewards based on the amount staked vs. ideal staking rate, and the
 remainder goes to the treasury.
 

@@ -179,7 +179,7 @@ For an updated and complete description of the cross-consensus message format pl
 - [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) -
   Technical audit report by Quarkslab prepared for Parity.
 
-- [XCM pallet code](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs) -
+- [XCM pallet code](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs) -
   The pallet that contains XCM logic from the Polkadot code repository
 
 - [XCM Config & Pallet-XCM | Polkadot Deep Dives](https://www.youtube.com/watch?v=bFMvWmU1pYI) - A

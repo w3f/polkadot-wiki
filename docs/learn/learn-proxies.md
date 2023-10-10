@@ -95,8 +95,8 @@ transactions.
 :::tip Know how to check the calls and pallets accessible by proxies
 
 For the latest information on the calls and pallets that can be fully accessed by proxies, check the
-[source code in the runtime folder](https://github.com/paritytech/polkadot/blob/153543b0c8c582e73f520e5c08cbe33bddfb5f69/runtime/polkadot/src/lib.rs#L1158)
-on the [Polkadot repository](https://github.com/paritytech/polkadot)
+[source code in the runtime folder](https://github.com/paritytech/polkadot-sdk/blob/153543b0c8c582e73f520e5c08cbe33bddfb5f69/runtime/polkadot/src/lib.rs#L1158)
+on the [Polkadot repository](https://github.com/paritytech/polkadot-sdk)
 
 :::
 
