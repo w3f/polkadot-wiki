@@ -115,7 +115,7 @@ Governance > Preimages and click on unnote button shown on the preimage you subm
 Similarly, to claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and
 scroll down to the end of the page to click on the referenda with the decision deposit and claim it.
 
-![Claim Referendum Deposits](../assets/claim-referendum-deposits.png)
+![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
 
 ## Requesting Tips from the Treasury
 
