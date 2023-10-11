@@ -104,18 +104,8 @@ in this document.
 
 ![Submit Treasury Proposal Decision Deposit](../assets/treasury/treasury-proposal-decision-deposit.png)
 
-### Claiming the Preimage and Decision Deposits
-
-After the referendum finishes its life cycle (and gets approved or rejected or timed out), the
-deposits can be claimed. For claiming the preimage deposit, navigate to Polkadot-JS UI >
-Governance > Preimages and click on unnote button shown on the preimage you submitted.
-
-![Claim Preimage Deposit](../assets/claim-preimage-deposit.png)
-
-Similarly, to claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and
-scroll down to the end of the page to click on the referenda with the decision deposit and claim it.
-
-![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
+The preimage and decision deposits
+[can be claimed once the referendum ends](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits).
 
 ## Requesting Tips from the Treasury
 
@@ -127,5 +117,15 @@ to the `32 / Small Spender` track, you will need to submit it to the `30 / Small
 Briefly, you will need to:
 
 - Create a preimage using the `treasury.Spend` extrinsic and specifying the number of tokens and the
-  beneficiary of the tip, and
-- Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash.
+  beneficiary of the tip
+- Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash
+- Once you started the referendum go to [Polkassembly](https://polkassembly.io/), log in with the
+  proposer account and edit the referendum details
+- Notify the
+  {{ polkadot: [Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}{{ kusama: [Kusama Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :kusama }}
+  about your referendum
+- Place the decision deposit before the
+  {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
+  timeout
+- Once the referendum ends you can
+  [claim the preimage and decision deposits back](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits)
