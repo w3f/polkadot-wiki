@@ -35,10 +35,17 @@ a referendum, you must specify the `referenda.cancel` extrinsic of referendum `2
 ![cancel-referenda-preimage-creation](../assets/cancel-referenda-preimage-creation.png)
 
 This call will cancel the referendum and return the deposit. You can also kill a referendum using
-the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit. Note that
-creating a preimage will reserve some funds proportionally to the amount of information stored
-within the preimage. In this case, the deposit was 1.33 KSM (see
-[Subscan](https://kusama.subscan.io/extrinsic/19143604-2)).
+the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit.
+
+:::info Preimage Submission Deposit
+
+A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
+to the amount of information stored within the preimage. The deposit amount required for a preimage
+with a treasury spend transaction is around
+{{ polkadot: 41 DOT :polkadot }}{{ kusama:  1.4 KSM  :kusama }}. Ensure you have enough account
+balance to pay for the submission deposit and the transaction fees.
+
+:::
 
 Once a preimage is submitted, it can be checked under
 [Governance > Preimages](https://polkadot.js.org/apps/#/preimages).
