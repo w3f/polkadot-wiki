@@ -108,9 +108,14 @@ in this document.
 
 After the referendum finishes its life cycle (and gets approved or rejected or timed out), the
 deposits can be claimed. For claiming the preimage deposit, navigate to Polkadot-JS UI >
-Governance > Preimages and click on unnote button shown on the preimage you submitted. Similarly, to
-claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and scroll down to
-the end of the page to click on the referenda with the decision deposit and claim it.
+Governance > Preimages and click on unnote button shown on the preimage you submitted.
+
+![Claim Preimage Deposit](../assets/claim-preimage-deposit.png)
+
+Similarly, to claim the decision deposit, navigate to Polkadot-JS UI > Governance > Referenda and
+scroll down to the end of the page to click on the referenda with the decision deposit and claim it.
+
+![Claim Referendum Deposits](../assets/claim-referendum-deposits.png)
 
 ## Requesting Tips from the Treasury
 
