@@ -169,7 +169,7 @@ must be created. This is inconvenient, especially at corporate-level management 
 replacing someone within a multisig can be high. _Pure_ proxies allow keeping the same multisig when
 the signatories change.
 
-#### Scenario One: One Anonymous Proxy within a Multisig
+#### Scenario One: One Pure Proxy within a Multisig
 
 :::info Walk-through tutorial video
 
@@ -204,7 +204,7 @@ private key.
 
 :::
 
-#### Scenario Two: Multisig made of Anonymous Proxies
+#### Scenario Two: Multisig made of Pure Proxies
 
 :::info Walk-through Tutorial Video
 
@@ -226,6 +226,15 @@ In the diagram above, Alice submits the `proxy.proxy` extrinsic to P-A, which in
 transfer of some tokens from ABC to Dan. Then, Charly does the same to confirm the transaction. Note
 that Charly will need to pay for some weight, for the computation that is necessary to execute the
 transaction.
+
+#### Scenario Three: Multisig controlling a Pure Proxy
+
+This setup is used by the [MultiX](./learn-account-multisig.md#multisig-with-multix-tool) tool.
+
+After its creation, a multi-signature account creates a pure proxy that becomes the proxied account.
+The multi-signature account behaves as _any_ proxy of the pure. If signatories of the
+multi-signature account change, a new multisig can be created, assigned as _any_ proxy of the pure,
+and then the old multisig can be removed as a proxy.
 
 ## Proxy calls
 
