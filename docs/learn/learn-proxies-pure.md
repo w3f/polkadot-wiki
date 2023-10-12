@@ -236,6 +236,12 @@ The multi-signature account behaves as _any_ proxy of the pure. If signatories o
 multi-signature account change, a new multisig can be created, assigned as _any_ proxy of the pure,
 and then the old multisig can be removed as a proxy.
 
+Compared to [Scenario Two](#scenario-two-multisig-made-of-pure-proxies), here signatories do not
+need to create they pure proxies. It is a more practical solution, the number of signatories and
+threshold can be changed but the multisig address will change as well. In Scenario Two, if
+signatories change, the address of the multisig stays the same. However, changing the number of
+signatories and threshold will require the creation of a new multisig.
+
 ## Proxy calls
 
 Proxy calls are used by proxies to call proxied accounts. These calls are important for example in
