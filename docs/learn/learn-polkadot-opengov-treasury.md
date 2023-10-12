@@ -10,10 +10,16 @@ slug: ../learn-polkadot-opengov-treasury
 import RPC from "./../../components/RPC-Connection";
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
-fees, slashing, and [staking inefficiencies](learn-staking.md#inflation).
+fees, slashing, and [staking inefficiencies](./learn-inflation.md).Treasury funds are held in a
+[system account](./learn-account-advanced.md#system-accounts) that cannot be controlled by any
+external account; only the system internal logic can access it.
 
-Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) that
-cannot be controlled by any external account; only the system internal logic can access it.
+:::tip Creating a Treasury Proposal on Polkadot OpenGov
+
+If you would like to create a treasury proposal on Polkadot OpenGov, follow the instructions
+outlined on [this how-to guide](./learn-guides-treasury#creating-a-treasury-proposal).
+
+:::
 
 ## Treasury Inflow and Outflow
 
