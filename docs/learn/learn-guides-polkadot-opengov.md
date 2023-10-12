@@ -35,10 +35,17 @@ a referendum, you must specify the `referenda.cancel` extrinsic of referendum `2
 ![cancel-referenda-preimage-creation](../assets/cancel-referenda-preimage-creation.png)
 
 This call will cancel the referendum and return the deposit. You can also kill a referendum using
-the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit. Note that
-creating a preimage will reserve some funds proportionally to the amount of information stored
-within the preimage. In this case, the deposit was 1.33 KSM (see
-[Subscan](https://kusama.subscan.io/extrinsic/19143604-2)).
+the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit.
+
+:::info Preimage Submission Deposit
+
+A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
+to the amount of information stored within the preimage. The deposit amount required for a preimage
+with a treasury spend transaction is around
+{{ polkadot: 41 DOT :polkadot }}{{ kusama:  1.4 KSM  :kusama }}. Ensure you have enough account
+balance to pay for this submission deposit as well as the transaction fees.
+
+:::
 
 Once a preimage is submitted, it can be checked under
 [Governance > Preimages](https://polkadot.js.org/apps/#/preimages).
@@ -66,16 +73,30 @@ have been met. Failing to submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
 
-## Request Submission and Decision Deposit Back
+## Claiming the Preimage and Decision Deposits
 
-If you submitted a proposal and a referendum for such proposal has ended, you can claim your
-submission and decision deposits back by issuing the `refundSubmissionDeposit` and the
-`refundDecisionDeposit` extrinsics, respectively. Those calls will succeed if the proposal is
-completed as passing or failing.
+After a referendum finishes its life cycle (and gets approved or rejected or timed out), the
+preimage and decision deposits can be claimed. For claiming the preimage deposit, navigate to
+[Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and click on
+unnote button shown on the preimage you submitted.
 
-Users can not refund their submission deposit while the referendum is `Ongoing`. Similarly, users
-cannot refund their submission deposit if the proposal has `TimedOut` (failing to submit the
-decision deposit within a
+![Claim Preimage Deposit](../assets/claim-preimage-deposit.png)
+
+Similarly, to claim the decision deposit, navigate to
+[Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and scroll down
+to the end of the page to click on the referenda with the decision deposit and claim it.
+
+![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
+
+## Claiming the Referendum Submission Deposit
+
+The submission deposit for a referendum can be claimed
+[only if the referendum was `Approved` or `Canceled`](https://github.com/paritytech/polkadot-sdk/blob/cfb29254f74412cea35e8048d8aea94bc789fcb1/substrate/frame/referenda/src/types.rs#L261).
+The submission deposit can be claimed by issuing the `refundSubmissionDeposit` extrinsic.
+
+Users can not refund their submission deposit while the referendum is `Ongoing` or `Rejected`.
+Similarly, users cannot refund their submission deposit if the proposal has `TimedOut` (failing to
+submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout). This behavior exists so that users can refrain from
 spamming the chain with proposals that have no interest from the community. If a proposal is in the
