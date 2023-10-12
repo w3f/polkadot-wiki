@@ -546,7 +546,7 @@ For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, 
 [Delegating Voting Power](../maintain/maintain-guides-polkadot-opengov.md#delegating-voting-power)
 section on the [Polkadot OpenGov Maintenance](../maintain/maintain-guides-polkadot-opengov.md) page.
 
-## The Technical Fellowship
+## The Polkadot Technical Fellowship
 
 :::info From Technical Committee to the Technical Fellowship
 
@@ -634,12 +634,22 @@ For more information about how to submit a whitelisted proposal see the
 
 :::
 
-### Becoming a Fellowship Member
+### Becoming a Polkadot Technical Fellowship Member
 
-Currently, the only way to become a fellowship member is through an existing member who submits a
-`fellowshipCollective.addMember` extrinsic. See more information on
-[this Kusama SubSquare discussion](https://kusama.subsquare.io/post/6), which points to
-[these guidelines](https://docs.google.com/document/d/1nHa-7Na4u52CTZzq87HaKNptGjyQDWm9H7s7GRjJpMU/edit).
+The Polkadot Technical Fellowship resides on the [Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)
+parachain and maintains the [Polkadot Fellows](https://github.com/polkadot-fellows) repository. The fellowship also has its own 
+governance model with multiple tracks with approval and support parameters, where the votes are weighted by the rank of the member.  
+The fellowship governance is primarily used for its membership management, [approving RFCs](https://github.com/polkadot-fellows/RFCs)
+and whitelisting Polkadot OpenGov proposals.
+
+Currently, the only way to become a fellowship member is through a referenda. An existing member can submit a referendum with 
+the preimage of a batch call that has `fellowshipCollective.addMember` and `fellowshipCollective.promoteMember` on "2/Proficients" track.
+After the referendum is successfully executed, the member is added to the fellowship with "rank 1". For example,
+check the [Referenda 23](https://collectives.subsquare.io/fellowship/referenda/23) on the Collectives parachain.
+
+If a member has to be added and promoted to “rank 5”, the proposal has to be submitted through track “6/Senior Experts” 
+(Always a track with a rank higher). For example,
+check the [Referenda 25](https://collectives.subsquare.io/fellowship/referenda/25) on the Collectives parachain.
 
 Future plans include that public members can apply to become a Fellowship candidate by placing a
 small deposit (which will be returned once they become members). Their candidacy will go through a
