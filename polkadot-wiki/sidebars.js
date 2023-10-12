@@ -152,6 +152,7 @@ module.exports = {
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
+                "learn/learn-origin-abstraction",
                 "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
