@@ -657,10 +657,16 @@ module.exports = {
           type: "category",
           label: "Governance Guides",
           items: [
-            "maintain/maintain-guides-democracy",
             "maintain/maintain-guides-polkadot-opengov",
             "maintain/maintain-guides-how-to-join-council",
             "maintain/maintain-guides-how-to-vote-councillor",
+          ],
+        },
+        {
+          type: "category",
+          label: "Archive",
+          items: [
+            "maintain/maintain-guides-democracy",
           ],
         },
       ],
