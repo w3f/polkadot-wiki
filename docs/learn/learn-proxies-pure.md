@@ -236,6 +236,8 @@ The multi-signature account behaves as _any_ proxy of the pure. If signatories o
 multi-signature account change, a new multisig can be created, assigned as _any_ proxy of the pure,
 and then the old multisig can be removed as a proxy.
 
+![multisig with pure](../assets/multisig-with-pure.png)
+
 Compared to [Scenario Two](#scenario-two-multisig-made-of-pure-proxies), signatories do not need to
 create pure proxies here. It is a more practical solution; the number of signatories and threshold
 can be changed, but the multisig address will also change. In Scenario Two, if signatories change,
