@@ -658,8 +658,6 @@ module.exports = {
           label: "Governance Guides",
           items: [
             "maintain/maintain-guides-polkadot-opengov",
-            "maintain/maintain-guides-how-to-join-council",
-            "maintain/maintain-guides-how-to-vote-councillor",
           ],
         },
         {
@@ -667,6 +665,8 @@ module.exports = {
           label: "Archive",
           items: [
             "maintain/maintain-guides-democracy",
+            "maintain/maintain-guides-how-to-join-council",
+            "maintain/maintain-guides-how-to-vote-councillor",
           ],
         },
       ],
