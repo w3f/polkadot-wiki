@@ -43,7 +43,7 @@ A deposit is required for the preimage to be stored on chain. The preimage depos
 to the amount of information stored within the preimage. The deposit amount required for a preimage
 with a treasury spend transaction is around
 {{ polkadot: 41 DOT :polkadot }}{{ kusama:  1.4 KSM  :kusama }}. Ensure you have enough account
-balance to pay for the submission deposit and the transaction fees.
+balance to pay for this submission deposit as well as the transaction fees.
 
 :::
 
