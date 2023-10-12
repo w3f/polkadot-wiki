@@ -88,7 +88,7 @@ to the end of the page to click on the referenda with the decision deposit and c
 
 ![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
 
-## Claiming the Submission Deposit
+## Claiming the Referendum Submission Deposit
 
 The submission deposit for a referendum can be claimed
 [only if the referendum was `Approved` or `Canceled`](https://github.com/paritytech/polkadot-sdk/blob/cfb29254f74412cea35e8048d8aea94bc789fcb1/substrate/frame/referenda/src/types.rs#L261).
