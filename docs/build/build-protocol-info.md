@@ -108,9 +108,9 @@ make the transfer if doing so would result in reaping the sender's account.
 
 :::info The existential deposit is a property of the Relay Chain
 
-Your account on the Relay Chain has no direct impact on parachains as you have seperate accounts on
+Your account on the Relay Chain has no direct impact on parachains as you have separate accounts on
 each parachain. Still, parachains are able to define an existential deposit of their own, but this
-is seperate to that of the Relay Chain ED.
+is separate to that of the Relay Chain ED.
 
 :::
 

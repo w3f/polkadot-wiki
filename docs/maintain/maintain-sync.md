@@ -78,7 +78,7 @@ and Firefox as a [browser extension](https://substrate.io/developers/substrate-c
 
 :::
 
-<!--seperates content from instructions-->
+<!--separates content from instructions-->
 
 ---
 

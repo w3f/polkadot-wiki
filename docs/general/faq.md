@@ -202,7 +202,7 @@ based on the amount of DOT that are staked. Please see the article on
 
 ### Why can't crowdloaned DOT be staked?
 
-DOTs contributed to a sucessful crowdloan campaign by a parachain are bonded for the entire lease
+DOTs contributed to a successful crowdloan campaign by a parachain are bonded for the entire lease
 period, which is two years on Polkadot. The crowdloaned DOT cannot be used for any other DOT utility
 functionalities like staking and democracy. In exchange to the lost staking rewards or liquidity of
 DOTs, the parachain team may offer rewards to the contributor.
