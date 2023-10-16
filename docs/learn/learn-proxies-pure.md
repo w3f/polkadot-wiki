@@ -239,10 +239,9 @@ and then the old multisig can be removed as a proxy.
 ![multisig with pure](../assets/multisig-with-pure.png)
 
 Compared to [Scenario Two](#scenario-two-multisig-made-of-pure-proxies), signatories do not need to
-create pure proxies here. It is a more practical solution; the number of signatories and threshold
-can be changed, but the multisig address will also change. In Scenario Two, if signatories change,
+create pure proxies here. Multisig controlling a Pure Proxy is a more practical solution, where the signatories, number of signatories and/or the threshold can be changed, which changes the multisig address but does not impact the pure proxy address. In Scenario Two, if signatories behind the pure proxies change,
 the address of the multisig stays the same. However, changing the number of signatories and
-threshold will require the creation of a new multisig.
+threshold would not be possible.
 
 ## Proxy calls
 
