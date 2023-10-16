@@ -645,10 +645,12 @@ For more information about how to submit a whitelisted proposal see the
 
 ### Becoming a Polkadot Technical Fellowship Member
 
-Currently, the only way to become a fellowship member is through a referenda. An existing member can
-submit a referendum with the preimage of a batch call that has `fellowshipCollective.addMember` and
+Currently, the only way to become a fellowship member is through a referenda. To get added as a 
+member of "Rank 1", an existing member of the fellowship needs to submit a referendum with the preimage of a 
+batch call that has `fellowshipCollective.addMember` and
 `fellowshipCollective.promoteMember` on "2/Proficients" track. On Polkadot-JS UI for Polkadot
-Collectives, navigate to Governance > Fellowship > Referenda and click on "Add Preimage".
+Collectives, navigate to Governance > Fellowship > Referenda and click on "Add Preimage". This
+preimage can be submitted by anyone.
 
 ![fellowship-add-promote-member-preimage](../assets/fellowship-add-member-preimage.png)
 
