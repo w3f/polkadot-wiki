@@ -194,6 +194,9 @@ Besides being user-friendly, Multix provides several benefits compared to the Po
   adding and removing signatories or adjusting the threshold is now possible without creating new
   multisigs and Multix provides an intuitive interface to work with pure proxies.
 
+The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
+[pure proxy page](./learn-proxies-pure.md#scenario-three-multisig-controlling-a-pure-proxy).
+
 ## Decoding Multisig Call Data
 
 :::info
