@@ -223,6 +223,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Signature Aggregation            | [apk-proofs](https://github.com/w3f/apk-proofs) ⚪|
 | Distributed key generation (DKG) or management | [keygen.rs](https://github.com/isislovecruft/frost-dalek) ⚪, [Secure Wallet Origin Distribution (SWORD)](https://github.com/w3f-grants-archive/sword) ⚪|
 | Validator HSMs                   | [Zondax Remote Signer](https://github.com/Zondax/buildroot-zondax) ⚪|
+| MPC                              | [Orochi Network](https://github.com/orochi-network/orochi-network.github.io) 🟢 |
 
 ### Consensus
 
