@@ -13,6 +13,20 @@ This page is for advanced users of Polkadot OpenGov. If you would learn about an
 OpenGov, please navigate to the page on
 [participating in Polkadot Opengov.](https://wiki.polkadot.network/docs/maintain-guides-polkadot-opengov)
 
+## Delegate and Undelegate Votes
+
+![js-delegation-start](../assets/js-delegation-start.png)
+
+![js-delegation-allTracks](../assets/js-delegation-allTracks.png)
+
+![js-delegation-undelegate](../assets/js-delegation-undelegate.png)
+
+![js-delegation-undelegate](../assets/js-delegation-undelegated.png)
+
+![js-delegation-unlock](../assets/js-delegation-unlock.png)
+
+![js-delegation-delegate](../assets/js-delegation-delegate.png)
+
 ## Cancel or Kill a Referendum
 
 :::info

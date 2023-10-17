@@ -266,7 +266,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: 'Advanced Guides',
-                description: 'Advanced how-to guides.',
+                description: 'Advanced how-to guides using the Polkadot-JS User Interface.',
                 slug: '/learn-guides-index',
               },
               items: [
