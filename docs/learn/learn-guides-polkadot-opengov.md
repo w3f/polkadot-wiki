@@ -82,6 +82,13 @@ information.
 
 ## Claiming OpenGov Deposits
 
+:::info Video tutorial about how to claim OpenGov deposits
+
+See this technical explainer video to learn how you can claim submission and decision deposits for a
+referendum and how to unnote a preimage and claim the preimage's deposit.
+
+:::
+
 ### Claiming the Preimage and Decision Deposits
 
 After a referendum finishes its life cycle (and gets approved or rejected or timed out), the
