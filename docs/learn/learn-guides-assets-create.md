@@ -43,10 +43,10 @@ which is a parachain on Westend. The WND tokens (Westies) are free and are avail
 
 To create an asset on the Asset Hub, you would need a deposit of
 {{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 and around
 {{ polkadot: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :kusama }}
 for the metadata. Before you create an asset on the Asset Hub, ensure that your Asset Hub account
 balance is a bit more than the sum of those two deposits, which should seamlessly account for the
 required deposits and transaction fees. You can send
