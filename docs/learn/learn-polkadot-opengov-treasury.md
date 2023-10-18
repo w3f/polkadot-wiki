@@ -106,3 +106,9 @@ requires a decision deposit of {{ polkadot: 10 DOT :polkadot }}{{ kusama:  0.33 
 This track can be used for treasury spending requests up to
 {{ polkadot: 100 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} per referendum. Each referendum
 requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 KSM  :kusama }}.
+
+## Spending Period
+
+Awarded treasury referenda will all get funded at the end of the spending period that resets every
+{{ polkadot: <RPC network="polkadot" path="const.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
+days. If awarded, treasury funds will be sent to your account when the spending period ends.
