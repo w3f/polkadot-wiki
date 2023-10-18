@@ -41,13 +41,13 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each spending period lasting
+- **Burned tokens:** at the end of each spend period lasting
   {{ polkadot: 24 days on Polkadot, 1% :polkadot }}{{ kusama: 6 days on Kusama, 0.2% :kusama }} of
   the available funds are burned, respectively.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
-  community and need to be approved by governance. Then, payouts occur at the end of a spending
+  community and need to be approved by governance. Then, payouts occur at the end of a spend
   period.
-- **Tips:** smaller payouts directly to grantees that can happen within a spending period.
+- **Tips:** smaller payouts directly to grantees that can happen within a spend period.
 
 ## Treasury Tracks
 
@@ -106,9 +106,3 @@ requires a decision deposit of {{ polkadot: 10 DOT :polkadot }}{{ kusama:  0.33 
 This track can be used for treasury spending requests up to
 {{ polkadot: 100 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} per referendum. Each referendum
 requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 KSM  :kusama }}.
-
-## Spending Period
-
-Awarded treasury referenda will all get funded at the end of the spending period that resets every
-{{ polkadot: <RPC network="polkadot" path="const.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
-days. If awarded, treasury funds will be sent to your account when the spending period ends.
