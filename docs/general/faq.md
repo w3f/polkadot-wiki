@@ -172,7 +172,7 @@ use TPS as a measure for the network performance if all the transactions carry t
 [Performance benchmark tests](https://twitter.com/gavofyork/status/1270025498580656134) show that
 Substrate-based blockchains can achieve over 1000 TPS for balance transfer transactions. Assuming
 Polkadot is running over 100 parachains; the projected TPS is well over 100,000. With
-[asynchronous backing upgrade](../learn/learn-async-backing), the TPS is expected to increase
+[asynchronous backing upgrade](../learn/learn-async-backing.md), the TPS is expected to increase
 tenfold to 1,000,000.
 
 It is essential to realize that TPS is inherently a subjective measurement with numerous factors
@@ -202,7 +202,7 @@ based on the amount of DOT that are staked. Please see the article on
 
 ### Why can't crowdloaned DOT be staked?
 
-DOTs contributed to a sucessful crowdloan campaign by a parachain are bonded for the entire lease
+DOTs contributed to a successful crowdloan campaign by a parachain are bonded for the entire lease
 period, which is two years on Polkadot. The crowdloaned DOT cannot be used for any other DOT utility
 functionalities like staking and democracy. In exchange to the lost staking rewards or liquidity of
 DOTs, the parachain team may offer rewards to the contributor.

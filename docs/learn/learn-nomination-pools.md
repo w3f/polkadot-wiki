@@ -240,14 +240,6 @@ balance.
 
 ### Pool Commissions
 
-:::info Live on Kusama
-
-Pool commissions are currently live on Kusama. On Polkadot
-[Referendum 55](https://polkadot.polkassembly.io/referenda/55) will enable a `globalMaxCommission`
-of 10% on Polkadot and enable pool commission.
-
-:::
-
 As the pool root role, you can set pool commissions that will be applied to the staking rewards paid
 out to the pool's system account before rewards are allocated for the pool members. You can set pool
 commissions through the [Polkadot Staking Dashboard](../general/staking-dashboard.md#pools).
@@ -255,9 +247,12 @@ commissions through the [Polkadot Staking Dashboard](../general/staking-dashboar
 Three methods can be used when setting the pool commission:
 
 - **Commission Rate** (`nominationPools.setCommission` extrinsic): the start or new commission rate
-  (`newCommission` parameter) that can be set between 0% and the Max Commission (decided through
-  [governance referendum](./learn-polkadot-opengov.md)). You will need to specify an Input Payee
-  Account, i.e. the account that will receive the commission.
+  (`newCommission` parameter) that can be set between 0% and
+  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/> :polkadot }}%
+  (decided through [governance referendum](./learn-polkadot-opengov.md)) via the
+  [`globalMaxCommission`](https://paritytech.github.io/substrate/master/pallet_nomination_pools/pallet/type.GlobalMaxCommission.html)
+  parameter. You will need to specify an Input Payee Account, i.e. the account that will receive the
+  commission.
 - **Max Commission** (`nominationPools.setCommissionMax` extrinsic): the maximum commission
   (`maxCommission` parameter) the pool will apply to its members (between 0% and Max Commission).
   Note that once set, **the pool admin can only lower it**.

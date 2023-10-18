@@ -45,7 +45,7 @@ validator gets slashed.
 
 If you are a beginner, please watch the video below for detailed instructions.
 
-<iframe width="560" height="315" src="https://youtube.com/embed/F59N3YKYCRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+[![Staking Tutorial](https://img.youtube.com/vi/F59N3YKYCRs/0.jpg)](https://www.youtube.com/watch?v=F59N3YKYCRs)
 
 ## Setting up Stash and Staking Proxy Accounts
 

@@ -7,6 +7,13 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
+:::info XCM Documentation
+
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
+
+:::
+
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
 communicate between consensus systems.
 
@@ -172,7 +179,7 @@ For an updated and complete description of the cross-consensus message format pl
 - [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) -
   Technical audit report by Quarkslab prepared for Parity.
 
-- [XCM pallet code](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs) -
+- [XCM pallet code](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs) -
   The pallet that contains XCM logic from the Polkadot code repository
 
 - [XCM Config & Pallet-XCM | Polkadot Deep Dives](https://www.youtube.com/watch?v=bFMvWmU1pYI) - A

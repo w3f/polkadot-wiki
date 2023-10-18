@@ -2,120 +2,6 @@ module.exports = {
   docs: [
     {
       type: "category",
-      label: "General",
-      link: {
-        type: 'generated-index',
-        title: 'General',
-        description: 'General Information to get started with Polkadot and Web3.',
-        slug: '/general-index',
-      },
-      items: [
-        "general/getting-started",
-        {
-          type: "category",
-          label: "Polkadot Vision",
-          description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
-          link: {
-            type: 'generated-index',
-            title: 'Polkadot Vision',
-            description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
-            slug: '/polkadot-vision-index',
-          },
-          items: [
-            "general/polkadot-v1",
-          ],
-        },
-        {
-          type: "category",
-          label: "Stay Safe",
-          description: 'Good-practices to Stay Safe while Surfing in Web3.',
-          link: {
-            type: 'generated-index',
-            title: 'Stay Safe',
-            description: 'Learn about good-practices to stay safe while surfing in Web3.',
-            slug: '/stay-safe-index',
-          },
-          items: [
-            "general/scams",
-            "general/how-to-dyor",
-          ],
-        },
-        {
-          type: "category",
-          label: "Wallets",
-          description: 'Wallet Options in the Polkadot Ecosystem.',
-          link: {
-            type: 'generated-index',
-            title: 'Wallets',
-            description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
-            slug: '/wallets-index',
-          },
-          items: [
-            "general/wallets-and-extensions",
-            "general/ledger",
-            "general/polkadot-vault",
-            "general/polkadotjs-ui",
-          ],
-        },
-        {
-          type: "category",
-          label: "Dashboards",
-          description: 'Dashboards in the Polkadot Ecosystem.',
-          link: {
-            type: 'generated-index',
-            title: 'Dashboards',
-            description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
-            slug: '/dashboards-index',
-          },
-          items: [
-            "general/staking-dashboard",
-          ],
-        },
-        "general/polkadotjs",
-        {
-          type: "category",
-          label: "Community & Contributors",
-          description: 'Polkadot Community and Wiki Contributors.',
-          link: {
-            type: 'generated-index',
-            title: 'Community & Contributors',
-            description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
-            slug: '/community-index',
-          },
-          items: [
-            "general/community",
-            "general/contributing",
-            "general/contributors",
-          ],
-        },
-        {
-          type: "category",
-          label: "Programmes",
-          description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
-          link: {
-            type: 'generated-index',
-            title: 'Programmes',
-            description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
-            slug: '/programmes-index',
-          },
-          items: [
-            "general/grants",
-            "general/bug-bounty",
-            "general/ambassadors",
-            "general/builders-program",
-            "general/doc-thousand-validators",
-            "general/doc-thousand-contributors",
-            "general/dev-heroes",
-          ],
-        },
-        "general/research",
-        "general/metadata",
-        "general/faq",
-        "general/glossary",
-      ],
-    },
-    {
-      type: "category",
       label: "Learn",
       link: {
         type: 'generated-index',
@@ -124,6 +10,124 @@ module.exports = {
         slug: '/learn-index',
       },
       items: [
+        {
+          type: "category",
+          label: "General",
+          description: 'General Information to get started with Polkadot and Web3.',
+          link: {
+            type: 'generated-index',
+            title: 'General',
+            description: 'General Information to get started with Polkadot and Web3.',
+            slug: '/general-index',
+          },
+          items: [
+            "general/getting-started",
+            "general/web3-and-polkadot",
+            {
+              type: "category",
+              label: "Polkadot Vision",
+              description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot Vision',
+                description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+                slug: '/polkadot-vision-index',
+              },
+              items: [
+                "general/polkadot-v1",
+                "general/polkadot-direction",
+              ],
+            },
+            {
+              type: "category",
+              label: "Stay Safe",
+              description: 'Good-practices to Stay Safe while Surfing in Web3.',
+              link: {
+                type: 'generated-index',
+                title: 'Stay Safe',
+                description: 'Learn about good-practices to stay safe while surfing in Web3.',
+                slug: '/stay-safe-index',
+              },
+              items: [
+                "general/scams",
+                "general/how-to-dyor",
+              ],
+            },
+            {
+              type: "category",
+              label: "Wallets",
+              description: 'Wallet Options in the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Wallets',
+                description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
+                slug: '/wallets-index',
+              },
+              items: [
+                "general/wallets-and-extensions",
+                "general/ledger",
+                "general/polkadot-vault",
+                "general/polkadotjs-ui",
+              ],
+            },
+            {
+              type: "category",
+              label: "Dashboards",
+              description: 'Dashboards in the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Dashboards',
+                description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
+                slug: '/dashboards-index',
+              },
+              items: [
+                "general/staking-dashboard",
+              ],
+            },
+            "general/polkadotjs",
+            {
+              type: "category",
+              label: "Community & Contributors",
+              description: 'Polkadot Community and Wiki Contributors.',
+              link: {
+                type: 'generated-index',
+                title: 'Community & Contributors',
+                description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
+                slug: '/community-index',
+              },
+              items: [
+                "general/community",
+                "general/contributing",
+                "general/contributors",
+              ],
+            },
+            {
+              type: "category",
+              label: "Programmes",
+              description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
+              link: {
+                type: 'generated-index',
+                title: 'Programmes',
+                description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
+                slug: '/programmes-index',
+              },
+              items: [
+                "general/grants",
+                "general/bug-bounty",
+                "general/ambassadors",
+                "general/builders-program",
+                "general/doc-thousand-validators",
+                "general/doc-thousand-contributors",
+                "general/dev-heroes",
+              ],
+            },
+            "general/start-building",
+            "general/research",
+            "general/metadata",
+            "general/faq",
+            "general/glossary",
+          ],
+        },
         {
           type: "category",
           label: "Basics",
@@ -148,9 +152,11 @@ module.exports = {
               items: [
                 "learn/learn-accounts",
                 "learn/learn-account-generation",
+                "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
-                'learn/learn-proxies',
+                "learn/learn-proxies",
+                "learn/learn-proxies-pure",
               ],
             },
             {
@@ -182,6 +188,7 @@ module.exports = {
               items: [
                 "learn/learn-assets",
                 "learn/learn-DOT",
+                "learn/learn-inflation",
                 "learn/learn-teleport",
               ],
             },
@@ -279,6 +286,7 @@ module.exports = {
                   ],
                 },
                 "learn/learn-guides-polkadot-opengov",
+                "learn/learn-guides-treasury",
                 "learn/learn-guides-identity",
                 {
                   type: "category",
@@ -371,6 +379,145 @@ module.exports = {
         },
         {
           type: "category",
+          label: "XCM Docs",
+          description: "In-depth documentation about the Polkadot's Cross-Chain Messaging (XCM).",
+          link: {
+            type: 'generated-index',
+            title: "XCM Documentation",
+            description: "In-depth documentation about the Polkadot's Cross-Chain Messaging (XCM).",
+            slug: 'learn/xcm',
+          },
+          items: [
+            "learn/xcm/learn-xcm-docs-intro",
+            {
+              type: "category",
+              label: "Overview",
+              description: "Overview of the XCM Documentation.",
+              link: {
+                type: 'generated-index',
+                title: "Overview",
+                description: "Overview of the XCM Documentation.",
+                slug: '/learn/xcm/overview',
+              },
+              items: [
+                "learn/xcm/overview/learn-xcm-docs-overview-summary",
+                "learn/xcm/overview/learn-xcm-docs-overview-intro",
+                "learn/xcm/overview/learn-xcm-docs-overview-format",
+                "learn/xcm/overview/learn-xcm-docs-overview-xcvm",
+                "learn/xcm/overview/learn-xcm-docs-overview-architecture",
+              ],
+            },
+            {
+              type: "category",
+              label: "Quickstart",
+              description: "Start Diving into XCM.",
+              link: {
+                type: 'generated-index',
+                title: "Quickstart",
+                description: "Start Diving into XCM.",
+                slug: '/learn/xcm/quickstart',
+              },
+              items: [
+                "learn/xcm/quickstart/learn-xcm-docs-quickstart-summary",
+                "learn/xcm/quickstart/learn-xcm-docs-quickstart-simulator",
+                "learn/xcm/quickstart/learn-xcm-docs-quickstart-first-look",
+              ],
+            },
+            {
+              type: "category",
+              label: "Fundamentals",
+              description: "Fundamental Concepts about XCM.",
+              link: {
+                type: 'generated-index',
+                title: "Fundamentals",
+                description: "Fundamental Concepts about XCM.",
+                slug: '/learn/xcm/fundamentals',
+              },
+              items: [
+                "learn/xcm/fundamentals/learn-xcm-docs-fundamentals-summary",
+                {
+                  type: "category",
+                  label: "MultiLocation",
+                  description: "The MultiLocation Type.",
+                  link: {
+                    type: 'generated-index',
+                    title: "MultiLocation",
+                    description: "The MultiLocation Type.",
+                    slug: '/learn/xcm/fundamentals/multilocation',
+                  },
+                  items: [
+                    "learn/xcm/fundamentals/multilocation/learn-xcm-docs-multilocation-summary",
+                    "learn/xcm/fundamentals/multilocation/learn-xcm-docs-multilocation-junctions",
+                    "learn/xcm/fundamentals/multilocation/learn-xcm-docs-multilocation-example",
+                  ],
+                },
+                "learn/xcm/fundamentals/learn-xcm-docs-fundamentals-multiasset",
+                "learn/xcm/fundamentals/learn-xcm-docs-fundamentals-xcvm",
+                "learn/xcm/fundamentals/learn-xcm-docs-fundamentals-fees",
+              ],
+            },
+            {
+              type: "category",
+              label: "A Journey through XCM",
+              description: "A Practical Introduction to the XCM Features",
+              link: {
+                type: 'generated-index',
+                title: "A Journey through XCM",
+                description: "A Practical Introduction to the XCM Features.",
+                slug: '/learn/xcm/journey',
+              },
+              items: [
+                "learn/xcm/journey/learn-xcm-docs-journey-summary",
+                {
+                  type: "category",
+                  label: "Transfers",
+                  description: "Transferring Assets between Consensus Systems with XCM.",
+                  link: {
+                    type: 'generated-index',
+                    title: "Transfers",
+                    description: "Transferring Assets between Consensus Systems with XCM.",
+                    slug: '/learn/xcm/journey/transfers',
+                  },
+                  items: [
+                    "learn/xcm/journey/transfers/learn-xcm-docs-transfers-summary",
+                    "learn/xcm/journey/transfers/learn-xcm-docs-transfers-teleport",
+                    "learn/xcm/journey/transfers/learn-xcm-docs-transfers-reserve",
+                  ],
+                },
+                "learn/xcm/journey/learn-xcm-docs-journey-fees",
+                "learn/xcm/journey/learn-xcm-docs-journey-transact",
+                "learn/xcm/journey/learn-xcm-docs-journey-origin",
+                "learn/xcm/journey/learn-xcm-docs-journey-register",
+                "learn/xcm/journey/learn-xcm-docs-journey-holding",
+                "learn/xcm/journey/learn-xcm-docs-journey-assets",
+                "learn/xcm/journey/learn-xcm-docs-journey-expectations",
+                "learn/xcm/journey/learn-xcm-docs-journey-queries",
+                "learn/xcm/journey/learn-xcm-docs-journey-version",
+                "learn/xcm/journey/locks/learn-xcm-docs-journey-locks",
+                "learn/xcm/journey/learn-xcm-docs-journey-channels",
+              ],
+            },
+            "learn/xcm/executor_config/learn-xcm-docs-config-deep-dive",
+            "learn/xcm/learn-xcm-docs-testing",
+            {
+              type: "category",
+              label: "References",
+              description: "XCVM Registers and Glossary",
+              link: {
+                type: 'generated-index',
+                title: "References",
+                description: "References.",
+                slug: '/learn/xcm/references',
+              },
+              items: [
+                "learn/xcm/reference/learn-xcm-docs-reference-xcvm-registers",
+                "learn/xcm/reference/learn-xcm-docs-reference-glossary",
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
           label: "Polkadot Comparisons",
           description: "Comparison between Polkadot and other Networks. ",
           link: {
@@ -402,6 +549,8 @@ module.exports = {
           items: [
             'learn/learn-spree',
             "learn/learn-parathreads",
+            "learn/learn-async-backing",
+            "learn/learn-sassafras",
           ],
         },
         {

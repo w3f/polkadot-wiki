@@ -3,7 +3,7 @@ id: learn-account-multisig
 title: Multi-Signature Accounts
 sidebar_label: Multi-Signature Accounts
 description: Multi-signature Accounts on Polkadot.
-keywords: [account, multisig, polkadot account, polkadotjs]
+keywords: [account, multisig, polkadot account, polkadotjs, multix]
 slug: ../learn-account-multisig
 ---
 
@@ -37,8 +37,9 @@ Multi-signature accounts have several uses:
 - board decisions: legal entities such as businesses and foundations use multisigs to govern over
   the entity's treasury collectively.
 - group participation in governance: a multisig account can do everything a regular account can. A
-  multisig account could be a council member in Kusama's governance, where a set of community
-  members could vote as one entity.
+  multisig account could be a council member in
+  {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} governance, where a set of
+  community members could vote as one entity.
 
 Multi-signature accounts **cannot be modified after being created**. Changing the set of members or
 altering the threshold is not possible and instead requires the dissolution of the current multisig
@@ -52,7 +53,7 @@ threshold, they will immediately have access to these tokens.
 
 ### Multisig Transactions with Accounts Tab
 
-:::info Waltkthrough Video Tutorial
+:::info Walkthrough Video Tutorial
 
 See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with
 a multisig account using the Accounts Tab in the
@@ -189,9 +190,12 @@ Besides being user-friendly, Multix provides several benefits compared to the Po
   their interface.
 - There is no need to pass around the call data to confirm a transaction. Such information is
   retrieved from the chain and displayed to the users.
-- Thanks to the power of [pure proxies](../learn/learn-proxies.md#anonymous-proxy-pure-proxy),
+- Thanks to the power of [pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy),
   adding and removing signatories or adjusting the threshold is now possible without creating new
   multisigs and Multix provides an intuitive interface to work with pure proxies.
+
+The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
+[pure proxy page](./learn-proxies-pure.md#scenario-three-multisig-controlling-a-pure-proxy).
 
 ## Decoding Multisig Call Data
 

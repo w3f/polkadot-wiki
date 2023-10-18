@@ -33,6 +33,11 @@ parachain candidate block is valid or invalid.
 
 Parachain auctions are how non-common-good parathreads win a slot to become a parachain.
 
+## Aura
+
+Authority-based round-robin scheduling (AURA) provides a slot-based block authoring mechanism, where
+a known set of authorities take turns producing blocks.
+
 ## Authority
 
 An authority is a generic term for the role in a blockchain that can participate in the consensus
@@ -65,7 +70,11 @@ blockchain.
 
 ## Blockspace
 
-[Blockspace](https://polkadot.network/blog/blockspace-blockspace-ecosystems-how-polkadot-is-unlocking-the-full-potential-of-web3) is the capacity of a blockchain to finalize and commit operations. It represents a blockchain's security, computing, and storage capability as an end product. Blockspace produced by different blockchains can vary in quality, availability, and flexibility. Polkadot has a [blockspace-centric architecture](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/). 
+[Blockspace](https://polkadot.network/blog/blockspace-blockspace-ecosystems-how-polkadot-is-unlocking-the-full-potential-of-web3)
+is the capacity of a blockchain to finalize and commit operations. It represents a blockchain's
+security, computing, and storage capability as an end product. Blockspace produced by different
+blockchains can vary in quality, availability, and flexibility. Polkadot has a
+[blockspace-centric architecture](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/).
 
 ## Block Explorer
 
@@ -774,7 +783,8 @@ before the watermark are guaranteed to be processed.
 
 A Switzerland-based foundation that nurtures and stewards technologies and applications in the
 fields of decentralized web software protocols, particularly those that utilize modern cryptographic
-methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
+methods to safeguard decentralization, to the benefit and for the stability of the
+[Web3 ecosystem](./web3-and-polkadot.md).
 
 ## WebAssembly
 

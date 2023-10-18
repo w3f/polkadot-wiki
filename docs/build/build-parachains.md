@@ -139,7 +139,7 @@ parachain. They can be incentivized with a native token payout from:
 
 - Transaction fees collected
 - Parathread token sponsorship
-  - Blocks are naturally produced when a parathread bid is less than the native token payout.
+- Blocks are naturally produced when a parathread bid is less than the native token payout.
 
 ### Para-objects
 
@@ -158,7 +158,7 @@ These could be in the form of:
 - System level chains (permanent chains): [leased slots](../learn/learn-auction.md),
   [parathread pool](../learn/learn-parathreads.md)
 - [Bridge](../learn/learn-bridges.md) Hubs
-- Nested Relay Chains: [Polkadot 2.0](../learn/learn-launch.md##polkadot2.0)
+- Nested Relay Chains
 
 ### Migration
 

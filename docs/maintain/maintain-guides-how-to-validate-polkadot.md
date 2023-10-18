@@ -82,12 +82,10 @@ instead.
 
 ## Initial Set-up
 
-:::
-
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is best to use a recent
+choose whatever [VPS](#note-about-vps) provider that you prefer. As OS it is best to use a recent
 Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
@@ -181,17 +179,28 @@ If it is not enabled, please see the
 [official docs ("Kernel support")](https://docs.kernel.org/userspace-api/landlock.html#kernel-support)
 if you would like to build Linux with landlock enabled.
 
-### Installing the `polkadot` binary
+### Installing the Polkadot binaries
+
+:::info Multiple Validator Binaries
+
+In addition to the `polkadot` binary, recent changes have separated out functionality into two
+additional needed binaries, `polkadot-prepare-worker`, and `polkadot-execute-worker`. All three
+binaries are needed to properly run a validator node. More context on these changes can be found
+[here](https://github.com/paritytech/polkadot/pull/7337)
+
+:::
 
 #### Installation from official releases
 
-The official `polkadot` binaries can be downloaded from the
-[Github Releases](https://github.com/paritytech/polkadot/releases). You should download the latest
-available version. You can also download the binary by using the following direct link (replace
-X.Y.Z by the appropriate version):
+The official binaries can be downloaded from the
+[Github Releases](https://github.com/paritytech/polkadot-sdk/releases). You should download the
+latest available version. You can also download the binaries by using the following direct links
+(replace X.Y.Z by the appropriate version):
 
 ```sh
-https://github.com/paritytech/polkadot/releases/download/vX.Y.Z/polkadot
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot-execute-worker
+https://github.com/paritytech/polkadot-sdk/releases/download/polkadot-vX.Y.Z/polkadot-prepare-worker
 ```
 
 #### Optional: Installation with Package Managers
@@ -232,17 +241,7 @@ dnf config-manager --set-enabled polkadot
 dnf install polkadot
 ```
 
-After installing Polkadot, you can verify the installation by running
-
-```bash
-which polkadot
-```
-
-It should return
-
-```bash
-/usr/bin/polkadot
-```
+Make sure you verify the installation (see the "Verify the installation" section).
 
 :::note By default, the Polkadot systemd service is disabled
 
@@ -251,6 +250,8 @@ To start the service, run:
 ```bash
 sudo systemctl start polkadot.service
 ```
+
+:::
 
 #### Optional: Installation with Ansible
 
@@ -267,9 +268,7 @@ Hub (replace X.Y.Z by the appropriate version):
 docker.io/parity/polkadot:vX.Y.Z
 ```
 
-:::
-
-### Building the `polkadot` binary from sources
+### Optional: Building the Polkadot binaries from sources
 
 #### Prerequisites: Install Rust and Dependencies
 
@@ -321,36 +320,40 @@ Polkadot node software.
 sudo apt install make clang pkg-config libssl-dev build-essential
 ```
 
-Note - if you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the
-following equivalent command INSTEAD of the previous one:
+:::note
+
+If you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the following
+equivalent command INSTEAD of the previous one:
 
 ```sh
 brew install cmake pkg-config openssl git llvm
 ```
 
-### Build the Polkadot Binary from sources
+:::
 
-You can build the `polkadot` binary from the
-[paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub.
+#### Building the binaries
+
+You can build the Polkadot binaries from the
+[paritytech/polkadot-sdk](https://github.com/paritytech/polkadot-sdk) repository on GitHub.
 
 You should generally use the latest **X.Y.Z** tag. You should either review the output from the "git
-tag" command or view the [Polkadot Github tags](https://github.com/paritytech/polkadot/tags) to see
-a list of all the available release versions. You should replace `VERSION` below with the latest
-build (i.e., the highest number).
+tag" command or view the [Polkadot SDK Github tags](https://github.com/paritytech/polkadot-sdk/tags)
+to see a list of all the available release versions. You should replace `VERSION` below with the
+latest build (i.e., the highest number).
 
 :::note
 
 If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 
 ```sh
-git clone git@github.com:paritytech/polkadot.git
+git clone git@github.com:paritytech/polkadot-sdk.git
 ```
 
 :::
 
 ```sh
-git clone https://github.com/paritytech/polkadot.git
-cd polkadot
+git clone https://github.com/paritytech/polkadot-sdk.git
+cd polkadot-sdk/polkadot
 ```
 
 Run the following command to find the latest version.
@@ -366,10 +369,11 @@ git checkout VERSION
 ./scripts/init.sh
 ```
 
-Build native code with the production profile.
+Build native code with the production profile. The following will make sure that the binaries are
+all in your `$PATH`.
 
 ```sh
-cargo build --profile production
+cargo install --force --path . --profile production
 ```
 
 **_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
@@ -401,8 +405,30 @@ directory. You may then take the generated `subkey` executable and transfer it t
 machine for extra security.
 
 ```sh
-cargo install --force --git https://github.com/paritytech/substrate subkey
+cargo install --force --git https://github.com/paritytech/polkadot-sdk subkey
 ```
+
+### Verify the installation
+
+After installing Polkadot, you can verify the installation by running
+
+```bash
+polkadot --version
+polkadot-execute-worker --version
+polkadot-prepare-worker --version
+```
+
+It should return something like this (the exact versions don't matter, but they must all be the
+same):
+
+```bash
+0.9.43-36264cb36db
+0.9.43-36264cb36db
+0.9.43-36264cb36db
+```
+
+If not, make sure that you installed all the binaries, all the binaries are somewhere in your
+`$PATH` and they are all in the same folder.
 
 ### Synchronize Chain Data
 
@@ -520,37 +546,43 @@ a non-canonical chain.
 
 ## Bond DOT
 
-It is highly recommended that you set a stash account and a staking proxy. For this, you will create
-two accounts and make sure each of them have at least enough funds to pay the fees for making
-transactions. Keep most of your funds in the stash account since it is meant to be the custodian of
-your staking funds.
+To start a validator instance on Polkadot, the minimum bond required is
+{{ polkadot: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :kusama }}
+But to enter the active validator set and be eligible to earn rewards, your validator node should be
+nominated by a minimum number of DOT tokens. On Polkadot, the minimum stake backing a validator in
+the active set is
+{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
+{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
+{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
+On Kusama, the minimum stake backing a validator in the active set is
+{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
+{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
+era
+{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
+{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 
-:::info Controller accounts are deprecated
+If you are validator who intends to get DOT/KSM nominations from the community, you will need to
+show some skin in the game. For that, you need to bond some DOT/KSM as own stake. Make sure not to
+bond all your DOT balance since you will be unable to pay transaction fees from your bonded balance.
+
+:::info Controller accounts are deprecated. Use Staking Proxy.
 
 Controller accounts are deprecated. For more information, see
 [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+It is highly recommended that you setup an account with a staking proxy, which can be used for
+issuing start and stop validating calls. Read more about [proxy accounts](../learn/learn-proxies)
+here.
 
 :::
-
-Make sure not to bond all your DOT balance since you will be unable to pay transaction fees from
-your bonded balance.
-
-It is now time to set up our validator. We will do the following:
-
-- Bond the DOT of the Stash account. These DOT will be put at stake for the security of the network
-  and can be slashed.
-- Select the staking proxy. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "+ Stash" button.
 
 ![bonding-JS-UI](../assets/JS-UI-bond.png)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 1 DOT, where the
-  minimum bonding amount is 1. Make sure that your Stash account contains _at least_ this much. You
-  can, of course, stake more than this.
-- **Staking proxy account** - Select the staking proxy account created earlier. This account will
-  also need a small amount of DOT in order to start and stop validating.
+- **Stash account** - Select your Stash account (which is the acocunt with the DOT/KSM balance)
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
@@ -558,8 +590,8 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](../learn/learn-staking.md/#reward-distribution). Starting with runtime version v23 natively
   included in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3),
-  payouts can go to any custom address. If you'd like to redirect payments to an account that is
-  neither the staking proxy nor the stash account, set one up. Note that it is extremely unsafe to
+  payouts can go to any custom address. If you'd like to redirect payments to an account that is not
+  the stash account, you can do it by entering the address here. Note that it is extremely unsafe to
   set an exchange address as the recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
@@ -572,8 +604,6 @@ After a few seconds, you should see an `ExtrinsicSuccess` message.
 Your bonded account will available under `Stashes`. You should now see a new card with all your
 accounts (note: you may need to refresh the screen). The bonded amount on the right corresponds to
 the funds bonded by the Stash account.
-
-![stash overview](../assets/JS-UI-stash-overview.png)
 
 ## Set Session Keys
 

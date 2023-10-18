@@ -229,7 +229,11 @@ from the treasury at once.
 
 ### Submitting a Preimage
 
-The act of creating a proposal is split from submitting the preimage for the proposal since the storage cost of submitting a large preimage could be expensive. Allowing the preimage submission to come as a separate transaction means that another account could submit the preimage for you and pay the fee. The example below demonstrates the creation of a preimage to propose and approve a spend of treasury funds.
+The act of creating a proposal is split from submitting the preimage for the proposal since the
+storage cost of submitting a large preimage could be expensive. Allowing the preimage submission to
+come as a separate transaction means that another account could submit the preimage for you and pay
+the fee. The example below demonstrates the creation of a preimage to propose and approve a spend of
+treasury funds.
 
 ![submit preimage](../assets/governance/opengov-submit-preimage.png)
 
@@ -237,11 +241,12 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 
 1. Navigate to Governance -> Referenda.
 2. Click on the "Add preimage" button.
-3. From the *propose* drop-down field, select `treasury`.
-4. From the unlabeled drop-down field to the right of the *propose* drop-down field, select `spend(amount, beneficiary)`.
+3. From the _propose_ drop-down field, select `treasury`.
+4. From the unlabeled drop-down field to the right of the _propose_ drop-down field, select
+   `spend(amount, beneficiary)`.
 5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount.
-6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by default. Select the beneficiary from the `Id: AccountId` drop-down field.
-
+6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by
+   default. Select the beneficiary from the `Id: AccountId` drop-down field.
 
 :::info
 
@@ -252,10 +257,7 @@ Copy the `preimage hash` value before clicking the "Submit preimage" button.
 7. Click the "Submit preimage" button.
 
 After the preimage is submitted successfully on-chain, Polkadot-JS UI lists it under the tab of
-Governance -> Preimages.  
-
-
-
+Governance -> Preimages.
 
 ### Submitting a Proposal
 
@@ -359,7 +361,7 @@ To make multi-role delegation easy and intuitive,
 displays the list of delegates and their details. The video tutorial below walks through the
 features of the Delegation Dashboard and shows how to perform multi-role delegation.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RapBYZc5ZPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
 
 For detailed instructions on how to delegate your voting power using dashboard, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power)

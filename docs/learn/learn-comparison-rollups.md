@@ -71,7 +71,7 @@ approach:
 Optimistic rollups are often used in the Ethereum ecosystem. Examples of optimistic EVM-based rollup
 solutions include:
 
-- [Optimisim](https://www.optimism.io/)
+- [Optimism](https://www.optimism.io/)
 - [Arbitrum](https://bridge.arbitrum.io/)
 - [Unipig](https://unipig.exchange/welcome)
 

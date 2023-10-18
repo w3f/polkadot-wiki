@@ -308,7 +308,7 @@ include:
 - **Support Curve**: the curve describing the minimum % of all votes in support of a proposal as a
   function of time within the Decision Period. The support % is defined as the portion of all votes
   (_aye_ and _abstained_) without conviction over the total possible amount of votes in the system
-  (i.e. the total issuance).
+  (i.e. the total active issuance).
 
 For example, a runtime upgrade (requiring a `set_code` call, if approved) does not have the same
 implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and
@@ -442,6 +442,20 @@ days. For additional information regarding the timeline of governance events, ch
 governance section on the
 {{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
+:::info do votes stack?
+
+You can use the same number of tokens to vote on different referenda. Votes with conviction do not
+stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
+and C with 2x conviction you would have 10 votes on all those referenda and 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
+(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+countdown starting when the last referendum you voted on ends (assuming you are on the winning
+side). If you voted with conviction on referendum and then a week later voted on another one with
+the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+extended by a week (always assuming you are on the winning side).
+
+:::
+
 :::info Staked tokens can be used in governance
 
 While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
@@ -532,7 +546,7 @@ For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, 
 [Delegating Voting Power](../maintain/maintain-guides-polkadot-opengov.md#delegating-voting-power)
 section on the [Polkadot OpenGov Maintenance](../maintain/maintain-guides-polkadot-opengov.md) page.
 
-## The Technical Fellowship
+## The Polkadot Technical Fellowship
 
 :::info From Technical Committee to the Technical Fellowship
 
@@ -540,6 +554,9 @@ The Polkadot Technical Fellowship is a collection of Substrate experts. This fel
 established in 2022. In Polkadot OpenGov, this fellowship replaces the
 [Technical Committee](./learn-governance.md#technical-committee) in Governance v1, and will serve
 both the Polkadot and Kusama networks.
+
+For more information about the Fellowship see the
+[Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
 
 :::
 
@@ -557,6 +574,15 @@ The mechanism by which the Fellowship votes is the same as what is used for Polk
 stakeholder voting for a proposed referendum. Members of the Fellowship can vote on any given
 Fellowship proposal and the aggregated opinion of the members (weighted by their rank) constitutes
 the Fellowship's considered opinion.
+
+The Polkadot Technical Fellowship resides on the
+[Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)
+parachain and maintains the [Polkadot Fellows](https://github.com/polkadot-fellows) repository. The
+fellowship also has its own governance model with multiple tracks with approval and support
+parameters, where the votes are weighted by the rank of the member.  
+The fellowship governance is primarily used for its membership management,
+[approving RFCs](https://github.com/polkadot-fellows/RFCs) and whitelisting Polkadot OpenGov
+proposals.
 
 {{ kusama: <Fellowship network="kusama" defaultValue="Loading Kusama Fellows..."/> :kusama }}
 
@@ -591,7 +617,8 @@ referendum.
 ### Whitelisting
 
 Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
-execute with Root-level privileges for calls that have been approved by the Fellowship.
+execute with Root-level privileges for calls that have been approved by the Fellowship (currently
+only level-three fellows and above can vote for whitelist calls).
 
 The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
 Origin to escalate the privilege level of another Origin for a certain operation. The pallet
@@ -616,12 +643,30 @@ For more information about how to submit a whitelisted proposal see the
 
 :::
 
-### Becoming a Fellowship Member
+### Becoming a Polkadot Technical Fellowship Member
 
-Currently, the only way to become a fellowship member is through an existing member who submits a
-`fellowshipCollective.addMember` extrinsic. See more information on
-[this Kusama SubSquare discussion](https://kusama.subsquare.io/post/6), which points to
-[these guidelines](https://docs.google.com/document/d/1nHa-7Na4u52CTZzq87HaKNptGjyQDWm9H7s7GRjJpMU/edit).
+Currently, the only way to become a fellowship member is through a referenda. To get added as a
+member of "Rank 1", an existing member of the fellowship needs to submit a referendum with the
+preimage of a batch call that has `fellowshipCollective.addMember` and
+`fellowshipCollective.promoteMember` on "2/Proficients" track. On Polkadot-JS UI for Polkadot
+Collectives, navigate to Governance > Fellowship > Referenda and click on "Add Preimage". This
+preimage can be submitted by anyone.
+
+![fellowship-add-promote-member-preimage](../assets/fellowship-add-member-preimage.png)
+
+After the preimage is successfully noted, navigate to Governance > Fellowship > Referenda and click
+on "Submit Proposal" (This button is active on the UI only if you have an account that belongs to
+the Fellowship). Choose the appropriate track and the origin, and enter the preimage hash of the
+batch call that adds and promotes the member.
+
+![fellowship-add-promote-member-proposal](../assets/fellowship-add-member-proposal.png)
+
+After the referendum is successfully executed, the member is added to the fellowship with "rank 1".
+For example, check the [Referenda 23](https://collectives.subsquare.io/fellowship/referenda/23) on
+the Collectives parachain. If a member has to be added and promoted to “rank 5”, the proposal has to
+be submitted through track “6/Senior Experts” (Always a track with a rank higher). For example,
+check the [Referenda 25](https://collectives.subsquare.io/fellowship/referenda/25) on the
+Collectives parachain.
 
 Future plans include that public members can apply to become a Fellowship candidate by placing a
 small deposit (which will be returned once they become members). Their candidacy will go through a

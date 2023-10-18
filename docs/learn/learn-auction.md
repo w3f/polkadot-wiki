@@ -13,7 +13,7 @@ import AuctionSchedule from "./../../components/Auction-Schedule";
 
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
-parachain slots. The number of parachain slots is are not unbounded on
+parachain slots. The number of parachain slots is not unbounded on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, as only a limited number are
 available. A limited number of slots are unlocked every few months through on-chain governance. If a
 parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a
@@ -96,8 +96,7 @@ auction on Kusama. Keep in mind that the candle phase has a uniform termination 
 equal probability of ending at any given block, and the termination block cannot be predicted before
 or during the auction.
 
-- Auction 9 starts at
-  [`block 9362014`](https://kusama.subscan.io/extrinsic/0x7b67d653c9522b623a97e20a967b83a8517fe3821370475ddb6611cd37c29a03?event=9335014-26).
+- The ending period of auction 9 starts at [`block 9362014`](https://kusama.subscan.io/auction/9).
 
   :::note The auction has a full duration equal to `block 9362014` + `72000`
 
@@ -329,7 +328,7 @@ until it wins a new slot.
 ## Resources
 
 - [How do Parachain Slot Auctions Work](https://support.polkadot.network/support/solutions/articles/65000182287-how-does-a-parachain-slots-auction-work-)
-- [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
+- [Parachain Allocation](https://research.web3.foundation/Polkadot/overview/parachain-allocation) -
   W3F research page on parachain allocation that goes more in depth to the mechanism
 - [Research Update: The Case for Candle Auctions](https://polkadot.network/blog/research-update-the-case-for-candle-auctions/) -
   W3F breakdown and research update about candle auctions

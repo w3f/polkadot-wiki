@@ -9,6 +9,10 @@ slug: ../learn-guides-polkadot-opengov
 
 import RPC from "./../../components/RPC-Connection";
 
+This page is for advanced users of Polkadot OpenGov. If you would learn about and participate in
+OpenGov, please navigate to the page on
+[participating in Polkadot Opengov.](https://wiki.polkadot.network/docs/maintain-guides-polkadot-opengov)
+
 ## Cancel or Kill a Referendum
 
 :::info
@@ -24,17 +28,24 @@ attain
 :::
 
 To cancel a referendum, you need first to submit a preimage. Go to the
-[Polkadot-JS UI > Governace > Referenda](https://polkadot.js.org/apps/#/referenda) and click on the
+[Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and click on the
 "Add Preimage" button. You must specify the specific call enacted if the proposal passes. To cancel
 a referendum, you must specify the `referenda.cancel` extrinsic of referendum `249`.
 
 ![cancel-referenda-preimage-creation](../assets/cancel-referenda-preimage-creation.png)
 
 This call will cancel the referendum and return the deposit. You can also kill a referendum using
-the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit. Note that
-creating a preimage will reserve some funds proportionally to the amount of information stored
-within the preimage. In this case, the deposit was 1.33 KSM (see
-[Subscan](https://kusama.subscan.io/extrinsic/19143604-2)).
+the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit.
+
+:::info Preimage Submission Deposit
+
+A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
+to the amount of information stored within the preimage. The deposit amount required for a preimage
+with a treasury spend transaction is around
+{{ polkadot: 41 DOT :polkadot }}{{ kusama:  1.4 KSM  :kusama }}. Ensure you have enough account
+balance to pay for this submission deposit as well as the transaction fees.
+
+:::
 
 Once a preimage is submitted, it can be checked under
 [Governance > Preimages](https://polkadot.js.org/apps/#/preimages).
@@ -61,3 +72,40 @@ within the track, and a
 have been met. Failing to submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
+
+## Claiming the Preimage and Decision Deposits
+
+After a referendum finishes its life cycle (and gets approved or rejected or timed out), the
+preimage and decision deposits can be claimed. For claiming the preimage deposit, navigate to
+[Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and click on
+unnote button shown on the preimage you submitted.
+
+![Claim Preimage Deposit](../assets/claim-preimage-deposit.png)
+
+Similarly, to claim the decision deposit, navigate to
+[Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and scroll down
+to the end of the page to click on the referenda with the decision deposit and claim it.
+
+![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
+
+## Claiming the Referendum Submission Deposit
+
+The submission deposit for a referendum can be claimed
+[only if the referendum was `Approved` or `Canceled`](https://github.com/paritytech/polkadot-sdk/blob/cfb29254f74412cea35e8048d8aea94bc789fcb1/substrate/frame/referenda/src/types.rs#L261).
+The submission deposit can be claimed by issuing the `refundSubmissionDeposit` extrinsic.
+
+Users can not refund their submission deposit while the referendum is `Ongoing` or `Rejected`.
+Similarly, users cannot refund their submission deposit if the proposal has `TimedOut` (failing to
+submit the decision deposit within a
+{{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
+period will lead to a referendum timeout). This behavior exists so that users can refrain from
+spamming the chain with proposals that have no interest from the community. If a proposal is in the
+`TimedOut` state, any user can call `slash_proposal_deposit`, which will move the funds from the
+user to a runtime-configured account, like the treasury.
+
+To refund your slashed deposit, you can start a new referendum and specifically request a refund
+from the treasury. You need to make sure you have enough balance for a new submission and decision
+deposit, and you will need to select the right track to ask for a refund. For example, the
+[Small Tipper Track](../maintain/maintain-guides-polkadot-opengov.md#small-tipper) would be fine for
+any kind of deposit refund up to
+{{ polkadot: 250 DOT :polkadot }}{{ kusama: 8.25 KSM KSM :kusama }}.

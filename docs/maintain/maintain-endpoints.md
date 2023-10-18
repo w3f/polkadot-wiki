@@ -31,6 +31,7 @@ tables below list these endpoints.
 | ------- | ----------------------------- |
 | Westend | wss://westend-rpc.polkadot.io |
 | Rococo  | wss://rococo-rpc.polkadot.io  |
+| Wococo  | wss://wococo-rpc.polkadot.io  |
 
 #### Example usage with Polkadot-JS API
 
@@ -72,6 +73,7 @@ service, and additional metrics.
 - [Dwellir](https://dwellir.com)
 - [Pinknode](https://pinknode.io)
 - [Radium Block](https://radiumblock.com/)
+- [1RPC](https://1rpc.io/)
 
 :::note
 

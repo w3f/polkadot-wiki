@@ -15,7 +15,7 @@ with anyone, they can access your account, including your funds. This informatio
 for hackers and malicious actors. Check out the wiki doc on
 [how to recognize scams](../general/scams.md).
 
-<iframe width="560" height="315" src="https://youtube.com/embed/ARsdXZycJAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+[![Account Creation Tutorial](https://img.youtube.com/vi/ARsdXZycJAg/0.jpg)](https://www.youtube.com/watch?v=ARsdXZycJAg)
 
 :::info
 
@@ -105,7 +105,7 @@ to learn how to restore your account on the Polkadot-JS UI.
 
 ## Polkadot-JS Browser Extension
 
-<iframe width="560" height="315" src="https://youtube.com/embed/DNU0p5G0Gqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/><br/>
+[![Polkadot-JS Browser Extension Tutorial](https://img.youtube.com/vi/DNU0p5G0Gqc/0.jpg)](https://www.youtube.com/watch?v=DNU0p5G0Gqc)
 
 :::info
 
@@ -242,7 +242,7 @@ password for an account created on the Polkadot-JS UI (i.e. a non-injected accou
 If you create an account first using Polkadot-JS Apps UI and then add it to the browser extension,
 you need to follow the
 [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
-the password of such an account.
+password of such an account.
 
 :::
 

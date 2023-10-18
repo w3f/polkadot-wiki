@@ -7,7 +7,15 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-pallet
 ---
 
-The XCM pallet ([`pallet-xcm`](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm))
+:::info XCM Documentation
+
+For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
+mind that XCM is under active development.
+
+:::
+
+The XCM pallet
+([`pallet-xcm`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs))
 provides a set of pre-defined, commonly used XCVM programs in the form of a set of extrinsics using
 [FRAME](https://docs.substrate.io/reference/frame-pallets/).
 
@@ -35,13 +43,13 @@ handle and execute these programs.
 There are two primary primitive extrinsics. These extrinsics handle sending and executing XCVM
 programs as dispatchable functions within the pallet.
 
-1. [`execute`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L871) -
+1. [`execute`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L902) -
    This call contains direct access to the XCM executor. It is the job of the executor to check the
    message and ensure that no barrier/filter will block the execution of the XCM. Once it is deemed
    valid, the message will then be _locally_ executed, therein returning the outcome as an event.
    This operation is executed on behalf of whichever account has signed the extrinsic. It's possible
    for only a partial execution to occur.
-2. [`send`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L761) -
+2. [`send`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L769) -
    This call specifies where a message should be sent
    ([via a transport method](./learn-xcm-transport.md)) externally to a particular destination, i.e.
    a parachain, smart contract, or any system which is governed by consensus. In contrast to
@@ -67,13 +75,13 @@ instructions for sending and executing XCMs. Two variants of these functions are
 
 Otherwise, the fee is taken as needed from the asset being transferred.
 
-1. [`reserve_transfer_assets`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L823) -
+1. [`reserve_transfer_assets`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L872) -
    Transfer some assets from the local chain to the sovereign account of a destination chain and
    forward an XCM containing a
    [`ReserveAssetDeposited`](https://github.com/paritytech/xcm-format#reserveassetdeposited)
    instruction, which serves as a notification.
 
-2. [`teleport_assets`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L777) -
+2. [`teleport_assets`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L827) -
    Teleport some assets from the local chain to some destination chain.
 
 ### Transfer Reserve vs. Teleport
@@ -109,16 +117,16 @@ communication between these sovereign accounts that are in other consensus syste
 The following extrinsics require root, as they are only used when bypassing XCM version negotiation.
 They change any relevant storage aspects that enforce anything to do with XCM version negotiations.
 
-1. [`force_xcm_version`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L908) -
+1. [`force_xcm_version`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L934) -
    Modifies the `SupportedVersion` storage to change a particular destination's stated XCM version.
-2. [`force_default_xcm_version`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L932) -
+2. [`force_default_xcm_version`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L957) -
    Modifies the `SafeXcmVersion` storage, which stores the default XCM version to use when the
    destination's version is unknown.
-3. [`force_subscribe_version_notify`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L948) -
+3. [`force_subscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L972) -
    Sends an XCM with a
    [`SubscribeVersion`](https://github.com/paritytech/xcm-format#subscribeversion) instruction to a
    destination.
-4. [`force_unsubscribe_version_notify`](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs#L970) -
+4. [`force_unsubscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L996) -
    Sends an XCM with a
    [`UnsubscribeVersion`](https://github.com/paritytech/xcm-format#unsubscribeversion) instruction
    to a destination.

@@ -55,7 +55,8 @@ Please see the [Wallets](./wallets) page.
 - [Panic](https://github.com/SimplyVC/panic) - A node monitoring and alert server for validators.
 - [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to
   monitor on chain states and events.
-- [Ocelloids SDK](https://github.com/sodazone/ocelloids) - Typescript SDK for multi-chain monitoring that supports domain-specific logic for different pallets.
+- [Ocelloids SDK](https://github.com/sodazone/ocelloids) - Typescript SDK for multi-chain monitoring
+  that supports domain-specific logic for different pallets.
 
 ## Clients
 
