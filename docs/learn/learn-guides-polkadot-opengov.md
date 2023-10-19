@@ -126,10 +126,11 @@ attain
 
 :::
 
-To cancel a referendum, you need first to submit a preimage. Go to the
+To cancel a referendum, you need first to submit a preimage with the `referenda.cancel` extrinsic. Go to the
 [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and click on the
-"Add Preimage" button. You must specify the specific call enacted if the proposal passes. To cancel
-a referendum, you must specify the `referenda.cancel` extrinsic of referendum `249`.
+"Add Preimage" button. You must specify 
+the `referenda.cancel` extrinsic with the index equal to the ongoing Referendum you wish to cancel. 
+In the screenshot below, the Referendum to be cancelled is 249.
 
 ![cancel-referenda-preimage-creation](../assets/cancel-referenda-preimage-creation.png)
 
@@ -169,5 +170,5 @@ Once the proposal has been submitted, it will stay in the Lead-in period until t
 within the track, and a
 [track-dependent preparation period and decision deposit](../maintain/maintain-guides-polkadot-opengov.md#polkadot-opengov-terminology-and-parameters)
 have been met. Failing to submit the decision deposit within a
-{{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.

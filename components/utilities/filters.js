@@ -67,6 +67,12 @@ module.exports = {
     setReturnValue(value.toString());
   },
 
+  PermillToPercent: function (value, setReturnValue) {
+    value = (value) / 10000;
+    // Update value
+    setReturnValue(value.toString());
+  },
+
   ArrayLength: function (value, setReturnValue) {
     value = value.split(',').length;
     // Update value
