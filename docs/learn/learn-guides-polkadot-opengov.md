@@ -70,7 +70,7 @@ Once the proposal has been submitted, it will stay in the Lead-in period until t
 within the track, and a
 [track-dependent preparation period and decision deposit](../maintain/maintain-guides-polkadot-opengov.md#polkadot-opengov-terminology-and-parameters)
 have been met. Failing to submit the decision deposit within a
-{{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
 
 ## Claiming the Preimage and Decision Deposits
@@ -97,7 +97,7 @@ The submission deposit can be claimed by issuing the `refundSubmissionDeposit` e
 Users can not refund their submission deposit while the referendum is `Ongoing` or `Rejected`.
 Similarly, users cannot refund their submission deposit if the proposal has `TimedOut` (failing to
 submit the decision deposit within a
-{{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout). This behavior exists so that users can refrain from
 spamming the chain with proposals that have no interest from the community. If a proposal is in the
 `TimedOut` state, any user can call `slash_proposal_deposit`, which will move the funds from the
