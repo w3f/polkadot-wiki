@@ -135,7 +135,7 @@ module.exports = {
           link: {
             type: 'generated-index',
             title: 'Basic concepts about Polkadot',
-            description: 'Everything about staking, accounts, transactions, tokens and NFTs.',
+            description: 'Everything about staking, accounts, OpenGov, treasury, transactions, tokens and NFTs.',
             slug: '/learn-basics-index',
           },
           items: [
