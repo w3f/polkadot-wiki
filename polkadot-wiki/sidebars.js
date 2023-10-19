@@ -177,6 +177,23 @@ module.exports = {
             },
             {
               type: "category",
+              label: "Staking",
+              description: 'Staking Philosophy and Mechanics.',
+              link: {
+                type: 'generated-index',
+                title: 'Staking on Polkadot',
+                description: 'Staking Philosophy and Mechanics on Polkadot.',
+                slug: '/learn-staking-index',
+              },
+              items: [
+                "learn/learn-staking",
+                "learn/learn-nomination-pools",
+              ],
+            },
+            "learn/learn-polkadot-opengov",
+            "learn/learn-polkadot-opengov-treasury",
+            {
+              type: "category",
               label: "Tokens and Assets",
               description: 'DOT Token, Asset Hub, and Teleports.',
               link: {
@@ -221,24 +238,7 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-polkadot-opengov",
-                "learn/learn-polkadot-opengov-treasury",
                 "learn/learn-consensus",
-              ],
-            },
-            {
-              type: "category",
-              label: "Staking",
-              description: 'Staking Philosophy and Mechanics.',
-              link: {
-                type: 'generated-index',
-                title: 'Staking on Polkadot',
-                description: 'Staking Philosophy and Mechanics on Polkadot.',
-                slug: '/learn-staking-index',
-              },
-              items: [
-                "learn/learn-staking",
-                "learn/learn-nomination-pools",
               ],
             },
           ],
