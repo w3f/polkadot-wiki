@@ -41,7 +41,7 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each [spend period](../general/glossary.md#spend-period)
+- **Burned tokens:** at the end of each spend period
   {{ polkadot: <RPC network="polkadot" path="consts.treasury.burn" defaultValue={10000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.treasury.burn" defaultValue={200000} filter="permillToPercent"/> :kusama }}%
   of the available funds are burned.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
