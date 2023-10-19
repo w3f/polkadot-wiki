@@ -135,7 +135,7 @@ module.exports = {
           link: {
             type: 'generated-index',
             title: 'Basic concepts about Polkadot',
-            description: 'Everything about staking, accounts, transactions, tokens and NFTs.',
+            description: 'Everything about staking, accounts, OpenGov, treasury, transactions, tokens and NFTs.',
             slug: '/learn-basics-index',
           },
           items: [
@@ -175,6 +175,23 @@ module.exports = {
                 "learn/learn-transaction-fees",
               ],
             },
+            {
+              type: "category",
+              label: "Staking",
+              description: 'Mechanics of Staking.',
+              link: {
+                type: 'generated-index',
+                title: 'Staking on Polkadot',
+                description: 'Mechanics of Staking on Polkadot.',
+                slug: '/learn-staking-index',
+              },
+              items: [
+                "learn/learn-staking",
+                "learn/learn-nomination-pools",
+              ],
+            },
+            "learn/learn-polkadot-opengov",
+            "learn/learn-polkadot-opengov-treasury",
             {
               type: "category",
               label: "Tokens and Assets",
@@ -221,24 +238,7 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-polkadot-opengov",
-                "learn/learn-polkadot-opengov-treasury",
                 "learn/learn-consensus",
-              ],
-            },
-            {
-              type: "category",
-              label: "Staking",
-              description: 'Staking Philosophy and Mechanics.',
-              link: {
-                type: 'generated-index',
-                title: 'Staking on Polkadot',
-                description: 'Staking Philosophy and Mechanics on Polkadot.',
-                slug: '/learn-staking-index',
-              },
-              items: [
-                "learn/learn-staking",
-                "learn/learn-nomination-pools",
               ],
             },
           ],
