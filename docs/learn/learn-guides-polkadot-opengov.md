@@ -42,9 +42,9 @@ By clicking on "Add item" you can add new extrinsics for multiple tracks.
 
 ### Undelegate Votes
 
-The "Delegate" tab is only for delegate votes. You cannot undelegate or modify your delegations. If
-you wish to undelegate, you will need to go to
-[Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and submit a
+The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only
+for delegate votes. You cannot undelegate or modify your delegations. If you wish to undelegate, you
+will need to go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and submit a
 `convictionVoting.undelegate` extrinsic, specifying the track you wish to undelegate.
 
 ![js-delegation-undelegate](../assets/js-delegation-undelegate.png)
@@ -67,11 +67,11 @@ multiple tracks, the funds will be unlocked after undelegating all the tracks.
 
 ### Modify your Delegations
 
-The "Delegate" tab is only for delegate votes. You cannot undelegate or modify your delegations. If
-you wish to update the delegated account, the conviction, and the number of votes you will need to
-go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics),
-[undelegate](#undelegate-votes) the track and [delegate](#delegate-votes) again with updated
-information.
+The "Delegate" on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only for
+delegate votes. You cannot undelegate or modify your delegations. If you wish to update the
+delegated account, the conviction, and the number of votes you will need to go to
+[Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics), [undelegate](#undelegate-votes)
+the track and [delegate](#delegate-votes) again with updated information.
 
 ## Claiming OpenGov Deposits
 
@@ -126,11 +126,11 @@ attain
 
 :::
 
-To cancel a referendum, you need first to submit a preimage with the `referenda.cancel` extrinsic. Go to the
-[Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and click on the
-"Add Preimage" button. You must specify 
-the `referenda.cancel` extrinsic with the index equal to the ongoing Referendum you wish to cancel. 
-In the screenshot below, the Referendum to be cancelled is 249.
+To cancel a referendum, you need first to submit a preimage with the `referenda.cancel` extrinsic.
+Go to the [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and
+click on the "Add Preimage" button. You must specify the `referenda.cancel` extrinsic with the index
+equal to the ongoing Referendum you wish to cancel. In the screenshot below, the Referendum to be
+cancelled is 249.
 
 ![cancel-referenda-preimage-creation](../assets/cancel-referenda-preimage-creation.png)
 
