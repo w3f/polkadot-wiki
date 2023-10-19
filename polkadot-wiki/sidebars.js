@@ -182,7 +182,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: 'Staking on Polkadot',
-                description: 'Staking Philosophy and Mechanics on Polkadot.',
+                description: 'Mechanics of Staking on Polkadot.',
                 slug: '/learn-staking-index',
               },
               items: [
