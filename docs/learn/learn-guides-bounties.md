@@ -25,7 +25,7 @@ an OpenGov referendum.
 
 [![Submit a Bounty](https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg)](https://www.youtube.com/watch?v=8Cft1-8RWmk)
 
-When you add a Bounty, this will show as "proposed" in the main
+When you add a bounty, this will show as "proposed" in the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Once the community approves your bounty
 proposal as an OpenGov referendum, the bounty will show as "funded" at the end of the
 [spending period](../general/glossary.md#spend-period) on the main
@@ -42,10 +42,11 @@ through an OpenGov referendum.
 [![Assign Curator to a Bounty](https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg)](https://www.youtube.com/watch?v=TM7vk3oP9IA)
 
 Once your OpenGov referendum has been approved by the community and served the required
-[spending period](../general/glossary.md#spend-period), the Bounty will show as "active" on the main
-Bounties page and await the curator's acceptance. The curator must formally accept the curator role
-by signing a `bounties.acceptCurator` extrinsic. More information about when to do this can be found
-on the main bounties page.
+[spending period](../general/glossary.md#spend-period), the bounty will show as "active" on the main
+[Bounties page](https://polkadot.js.org/apps/#/bounties) and await the curator's acceptance. The
+curator must formally accept the curator role by signing a `bounties.acceptCurator` extrinsic. More
+information about when to do this can be found on the main
+[Bounties page](https://polkadot.js.org/apps/#/bounties).
 
 ## Create and Award Child Bounties
 
@@ -64,7 +65,7 @@ child bounty.
 
 ## Claim a Child Bounty Reward
 
-Once the {{ polkadot: 8 :polkadot }}{{ kusama: 4 :kusama }}-day delay is elapsed, see the video
-tutorial below to learn how to claim a child bounty reward.
+Once the {{ polkadot: 8 :polkadot }}{{ kusama: 4 :kusama }}-day delay is elapsed, follow the
+guidelines in the video tutorial below to learn how to claim a child bounty reward.
 
 [![Claim Child Bounty Reward](https://img.youtube.com/vi/db82aHgy23c/0.jpg)](https://www.youtube.com/watch?v=db82aHgy23c)
