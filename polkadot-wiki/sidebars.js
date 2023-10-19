@@ -178,7 +178,7 @@ module.exports = {
             {
               type: "category",
               label: "Staking",
-              description: 'Staking Philosophy and Mechanics.',
+              description: 'Mechanics of Staking.',
               link: {
                 type: 'generated-index',
                 title: 'Staking on Polkadot',
