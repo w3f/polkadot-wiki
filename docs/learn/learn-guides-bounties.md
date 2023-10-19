@@ -26,8 +26,8 @@ an OpenGov referendum.
 [![Submit a Bounty](https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg)](https://www.youtube.com/watch?v=8Cft1-8RWmk)
 
 When you add a Bounty, this will show as "proposed" in the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties). Once your bounty proposal is approved by
-the community as an OpenGov referendum, the bounty will show as "funded" at the end of the
+[Bounties page](https://polkadot.js.org/apps/#/bounties). Once the community approves your bounty
+proposal as an OpenGov referendum, the bounty will show as "funded" at the end of the
 [spending period](../general/glossary.md#spend-period) on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). You can then proceed with assigning
 curators to the bounty.
@@ -35,27 +35,26 @@ curators to the bounty.
 ## Assign a Curator to a Bounty
 
 Once your bounty is shown as "funded" on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties), you can now propose a curator for the
-bounty. See the video tutorial below to learn how you can add a curator to a bounty and submit it
-for approval through an OpenGov referendum.
+[Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. See the
+video tutorial below to learn how you can add a curator to a bounty and submit it for approval
+through an OpenGov referendum.
 
 [![Assign Curator to a Bounty](https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg)](https://www.youtube.com/watch?v=TM7vk3oP9IA)
 
 Once your OpenGov referendum has been approved by the community and served the required
 [spending period](../general/glossary.md#spend-period), the Bounty will show as "active" on the main
-Bounties page and await the curator's acceptance. The curator needs to formally accept the curator
-role by signing an `bounties.acceptCurator` extrinsic. More information about when to do this can be
-found on the main bounties page.
+Bounties page and await the curator's acceptance. The curator must formally accept the curator role
+by signing a `bounties.acceptCurator` extrinsic. More information about when to do this can be found
+on the main bounties page.
 
 ## Create and Award Child Bounties
 
 See the video tutorial below to learn how to create a child bounty, assign a curator, and award a
 child bounty.
 
-Note that the video will show how to create and award a child bounty using a batch call. We will
-also include proposing and approving curator candidacy for the child bounty. The calls can be
-executed separately, depending on the process that curators consider appropriate for their specific
-bounty.
+The video will show how to create and award a child bounty using a batch call. We will also include
+proposing and approving curator candidacy for the child bounty. The calls can be executed
+separately, depending on the process curators consider appropriate for their bounty.
 
 [![Create and Award Child Bounties](https://img.youtube.com/vi/mLpvx0OQoyM/0.jpg)](https://www.youtube.com/watch?v=mLpvx0OQoyM)
 
