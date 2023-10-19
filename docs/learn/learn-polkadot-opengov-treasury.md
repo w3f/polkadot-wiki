@@ -45,12 +45,15 @@ The outflow is determined by the following mechanisms:
   {{ polkadot: 24 days on Polkadot, 1% :polkadot }}{{ kusama: 6 days on Kusama, 0.2% :kusama }} of
   the available funds are burned, respectively.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
-  community and need to be approved by governance. Then, payouts occur at the end of a spend period.
-- **Tips:** smaller payouts directly to grantees that can happen within a spend period.
+  community and need to be approved by governance. Then, payouts occur at the end of a
+  [spend period](../general/glossary.md#spend-period).
+- **Tips:** smaller payouts directly to grantees that can happen within a
+  [spend period](../general/glossary.md#spend-period).
 
 :::info Spend Period Schedule
 
-On Polkadot-JS UI, navigate to Governance > Treasury to view the status of current spend period.
+On Polkadot-JS UI, navigate to Governance > Treasury to view the status of current
+[spend period](../general/glossary.md#spend-period).
 
 ![preimage-whitelist](../assets/treasury/treasury-spend-period.png)
 
