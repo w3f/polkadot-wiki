@@ -41,9 +41,9 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each spend period lasting
-  {{ polkadot: 24 days on Polkadot, 1% :polkadot }}{{ kusama: 6 days on Kusama, 0.2% :kusama }} of
-  the available funds are burned, respectively.
+- **Burned tokens:** at the end of each spend period
+  {{ polkadot: <RPC network="polkadot" path="const.treasury.burn" defaultValue={1000000} filter="permill"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.treasury.burn" defaultValue={0.2} filter="humanReadable"/> :kusama }}%
+  of the available funds are burned.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
   community and need to be approved by governance. Then, payouts occur at the end of a
   [spend period](../general/glossary.md#spend-period).
