@@ -15,13 +15,6 @@ OpenGov, please navigate to the page on
 
 ## Delegations
 
-:::info Video tutorial about how to delegate your votes
-
-See this technical explainer video to learn how you can delegate votes, undelegate votes, modify
-delegations, and remove conviction voting locks.
-
-:::
-
 ### Delegate Votes
 
 You can start delegating your votes by clicking the "Delegate" button on
@@ -81,13 +74,6 @@ go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics),
 information.
 
 ## Claiming OpenGov Deposits
-
-:::info Video tutorial about how to claim OpenGov deposits
-
-See this technical explainer video to learn how you can claim submission and decision deposits for a
-referendum and how to unnote a preimage and claim the preimage's deposit.
-
-:::
 
 ### Claiming the Preimage and Decision Deposits
 
