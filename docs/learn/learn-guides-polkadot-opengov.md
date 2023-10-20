@@ -43,7 +43,7 @@ By clicking on "Add item" you can add new extrinsics for multiple tracks.
 ### Undelegate Votes
 
 The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only
-for delegate votes. You cannot undelegate or modify your delegations. If you wish to undelegate, you
+for delegating votes. You cannot undelegate or modify your delegations. If you wish to undelegate, you
 will need to go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and submit a
 `convictionVoting.undelegate` extrinsic, specifying the track you wish to undelegate.
 
