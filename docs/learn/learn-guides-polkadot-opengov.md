@@ -23,16 +23,16 @@ You can start delegating your votes by clicking the "Delegate" button on
 ![js-delegation-start](../assets/js-delegation-start.png)
 
 If it is the first time you delegate or vote, there will be a banner message. You can delegate on a
-single track or all the tracks. You have an option to specify the number of votes (i.e., the number of tokens)
-and the [conviction multiplier](./learn-polkadot-opengov.md#voluntary-locking). After clicking
-"Next", you will need to specify the account to delegate your votes to, and after clicking
+single track or all the tracks. You have an option to specify the number of votes (i.e., the number
+of tokens) and the [conviction multiplier](./learn-polkadot-opengov.md#voluntary-locking). After
+clicking "Next", you will need to specify the account to delegate your votes to, and after clicking
 "Delegate" and "Sign and Submit" your delegations will appear for each track (see below).
 
 ![js-delegation-allTracks](../assets/js-delegation-allTracks.png)
 
 Note that if you want to delegate just a few tracks, you have two options:
 
-- Repeat the process through the "Delegate" tab multiple times
+- Repeat the process using the "Delegate" button multiple times
 - Issue a batch call with multiple `convictionVoting.delegate` extrinsics under
   [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics)
 
@@ -43,9 +43,9 @@ By clicking on "Add item" you can add new extrinsics for multiple tracks.
 ### Undelegate Votes
 
 The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only
-for delegating votes. You cannot undelegate or modify your delegations. If you wish to undelegate, you
-will need to go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and submit a
-`convictionVoting.undelegate` extrinsic, specifying the track you wish to undelegate.
+for delegating votes. You cannot undelegate or modify your delegations. If you wish to undelegate,
+you will need to go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and
+submit a `convictionVoting.undelegate` extrinsic, specifying the track you wish to undelegate.
 
 ![js-delegation-undelegate](../assets/js-delegation-undelegate.png)
 
@@ -67,8 +67,8 @@ multiple tracks, the funds will be unlocked after undelegating all the tracks.
 
 ### Modify your Delegations
 
-The "Delegate" on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only for
-delegating votes. You cannot undelegate or modify your delegations. If you wish to update the
+The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only
+for delegating votes. You cannot undelegate or modify your delegations. If you wish to update the
 delegated account, the conviction, and the number of votes you will need to go to
 [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics), [undelegate](#undelegate-votes)
 the track and [delegate](#delegate-votes) again with updated information.
