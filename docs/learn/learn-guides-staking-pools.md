@@ -13,6 +13,11 @@ This page is for pool creators and maintainers. If you like to participate in st
 nomination pools, please navigate to this page on
 [how to join a nomination pool.](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
 
+See the video tutorial below to learn how to create a pool, set the pool commission, set claim
+permissions, claim rewards on behalf of another account, and destroy a pool.
+
+[![Create and manage pools](https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg)](https://www.youtube.com/watch?v=aTFWhwy_Mxg)
+
 ## Pool Creation
 
 :::info
