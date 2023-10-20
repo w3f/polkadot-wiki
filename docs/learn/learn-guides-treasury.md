@@ -95,6 +95,22 @@ The example below shows how to submit a Treasury track referendum.
 Once your submission is executed, your referendum will appear under your chosen track on the
 Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
 
+#### Submit Treasury Proposal via Polkassembly
+
+You can also submit treasury track referendum via polkassembly.
+
+- Navigate to polkadot.polkassembly.io and click on the FAB button
+- Click on Create Treasury Proposal button > Choose an address to proceed with
+- Once you enter the flow for treasury proposal creation you can add the detailed description for the proposal which will be stored on Polkassembly. Alternatively, you can link an existing discussion post.
+- In the next step, an existing preimage can be linked or a new one can be created. To create a preimage, add the beneficiary address and the DOT amount. The track will be auto selected and the user can proceed with creation of a preimage.
+- The last step involves confirmation with regard to creation of a proposal. The description of the proposal and the preimage are automatically linked to the proposal.
+  
+![treasury flow polkassembly](https://github.com/w3f/polkadot-wiki/assets/874046/f3234554-4b9d-4b97-9dbf-90775634b300)
+
+![treasury polkassembly](https://github.com/w3f/polkadot-wiki/assets/874046/12f7b002-fc20-4759-8bd2-09e83f63eb79)
+
+
+
 ### Place a Decision Deposit for the Treasury Track Referendum
 
 For the referendum to move from preparing phase to the deciding phase, a decision deposit needs to
