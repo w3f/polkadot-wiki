@@ -109,22 +109,26 @@ The preimage and decision deposits
 
 ## Submit Treasury Proposal via Polkassembly
 
-To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov):
+To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov)
+click on the FAB button on the bottom right corner. Then,
 
-- Click on the FAB button
-- Click on Create Treasury Proposal button and choose an address for the proposer
-- Once you enter the flow for treasury proposal creation you can add the detailed description for
-  the proposal which will be stored on Polkassembly. Alternatively, you can link an existing
-  discussion post.
-- In the next step, an existing preimage can be linked or a new one can be created. To create a
-  preimage, add the beneficiary address and the DOT amount. The track will be auto selected and the
-  user can proceed with creation of a preimage.
-- The last step involves confirmation with regard to creation of a proposal. The description of the
-  proposal and the preimage are automatically linked to the proposal.
+- Click on "Create Treasury Proposal" and choose an address for the proposer
+- After choosing an address, you will enter a three-stage guideline:
 
-![treasury flow polkassembly](https://github.com/w3f/polkadot-wiki/assets/874046/f3234554-4b9d-4b97-9dbf-90775634b300)
+  - Write a proposal: you can add the detailed description for the proposal which will be stored on
+    Polkassembly. Alternatively, you can link an existing discussion post.
 
-![treasury polkassembly](https://github.com/w3f/polkadot-wiki/assets/874046/12f7b002-fc20-4759-8bd2-09e83f63eb79)
+  ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
+
+  - Create a preimage: an existing preimage can be linked or a new one can be created. To create a
+    preimage, add the beneficiary address and the
+    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto selected
+    and the user can proceed with creation of a preimage.
+
+  ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
+
+  - Create a proposal: final confirmation about the proposal creation. The description of the
+    proposal and the preimage are automatically linked to the proposal.
 
 ## Requesting Tips from the Treasury
 
