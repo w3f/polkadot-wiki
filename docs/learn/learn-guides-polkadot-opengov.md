@@ -68,7 +68,7 @@ multiple tracks, the funds will be unlocked after undelegating all the tracks.
 ### Modify your Delegations
 
 The "Delegate" on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only for
-delegate votes. You cannot undelegate or modify your delegations. If you wish to update the
+delegating votes. You cannot undelegate or modify your delegations. If you wish to update the
 delegated account, the conviction, and the number of votes you will need to go to
 [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics), [undelegate](#undelegate-votes)
 the track and [delegate](#delegate-votes) again with updated information.
