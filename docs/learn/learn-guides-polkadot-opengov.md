@@ -33,7 +33,7 @@ and the [conviction multiplier](./learn-polkadot-opengov.md#voluntary-locking). 
 Note that if you want to delegate just a few tracks, you have two options:
 
 - Repeat the process through the "Delegate" tab multiple times
-- Issues a batch call with multiple `convictionVoting.delegate` extrinsics under
+- Issue a batch call with multiple `convictionVoting.delegate` extrinsics under
   [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics)
 
 ![js-delegation-delegate](../assets/js-delegation-delegate.png)
