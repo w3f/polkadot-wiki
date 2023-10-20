@@ -266,7 +266,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: 'Advanced Guides',
-                description: 'Advanced how-to guides.',
+                description: 'Advanced how-to guides using the Polkadot-JS User Interface.',
                 slug: '/learn-guides-index',
               },
               items: [
@@ -657,8 +657,14 @@ module.exports = {
           type: "category",
           label: "Governance Guides",
           items: [
-            "maintain/maintain-guides-democracy",
             "maintain/maintain-guides-polkadot-opengov",
+          ],
+        },
+        {
+          type: "category",
+          label: "Archive",
+          items: [
+            "maintain/maintain-guides-democracy",
             "maintain/maintain-guides-how-to-join-council",
             "maintain/maintain-guides-how-to-vote-councillor",
           ],
