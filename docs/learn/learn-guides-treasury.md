@@ -110,20 +110,20 @@ The preimage and decision deposits
 ## Submit Treasury Proposal via Polkassembly
 
 To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov)
-click on the FAB button on the bottom right corner. Then,
+click on the FAB button in the bottom right corner. Then,
 
 - Click on "Create Treasury Proposal" and choose an address for the proposer
 - After choosing an address, you will enter a three-stage guideline:
 
-  - Write a proposal: you can add the detailed description for the proposal which will be stored on
+  - Write a proposal: you can add a detailed description for the proposal, which will be stored on
     Polkassembly. Alternatively, you can link an existing discussion post.
 
   ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
 
-  - Create a preimage: an existing preimage can be linked or a new one can be created. To create a
+  - Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
     preimage, add the beneficiary address and the
-    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto selected
-    and the user can proceed with creation of a preimage.
+    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto-selected
+    and the user can proceed with the creation of a preimage.
 
   ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
 
