@@ -47,13 +47,13 @@ the main [Bounties page](https://polkadot.js.org/apps/#/bounties) and await the 
 acceptance. The curator must formally accept the curator role by signing a `bounties.acceptCurator`
 extrinsic. More information about when to do this can be found on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
-candidacy the bounty will show as "active" in the main Bounty page.
+candidacy the bounty will show as "active" on the main Bounty page.
 
 ## Create and Award Child Bounties
 
 :::info Remember to add contextual information about child bounties
 
-When you add child bounties please add contextual information on the governance forums
+When you add child bounties, please add contextual information on the governance forums
 [Polkassembly](https://polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/).
 
 :::
@@ -75,14 +75,14 @@ child bounty.
 
 The status of child bounties can be viewed on the
 [Polkassembly Bounty page](https://polkadot.polkassembly.io/bounties) under the specific parent
-bounty. A child bounty status can be "Added", "Awarded", and "Claimed". For example, the parent
-bounty 17 refers to the Community Events Bounty that has 183 child bounties.
+bounty. A child bounty status can be "Added", "Awarded", or "Claimed". For example, the parent
+bounty 17 refers to the Community Events Bounty, which has 183 child bounties.
 
 ![polkassembly-child-bounties](../assets/polkassembly-child-bounties.png)
 
 After a child bounty has been awarded and the {{ polkadot: 8 :polkadot }}{{ kusama: 4 :kusama }}-day
 delay elapsed, follow the guidelines in the video tutorial below to learn how to claim a child
-bounty reward. Note that the extrinsic to claim the child bounty reward is permissionless and anyone
-can initiate the claim on behalf of the beneficiary.
+bounty reward. Note that the extrinsic to claim the child bounty reward is permissionless, and
+anyone can initiate the claim on behalf of the beneficiary.
 
 [![Claim Child Bounty Reward](https://img.youtube.com/vi/db82aHgy23c/0.jpg)](https://www.youtube.com/watch?v=db82aHgy23c)
