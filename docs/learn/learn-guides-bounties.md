@@ -42,13 +42,21 @@ through an OpenGov referendum.
 [![Assign Curator to a Bounty](https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg)](https://www.youtube.com/watch?v=TM7vk3oP9IA)
 
 Once your OpenGov referendum has been approved by the community and served the required
-[spending period](../general/glossary.md#spend-period), the bounty will show as "active" on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties) and await the curator's acceptance. The
-curator must formally accept the curator role by signing a `bounties.acceptCurator` extrinsic. More
-information about when to do this can be found on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties).
+[spending period](../general/glossary.md#spend-period), the bounty will still show as "funded" on
+the main [Bounties page](https://polkadot.js.org/apps/#/bounties) and await the curator's
+acceptance. The curator must formally accept the curator role by signing a `bounties.acceptCurator`
+extrinsic. More information about when to do this can be found on the main
+[Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
+candidacy the bounty will show as "active" in the main Bounty page.
 
 ## Create and Award Child Bounties
+
+:::info Remember to add contextual information about child bounties
+
+When you add child bounties please add contextual information on the governance forums
+[Polkassembly](https://polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/).
+
+:::
 
 See the video tutorial below to learn how to create a child bounty, assign a curator, and award a
 child bounty.
@@ -66,6 +74,8 @@ child bounty.
 ## Claim a Child Bounty Reward
 
 Once the {{ polkadot: 8 :polkadot }}{{ kusama: 4 :kusama }}-day delay is elapsed, follow the
-guidelines in the video tutorial below to learn how to claim a child bounty reward.
+guidelines in the video tutorial below to learn how to claim a child bounty reward. Note that the
+extrinsic to claim the child bounty reward is permissionless and anyone can initiate the claim on
+behalf of the beneficiary.
 
 [![Claim Child Bounty Reward](https://img.youtube.com/vi/db82aHgy23c/0.jpg)](https://www.youtube.com/watch?v=db82aHgy23c)
