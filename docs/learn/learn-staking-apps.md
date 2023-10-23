@@ -9,22 +9,26 @@ slug: ../learn-staking-apps
 
 :::info Community Page
 
-This page is open to contributions from the community. Please follow the [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) and add your Staking app to this page.
+This page is open to contributions from the community. Please follow the
+[Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
+and add your Staking app to this page.
 
 :::
 
 ## Polkadot Staking Dashboard
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is an application
+The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a web3 application
 dedicated to native non-custodial [staking](./learn-staking.md) on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. The dashboard allows to
 stake as a solo nominator or as a [nomination pool](./learn-nomination-pools.md) member. Users can
 also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
 [Subwallet](../general/wallets-and-extensions.md#subwallet),
-[Talisman](../general/wallets-and-extensions.md#talisman), etc.
+[Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
+PolkaGate, and Enkrypt. The dashboard also supports
+[staking proxies](./learn-proxies.md#staking-proxy).
 
-### Staking Dashboard Video tutorials
+### Staking Dashboard Video Tutorials
 
 <tr class="cards-container">
   <td>
