@@ -7,6 +7,12 @@ keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft-projects
 ---
 
+:::info Community Page
+
+This is a community page. Feel free to submit a PR for review to add you NFT app to this page.
+
+:::
+
 ## List of NFT Projects
 
 - [Astar](#Astar)
