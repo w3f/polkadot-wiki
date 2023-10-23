@@ -48,7 +48,7 @@ also create their nomination pools. The dashboard supports [Ledger](../general/l
   <a class="guide-link" href="https://youtu.be/hvXLc4H7rA4?feature=shared">  
     <img class="guide-image" src="https://img.youtube.com/vi/hvXLc4H7rA4/0.jpg" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
-                <h5 class="cards-title">Staking Dashbaord Walkthrough</h5>
+                <h5 class="cards-title">Staking Dashboard Walkthrough</h5>
             </div>
   </a>
   </td>
