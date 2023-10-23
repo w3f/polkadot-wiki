@@ -9,8 +9,7 @@ slug: ../learn-staking-apps
 
 :::info Community Page
 
-This is a community page. Feel free to submit a PR for review to add you staking app to this page
-following the example below about the Polkadot Staking Dashboard.
+This page is open to contributions from the community. Please follow the [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) and add your Staking app to this page.
 
 :::
 
