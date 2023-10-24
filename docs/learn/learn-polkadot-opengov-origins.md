@@ -1,10 +1,10 @@
 ---
-id: maintain-guides-polkadot-opengov
-title: Participate in Polkadot OpenGov
-sidebar_label: Participate in Polkadot OpenGov
-description: Steps on how to participate in OpenGov.
-keywords: [democracy, council, action, proposal, referenda]
-slug: ../maintain-guides-polkadot-opengov
+id: learn-polkadot-opengov-origins
+title: Polkadot OpenGov Origins
+sidebar_label: OpenGov Origins
+description: All Origins for Polkadot's OpenGov.
+keywords: [proposal, referenda, OpenGov, origins]
+slug: ../learn-polkadot-opengov-origins
 ---
 
 import Tracks from "./../../components/Referenda-Tracks"; import Chart from
@@ -369,4 +369,6 @@ If you like to use Polkadot-JS UI for performing multi-role delegation, the inst
 available
 [here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
 
-Polkassembly also provides an engaging interface to interact with governance in OpenGov along with an alternative interface for delegation at [polkadot.polkassembly.io/delegation](https://polkadot.polkassembly.io/delegation)
+Polkassembly also provides an engaging interface to interact with governance in OpenGov along with
+an alternative interface for delegation at
+[polkadot.polkassembly.io/delegation](https://polkadot.polkassembly.io/delegation)
