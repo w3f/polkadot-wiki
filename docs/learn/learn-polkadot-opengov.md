@@ -29,11 +29,13 @@ For additional support about Polkadot OpenGov see the
 
 :::info Polkadot Delegation Dashboard
 
-You can easily delegate your votes to somebody else using the
-[Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to learn how to use the
-dashboard. **If you become a nomination pool member or a pool admin, you cannot participate in
-Governance with the bonded tokens in the pool, as they are held in a
+See the video tutorial below to easily delegate your votes to somebody else using the
+[Polkadot Delegation Dashboard](https://delegation.polkadot.network/).
+
+[![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
+
+**If you become a nomination pool member or a pool admin, you cannot participate in Governance with
+the bonded tokens in the pool, as they are held in a
 [system account](./learn-account-advanced.md#system-accounts).**
 
 :::
