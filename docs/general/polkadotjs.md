@@ -14,12 +14,13 @@ consult the [**official documentation**](https://polkadot.js.org/docs/).
 
 ## Polkadot-JS UI
 
-:::info Supported Wallet
+:::info For Developers and Power Users Only
 
-If you need help using the Polkadot-JS UI you can contact the
-[**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
-wallet is oriented toward developers and power users. For more user-friendly wallets, check out the
-supported and treasury-funded wallets on the [Wallets Page](./wallets-and-extensions.md).
+Please note that this wallet UI is oriented toward developers and power users. Explore Polkadot with
+a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/). If you need help using the
+Polkadot-JS UI you can contact the
+[**Polkadot Support Team**](https://support.polkadot.network/support/home).
 
 :::
 

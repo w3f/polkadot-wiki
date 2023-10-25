@@ -145,6 +145,13 @@ See the videos below to know more about Polkadot.
 transaction fees, staking, governance, acquisition of a parachain slot and for enabling several key
 functionalities on Polkadot.
 
+:::info
+
+Explore Polkadot with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+
+:::
+
 - {{ polkadot: __<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
   the minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below the minimum, your account will be reaped. Learn more about
