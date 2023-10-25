@@ -295,6 +295,7 @@ module.exports = {
                   },
                   items: [
                     "learn/learn-parachains",
+                    "learn/learn-parachains-apps",
                     "learn/learn-parachains-protocol",
                     "learn/learn-system-chains",
                     "learn/learn-auction",
