@@ -62,7 +62,7 @@ On Polkadot-JS UI, navigate to Governance > Treasury to view the status of curre
 ## Treasury Tracks
 
 OpenGov allows for managing funds through six tracks, each with its own
-[origin and track parameters](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info).
+[origin and track parameters](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
 
 - [Treasurer](./learn-polkadot-opengov-origins.md#treasurer)
 - [Big Spender](./learn-polkadot-opengov-origins.md#big-spender)

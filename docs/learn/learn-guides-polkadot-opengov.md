@@ -267,9 +267,8 @@ user to a runtime-configured account, like the treasury.
 To refund your slashed deposit, you can start a new referendum and specifically request a refund
 from the treasury. You need to make sure you have enough balance for a new submission and decision
 deposit, and you will need to select the right track to ask for a refund. For example, the
-[Small Tipper Track](../maintain/maintain-guides-polkadot-opengov.md#small-tipper) would be fine for
-any kind of deposit refund up to
-{{ polkadot: 250 DOT :polkadot }}{{ kusama: 8.25 KSM KSM :kusama }}.
+[Small Tipper Track](./learn-polkadot-opengov-origins.md#small-tipper) would be fine for any kind of
+deposit refund up to {{ polkadot: 250 DOT :polkadot }}{{ kusama: 8.25 KSM KSM :kusama }}.
 
 ## Cancel or Kill a Referendum
 
@@ -281,7 +280,7 @@ see the [dedicated page](../learn/learn-polkadot-opengov.md#referenda-timeline).
 
 To successfully cancel a referendum through the track `20 / Referendum Canceller`, you will need to
 attain
-[specific approval and support levels](../maintain/maintain-guides-polkadot-opengov.md#referendum-canceller).
+[specific approval and support levels](./learn-polkadot-opengov-origins.md#referendum-canceller).
 
 :::
 
@@ -327,7 +326,7 @@ will be reserved for submitting the proposal.
 
 Once the proposal has been submitted, it will stay in the Lead-in period until there is enough space
 within the track, and a
-[track-dependent preparation period and decision deposit](../maintain/maintain-guides-polkadot-opengov.md#polkadot-opengov-terminology-and-parameters)
+[track-dependent preparation period and decision deposit](./learn-polkadot-opengov-origins.md#polkadot-opengov-terminology-and-parameters)
 have been met. Failing to submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
