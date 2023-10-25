@@ -56,11 +56,11 @@ module.exports = {
             {
               type: "category",
               label: "Wallets & Apps",
-              description: 'Wallet Options in the Polkadot Ecosystem.',
+              description: 'Wallets and Apps in the Polkadot Ecosystem.',
               link: {
                 type: 'generated-index',
                 title: 'Wallets & Apps',
-                description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
+                description: 'Explore the different wallets and applications in the Polkadot and Kusama ecosystems.',
                 slug: '/wallets-index',
               },
               items: [
