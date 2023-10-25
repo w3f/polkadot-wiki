@@ -16,6 +16,12 @@ accounts such as [account derivation](./learn-account-advanced.md#derivation-pat
 behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
 [the cryptography page](learn-cryptography.md).
 
+:::info User friendly wallets
+
+Create your Polkadot accounts with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+
+:::
+
 ## Account Address
 
 An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
