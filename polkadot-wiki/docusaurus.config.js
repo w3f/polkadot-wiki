@@ -168,7 +168,12 @@ module.exports = {
           {
             to: '/docs/learn-guides-vault',
             from: ['/docs/learn-vault-guides']
+          },
+          {
+            to: '/docs/staking-apps',
+            from: ['/docs/learn-staking-apps']
           }
+          
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
