@@ -28,6 +28,9 @@ also create their nomination pools. The dashboard supports [Ledger](../general/l
 PolkaGate, and Enkrypt. The dashboard also supports
 [staking proxies](./learn-proxies.md#staking-proxy).
 
+You can find more information about the Polkadot staking dashboard on the
+[dedicated page](./staking-dashboard.md).
+
 ### Staking Dashboard Video Tutorials
 
 <tr class="cards-container">
