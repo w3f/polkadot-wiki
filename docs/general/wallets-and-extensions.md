@@ -14,6 +14,12 @@ issues related to these wallet, reach out to their support teams directly.
 
 :::
 
+:::info 
+
+Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+
+:::
+
 If you are new to blockchain technology, generally a typical blockchain network account is a
 public-private key pair. Access to a private key gives full access to all the allowed transactions
 on that blockchain account. It is essential to keep the private key secure.
