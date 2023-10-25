@@ -11,7 +11,7 @@ slug: ../learn-staking-apps
 
 This page is open to contributions from the community. Please follow the
 [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your Staking app to this page.
+and add your protocol native, permissionless, non-custodial NPoS Staking app to this page.
 
 :::
 
