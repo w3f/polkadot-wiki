@@ -1409,10 +1409,10 @@
   resolved "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
-"@crowdin/cli@^3.14.0":
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.14.0.tgz#6009d4852addd1ab92ae52e13ed792af9d2e6ea9"
-  integrity sha512-8MnJvGPkrLprrpLT+jPgBn7aKdv/8eyxLXMN929qYadDy7ZjZiB2CzlTvdGh4DUBoMOr/anoYWDhn9kxP0fn/Q==
+"@crowdin/cli@^3.15.0":
+  version "3.15.0"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.15.0.tgz#85934161a36a6570634bc781de6a3441ab7d76ba"
+  integrity sha512-oQMfC5S5OkVee+ryB56E1g0cr2iL9HFaYMWSwNRODp1KICWo0B/oRQo3MvStiZ3VW9ZkeydEoOgRnXXxw2amOA==
   dependencies:
     command-exists-promise "^2.0.2"
     node-fetch "2.6.7"
