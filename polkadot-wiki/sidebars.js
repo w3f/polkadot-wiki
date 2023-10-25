@@ -55,33 +55,35 @@ module.exports = {
             },
             {
               type: "category",
-              label: "Wallets",
+              label: "Wallets & Apps",
               description: 'Wallet Options in the Polkadot Ecosystem.',
               link: {
                 type: 'generated-index',
-                title: 'Wallets',
+                title: 'Wallets & Apps',
                 description: 'Explore the different wallet options in the Polkadot and Kusama ecosystems.',
                 slug: '/wallets-index',
               },
               items: [
                 "general/wallets-and-extensions",
+                "general/staking-apps",
+                "general/parachains-apps",
+                {
+                  type: "category",
+                  label: "Dashboards",
+                  description: 'Dashboards in the Polkadot Ecosystem.',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Dashboards',
+                    description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
+                    slug: '/dashboards-index',
+                  },
+                  items: [
+                    "general/staking-dashboard",
+                  ],
+                },
                 "general/ledger",
                 "general/polkadot-vault",
                 "general/polkadotjs-ui",
-              ],
-            },
-            {
-              type: "category",
-              label: "Dashboards",
-              description: 'Dashboards in the Polkadot Ecosystem.',
-              link: {
-                type: 'generated-index',
-                title: 'Dashboards',
-                description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
-                slug: '/dashboards-index',
-              },
-              items: [
-                "general/staking-dashboard",
               ],
             },
             "general/polkadotjs",
@@ -188,7 +190,6 @@ module.exports = {
               items: [
                 "learn/learn-staking",
                 "learn/learn-nomination-pools",
-                "learn/learn-staking-apps",
               ],
             },
             "learn/learn-polkadot-opengov",
@@ -295,7 +296,6 @@ module.exports = {
                   },
                   items: [
                     "learn/learn-parachains",
-                    "learn/learn-parachains-apps",
                     "learn/learn-parachains-protocol",
                     "learn/learn-system-chains",
                     "learn/learn-auction",

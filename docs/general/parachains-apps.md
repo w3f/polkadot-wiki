@@ -1,10 +1,10 @@
 ---
-id: learn-parachains-apps
+id: parachains-apps
 title: Polkadot Parachain Apps
 sidebar_label: Parachain Apps
 description: Polkadot's Parachain Apps.
 keywords: [parachains, apps, staking, liquid staking]
-slug: ../learn-parachains-apps
+slug: ../parachains-apps
 ---
 
 :::info Community Page
