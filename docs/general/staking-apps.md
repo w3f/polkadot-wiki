@@ -18,15 +18,15 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 ## Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a web3 application
-dedicated to native non-custodial [staking](./learn-staking.md) on the
+dedicated to native non-custodial [staking](../learn/learn-staking.md) on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. The dashboard allows to
-stake as a solo nominator or as a [nomination pool](./learn-nomination-pools.md) member. Users can
-also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
+stake as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member.
+Users can also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
 [Subwallet](../general/wallets-and-extensions.md#subwallet),
 [Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
 PolkaGate, and Enkrypt. The dashboard also supports
-[staking proxies](./learn-proxies.md#staking-proxy).
+[staking proxies](../learn/learn-proxies.md#staking-proxy).
 
 You can find more information about the Polkadot staking dashboard on the
 [dedicated page](./staking-dashboard.md).
