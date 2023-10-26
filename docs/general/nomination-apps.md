@@ -11,7 +11,7 @@ slug: ../nomination-apps
 
 This page is open to contributions from the community. Please follow the
 [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your nomination app app to this page.
+and add your nomination app to this page.
 
 :::
 
