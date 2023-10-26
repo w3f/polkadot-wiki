@@ -21,7 +21,7 @@ These applications are useful for solo nominators and nomination pool admins.
 
 - [NOMI](#nomi)
 
-### NOMI
+## NOMI
 
 [NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
 Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
