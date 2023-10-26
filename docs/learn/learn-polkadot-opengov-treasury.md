@@ -116,3 +116,65 @@ requires a decision deposit of {{ polkadot: 10 DOT :polkadot }}{{ kusama:  0.33 
 This track can be used for treasury spending requests up to
 {{ polkadot: 100 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} per referendum. Each referendum
 requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 KSM  :kusama }}.
+
+## Bounties
+
+:::info Bounty Guides
+
+See the [bounty guides](./learn-guides-bounties.md) to learn about how to
+[create a bounty](./learn-guides-bounties.md#submit-a-bounty-proposal),
+[assign a curator](./learn-guides-bounties.md#assign-a-curator-to-a-bounty) to a bounty, as well as
+[creating, awarding](./learn-guides-bounties.md#create-and-award-child-bounties) and
+[claiming child bounties](./learn-guides-bounties.md#claim-a-child-bounty-reward).
+
+:::
+
+### Parent Bounties
+
+There are practical limits to Council Members curation capabilities when it comes to treasury
+proposals: Council members likely do not have the expertise to make a proper assessment of the
+activities described in all proposals. Even if individual Councillors have that expertise, it is
+highly unlikely that a majority of members are capable in such diverse topics.
+
+Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts
+called Curators: They can be defined as addresses with agency over a portion of the Treasury with
+the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks
+related to a specific topic: all for the benefit of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
+
+A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined later,
+whose background and expertise is such that they are capable of determining when the task is
+complete. Curators are selected by the Council after the bounty proposal passes, and need to add an
+upfront payment to take the position. This deposit can be used to punish them if they act
+maliciously. However, if they are successful in their task of getting someone to complete the bounty
+work, they will receive their deposit back and part of the bounty reward.
+
+When submitting the value of the bounty, the proposer includes a reward for curators willing to
+invest their time and expertise in the task: this amount is included in the total value of the
+bounty. In this sense, the curator's fee can be defined as the result of subtracting the value paid
+to the bounty rewardee from the total value of the bounty.
+
+In general terms, curators are expected to have a well-balanced track record related to the issues
+the bounty tries to resolve: they should be at least knowledgeable on the topics the bounty touches,
+and show project management skills or experience. These recommendations ensure an effective use of
+the mechanism. A Bounty Spending is a reward for a specified body of work - or specified set of
+objectives - that needs to be executed for a predefined treasury amount to be paid out. The
+responsibility of assigning a payout address once the specified set of objectives is completed is
+delegated to the curator.
+
+After the Council has activated a bounty, it delegates the work that requires expertise to the
+curator who gets to close the active bounty. Closing the active bounty enacts a delayed payout to
+the payout address and a payout of the curator fee. The delay phase allows the Council to act if any
+issues arise.
+
+To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
+information. When a user submits a bounty spending proposal, they will probably need to find an
+off-chain way to explain the proposal (any of the available community forums serve this purpose).
+[This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing)
+can help as a checklist of all needed information for the Council to make an informed decision.
+
+The bounty has a predetermined duration of 90 days with the possibility of being extended by the
+curator. Aiming to maintain flexibility on the tasks’ curation, the curator will be able to create
+sub-bounties for more granularity and allocation in the next iteration of the mechanism.
+
+### Child Bounties
