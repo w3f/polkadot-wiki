@@ -124,48 +124,50 @@ requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 
 See the [bounty guides](./learn-guides-bounties.md) to learn about how to
 [create a bounty](./learn-guides-bounties.md#submit-a-bounty-proposal),
 [assign a curator](./learn-guides-bounties.md#assign-a-curator-to-a-bounty) to a bounty, as well as
-[creating, awarding](./learn-guides-bounties.md#create-and-award-child-bounties) and
-[claiming child bounties](./learn-guides-bounties.md#claim-a-child-bounty-reward).
+[creating and awarding child bounties](./learn-guides-bounties.md#create-and-award-child-bounties)
+and [claiming child bounties rewards](./learn-guides-bounties.md#claim-a-child-bounty-reward).
 
 :::
 
 ### Parent Bounties
 
-There are practical limits to Council Members curation capabilities when it comes to treasury
-proposals: Council members likely do not have the expertise to make a proper assessment of the
-activities described in all proposals. Even if individual Councillors have that expertise, it is
-highly unlikely that a majority of members are capable in such diverse topics.
+Getting treasury funding through OpenGov, depending on which treasury track you submit your
+referendum, can be a long and uncertain process. This can be unideal for example for events'
+organizers needing to pay costs upfront or close to the event's date. Bounties solve this problem by
+allowing the access to treasury funds once to fund multiple events later on through
+[child bounties](#child-bounties) (that is why bounties are also called _parent_ bounties).
 
-Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts
-called Curators: They can be defined as addresses with agency over a portion of the Treasury with
-the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks
-related to a specific topic: all for the benefit of the
+Parent bounty proposals aim to access treasury funds once to fund multiple smaller proposals later
+on without creating OpenGov referenda for each one of them. Bounties are manged by curators, where
+usually a curator is a [multi-signature account](./learn-account-multisig.md). Bounties can get
+access to a large amount of funds and therefore it is good practice to mange those funds with a
+multisig to enhance security. Essentially, curators are multisig addresses with agency over a
+portion of the treasury with the goal of promoting events, fixing a bug or vulnerability, developing
+a strategy, or monitoring a set of tasks related to a specific topic: all for the benefit of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
-A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined later,
-whose background and expertise is such that they are capable of determining when the task is
-complete. Curators are selected by the Council after the bounty proposal passes, and need to add an
-upfront payment to take the position. This deposit can be used to punish them if they act
+A proposer can [submit a bounty proposal](./learn-guides-bounties.md#submit-a-bounty-proposal) to
+OpenGov,
+[with a curator to be defined later](./learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
+background and expertise is such that they are capable of determining when the task is complete.
+Curators are selected through OpenGov referendum after the bounty proposal passes, and need to add
+an upfront payment to take the position. This deposit can be used to punish them if they act
 maliciously. However, if they are successful in their task of getting someone to complete the bounty
-work, they will receive their deposit back and part of the bounty reward.
+work, they will receive their deposit back and part of the bounty reward as fee payment for their
+job.
 
-When submitting the value of the bounty, the proposer includes a reward for curators willing to
+When submitting the value of the bounty, the proposer includes a fee paid to curators willing to
 invest their time and expertise in the task: this amount is included in the total value of the
 bounty. In this sense, the curator's fee can be defined as the result of subtracting the value paid
 to the bounty rewardee from the total value of the bounty.
 
-In general terms, curators are expected to have a well-balanced track record related to the issues
-the bounty tries to resolve: they should be at least knowledgeable on the topics the bounty touches,
-and show project management skills or experience. These recommendations ensure an effective use of
-the mechanism. A Bounty Spending is a reward for a specified body of work - or specified set of
-objectives - that needs to be executed for a predefined treasury amount to be paid out. The
-responsibility of assigning a payout address once the specified set of objectives is completed is
-delegated to the curator.
-
-After the Council has activated a bounty, it delegates the work that requires expertise to the
-curator who gets to close the active bounty. Closing the active bounty enacts a delayed payout to
-the payout address and a payout of the curator fee. The delay phase allows the Council to act if any
-issues arise.
+Curators are expected to have a well-balanced track record related to the issues the bounty tries to
+resolve: they should be at least knowledgeable on the topics the bounty touches, and show project
+management skills or experience. These recommendations ensure an effective use of the mechanism. A
+Bounty Spending is a reward for a specified body of work - or specified set of objectives - that
+needs to be executed for a predefined treasury amount to be paid out. The responsibility of
+assigning a payout address once the specified set of objectives is completed is delegated to the
+curator.
 
 To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
 information. When a user submits a bounty spending proposal, they will probably need to find an

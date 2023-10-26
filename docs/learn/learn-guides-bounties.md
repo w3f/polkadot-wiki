@@ -32,6 +32,13 @@ proposal as an OpenGov referendum, the bounty will show as "funded" at the end o
 [Bounties page](https://polkadot.js.org/apps/#/bounties). You can then proceed with assigning
 curators to the bounty.
 
+To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
+information. When a user submits a bounty spending proposal, they will need to find an off-chain way
+to explain the proposal through for example [Polkassembly](https://polkadot.polkassembly.io/opengov)
+or [Subsquare](https://polkadot.subsquare.io/).
+[This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing)
+can help as a checklist of all needed information for OpenGov voters to make an informed decision.
+
 ## Assign a Curator to a Bounty
 
 Once your bounty is shown as "funded" on the main
