@@ -18,6 +18,6 @@ and add your Governance app to this page.
 ## Delegation Dashboard
 
 The [Polkadot Delegation Dashboard](https://delegation.polkadot.network/) is a web3 application that
-allows you to delegate your voting power on [Polkadot OpenGov.](../learn/learn-polkadot-opengov.md)
+allows you to delegate your voting power on [Polkadot OpenGov](../learn/learn-polkadot-opengov.md).
 
 [![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
