@@ -176,3 +176,5 @@ tasks’ curation, the curator will be able to create child bounties for more gr
 allocation in the next iteration of the mechanism.
 
 ### Child Bounties
+
+Child bounties are bounties accessing funds from parent bounties.
