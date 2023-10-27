@@ -20,6 +20,17 @@ and add your parachain app to this page.
 
 Through the [dApp staking](https://docs.astar.network/docs/build/dapp-staking/), Astar offers a basic income to dApp developers, which allows them to continue building and enhancing their dApps without a pressing need to apply for grant programs, issue tokens and fundraise to earn money. At every block, a portion of the rewards goes to dApp staking and is then divided between operators (developers) and nominators. As a dApp grows in popularity, more members of the community nominate the dApp, and this, in turn, enables the developers who built the dApp to receive a greater percentage of the block reward. 
 
+### Astar Portal
+
+[Astar Portal](https://portal.astar.network/) is a one-stop-place for interaction with Astar ecosystem, and an exclusive platform for Astar [dApp staking](https://docs.astar.network/docs/build/dapp-staking/) — users can [nominate](https://docs.astar.network/docs/build/dapp-staking/for-stakers/staking/) their Astar/Shiden tokens on specific dApps they wish to support and get a portion of the rewards distributed at every block. Portal also allows unbonding, rewards compounding and nomination transfer. 
+
+[![](https://docs.astar.network/assets/images/18_projects-77835c356c399187d0627b5bf7093498.png)](https://portal.astar.network/)
+
+Astar Portal supports Polkadot native accounts (Polkadot.js, Talisman, SubWallet, Clover, Math Wallet, Hana Wallet, OneKey), Multisig accounts (PolkaSafe) and EVM accounts (MetaMask, Talisman, SubWallet, Hana Wallet, OneKey).
+
+[![](https://docs.astar.network/assets/images/19_Staking-398bf2dd12b5048a5b8ed4e326fe0ac5.png)](https://portal.astar.network/)
+
+
 ### Astar dApps
 Astar Network allows developers to use and build smart contracts in ways they never have before, leading to the realization of truly innovative solutions that can't be replicated in any other environment.
 
