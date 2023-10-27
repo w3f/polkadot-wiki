@@ -18,6 +18,7 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
 - [Sub.ID](#subid)
 - [NOMI](#nomi)
+- [Astar Portal](#astar-portal)
 
 ## Polkadot Staking Dashboard
 
@@ -104,3 +105,13 @@ validators or stake with the recommended validator set.
 [![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
 
 source: https://github.com/turboflakes/apps
+
+## Astar Portal
+
+[Astar Portal](https://portal.astar.network/) is a one-stop-place for interaction with Astar ecosystem, and an exclusive platform for Astar [dApp staking](https://docs.astar.network/docs/build/dapp-staking/) — users can [nominate](https://docs.astar.network/docs/build/dapp-staking/for-stakers/staking/) their Astar/Shiden tokens on specific dApps they wish to support and get a portion of the rewards distributed at every block. Portal also allows unbonding, rewards compounding and nomination transfer. 
+
+[![](https://docs.astar.network/assets/images/18_projects-77835c356c399187d0627b5bf7093498.png)](https://portal.astar.network/)
+
+Astar Portal supports Polkadot native accounts (Polkadot.js, Talisman, SubWallet, Clover, Math Wallet, Hana Wallet, OneKey), Multisig accounts (PolkaSafe) and EVM accounts (MetaMask, Talisman, SubWallet, Hana Wallet, OneKey).
+
+[![](https://docs.astar.network/assets/images/19_Staking-398bf2dd12b5048a5b8ed4e326fe0ac5.png)](https://portal.astar.network/)
