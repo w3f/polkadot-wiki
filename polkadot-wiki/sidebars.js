@@ -606,6 +606,13 @@ module.exports = {
     {
       type: "category",
       label: "Explore",
+      description: 'Wallets and Apps in the Polkadot Ecosystem.',
+      link: {
+        type: 'generated-index',
+        title: 'Explore',
+        description: 'Explore Wallets, Apps and Programmes in Polkadot and Kusama ecosystems.',
+        slug: '/explore-index',
+      },
       items: [
         {
           type: "category",
@@ -625,9 +632,22 @@ module.exports = {
             "general/polkadotjs-ui",
           ],
         },
-        "general/staking-apps",
-        "general/governance-apps",
-        "general/parachains-apps",
+        {
+          type: "category",
+          label: "Apps",
+          description: 'Apps in the Polkadot Ecosystem.',
+          link: {
+            type: 'generated-index',
+            title: 'Apps',
+            description: 'Explore the different applications in the Polkadot and Kusama ecosystems.',
+            slug: '/apps-index',
+          },
+          items: [
+            "general/staking-apps",
+            "general/governance-apps",
+            "general/parachains-apps",
+          ],
+        },
         "general/polkadotjs",
         {
           type: "category",
