@@ -99,7 +99,13 @@ validators or stake with the recommended validator set.
 
 ## NOMI
 
-[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native Staking within the Polkadot and Kusama networks. It aims to offer a unique and enhanced nomination experience, using   Multiple-Criteria Decision Analysis as base for the analytical research. [MCDA](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis) is an open and transparent approach for evaluating numerous conflicting traits in the decision-making process. For the analysis, validator data is collected at the last block of every session.
+[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
+Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
+to offer a unique and enhanced nomination experience, using
+[Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
+(MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
+evaluating numerous conflicting traits in the decision-making process. For the analysis, validator
+data is collected at the last block of every session.
 
 [![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
 
