@@ -17,6 +17,7 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
 - [Sub.ID](#subid)
+- [NOMI](#nomi)
 
 ## Polkadot Staking Dashboard
 
@@ -95,3 +96,17 @@ staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choo
 validators or stake with the recommended validator set.
 
 [![](https://cdn.discordapp.com/attachments/893485384154095640/1166807508837474394/image.png?ex=654bd52c&is=6539602c&hm=f78e346cfd364529b1b03d5207a8ad0cd100fc5093ee832eece397e788200cf0&)](https://sub.id/validator/polkadot)
+
+## NOMI
+
+[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
+Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
+to offer a unique and enhanced nomination experience, using
+[Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
+(MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
+evaluating numerous conflicting traits in the decision-making process. For the analysis, validator
+data is collected at the last block of every session.
+
+[![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
+
+source: https://github.com/turboflakes/apps
