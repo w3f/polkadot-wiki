@@ -169,14 +169,10 @@ needs to be executed for a predefined treasury amount to be paid out. The respon
 assigning a payout address once the specified set of objectives is completed is delegated to the
 curator.
 
-To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
-information. When a user submits a bounty spending proposal, they will probably need to find an
-off-chain way to explain the proposal (any of the available community forums serve this purpose).
-[This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing)
-can help as a checklist of all needed information for the Council to make an informed decision.
-
-The bounty has a predetermined duration of 90 days with the possibility of being extended by the
-curator. Aiming to maintain flexibility on the tasks’ curation, the curator will be able to create
-sub-bounties for more granularity and allocation in the next iteration of the mechanism.
+The bounty has a predetermined duration of
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
+days with the possibility of being extended by the curator. Aiming to maintain flexibility on the
+tasks’ curation, the curator will be able to create child bounties for more granularity and
+allocation in the next iteration of the mechanism.
 
 ### Child Bounties
