@@ -150,16 +150,22 @@ A proposer can [submit a bounty proposal](./learn-guides-bounties.md#submit-a-bo
 OpenGov,
 [with a curator to be defined later](./learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
 background and expertise is such that they are capable of determining when the task is complete.
-Curators are selected through OpenGov referendum after the bounty proposal passes, and need to add
-an upfront payment to take the position. This deposit can be used to punish them if they act
-maliciously. However, if they are successful in their task of getting someone to complete the bounty
-work, they will receive their deposit back and part of the bounty reward as fee payment for their
-job.
 
 When submitting the value of the bounty, the proposer includes a fee paid to curators willing to
 invest their time and expertise in the task: this amount is included in the total value of the
 bounty. In this sense, the curator's fee can be defined as the result of subtracting the value paid
 to the bounty rewardee from the total value of the bounty.
+
+Curators are selected through OpenGov referendum after the bounty proposal passes, and need to add
+an upfront deposit to take the position. The deposit is calculated multiplying the curator fee by
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :kusama }}%,
+and it can range between a minimum of
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> :kusama }}
+and a maximum of
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
+This deposit can be used to punish them if they act maliciously. However, if they are successful in
+their task of getting someone to complete the bounty work, they will receive their deposit back and
+part of the bounty reward as fee payment for their job.
 
 Curators are expected to have a well-balanced track record related to the issues the bounty tries to
 resolve: they should be at least knowledgeable on the topics the bounty touches, and show project
