@@ -29,7 +29,6 @@ allows you to delegate your voting power on [Polkadot OpenGov](../learn/learn-po
 
 Polkassembly is a platform specifically designed to foster open, transparent discussions around Polkadot and Kusama governance proposals. By bridging on-chain decisions with off-chain discussions, Polkassembly ensures that the community remains at the heart of the decision-making process.
 
-Polkassembly is a platform specifically designed to foster open, transparent discussions around Polkadot and Kusama governance proposals. By bridging on-chain decisions with off-chain discussions, Polkassembly ensures that the community remains at the heart of the decision-making process.
 
 **1. Getting Started with Polkassembly** (https://polkadot.polkassembly.io/)
 
