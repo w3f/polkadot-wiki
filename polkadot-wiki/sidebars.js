@@ -67,6 +67,7 @@ module.exports = {
                 "general/wallets-and-extensions",
                 "general/staking-apps",
                 "general/governance-apps",
+                "general/multisig-apps",
                 "general/parachains-apps",
                 {
                   type: "category",
