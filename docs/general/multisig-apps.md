@@ -17,6 +17,9 @@ and add your Governance app to this page.
 
 ## Polkasafe
 
+![Polkasafe](https://github.com/w3f/polkadot-wiki/assets/874046/586bf051-a7fb-43c0-957e-0b659d50c9ab)
+
+
 [Polkasafe](https://polkasafe.xyz) - Your gateway to the Ultimate MultiSig experience on Polkadot.
 
 Gone are the days of cumbersome MultiSig transactions. PolkaSafe redefines the way you interact with
