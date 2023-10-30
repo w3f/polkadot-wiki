@@ -25,7 +25,6 @@ module.exports = {
             "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
-            "general/polkadotjs-ui",
           ],
         },
         {
@@ -46,7 +45,6 @@ module.exports = {
             "general/parachains-apps",
           ],
         },
-        "general/polkadotjs",
         {
           type: "category",
           label: "Dashboards",
@@ -271,6 +269,21 @@ module.exports = {
             slug: '/learn-advanced-index',
           },
           items: [
+            {
+              type: "category",
+              label: "Polkadot-JS",
+              description: 'Overview of Polkadot-JS.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot-JS',
+                description: 'Overview of Polkadot-JS.',
+                slug: '/learn-polkadotjs-index',
+              },
+              items: [
+                "general/polkadotjs",
+                "general/polkadotjs-ui",
+              ],
+            },
             {
               type: "category",
               label: "Architecture",
