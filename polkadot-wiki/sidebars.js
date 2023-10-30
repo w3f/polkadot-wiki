@@ -269,8 +269,21 @@ module.exports = {
             slug: '/learn-advanced-index',
           },
           items: [
-            "general/polkadotjs",
-            "general/polkadotjs-ui",
+            {
+              type: "category",
+              label: "Polkadot-JS",
+              description: 'Everything you need to now about Polkadot-JS.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot-JS',
+                description: 'Everything you need to now about Polkadot-JS.',
+                slug: '/learn-polkadotjs-index',
+              },
+              items: [
+                "general/polkadotjs",
+                "general/polkadotjs-ui",
+              ],
+            },
             {
               type: "category",
               label: "Architecture",
