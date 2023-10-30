@@ -177,7 +177,6 @@ Registrar 3: <br /> **Account**:
 
 {{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their [website](https://polkadot.polkassembly.io/). :polkadot }}
 
-
 ## Sub Accounts
 
 Users can also link accounts by setting "sub accounts", each with its own identity, under a primary

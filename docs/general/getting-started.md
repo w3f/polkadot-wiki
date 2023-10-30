@@ -147,7 +147,8 @@ functionalities on Polkadot.
 
 :::info
 
-Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+Explore Polkadot with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 :::
 
