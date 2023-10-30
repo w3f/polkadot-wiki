@@ -75,23 +75,28 @@ collator side of Async Backing and establish a basic understanding of the change
 
 This phase involves configuring your parachain’s runtime to make use of async backing system.
 
-1. Establish constants for `capacity` and `velocity` and set both of them to 1.
+1. Establish constants for
+   [`capacity` and `velocity` and set both of them to 1](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L231-L236).
 
-2. Establish a constant relay chain slot duration measured in milliseconds equal to `6000`.
+2. Establish a constant relay chain slot duration measured in milliseconds
+   [equal to `6000`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L238).
 
-3. Establish constants `MILLISECS_PER_BLOCK` and `SLOT_DURATION` if not already present.
+3. Establish constants
+   [`MILLISECS_PER_BLOCK` and `SLOT_DURATION`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L197-L202)
+   if not already present.
 
 4. Configure `cumulus_pallet_parachain_system`
 
    - Define a `FixedVelocityConsensusHook` using our capacity, velocity, and relay slot duration
-     constants. Use this to set the parachain system `ConsensusHook` property.
-   - Set the parachain system property `CheckAssociatedRelayNumber` to
-     `RelayNumberMonotonicallyIncreases`.
+     constants. Use this to
+     [set the parachain system `ConsensusHook` property](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L397).
+   - Set the parachain system property
+     [`CheckAssociatedRelayNumber` to `RelayNumberStrictlyIncreases`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L396).
 
 5. Configure `pallet_aura`
 
-   - Set `AllowMultipleBlocksPerSlot` to false
-   - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
+   - [Set `AllowMultipleBlocksPerSlot` to false](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L450)
+   - [Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L452)
 
 6. Update `aura_api::SlotDuration()` to match the constant `SLOT_DURATION`
 
