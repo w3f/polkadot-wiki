@@ -272,7 +272,7 @@ module.exports = {
             {
               type: "category",
               label: "Polkadot-JS",
-              description: 'Everything you need to now about Polkadot-JS.',
+              description: 'Overview of Polkadot-JS.',
               link: {
                 type: 'generated-index',
                 title: 'Polkadot-JS',
