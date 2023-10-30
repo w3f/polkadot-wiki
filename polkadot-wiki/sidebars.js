@@ -25,7 +25,6 @@ module.exports = {
             "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
-            "general/polkadotjs-ui",
           ],
         },
         {
@@ -271,6 +270,7 @@ module.exports = {
           },
           items: [
             "general/polkadotjs",
+            "general/polkadotjs-ui",
             {
               type: "category",
               label: "Architecture",
