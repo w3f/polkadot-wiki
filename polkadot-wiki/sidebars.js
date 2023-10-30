@@ -42,6 +42,7 @@ module.exports = {
           items: [
             "general/staking-apps",
             "general/governance-apps",
+            "learn/learn-nft-projects",
             "general/parachains-apps",
           ],
         },
@@ -237,21 +238,7 @@ module.exports = {
                 "learn/learn-DOT",
                 "learn/learn-inflation",
                 "learn/learn-teleport",
-              ],
-            },
-            {
-              type: "category",
-              label: "NFTs",
-              description: 'Intro to NFTs and NFT Projects.',
-              link: {
-                type: 'generated-index',
-                title: 'NFTs',
-                description: 'Everything about NFTs on Polkadot.',
-                slug: '/learn-nft-index',
-              },
-              items: [
                 "learn/learn-nft",
-                "learn/learn-nft-projects",
               ],
             },
             {
