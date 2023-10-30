@@ -18,7 +18,8 @@ behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, 
 
 :::info User friendly wallets
 
-Create your Polkadot accounts with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+Create your Polkadot accounts with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 :::
 

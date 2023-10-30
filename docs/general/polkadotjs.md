@@ -16,10 +16,10 @@ consult the [**official documentation**](https://polkadot.js.org/docs/).
 
 :::info For Developers and Power Users Only
 
-Please note that this wallet UI is oriented toward developers and power users.
-Explore Polkadot with a secure and user-friendly wallets listed on 
-the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
-If you need help using the Polkadot-JS UI you can contact the
+Please note that this wallet UI is oriented toward developers and power users. Explore Polkadot with
+a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/). If you need help using the
+Polkadot-JS UI you can contact the
 [**Polkadot Support Team**](https://support.polkadot.network/support/home).
 
 :::
