@@ -15,6 +15,30 @@ and add your Governance app to this page.
 
 :::
 
+
+## Polkasafe
+
+![Polkasafe](https://github.com/w3f/polkadot-wiki/assets/874046/586bf051-a7fb-43c0-957e-0b659d50c9ab)
+
+[Polkasafe](https://polkasafe.xyz) - Your gateway to the Ultimate MultiSig experience on Polkadot.
+
+Gone are the days of cumbersome MultiSig transactions. PolkaSafe redefines the way you interact with
+the Polkadot Blockchain, making MultiSig operations not just safer but also incredibly
+user-friendly.
+
+- Seamless MultiSig Transactions: With PolkaSafe, initiating, approving, and executing MultiSig
+  transactions is a breeze. Whether you're managing funds, delegating responsibilities, or simply
+  securing your assets, the platform's intuitive design ensures every step is straightforward.
+- Collaborative Asset Management: Engage in collective decision-making with stakeholders, team
+  members, or partners. PolkaSafe's collaborative tools make it easy to propose, discuss, and
+  finalize MultiSig transactions, ensuring transparency and consensus. Extrinsic Management: Beyond
+  standard transactions, PolkaSafe simplifies extrinsics – specialized instructions or functions on
+  the Polkadot Blockchain.
+- Whether you're interacting with smart contracts, parachains, or other advanced features,
+  PolkaSafe's MultiSig capabilities ensure every extrinsic is secure and efficient.
+- User-Centric Design: Every feature, from initiating a transaction to diving deep into extrinsics,
+  is designed for clarity and ease.
+
 ## Multix
 
 :::info Walk-Through Video Tutorial
@@ -40,26 +64,3 @@ Besides being user-friendly, Multix provides several benefits compared to the Po
 
 The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
 [pure proxy page](../learn/learn-proxies-pure.md#scenario-three-multisig-controlling-a-pure-proxy).
-
-## Polkasafe
-
-![Polkasafe](https://github.com/w3f/polkadot-wiki/assets/874046/586bf051-a7fb-43c0-957e-0b659d50c9ab)
-
-[Polkasafe](https://polkasafe.xyz) - Your gateway to the Ultimate MultiSig experience on Polkadot.
-
-Gone are the days of cumbersome MultiSig transactions. PolkaSafe redefines the way you interact with
-the Polkadot Blockchain, making MultiSig operations not just safer but also incredibly
-user-friendly.
-
-- Seamless MultiSig Transactions: With PolkaSafe, initiating, approving, and executing MultiSig
-  transactions is a breeze. Whether you're managing funds, delegating responsibilities, or simply
-  securing your assets, the platform's intuitive design ensures every step is straightforward.
-- Collaborative Asset Management: Engage in collective decision-making with stakeholders, team
-  members, or partners. PolkaSafe's collaborative tools make it easy to propose, discuss, and
-  finalize MultiSig transactions, ensuring transparency and consensus. Extrinsic Management: Beyond
-  standard transactions, PolkaSafe simplifies extrinsics – specialized instructions or functions on
-  the Polkadot Blockchain.
-- Whether you're interacting with smart contracts, parachains, or other advanced features,
-  PolkaSafe's MultiSig capabilities ensure every extrinsic is secure and efficient.
-- User-Centric Design: Every feature, from initiating a transaction to diving deep into extrinsics,
-  is designed for clarity and ease.
