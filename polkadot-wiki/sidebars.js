@@ -23,7 +23,6 @@ module.exports = {
           },
           items: [
             "general/wallets-and-extensions",
-            "general/multisig-apps",
             "general/ledger",
             "general/polkadot-vault",
             "general/polkadotjs-ui",
@@ -42,6 +41,7 @@ module.exports = {
           items: [
             "general/staking-apps",
             "general/governance-apps",
+            "general/multisig-apps",
             "learn/learn-nft-projects",
             "general/parachains-apps",
           ],
