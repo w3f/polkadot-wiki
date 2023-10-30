@@ -46,7 +46,6 @@ module.exports = {
             "general/parachains-apps",
           ],
         },
-        "general/polkadotjs",
         {
           type: "category",
           label: "Dashboards",
@@ -271,6 +270,7 @@ module.exports = {
             slug: '/learn-advanced-index',
           },
           items: [
+            "general/polkadotjs",
             {
               type: "category",
               label: "Architecture",
