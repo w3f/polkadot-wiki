@@ -73,9 +73,82 @@ collator side of Async Backing and establish a basic understanding of the change
 
 ## Phase 1 - Update Parachain Runtime
 
+This phase involves configuring your parachain’s runtime to make use of async backing system.
+
+1. Establish constants for `capacity` and `velocity` and set both of them to 1.
+
+2. Establish a constant relay chain slot duration measured in milliseconds equal to `6000`.
+
+3. Establish constants `MILLISECS_PER_BLOCK` and `SLOT_DURATION` if not already present.
+
+4. Configure `cumulus_pallet_parachain_system`
+
+   - Define a `FixedVelocityConsensusHook` using our capacity, velocity, and relay slot duration
+     constants. Use this to set the parachain system `ConsensusHook` property.
+   - Set the parachain system property `CheckAssociatedRelayNumber` to
+     `RelayNumberMonotonicallyIncreases`.
+
+5. Configure `pallet_aura`
+
+   - Set `AllowMultipleBlocksPerSlot` to false
+   - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
+
+6. Update `aura_api::SlotDuration()` to match the constant `SLOT_DURATION`
+
+7. Implement the AuraUnincludedSegmentApi, which allows the collator client to query its runtime to
+   determine whether it should author a block.
+
+   - Add the dependency `cumulus-primitives-aura` to the `Cargo.toml` file for your runtime
+   - Inside the `impl_runtime_apis!` block for your runtime, implement the
+     `AuraUnincludedSegmentApi` as shown below.
+
+8. If your runtime provides a `CheckInherents` type to `register_validate_block`, remove it.
+   `FixedVelocityConsensusHook` makes it unnecessary. The following example shows how
+   `register_validate_block` should look after removing `CheckInherents`.
+
 ## Phase 2 - Update Parachain Nodes
 
+This phase consists of plugging in the new lookahead collator node.
+
+1. Import `cumulus_primitives_core::ValidationCode`
+
+2. Modify `sc_service::spawn_tasks` to use a clone of `Backend` rather than the original
+
+3. Add `backend` as a parameter to `start_consensus()`
+
+4. In `start_consensus()` import the lookahead collator rather than the basic collator
+
+5. In `start_consensus()` replace the `BasicAuraParams` struct with `AuraParams`
+   - Change the struct type from `BasicAuraParams` to `AuraParams`
+   - In the `para_client` field, pass in a cloned para client rather than the original
+   - Add a `para_backend` parameter after `para_client`, passing in our para backend
+   - Provide a `code_hash_provider` closure like that shown below
+   - Increase `authoring_duration` from 500 milliseconds to 1500
+
+Note: Set `authoring_duration` to whatever you want, taking your own hardware into account. But if
+the backer who should be slower than you due to reading from disk, times out at two seconds your
+candidates will be rejected.
+
+6. In `start_consensus()` replace `basic_aura::run` with `aura::run`
+
 ## Phase 3 - Activate Async Backing
+
+This phase consists of changes to your parachain’s runtime that activate async backing feature.
+
+1. Configure `pallet_aura`, setting `AllowMultipleBlocksPerSlot` to true.
+
+2. Increase the maximum unincluded segment capacity
+
+3. Either decrease `MILLISECS_PER_BLOCK` to 6000 or increase `BLOCK_PROCESSING_VELOCITY` to 2.
+
+- Note: For a parachain which measures time in terms of its own block number rather than by relay
+  block number it may be preferable to increase velocity. Changing block time may cause
+  complications, requiring additional changes. See the section “Timing by Block Number”.
+
+4. Update `MAXIMUM_BLOCK_WEIGHT` to reflect the increased time available for block production.
+
+5. Add a feature flagged alternative for `MinimumPeriod` in `pallet_timestamp`. The type should be
+   `ConstU64<0>` with the feature flag experimental, and `ConstU64<{SLOT_DURATION / 2}>` without.
 
 ## Timing by Block Number
 
