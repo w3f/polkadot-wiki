@@ -23,6 +23,12 @@ to set the stage.
 
 ## Async Backing Prerequisites
 
+:::info
+
+For more contextual information about asynchronous backing, see [this page](../learn/learn-async-backing.md).
+
+:::
+
 Pull the latest version of Cumulus for use with your parachain. It contains necessary changes for
 async backing compatibility. Latest on master branch of
 [Polkadot-SDK](https://github.com/paritytech/polkadot-sdk) is currently sufficient. Any 2024 release
