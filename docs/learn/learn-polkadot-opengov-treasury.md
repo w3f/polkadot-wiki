@@ -156,7 +156,7 @@ invest their time and expertise in the task: this amount will be included in the
 bounty. In this sense, the curator's fee can be defined as the difference between the amounts paid to child bounty
 awardees and the total value of the bounty.
 
-Curators are selected through OpenGov referendum after the bounty proposal passes and need to add an
+Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to pay an
 upfront deposit to take the position. The deposit is calculated by multiplying the curator fee by
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :kusama }}%,
 and it can range between a minimum of
