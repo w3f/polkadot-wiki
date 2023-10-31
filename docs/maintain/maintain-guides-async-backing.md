@@ -85,31 +85,44 @@ This phase involves configuring your parachain’s runtime to make use of async 
    [`MILLISECS_PER_BLOCK` and `SLOT_DURATION`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L197-L202)
    if not already present.
 
-4. Configure `cumulus_pallet_parachain_system`
+4. Configure `cumulus_pallet_parachain_system` in `cumulus/parachain-template/runtime/src/lib.rs`
 
    - Define a `FixedVelocityConsensusHook` using our capacity, velocity, and relay slot duration
-     constants. Use this to
-     [set the parachain system `ConsensusHook` property](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L397).
-   - Set the parachain system property
-     [`CheckAssociatedRelayNumber` to `RelayNumberStrictlyIncreases`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L396).
+     constants. Use this to set the parachain system `ConsensusHook` property.
 
-5. Configure `pallet_aura`
+   ![consensus-hook](../assets/async/async-backing-consensus-hook.png)
 
-   - [Set `AllowMultipleBlocksPerSlot` to false](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L450)
-   - [Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L452)
+   - Set the parachain system property `CheckAssociatedRelayNumber` to
+     `RelayNumberMonotonicallyIncreases`
+
+   ![Associated-Relay-number](../assets/async/async-backing-associated-relay.png)
+
+5. Configure `pallet_aura` in `cumulus/parachain-template/runtime/src/lib.rs`
+
+   - Set `AllowMultipleBlocksPerSlot` to false
+   - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
+
+   ![Aura-config](../assets/async/async-backing-config-aura.png)
 
 6. Update `aura_api::SlotDuration()` to match the constant `SLOT_DURATION`
+
+   ![Aura-spi](../assets/async/async-backing-aura-api.png)
 
 7. Implement the AuraUnincludedSegmentApi, which allows the collator client to query its runtime to
    determine whether it should author a block.
 
    - Add the dependency `cumulus-primitives-aura` to the `Cargo.toml` file for your runtime
+     ![cargo-toml](../assets/async/async-backing-cargo.png)
+
    - Inside the `impl_runtime_apis!` block for your runtime, implement the
      `AuraUnincludedSegmentApi` as shown below.
+     ![unincluded-segment](../assets/async/async-backing-unincluded-segment.png)
 
 8. If your runtime provides a `CheckInherents` type to `register_validate_block`, remove it.
    `FixedVelocityConsensusHook` makes it unnecessary. The following example shows how
    `register_validate_block` should look after removing `CheckInherents`.
+
+   ![register-validate-block](../assets/async/async-backing-register-validate.png)
 
 ## Phase 2 - Update Parachain Nodes
 
