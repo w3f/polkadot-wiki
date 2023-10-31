@@ -432,8 +432,8 @@ payout for that validator for that era.
 If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and
 they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts
 will also be lost. Since unbonding takes
-{{ polkadot: <RPC network="polkadot" path="query.staking.bondingDuration" defaultValue={28}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.bondingDuration" defaultValue={7}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days, nominators should check if they have pending payouts at least this often.
 
 :::
@@ -480,8 +480,9 @@ Once a validator gets slashed, it goes into the state as an "unapplied slash". Y
 via
 [Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator and then all the affected nominators along with the amounts. While
-unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
-days on Polkadot). After the grace period, the slashes are applied.
+unapplied, a governance proposal can be made to reverse it during this period
+({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
+days). After the grace period, the slashes are applied.
 
 The following levels of offense are
 [defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
@@ -539,8 +540,8 @@ can now unbond them immediately.
 :::
 
 If your bonded balance did not back any validators in the last
-{{ polkadot: 28 days on Polkadot :polkadot }}{{ kusama: 7 days on Kusama :kusama }}, you are
-eligible to perform fast unstaking. The
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
+days, you are eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
@@ -574,14 +575,32 @@ users to withdraw. For in-depth understanding, check the
 
 ### Cons of Staking
 
-- Tokens will be locked for about {{ polkadot: 28 :polkadot }}{{ kusama: 7 :kusama }} days on
-  {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned during
-  the unbonding period.
-
+- Tokens will be locked for about
+  {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
+  days on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned
+  during the unbonding period.
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](#slashing)).
 - Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
   transfer them to different account etc.
+
+#### Unbonding Period Length
+
+The unbonding period provides a safety net for slashing offenses identified in
+[past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras),
+which can hold the respective validators and their nominators accountable. The
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
+unbonding period is crucial in mitigating ex post facto slashing, particularly in guarding against
+long-range attacks. When a client encounters a chain finalized by
+[GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
+days in the past, it lacks the security of slashing protection.
+
+Essentially, this period establishes a cadence for synchronizing with the chain or acquiring a
+checkpoint within a timeframe that engenders trust. It's worth noting that while the choice of a
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
+period is somewhat arbitrary, it unquestionably provides a higher level of security compared to a
+shorter period.
 
 ## How many Validators?
 
