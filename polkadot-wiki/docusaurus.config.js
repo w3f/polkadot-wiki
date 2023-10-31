@@ -172,8 +172,11 @@ module.exports = {
           {
             to: '/docs/staking-apps',
             from: ['/docs/learn-staking-apps']
-          }
-          
+          },
+          {
+            to: '/docs/learn-polkadot-opengov-origins',
+            from: ['/docs/maintain-guides-polkadot-opengov']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {

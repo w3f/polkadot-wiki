@@ -219,7 +219,21 @@ module.exports = {
                 "learn/learn-nomination-pools",
               ],
             },
-            "learn/learn-polkadot-opengov",
+            {
+              type: "category",
+              label: "Polkadot OpenGov",
+              description: 'Everything about Polkadot OpenGov.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot OpenGov',
+                description: 'Everything about Polkadot OpenGov.',
+                slug: '/learn-polkadot-opengov-index',
+              },
+              items: [
+                "learn/learn-polkadot-opengov",
+                "learn/learn-polkadot-opengov-origins",
+              ],
+            },
             "learn/learn-polkadot-opengov-treasury",
             {
               type: "category",
@@ -682,13 +696,6 @@ module.exports = {
             "maintain/maintain-guides-how-to-stop-validating",
             "maintain/doc-maintain-guides-validator-community",
             "maintain/maintain-guides-avoid-slashing",
-          ],
-        },
-        {
-          type: "category",
-          label: "Governance Guides",
-          items: [
-            "maintain/maintain-guides-polkadot-opengov",
           ],
         },
         {
