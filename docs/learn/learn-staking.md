@@ -586,10 +586,9 @@ users to withdraw. For in-depth understanding, check the
 
 #### Unbonding Period Length
 
-The
+The unbonding period provides a safety net for slashing offenses identified in [past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras), which can hold the respective validators and their nominators accountable. The
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
-unbonding period serves a crucial role in mitigating ex post facto slashing, particularly in the
-context of guarding against long-range attacks. When a client encounters a chain finalized by
+unbonding period is crucial in mitigating ex post facto slashing, particularly in guarding against long-range attacks. When a client encounters a chain finalized by
 [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days in the past, it lacks the security of slashing protection.
