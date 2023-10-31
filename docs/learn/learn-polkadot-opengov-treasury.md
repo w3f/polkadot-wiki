@@ -178,7 +178,7 @@ The bounty has a predetermined duration of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
 days, with possible extension(s) to be requested by the curator. To maintain flexibility during the
 tasks’ curation, the curator will also be able to create child bounties for more granularity in the allocation of funds and 
-allocation in the next iteration of the mechanism.
+as part of a nested iteration of the bounty mechanism.
 
 ### Child Bounties
 
