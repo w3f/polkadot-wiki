@@ -176,7 +176,7 @@ address once the specified set of objectives is completed is delegated to the cu
 
 The bounty has a predetermined duration of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
-days with the possibility of being extended by the curator. Aiming to maintain flexibility on the
+days, with possible extension(s) to be requested by the curator. To maintain flexibility during the
 tasks’ curation, the curator will be able to create child bounties for more granularity and
 allocation in the next iteration of the mechanism.
 
