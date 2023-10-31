@@ -182,5 +182,5 @@ as part of a nested iteration of the bounty mechanism.
 
 ### Child Bounties
 
-Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties access funds
+Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties are used to access funds
 directly from the parent bounty without going through an OpenGov referendum.
