@@ -151,7 +151,7 @@ OpenGov,
 [with a curator to be defined later](./learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
 background and expertise is such that they can determine when the task is complete.
 
-When submitting the value of the bounty, the proposer includes a fee paid to curators willing to
+When submitting the value of the bounty, the proposer can specify a fee that will be paid to curators willing to
 invest their time and expertise in the task: this amount is included in the total value of the
 bounty. In this sense, the curator's fee can be defined as subtracting the value paid to the bounty
 rewardee from the total value of the bounty.
