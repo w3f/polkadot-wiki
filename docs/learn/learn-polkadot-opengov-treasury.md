@@ -139,7 +139,7 @@ allowing access to treasury funds once to fund multiple events later on through
 
 Parent bounty proposals aim to reserve a portion of treasury funds once that will be used later on.
 They save proponents the time needed to create and obtain approval for several OpenGov referenda. Bounties are managed by curators, where
-usually a curator is a [multi-signature account](./learn-account-multisig.md). Bounties can access a
+the curator is usually a [multi-signature account](./learn-account-multisig.md). Bounties can access a
 large amount of funds, so managing those funds with a multisig is a good practice to enhance
 security. Essentially, curators are multisig addresses with agency over a portion of the treasury to
 promote events, fix a bug or vulnerability, develop a strategy, or monitor a set of tasks related to
