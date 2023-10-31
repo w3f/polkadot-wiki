@@ -655,6 +655,7 @@ module.exports = {
         "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
         "maintain/maintain-endpoints",
+        "maintain/maintain-guides-async-backing",
         {
           type: "category",
           label: "Nodes and Dapps",
