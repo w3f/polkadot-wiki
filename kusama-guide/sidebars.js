@@ -89,7 +89,7 @@ module.exports = {
               items: [
                 "learn/learn-governance",
                 "learn/learn-polkadot-opengov",
-                "maintain/maintain-guides-polkadot-opengov",
+                "learn/learn-guides-polkadot-opengov",
                 "maintain/maintain-guides-how-to-join-council",
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
