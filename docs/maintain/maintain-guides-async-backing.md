@@ -75,15 +75,18 @@ collator side of Async Backing and establish a basic understanding of the change
 
 This phase involves configuring your parachain’s runtime to make use of async backing system.
 
-1. Establish constants for
-   [`capacity` and `velocity` and set both of them to 1](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L231-L236).
+1. Establish constants for `capacity` and `velocity` and set both of them to 1 in
+   `/runtime/src/lib.rs`.
 
-2. Establish a constant relay chain slot duration measured in milliseconds
-   [equal to `6000`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L238).
+2. Establish a constant relay chain slot duration measured in milliseconds equal to `6000` in
+   `/runtime/src/lib.rs`.
 
-3. Establish constants
-   [`MILLISECS_PER_BLOCK` and `SLOT_DURATION`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L197-L202)
-   if not already present.
+![capacity-velocity](../assets/async/async-backing-capacity-velocity.png)
+
+3. Establish constants `MILLISECS_PER_BLOCK` and `SLOT_DURATION` if not already present in
+   `/runtime/src/lib.rs`.
+
+![capacity-velocity](../assets/async/async-backing-slot-duration.png)
 
 4. Configure `cumulus_pallet_parachain_system` in `runtime/src/lib.rs`
 
@@ -112,10 +115,12 @@ This phase involves configuring your parachain’s runtime to make use of async 
    determine whether it should author a block.
 
    - Add the dependency `cumulus-primitives-aura` to the `runtime/Cargo.toml` file for your runtime
+
      ![cargo-toml](../assets/async/async-backing-cargo.png)
 
    - Inside the `impl_runtime_apis!` block for your runtime, implement the
      `AuraUnincludedSegmentApi` as shown below.
+
      ![unincluded-segment](../assets/async/async-backing-unincluded-segment.png)
 
      Important note: With a capacity of 1 we have an effective velocity of ½ even when velocity is
