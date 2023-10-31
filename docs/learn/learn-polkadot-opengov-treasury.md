@@ -154,7 +154,7 @@ background and expertise is such that they can determine when the task is comple
 When submitting the value of the bounty, the proposer can specify a fee that will be paid to curators willing to
 invest their time and expertise in the task: this amount will be included in the total value of the
 bounty. In this sense, the curator's fee can be defined as the difference between the amounts paid to child bounty
-rewardee from the total value of the bounty.
+awardees and the total value of the bounty.
 
 Curators are selected through OpenGov referendum after the bounty proposal passes and need to add an
 upfront deposit to take the position. The deposit is calculated by multiplying the curator fee by
