@@ -85,7 +85,7 @@ This phase involves configuring your parachain’s runtime to make use of async 
    [`MILLISECS_PER_BLOCK` and `SLOT_DURATION`](https://github.com/paritytech/polkadot-sdk/blob/30f3ad2eefce06fc3a1a063b57af22e9d75bb903/cumulus/parachain-template/runtime/src/lib.rs#L197-L202)
    if not already present.
 
-4. Configure `cumulus_pallet_parachain_system` in `cumulus/parachain-template/runtime/src/lib.rs`
+4. Configure `cumulus_pallet_parachain_system` in `runtime/src/lib.rs`
 
    - Define a `FixedVelocityConsensusHook` using our capacity, velocity, and relay slot duration
      constants. Use this to set the parachain system `ConsensusHook` property.
@@ -97,7 +97,7 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
    ![Associated-Relay-number](../assets/async/async-backing-associated-relay.png)
 
-5. Configure `pallet_aura` in `cumulus/parachain-template/runtime/src/lib.rs`
+5. Configure `pallet_aura` in `runtime/src/lib.rs`
 
    - Set `AllowMultipleBlocksPerSlot` to false
    - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
@@ -111,15 +111,21 @@ This phase involves configuring your parachain’s runtime to make use of async 
 7. Implement the AuraUnincludedSegmentApi, which allows the collator client to query its runtime to
    determine whether it should author a block.
 
-   - Add the dependency `cumulus-primitives-aura` to the `Cargo.toml` file for your runtime
+   - Add the dependency `cumulus-primitives-aura` to the `runtime/Cargo.toml` file for your runtime
      ![cargo-toml](../assets/async/async-backing-cargo.png)
 
    - Inside the `impl_runtime_apis!` block for your runtime, implement the
      `AuraUnincludedSegmentApi` as shown below.
      ![unincluded-segment](../assets/async/async-backing-unincluded-segment.png)
 
-8. If your runtime provides a `CheckInherents` type to `register_validate_block`, remove it.
-   `FixedVelocityConsensusHook` makes it unnecessary. The following example shows how
+     Important note: With a capacity of 1 we have an effective velocity of ½ even when velocity is
+     configured to some larger value. This is because capacity will be filled after a single block
+     is produced and will only be freed up after that block is included on the relay chain, which
+     takes 2 relay blocks to accomplish. Thus with capacity 1 and velocity 1 we get the customary 12
+     second parachain block time.
+
+8. If your `runtime/src/lib.rs` provides a `CheckInherents` type to `register_validate_block`,
+   remove it. `FixedVelocityConsensusHook` makes it unnecessary. The following example shows how
    `register_validate_block` should look after removing `CheckInherents`.
 
    ![register-validate-block](../assets/async/async-backing-register-validate.png)
@@ -128,13 +134,24 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
 This phase consists of plugging in the new lookahead collator node.
 
-1. Import `cumulus_primitives_core::ValidationCode`
+1. Import `cumulus_primitives_core::ValidationCode` to `node/src/service.rs`
 
-2. Modify `sc_service::spawn_tasks` to use a clone of `Backend` rather than the original
+![import-validation-code](../assets/async/async-backing-cumulus-primitives.png)
 
-3. Add `backend` as a parameter to `start_consensus()`
+2. In `node/src/service.rs`, modify `sc_service::spawn_tasks` to use a clone of `Backend` rather
+   than the original
+
+![spawn-tasks](../assets/async/async-backing-spawn-tasks.png)
+
+3. Add `backend` as a parameter to `start_consensus()` in `node/src/service.rs`
+
+![start-consensus-1](../assets/async/async-backing-start-consensus.png)
+
+![start-consensus-2](../assets/async/async-backing-start-consensus-2.png)
 
 4. In `start_consensus()` import the lookahead collator rather than the basic collator
+
+![lookahead-collator](../assets/async/async-backing-lookahead-collator.png)
 
 5. In `start_consensus()` replace the `BasicAuraParams` struct with `AuraParams`
    - Change the struct type from `BasicAuraParams` to `AuraParams`
@@ -147,7 +164,11 @@ Note: Set `authoring_duration` to whatever you want, taking your own hardware in
 the backer who should be slower than you due to reading from disk, times out at two seconds your
 candidates will be rejected.
 
+![Aura-params](../assets/async/async-backing-aura-params.png)
+
 6. In `start_consensus()` replace `basic_aura::run` with `aura::run`
+
+![Aura-run](../assets/async/async-backing-aura-run.png)
 
 ## Phase 3 - Activate Async Backing
 
