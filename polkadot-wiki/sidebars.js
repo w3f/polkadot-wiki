@@ -11,6 +11,7 @@ module.exports = {
         slug: '/explore-index',
       },
       items: [
+        "general/getting-started",
         {
           type: "category",
           label: "Wallets",
@@ -119,7 +120,6 @@ module.exports = {
             slug: '/general-index',
           },
           items: [
-            "general/getting-started",
             "general/web3-and-polkadot",
             {
               type: "category",
