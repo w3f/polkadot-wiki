@@ -163,7 +163,7 @@ and it can range between a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> :kusama }}
 and a maximum of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
-This deposit can be used to punish them if they act maliciously. However, if they are successful in
+This deposit can be used to punish curators if they act maliciously. However, if they are successful in
 their task of getting someone to complete the bounty work, they will receive their deposit back and
 part of the bounty reward as a fee payment for their job.
 
