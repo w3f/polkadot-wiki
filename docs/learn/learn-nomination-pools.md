@@ -189,10 +189,10 @@ At any point in time after joining the pool, a member can start the process of e
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the
 unbonding duration has passed
 {{ polkadot: (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
-{{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
+{{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
 eras which correspond to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
+{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
 days on {{ polkadot: Polkadot), :polkadot }} {{ kusama: Kusama), :kusama }} a member may withdraw
 their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their
 pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section
