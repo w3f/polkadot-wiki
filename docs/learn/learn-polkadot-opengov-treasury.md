@@ -135,7 +135,7 @@ Getting treasury funding through OpenGov, depending on which treasury track you 
 referendum, can be a long and uncertain process. This is not always a suitable option, for example, for events'
 organizers needing to pay costs upfront or close to the event's date. Bounties solve this problem by
 allowing access to treasury funds once to fund multiple events later on through
-[child bounties](#child-bounties) (that is why bounties are also called _parent_ bounties).
+[child bounties](#child-bounties). This is why bounties are also called _parent_ bounties.
 
 Parent bounty proposals aim to access treasury funds once to fund multiple smaller proposals later
 on without creating OpenGov referenda for each one of them. Bounties are managed by curators, where
