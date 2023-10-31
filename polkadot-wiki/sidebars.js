@@ -23,10 +23,8 @@ module.exports = {
           },
           items: [
             "general/wallets-and-extensions",
-            "general/multisig-apps",
             "general/ledger",
             "general/polkadot-vault",
-            "general/polkadotjs-ui",
           ],
         },
         {
@@ -42,10 +40,11 @@ module.exports = {
           items: [
             "general/staking-apps",
             "general/governance-apps",
+            "general/multisig-apps",
+            "learn/learn-nft-projects",
             "general/parachains-apps",
           ],
         },
-        "general/polkadotjs",
         {
           type: "category",
           label: "Dashboards",
@@ -220,7 +219,21 @@ module.exports = {
                 "learn/learn-nomination-pools",
               ],
             },
-            "learn/learn-polkadot-opengov",
+            {
+              type: "category",
+              label: "Polkadot OpenGov",
+              description: 'Everything about Polkadot OpenGov.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot OpenGov',
+                description: 'Everything about Polkadot OpenGov.',
+                slug: '/learn-polkadot-opengov-index',
+              },
+              items: [
+                "learn/learn-polkadot-opengov",
+                "learn/learn-polkadot-opengov-origins",
+              ],
+            },
             "learn/learn-polkadot-opengov-treasury",
             {
               type: "category",
@@ -237,21 +250,7 @@ module.exports = {
                 "learn/learn-DOT",
                 "learn/learn-inflation",
                 "learn/learn-teleport",
-              ],
-            },
-            {
-              type: "category",
-              label: "NFTs",
-              description: 'Intro to NFTs and NFT Projects.',
-              link: {
-                type: 'generated-index',
-                title: 'NFTs',
-                description: 'Everything about NFTs on Polkadot.',
-                slug: '/learn-nft-index',
-              },
-              items: [
                 "learn/learn-nft",
-                "learn/learn-nft-projects",
               ],
             },
             {
@@ -284,6 +283,21 @@ module.exports = {
             slug: '/learn-advanced-index',
           },
           items: [
+            {
+              type: "category",
+              label: "Polkadot-JS",
+              description: 'Overview of Polkadot-JS.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot-JS',
+                description: 'Overview of Polkadot-JS.',
+                slug: '/learn-polkadotjs-index',
+              },
+              items: [
+                "general/polkadotjs",
+                "general/polkadotjs-ui",
+              ],
+            },
             {
               type: "category",
               label: "Architecture",
@@ -682,13 +696,6 @@ module.exports = {
             "maintain/maintain-guides-how-to-stop-validating",
             "maintain/doc-maintain-guides-validator-community",
             "maintain/maintain-guides-avoid-slashing",
-          ],
-        },
-        {
-          type: "category",
-          label: "Governance Guides",
-          items: [
-            "maintain/maintain-guides-polkadot-opengov",
           ],
         },
         {

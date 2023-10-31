@@ -62,14 +62,14 @@ On Polkadot-JS UI, navigate to Governance > Treasury to view the status of curre
 ## Treasury Tracks
 
 OpenGov allows for managing funds through six tracks, each with its own
-[origin and track parameters](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info).
+[origin and track parameters](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
 
-- Treasurer
-- Big Spender
-- Medium Spender
-- Small Spender
-- Big Tipper
-- Small Tipper
+- [Treasurer](./learn-polkadot-opengov-origins.md#treasurer)
+- [Big Spender](./learn-polkadot-opengov-origins.md#big-spender)
+- [Medium Spender](./learn-polkadot-opengov-origins.md#medium-spender)
+- [Small Spender](./learn-polkadot-opengov-origins.md#small-spender)
+- [Big Tipper](./learn-polkadot-opengov-origins.md#big-tipper)
+- [Small Tipper](./learn-polkadot-opengov-origins.md#small-tipper)
 
 :::info How to access Treasury funds?
 
@@ -78,41 +78,3 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 [here](./learn-guides-treasury#creating-a-treasury-proposal).
 
 :::
-
-### Treasurer
-
-This track can be used for treasury spending requests up to
-{{ polkadot: 10M DOT :polkadot }}{{ kusama:  333333.33 KSM  :kusama }} per referendum. Each
-referendum requires a decision deposit of
-{{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }}.
-
-### Big Spender
-
-This track can be used for treasury spending requests up to
-{{ polkadot: 1M DOT :polkadot }}{{ kusama:  33333.33 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 400 DOT :polkadot }}{{ kusama:  13.33 KSM  :kusama }}.
-
-### Medium Spender
-
-This track can be used for treasury spending requests up to
-{{ polkadot: 100K DOT :polkadot }}{{ kusama:  3333.33 KSM  :kusama }} per referendum. Each
-referendum requires a decision deposit of
-{{ polkadot: 200 DOT :polkadot }}{{ kusama:  6.66 KSM  :kusama }}.
-
-### Small Spender
-
-This track can be used for treasury spending requests up to
-{{ polkadot: 10K DOT :polkadot }}{{ kusama:  333.33 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 100 DOT :polkadot }}{{ kusama:  3.33 KSM  :kusama }}.
-
-### Big Tipper
-
-This track can be used for treasury spending requests up to
-{{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 10 DOT :polkadot }}{{ kusama:  0.33 KSM  :kusama }}.
-
-### Small Tipper
-
-This track can be used for treasury spending requests up to
-{{ polkadot: 100 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 KSM  :kusama }}.
