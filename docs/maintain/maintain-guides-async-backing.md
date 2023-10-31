@@ -174,20 +174,31 @@ candidates will be rejected.
 
 This phase consists of changes to your parachain’s runtime that activate async backing feature.
 
-1. Configure `pallet_aura`, setting `AllowMultipleBlocksPerSlot` to true.
+1. Configure `pallet_aura`, setting `AllowMultipleBlocksPerSlot` to true in `runtime/src/lib.rs`.
 
-2. Increase the maximum unincluded segment capacity
+![Aura-allow-multiple-blocks](../assets/async/async-backing-allow-multiple.png)
 
-3. Either decrease `MILLISECS_PER_BLOCK` to 6000 or increase `BLOCK_PROCESSING_VELOCITY` to 2.
+2. Increase the maximum unincluded segment capacity in `runtime/src/lib.rs`.
+
+![Unincluded-segment-capacity](../assets/async/async-backing-unincluded-segment.png)
+
+3. Either decrease `MILLISECS_PER_BLOCK` to 6000 or increase `BLOCK_PROCESSING_VELOCITY` to 2 in
+   `runtime/src/lib.rs`.
 
 - Note: For a parachain which measures time in terms of its own block number rather than by relay
   block number it may be preferable to increase velocity. Changing block time may cause
   complications, requiring additional changes. See the section “Timing by Block Number”.
 
+![block-time](../assets/async/async-backing-block-time.png)
+
 4. Update `MAXIMUM_BLOCK_WEIGHT` to reflect the increased time available for block production.
+
+![block-weight](../assets/async/async-backing-maxblock-weight.png)
 
 5. Add a feature flagged alternative for `MinimumPeriod` in `pallet_timestamp`. The type should be
    `ConstU64<0>` with the feature flag experimental, and `ConstU64<{SLOT_DURATION / 2}>` without.
+
+![minimum-period](../assets/async/async-backing-minimum-period.png)
 
 ## Timing by Block Number
 
