@@ -432,8 +432,8 @@ payout for that validator for that era.
 If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and
 they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts
 will also be lost. Since unbonding takes
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days, nominators should check if they have pending payouts at least this often.
 
 :::
@@ -481,7 +481,7 @@ via
 [Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator and then all the affected nominators along with the amounts. While
 unapplied, a governance proposal can be made to reverse it during this period
-({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
+({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days). After the grace period, the slashes are applied.
 
 The following levels of offense are
@@ -540,7 +540,7 @@ can now unbond them immediately.
 :::
 
 If your bonded balance did not back any validators in the last
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days, you are eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
 qualify. For more information, visit the
@@ -576,7 +576,7 @@ users to withdraw. For in-depth understanding, check the
 ### Cons of Staking
 
 - Tokens will be locked for about
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
+  {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
   days on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned
   during the unbonding period.
 - Possible punishment in case of the active validator found to be misbehaving (see
@@ -587,22 +587,22 @@ users to withdraw. For in-depth understanding, check the
 #### Unbonding Period Length
 
 The
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
 unbonding period serves a crucial role in mitigating ex post facto slashing, particularly in the
 context of guarding against long-range attacks. When a client encounters a chain finalized by
 [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days in the past, it lacks the security of slashing protection.
 
 Essentially, this period establishes a cadence for synchronizing with the chain or acquiring a
 checkpoint within a timeframe that engenders trust. It's worth noting that while the choice of a
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
 period is somewhat arbitrary, it unquestionably provides a higher level of security compared to a
 shorter period.
 
 Looking ahead, there may be a Request for Proposals (RFP) for implementing a mechanism for fast
 unbonding through an unbonding queue. Importantly, this proposed change will not alter the
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
 period's role in maintaining security; instead, it will ensure that an excessive number of stakers
 cannot unbond too swiftly.
 
