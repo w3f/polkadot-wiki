@@ -22,7 +22,7 @@ allows you to delegate your voting power on [Polkadot OpenGov](../learn/learn-po
 
 :::info How to get added as a Delegate on the Dashboard?
 
-Anyone interested in being listed as a delegate can add their details on the 
+Anyone interested in being listed as a delegate can add their details on the
 [Governance-UI repository](https://github.com/paritytech/governance-ui/blob/main/assets/data/polkadot/delegates.json).
 
 :::
