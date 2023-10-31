@@ -15,6 +15,10 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 
 :::
 
+- [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
+- [Sub.ID](#subid)
+- [NOMI](#nomi)
+
 ## Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a web3 application
@@ -30,8 +34,6 @@ PolkaGate, and Enkrypt. The dashboard also supports
 
 You can find more information about the Polkadot staking dashboard on the
 [dedicated page](./staking-dashboard.md).
-
-### Staking Dashboard Video Tutorials
 
 <tr class="cards-container">
   <td>
@@ -81,3 +83,30 @@ You can find more information about the Polkadot staking dashboard on the
   </td>
   
 </tr>
+
+## Sub.ID
+
+[Sub.ID](https://sub.id/) is a one-stop-shop for managing your Polkadot accounts, viewing your
+addresses and balances, and looking at other accounts.
+
+[![](https://cdn.discordapp.com/attachments/893485384154095640/1166807359411204228/image.png?ex=654bd508&is=65396008&hm=ddf3dc26f525d0021df4d8879f19973b81040514bfb10423e748d397c7a66329&)](https://sub.id/)
+
+It features a Polkadot [staking page](https://sub.id/validator/polkadot), where you can easily start
+staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choose their preferred
+validators or stake with the recommended validator set.
+
+[![](https://cdn.discordapp.com/attachments/893485384154095640/1166807508837474394/image.png?ex=654bd52c&is=6539602c&hm=f78e346cfd364529b1b03d5207a8ad0cd100fc5093ee832eece397e788200cf0&)](https://sub.id/validator/polkadot)
+
+## NOMI
+
+[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
+Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
+to offer a unique and enhanced nomination experience, using
+[Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
+(MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
+evaluating numerous conflicting traits in the decision-making process. For the analysis, validator
+data is collected at the last block of every session.
+
+[![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
+
+source: https://github.com/turboflakes/apps

@@ -147,6 +147,12 @@ There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Ku
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
+To find out how to contact the registrar after the application for judgement or to learn who they
+are, you can check their identity by adding them to your Address Book. Their identity will be
+automatically loaded.
+
+![Chevdor is registrar #1](../assets/identity/16.jpg)
+
 Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**:
 {{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }}
 {{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**:
@@ -170,12 +176,6 @@ Registrar 3: <br /> **Account**:
 {{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**: 0.04 KSM <br /> :kusama }}
 
 {{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their [website](https://polkadot.polkassembly.io/). :polkadot }}
-
-To find out how to contact the registrar after the application for judgement or to learn who they
-are, we can check their identity by adding them to our Address Book. Their identity will be
-automatically loaded.
-
-![Chevdor is registrar #1](../assets/identity/16.jpg)
 
 ## Sub Accounts
 

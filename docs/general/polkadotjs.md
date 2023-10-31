@@ -1,7 +1,7 @@
 ---
 id: polkadotjs
 title: Polkadot-JS
-sidebar_label: Polkadot-JS
+sidebar_label: Polkadot-JS Tooling
 description: The Polkadot-JS Tool Collection.
 keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs
