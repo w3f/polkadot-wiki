@@ -587,7 +587,7 @@ users to withdraw. For in-depth understanding, check the
 #### Unbonding Period Length
 
 The
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={7}/> :kusama }}-day
+{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
 unbonding period serves a crucial role in mitigating ex post facto slashing, particularly in the
 context of guarding against long-range attacks. When a client encounters a chain finalized by
 [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than
