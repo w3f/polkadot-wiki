@@ -586,9 +586,12 @@ users to withdraw. For in-depth understanding, check the
 
 #### Unbonding Period Length
 
-The unbonding period provides a safety net for slashing offenses identified in [past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras), which can hold the respective validators and their nominators accountable. The
+The unbonding period provides a safety net for slashing offenses identified in
+[past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras),
+which can hold the respective validators and their nominators accountable. The
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
-unbonding period is crucial in mitigating ex post facto slashing, particularly in guarding against long-range attacks. When a client encounters a chain finalized by
+unbonding period is crucial in mitigating ex post facto slashing, particularly in guarding against
+long-range attacks. When a client encounters a chain finalized by
 [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days in the past, it lacks the security of slashing protection.
@@ -598,12 +601,6 @@ checkpoint within a timeframe that engenders trust. It's worth noting that while
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
 period is somewhat arbitrary, it unquestionably provides a higher level of security compared to a
 shorter period.
-
-Looking ahead, there may be a Request for Proposals (RFP) for implementing a mechanism for fast
-unbonding through an unbonding queue. Importantly, this proposed change will not alter the
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
-period's role in maintaining security; instead, it will ensure that an excessive number of stakers
-cannot unbond too swiftly.
 
 ## How many Validators?
 
