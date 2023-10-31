@@ -39,7 +39,7 @@ information. When a user submits a bounty spending proposal, they will need to f
 to explain the proposal, for example a bounty proposal document on Polkassembly [Polkassembly](https://polkadot.polkassembly.io/opengov)
 or [Subsquare](https://polkadot.subsquare.io/).
 [This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing)
-can help as a checklist of all needed information for OpenGov voters to make an informed decision.
+can be used to submit all the information needed by OpenGov voters to make an informed decision.
 
 Submitting a bounty proposal will reserve
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyDepositBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyDepositBase" defaultValue={33333333300} filter="humanReadable"/> :kusama }}.
