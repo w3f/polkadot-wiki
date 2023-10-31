@@ -35,7 +35,7 @@ proposal as an OpenGov referendum, the bounty will show as "funded" at the end o
 curators to the bounty.
 
 To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
-information. When a user submits a bounty spending proposal, they will need to find an off-chain way
+information. When a user submits a bounty spending proposal, they will need to find an off-chain medium
 to explain the proposal through for example [Polkassembly](https://polkadot.polkassembly.io/opengov)
 or [Subsquare](https://polkadot.subsquare.io/).
 [This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing)
