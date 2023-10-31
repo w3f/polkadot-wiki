@@ -9,7 +9,9 @@ slug: ../learn-nft-projects
 
 :::info Community Page
 
-This page is open to contributions from the community. Please follow the [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) and add your NFT app to this page.
+This page is open to contributions from the community. Please follow the
+[Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
+and add your NFT app to this page.
 
 :::
 

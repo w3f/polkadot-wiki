@@ -11,9 +11,9 @@ import RPC from "./../../components/RPC-Connection";
 
 :::tip New to Staking?
 
-Explore Polkadot with a secure and user-friendly wallets listed on the 
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start 
-your staking journey or explore more information about staking on
+Explore Polkadot with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey
+or explore more information about staking on
 [Polkadot's Staking Page](https://polkadot.network/staking/). Discover the new
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this

@@ -369,4 +369,6 @@ If you like to use Polkadot-JS UI for performing multi-role delegation, the inst
 available
 [here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
 
-Polkassembly also provides an engaging interface to interact with governance in OpenGov along with an alternative interface for delegation at [polkadot.polkassembly.io/delegation](https://polkadot.polkassembly.io/delegation)
+Polkassembly also provides an engaging interface to interact with governance in OpenGov along with
+an alternative interface for delegation at
+[polkadot.polkassembly.io/delegation](https://polkadot.polkassembly.io/delegation)

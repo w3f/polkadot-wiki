@@ -14,9 +14,10 @@ issues related to these wallet, reach out to their support teams directly.
 
 :::
 
-:::info 
+:::info
 
-Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+Explore Polkadot with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 :::
 
