@@ -207,8 +207,8 @@ This phase consists of changes to your parachain’s runtime that activate async
 
 ## Timing by Block Number
 
-With asynchronous backing it will be possible for parachains to opt for a block time of six seconds
-rather than twelve seconds. But modifying block duration isn’t so simple for a parachain which was
+With asynchronous backing it will be possible for parachains to opt for a block time of 6 seconds
+rather than 12 seconds. But modifying block duration isn’t so simple for a parachain which was
 measuring time in terms of its own block number. It could result in expected and actual time not
 matching up, stalling the parachain.
 
