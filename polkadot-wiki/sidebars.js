@@ -624,7 +624,7 @@ module.exports = {
       link: {
         type: 'generated-index',
         title: "Build on Polkadot",
-        description: "",
+        description: "Learn to build on Polkadot",
         slug: '/build-build-index',
       },
       items: [
