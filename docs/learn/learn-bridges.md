@@ -106,22 +106,22 @@ Please read the blog article for fuller descriptions of each one of these option
 
 ### Bitcoin Bridge (XCLAIM <-> Substrate <-> Polkadot)
 
-The Interlay team has written a [specification](https://interlay.gitlab.io/polkabtc-spec/) on a
+The Interlay team has written a [specification](https://interlay.gitlab.io/iBTC-spec/) on a
 Bitcoin bridge that is based on the [XCLAIM](https://eprint.iacr.org/2018/643.pdf) design paper. The
 protocol enables a two-way bridge between Polkadot and Bitcoin. It allows holders of BTC to
-"teleport" their assets to Polkadot as PolkaBTC, and holders of PolkaBTC to burn their assets for
+"teleport" their assets to Polkadot as iBTC, and holders of iBTC to burn their assets for
 BTC on the Bitcoin chain.
 
 The Bitcoin bridge, as documented in the specification, is composed of two logically different
 components:
 
-- The XCLAIM component maintains all accounts that own PolkaBTC.
+- The XCLAIM component maintains all accounts that own iBTC.
 - The BTC-Relay is responsible for verifying the Bitcoin state when a new transaction is submitted.
 
 For full details on how it works, please refer to the specification.
 
 There is now a
-[reference implementation and testnet available](https://medium.com/interlay/polkabtc-beta-testnet-launch-2cc9ea7431b7).
+[working implementation and mainnet bridge available](https://app.interlay.io/btc?tab=issue).
 
 ## Additional Resources and Examples
 
@@ -130,7 +130,7 @@ There is now a
   were awarded a grant in W3F Grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
   to build a Substrate to Ethereum two-way bridge.
-- [PolkaBTC (Bitcoin <-> Polkadot Bridge)](https://docs.polkabtc.io/#/)
+- [iBTC (Bitcoin <-> Polkadot Bridge)](https://docs.iBTC.io/#/)
 - [EOS Bridge](https://github.com/bifrost-codes/bifrost) - The Bifrost team was awarded a grant in
   W3F Grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
@@ -139,7 +139,7 @@ There is now a
   a grant in
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
   to build a GRANDPA light client in Tendermint.
-- [Interlay BTC Bridge](https://interlay.gitlab.io/polkabtc-spec/) - The Interlay team was awarded a
+- [Interlay BTC Bridge](https://app.interlay.io/btc?tab=issue) - The Interlay team was awarded a
   grant in W3F grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
   to build a trust-minimized BTC bridge.
