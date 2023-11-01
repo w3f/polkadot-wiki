@@ -1,7 +1,7 @@
 ---
 id: build-guide
-title: Builders Starter's Guide
-sidebar_label: Builders Starter's Guide
+title: Polkadot Development Starter's Guide
+sidebar_label: Polkadot Development Starter's Guide
 description: Start building with Polkadot/Kusama.
 keywords: [build, how to build, develop, parachain, smart contract]
 slug: ../build-guide

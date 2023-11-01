@@ -621,43 +621,82 @@ module.exports = {
     {
       type: "category",
       label: "Build",
+      link: {
+        type: 'generated-index',
+        title: "Build on Polkadot",
+        description: "",
+        slug: '/build-build-index',
+      },
       items: [
-        "build/build-index",
+        "build/build-guide",
         {
           type: "category",
-          label: "Development Guide",
+          label: "Client-side Development",
+          link: {
+            type: 'generated-index',
+            title: "Client-side Development",
+            description: "Learn about different options for building client-side apps on Polkadot.",
+            slug: '/build-client-index',
+          },
           items: [
-            "build/build-guide",
-            "build/build-parachains",
-            "build/build-storage",
-            "build/build-smart-contracts",
-            "build/build-oracle",
             "build/build-data",
-            "build/build-substrate",
-            "build/build-ss58-registry",
-            "build/build-hrmp-channels",
-          ],
-        },
-        {
-          type: "category",
-          label: "Integration Guide",
-          items: [
-            "build/build-integration",
-            "build/build-protocol-info",
-            "build/build-integrate-assets",
-            "build/build-node-management",
-            "build/build-node-interaction",
+            "build/build-oracle",
+            "build/build-storage",
             "build/build-transaction-construction",
           ],
         },
         {
           type: "category",
-          label: "Tools",
-          items: ["build/build-tools-index", "build/build-open-source"],
+          label: "Smart Contract Development",
+          link: {
+            type: 'generated-index',
+            title: "Smart Contract Development",
+            description: "Learn how to deploy smart contracts on Polkadot's parachains",
+            slug: '/build-smart-contracts-index',
+          },
+          items: [
+            "build/build-smart-contracts",
+          ],
         },
         {
           type: "category",
-          label: "Resources",
+          label: "Protocol Development",
+          link: {
+            type: 'generated-index',
+            title: "Protocol & Parachain Development",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-protocol-index',
+          },
+          items: [
+            "build/build-parachains",
+            "build/build-substrate",
+            "build/build-protocol-info",
+            "build/build-hrmp-channels"
+          ],
+        },
+        {
+          type: "category",
+          label: "Development Networks & Node Management",
+          items: [
+            "build/build-integration",
+            "build/build-integrate-assets",
+            "build/build-node-management",
+            "build/build-node-interaction",
+          ],
+        },
+
+        {
+          type: "category",
+          label: "Opensource Tools",
+          items: [
+            "build/build-tools-index",
+            "build/build-open-source",
+            "build/build-ss58-registry",
+          ],
+        },
+        {
+          type: "category",
+          label: "Other Resources",
           items: ["build/build-hackathon"],
         },
       ],
