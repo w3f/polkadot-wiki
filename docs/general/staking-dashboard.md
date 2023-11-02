@@ -324,4 +324,4 @@ The Support pages are:
 
 Under Network, you can connect to either Polkadot, Kusama, or Westend through public RPC nodes or
 light clients for a true Web3 experience. For more information about light clients, see
-[this page](../build/build-substrate.md#replacing-rpc-node-reliance-with-light-clients).
+[this page](../build/build-light-clients.md#replacing-rpc-node-reliance-with-light-clients).

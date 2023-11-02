@@ -7,6 +7,8 @@ keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, c
 slug: ../build-dapp
 ---
 
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
 ## Developing a dApp/uApp
 
 If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
@@ -38,3 +40,9 @@ pre-configured project setup, it lets you scaffold any dApp quickly. Live exampl
 documentation available&nbsp;<a href="https://inkathon.xyz" target="_blank">here</a>. </TabItem>
 
 </Tabs>
+
+## Polkadot JS / Polkadot API
+
+## Sidecar API
+
+## Polkadot Cloud

@@ -120,7 +120,7 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-substrate",
+            "build/build-light-clients",
             "build/build-ss58-registry",
           ],
         },

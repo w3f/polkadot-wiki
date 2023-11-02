@@ -641,7 +641,7 @@ module.exports = {
           items: [
             "build/build-dapp",
             "build/build-oracle",
-            "build/build-substrate",
+            "build/build-light-clients",
             "build/build-storage",
             "build/build-transaction-construction",
             "build/build-ss58-registry",
