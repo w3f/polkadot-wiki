@@ -135,6 +135,7 @@ The following libraries/SDKs allow for interfacing with a Substrate node in othe
 - [Fearless Utils iOS Swift SDK](https://github.com/soramitsu/fearless-utils-iOS)
 - [Nova Wallet iOS/Swift Substrate SDK](https://github.com/nova-wallet/substrate-sdk-ios)
 - [Kotlin SDK](https://github.com/soramitsu/fearless-utils-Android)
+- [Dart/Flutter Library](https://github.com/leonardocustodio/polkadart)
 
 ### CLI Tools
 
@@ -184,6 +185,7 @@ WebAssembly related tools and projects.
   Substrate, abstracting some complex RPC calls into simple REST calls.
 - [Subxt](https://github.com/paritytech/substrate-subxt) - A Rust library to submit extrinsics to a
   Substrate node via RPC.
+- [Dart/Flutter API](https://github.com/leonardocustodio/polkadart) - Dart API for Polkadot.
 
 ### SCALE Codec
 
