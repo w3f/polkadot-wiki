@@ -86,9 +86,9 @@ function VoluntaryLocking() {
 		// can't be used to render a table (can't put a <table> in a <p>).
 		// So, we use the same component for Polkadot and Kusama and figure it out here.
 		const title = document.title;
-		if (title === "Governance V1 · Polkadot Wiki" || title === "Polkadot OpenGov · Polkadot Wiki") {
+		if (title === "Governance V1 · Polkadot Wiki" || title === "Introduction to Polkadot OpenGov · Polkadot Wiki") {
 			updateTable("polkadot")
-		} else if (title === "Governance V1 · Guide" || title === "Polkadot OpenGov · Guide") {
+		} else if (title === "Governance V1 · Guide" || title === "Introduction to Polkadot OpenGov · Guide") {
 			updateTable("kusama");
 		} else {
 			console.log("Unknown wiki/guide type");
