@@ -152,3 +152,4 @@ There is now a
   Edgeware chain (a Substrate-based chain) - now defunct and not maintained, but a good example.
 - [XCLAIM](https://eprint.iacr.org/2018/643.pdf) - XCLAIM is a framework for achieving trustless and
   efficient cross-chain exchanges using cryptocurrency-backed assets.
+- [Celer cBridge](https://github.com/celer-network/cBridge-contracts) - a bridge to transfer assets from Ethereum & Binance Smart Chain to the Astar Polkadot EVM.
