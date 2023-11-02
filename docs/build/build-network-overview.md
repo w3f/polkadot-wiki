@@ -7,7 +7,7 @@ keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, c
 slug: ../build-network-overview
 ---
 
-### Polkadot Ecosystem Networks
+## Polkadot Ecosystem Networks
 
 - Mainnet: **Polkadot**
 - Canary network: **Kusama**
@@ -31,3 +31,11 @@ Tooling is rapidly evolving to interact with the network; there are many ways to
 But before you jump head-first into the code, you should consider the _kind_ of decentralized
 application you want to make and understand the different paradigms available to developers who want
 to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+
+## Testnet Faucets
+
+### Rococo
+
+### Canvas
+
+### Westend

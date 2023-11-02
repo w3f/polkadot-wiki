@@ -637,11 +637,10 @@ module.exports = {
           },
           items: [
             "build/build-dapp",
-            "build/build-oracle",
+            "build/build-oracle", 
             "build/build-light-clients",
             "build/build-storage",
             "build/build-transaction-construction",
-            "build/build-ss58-registry",
             "build/build-node-interaction",
           ],
         },

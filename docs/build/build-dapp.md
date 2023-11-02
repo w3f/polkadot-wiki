@@ -14,6 +14,14 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
 ecosystem contains various SDKs to tap into the relay chain and parachains.
 
+:::note Substrate-based chains use an SS58 encoding for their address formats.
+
+Please see the [SS58 registry](https://github.com/paritytech/ss58-registry/) to see which
+[chain corresponds to a given prefix](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json),
+and which prefixes are available.
+
+:::
+
 For front-end applications, several options exist for interfacing with Substrate-based chains
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
 Substrate node:
