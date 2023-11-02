@@ -639,10 +639,13 @@ module.exports = {
             slug: '/build-client-index',
           },
           items: [
-            "build/build-data",
+            "build/build-dapp",
             "build/build-oracle",
+            "build/build-substrate",
             "build/build-storage",
             "build/build-transaction-construction",
+            "build/build-ss58-registry",
+            "build/build-node-interaction",
           ],
         },
         {
@@ -656,6 +659,7 @@ module.exports = {
           },
           items: [
             "build/build-smart-contracts",
+            "build/build-supported-contract-chains"
           ],
         },
         {
@@ -668,9 +672,9 @@ module.exports = {
             slug: '/build-protocol-index',
           },
           items: [
-            "build/build-parachains",
-            "build/build-substrate",
             "build/build-protocol-info",
+            "build/build-parachains",
+            "build/build-integrate-assets",
             "build/build-hrmp-channels"
           ],
         },
@@ -678,10 +682,9 @@ module.exports = {
           type: "category",
           label: "Development Networks & Node Management",
           items: [
+            "build/build-network-overview",
             "build/build-integration",
-            "build/build-integrate-assets",
             "build/build-node-management",
-            "build/build-node-interaction",
           ],
         },
 
@@ -690,14 +693,13 @@ module.exports = {
           label: "Opensource Tools",
           items: [
             "build/build-tools-index",
+            "build/build-data",
             "build/build-open-source",
-            "build/build-ss58-registry",
           ],
         },
         {
-          type: "category",
-          label: "Other Resources",
-          items: ["build/build-hackathon"],
+          type: "doc",
+          id: "build/build-hackathon",
         },
       ],
     },
