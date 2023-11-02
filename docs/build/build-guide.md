@@ -1,15 +1,16 @@
 ---
 id: build-guide
-title: Polkadot Development Starter's Guide
-sidebar_label: Polkadot Development Starter's Guide
+title: Polkadot Developer Portal
+sidebar_label: Polkadot Developer Portal
 description: Start building with Polkadot/Kusama.
 keywords: [build, how to build, develop, parachain, smart contract]
 slug: ../build-guide
 ---
 
-import Tabs from "@theme/Tabs";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from
+'@theme/DocCardList';
 
-import TabItem from "@theme/TabItem";
+<DocCardList />
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol with two
 goals: providing **shared security** among all connected parachains and allowing all connected
@@ -24,14 +25,13 @@ with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will exp
 between a [parachain](../learn/learn-parachains.md) and a smart contract in deciding which best fits
 your architectural needs.
 
-This build guide provides four different tracks:
+This build guide provides three different tracks:
 
-1.  [Building Parachains](#building-parachains)
-2.  [Building a Pallet](#building-a-pallet)
-3.  [Developing Smart Contracts](#developing-smart-contracts)
-4.  [Developing a dApp](#developing-a-dappuapp)
+1.  [Protocol Development - Blockchain & Parachain Development](#building-parachains)
+2.  [Developing Smart Contracts](#developing-smart-contracts)
+3.  [Developing a dApp](#developing-a-dappuapp)
 
-:::info
+:::tip Keep reading to find out more, or visit each respective track
 
 Keep in mind that these tracks are merely suggestive, and there are many ways to utilize
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, Substrate, and their various
@@ -39,10 +39,6 @@ developmental components. For more inspiration, look at the
 [open source projects](./build-open-source.md) featured here in the wiki!
 
 :::
-
-Before diving into any one of these tracks, it is encouraged to read about
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
-context about the application you could make.
 
 ## Development Ecosystem Overview
 
@@ -91,30 +87,9 @@ to understand what {{ polkadot: Polkadot :polkadot }} _is_ and how {{ kusama: Ku
 relates to it, and how what each developmental component can do for you within the Polkadot
 ecosystem.
 
-### Polkadot Ecosystem Networks
-
-- Mainnet: **Polkadot**
-- Canary network: **Kusama**
-  - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
-    Polkadot does. _Expect Chaos_.
-- Official testnets:
-  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
-    testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet
-    (is not reset back to genesis block).
-  - **Canvas** - Wasm-based Smart Contract enabled testnet, primarily for [`ink!`](https://use.ink/)
-    development.
-  - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new
-    genesis block).
-
-{{ polkadot: Polkadot mainnet has been running since May 2020 :polkadot }}{{ kusama: Kusama mainnet has been
-running since August 2019 :kusama }} and has [implementations in various programming languages](../learn/learn-implementations.md)
-ranging from Rust to JavaScript. The leading implementation is built in Rust and uses the Substrate framework.
-
-Tooling is rapidly evolving to interact with the network; there are many ways to get started!
-
-But before you jump head-first into the code, you should consider the _kind_ of decentralized
-application you want to make and understand the different paradigms available to developers who want
-to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Before diving into any one of these tracks, it is encouraged to read about
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
+context about the application you could make.
 
 ## Building Parachains
 
@@ -225,7 +200,7 @@ a parachain or parathread.
 #### Parachains Benefits
 
 Parachains contain their own runtime/STF logic and benefit from the shared security and the
-cross-chain messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
+cross-consensus messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
 permit high flexibility and customization but require more effort to create and maintain over time.
 A production-grade parachain is typically more involved to create due to the complexity involved in
 blockchain networks' technical and economic aspects.
@@ -245,7 +220,7 @@ Some examples of features you can have on a parachain or parathread:
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
   treasury.
 
-## Building a Pallet
+### Building a Pallet
 
 While parachains are highly customizable, they are often complex to develop. If you wish to get
 familiar with FRAME and Substrate, a good place to start is by building a pallet in a development
@@ -324,29 +299,8 @@ ecosystem contains various SDKs to tap into the relay chain and parachains.
 
 For front-end applications, several options exist for interfacing with Substrate-based chains
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
-Substrate node:
+Substrate node.
 
-<!-- prettier-ignore -->
-<Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink!', value: 'useink'}, {label: 'ink!athon Boilerplate', value: 'inkathon'} ]}>
-
-<TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate based chains via RPC
-calls. It is dynamically generated based on what the Substrate runtime provides in terms of
-metadata. Full documentation & examples
-available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>. </TabItem>
-
-<TabItem value="subxt"> Query and submit extrinsics (transactions) to a Substrate node via RPC using
-Rust. Also referred to as Rust Parity. Full documentation & examples
-available&nbsp;<a href="https://github.com/paritytech/subxt" target="_blank">here</a>. </TabItem>
-
-<TabItem value="useink"> React hooks library for ink! smart contracts that abstract the
-functionality of polkadot.js. Full documentation & examples
-available&nbsp;<a href="https://use.ink" target="_blank">here</a>. </TabItem>
-
-<TabItem value="inkathon">ink!athon is a starterkit for full-stack dApp development with ink! smart
-contracts and a React-based frontend in one place. With convenient helper scripts and a
-pre-configured project setup, it lets you scaffold any dApp quickly. Live example & full
-documentation available&nbsp;<a href="https://inkathon.xyz" target="_blank">here</a>. </TabItem>
-
-</Tabs>
+[Please visit the full documentation for developing dApps, and other general client-side development resources.](build-dapp)
 
 For a full list of tools please take a look here: [Tools, APIs and Languages](build-open-source.md)
