@@ -622,13 +622,10 @@ module.exports = {
       type: "category",
       label: "Build",
       link: {
-        type: 'generated-index',
-        title: "Build on Polkadot",
-        description: "Learn to build on Polkadot",
-        slug: '/build-build-index',
+        type: 'doc',
+        id: "build/build-guide"
       },
       items: [
-        "build/build-guide",
         {
           type: "category",
           label: "Client-side Development",
