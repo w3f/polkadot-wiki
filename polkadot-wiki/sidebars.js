@@ -296,6 +296,51 @@ module.exports = {
               items: [
                 "general/polkadotjs",
                 "general/polkadotjs-ui",
+                {
+                  type: "category",
+                  label: "Polkadot-JS Guides",
+                  description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Polkadot-JS Guides',
+                    slug: '/learn-guides-index',
+                  },
+                  items: [
+                    {
+                      type: "category",
+                      label: "Staking",
+                      description: 'Polkadot-JS Guides about Staking.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Polkadot-JS Guides about Staking',
+                        slug: '/learn-guides-staking-index',
+                      },
+                      items: [
+                        "learn/learn-guides-staking",
+                        "learn/learn-guides-staking-pools",
+                      ],
+                    },
+                    "learn/learn-guides-polkadot-opengov",
+                    "learn/learn-guides-treasury",
+                    "learn/learn-guides-bounties",
+                    "learn/learn-guides-identity",
+                    {
+                      type: "category",
+                      label: "Asset Hub",
+                      description: 'Advanced How-to Guides about the Asset Hub.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Advanced Guides for Asset Hub',
+                        description: 'Advanced how-to guides about the Asset Hub.',
+                        slug: '/learn-guides-assets-index',
+                      },
+                      items: [
+                        "learn/learn-guides-assets-create",
+                        "learn/learn-guides-assets-ledger",
+                      ],
+                    },
+                  ],
+                },
               ],
             },
             {
@@ -372,51 +417,6 @@ module.exports = {
             "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
-            {
-              type: "category",
-              label: "Polkadot-JS Guides",
-              description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
-              link: {
-                type: 'generated-index',
-                title: 'Polkadot-JS Guides',
-                slug: '/learn-guides-index',
-              },
-              items: [
-                {
-                  type: "category",
-                  label: "Staking",
-                  description: 'Polkadot-JS Guides about Staking.',
-                  link: {
-                    type: 'generated-index',
-                    title: 'Polkadot-JS Guides about Staking',
-                    slug: '/learn-guides-staking-index',
-                  },
-                  items: [
-                    "learn/learn-guides-staking",
-                    "learn/learn-guides-staking-pools",
-                  ],
-                },
-                "learn/learn-guides-polkadot-opengov",
-                "learn/learn-guides-treasury",
-                "learn/learn-guides-bounties",
-                "learn/learn-guides-identity",
-                {
-                  type: "category",
-                  label: "Asset Hub",
-                  description: 'Advanced How-to Guides about the Asset Hub.',
-                  link: {
-                    type: 'generated-index',
-                    title: 'Advanced Guides for Asset Hub',
-                    description: 'Advanced how-to guides about the Asset Hub.',
-                    slug: '/learn-guides-assets-index',
-                  },
-                  items: [
-                    "learn/learn-guides-assets-create",
-                    "learn/learn-guides-assets-ledger",
-                  ],
-                },
-              ],
-            },
             "learn/learn-guides-vault",
           ],
         },
