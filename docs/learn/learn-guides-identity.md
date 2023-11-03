@@ -3,7 +3,7 @@ id: learn-guides-identity
 title: Polkadot-JS Guides about Identity
 sidebar_label: Identity
 description: Polkadot-JS Guides about Identity.
-keywords: [registrar, identity, sub-identity]
+keywords: [registrar, identity, sub-identity, polkadot-js]
 slug: ../learn-guides-identity
 ---
 

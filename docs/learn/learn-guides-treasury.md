@@ -3,7 +3,7 @@ id: learn-guides-treasury
 title: Polkadot-JS Guides about the Treasury
 sidebar_label: Treasury
 description: Polkadot-JS Guides about the Polkadot Treasury.
-keywords: [opengov, polkadot opengov, referenda, treasury, tipps, bounties]
+keywords: [opengov, polkadot opengov, referenda, treasury, tipps, polkadot-js]
 slug: ../learn-guides-treasury
 ---
 

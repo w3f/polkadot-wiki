@@ -3,7 +3,7 @@ id: learn-guides-staking-pools
 title: Polkadot-JS Guides for Pool Creators
 sidebar_label: Nomination Pools
 description: Polkadot-JS Guides about Nomination Pools.
-keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
+keyword: [stake, staking, pools, create, destroy, claim, rewards, polkadot-js]
 slug: ../learn-guides-staking-pools
 ---
 

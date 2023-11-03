@@ -3,7 +3,7 @@ id: learn-guides-polkadot-opengov
 title: Polkadot-JS Guides about OpenGov
 sidebar_label: OpenGov
 description: Polkadot-JS Guides about Polkadot OpenGov.
-keywords: [opengov, polkadot opengov, referenda, cancel]
+keywords: [opengov, polkadot opengov, referenda, cancel, polkadot-js]
 slug: ../learn-guides-polkadot-opengov
 ---
 
