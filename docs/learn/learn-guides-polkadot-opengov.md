@@ -161,6 +161,9 @@ For an overview of how delegation works in Polkadot OpenGov, check out the
 [Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
 [Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
+Instructions to do delegations with Polkadot-JS are also available on the
+[Support Pages](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
+
 ### Delegate Votes
 
 You can start delegating your votes by clicking the "Delegate" button on

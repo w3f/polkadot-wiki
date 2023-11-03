@@ -35,10 +35,7 @@ features of the Delegation Dashboard and shows how to perform multi-role delegat
 [![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
 
 For detailed instructions on how to delegate your voting power using dashboard, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power)
-If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions are
-available
-[here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power).
 
 ## Polkassembly
 
