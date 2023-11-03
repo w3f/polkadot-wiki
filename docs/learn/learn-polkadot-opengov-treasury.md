@@ -94,8 +94,8 @@ and [claiming child bounties rewards](./learn-guides-bounties.md#claim-a-child-b
 ### Parent Bounties
 
 Getting treasury funding through OpenGov, depending on which treasury track you submit your
-referendum, can be a long and uncertain process. This is not always a suitable option, for example, for events'
-organizers needing to pay costs upfront or close to the event's date. Bounties solve this problem by
+referendum, can be a long and uncertain process. This is not always a suitable option, for example, for event
+organizers who need to pay costs upfront or close to the event's date. Bounties solve this problem by
 allowing access to treasury funds once to fund multiple events later on through
 [child bounties](#child-bounties). This is why bounties are also called _parent_ bounties.
 
