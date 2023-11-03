@@ -162,25 +162,6 @@ For an overview of how delegation works in Polkadot OpenGov, check out the
 [Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
 [Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
-### Delegation Dashboard
-
-To make multi-role delegation easy and intuitive,
-[Delegation Dashboard](https://delegation.polkadot.network/) provides an interactive interface that
-displays the list of delegates and their details. The video tutorial below walks through the
-features of the Delegation Dashboard and shows how to perform multi-role delegation.
-
-[![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
-
-For detailed instructions on how to delegate your voting power using dashboard, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power)
-If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions are
-available
-[here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
-
-Polkassembly also provides an engaging interface to interact with governance in OpenGov along with
-an alternative interface for delegation at
-[polkadot.polkassembly.io/delegation](https://polkadot.polkassembly.io/delegation)
-
 ### Delegate Votes
 
 You can start delegating your votes by clicking the "Delegate" button on
