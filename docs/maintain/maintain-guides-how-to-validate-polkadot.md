@@ -764,20 +764,17 @@ you can find more information [on the wiki page](../general/thousand-validators.
 
 ## Running a validator on a testnet
 
-To verify your validator set up, it is possible to run it against a PoS test network such as Westend
-or Wococo. However, validator slots are intentionally limited on Westend to ensure the stability and
-availability of the testnet for the Polkadot release process. As such it is advised for node
-operators wishing to run testnet validators to join the Wococo network. You can obtain WOOK tokens
-[here](../learn/learn-DOT.md#getting-tokens-on-the-wococo-testnet).
+To verify your validator set up, it is possible to run it against a PoS test network such as Westend. However, validator slots are intentionally limited on Westend to ensure the stability and
+availability of the testnet for the Polkadot release process.
 
 Here is a small comparison of each network characteristics as relevant to validators:
 
-| Network           | Polkadot | Westend    | Wococo      |
-| ----------------- | -------- | ---------- | ----------- |
-| epoch             | 4h       | 1h         | 10m         |
-| era               | 1d       | 6h         | 1h          |
-| token             | DOT      | WND (test) | WOOK (test) |
-| active validators | ~300     | ~20        | 10<x<100    |
+| Network           | Polkadot | Westend    |
+| ----------------- | -------- | ---------- |
+| epoch             | 4h       | 1h         |
+| era               | 1d       | 6h         |
+| token             | DOT      | WND (test) |
+| active validators | ~300     | ~20        |
 
 ## FAQ
 
