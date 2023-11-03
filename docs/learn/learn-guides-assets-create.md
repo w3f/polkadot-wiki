@@ -1,8 +1,8 @@
 ---
 id: learn-guides-assets-create
-title: Creating Assets with the Asset Hub
+title: Polkadot-JS Guides about Creating Assets
 sidebar_label: Creating Assets
-description: Advanced How-to Guides about Creating Assets.
+description: Polkadot-JS Guides about Creating Assets.
 keywords: [asset hub, assets, statemine, statemint]
 slug: ../learn-guides-assets-create
 ---
@@ -29,7 +29,7 @@ assets held on the Asset Hub can be broadly categorized as
 For additional background on the Asset Hub check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
 
-## Creating Assets on the Asset Hub
+## Creating Assets on the Asset Hub with Polkadot-JS
 
 :::info
 

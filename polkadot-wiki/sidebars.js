@@ -374,23 +374,21 @@ module.exports = {
             'learn/learn-phragmen',
             {
               type: "category",
-              label: "How-to Guides",
-              description: 'Advanced Guides about Staking, Asset Hub, Vault App, and more.',
+              label: "Polkadot-JS Guides",
+              description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
               link: {
                 type: 'generated-index',
-                title: 'Advanced Guides',
-                description: 'Advanced how-to guides using the Polkadot-JS User Interface.',
+                title: 'Polkadot-JS Guides',
                 slug: '/learn-guides-index',
               },
               items: [
                 {
                   type: "category",
                   label: "Staking",
-                  description: 'Advanced How-to Guides about Staking.',
+                  description: 'Polkadot-JS Guides about Staking.',
                   link: {
                     type: 'generated-index',
-                    title: 'Advanced Guides for Staking',
-                    description: 'Advanced how-to guides about Staking.',
+                    title: 'Polkadot-JS Guides about Staking',
                     slug: '/learn-guides-staking-index',
                   },
                   items: [

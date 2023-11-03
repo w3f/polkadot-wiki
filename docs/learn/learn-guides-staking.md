@@ -1,19 +1,17 @@
 ---
 id: learn-guides-staking
-title: How-to Guides for Nominators
+title: Polkadot-JS Guides For Nominators
 sidebar_label: Staking
-description: Advanced How-to Guides for Nominators.
+description: Polkadot-JS Guides for Nominators.
 keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
 slug: ../learn-guides-staking
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-This page focuses on the advanced staking features of the network. If you like to learn about
-staking, check this page on the
-[introduction to staking.](https://wiki.polkadot.network/docs/learn-staking)
+See [this page](./learn-staking.md) to learn about staking.
 
-## Claiming Rewards with the Polkadot-JS UI
+## Claiming Rewards with Polkadot-JS
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
 fee. Someone must submit a transaction with a validator ID and an era index.

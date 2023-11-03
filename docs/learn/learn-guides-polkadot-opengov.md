@@ -1,16 +1,15 @@
 ---
 id: learn-guides-polkadot-opengov
-title: Polkadot OpenGov How-to Guides
+title: Polkadot-JS Guides about OpenGov
 sidebar_label: OpenGov
-description: Advanced How-to Guides about Polkadot OpenGov.
+description: Polkadot-JS Guides about Polkadot OpenGov.
 keywords: [opengov, polkadot opengov, referenda, cancel]
 slug: ../learn-guides-polkadot-opengov
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-This page is for advanced users of Polkadot OpenGov. If you would learn more about OpenGov see the
-[dedicated page](./learn-polkadot-opengov.md).
+See [this page](./learn-polkadot-opengov.md) to learn about Polkadot OpenGov.
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Referenda module (OpenGov). Below are a few links to stay informed and directly engage with the

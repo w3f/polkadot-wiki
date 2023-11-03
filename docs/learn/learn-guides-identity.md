@@ -1,16 +1,15 @@
 ---
 id: learn-guides-identity
-title: Identity How-to Guides
+title: Polkadot-JS Guides about Identity
 sidebar_label: Identity
-description: Advanced How-to Guides about Identity - Registrars and Sub-Identity.
+description: Polkadot-JS Guides about Identity.
 keywords: [registrar, identity, sub-identity]
 slug: ../learn-guides-identity
 ---
 
 This is an advanced guide that is relevant for entities that would like to become registrars or
-would like to set sub-identities to an existing account with an identity. The
-[learn identity](https://wiki.polkadot.network/docs/learn-identity) page provides information on how
-to set an identity and have it verified.
+would like to set sub-identities to an existing account with an identity. See
+[this page](./learn-identity.md) to learn about how to set an identity and have it verified.
 
 ## Registrars
 
