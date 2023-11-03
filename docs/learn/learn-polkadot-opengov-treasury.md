@@ -129,7 +129,7 @@ This deposit can be used to punish curators if they act maliciously. However, if
 managing the bounty to completion, they will receive their deposit back and
 part of the bounty funding as a payment for their efforts.
 
-Curators are expected to have a well-balanced track record in addressing the issues that the bounty wants to
+Curators are expected to have a decent track record in addressing the issues that the bounty wants to
 solve. At the very least, they should be very knowledgeable on the topics covered by the bounty and have proven project
 management skills or experience. These recommendations help ensure an effective use of the bounty mechanism.
 A Bounty is a reward for a specified body of work - or specified set of objectives - that needs to be
