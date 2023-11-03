@@ -94,55 +94,57 @@ and [claiming child bounties rewards](./learn-guides-bounties.md#claim-a-child-b
 ### Parent Bounties
 
 Getting treasury funding through OpenGov, depending on which treasury track you submit your
-referendum, can be a long and uncertain process. This is not always a suitable option, for example, for events'
-organizers needing to pay costs upfront or close to the event's date. Bounties solve this problem by
-allowing access to treasury funds once to fund multiple events later on through
+referendum, can be a long and uncertain process. This is not always a suitable option, for example,
+for events' organizers needing to pay costs upfront or close to the event's date. Bounties solve
+this problem by allowing access to treasury funds once to fund multiple events later on through
 [child bounties](#child-bounties). This is why bounties are also called _parent_ bounties.
 
-Parent bounty proposals aim to reserve a portion of treasury funds once that will be used later on.
-They save proponents the time needed to create and obtain approval for several OpenGov referenda. Bounties are managed by curators, where
-the curator is usually a [multi-signature account](./learn-account-multisig.md). Bounties can access a
-large amount of funds, so managing those funds with a multisig is a good practice to enhance
-security. Essentially, curators are multisig addresses with agency over a portion of the treasury to
-promote events, fix a bug or vulnerability, develop a strategy, or monitor a set of tasks related to
-a specific topic: all for the benefit of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
+Parent bounty proposals aim to reserve a portion of treasury funds once, which will be used later.
+They save proponents the time needed to create and obtain approval for several OpenGov referenda.
+Bounties are managed by curators, where the curator is usually a
+[multi-signature account](./learn-account-multisig.md). Bounties can access a large amount of funds,
+so managing those funds with a multisig is a good practice to enhance security. Essentially,
+curators are multisig addresses with agency over a portion of the treasury to promote events, fix a
+bug or vulnerability, develop a strategy, or monitor a set of tasks related to a specific topic, all
+for the benefit of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
 A proposer can [submit a bounty proposal](./learn-guides-bounties.md#submit-a-bounty-proposal) to
 OpenGov,
 [with a curator to be defined later](./learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
 background and expertise is such that they can determine when the task is complete.
 
-When submitting the value of the bounty, the proposer can specify a fee that will be paid to curators willing to
-invest their time and expertise in the task: this amount will be included in the total value of the
-bounty. In this sense, the curator's fee can be defined as the difference between the amounts paid to child bounty
-awardees and the total value of the bounty.
+When submitting the value of the bounty, the proposer can specify a fee that will be paid to
+curators willing to invest their time and expertise in the task; this amount will be included in the
+total value of the bounty. In this sense, the curator's fee can be defined as the difference between
+the amounts paid to child bounty awardees and the total value of the bounty.
 
-Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to pay an
-upfront deposit to take the position. The deposit is calculated by multiplying the curator fee by
+Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to
+pay an upfront deposit to take the position. The deposit is calculated by multiplying the curator
+fee by
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :kusama }}%,
 and it can range between a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> :kusama }}
 and a maximum of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
-This deposit can be used to punish curators if they act maliciously. However, if they are successful in
-managing the bounty to completion, they will receive their deposit back and
-part of the bounty funding as a payment for their job.
+This deposit can be used to punish curators if they act maliciously. However, if they are successful
+in managing the bounty to completion, they will receive their deposit back and part of the bounty
+funding as a payment for their job.
 
-Curators are expected to have a well-balanced track record in addressing the issues that the bounty wants to
-solve. At the very least, they should be very knowledgeable on the topics covered by the bounty and have proven project
-management skills or experience. These recommendations help ensure an effective use of the bounty mechanism.
-A Bounty is a reward for a specified body of work - or specified set of objectives - that needs to be
-executed for a predefined treasury amount to be paid out. The responsibility of assigning a payout
-address once the specified set of objectives is completed is delegated to the curator.
+Curators are expected to have a well-balanced track record in addressing the issues the bounty wants
+to solve. At the very least, they should be very knowledgeable on the topics covered by the bounty
+and have proven project management skills or experience. These recommendations help ensure an
+effective use of the bounty mechanism. A Bounty is a reward for a specified body of work or set of
+objectives that needs to be executed for a predefined treasury amount to be paid out. The
+responsibility of assigning a payout address once the specified set of objectives is completed is
+delegated to the curator.
 
 The bounty has a predetermined duration of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
 days, with possible extension(s) to be requested by the curator. To maintain flexibility during the
-tasks’ curation, the curator will also be able to create child bounties for more granularity in the allocation of funds and 
-as part of a nested iteration of the bounty mechanism.
+tasks’ curation, the curator will also be able to create child bounties for more granularity in the
+allocation of funds and as part of a nested iteration of the bounty mechanism.
 
 ### Child Bounties
 
-Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties are used to access funds
-directly from the parent bounty without going through an OpenGov referendum.
+Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties are used to
+access funds directly from the parent bounty without going through an OpenGov referendum.
