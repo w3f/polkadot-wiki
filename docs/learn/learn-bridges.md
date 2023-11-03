@@ -106,11 +106,10 @@ Please read the blog article for fuller descriptions of each one of these option
 
 ### Bitcoin Bridge (XCLAIM <-> Substrate <-> Polkadot)
 
-The Interlay team has written a [specification](https://spec.interlay.io/) on a
-Bitcoin bridge that is based on the [XCLAIM](https://eprint.iacr.org/2018/643.pdf) design paper. The
-protocol enables a two-way bridge between Polkadot and Bitcoin. It allows holders of BTC to
-"teleport" their assets to Polkadot as iBTC, and holders of iBTC to burn their assets for
-BTC on the Bitcoin chain.
+The Interlay team has written a [specification](https://spec.interlay.io/) on a Bitcoin bridge that
+is based on the [XCLAIM](https://eprint.iacr.org/2018/643.pdf) design paper. The protocol enables a
+two-way bridge between Polkadot and Bitcoin. It allows holders of BTC to "teleport" their assets to
+Polkadot as iBTC, and holders of iBTC to burn their assets for BTC on the Bitcoin chain.
 
 The Bitcoin bridge, as documented in the specification, is composed of two logically different
 components:
@@ -152,4 +151,5 @@ There is now a
   Edgeware chain (a Substrate-based chain) - now defunct and not maintained, but a good example.
 - [XCLAIM](https://eprint.iacr.org/2018/643.pdf) - XCLAIM is a framework for achieving trustless and
   efficient cross-chain exchanges using cryptocurrency-backed assets.
-- [Celer cBridge](https://github.com/celer-network/cBridge-contracts) - a bridge to transfer assets from Ethereum & Binance Smart Chain to the Astar Polkadot EVM.
+- [Celer cBridge](https://github.com/celer-network/cBridge-contracts) - a bridge to transfer assets
+  from Ethereum & Binance Smart Chain to the Astar Polkadot EVM.
