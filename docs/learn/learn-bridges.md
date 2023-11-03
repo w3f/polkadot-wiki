@@ -130,7 +130,7 @@ There is now a
   were awarded a grant in W3F Grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
   to build a Substrate to Ethereum two-way bridge.
-- [iBTC (Bitcoin <-> Polkadot Bridge)](https://docs.iBTC.io/#/)
+- [iBTC (Bitcoin <-> Polkadot Bridge)](https://docs.interlay.io/#//)
 - [EOS Bridge](https://github.com/bifrost-codes/bifrost) - The Bifrost team was awarded a grant in
   W3F Grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
