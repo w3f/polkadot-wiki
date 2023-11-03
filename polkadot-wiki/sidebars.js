@@ -326,6 +326,7 @@ module.exports = {
                     "learn/learn-guides-treasury",
                     "learn/learn-guides-bounties",
                     "learn/learn-guides-identity",
+                    "learn/learn-guides-ledger",
                     {
                       type: "category",
                       label: "Asset Hub",
