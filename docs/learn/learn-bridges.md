@@ -106,7 +106,7 @@ Please read the blog article for fuller descriptions of each one of these option
 
 ### Bitcoin Bridge (XCLAIM <-> Substrate <-> Polkadot)
 
-The Interlay team has written a [specification](https://interlay.gitlab.io/iBTC-spec/) on a
+The Interlay team has written a [specification](https://spec.interlay.io/) on a
 Bitcoin bridge that is based on the [XCLAIM](https://eprint.iacr.org/2018/643.pdf) design paper. The
 protocol enables a two-way bridge between Polkadot and Bitcoin. It allows holders of BTC to
 "teleport" their assets to Polkadot as iBTC, and holders of iBTC to burn their assets for
