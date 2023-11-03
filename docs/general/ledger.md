@@ -87,22 +87,9 @@ Here is a list of what you will need before using
 
 ## Using Ledger Live
 
-Check
+See
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
 to learn how to use {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with ledger live.
-
-:::info
-
-Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
-you import a [derived account using Polkadot-JS](#using-on-polkadot-js-apps) with a derivation path
-44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. Consequently, it is not possible
-to transact with derived accounts using the Ledger Live App, but it is possible to do so using
-Polkadot-JS. Check [the accounts page](../learn/learn-accounts.md) for more information about
-derived accounts and derivation paths.
-
-:::
-
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
 
 ## Ledger Developer Release
 

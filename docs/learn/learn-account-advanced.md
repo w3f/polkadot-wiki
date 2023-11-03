@@ -49,9 +49,21 @@ them in the [address conversion tools](#address-conversion-tools) section.
 
 If you want to create and manage several accounts on the network using the same seed, you can use
 derivation paths. We can think of the derived accounts as child accounts of the root account created
-using the original mnemonic seed phrase. Many
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support hard and
-soft derivation. For instance, if you intend to create an account to be used on the
+using the original mnemonic seed phrase.
+
+### Soft and Hard Derivation
+
+A soft derivation allows someone to potentially "go backward” to figure out the initial account's
+private key if they know the derived account's private key. It is also possible to determine that
+different accounts generated from the same seed are linked to that seed. A hard derivation path does
+not allow either of these - even if you know a derived private key, it's not feasible to figure out
+the private key of the root address, and it's impossible to prove that the first account is linked
+with the second. These derivation methods have their use cases, given that the private keys for all
+the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
+recommended to generate the account using a hard derivation path.
+
+Many {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support
+hard and soft derivation. For instance, if you intend to create an account to be used on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
 child account using **//** after the mnemonic phrase.
 
@@ -75,11 +87,27 @@ For instance, `//bill//account//1` and `//john/polkadot/initial` are both valid.
 derived account, you must know both the seed and the derivation path, so you should either use a
 well-defined sequence (e.g. //0, //1, //2...) or be sure to write down any derivation paths you use.
 
-:::info
+See the [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/) for
+details and examples of derivation path formats. The Polkadot-JS Apps and Extension and Parity
+Signer support custom derivation paths using the same syntax as Subkey.
 
-It is only possible to generate a derived account by knowing the derivation path.
+Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase.
+This will generate separate seeds for different paths, allowing separate signing keys with the same
+mnemonic, e.g. `<mnemonic phrase>//polkadot` and `<mnemonic phrase>//kusama`. Although you may
+correctly save the mnemonic phrase, using it in another wallet will generate the same addresses only
+if both wallets use the same derivation paths.
+
+Polkadot and Kusama both have paths registered in the
+[BIP44 registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
+
+:::warning
+
+You must have the _parent_ private key and the derivation path to arrive at the key for an address.
+Only use custom derivation paths if you are comfortable with your knowledge of this topic.
 
 :::
+
+### Password Derivation
 
 There is an additional type of derivation called password derivation. On Polkadot you can derive a
 **password key** account using **///** after the mnemonic phrase
@@ -104,36 +132,16 @@ Password-derived account are as secure as the chosen password.
 
 :::
 
-### Soft vs. Hard Derivation
+### Account Derivation in Ledger Live
 
-A soft derivation allows someone to potentially "go backward” to figure out the initial account's
-private key if they know the derived account's private key. It is also possible to determine that
-different accounts generated from the same seed are linked to that seed. A hard derivation path does
-not allow either of these - even if you know a derived private key, it's not feasible to figure out
-the private key of the root address, and it's impossible to prove that the first account is linked
-with the second. These derivation methods have their use cases, given that the private keys for all
-the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
-recommended to generate the account using a hard derivation path.
+Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
+you created a derived account with a derivation path 44'/354'/0'/0'/1' on a wallet or extension, it
+will not be displayed on the Ledger Live App. Consequently, it is not possible to transact with
+derived accounts using the Ledger Live App, but it is possible to do so using Polkadot-JS. Check
+[the accounts page](../learn/learn-accounts.md) for more information about derived accounts and
+derivation paths.
 
-See the [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/) for
-details and examples of derivation path formats. The Polkadot-JS Apps and Extension and Parity
-Signer support custom derivation paths using the same syntax as Subkey.
-
-Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase.
-This will generate separate seeds for different paths, allowing separate signing keys with the same
-mnemonic, e.g. `<mnemonic phrase>//polkadot` and `<mnemonic phrase>//kusama`. Although you may
-correctly save the mnemonic phrase, using it in another wallet will generate the same addresses only
-if both wallets use the same derivation paths.
-
-Polkadot and Kusama both have paths registered in the
-[BIP44 registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
-
-:::warning
-
-You must have the _parent_ private key and the derivation path to arrive at the key for an address.
-Only use custom derivation paths if you are comfortable with your knowledge of this topic.
-
-:::
+{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
 
 ## For the Curious: How Prefixes Work
 
