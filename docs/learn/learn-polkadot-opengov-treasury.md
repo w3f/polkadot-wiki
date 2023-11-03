@@ -133,7 +133,7 @@ Curators are expected to have a decent track record in addressing the issues tha
 solve. They should be very knowledgeable on the topics covered by the bounty and have proven project
 management skills or experience. These recommendations help ensure an effective use of the bounty mechanism.
 A Bounty is a reward for a specified body of work - or specified set of objectives - that needs to be
-executed for a predefined treasury amount to be paid out. The responsibility of assigning a payout
+executed for a predefined treasury amount that is designated to be paid out. The responsibility of assigning a payout
 address once the specified set of objectives is completed is delegated to the curator.
 
 The bounty has a predetermined duration of
