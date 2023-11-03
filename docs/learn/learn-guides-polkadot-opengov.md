@@ -151,6 +151,13 @@ To remove the lock from votes, you first need to call `removeVote` and then `unl
 
 ## Delegations
 
+:::info Video Tutorial about Delegations using the Polkadot-JS UI
+
+See [this video tutorial](https://youtu.be/PNGs11EvCB0) to learn about how to delegate, modify
+delegations and remove delegations using the Polkadot-JS UI.
+
+:::
+
 For an overview of how delegation works in Polkadot OpenGov, check out the
 [Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
 [Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
@@ -233,6 +240,13 @@ delegated account, the conviction, and the number of votes you will need to go t
 the track and [delegate](#delegate-votes) again with updated information.
 
 ## Claiming OpenGov Deposits
+
+:::info Video Tutorial about OpenGov deposits using the Polkadot-JS UI
+
+See [this video tutorial](https://youtu.be/kkEq5cqW2Pk) to learn about how to claim OpenGov deposits
+using the Polkadot-JS UI.
+
+:::
 
 ### Claiming the Preimage and Decision Deposits
 

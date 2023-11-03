@@ -61,6 +61,22 @@ module.exports = {
     setReturnValue(value.toString());
   },
 
+  ErasToDays: function (value, setReturnValue, network) {
+    let factor = undefined;
+    if (network === Polkadot || network === Statemint) {
+      factor = 1;
+    } else if (network === Kusama || network === Statemine) {
+      factor = 4;
+    } else {
+      console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
+      return;
+    }
+    
+    value = value/factor;
+    // Update value
+    setReturnValue(value.toString());
+  },
+
   Percentage: function (value, setReturnValue) {
     value = (value) / 10000000;
     // Update value

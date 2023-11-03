@@ -154,7 +154,7 @@ module.exports = {
             from: ['/docs/learn-availability']
           },
           {
-            to: '/docs/maintain-guides-polkadot-opengov',
+            to: '/docs/learn-polkadot-opengov-origins',
             from: ['/docs/maintain-guides-opengov']
           },
           {
