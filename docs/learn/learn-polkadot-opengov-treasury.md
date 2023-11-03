@@ -96,9 +96,9 @@ and [claiming child bounties rewards](./learn-guides-bounties.md#claim-a-child-b
 Getting treasury funding through OpenGov, depending on which treasury track you submit your
 referendum, can be a long and uncertain process. This is not always a suitable option, for example,
 for event organizers who need to pay costs upfront or close to the event's date. Bounties solve this
-problem by procuring access to treasury funds in a single shot and use them to fund multiple events
-later on through [child bounties](#child-bounties). This is why bounties are also called _parent_
-bounties.
+problem by procuring access to treasury funds in a single shot and using them to fund multiple
+events later on through [child bounties](#child-bounties). This is why bounties are also called
+_parent_ bounties.
 
 Parent bounty proposals aim to reserve a portion of treasury funds once, which will be used later.
 They save proponents the time needed to create and obtain approval for several OpenGov referenda.
@@ -128,16 +128,15 @@ and it can range between a minimum of
 and a maximum of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
 This deposit can be used to punish curators if they act maliciously. However, if they are successful
-in managing the bounty to completion, they will receive their deposit back and part of the bounty
+in managing the bounty to completion, they will receive their deposit back, and part of the bounty
 funding as a payment for their efforts.
 
-Curators are expected to have a decent track record in addressing the issues that the bounty wants
-to solve. They should be very knowledgeable on the topics covered by the bounty and have proven
-project management skills or experience. These recommendations help ensure an effective use of the
-bounty mechanism. A Bounty is a reward for a specified body of work - or specified set of
-objectives - that needs to be executed for a predefined treasury amount that is designated to be
-paid out. The responsibility of assigning a payout address once the specified set of objectives is
-completed is delegated to the curator.
+Curators are expected to have a decent track record in addressing the issues the bounty wants to
+solve. They should be very knowledgeable on the topics covered by the bounty and have proven project
+management skills or experience. These recommendations help ensure an effective use of the bounty
+mechanism. A Bounty is a reward for a specified body of work or set of objectives that needs to be
+executed for a predefined treasury amount designated to be paid out. The responsibility of assigning
+a payout address once the specified set of objectives is completed is delegated to the curator.
 
 The bounty has a predetermined duration of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
