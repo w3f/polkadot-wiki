@@ -7,6 +7,9 @@ keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, c
 slug: ../build-network-overview
 ---
 
+While Polkadot itself is the mainnet, there are several networks which can cater to different
+development or application-driven contexts.
+
 ## Polkadot Ecosystem Networks
 
 - Mainnet: **Polkadot**
@@ -17,10 +20,10 @@ slug: ../build-network-overview
   - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet
     (is not reset back to genesis block).
-  - **Canvas** - Wasm-based Smart Contract enabled testnet, primarily for [`ink!`](https://use.ink/)
-    development.
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new
     genesis block).
+  - **Contracts** - Wasm-based Smart Contract enabled parachain testnet on Rococo, primarily for
+    [`ink!`](https://use.ink/) development.
 
 {{ polkadot: Polkadot mainnet has been running since May 2020 :polkadot }}{{ kusama: Kusama mainnet has been
 running since August 2019 :kusama }} and has [implementations in various programming languages](../learn/learn-implementations.md)
@@ -32,10 +35,19 @@ But before you jump head-first into the code, you should consider the _kind_ of 
 application you want to make and understand the different paradigms available to developers who want
 to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
+## Interfacing - PolkadotJS
+
+PolkadotJS is the most widely used developer tool in the Polkadot ecosystem. It provides a web app
+to interact with various parachains, nodes, and their RPCs, as well as a Javascript API for use
+within front end contexts. You can view more on PolkadotJS and its respective resources
+[here](https://polkadot.js.org/).
+
+For other programmatic ways of interacting with these networks (inlcuding PolkadotJS), please view
+the [Node Interactions page](./build-node-interaction.md).
+
 ## Testnet Faucets
 
-### Rococo
+Almost all tesnets either have a web-based interface for getting test currency, or a Matrix room
+which you can post `!drip <ADDRESS>`
 
-### Canvas
-
-### Westend
+[See here for all available faucets and how to obtain testnet tokens.](../learn/learn-DOT.md#obtaining-testnet-tokens)

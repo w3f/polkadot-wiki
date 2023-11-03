@@ -686,9 +686,12 @@ module.exports = {
 
         {
           type: "category",
-          label: "Opensource Tools",
+          label: "Tooling",
+          link: {
+            type: 'doc',
+            id: "build/build-tools-index"
+          },
           items: [
-            "build/build-tools-index",
             "build/build-data",
             "build/build-open-source",
           ],
