@@ -415,9 +415,9 @@ module.exports = {
                     "learn/learn-guides-assets-ledger",
                   ],
                 },
-                "learn/learn-guides-vault",
               ],
             },
+            "learn/learn-guides-vault",
           ],
         },
         {
