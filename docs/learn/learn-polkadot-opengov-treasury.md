@@ -127,7 +127,7 @@ and a maximum of
 {{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
 This deposit can be used to punish curators if they act maliciously. However, if they are successful in
 managing the bounty to completion, they will receive their deposit back and
-part of the bounty funding as a payment for their job.
+part of the bounty funding as a payment for their efforts.
 
 Curators are expected to have a well-balanced track record in addressing the issues that the bounty wants to
 solve. At the very least, they should be very knowledgeable on the topics covered by the bounty and have proven project
