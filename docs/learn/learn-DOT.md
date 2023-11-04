@@ -195,11 +195,6 @@ obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [Rococo faucet](https://paritytech.github.io/polkadot-testnet-faucet/). Learn more about Rococo on
 its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
-### Getting Tokens on the Wococo Testnet
-
-Wococo is a bridge testnet. General users can obtain WOOK by posting `!drip <WOCOCO_ADDRESS>` in the
-Matrix chatroom [#wococo-faucet:matrix.org](https://matrix.to/#/#wococo-faucet:matrix.org).
-
 ### Faucets support
 
 If you require help with using faucets, or wish to report an issue, there is a support chat

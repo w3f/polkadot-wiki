@@ -95,27 +95,10 @@ Check that your node is connected by viewing it on
 Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
 ROCs tokens.
 
-### Wococo Test Network
+### Wococo Test Network (inactive)
 
-Wococo is a test network of Polkadot built for bridges. The native token of this network (WOOK)
-holds no economic value.
-
-Run the Polkadot binary and specify `rococo` as the chain:
-
-```bash
-polkadot --chain=wococo
-```
-
-and you will connect and start syncing to Wococo.
-
-Check that your node is connected by viewing it on
-[Wococo Telemetry](https://telemetry.polkadot.io/#list/0xdb4fd29dd914017e9dda3b751d6a4e0c5ca28cce7b6260cb063936633cc8175c)
-(you can set a custom node name by specifying `--name "my-custom-node-name"`).
-
-#### Wococo Faucet
-
-Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-wococo-testnet) to get
-WOOKs tokens.
+Wococo used to be a Polkadot test network for testing bridges. The network was shut down following
+the bridge between Westend and Rococo deployment.
 
 ## Differences
 
