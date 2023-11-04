@@ -764,8 +764,9 @@ you can find more information [on the wiki page](../general/thousand-validators.
 
 ## Running a validator on a testnet
 
-To verify your validator set up, it is possible to run it against a PoS test network such as Westend. However, validator slots are intentionally limited on Westend to ensure the stability and
-availability of the testnet for the Polkadot release process.
+To verify your validator setup, it is possible to run it against a PoS test network such as Westend.
+However, validator slots are intentionally limited on Westend to ensure stability and availability
+of the testnet for the Polkadot release process.
 
 Here is a small comparison of each network characteristics as relevant to validators:
 

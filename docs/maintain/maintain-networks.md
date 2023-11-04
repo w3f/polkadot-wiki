@@ -97,8 +97,8 @@ ROCs tokens.
 
 ### Wococo Test Network (inactive)
 
-Wococo used to be a test network of Polkadot built for testing bridges.
-The network has been shut down following the deployment of the bridge between Westend and Rococo.
+Wococo used to be a Polkadot test network for testing bridges. The network was shut down following
+the bridge between Westend and Rococo deployment.
 
 ## Differences
 
