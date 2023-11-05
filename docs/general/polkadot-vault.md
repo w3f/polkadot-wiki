@@ -73,9 +73,7 @@ Set).
 We recommend importing a Vault account into the
 [Polkadot-JS Browser Extension](./polkadotjs.md#polkadot-js-extension) or
 [Parity Signer Companion](https://chrome.google.com/webstore/detail/parity-signer-companion/damllfnhhcbmclmjilomenbhkappdjgb).
-Alternatively, you can import a Vault account directly into the Polkadot-JS UI but keep in mind that
-clearing the cache of your browser will remove those accounts (this will not happen for accounts
-imported into an extension). See the instructions in
+See the instructions in
 [this article](https://support.polkadot.network/support/solutions/articles/65000184076-polkadot-vault-how-to-create-an-account)
 to learn more about creating Vault accounts, and
 [this article](https://support.polkadot.network/support/solutions/articles/65000184118-polkadot-vault-how-to-add-your-account-on-polkadot-js-ui)

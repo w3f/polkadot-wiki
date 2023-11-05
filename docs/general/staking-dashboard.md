@@ -47,8 +47,8 @@ dedicated to [staking](../learn/learn-staking.md) on Polkadot,
 [Westend](../maintain/maintain-networks.md#westend-test-network) (Polkadot's test network).
 
 The dashboard is not a wallet, meaning that you cannot transfer funds between accounts. To fund
-accounts, you can use [supported wallets](./wallets) or the [Polkadot-JS UI](./polkadotjs-ui.md).
-You can participate in staking by being a [nominator](../learn/learn-nominator.md) or a member of a
+accounts, you can use [wallets and extension](./wallets-and-extensions.md). You can participate in
+staking by being a [nominator](../learn/learn-nominator.md) or a member of a
 [nomination pool](../learn/learn-nomination-pools.md). Once you have a funded account, you need to
 connect it to the dashboard (connect button on the top-right corner), this will allow you to
 interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native staking.
