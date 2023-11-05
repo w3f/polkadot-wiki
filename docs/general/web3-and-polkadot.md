@@ -90,7 +90,7 @@ So, with blockchain as a means of storing data and transactions permanently with
 modify them, we can ensure what we cryptographically sign with our digital identity is set in stone
 digitally.
 
-## Data Availability
+## Data Retrievability
 
 But what if our data are stored in a blockchain, but that blockchain is run on a centralized server
 or by different computers belonging to the same operator?
@@ -101,14 +101,14 @@ or from the outside by regulatory rules and other forces. Though blockchain offe
 there would be little sense in using a centralized blockchain to prove ownership as it can possibly
 cease to exist in the future.
 
-Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
+Data retrievability is dependent on how resilient the blockchain is. Resiliency is achieved through
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
 network can sustain on its own.
 
 ### Decentralization
 
 Having multiple nodes belonging to numerous independent identities increases network resiliency and
-thus data availability.
+thus data retrievability.
 
 Blockchain is a state machine, and consensus must be achieved on every single state transition by
 every node on the blockchain network. In Proof of Work (PoW) based blockchains, which let any node
