@@ -644,20 +644,7 @@ module.exports = {
             "build/build-node-interaction",
           ],
         },
-        {
-          type: "category",
-          label: "Smart Contract Development",
-          link: {
-            type: 'generated-index',
-            title: "Smart Contract Development",
-            description: "Learn how to deploy smart contracts on Polkadot's parachains",
-            slug: '/build-smart-contracts-index',
-          },
-          items: [
-            "build/build-smart-contracts",
-            "build/build-supported-contract-chains"
-          ],
-        },
+        "build/build-smart-contracts",
         {
           type: "category",
           label: "Protocol Development",
