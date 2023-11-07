@@ -90,7 +90,7 @@ So, with blockchain as a means of storing data and transactions permanently with
 modify them, we can ensure what we cryptographically sign with our digital identity is set in stone
 digitally.
 
-## Data Availability
+## Data Retrievability
 
 But what if our data are stored in a blockchain, but that blockchain is run on a centralized server
 or by different computers belonging to the same operator?
@@ -101,14 +101,27 @@ or from the outside by regulatory rules and other forces. Though blockchain offe
 there would be little sense in using a centralized blockchain to prove ownership as it can possibly
 cease to exist in the future.
 
-Data availability is dependent on how resilient the blockchain is. Resiliency is achieved through
+Data retrievability is dependent on how resilient the blockchain is. Resiliency is achieved through
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
 network can sustain on its own.
+
+:::info Data Retrievability vs. Data Availability
+
+Data **retrievability** is the ability of nodes to retrieve historical information from the
+blockchain. Historical data is not needed to verify new blocks; it is only required for synching
+full nodes from the Genesis block or serving specific historical requests.
+
+Data **availability** assures full nodes can access and verify the full transactions associated with
+a specific block. It does not necessarily imply that the data is accessible forever. For more
+information about data availability on Polkadot, see the
+[dedicated section on the parachain protocol page](../learn/learn-parachains-protocol.md#availability-and-validity-anv-protocol).
+
+:::
 
 ### Decentralization
 
 Having multiple nodes belonging to numerous independent identities increases network resiliency and
-thus data availability.
+thus data retrievability.
 
 Blockchain is a state machine, and consensus must be achieved on every single state transition by
 every node on the blockchain network. In Proof of Work (PoW) based blockchains, which let any node
