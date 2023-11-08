@@ -23,10 +23,7 @@ extension or a wallet to use it; you just need your Ledger device.
 only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account in a Ledger device with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger app installed, or a browser
-extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extension) or
-[other third-party extensions](./wallets-and-extensions.md#browser-extensions) with a funded
+[wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account.
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
