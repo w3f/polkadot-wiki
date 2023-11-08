@@ -303,7 +303,7 @@ module.exports = {
                   link: {
                     type: 'generated-index',
                     title: 'Polkadot-JS Guides',
-                    description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
+                    description: 'Polkadot-JS Guides about Staking, Asset Hub, Ledger, Vault App, and more.',
                     slug: '/learn-guides-index',
                   },
                   items: [
@@ -327,6 +327,7 @@ module.exports = {
                     "learn/learn-guides-bounties",
                     "learn/learn-guides-identity",
                     "learn/learn-guides-ledger",
+                    "learn/learn-guides-vault",
                     {
                       type: "category",
                       label: "Asset Hub",
@@ -420,7 +421,6 @@ module.exports = {
             "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
-            "learn/learn-guides-vault",
           ],
         },
         {
