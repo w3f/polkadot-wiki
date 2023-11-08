@@ -24,7 +24,9 @@ only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
 [wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. Note that accounts on
+wallets or extensions can be imported from [Ledger](./ledger.md) or
+[Polkadot Vault](./polkadot-vault.md).
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
 need some free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the
