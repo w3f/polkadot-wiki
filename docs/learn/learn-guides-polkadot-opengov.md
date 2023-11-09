@@ -1,16 +1,15 @@
 ---
 id: learn-guides-polkadot-opengov
-title: Polkadot OpenGov How-to Guides
+title: Polkadot-JS Guides about OpenGov
 sidebar_label: OpenGov
-description: Advanced How-to Guides about Polkadot OpenGov.
-keywords: [opengov, polkadot opengov, referenda, cancel]
+description: Polkadot-JS Guides about Polkadot OpenGov.
+keywords: [opengov, polkadot opengov, referenda, cancel, polkadot-js]
 slug: ../learn-guides-polkadot-opengov
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-This page is for advanced users of Polkadot OpenGov. If you would learn more about OpenGov see the
-[dedicated page](./learn-polkadot-opengov.md).
+See [this page](./learn-polkadot-opengov.md) to learn about Polkadot OpenGov.
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Referenda module (OpenGov). Below are a few links to stay informed and directly engage with the
@@ -162,24 +161,8 @@ For an overview of how delegation works in Polkadot OpenGov, check out the
 [Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
 [Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
-### Delegation Dashboard
-
-To make multi-role delegation easy and intuitive,
-[Delegation Dashboard](https://delegation.polkadot.network/) provides an interactive interface that
-displays the list of delegates and their details. The video tutorial below walks through the
-features of the Delegation Dashboard and shows how to perform multi-role delegation.
-
-[![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
-
-For detailed instructions on how to delegate your voting power using dashboard, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power)
-If you like to use Polkadot-JS UI for performing multi-role delegation, the instructions are
-available
-[here](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
-
-Polkassembly also provides an engaging interface to interact with governance in OpenGov along with
-an alternative interface for delegation at
-[polkadot.polkassembly.io/delegation](https://polkadot.polkassembly.io/delegation)
+Instructions to do delegations with Polkadot-JS are also available on the
+[Support Pages](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
 
 ### Delegate Votes
 

@@ -317,20 +317,15 @@ likely also surface. So, crowdloans require their own section to ensure particip
 First of all, only projects that aim to become a parachain should have a crowdloan. If a project is
 not a parachain candidate, there should not be a crowdloan associated with it.
 
-The optimal way to participate in a parachain crowdloan is natively through the
-[Crowdloan module](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan)
-on Polkadot-JS Apps. This issues a special extrinsic that locks your funds until the parachain slot
-lease period ends and guarantees that your stake will be returned afterwards. You can learn more
-about crowdloans through the link above and [here](https://kusama.network/auctions) for Kusama.
-
-Many parachain candidates offer a way to participate through their site as well. However, you should
-ensure that they are using the crowdloan pallet in the background and that they are simply wrapping
-that in a nicer, more user-friendly interface. If their crowdloan interface _transfers_ funds to an
-account instead, these funds will be totally under their control, and this means you need to fully
-trust that the team will use the funds for the crowdloan, will return your share to you when the
-lease period ends or if they do not win a slot, and will secure the funds properly. If their
-crowdloan involves this kind of mechanism, it should be explicitly mentioned in their site and
-documentation.
+The optimal way to participate in a parachain crowdloan is through
+on-chain, via one of the available [wallets or extensions](./wallets-and-extensions.md). Many parachain candidates offer a way to
+participate through their site as well. However, you should ensure that they are using the crowdloan
+pallet in the background and that they are simply wrapping that in a nicer, more user-friendly
+interface. If their crowdloan interface _transfers_ funds to an account instead, these funds will be
+totally under their control, and this means you need to fully trust that the team will use the funds
+for the crowdloan, will return your share to you when the lease period ends or if they do not win a
+slot, and will secure the funds properly. If their crowdloan involves this kind of mechanism, it
+should be explicitly mentioned in their site and documentation.
 
 That being said, some teams have been doing token sales or swaps in an attempt to get a head start
 in raising funds for the auctions, but these are **not crowdloans** and still require full trust in

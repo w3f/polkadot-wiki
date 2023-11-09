@@ -27,7 +27,15 @@ Anyone interested in being listed as a delegate can add their details on the
 
 :::
 
+To make OpenGov multi-role delegation easy and intuitive,
+[Delegation Dashboard](https://delegation.polkadot.network/) provides an interactive interface that
+displays the list of delegates and their details. The video tutorial below walks through the
+features of the Delegation Dashboard and shows how to perform multi-role delegation.
+
 [![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
+
+For detailed instructions on how to delegate your voting power using dashboard, check
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power).
 
 ## Polkassembly
 

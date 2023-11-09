@@ -1,15 +1,15 @@
 ---
 id: learn-guides-bounties
-title: How-to Guides for Bounties
+title: Polkadot-JS Guides about Bounties
 sidebar_label: Bounties
-description: Advanced How-to Guides for Bounties
-keyword: [treasury, bounties, guides, child bounty]
+description: Polkadot-JS Guides for Bounties
+keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 slug: ../learn-guides-bounties
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-For these guides, you will use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
+See [this page](./learn-polkadot-opengov-treasury.md#bounties) to learn about Bounties.
 
 :::info Notify the Polkadot Direction Channel
 
