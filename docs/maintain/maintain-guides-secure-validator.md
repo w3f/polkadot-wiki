@@ -71,13 +71,13 @@ behavior.
 
 ### Secure-Validator Mode
 
-Parity Polkadot has a Secure-Validator Mode which enables several protections for keeping keys
-secure. The protections include highly strict filesystem, networking, and process sandboxing, on top
-of the existing wasmtime sandbox.
+Parity Polkadot has a Secure-Validator Mode, enabling several protections for keeping keys secure.
+The protections include highly strict filesystem, networking, and process sandboxing on top of the
+existing wasmtime sandbox.
 
-This mode is **on by default** if the machine meets the following requirements. If not, there is an
-error message with instructions on disabling Secure-Validator Mode, though this is not recommended
-due to the security risks involved.
+This mode is **activated by default** if the machine meets the following requirements. If not, there
+is an error message with instructions on disabling Secure-Validator Mode, though this is not
+recommended due to the security risks involved.
 
 #### Requirements
 
