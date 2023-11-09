@@ -69,6 +69,33 @@ behavior.
 
 :::
 
+### Secure-Validator Mode
+
+Parity Polkadot has a Secure-Validator Mode, enabling several protections for keeping keys secure.
+The protections include highly strict filesystem, networking, and process sandboxing on top of the
+existing wasmtime sandbox.
+
+This mode is **activated by default** if the machine meets the following requirements. If not, there
+is an error message with instructions on disabling Secure-Validator Mode, though this is not
+recommended due to the security risks involved.
+
+#### Requirements
+
+1. **Linux on x86-64 family** (usually Intel or AMD).
+2. **seccomp enabled**. You can check that this is the case by running the following command:
+
+```
+cat /boot/config-`uname -r` | grep CONFIG_SECCOMP=
+```
+
+The expected output, if enabled, is:
+
+```
+CONFIG_SECCOMP=y
+```
+
+3. OPTIONAL: **Linux 5.13**. Provides access to even more strict filesystem protections.
+
 ## Monitoring Tools
 
 - [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details
