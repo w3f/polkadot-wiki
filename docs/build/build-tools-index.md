@@ -98,7 +98,9 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## IDEs
 
-- [Sandox IDE](https://github.com/sandoxio/sandox) is an integrated development environment with tools for building in the Polkadot environment. Currently helpful for creating applications in JS.
+- [Sandox IDE](https://github.com/sandoxio/sandox) is an integrated development environment (IDE)
+  with tools for building in the Polkadot environment. Currently helpful for creating applications
+  in JS.
 
 ## UI
 
