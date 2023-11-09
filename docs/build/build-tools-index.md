@@ -96,6 +96,12 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 - [sub-flood](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by flooding it
   with requests.
 
+## IDEs
+
+- [Sandox IDE](https://github.com/sandoxio/sandox) is an integrated development environment (IDE)
+  with tools for building in the Polkadot environment. Currently helpful for creating applications
+  in JS.
+
 ## UI
 
 - [Polkadash](https://github.com/Swader/polkadash) - VueJS-based starter kit for custom user
