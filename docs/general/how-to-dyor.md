@@ -318,7 +318,7 @@ First of all, only projects that aim to become a parachain should have a crowdlo
 not a parachain candidate, there should not be a crowdloan associated with it.
 
 The optimal way to participate in a parachain crowdloan is through
-[wallets and extensions](./wallets-and-extensions.md). Many parachain candidates offer a way to
+on-chain, via one of the available [wallets or extensions](./wallets-and-extensions.md). Many parachain candidates offer a way to
 participate through their site as well. However, you should ensure that they are using the crowdloan
 pallet in the background and that they are simply wrapping that in a nicer, more user-friendly
 interface. If their crowdloan interface _transfers_ funds to an account instead, these funds will be
