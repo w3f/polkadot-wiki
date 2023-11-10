@@ -323,7 +323,7 @@ In all of the examples, assume that there are 100 validators in the active set.
 
 :::
 
-No slashing would enact if < 10% of all validators are unresponsive.
+No slashing would enact if <= 10% of all validators are unresponsive.
 
 For example, if exactly 10 validators were unresponsive, the expression 3 _ (x - (n / 10 + 1))) / n
 would be 3 _ (10 - (100 / 10 + 1)) / 100 = 3 \* (10 - (10 + 1)) / 100 = -0.03 which is rounded to 0.
