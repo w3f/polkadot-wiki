@@ -307,6 +307,7 @@ module.exports = {
                     slug: '/learn-guides-index',
                   },
                   items: [
+                    "learn/learn-guides-accounts",
                     {
                       type: "category",
                       label: "Staking",
