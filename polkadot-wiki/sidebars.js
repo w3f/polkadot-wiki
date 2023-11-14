@@ -664,6 +664,12 @@ module.exports = {
         {
           type: "category",
           label: "Development Networks & Node Management",
+          link: {
+            type: 'generated-index',
+            title: "Development Networks & Node Management",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-network-index',
+          },
           items: [
             "build/build-network-overview",
             "build/build-integration",
