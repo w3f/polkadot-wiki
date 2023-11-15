@@ -622,44 +622,77 @@ module.exports = {
     {
       type: "category",
       label: "Build",
+      link: {
+        type: 'doc',
+        id: "build/build-guide"
+      },
       items: [
-        "build/build-index",
         {
           type: "category",
-          label: "Development Guide",
+          label: "Client-side Development",
+          link: {
+            type: 'generated-index',
+            title: "Client-side Development",
+            description: "Learn about different options for building client-side apps on Polkadot.",
+            slug: '/build-client-index',
+          },
           items: [
-            "build/build-guide",
-            "build/build-parachains",
+            "build/build-dapp",
+            "build/build-oracle", 
+            "build/build-light-clients",
             "build/build-storage",
-            "build/build-smart-contracts",
-            "build/build-oracle",
-            "build/build-data",
-            "build/build-substrate",
-            "build/build-ss58-registry",
-            "build/build-hrmp-channels",
-          ],
-        },
-        {
-          type: "category",
-          label: "Integration Guide",
-          items: [
-            "build/build-integration",
-            "build/build-protocol-info",
-            "build/build-integrate-assets",
-            "build/build-node-management",
-            "build/build-node-interaction",
             "build/build-transaction-construction",
+            "build/build-node-interaction",
+          ],
+        },
+        "build/build-smart-contracts",
+        {
+          type: "category",
+          label: "Protocol Development",
+          link: {
+            type: 'generated-index',
+            title: "Protocol & Parachain Development",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-protocol-index',
+          },
+          items: [
+            "build/build-protocol-info",
+            "build/build-parachains",
+            "build/build-integrate-assets",
+            "build/build-hrmp-channels"
           ],
         },
         {
           type: "category",
-          label: "Tools",
-          items: ["build/build-tools-index", "build/build-open-source"],
+          label: "Development Networks & Node Management",
+          link: {
+            type: 'generated-index',
+            title: "Development Networks & Node Management",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-network-index',
+          },
+          items: [
+            "build/build-network-overview",
+            "build/build-integration",
+            "build/build-node-management",
+          ],
         },
+
         {
           type: "category",
-          label: "Resources",
-          items: ["build/build-hackathon"],
+          label: "Tooling",
+          link: {
+            type: 'doc',
+            id: "build/build-tools-index"
+          },
+          items: [
+            "build/build-data",
+            "build/build-open-source",
+          ],
+        },
+        {
+          type: "doc",
+          id: "build/build-hackathon",
         },
       ],
     },

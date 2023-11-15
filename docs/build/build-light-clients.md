@@ -1,10 +1,10 @@
 ---
-id: build-substrate
-title: Substrate Connect
-sidebar_label: Substrate Connect
-description: Information about Substrate Connect.
+id: build-light-clients
+title: Using Light Clients
+sidebar_label: Using Light Clients
+description: Information about light client options.
 keywords: [build, substrate, substrate connect, light client]
-slug: ../build-substrate
+slug: ../build-light-clients
 ---
 
 ## Blockchain User Interfaces are still Centralized
