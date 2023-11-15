@@ -84,8 +84,7 @@ Before diving into the various paths, one can take in developing on
 {{ polkadot: Polkadot :polkadot }}, it's important to realize and know key terms that make up the
 following sections. Even before considering what kind of application you want to build, it's prudent
 to understand what {{ polkadot: Polkadot :polkadot }} _is_ and how {{ kusama: Kusama :kusama }}
-relates to it, and how what each developmental component can do for you within the Polkadot
-ecosystem.
+relates to it, and what each developmental component can do for you within the Polkadot ecosystem.
 
 Before diving into any one of these tracks, it is encouraged to read about
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
@@ -104,7 +103,7 @@ protocols. Parachains connect to a relay chain using the
 :::info
 
 Throughout this document, you will encounter the term **runtime** or **STF (State Transition
-Function)**. Both refer to the same concept, as they define how exactly a particular system, i.e., a
+Function)**. Both refer to the same concept, as they define how a particular system, i.e., a
 blockchain, should deal with state changes externally and internally. Both of these terms are used
 extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and by association,
 Substrate contexts.
@@ -137,7 +136,7 @@ benefits of building a parachain without the cost drawback.
 Polkadot is built using the [Substrate](https://substrate.io/) framework.
 [Substrate](https://substrate.io/) is a highly configurable and dynamic framework for building
 blockchains. At a lower level, Substrate provides a set of tools and libraries ranging from
-[block production, finality gadgets, to peer-to-peer networking](https://docs.substrate.io/reference/rust-api/).
+[block production, finality gadgets to peer-to-peer networking](https://docs.substrate.io/reference/rust-api/).
 Both Polkadot and Kusama, as well as most parachains, are built using Substrate.
 
 In essence, Substrate can break down a blockchain's development process by providing crucial
@@ -167,7 +166,7 @@ of web3.
 :::note
 
 Although most parachains utilize FRAME and Substrate to build runtime/STFs for connecting to the
-relay chain, it is not contingent. Building a parachain using other tools is possible, so long as
+relay chain, it is not contingent. Building a parachain using other tools is possible, as long as
 they follow the [Parachains Protocol](../learn/learn-parachains-protocol.md).
 
 As a general rule of thumb, Substrate provides the means for this to become possible through
@@ -184,15 +183,15 @@ chain follows the Parachain Protocol.
 
 :::info
 
-_Cumulus clouds are shaped sort of like dots; together, they form a system that is intricate,
-beautiful, and functional._
+_Cumulus clouds are shaped like dots; together, they form an intricate, beautiful and functional
+system._
 
 :::
 
 For most developers, the best place to start is to get familiar with Substrate independently,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
-process. This way, one can view how various paradigms are applied and make decisions on integrating
-or utilizing Substrate for their particular use case.
+process. This way, one can view how various paradigms are applied and decide on integrating or
+utilizing Substrate for their particular use case.
 
 Please see the [parachain development guide](build-parachains.md) for how to get started on building
 a parachain or parathread.
@@ -207,7 +206,7 @@ blockchain networks' technical and economic aspects.
 
 Parachains grant the creators more space to build the monetary system and other chain aspects from
 the ground up. They will allow for a more concise and efficient execution of complex logic than a
-smart contract platform could offer. Parachains also offer more flexibility in the form of
+smart contract platform could offer. Parachains also provide more flexibility in the form of
 governance and can perform complete upgrades in a less controversial way than the current process of
 hard forks.
 
@@ -225,16 +224,16 @@ Some examples of features you can have on a parachain or parathread:
 While parachains are highly customizable, they are often complex to develop. If you wish to get
 familiar with FRAME and Substrate, a good place to start is by building a pallet in a development
 environment. A pallet is a fully customizable module that allows you to implement layer one logic
-with relatively minimal development time on a basic level while still allowing the possibility of
-building advanced functionality into your custom chain.
+with relatively minimal development time on a fundamental level while still allowing the possibility
+of building advanced functionality into your custom chain.
 
 To learn how to build a pallet, follow the
 [Substrate documentation](https://docs.substrate.io/tutorials/build-application-logic/).
 
 ## Developing Smart Contracts
 
-Smart contracts are another option that enables for an often simpler developer experience. Below is
-a quick comparison of how building a smart contract compares to building a parachain:
+Smart contracts are another option that enables an often simpler developer experience. Below is a
+quick comparison of how building a smart contract compares to building a parachain:
 
 |                         | Parachains | Smart Contracts |
 | ----------------------- | ---------- | --------------- |
@@ -301,6 +300,7 @@ For front-end applications, several options exist for interfacing with Substrate
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
 Substrate node.
 
-[Please visit the full documentation for developing dApps, and other general client-side development resources.](build-dapp)
+[Please visit the full documentation for developing dApps and other general client-side development resources.](build-dapp)
 
-For a full list of tools please take a look here: [Tools, APIs and Languages](build-open-source.md)
+For a complete list of tools, please take a look here:
+[Tools, APIs, and Languages](build-open-source.md)
