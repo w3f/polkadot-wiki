@@ -7,7 +7,7 @@ keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, c
 slug: ../build-network-overview
 ---
 
-While Polkadot itself is the mainnet, there are several networks which can cater to different
+While Polkadot itself is the mainnet, there are several networks that can cater to different
 development or application-driven contexts.
 
 ## Polkadot Ecosystem Networks
@@ -39,15 +39,15 @@ to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 PolkadotJS is the most widely used developer tool in the Polkadot ecosystem. It provides a web app
 to interact with various parachains, nodes, and their RPCs, as well as a Javascript API for use
-within front end contexts. You can view more on PolkadotJS and its respective resources
+within front-end contexts. You can view more on PolkadotJS and its resources
 [here](https://polkadot.js.org/).
 
-For other programmatic ways of interacting with these networks (inlcuding PolkadotJS), please view
+For other programmatic ways of interacting with these networks (including PolkadotJS), please view
 the [Node Interactions page](./build-node-interaction.md).
 
 ## Testnet Faucets
 
-Almost all tesnets either have a web-based interface for getting test currency, or a Matrix room
+Almost all tesnets either have a web-based interface for getting test currency or a Matrix room
 which you can post `!drip <ADDRESS>`
 
 [See here for all available faucets and how to obtain testnet tokens.](../learn/learn-DOT.md#obtaining-testnet-tokens)
