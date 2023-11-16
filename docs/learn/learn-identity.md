@@ -161,7 +161,7 @@ Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account
 Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
 {{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }}
 {{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
-{{ polkadot: 10 DOT :polkadot }}{{ kusama: 0.65 KSM :kusama }} <br />
+{{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
 
 Registrar 2: <br /> **Account**:
 {{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
@@ -171,7 +171,7 @@ Registrar 2: <br /> **Account**:
 Registrar 3: <br /> **Account**:
 {{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC :polkadot }}
 {{ kusama: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM :kusama }} <br /> **Fee**:
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
+{{ polkadot: 0.5 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
 
 {{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**: 0.04 KSM <br /> :kusama }}
 
