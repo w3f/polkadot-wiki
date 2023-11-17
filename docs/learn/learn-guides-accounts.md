@@ -191,6 +191,38 @@ See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui)
 to learn how to restore your account on the Polkadot-JS UI.
 
+## Query Account Data in Polkadot-JS
+
+In the Polkadot-JS UI, you can also query account data under
+[Developer > Chain state](https://polkadot.js.org/apps/#/chainstate). Under `selected state query`
+choose the system pallet followed by `account(AccountId32): FrameSystemAccountInfo`, under `Option`
+choose an account, and then click on the "+" button on the right.
+
+![account_balance_types](../assets/AccountData-struct.png)
+
+Account information include:
+
+- `nonce`, the number of transactions the account sent.
+- `consumers`, the number of other modules that currently depend on this account's existence. The
+  account cannot be reaped until this is zero.
+- `providers`, the number of other modules that allow this account to exist. The account may not be
+  reaped until this and `sufficients` are both zero.
+- `sufficients`, the number of modules that allow this account to exist for their own purposes. The
+  account may not be reaped until this and `providers` are both zero.
+- `data`, the additional data that belongs to this account. Used to store the balance(s) in a lot of
+  chains.
+
+More in-depth information about the above data can be found in the
+[substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/system/src/lib.rs#LL767C1-L781C24).
+
+The `AccountData` structure defines the balance types in Substrate. The three types of balances
+include `free`, `reserved`, and `frozen`. The **usable** balance of the account is the amount that
+is `free` minus any funds considered `frozen`, while the **total** balance of the account is the sum
+of `free` and `reserved` funds. The `flags` describe extra information about the account.
+
+More in-depth information about the above data can be found in the
+[balances pallet in the Substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).
+
 ## Vanity Generator
 
 The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
