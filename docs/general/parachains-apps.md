@@ -123,3 +123,41 @@ addition, users can earn additional tokens and rewards through gamification.
 
 Discover more Astar dApps on
 [Astar Portal](https://portal.astar.network/astar/dapp-staking/discover).
+
+## Bifrost Finance
+
+[Bifrost ](https://bifrost.finance/)is a dedicated liquid staking middle layer built on Substrate,
+powered by Polkadot, providing non-custodial decentralized cross-chain liquid tokens for staked
+assets. By leveraging Polkadot’s cross-consensus message format (XCM), Bifrost provides standardized
+cross-chain liquid staking solutions for multiple chains currently Polkadot (vDOT), Kusama (vKSM),
+Moonbeam (vGLMR), Moonriver (vMOVR) and other chains notably vASTR (Astar) and vFIL (Filecoin).
+
+Through Bifrost Staking Liquidity Protocol
+([SLP](https://bifrost-finance.medium.com/why-bifrost-slp-is-the-good-choice-for-decentralized-liquid-staking-ceb90091ef41)),
+Bifost facilitates the issuance and deployment of liquid staked assets (“vTokens' '), allowing users
+to earn staking rewards while retaining their governance rights and participating in DeFi, such as
+liquidity provisioning on DEXs, providing collateral on lending/borrowing protocols and for
+stablecoin issuance as well as restaking for securing decentralized solutions. Bifrost vTokens are
+reward-bearing liquid staking tokens representing the users staked asset, including returns from
+staking. As staking rewards are received, vTokens increase in value without changing the quantity of
+tokens.
+
+Bifrost aims to offer seamless staking and DeFi experience for Proof of Stake (PoS) users and enable
+developers to build innovative applications around Bifrosts’ liquid staking tokens.
+
+### Bifrost dApp
+
+Bifrost recent development of
+[SLPx](https://bifrost-finance.medium.com/slpx-pallet-a-further-step-into-the-omni-chain-liquid-staking-68cb4d99c82f),
+is an extension pallet to Bifrost SLP that will allow users to invoke SLP's functionality on a
+remote chain without crossing assets into the Bifrost chain, allowing users to mint, redeem, swap
+vTokens remotely on the target chain. Leveraging this, developers can use and build innovative
+solutions around chain abstraction and solving liquidity and user fragmentation challenges.
+
+- [Omni LS](https://omni.ls/)
+
+[Omni LS DApp](https://bifrost-finance.medium.com/omni-ls-dapp-the-easiest-fastest-and-most-secure-way-to-access-bifrost-liquid-staking-tokens-21ee080b03cd)
+is a front-end application that supports remote minting and redemption of Bifrost liquid staking
+tokens (LST) “vTokens”, as well as remote exchange, and swapping of vTokens from any chain. The DApp
+aims to simplify the cross-chain experience by providing a seamless interface for users to interact
+with vTokens across different chains natively.

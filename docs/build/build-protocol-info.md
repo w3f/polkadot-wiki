@@ -44,6 +44,8 @@ Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-form
 handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
 Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
+<!-- todo: link to dev hub once up -->
+
 See the
 [SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses)
 in the Substrate documentation for encoding information and a more comprehensive list of network
@@ -153,6 +155,8 @@ More info:
 
 ## Extrinsics and Events
 
+<!-- todo: link to dev hub once up, not sure if this should be here ? -->
+
 ### Block Format
 
 A Polkadot block consists of a block header and a block body. The block body is made up of
@@ -178,9 +182,12 @@ about the block. Additional details on the process are outlined
 
 ### Extrinsics
 
-An extrinsic is a [SCALE encoded](https://docs.substrate.io/reference/scale-codec/) array consisting
-of a `version number`, `signature`, and varying `data` types indicating the resulting runtime
-function to be called, including the parameters required for that function to be executed.
+An extrinsic is a
+[SCALE encoded](https://github.com/paritytech/parity-scale-codec#parity-scale-codec) array
+consisting of a `version number`, `signature`, and varying `data` types indicating the resulting
+runtime function to be called, including the parameters required for that function to be executed.
+
+<!-- todo: link to dev hub once up -->
 
 Extrinsics constitute information from the outside world and take on three forms:
 
@@ -257,10 +264,13 @@ transactions are identical, and both valid.
 |   1   | 0x02 | Account B |   4   | Transfer 7 DOT to A | Account A created (nonce = 0) |
 |   2   | 0x01 | Account A |   0   | Transfer 5 DOT to B | Successful transaction        |
 
-In addition, not every extrinsic in a Substrate-based chain comes from an account as a
-public/private key pair; Substrate, rather, has the concept of dispatch “origin”, which could be
-created from a public key account, but could also form from other means such as governance. These
-origins do not have a nonce associated with them the way that an account does. For example,
+In addition, not every extrinsic in a Substrate-based chain comes from an account as a "pure"
+public/private key pair. The concept of dispatch
+[“Origin”](../learn/learn-account-abstraction.md#origin-abstraction-in-polkadot), which could
+represent different contexts for a particular, signed extrinsic.
+
+For example, the origin could befrom a public key account, but could also represent a collective.
+These origins do not have a nonce associated with them the way that an account does. For example,
 governance might dispatch the same call with the same arguments multiple times, like “increase the
 validator set by 10%.” This dispatch information (and therefore its hash) would be the same, and the
 hash would be a reliable representative of the call, but its execution would have different effects
@@ -295,61 +305,31 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them
 and interact directly with the chain data or implement your own codec, Polkadot encodes block and
-transaction data using the [SCALE codec](https://docs.substrate.io/reference/scale-codec/).
+transaction data using the
+[SCALE codec](https://github.com/paritytech/parity-scale-codec#parity-scale-codec).
 
 ## Runtime Upgrades
 
 [Runtime upgrades](../learn/learn-runtime-upgrades.md) allow Polkadot to change the logic of the
-chain without the need for a hard fork. A hard fork would require node operators to manually upgrade
-their nodes to the latest runtime version. In a distributed system, this is a complex process to
-coordinate and communicate. Polkadot can upgrade without a hard fork. The existing runtime logic is
-followed to update the Wasm runtime stored on the blockchain to a new version. The upgrade is then
-included in the blockchain itself, meaning that all the nodes on the network execute it.
+chain without the need for a hard fork. You can find a guide for how to properly perform a runtime
+upgrade here.
 
-Generally there is no need to upgrade your nodes manually before the runtime upgrade as they will
-automatically start to follow the new logic of the chain. Nodes only need to be updated when the
-runtime requires new host functions or there is a change in networking or consensus.
+### Runtime Versioning
 
-Transactions constructed for a given runtime version will not work on later versions. Therefore, a
-transaction constructed based on a runtime version will not be valid in later runtime versions. If
-you don't think you can submit a transaction before the upgrade, it is better to wait and construct
-it after the upgrade takes place.
+<!-- todo: either expand or delete this section -->
 
-Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
-following the Polkadot releases and upgrading in a timely manner, especially for high priority or
-critical releases.
-
-### Transaction Version Upgrades
+There are a number of fields that are a part of the overall
+[`RuntimeVersion`](https://paritytech.github.io/polkadot-sdk/master/frame/runtime/apis/struct.RuntimeVersion.html#).
 
 Apart the `runtime_version` there is also the `transaction_version` which denotes how to correctly
 encode/decode calls for a given runtime (useful for hardware wallets). The reason
 `transaction_version` is separate from `runtime_version` is that it explicitly notes that the call
 interface is broken/not compatible.
 
-The `transaction_version` is updated in the cases mentioned in the
-[Substrate docs](https://paritytech.github.io/substrate/master/sp_version/struct.RuntimeVersion.html#structfield.transaction_version).
-So when a new transaction version is introduced (during a runtime upgrade), it indicates a breaking
-change to transaction serialization. In that case, any custom application/tool that constructs &
-signs transactions should also be updated in order to be compatible with the new transaction
-version. It is the responsibility of the maintainers of the custom application/tool to keep up with
-the `transaction_version` updates. However, if you do not want to keep monitoring these changes
-yourself, you can also use the [txwrapper-core](https://github.com/paritytech/txwrapper-core) tool
-that handles these breaking changes for you and allows you to construct transactions using the
-function names and chain metadata.
-
 ## Smart Contracts
 
-The Polkadot Relay Chain does not support smart contracts.
-
-## Other Networks
-
-Besides running a private network, Polkadot has two other networks where you could test
-infrastructure prior to deploying to the Polkadot mainnet.
-
-**Kusama Canary Network:** Kusama is Polkadot's cutting-edge cousin. Many risky features are
-deployed to Kusama prior to making their way into Polkadot.
-
-**Westend Testnet:** Westend is Polkadot's testnet and uses the Polkadot runtime.
+The Polkadot Relay Chain does not support smart contracts, but a number of its parachains do,
+[see here for more.](./build-smart-contracts.md)
 
 ## Other F.A.Q.
 

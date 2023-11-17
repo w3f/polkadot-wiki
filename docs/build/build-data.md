@@ -1,7 +1,7 @@
 ---
 id: build-data
-title: Data Analytics
-sidebar_label: Data
+title: Explorer, Data, & Indexing Tools
+sidebar_label: Explorer, Data, & Indexing Tools
 description: An overview about building with data analytics
 keywords: [data, index, query, explorer, dashboard]
 slug: ../build-data

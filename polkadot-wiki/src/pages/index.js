@@ -81,7 +81,7 @@ function HomeNav() {
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("build-index")} aosDelay="400">
+      <NavItem href={useDocUrl("build-guide")} aosDelay="400">
         <NavItemContent>
           <NavItemTitle>
             <Translate

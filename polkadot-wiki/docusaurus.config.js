@@ -226,7 +226,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/build-index",
+          to: "docs/build-guide",
           label: "Build",
           position: "right",
         },
