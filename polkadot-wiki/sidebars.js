@@ -307,7 +307,21 @@ module.exports = {
                     slug: '/learn-guides-index',
                   },
                   items: [
-                    "learn/learn-guides-accounts",
+                    {
+                      type: "category",
+                      label: "Accounts",
+                      description: 'Polkadot-JS Guides about Accounts.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Polkadot-JS Guides about Accounts',
+                        description: 'Polkadot-JS Guides about Accounts.',
+                        slug: '/learn-guides-accounts-index',
+                      },
+                      items: [
+                        "learn/learn-guides-accounts",
+                        "learn/learn-guides-accounts-multisig",
+                      ],
+                    },
                     {
                       type: "category",
                       label: "Staking",
