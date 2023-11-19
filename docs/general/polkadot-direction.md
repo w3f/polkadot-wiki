@@ -51,7 +51,7 @@ A paradigm shift from:
 - being a chain-focused ecosystem where each parachain owned an execution core at all times
   (acquired through fixed parachain slots), which allowed a simple and secure, sharded execution
   environment
-- to being an application-focused ecosystem where where we remove the assumption that each
+- to being an application-focused ecosystem where we remove the assumption that each
   application owns a core, and instead that all cores are a resource to be consumed and used as
   needed by all applications.
 
@@ -64,7 +64,7 @@ On top of those main changes, [agile core usage](#agile-core-usage) and
 [coretime allocation](#agile-coretime-allocation) will allow any application to access Polkadot's
 computation based on their needs without wasting valuable blockspace. [Accords](#xcm-and-accords)
 will improve cross-chain communication and the security guarantees of XCM messages. Finally,
-Polkadot itself will scale by moving on-chian logic into its own system parachains, allowing it to
+Polkadot itself will scale by moving on-chain logic into its own system parachains, allowing it to
 have more bandwidth for the [parachains protocol](../learn/learn-parachains-protocol.md) and
 accords.
 
@@ -89,7 +89,7 @@ applications to be successful.
 Applications will be able to reserve **bulk coretime** and **instantaneous coretime** depending on
 their needs. Bulk coretime rental will be a standard rental of coretime through a broker system
 parachain at fixed price for a fixed period of time. Instantaneous coretime rental will be available
-through ongoing sale of coretime for immediate use at a spot price. This system will lowers the
+through ongoing sale of coretime for immediate use at a spot price. This system lowers the
 barrier-to-entry for prospective builders.
 
 Revenues from coretime sales can for example be burnt, used to fund the Treasury, or used for a mix
