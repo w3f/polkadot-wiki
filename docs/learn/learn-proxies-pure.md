@@ -23,7 +23,7 @@ non-deterministic accounts** as they do not have a private key but they have an 
 randomly generated. Also, in some sense, nobody owns a pure proxy as nobody has a private key to
 control them.
 
-:::info Pure proxies where called anonymous proxies
+:::info Pure proxies were called anonymous proxies
 
 Pure proxies are not anonymous because they have an address that is spawned by a primary account
 acting as _any_ proxy. Even if the _any_ proxy changes, it is still possible to find who generated
@@ -66,12 +66,12 @@ _pure_ proxies cannot sign for anything.
 
 Pure proxies have important benefits that we discuss below:
 
-- **Enhanced Security**: _Pure_ proxies cannot be stolen because they do not have private keys. The
+- **Enhanced Security**: Pure proxies cannot be stolen because they do not have private keys. The
   only accounts that have full access to the _pure_ proxies are _any_ proxies. Security can be
   further increased if the _any_ proxy is a multi-signature account.
-- **Simplified and Secure Account Management**:_pure_ proxies can simplify the management of complex
+- **Simplified and Secure Account Management**: Pure proxies can simplify the management of complex
   account relationships at a corporate level.
-- **Multi-signature Account Management**: _Pure_ proxies are useful to efficiently manage
+- **Multi-signature Account Management**: Pure proxies are useful to efficiently manage
   multi-signature (multisig) accounts. In fact, multi-signature accounts are deterministic, which
   means that once a multisig is created the signatories cannot be changed. If one of the signatories
   wants to leave the multisig, a new multisig must be created. This is inconvenient, especially at
