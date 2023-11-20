@@ -60,8 +60,8 @@ ensure that the proxy account has the appropriate permission to make that transa
 the proxied account. For example, staking proxies have permission to do only staking-related
 transactions.
 
-You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
-proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
+When you set a proxy, you must choose a type of proxy for the relationship.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
 
 - **Any**: allow any transaction, including balance transfers. In most cases, this should be avoided
   as the proxy account is used more frequently than the cold account and is therefore less secure.
