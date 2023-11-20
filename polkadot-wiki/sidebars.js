@@ -15,7 +15,7 @@ module.exports = {
         {
           type: "category",
           label: "Wallets",
-          description: 'Beginner friendly wallets with advanced features',
+          description: 'Beginner friendly wallets with advanced features.',
           link: {
             type: 'generated-index',
             title: 'Wallets',
