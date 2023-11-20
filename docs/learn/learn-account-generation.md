@@ -43,17 +43,6 @@ intended for users comfortable using the command line and can seem intimidating,
 approachable. Follow the instructions in the
 [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/).
 
-:::info How-to guides to generate an account
-
-See our Support Articles for more information about how to create an account using the tools below.
-
-- [Ledger Hardware Wallet](#ledger-hardware-wallet)
-- [Polkadot Vault](#polkadot-vault)
-- [Subkey](#subkey)
-- [Vanity Generator](#vanity-generator)
-
-:::
-
 ## Backing Up Accounts
 
 Depending on what software you use to access your account, there are various ways to back up and
@@ -61,39 +50,3 @@ restore your account. It is a good idea to back your information up and keep it 
 as long as you know how you created your account and have the seed phrase
 ([mnemonic phrase](learn-accounts#portability)) or JSON file (and password) stored securely, you can
 restore your account.
-
-## Ledger Hardware Wallet
-
-To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on the [Ledger hardware wallet guide page](../general/ledger.md).
-
-## Polkadot Vault
-
-Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
-that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it.
-
-For guidelines about how to create an account using Parity Signer, see
-[**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
-
-### Restore Account on Polkadot Vault
-
-See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
-to learn how to restore your account on the Polkadot-JS UI.
-
-## Subkey
-
-Subkey is recommended for technically advanced users comfortable with the command line and compiling
-Rust code. Subkey lets you generate keys on any device that can compile the code. Subkey may also be
-useful for automated account generation using an air-gapped device. It is not recommended for
-general users.
-
-:::info
-
-For guidelines about how to create an account using Subkey, see
-[**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
-
-:::

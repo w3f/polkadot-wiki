@@ -29,7 +29,7 @@ for more information about key security.
 
 :::
 
-## Essential rules:
+## Essential Rules
 
 1. Never, ever, ever share your seed phrase or account password.
 2. Do not trust anyone online. It is trivial for them to lie and change their identities.

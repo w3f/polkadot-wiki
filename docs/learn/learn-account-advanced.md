@@ -45,105 +45,7 @@ them in the [address conversion tools](#address-conversion-tools) section.
 
 :::
 
-## Derivation Paths
-
-If you want to create and manage several accounts on the network using the same seed, you can use
-derivation paths. We can think of the derived accounts as child accounts of the root account created
-using the original mnemonic seed phrase.
-
-### Soft and Hard Derivation
-
-A soft derivation allows someone to potentially "go backward” to figure out the initial account's
-private key if they know the derived account's private key. It is also possible to determine that
-different accounts generated from the same seed are linked to that seed. A hard derivation path does
-not allow either of these - even if you know a derived private key, it's not feasible to figure out
-the private key of the root address, and it's impossible to prove that the first account is linked
-with the second. These derivation methods have their use cases, given that the private keys for all
-the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
-recommended to generate the account using a hard derivation path.
-
-Many {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support
-hard and soft derivation. For instance, if you intend to create an account to be used on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
-child account using **//** after the mnemonic phrase.
-
-```
-'caution juice atom organ advance problem want pledge someone senior holiday very//0'
-```
-
-and a **soft key** child account using **/** after the mnemonic phrase
-
-```
-'caution juice atom organ advance problem want pledge someone senior holiday very/0'
-```
-
-If you want to create another account using the Polkadot chain using the same seed, you can change
-the number at the end of the string above. For example, `/1`, `/2`, and `/3` will create different
-derived accounts.
-
-You can use any letters or numbers in the derivation path as long as they make sense to you; they do
-not have to follow any specific pattern. You may combine multiple derivations in your path, as well.
-For instance, `//bill//account//1` and `//john/polkadot/initial` are both valid. To recreate a
-derived account, you must know both the seed and the derivation path, so you should either use a
-well-defined sequence (e.g. //0, //1, //2...) or be sure to write down any derivation paths you use.
-
-See the [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/) for
-details and examples of derivation path formats. The Polkadot-JS Apps and Extension and Parity
-Signer support custom derivation paths using the same syntax as Subkey.
-
-Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase.
-This will generate separate seeds for different paths, allowing separate signing keys with the same
-mnemonic, e.g. `<mnemonic phrase>//polkadot` and `<mnemonic phrase>//kusama`. Although you may
-correctly save the mnemonic phrase, using it in another wallet will generate the same addresses only
-if both wallets use the same derivation paths.
-
-Polkadot and Kusama both have paths registered in the
-[BIP44 registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
-
-:::warning
-
-You must have the _parent_ private key and the derivation path to arrive at the key for an address.
-Only use custom derivation paths if you are comfortable with your knowledge of this topic.
-
-:::
-
-### Password Derivation
-
-There is an additional type of derivation called password derivation. On Polkadot you can derive a
-**password key** account using **///** after the mnemonic phrase
-
-```
-'caution juice atom organ advance problem want pledge someone senior holiday very///0'
-```
-
-In this type of derivation, if the mnemonic phrase leaks, accounts cannot be derived without the
-initial password. In fact, for soft- and hard-derived accounts, if someone knows the mnemonic phrase
-and the derivation path, they will have access to your account. For password-derived accounts, the
-password is applied on the derivation path. You can know the mnemonic phrase and the derivation
-path, but without the password, it is impossible to access the account. In mathematical terms, if we
-have a `written derivation path` and a `password`, we can calculate the `real derivation path` as
-`f(written derivation path, password)`, where `f` is a function. We can then calculate the
-`account key pair` using `f(seed, real derivation path)`. Unlike hard and soft derivations that can
-be mixed, only a single password should be specified per derivation.
-
-:::info
-
-Password-derived account are as secure as the chosen password.
-
-:::
-
-### Account Derivation in Ledger Live
-
-Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
-you created a derived account with a derivation path 44'/354'/0'/0'/1' on a wallet or extension, it
-will not be displayed on the Ledger Live App. Consequently, it is not possible to transact with
-derived accounts using the Ledger Live App, but it is possible to do so using Polkadot-JS. Check
-[the accounts page](../learn/learn-accounts.md) for more information about derived accounts and
-derivation paths.
-
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
-
-## For the Curious: How Prefixes Work
+### For the Curious: How Prefixes Work
 
 The [SS58 registry](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json) states
 that:
@@ -174,64 +76,6 @@ different letter, like `J4iggBtsWsb61RemU2TDWDXTNHqHNfBSAkGvVZBtn1AJV1a`, we sti
 first byte: `02f2d606a67f58fa0b3ad2b556195a0ef905676efd4e3ec62f8fa1b8461355f1142509`. It seems
 counterintuitive that some addresses always have the same prefix and others like Kusama can vary
 wildly, but it's just a quirk of Base58-check encoding.
-
-## System Accounts
-
-As the word suggests, system accounts are used by the system. They are used, for example, for the
-treasury, crowdloans, and nomination pools. From the point of view of the runtime, these accounts
-are like any other account on-chain. These special system accounts are just public keys, with the
-private key being unknown (and unattainable). So, that means that only the pallet itself can
-interact with this account. These accounts can never issue a signed
-[extrinsic](./learn-extrinsics.md) since they do not have a private key.
-
-:::info Explore System Accounts
-
-Treasury account address -
-{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
-
-You can view the existing system accounts on
-[Subscan](https://polkadot.subscan.io/account_list?role=module).
-
-:::
-
-Let us take a look at how system accounts are generated under the hood. For instance, to generate
-the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined to create the
-`AccountID`. For more information, check the post on Substrate StackExchange on
-[Treasury accounts](https://substrate.stackexchange.com/questions/536/how-do-treasury-accounts-compare-to-end-user-accounts-in-frame).
-Similarly, to generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund"
-along with the fund index are combined to create the `AccountID`. Similar logic applies to
-nomination pool and parachain accounts as well.
-
-## Portability
-
-The above information brings us to portability: the ability to use a mnemonic phrase or seed across
-multiple wallets. Portability depends on several factors:
-
-- Derivation path
-- Mnemonic format
-- Seed derivation
-- Signature scheme
-
-To use the exact mnemonic across multiple wallets, ensure they follow compatible methods for
-generating keys and signing messages. If you are still looking for understandable documentation,
-contact the project maintainers.
-
-|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-| :---------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
-| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                  |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
-
-\* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with
-BIP39.
-
-&dagger; [BIP44 Registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
-
-&Dagger; Ed25519 and BIP32 based on
-[Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)
-
-&sect; Sr25519 planned
 
 ## Address Conversion Tools
 
@@ -339,6 +183,162 @@ the verification is performed:
 [pubkeyToAddress.js](https://github.com/w3f/utility-scripts/blob/master/src/misc/pubkeyToAddress.js)
 demonstrates how a single public key interprets a Polkadot, Substrate, or Kusama address.
 
+## Portability
+
+Portability is the ability to use a mnemonic phrase or seed across multiple wallets. Portability
+depends on several factors:
+
+- Derivation path
+- Mnemonic format
+- Seed derivation
+- Signature scheme
+
+To use the exact mnemonic across multiple wallets, ensure they follow compatible methods for
+generating keys and signing messages. If you are still looking for understandable documentation,
+contact the project maintainers.
+
+|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
+| :---------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
+| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
+| Subkey                  |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
+
+\* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with
+BIP39.
+
+&dagger; [BIP44 Registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
+
+&Dagger; Ed25519 and BIP32 based on
+[Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)
+
+&sect; Sr25519 planned
+
+## Derivation Paths
+
+If you want to create and manage several accounts on the network using the same seed, you can use
+derivation paths. We can think of the derived accounts as child accounts of the root account created
+using the original mnemonic seed phrase.
+
+### Soft and Hard Derivation
+
+A soft derivation allows someone to potentially "go backward” to figure out the initial account's
+private key if they know the derived account's private key. It is also possible to determine that
+different accounts generated from the same seed are linked to that seed. A hard derivation path does
+not allow either of these - even if you know a derived private key, it's not feasible to figure out
+the private key of the root address, and it's impossible to prove that the first account is linked
+with the second. These derivation methods have their use cases, given that the private keys for all
+the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
+recommended to generate the account using a hard derivation path.
+
+Many {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support
+hard and soft derivation. For instance, if you intend to create an account to be used on the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
+child account using **//** after the mnemonic phrase.
+
+```
+'caution juice atom organ advance problem want pledge someone senior holiday very//0'
+```
+
+and a **soft key** child account using **/** after the mnemonic phrase
+
+```
+'caution juice atom organ advance problem want pledge someone senior holiday very/0'
+```
+
+If you want to create another account using the Polkadot chain using the same seed, you can change
+the number at the end of the string above. For example, `/1`, `/2`, and `/3` will create different
+derived accounts.
+
+You can use any letters or numbers in the derivation path as long as they make sense to you; they do
+not have to follow any specific pattern. You may combine multiple derivations in your path, as well.
+For instance, `//bill//account//1` and `//john/polkadot/initial` are both valid. To recreate a
+derived account, you must know both the seed and the derivation path, so you should either use a
+well-defined sequence (e.g. //0, //1, //2...) or be sure to write down any derivation paths you use.
+
+See the [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/) for
+details and examples of derivation path formats. The Polkadot-JS Apps and Extension and Parity
+Signer support custom derivation paths using the same syntax as Subkey.
+
+Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase.
+This will generate separate seeds for different paths, allowing separate signing keys with the same
+mnemonic, e.g. `<mnemonic phrase>//polkadot` and `<mnemonic phrase>//kusama`. Although you may
+correctly save the mnemonic phrase, using it in another wallet will generate the same addresses only
+if both wallets use the same derivation paths.
+
+Polkadot and Kusama both have paths registered in the
+[BIP44 registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
+
+:::warning
+
+You must have the _parent_ private key and the derivation path to arrive at the key for an address.
+Only use custom derivation paths if you are comfortable with your knowledge of this topic.
+
+:::
+
+### Password Derivation
+
+There is an additional type of derivation called password derivation. On Polkadot you can derive a
+**password key** account using **///** after the mnemonic phrase
+
+```
+'caution juice atom organ advance problem want pledge someone senior holiday very///0'
+```
+
+In this type of derivation, if the mnemonic phrase leaks, accounts cannot be derived without the
+initial password. In fact, for soft- and hard-derived accounts, if someone knows the mnemonic phrase
+and the derivation path, they will have access to your account. For password-derived accounts, the
+password is applied on the derivation path. You can know the mnemonic phrase and the derivation
+path, but without the password, it is impossible to access the account. In mathematical terms, if we
+have a `written derivation path` and a `password`, we can calculate the `real derivation path` as
+`f(written derivation path, password)`, where `f` is a function. We can then calculate the
+`account key pair` using `f(seed, real derivation path)`. Unlike hard and soft derivations that can
+be mixed, only a single password should be specified per derivation.
+
+:::info
+
+Password-derived account are as secure as the chosen password.
+
+:::
+
+### Account Derivation in Ledger Live
+
+Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
+you created a derived account with a derivation path 44'/354'/0'/0'/1' on a wallet or extension, it
+will not be displayed on the Ledger Live App. Consequently, it is not possible to transact with
+derived accounts using the Ledger Live App, but it is possible to do so using Polkadot-JS. Check
+[the accounts page](../learn/learn-accounts.md) for more information about derived accounts and
+derivation paths.
+
+{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
+
+## System Accounts
+
+As the word suggests, system accounts are used by the system. They are used, for example, for the
+treasury, crowdloans, and nomination pools. From the point of view of the runtime, these accounts
+are like any other account on-chain. These special system accounts are just public keys, with the
+private key being unknown (and unattainable). So, that means that only the pallet itself can
+interact with this account. These accounts can never issue a signed
+[extrinsic](./learn-extrinsics.md) since they do not have a private key.
+
+:::info Explore System Accounts
+
+Treasury account address -
+{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+
+You can view the existing system accounts on
+[Subscan](https://polkadot.subscan.io/account_list?role=module).
+
+:::
+
+Let us take a look at how system accounts are generated under the hood. For instance, to generate
+the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined to create the
+`AccountID`. For more information, check the post on Substrate StackExchange on
+[Treasury accounts](https://substrate.stackexchange.com/questions/536/how-do-treasury-accounts-compare-to-end-user-accounts-in-frame).
+Similarly, to generate the crowdloan account, the raw bytes of the strings "modl" and "py/cfund"
+along with the fund index are combined to create the `AccountID`. Similar logic applies to
+nomination pool and parachain accounts as well.
+
 ## Indices
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
@@ -377,6 +377,21 @@ To find available indices to claim on Polkadot or Kusama,
 [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
 
 For keeping the index permanently, you can follow up with a `freeze` extrinsic as mentioned above.
+
+## Creating Accounts with Subkey
+
+Subkey is recommended for technically advanced users comfortable with the command line and compiling
+Rust code. Subkey lets you generate keys on any device that can compile the code. Subkey may also be
+useful for automated account generation using an air-gapped device. It is not recommended for
+general users.
+
+:::info
+
+For guidelines about how to create an account using Subkey, see
+[**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+
+:::
 
 ## Using ENS with DOT/KSM accounts
 
