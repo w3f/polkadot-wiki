@@ -172,16 +172,6 @@ Slots pallets.
 Proxies that are of the type **Nomination Pools** are accounts that allow transactions pertaining to
 [Nomination Pools](./learn-nomination-pools.md).
 
-## Removing Proxy
-
-:::info Removing proxies
-
-Read the section "Removing Proxies" on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account)
-to learn how to remove proxies.
-
-:::
-
 ## How to view your Proxy
 
 To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next to the proxied
