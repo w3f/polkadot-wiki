@@ -9,19 +9,19 @@ slug: ../learn-accounts
 
 import RPC from "./../../components/RPC-Connection";
 
-This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about
-accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and
-[indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography
-behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
-[the cryptography page](learn-cryptography.md).
-
 :::info User friendly wallets
 
 Create your Polkadot accounts with a secure and user-friendly wallets listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 :::
+
+This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about
+accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and
+[indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography
+behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
+[the cryptography page](learn-cryptography.md).
 
 ## Account Address
 
@@ -43,8 +43,8 @@ private key an account cannot sign anything. In
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
 that do not have private keys (i.e. key-less accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md) and
-[anonymous proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy) that are not discussed here
-and are meant for an advanced audience.
+[pure proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy) that are not discussed here and
+are meant for an advanced audience.
 
 Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private
 key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to
