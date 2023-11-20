@@ -87,14 +87,7 @@ pallet.
 
 ### Governance Proxy
 
-The **Governance** type will allow proxies to make transactions related to governance (i.e., from
-the [Democracy](https://paritytech.github.io/substrate/master/pallet_democracy),
-[Phragmen Election](https://paritytech.github.io/substrate/master/pallet_elections_phragmen/),
-[Treasury](https://paritytech.github.io/substrate/master/pallet_treasury/),
-[Bounties](https://paritytech.github.io/substrate/master/pallet_bounties/),
-[Tips](https://paritytech.github.io/substrate/master/pallet_tips/),
-[Utility](https://paritytech.github.io/substrate/master/pallet_utility/) and
-[Child Bounties](https://paritytech.github.io/substrate/master/pallet_child_bounties/) pallets).
+The **Governance** type will allow proxies to make transactions related to governance.
 
 ### Staking Proxy
 
@@ -108,15 +101,6 @@ detailed information about staking proxies.
 The **Staking** type allows all staking-related transactions. The stash account is meant to stay in
 cold storage, while the staking proxy account makes day-to-day transactions like setting session
 keys or deciding which validators to nominate.
-
-The staking proxy can fully access Staking, Session, Utility and Fast Unstake pallets.
-
-:::caution Do not use Staking proxy for participating in Nomination Pools
-
-Use a [non-transfer](#non-transfer-proxy) instead of a staking proxy to participate in nomination
-pools. The staking proxy is not enabled to make successful calls to the nomination pools pallet.
-
-:::
 
 ### Identity Judgement Proxy
 
