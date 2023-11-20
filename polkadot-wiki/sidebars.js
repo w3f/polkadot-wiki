@@ -320,6 +320,7 @@ module.exports = {
                       items: [
                         "learn/learn-guides-accounts",
                         "learn/learn-guides-accounts-multisig",
+                        "learn/learn-guides-accounts-proxy",
                       ],
                     },
                     {
