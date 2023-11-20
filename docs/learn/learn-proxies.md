@@ -96,14 +96,6 @@ the [Democracy](https://paritytech.github.io/substrate/master/pallet_democracy),
 [Utility](https://paritytech.github.io/substrate/master/pallet_utility/) and
 [Child Bounties](https://paritytech.github.io/substrate/master/pallet_child_bounties/) pallets).
 
-:::note Explainers on governance proxies
-
-See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information
-on governance proxies or watch our
-[technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
-
-:::
-
 ### Staking Proxy
 
 :::info

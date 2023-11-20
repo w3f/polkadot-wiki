@@ -25,7 +25,7 @@ on the [Polkadot repository](https://github.com/paritytech/polkadot-sdk)
 
 ## Creating Proxy with Polkadot-JS
 
-To create a **proxy account** with Polkadot-JS read
+To create a proxy account with Polkadot-JS read
 [this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
 
 ## Removing Proxy with Polkadot-JS
