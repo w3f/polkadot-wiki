@@ -54,89 +54,50 @@ can have the same proxy for multiple accounts.
 
 ## Proxy Types
 
-You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
-proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
-
-- [Any](#any-proxy)
-- [Non-transfer](#non-transfer-proxy)
-- [Governance](#governance-proxy)
-- [Staking](#staking-proxy)
-- [Identity Judgement](#identity-judgement-proxy)
-- [Cancel](#cancel-proxy)
-- [Auction](#auction-proxy)
-- [Nomination pool](#nomination-pools-proxy)
-
 When a proxy account makes a transaction,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
 ensure that the proxy account has the appropriate permission to make that transaction on behalf of
-the cold account. For example, staking proxies have permission to do only staking-related
+the proxied account. For example, staking proxies have permission to do only staking-related
 transactions.
 
-### Any Proxy
+You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
+proxy for the relationship. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
 
-As implied by the name, a proxy type of **Any** allows the proxy account to make any transaction,
-including balance transfers. In most cases, this should be avoided as the proxy account is used more
-frequently than the cold account and is therefore less secure.
-
-### Non-transfer Proxy
-
-Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
-[balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting)
-transfers). Hence, this proxy does not have permission to access calls in the Balances and XCM
-pallet.
-
-### Governance Proxy
-
-The **Governance** type will allow proxies to make transactions related to governance.
-
-### Staking Proxy
-
-:::info
-
-Visit the [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more
-detailed information about staking proxies.
-
-:::
-
-The **Staking** type allows all staking-related transactions. The stash account is meant to stay in
-cold storage, while the staking proxy account makes day-to-day transactions like setting session
-keys or deciding which validators to nominate.
-
-### Identity Judgement Proxy
-
-The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an
-account's identity. If you are unfamiliar with judgment and identities on chain, please refer to
-[this page](learn-identity.md#judgements). This proxy can only access `provide_judgement` call from
-the Identity pallet along with the calls from the Utility pallet.
-
-### Cancel Proxy
-
-Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy
-announcements. This proxy can only access `reject_announcement` call from the Proxy pallet.
-
-### Auction Proxy
-
-Proxies that are of the type **Auction** are accounts that allow transactions pertaining to
-parachain auctions and crowdloans. The Auction proxy account can sign those transactions on behalf
-of an account in cold storage. If you already set up a Non-transfer proxy account, it can do
-everything an Auction proxy can do. Before participating in a crowdloan using an Auction proxy, it
-is recommended that you check with the respective parachain team for any possible issues pertaining
-to the crowdloan rewards distribution. Auction proxy can access Auctions, Crowdloan, Registrar and
-Slots pallets.
-
-### Nomination Pools Proxy
-
-Proxies that are of the type **Nomination Pools** are accounts that allow transactions pertaining to
-[Nomination Pools](./learn-nomination-pools.md).
+- **Any**: allow any transaction, including balance transfers. In most cases, this should be avoided
+  as the proxy account is used more frequently than the cold account and is therefore less secure.
+- **Non-transfer**: allow any type of transaction except
+  [balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting)
+  transfers). Hence, this proxy does not have permission to access calls in the Balances and XCM
+  pallet.
+- **Governance**: allow to make transactions related to governance.
+- **Nomination pool**: allow transactions pertaining to
+  [Nomination Pools](./learn-nomination-pools.md).
+- **Staking**: allow all staking-related transactions. The stash account is meant to stay in cold
+  storage, while the staking proxy account makes day-to-day transactions like setting session keys
+  or deciding which validators to nominate. Visit the
+  [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more detailed
+  information about staking proxies.
+- **Identity Judgement**: allow registrars to make judgments on an account's identity. If you are
+  unfamiliar with judgment and identities on chain, please refer to
+  [this page](learn-identity.md#judgements). This proxy can only access `provide_judgement` call
+  from the Identity pallet along with the calls from the Utility pallet.
+- **Cancel**: allow to reject and remove any time-delay proxy announcements. This proxy can only
+  access `reject_announcement` call from the Proxy pallet.
+- **Auction**: allow transactions pertaining to parachain auctions and crowdloans. The Auction proxy
+  account can sign those transactions on behalf of an account in cold storage. If you already set up
+  a Non-transfer proxy account, it can do everything an Auction proxy can do. Before participating
+  in a crowdloan using an Auction proxy, it is recommended that you check with the respective
+  parachain team for any possible issues pertaining to the crowdloan rewards distribution. Auction
+  proxy can access Auctions, Crowdloan, Registrar and Slots pallets.
 
 ## Proxy Deposits
 
-Proxies require deposits in the native currency (i.e. DOT or KSM) to be created. The deposit is
-required because adding a proxy requires some storage space on-chain, which must be replicated
-across every peer in the network. Due to the costly nature of this, these functions could open up
-the network to a Denial-of-Service attack. To defend against this attack, proxies require a deposit
-to be reserved while the storage space is consumed over the lifetime of the proxy. When the proxy is
-removed, so is the storage space, and therefore the deposit is returned.
+Proxies require deposits in the native currency to be created. The deposit is required because
+adding a proxy requires some storage space on-chain, which must be replicated across every peer in
+the network. Due to the costly nature of this, these functions could open up the network to a
+Denial-of-Service attack. To defend against this attack, proxies require a deposit to be reserved
+while the storage space is consumed over the lifetime of the proxy. When the proxy is removed, so is
+the storage space, and therefore the deposit is returned.
 
 The required deposit amount for `n` proxies is equal to:
 
@@ -157,21 +118,11 @@ and the `ProxyDepositFactor` is
 We can add a layer of security to proxies by giving them a delay time. The delay will be quantified
 in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6
 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute
-delay. The proxy will announce its intended action using the `proxy.announce` extrinsic and will
-wait for the number of blocks defined in the delay time before executing it. The proxy will include
-the hash of the intended function call in the announcement. Within this time window, the intended
-action may be canceled by accounts that control the proxy. This can be done by the proxy itself
-using the `proxy.removeAnnouncement` extrinsic or by the proxied account using the the
-`proxy.rejectAnnouncement` extrinsic. Now we can use proxies knowing that any malicious actions can
-be noticed and reverted within a delay period. After the time-delay, the proxy can use the
-`proxy.proxyAnnounced` extrinsic to execute the announced call.
+delay.
 
-:::info
-
-See [this video tutorial](https://youtu.be/3L7Vu2SX0PE) to learn how you can setup and use
-time-delayed proxies. The video goes through the example below.
-
-:::
+The proxy will announce its intended action and will wait for the number of blocks defined in the
+delay time before executing it. Within this time window, the intended action may be canceled by
+accounts that control the proxy.
 
 Announcing `n` calls using a time-delayed proxy also requires a deposit of the form:
 
@@ -185,22 +136,3 @@ a proxy call. For every proxy call the account has, an additional amount defined
 and the `announcementDepositFactor` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
-
-Let's take for example the stash account Eleanor setting Bob as a time-delayed staking proxy. In
-this way, if Bob submits an extrinsic to change the reward destination, such extrinsic can be
-rejected by Eleanor. This implies that Eleanor monitors Bob, and that within the time-delay she can
-spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
-account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
-check the hashes for the calls made by the proxy accounts and the block height at which they are
-enabled for execution.
-
-![time-delayed proxies](../assets/time-delayed-proxies.png)
-
-:::info
-
-If you try to use `proxy.proxyAnnounced` to execute the call within the time-delay window you will
-get an error "Proxy unannounced" since the announcement will be done after the time delay. Also note
-that regular `proxy.proxy` calls do not work with time-delayed proxies, you need to announce the
-call first and then execute the announced call on a separate transaction.
-
-:::
