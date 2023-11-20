@@ -7,8 +7,6 @@ keywords: [account, multisig, polkadot account, polkadotjs, multix]
 slug: ../learn-account-multisig
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 It is possible to create multi-signature accounts (multisig) in Substrate-based chains. A multisig
 is composed of one or more addresses and a threshold. The threshold defines how many signatories
 (participating addresses) need to agree on submitting an extrinsic for the call to be successful.
