@@ -91,3 +91,33 @@ that regular `proxy.proxy` calls do not work with time-delayed proxies, you need
 call first and then execute the announced call on a separate transaction.
 
 :::
+
+## Proxy calls
+
+Proxy calls are used by proxies to call proxied accounts. These calls are important for example in
+the case of _pure_ proxies, as any attempt to sign transactions with a _pure_ proxy will fail. For
+more details see the [dedicated section about pure proxies](./learn-proxies-pure.md).
+
+### Nested Proxy Calls
+
+As the term suggests, nested proxy calls are proxy calls within proxy calls. Such calls are needed
+if there are proxied accounts that are proxies themselves. In the example diagram below, Alice has a
+stash account that has a _staking_ proxy account, P-C. P-C is a _pure_ proxy, a proxied account
+originally spawned by Charly that is now an _any_ proxy of P-C and signs everything on its behalf.
+
+![nested proxy calls](../assets/nested-proxy-calls.png)
+
+For example, to bond more funds, Charly needs to submit a `prox.proxy` extrinsic to P-C, which in
+turn submits a `proxy.proxy` extrinsic to Alice including for example a `staking.bondExtra`
+extrinsic, specifying the number of extra tokens that need to be bounded. If Charly wants to leave,
+a new account can take his place as any proxy (before Charly leaves!). There is no need to change
+the staking proxy account. Also, Alice is the only one who can remove P-C as a staking proxy, and
+P-C can only perform staking-related tasks. For example, P-C cannot send funds out from Alice's
+account.
+
+Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be
+done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last
+`proxy.proxy` extrinsic. In the diagram above, submitting the proxy call from P-C to Alice will
+automatically ask for Charly's signature. Thus one proxy call will trigger the second one because
+Charly's is the only _any_ proxy of P-C, and P-C cannot sign anything. While if we want to use Bob's
+account we will need to submit all three proxy calls.
