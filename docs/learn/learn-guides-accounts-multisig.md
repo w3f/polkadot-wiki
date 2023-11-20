@@ -7,6 +7,13 @@ keyword: [guides, polkadot-js, accounts, multisig, multi-signature]
 slug: ../learn-guides-accounts-multisig
 ---
 
+## Creating a Multisig Account
+
+Check the "How to create a multisig account" section on
+[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
+We recommend trying out the tutorial on
+[Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
+
 ## Multisig Transactions with Accounts Tab
 
 :::info Walkthrough Video Tutorial

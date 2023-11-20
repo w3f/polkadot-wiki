@@ -9,8 +9,6 @@ slug: ../learn-account-multisig
 
 import RPC from "./../../components/RPC-Connection";
 
-## Introduction to Multisig Accounts
-
 It is possible to create multi-signature accounts (multisig) in Substrate-based chains. A multisig
 is composed of one or more addresses and a threshold. The threshold defines how many signatories
 (participating addresses) need to agree on submitting an extrinsic for the call to be successful.
@@ -19,15 +17,6 @@ For example, Alice, Bob, and Charlie set up a multisig with a threshold of 2. Th
 Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute
 any call without Alice. A threshold is typically a number smaller than the total number of members
 but can also be equal to it, which means they all have to agree.
-
-:::info Learn more about multisig accounts
-
-Check the "How to create a multisig account" section on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
-We recommend trying out the tutorial on
-[Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
-
-:::
 
 Multi-signature accounts have several uses:
 

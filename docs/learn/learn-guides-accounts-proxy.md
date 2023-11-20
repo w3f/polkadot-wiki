@@ -15,6 +15,14 @@ account. The video below contains more information about using proxies.
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
+:::tip Know how to check the calls and pallets accessible by proxies
+
+For the latest information on the calls and pallets that can be fully accessed by proxies, check the
+[source code in the runtime folder](https://github.com/paritytech/polkadot-sdk/blob/153543b0c8c582e73f520e5c08cbe33bddfb5f69/runtime/polkadot/src/lib.rs#L1158)
+on the [Polkadot repository](https://github.com/paritytech/polkadot-sdk)
+
+:::
+
 ## Creating Proxy with Polkadot-JS
 
 To create a **proxy account** with Polkadot-JS read

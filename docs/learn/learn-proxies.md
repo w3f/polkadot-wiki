@@ -47,9 +47,8 @@ participate in the network.
 
 The **maximum number of proxies** allowed for a single account is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }}
-
-You can have the same proxy for multiple accounts.
+{{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }} You
+can have the same proxy for multiple accounts.
 
 :::
 
@@ -72,14 +71,6 @@ When a proxy account makes a transaction,
 ensure that the proxy account has the appropriate permission to make that transaction on behalf of
 the cold account. For example, staking proxies have permission to do only staking-related
 transactions.
-
-:::tip Know how to check the calls and pallets accessible by proxies
-
-For the latest information on the calls and pallets that can be fully accessed by proxies, check the
-[source code in the runtime folder](https://github.com/paritytech/polkadot-sdk/blob/153543b0c8c582e73f520e5c08cbe33bddfb5f69/runtime/polkadot/src/lib.rs#L1158)
-on the [Polkadot repository](https://github.com/paritytech/polkadot-sdk)
-
-:::
 
 ### Any Proxy
 
