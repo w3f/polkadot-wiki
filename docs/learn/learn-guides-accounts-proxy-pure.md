@@ -145,7 +145,7 @@ transaction.
 
 ### Scenario Three: Multisig controlling a Pure Proxy
 
-This setup is used by the [MultiX](./learn-account-multisig.md#multisig-with-multix-tool) tool.
+This setup is used by the [MultiX](../general/multisig-apps.md#multix) tool.
 
 After its creation, a multi-signature account creates a pure proxy that becomes the proxied account.
 The multi-signature account behaves as _any_ proxy of the pure. If signatories of the
