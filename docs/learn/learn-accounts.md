@@ -82,16 +82,6 @@ will generate public keys for different parachains. For more information see the
 [Address Format](./learn-account-advanced.md#address-format) section on the
 [Advanced Account](./learn-account-advanced.md) page.
 
-### Obtaining and Managing an Address
-
-:::info
-
-To learn more about generating accounts on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} visit the
-[Account Generation page](./learn-account-generation.md).
-
-:::
-
 ## Account Balance Types
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
