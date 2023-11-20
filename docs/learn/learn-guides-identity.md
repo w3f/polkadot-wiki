@@ -7,6 +7,8 @@ keywords: [registrar, identity, sub-identity, polkadot-js]
 slug: ../learn-guides-identity
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 This is an advanced guide that is relevant for entities that would like to become registrars or
 would like to set sub-identities to an existing account with an identity. See
 [this page](./learn-identity.md) to learn about how to set an identity and have it verified.

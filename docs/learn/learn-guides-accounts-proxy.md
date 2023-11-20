@@ -7,6 +7,8 @@ keyword: [guides, polkadot-js, accounts, proxy]
 slug: ../learn-guides-accounts-proxy
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
 but actively participate in the network with the weight of the tokens in that account. Proxies are
 allowed to perform a limited amount of actions related to specific

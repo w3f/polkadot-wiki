@@ -7,6 +7,8 @@ keyword: [guides, polkadot-js, accounts, multisig, multi-signature]
 slug: ../learn-guides-accounts-multisig
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 ## Creating a Multisig Account
 
 Check the "How to create a multisig account" section on

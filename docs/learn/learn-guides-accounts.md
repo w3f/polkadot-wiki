@@ -7,6 +7,8 @@ keyword: [guides, polkadot-js, accounts]
 slug: ../learn-guides-accounts
 ---
 
+import RPC from "./../../components/RPC-Connection";
+
 ## Account Address Format
 
 An account created for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can also be
