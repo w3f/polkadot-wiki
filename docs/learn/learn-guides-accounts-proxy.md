@@ -7,6 +7,14 @@ keyword: [guides, polkadot-js, accounts, proxy]
 slug: ../learn-guides-accounts-proxy
 ---
 
+Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
+but actively participate in the network with the weight of the tokens in that account. Proxies are
+allowed to perform a limited amount of actions related to specific
+[substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another
+account. The video below contains more information about using proxies.
+
+[![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
+
 ## Creating Proxy with Polkadot-JS
 
 To create a **proxy account** with Polkadot-JS read
