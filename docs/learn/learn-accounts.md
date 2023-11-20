@@ -125,27 +125,6 @@ types are the same for a Polkadot account).
   is not given for free. In the example we created a governance proxy and the reserved funds for
   this are 0.0668 KSM.
 
-### Unlocking Locks
-
-:::info Locks do not stack!
-
-The biggest lock decides the total amount of locked funds. See
-[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the
-process of unlocking funds in the example above.
-
-:::
-
-In the example, we mentioned that the locked balance is 0.55 KSM because the biggest lock is on
-democracy and is 0.55 KSM. As soon as the democracy lock is removed the next biggest lock is on
-staking 0.5 KSM (bonded 0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be
-0.5 KSM, and 0.05 KSM will be added to the transferrable balance. After redeeming the unbonded 0.1
-KSM, the locked balance will be 0.4 KSM, and an additional 0.1 KSM will be added to the
-transferrable balance. Now the biggest lock is still the bonded one. This means that even if we
-remove the vested lock, the locked balance will still be 0.4 KSM and no tokens will be added to the
-transferrable balance. To free those bonded tokens we will need to unbond them and wait for the
-unbonding period to make them redeemable. If we remove the proxy the reserved funds will be
-automatically added to the transferrable balance.
-
 ## Existential Deposit and Reaping
 
 :::info

@@ -193,6 +193,26 @@ See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui)
 to learn how to restore your account on the Polkadot-JS UI.
 
+### Unlocking Locks
+
+:::info Locks do not stack!
+
+The biggest lock decides the total amount of locked funds. See
+[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the
+process of unlocking funds in the example above.
+
+:::
+
+In the example, the locked balance is 0.55 KSM because the biggest lock is on democracy and is 0.55
+KSM. As soon as the democracy lock is removed the next biggest lock is on staking 0.5 KSM (bonded
+0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be 0.5 KSM, and 0.05 KSM will
+be added to the transferrable balance. After redeeming the unbonded 0.1 KSM, the locked balance will
+be 0.4 KSM, and an additional 0.1 KSM will be added to the transferrable balance. Now the biggest
+lock is still the bonded one. This means that even if we remove the vested lock, the locked balance
+will still be 0.4 KSM and no tokens will be added to the transferrable balance. To free those bonded
+tokens we will need to unbond them and wait for the unbonding period to make them redeemable. If we
+remove the proxy the reserved funds will be automatically added to the transferrable balance.
+
 ## Query Account Data in Polkadot-JS
 
 In the Polkadot-JS UI, you can also query account data under
