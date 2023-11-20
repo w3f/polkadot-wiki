@@ -15,7 +15,7 @@ module.exports = {
         {
           type: "category",
           label: "Wallets",
-          description: 'Wallets in the Polkadot Ecosystem.',
+          description: 'Beginner friendly wallets with advanced features',
           link: {
             type: 'generated-index',
             title: 'Wallets',
@@ -31,7 +31,7 @@ module.exports = {
         {
           type: "category",
           label: "Apps",
-          description: 'Apps in the Polkadot Ecosystem.',
+          description: 'Apps for Staking, Governance, Multisigs, NFTs and many more use cases.',
           link: {
             type: 'generated-index',
             title: 'Apps',
@@ -79,7 +79,7 @@ module.exports = {
         {
           type: "category",
           label: "Programmes",
-          description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
+          description: 'Programmes for Grants, Bounties, Ambassadors and many more inititatives.',
           link: {
             type: 'generated-index',
             title: 'Programmes',
