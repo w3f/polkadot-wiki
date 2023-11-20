@@ -7,84 +7,35 @@ keywords: [proxy, proxies, proxy accounts, pure proxy, anonymous proxy]
 slug: ../learn-proxies-pure
 ---
 
-## Anonymous Proxy (Pure Proxy)
-
-:::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
-
-The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
--> a pure proxy which is part of another multisig). These complex setups must be done using the
-[Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
-you are testing features for the first time.** By performing the complex proxy setups on the
-testnet, you can comfortably replicate the procedure on the main networks.
-
-:::
-
-:::danger Risk of loss of funds
-
-Read carefully the text below and before performing any action using anonymous proxies on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, experiment on the Westend testnet.
-
-:::
-
-Anonymous proxies (pure proxies) are very different from other proxy types. The proxies we described
-so far are _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf
-of the primary account, reducing the exposure of the primary account's private key. Remember, the
-more often we use an account's private key to sign transactions, the more we expose that key to the
+Pure proxies are very different from other proxy types. The proxies we described so far are
+_existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the
+primary account, reducing the exposure of the primary account's private key. Remember, the more
+often we use an account's private key to sign transactions, the more we expose that key to the
 internet, increasing the visibility of that account. The purpose of a proxy is thus to draw the
 attention of potential attackers away from the primary account, as proxies' private keys will be
 used most of the time to perform actions on behalf of the primary account.
 
 ![anonymous proxies](../assets/proxy-vs-anon.png)
 
-Anonymous proxies (pure proxies) are new accounts that are _created_ (not assigned) by a primary
-account. That primary account then acts as _any_ proxy on behalf of the anonymous proxy. Anonymous
-proxies are **keyless non-deterministic accounts** as they do not have a private key but they have
-an address that is randomly generated. Also, in some sense, nobody owns an anonymous proxy as nobody
-has a private key to control them.
+Pure proxies are new accounts that are _created_ (not assigned) by a primary account. That primary
+account then acts as _any_ proxy on behalf of the pure proxy. Pure proxies are **keyless
+non-deterministic accounts** as they do not have a private key but they have an address that is
+randomly generated. Also, in some sense, nobody owns a pure proxy as nobody has a private key to
+control them.
 
-:::info Renaming Anonymous Proxies as **Pure Proxies**
+:::info Pure proxies where called anonymous proxies
 
-Anonymous proxies are not anonymous because they have an address that is spawned by a primary
-account acting as _any_ proxy. Even if the _any_ proxy changes, it is still possible to find who
-generated the _anonymous_ proxy by going backward using a block explorer. There was thus the need to
-change the name of _anonymous_ proxy. People suggested _keyless accounts_ since they do not have a
-private key and are proxied accounts. However, multisig accounts are also keyless (but
-deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as
-proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that
-has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of
-pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or
-the discussion on
+Pure proxies are not anonymous because they have an address that is spawned by a primary account
+acting as _any_ proxy. Even if the _any_ proxy changes, it is still possible to find who generated
+the _anonymous_ proxy by going backward using a block explorer. There was thus the need to change
+the name of _anonymous_ proxy. People suggested _keyless accounts_ since they do not have a private
+key and are proxied accounts. However, multisig accounts are also keyless (but deterministic).
+Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as proxies and
+control other accounts via proxy calls (see multisig example below). Thus, the name that has been
+chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of pure
+proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or the
+discussion on
 [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
-
-:::
-
-From now on we will thus use the term pure proxy instead of anonymous proxy.
-
-## Create and Remove Pure Proxy
-
-:::info
-
-To create a **pure proxy** see
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or
-watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
-
-:::
-
-:::caution Removing Pure Proxies
-
-The procedure for removing a _pure_ proxy is different from the one used to remove other proxies.
-Visit the section "Removing an Anonymous Proxy" on
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or
-watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
-
-:::
-
-:::note Explainer video on Pure Proxies
-
-Learn more about pure proxies from our
-[technical explainer video](https://www.youtube.com/watch?v=YkYApbhU3i0).
 
 :::
 
