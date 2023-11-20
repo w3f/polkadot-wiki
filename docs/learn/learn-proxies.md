@@ -63,15 +63,6 @@ You can have the same proxy for multiple accounts.
 
 :::
 
-## Creating Proxy
-
-:::info
-
-To create a **proxy account** read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
-
-:::
-
 ## Proxy Types
 
 You can set up a proxy account via the proxy pallet. When you set a proxy, you must choose a type of
