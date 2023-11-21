@@ -434,10 +434,9 @@ double.
 
 <VLTable />
 
-{{ polkadot: **The table above shows the correct duration values. However, the current values for Polkadot are the same as those for Kusama. This is going to be fixed. For more information, see [this GitHub issue](https://github.com/paritytech/polkadot/issues/7394).** :polkadot }}
-
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals {{ polkadot: 28 :polkadot }}
+total), and one lock period equals
+{{ polkadot: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
 days. For additional information regarding the timeline of governance events, check out the
 governance section on the
@@ -449,7 +448,7 @@ You can use the same number of tokens to vote on different referenda. Votes with
 stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
 and C with 2x conviction you would have 10 votes on all those referenda and 5
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
-(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+(i.e. {{ polkadot: two weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
 countdown starting when the last referendum you voted on ends (assuming you are on the winning
 side). If you voted with conviction on referendum and then a week later voted on another one with
 the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
@@ -470,15 +469,15 @@ long the tokens are locked.
 See below an example that shows how voluntary locking works.
 
 Peter: Votes `No` with
-{{ polkadot: 10 DOT for a 128-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
+{{ polkadot: 10 DOT for a 32-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
 => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
 
 Logan: Votes `Yes` with
-{{ polkadot: 20 DOT for a 4-week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
+{{ polkadot: 20 DOT for one week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
 {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
 
 Kevin: Votes `Yes` with
-{{ polkadot: 15 DOT for a 8-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
+{{ polkadot: 15 DOT for a 2-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
 => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
 
 Even though combined both Logan and Kevin vote with more
