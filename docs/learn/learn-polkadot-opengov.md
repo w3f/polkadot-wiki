@@ -539,7 +539,7 @@ unlocking period countdown begins after the account undelegates. There can be di
 It is worth noting that a user delegating their voting power does not imply that the delegate will
 have control over the funds of the delegating user's account. That delegate's account can vote with a user's voting
 power but won't be able to transfer balances, nominate a different set of validators, or execute any
-call other than voting on the defined call/s by the user.
+call other than voting on the tracks defined by the user.
 
 The goal of delegations is to ensure the required support for proposals to be enacted is reached
 while maintaining the anonymity of voters and keeping the overall design censorship-free.
