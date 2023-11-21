@@ -12,10 +12,10 @@ from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
 :::info User friendly wallets
 
-Create your Polkadot accounts with a secure and user-friendly wallets listed on the
+Create your Polkadot accounts with a secure and user-friendly wallet listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
-See the [Wallets](./wallets-index) section for more information about wallets, and the
+See the [Wallets](./wallets-index) section for more information about wallets and the
 [wallets and extensions](../general/wallets-and-extensions.md) page for wallets and browser
 extensions funded by the Polkadot/Kusama Treasuries or by the
 [Web3 Foundation Grants Program](../general/grants.md).
@@ -36,20 +36,20 @@ behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, 
 An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 account. The private part is the key used to access this address. The public and private parts
 together make up a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can
-think of the public address of your account like your mailbox and the private key like the key to
-open that mailbox. Anybody can send mail to your mailbox, but only you can access them as only you
+think of the public address of your account, like your mailbox and the private key like the key to
+open that mailbox. Anybody can send mail to your mailbox, but only you can access it as only you
 have access to its key. In the context of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, anybody can send tokens to
-your public address but only you can transact with them using your private key. That is why you
+your public address, but only you can transact with them using your private key. That is why you
 should keep your private key secret.
 
 ### Mnemonic and Address Generation
 
 A user's account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
-private key an account cannot sign anything. In
+private key, an account cannot sign anything. In
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
-that do not have private keys (i.e. key-less accounts). Such accounts are
+that do not have private keys (i.e. keyless accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md),
 [pure proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy), and
 [system accounts](./learn-account-advanced.md#system-accounts) that are not discussed here and are
@@ -58,7 +58,7 @@ meant for an advanced audience.
 A typical 12-word mnemonic seed phrase is shown below.
 
 ```
-'caution juice atom organ advance problem want pledge someone senior holiday very'
+'caution juice atom organ advance problem want to pledge someone senior holiday very'
 ```
 
 Its corresponding _private/public keypair_ is also shown.
@@ -68,31 +68,31 @@ Secret seed (Private key): 0x056a6a4e203766ffbea3146967ef25e9daf677b14dc6f6ed891
 Public key (SS58): 5F3sa2TJAWMqDhXG6jhV4N8ko9SxwGy8TpaNS1repo5EYjQX
 ```
 
-Polkadot default address format is the `MultiAddress` type. This means that the same mnemonic phrase
-will generate public keys for different parachains. For more information see the
+Polkadot default address format is the `MultiAddress` type. This means the same mnemonic phrase will
+generate public keys for different parachains. For more information, see the
 [Address Format](./learn-account-advanced.md#address-format) section on the
 [Advanced Account](./learn-account-advanced.md) page.
 
 ### Ways to Generate an Account
 
-Usually there are two ways of generating a mnemonic seed:
+Usually, there are two ways of generating a mnemonic seed:
 
 - On a "hot" device, i.e. a device that is connected to the internet
 - On a "cold" device, i.e. a device that is not (and ideally will never be) connected to the
   internet
 
 Hot wallets are susceptible to a wide range of attacks, so it is recommended to use cold wallets
-when dealing with non-trivial amount of funds.
+when dealing with non-trivial amounts of funds.
 
 Generating a mnemonic seed on a browser extension or a mobile application will create a hot key or
-hot wallet. Create your Polkadot accounts with a secure and user-friendly wallets listed on the
+hot wallet. Create your Polkadot accounts with a secure and user-friendly wallet listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/). See also the
-[Wallets](./wallets-index) section for more information about wallets, and the
+[Wallets](./wallets-index) section for more information about wallets and the
 [wallets and extensions](../general/wallets-and-extensions.md) page for wallets and browser
 extensions funded by the Polkadot/Kusama Treasuries or by the
 [Web3 Foundation Grants Program](../general/grants.md).
 
-Cold keys are generated on special devices such those provided by [Ledger](../general/ledger.md).
+Cold keys are generated on special devices such as those provided by [Ledger](../general/ledger.md).
 Additionally, you can generate your wallet using the [Polkadot Vault](../general/polkadot-vault.md)
 mobile app (you need a dedicated air-gapped Android or iOS-compatible smartphone that you are
 comfortable using only for Polkadot Vault), or a dedicated hardware implementation of Polkadot Vault
@@ -100,9 +100,9 @@ such as [the Kampela Signer](https://www.kampe.la/).
 
 Usually, browser extensions and mobile devices have options to import accounts generated on cold
 devices. Note that the private keys of those accounts will remain on the cold device, meaning that
-you will always need the device to sign for any transaction. Exceptions do exist, where you can
-generate hot [proxy accounts](./learn-proxies.md) and sign on behalf of a cold account without the
-need if using the cold device. This is practical especially for routine transactions.
+you will always need the device to sign for any transaction. Exceptions exist where you can generate
+hot [proxy accounts](./learn-proxies.md) and sign on behalf of a cold account without using the cold
+device. This is practical, especially for routine transactions.
 
 ## Account Balance Types
 
@@ -115,35 +115,34 @@ types are the same for a Polkadot account).
 ![account_balance_types](../assets/account-balance-types.png)
 
 - The **total** balance indicates the total number of tokens in the account. Note that this number
-  does not necessarily correspond to the tokens you are allowed to transfer. In the example the
-  total number of tokens in 0.6274 KSM. The **transferrable** balance indicates the number of tokens
-  that are free to be transferred. This is calculated by subtracting the number of _locked_ and
-  _reserved_ tokens from the total number of tokens. Locked funds correspond to tokens used in
-  staking, governance, and vested transfers (see below). In the example, the transferrable balance
-  is 0.0106 KSM.
-- The **vested** balance indicates tokens that were sent to the account and that are released with a
-  specific time schedule. The tokens are owned by the account but are _locked_ and become available
-  for transfer after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
+  does not necessarily correspond to the tokens you can transfer. In the example, the total number
+  of tokens is 0.6274 KSM. The **transferrable** balance indicates the number of free tokens to be
+  transferred. This is calculated by subtracting the number of _locked_ and _reserved_ tokens from
+  the total number of tokens. Locked funds correspond to tokens used in staking, governance, and
+  vested transfers (see below). In the example, the transferrable balance is 0.0106 KSM.
+- The **vested** balance indicates tokens sent to the account and released with a specific time
+  schedule. The account owns the tokens, but they are _locked_ and become available for transfer
+  after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
 - The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
-  to staking. In the example the bonded balance is 0.4 KSM.
+  to staking. In the example, the bonded balance is 0.4 KSM.
 - The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
-  participation to democracy (i.e. voting for referenda and council). In the example, the democracy
+  participation in democracy (i.e. voting for referenda and council). In the example, the democracy
   balance is 0.4 KSM.
-- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become
+- The **redeemable** balance indicates the number of tokens ready to be unlocked to become
   transferrable again. Those tokens already went through the unbonding period. In this case, the
   redeemable balance is 0.1 KSM.
-- The **locked** balance indicates the number of tokens that are frozen for on-chain participation
-  to staking and democracy, or for vested transfers. **Locks do not stack**, which means that if you
-  have different locks the total locked balance is not the addition of all single locks. Instead,
-  **the biggest lock decides the total locked balance**. In the example, the locked balance is 0.55
-  KSM because the biggest lock is on democracy (0.55 KSM).
+- The **locked** balance indicates the number of frozen tokens for on-chain participation to staking
+  and democracy or for vested transfers. **Locks do not stack**, which means that if you have
+  different locks the total locked balance is not the addition of all single locks. Instead, **the
+  biggest lock decides the total locked balance**. In the example, the locked balance is 0.55 KSM
+  because the biggest lock is on democracy (0.55 KSM).
 - The **reserved** balance indicates the number of tokens that are frozen for on-chain activity
   other than staking, governance, and vested transfers. Such activity can be setting an identity or
   a proxy. Reserved funds are held due to on-chain requirements and can usually be freed by taking
   some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
   is registered, but by clearing the identity, you can unreserve the funds and make them free again.
   The same applies to proxies. The idea is that those actions require some network memory usage that
-  is not given for free. In the example we created a governance proxy and the reserved funds for
+  is not given for free. In the example, we created a governance proxy, and the reserved funds for
   this are 0.0668 KSM.
 
 ## Existential Deposit and Reaping
@@ -174,9 +173,9 @@ construct a valid transaction. Additional funds will need to be added to cover t
 Here's another way to think about existential deposits. Ever notice those `Thumbs.db` files on
 Windows or `.DS_Store` files on Mac? Those are junk; they serve no specific purpose other than
 making previews a bit faster. If a folder is empty saved for such a file, you can remove the folder
-to clear the junk off your hard drive. That does not mean you lose access to this folder forever -
-you can always recreate it. You have the _key_, after all - you're the computer's owner. It just
-means you want to keep your computer clean until you maybe end up needing this folder again and then
+to clear the junk off your hard drive. That does not mean you will lose access to this folder
+forever - you can always recreate it. You have the _key_, after all - you're the computer's owner.
+It just means you want to keep your computer clean until you maybe need this folder again and
 recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it
 but gets put back when it has the existential deposit.
 
