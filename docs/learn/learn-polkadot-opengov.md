@@ -418,6 +418,10 @@ Voting a second time replaces your original vote, e.g. voting with 10
 
 :::
 
+Note that to successfully cast votes you need to have the
+[existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
+to pay for transaction fees.
+
 ### Voluntary Locking
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
