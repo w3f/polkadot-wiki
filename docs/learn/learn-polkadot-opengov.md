@@ -537,7 +537,7 @@ unlocking period countdown begins after the account undelegates. There can be di
 :::
 
 It is worth noting that a user delegating their voting power does not imply that the delegate will
-have control over the funds of the delegating account. That account can vote with a user's voting
+have control over the funds of the delegating user's account. That delegate's account can vote with a user's voting
 power but won't be able to transfer balances, nominate a different set of validators, or execute any
 call other than voting on the defined call/s by the user.
 
