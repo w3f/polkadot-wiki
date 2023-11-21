@@ -185,8 +185,26 @@ demonstrates how a single public key interprets a Polkadot, Substrate, or Kusama
 
 ## Portability
 
-Portability is the ability to use a mnemonic phrase or seed across multiple wallets. Portability
-depends on several factors:
+Portability is the ability to use a mnemonic phrase or seed across multiple wallets.
+
+Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private
+key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to
+private key, which affects the ability to use the same mnemonic phrase in multiple wallets. Wallets
+that use different measures will arrive at a different set of addresses from the exact mnemonic
+phrase.
+
+:::danger Not all wallets use the same algorithm to convert from mnemonic phrase to private key
+
+[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) and Polkadot-JS based
+wallets use the BIP39 dictionary for mnemonic generation, but use the entropy byte array to generate
+the private key, while full BIP39 wallets (like Ledger) use 2048 rounds of PBKDF2 on the mnemonic.
+The same mnemonic may generate different private keys on other wallets due to the various
+cryptographic algorithms used. See
+[Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for more information.
+
+:::
+
+Portability depends on several factors:
 
 - Derivation path
 - Mnemonic format
