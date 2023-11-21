@@ -532,12 +532,10 @@ unlocking period countdown begins after the account undelegates. There can be di
 
 :::
 
-Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
-to use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
-is worth noting that a user delegating their voting power does not imply that the delegate will have
-control over the funds of the delegating account: they can vote with a user's voting power: but they
-won't be able to transfer your balance, nominate a different set of validators or execute any call
-other than voting on the defined call/s by the user.
+It is worth noting that a user delegating their voting power does not imply that the delegate will
+have control over the funds of the delegating account: they can vote with a user's voting power: but
+they won't be able to transfer your balance, nominate a different set of validators or execute any
+call other than voting on the defined call/s by the user.
 
 With the new delegation features, the goal is to ensure the required support for proposals to be
 enacted is reached while maintaining the anonymity of voters and keeping the overall design
