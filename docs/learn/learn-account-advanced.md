@@ -398,10 +398,12 @@ For keeping the index permanently, you can follow up with a `freeze` extrinsic a
 
 ## Creating Accounts with Subkey
 
-Subkey is recommended for technically advanced users comfortable with the command line and compiling
-Rust code. Subkey lets you generate keys on any device that can compile the code. Subkey may also be
-useful for automated account generation using an air-gapped device. It is not recommended for
-general users.
+[Subkey](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey) is recommended for
+technically advanced users comfortable with the command line and compiling Rust code. Subkey lets
+you generate keys on any device that can compile the code. Subkey may also be useful for automated
+account generation using an air-gapped device. It is not recommended for general users. Follow the
+instructions in the
+[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/).
 
 :::info
 

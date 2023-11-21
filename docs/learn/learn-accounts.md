@@ -75,38 +75,41 @@ will generate public keys for different parachains. For more information see the
 
 ### Ways to Generate an Account
 
-When you create accounts using browser extensions like
-[the Polkadot-JS extension](#polkadot-js-browser-extension), it stores your accounts in a private
-vault and lets you clear your browser cache without fear. Remember to back up your seed phrase - if
-you lose access to this computer or the extension somehow crashes beyond repair, the seed phrase
-will come in handy. Alternatively, you can create accounts using the
-[Polkadot-JS UI](#polkadot-js-ui), although this option is disabled by default. More info about the
-Polkadot-JS UI can be found on [the dedicated page](../general/polkadotjs-ui.md).
+Usually there are two ways of generating a mnemonic seed:
 
-Please note that all wallets that are connected to the internet are considered "hot wallets" that
-are susceptible to a wide range of attacks, so it is recommended to use cold storage when dealing
-with non-trivial amounts.
+- On a "hot" device, i.e. a device that is connected to the internet
+- On a "cold" device, i.e. a device that is not (and ideally will never be) connected to the
+  internet
 
-Current popular cold storage solutions within the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem include
-[Ledger](../general/ledger.md) and [Polkadot Vault](../general/polkadot-vault.md). The latter keeps
-your keys on an air-gapped mobile phone. However, it does require obtaining a dedicated Android or
-iOS-compatible phone that you are comfortable using only for Polkadot Vault.
+Hot wallets are susceptible to a wide range of attacks, so it is recommended to use cold wallets
+when dealing with non-trivial amount of funds.
 
-Besides the Polkadot-JS browser extension and the Polkadot-JS UI,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can also be created with
-the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
-intended for users comfortable using the command line and can seem intimidating, but it is quite
-approachable. Follow the instructions in the
-[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/).
+Generating a mnemonic seed on a browser extension or a mobile application will create a hot key or
+hot wallet. Create your Polkadot accounts with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/). See also the
+[Wallets](./wallets-index) section for more information about wallets, and the
+[wallets and extensions](../general/wallets-and-extensions.md) page for wallets and browser
+extensions funded by the Polkadot/Kusama Treasuries or by the
+[Web3 Foundation Grants Program](../general/grants.md).
+
+Cold keys are generated on special devices such those provided by [Ledger](../general/ledger.md).
+Additionally, you can generate your wallet using the [Polkadot Vault](../general/polkadot-vault.md)
+mobile app (you need a dedicated air-gapped Android or iOS-compatible smartphone that you are
+comfortable using only for Polkadot Vault), or a dedicated hardware implementation of Polkadot Vault
+such as [the Kampela Signer](https://www.kampe.la/).
+
+Usually, browser extensions and mobile devices have options to import accounts generated on cold
+devices. Note that the private keys of those accounts will remain on the cold device, meaning that
+you will always need the device to sign for any transaction. Exceptions do exist, where you can
+generate hot [proxy accounts](./learn-proxies.md) and sign on behalf of a cold account without the
+need if using the cold device. This is practical especially for routine transactions.
 
 ## Account Balance Types
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below is an example that displays different balance types of a Kusama account in the
-[Accounts tab of the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (note that the balance
+Below is an example that displays different balance types of a Kusama account (note that the balance
 types are the same for a Polkadot account).
 
 ![account_balance_types](../assets/account-balance-types.png)
