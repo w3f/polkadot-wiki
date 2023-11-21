@@ -43,7 +43,7 @@ have access to its key. In the context of
 your public address, but only you can transact with them using your private key. That is why you
 should keep your private key secret.
 
-### Mnemonic and Address Generation
+### Mnemonic Seed Phrase
 
 A user's account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
@@ -73,7 +73,7 @@ generate public keys for different parachains. For more information, see the
 [Address Format](./learn-account-advanced.md#address-format) section on the
 [Advanced Account](./learn-account-advanced.md) page.
 
-### Ways to Generate an Account
+### Account Generation
 
 Usually, there are two ways of generating a mnemonic seed:
 
@@ -103,6 +103,47 @@ devices. Note that the private keys of those accounts will remain on the cold de
 you will always need the device to sign for any transaction. Exceptions exist where you can generate
 hot [proxy accounts](./learn-proxies.md) and sign on behalf of a cold account without using the cold
 device. This is practical, especially for routine transactions.
+
+### Backing Up Accounts
+
+Depending on what software you use to access your account, there are various ways to back up and
+restore your account. It is a good idea to back your information up and keep it secure. In general,
+as long as you know how you created your account and have the mnemonic seed phrase or the JSON
+backup file (and password) stored securely, you can restore your account.
+
+## Existential Deposit and Reaping
+
+:::info
+
+Visit
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
+for more information about existential deposit.
+
+:::
+
+When you generate an account (address), you only generate a _key_ that lets you access it. The
+account does not exist yet on-chain. For that, it needs the existential deposit of
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
+
+Having an account go below the existential deposit causes that account to be _reaped_. The account
+will be wiped from the blockchain's state to conserve space, along with any funds in that address.
+You do not lose access to the reaped address - as long as you have your private key or recovery
+phrase, you can still use the address - but it needs a top-up of another existential deposit to be
+able to interact with the chain.
+
+Transaction fees cannot cause an account to be reaped. Since fees are deducted from the account
+before any other transaction logic, accounts with balances _equal to_ the existential deposit cannot
+construct a valid transaction. Additional funds will need to be added to cover the transaction fees.
+
+Here's another way to think about existential deposits. Ever notice those `Thumbs.db` files on
+Windows or `.DS_Store` files on Mac? Those are junk; they serve no specific purpose other than
+making previews a bit faster. If a folder is empty saved for such a file, you can remove the folder
+to clear the junk off your hard drive. That does not mean you will lose access to this folder
+forever - you can always recreate it. You have the _key_, after all - you're the computer's owner.
+It just means you want to keep your computer clean until you maybe need this folder again and
+recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it
+but gets put back when it has the existential deposit.
 
 ## Account Balance Types
 
@@ -144,44 +185,3 @@ types are the same for a Polkadot account).
   The same applies to proxies. The idea is that those actions require some network memory usage that
   is not given for free. In the example, we created a governance proxy, and the reserved funds for
   this are 0.0668 KSM.
-
-## Existential Deposit and Reaping
-
-:::info
-
-Visit
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
-for more information about existential deposit.
-
-:::
-
-When you generate an account (address), you only generate a _key_ that lets you access it. The
-account does not exist yet on-chain. For that, it needs the existential deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
-
-Having an account go below the existential deposit causes that account to be _reaped_. The account
-will be wiped from the blockchain's state to conserve space, along with any funds in that address.
-You do not lose access to the reaped address - as long as you have your private key or recovery
-phrase, you can still use the address - but it needs a top-up of another existential deposit to be
-able to interact with the chain.
-
-Transaction fees cannot cause an account to be reaped. Since fees are deducted from the account
-before any other transaction logic, accounts with balances _equal to_ the existential deposit cannot
-construct a valid transaction. Additional funds will need to be added to cover the transaction fees.
-
-Here's another way to think about existential deposits. Ever notice those `Thumbs.db` files on
-Windows or `.DS_Store` files on Mac? Those are junk; they serve no specific purpose other than
-making previews a bit faster. If a folder is empty saved for such a file, you can remove the folder
-to clear the junk off your hard drive. That does not mean you will lose access to this folder
-forever - you can always recreate it. You have the _key_, after all - you're the computer's owner.
-It just means you want to keep your computer clean until you maybe need this folder again and
-recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it
-but gets put back when it has the existential deposit.
-
-## Backing Up Accounts
-
-Depending on what software you use to access your account, there are various ways to back up and
-restore your account. It is a good idea to back your information up and keep it secure. In general,
-as long as you know how you created your account and have the mnemonic seed phrase or the JSON
-backup file (and password) stored securely, you can restore your account.
