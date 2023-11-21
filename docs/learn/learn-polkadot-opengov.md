@@ -537,12 +537,15 @@ unlocking period countdown begins after the account undelegates. There can be di
 :::
 
 It is worth noting that a user delegating their voting power does not imply that the delegate will
-have control over the funds of the delegating user's account. That delegate's account can vote with a user's voting
-power but won't be able to transfer balances, nominate a different set of validators, or execute any
-call other than voting on the tracks defined by the user.
+have control over the funds of the delegating user's account. That delegate's account can vote with
+a user's voting power but won't be able to transfer balances, nominate a different set of
+validators, or execute any call other than voting on the tracks defined by the user.
 
 The goal of delegations is to ensure the required support for proposals to be enacted is reached
-while maintaining the anonymity of voters and keeping the overall design censorship-free.
+while keeping the overall design censorship-free. Also, voters might not have the technical
+knowledge to judge some referenda or might not have the time to read all referenda. Delegations
+allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
+entities.
 
 For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, check out the
 [Delegating Voting Power](./learn-guides-polkadot-opengov.md#delegations) section on the
