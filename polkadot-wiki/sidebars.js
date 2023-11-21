@@ -173,14 +173,10 @@ module.exports = {
               label: "Accounts",
               description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
               link: {
-                type: 'generated-index',
-                title: 'Accounts',
-                description: 'Everything about accounts and native account abstraction on Polkadot.',
-                slug: '/learn-accounts-index',
+                type: 'doc',
+                id: "learn/learn-accounts"
               },
               items: [
-                "learn/learn-accounts",
-                "learn/learn-account-generation",
                 "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
