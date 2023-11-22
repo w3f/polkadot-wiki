@@ -84,10 +84,6 @@ module.exports = {
             from: ['/docs/maintain-bug-bounty']
           },
           {
-            to: '/docs/maintain-guides-polkadot-opengov',
-            from: ['/docs/maintain-guides-opengov']
-          },
-          {
             to: '/docs/learn-guides-assets-create',
             from: ['/docs/kusama-statemine']
           },
