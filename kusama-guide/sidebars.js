@@ -121,7 +121,6 @@ module.exports = {
             "build/build-oracle",
             "build/build-data",
             "build/build-light-clients",
-            "build/build-ss58-registry",
           ],
         },
         {
