@@ -31,7 +31,7 @@ added to the Substrate FRAME system.
 For more information about the adoption of RFC within the Polkadot ecosystem see
 [this Medium article](https://www.polkadotphilosophy.com/polkadots-strategic-adoption-of-rfcs-pioneering-a-collaborative-future-in-blockchain-3330843cfd4f)
 and the
-[original Polkadot Forum post](https://forum.polkadot.network/t/polkadot-protocol-proposals-rfc-process/1421?source=post_page-----3330843cfd4f--------------------------------).
+[original Polkadot Forum post](https://forum.polkadot.network/t/polkadot-protocol-proposals-rfc-process/1421/1).
 
 ## Polkadot SDK
 
