@@ -28,6 +28,11 @@ Subsequently, the
 [code for the Agile Coretime Broker pallet](https://github.com/paritytech/substrate/pull/14568) was
 added to the Substrate FRAME system.
 
+For more information about the adoption of RFCs within the Polkadot ecosystem, see
+[this Medium article](https://www.polkadotphilosophy.com/polkadots-strategic-adoption-of-rfcs-pioneering-a-collaborative-future-in-blockchain-3330843cfd4f)
+and the
+[original Polkadot Forum post](https://forum.polkadot.network/t/polkadot-protocol-proposals-rfc-process/1421/1).
+
 ## Polkadot SDK
 
 :::info
