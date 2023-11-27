@@ -48,7 +48,7 @@ A user's account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
 private key, an account cannot sign anything. In
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
-that do not have private keys (i.e. keyless accounts). Such accounts are
+that do not have known private keys (i.e. keyless accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md),
 [pure proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy), and
 [system accounts](./learn-account-advanced.md#system-accounts) that are not discussed here and are
