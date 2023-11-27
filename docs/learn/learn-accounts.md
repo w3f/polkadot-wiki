@@ -15,9 +15,8 @@ from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 Create your Polkadot accounts with any of the secure and user-friendly wallet listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
-See the [Wallets](./wallets-index) section for more information about wallets and the
-[wallets and extensions](../general/wallets-and-extensions.md) page for wallets and browser
-extensions funded by the Polkadot/Kusama Treasuries or by the
+See the [Wallets](./wallets-index) section for more information about different wallet options available, and specifically the
+[wallets and extensions](../general/wallets-and-extensions.md) page, which lists the user friendly wallet projects funded by the Polkadot/Kusama Treasuries or by the
 [Web3 Foundation Grants Program](../general/grants.md).
 
 :::
