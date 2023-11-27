@@ -92,7 +92,7 @@ extensions funded by the Polkadot/Kusama Treasuries or by the
 [Web3 Foundation Grants Program](../general/grants.md).
 
 Cold keys are generated on special devices such as those provided by [Ledger](../general/ledger.md).
-Additionally, you can generate your wallet using the [Polkadot Vault](../general/polkadot-vault.md)
+Additionally, you can generate your account using the [Polkadot Vault](../general/polkadot-vault.md)
 mobile app (you need a dedicated air-gapped Android or iOS-compatible smartphone that you are
 comfortable using only for Polkadot Vault), or a dedicated hardware implementation of Polkadot Vault
 such as [the Kampela Signer](https://www.kampe.la/).
