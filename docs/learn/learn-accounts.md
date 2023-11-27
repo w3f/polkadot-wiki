@@ -57,7 +57,7 @@ meant for an advanced audience.
 A typical 12-word mnemonic seed phrase is shown below.
 
 ```
-'caution juice atom organ advance problem want to pledge someone senior holiday very'
+'caution juice atom organ advance problem want pledge someone senior holiday very'
 ```
 
 Its corresponding _private/public keypair_ is also shown.
