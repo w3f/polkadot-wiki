@@ -97,11 +97,10 @@ mobile app (you need a dedicated air-gapped Android or iOS-compatible smartphone
 comfortable using only for Polkadot Vault), or a dedicated hardware implementation of Polkadot Vault
 such as [the Kampela Signer](https://www.kampe.la/).
 
-Usually, browser extensions and mobile devices have options to import accounts generated on cold
-devices. Note that the private keys of those accounts will remain on the cold device, meaning that
-you will always need the device to sign for any transaction. Exceptions exist where you can generate
-hot [proxy accounts](./learn-proxies.md) and sign on behalf of a cold account without using the cold
-device. This is practical, especially for routine transactions.
+Usually, browser extensions and mobile devices have options to securely import accounts from cold
+wallets. Note that the private keys of those accounts will remain on the cold wallet, meaning that
+you will always need the device to sign any transaction. Exceptions exist where you can generate
+hot wallet based [proxy accounts](./learn-proxies.md) and sign on behalf of a cold wallet account without connecting the cold device. This is practical, especially for transactions made frequently.
 
 ### Backing Up Accounts
 
