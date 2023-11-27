@@ -91,6 +91,17 @@ their official social media handles).
 
 :::
 
+### Web Wallets
+
+Web Wallets are the all-in-one solution to accessing the Web3 space. With all of the features of mobile wallets, you can also connect to and interact with decentralized web apps.
+
+| Wallet                                        | Platforms                                                                                              | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
+| [SubWallet](https://web.subwallet.app/) | Any web browsers | **Yes, Yes** | **Yes** | **Yes** | **Yes** | No | [SubWallet features](#subwallet)
+
+
+::: 
+
 ## Enkrypt
 
 A multichain crypto wallet - Bitcoin, Ethereum, Polkadot, Kusama and a few parachains.
