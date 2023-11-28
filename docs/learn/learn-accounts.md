@@ -15,8 +15,9 @@ from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 Create your Polkadot accounts with any of the secure and user-friendly wallet listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
-See the [Wallets](./wallets-index) section for more information about different wallet options available, and specifically the
-[wallets and extensions](../general/wallets-and-extensions.md) page, which lists the user friendly wallet projects funded by the Polkadot/Kusama Treasuries or by the
+See the [Wallets](./wallets-index) section for more information about different wallet options
+available, and specifically the [wallets and extensions](../general/wallets-and-extensions.md) page,
+which lists the user friendly wallet projects funded by the Polkadot/Kusama Treasuries or by the
 [Web3 Foundation Grants Program](../general/grants.md).
 
 :::
@@ -99,8 +100,9 @@ such as [the Kampela Signer](https://www.kampe.la/).
 
 Usually, browser extensions and mobile devices have options to securely import accounts from cold
 wallets. Note that the private keys of those accounts will remain on the cold wallet, meaning that
-you will always need the device to sign any transaction. Exceptions exist where you can generate
-hot wallet based [proxy accounts](./learn-proxies.md) and sign on behalf of a cold wallet account without connecting the cold device. This is practical, especially for transactions made frequently.
+you will always need the device to sign any transaction. Exceptions exist where you can generate hot
+wallet based [proxy accounts](./learn-proxies.md) and sign on behalf of a cold wallet account
+without connecting the cold device. This is practical, especially for transactions made frequently.
 
 ### Backing Up Accounts
 
@@ -148,7 +150,8 @@ but gets put back when it has the existential deposit.
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below is an example that displays different balance types of a Kusama account (note that the balance
+Below is an example that displays different balance types on the
+[Polkadot-JS UI (wallet)](../general/polkadotjs-ui.md) of a Kusama account (note that the balance
 types are the same for a Polkadot account).
 
 ![account_balance_types](../assets/account-balance-types.png)
