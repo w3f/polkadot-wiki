@@ -418,6 +418,10 @@ Voting a second time replaces your original vote, e.g. voting with 10
 
 :::
 
+Note that to successfully cast votes you need to have the
+[existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
+to pay for transaction fees.
+
 ### Voluntary Locking
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
@@ -434,10 +438,9 @@ double.
 
 <VLTable />
 
-{{ polkadot: **The table above shows the correct duration values. However, the current values for Polkadot are the same as those for Kusama. This is going to be fixed. For more information, see [this GitHub issue](https://github.com/paritytech/polkadot/issues/7394).** :polkadot }}
-
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals {{ polkadot: 28 :polkadot }}
+total), and one lock period equals
+{{ polkadot: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
 days. For additional information regarding the timeline of governance events, check out the
 governance section on the
@@ -449,7 +452,7 @@ You can use the same number of tokens to vote on different referenda. Votes with
 stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
 and C with 2x conviction you would have 10 votes on all those referenda and 5
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
-(i.e. {{ polkadot: 8 weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+(i.e. {{ polkadot: two weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
 countdown starting when the last referendum you voted on ends (assuming you are on the winning
 side). If you voted with conviction on referendum and then a week later voted on another one with
 the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
@@ -470,15 +473,15 @@ long the tokens are locked.
 See below an example that shows how voluntary locking works.
 
 Peter: Votes `No` with
-{{ polkadot: 10 DOT for a 128-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
+{{ polkadot: 10 DOT for a 32-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
 => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
 
 Logan: Votes `Yes` with
-{{ polkadot: 20 DOT for a 4-week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
+{{ polkadot: 20 DOT for one week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
 {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
 
 Kevin: Votes `Yes` with
-{{ polkadot: 15 DOT for a 8-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
+{{ polkadot: 15 DOT for a 2-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
 => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
 
 Even though combined both Logan and Kevin vote with more
@@ -532,16 +535,16 @@ unlocking period countdown begins after the account undelegates. There can be di
 
 :::
 
-Occasional delegation and undelegation calls are fee-free: creating an incentive for token holders
-to use this feature and ensure that wallets can do it “by default” without any cost to end-users. It
-is worth noting that a user delegating their voting power does not imply that the delegate will have
-control over the funds of the delegating account: they can vote with a user's voting power: but they
-won't be able to transfer your balance, nominate a different set of validators or execute any call
-other than voting on the defined call/s by the user.
+It is worth noting that a user delegating their voting power does not imply that the delegate will
+have control over the funds of the delegating user's account. That delegate's account can vote with
+a user's voting power but won't be able to transfer balances, nominate a different set of
+validators, or execute any call other than voting on the tracks defined by the user.
 
-With the new delegation features, the goal is to ensure the required support for proposals to be
-enacted is reached while maintaining the anonymity of voters and keeping the overall design
-censorship-free.
+The goal of delegations is to ensure the required support for proposals to be enacted is reached
+while keeping the overall design censorship-free. Also, voters might not have the technical
+knowledge to judge some referenda or might not have the time to read all referenda. Delegations
+allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
+entities.
 
 For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, check out the
 [Delegating Voting Power](./learn-guides-polkadot-opengov.md#delegations) section on the

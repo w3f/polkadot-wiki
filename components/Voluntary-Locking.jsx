@@ -59,12 +59,12 @@ const lockPeriods = ["p0", "p1", "p2", "p4", "p8", "p16", "p32"]
 
 const dotLocking = {
 	p0: 0,
-	p1: 28,
-	p2: 56,
-	p4: 112,
-	p8: 224,
-	p16: 448,
-	p32: 896
+	p1: 7,
+	p2: 14,
+	p4: 28,
+	p8: 56,
+	p16: 112,
+	p32: 224
 }
 
 const ksmLocking = {
