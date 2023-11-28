@@ -31,13 +31,6 @@ behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, 
 
 <DocCardList />
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the
-[Polkadot-JS guides about accounts](./learn-guides-accounts-index).
-
-:::
-
 ## Account Address
 
 An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
@@ -193,3 +186,12 @@ types are the same for a Polkadot account).
   The same applies to proxies. The idea is that those actions require some network memory usage that
   is not given for free. In the example, we created a governance proxy, and the reserved funds for
   this are 0.0668 KSM.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about accounts](./learn-guides-accounts-index).
+
+:::
