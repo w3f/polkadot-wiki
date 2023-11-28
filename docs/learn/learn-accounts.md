@@ -31,6 +31,13 @@ behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, 
 
 <DocCardList />
 
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about accounts](./learn-guides-accounts-index).
+
+:::
+
 ## Account Address
 
 An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}

@@ -42,3 +42,12 @@ always calculate the address of a multisig by knowing the members and the thresh
 account existing yet. This means one can send tokens to an address that does not exist yet, and if
 the entities designated as the recipients come together in a new multisig under a matching
 threshold, they will immediately have access to these tokens.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about multi-signature accounts](./learn-guides-accounts-multisig.md).
+
+:::

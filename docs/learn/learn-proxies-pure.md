@@ -77,3 +77,12 @@ Pure proxies have important benefits that we discuss below:
   wants to leave the multisig, a new multisig must be created. This is inconvenient, especially at
   corporate-level management where the chance of replacing someone within a multisig can be high.
   _Pure_ proxies allow keeping the same multisig when the signatories change.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about pure proxy accounts](./learn-guides-accounts-proxy-pure.md).
+
+:::

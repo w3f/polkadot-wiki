@@ -136,3 +136,12 @@ a proxy call. For every proxy call the account has, an additional amount defined
 and the `announcementDepositFactor` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md).
+
+:::
