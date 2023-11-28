@@ -23,7 +23,7 @@ For most users, we recommend using the
 since it will allow you to store your encrypted keystore locally.
 
 In terms of hardware wallet support, you can use the [Kusama Ledger application](../ledger.md), or
-[Parity Signer](../../learn/learn-account-generation.md#parity-signer).
+[Polkadot Vault](../polkadot-vault.md).
 
 Another option you may consider using is the
 [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) command-line utility, which

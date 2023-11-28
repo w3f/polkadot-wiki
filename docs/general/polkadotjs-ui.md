@@ -55,7 +55,7 @@ For each account visible in the UI, you can perform different actions, including
 [**sending tokens**](../learn/learn-balance-transfers.md).
 
 For more information about adding and recovering accounts, see the
-[**Account Generation**](../learn/learn-account-generation.md) page.
+[**Account Generation**](../learn/learn-accounts.md#account-generation) page.
 
 ### Network (Staking)
 
