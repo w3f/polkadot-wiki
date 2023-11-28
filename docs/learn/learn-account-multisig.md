@@ -7,6 +7,13 @@ keywords: [account, multisig, polkadot account, polkadotjs, multix]
 slug: ../learn-account-multisig
 ---
 
+:::info Mulisig Apps
+
+See the [multisig apps](../general/multisig-apps.md) page for more information about user-friendly
+tools about multi-signature accounts.
+
+:::
+
 It is possible to create multi-signature accounts (multisig) in Substrate-based chains. A multisig
 is composed of one or more addresses and a threshold. The threshold defines how many signatories
 (participating addresses) need to agree on submitting an extrinsic for the call to be successful.
