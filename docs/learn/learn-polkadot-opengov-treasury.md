@@ -148,3 +148,12 @@ allocation of funds and as part of a nested iteration of the bounty mechanism.
 
 Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties are used to
 access funds directly from the parent bounty without going through an OpenGov referendum.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the [Polkadot-JS guides about bounties](./learn-guides-bounties.md)
+and [treasury](./learn-guides-treasury.md).
+
+:::

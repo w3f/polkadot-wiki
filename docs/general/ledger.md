@@ -148,3 +148,12 @@ below:
 - If you wish to revert the version to the stable release, go to Ledger Live. The app will
   automatically detect the developer release and give the option to install the previous stable
   release.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about Ledger](../learn/learn-guides-ledger.md).
+
+:::

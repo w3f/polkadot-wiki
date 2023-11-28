@@ -173,14 +173,10 @@ module.exports = {
               label: "Accounts",
               description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
               link: {
-                type: 'generated-index',
-                title: 'Accounts',
-                description: 'Everything about accounts and native account abstraction on Polkadot.',
-                slug: '/learn-accounts-index',
+                type: 'doc',
+                id: "learn/learn-accounts"
               },
               items: [
-                "learn/learn-accounts",
-                "learn/learn-account-generation",
                 "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
@@ -307,6 +303,23 @@ module.exports = {
                     slug: '/learn-guides-index',
                   },
                   items: [
+                    {
+                      type: "category",
+                      label: "Accounts",
+                      description: 'Polkadot-JS Guides about Accounts.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Polkadot-JS Guides about Accounts',
+                        description: 'Polkadot-JS Guides about Accounts.',
+                        slug: '/learn-guides-accounts-index',
+                      },
+                      items: [
+                        "learn/learn-guides-accounts",
+                        "learn/learn-guides-accounts-multisig",
+                        "learn/learn-guides-accounts-proxy",
+                        "learn/learn-guides-accounts-proxy-pure",
+                      ],
+                    },
                     {
                       type: "category",
                       label: "Staking",
