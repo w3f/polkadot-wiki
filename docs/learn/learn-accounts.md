@@ -7,64 +7,55 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+
+:::info User friendly wallets
+
+Create your Polkadot accounts with any of the secure and user-friendly wallet listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+
+See the [Wallets](./wallets-index) section for more information about different wallet options
+available, and specifically the [wallets and extensions](../general/wallets-and-extensions.md) page,
+which lists the user friendly wallet projects funded by the Polkadot/Kusama Treasuries or by the
+[Web3 Foundation Grants Program](../general/grants.md).
+
+:::
 
 This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about
 accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and
 [indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography
-behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see
-[the cryptography page](learn-cryptography.md).
+behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see the
+[cryptography page](learn-cryptography.md).
 
-:::info User friendly wallets
-
-Create your Polkadot accounts with a secure and user-friendly wallets listed on the
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
-
-:::
+<DocCardList />
 
 ## Account Address
 
 An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 account. The private part is the key used to access this address. The public and private parts
 together make up a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can
-think of the public address of your account like your mailbox and the private key like the key to
-open that mailbox. Anybody can send mail to your mailbox, but only you can access them as only you
+think of the public address of your account, like your mailbox and the private key like the key to
+open that mailbox. Anybody can send mail to your mailbox, but only you can access it as only you
 have access to its key. In the context of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, anybody can send tokens to
-your public address but only you can transact with them using your private key. That is why you
+your public address, but only you can transact with them using your private key. That is why you
 should keep your private key secret.
 
-### Mnemonic and Address Generation
+### Mnemonic Seed Phrase
 
-A valid account requires a private key that can sign on to one of the
+A user's account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
-private key an account cannot sign anything. In
+private key, an account cannot sign anything. In
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
-that do not have private keys (i.e. key-less accounts). Such accounts are
-[multi-signature accounts](./learn-account-multisig.md) and
-[anonymous proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy) that are not discussed here
-and are meant for an advanced audience.
+that do not have known private keys (i.e. keyless accounts). Such accounts are
+[multi-signature accounts](./learn-account-multisig.md),
+[pure proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy), and
+[system accounts](./learn-account-advanced.md#system-accounts) that are not discussed here and are
+meant for an advanced audience.
 
-Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private
-key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to
-private key, which affects the ability to use the same mnemonic phrase in multiple wallets. Wallets
-that use different measures will arrive at a different set of addresses from the exact mnemonic
-phrase.
-
-:::danger Not all wallets use the same algorithm to convert from mnemonic phrase to private key
-
-[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) and Polkadot-JS based
-wallets use the BIP39 dictionary for mnemonic generation, but use the entropy byte array to generate
-the private key, while full BIP39 wallets (like Ledger) use 2048 rounds of PBKDF2 on the mnemonic.
-The same mnemonic may generate different private keys on other wallets due to the various
-cryptographic algorithms used. See
-[Substrate BIP39 Repo](https://github.com/paritytech/substrate-bip39) for more information.
-
-:::
-
-A typical mnemonic phrase generated by
-[the Subkey tool](https://docs.substrate.io/reference/command-line-tools/subkey/) is shown below.
+A typical 12-word mnemonic seed phrase is shown below.
 
 ```
 'caution juice atom organ advance problem want pledge someone senior holiday very'
@@ -77,122 +68,54 @@ Secret seed (Private key): 0x056a6a4e203766ffbea3146967ef25e9daf677b14dc6f6ed891
 Public key (SS58): 5F3sa2TJAWMqDhXG6jhV4N8ko9SxwGy8TpaNS1repo5EYjQX
 ```
 
-Polkadot default address format is the `MultiAddress` type. This means that the same mnemonic phrase
-will generate public keys for different parachains. For more information see the
+Polkadot default address format is the `MultiAddress` type. This means the same mnemonic phrase will
+generate public keys for different parachains. For more information, see the
 [Address Format](./learn-account-advanced.md#address-format) section on the
 [Advanced Account](./learn-account-advanced.md) page.
 
-### Obtaining and Managing an Address
+### Account Generation
 
-:::info
+Usually, there are two ways of generating a mnemonic seed:
 
-To learn more about generating accounts on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} visit the
-[Account Generation page](./learn-account-generation.md).
+- On a "hot" device, i.e. a device that is connected to the internet
+- On a "cold" device, i.e. a device that is not (and ideally will never be) connected to the
+  internet
 
-:::
+Hot wallets are susceptible to a wide range of attacks, so it is recommended to use cold wallets
+when dealing with non-trivial amounts of funds.
 
-## Account Balance Types
+Generating a mnemonic seed on a browser extension or a mobile application will create a hot key or
+hot wallet. Create your Polkadot accounts with a secure and user-friendly wallet listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/). See also the
+[Wallets](./wallets-index) section for more information about wallets and the
+[wallets and extensions](../general/wallets-and-extensions.md) page for wallets and browser
+extensions funded by the Polkadot/Kusama Treasuries or by the
+[Web3 Foundation Grants Program](../general/grants.md).
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
-balance depending on the account activity. Different balance types indicate whether your balance can
-be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below is an example that displays different balance types of a Kusama account in the
-[Accounts tab of the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) (note that the balance
-types are the same for a Polkadot account).
+Cold keys are generated on special devices such as those provided by [Ledger](../general/ledger.md).
+Additionally, you can generate your account using the [Polkadot Vault](../general/polkadot-vault.md)
+mobile app (you need a dedicated air-gapped Android or iOS-compatible smartphone that you are
+comfortable using only for Polkadot Vault), or a dedicated hardware implementation of Polkadot Vault
+such as [the Kampela Signer](https://www.kampe.la/).
 
-![account_balance_types](../assets/account-balance-types.png)
+Usually, browser extensions and mobile devices have options to securely import accounts from cold
+wallets. Note that the private keys of those accounts will remain on the cold wallet, meaning that
+you will always need the device to sign any transaction. Exceptions exist where you can generate hot
+wallet based [proxy accounts](./learn-proxies.md) and sign on behalf of a cold wallet account
+without connecting the cold device. This is practical, especially for transactions made frequently.
 
-- The **total** balance indicates the total number of tokens in the account. Note that this number
-  does not necessarily correspond to the tokens you are allowed to transfer. In the example the
-  total number of tokens in 0.6274 KSM. The **transferrable** balance indicates the number of tokens
-  that are free to be transferred. This is calculated by subtracting the number of _locked_ and
-  _reserved_ tokens from the total number of tokens. Locked funds correspond to tokens used in
-  staking, governance, and vested transfers (see below). In the example, the transferrable balance
-  is 0.0106 KSM.
-- The **vested** balance indicates tokens that were sent to the account and that are released with a
-  specific time schedule. The tokens are owned by the account but are _locked_ and become available
-  for transfer after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
-- The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
-  to staking. In the example the bonded balance is 0.4 KSM.
-- The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
-  participation to democracy (i.e. voting for referenda and council). In the example, the democracy
-  balance is 0.4 KSM.
-- The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become
-  transferrable again. Those tokens already went through the unbonding period. In this case, the
-  redeemable balance is 0.1 KSM.
-- The **locked** balance indicates the number of tokens that are frozen for on-chain participation
-  to staking and democracy, or for vested transfers. **Locks do not stack**, which means that if you
-  have different locks the total locked balance is not the addition of all single locks. Instead,
-  **the biggest lock decides the total locked balance**. In the example, the locked balance is 0.55
-  KSM because the biggest lock is on democracy (0.55 KSM).
-- The **reserved** balance indicates the number of tokens that are frozen for on-chain activity
-  other than staking, governance, and vested transfers. Such activity can be setting an identity or
-  a proxy. Reserved funds are held due to on-chain requirements and can usually be freed by taking
-  some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
-  is registered, but by clearing the identity, you can unreserve the funds and make them free again.
-  The same applies to proxies. The idea is that those actions require some network memory usage that
-  is not given for free. In the example we created a governance proxy and the reserved funds for
-  this are 0.0668 KSM.
+### Backing Up Accounts
 
-### Query Account Data in Polkadot-JS
-
-In the Polkadot-JS UI, you can also query account data under
-[Developer > Chain state](https://polkadot.js.org/apps/#/chainstate). Under `selected state query`
-choose the system pallet followed by `account(AccountId32): FrameSystemAccountInfo`, under `Option`
-choose an account, and then click on the "+" button on the right.
-
-![account_balance_types](../assets/AccountData-struct.png)
-
-Account information include:
-
-- `nonce`, the number of transactions the account sent.
-- `consumers`, the number of other modules that currently depend on this account's existence. The
-  account cannot be reaped until this is zero.
-- `providers`, the number of other modules that allow this account to exist. The account may not be
-  reaped until this and `sufficients` are both zero.
-- `sufficients`, the number of modules that allow this account to exist for their own purposes. The
-  account may not be reaped until this and `providers` are both zero.
-- `data`, the additional data that belongs to this account. Used to store the balance(s) in a lot of
-  chains.
-
-More in-depth information about the above data can be found in the
-[substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/system/src/lib.rs#LL767C1-L781C24).
-
-The `AccountData` structure defines the balance types in Substrate. The three types of balances
-include `free`, `reserved`, and `frozen`. The **usable** balance of the account is the amount that
-is `free` minus any funds considered `frozen`, while the **total** balance of the account is the sum
-of `free` and `reserved` funds. The `flags` describe extra information about the account.
-
-More in-depth information about the above data can be found in the
-[balances pallet in the Substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).
-
-### Unlocking Locks
-
-:::info Locks do not stack!
-
-The biggest lock decides the total amount of locked funds. See
-[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the
-process of unlocking funds in the example above.
-
-:::
-
-In the example, we mentioned that the locked balance is 0.55 KSM because the biggest lock is on
-democracy and is 0.55 KSM. As soon as the democracy lock is removed the next biggest lock is on
-staking 0.5 KSM (bonded 0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be
-0.5 KSM, and 0.05 KSM will be added to the transferrable balance. After redeeming the unbonded 0.1
-KSM, the locked balance will be 0.4 KSM, and an additional 0.1 KSM will be added to the
-transferrable balance. Now the biggest lock is still the bonded one. This means that even if we
-remove the vested lock, the locked balance will still be 0.4 KSM and no tokens will be added to the
-transferrable balance. To free those bonded tokens we will need to unbond them and wait for the
-unbonding period to make them redeemable. If we remove the proxy the reserved funds will be
-automatically added to the transferrable balance.
+Depending on what software you use to access your account, there are various ways to back up and
+restore your account. It is a good idea to back your information up and keep it secure. In general,
+as long as you know how you created your account and have the mnemonic seed phrase or the JSON
+backup file (and password) stored securely, you can restore your account.
 
 ## Existential Deposit and Reaping
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) or visit
+Visit
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
 for more information about existential deposit.
 
@@ -216,52 +139,59 @@ construct a valid transaction. Additional funds will need to be added to cover t
 Here's another way to think about existential deposits. Ever notice those `Thumbs.db` files on
 Windows or `.DS_Store` files on Mac? Those are junk; they serve no specific purpose other than
 making previews a bit faster. If a folder is empty saved for such a file, you can remove the folder
-to clear the junk off your hard drive. That does not mean you lose access to this folder forever -
-you can always recreate it. You have the _key_, after all - you're the computer's owner. It just
-means you want to keep your computer clean until you maybe end up needing this folder again and then
+to clear the junk off your hard drive. That does not mean you will lose access to this folder
+forever - you can always recreate it. You have the _key_, after all - you're the computer's owner.
+It just means you want to keep your computer clean until you maybe need this folder again and
 recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it
 but gets put back when it has the existential deposit.
 
-## Account Identity
+## Account Balance Types
 
-The [Identities pallet](https://github.com/paritytech/substrate/tree/master/frame/identity) built
-into {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows users to attach on-chain
-metadata to their accounts. Independent registrars can verify this metadata to provide
-trustworthiness.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are different types of
+balance depending on the account activity. Different balance types indicate whether your balance can
+be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
+Below is an example that displays different balance types on the
+[Polkadot-JS UI (wallet)](../general/polkadotjs-ui.md) of a Kusama account (note that the balance
+types are the same for a Polkadot account).
 
-:::info
+![account_balance_types](../assets/account-balance-types.png)
 
-To learn more about how to set or release an identity, how to define sub-accounts, or how to become
-a registrar, please read [this guide](learn-identity.md).
+- The **total** balance indicates the total number of tokens in the account. Note that this number
+  does not necessarily correspond to the tokens you can transfer. In the example, the total number
+  of tokens is 0.6274 KSM. The **transferrable** balance indicates the number of free tokens to be
+  transferred. This is calculated by subtracting the number of _locked_ and _reserved_ tokens from
+  the total number of tokens. Locked funds correspond to tokens used in staking, governance, and
+  vested transfers (see below). In the example, the transferrable balance is 0.0106 KSM.
+- The **vested** balance indicates tokens sent to the account and released with a specific time
+  schedule. The account owns the tokens, but they are _locked_ and become available for transfer
+  after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
+- The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
+  to staking. In the example, the bonded balance is 0.4 KSM.
+- The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
+  participation in democracy (i.e. voting for referenda and council). In the example, the democracy
+  balance is 0.4 KSM.
+- The **redeemable** balance indicates the number of tokens ready to be unlocked to become
+  transferrable again. Those tokens already went through the unbonding period. In this case, the
+  redeemable balance is 0.1 KSM.
+- The **locked** balance indicates the number of frozen tokens for on-chain participation to staking
+  and democracy or for vested transfers. **Locks do not stack**, which means that if you have
+  different locks the total locked balance is not the addition of all single locks. Instead, **the
+  biggest lock decides the total locked balance**. In the example, the locked balance is 0.55 KSM
+  because the biggest lock is on democracy (0.55 KSM).
+- The **reserved** balance indicates the number of tokens that are frozen for on-chain activity
+  other than staking, governance, and vested transfers. Such activity can be setting an identity or
+  a proxy. Reserved funds are held due to on-chain requirements and can usually be freed by taking
+  some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
+  is registered, but by clearing the identity, you can unreserve the funds and make them free again.
+  The same applies to proxies. The idea is that those actions require some network memory usage that
+  is not given for free. In the example, we created a governance proxy, and the reserved funds for
+  this are 0.0668 KSM.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about accounts](./learn-guides-accounts-index).
 
 :::
-
-## Proxy Accounts
-
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} comes with a generalized proxy
-account system that allows users to keep keys in cold storage while proxies act on their behalf with
-restricted (or unrestricted) functionality.
-
-:::info
-
-See the [proxies](learn-proxies.md) page for more information about proxies.
-
-:::
-
-## Multi-signature Accounts
-
-Multi-signature accounts are accounts created from several standard accounts, pure proxies, and even
-other multi-sig accounts.
-
-:::info
-
-See the [Multi-signature accounts page](./learn-account-multisig.md) for a full explanation about
-multi-signature accounts, including their use-cases.
-
-:::
-
-## Resources
-
-- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
-  explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill
-  Laboon and Chinmay Patel of BlockX Labs.

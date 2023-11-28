@@ -683,3 +683,12 @@ referendum to be approved to become a member.
 - [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io)
 - [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io)
 - [PolkAssembly](https://polkadot.polkassembly.io/)
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about OpenGov](./learn-guides-polkadot-opengov.md).
+
+:::

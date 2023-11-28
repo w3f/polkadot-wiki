@@ -111,8 +111,7 @@ qualify. For more information, visit the
 The first thing you need to do before becoming a nominator is to make sure you have a
 [**stash account**](./learn-staking.md/#stash-account-and-staking-proxy) where you can transfer
 funds you want to use for staking. For these accounts, it is recommended to use a "cold wallet"
-solution such as [Ledger](../general/ledger.md) or
-[Parity Signer](./learn-account-generation.md#parity-signer).
+solution such as [Ledger](../general/ledger.md) or [Polkadot Vault](../general/polkadot-vault.md).
 
 After setting up the stash account, it is recommended to have a
 [**staking proxy**](./learn-staking-advanced.md/#staking-proxies). Although you can be a nominator
