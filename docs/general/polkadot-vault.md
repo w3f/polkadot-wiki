@@ -177,9 +177,11 @@ Alternatively, you can use a third-party provider to add chains and their metada
 [this article](https://support.polkadot.network/support/solutions/articles/65000184128-polkadot-vault-how-to-add-a-new-chain-and-update-the-metadata)
 for detailed instructions. If you choose this approach, you should trust the provider you choose.
 
-:::info Advanced How-to Guides
+---
 
-See the [advanced guides](../learn/learn-guides-vault.md) for more information about how to add
-chain specification and do metadata updates yourself.
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about Polkadot Vault](../learn/learn-guides-vault.md).
 
 :::
