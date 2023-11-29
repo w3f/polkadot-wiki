@@ -142,6 +142,7 @@ and the `announcementDepositFactor` is
 :::info Polkadot-JS Guides
 
 If you are an advanced user, see the
-[Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md).
+[Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md). You can find
+information about creating and removing proxies, and more.
 
 :::
