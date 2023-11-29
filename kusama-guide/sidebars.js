@@ -42,7 +42,6 @@ module.exports = {
           type: "category",
               label: "Accounts",
               items: [
-                "learn/learn-account-generation",
                 "general/kusama/kusama-social-recovery",
                 "learn/learn-proxies",
               ],
