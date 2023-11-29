@@ -40,7 +40,7 @@ fees.
 
 ## Executor config
 
-The executor has a `Weigher` [configuration item](../executor_config/index.html#weigher) that
+The executor has a `Weigher` [configuration item](../executor_config/config.md#weigher) that
 specifies the weight of each instruction. It weighs the whole message by adding the weight of each
 instruction. A simple way of weighing instructions is to assign them a base weight value to all of
 them. This works, but it is not very accurate, as different instructions use more resources when
