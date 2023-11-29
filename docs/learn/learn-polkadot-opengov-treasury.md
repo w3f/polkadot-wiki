@@ -81,6 +81,16 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 ## Bounties
 
+:::info Bounty Guides
+
+See the [bounty guides](./learn-guides-bounties.md) to learn about how to
+[create a bounty](./learn-guides-bounties.md#submit-a-bounty-proposal),
+[assign a curator](./learn-guides-bounties.md#assign-a-curator-to-a-bounty) to a bounty, as well as
+[creating and awarding child bounties](./learn-guides-bounties.md#create-and-award-child-bounties)
+and [claiming child bounties rewards](./learn-guides-bounties.md#claim-a-child-bounty-reward).
+
+:::
+
 ### Parent Bounties
 
 Getting treasury funding through OpenGov, depending on which treasury track you submit your
