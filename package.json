@@ -69,13 +69,16 @@
     "@algolia/client-search": "^4.20.0",
     "@apollo/client": "^3.8.7",
     "@docusaurus/theme-mermaid": "^2.4.3",
+    "bufferutil": "^4.0.8",
     "chart.js": "^4.4.0",
     "crowdin-cli": "^0.3.0",
     "graphql": "^16.8.1",
     "graphql-ws": "^5.14.2",
     "react-chartjs-2": "^5.2.0",
     "react-treebeard": "^3.2.4",
-    "remark-docusaurus-tabs": "^0.2.0"
+    "remark-docusaurus-tabs": "^0.2.0",
+    "utf-8-validate": "^5.0.10",
+    "ws": "^8.14.2"
   },
   "husky": {
     "hooks": {
