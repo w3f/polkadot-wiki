@@ -180,7 +180,7 @@ module.exports = {
           {
             to: '/docs/learn-accounts',
             from: ['/docs/learn-account-generation']
-          },
+          }
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
