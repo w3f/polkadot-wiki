@@ -90,10 +90,6 @@ module.exports = {
           {
             to: '/docs/learn-guides-assets-ledger',
             from: ['/docs/kusama-statemine-ledger']
-          },
-          {
-            to: '/docs/learn-accounts',
-            from: ['/docs/learn-account-generation', '/docs/learn-accounts-index']
           }
         ],
         createRedirects: function (existingPath) {
