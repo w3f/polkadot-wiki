@@ -21,12 +21,12 @@ like Google Chrome.
 
 :::
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} [Ledger](https://www.ledger.com/)
-application is compatible with the Ledger Nano S and the Ledger Nano X devices. Ledger devices are
-hardware wallets that keep your secret key secured on a physical device that does not expose it to
-your computer or the internet. The private keys will not be leaked even if you connect your nano via
-USB to your computer. Ledger devices are also hierarchical deterministic wallets (HD wallets), that
-is:
+The \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+[Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S and the Ledger
+Nano X devices. Ledger devices are hardware wallets that keep your secret key secured on a physical
+device that does not expose it to your computer or the internet. The private keys will not be leaked
+even if you connect your nano via USB to your computer. Ledger devices are also hierarchical
+deterministic wallets (HD wallets), that is:
 
 - _Deterministic_ means that only one seed phrase generates all the accounts for different
   blockchain networks.
@@ -35,18 +35,18 @@ is:
 
 Ledger devices can be equipped with applications that are blockchain-specific. Third parties usually
 develop such applications, enabling the user to transact securely on the blockchain network. The
-Polkadot Ledger application allows you to manage
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native token,
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. It supports most of the transaction types of
-the network, including batch transactions from the Utility pallet.
+Polkadot Ledger application allows you to manage \{\{ polkadot: Polkadot's :polkadot }}\{\{ kusama:
+Kusama's :kusama }} native token, \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}. It
+supports most of the transaction types of the network, including batch transactions from the Utility
+pallet.
 
 :::note Ledger apps may not support all the transactions
 
-Check the
-{{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot }}{{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }}
-specification for the list of transactions supported. Some transactions are supported only on a
-specific app version, and others are not supported by any version. For instance, the staking `rebag`
-extrinsic is supported on the **XL version** but not on the **lite version**. Also, joining a
+Check the \{\{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot
+}}\{\{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }} specification
+for the list of transactions supported. Some transactions are supported only on a specific app
+version, and others are not supported by any version. For instance, the staking `rebag` extrinsic is
+supported on the **XL version** but not on the **lite version**. Also, joining a
 [nomination pool](../learn/learn-nomination-pools.md) is only possible with the XL version.
 
 :::
@@ -73,15 +73,14 @@ support Ledger devices.
 
 :::
 
-Here is a list of what you will need before using
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with Ledger:
+Here is a list of what you will need before using \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama:
+Kusama :kusama }} with Ledger:
 
-- A Ledger Nano X or Nano S plus (recommended for
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger App space requirements and
-  functionalities).
-- The latest firmware of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger
-  App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to
-  allow access with your nano).
+- A Ledger Nano X or Nano S plus (recommended for \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama:
+  Kusama :kusama }} Ledger App space requirements and functionalities).
+- The latest firmware of the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+  Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will
+  need to allow access with your nano).
 - Ledger Live is installed and up-to-date.
 - A Chromium-based web browser if you use a browser extension.
 
@@ -89,7 +88,8 @@ Here is a list of what you will need before using
 
 See
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
-to learn how to use {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with ledger live.
+to learn how to use \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} with ledger
+live.
 
 ## Ledger Developer Release
 
@@ -102,7 +102,7 @@ unless you _know precisely what you're doing_.
 
 ### Why you might need the Developer Release
 
-Ledger apps for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem are
+Ledger apps for the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} ecosystem are
 developed by [Zondax](https://zondax.ch/). When new functionalities are added to the Ledger apps,
 they are made available on a developer release for testing purposes. After a successful audit and
 review, the apps would be available for download and installation using

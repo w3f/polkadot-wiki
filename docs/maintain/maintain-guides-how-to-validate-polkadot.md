@@ -61,18 +61,18 @@ nominators. To understand how validators are elected, check the
 
 :::info On-Chain Data for Reference
 
-On Polkadot, the minimum stake backing a validator in the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
+On Polkadot, the minimum stake backing a validator in the active set is \{\{ polkadot:
+<MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }} \{\{ kusama:
+<MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era \{\{
+polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+\{\{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama
+}}
 
-On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
+On Kusama, the minimum stake backing a validator in the active set is \{\{ kusama:
+<MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }} \{\{ polkadot:
+<MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the era \{\{
+kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }} \{\{
+polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 :::
 
 **Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
@@ -546,22 +546,22 @@ a non-canonical chain.
 
 ## Bond DOT
 
-To start a validator instance on Polkadot, the minimum bond required is
-{{ polkadot: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :kusama }}
-But to enter the active validator set and be eligible to earn rewards, your validator node should be
-nominated by a minimum number of DOT tokens. On Polkadot, the minimum stake backing a validator in
-the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
-On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
+To start a validator instance on Polkadot, the minimum bond required is \{\{ polkadot:
+<RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>.
+:kusama }} But to enter the active validator set and be eligible to earn rewards, your validator
+node should be nominated by a minimum number of DOT tokens. On Polkadot, the minimum stake backing a
+validator in the active set is \{\{ polkadot:
+<MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }} \{\{ kusama:
+<MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era \{\{
+polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+\{\{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama
+}} On Kusama, the minimum stake backing a validator in the active set is \{\{ kusama:
+<MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }} \{\{ polkadot:
+<MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the era \{\{
+kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }} \{\{
+polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 
 If you are validator who intends to get DOT/KSM nominations from the community, you will need to
 show some skin in the game. For that, you need to bond some DOT/KSM as own stake. Make sure not to

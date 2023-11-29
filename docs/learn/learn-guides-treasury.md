@@ -16,21 +16,25 @@ See [this page](./learn-polkadot-opengov-treasury.md) to learn about the Polkado
 Your proposal should address a problem, outline a goal, give a detailed account of how you will
 reach that goal, and include any ongoing maintenance needs. As much as possible, you should itemize
 the tasks to be completed so fees can be evaluated and milestones can be followed. You can check the
-{{ polkadot: [guidelines for a successful proposal](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w) :polkadot }}{{ kusama:  [guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)  :kusama }}
-and fill out the
-{{ polkadot: [Treasury proposal template](https://docs.google.com/document/d/1O_84mXYFERCavmnJyxbIPKFkG0bVBySRjCVy-d-VKcc) :polkadot }}{{ kusama:  Treasury proposal template :kusama }}
-provided.
+\{\{ polkadot:
+[guidelines for a successful proposal](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w)
+:polkadot }}\{\{ kusama:
+[guidelines for a successful proposal](https://docs.google.com/document/d/1CzEnurqwqLBOGrJI9CQORiGW9m6QyPOSshhzJdR57Pk)
+:kusama }} and fill out the \{\{ polkadot:
+[Treasury proposal template](https://docs.google.com/document/d/1O_84mXYFERCavmnJyxbIPKFkG0bVBySRjCVy-d-VKcc)
+:polkadot }}\{\{ kusama: Treasury proposal template :kusama }} provided.
 
 ### Announcing the Proposal
 
 To minimize storage on-chain, proposals don't contain contextual information. When a user submits a
 proposal, they will need to find an off-chain way to explain the proposal:
 
-- Many community members participate in discussion in the
-  {{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
-  {{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the :kusama }}
-  {{ polkadot: [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}
-  {{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
+- Many community members participate in discussion in the \{\{ polkadot:
+  [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
+  \{\{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the
+  :kusama }} \{\{ polkadot:
+  [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }} \{\{
+  kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
 - Use platforms like [Polkassembly](https://polkassembly.io) and
   [SubSquare](https://www.subsquare.io/) to initiate discussion with the community. They also offer
   a gauge poll to capture the community sentiment before submitting an on-chain referendum.
@@ -65,9 +69,9 @@ that requests 100 DOT from Treasury.
 
 A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
 to the amount of information stored within the preimage. The deposit amount required for a preimage
-with a treasury spend transaction is around
-{{ polkadot: 41 DOT :polkadot }}{{ kusama:  1.4 KSM  :kusama }}. Ensure you have enough account
-balance to pay for the submission deposit and the transaction fees.
+with a treasury spend transaction is around \{\{ polkadot: 41 DOT :polkadot }}\{\{ kusama: 1.4 KSM
+:kusama }}. Ensure you have enough account balance to pay for the submission deposit and the
+transaction fees.
 
 :::
 
@@ -123,9 +127,9 @@ click on the FAB button in the bottom right corner. Then,
   ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
 
   - Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
-    preimage, add the beneficiary address and the
-    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto-selected
-    and the user can proceed with the creation of a preimage.
+    preimage, add the beneficiary address and the \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM
+    :kusama }} amount. The track will be auto-selected and the user can proceed with the creation of
+    a preimage.
 
   ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
 
@@ -146,11 +150,15 @@ Briefly, you will need to:
 - Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash
 - Once you started the referendum go to [Polkassembly](https://polkassembly.io/), log in with the
   proposer account and edit the referendum details
-- Notify the
-  {{ polkadot: [Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}{{ kusama: [Kusama Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :kusama }}
+- Notify the \{\{ polkadot:
+  [Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot
+  }}\{\{ kusama:
+  [Kusama Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :kusama }}
   about your referendum
-- Place the decision deposit before the
-  {{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
-  timeout
+- Place the decision deposit before the \{\{ polkadot:
+  <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/>
+  :polkadot }}\{\{ kusama:
+  <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/>
+  :kusama }}-day timeout
 - Once the referendum ends you can
   [claim the preimage and decision deposits back](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits)

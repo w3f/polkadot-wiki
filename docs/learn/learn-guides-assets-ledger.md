@@ -80,9 +80,9 @@ your account on Polkadot-JS UI as described below.
 :::note
 
 These instructions will guide you on how to add a Ledger account that's **only** available on the
-Asset Hub. If you want to use the same Ledger account on both
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} **and** the Asset Hub check the
-instructions [below](#working-on-relay-chains-and-asset-hubs).
+Asset Hub. If you want to use the same Ledger account on both \{\{ polkadot: Polkadot :polkadot
+}}\{\{ kusama: Kusama :kusama }} **and** the Asset Hub check the instructions
+[below](#working-on-relay-chains-and-asset-hubs).
 
 :::
 
@@ -132,13 +132,13 @@ confirmation when you initiate a transaction.
 
 Polkadot and Kusama accounts from the [extension](../general/polkadotjs.md#polkadot-js-extension)
 will show up in the Asset Hub, even if they're not set to be used on all chains. The Asset Hub is a
-system parachains on {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} and uses
-{{ polkadot: DOT :polkadot}}{{ kusama: KSM :kusama}} as native token. Hence, accounts on a Relay
+system parachains on \{\{ polkadot: Polkadot :polkadot}}\{\{ kusama: Kusama :kusama}} and uses \{\{
+polkadot: DOT :polkadot}}\{\{ kusama: KSM :kusama}} as native token. Hence, accounts on a Relay
 Chain are also available on each Relay's system chains. What this means is that if you already have
-a {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} Ledger account configured on the
+a \{\{ polkadot: Polkadot :polkadot}}\{\{ kusama: Kusama :kusama}} Ledger account configured on the
 extension, that account will also be available on the Asset Hub. But the opposite is not the case:
-an account created specifically on the Asset Hub won't show up on
-{{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}}.
+an account created specifically on the Asset Hub won't show up on \{\{ polkadot: Polkadot
+:polkadot}}\{\{ kusama: Kusama :kusama}}.
 
 **However**, as mentioned above, the
 [Polkadot extension](../general/polkadotjs.md#polkadot-js-extension) does not support Statemine
@@ -156,8 +156,8 @@ To remove an account from the Polkadot extension:
 
 :::info
 
-As mentioned above, a {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} Ledger account
-will also be available on the Asset Hub.
+As mentioned above, a \{\{ polkadot: Polkadot :polkadot}}\{\{ kusama: Kusama :kusama}} Ledger
+account will also be available on the Asset Hub.
 
 :::
 
@@ -188,9 +188,8 @@ method is to use [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
 :::info Transfers
 
 Transferring in this way sends tokens to another account on the Asset Hub parachain. If you need to
-transfer KSM between the Asset Hub and
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, see the [Teleporting](#teleporting)
-section below.
+transfer KSM between the Asset Hub and \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }}, see the [Teleporting](#teleporting) section below.
 
 :::
 
@@ -227,8 +226,8 @@ clicking on your account's avatar icon - this immediately copies your address to
 :::note Your Asset Hub address is the same as your Relay Chain address
 
 Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub
-parachain, otherwise (if you're receiving {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-tokens) they could be sent on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+parachain, otherwise (if you're receiving \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}
+tokens) they could be sent on the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 chain.
 
 :::

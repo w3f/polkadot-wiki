@@ -22,7 +22,7 @@ risk their lives to ensure the VIP's protection. But proxies are also useful in 
 as efficient account management at the corporate level. They also provide an elegant solution to
 change signatories within multi-signature accounts, and they can be used within proxy calls and
 nested proxy calls. In this page we will explore all these interesting use cases of proxies within
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
+the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} ecosystem.
 
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as
 your primary token-holding account and don't want to access it very often, but you want to
@@ -45,23 +45,22 @@ participate in the network.
 
 :::info
 
-The **maximum number of proxies** allowed for a single account is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }} You
-can have the same proxy for multiple accounts.
+The **maximum number of proxies** allowed for a single account is \{\{ polkadot:
+<RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }} \{\{
+kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }} You can
+have the same proxy for multiple accounts.
 
 :::
 
 ## Proxy Types
 
-When a proxy account makes a transaction,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
-ensure that the proxy account has the appropriate permission to make that transaction on behalf of
-the proxied account. For example, staking proxies have permission to do only staking-related
-transactions.
+When a proxy account makes a transaction, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} filters the desired transaction to ensure that the proxy account has the appropriate
+permission to make that transaction on behalf of the proxied account. For example, staking proxies
+have permission to do only staking-related transactions.
 
-When you set a proxy, you must choose a type of proxy for the relationship.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
+When you set a proxy, you must choose a type of proxy for the relationship. \{\{ polkadot: Polkadot
+:polkadot }}\{\{ kusama: Kusama :kusama }} offers:
 
 - **Any**: allow any transaction, including balance transfers. In most cases, this should be avoided
   as the proxy account is used more frequently than the cold account and is therefore less secure.
@@ -106,17 +105,20 @@ The required deposit amount for `n` proxies is equal to:
 where the `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy
 list (creates one new item in storage). For every proxy the account has, an additional amount
 defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location). The
-`ProxyDepositBase` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
-and the `ProxyDepositFactor` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/>. :kusama }}
+`ProxyDepositBase` is \{\{ polkadot:
+<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>
+:kusama }} and the `ProxyDepositFactor` is \{\{ polkadot:
+<RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/>.
+:kusama }}
 
 ## Time-delayed Proxy
 
 We can add a layer of security to proxies by giving them a delay time. The delay will be quantified
-in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6
+in blocks. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} has approximately 6
 seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute
 delay.
 
@@ -130,12 +132,15 @@ Announcing `n` calls using a time-delayed proxy also requires a deposit of the f
 
 where the `announcementDepositBase` is the required amount to be reserved for an account to announce
 a proxy call. For every proxy call the account has, an additional amount defined by the
-`announcementDepositFactor` is reserved as well. The `announcementDepositBase` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
-and the `announcementDepositFactor` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
+`announcementDepositFactor` is reserved as well. The `announcementDepositBase` is \{\{ polkadot:
+<RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/>
+:kusama }} and the `announcementDepositFactor` is \{\{ polkadot:
+<RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>.
+:kusama }}
 
 ---
 

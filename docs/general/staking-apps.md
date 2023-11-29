@@ -22,10 +22,10 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 ## Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a web3 application
-dedicated to native non-custodial [staking](../learn/learn-staking.md) on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. The dashboard allows to
-stake as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member.
-Users can also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
+dedicated to native non-custodial [staking](../learn/learn-staking.md) on the \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} relay chain. The dashboard allows to stake as a
+solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member. Users can also
+create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
 [Subwallet](../general/wallets-and-extensions.md#subwallet),
 [Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
@@ -95,16 +95,16 @@ addresses and balances, and looking at other accounts.
 [![](https://cdn.discordapp.com/attachments/893485384154095640/1166807359411204228/image.png?ex=654bd508&is=65396008&hm=ddf3dc26f525d0021df4d8879f19973b81040514bfb10423e748d397c7a66329&)](https://sub.id/)
 
 It features a Polkadot [staking page](https://sub.id/validator/polkadot), where you can easily start
-staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choose their preferred
-validators or stake with the recommended validator set.
+staking \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}. Stakers can choose their
+preferred validators or stake with the recommended validator set.
 
 [![](https://cdn.discordapp.com/attachments/893485384154095640/1166807508837474394/image.png?ex=654bd52c&is=6539602c&hm=f78e346cfd364529b1b03d5207a8ad0cd100fc5093ee832eece397e788200cf0&)](https://sub.id/validator/polkadot)
 
 ## NOMI
 
 [NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
-Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
-to offer a unique and enhanced nomination experience, using
+Staking within the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} networks. It
+aims to offer a unique and enhanced nomination experience, using
 [Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
 (MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
 evaluating numerous conflicting traits in the decision-making process. For the analysis, validator

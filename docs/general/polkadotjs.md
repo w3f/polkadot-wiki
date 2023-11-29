@@ -7,9 +7,9 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs
 ---
 
-[**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain in a granular way. Below
-we describe the different components of Polkadot-JS. For more information about Polkadot-JS you can
+[**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with the \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} blockchain in a granular way. Below we
+describe the different components of Polkadot-JS. For more information about Polkadot-JS you can
 consult the [**official documentation**](https://polkadot.js.org/docs/).
 
 ## Polkadot-JS UI
@@ -92,8 +92,8 @@ address.
 ## Polkadot-JS API
 
 The [**Polkadot-JS API**](https://github.com/polkadot-js/api) is a JavaScript API allowing for
-programs to interface with the functionalities of
-{{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }}
+programs to interface with the functionalities of \{\{ polkadot: Polkadot. :polkadot }}\{\{ kusama:
+Kusama. :kusama }}
 
 While interacting with the underlying
 [**@polkadot/api**](https://www.npmjs.com/package/@polkadot/api), most interfaces are generated
@@ -126,8 +126,8 @@ comes down to either [**querying on-chain data**](#querying-on-chain-data) or
 
 ### Querying On-chain Data
 
-To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node and uses JavaScript to return
+To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} node and uses JavaScript to return
 information that the UI will display on the screen. You can choose which node to connect to by
 changing it in the upper-left-hand corner of the screen.
 

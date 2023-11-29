@@ -9,8 +9,8 @@ slug: ../learn-crowdloans
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
-for their parachain bids in a decentralized crowdloan.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} allows parachains to source
+tokens for their parachain bids in a decentralized crowdloan.
 
 :::note Contributing to a crowdloan
 
@@ -35,13 +35,13 @@ a parachain slot auction. The parachain slot auction can also be won directly th
 without community involvement. To reiterate, crowdloan campaigns are just one of the means to win
 auctions, which allow the community to participate in a trustless and permissionless way.
 
-Let's look at a scenario where Project A is hoping to gain a parachain slot on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but they don't have enough tokens to
-bid directly to win the parachain auction. Project A could benefit from starting a new crowdloan
+Let's look at a scenario where Project A is hoping to gain a parachain slot on \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, but they don't have enough tokens to bid
+directly to win the parachain auction. Project A could benefit from starting a new crowdloan
 campaign to help secure a parachain slot. Crowdloans are trustless and are supported natively on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, allowing the community to bond their
-tokens on Project A's behalf for the entire parachain lease duration. This will allow Project A to
-compete with projects that may have access to greater capital, given the project has sufficient
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, allowing the community to bond
+their tokens on Project A's behalf for the entire parachain lease duration. This will allow Project
+A to compete with projects that may have access to greater capital, given the project has sufficient
 community support. In return, the community contributors are rewarded by the projects that win the
 parachain slot, which would compensate for the opportunity cost of bonding their tokens for the
 lease duration.
@@ -72,9 +72,8 @@ need to restart the campaign just because they do not secure a slot on their fir
 
 :::info Crowdloan Submission Deposit Required
 
-To create a new crowdloan campaign, your account must have
-{{ polkadot: 500 DOT :polkadot }}{{ kusama: 100 KSM :kusama }} transferrable which will be reserved
-for the duration of the crowdloan.
+To create a new crowdloan campaign, your account must have \{\{ polkadot: 500 DOT :polkadot }}\{\{
+kusama: 100 KSM :kusama }} transferrable which will be reserved for the duration of the crowdloan.
 
 :::
 
@@ -110,11 +109,12 @@ upgrades (as determined through its local governance).
 
 :::info Minimum Crowdloan Contribution
 
-The minimum balance for contributions for a crowdloan campaign is currently set to
-{{ polkadot: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
-This is to make crowdloans as accessible as possible while maintaining a balance to justify using
-the network's resources.
+The minimum balance for contributions for a crowdloan campaign is currently set to \{\{ polkadot:
+<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>.
+:kusama }} This is to make crowdloans as accessible as possible while maintaining a balance to
+justify using the network's resources.
 
 :::
 

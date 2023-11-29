@@ -7,10 +7,10 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain which is a layer 0
-blockchain, does not support smart contracts natively. However, parachains which are layer 1
-blockchains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are equipped with the
-functionality to support smart contracts.
+The \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} Relay Chain which is a layer
+0 blockchain, does not support smart contracts natively. However, parachains which are layer 1
+blockchains on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} are equipped with
+the functionality to support smart contracts.
 
 The two primary supported smart contract environments are [ink!](#ink) and EVM. There are multiple
 [parachains that support both environments](#parachains).
@@ -52,15 +52,15 @@ Leaving certain logic, such as complex loops that could run indefinitely, to a n
 layer, or even trying to eliminate it, will often be a wiser choice. Parachains try to be proactive,
 while smart contract platforms are event-driven.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and parachians typically use the
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} and parachians typically use the
 _weight-fee model_ and not a _gas-metering model_.
 
 ## Building a Smart Contract
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain does not natively
-support smart contracts. However, since the parachains that connect to
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can support arbitrary state
-transitions, they support smart contracts.
+The \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} relay chain does not natively
+support smart contracts. However, since the parachains that connect to \{\{ polkadot: Polkadot
+:polkadot }}\{\{ kusama: Kusama :kusama }} can support arbitrary state transitions, they support
+smart contracts.
 
 Substrate presently supports smart contracts out-of-the-box in several ways:
 
@@ -171,10 +171,10 @@ smart contract example? Ask us to add it to this page!**
 
 ## Smart Contract Environments
 
-It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} and the development is only now stabilizing. We are actively producing
-content to help developers get up to speed and will maintain the Wiki with the latest resources. You
-should also keep up to date with the following links:
+It is still early for smart contracts on \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama
+:kusama }} and the development is only now stabilizing. We are actively producing content to help
+developers get up to speed and will maintain the Wiki with the latest resources. You should also
+keep up to date with the following links:
 
 ### Parity Tech
 
@@ -190,8 +190,8 @@ should also keep up to date with the following links:
 - [Darwinia](https://darwinia.network/)
 
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
-created and maintained list of different smart contract platforms building on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be found at
+created and maintained list of different smart contract platforms building on \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} can be found at
 [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
@@ -282,11 +282,11 @@ Try deploying a smart contract to Darwinia by following their
 Even though the tooling is still maturing, the advantage of being early will be the familiarity and
 head start on your project, allowing you to innovate and create something truly new.
 
-If you have interesting ideas for smart contracts on
-{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} feel free to drop into the
-{{ polkadot: [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) :polkadot }}
-{{ kusama: [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to
-talk about them. Developers may be interested in joining the
+If you have interesting ideas for smart contracts on \{\{ polkadot: Polkadot, :polkadot }}\{\{
+kusama: Kusama, :kusama }} feel free to drop into the \{\{ polkadot:
+[Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) :polkadot }} \{\{
+kusama: [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to talk
+about them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) :polkadot }} or
 [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the

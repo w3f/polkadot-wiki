@@ -59,18 +59,18 @@ nominators. To understand how validators are elected, check the
 
 :::info On-Chain Data for Reference
 
-On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
+On Kusama, the minimum stake backing a validator in the active set is \{\{ kusama:
+<MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }} \{\{ polkadot:
+<MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the era \{\{
+kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }} \{\{
+polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 
-On Polkadot, the minimum stake backing a validator in the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
+On Polkadot, the minimum stake backing a validator in the active set is \{\{ polkadot:
+<MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }} \{\{ kusama:
+<MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era \{\{
+polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
+\{\{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama
+}}
 
 :::
 
@@ -92,11 +92,12 @@ instead.
 On Kusama, one day is approximately four eras whereas on Polkadot, one era is approximately a day.
 In each era, the validators elected to the active set earn era points which correspond to the actual
 rewards earned that are distributed proportionally to the nominators after deducting the validator
-commission. Currently, the minimum validator commission is set to
-{{ kusama: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>% :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>% :polkadot }}
-which can be set through on-chain governance. For more information rewards and payouts, check the
-[validator payout](../maintain-guides-validator-payout.md) document.
+commission. Currently, the minimum validator commission is set to \{\{ kusama:
+<RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%
+:kusama }} \{\{ polkadot:
+<RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%
+:polkadot }} which can be set through on-chain governance. For more information rewards and payouts,
+check the [validator payout](../maintain-guides-validator-payout.md) document.
 
 ## Run a Kusama Validator
 

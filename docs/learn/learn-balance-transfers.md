@@ -54,16 +54,18 @@ to learn about keep-alive checks and existential deposit.
 
 :::
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are two main ways to
+In \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} there are two main ways to
 transfer funds from one account to another:
 
 - `transfer keep-alive` (default option) will not allow you to send an amount that would allow the
   sending account to be removed due to it going below the
   [existential deposit](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
-  of
-  {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>. :kusama }}
-- `transfer` will allow you to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+  of \{\{ polkadot:
+  <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>.
+  :polkadot }} \{\{ kusama:
+  <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>.
+  :kusama }}
+- `transfer` will allow you to send \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}
   regardless of the consequence. If the balance drops below the existential deposit your account
   will be reaped. It may be that you do not want to keep the account alive (for example, because you
   are moving all of your funds to a different address). To switch the keep-alive check off visit
@@ -71,20 +73,20 @@ transfer funds from one account to another:
 
 :::info
 
-Attempting to send less than the existential deposit to an account with
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: 0 KSM :kusama }} will always fail, no matter if the
-keep-alive check is on or not.
+Attempting to send less than the existential deposit to an account with \{\{ polkadot: 0 DOT
+:polkadot }}\{\{ kusama: 0 KSM :kusama }} will always fail, no matter if the keep-alive check is on
+or not.
 
 :::
 
-For instance, attempting to transfer
-{{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} to an account you just generated
-(and thus has no balance) will fail, since
-{{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} is less than the existential
-deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :kusama }}
-and the account cannot be initialized with such a low balance.
+For instance, attempting to transfer \{\{ polkadot: 0.1 DOT :polkadot }}\{\{ kusama: 0.0001 KSM
+:kusama }} to an account you just generated (and thus has no balance) will fail, since \{\{
+polkadot: 0.1 DOT :polkadot }}\{\{ kusama: 0.0001 KSM :kusama }} is less than the existential
+deposit of \{\{ polkadot:
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>
+:kusama }} and the account cannot be initialized with such a low balance.
 
 :::note
 
@@ -95,9 +97,10 @@ sending account if you attempt to transfer.
 
 ## Vested Transfers
 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock placed on them to account for
-vesting funds. Like other types of locks, these funds cannot be transferred but can be used in other
-parts of the protocol such as voting in governance or being staked as a validator or nominator.
+\{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} may have a lock placed on them to account
+for vesting funds. Like other types of locks, these funds cannot be transferred but can be used in
+other parts of the protocol such as voting in governance or being staked as a validator or
+nominator.
 
 Vesting funds are on a release schedule and unlock a constant number of tokens at each block
 (**linear vesting**) or can unlock the full amount after a specific block number (**cliff
@@ -110,10 +113,10 @@ There are two ways that vesting schedules can be created.
   vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as
   long as the account for which the vesting schedule will be created does not already have one and
   the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
-- A second way is as part of the genesis configuration of the chain. In the case of
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the chain specification genesis
-  script reads the state of the Claims contract that exists on the Ethereum blockchain and creates
-  vesting schedules in genesis for all the allocations registered as being vested.
+- A second way is as part of the genesis configuration of the chain. In the case of \{\{ polkadot:
+  Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, the chain specification genesis script reads
+  the state of the Claims contract that exists on the Ethereum blockchain and creates vesting
+  schedules in genesis for all the allocations registered as being vested.
 
 Vesting schedules have three parameters:
 
@@ -143,10 +146,10 @@ explicitly call an extrinsic to update the lock that is placed on an account.
 
 These extrinsics are exposed from the Vesting pallet.
 
-If you are using the Polkadot-JS UI, when there are
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} available to vest for an account, then you
-will have the ability to unlock {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} which has
-already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+If you are using the Polkadot-JS UI, when there are \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM
+:kusama }} available to vest for an account, then you will have the ability to unlock \{\{ polkadot:
+DOT :polkadot }}\{\{ kusama: KSM :kusama }} which has already vested from the
+[Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 ![unbond](../assets/unlock-vesting.png)
 
@@ -214,15 +217,16 @@ be checked by checking `session.nextKeys` in the chain state for an existing key
 
 ### Existing Recovery Info
 
-{{ polkadot: Currently, Polkadot does not use the
+\{\{ polkadot: Currently, Polkadot does not use the
 [Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
 probably not the reason for your tokens having existing references. :polkadot }}
 
-{{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
-chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps](https://polkadot.js.org/apps/). :kusama }}
+\{\{ kusama: On Kusama, you can check if recovery has been set up by checking the
+`recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in
+[PolkadotJS Apps](https://polkadot.js.org/apps/). :kusama }}
 
 ### Existing Non-Native Assets
 
-Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
+Currently, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
 probably not the reason for your tokens having existing references.

@@ -152,46 +152,56 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
 
 :::
 
-- {{ polkadot: __<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
-  the minimum balance required to have an active account on Polkadot Network. If your account
-  balance drops below the minimum, your account will be reaped. Learn more about
+- \{\{ polkadot:
+  **<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:**
+  :polkadot }} the minimum balance required to have an active account on Polkadot Network. If your
+  account balance drops below the minimum, your account will be reaped. Learn more about
   [Accounts](../learn/learn-accounts.md) and the
   [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
 
-- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
-  the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
-  and earn staking rewards for contributing to the security of the network. Learn more about
+- \{\{ polkadot:
+  **<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:**
+  :polkadot }} the minimum contribution required to join a
+  [nomination pool](../learn/learn-nomination-pools.md) and earn staking rewards for contributing to
+  the security of the network. Learn more about
   [nomination pools](../learn/learn-nomination-pools.md).
 
-- {{ polkadot: __<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>:__ :polkadot }}
-  the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md) for
+- \{\{ polkadot:
+  **<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>:**
+  :polkadot }} the minimum contribution required to participate in
+  [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
 
 - **Around 20 DOT**:
 
-  - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
-    register an [on-chain identity](../learn/learn-identity.md)
-  - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
-    create a [proxy account](../learn/learn-proxies.md).
+  - \{\{ polkadot:
+    **<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:**
+    :polkadot }} register an [on-chain identity](../learn/learn-identity.md)
+  - \{\{ polkadot:
+    **<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:**
+    :polkadot }} create a [proxy account](../learn/learn-proxies.md).
 
-- {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>:__ :polkadot }}
-  the minimum stake required to submit your intent to directly nominate validators.
-- {{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__ :polkadot }}
-  the minimum amount of DOT required to become an active nominator and earn rewards, i.e. the
-  minimum active bond. To increase the chance of earning staking rewards, your stake should not be
-  less than the minimum stake among the active nominators, which is a dynamic threshold. If you have
-  lesser DOT than the minimum active nomination, please consider contributing to
+- \{\{ polkadot:
+  **<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>:**
+  :polkadot }} the minimum stake required to submit your intent to directly nominate validators.
+- \{\{ polkadot:
+  **<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:**
+  :polkadot }} the minimum amount of DOT required to become an active nominator and earn rewards,
+  i.e. the minimum active bond. To increase the chance of earning staking rewards, your stake should
+  not be less than the minimum stake among the active nominators, which is a dynamic threshold. If
+  you have lesser DOT than the minimum active nomination, please consider contributing to
   [nomination pools](../learn/learn-nomination-pools.md). Learn more about
   [becoming a nominator](../learn/learn-nominator.md).
 
-- {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable"/>:__ :polkadot }}
-  you can create your own [nomination pool](../learn/learn-nomination-pools.md).
+- \{\{ polkadot:
+  **<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable"/>:**
+  :polkadot }} you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
 DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is
 a requirement to create proposals, to endorse them and to vote on them when they become referendums.
-Bonding
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
-or 5% of requested funding is a requirement to make a
+Bonding \{\{ polkadot:
+<RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/>
+:polkadot }} or 5% of requested funding is a requirement to make a
 [treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). DOT can also enable
 you to participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).

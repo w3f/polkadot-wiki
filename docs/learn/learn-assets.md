@@ -9,7 +9,7 @@ slug: ../learn-assets
 
 import RPC from "./../../components/RPC-Connection";
 
-Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
+Assets in the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} network can be
 represented on several chains. They can take many forms, from a parachain's native token to on-chain
 representations of off-chain reserves. This page focuses on the latter, namely assets issued by a
 creator (e.g. rights to audited, off-chain reserves held by the creator, or art issued as an NFT).
@@ -17,18 +17,18 @@ creator (e.g. rights to audited, off-chain reserves held by the creator, or art 
 The
 [Asset Hub system parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/)
 hosts data structures and logic that specialize in the creation, management, and use of assets in
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. Although other
+the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} network. Although other
 parachains can host applications dealing with assets on the Asset Hub, the hub can be thought of as
 the "home base" of assets in the network.
 
-The Asset Hub uses {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as its native token. The
-chain yields its governance to its parent Relay Chain and has no inflation or era-based rewards for
-collators (although collators receive a portion of transaction fees). As a
+The Asset Hub uses \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} as its native token.
+The chain yields its governance to its parent Relay Chain and has no inflation or era-based rewards
+for collators (although collators receive a portion of transaction fees). As a
 [system parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-the Asset Hub has a trusted relationship with the Relay Chain, and as such, can teleport
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} between itself and the Relay Chain. That is,
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Asset Hub is just as good as
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Relay Chain.
+the Asset Hub has a trusted relationship with the Relay Chain, and as such, can teleport \{\{
+polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} between itself and the Relay Chain. That is,
+\{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} on the Asset Hub is just as good as \{\{
+polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} on the Relay Chain.
 
 The Asset Hub does not support smart contracts. See the [Advanced](#advanced-techniques) section at
 the bottom for a discussion on using proxy and multisig accounts to replicate oft-used contract
@@ -45,15 +45,17 @@ to learn how to create fungible assets on the Asset Hub.
 :::
 
 Anyone on the network can create assets on the Asset Hub as long as they can reserve the required
-deposit of
-{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-and around
-{{ polkadot: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :kusama }}
-for the metadata. The network reserves the deposit on creation. The creator also must specify a
-unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId` should be the
-canonical identifier for an asset, as the chain does not enforce the uniqueness of metadata like
+deposit of \{\{ polkadot:
+<RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
+:kusama }} and around \{\{ polkadot:
+<RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/>
+:kusama }} for the metadata. The network reserves the deposit on creation. The creator also must
+specify a unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId` should be
+the canonical identifier for an asset, as the chain does not enforce the uniqueness of metadata like
 "name" and "symbol". The creator must also specify a minimum balance, preventing accounts from
 having dust balances.
 
@@ -86,17 +88,17 @@ sufficiency**. Only the network's governance mechanism can deem an asset as _suf
 of a non-sufficient asset can only exist on accounts that are on-chain (i.e. accounts having the
 existential deposit of a sufficient asset). That is, a user could not keep an account on-chain by
 transferring an insufficient asset to it; the account must already be on-chain by having more than
-the existential deposit in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient
-asset). However, assets deemed _sufficient_ can instantiate accounts and pay for transaction fees,
-such that users can transact on the Asset Hub without the need for
-{{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
+the existential deposit in \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} (or a
+sufficient asset). However, assets deemed _sufficient_ can instantiate accounts and pay for
+transaction fees, such that users can transact on the Asset Hub without the need for \{\{ polkadot:
+DOT. :polkadot }}\{\{ kusama: KSM. :kusama }}
 
 :::info Transaction Fees on Polkadot-JS UI
 
 Polkadot-JS UI
 [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812).
-When using Polkadot-JS UI, transaction fee needs to be paid in
-{{ polkadot:  DOT :polkadot }}{{ kusama: KSM :kusama }}.
+When using Polkadot-JS UI, transaction fee needs to be paid in \{\{ polkadot: DOT :polkadot }}\{\{
+kusama: KSM :kusama }}.
 
 :::
 
@@ -136,9 +138,9 @@ transfer all 25.
 
 Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover
 the existential deposit and transaction fees for future transfers. Failing to do so will cause the
-asset transfer to fail. The transfer will be successful for sufficient assets, but without
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens, you will not be able to transfer
-those assets from the receiver account through Polkadot-JS UI. The feature request to
+asset transfer to fail. The transfer will be successful for sufficient assets, but without \{\{
+polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} tokens, you will not be able to transfer those
+assets from the receiver account through Polkadot-JS UI. The feature request to
 [enable sufficient assets for transaction fee payment on Polkadot-JS UI](https://github.com/polkadot-js/apps/issues/7812)
 is yet to be implemented.
 

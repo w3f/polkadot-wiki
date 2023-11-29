@@ -51,19 +51,19 @@ its full state.
 
 ### Fishermen: Deprecated
 
-Fishermen are not available on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and
-are not planned for formal implementation, despite previous proposals in the
+Fishermen are not available on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+and are not planned for formal implementation, despite previous proposals in the
 [AnV protocol](./learn-parachains-protocol.md#availability-and-validity-anv-protocol).
 
 The idea behind Fishermen is that they are full nodes of parachains, like collators, but perform a
-different role in relation to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+different role in relation to the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 network. Instead of packaging the state transitions and producing the next parachain blocks as
 collators do, fishermen will watch this process and ensure no invalid state transitions are
 included.
 
 To address the motivation behind the Fishermen design consideration, the current
 [secondary backing checkers](#assignments--secondary-checks) perform a similar role in relation to
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. From a security
+the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} network. From a security
 standpoint, security is based on having at least one honest validator either among parachain
 validators or secondary checker (more about this later on).
 
@@ -176,8 +176,9 @@ later on) that will be sent to all validators in the network.
 
 :::info Polkadot guarantees valid state transitions, not valid states
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validators do not inspect every value
-in a parachain's state, only those that are modified. This insures that the modification is valid.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} validators do not inspect every
+value in a parachain's state, only those that are modified. This insures that the modification is
+valid.
 
 :::
 
@@ -210,14 +211,14 @@ the network can consider the candidate block available. The block is graduated t
 parachain block, and its header will be included in that fork of the Relay Chain. The information
 about the candidate availability is noted in the subsequent relay chain blocks of that fork.
 
-The availability check by the block author ensures that
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will only include blocks for which
-the validators distributed their erasure-coded chunks, but it does not guarantee their validity.
-Because the number of para-validators on each parachain is so low, collusion is a reasonable
-concern. By separating block production ([BABE](./learn-consensus.md#block-production-babe)) from
-finality ([GRANDPA](./learn-consensus.md/#finality-gadget-grandpa)),
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can perform extra validity checks
-after a block is produced but before it is finalized.
+The availability check by the block author ensures that \{\{ polkadot: Polkadot :polkadot }}\{\{
+kusama: Kusama :kusama }} will only include blocks for which the validators distributed their
+erasure-coded chunks, but it does not guarantee their validity. Because the number of
+para-validators on each parachain is so low, collusion is a reasonable concern. By separating block
+production ([BABE](./learn-consensus.md#block-production-babe)) from finality
+([GRANDPA](./learn-consensus.md/#finality-gadget-grandpa)), \{\{ polkadot: Polkadot :polkadot }}\{\{
+kusama: Kusama :kusama }} can perform extra validity checks after a block is produced but before it
+is finalized.
 
 Thus, once the parablock is considered available and part of the parachain, it is still "pending
 approval". The Inclusion Pipeline must conclude for a specific parachain before a new block can be
@@ -385,9 +386,9 @@ For detailed information about chain selection, see dedicated section in
 ## Candidate Receipts
 
 PoV are typically between 1 MB and 10 MB in size and are not included in the Relay Chain blocks. For
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to scale to hundreds of parachains,
-PoV need to be represented by something smaller on the Relay Chain: candidate receipts. A
-para-validator constructs a candidate receipt for a parachain block by signing:
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} to scale to hundreds of
+parachains, PoV need to be represented by something smaller on the Relay Chain: candidate receipts.
+A para-validator constructs a candidate receipt for a parachain block by signing:
 
 - The parachain ID.
 - The collator's ID and signature.
@@ -409,22 +410,23 @@ constructs the receipt must also construct an erasure coding of the parachain bl
 
 An erasure coding takes a message (in this case, the parachain block and PoV) and creates a set of
 smaller messages such that you can reconstruct the original message by obtaining a fraction of the
-smaller messages. In the case of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
-total number of smaller messages is equal to the total number of validators and the fraction is 1/3.
+smaller messages. In the case of \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+the total number of smaller messages is equal to the total number of validators and the fraction is
+1/3.
 
 The para-validator creates the erasure coding chunks, puts them into their Merkle tree, and sends
 out each chunk (together with the candidate receipt) to a corresponding validator on the Relay
 Chain. Validators who receive the receipts with an erasure coding chunk will include the receipt in
 the Relay Chain queue, where an author can include it in a block.
 
-The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
-availability scheme are
+The type of erasure codes used by \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama
+}}'s availability scheme are
 [Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction) codes, which
 already enjoy a battle-tested application in technology outside the blockchain industry. One example
 is found in the compact disk industry. CDs use Reed-Solomon codes to correct any missing data due to
 inconsistencies on the disk face such as dust particles or scratches.
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the erasure codes are used to
+In \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, the erasure codes are used to
 keep parachain state available to the system without requiring all validators to keep tabs on all
 the parachains. Instead, validators share smaller pieces of the data and can later reconstruct the
 entire data under the assumption that 1/3+1 of the validators can provide their pieces of the data.
@@ -432,8 +434,8 @@ entire data under the assumption that 1/3+1 of the validators can provide their 
 :::note
 
 The 1/3+1 threshold of validators that must be responsive to construct the full parachain state data
-corresponds to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s security assumption
-about Byzantine nodes.
+corresponds to \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}'s security
+assumption about Byzantine nodes.
 
 :::
 

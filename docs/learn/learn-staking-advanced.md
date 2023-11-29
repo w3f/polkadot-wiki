@@ -30,38 +30,39 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. You can now stake on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
-{{ polkadot: <RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
-and earn staking rewards. For additional information, check out
+help you get started. You can now stake on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} natively with just \{\{ polkadot:
+<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>
+:kusama }} and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 :::
 
-This page is meant to be an advanced guide to staking with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For a more general introduction,
-checkout the [Introduction to Staking](./learn-staking.md) page.
+This page is meant to be an advanced guide to staking with \{\{ polkadot: Polkadot :polkadot }}\{\{
+kusama: Kusama :kusama }}. For a more general introduction, checkout the
+[Introduction to Staking](./learn-staking.md) page.
 
 ## Staking Proxies
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes it possible to create accounts
-having special permissions also called **proxy accounts**. For mode details about proxy accounts
-visit the [dedicated page](./learn-proxies.md) on this wiki.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} makes it possible to create
+accounts having special permissions also called **proxy accounts**. For mode details about proxy
+accounts visit the [dedicated page](./learn-proxies.md) on this wiki.
 
 Proxy accounts are special accounts which can sign
 [**extrinsic calls**](./learn-extrinsics.md/#pallets-and-extrinsics) made to specific **pallets** on
 behalf of the proxied account. There is thus the possibility to create staking proxy accounts that
 can be used to sign extrinsic calls specific to the staking, session and utility pallets.
 
-Staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
-action, as a nominator you will need to monitor the performance of your validators and make changes
-if needed. There will be this transactions such as nominating that will be needed to regularly
-signed. Each time you sign with an account, in the case of hot accounts, you expose the private key
-of that account to the internet with consequent risk of attack. A hot stash will be exposed all the
-time a transaction is signed. Even in the case of a cold stash created with a Ledger device, signing
-with the stash will build a transaction history that might tell something about your habits and
-preferences, or even your location.
+Staking on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} is not a
+set-and-forget action, as a nominator you will need to monitor the performance of your validators
+and make changes if needed. There will be this transactions such as nominating that will be needed
+to regularly signed. Each time you sign with an account, in the case of hot accounts, you expose the
+private key of that account to the internet with consequent risk of attack. A hot stash will be
+exposed all the time a transaction is signed. Even in the case of a cold stash created with a Ledger
+device, signing with the stash will build a transaction history that might tell something about your
+habits and preferences, or even your location.
 
 Ideally, accounts with high economic power like the stash must be and remain as isolated as
 possible. With a staking proxy, the stash account is fully isolated when signing for staking-related
@@ -92,9 +93,9 @@ For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZ
 
 :::
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS nomination intents are
+In \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}'s NPoS nomination intents are
 placed in a semi-sorted list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
-{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }} The
+\{\{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }} The
 Bags-List substrate pallet is designed to be self-maintaining, with minimal effort from the
 blockchain, making it extremely scalable. The bags list has two primary components, bags and nodes
 (or nominators' accounts), with bags containing the nodes with bonded balance within a specific
@@ -138,13 +139,14 @@ rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) secti
 information.
 
 The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime
-storage. In the current staking system configuration, the bags list keeps
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nomination intents, of which, at most
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
-come out as the electing nominators. See
+storage. In the current staking system configuration, the bags list keeps \{\{ polkadot:
+<RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+\{\{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>
+:kusama }} nomination intents, of which, at most \{\{ polkadot:
+<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>
+:kusama }} come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 This means that only a portion of the nomination intents is kept. Once the nomination period ends,
@@ -166,12 +168,14 @@ staking/election system.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
-nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
-the number of tokens bonded is higher than the minimum active bond. For more information, see the
-[nominator guide](learn-nominator.md).
+Submitting a nomination intent does not guarantee staking rewards. The stake of the top \{\{
+polkadot:
+<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>
+:kusama }} nominators is applied to the validators in the active set. To avail of staking rewards,
+ensure that the number of tokens bonded is higher than the minimum active bond. For more
+information, see the [nominator guide](learn-nominator.md).
 
 :::
 
@@ -266,19 +270,23 @@ since staking participation is changing dynamically, it works well as an indicat
 
 There is an additional factor to consider in terms of rewards. While there is no limit to the number
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is
-currently
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>, :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>, :kusama }}
-although this can be modified via runtime upgrade. A validator with more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators is _oversubscribed_. When payouts occur, only the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> :kusama }}
-nominators as measured by the amount of stake allocated to that validator will receive rewards. All
-other nominators are essentially "wasting" their stake - they used their nomination to elect that
-validator to the active stake, but receive no rewards in exchange for doing so.
+can pay rewards. In \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} this limit is
+currently \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>,
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>,
+:kusama }} although this can be modified via runtime upgrade. A validator with more than \{\{
+polkadot:
+<RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:kusama }} nominators is _oversubscribed_. When payouts occur, only the top \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/>
+:kusama }} nominators as measured by the amount of stake allocated to that validator will receive
+rewards. All other nominators are essentially "wasting" their stake - they used their nomination to
+elect that validator to the active stake, but receive no rewards in exchange for doing so.
 
 Note that the network slashes a validator for a misbehavior (e.g. validator offline, equivocation,
 etc.) the slashed amount is a fixed percentage (and not a fixed amount), which means that validators
@@ -408,10 +416,10 @@ already maxed out.
 
 ## Simple Payouts
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes stakers claim their rewards for
-past eras by submitting a transaction. This naturally leads to spreading out reward distribution, as
-people make transactions at disparate times, rather than updating the accounts of all stakers in a
-single block.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} makes stakers claim their rewards
+for past eras by submitting a transaction. This naturally leads to spreading out reward
+distribution, as people make transactions at disparate times, rather than updating the accounts of
+all stakers in a single block.
 
 Even if everyone submitted a reward claim at the same time, the fact that they are individual
 transactions would allow the block construction algorithm to process only a limited number per block
@@ -419,15 +427,15 @@ and ensure that the network maintains a constant block time. If all rewards were
 block, this could cause serious issues with the stability of the network.
 
 Simple payouts require one transaction per validator, per [era](../general/glossary.md##era), to
-claim rewards. The reason {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} requires
-this is to avoid an attack where someone has several thousand accounts nominating a single
-validator. The major cost in reward distribution is mutating the accounts in storage, and
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} cannot pay out several thousand
+claim rewards. The reason \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+requires this is to avoid an attack where someone has several thousand accounts nominating a single
+validator. The major cost in reward distribution is mutating the accounts in storage, and \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} cannot pay out several thousand
 accounts in a single transaction.
 
 ### Claiming Rewards
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} stores the last 84 eras of reward
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} stores the last 84 eras of reward
 information (e.g. maps of era number to validator points, staking rewards, nomination exposure,
 etc.). Rewards will not be claimable more than 84 eras after they were earned. This means that all
 rewards must be claimed within a maximum of 84 eras, although under certain circumstances (described
@@ -543,10 +551,11 @@ A maximum of `pallet::Config::SignedMaxSubmissions` will be stored on-chain and 
 based on score. Higher the score the more optimal the election solution is. On both Polkadot and
 Kusama the
 ['SignedMaxSubmissions'](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L390)
-is set to
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :kusama }}
-submissions. This variable can be modified if needed through governance.
+is set to \{\{ polkadot:
+<RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>
+:kusama }} submissions. This variable can be modified if needed through governance.
 
 Upon arrival of a new solution:
 
@@ -591,26 +600,29 @@ to receiving a `SignedRewardBase`.
 
 #### Deposit
 
-Current deposit(`SignedDepositBase`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/> :kusama }}
-which is a fixed amount.
+Current deposit(`SignedDepositBase`) is \{\{ polkadot:
+<RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/>
+:kusama }} which is a fixed amount.
 
-Current deposit per byte(`SignedDepositByte`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/> :kusama }}
-and the total is variable depending on the size of the solution data. For example, a solution
-weighing 200KB would yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
-{{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
+Current deposit per byte(`SignedDepositByte`) is \{\{ polkadot:
+<RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/>
+:kusama }} and the total is variable depending on the size of the solution data. For example, a
+solution weighing 200KB would yield \{\{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**.
+:polkadot }} \{\{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
 
 And the weight deposit(`SignedDepositWeight`) is currently set to `0` and has no effect.
 
 #### Reward
 
-Current reward(`SignedRewardBase`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-which is a fixed amount.
+Current reward(`SignedRewardBase`) is \{\{ polkadot:
+<RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/>
+:kusama }} which is a fixed amount.
 
 ### Further Resources
 

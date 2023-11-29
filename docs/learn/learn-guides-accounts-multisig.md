@@ -70,14 +70,17 @@ The deposit is dependent on the `threshold` parameter and is calculated as follo
 Deposit = depositBase + threshold * depositFactor
 ```
 
-Where `depositBase` and `depositFactor` are chain constants (in
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} units) set in the runtime code. Currently,
-the deposit base equals
-{{ polkadot: <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={669599996400} filter="humanReadable"/> :kusama }}
-and the deposit factor equals
-{{ polkadot: <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>. :kusama }}
+Where `depositBase` and `depositFactor` are chain constants (in \{\{ polkadot: DOT :polkadot }}\{\{
+kusama: KSM :kusama }} units) set in the runtime code. Currently, the deposit base equals \{\{
+polkadot:
+<RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.multisig.depositBase" defaultValue={669599996400} filter="humanReadable"/>
+:kusama }} and the deposit factor equals \{\{ polkadot:
+<RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>.
+:kusama }}
 
 ### Example using Multisig Accounts
 

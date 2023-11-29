@@ -17,12 +17,12 @@
   // }
   "Polkadot braces": {
     "prefix": "pol",
-    "body": ["{{ polkadot: :polkadot }}"],
+    "body": ["\{\{ polkadot: :polkadot }}"],
     "description": "Polkadot wiki conditional rendering for Polkadot strings"
   },
   "Kusama braces": {
     "prefix": "pol",
-    "body": ["{{ kusama: :kusama }}"],
+    "body": ["\{\{ kusama: :kusama }}"],
     "description": "Polkadot wiki conditional rendering for Kusama strings"
   }
 }

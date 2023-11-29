@@ -206,13 +206,14 @@ command. After these jobs are completed, the CICD production workflow will autom
 The two Wikis support conditional rendering depending on which Wiki is being deployed. This is
 useful for mirrored pages with most content in common but have minor differences. To use this
 functionality, surround Kusama specific content with
-`{{ kusama: KUSAMA_SPECIFIC_CONTENT :kusama }}`, and polkadot specific content with
-`{{ polkadot: POLKADOT_SPECIFIC_CONTENT :polkadot }}`.
+`\{\{ kusama: KUSAMA_SPECIFIC_CONTENT :kusama }}`, and polkadot specific content with
+`\{\{ polkadot: POLKADOT_SPECIFIC_CONTENT :polkadot }}`.
 
 For example the syntax:
 
 ```markdown
-The {{ polkadot: Polkdadot Wiki :polkadot }} {{ kusama: Kusama Guide :kusama }} is a great resource!
+The \{\{ polkadot: Polkdadot Wiki :polkadot }} \{\{ kusama: Kusama Guide :kusama }} is a great
+resource!
 ```
 
 Will render:
@@ -257,20 +258,20 @@ that will not be modified by the prettier command:
 Always wrap RPC components in conditional rendering & keep them on new lines:
 
 ```
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
+\{\{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
+\{\{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
 ```
 
 To add grammar without added spacing, place the grammar inside the conditional brackets:
 
 ```
 The validator count followed by a period is
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>. :kusama }}
+\{\{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>. :polkadot }}
+\{\{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>. :kusama }}
 
 The validator count in parentheses is
-{{ polkadot: (<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>) :polkadot }}
-{{ kusama: (<RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>) :kusama }}
+\{\{ polkadot: (<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>) :polkadot }}
+\{\{ kusama: (<RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>) :kusama }}
 ```
 
 Failing to follow this schema can results in unexpected formatting, such as added line-breaks or

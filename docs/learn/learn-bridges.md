@@ -19,11 +19,10 @@ progress. It will be updated as more information is determined and available.
 
 :::info Purpose of bridging
 
-Bridges are specifically for making the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem compatible with external
-blockchains such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
-interoperability technology that allows parachains to communicate trustlessly, please see the
-dedicated [cross consensus](learn-xcm.md) page on the Wiki.
+Bridges are specifically for making the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} ecosystem compatible with external blockchains such as Bitcoin, Ethereum, or Tezos (among
+others). For information on XCM, the native interoperability technology that allows parachains to
+communicate trustlessly, please see the dedicated [cross consensus](learn-xcm.md) page on the Wiki.
 
 :::
 
@@ -42,24 +41,23 @@ following methods (ordered by suggested methodology):
 
 ### via Bridge Pallets
 
-Receiving messages on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} from an
+Receiving messages on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} from an
 external, non-parachain blockchain can be possible through a Substrate pallet. The Substrate
-instance can then be deployed to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-either as a system-level parachain (native extension to the core
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} software) or as a community-operated
-parachain.
+instance can then be deployed to \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+either as a system-level parachain (native extension to the core \{\{ polkadot: Polkadot :polkadot
+}}\{\{ kusama: Kusama :kusama }} software) or as a community-operated parachain.
 
 An example of a bridge that would strictly use bridge pallets would be a Kusama `<->` Polkadot
 bridge, since both use parachains based on Substrate.
 
-For the standalone chains that will not have a parachain bridging module on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (non-Substrate), it will be necessary
-to deploy bridge contracts (see below).
+For the standalone chains that will not have a parachain bridging module on \{\{ polkadot: Polkadot
+:polkadot }}\{\{ kusama: Kusama :kusama }} (non-Substrate), it will be necessary to deploy bridge
+contracts (see below).
 
 ### via Smart Contracts
 
 Given the generality of blockchain platforms with Turing-complete smart contract languages, it is
-possible to bridge {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and any other
+possible to bridge \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} and any other
 smart contract capable blockchain.
 
 Those who are already familiar with Ethereum may know of the now archived
@@ -72,8 +70,8 @@ Conversely, ERC-20 tokens deposited back into the contract on `side` can free up
 
 :::note
 
-To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, check out this explainer video
+To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, check out this explainer video
 [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
 
 :::
@@ -94,11 +92,10 @@ it does not support smart-contracts and it's not based on Substrate.
 
 As explained by Dr. Gavin Wood in a
 [blog post](https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13) from
-late 2019, there are three ways that the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate ecosystem can be
-bridged to the Ethereum ecosystem.
+late 2019, there are three ways that the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} and Substrate ecosystem can be bridged to the Ethereum ecosystem.
 
-1. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} <-> Ethereum Public Bridge.
+1. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} <-> Ethereum Public Bridge.
 1. Substrate <-> Parity Ethereum (Openethereum) Bridge.
 1. The Substrate EVM module.
 

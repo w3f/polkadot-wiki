@@ -48,13 +48,12 @@ milestones, then their code is most likely of reasonable quality.
 Furthermore, Web3 Foundation is not the only entity in the ecosystem that provides grants. Other
 reputable teams in the ecosystem that have developed platforms or prospective parachains provide
 grants for projects to build on or expand their project. These are also indicators that a project is
-committed to building on the broader {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }}
-ecosystem.
+committed to building on the broader \{\{ polkadot: Polkadot :Polkadot }}\{\{ kusama: Kusama :kusama
+}} ecosystem.
 
-Receiving funding from reputable VCs and are known to be involved with other reputable
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} projects can also be a good
-indicator. Or participating in the
-[Substrate Builders Program](https://www.substrate.io/builders-program/).
+Receiving funding from reputable VCs and are known to be involved with other reputable \{\{
+polkadot: Polkadot :Polkadot }}\{\{ kusama: Kusama :kusama }} projects can also be a good indicator.
+Or participating in the [Substrate Builders Program](https://www.substrate.io/builders-program/).
 
 **However**, claiming such associations and having them is not always the same thing. **You always
 need to verify any claims a project makes**, and that is probably the most critical takeaway from
@@ -170,21 +169,20 @@ community, providing guidance and answers, which is always a good sign.
 But if the team are ghosts that do not show up anywhere and only engage with the community through
 proxies, this can be considered a red flag and extra precaution should be taken.
 
-Besides their community, projects that are serious about building on
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} usually engage with the broader
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} community. They are active in the
-various [Polkadot and Kusama channels](https://wiki.polkadot.network/docs/community/), and some of
-them are [Polkadot Ambassadors](https://polkadot.network/polkadot-ambassador-program/), or generally
+Besides their community, projects that are serious about building on \{\{ polkadot: Polkadot
+:Polkadot }}\{\{ kusama: Kusama :kusama }} usually engage with the broader \{\{ polkadot: Polkadot
+:Polkadot }}\{\{ kusama: Kusama :kusama }} community. They are active in the various
+[Polkadot and Kusama channels](https://wiki.polkadot.network/docs/community/), and some of them are
+[Polkadot Ambassadors](https://polkadot.network/polkadot-ambassador-program/), or generally
 prominent members of the ecosystem.
 
 #### 6. Clear integration
 
-There are many ways for a project to build on
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }}. Perhaps the most direct one is to
-aim to become a parachain. Some of the most notable
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} projects are already parachains on
-Kusama or gearing up to become one, and most of them may also bid for Polkadot parachain slots when
-live.
+There are many ways for a project to build on \{\{ polkadot: Polkadot :Polkadot }}\{\{ kusama:
+Kusama :kusama }}. Perhaps the most direct one is to aim to become a parachain. Some of the most
+notable \{\{ polkadot: Polkadot :Polkadot }}\{\{ kusama: Kusama :kusama }} projects are already
+parachains on Kusama or gearing up to become one, and most of them may also bid for Polkadot
+parachain slots when live.
 
 Of course, getting a parachain slot on either of the two main networks is not guaranteed, and all
 projects will need to win an [auction](https://kusama.network/auctions/) for a parachain slot.
@@ -203,27 +201,26 @@ parachain. Some use it simply because of its infrastructure to build their custo
 any plans to connect to the Relay Chain. And other projects may aim to become a parachain only on
 Kusama or directly on Polkadot.
 
-However, building a potential parachain is not the only way to build on
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} and expand its ecosystem. A project
-might aim to build a DeFi platform on a parachain, launch a stablecoin or other token on the Asset
-Hub, build a decentralized exchange, or any other dApp that one might think of, without ever
-touching the Relay Chain. And that's the beauty of
-{{ polkadot: Polkadot! :Polkadot }}{{ kusama: Kusama! :kusama }}
+However, building a potential parachain is not the only way to build on \{\{ polkadot: Polkadot
+:Polkadot }}\{\{ kusama: Kusama :kusama }} and expand its ecosystem. A project might aim to build a
+DeFi platform on a parachain, launch a stablecoin or other token on the Asset Hub, build a
+decentralized exchange, or any other dApp that one might think of, without ever touching the Relay
+Chain. And that's the beauty of \{\{ polkadot: Polkadot! :Polkadot }}\{\{ kusama: Kusama! :kusama }}
 
-But in all of those cases, their plans to build on
-{{ polkadot: Polkadot, :Polkadot }}{{ kusama: Kusama, :kusama }} whatever they may be, should be
-clearly stated on their site and in their documentation. Most importantly, you should look for an
-explanation of _how_ they plan to achieve that integration. A roadmap that places the integration at
-some point in the future means close to nothing without clearly stating the steps to get there.
-These plans should be evaluated in tandem with your research on the technical expertise of the team.
+But in all of those cases, their plans to build on \{\{ polkadot: Polkadot, :Polkadot }}\{\{ kusama:
+Kusama, :kusama }} whatever they may be, should be clearly stated on their site and in their
+documentation. Most importantly, you should look for an explanation of _how_ they plan to achieve
+that integration. A roadmap that places the integration at some point in the future means close to
+nothing without clearly stating the steps to get there. These plans should be evaluated in tandem
+with your research on the technical expertise of the team.
 
 This is especially true for projects that are already running on another network, like on Ethereum
 or Binance Smart Chain, and have issued tokens there. Many projects do that either to raise funds
 and test their infrastructure or because they aim to build a "multi-chain" solution or both. But
 because those projects are not currently built on Substrate, the existence of a clear and robust
-integration plan with {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} should be
-essential in your research to ensure that they will indeed build on
-{{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} one day.
+integration plan with \{\{ polkadot: Polkadot :Polkadot }}\{\{ kusama: Kusama :kusama }} should be
+essential in your research to ensure that they will indeed build on \{\{ polkadot: Polkadot
+:Polkadot }}\{\{ kusama: Kusama :kusama }} one day.
 
 ## "Soft" metrics
 

@@ -11,8 +11,8 @@ import RPC from "./../../components/RPC-Connection";
 
 ## Account Address Format
 
-An account created for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can also be
-used on multiple chains in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+An account created for \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} can also
+be used on multiple chains in the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 ecosystem. More specifically, the account of a chain that uses the `*25519` account address format
 (the latest list can be accessed on the
 [ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
@@ -40,9 +40,9 @@ Account you are using on multiple chains and recommends using different Accounts
 
 On Polkadot-JS Extension, you can copy your address by clicking the account's icon while the desired
 chain format is active. E.g. selecting "Substrate" as the format will change your address, and
-clicking the colorful icon of your account will copy it in that format. While in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} mode, that address format will be
-copied, and so on.
+clicking the colorful icon of your account will copy it in that format. While in \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} mode, that address format will be copied, and so
+on.
 
 ## Polkadot-JS Browser Extension
 
@@ -58,7 +58,7 @@ For guidelines about how to create an account using the Polkadot Extension, see
 
 The Polkadot-JS Browser Extension (the Polkadot Extension) provides a reasonable balance of security
 and usability. It provides a separate local mechanism to generate your address and interact with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}.
 
 This method involves installing the Polkadot Extension and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows the signing of transactions and
@@ -98,8 +98,8 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
 `ACCOUNT 1` using the browser extension, you must follow the following steps:
 
 - Go to `ACCOUNT 1` on the browser extension and click "Forget account". This action will delete the
-  access to your account. Note that your tokens are still in your account on the
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain network.
+  access to your account. Note that your tokens are still in your account on the \{\{ polkadot:
+  Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} blockchain network.
 - On the browser extension click the "+" button in the top right corner and select the option
   "Import account from pre-existing seed". After entering the mnemonic phrase, you can choose a new
   password, `PSW 2`.

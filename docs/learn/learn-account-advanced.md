@@ -249,9 +249,9 @@ with the second. These derivation methods have their use cases, given that the p
 the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
 recommended to generate the account using a hard derivation path.
 
-Many {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support
-hard and soft derivation. For instance, if you intend to create an account to be used on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
+Many \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} key generation tools support
+hard and soft derivation. For instance, if you intend to create an account to be used on the \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
 child account using **//** after the mnemonic phrase.
 
 ```
@@ -328,7 +328,8 @@ derived accounts using the Ledger Live App, but it is possible to do so using Po
 [the accounts page](../learn/learn-accounts.md) for more information about derived accounts and
 derivation paths.
 
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
+\{\{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama
+account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
 
 ## System Accounts
 
@@ -341,8 +342,8 @@ interact with this account. These accounts can never issue a signed
 
 :::info Explore System Accounts
 
-Treasury account address -
-{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+Treasury account address - \{\{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB`
+:polkadot }}\{\{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
 
 You can view the existing system accounts on
 [Subscan](https://polkadot.subscan.io/account_list?role=module).
@@ -359,11 +360,14 @@ nomination pool and parachain accounts as well.
 
 ## Indices
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
-is like a short and easy-to-remember version of an address. Claiming an index requires a deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.indices.deposit" defaultValue={33333333300} filter="humanReadable"/> :kusama }}
-that is released when the index is cleared. Any index can be claimed if it is not taken by someone
-else.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} addresses can have indices. An
+index is like a short and easy-to-remember version of an address. Claiming an index requires a
+deposit of \{\{ polkadot:
+<RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>
+:polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.indices.deposit" defaultValue={33333333300} filter="humanReadable"/>
+:kusama }} that is released when the index is cleared. Any index can be claimed if it is not taken
+by someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_

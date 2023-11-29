@@ -26,22 +26,25 @@ does not require an extension or wallet as an interface.
 :::info Stake through Nomination Pools
 
 The minimum amount required to become an active nominator and earn rewards may change from era to
-era.
-{{ polkadot: It is currently __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={3269785922095} filter="humanReadable"/>__. :polkadot }}
-{{ kusama: It is currently __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__. :kusama }}
-If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
-nomination and still want to participate in staking, you can join the nomination pools. You can now
-stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
-{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
-in the nomination pools and earn staking rewards. For additional information, check out
+era. \{\{ polkadot: It is currently
+**<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={3269785922095} filter="humanReadable"/>**.
+:polkadot }} \{\{ kusama: It is currently
+**<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>**.
+:kusama }} If you have less \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} than the
+minimum active nomination and still want to participate in staking, you can join the nomination
+pools. You can now stake on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+natively with just \{\{ polkadot:
+**<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>**
+:polkadot }} \{\{ kusama:
+**<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>**
+:kusama }} in the nomination pools and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 :::
 
-Here you will learn about what staking is, why it is important and how it works on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Here you will learn about what staking is, why it is important and how it works on \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}.
 
 ## Proof-of-Stake (PoS)
 
@@ -62,9 +65,9 @@ who are responsible for adding blocks to the chain must compete to solve difficu
 puzzles to add blocks - a solution that has been criticized for the wastage of energy. For doing
 this work, miners are typically rewarded with tokens.
 
-In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of
-the network depends on the amount of capital locked on the chain: the more the capital locked, the
-lower the chance of an attack on the network, as the attacker needs to incur a heavy loss to
+In PoS networks like \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} the security
+of the network depends on the amount of capital locked on the chain: the more the capital locked,
+the lower the chance of an attack on the network, as the attacker needs to incur a heavy loss to
 orchestrate a successful attack (more on this later on). The process of locking tokens on the chain
 is called **staking**.
 
@@ -86,48 +89,51 @@ PoS network rewards good behavior and punishes bad behavior.
 
 ## Nominated Proof-of-Stake (NPoS)
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} implements
 [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake), a relatively novel
 and sophisticated mechanism to select the validators who are allowed to participate in its
-[consensus](learn-consensus.md) protocol. NPoS encourages
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as **nominators**.
+[consensus](learn-consensus.md) protocol. NPoS encourages \{\{ polkadot: DOT :polkadot }}\{\{
+kusama: KSM :kusama }} holders to participate as **nominators**.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
-are made public to all nominators, and a nominator, in turn, submits a list of up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+are made public to all nominators, and a nominator, in turn, submits a list of up to \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }} \{\{
+kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 candidates that it supports, and the network will automatically distribute the stake among
 validators in an even manner so that the economic security is maximized. In the next era, a certain
-number of validators having the most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing
-get elected and become active. For more information about the election algorithm go to
+number of validators having the most \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}
+backing get elected and become active. For more information about the election algorithm go to
 [this](learn-phragmen.md) page on the wiki or
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Paper) research article. As a
-nominator, a minimum of
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-is required to submit an intention to nominate, which can be thought of as registering to be a
-nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
+nominator, a minimum of \{\{ polkadot:
+<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>
+:kusama }} is required to submit an intention to nominate, which can be thought of as registering to
+be a nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
 in-depth review of NPoS see
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
-Although the minimum nomination intent is
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>, :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>, :kusama }}
-it does not guarantee staking rewards. The nominated amount has to be greater than
+Although the minimum nomination intent is \{\{ polkadot:
+<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>,
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>,
+:kusama }} it does not guarantee staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
-which is a dynamic value that can be much higher than
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
-This dynamic value depends on the amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-being staked, in addition to the selected nominations.
+which is a dynamic value that can be much higher than \{\{ polkadot:
+<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>.
+:kusama }} This dynamic value depends on the amount of \{\{ polkadot: DOT :polkadot }}\{\{ kusama:
+KSM :kusama }} being staked, in addition to the selected nominations.
 
 :::
 
 ### Nominating Validators
 
-Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} requires 2 actions:
+Nominating on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} requires 2 actions:
 
 - Locking tokens on-chain.
 - Selecting a set of validators, to whom these locked tokens will automatically be allocated to.
@@ -140,38 +146,38 @@ tokens will be referred to as bonded tokens.
 
 Once the previous 2 steps are completed and you are nominating, your bonded tokens could be
 allocated to one or more of your selected validators, and this happens every time the active
-validator set changes. This validator set is updated every era on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+validator set changes. This validator set is updated every era on \{\{ polkadot: Polkadot :polkadot
+}}\{\{ kusama: Kusama :kusama }}.
 
-Unlike other staking systems, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+Unlike other staking systems, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 automatically chooses which of your selected validators will be backed by your bonded tokens.
 Selecting a group of validators increases your chances of consistently backing at least one who is
 active. This results in your bonded tokens being allocated to validators more often, which means
 more network security and more rewards. This is in strong contrast to other staking systems that
 only allow you to back one validator; if that validator is not active, you as a staker will also not
-be. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s nomination model solves this.
+be. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}'s nomination model solves
+this.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging from election
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} uses tools ranging from election
 theory to game theory to discrete optimization, to develop an efficient validator selection process
 that offers fair representation and security, thus avoiding uneven power and influence among
-validators. The election algorithms used by
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are based on the Proportional
-Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information
-about PJR methods visit [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview)
-research article.
+validators. The election algorithms used by \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} are based on the Proportional Justified Representation (PJR) methods like
+[Phragmen](learn-phragmen.md). For more information about PJR methods visit
+[this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 ### Eras and Sessions
 
 The stake from nominators is used to increase the number of tokens held by such candidates,
 increasing their chance of being selected by the election algorithm for block production during a
-specific **era**. An era is a period of {{ polkadot: 24 :polkadot }}{{ kusama: 6 :kusama }} hours
-during which an **active set** of validators is producing blocks and performing other actions on the
-chain. This means that not all validators are in the active set and such set changes between eras.
-Each era is divided into 6 epochs or **sessions** during which validators are assigned as block
-producers to specific time frames or **slots**. This means that validators know the slots when they
-will be required to produce a block within a specific session, but they do not know all the slots
-within a specific era. Having sessions adds a layer of security because it decreases the chance of
-having multiple validators assigned to a slot colluding to harm the network.
+specific **era**. An era is a period of \{\{ polkadot: 24 :polkadot }}\{\{ kusama: 6 :kusama }}
+hours during which an **active set** of validators is producing blocks and performing other actions
+on the chain. This means that not all validators are in the active set and such set changes between
+eras. Each era is divided into 6 epochs or **sessions** during which validators are assigned as
+block producers to specific time frames or **slots**. This means that validators know the slots when
+they will be required to produce a block within a specific session, but they do not know all the
+slots within a specific era. Having sessions adds a layer of security because it decreases the
+chance of having multiple validators assigned to a slot colluding to harm the network.
 
 ### Staking Rewards
 
@@ -203,9 +209,9 @@ lead to centralization.
 
 ### Tasks and Responsibilities of a Nominator
 
-**Validators.** Since validator slots are limited, most of those who wish to stake their
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and contribute to the economic security of
-the network will be nominators, thus here we focus on the role of nominators. However, it is worth
+**Validators.** Since validator slots are limited, most of those who wish to stake their \{\{
+polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} and contribute to the economic security of the
+network will be nominators, thus here we focus on the role of nominators. However, it is worth
 mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
 [session keys](https://research.web3.foundation/Polkadot/security/keys/session), produce new block
 candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in
@@ -228,8 +234,8 @@ If you want to become a nominator, see
 [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
 would like to securely stake your tokens using the Polkadot-JS UI, refer to
 [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-)
-support article.
-{{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama. :kusama }}
+support article. \{\{ kusama: The tutorial presented in the support article is demonstrated on
+Polkadot, but the procedure is the same for Kusama. :kusama }}
 
 :::info Polkadot Staking Dashboard
 
@@ -269,7 +275,7 @@ To maximize rewards and minimize risk, one could select those validators that:
 
 - have era points above average (because they will get more rewards for being active),
 - have the total stake backing the validator below the average active validator stake (because they
-  will pay out more rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}),
+  will pay out more rewards per staked \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}),
 - have high own stake (because if slashed they have something to lose),
 - have low commission fees but not 0% (because it makes sense that for doing the heavy lifting,
   validators ask for a small commission),
@@ -392,8 +398,8 @@ other wallets that officially secured funding from the treasury
 
 ### Claiming Staking Rewards
 
-{{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
-Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
+\{\{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production
+times. Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
 
 Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on
 Polkadot). These rewards are calculated based on era points, which have a probabilistic component.
@@ -405,10 +411,11 @@ The distribution of staking rewards to the nominators is not automatic and needs
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
 payout for all the nominators whose stake has backed a specific validator in the active set of that
 era. Staking rewards are kept available for 84 eras. The following calculation can be used to
-approximate this length in days on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}:
+approximate this length in days on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama
+}}:
 
-{{ polkadot: `84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days` :polkadot }}
-{{ kusama: `84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days` :kusama }}
+\{\{ polkadot: `84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days` :polkadot }}
+\{\{ kusama: `84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days` :kusama }}
 
 For more information on why this is so, see the page on [simple payouts](learn-staking-advanced.md).
 
@@ -431,10 +438,11 @@ payout for that validator for that era.
 
 If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and
 they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts
-will also be lost. Since unbonding takes
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days, nominators should check if they have pending payouts at least this often.
+will also be lost. Since unbonding takes \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:kusama }} days, nominators should check if they have pending payouts at least this often.
 
 :::
 
@@ -480,9 +488,11 @@ Once a validator gets slashed, it goes into the state as an "unapplied slash". Y
 via
 [Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator and then all the affected nominators along with the amounts. While
-unapplied, a governance proposal can be made to reverse it during this period
-({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days). After the grace period, the slashes are applied.
+unapplied, a governance proposal can be made to reverse it during this period (\{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:kusama }} days). After the grace period, the slashes are applied.
 
 The following levels of offense are
 [defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
@@ -520,11 +530,10 @@ When used as part of a punishment (initiated externally), being chilled carries 
 of being un-nominated. It also disables the validator for the remainder of the current era and
 removes the offending validator from the next election.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows some validators to be
-disabled, but if the number of disabled validators gets too large,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will trigger a new validator election
-to get a full set. Disabled validators will need to resubmit their intention to validate and
-re-garner support from nominators.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} allows some validators to be
+disabled, but if the number of disabled validators gets too large, \{\{ polkadot: Polkadot :polkadot
+}}\{\{ kusama: Kusama :kusama }} will trigger a new validator election to get a full set. Disabled
+validators will need to resubmit their intention to validate and re-garner support from nominators.
 
 For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
 this wiki.
@@ -533,15 +542,17 @@ this wiki.
 
 :::info Fast Unstaking feature is live!
 
-If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
-bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
-can now unbond them immediately.
+If you accidentally bonded your \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} or your
+bonded \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} never backed any active validator,
+you can now unbond them immediately.
 
 :::
 
-If your bonded balance did not back any validators in the last
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days, you are eligible to perform fast unstaking. The
+If your bonded balance did not back any validators in the last \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:kusama }} days, you are eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
@@ -552,18 +563,18 @@ qualify. For more information, visit the
 
 - Earn rewards for contributing to the network's security through staking.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
-- Can choose up-to
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+- Can choose up-to \{\{ polkadot:
+  <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }} \{\{
+  kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
   validators which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
 - 10% inflation/year of the tokens is primarily intended for staking rewards.
 
 When the system staking rate matches with the ideal staking rate, the entire inflation of the
-network is given away as the staking rewards.
-{{ polkadot: Up until now, the network has been following an inflation model that excludes the metric of active parachains. :polkadot }}
-The ideal staking rate is a dynamic value - as the number of active parachains influences the
-available liquidity that is available to secure the network.
+network is given away as the staking rewards. \{\{ polkadot: Up until now, the network has been
+following an inflation model that excludes the metric of active parachains. :polkadot }} The ideal
+staking rate is a dynamic value - as the number of active parachains influences the available
+liquidity that is available to secure the network.
 
 Any divergence from the ideal staking rate will result in the distribution of a proportion of the
 newly minted tokens through inflation to go to the treasury. Keep in mind that when the system's
@@ -575,10 +586,12 @@ users to withdraw. For in-depth understanding, check the
 
 ### Cons of Staking
 
-- Tokens will be locked for about
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-  days on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned
-  during the unbonding period.
+- Tokens will be locked for about \{\{ polkadot:
+  <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+  :polkadot }}\{\{ kusama:
+  <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+  :kusama }} days on \{\{ polkadot: Polkadot. :polkadot }}\{\{ kusama: Kusama. :kusama }} No rewards
+  will be earned during the unbonding period.
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](#slashing)).
 - Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
@@ -588,41 +601,48 @@ users to withdraw. For in-depth understanding, check the
 
 The unbonding period provides a safety net for slashing offenses identified in
 [past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras),
-which can hold the respective validators and their nominators accountable. The
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
-unbonding period is crucial in mitigating ex post facto slashing, particularly in guarding against
-long-range attacks. When a client encounters a chain finalized by
-[GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days in the past, it lacks the security of slashing protection.
+which can hold the respective validators and their nominators accountable. The \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:kusama }}-day unbonding period is crucial in mitigating ex post facto slashing, particularly in
+guarding against long-range attacks. When a client encounters a chain finalized by
+[GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:kusama }} days in the past, it lacks the security of slashing protection.
 
 Essentially, this period establishes a cadence for synchronizing with the chain or acquiring a
 checkpoint within a timeframe that engenders trust. It's worth noting that while the choice of a
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}-day
-period is somewhat arbitrary, it unquestionably provides a higher level of security compared to a
-shorter period.
+\{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
+:kusama }}-day period is somewhat arbitrary, it unquestionably provides a higher level of security
+compared to a shorter period.
 
 ## How many Validators?
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} currently has
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} currently has \{\{ polkadot:
+<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }} \{\{
+kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
 validators. The top bound on the number of validators has not been determined yet, but should only
 be limited by the bandwidth strain of the network due to peer-to-peer message passing.
 
-{{ polkadot: The estimate of the number of validators that Polkadot will have at maturity is around 1000. :polkadot }}
-{{ polkadot: Kusama is already operating at this threshold. :polkadot }}
+\{\{ polkadot: The estimate of the number of validators that Polkadot will have at maturity is
+around 1000. :polkadot }} \{\{ polkadot: Kusama is already operating at this threshold. :polkadot }}
 
 ## Why am I not receiving rewards?
 
-Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
-action. Nominators need to monitor their nominations and ensure they are eligible to receive staking
-rewards. Otherwise, they would be risking their funds to secure the chain with no reward. If you are
-bonding significantly more than the Minimum Active Bond and yet not receiving rewards, your
-nominations are all waiting, or your active validator has 100% commission. However, if you bond
-funds close to the Minimum Active Bond, there could be several possibilities for not receiving
-staking rewards. The table below can be used to troubleshoot why you might not be receiving staking
-rewards using Polkadot-JS UI.
+Nominating on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} is not a
+set-and-forget action. Nominators need to monitor their nominations and ensure they are eligible to
+receive staking rewards. Otherwise, they would be risking their funds to secure the chain with no
+reward. If you are bonding significantly more than the Minimum Active Bond and yet not receiving
+rewards, your nominations are all waiting, or your active validator has 100% commission. However, if
+you bond funds close to the Minimum Active Bond, there could be several possibilities for not
+receiving staking rewards. The table below can be used to troubleshoot why you might not be
+receiving staking rewards using Polkadot-JS UI.
 
 |                   Nomination Status                   |                                                                                                                                               What's happening?                                                                                                                                                |                                                                                                                                                   Causes                                                                                                                                                    |                                                                                                                                                What to do?                                                                                                                                                |
 | :---------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |

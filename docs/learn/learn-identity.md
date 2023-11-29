@@ -9,18 +9,20 @@ slug: ../learn-identity
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows
-participants to add personal information to their on-chain account and subsequently ask for
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} provides a naming system that
+allows participants to add personal information to their on-chain account and subsequently ask for
 verification of this information by [registrars](#registrars).
 
-Users must reserve funds in a bond to store their information on chain:
-{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
-and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
-per each field beyond the legal name. These funds are _locked_, not spent - they are returned when
-the identity is cleared.
+Users must reserve funds in a bond to store their information on chain: \{\{ polkadot:
+<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
+:kusama }} and \{\{ polkadot:
+<RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/>
+:kusama }} per each field beyond the legal name. These funds are _locked_, not spent - they are
+returned when the identity is cleared.
 
 ## Judgements
 
@@ -51,38 +53,38 @@ issuing faulty judgments.
 ## Registrars
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For
-example, a registrar could charge {{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.1 KSM :kusama }} to
-verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee
-to the registrar who provides the judgement on those claims. Users set a maximum fee they are
+example, a registrar could charge \{\{ polkadot: 1 DOT :polkadot }}\{\{ kusama: 0.1 KSM :kusama }}
+to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this
+fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are
 willing to pay and only registrars below this amount would provide judgement.
 
-There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+There are multiple registrars on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}.
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
-Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**:
-{{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }}
-{{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**:
-{{ polkadot: 0 DOT :polkadot }}{{ kusama:  0.04 KSM :kusama }} <br />
+Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**: \{\{ polkadot:
+12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }} \{\{ kusama:
+H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**: \{\{ polkadot: 0 DOT
+:polkadot }}\{\{ kusama: 0.04 KSM :kusama }} <br />
 
-Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-{{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }}
-{{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
-{{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
+Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**: \{\{ polkadot:
+1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }} \{\{ kusama:
+Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**: \{\{ polkadot: 20 DOT
+:polkadot }}\{\{ kusama: 4.5 KSM :kusama }} <br />
 
-Registrar 2: <br /> **Account**:
-{{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
-{{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
+Registrar 2: <br /> **Account**: \{\{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB
+:polkadot }} \{\{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
+\{\{ polkadot: 0 DOT :polkadot }}\{\{ kusama: 1 KSM :kusama }} <br />
 
-Registrar 3: <br /> **Account**:
-{{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC :polkadot }}
-{{ kusama: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM :kusama }} <br /> **Fee**:
-{{ polkadot: 0.5 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
+Registrar 3: <br /> **Account**: \{\{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC
+:polkadot }} \{\{ kusama: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM :kusama }} <br /> **Fee**:
+\{\{ polkadot: 0.5 DOT :polkadot }}\{\{ kusama: 1 KSM :kusama }} <br />
 
-{{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**: 0.04 KSM <br /> :kusama }}
+\{\{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br />
+**Fee**: 0.04 KSM <br /> :kusama }}
 
-{{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their [website](https://polkadot.polkassembly.io/). :polkadot }}
+\{\{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
+[website](https://polkadot.polkassembly.io/). :polkadot }}
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
@@ -94,10 +96,11 @@ be a validation company running multiple validators. A single entity, "My Stakin
 register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of
 their validators.
 
-An account can have a maximum of 100 sub-accounts. Note that a deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
-is required for every sub-account.
+An account can have a maximum of 100 sub-accounts. Note that a deposit of \{\{ polkadot:
+<RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/>
+:kusama }} is required for every sub-account.
 
 ---
 

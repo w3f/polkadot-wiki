@@ -11,16 +11,16 @@ import RPC from "./../../components/RPC-Connection";
 
 :::info
 
-This page provides a general overview of the role of validators in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
-can read the Protocol Overview Section in
+This page provides a general overview of the role of validators in \{\{ polkadot: Polkadot :polkadot
+}}\{\{ kusama: Kusama :kusama }}. For more detailed information you can read the Protocol Overview
+Section in
 [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/).
 
 :::
 
-Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, validating proofs from collators and
-participating in consensus with other validators.
+Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking \{\{ polkadot: DOT
+:polkadot }}\{\{ kusama: KSM :kusama }}, validating proofs from collators and participating in
+consensus with other validators.
 
 Validators play a crucial role in adding new blocks to the relay chain and, by extension, to all
 parachains. This allows parties to complete cross-chain transactions via the relay chain. They
@@ -36,11 +36,11 @@ transaction queue so that a block author can include information on the parabloc
 the Relay Chain.
 
 Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
-blocks for all parachains connected to the relay chain. The selected para-validators are one of
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
-validators randomly selected (per epoch) to participate in the validation, creating a validator pool
-of 200 para-validators.
+blocks for all parachains connected to the relay chain. The selected para-validators are one of \{\{
+polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot
+}} \{\{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/>
+:kusama }} validators randomly selected (per epoch) to participate in the validation, creating a
+validator pool of 200 para-validators.
 
 Para-validators verify that the information contained in an assigned set of parachain blocks is
 valid. They receive parachain block candidates from the [collators](./learn-collator.md) together
@@ -82,11 +82,10 @@ system.
 
 Any instances of non-compliance with the consensus algorithms result in
 [**disputes**](./learn-parachains-protocol.md/#disputes) with the punishment of the validators on
-the wrong side by removing some or all their staked
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, thereby discouraging bad actors. Good
-performance, however, will be rewarded, with validators receiving block rewards (including
-transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange
-for their activities.
+the wrong side by removing some or all their staked \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM
+:kusama }}, thereby discouraging bad actors. Good performance, however, will be rewarded, with
+validators receiving block rewards (including transaction fees) in the form of \{\{ polkadot: DOT
+:polkadot }}\{\{ kusama: KSM :kusama }} in exchange for their activities.
 
 Finally, validators participate in the
 [chain selection process within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring

@@ -1,10 +1,10 @@
 const visit = require("unist-util-visit");
 
-const R_POLKADOT = /{{ polkadot: ([\s\S]+?) :polkadot }}/gim;
-const R_KUSAMA = /{{ kusama: ([\s\S]+?) :kusama }}/gim;
-const R_KUSAMA_HEAD = /{{ kusama: [\s\S]*/gim;
+const R_POLKADOT = /\{\{ polkadot: ([\s\S]+?) :polkadot }}/gim;
+const R_KUSAMA = /\{\{ kusama: ([\s\S]+?) :kusama }}/gim;
+const R_KUSAMA_HEAD = /\{\{ kusama: [\s\S]*/gim;
 const R_KUSAMA_TAIL = /[\s\S]* :kusama }}/gim;
-const R_POLKADOT_HEAD = /{{ polkadot: [\s\S]*/gim;
+const R_POLKADOT_HEAD = /\{\{ polkadot: [\s\S]*/gim;
 const R_POLKADOT_TAIL = /[\s\S]* :polkadot }}/gim;
 
 const conditionalReplace = (node, options) => {

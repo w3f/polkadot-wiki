@@ -14,19 +14,21 @@ See [this page](./learn-staking.md) to learn about staking.
 ## Claiming Rewards with Polkadot-JS
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
-fee. Someone must submit a transaction with a validator ID and an era index.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will automatically calculate that
-validator's reward, find the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators for that era, and distribute the rewards pro rata.
+fee. Someone must submit a transaction with a validator ID and an era index. \{\{ polkadot: Polkadot
+:polkadot }}\{\{ kusama: Kusama :kusama }} will automatically calculate that validator's reward,
+find the top \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:kusama }} nominators for that era, and distribute the rewards pro rata.
 
 :::note
 
-The Staking system only applies the highest
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominations to each validator to reduce the complexity of the staking set.
+The Staking system only applies the highest \{\{ polkadot:
+<RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
+:kusama }} nominations to each validator to reduce the complexity of the staking set.
 
 :::
 

@@ -81,13 +81,15 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust
 accounts from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e.
-completely removed from storage and the nonce reset. Polkadot's ED is
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>, :polkadot }}
-{{ kusama: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>, :kusama }}
-while Kusama's is
-{{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>. :kusama }}
-You can always verify the existential deposit by checking the
+completely removed from storage and the nonce reset. Polkadot's ED is \{\{ polkadot:
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,
+:polkadot }} \{\{ kusama:
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,
+:kusama }} while Kusama's is \{\{ polkadot:
+<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>.
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>.
+:kusama }} You can always verify the existential deposit by checking the
 [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
 `balances.existentialDeposit`.
 
@@ -226,11 +228,11 @@ valid. If the extrinsic is not included in a block within this validity window, 
 from the transaction queue.
 
 The chain only stores a limited number of prior block hashes as reference. You can query this
-parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to
-{{ polkadot: <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> :polkadot }}
-blocks (about seven hours) at genesis. If the validity period is larger than the number of blocks
-stored on-chain, then the transaction will only be valid as long as there is a block to check it
-against, i.e. the minimum value of validity period and block hash count.
+parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to \{\{
+polkadot: <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/>
+:polkadot }} blocks (about seven hours) at genesis. If the validity period is larger than the number
+of blocks stored on-chain, then the transaction will only be valid as long as there is a block to
+check it against, i.e. the minimum value of validity period and block hash count.
 
 Setting the block checkpoint to zero, using the genesis hash, and a validity period of zero will
 make the transaction "immortal".

@@ -40,12 +40,12 @@ the bonded tokens in the pool, as they are held in a
 
 :::
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
 defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)), and several on-chain
 voting mechanisms such as referenda and batch approval voting. All changes to the protocol must be
@@ -53,7 +53,7 @@ agreed upon by stake-weighted referenda.
 
 ## Premise
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first governance system
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}'s first governance system
 ([Governance V1](./learn-governance.md)) included three main components.
 
 - The [Technical Committee](./learn-governance.md#technical-committee): A technocratic committee to
@@ -68,18 +68,19 @@ mature to improve their shortcomings and keep up with modern advancements. In Go
 referenda carried the same weight as only one referendum could be voted on at a time (except for
 emergency proposals), and the voting period could last multiple weeks. Also, an
 [alternating voting timetable](./learn-governance.md#alternating-voting-timetable) allowed to vote
-either for a public referendum or a council motion every
-{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}. This resulted in the system favoring
-careful consideration of very few proposals instead of broad consideration of many.
+either for a public referendum or a council motion every \{\{ polkadot: 28 days :polkadot }}\{\{
+kusama: 7 days :kusama }}. This resulted in the system favoring careful consideration of very few
+proposals instead of broad consideration of many.
 
 Polkadot OpenGov changes how the practical means of day-to-day decisions are made, making the
 repercussions of referenda better scoped and agile to increase the number of collective decisions
 the system can make at any given time.
 
 The following content is focused on what the new Polkadot OpenGov version brings to the governance
-on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and on the main differences with
-previous governance versions. We recommend learning about [Governance v1](./learn-governance.md) to
-better understand the need for and the direction of Polkadot OpenGov.
+on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, and on the main differences
+with previous governance versions. We recommend learning about
+[Governance v1](./learn-governance.md) to better understand the need for and the direction of
+Polkadot OpenGov.
 
 ## Summary
 
@@ -90,7 +91,7 @@ decision.
 
 The Council fulfilled its role as the representative of the public, guardian of the treasury and
 initiator of legislation, but it was often seen as a centralized entity. To further decentralize
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, Polkadot OpenGov proposes the
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, Polkadot OpenGov proposes the
 following main changes:
 
 - Migrating all responsibilities of the Council to the public via a direct democracy voting system.
@@ -410,11 +411,10 @@ different votes for _aye_, _nay_, and _abstain_.
 
 :::info Only the last vote counts
 
-Voting a second time replaces your original vote, e.g. voting with 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, means that you are voting with 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, not 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+Voting a second time replaces your original vote, e.g. voting with 10 \{\{ polkadot: DOT :polkadot
+}}\{\{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5 \{\{ polkadot: DOT :polkadot
+}}\{\{ kusama: KSM :kusama }}, means that you are voting with 5 \{\{ polkadot: DOT :polkadot }}\{\{
+kusama: KSM :kusama }}, not 10 \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}.
 
 :::
 
@@ -424,7 +424,7 @@ to pay for transaction fees.
 
 ### Voluntary Locking
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} utilizes an idea called voluntary
 locking that allows token holders to increase their voting power by declaring how long they are
 willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
 by the following formula:
@@ -439,23 +439,25 @@ double.
 <VLTable />
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals
-{{ polkadot: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
-days. For additional information regarding the timeline of governance events, check out the
-governance section on the
-{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
+total), and one lock period equals \{\{ polkadot:
+<RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/>
+:polkadot }} \{\{ kusama:
+<RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/>
+:kusama }} days. For additional information regarding the timeline of governance events, check out
+the governance section on the \{\{ polkadot:
+[Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}\{\{ kusama:
+[Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
 :::info do votes stack?
 
 You can use the same number of tokens to vote on different referenda. Votes with conviction do not
-stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
-and C with 2x conviction you would have 10 votes on all those referenda and 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
-(i.e. {{ polkadot: two weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
-countdown starting when the last referendum you voted on ends (assuming you are on the winning
-side). If you voted with conviction on referendum and then a week later voted on another one with
-the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+stack. If you voted with 5 \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} on Referenda
+A, B and C with 2x conviction you would have 10 votes on all those referenda and 5 \{\{ polkadot:
+DOT :polkadot }}\{\{ kusama: KSM :kusama }} locked up only for the 2x conviction period (i.e. \{\{
+polkadot: two weeks :polkadot }}\{\{ kusama: two weeks :kusama }}), with the unlocking countdown
+starting when the last referendum you voted on ends (assuming you are on the winning side). If you
+voted with conviction on referendum and then a week later voted on another one with the same
+conviction, the lock on your \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} will be
 extended by a week (always assuming you are on the winning side).
 
 :::
@@ -472,21 +474,21 @@ long the tokens are locked.
 
 See below an example that shows how voluntary locking works.
 
-Peter: Votes `No` with
-{{ polkadot: 10 DOT for a 32-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
-=> {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+Peter: Votes `No` with \{\{ polkadot: 10 DOT for a 32-week :polkadot }}\{\{ kusama: 1 KSM for a
+32-week :kusama }} lock period => \{\{ polkadot: 10 x 6 = 60 Votes :polkadot }}\{\{ kusama: 1 x 6 =
+6 Votes :kusama }}
 
-Logan: Votes `Yes` with
-{{ polkadot: 20 DOT for one week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
-{{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+Logan: Votes `Yes` with \{\{ polkadot: 20 DOT for one week :polkadot }}\{\{ kusama: 2 KSM for one
+week :kusama }} lock period => \{\{ polkadot: 20 x 1 = 20 Votes :polkadot }}\{\{ kusama: 2 x 1 = 2
+Votes :kusama }}
 
-Kevin: Votes `Yes` with
-{{ polkadot: 15 DOT for a 2-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
-=> {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+Kevin: Votes `Yes` with \{\{ polkadot: 15 DOT for a 2-week :polkadot }}\{\{ kusama: 1.5 KSM for a
+2-week :kusama }} lock period => \{\{ polkadot: 15 x 2 = 30 Votes :polkadot }}\{\{ kusama: 1.5 x 2 =
+3 Votes :kusama }}
 
-Even though combined both Logan and Kevin vote with more
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
-is less than Peter, leading to their voting power counting as less.
+Even though combined both Logan and Kevin vote with more \{\{ polkadot: DOT :polkadot }}\{\{ kusama:
+KSM :kusama }} than Peter, the lock period for both of them is less than Peter, leading to their
+voting power counting as less.
 
 :::info Conviction Voting Locks created during Gov 1
 
@@ -588,7 +590,7 @@ The fellowship governance is primarily used for its membership management,
 [approving RFCs](https://github.com/polkadot-fellows/RFCs) and whitelisting Polkadot OpenGov
 proposals.
 
-{{ kusama: <Fellowship network="kusama" defaultValue="Loading Kusama Fellows..."/> :kusama }}
+\{\{ kusama: <Fellowship network="kusama" defaultValue="Loading Kusama Fellows..."/> :kusama }}
 
 ### Ranking System
 
@@ -637,7 +639,7 @@ If both conditions are true, the operation executes with Root-level privileges.
 
 This system enables a new parallel Track (Whitelisted-Caller), whose parameters have less
 restrictive passing parameters than Root in the short term. Through an open and transparent process,
-a body of global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+a body of global experts on the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 protocol have determined that the action is both safe and time-critical.
 
 :::info Submitting Whitelisted Proposals

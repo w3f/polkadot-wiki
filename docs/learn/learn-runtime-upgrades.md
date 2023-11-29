@@ -7,8 +7,8 @@ keywords: [runtime, upgrades, releases, forkless]
 slug: ../learn-runtime-upgrades
 ---
 
-Runtime upgrades allow {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to change the
-logic of the chain without the need for a hard fork.
+Runtime upgrades allow \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} to change
+the logic of the chain without the need for a hard fork.
 
 ## Forkless Upgrades
 
@@ -24,19 +24,18 @@ By using Wasm in Substrate (the framework powering Polkadot, Kusama, and many co
 parachains are given the ability to upgrade their runtime (a chain's "business logic") without hard
 forking.
 
-Rather than encoding the runtime in the nodes,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
-[execution host](learn-polkadot-host). They maintain consensus on a very low-level and
-well-established instruction set. Upgrades can be small, isolated, and very specific by deploying
-Wasm on-chain and having nodes auto-enact the new logic at a particular block height.
+Rather than encoding the runtime in the nodes, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama:
+Kusama :kusama }} nodes contain a WebAssembly [execution host](learn-polkadot-host). They maintain
+consensus on a very low-level and well-established instruction set. Upgrades can be small, isolated,
+and very specific by deploying Wasm on-chain and having nodes auto-enact the new logic at a
+particular block height.
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is stored on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain itself.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by upgrading
-the logic stored on-chain and removes the coordination challenge of requiring thousands of node
-operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
-upgrades through the [on-chain governance](learn-governance.md) system, which also enacts them
-autonomously.
+The \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} runtime is stored on the \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} blockchain itself. \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} can upgrade its runtime by upgrading the logic
+stored on-chain and removes the coordination challenge of requiring thousands of node operators to
+upgrade in advance of a given block number. Polkadot stakeholders propose and approve upgrades
+through the [on-chain governance](learn-governance.md) system, which also enacts them autonomously.
 
 As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
 sensitive, and calls to Runtime can change the Runtime code itself. Therefore, the Polkadot Host
@@ -57,8 +56,8 @@ transaction constructed based on a runtime version will not be valid in later ru
 you can’t submit a transaction before the upgrade, it is better to wait and construct it afterward.
 
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
-following the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading
-promptly, especially for high-priority or critical releases.
+following the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} releases and
+upgrading promptly, especially for high-priority or critical releases.
 
 :::info New Client Releases
 
@@ -105,9 +104,9 @@ to upgrade their clients within a specific time frame, for example, if a release
 changes to networking. It is essential to check the release notes, starting with the upgrade
 priority and acting accordingly.
 
-General infrastructure providers, aside from following the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading in a timely
-manner, should monitor changes to runtime events and auxiliary tooling, such as the
+General infrastructure providers, aside from following the \{\{ polkadot: Polkadot :polkadot }}\{\{
+kusama: Kusama :kusama }} releases and upgrading in a timely manner, should monitor changes to
+runtime events and auxiliary tooling, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
 Transactions constructed for runtime `n` will not work for any other runtime `>n`. If a runtime

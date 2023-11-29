@@ -9,7 +9,7 @@ slug: ../learn-extrinsics
 
 ## Pallets and Extrinsics
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} is built using
 [Substrate](https://substrate.io/), a modular framework to efficiently build blockchains.
 Substrate's FRAME development environment provides modules called pallets and support libraries that
 you can use, modify, and extend to build the runtime logic to suit the needs of your blockchain. You

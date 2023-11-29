@@ -7,8 +7,8 @@ keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain does not natively
-support assets beyond {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. This functionality
+The \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} Relay Chain does not natively
+support assets beyond \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}. This functionality
 exists in parachains. On both Polkadot and Kusama, this parachain is called Asset Hub.
 
 The Asset Hub provides a first-class interface for creating, managing, and using fungible and
@@ -87,8 +87,8 @@ issue so a developer can help.
 ### Parachain Node
 
 Using the Asset Hub will require running a parachain node to sync the chain. This is very similar to
-running a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node, with the addition of
-some extra flags. You can follow
+running a \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} node, with the addition
+of some extra flags. You can follow
 [these guidelines](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) to set
 up an Asset Hub node.
 
@@ -140,12 +140,11 @@ and type registry.
 
 #### Monitoring of XCM deposits
 
-Thanks to XCM and a growing number of parachains,
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can exist across several blockchains, which
-means the providers need to monitor cross-chain transfers on top of local transfers and
-corresponding `balances.transfer` events.
+Thanks to XCM and a growing number of parachains, \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM
+:kusama }} can exist across several blockchains, which means the providers need to monitor
+cross-chain transfers on top of local transfers and corresponding `balances.transfer` events.
 
-Currently {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can be sent and received in the
+Currently \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} can be sent and received in the
 Relay Chain either with a [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
 [system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a
 [Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport)
@@ -156,10 +155,10 @@ events array, filter for any `balances.deposit` event, and apply the appropriate
 
 #### Tracking back XCM information
 
-What has been mentioned earlier should be sufficient to confirm that
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} has arrived in a given account via XCM.
-However, in some cases, it may be interesting to identify the cross-chain message that emitted the
-relevant `balances.deposit` event. This can be done as follows:
+What has been mentioned earlier should be sufficient to confirm that \{\{ polkadot: DOT :polkadot
+}}\{\{ kusama: KSM :kusama }} has arrived in a given account via XCM. However, in some cases, it may
+be interesting to identify the cross-chain message that emitted the relevant `balances.deposit`
+event. This can be done as follows:
 
 1. Query the Relay Chain `at` the block the `balances.deposit` event was emitted.
 2. Filter for a `messageQueue(Processed)` event, also emitted during block initialization. This

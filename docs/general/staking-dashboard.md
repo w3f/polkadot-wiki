@@ -23,19 +23,22 @@ extension or a wallet to use it; you just need your Ledger device.
 only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
-[wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. Note that accounts on
-wallets or extensions can be imported from [Ledger](./ledger.md) or
-[Polkadot Vault](./polkadot-vault.md).
+[wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} account. Note that accounts on wallets or
+extensions can be imported from [Ledger](./ledger.md) or [Polkadot Vault](./polkadot-vault.md).
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
 need some free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the
-minimum amount to place your nominations (only for nominators, currently
-{{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__ :kusama }})
-or join a nomination pool (only for pool members, currently
-{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>__ :kusama }}).
-For more information about staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-visit the [staking page](../learn/learn-staking.md) and the
+minimum amount to place your nominations (only for nominators, currently \{\{ polkadot:
+**<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>**
+:polkadot }}\{\{ kusama:
+**<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>**
+:kusama }}) or join a nomination pool (only for pool members, currently \{\{ polkadot:
+**<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>**
+:polkadot }}\{\{ kusama:
+**<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>**
+:kusama }}). For more information about staking on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama:
+Kusama :kusama }} visit the [staking page](../learn/learn-staking.md) and the
 [advanced staking page](../learn/learn-staking-advanced.md).
 
 :::
@@ -50,7 +53,7 @@ accounts, you can use [wallets and extension](./wallets-and-extensions.md). You 
 staking by being a [nominator](../learn/learn-nominator.md) or a member of a
 [nomination pool](../learn/learn-nomination-pools.md). Once you have a funded account, you need to
 connect it to the dashboard (connect button on the top-right corner), this will allow you to
-interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native staking.
+interact with \{\{ polkadot: Polkadot's :polkadot }}\{\{ kusama: Kusama's :kusama }} native staking.
 
 :::info The dashboard is a Web3 dApp
 
@@ -62,9 +65,9 @@ to the world of [true Web3](./web3-and-polkadot.md)!
 
 :::
 
-{{ polkadot: Note the pictures on this page refer to Kusama, but the same applies to Polkadot and Westend. :polkadot }}
-The structure of this page follows the sidebar of the staking dashboard. Here you will learn about
-the main features of the dashboard. If you need more information, see the
+\{\{ polkadot: Note the pictures on this page refer to Kusama, but the same applies to Polkadot and
+Westend. :polkadot }} The structure of this page follows the sidebar of the staking dashboard. Here
+you will learn about the main features of the dashboard. If you need more information, see the
 [Walkthrough Tutorial](https://youtu.be/hvXLc4H7rA4).
 
 ## Overview
@@ -107,9 +110,11 @@ Note that Sections A and B will always be visible while you use the dashboard.
   balance that can be transferred) and "Reserve" (a balance that is needed the keep the account
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
   In this case, 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
-  not used for staking. Of the non-staking balance, 0.144 KSM are free while
-  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/> :kusama }}
-  are reserved for the existential deposit.
+  not used for staking. Of the non-staking balance, 0.144 KSM are free while \{\{ polkadot:
+  <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>
+  :polkadot }}\{\{ kusama:
+  <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>
+  :kusama }} are reserved for the existential deposit.
 
 - **Section F: The Recent Payouts Panel** shows a bar chart with the rewards paid out to you in the
   past 15 days either as a nominator or a pool member (manually claimed). Note how the 4th of April
@@ -153,9 +158,9 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
 - **Section B: The Balance Panel** shows the number of tokens bonded in pools and those that are
   free. In this case, we have 0.3 KSM bonded and 0.144 KSM free. In this panel, you can bond more
   funds (`+` button) or unbond some funds (`-` button). Unbonding will withdraw unclaimed rewards
-  and funds will be locked for 28 eras
-  ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed, you
-  can unlock the locked funds (button with a lock icon) that will be available as a free balance.
+  and funds will be locked for 28 eras (\{\{ polkadot: 28 days :polkadot }}\{\{ kusama: 7 days
+  :kusama }}). Once the 28 eras have passed, you can unlock the locked funds (button with a lock
+  icon) that will be available as a free balance.
 
 :::info No fast unstake and pool swap for pool members
 
@@ -250,19 +255,23 @@ Staking Dashboard.
 This page of the dashboard has four main panels (Sidebar and Accounts Panels excluded):
 
 - **Section A: The Stats Panel** shows the number of active nominators, the minimum number of tokens
-  to nominate (currently
-  {{ polkadot: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }})
-  and the minimum active bond (currently
-  {{ polkadot: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/> :kusama }}).
-  The system keeps 12500 nomination intents and puts them into the
+  to nominate (currently \{\{ polkadot:
+  <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>
+  :polkadot }}\{\{ kusama:
+  <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>
+  :kusama }}) and the minimum active bond (currently \{\{ polkadot:
+  <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>
+  :polkadot }}\{\{ kusama:
+  <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>
+  :kusama }}). The system keeps 12500 nomination intents and puts them into the
   [bags list](../learn/learn-staking-advanced.md#bags-list). The fact that active nominators are not
   12500 is because there are nominators that have no active validator.
 - **Section B: The Balance Panel** shows the number of tokens bonded in nominations and those that
   are free. In this case, we have 0.301 KSM bonded and 0.144 KSM free. In this panel, you can bond
   more funds (`+` button) or unbond some funds (`-` button). Unbonding will withdraw unclaimed
-  rewards and funds will be locked for 28 eras
-  ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed, you
-  can unlock the locked funds (button with a lock icon) that will be available as a free balance.
+  rewards and funds will be locked for 28 eras (\{\{ polkadot: 28 days :polkadot }}\{\{ kusama: 7
+  days :kusama }}). Once the 28 eras have passed, you can unlock the locked funds (button with a
+  lock icon) that will be available as a free balance.
 
 :::info Fast unstake
 

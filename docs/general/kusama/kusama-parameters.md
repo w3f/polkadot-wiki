@@ -38,15 +38,22 @@ a block in the chain. Thus, the times given are *estimates*. See
 
 ### Accounts, Identity and Crowdloans
 
-- The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is
-  {{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :kusama }}
-- The deposit required to set an Identity is
-  {{ polkadot: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>  :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>  :kusama }}
-- The minimum contribution required to participate in a crowdloan is
-  {{ polkadot: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>  :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>  :kusama }}
+- The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is \{\{
+  polkadot:
+  <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>
+  :polkadot }} \{\{ kusama:
+  <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>
+  :kusama }}
+- The deposit required to set an Identity is \{\{ polkadot:
+  <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
+  :polkadot }} \{\{ kusama:
+  <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
+  :kusama }}
+- The minimum contribution required to participate in a crowdloan is \{\{ polkadot:
+  <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>
+  :polkadot }} \{\{ kusama:
+  <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>
+  :kusama }}
 
 ### Governance
 
@@ -70,9 +77,9 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 ### Staking, Validating, and Nominating
 
-A maximum of
-{{ polkadot: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+A maximum of \{\{ polkadot:
+<RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :polkadot }} \{\{
+kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 validators can be nominated by a nominator on Kusama.
 
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |

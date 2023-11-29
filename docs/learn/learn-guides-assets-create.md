@@ -11,16 +11,18 @@ import RPC from "./../../components/RPC-Connection";
 
 The Asset Hub is a generic assets system parachain which provides functionality for deploying and
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
-hub is {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. The Existential Deposit (ED),
+hub is \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}. The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations are about 1/10th of the values on
-the Relay chains. For example, the Existential Deposit of an Asset Hub account is
-{{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :polkadot }}
-{{ kusama: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :kusama }}
-when compared to
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> on Polkadot :polkadot }}
-{{ kusama:  <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> on Kusama :kusama }}.
-Apart from the core protocol token {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, the
-assets held on the Asset Hub can be broadly categorized as
+the Relay chains. For example, the Existential Deposit of an Asset Hub account is \{\{ polkadot:
+<RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>,
+:polkadot }} \{\{ kusama:
+<RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>,
+:kusama }} when compared to \{\{ polkadot:
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
+on Polkadot :polkadot }} \{\{ kusama:
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
+on Kusama :kusama }}. Apart from the core protocol token \{\{ polkadot: DOT :polkadot }}\{\{ kusama:
+KSM :kusama }}, the assets held on the Asset Hub can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility
 - Assets with off-chain backing
@@ -41,22 +43,23 @@ which is a parachain on Westend. The WND tokens (Westies) are free and are avail
 
 :::
 
-To create an asset on the Asset Hub, you would need a deposit of
-{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-and around
-{{ polkadot: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> :kusama }}
-for the metadata. Before you create an asset on the Asset Hub, ensure that your Asset Hub account
-balance is a bit more than the sum of those two deposits, which should seamlessly account for the
-required deposits and transaction fees. You can send
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account to a the Asset Hub account
-using the teleport functionality. For instructions on teleporting
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, check this
+To create an asset on the Asset Hub, you would need a deposit of \{\{ polkadot:
+<RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
+:kusama }} and around \{\{ polkadot:
+<RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/>
+:polkadot }} \{\{ kusama:
+<RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/>
+:kusama }} for the metadata. Before you create an asset on the Asset Hub, ensure that your Asset Hub
+account balance is a bit more than the sum of those two deposits, which should seamlessly account
+for the required deposits and transaction fees. You can send \{\{ polkadot: DOT :polkadot }}\{\{
+kusama: KSM :kusama }} from a \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
+account to a the Asset Hub account using the teleport functionality. For instructions on teleporting
+\{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}, check this
 [tutorial on Teleports](../learn/learn-teleport.md).
 
-Assuming you have the required {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balance on
+Assuming you have the required \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} balance on
 your Asset Hub account, the following instructions should let you successfully create an asset on
 the Asset Hub
 

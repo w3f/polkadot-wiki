@@ -8,10 +8,10 @@ slug: ../learn-transaction-fees
 ---
 
 Several resources in a blockchain network are limited, for example, storage and computation.
-Transaction fees prevent individual users from consuming too many resources.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a weight-based fee model as
-opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the
-fee is paid, nodes will execute the transaction.
+Transaction fees prevent individual users from consuming too many resources. \{\{ polkadot: Polkadot
+:polkadot }}\{\{ kusama: Kusama :kusama }} uses a weight-based fee model as opposed to a
+gas-metering model. As such, fees are charged prior to transaction execution; once the fee is paid,
+nodes will execute the transaction.
 
 [Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics#2-slow-adjusting-mechanism)
 designed the Polkadot fee system with the following objectives:
@@ -32,15 +32,15 @@ Fees on the Polkadot Relay Chain are calculated based on three parameters:
 - A Length fee
 - A Tip (optional).
 
-As a permissionless system, the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+As a permissionless system, the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 network needs to implement a mechanism to measure and to limit the usage in order to establish an
 economic incentive structure, to prevent the network overload, and to mitigate DoS vulnerabilities.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} enforces a limited time-window for
-block producers to create a block, including limitations on block size, which can make the selection
-and execution of certain extrinsics too expensive and decelerate the network. Extrinsics which
-require too many resources are discarded by the network.
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} enforces a limited time-window
+for block producers to create a block, including limitations on block size, which can make the
+selection and execution of certain extrinsics too expensive and decelerate the network. Extrinsics
+which require too many resources are discarded by the network.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} defines a specified
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} defines a specified
 [block ratio](https://spec.polkadot.network/#sect-limitations) ensuring that only a certain portion
 of the total block size gets used for regular extrinsics. The remaining space is reserved for
 critical, operational extrinsics required for the functionality by network itself.
@@ -93,9 +93,8 @@ is actually executed.
 The runtime only returns weights if the difference between the assigned weight and the actual weight
 calculated during execution is greater than 20%.
 
-Checkout some examples of how various weights are gauged in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime for several different types
-of operations:
+Checkout some examples of how various weights are gauged in the \{\{ polkadot: Polkadot :polkadot
+}}\{\{ kusama: Kusama :kusama }} runtime for several different types of operations:
 
 - [request_judgement](https://spec.polkadot.network/#id-practical-example-1-request_judgement) -
   from the identity pallet, allows users to request judgement from a specific registrar
@@ -110,11 +109,11 @@ of operations:
 
 ## Block Limits and Transaction Priority
 
-Blocks in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} have both a maximum length
-(in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these
-limits. A portion of each block - currently 25% - is reserved for critical transactions that are
-related to the chain's operation. Block producers will only fill up to 75% of a block with normal
-transactions. Some examples of operational transactions:
+Blocks in \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} have both a maximum
+length (in bytes) and a maximum weight. Block producers will fill blocks with transactions up to
+these limits. A portion of each block - currently 25% - is reserved for critical transactions that
+are related to the chain's operation. Block producers will only fill up to 75% of a block with
+normal transactions. Some examples of operational transactions:
 
 - Misbehavior reports
 - Council operations
@@ -127,23 +126,23 @@ to maximize their reward.
 ## Fees
 
 Block producers charge a fee in order to be economically sustainable. That fee must always be
-covered by the sender of the transaction.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has a flexible mechanism to determine
-the minimum cost to include transactions in a block.
+covered by the sender of the transaction. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} has a flexible mechanism to determine the minimum cost to include transactions in a
+block.
 
 Transaction volume on blockchains is highly irregular, and therefore transaction fees need a
 mechanism to adjust. However, users should be able to predict transaction fees.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a slow-adjusting fee mechanism
-with tips to balance these two considerations. In addition to block _limits_,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also has a block fullness _target._
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} uses a slow-adjusting fee
+mechanism with tips to balance these two considerations. In addition to block _limits_, \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} also has a block fullness _target._
 Fees increase or decrease for the next block based on the fullness of the current block relative to
 the target. The per-weight fee can change up to 30% in a 24 hour period. This rate captures
-long-term trends in demand, but not short-term spikes. To consider short-term spikes,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tips on top of the length and
-weight fees. Users can optionally add a tip to the fee to give the transaction a higher priority.
+long-term trends in demand, but not short-term spikes. To consider short-term spikes, \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} uses tips on top of the length and weight fees.
+Users can optionally add a tip to the fee to give the transaction a higher priority.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} fees consists of three parts:
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} fees consists of three parts:
 
 1. `Base fee`: a fixed fee that is applied to every transaction and set by the runtime.
 2. `Length fee`: a fee that gets multiplied by the length of the transaction, in bytes.
@@ -174,17 +173,17 @@ exceed the max size of an unsigned 128 bit integer.
 
 ### Fee Multiplier
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can add a additional fee to
+\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} can add a additional fee to
 transactions if the network becomes too busy and starts to decelerate the system. This fee can
 create an incentive to avoid the production of low priority or insignificant transactions. In
 contrast, those additional fees will decrease if the network calms down and can execute transactions
 without much difficulties.
 
-This additional fee is known as the `Fee Multiplier` and its value is defined by the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime. The multiplier works by
-comparing the saturation of blocks; if the previous block is less saturated than the current block
-(implying an uptrend), the fee is slightly increased. Similarly, if the previous block is more
-saturated than the current block (implying a downtrend), the fee is slightly decreased.
+This additional fee is known as the `Fee Multiplier` and its value is defined by the \{\{ polkadot:
+Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} runtime. The multiplier works by comparing the
+saturation of blocks; if the previous block is less saturated than the current block (implying an
+uptrend), the fee is slightly increased. Similarly, if the previous block is more saturated than the
+current block (implying a downtrend), the fee is slightly decreased.
 
 The final fee is calculated as:
 
@@ -193,10 +192,9 @@ final_fee = fee * fee_multiplier
 ```
 
 The `Update Multiplier` defines how the multiplier can change. Each runtime has the ability to
-define this behavior accordingly. For example, the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime internally updates the
-multiplier after each block according to a custom formula defined
-[here](https://spec.polkadot.network/#id-update-multiplier).
+define this behavior accordingly. For example, the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama:
+Kusama :kusama }} runtime internally updates the multiplier after each block according to a custom
+formula defined [here](https://spec.polkadot.network/#id-update-multiplier).
 
 ## Calcuating Fees with Polkadot-JS
 
@@ -221,11 +219,11 @@ For additional information on interacting with the API, checkout
 
 ## Shard Transactions
 
-The transactions that take place within
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s shards - parachains and
-parathreads - do not incur Relay Chain transaction fees. Users of shard applications do not even
-need to hold DOT tokens, as each shard has its own economic model and may or may not have a token.
-There are, however, situations where shards themselves make transactions on the Relay Chain.
+The transactions that take place within \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }}'s shards - parachains and parathreads - do not incur Relay Chain transaction fees. Users
+of shard applications do not even need to hold DOT tokens, as each shard has its own economic model
+and may or may not have a token. There are, however, situations where shards themselves make
+transactions on the Relay Chain.
 
 [Parachains](learn-parachains.md) have a dedicated slot on the Relay Chain for execution, so their
 collators do not need to own DOT in order to include blocks. The parachain will make some
@@ -257,19 +255,19 @@ logic. Some transactions warrant limiting resources with other strategies. For e
 ## Advanced
 
 This page only covered transactions that come from normal users. If you look at blocks in a block
-explorer, though, you may see some "extrinsics" that look different from these transactions. In
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (and any chain built on Substrate),
-an extrinsic is a piece of information that comes from outside the chain. Extrinsics fall into three
+explorer, though, you may see some "extrinsics" that look different from these transactions. In \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} (and any chain built on Substrate), an
+extrinsic is a piece of information that comes from outside the chain. Extrinsics fall into three
 categories:
 
 - Signed transactions
 - Unsigned transactions
 - Inherents
 
-This page only covered signed transactions, which is the way that most users will interact with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} . Signed transactions come from an
-account that has funds, and therefore {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-can charge a transaction fee as a way to prevent spam.
+This page only covered signed transactions, which is the way that most users will interact with \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} . Signed transactions come from an
+account that has funds, and therefore \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} can charge a transaction fee as a way to prevent spam.
 
 Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
 pair that does not control funds. For example, when users
@@ -283,12 +281,11 @@ charge a fee for them, each one needs its own, custom validation logic.
 Finally, inherents are pieces of information that are not signed or included in the transaction
 queue. As such, only the block author can add inherents to a block. Inherents are assumed to be
 "true" simply because a sufficiently large number of validators have agreed on them being
-reasonable. For example, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blocks
+reasonable. For example, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} blocks
 include a timestamp inherent. There is no way to prove that a timestamp is true the way one proves
 the desire to send funds with a signature. Rather, validators accept or reject the block based on
-how reasonable they find the timestamp. In
-{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} it must be within some acceptable
-range of their own system clocks.
+how reasonable they find the timestamp. In \{\{ polkadot: Polkadot, :polkadot }}\{\{ kusama: Kusama,
+:kusama }} it must be within some acceptable range of their own system clocks.
 
 ## Learn More
 

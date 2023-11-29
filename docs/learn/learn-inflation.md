@@ -9,30 +9,33 @@ slug: ../learn-inflation
 
 import RPC from "./../../components/RPC-Connection";
 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is an inflationary token. On the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, inflation is
-{{ polkadot: [set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576), :polkadot }}
-{{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535), :kusama }}
-which is distributed as staking rewards based on the amount staked vs. ideal staking rate, and the
-remainder goes to the treasury.
+\{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} is an inflationary token. On the \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} network, inflation is \{\{ polkadot:
+[set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/polkadot/src/lib.rs#L576),
+:polkadot }} \{\{ kusama:
+[set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535),
+:kusama }} which is distributed as staking rewards based on the amount staked vs. ideal staking
+rate, and the remainder goes to the treasury.
 
 :::info
 
 DOT went through [redenomination](./learn-redenomination.md) in 2020 that saw the DOT token supply
 increase by 100 times.
 
-The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
-{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093} filter="humanReadable"/> (Over 12 Million KSM). :kusama }}
+The current token supply on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} is
+\{\{ polkadot:
+<RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>
+(Over 1.2 Billion DOT). :polkadot }} \{\{ kusama:
+<RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093} filter="humanReadable"/>
+(Over 12 Million KSM). :kusama }}
 
 :::
 
-It is essential to understand that the primary objective of
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} inflation is to incentivize network
-participants through
+It is essential to understand that the primary objective of \{\{ polkadot: DOT :polkadot }}\{\{
+kusama: KSM :kusama }} inflation is to incentivize network participants through
 [Nominated Proof of Stake (NPoS)](./learn-consensus.md#nominated-proof-of-stake) and to grow the
-network through funding the on-chain treasury. There is an opportunity cost of keeping the
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens idle with the current inflation model
+network through funding the on-chain treasury. There is an opportunity cost of keeping the \{\{
+polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} tokens idle with the current inflation model
 as the tokens get diluted over time. Economics and game theory suggest that setting an ideal
 inflation rate is essential for incentivizing the network participants as well as the growth of the
 network, and any deviation from it can have negative effects. Reducing the inflation rate could
@@ -51,15 +54,15 @@ There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure se
 that the network tries to maintain. The goal is to have the _system staking rate_ meet the _ideal
 staking rate_. The system staking rate would be the total amount staked over the total token supply,
 where the total amount staked is the stake of all validators and nominators on the network. The
-ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
-{{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
-token liquid.
+ideal staking rate accounts for having sufficient backing of \{\{ polkadot: DOT :polkadot }} \{\{
+kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native token
+liquid.
 
 ![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
 <p style={{textAlign:"center"}}>Source: <a href="https://research.web3.foundation/Polkadot/overview/token-economics">Research - Web3 Foundation</a></p>
 
-- **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
+- **x-axis**: Proportion of \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
 - **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators
   and nominators.
@@ -69,7 +72,7 @@ token liquid.
   [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking).
 
 Assuming that the ideal staking rate is 50%, all of the inflation would go to the validators and
-nominators if 50% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked. Any
+nominators if 50% of all \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} are staked. Any
 deviation from the 50% - positive or negative - sends the proportional remainder to the treasury.
 Deviation from the ideal staking rate are referred to as _staking inefficiencies_. Thus, the
 treasury does not currently receive a substantial inflow of funds at the ideal staking rate. See

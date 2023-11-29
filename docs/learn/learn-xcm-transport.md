@@ -14,8 +14,8 @@ mind that XCM is under active development.
 
 :::
 
-With the XCM format established, common patterns for protocols of these messages are needed.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements two message passing
+With the XCM format established, common patterns for protocols of these messages are needed. \{\{
+polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} implements two message passing
 protocols for acting on XCM messages between its constituent parachains.
 
 There are three primary methods for message passing, one of which is under development:
@@ -49,9 +49,9 @@ ensure fidelity. It is the task of the Relay Chain validators to move transactio
 queue of one parachain into the input queue of the destination parachain. However, only the
 associated metadata is stored as a hash in the Relay Chain storage.
 
-The input and output queue are sometimes referred to in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} codebase and associated documentation
-as `ingress` and `egress` messages, respectively.
+The input and output queue are sometimes referred to in the \{\{ polkadot: Polkadot :polkadot }}\{\{
+kusama: Kusama :kusama }} codebase and associated documentation as `ingress` and `egress` messages,
+respectively.
 
 :::info
 

@@ -28,20 +28,18 @@ while if you want to import Ledger accounts to the Polkadot-JS UI you can consul
 When adding a Ledger account using the extension or the UI, you will be asked to select an
 `account type` and an `account index`. The first lets you select an account, while the second lets
 you pick a derivation path from that account - think of it like a formula from which child accounts
-are generated. When you are creating a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account for the first time on
-Ledger Live with name {{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }}, this
-can be added to Polkadot-JS using the 0/0 derivation path (i.e. account type = 0 and account index =
-0). If you add a second account called
-{{ polkadot: `Polkadot 2` :polkadot }}{{ kusama: `Kusama 2` :kusama }}, this will correspond to the
-1/0 derivation path, and so on. We thus have multiple parent accounts that can be viewed and used in
-both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to create multiple
-children accounts from each parent account. For example,
-{{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }} with 0/0 derivation path can
-have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be
-used in Ledger Live, as it only scans through the parent accounts. So, remember that the balances on
-the children accounts cannot be viewed, and you will not be able to transact with those accounts on
-Ledger Live.
+are generated. When you are creating a \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} ledger account for the first time on Ledger Live with name \{\{ polkadot: `Polkadot 1`
+:polkadot }}\{\{ kusama: `Kusama 1` :kusama }}, this can be added to Polkadot-JS using the 0/0
+derivation path (i.e. account type = 0 and account index = 0). If you add a second account called
+\{\{ polkadot: `Polkadot 2` :polkadot }}\{\{ kusama: `Kusama 2` :kusama }}, this will correspond to
+the 1/0 derivation path, and so on. We thus have multiple parent accounts that can be viewed and
+used in both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to create multiple
+children accounts from each parent account. For example, \{\{ polkadot: `Polkadot 1` :polkadot
+}}\{\{ kusama: `Kusama 1` :kusama }} with 0/0 derivation path can have child 0/1, 0/2, etc. that can
+be used within the UI. However, such children accounts cannot be used in Ledger Live, as it only
+scans through the parent accounts. So, remember that the balances on the children accounts cannot be
+viewed, and you will not be able to transact with those accounts on Ledger Live.
 
 ### Connecting your ledger device
 
@@ -56,9 +54,8 @@ If you are adding your Ledger Nano for the first time, click on the "Unknown dev
 :::info Signature error message
 
 If you have already connected your device, but an error message appears before signing a
-transaction, make sure you have opened the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} application on your Ledger Nano
-device. Visit
+transaction, make sure you have opened the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
+:kusama }} application on your Ledger Nano device. Visit
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
 more information about signing transactions using your ledger.
 
@@ -66,7 +63,7 @@ more information about signing transactions using your ledger.
 
 ## Confirming the Address on your Device
 
-To display your {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account
+To display your \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} ledger account
 address on your Ledger Nano, you can follow the guidelines on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device).
 Here you can scroll through and make sure the address matches what is displayed on

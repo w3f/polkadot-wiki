@@ -46,8 +46,8 @@ function from the Balances pallet will take:
 **Serialized transaction format**
 
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded
-SCALE-encoded bytes. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtimes are
-upgradable and therefore any interfaces are subject to change, the metadata allows developers to
+SCALE-encoded bytes. The \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} runtimes
+are upgradable and therefore any interfaces are subject to change, the metadata allows developers to
 structure any extrinsics or storage entries accordingly. This being said, the serialization format
 can be described as follows:
 
@@ -80,7 +80,7 @@ serialized call data specific to your transaction. You can read more about the m
 and how to get it in the
 [Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
-\* {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports sr25519, ed25519, and
+\* \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} supports sr25519, ed25519, and
 ECDSA as signing schemes.
 
 **Summary**

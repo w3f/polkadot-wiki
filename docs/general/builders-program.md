@@ -20,8 +20,8 @@ experience and resources.
 ## Square One Initiative
 
 The [Square One initiative](https://substrate.io/ecosystem/square-one/) is a step behind the
-Substrate Builders Program as it helps early-stage teams who are committed to building on
-{{ polkadot: polkadot :polkadot }}{{ kusama: kusama :kusama }} find their feet in the ecosystem.
+Substrate Builders Program as it helps early-stage teams who are committed to building on \{\{
+polkadot: polkadot :polkadot }}\{\{ kusama: kusama :kusama }} find their feet in the ecosystem.
 
 Square One's primary purpose as a program is to help tailor a specific pathway across our Substrate
 resources that act as a lighthouse for new and early-stage projects, developers & builders that are

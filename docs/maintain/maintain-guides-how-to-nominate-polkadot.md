@@ -18,8 +18,8 @@ reading [this dedicated page](../learn/learn-staking.md).
 Discover the new [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes
 staking much easier and check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started.
-{{ kusama: All the examples presented on Polkadot also apply to Kusama. :kusama }}
+help you get started. \{\{ kusama: All the examples presented on Polkadot also apply to Kusama.
+:kusama }}
 
 :::
 
