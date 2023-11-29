@@ -106,7 +106,7 @@ module.exports = {
       disableSwitch: true,
     },
     prism: {
-      theme: require("prism-react-renderer/themes/github"),
+      theme: require("prism-react-renderer").themes.github,
     },
     /*
     announcementBar: {

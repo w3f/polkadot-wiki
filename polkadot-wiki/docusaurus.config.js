@@ -192,7 +192,7 @@ module.exports = {
     },
     prism: {
       additionalLanguages: ["rust"],
-      theme: require("prism-react-renderer/themes/github"),
+      theme: require("prism-react-renderer").themes.github,
     },
     /*
     announcementBar: {
