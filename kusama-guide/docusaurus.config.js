@@ -93,7 +93,7 @@ module.exports = {
           },
           {
             to: '/docs/learn-accounts',
-            from: ['/docs/learn-account-generation']
+            from: ['/docs/learn-account-generation', '/docs/learn-accounts-index']
           }
         ],
         createRedirects: function (existingPath) {

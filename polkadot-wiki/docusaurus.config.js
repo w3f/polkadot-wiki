@@ -94,10 +94,6 @@ module.exports = {
             from: ['/docs/learn-simple-payouts', '/docs/learn-staking-miner']
           },
           {
-            to: '/docs/learn-account-generation',
-            from: ['/docs/learn-account-restore']
-          },
-          {
             to: '/docs/learn-polkadot-opengov',
             from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
@@ -179,7 +175,7 @@ module.exports = {
           },
           {
             to: '/docs/learn-accounts',
-            from: ['/docs/learn-account-generation']
+            from: ['/docs/learn-account-generation', '/docs/learn-account-restore', '/docs/learn-accounts-index']
           }
         ],
         createRedirects: function (existingPath) {
