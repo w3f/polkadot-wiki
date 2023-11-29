@@ -15,15 +15,15 @@ slug: ../learn-parachains-faq
 \{\{ kusama: Kusama :kusama }} Relay Chain. Parachains cannot use other consensus algorithms that
 provide their own finality. Only sovereign chains (that must bridge to the Relay Chain via a
 parachain) can control their own consensus. Parachains have control over how blocks are authored and
-by whom. \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama :kusama }} guarantees valid state
+by whom. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} guarantees valid state
 transitions. Executing a block finality outside the context of the relay chain is outside the scope
-of trust that \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama :kusama }} provides.
+of trust that \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} provides.
 
 ### How about parachains that are not Substrate-based?
 
 Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
-that can be used for consensus. \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama :kusama }}
+that can be used for consensus. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 being a Substrate-based chain rely on BABE as the block production scheme and GRANDPA as the
 finality gadget as part of its consensus mechanism. Collectively, this is a
 [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block
@@ -34,15 +34,15 @@ Substrate-based.
 
 ### Is 100 a hard limit on the number of Parachains that can be supported?
 
-No.\{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama :kusama }} network went through a
+No.\{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} network went through a
 significant number of optimizations, and there are
 [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) in the near
 future. The exact number of parachains that the Relay Chain can support without any degradation in
 performance is yet to be discovered. Also, with the
 [blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm
 which brings parathreads into the picture, there is no hard limit number on the number of
-blockchains that can be supported by \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama
-:kusama }}.
+blockchains that can be supported by \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama
+}}.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 

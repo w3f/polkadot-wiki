@@ -27,7 +27,7 @@ waiting period before distribution. This waiting period is known as the _spend p
 duration is subject to [governance](learn-governance.md), with the current default set to \{\{
 polkadot:
 <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/>
 :kusama }} days. The Treasury attempts to spend as many proposals in the queue as it can without
 running out of funds.
@@ -39,8 +39,8 @@ Treasury payout is an automatic process:
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
   percentage of its funds - thereby causing deflationary pressure. This encourages the spending of
   the funds in the Treasury by Polkadot's governance system. \{\{ polkadot: This percentage is
-  currently at 1% on Polkadot. :polkadot }} \{\{ kusama: This percentage is currently 0.2% on
-  Kusama, with the amount currently going to
+  currently at 1% on Polkadot. :polkadot }}\{\{ kusama: This percentage is currently 0.2% on Kusama,
+  with the amount currently going to
   [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
   burned. :kusama }}
 
@@ -107,10 +107,10 @@ There are two types of tips:
 - public: A small bond is required to place them. This bond depends on the tip message length, and a
   fixed bond constant defined on chain, currently \{\{ polkadot:
   <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/>.
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadable"/>.
   :kusama }} Public tips carry a finder's fee of \{\{ polkadot:
-  <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :polkadot }} \{\{
+  <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :polkadot }}\{\{
   kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :kusama }}
   which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
@@ -134,8 +134,8 @@ is composed of three members Charlie, Dave, and Eve.
 Alice begins the process by issuing the `report_awesome` extrinsic. This extrinsic requires two
 arguments, a reason and the beneficiary. Alice submits Bob's address with the reason being a UTF-8
 encoded URL to a post on \{\{ polkadot: [Polkassembly](https://polkadot.polkassembly.io) :polkadot
-}} \{\{ kusama: [Polkassembly](https://kusama.polkassembly.io) :kusama }} that explains her
-reasoning for why Bob deserves the tip.
+}}\{\{ kusama: [Polkassembly](https://kusama.polkassembly.io) :kusama }} that explains her reasoning
+for why Bob deserves the tip.
 
 As mentioned above, Alice must also lock up a deposit for making this report. The deposit is the
 base deposit as set in the chain's parameter list, plus the additional deposit per byte contained in
@@ -225,12 +225,12 @@ requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
 motion. You can contact the Council by joining the \{\{ polkadot: Polkadot Direction
-[channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }} \{\{ kusama: Kusama
+[channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}\{\{ kusama: Kusama
 Direction [channel](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} in Element or
 joining our \{\{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot
-}} \{\{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and
-publishing a short description of your bounty, with a link to one of the
-[forums](#announcing-the-proposal) for contextual information.
+}}\{\{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and publishing
+a short description of your bounty, with a link to one of the [forums](#announcing-the-proposal) for
+contextual information.
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the
 tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by

@@ -199,7 +199,7 @@ validator, then you will lose 1 DOT in each case.
 If a validator is oversubscribed in an era, staking rewards are distributed only to the the top \{\{
 polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} nominators and the rest of the nominators do not receive any rewards. This is not the
 case for slashing! Every active nominator of the validator committing slashable offence will be

@@ -18,7 +18,7 @@ fee. Someone must submit a transaction with a validator ID and an era index. \{\
 :polkadot }}\{\{ kusama: Kusama :kusama }} will automatically calculate that validator's reward,
 find the top \{\{ polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} nominators for that era, and distribute the rewards pro rata.
 
@@ -26,7 +26,7 @@ find the top \{\{ polkadot:
 
 The Staking system only applies the highest \{\{ polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} nominations to each validator to reduce the complexity of the staking set.
 

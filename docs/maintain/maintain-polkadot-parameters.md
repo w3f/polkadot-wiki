@@ -41,17 +41,17 @@ a block in the chain. Thus, the times given are *estimates*. See
 - The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is \{\{
   polkadot:
   <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
   :kusama }}
 - The deposit required to set an Identity is \{\{ polkadot:
   <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
   :kusama }}
 - The minimum contribution required to participate in a crowdloan is \{\{ polkadot:
   <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>
   :kusama }}
 
@@ -78,7 +78,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 ### Staking, Validating, and Nominating
 
 The maximum number of validators that can be nominated by a nominator is \{\{ polkadot:
-<RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>. :polkadot }} \{\{
+<RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>. :polkadot }}\{\{
 kusama: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>. :kusama }}
 
 | Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |

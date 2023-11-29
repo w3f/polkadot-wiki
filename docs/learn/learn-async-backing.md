@@ -179,8 +179,8 @@ backing step for a few extra seconds until a core frees up to back that block as
 block or some later relay block. Note a core is occupied after backing and before inclusion.
 
 The 2-second block generation time is thus a limiter, not a system limitation. If block generation
-takes >2 seconds, the unincluded segment will shrink (less unincluded parablocks), while if it takes
-<2 seconds, the segment will grow (more unincluded parablocks that will need to be backed and
+takes > 2 seconds, the unincluded segment will shrink (less unincluded parablocks), while if it
+takes < 2 seconds, the segment will grow (more unincluded parablocks that will need to be backed and
 included). Such flexibility from the parachain side will be possible when, on the relay chain side,
 there will be elastic scaling (i.e.,
 [agile core usage](../general/polkadot-direction.md#agile-core-usage) and

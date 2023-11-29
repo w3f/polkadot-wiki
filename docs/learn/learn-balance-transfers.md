@@ -62,7 +62,7 @@ transfer funds from one account to another:
   [existential deposit](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
   of \{\{ polkadot:
   <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>.
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>.
   :kusama }}
 - `transfer` will allow you to send \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}
@@ -84,7 +84,7 @@ For instance, attempting to transfer \{\{ polkadot: 0.1 DOT :polkadot }}\{\{ kus
 polkadot: 0.1 DOT :polkadot }}\{\{ kusama: 0.0001 KSM :kusama }} is less than the existential
 deposit of \{\{ polkadot:
 <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>
 :kusama }} and the account cannot be initialized with such a low balance.
 

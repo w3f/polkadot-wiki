@@ -88,20 +88,20 @@ it does not support smart-contracts and it's not based on Substrate.
 
 ## Examples
 
-### Ethereum Bridge (Smart Contracts <-> Polkadot)
+### Ethereum Bridge (Smart Contracts - Polkadot)
 
 As explained by Dr. Gavin Wood in a
 [blog post](https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13) from
 late 2019, there are three ways that the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }} and Substrate ecosystem can be bridged to the Ethereum ecosystem.
 
-1. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} <-> Ethereum Public Bridge.
-1. Substrate <-> Parity Ethereum (Openethereum) Bridge.
+1. \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} - Ethereum Public Bridge.
+1. Substrate - Parity Ethereum (Openethereum) Bridge.
 1. The Substrate EVM module.
 
 Please read the blog article for fuller descriptions of each one of these options.
 
-### Bitcoin Bridge (XCLAIM <-> Substrate <-> Polkadot)
+### Bitcoin Bridge (XCLAIM - Substrate - Polkadot)
 
 The Interlay team has written a [specification](https://spec.interlay.io/) on a Bitcoin bridge that
 is based on the [XCLAIM](https://eprint.iacr.org/2018/643.pdf) design paper. The protocol enables a
@@ -126,7 +126,7 @@ There is now a
   were awarded a grant in W3F Grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)
   to build a Substrate to Ethereum two-way bridge.
-- [iBTC (Bitcoin <-> Polkadot Bridge)](https://docs.interlay.io/#//)
+- [iBTC (Bitcoin - Polkadot Bridge)](https://docs.interlay.io/#//)
 - [EOS Bridge](https://github.com/bifrost-codes/bifrost) - The Bifrost team was awarded a grant in
   W3F Grants
   [Wave 5](https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096)

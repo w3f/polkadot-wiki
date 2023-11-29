@@ -15,11 +15,11 @@ verification of this information by [registrars](#registrars).
 
 Users must reserve funds in a bond to store their information on chain: \{\{ polkadot:
 <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
 :kusama }} and \{\{ polkadot:
 <RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/>
 :kusama }} per each field beyond the legal name. These funds are _locked_, not spent - they are
 returned when the identity is cleared.
@@ -63,21 +63,21 @@ Unless no additional information is available here, you must reach out to specif
 individually if you want to be judged by those.
 
 Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**: \{\{ polkadot:
-12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }} \{\{ kusama:
+12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }}\{\{ kusama:
 H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**: \{\{ polkadot: 0 DOT
 :polkadot }}\{\{ kusama: 0.04 KSM :kusama }} <br />
 
 Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**: \{\{ polkadot:
-1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }} \{\{ kusama:
+1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }}\{\{ kusama:
 Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**: \{\{ polkadot: 20 DOT
 :polkadot }}\{\{ kusama: 4.5 KSM :kusama }} <br />
 
 Registrar 2: <br /> **Account**: \{\{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB
-:polkadot }} \{\{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
+:polkadot }}\{\{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
 \{\{ polkadot: 0 DOT :polkadot }}\{\{ kusama: 1 KSM :kusama }} <br />
 
 Registrar 3: <br /> **Account**: \{\{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC
-:polkadot }} \{\{ kusama: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM :kusama }} <br /> **Fee**:
+:polkadot }}\{\{ kusama: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM :kusama }} <br /> **Fee**:
 \{\{ polkadot: 0.5 DOT :polkadot }}\{\{ kusama: 1 KSM :kusama }} <br />
 
 \{\{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br />
@@ -98,7 +98,7 @@ their validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a deposit of \{\{ polkadot:
 <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/>
 :kusama }} is required for every sub-account.
 

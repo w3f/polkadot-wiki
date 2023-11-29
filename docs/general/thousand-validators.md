@@ -78,22 +78,22 @@ The below addresses are the stash / staking proxy pairs for the primary nominato
 They are formatted like "`stash` / `staking proxy`".
 
 \{\{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` /
-`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }} \{\{ kusama: -
+`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}\{\{ kusama: -
 `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` /
 `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 
 \{\{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` /
-`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }} \{\{ kusama: -
+`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}\{\{ kusama: -
 `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` /
 `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 
 \{\{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` /
-`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }} \{\{ kusama: -
+`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}\{\{ kusama: -
 `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` /
 `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 
 \{\{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` /
-`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }} \{\{ kusama: -
+`12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}\{\{ kusama: -
 `JLENz97TFT2kYaQmyCSEnBsK8VhaDZNmYATfsLCHyLF6Gzu` /
 `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
 

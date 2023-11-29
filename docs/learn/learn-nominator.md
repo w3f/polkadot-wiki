@@ -18,7 +18,7 @@ check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started. \{\{ polkadot: You can now
 [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-:polkadot }} \{\{ kusama: All the examples presented on Polkadot also apply to Kusama. :kusama }}
+:polkadot }}\{\{ kusama: All the examples presented on Polkadot also apply to Kusama. :kusama }}
 
 :::
 
@@ -27,14 +27,14 @@ help you get started. \{\{ polkadot: You can now
 The minimum amount required to become an active nominator and earn rewards may change from era to
 era. \{\{ polkadot: It is currently
 **<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>**.
-:polkadot }} \{\{ kusama: It is currently
+:polkadot }}\{\{ kusama: It is currently
 **<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>**.
 :kusama }} If you have less \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} than the
 minimum active nomination and still want to participate in staking, you can join the nomination
 pools. You can now stake on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 natively with just \{\{ polkadot:
 **<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>**
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 **<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>**
 :kusama }} in the nomination pools and earn staking rewards. For additional information, see
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
@@ -164,18 +164,18 @@ metrics shown as an example, followed by a brief description of each.
   Be cautious of validators with a high number of subscribers. A validator is considered
   oversubscribed when more than \{\{ polkadot:
   <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
   :kusama }} active nominators are assigned to the validator. In this scenario, only the top \{\{
   polkadot:
   <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
   :kusama }} nominators (sorted by stake) will receive rewards. The remaining nominators will not be
   rewarded. However, they can be slashed if the validator commits a slashable offense.
 
   Every nominator can select up to a maximum of \{\{ polkadot:
-  <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }} \{\{
+  <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}\{\{
   kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
   validators, which contributes towards maximizing the probability of having the nominator’s stake
   applied to the validators active set. Nominating too few validators could result in the nominators
@@ -265,7 +265,7 @@ up to \{\{ polkadot:
 :kusama }} nominators to set their intention to nominate, of which the stake of the top \{\{
 polkadot:
 <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>
 :kusama }} nominators is considered for [electing set](#staking-election-stages) that eventually
 determines the active validators.
@@ -324,7 +324,7 @@ The staking election system has three stages for both validators and nominators,
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
   validator. Staking rewards are received by the top \{\{ polkadot:
   <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
   :kusama }} nominators ranked by stake. When slashing occurs, all the active nominators backing the
   validator get slashed (also those who do not receive rewards due to oversubscription issues).
@@ -350,7 +350,7 @@ fully distributed to one or more validators. That being said, you may not receiv
 nominated very few validator candidates and no one got elected, or your stake is small, and you only
 selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
 generally wise to choose as many trustworthy validators as you can (up to \{\{ polkadot:
-<RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>) :polkadot }} \{\{
+<RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>) :polkadot }}\{\{
 kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>) :kusama }}
 to reduce the risk of none of your nominated validators being elected.
 
@@ -406,16 +406,16 @@ nominate with to receive staking rewards can change between the eras.
 Thus, for **nominator counters**, we have:
 
 - count of nominator intentions and max possible nominator intentions \{\{ polkadot: (unlimited)
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   (<RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>) :kusama }}
 - count of electing nominators, and maximum possible electing nominators \{\{ polkadot:
   (<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>)
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   (<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>)
   :kusama }}
 - count of active nominators and maximum possible active nominators \{\{ polkadot:
   (<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>)
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   (<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>)
   :kusama }}
 
@@ -424,16 +424,16 @@ Thus, for **nominator counters**, we have:
 Validators can only pay out to a certain number of nominators per era. This is currently set to \{\{
 polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} but can be modified via governance. If more than \{\{ polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} nominators nominate the same validator, it is "oversubscribed", and only the top \{\{
 polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} staked nominators (ranked by the amount of stake) are paid rewards. Other nominators will
 receive no rewards for that era, although their stake will still be used to calculate entry into the
@@ -443,7 +443,7 @@ Although it is difficult to determine how many nominators will nominate a given 
 next era, one can estimate based on the current number of nominators. A validator with only 5
 nominators in this era, for instance, is unlikely to have more than \{\{ polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
 :kusama }} in the next era. However, an already-oversubscribed validator with 1000 nominators this
 era is very likely to be oversubscribed in the next era as well.

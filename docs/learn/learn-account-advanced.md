@@ -215,12 +215,12 @@ To use the exact mnemonic across multiple wallets, ensure they follow compatible
 generating keys and signing messages. If you are still looking for understandable documentation,
 contact the project maintainers.
 
-|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-| :---------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
-| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                  |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
+|                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
+| :-------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
+| Polkadot-JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot-JS Apps      |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
+| Subkey                |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
 
 \* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with
 BIP39.

@@ -94,7 +94,7 @@ requirements.
 
 `ChillThreshold` defines how close to the max nominators or validators we must reach before users
 can start chilling one-another. This value is currently set to \{\{ polkadot:
-<RPC network="polkadot" path="query.staking.chillThreshold" defaultValue={90}/>% :polkadot }} \{\{
+<RPC network="polkadot" path="query.staking.chillThreshold" defaultValue={90}/>% :polkadot }}\{\{
 kusama: <RPC network="kusama" path="query.staking.chillThreshold" defaultValue={90}/>% :kusama }}
 
 :::

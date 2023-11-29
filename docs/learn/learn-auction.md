@@ -29,7 +29,7 @@ details.
 
 ## Auction Schedule
 
-\{\{ polkadot: <AuctionSchedule network="polkadot" /> :polkadot }} \{\{ kusama:
+\{\{ polkadot: <AuctionSchedule network="polkadot" /> :polkadot }}\{\{ kusama:
 <AuctionSchedule network="kusama" /> :kusama }}
 
 ## Mechanics of a Candle Auction
@@ -76,7 +76,7 @@ Random Function wins the slot auction.
 A parachain auction on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} lasts
 exactly one week from the start: 1 day and 18 hours for the starting period, \{\{ polkadot:
 <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/>
 :kusama }} days for the ending period (candle auction phase) and 6 hours for determining the auction
 winner.
@@ -169,7 +169,7 @@ on the [Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The VRF 
 base of the randomness, which will retroactively determine the end-time of the auction.
 
 The slot durations are capped to \{\{ polkadot: 2 years and divided into 3-month periods. :polkadot
-}} \{\{ kusama: 1 year and divided into 6-week periods. :kusama }} Parachains may lease a slot for
+}}\{\{ kusama: 1 year and divided into 6-week periods. :kusama }} Parachains may lease a slot for
 any combination of periods of the slot duration. Parachains may lease more than one slot over time,
 meaning that they could extend their lease to the network past the maximum duration by leasing a
 contiguous slot.
@@ -206,13 +206,13 @@ Slot E |__________|___________|     1     |     2     |     3     |     4    |  
 ```
 
 _Each period of the range 1 - 4 represents a \{\{ polkadot: 3-month duration for a total of 2 years
-:polkadot }} \{\{ kusama: 6-week duration for a total of 1 year :kusama }} _
+:polkadot }}\{\{ kusama: 6-week duration for a total of 1 year :kusama }} _
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
 periods available for a slot. (`n`= \{\{ polkadot:
 <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Polkadot)
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Kusama)
 :kusama }}
 

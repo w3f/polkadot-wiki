@@ -136,11 +136,11 @@ use it to set a sub-identity to your Ledger account.
 
 You should now see the sub-identity displayed on-chain. You need to be aware that \{\{ polkadot:
 <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
 :kusama }} is reserved for setting identity and \{\{ polkadot:
 <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/>
 :kusama }} for each sub-identity. This reserved account balance is freed once you
 [clear the identities](../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
@@ -170,7 +170,7 @@ a transaction.
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
 field needs to be at least \{\{ polkadot:
 <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>.
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>.
 :kusama }} You can find out the minimum by querying the chain state under
 [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy ->

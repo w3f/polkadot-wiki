@@ -33,7 +33,7 @@ pool. In other words, some parachain slots will have no parachain attached to th
 be used as a space for which the winner(s) of the block-by-block parathread fee auction can have
 their block candidate included.
 
-Collators will offer a bid designated in \{\{ polkadot: DOT :polkadot }} \{\{ kusama: KSM :kusama }}
+Collators will offer a bid designated in \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}
 for inclusion of a parathread block candidate. The Relay Chain block author is able to select from
 these bids to include a parathread block. The obvious incentive is for them to accept the block
 candidate with the highest bid, which would bring them the most profit. The tokens from the
@@ -50,18 +50,18 @@ an independent chain with secured bridge, a parachain, or a parathread. It can s
 last two states with relatively minimal effort since the difference is more of an economic
 distinction than a technological one.
 
-Parathreads have the exact same benefits for connecting to \{\{ polkadot: Polkadot :polkadot }} \{\{
+Parathreads have the exact same benefits for connecting to \{\{ polkadot: Polkadot :polkadot }}\{\{
 kusama: Kusama :kusama }} that a full parachain has. Namely, it is able to send messages to other
 para-objects through [XCMP](learn-xcm.md###XCMP) and it is secured under the full economic security
-of \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama :kusama }}'s validator set.
+of \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}'s validator set.
 
 The difference between parachains and parathreads is economic. Parachains must be registered through
 a normal means of \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}, i.e.
 governance proposal or parachain slot auction. Parathreads have a fixed fee for registration that
 would realistically be much lower than the cost of acquiring a parachain slot. Similar to how \{\{
-polkadot: DOT :polkadot }} \{\{ kusama: KSM :kusama }} are locked for the duration of parachain
-slots and then returned to the winner of the auction, the deposit for a parathread will be returned
-to the parathread after the conclusion of its term.
+polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} are locked for the duration of parachain slots
+and then returned to the winner of the auction, the deposit for a parathread will be returned to the
+parathread after the conclusion of its term.
 
 Registration of the parathread does not guarantee anything more than the registration of the
 parathread code to the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} Relay
@@ -84,7 +84,7 @@ There are two sources of compensation for collators:
 1. Assuming a parathread has its own local token system, it pays the collators from the transaction
    fees in its local token. If the parathread does not implement a local token, or its local token
    has no value (e.g. it is used only for governance), then it can use \{\{ polkadot: DOT :polkadot
-   }} \{\{ kusama: KSM :kusama }} to incentivize collators.
+   }}\{\{ kusama: KSM :kusama }} to incentivize collators.
 2. Parathread protocol subsidy. A parathread can mint new tokens in order to provide additional
    incentives for the collator. Probably, the amount of local tokens to mint for the parathread
    would be a function of time, the more time that passes between parathread blocks that are
@@ -94,7 +94,7 @@ There are two sources of compensation for collators:
 
 Collators may be paid in local parathread currency. However, the Relay Chain transacts with the \{\{
 polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }} native currency only. Collators must
-then submit block candidates with an associated bid in \{\{ polkadot: DOT. :polkadot }} \{\{ kusama:
+then submit block candidates with an associated bid in \{\{ polkadot: DOT. :polkadot }}\{\{ kusama:
 KSM. :kusama }}
 
 ## Parachain Slot Swaps

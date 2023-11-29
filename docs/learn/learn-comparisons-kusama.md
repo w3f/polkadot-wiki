@@ -31,19 +31,19 @@ Another key technical difference between Polkadot and Kusama is that Kusama has 
 parameters that allow for faster upgrades. Kusama is up to four times faster than Polkadot. On
 Polkadot, the voting period on referendums lasts \{\{ polkadot:
 <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/>
 :kusama }} days, followed by an enactment period of \{\{ polkadot:
 <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/>
 :kusama }} days before the changes are enacted on-chain. On Kusama, voting lasts \{\{ polkadot:
 <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays"/>
 :kusama }} days, followed by an \{\{ polkadot:
 <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays"/>
 :kusama }} day enactment period. This means stakeholders need to stay active and vigilant if they
 want to keep up with all the proposals, referenda, and upgrades, and validators on Kusama often need

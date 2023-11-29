@@ -92,7 +92,7 @@ confirm period. The support curve drops linearly to 25% by the end of day \{\{ p
 proposal during the decision period.
 
 \{\{ polkadot: <Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Whitelisted Caller
@@ -107,7 +107,7 @@ kusama: 88% :kusama }} approval to be considered to be part of the confirm perio
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot
-}} \{\{ kusama:
+}}\{\{ kusama:
 <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Staking Admin
@@ -117,7 +117,7 @@ pallet and the Election Provider Multiphase Pallet.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="AdminStaking" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="AdminStaking" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -129,7 +129,7 @@ pallet.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="Treasurer" network="Polkadot" maxX="672" maxY="100" /> :polkadot
-}} \{\{ kusama:
+}}\{\{ kusama:
 <Chart title="" type="line" dataId="Treasurer" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Lease Admin
@@ -138,7 +138,7 @@ Origin can force slot leases. This origin has the privilege to execute calls fro
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="AdminLease" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="AdminLease" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Fellowship Admin
@@ -147,7 +147,7 @@ The origin for managing the composition of the fellowship.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="AdminFellowship" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="AdminFellowship" network="Kusama" maxX="336" maxY="100" />
 :kusama }}
 
@@ -158,7 +158,7 @@ Identity pallet.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="AdminGeneral" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="AdminGeneral" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -169,7 +169,7 @@ Scheduler Pallet.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="AdminAuction" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="AdminAuction" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -180,7 +180,7 @@ slightly sharper reductions in their thresholds for passing.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="RefCanceller" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="RefCanceller" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -192,7 +192,7 @@ passing.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="RefKiller" network="Polkadot" maxX="672" maxY="100" /> :polkadot
-}} \{\{ kusama:
+}}\{\{ kusama:
 <Chart title="" type="line" dataId="RefKiller" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Small Tipper
@@ -202,7 +202,7 @@ the treasury at once.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="SmallTipper" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="SmallTipper" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -213,7 +213,7 @@ from the treasury at once.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="BigTipper" network="Polkadot" maxX="672" maxY="100" /> :polkadot
-}} \{\{ kusama:
+}}\{\{ kusama:
 <Chart title="" type="line" dataId="BigTipper" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
 ### Small Spender
@@ -223,7 +223,7 @@ from the treasury at once.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="SmallSpender" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="SmallSpender" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -234,7 +234,7 @@ from the treasury at once.
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="MediumSpender" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="MediumSpender" network="Kusama" maxX="336" maxY="100" /> :kusama
 }}
 
@@ -245,5 +245,5 @@ Origin able to spend up to \{\{ polkadot: 1000000 DOT :polkadot }}\{\{ kusama: 3
 
 \{\{ polkadot:
 <Chart title="" type="line" dataId="BigSpender" network="Polkadot" maxX="672" maxY="100" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <Chart title="" type="line" dataId="BigSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}

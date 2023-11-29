@@ -32,8 +32,8 @@ proposal, they will need to find an off-chain way to explain the proposal:
 - Many community members participate in discussion in the \{\{ polkadot:
   [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and :polkadot }}
   \{\{ kusama: [Kusama Direction room](https://matrix.to/#/#Kusama-Direction:parity.io) and the
-  :kusama }} \{\{ polkadot:
-  [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }} \{\{
+  :kusama }}\{\{ polkadot:
+  [Polkadot Direction room](https://matrix.to/#/#Polkadot-Direction:parity.io). :polkadot }}\{\{
   kusama: [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders). :kusama }}
 - Use platforms like [Polkassembly](https://polkassembly.io) and
   [SubSquare](https://www.subsquare.io/) to initiate discussion with the community. They also offer

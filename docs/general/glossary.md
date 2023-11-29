@@ -325,7 +325,7 @@ margin that each validator deems reasonable.
 ## Injected Account
 
 An account that is not directly managed by the Polkadot UI but can be accessed through it, such as
-accounts controlled by the Polkadot{.js} extension.
+accounts controlled by the Polkadot-JS extension.
 
 ## Interoperability
 
@@ -453,7 +453,7 @@ and only the top staked nominators (ranked by the amount of stake, up to the max
 nominators) are paid rewards. Other nominators will receive no rewards for that era. The current
 maximum number of nominators is \{\{ polkadot:
 <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>
-on Polkadot, :polkadot }} \{\{ kusama:
+on Polkadot, :polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> on
 Kusama, :kusama }} but it can be modified via governance.
 
@@ -669,16 +669,16 @@ software.
 Successfully enacted Treasury track referenda will get funded at the end of the spending period that
 resets every \{\{ polkadot:
 <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/>
 :kusama }} days. Treasury funds are directly sent to the beneficiary account at the end of the spend
 period.
 
 ## Staking
 
-The act of bonding tokens for \{\{ polkadot: Polkadot (DOT) :polkadot }} \{\{ kusama: Kusama (KSM)
+The act of bonding tokens for \{\{ polkadot: Polkadot (DOT) :polkadot }}\{\{ kusama: Kusama (KSM)
 :kusama }} by putting them up as "collateral" for a chance to produce a valid block (and thus obtain
-a block reward). Validators and nominators stake their \{\{ polkadot: DOT :polkadot }} \{\{ kusama:
+a block reward). Validators and nominators stake their \{\{ polkadot: DOT :polkadot }}\{\{ kusama:
 KSM :kusama }} in order to secure the network.
 
 ## State transition function

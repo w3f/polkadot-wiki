@@ -122,7 +122,7 @@ for more information about existential deposit.
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the existential deposit of \{\{ polkadot:
 <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>.
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>.
 :kusama }}
 

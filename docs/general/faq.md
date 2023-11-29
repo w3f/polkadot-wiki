@@ -113,7 +113,7 @@ It is also worth mentioning that one thousand validators is more than the number
 similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders
 are operating with around 150 validators, while Polkadot is already securely running with \{\{
 polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot
-}} \{\{ kusama: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>
+}}\{\{ kusama: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>
 :kusama }} validators.
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates

@@ -15,11 +15,11 @@ hub is \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }}. The Existenti
 transaction fees, and the deposits for proxy/multisig operations are about 1/10th of the values on
 the Relay chains. For example, the Existential Deposit of an Asset Hub account is \{\{ polkadot:
 <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>,
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>,
 :kusama }} when compared to \{\{ polkadot:
 <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
-on Polkadot :polkadot }} \{\{ kusama:
+on Polkadot :polkadot }}\{\{ kusama:
 <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
 on Kusama :kusama }}. Apart from the core protocol token \{\{ polkadot: DOT :polkadot }}\{\{ kusama:
 KSM :kusama }}, the assets held on the Asset Hub can be broadly categorized as
@@ -45,11 +45,11 @@ which is a parachain on Westend. The WND tokens (Westies) are free and are avail
 
 To create an asset on the Asset Hub, you would need a deposit of \{\{ polkadot:
 <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
 :kusama }} and around \{\{ polkadot:
 <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/>
 :kusama }} for the metadata. Before you create an asset on the Asset Hub, ensure that your Asset Hub
 account balance is a bit more than the sum of those two deposits, which should seamlessly account

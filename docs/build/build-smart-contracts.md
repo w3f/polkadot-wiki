@@ -171,7 +171,7 @@ smart contract example? Ask us to add it to this page!**
 
 ## Smart Contract Environments
 
-It is still early for smart contracts on \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama
+It is still early for smart contracts on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }} and the development is only now stabilizing. We are actively producing content to help
 developers get up to speed and will maintain the Wiki with the latest resources. You should also
 keep up to date with the following links:
@@ -284,7 +284,7 @@ head start on your project, allowing you to innovate and create something truly 
 
 If you have interesting ideas for smart contracts on \{\{ polkadot: Polkadot, :polkadot }}\{\{
 kusama: Kusama, :kusama }} feel free to drop into the \{\{ polkadot:
-[Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) :polkadot }} \{\{
+[Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) :polkadot }}\{\{
 kusama: [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) :kusama }} to talk
 about them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) :polkadot }} or

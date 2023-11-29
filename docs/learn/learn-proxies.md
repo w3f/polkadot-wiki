@@ -46,9 +46,9 @@ participate in the network.
 :::info
 
 The **maximum number of proxies** allowed for a single account is \{\{ polkadot:
-<RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }} \{\{
-kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }} You can
-have the same proxy for multiple accounts.
+<RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}\{\{ kusama:
+<RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }} You can have
+the same proxy for multiple accounts.
 
 :::
 
@@ -107,11 +107,11 @@ list (creates one new item in storage). For every proxy the account has, an addi
 defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location). The
 `ProxyDepositBase` is \{\{ polkadot:
 <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>
 :kusama }} and the `ProxyDepositFactor` is \{\{ polkadot:
 <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>.
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/>.
 :kusama }}
 
@@ -134,11 +134,11 @@ where the `announcementDepositBase` is the required amount to be reserved for an
 a proxy call. For every proxy call the account has, an additional amount defined by the
 `announcementDepositFactor` is reserved as well. The `announcementDepositBase` is \{\{ polkadot:
 <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/>
 :kusama }} and the `announcementDepositFactor` is \{\{ polkadot:
 <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>.
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>.
 :kusama }}
 

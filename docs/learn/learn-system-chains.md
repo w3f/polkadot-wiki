@@ -61,11 +61,11 @@ These low fee levels mean that the Asset Hub is well suited for handling \{\{ po
 For example, the existential deposit for \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }} is \{\{ polkadot:
 <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>,
 :kusama }} while only \{\{ polkadot:
 <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>
 :kusama }} on the Asset Hub.
 

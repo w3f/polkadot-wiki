@@ -47,11 +47,11 @@ to learn how to create fungible assets on the Asset Hub.
 Anyone on the network can create assets on the Asset Hub as long as they can reserve the required
 deposit of \{\{ polkadot:
 <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
 :kusama }} and around \{\{ polkadot:
 <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/>
 :kusama }} for the metadata. The network reserves the deposit on creation. The creator also must
 specify a unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId` should be

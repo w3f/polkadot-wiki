@@ -183,7 +183,7 @@ increases towards 100%, it will require a simple majority of _aye_ votes to pass
 
 Note that the bonded tokens will be released once the proposal is tabled (that is, brought to a
 vote), and a maximum of \{\{ polkadot:
-<RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }} \{\{
+<RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }}\{\{
 kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
 public proposals can be in the proposal queue.
 
@@ -223,7 +223,7 @@ referenda can be voted on.
 
 Every \{\{ polkadot:
 <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" />
 :kusama }} days, a new referendum will come up for a vote, assuming there is at least one proposal
 in one of the queues. There is a queue for Council-approved proposals and a queue for
@@ -310,9 +310,9 @@ kusama: 150 x 3 = 450 Votes :kusama }}
 - turnout = \{\{ polkadot: 750 :polkadot }}\{\{ kusama: 75 :kusama }}
 - electorate = \{\{ polkadot: 1500 :polkadot }}\{\{ kusama: 150 :kusama }}
 
-![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
+![eq-1](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
 
-![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
+![eq-2](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
 
 Since the above example is a public referendum, **Super-Majority Approve** would be used to
 calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
@@ -387,7 +387,7 @@ To represent passive stakeholders, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusa
 each represented as an on-chain account. On \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }}, the council currently consists of \{\{ polkadot:
 <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" />
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" />
 :kusama }} members.
 
@@ -512,7 +512,7 @@ be an error, the council _may_ consider a governance motion to correct it.
 The first step to appeal to the council is to contact the councilors. There is no singular place
 where you are guaranteed to grab every councilor’s ear with your message. However, there are a
 handful of good places to start where you can get the attention of some of them. The \{\{ polkadot:
-[Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }} \{\{ kusama:
+[Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}\{\{ kusama:
 [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} matrix room is one
 such place. After creating an account and joining this room, you can post a well-thought-through
 message here that lays down your case and justifies why you think the council should consider

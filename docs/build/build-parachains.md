@@ -190,7 +190,7 @@ parachain. In practice, the PDK will consist of the following key components:
 #### Key Components
 
 The state transition function (STF) can be an abstract way for an application to go from one state
-to another state. The only constraint that \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama
+to another state. The only constraint that \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }} places on this STF is that it must be easily verifiable -- usually through what we call a
 _witness_ or _proof_. It must be so because the Relay Chain validators will need to check that each
 state it receives from the collator node is correct without actually running through the entire
@@ -411,7 +411,7 @@ To include your parachain into the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusa
 }} network, you will need to acquire a parachain slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the \{\{
-polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }} \{\{ kusama:
+polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}\{\{ kusama:
 [parachain auction](../learn/learn-auction.md) :kusama }} page of the wiki.
 
 ### Parathread
@@ -422,7 +422,7 @@ from then be able to start participating in the per-block auctions for inclusion
 transition into a Relay Chain.
 
 For more information on how parathread per-block auctions work, see the more detailed \{\{ polkadot:
-[parathread](../learn/learn-parathreads.md) :polkadot }} \{\{ kusama:
+[parathread](../learn/learn-parathreads.md) :polkadot }}\{\{ kusama:
 [parathread](../learn/learn-parathreads.md) :kusama }} page.
 
 ## Resources

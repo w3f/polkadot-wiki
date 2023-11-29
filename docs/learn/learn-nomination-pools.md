@@ -22,11 +22,11 @@ pools will receive rewards.**
 
 - There are currently \{\{ polkadot:
   <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} />
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} />
   :kusama }} members. (There can be a maximum of \{\{ polkadot:
   <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} />
-  :polkadot }} \{\{ kusama:
+  :polkadot }}\{\{ kusama:
   <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama
   }} members.)
 - There are currently \{\{ polkadot:
@@ -36,7 +36,7 @@ pools will receive rewards.**
   <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
   \{\{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} />
   :kusama }} pools)
-- \{\{ polkadot: No limit on :polkadot }} \{\{ kusama: There can be a maximum of
+- \{\{ polkadot: No limit on :polkadot }}\{\{ kusama: There can be a maximum of
   <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} />
   :kusama }} members per pool.
 
@@ -73,7 +73,7 @@ allow members to pool their funds together and act as a single nominator account
 Due to the current runtime constraints, \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }} can only handle \{\{ polkadot:
 <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>
 :kusama }} nominators comfortably in the [electing set](learn-nominator.md#staking-election-stages).
 As one of the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake
@@ -124,9 +124,9 @@ ability to bond additional funds or re-stake rewards as long as they are already
 Note that a member may only belong to one pool at a time.
 
 **The current minimum bond to join a pool on** \{\{ polkadot: **Polkadot** :polkadot }}\{\{ kusama:
-**Kusama** :kusama }} \{\{ polkadot: **is
+**Kusama** :kusama }}\{\{ polkadot: **is
 <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.**
-:polkadot }} \{\{ kusama: **is
+:polkadot }}\{\{ kusama: **is
 <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.**
 :kusama }}
 
@@ -193,13 +193,13 @@ At any point in time after joining the pool, a member can start the process of e
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the
 unbonding duration has passed \{\{ polkadot:
 (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
 :kusama }} eras which correspond to \{\{ polkadot:
 <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/>
-:kusama }} days on \{\{ polkadot: Polkadot), :polkadot }} \{\{ kusama: Kusama), :kusama }} a member
+:kusama }} days on \{\{ polkadot: Polkadot), :polkadot }}\{\{ kusama: Kusama), :kusama }} a member
 may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
 relationship with their pool, allowing them to join a different pool if desired. Check the "Withdraw
 unbonded funds" section in
@@ -364,14 +364,14 @@ from time to time and change the pool if necessary.
 
 The minimum amount required to become an active nominator and earn rewards is \{\{ polkadot:
 **<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>**.
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 **<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>**.
 :kusama }} If you have less \{\{ polkadot: DOT :polkadot }}\{\{ kusama: KSM :kusama }} than the
 minimum active nomination and still want to participate in staking, you can join the nomination
 pools. You can now stake on \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama :kusama }}
 natively with just \{\{ polkadot:
 **<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>**
-:polkadot }} \{\{ kusama:
+:polkadot }}\{\{ kusama:
 **<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>**
 :kusama }} in the nomination pools and earn staking rewards. For additional information, see
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).

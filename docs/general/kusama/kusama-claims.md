@@ -19,7 +19,7 @@ tokens. There is no deadline for claiming KSM.
 You will need to generate a Kusama account to claim KSM. There are a few ways you can create one.
 
 For most users, we recommend using the
-[Polkadot{.js} browser extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
+[Polkadot-JS browser extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
 since it will allow you to store your encrypted keystore locally.
 
 In terms of hardware wallet support, you can use the [Kusama Ledger application](../ledger.md), or
@@ -38,9 +38,9 @@ Kusama accounts as well.
 Please follow the instructions for [installing the Kusama Ledger application](../ledger.md) and then
 proceed to step 2 below.
 
-### Using Polkadot{.js} extension (Chrome/Brave or Firefox)
+### Using Polkadot-JS extension (Chrome/Brave or Firefox)
 
-1. Install the Polkadot{.js} extension from the
+1. Install the Polkadot-JS extension from the
    [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
    or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
 2. Click on the settings button to change the network to "Kusama (canary)". <img

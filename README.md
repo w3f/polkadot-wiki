@@ -212,7 +212,7 @@ functionality, surround Kusama specific content with
 For example the syntax:
 
 ```markdown
-The \{\{ polkadot: Polkdadot Wiki :polkadot }} \{\{ kusama: Kusama Guide :kusama }} is a great
+The \{\{ polkadot: Polkdadot Wiki :polkadot }}\{\{ kusama: Kusama Guide :kusama }} is a great
 resource!
 ```
 

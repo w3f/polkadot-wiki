@@ -48,7 +48,7 @@ have historically functioned:
     result from insufficient disk space or a corrupt database.
 3.  Monitoring should be implemented that allows node operators to monitor connectivity network
     connectivity to the peer-to-peer port of the validator instance. Monitoring should also be
-    implemented to ensure that there is <50 Block ‘drift’ between the target and best blocks. If
+    implemented to ensure that there is < 50 Block ‘drift’ between the target and best blocks. If
     either event produces a failure, the node operator should be notified. The following are
     recommendations to validators to avoid liveliness for new servers / migrated servers:
 4.  Ensure that the `--validator` flag is used when starting the validator instance

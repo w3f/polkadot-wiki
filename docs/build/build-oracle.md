@@ -38,6 +38,6 @@ their off-chain data and computation requirements and receive the outputs to the
 [Acurast Pallet](https://docs.acurast.com/integrations/substrate) and EVM or WASM environments.
 
 When using an oracle in your application you should be aware of the benefits and risks that are
-baked into its specific model. As the \{\{ polkadot: Polkadot :polkadot }} \{\{ kusama: Kusama
+baked into its specific model. As the \{\{ polkadot: Polkadot :polkadot }}\{\{ kusama: Kusama
 :kusama }} ecosystem develops and oracle parachains begin to appear, this article will be updated
 with a comparison of the different solutions and the benefits and drawbacks that each provide.
