@@ -62,7 +62,7 @@
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "shx": "^0.3.4",
-    "unist-util-visit": "5.0.0",
+    "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
   },
   "dependencies": {
