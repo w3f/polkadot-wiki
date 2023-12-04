@@ -96,6 +96,8 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
 
 In the [Earning Tab](https://web.subwallet.app/home/earning/overview), users can easily stake their tokens as well as monitor staking rewards using SubWallet's Earning Calculator. 
 
+[![](https://cdn.discordapp.com/attachments/865823369092661279/1181154676092194816/Earning.png?ex=65800703&is=656d9203&hm=1185ef272b56a79919edb9868b6fd4206aadf0baf1725a28c85afd2f5a750c48&)](https://web.subwallet.app/)
+
 ## Sub.ID
 
 [Sub.ID](https://sub.id/) is a one-stop-shop for managing your Polkadot accounts, viewing your
