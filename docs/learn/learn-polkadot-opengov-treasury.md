@@ -81,16 +81,6 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 ## Bounties
 
-:::info Bounty Guides
-
-See the [bounty guides](./learn-guides-bounties.md) to learn about how to
-[create a bounty](./learn-guides-bounties.md#submit-a-bounty-proposal),
-[assign a curator](./learn-guides-bounties.md#assign-a-curator-to-a-bounty) to a bounty, as well as
-[creating and awarding child bounties](./learn-guides-bounties.md#create-and-award-child-bounties)
-and [claiming child bounties rewards](./learn-guides-bounties.md#claim-a-child-bounty-reward).
-
-:::
-
 ### Parent Bounties
 
 Getting treasury funding through OpenGov, depending on which treasury track you submit your
@@ -148,3 +138,12 @@ allocation of funds and as part of a nested iteration of the bounty mechanism.
 
 Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties are used to
 access funds directly from the parent bounty without going through an OpenGov referendum.
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the [Polkadot-JS guides about bounties](./learn-guides-bounties.md)
+and [treasury](./learn-guides-treasury.md).
+
+:::

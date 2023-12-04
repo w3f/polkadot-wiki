@@ -94,10 +94,6 @@ module.exports = {
             from: ['/docs/learn-simple-payouts', '/docs/learn-staking-miner']
           },
           {
-            to: '/docs/learn-account-generation',
-            from: ['/docs/learn-account-restore']
-          },
-          {
             to: '/docs/learn-polkadot-opengov',
             from: ['/docs/learn-gov2', '/docs/learn-opengov']
           },
@@ -177,6 +173,10 @@ module.exports = {
             to: '/docs/learn-polkadot-opengov-origins',
             from: ['/docs/maintain-guides-polkadot-opengov']
           },
+          {
+            to: '/docs/learn-accounts',
+            from: ['/docs/learn-account-generation', '/docs/learn-account-restore', '/docs/learn-accounts-index']
+          }
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
@@ -192,7 +192,7 @@ module.exports = {
     },
     prism: {
       additionalLanguages: ["rust"],
-      theme: require("prism-react-renderer/themes/github"),
+      theme: require("prism-react-renderer").themes.github,
     },
     /*
     announcementBar: {
