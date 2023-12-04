@@ -16,6 +16,7 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 :::
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
+- [SubWallet Earning](#subwallet-earning)
 - [Sub.ID](#subid)
 - [NOMI](#nomi)
 
@@ -27,7 +28,7 @@ dedicated to native non-custodial [staking](../learn/learn-staking.md) on the
 stake as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member.
 Users can also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
-[Subwallet](../general/wallets-and-extensions.md#subwallet),
+[SubWallet](../general/wallets-and-extensions.md#subwallet),
 [Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
 PolkaGate, and Enkrypt. The dashboard also supports
 [staking proxies](../learn/learn-proxies.md#staking-proxy).
@@ -86,6 +87,14 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
   </td>
   
 </tr>
+
+## SubWallet Earning 
+
+[SubWallet Web Dashboard](https://web.subwallet.app/) is the all-in-one solution to managing assets and staking on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. 
+
+[![](https://cdn.discordapp.com/attachments/865823369092661279/1181154288035172352/Portfolio_tokens.png?ex=658006a7&is=656d91a7hm=fc804c68c9ac864849990e063a3ae0f0bb3813b837a28016d9f296bba282c257&)](https://web.subwallet.app/)
+
+In the [Earning Tab](https://web.subwallet.app/home/earning/overview), users can easily stake their tokens as well as monitor staking rewards using SubWallet's Earning Calculator. 
 
 ## Sub.ID
 
