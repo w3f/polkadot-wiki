@@ -16,9 +16,9 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 :::
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
-- [SubWallet Earning](#subwallet-earning)
 - [Sub.ID](#subid)
 - [NOMI](#nomi)
+- [SubWallet Earning](#subwallet-earning)
 
 ## Polkadot Staking Dashboard
 
@@ -88,14 +88,6 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
   
 </tr>
 
-## SubWallet Earning 
-
-[SubWallet Web Dashboard](https://web.subwallet.app/) is the all-in-one solution to manage assets and stake on multiple networks in the Polkadot, Kusama and Polkadot SDK (Substrate) ecosystems. 
-
-The Web Dashboard features an Earning tab which allows users to stake DOT easily via native nomination pools, as well as in liquid staking and lending protocols, without having to manage multiple applications with different interfaces and experiences.
-
-[![](https://cdn.discordapp.com/attachments/865823369092661279/1181493922166493214/earning_tab.gif?ex=658142f6&is=656ecdf6&hm=b02716903c18d046896c59eb1c5935518f75cf9f52845c1636609ccaf43c57cd&)](https://web.subwallet.app/)
-
 ## Sub.ID
 
 [Sub.ID](https://sub.id/) is a one-stop-shop for managing your Polkadot accounts, viewing your
@@ -122,3 +114,11 @@ data is collected at the last block of every session.
 [![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
 
 source: https://github.com/turboflakes/apps
+
+## SubWallet Earning 
+
+[SubWallet Web Dashboard](https://web.subwallet.app/) is the all-in-one solution to manage assets and stake on multiple networks in the Polkadot, Kusama and Polkadot SDK (Substrate) ecosystems. 
+
+The Web Dashboard features an Earning tab which allows users to stake DOT easily via native nomination pools, as well as in liquid staking and lending protocols, without having to manage multiple applications with different interfaces and experiences.
+
+[![](https://cdn.discordapp.com/attachments/865823369092661279/1181493922166493214/earning_tab.gif?ex=658142f6&is=656ecdf6&hm=b02716903c18d046896c59eb1c5935518f75cf9f52845c1636609ccaf43c57cd&)](https://web.subwallet.app/)
