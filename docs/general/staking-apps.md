@@ -90,9 +90,9 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
 
 ## SubWallet Earning 
 
-[SubWallet Web Dashboard](https://web.subwallet.app/) is the all-in-one solution to manage assets and stake on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. 
+[SubWallet Web Dashboard](https://web.subwallet.app/) is the all-in-one solution to manage assets and stake on the Polkadot, Kusama ecosystems and Polkadot SDK (Substrate) networks. 
 
-SubWallet Earning tab allows users to stake DOT easily via native nomination pools, as well as in liquid staking and lending protocols, without having to manage multiple applications with different interfaces and experiences.. 
+The Web Wallet features the **SubWallet Earning** tab which allows users to stake DOT easily via native nomination pools, as well as in liquid staking and lending protocols, without having to manage multiple applications with different interfaces and experiences.
 
 [![](https://cdn.discordapp.com/attachments/865823369092661279/1181493922166493214/earning_tab.gif?ex=658142f6&is=656ecdf6&hm=b02716903c18d046896c59eb1c5935518f75cf9f52845c1636609ccaf43c57cd&)](https://web.subwallet.app/)
 
