@@ -49,7 +49,7 @@ developmental components. For more inspiration, look at the
     'themeVariables': {
       'fontFamily': 'Unbounded',
       'primaryColor': '#E6007A',
-      'fontSize': '18px',
+      'fontSize': '16px',
       'primaryTextColor': '#fff',
       'primaryBorderColor': '#7C0000',
       'lineColor': '#140523',
@@ -60,20 +60,27 @@ developmental components. For more inspiration, look at the
 }%%
 flowchart TB
     subgraph PL ["Protocol Side (Parachains, Smart Contracts)"]
-        ST[Build a Blockchain]
-        BSC[Develop a Smart Contract] --> SC[Smart Contract Parachain]
-        SC --> ink!
-        SC --> Solidity
-        ST --> R[WASM Runtime - FRAME]
-        R -->Parachain["Parachain"]-->SSC["Shared Security - Cumulus"]
-        R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
+
+        subgraph SCD ["Smart Contract Development"]
+          direction LR
+          SC["Use Smart Contract Parachain"]
+          SC --> ink!
+          SC --> Solidity
+        end
+
+        subgraph PSL ["Build a Blockchain"]
+           direction LR
+           PS["Polkadot SDK"] --> R[WASM Runtime - Substrate & FRAME]
+           R -->Parachain["Parachain"]-->SSC["Shared Security - Cumulus"]
+           R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
+        end
     end
 
-    CS-->| Develop apps| PL
+    PL-->| Develop apps| CS
 
     subgraph CS ["Client Side (dApps/uApps)"]
         UA[UApp - Smoldot]
-        UA --> CAPI
+        UA --> PAPI[Polkadot API]
         UA --> PJS[Polkadot JS]
         UA --> SubXT
         SubXT
