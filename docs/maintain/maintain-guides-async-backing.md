@@ -194,8 +194,7 @@ This phase consists of changes to your parachain’s runtime that activate async
 
 ![Unincluded-segment-capacity](../assets/async/async-backing-unincluded-segment.png)
 
-3. Either decrease `MILLISECS_PER_BLOCK` to 6000 or increase `BLOCK_PROCESSING_VELOCITY` to 2 in
-   `runtime/src/lib.rs`.
+3. Decrease `MILLISECS_PER_BLOCK` to 6000.
 
 - Note: For a parachain which measures time in terms of its own block number rather than by relay
   block number it may be preferable to increase velocity. Changing block time may cause
