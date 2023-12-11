@@ -108,8 +108,9 @@ slashed.
     performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
 - **Storage**
   - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An
-    estimation of current chain snapshot sizes can be found [here](https://stakeworld.io/docs/dbsize). In
-    general, the latency is more important than the throughput.
+    estimation of current chain snapshot sizes can be found
+    [here](https://stakeworld.io/docs/dbsize). In general, the latency is more important than the
+    throughput.
 - **Memory**
   - 32 GB DDR4 ECC.
 - **System**
