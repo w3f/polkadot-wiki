@@ -102,8 +102,6 @@ web apps.
 | --------------------------------------- | ---------------- | ---------------------------- | -------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
 | [SubWallet](https://web.subwallet.app/) | Any web browsers | **Yes, Yes**                 | **Yes**        | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 
-:::
-
 ## Enkrypt
 
 A multichain crypto wallet - Bitcoin, Ethereum, Polkadot, Kusama and a few parachains.
