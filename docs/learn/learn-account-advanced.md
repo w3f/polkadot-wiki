@@ -319,7 +319,7 @@ Password-derived account are as secure as the chosen password.
 
 :::
 
-### Account Derivation in Ledger Live
+### Account Derivation on Ledger Live
 
 Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
 you created a derived account with a derivation path 44'/354'/0'/0'/1' on a wallet or extension, it
@@ -329,6 +329,8 @@ derived accounts using the Ledger Live App, but it is possible to do so using Po
 derivation paths.
 
 {{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
+
+### Account Derivation on Polkadot Vault
 
 ## System Accounts
 
