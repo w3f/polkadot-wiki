@@ -81,13 +81,13 @@ wildly, but it's just a quirk of Base58-check encoding.
 
 :::warning Always check for Metadata Updates
 
-Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Signer, always check for
-metadata updates. [**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to
-do it.
+Before signing extrinsics with the Polkadot-JS Browser Extension and
+[Polkadot Vault](../general/polkadot-vault.md), always check for metadata updates.
+[**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to do it.
 
 :::
 
-### Parity Signer vs Browser Extension
+### Parity Signer vs Polkadot-JS Extension
 
 Parity Signer updates the full metadata through the QR fountain while the extension updates the
 metadata index (the metadata is not loaded into it). As a consequence the process of updating

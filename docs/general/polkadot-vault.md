@@ -89,6 +89,13 @@ to learn how to restore your account on the Polkadot Vault app.
 
 ## Signing Extrinsics
 
+:::warning Always check for Metadata Updates
+
+Before signing extrinsics with the Polkadot Vault app, always check for metadata updates.
+[**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=328) will explain how to do it.
+
+:::
+
 Remember to always check for metadata updates before signing transactions. See
 [this article](https://github.com/w3f/polkadot-wiki/pull/4600/files#diff-5d4d0a286cdc7b1d016ee155f9694dbcddc13f5264490fc1a960c38000baca4d)
 to learn how to sign transactions and
