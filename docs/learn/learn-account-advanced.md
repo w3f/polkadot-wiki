@@ -346,7 +346,7 @@ Additionally, users can adopt the following good practice scheme:
     `network`
 - `//network//hot` as the primary low-security account for `network` (the one whose secret key the
   user exports from the Vault app to carry on an internet-connected device)
-  - `//network//hot//0`, `//network//hot//1`, ... as the secondary low-security account for
+  - `//network//hot//0`, `//network//hot//1`, ... as the secondary low-security accounts for
     `network`
 
 :::info
