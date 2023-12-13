@@ -338,7 +338,19 @@ The Subkey tool and Polkadot Vault App use the following Polkadot Standard Hard 
   specification
   - `//network//0`, `//network//1`, ... as the secondary high-security accounts for `network`
 
-Additionally, users can adopt the following good practice scheme:
+For example, the Vault app will generate a new account from a `SEED PHRASE`, and for each network
+will create a derived child account from that seed. For the default networks Polkadot, Kusama and
+Westend the derivation path will be:
+
+- `SEED PHRASE//polkadot` for Polkadot, with `SEED PHRASE//polkadot//0` as the first secondary
+  high-security account
+- `SEED PHRASE//kusama` for Kusama, with `SEED PHRASE//kusama//0` as the first secondary
+  high-security account
+- `SEED PHRASE//westend` for Westend, with `SEED PHRASE//westend//0` as the first secondary
+  high-security account
+
+Additionally, although it is not strictly necessary, users can adopt the following good practice
+scheme:
 
 - `//network//pub` as the primary high-security public account for `network` (the one the user is
   happy to be associated with their "real" ID)
