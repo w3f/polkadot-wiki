@@ -349,6 +349,14 @@ Additionally, users can adopt the following good practice scheme:
   - `//network//hot//0`, `//network//hot//1`, ... as the secondary low-security account for
     `network`
 
+:::info
+
+For more information about account derivation best practices, see
+[this post](https://forum.polkadot.network/t/polkadot-standards-proposal-psp-to-define-hierarchical-deterministic-hd-key-derivation-paths/2941/2)
+on the Polkadot Forum.
+
+:::
+
 ## System Accounts
 
 As the word suggests, system accounts are used by the system. They are used, for example, for the
