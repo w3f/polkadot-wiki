@@ -319,7 +319,7 @@ Password-derived account are as secure as the chosen password.
 
 :::
 
-### Account Derivation on Ledger Live
+### Account Derivation on [Ledger](../general/ledger.md) Live
 
 Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
 you created a derived account with a derivation path 44'/354'/0'/0'/1' on a wallet or extension, it
@@ -330,7 +330,24 @@ derivation paths.
 
 {{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
 
-### Account Derivation on Polkadot Vault
+### Account Derivation on [Subkey](#creating-accounts-with-subkey) and [Polkadot Vault](../general/polkadot-vault.md)
+
+The Subkey tool and Polkadot Vault App use the following Polkadot Standard Hard Derivation scheme:
+
+- `//network` as the primary account for `network`, named according to `network`'s named chain
+  specification
+  - `//network//0`, `//network//1`, ... as the secondary high-security accounts for `network`
+
+Additionally, users can adopt the following good practice scheme:
+
+- `//network//pub` as the primary high-security public account for `network` (the one the user is
+  happy to be associated with their "real" ID)
+  - `//network//pub//0`, `//network//pub//0`, ... as the secondary high-security public account for
+    `network`
+- `//network//hot` as the primary low-security account for `network` (the one whose secret key the
+  user exports from the Vault app to carry on an internet-connected device)
+  - `//network//hot//0`, `//network//hot//1`, ... as the secondary low-security account for
+    `network`
 
 ## System Accounts
 
