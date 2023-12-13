@@ -342,7 +342,7 @@ Additionally, users can adopt the following good practice scheme:
 
 - `//network//pub` as the primary high-security public account for `network` (the one the user is
   happy to be associated with their "real" ID)
-  - `//network//pub//0`, `//network//pub//0`, ... as the secondary high-security public account for
+  - `//network//pub//0`, `//network//pub//0`, ... as the secondary high-security public accounts for
     `network`
 - `//network//hot` as the primary low-security account for `network` (the one whose secret key the
   user exports from the Vault app to carry on an internet-connected device)
