@@ -68,26 +68,6 @@ the only exception being if the account is reaped and then re-funded shortly aft
 mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
 the specified block interval).
 
-## Metadata Updates
-
-:::warning Always check for Metadata Updates
-
-Before signing extrinsics with the Polkadot-JS Browser Extension and Parity Signer, always check for
-metadata updates. [**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to
-do it.
-
-:::
-
-### Parity Signer vs Browser Extension
-
-Parity Signer updates the full metadata through the QR fountain while the extension updates the
-metadata index (the metadata is not loaded into it). As a consequence the process of updating
-metadata is different in this two cases (you will notice that on the Signer app the update takes
-longer for example). Having outdated metadata on the Signer app will prevent you from signing, while
-on the extension you will be able to click the sign button but the extrinsic will likely fail
-(similarly of having an outdated Ledger app). In general, failing to update metadata will most
-likely result in you not being able to sign extrinsics.
-
 ## Verifying Extrinsics
 
 :::info Walk-through Video Tutorial
