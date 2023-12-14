@@ -73,6 +73,16 @@ the only exception being if the account is reaped and then re-funded shortly aft
 mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
 the specified block interval).
 
+### Vested Transfers
+
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock placed on them to account for
+vesting funds. Like other types of locks, these funds cannot be transferred but can be used in other
+parts of the protocol such as voting in governance or being staked as a validator or nominator.
+
+Vesting funds are on a release schedule and unlock a constant number of tokens at each block
+(**linear vesting**) or can unlock the full amount after a specific block number (**cliff
+vesting**).
+
 ## Verifying Extrinsics
 
 :::danger

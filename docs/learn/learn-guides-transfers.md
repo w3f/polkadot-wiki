@@ -108,6 +108,27 @@ transfers using the Polkadot-JS UI, including linear and cliff vesting. Note the
 Westend Testnet, but the same applies to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
+There are two ways that vesting schedules can be created.
+
+- One way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The
+  vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as
+  long as the account for which the vesting schedule will be created does not already have one and
+  the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
+- A second way is as part of the genesis configuration of the chain. In the case of
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the chain specification genesis
+  script reads the state of the Claims contract that exists on the Ethereum blockchain and creates
+  vesting schedules in genesis for all the allocations registered as being vested.
+
+Vesting schedules have three parameters:
+
+- **locked**, the amount of tokens to be transferred in
+  [Planck units](../learn/learn-DOT#the-planck-unit))
+- **per block**, the number of tokens that are released per block
+- **starting block**, the block number after which the vesting schedule starts
+
+The configuration of these three fields dictates the amount of funds that are originally locked, the
+slope of the unlock line and the block number for when the unlocking begins.
+
 #### Lazy Vesting
 
 Like [simple payouts](learn-staking-advanced.md), vesting is _lazy_, which means that someone must
