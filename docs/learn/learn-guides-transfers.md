@@ -144,6 +144,27 @@ Kusama.
 
 :::
 
+## Calculating Fees with Polkadot-JS
+
+One useful utility for estimating transaction fees programmatically is the via the
+[@polkadot/api](https://www.npmjs.com/package/@polkadot/api). Check out the following script that
+logs some relevant fee information:
+
+```js
+// Estimate the fees as RuntimeDispatchInfo using the signer
+const info = await api.tx.balances.transfer(recipient, 123).paymentInfo(sender);
+
+// Log relevant info, partialFee is Balance, estimated for current
+console.log(`
+  class=${info.class.toString()},
+  weight=${info.weight.toString()},
+  partialFee=${info.partialFee.toHuman()}
+`);
+```
+
+For additional information on interacting with the API, checkout
+[Polkadot-JS](../general/polkadotjs.md).
+
 ## Existing Reference Error
 
 If you are trying to reap an account and you receive an error similar to

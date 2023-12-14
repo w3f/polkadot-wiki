@@ -198,27 +198,6 @@ define this behavior accordingly. For example, the
 multiplier after each block according to a custom formula defined
 [here](https://spec.polkadot.network/#id-update-multiplier).
 
-## Calcuating Fees with Polkadot-JS
-
-One useful utility for estimating transaction fees programmatically is the via the
-[@polkadot/api](https://www.npmjs.com/package/@polkadot/api). Check out the following script that
-logs some relevant fee information:
-
-```js
-// Estimate the fees as RuntimeDispatchInfo using the signer
-const info = await api.tx.balances.transfer(recipient, 123).paymentInfo(sender);
-
-// Log relevant info, partialFee is Balance, estimated for current
-console.log(`
-  class=${info.class.toString()},
-  weight=${info.weight.toString()},
-  partialFee=${info.partialFee.toHuman()}
-`);
-```
-
-For additional information on interacting with the API, checkout
-[Polkadot-JS](../general/polkadotjs.md).
-
 ## Shard Transactions
 
 The transactions that take place within
