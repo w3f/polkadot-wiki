@@ -189,13 +189,10 @@ module.exports = {
               label: "Transactions",
               description: 'Extrinsics, Balance Transfers, and Fees.',
               link: {
-                type: 'generated-index',
-                title: 'Transactions',
-                description: 'Everything about transactions between Polkadot accounts.',
-                slug: '/learn-transactions-index',
+                type: 'doc',
+                id: "learn/learn-transactions",
               },
               items: [
-                "learn/learn-extrinsics",
                 "learn/learn-balance-transfers",
                 "learn/learn-transaction-fees",
               ],

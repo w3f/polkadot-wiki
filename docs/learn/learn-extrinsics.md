@@ -1,11 +1,16 @@
 ---
-id: learn-extrinsics
-title: Extrinsics (a.k.a. Types of Transactions)
-sidebar_label: Extrinsics
+id: learn-transactions
+title: Types of Transactions (a.k.a. Extrinsics)
+sidebar_label: Transactions
 description: Types of Transactions on Polkadot.
-keywords: [transaction, DOT, extrinsics, KSM]
-slug: ../learn-extrinsics
+keywords: [transaction, transfer, DOT, extrinsics]
+slug: ../learn-transactions
 ---
+
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Pallets and Extrinsics
 

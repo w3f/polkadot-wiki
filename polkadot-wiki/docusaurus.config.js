@@ -176,6 +176,10 @@ module.exports = {
           {
             to: '/docs/learn-accounts',
             from: ['/docs/learn-account-generation', '/docs/learn-account-restore', '/docs/learn-accounts-index']
+          },
+          {
+            to: '/docs/learn-transactions',
+            from: ['/docs/learn-transactions-index', '/docs/learn-extrinsics']
           }
         ],
         createRedirects: function (existingPath) {
