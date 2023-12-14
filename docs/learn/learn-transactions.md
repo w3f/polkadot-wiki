@@ -85,3 +85,12 @@ signing a different extrinsic than the one intended.
 Verifying the extrinsic you are signing can take some more time before signing for a transaction but
 it allows you to add an extra security step. There are a multitude of possible attacks that will
 prevent you to send funds to the desired destination account (see below).
+
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about accounts](./learn-guides-accounts.md).
+
+:::
