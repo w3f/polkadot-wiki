@@ -78,7 +78,7 @@ There are a few methods to check the balance of your account. Check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000169332-where-can-i-see-the-balance-of-my-account-)
 for information.
 
-## Sending a Transfer
+## Sending a Transfer with Ledger Devices
 
 :::danger Verifying Extrinsics
 
@@ -93,7 +93,8 @@ to you while signing for transactions.
 General instructions to send a transfer can be found on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
 To sign transactions with your Ledger nano check
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181994).
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181994) or
+see [this video tutorial](https://youtu.be/gbvrHzr4EDY?t=579).
 
 ## Receiving a Transfer
 

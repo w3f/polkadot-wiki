@@ -45,24 +45,18 @@ to you while signing for transactions.
 
 ## Transfers using the Polkadot-JS UI and Browser Extension
 
-See the video tutorial below to learn how to send funds using the supported tools. See the Polkadot
-Support pages for detailed information about transferring funds using the
-[Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
-
-[![Balance Transfer Tutorial](https://img.youtube.com/vi/gbvrHzr4EDY/0.jpg)](https://www.youtube.com/watch?v=gbvrHzr4EDY)
-
-See the Polkadot Support pages for detailed information about signing transactions using:
-
-- [The Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
-- [The Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
-- [Ledger devices](https://support.polkadot.network/support/solutions/articles/65000181994-how-to-sign-a-transaction-on-ledger)
-- [The Parity Signer app](https://support.polkadot.network/support/solutions/articles/65000182000-how-to-sign-a-transaction-in-parity-signer)
+See [this video tutorial](https://www.youtube.com/watch?v=gbvrHzr4EDY) to learn how to send funds
+using the Polkadot-JS UI and Browser Extension. See also the Polkadot Support pages for detailed
+information about signing transactions using
+[the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
+and
+[the Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989).
 
 ### Keep-Alive Checks with the Polkadot-JS UI
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and
+See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
 to learn about keep-alive checks and existential deposit.
 
