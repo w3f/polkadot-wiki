@@ -9,8 +9,9 @@ slug: ../attacks
 
 ## How do Attacks look like
 
-In general, an attacker would make you think you are signing an extrinsic A when in reality you are
-signing an extrinsic B. An Attack might come from:
+In general, an attacker would make you think you are signing an
+[extrinsic](../learn/learn-transactions.md) A when in reality you are signing an extrinsic B. An
+Attack might come from:
 
 ### Clipboard Memory
 

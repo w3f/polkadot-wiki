@@ -94,7 +94,7 @@ In this UI section, you can change general settings such as appearance and langu
 
 Under Settings you can also do the metadata update. Usually, if there is an update, this will be
 shown as a notification. For more information about metadata updates, see the
-[**dedicated section**](../learn/learn-extrinsics.md#metadata-updates).
+[**dedicated section**](../learn/learn-guides-accounts.md#metadata-updates-with-the-polkadot-js-browser-extension).
 
 ## Other Functionalities
 
@@ -120,7 +120,7 @@ In this section of the UI, you can access advanced features such as:
 
 - [Query on-chain data](https://polkadot.js.org/apps/#/chainstate)
 - [Query the node using RPC calls](https://polkadot.js.org/apps/#/rpc)
-- Call [**extrinsics**](../learn/learn-extrinsics.md) using your account (you are able to see this
+- Call [**extrinsics**](../learn/learn-transactions.md) using your account (you are able to see this
   option only if you have an account in the UI)
 
 The [Extrinsic tab](https://polkadot.js.org/apps/#/extrinsics) provides the use to access more

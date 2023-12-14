@@ -42,7 +42,7 @@ tool that will enable you the create, manage, and restore accounts.
 By default, the Vault app contains chain specifications for Polkadot, Kusama, and Westend. Metadata
 updates are possible via a [QR code fountain](https://metadata.parity.io/#/polkadot). It is also
 possible to [add other Substrate-based chains and do metadata updates](#add-chains) for those. The
-app allows you to securely sign [extrinsics](../learn/learn-extrinsics.md) via QR codes without
+app allows you to securely sign [extrinsics](../learn/learn-transactions.md) via QR codes without
 exposing your private keys to the internet.
 
 ## Vault vs. Ledger
@@ -109,8 +109,8 @@ The procedure to sign transactions with the Vault app is as follows:
 - After scanning the QR code with the Vault app, you will be presented with decoded information
   about what you will sign. Make sure the information matches what you intended to sign in the first
   place. If something does not feel right, do not sign. Check
-  [this page](../learn/learn-extrinsics.md#corrupted-qr-code-parity-signer) for more information and
-  contact [the Polkadot Support Team](https://support.polkadot.network/support/home).
+  [this page](./attacks.md#corrupted-qr-code-parity-signer) for more information and contact
+  [the Polkadot Support Team](https://support.polkadot.network/support/home).
 - If the information shown by the Vault app is correct, you can present the QR code (signature) to
   the camera on your laptop to sign for the transaction.
 
