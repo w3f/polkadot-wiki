@@ -304,13 +304,10 @@ module.exports = {
                       label: "Accounts",
                       description: 'Polkadot-JS Guides about Accounts.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Polkadot-JS Guides about Accounts',
-                        description: 'Polkadot-JS Guides about Accounts.',
-                        slug: '/learn-guides-accounts-index',
+                        type: 'doc',
+                        id: "learn/learn-guides-accounts",
                       },
                       items: [
-                        "learn/learn-guides-accounts",
                         "learn/learn-guides-accounts-multisig",
                         "learn/learn-guides-accounts-proxy",
                         "learn/learn-guides-accounts-proxy-pure",

@@ -7,7 +7,10 @@ keyword: [guides, polkadot-js, accounts]
 slug: ../learn-guides-accounts
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Account Address Format
 
