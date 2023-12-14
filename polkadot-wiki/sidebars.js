@@ -194,7 +194,6 @@ module.exports = {
                 id: "learn/learn-transactions",
               },
               items: [
-                "learn/learn-balance-transfers",
                 "learn/learn-transaction-fees",
               ],
             },

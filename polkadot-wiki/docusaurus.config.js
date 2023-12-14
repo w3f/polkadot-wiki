@@ -179,7 +179,7 @@ module.exports = {
           },
           {
             to: '/docs/learn-transactions',
-            from: ['/docs/learn-transactions-index', '/docs/learn-extrinsics']
+            from: ['/docs/learn-transactions-index', '/docs/learn-extrinsics', '/docs/learn-balance-transfers']
           }
         ],
         createRedirects: function (existingPath) {
