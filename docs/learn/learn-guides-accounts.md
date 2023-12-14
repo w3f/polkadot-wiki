@@ -67,6 +67,21 @@ similar functionality.
 It is still running on the same computer you use to connect to the internet and thus is less secure
 than using Parity Signer or other air-gapped approaches.
 
+### Metadata Updates with the Polkadot-JS Browser Extension
+
+Before signing extrinsics with the Polkadot-JS Browser Extension, always check for metadata updates.
+[**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to do it.
+
+#### Polkadot Vault vs Polkadot-JS Browser Extension
+
+The Polkadot Vault app updates the full metadata through the QR fountain while the extension updates
+the metadata index (the metadata is not loaded into it). As a consequence the process of updating
+metadata is different in this two cases (you will notice that on the Vault app the update takes
+longer for example). Having outdated metadata on the Vault app will prevent you from signing, while
+on the extension you will be able to click the sign button but the extrinsic will likely fail
+(similarly of having an outdated Ledger app). In general, failing to update metadata will most
+likely result in you not being able to sign extrinsics.
+
 ### Account Backup using the Polkadot-JS Browser Extension
 
 :::info

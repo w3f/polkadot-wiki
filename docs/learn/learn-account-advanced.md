@@ -77,26 +77,6 @@ first byte: `02f2d606a67f58fa0b3ad2b556195a0ef905676efd4e3ec62f8fa1b8461355f1142
 counterintuitive that some addresses always have the same prefix and others like Kusama can vary
 wildly, but it's just a quirk of Base58-check encoding.
 
-## Metadata Updates
-
-:::warning Always check for Metadata Updates
-
-Before signing extrinsics with the Polkadot-JS Browser Extension and
-[Polkadot Vault](../general/polkadot-vault.md), always check for metadata updates.
-[**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to do it.
-
-:::
-
-### Parity Signer vs Polkadot-JS Extension
-
-Parity Signer updates the full metadata through the QR fountain while the extension updates the
-metadata index (the metadata is not loaded into it). As a consequence the process of updating
-metadata is different in this two cases (you will notice that on the Signer app the update takes
-longer for example). Having outdated metadata on the Signer app will prevent you from signing, while
-on the extension you will be able to click the sign button but the extrinsic will likely fail
-(similarly of having an outdated Ledger app). In general, failing to update metadata will most
-likely result in you not being able to sign extrinsics.
-
 ## Address Conversion Tools
 
 You can use the tools below to convert any SS58 address for any network for use on different
