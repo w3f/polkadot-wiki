@@ -316,6 +316,7 @@ module.exports = {
                         "learn/learn-guides-accounts-proxy-pure",
                       ],
                     },
+                    "learn/learn-guides-transfers",
                     {
                       type: "category",
                       label: "Staking",
