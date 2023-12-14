@@ -19,7 +19,7 @@ make that decision for you.
 Furthermore, a legitimate project does not necessarily mean it will also be successful, and **this
 guide is not meant to be viewed as financial or investment advice.**
 
-### "Powered by Polkadot" or "Polka" prefix clarification
+## _Powered by Polkadot_ or _Polka_ prefix clarification
 
 The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This
 usually means that the project is building, or intends to build, on the Polkadot ecosystem, using
@@ -31,9 +31,9 @@ This also applies for projects with a "Polka" prefix in their name. Many project
 associate themselves with the ecosystem, some legitimately and others only to piggyback on
 Polkadot's reputation.
 
-## "Hard" metrics to look for when you DYOR
+## _Hard_ metrics to look for when you DYOR
 
-#### 1. Association with entities you trust
+### Association with Entities You Trust
 
 New projects usually try to increase their credibility by associating themselves with well-known
 entities. The thinking is simple: "These entities that have a good reputation trust us, so if you
@@ -84,7 +84,7 @@ releases, or by contacting them directly. And if you see such claims about Web3 
 be sure they're false because Web3 Foundation **does not** partner with, or endorse, ecosystem
 projects.
 
-#### 2. Open source
+### Open Source
 
 An open-source project promotes transparency, builds trust, and potentially ensures project team
 honesty. Additionally, it makes it very easy to track the project's progress and see how active the
@@ -111,7 +111,7 @@ verify the project in that regard, but there are indirect ways as described belo
 project being open source is undoubtedly a potentially strong indicator of its legitimacy because
 shady or poor practices seldom stay hidden for long in open source code.
 
-#### 3. Active development
+### Active Development
 
 If a project team constantly updates their product, it is always a good indication that they are
 serious and passionate about building. Regularly releasing new features and upgrades, fixing bugs,
@@ -124,7 +124,7 @@ indicator for a closed source project.
 An open-source project allows anyone to monitor the development activity through its code repository
 directly, such as through GitHub.
 
-#### 4. Comprehensive documentation
+### Comprehensive Documentation
 
 The existence of comprehensive documentation should be considered mandatory for any serious project.
 A couple of years ago, this meant a whitepaper, but lately, we have seen a shift to other forms of
@@ -146,7 +146,7 @@ populated over the course of multiple years. Updates are also constantly being p
 are consistently being made. Nevertheless, this wiki provides a good example of the documentation a
 legitimate project should provide.
 
-#### 5. Reputable team
+### Reputable Team
 
 Some teams display their team members prominently on their site, along with their social media
 profiles (usually LinkedIn) and GitHub accounts. This gives prospective users and investors the
@@ -177,7 +177,7 @@ various [Polkadot and Kusama channels](https://wiki.polkadot.network/docs/commun
 them are [Polkadot Ambassadors](https://polkadot.network/polkadot-ambassador-program/), or generally
 prominent members of the ecosystem.
 
-#### 6. Clear integration
+### Clear Integration
 
 There are many ways for a project to build on
 {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }}. Perhaps the most direct one is to
@@ -225,7 +225,7 @@ integration plan with {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusam
 essential in your research to ensure that they will indeed build on
 {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} one day.
 
-## "Soft" metrics
+## _Soft_ metrics
 
 The items above are what you should look at first when evaluating a project and should carry most of
 the weight in your decision. The reason is that they are hard to fake or manipulate, assuming that
@@ -235,7 +235,7 @@ But there are other things to look for that might point to a project's legitimac
 easily manipulated, so they should not affect your decision heavily. These are called "soft"
 metrics.
 
-#### 1. Site quality
+### Site Quality
 
 The quality of a project's site could sometimes provide insights into the legitimacy of a project. A
 poorly constructed site, may:
@@ -255,7 +255,7 @@ project, a poor site might indicate an illegitimate one, but the site quality al
 enough to reach a conclusion. None of these metrics are sufficient alone; you need to look into all
 of them to make an educated decision.
 
-#### 2. Social media presence
+### Social Media Presence
 
 Having a vibrant community is a good indication of a legitimate project. A team that engages with
 their community, gives updates, answers questions, holds AMAs, and posts articles, is a team that is
@@ -276,7 +276,7 @@ etc, without really engaging, remain skeptical and maintain a critical eye, as t
 bots. Additionally, verify any information shared by the team on social media and also verify the
 comments of users.
 
-#### 3. Media presence
+### Media Presence
 
 Related to social media presence is media presence: third-party articles, mentions in YouTube
 videos, and general promotions of the project.
@@ -294,7 +294,7 @@ That is not to say that media exposure is terrible. It is probably the most abun
 information outside the project itself, but at the same time, it requires extensive cross-checking
 and verification of information.
 
-#### 4. Email communication
+### Email Communication
 
 Nowadays, many projects use Telegram, Discord, or similar apps for community engagement, as well as
 the sole channel for communication, updates, and support. But having an email registered with their
