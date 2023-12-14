@@ -147,8 +147,9 @@ module.exports = {
                 slug: '/stay-safe-index',
               },
               items: [
-                "general/scams",
                 "general/how-to-dyor",
+                "general/scams",
+                "general/attacks",
               ],
             },
             "general/start-building",
