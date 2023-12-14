@@ -75,16 +75,6 @@ the specified block interval).
 
 ## Verifying Extrinsics
 
-:::info Walk-through Video Tutorial
-
-Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-)
-and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk) tutorial to learn about how to
-verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing for transactions.
-
-:::
-
 :::danger
 
 Do not sign a transaction if you can't verify what you are signing or you suspect you might be

@@ -82,15 +82,19 @@ on the extension you will be able to click the sign button but the extrinsic wil
 (similarly of having an outdated Ledger app). In general, failing to update metadata will most
 likely result in you not being able to sign extrinsics.
 
-### Account Backup using the Polkadot-JS Browser Extension
+### Verify Extrinsics with the Polkadot-JS Browser Extension
 
-:::info
+Visit the
+[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-extension)
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=261) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions.
+
+### Account Backup using the Polkadot-JS Browser Extension
 
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
 to know how to back up your account.
-
-:::
 
 ### Reset Password using the Polkadot-JS Browser Extension
 
@@ -173,6 +177,14 @@ using the Polkadot-JS UI, navigate to settings > account options and click on al
 account storage in the drop-down menu. Using the Polkadot-JS user interface without a browser
 extension is **not recommended**. It is the least secure way of generating an account. It should
 only be used if all other methods are not feasible.
+
+### Verify Extrinsics with the Polkadot-JS UI
+
+Visit the
+[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-JS-UI)
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=163) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions.
 
 ### Account Backup using the Polkadot-JS UI
 
