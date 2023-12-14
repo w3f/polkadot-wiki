@@ -91,6 +91,6 @@ prevent you to send funds to the desired destination account (see below).
 :::info Polkadot-JS Guides
 
 If you are an advanced user, see the
-[Polkadot-JS guides about accounts](./learn-guides-accounts.md).
+[Polkadot-JS guides about transfers](./learn-guides-transfers.md).
 
 :::
