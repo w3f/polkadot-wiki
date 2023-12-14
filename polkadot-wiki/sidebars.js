@@ -295,10 +295,8 @@ module.exports = {
                   label: "Polkadot-JS Guides",
                   description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
                   link: {
-                    type: 'generated-index',
-                    title: 'Polkadot-JS Guides',
-                    description: 'Polkadot-JS Guides about Staking, Asset Hub, Ledger, Vault App, and more.',
-                    slug: '/learn-guides-index',
+                    type: 'doc',
+                    id: "learn/learn-guides",
                   },
                   items: [
                     {

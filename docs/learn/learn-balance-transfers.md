@@ -9,21 +9,7 @@ slug: ../learn-balance-transfers
 
 import RPC from "./../../components/RPC-Connection";
 
-Balance transfers are used to send a balance from one account to another account. To start
-transferring a balance, we will begin by using
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). This guide assumes that you've already
-[created an account](./learn-accounts.md#account-generation) and have some funds that are ready to
-be transferred.
-
-:::info
-
-We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
-together with the [**browser extension**](https://polkadot.js.org/extension/),
-[**Ledger**](https://www.ledger.com/ledger-live) and
-[**Parity Signer**](https://www.parity.io/technologies/signer/) for signing transactions. We do not
-provide support for third party applications.
-
-:::
+Balance transfers are used to send a balance from one account to another account.
 
 ## Sending Funds using UI, Extension, Parity Signer & Ledger
 
