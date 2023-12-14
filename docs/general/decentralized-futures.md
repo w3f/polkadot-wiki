@@ -19,7 +19,7 @@ participants in the Polkadot ecosystem.
 ## Applications
 
 To apply for funding to the Decentralized Futures fill
-[this form](https://docs.google.com/forms/d/e/1FAIpQLSdlPyHj56tY6t-5zhdn55VvznR5OACvXe8K1M6vRGmhdslZkw/viewform).
+[**this form**](https://docs.google.com/forms/d/e/1FAIpQLSdlPyHj56tY6t-5zhdn55VvznR5OACvXe8K1M6vRGmhdslZkw/viewform).
 The form will guide you through each step of the application. Proposals have to be **submitted
 before July 1st, 2024**. Applications will be **reviewed from Dec 1st, 2023 - Jul 31st, 2024** on a
 rolling basis.
