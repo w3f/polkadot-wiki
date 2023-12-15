@@ -10,6 +10,17 @@ slug: ../decentralized-futures
 The new [Decentralized Futures Program](https://futures.web3.foundation/) supplements the Grants
 Program, and (as the name suggests) it strengthens the decentralization of the Polkadot ecosystem.
 
+## Overview
+
+This program is set to distribute **20 million USD and 5 million DOT tokens** to support individuals
+and teams as they launch new initiatives aimed at growing the Polkadot ecosystem. The main objective
+is to expand the network by adding self-sustaining participants. Funding is available for
+Polkadot-focused organizations that aim to generate profit, as well as for non-profit ventures that
+have a strategy to secure ongoing financing through Polkadot's on-chain treasury system beyond 2024.
+
+The Program is run by the Web3 Foundation, which is a not-for-profit organization that supports Web3
+teams and open-source projects through funding, advocacy, research, and collaboration.
+
 ## Program Goal
 
 The goal of the Decentralized Futures Program is to kickstart economically independent, active
