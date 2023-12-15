@@ -123,8 +123,6 @@ Verifying the extrinsic you are signing can take some more time before signing f
 it allows you to add an extra security step. There are a multitude of possible attacks that will
 prevent you to send funds to the desired destination account (see below).
 
-## Fees
-
 ## Shard Transactions
 
 The transactions that take place within
@@ -143,6 +141,24 @@ parachain's behalf.
 [Parathreads](learn-parathreads.md) will also make all the same transactions that a parachain might.
 In addition, the collators need to participate in an auction every block to progress their chain.
 The collators will need to have DOT to participate in these auctions.
+
+## Block Limits and Transaction Priority
+
+Blocks in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} have both a maximum length
+(in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these
+limits. A portion of each block - currently 25% - is reserved for critical transactions that are
+related to the chain's operation. Block producers will only fill up to 75% of a block with normal
+transactions. Some examples of operational transactions:
+
+- Misbehavior reports
+- Council operations
+- Member operations in an election (e.g. renouncing candidacy)
+
+Block producers prioritize transactions based on each transaction's total fee. Since a portion of
+the fee will go to the block producer, producers will include the transactions with the highest fees
+to maximize their reward.
+
+## Transaction Fees
 
 ---
 

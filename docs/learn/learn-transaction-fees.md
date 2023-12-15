@@ -99,22 +99,6 @@ of operations:
   from the staking module, is designed to move any unlocked funds from the staking management system
   to be ready for transfer
 
-## Block Limits and Transaction Priority
-
-Blocks in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} have both a maximum length
-(in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these
-limits. A portion of each block - currently 25% - is reserved for critical transactions that are
-related to the chain's operation. Block producers will only fill up to 75% of a block with normal
-transactions. Some examples of operational transactions:
-
-- Misbehavior reports
-- Council operations
-- Member operations in an election (e.g. renouncing candidacy)
-
-Block producers prioritize transactions based on each transaction's total fee. Since a portion of
-the fee will go to the block producer, producers will include the transactions with the highest fees
-to maximize their reward.
-
 ## Fees
 
 Block producers charge a fee in order to be economically sustainable. That fee must always be
