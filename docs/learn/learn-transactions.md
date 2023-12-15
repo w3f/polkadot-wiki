@@ -60,18 +60,20 @@ valid). By default and for security reasons, all extrinsics will be mortal, but 
 before signing is a good practice. This will avoid the chance of being a victim of a replay attack
 after [reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
 
-A replay attack is where past transactions can be replayed (same balance, receiver account, etc.)
-without knowing private keys. This could happen in the context of reaping accounts because the
-reaping process resets the nonce value. If all signed transactions until the nonce before the
-reaping event were immortal, all past transactions can be replayed once the account is refunded.
-There is no need for the attacker to know your private key, valid signatures for those past
-transactions and nonces already exist and are stored on-chain (meaning the private key was already
-used to generate those signatures).
+A replay attack is where past transactions can be replayed (same [balance](#balance-transfers),
+receiver account, etc.) without knowing private keys. This could happen in the context of reaping
+accounts because the reaping process resets the nonce value. If all signed transactions until the
+nonce before the reaping event were immortal, all past transactions can be replayed once the account
+is refunded. There is no need for the attacker to know your private key, valid signatures for those
+past transactions and nonces already exist and are stored on-chain (meaning the private key was
+already used to generate those signatures).
 
 Making a transaction mortal will almost certainly ensure that replay attacks are not possible, with
 the only exception being if the account is reaped and then re-funded shortly after submitting a
 mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
 the specified block interval).
+
+### Balance Transfers
 
 ### Vested Transfers
 

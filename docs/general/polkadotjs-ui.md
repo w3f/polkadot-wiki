@@ -52,7 +52,7 @@ to expand balance details and see different
 For each account visible in the UI, you can perform different actions, including
 [**adding a proxy**](../learn/learn-proxies.md),
 [**setting an identity**](../learn/learn-identity.md), and
-[**sending tokens**](../learn/learn-balance-transfers.md).
+[**sending tokens**](../learn/learn-transactions.md#balance-transfers).
 
 For more information about adding and recovering accounts, see the
 [**Account Generation**](../learn/learn-accounts.md#account-generation) page.

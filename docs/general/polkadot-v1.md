@@ -75,8 +75,8 @@ meaning that transactions can be made between different parachains.
 
 The Polkadot relay-chain also manges [crowdloans](../learn/learn-crowdloans.md),
 [auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
-[accounts](./learn-accounts-index), [balances](../learn/learn-balance-transfers.md), and
-[governance](../learn/learn-polkadot-opengov.md). Parachain slots or cores are leased in 6-month
+[accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
+and [governance](../learn/learn-polkadot-opengov.md). Parachain slots or cores are leased in 6-month
 chunks for a maximum of two years, and crowdloans allow users to trustlessly loan funds to teams for
 lease deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
 

@@ -104,8 +104,8 @@ include:
   private key on multiple _children_ accounts
 - Account recovery mechanisms such as social recovery to help regain access to your key using
   trusted third-party accounts
-- [Batching functionality](./learn-balance-transfers.md#batch-transfers) to submit multiple calls in
-  one single transaction
+- [Batching functionality](./learn-guides-transfers.md#batch-transfers-with-the-polkadot-js-ui) to
+  submit multiple calls in one single transaction
 - Payments with non-native tokens
 
 All the above can be used together, meaning that, for example, you can create a multi-signature
