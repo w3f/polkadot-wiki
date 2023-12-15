@@ -319,7 +319,7 @@ Password-derived account are as secure as the chosen password.
 
 :::
 
-### Account Derivation in Ledger Live
+### Account Derivation on [Ledger](../general/ledger.md) Live
 
 Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if
 you created a derived account with a derivation path 44'/354'/0'/0'/1' on a wallet or extension, it
@@ -329,6 +329,45 @@ derived accounts using the Ledger Live App, but it is possible to do so using Po
 derivation paths.
 
 {{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
+
+### Account Derivation on [Subkey](#creating-accounts-with-subkey) and [Polkadot Vault](../general/polkadot-vault.md)
+
+The Subkey tool and Polkadot Vault App use the following Polkadot Standard Hard Derivation scheme:
+
+- `//network` as the primary account for `network`, named according to `network`'s named chain
+  specification
+  - `//network//0`, `//network//1`, ... as the secondary high-security accounts for `network`
+
+For example, the Vault app will generate a new account from a `SEED PHRASE`, and for each network
+will create a derived child account from that seed. For the default networks Polkadot, Kusama and
+Westend the derivation path will be:
+
+- `SEED PHRASE//polkadot` for Polkadot, with `SEED PHRASE//polkadot//0` as the first secondary
+  high-security account
+- `SEED PHRASE//kusama` for Kusama, with `SEED PHRASE//kusama//0` as the first secondary
+  high-security account
+- `SEED PHRASE//westend` for Westend, with `SEED PHRASE//westend//0` as the first secondary
+  high-security account
+
+Additionally, although it is not strictly necessary, users can adopt the following good practice
+scheme:
+
+- `//network//pub` as the primary high-security public account for `network` (the one the user is
+  happy to be associated with their "real" ID)
+  - `//network//pub//0`, `//network//pub//0`, ... as the secondary high-security public accounts for
+    `network`
+- `//network//hot` as the primary low-security account for `network` (the one whose secret key the
+  user exports from the Vault app to carry on an internet-connected device)
+  - `//network//hot//0`, `//network//hot//1`, ... as the secondary low-security accounts for
+    `network`
+
+:::info
+
+For more information about account derivation best practices, see
+[this post](https://forum.polkadot.network/t/polkadot-standards-proposal-psp-to-define-hierarchical-deterministic-hd-key-derivation-paths/2941/2)
+on the Polkadot Forum.
+
+:::
 
 ## System Accounts
 
