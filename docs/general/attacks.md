@@ -38,21 +38,20 @@ device you have a second layer of verification, as it will also display Extrinsi
 
 ### Malicious Browser Extension
 
-This scenario can happen if you have downloaded a malicious extension or a trusted extension, like
-the [Polkadot-JS Browser Extension](https://polkadot.js.org/extension/), from a non-trusted source.
-In this scenario the extension will display that you will sign for an Extrinsic A but in the
-background will execute Extrinsic B. If you are using a [Ledger](https://www.ledger.com/) device
-this attack can be detected because you will be able to see Extrinsic B on the screen of your Ledger
-device.
+This scenario can happen if you have downloaded a malicious browser extension or a trusted browser
+extension, from a non-trusted source. In this scenario the extension will display that you will sign
+for an Extrinsic A but in the background will execute Extrinsic B. If you are using a
+[Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see
+Extrinsic B on the screen of your Ledger device.
 
 ### Corrupted metadata
 
 This attack is least common and might result in signing a non-intended extrinsic without the
 possibility of verifying it. Before authorizing the metadata update check who is requesting it.
-Metadata updates for the Polkadot-JS Browser Extension (or other extensions) might be requested by
-the Polkadot-JS UI and dApps (for example DeFi apps of parachains). For the extensions, you should
-trust the app that requests the update. When updating the metadata for Parity Signer you should
-trust the issuer of the metadata (or generate the QR fountain yourself).
+Metadata updates for browser extensions might be requested by dApps (for example DeFi apps of
+parachains). For the extensions, you should trust the app that requests the update. When updating
+the metadata for Parity Signer you should trust the issuer of the metadata (or generate the QR
+fountain yourself).
 
 ### Corrupted QR-code (Parity Signer)
 
