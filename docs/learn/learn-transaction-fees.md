@@ -233,42 +233,6 @@ logic. Some transactions warrant limiting resources with other strategies. For e
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16
   validators. This limits the complexity of [Phragmén](learn-phragmen.md).
 
-## Advanced
-
-This page only covered transactions that come from normal users. If you look at blocks in a block
-explorer, though, you may see some "extrinsics" that look different from these transactions. In
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (and any chain built on Substrate),
-an extrinsic is a piece of information that comes from outside the chain. Extrinsics fall into three
-categories:
-
-- Signed transactions
-- Unsigned transactions
-- Inherents
-
-This page only covered signed transactions, which is the way that most users will interact with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} . Signed transactions come from an
-account that has funds, and therefore {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-can charge a transaction fee as a way to prevent spam.
-
-Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
-pair that does not control funds. For example, when users
-[claim their DOT tokens](https://claims.polkadot.network) after genesis, their DOT address doesn't
-have any funds yet, so that uses an unsigned transaction. Validators also submit unsigned
-transactions in the form of "heartbeat" messages to indicate that they are online. These heartbeats
-must be signed by one of the validator's [session keys](learn-cryptography.md). Session keys never
-control funds. Unsigned transactions are only used in special cases because, since Polkadot cannot
-charge a fee for them, each one needs its own, custom validation logic.
-
-Finally, inherents are pieces of information that are not signed or included in the transaction
-queue. As such, only the block author can add inherents to a block. Inherents are assumed to be
-"true" simply because a sufficiently large number of validators have agreed on them being
-reasonable. For example, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blocks
-include a timestamp inherent. There is no way to prove that a timestamp is true the way one proves
-the desire to send funds with a signature. Rather, validators accept or reject the block based on
-how reasonable they find the timestamp. In
-{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} it must be within some acceptable
-range of their own system clocks.
-
 ## Learn More
 
 - [Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics)

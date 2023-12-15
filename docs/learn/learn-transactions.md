@@ -44,6 +44,28 @@ really are. Extrinsics can be one of 3 distinct types:
 - **Inherents:** are a special type of unsigned transaction made by block authors which carry
   information required to build a block such as timestamps, storage proofs and uncle blocks.
 
+Signed transactions is the way that most users will interact with
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. Signed transactions come from an
+account that has funds, and therefore {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+can charge a transaction fee as a way to prevent spam.
+
+Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
+pair that does not control funds. For example, validators submit unsigned transactions in the form
+of "heartbeat" messages to indicate that they are online. These heartbeats must be signed by one of
+the validator's [session keys](learn-cryptography.md). Session keys never control funds. Unsigned
+transactions are only used in special cases because, since
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} cannot charge a fee for them, each
+one needs its own, custom validation logic.
+
+Inherents are pieces of information that are not signed or included in the transaction queue. As
+such, only the block author can add inherents to a block. Inherents are assumed to be "true" simply
+because a sufficiently large number of validators have agreed on them being reasonable. For example,
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blocks include a timestamp inherent.
+There is no way to prove that a timestamp is true the way one proves the desire to send funds with a
+signature. Rather, validators accept or reject the block based on how reasonable they find the
+timestamp. In {{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} it must be within
+some acceptable range of their own system clocks.
+
 Here are some key differences between the different types of extrinsics:
 
 - Contrary to signed transactions, unsigned transaction types require implementing custom validation
@@ -74,6 +96,9 @@ mortal transaction, and then an attacker replays that transaction within the mor
 the specified block interval).
 
 ### Balance Transfers
+
+Balance transfers are transfers of token balances between accounts. This is the most well-known type
+of transfer.
 
 ### Vested Transfers
 
