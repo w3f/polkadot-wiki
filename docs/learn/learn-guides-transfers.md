@@ -27,22 +27,6 @@ likely result in you not being able to sign extrinsics.
 
 :::
 
-## Verify Extrinsics with the Polkadot-JS Browser Extension
-
-Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-extension)
-and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=261) tutorial to learn about how to
-verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing for transactions.
-
-## Verify Extrinsics with the Polkadot-JS UI
-
-Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-JS-UI)
-and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=163) tutorial to learn about how to
-verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing for transactions.
-
 ## Transfers using the Polkadot-JS UI and Browser Extension
 
 See [this video tutorial](https://www.youtube.com/watch?v=gbvrHzr4EDY) to learn how to send funds
@@ -51,6 +35,22 @@ information about signing transactions using
 [the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
 and
 [the Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989).
+
+### Verify Extrinsics with the Polkadot-JS Browser Extension
+
+Visit the
+[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-extension)
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=261) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions.
+
+### Verify Extrinsics with the Polkadot-JS UI
+
+Visit the
+[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-JS-UI)
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=163) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions.
 
 ### Keep-Alive Checks with the Polkadot-JS UI
 
