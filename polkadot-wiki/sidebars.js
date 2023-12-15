@@ -87,6 +87,7 @@ module.exports = {
             slug: '/programmes-index',
           },
           items: [
+            "general/decentralized-futures",
             "general/grants",
             "general/bug-bounty",
             "general/ambassadors",

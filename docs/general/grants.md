@@ -1,6 +1,6 @@
 ---
 id: grants
-title: Grants
+title: Grants Programme
 sidebar_label: Grants
 description: The Grant Programs in the Polkadot Ecosystem.
 keywords: [grants program, grants, funding]
