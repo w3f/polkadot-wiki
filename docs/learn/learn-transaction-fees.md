@@ -13,15 +13,6 @@ Transaction fees prevent individual users from consuming too many resources.
 opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the
 fee is paid, nodes will execute the transaction.
 
-[Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics#2-slow-adjusting-mechanism)
-designed the Polkadot fee system with the following objectives:
-
-- Each Relay Chain block should be processed efficiently to avoid delays in block production.
-- The growth rate of the Relay Chain should be bounded.
-- Each block should have space for special, high-priority transactions like misconduct reports.
-- The system should be able to handle spikes in demand.
-- Fees should change slowly so that senders can accurately predict the fee for a given transaction.
-
 ## Fee Calculation
 
 Fees on the Polkadot Relay Chain are calculated based on three parameters:
