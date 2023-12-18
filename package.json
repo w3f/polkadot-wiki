@@ -74,7 +74,7 @@
     "crowdin-cli": "^0.3.0",
     "graphql": "^16.8.1",
     "graphql-ws": "^5.14.2",
-    "prism-react-renderer": "^2.3.0",
+    "prism-react-renderer": "^2.3.1",
     "punycode": "^2.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-treebeard": "^3.2.4",
