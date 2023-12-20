@@ -191,7 +191,7 @@ should also keep up to date with the following links:
 
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
 created and maintained list of different smart contract platforms building on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be found at
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be found at [use.ink](https://use.ink/#where-can-i-deploy-ink-contracts) and 
 [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Moonbeam
