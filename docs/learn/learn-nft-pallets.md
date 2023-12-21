@@ -26,7 +26,7 @@ The pallet comes with a new way to configure NFTs, as well as configure collecti
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling
 functionalities not needed in the runtime. 
 
-Polkadot JS API for FRAME pallet can be found [here](https://polkadot.js.org/docs/substrate/extrinsics#nfts).
+Polkadot JS API for NFTs FRAME pallet can be found [here](https://polkadot.js.org/docs/substrate/extrinsics#nfts).
 
 ### Roles
 
