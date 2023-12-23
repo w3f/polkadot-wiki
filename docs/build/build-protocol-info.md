@@ -91,7 +91,7 @@ You can always verify the existential deposit by checking the
 [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
 `balances.existentialDeposit`.
 
-If an account drops below the _existential deposit_ ED, the account is reaped ("deactivated"), and any remaining funds are destroyed. The address can be reactivated with a new deposit larger than the existential deposit at any time. This will not restore the destroyed funds. 
+If an account drops below the _existential deposit_ ED, the account is reaped ("deactivated"), and any remaining funds are burned. The address can be reactivated anytime by transferring funds greater than the existential deposit. This will not restore the burned funds when the account was reaped. 
 
 
 
