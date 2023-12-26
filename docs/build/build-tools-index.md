@@ -96,6 +96,10 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 - [sub-flood](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by flooding it
   with requests.
 
+## IDEs
+
+- [Astar IDE](https://chainide.gitbook.io/chainide-english-1/ethereum-ide-1/13.-astar-ide) by [Chain IDE](https://chainide.com/) is a tool for lightning-speed smart contracts and dApp development for [Wasm](https://chainide.com/s/createTempProject/astar-wasm?language=en) and [EVM](https://chainide.com/s/createTempProject/astar-evm?language=en).
+
 ## UI
 
 - [Polkadash](https://github.com/Swader/polkadash) - VueJS-based starter kit for custom user
