@@ -14,9 +14,10 @@ issues related to these wallet, reach out to their support teams directly.
 
 :::
 
-:::info 
+:::info
 
-Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+Explore Polkadot with a secure and user-friendly wallets listed on the
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 :::
 
@@ -78,7 +79,7 @@ wallets through Bluetooth connectivity.
 | [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
 | [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                                                           | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
 | [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet)             |
+| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | No             | No         | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
 
@@ -89,6 +90,17 @@ to double-check the wallet website URLs through official channels (most projects
 their official social media handles).
 
 :::
+
+### Web Wallets
+
+Web Wallets are the all-in-one solution to accessing the Web3 space, allowing you to sign
+transactions on the web without having to download and install any browser extension and mobile app.
+With all of the features of mobile wallets, you can also connect to and interact with decentralized
+web apps.
+
+| Wallet                                  | Platforms        | Staking and Nomination Pools | Liquid Staking | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
+| --------------------------------------- | ---------------- | ---------------------------- | -------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
+| [SubWallet](https://web.subwallet.app/) | Any web browsers | **Yes, Yes**                 | **Yes**        | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
 
 ## Enkrypt
 

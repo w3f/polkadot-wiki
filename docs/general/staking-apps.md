@@ -17,6 +17,8 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
 - [Sub.ID](#subid)
+- [NOMI](#nomi)
+- [SubWallet Earning](#subwallet-earning)
 
 ## Polkadot Staking Dashboard
 
@@ -26,13 +28,16 @@ dedicated to native non-custodial [staking](../learn/learn-staking.md) on the
 stake as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member.
 Users can also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
-[Subwallet](../general/wallets-and-extensions.md#subwallet),
+[SubWallet](../general/wallets-and-extensions.md#subwallet),
 [Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
 PolkaGate, and Enkrypt. The dashboard also supports
 [staking proxies](../learn/learn-proxies.md#staking-proxy).
 
-You can find more information about the Polkadot staking dashboard on the
-[dedicated page](./staking-dashboard.md).
+You can find more information about the Polkadot staking dashboard on the dedicated
+[wiki page](./staking-dashboard.md) and
+[support articles](https://support.polkadot.network/support/solutions/folders/65000157523).
+
+Below a list of video tutorial about the Polkadot Staking Dashboard.
 
 <tr class="cards-container">
   <td>
@@ -95,3 +100,28 @@ staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choo
 validators or stake with the recommended validator set.
 
 [![](https://cdn.discordapp.com/attachments/893485384154095640/1166807508837474394/image.png?ex=654bd52c&is=6539602c&hm=f78e346cfd364529b1b03d5207a8ad0cd100fc5093ee832eece397e788200cf0&)](https://sub.id/validator/polkadot)
+
+## NOMI
+
+[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
+Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
+to offer a unique and enhanced nomination experience, using
+[Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
+(MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
+evaluating numerous conflicting traits in the decision-making process. For the analysis, validator
+data is collected at the last block of every session.
+
+[![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
+
+source: https://github.com/turboflakes/apps
+
+## SubWallet Earning
+
+[SubWallet Web Dashboard](https://web.subwallet.app/) is the all-in-one solution to manage assets
+and stake on multiple networks in the Polkadot, Kusama and Polkadot SDK (Substrate) ecosystems.
+
+The Web Dashboard features an Earning tab which allows users to stake DOT easily via native
+nomination pools, as well as in liquid staking and lending protocols, without having to manage
+multiple applications with different interfaces and experiences.
+
+[![](https://cdn.discordapp.com/attachments/865823369092661279/1181493922166493214/earning_tab.gif?ex=658142f6&is=656ecdf6&hm=b02716903c18d046896c59eb1c5935518f75cf9f52845c1636609ccaf43c57cd&)](https://web.subwallet.app/)

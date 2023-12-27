@@ -1,22 +1,33 @@
 ---
 id: learn-guides-vault
-title: Vault How-to Guides
+title: Polkadot-JS Guides about the Vault App
 sidebar_label: Polkadot Vault
-description: Advanced How-to Guides about Polkadot Vault.
-keywords: [parity signer, signer, polkadot vault]
+description: Polkadot-JS Guides about Polkadot Vault.
+keywords: [parity signer, signer, polkadot vault, polkadot-js]
 slug: ../learn-guides-vault
 ---
-
-:::danger This page is for developers and power users only
-
-By requesting the chain specification and metadata you trust the specific endpoint you are using
-(unless you are using you own node).
-
-:::
 
 :::info
 
 These guides apply to both Parity Signer and Polkadot Vault apps.
+
+:::
+
+## Import Vault Accounts into Polkadot-JS
+
+See
+[this support article](https://support.polkadot.network/support/solutions/articles/65000184118-polkadot-vault-how-to-add-your-account-on-polkadot-js-ui)
+to import a Polkadot Vault account into the
+[Polkadot-JS Browser Extension](../general/polkadotjs.md#polkadot-js-extension) or
+[Parity Signer Companion](https://chrome.google.com/webstore/detail/parity-signer-companion/damllfnhhcbmclmjilomenbhkappdjgb).
+Accounts added to those extensions will be injected into the Polkadot-JS UI.
+
+## Do Your Own Chain Spec and Metadata Update
+
+:::danger This section is for developers and power users only
+
+By requesting the chain specification and metadata you trust the specific endpoint you are using
+(unless you are using you own node).
 
 :::
 
@@ -25,9 +36,9 @@ page (to create the Chain Spec QR code and the metadata QR code fountain) and
 [Metadata Portal](https://github.com/paritytech/metadata-portal) Github page (to embed the Chain
 Spec and Metadata into a portal).
 
-## Chain Specification
+### Chain Specification
 
-### Chain Spec QR
+#### Chain Spec QR
 
 To add more chains on the Vault app you can follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-specs).
@@ -42,7 +53,7 @@ Kusama. This will create the file `sign_me_add_specs_statemine_sr25510` under th
 `files/in_progress` folder. See
 {{ polkadot: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts) for a list of all endpoints listed in the Polkadot-JS UI. :polkadot }}{{ kusama: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts) for a list of all endpoints listed in the Polkadot-JS UI. :kusama}}
 
-### Generating Signature
+#### Generating Signature
 
 :::danger Use a hot account
 
@@ -62,7 +73,7 @@ signature similar to that below:
 
 `0xc4ce72db959000b6166af96d3bda55a927fd837747bf1bf1ae8a69e57c9ef37c25a88707c47b105a9eb1fbcf9345680eff57eb978cf73919506f6c738834e78a`
 
-### Signing Chain Spec
+#### Signing Chain Spec
 
 Now, go back to the `/generate_message` folder and type the following:
 
@@ -72,12 +83,12 @@ where `PUBLIC KEY` is the public key of the account with seed `"YOUR SEED PHRASE
 is the signature generated in the previous step. Running the code above will create the file
 `add_specs_statemine-sr25519` under the `files/completed` folder.
 
-## Metadata Updates
+### Metadata Updates
 
 Similarly to what we did for the chain specification, we now generate and sign the Asset Hub
 metadata.
 
-### Metadata QR Fountain
+#### Metadata QR Fountain
 
 To update the chain metadata for the Asset Hub specs on the Vault app you can follow the
 instructions
@@ -99,7 +110,7 @@ Note that the name of the file changes according to the network version. That is
 
 :::
 
-### Generating Signature
+#### Generating Signature
 
 :::danger Use a hot account
 
@@ -127,7 +138,7 @@ folder. The signature changes as well.
 
 :::
 
-### Signing Metadata
+#### Signing Metadata
 
 Now, go back to the `/generate_message` folder and type the following:
 
@@ -137,16 +148,16 @@ where `PUBLIC KEY` is the public key of the account with seed `"YOUR SEED PHRASE
 is the signature generated in the previous step. Running the code above will create the file
 `load_metadata_statemineV9370` under the `files/completed` folder.
 
-## Add Chain & Update Metadata
+### Add Chain & Update Metadata
 
 You can open `add_specs_statemine-sr25519` on your browser (just drag the file on an open tab). This
 is a .png file containing the QR code to add the Asset Hub chain specification into the Vault App.
 You can do the same with the `load_metadata_statemineV9370`. This is a .apng file containing the QR
 code fountain to do the metadata update for the Asset Hub on Kusama.
 
-## Metadata Portal
+### Metadata Portal
 
-### Modify `config` File
+#### Modify `config` File
 
 Alternatively, you can add the chain specification QR code and the metadata QR code fountain in a
 metadata portal. Briefly, fork the
@@ -173,7 +184,7 @@ genesis_hash = "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda77
 For each additional chain, you need to add the respective information. Information about the genesis
 hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State.
 
-### Rename Chain's Files
+#### Rename Chain's Files
 
 Rename the signed chain specification and metadata files as follow:
 
@@ -187,7 +198,7 @@ chain and `version` is the version of the metadata.
 
 Add the renamed files to the `/public/qr folder` within the Metadata Portal repository.
 
-### Run Portal
+#### Run Portal
 
 Open the terminal within the Metadata Portal repository and run `make updater`. Then run
 `make collector`; this will create the `_latest.apng` files for each of the chains (removed by the

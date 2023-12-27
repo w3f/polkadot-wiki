@@ -2,6 +2,106 @@ module.exports = {
   docs: [
     {
       type: "category",
+      label: "Explore",
+      description: 'Wallets and Apps in the Polkadot Ecosystem.',
+      link: {
+        type: 'generated-index',
+        title: 'Explore',
+        description: 'Explore Wallets, Apps and Programmes in Polkadot and Kusama ecosystems.',
+        slug: '/explore-index',
+      },
+      items: [
+        "general/getting-started",
+        {
+          type: "category",
+          label: "Wallets",
+          description: 'Beginner friendly wallets with advanced features.',
+          link: {
+            type: 'generated-index',
+            title: 'Wallets',
+            description: 'Explore the different wallets and applications in the Polkadot and Kusama ecosystems.',
+            slug: '/wallets-index',
+          },
+          items: [
+            "general/wallets-and-extensions",
+            "general/ledger",
+            "general/polkadot-vault",
+          ],
+        },
+        {
+          type: "category",
+          label: "Apps",
+          description: 'Apps for Staking, Governance, Multisigs, NFTs and many more use cases.',
+          link: {
+            type: 'generated-index',
+            title: 'Apps',
+            description: 'Explore the different applications in the Polkadot and Kusama ecosystems.',
+            slug: '/apps-index',
+          },
+          items: [
+            "general/staking-apps",
+            "general/governance-apps",
+            "general/multisig-apps",
+            "learn/learn-nft-projects",
+            "general/parachains-apps",
+          ],
+        },
+        {
+          type: "category",
+          label: "Dashboards",
+          description: 'Dashboards in the Polkadot Ecosystem.',
+          link: {
+            type: 'generated-index',
+            title: 'Dashboards',
+            description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
+            slug: '/dashboards-index',
+          },
+          items: [
+            "general/staking-dashboard",
+          ],
+        },
+        {
+          type: "category",
+          label: "Community & Contributors",
+          description: 'Polkadot Community and Wiki Contributors.',
+          link: {
+            type: 'generated-index',
+            title: 'Community & Contributors',
+            description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
+            slug: '/community-index',
+          },
+          items: [
+            "general/community",
+            "general/contributing",
+            "general/contributors",
+          ],
+        },
+        {
+          type: "category",
+          label: "Programmes",
+          description: 'Programmes for Grants, Bounties, Ambassadors and many more inititatives.',
+          link: {
+            type: 'generated-index',
+            title: 'Programmes',
+            description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
+            slug: '/programmes-index',
+          },
+          items: [
+            "general/decentralized-futures",
+            "general/grants",
+            "general/bug-bounty",
+            "general/ambassadors",
+            "general/builders-program",
+            "general/doc-thousand-validators",
+            "general/doc-thousand-contributors",
+            "general/dev-heroes",
+          ],
+        },
+        "general/metadata",
+      ],
+    },
+    {
+      type: "category",
       label: "Learn",
       link: {
         type: 'generated-index',
@@ -21,7 +121,6 @@ module.exports = {
             slug: '/general-index',
           },
           items: [
-            "general/getting-started",
             "general/web3-and-polkadot",
             {
               type: "category",
@@ -53,80 +152,8 @@ module.exports = {
                 "general/how-to-dyor",
               ],
             },
-            {
-              type: "category",
-              label: "Wallets & Apps",
-              description: 'Wallets and Apps in the Polkadot Ecosystem.',
-              link: {
-                type: 'generated-index',
-                title: 'Wallets & Apps',
-                description: 'Explore the different wallets and applications in the Polkadot and Kusama ecosystems.',
-                slug: '/wallets-index',
-              },
-              items: [
-                "general/wallets-and-extensions",
-                "general/staking-apps",
-                "general/governance-apps",
-                "general/parachains-apps",
-                {
-                  type: "category",
-                  label: "Dashboards",
-                  description: 'Dashboards in the Polkadot Ecosystem.',
-                  link: {
-                    type: 'generated-index',
-                    title: 'Dashboards',
-                    description: 'Explore the different dashboards in the Polkadot and Kusama ecosystems.',
-                    slug: '/dashboards-index',
-                  },
-                  items: [
-                    "general/staking-dashboard",
-                  ],
-                },
-                "general/ledger",
-                "general/polkadot-vault",
-                "general/polkadotjs-ui",
-              ],
-            },
-            "general/polkadotjs",
-            {
-              type: "category",
-              label: "Community & Contributors",
-              description: 'Polkadot Community and Wiki Contributors.',
-              link: {
-                type: 'generated-index',
-                title: 'Community & Contributors',
-                description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
-                slug: '/community-index',
-              },
-              items: [
-                "general/community",
-                "general/contributing",
-                "general/contributors",
-              ],
-            },
-            {
-              type: "category",
-              label: "Programmes",
-              description: 'Programmes and Initiatives within the Polkadot Ecosystem.',
-              link: {
-                type: 'generated-index',
-                title: 'Programmes',
-                description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
-                slug: '/programmes-index',
-              },
-              items: [
-                "general/grants",
-                "general/bug-bounty",
-                "general/ambassadors",
-                "general/builders-program",
-                "general/doc-thousand-validators",
-                "general/doc-thousand-contributors",
-                "general/dev-heroes",
-              ],
-            },
             "general/start-building",
             "general/research",
-            "general/metadata",
             "general/faq",
             "general/glossary",
           ],
@@ -147,14 +174,10 @@ module.exports = {
               label: "Accounts",
               description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
               link: {
-                type: 'generated-index',
-                title: 'Accounts',
-                description: 'Everything about accounts and native account abstraction on Polkadot.',
-                slug: '/learn-accounts-index',
+                type: 'doc',
+                id: "learn/learn-accounts"
               },
               items: [
-                "learn/learn-accounts",
-                "learn/learn-account-generation",
                 "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",
@@ -193,7 +216,21 @@ module.exports = {
                 "learn/learn-nomination-pools",
               ],
             },
-            "learn/learn-polkadot-opengov",
+            {
+              type: "category",
+              label: "Polkadot OpenGov",
+              description: 'Everything about Polkadot OpenGov.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot OpenGov',
+                description: 'Everything about Polkadot OpenGov.',
+                slug: '/learn-polkadot-opengov-index',
+              },
+              items: [
+                "learn/learn-polkadot-opengov",
+                "learn/learn-polkadot-opengov-origins",
+              ],
+            },
             "learn/learn-polkadot-opengov-treasury",
             {
               type: "category",
@@ -210,21 +247,7 @@ module.exports = {
                 "learn/learn-DOT",
                 "learn/learn-inflation",
                 "learn/learn-teleport",
-              ],
-            },
-            {
-              type: "category",
-              label: "NFTs",
-              description: 'Intro to NFTs and NFT Projects.',
-              link: {
-                type: 'generated-index',
-                title: 'NFTs',
-                description: 'Everything about NFTs on Polkadot.',
-                slug: '/learn-nft-index',
-              },
-              items: [
                 "learn/learn-nft",
-                "learn/learn-nft-projects",
               ],
             },
             {
@@ -257,6 +280,87 @@ module.exports = {
             slug: '/learn-advanced-index',
           },
           items: [
+            {
+              type: "category",
+              label: "Polkadot-JS",
+              description: 'Overview of Polkadot-JS.',
+              link: {
+                type: 'generated-index',
+                title: 'Polkadot-JS',
+                description: 'Overview of Polkadot-JS.',
+                slug: '/learn-polkadotjs-index',
+              },
+              items: [
+                "general/polkadotjs",
+                "general/polkadotjs-ui",
+                {
+                  type: "category",
+                  label: "Polkadot-JS Guides",
+                  description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Polkadot-JS Guides',
+                    description: 'Polkadot-JS Guides about Staking, Asset Hub, Ledger, Vault App, and more.',
+                    slug: '/learn-guides-index',
+                  },
+                  items: [
+                    {
+                      type: "category",
+                      label: "Accounts",
+                      description: 'Polkadot-JS Guides about Accounts.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Polkadot-JS Guides about Accounts',
+                        description: 'Polkadot-JS Guides about Accounts.',
+                        slug: '/learn-guides-accounts-index',
+                      },
+                      items: [
+                        "learn/learn-guides-accounts",
+                        "learn/learn-guides-accounts-multisig",
+                        "learn/learn-guides-accounts-proxy",
+                        "learn/learn-guides-accounts-proxy-pure",
+                      ],
+                    },
+                    {
+                      type: "category",
+                      label: "Staking",
+                      description: 'Polkadot-JS Guides about Staking.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Polkadot-JS Guides about Staking',
+                        description: 'Polkadot-JS Guides about Staking.',
+                        slug: '/learn-guides-staking-index',
+                      },
+                      items: [
+                        "learn/learn-guides-staking",
+                        "learn/learn-guides-staking-pools",
+                      ],
+                    },
+                    "learn/learn-guides-polkadot-opengov",
+                    "learn/learn-guides-treasury",
+                    "learn/learn-guides-bounties",
+                    "learn/learn-guides-identity",
+                    "learn/learn-guides-ledger",
+                    "learn/learn-guides-vault",
+                    {
+                      type: "category",
+                      label: "Asset Hub",
+                      description: 'Polkadot-JS Guides about the Asset Hub.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Advanced Guides for Asset Hub',
+                        description: 'Polkadot-JS guides about the Asset Hub.',
+                        slug: '/learn-guides-assets-index',
+                      },
+                      items: [
+                        "learn/learn-guides-assets-create",
+                        "learn/learn-guides-assets-ledger",
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
             {
               type: "category",
               label: "Architecture",
@@ -331,54 +435,6 @@ module.exports = {
             "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
-            {
-              type: "category",
-              label: "How-to Guides",
-              description: 'Advanced Guides about Staking, Asset Hub, Vault App, and more.',
-              link: {
-                type: 'generated-index',
-                title: 'Advanced Guides',
-                description: 'Advanced how-to guides using the Polkadot-JS User Interface.',
-                slug: '/learn-guides-index',
-              },
-              items: [
-                {
-                  type: "category",
-                  label: "Staking",
-                  description: 'Advanced How-to Guides about Staking.',
-                  link: {
-                    type: 'generated-index',
-                    title: 'Advanced Guides for Staking',
-                    description: 'Advanced how-to guides about Staking.',
-                    slug: '/learn-guides-staking-index',
-                  },
-                  items: [
-                    "learn/learn-guides-staking",
-                    "learn/learn-guides-staking-pools",
-                  ],
-                },
-                "learn/learn-guides-polkadot-opengov",
-                "learn/learn-guides-treasury",
-                "learn/learn-guides-bounties",
-                "learn/learn-guides-identity",
-                {
-                  type: "category",
-                  label: "Asset Hub",
-                  description: 'Advanced How-to Guides about the Asset Hub.',
-                  link: {
-                    type: 'generated-index',
-                    title: 'Advanced Guides for Asset Hub',
-                    description: 'Advanced how-to guides about the Asset Hub.',
-                    slug: '/learn-guides-assets-index',
-                  },
-                  items: [
-                    "learn/learn-guides-assets-create",
-                    "learn/learn-guides-assets-ledger",
-                  ],
-                },
-                "learn/learn-guides-vault",
-              ],
-            },
           ],
         },
         {
@@ -580,44 +636,77 @@ module.exports = {
     {
       type: "category",
       label: "Build",
+      link: {
+        type: 'doc',
+        id: "build/build-guide"
+      },
       items: [
-        "build/build-index",
         {
           type: "category",
-          label: "Development Guide",
+          label: "Client-side Development",
+          link: {
+            type: 'generated-index',
+            title: "Client-side Development",
+            description: "Learn about different options for building client-side apps on Polkadot.",
+            slug: '/build-client-index',
+          },
           items: [
-            "build/build-guide",
-            "build/build-parachains",
+            "build/build-dapp",
+            "build/build-oracle", 
+            "build/build-light-clients",
             "build/build-storage",
-            "build/build-smart-contracts",
-            "build/build-oracle",
-            "build/build-data",
-            "build/build-substrate",
-            "build/build-ss58-registry",
-            "build/build-hrmp-channels",
-          ],
-        },
-        {
-          type: "category",
-          label: "Integration Guide",
-          items: [
-            "build/build-integration",
-            "build/build-protocol-info",
-            "build/build-integrate-assets",
-            "build/build-node-management",
-            "build/build-node-interaction",
             "build/build-transaction-construction",
+            "build/build-node-interaction",
+          ],
+        },
+        "build/build-smart-contracts",
+        {
+          type: "category",
+          label: "Protocol Development",
+          link: {
+            type: 'generated-index',
+            title: "Protocol & Parachain Development",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-protocol-index',
+          },
+          items: [
+            "build/build-protocol-info",
+            "build/build-parachains",
+            "build/build-integrate-assets",
+            "build/build-hrmp-channels"
           ],
         },
         {
           type: "category",
-          label: "Tools",
-          items: ["build/build-tools-index", "build/build-open-source"],
+          label: "Development Networks & Node Management",
+          link: {
+            type: 'generated-index',
+            title: "Development Networks & Node Management",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-network-index',
+          },
+          items: [
+            "build/build-network-overview",
+            "build/build-integration",
+            "build/build-node-management",
+          ],
         },
+
         {
           type: "category",
-          label: "Resources",
-          items: ["build/build-hackathon"],
+          label: "Tooling",
+          link: {
+            type: 'doc',
+            id: "build/build-tools-index"
+          },
+          items: [
+            "build/build-data",
+            "build/build-open-source",
+          ],
+        },
+        {
+          type: "doc",
+          id: "build/build-hackathon",
         },
       ],
     },
@@ -628,6 +717,7 @@ module.exports = {
         "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
         "maintain/maintain-endpoints",
+        "maintain/maintain-guides-async-backing",
         {
           type: "category",
           label: "Nodes and Dapps",
@@ -655,13 +745,6 @@ module.exports = {
             "maintain/maintain-guides-how-to-stop-validating",
             "maintain/doc-maintain-guides-validator-community",
             "maintain/maintain-guides-avoid-slashing",
-          ],
-        },
-        {
-          type: "category",
-          label: "Governance Guides",
-          items: [
-            "maintain/maintain-guides-polkadot-opengov",
           ],
         },
         {

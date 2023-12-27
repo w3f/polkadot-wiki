@@ -24,7 +24,7 @@ function FooterSocialColumn() {
     <ul className="list-social-links mt-5 mt-lg-0 justify-content-lg-end">
       <SocialItem href="https://twitter.com/Polkadot" className="socicon-twitter" />
       <SocialItem href="https://www.reddit.com/r/polkadot" className="socicon-reddit" />
-      <SocialItem href="https://github.com/paritytech/polkadot" className="socicon-github" />
+      <SocialItem href="https://github.com/paritytech/polkadot-sdk" className="socicon-github" />
       <SocialItem
         href="https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw"
         className="socicon-youtube"

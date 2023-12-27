@@ -1,9 +1,9 @@
 ---
 id: learn-guides-assets-ledger
-title: Using the Asset Hub Ledger App
+title: Polkadot-JS Guides about Asset Hub Ledger App
 sidebar_label: Asset Hub Ledger App
-description: Advanced How-to Guides about Ledger and the Asset Hub.
-keywords: [asset hub, ledger, assets, statemine, statemint]
+description: Polkadot-JS Guides about Ledger and the Asset Hub.
+keywords: [asset hub, ledger, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-ledger
 ---
 
@@ -130,8 +130,7 @@ confirmation when you initiate a transaction.
 
 ### Working on Relay Chains and Asset Hubs
 
-Polkadot and Kusama accounts from the
-[extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
+Polkadot and Kusama accounts from the [extension](../general/polkadotjs.md#polkadot-js-extension)
 will show up in the Asset Hub, even if they're not set to be used on all chains. The Asset Hub is a
 system parachains on {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} and uses
 {{ polkadot: DOT :polkadot}}{{ kusama: KSM :kusama}} as native token. Hence, accounts on a Relay
@@ -142,10 +141,10 @@ an account created specifically on the Asset Hub won't show up on
 {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}}.
 
 **However**, as mentioned above, the
-[Polkadot extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
-does not support Statemine Ledger accounts at the moment, but the Polkadot-JS UI does. So, if your
-Kusama account is in the Polkadot extension, you'll need to remove it from there and re-add it on
-Polkadot-JS UI directly **as a Kusama account**, as described
+[Polkadot extension](../general/polkadotjs.md#polkadot-js-extension) does not support Statemine
+Ledger accounts at the moment, but the Polkadot-JS UI does. So, if your Kusama account is in the
+Polkadot extension, you'll need to remove it from there and re-add it on Polkadot-JS UI directly
+**as a Kusama account**, as described
 [here](https://guide.kusama.network/docs/kusama-ledger#using-on-polkadot-js-apps-ui). After that,
 you will be able to make transactions with that account.
 
@@ -254,7 +253,7 @@ account needs to be created first.
 To teleport KSM to the Relay Chain follow these steps:
 
 - Create an account outside your Ledger. Instructions can be found
-  [here](../learn/learn-account-generation.md).
+  [here](./learn-accounts.md#account-generation).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
   the amount you want to teleport, don't forget take into account the fees for teleporting that will
   be deducted in the next step.

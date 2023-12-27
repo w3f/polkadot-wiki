@@ -70,16 +70,9 @@ example, you can have an air-gapped laptop with the Subkey tool installed and ge
 there. The seed phrase of that account can be imported into the Vault App (Add Key Set > Recover Key
 Set).
 
-We recommend importing a Vault account into the
-[Polkadot-JS Browser Extension](./polkadotjs.md#polkadot-js-extension) or
-[Parity Signer Companion](https://chrome.google.com/webstore/detail/parity-signer-companion/damllfnhhcbmclmjilomenbhkappdjgb).
-Alternatively, you can import a Vault account directly into the Polkadot-JS UI but keep in mind that
-clearing the cache of your browser will remove those accounts (this will not happen for accounts
-imported into an extension). See the instructions in
-[this article](https://support.polkadot.network/support/solutions/articles/65000184076-polkadot-vault-how-to-create-an-account)
-to learn more about creating Vault accounts, and
-[this article](https://support.polkadot.network/support/solutions/articles/65000184118-polkadot-vault-how-to-add-your-account-on-polkadot-js-ui)
-on how to import them to the Polkadot extension or Polkadot-JS UI.
+For guidelines about how to create an account using Polkadot Vault, see
+[**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
+[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
 
 :::info
 
@@ -87,6 +80,12 @@ Importing an account into an extension will not import its private key. Only the
 imported and you must sign using your air-gapped phone which holds the private key.
 
 :::
+
+## Restore Account on Polkadot Vault
+
+See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
+[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
+to learn how to restore your account on the Polkadot Vault app.
 
 ## Signing Extrinsics
 
@@ -178,9 +177,11 @@ Alternatively, you can use a third-party provider to add chains and their metada
 [this article](https://support.polkadot.network/support/solutions/articles/65000184128-polkadot-vault-how-to-add-a-new-chain-and-update-the-metadata)
 for detailed instructions. If you choose this approach, you should trust the provider you choose.
 
-:::info Advanced How-to Guides
+---
 
-See the [advanced guides](../learn/learn-guides-vault.md) for more information about how to add
-chain specification and do metadata updates yourself.
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the
+[Polkadot-JS guides about Polkadot Vault](../learn/learn-guides-vault.md).
 
 :::

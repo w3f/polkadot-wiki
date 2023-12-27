@@ -1,25 +1,17 @@
 ---
 id: learn-guides-staking-pools
-title: Nomination Pools How-to Guides
+title: Polkadot-JS Guides for Pool Creators
 sidebar_label: Nomination Pools
-description: Advanced How-to Guides about Nomination Pools.
-keyword: [nominate, stake, staking, pools, create, destroy, claim, rewards]
+description: Polkadot-JS Guides about Nomination Pools.
+keyword: [stake, staking, pools, create, destroy, claim, rewards, polkadot-js]
 slug: ../learn-guides-staking-pools
 ---
 
 import RPC from "./../../components/RPC-Connection";
 
-This page is for pool creators and maintainers. If you like to participate in staking through
-nomination pools, please navigate to this page on
-[how to join a nomination pool.](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool)
+See [this page](./learn-nomination-pools.md) to learn about nomination pools.
 
-See the video tutorial below to learn how to create a pool, set the pool commission, set claim
-permissions, claim rewards on behalf of another account, and destroy a pool using the Polkadot
-Staking Dashboard.
-
-[![Create and manage pools](https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg)](https://www.youtube.com/watch?v=aTFWhwy_Mxg)
-
-## Pool Creation
+## Pool Creation with Polkadot-JS
 
 :::info
 
@@ -59,7 +51,7 @@ Apps UI.
 
 ![Nomination Pool Roles](../assets/staking/Nomination-Pools-7.png)
 
-## Pool Upkeep
+## Pool Upkeep with Polkadot-JS
 
 The nominator can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
 [Network > Staking > Accounts page](https://polkadot.js.org/apps/#/staking/actions) and click on
@@ -72,7 +64,7 @@ account.
 The root and bouncer can update the pool’s state to blocked through `setState` extrinsic and kick
 members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open).
 
-## Pool Destruction
+## Pool Destruction with Polkadot-JS
 
 :::info
 
@@ -99,7 +91,7 @@ anyone can help all the members exit.
 The pool is destroyed once the depositor withdraws, no members belong to the pool, and all the
 pool’s resources are wiped from the state.
 
-## Claim Rewards for Other Pool Members
+## Claim Rewards for Other Pool Members with Polkadot-JS
 
 As a pool member you can claim rewards for any other members who set their
 [claim permissions](./learn-nomination-pools.md#claim-permissions) to one of the _permissionless_

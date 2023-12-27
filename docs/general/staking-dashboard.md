@@ -23,11 +23,10 @@ extension or a wallet to use it; you just need your Ledger device.
 only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account in a Ledger device with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger app installed, or a browser
-extension such as the [Polkadot-JS Extension](./polkadotjs.md#polkadot-js-extension) or
-[other third-party extensions](./wallets-and-extensions.md#browser-extensions) with a funded
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account.
+[wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. Note that accounts on
+wallets or extensions can be imported from [Ledger](./ledger.md) or
+[Polkadot Vault](./polkadot-vault.md).
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
 need some free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the
@@ -47,8 +46,8 @@ dedicated to [staking](../learn/learn-staking.md) on Polkadot,
 [Westend](../maintain/maintain-networks.md#westend-test-network) (Polkadot's test network).
 
 The dashboard is not a wallet, meaning that you cannot transfer funds between accounts. To fund
-accounts, you can use [supported wallets](./wallets) or the [Polkadot-JS UI](./polkadotjs-ui.md).
-You can participate in staking by being a [nominator](../learn/learn-nominator.md) or a member of a
+accounts, you can use [wallets and extension](./wallets-and-extensions.md). You can participate in
+staking by being a [nominator](../learn/learn-nominator.md) or a member of a
 [nomination pool](../learn/learn-nomination-pools.md). Once you have a funded account, you need to
 connect it to the dashboard (connect button on the top-right corner), this will allow you to
 interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native staking.
@@ -324,4 +323,4 @@ The Support pages are:
 
 Under Network, you can connect to either Polkadot, Kusama, or Westend through public RPC nodes or
 light clients for a true Web3 experience. For more information about light clients, see
-[this page](../build/build-substrate.md#replacing-rpc-node-reliance-with-light-clients).
+[this page](../build/build-light-clients.md#replacing-rpc-node-reliance-with-light-clients).

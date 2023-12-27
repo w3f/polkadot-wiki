@@ -20,17 +20,17 @@ function HomeNav() {
   const NavContainer = ({ children }) => (
     <section className="homeNavContainer">
       <Container className="h-100 px-5">
-        <Row className="h-100 d-flex align-items-center">{children}</Row>
+        <div className="row h-100 d-flex align-items-center justify-content-center">{children}</div>
       </Container>
     </section>
   );
-
+  
   const NavItem = ({ href, aosDelay, children }) => (
-    <Col xs={12} md={12} lg={4} className="homeNavItem rounded-lg">
+    <div className="col-xs-12 col-md-6 col-lg-6 homeNavItem rounded-lg"> {/* Adjusted column classes */}
       <a href={href} className="h-100" data-aos="fade-up" data-aos-delay={aosDelay}>
         <div className="mx-auto">{children}</div>
       </a>
-    </Col>
+    </div>
   );
 
   const NavItemTitle = ({ children }) => (
@@ -41,7 +41,27 @@ function HomeNav() {
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("learn-index")} aosDelay="0">
+      <NavItem href={useDocUrl("explore-index")} aosDelay="0">
+        <NavItemContent>
+          <NavItemTitle>
+            <Translate
+              id="homePage.navContainer.explore.title"
+              description="Title of Explore Navigator in Home page"
+            >
+              Explore
+            </Translate>
+          </NavItemTitle>
+          <p className="mx-auto small text-secondary px-4">
+            <Translate
+              id="homePage.navContainer.explore.content"
+              description="Content of Explore Navigator in Home page"
+            >
+              Explore Wallets, Applications and Programmes within the Polkadot Ecosystem.
+            </Translate>
+          </p>
+        </NavItemContent>
+      </NavItem>
+      <NavItem href={useDocUrl("learn-index")} aosDelay="200">
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -56,13 +76,12 @@ function HomeNav() {
               id="homePage.navContainer.learn.content"
               description="Content of Learn Navigator in Home page"
             >
-              Polkadot is a sharded protocol that enables blockchain networks to operate together
-              seamlessly.
+              Learn about Polkadot and how it provides Shared Security and Secure Interoperability to its Parachains.
             </Translate>
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("build-index")} aosDelay="200">
+      <NavItem href={useDocUrl("build-guide")} aosDelay="400">
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -77,13 +96,13 @@ function HomeNav() {
               id="homePage.navContainer.build.content"
               description="Content of Build Navigator in Home page"
             >
-              Most up-to-date information on the status of the development tools in the Polkadot
-              ecosystem.
+              Most up-to-date Information on the Status of the Development Tools in the Polkadot
+              Ecosystem.
             </Translate>
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("maintain-index")} aosDelay="400">
+      <NavItem href={useDocUrl("maintain-index")} aosDelay="600">
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -98,7 +117,7 @@ function HomeNav() {
               id="homePage.navContainer.maintain.content"
               description="Content of Maintain Navigator in Home page"
             >
-              Information and guides on how to deploy a node and run the network.
+              Information and Guides on how to Deploy a Node and Run the Network.
             </Translate>
           </p>
         </NavItemContent>

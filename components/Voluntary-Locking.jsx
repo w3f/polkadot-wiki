@@ -59,12 +59,12 @@ const lockPeriods = ["p0", "p1", "p2", "p4", "p8", "p16", "p32"]
 
 const dotLocking = {
 	p0: 0,
-	p1: 28,
-	p2: 56,
-	p4: 112,
-	p8: 224,
-	p16: 448,
-	p32: 896
+	p1: 7,
+	p2: 14,
+	p4: 28,
+	p8: 56,
+	p16: 112,
+	p32: 224
 }
 
 const ksmLocking = {
@@ -86,9 +86,9 @@ function VoluntaryLocking() {
 		// can't be used to render a table (can't put a <table> in a <p>).
 		// So, we use the same component for Polkadot and Kusama and figure it out here.
 		const title = document.title;
-		if (title === "Governance V1 · Polkadot Wiki" || title === "Polkadot OpenGov · Polkadot Wiki") {
+		if (title === "Governance V1 · Polkadot Wiki" || title === "Introduction to Polkadot OpenGov · Polkadot Wiki") {
 			updateTable("polkadot")
-		} else if (title === "Governance V1 · Guide" || title === "Polkadot OpenGov · Guide") {
+		} else if (title === "Governance V1 · Guide" || title === "Introduction to Polkadot OpenGov · Guide") {
 			updateTable("kusama");
 		} else {
 			console.log("Unknown wiki/guide type");

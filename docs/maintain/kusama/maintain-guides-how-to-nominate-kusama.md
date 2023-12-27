@@ -46,7 +46,7 @@ reasoning for generating distinct accounts for this purpose is elaborated in the
 [keys](../../learn/learn-cryptography.md) section.
 
 You can generate your stash and staking proxy account via any of the recommended methods that are
-detailed on the [account generation](../../learn/learn-account-generation.md) page.
+detailed on the [account generation](../../learn/learn-accounts.md#account-generation) page.
 
 Starting with runtime version v2023 natively included in client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom

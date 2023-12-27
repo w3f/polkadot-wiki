@@ -42,7 +42,7 @@ module.exports = {
           type: "category",
               label: "Accounts",
               items: [
-                "learn/learn-account-generation",
+                "learn/learn-accounts",
                 "general/kusama/kusama-social-recovery",
                 "learn/learn-proxies",
               ],
@@ -89,7 +89,7 @@ module.exports = {
               items: [
                 "learn/learn-governance",
                 "learn/learn-polkadot-opengov",
-                "maintain/maintain-guides-polkadot-opengov",
+                "learn/learn-guides-polkadot-opengov",
                 "maintain/maintain-guides-how-to-join-council",
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
@@ -120,8 +120,7 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-substrate",
-            "build/build-ss58-registry",
+            "build/build-light-clients",
           ],
         },
         {

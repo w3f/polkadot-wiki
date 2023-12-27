@@ -62,14 +62,14 @@ On Polkadot-JS UI, navigate to Governance > Treasury to view the status of curre
 ## Treasury Tracks
 
 OpenGov allows for managing funds through six tracks, each with its own
-[origin and track parameters](../maintain/maintain-guides-polkadot-opengov.md#origins-and-tracks-info).
+[origin and track parameters](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
 
-- Treasurer
-- Big Spender
-- Medium Spender
-- Small Spender
-- Big Tipper
-- Small Tipper
+- [Treasurer](./learn-polkadot-opengov-origins.md#treasurer)
+- [Big Spender](./learn-polkadot-opengov-origins.md#big-spender)
+- [Medium Spender](./learn-polkadot-opengov-origins.md#medium-spender)
+- [Small Spender](./learn-polkadot-opengov-origins.md#small-spender)
+- [Big Tipper](./learn-polkadot-opengov-origins.md#big-tipper)
+- [Small Tipper](./learn-polkadot-opengov-origins.md#small-tipper)
 
 :::info How to access Treasury funds?
 
@@ -79,40 +79,71 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 :::
 
-### Treasurer
+## Bounties
 
-This track can be used for treasury spending requests up to
-{{ polkadot: 10M DOT :polkadot }}{{ kusama:  333333.33 KSM  :kusama }} per referendum. Each
-referendum requires a decision deposit of
-{{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }}.
+### Parent Bounties
 
-### Big Spender
+Getting treasury funding through OpenGov, depending on which treasury track you submit your
+referendum, can be a long and uncertain process. This is not always a suitable option, for example,
+for event organizers who need to pay costs upfront or close to the event's date. Bounties solve this
+problem by procuring access to treasury funds in a single shot and using them to fund multiple
+events later on through [child bounties](#child-bounties). This is why bounties are also called
+_parent_ bounties.
 
-This track can be used for treasury spending requests up to
-{{ polkadot: 1M DOT :polkadot }}{{ kusama:  33333.33 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 400 DOT :polkadot }}{{ kusama:  13.33 KSM  :kusama }}.
+Parent bounty proposals aim to reserve a portion of treasury funds once, which will be used later.
+They save proponents the time needed to create and obtain approval for several OpenGov referenda.
+Bounties are managed by curators, where the curator is usually a
+[multi-signature account](./learn-account-multisig.md). Bounties can access a large amount of funds,
+so managing those funds with a multisig is a good practice to enhance security. Essentially,
+curators are multisig addresses with agency over a portion of the treasury to promote events, fix a
+bug or vulnerability, develop a strategy, or monitor a set of tasks related to a specific topic, all
+for the benefit of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
 
-### Medium Spender
+A proposer can [submit a bounty proposal](./learn-guides-bounties.md#submit-a-bounty-proposal) to
+OpenGov,
+[with a curator to be defined later](./learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
+background and expertise is such that they can determine when the task is complete.
 
-This track can be used for treasury spending requests up to
-{{ polkadot: 100K DOT :polkadot }}{{ kusama:  3333.33 KSM  :kusama }} per referendum. Each
-referendum requires a decision deposit of
-{{ polkadot: 200 DOT :polkadot }}{{ kusama:  6.66 KSM  :kusama }}.
+When submitting the value of the bounty, the proposer can specify a fee that will be paid to
+curators willing to invest their time and expertise in the task; this amount will be included in the
+total value of the bounty. In this sense, the curator's fee can be defined as the difference between
+the amounts paid to child bounty awardees and the total value of the bounty.
 
-### Small Spender
+Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to
+pay an upfront deposit to take the position. The deposit is calculated by multiplying the curator
+fee by
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :kusama }}%,
+and it can range between a minimum of
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> :kusama }}
+and a maximum of
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
+This deposit can be used to punish curators if they act maliciously. However, if they are successful
+in managing the bounty to completion, they will receive their deposit back, and part of the bounty
+funding as a payment for their efforts.
 
-This track can be used for treasury spending requests up to
-{{ polkadot: 10K DOT :polkadot }}{{ kusama:  333.33 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 100 DOT :polkadot }}{{ kusama:  3.33 KSM  :kusama }}.
+Curators are expected to have a decent track record in addressing the issues the bounty wants to
+solve. They should be very knowledgeable on the topics covered by the bounty and have proven project
+management skills or experience. These recommendations help ensure an effective use of the bounty
+mechanism. A Bounty is a reward for a specified body of work or set of objectives that needs to be
+executed for a predefined treasury amount designated to be paid out. The responsibility of assigning
+a payout address once the specified set of objectives is completed is delegated to the curator.
 
-### Big Tipper
+The bounty has a predetermined duration of
+{{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
+days, with possible extension(s) to be requested by the curator. To maintain flexibility during the
+tasks’ curation, the curator will also be able to create child bounties for more granularity in the
+allocation of funds and as part of a nested iteration of the bounty mechanism.
 
-This track can be used for treasury spending requests up to
-{{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 10 DOT :polkadot }}{{ kusama:  0.33 KSM  :kusama }}.
+### Child Bounties
 
-### Small Tipper
+Child bounties are spawned from [parent bounties](#parent-bounties). Child bounties are used to
+access funds directly from the parent bounty without going through an OpenGov referendum.
 
-This track can be used for treasury spending requests up to
-{{ polkadot: 100 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} per referendum. Each referendum
-requires a decision deposit of {{ polkadot: 1 DOT :polkadot }}{{ kusama:  0.033 KSM  :kusama }}.
+---
+
+:::info Polkadot-JS Guides
+
+If you are an advanced user, see the [Polkadot-JS guides about bounties](./learn-guides-bounties.md)
+and [treasury](./learn-guides-treasury.md).
+
+:::

@@ -25,7 +25,7 @@ The Transact instruction has three fields. The `origin_kind` is of type
 [OriginKind](https://paritytech.github.io/polkadot/doc/xcm/v2/enum.OriginKind.html) and specifies
 how the origin of the call should be interpreted. In the xcm-executor, the `origin_kind` is used to
 determine how to convert a `MultiLocation` origin into a `RuntimeOrigin`. For more information,
-check out the [xcm-executor config docs](../executor_config/index.html).
+check out the [xcm-executor config docs](../executor_config/config.md).
 
 The `require_weight_at_most` field tells the XCVM executing the call how much
 [weight](../fundamentals/weight_and_fees.md) it can use. If the call uses more weight than the
@@ -75,9 +75,9 @@ In this section, we quickly look at how the XCM executor executes the `Transact`
 It executes, among other things, the following steps:
 
 1. Decode the call field into the actual call that we want to dispatch.
-2. Check with the [SafeCallFilter](../executor_config/index.html#safecallfilter) on whether the
+2. Check with the [SafeCallFilter](../executor_config/config.md#safecallfilter) on whether the
    execution of this call is allowed.
-3. Use the [OriginConverter](../executor_config/index.html#originconverter) to convert the
+3. Use the [OriginConverter](../executor_config/config.md#originconverter) to convert the
    `MultiLocation` origin into a `RuntimeOrigin`.
 4. Check whether the call weight does not exceed `require_weight_at_most`.
 5. Dispatch the call with the converted origin and set the `transact_status` register to be the

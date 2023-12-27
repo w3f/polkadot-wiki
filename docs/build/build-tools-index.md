@@ -99,6 +99,9 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 ## IDEs
 
 - [Astar IDE](https://chainide.gitbook.io/chainide-english-1/ethereum-ide-1/13.-astar-ide) by [Chain IDE](https://chainide.com/) is a tool for lightning-speed smart contracts and dApp development for [Wasm](https://chainide.com/s/createTempProject/astar-wasm?language=en) and [EVM](https://chainide.com/s/createTempProject/astar-evm?language=en).
+- [Sandox IDE](https://github.com/sandoxio/sandox) is an integrated development environment (IDE)
+  with tools for building in the Polkadot environment. Currently helpful for creating applications
+  in JS.
 
 ## UI
 
@@ -110,8 +113,8 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
   ReactJS-based starter UI for custom user interfaces for Substrate chains.
 - [Polkadot JS Browser Extension](https://github.com/polkadot-js/extension) - Key management in a
   Chrome extension.
-- [Polkadot Cloud](https://polkadot.cloud/) - A library and platform for developing and publishing assets for Polkadot dapps.
-
+- [Polkadot Cloud](https://polkadot.cloud/) - A library and platform for developing and publishing
+  assets for Polkadot dapps.
 
 ## Libraries
 
@@ -139,6 +142,7 @@ The following libraries/SDKs allow for interfacing with a Substrate node in othe
 - [Fearless Utils iOS Swift SDK](https://github.com/soramitsu/fearless-utils-iOS)
 - [Nova Wallet iOS/Swift Substrate SDK](https://github.com/nova-wallet/substrate-sdk-ios)
 - [Kotlin SDK](https://github.com/soramitsu/fearless-utils-Android)
+- [Dart/Flutter Library](https://github.com/leonardocustodio/polkadart)
 
 ### CLI Tools
 

@@ -1,13 +1,15 @@
 ---
 id: learn-guides-treasury
-title: Polkadot Treasury How-to Guides
+title: Polkadot-JS Guides about the Treasury
 sidebar_label: Treasury
-description: Advanced How-to Guides about requesting funds from the Polkadot Treasury.
-keywords: [opengov, polkadot opengov, referenda, treasury, tipps, bounties]
+description: Polkadot-JS Guides about the Polkadot Treasury.
+keywords: [opengov, polkadot opengov, referenda, treasury, tipps, polkadot-js]
 slug: ../learn-guides-treasury
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+See [this page](./learn-polkadot-opengov-treasury.md) to learn about the Polkadot Treasury.
 
 ## Creating a Treasury Proposal
 

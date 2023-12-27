@@ -84,10 +84,6 @@ module.exports = {
             from: ['/docs/maintain-bug-bounty']
           },
           {
-            to: '/docs/maintain-guides-polkadot-opengov',
-            from: ['/docs/maintain-guides-opengov']
-          },
-          {
             to: '/docs/learn-guides-assets-create',
             from: ['/docs/kusama-statemine']
           },
@@ -110,7 +106,7 @@ module.exports = {
       disableSwitch: true,
     },
     prism: {
-      theme: require("prism-react-renderer/themes/github"),
+      theme: require("prism-react-renderer").themes.github,
     },
     /*
     announcementBar: {

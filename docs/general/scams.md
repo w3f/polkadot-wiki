@@ -11,7 +11,25 @@ Scams are an unfortuante reality of the crypto industry. It's important to stay 
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
 scammed, please get in contact with [Polkadot Support](https://support.polkadot.network).
 
-## Essential rules:
+## DISCLAIMER: Key Security
+
+The _only_ ways to access your account are via your secret seed or your account's JSON file in
+combination with a password. Keep them offline in a secure and private location. If you share these
+with anyone, they can access your account, including your funds. This information is always a target
+for hackers and malicious actors. Check out the wiki doc on
+[how to recognize scams](../general/scams.md).
+
+[![Account Creation Tutorial](https://img.youtube.com/vi/ARsdXZycJAg/0.jpg)](https://www.youtube.com/watch?v=ARsdXZycJAg)
+
+:::info
+
+Visit
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely)
+for more information about key security.
+
+:::
+
+## Essential Rules
 
 1. Never, ever, ever share your seed phrase or account password.
 2. Do not trust anyone online. It is trivial for them to lie and change their identities.

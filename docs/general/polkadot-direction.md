@@ -24,21 +24,21 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
 
 - About [**Blockspace**](./polkadot-v1.md#polkadots-blockspace) (the underlying resources that
   chains need), not chains.
-- **A platform to build applications** rather than chains, and for people to use those applications.
+- **A platform to build applications** rather than chains and for people to use those applications.
   Fundamentally, Polkadot is not a platform to host chains, and so far, chains happened to be one
   way to build applications and grow Polkadot's utility.
 - **A provider of resilient general-purpose continuation computation**, where the term
-  _continuation_ refers to a broad long-running task that can do something, pause, continue (or do
+  _continuation_ refers to a broad, long-running task that can do something, pause, continue (or do
   something else) later.
 - **A multicore computer** where chains that continuously operate in parallel on different cores are
   called [parachains](../learn/learn-parachains.md). Currently, one core is reserved for one chain
   through [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved
   on-demand to multiple chains at different periods (see
-  [parathreads](../learn/learn-parathreads.md)). At the time of writing (mid 2023), on Polkadot,
-  there are around 50 cores independently operating in parallel.
+  [parathreads](../learn/learn-parathreads.md)). At the time of writing (mid 2023), there are around
+  50 cores independently operating in parallel on Polkadot.
 
-From now _application_ will be used as a general term to describe anything that can use a Polkadot
-core to access secure and decentralized computation.
+From now on _application_ will be used as a general term to describe anything that can use a
+Polkadot core to access secure and decentralized computation.
 
 ## Summary
 
@@ -51,22 +51,21 @@ A paradigm shift from:
 - being a chain-focused ecosystem where each parachain owned an execution core at all times
   (acquired through fixed parachain slots), which allowed a simple and secure, sharded execution
   environment
-- to being an application-focused ecosystem where where we remove the assumption that each
-  application owns a core, and instead that all cores are a resource to be consumed and used as
-  needed by all applications.
+- to being an application-focused ecosystem where we remove the assumption that each application
+  owns a core, and instead that all cores are a resource to be consumed and used as needed by all
+  applications.
 
 Previously, securing a parachain slot was a competitive process through an
 [auction mechanism](../learn/learn-auction.md). With coretime rental, there is no need for slot
-auctions anymore. Teams can either purchase some instantaneous coretime, or reserve bulk coretime as
-required. This greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
+auctions anymore. Teams can purchase instantaneous coretime or reserve bulk coretime as required.
+This greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
 
 On top of those main changes, [agile core usage](#agile-core-usage) and
 [coretime allocation](#agile-coretime-allocation) will allow any application to access Polkadot's
 computation based on their needs without wasting valuable blockspace. [Accords](#xcm-and-accords)
 will improve cross-chain communication and the security guarantees of XCM messages. Finally,
-Polkadot itself will scale by moving on-chian logic into its own system parachains, allowing it to
-have more bandwidth for the [parachains protocol](../learn/learn-parachains-protocol.md) and
-accords.
+Polkadot will scale by moving on-chain logic into its system parachains, allowing it to have more
+bandwidth for the [parachains protocol](../learn/learn-parachains-protocol.md) and accords.
 
 ## From Slot Auctions to Coretime Marketplace
 
@@ -82,17 +81,17 @@ The slot auction mechanism is not agile, creates high entry barriers, and is des
 long-running single applications (i.e., the original Polkadot vision proposed in the whitepaper).
 
 We depart from the classic lease auctions and propose an agile marketplace for coretime, where
-essentially **coretime becomes a commodity that can be tokenized, sold and traded**. This setup
+essentially **coretime becomes a commodity that can be tokenized, sold, and traded**. This setup
 maximizes the agility of Polkadot and lets the market figure out the best solution needed for
 applications to be successful.
 
-Applications will be able to reserve **bulk coretime** and **instantaneous coretime** depending on
-their needs. Bulk coretime rental will be a standard rental of coretime through a broker system
-parachain at fixed price for a fixed period of time. Instantaneous coretime rental will be available
-through ongoing sale of coretime for immediate use at a spot price. This system will lowers the
-barrier-to-entry for prospective builders.
+Applications can reserve **bulk coretime** and **instantaneous coretime** depending on their needs.
+Bulk coretime rental will be a standard rental of coretime through a broker system parachain at a
+fixed price for a fixed period of time. Instantaneous coretime rental will be available through
+ongoing sale of coretime for immediate use at a spot price. This system lowers the barrier to entry
+for prospective builders.
 
-Revenues from coretime sales can for example be burnt, used to fund the Treasury, or used for a mix
+For example, revenues from coretime sales can be burnt, used to fund the Treasury, or used for a mix
 of those options. The topic is currently under discussion. For more information, see
 [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10) and
 [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
@@ -136,14 +135,14 @@ to it and will service that particular function. To lower the entry barrier, acc
 permissionlessly, but because they are opt-in, the accord proposal will take effect until chains
 agree and sign up.
 
-To sum up, accords ensure that XCM messages securely sent via XCMP channels are faithfully
-interpreted by the receiver. Accords are the missing piece of the puzzle to achieve a fully
-trustless and collaborative environment between applications.
+To sum up, accords ensure that the receiver faithfully interprets XCM messages securely sent via
+XCMP channels. Accords are the missing piece of the puzzle to achieve a fully trustless and
+collaborative environment between applications.
 
-Polkadot is the only ecosystem where accords can properly exist because it has an homogenous
-security layer that also provides a specific state transition function for each of its logic
-components. This allows patterns of cooperation between multiple logic components (i.e.,
-trans-applications) that would not be possible to achieve over bridges.
+Polkadot is the only ecosystem where accords can properly exist because it has a homogenous security
+layer that provides a specific state transition function for each logic component. This allows
+patterns of cooperation between multiple logic components (i.e., trans-applications) that would not
+be possible to achieve over bridges.
 
 Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
 
@@ -161,13 +160,13 @@ one core formula).
 
 The above setup allowed a **simple and secure, sharded execution environment**.
 
-However, to achieve full efficiency blocks must be produced when needed, and the system must target
-full block capacity lowering the probability of incentivizing validators to build blocks half full
+However, to achieve full efficiency, blocks must be produced when needed, and the system must target
+full block capacity, lowering the probability of incentivizing validators to build blocks half full
 or, worse, empty.
 
 ## Agile Coretime Allocation
 
-In Polkadot 1.0, coretime is a fixed two-year period on one specific core. Here we remove this
+In Polkadot 1.0, coretime is a fixed two-year period on one specific core. Here, we remove this
 limitation and generalize coretime usage to meet different application needs.
 
 ### Split Coretime
@@ -195,13 +194,13 @@ multiple blocks to multiple cores at the same time slot to reduce latency.
 
 ## Agile Core Usage
 
-In Polkadot 1.0 the one core is assigned to one application (in this case equivalent to a
-parachain). Ideally, core affinity (i.e., which application operates on which core) is unimportant
-(see below). Cores do not have any higher friendliness to one application than another.
+In Polkadot 1.0, one core is assigned to one application (in this case, equivalent to a parachain).
+Ideally, core affinity (i.e., which application operates on which core) is unimportant (see below).
+Cores do not have any higher friendliness to one application than another.
 
 ![core-usage-dumb-noAffinity](../assets/core-usage-dumb-noAffinity.png)
 
-Here we remove the assumption that each application owns a core, and instead that all cores are a
+Here, we remove the assumption that each application owns a core and instead that all cores are a
 resource to be consumed and used as needed by all applications in the ecosystem.
 
 ### Compressed Cores
@@ -228,9 +227,9 @@ global computing system.
 
 ![core-usage-agile-composable](../assets/core-usage-agile-composable.png)
 
-Thus, this new vision is focused on Polkadot’s resource, which is secure, flexible and available
-blockspace that can be accessed by reserving some time on a core. Agility in allocation of coretime
-and use of cores allow for maximized network efficiency and blockspace usage.
+Thus, this new vision is focused on Polkadot’s resource, which is secure, flexible, and available
+blockspace that can be accessed by reserving some time on a core. Agility in allocating coretime and
+using cores allows for maximized network efficiency and blockspace usage.
 
 ## Polkadot's Resilience
 
@@ -240,7 +239,7 @@ are breakable and prone to cyber-attacks. Polkadot is basing its resilience on d
 - **Preponderance of light-client usage:** Centralized RPC servers are common but susceptible to
   attack and not trustless decentralized entry points to using blockchain-based applications. Light
   client usage on Polkadot is possible through
-  [Smoldot](../build/build-substrate.md#how-to-use-substrate-connect).
+  [Smoldot](../build/build-light-clients.md#how-to-use-substrate-connect).
 - **Zero-Knowledge (ZK) Primitives:** They can have a problematic effect on censorship and
   centralization as having a big state transition function boiled down to a single proof of correct
   execution is not currently a scaling solution to build resilient systems. However, a library of

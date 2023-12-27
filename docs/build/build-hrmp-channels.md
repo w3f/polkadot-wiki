@@ -80,7 +80,7 @@ the community to review and ultimately vote on:
     tab;
 6.  The preimage hash to include in the proposal's submission. Note that if the proposer is planning
     to
-    [submit a referendum on the Whitelisted Caller Track](../maintain/maintain-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track),
+    [submit a referendum on the Whitelisted Caller Track](../learn/learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track),
     the preimage hash needs to be submitted to and whitelisted by the
     [Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship).
 

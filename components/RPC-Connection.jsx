@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import { HumanReadable, Precise, BlocksToDays, Percentage, PermillToPercent, ArrayLength } from "./utilities/filters";
+import { HumanReadable, Precise, BlocksToDays, ErasToDays, Percentage, PermillToPercent, ArrayLength } from "./utilities/filters";
 
 /*
 This component connects to the Polkadot/Kusama APIs and renders the response data.
@@ -142,6 +142,9 @@ function applyFilter(value, filter, network, setReturnValue) {
 			break;
 		case "blocksToDays":
 			BlocksToDays(value, setReturnValue);
+			break;
+		case "erasToDays":
+			ErasToDays(value, setReturnValue, network);
 			break;
 		case "percentage":
 			Percentage(value, setReturnValue);
