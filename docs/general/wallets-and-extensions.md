@@ -74,12 +74,13 @@ and management of your accounts, through the mobile app. Unlike browser extensio
 usually can’t connect to third-party web apps. Some mobile wallets provide support for hardware
 wallets through Bluetooth connectivity.
 
-| Wallet                                        | Platforms                                                                                              | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
-| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
-| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                                                           | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
-| [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | No             | No         | [SubWallet features](#subwallet)             |
+| Wallet                                        | Platforms                                                                                                    | Staking and Nomination Pools | NFTs    | Crowdloans | MPC Wallet | Ledger support | Governance | Other features                               |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- | ---------- | ---------- | -------------- | ---------- | -------------------------------------------- |
+| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                                                                 | **Yes**, **Yes**             | No      | **Yes**    | No         | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
+| [Gridlock Wallet](https://gridlock.network)   | [iOS](https://apps.apple.com/us/app/gridlock-secure-crypto-wallet/id1567057330?utm_source=website_apple&pcampaignid=polkadot_wiki), [Android](https://play.google.com/store/apps/details?id=network.gridlock.AppGridlock&utm_source=website_google&pcampaignid=polkadot_wiki) | No, No                       | **Yes** | No         | **Yes**    | No (n/a)             | No         | [Gridlock Wallet features](#gridlock)        |
+| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                                                                 | **Yes**, **Yes**             | **Yes** | **Yes**    | No         | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
+| [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                                                                 | **Yes**, **Yes**             | No      | **Yes**    | No         | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
+| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg)       | **Yes**, **Yes**             | **Yes** | **Yes**    | No         | No             | No         | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
 
@@ -122,6 +123,10 @@ Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/23),
 [4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178)],
 and the SORA community [[1](https://sora.subscan.io/referenda/193?tab=votes)], developed with <3 by
 SORAMITSU. Stay Fearless!
+
+## Gridlock
+
+Gridlock is the first distributed, multi-party computation (MPC) with a strong presence in the Polkadot ecosystem. This innovative wallet eliminates traditional vulnerabilities such as seed phrases by leveraging MPC threshold signatures and distributing key management across multiple parties to significantly enhance security. With features like social recovery and enabling account recovery through trusted contacts, Gridlock is ideal for both new and experienced users seeking a secure yet user-friendly crypto experience without the risk of a single point of failure or the need for extensive management. 
 
 ## Nova Wallet
 
