@@ -73,6 +73,13 @@ Check that your node is connected by viewing it on
 Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-westend-testnet) to get
 Westies (WND) tokens.
 
+### Westmint or Westend Asset Hub
+Westmint or Westend [Asset Hub](https://wiki.polkadot.network/docs/learn-guides-assets-create#creating-assets-on-the-asset-hub) is a systems parachain on Westend network. 
+
+#### Westmint Faucet
+Claim Westmint tokens from the [faucet](https://paritytech.github.io/polkadot-testnet-faucet/westend). 
+
+
 ### Rococo Test Network
 
 [Rococo](https://substrate.io/developers/rococo-network/) is a test network built for parachains.
