@@ -34,7 +34,7 @@ For additional background on the Asset Hub check out
 :::info
 
 Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westmint,
-which is a parachain on Westend. The WND tokens (Westies) are free and are available through a
+which is a systems parachain on Westend. The WND tokens (Westies) used for Westmint are free and are available through a
 [faucet](https://wiki.polkadot.network/docs/learn-DOT#getting-westies).
 
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**
