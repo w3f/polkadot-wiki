@@ -48,7 +48,8 @@ Full documentation & examples
 available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>. </TabItem>
 
 <TabItem value="papi"> The Polkadot API (formerly known as "CAPI") is currently under development,
-but will serve as a replacement for Polkadot JS. Learn more
+but will serve as a replacement for Polkadot JS. While still under construction, you may view the
+current progress on GitHub
 &nbsp;<a href="https://github.com/paritytech/polkadot-api/" target="_blank">here</a>. </TabItem>
 
 <TabItem value="subxt"> Query and submit extrinsics (transactions) to a Substrate node via RPC using

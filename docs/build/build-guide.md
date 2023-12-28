@@ -59,7 +59,7 @@ developmental components. For more inspiration, look at the
   }
 }%%
 flowchart TB
-    subgraph PL ["Protocol Side (Parachains, Smart Contracts)"]
+    subgraph PL ["Protocol Land (Parachains, Smart Contracts)"]
 
         subgraph SCD ["Smart Contract Development"]
           direction LR
@@ -68,7 +68,7 @@ flowchart TB
           SC --> Solidity
         end
 
-        subgraph PSL ["Build a Blockchain"]
+        subgraph PSL ["Blockchain Development"]
            direction LR
            PS["Polkadot SDK"] --> R[WASM Runtime - Substrate & FRAME]
            R -->Parachain["Parachain"]-->SSC["Shared Security - Cumulus"]
@@ -78,12 +78,15 @@ flowchart TB
 
     PL-->| Develop apps| CS
 
-    subgraph CS ["Client Side (dApps/uApps)"]
-        UA[UApp - Smoldot]
+    subgraph CS ["Client/User Land (dApps/uApps)"]
+        LC["Light Clients (Smoldot)"]
+        UA[uApp]
         UA --> PAPI[Polkadot API]
         UA --> PJS[Polkadot JS]
         UA --> SubXT
-        SubXT
+        PAPI --> LC
+        PJS --> LC
+        SubXT --> LC
     end
 ```
 
