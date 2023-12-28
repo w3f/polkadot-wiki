@@ -77,7 +77,8 @@ Westies (WND) tokens.
 Westmint or Westend [Asset Hub](https://wiki.polkadot.network/docs/learn-guides-assets-create#creating-assets-on-the-asset-hub) is a system parachain on Westend network. 
 
 #### Westmint Faucet
-Claim Westmint tokens from the [faucet](https://paritytech.github.io/polkadot-testnet-faucet/westend). 
+
+Claim WND tokens from the [faucet](https://paritytech.github.io/polkadot-testnet-faucet/westend) on Westend and teleport them to Westmint. 
 
 
 ### Rococo Test Network
