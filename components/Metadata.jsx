@@ -17,6 +17,10 @@ const Networks = [
   { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
+// Common pallets specific to Polkadot/Kusama.
+const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots"];
+const PalletNameMappings = { "registrar": "paras_registrar", "xcmpallet": "xcm", "voterlist": "bags_list", "fastunstake": "fast_unstake" };
+
 // Track all top-level containers for expand/collapse all functionality
 let Expandable = [];
 
@@ -147,12 +151,16 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
 // Format lists for a given pallet invocation
 function BuildPalletItems(pallet, call, type, types) {
+  // BuildPalletItems(pallet, api.tx[`${Camel(pallet.name)}`], "extrinsics", types);
   let output = [];
   if (call !== undefined && call !== null) {
     const keys = Object.keys(call).sort((a, b) => a.localeCompare(b));
     keys.forEach(key => {
       const meta = call[key].meta.toHuman();
-      const description = FormatDescription(meta.docs.join(" "));
+      if (type == "extrinsics") {
+        console.log(meta)
+      }
+      const description = FormatDescription(pallet.name.toLowerCase(), meta.docs.join(" "));
       const keyUpper = key.charAt(0).toUpperCase() + key.slice(1);
       let list;
       switch (type) {
@@ -231,7 +239,7 @@ function BuildRPCOrRuntime(call, type) {
     methodKeys.sort((a, b) => a.localeCompare(b));
     methodKeys.forEach(methodKey => {
       const childCall = methods[methodKey].meta;
-      const callDescription = FormatDescription(childCall.description);
+      const callDescription = FormatDescription('', childCall.description);
       let listItems;
       switch (type) {
         case "rpc":
@@ -308,13 +316,28 @@ function CompilePalletSection(palletName, category, items) {
   )
 }
 
+function BuildDocLink(pallet, method) {
+  let mapped = PalletNameMappings[pallet] != undefined ? PalletNameMappings[pallet] : pallet;
+  console.log(pallet, method)
+  if (CommonRuntimeModules.includes(pallet)) {
+    return `https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_common/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  } else {
+    return `https://paritytech.github.io/polkadot-sdk/master/pallet_${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  }
+}
+
 // Format a description string
-function FormatDescription(description) {
+function FormatDescription(pallet, description) {
   let descriptionItems = description.split("`");
   let output = [];
   for (let i = 0; i < descriptionItems.length; i++) {
+    console.log("PALLET", pallet);
     if (i % 2 === 0) {
       output.push(<p key={i} style={DescriptionRegular}>{descriptionItems[i]}</p>)
+    } else if (descriptionItems[i].startsWith("Pallet::")) {
+      let method = descriptionItems[i].split("Pallet::")[1];
+      let link = BuildDocLink(pallet, method);
+      output.push(<a key={i} target="_blank" href={link} style={DescriptionHighlighting}>{descriptionItems[i]}</a>)
     } else {
       output.push(<p key={i} style={DescriptionHighlighting}>{descriptionItems[i]}</p>)
     }
