@@ -18,8 +18,8 @@ const Networks = [
 ];
 
 // Common pallets specific to Polkadot/Kusama.
-const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots"];
-const PalletNameMappings = { "registrar": "paras_registrar", "xcmpallet": "xcm", "voterlist": "bags_list", "fastunstake": "fast_unstake" };
+const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots", "configuration", "paras"];
+const PalletNameMappings = { "registrar": "paras_registrar", "xcmpallet": "xcm", "voterlist": "bags_list", "fastunstake": "fast_unstake", "childbounties": "child_bounties", "nominationpools": "nomination_pools" };
 
 // Track all top-level containers for expand/collapse all functionality
 let Expandable = [];
@@ -157,9 +157,6 @@ function BuildPalletItems(pallet, call, type, types) {
     const keys = Object.keys(call).sort((a, b) => a.localeCompare(b));
     keys.forEach(key => {
       const meta = call[key].meta.toHuman();
-      if (type == "extrinsics") {
-        console.log(meta)
-      }
       const description = FormatDescription(pallet.name.toLowerCase(), meta.docs.join(" "));
       const keyUpper = key.charAt(0).toUpperCase() + key.slice(1);
       let list;
@@ -331,12 +328,12 @@ function FormatDescription(pallet, description) {
   let descriptionItems = description.split("`");
   let output = [];
   for (let i = 0; i < descriptionItems.length; i++) {
-    console.log("PALLET", pallet);
     if (i % 2 === 0) {
       output.push(<p key={i} style={DescriptionRegular}>{descriptionItems[i]}</p>)
     } else if (descriptionItems[i].startsWith("Pallet::")) {
       let method = descriptionItems[i].split("Pallet::")[1];
       let link = BuildDocLink(pallet, method);
+      console.log(link)
       output.push(<a key={i} target="_blank" href={link} style={DescriptionHighlighting}>{descriptionItems[i]}</a>)
     } else {
       output.push(<p key={i} style={DescriptionHighlighting}>{descriptionItems[i]}</p>)
