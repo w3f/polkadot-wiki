@@ -1,3 +1,6 @@
+![Ggggg](https://github.com/w3f/polkadot-wiki/assets/138715838/b911f0cb-c254-443c-80a4-47d1edf5520b)
+![qrcode](https://github.com/w3f/polkadot-wiki/assets/138715838/983a8b51-b5d6-402b-830b-d425360588ce)
+![avatar](https://github.com/w3f/polkadot-wiki/assets/138715838/6e75ea32-b913-4d95-bd21-5252b6b00f25)
 ---
 id: learn-cryptography
 title: Cryptography on Polkadot
