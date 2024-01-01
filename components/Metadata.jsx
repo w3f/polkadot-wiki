@@ -18,8 +18,25 @@ const Networks = [
 ];
 
 // Common pallets specific to Polkadot/Kusama.
-const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots", "configuration", "paras"];
-const PalletNameMappings = { "registrar": "paras_registrar", "xcmpallet": "xcm", "voterlist": "bags_list", "fastunstake": "fast_unstake", "childbounties": "child_bounties", "nominationpools": "nomination_pools" };
+const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots"];
+const CommonParachainRuntimeModules = ["configuration", "hrmp", "initializer", "paras_inherent", "paras", "disputes", "disputes/slashing"];
+// Mappings from metadata to names compatible with searching in Rust docs
+const PalletNameMappings = {
+  "registrar": "paras_registrar",
+  "xcmpallet": "xcm",
+  "voterlist": "bags_list",
+  "fastunstake": "fast_unstake",
+  "childbounties": "child_bounties",
+  "nominationpools": "nomination_pools",
+  "convictionvoting": "conviction_voting",
+  "imonline": "im_online",
+  "parasdisputes": "disputes",
+  "parasslashing": "disputes/slashing",
+  "parainherent": "paras_inherent",
+  "messagequeue": "message_queue",
+  "electionprovidermultiphase": "election_provider_multi_phase",
+  "system": "frame_system",
+};
 
 // Track all top-level containers for expand/collapse all functionality
 let Expandable = [];
@@ -315,9 +332,17 @@ function CompilePalletSection(palletName, category, items) {
 
 function BuildDocLink(pallet, method) {
   let mapped = PalletNameMappings[pallet] != undefined ? PalletNameMappings[pallet] : pallet;
-  console.log(pallet, method)
   if (CommonRuntimeModules.includes(pallet)) {
     return `https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_common/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  } else if (CommonParachainRuntimeModules.includes(mapped)) {
+    return `https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_parachains/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  } else if (pallet == "staking") {
+    // not sure why this needs a special link, but oh well
+    return `https://paritytech.github.io/polkadot-sdk/master/pallet_${mapped}/struct.Pallet.html#method.${method}`;
+  }
+  else if (mapped.startsWith("frame_")) {
+    return `https://paritytech.github.io/polkadot-sdk/master/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+
   } else {
     return `https://paritytech.github.io/polkadot-sdk/master/pallet_${mapped}/pallet/struct.Pallet.html#method.${method}`;
   }
@@ -333,7 +358,6 @@ function FormatDescription(pallet, description) {
     } else if (descriptionItems[i].startsWith("Pallet::")) {
       let method = descriptionItems[i].split("Pallet::")[1];
       let link = BuildDocLink(pallet, method);
-      console.log(link)
       output.push(<a key={i} target="_blank" href={link} style={DescriptionHighlighting}>{descriptionItems[i]}</a>)
     } else {
       output.push(<p key={i} style={DescriptionHighlighting}>{descriptionItems[i]}</p>)
