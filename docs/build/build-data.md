@@ -83,7 +83,7 @@ Cloud users. Check this
 [announcement](https://cloud.google.com/blog/products/data-analytics/data-for-11-more-blockchains-in-bigquery-public-datasets)
 for details on how to access the data.
 
-#### Block Explorers
+## Block Explorers
 
 As you can imagine, blockchain explorers also offer data analytics through an interface where users
 can examine common data points.
