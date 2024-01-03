@@ -11,7 +11,7 @@ The tools that accentuate and aggregate the data within blockchains are integral
 future. Parachains will need robust and secure ways to index and aggregate data, such as a data
 aggregation layer.
 
-## Indexing and Querying
+## Custom Indexer 
 
 ### Subsquid
 
@@ -41,6 +41,17 @@ fully-featured indexer, so you don’t have to, with:
 To start building, head to the [SubQuery documentation](https://academy.subquery.network/) where
 you'll find quick start guides and walkthrough developer tutorials.
 
+### The Graph
+
+[The Graph](https://thegraph.com/en/) is a layer-1 indexing tool and querying layer for the
+decentralized web, who announced an integration plan to bring
+[indexing and querying to Polkadot](https://medium.com/polkadot-network/the-graph-bringing-indexing-and-querying-to-polkadot-6b433e381fe8).
+
+The Graph allows developers to build and publish open APIs, called subgraphs. Applications can query
+subgraphs using [GraphQL](https://graphql.org/).
+
+## Analytics platform 
+
 ### Dolpha Analytics
 
 [Dolpha Analytics](https://dolpha.com/) is an on-chain data analytics and insights platform for the
@@ -51,15 +62,6 @@ ecosystems, perform due diligence, surface signals, and make informed data-drive
 
 [Web3GO](https://web3go.xyz/) is a Polkadot-based open data analytics platform that provides
 infrastructure and tooling to help users visualize, curate, share, and analyze on-chain data.
-
-### The Graph
-
-[The Graph](https://thegraph.com/en/) is a layer-1 indexing tool and querying layer for the
-decentralized web, who announced an integration plan to bring
-[indexing and querying to Polkadot](https://medium.com/polkadot-network/the-graph-bringing-indexing-and-querying-to-polkadot-6b433e381fe8).
-
-The Graph allows developers to build and publish open APIs, called subgraphs. Applications can query
-subgraphs using [GraphQL](https://graphql.org/).
 
 ### Covalent
 
@@ -72,6 +74,8 @@ implementing a full parachain or parathread.
 Covalent captures the entire history of blockchains and offers a way to zoom into data points
 recorded in smart contracts that are often not accessible.
 
+## Data warehouse
+
 ### BigQuery by Google Cloud
 
 [BigQuery](https://cloud.google.com/bigquery) makes Polkadot blockchain data available for Google
@@ -79,7 +83,7 @@ Cloud users. Check this
 [announcement](https://cloud.google.com/blog/products/data-analytics/data-for-11-more-blockchains-in-bigquery-public-datasets)
 for details on how to access the data.
 
-### Polkadot-based Explorers
+#### Block Explorers
 
 As you can imagine, blockchain explorers also offer data analytics through an interface where users
 can examine common data points.
