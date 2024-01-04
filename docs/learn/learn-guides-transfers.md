@@ -180,7 +180,7 @@ Kusama.
 
 ### Teleporting Tokens using the Polkadot-JS UI
 
-See [this video tutorial](https://youtu.be/PGyDpH2kad8) and
+See [this video tutorial](https://youtu.be/3tE9ouub5Tg) and
 [this additional support article](https://support.polkadot.network/support/solutions/articles/65000181119-how-to-teleport-dot-or-ksm-between-statemint-or-statemine)
 to learn more about how to teleport tokens.
 
