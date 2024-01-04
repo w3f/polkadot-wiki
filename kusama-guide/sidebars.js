@@ -9,7 +9,6 @@ module.exports = {
         "general/kusama/kusama-claims",
         "general/wallets-and-extensions",
         "general/polkadotjs",
-        "learn/learn-balance-transfers",
         "learn/learn-auction",
         "learn/learn-parachains",
         "general/metadata",

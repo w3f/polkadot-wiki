@@ -19,8 +19,8 @@ members).
 
 The dashboard also has **native [Ledger](./ledger.md) support**, meaning that you do not need an
 extension or a wallet to use it; you just need your Ledger device.
-[Metadata updates](../learn/learn-extrinsics.md#metadata-updates) are thus not necessary, as you
-only need to keep your Ledger apps up-to-date.
+[Metadata updates](../learn/learn-guides-accounts.md#metadata-updates-with-the-polkadot-js-browser-extension)
+are thus not necessary, as you only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
 [wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded

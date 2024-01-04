@@ -1,54 +1,62 @@
 ---
-id: learn-balance-transfers
-title: Balance Transfers
-sidebar_label: Balances Transfers
-keywords: [balance, transfers, transaction, signing]
-description: Perform Balance Transfers between Accounts.
-slug: ../learn-balance-transfers
+id: learn-guides-transfers
+title: Polkadot-JS Guides about Transfers
+sidebar_label: Transfers
+description: Polkadot-JS Guides about Balances Transfers.
+keywords: [gides, advanced, polkadot-js, transfers]
+slug: ../learn-guides-transfers
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
-Balance transfers are used to send a balance from one account to another account. To start
-transferring a balance, we will begin by using
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). This guide assumes that you've already
-[created an account](./learn-accounts.md#account-generation) and have some funds that are ready to
-be transferred.
+## Metadata Updates with the Polkadot-JS Browser Extension
 
-:::info
+Before signing extrinsics with the Polkadot-JS Browser Extension, always check for metadata updates.
+[**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to do it.
 
-We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
-together with the [**browser extension**](https://polkadot.js.org/extension/),
-[**Ledger**](https://www.ledger.com/ledger-live) and
-[**Parity Signer**](https://www.parity.io/technologies/signer/) for signing transactions. We do not
-provide support for third party applications.
+:::info Polkadot Vault vs Polkadot-JS Browser Extension
 
-:::
-
-## Sending Funds using UI, Extension, Parity Signer & Ledger
-
-See the video tutorial below to learn how to send funds using the supported tools. See the Polkadot
-Support pages for detailed information about transferring funds using the
-[Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
-
-[![Balance Transfer Tutorial](https://img.youtube.com/vi/gbvrHzr4EDY/0.jpg)](https://www.youtube.com/watch?v=gbvrHzr4EDY)
-
-:::info Signing Transactions
-
-See the Polkadot Support pages for detailed information about signing transactions using:
-
-- [The Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
-- [The Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
-- [Ledger devices](https://support.polkadot.network/support/solutions/articles/65000181994-how-to-sign-a-transaction-on-ledger)
-- [The Parity Signer app](https://support.polkadot.network/support/solutions/articles/65000182000-how-to-sign-a-transaction-in-parity-signer).
+The Polkadot Vault app updates the full metadata through the QR fountain while the extension updates
+the metadata index (the metadata is not loaded into it). As a consequence the process of updating
+metadata is different in this two cases (you will notice that on the Vault app the update takes
+longer for example). Having outdated metadata on the Vault app will prevent you from signing, while
+on the extension you will be able to click the sign button but the extrinsic will likely fail
+(similarly of having an outdated Ledger app). In general, failing to update metadata will most
+likely result in you not being able to sign extrinsics.
 
 :::
 
-## Keep-Alive Checks
+## Transfers using the Polkadot-JS UI and Browser Extension
+
+See [this video tutorial](https://www.youtube.com/watch?v=gbvrHzr4EDY) to learn how to send funds
+using the Polkadot-JS UI and Browser Extension. See also the Polkadot Support pages for detailed
+information about signing transactions using
+[the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
+and
+[the Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989).
+
+### Verify Extrinsics with the Polkadot-JS Browser Extension
+
+Visit the
+[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-extension)
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=261) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions.
+
+### Verify Extrinsics with the Polkadot-JS UI
+
+Visit the
+[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-JS-UI)
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=163) tutorial to learn about how to
+verify extrinsics before signing them. The video will also mention potential attacks that can happen
+to you while signing for transactions.
+
+### Keep-Alive Checks with the Polkadot-JS UI
 
 :::info
 
-See [**this video tutorial**](https://youtu.be/Wg0pH05CC9Y) and
+See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
 to learn about keep-alive checks and existential deposit.
 
@@ -73,11 +81,7 @@ transfer funds from one account to another:
 
 Attempting to send less than the existential deposit to an account with
 {{ polkadot: 0 DOT :polkadot }}{{ kusama: 0 KSM :kusama }} will always fail, no matter if the
-keep-alive check is on or not.
-
-:::
-
-For instance, attempting to transfer
+keep-alive check is on or not. For instance, attempting to transfer
 {{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} to an account you just generated
 (and thus has no balance) will fail, since
 {{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} is less than the existential
@@ -86,23 +90,17 @@ deposit of
 {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :kusama }}
 and the account cannot be initialized with such a low balance.
 
-:::note
-
 Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the
 sending account if you attempt to transfer.
 
 :::
 
-## Vested Transfers
+### Vested Transfers with the Polkadot-JS UI
 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock placed on them to account for
-vesting funds. Like other types of locks, these funds cannot be transferred but can be used in other
-parts of the protocol such as voting in governance or being staked as a validator or nominator.
-
-Vesting funds are on a release schedule and unlock a constant number of tokens at each block
-(**linear vesting**) or can unlock the full amount after a specific block number (**cliff
-vesting**). Although the tokens are released in this manner, it does not get reflected on-chain
-automatically since locks are [lazy](#lazy-vesting) and require an extrinsic to update.
+You can watch [**this video tutorial**](https://youtu.be/JVlwTQBwNGc) to understand how to do vested
+transfers using the Polkadot-JS UI, including linear and cliff vesting. Note the tutorial uses the
+Westend Testnet, but the same applies to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 There are two ways that vesting schedules can be created.
 
@@ -125,15 +123,7 @@ Vesting schedules have three parameters:
 The configuration of these three fields dictates the amount of funds that are originally locked, the
 slope of the unlock line and the block number for when the unlocking begins.
 
-:::info
-
-You can watch [**this video tutorial**](https://youtu.be/JVlwTQBwNGc) to understand how to do vested
-transfers, including linear and cliff vesting. Note the tutorial uses the Westend Testnet, but the
-same applies to both Polkadot and Kusama.
-
-:::
-
-### Lazy Vesting
+#### Lazy Vesting
 
 Like [simple payouts](learn-staking-advanced.md), vesting is _lazy_, which means that someone must
 explicitly call an extrinsic to update the lock that is placed on an account.
@@ -150,7 +140,26 @@ already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page
 
 ![unbond](../assets/unlock-vesting.png)
 
-## Batch Transfers
+#### Calculating When Vesting DOT Will Be Available
+
+Generally, you should be able to see from the [Accounts](https://polkadot.js.org/apps/#/accounts) by
+looking at your accounts and seeing when the vesting will finish. However, some DOT vest with
+"cliffs" - a single block where all the DOT are released, instead of vesting over time. In this
+case, you will have to query the chain state directly to see when they will be available (since
+technically, the vesting has not yet started - all of the vesting will occur in a single block in
+the future).
+
+1. Navigate to the
+   [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate) page on
+   Polkadot-JS.
+2. Query chain state for `vesting.vesting(ACCOUNT_ID)`
+3. Note the `startingBlock` where the unlock starts, and how much DOT is unlocked per block
+   (`perBlock`).
+4. You will have to calculate the result into “human time". To do this, remember that there are
+   approximately 14’400 blocks per day, and you can see what the latest block is shown on the
+   [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
+
+### Batch Transfers with the Polkadot-JS UI
 
 Batch transfers are balances transfers to multiple accounts executed by one account. In order to
 construct a batch transfer you need to:
@@ -168,6 +177,27 @@ transfers. Note the tutorial uses the Westend Testnet, but the same applies to b
 Kusama.
 
 :::
+
+## Calculating Fees with Polkadot-JS
+
+One useful utility for estimating transaction fees programmatically is the via the
+[@polkadot/api](https://www.npmjs.com/package/@polkadot/api). Check out the following script that
+logs some relevant fee information:
+
+```js
+// Estimate the fees as RuntimeDispatchInfo using the signer
+const info = await api.tx.balances.transfer(recipient, 123).paymentInfo(sender);
+
+// Log relevant info, partialFee is Balance, estimated for current
+console.log(`
+  class=${info.class.toString()},
+  weight=${info.weight.toString()},
+  partialFee=${info.partialFee.toHuman()}
+`);
+```
+
+For additional information on interacting with the API, checkout
+[Polkadot-JS](../general/polkadotjs.md).
 
 ## Existing Reference Error
 

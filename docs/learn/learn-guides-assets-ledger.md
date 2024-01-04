@@ -211,7 +211,8 @@ be able to go below existential deposit balance, causing your account to be dele
 amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this might
 be the reason.
 
-A detailed guide on doing transfers is available [here](../learn/learn-balance-transfers.md).
+A detailed guide on doing transfers is available
+[here](./learn-guides-ledger.md#sending-a-transfer-with-ledger-devices).
 
 :::
 

@@ -7,7 +7,10 @@ keyword: [guides, polkadot-js, accounts]
 slug: ../learn-guides-accounts
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Account Address Format
 
@@ -69,13 +72,9 @@ than using Parity Signer or other air-gapped approaches.
 
 ### Account Backup using the Polkadot-JS Browser Extension
 
-:::info
-
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
 to know how to back up your account.
-
-:::
 
 ### Reset Password using the Polkadot-JS Browser Extension
 
