@@ -131,3 +131,7 @@ you face any issues, join the rooms individually.
 - [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
   building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
   unofficial).
+- [Jobs in Polkadot Ecosystem](https://polkadot.getro.com/jobs) - Join the Polkadot Talent Network.
+- [Polkadot Blockchain Academy](https://polkadot.network/development/blockchain-academy/) - a
+  classroom-based educational program covering the conceptual underpinnings and the hands-on
+  application of blockchain technology, using Polkadot and Substrate as its foundations..

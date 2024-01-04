@@ -98,6 +98,10 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## IDEs
 
+- [Astar IDE](https://chainide.gitbook.io/chainide-english-1/ethereum-ide-1/13.-astar-ide) by
+  [Chain IDE](https://chainide.com/) is a tool for lightning-speed smart contracts and dApp
+  development for [Wasm](https://chainide.com/s/createTempProject/astar-wasm?language=en) and
+  [EVM](https://chainide.com/s/createTempProject/astar-evm?language=en).
 - [Sandox IDE](https://github.com/sandoxio/sandox) is an integrated development environment (IDE)
   with tools for building in the Polkadot environment. Currently helpful for creating applications
   in JS.

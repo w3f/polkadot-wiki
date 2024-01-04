@@ -192,7 +192,9 @@ should also keep up to date with the following links:
 Many smart contract platforms are building to become a parachain in the ecosystem. A community
 created and maintained list of different smart contract platforms building on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be found at
-[PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
+[PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6). Additionally, information
+about ink smart contracts can be accessed at
+[use.ink](https://use.ink/#where-can-i-deploy-ink-contracts).
 
 #### Moonbeam
 
@@ -250,16 +252,16 @@ Try deploying an Acala EVM smart contract by following their
 
 - ink!: **Unsupported**
 - EVM (Solidity): **Unsupported**
-- See: [**Phat Contracts**](https://docs.phala.network/developers/phat-contract)
+- See: [**Phat Contracts**](https://docs.phala.network/developers/phat-contract) powered by ink!
 
-[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
-strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala
-will enable the use of confidential smart contracts on Polkadot.
+[Phala](https://phala.network) is an off-chain trustless compute infrastructure that provides fully
+verifiable computation. Using [Phat contracts](https://docs.phala.network/developers/phat-contract),
+developers can write smart contracts that can interact with web2 services.
 [Khala](https://phala.network/en/khala) is Phala's canary network and is live as a parachain on
 Kusama.
 
-Try deploying a confidential smart contract by following their
-[documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
+Try deploying a smart contract that interacts with Etherscan's web2 API by following their
+[documentation](https://docs.phala.network/developers/build-on-phat-contract/create-contract).
 
 #### Darwinia
 

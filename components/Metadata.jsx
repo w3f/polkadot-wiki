@@ -17,6 +17,27 @@ const Networks = [
   { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
+// Common pallets specific to Polkadot/Kusama.
+const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots"];
+const CommonParachainRuntimeModules = ["configuration", "hrmp", "initializer", "paras_inherent", "paras", "disputes", "disputes/slashing"];
+// Mappings from metadata to names compatible with searching in Rust docs
+const PalletNameMappings = {
+  "registrar": "paras_registrar",
+  "xcmpallet": "xcm",
+  "voterlist": "bags_list",
+  "fastunstake": "fast_unstake",
+  "childbounties": "child_bounties",
+  "nominationpools": "nomination_pools",
+  "convictionvoting": "conviction_voting",
+  "imonline": "im_online",
+  "parasdisputes": "disputes",
+  "parasslashing": "disputes/slashing",
+  "parainherent": "paras_inherent",
+  "messagequeue": "message_queue",
+  "electionprovidermultiphase": "election_provider_multi_phase",
+  "system": "frame_system",
+};
+
 // Track all top-level containers for expand/collapse all functionality
 let Expandable = [];
 
@@ -147,12 +168,13 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
 
 // Format lists for a given pallet invocation
 function BuildPalletItems(pallet, call, type, types) {
+  // BuildPalletItems(pallet, api.tx[`${Camel(pallet.name)}`], "extrinsics", types);
   let output = [];
   if (call !== undefined && call !== null) {
     const keys = Object.keys(call).sort((a, b) => a.localeCompare(b));
     keys.forEach(key => {
       const meta = call[key].meta.toHuman();
-      const description = FormatDescription(meta.docs.join(" "));
+      const description = FormatDescription(pallet.name.toLowerCase(), meta.docs.join(" "));
       const keyUpper = key.charAt(0).toUpperCase() + key.slice(1);
       let list;
       switch (type) {
@@ -231,7 +253,7 @@ function BuildRPCOrRuntime(call, type) {
     methodKeys.sort((a, b) => a.localeCompare(b));
     methodKeys.forEach(methodKey => {
       const childCall = methods[methodKey].meta;
-      const callDescription = FormatDescription(childCall.description);
+      const callDescription = FormatDescription('', childCall.description);
       let listItems;
       switch (type) {
         case "rpc":
@@ -308,13 +330,35 @@ function CompilePalletSection(palletName, category, items) {
   )
 }
 
+function BuildDocLink(pallet, method) {
+  let mapped = PalletNameMappings[pallet] != undefined ? PalletNameMappings[pallet] : pallet;
+  if (CommonRuntimeModules.includes(pallet)) {
+    return `https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_common/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  } else if (CommonParachainRuntimeModules.includes(mapped)) {
+    return `https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_parachains/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  } else if (pallet == "staking") {
+    // not sure why this needs a special link, but oh well
+    return `https://paritytech.github.io/polkadot-sdk/master/pallet_${mapped}/struct.Pallet.html#method.${method}`;
+  }
+  else if (mapped.startsWith("frame_")) {
+    return `https://paritytech.github.io/polkadot-sdk/master/${mapped}/pallet/struct.Pallet.html#method.${method}`;
+
+  } else {
+    return `https://paritytech.github.io/polkadot-sdk/master/pallet_${mapped}/pallet/struct.Pallet.html#method.${method}`;
+  }
+}
+
 // Format a description string
-function FormatDescription(description) {
+function FormatDescription(pallet, description) {
   let descriptionItems = description.split("`");
   let output = [];
   for (let i = 0; i < descriptionItems.length; i++) {
     if (i % 2 === 0) {
       output.push(<p key={i} style={DescriptionRegular}>{descriptionItems[i]}</p>)
+    } else if (descriptionItems[i].startsWith("Pallet::")) {
+      let method = descriptionItems[i].split("Pallet::")[1];
+      let link = BuildDocLink(pallet, method);
+      output.push(<a key={i} target="_blank" href={link} style={DescriptionHighlighting}>{descriptionItems[i]}</a>)
     } else {
       output.push(<p key={i} style={DescriptionHighlighting}>{descriptionItems[i]}</p>)
     }

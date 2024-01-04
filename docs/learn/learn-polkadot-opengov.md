@@ -604,9 +604,10 @@ system will adhere to three main principles:
 - The Fellowship should be designed to grow and develop its membership, aggregate levels of
   expertise and ensure that its overall decision-making capacity strengthens over time.
 
-To support these conditions, the Fellowship will have a constitution that outlines the requirements
-and expectations for individuals to attain and retain any given rank. Higher ranks can vote and
-promote lower ranks based on this constitution.
+To support these conditions, the Fellowship has a
+[manifesto](https://github.com/polkadot-fellows/manifesto) that outlines the requirements and
+expectations for individuals to attain and retain any given rank. Higher ranks can vote and promote
+lower ranks based on this [manifesto](https://github.com/polkadot-fellows/manifesto).
 
 **Demotion** occurs automatically after a given period has elapsed, and the member is unable to
 defend their position to their peers.
