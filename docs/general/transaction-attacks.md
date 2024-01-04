@@ -1,5 +1,5 @@
 ---
-id: attacks
+id: transaction-attacks
 title: Why Verify Transactions?
 sidebar_label: Transaction Verification
 description: How to Prevent from being a Victim of an Attack
