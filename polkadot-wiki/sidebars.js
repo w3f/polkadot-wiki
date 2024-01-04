@@ -296,7 +296,7 @@ module.exports = {
                   description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
                   link: {
                     type: 'doc',
-                    id: "learn/learn-guides",
+                    id: "learn/learn-polkadot-js-guides",
                   },
                   items: [
                     {

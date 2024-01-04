@@ -1,17 +1,14 @@
 ---
 id: attacks
-title: Protection from Attacks
-sidebar_label: Attack Protection
+title: Why Verify Transactions?
+sidebar_label: Transaction Verification
 description: How to Prevent from being a Victim of an Attack
-keywords: [attack, protection]
+keywords: [transaction, extrinsic, verification, protection]
 slug: ../attacks
 ---
 
-## How do Attacks look like
-
-In general, an attacker would make you think you are signing an
-[extrinsic](../learn/learn-transactions.md) A when in reality you are signing an extrinsic B. An
-Attack might come from:
+In general, an attacker would make you think you are signing a Transaction A when in reality you are
+signing a Transaction B. An Attack might come from:
 
 ### Clipboard Memory
 
@@ -32,21 +29,21 @@ signing. Failing to do so could result in loss of the funds.
 ### Malicious Website/dApp
 
 This is a common attack that can happen if you are interacting with a malicious site (dApp). In this
-scenario you want to perform Extrinsic A on the website, but the dApp will send Extrinsic B to the
-extension for signing. In this case the extension will show Extrinsic B. If you are using a Ledger
-device you have a second layer of verification, as it will also display Extrinsic B.
+scenario you want to perform Transaction A on the website, but the dApp will send Transaction B to
+the extension for signing. In this case the extension will show Transaction B. If you are using a
+Ledger device you have a second layer of verification, as it will also display Transaction B.
 
 ### Malicious Browser Extension
 
 This scenario can happen if you have downloaded a malicious browser extension or a trusted browser
 extension, from a non-trusted source. In this scenario the extension will display that you will sign
-for an Extrinsic A but in the background will execute Extrinsic B. If you are using a
+for an Transaction A but in the background will execute Transaction B. If you are using a
 [Ledger](https://www.ledger.com/) device this attack can be detected because you will be able to see
-Extrinsic B on the screen of your Ledger device.
+Transaction B on the screen of your Ledger device.
 
 ### Corrupted metadata
 
-This attack is least common and might result in signing a non-intended extrinsic without the
+This attack is least common and might result in signing a non-intended transaction without the
 possibility of verifying it. Before authorizing the metadata update check who is requesting it.
 Metadata updates for browser extensions might be requested by dApps (for example DeFi apps of
 parachains). For the extensions, you should trust the app that requests the update. When updating
@@ -56,18 +53,18 @@ fountain yourself).
 ### Corrupted QR-code (Parity Signer)
 
 This is a sub-case of the malicious dApp scenario. If your account is on
-[Parity Signer](https://www.parity.io/technologies/signer/) the extrinsic will be displayed as a QR
-code, instead of the extension showing its details and you need to verify it on the device. The
-corrupted QR code will make you sign for an Extrinsic B when you want to sign for Extrinsic A. This
-will be showed in the Signer app and a careful user will notice it. If the metadata in the Signer is
-already incorrect (or the Signer is corrupted) there is the risk of signing a non-intended extrinsic
-without the possibility of verifying it.
+[Parity Signer](https://www.parity.io/technologies/signer/) the transaction will be displayed as a
+QR code, instead of the extension showing its details and you need to verify it on the device. The
+corrupted QR code will make you sign for an Transaction B when you want to sign for Transaction A.
+This will be showed in the Signer app and a careful user will notice it. If the metadata in the
+Signer is already incorrect (or the Signer is corrupted) there is the risk of signing a non-intended
+transaction without the possibility of verifying it.
 
 ## Defense against Attacks
 
 :::warning
 
-If you can't verify the extrinsic or you suspect you are signing something different than what you
+If you can't verify the transaction or you suspect you are signing something different than what you
 intended, don't sign it!
 
 :::

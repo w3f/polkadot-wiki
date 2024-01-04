@@ -1,10 +1,10 @@
 ---
-id: learn-guides
+id: learn-polkadot-js-guides
 title: Polkadot-JS Guides
 sidebar_label: Polkadot-JS Guides
 description: Guides about Polkadot-JS.
 keywords: [polkadot-JS, polkadotjs, guides, advanced]
-slug: ../learn-guides
+slug: ../learn-polkadot-js-guides
 ---
 
 :::info
