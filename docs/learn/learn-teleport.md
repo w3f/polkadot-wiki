@@ -9,18 +9,18 @@ slug: ../learn-teleport
 
 import RPC from "./../../components/RPC-Connection";
 
-One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralized
-blockchain interoperability. This interoperability allows for asset teleportation: the process of
-moving assets, such as coins, tokens, or NFTs, between chains (parachains) to use them as you would
-any other asset native to that chain. Interoperability is possible through [XCM](learn-xcm.md) and
-[SPREE modules](learn-spree.md), which together ensure that assets are not lost or duplicated across
-multiple chain.
+One of the main properties that {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+brings to the blockchain industry is secure interoperability. This interoperability allows for
+**asset teleportation**, i.e., the process of moving assets (such as fungible and non-fungible
+tokens) between chains (parachains) to use them as any other asset native to that chain.
+Interoperability is possible through [XCM](learn-xcm.md) and [SPREE modules](learn-spree.md), which
+together ensure that assets are not lost or duplicated across multiple chains.
 
 :::info Walk-through video tutorial about teleporting assets
 
 See [this technical explainer video](https://youtu.be/3tE9ouub5Tg) to learn how to teleport assets
 from Kusama to the Asset Hub. The same procedure applies to teleporting between Polkadot and the
-Polkadot Asset Hub, or between any other parachain.
+Polkadot Asset Hub, or any other parachain.
 
 :::
 
@@ -28,9 +28,9 @@ Polkadot Asset Hub, or between any other parachain.
 
 ![teleport](../assets/asset-hub/teleport-asset.png)
 
-As you can see from the diagram above, there are only 2 actors within this model: the source and the
-destination. The way in which we transfer assets between the source and the destination are briefly
-summarized in the numbered labels on the diagram, and are explained in more detail below:
+As you can see from the diagram above, there are only two actors within this model: the source and
+the destination. How we transfer assets between the source and the destination is briefly summarized
+in the numbered labels on the diagram and explained in more detail below.
 
 ### Initiate Teleport
 
@@ -39,9 +39,10 @@ the circulating supply, taking note of the total amount of assets that was taken
 
 ### Receive Teleported Assets
 
-The source then creates an [XCM](learn-xcm.md) instruction called `ReceiveTeleportedAssets`
-containing as parameters a) the receiving account and b) the amount of assets taken out from
-circulation. It then sends this instruction over to the destination, where it gets processed and new
+The source chain then creates an [XCM](learn-xcm.md) instruction called `ReceiveTeleportedAssets`
+containing the receiving account and the amount of assets taken out from circulation as parameters.
+
+It then sends this instruction over to the destination chain, where it gets processed, and new
 assets are **put back into** the circulating supply.
 
 ### Deposit Asset
@@ -49,7 +50,7 @@ assets are **put back into** the circulating supply.
 The destination deposits the assets to the receiving account. The actions of **taking out** from the
 circulating supply and **putting back** into the circulating supply show the great flexibility that
 an [XCM](learn-xcm.md) executor has in regulating the flow of an asset without changing its
-circulating supply. Assets are transferred to an inaccessible account in order to take them out from
+circulating supply. Assets are transferred to an inaccessible account to remove them from
 circulation. Likewise, for putting assets back into circulation, assets are released from a
 pre-filled and inaccessible treasury, or perform a mint of the assets. This process requires mutual
 trust between the source and destination. The destination must trust the source of having
@@ -58,13 +59,3 @@ destination of having put the received assets back into circulation. The result 
 teleportation should result in the same circulating supply of the asset, and failing to uphold this
 condition will result in a change in the asset's total issuance (in the case of fungible tokens) or
 a complete loss/duplication of an NFT.
-
-## Teleporting Tokens using the Polkadot-JS UI
-
-- [Video tutorial on Teleporting](https://youtu.be/PGyDpH2kad8)
-- [Additional support article](https://support.polkadot.network/support/solutions/articles/65000181119-how-to-teleport-dot-or-ksm-between-statemint-or-statemine)
-
-## Troubleshooting
-
-If you do not see "Accounts > Teleport" in [Polkadot-JS UI], the source chain that you have selected
-does not support teleportation yet.
