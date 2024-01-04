@@ -150,7 +150,7 @@ module.exports = {
               items: [
                 "general/how-to-dyor",
                 "general/scams",
-                "general/attacks",
+                "general/transaction-attacks",
               ],
             },
             "general/start-building",
