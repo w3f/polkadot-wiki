@@ -89,7 +89,7 @@ choose whatever [VPS](#note-about-vps) provider that you prefer. As OS it is bes
 Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
-#### Reference Hardware {#standard-hardware}
+#### Reference Hardware
 
 The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on
 VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services
