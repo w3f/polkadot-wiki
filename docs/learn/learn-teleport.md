@@ -58,13 +58,3 @@ destination of having put the received assets back into circulation. The result 
 teleportation should result in the same circulating supply of the asset, and failing to uphold this
 condition will result in a change in the asset's total issuance (in the case of fungible tokens) or
 a complete loss/duplication of an NFT.
-
-## Teleporting Tokens using the Polkadot-JS UI
-
-- [Video tutorial on Teleporting](https://youtu.be/PGyDpH2kad8)
-- [Additional support article](https://support.polkadot.network/support/solutions/articles/65000181119-how-to-teleport-dot-or-ksm-between-statemint-or-statemine)
-
-## Troubleshooting
-
-If you do not see "Accounts > Teleport" in [Polkadot-JS UI], the source chain that you have selected
-does not support teleportation yet.
