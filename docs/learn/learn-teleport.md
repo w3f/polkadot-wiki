@@ -9,12 +9,12 @@ slug: ../learn-teleport
 
 import RPC from "./../../components/RPC-Connection";
 
-One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralized
-blockchain interoperability. This interoperability allows for asset teleportation: the process of
-moving assets, such as coins, tokens, or NFTs, between chains (parachains) to use them as you would
-any other asset native to that chain. Interoperability is possible through [XCM](learn-xcm.md) and
-[SPREE modules](learn-spree.md), which together ensure that assets are not lost or duplicated across
-multiple chain.
+One of the main properties that {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+brings is decentralized blockchain interoperability. This interoperability allows for **asset
+teleportation**, i.e. the process of moving assets (such as fungible and non-fungible tokens)
+between chains (parachains) to use them as any other asset native to that chain. Interoperability is
+possible through [XCM](learn-xcm.md) and [SPREE modules](learn-spree.md), which together ensure that
+assets are not lost or duplicated across multiple chain.
 
 :::info Walk-through video tutorial about teleporting assets
 
@@ -30,7 +30,7 @@ Polkadot Asset Hub, or between any other parachain.
 
 As you can see from the diagram above, there are only 2 actors within this model: the source and the
 destination. The way in which we transfer assets between the source and the destination are briefly
-summarized in the numbered labels on the diagram, and are explained in more detail below:
+summarized in the numbered labels on the diagram, and are explained in more detail below.
 
 ### Initiate Teleport
 
@@ -39,10 +39,11 @@ the circulating supply, taking note of the total amount of assets that was taken
 
 ### Receive Teleported Assets
 
-The source then creates an [XCM](learn-xcm.md) instruction called `ReceiveTeleportedAssets`
-containing as parameters a) the receiving account and b) the amount of assets taken out from
-circulation. It then sends this instruction over to the destination, where it gets processed and new
-assets are **put back into** the circulating supply.
+The source chain then creates an [XCM](learn-xcm.md) instruction called `ReceiveTeleportedAssets`
+containing as parameters the receiving account and the amount of assets taken out from circulation.
+
+It then sends this instruction over to the destination chain, where it gets processed and new assets
+are **put back into** the circulating supply.
 
 ### Deposit Asset
 
