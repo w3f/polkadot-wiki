@@ -1,8 +1,8 @@
 ---
 id: learn-coreplay
-title: Polkadot's Corerplay
+title: Polkadot's Coreplay
 sidebar_label: Coreplay
-description: Polkadot's Corerplay.
+description: Polkadot's Coreplay.
 keywords: [coreplay, polkadot]
 slug: ../learn-coreplay
 ---
