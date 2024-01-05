@@ -93,14 +93,14 @@ Briefly, the ideal staking rate can be calculated as follows:
 
 `0.75 - auction_proportion`
 
-where `auction_proportion` is obtained by computing `min(auctioned_slots, 60) / 200`. The
+where `auction_proportion` is obtained by computing `min(auctioned_slots, 60) / 300`. The
 `auctioned_slots` are all the auctioned slots without the slots for system parachains.
 
-Assuming there are 48 filled slots, of which three are dedicated to system parachains (Asset Hub,
-Bridge Hub and Collectives), there are 45 auctioned slots. The `auction_proportion` is thus
-`45 / 200 = 0.225`. The ideal staking rate is `0.75 - 0.225 = 0.525`.
+Assuming there are 50 filled slots, of which three are dedicated to system parachains (Asset Hub,
+Bridge Hub and Collectives), there are 47 auctioned slots. The `auction_proportion` is thus
+`47 / 300 = 0.157`. The ideal staking rate is `0.75 - 0.157 = 0.593`.
 
-If the amount of tokens staked goes below 52.5%, then staking rewards for nominators increase,
+If the amount of tokens staked goes below 59.3%, then staking rewards for nominators increase,
 incentivizing them to stake more tokens on the network. On the contrary, staking rewards drop if
 staked tokens exceed the ideal staking rate. This results from the change in the percentage of
 staking rewards that go to the Treasury.
