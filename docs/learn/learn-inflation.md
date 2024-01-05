@@ -15,7 +15,7 @@ import RPC from "./../../components/RPC-Connection";
 {{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535). :kusama }}Depending
 on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} supply staked and the ideal staking
 rate (more about this below), part of the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-inflation goes to stakers and part to the [treasury](./learn-polkadot-opengov-treasury.md).
+inflation is distributed to the stakers and part to the [treasury](./learn-polkadot-opengov-treasury.md).
 
 :::info
 
