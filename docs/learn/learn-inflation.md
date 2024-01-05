@@ -47,7 +47,7 @@ The chart below shows the inflation model of the network. Depending on the numbe
 the distribution of the inflation to validators and nominators versus the treasury will change
 dynamically to provide incentives to participate (or not participate) in staking.
 
-There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.5 or 50%)
+There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.59 or 59%)
 that the network tries to maintain. The goal is to have the _system staking rate_ meet the _ideal
 staking rate_. The system staking rate would be the total amount staked over the total token supply,
 where the total amount staked is the stake of all validators and nominators on the network. The
@@ -55,7 +55,7 @@ ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :p
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
 token liquid.
 
-![staking](../assets/NPoS/staking-rate-with-parachains.png)
+![staking](../assets/rewards-inflation.png)
 
 <p style={{textAlign:"center"}}>Source: <a href="https://research.web3.foundation/Polkadot/overview/token-economics">Research - Web3 Foundation</a></p>
 
