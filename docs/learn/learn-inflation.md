@@ -15,7 +15,8 @@ import RPC from "./../../components/RPC-Connection";
 {{ kusama: [set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535). :kusama }}Depending
 on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} supply staked and the ideal staking
 rate (more about this below), part of the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-inflation is distributed to the stakers and part to the [treasury](./learn-polkadot-opengov-treasury.md).
+inflation is distributed to the stakers and part to the
+[treasury](./learn-polkadot-opengov-treasury.md).
 
 :::info
 
@@ -23,8 +24,8 @@ DOT went through [redenomination](./learn-redenomination.md) in 2020 that saw th
 increase by 100 times.
 
 The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
-{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093} filter="humanReadable"/>. :kusama }}
+{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (1.4 Billion DOT). :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093} filter="humanReadable"/> (15 Million KSM). :kusama }}
 
 :::
 
@@ -49,13 +50,13 @@ dynamically to provide incentives to participate (or not participate) in staking
 
 There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.6 or 60%)
 that the network tries to maintain. The inflation model will incentivize network participants to
-stake when the _current staking rate_ < _ideal staking rate_ and disincentivize staking when _current
-staking rate_ > _ideal staking rate_. The goal is to have the staking rate meet the ideal
-staking rate. The current staking rate would be the total amount staked in the current era over the total token supply,
-where the total amount staked is the stake of all validators and nominators on the network. The
-ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
-{{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
-token liquid.
+stake when the _current staking rate_ < _ideal staking rate_ and disincentivize staking when
+_current staking rate_ > _ideal staking rate_. The goal is to have the staking rate meet the ideal
+staking rate. The current staking rate would be the total amount staked in the current era over the
+total token supply, where the total amount staked is the stake of all validators and nominators on
+the network. The ideal staking rate accounts for having sufficient backing of
+{{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} to prevent the possible compromise of
+security while keeping the native token liquid.
 
 ![staking](../assets/rewards-inflation.png)
 
