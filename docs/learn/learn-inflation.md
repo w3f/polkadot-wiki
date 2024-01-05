@@ -51,7 +51,7 @@ There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure se
 that the network tries to maintain. The inflation model will incentivize network participants to
 stake when the _current staking rate_ < _ideal staking rate_ and disincentivize staking when _current
 staking rate_ > _ideal staking rate_. The goal is to have the staking rate meet the ideal
-staking rate. The system staking rate would be the total amount staked over the total token supply,
+staking rate. The current staking rate would be the total amount staked in the current era over the total token supply,
 where the total amount staked is the stake of all validators and nominators on the network. The
 ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
