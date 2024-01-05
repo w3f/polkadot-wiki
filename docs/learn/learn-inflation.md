@@ -48,9 +48,11 @@ The chart below shows the inflation model of the network. Depending on the numbe
 the distribution of the inflation to validators and nominators versus the treasury will change
 dynamically to provide incentives to participate (or not participate) in staking.
 
-There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.59 or 59%)
-that the network tries to maintain. The goal is to have the _system staking rate_ meet the _ideal
-staking rate_. The system staking rate would be the total amount staked over the total token supply,
+There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.6 or 60%)
+that the network tries to maintain. The inflation model will incentivize network participants to
+stake when the _system staking rate_ < _ideal staking rate_ and disincentivize staking when _system
+staking rate_ > _ideal staking rate_. The goal is to have the system staking rate meet the ideal
+staking rate. The system staking rate would be the total amount staked over the total token supply,
 where the total amount staked is the stake of all validators and nominators on the network. The
 ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
@@ -61,21 +63,23 @@ token liquid.
 <p style={{textAlign:"center"}}>Source: <a href="https://research.web3.foundation/Polkadot/overview/token-economics">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
-- **y-axis**: Inflation, annualized percentage
-- **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators
-  and nominators.
+- **y-axis**: Annualized percentage (inflation and staking rewards, see below)
+- **Blue line**: Annual inflation rate diverted to NPoS, i.e. total amount of tokens minted to pay
+  validators and nominators. For instance, 0.1 corresponds to 10% of token inflation diverted to
+  stakers. Since annual token inflation is 10%, this means that all inflation is used to pay
+  validators and nominators, and 0% of token inflation is diverted to the treasury.
 - **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual
   returns on the staked tokens. You can determine the current annual staking rewards rate by looking
   at the top bar of the staking overview on
   [the Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview).
 
-Assuming that the ideal staking rate is 50%, all of the inflation would go to the validators and
-nominators if 50% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked. Any
-deviation from the 50% - positive or negative - sends the proportional remainder to the treasury.
+Assuming that the ideal staking rate is 60%, all of the inflation would go to the validators and
+nominators if 60% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked. Any
+deviation from the 60% - positive or negative - sends the proportional remainder to the treasury.
 Deviation from the ideal staking rate are referred to as _staking inefficiencies_. Thus, the
-treasury does not currently receive a substantial inflow of funds at the ideal staking rate. See
-[this page](./learn-polkadot-opengov-treasury.md) for more information about treasury inflow
-sources.
+treasury does not receive inflow of funds from inflation when the system staking rate equals the
+ideal staking rate. See [this page](./learn-polkadot-opengov-treasury.md) for more information about
+treasury inflow sources.
 
 For those who are interested in knowing more about the design of the inflation model for the
 network, please see [here](https://research.web3.foundation/Polkadot/overview/token-economics).
