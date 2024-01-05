@@ -36,11 +36,10 @@ network through funding the on-chain treasury. There is an opportunity cost of k
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens idle with the current inflation model
 as the tokens get diluted over time. Economics and game theory suggest that setting an ideal
 inflation rate is essential for incentivizing the network participants as well as the growth of the
-network, and any deviation from it can have negative effects. Reducing the inflation rate could
-limit growth while increasing the inflation rate could break the incentive model of the token.
-Hence, **token inflation rate is not a forever fixed value, and inflation can be updated in the
-future through [on-chain governance](./learn-polkadot-opengov.md)** based on thorough tokenomics
-research.
+network, and any deviation from it can have adverse effects. Reducing the inflation rate could limit
+growth, while increasing the inflation rate could break the incentive model of the token. Hence,
+**token inflation rate is not a forever fixed value, and inflation can be updated in the future
+through [on-chain governance](./learn-polkadot-opengov.md)** based on thorough tokenomics research.
 
 ## Inflation Model
 
@@ -64,10 +63,10 @@ token liquid.
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Annualized percentage (inflation and staking rewards, see below)
-- **Blue line**: Annual inflation rate diverted to NPoS, i.e. total amount of tokens minted to pay
-  validators and nominators. For instance, 0.1 corresponds to 10% of token inflation diverted to
-  stakers. Since annual token inflation is 10%, this means that all inflation is used to pay
-  validators and nominators, and 0% of token inflation is diverted to the treasury.
+- **Blue line**: Annual inflation rate diverted to NPoS, i.e., the total amount of tokens minted to
+  pay validators and nominators. For instance, 0.1 corresponds to 10% of token inflation diverted to
+  stakers. Since annual token inflation is 10%, all inflation is used to pay validators and
+  nominators, and 0% of token inflation is diverted to the treasury.
 - **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual
   returns on the staked tokens. You can determine the current annual staking rewards rate by looking
   at the top bar of the staking overview on
@@ -76,8 +75,8 @@ token liquid.
 Assuming that the ideal staking rate is 60%, all of the inflation would go to the validators and
 nominators if 60% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked. Any
 deviation from the 60% - positive or negative - sends the proportional remainder to the treasury.
-Deviation from the ideal staking rate are referred to as _staking inefficiencies_. Thus, the
-treasury does not receive inflow of funds from inflation when the system staking rate equals the
+Deviations from the ideal staking rate are referred to as _staking inefficiencies_. Thus, the
+treasury does not receive an inflow of funds from inflation when the system staking rate equals the
 ideal staking rate. See [this page](./learn-polkadot-opengov-treasury.md) for more information about
 treasury inflow sources.
 
