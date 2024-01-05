@@ -50,7 +50,7 @@ dynamically to provide incentives to participate (or not participate) in staking
 There is a [dynamic _ideal staking rate_](#ideal-staking-rate) (in the figure set to 0.6 or 60%)
 that the network tries to maintain. The inflation model will incentivize network participants to
 stake when the _current staking rate_ < _ideal staking rate_ and disincentivize staking when _current
-staking rate_ > _ideal staking rate_. The goal is to have the system staking rate meet the ideal
+staking rate_ > _ideal staking rate_. The goal is to have the staking rate meet the ideal
 staking rate. The system staking rate would be the total amount staked over the total token supply,
 where the total amount staked is the stake of all validators and nominators on the network. The
 ideal staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
