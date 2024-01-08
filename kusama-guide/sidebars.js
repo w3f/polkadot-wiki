@@ -642,17 +642,11 @@ module.exports = {
     },
     {
       type: "category",
-      label: "What to Try",
+      label: "Validate",
       items: [
-        {
-          type: "category",
-              label: "Validate",
-              items: [
-                "maintain/kusama/maintain-guides-how-to-validate-kusama",
-                "maintain/maintain-guides-how-to-stop-validating",
-                "maintain/doc-maintain-guides-validator-community",
-              ],
-        },
+        "maintain/kusama/maintain-guides-how-to-validate-kusama",
+        "maintain/maintain-guides-how-to-stop-validating",
+        "maintain/doc-maintain-guides-validator-community",
       ],
     },
     {
