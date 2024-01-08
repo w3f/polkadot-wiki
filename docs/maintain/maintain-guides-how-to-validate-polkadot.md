@@ -573,7 +573,7 @@ bond all your DOT balance since you will be unable to pay transaction fees from 
 Controller accounts are deprecated. For more information, see
 [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
 It is highly recommended that you setup an account with a staking proxy, which can be used for
-issuing start and stop validating calls. Read more about [proxy accounts](../docs/learn-proxies)
+issuing start and stop validating calls. Read more about [proxy accounts](../learn/learn-proxies.md)
 here.
 
 :::
