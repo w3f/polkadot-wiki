@@ -28,7 +28,7 @@ The Wiki has three main sections:
 
 <tr class="cards-container">
   <td>
-    <a class="guide-link" href="../docs/learn-account-generation">
+    <a class="guide-link" href="../docs/learn-accounts">
       <img src="/img/polkadot-guide/Account.jpg" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Creating an Account</h5>
@@ -36,10 +36,10 @@ The Wiki has three main sections:
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-balance-transfers">
+    <a class="guide-link" href="../docs/learn-transactions">
       <img src="/img/polkadot-guide/Transfer.jpg" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
-            <h5 class="cards-title">Balance Transfers</h5>
+            <h5 class="cards-title">Transactions</h5>
         </div>
     </a>
   </td>
