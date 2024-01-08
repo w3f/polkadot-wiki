@@ -3,7 +3,7 @@ module.exports = {
     {
       type: "category",
       label: "Explore",
-      description: 'Wallets and Apps in the Polkadot Ecosystem.',
+      description: 'Wallets and Apps in the Kusama Ecosystem.',
       link: {
         type: 'generated-index',
         title: 'Explore',
@@ -61,7 +61,7 @@ module.exports = {
         {
           type: "category",
           label: "Dashboards",
-          description: 'Dashboards in the Polkadot Ecosystem.',
+          description: 'Dashboards in the Kusama Ecosystem.',
           link: {
             type: 'generated-index',
             title: 'Dashboards',
@@ -75,11 +75,11 @@ module.exports = {
         {
           type: "category",
           label: "Community & Contributors",
-          description: 'Polkadot Community and Wiki Contributors.',
+          description: 'Kusama Community and Wiki Contributors.',
           link: {
             type: 'generated-index',
             title: 'Community & Contributors',
-            description: 'Learn about how to participate in the Polkadot community and how to contribute to the Polkadot Wiki.',
+            description: 'Learn about how to participate in the Kusama community and how to contribute to the Kusama Guide.',
             slug: '/community-index',
           },
           items: [
@@ -117,31 +117,31 @@ module.exports = {
       label: "Learn",
       link: {
         type: 'generated-index',
-        title: 'Learn about Polkadot',
-        description: 'Learn about the technology behind the Polkadot ecosystem, and the tools you can use to become a participant of Web3.',
+        title: 'Learn about Kusama',
+        description: 'Learn about the technology behind the Kusama ecosystem, and the tools you can use to become a participant of Web3.',
         slug: '/learn-index',
       },
       items: [
         {
           type: "category",
           label: "General",
-          description: 'General Information to get started with Polkadot and Web3.',
+          description: 'General Information to get started with Kusama and Web3.',
           link: {
             type: 'generated-index',
             title: 'General',
-            description: 'General Information to get started with Polkadot and Web3.',
+            description: 'General Information to get started with Kusama and Web3.',
             slug: '/general-index',
           },
           items: [
             "general/web3-and-polkadot",
             {
               type: "category",
-              label: "Polkadot Vision",
-              description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+              label: "Kusama Vision",
+              description: "Kusama's Vision revealed by Gavin Wood at Decoded 2023.",
               link: {
                 type: 'generated-index',
-                title: 'Polkadot Vision',
-                description: "Polkadot's Vision revealed by Gavin Wood at Decoded 2023.",
+                title: 'Kusama Vision',
+                description: "Kusama's Vision revealed by Gavin Wood at Decoded 2023.",
                 slug: '/polkadot-vision-index',
               },
               items: [
@@ -177,7 +177,7 @@ module.exports = {
           description: 'Staking, Accounts, Transactions, Tokens and NFTs, and Governance.',
           link: {
             type: 'generated-index',
-            title: 'Basic concepts about Polkadot',
+            title: 'Basic concepts about Kusama',
             description: 'Everything about staking, accounts, OpenGov, treasury, transactions, tokens and NFTs.',
             slug: '/learn-basics-index',
           },
@@ -217,8 +217,8 @@ module.exports = {
               description: 'Mechanics of Staking.',
               link: {
                 type: 'generated-index',
-                title: 'Staking on Polkadot',
-                description: 'Mechanics of Staking on Polkadot.',
+                title: 'Staking on Kusama',
+                description: 'Mechanics of Staking on Kusama.',
                 slug: '/learn-staking-index',
               },
               items: [
@@ -229,12 +229,12 @@ module.exports = {
             },
             {
               type: "category",
-              label: "Polkadot OpenGov",
-              description: 'Everything about Polkadot OpenGov.',
+              label: "Kusama OpenGov",
+              description: 'Everything about Kusama OpenGov.',
               link: {
                 type: 'generated-index',
-                title: 'Polkadot OpenGov',
-                description: 'Everything about Polkadot OpenGov.',
+                title: 'Kusama OpenGov',
+                description: 'Everything about Kusama OpenGov.',
                 slug: '/learn-polkadot-opengov-index',
               },
               items: [
@@ -250,7 +250,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: 'Tokens and Assets',
-                description: 'Everything about tokens and assets on Polkadot.',
+                description: 'Everything about tokens and assets on Kusama.',
                 slug: '/learn-assets-index',
               },
               items: [
@@ -268,7 +268,7 @@ module.exports = {
               link: {
                 type: 'generated-index',
                 title: 'Components',
-                description: 'Key components of the Polkadot ecosystem.',
+                description: 'Key components of the Kusama ecosystem.',
                 slug: '/learn-components-index',
               },
               items: [
@@ -287,7 +287,7 @@ module.exports = {
           link: {
             type: 'generated-index',
             title: 'Advanced Concepts',
-            description: 'Advanced concepts to better understand Polkadot.',
+            description: 'Advanced concepts to better understand Kusama.',
             slug: '/learn-advanced-index',
           },
           items: [
@@ -374,8 +374,8 @@ module.exports = {
               description: "Nominators, Validators, Collators, Parachains, and more.",
               link: {
                 type: 'generated-index',
-                title: "Polkadot's Architecture",
-                description: "Everything about Polkadot's Architecture.",
+                title: "Kusama's Architecture",
+                description: "Everything about Kusama's Architecture.",
                 slug: '/learn-architecture-index',
               },
               items: [
@@ -383,10 +383,10 @@ module.exports = {
                 {
                   type: "category",
                   label: "Network Participants",
-                  description: "Participants in the Polkadot Ecosystem.",
+                  description: "Participants in the Kusama Ecosystem.",
                   link: {
                     type: 'generated-index',
-                    title: "Participants in the Polkadot Ecosystem",
+                    title: "Participants in the Kusama Ecosystem",
                     description: "Learn about collators, nominators and validators.",
                     slug: '/learn-participants-index',
                   },
@@ -402,8 +402,8 @@ module.exports = {
                   description: "Parachains' Protocol, Auctions, Crowdloans, and more.",
                   link: {
                     type: 'generated-index',
-                    title: "Polkadot's Parachains",
-                    description: "Everything about Polkadot's Parachains.",
+                    title: "Kusama's Parachains",
+                    description: "Everything about Kusama's Parachains.",
                     slug: '/learn-parachains-index',
                   },
                   items: [
@@ -419,11 +419,11 @@ module.exports = {
                 {
                   type: "category",
                   label: "Cross Consensus Messaging (XCM)",
-                  description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
+                  description: "Kusama's Cross-Consensus Messaging Format (XCM).",
                   link: {
                     type: 'generated-index',
-                    title: "Polkadot's XCM",
-                    description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
+                    title: "Kusama's XCM",
+                    description: "Kusama's Cross-Consensus Messaging Format (XCM).",
                     slug: '/learn-xcm-index',
                   },
                   items: [
@@ -583,34 +583,15 @@ module.exports = {
             },
           ],
         },
-        {
-          type: "category",
-          label: "Polkadot Comparisons",
-          description: "Comparison between Polkadot and other Networks. ",
-          link: {
-            type: 'generated-index',
-            title: "Polkadot Comparisons",
-            description: "Comparison between Polkadot and other Networks. ",
-            slug: '/learn-comparisons-index',
-          },
-          items: [
-            'learn/learn-comparisons-kusama',
-            'learn/learn-comparisons-ethereum-2',
-            'learn/learn-comparisons-cosmos',
-            'learn/learn-comparisons-avalanche',
-            'learn/learn-comparisons',
-            'learn/learn-comparisons-rollups'
-          ],
-        },
         "learn/learn-video-tutorials",
         {
           type: "category",
           label: "Future Implementations",
-          description: "Implementations that will be deployed on Polkadot.",
+          description: "Implementations that will be deployed on Kusama.",
           link: {
             type: 'generated-index',
             title: "Future Implementations",
-            description: "Implementations that will be deployed on Polkadot.",
+            description: "Implementations that will be deployed on Kusama.",
             slug: '/learn-future-implementations-index',
           },
           items: [
@@ -623,11 +604,11 @@ module.exports = {
         {
           type: "category",
           label: "Archive",
-          description: "Implementations no longer live on Polkadot.",
+          description: "Implementations no longer live on Kusama.",
           link: {
             type: 'generated-index',
             title: "Archive",
-            description: "Implementations no longer live on Polkadot.",
+            description: "Implementations no longer live on Kusama.",
             slug: '/learn-archive-index',
           },
           items: [
