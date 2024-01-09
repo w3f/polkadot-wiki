@@ -40,7 +40,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
     <a class="guide-link" href="../docs/learn-accounts">
       <img src="/img/kusama-guide/Account.jpg" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
-            <h5 class="cards-title">Creating an Account</h5>
+            <h5 class="cards-title">Accounts</h5>
         </div>
     </a>
   </td>
@@ -85,7 +85,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
     <a class="guide-link" href="../docs/learn-identity">
       <img class="guide-image" src="/img/kusama-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
-                 <h5 class="cards-title">Set an Identity</h5>
+                 <h5 class="cards-title">Account Identity</h5>
               </div>
     </a>
   </td>
