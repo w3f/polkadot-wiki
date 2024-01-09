@@ -109,8 +109,8 @@ The procedure to sign transactions with the Vault app is as follows:
 - After scanning the QR code with the Vault app, you will be presented with decoded information
   about what you will sign. Make sure the information matches what you intended to sign in the first
   place. If something does not feel right, do not sign. Check
-  [this page](./transaction-attacks.md#corrupted-qr-code-parity-signer) for more information and contact
-  [the Polkadot Support Team](https://support.polkadot.network/support/home).
+  [this page](./transaction-attacks.md#corrupted-qr-code-parity-signer) for more information and
+  contact [the Polkadot Support Team](https://support.polkadot.network/support/home).
 - If the information shown by the Vault app is correct, you can present the QR code (signature) to
   the camera on your laptop to sign for the transaction.
 
