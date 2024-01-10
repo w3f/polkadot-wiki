@@ -38,11 +38,13 @@ governance proposals, proposers should follow best practices like opening a disc
 then submitting the proposal on-chain.
 
 Before submitting the proposal, both the system parachain's and the parachain's sovereign accounts
-must have the channel deposit of 20 DOT plus the
+(both [system accounts](../learn/learn-account-advanced.md#system-accounts)) must have the channel
+deposit of 20 DOT plus the
 [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) and some extra
-funds to cover for fees. The parachain's sovereign account can send those funds via
-`balances.transferKeepAlive` call to the system parachain's sovereign account (if funds are not
-already available).
+funds to cover for fees. Anyone can send those funds via `balances.transferKeepAlive` call to the
+system parachain's sovereign account (if funds are not already available). System parachains have ID
+< 2000 and they can be found on
+[Subscan](https://polkadot.subscan.io/account_list?page=1&role=module&value_dimension=token).
 
 Proposals should generally be a `batch_all` call containing:
 
