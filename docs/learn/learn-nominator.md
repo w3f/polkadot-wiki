@@ -169,15 +169,13 @@ metrics shown as an example, followed by a brief description of each.
   nominators (sorted by stake) will receive rewards. The remaining nominators will not be rewarded.
   However, they can be slashed if the validator commits a slashable offense.
 
-  Every nominator can select up to a maximum of
-  {{ polkadot: <RPC network="polkadot" path="staking.nominationsquota" defaultValue={16}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="staking.nominationsquota" defaultValue={24}/> :kusama }}
-  validators, which contributes towards maximizing the probability of having the nominator’s stake
-  applied to the validators active set. Nominating too few validators could result in the nominators
-  not receiving their rewards when none of them make it to the active set or when those validators
-  stop validating. The election algorithm attempts to maximize the overall network stake while
-  minimizing the variance of the active stake across the validators. For additional information on
-  the election process, check out the research behind
+  Every nominator can select up to a maximum of {{ polkadot: 16 :polkadot }}
+  {{ kusama: 24 :kusama }} validators, which contributes towards maximizing the probability of
+  having the nominator’s stake applied to the validators active set. Nominating too few validators
+  could result in the nominators not receiving their rewards when none of them make it to the active
+  set or when those validators stop validating. The election algorithm attempts to maximize the
+  overall network stake while minimizing the variance of the active stake across the validators. For
+  additional information on the election process, check out the research behind
   [nominated proof-of-stake](https://research.web3.foundation/Polkadot/protocols/NPoS).
 
 - **comm.**: Total commission kept by the validator (100% means the validator will keep all rewards
@@ -341,10 +339,9 @@ and you are nominating with enough stake to get into the solution set, your bond
 fully distributed to one or more validators. That being said, you may not receive rewards if you
 nominated very few validator candidates and no one got elected, or your stake is small, and you only
 selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
-generally wise to choose as many trustworthy validators as you can (up to
-{{ polkadot: <RPC network="polkadot" path="staking.nominationsquota" defaultValue={16}/>) :polkadot }}
-{{ kusama: <RPC network="kusama" path="staking.nominationsquota" defaultValue={24}/>) :kusama }} to
-reduce the risk of none of your nominated validators being elected.
+generally wise to choose as many trustworthy validators as you can
+{{ polkadot: (up to 16) :polkadot }}{{ kusama: (up to 24) :kusama }} to reduce the risk of none of
+your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 
