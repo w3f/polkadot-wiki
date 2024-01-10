@@ -54,10 +54,10 @@ You can have a rough estimate on that by using the methods listed
 [here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
 To be elected into the set, you need a minimum stake behind your validator. This stake can come from
 yourself or from [nominators](../learn/learn-nominator.md). This means that as a minimum, you will
-need enough DOT to set up stash (and optionally a staking [proxy account](../learn/learn-proxies.md)) with
-the existential deposit, plus a little extra for transaction fees. The rest can come from
-nominators. To understand how validators are elected, check the
-[NPoS Election algorithms](../learn/learn-phragmen.md) page.
+need enough DOT to set up stash (and optionally a staking
+[proxy account](../learn/learn-proxies.md)) with the existential deposit, plus a little extra for
+transaction fees. The rest can come from nominators. To understand how validators are elected, check
+the [NPoS Election algorithms](../learn/learn-phragmen.md) page.
 
 :::info On-Chain Data for Reference
 
