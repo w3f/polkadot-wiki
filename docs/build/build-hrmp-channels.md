@@ -44,7 +44,7 @@ deposit of 20 DOT plus the
 funds to cover for fees. Anyone can send those funds via `balances.transferKeepAlive` call to the
 system parachain's sovereign account (if funds are not already available). System parachains have ID
 < 2000 and they can be found on
-[Subscan](https://polkadot.subscan.io/account_list?page=1&role=module&value_dimension=token).
+[Subscan](https://polkadot.subscan.io/parachain_list?page=2&status=parachain).
 
 Proposals should generally be a `batch_all` call containing:
 
