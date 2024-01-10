@@ -30,17 +30,24 @@ the Relay Chain.
 
 ## Opening HRMP Channels with System Parachains
 
-Opening an HRMP channel with a system parachain requires a referendum. Like all other governance
-proposals, proposers should follow best practices like opening a discussion on
+Opening an HRMP channel with a system parachain requires an
+[OpenGov referendum](../learn/learn-guides-polkadot-opengov.md) using the
+[General Admin Track](../learn/learn-polkadot-opengov-origins.md#general-admin). Like all other
+governance proposals, proposers should follow best practices like opening a discussion on
 [Polkassembly](https://polkadot.polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/) and
 then submitting the proposal on-chain.
 
+Before submitting the proposal, both the system parachain's and the parachain's sovereign accounts
+must have the channel deposit of 20 DOT plus the
+[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) and some extra
+funds to cover for fees. The parachain's sovereign account can send those funds via
+`balances.transferKeepAlive` call to the system parachain's sovereign account (if funds are not
+already available).
+
 Proposals should generally be a `batch_all` call containing:
 
-1. A `force_transfer` of the channel deposit from the Treasury to the System parachain's sovereign
-   account. Remember that a bi-direction channel is _two_ channels so will need double the amount.
 1. A `force_open_hrmp_channel` from your chain to the system chain.
-1. A `force_open_hrmp_channel` from the system chain to your chain.
+2. A `force_open_hrmp_channel` from the system chain to your chain.
 
 :::caution
 
@@ -67,7 +74,6 @@ the community to review and ultimately vote on:
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls):
 
-    - A `forceTransfer` of 20 DOT from the Treasury to AssetHub sovereign account.
     - A `forceOpenhrmpchannel` from AssetHub (1,000) to ParaID.
     - A `forceOpenhrmpChannel` from ParaID to AssetHub (1,000).
 
