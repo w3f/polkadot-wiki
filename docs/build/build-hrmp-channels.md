@@ -40,11 +40,17 @@ then submitting the proposal on-chain.
 Before submitting the proposal, both the system parachain's and the parachain's sovereign accounts
 (both [system accounts](../learn/learn-account-advanced.md#system-accounts)) must have the channel
 deposit of 20 DOT plus the
-[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) and some extra
-funds to cover for fees. Anyone can send those funds via `balances.transferKeepAlive` call to the
-system parachain's sovereign account (if funds are not already available). System parachains have ID
-< 2000 and they can be found on
-[Subscan](https://polkadot.subscan.io/parachain_list?page=2&status=parachain).
+[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping). At the time of
+execution, each parachain's sovereign account must have a free balance greater than or equal to the
+sum of the sender deposit, recipient deposit, and existential deposit.
+
+:::info
+
+After runtime 1,001,000, chains will not need any deposit for channels with system chains (and
+should be fine without any balance in their accounts). There will be a `poke_deposit` function that
+will refund any existing deposits.
+
+:::
 
 Proposals should generally be a `batch_all` call containing:
 
@@ -74,13 +80,10 @@ the community to review and ultimately vote on:
 1.  A request on what the proposal aims to do (opening an HRMP channel with the AssetHub);
 2.  The use cases this channel will support for your chain;
 3.  Technical details of the proposal, including proposal parameters and technical details of this
-    call (On Kusama, most proposals were designed as a batchAll calls):
+    call:
 
     - A `forceOpenhrmpchannel` from AssetHub (1,000) to ParaID.
     - A `forceOpenhrmpChannel` from ParaID to AssetHub (1,000).
-
-    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
-    the first transaction should not be necessary (these guidelines will be updated accordingly).
 
 4.  The XCM message to the Asset Hub, which can be decoded on the network;
 5.  The call data to verify on
@@ -97,7 +100,7 @@ Below is an example of how teams followed this process on Kusama, as a way to:
 - Proposal to open HRMP channel between Bifrost and the Asset Hub: the motion can be found
   [here](https://kusama.polkassembly.io/motion/418).
 
-## Preimage submission on democracy tab (Polkadot JS Apps)
+## Preimage submission on democracy tab (Polkadot-JS UI)
 
 Once the community has given enough feedback (we expect these proposal to be non controversial)
 please submit the image on the discussion post in the
