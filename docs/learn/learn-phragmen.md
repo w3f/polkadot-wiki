@@ -628,10 +628,8 @@ to an off-chain worker, which validators can work on the problem without impacti
 time.
 
 There are several restrictions put in place to limit the complexity of the election and payout. As
-already mentioned, any given nominator can only select up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
-validators to nominate. Conversely, a single validator can have only
+already mentioned, any given nominator can only select up to {{ polkadot: 16 :polkadot }}
+{{ kusama: 24 :kusama }} validators to nominate. Conversely, a single validator can have only
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
 nominators. A drawback to this is that it is possible, if the number of nominators is very high or
