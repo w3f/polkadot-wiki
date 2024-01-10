@@ -11,7 +11,7 @@ The tools that accentuate and aggregate the data within blockchains are integral
 future. Parachains will need robust and secure ways to index and aggregate data, such as a data
 aggregation layer.
 
-## Custom Indexer 
+## Custom Indexer
 
 ### Subsquid
 
@@ -21,7 +21,7 @@ query Substrate chain state and history.
 Subsquid replaces direct gRPC node access with performant Squid archive gateways, allowing quick
 synchronization of the API with the historical on-chain data.
 
-Subsquid-powered APIs support filtering, pagination, union types, interfaces and full-text search
+Subsquid-powered APIs support filtering, pagination, union types, interfaces, and full-text search
 out-of-the-box, and can be further extended with custom GraphQL resolvers.
 
 ### SubQuery
@@ -33,10 +33,10 @@ fully-featured indexer, so you don’t have to, with:
 - automatic support for any Substrate network
 - support for all Polkadot smart contract frameworks (FrontierEVM, Acala EVM+, and Wasm)
 - automated historical state tracking to enable faster partial re-indexing
-- a lightweight and portable design that doesn't require centralised archives
+- a lightweight and portable design that doesn't require centralized archives
 - full support for GraphQL filtering, pagination, interfaces, subscriptions, and aggregations
 - a future decentralized network acts as chain-agnostic data aggregation, indexing, and querying
-  layer between blockchains and applications that will not require centralised services.
+  layer between blockchains and applications that will not require centralized services.
 
 To start building, head to the [SubQuery documentation](https://academy.subquery.network/) where
 you'll find quick start guides and walkthrough developer tutorials.
@@ -50,7 +50,7 @@ decentralized web, who announced an integration plan to bring
 The Graph allows developers to build and publish open APIs, called subgraphs. Applications can query
 subgraphs using [GraphQL](https://graphql.org/).
 
-## Analytics platform 
+## Analytics platform
 
 ### Dolpha Analytics
 
@@ -67,7 +67,7 @@ infrastructure and tooling to help users visualize, curate, share, and analyze o
 
 [Covalent](https://www.covalenthq.com/) offers a unified API to understand the data on a blockchain,
 and is currently live on the [Moonbeam](https://moonbeam.network/) network, bringing visibility to
-billions of blockchain data points to Polkadot via their unified API. The approach to deploy on
+billions of blockchain data points to Polkadot via their unified API. The approach to deploying on
 Moonbeam simplifies the development of Polkadot-based blockchain applications as compared to
 implementing a full parachain or parathread.
 
