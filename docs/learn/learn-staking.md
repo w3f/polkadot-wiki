@@ -94,8 +94,8 @@ and sophisticated mechanism to select the validators who are allowed to particip
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator, in turn, submits a list of up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="staking.nominationsquota" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="staking.nominationsquota" defaultValue={24}/> :kusama }}
 candidates that it supports, and the network will automatically distribute the stake among
 validators in an even manner so that the economic security is maximized. In the next era, a certain
 number of validators having the most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing
@@ -553,8 +553,8 @@ qualify. For more information, visit the
 - Earn rewards for contributing to the network's security through staking.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
 - Can choose up-to
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+  {{ polkadot: <RPC network="polkadot" path="staking.nominationsquota" defaultValue={16}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="staking.nominationsquota" defaultValue={24}/> :kusama }}
   validators which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
 - 10% inflation/year of the tokens is primarily intended for staking rewards.

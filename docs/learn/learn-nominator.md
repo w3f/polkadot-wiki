@@ -170,8 +170,8 @@ metrics shown as an example, followed by a brief description of each.
   However, they can be slashed if the validator commits a slashable offense.
 
   Every nominator can select up to a maximum of
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+  {{ polkadot: <RPC network="polkadot" path="staking.nominationsquota" defaultValue={16}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="staking.nominationsquota" defaultValue={24}/> :kusama }}
   validators, which contributes towards maximizing the probability of having the nominator’s stake
   applied to the validators active set. Nominating too few validators could result in the nominators
   not receiving their rewards when none of them make it to the active set or when those validators
@@ -342,9 +342,9 @@ fully distributed to one or more validators. That being said, you may not receiv
 nominated very few validator candidates and no one got elected, or your stake is small, and you only
 selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
 generally wise to choose as many trustworthy validators as you can (up to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>) :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>) :kusama }}
-to reduce the risk of none of your nominated validators being elected.
+{{ polkadot: <RPC network="polkadot" path="staking.nominationsquota" defaultValue={16}/>) :polkadot }}
+{{ kusama: <RPC network="kusama" path="staking.nominationsquota" defaultValue={24}/>) :kusama }} to
+reduce the risk of none of your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 
