@@ -280,8 +280,8 @@ To maximize rewards and minimize risk, one could select those validators that:
 #### Network Providers
 
 For successful operation, a Validator node should always be ensured to meet the required
-[software, hardware, and network bandwidth specifications](../maintain/maintain-guides-how-to-validate-polkadot#reference-hardware).
-Understandably, most of the validator nodes run on cloud service providers that guarantee high
+[software, hardware, and network bandwidth specifications](../maintain/maintain-guides-how-to-validate-polkadot.md#reference-hardware).
+Understandably, most of the validator nodes run on cloud service providers that guarantee hig
 hardware specifications and high levels of availability and connectivity. Keep in mind that a
 validator in the active set is supposed to be fully online and available for producing blocks. If
 the active validator node goes offline due to network interruptions or a power outage, that

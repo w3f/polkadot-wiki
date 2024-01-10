@@ -191,7 +191,6 @@ types are the same for a Polkadot account).
 
 :::info Polkadot-JS Guides
 
-If you are an advanced user, see the
-[Polkadot-JS guides about accounts](./learn-guides-accounts-index).
+If you are an advanced user, see the [Polkadot-JS guides about accounts](./learn-guides-accounts).
 
 :::

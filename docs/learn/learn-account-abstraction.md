@@ -49,7 +49,7 @@ and security in blockchain adoption.
 
 When users interact with a blockchain they call _dispatchable_ functions to do something. Because
 those functions are called from the outside of the blockchain interface, in Polkadot's terms any
-action that involves a dispatchable function is an [extrinsic](./learn-extrinsics.md). Extrinsics
+action that involves a dispatchable function is an [extrinsic](./learn-transactions.md). Extrinsics
 are calls coming from the _outside_ of the blockchain interface that (if successfully executed)
 invoke some changes in the _inside_ of the blockchain's state. An extrinsic is always directed to a
 specific function within a particular [pallet](../general/glossary.md#pallet).
@@ -104,8 +104,8 @@ include:
   private key on multiple _children_ accounts
 - Account recovery mechanisms such as social recovery to help regain access to your key using
   trusted third-party accounts
-- [Batching functionality](./learn-balance-transfers.md#batch-transfers) to submit multiple calls in
-  one single transaction
+- [Batching functionality](./learn-guides-transfers.md#batch-transfers-with-the-polkadot-js-ui) to
+  submit multiple calls in one single transaction
 - Payments with non-native tokens
 
 All the above can be used together, meaning that, for example, you can create a multi-signature

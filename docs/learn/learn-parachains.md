@@ -302,7 +302,7 @@ addressed by two different components:
   :::
 
 The Runtime and Node-side behavior are dependent on each other. The Runtime depends on Node-side
-behavior to author blocks, and to include [extrinsics](./learn-extrinsics.md) which trigger the
+behavior to author blocks, and to include [extrinsics](./learn-transactions.md) which trigger the
 correct entry points. The Node-side behavior relies on the Runtime APIs to extract information
 necessary to determine which action to take.
 

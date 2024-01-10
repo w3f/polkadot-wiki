@@ -57,7 +57,7 @@ can try Parity Signer (aka Polkadot Vault).
 The [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/) is not a wallet _per se_
 but an account management tool. It allows you to create accounts and also import accounts from
 [**Ledger**](./ledger.md) devices or Parity Signer, allowing the signing of
-[**extrinsics**](../learn/learn-extrinsics.md) using these accounts. It also allows you export
+[**extrinsics**](../learn/learn-transactions.md) using these accounts. It also allows you export
 existing accounts and restore accounts (given you have the required information to restore them).
 
 The extension is a robust key storage tool, i.e. even if you clear the cache of your browser your
@@ -77,8 +77,9 @@ transacting on-chain directly.
 
 The browser extension is a tool that interacts with the Polkadot network, but it is disconnected
 from it when it is not in use. It is important you
-[**always check for metadata updates**](../learn/learn-extrinsics.md#metadata-updates) before using
-the extension or other account management tools such as Parity Signer (aka Polkadot Vault).
+[**always check for metadata updates**](../learn/learn-guides-accounts.md#metadata-updates-with-the-polkadot-js-browser-extension)
+before using the extension or other account management tools such as Parity Signer (aka Polkadot
+Vault).
 
 :::
 

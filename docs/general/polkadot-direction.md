@@ -103,9 +103,9 @@ This was not fundamentally different from having completely different chains con
 with the only difference of having the relay-chain securing the network, providing message-passing
 capability, and doing some extra tasks such as [crowdloans](../learn/learn-crowdloans.md),
 [auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
-[accounts](./learn-accounts-index), [balances](../learn/learn-balance-transfers.md), and
-[governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately end
-in chain-centric application and UX.
+[accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
+and [governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately
+end in chain-centric application and UX.
 
 The true innovation of Polkadot is about leveraging the unique value proposition offered by
 different chains and using those chains’ collaborative potential to build inter-chain applications

@@ -66,9 +66,9 @@ When you set a proxy, you must choose a type of proxy for the relationship.
 - **Any**: allow any transaction, including balance transfers. In most cases, this should be avoided
   as the proxy account is used more frequently than the cold account and is therefore less secure.
 - **Non-transfer**: allow any type of transaction except
-  [balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting)
-  transfers). Hence, this proxy does not have permission to access calls in the Balances and XCM
-  pallet.
+  [balance transfers](./learn-transactions.md#balance-transfers) (including
+  [vested](./learn-transactions.md#vested-transfers) transfers). Hence, this proxy does not have
+  permission to access calls in the Balances and XCM pallet.
 - **Governance**: allow to make transactions related to governance.
 - **Nomination pool**: allow transactions pertaining to
   [Nomination Pools](./learn-nomination-pools.md).

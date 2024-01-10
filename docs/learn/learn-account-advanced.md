@@ -376,7 +376,7 @@ treasury, crowdloans, and nomination pools. From the point of view of the runtim
 are like any other account on-chain. These special system accounts are just public keys, with the
 private key being unknown (and unattainable). So, that means that only the pallet itself can
 interact with this account. These accounts can never issue a signed
-[extrinsic](./learn-extrinsics.md) since they do not have a private key.
+[extrinsic](./learn-transactions.md) since they do not have a private key.
 
 :::info Explore System Accounts
 

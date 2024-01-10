@@ -42,7 +42,7 @@ tool that will enable you the create, manage, and restore accounts.
 By default, the Vault app contains chain specifications for Polkadot, Kusama, and Westend. Metadata
 updates are possible via a [QR code fountain](https://metadata.parity.io/#/polkadot). It is also
 possible to [add other Substrate-based chains and do metadata updates](#add-chains) for those. The
-app allows you to securely sign [extrinsics](../learn/learn-extrinsics.md) via QR codes without
+app allows you to securely sign [extrinsics](../learn/learn-transactions.md) via QR codes without
 exposing your private keys to the internet.
 
 ## Vault vs. Ledger
@@ -89,6 +89,13 @@ to learn how to restore your account on the Polkadot Vault app.
 
 ## Signing Extrinsics
 
+:::warning Always check for Metadata Updates
+
+Before signing extrinsics with the Polkadot Vault app, always check for metadata updates.
+[**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=328) will explain how to do it.
+
+:::
+
 Remember to always check for metadata updates before signing transactions. See
 [this article](https://github.com/w3f/polkadot-wiki/pull/4600/files#diff-5d4d0a286cdc7b1d016ee155f9694dbcddc13f5264490fc1a960c38000baca4d)
 to learn how to sign transactions and
@@ -102,7 +109,7 @@ The procedure to sign transactions with the Vault app is as follows:
 - After scanning the QR code with the Vault app, you will be presented with decoded information
   about what you will sign. Make sure the information matches what you intended to sign in the first
   place. If something does not feel right, do not sign. Check
-  [this page](../learn/learn-extrinsics.md#corrupted-qr-code-parity-signer) for more information and
+  [this page](./transaction-attacks.md#corrupted-qr-code-parity-signer) for more information and
   contact [the Polkadot Support Team](https://support.polkadot.network/support/home).
 - If the information shown by the Vault app is correct, you can present the QR code (signature) to
   the camera on your laptop to sign for the transaction.

@@ -148,8 +148,9 @@ module.exports = {
                 slug: '/stay-safe-index',
               },
               items: [
-                "general/scams",
                 "general/how-to-dyor",
+                "general/scams",
+                "general/transaction-attacks",
               ],
             },
             "general/start-building",
@@ -190,14 +191,10 @@ module.exports = {
               label: "Transactions",
               description: 'Extrinsics, Balance Transfers, and Fees.',
               link: {
-                type: 'generated-index',
-                title: 'Transactions',
-                description: 'Everything about transactions between Polkadot accounts.',
-                slug: '/learn-transactions-index',
+                type: 'doc',
+                id: "learn/learn-transactions",
               },
               items: [
-                "learn/learn-extrinsics",
-                "learn/learn-balance-transfers",
                 "learn/learn-transaction-fees",
               ],
             },
@@ -298,10 +295,8 @@ module.exports = {
                   label: "Polkadot-JS Guides",
                   description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
                   link: {
-                    type: 'generated-index',
-                    title: 'Polkadot-JS Guides',
-                    description: 'Polkadot-JS Guides about Staking, Asset Hub, Ledger, Vault App, and more.',
-                    slug: '/learn-guides-index',
+                    type: 'doc',
+                    id: "learn/learn-polkadot-js-guides",
                   },
                   items: [
                     {
@@ -309,18 +304,16 @@ module.exports = {
                       label: "Accounts",
                       description: 'Polkadot-JS Guides about Accounts.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Polkadot-JS Guides about Accounts',
-                        description: 'Polkadot-JS Guides about Accounts.',
-                        slug: '/learn-guides-accounts-index',
+                        type: 'doc',
+                        id: "learn/learn-guides-accounts",
                       },
                       items: [
-                        "learn/learn-guides-accounts",
                         "learn/learn-guides-accounts-multisig",
                         "learn/learn-guides-accounts-proxy",
                         "learn/learn-guides-accounts-proxy-pure",
                       ],
                     },
+                    "learn/learn-guides-transfers",
                     {
                       type: "category",
                       label: "Staking",

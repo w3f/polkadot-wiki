@@ -7,7 +7,7 @@ keywords: [NFT, non-fungible token, NFT 2.0, nfts, NFT pallets]
 slug: ../learn-nft-pallets
 ---
 
-NFT [pallets](learn-extrinsics.md#pallets-and-extrinsics) allow developers to easily implement
+NFT [pallets](./learn-transactions.md#pallets-and-extrinsics) allow developers to easily implement
 NFT-related actions within their dApp.
 
 ## NFTs Pallet

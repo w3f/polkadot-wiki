@@ -13,15 +13,6 @@ Transaction fees prevent individual users from consuming too many resources.
 opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the
 fee is paid, nodes will execute the transaction.
 
-[Web3 Foundation Research](https://research.web3.foundation/Polkadot/overview/token-economics#2-slow-adjusting-mechanism)
-designed the Polkadot fee system with the following objectives:
-
-- Each Relay Chain block should be processed efficiently to avoid delays in block production.
-- The growth rate of the Relay Chain should be bounded.
-- Each block should have space for special, high-priority transactions like misconduct reports.
-- The system should be able to handle spikes in demand.
-- Fees should change slowly so that senders can accurately predict the fee for a given transaction.
-
 ## Fee Calculation
 
 Fees on the Polkadot Relay Chain are calculated based on three parameters:
@@ -108,22 +99,6 @@ of operations:
   from the staking module, is designed to move any unlocked funds from the staking management system
   to be ready for transfer
 
-## Block Limits and Transaction Priority
-
-Blocks in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} have both a maximum length
-(in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these
-limits. A portion of each block - currently 25% - is reserved for critical transactions that are
-related to the chain's operation. Block producers will only fill up to 75% of a block with normal
-transactions. Some examples of operational transactions:
-
-- Misbehavior reports
-- Council operations
-- Member operations in an election (e.g. renouncing candidacy)
-
-Block producers prioritize transactions based on each transaction's total fee. Since a portion of
-the fee will go to the block producer, producers will include the transactions with the highest fees
-to maximize their reward.
-
 ## Fees
 
 Block producers charge a fee in order to be economically sustainable. That fee must always be
@@ -198,46 +173,6 @@ define this behavior accordingly. For example, the
 multiplier after each block according to a custom formula defined
 [here](https://spec.polkadot.network/#id-update-multiplier).
 
-## Calcuating Fees with Polkadot-JS
-
-One useful utility for estimating transaction fees programmatically is the via the
-[@polkadot/api](https://www.npmjs.com/package/@polkadot/api). Check out the following script that
-logs some relevant fee information:
-
-```js
-// Estimate the fees as RuntimeDispatchInfo using the signer
-const info = await api.tx.balances.transfer(recipient, 123).paymentInfo(sender);
-
-// Log relevant info, partialFee is Balance, estimated for current
-console.log(`
-  class=${info.class.toString()},
-  weight=${info.weight.toString()},
-  partialFee=${info.partialFee.toHuman()}
-`);
-```
-
-For additional information on interacting with the API, checkout
-[Polkadot-JS](../general/polkadotjs.md).
-
-## Shard Transactions
-
-The transactions that take place within
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s shards - parachains and
-parathreads - do not incur Relay Chain transaction fees. Users of shard applications do not even
-need to hold DOT tokens, as each shard has its own economic model and may or may not have a token.
-There are, however, situations where shards themselves make transactions on the Relay Chain.
-
-[Parachains](learn-parachains.md) have a dedicated slot on the Relay Chain for execution, so their
-collators do not need to own DOT in order to include blocks. The parachain will make some
-transactions itself, for example, opening or closing an [XCM](learn-xcm.md) channel, participating
-in an [auction](learn-auction.md) to renew its slot, or upgrading its runtime. Parachains have their
-own accounts on the Relay Chain and will need to use those funds to issue transactions on the
-parachain's behalf.
-
-[Parathreads](learn-parathreads.md) will also make all the same transactions that a parachain might.
-In addition, the collators need to participate in an auction every block to progress their chain.
-The collators will need to have DOT to participate in these auctions.
-
 ## Other Resource Limitation Strategies
 
 Transaction weight must be computable prior to execution, and therefore can only represent fixed
@@ -253,42 +188,6 @@ logic. Some transactions warrant limiting resources with other strategies. For e
   burn funds from the sender if it creates new storage entries, thus increasing the state size.
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16
   validators. This limits the complexity of [Phragmén](learn-phragmen.md).
-
-## Advanced
-
-This page only covered transactions that come from normal users. If you look at blocks in a block
-explorer, though, you may see some "extrinsics" that look different from these transactions. In
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (and any chain built on Substrate),
-an extrinsic is a piece of information that comes from outside the chain. Extrinsics fall into three
-categories:
-
-- Signed transactions
-- Unsigned transactions
-- Inherents
-
-This page only covered signed transactions, which is the way that most users will interact with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} . Signed transactions come from an
-account that has funds, and therefore {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-can charge a transaction fee as a way to prevent spam.
-
-Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
-pair that does not control funds. For example, when users
-[claim their DOT tokens](https://claims.polkadot.network) after genesis, their DOT address doesn't
-have any funds yet, so that uses an unsigned transaction. Validators also submit unsigned
-transactions in the form of "heartbeat" messages to indicate that they are online. These heartbeats
-must be signed by one of the validator's [session keys](learn-cryptography.md). Session keys never
-control funds. Unsigned transactions are only used in special cases because, since Polkadot cannot
-charge a fee for them, each one needs its own, custom validation logic.
-
-Finally, inherents are pieces of information that are not signed or included in the transaction
-queue. As such, only the block author can add inherents to a block. Inherents are assumed to be
-"true" simply because a sufficiently large number of validators have agreed on them being
-reasonable. For example, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blocks
-include a timestamp inherent. There is no way to prove that a timestamp is true the way one proves
-the desire to send funds with a signature. Rather, validators accept or reject the block based on
-how reasonable they find the timestamp. In
-{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} it must be within some acceptable
-range of their own system clocks.
 
 ## Learn More
 
