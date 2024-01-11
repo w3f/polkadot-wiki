@@ -7,9 +7,9 @@ keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
 slug: ../build-hrmp-channels
 ---
 
-[HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) has the same interface and functionality as
-[XCMP](../learn/learn-xcm.md#xcmp-cross-chain-message-passing) but is much more demanding on
-resources since it passes all messages via the Relay Chain. When XCMP is implemented on Polkadot,
+[HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite) has the same interface and functionality as
+[XCMP](../learn/learn-xcm-transport.md#xcmp-cross-chain-message-passing) but is much more demanding
+on resources since it passes all messages via the Relay Chain. When XCMP is implemented on Polkadot,
 HRMP is planned to be deprecated and phased out in favor of it.
 
 ## Opening HRMP channel: parachain to parachain
@@ -40,9 +40,7 @@ then submitting the proposal on-chain.
 Before submitting the proposal, both the system parachain's and the parachain's sovereign accounts
 (both [system accounts](../learn/learn-account-advanced.md#system-accounts)) must have the channel
 deposit of 20 DOT plus the
-[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping). At the time of
-execution, each parachain's sovereign account must have a free balance greater than or equal to the
-sum of the sender deposit, recipient deposit, and existential deposit.
+[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping).
 
 :::info
 

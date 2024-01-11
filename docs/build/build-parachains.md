@@ -325,9 +325,10 @@ available for this type of work.
 ### Rococo Testnet
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a testnet built for testing
-parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) (Horizontal
-Relay-routed Message Passing) in order to send transfers and messages between parachains and a Relay
-Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
+parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite)
+(Horizontal Relay-routed Message Passing) in order to send transfers and messages between parachains
+and a Relay Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the
+desired parachain.
 
 Rococo runs a few test system parachains:
 [Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
