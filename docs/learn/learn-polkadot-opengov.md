@@ -339,8 +339,8 @@ satisfy the approval and support criteria for the **Confirmation Period**.
 - **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
   [conviction](#voluntary-locking)) against the total vote-weight (_aye_, _nay_, and _abstained_).
 - **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
-  conviction) compared to the total possible votes that could be made in the system. In case of
-  _split_ votes, only _aye_ and _abstain_ will count.
+  conviction) compared to the total possible votes ([active issuance](learn-DOT.md#token-issuance))
+  that could be made in the system. In case of _split_ votes, only _aye_ and _abstain_ will count.
 
 :::info Nay votes are not counted towards Support
 
