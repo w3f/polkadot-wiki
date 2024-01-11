@@ -40,7 +40,9 @@ then submitting the proposal on-chain.
 Before submitting the proposal, both the system parachain's and the parachain's sovereign accounts
 (both [system accounts](../learn/learn-account-advanced.md#system-accounts)) must have the channel
 deposit of 20 DOT plus the
-[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping).
+[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping). Opening an HRMP
+channels requires submitting a transactions, therefore make sure you have some extra funds to cover
+transaction fees.
 
 :::info
 
