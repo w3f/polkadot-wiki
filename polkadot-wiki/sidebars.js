@@ -606,24 +606,6 @@ module.exports = {
             "learn/learn-sassafras",
           ],
         },
-        {
-          type: "category",
-          label: "Archive",
-          description: "Implementations no longer live on Polkadot.",
-          link: {
-            type: 'generated-index',
-            title: "Archive",
-            description: "Implementations no longer live on Polkadot.",
-            slug: '/learn-archive-index',
-          },
-          items: [
-            "learn/learn-governance",
-            "learn/learn-treasury",
-            "learn/learn-launch",
-            "learn/learn-redenomination",
-            "learn/learn-controller",
-          ],
-        },
       ],
     },
     {
