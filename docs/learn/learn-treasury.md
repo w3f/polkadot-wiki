@@ -7,8 +7,6 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::info Use OpenGov to access treasury funds
 
 Governance v1 is deprecated. To access
@@ -26,10 +24,8 @@ accessible by anyone; only the system internal logic can access it. Funds can be
 spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
 waiting period before distribution. This waiting period is known as the _spend period_, and its
 duration is subject to [governance](learn-governance.md), with the current default set to
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
-days. The Treasury attempts to spend as many proposals in the queue as it can without running out of
-funds.
+{{ polkadot: 28 :polkadot }} {{ kusama: 6 :kusama }} days. The Treasury attempts to spend as many
+proposals in the queue as it can without running out of funds.
 
 Treasury payout is an automatic process:
 
@@ -104,13 +100,9 @@ be paid out.
 There are two types of tips:
 
 - public: A small bond is required to place them. This bond depends on the tip message length, and a
-  fixed bond constant defined on chain, currently
-  {{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadable"/>. :kusama }}
-  Public tips carry a finder's fee of
-  {{ polkadot: <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :kusama }}
-  which is paid out from the total amount.
+  fixed bond constant defined on chain, currently {{ polkadot: 1 DOT. :polkadot }}
+  {{ kusama: 0.166 KSM. :kusama }} Public tips carry a finder's fee of
+  {{ polkadot: 20%, :polkadot }} {{ kusama: 20%, :kusama }} which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
 :::info

@@ -7,8 +7,6 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
@@ -183,10 +181,8 @@ they will require a heavy supermajority of _aye_ votes to pass at low turnouts b
 increases towards 100%, it will require a simple majority of _aye_ votes to pass (i.e. 51% wins).
 
 Note that the bonded tokens will be released once the proposal is tabled (that is, brought to a
-vote), and a maximum of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
-public proposals can be in the proposal queue.
+vote), and a maximum of {{ polkadot: 100 :polkadot }} {{ kusama: 100 :kusama }} public proposals can
+be in the proposal queue.
 
 :::info turnout
 
@@ -222,13 +218,11 @@ in the same period, excluding emergency referenda. An emergency referendum occur
 time as a regular referendum (either public- or council-proposed) is the only time multiple
 referenda can be voted on.
 
-Every
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
-days, a new referendum will come up for a vote, assuming there is at least one proposal in one of
-the queues. There is a queue for Council-approved proposals and a queue for publicly-submitted
-proposals. The referendum to be voted upon alternates between the top proposal in the two queues,
-where the proposals' rank is based on [endorsement](#endorsing-proposals) (i.e. bonded tokens).
+Every {{ polkadot: 28 :polkadot }} {{ kusama: 7 :kusama }} days, a new referendum will come up for a
+vote, assuming there is at least one proposal in one of the queues. There is a queue for
+Council-approved proposals and a queue for publicly-submitted proposals. The referendum to be voted
+upon alternates between the top proposal in the two queues, where the proposals' rank is based on
+[endorsement](#endorsing-proposals) (i.e. bonded tokens).
 
 ### Adaptive Quorum Biasing
 
@@ -335,10 +329,9 @@ All referenda are associated with an enactment delay or **enactment period**. Th
 between a referendum ending and (assuming it was approved) the changes being enacted.
 
 For public and Council referenda, the enactment period is a fixed time of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays" /> :kusama }}.
-For proposals submitted as part of the enactment of a prior referendum, it can be set as desired.
-Emergency proposals deal with major problems with the network and need to be "fast-tracked". These
-will have a shorter enactment period.
+{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For proposals submitted as part of
+the enactment of a prior referendum, it can be set as desired. Emergency proposals deal with major
+problems with the network and need to be "fast-tracked". These will have a shorter enactment period.
 
 ## Voting on a Referendum
 
@@ -383,9 +376,7 @@ To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: 
 introduces the idea of a "council". The council is an on-chain entity comprising several actors,
 each represented as an on-chain account. On
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
-{{ polkadot: <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" /> :kusama }}
-members.
+{{ polkadot: 13 :polkadot }} {{ kusama: 19 :kusama }} members.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance:
