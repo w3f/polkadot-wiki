@@ -554,10 +554,9 @@ For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, 
 
 :::info From Technical Committee to the Technical Fellowship
 
-The Polkadot Technical Fellowship is a collection of Substrate experts. This fellowship was
-established in 2022. In Polkadot OpenGov, this fellowship replaces the
-[Technical Committee](./learn-governance.md#technical-committee) in Governance v1, and will serve
-both the Polkadot and Kusama networks.
+The Polkadot Technical Fellowship fellowship was established in 2022. In Polkadot OpenGov, this
+fellowship replaces the [Technical Committee](./learn-governance.md#technical-committee) in
+Governance v1, and will serve both the Polkadot and Kusama networks.
 
 For more information about the Fellowship see the
 [Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
@@ -574,10 +573,8 @@ Unlike the Technical Committee in Governance V1, the Fellowship is designed to b
 membership (i.e. to work well with even tens of thousands of members) and with far lower barriers to
 entry (both in terms of administrative process flow and expectations of expertise).
 
-The mechanism by which the Fellowship votes is the same as what is used for Polkadot and Kusama
-stakeholder voting for a proposed referendum. Members of the Fellowship can vote on any given
-Fellowship proposal and the aggregated opinion of the members (weighted by their rank) constitutes
-the Fellowship's considered opinion.
+Members of the Fellowship can vote on any given Fellowship proposal and the aggregated opinion of
+the members (weighted by their rank) constitutes the Fellowship's collective opinion.
 
 The Polkadot Technical Fellowship resides on the
 [Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)
@@ -589,6 +586,8 @@ The fellowship governance is primarily used for its membership management,
 proposals.
 
 {{ kusama: <Fellowship network="kusama" defaultValue="Loading Kusama Fellows..."/> :kusama }}
+
+### Becoming a Polkadot Technical Fellowship Member
 
 ### Ranking System
 
@@ -647,35 +646,6 @@ For more information about how to submit a whitelisted proposal see the
 [dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
 
 :::
-
-### Becoming a Polkadot Technical Fellowship Member
-
-Currently, the only way to become a fellowship member is through a referenda. To get added as a
-member of "Rank 1", an existing member of the fellowship needs to submit a referendum with the
-preimage of a batch call that has `fellowshipCollective.addMember` and
-`fellowshipCollective.promoteMember` on "2/Proficients" track. On Polkadot-JS UI for Polkadot
-Collectives, navigate to Governance > Fellowship > Referenda and click on "Add Preimage". This
-preimage can be submitted by anyone.
-
-![fellowship-add-promote-member-preimage](../assets/fellowship-add-member-preimage.png)
-
-After the preimage is successfully noted, navigate to Governance > Fellowship > Referenda and click
-on "Submit Proposal" (This button is active on the UI only if you have an account that belongs to
-the Fellowship). Choose the appropriate track and the origin, and enter the preimage hash of the
-batch call that adds and promotes the member.
-
-![fellowship-add-promote-member-proposal](../assets/fellowship-add-member-proposal.png)
-
-After the referendum is successfully executed, the member is added to the fellowship with "rank 1".
-For example, check the [Referenda 23](https://collectives.subsquare.io/fellowship/referenda/23) on
-the Collectives parachain. If a member has to be added and promoted to “rank 5”, the proposal has to
-be submitted through track “6/Senior Experts” (Always a track with a rank higher). For example,
-check the [Referenda 25](https://collectives.subsquare.io/fellowship/referenda/25) on the
-Collectives parachain.
-
-Future plans include that public members can apply to become a Fellowship candidate by placing a
-small deposit (which will be returned once they become members). Their candidacy will go through a
-referendum to be approved to become a member.
 
 ## Resources
 
