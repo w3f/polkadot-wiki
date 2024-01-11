@@ -14,19 +14,19 @@ HRMP is planned to be deprecated and phased out in favor of it.
 
 ## Opening HRMP channel: parachain to parachain
 
-To open a channel from one parachain to another that are not system chains on Polkadot, the
-governance of each parachain needs to declare its intent to open a channel on the Relay Chain, and
+To open a channel from one parachain to another, that is not system chains on Polkadot, the
+governance of each parachain needs to declare its intent to open a channel on the Relay Chain and
 the second chain needs to accept and do the same.
 
-In order to do this, the calls to be dispatched from both chains are:
+To do this, the calls to be dispatched from both chains are:
 
 1. `hrmp > hrmpInitOpenChannel(recipient, proposedMaxCapacity, proposedMaxMessageSize)`: this call
-   initiates opening a channel from a parachain to a given recipient with given channel
+   initiates opening a channel from a parachain to a given recipient with a given channel
 
 2. `hrmp > hrmpAcceptOpenChannel(sender)`: accepting the channel open request from the given sender.
 
-Each parachain is to use its own governance process to execute this. The call will be executed on
-the Relay Chain.
+Each parachain is to use its governance process to execute this. The call will be executed on the
+Relay Chain.
 
 ## Opening HRMP Channels with System Parachains
 
@@ -40,8 +40,8 @@ then submitting the proposal on-chain.
 Before submitting the proposal, both the system parachain's and the parachain's sovereign accounts
 (both [system accounts](../learn/learn-account-advanced.md#system-accounts)) must have the channel
 deposit of 20 DOT plus the
-[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping). Opening an HRMP
-channels requires submitting a transactions, therefore make sure you have some extra funds to cover
+[existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping). Opening HRMP
+channels requires submitting a transaction; therefore, ensure you have some extra funds to cover
 transaction fees.
 
 :::info
@@ -67,9 +67,9 @@ than the old two-phase channel request/accept method.
 ## Publication on Polkassembly for discussion and feedback
 
 The [discussions section of Polkassembly](https://polkadot.polkassembly.io/discussions) is the best
-place to share the reasoning behind your proposal: make sure to log in with the proposer address (if
-possible) before publishing yours, and if you can do this also make sure the address has an on-chain
-identity.
+place to share the reasoning behind your proposal: make sure to log in with the proposer’s address
+(if possible) before publishing yours, and if you can do this, also make sure the address has an
+on-chain identity.
 
 ### Example: Opening an HRMP Channel with the AssetHub
 
@@ -95,27 +95,27 @@ the community to review and ultimately vote on:
     the preimage hash needs to be submitted to and whitelisted by the
     [Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship).
 
-Below is an example of how teams followed this process on Kusama, as a way to:
+Below is an example of how teams followed this process on Kusama as a way to:
 
 - Proposal to open HRMP channel between Bifrost and the Asset Hub: the motion can be found
   [here](https://kusama.polkassembly.io/motion/418).
 
 ## Preimage submission on democracy tab (Polkadot-JS UI)
 
-Once the community has given enough feedback (we expect these proposal to be non controversial)
-please submit the image on the discussion post in the
+Once the community has given enough feedback (we expect this proposal to be noncontroversial) please
+submit the image on the discussion post in the
 [Democracy](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/democracy) tab on
 Polkadot JS Apps, by using the "Submit Preimage" button:
 
 ![submit preimage](../assets/democracy/submit-preimage.png)
 
-On the pop up window, compose the preimage in the discussion post: making sure the proposal hash is
+On the pop-up window, compose the preimage in the discussion post, making sure the proposal hash is
 the same as in the post.
 
 ## Vote by the community
 
-After the community voting period, there will be an enactment period. In general, on Kusama these
-have been defined in shorter terms than the voting periods. Again, it is very important you
-encourage the community to vote on this, highlighting the benefits for your chain, use cases enabled
-with this submission, among other things. After the enactment period is over, both chains will
-authorize the channel.
+After the community voting period, there will be an enactment period. In general, these have been
+defined in shorter terms than the voting periods on Kusama. Again, it would be best to encourage the
+community to vote on this, highlighting the benefits for your chain use cases enabled with this
+submission, among other things. After the enactment period is over, both chains will authorize the
+channel.
