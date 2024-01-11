@@ -7,104 +7,72 @@ keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
 slug: ../build-hrmp-channels
 ---
 
-[HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) has the same interface and functionality as
-[XCMP](../learn/learn-xcm.md#xcmp-cross-chain-message-passing) but is much more demanding on
-resources since it passes all messages via the Relay Chain. When XCMP is implemented on Polkadot,
-HRMP is planned to be deprecated and phased out in favor of it.
+In order to communicate over [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite), parachains must
+establish channels by registering them on the Relay Chain. Like
+[XCMP](../learn/learn-xcm-transport.md#xcmp-cross-chain-message-passing), HRMP is a message
+transport protocol, but passes all messages via the Relay Chain. When XCMP is implemented on
+Polkadot, HRMP is planned to be deprecated and phased out.
 
-## Opening HRMP channel: parachain to parachain
+HRMP channels are uni-directional. Bi-directional communication between two parachains will require
+two channels, one in each direction.
 
-To open a channel from one parachain to another that are not system chains on Polkadot, the
-governance of each parachain needs to declare its intent to open a channel on the Relay Chain, and
-the second chain needs to accept and do the same.
+## Opening HRMP Channels
 
-In order to do this, the calls to be dispatched from both chains are:
+Opening a channel between two parachains is a two-phase process, with one chain first initiating a
+channel request and then the second chain accepting it. When neither chain is a system chain, they
+will use the `hrmpInitOpenChannel` and `hrmpAcceptOpenChannel` calls, respectively.
 
-1. `hrmp > hrmpInitOpenChannel(recipient, proposedMaxCapacity, proposedMaxMessageSize)`: this call
-   initiates opening a channel from a parachain to a given recipient with given channel
+Each chain must dispatch the following calls on the Relay Chain from its parachain origin.
 
-2. `hrmp > hrmpAcceptOpenChannel(sender)`: accepting the channel open request from the given sender.
+1. `hrmp > hrmpInitOpenChannel(recipient, proposedMaxCapacity, proposedMaxMessageSize)`: Initiates
+   channel establishment by creating a channel request with a given configuration. Note that the max
+   capacity and max message size must be within the `configuration`'s limits.
 
-Each parachain is to use its own governance process to execute this. The call will be executed on
-the Relay Chain.
+2. `hrmp > hrmpAcceptOpenChannel(sender)`: Accept the channel open request from the given sender.
+
+In order to dispatch a call from its sovereign origin, a parachain may use governance to send the
+encoded call in a `Transact` instruction to the Relay Chain, but it may also execute this logic
+autonomously (e.g. on the notification that a channel was requested).
 
 ## Opening HRMP Channels with System Parachains
 
-Opening an HRMP channel with a system parachain requires a referendum. Like all other governance
-proposals, proposers should follow best practices like opening a discussion on
-[Polkassembly](https://polkadot.polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/) and
-then submitting the proposal on-chain.
+HRMP channel management involving system parachains takes place entirely on the Relay Chain. No
+action is required from the parachain origin.
 
-Proposals should generally be a `batch_all` call containing:
+Opening an HRMP channel with a system parachain requires an
+[OpenGov referendum](../learn/learn-guides-polkadot-opengov.md) using the
+[General Admin Track](../learn/learn-polkadot-opengov-origins.md#general-admin).
 
-1. A `force_transfer` of the channel deposit from the Treasury to the System parachain's sovereign
-   account. Remember that a bi-direction channel is _two_ channels so will need double the amount.
-1. A `force_open_hrmp_channel` from your chain to the system chain.
-1. A `force_open_hrmp_channel` from the system chain to your chain.
+Proposals should generally be a `batchAll` call containing two `forceOpenHrmpChannel` calls (one for
+each direction of the channel).
+
+As an example, see [Referendum 280](https://polkadot.polkassembly.io/referenda/280), which opened
+two bi-directional channels with Asset Hub (one for Zeitgeist and one for Composable).
 
 :::caution
 
-Please ensure that you use the new `force_open_hrmp_channel` directly on the Relay Chain, rather
-than the old two-phase channel request/accept method.
+Please ensure that you use the new `forceOpenHrmpChannel` directly on the Relay Chain, rather than
+the old two-phase channel request/accept method.
 
 :::
 
-## Publication on Polkassembly for discussion and feedback
+:::info
 
-The [discussions section of Polkassembly](https://polkadot.polkassembly.io/discussions) is the best
-place to share the reasoning behind your proposal: make sure to log in with the proposer address (if
-possible) before publishing yours, and if you can do this also make sure the address has an on-chain
-identity.
+As of Polkadot and Kusama runtimes 1,001,000, channel establishment with system chains will not
+require a deposit. However, for lower spec versions, each chain in the channel will need a free
+balance of at least the required channel deposits plus the existential deposit.
 
-### Example: Opening an HRMP Channel with the AssetHub
+For example, on Polkadot the sender and recipient deposit are both 10 DOT and the existential
+deposit is 1 DOT. Each chain, as in both the system chain and its interlocutor, will need 21 DOT; 10
+as a channel sender, 10 as a channel recipient, and 1 as existential.
 
-The following highlights the steps required to submit a proposal for opening an HRMP channel with
-the AssetHub. Your submission should contain the following sections to be considered complete for
-the community to review and ultimately vote on:
+Someone must transfer this DOT to the parachain sovereign accounts prior to the execution of the
+`forceOpenHrmpChannel` calls.
 
-1.  A request on what the proposal aims to do (opening an HRMP channel with the AssetHub);
-2.  The use cases this channel will support for your chain;
-3.  Technical details of the proposal, including proposal parameters and technical details of this
-    call (On Kusama, most proposals were designed as a batchAll calls):
+:::
 
-    - A `forceTransfer` of 20 DOT from the Treasury to AssetHub sovereign account.
-    - A `forceOpenhrmpchannel` from AssetHub (1,000) to ParaID.
-    - A `forceOpenhrmpChannel` from ParaID to AssetHub (1,000).
+## Opening HRMP Channels Between Two System Parachains
 
-    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT,
-    the first transaction should not be necessary (these guidelines will be updated accordingly).
-
-4.  The XCM message to the Asset Hub, which can be decoded on the network;
-5.  The call data to verify on
-    [Polkadot JS Apps Decode](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics/decode)
-    tab;
-6.  The preimage hash to include in the proposal's submission. Note that if the proposer is planning
-    to
-    [submit a referendum on the Whitelisted Caller Track](../learn/learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track),
-    the preimage hash needs to be submitted to and whitelisted by the
-    [Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship).
-
-Below is an example of how teams followed this process on Kusama, as a way to:
-
-- Proposal to open HRMP channel between Bifrost and the Asset Hub: the motion can be found
-  [here](https://kusama.polkassembly.io/motion/418).
-
-## Preimage submission on democracy tab (Polkadot JS Apps)
-
-Once the community has given enough feedback (we expect these proposal to be non controversial)
-please submit the image on the discussion post in the
-[Democracy](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/democracy) tab on
-Polkadot JS Apps, by using the "Submit Preimage" button:
-
-![submit preimage](../assets/democracy/submit-preimage.png)
-
-On the pop up window, compose the preimage in the discussion post: making sure the proposal hash is
-the same as in the post.
-
-## Vote by the community
-
-After the community voting period, there will be an enactment period. In general, on Kusama these
-have been defined in shorter terms than the voting periods. Again, it is very important you
-encourage the community to vote on this, highlighting the benefits for your chain, use cases enabled
-with this submission, among other things. After the enactment period is over, both chains will
-authorize the channel.
+As of Polkadot and Kusama runtimes 1,001,000, anyone can call an `establishSystemChannel` extrinsic
+with two system parachains as arguments in order to establish a channel from the given sender to
+receiver.
