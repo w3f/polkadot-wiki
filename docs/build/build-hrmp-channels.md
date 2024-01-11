@@ -62,9 +62,6 @@ As of Polkadot and Kusama runtimes 1,001,000, channel establishment with system 
 require a deposit. However, for lower spec versions, each chain in the channel will need a free
 balance of at least the required channel deposits plus the existential deposit.
 
-:::
-
-
 For example, on Polkadot the sender and recipient deposit are both 10 DOT and the existential
 deposit is 1 DOT. Each chain, as in both the system chain and its interlocutor, will need 21 DOT; 10
 as a channel sender, 10 as a channel recipient, and 1 as existential.
