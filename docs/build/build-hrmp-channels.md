@@ -18,7 +18,7 @@ To open a channel from one parachain to another, that is not a system chain on P
 governance of each parachain needs to declare its intent to open a channel on the Relay Chain through a `Transact` XCM message with parachain origin, and
 the second chain needs to accept and do the same.
 
-To do this, the calls to be dispatched from both chains are:
+To do this, the calls to be included in the `Transact` message from both chains are:
 
 1. `hrmp > hrmpInitOpenChannel(recipient, proposedMaxCapacity, proposedMaxMessageSize)`: this call
    initiates opening a channel from a parachain to a given recipient.
