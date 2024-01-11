@@ -19,7 +19,7 @@ two channels, one in each direction.
 ## Opening HRMP Channels
 
 Opening a channel between two parachains is a two-phase process, with one chain first initiating a
-channel request and then the second chain accepting it. When neither chain is a system chain, they
+channel request and then the second chain accepting it. When neither chain is a [system chain](../learn/learn-system-chains.md), they
 will use the `hrmpInitOpenChannel` and `hrmpAcceptOpenChannel` calls, respectively.
 
 Each chain must dispatch the following calls on the Relay Chain from its parachain origin.
