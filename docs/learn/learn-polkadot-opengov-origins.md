@@ -140,8 +140,7 @@ The origin for managing the composition of the fellowship.
 
 ### General Admin
 
-The origin for managing the registrar. This origin has the privilege of executing calls from the
-Identity pallet.
+The origin managing the registrar and permissioned HRMP channel operations.
 
 {{ polkadot: <Chart title="" type="line" dataId="AdminGeneral" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="AdminGeneral" network="Kusama" maxX="336" maxY="100" /> :kusama }}
