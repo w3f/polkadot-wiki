@@ -58,9 +58,14 @@ the old two-phase channel request/accept method.
 
 :::info
 
+:::info
+
 As of Polkadot and Kusama runtimes 1,001,000, channel establishment with system chains will not
 require a deposit. However, for lower spec versions, each chain in the channel will need a free
 balance of at least the required channel deposits plus the existential deposit.
+
+:::
+
 
 For example, on Polkadot the sender and recipient deposit are both 10 DOT and the existential
 deposit is 1 DOT. Each chain, as in both the system chain and its interlocutor, will need 21 DOT; 10
