@@ -21,9 +21,10 @@ the second chain needs to accept and do the same.
 To do this, the calls to be dispatched from both chains are:
 
 1. `hrmp > hrmpInitOpenChannel(recipient, proposedMaxCapacity, proposedMaxMessageSize)`: this call
-   initiates opening a channel from a parachain to a given recipient with a given channel
+   initiates opening a channel from a parachain to a given recipient.
 
-2. `hrmp > hrmpAcceptOpenChannel(sender)`: accepting the channel open request from the given sender.
+2. `hrmp > hrmpAcceptOpenChannel(sender)`: this call is for accepting the channel open request from
+   the given sender.
 
 Each parachain is to use its governance process to execute this. The call will be executed on the
 Relay Chain.
