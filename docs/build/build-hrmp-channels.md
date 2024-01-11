@@ -14,7 +14,7 @@ HRMP is planned to be deprecated and phased out in favor of it.
 
 ## Opening HRMP channel: parachain to parachain
 
-To open a channel from one parachain to another, that is not system chains on Polkadot, the
+To open a channel from one parachain to another, that is not a system chain on Polkadot, the
 governance of each parachain needs to declare its intent to open a channel on the Relay Chain and
 the second chain needs to accept and do the same.
 
