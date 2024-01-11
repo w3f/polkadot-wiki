@@ -325,15 +325,19 @@ available for this type of work.
 ### Rococo Testnet
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a testnet built for testing
-parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm.md#xcmp-lite-hrmp) (Horizontal
-Relay-routed Message Passing) in order to send transfers and messages between parachains and a Relay
-Chain. Every message is sent to the Relay Chain, then from the Relay Chain to the desired parachain.
+parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite)
+(Horizontal Relay-routed Message Passing) in order to send transfers and messages between
+parachains.
 
-Rococo runs a few test system parachains:
-[Rockmine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
-and
-[Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer).
-It also runs several externally developed parachains.
+Rococo runs a few test system parachains, like
+[Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
+[Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer),
+[Coretime](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-coretime-rpc.polkadot.io#/explorer),
+[Encointer
+Lietaer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo.api.encointer.org#/explorer), and
+[Bridge
+Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-bridge-hub-rpc.polkadot.io#/explorer). It
+also runs several externally developed parachains.
 
 ### What Parachains are on Rococo Now?
 
