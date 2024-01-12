@@ -19,8 +19,9 @@ two channels, one in each direction.
 ## Opening HRMP Channels
 
 Opening a channel between two parachains is a two-phase process, with one chain first initiating a
-channel request and then the second chain accepting it. When neither chain is a [system chain](../learn/learn-system-chains.md), they
-will use the `hrmpInitOpenChannel` and `hrmpAcceptOpenChannel` calls, respectively.
+channel request and then the second chain accepting it. When neither chain is a
+[system chain](../learn/learn-system-chains.md), they will use the `hrmpInitOpenChannel` and
+`hrmpAcceptOpenChannel` calls, respectively.
 
 Each chain must dispatch the following calls on the Relay Chain from its parachain origin.
 
@@ -33,6 +34,11 @@ Each chain must dispatch the following calls on the Relay Chain from its paracha
 In order to dispatch a call from its sovereign origin, a parachain may use governance to send the
 encoded call in a `Transact` instruction to the Relay Chain, but it may also execute this logic
 autonomously (e.g. on the notification that a channel was requested).
+
+The xcm-executor pallet can be forked by parachains' teams and modified to include logic to handle
+[high-level HRMP instructions](https://paritytech.github.io/xcm-docs/journey/channels-and-bridges.html#hrmpnewchannelopenrequest).
+These instructions are not included in the default version of the pallet, but can be used for
+opening, accepting, and closing channels without relying on governance.
 
 ## Opening HRMP Channels with System Parachains
 
