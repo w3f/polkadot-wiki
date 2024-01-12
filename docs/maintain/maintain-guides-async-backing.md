@@ -109,7 +109,8 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
 5. Configure `pallet_aura` in `runtime/src/lib.rs`
 
-   - Set `AllowMultipleBlocksPerSlot` to false
+   - Set `AllowMultipleBlocksPerSlot` to `false` (don't worry, we will set it to `true` when we
+     activate async backing in step 3).
    - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
 
    ![Aura-config](../assets/async/async-backing-config-aura.png)
@@ -118,12 +119,14 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
    ![Aura-spi](../assets/async/async-backing-aura-api.png)
 
-7. Implement the AuraUnincludedSegmentApi, which allows the collator client to query its runtime to
+7. Implement the `AuraUnincludedSegmentApi`, which allows the collator client to query its runtime to
    determine whether it should author a block.
 
    - Add the dependency `cumulus-primitives-aura` to the `runtime/Cargo.toml` file for your runtime
 
      ![cargo-toml](../assets/async/async-backing-cargo.png)
+
+   - In the same file, add `"cumulus-primitives-aura/std",` to the `std` feature.
 
    - Inside the `impl_runtime_apis!` block for your runtime, implement the
      `AuraUnincludedSegmentApi` as shown below.
@@ -190,7 +193,7 @@ This phase consists of changes to your parachain’s runtime that activate async
 
 ![Aura-allow-multiple-blocks](../assets/async/async-backing-allow-multiple.png)
 
-2. Increase the maximum unincluded segment capacity in `runtime/src/lib.rs`.
+1. Increase the maximum `UNINCLUDED_SEGMENT_CAPACITY` in `runtime/src/lib.rs`.
 
 ![Unincluded-segment-capacity](../assets/async/async-backing-unincluded-segment.png)
 
