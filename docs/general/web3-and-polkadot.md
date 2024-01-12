@@ -15,7 +15,7 @@ As social media platforms and online businesses began to emerge, the internet tr
 next iteration - the Web2. This upgraded internet, which we use today, features dynamic, interactive
 web pages, where users can read and write information and publish their own for others to see.
 However, this version of the web comes with downsides, dealing with data control, privacy issues,
-and the consequences of trusting centralized entities storing our data on their servers. This is
+and the consequences of trusting centralized entities to store our data on their servers. This is
 where Web3 comes into the picture.
 
 Web3 is transforming applications hosted on centralized infrastructure into decentralized
@@ -80,7 +80,7 @@ other using hash functions. For example, the hash of block `N + 1` contains data
 together with the hash of the previous block `N`. This creates the situation where if you modify the
 content of block `N` you will change the hash of block `N + 1`, `N + 2`, etc. essentially breaking
 the chain. Although it can be possible to add an invalid block (a block with invalid transactions)
-or censor certain transactions, if the blockchain network is nor sufficiently decentralized. In
+or censor certain transactions, if the blockchain network is not sufficiently decentralized. In
 decentralized proof-of-stake blockchains like
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially
 expensive, and attempting to do it can get you
