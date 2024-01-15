@@ -24,6 +24,16 @@ The Wiki has three main sections:
 
 :::
 
+<center>
+    <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8">
+        <img style={{height: 30, marginTop: 5}} src="https://img.shields.io/badge/click-white.svg?logo=YouTube&logoColor=eb3f25&label=Technical Explainers Videos%20YouTube&labelColor=white&color=blue" />
+    </a>
+    <br/>
+    <a href="https://polkadot.network">
+        <img style={{height: 30, marginTop: 5}} src="/img/badges/built-with-love-for-polkadot.svg" />
+    </a>
+</center>
+
 ## Interact with Polkadot
 
 <div className="row">
