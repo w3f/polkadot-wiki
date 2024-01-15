@@ -24,15 +24,17 @@ The Wiki has three main sections:
 
 :::
 
-<center>
-    <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8">
-        <img style={{height: 30, marginTop: 5}} src="https://img.shields.io/badge/click-white.svg?logo=YouTube&logoColor=eb3f25&label=Technical Explainers Videos%20YouTube&labelColor=white&color=blue" />
-    </a>
-    <br/>
-    <a href="https://polkadot.network">
-        <img style={{height: 30, marginTop: 5}} src="/img/badges/built-with-love-for-polkadot.svg" />
-    </a>
-</center>
+<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+  <a href="https://github.com/w3f/polkadot-wiki">
+    <img style={{ height: 30, marginRight: 10 }} src="https://img.shields.io/badge/click-white.svg?logo=GitHub&logoColor=black&label=Polkadot Wiki&labelColor=white&color=blue" />
+  </a>
+  <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8">
+    <img style={{ height: 30, marginRight: 10 }} src="https://img.shields.io/badge/click-white.svg?logo=YouTube&logoColor=eb3f25&label=Technical Explainers Videos%20YouTube&labelColor=white&color=blue" />
+  </a>
+  <a href="https://polkadot.network">
+    <img style={{ height: 30}} src="/img/badges/built-with-love-for-polkadot.svg" />
+  </a>
+</div>
 
 ## Interact with Polkadot
 
