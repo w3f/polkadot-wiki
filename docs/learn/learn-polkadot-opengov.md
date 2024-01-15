@@ -336,8 +336,9 @@ Decision Period.
 Once the proposal exits the Lead-in Period and enters the Voting Period, to be approved, it must
 satisfy the approval and support criteria for the **Confirmation Period**.
 
-- **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
-  [conviction](#voluntary-locking)) against the total vote-weight (_aye_, _nay_, and _abstained_).
+- **Approval** is defined as the share of [conviction](#voluntary-locking)-weighted _aye_ votes
+  against the conviction-weighted total of _aye_ and _nay_ votes. The code implementation can be viewed
+  [here](https://github.com/paritytech/polkadot-sdk/blob/f2fbba3be1d7deaf7cfc731cea00552c212ddfcf/substrate/frame/conviction-voting/src/types.rs#L77)
 - **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
   conviction) compared to the total possible votes ([active issuance](learn-DOT.md#token-issuance))
   that could be made in the system. In case of _split_ votes, only _aye_ and _abstain_ will count.
@@ -355,25 +356,25 @@ to consider _nay_ votes.
 
 :::
 
-The figure above shows the followings:
+The figure above shows the following:
 
 - Even if the approval threshold is reached (i.e. % of current approval is greater than the approval
   curve), the proposal only enters the confirmation period once the support threshold is also
   reached (i.e. % current support is greater than the underlying support curve).
-- If the referendum meets the criteria for the confirmation period, then the proposal is approved
-  and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
-  but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
+- If the referendum meets the approval and support thresholds for the duration of the confirmation period, the proposal will be approved
+  and will be scheduled for enactment. Each track has a default minimum Enactment Period and the approved referendum needs to wait
+  till the end of it to be executed. Powerful Tracks like `Root` enforce a larger
   Enactment Period to ensure the network has ample time to prepare for any changes the proposal may
-  bring.
+  bring. The referendum proposers can also choose to set the enactment period to be higher than its default value.
 - A referendum may exit the confirmation period when the thresholds are no longer met, due to new
   _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the
-  confirmation period resets. For example, if the confirmation period is 20 minutes and a referendum
-  enters it just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
+  confirmation period clock is reset. For example, if the confirmation period is 20 minutes and a referendum
+  enters it just for 5 min before exiting, the next time it enters, it must be confirming for 20 minutes (not 15 minutes).
 - During the decision period, if a referendum fails to meet the approval and support thresholds for
   the duration of the track-specific confirmation period, it fails and does not go to the enactment
   period (it may have to be resubmitted, see below).
-- The current approval must be above 50% for a referendum to pass, and the approval curve never goes
-  below 50%.
+- The approval curve starts with a value of 100% and gradually goes to 50%, but never below. Assuming all the active
+  token supply has voted on a proposal, the conviction vote weighted support should at least always be above 50% to pass.
 
 ![opengov-curves-pass](../assets/opengov-curves-nopass.png)
 
@@ -382,11 +383,9 @@ votes.
 
 Different Origins' tracks have different Confirmation Periods and requirements for approval and
 support. For additional details on the various origins and tracks, check out
-[this table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info). Configuring the amount of
-support and overall approval required for it to pass is now possible. With proposals that use less
+[this table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info). With proposals that use less
 privileged origins, it is far more reasonable to drop the required support to a more realistic
-amount earlier than those which use highly privileged classes such as `Root`. Classes with more
-significance can be made to require higher approval early on, to avoid controversy.
+amount earlier than those which use highly privileged classes such as `Root`. 
 
 ### Enactment
 
@@ -397,8 +396,8 @@ v1.
 
 :::
 
-In Polkadot OpenGov, the proposer suggests the enactment period, but there are also minimums set for
-each Origin Track. For example, root Origin approvals require a more extended period because of the
+In Polkadot OpenGov, the proposer suggests the enactment period, but there are also a minimum set for
+each Origin Track. For example, `root` Origin approvals require an extended period because of the
 importance of the changes they bring to the network.
 
 ## Voting on a Referendum
@@ -406,7 +405,8 @@ importance of the changes they bring to the network.
 In Governance V1, voters could cast only an _aye_ or _nay_ vote. In Polkadot OpenGov, voters can
 additionally cast a _abstain_ and _split_ votes.
 [Vote splitting](./learn-guides-polkadot-opengov.md#voting-on-referenda) allows voters to allocate
-different votes for _aye_, _nay_, and _abstain_.
+different votes for _aye_, _nay_, and _abstain_. Voting with conviction is not possible when
+abstaining or splitting the votes.
 
 :::info Only the last vote counts
 
