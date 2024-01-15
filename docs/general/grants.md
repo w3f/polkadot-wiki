@@ -9,8 +9,10 @@ slug: ../grants
 
 :::info Decentralized Futures Programme
 
-Please see the [Decentralized Futures Programme](./decentralized-futures.md) before submitting any
-application to the Grants Programme.
+In addition to the listed grants programs, the Web3 Foundation is also currently distributing 20
+million USD and 5 million DOT tokens to support individuals and teams as they launch new initiatives
+aimed at growing the Polkadot ecosystem. For details, see the
+[Decentralized Futures Programme](./decentralized-futures.md).
 
 :::
 
