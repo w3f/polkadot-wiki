@@ -145,11 +145,28 @@ specific to their use cases, and for those applications to communicate securely 
 other value proposition. The trustless cooperation between applications is what makes Polkadot an
 ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
 
-See the videos below to know more about Polkadot.
-
-[![Polkadot](https://img.youtube.com/vi/_-k0xkooSlA/0.jpg)](https://www.youtube.com/watch?v=_-k0xkooSlA)
-
-[![Introduction to Polkadot](https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg)](https://www.youtube.com/watch?v=BQ60bTU1bPg)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=_-k0xkooSlA">
+      <img src="https://img.youtube.com/vi/_-k0xkooSlA/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Polkadot: Are You Ready to Start Building?
+      <br />
+      <a href="https://www.youtube.com/watch?v=_-k0xkooSlA">» view video</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=BQ60bTU1bPg">
+      <img src="https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      What is Polkadot?
+      <br />
+      <a href="https://www.youtube.com/watch?v=BQ60bTU1bPg">» view video</a>
+    </p>
+  </div>
+</div>
 
 ## What can I do with my DOT?
 
