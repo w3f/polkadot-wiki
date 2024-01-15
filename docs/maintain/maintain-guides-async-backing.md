@@ -119,8 +119,8 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
    ![Aura-spi](../assets/async/async-backing-aura-api.png)
 
-7. Implement the `AuraUnincludedSegmentApi`, which allows the collator client to query its runtime to
-   determine whether it should author a block.
+7. Implement the `AuraUnincludedSegmentApi`, which allows the collator client to query its runtime
+   to determine whether it should author a block.
 
    - Add the dependency `cumulus-primitives-aura` to the `runtime/Cargo.toml` file for your runtime
 

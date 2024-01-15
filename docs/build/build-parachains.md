@@ -333,11 +333,10 @@ Rococo runs a few test system parachains, like
 [Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
 [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer),
 [Coretime](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-coretime-rpc.polkadot.io#/explorer),
-[Encointer
-Lietaer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo.api.encointer.org#/explorer), and
-[Bridge
-Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-bridge-hub-rpc.polkadot.io#/explorer). It
-also runs several externally developed parachains.
+[Encointer Lietaer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo.api.encointer.org#/explorer),
+and
+[Bridge Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-bridge-hub-rpc.polkadot.io#/explorer).
+It also runs several externally developed parachains.
 
 ### What Parachains are on Rococo Now?
 
