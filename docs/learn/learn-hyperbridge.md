@@ -17,7 +17,7 @@ To fully follow the material on this page, it is recommended to be familiar with
 
 Interoperability is the core vision of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} technology. Through years of blockchain development, much effort has been put into making a secure interoperability solution between blockchains.
 
-With that vision in mind, Hyperbridge (short for hyper-scalable bridge) is innovated as a cross-chain solution built as an interoperability coprocessor. Hyperbridge is crafted to scale cryptographically secure, consensus, and state-proof-based interoperability across all blockchains. Before diving deeper into the core technology of the Hyperbridge, let's go through a first few foundational concepts.
+Hyperbridge (short for hyper-scalable bridge) is innovated as a cross-chain solution built as an interoperability coprocessor. Hyperbridge is crafted to scale cryptographically secure, consensus, and state-proof-based interoperability across all blockchains.
 
 ## Coprocessor Model
 
