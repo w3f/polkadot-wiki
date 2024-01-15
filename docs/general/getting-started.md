@@ -26,92 +26,104 @@ The Wiki has three main sections:
 
 ## Interact with Polkadot
 
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-accounts">
-      <img src="/img/polkadot-guide/Account.jpg" alt="Drawing" width="250" height="150"/>
-        <div class="cards-body">
-            <h5 class="cards-title">Accounts</h5>
-        </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-accounts">
+      <img src="/img/polkadot-guide/Account.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-transactions">
-      <img src="/img/polkadot-guide/Transfer.jpg" alt="Drawing" width="250" height="150"/>
-        <div class="cards-body">
-            <h5 class="cards-title">Transactions</h5>
-        </div>
+    <p>
+      Accounts
+      <br />
+      <a href="../docs/learn-accounts">» view page</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-transactions">
+      <img src="/img/polkadot-guide/Transfer.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-staking">
-      <img class="guide-image" src="/img/polkadot-guide/Stake.jpg" alt="Drawing" width="250" height="150" />
-              <div class="cards-body">
-                  <h5 class="cards-title">Staking</h5>
-              </div>
+    <p>
+      Transactions
+      <br />
+      <a href="../docs/learn-transactions">» view page</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-staking">
+      <img src="/img/polkadot-guide/Stake.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-</tr>
+    <p>
+      Staking
+      <br />
+      <a href="../docs/learn-staking">» view page</a>
+    </p>
+  </div>
+</div>
 
-<br />
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-polkadot-opengov">
+      <img src="/img/polkadot-guide/Council.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Polkadot OpenGov
+      <br />
+      <a href="../docs/learn-polkadot-opengov">» view page</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-proxies">
+      <img src="/img/polkadot-guide/Proxy.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Proxy Accounts
+      <br />
+      <a href="../docs/learn-proxies">» view page</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-identity">
+      <img src="/img/polkadot-guide/Identity.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Account Identity
+      <br />
+      <a href="../docs/learn-identity">» view page</a>
+    </p>
+  </div>
+</div>
 
-<tr class="cards-container">
-<td>
-    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
-      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Polkadot OpenGov</h5>
-              </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-parachains">
+      <img src="/img/polkadot-guide/Parachain.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Proxy Accounts</h5>
-              </div>
+    <p>
+      Parachains
+      <br />
+      <a href="../docs/learn-parachains">» view page</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-bridges">
+      <img src="/img/polkadot-guide/Bridges.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                 <h5 class="cards-title">Account Identity</h5>
-              </div>
+    <p>
+      Bridges
+      <br />
+      <a href="../docs/learn-bridges">» view page</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/ambassadors">
+      <img src="/img/polkadot-guide/Ambassadors.jpg" width="250" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-parachains">  
-      <img class="guide-image" src="/img/polkadot-guide/Parachain.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Parachains</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-bridges">  
-      <img class="guide-image" src="/img/polkadot-guide/Bridges.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Bridges</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-  <a class="guide-link" href="../docs/ambassadors">  
-    <img class="guide-image" src="/img/polkadot-guide/Ambassadors.jpg" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Become an Ambassador</h5>
-            </div>
-  </a>
-  </td>
-</tr>
-
-<br />
+    <p>
+      Become an Ambassador
+      <br />
+      <a href="../docs/ambassadors">» view page</a>
+    </p>
+  </div>
+</div>
 
 ## What is Polkadot?
 
