@@ -7,6 +7,13 @@ keywords: [grants program, grants, funding]
 slug: ../grants
 ---
 
+:::info Decentralized Futures Programme
+
+Please see the [Decentralized Futures Programme](./decentralized-futures.md) before submitting any
+application to the Grants Programme.
+
+:::
+
 ## Web3 Foundation Grants
 
 Web3 Foundation offers grants for open source software development and research around Substrate,
