@@ -11,7 +11,7 @@ import RPC from "./../../components/RPC-Connection";
 
 :::info Learn about Parachain and Bridges
 
-To fully follow the material on this page, it is recommended to be familiar with the concepts of the [Parachain](https://wiki.polkadot.network/docs/learn-parachains) and [Bridges](./learn-bridges.md).
+To fully follow the material on this page, it is recommended to be familiar with the concepts of [Parachain](./learn-parachains) and [Bridges](./learn-bridges.md).
 
 :::
 
