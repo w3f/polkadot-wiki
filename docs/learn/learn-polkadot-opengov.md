@@ -583,8 +583,8 @@ The Polkadot Technical Fellowship resides on the
 [Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)
 parachain and maintains the [Polkadot Fellows](https://github.com/polkadot-fellows) repository. The
 fellowship also has its own governance model with multiple tracks with approval and support
-parameters, where the votes are weighted by the rank of the member.  
-The fellowship governance is primarily used for its membership management,
+parameters, where the votes are weighted by the rank of the member. The fellowship governance is
+primarily used for its membership management,
 [approving RFCs](https://github.com/polkadot-fellows/RFCs) and whitelisting Polkadot OpenGov
 proposals.
 
@@ -660,7 +660,7 @@ For more information about how to submit a whitelisted proposal see the
 
 :::info Polkadot-JS Guides
 
-If you are an advanced user, see the
-[Polkadot-JS guides about OpenGov](./learn-guides-polkadot-opengov.md).
+If you are an advanced user, see the Polkadot-JS guides about
+[OpenGov](./learn-guides-polkadot-opengov.md) and [Fellowships](./learn-guides-fellowship.md).
 
 :::
