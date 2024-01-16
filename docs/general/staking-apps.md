@@ -45,9 +45,7 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
       <img src="https://img.youtube.com/vi/F59N3YKYCRs/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Nominate
-      <br />
-      <a href="https://youtu.be/F59N3YKYCRs?feature=shared">» view video</a>
+      <a href="https://youtu.be/F59N3YKYCRs?feature=shared">Stake your DOT</a>
     </p>
   </div>
   <div className="col text--center">
