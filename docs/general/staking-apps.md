@@ -39,54 +39,61 @@ You can find more information about the Polkadot staking dashboard on the dedica
 
 Below a list of video tutorial about the Polkadot Staking Dashboard.
 
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="https://youtu.be/F59N3YKYCRs?feature=shared">  
-      <img class="guide-image" src="https://img.youtube.com/vi/F59N3YKYCRs/0.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Nominate</h5>
-              </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="https://youtu.be/F59N3YKYCRs?feature=shared">
+      <img src="https://img.youtube.com/vi/F59N3YKYCRs/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="https://youtu.be/dDIG7QAApig?feature=shared">  
-      <img class="guide-image" src="https://img.youtube.com/vi/dDIG7QAApig/0.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Join a Nomination Pool</h5>
-              </div>
+    <p>
+      Nominate
+      <br />
+      <a href="https://youtu.be/F59N3YKYCRs?feature=shared">» view video</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://youtu.be/dDIG7QAApig?feature=shared">
+      <img src="https://img.youtube.com/vi/dDIG7QAApig/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-  <a class="guide-link" href="https://youtu.be/hvXLc4H7rA4?feature=shared">  
-    <img class="guide-image" src="https://img.youtube.com/vi/hvXLc4H7rA4/0.jpg" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Staking Dashboard Walkthrough</h5>
-            </div>
-  </a>
-  </td>
-</tr>
+    <p>
+      Join a Nomination Pool
+      <br />
+      <a href="https://youtu.be/dDIG7QAApig?feature=shared">» view video</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://youtu.be/hvXLc4H7rA4?feature=shared">
+      <img src="https://img.youtube.com/vi/hvXLc4H7rA4/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Staking Dashboard Walkthrough
+      <br />
+      <a href="https://youtu.be/hvXLc4H7rA4?feature=shared">» view video</a>
+    </p>
+  </div>
+</div>
 
-<br />
-
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="https://youtu.be/58pIe8tt2o4?feature=shared">  
-      <img class="guide-image" src="https://img.youtube.com/vi/58pIe8tt2o4/0.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">After Staking</h5>
-              </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="https://youtu.be/58pIe8tt2o4?feature=shared">
+      <img src="https://img.youtube.com/vi/58pIe8tt2o4/0.jpg" width="300" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="https://youtu.be/aTFWhwy_Mxg?feature=shared">  
-      <img class="guide-image" src="https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Create, Manage & Destroy Pools</h5>
-              </div>
+    <p>
+      After Staking
+      <br />
+      <a href="https://youtu.be/58pIe8tt2o4?feature=shared">» view video</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://youtu.be/aTFWhwy_Mxg?feature=shared">
+      <img src="https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg" width="300" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  
-</tr>
+    <p>
+      Create, Manage & Destroy Pools
+      <br />
+      <a href="https://youtu.be/aTFWhwy_Mxg?feature=shared">» view video</a>
+    </p>
+  </div>
+</div>
 
 ## Sub.ID
 
