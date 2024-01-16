@@ -24,19 +24,6 @@ The Wiki has three main sections:
 
 :::
 
-<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
-  <a href="https://github.com/w3f/polkadot-wiki">
-    <img style={{ height: 30, marginRight: 10 }} src="https://img.shields.io/badge/click-white.svg?logo=GitHub&logoColor=black&label=Polkadot Wiki&labelColor=white&color=blue" />
-  </a>
-  <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8">
-    <img style={{ height: 30, marginRight: 10 }} src="https://img.shields.io/badge/click-white.svg?logo=YouTube&logoColor=eb3f25&label=Technical Explainers Videos%20YouTube&labelColor=white&color=blue" />
-  </a>
-</div>
-<br/>
-<a href="https://polkadot.network">
-    <img style={{ height: 35}} src="/img/badges/built-with-love-for-polkadot.svg" />
-</a>
-
 ## Interact with Polkadot
 
 <div className="row">
@@ -45,9 +32,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Account.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Accounts
-      <br />
-      <a href="../docs/learn-accounts">» view page</a>
+      <a href="../docs/learn-accounts">Accounts</a>
     </p>
   </div>
   <div className="col text--center">
@@ -55,9 +40,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Transfer.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Transactions
-      <br />
-      <a href="../docs/learn-transactions">» view page</a>
+      <a href="../docs/learn-transactions">Transactions</a>
     </p>
   </div>
   <div className="col text--center">
@@ -65,9 +48,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Stake.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Staking
-      <br />
-      <a href="../docs/learn-staking">» view page</a>
+      <a href="../docs/learn-staking">Staking</a>
     </p>
   </div>
 </div>
@@ -78,9 +59,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Council.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Polkadot OpenGov
-      <br />
-      <a href="../docs/learn-polkadot-opengov">» view page</a>
+      <a href="../docs/learn-polkadot-opengov">Polkadot OpenGov</a>
     </p>
   </div>
   <div className="col text--center">
@@ -88,9 +67,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Proxy.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Proxy Accounts
-      <br />
-      <a href="../docs/learn-proxies">» view page</a>
+      <a href="../docs/learn-proxies">Proxy Accounts</a>
     </p>
   </div>
   <div className="col text--center">
@@ -98,9 +75,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Identity.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Account Identity
-      <br />
-      <a href="../docs/learn-identity">» view page</a>
+      <a href="../docs/learn-identity">Account Identity</a>
     </p>
   </div>
 </div>
@@ -111,9 +86,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Parachain.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Parachains
-      <br />
-      <a href="../docs/learn-parachains">» view page</a>
+      <a href="../docs/learn-parachains">Parachains</a>
     </p>
   </div>
   <div className="col text--center">
@@ -121,9 +94,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Bridges.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Bridges
-      <br />
-      <a href="../docs/learn-bridges">» view page</a>
+      <a href="../docs/learn-bridges">Bridges</a>
     </p>
   </div>
   <div className="col text--center">
@@ -131,9 +102,7 @@ The Wiki has three main sections:
       <img src="/img/polkadot-guide/Ambassadors.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Become an Ambassador
-      <br />
-      <a href="../docs/ambassadors">» view page</a>
+      <a href="../docs/ambassadors">Become an Ambassador</a>
     </p>
   </div>
 </div>
@@ -164,9 +133,7 @@ ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
       <img src="https://img.youtube.com/vi/_-k0xkooSlA/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Polkadot: Are You Ready to Start Building?
-      <br />
-      <a href="https://www.youtube.com/watch?v=_-k0xkooSlA">» view video</a>
+      <a href="https://www.youtube.com/watch?v=_-k0xkooSlA">Polkadot: Are You Ready to Start Building?</a>
     </p>
   </div>
   <div className="col text--center">
@@ -174,9 +141,7 @@ ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
       <img src="https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      What is Polkadot?
-      <br />
-      <a href="https://www.youtube.com/watch?v=BQ60bTU1bPg">» view video</a>
+      <a href="https://www.youtube.com/watch?v=BQ60bTU1bPg">What is Polkadot?</a>
     </p>
   </div>
 </div>
