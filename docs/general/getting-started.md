@@ -26,92 +26,86 @@ The Wiki has three main sections:
 
 ## Interact with Polkadot
 
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-accounts">
-      <img src="/img/polkadot-guide/Account.jpg" alt="Drawing" width="250" height="150"/>
-        <div class="cards-body">
-            <h5 class="cards-title">Accounts</h5>
-        </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-accounts">
+      <img src="/img/polkadot-guide/Account.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-transactions">
-      <img src="/img/polkadot-guide/Transfer.jpg" alt="Drawing" width="250" height="150"/>
-        <div class="cards-body">
-            <h5 class="cards-title">Transactions</h5>
-        </div>
+    <p>
+      <a href="../docs/learn-accounts">Accounts</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-transactions">
+      <img src="/img/polkadot-guide/Transfer.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-staking">
-      <img class="guide-image" src="/img/polkadot-guide/Stake.jpg" alt="Drawing" width="250" height="150" />
-              <div class="cards-body">
-                  <h5 class="cards-title">Staking</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-transactions">Transactions</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-staking">
+      <img src="/img/polkadot-guide/Stake.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-</tr>
+    <p>
+      <a href="../docs/learn-staking">Staking</a>
+    </p>
+  </div>
+</div>
 
-<br />
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-polkadot-opengov">
+      <img src="/img/polkadot-guide/Council.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="../docs/learn-polkadot-opengov">Polkadot OpenGov</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-proxies">
+      <img src="/img/polkadot-guide/Proxy.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="../docs/learn-proxies">Proxy Accounts</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-identity">
+      <img src="/img/polkadot-guide/Identity.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="../docs/learn-identity">Account Identity</a>
+    </p>
+  </div>
+</div>
 
-<tr class="cards-container">
-<td>
-    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
-      <img class="guide-image" src="/img/polkadot-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Polkadot OpenGov</h5>
-              </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-parachains">
+      <img src="/img/polkadot-guide/Parachain.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/polkadot-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Proxy Accounts</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-parachains">Parachains</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-bridges">
+      <img src="/img/polkadot-guide/Bridges.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/polkadot-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                 <h5 class="cards-title">Account Identity</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-bridges">Bridges</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/ambassadors">
+      <img src="/img/polkadot-guide/Ambassadors.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-parachains">  
-      <img class="guide-image" src="/img/polkadot-guide/Parachain.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Parachains</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-bridges">  
-      <img class="guide-image" src="/img/polkadot-guide/Bridges.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Bridges</h5>
-              </div>
-    </a>
-  </td>
-  <td>
-  <a class="guide-link" href="../docs/ambassadors">  
-    <img class="guide-image" src="/img/polkadot-guide/Ambassadors.jpg" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Become an Ambassador</h5>
-            </div>
-  </a>
-  </td>
-</tr>
-
-<br />
+    <p>
+      <a href="../docs/ambassadors">Become an Ambassador</a>
+    </p>
+  </div>
+</div>
 
 ## What is Polkadot?
 
@@ -133,11 +127,24 @@ specific to their use cases, and for those applications to communicate securely 
 other value proposition. The trustless cooperation between applications is what makes Polkadot an
 ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
 
-See the videos below to know more about Polkadot.
-
-[![Polkadot](https://img.youtube.com/vi/_-k0xkooSlA/0.jpg)](https://www.youtube.com/watch?v=_-k0xkooSlA)
-
-[![Introduction to Polkadot](https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg)](https://www.youtube.com/watch?v=BQ60bTU1bPg)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=_-k0xkooSlA">
+      <img src="https://img.youtube.com/vi/_-k0xkooSlA/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=_-k0xkooSlA">Polkadot: Are You Ready to Start Building?</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=BQ60bTU1bPg">
+      <img src="https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=BQ60bTU1bPg">What is Polkadot?</a>
+    </p>
+  </div>
+</div>
 
 ## What can I do with my DOT?
 

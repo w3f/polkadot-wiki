@@ -25,7 +25,16 @@ them and voting on them.
 See the video tutorial below to learn how you can create a bounty and submit it for approval through
 an OpenGov referendum.
 
-[![Submit a Bounty](https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg)](https://www.youtube.com/watch?v=8Cft1-8RWmk)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">
+      <img src="https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">Submit a Bounty</a>
+    </p>
+  </div>
+</div>
 
 When you add a bounty, this will show as "proposed" in the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Once the community approves your bounty
@@ -52,7 +61,16 @@ Once your bounty is shown as "funded" on the main
 video tutorial below to learn how you can add a curator to a bounty and submit it for approval
 through an OpenGov referendum.
 
-[![Assign Curator to a Bounty](https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg)](https://www.youtube.com/watch?v=TM7vk3oP9IA)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=TM7vk3oP9IA">
+      <img src="https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=TM7vk3oP9IA">Assign Curator to a Bounty</a>
+    </p>
+  </div>
+</div>
 
 Once your OpenGov referendum has been approved by the community and served the required
 [spending period](../general/glossary.md#spend-period), the bounty will still show as "funded" on
@@ -78,7 +96,16 @@ The video will show how to create and award a child bounty using a batch call. W
 proposing and approving curator candidacy for the child bounty. The calls can be executed
 separately, depending on the process curators consider appropriate for their bounty.
 
-[![Create and Award Child Bounties](https://img.youtube.com/vi/mLpvx0OQoyM/0.jpg)](https://www.youtube.com/watch?v=mLpvx0OQoyM)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=mLpvx0OQoyM">
+      <img src="https://img.youtube.com/vi/mLpvx0OQoyM/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=mLpvx0OQoyM">Create and Award Child Bounties</a>
+    </p>
+  </div>
+</div>
 
 Note that once a child bounty is awarded, awardees need to wait for the
 {{ polkadot: 8 :polkadot }}{{ kusama: 4 :kusama }}-day delay to be complete before claiming the
@@ -99,4 +126,13 @@ delay elapsed, follow the guidelines in the video tutorial below to learn how to
 bounty reward. Note that the extrinsic to claim the child bounty reward is permissionless, and
 anyone can initiate the claim on behalf of the beneficiary.
 
-[![Claim Child Bounty Reward](https://img.youtube.com/vi/db82aHgy23c/0.jpg)](https://www.youtube.com/watch?v=db82aHgy23c)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=db82aHgy23c">
+      <img src="https://img.youtube.com/vi/db82aHgy23c/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=db82aHgy23c">Claim Child Bounty Reward</a>
+    </p>
+  </div>
+</div>
