@@ -19,7 +19,18 @@ If you are here for guidance on how to contribute to a crowdloan, watch the vide
 
 :::
 
-[![Crowdloans on Polkadot JS](https://img.youtube.com/vi/AA9mPANmzmU/0.jpg)](https://youtu.be/AA9mPANmzmU)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://youtu.be/AA9mPANmzmU">
+      <img src="https://img.youtube.com/vi/AA9mPANmzmU/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Crowdloans on Polkadot-JS
+      <br />
+      <a href="https://youtu.be/AA9mPANmzmU">» view video</a>
+    </p>
+  </div>
+</div>
 
 :::note Testing on Rococo
 
