@@ -38,9 +38,7 @@ Vault app.
       <img src="https://img.youtube.com/vi/IG_RGLsb2g0/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      How to Use Polkadot Vault
-      <br />
-      <a href="https://www.youtube.com/watch?v=IG_RGLsb2g0">» view video</a>
+      <a href="https://www.youtube.com/watch?v=IG_RGLsb2g0"> How to Use Polkadot Vault</a>
     </p>
   </div>
 </div>
