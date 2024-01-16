@@ -55,9 +55,7 @@ copied, and so on.
       <img src="https://img.youtube.com/vi/DNU0p5G0Gqc/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Polkadot-JS Browser Extension Tutorial
-      <br />
-      <a href="https://www.youtube.com/watch?v=DNU0p5G0Gqc">» view video</a>
+      <a href="https://www.youtube.com/watch?v=DNU0p5G0Gqc">Polkadot-JS Browser Extension Tutorial</a>
     </p>
   </div>
 </div>

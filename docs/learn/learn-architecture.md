@@ -130,9 +130,7 @@ whiteboard interview with W3F researcher Alistair Stewart:
       <img src="https://img.youtube.com/vi/xBfC6uTjvbM/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Architecture Overview
-      <br />
-      <a href="https://www.youtube.com/watch?v=xBfC6uTjvbM">» view video</a>
+      <a href="https://www.youtube.com/watch?v=xBfC6uTjvbM">Architecture Overview</a>
     </p>
   </div>
 </div>

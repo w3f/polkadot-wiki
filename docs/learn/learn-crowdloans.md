@@ -25,9 +25,7 @@ If you are here for guidance on how to contribute to a crowdloan, watch the vide
       <img src="https://img.youtube.com/vi/AA9mPANmzmU/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Crowdloans on Polkadot-JS
-      <br />
-      <a href="https://youtu.be/AA9mPANmzmU">» view video</a>
+      <a href="https://youtu.be/AA9mPANmzmU">Crowdloans on Polkadot-JS</a>
     </p>
   </div>
 </div>

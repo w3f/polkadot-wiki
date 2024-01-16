@@ -31,9 +31,7 @@ an OpenGov referendum.
       <img src="https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Submit a Bounty
-      <br />
-      <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">» view video</a>
+      <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">Submit a Bounty</a>
     </p>
   </div>
 </div>
@@ -69,9 +67,7 @@ through an OpenGov referendum.
       <img src="https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Assign Curator to a Bounty
-      <br />
-      <a href="https://www.youtube.com/watch?v=TM7vk3oP9IA">» view video</a>
+      <a href="https://www.youtube.com/watch?v=TM7vk3oP9IA">Assign Curator to a Bounty</a>
     </p>
   </div>
 </div>
@@ -106,9 +102,7 @@ separately, depending on the process curators consider appropriate for their bou
       <img src="https://img.youtube.com/vi/mLpvx0OQoyM/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Create and Award Child Bounties
-      <br />
-      <a href="https://www.youtube.com/watch?v=mLpvx0OQoyM">» view video</a>
+      <a href="https://www.youtube.com/watch?v=mLpvx0OQoyM">Create and Award Child Bounties</a>
     </p>
   </div>
 </div>
@@ -138,9 +132,7 @@ anyone can initiate the claim on behalf of the beneficiary.
       <img src="https://img.youtube.com/vi/db82aHgy23c/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Claim Child Bounty Reward
-      <br />
-      <a href="https://www.youtube.com/watch?v=db82aHgy23c">» view video</a>
+      <a href="https://www.youtube.com/watch?v=db82aHgy23c">Claim Child Bounty Reward</a>
     </p>
   </div>
 </div>

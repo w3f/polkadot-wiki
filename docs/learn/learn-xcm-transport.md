@@ -108,9 +108,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
       <img src="https://img.youtube.com/vi/tOnzk4AROUY/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      XCMP Explained
-      <br />
-      <a href="https://www.youtube.com/watch?v=tOnzk4AROUY">» view video</a>
+      <a href="https://www.youtube.com/watch?v=tOnzk4AROUY">XCMP Explained</a>
     </p>
   </div>
 </div>

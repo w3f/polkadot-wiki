@@ -163,9 +163,7 @@ Watch the video below on how to get started on Westend.
       <img src="https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Testing Polkadot features on Westend
-      <br />
-      <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">» view video</a>
+      <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">Testing Polkadot features on Westend</a>
     </p>
   </div>
 </div>

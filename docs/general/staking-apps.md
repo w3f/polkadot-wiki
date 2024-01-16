@@ -53,9 +53,7 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
       <img src="https://img.youtube.com/vi/dDIG7QAApig/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Join a Nomination Pool
-      <br />
-      <a href="https://youtu.be/dDIG7QAApig?feature=shared">» view video</a>
+      <a href="https://youtu.be/dDIG7QAApig?feature=shared">Join a Nomination Pool</a>
     </p>
   </div>
   <div className="col text--center">
@@ -63,9 +61,7 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
       <img src="https://img.youtube.com/vi/hvXLc4H7rA4/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Staking Dashboard Walkthrough
-      <br />
-      <a href="https://youtu.be/hvXLc4H7rA4?feature=shared">» view video</a>
+      <a href="https://youtu.be/hvXLc4H7rA4?feature=shared">Staking Dashboard Walkthrough</a>
     </p>
   </div>
 </div>
@@ -76,9 +72,7 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
       <img src="https://img.youtube.com/vi/58pIe8tt2o4/0.jpg" width="300" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      After Staking
-      <br />
-      <a href="https://youtu.be/58pIe8tt2o4?feature=shared">» view video</a>
+      <a href="https://youtu.be/58pIe8tt2o4?feature=shared">After Staking</a>
     </p>
   </div>
   <div className="col text--center">
@@ -86,9 +80,7 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
       <img src="https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg" width="300" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Create, Manage & Destroy Pools
-      <br />
-      <a href="https://youtu.be/aTFWhwy_Mxg?feature=shared">» view video</a>
+      <a href="https://youtu.be/aTFWhwy_Mxg?feature=shared">Create, Manage & Destroy Pools</a>
     </p>
   </div>
 </div>

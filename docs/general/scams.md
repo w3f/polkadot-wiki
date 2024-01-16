@@ -25,7 +25,7 @@ for hackers and malicious actors. Check out the wiki doc on
       <img src="https://img.youtube.com/vi/ARsdXZycJAg/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      <a href="https://www.youtube.com/watch?v=ARsdXZycJAg"> Stay Safe in Polkadot</a>
+      <a href="https://www.youtube.com/watch?v=ARsdXZycJAg">Stay Safe in Polkadot</a>
     </p>
   </div>
 </div>

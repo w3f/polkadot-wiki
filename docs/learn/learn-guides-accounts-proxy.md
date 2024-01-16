@@ -21,9 +21,7 @@ account. The video below contains more information about using proxies.
       <img src="https://img.youtube.com/vi/1tcygkq52tU/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Proxy Accounts Tutorial
-      <br />
-      <a href="https://www.youtube.com/watch?v=1tcygkq52tU">» view video</a>
+      <a href="https://www.youtube.com/watch?v=1tcygkq52tU">Proxy Accounts Tutorial</a>
     </p>
   </div>
 </div>

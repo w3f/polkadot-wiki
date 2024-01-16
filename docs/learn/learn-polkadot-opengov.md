@@ -38,9 +38,7 @@ See the video tutorial below to easily delegate your votes to somebody else usin
       <img src="https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      Delegation Dashboard Tutorial
-      <br />
-      <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">» view video</a>
+      <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">Delegation Dashboard Tutorial</a>
     </p>
   </div>
 </div>

@@ -90,9 +90,7 @@ KodaDot.
       <img src="https://img.youtube.com/vi/SKdx4pTgL04/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      KodaDot Tutorial on Minting NFTs
-      <br />
-      <a href="https://www.youtube.com/watch?v=SKdx4pTgL04">» view video</a>
+      <a href="https://www.youtube.com/watch?v=SKdx4pTgL04">KodaDot Tutorial on Minting NFTs</a>
     </p>
   </div>
 </div>
