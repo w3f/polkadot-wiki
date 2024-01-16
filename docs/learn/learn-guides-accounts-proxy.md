@@ -15,7 +15,18 @@ allowed to perform a limited amount of actions related to specific
 [substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another
 account. The video below contains more information about using proxies.
 
-[![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=1tcygkq52tU">
+      <img src="https://img.youtube.com/vi/1tcygkq52tU/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Proxy Accounts Tutorial
+      <br />
+      <a href="https://www.youtube.com/watch?v=1tcygkq52tU">» view video</a>
+    </p>
+  </div>
+</div>
 
 :::tip Know how to check the calls and pallets accessible by proxies
 
