@@ -157,7 +157,18 @@ Another way is to use our web-based
 You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network.
 Watch the video below on how to get started on Westend.
 
-[![Testing Polkadot features on Westend](https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg)](https://www.youtube.com/watch?v=0ji0ccZyb3k)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">
+      <img src="https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Testing Polkadot features on Westend
+      <br />
+      <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">» view video</a>
+    </p>
+  </div>
+</div>
 
 | Unit            | Decimal Places | Conversion to Planck   | Conversion to WND  |
 | --------------- | -------------- | ---------------------- | ------------------ |
