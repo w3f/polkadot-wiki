@@ -32,7 +32,18 @@ To make OpenGov multi-role delegation easy and intuitive,
 displays the list of delegates and their details. The video tutorial below walks through the
 features of the Delegation Dashboard and shows how to perform multi-role delegation.
 
-[![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">
+      <img src="https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      Delegation Dashboard Tutorial
+      <br />
+      <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">» view video</a>
+    </p>
+  </div>
+</div>
 
 For detailed instructions on how to delegate your voting power using dashboard, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power).
