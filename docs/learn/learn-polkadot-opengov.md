@@ -319,6 +319,83 @@ approval, and a minimum [enactment](#enactment) periods will be predetermined on
 For detailed information about origin and tracks, and parameter values in Kusama, see
 [this page](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
 
+### Voluntary Locking (Conviction Voting)
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
+locking that allows token holders to increase their voting power by declaring how long they are
+willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
+by the following formula:
+
+```
+votes = tokens * conviction_multiplier
+```
+
+The conviction multiplier increases the vote multiplier by one every time the number of lock periods
+double.
+
+<VLTable />
+
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
+total), and one lock period equals
+{{ polkadot: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
+days. For additional information regarding the timeline of governance events, check out the
+governance section on the
+{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
+
+:::info do votes stack?
+
+You can use the same number of tokens to vote on different referenda. Votes with conviction do not
+stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
+and C with 2x conviction you would have 10 votes on all those referenda and 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
+(i.e. {{ polkadot: two weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
+countdown starting when the last referendum you voted on ends (assuming you are on the winning
+side). If you voted with conviction on referendum and then a week later voted on another one with
+the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
+extended by a week (always assuming you are on the winning side).
+
+:::
+
+:::info Staked tokens can be used in governance
+
+While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
+only prohibited from transferring these tokens to another account.
+
+:::
+
+Votes are always "counted" at the same time (at the end of the voting period), no matter for how
+long the tokens are locked.
+
+See below an example that shows how voluntary locking works.
+
+Peter: Votes `No` with
+{{ polkadot: 10 DOT for a 32-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
+=> {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+
+Logan: Votes `Yes` with
+{{ polkadot: 20 DOT for one week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
+{{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+
+Kevin: Votes `Yes` with
+{{ polkadot: 15 DOT for a 2-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
+=> {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+
+Even though combined both Logan and Kevin vote with more
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
+is less than Peter, leading to their voting power counting as less.
+
+:::info Conviction Voting Locks created during Gov 1
+
+Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
+in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
+existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
+Delegations under Governance v1 will need to be re-issued under OpenGov.
+
+:::
+
+
+
 ### Approval and Support
 
 :::info Adaptive Quorum Biasing is deprecated
@@ -422,80 +499,6 @@ Note that to successfully cast votes you need to have the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
 to pay for transaction fees.
 
-### Voluntary Locking
-
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
-locking that allows token holders to increase their voting power by declaring how long they are
-willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
-by the following formula:
-
-```
-votes = tokens * conviction_multiplier
-```
-
-The conviction multiplier increases the vote multiplier by one every time the number of lock periods
-double.
-
-<VLTable />
-
-The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals
-{{ polkadot: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
-days. For additional information regarding the timeline of governance events, check out the
-governance section on the
-{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
-
-:::info do votes stack?
-
-You can use the same number of tokens to vote on different referenda. Votes with conviction do not
-stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
-and C with 2x conviction you would have 10 votes on all those referenda and 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
-(i.e. {{ polkadot: two weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
-countdown starting when the last referendum you voted on ends (assuming you are on the winning
-side). If you voted with conviction on referendum and then a week later voted on another one with
-the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
-extended by a week (always assuming you are on the winning side).
-
-:::
-
-:::info Staked tokens can be used in governance
-
-While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
-only prohibited from transferring these tokens to another account.
-
-:::
-
-Votes are always "counted" at the same time (at the end of the voting period), no matter for how
-long the tokens are locked.
-
-See below an example that shows how voluntary locking works.
-
-Peter: Votes `No` with
-{{ polkadot: 10 DOT for a 32-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
-=> {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
-
-Logan: Votes `Yes` with
-{{ polkadot: 20 DOT for one week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
-{{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
-
-Kevin: Votes `Yes` with
-{{ polkadot: 15 DOT for a 2-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
-=> {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
-
-Even though combined both Logan and Kevin vote with more
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
-is less than Peter, leading to their voting power counting as less.
-
-:::info Conviction Voting Locks created during Gov 1
-
-Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
-in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
-existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
-Delegations under Governance v1 will need to be re-issued under OpenGov.
-
-:::
 
 ### Multirole Delegation
 
