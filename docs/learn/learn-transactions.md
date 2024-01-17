@@ -159,8 +159,6 @@ Block producers prioritize transactions based on each transaction's total fee. S
 the fee will go to the block producer, producers will include the transactions with the highest fees
 to maximize their reward.
 
-## Transaction Fees
-
 ---
 
 :::info Polkadot-JS Guides
