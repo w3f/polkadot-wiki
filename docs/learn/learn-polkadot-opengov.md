@@ -431,12 +431,12 @@ satisfy the approval and support criteria for the **Confirmation Period**.
 For example, let us consider a hypothetical example where the total active issuance is {{ polkadot: 100 DOT :polkadot }}{{ kusama: 100 KSM :kusama }}
 - An account A votes "Aye" with 10 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} with 4x conviction
 - An account B votes "Nay" with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} with 2x conviction 
-- An account C votes "abstain" with 20 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. (no conviction can be applied on "abstain" votes)
+- An account C votes "Abstain" with 20 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. (no conviction can be applied on "Abstain" votes)
 
 In this scenario, only 35 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from the total active issuance participated in voting on the
 referendum. Now, let us calculate the Approval and Support values for that referendum. 
 
-- Approval is calculated as (Aye') / (Aye' + Nay')  where "Aye'" and "Nay'" are the votes after 
+- Approval is calculated as (Aye') / (Aye' + Nay')  where Aye' and Nay' are the votes after 
 the conviction multiplier is applied. Hence, Approval = (10 x 4) / (10 x 4 + 5 x 2) = 40/50 which is 80%.
 - Support is calculated as (Aye + Abstain) / (total active issuance), where "Aye" and "Abstain" are the votes without the conviction multiplier.
   Hence,  Support = (10 + 20) / 100 which is 30%.
