@@ -29,7 +29,7 @@ Ensuring secure cross-chain communication involves the meticulous verification o
 
 Due to the complexity and expensiveness of the onchain verification process, in coprocessor model, the computation is performed off-chain and the outcomes of the execution, along with cryptographic proofs validating their accuracy, are subsequently presented on-chain.
 
-Expanding more about the coprocessor model, it has been applied in other solutions of offloading cryptographic computation as well, particularly, **SNARK coprocessor model**.
+Expanding more about the coprocessor model, it has been applied in other solutions of offloading cryptographic computation as well, particularly, [**Zero-knowledge (ZK) coprocessor**](https://orochi.network/blog/Exploring-ZK-Coprocessor-What-Comes-Next) or [SNARK circuit](https://www.di.ens.fr/~nitulesc/files/Survey-SNARKs.pdf).
 
 ### Parachain as Coprocessors
 
@@ -41,7 +41,7 @@ Hence, an additional layer of security is provided, allowing Hyperbridge to dete
 
 ### Interoperable State Machine Protocol (ISMP)
 
-Interoperable State Machine Protocol (ISMP) provides a familiar HTTP-like API for developers who want to make cross-chain requests to trigger certain logic on the counterparty chain. It allows making POST requests to send arbitrary data to connected chains, as well as GET requests to read the storage (verified through state proofs) of applications on connected chains.
+[Interoperable State Machine Protocol (ISMP)](https://blog.polytope.technology/introducing-hyperbridge-interoperability-coprocessor) provides a familiar HTTP-like API for developers who want to make cross-chain requests to trigger certain logic on the counterparty chain. It allows making POST requests to send arbitrary data to connected chains, as well as GET requests to read the storage (verified through state proofs) of applications on connected chains.
 
 In addition to facilitating cross-chain message passing among connected chains, ISMP also serves as a synchronisation primitive across Hyperbridge's internal state machines. This enables its parachain cores to communicate with each other and delegate tasks.
 
@@ -49,9 +49,9 @@ In addition to facilitating cross-chain message passing among connected chains, 
 
 Underlying technologies of the Hyperbridge is integrated with:
 
-- **PLONK verifier**
-- [BEEFY consensus](https://spec.polkadot.network/sect-finality#sect-grandpa-beefy)
-- The Barretenberg backend
+- [PLONK verifier](https://eprint.iacr.org/2019/953.pdf): The PLONK Verifier within Hyperbridge can be likened to a sophisticated security apparatus. It operates akin to an expert detective, meticulously ensuring the legitimacy of every transaction without compromising private details. Continuously enhancing its capabilities, particularly with advancements like UltraPLONK, this integral component plays a pivotal role in maintaining the utmost integrity and confidentiality of cross-chain communications.
+- [BEEFY consensus](https://spec.polkadot.network/sect-finality#sect-grandpa-beefy): The BEEFY (Bridge Efficiency Enabling Finality Yielder) protocol functions as a complementary system to GRANDPA, specifically designed to facilitate efficient bridging between the Polkadot network's relay chain and external, isolated blockchains like Ethereum. Notably, BEEFY addresses the challenge of interoperability with blockchains that were not initially constructed to integrate seamlessly with the Polkadot interchain framework.
+- The Barretenberg backend: Within the realm of Hyperbridge, Barretenberg functions as a powerhouse engine, adeptly managing intricate mathematical computations. Serving as the backend infrastructure, it guarantees the swift, secure, and reliable execution of all cryptographic operations within the Hyperbridge ecosystem.
 
 ## Terminology
 
@@ -80,4 +80,4 @@ The information provided here is subject to change; keep up to date using the fo
 - [The Puzzle of Blockchain Interoperability](https://twitter.com/stakenode_dev/status/1744653040764817675)
 - [RFC-1: Agile Coretime](https://github.com/polkadot-fellows/RFCs/blob/6f29561a4747bbfd95307ce75cd949dfff359e39/text/0001-agile-coretime.md) - Agile periodic-sale-based model for assigning Coretime on the Polkadot Ubiquitous Computer.
 - [ISMP, The Endgame for Parachain Interoperability | Sub0 2023](https://www.youtube.com/watch?v=MCOAwooWecs)
-
+- [Research Summary: PlonK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge](https://www.smartcontractresearch.org/t/research-summary-plonk-permutations-over-lagrange-bases-for-oecumenical-noninteractive-arguments-of-knowledge/382)
