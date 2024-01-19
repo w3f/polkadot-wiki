@@ -9,15 +9,20 @@ slug: ../learn-hyperbridge
 
 :::info Learn about Parachain and Bridges
 
-To fully follow the material on this page, it is recommended to be familiar with the concepts of
-[Parachain](./learn-parachains) and [Bridges](./learn-bridges.md).
+To follow the material on this page, it is recommended to be familiar with the concepts of
+[Parachains](./learn-parachains) and [Bridges](./learn-bridges.md).
 
 :::
 
 Interoperability is the core vision of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} technology. Through years of
 blockchain development, much effort has been put into making a secure interoperability solution
-between blockchains.
+between blockchains. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} achieves secure
+interoperability through its [Cross-chain messaging (XCM)](./learn-xcm.md) format, and
+[Cross-chain messaging passing (XCMP)](./learn-xcm-transport.md#xcmp-cross-chain-message-passing)
+protocol. However, these solutions work when there is a homogeneous security layer. In the case of
+interaction between chains that do not belong to the same homogenous security layer, bridges are
+needed.
 
 Hyperbridge (short for hyper-scalable bridge) is innovated as a cross-chain solution built as an
 interoperability coprocessor. Hyperbridge is crafted to scale cryptographically secure, consensus,
