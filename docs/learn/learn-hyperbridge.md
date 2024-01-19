@@ -59,8 +59,8 @@ legitimacy of all parachain state transitions safeguarded by the network.
 
 This capability enables the distribution of the validation workload for consensus, state proofs, and
 state transition re-execution across various designated
-[Parachain Cores](https://github.com/polkadot-fellows/RFCs/blob/6f29561a4747bbfd95307ce75cd949dfff359e39/text/0001-agile-coretime.md).
-Hence, Polkadot is utilized by the Hyperbridge as a verifiable computation layer to provide the
+[Parachain Cores](../general/polkadot-direction.md#polkadot-as-a-computational-resource). Hence,
+Polkadot is utilized by Hyperbridge as a verifiable computation layer to provide the
 ["Full Node Security"](https://blog.polytope.technology/introducing-hyperbridge-interoperability-coprocessor#full-node-level-security)
 in cross-chain bridges.
 
