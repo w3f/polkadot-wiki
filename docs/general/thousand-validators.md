@@ -7,6 +7,16 @@ keywords: [thousand validators programme, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
+:::warning 1KV Program is on Hold. Please check this space again in Feb 2024.
+
+Starting in February 2024, Web3 Foundation plans to share a new application form for the community validators that will include a KYC and KYB process.
+Until then, all the applications submitted will be on hold. The 1KV program is undergoing a significant redesign, and the plan is 
+to make it more attractive to participate in, contributing to further decentralization of the Polkadot network (see [Nakamoto coefficients](https://nakaflow.io/)).
+
+If you have any questions, please contact `validators@web3.foundation`
+
+:::
+
 The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use
 the funds held by both organizations to nominate validators in the community.
 
