@@ -227,7 +227,7 @@ After the runtime upgrade with async backing is activated there will be two new 
 
 These need to be set to 3 and 2 respectively in governance for async backing to be enabled.
 
-⚠️ scheduling_lookahead must also be set to 2 along with this change otherwise parachain block times
+⚠️ `scheduling_lookahead` must also be set to 2 along with this change otherwise parachain block times
 will degrade to worse than with sync backing! ⚠️
 
 ## Timing by Block Number
