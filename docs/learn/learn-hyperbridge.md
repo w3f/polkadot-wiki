@@ -16,8 +16,7 @@ To follow the material on this page, it is recommended to be familiar with the c
 
 Interoperability is the core vision of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} technology. Through years of
-blockchain development, much effort has been put into making a secure interoperability solution
-between blockchains. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} achieves secure
+blockchain development, much effort has been put into making a secure interoperability solution between blockchains. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} achieves secure
 interoperability through its [Cross-chain messaging (XCM)](./learn-xcm.md) format, and
 [Cross-chain messaging passing (XCMP)](./learn-xcm-transport.md#xcmp-cross-chain-message-passing)
 protocol. However, these solutions work when there is a homogeneous security layer. In the case of
@@ -47,8 +46,7 @@ model, the computation is performed off-chain. The execution outcomes and crypto
 validating their accuracy are subsequently presented on-chain.
 
 Expanding more about the coprocessor model, it has been applied in other solutions of offloading
-cryptographic computation as well, particularly
-[**Zero-knowledge (ZK) coprocessor**](https://orochi.network/blog/Exploring-ZK-Coprocessor-What-Comes-Next)
+cryptographic computation as well, particularly [**Zero-knowledge (ZK) coprocessor**](https://orochi.network/blog/Exploring-ZK-Coprocessor-What-Comes-Next)
 or [SNARK circuit](https://www.di.ens.fr/~nitulesc/files/Survey-SNARKs.pdf).
 
 ### Parachain as Coprocessors
@@ -58,10 +56,8 @@ By leveraging the cost-effective consensus proofs facilitated by
 legitimacy of all parachain state transitions safeguarded by the network.
 
 This capability enables the distribution of the validation workload for consensus, state proofs, and
-state transition re-execution across various designated
-[Parachain Cores](../general/polkadot-direction.md#polkadot-as-a-computational-resource). Hence,
-Polkadot is utilized by Hyperbridge as a verifiable computation layer to provide the
-["Full Node Security"](https://blog.polytope.technology/introducing-hyperbridge-interoperability-coprocessor#full-node-level-security)
+state transition re-execution across various designated [Parachain Cores](../general/polkadot-direction.md#polkadot-as-a-computational-resource). Hence,
+Polkadot is utilized by Hyperbridge as a verifiable computation layer to provide the ["Full Node Security"](https://blog.polytope.technology/introducing-hyperbridge-interoperability-coprocessor#full-node-level-security)
 in cross-chain bridges.
 
 Hence, an additional layer of security is provided, allowing Hyperbridge to detect and prevent
@@ -70,14 +66,12 @@ Hence, an additional layer of security is provided, allowing Hyperbridge to dete
 ### Interoperable State Machine Protocol (ISMP)
 
 [Interoperable State Machine Protocol (ISMP)](https://blog.polytope.technology/introducing-hyperbridge-interoperability-coprocessor)
-provides a familiar HTTP-like API for developers who want to make cross-chain requests to trigger
-certain logic on the counterparty chain. It allows POST requests to send arbitrary data to connected
+provides a familiar HTTP-like API for developers who want to make cross-chain requests to trigger certain logic on the counterparty chain. It allows POST requests to send arbitrary data to connected
 chains and GET requests to read the storage (verified through state proofs) of applications on
 connected chains.
 
 In addition to facilitating cross-chain message passing among connected chains, ISMP also serves as
-a synchronization primitive across Hyperbridge's internal state machines. This enables its parachain
-cores to communicate with each other and delegate tasks.
+a synchronization primitive across Hyperbridge's internal state machines. This enables its parachain cores to communicate with each other and delegate tasks.
 
 ### Underlying technologies
 
@@ -87,13 +81,11 @@ The underlying technologies of the Hyperbridge are integrated with:
   be likened to a sophisticated security apparatus. It operates like an expert detective,
   meticulously ensuring the legitimacy of every transaction without compromising private details.
   Continuously enhancing its capabilities, particularly with advancements like UltraPLONK, this
-  integral component is pivotal in maintaining the utmost integrity and confidentiality of
-  cross-chain communications.
+  integral component is pivotal in maintaining the utmost integrity and confidentiality of cross-chain communications.
 - [BEEFY consensus](https://spec.polkadot.network/sect-finality#sect-grandpa-beefy): The BEEFY
   (Bridge Efficiency Enabling Finality Yielder) protocol functions as a complementary system to
   GRANDPA, specifically designed to facilitate efficient bridging between the Polkadot network's
-  relay chain and external, isolated blockchains like Ethereum. Notably, BEEFY addresses the
-  interoperability challenge with blockchains not initially constructed to integrate seamlessly with
+  relay chain and external, isolated blockchains like Ethereum. Notably, BEEFY addresses the interoperability challenge with blockchains not initially constructed to integrate seamlessly with
   the Polkadot interchain framework.
 - [The Barretenberg backend](https://github.com/AztecProtocol/barretenberg): Within the realm of
   Hyperbridge, Barretenberg functions as a powerhouse engine, adeptly managing intricate
@@ -106,8 +98,7 @@ The underlying technologies of the Hyperbridge are integrated with:
 
 State proofs are a critical primitive of the blockchain stack that enables things like trustless
 bridges. These off-chain light clients can access on-chain data in a permissionless and secure
-manner and modular blockchain architectures where the execution layer can be decoupled from the
-consensus layer.
+manner and modular blockchain architectures where the execution layer can be decoupled from the consensus layer.
 
 ### Consensus Proofs
 
@@ -119,8 +110,7 @@ Proof-of-Stake, or other consensus algorithms.
 The ultimate goal is to ensure a widespread and verifiable agreement among network participants,
 enhancing the security and reliability of the distributed ledger.
 
-For example, Consensus Proofs in a proof of stake system are given as the signatures over the latest
-block header in the chain from a supermajority (two-thirds plus one) subset of the full authority
+For example, Consensus Proofs in a proof of stake system are given as the signatures over the latest block header in the chain from a supermajority (two-thirds plus one) subset of the full authority
 set.
 
 ## Learn More
