@@ -65,7 +65,7 @@ Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account
 {{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**:
 {{ polkadot: 0 DOT :polkadot }}{{ kusama:  0.04 KSM :kusama }} <br />
 
-Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
+Registrar 1: <br /> **URL**: https://www.chevdor.com/ <br /> **Account**:
 {{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }}
 {{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
 {{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
