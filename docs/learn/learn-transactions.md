@@ -88,9 +88,9 @@ victim of an attack.
 
 In blockchain terms, irreversible transactions are called **mortal** extrinsics (i.e. valid within a
 defined block interval, usually short). However, extrinsics can also be **immortal** (i.e. always
-valid). By default and for security reasons, all extrinsics on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will be mortal, but always checking
-before signing is a good practice.
+valid). By default and [for security reasons](../general/transaction-attacks.md#replay-attack), all
+extrinsics on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will be mortal, but
+always checking before signing is a good practice.
 
 ### Balance Transfers
 
