@@ -214,21 +214,19 @@ This phase consists of changes to your parachain’s runtime that activate async
 
 ![minimum-period](../assets/async/async-backing-minimum-period.png)
 
-6. **Update parameters:** Once the runtime is deployed the final step is to update three parameters!
-
-After the runtime upgrade with async backing is activated there will be two new parameters:
+6. Check parameters: double-check that the relay-chain configuration contains the following three
+   parameters (especially when testing locally e.g. with zombienet):
 
 ```json
 "async_backing_params": {
-    "max_candidate_depth": 0,
-    "allowed_ancestry_len": 0
-}
+    "max_candidate_depth": 3,
+    "allowed_ancestry_len": 2
+},
+"scheduling_lookahead": 2
 ```
 
-These need to be set to 3 and 2 respectively in governance for async backing to be enabled.
-
-⚠️ `scheduling_lookahead` must also be set to 2 along with this change otherwise parachain block times
-will degrade to worse than with sync backing! ⚠️
+⚠️ `scheduling_lookahead` must be set to 2, otherwise parachain block times will degrade to worse
+than with sync backing! ⚠️
 
 ## Timing by Block Number
 
