@@ -77,6 +77,13 @@ Here are some key differences between the different types of extrinsics:
 
 ### Mortal and Immortal Extrinsics
 
+Transactions are usually irreversible once confirmed and added to the blockchain, an immutable
+ledger of all transactions. This feature ensures network integrity by preventing
+[double-spending](https://en.wikipedia.org/wiki/Double-spending). However, it also means users must
+exercise caution, as sending funds to the wrong address or wrong amount cannot be rectified unless
+the recipient cooperates. The permanence of transactions highlights the importance of careful
+verification before sending funds on a blockchain network.
+
 Extrinsics can be mortal (i.e. valid within a defined block interval) or immortal (i.e. always
 valid). By default and for security reasons, all extrinsics will be mortal, but always checking
 before signing is a good practice. This will avoid the chance of being a victim of a replay attack
