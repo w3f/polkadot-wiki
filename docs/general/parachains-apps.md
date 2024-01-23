@@ -66,6 +66,12 @@ Astar Network allows developers to use and build smart contracts in ways they ne
 leading to the realization of truly innovative solutions that can't be replicated in any other
 environment.
 
+- [AirLyft](https://airlyft.one/astarnetwork)
+
+AirLyft is a community engagement platform that enables projects to create onboarding flows, ambassador
+programs & learn to earn quests based on off-chain (social, quizzes, surveys) & on-chain substrate 
+actions that are automatically verified.
+
 - [ArthSwap](https://app.arthswap.org/#/swap)
 
 ArthSwap is a one-stop DeFi protocol that aspires to be the main DEX on the Astar Network. The
