@@ -79,28 +79,18 @@ Here are some key differences between the different types of extrinsics:
 
 Transactions are usually irreversible once confirmed and added to the blockchain, an immutable
 ledger of all transactions. This feature ensures network integrity by preventing
-[double-spending](https://en.wikipedia.org/wiki/Double-spending). However, it also means users must
-exercise caution, as sending funds to the wrong address or wrong amount cannot be rectified unless
-the recipient cooperates. The permanence of transactions highlights the importance of careful
-verification before sending funds on a blockchain network.
+[double-spending](https://en.wikipedia.org/wiki/Double-spending). However, it also means **users
+must exercise caution, as sending funds to the wrong address or wrong amount cannot be rectified
+unless the recipient cooperates.** The permanence of transactions highlights the importance of
+careful verification before sending funds on a blockchain network. It is usually a
+[good practice not to blind sign transactions](../general/transaction-attacks.md) to avoid being
+victim of an attack.
 
-Extrinsics can be mortal (i.e. valid within a defined block interval) or immortal (i.e. always
-valid). By default and for security reasons, all extrinsics will be mortal, but always checking
-before signing is a good practice. This will avoid the chance of being a victim of a replay attack
-after [reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
-
-A replay attack is where past transactions can be replayed (same [balance](#balance-transfers),
-receiver account, etc.) without knowing private keys. This could happen in the context of reaping
-accounts because the reaping process resets the nonce value. If all signed transactions until the
-nonce before the reaping event were immortal, all past transactions can be replayed once the account
-is refunded. There is no need for the attacker to know your private key, valid signatures for those
-past transactions and nonces already exist and are stored on-chain (meaning the private key was
-already used to generate those signatures).
-
-Making a transaction mortal will almost certainly ensure that replay attacks are not possible, with
-the only exception being if the account is reaped and then re-funded shortly after submitting a
-mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
-the specified block interval).
+In blockchain terms, irreversible transactions are called **mortal** extrinsics (i.e. valid within a
+defined block interval, usually short). However, extrinsics can also be **immortal** (i.e. always
+valid). By default and for security reasons, all extrinsics on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will be mortal, but always checking
+before signing is a good practice.
 
 ### Balance Transfers
 
