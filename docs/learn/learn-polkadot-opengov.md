@@ -534,7 +534,7 @@ to pay for transaction fees.
 
 A lock is placed on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} when you vote on an
 Ongoing referendum. If you choose to remove your vote when the referendum is still in the decision period, 
-Your voting lock is removed. Once the referendum is decided (accepted or rejected), your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
+your voting lock is removed. Once the referendum is decided (accepted or rejected), your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
 will be available for unlocking if you voted with zero conviction. The governance app or interface you 
 used for participating in Polkadot OpenGov should show an option to unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
 [Here](https://support.polkadot.network/support/solutions/articles/65000184129) are the instructions to 
