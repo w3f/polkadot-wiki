@@ -77,23 +77,19 @@ Here are some key differences between the different types of extrinsics:
 
 ### Mortal and Immortal Extrinsics
 
-Extrinsics can be mortal (i.e. valid within a defined block interval) or immortal (i.e. always
-valid). By default and for security reasons, all extrinsics will be mortal, but always checking
-before signing is a good practice. This will avoid the chance of being a victim of a replay attack
-after [reaping an account](./learn-accounts.md#existential-deposit-and-reaping).
+Transactions are generally irreversible once confirmed and added to the blockchain, an immutable
+ledger of all transactions. This means users must exercise caution, as mistakes such as sending
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to the wrong address cannot be reverted. The
+permanence of transactions highlights the importance of careful verification before signing any
+transaction on a blockchain network. It is usually a
+[good practice not to blind sign transactions](../general/transaction-attacks.md) to avoid being
+victim of an attack.
 
-A replay attack is where past transactions can be replayed (same [balance](#balance-transfers),
-receiver account, etc.) without knowing private keys. This could happen in the context of reaping
-accounts because the reaping process resets the nonce value. If all signed transactions until the
-nonce before the reaping event were immortal, all past transactions can be replayed once the account
-is refunded. There is no need for the attacker to know your private key, valid signatures for those
-past transactions and nonces already exist and are stored on-chain (meaning the private key was
-already used to generate those signatures).
-
-Making a transaction mortal will almost certainly ensure that replay attacks are not possible, with
-the only exception being if the account is reaped and then re-funded shortly after submitting a
-mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
-the specified block interval).
+In blockchain terms, transactions can be **mortal** extrinsics (i.e. valid within a defined block
+interval, usually short), or **immortal** extrinsics (i.e. always valid). It is possible to make
+immortal transactions on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} However,
+[for security reasons](../general/transaction-attacks.md#replay-attack), it is highly recommended
+not to do so and most wallet software will not allow you to make an immortal extrinsic.
 
 ### Balance Transfers
 
