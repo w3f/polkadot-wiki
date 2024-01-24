@@ -546,7 +546,7 @@ For instance, let's say you voted AYE with 6X conviction on a referendum, and it
 If you voted NAY with 6X conviction on a referendum and it got accepted, then your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 would be ready to be unlocked immediately. Polkadot OpenGov is designed to ensure that only the winning side 
 is mandated to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the losing side can claim 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to their transferable balance on their account.
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance on their account.
 
 ### Multirole Delegation
 
