@@ -548,6 +548,10 @@ would be ready to be unlocked immediately. Polkadot OpenGov is designed to ensur
 is mandated to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the losing side can claim 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance on their account.
 
+For unlocking generic account locks, navigate to [this section.](./learn-guides-accounts.md#unlocking-locks). When you
+delegate your votes, the locking mechanism differs slightly. Please check the next section on Multirole Delegation for
+more information.
+
 ### Multirole Delegation
 
 Polkadot OpenGov builds on the
