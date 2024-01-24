@@ -17,7 +17,7 @@ To follow the material on this page, it is recommended to be familiar with the c
 Interoperability is the core vision of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} technology. Through years of
 blockchain development, much effort has been put into making a secure interoperability solution between blockchains. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides secure
-interoperability through its [Cross-chain messaging (XCM)](./learn-xcm.md) format, and
+interoperability through its [Cross-Consensus Messaging (XCM)](./learn-xcm.md), and
 [Cross-chain messaging passing (XCMP)](./learn-xcm-transport.md#xcmp-cross-chain-message-passing)
 protocol. However, these solutions work when there is a homogeneous security layer. In the case of
 interaction between chains that do not belong to the same homogenous security layer, bridges are
