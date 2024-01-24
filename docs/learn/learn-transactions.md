@@ -77,20 +77,19 @@ Here are some key differences between the different types of extrinsics:
 
 ### Mortal and Immortal Extrinsics
 
-Transactions are usually irreversible once confirmed and added to the blockchain, an immutable
-ledger of all transactions. This feature ensures network integrity by preventing
-[double-spending](https://en.wikipedia.org/wiki/Double-spending). However, it also means **users
-must exercise caution, as sending funds to the wrong address or wrong amount cannot be rectified
-unless the recipient cooperates.** The permanence of transactions highlights the importance of
-careful verification before sending funds on a blockchain network. It is usually a
+Transactions are generally irreversible once confirmed and added to the blockchain, an immutable
+ledger of all transactions. This means users must exercise caution, as mistakes such as sending
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to the wrong address cannot be reverted. The
+permanence of transactions highlights the importance of careful verification before signing any
+transaction on a blockchain network. It is usually a
 [good practice not to blind sign transactions](../general/transaction-attacks.md) to avoid being
 victim of an attack.
 
-In blockchain terms, irreversible transactions are called **mortal** extrinsics (i.e. valid within a
-defined block interval, usually short). However, extrinsics can also be **immortal** (i.e. always
-valid). By default and [for security reasons](../general/transaction-attacks.md#replay-attack), all
-extrinsics on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will be mortal, but
-always checking before signing is a good practice.
+In blockchain terms, transactions can be **mortal** extrinsics (i.e. valid within a defined block
+interval, usually short), or **immortal** extrinsics (i.e. always valid). It is possible to make
+immortal transactions on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} However,
+[for security reasons](../general/transaction-attacks.md#replay-attack), it is highly recommended
+not to do so and most wallet software will not allow you to make an immortal extrinsic.
 
 ### Balance Transfers
 

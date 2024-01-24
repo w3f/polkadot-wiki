@@ -63,7 +63,8 @@ transaction without the possibility of verifying it.
 ### Replay Attack
 
 A replay attack is where past transactions can be replayed (same [balance](#balance-transfers),
-receiver account, etc.) without knowing private keys. This could happen in the context of
+receiver account, etc.) without knowing private keys. It is an attack where publicly known data can
+be "replayed" as a new extrinsic. This could happen in the context of
 [reaping accounts](./learn-accounts.md#existential-deposit-and-reaping) because the reaping process
 resets the nonce value. If all signed transactions until the nonce before the reaping event were
 immortal, all past transactions can be replayed once the account is refunded. There is no need for
@@ -71,10 +72,13 @@ the attacker to know your private key, valid signatures for those past transacti
 already exist and are stored on-chain (meaning the private key was already used to generate those
 signatures).
 
-Making a [transaction mortal](../learn/learn-transactions.md#mortal-and-immortal-extrinsics) will
-almost certainly ensure that replay attacks are not possible, with the only exception being if the
-account is reaped and then re-funded shortly after submitting a mortal transaction, and then an
-attacker replays that transaction within the mortality window (i.e., the specified block interval).
+Making a [transaction mortal](../learn/learn-transactions.md#mortal-and-immortal-extrinsics) with a
+relatively short mortality window will almost certainly ensure that replay attacks are not possible,
+with the only exception being if the account is reaped and then re-funded shortly after submitting a
+mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
+the specified block interval) and such transaction is valid (e.g. if you only have 10 DOT, and you
+try to issue an extrinsic sending 20 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, the
+transfer will fail).
 
 ## Defense against Attacks
 
