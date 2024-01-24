@@ -65,10 +65,10 @@ transaction without the possibility of verifying it.
 A replay attack is where past transactions can be replayed (same [balance](#balance-transfers),
 receiver account, etc.) without knowing private keys. It is an attack where publicly known data can
 be "replayed" as a new extrinsic. This could happen in the context of
-[reaping accounts](./learn-accounts.md#existential-deposit-and-reaping) because the reaping process
-resets the nonce value. If all signed transactions until the nonce before the reaping event were
-immortal, all past transactions can be replayed once the account is refunded. There is no need for
-the attacker to know your private key, valid signatures for those past transactions and nonces
+[reaping accounts](../learn/learn-accounts.md#existential-deposit-and-reaping) because the reaping
+process resets the nonce value. If all signed transactions until the nonce before the reaping event
+were immortal, all past transactions can be replayed once the account is refunded. There is no need
+for the attacker to know your private key, valid signatures for those past transactions and nonces
 already exist and are stored on-chain (meaning the private key was already used to generate those
 signatures).
 
