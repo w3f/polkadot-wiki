@@ -218,10 +218,10 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@apollo/client@^3.8.9":
-  version "3.8.9"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.8.9.tgz#0e4ac133eb04c63e618138c1ebf273d9f110a4d0"
-  integrity sha512-IcQDFEEPc9+PEQsxhxQvsoQ04BRarOzi/Ila5PcniRSDeKJWgY22dnp6+V1i1fWXRDVd1ybdvze4sFESDVQUCQ==
+"@apollo/client@^3.8.10":
+  version "3.8.10"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.8.10.tgz#db6ee4378212d93c1f22b90a2aa474f6e9664b68"
+  integrity sha512-p/22RZ8ehHyvySnC20EHPPe0gdu8Xp6ZCiXOfdEe1ZORw5cUteD/TLc66tfKv8qu8NLIfbiWoa+6s70XnKvxqg==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "@wry/equality" "^0.5.6"
@@ -1340,10 +1340,10 @@
   resolved "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
-"@crowdin/cli@^3.16.0":
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.16.0.tgz#cf5d2852e4a97592eb76da36df5c26e812d870a7"
-  integrity sha512-YhYcaq7QzLiaCH2lkIM7upaOPOwLffxVly+Etd/Kj032n1QeH0Wdp3oC7UyiN0M834bNlONryfF0B3kDZUdx/A==
+"@crowdin/cli@^3.16.1":
+  version "3.16.1"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.16.1.tgz#beb952544698585feaeea0e551de6cba91a42531"
+  integrity sha512-IXimw0KRA27IkD12DGNwoUgnk8Mw/NFLKFCEup47UFrPIxKusRzR+VbpI6HWjlgOlnbpZWl7ID25Q8JPtGHKOg==
   dependencies:
     command-exists-promise "^2.0.2"
     node-fetch "2.6.7"
@@ -2927,10 +2927,10 @@
     lz-string "^1.5.0"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-6.2.0.tgz#b572bd5cd6b29314487bac7ba393188e4987b4f7"
-  integrity sha512-+BVQlJ9cmEn5RDMUS8c2+TU6giLvzaHZ8sU/x0Jj7fk+6/46wPdwlgOPcpxS17CjcanBi/3VmGMqVr2rmbUmNw==
+"@testing-library/jest-dom@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-6.2.1.tgz#0beba7515caad06de8733e1dd5a040fe34ad212d"
+  integrity sha512-Nuy/uFFDe9h/2jwoUuMKgoxvgkUv4S9jI9bARj6dGUKJ3euRhg8JFi5sciYbrayoxkadEOZednRT9+vo6LvvxQ==
   dependencies:
     "@adobe/css-tools" "^4.3.2"
     "@babel/runtime" "^7.9.2"
@@ -9266,10 +9266,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-2.0.0.tgz"
   integrity sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==
 
-prettier@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.1.1.tgz#6ba9f23165d690b6cbdaa88cb0807278f7019848"
-  integrity sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==
+prettier@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.4.tgz#4723cadeac2ce7c9227de758e5ff9b14e075f283"
+  integrity sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==
 
 pretty-error@^4.0.0:
   version "4.0.0"
@@ -9524,10 +9524,10 @@ react-base16-styling@^0.6.0:
     lodash.flow "^3.3.0"
     pure-color "^1.2.0"
 
-react-bootstrap@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.9.2.tgz#ee2bab4cb19df628a90868fa594a3b410fe0c0be"
-  integrity sha512-a36B+EHsAI/aH+ZhXNILBFnqscE3zr10dWmjBmfhIb2QR7KSXJiGzYd6Faf/25G8G7/CP9TCL2B0WhUBOD2UBQ==
+react-bootstrap@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.10.0.tgz#0d9a003dc32cc5d9df972f1e581285d56e93c1d7"
+  integrity sha512-87gRP69VAfeU2yKgp8RI3HvzhPNrnYIV2QNranYXataz3ef+k7OhvKGGdxQLQfUsQ2RTmlY66tn4pdFrZ94hNg==
   dependencies:
     "@babel/runtime" "^7.22.5"
     "@restart/hooks" "^0.4.9"

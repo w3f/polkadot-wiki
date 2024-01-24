@@ -95,6 +95,8 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
   JavaScript utilities making life with Substrate a little easier.
 - [sub-flood](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by flooding it
   with requests.
+- [Apillon](https://github.com/Apillon) - A Web3 development platform with a complete toolbox and
+  access to Polkadot’s technology stack.
 
 ## IDEs
 

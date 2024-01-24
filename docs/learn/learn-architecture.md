@@ -124,4 +124,13 @@ For a video overview of the architecture of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} watch the video below for the
 whiteboard interview with W3F researcher Alistair Stewart:
 
-[![Architecture Overview](https://img.youtube.com/vi/xBfC6uTjvbM/0.jpg)](https://www.youtube.com/watch?v=xBfC6uTjvbM)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=xBfC6uTjvbM">
+      <img src="https://img.youtube.com/vi/xBfC6uTjvbM/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=xBfC6uTjvbM">Architecture Overview</a>
+    </p>
+  </div>
+</div>

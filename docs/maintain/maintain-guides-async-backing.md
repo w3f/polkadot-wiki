@@ -13,7 +13,7 @@ slug: ../maintain-guides-async-backing
 This guide is relevant for cumulus based parachain projects started in 2023 or before. Later
 projects should already be async backing compatible. If starting a new parachain project, please use
 an async backing compatible template such as
-[`cumulus/parachain-template`](https://github.com/paritytech/cumulus/tree/rh-test-async-backing).
+[`cumulus/parachain-template`](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/parachain-template).
 
 :::
 
@@ -109,7 +109,8 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
 5. Configure `pallet_aura` in `runtime/src/lib.rs`
 
-   - Set `AllowMultipleBlocksPerSlot` to false
+   - Set `AllowMultipleBlocksPerSlot` to `false` (don't worry, we will set it to `true` when we
+     activate async backing in step 3).
    - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
 
    ![Aura-config](../assets/async/async-backing-config-aura.png)
@@ -118,12 +119,14 @@ This phase involves configuring your parachain’s runtime to make use of async 
 
    ![Aura-spi](../assets/async/async-backing-aura-api.png)
 
-7. Implement the AuraUnincludedSegmentApi, which allows the collator client to query its runtime to
-   determine whether it should author a block.
+7. Implement the `AuraUnincludedSegmentApi`, which allows the collator client to query its runtime
+   to determine whether it should author a block.
 
    - Add the dependency `cumulus-primitives-aura` to the `runtime/Cargo.toml` file for your runtime
 
      ![cargo-toml](../assets/async/async-backing-cargo.png)
+
+   - In the same file, add `"cumulus-primitives-aura/std",` to the `std` feature.
 
    - Inside the `impl_runtime_apis!` block for your runtime, implement the
      `AuraUnincludedSegmentApi` as shown below.
@@ -190,9 +193,9 @@ This phase consists of changes to your parachain’s runtime that activate async
 
 ![Aura-allow-multiple-blocks](../assets/async/async-backing-allow-multiple.png)
 
-2. Increase the maximum unincluded segment capacity in `runtime/src/lib.rs`.
+1. Increase the maximum `UNINCLUDED_SEGMENT_CAPACITY` in `runtime/src/lib.rs`.
 
-![Unincluded-segment-capacity](../assets/async/async-backing-unincluded-segment.png)
+![Unincluded-segment-capacity](../assets/async/async-backing-unincluded-segment-capacity.png)
 
 3. Decrease `MILLISECS_PER_BLOCK` to 6000.
 
@@ -210,6 +213,20 @@ This phase consists of changes to your parachain’s runtime that activate async
    `ConstU64<0>` with the feature flag experimental, and `ConstU64<{SLOT_DURATION / 2}>` without.
 
 ![minimum-period](../assets/async/async-backing-minimum-period.png)
+
+6. Check parameters: double-check that the relay-chain configuration contains the following three
+   parameters (especially when testing locally e.g. with zombienet):
+
+```json
+"async_backing_params": {
+    "max_candidate_depth": 3,
+    "allowed_ancestry_len": 2
+},
+"scheduling_lookahead": 2
+```
+
+⚠️ `scheduling_lookahead` must be set to 2, otherwise parachain block times will degrade to worse
+than with sync backing! ⚠️
 
 ## Timing by Block Number
 

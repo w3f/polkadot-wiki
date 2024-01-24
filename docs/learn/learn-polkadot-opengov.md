@@ -32,7 +32,16 @@ For additional support about Polkadot OpenGov see the
 See the video tutorial below to easily delegate your votes to somebody else using the
 [Polkadot Delegation Dashboard](https://delegation.polkadot.network/).
 
-[![Delegation Dashboard Tutorial](https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg)](https://www.youtube.com/watch?v=RapBYZc5ZPo)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">
+      <img src="https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">Delegation Dashboard Tutorial</a>
+    </p>
+  </div>
+</div>
 
 **If you become a nomination pool member or a pool admin, you cannot participate in Governance with
 the bonded tokens in the pool, as they are held in a
@@ -319,110 +328,7 @@ approval, and a minimum [enactment](#enactment) periods will be predetermined on
 For detailed information about origin and tracks, and parameter values in Kusama, see
 [this page](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
 
-### Approval and Support
-
-:::info Adaptive Quorum Biasing is deprecated
-
-In Polkadot OpenGov, [Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) used
-in Governance V1 has been replaced with the **Approval and Support system**.
-
-:::
-
-![opengov-curves-pass](../assets/opengov-curves-pass.png)
-
-The figure above provides a summary view of how the approval and support system works during the
-Decision Period.
-
-Once the proposal exits the Lead-in Period and enters the Voting Period, to be approved, it must
-satisfy the approval and support criteria for the **Confirmation Period**.
-
-- **Approval** is defined as the share of approval (_aye_ votes) vote-weight (after adjustment for
-  [conviction](#voluntary-locking)) against the total vote-weight (_aye_, _nay_, and _abstained_).
-- **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
-  conviction) compared to the total possible votes ([active issuance](learn-DOT.md#token-issuance))
-  that could be made in the system. In case of _split_ votes, only _aye_ and _abstain_ will count.
-
-:::info Nay votes are not counted towards Support
-
-Support is a measure of voters who turned out either in favor of the referenda and who consciously
-abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_
-votes could push a referendum into confirming state. For example, imagine current approval is high
-(near 100%, way above the approval curve), and current support is just below the support curve. A
-_nay_ could bump support above the support curve but not reduce approval below the approval curve.
-Therefore someone voting against a proposal would make it pass. Hence, a decrease in % of current
-approval through new votes does not directly translate into increasing support because Support needs
-to consider _nay_ votes.
-
-:::
-
-The figure above shows the followings:
-
-- Even if the approval threshold is reached (i.e. % of current approval is greater than the approval
-  curve), the proposal only enters the confirmation period once the support threshold is also
-  reached (i.e. % current support is greater than the underlying support curve).
-- If the referendum meets the criteria for the confirmation period, then the proposal is approved
-  and scheduled for enactment. The Enactment Period can be specified when the referendum is proposed
-  but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger
-  Enactment Period to ensure the network has ample time to prepare for any changes the proposal may
-  bring.
-- A referendum may exit the confirmation period when the thresholds are no longer met, due to new
-  _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the
-  confirmation period resets. For example, if the confirmation period is 20 minutes and a referendum
-  enters it just for 5 min, the next time it enters, it must stay for 20 minutes (not 15 minutes).
-- During the decision period, if a referendum fails to meet the approval and support thresholds for
-  the duration of the track-specific confirmation period, it fails and does not go to the enactment
-  period (it may have to be resubmitted, see below).
-- The current approval must be above 50% for a referendum to pass, and the approval curve never goes
-  below 50%.
-
-![opengov-curves-pass](../assets/opengov-curves-nopass.png)
-
-Note that support may not increase monotonically as shown in the figure, as people might switch
-votes.
-
-Different Origins' tracks have different Confirmation Periods and requirements for approval and
-support. For additional details on the various origins and tracks, check out
-[this table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info). Configuring the amount of
-support and overall approval required for it to pass is now possible. With proposals that use less
-privileged origins, it is far more reasonable to drop the required support to a more realistic
-amount earlier than those which use highly privileged classes such as `Root`. Classes with more
-significance can be made to require higher approval early on, to avoid controversy.
-
-### Enactment
-
-:::info Enactment in Governance v1
-
-See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
-v1.
-
-:::
-
-In Polkadot OpenGov, the proposer suggests the enactment period, but there are also minimums set for
-each Origin Track. For example, root Origin approvals require a more extended period because of the
-importance of the changes they bring to the network.
-
-## Voting on a Referendum
-
-In Governance V1, voters could cast only an _aye_ or _nay_ vote. In Polkadot OpenGov, voters can
-additionally cast a _abstain_ and _split_ votes.
-[Vote splitting](./learn-guides-polkadot-opengov.md#voting-on-referenda) allows voters to allocate
-different votes for _aye_, _nay_, and _abstain_.
-
-:::info Only the last vote counts
-
-Voting a second time replaces your original vote, e.g. voting with 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, means that you are voting with 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, not 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
-
-:::
-
-Note that to successfully cast votes you need to have the
-[existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
-to pay for transaction fees.
-
-### Voluntary Locking
+### Voluntary Locking (Conviction Voting)
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
 locking that allows token holders to increase their voting power by declaring how long they are
@@ -496,6 +402,133 @@ existing lock under Governance v1 (using the deprecated `democracy` pallet) will
 Delegations under Governance v1 will need to be re-issued under OpenGov.
 
 :::
+
+### Approval and Support
+
+:::info Adaptive Quorum Biasing is deprecated
+
+In Polkadot OpenGov, [Adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) used
+in Governance V1 has been replaced with the **Approval and Support system**.
+
+:::
+
+![opengov-curves-pass](../assets/opengov-curves-pass.png)
+
+The figure above provides a summary view of how the approval and support system works during the
+Decision Period.
+
+Once the proposal exits the Lead-in Period and enters the Voting Period, to be approved, it must
+satisfy the approval and support criteria for the **Confirmation Period**.
+
+- **Approval** is defined as the share of [conviction](#voluntary-locking)-weighted _aye_ votes
+  against the conviction-weighted total of _aye_ and _nay_ votes. The code implementation can be
+  viewed
+  [here](https://github.com/paritytech/polkadot-sdk/blob/f2fbba3be1d7deaf7cfc731cea00552c212ddfcf/substrate/frame/conviction-voting/src/types.rs#L77)
+- **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
+  conviction) compared to the total possible votes ([active issuance](learn-DOT.md#token-issuance))
+  that could be made in the system. In case of _split_ votes, only _aye_ and _abstain_ will count.
+
+For example, let us consider a hypothetical example where the total active issuance is
+{{ polkadot: 100 DOT :polkadot }}{{ kusama: 100 KSM :kusama }}
+
+- An account A votes "Aye" with 10 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} with 4x
+  conviction
+- An account B votes "Nay" with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} with 2x
+  conviction
+- An account C votes "Abstain" with 20 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. (no
+  conviction can be applied on "Abstain" votes)
+
+In this scenario, only 35 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from the total
+active issuance participated in voting on the referendum. Now, let us calculate the Approval and
+Support values for that referendum.
+
+- Approval is calculated as (Aye') / (Aye' + Nay') where Aye' and Nay' are the votes after the
+  conviction multiplier is applied. Hence, Approval = (10 x 4) / (10 x 4 + 5 x 2) = 40/50 which is
+  80%.
+- Support is calculated as (Aye + Abstain) / (total active issuance), where "Aye" and "Abstain" are
+  the votes without the conviction multiplier. Hence, Support = (10 + 20) / 100 which is 30%.
+
+:::info Nay votes are not counted towards Support
+
+Support is a measure of voters who turned out either in favor of the referenda and who consciously
+abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_
+votes could push a referendum into confirming state. For example, imagine current approval is high
+(near 100%, way above the approval curve), and current support is just below the support curve. A
+_nay_ could bump support above the support curve but not reduce approval below the approval curve.
+Therefore someone voting against a proposal would make it pass. Hence, a decrease in % of current
+approval through new votes does not directly translate into increasing support because Support needs
+to consider _nay_ votes.
+
+:::
+
+The figure above shows the following:
+
+- Even if the approval threshold is reached (i.e. % of current approval is greater than the approval
+  curve), the proposal only enters the confirmation period once the support threshold is also
+  reached (i.e. % current support is greater than the underlying support curve).
+- If the referendum meets the approval and support thresholds for the duration of the confirmation
+  period, the proposal will be approved and will be scheduled for enactment. Each track has a
+  default minimum Enactment Period and the approved referendum needs to wait till the end of it to
+  be executed. Powerful Tracks like `Root` enforce a larger Enactment Period to ensure the network
+  has ample time to prepare for any changes the proposal may bring. The referendum proposers can
+  also choose to set the enactment period to be higher than its default value.
+- A referendum may exit the confirmation period when the thresholds are no longer met, due to new
+  _Nay_ votes or a change of existing _Aye_ or _Abstain_ votes to _Nay_ . Each time it exits, the
+  confirmation period clock is reset. For example, if the confirmation period is 20 minutes and a
+  referendum enters it just for 5 min before exiting, the next time it enters, it must be confirming
+  for 20 minutes (not 15 minutes).
+- During the decision period, if a referendum fails to meet the approval and support thresholds for
+  the duration of the track-specific confirmation period, it fails and does not go to the enactment
+  period (it may have to be resubmitted, see below).
+- The approval curve starts with a value of 100% and gradually goes to 50%, but never below.
+  Assuming all the active token supply has voted on a proposal, the conviction vote weighted support
+  should at least always be above 50% to pass.
+
+![opengov-curves-pass](../assets/opengov-curves-nopass.png)
+
+Note that support may not increase monotonically as shown in the figure, as people might switch
+votes.
+
+Different Origins' tracks have different Confirmation Periods and requirements for approval and
+support. For additional details on the various origins and tracks, check out
+[this table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info). With proposals that use
+less privileged origins, it is far more reasonable to drop the required support to a more realistic
+amount earlier than those which use highly privileged classes such as `Root`.
+
+### Enactment
+
+:::info Enactment in Governance v1
+
+See [this page](./learn-governance.md#enactment) for more information about enactment in Governance
+v1.
+
+:::
+
+In Polkadot OpenGov, the proposer suggests the enactment period, but there are also a minimum set
+for each Origin Track. For example, `root` Origin approvals require an extended period because of
+the importance of the changes they bring to the network.
+
+## Voting on a Referendum
+
+In Governance V1, voters could cast only an _aye_ or _nay_ vote. In Polkadot OpenGov, voters can
+additionally cast a _abstain_ and _split_ votes.
+[Vote splitting](./learn-guides-polkadot-opengov.md#voting-on-referenda) allows voters to allocate
+different votes for _aye_, _nay_, and _abstain_. Voting with conviction is not possible when
+abstaining or splitting the votes.
+
+:::info Only the last vote counts
+
+Voting a second time replaces your original vote, e.g. voting with 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, means that you are voting with 5
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, not 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+
+:::
+
+Note that to successfully cast votes you need to have the
+[existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
+to pay for transaction fees.
 
 ### Multirole Delegation
 

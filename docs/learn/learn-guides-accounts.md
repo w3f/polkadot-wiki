@@ -49,7 +49,16 @@ copied, and so on.
 
 ## Polkadot-JS Browser Extension
 
-[![Polkadot-JS Browser Extension Tutorial](https://img.youtube.com/vi/DNU0p5G0Gqc/0.jpg)](https://www.youtube.com/watch?v=DNU0p5G0Gqc)
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=DNU0p5G0Gqc">
+      <img src="https://img.youtube.com/vi/DNU0p5G0Gqc/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=DNU0p5G0Gqc">Polkadot-JS Browser Extension Tutorial</a>
+    </p>
+  </div>
+</div>
 
 :::info
 
