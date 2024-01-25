@@ -155,6 +155,27 @@ candidate is successfully inducted into the Polkadot Fellowship with rank 0.
 
 ### Promotion and Demotion
 
+Any fellowship member upto rank 4 can be promoted to the next rank through a fellowship referenda
+that can be voted by the members who are 2 ranks higher. For instance, the fellowship
+[referenda 64](https://collectives.subsquare.io/fellowship/referenda/64) which promotes a member
+from rank 1 to rank 2 can only be voted by members whose ranks are greater than or equal to 3.
+Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
+referendum.
+
+This preimage example should include the call to `promote` an account to a specific rank, as shown
+below. This preimage can be added by any account on the collectives system chain.
+
+![candidate-promote](../assets/fellowship-promote-member.png)
+
+In the snapshot below, the submission track is chosen as `2/Proficient members`, origin as
+`FellowshipOrigins` and fellowship origins as `Fellowship2Dan`. This selection should work for
+promoting a candidate with rank 0 to a member with rank 1.
+
+![candidate-promote-proposal](../assets/fellowship-promotion-proposal.png)
+
+To retain a rank, the Polkadot Fellowship members are expected to submit evidence of work in an
+on-going basis.
+
 **Demotion** occurs automatically after a given period has elapsed, and the member is unable to
 defend their position to their peers.
 
