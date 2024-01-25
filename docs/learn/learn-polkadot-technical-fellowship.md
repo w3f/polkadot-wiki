@@ -13,10 +13,7 @@ The Technical Fellowship is a self-governing body of experts and developers of P
 networks protocols. It operates on-chain through the Polkadot
 [Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)
 system chain and off-chain through the [Polkadot Fellows](https://github.com/polkadot-fellows)
-repository. The Fellowship does not have any hard power over the network. Its only on-chain power on
-Polkadot network is the ability to [whitelist](#whitelisting) Polkadot OpenGov proposals submitted
-to the `whitelist` track whose approval and support curve parameters allow for slightly expedited
-confirmation than the `root` track.
+repository.
 
 :::info Historical Context
 
@@ -48,10 +45,33 @@ referenda can be viewed on [Polkassembly](https://collectives.polkassembly.io/) 
 membership management, [approving RFCs](https://github.com/polkadot-fellows/RFCs) and whitelisting
 Polkadot OpenGov proposals created on the whitelist track.
 
+### Whitelisting
+
+Polkadot OpenGov allows the Technical Fellowship to authorize an origin known as
+"Whitelisted-Caller" to execute with Root-level privileges for calls approved by the Fellowship
+(currently only level-three fellows and above can vote for whitelist calls). Note that the
+fellowship cannot unanimously change the network parameters, conduct rescues or move assets. The
+whitelisted proposals still have to go through the whole life cycle of an OpenGov referendum and can
+only be enacted when the referendum passes successfully.
+
+The whitelisting process starts as a fellowship referenda with embedded XCM call from the
+collectives system chain to the Polkadot relay chain. For instance,
+[the Polkadot Fellowship referenda 68](https://collectives.polkassembly.io/referenda/68) was used to
+**whitelist** [the Polkadot OpenGov referenda 440](https://polkadot.polkassembly.io/referenda/440).
+
+![whitelist-xcm](../assets/fellowship-whitelist-xcm.png)
+
+:::info Submitting Whitelisted Proposals
+
+For more information about how to submit a whitelisted proposal see the
+[dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
+
+:::
+
 ## Technical Fellowship Ranking and Salary
 
 The Fellowship [manifesto](https://github.com/polkadot-fellows/manifesto) outlines the requirements
-and expectations for individuals to attain and retain any given rank, ranging between 1 to 9. By
+and expectations for individuals to attain and retain any given rank, ranging between 0 to 9. By
 default, an active account on the collectives system chain has no assigned rank and can be inducted
 into the Polkadot Technical Fellowship starting with rank 0. The Fellowship Manifesto states that
 members should receive a monthly allowance on par with gross income in OECD countries. A
@@ -78,20 +98,29 @@ with its members and their corresponding ranks, and got
 
 ### Becoming a Member
 
-:::note
-
-The fellowship manifesto states that any account may register to become a candidate for a basic
-deposit, but that feature has not been added to the collectives runtime yet.
-
-:::
-
 As a member of the Polkadot Technical Fellowship, you are expected to faithfully uphold the below
 tenets:
 
 - Sincerely uphold the interests of Polkadot and avoid actions which clearly work against it.
 - Respect the philosophy and principles of Polkadot.
 - Respect the operational procedures, norms and voting conventions of the Fellowship.
-- Respect your fellow Members and the wider community.
+- Respect fellow Members and the wider community.
+
+:::tip Register your interest
+
+For new fellowship inductions, Polkassembly has created an interface (still in beta) to
+[apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives)
+This initiative is funded by Polkadot treasury through
+[OpenGov referendum 373](https://polkadot.polkassembly.io/treasury/574)
+
+:::
+
+:::info
+
+The fellowship manifesto states that any account may register to become a candidate for a basic
+deposit, but that feature has not been added to the collectives runtime yet.
+
+:::
 
 To be added as a candidate of the Polkadot Technical Fellowship, a pre-existing member with rank
 greater than or equal to 1 can initiate the process. The fellowship membership management is
@@ -115,51 +144,19 @@ Technical Fellowship member. When a fellowship member navigates to Governance > 
 Referenda, they should be able to see a submit proposal button. In the example below,submission
 track is chosen as `1/members`, origin as `FellowshipOrigins` and fellowship origins as `Members`.
 This selection should work for inducting an account without any rank to the fellowship as a
-candidate with rank 0. After copying the preimage hash in the designated field, the preimage lenght
+candidate with rank 0. After copying the preimage hash in the designated field, the preimage length
 will automatically be populated.
 
 ![candidate-induct-proposal](../assets/fellowship-candidate-proposal.png)
 
 After submitting the proposal, the voting can commence. A decision deposit needs to be placed for
-this fellowship referendum to be decided.
+this fellowship referendum to be decided. After the fellowship referenda successfully passes, the
+candidate is successfully inducted into the Polkadot Fellowship with rank 0.
 
 ### Promotion and Demotion
 
 **Demotion** occurs automatically after a given period has elapsed, and the member is unable to
 defend their position to their peers.
 
-**Suspension** can happen only through a referendum, which ensures that the Fellowship's bias alone
-does not necessarily result in expulsion.
-
-To prevent the Fellowship from becoming a cabal (popularity with Fellowship peers alone should not
-be enough to gain access to a top rank), gaining access to the top tiers of the ranks will require a
-referendum.
-
-### Whitelisting
-
-Polkadot OpenGov allows the Fellowship to authorize a new origin (known as "Whitelisted-Caller") to
-execute with Root-level privileges for calls that have been approved by the Fellowship (currently
-only level-three fellows and above can vote for whitelist calls).
-
-The [Whitelist](https://paritytech.github.io/substrate/master/pallet_whitelist/) pallet allows one
-Origin to escalate the privilege level of another Origin for a certain operation. The pallet
-verifies two things:
-
-- The origin of the escalation is the Whitelisted-Root (i.e. that the referendum passed on this
-  track), and
-- The whitelist contains the given proposal (in the configuration of Polkadot OpenGov, it gets there
-  via a separate Fellowship referendum).
-
-If both conditions are true, the operation executes with Root-level privileges.
-
-This system enables a new parallel Track (Whitelisted-Caller), whose parameters have less
-restrictive passing parameters than Root in the short term. Through an open and transparent process,
-a body of global experts on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-protocol have determined that the action is both safe and time-critical.
-
-:::info Submitting Whitelisted Proposals
-
-For more information about how to submit a whitelisted proposal see the
-[dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
-
-:::
+**Suspension** can happen only through a Polkadot OpenGov referendum, which ensures that the
+Fellowship's bias alone does not necessarily result in expulsion.
