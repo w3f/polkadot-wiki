@@ -226,6 +226,7 @@ module.exports = {
               items: [
                 "learn/learn-polkadot-opengov",
                 "learn/learn-polkadot-opengov-origins",
+                "learn/learn-polkadot-technical-fellowship"
               ],
             },
             "learn/learn-polkadot-opengov-treasury",
