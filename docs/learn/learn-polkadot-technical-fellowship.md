@@ -13,7 +13,10 @@ The Technical Fellowship is a self-governing body of experts and developers of P
 networks protocols. It operates on-chain through the Polkadot
 [Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)
 system chain and off-chain through the [Polkadot Fellows](https://github.com/polkadot-fellows)
-repository.
+repository. The Fellowship does not have any hard power over the network. Its only on-chain power on
+Polkadot network is the ability to [whitelist](#whitelisting) Polkadot OpenGov proposals submitted
+to the `whitelist` track whose approval and support curve parameters allow for slightly expedited
+confirmation than the `root` track.
 
 :::info Historical Context
 
@@ -45,7 +48,29 @@ referenda can be viewed on [Polkassembly](https://collectives.polkassembly.io/) 
 membership management, [approving RFCs](https://github.com/polkadot-fellows/RFCs) and whitelisting
 Polkadot OpenGov proposals created on the whitelist track.
 
-## Membership and Ranking
+## Technical Fellowship Ranking and Salary
+
+The Fellowship [manifesto](https://github.com/polkadot-fellows/manifesto) outlines the requirements
+and expectations for individuals to attain and retain any given rank, ranging between 1 to 9. By
+default, an active account on the collectives system chain has no assigned rank and can be inducted
+into the Polkadot Technical Fellowship starting with rank 0. The Fellowship Manifesto states that
+members should receive a monthly allowance on par with gross income in OECD countries. A
+[fellowship RFC](https://github.com/polkadot-fellows/RFCs/pull/50) was proposed with concrete
+amounts for each ranked members.
+
+| Dan  |      Title      | Annual Salary |
+| :--: | :-------------: | :-----------: |
+|  I   |     Member      |    $10,000    |
+|  II  |   Proficient    |    $20,000    |
+| III  |     Fellow      |    $80,000    |
+|  IV  |    Architect    |   $120,000    |
+|  V   | Architect Adept |   $160,000    |
+|  VI  | Grand Architect |   $200,000    |
+| VII  |   Free Master   |   $200,000    |
+| VIII | Master Constant |   $200,000    |
+|  IX  |  Grand Master   |   $200,000    |
+
+## Membership Management
 
 The Polkadot technical Fellowship was initally [seeded](https://github.com/polkadot-fellows/seeding)
 with its members and their corresponding ranks, and got
@@ -69,26 +94,34 @@ tenets:
 - Respect your fellow Members and the wider community.
 
 To be added as a candidate of the Polkadot Technical Fellowship, a pre-existing member with rank
-greater than or equal to 2 should initiate the process.
+greater than or equal to 1 can initiate the process. The fellowship membership management is
+administered through the
+[core fellowship](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/core-fellowship/src/lib.rs)
+pallet.
 
-### Ranking System
+Before starting the candidate induction process, please ensure the candidate account is active and
+has a balance greater than the existential deposit of the collectives system chain (0.1 DOT). It is
+recommended that the candidate account also has a verified identity.
 
-To prevent a small group of participants from gaining effective control over the network, this
-system will adhere to three main principles:
+The first step is to add a preimage on the collectives system chain. This preimage should include
+the call to `induct` a candidate account, as shown below. The preimage can be added by any account
+on the collectives system chain. The preimage hash of this call will later be used for creating a
+fellowship referenda with an approriate origin and track.
 
-- The Fellowship must never have hard power over the network: it cannot change the parameters,
-  conduct rescues or move assets. Their only power in governance is reducing the effective timeline
-  on which a referendum takes place through [whitelisting](#whitelisting).
-- The Fellowship weights those with a higher rank more in the aggregate opinion. However, the weight
-  should not be so high as to make a small number of higher members’ opinions be insurmountable
-  compared to a coherent opinion from lower-ranked membership.
-- The Fellowship should be designed to grow and develop its membership, aggregate levels of
-  expertise and ensure that its overall decision-making capacity strengthens over time.
+![candidate-induct](../assets/fellowship-induct-candidate.png)
 
-To support these conditions, the Fellowship has a
-[manifesto](https://github.com/polkadot-fellows/manifesto) that outlines the requirements and
-expectations for individuals to attain and retain any given rank. Higher ranks can vote and promote
-lower ranks based on this [manifesto](https://github.com/polkadot-fellows/manifesto).
+The next step is to create a fellowship referenda, which can only be done by a pre-existing
+Technical Fellowship member. When a fellowship member navigates to Governance > Fellowship >
+Referenda, they should be able to see a submit proposal button. In the example below,submission
+track is chosen as `1/members`, origin as `FellowshipOrigins` and fellowship origins as `Members`.
+This selection should work for inducting an account without any rank to the fellowship as a
+candidate with rank 0. After copying the preimage hash in the designated field, the preimage lenght
+will automatically be populated.
+
+![candidate-induct-proposal](../assets/fellowship-candidate-proposal.png)
+
+After submitting the proposal, the voting can commence. A decision deposit needs to be placed for
+this fellowship referendum to be decided.
 
 ### Promotion and Demotion
 
