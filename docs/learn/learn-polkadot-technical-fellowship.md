@@ -94,7 +94,9 @@ amounts for each ranked members.
 
 The Polkadot technical Fellowship was initally [seeded](https://github.com/polkadot-fellows/seeding)
 with its members and their corresponding ranks, and got
-[added on to Polkadot's Collectives](https://polkadot.polkassembly.io/motion/403) system chain.
+[added on to Polkadot's Collectives](https://polkadot.polkassembly.io/motion/403) system chain. All
+new membership requests will go through the fellowship governance and the procedure is outlined in
+the section below.
 
 ### Becoming a Member
 
