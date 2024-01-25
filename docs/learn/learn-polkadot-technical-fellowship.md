@@ -169,8 +169,8 @@ below. This preimage can be added by any account on the collectives system chain
 
 ![candidate-promote](../assets/fellowship-promote-member.png)
 
-In the snapshot below, the submission track is chosen as `2/Proficient members`, origin as
-`FellowshipOrigins` and fellowship origins as `Fellowship2Dan`. This selection should work for
+In the snapshot below, the submission track is chosen as `21/Promote to 1 Dan`, origin as
+`FellowshipOrigins` and fellowship origins as `PromoteTo1Dan`. This selection should work for
 promoting a candidate with rank 0 to a member with rank 1.
 
 ![candidate-promote-proposal](../assets/fellowship-promotion-proposal.png)
