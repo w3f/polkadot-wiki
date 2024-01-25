@@ -55,18 +55,9 @@ Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibil
 
 ### Cosmos
 
-Cosmos has a main chain called a "Hub" that connects other blockchains called "zones". Cosmos can
-have multiple hubs, but this overview will consider a single hub. Each zone must maintain its own
-state and therefore have its own validator community. When a zone wants to communicate with another
-zone, it sends packets over IBC. The Hub maintains a multi-token ledger of token balances
-(non-transfer messages are relayed but their state not stored in the Hub).
+Cosmos is a network of blockchains built using [CometBFT](https://cometbft.com/) as the consensus engine, [Cosmos SDK](https://docs.cosmos.network/) as the VM, and [IBC](https://ibcprotocol.dev/) which allows chains to interoperate with one another.
 
-Zones monitor the state of the Hub with a light client, but the Hub does not track zone states.
-Zones must use a deterministic finality algorithm (currently, all use Tendermint) and implement the
-IBC interface to be able to send messages to other chains through the Hub.
-
-Cosmos can also interact with external chains by using "peg zones", which are similar to bridged
-parachains.
+IBC leverages light clients that can keep track of the consensus of a counterparty chain. For example, when chains A and B want to talk to one another, chain A uses its light client of B to verify messages sent from chain B, and vice versa. IBC is [currently live](https://app.trustless.zone/?from=POLKADOT&to=OSMOSIS) on Polkadot and Kusama. Work is ongoing to implement IBC to Ethereum and it's layer 2s.
 
 ## Consensus
 
