@@ -64,7 +64,7 @@ signatories to approve the call before finally executing it.
 When you create a new multi-sig call, you will need to place a
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} deposit. The deposit stays locked until the
 call is executed. This deposit is to establish an economic cost on the storage space that the
-multisig call takes up on the chain state and discourage users from creating multisig calls that
+multisig call takes up in the chain state and discourage users from creating multisig calls that
 never get executed. The deposit will be reserved in the call initiator's account.
 
 The deposit is dependent on the `threshold` parameter and is calculated as follows:
