@@ -37,11 +37,25 @@ autonomously (e.g. on the notification that a channel was requested).
 
 ### Examples of HRMP Channel Management
 
-- Use governance on your parachain (or sudo, if you have it).
-- Add a dispatchable that some origin (or anyone) can call to send channel request/accept messages from your chain.
-- Add autonomous logic, e.g. implement HRMP-related instructions in your implementation of the `XcmExecutor`. For
-  example, check Polimec's implementation of their `XcmExecutor` [here](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/xcm-executor/src/lib.rs#L890)
-  and the corresponding configuration types [here](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/funding/src/lib.rs#L1398) 
+There are several ways to trigger a specific message from a parachain's origin. The naive way is to
+write the program off-chain and submit it using the XCM pallet's `send` extrinsic. Sending arbitrary
+programs is gated by a privileged origin, so who can initiate that depends on each chain's
+configuration. The chain may need to go through governance to dispatch the extrinsic.
+
+Another option is to write the programs your chain will send ahead of time and incorporate them into
+the runtime. These programs could be behind extrinsics with their own privileged origins, or even
+unprivileged origins. As the extrinsic can perform any checks prior to sending the message, the
+runtime developer can program things like allowing any signed origin to dispatch a call accepting an
+open HRMP channel request with another parachain.
+
+Note that this is actually how other extrinsics (e.g. to teleport assets) in the XCM pallet work;
+they construct XCM programs locally from a user's inputs and, assuming all checks pass, send the
+program to the destination.
+
+In addition, the logic could be autonomous and react to other instructions that the chain receives.
+For example, see Polimec's
+[implementation](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/xcm-executor/src/lib.rs#L890)
+of the `XcmExecutor`, which handles notifications of channel requests and acceptance.
 
 ## Opening HRMP Channels with System Parachains
 
