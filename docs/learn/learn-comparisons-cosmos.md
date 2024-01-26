@@ -75,7 +75,7 @@ Second, having the capacity to extend the chain with unfinalized blocks allows o
 perform extensive availability and validity checks to ensure that no invalid state transitions make
 their way into the final chain.
 
-Cosmos chains uses Tendermint consensus, a round-robin protocol that provides
+Cosmos chains use Tendermint consensus, a round-robin protocol that provides
 instant finality. Block production and finalization are on the same path of the algorithm, meaning
 it produces and finalizes one block at a time. Because it is a PBFT-based algorithm (like GRANDPA),
 it has quadratic transport complexity, but can only finalize one block at a time.
