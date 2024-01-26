@@ -82,10 +82,10 @@ and the deposit factor equals
 {{ polkadot: <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>. :kusama }}
 
-The other signatory accounts should have enough funds to pay for the transaction fees to sign and
-submit the multi-sig transaction. No deposit is held from the signatory accounts. Once the multi-sig
-transaction is executed or rejected, the deposit is released on the account that created the
-multi-sig transaction.
+The other signatory accounts should have enough funds to pay for the transaction fees associated
+with approving the multisig call. The deposit is for the call; that is, other signatories will not
+need to place additional deposits. Once the multisig call is executed or rejected, the deposit is
+released on the account that initiated the call.
 
 ### Example using Multisig Accounts
 
