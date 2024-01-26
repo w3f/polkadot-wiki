@@ -157,8 +157,10 @@ candidate is successfully inducted into the Polkadot Fellowship with rank 0.
 
 ### Promotion and Demotion
 
-Any fellowship member upto rank 4 can be promoted to the next rank through a fellowship referenda
-that can be voted by the members who are 2 ranks higher. For instance, the fellowship
+The Polkadot Technical Fellowship members are expected to provide a periodic evidence to request for
+retaining their rank or to get promoted to a higher rank. Any fellowship member upto rank 4 can be
+promoted to the next rank through a fellowship referenda that can be voted by the members who are 2
+ranks higher. For instance, the fellowship
 [referenda 64](https://collectives.subsquare.io/fellowship/referenda/64) which promotes a member
 from rank 1 to rank 2 can only be voted by members whose ranks are greater than or equal to 3.
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
