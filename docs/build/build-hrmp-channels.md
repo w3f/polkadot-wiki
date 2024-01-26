@@ -35,6 +35,28 @@ In order to dispatch a call from its sovereign origin, a parachain may use gover
 encoded call in a `Transact` instruction to the Relay Chain, but it may also execute this logic
 autonomously (e.g. on the notification that a channel was requested).
 
+### Examples of HRMP Channel Management
+
+There are several ways to trigger a specific message from a parachain's origin. The naive way is to
+write the program off-chain and submit it using the XCM pallet's `send` extrinsic. Sending arbitrary
+programs is gated by a privileged origin, so who can initiate that depends on each chain's
+configuration. The chain may need to go through governance to dispatch the extrinsic.
+
+Another option is to write the programs that a chain will send ahead of time and incorporate them
+into the runtime. These programs could be behind extrinsics with their own privileged origins, or
+even unprivileged origins. As the extrinsic can perform any checks prior to sending the message, the
+runtime developer can program things like allowing any signed origin to dispatch a call accepting an
+open HRMP channel request with another parachain.
+
+Note that this is actually how other extrinsics (e.g. to teleport assets) in the XCM pallet work;
+they construct XCM programs locally from a user's inputs and, assuming all checks pass, send the
+program to the destination.
+
+In addition, the logic could be autonomous and react to other instructions that the chain receives.
+For example, see Polimec's
+[implementation](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/xcm-executor/src/lib.rs#L890)
+of the `XcmExecutor`, which handles notifications of channel requests and acceptance.
+
 ## Opening HRMP Channels with System Parachains
 
 HRMP channel management involving system parachains takes place entirely on the Relay Chain. No

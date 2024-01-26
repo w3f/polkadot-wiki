@@ -57,14 +57,15 @@ Parity Technologies. There is a detailed
 that you can try out and change to see how it works.
 
 However, in anything but the simple one approval case, you will likely need more than one of the
-signatories to approve the call before finally executing it. 
+signatories to approve the call before finally executing it.
 
 ### Multisig Call Deposit
 
-When you create a new multi-sig call, you will need to place a {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
-deposit. The deposit stays locked until the call is executed. This deposit is to establish an economic cost on the 
-storage space that the multisig call takes up on the chain state and discourage users from creating multisig
-calls that never get executed. The deposit will be reserved in the call initiator's account.
+When you create a new multi-sig call, you will need to place a
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} deposit. The deposit stays locked until the
+call is executed. This deposit is to establish an economic cost on the storage space that the
+multisig call takes up in the chain state and discourage users from creating multisig calls that
+never get executed. The deposit will be reserved in the call initiator's account.
 
 The deposit is dependent on the `threshold` parameter and is calculated as follows:
 
@@ -81,9 +82,10 @@ and the deposit factor equals
 {{ polkadot: <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>. :kusama }}
 
-The other signatory accounts should have enough funds to pay for the transaction fees to sign and submit the multi-sig transaction.
-No deposit is held from the signatory accounts. Once the multi-sig transaction is executed or rejected, the deposit is released on the
-account that created the multi-sig transaction.
+The other signatory accounts should have enough funds to pay for the transaction fees associated
+with approving the multisig call. The deposit is for the call; that is, other signatories will not
+need to place additional deposits. Once the multisig call is executed or rejected, the deposit is
+released on the account that initiated the call.
 
 ### Example using Multisig Accounts
 
