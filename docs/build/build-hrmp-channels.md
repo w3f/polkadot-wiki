@@ -42,9 +42,9 @@ write the program off-chain and submit it using the XCM pallet's `send` extrinsi
 programs is gated by a privileged origin, so who can initiate that depends on each chain's
 configuration. The chain may need to go through governance to dispatch the extrinsic.
 
-Another option is to write the programs your chain will send ahead of time and incorporate them into
-the runtime. These programs could be behind extrinsics with their own privileged origins, or even
-unprivileged origins. As the extrinsic can perform any checks prior to sending the message, the
+Another option is to write the programs that a chain will send ahead of time and incorporate them
+into the runtime. These programs could be behind extrinsics with their own privileged origins, or
+even unprivileged origins. As the extrinsic can perform any checks prior to sending the message, the
 runtime developer can program things like allowing any signed origin to dispatch a call accepting an
 open HRMP channel request with another parachain.
 
