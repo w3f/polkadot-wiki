@@ -35,13 +35,13 @@ In order to dispatch a call from its sovereign origin, a parachain may use gover
 encoded call in a `Transact` instruction to the Relay Chain, but it may also execute this logic
 autonomously (e.g. on the notification that a channel was requested).
 
-The xcm-executor pallet can be forked by parachains' teams and modified to include logic to handle
-[high-level HRMP instructions](https://paritytech.github.io/xcm-docs/journey/channels-and-bridges.html#hrmpnewchannelopenrequest).
-These instructions are not included in the default version of the pallet, but can be used for
-opening, accepting, and closing channels without relying on governance. See below useful links:
+### Examples of HRMP Channel Management
 
-- [Polimec's HRMP instruction implementation in XCM-executor fork](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/xcm-executor/src/lib.rs#L890)
-- [Polimec's implementation of the XCM-executor configuration types](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/funding/src/lib.rs#L1398)
+- Use governance on your parachain (or sudo, if you have it).
+- Add a dispatchable that some origin (or anyone) can call to send channel request/accept messages from your chain.
+- Add autonomous logic, e.g. implement HRMP-related instructions in your implementation of the `XcmExecutor`. For
+  example, check Polimec's implementation of their `XcmExecutor` [here](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/xcm-executor/src/lib.rs#L890)
+  and the corresponding configuration types [here](https://github.com/Polimec/polimec-node/blob/da9d1ee0062ead7a62f815647813ada48e4c2250/pallets/funding/src/lib.rs#L1398) 
 
 ## Opening HRMP Channels with System Parachains
 
