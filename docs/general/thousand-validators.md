@@ -9,10 +9,10 @@ slug: ../thousand-validators
 
 :::warning 1KV Program is on Hold. Please check this space again in Feb 2024.
 
-Starting in February 2024, Web3 Foundation plans to share a new application form for
-validators that will include a KYC and KYB process. Until then, all applications submitted will
-be on hold. The 1KV program is undergoing a significant redesign, and the plan is to make it more
-attractive to participate in, contributing to further decentralization of the Polkadot network (see
+Starting in February 2024, Web3 Foundation plans to share a new application form for validators that
+will include a KYC and KYB process. Until then, all applications submitted will be on hold. The 1KV
+program is undergoing a significant redesign, and the plan is to make it more attractive to
+participate in, contributing to further decentralization of the Polkadot network (see
 [Nakamoto coefficients](https://nakaflow.io/)).
 
 If you have any questions, please contact `validators@web3.foundation`
