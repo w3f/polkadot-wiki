@@ -131,8 +131,8 @@ pallet.
 
 See
 [these Polkadot-JS Guides](./learn-guides-fellowships.md#becoming-a-member-of-the-polkadot-technical-fellowship)
-to learn more about how to become a member of the Polkadot Technical Fellowship. In-depth
-information about the fellowship can be found
+to learn more about how to become a member of the Polkadot Technical Fellowship. The official
+documentation about the fellowship can be found
 [here](https://polkadot-fellows.github.io/dashboard/#/overview).
 
 #### Retain Rank
