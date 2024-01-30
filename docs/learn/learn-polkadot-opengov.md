@@ -530,6 +530,32 @@ Note that to successfully cast votes you need to have the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
 to pay for transaction fees.
 
+### Voting Locks
+
+#### Voting Without Conviction
+
+A lock is placed on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} when you vote on an
+Ongoing referendum. If you choose to remove your vote when the referendum is still in the decision period, 
+your voting lock is removed. Once the referendum is decided (accepted or rejected), your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
+will be available for unlocking if you voted with zero conviction. The governance app or interface you 
+used for participating in Polkadot OpenGov should show an option to unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+[Here](https://support.polkadot.network/support/solutions/articles/65000184129) are the instructions to 
+do it on the Polkadot-JS UI.
+
+#### Voting with Conviction
+
+If you voted with conviction, the corresponding locks start at the end of the Referendum and not at the moment you voted.
+For instance, let's say you voted AYE with 6X conviction on a referendum, and it got accepted; the 
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you voted with is locked for 32 weeks from that moment.
+If you voted NAY with 6X conviction on a referendum and it got accepted, then your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+would be ready to be unlocked immediately. Polkadot OpenGov is designed to ensure that only the winning side 
+is mandated to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the losing side can claim 
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance on their account.
+
+For unlocking generic account locks, navigate to [this section](./learn-guides-accounts.md#unlocking-locks). When you
+delegate your votes, the locking mechanism differs slightly. Please check the next section on Multirole Delegation for
+more information.
+
 ### Multirole Delegation
 
 Polkadot OpenGov builds on the
