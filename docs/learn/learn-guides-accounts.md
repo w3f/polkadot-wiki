@@ -246,9 +246,21 @@ More in-depth information about the above data can be found in the
 [substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/system/src/lib.rs#LL767C1-L781C24).
 
 The `AccountData` structure defines the balance types in Substrate. The three types of balances
-include `free`, `reserved`, and `frozen`. The **usable** balance of the account is the amount that
-is `free` minus any funds considered `frozen`, while the **total** balance of the account is the sum
-of `free` and `reserved` funds. The `flags` describe extra information about the account.
+include:
+
+- `free`, this is the balance that is free but not necessarily transferrable.
+- `reserved`, this is the balance that is not free and it is put on hold for proxies, identities and
+  other actions that hold state on the network.
+- `frozen`, this is the amount locked for staking, governance, or vesting.
+
+The **usable** or transferrable balance of the account is calculated using the formula below:
+
+```
+transferable = free - max(frozen, reserved)
+```
+
+The **total** balance of the account is the sum of `free` and `reserved` funds. The `flags` describe
+extra information about the account.
 
 More in-depth information about the above data can be found in the
 [balances pallet in the Substrate code base](https://github.com/paritytech/substrate/blob/2e7fde832b77b242269b136f1c3b6fffef86f9b6/frame/balances/src/types.rs#LL95-L114).
