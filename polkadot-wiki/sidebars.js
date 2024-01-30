@@ -334,6 +334,7 @@ module.exports = {
                     "learn/learn-guides-treasury",
                     "learn/learn-guides-bounties",
                     "learn/learn-guides-identity",
+                    "learn/learn-guides-fellowships",
                     "learn/learn-guides-ledger",
                     "learn/learn-guides-vault",
                     {

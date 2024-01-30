@@ -84,7 +84,8 @@ Let's consider increasing the number of validators participating in parachain co
 deposit and has very conservative passing parameters such that it will probably need the entire
 28-day voting period to pass.
 
-Operations that are deemed safe or time critical by the Polkadot Technical Fellowship can use the
+Operations that are deemed safe or time critical by
+[the Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md) can use the
 Whitelisted Caller track. This track requires less turnout in the first half of the decision period
 so that it can pass more quickly. This track is typically used for more neutral, technical proposals
 like runtime upgrades or changing the system's parachain validation configuration.

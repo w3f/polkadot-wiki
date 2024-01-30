@@ -106,7 +106,7 @@ following main changes:
 - Dissolving the current [Council](./learn-governance.md#council) collective
 - Allowing users to delegate voting power in more ways to community members
 - Dissolving the [Technical Committee](./learn-governance.md#technical-committee) and establishing
-  the broader [Polkadot Technical Fellowship](#the-technical-fellowship)
+  the broader [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md)
 
 The figure below shows an overview of Polkadot OpenGov's structure.
 
@@ -128,7 +128,7 @@ be submitted in different tracks depending on the amount requested. A proposal f
 need to be submitted in the Small Tipper track, while a proposal requiring substantial funds will
 need to be submitted to the Medium or Big Spender track.
 
-The [Polkadot Technical Fellowship](#the-technical-fellowship) can decide to
+The [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md) can decide to
 [whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin.
 Those proposals will have a shorter Lead-in, Confirmation, and Enactment period when compared to the
 Root Origin track.
@@ -162,7 +162,7 @@ and learn how to use it.
 
 | Governance V1                                                                                                                                                                                                                                                                                                                                  | Polkadot OpenGov                                                                                                                                                                                                                                       | Polkadot OpenGov Benefit                                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Includes the [Council](./learn-governance.md#council), the [Technical Committee](./learn-governance.md#technical-committee), and the Public (i.e. token holders).                                                                                                                                                                              | Includes the Public and the [Technical Fellowship](#the-technical-fellowship).                                                                                                                                                                         | Simpler and more decentralized structure.                                                                                                                                      |
+| Includes the [Council](./learn-governance.md#council), the [Technical Committee](./learn-governance.md#technical-committee), and the Public (i.e. token holders).                                                                                                                                                                              | Includes the Public and the [Technical Fellowship](./learn-polkadot-technical-fellowship.md).                                                                                                                                                          | Simpler and more decentralized structure.                                                                                                                                      |
 | Referenda executed only from one origin (Root). Referenda in this origin must be carefully scrutinized. Therefore, there is only one track (i.e. only one referendum at a time can be executed).                                                                                                                                               | Referenda executed from [multiple origins](./learn-polkadot-opengov-origins.md#origins-and-tracks-info), each with a different track that shapes proposals’ timelines. Depending on the origin, multiple referenda within the same track are possible. | Possibility to categorize proposals (based on importance and urgency) and execute them simultaneously within and between origin tracks.                                        |
 | Proposals can be submitted by either the Council or the Public.                                                                                                                                                                                                                                                                                | The public submits proposals.                                                                                                                                                                                                                          | More democratic.                                                                                                                                                               |
 | Uses [Adaptive Quorum Biasing](./learn-governance.md#adaptive-quorum-biasing) to define the approval threshold based on turnout. Given the same turnout, council-initiated referenda require fewer Aye votes to pass compared to public referenda.                                                                                             | Uses origin-specific approval and support curves defining the amount of approval and support (i.e. turnout) needed as a function of time. The same curves are applied to all referenda within the same origin track.                                   | Referenda timeline depends on the origin and not on who submitted the proposal (i.e. Council or Public). This is a more democratic and equalitarian system.                    |
@@ -229,8 +229,8 @@ in Governance v1.
 :::
 
 **In Polkadot OpenGov all referenda are public.** The
-[Technical Fellowship](#the-technical-fellowship) has the option to [whitelist](#whitelisting)
-referenda that can be then proposed in the track with
+[Technical Fellowship](./learn-polkadot-technical-fellowship.md) has the option to
+[whitelist](#whitelisting) referenda that can be then proposed in the track with
 [whitelist origin](./learn-polkadot-opengov-origins.md#whitelisted-caller).
 
 ### Referenda Timeline
@@ -535,26 +535,30 @@ to pay for transaction fees.
 #### Voting Without Conviction
 
 A lock is placed on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} when you vote on an
-Ongoing referendum. If you choose to remove your vote when the referendum is still in the decision period, 
-your voting lock is removed. Once the referendum is decided (accepted or rejected), your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
-will be available for unlocking if you voted with zero conviction. The governance app or interface you 
-used for participating in Polkadot OpenGov should show an option to unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
-[Here](https://support.polkadot.network/support/solutions/articles/65000184129) are the instructions to 
-do it on the Polkadot-JS UI.
+Ongoing referendum. If you choose to remove your vote when the referendum is still in the decision
+period, your voting lock is removed. Once the referendum is decided (accepted or rejected), your
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be available for unlocking if you voted
+with zero conviction. The governance app or interface you used for participating in Polkadot OpenGov
+should show an option to unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+[Here](https://support.polkadot.network/support/solutions/articles/65000184129) are the instructions
+to do it on the Polkadot-JS UI.
 
 #### Voting with Conviction
 
-If you voted with conviction, the corresponding locks start at the end of the Referendum and not at the moment you voted.
-For instance, let's say you voted AYE with 6X conviction on a referendum, and it got accepted; the 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you voted with is locked for 32 weeks from that moment.
-If you voted NAY with 6X conviction on a referendum and it got accepted, then your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-would be ready to be unlocked immediately. Polkadot OpenGov is designed to ensure that only the winning side 
-is mandated to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the losing side can claim 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance on their account.
+If you voted with conviction, the corresponding locks start at the end of the Referendum and not at
+the moment you voted. For instance, let's say you voted AYE with 6X conviction on a referendum, and
+it got accepted; the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you voted with is locked
+for 32 weeks from that moment. If you voted NAY with 6X conviction on a referendum and it got
+accepted, then your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} would be ready to be
+unlocked immediately. Polkadot OpenGov is designed to ensure that only the winning side is mandated
+to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the losing side can claim
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance
+on their account.
 
-For unlocking generic account locks, navigate to [this section](./learn-guides-accounts.md#unlocking-locks). When you
-delegate your votes, the locking mechanism differs slightly. Please check the next section on Multirole Delegation for
-more information.
+For unlocking generic account locks, navigate to
+[this section](./learn-guides-accounts.md#unlocking-locks). When you delegate your votes, the
+locking mechanism differs slightly. Please check the next section on Multirole Delegation for more
+information.
 
 ### Multirole Delegation
 
