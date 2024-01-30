@@ -120,15 +120,14 @@ This initiative is funded by Polkadot treasury through
 :::info
 
 The fellowship manifesto states that any account may register to become a candidate for a basic
-deposit, but that feature has not been added to the collectives runtime yet.
-
-:::
-
-To be added as a candidate of the Polkadot Technical Fellowship, a pre-existing member with rank
-greater than or equal to 1 can initiate the process. The fellowship membership management is
-administered through the
+deposit, but that feature has not been added to the collectives runtime yet. To be added as a
+candidate of the Polkadot Technical Fellowship, a pre-existing member with rank greater than or
+equal to 1 can initiate the process. The fellowship membership management is administered through
+the
 [core fellowship](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/core-fellowship/src/lib.rs)
 pallet.
+
+:::
 
 Before starting the candidate induction process, please ensure the candidate account is active and
 has a balance greater than the existential deposit of the collectives system chain (0.1 DOT). It is
@@ -157,8 +156,10 @@ candidate is successfully inducted into the Polkadot Fellowship with rank 0.
 
 ### Rank Updates
 
-Any fellowship member upto rank 4 can be promoted to the next rank through a fellowship referenda
-that can be voted by the members who are 2 ranks higher. For instance, the fellowship
+The Polkadot Technical Fellowship members are expected to provide a periodic evidence to request for
+retaining their rank or to get promoted to a higher rank. Any fellowship member upto rank 4 can be
+promoted to the next rank through a fellowship referenda that can be voted by the members who are 2
+ranks higher. For instance, the fellowship
 [referenda 64](https://collectives.subsquare.io/fellowship/referenda/64) which promotes a member
 from rank 1 to rank 2 can only be voted by members whose ranks are greater than or equal to 3.
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov

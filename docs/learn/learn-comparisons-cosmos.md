@@ -25,13 +25,14 @@ when they are finalized by Polkadot's Relay Chain, the main chain of the system.
 parachains share state with the entire system, meaning that a chain re-organization of a single
 parachain would require a re-organization of all parachains and the Relay Chain.
 
-Cosmos uses a bridge-hub model that connects Tendermint chains. The system can have multiple hubs
-(the primary being the "Cosmos Hub"), but each hub connects a group of exterior chains, called
-"zones". Each zone is responsible for securing the chain with a sufficiently staked and
-decentralized validator set. Zones send messages and tokens to each other via the hub using a
-protocol called Inter-Blockchain Communication (IBC). As zones do not share state, a re-organization
-of one zone would not re-organize other zones, meaning each message is trust-bound by the
-recipient's trust in the security of the sender.
+Cosmos employs horizontal scalability using
+[app-chains](https://www.alchemy.com/overviews/what-is-an-appchain). The Cosmos Network consists of
+100+ IBC connected chains, including the Cosmos Hub, Osmosis, Celestia, dYdX v4 chain, Injective,
+etc. Each chain is responsible for securing the chain with a sufficiently staked and decentralized
+validator set. But chains also have the option to leverage shared security from the Cosmos Hub.
+Cosmos chains send cross-chain messages using the Inter-Blockchain Communication protocol. As chains
+do not share state, a re-organization of one chain would not re-organize other chains, meaning each
+message is trust-bound by the recipient's trust in the security of the sender.
 
 ## Architecture
 
@@ -55,9 +56,15 @@ Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibil
 
 ### Cosmos
 
-Cosmos is a network of blockchains built using [CometBFT](https://cometbft.com/) as the consensus engine, [Cosmos SDK](https://docs.cosmos.network/) as the VM, and [IBC](https://ibcprotocol.dev/) which allows chains to interoperate with one another.
+Cosmos is a network of blockchains built using [CometBFT](https://cometbft.com/) as the consensus
+engine, [Cosmos SDK](https://docs.cosmos.network/) as the VM, and [IBC](https://ibcprotocol.dev/)
+which allows chains to interoperate with one another.
 
-IBC leverages light clients that can keep track of the consensus of a counterparty chain. For example, when chains A and B want to talk to one another, chain A uses its light client of B to verify messages sent from chain B, and vice versa. IBC is [currently live](https://app.trustless.zone/?from=POLKADOT&to=OSMOSIS) on Polkadot and Kusama. Work is ongoing to implement IBC to Ethereum and it's layer 2s.
+IBC leverages light clients that can keep track of the consensus of a counterparty chain. For
+example, when chains A and B want to talk to one another, chain A uses its light client of B to
+verify messages sent from chain B, and vice versa. IBC is
+[currently live](https://app.trustless.zone/?from=POLKADOT&to=OSMOSIS) on Polkadot and Kusama. Work
+is ongoing to implement IBC to Ethereum and it's layer 2s.
 
 ## Consensus
 
@@ -78,10 +85,10 @@ Second, having the capacity to extend the chain with unfinalized blocks allows o
 perform extensive availability and validity checks to ensure that no invalid state transitions make
 their way into the final chain.
 
-Cosmos (both the Hub and the zones) uses Tendermint consensus, a round-robin protocol that provides
-instant finality. Block production and finalization are on the same path of the algorithm, meaning
-it produces and finalizes one block at a time. Because it is a PBFT-based algorithm (like GRANDPA),
-it has quadratic transport complexity, but can only finalize one block at a time.
+Cosmos chains use Tendermint consensus, a round-robin protocol that provides instant finality. Block
+production and finalization are on the same path of the algorithm, meaning it produces and finalizes
+one block at a time. Because it is a PBFT-based algorithm (like GRANDPA), it has quadratic transport
+complexity, but can only finalize one block at a time.
 
 ## Staking Mechanics
 
@@ -127,10 +134,13 @@ Polkadot has an additional protocol called [SPREE](learn-spree.md) that provides
 cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and
 interpretation by the receiving chain.
 
-Cosmos uses a cross-chain protocol called Inter-Blockchain Communication (IBC). The current
-implementation of Cosmos uses the Hub to pass tokens between zones. However, Cosmos does have a new
-specification for passing arbitrary data. Nonetheless, as chains do not share state, receiving
-chains must trust the security of a message's origin.
+Cosmos uses a light client-based cross-chain protocol called
+[Inter-Blockchain Communication (IBC)](https://www.ibcprotocol.dev/) for arbitrary message-passing.
+In the current design, IBC chains create 1:1
+[Connections](https://ibc.cosmos.network/main/ibc/overview#connections) with each other, over which
+[Channels](https://ibc.cosmos.network/main/ibc/overview#channels) can be established. IBC data
+packets are sent between application modules on different chains over these channels. In the case of
+IBC, as chains do not share state, receiving chains must trust the security of a message's origin.
 
 ## Governance
 
@@ -193,8 +203,8 @@ security must be cooperative, not competitive. Therefore, Polkadot provides the 
 logic and security processes across chains so that they can interact knowing that their
 interlocutors execute within the same security context.
 
-The Cosmos network uses a bridge-hub model to connect chains with independent security guarantees,
-meaning that when data is sent from one chain to another (inter-chain communication), the receiving
-chain must trust the sending chain. Thus, each blockchain in the Cosmos network has its independent
-security mechanisms. They're independently secured and do not rely on the security of other
-blockchains or the hub.
+The Cosmos network uses an Internet-like unstructured network that uses IBC to connect chains with
+independent security guarantees, meaning that when data is sent from one chain to another, the
+receiving chain must trust the sending chain. Thus, each blockchain in the Cosmos network has its
+independent security mechanisms. Chains also have the option to share security with the Cosmos Hub
+and thereby leverage its economic security.
