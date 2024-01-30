@@ -95,12 +95,12 @@ ample time to vote on the proposal during the decision period.
 
 ### Whitelisted Caller
 
-Origin commanded by the [Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship)
-whitelist some hash of a call and allow the call to be dispatched with the root origin (after the
-referendum passes). This track allows for a shorter voting turnaround, safe in the knowledge through
-an open and transparent process for time-critical proposals. For instance, a referendum proposed in
-this track needs to amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much
-lesser than the root) by the end of the first day with over
+Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md) whitelist some
+hash of a call and allow the call to be dispatched with the root origin (after the referendum
+passes). This track allows for a shorter voting turnaround, safe in the knowledge through an open
+and transparent process for time-critical proposals. For instance, a referendum proposed in this
+track needs to amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser
+than the root) by the end of the first day with over
 {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval to be considered to be part of
 the confirm period.
 

@@ -16,11 +16,10 @@ to the network protocol, runtime logic, and public interfaces, and other technic
 To submit an RFC, follow the instructions [here](https://github.com/polkadot-fellows/RFCs#process).
 
 RFCs can only be approved and merged by III-Dan members of
-[Polkadot Technical Fellowship](../learn/learn-polkadot-opengov.md#the-technical-fellowship) via
-on-chain voting mechanism. Definitive approval or rejection is done by issuing the
-`RFC_APPROVE(xxxx, h)` or `RFC_REJECT(xxxx, h)` on-chain remark from the Fellowship origin on the
-Polkadot Collectives parachain, where `xxxx` is the RFC number and `h` is the hash of the raw
-proposal text.
+[Polkadot Technical Fellowship](../learn/learn-polkadot-technical-fellowship.md) via on-chain voting
+mechanism. Definitive approval or rejection is done by issuing the `RFC_APPROVE(xxxx, h)` or
+`RFC_REJECT(xxxx, h)` on-chain remark from the Fellowship origin on the Polkadot Collectives
+parachain, where `xxxx` is the RFC number and `h` is the hash of the raw proposal text.
 
 For example, the first RFC [RFC-1](https://github.com/polkadot-fellows/RFCs/pull/1) about Agile
 Coretime was proposed by Gavin Wood on the 30th of June 2023 and merged on the 12th of August 2023.
