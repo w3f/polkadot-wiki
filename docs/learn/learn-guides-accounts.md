@@ -248,11 +248,11 @@ More in-depth information about the above data can be found in the
 The `AccountData` structure defines the balance types in Substrate. The three types of balances
 include:
 
-- `free`, this is the balance that is free but not necessarily transferrable.
-- `reserved`, this is the balance that is not free and it is put on hold for on-chain activity such
-  as setting up proxies, identities, deposits for multi-signature calls, and other actions that hold
+- `free`, is the balance that is free but not necessarily transferrable.
+- `reserved`, is the balance that is not free, and it is put on hold for on-chain activity such as
+  deposits for multi-signature calls, setting up proxies and identities, and other actions that hold
   state on the network.
-- `frozen`, this is the amount that is free to use for on-chain activity, but is locked in staking,
+- `frozen`, is the amount that is free to use for on-chain activity but is locked in staking,
   governance, or vesting.
 
 The **usable** or transferrable balance of the account is currently calculated using the formula
