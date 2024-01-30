@@ -542,6 +542,8 @@ used for participating in Polkadot OpenGov should show an option to unlock your 
 [Here](https://support.polkadot.network/support/solutions/articles/65000184129) are the instructions to 
 do it on the Polkadot-JS UI.
 
+#### Voting with Conviction
+
 If you voted with conviction, the corresponding locks start at the end of the Referendum and not at the moment you voted.
 For instance, let's say you voted AYE with 6X conviction on a referendum, and it got accepted; the 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you voted with is locked for 32 weeks from that moment.
