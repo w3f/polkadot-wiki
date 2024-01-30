@@ -117,7 +117,7 @@ This initiative is funded by Polkadot treasury through
 
 :::
 
-:::info
+:::info Only Pre-existing members can currently add new members
 
 The fellowship manifesto states that any account may register to become a candidate for a basic
 deposit, but that feature has not been added to the collectives runtime yet. To be added as a
