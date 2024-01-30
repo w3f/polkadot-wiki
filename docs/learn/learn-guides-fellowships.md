@@ -2,7 +2,7 @@
 id: learn-guides-fellowships
 title: Polkadot-JS Guides about Fellowships
 sidebar_label: Fellowships
-description: Polkadot-JS Guides for Bounties
+description: Polkadot-JS Guides for Fellowship Members.
 keyword: [polkadot-js, guides, fellowships, technical fellowship]
 slug: ../learn-guides-fellowships
 ---
