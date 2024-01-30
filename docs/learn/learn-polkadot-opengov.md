@@ -532,6 +532,8 @@ to pay for transaction fees.
 
 ### Voting Locks
 
+#### Voting Without Conviction
+
 A lock is placed on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} when you vote on an
 Ongoing referendum. If you choose to remove your vote when the referendum is still in the decision period, 
 your voting lock is removed. Once the referendum is decided (accepted or rejected), your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
