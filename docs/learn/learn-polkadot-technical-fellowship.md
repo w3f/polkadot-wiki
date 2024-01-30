@@ -155,7 +155,7 @@ After submitting the proposal, the voting can commence. A decision deposit needs
 this fellowship referendum to be decided. After the fellowship referenda successfully passes, the
 candidate is successfully inducted into the Polkadot Fellowship with rank 0.
 
-### Promotion and Demotion
+### Rank Updates
 
 Any fellowship member upto rank 4 can be promoted to the next rank through a fellowship referenda
 that can be voted by the members who are 2 ranks higher. For instance, the fellowship
@@ -169,14 +169,22 @@ below. This preimage can be added by any account on the collectives system chain
 
 ![candidate-promote](../assets/fellowship-promote-member.png)
 
-In the snapshot below, the submission track is chosen as `21/Promote to 1 Dan`, origin as
+In the snapshot below, the submission track is chosen as `21/Promote to I Dan`, origin as
 `FellowshipOrigins` and fellowship origins as `PromoteTo1Dan`. This selection should work for
 promoting a candidate with rank 0 to a member with rank 1.
 
 ![candidate-promote-proposal](../assets/fellowship-promotion-proposal.png)
 
+For promoting a member from Rank 1 to Rank 2, the submission track can be chosen as
+`22/Promote to  II Dan`, origin as `FellowshipOrigins` and fellowship origins as `PromoteTo2Dan`.
+Only the members with Rank >= 3 can vote on this proposal.
+
+#### Retain Rank
+
 To retain a rank, the Polkadot Fellowship members are expected to submit evidence of work in an
 on-going basis.
+
+#### Demotion and Suspension
 
 **Demotion** occurs automatically after a given period has elapsed, and the member is unable to
 defend their position to their peers.
