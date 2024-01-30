@@ -57,7 +57,7 @@ A paradigm shift from:
 
 Previously, securing a parachain slot was a competitive process through an
 [auction mechanism](../learn/learn-auction.md). With coretime rental, there is no need for slot
-auctions anymore. Teams can purchase instantaneous coretime or reserve bulk coretime as required.
+auctions anymore. Teams can purchase on-demand coretime or reserve bulk coretime as required.
 This greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
 
 On top of those main changes, [agile core usage](#agile-core-usage) and
@@ -85,9 +85,9 @@ essentially **coretime becomes a commodity that can be tokenized, sold, and trad
 maximizes the agility of Polkadot and lets the market figure out the best solution needed for
 applications to be successful.
 
-Applications can reserve **bulk coretime** and **instantaneous coretime** depending on their needs.
+Applications can reserve **bulk coretime** and **on-demand coretime** depending on their needs.
 Bulk coretime rental will be a standard rental of coretime through a broker system parachain at a
-fixed price for a fixed period of time. Instantaneous coretime rental will be available through
+fixed price for a fixed period of time. On-demand coretime rental will be available through
 ongoing sale of coretime for immediate use at a spot price. This system lowers the barrier to entry
 for prospective builders.
 
