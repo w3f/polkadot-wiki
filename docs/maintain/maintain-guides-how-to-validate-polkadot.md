@@ -602,7 +602,7 @@ account.
 
 After a few seconds, you should see an `ExtrinsicSuccess` message.
 
-Your bonded account will available under `Stashes`. You should now see a new card with all your
+Your bonded account will be available under `Stashes`. You should now see a new card with all your
 accounts (note: you may need to refresh the screen). The bonded amount on the right corresponds to
 the funds bonded by the Stash account.
 
