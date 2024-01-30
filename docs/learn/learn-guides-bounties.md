@@ -56,6 +56,19 @@ Submitting a bounty proposal will reserve
 
 ## Assign a Curator to a Bounty
 
+:::info
+
+The curator assignment call can only be executed successfully if the original bounty proposal
+funding has been executed and a new spending period has not begun. Proposers need to ensure they
+calculate a time further past the new spending period for the execution of their curator assignment
+call. Suppose your bounty has been awarded and gets funded at the end of the current spending
+period. In that case, you need to make sure that if the curator assignment ends before the end of
+the spending period, the enactment will take place after that (you can set a delay in
+[Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the
+proposal).
+
+:::
+
 Once your bounty is shown as "funded" on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. See the
 video tutorial below to learn how you can add a curator to a bounty and submit it for approval
