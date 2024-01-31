@@ -84,7 +84,7 @@ candidacy the bounty will show as "active" on the main Bounty page.
 
 Curator assignment must take place after the bounty has been funded, and approved bounties can only
 be funded after a spend period has been completed. A curator assignment referendum cannot be
-executed during the same spend period as the bounty funding.
+executed during the same spend period when the bounty is funded.
 
 If your bounty has been awarded, it will be funded at the end of the current spending period. You
 need to make sure that if the curator assignment referendum ends before the end of the spending
