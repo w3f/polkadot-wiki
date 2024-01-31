@@ -56,21 +56,6 @@ Submitting a bounty proposal will reserve
 
 ## Assign a Curator to a Bounty
 
-:::info
-
-A bounty needs to be funded before the curator assignment, and approved bounties can only be funded
-after a spend period has been completed. A curator assignment referendum cannot be executed during
-the same spend period as the bounty funding.
-
-If your bounty has been awarded, it will be funded at the end of the current spending period. You
-need to make sure that if the curator assignment referendum ends before the end of the spending
-period, the enactment of the curator assignment referendum will take place in the next spending
-period (you can set a delay in
-[Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the
-proposal).
-
-:::
-
 Once your bounty is shown as "funded" on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. See the
 video tutorial below to learn how you can add a curator to a bounty and submit it for approval
@@ -94,6 +79,21 @@ acceptance. The curator must formally accept the curator role by signing a `boun
 extrinsic. More information about when to do this can be found on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
 candidacy the bounty will show as "active" on the main Bounty page.
+
+:::info Curator assignment must execute after bounty funding
+
+Curator assignment must take place after the bounty has been funded, and approved bounties can only
+be funded after a spend period has been completed. A curator assignment referendum cannot be
+executed during the same spend period as the bounty funding.
+
+If your bounty has been awarded, it will be funded at the end of the current spending period. You
+need to make sure that if the curator assignment referendum ends before the end of the spending
+period, the enactment of the curator assignment referendum will take place in the next spending
+period (you can set a delay in
+[Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the
+proposal).
+
+:::
 
 ## Create and Award Child Bounties
 
