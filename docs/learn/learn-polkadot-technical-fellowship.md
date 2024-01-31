@@ -133,7 +133,10 @@ Before starting the candidate induction process, please ensure the candidate acc
 has a balance greater than the existential deposit of the collectives system chain (0.1 DOT). It is
 recommended that the candidate account also has a verified identity.
 
+An existing Technical Fellowship member with rank greater than or equal to 1 can submit the signed
+`induct` call, as shown below.
 
+![candidate-induct](../assets/fellowship-induct-call.png)
 
 ### Rank Updates
 
