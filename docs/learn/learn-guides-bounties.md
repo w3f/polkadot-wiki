@@ -87,11 +87,11 @@ be funded after a spend period has been completed. A curator assignment referend
 executed during the same spend period when the bounty is funded.
 
 If your bounty has been awarded, it will be funded at the end of the current spending period. You
-need to make sure that if the curator assignment referendum ends before the end of the spending
-period, the enactment of the curator assignment referendum will take place in the next spending
+need to make sure that the curator assignment referendum gets enacted in the subsequent spending
 period (you can set a delay in
 [Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the
-proposal).
+proposal during the current spend period).
+
 
 :::
 
