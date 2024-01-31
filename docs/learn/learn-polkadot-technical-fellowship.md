@@ -117,12 +117,12 @@ This initiative is funded by Polkadot treasury through
 
 :::
 
-:::info
+:::info Induction to Fellowship as a Candidate (Rank 0)
 
 The fellowship manifesto states that any account may register to become a candidate for a basic
 deposit, but that feature has not been added to the collectives runtime yet. To be added as a
 candidate of the Polkadot Technical Fellowship, a pre-existing member with rank greater than or
-equal to 1 can initiate the process. The fellowship membership management is administered through
+equal to 1 can sign and submit an `induct` call. The fellowship membership management is administered through
 the
 [core fellowship](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/core-fellowship/src/lib.rs)
 pallet.
