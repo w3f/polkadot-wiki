@@ -39,6 +39,18 @@ module.exports = {
             slug: '/apps-index',
           },
           items: [
+            {
+              type: 'link',
+              label: 'Polkadot Ecosystem Apps',
+              description: 'Apps listed on official Polkadot website.',
+              href: 'https://polkadot.network/ecosystem/dapps/',
+            },
+            {
+              type: 'link',
+              label: 'DotAppStore',
+              description: 'Apps upvoted by the community.',
+              href: 'https://dotappstore.com/',
+            },
             "general/staking-apps",
             "general/governance-apps",
             "general/multisig-apps",
