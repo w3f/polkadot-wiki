@@ -80,7 +80,7 @@ extrinsic. More information about when to do this can be found on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
 candidacy the bounty will show as "active" on the main Bounty page.
 
-:::info Curator assignment must execute after bounty funding
+:::info Curator assignment call must be executed after bounty is funded
 
 Curator assignment must take place after the bounty has been funded, and approved bounties can only
 be funded after a spend period has been completed. A curator assignment referendum cannot be
