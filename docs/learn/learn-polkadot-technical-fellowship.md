@@ -129,12 +129,11 @@ pallet.
 
 :::
 
-Before starting the candidate induction process, please ensure the candidate account is active and
-has a balance greater than the existential deposit of the collectives system chain (0.1 DOT). It is
-recommended that the candidate account also has a verified identity.
-
 An existing Technical Fellowship member with rank greater than or equal to 1 can submit the signed
-`induct` call, as shown below.
+`induct` call, as shown below. It is recommended that the candidate account has a verified identity.
+Upon successfuly execution of the extrinsic, the candidate's account will be displayed on the
+[Fellowship Overview](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship)
+tab on Polkadot-JS UI.
 
 ![candidate-induct](../assets/fellowship-induct-call.png)
 
