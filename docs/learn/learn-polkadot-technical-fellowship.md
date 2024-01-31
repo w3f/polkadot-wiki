@@ -117,42 +117,26 @@ This initiative is funded by Polkadot treasury through
 
 :::
 
-:::info
+:::info Induction to Fellowship as a Candidate (Rank 0)
 
 The fellowship manifesto states that any account may register to become a candidate for a basic
-deposit, but that feature has not been added to the collectives runtime yet. To be added as a
+deposit, but that feature has not been added to the collectives runtime yet.  A fellowship referendum 
+is no longer needed for candidate induction.  To be added as a
 candidate of the Polkadot Technical Fellowship, a pre-existing member with rank greater than or
-equal to 1 can initiate the process. The fellowship membership management is administered through
+equal to 1 can sign and submit an `induct` call. The fellowship membership management is administered through
 the
 [core fellowship](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/core-fellowship/src/lib.rs)
 pallet.
 
 :::
 
-Before starting the candidate induction process, please ensure the candidate account is active and
-has a balance greater than the existential deposit of the collectives system chain (0.1 DOT). It is
-recommended that the candidate account also has a verified identity.
+An existing Technical Fellowship member with rank greater than or equal to 1 can submit the signed
+`induct` call, as shown below. It is recommended that the candidate account has a verified identity.
+Upon successfuly execution of the extrinsic, the candidate's account will be displayed on the
+[Fellowship Overview](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship)
+tab on Polkadot-JS UI.
 
-The first step is to add a preimage on the collectives system chain. This preimage should include
-the call to `induct` a candidate account, as shown below. The preimage can be added by any account
-on the collectives system chain. The preimage hash of this call will later be used for creating a
-fellowship referenda with an approriate origin and track.
-
-![candidate-induct](../assets/fellowship-induct-candidate.png)
-
-The next step is to create a fellowship referenda, which can only be done by a pre-existing
-Technical Fellowship member. When a fellowship member navigates to Governance > Fellowship >
-Referenda, they should be able to see a submit proposal button. In the example below,submission
-track is chosen as `1/members`, origin as `FellowshipOrigins` and fellowship origins as `Members`.
-This selection should work for inducting an account without any rank to the fellowship as a
-candidate with rank 0. After copying the preimage hash in the designated field, the preimage length
-will automatically be populated.
-
-![candidate-induct-proposal](../assets/fellowship-candidate-proposal.png)
-
-After submitting the proposal, the voting can commence. A decision deposit needs to be placed for
-this fellowship referendum to be decided. After the fellowship referenda successfully passes, the
-candidate is successfully inducted into the Polkadot Fellowship with rank 0.
+![candidate-induct](../assets/fellowship-induct-call.png)
 
 ### Rank Updates
 
