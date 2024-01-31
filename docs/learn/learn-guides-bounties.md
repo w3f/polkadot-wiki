@@ -58,12 +58,14 @@ Submitting a bounty proposal will reserve
 
 :::info
 
-The curator assignment call can only be executed successfully if the original bounty proposal
-funding has been executed and a new spending period has not begun. Proposers need to ensure they
-calculate a time further past the new spending period for the execution of their curator assignment
-call. Suppose your bounty has been awarded and gets funded at the end of the current spending
-period. In that case, you need to make sure that if the curator assignment ends before the end of
-the spending period, the enactment will take place after that (you can set a delay in
+A bounty needs to be funded before the curator assignment, and approved bounties can only be funded
+after a spend period has been completed. A curator assignment referendum cannot be executed during
+the same spend period as the bounty funding.
+
+If your bounty has been awarded, it will be funded at the end of the current spending period. You
+need to make sure that if the curator assignment referendum ends before the end of the spending
+period, the enactment of the curator assignment referendum will take place in the next spending
+period (you can set a delay in
 [Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the
 proposal).
 
