@@ -22,6 +22,14 @@ them and voting on them.
 
 ## Submit a Bounty Proposal
 
+:::info Step-by-step written tutorial
+
+See
+[this written tutorial](https://scribehow.com/shared/How_to_Submit_a_Bounty_Proposal_on_Polkadotjs_Apps__Ps_zfmNXRbm6PuZaj28JBQ)
+to learn more about how to submit a bounty proposal.
+
+:::
+
 See the video tutorial below to learn how you can create a bounty and submit it for approval through
 an OpenGov referendum.
 
@@ -56,6 +64,14 @@ Submitting a bounty proposal will reserve
 
 ## Assign a Curator to a Bounty
 
+:::info Step-by-step written tutorial
+
+See
+[this written tutorial](https://scribehow.com/shared/How_to_Assign_a_Curator_to_a_Bounty_on_Polkadotjs_Apps__JgK3eSfXQdm_PSvtz8TelQ)
+to learn more about how to assign a curator to a bounty.
+
+:::
+
 Once your bounty is shown as "funded" on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. See the
 video tutorial below to learn how you can add a curator to a bounty and submit it for approval
@@ -80,7 +96,28 @@ extrinsic. More information about when to do this can be found on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
 candidacy the bounty will show as "active" on the main Bounty page.
 
+:::info Curator assignment call must be executed after bounty is funded
+
+Curator assignment must take place after the bounty has been funded, and approved bounties are
+funded after a spend period has been completed. A curator assignment referendum cannot be executed
+during the same spend period when the bounty is funded.
+
+If your bounty has been awarded but is not funded yet, you need to make sure that the curator
+assignment referendum gets enacted in the subsequent spending period (you can set a delay in
+[Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the proposal
+during the current spend period).
+
+:::
+
 ## Create and Award Child Bounties
+
+:::info Step-by-step written tutorial
+
+See
+[this written tutorial](https://scribehow.com/shared/How_to_Create_and_Award_a_Child_Bounty__Q-YFGkYAR3WxMnvYGHiU3Q)
+to learn more about how to create and award child bounties.
+
+:::
 
 :::info Remember to add contextual information about child bounties
 
@@ -112,6 +149,14 @@ Note that once a child bounty is awarded, awardees need to wait for the
 child bounty.
 
 ## Claim a Child Bounty Reward
+
+:::info Step-by-step written tutorial
+
+See
+[this written tutorial](https://scribehow.com/shared/How_to_claim_a_Child_Bounty_reward_on_Polkadotjs__t3V7NDUjQlus40EUjc-5Kw)
+to learn more about how to claim a child bounty reward.
+
+:::
 
 The status of child bounties can be viewed on the
 [Polkassembly Bounty page](https://polkadot.polkassembly.io/bounties) under the specific parent
