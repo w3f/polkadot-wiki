@@ -78,6 +78,22 @@ collator side of Async Backing and establish a basic understanding of the change
   AuraUnincludedSegmentApi. If that runtime API is not supported, this assumes a maximum backlog
   size of 1.
 
+## Prerequisite
+
+The relay chain needs to have async backing enabled so double-check that the relay-chain configuration
+contains the following three parameters (especially when testing locally e.g. with zombienet):
+
+```json
+"async_backing_params": {
+    "max_candidate_depth": 3,
+    "allowed_ancestry_len": 2
+},
+"scheduling_lookahead": 2
+```
+
+⚠️ `scheduling_lookahead` must be set to 2, otherwise parachain block times will degrade to worse
+than with sync backing! ⚠️
+
 ## Phase 1 - Update Parachain Runtime
 
 This phase involves configuring your parachain’s runtime to make use of async backing system.
@@ -213,20 +229,6 @@ This phase consists of changes to your parachain’s runtime that activate async
    `ConstU64<0>` with the feature flag experimental, and `ConstU64<{SLOT_DURATION / 2}>` without.
 
 ![minimum-period](../assets/async/async-backing-minimum-period.png)
-
-6. Check parameters: double-check that the relay-chain configuration contains the following three
-   parameters (especially when testing locally e.g. with zombienet):
-
-```json
-"async_backing_params": {
-    "max_candidate_depth": 3,
-    "allowed_ancestry_len": 2
-},
-"scheduling_lookahead": 2
-```
-
-⚠️ `scheduling_lookahead` must be set to 2, otherwise parachain block times will degrade to worse
-than with sync backing! ⚠️
 
 ## Timing by Block Number
 
