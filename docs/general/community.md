@@ -137,3 +137,5 @@ you face any issues, join the rooms individually.
   application of blockchain technology, using Polkadot and Substrate as its foundations.
 - [Polkadot Communities and Campaigns by AirLyft One](https://airlyft.one/communities?ecosystem=POLKADOT) -
   Discover thriving communities and participate in engaging campaigns.
+- [DotAppStore](https://dotappstore.com/) - Discover featured projects and apps upvoted by the
+  Polkadot community.
