@@ -138,7 +138,7 @@ typically rented through service providers. Resiliency is also achieved by ensur
 many different providers as possible and avoiding a significant share of the nodes being run under
 the same provider in the same geographic region. A legislation change or a natural disaster could
 impact a considerable fraction of the nodes and potentially stop the network.
-{{ polkadot: Pokadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can be
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can be
 explored through the [Polkawatch app](https://polkawatch.app/).
 
 The [One Thousand Validator Programme](./thousand-validators.md) aims to incentivize the creation of
