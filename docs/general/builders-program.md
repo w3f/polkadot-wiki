@@ -61,13 +61,13 @@ There are three tracks builders can take for the program.
 
 ### Chains track
 
-This track supports builders who are building application-specific chains, which include parachains,
+This track supports builders who are building application-specific chains, which include [parachains](https://wiki.polkadot.network/docs/learn-parachains-index),
 parathreads and independent chains too.
 
 ### Infrastructure track
 
 This track supports builders who are building ecosystem-based infrastructure, which may be in the
-form of tooling, UI, middleware, bridges, and more.
+form of tooling, UI, middleware, [bridges](https://wiki.polkadot.network/docs/learn-bridges), and more.
 
 ### Application track
 
