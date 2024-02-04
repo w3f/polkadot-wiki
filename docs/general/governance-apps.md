@@ -15,6 +15,10 @@ and add your Governance app to this page.
 
 :::
 
+- [Delegation Dashboard](#delegation-dashboard)
+- [Polkassembly](#polkassembly)
+- [SubSquare](#subsquare)
+
 ## Delegation Dashboard
 
 The [Polkadot Delegation Dashboard](https://delegation.polkadot.network/) is a web3 application that
@@ -100,3 +104,10 @@ Polkassembly ensures that the community remains at the heart of the decision-mak
 Dive into the world of Polkadot governance with Polkassembly and be an active part of the future!
 For deeper insights or specific tutorials, please refer to the official documentation at
 https://docs.polkassembly.io.
+
+## SubSquare
+
+SubSquare is a governance platform well-designed for substrate based chains. It monitors on-chain
+governance events and provides user interfaces to facilitate various governance workflow. It has
+supported tens of chains including polkadot, kusama, acala, centrifuge, hydradx, interlay, phala,
+etc. Please check all deployments [here](https://subsquare.io/).
