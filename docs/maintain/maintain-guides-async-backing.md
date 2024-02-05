@@ -80,8 +80,9 @@ collator side of Async Backing and establish a basic understanding of the change
 
 ## Prerequisite
 
-The relay chain needs to have async backing enabled so double-check that the relay-chain configuration
-contains the following three parameters (especially when testing locally e.g. with zombienet):
+The relay chain needs to have async backing enabled so double-check that the relay-chain
+configuration contains the following three parameters (especially when testing locally e.g. with
+zombienet):
 
 ```json
 "async_backing_params": {
