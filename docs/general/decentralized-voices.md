@@ -12,7 +12,7 @@ empowers broader community participation in [Polkadot OpenGov](../learn/learn-po
 by [delegating](../learn/learn-polkadot-opengov.md#multirole-delegation)
 {{ polkadot: 42 Million DOT :polkadot }}{{ kusama: 180,000 KSM :kusama }} of voting power.
 
-## Decentralized Voting Power
+## Decentralized Votes
 
 Building on the success of previous initiatives like
 [the Thousand Validators Program](./thousand-validators.md) and
