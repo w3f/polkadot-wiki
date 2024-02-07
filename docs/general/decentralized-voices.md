@@ -9,7 +9,7 @@ slug: ../decentralized-voices
 
 The Decentralized Voices program for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 empowers broader community participation in [Polkadot OpenGov](../learn/learn-polkadot-opengov.md)
-by delegating {{ polkadot: 42 Million DOT :polkadot }}{{ kusama: 180,000 KSM :kusama }}. Interested
+by delegating {{ polkadot: 42 Million DOT :polkadot }}{{ kusama: 180,000 KSM :kusama }} of voting power. Interested
 applicants can fill
 [**this application form**](https://docs.google.com/forms/d/e/1FAIpQLSeIFOhMfoqRoeYqr1c_-UeB2a6u0YEsi9CaNEEeUAXtN0oE3w/viewform)
 to qualify for receiving
