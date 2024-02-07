@@ -49,7 +49,7 @@ and we will respond shortly. Information requested includes the following:
 The Decentralized Voices program initially designates delegates who will be receiving delegated
 funds. In addition to the platforms mentioned above, to expand their reach, participants can
 showcase their governance contributions and political philosophy through public declarations and
-active engagement on other social media platforms such as:
+active engagement (optionally) on other social media platforms such as:
 
 - [Reddit](https://www.reddit.com/r/Polkadot/)
 - [Discord](https://discord.gg/polkadot)
