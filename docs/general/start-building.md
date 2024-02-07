@@ -27,6 +27,14 @@ Subsequently, the
 [code for the Agile Coretime Broker pallet](https://github.com/paritytech/substrate/pull/14568) was
 added to the Substrate FRAME system.
 
+In general, the flow from RFC write-up to its implementation will follow the timeline below:
+
+- RFC write-up and review [via GitHub](https://github.com/polkadot-fellows/RFCs)
+- Polkadot Technical Fellowship Referendum submitted to the Track `3 / Fellows`
+- If the Referendum is approved, changes discussed in the RFC are implemented
+- Further changes to the RFC's implementation can be subject to an OpenGov referendum in the future
+  if the token holders deem it necessary
+
 For more information about the adoption of RFCs within the Polkadot ecosystem, see
 [this Medium article](https://www.polkadotphilosophy.com/polkadots-strategic-adoption-of-rfcs-pioneering-a-collaborative-future-in-blockchain-3330843cfd4f)
 and the
