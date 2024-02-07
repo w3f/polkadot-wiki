@@ -41,5 +41,5 @@ philosophy through public declarations and active engagement on relevant platfor
 Selection criteria include demonstrated participation in governance activities and ethical voting
 practices. Delegations are subject to review, and non-compliance may result in revocation.
 
-The Decentralized Voices program commences on **February 6, 2024**, offering an opportunity for
+The Decentralized Voices program commenced on **February 6, 2024**, offering an opportunity for
 dedicated community members to shape the future of the Polkadot ecosystem.
