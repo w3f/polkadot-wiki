@@ -19,8 +19,8 @@ Foundation. For more detailed information, see
 
 Building on the success of previous initiatives like
 [the Thousand Validators Program](./thousand-validators.md) and
-[the Decentralized Futures Program](./decentralized-futures.md), the Web3 Foundation emphasizes the
-importance of decentralized governance within the Polkadot ecosystem to ensure a fair
+[the Decentralized Futures Program](./decentralized-futures.md), Web3 Foundation is working on
+decentralizing governance within the Polkadot ecosystem to ensure a fair
 decision-making process. In line with this ethos, the Foundation seeks to amplify the voices of
 passionate and knowledgeable participants who may lack significant
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holdings, aiming to mitigate potential
