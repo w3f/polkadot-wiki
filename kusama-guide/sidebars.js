@@ -100,6 +100,7 @@ module.exports = {
           },
           items: [
             "general/decentralized-futures",
+            "general/decentralized-voices",
             "general/grants",
             "general/bug-bounty",
             "general/ambassadors",
