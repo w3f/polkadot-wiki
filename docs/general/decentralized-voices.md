@@ -29,7 +29,7 @@ Programme, as
 
 Please fill out
 [this application](https://docs.google.com/forms/d/e/1FAIpQLSeIFOhMfoqRoeYqr1c_-UeB2a6u0YEsi9CaNEEeUAXtN0oE3w/viewform)
-and we will respond shortly. Information requested includes the following:
+provided by Web3 Foundation. Information requested in the form includes the following:
 
 - The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} address to which you would like
   to have {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} delegated. This account must have a
