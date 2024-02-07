@@ -26,7 +26,7 @@ passionate and knowledgeable participants who may lack significant
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holdings, aiming to mitigate potential
 marginalization. This initiative does not impact existing programs like the Thousand Validators
 Programme, as
-[staking and governance locks can coexist](../learn/learn-polkadot-opengov.md#voluntary-locking-conviction-voting).
+[the tokens allocated can be used for both staking and governance](../learn/learn-polkadot-opengov.md#voluntary-locking-conviction-voting).
 
 The Decentralized Voices program initially designates delegates who will be receiving delegated
 funds. Participants are encouraged to showcase their governance contributions and political
