@@ -117,25 +117,8 @@ This initiative is funded by Polkadot treasury through
 
 :::
 
-:::info Induction to Fellowship as a Candidate (Rank 0)
-
-The fellowship manifesto states that any account may register to become a candidate for a basic
-deposit, but that feature has not been added to the collectives runtime yet. A fellowship referendum
-is no longer needed for candidate induction. To be added as a candidate of the Polkadot Technical
-Fellowship, a pre-existing member with rank greater than or equal to 1 can sign and submit an
-`induct` call. The fellowship membership management is administered through the
-[core fellowship](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/core-fellowship/src/lib.rs)
-pallet.
-
-:::
-
-An existing Technical Fellowship member with rank greater than or equal to 1 can submit the signed
-`induct` call, as shown below. It is recommended that the candidate account has a verified identity.
-Upon successfuly execution of the extrinsic, the candidate's account will be displayed on the
-[Fellowship Overview](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship)
-tab on Polkadot-JS UI.
-
-![candidate-induct](../assets/fellowship-induct-call.png)
+The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on 
+[the fellowship dasboard](https://polkadot-fellows.github.io/dashboard/#/membership).
 
 ### Rank Updates
 
@@ -146,32 +129,6 @@ ranks higher. For instance, the fellowship
 [referenda 64](https://collectives.subsquare.io/fellowship/referenda/64) which promotes a member
 from rank 1 to rank 2 can only be voted by members whose ranks are greater than or equal to 3.
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
-referendum.
+referendum. For more information, check the rank updates section on [the fellowship dasboard](https://polkadot-fellows.github.io/dashboard/#/membership).
 
-This preimage example should include the call to `promote` an account to a specific rank, as shown
-below. This preimage can be added by any account on the collectives system chain.
 
-![candidate-promote](../assets/fellowship-promote-member.png)
-
-In the snapshot below, the submission track is chosen as `21/Promote to I Dan`, origin as
-`FellowshipOrigins` and fellowship origins as `PromoteTo1Dan`. This selection should work for
-promoting a candidate with rank 0 to a member with rank 1.
-
-![candidate-promote-proposal](../assets/fellowship-promotion-proposal.png)
-
-For promoting a member from Rank 1 to Rank 2, the submission track can be chosen as
-`22/Promote to  II Dan`, origin as `FellowshipOrigins` and fellowship origins as `PromoteTo2Dan`.
-Only the members with Rank >= 3 can vote on this proposal.
-
-#### Retain Rank
-
-To retain a rank, the Polkadot Fellowship members are expected to submit evidence of work in an
-on-going basis.
-
-#### Demotion and Suspension
-
-**Demotion** occurs automatically after a given period has elapsed, and the member is unable to
-defend their position to their peers.
-
-**Suspension** can happen only through a Polkadot OpenGov referendum, which ensures that the
-Fellowship's bias alone does not necessarily result in expulsion.
