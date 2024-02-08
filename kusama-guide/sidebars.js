@@ -600,6 +600,7 @@ module.exports = {
             "learn/learn-parathreads",
             "learn/learn-async-backing",
             "learn/learn-sassafras",
+            "learn/learn-hyperbridge",
           ],
         },
         {
