@@ -149,7 +149,7 @@ exceed the max size of an unsigned 128 bit integer.
 
 ### Fee Multiplier
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can add a additional fee to
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can add an additional fee to
 transactions if the network becomes too busy and starts to decelerate the system. This fee can
 create an incentive to avoid the production of low priority or insignificant transactions. In
 contrast, those additional fees will decrease if the network calms down and can execute transactions
