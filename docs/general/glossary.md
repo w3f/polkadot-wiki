@@ -521,6 +521,11 @@ will have to use a bridge. Previously known as the
 The previous name for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 [Host](#polkadot-host).
 
+## Paseo
+
+The [testnet](#testnet) is set aside for testing the Polkadot Relay Chain. The Paseo testnet is an
+exact copy of Polkadot, and it is maintained by the community.
+
 ## Preimage
 
 The on-chain proposals do not require the entire image of extrinsics and data (for instance the WASM
@@ -810,6 +815,12 @@ deemed too expensive and could decelerate the network. This is handled by the we
 the cost of the transactions (referred to as [extrinsics](#extrinsic)) are determined before
 execution. Checkout this section of the Substrate docs covering
 [transaction weights and fees](https://docs.substrate.io/build/tx-weights-fees/).
+
+## Westend
+
+The [testnet](#testnet) is set aside for testing the Polkadot Relay Chain. Contrary to the
+[Paseo testnet](#paseo), the Westend testnet is not an exact copy of Polkadot (it can contain future
+upgrades), and it is maintained by Parity Technologies.
 
 ## Witness
 
