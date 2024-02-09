@@ -364,7 +364,7 @@ receivers:
     send_resolved: true
 ```
 
-With the above configuration, alerts will be sent using the the email you set above. Remember to
+With the above configuration, alerts will be sent using the email you set above. Remember to
 change `YOUR_EMAIL` to your email and paste the app password you just saved earlier to the
 `YOUR_APP_PASSWORD`.
 

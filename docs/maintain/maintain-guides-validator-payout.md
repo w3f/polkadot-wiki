@@ -196,7 +196,7 @@ validator, then you will lose 1 DOT in each case.
 
 :::caution
 
-If a validator is oversubscribed in an era, staking rewards are distributed only to the the top
+If a validator is oversubscribed in an era, staking rewards are distributed only to the top
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators and the rest of the nominators do not receive any rewards. This is not the case for

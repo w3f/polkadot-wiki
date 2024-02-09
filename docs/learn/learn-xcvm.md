@@ -129,7 +129,7 @@ enum Instruction {
   non-fungible assets, and in the case of a fungible asset, it represents some defined amount of the
   asset.
 
-- A `MultiLocation` is a relative identifier, meaning that it can only be used to define the the
+- A `MultiLocation` is a relative identifier, meaning that it can only be used to define the 
   relative path between two locations, and cannot generally be used to refer to a location
   universally.
 
