@@ -530,6 +530,14 @@ Note that to successfully cast votes you need to have the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
 to pay for transaction fees.
 
+:::info Remove Delegations to Vote
+
+Before voting on a referendum on a specific track, you will need to remove any existing
+[delegation](#multirole-delegation) on that track (i.e. undelegate). You can have a lock on the
+track, but you cannot have a delegation.
+
+:::
+
 ### Voting Locks
 
 #### Voting Without Conviction
@@ -595,6 +603,9 @@ unlocking period countdown begins after the account undelegates. There can be di
 - if the account delegated votes to different delegates using different convictions, then after
   undelegating those delegates, there will be different unlocking periods with lengths dependent on
   the conviction multipliers.
+
+**Before delegating a specific track, you must remove any [vote](#voting-on-a-referendum) on that
+track.**
 
 :::
 
