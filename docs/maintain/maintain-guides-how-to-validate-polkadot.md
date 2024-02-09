@@ -363,7 +363,7 @@ Run the following command to find the latest version.
 git tag -l | sort -V | grep -v -- '-rc'
 ```
 
-Find the latest version; replace "VERSION" in the commmand below and run to change your branch.
+Find the latest version; replace "VERSION" in the command below and run to change your branch.
 
 ```sh
 git checkout VERSION
@@ -878,7 +878,7 @@ As demonstrated in
 [Yusuke Endoh's article](http://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html),
 a performance penalty for containerized workloads can be as high as 100%. This is due to SECCOMP
 profile being overprotective about applying Spectre/Meltdown mitigations without providing real
-security. A longer explanation is a available in the
+security. A longer explanation is available in the
 [kernel patch discussion](https://lkml.org/lkml/2020/11/4/1135).
 
 Linux 5.16
