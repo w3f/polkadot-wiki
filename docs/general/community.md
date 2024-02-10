@@ -139,3 +139,5 @@ you face any issues, join the rooms individually.
   Discover thriving communities and participate in engaging campaigns.
 - [DotAppStore](https://dotappstore.com/) - Discover featured projects and apps upvoted by the
   Polkadot community.
+- [Awesome Dot](https://github.com/haquefardeen/awesome-dot) - community curated resources, projects,
+  and learning around the Polkadot and Kusama ecosystem.
