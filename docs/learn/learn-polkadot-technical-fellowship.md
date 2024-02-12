@@ -117,7 +117,7 @@ This initiative is funded by Polkadot treasury through
 
 :::
 
-The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on 
+The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on
 [the fellowship dasboard](https://polkadot-fellows.github.io/dashboard/#/membership).
 
 ### Rank Updates
@@ -129,6 +129,5 @@ ranks higher. For instance, the fellowship
 [referenda 64](https://collectives.subsquare.io/fellowship/referenda/64) which promotes a member
 from rank 1 to rank 2 can only be voted by members whose ranks are greater than or equal to 3.
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
-referendum. For more information, check the rank updates section on [the fellowship dasboard](https://polkadot-fellows.github.io/dashboard/#/membership).
-
-
+referendum. For more information, check the rank updates section on
+[the fellowship dasboard](https://polkadot-fellows.github.io/dashboard/#/membership).
