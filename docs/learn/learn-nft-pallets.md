@@ -266,7 +266,7 @@ user will not have to worry about all technicalities.
 
 :::info
 
-The Uniques Pallet is deprecated. Everything related to NFTs will be covered by the 
+The Uniques Pallet is deprecated. Everything related to NFTs will be covered by the
 [NFTs Pallet](#nfts-pallet).
 
 :::

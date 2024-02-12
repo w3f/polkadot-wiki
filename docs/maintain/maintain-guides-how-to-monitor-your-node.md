@@ -364,8 +364,8 @@ receivers:
     send_resolved: true
 ```
 
-With the above configuration, alerts will be sent using the email you set above. Remember to
-change `YOUR_EMAIL` to your email and paste the app password you just saved earlier to the
+With the above configuration, alerts will be sent using the email you set above. Remember to change
+`YOUR_EMAIL` to your email and paste the app password you just saved earlier to the
 `YOUR_APP_PASSWORD`.
 
 Next, create another `systemd` configuration file named `alertmanager.service` by running the
