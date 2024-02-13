@@ -530,11 +530,11 @@ Note that to successfully cast votes you need to have the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
 to pay for transaction fees.
 
-:::info Remove Delegations to Vote
+:::info Revoke your delegation before voting on the same track
 
-Before voting on a referendum on a specific track, you will need to remove any existing
-[delegation](#multirole-delegation) on that track (i.e. undelegate). You can have a lock on the
-track, but you cannot have a delegation.
+Before voting on a referendum on a specific track, you will need to revoke any existing
+[delegation](#multirole-delegation) on that track (i.e. undelegate). You can have a conviction lock
+on the track, but you cannot have an active delegation.
 
 :::
 
