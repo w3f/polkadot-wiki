@@ -14,7 +14,7 @@ in the relay chain as part of its final state
 
 [Asynchronous backing](./learn-async-backing.md) is the first implementation to the parachain
 protocol that alters how parachains produce blocks and how the relay chain processes their data.
-Briefly, parachains will take up to 2 seconds execution time (produce parablocks), while the relay
+This upgrade will allow parachains to take up to 2 seconds execution time (for producing parablocks), while the relay
 chain will be able to include a parablock every 6 seconds.
 
 The limiting factor now is the relay chain and the 6 seconds it takes backing groups to back and
