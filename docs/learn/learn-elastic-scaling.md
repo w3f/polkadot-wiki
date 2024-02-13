@@ -17,13 +17,10 @@ protocol that alters how parachains produce blocks and how the relay chain proce
 This upgrade will allow parachains to take up to 2 seconds execution time (for producing parablocks), while the relay
 chain will be able to include a parablock every 6 seconds.
 
-The limiting factor now is the relay chain and the 6 seconds it takes backing groups to back and
-include parablocks. After asynchronous backing is implemented, parachains can theoretically produce
-parablocks in the sub-second time range, but this would just create large
-[unincluded segments](./learn-async-backing.md#unincluded-segments) on their end and a bottleneck on
-the relay chain. Here is where elastic scaling comes into play. With elastic scaling, parachains can
-use multiple cores to include multiple parablocks within the same relay chain block. Take for
-example a parachain that wants to submit 4 parablocks to the relay chain:
+With asynchronous backing enabled, parachains can theoretically produce
+parablocks in the sub-second time range. However, to accomplish this, asynchronous backing must temporarily **hold** blocks in [unincluded segments](./learn-async-backing.md#unincluded-segments).  This is the bottleneck that elastic scaling addresses.  With elastic scaling, parachains can
+use multiple cores to include multiple parablocks within the same relay chain block. Take, for
+example, a parachain that wants to submit 4 parablocks to the relay chain:
 
 Without elastic scaling, it will take 35 s to include all of them through one core. Remember that a
 core is occupied after backing and before inclusion, i.e. for the whole data availability process. A
