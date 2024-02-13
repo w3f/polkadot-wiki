@@ -8,10 +8,9 @@ slug: ../learn-elastic-scaling
 ---
 
 The path of parablocks from their creation to their inclusion into the relay chain (discussed in the
-[Parachain Protocol Page](./learn-parachains-protocol.md)) span two domains: the parachain side and
-the relay chain side. Scaling the Polkadot technology implies scaling how parablocks are produced
-and how their data is processed, secured, made available for additional checks, and finally included
-in the relay chain.
+[Parachain Protocol Page](./learn-parachains-protocol.md)) span two domains: the parachain's role and
+the relay chain's role. Scaling the Polkadot protocol involves consideration on how parablocks are validated, processed, secured, made available for additional checks, and finally included
+in the relay chain as part of its final state
 
 [Asynchronous backing](./learn-async-backing.md) is the first implementation to the parachain
 protocol that alters how parachains produce blocks and how the relay chain processes their data.
