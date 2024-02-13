@@ -240,7 +240,7 @@ from the outside world, i.e. they are not part of the system itself. Extrinsics 
 "[inherents](#inherent)" and "[transactions](#transaction)". For more technical details see the
 [polkadot spec](https://spec.polkadot.network/#id-extrinsics)
 
-## Fellowship
+## Technical Fellowship
 
 A mostly self-governing expert body with a primary goal of representing humans who embody and
 contain the technical knowledge base of the Kusama and/or Polkadot networks and protocols.
