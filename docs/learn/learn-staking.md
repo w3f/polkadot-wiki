@@ -657,7 +657,8 @@ for the FAQs about staking.
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
 - [Validator setup](../maintain/maintain-guides-secure-validator.md)
-- [Polkadot validator selector tool](https://decentradot.com/polkadot-validator-selector/)
+- [Polkadot validator selector tool](https://decentradot.com/polkadot-validator-selector/) -
+  A tool which helps nominators find reliable validators which meet a set of quality-control criteria including commission rates, verified identity et cetera.
 
 ---
 
