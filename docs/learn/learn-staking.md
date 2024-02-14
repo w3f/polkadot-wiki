@@ -658,7 +658,7 @@ for the FAQs about staking.
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
 - [Validator setup](../maintain/maintain-guides-secure-validator.md)
 - [Polkadot validator selector tool](https://decentradot.com/polkadot-validator-selector/) -
-  A tool which helps nominators find reliable validators which meet a set of quality-control criteria including commission rates, verified identity et cetera.
+  A tool that helps nominators find reliable validators that meet quality-control criteria, including commission rates, verified identity, etc.
 
 ---
 
