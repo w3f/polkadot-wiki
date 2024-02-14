@@ -523,7 +523,11 @@ The previous name for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :k
 
 ## Paseo
 
-Paseo [testnet](#testnet) provisions testing on Polkadot's "production" runtime, which means less chance of feature/code mismatch when developing parachain apps. Specifically, after the [Polkadot Technical fellowship](#technical-fellowship) proposes a runtime upgrade for Polkadot, this testnet is updated, giving a period where the testnet will be ahead of Polkadot to allow for testing.
+Paseo [testnet](#testnet) provisions testing on Polkadot's "production" runtime, which means less
+chance of feature/code mismatch when developing parachain apps. Specifically, after the
+[Polkadot Technical fellowship](#technical-fellowship) proposes a runtime upgrade for Polkadot, this
+testnet is updated, giving a period where the testnet will be ahead of Polkadot to allow for
+testing.
 
 ## Preimage
 
@@ -818,8 +822,9 @@ execution. Checkout this section of the Substrate docs covering
 ## Westend
 
 The [testnet](#testnet) is set aside for testing the Polkadot Relay Chain. Contrary to the
-[Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on protocol-level features like async backing, etc, that are not relevant for parachain developers.
-
+[Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on
+protocol-level features like [asynchronous backing](../learn/learn-async-backing.md), etc, that are
+not relevant for parachain developers.
 
 ## Witness
 
