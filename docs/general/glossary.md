@@ -523,8 +523,7 @@ The previous name for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :k
 
 ## Paseo
 
-The [testnet](#testnet) is set aside for testing the Polkadot Relay Chain. The Paseo testnet is an
-exact copy of Polkadot, and it is maintained by the community.
+Paseo [testnet](#testnet) provisions testing on Polkadot's "production" runtime, which means less chance of feature/code mismatch when developing parachain apps. Specifically, after the [Polkadot Technical fellowship](#technical-fellowship) proposes a runtime upgrade for Polkadot, this testnet is updated, giving a period where the testnet will be ahead of Polkadot to allow for testing.
 
 ## Preimage
 
