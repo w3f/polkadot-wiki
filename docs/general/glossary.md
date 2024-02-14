@@ -240,7 +240,7 @@ from the outside world, i.e. they are not part of the system itself. Extrinsics 
 "[inherents](#inherent)" and "[transactions](#transaction)". For more technical details see the
 [polkadot spec](https://spec.polkadot.network/#id-extrinsics)
 
-## Fellowship
+## Technical Fellowship
 
 A mostly self-governing expert body with a primary goal of representing humans who embody and
 contain the technical knowledge base of the Kusama and/or Polkadot networks and protocols.
@@ -520,6 +520,14 @@ will have to use a bridge. Previously known as the
 
 The previous name for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 [Host](#polkadot-host).
+
+## Paseo
+
+Paseo [testnet](#testnet) provisions testing on Polkadot's "production" runtime, which means less
+chance of feature/code mismatch when developing parachain apps. Specifically, after the
+[Polkadot Technical fellowship](#technical-fellowship) proposes a runtime upgrade for Polkadot, this
+testnet is updated, giving a period where the testnet will be ahead of Polkadot to allow for
+testing.
 
 ## Preimage
 
@@ -810,6 +818,13 @@ deemed too expensive and could decelerate the network. This is handled by the we
 the cost of the transactions (referred to as [extrinsics](#extrinsic)) are determined before
 execution. Checkout this section of the Substrate docs covering
 [transaction weights and fees](https://docs.substrate.io/build/tx-weights-fees/).
+
+## Westend
+
+The [testnet](#testnet) is set aside for testing the Polkadot Relay Chain. Contrary to the
+[Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on
+protocol-level features like [asynchronous backing](../learn/learn-async-backing.md), etc, that are
+not relevant for parachain developers.
 
 ## Witness
 

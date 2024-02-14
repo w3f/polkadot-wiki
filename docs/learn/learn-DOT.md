@@ -140,8 +140,23 @@ All the tokens under active issuance are can be used to participate in the gover
 ## Obtaining Testnet Tokens
 
 DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets like
-Westend and Rococo do not have any value besides allowing you to experiment with the features on the
-network.
+Paseo, Westend and Rococo do not have any value besides allowing you to experiment with the features
+on the network.
+
+### Getting Tokens on the Paseo Testnet
+
+The Paseo testnet mirrors the Polkadot runtime and it is maintained by the community. To get Paseo
+tokens (PAS) you can use the web-based
+[Paseo faucet](https://paritytech.github.io/polkadot-testnet-faucet/paseo). The PAS tokens has the
+same Planck conversion as Polkadot.
+
+| Unit            | Decimal Places | Conversion to Planck   | Conversion to PAS |
+| --------------- | -------------- | ---------------------- | ----------------- |
+| Planck          | 0              | 1 Planck               | 0.0000000001 PAS  |
+| Microdot (uPAS) | 4              | 10<sup>4</sup> Planck  | 0.0000010000 PAS  |
+| Millidot (mPAS) | 7              | 10<sup>7</sup> Planck  | 0.0010000000 PAS  |
+| Dot (PAS)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 PAS  |
+| Million (MPAS)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 PAS  |
 
 ### Getting Tokens on the Westend Testnet
 
