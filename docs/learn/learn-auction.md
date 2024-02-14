@@ -9,8 +9,6 @@ slug: ../learn-auction
 
 import RPC from "./../../components/RPC-Connection";
 
-import AuctionSchedule from "./../../components/Auction-Schedule";
-
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
 parachain slots. The number of parachain slots is not unbounded on
@@ -36,11 +34,6 @@ details.
     </p>
   </div>
 </div>
-
-## Auction Schedule
-
-{{ polkadot: <AuctionSchedule network="polkadot" /> :polkadot }}
-{{ kusama: <AuctionSchedule network="kusama" /> :kusama }}
 
 ## Mechanics of a Candle Auction
 
