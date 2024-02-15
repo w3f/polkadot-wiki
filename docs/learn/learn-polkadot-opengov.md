@@ -532,7 +532,7 @@ to pay for transaction fees.
 
 :::info Revoke your delegation on a track if you like to vote on your own
 
-Before voting on a referendum on a specific track, you will need to revoke any existing
+If you want to vote on a referendum on a specific track on your own, you will need to revoke any existing
 [delegation](#multirole-delegation) on that track (i.e. undelegate). You can have a conviction lock
 on the track, but you cannot have an active delegation.
 
