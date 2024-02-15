@@ -34,7 +34,7 @@ let _: MultiLocation = (Parent, GlobalConsensus(RELAY_B_NETWORK), Parachain(1000
 From the perspective of Parachain C
 
 ```rust
-// Relay A
+// Relay B
 let _: MultiLocation = Parent.into();
 // Plurality Example. Many more BodyId/BodyPart combos imaginable
 let _: MultiLocation = (Parent, Plurality { id: BodyId::Index(0), part: BodyPart::Members { count: 10 } }).into();
