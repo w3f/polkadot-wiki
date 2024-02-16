@@ -92,8 +92,10 @@ zombienet):
 "scheduling_lookahead": 2
 ```
 
-⚠️ `scheduling_lookahead` must be set to 2, otherwise parachain block times will degrade to worse
-than with sync backing! ⚠️
+:::warning warning 
+`scheduling_lookahead` must be set to 2, otherwise parachain block times will
+degrade to worse than with sync backing!
+:::
 
 ## Phase 1 - Update Parachain Runtime
 
@@ -105,62 +107,169 @@ This phase involves configuring your parachain’s runtime to make use of async 
 2. Establish a constant relay chain slot duration measured in milliseconds equal to `6000` in
    `/runtime/src/lib.rs`.
 
-![capacity-velocity](../assets/async/async-backing-capacity-velocity.png)
+   ```rust
+   /// Maximum number of blocks simultaneously accepted by the Runtime, not yet included into the
+   /// relay chain.
+   pub const UNINCLUDED_SEGMENT_CAPACITY: u32 = 1;
+   /// How many parachain blocks are processed by the relay chain per parent. Limits the number of
+   /// blocks authored per slot.
+   pub const BLOCK_PROCESSING_VELOCITY: u32 = 1;
+   /// Relay chain slot duration, in milliseconds.
+   pub const RELAY_CHAIN_SLOT_DURATION_MILLIS: u32 = 6000;
+   ```
 
 3. Establish constants `MILLISECS_PER_BLOCK` and `SLOT_DURATION` if not already present in
    `/runtime/src/lib.rs`.
 
-![capacity-velocity](../assets/async/async-backing-slot-duration.png)
+   ```rust
+
+   /// BLOCKSkkhasd will be produced at a minimum duration defined by `SLOT_DURATION`.
+   /// `SLOT_DURATION` is picked up by `pallet_timestamp` which is in turn picked
+   /// up by `pallet_aura` to implement `fn slot_duration()`.
+   ///
+   /// Change this to adjust the block time.
+   pub const MILLISECS_PER_BLOCK: u64 = 12000;
+   pub const SLOT_DURATION: u64 = MILLISECS_PER_BLOCK;
+   ```
 
 4. Configure `cumulus_pallet_parachain_system` in `runtime/src/lib.rs`
 
    - Define a `FixedVelocityConsensusHook` using our capacity, velocity, and relay slot duration
      constants. Use this to set the parachain system `ConsensusHook` property.
 
-   ![consensus-hook](../assets/async/async-backing-consensus-hook.png)
+   ```rust
+   impl cumulus_pallet_parachain_system::Config for Runtime {
+   	type RuntimeEvent = RuntimeEvent;
+   	type OnSystemEvent = ();
+   	type SelfParaId = parachain_info::Pallet<Runtime>;
+   	type OutboundXcmpMessageSource = XcmpQueue;
+   	type DmpQueue = frame_support::traits::EnqueueWithOrigin<MessageQueue, RelayOrigin>;
+   	type ReservedDmpWeight = ReservedDmpWeight;
+   	type XcmpMessageHandler = XcmpQueue;
+   	type ReservedXcmpWeight = ReservedXcmpWeight;
+   	type CheckAssociatedRelayNumber = RelayNumberMonotonicallyIncreases;
+    // highlight-next-line
+   	type ConsensusHook = ConsensusHook;
+   	type WeightInfo = weights::cumulus_pallet_parachain_system::WeightInfo<Runtime>;
+   }
+   // highlight-start
+   type ConsensusHook = cumulus_pallet_aura_ext::FixedVelocityConsensusHook<
+   	Runtime,
+   	RELAY_CHAIN_SLOT_DURATION_MILLIS,
+   	BLOCK_PROCESSING_VELOCITY,
+   	UNINCLUDED_SEGMENT_CAPACITY,
+   >;
+   // highlight-end
+   ```
 
    - Set the parachain system property `CheckAssociatedRelayNumber` to
      `RelayNumberMonotonicallyIncreases`
 
-   ![Associated-Relay-number](../assets/async/async-backing-associated-relay.png)
+   ```rust
+   impl cumulus_pallet_parachain_system::Config for Runtime {
+   	type RuntimeEvent = RuntimeEvent;
+   	type OnSystemEvent = ();
+   	type SelfParaId = parachain_info::Pallet<Runtime>;
+   	type OutboundXcmpMessageSource = XcmpQueue;
+   	type DmpQueue = frame_support::traits::EnqueueWithOrigin<MessageQueue, RelayOrigin>;
+   	type ReservedDmpWeight = ReservedDmpWeight;
+   	type XcmpMessageHandler = XcmpQueue;
+   	type ReservedXcmpWeight = ReservedXcmpWeight;
+    // highlight-next-line
+   	type CheckAssociatedRelayNumber = RelayNumberMonotonicallyIncreases;
+   	type ConsensusHook = ConsensusHook;
+   	type WeightInfo = weights::cumulus_pallet_parachain_system::WeightInfo<Runtime>;
+   }
+   type ConsensusHook = cumulus_pallet_aura_ext::FixedVelocityConsensusHook<
+   	Runtime,
+   	RELAY_CHAIN_SLOT_DURATION_MILLIS,
+   	BLOCK_PROCESSING_VELOCITY,
+   	UNINCLUDED_SEGMENT_CAPACITY,
+   >;
+   ```
 
 5. Configure `pallet_aura` in `runtime/src/lib.rs`
 
    - Set `AllowMultipleBlocksPerSlot` to `false` (don't worry, we will set it to `true` when we
-     activate async backing in step 3).
+     activate async backing in phase 3).
    - Define `pallet_aura::SlotDuration` using our constant `SLOT_DURATION`
 
-   ![Aura-config](../assets/async/async-backing-config-aura.png)
+   ```rust
+   impl pallet_aura::Config for Runtime {
+   	type AuthorityId = AuraId;
+   	type DisabledValidators = ();
+   	type MaxAuthorities = ConstU32<100_000>;
+    // highlight-start
+   	type AllowMultipleBlocksPerSlot = ConstBool<false>;
+   	#[cfg(feature = "experimental")]
+   	type SlotDuration = ConstU64<SLOT_DURATION>;
+    // highlight-end
+   }
+   ```
 
 6. Update `aura_api::SlotDuration()` to match the constant `SLOT_DURATION`
 
-   ![Aura-spi](../assets/async/async-backing-aura-api.png)
+   ```rust
+   impl_runtime_apis! {
+   	impl sp_consensus_aura::AuraApi<Block, AuraId> for Runtime {
+   		fn slot_duration() -> sp_consensus_aura::SlotDuration {
+            // highlight-next-line
+   			sp_consensus_aura::SlotDuration::from_millis(SLOT_DURATION)
+   		}
+
+   		fn authorities() -> Vec<AuraId> {
+   			Aura::authorities().into_inner()
+   		}
+   	}
+   ...
+   ```
 
 7. Implement the `AuraUnincludedSegmentApi`, which allows the collator client to query its runtime
    to determine whether it should author a block.
 
    - Add the dependency `cumulus-primitives-aura` to the `runtime/Cargo.toml` file for your runtime
 
-     ![cargo-toml](../assets/async/async-backing-cargo.png)
+```rust
+cumulus-pallet-aura-ext = { path = "../../../../pallets/aura-ext", default-features = false }
+cumulus-pallet-parachain-system = { path = "../../../../pallets/parachain-system", default-features = false, features = ["parameterized-consensus-hook"] }
+cumulus-pallet-session-benchmarking = { path = "../../../../pallets/session-benchmarking", default-features = false }
+cumulus-pallet-xcm = { path = "../../../../pallets/xcm", default-features = false }
+cumulus-pallet-xcmp-queue = { path = "../../../../pallets/xcmp-queue", default-features = false, features = ["bridging"] }
+// highlight-next-line
+cumulus-primitives-aura = { path = "../../../../primitives/aura", default-features = false }
+```
 
-   - In the same file, add `"cumulus-primitives-aura/std",` to the `std` feature.
+- In the same file, add `"cumulus-primitives-aura/std",` to the `std` feature.
 
-   - Inside the `impl_runtime_apis!` block for your runtime, implement the
-     `AuraUnincludedSegmentApi` as shown below.
+- Inside the `impl_runtime_apis!` block for your runtime, implement the `AuraUnincludedSegmentApi`
+  as shown below.
 
-     ![unincluded-segment](../assets/async/async-backing-unincluded-segment.png)
+```rust
+impl cumulus_primitives_aura::AuraUnincludedSegmentApi<Block> for Runtime {
+	fn can_build_upon(
+		included_hash: <Block as BlockT>::Hash,
+		slot: cumulus_primitives_aura::Slot,
+	) -> bool {
+		ConsensusHook::can_build_upon(included_hash, slot)
+	}
+}
+```
 
-     Important note: With a capacity of 1 we have an effective velocity of ½ even when velocity is
-     configured to some larger value. This is because capacity will be filled after a single block
-     is produced and will only be freed up after that block is included on the relay chain, which
-     takes 2 relay blocks to accomplish. Thus with capacity 1 and velocity 1 we get the customary 12
-     second parachain block time.
+**Note:** With a capacity of 1 we have an effective velocity of ½ even when velocity is configured
+to some larger value. This is because capacity will be filled after a single block is produced and
+will only be freed up after that block is included on the relay chain, which takes 2 relay blocks to
+accomplish. Thus with capacity 1 and velocity 1 we get the customary 12 second parachain block time.
 
 8. If your `runtime/src/lib.rs` provides a `CheckInherents` type to `register_validate_block`,
    remove it. `FixedVelocityConsensusHook` makes it unnecessary. The following example shows how
    `register_validate_block` should look after removing `CheckInherents`.
 
-   ![register-validate-block](../assets/async/async-backing-register-validate.png)
+```rust
+cumulus_pallet_parachain_system::register_validate_block! {
+	Runtime = Runtime,
+	BlockExecutor = cumulus_pallet_aura_ext::BlockExecutor::<Runtime, Executive>,
+}
+```
 
 ## Phase 2 - Update Parachain Nodes
 
@@ -168,22 +277,63 @@ This phase consists of plugging in the new lookahead collator node.
 
 1. Import `cumulus_primitives_core::ValidationCode` to `node/src/service.rs`
 
-![import-validation-code](../assets/async/async-backing-cumulus-primitives.png)
+```rust
+use cumulus_primitives_core::{
+// highlight-next-line
+	relay_chain::{CollatorPair, ValidationCode},
+	ParaId,
+};
+```
 
 2. In `node/src/service.rs`, modify `sc_service::spawn_tasks` to use a clone of `Backend` rather
    than the original
 
-![spawn-tasks](../assets/async/async-backing-spawn-tasks.png)
+```rust
+sc_service::spawn_tasks(sc_service::SpawnTasksParams {
+	rpc_builder,
+	client: client.clone(),
+	transaction_pool: transaction_pool.clone(),
+	task_manager: &mut task_manager,
+	config: parachain_config,
+	keystore: params.keystore_container.keystore(),
+  // highlight-next-line
+	backend: backend.clone(),
+	network: network.clone(),
+	sync_service: sync_service.clone(),
+	system_rpc_tx,
+	tx_handler_controller,
+	telemetry: telemetry.as_mut(),
+})?;
+```
 
 3. Add `backend` as a parameter to `start_consensus()` in `node/src/service.rs`
 
-![start-consensus-1](../assets/async/async-backing-start-consensus.png)
+```rust
+fn start_consensus(
+    client: Arc<ParachainClient>,
+    // highlight-next-line
+    backend: Arc<ParachainBackend>,
+    block_import: ParachainBlockImport,
+    prometheus_registry: Option<&Registry>,
+    telemetry: Option<TelemetryHandle>,
+    task_manager: &TaskManager,
+```
 
-![start-consensus-2](../assets/async/async-backing-start-consensus-2.png)
+```rust
+if validator {
+    start_consensus(
+    client.clone(),
+    // highlight-next-line
+    backend.clone(),
+    block_import,
+    prometheus_registry.as_ref(),
+```
 
-4. In `start_consensus()` import the lookahead collator rather than the basic collator
+4. In `node/src/service.rs` import the lookahead collator rather than the basic collator
 
-![lookahead-collator](../assets/async/async-backing-lookahead-collator.png)
+```rust
+use cumulus_client_consensus_aura::collators::lookahead::{self as aura, Params as AuraParams};
+```
 
 5. In `start_consensus()` replace the `BasicAuraParams` struct with `AuraParams`
    - Change the struct type from `BasicAuraParams` to `AuraParams`
@@ -192,15 +342,52 @@ This phase consists of plugging in the new lookahead collator node.
    - Provide a `code_hash_provider` closure like that shown below
    - Increase `authoring_duration` from 500 milliseconds to 1500
 
-Note: Set `authoring_duration` to whatever you want, taking your own hardware into account. But if
-the backer who should be slower than you due to reading from disk, times out at two seconds your
-candidates will be rejected.
+```rust
+let params = AuraParams {
+    create_inherent_data_providers: move |_, ()| async move { Ok(()) },
+    block_import,
+    para_client: client.clone(),
+    para_backend: backend.clone(),
+    relay_client: relay_chain_interface,
+    code_hash_provider: move |block_hash| {
+        client.code_at(block_hash).ok().map(|c| ValidationCode::from(c).hash())
+    },
+    sync_oracle,
+    keystore,
+    collator_key,
+    para_id,
+    overseer_handle,
+    relay_chain_slot_duration,
+    proposer,
+    collator_service,
+    // highlight-next-line
+    authoring_duration: Duration::from_millis(1500),
+    reinitialize: false,
+};
+```
 
-![Aura-params](../assets/async/async-backing-aura-params.png)
+**Note:** Set `authoring_duration` to whatever you want, taking your own hardware into account. But
+if the backer who should be slower than you due to reading from disk, times out at two seconds your
+candidates will be rejected.
 
 6. In `start_consensus()` replace `basic_aura::run` with `aura::run`
 
-![Aura-run](../assets/async/async-backing-aura-run.png)
+```rust
+let fut = aura::run::<
+    Block,
+    sp_consensus_aura::sr25519::AuthorityPair,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    >(params);
+task_manager.spawn_essential_handle().spawn("aura", None, fut);
+```
 
 ## Phase 3 - Activate Async Backing
 
@@ -208,11 +395,28 @@ This phase consists of changes to your parachain’s runtime that activate async
 
 1. Configure `pallet_aura`, setting `AllowMultipleBlocksPerSlot` to true in `runtime/src/lib.rs`.
 
-![Aura-allow-multiple-blocks](../assets/async/async-backing-allow-multiple.png)
+```rust
+impl pallet_aura::Config for Runtime {
+    type AuthorityId = AuraId;
+    type DisabledValidators = ();
+    type MaxAuthorities = ConstU32<100_000>;
+    // highlight-next-line
+    type AllowMultipleBlocksPerSlot = ConstBool<true>;
+    #[cfg(feature = "experimental")]
+    type SlotDuration = ConstU64<SLOT_DURATION>;
+}
+```
 
 1. Increase the maximum `UNINCLUDED_SEGMENT_CAPACITY` in `runtime/src/lib.rs`.
 
-![Unincluded-segment-capacity](../assets/async/async-backing-unincluded-segment-capacity.png)
+```rust
+/// Maximum number of blocks simultaneously accepted by the Runtime, not yet included into the
+/// relay chain.
+pub const UNINCLUDED_SEGMENT_CAPACITY: u32 = 3;
+/// How many parachain blocks are processed by the relay chain per parent. Limits the number of
+/// blocks authored per slot.
+pub const BLOCK_PROCESSING_VELOCITY: u32 = 1;
+```
 
 3. Decrease `MILLISECS_PER_BLOCK` to 6000.
 
@@ -220,16 +424,40 @@ This phase consists of changes to your parachain’s runtime that activate async
   block number it may be preferable to increase velocity. Changing block time may cause
   complications, requiring additional changes. See the section “Timing by Block Number”.
 
-![block-time](../assets/async/async-backing-block-time.png)
+  ```rust
+  /// This determines the average expected block time that we are targeting.
+  /// Blocks will be produced at a minimum duration defined by `SLOT_DURATION`.
+  /// `SLOT_DURATION` is picked up by `pallet_timestamp` which is in turn picked
+  /// up by `pallet_aura` to implement `fn slot_duration()`.
+  ///
+  /// Change this to adjust the block time.
+  pub const MILLISECS_PER_BLOCK: u64 = 6000;
+  ```
 
 4. Update `MAXIMUM_BLOCK_WEIGHT` to reflect the increased time available for block production.
 
-![block-weight](../assets/async/async-backing-maxblock-weight.png)
+```rust
+/// We allow for 2 seconds of compute with a 6 second average block.
+pub const MAXIMUM_BLOCK_WEIGHT: Weight = Weight::from_parts(
+    WEIGHT_REF_TIME_PER_SECOND.saturating_mul(2),
+    cumulus_primitives_core::relay_chain::MAX_POV_SIZE as u64,
+);
+```
 
 5. Add a feature flagged alternative for `MinimumPeriod` in `pallet_timestamp`. The type should be
    `ConstU64<0>` with the feature flag experimental, and `ConstU64<{SLOT_DURATION / 2}>` without.
 
-![minimum-period](../assets/async/async-backing-minimum-period.png)
+```rust
+impl pallet_timestamp::Config for Runtime {
+    type Moment = u64;
+    type OnTimestampSet = Aura;
+    #[cfg(feature = "experimental")]
+    type MinimumPeriod = ConstU64<0>;
+    #[cfg(not(feature = "experimental"))]
+    type MinimumPeriod = ConstU64<{ SLOT_DURATION / 2 }>;
+    type WeightInfo = weights::pallet_timestamp::WeightInfo<Runtime>;
+}
+```
 
 ## Timing by Block Number
 
