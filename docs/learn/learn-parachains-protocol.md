@@ -224,6 +224,16 @@ approval". The Inclusion Pipeline must conclude for a specific parachain before 
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts and it
 makes sure the block is valid, and it can run for many parachain blocks at once.
 
+:::info Proof-of-Validity and Erasure Codes are stored on disk
+
+[Erasure coding](#erasure-codes) chunks are kept on the validator’s hardware (disk) and not stored
+within the relay chain blocks or chain state. The root of those chunks is in the
+[candidate receipt](#candidate-receipts) and is stored in the blocks. Similarly, Proof-of-Validity
+are also held by validators and not included in blocks (erasure codes are necessary to reconstruct
+PoV).
+
+:::
+
 ### Failure to Inclusion
 
 The candidate can fail to be included in the parachain in any of the following ways:
