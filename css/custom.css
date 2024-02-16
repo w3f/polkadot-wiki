@@ -23,8 +23,8 @@
   --docsearch-searchbox-background: white;
   --docsearch-searchbox-shadow: var(--snowColor);
   --docusaurus-announcement-bar-height: auto !important;
-
   --custom-code-block-background: #f6f8fa;
+  --docusaurus-highlighted-code-line-bg: #e6ebf1;
   --custom-content-max-width: none;
 }
 
