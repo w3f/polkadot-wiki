@@ -57,7 +57,9 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
   monitor on chain states and events.
 - [Ocelloids SDK](https://github.com/sodazone/ocelloids) - Typescript SDK for multi-chain monitoring
   that supports domain-specific logic for different pallets.
-- [Cyclops Dashboard](https://github.com/ArthurHoeke/cyclops/) - a validator dashboard application that helps Polkadot network validators keep track of all their validators, their staking rewards, and performance.
+- [Cyclops Dashboard](https://github.com/ArthurHoeke/cyclops/) - a validator dashboard application
+  that helps Polkadot network validators keep track of all their validators, their staking rewards,
+  and performance.
 
 ## Clients
 
