@@ -167,10 +167,9 @@ expected time to finality is 12-60 seconds.
     achieves this by making validators distribute an
     [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all validators in the system,
     such that anyone - not only the shard's validators - can reconstruct a parachain's block and
-    test its validity. The random parachain-validator assignments and secondary checks are
-
-    performed by randomly selected validators making it less likely for the small set of validators
-    on each parachain to collude.
+    test its validity. The random parachain-validator assignments and secondary checks are performed
+    by randomly selected validators making it less likely for the small set of validators on each
+    parachain to collude.
 
 ### Staking Mechanics
 
