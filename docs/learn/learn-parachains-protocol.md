@@ -157,12 +157,12 @@ via the **Collator Distribution Subsystem**.
 Para-validators participate in the **Candidate Backing Subsystem**. A para-validator needs to check
 if the candidate block follows the
 [state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
-states are stored within Merke trees, a para-validator can verify state transitions without having
+states are stored within Merkle trees, a para-validator can verify state transitions without having
 access to the entire state, but it needs:
 
 - The block candidate (list of state transitions)
 - The values in the parachain's database that the block modifies
-- The hashes of the unaffected points in the Merke tree
+- The hashes of the unaffected points in the Merkle tree
 
 This set of information is the proof-of-validity (PoV).
 
@@ -343,7 +343,7 @@ needed to provide rewards for the off-chain protocol. The
 has two phases: a) assignments notices and approval votes are recorded in a relay chain block, and
 b) in another relay chain block notes are fed into the approval code.
 
-The gossiped messages are of two types, assignment notices, and approval votes, and are singed with
+The gossiped messages are of two types, assignment notices, and approval votes, and are signed with
 [approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
 Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) used by validators.
 Briefly, approval keys are:
