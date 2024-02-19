@@ -71,10 +71,11 @@ transfer funds from one account to another:
   of
   {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>. :kusama }}
-- `transfer allow-death` will allow you to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-  regardless of the consequence. If the balance drops below the existential deposit your account
-  will be reaped. It may be that you do not want to keep the account alive (for example, because you
-  are moving all of your funds to a different address). To switch the keep-alive check off visit
+- `transfer allow-death` will allow you to send
+  {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence. If the
+  balance drops below the existential deposit your account will be reaped. It may be that you do not
+  want to keep the account alive (for example, because you are moving all of your funds to a
+  different address). To switch the keep-alive check off visit
   [this support article](https://support.polkadot.network/support/solutions/articles/65000169248).
 
 :::info
