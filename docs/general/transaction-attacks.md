@@ -19,7 +19,7 @@ For a more detailed read about clipboard memory attacks see
 
 :::
 
-This is a common attack. The clipboard memory is that memory on you computer dedicated to copy-paste
+This is a common attack. The clipboard memory is that memory on your computer dedicated to copy-paste
 operations. There is malicious software that can be remotely installed on your computer and that can
 detect when a cryptocurrency address is copied. For example, you want to send funds to Address A
 (belonging to you) but after copying address A a malicious software swaps that address with Address
@@ -92,7 +92,7 @@ intended, don't sign it!
 To avoid being victim of an attack:
 
 - Use only trusted extensions, sites and software in general.
-- Use cold storage options (Ledger, Signer) and verify on them. Trust what these devices tell you
+- Use cold storage options (Ledger, Signer) and verify them. Trust what these devices tell you
   over what is shown in the app or the browser extension.
 - Update Signer metadata only from trusted sources (or do it yourself).
 - Accept metadata updates for the extension only from trusted apps.
