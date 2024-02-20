@@ -3,7 +3,7 @@ id: polkadot-direction
 title: Polkadot Direction
 sidebar_label: Polkadot Direction
 description: Polkadot as a Decentralized and Secure Ubiquitous Computer.
-keywords: [polkadot vison, decentralization, ubiquitous computer, coretime, blockspace, cores]
+keywords: [polkadot vision, decentralization, ubiquitous computer, coretime, blockspace, cores]
 slug: ../polkadot-direction
 ---
 
