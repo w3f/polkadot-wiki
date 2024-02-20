@@ -317,7 +317,7 @@ could result in applied slashes and/or rewards not being paid out, possibly for 
 Although the theory can be used as a general guideline, in practice it is more complicated and
 following the theory might not necessarily lead to the desired result. Validators might have the
 total stake backing them below average, low commission and above average era points in one era and
-then have a different profile in the next one. Selection based criteria like on-chain identity,
+then have a different profile in the next one. Selection based on the criteria like on-chain identity,
 slash history and low commission make the staking rewards deterministic. But some criteria vary more
 than others, with era points being the most variable and thus one of the key probabilistic
 components of staking rewards. Part of this probability is directly related to the fact that a
