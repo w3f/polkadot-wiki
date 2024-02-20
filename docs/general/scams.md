@@ -7,7 +7,7 @@ keywords: [scams, protect, official]
 slug: ../learn-scams
 ---
 
-Scams are an unfortuante reality of the crypto industry. It's important to stay alert and protect
+Scams are an unfortunate reality of the crypto industry. It's important to stay alert and protect
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
 scammed, please get in contact with [Polkadot Support](https://support.polkadot.network).
 
