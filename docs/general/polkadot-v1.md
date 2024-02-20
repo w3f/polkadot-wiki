@@ -104,7 +104,7 @@ Currently, Polkadot 1.0 achieve resilience through the following strategies:
   social decentralization (how many validator nodes per operator). Those can be explored with the
   [Polkawatch App](https://polkadot.polkawatch.app/).
 - An on-chain treasury and governance (see: [OpenGov](../learn/learn-polkadot-opengov.md) where
-  every decision goes though public referenda and any token holder can cast a vote.
+  every decision goes through public referenda and any token holder can cast a vote.
 
 ### Polkadot's Blockspace
 
