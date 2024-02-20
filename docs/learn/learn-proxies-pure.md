@@ -26,7 +26,7 @@ control them.
 :::info Pure proxies were called anonymous proxies
 
 Pure proxies are not anonymous because they have an address that is spawned by a primary account
-acting as _any_ proxy. Even if the _any_ proxy changes, it is still possible to find who generated
+acting as _any_ proxy. Even if _any_ proxy changes, it is still possible to find who generated
 the _anonymous_ proxy by going backward using a block explorer. There was thus the need to change
 the name of _anonymous_ proxy. People suggested _keyless accounts_ since they do not have a private
 key and are proxied accounts. However, multisig accounts are also keyless (but deterministic).
