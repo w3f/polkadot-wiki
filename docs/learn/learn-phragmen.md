@@ -543,7 +543,7 @@ V5 supports: A with stake: 2.813 and D with stake: 2.187.
 
 You will notice that the total amount of stake for candidates `A`, `D`, and `B` equals (aside from
 rounding errors) the total amount of stake of all the voters (`1 + 2 + 3 + 4 + 5 = 15`). This is
-because each voter had at least one of their candidates fill a seat. Any voter whose had none of
+because each voter had at least one of their candidates fill a seat. Any voter who had none of
 their candidates selected will also not have any stake in any of the elected candidates.
 
 ## Optimizations
