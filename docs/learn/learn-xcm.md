@@ -145,7 +145,7 @@ bringing ecosystems together using a common communication abstraction.
 
 :::
 
-For more information on the specific intructions used for these key features, head over to the
+For more information on the specific instructions used for these key features, head over to the
 [instructions and registers page](./learn-xcm-instructions.md).
 
 #### Cross-Consensus Message Format (XCM Format)

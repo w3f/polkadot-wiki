@@ -212,7 +212,7 @@ a trait is a combination of the metrics above). Available filters are:
 :::info Validator vs Operator
 
 A validator is the node, the physical equipment with installed software that allows to produce new
-blocks and earn rewards. An operator is the entity responsible for setting up, running an
+blocks and earn rewards. An operator is the entity responsible for setting up, running and
 maintaining the node. An operator can have multiple validators under different sub-identities. For
 example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the operator Zug Capital.
 

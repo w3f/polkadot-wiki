@@ -66,7 +66,7 @@ ensuring that the system can perform the next round of availability and validity
 
 Validators also contribute to the so-called **availability distribution**. In fact, once the
 candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e. it is not
-fully included (only tentative included) as part of the parachain until it is proven avaialable
+fully included (only tentative included) as part of the parachain until it is proven available
 (together with the PoV). Information regarding the availability of the candidate will be noted in
 the following relay chain blocks. Only when there is enough information, the candidate is considered
 a full parachain block or _parablock_.

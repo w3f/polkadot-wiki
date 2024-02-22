@@ -92,7 +92,7 @@ protect it and change it regularly.
 Session keys are hot keys that must be kept online by a validator to perform network operations.
 Session keys are typically generated in the client, although they don't have to be. They are _not_
 meant to control funds and should only be used for their intended purpose. They can be changed
-regularly; your staking proxy only need create a certificate by signing a session public key and
+regularly; your staking proxy only need to create a certificate by signing a session public key and
 broadcast this certificate via an extrinsic.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses six session keys:
