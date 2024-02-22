@@ -148,7 +148,7 @@ consensus system.
 
 It is used to define the relative path between two locations, and cannot generally be used to refer
 to a location universally. It is very much akin to how a **relative** filesystem path works and is
-dependent on the which consensus system the location expression is being evaluated.
+dependent on which consensus system the location expression is being evaluated.
 
 ![XCM MultiLocation](../assets/cross-consensus/multilocation.png)
 
