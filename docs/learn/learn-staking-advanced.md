@@ -46,7 +46,7 @@ checkout the [Introduction to Staking](./learn-staking.md) page.
 ## Staking Proxies
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes it possible to create accounts
-having special permissions also called **proxy accounts**. For mode details about proxy accounts
+having special permissions also called **proxy accounts**. For more details about proxy accounts
 visit the [dedicated page](./learn-proxies.md) on this wiki.
 
 Proxy accounts are special accounts which can sign
