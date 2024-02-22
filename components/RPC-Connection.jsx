@@ -38,10 +38,10 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 				wsUrl = "wss://kusama-rpc.polkadot.io/";
 				break;
 			case Statemine:
-				wsUrl = "wss://statemine-rpc.polkadot.io/";
+				wsUrl = "wss://kusama-asset-hub-rpc.polkadot.io/";
 				break;
 			case Statemint:
-				wsUrl = "wss://statemint-rpc.polkadot.io/";
+				wsUrl = "wss://polkadot-asset-hub-rpc.polkadot.io/";
 				break;
 			default:
 				console.log(`Unknown network provided, ${network}`);

@@ -14,7 +14,7 @@ transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native
 hub is {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations are about 1/10th of the values on
 the Relay chains. For example, the Existential Deposit of an Asset Hub account is
-{{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :polkadot }}
+{{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={100000000} filter="humanReadable"/>, :polkadot }}
 {{ kusama: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, :kusama }}
 when compared to
 {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> on Polkadot :polkadot }}
