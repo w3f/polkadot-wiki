@@ -478,9 +478,9 @@ The figure above shows the following:
   referendum enters it just for 5 min before exiting, the next time it enters, it must be confirming
   for 20 minutes (not 15 minutes).
 - It is possible that a referendum meets the approval and support thresholds almost at the end of
-  decision period. In this case,  even though the decision period elapses, the referendum can pass
+  decision period. In this case, even though the decision period elapses, the referendum can pass
   if it stays confirming for the duration of the track-specific confirmation period. If it exits
-  the confirmation period after the decision period elapsed, it is rejected immediately.
+  the confirmation period after the decision period elapses, it is rejected immediately.
 - The approval curve starts with a value of 100% and gradually goes to 50%, but never below.
   Assuming all the active token supply has voted on a proposal, the conviction vote weighted support
   should at least always be above 50% to pass.
