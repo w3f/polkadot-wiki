@@ -309,7 +309,7 @@ include:
 - **Decision Period**: the time interval during which a proposal's outcome can be decided. 
 - **Confirmation Period**: the minimum amount of time the approval and
   support criteria must hold before the proposal is approved and moved to the enactment period. The
-  start of the confirmation period should be within the decision period.
+  confirmation period should start before the end of decision period.
 - **Minimum Enactment Period**: the minimum amount of waiting time before the proposed changes are
   applied
 - **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
