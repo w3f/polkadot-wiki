@@ -310,6 +310,16 @@ include:
 - **Confirmation Period**: the minimum amount of time the approval and
   support criteria must hold before the proposal is approved and moved to the enactment period. The
   confirmation period should start before the end of decision period.
+
+:::info Example Scenario of an Edge Case
+
+A referendum my enter the confirmation period just one block before the decision period ends. In this scenario, 
+the referendum will pass if it satisfies approval and support thresholds for the minimum confirmation period (track-dependent).
+
+:::
+
+- **Voting Period**:  The period in which voting is allowed on a referendum, which includes preparation,
+  decision, and confirmation periods.
 - **Minimum Enactment Period**: the minimum amount of waiting time before the proposed changes are
   applied
 - **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
