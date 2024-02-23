@@ -149,8 +149,8 @@ for each sub-identity. This reserved account balance is freed once you
 
 ### Becoming a Registrar
 
-To become a registrar, submit a pre-image and proposal into
-[Democracy](../maintain/maintain-guides-democracy.md), then wait for people to vote on it. For best
+To become a registrar, submit a pre-image and proposal on
+[OpenGov](../learn/learn-guides-polkadot-opengov.md), then wait for people to vote on it. For best
 results, write a post about your identity and intentions beforehand, and once the proposal is in the
 queue ask people to endorse it so that it gets ahead in the referendum queue.
 
