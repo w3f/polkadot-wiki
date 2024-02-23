@@ -269,7 +269,7 @@ Until they are in the lead-in period, proposals remain undecided. Once the crite
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
 the outcome.
 
-In (2), the proposal enters the **Decision Period** where votes can be cast. For a proposal to be
+In (2), the proposal enters the **Decision Period** where voting can continue. For a proposal to be
 approved, votes must satisfy the approval and support criteria for at least the **Confirmation
 Period**; otherwise, the proposal is automatically rejected. A rejected proposal can be resubmitted
 anytime and as many times as needed.
@@ -278,7 +278,7 @@ In (3), approved proposals will enter the **Enactment Period**, after which prop
 executed.
 
 Note how the length of the lead-in, decision, confirmation, and enactment periods vary depending on
-the origin. Root origin has more extended periods than the other origins. Also, the number of
+the track. Root origin track has more extended periods than the other tracks. Also, the number of
 referenda within each track differs, with the Root origin track only accepting one. proposal at a
 time (see below).
 
@@ -306,10 +306,20 @@ include:
   Period (note that more requirements must be met to enter the Decision Period).
 - **Preparation Period**: the minimum amount of voting time needed before entering the Decision
   Period (given capacity and deposit are met).
-- **Decision Period**: the maximum time to approve a proposal. The proposal will be accepted if
-  approved by the end of the period.
-- **Confirmation Period**: the minimum amount of time (within the Decision Period) the approval and
-  support criteria must hold before the proposal is approved and moved to the enactment period.
+- **Decision Period**: the time interval during which a proposal's outcome can be decided. 
+- **Confirmation Period**: the minimum amount of time the approval and
+  support criteria must hold before the proposal is approved and moved to the enactment period. The
+  confirmation period should start before the end of decision period.
+
+:::info Example Scenario of an Edge Case
+
+A referendum my enter the confirmation period just one block before the decision period ends. In this scenario, 
+the referendum will pass if it satisfies approval and support thresholds for the minimum confirmation period (track-dependent).
+
+:::
+
+- **Voting Period**:  The period in which voting is allowed on a referendum, which includes preparation,
+  decision, and confirmation periods.
 - **Minimum Enactment Period**: the minimum amount of waiting time before the proposed changes are
   applied
 - **Approval Curve**: the curve describing the minimum % of _aye_ votes as a function of time within
@@ -477,9 +487,10 @@ The figure above shows the following:
   confirmation period clock is reset. For example, if the confirmation period is 20 minutes and a
   referendum enters it just for 5 min before exiting, the next time it enters, it must be confirming
   for 20 minutes (not 15 minutes).
-- During the decision period, if a referendum fails to meet the approval and support thresholds for
-  the duration of the track-specific confirmation period, it fails and does not go to the enactment
-  period (it may have to be resubmitted, see below).
+- It is possible that a referendum meets the approval and support thresholds almost at the end of
+  decision period. In this case, even though the decision period elapses, the referendum can pass
+  if it stays confirming for the duration of the track-specific confirmation period. If it exits
+  the confirmation period after the decision period elapses, it is rejected immediately.
 - The approval curve starts with a value of 100% and gradually goes to 50%, but never below.
   Assuming all the active token supply has voted on a proposal, the conviction vote weighted support
   should at least always be above 50% to pass.
