@@ -599,7 +599,8 @@ module.exports = {
             'learn/learn-comparisons-cosmos',
             'learn/learn-comparisons-avalanche',
             'learn/learn-comparisons',
-            'learn/learn-comparisons-rollups'
+            'learn/learn-comparisons-rollups',
+            'learn/learn-comparisons-restaking'
           ],
         },
         "learn/learn-video-tutorials",
