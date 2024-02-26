@@ -226,11 +226,11 @@ makes sure the block is valid, and it can run for many parachain blocks at once.
 
 :::info Proof-of-Validity and Erasure Codes are stored on disk
 
-[Erasure coding](#erasure-codes) chunks are kept on the validator’s hardware (disk) and not stored
-within the relay chain blocks or chain state. The root of those chunks is in the
-[candidate receipt](#candidate-receipts) and is stored in the blocks. Similarly, Proof-of-Validity
-are also held by validators and not included in blocks (erasure codes are necessary to reconstruct
-PoV).
+Proof-of-Validity are kept on the validator’s hardware (disk) for at least 24 hours and are not
+stored within the relay chain blocks or chain state. Similarly, [Erasure coding](#erasure-codes)
+chunks are also held by validators and not included in blocks (erasure codes are necessary to
+reconstruct PoV). The root of those chunks is in the [candidate receipt](#candidate-receipts) and is
+stored in the blocks.
 
 :::
 
