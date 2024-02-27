@@ -49,6 +49,7 @@ Polkadot and Ethereum mainly differ on the following aspects:
 <!-- no toc -->
 
 - [Scalability Approaches](#scalability-approaches)
+- [Rollups vs. Parachain Creation](#rollups-vs-parachain-creation)
 - [Architectural Differences: Polkadot and Ethereum](#architectural-differences-polkadot-and-ethereum)
 - [Forks, Upgrades, and Governance](#forks-upgrades-and-governance)
 - [Consensus and Finalization](#consensus-and-finalization)
@@ -78,8 +79,15 @@ validated by Polkadot.
 
 ### Rollups vs. Parachain Creation
 
-Whereas Ethereum primarily focuses on optimizing itself for rollups, Polkadot's parachains protocol
-allows validation to occur on the protocol level without needing a layer two solution.
+Ethereum primarily focuses on optimizing itself for rollups, Polkadot's parachains protocol allows
+validation to occur on the protocol level without needing a layer two solution.
+
+:::info Rollup vs. Parachain Comparison
+
+For a more in-depth comparison on parachains versus rollups, take a look at the
+[rollup comparison page](./learn-comparison-rollups.md)
+
+:::
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each parachain hosts its own core
 logic, called a **runtime** (sometimes called a **state transition function**).
@@ -130,7 +138,8 @@ protocols - Casper FFG for Ethereum and [GRANDPA](./learn-consensus.md#finality-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} - are both GHOST-based and can both
 finalize batches of blocks in one round. For block production, both protocols use slot-based
 protocols that randomly assign validators to a slot and provide a fork choice rule for unfinalized
-blocks - RandDAO/LMD for Ethereum and [BABE](./learn-consensus.md#badass-babe-sassafras) for
+blocks - [LMD-GHOST](https://ethereum.org/glossary#lmd-ghost) for Ethereum and
+[BABE](./learn-consensus.md#badass-babe-sassafras) for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 There are two main differences between Ethereum and
@@ -185,8 +194,9 @@ as well, they will be connected and can relay messages from parachain A to parac
 Messages do not pass through the relay chain. Only validity proofs and channel operations do (open,
 close, etc.). This enhances scalability by keeping data on the edges of the system.
 
-Currently, Ethereum rollups can communicate using shared sequencers, which provide a common grounds
-of interoperability between layer two solutions.
+Currently, Ethereum rollups can communicate using
+[shared sequencers](https://medium.com/@richardchen_81235/intro-to-shared-sequencing-1622d1fd51c9),
+which provide a common grounds of interoperability between layer two solutions.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will add a protocol called
 [SPREE](learn-spree.md) that provides shared logic for cross-consensus messages. Messages sent with
@@ -209,13 +219,16 @@ directly retrieve and act on-chain information. DApps on Polkadot are often comp
 multiple components working together to modify, retrieve, and watch state changes live as they
 happen.
 
+For a more comprehensive list of how to build on Polkadot, be sure to check the
+["Build" section of the wiki.](../build/build-guide.md).
+
 ## Conclusion
 
 Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded
 model. Danksharding plans to utilize a rollup-centric approach by focusing on data availability. The
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem is secured by a main chain,
-called the "relay chain," which in turn manages and connects its shards ("parachains/parathreads")
-into a single, homogenous solution.
+called the "relay chain," which in turn manages cores and allows tasks, such as parachains to be run
+on top of them.
 
 The primary differences between the two protocols are:
 
