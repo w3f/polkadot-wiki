@@ -7,35 +7,14 @@ keywords: [ethereum, Ethereum, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---
 
-Polkadot is the first fully sharded production-grade blockchain protocol. The current protocol of
-Ethereum does not implement sharding and it is the main focus of
-[the next major upgrade](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq#What-is-Danksharding).
-Similar to Polkadot and its parachains, Ethereum has goals of being a multi-sharded network. When a
-network is **sharded**, this implies that it is capable of executing multiple (and often many) state
-transitions in parallel in a scalable manner. One key difference is that Polkadot parachains are
-heterogeneous shards while Ethereum will have homogeneous shards. In other words, each parachain can
-have its own state transition logic whereas on Ethereum, all the shards use the same state
-transition logic.
-
 Both protocols are blockchains but serve fundamentally different roles in how they are utilized:
 
 - Ethereum is a general-purpose blockchain that hosts the Ethereum Virtual Machine, an environment
-  for executing smart contracts.
-- Polkadot is a heterogeneous sharded, multi-chain protocol that hosts multiple chains and provides
-  a way for them to partake in a shared security model. Polkadot acts as a **meta-protocol** that
-  allows for multiple protocols to coexist and work together.
-
-:::info
-
-It's important to note that the "Ethereum" here refers to what was previously known as "Eth2" or
-"Ethereum 2.0". For more concrete details regarding the subsequent iterations of Ethereum, please
-refer to the [Ethereum Roadmap](https://ethereum.org/en/roadmap/).
-
-It's relevant to mention that some upgrades may not be active for Ethereum but are described as a
-part of this comparison to Polkadot. Some of these goals/upgrades may change to reflect the general
-direction of Ethereum.
-
-:::
+  for executing smart contracts. Ethereum is homogenous, but can utilize rollups and layer two
+  solutions to scale its usage.
+- Polkadot is a heterogeneous, multi-chain protocol that hosts multiple chains and provides a way
+  for them to partake in shared security. Polkadot acts as a **meta-protocol** that allows for
+  multiple protocols to coexist and work together.
 
 ## High-Level Comparison
 
@@ -50,18 +29,19 @@ architecture:
   that goal. Polkadot provides shared security and consensus to these shards through the Polkadot
   relay chain.
 
-Polkadot can't and does not directly run something like a virtual machine for smart contracts.
-However, several of its parachains can (and do). Parachains on Polkadot can even run an EVM for
-executing smart contracts written in Solidity, Ethereum's native smart contract language.
+Polkadot _does not_ directly run a virtual machine for smart contracts, as Polkadot's main purpose
+is to validate the protocols that operate under it.
+
+Several of its parachains do. Parachains on Polkadot can even run an EVM for executing smart
+contracts written in Solidity using Frontier
 
 In the context of blockchain, "sharding" refers to the parallelization of state transition
 (transaction) execution. The way Ethereum and Polkadot deal with scalability and sharding is quite
 different.
 
-## Scalability: Sharding vs. Danksharding
+## Scalability: Coretime vs. Danksharding
 
-As part of Ethereum's roadmap, the previously dubbed "shard chains" have been forgone in favor of
-rollup-based approach for scaling transaction throughput.
+Ethereum favors a rollup-centric approach for scaling transaction throughput.
 [**Danksharding**](https://ethereum.org/en/roadmap/danksharding/) is how Ethereum plans to create a
 scalable environment for an acclaimed >100,000 transactions per second. Danksharding was the chosen
 alternative over "shard chains" and works by storing blobs.
@@ -120,19 +100,14 @@ medium other than the protocol itself. Upgrades on Ethereum will follow the stan
 procedure, requiring validators to upgrade their nodes to implement protocol changes.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
-[governance](./learn-polkadot-opengov.md) with a multicameral system. There are several avenues to
-issue proposals, and all proposals ultimately pass through a public referendum, where the majority
-of tokens can always control the outcome.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
-[adaptive quorum biasing](./learn-governance.md#adaptive-quorum-biasing) to set the passing
-threshold for low-turnout referenda. Referenda can cover various topics, including fund allocation
-from an on-chain [Treasury](./learn-treasury.md) or modifying the underlying runtime code of the
-chain. Decisions get enacted on-chain and are binding and autonomous.
+[governance, called OpenGov](./learn-polkadot-opengov.md), to faciliate upgrades to the Polkadot
+runtime. These upgrades are voted on via the stakeholders of Polkadot, where if successful, the
+upgrade is enacted automatically in the blocks to come.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact chain upgrades and
-successful proposals using the Wasm meta-protocol without a hard fork. Anything within the state
-transition function, the transaction queue, or off-chain workers can be upgraded without forking the
-chain.
+Because of this mechanism, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact
+chain upgrades and successful proposals using the Wasm meta-protocol _without_ a hard fork. Anything
+within the state transition function, the transaction queue, or off-chain workers can be upgraded
+without forking the chain.
 
 ### Consensus and Finalization
 
@@ -171,18 +146,12 @@ expected time to finality is 12-60 seconds.
     by randomly selected validators making it less likely for the small set of validators on each
     parachain to collude.
 
-### Staking Mechanics
+### Staking Mechanics: Ethereum PoS vs. Polkadot NPoS
 
 Ethereum is a proof-of-stake network that requires 32 ETH to stake for each validator instance.
 Validators run a primary Beacon Chain node and multiple validator clients - one for each 32 ETH.
-These validators get assigned to "committees," randomly selected groups to validate shards in the
-network. Ethereum relies on having a large validator set to provide availability and validity
-guarantees: They need at least 111 validators per shard to run the network and 256 validators per
-shard to finalize all shards within one epoch. With 64 shards, that's 16_384 validators (given 256
-validators per shard). See
-[Ethereum Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/) and
-[Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS) for more
-information.
+These validators get assigned to "committees," randomly selected groups to validate blocks in the
+network.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong finality and
 availability guarantees with much fewer validators. It uses
