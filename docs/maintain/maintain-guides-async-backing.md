@@ -92,8 +92,11 @@ zombienet):
 "scheduling_lookahead": 2
 ```
 
+<!-- prettier-ignore-start -->
 :::warning warning `scheduling_lookahead` must be set to 2, otherwise parachain block times will
-degrade to worse than with sync backing! :::
+degrade to worse than with sync backing! 
+:::
+<!-- prettier-ignore-end -->
 
 ## Phase 1 - Update Parachain Runtime
 
