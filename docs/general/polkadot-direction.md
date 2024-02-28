@@ -96,7 +96,7 @@ of those options. The topic is currently under discussion. For more information,
 [RFC-0010](https://github.com/polkadot-fellows/RFCs/pull/10) and
 [RFC-0015](https://github.com/polkadot-fellows/RFCs/pull/17/files).
 
-## From Chain- to Application-centricity
+## From Chain-centricity to Application-centricity
 
 Polkadot 1.0 was a chain-centric paradigm consisting of isolated chains able to exchange messages.
 This was not fundamentally different from having completely different chains connected to bridges,
