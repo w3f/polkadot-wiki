@@ -412,6 +412,7 @@ module.exports = {
                     "learn/learn-system-chains",
                     "learn/learn-auction",
                     "learn/learn-crowdloans",
+                    "learn/learn-agile-coretime",
                     "learn/learn-parachains-faq",
                   ],
                 },
