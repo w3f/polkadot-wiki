@@ -17,7 +17,7 @@ locking significant amount of DOT, leading to a high barrier of entry for small 
 blockchain projects. The parachains produced blocks at a regular interval of 12 seconds, 
 irrespective of the network activity. This led to inefficient resource allocation and misplaced 
 economic incentives while producing almost empty blocks under lighter traffic and being unable to 
-Accommodate heavier traffic when it exceeded block limits. Agile Coretime resolves all of these  
+Accommodate heavier traffic when it exceeded block limits. Agile Coretime resolves all of these 
 drawbacks. 
 
 The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time, and each
@@ -41,7 +41,7 @@ functionality that enables the authoring of a parachain block on-demand.
 
 :::info Agile Coretime is under active development
 
-The progress of Agile Coretime can be monitored [here.](https://github.com/orgs/paritytech/projects/119/views/20)
+The progress of Agile Coretime development can be tracked [here.](https://github.com/orgs/paritytech/projects/119/views/20)
 
 :::
 
@@ -94,22 +94,3 @@ chain blocks in advance. The region length of 28 days corresponds to 5,040 times
 
 The term "Task" captures the abstraction of utility of the core. Tasks on the cores
 are not just limited to securing parachains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
