@@ -7,7 +7,8 @@ keywords: [ethereum, Ethereum, proof of stake, sharding]
 slug: ../learn-comparisons-ethereum-2
 ---
 
-Both protocols are blockchainsm but serve fundamentally different roles in how they are utilized:
+Both protocols are blockchains at their core, but serve fundamentally different roles in how they
+are utilized:
 
 - Ethereum is a general-purpose blockchain that hosts the Ethereum Virtual Machine, an environment
   for executing smart contracts. Ethereum is homogenous, but can utilize rollups and layer two
@@ -19,8 +20,9 @@ Both protocols are blockchainsm but serve fundamentally different roles in how t
 :::note
 
 The term "shards" or "sharded protocol" may be used throughout the various ecosystems. They are
-typically used, in the context of blockchains, to refer to sub-protocols (i.e., parachains on
-Polkadot).
+typically used, in the context of blockchains, to refer to sub-protocols, or as a general term to
+refer to a form of
+[**horizontal scaling**](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out).
 
 :::
 
@@ -33,9 +35,11 @@ Both protocols have fundamentally different goals, which can be summarized as:
   application, rather its primary focus is the Ethereum Virtual Machine for executing smart
   contracts. Ethereum achieves scalability via **rollups**, which are secondary protocols which
   utilize Ethereum as a settlement layer.
+
 - Polkadot is a multi-chain protocol that provides shared security for each one of its
   **parachains**. Each parachain (which could also be called an "appchain" in this context) is
   specialized towards a specific focus and optimized towards that goal. Parachains must abide by the
+  [Parachains Protocol](./learn-parachains-protocol.md)
 
 Polkadot _does not_ directly run a virtual machine for smart contracts, as Polkadot's main purpose
 is to validate the protocols that operate under it.
@@ -43,6 +47,9 @@ is to validate the protocols that operate under it.
 However, several parachains provide smart contract functionality. Parachains on Polkadot can even
 run an EVM for executing smart contracts written in Solidity using
 [Frontier, an Ethereum compatibility layer for Substrate](https://github.com/polkadot-evm/frontier).
+
+> As a general summary, one could also say that Polkadot coordinates protocols (and their subsequent
+> validation), while Ethereum coordinates inputs and outputs for the EVM.
 
 Polkadot and Ethereum mainly differ on the following aspects:
 
@@ -61,8 +68,9 @@ Polkadot and Ethereum mainly differ on the following aspects:
 
 Ethereum favors a _rollup-centric_ approach for scaling transaction throughput.
 [**Danksharding**](https://ethereum.org/en/roadmap/danksharding/) is how Ethereum plans to better
-accommodate and facilitate rollup activity by providing better utilities, such as data availability,
-for rollups to record state to Ethereum.
+accommodate and facilitate rollup activity by providing better utilities, such as data availability
+via [Proto-Danksharding](https://ethereum.org/roadmap/danksharding),for rollups to record state to
+Ethereum.
 
 Danksharding will allow for much more space to be utilized per block on Ethereum, where blobs of
 data will be verifiable for an amount of time before being pruned from the network. This approach
@@ -134,7 +142,8 @@ without forking the chain.
 
 Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid consensus
 models where block production and finality are seperated into their own protocols. The finality
-protocols - Casper FFG for Ethereum and [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for
+protocols - [Casper FFG](https://ethereum.org/glossary#casper-ffg) for Ethereum and
+[GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} - are both GHOST-based and can both
 finalize batches of blocks in one round. For block production, both protocols use slot-based
 protocols that randomly assign validators to a slot and provide a fork choice rule for unfinalized
@@ -234,7 +243,7 @@ The primary differences between the two protocols are:
 
 - Ethereum processes EVM-compatible state transitions, whether through rollups or on the mainnet
   itself, while {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows its parachains
-  have an abstract state transition function implementation.
+  to have an abstract state transition function implementation.
 - Governance processes in Ethereum are planned to be off-chain and thus require coordination for a
   hard fork to enact governance decisions. In contrast, in
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
