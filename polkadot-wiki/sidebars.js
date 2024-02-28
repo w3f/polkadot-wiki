@@ -755,15 +755,6 @@ module.exports = {
             "maintain/maintain-guides-avoid-slashing",
           ],
         },
-        {
-          type: "category",
-          label: "Archive",
-          items: [
-            "maintain/maintain-guides-democracy",
-            "maintain/maintain-guides-how-to-join-council",
-            "maintain/maintain-guides-how-to-vote-councillor",
-          ],
-        },
       ],
     },
   ],
