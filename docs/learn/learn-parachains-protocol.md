@@ -224,9 +224,9 @@ approval". The Inclusion Pipeline must conclude for a specific parachain before 
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts and it
 makes sure the block is valid, and it can run for many parachain blocks at once.
 
-:::info Data Availability - Erasure Codes of Parachain PoV blocks
+:::info Data Availability - Erasure Codes of Parachain Blocks and PoVs
 
-The erasure code chunks necessary for reconstructing Proof-of-Validity (PoV) blocks of Parachains are stored on the relay chain validator’s hardware (disk) and made available to the relay chain network for up to 24 hours. It is important to note that this data is 
+The erasure code chunks necessary for reconstructing parachain blocks and their respective Proofs-of-Validity (PoV) are stored on the relay chain validator’s hardware (disk) and made available to the relay chain network for up to 24 hours. It is important to note that this data is 
 neither stored within the relay chain blocks nor in the chain state. Only the root of those chunks is embedded within the [candidate receipt](#candidate-receipts) and is stored in the relay chain blocks.
 
 :::
