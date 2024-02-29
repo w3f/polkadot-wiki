@@ -254,9 +254,10 @@ module.exports = {
                 slug: '/learn-assets-index',
               },
               items: [
-                "learn/learn-assets",
                 "learn/learn-DOT",
                 "learn/learn-inflation",
+                "learn/learn-assets",
+                "learn/learn-asset-conversion-assethub",
                 "learn/learn-teleport",
                 "learn/learn-nft",
               ],
@@ -362,6 +363,7 @@ module.exports = {
                       items: [
                         "learn/learn-guides-assets-create",
                         "learn/learn-guides-assets-ledger",
+                        "learn/learn-guides-asset-conversion",
                       ],
                     },
                   ],
