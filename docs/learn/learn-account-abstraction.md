@@ -132,3 +132,4 @@ example using the [ink!](../build/build-smart-contracts.md#ink) smart contract l
   on Polkadot"
 - [Parity Blog Post](https://www.parity.io/blog/building-a-hot-wallet-with-substrate-primitives/) by
   Joe Petrowski - "Building a Hot Wallet with Substrate Primitives"
+- [FRAME Origin - Polkadot-SDK Docs](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/frame_origin/index.html)
