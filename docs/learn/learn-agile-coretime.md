@@ -101,19 +101,32 @@ Coretime is managed through the [broker pallet](https://github.com/paritytech/po
 which is deployed on the Coretime Chain. In theory, the Polkadot Relay Chain can support around a 
 hundred cores seamlessly and can support over a few hundred cores through optimizations. Preliminary tests ran successfully with 80 cores with 12-second block times.
 
-### Pricing Model
+### Coretime Sales
 
+Sales on the Coretime Chain are of `timeslice` length. These sales are divided into two main periods: the Renewal period and the Sale period.
+
+![coretime-sale-timeline](../assets/coretime/Coretime-Sale-Timeline.png)
+
+- Renewal periods are of `interlude_length` blocks long, and it’s where bulk coretime can be renewed.
+- Sale periods are as well divided into two periods: a Price Discovery period and a Fixed Price period. After the Renewal period, a new `start_price` will be set by the Coretime Chain and a dutch auction of `leading_length` blocks will start, putting downward pressure on price to find the right equilibrium. This process will set the `regular_price` which will be the one offered at the Fixed Price period.
+
+This discussion on initial coretime pricing can be viewed [here](https://forum.polkadot.network/t/initial-coretime-pricing/5187)
 
 ### Splitting and Interlacing
 
+Splitting and interlacing are actions that can be performed within a region. Performing either of 
+these actions makes you lose the right to a price-capped renewal.
+
+- **Splitting**: the action of dividing a region into several regions with different start and end 
+timeslices.
+- **Interlacing:** the action of dividing a region into the execution of different tasks for each 
+block of a timeslice. The result regions will have the same start and end timeslice as the parent 
+region, but different tasks will be executed at different blocks.
 
 ### Elastic Scaling
 
-
-
-
-
-
-
-
-
+With elastic scaling (still under development) projects can scale seamlessly and without being 
+limited to previously allocated resources. Elastic scaling is the process of getting multiple cores 
+for one task. This allows parachains to include more blocks per unit time (Relay Chain-side), and 
+produce more blocks per unit time (async backing on the parachain side). Elastic scaling can be
+paired with on-demand coretime to increase your bandwidth seamlessly.
