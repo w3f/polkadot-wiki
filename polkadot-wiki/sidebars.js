@@ -412,8 +412,21 @@ module.exports = {
                     "learn/learn-system-chains",
                     "learn/learn-auction",
                     "learn/learn-crowdloans",
-                    "learn/learn-agile-coretime",
                     "learn/learn-parachains-faq",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Agile Coretime",
+                  description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                  link: {
+                    type: 'generated-index',
+                    title: "Agile Coretime",
+                    description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                    slug: '/learn-agile-coretime-index',
+                  },
+                  items: [
+                    "learn/learn-agile-coretime",
                   ],
                 },
                 "learn/learn-bridges",
