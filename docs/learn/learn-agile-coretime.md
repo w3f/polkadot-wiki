@@ -17,7 +17,7 @@ locking significant amount of DOT, leading to a high barrier of entry for small 
 blockchain projects. The parachains produced blocks at a regular interval of 12 seconds, 
 irrespective of the network activity. This led to inefficient resource allocation and misplaced 
 economic incentives while producing almost empty blocks under lighter traffic and being unable to 
-Accommodate heavier traffic when it exceeded block limits. Agile Coretime resolves all of these 
+accommodate heavier traffic when it exceeded block limits. Agile Coretime resolves all of these 
 drawbacks. 
 
 The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time, and each
@@ -28,7 +28,7 @@ one core).
 
 Agile Coretime allows for the purchase of [coretime](#coretime) in “bulk” with an allocation for 
 one month. Heavy duty parachains which need to author a block every 12 
-seconds (or every 6s through Async backing), can seamlessly “renew” the [core](#core) each month. 
+seconds (or every 6s through [Async Backing](./learn-async-backing.md)), can seamlessly “renew” the [core](#core) each month. 
 Coretime renewal orders take precedence over new orders and provide protection against price 
 fluctuations, allowing parachains to plan their project budget and costs more effectively.
 
@@ -94,3 +94,26 @@ chain blocks in advance. The region length of 28 days corresponds to 5,040 times
 
 The term "Task" captures the abstraction of utility of the core. Tasks on the cores
 are not just limited to securing parachains.
+
+## Agile Coretime Implementation
+
+Coretime is managed through the [broker pallet](https://github.com/paritytech/polkadot-sdk/blob/eefd5fe4499515da66d088505093f75b5aa22550/substrate/frame/broker/src/lib.rs) 
+which is deployed on the Coretime Chain. In theory, the Polkadot Relay Chain can support around a 
+hundred cores seamlessly and can support over a few hundred cores through optimizations. Preliminary tests ran successfully with 80 cores with 12-second block times.
+
+### Pricing Model
+
+
+### Splitting and Interlacing
+
+
+### Elastic Scaling
+
+
+
+
+
+
+
+
+
