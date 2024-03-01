@@ -57,8 +57,8 @@ guides to set up a node and run the network.
 
 ## Governance
 
-- [How to participate in Governance](maintain-guides-democracy.md) - Walkthrough on how to
-  participate in governance.
+- [How to participate in Governance](../learn/learn-guides-polkadot-opengov.md) - Walkthrough on how
+  to participate in governance.
 - [How to join the Council](maintain-guides-how-to-join-council.md) - Step by step guide for running
   for the Council.
 - [How to vote for a Councillor](maintain-guides-how-to-vote-councillor.md) - Step by step guide for

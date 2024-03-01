@@ -123,7 +123,6 @@ Check out
 the learn how to remove democracy locks after the end of a Governance referendum.
 
 **Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger
-Nano S and the Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md)
-extrinsics are available in the light version. The following
+Nano S and the Ledger Nano X, some extrinsics are not supported by the light version. The following
 [repository by Zondax](https://github.com/Zondax/ledger-polkadot) lists the currently supported
-Democracy extrinsics on the full ledger.
+extrinsics on the XL version of the Ledger app.
