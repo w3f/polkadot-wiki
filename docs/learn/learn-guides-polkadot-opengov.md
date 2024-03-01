@@ -227,8 +227,8 @@ available for unlocking after the countdown ends.
 
 ### Remove Expired Locks from Delegations
 
-To remove expired locks from delegations you can
-[follow the same procedure to remove expired voting locks](#removing-expired-voting-locks).
+To remove expired locks from delegations, you can
+[follow the same procedure as how to remove expired voting locks](#removing-expired-voting-locks).
 
 ### Modify your Delegations
 
