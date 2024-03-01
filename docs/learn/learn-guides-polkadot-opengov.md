@@ -144,7 +144,7 @@ Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead 
 
 ### Removing Votes
 
-To remove votes, you need to use the [Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and
+To remove votes, you need to use the [Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and
 call the `removeVote` function through the `convictionVoting` pallet.
 
 ![rm-vote](../assets/rm-vote.png)
