@@ -155,7 +155,7 @@ on and the `index` is the referendum number.
 ### Removing Expired Voting Locks
 
 To remove an expired lock, you need to use the
-[Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and call the `unlock` function through
+[Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and call the `unlock` function through
 the `convictionVoting` pallet. Note that if you voted on referenda in multiple tracks, the funds
 will be unlocked after removing votes and unlocking all the tracks. Similarly, if you
 [delegated](#delegations) multiple tracks, the funds will be unlocked after
