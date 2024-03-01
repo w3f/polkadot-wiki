@@ -60,7 +60,7 @@ under control of any centralized authority.
 ## Balance Transfers
 
 To enable balance transfers, the community
-[made a public proposal](../learn/learn-polkadot-opengov.md) for a runtime upgrade that lifted the
+made a public proposal for a runtime upgrade that lifted the
 restriction on balance transfers. Transfer functionality was subsequently enabled on Polkadot at
 block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
