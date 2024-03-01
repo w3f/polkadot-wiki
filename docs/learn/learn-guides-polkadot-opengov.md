@@ -142,10 +142,30 @@ Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead 
 
 :::
 
-### Removing expired voting locks
+### Removing Votes
 
-To remove the lock from votes, you first need to call `removeVote` and then `unlock` through the
-`convictionVoting` pallet. For detailed instructions, check
+To remove votes, you need to use the [Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and
+call the `removeVote` function through the `convictionVoting` pallet.
+
+![rm-vote](../assets/rm-vote.png)
+
+The `class` is the [OpenGov track](./learn-polkadot-opengov-origins.md) of the referendum you voted
+on and the `index` is the referendum number.
+
+### Removing Expired Voting Locks
+
+To remove an expired lock, you need to use the
+[Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and call the `unlock` function through
+the `convictionVoting` pallet. Note that if you voted on referenda in multiple tracks, the tokens
+will be unlocked after removing votes and unlocking on all the tracks. Similarly, if you
+you [delegated](#delegations) on multiple tracks, the funds will be unlocked after
+[undelegating](#undelegate-votes) and unlocking on all the tracks.
+
+![rm-voting-lock](../assets/rm-voting-lock.png)
+
+The `class` is the [OpenGov track](./learn-polkadot-opengov-origins.md) where you have the lock.
+
+For additional instructions, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184129-polkadot-js-ui-how-to-remove-expired-referenda-locks)
 
 ## Delegations
@@ -205,14 +225,10 @@ Undelegated tracks will show up as "0 votes" on the Delegate tab.
 After you undelegated, the conviction lock will start the countdown, and your funds will be
 available for unlocking after the countdown ends.
 
-### Unlock Expired ConvictionVoting Locks
+### Remove Expired Locks from Delegations
 
-After the conviction lock expires, you can go to
-[Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and submit a
-`convictionVoting.unlock` extrinsic to unlock funds for a specific track. Note that if you delegated
-multiple tracks, the funds will be unlocked after undelegating all the tracks.
-
-![js-delegation-unlock](../assets/js-delegation-unlock.png)
+To remove expired locks from delegations, you can
+[follow the same procedure as how to remove expired voting locks](#removing-expired-voting-locks).
 
 ### Modify your Delegations
 
