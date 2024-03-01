@@ -157,7 +157,7 @@ on and the `index` is the referendum number.
 To remove an expired lock, you need to use the
 [Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and call the `unlock` function through
 the `convictionVoting` pallet. Note that if you voted on referenda in multiple tracks, the tokens
-will be unlocked after removing votes and unlocking all the tracks. Similarly, if you
+will be unlocked after removing votes and unlocking on all the tracks. Similarly, if you
 [delegated](#delegations) multiple tracks, the funds will be unlocked after
 [undelegating](#undelegate-votes) and unlocking all the tracks.
 
