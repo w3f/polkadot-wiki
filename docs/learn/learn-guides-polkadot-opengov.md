@@ -159,7 +159,7 @@ To remove an expired lock, you need to use the
 the `convictionVoting` pallet. Note that if you voted on referenda in multiple tracks, the tokens
 will be unlocked after removing votes and unlocking on all the tracks. Similarly, if you
 you [delegated](#delegations) on multiple tracks, the funds will be unlocked after
-[undelegating](#undelegate-votes) and unlocking all the tracks.
+[undelegating](#undelegate-votes) and unlocking on all the tracks.
 
 ![rm-voting-lock](../assets/rm-voting-lock.png)
 
