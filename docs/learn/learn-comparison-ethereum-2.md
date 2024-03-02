@@ -44,8 +44,9 @@ Both protocols have fundamentally different goals, which can be summarized as:
 Polkadot _does not_ directly run a virtual machine for smart contracts, as Polkadot's main purpose
 is to validate the protocols that operate under it.
 
-However, several parachains provide smart contract functionality. Parachains on Polkadot can even
-run an EVM for executing smart contracts written in Solidity using
+However, several parachains provide
+[smart contract functionality](https://wiki.polkadot.network/docs/build-smart-contracts#parachains).
+Parachains on Polkadot can even run an EVM for executing smart contracts written in Solidity using
 [Frontier, an Ethereum compatibility layer for Substrate](https://github.com/polkadot-evm/frontier).
 
 > As a general summary, one could also say that Polkadot coordinates protocols (and their subsequent
@@ -89,8 +90,9 @@ logic, called a **runtime** (sometimes called a **state transition function**).
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
 ([Wasm](./learn-wasm.md)) as a "meta-protocol".
 
-Parachains have the option of using [cross-consensus messaging](learn-xcm.md) to communicate with
-one another and facilitate inter-chain reactions.
+Parachains have the option of using [cross-consensus messaging (XCM)](learn-xcm.md) to communicate
+with one another and facilitate inter-chain reactions. It is also possible to utilize XCM on
+Ethereum, as it is merely a format for describing state transitions on a particular network.
 
 ## Architectural Differences: Polkadot and Ethereum
 
