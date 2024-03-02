@@ -51,21 +51,6 @@ run an EVM for executing smart contracts written in Solidity using
 > As a general summary, one could also say that Polkadot coordinates protocols (and their subsequent
 > validation), while Ethereum coordinates inputs and outputs for the EVM.
 
-Polkadot and Ethereum mainly differ on the following aspects:
-
-<!-- no toc -->
-
-- [High-Level Comparison](#high-level-comparison)
-- [Scalability Approaches](#scalability-approaches)
-  - [Rollups vs. Parachain Creation](#rollups-vs-parachain-creation)
-- [Architectural Differences: Polkadot and Ethereum](#architectural-differences-polkadot-and-ethereum)
-  - [Forks, Upgrades, and Governance](#forks-upgrades-and-governance)
-  - [Block Production \& Finalization](#block-production--finalization)
-  - [Staking Mechanics: Ethereum PoS vs. Polkadot NPoS](#staking-mechanics-ethereum-pos-vs-polkadot-npos)
-  - [Interoperability and Message Passing](#interoperability-and-message-passing)
-- [DApp Support and Development](#dapp-support-and-development)
-- [Conclusion](#conclusion)
-
 ## Scalability Approaches
 
 Ethereum favors a _rollup-centric_ approach for scaling transaction throughput.
