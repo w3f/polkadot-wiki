@@ -69,7 +69,7 @@ is ongoing to implement IBC to Ethereum and it's layer 2s.
 ## Consensus
 
 Polkadot uses a hybrid [consensus](learn-consensus.md) protocol with two sub-protocols: BABE and
-GRANDPA, together called "Fast Forward". BABE (Blind Assignment for Blockchain Extension) uses a
+GRANDPA. BABE (Blind Assignment for Blockchain Extension) uses a
 verifiable random function (VRF) to assign slots to validators and a fallback round-robin pattern to
 guarantee that each slot has an author. GRANDPA (GHOST-based Recursive Ancestor Deriving Prefix
 Agreement) votes on chains, rather than individual blocks. Together, BABE can author candidate
@@ -79,16 +79,17 @@ blocks at a time).
 This isolation of tasks provides several benefits. First, it represents a reduction in transport
 complexity for both block production and finalization. BABE has linear complexity, making it easy to
 scale to thousands of block producers with low networking overhead. GRANDPA has quadratic
-complexity, but is reduced by a factor of the latency, or how many blocks it finalizes in one batch.
+complexity, but has an advantage in terms of the latency. It is capable of finalizing multiple blocks 
+in one batch.
 
-Second, having the capacity to extend the chain with unfinalized blocks allows other validators to
-perform extensive availability and validity checks to ensure that no invalid state transitions make
-their way into the final chain.
+Second, having the capacity to extend the chain with unfinalized blocks allows for liveness of the
+network and the validators to perform extensive availability and validity checks to ensure that no 
+invalid state transitions make their way into the final chain.
 
 Cosmos chains use Tendermint consensus, a round-robin protocol that provides instant finality. Block
 production and finalization are on the same path of the algorithm, meaning it produces and finalizes
-one block at a time. Because it is a PBFT-based algorithm (like GRANDPA), it has quadratic transport
-complexity, but can only finalize one block at a time.
+one block at a time. Because it is a PBFT-based algorithm (like GRANDPA), it has quadratic
+complexity, designed to finalize one block at a time.
 
 ## Staking Mechanics
 
@@ -144,18 +145,11 @@ IBC, as chains do not share state, receiving chains must trust the security of a
 
 ## Governance
 
-Polkadot has a multicameral [governance](learn-governance.md) system with several avenues to pass
-proposals. All proposals ultimately pass through a public referendum, where the majority of tokens
-can always control the outcome. For low-turnout referenda, Polkadot uses adaptive quorum biasing to
-set the passing threshold. Referenda can contain a variety of proposals, including fund allocation
+Polkadot has [OpenGov](learn-polkadot-opengov.md) framewok with several trackss to pass
+proposals as public referenda, where the majority of tokens
+can always control the outcome. Referenda can contain a variety of proposals, including fund allocation
 from an on-chain [Treasury](learn-treasury.md). Decisions get enacted on-chain and are binding and
 autonomous.
-
-Polkadot has several on-chain, permissionless bodies. The primary one is the Council, which
-comprises a set of accounts that are elected in Phragmén fashion. The Council represents minority
-interests and as such, proposals that are unanimously approved of by the Council have a lower
-passing threshold in the public referendum. There is also a Technical Committee for making technical
-recommendations (e.g. emergency runtime upgrade to fix a bug).
 
 Cosmos uses coin-vote signaling to pass referenda. The actual enactment of governance decisions is
 carried out via a protocol fork, much like other blockchains. All token holders can vote, however,
