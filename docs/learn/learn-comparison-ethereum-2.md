@@ -55,14 +55,16 @@ Polkadot and Ethereum mainly differ on the following aspects:
 
 <!-- no toc -->
 
+- [High-Level Comparison](#high-level-comparison)
 - [Scalability Approaches](#scalability-approaches)
-- [Rollups vs. Parachain Creation](#rollups-vs-parachain-creation)
+  - [Rollups vs. Parachain Creation](#rollups-vs-parachain-creation)
 - [Architectural Differences: Polkadot and Ethereum](#architectural-differences-polkadot-and-ethereum)
-- [Forks, Upgrades, and Governance](#forks-upgrades-and-governance)
-- [Consensus and Finalization](#consensus-and-finalization)
-- [Staking Mechanics: Ethereum PoS vs. Polkadot NPoS](#staking-mechanics-ethereum-pos-vs-polkadot-npos)
-- [Interoperability and Message Passing](#interoperability-and-message-passing)
+  - [Forks, Upgrades, and Governance](#forks-upgrades-and-governance)
+  - [Block Production \& Finalization](#block-production--finalization)
+  - [Staking Mechanics: Ethereum PoS vs. Polkadot NPoS](#staking-mechanics-ethereum-pos-vs-polkadot-npos)
+  - [Interoperability and Message Passing](#interoperability-and-message-passing)
 - [DApp Support and Development](#dapp-support-and-development)
+- [Conclusion](#conclusion)
 
 ## Scalability Approaches
 
@@ -138,44 +140,49 @@ chain upgrades and successful proposals using the Wasm meta-protocol _without_ a
 within the state transition function, the transaction queue, or off-chain workers can be upgraded
 without forking the chain.
 
-### Consensus and Finalization
+### Block Production & Finalization
 
-Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid consensus
-models where block production and finality are seperated into their own protocols. The finality
-protocols - [Casper FFG](https://ethereum.org/glossary#casper-ffg) for Ethereum and
-[GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} - are both GHOST-based and can both
-finalize batches of blocks in one round. For block production, both protocols use slot-based
-protocols that randomly assign validators to a slot and provide a fork choice rule for unfinalized
-blocks - [LMD-GHOST](https://ethereum.org/glossary#lmd-ghost) for Ethereum and
-[BABE](./learn-consensus.md#badass-babe-sassafras) for
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Both Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid
+consensus models where **block production** and **finality** are decoupled from one another.
+
+For finalization, Ethereum utilizes [Casper FFG](https://ethereum.org/glossary#casper-ffg), which
+works with [LMD-GHOST](https://ethereum.org/glossary#lmd-ghost) as the fork choice rule for
+finalization.
+
+Polkadot utilizes [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) for finalization. Rather
+than decide on a block-by-block basis, GRANDPA is able to finalize _chains_ of blocks. Both
+finalization mechanisms are both
+[GHOST](https://www.geeksforgeeks.org/what-is-ghost-protocol-for-ethereum/)-based and can both
+finalize batches of blocks in one round.
+
+For block production, both protocols use slot-based protocols that randomly assign validators to a
+slot and provide a fork choice rule for unfinalized blocks. Polkadot uses
+[BABE](./learn-consensus.md#badass-babe-sassafras) for block production. BABE includes two
+mechanisms for selecting block producers, one of which is a fallback in case the first fails, which
+allows for chain liveness. BABE produces unfinalized blocks on top of the chain already finalized by
+GRANDPA.
 
 There are two main differences between Ethereum and
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus:
 
-1.  Ethereum finalizes batches of blocks according to periods called "epochs". The current plan is
-    to have 32 blocks per epoch and finalize them all in one round. With a predicted block time of
-    12 seconds, the expected time to finality is 6 minutes (12 minutes maximum). See
-    [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
-    for more information.
+1. {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} finality protocol, GRANDPA,
+   finalizes batches of blocks based on
+   [availability and validity checks](./learn-parachains-protocol.md#availability-and-unavailability-phase)
+   that happen as the proposed chain grows. The time to finality varies with the number of checks
+   that need to be performed (and invalidity reports cause the protocol to require extra checks).
+   The expected time to finality is 12-60 seconds.
 
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} finality protocol, GRANDPA,
-finalizes batches of blocks based on
-[availability and validity checks](./learn-parachains-protocol.md#availability-and-unavailability-phase)
-that happen as the proposed chain grows. The time to finality varies with the number of checks that
-need to be performed (and invalidity reports cause the protocol to require extra checks). The
-expected time to finality is 12-60 seconds.
-
-2.  Ethereum requires many validators per shard to provide strong validity guarantees while
-    {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide stronger guarantees
-    with fewer validators per shard. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-    achieves this by making validators distribute an
-    [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all validators in the system,
-    such that anyone - not only the shard's validators - can reconstruct a parachain's block and
-    test its validity. The random parachain-validator assignments and secondary checks are performed
-    by randomly selected validators making it less likely for the small set of validators on each
-    parachain to collude.
+2. Ethereum typically many validators per round (called an
+   [epoch](https://ethereum.org/en/glossary/#epoch) on Ethereum) to provide strong validity
+   guarantees while {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide
+   stronger guarantees with fewer validators per round.
+   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} achieves this by making validators
+   distribute an [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all validators in
+   the system, such that anyone - not only the round's validators - can reconstruct a parachain's
+   block and test its validity. This data availability is a core part of Polkadot - ensuring state
+   is valid for its state transitions. The random parachain-validator assignments and secondary
+   checks are performed by randomly selected validators making it less likely for the small set of
+   validators on each parachain to collude.
 
 ### Staking Mechanics: Ethereum PoS vs. Polkadot NPoS
 
