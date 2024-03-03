@@ -145,7 +145,7 @@ the relay-chain to provide shared security and interoperability. Blockspace is o
 through slot auctions, but an auction winner has access to a "freighter of blocks" regardless it is
 needed or not. This creates high entry barriers and it can lead to waste of energy and resources.
 
-For more information about blockspace the [this interview](https://youtu.be/e1vISppPwe4) to Robert
+For more information about blockspace see [this interview](https://youtu.be/e1vISppPwe4) with Robert
 Habermeier as well as [this article](https://www.rob.tech/polkadot-blockspace-over-blockchains/) by
 him.
 
