@@ -10,7 +10,8 @@ slug: ../learn-asset-conversion-assethub
 Asset conversion is a simple AMM (Automated Market Maker) based on [Uniswap V2](https://github.com/Uniswap/v2-core)
 logic, deployed as a [pallet on Polkadot AssetHub](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/asset-conversion).
 In the AMM model the prices of tokens are determined by a mathematical formula based on the ratio of 
-tokens in a liquidity pool, unlike traditional exchanges that use an order book.
+tokens in a liquidity pool, unlike traditional exchanges that use an order book. This will be 
+a “trustless” DEX, which is controlled through Polkadot OpenGov.
 
 Asset Conversion on Asset Hub enables fee payment in any asset, given it has a liquidity pool, such 
 that the fee handler (in this case, a Collator) only receives the native asset (DOT).
