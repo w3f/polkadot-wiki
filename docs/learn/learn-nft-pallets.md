@@ -190,6 +190,8 @@ Creating an item usually involves setting some attributes specific to that item.
 
 ### Uploading Files and Metadata
 
+#### Using Apillon
+
 When you have a collection ID and an item ID you need to:
 
 - Open an account on [Apillon](https://app.apillon.io/) and create a new project.
@@ -211,9 +213,32 @@ When you have a collection ID and an item ID you need to:
 ```
 
 - Upload the metadata file to Apillon Storage and get the updated CID.
-- After minting your NFT on the Polkadot-JS UI, you can add the CID. Go to Developer > Extrinsics
-  and select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single
-  NFTs) extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
+
+#### Alternative - Using Pinata
+
+- Open an account on [Pinata](https://www.pinata.cloud/).
+- Follow
+  [these steps](https://docs.pinata.cloud/what-can-i-learn-here/pinning-your-first-file-with-pinata)
+  to upload the file you want to mint.
+- After uploading your file, get the
+  [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid).
+  This unique string of letters and numbers will act as a marker to link the data uploaded onto
+  [IPFS](https://ipfs.tech/#how) to the collection or item ID you own.
+- Prepare the metadata file and add your CID (see below):
+
+```
+{
+    "name":"Your Collection Name",
+    "description":"Collection's Description",
+    "image":"Your Collection CID"
+}
+```
+
+- Upload the metadata file to Pinata and get the updated CID.
+
+After minting your NFT on the Polkadot-JS UI, you can add the CID. Go to Developer > Extrinsics and
+select the `nfts.setCollectionMetadata` (for collections) or `nfts.setMetadata` (for single NFTs)
+extrinsic. Under the `data: Bytes` field you can enter the CID or upload the metadata file.
 
 The collection can be created and its item minted before uploading the NFT file and related
 metadata. The minting process on-chain will assign a collection and item ID to your account. Those
