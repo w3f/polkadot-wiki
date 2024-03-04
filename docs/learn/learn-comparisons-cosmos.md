@@ -69,21 +69,20 @@ is ongoing to implement IBC to Ethereum and it's layer 2s.
 ## Consensus
 
 Polkadot uses a hybrid [consensus](learn-consensus.md) protocol with two sub-protocols: BABE and
-GRANDPA. BABE (Blind Assignment for Blockchain Extension) uses a
-verifiable random function (VRF) to assign slots to validators and a fallback round-robin pattern to
-guarantee that each slot has an author. GRANDPA (GHOST-based Recursive Ancestor Deriving Prefix
-Agreement) votes on chains, rather than individual blocks. Together, BABE can author candidate
-blocks to extend the finalized chain and GRANDPA can finalize them in batches (up to millions of
-blocks at a time).
+GRANDPA. BABE (Blind Assignment for Blockchain Extension) uses a verifiable random function (VRF) to
+assign slots to validators and a fallback round-robin pattern to guarantee that each slot has an
+author. GRANDPA (GHOST-based Recursive Ancestor Deriving Prefix Agreement) votes on chains, rather
+than individual blocks. Together, BABE can author candidate blocks to extend the finalized chain and
+GRANDPA can finalize them in batches (up to millions of blocks at a time).
 
 This isolation of tasks provides several benefits. First, it represents a reduction in transport
 complexity for both block production and finalization. BABE has linear complexity, making it easy to
 scale to thousands of block producers with low networking overhead. GRANDPA has quadratic
-complexity, but has an advantage in terms of the latency. It is capable of finalizing multiple blocks 
-in one batch.
+complexity, but has an advantage in terms of the latency. It is capable of finalizing multiple
+blocks in one batch.
 
 Second, having the capacity to extend the chain with unfinalized blocks allows for liveness of the
-network and the validators to perform extensive availability and validity checks to ensure that no 
+network and the validators to perform extensive availability and validity checks to ensure that no
 invalid state transitions make their way into the final chain.
 
 Cosmos chains use Tendermint consensus, a round-robin protocol that provides instant finality. Block
@@ -145,11 +144,10 @@ IBC, as chains do not share state, receiving chains must trust the security of a
 
 ## Governance
 
-Polkadot has [OpenGov](learn-polkadot-opengov.md) framewok with several trackss to pass
-proposals as public referenda, where the majority of tokens
-can always control the outcome. Referenda can contain a variety of proposals, including fund allocation
-from an on-chain [Treasury](learn-treasury.md). Decisions get enacted on-chain and are binding and
-autonomous.
+Polkadot has [OpenGov](learn-polkadot-opengov.md) framewok with several trackss to pass proposals as
+public referenda, where the majority of tokens can always control the outcome. Referenda can contain
+a variety of proposals, including fund allocation from an on-chain [Treasury](learn-treasury.md).
+Decisions get enacted on-chain and are binding and autonomous.
 
 Cosmos uses coin-vote signaling to pass referenda. The actual enactment of governance decisions is
 carried out via a protocol fork, much like other blockchains. All token holders can vote, however,

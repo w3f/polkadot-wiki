@@ -66,9 +66,16 @@ The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can b
 
 ## Mimir
 
-Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) | [Website](https://app.mimir.global/) | [Twitter](https://twitter.com/Mimir_global) | [Telegram](https://t.me/+t7vZ1kXV5h1kNGQ9) | [Github](https://github.com/mimir-labs)
+Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
+[Website](https://app.mimir.global/) | [Twitter](https://twitter.com/Mimir_global) |
+[Telegram](https://t.me/+t7vZ1kXV5h1kNGQ9) | [Github](https://github.com/mimir-labs)
 
-- **Support for Various Account Types**: Mimir supports a range of account types including Flexible Multisig, Static Multisig, Nested Multisig, and Extension Wallets.
-- **Transaction Tracking**: Offers real-time synchronization of transactions across different account levels.
-- **Third-Party Application Integration**: Users can access third-party applications with their multisig identities. Mimir currently supports integration with applications like Polkadot.js and is planning to expand to others.
-- **User-Friendly Interface**: Designed for ease of use, making complex multisig operations more accessible.
+- **Support for Various Account Types**: Mimir supports a range of account types including Flexible
+  Multisig, Static Multisig, Nested Multisig, and Extension Wallets.
+- **Transaction Tracking**: Offers real-time synchronization of transactions across different
+  account levels.
+- **Third-Party Application Integration**: Users can access third-party applications with their
+  multisig identities. Mimir currently supports integration with applications like Polkadot.js and
+  is planning to expand to others.
+- **User-Friendly Interface**: Designed for ease of use, making complex multisig operations more
+  accessible.
