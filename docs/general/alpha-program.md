@@ -6,7 +6,7 @@ description: The Polkadot Alpha Program and How it can Support your Development.
 slug: ../alpha-program
 ---
 
-Over 150 projects are using [Polkadot SDK known as Substrate](https://substrate.io) to create the next generation of
+Over 150 projects are using the [Polkadot SDK (also known as Substrate)](https://substrate.io) to create the next generation of
 blockchain infrastructure and application-specific chains.
 
 The [Polkadot Alpha Program](https://polkadot.network/development/alpha/) is an
