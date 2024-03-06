@@ -6,11 +6,11 @@ description: The Polkadot Alpha Program and How it can Support your Development.
 slug: ../alpha-program
 ---
 
-Over 150 projects are using the [Polkadot SDK (also known as Substrate)](https://substrate.io) to
-create the next generation of blockchain infrastructure and application-specific chains.
+Over 150 projects are using the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) to create
+the next generation of blockchain infrastructure and application-specific chains.
 
 The [Polkadot Alpha Program](https://polkadot.network/development/alpha/) is an initiative by Parity
-Technologies to take your [Polkadot SDK](https://substrate.io) project to the next level.
+Technologies to take your Polkadot SDK-powered project to the next level.
 
 Take your project from idea to market with comprehensive resources and collaborative development
 while seizing the opportunity to shape the future of the Polkadot ecosystem.
@@ -33,7 +33,7 @@ experiment while receiving and providing feedback, get involved now.
 
 ## Why join the Polkadot Alpha Program?
 
-The term 'Alpha' comes from alpha testing, a form of pre-production testing and iteration of product
+The term "Alpha" comes from alpha testing, a form of pre-production testing and iteration of product
 development. The program aims to enable your team to tap into Polkadot’s ecosystem of resources and
 bring your product into production while contributing to feedback for Polkadot’s ecosystem.
 
