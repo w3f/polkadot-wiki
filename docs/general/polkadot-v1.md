@@ -42,7 +42,7 @@ initiatives:
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
   such as:
   - [The Polkadot Blockchain Academy](https://polkadot.network/development/academy/)
-  - [Substrate Builders Program](./builders-program.md)
+  - [Polkadot Alpha Program](./alpha-program.md)
   - [Polkadot Developer Heroes Program](./dev-heroes.md)
   - [Edx Courses](https://www.edx.org/school/web3x)
   - Rust and Substrate Courses (coming soon)

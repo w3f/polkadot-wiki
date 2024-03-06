@@ -54,7 +54,7 @@ ecosystem.
 Receiving funding from reputable VCs and are known to be involved with other reputable
 {{ polkadot: Polkadot :Polkadot }}{{ kusama: Kusama :kusama }} projects can also be a good
 indicator. Or participating in the
-[Substrate Builders Program](https://www.substrate.io/builders-program/).
+[Polkadot Alpha Program](https://polkadot.network/development/alpha/).
 
 **However**, claiming such associations and having them is not always the same thing. **You always
 need to verify any claims a project makes**, and that is probably the most critical takeaway from

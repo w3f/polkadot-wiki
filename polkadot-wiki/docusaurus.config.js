@@ -180,6 +180,10 @@ module.exports = {
           {
             to: '/docs/learn-transactions',
             from: ['/docs/learn-transactions-index', '/docs/learn-extrinsics', '/docs/learn-balance-transfers']
+          },
+          {
+            to: '/docs/alpha-program',
+            from: ['/docs/builders-program']
           }
         ],
         createRedirects: function (existingPath) {
