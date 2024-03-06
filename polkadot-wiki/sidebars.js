@@ -104,7 +104,7 @@ module.exports = {
             "general/grants",
             "general/bug-bounty",
             "general/ambassadors",
-            "general/builders-program",
+            "general/alpha-program",
             "general/doc-thousand-validators",
             "general/doc-thousand-contributors",
             "general/dev-heroes",
