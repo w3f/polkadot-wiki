@@ -129,9 +129,8 @@ chain upgrades using the Wasm meta-protocol _without_ a hard fork. As the WebAss
 Polkadot (and all of its subsequent parachains) are stored on-chain, this involves simply replacing
 the runtime with a new WebAssembly blob once governance allowed the upgrade to be enacted.
 
-This also means that anything within the state transition function, the transaction queue, or
-off-chain workers can be upgraded without forking the chain, as these are all part of the
-WebAssembly runtime.
+Anything within the state transition function, the transaction queue, or off-chain workers can be
+upgraded without forking the chain, as these are all part of the WebAssembly runtime.
 
 ### Block Production & Finalization
 
