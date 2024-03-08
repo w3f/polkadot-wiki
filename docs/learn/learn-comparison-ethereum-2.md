@@ -206,8 +206,8 @@ cannot be changed and undermined by participating protocols. This helps ensure t
 can be properly interpreted and executed as needed on the target protocol in a fully trustless
 environment.
 
-[SPREE](./learn-spree.md) is the mechanism that provides shared logic for cross-consensus messages,
-and will be used to construct Accords.
+[SPREE (Shared Protected Runtime Execution Enclaves)](./learn-spree.md) is the mechanism that
+provides shared logic for cross-consensus messages, and will be used to construct Accords.
 
 ## DApp Support and Development
 
