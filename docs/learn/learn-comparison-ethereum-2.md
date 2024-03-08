@@ -19,9 +19,7 @@ are utilized:
 
 :::note
 
-The term "shards" or "sharded protocol" may be used throughout the various ecosystems. They are
-typically used, in the context of blockchains, to refer to sub-protocols, or as a general term to
-refer to a form of
+In the context of blockchains, the term "shards" or "sharded protocol" is typically used to refer to sub-protocols or as a general term to refer to a form of
 [**horizontal scaling**](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out).
 
 :::
