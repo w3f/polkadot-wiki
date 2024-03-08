@@ -38,7 +38,7 @@ Both protocols have fundamentally different goals:
 - Polkadot is a multi-chain protocol that provides shared security and secure interoperability for
   each of its **parachains**. Each parachain (also called an "appchain" in this context) is
   specialized towards a specific focus and optimized towards that goal. Parachains must abide by the
-  [Parachains Protocol](./learn-parachains-protocol.md)
+  [Parachains Protocol](./learn-parachains-protocol.md).
 
 Polkadot _does not_ directly run a virtual machine for smart contracts, as Polkadot's primary
 purpose is to validate the protocols that operate under it.
