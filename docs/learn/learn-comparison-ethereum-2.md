@@ -221,7 +221,7 @@ multiple components working together to modify, retrieve, and watch state change
 happen.
 
 For a more comprehensive list of how to build on Polkadot, be sure to check the
-["Build" section of the wiki.](../build/build-guide.md).
+[Build Section](../build/build-guide.md).
 
 ## Conclusion
 
