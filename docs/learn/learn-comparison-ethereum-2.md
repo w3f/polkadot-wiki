@@ -34,7 +34,7 @@ Both protocols have fundamentally different goals:
   contracts. Ethereum achieves scalability via [**rollups**](./learn-comparisons-rollups), which are secondary protocols which
   utilize Ethereum as a settlement layer.
 
-- Polkadot is a multi-chain protocol that provides shared security for each one of its
+- Polkadot is a multi-chain protocol that provides shared security and secure interoperability for each one of its
   **parachains**. Each parachain (which could also be called an "appchain" in this context) is
   specialized towards a specific focus and optimized towards that goal. Parachains must abide by the
   [Parachains Protocol](./learn-parachains-protocol.md)
