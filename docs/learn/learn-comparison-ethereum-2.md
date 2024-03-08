@@ -48,8 +48,10 @@ However, several parachains provide
 Parachains on Polkadot can even run an EVM for executing smart contracts written in Solidity using
 [Frontier, an Ethereum compatibility layer for Substrate](https://github.com/polkadot-evm/frontier).
 
-> As a general summary, one could also say that Polkadot coordinates protocols (and their subsequent
-> validation), while Ethereum coordinates inputs and outputs for the EVM.
+> As a general summary, one could also say that Polkadot **coordinates** and **validates**
+> sub-protocols that follow the [Parachains Protocol](./learn-parachains-protocol.md) (which are
+> akin to an optimistic-style rollup). In contrast, Ethereum coordinates inputs and outputs for the
+> EVM. On Polkadot, any sub-protocol can have its own logic so long as it compiles to WebAssembly.
 
 ## Scalability Approaches
 
@@ -67,10 +69,11 @@ flourish more readily.
 In contrast, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} require parachains to
 register themselves in accordance with the [Parachains Protocol](./learn-parachains-protocol.md).
 Once registered, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validates the state
-transitions of each parachain as per their parachain validation function (PVF). [Data availability](./learn-parachains-protocol#availability-and-unavailability-phase)
-is an integral part of validating the parachain state. This approach enables parallelized
-interactions between parachains. They can trust that each sub-protocol's respective state is valid,
-as Polkadot collectively validated them.
+transitions of each parachain as per their parachain validation function (PVF).
+[Data availability](./learn-parachains-protocol#availability-and-unavailability-phase) is an
+integral part of validating the parachain state. This approach enables parallelized interactions
+between parachains. They can trust that each sub-protocol's respective state is valid, as Polkadot
+collectively validated them.
 
 ### Rollups vs. Parachain Creation
 
@@ -122,9 +125,13 @@ enacted automatically in the blocks to come. Polkadot validator operators only u
 when the client itself gets updated.
 
 Because of this mechanism, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact
-chain upgrades and successful proposals using the Wasm meta-protocol _without_ a hard fork. Anything
-within the state transition function, the transaction queue, or off-chain workers can be upgraded
-without forking the chain.
+chain upgrades using the Wasm meta-protocol _without_ a hard fork. As the WebAssembly runtime for
+Polkadot (and all of its subsequent parachains) are stored on-chain, this involves simply replacing
+the runtime with a new WebAssembly blob once governance allowed the upgrade to be enacted.
+
+This also means that anything within the state transition function, the transaction queue, or
+off-chain workers can be upgraded without forking the chain, as these are all part of the
+WebAssembly runtime.
 
 ### Block Production & Finalization
 
