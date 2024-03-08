@@ -67,7 +67,7 @@ flourish more readily.
 In contrast, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} require parachains to
 register themselves in accordance with the [Parachains Protocol](./learn-parachains-protocol.md).
 Once registered, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validates the state
-transitions of each parachain as per their PVF, or parachain validation function. Data availability
+transitions of each parachain as per their parachain validation function (PVF). [Data availability](./learn-parachains-protocol#availability-and-unavailability-phase)
 is an integral part of validating the parachain state. This approach enables parallelized
 interactions between parachains. They can trust that each sub-protocol's respective state is valid,
 as Polkadot collectively validated them.
