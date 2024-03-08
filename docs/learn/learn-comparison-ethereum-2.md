@@ -19,7 +19,8 @@ are utilized:
 
 :::note Sharding
 
-In the context of blockchains, the term "shards" or "sharded protocol" is typically used to refer to sub-protocols or as a general term to refer to a form of
+In the context of blockchains, the term "shards" or "sharded protocol" is typically used to refer to
+sub-protocols or as a general term to refer to a form of
 [**horizontal scaling**](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out).
 
 :::
@@ -28,16 +29,16 @@ In the context of blockchains, the term "shards" or "sharded protocol" is typica
 
 Both protocols have fundamentally different goals:
 
-- Ethereum is a general-purpose blockchain based on the
-  Ethereum Virtual Machine (EVM). Ethereum is not specialized nor optimized for any particular
-  application, rather its primary focus is the Ethereum Virtual Machine for executing smart
-  contracts. Ethereum achieves scalability via [**rollups**](./learn-comparisons-rollups), which are secondary protocols which
-  utilize Ethereum as a settlement layer.
+- Ethereum is a general-purpose blockchain based on the Ethereum Virtual Machine (EVM). Ethereum is
+  not specialized nor optimized for any particular application, rather its primary focus is the
+  Ethereum Virtual Machine for executing smart contracts. Ethereum achieves scalability via
+  [**rollups**](./learn-comparisons-rollups), which are secondary protocols which utilize Ethereum
+  as a settlement layer.
 
-- Polkadot is a multi-chain protocol that provides shared security and secure interoperability for each one of its
-  **parachains**. Each parachain (which could also be called an "appchain" in this context) is
-  specialized towards a specific focus and optimized towards that goal. Parachains must abide by the
-  [Parachains Protocol](./learn-parachains-protocol.md)
+- Polkadot is a multi-chain protocol that provides shared security and secure interoperability for
+  each one of its **parachains**. Each parachain (which could also be called an "appchain" in this
+  context) is specialized towards a specific focus and optimized towards that goal. Parachains must
+  abide by the [Parachains Protocol](./learn-parachains-protocol.md)
 
 Polkadot _does not_ directly run a virtual machine for smart contracts, as Polkadot's main purpose
 is to validate the protocols that operate under it.
@@ -154,8 +155,8 @@ There are two main differences between Ethereum and
    finalizes batches of blocks based on
    [availability and validity checks](./learn-parachains-protocol.md#availability-and-unavailability-phase)
    that happen as the proposed chain grows. The time to finality varies with the number of checks
-   that need to be performed (and invalidity reports cause the protocol to require extra checks).
-   The expected time to finality is 12-60 seconds.
+   that need to be performed (and invalidity reports, which cause extra checks). The expected time
+   to finality is 30 seconds.
 
 2. Ethereum typically many validators per round (called an
    [epoch](https://ethereum.org/en/glossary/#epoch) on Ethereum) to provide strong validity
@@ -171,18 +172,15 @@ There are two main differences between Ethereum and
 
 ### Staking Mechanics: Ethereum PoS vs. Polkadot NPoS
 
-Ethereum is a proof-of-stake network that requires 32 ETH to stake for each validator instance.
-Validators run a primary Beacon Chain node and multiple validator clients - one for each 32 ETH.
-These validators get assigned to "committees," randomly selected groups to validate blocks in the
-network.
+Polkadot uses [Nominated Proof of Stake (NPoS)](./learn-phragmen.md) to select validators from a
+smaller set, letting smaller holders nominate validators to run the network while claiming the
+system’s rewards without running a node. Polkadot needs about five validators for each parachain in
+the network. For more information, see the [staking page](./learn-staking.md).
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong finality and
-availability guarantees with much fewer validators. It uses
-[Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a smaller set, letting
-smaller holders nominate validators to run infrastructure while still claiming the rewards of the
-system without running a node of their own.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} needs about ten validators for each
-parachain in the network.
+Ethereum is a Proof of Stake (PoS) network that requires 32 ETH to stake for each validator
+instance. Validators run a primary Beacon Chain node and multiple validator clients - one for each
+32 ETH. These validators get assigned to "committees," randomly selected groups to validate blocks
+in the network.
 
 ### Interoperability and Message Passing
 
@@ -199,9 +197,15 @@ Currently, Ethereum rollups can communicate using
 [shared sequencers](https://medium.com/@richardchen_81235/intro-to-shared-sequencing-1622d1fd51c9),
 which provide a common grounds of interoperability between layer two solutions.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will add a protocol called
-[SPREE](learn-spree.md) that provides shared logic for cross-consensus messages. Messages sent with
-SPREE carries additional guarantees about provenance and interpretation by the receiving chain.
+Polkadot plans to have the concept of
+[**Accords**](../general/polkadot-direction.md#xcm-and-accords), which are opt-in treaties for
+different protocols to partake in. Accords ensure that logic to pertaining to interoperability are
+kept consistent, and cannot be changed and undermined by participating protocols. This helps ensure
+that any XCM message can be properly interpreted and executed as needed on the target protocol in a
+fully trustless environment.
+
+[SPREE](./learn-spree.md) is the mechanism that provides shared logic for cross-consensus messages,
+and will be used to construct Accords.
 
 ## DApp Support and Development
 
