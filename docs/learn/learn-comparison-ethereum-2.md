@@ -28,7 +28,7 @@ In the context of blockchains, the term "shards" or "sharded protocol" is typica
 
 Both protocols have fundamentally different goals:
 
-- Ethereum is a general-purpose blockchain, which coordinates the global coordination of the
+- Ethereum is a general-purpose blockchain based on the
   Ethereum Virtual Machine (EVM). Ethereum is not specialized nor optimized for any particular
   application, rather its primary focus is the Ethereum Virtual Machine for executing smart
   contracts. Ethereum achieves scalability via **rollups**, which are secondary protocols which
