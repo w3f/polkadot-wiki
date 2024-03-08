@@ -187,8 +187,10 @@ in the network.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
 [Cross-Consensus Messaging (XCM)](./learn-xcm.md) for parachains to send arbitrary messages to each
 other. Parachains open connections with each other and can send messages via their established
-channels. Given that [collators](./learn-collator.md) will need to be full nodes of the relay chain,
-they will be connected and can relay messages from parachain A to parachain B.
+channels. Given that [collators](./learn-collator.md) communicate directly to the relay chain, they
+will be connected and can relay messages from parachain A to parachain B if needed through these
+message passing channels (see:
+[HRMP, VMP, and other message passing mechanisms for XCM](./learn-xcm-transport.md)).
 
 Messages do not pass through the relay chain. Only validity proofs and channel operations do (open,
 close, etc.). This enhances scalability by keeping data on the edges of the system.
