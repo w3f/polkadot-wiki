@@ -764,9 +764,9 @@ module.exports = {
             id: "maintain/maintain-archive"
           },
           items: [
-            "maintain/maintain-guides-democracy",
-            "maintain/maintain-guides-how-to-join-council",
-            "maintain/maintain-guides-how-to-vote-councillor",
+            "maintain/archive/maintain-guides-democracy",
+            "maintain/archive/maintain-guides-how-to-join-council",
+            "maintain/archive/maintain-guides-how-to-vote-councillor",
           ],
         },
       ],
