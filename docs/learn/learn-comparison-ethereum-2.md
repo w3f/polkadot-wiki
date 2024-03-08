@@ -26,7 +26,7 @@ In the context of blockchains, the term "shards" or "sharded protocol" is typica
 
 ## High-Level Comparison
 
-Both protocols have fundamentally different goals, which can be summarized as:
+Both protocols have fundamentally different goals:
 
 - Ethereum is a general-purpose blockchain, which coordinates the global coordination of the
   Ethereum Virtual Machine (EVM). Ethereum is not specialized nor optimized for any particular
