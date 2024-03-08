@@ -229,7 +229,7 @@ Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both
 model. Danksharding plans to utilize a rollup-centric approach by focusing on data availability. The
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem is secured by a main chain,
 called the "relay chain," which in turn manages cores and allows tasks, such as parachains to be run
-on top of them.
+on top of those cores and messages to be sent between them.
 
 The primary differences between the two protocols are:
 
