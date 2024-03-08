@@ -17,7 +17,7 @@ are utilized:
   multiple layer 1 blockchains and provides a way for them to partake in shared security. Polkadot
   acts as a **meta-protocol** that allows for multiple protocols to coexist and work together.
 
-:::note
+:::note Sharding
 
 In the context of blockchains, the term "shards" or "sharded protocol" is typically used to refer to sub-protocols or as a general term to refer to a form of
 [**horizontal scaling**](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out).
