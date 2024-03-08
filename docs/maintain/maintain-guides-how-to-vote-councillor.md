@@ -9,6 +9,13 @@ slug: ../maintain-guides-how-to-vote-councillor
 
 import RPC from "./../../components/RPC-Connection";
 
+:::caution Archived Document
+
+The content on this page no longer applies to Polkadot. For up-to-date information about governance,
+see the [Polkadot OpenGov page](../learn/learn-polkadot-opengov.md).
+
+:::
+
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
