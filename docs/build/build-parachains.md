@@ -350,30 +350,6 @@ proposed parachains is available
 Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
 ROCs tokens.
 
-### Build and Register a Rococo Parathread
-
-The parachains of Rococo all use the same runtime code. The only difference between them is the
-parachain ID used for registration with the Relay Chain.
-
-You will need to run a Rococo collator. To do so, you need to compile the following binary:
-
-```bash
-cargo build --release --locked -p polkadot-collator
-```
-
-Once the executable is built, launch collators for your parachain:
-
-```bash
-./target/release/polkadot-collator --chain $CHAIN --validator
-```
-
-If you are interested in running and launching your own parathread or parachain, Parity Technologies
-has created
-[parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
-to show you how. Got stuck or need support along the way? Join
-[Substrate Stack Exchange](https://substrate.stackexchange.com/)) to interact with other builders
-there.
-
 ### How to Connect to a Parachain
 
 If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
