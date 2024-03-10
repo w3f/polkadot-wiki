@@ -147,7 +147,7 @@ proposals and referenda.
 \* E.g. via `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` on Sidecar.
 
 ### Polkadot OpenGov
-Wiht [Polkadot OpenGov](https://wiki.polkadot.network/docs/learn-polkadot-opengov), these runtime upgrades are voted on and executed via [OpenGov](https://wiki.polkadot.network/docs/learn-polkadot-opengov). You should monitor the Relay chain as follows to know when the next runtime upgrade will be enacted:
+Runtime upgrades are voted on and executed via [Polkadot OpenGov](./learn-polkadot-opengov.md). You should monitor the Relay chain as follows to know when the next runtime upgrade will be enacted:
 
 1. Check each block for `referenda (Submitted)` events and check if `track` is `1`, which means it's `whitelistedCaller` - this is the only track that can enact runtime upgrdes - and log its `index` and `proposal`, this will help you keep track of the proposal's evolution. With the index you can lookup the details of the proposal in [Polkassembly.io](https://polkadot.polkassembly.io/whitelisted-caller?trackStatus=all&page=1) to see if it corresponds with a runtime upgrade.
 2. In the same block, look for the extrinsic `referenda.submit`, which has the `enactment_moment` for the proposal in blocks.
