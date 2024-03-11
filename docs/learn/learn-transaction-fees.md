@@ -70,8 +70,8 @@ Together, these fees constitute the inclusion fee. The inclusion fee is the base
 fee plus the adjusted weight fee.
 
 The inclusion fee is deducted from the sender's account before transaction execution. A portion of
-the fee will go to the block author, and the remainder will go to the [Treasury](learn-treasury.md).
-This is 20% and 80%, respectively.
+the fee will go to the block author, and the remainder will go to the
+[Treasury](./archive/learn-treasury.md). This is 20% and 80%, respectively.
 
 Tips are an optional transaction fee that users can add. Tips are not part of the inclusion fee and
 are an incentive to block authors for prioritizing a transaction, and the entire tip goes directly

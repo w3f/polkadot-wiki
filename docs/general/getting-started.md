@@ -199,8 +199,8 @@ requirement to create proposals, to endorse them and to vote on them when they b
 Bonding
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
 or 5% of requested funding is a requirement to make a
-[treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). DOT can also enable
-you to participate in programs like the
+[treasury proposal](../learn/learn-polkadot-opengov-treasury.md). DOT can also enable you to
+participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).
 
 ## Polkadot Gifts

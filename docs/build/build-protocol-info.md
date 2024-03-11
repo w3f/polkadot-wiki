@@ -33,7 +33,7 @@ decided to redenominate the DOT token. The redenomination does not change the nu
 
 The redenomination took effect 72 hours after transfers were enabled, at block 1_248_326, which
 occurred at approximately 16:50 UTC on 21 Aug 2020. You can find more information about the
-redenomination [here](../learn/learn-redenomination.md).
+redenomination [here](../learn/archive/learn-redenomination.md).
 
 ## Addresses
 

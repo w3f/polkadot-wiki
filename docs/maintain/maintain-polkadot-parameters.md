@@ -107,4 +107,5 @@ DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or
 Plancks make up a DOT.
 
 The denomination of DOT was changed from 12 decimals of precision at block #1,248,328 in an event
-known as _Denomination Day_. See [Redenomination](../learn/learn-redenomination.md) for details.
+known as _Denomination Day_. See [Redenomination](../learn/archive/learn-redenomination.md) for
+details.
