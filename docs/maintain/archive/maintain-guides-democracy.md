@@ -17,7 +17,7 @@ see the [Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
 
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the
-[council](../maintain-guides-how-to-join-council.md) and the
+[council](./maintain-guides-how-to-join-council.md) and the
 [technical committee](../../learn/learn-governance.md#technical-committee).
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
