@@ -10,8 +10,8 @@ slug: ../maintain-guides-how-to-vote-councillor
 <div className="sticky"> 
 <br />
 
-The content on this page no longer applies to Polkadot. For up-to-date information about governance,
-see the [Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
 
 </div>
 

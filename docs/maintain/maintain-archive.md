@@ -9,11 +9,12 @@ slug: ../maintain-archive
 
 import DocCardList from '@theme/DocCardList';
 
-:::caution Welcome to the Maintain Archive
+<div className="sticky"> 
+<br />
 
 This section contains archived pages. The content on those pages no longer applies to Polkadot but
-can still be relevant for parachains.
+can still be relevant for parachains and related projects.
 
-:::
+</div>
 
 <DocCardList />
