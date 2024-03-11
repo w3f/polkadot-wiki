@@ -194,8 +194,8 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
 - {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable"/>:__ :polkadot }}
   you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
-DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is
-a requirement to create proposals, to endorse them and to vote on them when they become referendums.
+DOT has utility in [Polkadot's OpenGov](../learn/learn-polkadot-opengov.md). Bonding DOT is a
+requirement to create proposals, to endorse them and to vote on them when they become referendums.
 Bonding
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
 or 5% of requested funding is a requirement to make a

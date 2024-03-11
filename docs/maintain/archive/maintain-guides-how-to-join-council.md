@@ -7,11 +7,19 @@ keywords: [council, how to join council, governance, candidate]
 slug: ../maintain-guides-how-to-join-council
 ---
 
+<div className="sticky"> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
+
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
-[governance page](../learn/learn-governance.md#council). This guide will walk you through entering
-your candidacy to the council.
+[governance page](../../learn/learn-governance.md#council). This guide will walk you through
+entering your candidacy to the council.
 
 ## Submit Candidacy
 
@@ -34,11 +42,11 @@ one else does.
 Go to [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and navigate to the "Council" tab.
 Click the button on the right that says "Submit Candidacy."
 
-![submit candidacy button](../assets/council/polkadotjs_submit_candidancy.png)
+![submit candidacy button](../../assets/council/polkadotjs_submit_candidancy.png)
 
 After making the transaction, you will see your account appear underneath the row "Candidates."
 
-![candidates list](../assets/council/polkadotjs_candidates.png)
+![candidates list](../../assets/council/polkadotjs_candidates.png)
 
 It is a good idea now to lead by example and give yourself a vote.
 
@@ -47,21 +55,21 @@ It is a good idea now to lead by example and give yourself a vote.
 Next to the button to submit candidacy is another button titled "Vote." You will click this button
 to make a vote for yourself (optional).
 
-![voting button on UI](../assets/council/polkadotjs_vote_button.png)
+![voting button on UI](../../assets/council/polkadotjs_vote_button.png)
 
-The council uses [Phragmén](../learn/learn-phragmen.md) approval voting, which is also used in the
-validator elections. This means that you can choose up to 16 distinct candidates to vote for and
+The council uses [Phragmén](../../learn/learn-phragmen.md) approval voting, which is also used in
+the validator elections. This means that you can choose up to 16 distinct candidates to vote for and
 your stake will equalize between them. For this guide, choose to approve your own candidacy by
 clicking on the switch next to your account and changing it to say "Aye."
 
-![voting pop up on UI](../assets/council/polkadotjs_voting.png)
+![voting pop up on UI](../../assets/council/polkadotjs_voting.png)
 
 ## Winning
 
 If you are one of the lucky ones to win a council election you will see your account move underneath
 the row "Members".
 
-![council members list](../assets/council/polkadotjs_council_members.png)
+![council members list](../../assets/council/polkadotjs_council_members.png)
 
 Now you are able to participate on the council by making motions or voting proposals. To join in on
 the active discussions, join the

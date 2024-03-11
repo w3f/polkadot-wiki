@@ -54,12 +54,3 @@ guides to set up a node and run the network.
 - [How to Chill](maintain-guides-how-to-chill.md) - Walkthrough on how to chill as a validator.
 - [How to Stop Validating](maintain-guides-how-to-stop-validating.md) - Proper way to stop
   validating.
-
-## Governance
-
-- [How to participate in Governance](maintain-guides-democracy.md) - Walkthrough on how to
-  participate in governance.
-- [How to join the Council](maintain-guides-how-to-join-council.md) - Step by step guide for running
-  for the Council.
-- [How to vote for a Councillor](maintain-guides-how-to-vote-councillor.md) - Step by step guide for
-  voting for your favorite councillors.

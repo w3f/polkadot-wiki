@@ -758,10 +758,15 @@ module.exports = {
         {
           type: "category",
           label: "Archive",
+          description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
+          link: {
+            type: 'doc',
+            id: "maintain/maintain-archive"
+          },
           items: [
-            "maintain/maintain-guides-democracy",
-            "maintain/maintain-guides-how-to-join-council",
-            "maintain/maintain-guides-how-to-vote-councillor",
+            "maintain/archive/maintain-guides-democracy",
+            "maintain/archive/maintain-guides-how-to-join-council",
+            "maintain/archive/maintain-guides-how-to-vote-councillor",
           ],
         },
       ],

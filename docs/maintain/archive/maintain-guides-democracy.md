@@ -7,26 +7,25 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
-:::caution Polkadot OpenGov is Live! This document will soon be archived.
+<div className="sticky"> 
+<br />
 
-Polkadot OpenGov: Polkadot’s next generation of decentralized governance is live on Polkadot and
-Kusama. Check the [Polkadot OpenGov page](../learn/learn-polkadot-opengov.md) for a detailed
-explanation of the latest features of Polkadot governance. The democracy pallet (Gov1) will soon be
-deprecated.
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
 
-:::
+</div>
 
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the
-[council](maintain-guides-how-to-join-council.md) and the
-[technical committee](../learn/learn-governance.md#technical-committee).
+[council](./maintain-guides-how-to-join-council.md) and the
+[technical committee](../../learn/learn-governance.md#technical-committee).
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _endorsing_ it and putting up
 tokens equal to the original bond. During every launch period, the most endorsed proposal will be
 moved to the public referenda table where it can be voted upon. Voters who are willing to lock up
 their tokens for a greater duration of time can do so and get their votes amplified. For more
-details on the governance system please see [here](../learn/learn-governance.md).
+details on the governance system please see [here](../../learn/learn-governance.md).
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Democracy module. Below are a few links to stay informed and directly engage with the community.
@@ -86,14 +85,14 @@ would be `0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`. Y
 preimage hash and save it for the next step. There is no need to click Submit Preimage at this
 point, though you could. We'll go over that in the next section.
 
-![submit preimage](../assets/democracy/submit_preimage.png)
+![submit preimage](../../assets/democracy/submit_preimage.png)
 
 Now you will click on the "Submit proposal" button and enter the preimage hash in the input titled
 "preimage hash" and _at least_ the minimum deposit into the "locked balance" field. Click on the
 "Submit proposal" button and confirm the transaction. You should now see your proposal appear in the
 "proposals" column on the page.
 
-![submit proposal](../assets/democracy/submit_proposal.png)
+![submit proposal](../../assets/democracy/submit_proposal.png)
 
 Now your proposal is visible to anyone who accesses the chain and others can endorse it or submit a
 preimage. However, it's hard to tell what exactly this proposal does since it shows the hash of the
@@ -101,7 +100,7 @@ action. Other holders will not be able to make a judgement on whether they endor
 someone submits the actual preimage for this proposal. In the next step, you will submit the
 preimage.
 
-![proposal hash](../assets/democracy/proposal-hash.png)
+![proposal hash](../../assets/democracy/proposal-hash.png)
 
 ## Submitting a Preimage
 
@@ -118,12 +117,12 @@ Click on the blue "Submit preimage" button and configure it to be the same as wh
 acquire the preimage hash. This time, instead of copying the hash to another tab, you will follow
 through and click "Submit preimage" and confirm the transaction.
 
-![submit preimage](../assets/democracy/submit_preimage.png)
+![submit preimage](../../assets/democracy/submit_preimage.png)
 
 Once the transaction is included you should see the UI update with the information for your already
 submitted proposal.
 
-![proposals](../assets/democracy/proposals.png)
+![proposals](../../assets/democracy/proposals.png)
 
 ## Endorsing a Proposal
 
@@ -148,16 +147,16 @@ Thus, no restrictions are made on the number of times a single account can endor
 To endorse a proposal, navigate to the proposal you want to endorse and click on the "Endorse"
 button.
 
-![endorsement button](../assets/democracy/endorse1.png)
+![endorsement button](../../assets/democracy/endorse1.png)
 
 You will be prompted with the full details of the proposal (if the preimage has been submitted!) and
 can then broadcast the transaction by clicking the blue "Endorse" button.
 
-![endorsement confirmed](../assets/democracy/endorse.png)
+![endorsement confirmed](../../assets/democracy/endorse.png)
 
 Once successful, you will see your endorsement appear in the dropdown in the proposal details.
 
-![endorsement result](../assets/democracy/endorsed-list.png)
+![endorsement result](../../assets/democracy/endorsed-list.png)
 
 ## Voting on a Proposal
 
@@ -194,28 +193,28 @@ tokens already locked by staking.
 When you are comfortable with the decision you have made, click the blue "Vote" button to submit
 your transaction and wait for it to be included in a block.
 
-![voting](../assets/democracy/voting.png)
+![voting](../../assets/democracy/voting.png)
 
 ## Unlocking Locked Tokens
 
-Like [vesting](../learn/learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are
+Like [vesting](../../learn/learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are
 unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make
 your funds available again after the lock expires. Unbonding is another term you hear a lot in
 Polkadot, it means withdrawing your DOT that was used in staking. To know more about it, please see
-[here](maintain-guides-how-to-nominate-polkadot.md).
+[here](../maintain-guides-how-to-nominate-polkadot.md).
 
 You can do this from the "Accounts" page in
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts), unless you use Ledger (see below).
 First, check that your account has a "democracy" lock by opening the details on your balance. In the
 example below the account has 150 KSM locked in democracy.
 
-![democracy balance details](../assets/democracy_balance_details.png)
+![democracy balance details](../../assets/democracy_balance_details.png)
 
 Now you can click the menu button (the three dots) and find the option that says "Clear expired
 democracy locks". After selecting this option you may confirm the transaction and your locks will be
 cleared when successful.
 
-![democracy clear locks](../assets/democracy_clear_locks.png)
+![democracy clear locks](../../assets/democracy_clear_locks.png)
 
 #### With a Ledger hardware wallet or Unlocking Very Old Locks
 
@@ -234,12 +233,12 @@ The number of the referendum for which you voted is visible in an explorer such 
 
 You need to press the "Submit Transaction" button to submit the extrinsic.
 
-![democracy clear_lock_extrinsic_1](../assets/democracy_clear_lock_extrinsic_1.png)
+![democracy clear_lock_extrinsic_1](../../assets/democracy_clear_lock_extrinsic_1.png)
 
 Now submit the following extrinsic: `democracy.unlock(target), where the target is your account
 address.
 
-![democracy clear_lock_extrinsic_2](../assets/democracy_clear_lock_extrinsic_2.png)
+![democracy clear_lock_extrinsic_2](../../assets/democracy_clear_lock_extrinsic_2.png)
 
 If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), you should see that
 the democracy lock has been released.
@@ -269,7 +268,7 @@ your choice. Then you would be presented with a pop-up window which lets you ent
 details of the delegated account, delegated amount and conviction. You can enter the relevant
 details and click on the delegate button and then sign and submit the transaction.
 
-![delegate](../assets/democracy/delegate-vote.png)
+![delegate](../../assets/democracy/delegate-vote.png)
 
 Your delegation will count toward whatever account you delegated for votes on until you explicitly
 undelegate your vote.
@@ -279,7 +278,7 @@ undelegate your vote.
 It is possible to query the delegation preferences of any actively delegating account on the network
 through `democracy.votingOf` extrinsic.
 
-![query delegation](../assets/democracy/query-delegation.png)
+![query delegation](../../assets/democracy/query-delegation.png)
 
 :::
 
@@ -325,13 +324,13 @@ The easiest way to do this is from the
 ["Accounts" tab on Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) where you can manage the
 delegation of your account.
 
-![manage delegation](../assets/democracy/manage-delegation.png)
+![manage delegation](../../assets/democracy/manage-delegation.png)
 
 When you click on "manage delegation", you would be presented with a pre-populated pop-up window
 with that account's delegation preferences. Here, you have an option to undelegate or save the
 modifications made to the account's delegation preferences.
 
-![undelegate](../assets/democracy/undelegate-save.png)
+![undelegate](../../assets/democracy/undelegate-save.png)
 
 ## Voting with a Governance Proxy
 
@@ -341,7 +340,7 @@ pallet, and you will specify the index of the referendum that is being voted, th
 "Aye" for approval or "Nay" for rejection), and the conviction, just like a normal vote.
 
 For more material on adding and removing Governance proxies, as well as other types, please see the
-[Proxy page](../learn/learn-proxies.md).
+[Proxy page](../../learn/learn-proxies.md).
 
 ## Interpreting On-Chain Voting Data
 
