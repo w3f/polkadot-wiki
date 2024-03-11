@@ -1,10 +1,10 @@
 ---
-id: maintain-archive
-title: Maintain Archive
+id: learn-archive
+title: Learn Archive
 sidebar_label: Archive
-description: Archive for the Maintain Section.
-keywords: [Democracy, Council, Gov1, Councillor]
-slug: ../maintain-archive
+description: Archive for the Learn Section.
+keywords: [Gov1, Gov1 Treasury, Launch, Redenomination, Controller]
+slug: ../learn-archive
 ---
 
 import DocCardList from '@theme/DocCardList';

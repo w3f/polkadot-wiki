@@ -7,6 +7,13 @@ keyword: [launch, phases, polkadot, DOT, claim, token sale, redenomination]
 slug: ../learn-launch
 ---
 
+<div className="sticky"> 
+<br />
+
+The content on this page is archived.
+
+</div>
+
 The Polkadot network has a phased roll-out plan, with important milestones toward decentralization
 marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the
 [roadmap](https://polkadot.network/launch-roadmap/)
@@ -39,7 +46,7 @@ Once Web3 Foundation was confident in the stability of the network and there was
 of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) &mdash; a
 superuser account with access to governance functions &mdash; to initiate the first validator
 election. Following this election, the network transitioned from PoA into its second phase,
-[Nominated Proof of Stake (NPoS)](learn-staking.md), on June 18, 2020.
+[Nominated Proof of Stake (NPoS)](../learn-staking.md), on June 18, 2020.
 
 ## Governance
 
@@ -59,9 +66,8 @@ under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community
-made a public proposal for a runtime upgrade that lifted the
-restriction on balance transfers. Transfer functionality was subsequently enabled on Polkadot at
+To enable balance transfers, the community made a public proposal for a runtime upgrade that lifted
+the restriction on balance transfers. Transfer functionality was subsequently enabled on Polkadot at
 block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Core Functionality

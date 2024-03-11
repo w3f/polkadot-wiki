@@ -152,10 +152,10 @@ that are locked up to another buyer. This would allow the seller to get liquid t
 for the parachain slot and the buyer to acquire the slot as well as the deposited tokens.
 
 A number of system or common-good parachains may be granted slots by the
-[governing bodies](learn-governance.md) of the Relay Chain. System parachains can be recognized by a
-parachain ID lower than 1_000, and common-good parachains by a parachain ID between 1_000 and 1_999.
-Other parachains will have IDs 2_000 or higher. Such parachains would not have to bid for or renew
-their slots as they would be considered essential to the ecosystem's future.
+[governance](./learn-polkadot-opengov.md) of the Relay Chain. System parachains can be recognized by
+a parachain ID lower than 1_000, and common-good parachains by a parachain ID between 1_000 and
+1_999. Other parachains will have IDs 2_000 or higher. Such parachains would not have to bid for or
+renew their slots as they would be considered essential to the ecosystem's future.
 
 ### How are auctions scheduled?
 

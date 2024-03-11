@@ -260,7 +260,7 @@ Polkadot-JS UI and click "Confirm Claim."
 
 At this point, you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama
-network such as [governance](../../learn/learn-governance.md) and
+network such as [governance](../../learn/learn-polkadot-opengov.md) and
 [staking](../../learn/learn-staking.md). During the soft launch period balance transfers will not be
 enabled.
 

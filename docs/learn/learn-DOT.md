@@ -35,8 +35,8 @@ equals to 10<sup>12</sup> Planck.
 :::note DOT was redenominated at block #1_248_328
 
 DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT
-(old)"), but went through a process of [redenomination](./learn-redenomination.md) which increased
-DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
+(old)"), but went through a process of [redenomination](./archive/learn-redenomination.md) which
+increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
 
 :::
 
@@ -211,7 +211,8 @@ in the faucets repo
 
 Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are available via the
 [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or
-through the [Treasury](learn-treasury.md). Alternatively, they can be obtained on the open market.
+through the [Treasury](./archive/learn-treasury.md). Alternatively, they can be obtained on the open
+market.
 
 ## Polkadot Mainnet DOT
 

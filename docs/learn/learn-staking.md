@@ -451,11 +451,11 @@ Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the n
 modified software) in the network. They and their nominators will get slashed by losing a percentage
 of their bonded/staked DOT.
 
-Any slashed DOT will be added to the [Treasury](learn-treasury.md). The rationale for this (rather
-than burning or distributing them as rewards) is that slashes may then be reverted by the Council by
-simply paying out from the Treasury. This would be useful in situations such as faulty slashes. In
-the case of legitimate slashing, it moves tokens away from malicious validators to those building
-the ecosystem through the normal Treasury process.
+Any slashed DOT will be added to the [Treasury](./archive/learn-treasury.md). The rationale for this
+(rather than burning or distributing them as rewards) is that slashes may then be reverted by the
+Council by simply paying out from the Treasury. This would be useful in situations such as faulty
+slashes. In the case of legitimate slashing, it moves tokens away from malicious validators to those
+building the ecosystem through the normal Treasury process.
 
 Validators with a larger total stake backing them will get slashed more harshly than less popular
 ones, so we encourage nominators to shift their nominations to less popular validators to reduce

@@ -7,6 +7,13 @@ keywords: [DOT, redenomination]
 slug: ../learn-redenomination
 ---
 
+<div className="sticky"> 
+<br />
+
+The content on this page is archived.
+
+</div>
+
 On August 21, 2020, the redenomination of DOT, the native token on Polkadot, occurred. From this
 date, one DOT (old) equals 100 new DOT.
 
@@ -17,7 +24,7 @@ The DOT redenomination took place on 21 August 2020, known as Denomination Day, 
 
 :::
 
-While [DOT](../learn/learn-DOT.md) is the unit of currency on Polkadot that most people use when
+While [DOT](../../learn/learn-DOT.md) is the unit of currency on Polkadot that most people use when
 interacting with the system, the smallest unit of account is the Planck. A Planck's relation to DOT
 is like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12
 Plancks, that is, twelve decimal places. After Denomination Day, DOT is denominated as 1e10 Plancks,
@@ -132,7 +139,7 @@ community for a final, binding decision.
 
 ## The Outcome
 
-![redenomination](../assets/redenomination.png)
+![redenomination](../../assets/redenomination.png)
 
 After two weeks of voting, the [results](https://polkadot.network/the-results-are-in/) of the
 redenomination vote were tallied. About one-third of the total DOT in the network participated in
