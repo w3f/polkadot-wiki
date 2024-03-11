@@ -106,12 +106,12 @@ module.exports = {
             from: ['/docs/learn-common-goods']
           },
           {
-            to: '/docs/learn-launch',
-            from: ['/docs/claims']
+            to: '/docs/archive/learn-launch',
+            from: ['/docs/claims', '/docs/learn-launch']
           },
           {
-            to: '/docs/learn-redenomination',
-            from: ['/docs/redenomination']
+            to: '/docs/archive/learn-redenomination',
+            from: ['/docs/redenomination', '/docs/learn-redenomination']
           },
           {
             to: '/docs/maintain-guides-how-to-validate-polkadot',
