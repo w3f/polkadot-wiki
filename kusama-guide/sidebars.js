@@ -623,11 +623,25 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Validate",
+      label: "Maintain",
       items: [
         "maintain/kusama/maintain-guides-how-to-validate-kusama",
         "maintain/maintain-guides-how-to-stop-validating",
         "maintain/doc-maintain-guides-validator-community",
+        {
+          type: "category",
+          label: "Archive",
+          description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
+          link: {
+            type: 'doc',
+            id: "maintain/maintain-archive"
+          },
+          items: [
+            "maintain/archive/maintain-guides-democracy",
+            "maintain/archive/maintain-guides-how-to-join-council",
+            "maintain/archive/maintain-guides-how-to-vote-councillor",
+          ],
+        },
       ],
     },
     {
