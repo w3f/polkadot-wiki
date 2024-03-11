@@ -16,13 +16,13 @@ network.
 
 Learn about the upcoming changes to the governance on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
-[Wiki doc on Polkadot OpenGov](./learn-polkadot-opengov.md).
+[Wiki doc on Polkadot OpenGov](../learn-polkadot-opengov.md).
 
 :::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
-defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)). It also allows for
+defined in a platform-agnostic language (i.e. [WebAssembly](../learn-wasm.md)). It also allows for
 several on-chain voting mechanisms, such as referenda with the novel concept of
 [Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
 protocol must be agreed upon by stake-weighted referenda.
@@ -90,7 +90,7 @@ Referenda can be started in different ways:
 :::info Starting a proposal in Governance V1
 
 For more information about how to start a proposal, see the
-[dedicated page](../maintain/archive/maintain-guides-democracy.md#proposing-an-action).
+[dedicated page](../../maintain/archive/maintain-guides-democracy.md#proposing-an-action).
 
 :::
 
@@ -99,9 +99,9 @@ For more information about how to start a proposal, see the
 Anyone can submit a proposal by depositing the minimum amount of tokens for a certain period (number
 of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to
 support it - this action is called
-[_endorsing_](../maintain/archive/maintain-guides-democracy.md#endorsing-a-proposal). The proposal
-with the highest amount of bonded support will be selected to be a referendum in the next voting
-cycle based on an [alternating voting timetable](#alternating-voting-timetable).
+[_endorsing_](../../maintain/archive/maintain-guides-democracy.md#endorsing-a-proposal). The
+proposal with the highest amount of bonded support will be selected to be a referendum in the next
+voting cycle based on an [alternating voting timetable](#alternating-voting-timetable).
 
 ### Cancelling Proposals
 
@@ -356,19 +356,19 @@ below).
 :::info Voluntary Locking
 
 For more information about voluntary locking or conviction voting see
-[Polkadot OpenGov](./learn-polkadot-opengov.md#voluntary-locking).
+[Polkadot OpenGov](../learn-polkadot-opengov.md#voluntary-locking).
 
 :::
 
 ### Delegations
 
 In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
-[delegate your voting power](../maintain/archive/maintain-guides-democracy.md#delegate-a-vote) to
+[delegate your voting power](../../maintain/archive/maintain-guides-democracy.md#delegate-a-vote) to
 another account you trust if you are not willing to stay up-to-date with all referenda.
 
-You can also use a [governance proxy](./learn-proxies.md#governance-proxy) to vote on behalf of your
-stash account. The proxy can be yours, or you can authorize a third-party governance proxy to vote
-with your stash. Learn more from the [dedicated page on Proxy Accounts](./learn-proxies.md).
+You can also use a [governance proxy](../learn-proxies.md#governance-proxy) to vote on behalf of
+your stash account. The proxy can be yours, or you can authorize a third-party governance proxy to
+vote with your stash. Learn more from the [dedicated page on Proxy Accounts](../learn-proxies.md).
 
 ## Council
 
@@ -378,7 +378,7 @@ each represented as an on-chain account. On
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
 {{ polkadot: 13 :polkadot }} {{ kusama: 19 :kusama }} members.
 
-Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
+Along with [controlling the treasury](./learn-treasury.md), the council is called upon primarily for
 three tasks of governance:
 
 - Proposing sensible referenda
@@ -442,14 +442,14 @@ simultaneously. Voting on one does not prevent a user from voting on the other.
 
 All stakeholders can signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election](../docs/learn-phragmen) process that
+Council elections are handled by the same [Phragmén election](../learn-phragmen.md) process that
 selects validators from the available pool based on nominations. However, token holders' votes for
 councilors are isolated from any nominations they may have on validators. Council terms last for one
 {{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
 
-At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
-the result will choose the new councilors based on the vote configurations of all voters. The
-election also chooses a set number of runners-up, which is currently
+At the end of each term, [Phragmén election algorithm](../learn-phragmen#algorithm) runs and the
+result will choose the new councilors based on the vote configurations of all voters. The election
+also chooses a set number of runners-up, which is currently
 {{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
 intact.
 
