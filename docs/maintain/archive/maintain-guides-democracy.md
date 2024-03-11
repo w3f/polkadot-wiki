@@ -18,14 +18,14 @@ The content on this page is archived. For up-to-date information about governanc
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the
 [council](./maintain-guides-how-to-join-council.md) and the
-[technical committee](../../learn/learn-governance.md#technical-committee).
+[technical committee](../../learn/archive/learn-governance.md#technical-committee).
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _endorsing_ it and putting up
 tokens equal to the original bond. During every launch period, the most endorsed proposal will be
 moved to the public referenda table where it can be voted upon. Voters who are willing to lock up
 their tokens for a greater duration of time can do so and get their votes amplified. For more
-details on the governance system please see [here](../../learn/learn-governance.md).
+details on the governance system please see [here](../../learn/archive/learn-governance.md).
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Democracy module. Below are a few links to stay informed and directly engage with the community.

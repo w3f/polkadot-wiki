@@ -18,8 +18,8 @@ The content on this page is archived. For up-to-date information about governanc
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
-[governance page](../../learn/learn-governance.md#council). This guide will walk you through voting
-for councillors in the elections.
+[governance page](../../learn/archive/learn-governance.md#council). This guide will walk you through
+voting for councillors in the elections.
 
 ## Voting for Councillors
 

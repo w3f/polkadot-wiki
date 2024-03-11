@@ -13,7 +13,7 @@ import RPC from "./../../components/RPC-Connection";
 
 System parachains are those that contain core Polkadot protocol features, but in parachains rather
 than the Relay Chain. Rather than leasing an execution core by economic means (e.g., auction),
-execution cores are allocated by network [governance](learn-governance.md).
+execution cores are allocated by network [governance](./learn-guides-polkadot-opengov.md).
 
 By hosting core protocol logic in parachains instead of the Relay Chain, Polkadot uses its own
 scaling technology -- namely, parallel execution -- to host _itself_. System parachains remove

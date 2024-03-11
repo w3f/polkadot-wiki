@@ -189,7 +189,7 @@ to consider precisely how benchmarking was performed for Polkadot.
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
 August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
 ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
-[redenomination](../learn/learn-redenomination.md), the new DOT is called DOT.
+[redenomination](../learn/archive/learn-redenomination.md), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
 
@@ -247,7 +247,7 @@ determined minority to overrule the vote of an apathetic majority in certain sit
 mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
 approval or rejection based on what part of the governance protocol the proposal originated in. For
 details on the subtleties of Polkadot's governance system, please see the
-[governance page](../learn/learn-governance.md).
+[governance page](../learn/learn-polkadot-opengov.md).
 
 ## Parachains
 
