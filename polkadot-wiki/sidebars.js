@@ -626,10 +626,8 @@ module.exports = {
           label: "Archive",
           description: "Implementations no longer live on Polkadot.",
           link: {
-            type: 'generated-index',
-            title: "Archive",
-            description: "Implementations no longer live on Polkadot.",
-            slug: '/learn-archive-index',
+            type: 'doc',
+            id: "learn/learn-archive",
           },
           items: [
             "learn/learn-governance",
