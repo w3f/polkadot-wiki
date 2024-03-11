@@ -46,7 +46,7 @@ Once Web3 Foundation was confident in the stability of the network and there was
 of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) &mdash; a
 superuser account with access to governance functions &mdash; to initiate the first validator
 election. Following this election, the network transitioned from PoA into its second phase,
-[Nominated Proof of Stake (NPoS)](learn-staking.md), on June 18, 2020.
+[Nominated Proof of Stake (NPoS)](../learn-staking.md), on June 18, 2020.
 
 ## Governance
 

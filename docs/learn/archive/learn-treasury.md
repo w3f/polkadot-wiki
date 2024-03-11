@@ -16,9 +16,9 @@ The content on this page is archived. For up-to-date information about treasury,
 </div>
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
-fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
+fees, slashing, [staking inefficiencies](../learn-staking.md#inflation), etc.
 
-The Treasury funds are held in a [system account](./learn-account-advanced.md#system-accounts) not
+The Treasury funds are held in a [system account](../learn-account-advanced.md#system-accounts) not
 accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
 spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
 waiting period before distribution. This waiting period is known as the _spend period_, and its
@@ -70,13 +70,13 @@ The Treasury is funded from different sources:
    taken from the slash amount and varies per offence and number of reporters.
 2. Transaction fees: A portion of each block's transaction fees goes to the Treasury, with the
    remainder going to the block author.
-3. Staking inefficiency: [Inflation](learn-staking.md#inflation) is designed to be 10% in the first
-   year, and the ideal staking ratio is set at 50%, meaning half of all tokens should be locked in
-   staking. Any deviation from this ratio will cause a proportional amount of the inflation to go to
-   the Treasury. In other words, if 50% of all tokens are staked, then 100% of the inflation goes to
-   the validators as reward. If the staking rate is greater than or less than 50%, then the
-   validators will receive less, with the remainder going to the Treasury.
-4. Parathreads: [Parathreads](learn-parathreads.md) participate in a per-block auction for block
+3. Staking inefficiency: [Inflation](../learn-staking.md#inflation) is designed to be 10% in the
+   first year, and the ideal staking ratio is set at 50%, meaning half of all tokens should be
+   locked in staking. Any deviation from this ratio will cause a proportional amount of the
+   inflation to go to the Treasury. In other words, if 50% of all tokens are staked, then 100% of
+   the inflation goes to the validators as reward. If the staking rate is greater than or less than
+   50%, then the validators will receive less, with the remainder going to the Treasury.
+4. Parathreads: [Parathreads](../learn-parathreads.md) participate in a per-block auction for block
    inclusion. Part of this bid goes to the validator that accepts the block and the remainder goes
    to the Treasury.
 
