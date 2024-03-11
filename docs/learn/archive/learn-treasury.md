@@ -7,14 +7,13 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
-:::info Use OpenGov to access treasury funds
+<div className="sticky"> 
+<br />
 
-Governance v1 is deprecated. To access
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury funds use
-[OpenGov](./learn-polkadot-opengov.md). For more information about OpenGov Treasury see the
-[dedicated wiki page](./learn-polkadot-opengov-treasury.md).
+The content on this page is archived. For up-to-date information about treasury, see the
+[Polkadot OpenGov Treasury page](../../learn/learn-polkadot-opengov-treasury.md).
 
-:::
+</div>
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.

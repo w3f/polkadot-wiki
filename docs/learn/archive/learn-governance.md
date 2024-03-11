@@ -7,18 +7,18 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
+<div className="sticky"> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
-
-:::info Polkadot OpenGov is live on Kusama Network
-
-Learn about the upcoming changes to the governance on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} in this
-[Wiki doc on Polkadot OpenGov](../learn-polkadot-opengov.md).
-
-:::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
 mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
