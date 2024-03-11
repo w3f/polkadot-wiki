@@ -608,10 +608,8 @@ module.exports = {
           label: "Archive",
           description: "Implementations no longer live on Kusama.",
           link: {
-            type: 'generated-index',
-            title: "Archive",
-            description: "Implementations no longer live on Kusama.",
-            slug: '/learn-archive-index',
+            type: 'doc',
+            id: 'learn/learn-archive',
           },
           items: [
             "learn/archive/learn-governance",
