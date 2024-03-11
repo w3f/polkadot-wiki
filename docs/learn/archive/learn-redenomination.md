@@ -132,7 +132,7 @@ community for a final, binding decision.
 
 ## The Outcome
 
-![redenomination](../assets/redenomination.png)
+![redenomination](../../assets/redenomination.png)
 
 After two weeks of voting, the [results](https://polkadot.network/the-results-are-in/) of the
 redenomination vote were tallied. About one-third of the total DOT in the network participated in

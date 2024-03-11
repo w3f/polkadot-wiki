@@ -37,7 +37,7 @@ a referendum to let all holders, weighted by stake, make the decision.
 The figure below shows an overview of Governance V1 with the key actors and different paths for
 submitting a proposal that can potentially be voted on as a referendum.
 
-![gov1-overview](../assets/gov1-overview.png)
+![gov1-overview](../../assets/gov1-overview.png)
 
 The public (i.e. token holders) can submit a proposal that gets added to the proposal queue. Here,
 proposals are [endorsed](#endorsing-proposals), and the one that gets the most support will climb to
@@ -145,7 +145,7 @@ options in voting are "aye", "nay", or abstaining entirely.
 The structure of the timeline for all referenda is the same regardless of who initiates the
 proposal, although the timeline length can vary (see below).
 
-![gov1-timeline](../assets/gov1-timeline.png)
+![gov1-timeline](../../assets/gov1-timeline.png)
 
 The figure above provides a summary view of the referenda timeline for Governance V1.
 
@@ -244,7 +244,7 @@ selection depends on which entity proposed the proposal and whether all Council 
 
 Let's use the image below as an example.
 
-![adaptive-quorum-biasing](../assets/governance/adaptive-quorum-biasing.png)
+![adaptive-quorum-biasing](../../assets/governance/adaptive-quorum-biasing.png)
 
 If a publicly submitted referendum only has a 25% turnout, the tally of _aye_ votes has to reach 66%
 for it to pass since we applied **Positive Turnout Bias**. In contrast, when it has a 75% turnout,
@@ -438,7 +438,7 @@ simultaneously. Voting on one does not prevent a user from voting on the other.
 
 ### How to be a council member?
 
-![approval-vote](../assets/governance/approval-vote.png)
+![approval-vote](../../assets/governance/approval-vote.png)
 
 All stakeholders can signal their approval of any of the registered candidates.
 
