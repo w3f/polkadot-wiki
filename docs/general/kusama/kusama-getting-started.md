@@ -192,7 +192,7 @@ requirement to create proposals, to endorse them and to vote on them when they b
 Bonding
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={666666666000} filter="humanReadable"/> :kusama }}
 or 5% of requested funding is a requirement to make a
-[treasury proposal](../../learn/learn-treasury.md#creating-a-treasury-proposal).
+[treasury proposal](../../learn/learn-polkadot-opengov-treasury.md).
 
 ### Kusama Gifts
 
