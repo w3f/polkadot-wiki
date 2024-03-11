@@ -7,12 +7,13 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
-:::caution Archived Document
+<div className="sticky"> 
+<br />
 
 The content on this page no longer applies to Polkadot. For up-to-date information about governance,
 see the [Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
 
-:::
+</div>
 
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the

@@ -7,12 +7,13 @@ keywords: [council, vote, councillors]
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 
-:::caution Archived Document
+<div className="sticky"> 
+<br />
 
 The content on this page no longer applies to Polkadot. For up-to-date information about governance,
 see the [Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
 
-:::
+</div>
 
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
@@ -26,7 +27,7 @@ Voting for councillors requires you to reserve
 {{ polkadot: 20.064 DOT :polkadot }}{{ kusama: 0.067 KSM :kusama }} as a base amount and an amount
 of {{ polkadot: 0.032 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} per vote. You can then bond
 whatever amount you wish to put behind your vote. See the
-[democracy guide](maintain-guides-democracy.md) for more information.
+[democracy guide](./maintain-guides-democracy.md) for more information.
 
 :::info Voting and staking locks can overlap
 
