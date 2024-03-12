@@ -29,16 +29,8 @@ seminars, and initiatives within the ecosystem.
     </p>
   </div>
   <div className="col text--center">
-    <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGsfgxkwTdMOwnbRW4nx_T-i">
-      <img src="https://i.ytimg.com/vi/aEWbZxNCH0A/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYfyATKE4wDw==&rs=AOn4CLDIzXNOiP1uDZ0b-UTGcdnMuR1ZKg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGsfgxkwTdMOwnbRW4nx_T-i">Substrate Seminars</a>
-    </p>
-  </div>
-  <div className="col text--center">
     <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGvJuOchUyo6eFB_RA76mv3h">
-      <img src="https://i.ytimg.com/vi/tbewfQM_19c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDmZ-7V93XjYZBe2-LFywSTnjvi-w" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://i9.ytimg.com/vi_webp/tbewfQM_19c/mqdefault.webp?v=65731978&sqp=CNztwK8G&rs=AOn4CLBOyQxD-cNsJZJeBWyjBrbikk3Ueg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGvJuOchUyo6eFB_RA76mv3h">Polkadot Community Calls</a>
@@ -47,6 +39,33 @@ seminars, and initiatives within the ecosystem.
 </div>
 
 ## Past Events
+
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGuRyaTrepJ3SYxO1xQ0NyCn">
+      <img src="https://i.ytimg.com/vi/alg8KZKyUKI/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnGMQRbYdpEk44RYRTb1il_Vg4lA" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGuRyaTrepJ3SYxO1xQ0NyCn">ETH Denver 2024</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGsfgxkwTdMOwnbRW4nx_T-i">
+      <img src="https://i.ytimg.com/vi/aEWbZxNCH0A/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYfyATKE4wDw==&rs=AOn4CLDIzXNOiP1uDZ0b-UTGcdnMuR1ZKg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGsfgxkwTdMOwnbRW4nx_T-i">Substrate Seminars</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGsJjsxWZ4rZGD7mZOvrWfWK">
+      <img src="https://i.ytimg.com/vi/PRnuU0Y2GS4/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLDAKIXyawftGdyzP8TZQ2aMlEyXTA" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/playlist?list=PLOyWqupZ-WGsJjsxWZ4rZGD7mZOvrWfWK">Polkadot Developer Heroes</a>
+    </p>
+  </div>
+</div>
 
 <div className="row">
   <div className="col text--center">
