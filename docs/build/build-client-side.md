@@ -132,7 +132,9 @@ decentralized _content-centric_ approach.
 [IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all
 computing devices with the same system of files, by utilizing features such as content-addressing,
 content-signing, and enhanced security methods through encryption. IPFS aims to address the current
-hurdles of the HTTP-based Internet. </TabItem>
+hurdles of the HTTP-based Internet.
+
+</TabItem>
 
 <!-- prettier-ignore -->
 <TabItem value="crust">
