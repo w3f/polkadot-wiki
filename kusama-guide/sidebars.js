@@ -584,7 +584,7 @@ module.exports = {
             },
           ],
         },
-        "learn/kusama/learn-video-tutorials",
+        "learn/kusama/learn-video-tutorials-kusama",
         {
           type: "category",
           label: "Future Implementations",

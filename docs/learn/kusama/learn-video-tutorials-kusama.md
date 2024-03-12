@@ -1,10 +1,10 @@
 ---
-id: learn-video-tutorials
-title: Videos about Polkadot
+id: learn-video-tutorials-kusama
+title: Videos about Kusama
 sidebar_label: Videos
-description: Videos about Polkadot and Related Topics.
+description: Videos about Kusama and Related Topics.
 keywords: [learn, video, tutorials, explainers]
-slug: ../learn-video-tutorials
+slug: ../learn-video-tutorials-kusama
 ---
 
 :::info Visit the Polkadot YouTube Channel
@@ -16,7 +16,7 @@ For more videos see all playlists on the
 
 ## Ongoing Series
 
-Learn about Polkadot and Substrate at a deeper level with these ongoing deep dives, technical
+Learn about Kusama and Substrate at a deeper level with these ongoing deep dives, technical
 seminars, and initiatives within the ecosystem.
 
 <div className="row">
