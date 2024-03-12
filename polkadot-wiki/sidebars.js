@@ -657,10 +657,8 @@ module.exports = {
             slug: '/build-client-index',
           },
           items: [
-            "build/build-dapp",
-            "build/build-oracle", 
+            "build/build-client-side",
             "build/build-light-clients",
-            "build/build-storage",
             "build/build-transaction-construction",
             "build/build-node-interaction",
           ],
