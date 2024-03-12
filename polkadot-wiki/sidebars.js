@@ -728,6 +728,13 @@ module.exports = {
         {
           type: "category",
           label: "Nodes and Dapps",
+          description: 'Learn how to set up a node.',
+          link: {
+            type: 'generated-index',
+            title: "Nodes and Dapps",
+            description: "Learn how to set up a node.",
+            slug: '/maintain-node-index',
+          },
           items: [
             "maintain/maintain-endpoints",
             "maintain/maintain-sync",
@@ -742,6 +749,13 @@ module.exports = {
         {
           type: "category",
           label: "Collator Guides",
+          description: "Guides for Collator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Collator Guides",
+            description: "Guides for Collator Nodes.",
+            slug: '/maintain-collator-index',
+          },
           items: [
             "maintain/maintain-guides-async-backing",
           ],
@@ -749,6 +763,13 @@ module.exports = {
         {
           type: "category",
           label: "Validator Guides",
+          description: "Guides for Validator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Validator Guides",
+            description: "Guides for Validator Nodes.",
+            slug: '/maintain-validator-index',
+          },
           items: [
             "maintain/maintain-guides-how-to-validate-polkadot",
             "maintain/maintain-guides-validator-payout",
