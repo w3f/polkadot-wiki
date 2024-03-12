@@ -719,15 +719,24 @@ module.exports = {
     {
       type: "category",
       label: "Maintain",
+      link: {
+        type: 'doc',
+        id: "maintain/maintain-index",
+      },
       items: [
-        "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
-        "maintain/maintain-endpoints",
-        "maintain/maintain-guides-async-backing",
         {
           type: "category",
           label: "Nodes and Dapps",
+          description: 'Learn how to set up a node.',
+          link: {
+            type: 'generated-index',
+            title: "Nodes and Dapps",
+            description: "Learn how to set up a node.",
+            slug: '/maintain-node-index',
+          },
           items: [
+            "maintain/maintain-endpoints",
             "maintain/maintain-sync",
             "maintain/maintain-bootnode",
             "maintain/maintain-rpc",
@@ -739,7 +748,28 @@ module.exports = {
         "maintain/maintain-guides-how-to-nominate-polkadot",
         {
           type: "category",
+          label: "Collator Guides",
+          description: "Guides for Collator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Collator Guides",
+            description: "Guides for Collator Nodes.",
+            slug: '/maintain-collator-index',
+          },
+          items: [
+            "maintain/maintain-guides-async-backing",
+          ],
+        },
+        {
+          type: "category",
           label: "Validator Guides",
+          description: "Guides for Validator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Validator Guides",
+            description: "Guides for Validator Nodes.",
+            slug: '/maintain-validator-index',
+          },
           items: [
             "maintain/maintain-guides-how-to-validate-polkadot",
             "maintain/maintain-guides-validator-payout",
