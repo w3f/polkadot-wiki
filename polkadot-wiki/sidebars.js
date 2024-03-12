@@ -719,15 +719,17 @@ module.exports = {
     {
       type: "category",
       label: "Maintain",
+      link: {
+        type: 'doc',
+        id: "maintain/maintain-index",
+      },
       items: [
-        "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
-        "maintain/maintain-endpoints",
-        "maintain/maintain-guides-async-backing",
         {
           type: "category",
           label: "Nodes and Dapps",
           items: [
+            "maintain/maintain-endpoints",
             "maintain/maintain-sync",
             "maintain/maintain-bootnode",
             "maintain/maintain-rpc",
@@ -737,6 +739,13 @@ module.exports = {
           ],
         },
         "maintain/maintain-guides-how-to-nominate-polkadot",
+        {
+          type: "category",
+          label: "Collator Guides",
+          items: [
+            "maintain/maintain-guides-async-backing",
+          ],
+        },
         {
           type: "category",
           label: "Validator Guides",
