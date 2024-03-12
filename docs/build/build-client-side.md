@@ -177,6 +177,8 @@ an S3-compatible API for widespread integrations and configurations in current w
 To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com), and
 specifically the documentation on
 [deploying Polkadot dApp on decentralized storage.](https://docs.filebase.com/web3-education/web3-tutorials/polkadot/polkadot-deploy-a-polkadot-dapp-on-decentralized-storage)
-You can get started with Filebase by signing up [here.](https://filebase.com/signup) </TabItem>
+You can get started with Filebase by signing up [here.](https://filebase.com/signup)
+
+</TabItem>
 
 </Tabs>
