@@ -205,7 +205,7 @@ participate in programs like the
 
 ## Polkadot Gifts
 
-<img align="right" src="/img/Gift.png" width="210" height="200"/>
+<img align="right" src="/img/polkadot-guide/Gift.png" width="210" height="200"/>
 
 Polkadot Gifts provide an easy way to:
 
