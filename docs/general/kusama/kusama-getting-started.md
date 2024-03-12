@@ -35,121 +35,113 @@ nominating), governance, parachain auctions, basic transfers and everything else
 
 :::
 
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-accounts">
-      <img src="/img/kusama-guide/Creating an account.png" alt="Drawing" width="250" height="150"/>
-        <div class="cards-body">
-            <h5 class="cards-title">Accounts</h5>
-        </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-accounts">
+      <img src="/img/kusama-guide/Creating an account.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-transactions">
-      <img src="/img/kusama-guide/Balance Transfers.png" alt="Drawing" width="250" height="150"/>
-        <div class="cards-body">
-            <h5 class="cards-title">Balance Transfers</h5>
-        </div>
+    <p>
+      <a href="../docs/learn-accounts">Accounts</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-transactions">
+      <img src="/img/kusama-guide/Balance Transfers.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-staking">
-      <img class="guide-image" src="/img/kusama-guide/Staking.png" alt="Drawing" width="250" height="150" />
-              <div class="cards-body">
-                  <h5 class="cards-title">Staking</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-transactions">Transactions</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-staking">
+      <img src="/img/kusama-guide/Staking.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-</tr>
+    <p>
+      <a href="../docs/learn-staking">Staking</a>
+    </p>
+  </div>
+</div>
 
-<br />
-
-<tr class="cards-container">
-<td>
-    <a class="guide-link" href="../docs/learn-polkadot-opengov">  
-      <img class="guide-image" src="/img/kusama-guide/Polkadot OpenGov.png" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Polkadot OpenGov</h5>
-              </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-polkadot-opengov">
+      <img src="/img/kusama-guide/Polkadot OpenGov.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/kusama-guide/Proxy Accounts.png" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Proxy Accounts</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-polkadot-opengov">Polkadot OpenGov</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-proxies">
+      <img src="/img/kusama-guide/Proxy Accounts.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/kusama-guide/Set an Identity.png" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                 <h5 class="cards-title">Account Identity</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-proxies">Proxy Accounts</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-identity">
+      <img src="/img/kusama-guide/Set an Identity.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-</tr>
+    <p>
+      <a href="../docs/learn-identity">Account Identity</a>
+    </p>
+  </div>
+</div>
 
-<br />
-
-<tr class="cards-container">
-  <td>
-    <a class="guide-link" href="../docs/learn-parachains">  
-      <img class="guide-image" src="/img/kusama-guide/Parachains.png" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Parachains</h5>
-              </div>
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/learn-parachains">
+      <img src="/img/kusama-guide/Parachains.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-bridges">  
-      <img class="guide-image" src="/img/kusama-guide/Bridges.png" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Bridges</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-parachains">Parachains</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-bridges">
+      <img src="/img/kusama-guide/Bridges.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-  <a class="guide-link" href="../docs/ambassadors">  
-    <img class="guide-image" src="/img/kusama-guide/Become an Ambassador.png" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Become an Ambassador</h5>
-            </div>
-  </a>
-  </td>
-</tr>
-
-<br />
-
-<tr class="cards-container">
-  <td>
-  <a class="guide-link" href="../docs/maintain-guides-how-to-nominate-kusama/">
-    <img class="guide-image" src="/img/kusama-guide/Nominate.png" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Become a Nominator</h5>
-            </div>
-  </a>
-  </td>
-  <td>
-    <a class="guide-link" href="../docs/learn-polkadot-opengov-treasury">  
-      <img class="guide-image" src="/img/kusama-guide/Treasury.jpg" alt="Drawing" width="250" height="150"/>
-              <div class="cards-body">
-                  <h5 class="cards-title">Treasury</h5>
-              </div>
+    <p>
+      <a href="../docs/learn-bridges">Bridges</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/ambassadors">
+      <img src="/img/kusama-guide/Become an Ambassador.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
-  </td>
-  <td>
-  <a class="guide-link" href="../docs/maintain-guides-society-kusama">  
-    <img class="guide-image" src="/img/kusama-guide/Kusama-Society.png" alt="Drawing" width="250" height="150"/>
-            <div class="cards-body">
-                <h5 class="cards-title">Join Kappa Sigma Mu</h5>
-            </div>
-  </a>
-  </td>
-</tr>
+    <p>
+      <a href="../docs/ambassadors">Become an Ambassador</a>
+    </p>
+  </div>
+</div>
 
-<br />
+<div className="row">
+  <div className="col text--center">
+    <a href="../docs/maintain-guides-how-to-nominate-kusama/">
+      <img src="/img/kusama-guide/Nominate.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="../docs/maintain-guides-how-to-nominate-kusama/">Become a Nominator</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/learn-polkadot-opengov-treasury">
+      <img src="/img/kusama-guide/Treasury.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="../docs/learn-polkadot-opengov-treasury">Treasury</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="../docs/maintain-guides-society-kusama">
+      <img src="/img/kusama-guide/Kusama-Society.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="../docs/maintain-guides-society-kusama">Join Kappa Sigma Mu</a>
+    </p>
+  </div>
+</div>
 
 For brand-new learners of Kusama's cousin network, Polkadot, please head over to the
 [Polkadot Wiki](https://wiki.polkadot.network/).
