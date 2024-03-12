@@ -38,7 +38,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-accounts">
-      <img src="/img/kusama-guide/Account.jpg" alt="Drawing" width="250" height="150"/>
+      <img src="/img/kusama-guide/Creating an account.png" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Accounts</h5>
         </div>
@@ -46,7 +46,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-transactions">
-      <img src="/img/kusama-guide/Transfer.jpg" alt="Drawing" width="250" height="150"/>
+      <img src="/img/kusama-guide/Balance Transfers.png" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Balance Transfers</h5>
         </div>
@@ -54,7 +54,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-staking">
-      <img class="guide-image" src="/img/kusama-guide/Stake.jpg" alt="Drawing" width="250" height="150" />
+      <img class="guide-image" src="/img/kusama-guide/Staking.png" alt="Drawing" width="250" height="150" />
               <div class="cards-body">
                   <h5 class="cards-title">Staking</h5>
               </div>
@@ -67,7 +67,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
 <tr class="cards-container">
 <td>
     <a class="guide-link" href="../docs/learn-polkadot-opengov">  
-      <img class="guide-image" src="/img/kusama-guide/Council.jpg" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/kusama-guide/Polkadot OpenGov.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Polkadot OpenGov</h5>
               </div>
@@ -75,7 +75,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-proxies">
-      <img class="guide-image" src="/img/kusama-guide/Proxy.jpg" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/kusama-guide/Proxy Accounts.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Proxy Accounts</h5>
               </div>
@@ -83,7 +83,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/kusama-guide/Identity.jpg" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/kusama-guide/Set an Identity.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                  <h5 class="cards-title">Account Identity</h5>
               </div>
@@ -96,7 +96,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-parachains">  
-      <img class="guide-image" src="/img/kusama-guide/Parachain.jpg" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/kusama-guide/Parachains.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Parachains</h5>
               </div>
@@ -104,7 +104,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
   </td>
   <td>
     <a class="guide-link" href="../docs/learn-bridges">  
-      <img class="guide-image" src="/img/kusama-guide/Bridges.jpg" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/kusama-guide/Bridges.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Bridges</h5>
               </div>
@@ -112,7 +112,7 @@ nominating), governance, parachain auctions, basic transfers and everything else
   </td>
   <td>
   <a class="guide-link" href="../docs/ambassadors">  
-    <img class="guide-image" src="/img/kusama-guide/Ambassadors.jpg" alt="Drawing" width="250" height="150"/>
+    <img class="guide-image" src="/img/kusama-guide/Become an Ambassador.png" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
                 <h5 class="cards-title">Become an Ambassador</h5>
             </div>
@@ -196,7 +196,7 @@ or 5% of requested funding is a requirement to make a
 
 ### Kusama Gifts
 
-<img align="right" src="/img/kusama-gift.png" width="210" height="200"/>
+<img align="right" src="/img/kusama-guide/Gift.png" width="210" height="200"/>
 
 Kusama Gifts provide an easy way to:
 
