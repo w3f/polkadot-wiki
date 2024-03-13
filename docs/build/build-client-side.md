@@ -95,13 +95,19 @@ Chainlink</a> fit somewhere in the middle, where the amount of trust you put int
 oracles can be adjusted based on your preferences. A Chainlink
 <a href="https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md" target="_blank">Feed
 Pallet</a> is available to allow smart contracts across smart contract-enabled parachains to access
-price reference data, and is available as a Substrate oracle pallet.&nbsp; </TabItem>
+price reference data, and is available as a Substrate oracle pallet.&nbsp;
+
+</TabItem>
 
 <TabItem value="acurast"> Solutions such as
 <a href="https://acurast.com" target="_blank">Acurast</a> enables developers to delegate oracle
 requests to their network of phones, which provide off-chain data and computation to the
 <a href="https://docs.acurast.com/integrations/substrate" target="_blank">Acurast Pallet</a>.
-Acurast supports both Substrate (WASM) and EVM environments. </TabItem> </Tabs>
+Acurast supports both Substrate (WASM) and EVM environments.
+
+</TabItem>
+
+</Tabs>
 
 When using an oracle in your application you should be aware of the benefits and risks that are
 baked into its specific model.
@@ -115,13 +121,10 @@ familiarize yourself with the current Web3 approach towards decentralized storag
 
 ## DCS (Decentralized Cloud Storage)
 
-The key attribute that characterizes centralized cloud storage is the location of data.
-
-In decentralized cloud storage, the key attribute becomes the data itself instead of the data's
-location.
-
-This can be viewed as the shift from the centralized _location-centric_ storage approach to the
-decentralized _content-centric_ approach.
+The key attribute that characterizes centralized cloud storage is the location of data. In
+decentralized cloud storage, the key attribute becomes the data itself instead of the data's
+location. This can be viewed as the shift from the centralized _location-centric_ storage approach
+to the decentralized _content-centric_ approach.
 
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'IPFS (Interplanetary File System)', value: 'ipfs'}, {label: 'Crust Storage', value: 'crust'}, {label: 'Filebase', value: 'filebase'} ]}>

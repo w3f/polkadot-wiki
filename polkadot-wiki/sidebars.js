@@ -659,7 +659,6 @@ module.exports = {
           items: [
             "build/build-client-side",
             "build/build-light-clients",
-            "build/build-transaction-construction",
             "build/build-node-interaction",
           ],
         },
@@ -680,22 +679,7 @@ module.exports = {
             "build/build-hrmp-channels"
           ],
         },
-        {
-          type: "category",
-          label: "Development Networks & Node Management",
-          link: {
-            type: 'generated-index',
-            title: "Development Networks & Node Management",
-            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
-            slug: '/build-network-index',
-          },
-          items: [
-            "build/build-network-overview",
-            "build/build-integration",
-            "build/build-node-management",
-          ],
-        },
-
+        "build/build-network-overview",
         {
           type: "category",
           label: "Tooling",
@@ -711,6 +695,21 @@ module.exports = {
         {
           type: "doc",
           id: "build/build-hackathon",
+        },
+        {
+          type: "category",
+          label: "Build Archive",
+          link: {
+            type: 'generated-index',
+            title: "Archived Build Resources",
+            description: "Archived build resources for building on Polkadot",
+            slug: '/build-archive-index',
+          },
+          items: [
+            "build/build-transaction-construction",
+            "build/build-integration",
+            "build/build-node-management",
+          ],
         },
       ],
     },

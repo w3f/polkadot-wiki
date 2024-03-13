@@ -1,7 +1,7 @@
 ---
 id: build-network-overview
-title: Networks Overview
-sidebar_label: Networks Overview
+title: Development Networks
+sidebar_label: Development Networks
 description: An overview of the different networks on Polkadot
 keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, client]
 slug: ../build-network-overview
