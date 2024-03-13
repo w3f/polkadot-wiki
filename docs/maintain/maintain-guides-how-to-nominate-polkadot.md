@@ -7,8 +7,6 @@ keywords: [nominate, how to nominate, nominator, stake]
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
@@ -69,16 +67,5 @@ rewards is extremely unsafe.
 - [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
   learn what you can do with the dashboard after you started staking.
-
-:::
-
-## Why am I not receiving Staking Rewards?
-
-:::info Bags List & Minimum Active Bond
-
-See [**this video tutorial**](https://youtu.be/hIIZRJLrBZA) and read
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards)
-to understand why in some cases you might not receive staking rewards and how to avoid those
-situations.
 
 :::
