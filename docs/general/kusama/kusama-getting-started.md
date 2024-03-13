@@ -118,11 +118,11 @@ nominating), governance, parachain auctions, basic transfers and everything else
 
 <div className="row">
   <div className="col text--center">
-    <a href="../docs/maintain-guides-how-to-nominate-kusama/">
+    <a href="../docs/maintain-guides-how-to-nominate-polkadot/">
       <img src="/img/kusama-guide/Nominate.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
-      <a href="../docs/maintain-guides-how-to-nominate-kusama/">Become a Nominator</a>
+      <a href="../docs/maintain-guides-how-to-nominate-polkadot/">Become a Nominator</a>
     </p>
   </div>
   <div className="col text--center">
