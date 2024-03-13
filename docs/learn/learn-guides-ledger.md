@@ -1,7 +1,7 @@
 ---
 id: learn-guides-ledger
 title: Polkadot-JS Guides for Ledger Devices
-sidebar_label: Ledger
+sidebar_label: Ledger Guides
 description: Polkadot-JS Guides for Ledger Devices.
 keywords: [ledger, polkadot-js]
 slug: ../learn-guides-ledger
