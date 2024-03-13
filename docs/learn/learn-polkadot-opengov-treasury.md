@@ -10,7 +10,7 @@ slug: ../learn-polkadot-opengov-treasury
 import RPC from "./../../components/RPC-Connection";
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
-fees, slashing, and [staking inefficiencies](./learn-inflation.md).Treasury funds are held in a
+fees, slashing, and [staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
 [system account](./learn-account-advanced.md#system-accounts) that cannot be controlled by any
 external account; only the system internal logic can access it.
 
@@ -78,6 +78,22 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 [here](./learn-guides-treasury#creating-a-treasury-proposal).
 
 :::
+
+## Sub-treasuries
+
+The Polkadot treasury currently operates under a single account on-chain. The above tracks manage
+the treasury and represent the funds on the network. However, creating _sub_-treasuries that
+correspond to each collective is also possible.
+
+Rather than have a spam-worthy amount of referenda, of which all are subject to the main treasury,
+the overarching Polkadot Treasury can allocate funds to each sub-treasury (through governance), of
+which each respective collective can pay out as needed, depending on their specific rule set.
+
+At the core level, sub-treasuries are different instances of the treasury pallet. New treasuries
+could be added to respective system chains through governance by adding more instances of this
+pallet. Furthermore, the use of [cross-consensus messaging](./learn-xcm.md) would also mean that
+these treasuries can support multiple asset types. [See this guide for more
+detail.](./learn-guide-multi-asset-treasury.md
 
 ## Bounties
 
