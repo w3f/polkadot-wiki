@@ -635,10 +635,11 @@ is receiving rewards.
 
 :::
 
-:::info
+:::info Bags List & Minimum Active Bond
 
 You can find information about why you might not receive staking rewards on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-).
+[this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-)
+and [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 :::
 

@@ -224,7 +224,7 @@ module.exports = {
               },
               items: [
                 "learn/learn-staking",
-                "maintain/kusama/maintain-guides-how-to-nominate-kusama",
+                "maintain/maintain-guides-how-to-nominate-polkadot",
                 "learn/learn-nomination-pools",
               ],
             },
