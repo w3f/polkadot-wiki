@@ -9,14 +9,16 @@ slug: ../learn-consensus
 
 ## Why do we need Consensus?
 
-Consensus is a method for coming to agreement over a shared state. In order for the state of the
-blockchain to continue to build and move forward, all nodes in the network must agree and come to
-consensus. It is the way that the nodes in a decentralized network are able to stay synced with each
-other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to
-ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to
-provide the _objective_ view of the state amid participants who each have their own _subjective_
-views of the network. It is the process by which these nodes communicate and come to agreement, and
-are able to build new blocks.
+In blockchains and distributed ledgers, **consensus** is a method for agreeing on a shared state
+among participants who do not necessarily know each other, have different intentions, and are
+scattered across the globe. Blockchains are replicated state machines where each participant holds
+the exact copy of all transactions. The only way to continue to build blocks and move forward, all
+nodes in the network must agree and come to consensus over which blocks are added to the chain.
+
+Without consensus, there is no way to ensure that the state true for one node is also true for
+others. Consensus aims to provide an _objective_ view of the state among participants who each have
+their own _subjective_ views of the network. It is the process by which these nodes communicate and
+agree and can build new blocks.
 
 ## What are PoW and PoS?
 
