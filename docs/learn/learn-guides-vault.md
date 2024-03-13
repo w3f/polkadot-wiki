@@ -1,7 +1,7 @@
 ---
 id: learn-guides-vault
 title: Polkadot-JS Guides about the Vault App
-sidebar_label: Polkadot Vault
+sidebar_label: Polkadot Vault Guides
 description: Polkadot-JS Guides about Polkadot Vault.
 keywords: [parity signer, signer, polkadot vault, polkadot-js]
 slug: ../learn-guides-vault

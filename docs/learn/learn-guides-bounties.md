@@ -1,7 +1,7 @@
 ---
 id: learn-guides-bounties
 title: Polkadot-JS Guides about Bounties
-sidebar_label: Bounties
+sidebar_label: Bounty Guides
 description: Polkadot-JS Guides for Bounties
 keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 slug: ../learn-guides-bounties

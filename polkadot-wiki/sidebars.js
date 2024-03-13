@@ -315,7 +315,7 @@ module.exports = {
                   items: [
                     {
                       type: "category",
-                      label: "Accounts",
+                      label: "Account Guides",
                       description: 'Polkadot-JS Guides about Accounts.',
                       link: {
                         type: 'doc',
@@ -330,7 +330,7 @@ module.exports = {
                     "learn/learn-guides-transfers",
                     {
                       type: "category",
-                      label: "Staking",
+                      label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
                         type: 'generated-index',
@@ -351,7 +351,7 @@ module.exports = {
                     "learn/learn-guides-vault",
                     {
                       type: "category",
-                      label: "Asset Hub",
+                      label: "Asset Hub Guides",
                       description: 'Polkadot-JS Guides about the Asset Hub.',
                       link: {
                         type: 'generated-index',
