@@ -23,17 +23,10 @@ help you get started.
 
 :::
 
-:::info
-
-The following information applies to the Polkadot network. If you want to nominate on Kusama, check
-out the [Kusama guide](https://guide.kusama.network/docs/maintain-guides-how-to-nominate-kusama/)
-instead.
-
-:::
-
-Nominators are one type of participant in the staking subsystem of Polkadot. They appoint their
-stake to the validators, the second type of participant. By appointing their stake, they can elect
-the active set of validators and share in the rewards that are paid out.
+Nominators are one type of participant in the staking subsystem of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. They appoint their stake to the
+validators, the second type of participant. By appointing their stake, they can elect the active set
+of validators and share in the rewards that are paid out.
 
 While the [validators](maintain-guides-how-to-validate-polkadot.md) are active participants in the
 network that engage in the block production and finality mechanisms, nominators take a slightly more
@@ -67,13 +60,15 @@ rewards is extremely unsafe.
 :::info Walk-through Video Tutorials
 
 - [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
-  and start your staking journey on Polkadot.
+  and start your staking journey on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 - [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
-  movement, keep Polkadot secure by staking minimum 1 DOT and receiving staking rewards.
+  movement, keep {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure by staking
+  minimum 1 DOT and receiving staking rewards.
 - [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
   Dashboard.
-- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on Polkadot is not a set-and-forget
-  action, learn what you can do with the dashboard after you started staking.
+- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
+  learn what you can do with the dashboard after you started staking.
 
 :::
 
@@ -104,16 +99,16 @@ Here is the list of basic nominator actions that can be performed using the Polk
 :::info Video Tutorials
 
 - [How to Nominate/Stake](https://youtu.be/FCXC0CDhyS4?t=219)
-- [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
+- [Staking with a Ledger and Polkadot-JS](https://youtu.be/7VlTncHCGPc)
 - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
 :::
 
 ## Using Command-Line Interface (CLI)
 
-Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI
-instead. The CLI approach allows you to interact with the Polkadot network without going to the
-Polkadot-JS Apps dashboard.
+Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in
+CLI instead. The CLI approach allows you to interact with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network without using Polkadot-JS.
 
 ### Step 1: Install @polkadot/api-cli
 
@@ -124,7 +119,7 @@ install the `@polkadot/api-cli` globally:
 npm install -g @polkadot/api-cli
 ```
 
-### Step 2. Bond your DOT
+### Step 2. Bond Tokens
 
 :::info Controller accounts are deprecated
 
@@ -144,28 +139,26 @@ are now deprecated. Refer to
 [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)
 for additional context)
 
-`NUMBER_OF_TOKENS`: The number of DOT you would like to stake to the network.
-
-:::note Decimal places
-
-DOT has ten decimal places and is always represented as an integer with zeros at the end. So 1 DOT =
-10_000_000_000 Plancks.
-
-:::
+`NUMBER_OF_TOKENS`: The number of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you would
+like to stake to the network.
+{{ polkadot: DOT has ten decimal places and is always represented as an integer with zeroes at the end. So 1 DOT = 10_000_000_000 Plancks. :polkadot }}{{ kusama: KSM has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
+1_000_000_000_000 Plancks. :kusama }} For more information, see [this page](../learn/learn-DOT.md).
 
 `REWARD_DESTINATION`:
 
 - `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
 - `Account` - Pay into a custom account, like so:
-  `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX`.
+  {{ polkadot: `Account 1n8msHozaNxHicWFnRnNXzvqkYPWczkzUUkHhKw6o2BLBdo` :polkadot }}{{ kusama: `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX` :kusama }}.
 - `Controller` - Pay into the controller account.
 
-Example:
+Example for Kusama:
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://rpc.polkadot.io
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io
 ```
+
+For wss endpoints see [this page](./maintain-endpoints.md).
 
 Result:
 
@@ -178,8 +171,8 @@ Result:
 ```
 
 You can check the transaction status by using the value of the `InBlock` in
-[Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
+[Subscan](https://www.subscan.io/). Also, you can verify the bonding state under the
+[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS UI.
 
 ### Step 3. Nominate a validator
 
@@ -190,7 +183,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRES
 ```
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.polkadot.io
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://kusama-rpc.polkadot.io
 ```
 
 After a few seconds, you should see the hash of the transaction, and if you would like to verify the
