@@ -624,6 +624,10 @@ module.exports = {
     {
       type: "category",
       label: "Maintain",
+      link: {
+        type: 'doc',
+        id: 'maintain/maintain-index',
+      },
       items: [
         "maintain/kusama/maintain-guides-how-to-validate-kusama",
         "maintain/maintain-guides-how-to-stop-validating",

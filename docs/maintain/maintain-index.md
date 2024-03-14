@@ -3,14 +3,15 @@ id: maintain-index
 title: Network Maintainers
 sidebar_label: Network Maintainers
 description: Reference point for network maintenance guides.
-keywords: [index, reference, maintain]
+keywords: [maintain, validator, collator]
 slug: ../maintain-index
 ---
 
 import DocCardList from '@theme/DocCardList';
 
-Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and
-guides to set up a node and run the network.
+Welcome to the network maintainers section of the
+{{ polkadot: Polkadot wiki :polkadot }}{{ kusama: Kusama Guide :kusama }}. Here you will find
+information and guides to set up a node and run the network.
 
 <DocCardList />
 
