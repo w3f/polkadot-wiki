@@ -176,6 +176,10 @@ module.exports = {
           {
             to: '/docs/alpha-program',
             from: ['/docs/builders-program']
+          },
+          {
+            to: '/docs/learn-nominator',
+            from: ['/docs/maintain-guides-how-to-nominate-polkadot']
           }
         ],
         createRedirects: function (existingPath) {

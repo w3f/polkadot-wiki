@@ -1,7 +1,7 @@
 ---
 id: learn-guides-staking
 title: Polkadot-JS Guides For Nominators
-sidebar_label: Staking Guides
+sidebar_label: Nominator Guides
 description: Polkadot-JS Guides for Nominators.
 keyword: [nominate, stake, staking, claim, rewards, polkadot-js]
 slug: ../learn-guides-staking
@@ -119,8 +119,7 @@ more details.
 ### Step 3: Stop nominating
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
-you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](../maintain/maintain-guides-how-to-nominate-polkadot.md).
+you're nominating, but you cannot withdraw your tokens unless you unbond them.
 
 ## Claiming Rewards with Polkadot-JS
 

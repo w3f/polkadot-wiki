@@ -224,7 +224,7 @@ module.exports = {
               },
               items: [
                 "learn/learn-staking",
-                "maintain/maintain-guides-how-to-nominate-polkadot",
+                "learn/learn-nominator",
                 "learn/learn-nomination-pools",
               ],
             },

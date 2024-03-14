@@ -745,7 +745,6 @@ module.exports = {
             "maintain/maintain-errors",
           ],
         },
-        "maintain/maintain-guides-how-to-nominate-polkadot",
         {
           type: "category",
           label: "Collator Guides",

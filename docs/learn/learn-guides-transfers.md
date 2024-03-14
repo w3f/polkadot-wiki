@@ -230,8 +230,8 @@ reaped. References may still exist from:
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
 Follow the instructions at
-[Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md) to check if you
-have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+[Unbonding and Rebonding](./learn-guides-staking.md#step-1-bond-your-tokens) to check if you have
+bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 ### Checking for Locks
 
