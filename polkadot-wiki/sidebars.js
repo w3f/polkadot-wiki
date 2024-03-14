@@ -7,7 +7,7 @@ module.exports = {
       link: {
         type: 'generated-index',
         title: 'Explore',
-        description: 'Explore Wallets, Apps and Programmes in Polkadot and Kusama ecosystems.',
+        description: 'Explore Wallets, Apps and Programs in Polkadot and Kusama ecosystems.',
         slug: '/explore-index',
       },
       items: [
@@ -90,13 +90,13 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Programmes",
-          description: 'Programmes for Grants, Bounties, Ambassadors and many more inititatives.',
+          label: "Programs",
+          description: 'Programs for Grants, Bounties, Ambassadors and many more inititatives.',
           link: {
             type: 'generated-index',
-            title: 'Programmes',
-            description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
-            slug: '/programmes-index',
+            title: 'Programs',
+            description: 'Learn about different programs and initiatives within the Polkadot and Kusama ecosystems.',
+            slug: '/programs-index',
           },
           items: [
             "general/decentralized-futures",

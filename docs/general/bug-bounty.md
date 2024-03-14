@@ -1,6 +1,6 @@
 ---
 id: bug-bounty
-title: Bug Bounty Programme
+title: Bug Bounty Program
 sidebar_label: Bug Bounty
 description: An Overview of How you can Help Catch Bugs.
 keywords: [bug, bug bounty, report]

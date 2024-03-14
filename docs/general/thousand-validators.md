@@ -3,7 +3,7 @@ id: doc-thousand-validators
 title: Thousand Validators Programme
 sidebar_label: Thousand Validators
 description: The Thousand Validators Program and How it can Support your Validator Endeavors.
-keywords: [thousand validators programme, validator, validate, maintain, TVP]
+keywords: [thousand validators program, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
@@ -28,7 +28,7 @@ descending order.
 
 - If a validator is active during a single nomination period (the time after a new nomination and
   before the next one) and does not break any of the requirements, it will have its rank increased
-  by 1. Validators with higher rank have performed well within the programme for a longer period of
+  by 1. Validators with higher rank have performed well within the program for a longer period of
   time.
 
 The backend nominates as many validators as it reasonably can in such a manner to allow each nominee
@@ -42,13 +42,13 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 
 ## How to Apply
 
-{{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
+{{ polkadot: **Entrance to the Polkadot program requires a rank of 25 or higher in the Kusama program.**
 Attaining a rank of 25 usually takes around two months. The leaderboard is available
 [here](https://thousand-validators.kusama.network/#/leaderboard).
-In order to apply to the Polkadot programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
+In order to apply to the Polkadot 1KV programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
 and fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the team shortly. :polkadot }}
 
-{{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
+{{ kusama: In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below
 and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard, if accepted. :kusama }}
 
 #### Requirements
@@ -89,7 +89,7 @@ are formatted like "`stash` / `staking proxy`".
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
-{{ kusama: Within the Kusama programme, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
+{{ kusama: Within the Kusama program, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
 
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
@@ -119,18 +119,18 @@ were no stints of active validation in 28 eras.
 #### Discovered \*
 
 The discovered weight accounts for 5 points. It is determined by comparing the candidates tenure in
-the programme relative to other candidates. A candidate that is in the programme for a longer
-duration relative to the entire group of validators allows for a higher score.
+the program relative to other candidates. A candidate that is in the program for a longer duration
+relative to the entire group of validators allows for a higher score.
 
 #### Nominated \*
 
 The nominated weight accounts for 10 points, and it is assessed based on when the candidate was last
-nominated relative to the other candidates in the programme.
+nominated relative to the other candidates in the program.
 
 #### Rank \*
 
 The rank weight accounts for 5 points and is assessed relative to the ranks of other candidates
-within the programme.
+within the program.
 
 #### Unclaimed
 
@@ -147,7 +147,7 @@ points.
 
 A fault is attained when a candidate has an offline event when actively validating. A legitimate
 fault is irrevocable. Faults account for 5 points in the system and are relative to others in the
-programme.
+program.
 
 #### Offline time
 
@@ -205,7 +205,7 @@ of 100 points. Scores are based on votes for referendum
 
 ## Resources
 
-To extract and display the 1KV Program scores there are various tools listed below.
+To extract and display the 1KV Programme scores there are various tools listed below.
 
 | Resource                                                                                                                                    | Github source                                                                               | Info                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |

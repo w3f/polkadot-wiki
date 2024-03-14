@@ -1,18 +1,18 @@
 ---
 id: grants
-title: Grants Programme
+title: Grants Program
 sidebar_label: Grants
 description: The Grant Programs in the Polkadot Ecosystem.
 keywords: [grants program, grants, funding]
 slug: ../grants
 ---
 
-:::info Decentralized Futures Programme
+:::info Decentralized Futures Program
 
 In addition to the listed grants programs, the Web3 Foundation is also currently distributing 20
 million USD and 5 million DOT tokens to support individuals and teams as they launch new initiatives
 aimed at growing the Polkadot ecosystem. For details, see the
-[Decentralized Futures Programme](./decentralized-futures.md).
+[Decentralized Futures Program](./decentralized-futures.md).
 
 :::
 
@@ -70,6 +70,6 @@ Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 - [HydraDX Grants and Bounties](https://docs.hydradx.io/new_deal/)
 - [Astar / Shiden Network Builders Program](https://astar.network/spacelabs/)
 - [Picasso / Composable Grants Program](https://grants.composable.finance)
-- [SubQuery Grants Programme](https://subquery.network/grants)
+- [SubQuery Grants Program](https://subquery.network/grants)
 - [Acala Grants Program](https://acala.network/ecosystem-program)
 - [OAK’s Developer Grants](https://oak.tech/community/grants/)

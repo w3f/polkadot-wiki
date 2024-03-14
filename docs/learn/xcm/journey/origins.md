@@ -25,8 +25,8 @@ pub struct XcmContext {
 ```
 
 In the XCVM, the origin field of the XcmContext indicates which `MultiLocation`'s privilege level
-that the current programme is using to execute. The origin is important for enforcing restrictions
-and ensuring appropriate execution of the instructions.
+that the current program is using to execute. The origin is important for enforcing restrictions and
+ensuring appropriate execution of the instructions.
 
 There are multiple instructions in XCM that can alter the XcmContext origin field:
 

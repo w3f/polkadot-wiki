@@ -1,13 +1,13 @@
 ---
 id: ambassadors
-title: Polkadot Ambassador Programme
+title: Polkadot Ambassador Program
 sidebar_label: Polkadot Ambassadors
 description: The Polkadot's Ambassador Program and How you can Participate in It.
 keywords: [ambassadors, contribute, contributions, program]
 slug: ../ambassadors
 ---
 
-The Polkadot Ambassador Programme is an initiative ran by Web3 Foundation to support potential
+The Polkadot Ambassador Program is an initiative ran by Web3 Foundation to support potential
 contributors to the Polkadot community and ecosystem.
 
 ## How it works
@@ -31,5 +31,5 @@ There are many ways you can get involved in expanding Polkadot’s ecosystem, su
 To become a Polkadot Ambassador, please fill out your application
 [here](https://info.polkadot.network/ambassador-application).
 
-Find out more about the programme and how to join
+Find out more about the program and how to join
 [here](https://polkadot.network/polkadot-ambassador-program/?utm_source=twitter&utm_medium=social&utm_campaign=Ambassador%20program).
