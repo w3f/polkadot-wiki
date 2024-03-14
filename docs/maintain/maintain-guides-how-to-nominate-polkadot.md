@@ -33,22 +33,3 @@ uptime. However, a good nominator performs due diligence on the validators that 
 looking for validators to nominate, a nominator should pay attention to their own reward percentage
 for nominating a specific validator - as well as the risk that they bear of being slashed if the
 validator gets slashed.
-
-If you are a beginner, please watch the video below for detailed instructions.
-
-[![Staking Tutorial](https://img.youtube.com/vi/F59N3YKYCRs/0.jpg)](https://www.youtube.com/watch?v=F59N3YKYCRs)
-
-## Setting up Stash and Staking Proxy Accounts
-
-Nominators are recommended to set up separate stash and staking proxy accounts. Explanation and the
-reasoning for generating distinct accounts for this purpose is elaborated in the
-[keys](../learn/learn-cryptography.md#keys) section of the Wiki.
-
-You can generate your stash and staking proxy account via any of the recommended methods, which are
-detailed on the [account generation](../learn/learn-accounts.md#account-generation) page.
-
-Starting with runtime version v23 natively included in the client version
-[0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
-address. If you'd like to redirect payments to an account that is neither the staking proxy nor the
-stash account, set one up. Note that setting an exchange address as the recipient of the staking
-rewards is extremely unsafe.

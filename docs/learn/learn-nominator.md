@@ -12,9 +12,11 @@ import RPC from "./../../components/RPC-Connection";
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
-check this
+[Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by
+reading [this dedicated page](../learn/learn-staking.md).
+
+Discover the new [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes
+staking much easier and check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started.
 {{ polkadot: You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
@@ -46,6 +48,21 @@ gain essential knowledge about how to choose nomination pools.
 The information provided on this page is complementary to that on the
 [**Staking Page**](./learn-staking.md) and [**Advanced Staking Page**](./learn-staking-advanced.md).
 Make sure you read those pages as well before nominating.
+
+## Who are Nominators?
+
+Nominators are one type of participant in the staking subsystem of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. They appoint their stake to the
+validators, the second type of participant. By appointing their stake, they can elect the active set
+of validators and share in the rewards that are paid out.
+
+While the [validators](../maintain/maintain-guides-how-to-validate-polkadot.md) are active
+participants in the network that engage in the block production and finality mechanisms, nominators
+take a slightly more passive role. Being a nominator does not require running a node of your own or
+worrying about online uptime. However, a good nominator performs due diligence on the validators
+that they elect. When looking for validators to nominate, a nominator should pay attention to their
+own reward percentage for nominating a specific validator - as well as the risk that they bear of
+being slashed if the validator gets slashed.
 
 ## Why Nominate?
 
@@ -89,7 +106,7 @@ era** (in hours), and dividing by the **hours in a day** (24). Example:
 staking lock will be visible on the Polkadot-JS UI during the unbonding period, and after it, the
 staking lock can be unlocked, and the bonded funds become free balance you can transfer.
 
-:::info Fast Unstaking feature is live!
+:::info Fast Unstaking
 
 If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
 bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
@@ -108,7 +125,13 @@ qualify. For more information, visit the
 
 ### Stash & Staking Proxy
 
-The first thing you need to do before becoming a nominator is to make sure you have a
+Nominators are recommended to set up separate stash and staking proxy accounts. Explanation and the
+reasoning for generating distinct accounts for this purpose is elaborated in the
+[keys section](../learn/learn-cryptography.md#keys).
+
+You can generate your stash and staking proxy account via any of the recommended methods, which are
+detailed on the [account generation](../learn/learn-accounts.md#account-generation) page. The first
+thing you need to do before becoming a nominator is to make sure you have a
 [**stash account**](./learn-staking.md/#stash-account-and-staking-proxy) where you can transfer
 funds you want to use for staking. For these accounts, it is recommended to use a "cold wallet"
 solution such as [Ledger](../general/ledger.md) or [Polkadot Vault](../general/polkadot-vault.md).
@@ -129,6 +152,12 @@ one of the following options:
 - back to staking: rewards are compounded to the bonded amount.
 - to stash: rewards are sent to the stash account as a free balance.
 - to another account: rewards are sent to a user-defined account (not stash).
+
+Starting with runtime version v23 natively included in the client version
+[0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
+address. If you'd like to redirect payments to an account that is neither the staking proxy nor the
+stash account, set one up. Note that setting an exchange address as the recipient of the staking
+rewards is extremely unsafe.
 
 :::info
 
@@ -293,31 +322,19 @@ corresponding nominators will be slashed.
 
 ## Nominating with the Staking Dashboard
 
-The Staking Dashboard allows to choose pre-selected lists of validators based on user preference, or
-to manually select validators similarly as in the Polkadot-JS UI.
+If you are a beginner, please watch the video below for detailed instructions.
+
+[![Staking Tutorial](https://img.youtube.com/vi/F59N3YKYCRs/0.jpg)](https://www.youtube.com/watch?v=F59N3YKYCRs)
+
+The [Polkadot Staking Dashboard](../general/staking-dashboard.md) allows to choose pre-selected
+lists of validators based on user preference, or to manually select validators similarly as in the
+Polkadot-JS UI.
 
 Pre-selected choices are:
 
 - Optimal Selection: Selects a mix of majority active and inactive validators.
 - Active Low Commission: Gets a set of active validators with low commission.
 - From Favorites: Gets a set of your favorite validators.
-
-### Using the Polkadot Staking Dashboard
-
-:::info Walk-through Video Tutorials
-
-- [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
-  and start your staking journey on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
-  movement, keep {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure by staking
-  minimum 1 DOT and receiving staking rewards.
-- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
-  Dashboard.
-- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
-  learn what you can do with the dashboard after you started staking.
-
-:::
 
 ## Staking Election Stages
 
