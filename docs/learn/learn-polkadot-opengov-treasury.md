@@ -85,15 +85,28 @@ The Polkadot treasury currently operates under a single account on-chain. The ab
 the treasury and represent the funds on the network. However, creating _sub_-treasuries that
 correspond to each collective is also possible.
 
-Rather than have a spam-worthy amount of referenda, of which all are subject to the main treasury,
-the overarching Polkadot Treasury can allocate funds to each sub-treasury (through governance), of
-which each respective collective can pay out as needed, depending on their specific rule set.
+Rather than have many amount of referenda on the relay chain, the overarching Polkadot Treasury can
+allocate funds to each sub-treasury (through governance), of which each respective collective can
+pay out as needed, depending on their specific rule set.
 
-At the core level, sub-treasuries are different instances of the treasury pallet. New treasuries
-could be added to respective system chains through governance by adding more instances of this
-pallet. Furthermore, the use of [cross-consensus messaging](./learn-xcm.md) would also mean that
-these treasuries can support multiple asset types. [See this guide for more
-detail.](./learn-guide-multi-asset-treasury.md
+Sub-treasuries are different instances of the treasury pallet. New treasuries could be added to
+respective system chains through governance by adding more instances of this pallet.
+
+For now, you will most likely see new treasuries being added in association to various collectives,
+such as the _Fellowship Treasury_ on the _Collectives_ system parachain.
+
+## Multi-Asset Treasury Support
+
+The use of [cross-consensus messaging](./learn-xcm.md) would also mean that these treasuries can
+support multiple asset types, and thus can spend assets other than DOT held within the treasury.
+These assets have a few requirements:
+
+1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
+2. The asset has sufficient liquidity/support.
+3. The asset has a set conversion rate, as per OpenGov referenda on the Treasurer track (set via the
+   asset rate pallet).
+4. The asset must be approved and onboarded via OpenGov to become spendable via the treasury as a
+   valid spend method.
 
 ## Bounties
 
