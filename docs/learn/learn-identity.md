@@ -60,6 +60,14 @@ There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Ku
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
+:::info Registrar 0 decommission on April 1st, 2024
+
+From the 1st of April 2024 onwards, Registrar 0 will still exist on-chain but will not accept any
+new judgment requests. Identities judged by the registrar before that date will not be affected. For
+new identity judgment, use the other registrars.
+
+:::
+
 Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**:
 {{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8 :polkadot }}
 {{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF :kusama }} <br /> **Fee**:
