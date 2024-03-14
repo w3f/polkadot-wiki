@@ -757,11 +757,11 @@ validator set.
 validator set, you are now running a Polkadot validator! If you need help, reach out on the
 [Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 
-## Thousand Validators Programme
+## Thousand Validators Program
 
-The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
-to provide support for community validators. If you are interested in applying for the programme,
-you can find more information [on the wiki page](../general/thousand-validators.md).
+The Thousand Validators Program is a joint initiative by Web3 Foundation and Parity Technologies to
+provide support for community validators. If you are interested in applying for the program, you can
+find more information [on the wiki page](../general/thousand-validators.md).
 
 ## Running a validator on a testnet
 

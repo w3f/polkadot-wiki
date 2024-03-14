@@ -22,7 +22,7 @@ line with the Foundation's ethos, this program seeks to amplify the voices of pa
 knowledgeable participants who may lack significant
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holdings, aiming to mitigate potential
 marginalization. This initiative does not impact existing programs like the Thousand Validators
-Programme, as
+Program, as
 [the tokens allocated can be used for both staking and governance](../learn/learn-polkadot-opengov.md#voluntary-locking-conviction-voting).
 
 ## How to Apply

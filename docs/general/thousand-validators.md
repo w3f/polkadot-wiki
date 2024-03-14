@@ -1,13 +1,13 @@
 ---
 id: doc-thousand-validators
-title: Thousand Validators Programme
+title: Thousand Validators Program
 sidebar_label: Thousand Validators
 description: The Thousand Validators Program and How it can Support your Validator Endeavors.
-keywords: [thousand validators programme, validator, validate, maintain, TVP]
+keywords: [thousand validators program, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
-The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use
+The Thousand Validators Program is an initiative by Web3 Foundation and Parity Technologies to use
 the funds held by both organizations to nominate validators in the community.
 
 It serves two major purposes:
@@ -28,7 +28,7 @@ descending order.
 
 - If a validator is active during a single nomination period (the time after a new nomination and
   before the next one) and does not break any of the requirements, it will have its rank increased
-  by 1. Validators with higher rank have performed well within the programme for a longer period of
+  by 1. Validators with higher rank have performed well within the program for a longer period of
   time.
 
 The backend nominates as many validators as it reasonably can in such a manner to allow each nominee
@@ -42,13 +42,13 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 
 ## How to Apply
 
-{{ polkadot: **Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.**
+{{ polkadot: **Entrance to the Polkadot program requires a rank of 25 or higher in the Kusama program.**
 Attaining a rank of 25 usually takes around two months. The leaderboard is available
 [here](https://thousand-validators.kusama.network/#/leaderboard).
-In order to apply to the Polkadot programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
+In order to apply to the Polkadot 1KV program, set up your Polkadot node to adhere to the [requirements](#requirements) below
 and fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the team shortly. :polkadot }}
 
-{{ kusama: In order to apply to the Kusama programme, set up your node to adhere to the requirements below
+{{ kusama: In order to apply to the Kusama 1KV program, set up your node to adhere to the requirements below
 and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard, if accepted. :kusama }}
 
 #### Requirements
@@ -68,8 +68,8 @@ and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The pro
 #### Nominators
 
 The below addresses are the stash / staking proxy pairs for the primary nominators involved in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators programme. They
-are formatted like "`stash` / `staking proxy`".
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators program. They are
+formatted like "`stash` / `staking proxy`".
 
 {{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
 {{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
@@ -89,7 +89,7 @@ are formatted like "`stash` / `staking proxy`".
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
-{{ kusama: Within the Kusama programme, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
+{{ kusama: Within the Kusama program, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
 
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
@@ -119,18 +119,18 @@ were no stints of active validation in 28 eras.
 #### Discovered \*
 
 The discovered weight accounts for 5 points. It is determined by comparing the candidates tenure in
-the programme relative to other candidates. A candidate that is in the programme for a longer
-duration relative to the entire group of validators allows for a higher score.
+the program relative to other candidates. A candidate that is in the program for a longer duration
+relative to the entire group of validators allows for a higher score.
 
 #### Nominated \*
 
 The nominated weight accounts for 10 points, and it is assessed based on when the candidate was last
-nominated relative to the other candidates in the programme.
+nominated relative to the other candidates in the program.
 
 #### Rank \*
 
 The rank weight accounts for 5 points and is assessed relative to the ranks of other candidates
-within the programme.
+within the program.
 
 #### Unclaimed
 
@@ -147,7 +147,7 @@ points.
 
 A fault is attained when a candidate has an offline event when actively validating. A legitimate
 fault is irrevocable. Faults account for 5 points in the system and are relative to others in the
-programme.
+program.
 
 #### Offline time
 
@@ -207,15 +207,15 @@ of 100 points. Scores are based on votes for referendum
 
 To extract and display the 1KV Program scores there are various tools listed below.
 
-| Resource                                                                                                                                    | Github source                                                                               | Info                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [Main 1KV site](https://thousand-validators.kusama.network/#/leaderboard)                                                                   | [github](https://github.com/w3f/1k-validators-be)                                           | Main site and 1KV backend.                                                                                                     |
-| SubVT telegram bot for [polkadot](https://t.me/subvt_polkadot_bot) and [kusama](https://t.me/subvt_kusama_bot)                              | [github](https://github.com/helikon-labs/subvt-backend/tree/development/subvt-telegram-bot) | Telegram bot with overviews and alerts for various polkadot and kusama related events, including 1KV events.                   |
-| [SubVT ios and android app](https://subvt.io/)                                                                                              | [github](https://github.com/helikon-labs/subvt-web)                                         | SubVT app version for mobile phones.                                                                                           |
-| [Validator earnings overview](https://richvalidator.me/)                                                                                    | [github](https://github.com/helikon-labs)                                                   | Overview of validators' earnings.                                                                                              |
-| [Math Crypto's Insights](https://insights.math-crypto.com/)                                                                                 | [github](https://github.com/MathCryptoDoc)                                                  | 1KV-oriented scoring overview of Kusama and Polkadot.                                                                          |
-| One-T for [polkadot](https://matrix.to/#/%23polkadot-one-t-bot:matrix.org) and [kusama](https://matrix.to/#/%23kusama-one-t-bot:matrix.org) | [github](https://github.com/turboflakes/one-t)                                              | A performance report bot for the Polkadot and Kusama network with special focus on the 1KV programme.                          |
-| [One-T parachains overview](https://apps.turboflakes.io/#/one-t/kusama/parachains/overview)                                                 | [github](https://github.com/turboflakes/one-t)                                              | One-T's parachain overview.                                                                                                    |
-| [Metaspan's 1KV overview](https://metaspan.io/kusama/candidate)                                                                             | [github](https://github.com/metaspan/metaspan.io)                                           | Overview of 1KV programme, including the newly introduced endpoints, see [here](https://metaspan.io/) for available endpoints. |
-| [Decentradot's 1KV overview](https://1kv.decentradot.com/)                                                                                  | [github](https://github.com/ccris02/1KV_API)                                                | Overview of the 1KV programme, including the newly introduced endpoints.                                                       |
-| [Hirish 1KV overview](https://1k.hirish.net/polkadot)                                                                                       | [github?](https://github.com/)                                                              | Overview of the 1KV Programme.                                                                                                 |
+| Resource                                                                                                                                    | Github source                                                                               | Info                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| [Main 1KV site](https://thousand-validators.kusama.network/#/leaderboard)                                                                   | [github](https://github.com/w3f/1k-validators-be)                                           | Main site and 1KV backend.                                                                                                   |
+| SubVT telegram bot for [polkadot](https://t.me/subvt_polkadot_bot) and [kusama](https://t.me/subvt_kusama_bot)                              | [github](https://github.com/helikon-labs/subvt-backend/tree/development/subvt-telegram-bot) | Telegram bot with overviews and alerts for various polkadot and kusama related events, including 1KV events.                 |
+| [SubVT ios and android app](https://subvt.io/)                                                                                              | [github](https://github.com/helikon-labs/subvt-web)                                         | SubVT app version for mobile phones.                                                                                         |
+| [Validator earnings overview](https://richvalidator.me/)                                                                                    | [github](https://github.com/helikon-labs)                                                   | Overview of validators' earnings.                                                                                            |
+| [Math Crypto's Insights](https://insights.math-crypto.com/)                                                                                 | [github](https://github.com/MathCryptoDoc)                                                  | 1KV-oriented scoring overview of Kusama and Polkadot.                                                                        |
+| One-T for [polkadot](https://matrix.to/#/%23polkadot-one-t-bot:matrix.org) and [kusama](https://matrix.to/#/%23kusama-one-t-bot:matrix.org) | [github](https://github.com/turboflakes/one-t)                                              | A performance report bot for the Polkadot and Kusama network with special focus on the 1KV program.                          |
+| [One-T parachains overview](https://apps.turboflakes.io/#/one-t/kusama/parachains/overview)                                                 | [github](https://github.com/turboflakes/one-t)                                              | One-T's parachain overview.                                                                                                  |
+| [Metaspan's 1KV overview](https://metaspan.io/kusama/candidate)                                                                             | [github](https://github.com/metaspan/metaspan.io)                                           | Overview of 1KV program, including the newly introduced endpoints, see [here](https://metaspan.io/) for available endpoints. |
+| [Decentradot's 1KV overview](https://1kv.decentradot.com/)                                                                                  | [github](https://github.com/ccris02/1KV_API)                                                | Overview of the 1KV program, including the newly introduced endpoints.                                                       |
+| [Hirish 1KV overview](https://1k.hirish.net/polkadot)                                                                                       | [github?](https://github.com/)                                                              | Overview of the 1KV Program.                                                                                                 |

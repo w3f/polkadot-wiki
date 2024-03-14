@@ -82,9 +82,9 @@ The following are scenarios that build towards slashes under equivocation:
 3.  The keystore folder is copied when attempting to copy a database from one instance to another.  
     It is important to note that equivocation slashes occur with a single incident. This can happen
     if duplicated keystores are used for only a few seconds. A slash can result in losing
-    nominators, and funds, removal from the Thousand Validator Programme, and reputational damage.
-    An offline event results in losing some funds but the retention of nominators and a fault under
-    the Thousand Validator Programme.
+    nominators, and funds, removal from the Thousand Validator Program, and reputational damage. An
+    offline event results in losing some funds but the retention of nominators and a fault under the
+    Thousand Validator Program.
 
 ## Application Related
 
