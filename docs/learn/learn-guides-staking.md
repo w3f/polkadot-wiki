@@ -1,7 +1,7 @@
 ---
 id: learn-guides-staking
 title: Polkadot-JS Guides For Nominators
-sidebar_label: Staking Guides
+sidebar_label: Nominator Guides
 description: Polkadot-JS Guides for Nominators.
 keyword: [nominate, stake, staking, claim, rewards, polkadot-js]
 slug: ../learn-guides-staking
