@@ -119,8 +119,7 @@ more details.
 ### Step 3: Stop nominating
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
-you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](../maintain/maintain-guides-how-to-nominate-polkadot.md).
+you're nominating, but you cannot withdraw your tokens unless you unbond them.
 
 ## Claiming Rewards with Polkadot-JS
 

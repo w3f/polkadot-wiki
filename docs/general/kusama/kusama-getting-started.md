@@ -212,5 +212,5 @@ Additional Resources:
 - [endpoints](maintain-endpoints)
 - [tokens](https://claim.kusama.network/)
 - [validator](../../maintain/kusama/maintain-guides-how-to-validate-kusama.md)
-- [nominator](../../maintain/maintain-guides-how-to-nominate-polkadot.md)
+- [nominator](../../learn/learn-nominator.md)
 - [polkadot wiki](https://wiki.polkadot.network/)

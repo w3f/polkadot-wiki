@@ -114,7 +114,7 @@ Transactions constructed for runtime `n` will not work for any other runtime `>n
 upgrade occurs before broadcasting a previously constructed transaction, you will need to
 reconstruct it with the appropriate runtime version and corresponding metadata.
 
-### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
+### For [Nominators](./learn-nominator.md)
 
 Runtime upgrades don't require any actions by a nominator, though it is always encouraged to keep
 up-to-date and participate with the latest runtime upgrade motions and releases while keeping an eye
