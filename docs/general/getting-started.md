@@ -201,7 +201,7 @@ Bonding
 or 5% of requested funding is a requirement to make a
 [treasury proposal](../learn/learn-polkadot-opengov-treasury.md). DOT can also enable you to
 participate in programs like the
-[Thousand Validators Program](../general/thousand-validators.md#polkadot).
+[Thousand Validators Programme](../general/thousand-validators.md#polkadot).
 
 ## Polkadot Gifts
 

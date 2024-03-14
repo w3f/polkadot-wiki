@@ -69,7 +69,7 @@ original server that is in the active set will be referred to as `Validator A`.
 **It is imperative that you keep Validator A running during this time.** `set_key` does not have an
 immediate effect and requires two full sessions to elapse before it does. If you do switch off
 Validator A too early you may risk being chilled and face a fault within the Thousand Validator
-Program.
+Programme.
 
 ### Session `N+3`
 

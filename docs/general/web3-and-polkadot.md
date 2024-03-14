@@ -141,7 +141,7 @@ impact a considerable fraction of the nodes and potentially stop the network.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can be
 explored through the [Polkawatch app](https://polkawatch.app/).
 
-The [One Thousand Validator Program](./thousand-validators.md) aims to incentivize the creation of
+The [One Thousand Validator Programme](./thousand-validators.md) aims to incentivize the creation of
 new validator nodes to increase the level of node decentralization.
 
 ### Decentralized Storage

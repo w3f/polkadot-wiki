@@ -74,9 +74,9 @@ On Polkadot, the minimum stake backing a validator in the active set is
 
 :::
 
-:::tip Join the Thousand Validator Program
+:::tip Join the Thousand Validator Programme
 
-[The Thousand Validator Program](../../general/thousand-validators.md) is an initiative by Web3
+[The Thousand Validator Programme](../../general/thousand-validators.md) is an initiative by Web3
 Foundation and Parity Technologies to use the funds held by both organizations to nominate
 validators in the community.
 
