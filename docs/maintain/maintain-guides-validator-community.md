@@ -253,9 +253,9 @@ person.
 Another way to show that one cares about the network is by actively participating in governance.
 Whether by voting on-chain, or by discussing off-chain, or proposing new things, active
 participation in the direction of the chain is an excellent signal that a validator is there for the
-network’s good. There are many ways to participate in different governance aspects, such as voting
-for council members, weighing in on treasury proposals, voting on public referenda, proposing tips,
-and more. See the section on [governance](maintain-guides-democracy) for additional details.
+network’s good. There are many ways to participate in different governance aspects, such as weighing in on treasury proposals, voting on public referenda, delegating voting power,
+and more. See the section on [Polkadot OpenGov](../learn/learn-polkadot-opengov.md) for additional
+details.
 
 #### Producing Educational Content
 

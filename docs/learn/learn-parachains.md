@@ -191,9 +191,9 @@ There are several ways to allocate parachain slots on
 
 [System parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
-[governance](learn-governance.md) and are part of the network's protocol, such as bridges to other
-networks or chains. These typically do not have an economic model and help remove transactions from
-the Relay Chain, allowing for more efficient parachain processing.
+[governance](./learn-polkadot-opengov.md) and are part of the network's protocol, such as bridges to
+other networks or chains. These typically do not have an economic model and help remove transactions
+from the Relay Chain, allowing for more efficient parachain processing.
 
 [Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
 teams can either bid with their own {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens,

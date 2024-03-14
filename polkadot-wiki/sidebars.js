@@ -315,7 +315,7 @@ module.exports = {
                   items: [
                     {
                       type: "category",
-                      label: "Accounts",
+                      label: "Account Guides",
                       description: 'Polkadot-JS Guides about Accounts.',
                       link: {
                         type: 'doc',
@@ -330,7 +330,7 @@ module.exports = {
                     "learn/learn-guides-transfers",
                     {
                       type: "category",
-                      label: "Staking",
+                      label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
                         type: 'generated-index',
@@ -351,7 +351,7 @@ module.exports = {
                     "learn/learn-guides-vault",
                     {
                       type: "category",
-                      label: "Asset Hub",
+                      label: "Asset Hub Guides",
                       description: 'Polkadot-JS Guides about the Asset Hub.',
                       link: {
                         type: 'generated-index',
@@ -626,17 +626,15 @@ module.exports = {
           label: "Archive",
           description: "Implementations no longer live on Polkadot.",
           link: {
-            type: 'generated-index',
-            title: "Archive",
-            description: "Implementations no longer live on Polkadot.",
-            slug: '/learn-archive-index',
+            type: 'doc',
+            id: "learn/learn-archive",
           },
           items: [
-            "learn/learn-governance",
-            "learn/learn-treasury",
-            "learn/learn-launch",
-            "learn/learn-redenomination",
-            "learn/learn-controller",
+            "learn/archive/learn-governance",
+            "learn/archive/learn-treasury",
+            "learn/archive/learn-launch",
+            "learn/archive/learn-redenomination",
+            "learn/archive/learn-controller",
           ],
         },
       ],
@@ -721,15 +719,24 @@ module.exports = {
     {
       type: "category",
       label: "Maintain",
+      link: {
+        type: 'doc',
+        id: "maintain/maintain-index",
+      },
       items: [
-        "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
-        "maintain/maintain-endpoints",
-        "maintain/maintain-guides-async-backing",
         {
           type: "category",
           label: "Nodes and Dapps",
+          description: 'Learn how to set up a node.',
+          link: {
+            type: 'generated-index',
+            title: "Nodes and Dapps",
+            description: "Learn how to set up a node.",
+            slug: '/maintain-node-index',
+          },
           items: [
+            "maintain/maintain-endpoints",
             "maintain/maintain-sync",
             "maintain/maintain-bootnode",
             "maintain/maintain-rpc",
@@ -741,7 +748,28 @@ module.exports = {
         "maintain/maintain-guides-how-to-nominate-polkadot",
         {
           type: "category",
+          label: "Collator Guides",
+          description: "Guides for Collator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Collator Guides",
+            description: "Guides for Collator Nodes.",
+            slug: '/maintain-collator-index',
+          },
+          items: [
+            "maintain/maintain-guides-async-backing",
+          ],
+        },
+        {
+          type: "category",
           label: "Validator Guides",
+          description: "Guides for Validator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Validator Guides",
+            description: "Guides for Validator Nodes.",
+            slug: '/maintain-validator-index',
+          },
           items: [
             "maintain/maintain-guides-how-to-validate-polkadot",
             "maintain/maintain-guides-validator-payout",
@@ -758,10 +786,15 @@ module.exports = {
         {
           type: "category",
           label: "Archive",
+          description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
+          link: {
+            type: 'doc',
+            id: "maintain/maintain-archive"
+          },
           items: [
-            "maintain/maintain-guides-democracy",
-            "maintain/maintain-guides-how-to-join-council",
-            "maintain/maintain-guides-how-to-vote-councillor",
+            "maintain/archive/maintain-guides-democracy",
+            "maintain/archive/maintain-guides-how-to-join-council",
+            "maintain/archive/maintain-guides-how-to-vote-councillor",
           ],
         },
       ],

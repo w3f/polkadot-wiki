@@ -43,7 +43,7 @@ The Polkadot Treasury is a pot of on-chain funds collected through transaction f
 staking inefficiencies, etc. The funds held in the treasury can be spent on spending proposals. Both
 Polkadot and Kusama offer everyone the opportunity to apply for funding via the treasury. See:
 
-- [Treasury Wiki](../learn/learn-treasury.md)
+- [Treasury Wiki](../learn/learn-polkadot-opengov-treasury.md)
 - [Polkadot Treasury Guide](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w)
 - [Kusama Treasury Guide](https://docs.google.com/document/d/1p3UQUjph5t8TVaWnTkfrI5mE-BABnM9Xvtuhdlhl6JE)
 
@@ -53,8 +53,9 @@ Due to high demand and spamming issues, the Kusama faucet is no longer in operat
 Foundation has considered new ways to distribute KSM for people who need KSM to build.
 
 If you are interested in obtaining KSM for building or research, you can apply through the
-[Treasury](../learn/learn-treasury.md#creating-a-treasury-proposal) or receive a
-[tip](../learn/learn-treasury.md#tipping) for doing something cool in the community.
+[Treasury](../learn/learn-polkadot-opengov-treasury.md) or receive a
+[tip](../learn/learn-polkadot-opengov-treasury.md#treasury-tracks) for doing something cool in the
+community.
 
 :::
 

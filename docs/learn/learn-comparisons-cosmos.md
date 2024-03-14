@@ -146,8 +146,9 @@ IBC, as chains do not share state, receiving chains must trust the security of a
 
 Polkadot has [OpenGov](learn-polkadot-opengov.md) framewok with several trackss to pass proposals as
 public referenda, where the majority of tokens can always control the outcome. Referenda can contain
-a variety of proposals, including fund allocation from an on-chain [Treasury](learn-treasury.md).
-Decisions get enacted on-chain and are binding and autonomous.
+a variety of proposals, including fund allocation from an on-chain
+[Treasury](./learn-polkadot-opengov-treasury.md). Decisions get enacted on-chain and are binding and
+autonomous.
 
 Cosmos uses coin-vote signaling to pass referenda. The actual enactment of governance decisions is
 carried out via a protocol fork, much like other blockchains. All token holders can vote, however,

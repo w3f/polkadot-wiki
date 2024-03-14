@@ -66,7 +66,7 @@ validators to participate in your network security are reduced.
 decentralised application projects wishing to benefit from this security would want to become a
 parachain to share in that pooled security.
 
-#### [On-Chain Governance](../learn/learn-governance.md) (Thought-through Governance)
+#### [On-Chain Governance](../learn/learn-polkadot-opengov.md) (Thought-through Governance)
 
 Most governance systems in blockchains use an off-chain governance mechanism.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain governance encourages

@@ -29,7 +29,7 @@ The Wiki has three main sections:
 <div className="row">
   <div className="col text--center">
     <a href="../docs/learn-accounts">
-      <img src="/img/polkadot-guide/Account.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Creating an account.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-accounts">Accounts</a>
@@ -37,7 +37,7 @@ The Wiki has three main sections:
   </div>
   <div className="col text--center">
     <a href="../docs/learn-transactions">
-      <img src="/img/polkadot-guide/Transfer.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Balance Transfers.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-transactions">Transactions</a>
@@ -45,7 +45,7 @@ The Wiki has three main sections:
   </div>
   <div className="col text--center">
     <a href="../docs/learn-staking">
-      <img src="/img/polkadot-guide/Stake.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Staking.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-staking">Staking</a>
@@ -56,7 +56,7 @@ The Wiki has three main sections:
 <div className="row">
   <div className="col text--center">
     <a href="../docs/learn-polkadot-opengov">
-      <img src="/img/polkadot-guide/Council.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Polkadot OpenGov.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-polkadot-opengov">Polkadot OpenGov</a>
@@ -64,7 +64,7 @@ The Wiki has three main sections:
   </div>
   <div className="col text--center">
     <a href="../docs/learn-proxies">
-      <img src="/img/polkadot-guide/Proxy.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Proxy Accounts.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-proxies">Proxy Accounts</a>
@@ -72,7 +72,7 @@ The Wiki has three main sections:
   </div>
   <div className="col text--center">
     <a href="../docs/learn-identity">
-      <img src="/img/polkadot-guide/Identity.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Set an Identity.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-identity">Account Identity</a>
@@ -83,7 +83,7 @@ The Wiki has three main sections:
 <div className="row">
   <div className="col text--center">
     <a href="../docs/learn-parachains">
-      <img src="/img/polkadot-guide/Parachain.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Parachains.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-parachains">Parachains</a>
@@ -91,7 +91,7 @@ The Wiki has three main sections:
   </div>
   <div className="col text--center">
     <a href="../docs/learn-bridges">
-      <img src="/img/polkadot-guide/Bridges.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Bridges.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/learn-bridges">Bridges</a>
@@ -99,7 +99,7 @@ The Wiki has three main sections:
   </div>
   <div className="col text--center">
     <a href="../docs/ambassadors">
-      <img src="/img/polkadot-guide/Ambassadors.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="/img/polkadot-guide/Become an Ambassador.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="../docs/ambassadors">Become an Ambassador</a>
@@ -194,18 +194,18 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
 - {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable"/>:__ :polkadot }}
   you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
-DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding DOT is
-a requirement to create proposals, to endorse them and to vote on them when they become referendums.
+DOT has utility in [Polkadot's OpenGov](../learn/learn-polkadot-opengov.md). Bonding DOT is a
+requirement to create proposals, to endorse them and to vote on them when they become referendums.
 Bonding
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1000000000000} filter="humanReadable"/> :polkadot }}
 or 5% of requested funding is a requirement to make a
-[treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). DOT can also enable
-you to participate in programs like the
+[treasury proposal](../learn/learn-polkadot-opengov-treasury.md). DOT can also enable you to
+participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).
 
 ## Polkadot Gifts
 
-<img align="right" src="/img/polkadot-gift.png" width="210" height="200"/>
+<img align="right" src="/img/polkadot-guide/Gift.png" width="210" height="200"/>
 
 Polkadot Gifts provide an easy way to:
 

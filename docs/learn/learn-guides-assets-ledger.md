@@ -1,7 +1,7 @@
 ---
 id: learn-guides-assets-ledger
 title: Polkadot-JS Guides about Asset Hub Ledger App
-sidebar_label: Asset Hub Ledger App
+sidebar_label: Asset Hub Ledger Guides
 description: Polkadot-JS Guides about Ledger and the Asset Hub.
 keywords: [asset hub, ledger, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-ledger

@@ -106,14 +106,6 @@ module.exports = {
             from: ['/docs/learn-common-goods']
           },
           {
-            to: '/docs/learn-launch',
-            from: ['/docs/claims']
-          },
-          {
-            to: '/docs/learn-redenomination',
-            from: ['/docs/redenomination']
-          },
-          {
             to: '/docs/maintain-guides-how-to-validate-polkadot',
             from: ['/docs/maintain-guides-how-to-use-polkadot-validator-setup', '/docs/maintain-guides-how-to-setup-a-validator-with-reverse-proxy']
           },

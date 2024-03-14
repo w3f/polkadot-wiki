@@ -224,7 +224,7 @@ module.exports = {
               },
               items: [
                 "learn/learn-staking",
-                "maintain/kusama/maintain-guides-how-to-nominate-kusama",
+                "maintain/maintain-guides-how-to-nominate-polkadot",
                 "learn/learn-nomination-pools",
               ],
             },
@@ -316,7 +316,7 @@ module.exports = {
                   items: [
                     {
                       type: "category",
-                      label: "Accounts",
+                      label: "Account Guides",
                       description: 'Polkadot-JS Guides about Accounts.',
                       link: {
                         type: 'doc',
@@ -331,7 +331,7 @@ module.exports = {
                     "learn/learn-guides-transfers",
                     {
                       type: "category",
-                      label: "Staking",
+                      label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
                         type: 'generated-index',
@@ -352,7 +352,7 @@ module.exports = {
                     "learn/learn-guides-vault",
                     {
                       type: "category",
-                      label: "Asset Hub",
+                      label: "Asset Hub Guides",
                       description: 'Polkadot-JS Guides about the Asset Hub.',
                       link: {
                         type: 'generated-index',
@@ -608,28 +608,40 @@ module.exports = {
           label: "Archive",
           description: "Implementations no longer live on Kusama.",
           link: {
-            type: 'generated-index',
-            title: "Archive",
-            description: "Implementations no longer live on Kusama.",
-            slug: '/learn-archive-index',
+            type: 'doc',
+            id: 'learn/learn-archive',
           },
           items: [
-            "learn/learn-governance",
-            "learn/learn-treasury",
-            "learn/learn-launch",
-            "learn/learn-redenomination",
-            "learn/learn-controller",
+            "learn/archive/learn-governance",
+            "learn/archive/learn-treasury",
+            "learn/archive/learn-launch",
+            "learn/archive/learn-redenomination",
+            "learn/archive/learn-controller",
           ],
         },
       ],
     },
     {
       type: "category",
-      label: "Validate",
+      label: "Maintain",
       items: [
         "maintain/kusama/maintain-guides-how-to-validate-kusama",
         "maintain/maintain-guides-how-to-stop-validating",
         "maintain/doc-maintain-guides-validator-community",
+        {
+          type: "category",
+          label: "Archive",
+          description: 'Basic Accounts, Identity, Multi-signature, and Proxies.',
+          link: {
+            type: 'doc',
+            id: "maintain/maintain-archive"
+          },
+          items: [
+            "maintain/archive/maintain-guides-democracy",
+            "maintain/archive/maintain-guides-how-to-join-council",
+            "maintain/archive/maintain-guides-how-to-vote-councillor",
+          ],
+        },
       ],
     },
     {

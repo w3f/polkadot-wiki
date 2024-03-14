@@ -19,11 +19,11 @@ repository.
 
 The Polkadot Technical Fellowship was established in 2022 and plays an important role in the
 Polkadot OpenGov. This fellowship replaced the
-[Technical Committee](./learn-governance.md#technical-committee) from Polkadot's first iteration of
-governance, and will be serving both the Polkadot and Kusama networks. This Fellowship is designed
-to be far broader in membership (i.e. to work well with even tens of thousands of members) and with
-far lower barriers to entry both in terms of administrative process flow and levels of expertise.
-For more information, read through the
+[Technical Committee](./archive/learn-governance.md#technical-committee) from Polkadot's first
+iteration of governance, and will be serving both the Polkadot and Kusama networks. This Fellowship
+is designed to be far broader in membership (i.e. to work well with even tens of thousands of
+members) and with far lower barriers to entry both in terms of administrative process flow and
+levels of expertise. For more information, read through the
 [Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
 
 :::
