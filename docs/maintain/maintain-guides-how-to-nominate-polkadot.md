@@ -52,20 +52,3 @@ Starting with runtime version v23 natively included in the client version
 address. If you'd like to redirect payments to an account that is neither the staking proxy nor the
 stash account, set one up. Note that setting an exchange address as the recipient of the staking
 rewards is extremely unsafe.
-
-## Using the Polkadot Staking Dashboard
-
-:::info Walk-through Video Tutorials
-
-- [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
-  and start your staking journey on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
-  movement, keep {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure by staking
-  minimum 1 DOT and receiving staking rewards.
-- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
-  Dashboard.
-- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
-  learn what you can do with the dashboard after you started staking.
-
-:::

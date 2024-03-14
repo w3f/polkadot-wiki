@@ -302,6 +302,23 @@ Pre-selected choices are:
 - Active Low Commission: Gets a set of active validators with low commission.
 - From Favorites: Gets a set of your favorite validators.
 
+### Using the Polkadot Staking Dashboard
+
+:::info Walk-through Video Tutorials
+
+- [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
+  and start your staking journey on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
+  movement, keep {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure by staking
+  minimum 1 DOT and receiving staking rewards.
+- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
+  Dashboard.
+- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
+  learn what you can do with the dashboard after you started staking.
+
+:::
+
 ## Staking Election Stages
 
 The staking election system has three stages for both validators and nominators, namely "intention",
