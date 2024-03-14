@@ -96,7 +96,7 @@ module.exports = {
             type: 'generated-index',
             title: 'Programs',
             description: 'Learn about different programs and initiatives within the Polkadot and Kusama ecosystems.',
-            slug: '/programmes-index',
+            slug: '/programs-index',
           },
           items: [
             "general/decentralized-futures",
