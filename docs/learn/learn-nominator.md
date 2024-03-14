@@ -62,7 +62,7 @@ take a slightly more passive role. Being a nominator does not require running a 
 worrying about online uptime. However, a good nominator performs due diligence on the validators
 that they elect. When looking for validators to nominate, a nominator should pay attention to their
 own reward percentage for nominating a specific validator - as well as the risk that they bear of
-being slashed if the validator gets slashed.
+being [slashed](./learn-staking.md#slashing) if the validator gets slashed.
 
 ## Why Nominate?
 
