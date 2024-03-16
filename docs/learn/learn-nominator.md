@@ -96,8 +96,8 @@ you can share the staking rewards they generate.
 
 While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked for nominations, they
 are 'locked' (bonded). You can
-[stop nominating at any time](./learn-guides-staking.md#step-3-stop-nominating), but remember that
-the action is effective in the next era and does not automatically unbond your funds. Unbonding is a
+[stop nominating at any time](./learn-guides-staking.md#stop-nominating), but remember that the
+action is effective in the next era and does not automatically unbond your funds. Unbonding is a
 separate action, and it takes effect after the unbonding period, which is
 {{ polkadot: 28-day long on Polkadot :polkadot }}{{ kusama: 7-day long on Kusama :kusama }}. This is
 calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
@@ -516,7 +516,7 @@ higher, which can be viewed on
 
 ## Guides
 
-- [Be a Nominator (Polkadot)](./learn-guides-staking.md#step-2-nominate-a-validator) - Guide on
-  nominating on the Kusama canary network.
-- [Stop Being a Nominator (all networks)](./learn-guides-staking#step-3-stop-nominating) - Guide on
+- [Be a Nominator (Polkadot)](./learn-guides-staking.md#nominate-a-validator) - Guide on nominating
+  on the Kusama canary network.
+- [Stop Being a Nominator (all networks)](./learn-guides-staking#stop-nominating) - Guide on
   stopping nominations and withdrawing tokens.
