@@ -13,26 +13,22 @@ See [this page](./learn-staking.md) to learn about staking.
 
 ## Nominate Using Polkadot-JS
 
-:::info Using Polkadot-JS UI as a Nominator
-
-Here is the list of basic nominator actions that can be performed using the Polkadot-JS UI.
-
-- [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
-- [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
-- [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-)
-- [How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period)
-
-:::
-
 :::info Video Tutorials
 
 - [How to Nominate/Stake](https://youtu.be/FCXC0CDhyS4?t=219)
-- [Staking with a Ledger and Polkadot-JS](https://youtu.be/7VlTncHCGPc)
-- [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
+- [Staking with a Ledger device and Polkadot-JS](https://youtu.be/7VlTncHCGPc)
+- [Staking with a Ledger device and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
 :::
 
-### Step 1: Bond your tokens
+### Bond your tokens
+
+:::info Support Article
+
+Read the support article about
+[How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-).
+
+:::
 
 On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
 "Network" menu).
@@ -83,7 +79,14 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
 
-### Step 2: Nominate a validator
+### Nominate a validator
+
+:::info Support Article
+
+Read the support article about
+[How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-).
+
+:::
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](./learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds
@@ -109,7 +112,16 @@ initiate a claim. This is to help optimize the effectiveness and storage of payo
 the [Claiming Rewards](./learn-staking.md#claiming-rewards) section of the Staking wiki page for
 more details.
 
-### Step 3: Stop nominating
+### Stop nominating
+
+:::info Support Article
+
+Read the support article about
+[How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-).
+See also the support article about
+[How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period).
+
+:::
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them.
@@ -167,7 +179,7 @@ install the `@polkadot/api-cli` globally:
 npm install -g @polkadot/api-cli
 ```
 
-### Step 2. Bond Tokens
+### Step 2: Bond Tokens
 
 :::info Controller accounts are deprecated
 
@@ -222,7 +234,7 @@ You can check the transaction status by using the value of the `InBlock` in
 [Subscan](https://www.subscan.io/). Also, you can verify the bonding state under the
 [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS UI.
 
-### Step 3. Nominate a validator
+### Step 3: Nominate a validator
 
 To nominate a validator, you can execute the following command:
 
