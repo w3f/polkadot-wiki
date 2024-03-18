@@ -83,7 +83,7 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates under a single account on-chain. The above tracks manage
 the treasury and represent the funds on the network. However, creating _sub_-treasuries that
-correspond to each collective is also possible.
+correspond to each [collective](./learn-system-chains#collectives) is also possible.
 
 Rather than have many amount of referenda on the relay chain, the overarching Polkadot Treasury can
 allocate funds to each sub-treasury (through governance), of which each respective collective can
