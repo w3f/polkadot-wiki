@@ -81,7 +81,7 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 ## Sub-treasuries
 
-The Polkadot treasury currently operates under a single account on-chain. The above tracks manage
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates under a single account on-chain. The above tracks manage
 the treasury and represent the funds on the network. However, creating _sub_-treasuries that
 correspond to each collective is also possible.
 
