@@ -81,29 +81,39 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 ## Sub-treasuries
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates under a single account on-chain. The above tracks manage
-the treasury and represent the funds on the network. However, creating _sub_-treasuries that
-correspond to each [collective](./learn-system-chains#collectives) is also possible.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates under
+a single account on-chain. The above tracks manage the treasury and represent the funds on the
+network. However, creating _sub_-treasuries that correspond to each
+[collective](./learn-system-chains#collectives) is also possible.
 
-Rather than have many referenda on the relay chain, the overarching {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective can spend funds (depending on their specific rule set).
+Rather than have many referenda on the relay chain, the overarching
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each
+sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
+can spend funds (depending on their specific rule set).
 
-New treasuries could be added to respective [system chains](./learn-system-chains#existing-system-chains) through governance by adding more instances of this pallet.
-
-For now, you will most likely see new treasuries being added in association to various collectives,
-such as the _Fellowship Treasury_ on the _Collectives_ system parachain.
+New treasuries could be added to respective
+[system chains](./learn-system-chains#existing-system-chains) through governance by adding more
+instances of this pallet.
 
 ## Multi-Asset Treasury Support
 
 The use of [cross-consensus messaging](./learn-xcm.md) would also mean that these treasuries can
-support multiple asset types, and thus can spend assets other than {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury.
-These assets have a few requirements:
+support multiple asset types, and thus can spend assets other than
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury. These assets have a
+few requirements:
 
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
 2. The asset has sufficient liquidity/support.
 3. The asset has a set conversion rate, as per OpenGov referenda on the Treasurer track (set via the
-   asset rate pallet).
+   asset rate pallet). This conversion rate defines a fixed-rate representation for converting from
+   that asset to {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
 4. The asset must be approved and onboarded via OpenGov to become spendable via the treasury as a
-   valid spend method.
+   valid spend method.  
+
+
+> For example,
+> [see how USDT became approved as an asset on AssetHub](https://forum.polkadot.network/t/multi-asset-treasury-and-milestone-based-spends/6780),
+> which can be used in the treasury.
 
 ## Bounties
 
