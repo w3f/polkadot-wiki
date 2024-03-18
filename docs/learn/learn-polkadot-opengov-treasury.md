@@ -85,9 +85,7 @@ The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury curr
 the treasury and represent the funds on the network. However, creating _sub_-treasuries that
 correspond to each [collective](./learn-system-chains#collectives) is also possible.
 
-Rather than have many amount of referenda on the relay chain, the overarching Polkadot Treasury can
-allocate funds to each sub-treasury (through governance), of which each respective collective can
-pay out as needed, depending on their specific rule set.
+Rather than have many referenda on the relay chain, the overarching {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective can spend funds (depending on their specific rule set).
 
 Sub-treasuries are different instances of the treasury pallet. New treasuries could be added to
 respective system chains through governance by adding more instances of this pallet.
