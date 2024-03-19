@@ -19,7 +19,7 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block
   explorer. Supports dozens of other networks, including Kusama, Westend, and other remote or local
-  endpoints. [Access via IPFS](https://dweb.link/ipns/dotapps.io)
+  endpoints. [Access via IPFS](https://cloudflare-ipfs.com/ipns/dotapps.io)
 - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related
   chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
