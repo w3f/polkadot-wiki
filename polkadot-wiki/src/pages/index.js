@@ -24,11 +24,19 @@ function HomeNav() {
       </Container>
     </section>
   );
-  
-  const NavItem = ({ href, aosDelay, children }) => (
-    <div className="col-xs-12 col-md-6 col-lg-6 homeNavItem rounded-lg"> {/* Adjusted column classes */}
+
+  const NavItem = ({ href, aosDelay, children, imageSrc }) => (
+    <div className="col-xs-12 col-md-6 col-lg-6 homeNavItem rounded-lg">
       <a href={href} className="h-100" data-aos="fade-up" data-aos-delay={aosDelay}>
-        <div className="mx-auto">{children}</div>
+        <div className="d-flex justify-content-end align-items-center">
+          <img 
+          src={imageSrc} 
+          alt="NavItem Image" 
+          className="img-fluid rounded" 
+          style={{ width: '150px', height: 'auto' }}
+          />
+          {children}
+        </div>
       </a>
     </div>
   );
@@ -38,10 +46,9 @@ function HomeNav() {
   );
 
   const NavItemContent = ({ children }) => <div className="homeNavItemContent">{children}</div>;
-
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("explore-index")} aosDelay="0">
+      <NavItem href={useDocUrl("explore-index")} aosDelay="0" imageSrc='img/polkadot-guide/Gift.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate
