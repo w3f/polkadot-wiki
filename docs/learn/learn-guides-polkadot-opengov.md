@@ -43,7 +43,7 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 2. Click on the "Add preimage" button.
 3. From the _propose_ drop-down field, select `treasury`.
 4. From the unlabeled drop-down field to the right of the _propose_ drop-down field, select
-   `spend(amount, beneficiary)`.
+   `spendLocal(amount, beneficiary)`.
 5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount.
 6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by
    default. Select the beneficiary from the `Id: AccountId` drop-down field.
