@@ -49,7 +49,7 @@ would last only 10 minutes until the validators caught up to the present moment.
 
 The above plan was executed successfully on January 7, 2020. Due to the time warp, the number of
 missed blocks in the sessions directly following
-[block #516558](https://polkascan.io/kusama/block/516558) was significantly higher. This is partly
+[block #516558](https://kusama.subscan.io/block/516558) was significantly higher. This is partly
 what contributes to the much higher ratio of missed blocks on Kusama versus Polkadot today.
 
 ## Kusama's Current Adventure: Auctions
