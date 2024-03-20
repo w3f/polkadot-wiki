@@ -20,8 +20,8 @@ Beyond merely supporting assets, integrating an Asset Hub into your systems has 
 infrastructure providers and users:
 
 - Support for on-chain assets.
-- Significantly lower transaction fees (about 1/10) than the Relay Chain.
-- Significantly lower deposits (1/10) than the Relay Chain. This includes the existential deposit
+- Significantly lower transaction fees (about 1/100) than the Relay Chain.
+- Significantly lower deposits (1/100) than the Relay Chain. This includes the existential deposit
   and deposits for proxy/multisig operations.
 - Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT to exist
   on-chain or pay fees.
