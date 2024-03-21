@@ -86,7 +86,7 @@ a single account on-chain. The above tracks manage the treasury and represent th
 network. However, creating _sub_-treasuries that correspond to each
 [collective](./learn-system-chains#collectives) is also possible.
 
-Rather than have many referenda on the relay chain, the overarching
+Rather than have many referenda through OpenGov, the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each
 sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
 can spend funds (depending on their specific rule set).
