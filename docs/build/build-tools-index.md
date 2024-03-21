@@ -22,8 +22,6 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
   endpoints. [Access via IPFS](https://cloudflare-ipfs.com/ipns/dotapps.io)
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
-- [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain
-  explorer.
 - [3xpl.com](https://3xpl.com/polkadot) - Fastest ad-free universal block explorer and JSON API with
   Polkadot support.
 - [Blockchair.com](https://blockchair.com/polkadot) - Universal blockchain explorer and search
