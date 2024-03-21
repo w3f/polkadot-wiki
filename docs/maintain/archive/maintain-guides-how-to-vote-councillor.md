@@ -7,7 +7,7 @@ keywords: [council, vote, councillors]
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived. For up-to-date information about governance, see the

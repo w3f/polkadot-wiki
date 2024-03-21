@@ -9,6 +9,15 @@ slug: ../learn-guides-staking-pools
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 See [this page](./learn-nomination-pools.md) to learn about nomination pools.
 
 ## Pool Creation with Polkadot-JS

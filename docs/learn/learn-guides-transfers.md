@@ -10,6 +10,15 @@ slug: ../learn-guides-transfers
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 ## Metadata Updates with the Polkadot-JS Browser Extension
 
 Before signing extrinsics with the Polkadot-JS Browser Extension, always check for metadata updates.
@@ -229,8 +238,8 @@ reaped. References may still exist from:
 ### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at [Unbonding and Rebonding](./learn-guides-staking.md#bond-your-tokens) to
-check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+Follow the instructions at [Unbonding and Rebonding](./learn-guides-nominator.md#bond-your-tokens)
+to check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 ### Checking for Locks
 

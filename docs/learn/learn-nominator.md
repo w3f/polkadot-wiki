@@ -96,7 +96,7 @@ you can share the staking rewards they generate.
 
 While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked for nominations, they
 are 'locked' (bonded). You can
-[stop nominating at any time](./learn-guides-staking.md#stop-nominating), but remember that the
+[stop nominating at any time](./learn-guides-nominator.md#stop-nominating), but remember that the
 action is effective in the next era and does not automatically unbond your funds. Unbonding is a
 separate action, and it takes effect after the unbonding period, which is
 {{ polkadot: 28-day long on Polkadot :polkadot }}{{ kusama: 7-day long on Kusama :kusama }}. This is
@@ -479,7 +479,7 @@ details.
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](./learn-guides-staking.md#nominate-using-polkadot-js) guide to configure it first. Your
+[this](./learn-guides-nominator.md#nominate-using-polkadot-js) guide to configure it first. Your
 nominations will be effective in the next era; eras are roughly
 {{ polkadot: 24 hours on Polkadot. :polkadot }}{{ kusama: 6 hours on Kusama. :kusama }}
 
@@ -516,7 +516,7 @@ higher, which can be viewed on
 
 ## Guides
 
-- [Be a Nominator (Polkadot)](./learn-guides-staking.md#nominate-a-validator) - Guide on nominating
-  on the Kusama canary network.
-- [Stop Being a Nominator (all networks)](./learn-guides-staking#stop-nominating) - Guide on
+- [Be a Nominator (Polkadot)](./learn-guides-nominator.md#nominate-a-validator) - Guide on
+  nominating on the Kusama canary network.
+- [Stop Being a Nominator (all networks)](./learn-guides-nominator.md#stop-nominating) - Guide on
   stopping nominations and withdrawing tokens.

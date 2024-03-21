@@ -9,6 +9,15 @@ slug: ../learn-guides-identity
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 This is an advanced guide that is relevant for entities that would like to become registrars or
 would like to set sub-identities to an existing account with an identity. See
 [this page](./learn-identity.md) to learn about how to set an identity and have it verified.

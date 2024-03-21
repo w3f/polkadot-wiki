@@ -334,13 +334,11 @@ module.exports = {
                       label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Polkadot-JS Guides about Staking',
-                        description: 'Polkadot-JS Guides about Staking.',
-                        slug: '/learn-guides-staking-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-staking',
                       },
                       items: [
-                        "learn/learn-guides-staking",
+                        "learn/learn-guides-nominator",
                         "learn/learn-guides-staking-pools",
                       ],
                     },
@@ -353,12 +351,10 @@ module.exports = {
                     {
                       type: "category",
                       label: "Asset Hub Guides",
-                      description: 'Polkadot-JS Guides about the Asset Hub.',
+                      description: 'Polkadot-JS Guides about Asset Hub.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Advanced Guides for Asset Hub',
-                        description: 'Polkadot-JS guides about the Asset Hub.',
-                        slug: '/learn-guides-assets-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-assets',
                       },
                       items: [
                         "learn/learn-guides-assets-create",
