@@ -97,9 +97,8 @@ instances of this pallet.
 
 ## Multi-Asset Treasury Support
 
-The use of [cross-consensus messaging](./learn-xcm.md) would also mean that these treasuries can
-support multiple asset types, and thus can spend assets other than
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury. These assets have a
+The treasuries can support multiple asset types and thus can spend assets other than
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury, and their transfers and interactions across the chains facilitated by [cross-consensus messaging](./learn-xcm.md). These assets have a
 few requirements:
 
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
