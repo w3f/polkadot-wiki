@@ -81,9 +81,9 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 ## Sub-treasuries
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates under
-a single account on-chain. The above tracks manage the treasury and represent the funds on the
-network. However, creating _sub_-treasuries that correspond to each
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates on
+a single account on-chain. The above tracks manage the outflow of the treasury on the
+network. With _sub_-treasuries, having treasury accounts that correspond to each
 [collective](./learn-system-chains#collectives) is also possible.
 
 Rather than have many referenda through OpenGov, the
