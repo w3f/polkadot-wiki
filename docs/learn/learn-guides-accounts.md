@@ -10,6 +10,13 @@ slug: ../learn-guides-accounts
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
+<div className="sticky"> 
+<br />
+
+Polkadot-JS App is for developers and power users only.
+
+</div>
+
 <DocCardList />
 
 ## Account Address Format
