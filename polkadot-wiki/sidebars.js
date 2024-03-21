@@ -333,10 +333,8 @@ module.exports = {
                       label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Polkadot-JS Guides about Staking',
-                        description: 'Polkadot-JS Guides about Staking.',
-                        slug: '/learn-guides-staking-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-staking',
                       },
                       items: [
                         "learn/learn-guides-nominator",
