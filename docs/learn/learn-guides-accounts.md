@@ -10,7 +10,7 @@ slug: ../learn-guides-accounts
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
-<div className="sticky" style={{ zIndex: 1}}> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 [Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more

@@ -7,7 +7,7 @@ keywords: [nominated proof of stake, staking, controller]
 slug: ../learn-controller
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived. Controller accounts are deprecated. For more information, see
