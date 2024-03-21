@@ -41,12 +41,13 @@ is a live example of the above.
 If you cannot look up the error this way, or there is no message in the `details` field, consult the
 table below.
 
-## Polkascan and Subscan
+## Subscan
 
-Polkascan and Subscan show the `ExtrinsicFailed` event when a transaction does not succeed
-([example](https://polkascan.io/polkadot/event/2836233-3)). This event gives us the `error` and
-`index` indices of the error but does not give us a nice message to understand what it means. We
-will look up the error in the codebase ourselves to understand what went wrong.
+The `ExtrinsicFailed` event indicates when a transaction does not succeed
+([example](https://polkadot.subscan.io/extrinsic/19983878-2?event=19983878-53)). This event gives us
+the `error` and `index` (as seen in the table of the event, in the `dispatch_error` row) indices of
+the error but does not give us a nice message to understand what it means. We will look up the error
+in the codebase ourselves to understand what went wrong.
 
 First, we should understand that the `index` number is the index of the pallet in the runtime from
 which the error originated. The `error` is likewise the index of that pallet's errors which is the

@@ -229,7 +229,7 @@ following extrinsic: `democracy.removeVote(index)` using the account that you vo
 index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the
 image below).
 
-The number of the referendum for which you voted is visible in an explorer such as Polkascan.
+The number of the referendum for which you voted is visible in an explorer such as Subscan.
 
 You need to press the "Submit Transaction" button to submit the extrinsic.
 
