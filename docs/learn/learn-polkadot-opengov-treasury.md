@@ -105,7 +105,7 @@ few requirements:
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
 2. The asset is active and has sufficient liquidity to be utilized for payouts.
 3. The asset has a set conversion rate, as per OpenGov referenda on the Treasurer track (set via the
-   asset rate pallet). This conversion rate defines a fixed-rate representation for converting from
+   asset rate pallet). This conversion rate defines a fixed-point representation for converting from
    that asset to {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
 4. The asset must be approved and onboarded via OpenGov to become spendable via the treasury as a
    valid spend method.
