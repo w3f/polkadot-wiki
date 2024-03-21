@@ -1,7 +1,7 @@
 ---
 id: learn-guides-assets-create
 title: Polkadot-JS Guides about Creating Assets
-sidebar_label: Asset Guides
+sidebar_label: Create Asset Guides
 description: Polkadot-JS Guides about Creating Assets.
 keywords: [asset hub, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-create

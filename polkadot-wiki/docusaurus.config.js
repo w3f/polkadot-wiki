@@ -126,7 +126,7 @@ module.exports = {
             from: ['/docs/learn-staking-faq']
           },
           {
-            to: '/docs/learn-guides-assets-create',
+            to: '/docs/learn-guides-assets',
             from: ['/docs/learn-statemint', '/docs/learn-assets-guides']
           },
           {
