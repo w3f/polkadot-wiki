@@ -7,6 +7,15 @@ keywords: [ledger, polkadot-js]
 slug: ../learn-guides-ledger
 ---
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 ## Loading Your Account
 
 :::info

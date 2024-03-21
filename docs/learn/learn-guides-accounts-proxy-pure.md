@@ -9,6 +9,15 @@ slug: ../learn-guides-accounts-proxy-pure
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 :::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
 
 The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig

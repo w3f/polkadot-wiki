@@ -9,6 +9,15 @@ slug: ../learn-guides-assets-create
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 The Asset Hub is a generic assets system parachain which provides functionality for deploying and
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
 hub is {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. The Existential Deposit (ED),

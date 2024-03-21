@@ -9,6 +9,15 @@ slug: ../learn-guides-accounts-proxy
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
 but actively participate in the network with the weight of the tokens in that account. Proxies are
 allowed to perform a limited amount of actions related to specific

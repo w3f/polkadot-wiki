@@ -10,6 +10,15 @@ slug: ../learn-guides-transfers
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 ## Metadata Updates with the Polkadot-JS Browser Extension
 
 Before signing extrinsics with the Polkadot-JS Browser Extension, always check for metadata updates.
