@@ -1,10 +1,10 @@
 ---
-id: learn-guides-staking
+id: learn-guides-nominator
 title: Polkadot-JS Guides For Nominators
 sidebar_label: Nominator Guides
 description: Polkadot-JS Guides for Nominators.
 keyword: [nominate, stake, staking, claim, rewards, polkadot-js]
-slug: ../learn-guides-staking
+slug: ../learn-guides-nominator
 ---
 
 import RPC from "./../../components/RPC-Connection";

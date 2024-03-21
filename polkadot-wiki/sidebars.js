@@ -339,7 +339,7 @@ module.exports = {
                         slug: '/learn-guides-staking-index',
                       },
                       items: [
-                        "learn/learn-guides-staking",
+                        "learn/learn-guides-nominator",
                         "learn/learn-guides-staking-pools",
                       ],
                     },
