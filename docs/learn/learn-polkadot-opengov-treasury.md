@@ -81,12 +81,12 @@ track on-chain. Learn how to submit a treasury proposal for referendum
 
 ## Sub-treasuries
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates under
-a single account on-chain. The above tracks manage the treasury and represent the funds on the
-network. However, creating _sub_-treasuries that correspond to each
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates on
+a single account on-chain. The above tracks manage the outflow of the treasury on the
+network. With _sub_-treasuries, having treasury accounts that correspond to each
 [collective](./learn-system-chains#collectives) is also possible.
 
-Rather than have many referenda on the relay chain, the overarching
+Rather than have many referenda through OpenGov, the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each
 sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
 can spend funds (depending on their specific rule set).
@@ -97,9 +97,8 @@ instances of this pallet.
 
 ## Multi-Asset Treasury Support
 
-The use of [cross-consensus messaging](./learn-xcm.md) would also mean that these treasuries can
-support multiple asset types, and thus can spend assets other than
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury. These assets have a
+The treasuries can support multiple asset types and thus can spend assets other than
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury, and their transfers and interactions across the chains facilitated by [cross-consensus messaging](./learn-xcm.md). These assets have a
 few requirements:
 
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
