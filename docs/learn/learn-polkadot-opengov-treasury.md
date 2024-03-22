@@ -71,13 +71,32 @@ OpenGov allows for managing funds through six tracks, each with its own
 - [Big Tipper](./learn-polkadot-opengov-origins.md#big-tipper)
 - [Small Tipper](./learn-polkadot-opengov-origins.md#small-tipper)
 
-:::info How to access Treasury funds?
+## Submit Treasury Proposal via Polkassembly
 
 Access to Treasury funds requires successful enactment of referendum in the respective treasury
-track on-chain. Learn how to submit a treasury proposal for referendum
-[here](./learn-guides-treasury#creating-a-treasury-proposal).
+track on-chain. Learn how to submit a treasury proposal for referendum using
+[Polkassembly](../general/governance-apps.md).
 
-:::
+Go to [Polkassembly](https://polkadot.polkassembly.io/opengov) and click on the FAB button in the
+bottom right corner. Then,
+
+- Click on "Create Treasury Proposal" and choose an address for the proposer
+- After choosing an address, you will enter a three-stage guideline:
+
+  - Write a proposal: you can add a detailed description for the proposal, which will be stored on
+    Polkassembly. Alternatively, you can link an existing discussion post.
+
+  ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
+
+  - Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
+    preimage, add the beneficiary address and the
+    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto-selected
+    and the user can proceed with the creation of a preimage.
+
+  ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
+
+  - Create a proposal: final confirmation about the proposal creation. The description of the
+    proposal and the preimage are automatically linked to the proposal.
 
 ## Bounties
 
