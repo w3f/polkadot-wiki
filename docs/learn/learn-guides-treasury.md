@@ -64,7 +64,7 @@ that requests 100 DOT from Treasury.
 - Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
-- Choose `treasury` pallet in the "propose" dropdown and the `spend(amount, beneficiary)`call
+- Choose `treasury` pallet in the "propose" dropdown and the `spend_local(amount, beneficiary)`call
 - Enter the DOT amount.
 - Enter the AccountID of the beneficiary (which has a verified on-chain identity).
 - Submit preimage
@@ -127,8 +127,8 @@ to the `32 / Small Spender` track, you will need to submit it to the `30 / Small
 
 Briefly, you will need to:
 
-- Create a preimage using the `treasury.Spend` extrinsic and specifying the number of tokens and the
-  beneficiary of the tip
+- Create a preimage using the `treasury.spendLocal` extrinsic and specifying the number of tokens
+  and the beneficiary of the tip
 - Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash
 - Once you started the referendum go to [Polkassembly](https://polkassembly.io/), log in with the
   proposer account and edit the referendum details
