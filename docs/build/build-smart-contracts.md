@@ -269,7 +269,7 @@ Try deploying a smart contract that interacts with Etherscan's web2 API by follo
 - EVM (Solidity) Support:
   [**Supported**](https://docs.darwinia.network/libraries-4a4ce70014ba43b7977aeb16ce9634ab)
 
-[Darwinia](https://darwinia.network/) is the community-run technology and service powering the cross-chain capabilities of decentralized applications. By crafting secure and efficient cross-chain messaging protocols, Darwinia is at the forefront of facilitating seamless communication between disparate blockchain networks. The newest addition to the suite of protocols is `Darwinia Msgport`, an innovative messaging abstraction that has been successfully implemented across a wide array of mainstream smart contract platforms, broadening the potential for interoperability and enabling developers to create more versatile and connected blockchain ecosystems.
+[Darwinia](https://darwinia.network/) is a community-run technology and service powering the cross-chain capabilities of decentralized applications. By crafting secure and efficient cross-chain messaging protocols, Darwinia is at the forefront of facilitating seamless communication between disparate blockchain networks. The newest addition to the suite of protocols is `Darwinia Msgport`, an innovative messaging abstraction that has been successfully implemented across a wide array of mainstream smart contract platforms, broadening the potential for interoperability and enabling developers to create more versatile and connected blockchain ecosystems.
 
 Try deploying a smart contract to Darwinia by following their
 [documentation](https://docs.darwinia.network/dapp-development-4b021f21c52d474aa08a8109eb55bbd1).
