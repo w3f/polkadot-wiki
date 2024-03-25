@@ -22,6 +22,10 @@ This upgrade allows parachains to utilize up to 2 seconds execution time per par
 With elastic scaling, parachains can use multiple cores to include multiple parablocks
 within the same relay chain block.
 
+The relay chain receives a sequence of parachain blocks on multiple cores, which are validated and checked if all their state roots line up during their inclusion, but assume they’re unrelated parachain blocks during backing, availability, and approvals. With elastic scaling implemented, a parachain's throughput depends upon its collator infrastructure.
+
+The [elastic scaling implementation](https://github.com/paritytech/polkadot-sdk/issues/1829) will be rolled out in multiple phases. In the first phase, elastic scaling is set to work on parachains with a trusted/permissioned collator set. With this restriction, it is possible to launch elastic scaling without changing the candidate receipt. After successfully implementing the first phase, changes can be made to the candidate receipt so the collator set can be untrusted/permissionless again. The final phase will feature full integration with the Cumulus framework, enabling parachains to be configured to access multiple cores continuously.
+
 
 Take, for example, a parachain that wants to submit four parablocks to the relay chain. Without
 elastic scaling, it will take 24 seconds to include all of them through one core. Remember that a
