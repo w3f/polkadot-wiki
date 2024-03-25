@@ -114,4 +114,4 @@ For detailed instructions on how to delegate your voting power using dashboard, 
 
 **If you become a nomination pool member or a pool admin, you cannot participate in Governance with
 the bonded tokens in the pool, as they are held in a
-[system account](./learn-account-advanced.md#system-accounts).**
+[system account](../learn/learn-account-advanced.md#system-accounts).**
