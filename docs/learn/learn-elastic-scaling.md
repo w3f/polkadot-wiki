@@ -15,10 +15,9 @@ validated, processed, secured, made available for additional checks, and finally
 relay chain.
 
 
-[Asynchronous backing](./learn-async-backing.md) is the first implementation of the parachain
-protocol that alters how parachains produce blocks and how the relay chain processes their data.
-This upgrade will allow parachains to take up to 2 seconds execution time (for producing
-parablocks), while the relay chain will be able to include a parablock every 6 seconds.
+[Asynchronous backing](./learn-async-backing.md) is the optimization implemented on the relay chain
+that allows parachains to produce blocks faster and allows relay chain to process them seamlessly. Async backing also improves the parachain side with unincluded segments and augmented info that allows collators to produce multiple parablocks even if the previous blocks are not yet included.
+This upgrade allows parachains to utilize up to 2 seconds execution time per parablock, and the relay chain will be able to include a parablock every 6 seconds.
 
 With asynchronous backing enabled, parachains can theoretically produce parablocks in the sub-second
 time range. However, to accomplish this, asynchronous backing must temporarily **hold** blocks in
