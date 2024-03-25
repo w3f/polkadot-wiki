@@ -141,7 +141,7 @@ Agile Coretime project logistics can be tracked on the [Parachains Team GitHub D
 
 #### Is all of RFC-1 coming at once or in parts?
 
-No, with the initial Kusama launch, the following features are rolled out:
+No, with the initial Kusama launch, the following features mentioned in [RFC-1](https://polkadot-fellows.github.io/RFCs/approved/0001-agile-coretime.html) are rolled out:
 
 - The purchase of bulk coretime and placement of on-demand orders
 - Renewing leases
@@ -221,27 +221,27 @@ There will be a minimum price configured, the rest is based on demand via a pric
     
 #### Do I need to pay a deposit to register for coretime?  
 
-All newly registered parachains must [place a deposit](https://github.com/paritytech/polkadot-sdk/pull/3020) equivalent to the cost of registering the maximum size of runtime (business logic) code. After a successful registration, parachains are allowed to be assigned to regions. The runtime of these parachains can then be upgraded without any additional costs. The maximum size is pre-defined and equal to everyone on the network. This way, every registration will cost the same independent of the size of the registered artefact. 
+All newly registered parachains must [place a deposit](https://github.com/paritytech/polkadot-sdk/pull/3020) equivalent to the cost of registering the maximum size of runtime (business logic) code. After a successful registration, parachains are allowed to be assigned to regions. The runtime of these parachains can then be upgraded without any additional costs. The maximum size is pre-defined and equal to everyone on the network. This way, every registration will cost the same independent of the size of the registered runtime code (Wasm blob). 
     
-[RFC-44](https://github.com/polkadot-fellows/RFCs/pull/44) is proposing a new rent-based registration price model, which will become an alternative (in case it gets approved). 
+[RFC-44](https://github.com/polkadot-fellows/RFCs/pull/44) is proposing a new rent-based registration price model, which will become an alternative (if it gets approved). 
     
 #### How does the price change over time?
     
-On-demand coretime will always be at market conditions. The price of bulk coretime changes based on the outcome of the previous sale. Factors such as the number of cores sold, the target (from the ideal bulk ratio) and the number of cores offered in the sale are used in combination with the price for which the last core was sold. Bulk renewals are capped within a percentage of the previous purchase price. The algorithm that is used is implemented in each runtime and can differ between chains.
+On-demand coretime will always be subject to market conditions. The price of bulk coretime changes based on the outcome of the previous sale. Factors such as the number of cores sold, the target (from the ideal bulk ratio) and the number of cores offered in the sale are used in combination with the price for which the last core was sold. Bulk renewals are capped within a percentage of the previous purchase price. The algorithm that is used is implemented in each runtime and can differ between chains.
     
-The bulk price in Kusama might vary between a 50% decrease in case no cores were sold in the previous sales and a 5x increase depending on the number of cores sold and when they sell. These numbers represent extreme cases though.
+The bulk price in Kusama might vary between a 50% decrease in case no cores were sold in the previous sales and can increase by 5x depending on the number of cores sold and when they sell. These numbers represent extreme cases though.
     
 #### If purchased in bulk, do you then have “one core” or “one bucket of coretime” that you can use in your own time? Or is there a specific slot?
     
- You have a specific core for the duration of four weeks, and have the ability to split the region up. Splitting or interlacing the region makes you lose the right to a price-capped renewal.
+You have a specific core for the duration of four weeks, and have the ability to split the region up. Splitting or interlacing the region makes you lose the right to a price-capped renewal.
     
 #### What happens to purchased coretime if I don't use it?
     
- Unused coretime can't be carried over. If you don’t use the coretime within the time allocation (timeslice) then it is lost. If you don't need previously purchased coretime, you will soon be able to sell it on secondary markets.
+Unused coretime can't be carried over. If the coretime within the time allocation (timeslice) is not used, then it is lost. If previously purchased coretime is no longer needed, it be sold on secondary markets.
     
 #### Can I buy coretime in advance and start using it when I'm ready?
     
-You can only purchase coretime up to 28 days in advance. Later, “futures” markets to hedge against price fluctuations could be a possible solution to increase predictability further.
+Coretime can be purchased up to 28 days in advance. Later, “futures” markets to hedge against price fluctuations could be a possible solution to increase predictability further.
 
 ### Concepts
 
