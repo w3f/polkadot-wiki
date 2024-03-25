@@ -28,7 +28,7 @@ one core).
 
 Agile Coretime allows for the purchase of [coretime](#coretime) in “bulk” with an allocation for 
 one month. Heavy duty parachains which need to author a block every 12 
-seconds (or every 6s through [Async Backing](./learn-async-backing.md)), can seamlessly “renew” the [core](#core) each month. 
+seconds (or every 6s through [Asynchronous Backing](./learn-async-backing.md)), can seamlessly “renew” the [core](#core) each month. 
 Coretime renewal orders take precedence over new orders and provide protection against price 
 fluctuations, allowing parachains to plan their project budget and costs more effectively.
 
