@@ -28,8 +28,8 @@ one core).
 
 Agile Coretime allows for the purchase of [coretime](#coretime) in “bulk” with an allocation for one
 month. Heavy duty parachains which need to author a block every 12 seconds (or every 6s through
-[Async Backing](./learn-async-backing.md)), can seamlessly “renew” the [core](#core) each month.
-Coretime renewal orders take precedence over new orders and provide protection against price
+[Asynchronous Backing](./learn-async-backing.md)), can seamlessly “renew” the [core](#core) each
+month. Coretime renewal orders take precedence over new orders and provide protection against price
 fluctuations, allowing parachains to plan their project budget and costs more effectively.
 
 The purchased coretime can also be split up and sold in parts, down to a single block per month,
@@ -166,8 +166,8 @@ These features are still under development and will be rolled out in later relea
 
 #### What is currently being developed in the ecosystem to support Agile Coretime?
 
-There are several ecosystem projects in the making, such as the secondary markets for
-coretime,[Lastic](https://www.lastic.xyz/) (focusing on frontend)
+There are several ecosystem projects in the making, such as the secondary markets for coretime,
+[Lastic](https://www.lastic.xyz/) (focusing on frontend)
 and [RegionX](https://app.regionx.tech/) (focusing on backend).
 
 Always do your own research. If you feel your project should be listed on the Wiki, please follow
