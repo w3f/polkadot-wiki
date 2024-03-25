@@ -565,10 +565,6 @@ power over any remaining classes.
 :::info Delegate your votes
 
 In Polkadot OpenGov you can delegate your votes to different entities, who will vote on your behalf.
-You can delegate your votes using the
-[**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to learn about the features of
-the dashboard.
 
 If you are staking directly and not through a nomination pool, you can use bonded tokens for voting.
 Note that if you are voting with conviction, your tokens will have a democracy lock in addition to
