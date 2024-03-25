@@ -88,7 +88,7 @@ scheduling the respective cores on the relay chain to the parachains.
 
 A timeslice represents the granularity the Coretime Chain schedules cores on the Relay Chain. 
 The Coretime Chain announces a schedule for each core, comprising the next 80 relay 
-chain blocks in advance. The region length of 28 days corresponds to 5,040 timeslices.
+chain blocks in advance. 5,040 timeslices corresponds to the region length of 28 days (which is the initial configuration set for bulk coretime).
 
 ### Task
 
