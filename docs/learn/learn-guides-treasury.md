@@ -47,6 +47,8 @@ and is
 
 :::
 
+## Creating A Treasury Proposal - Spend Local
+
 ### Submit Treasury Proposal Preimage
 
 The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
@@ -109,7 +111,27 @@ in this document.
 The preimage and decision deposits
 [can be claimed once the referendum ends](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits).
 
-## Submit Treasury Proposal via Polkassembly
+## Creating a Treasury Proposal - Spend (with AssetHub)
+
+The following mostly goes over how to utilize the `spend` extrinsic, which unlike `spend_local`, is
+able to specify assets besides the native asset on system parachains such as
+[AssetHub](../general/glossary.md#asset-hub).
+
+### Creating a preimage
+
+### Create DOT spending proposal (for DOT on AH)
+
+### Creating an alternative asset spending proposal
+
+## Creating a Staged Proposal
+
+Staged proposals are similar to a tranche or milestone-based model of funding, instead of a spend
+being paid out all at once, each portion is redeemable at a certain block height.
+
+This also implies that governance can propose to **void** a staged proposal before it has completed
+all of its pay outs.
+
+### Proposing a "Void" for a Staged Proposal
 
 To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov)
 click on the FAB button in the bottom right corner. Then,
