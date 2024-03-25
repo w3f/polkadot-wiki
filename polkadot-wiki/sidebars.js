@@ -674,7 +674,6 @@ module.exports = {
           },
           items: [
             "build/build-protocol-info",
-            "build/build-parachains",
             "build/build-integrate-assets",
             "build/build-hrmp-channels"
           ],
@@ -709,6 +708,7 @@ module.exports = {
             "build/build-transaction-construction",
             "build/build-integration",
             "build/build-node-management",
+            "build/build-parachains"
           ],
         },
       ],

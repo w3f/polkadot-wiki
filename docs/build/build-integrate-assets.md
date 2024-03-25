@@ -1,8 +1,8 @@
 ---
 id: build-integrate-assets
-title: Assets on Polkadot
-sidebar_label: Integrating Assets
-description: Tools that you can use to integrating assets.
+title: Using AssetHub
+sidebar_label: Using AssetHub
+description: Tools that you can use for integrating assets.
 keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
