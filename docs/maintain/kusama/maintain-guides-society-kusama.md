@@ -73,9 +73,9 @@ declare the bid amount (1 KSM in this case) that they will receive for joining t
 ![test_bid](../../assets/society/test_bid.jpg)
 
 Once you have submitted the transaction, your bid will be shown on the
-[Society page](https://cloudflare-ipfs.com/ipns/kusama.dotapps.io/#/society) under the bids section. You can
-cancel the bidding if you changed your mind about joining the society by calling `unbid` on the same
-page.
+[Society page](https://cloudflare-ipfs.com/ipns/kusama.dotapps.io/#/society) under the bids section.
+You can cancel the bidding if you changed your mind about joining the society by calling `unbid` on
+the same page.
 
 You can find an existing member to place a bid on your behalf if you do not have KSM and you are
 willing to give them a tip. An existing member can submit a `vouch` transaction through the

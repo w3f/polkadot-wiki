@@ -100,9 +100,9 @@ bottom right corner. Then,
 
 ## Sub-treasuries
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates on
-a single account on-chain. The above tracks manage the outflow of the treasury on the
-network. With _sub_-treasuries, having treasury accounts that correspond to each
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates on a
+single account on-chain. The above tracks manage the outflow of the treasury on the network. With
+_sub_-treasuries, having treasury accounts that correspond to each
 [collective](./learn-system-chains#collectives) is also possible.
 
 Rather than have many referenda through OpenGov, the
@@ -117,8 +117,9 @@ instances of this pallet.
 ## Multi-Asset Treasury Support
 
 The treasuries can support multiple asset types and thus can spend assets other than
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury, and their transfers and interactions across the chains facilitated by [cross-consensus messaging](./learn-xcm.md). These assets have a
-few requirements:
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury, and their transfers
+and interactions across the chains facilitated by [cross-consensus messaging](./learn-xcm.md). These
+assets have a few requirements:
 
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
 2. The asset is active and has sufficient liquidity to be utilized for payouts.
