@@ -544,10 +544,8 @@ to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the los
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance
 on their account.
 
-For unlocking generic account locks, navigate to
-[this section](./learn-guides-accounts.md#unlocking-locks). When you delegate your votes, the
-locking mechanism differs slightly. Please check the next section on Multirole Delegation for more
-information.
+When you delegate your votes, the locking mechanism differs slightly. Please check the next section
+on Multirole Delegation for more information.
 
 ### Multirole Delegation
 
@@ -562,18 +560,12 @@ For example, a voter could delegate one entity for managing a less potent refere
 different delegate for another class with more powerful consequences and still retain full voting
 power over any remaining classes.
 
-:::info Delegate your votes
+:::info Locks for Delegations
 
-In Polkadot OpenGov you can delegate your votes to different entities, who will vote on your behalf.
-
-If you are staking directly and not through a nomination pool, you can use bonded tokens for voting.
-Note that if you are voting with conviction, your tokens will have a democracy lock in addition to
-the staking lock. For more information about locks, see
-[this page](./learn-accounts.md/#unlocking-locks).
-
-Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
-after a referendum ends, provided you voted with the winning side. In the case of delegations, the
-unlocking period countdown begins after the account undelegates. There can be different scenarios:
+Democracy locks created through [conviction voting](#voluntary-locking-conviction-voting) start the
+unlocking period after a referendum ends, provided you voted with the winning side. In the case of
+delegations, the unlocking period countdown begins after the account undelegates. There can be
+different scenarios:
 
 - if the account delegated votes to one delegate, then after undelegating, there will be one
   unlocking period with length dependent on the conviction multiplier.
@@ -583,6 +575,8 @@ unlocking period countdown begins after the account undelegates. There can be di
 
 **Before delegating a specific track, you must remove any [vote](#voting-on-a-referendum) on that
 track.**
+
+For more information about locks, see [this page](./learn-accounts.md#account-balance-types).
 
 :::
 
