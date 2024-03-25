@@ -19,33 +19,8 @@ The governance protocol has already undergone iterations (see
 [Governance V1](./archive/learn-governance.md)). Governance is a constantly evolving protocol at
 this stage in its lifecycle.
 
-For technical information about Polkadot OpenGov and how to interact with it, please refer to this
-[dedicated Wiki page](./learn-guides-polkadot-opengov.md).
-
 For additional support about Polkadot OpenGov see the
 [dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
-
-:::
-
-:::info Polkadot Delegation Dashboard
-
-See the video tutorial below to easily delegate your votes to somebody else using the
-[Polkadot Delegation Dashboard](https://delegation.polkadot.network/).
-
-<div className="row">
-  <div className="col text--center">
-    <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">
-      <img src="https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">Delegation Dashboard Tutorial</a>
-    </p>
-  </div>
-</div>
-
-**If you become a nomination pool member or a pool admin, you cannot participate in Governance with
-the bonded tokens in the pool, as they are held in a
-[system account](./learn-account-advanced.md#system-accounts).**
 
 :::
 
@@ -150,15 +125,6 @@ consider the merits and vote on the referenda submitted to the Root track. In th
 delegate their voting power just for the Root track to a trusted expert who (according to them) acts
 in the best interest of the network protocol. In this way, token holders do not need to be
 up-to-date with governance matters and can still make their votes count through delegates.
-
-:::info Delegation Dashboard
-
-To easily delegate your votes you can use the
-[Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to know more about the dashboard
-and learn how to use it.
-
-:::
 
 ## Gov1 vs. Polkadot OpenGov
 
