@@ -19,12 +19,9 @@ relay chain.
 that allows parachains to produce blocks faster and allows relay chain to process them seamlessly. Async backing also improves the parachain side with unincluded segments and augmented info that allows collators to produce multiple parablocks even if the previous blocks are not yet included.
 This upgrade allows parachains to utilize up to 2 seconds execution time per parablock, and the relay chain will be able to include a parablock every 6 seconds.
 
-With asynchronous backing enabled, parachains can theoretically produce parablocks in the sub-second
-time range. However, to accomplish this, asynchronous backing must temporarily **hold** blocks in
-[unincluded segments](./learn-async-backing.md#unincluded-segments), while parablocks can be
-included into the relay chain every 6 seconds per core. This is the bottleneck that elastic scaling
-addresses. With elastic scaling, parachains can use multiple cores to include multiple parablocks
+With elastic scaling, parachains can use multiple cores to include multiple parablocks
 within the same relay chain block.
+
 
 Take, for example, a parachain that wants to submit four parablocks to the relay chain. Without
 elastic scaling, it will take 24 seconds to include all of them through one core. Remember that a
