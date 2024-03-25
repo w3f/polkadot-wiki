@@ -1,6 +1,6 @@
 ---
 id: learn-agile-coretime
-title: Agile Coretime
+title: Introduction to Agile Coretime
 sidebar_label: Agile Coretime
 description: Introduction to Agile Coretime and its terminology
 keywords: [coretime, blockspace, parathread, parachain, cores]
@@ -282,7 +282,7 @@ However, as compared to running on an L1 or a scaling solution, builders still h
     
 Polkadot thus offers all the benefits of building high-performing, purpose-made, and composable appchains, combined with the most flexible economics.
     
-#### How close do we get to Web2 scale for Web3?**
+#### How close do we get to Web2 scale for Web3?
     
 Agile Coretime mainly improves allocation efficiency. With [elastic scaling](https://github.com/paritytech/polkadot-sdk/issues/1829), we take a big step towards enabling Web2 scale in Web3 by reducing parachain block production below 6 seconds. Theoretically, parachains will be able to produce blocks very fast and the limitations will lie on the Relay Chain side’s cores and how many cores a parachain uses.
 
