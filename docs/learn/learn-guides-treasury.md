@@ -49,6 +49,15 @@ and is
 
 ## Creating A Treasury Proposal - Spend Local
 
+:::info "Spend" vs. "Spend Local"
+
+You may notice that the treasury pallet contains two extrinsics - `spend` and `spend_local`.
+`spend_local` refers to a spend of DOT which is locally available, i.e., DOT from the relay chain's
+treasury. `spend` actually allows for a spend to be specified in an asset other than DOT, or even
+DOT on a parachain like [AssetHub](../general/glossary.md#asset-hub).
+
+:::
+
 ### Submit Treasury Proposal Preimage
 
 The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
@@ -111,7 +120,7 @@ in this document.
 The preimage and decision deposits
 [can be claimed once the referendum ends](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits).
 
-## Creating a Treasury Proposal - Spend (with AssetHub)
+## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
 The following mostly goes over how to utilize the `spend` extrinsic, which unlike `spend_local`, is
 able to specify assets besides the native asset on system parachains such as
@@ -119,19 +128,85 @@ able to specify assets besides the native asset on system parachains such as
 
 ### Creating a preimage
 
-### Create DOT spending proposal (for DOT on AH)
+The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
+that requests 100 USDT from AssetHub.
 
-### Creating an alternative asset spending proposal
+- Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
+  and then click on Add Preimage.
+- Select the account which will be used to submit the preimage.
+- Choose `treasury` pallet in the "propose" dropdown and the
+  `spend(assetKind, amount, beneficiary, validFrom)` call
 
-## Creating a Staged Proposal
+Now, let's go by each field one-by-one and fill it out accordingly:
+
+#### Specifying asset kind
+
+`assetKind` here refers to where the asset lives in relation to the relay chain via XCM. In short,
+we need to be able to find:
+
+- Which system parachain the asset lives on
+- Which pallet and asset ID does it correspond to
+
+For this example, we are using USDT, which from the perspective of asking for USDT on the relay
+chain on AssetHub would be:
+
+`Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
+
+First, we specifiy which parachain - in this case AssetHub (1000). `PalletInstance 50` refers to the
+asset pallet instance on AssetHub. The general index is `1984`, which is the ID of USDT on the asset
+pallet on AssetHub.
+
+Here is how the final `assetKind` field should look:
+
+#### Specifying the amount
+
+The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
+asking for 100 USDT, we put `100000000` as the input for the amount:
+
+#### Specifying beneficiary
+
+The beneficiary account will be one on AssetHub. For this reason, the XCM junction must be specified
+as follows, with one junction (`X1`) and the beneficiary account(`AccountID32`), which is an
+address:
+
+#### Specifiying `validFrom` (optional)
+
+The `validFrom` field is optional, and refers to the block height upon which the payout may be
+issued. For more information on this field, refer to the
+[guide below.](#creating-a-staged-proposal-with-validfrom)
+
+#### Summary: Final Call
+
+The final call should look like the following, where we:
+
+- Specify our asset as **USDT** on **AssetHub**.
+- Specify the **amount** of **USDT** (100).
+- Specify the beneficiary address.
+- If applicable, use the `validFrom` field to specify a block number upon which the payout becomes
+  valid.
+
+The next steps are to:
+
+- Copy the preimage (and its length)
+- Sign and submit the preimage
+
+Once this is finished, one may submit a proposal
+[as stated above](#submit-a-treasury-track-referendum). Keep in mind one will also need to
+[provide the decision deposit as well!](#place-a-decision-deposit-for-the-treasury-track-referendum)
+
+## Creating a Staged Proposal with `validFrom`
 
 Staged proposals are similar to a tranche or milestone-based model of funding, instead of a spend
 being paid out all at once, each portion is redeemable at a certain block height.
 
 This also implies that governance can propose to **void** a staged proposal before it has completed
-all of its pay outs.
+all of its pay-outs.
+
+### Using `validFrom`
 
 ### Proposing a "Void" for a Staged Proposal
+
+## Submit Treasury Proposal via Polkassembly
 
 To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov)
 click on the FAB button in the bottom right corner. Then,
