@@ -15,7 +15,7 @@ uApp. While the naming isn't too important, what is important is building resili
 using decentralized technology.
 
 As an application developer, you can compose your front-end apps in a few different ways. Because
-Polkadot and its parachains are all built using Substraste; you can often use the same SDK to
+Polkadot and its parachains are all built using the Polkadot SDK. You can often use the same SDK to
 communicate with Polkadot, a parachain, or any other Substrate-based chain.
 
 :::note Substrate-based chains use an SS58 encoding for their address formats.
