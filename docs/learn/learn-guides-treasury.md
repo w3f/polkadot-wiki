@@ -197,14 +197,43 @@ Once this is finished, one may submit a proposal
 ## Creating a Staged Proposal with `validFrom`
 
 Staged proposals are similar to a tranche or milestone-based model of funding, instead of a spend
-being paid out all at once, each portion is redeemable at a certain block height.
+being paid out all at once, each portion is redeemable at a certain block height. This is done by
+specifying each milestone, set at its respective amount and block height at which it becomes
+redeemable.
 
-This also implies that governance can propose to **void** a staged proposal before it has completed
-all of its pay-outs.
+For example, take the following "staged" proposal which has three milestones, each at 100 DOT, and
+is redeemable at the following block heights. Usually, block heights correspond to a date in the
+future:
 
-### Using `validFrom`
+- 100 DOT paid out at block height 1000
+- 200 DOT paid out at block height 2000
+- 500 DOT paid out at block height 4000
+
+Governance can also propose to **void** a staged proposal before it has completed all of its
+pay-outs.
+
+:::info Calculating dates from block heights
+
+Although not the most accurate form of measurement, block heights can be used to correspond to
+certain dates in the future.
+
+:::
+
+### Using `batchAll` for multi-spend proposals
+
+Using the utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
+calls can have their own `validFrom` block heights, which allows for scenarios such as the above to
+be possible.
+
+### Using `validFrom` for a milestone-based proposal
+
+Once each spend is defined within the batched call, the validFrom field can be utilized to specify
+the "date", or block height, at which each spend is to be executed.
 
 ### Proposing a "Void" for a Staged Proposal
+
+If for any reason a proposal which hasn't completed all of its spends needs to be voided, the
+`treasury.voidSpend` extrinsic can be utilized via a governance proposal.
 
 ## Submit Treasury Proposal via Polkassembly
 
