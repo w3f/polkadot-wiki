@@ -374,11 +374,13 @@ the Relay Chain side’s cores and how many cores a parachain uses.
 
 ### Implementation
 
-#### Unable to use multiple cores!
+:::caution Unable to use multiple cores!
 
 The coretime chain does not prohibit ordering multiple cores and assigning them to the same
 parachain. However, elastic scaling is still in the works **so don't do this, you will not be able
 to use those cores.**
+
+:::
 
 #### What do I need to do for my parachain to continue working in the switch to coretime?
 
