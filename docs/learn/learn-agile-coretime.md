@@ -374,11 +374,13 @@ the Relay Chain side’s cores and how many cores a parachain uses.
 
 ### Implementation
 
-#### Unable to use multiple cores!
+:::caution Unable to use multiple cores!
 
 The coretime chain does not prohibit ordering multiple cores and assigning them to the same
 parachain. However, elastic scaling is still in the works **so don't do this, you will not be able
 to use those cores.**
+
+:::
 
 #### What do I need to do for my parachain to continue working in the switch to coretime?
 
@@ -394,7 +396,7 @@ migrated to Agile Coretime: In case you have a lease secured, you automatically 
 coretime, with renewal right.
 
 _Note: if your team secured a lease with a new paraID, please
-[read the question about swapping](https://www.notion.so/Agile-Coretime-FAQ-c930796e8c884011adb1fa24ef22f77c?pvs=21)._
+[read the question about swapping](https://github.com/w3f/polkadot-wiki/blob/master/docs/learn/learn-agile-coretime.md#will-i-be-able-to-still-swap-my-lease-with-another-project)._
 
 #### When and how can I renew my legacy lease?
 
@@ -405,7 +407,7 @@ sale period you can renew your bulk coretime by calling `renew` on the lease's
 be charged and will be equal to the market price of a bulk core in that sale.
 
 For more details, check out our
-[technical guide](https://www.notion.so/Agile-Coretime-FAQ-c930796e8c884011adb1fa24ef22f77c?pvs=21).
+[technical guide](https://polkadot-public.notion.site/Agile-Coretime-FAQ-c930796e8c884011adb1fa24ef22f77c#472589f3d2424931b101461d8c503213).
 
 #### Will all leases be migrated to Agile Coretime?
 
