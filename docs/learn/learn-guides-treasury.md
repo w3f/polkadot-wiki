@@ -123,7 +123,7 @@ The preimage and decision deposits
 ## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
 The following mostly goes over how to utilize the `spend` extrinsic, which unlike `spend_local`, is
-able to specify assets besides the native asset on system parachains such as
+able to specify assets besides the native asset on system parachains, such as
 [AssetHub](../general/glossary.md#asset-hub).
 
 ### Creating a preimage
@@ -133,16 +133,15 @@ that requests 100 USDT from AssetHub.
 
 - Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
-- Select the account which will be used to submit the preimage.
-- Choose `treasury` pallet in the "propose" dropdown and the
+- Select the account to submit the preimage.
+- Choose the`treasury` pallet in the "propose" dropdown and the
   `spend(assetKind, amount, beneficiary, validFrom)` call
 
 Now, let's go by each field one-by-one and fill it out accordingly:
 
-#### Specifying asset kind
+### Specifying asset kind
 
-`assetKind` here refers to where the asset lives in relation to the relay chain via XCM. In short,
-we need to be able to find:
+`assetKind` refers to the asset to be used, specified via XCM. In short, we need to be able to find:
 
 - Which system parachain the asset lives on
 - Which pallet and asset ID does it correspond to
@@ -152,30 +151,30 @@ chain on AssetHub would be:
 
 `Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
 
-First, we specifiy which parachain - in this case AssetHub (1000). `PalletInstance 50` refers to the
+First, we specify which parachain - in this case, AssetHub (1000). `PalletInstance 50` refers to the
 asset pallet instance on AssetHub. The general index is `1984`, which is the ID of USDT on the asset
 pallet on AssetHub.
 
 Here is how the final `assetKind` field should look:
 
-#### Specifying the amount
+### Specifying the amount
 
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
 asking for 100 USDT, we put `100000000` as the input for the amount:
 
-#### Specifying beneficiary
+### Specifying beneficiary
 
 The beneficiary account will be one on AssetHub. For this reason, the XCM junction must be specified
 as follows, with one junction (`X1`) and the beneficiary account(`AccountID32`), which is an
 address:
 
-#### Specifiying `validFrom` (optional)
+### Specifying `validFrom` (optional)
 
 The `validFrom` field is optional, and refers to the block height upon which the payout may be
 issued. For more information on this field, refer to the
 [guide below.](#creating-a-staged-proposal-with-validfrom)
 
-#### Summary: Final Call
+### Summary: Final Call
 
 The final call should look like the following, where we:
 
@@ -196,8 +195,8 @@ Once this is finished, one may submit a proposal
 
 ## Creating a Staged Proposal with `validFrom`
 
-Staged proposals are similar to a tranche or milestone-based model of funding, instead of a spend
-being paid out all at once, each portion is redeemable at a certain block height. This is done by
+Staged proposals are similar to a tranche or milestone-based funding model; instead of all spends
+being paid simultaneously, each portion is redeemable at a certain block height. This is done by
 specifying each milestone, set at its respective amount and block height at which it becomes
 redeemable.
 
@@ -228,12 +227,12 @@ be possible.
 ### Using `validFrom` for a milestone-based proposal
 
 Once each spend is defined within the batched call, the validFrom field can be utilized to specify
-the "date", or block height, at which each spend is to be executed.
+the "date", or block height, at which each spend will be executed.
 
 ### Proposing a "Void" for a Staged Proposal
 
-If for any reason a proposal which hasn't completed all of its spends needs to be voided, the
-`treasury.voidSpend` extrinsic can be utilized via a governance proposal.
+If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
+extrinsic can be utilized via a governance proposal.
 
 ## Submit Treasury Proposal via Polkassembly
 
