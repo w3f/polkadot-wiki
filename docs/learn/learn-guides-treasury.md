@@ -51,10 +51,15 @@ and is
 
 :::info "Spend" vs. "Spend Local"
 
-You may notice that the treasury pallet contains two extrinsics - `spend` and `spend_local`.
-`spend_local` refers to a spend of DOT which is locally available, i.e., DOT from the relay chain's
-treasury. `spend` actually allows for a spend to be specified in an asset other than DOT, or even
-DOT on a parachain like [AssetHub](../general/glossary.md#asset-hub).
+You may notice that the treasury pallet contains two extrinsics - `treasury.spend` and
+`treasury.spend_local`. `treasury.spend_local` (formally called `treasury.spend`) refers to a spend
+of DOT which is locally available, i.e., DOT from the relay chain's treasury. `spend` actually
+allows for a spend to be specified in an asset other than DOT, or even DOT on a parachain like
+[AssetHub](../general/glossary.md#asset-hub).
+
+Unlike `treasuy.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
+claimed manually via the `treasury.payout` extrinsic. `treasuy.spendLocal` behavior remains
+unchanged.
 
 :::
 
@@ -66,7 +71,7 @@ that requests 100 DOT from Treasury.
 - Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
-- Choose `treasury` pallet in the "propose" dropdown and the `spend(amount, beneficiary)`call
+- Choose `treasury` pallet in the "propose" dropdown and the `spend_local(amount, beneficiary)`call
 - Enter the DOT amount.
 - Enter the AccountID of the beneficiary (which has a verified on-chain identity).
 - Submit preimage
