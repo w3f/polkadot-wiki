@@ -229,6 +229,20 @@ be possible.
 Once each spend is defined within the batched call, the validFrom field can be utilized to specify
 the "date", or block height, at which each spend will be executed.
 
+### Manually claiming payouts
+
+:::info Spends can expire!
+
+Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
+spend before it expires.
+
+:::
+
+In order to claim the spend, you must manually call the `treasury.payout` extrinsic via a `Signed`
+origin. The ID used is the one found in
+[Polkadot-JS UI > Treasury](https://polkadot.js.org/apps/#/preimages), where the ID of the proposal
+in question would be available:
+
 ### Proposing a "Void" for a Staged Proposal
 
 If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
