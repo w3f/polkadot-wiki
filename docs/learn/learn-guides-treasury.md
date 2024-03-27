@@ -144,7 +144,7 @@ that requests 100 USDT from AssetHub.
 
 Now, let's go by each field one-by-one and fill it out accordingly:
 
-### Specifying asset kind
+### Specifying Asset Kind
 
 `assetKind` refers to the asset to be used, specified via XCM. In short, we need to be able to find:
 
