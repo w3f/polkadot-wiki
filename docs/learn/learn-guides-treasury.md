@@ -182,7 +182,7 @@ issued. For more information on this field, refer to the
 
 The final call should look like the following, where we:
 
-- Specify our asset as **USDT** on **AssetHub**.
+- Specify our asset as **USDT** on **Asset Hub**.
 - Specify the **amount** of **USDT** (100).
 - Specify the beneficiary address.
 - If applicable, use the `validFrom` field to specify a block number upon which the payout becomes
