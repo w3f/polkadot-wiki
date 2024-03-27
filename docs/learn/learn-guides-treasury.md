@@ -54,7 +54,7 @@ and is
 You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and
 `treasury.spend_local`. `treasury.spend_local` (formally called `treasury.spend`) refers to a spend
 of DOT that is locally available, i.e., DOT from the Relay Chain's treasury. `spend` actually
-allows for a spend to be specified in an asset other than DOT, or even DOT on a parachain like
+allows the caller to specify an asset other than DOT, or even assets in other locations, e.g.
 [AssetHub](../general/glossary.md#asset-hub).
 
 Unlike `treasuy.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
