@@ -229,7 +229,7 @@ Using the Utility pallet, one can batch multiple `treasury.spend` calls together
 calls can have their own `validFrom` block heights, which allows for scenarios such as the above to
 be possible.
 
-### Using `validFrom` for a milestone-based proposal
+### Using `validFrom` for a Milestone-Based Proposal
 
 Once each spend is defined within the batched call, the validFrom field can be utilized to specify
 the "date", or block height, at which each spend will be executed.
