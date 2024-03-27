@@ -7,6 +7,14 @@ keywords: [collator, maintain, full node, block candidate]
 slug: ../learn-collator
 ---
 
+:::info
+
+This page provides a general overview of the role of collators' in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
+can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
+
+:::
+
 ## Collators' Role
 
 Collators maintain parachains by collecting parachain transactions from users and producing state
