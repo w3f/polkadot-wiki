@@ -10,13 +10,13 @@ slug: ../build-client-side
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 As with any blockchain, building decentralized applications (dApps) is a significant part of how a
-developer can build on Polkadot. Within the ecosystem, you also hear the term "Unstoppable App", or
-uApp. While the naming isn't too important, what is important is building resilient applications
-using decentralized technology.
+developer can build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 As an application developer, you can compose your front-end apps in a few different ways. Because
-Polkadot and its parachains are all built using Substraste; you can often use the same SDK to
-communicate with Polkadot, a parachain, or any other Substrate-based chain.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its parachains are all built
+using Substraste; you can often use the same SDK to communicate with
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, a parachain, or any other
+Substrate-based chain.
 
 :::note Substrate-based chains use an SS58 encoding for their address formats.
 
@@ -28,23 +28,22 @@ and which prefixes are available.
 
 ## SDKS & Libraries
 
-If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
-ecosystem contains various SDKs to tap into the relay chain and parachains. There are several
-languages already supported -
+If one aims to develop a **dApp** (Decentralized App), the Polkadot ecosystem contains various SDKs
+to tap into the relay chain and parachains. There are several languages already supported -
 [see the tooling page for a detailed overview of different SDKs and libraries that are available.](./build-tools-index.md)
 
 ## Frameworks & Toolkits
 
 For front-end applications, several options exist for interfacing with Substrate-based chains
-(parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
+(parachains, relay chains, etc.) and smart contracts. These will often interact with the RPC of a
 Substrate node:
 
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, { label: 'Polkadot API (under development)', value: 'papi'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink!', value: 'useink'}, {label: 'ink!athon Boilerplate', value: 'inkathon'}, { label: 'Polkadot Cloud', value: 'pcloud'} ]}>
 
-<TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate-based chains via RPC
-calls. It is dynamically generated based on what the Substrate runtime provides regarding metadata.
-Full documentation & examples
+<TabItem value="pjs"> Promise and RxJS APIs around Polkadot, Kusama, and other Substrate-based
+chains via RPC calls. It is dynamically generated based on what the Substrate runtime provides
+regarding metadata. Full documentation & examples
 available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>. </TabItem>
 
 <TabItem value="papi"> The Polkadot API (formerly known as "CAPI") is currently under development,
@@ -71,7 +70,7 @@ codebases. &nbsp;<a href="https://polkadot.cloud/" target="_blank">Learn more he
 
 </Tabs>
 
-## Oracle Options for Polkadot
+## Oracle Options
 
 In the blockchain context, an _oracle_ is a way to bring real-world data onto the blockchain so that
 it can be used by a decentralized application.
