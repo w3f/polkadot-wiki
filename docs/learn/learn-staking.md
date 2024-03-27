@@ -665,7 +665,6 @@ for the FAQs about staking.
 
 :::info Polkadot-JS Guides
 
-If you are an advanced user, see the
-[Polkadot-JS guides about staking](./learn-guides-staking-index).
+If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-staking).
 
 :::

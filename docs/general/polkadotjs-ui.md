@@ -7,14 +7,15 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs-ui
 ---
 
-:::info A Wallet for Developers and Power Users
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
 
-If you need help using the Polkadot-JS UI, you can contact the
-[**Polkadot Support Team**](https://support.polkadot.network/support/home). Please note that this
-wallet is oriented toward developers and power users. Check out treasury-funded wallets on the
-[Wallets Page](./wallets-and-extensions.md) for more user-friendly wallets.
+Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you
+can contact the [Polkadot Support Team](https://support.polkadot.network/support/home). For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
 
-:::
+</div>
 
 The [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) is the native application for
 accessing all features available on Substrate chains as Polkadot and Kusama. The UI is one of the

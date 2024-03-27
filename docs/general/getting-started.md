@@ -280,8 +280,6 @@ and maintain on the Kusama network, please head over to our
   Web3 Foundation has done.
 - [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network;
   can be used for Polkadot, Kusama, or any Substrate-based chain.
-- [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain and
-  Parity Substrate chains.
 - [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.
 - [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of
   Polkadot. (Video)

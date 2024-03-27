@@ -85,9 +85,9 @@ size of the active set and how many validators are waiting in the pool.
 There are a few ways to estimate the minimum stake.
 
 One way can be to navigate to the
-[Polkadot Apps Targets tab](https://ipfs.io/ipns/polkadot.dotapps.io/#/staking/targets). The value
-at the top of the screen saying "Lowest" is the least staked validator. You need at least this
-much + 1 to enter the set.
+[Polkadot Apps Targets tab](https://cloudflare-ipfs.com/ipns/polkadot.dotapps.io/#/staking/targets).
+The value at the top of the screen saying "Lowest" is the least staked validator. You need at least
+this much + 1 to enter the set.
 
 You can also use some tools some to perform estimations.
 
@@ -308,11 +308,11 @@ libp2p and the standard and custom protocols, please see the
 
 ### How does libp2p differ from IPFS?
 
-The [Interplanetary File System](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used
-primarily for storage of files. It allows one to upload a file onto the network and share it with
-its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on
-the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate
-"uses" IPFS since besides sharing the underlying library for networking there is no native
+The [Interplanetary File System](https://ipfs.tech/) (IPFS) is a peer-to-peer hypermedia protocol
+used primarily for storage of files. It allows one to upload a file onto the network and share it
+with its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists
+higher on the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that
+Substrate "uses" IPFS since besides sharing the underlying library for networking there is no native
 integration between the two applications.
 
 ## Kusama

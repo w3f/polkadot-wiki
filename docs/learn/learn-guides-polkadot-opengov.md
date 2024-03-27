@@ -9,6 +9,16 @@ slug: ../learn-guides-polkadot-opengov
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
+
 See [this page](./learn-polkadot-opengov.md) to learn about Polkadot OpenGov.
 
 This guide will instruct token holders how to propose and vote on public referenda using the
@@ -43,7 +53,7 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 2. Click on the "Add preimage" button.
 3. From the _propose_ drop-down field, select `treasury`.
 4. From the unlabeled drop-down field to the right of the _propose_ drop-down field, select
-   `spend(amount, beneficiary)`.
+   `spendLocal(amount, beneficiary)`.
 5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount.
 6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by
    default. Select the beneficiary from the `Id: AccountId` drop-down field.

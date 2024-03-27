@@ -19,19 +19,14 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block
   explorer. Supports dozens of other networks, including Kusama, Westend, and other remote or local
-  endpoints. [Access via IPFS](https://ipfs.io/ipns/dotapps.io)
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related
-  chains. [Repo](https://github.com/polkascan/polkascan-os).
+  endpoints. [Access via IPFS](https://cloudflare-ipfs.com/ipns/dotapps.io)
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
-- [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain
-  explorer.
 - [3xpl.com](https://3xpl.com/polkadot) - Fastest ad-free universal block explorer and JSON API with
   Polkadot support.
 - [Blockchair.com](https://blockchair.com/polkadot) - Universal blockchain explorer and search
   engine with Polkadot support.
-- [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi
-  support across 40+ parachains.
+- [Statescan.io](https://www.statescan.io/) - Polkadot & Kusama Blockchain explorer.
 
 ## Blockchain Analytics
 
@@ -220,9 +215,6 @@ languages exist:
 
 The following tools help you extract and structure data from a Substrate node.
 
-- [Polkascan PRE Harvester](https://github.com/polkascan/polkascan-pre-harvester)
-  ([matching explorer for harvested data](https://github.com/polkascan/polkascan-pre-explorer-gui)) -
-  Transforms raw blockchain data into relational data.
 - [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive) - Can be run
   alongside a Substrate node to archive all blocks, state, and extrinsic data into PostgreSQL
   database.

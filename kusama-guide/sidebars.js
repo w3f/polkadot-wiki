@@ -264,6 +264,22 @@ module.exports = {
             },
             {
               type: "category",
+              label: "Network Participants",
+              description: "Participants in the Kusama Ecosystem.",
+              link: {
+                type: 'generated-index',
+                title: "Participants in the Kusama Ecosystem",
+                description: "Learn about collators, nominators and validators.",
+                slug: '/learn-participants-index',
+              },
+              items: [
+                "learn/learn-collator",
+                "learn/learn-nominator",
+                "learn/learn-validator",
+              ],
+            },
+            {
+              type: "category",
               label: "Components",
               description: 'OpenGov, Treasury, WASM, Runtime Upgrades, and more.',
               link: {
@@ -297,10 +313,8 @@ module.exports = {
               label: "Polkadot-JS",
               description: 'Overview of Polkadot-JS.',
               link: {
-                type: 'generated-index',
-                title: 'Polkadot-JS',
-                description: 'Overview of Polkadot-JS.',
-                slug: '/learn-polkadotjs-index',
+                type: 'doc',
+                id: "learn/learn-polkadotjs",
               },
               items: [
                 "general/polkadotjs",
@@ -334,13 +348,11 @@ module.exports = {
                       label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Polkadot-JS Guides about Staking',
-                        description: 'Polkadot-JS Guides about Staking.',
-                        slug: '/learn-guides-staking-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-staking',
                       },
                       items: [
-                        "learn/learn-guides-staking",
+                        "learn/learn-guides-nominator",
                         "learn/learn-guides-staking-pools",
                       ],
                     },
@@ -353,12 +365,10 @@ module.exports = {
                     {
                       type: "category",
                       label: "Asset Hub Guides",
-                      description: 'Polkadot-JS Guides about the Asset Hub.',
+                      description: 'Polkadot-JS Guides about Asset Hub.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Advanced Guides for Asset Hub',
-                        description: 'Polkadot-JS guides about the Asset Hub.',
-                        slug: '/learn-guides-assets-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-assets',
                       },
                       items: [
                         "learn/learn-guides-assets-create",
@@ -381,22 +391,6 @@ module.exports = {
               },
               items: [
                 "learn/learn-architecture",
-                {
-                  type: "category",
-                  label: "Network Participants",
-                  description: "Participants in the Kusama Ecosystem.",
-                  link: {
-                    type: 'generated-index',
-                    title: "Participants in the Kusama Ecosystem",
-                    description: "Learn about collators, nominators and validators.",
-                    slug: '/learn-participants-index',
-                  },
-                  items: [
-                    "learn/learn-collator",
-                    "learn/learn-nominator",
-                    "learn/learn-validator",
-                  ],
-                },
                 {
                   type: "category",
                   label: "Parachains",

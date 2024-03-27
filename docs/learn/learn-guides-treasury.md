@@ -9,6 +9,16 @@ slug: ../learn-guides-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
+
 See [this page](./learn-polkadot-opengov-treasury.md) to learn about the Polkadot Treasury.
 
 ## Creating a Treasury Proposal
@@ -284,8 +294,8 @@ to the `32 / Small Spender` track, you will need to submit it to the `30 / Small
 
 Briefly, you will need to:
 
-- Create a preimage using the `treasury.Spend` extrinsic and specifying the number of tokens and the
-  beneficiary of the tip
+- Create a preimage using the `treasury.spendLocal` extrinsic and specifying the number of tokens
+  and the beneficiary of the tip
 - Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash
 - Once you started the referendum go to [Polkassembly](https://polkassembly.io/), log in with the
   proposer account and edit the referendum details

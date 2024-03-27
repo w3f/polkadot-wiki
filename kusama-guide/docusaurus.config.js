@@ -84,7 +84,7 @@ module.exports = {
             from: ['/docs/maintain-bug-bounty']
           },
           {
-            to: '/docs/learn-guides-assets-create',
+            to: '/docs/learn-guides-assets',
             from: ['/docs/kusama-statemine']
           },
           {

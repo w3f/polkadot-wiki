@@ -1,10 +1,10 @@
 ---
-id: learn-guides-staking
-title: Polkadot-JS Guides about Staking
-sidebar_label: Staking Guides
-description: Polkadot-JS Guides about Staking.
-keyword: [nominate, stake, staking, claim, rewards, polkadot-js, pools]
-slug: ../learn-guides-staking
+id: learn-polkadotjs
+title: Polkadot-JS
+sidebar_label: Polkadot-JS
+description: Overview of Polkadot-JS.
+keywords: [polkadot-js, polkadot js]
+slug: ../learn-polkadotjs
 ---
 
 import DocCardList from '@theme/DocCardList';
