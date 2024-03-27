@@ -26,8 +26,6 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
   Polkadot support.
 - [Blockchair.com](https://blockchair.com/polkadot) - Universal blockchain explorer and search
   engine with Polkadot support.
-- [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi
-  support across 40+ parachains.
 
 ## Blockchain Analytics
 
