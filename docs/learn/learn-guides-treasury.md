@@ -131,7 +131,7 @@ The following mostly goes over how to utilize the `spend` extrinsic, which, unli
 able to specify assets besides the native asset in other locations, such as
 [Asset Hub](../general/glossary.md#asset-hub).
 
-### Creating a preimage
+### Creating a Preimage
 
 The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
 that requests 100 USDT from AssetHub.
