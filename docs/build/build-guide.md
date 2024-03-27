@@ -303,8 +303,8 @@ a smart contract.
 
 ## Developing a dApp/uApp
 
-If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
-ecosystem contains various SDKs to tap into the relay chain and parachains.
+If one aims to develop a **dApp** (Decentralized App), the Polkadot ecosystem contains various SDKs
+to tap into the relay chain and parachains.
 
 For front-end applications, several options exist for interfacing with Substrate-based chains
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
