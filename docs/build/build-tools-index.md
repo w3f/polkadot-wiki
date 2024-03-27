@@ -26,6 +26,7 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
   Polkadot support.
 - [Blockchair.com](https://blockchair.com/polkadot) - Universal blockchain explorer and search
   engine with Polkadot support.
+- [Statescan.io](https://www.statescan.io/) - Polkadot & Kusama Blockchain explorer.
 
 ## Blockchain Analytics
 
