@@ -234,7 +234,7 @@ be possible.
 Once each spend is defined within the batched call, the validFrom field can be utilized to specify
 the "date", or block height, at which each spend will be executed.
 
-### Manually claiming payouts
+### Manually Claiming Payouts
 
 :::info Spends can expire!
 
