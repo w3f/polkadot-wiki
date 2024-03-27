@@ -176,7 +176,7 @@ address:
 
 The `validFrom` field is optional, and refers to the block height upon which the payout may be
 issued. For more information on this field, refer to the
-[guide below.](#creating-a-staged-proposal-with-validfrom)
+[guide below](#creating-a-staged-proposal-with-validfrom).
 
 ### Summary: Final Call
 
