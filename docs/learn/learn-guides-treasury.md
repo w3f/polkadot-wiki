@@ -151,8 +151,7 @@ Now, let's go through each field one-by-one and fill them in accordingly:
 - The relative location of the asset, and
 - How it is identified within this location.
 
-For this example, we are using USDT, which from the perspective of asking for USDT on the relay
-chain on AssetHub would be:
+For this example, we are using USDT, which from the perspective of the Relay Chain would be:
 
 `Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
 
