@@ -407,6 +407,21 @@ module.exports = {
                     "learn/learn-parachains-faq",
                   ],
                 },
+                "learn/learn-async-backing",
+                {
+                  type: "category",
+                  label: "Agile Coretime",
+                  description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                  link: {
+                    type: 'generated-index',
+                    title: "Agile Coretime",
+                    description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                    slug: '/learn-agile-coretime-index',
+                  },
+                  items: [
+                    "learn/learn-agile-coretime",
+                  ],
+                },
                 "learn/learn-bridges",
                 {
                   type: "category",
@@ -589,7 +604,6 @@ module.exports = {
           items: [
             'learn/learn-spree',
             "learn/learn-parathreads",
-            "learn/learn-async-backing",
             "learn/learn-sassafras",
             "learn/learn-hyperbridge",
           ],

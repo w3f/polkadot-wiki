@@ -406,6 +406,7 @@ module.exports = {
                     "learn/learn-parachains-faq",
                   ],
                 },
+                "learn/learn-async-backing",
                 {
                   type: "category",
                   label: "Agile Coretime",
@@ -621,7 +622,6 @@ module.exports = {
           items: [
             'learn/learn-spree',
             "learn/learn-parathreads",
-            "learn/learn-async-backing",
             "learn/learn-sassafras",
             "learn/learn-hyperbridge",
           ],
