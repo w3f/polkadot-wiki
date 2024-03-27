@@ -384,13 +384,10 @@ module.exports = {
               label: "Architecture",
               description: "Nominators, Validators, Collators, Parachains, and more.",
               link: {
-                type: 'generated-index',
-                title: "Kusama's Architecture",
-                description: "Everything about Kusama's Architecture.",
-                slug: '/learn-architecture-index',
+                type: 'doc',
+                id: 'learn/learn-architecture',
               },
               items: [
-                "learn/learn-architecture",
                 {
                   type: "category",
                   label: "Parachains",

@@ -7,8 +7,12 @@ keywords: [polkadot, components, architecture]
 slug: ../learn-architecture
 ---
 
+import DocCardList from '@theme/DocCardList';
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a heterogeneous multichain with
 shared security and interoperability.
+
+<DocCardList />
 
 ## Relay Chain
 

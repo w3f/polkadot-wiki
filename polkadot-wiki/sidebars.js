@@ -383,13 +383,10 @@ module.exports = {
               label: "Architecture",
               description: "Nominators, Validators, Collators, Parachains, and more.",
               link: {
-                type: 'generated-index',
-                title: "Polkadot's Architecture",
-                description: "Everything about Polkadot's Architecture.",
-                slug: '/learn-architecture-index',
+                type: 'doc',
+                id: 'learn/learn-architecture',
               },
               items: [
-                "learn/learn-architecture",
                 {
                   type: "category",
                   label: "Parachains",
