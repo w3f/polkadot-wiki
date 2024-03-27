@@ -47,7 +47,7 @@ and is
 
 :::
 
-## Creating A Treasury Proposal - Spend Local
+## Creating a Treasury Proposal - Spend Local
 
 :::info "Spend" vs. "Spend Local"
 
