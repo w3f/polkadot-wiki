@@ -14,7 +14,7 @@ developer can build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusa
 
 As an application developer, you can compose your front-end apps in a few different ways. Because
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its parachains are all built
-using Substraste; you can often use the same SDK to communicate with
+using the Polkadot SDK. You can often use the same SDK to communicate with
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, a parachain, or any other
 Substrate-based chain.
 
