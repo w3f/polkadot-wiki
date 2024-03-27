@@ -139,7 +139,7 @@ that requests 100 USDT from AssetHub.
 - Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
 - Select the account to submit the preimage.
-- Choose the`treasury` pallet in the "propose" dropdown and the
+- Choose the `treasury` pallet in the "propose" dropdown and the
   `spend(assetKind, amount, beneficiary, validFrom)` call
 
 Now, let's go by each field one-by-one and fill it out accordingly:
