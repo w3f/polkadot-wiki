@@ -13,8 +13,7 @@ import RPC from "./../../components/RPC-Connection";
 
 This page provides a general overview of the role of validators in
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
-can read the Protocol Overview Section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/).
+can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 :::
 
