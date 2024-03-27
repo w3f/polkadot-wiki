@@ -195,7 +195,7 @@ The next steps are to:
 
 Once this is finished, one may submit a proposal
 [as stated above](#submit-a-treasury-track-referendum). Keep in mind one will also need to
-[provide the decision deposit as well!](#place-a-decision-deposit-for-the-treasury-track-referendum)
+[provide the decision deposit as well](#place-a-decision-deposit-for-the-treasury-track-referendum).
 
 ## Creating a Staged Proposal with `validFrom`
 
@@ -204,7 +204,7 @@ being paid simultaneously, each portion is redeemable at a certain block height.
 specifying each milestone, set at its respective amount and block height at which it becomes
 redeemable.
 
-For example, take the following "staged" proposal which has three milestones, each at 100 DOT, and
+For example, take the following "staged" proposal, which has three milestones, each at 100 DOT, and
 is redeemable at the following block heights. Usually, block heights correspond to a date in the
 future:
 
@@ -213,7 +213,7 @@ future:
 - 500 DOT paid out at block height 4000
 
 Governance can also propose to **void** a staged proposal before it has completed all of its
-pay-outs.
+payouts.
 
 :::info Calculating dates from block heights
 
@@ -222,7 +222,7 @@ certain dates in the future.
 
 :::
 
-### Using `batchAll` for multi-spend proposals
+### Using `batchAll` for Multi-Spend Proposals
 
 Using the Utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
 calls can have their own `validFrom` block heights, which allows for scenarios such as the above to
