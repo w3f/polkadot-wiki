@@ -230,7 +230,7 @@ be possible.
 
 ### Using `validFrom` for a Milestone-Based Proposal
 
-Once each spend is defined within the batched call, the validFrom field can be utilized to specify
+Once each spend is defined within the batched call, the `validFrom` field can be utilized to specify
 the "date", or block height, at which each spend will be executed.
 
 ### Manually Claiming Payouts
