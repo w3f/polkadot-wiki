@@ -1,10 +1,10 @@
 ---
-id: learn-guides-assets
-title: Polkadot-JS Guides about Asset Hub
-sidebar_label: Asset Hub Guides
-description: Polkadot-JS Guides about Asset Hub.
-keywords: [asset hub, assets, statemine, statemint, polkadot-js]
-slug: ../learn-guides-assets
+id: learn-polkadotjs
+title: Polkadot-JS
+sidebar_label: Polkadot-JS
+description: Overview of Polkadot-JS.
+keywords: [polkadot-js, polkadot js]
+slug: ../learn-polkadotjs
 ---
 
 import DocCardList from '@theme/DocCardList';

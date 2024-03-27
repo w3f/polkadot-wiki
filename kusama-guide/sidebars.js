@@ -313,10 +313,8 @@ module.exports = {
               label: "Polkadot-JS",
               description: 'Overview of Polkadot-JS.',
               link: {
-                type: 'generated-index',
-                title: 'Polkadot-JS',
-                description: 'Overview of Polkadot-JS.',
-                slug: '/learn-polkadotjs-index',
+                type: 'doc',
+                id: "learn/learn-polkadotjs",
               },
               items: [
                 "general/polkadotjs",
