@@ -52,9 +52,9 @@ and is
 :::info "Spend" vs. "Spend Local"
 
 You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and
-`treasury.spend_local`. `treasury.spend_local` (formally called `treasury.spend`) refers to a spend
-of DOT that is locally available, i.e., DOT from the Relay Chain's treasury. `spend` actually
-allows the caller to specify an asset other than DOT, or even assets in other locations, e.g.
+`treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of
+DOT that is locally available, i.e., DOT from the Relay Chain's treasury. `spend` actually allows
+the caller to specify an asset other than DOT, or even assets in other locations, e.g.
 [Asset Hub](../general/glossary.md#asset-hub).
 
 Unlike `treasuy.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
@@ -71,7 +71,7 @@ that requests 100 DOT from Treasury.
 - Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
-- Choose `treasury` pallet in the "propose" dropdown and the `spend_local(amount, beneficiary)`call
+- Choose `treasury` pallet in the "propose" dropdown and the `spendLocal(amount, beneficiary)`call
 - Enter the DOT amount.
 - Enter the AccountID of the beneficiary (which has a verified on-chain identity).
 - Submit preimage
@@ -127,7 +127,7 @@ The preimage and decision deposits
 
 ## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
-The following mostly goes over how to utilize the `spend` extrinsic, which, unlike `spend_local`, is
+The following mostly goes over how to utilize the `spend` extrinsic, which, unlike `spendLocal`, is
 able to specify assets besides the native asset in other locations, such as
 [Asset Hub](../general/glossary.md#asset-hub).
 
@@ -155,9 +155,9 @@ For this example, we are using USDT, which from the perspective of the Relay Cha
 
 `Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
 
-First, we specify the location - in this case, Asset Hub (parachain 1,000). `PalletInstance 50` refers to the
-Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of USDT in this instance
-of the Assets pallet.
+First, we specify the location - in this case, Asset Hub (parachain 1,000). `PalletInstance 50`
+refers to the Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of
+USDT in this instance of the Assets pallet.
 
 Here is how the final `assetKind` field should look:
 
@@ -168,9 +168,9 @@ asking for 100 USDT, we put `100000000` as the input for the amount:
 
 ### Specifying the Beneficiary
 
-The beneficiary account will be one on Asset Hub. For this reason, the XCM junction must be specified
-as follows, with one junction (`X1`) and the beneficiary account(`AccountId32`), which is an
-address:
+The beneficiary account will be one on Asset Hub. For this reason, the XCM junction must be
+specified as follows, with one junction (`X1`) and the beneficiary account(`AccountId32`), which is
+an address:
 
 ### Specifying `validFrom` (optional)
 
