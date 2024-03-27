@@ -74,18 +74,18 @@ and management of your accounts, through the mobile app. Unlike browser extensio
 usually can’t connect to third-party web apps. Some mobile wallets provide support for hardware
 wallets through Bluetooth connectivity.
 
-| Wallet                                        | Platforms                                                                                              | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Other features                               |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- | ---------- | -------------- | ---------- | -------------------------------------------- |
-| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | [Fearless Wallet Features](#fearless-wallet) |
-| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                                                           | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | [Nova Wallet features](#nova-wallet)         |
-| [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | [Polkawallet features](#polkawallet)         |
-| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | No             | No         | [SubWallet features](#subwallet)             |
+| Wallet                                        | Platforms                                                                                              | Staking and Nomination Pools | NFTs    | Crowdloans | Ledger support | Governance | Proxy Accounts | Other features                               |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- | ---------- | -------------- | ---------- | ---------- |-------------------------------------------- |
+| [Fearless Wallet](https://fearlesswallet.io/) | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | No         | No |  [Fearless Wallet Features](#fearless-wallet) |
+| [Nova Wallet](https://novawallet.io/)\*       | iOS, Android                                                                                           | **Yes**, **Yes**             | **Yes** | **Yes**    | **Yes**        | **Yes**    | **Yes** | [Nova Wallet features](#nova-wallet)         |
+| [Polkawallet](https://polkawallet.io/)        | iOS, Android                                                                                           | **Yes**, **Yes**             | No      | **Yes**    | No             | **Yes**    | No | [Polkawallet features](#polkawallet)         |
+| [SubWallet](https://subwallet.app/)           | [iOS](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285), [Android](bit.ly/3DE2Dlg) | **Yes**, **Yes**             | **Yes** | **Yes**    | No             | No         | No | [SubWallet features](#subwallet)             |
 
 :::caution \*Note about Nova wallet
 
 There's **another** Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised
 to ensure that they use the correct Nova wallet by downloading the app from their official website:
-[https://novawallet.io/](https://novawallet.io/). Before creating or restoring accounts , it is wise
+[https://novawallet.io/](https://novawallet.io/). Before creating or restoring accounts, it is wise
 to double-check the wallet website URLs through official channels (most projects have it listed on
 their official social media handles).
 
@@ -101,6 +101,15 @@ web apps.
 | Wallet                                  | Platforms        | Staking and Nomination Pools | Liquid Staking | NFTs    | Crowdloans | Ledger support | Governance | Other features                   |
 | --------------------------------------- | ---------------- | ---------------------------- | -------------- | ------- | ---------- | -------------- | ---------- | -------------------------------- |
 | [SubWallet](https://web.subwallet.app/) | Any web browsers | **Yes, Yes**                 | **Yes**        | **Yes** | **Yes**    | **Yes**        | No         | [SubWallet features](#subwallet) |
+
+### Telegram Wallets 
+
+Telegram Wallets are applications running ontop of the Telegram Messenger platform. These wallets typically provide a streamlined user experience and provide an easy way for new users to get started in the Polkadot ecosystem without having to download any new applications.
+
+
+| Wallet                                    | Platforms            | Self-Custodial | Send Tokens to Telegram Username |  Send Tokens to any Address   | Notifications | Other features | 
+| ----------------------------------------- | -------------------- | -------------- | -------------------------------- | ----------------------------- | ------------- | -------------- | 
+| [Telenova](https://t.me/telenova_app_bot) | Mobile, Desktop, Web | **Yes**        | **Yes**                          | **Yes**                       | **Yes**       |[Telenova Features](https://medium.com/novasama-technologies/meet-telenova-your-newbie-friendly-polkadot-wallet-built-into-telegram-5d9e9570d334)      | 
 
 ## Enkrypt
 
@@ -171,3 +180,9 @@ Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypt
 your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
 portfolio tracking. Talisman received funding from Polkadot Treasury
 [[1](https://polkadot.polkassembly.io/treasury/148)].
+
+## Telenova
+
+[Telenova](https://t.me/telenova_app_bot) is a brand new self-custodial Polkadot wallet that runs directly in Telegram providing you with a simple and clean user interface to manage your DOT & KSM tokens. Send crypto to anyone in Telegram, Buy/Sell DOT and KSM tokens, get notified about your balance changes, view your total balance in multiple fiat currencies, secured by your personal Telegram cloud and manual backups.
+
+Use [Telenova](https://t.me/telenova_app_bot) on any of your devices — be it mobile or desktop — within the same Telegram account, and start exploring the Polkadot ecosystem today!
