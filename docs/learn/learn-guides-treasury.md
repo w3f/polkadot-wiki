@@ -127,9 +127,9 @@ The preimage and decision deposits
 
 ## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
-The following mostly goes over how to utilize the `spend` extrinsic, which unlike `spend_local`, is
-able to specify assets besides the native asset on system parachains, such as
-[AssetHub](../general/glossary.md#asset-hub).
+The following mostly goes over how to utilize the `spend` extrinsic, which, unlike `spend_local`, is
+able to specify assets besides the native asset in other locations, such as
+[Asset Hub](../general/glossary.md#asset-hub).
 
 ### Creating a preimage
 
