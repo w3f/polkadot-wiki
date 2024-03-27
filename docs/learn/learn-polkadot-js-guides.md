@@ -7,6 +7,15 @@ keywords: [polkadot-JS, polkadotjs, guides, advanced]
 slug: ../learn-polkadot-js-guides
 ---
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+[Polkadot-JS](../general/polkadotjs-ui.md) is for developers and power users only. For more
+user-friendly tools see the [wallets](./wallets-index), [apps](./apps-index) and
+[dashboard](./dashboards-index) pages.
+
+</div>
+
 :::info
 
 We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
