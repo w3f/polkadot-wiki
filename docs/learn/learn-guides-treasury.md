@@ -161,7 +161,7 @@ of the Assets pallet.
 
 Here is how the final `assetKind` field should look:
 
-### Specifying the amount
+### Specifying the Amount
 
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
 asking for 100 USDT, we put `100000000` as the input for the amount:
