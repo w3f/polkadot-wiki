@@ -166,7 +166,7 @@ Here is how the final `assetKind` field should look:
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
 asking for 100 USDT, we put `100000000` as the input for the amount:
 
-### Specifying beneficiary
+### Specifying the Beneficiary
 
 The beneficiary account will be one on AssetHub. For this reason, the XCM junction must be specified
 as follows, with one junction (`X1`) and the beneficiary account(`AccountID32`), which is an
