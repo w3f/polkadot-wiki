@@ -148,8 +148,8 @@ Now, let's go through each field one-by-one and fill them in accordingly:
 
 `assetKind` refers to the asset to be used, specified via XCM. In short, we need to be able to find:
 
-- Which system parachain the asset lives on
-- Which pallet and asset ID does it correspond to
+- The relative location of the asset, and
+- How it is identified within this location.
 
 For this example, we are using USDT, which from the perspective of asking for USDT on the relay
 chain on AssetHub would be:
