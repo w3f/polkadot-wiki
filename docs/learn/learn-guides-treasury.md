@@ -155,9 +155,9 @@ For this example, we are using USDT, which from the perspective of the Relay Cha
 
 `Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
 
-First, we specify which parachain - in this case, AssetHub (1000). `PalletInstance 50` refers to the
-asset pallet instance on AssetHub. The general index is `1984`, which is the ID of USDT on the asset
-pallet on AssetHub.
+First, we specify the location - in this case, Asset Hub (parachain 1,000). `PalletInstance 50` refers to the
+Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of USDT in this instance
+of the Assets pallet.
 
 Here is how the final `assetKind` field should look:
 
