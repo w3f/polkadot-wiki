@@ -422,7 +422,18 @@ module.exports = {
                     "learn/learn-agile-coretime",
                   ],
                 },
-                "learn/learn-bridges",
+                {
+                  type: "category",
+                  label: "Bridges",
+                  description: "Bridging Polkadot to other Blockchain Protocols.",
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-bridges",
+                  },
+                  items: [
+                    "learn/learn-hyperbridge",
+                  ],
+                },
                 {
                   type: "category",
                   label: "Cross Consensus Messaging (XCM)",
@@ -605,7 +616,6 @@ module.exports = {
             'learn/learn-spree',
             "learn/learn-parathreads",
             "learn/learn-sassafras",
-            "learn/learn-hyperbridge",
           ],
         },
         {
