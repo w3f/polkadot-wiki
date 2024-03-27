@@ -142,7 +142,7 @@ that requests 100 USDT from AssetHub.
 - Choose the `treasury` pallet in the "propose" dropdown and the
   `spend(assetKind, amount, beneficiary, validFrom)` call
 
-Now, let's go by each field one-by-one and fill it out accordingly:
+Now, let's go through each field one-by-one and fill them in accordingly:
 
 ### Specifying Asset Kind
 
