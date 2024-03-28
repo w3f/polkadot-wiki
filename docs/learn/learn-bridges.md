@@ -7,6 +7,8 @@ keywords: [bridges, cross-chain, bridge methods]
 slug: ../learn-bridges
 ---
 
+import DocCardList from '@theme/DocCardList';
+
 A cornerstone technology of blockchain interoperability is the blockchain bridge. Blockchain bridges
 are ways for two economically sovereign and technologically diverse chains to communicate with each
 other. Bridge designs come in a variety of flavors ranging from centralised and trusted to more
@@ -26,6 +28,8 @@ interoperability technology that allows parachains to communicate trustlessly, p
 dedicated [cross consensus](learn-xcm.md) page on the Wiki.
 
 :::
+
+<DocCardList />
 
 ## Bridging Methods
 
