@@ -7,14 +7,6 @@ keywords: [build, parachain, develop, implement, PDK]
 slug: ../build-pdk
 ---
 
-### Your Go-To Overview for Developing a Parachain
-
-This guide will cover the motivation to build a parachain or parathread, the tools available to
-facilitate this, the steps to test, and finally, how to launch your network on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} .
-
-### Why Create a Parachain?
-
 Parachains are connected to and secured by the Relay Chain. They benefit from the _pooled security_,
 _thought-through governance_, and overall _scalability_ of the heterogeneous sharding approach of
 the network. Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its

@@ -303,8 +303,8 @@ a smart contract.
 
 ## Developing a dApp/uApp
 
-If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
-ecosystem contains various SDKs to tap into the relay chain and parachains.
+If one aims to develop a **dApp** (Decentralized App), the Polkadot ecosystem contains various SDKs
+to tap into the relay chain and parachains.
 
 For front-end applications, several options exist for interfacing with Substrate-based chains
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
@@ -314,3 +314,15 @@ Substrate node.
 
 For a complete list of tools, please take a look here:
 [Tools, APIs, and Languages](build-open-source.md)
+
+## Resources
+
+- [System (Common Good) Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+- [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
+- [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
+- [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
+- [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
+- [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
+- [Polkadot Parachain Slots](https://polkadot.network/polkadot-parachain-slots/)
+- [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
+- [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)
