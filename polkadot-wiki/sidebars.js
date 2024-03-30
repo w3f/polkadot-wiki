@@ -421,6 +421,8 @@ module.exports = {
                   },
                   items: [
                     "learn/learn-agile-coretime",
+                    "learn/learn-guides-agile-coretime",
+                    "learn/learn-agile-coretime-parachains",
                   ],
                 },
                 "learn/learn-bridges",

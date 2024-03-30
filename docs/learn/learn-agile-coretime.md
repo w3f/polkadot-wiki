@@ -1,7 +1,7 @@
 ---
 id: learn-agile-coretime
 title: Introduction to Agile Coretime
-sidebar_label: Agile Coretime
+sidebar_label: Agile Coretime Intro
 description: Introduction to Agile Coretime and its terminology
 keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../learn-agile-coretime
