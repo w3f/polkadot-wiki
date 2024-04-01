@@ -7,48 +7,39 @@ keywords: [Assets, DEX, Exchange, Pools, Tokens]
 slug: ../learn-guides-asset-conversion
 ---
 
-## Fee Payment in Any Asset - Wallets
+## Create a Liquidity Pool
 
-Without Asset Conversion pallet, only DOT and sufficient assets can be used for paying
-transaction fees. With the Asset Conversion pallet deployed, it is possible for Wallets
-to enable users to pay transaction fees through any arbitrary asset that has been made
-available in pools with either DOT or sufficient assets. More specifically, this functionality 
-is enabled through [Asset Conversion Transaction Payment Pallet](https://github.com/paritytech/polkadot-sdk/tree/cdc8d197e6d487ef54f7e16767b5c1ab041c8b10/substrate/frame/transaction-payment/asset-conversion-tx-payment),
-allowing runtimes that include it to pay for transactions in assets other than the native token of 
-the chain.
+The `create_pool` function is used to create an empty liquidity pool along with a new `lp_token`
+asset. This asset's ID is announced in the `Event::PoolCreated` event. After creating a pool,
+liquidity can be added to it via the `Pallet::add_liquidity` function.
 
-:::caution Handling Pools with Low Liquidity
+## Liquidity Provision
 
-The wallets and UIs should ensure that the user is prompted with the necessary warnings,
-such that they do not accidentally spend all the funds to perform a swap on a pool with no or
-low liquidity.
+The `add_liquidity` function allows users to provide liquidity to a pool composed of two assets. It
+requires specifying the desired amounts for both assets and minimum acceptable amounts. The function
+calculates an optimal contribution of assets, which may differ from the desired amounts but will not
+be less than the specified minimums. Liquidity providers receive liquidity tokens representing their
+share of the pool.
 
-:::
+## Withdraw Provided Liquidity
 
-## Fee Payment in Any Asset - Parachains
+The `remove_liquidity` function allows users to withdraw their provided liquidity from a pool,
+receiving back the original assets. When calling this function, users specify the amount of
+liquidity tokens (representing their share in the pool) they wish to burn. They also set minimum
+acceptable amounts for the assets they expect to receive back. This mechanism ensures users can
+control the minimum value they receive, protecting against unfavourable price movements during the
+withdrawal process​.
 
+## Swap Assets
 
+The `swap_exact_tokens_for_tokens` function allows users to swap a precise amount of one asset for
+another within a specified liquidity pool, ensuring the user receives at least a minimum expected
+amount of the second asset in return. This function aims to provide predictability in trading
+outcomes, allowing users to manage their asset exchanges with confidence regarding the minimum
+return.
 
-## Creation of Pools with Foreign Assets - Parachains
-
-Assets pallet uses XCM MultiLocations to represent assets, and their corresponding origins to 
-control them. 
-
-One of the pain points of integrating parachain tokens natively on wallets and exchanges is that 
-they require running individual parachain infrastructure like full nodes to process deposits, and 
-require additional code to handle withdrawals because they need to be able to construct and 
-broadcast transactions on each individual parachain. These parachains could use different balances 
-pallets or order them differently. When Polkadot hosts hundreds of parachains (and 
-possibly thousands of threads), this becomes a huge burden in terms of network support. This 
-is in contrast to for example adding support for an additional ERC20 token; the marginal effort is 
-very small since an Ethereum node already serves all the data they need.
-
-With support for these assets on AssetHub, exchanges/custodians could just monitor one chain for 
-deposits (applications and UIs would need to give the option to transfer to AssetHub). For 
-withdrawals, users could choose to withdraw to their address on AssetHub. There are two user 
-experience bonuses here:
-
-- For the exchange/custodian, they only need to transact on one parachain and can access every other without any infrastructure lift.
-- For the user, they never actually need to “see” AssetHub. It’s entirely abstracted away behind either the parachain wallet/application or the exchange/custodian.
-
-
+On the other hand, the `swap_tokens_for_exact_tokens` function allows users to trade a flexible
+amount of one asset to precisely obtain a specified amount of another asset. It ensures that users
+do not spend more than a predetermined maximum amount of the initial asset to acquire the exact
+target amount of the second asset, providing a way to control the cost of the transaction while
+achieving the desired outcome.
