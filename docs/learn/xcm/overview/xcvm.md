@@ -18,7 +18,7 @@ XCVM programs.
 
 Like XCM, the XCVM is also a specification. The implementation that will be used in this
 documentation is the
-[xcm-executor](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-executor), provided by
+[xcm-executor](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-executor), provided by
 Parity. The executor is highly configurable. For more information on the extensive configuration
 options available, see the [Config Deep Dive](../executor_config/config.md) chapter.
 

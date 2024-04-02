@@ -30,7 +30,7 @@ result, the addresses across Substrate-based chains are compatible if the format
 correctly.
 
 As of Runtime 28, the default [address format](learn-accounts.md##address-format) is the
-[`MultiAddress`](https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/multiaddress.rs)
+[`MultiAddress`](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/primitives/runtime/src/multiaddress.rs)
 type.
 
 This `enum` is a multi-format address wrapper for on-chain accounts and allows us to describe
@@ -437,7 +437,7 @@ For keeping the index permanently, you can follow up with a `freeze` extrinsic a
 
 ## Creating Accounts with Subkey
 
-[Subkey](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey) is recommended for
+[Subkey](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/bin/utils/subkey) is recommended for
 technically advanced users comfortable with the command line and compiling Rust code. Subkey lets
 you generate keys on any device that can compile the code. Subkey may also be useful for automated
 account generation using an air-gapped device. It is not recommended for general users. Follow the

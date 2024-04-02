@@ -569,9 +569,9 @@ give time for this off-chain worker to run, staking commands (bond, nominate, et
 in the last quarter of each era.
 
 These optimizations will not be covered in-depth on this page. For more details, you can view the
-[Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs),
+[Rust implementation of elections in Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/elections-phragmen/src/lib.rs),
 the
-[Rust implementation of staking in Substrate](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs),
+[Rust implementation of staking in Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/staking/src/lib.rs),
 or the `seqPhragménwithpostprocessing` method in the
 [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would
 like to dive even more deeply, you can review the
@@ -762,7 +762,7 @@ size _k_:
   An overview of Nominated Proof of Stake as its applied to Polkadot.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
   implementations of Simple and Complicated Phragmén methods.
-- [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs) -
+- [Substrate Implementation](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/staking/src/lib.rs) -
   Rust implementation used in Substrate.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.

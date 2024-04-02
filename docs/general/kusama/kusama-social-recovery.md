@@ -168,5 +168,5 @@ either go through [governance](../../learn/learn-polkadot-opengov.md).
 
 ## Further Reading
 
-- [Substrate's Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/src/lib.rs) -
+- [Substrate's Recovery Pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/recovery/src/lib.rs) -
   The Rust implementation of the recovery pallet.

@@ -115,15 +115,15 @@ the bridge between Westend and Rococo deployment.
 
 Runtime differences (e.g. existential and multisignature deposit sizes) between the different
 networks can be found by doing a `diff` between the `src/lib.rs` of the repositories. For example,
-to compare the Polkadot and Westend runtimes:
+to compare the Polkadot and Kusama runtimes:
 
-- `git clone https://github.com/paritytech/polkadot && cd polkadot/runtime`
+- `git clone https://github.com/polkadot-fellows/runtimes && cd runtimes/relay`
 - `ls` - show the available runtimes
-- `diff polkadot/src/lib.rs westend/src/lib.rs`
+- `diff polkadot/src/lib.rs kusama/src/lib.rs`
 
 You can also paste the runtimes
-([Polkadot](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs),
-[Westend](https://github.com/paritytech/polkadot/blob/master/runtime/westend/src/lib.rs)) into a
+([Polkadot](https://github.com/polkadot-fellows/runtimes/blob/main/relay/polkadot/src/lib.rs),
+[Kusama](https://github.com/polkadot-fellows/runtimes/blob/main/relay/kusama/src/lib.rs)) into a
 web-based diff tool like [Diffchecker](https://www.diffchecker.com/) if you're not comfortable with
 the CLI.
 

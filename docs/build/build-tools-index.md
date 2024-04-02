@@ -58,7 +58,7 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## Clients
 
-- [Polkadot](https://github.com/paritytech/polkadot) - The original Rust implementation of the
+- [Polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) - The original Rust implementation of the
   Polkadot Host.
 - [Kagome](https://github.com/soramitsu/kagome) - A C++ Polkadot implementation of the Polkadot Host
   developed by [Soramitsu](https://github.com/soramitsu).
@@ -69,7 +69,7 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## Tools
 
-- [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in
+- [Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) - Blockchain development platform written in
   Rust. The Rust version of the Polkadot Host is being built with Substrate.
 - [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and tutorials for
   building a blockchain using Substrate.
