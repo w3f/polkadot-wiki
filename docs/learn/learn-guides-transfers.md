@@ -268,7 +268,7 @@ be checked by checking `session.nextKeys` in the chain state for an existing key
 ### Existing Recovery Info
 
 {{ polkadot: Currently, Polkadot does not use the
-[Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
+[Recovery Pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/recovery/), so this is
 probably not the reason for your tokens having existing references. :polkadot }}
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
@@ -277,5 +277,5 @@ chain state. This can be found under `Developer > Chain state` in [PolkadotJS Ap
 ### Existing Non-Native Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
-[Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
+[Assets Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/assets), so this is
 probably not the reason for your tokens having existing references.

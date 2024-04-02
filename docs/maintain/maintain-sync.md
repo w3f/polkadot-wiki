@@ -169,8 +169,8 @@ value: 'linux-package'} ]}>
 
 - Once Rust is configured, run the following command to clone and build the Polkadot code:
   ```bash
-  git clone https://github.com/paritytech/polkadot polkadot
-  cd polkadot
+  git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
+  cd polkadot-sdk
   ./scripts/init.sh
   cargo build --release
   ```
@@ -189,12 +189,12 @@ value: 'linux-package'} ]}>
 - Install [Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (same webpage).
 
 - Determine the latest version of the
-  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+  [Polkadot binary](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/releases).
 - Download the correct Polkadot binary within Ubuntu by running the following command. Replace
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
   ```bash
-  curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot
+  curl -sL https://github.com/paritytech/polkadot-sdk/releases/download/*VERSION*/polkadot -o polkadot
   ```
 
 - Then, run the following:
@@ -213,7 +213,7 @@ value: 'linux-package'} ]}>
 <TabItem value="linux-standalone">
 
 - Determine the latest version of the
-  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+  [Polkadot binary](https://github.com/paritytech/polkadot-sdk/releases).
 
   :::info
 
@@ -228,7 +228,7 @@ value: 'linux-package'} ]}>
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
   ```bash
-  curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot
+  curl -sL https://github.com/paritytech/polkadot-sdk/releases/download/*VERSION*/polkadot -o polkadot
   ```
 
 - Run the following: `sudo chmod +x polkadot`
@@ -341,12 +341,12 @@ cargo 1.41.0 (626f0f40e 2019-12-03)
 
 ## Clone and Build
 
-The [paritytech/polkadot](https://github.com/paritytech/polkadot) repo's master branch contains the
+The [paritytech/polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) repo's master branch contains the
 latest Polkadot code.
 
 ```bash
-git clone https://github.com/paritytech/polkadot polkadot
-cd polkadot
+git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
+cd polkadot-sdk
 ./scripts/init.sh
 cargo build --release
 ```
@@ -355,9 +355,9 @@ Alternatively, if you wish to use a specific release, you can check out a specif
 the example below):
 
 ```bash
-git clone https://github.com/paritytech/polkadot polkadot
-cd polkadot
-git checkout tags/v0.8.3
+git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
+cd polkadot-sdk
+git checkout tags/polkadot-v1.9.0
 ./scripts/init.sh
 cargo build --release
 ```

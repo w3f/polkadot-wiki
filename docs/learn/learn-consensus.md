@@ -177,7 +177,7 @@ for a full description of the protocol.
 ### Implementation
 
 The
-[Substrate implementation of GRANDPA](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)
+[Substrate implementation of GRANDPA](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs)
 is part of Substrate Frame.
 
 ## Bridging: BEEFY
@@ -251,7 +251,7 @@ The two main differences between GRANDPA and Casper FFG are:
   description of the GRANDPA finality gadget. Contains formal proofs of the algorithm.
 - [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference
   implementation and the accompanying
-  [Substrate pallet](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs).
+  [Substrate pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs).
 - [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) -
   An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama,
   with Bill Laboon.

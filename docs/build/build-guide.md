@@ -16,7 +16,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import Doc
 goals: providing **shared security** among all connected parachains and allowing all connected
 chains to **interoperate** by using [XCM](../learn/learn-xcm.md). With the advent of
 [PDKs](../build/build-parachains.md#parachain-development-kit) like
-[Substrate](https://substrate.io/) and [Cumulus](https://github.com/paritytech/cumulus), the time it
+[Substrate](https://substrate.io/) and [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus), the time it
 takes to develop and launch a new chain has dropped significantly. While before, it would take years
 to launch a new chain, now it may only take weeks or even days, depending on your goals.
 
@@ -186,7 +186,7 @@ comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
-Diving further into building parachains, [Cumulus](https://github.com/paritytech/cumulus) is another
+Diving further into building parachains, [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is another
 set of tools that aid in building a parachain-ready blockchain for Polkadot or Kusama. Cumulus
 utilizes FRAME and Substrate to create an easy way to build your first parachain. It ensures the
 chain follows the Parachain Protocol.

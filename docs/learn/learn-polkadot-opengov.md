@@ -597,7 +597,7 @@ For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, 
 
 ## Resources
 
-- [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+- [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
 - [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
 - [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io)
 - [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io)
