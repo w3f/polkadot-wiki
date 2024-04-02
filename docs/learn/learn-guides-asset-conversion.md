@@ -32,11 +32,15 @@ withdrawal process​.
 
 ## Swap Assets
 
+### Swap from an exact amount of Tokens
+
 The `swap_exact_tokens_for_tokens` function allows users to swap a precise amount of one asset for
 another within a specified liquidity pool, ensuring the user receives at least a minimum expected
 amount of the second asset in return. This function aims to provide predictability in trading
 outcomes, allowing users to manage their asset exchanges with confidence regarding the minimum
 return.
+
+### Swap to an exact amount of Tokens
 
 On the other hand, the `swap_tokens_for_exact_tokens` function allows users to trade a flexible
 amount of one asset to precisely obtain a specified amount of another asset. It ensures that users
