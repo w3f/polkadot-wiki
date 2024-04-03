@@ -179,7 +179,7 @@ asking for 100 USDT, we put `100000000` as the input for the amount:
 ### Specifying the Beneficiary
 
 The beneficiary account will be one on Asset Hub. For this reason, the XCM junction must be
-specified as follows, with one junction (`X1`) and the beneficiary account(`AccountId32`), which is
+specified as follows, with one junction (`X1`) and the beneficiary account (`AccountId32`), which is
 an address:
 
 ### Specifying `validFrom` (optional)
