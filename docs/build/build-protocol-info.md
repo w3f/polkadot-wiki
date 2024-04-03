@@ -125,11 +125,11 @@ is separate to that of the Relay Chain ED.
 
 :::
 
-:::note Existential deposit for the Asset Hub
+:::note Existential deposit for the AssetHub
 
-The Asset Hub parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT) as
+The AssetHub parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT) as
 well as lower transaction fees. It is highly recommended to handle balance transfers on the Asset
-Hub. Asset Hub integration is discussed in the next page of the guide.
+Hub. AssetHub integration is discussed in the next page of the guide.
 
 :::
 

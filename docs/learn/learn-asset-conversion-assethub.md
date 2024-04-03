@@ -22,7 +22,7 @@ for pools with arbitrary asset pairs is not allowed.
 
 :::
 
-Asset Conversion on Asset Hub enables fee payment in any asset, given it has a liquidity pool, such
+Asset Conversion on AssetHub enables fee payment in any asset, given it has a liquidity pool, such
 that the fee handler (in this case, a Collator) only receives the native asset
 ({{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} ).
 

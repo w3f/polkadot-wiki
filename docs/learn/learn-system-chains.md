@@ -36,18 +36,18 @@ so "System Parachains" is preferred now. A discussion on this evolution can be f
 
 ## Existing System Chains
 
-### Asset Hub
+### AssetHub
 
-The [Asset Hub](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) on both Polkadot and Kusama are
-the first system parachains.
+The [AssetHub](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) on both
+Polkadot and Kusama are the first system parachains.
 
-The Asset Hub is an asset portal for the entire network. It helps asset creators (e.g. reserve
-backed stablecoin issuers) to track the total issuance of their asset in the
+The AssetHub is an asset portal for the entire network. It helps asset creators (e.g. reserve backed
+stablecoin issuers) to track the total issuance of their asset in the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, including amounts that have
 been transferred to other parachains. It is also the point where they can transact, to mint and
 burn, to manage the on-chain asset.
 
-The Asset Hub also supports non-fungible assets (NFTs) via the
+The AssetHub also supports non-fungible assets (NFTs) via the
 [Uniques pallet](https://polkadot.js.org/docs/substrate/extrinsics#uniques) and the new
 [nfts pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts). For more information about
 NFTs see the [dedicated wiki page](./learn-nft-pallets.md).
@@ -56,7 +56,7 @@ This logic for asset management is not encoded in smart contracts, but rather di
 runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and deposits
 are about 1/10th of their respective value on the Relay Chain.
 
-These low fee levels mean that the Asset Hub is well suited for handling
+These low fee levels mean that the AssetHub is well suited for handling
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balances and transfers as well as managing
 on-chain assets. For example, the existential deposit for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
@@ -65,7 +65,7 @@ on-chain assets. For example, the existential deposit for
 while only
 {{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>  :polkadot }}
 {{ kusama: <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>  :kusama }}
-on the Asset Hub.
+on the AssetHub.
 
 ### Encointer
 

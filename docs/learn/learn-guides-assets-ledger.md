@@ -1,9 +1,9 @@
 ---
 id: learn-guides-assets-ledger
-title: Polkadot-JS Guides about Asset Hub Ledger App
-sidebar_label: Asset Hub Ledger Guides
-description: Polkadot-JS Guides about Ledger and the Asset Hub.
-keywords: [asset hub, ledger, assets, statemine, statemint, polkadot-js]
+title: Polkadot-JS Guides about AssetHub Ledger App
+sidebar_label: AssetHub Ledger Guides
+description: Polkadot-JS Guides about Ledger and the AssetHub.
+keywords: [AssetHub, ledger, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-ledger
 ---
 
@@ -24,11 +24,11 @@ like Brave, Chrome or Edge.
 
 :::
 
-The Asset Hub has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
+The AssetHub has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
 Nano S and Ledger Nano X devices. The Ledger devices are hardware wallets that keep your private key
 secured on a physical device that does not get directly exposed to your computer or the internet.
 
-The Statemine application allows you to manage your KSM and other tokens on the Asset Hub parachain.
+The Statemine application allows you to manage your KSM and other tokens on the AssetHub parachain.
 It supports most of the available transaction types of the network in the XL version of the app
 (details [below](#installing-the-ledger-application)).
 
@@ -90,8 +90,8 @@ your account on Polkadot-JS UI as described below.
 :::note
 
 These instructions will guide you on how to add a Ledger account that's **only** available on the
-Asset Hub. If you want to use the same Ledger account on both
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} **and** the Asset Hub check the
+AssetHub. If you want to use the same Ledger account on both
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} **and** the AssetHub check the
 instructions [below](#working-on-relay-chains-and-asset-hubs).
 
 :::
@@ -134,20 +134,20 @@ You should now be able to scroll down and find a new account on the page with th
 
 ![Displaying the Ledger account in the list](../assets/ledger/ledger-balance.png)
 
-You can now use this account to interact with the Asset Hub on
+You can now use this account to interact with the AssetHub on
 [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer) and it will prompt your ledger for
 confirmation when you initiate a transaction.
 
-### Working on Relay Chains and Asset Hubs
+### Working on Relay Chains and AssetHubs
 
 Polkadot and Kusama accounts from the [extension](../general/polkadotjs.md#polkadot-js-extension)
-will show up in the Asset Hub, even if they're not set to be used on all chains. The Asset Hub is a
+will show up in the AssetHub, even if they're not set to be used on all chains. The AssetHub is a
 system parachains on {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} and uses
 {{ polkadot: DOT :polkadot}}{{ kusama: KSM :kusama}} as native token. Hence, accounts on a Relay
 Chain are also available on each Relay's system chains. What this means is that if you already have
 a {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} Ledger account configured on the
-extension, that account will also be available on the Asset Hub. But the opposite is not the case:
-an account created specifically on the Asset Hub won't show up on
+extension, that account will also be available on the AssetHub. But the opposite is not the case: an
+account created specifically on the AssetHub won't show up on
 {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}}.
 
 **However**, as mentioned above, the
@@ -167,7 +167,7 @@ To remove an account from the Polkadot extension:
 :::info
 
 As mentioned above, a {{ polkadot: Polkadot :polkadot}}{{ kusama: Kusama :kusama}} Ledger account
-will also be available on the Asset Hub.
+will also be available on the AssetHub.
 
 :::
 
@@ -197,8 +197,8 @@ method is to use [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
 
 :::info Transfers
 
-Transferring in this way sends tokens to another account on the Asset Hub parachain. If you need to
-transfer KSM between the Asset Hub and
+Transferring in this way sends tokens to another account on the AssetHub parachain. If you need to
+transfer KSM between the AssetHub and
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, see the [Teleporting](#teleporting)
 section below.
 
@@ -235,9 +235,9 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-:::note Your Asset Hub address is the same as your Relay Chain address
+:::note Your AssetHub address is the same as your Relay Chain address
 
-Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub
+Make sure that you clarify to the sender that you wish to receive your tokens on the AssetHub
 parachain, otherwise (if you're receiving {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 tokens) they could be sent on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 chain.

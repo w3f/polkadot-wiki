@@ -73,10 +73,10 @@ Check that your node is connected by viewing it on
 Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-westend-testnet) to get
 Westies (WND) tokens.
 
-### Westmint or Westend Asset Hub
+### Westmint or Westend AssetHub
 
 Westmint or Westend
-[Asset Hub](https://wiki.polkadot.network/docs/learn-guides-assets-create#creating-assets-on-the-asset-hub)
+[AssetHub](https://wiki.polkadot.network/docs/learn-guides-assets-create#creating-assets-on-the-asset-hub)
 is a system parachain on Westend network.
 
 #### Westmint Faucet

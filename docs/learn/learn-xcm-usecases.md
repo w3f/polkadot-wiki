@@ -20,7 +20,7 @@ the XCM format can be used to construct many more combinations to suit the use c
 ### Example Use-Cases
 
 - Request for specific operations to occur on the recipient system such as governance voting.
-- Enables single use-case chains e.g. the [Asset Hub](./learn-guides-assets-create.md) as asset
+- Enables single use-case chains e.g. the [AssetHub](./learn-guides-assets-create.md) as asset
   parachains
 - Optionally include payment of fees on a target network for requested operation.
 - Provide methods for various asset transfer models:

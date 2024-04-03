@@ -19,7 +19,7 @@ potentially receive staking rewards in return for doing so.
 
 The fourth (now defunct) proof of concept (PoC-4) [testnet](#testnet) for Polkadot.
 
-## Asset Hub
+## AssetHub
 
 A system parachain used for asset management.
 

@@ -1,9 +1,9 @@
 ---
 id: learn-guides-assets
-title: Polkadot-JS Guides about Asset Hub
-sidebar_label: Asset Hub Guides
-description: Polkadot-JS Guides about Asset Hub.
-keywords: [asset hub, assets, statemine, statemint, polkadot-js]
+title: Polkadot-JS Guides about AssetHub
+sidebar_label: AssetHub Guides
+description: Polkadot-JS Guides about AssetHub.
+keywords: [AssetHub, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets
 ---
 

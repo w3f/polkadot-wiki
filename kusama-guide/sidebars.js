@@ -253,7 +253,7 @@ module.exports = {
             {
               type: "category",
               label: "Tokens and Assets",
-              description: 'DOT Token, Asset Hub, and Teleports.',
+              description: 'DOT Token, AssetHub, and Teleports.',
               link: {
                 type: 'generated-index',
                 title: 'Tokens and Assets',
@@ -328,7 +328,7 @@ module.exports = {
                 {
                   type: "category",
                   label: "Polkadot-JS Guides",
-                  description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
+                  description: 'Polkadot-JS Guides about Staking, AssetHub, Vault App, and more.',
                   link: {
                     type: 'doc',
                     id: "learn/learn-polkadot-js-guides",
@@ -370,8 +370,8 @@ module.exports = {
                     "learn/learn-guides-vault",
                     {
                       type: "category",
-                      label: "Asset Hub Guides",
-                      description: 'Polkadot-JS Guides about Asset Hub.',
+                      label: "AssetHub Guides",
+                      description: 'Polkadot-JS Guides about AssetHub.',
                       link: {
                         type: 'doc',
                         id: 'learn/learn-guides-assets',

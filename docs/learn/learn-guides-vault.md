@@ -70,13 +70,13 @@ Spec and Metadata into a portal).
 
 To add more chains on the Vault app you can follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-specs).
-In this example we will add the [Asset Hub](../learn/learn-assets.md) system parachain. Briefly,
-fork the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
+In this example we will add the [AssetHub](../learn/learn-assets.md) system parachain. Briefly, fork
+the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
 terminal within the `/generate_message` folder and type the following:
 
 `cargo run add-specs -d -u wss://kusama-asset-hub-rpc.polkadot.io --encryption sr25519`
 
-where `wss://kusama-asset.hub-rpc.polkadot.io` is the Parity RPC endpoint for the Asset Hub on
+where `wss://kusama-asset.hub-rpc.polkadot.io` is the Parity RPC endpoint for the AssetHub on
 Kusama. This will create the file `sign_me_add_specs_statemine_sr25510` under the
 `files/in_progress` folder. See
 {{ polkadot: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts) for a list of all endpoints listed in the Polkadot-JS UI. :polkadot }}{{ kusama: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts) for a list of all endpoints listed in the Polkadot-JS UI. :kusama}}
@@ -113,20 +113,19 @@ is the signature generated in the previous step. Running the code above will cre
 
 ### Metadata Updates
 
-Similarly to what we did for the chain specification, we now generate and sign the Asset Hub
+Similarly to what we did for the chain specification, we now generate and sign the AssetHub
 metadata.
 
 #### Metadata QR Fountain
 
-To update the chain metadata for the Asset Hub specs on the Vault app you can follow the
-instructions
+To update the chain metadata for the AssetHub specs on the Vault app you can follow the instructions
 [here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-metadata).
 Briefly, in the Parity Signer repository, start the terminal within the `/generate_message` folder
 and type the following:
 
 `cargo run load-metadata -d -u wss://kusama-asset-hub-rpc.polkadot.io`
 
-where `wss://kusama-asset-hub-rpc.polkadot.io` is the Parity RPC endpoint for the Asset Hub on
+where `wss://kusama-asset-hub-rpc.polkadot.io` is the Parity RPC endpoint for the AssetHub on
 Kusama. This will create the file `sign_me_load_metadata_statemineV9370` under the
 `files/in_progress` folder. Note that for future metadata updates the file name will change as the
 version at the time of writing was `V9370`.
@@ -179,9 +178,9 @@ is the signature generated in the previous step. Running the code above will cre
 ### Add Chain & Update Metadata
 
 You can open `add_specs_statemine-sr25519` on your browser (just drag the file on an open tab). This
-is a .png file containing the QR code to add the Asset Hub chain specification into the Vault App.
+is a .png file containing the QR code to add the AssetHub chain specification into the Vault App.
 You can do the same with the `load_metadata_statemineV9370`. This is a .apng file containing the QR
-code fountain to do the metadata update for the Asset Hub on Kusama.
+code fountain to do the metadata update for the AssetHub on Kusama.
 
 ### Metadata Portal
 
@@ -199,7 +198,7 @@ modify the following fields of the `config.toml` file:
 ```
 [[chains]]
 name = "Statemine"
-title = "Kusama Asset Hub"
+title = "Kusama AssetHub"
 rpc_endpoint = "wss://kusama-asset-hub-rpc.polkadot.io"
 color = "#f27230"
 

@@ -9,14 +9,14 @@ slug: ../build-integrate-assets
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain does not natively
 support assets beyond {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. This functionality
-exists in parachains. On both Polkadot and Kusama, this parachain is called Asset Hub.
+exists in parachains. On both Polkadot and Kusama, this parachain is called AssetHub.
 
-The Asset Hub provides a first-class interface for creating, managing, and using fungible and
+The AssetHub provides a first-class interface for creating, managing, and using fungible and
 non-fungible assets. The fungible interface is similar to Ethereum's ERC-20 standard. However, the
 data structures and stateful operations are encoded directly into the chain's runtime, making
 operations fast and fee-efficient.
 
-Beyond merely supporting assets, integrating an Asset Hub into your systems has several benefits for
+Beyond merely supporting assets, integrating an AssetHub into your systems has several benefits for
 infrastructure providers and users:
 
 - Support for on-chain assets.
@@ -26,11 +26,11 @@ infrastructure providers and users:
 - Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT to exist
   on-chain or pay fees.
 
-The Asset Hub will use DOT as its native currency. Users can transfer DOT from the Relay Chain into
-the Asset Hub and use it natively. The Relay Chain will also accept DOT transfers from the Asset Hub
+The AssetHub will use DOT as its native currency. Users can transfer DOT from the Relay Chain into
+the AssetHub and use it natively. The Relay Chain will also accept DOT transfers from the AssetHub
 back to the Relay Chain for staking, governance, or any other activity.
 
-Using the Asset Hub for DOT/KSM balance transfers will be much more efficient than the Relay Chain
+Using the AssetHub for DOT/KSM balance transfers will be much more efficient than the Relay Chain
 and is highly recommended. Until domain-specific parachains are built, the Relay Chain will still
 need to be used for staking and governance.
 
@@ -71,13 +71,13 @@ Asset transfers will result in an `assets.transferred` event. The same instructi
 transfers.
 
 Note that you can use the same addresses (except
-[pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that
-you use on the Relay Chain. The SS58 encodings are the same; only the chain information (genesis
-hash, etc.) will change on transaction construction.
+[pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy)!) on the AssetHub that you
+use on the Relay Chain. The SS58 encodings are the same; only the chain information (genesis hash,
+etc.) will change on transaction construction.
 
 ## Integration
 
-The Asset Hub will come with the same tooling suite that Parity Technologies provides for the Relay
+The AssetHub will come with the same tooling suite that Parity Technologies provides for the Relay
 Chain, namely [API Sidecar](https://github.com/paritytech/substrate-api-sidecar) and
 [TxWrapper Polkadot](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-polkadot),
 as well as the [Asset Transfer API](https://github.com/paritytech/asset-transfer-api). If you have a
@@ -86,16 +86,16 @@ issue so a developer can help.
 
 ### Parachain Node
 
-Using the Asset Hub will require running a parachain node to sync the chain. This is very similar to
+Using the AssetHub will require running a parachain node to sync the chain. This is very similar to
 running a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node, with the addition of
 some extra flags. You can follow
 [these guidelines](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) to set
-up an Asset Hub node.
+up an AssetHub node.
 
 ### Asset Transfer API
 
 Asset-transfer-api is a library focused on simplifying the construction of asset transfers for
-Substrate-based chains that involve system parachains like Asset Hub (Polkadot and Kusama). It
+Substrate-based chains that involve system parachains like AssetHub (Polkadot and Kusama). It
 exposes a reduced set of methods that facilitate users to send transfers to other (para) chains or
 locally. You can refer to
 [this table](https://github.com/paritytech/asset-transfer-api/tree/main#current-cross-chain-support)
@@ -105,7 +105,7 @@ the complete documentation, including installation guide and usage examples.
 ### Sidecar
 
 API Sidecar is a REST service for Relay Chain and parachain nodes. It comes with endpoints to query
-information about assets and asset balances on the Asset Hub.
+information about assets and asset balances on the AssetHub.
 
 - Asset lookups always use the `AssetId` to refer to an asset class. On-chain metadata is subject to
   change and thus unsuitable as a canonical index.
@@ -114,9 +114,9 @@ information about assets and asset balances on the Asset Hub.
 
 Here are the available public instances:
 
-- [Sidecar connected to Polkadot Asset Hub](https://polkadot-asset-hub-public-sidecar.parity-chains.parity.io)
+- [Sidecar connected to Polkadot AssetHub](https://polkadot-asset-hub-public-sidecar.parity-chains.parity.io)
   and
-- [Sidecar connected to Kusama Asset Hub](https://kusama-asset-hub-public-sidecar.parity-chains.parity.io)
+- [Sidecar connected to Kusama AssetHub](https://kusama-asset-hub-public-sidecar.parity-chains.parity.io)
 
 The purpose of these instances is to allow anyone to check and get a quick overview of the info that
 the asset-related endpoints provide.
@@ -131,7 +131,7 @@ or any other critical purpose.
 ### Tx Wrapper Polkadot
 
 TxWrapper Polkadot is a library designed to facilitate transaction construction and signing in
-offline environments. It comes with asset-specific functions to use on the Asset Hub. When
+offline environments. It comes with asset-specific functions to use on the AssetHub. When
 constructing parachain transactions, you can use `txwrapper-polkadot` exactly as on the Relay Chain,
 but construct transactions with the appropriate parachain metadata like genesis hash, spec version,
 and type registry.

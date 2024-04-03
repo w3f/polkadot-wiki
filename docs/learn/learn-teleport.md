@@ -19,8 +19,8 @@ together ensure that assets are not lost or duplicated across multiple chains.
 :::info Walk-through video tutorial about teleporting assets
 
 See [this technical explainer video](https://youtu.be/3tE9ouub5Tg) to learn how to teleport assets
-from Kusama to the Asset Hub. The same procedure applies to teleporting between Polkadot and the
-Polkadot Asset Hub, or any other parachain.
+from Kusama to the AssetHub. The same procedure applies to teleporting between Polkadot and the
+Polkadot AssetHub, or any other parachain.
 
 :::
 

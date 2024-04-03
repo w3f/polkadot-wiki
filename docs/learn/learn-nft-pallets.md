@@ -22,7 +22,7 @@ Assets is under construction.
 NFTs is a
 [FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/nfts#readme)
 currently deployed on Westmint testnet and
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Asset Hub, which provides a multitude
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} AssetHub, which provides a multitude
 of functions to interact with NFTs.
 
 The pallet comes with a new way to configure NFTs, as well as configure collections and items.
@@ -296,20 +296,21 @@ The Uniques Pallet is deprecated. Everything related to NFTs will be covered by 
 
 :::
 
-Uniques is a [FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/uniques)
-deployed on the Asset Hub system parachain. It implements the most basic kind of NFT -- a data
-record referencing some metadata. This metadata reference is mutable until frozen, so NFTs and their
+Uniques is a
+[FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/uniques)
+deployed on the AssetHub system parachain. It implements the most basic kind of NFT -- a data record
+referencing some metadata. This metadata reference is mutable until frozen, so NFTs and their
 classes (entities derived from) are mutable unless specifically made immutable by the issuer.
 
-Uniques takes a very bare-bones approach on purpose to keep the Asset Hub chain a simple
+Uniques takes a very bare-bones approach on purpose to keep the AssetHub chain a simple
 balance-keeping chain for both fungible and non-fungibles.
 
 These NFTs can be viewed and interacted with on [RMRK's Singular platform](https://singular.app), by
-switching the top right menu from Kusama to the Asset Hub.
+switching the top right menu from Kusama to the AssetHub.
 
 ![nft-hub](../assets/asset-hub/hub-nft.png)
 
 They can also be interacted with directly through the
-[extrinsics tab of the Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics):
+[extrinsics tab of the AssetHub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics):
 
 ![uniques.png](../assets/nft/uniques.png)

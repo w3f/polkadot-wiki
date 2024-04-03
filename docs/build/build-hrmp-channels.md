@@ -3,7 +3,7 @@ id: build-hrmp-channels
 title: Opening HRMP Channels
 sidebar_label: Opening HRMP Channels
 description: Steps on how to open HRMP channels between parachains.
-keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
+keywords: [HRMP, parachain, statemint, proposal, AssetHub, statemine]
 slug: ../build-hrmp-channels
 ---
 
@@ -70,7 +70,7 @@ Proposals should generally be a `batchAll` call containing two `forceOpenHrmpCha
 each direction of the channel).
 
 As an example, see [Referendum 280](https://polkadot.polkassembly.io/referenda/280), which opened
-two bi-directional channels with Asset Hub (one for Zeitgeist and one for Composable).
+two bi-directional channels with AssetHub (one for Zeitgeist and one for Composable).
 
 :::caution
 

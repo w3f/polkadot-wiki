@@ -97,7 +97,7 @@ Briefly, the ideal staking rate can be calculated as follows:
 where `auction_proportion` is obtained by computing `min(auctioned_slots, 60) / 300`. The
 `auctioned_slots` are all the auctioned slots without the slots for system parachains.
 
-Assuming there are 50 filled slots, of which three are dedicated to system parachains (Asset Hub,
+Assuming there are 50 filled slots, of which three are dedicated to system parachains (AssetHub,
 Bridge Hub and Collectives), there are 47 auctioned slots. The `auction_proportion` is thus
 `47 / 300 = 0.157`. The ideal staking rate is `0.75 - 0.157 = 0.593`.
 
