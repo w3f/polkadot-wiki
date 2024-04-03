@@ -1,7 +1,7 @@
 ---
 id: learn-asset-conversion-assethub
 title: Asset Conversion on AssetHub
-sidebar_label: Asset Conversion on AssetHub
+sidebar_label: Asset Conversion
 description: Asset Conversion implementation details on AssetHub.
 keywords: [Assets, DEX, Exchange, Pools, Tokens]
 slug: ../learn-asset-conversion-assethub
