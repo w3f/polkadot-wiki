@@ -49,7 +49,7 @@ contracts.
 
 [Basilisk](https://bsx.fi/) is a Kusama parachain that provides liquidity for the ecosystem. It also
 has a full-featured NFT platform based on the
-[Uniques pallet](https://github.com/paritytech/substrate/tree/master/frame/uniques). One of the key
+[Uniques pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/uniques). One of the key
 features of Basilisk is that it allows minting NFTs with a royalty fee. This royalty fee is
 distributed to the original creator of the NFT via the runtime pallet. Additionally
 [Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)

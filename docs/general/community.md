@@ -21,7 +21,7 @@ contact and anyone doing so is likely trying to scam you.
 
 - [Polkadot Forum](https://forum.polkadot.network/) - a place for thoughtful comments and
   discussions on the future of Polkadot, and the steps we can take to get there together.
-- [Polkadot GitHub](https://github.com/paritytech/polkadot) - Parity maintained repository that
+- [Polkadot GitHub](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) - Parity maintained repository that
   houses the Rust implementation of the Polkadot Host.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).

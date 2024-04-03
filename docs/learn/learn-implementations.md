@@ -23,7 +23,7 @@ Polkadot uses WebAssembly ([Wasm](learn-wasm.md)) as a "meta-protocol". This all
 any programming language that can be interpreted or compiled into Wasm - being the driver for
 Polkadot's multiple implementations.
 
-### Parity Technologies: A [Rustic Vision for Polkadot](https://github.com/paritytech/polkadot)
+### Parity Technologies: A [Rustic Vision for Polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot)
 
 [Parity Technologies](https://www.parity.io/) is often in the spotlight for its core development of
 Polkadot, and while this is true, Parity Polkadot also serves to be the

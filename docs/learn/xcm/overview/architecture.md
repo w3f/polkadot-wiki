@@ -16,19 +16,19 @@ Parity Technologies maintains a Rust implementation, primarily for
 [Substrate](https://substrate.io/)-based chains in the [Polkadot](https://polkadot.network/)
 ecosystem. It is this implementation that we use throughout this documentation.
 
-All the code lives in the [Polkadot repo](https://github.com/paritytech/polkadot/tree/master/xcm).
+All the code lives in the [Polkadot repo](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm).
 The main structure is as follows:
 
-- [XCM](https://github.com/paritytech/polkadot/tree/master/xcm/src): Defines the fundamental
+- [XCM](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/src): Defines the fundamental
   constructs used in XCM and an enum with all the instructions available.
-- [Executor](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-executor/src): Implements
+- [Executor](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-executor/src): Implements
   the XCVM, capable of executing XCMs. Highly configurable.
-- [Builder](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-builder/src): Offers common
+- [Builder](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-builder/src): Offers common
   configuration building blocks for the executor.
-- [Pallet](https://github.com/paritytech/polkadot/tree/master/xcm/pallet-xcm/src): FRAME pallet that
+- [Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/pallet-xcm/src): FRAME pallet that
   provides extrinsics for interacting with the XCM executor, as well as specific XCM programs, such
   as teleports and reserve asset transfers.
-- [Simulator](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-simulator/example/src):
+- [Simulator](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-simulator/example/src):
   Allows for testing of XCM programs.
 
 ## Executor

@@ -70,7 +70,7 @@ Given that collators are full nodes of the Relay Chain and the parachain they ar
 be able to recognize a disruption as soon as it occurs and should stop producing block candidates.
 Likewise, it should be easy for them to recognize when it's safe to restart block production -
 perhaps based on finality delay, validator set size or some other factor that is yet to be decided
-within [Cumulus](https://github.com/paritytech/cumulus).
+within [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus).
 
 ### Parachain Development Kits (PDKs)
 

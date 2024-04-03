@@ -212,5 +212,5 @@ a `MultiLocation`.
 ## Simulating XCVM using the xcm-simulator
 
 Within the Polkadot repository exists the
-[`xcm-simulator`](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-simulator), which
+[`xcm-simulator`](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-simulator), which
 allows developers to experiment with building, executing, and simulating various XCM use scenarios.

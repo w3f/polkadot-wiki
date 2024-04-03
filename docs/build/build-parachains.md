@@ -7,14 +7,6 @@ keywords: [build, parachain, develop, implement, PDK]
 slug: ../build-pdk
 ---
 
-### Your Go-To Overview for Developing a Parachain
-
-This guide will cover the motivation to build a parachain or parathread, the tools available to
-facilitate this, the steps to test, and finally, how to launch your network on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} .
-
-### Why Create a Parachain?
-
 Parachains are connected to and secured by the Relay Chain. They benefit from the _pooled security_,
 _thought-through governance_, and overall _scalability_ of the heterogeneous sharding approach of
 the network. Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its
@@ -177,7 +169,7 @@ on Kusama through the networks that have secured a slot in the latest slot aucti
 The Parachain Implementer's Guide is a significant work in progress and maintained by Parity Tech.
 [**The live version**](https://w3f.github.io/parachain-implementers-guide/) is built from the source
 located in the official
-[Polkadot repository](https://github.com/paritytech/polkadot/tree/master/roadmap/implementers-guide).
+[Polkadot repository](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/roadmap/implementers-guide).
 
 ### Parachain Development Kit
 
@@ -211,8 +203,8 @@ chain. For more on collator nodes, see the [collator page](../learn/learn-collat
 
 #### What PDKs Exist?
 
-Currently, the only PDK is [Parity Substrate](https://github.com/paritytech/substrate) and
-[Cumulus](https://github.com/paritytech/cumulus). **[Substrate](https://substrate.io/)** is a
+Currently, the only PDK is [Parity Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) and
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus). **[Substrate](https://substrate.io/)** is a
 blockchain framework that provides the basic building blocks of a blockchain (things like the
 networking layer, consensus, a Wasm interpreter) while providing an intuitive way to construct your
 runtime. Substrate is made to ease the process of creating a new chain, but it does not provide
@@ -237,7 +229,7 @@ beautiful and functional.
 
 :::
 
-[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is an extension to Substrate that makes it easy to
 make any Substrate-built runtime into a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}-compatible parachain.
 
@@ -246,7 +238,7 @@ Cumulus Consensus is a consensus engine for Substrate that follows a
 runs a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node internally, and dictates
 to the client and synchronization algorithms which chain to follow, finalize, and treat as correct.
 
-See the [Cumulus overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a
+See the [Cumulus overview](https://github.com/paritytech/polkadot-sdk/blob/master/cumulus/docs/overview.md) for a
 more detailed description of Cumulus.
 
 Cumulus is still in development, but the idea is that it should be simple to take a Substrate chain
@@ -324,7 +316,7 @@ available for this type of work.
 
 ### Rococo Testnet
 
-[Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a testnet built for testing
+[Rococo](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#rococo-) is a testnet built for testing
 parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite)
 (Horizontal Relay-routed Message Passing) in order to send transfers and messages between
 parachains.

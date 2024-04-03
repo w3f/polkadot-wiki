@@ -65,7 +65,7 @@ transitions, they support smart contracts.
 Substrate presently supports smart contracts out-of-the-box in several ways:
 
 - The EVM pallet offered by [Frontier](https://github.com/paritytech/frontier).
-- The [Contracts pallet](https://github.com/paritytech/substrate/blob/master/frame/contracts/) in
+- The [Contracts pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/contracts/) in
   the FRAME library for Wasm-based contracts.
 
 ### Frontier EVM Contracts
@@ -179,7 +179,7 @@ should also keep up to date with the following links:
 ### Parity Tech
 
 - [ink!](https://github.com/paritytech/ink)
-- [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts)
+- [Substrate contracts pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts)
 
 ### Parachains
 
@@ -269,7 +269,13 @@ Try deploying a smart contract that interacts with Etherscan's web2 API by follo
 - EVM (Solidity) Support:
   [**Supported**](https://docs.darwinia.network/libraries-4a4ce70014ba43b7977aeb16ce9634ab)
 
-[Darwinia](https://darwinia.network/) is a community-run technology and service powering the cross-chain capabilities of decentralized applications. By crafting secure and efficient cross-chain messaging protocols, Darwinia is at the forefront of facilitating seamless communication between disparate blockchain networks. The newest addition to the suite of protocols is `Darwinia Msgport`, an innovative messaging abstraction that has been successfully implemented across a wide array of mainstream smart contract platforms, broadening the potential for interoperability and enabling developers to create more versatile and connected blockchain ecosystems.
+[Darwinia](https://darwinia.network/) is a community-run technology and service powering the
+cross-chain capabilities of decentralized applications. By crafting secure and efficient cross-chain
+messaging protocols, Darwinia is at the forefront of facilitating seamless communication between
+disparate blockchain networks. The newest addition to the suite of protocols is `Darwinia Msgport`,
+an innovative messaging abstraction that has been successfully implemented across a wide array of
+mainstream smart contract platforms, broadening the potential for interoperability and enabling
+developers to create more versatile and connected blockchain ecosystems.
 
 Try deploying a smart contract to Darwinia by following their
 [documentation](https://docs.darwinia.network/dapp-development-4b021f21c52d474aa08a8109eb55bbd1).

@@ -276,7 +276,7 @@ proposal is carried, no matter how much stake votes on the proposal.
 ![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
 To know more about where these above formulas come from, please read the
-[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
+[democracy pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/democracy/src/vote_threshold.rs).
 
 #### Example of Adaptive Quorum Biasing
 
@@ -404,7 +404,7 @@ For more information, check out our
 ### Prime Members
 
 The council, being an instantiation of
-[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
+[Substrate's Collective pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/collective),
 implements what's called a _prime member_ whose vote acts as the default for other members that fail
 to vote before the timeout.
 
@@ -521,7 +521,7 @@ case for why the change should be made.
 ## Resources
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
-- [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+- [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
