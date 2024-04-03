@@ -120,7 +120,7 @@ Runtime upgrades don't require any actions by a nominator, though it is always e
 up-to-date and participate with the latest runtime upgrade motions and releases while keeping an eye
 on how the nodes on the network are reacting to a new upgrade.
 
-## OpenGov Runtime Upgrade Monitoring
+## Monitoring Runtime Changes
 
 You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
 proposals related to any on-chain upgrades for easy matching. We recommend keeping track of the
