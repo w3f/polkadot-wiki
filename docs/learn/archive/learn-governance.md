@@ -518,7 +518,7 @@ case for why the change should be made.
 
 :::
 
-## Governance V1
+## Gov1 Runtime Upgrade Monitoring
 
 Monitor the chain for:
 

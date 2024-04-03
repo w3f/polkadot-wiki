@@ -120,15 +120,13 @@ Runtime upgrades don't require any actions by a nominator, though it is always e
 up-to-date and participate with the latest runtime upgrade motions and releases while keeping an eye
 on how the nodes on the network are reacting to a new upgrade.
 
-## Monitoring Runtime Changes
+## OpenGov Runtime Upgrade Monitoring
 
 You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
 proposals related to any on-chain upgrades for easy matching. We recommend keeping track of the
 Polkadot Fellowship's
 [runtime upgrades](https://github.com/polkadot-fellows/runtimes/releases/latest) to be aware of
 changes in the runtime logic.
-
-### Polkadot OpenGov
 
 Runtime upgrades are voted on and executed via [Polkadot OpenGov](./learn-polkadot-opengov.md). You
 should monitor the Relay Chain as follows to know when the next runtime upgrade will be enacted:
