@@ -67,7 +67,7 @@ DOT that is locally available, i.e., DOT from the Relay Chain's treasury. `spend
 the caller to specify an asset other than DOT, or even assets in other locations, e.g.
 [Asset Hub](../general/glossary.md#asset-hub).
 
-Unlike `treasuy.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
+Unlike `treasury.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
 claimed manually via the `treasury.payout` extrinsic. `treasuy.spendLocal` behavior remains
 unchanged.
 
