@@ -203,13 +203,15 @@ chain. For more on collator nodes, see the [collator page](../learn/learn-collat
 
 #### What PDKs Exist?
 
-Currently, the only PDK is [Parity Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) and
-[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus). **[Substrate](https://substrate.io/)** is a
-blockchain framework that provides the basic building blocks of a blockchain (things like the
-networking layer, consensus, a Wasm interpreter) while providing an intuitive way to construct your
-runtime. Substrate is made to ease the process of creating a new chain, but it does not provide
-support for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} compatibility directly.
-For this reason, `Cumulus`, an added _library_ contains all of the
+Currently, the only PDK is
+[Parity Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) and
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus).
+**[Substrate](https://substrate.io/)** is a blockchain framework that provides the basic building
+blocks of a blockchain (things like the networking layer, consensus, a Wasm interpreter) while
+providing an intuitive way to construct your runtime. Substrate is made to ease the process of
+creating a new chain, but it does not provide support for
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} compatibility directly. For this
+reason, `Cumulus`, an added _library_ contains all of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} compatibility glue code.
 
 :::note Get started with Substrate
@@ -229,8 +231,8 @@ beautiful and functional.
 
 :::
 
-[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is an extension to Substrate that makes it easy to
-make any Substrate-built runtime into a
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is an extension to
+Substrate that makes it easy to make any Substrate-built runtime into a
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}-compatible parachain.
 
 Cumulus Consensus is a consensus engine for Substrate that follows a
@@ -238,8 +240,9 @@ Cumulus Consensus is a consensus engine for Substrate that follows a
 runs a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node internally, and dictates
 to the client and synchronization algorithms which chain to follow, finalize, and treat as correct.
 
-See the [Cumulus overview](https://github.com/paritytech/polkadot-sdk/blob/master/cumulus/docs/overview.md) for a
-more detailed description of Cumulus.
+See the
+[Cumulus overview](https://github.com/paritytech/polkadot-sdk/blob/master/cumulus/docs/overview.md)
+for a more detailed description of Cumulus.
 
 Cumulus is still in development, but the idea is that it should be simple to take a Substrate chain
 and add the parachain code by importing the crates and adding a single line of code. Keep up-to-date
@@ -316,10 +319,10 @@ available for this type of work.
 
 ### Rococo Testnet
 
-[Rococo](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#rococo-) is a testnet built for testing
-parachains. Rococo utilizes Cumulus and [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite)
-(Horizontal Relay-routed Message Passing) in order to send transfers and messages between
-parachains.
+[Rococo](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#rococo-) is a testnet built
+for testing parachains. Rococo utilizes Cumulus and
+[HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite) (Horizontal Relay-routed Message Passing) in
+order to send transfers and messages between parachains.
 
 Rococo runs a few test system parachains, like
 [Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
@@ -372,8 +375,7 @@ Then, connect your local node with Polkadot-JS Apps.
 ## Deploy
 
 Substrate-based chains, including the Polkadot and Kusama Relay Chains, use an
-[SS58 encoding](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>) for
-their address formats.
+[SS58 encoding](../learn/learn-account-advanced.md#address-format) for their address formats.
 [This page](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json) serves as the
 canonical registry for teams to see which chain corresponds to a given prefix, and which prefixes
 are available.
