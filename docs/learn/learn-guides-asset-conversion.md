@@ -7,6 +7,16 @@ keywords: [Assets, DEX, Exchange, Pools, Tokens]
 slug: ../learn-guides-asset-conversion
 ---
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
+
 ## Create a Liquidity Pool
 
 The `create_pool` function is used to create an empty liquidity pool along with a new `lp_token`
