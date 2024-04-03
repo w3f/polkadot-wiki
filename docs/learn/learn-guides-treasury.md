@@ -63,7 +63,7 @@ and is
 
 You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and
 `treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of
-DOT that is locally available, i.e., DOT from the Relay Chain's treasury. `spend` actually allows
+DOT that is locally available, i.e., DOT from the Relay Chain's treasury account. `spend` actually allows
 the caller to specify an asset other than DOT, or even assets in other locations, e.g.
 [Asset Hub](../general/glossary.md#asset-hub).
 
