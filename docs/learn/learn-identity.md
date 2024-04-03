@@ -63,7 +63,7 @@ individually if you want to be judged by those.
 :::info Registrar 0 decommissioned on April 1st, 2024
 
 From the 1st of April 2024 onwards, Registrar 0 will still exist on-chain but will not accept any
-new judgment requests. The registrar fees is set to a substantial amount to dissuade identity judgement
+new judgment requests. The registrar fee is set to a substantial amount to dissuade identity judgement
 requests. Identities judged by the registrar before that date will not be affected. For new identity 
 judgment, please use the other registrars. 
 
