@@ -150,7 +150,7 @@ that requests 100 USDT from AssetHub.
   and then click on Add Preimage.
 - Select the account to submit the preimage.
 - Choose the `treasury` pallet in the "propose" dropdown and the
-  `spend(assetKind, amount, beneficiary, validFrom)` call
+  `spend(assetKind, amount, beneficiary, validFrom)` call.
 
 Now, let's go through each field one-by-one and fill them in accordingly:
 
