@@ -356,7 +356,7 @@ period will lead to a referendum timeout.
 
 ## Interpreting On-Chain Voting Data
 
-Consider the following example showcasing how votes would be displayed on a block explorer.
+Below is the numeric conversion of the type of vote and conviction displayed in a block explorer.
 
 ```
 Nay 0.1x => 0
@@ -376,10 +376,16 @@ Aye 5x => 133
 Aye 6x => 134
 ```
 
-At first glance, it may be difficult to interpret what you voted on. We need to take a step back and
+Take, for example, the information provided for
+[this vote](https://kusama.subscan.io/extrinsic/22460598-2). The vote `131` means the account voted
+Aye with 3x conviction.
+
+![vote_numeric_conversion](../assets/vote_numeric_conversion.png)
+
+At first glance, it may not be easy to interpret what you voted on. We need to take a step back and
 consider the "voting data" at the binary level.
 
 The vote is stored as a byte using a bitfield data structure and displayed on the block explorer as
 a decimal integer. The bitfield stores both the conviction and aye/nay boolean, where the boolean is
-represented using the MSB of the byte. This would mean that the grouping of the 7 remaining bits is
-used to store the conviction.
+represented using the MSB of the byte. This would mean that the seven remaining bits are grouped to
+store the conviction.
