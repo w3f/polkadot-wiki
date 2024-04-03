@@ -174,3 +174,20 @@ seminars, and initiatives within the ecosystem.
     </p>
   </div>
 </div>
+
+<div className="row">
+  <div className="col text--center">
+    <a href="https://youtu.be/xBfC6uTjvbM?feature=shared">
+      <img src="https://i.ytimg.com/an_webp/xBfC6uTjvbM/mqdefault_6s.webp?du=3000&sqp=COOQtLAG&rs=AOn4CLDc7t3gmeauOhro43lMkTj9hUnM5A" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://youtu.be/xBfC6uTjvbM?feature=shared">Polkadot Whiteboard Series</a>
+    </p>
+  </div>
+  <div className="col text--center">
+  
+  </div>
+  <div className="col text--center">
+    
+  </div>
+</div>
