@@ -281,7 +281,7 @@ include:
 
 :::info Example Scenario of an Edge Case
 
-A referendum my enter the confirmation period just one block before the decision period ends. In
+A referendum may enter the confirmation period just one block before the decision period ends. In
 this scenario, the referendum will pass if it satisfies approval and support thresholds for the
 minimum confirmation period (track-dependent).
 
