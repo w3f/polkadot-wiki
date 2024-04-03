@@ -35,6 +35,12 @@ module.exports = {
             slug: '/wallets-index',
           },
           items: [
+            {
+              type: 'link',
+              label: 'Polkadot Ecosystem Wallets',
+              description: 'Wallets listed on official Polkadot website.',
+              href: 'https://polkadot.network/ecosystem/wallets/',
+            },
             "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
