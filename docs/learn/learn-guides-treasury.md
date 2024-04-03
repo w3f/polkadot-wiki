@@ -235,7 +235,7 @@ certain dates in the future.
 ### Using `batchAll` for Multi-Spend Proposals
 
 Using the Utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
-calls can have their own `validFrom` block heights, which allows for scenarios such as the above to
+calls can have its own `validFrom` block height, which allows for scenarios such as the above to
 be possible.
 
 ### Using `validFrom` for a Milestone-Based Proposal
