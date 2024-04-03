@@ -30,7 +30,7 @@ seminars, and initiatives within the ecosystem.
   </div>
   <div className="col text--center">
     <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGvJuOchUyo6eFB_RA76mv3h">
-      <img src="https://i9.ytimg.com/vi_webp/tbewfQM_19c/mqdefault.webp?v=65731978&sqp=CNztwK8G&rs=AOn4CLBOyQxD-cNsJZJeBWyjBrbikk3Ueg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://i.ytimg.com/vi/tbewfQM_19c/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDzJbgSFKb3wupT8g1L5dhIr2nIYA" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="https://youtube.com/playlist?list=PLOyWqupZ-WGvJuOchUyo6eFB_RA76mv3h">Polkadot Community Calls</a>
