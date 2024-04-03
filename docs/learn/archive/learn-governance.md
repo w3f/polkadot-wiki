@@ -518,6 +518,28 @@ case for why the change should be made.
 
 :::
 
+## Governance V1
+
+Monitor the chain for:
+
+1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
+   referendum has started (although it does not mean it is a runtime upgrade). Get the referendum
+   info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
+   enactment `delay` (delay). If the referendum passes, it will execute on block number
+   `end + delay`.
+2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
+   If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
+   enactment block.
+3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. This
+   may be up to the last block before execution, but it will not work if this is missing.
+4. `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will
+   also be a `system(CodeUpdated)` event.
+
+You can also monitor [Polkassembly](https://polkadot.polkassembly.io/) for discussions on on-chain
+proposals and referenda.
+
+\* E.g. via `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` on Sidecar.
+
 ## Resources
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
