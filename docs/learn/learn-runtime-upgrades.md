@@ -168,8 +168,8 @@ should monitor the Relay Chain as follows to know when the next runtime upgrade 
    to enact _before_ this block number.
 3. Check also for `referenda (DecisionDepositPlaced)` events where `index` matches the one
    previously found. This means that the required deposit has been placed.
-4. `referenda (DecisionStarted)` indicates that the decision period has started for the referenda of
-   that `index`.
+4. `referenda (DecisionStarted)` indicates that the decision period has started for the referendum
+   of that `index`.
 5. `referenda (ConfirmStarted)` indicates that `index`'s referendum has entered the confirmation
    period.
    1. `referenda (Confirmed)` indicates that `index`'s referendum has been confirmed and will enter
