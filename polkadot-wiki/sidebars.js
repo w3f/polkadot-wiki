@@ -256,8 +256,18 @@ module.exports = {
               items: [
                 "learn/learn-DOT",
                 "learn/learn-inflation",
-                "learn/learn-assets",
-                "learn/learn-asset-conversion-assethub",
+                {
+                  type: "category",
+                  label: "Asset Hub",
+                  description: 'Fungible Tokens and NFTs on Polkadot.',
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-assets",
+                  },
+                  items: [
+                    "learn/learn-asset-conversion-assethub",,
+                  ],
+                },
                 "learn/learn-teleport",
                 "learn/learn-nft",
               ],
