@@ -383,13 +383,10 @@ module.exports = {
               label: "Architecture",
               description: "Nominators, Validators, Collators, Parachains, and more.",
               link: {
-                type: 'generated-index',
-                title: "Polkadot's Architecture",
-                description: "Everything about Polkadot's Architecture.",
-                slug: '/learn-architecture-index',
+                type: 'doc',
+                id: 'learn/learn-architecture',
               },
               items: [
-                "learn/learn-architecture",
                 {
                   type: "category",
                   label: "Parachains",
@@ -409,6 +406,7 @@ module.exports = {
                     "learn/learn-parachains-faq",
                   ],
                 },
+                "learn/learn-async-backing",
                 {
                   type: "category",
                   label: "Agile Coretime",
@@ -423,7 +421,18 @@ module.exports = {
                     "learn/learn-agile-coretime",
                   ],
                 },
-                "learn/learn-bridges",
+                {
+                  type: "category",
+                  label: "Bridges",
+                  description: "Bridging Polkadot to other Blockchain Protocols.",
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-bridges",
+                  },
+                  items: [
+                    "learn/learn-hyperbridge",
+                  ],
+                },
                 {
                   type: "category",
                   label: "Cross Consensus Messaging (XCM)",
@@ -627,7 +636,6 @@ module.exports = {
             "learn/learn-async-backing",
             "learn/learn-elastic-scaling",
             "learn/learn-sassafras",
-            "learn/learn-hyperbridge",
           ],
         },
         {
