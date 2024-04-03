@@ -88,15 +88,10 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
 ## Sub.ID
 
 [Sub.ID](https://sub.id/) is a one-stop-shop for managing your Polkadot accounts, viewing your
-addresses and balances, and looking at other accounts.
-
-[![](https://cdn.discordapp.com/attachments/893485384154095640/1166807359411204228/image.png?ex=654bd508&is=65396008&hm=ddf3dc26f525d0021df4d8879f19973b81040514bfb10423e748d397c7a66329&)](https://sub.id/)
-
-It features a Polkadot [staking page](https://sub.id/validator/polkadot), where you can easily start
-staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choose their preferred
+addresses and balances, and looking at other accounts. It features a Polkadot
+[staking page](https://sub.id/validator/polkadot), where you can easily start staking
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choose their preferred
 validators or stake with the recommended validator set.
-
-[![](https://cdn.discordapp.com/attachments/893485384154095640/1166807508837474394/image.png?ex=654bd52c&is=6539602c&hm=f78e346cfd364529b1b03d5207a8ad0cd100fc5093ee832eece397e788200cf0&)](https://sub.id/validator/polkadot)
 
 ## NOMI
 
@@ -120,5 +115,3 @@ and stake on multiple networks in the Polkadot, Kusama and Polkadot SDK (Substra
 The Web Dashboard features an Earning tab which allows users to stake DOT easily via native
 nomination pools, as well as in liquid staking and lending protocols, without having to manage
 multiple applications with different interfaces and experiences.
-
-[![](https://cdn.discordapp.com/attachments/865823369092661279/1181493922166493214/earning_tab.gif?ex=658142f6&is=656ecdf6&hm=b02716903c18d046896c59eb1c5935518f75cf9f52845c1636609ccaf43c57cd&)](https://web.subwallet.app/)
