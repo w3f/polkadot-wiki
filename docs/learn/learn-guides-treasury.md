@@ -63,8 +63,8 @@ and is
 
 You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and
 `treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of
-DOT that is locally available, i.e., DOT from the Relay Chain's treasury account. `spend` actually allows
-the caller to specify an asset other than DOT, or even assets in other locations, e.g.
+DOT that is locally available, i.e., DOT from the Relay Chain's treasury account. `spend` actually
+allows the caller to specify an asset other than DOT, or even assets in other locations, e.g.
 [Asset Hub](../general/glossary.md#asset-hub).
 
 Unlike `treasury.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
@@ -137,8 +137,8 @@ The preimage and decision deposits
 
 ## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
-The following mostly goes over how to utilize the `spend` extrinsic, which, unlike `spendLocal`, is
-able to specify assets besides the native asset in other locations, such as
+The following tutorial mostly goes over how to utilize the `spend` extrinsic, which, unlike
+`spendLocal`, is able to specify assets besides the native asset in other locations, such as
 [Asset Hub](../general/glossary.md#asset-hub).
 
 ### Creating a Preimage
@@ -171,22 +171,27 @@ USDT in this instance of the Assets pallet.
 
 Here is how the final `assetKind` field should look:
 
+![Asset Kind](../assets/asset-hub/spend-usdt-assethub.png)
+
 ### Specifying the Amount
 
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
-asking for 100 USDT, we put `100000000` as the input for the amount:
+asking for 100 USDT, we put `100000000` as the input for the amount.
 
 ### Specifying the Beneficiary
 
 The beneficiary account will be one on Asset Hub. For this reason, the XCM junction must be
 specified as follows, with one junction (`X1`) and the beneficiary account (`AccountId32`), which is
-an address:
+an account address on the chain.
 
 ### Specifying `validFrom` (optional)
 
-The `validFrom` field is optional, and refers to the block height upon which the payout may be
-issued. For more information on this field, refer to the
+The `validFrom` field is optional, and refers to the block height of the Relay Chain upon which the
+payout can be issued. If the `validFrom` parameter is not set, the spend can be paid out immediately
+after approval. For more information on this field, refer to the
 [guide below](#creating-a-staged-proposal-with-validfrom).
+
+![Asset Value, Beneficiary and ValidFrom](../assets/asset-hub/spend-amount-account-validfrom.png)
 
 ### Summary: Final Call
 
@@ -235,8 +240,8 @@ certain dates in the future.
 ### Using `batchAll` for Multi-Spend Proposals
 
 Using the Utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
-calls can have its own `validFrom` block height, which allows for scenarios such as the above to
-be possible.
+calls can have its own `validFrom` block height, which allows for scenarios such as the above to be
+possible.
 
 ### Using `validFrom` for a Milestone-Based Proposal
 
@@ -248,7 +253,7 @@ the "date", or block height, at which each spend will be executed.
 :::info Spends can expire!
 
 Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
-spend before it expires.
+spend within 30 days.
 
 :::
 
