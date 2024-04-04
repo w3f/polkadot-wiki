@@ -178,7 +178,7 @@ seminars, and initiatives within the ecosystem.
 <div className="row">
   <div className="col text--center">
     <a href="https://youtu.be/xBfC6uTjvbM?feature=shared">
-      <img src="https://i.ytimg.com/an_webp/xBfC6uTjvbM/mqdefault_6s.webp?du=3000&sqp=COOQtLAG&rs=AOn4CLDc7t3gmeauOhro43lMkTj9hUnM5A" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://i.ytimg.com/vi/xBfC6uTjvbM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCA6vdCF0Xsv1iSbLh5icf61Meauw" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
     <p>
       <a href="https://youtu.be/xBfC6uTjvbM?feature=shared">Polkadot Whiteboard Series</a>
