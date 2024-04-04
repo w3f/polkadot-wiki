@@ -353,3 +353,39 @@ within the track, and a
 have been met. Failing to submit the decision deposit within a
 {{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
 period will lead to a referendum timeout.
+
+## Interpreting On-Chain Voting Data
+
+Below is the numeric conversion of the type of vote and conviction displayed in a block explorer.
+
+```
+Nay 0.1x => 0
+Nay 1x => 1
+Nay 2x => 2
+Nay 3x => 3
+Nay 4x => 4
+Nay 5x => 5
+Nay 6x => 6
+
+Aye 0.1x => 128
+Aye 1x => 129
+Aye 2x => 130
+Aye 3x => 131
+Aye 4x => 132
+Aye 5x => 133
+Aye 6x => 134
+```
+
+Take, for example, the information provided for
+[this vote](https://kusama.subscan.io/extrinsic/22460598-2). The vote `131` means the account voted
+Aye with 3x conviction.
+
+![vote_numeric_conversion](../assets/vote_numeric_conversion.png)
+
+At first glance, it may not be easy to interpret what you voted on. We need to take a step back and
+consider the "voting data" at the binary level.
+
+The vote is stored as a byte using a bitfield data structure and displayed on the block explorer as
+a decimal integer. The bitfield stores both the conviction and aye/nay boolean, where the boolean is
+represented using the MSB of the byte. This would mean that the seven remaining bits are grouped to
+store the conviction.
