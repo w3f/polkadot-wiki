@@ -40,7 +40,7 @@
     "@actions/github": "^6.0.0",
     "@crowdin/cli": "^3.19.2",
     "@docusaurus/core": "^2.4.3",
-    "@docusaurus/module-type-aliases": "^2.4.3",
+    "@docusaurus/module-type-aliases": "^3.2.1",
     "@docusaurus/plugin-client-redirects": "^2.4.3",
     "@docusaurus/preset-classic": "^2.4.3",
     "@octokit/rest": "^20.1.0",
