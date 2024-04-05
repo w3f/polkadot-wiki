@@ -133,7 +133,7 @@ Setting an Identity is not possible on Ledger app yet, but as a workaround, you 
 [set the identity for an on-chain account ](../learn/learn-identity.md#setting-an-identity) and then
 use it to set a sub-identity to your Ledger account.
 
-- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to
+- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots corresponding to
   the account to which you already set identity. You should see an option to set onchain
   sub-identities. Click on it.
 

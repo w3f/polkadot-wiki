@@ -45,7 +45,7 @@ QueryResponse {
     querier: Option<MultiLocation>,
 }
 
-// Reponse Struct
+// Response Struct
 pub enum Response {
 	/// No response. Serves as a neutral default.
 	Null,
