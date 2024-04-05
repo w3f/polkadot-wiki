@@ -216,7 +216,7 @@ module.exports = {
     },
     navbar: {
       logo: {
-        src: "img/Polkadot_Logo_Horizontal_Pink-Black.svg",
+        src: "img/wiki-logo-2.svg",
       },
       items: [
         {
