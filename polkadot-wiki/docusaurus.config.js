@@ -268,7 +268,7 @@ module.exports = {
     footer: {
       copyright: `© ${new Date().getFullYear()} Web3 Foundation`,
       logo: {
-        src: "img/Polkadot_Logo_Horizontal_White.svg",
+        src: "img/wiki-logo-2.svg",
       },
     },
     algolia: {
@@ -287,7 +287,7 @@ module.exports = {
       textColor: 'white',
       isCloseable: true,
     },
-    image: 'img/og-polkadot.png'
+    image: 'img/wiki-logo-2.svg'
   },
 };
 
