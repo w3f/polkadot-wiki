@@ -65,8 +65,9 @@ transitions, they support smart contracts.
 Substrate presently supports smart contracts out-of-the-box in several ways:
 
 - The EVM pallet offered by [Frontier](https://github.com/paritytech/frontier).
-- The [Contracts pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/contracts/) in
-  the FRAME library for Wasm-based contracts.
+- The
+  [Contracts pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/contracts/)
+  in the FRAME library for Wasm-based contracts.
 
 ### Frontier EVM Contracts
 

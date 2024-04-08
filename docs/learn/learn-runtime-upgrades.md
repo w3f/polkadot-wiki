@@ -140,8 +140,8 @@ should monitor the Relay Chain as follows to know when the next runtime upgrade 
 2. Ongoing referenda will have an `enactment` field under `referenda.ReferendumInfoFor` storage.
    This is the block number that, if passed, the system will attempt to schedule the inner
    proposal's execution for. Note that there are some constraints like a minimum enactment period
-   that could result in the proposal's execution occurring later. It is not possible for the proposal
-   to enact _before_ this block number.
+   that could result in the proposal's execution occurring later. It is not possible for the
+   proposal to enact _before_ this block number.
 3. Check also for `referenda (DecisionDepositPlaced)` events where `index` matches the one
    previously found. This means that the required deposit has been placed.
 4. `referenda (DecisionStarted)` indicates that the decision period has started for the referendum

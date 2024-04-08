@@ -38,8 +38,8 @@ so "System Parachains" is preferred now. A discussion on this evolution can be f
 
 ### Asset Hub
 
-The [Asset Hub](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) on both Polkadot and Kusama are
-the first system parachains.
+The [Asset Hub](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) on both
+Polkadot and Kusama are the first system parachains.
 
 The Asset Hub is an asset portal for the entire network. It helps asset creators (e.g. reserve
 backed stablecoin issuers) to track the total issuance of their asset in the

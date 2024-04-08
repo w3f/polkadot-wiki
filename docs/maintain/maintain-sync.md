@@ -341,8 +341,8 @@ cargo 1.41.0 (626f0f40e 2019-12-03)
 
 ## Clone and Build
 
-The [paritytech/polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) repo's master branch contains the
-latest Polkadot code.
+The [paritytech/polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) repo's
+master branch contains the latest Polkadot code.
 
 ```bash
 git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
