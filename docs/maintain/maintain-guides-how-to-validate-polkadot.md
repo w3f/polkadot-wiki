@@ -583,7 +583,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![bonding-JS-UI](../assets/JS-UI-bond.png)
 
-- **Stash account** - Select your Stash account (which is the acocunt with the DOT/KSM balance)
+- **Stash account** - Select your Stash account (which is the account with the DOT/KSM balance)
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
