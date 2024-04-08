@@ -277,5 +277,5 @@ chain state. This can be found under `Developer > Chain state` in [PolkadotJS Ap
 ### Existing Non-Native Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
-[Assets Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/assets), so this is
-probably not the reason for your tokens having existing references.
+[Assets Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/assets), so
+this is probably not the reason for your tokens having existing references.

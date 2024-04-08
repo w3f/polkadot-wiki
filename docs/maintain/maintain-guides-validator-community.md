@@ -170,10 +170,10 @@ the usage of firewalls, VPNs, network segmentation, proxies, or other layers sep
 #### Upgrading
 
 Both Polkadot and Kusama releases are published.
-[here](https://github.com/paritytech/polkadot-sdk/releases). Validators are expected to upgrade their
-nodes as soon as a new release comes. Although not every release is mandatory to upgrade, each new
-release usually has bug fixes, optimizations, new features, or other beneficial changes. It's in the
-best interest of the entire network that validators update their nodes in a timely fashion. This
+[here](https://github.com/paritytech/polkadot-sdk/releases). Validators are expected to upgrade
+their nodes as soon as a new release comes. Although not every release is mandatory to upgrade, each
+new release usually has bug fixes, optimizations, new features, or other beneficial changes. It's in
+the best interest of the entire network that validators update their nodes in a timely fashion. This
 signals to nominators that a validator is timely care about their operations and is quick to adapt
 to necessary circumstances.
 

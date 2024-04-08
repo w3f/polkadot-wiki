@@ -15,8 +15,8 @@ anyone doing so is likely trying to scam you.**
 ## General
 
 - [Kusama Discussion and Governance on Polkassembly](https://kusama.polkassembly.io/)
-- [Polkadot GitHub](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/) - Parity maintained repository that
-  houses the Rust implementation of the Polkadot and Kusama Host.
+- [Polkadot GitHub](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/) - Parity
+  maintained repository that houses the Rust implementation of the Polkadot and Kusama Host.
 - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) -
   Information on hosting meetups, applying for funding, and materials for running it.
 - [Support Knowledgebase](https://support.polkadot.network/support/home) and

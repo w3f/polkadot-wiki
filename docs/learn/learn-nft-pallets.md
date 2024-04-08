@@ -296,7 +296,8 @@ The Uniques Pallet is deprecated. Everything related to NFTs will be covered by 
 
 :::
 
-Uniques is a [FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/uniques)
+Uniques is a
+[FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/uniques)
 deployed on the Asset Hub system parachain. It implements the most basic kind of NFT -- a data
 record referencing some metadata. This metadata reference is mutable until frozen, so NFTs and their
 classes (entities derived from) are mutable unless specifically made immutable by the issuer.
