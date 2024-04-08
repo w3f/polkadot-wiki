@@ -41,7 +41,7 @@ function HomeNav() {
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("explore-index")} aosDelay="0">
+      <NavItem href={useDocUrl("getting-started")} aosDelay="0">
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -61,7 +61,7 @@ function HomeNav() {
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("learn-index")} aosDelay="200">
+      <NavItem href={useDocUrl("web3-and-polkadot")} aosDelay="200">
         <NavItemContent>
           <NavItemTitle>
             <Translate
