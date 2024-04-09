@@ -52,6 +52,17 @@ both the bridge hubs, where each transaction has its cost, which can be:
 The relayers are compensated for the cost of submitting valid, minimal and useful bridge-related
 transactions. Valid here means that the transaction doesn't fail. Minimal means that all data within
 transaction call is actually required for the transaction to succeed. Useful means that all supplied
-data in transaction is new and yet unknown to the target chain. For more information, check the
+data in transaction is new and yet unknown to the target chain.
+
+It is always the sending chain that will be paying for rewards for the relayers. The sending chain
+will be paying at both ends of the bridge from its sovereign accounts on each Bridge Hub. For
+example Polkadot Asset Hub (PAH) → Kusama Asset Hub (KAH) transfer will involve relayers getting
+some rewards from PAH's sovereign account on Polkadot Bridge Hub (PBH) and some rewards from PAH's
+sovereign account on Kusama Bridge Hub (KBH). It is the responsibility of Polkadot OpenGov to
+replenish the funds of PAH's sovereign account on both the bridge hubs (PBH and KBH). Similarly, KAH
+→ PAH transfer is rewarded by KAH's sovereign accounts on PBH and KBH, which have to be replenished
+through Kusama OpenGov.
+
+For more information on relayer rewards, check the
 [relayers compensation scheme section](https://github.com/paritytech/polkadot-sdk/blob/master/bridges/docs/running-relayer.md#a-brief-introduction-into-relayers-and-our-compensations-scheme)
-on the relayer docs on Polkadot-SDK repository.
+on the relayer docs on the Polkadot-SDK repository.
