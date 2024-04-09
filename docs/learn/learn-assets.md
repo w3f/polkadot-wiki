@@ -41,7 +41,7 @@ keep an account alive on the network). Only the network's governance mechanism c
 _sufficient_. A balance of a non-sufficient asset can only exist on accounts that are on-chain
 (i.e., accounts having the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
-That is, a user could not keep an account on-chain by transferring an insufficient asset to it; the
+That is, a user could not keep an account on-chain by transferring an non-sufficient asset to it; the
 account must already be on-chain by having more than the existential deposit in
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset).
 
