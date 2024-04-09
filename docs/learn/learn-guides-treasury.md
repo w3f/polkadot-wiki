@@ -272,7 +272,7 @@ extrinsic can be utilized via a governance proposal.
 To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov)
 click on the FAB button in the bottom right corner. Then,
 
-- Click on "Create Treasury Proposal" and choose an address for the proposer
+- Click on "Create Treasury Proposal" and choose an address for the proposer.
 - After choosing an address, you will enter a three-stage guideline:
 
   - Write a proposal: you can add a detailed description for the proposal, which will be stored on
