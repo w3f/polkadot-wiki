@@ -10,11 +10,101 @@ slug: ../learn-guides-dot-ksm-bridge
 <div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
-Polkadot-JS is for developers and power users only. If you need help using the
-[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+These guides are for developers and power users only.
 
 </div>
 
-<br />
+The fully functional Polkadot < > Kusama bridge facilitates secure asset transfers between the
+chains in both the ecosystems. The progress of Polkadot < > Kusama bridge implementation can be
+tracked [here](https://forum.polkadot.network/t/polkadot-kusama-bridge/2971/1).
+
+## Transfer DOT to Kusama Asset Hub
+
+This tutorial shows how to transfer DOT on Polkadot Asset Hub to Kusama Asset Hub. The first step is
+to ensure that your account on Polkadot Asset Hub has enough DOT to cover the XCM transfer fee and
+the bridge fee (which is around 2 DOT). The next step is to craft an XCM message to be sent from
+Polkadot Asset Hub.
+
+[BagPipes (formerly called xcmsend)](https://xcmsend.com/#/builder) is an opensource application
+that lets you create workflows in a drag and drop style interface in order to build execution flows
+of cross chain assets transfers using XCM. Check
+[Bagpipes docs](https://xcmsend.github.io/workflows/dotksm.html) for more information on how to
+create workflows for crafting XCM transfers. The snapshot below shows a workflow on BagPipes that is
+designed to send 3 DOT from an account Polkadot Asset Hub to Kusama Asset Hub.
+
+![BagPipes Snapshot DOT Transfer](../assets/bridge-hub/PAH-to-KAH-DOT-transfer.png)
+
+This workflow crafts an XCM transfer as shown below.
+
+```
+{
+  "isSigned": false,
+  "method": {
+    "args": {
+      "dest": {
+        "V3": {
+          "parents": "2",
+          "interior": {
+            "X2": [
+              {
+                "GlobalConsensus": "Kusama"
+              },
+              {
+                "Parachain": "1,000"
+              }
+            ]
+          }
+        }
+      },
+      "beneficiary": {
+        "V3": {
+          "parents": "0",
+          "interior": {
+            "X1": {
+              "AccountId32": {
+                "network": null,
+                "id": "0x9e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818"
+              }
+            }
+          }
+        }
+      },
+      "assets": {
+        "V3": [
+          {
+            "id": {
+              "Concrete": {
+                "parents": "1",
+                "interior": "Here"
+              }
+            },
+            "fun": {
+              "Fungible": "30,000,000,000"
+            }
+          }
+        ]
+      },
+      "fee_asset_item": "0",
+      "weight_limit": "Unlimited"
+    },
+    "method": "limitedReserveTransferAssets",
+    "section": "polkadotXcm"
+  }
+}
+```
+
+Once this [extrinsic](https://assethub-polkadot.subscan.io/extrinsic/6028374-2) is signed and
+submitted, it is broadcast to Polkadot Asset Hub nodes. As this is a reserve asset transfer, the DOT
+is transferred to a dedicated account on Polkadot Asset Hub and
+[the wrapped DOT is issued](https://assethub-kusama.subscan.io/extrinsic/6758392-0?event=6758392-1)
+as a foreign asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset
+balances of any account on Kusama Asset Hub can be queried on-chain through the
+`foreignAssets`pallet as shown below.
+
+![Wrapped DOT Balance](../assets/bridge-hub/KAH-DOT-Balance.png)
+
+## Transfer KSM to Polkadot Asset Hub
+
+This tutorial shows how to transfer KSM on Kusama Asset Hub to Polkadot Asset Hub. The first step is
+to ensure that your account on Kusama Asset Hub has enough KSM to cover the XCM transfer fee and the
+bridge fee (which is around 0.4 KSM).

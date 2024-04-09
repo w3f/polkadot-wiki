@@ -15,6 +15,13 @@ and Kusama Bridge Hub runs a
 enabled through their respective OpenGov referenda. This trustless bridge allows Polkadot Asset Hub
 accounts to hold wrapped KSM tokens and Kusama Asset Hub accounts to hold wrapped DOT tokens.
 
+:::info Transferring Assets between Polkadot and Kusama
+
+The user guides for transferring assets between Polkadot and Kusama are available
+[here](./learn-guides-DOT-KSM-bridge.md).
+
+:::
+
 ## Polkadot and Kusama Bridge Relayers
 
 The job of the relayers is to relay Kusama/Polkadot GRANDPA justifications to the bridge hubs on one
