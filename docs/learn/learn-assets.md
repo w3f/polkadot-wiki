@@ -36,9 +36,8 @@ logic.
 
 ## Sufficient Assets
 
-A sufficient asset allows an account to exist in the network’s state (i.e., a sufficient asset can
-keep an account alive on the network). Only the network's governance mechanism can deem an asset as
-_sufficient_. A balance of a non-sufficient asset can only exist on accounts that are on-chain
+
+A sufficient asset on Asset Hub can allow for an account to exist on-chain even though it does not have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Any registered asset on the Asset Hub can be made _sufficient_ through governance on the Relay Chain. A balance of a non-sufficient asset can only exist on accounts that are on-chain
 (i.e., accounts having the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
 That is, a user could not keep an account on-chain by transferring an non-sufficient asset to it; the
