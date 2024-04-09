@@ -45,8 +45,7 @@ That is, a user could not keep an account on-chain by transferring an non-suffic
 account must already be on-chain by having more than the existential deposit in
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset).
 
-Assets deemed _sufficient_ can instantiate accounts and pay for transaction fees, such that users
-can transact on the Asset Hub without the need for
+Assets deemed _sufficient_ can instantiate accounts on the Asset Hub and pay for transaction fees without the need for
 {{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }} An example would be USDT on the Polkadot
 Asset Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset Hub system parachain
 without the need to hold DOT.
