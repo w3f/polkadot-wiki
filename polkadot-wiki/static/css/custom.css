@@ -314,9 +314,8 @@ div[role=banner] .close:focus {
 }
 
 div.sticky {
-  position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 10;
   background-color: #f5cbc4;
   padding: 30px;
   font-size: 20px;
