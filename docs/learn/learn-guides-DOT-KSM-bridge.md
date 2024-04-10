@@ -95,7 +95,7 @@ This workflow crafts an XCM transfer as shown below.
 
 Once this [extrinsic](https://assethub-polkadot.subscan.io/extrinsic/6028374-2) is signed and
 submitted, it is broadcast to Polkadot Asset Hub nodes. As this is a reserve asset transfer, the DOT
-is transferred to a dedicated account on Polkadot Asset Hub and
+is transferred to the destination's sovereign account on Polkadot Asset Hub and
 [the wrapped DOT is issued](https://assethub-kusama.subscan.io/extrinsic/6758392-0?event=6758392-1)
 as a foreign asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset
 balances of any account on Kusama Asset Hub can be queried on-chain through the
