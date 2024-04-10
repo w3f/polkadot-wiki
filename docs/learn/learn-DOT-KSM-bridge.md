@@ -13,7 +13,8 @@ Bridge Hub runs a [light client of Kusama network](https://polkadot.polkassembly
 and Kusama Bridge Hub runs a
 [light client of Polkadot network](https://kusama.polkassembly.io/referenda/354), which were both
 enabled through their respective OpenGov referenda. This trustless bridge allows Polkadot Asset Hub
-accounts to hold wrapped KSM tokens and Kusama Asset Hub accounts to hold wrapped DOT tokens.
+to bridge in wrapped KSM tokens and Kusama Asset Hub to bridge in wrapped DOT tokens, thus making
+DOT available to all Kusama parachains and KSM to all Polkadot parachains.
 
 :::info Transferring Assets between Polkadot and Kusama
 
