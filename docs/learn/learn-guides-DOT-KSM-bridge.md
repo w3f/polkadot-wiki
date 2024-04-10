@@ -107,4 +107,22 @@ balances of any account on Kusama Asset Hub can be queried on-chain through the
 
 This tutorial shows how to transfer KSM on Kusama Asset Hub to Polkadot Asset Hub. The first step is
 to ensure that your account on Kusama Asset Hub has enough KSM to cover the XCM transfer fee and the
-bridge fee (which is around 0.4 KSM).
+bridge fee (which is around 0.4 KSM). The next step is to craft an XCM message to be sent from
+Kusama Asset Hub.
+
+The XCM transfer extrinsic shown below can be accessed
+[here.](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics/decode/0x1f08030202090200a10f03000101008479c8ea5480acca5a847133cd97a87801b6e698a98f2eab0e8e9d5c51b14a33030400010000070088526a740000000000)
+If you plan on reusing this extrinsic, ensure that you change the Account ID and the transfer amount
+highlighted in the snapshot below.
+
+![PJS Snapshot KSM Transfer](../assets/bridge-hub/KAH-PAH-KSM-Transfer-PJS-Extrinsic.png)
+
+Once this [extrinsic](https://assethub-kusama.subscan.io/extrinsic/6761480-2) is signed and
+submitted, it is broadcast to Kusama Asset Hub nodes. As this is a reserve asset transfer, the KSM
+is transferred to the sovereign account on Kusama Asset Hub and
+[the wrapped KSM is issued](https://assethub-polkadot.subscan.io/extrinsic/6031467-0?event=6031467-6)
+as a foreign asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset
+balances of any account on Kusama Asset Hub can be queried on-chain through the
+`foreignAssets`pallet as shown below.
+
+![Wrapped KSM Balance](../assets/bridge-hub/PAH-KSM-Balance.png)
