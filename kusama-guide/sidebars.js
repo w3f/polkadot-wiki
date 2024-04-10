@@ -379,6 +379,21 @@ module.exports = {
                       items: [
                         "learn/learn-guides-assets-create",
                         "learn/learn-guides-assets-ledger",
+                        "learn/learn-guides-asset-conversion",
+                      ],
+                    },
+                    {
+                      type: "category",
+                      label: "Bridge Hub Guides",
+                      description: 'Polkadot-JS Guides for Bridge Hub.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Bridge Hub Guides',
+                        description: 'Guides and Tutorials for Trustless Bridges on Bridge Hub',
+                        slug: '/learn-guides-bridges',
+                      },
+                      items: [
+                        "learn/learn-guides-dot-ksm-bridge",
                       ],
                     },
                   ],
@@ -437,6 +452,8 @@ module.exports = {
                     id: "learn/learn-bridges",
                   },
                   items: [
+                    "learn/learn-bridge-hub",
+                    "learn/learn-dot-ksm-bridge",
                     "learn/learn-hyperbridge",
                   ],
                 },
