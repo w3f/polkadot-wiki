@@ -23,20 +23,11 @@ pools will receive rewards.**
 - There are currently
   {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
-  members. (There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
-  members.)
+  members.
 - There are currently
   {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
   {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
-  pools. (There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
-  pools)
-- {{ polkadot: No limit on :polkadot }}
-  {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
-  members per pool.
+  pools.
 
 :::
 
