@@ -26,7 +26,7 @@ There are currently
 members in
 {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
-pools.
+pools. There is no limit to the number of pools or pool members per pool. 
 
 :::
 
