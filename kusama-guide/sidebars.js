@@ -247,6 +247,12 @@ module.exports = {
               items: [
                 "learn/learn-polkadot-opengov",
                 "learn/learn-polkadot-opengov-origins",
+                {
+                  type: 'link',
+                  label: 'OpenGov.Watch',
+                  description: 'Community-maintained Support Pages about Kusama OpenGov.',
+                  href: 'https://www.opengov.watch/',
+                },
               ],
             },
             "learn/learn-polkadot-opengov-treasury",
