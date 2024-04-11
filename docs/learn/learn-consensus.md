@@ -7,8 +7,6 @@ keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus
 slug: ../learn-consensus
 ---
 
-## Nominated Proof of Stake
-
 In traditional PoS systems, block production participation is dependent on token holdings as opposed
 to computational power. While PoS developers usually have a proponent for equitable participation in
 a decentralized manner, most projects end up proposing some level of centralized operation, where
@@ -22,14 +20,17 @@ economies of scale. These pools are often off-chain.
 A way to alleviate this is to implement pool formation on-chain and allow token holders to vote with
 their stake for validators to represent them.
 
+## Nominated Proof of Stake
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
-as its mechanism for selecting the validator set. It is designed with the roles of **validators**
-and **nominators**, to maximize chain security. Actors who are interested in maintaining the network
-can run a validator node.
+as its mechanism for selecting the validator set. It is designed with the roles of
+[**validators**](./learn-validator.md) and [**nominators**](./learn-nominator.md), to maximize chain
+security. Actors who are interested in maintaining the network can run a validator node.
 
 Validators assume the role of producing new blocks in [BABE](#block-production-babe), validating
-parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
-their stake. Nominators can approve candidates that they trust and back them with their tokens.
+parachain blocks, and guaranteeing finality in [GRANDPA](#finality-gadget-grandpa). Nominators can
+choose to back select validators with their stake. Nominators can approve candidates that they trust
+and back them with their tokens.
 
 ## Hybrid Consensus
 
@@ -39,12 +40,12 @@ for Blockchain Extension). We talk about both of these because
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses what is known as _hybrid
 consensus_. Hybrid consensus splits up the finality gadget from the block production mechanism.
 
-This is a way of getting the benefits of probabilistic finality (the ability to always produce new
-blocks) and provable finality (having a universal agreement on the canonical chain with no chance
-for reversion) in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It also avoids the
-corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong fork in
-probabilistic finality, and a chance for "stalling" - not being able to produce new blocks - in
-provable finality). By combining these two mechanisms,
+This is a way of getting the benefits of **probabilistic finality** (the ability to always produce
+new blocks) and **provable finality** (having a universal agreement on the canonical chain with no
+chance for reversion) in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It also
+avoids the corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong
+fork in probabilistic finality, and a chance for "stalling" - not being able to produce new blocks -
+in provable finality). By combining these two mechanisms,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows for blocks to be rapidly
 produced, and the slower finality mechanism to run in a separate process to finalize blocks without
 risking slower transaction processing or stalling.
