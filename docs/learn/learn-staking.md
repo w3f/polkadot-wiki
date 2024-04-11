@@ -45,7 +45,7 @@ Here you will learn about what staking is, why it is important and how it works 
 
 ## Proof-of-Stake (PoS)
 
-Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to
+Blockchain networks use [consensus](../general/faq.md#why-do-we-need-consensus) mechanisms to
 finalize blocks on the chain. Consensus is the process of agreeing on something, in this case, the
 progression of the blockchain or how blocks are added to the chain. Consensus consists of two
 actions:
