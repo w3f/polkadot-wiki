@@ -285,10 +285,8 @@ up to
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
 nominators to set their intention to nominate, of which the stake of the top
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
-nominators is considered for [electing set](#staking-election-stages) that eventually determines the
-active validators.
+{{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }} nominators is considered for
+[electing set](#staking-election-stages) that eventually determines the active validators.
 
 The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
 stake. The `voterList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be
@@ -432,11 +430,9 @@ Thus, for **nominator counters**, we have:
   {{ polkadot: (unlimited) :polkadot }}
   {{ kusama: (<RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>) :kusama }}
 - count of electing nominators, and maximum possible electing nominators
-  {{ polkadot: (<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>) :polkadot }}
-  {{ kusama: (<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>) :kusama }}
+  {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
 - count of active nominators and maximum possible active nominators
-  {{ polkadot: (<RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/>) :polkadot }}
-  {{ kusama: (<RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/>) :kusama }}
+  {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
 
 ### Avoiding Oversubscribed Validators
 

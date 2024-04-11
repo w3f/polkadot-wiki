@@ -141,9 +141,7 @@ The bags-list is capable of including an unlimited number of nodes, subject to t
 storage. In the current staking system configuration, the bags list keeps
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nomination intents, of which, at most
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
+nomination intents, of which, at most {{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }}
 come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
@@ -167,11 +165,9 @@ staking/election system.
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
 Submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
-nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
-the number of tokens bonded is higher than the minimum active bond. For more information, see the
-[nominator guide](learn-nominator.md).
+{{ polkadot: 22500 :polkadot }} {{ kusama: 12500  :kusama }} nominators is applied to the validators
+in the active set. To avail of staking rewards, ensure that the number of tokens bonded is higher
+than the minimum active bond. For more information, see the [nominator guide](learn-nominator.md).
 
 :::
 
