@@ -31,30 +31,6 @@ Validators assume the role of producing new blocks in [BABE](#block-production-b
 parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
 their stake. Nominators can approve candidates that they trust and back them with their tokens.
 
-## Probabilistic vs. Provable Finality
-
-A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of
-_probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under
-some assumptions about the network and participants, if we see a few blocks building on a given
-block, we can estimate the probability that it is final. Eventual consensus means that at some point
-in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus
-may take a long time and will not be able to be determined how long it will take ahead of time.
-However, finality gadgets such as GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement)
-or Ethereum's Casper FFG (the Friendly Finality Gadget) are designed to give stronger and quicker
-guarantees on the finality of blocks - specifically, that they can never be reverted after some
-process of Byzantine agreements has taken place. The notion of irreversible consensus is known as
-_provable finality._
-
-In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf), it is phrased
-in this way:
-
-:::note
-
-We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
-participants after some unspecified time.
-
-:::
-
 ## Hybrid Consensus
 
 There are two protocols we use when we talk about the consensus protocol of
@@ -105,8 +81,8 @@ resulting in inconsistent block time.
 When multiple validators are block producer candidates in a given slot, all will produce a block and
 broadcast it to the network. At that point, it's a race. The validator whose block reaches most of
 the network first wins. Depending on network topology and latency, both chains will continue to
-build in some capacity, until finalization kicks in and amputates a fork. See Fork Choice below for
-how that works.
+build in some capacity, until finalization kicks in and amputates a fork. See
+[Fork Choice](#fork-choice) below for how that works.
 
 ### No Validators in Slot
 
@@ -140,35 +116,37 @@ failures.
 In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block,
 all blocks leading up to that one are finalized at once.
 
-### Protocol
+:::info GRANDPA description and implementation
 
 Please refer to [the GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)
-for a full description of the protocol.
+for a full description of the protocol. GRANDPA is implemented as a
+[module of the Substrate Frame System](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs).
 
-### Implementation
+:::
 
-The
-[Substrate implementation of GRANDPA](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs)
-is part of Substrate Frame.
+### Probabilistic vs. Provable Finality
 
-## Bridging: BEEFY
+A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of
+_probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under
+some assumptions about the network and participants, if we see a few blocks building on a given
+block, we can estimate the probability that it is final. Eventual consensus means that at some point
+in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus
+may take a long time and will not be able to be determined how long it will take ahead of time.
+However, finality gadgets such as GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement)
+or Ethereum's Casper FFG (the Friendly Finality Gadget) are designed to give stronger and quicker
+guarantees on the finality of blocks - specifically, that they can never be reverted after some
+process of Byzantine agreements has taken place. The notion of irreversible consensus is known as
+_provable finality._
 
-The BEEFY (Bridge Efficiency Enabling Finality Yielder) is a secondary protocol to GRANDPA to
-support efficient bridging between the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network (relay chain) and remote,
-segregated blockchains, such as Ethereum, which were not built with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} interchain operability in mind. The
-protocol allows participants of the remote network to verify finality proofs created by the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain validators. In other
-words: clients in the Ethereum network should able to verify that the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network is at a specific state.
+In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf), it is phrased
+in this way:
 
-Storing all the information necessary to verify the state of the remote chain, such as the block
-headers, is too expensive. BEEFY stores the information in a space-efficient way and clients can
-request additional information over the protocol.
+:::note
 
-For additional implementation details, check out
-[this](https://spec.polkadot.network/#sect-grandpa-beefy) section of the Polkadot Spec.
+We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
+participants after some unspecified time.
+
+:::
 
 ## Fork Choice
 
@@ -213,6 +191,36 @@ The two main differences between GRANDPA and Casper FFG are:
 - in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
 - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block
   production mechanism
+
+## Bridging: BEEFY
+
+The BEEFY (Bridge Efficiency Enabling Finality Yielder) is a secondary protocol to GRANDPA to
+support efficient bridging between the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network (relay chain) and remote,
+segregated blockchains, such as Ethereum, which were not built with the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} interchain operability in mind. The
+protocol allows participants of the remote network to verify finality proofs created by the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain validators. In other
+words: clients in the Ethereum network should able to verify that the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network is at a specific state.
+
+Storing all the information necessary to verify the state of the remote chain, such as the block
+headers, is too expensive. BEEFY addresses the limitations of GRANDPA finality for certain use
+cases, such as bridges to chains like Ethereum, by providing a more lightweight and efficient
+finality solution.
+
+BEEFY operates on top of GRANDPA, utilizing a consensus extension and a light client protocol. This
+allows for smaller consensus justifications and efficient communication between nodes. It utilizes
+Merkle Mountain Ranges (MMR) as an efficient data structure for storing and transmitting block
+headers and signatures to light clients. Payload, signed commitment, and witness data are used as
+essential components for verifying finality proofs.
+
+Overall, BEEFY aims to enhance the efficiency and reliability of cross-chain communication within
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem by providing a
+lightweight finality solution compatible with a variety of target chains.
+
+For additional implementation details, see
+[the Polkadot Specification](https://spec.polkadot.network/#sect-grandpa-beefy).
 
 ## Resources
 
