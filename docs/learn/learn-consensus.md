@@ -9,13 +9,13 @@ slug: ../learn-consensus
 
 In traditional PoS systems, block production participation is dependent on token holdings as opposed
 to computational power. While PoS developers usually have a proponent for equitable participation in
-a decentralized manner, most projects end up proposing some level of centralized operation, where
-the number of validators with full participation rights is limited. These validators are often seen
-to be the most wealthy, and, as a result, influence the PoS network as they are the most staked.
-Usually, the number of candidates to maintain the network with the necessary knowledge (and
-equipment) is limited; this can directly increase operational costs as well. Systems with a large
-number of validators tend to form pools to decrease the variance of their revenue and profit from
-economies of scale. These pools are often off-chain.
+a decentralized manner, most projects propose some level of centralized operation, where the number
+of validators with full participation rights is limited. These validators are often seen to be the
+most wealthy and, as a result, influence the PoS network as they are the most staked. Usually, the
+number of candidates to maintain the network with the necessary knowledge (and equipment) is
+limited; this can also increase operational costs. Systems with a large number of validators tend to
+form pools to decrease the variance of their revenue and profit from economies of scale. These pools
+are often off-chain.
 
 A way to alleviate this is to implement pool formation on-chain and allow token holders to vote with
 their stake for validators to represent them.
@@ -27,20 +27,17 @@ as its mechanism for selecting the validator set. It is designed with the roles 
 [**validators**](./learn-validator.md) and [**nominators**](./learn-nominator.md), to maximize chain
 security. Actors who are interested in maintaining the network can run a validator node.
 
-Validators assume the role of producing new blocks in [BABE](#block-production-babe), validating
-parachain blocks, and guaranteeing finality in [GRANDPA](#finality-gadget-grandpa). Nominators can
-choose to back select validators with their stake. Nominators can approve candidates that they trust
-and back them with their tokens.
+Validators assume the role of producing new blocks, validating parachain blocks, and guaranteeing
+finality. Nominators can choose to backselect validators with their stake. Nominators can approve
+candidates that they trust and back them with their tokens.
 
 ## Hybrid Consensus
 
-There are two protocols we use when we talk about the consensus protocol of
-{{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} GRANDPA and BABE (Blind Assignment
-for Blockchain Extension). We talk about both of these because
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses what is known as _hybrid
-consensus_. Hybrid consensus splits up the finality gadget from the block production mechanism.
+consensus_. Hybrid consensus splits up the finality gadget ([GRANDPA](#finality-gadget-grandpa))
+from the block production mechanism ([BABE](#block-production-babe)).
 
-This is a way of getting the benefits of **probabilistic finality** (the ability to always produce
+This is a way of getting the benefits of **probabilistic finality** (the ability always to produce
 new blocks) and **provable finality** (having a universal agreement on the canonical chain with no
 chance for reversion) in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It also
 avoids the corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong
@@ -61,7 +58,7 @@ the validator nodes and determines the authors of new blocks. BABE is comparable
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
 according to stake and using the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-[randomness cycle](./learn-cryptography.md#randomness). The chains runtime is required to provide
+[randomness cycle](./learn-cryptography.md#randomness). The chain’s runtime is required to provide
 the BABE authority list and randomness to the host via a consensus message in the header of the
 first block of each epoch.
 
@@ -82,7 +79,7 @@ resulting in inconsistent block time.
 When multiple validators are block producer candidates in a given slot, all will produce a block and
 broadcast it to the network. At that point, it's a race. The validator whose block reaches most of
 the network first wins. Depending on network topology and latency, both chains will continue to
-build in some capacity, until finalization kicks in and amputates a fork. See
+build in some capacity until finalization kicks in and amputates a fork. See
 [Fork Choice](#fork-choice) below for how that works.
 
 ### No Validators in Slot
@@ -90,9 +87,9 @@ build in some capacity, until finalization kicks in and amputates a fork. See
 When no validators have rolled low enough in the randomness lottery to qualify for block production,
 a slot can remain seemingly blockless. We avoid this by running a secondary, round-robin style
 validator selection algorithm in the background. The validators selected to produce blocks through
-this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also
-produces a primary block from a [VRF-selected](./learn-cryptography.md#randomness) validator. Thus,
-a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
+this algorithm always produce blocks. Still, these _secondary_ blocks are ignored if the same slot
+also produces a primary block from a [VRF-selected](./learn-cryptography.md#randomness) validator.
+Thus, a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
 [BABE paper](https://research.web3.foundation/Polkadot/protocols/block-production/Babe).
@@ -104,8 +101,8 @@ implemented for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama 
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host uses the GRANDPA Finality
 protocol to finalize blocks. Finality is obtained by consecutive rounds of voting by the validator
-nodes. Validators execute GRANDPA finality process in parallel to Block Production as an independent
-service.
+nodes. Validators execute the GRANDPA finality process in parallel to Block Production as an
+independent service.
 
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope
 with 1/5 Byzantine nodes in an asynchronous setting.
@@ -114,8 +111,8 @@ A notable distinction is that GRANDPA reaches agreements on chains rather than b
 speeding up the finalization process, even after long-term network partitioning or other networking
 failures.
 
-In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block,
-all blocks leading up to that one are finalized at once.
+In other words, as soon as more than 2/3 of validators attest to a chain containing a particular
+block, all blocks leading up to that one are finalized at once.
 
 :::info GRANDPA description and implementation
 
@@ -132,7 +129,7 @@ _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality 
 some assumptions about the network and participants, if we see a few blocks building on a given
 block, we can estimate the probability that it is final. Eventual consensus means that at some point
 in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus
-may take a long time and will not be able to be determined how long it will take ahead of time.
+may take a long time, and will not be able to determine how long it will take ahead of time.
 However, finality gadgets such as GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement)
 or Ethereum's Casper FFG (the Friendly Finality Gadget) are designed to give stronger and quicker
 guarantees on the finality of blocks - specifically, that they can never be reverted after some
@@ -144,7 +141,7 @@ in this way:
 
 :::note
 
-We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
+We say an Oracle A in a protocol is _eventually consistent_ if it returns the same value to all
 participants after some unspecified time.
 
 :::
@@ -153,8 +150,8 @@ participants after some unspecified time.
 
 Bringing BABE and GRANDPA together, the fork choice of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} becomes clear. BABE must always build
-on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE
-provides probabilistic finality by building on the chain with the most primary blocks.
+on the chain that GRANDPA has finalized. BABE provides probabilistic finality when there are forks
+after the finalized head by building on the chain with the most primary blocks.
 
 ![Best chain choice](../assets/best_chain.png)
 
@@ -174,7 +171,7 @@ Nakamoto consensus only gives us probabilistic finality. Probabilistic finality 
 in the past is only as safe as the number of confirmations it has, or the number of blocks that have
 been built on top of it. As more blocks are built on top of a specific block in a Proof of Work
 chain, more computational work has been expended behind this particular chain. However, it does not
-guarantee that the chain containing the block will always remain the agreed-upon chain, since an
+guarantee that the chain containing the block will always remain the agreed-upon chain since an
 actor with unlimited resources could potentially build a competing chain and expend enough
 computational resources to create a chain that did not contain a specific block. In such a
 situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to
@@ -202,7 +199,7 @@ segregated blockchains, such as Ethereum, which were not built with the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} interchain operability in mind. The
 protocol allows participants of the remote network to verify finality proofs created by the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain validators. In other
-words: clients in the Ethereum network should able to verify that the
+words: clients in the Ethereum network should be able to verify that the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network is at a specific state.
 
 Storing all the information necessary to verify the state of the remote chain, such as the block
@@ -213,8 +210,8 @@ finality solution.
 BEEFY operates on top of GRANDPA, utilizing a consensus extension and a light client protocol. This
 allows for smaller consensus justifications and efficient communication between nodes. It utilizes
 Merkle Mountain Ranges (MMR) as an efficient data structure for storing and transmitting block
-headers and signatures to light clients. Payload, signed commitment, and witness data are used as
-essential components for verifying finality proofs.
+headers and signatures to light clients. Payload, signed commitment, and witness data are essential
+for verifying finality proofs.
 
 Overall, BEEFY aims to enhance the efficiency and reliability of cross-chain communication within
 the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem by providing a
@@ -233,8 +230,8 @@ For additional implementation details, see
   implementation and the accompanying
   [Substrate pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs).
 - [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) -
-  An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama,
-  with Bill Laboon.
+  An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama with
+  Bill Laboon.
 - [Block Production and Finalization in Polkadot: Understanding the BABE and GRANDPA Protocols](https://www.youtube.com/watch?v=1CuTSluL7v4&t=4s) -
   An academic talk by Bill Laboon, given at MIT Cryptoeconomic Systems 2020, describing Polkadot's
   hybrid consensus model in-depth.
