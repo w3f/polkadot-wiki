@@ -1,40 +1,11 @@
 ---
 id: learn-consensus
-title: Polkadot Consensus
-sidebar_label: Consensus
+title: Polkadot's Consensus Protocols
+sidebar_label: Consensuses
 description: The Consensus Mechanism of Polkadot.
 keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus, finality]
 slug: ../learn-consensus
 ---
-
-## Why do we need Consensus?
-
-Consensus is a method for coming to agreement over a shared state. In order for the state of the
-blockchain to continue to build and move forward, all nodes in the network must agree and come to
-consensus. It is the way that the nodes in a decentralized network are able to stay synced with each
-other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to
-ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to
-provide the _objective_ view of the state amid participants who each have their own _subjective_
-views of the network. It is the process by which these nodes communicate and come to agreement, and
-are able to build new blocks.
-
-## What are PoW and PoS?
-
-Proof of Work (PoW) and Proof of Stake (PoS) have been inaccurately used as short hand to refer to
-consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method
-for agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that
-also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a
-set of rules for selecting the validator set and does not specify a chain selection rule or how a
-chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for
-coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos.md)
-is a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection
-method.
-
-## Why not Proof of Work?
-
-Although simple and effective in coming to a decentralized consensus on the next block producer,
-proof of work with Nakamoto consensus consumes an incredible amount of energy, has no economic or
-provable finality, and has no effective strategy in resisting cartels.
 
 ## Nominated Proof of Stake
 
@@ -213,9 +184,9 @@ with a "1" are primary blocks; those marked with a "2" are secondary blocks. Eve
 chain is the longest chain on the latest finalized block, it does not qualify because it has fewer
 primaries at the time of evaluation than the one below it.
 
-# Comparisons
+## Comparisons
 
-## Nakamoto consensus
+### Nakamoto consensus
 
 Nakamoto consensus consists of the longest chain rule using proof of work as its Sybil resistance
 mechanism and leader election.
@@ -230,12 +201,12 @@ computational resources to create a chain that did not contain a specific block.
 situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to
 this new chain as the canonical one.
 
-## PBFT / Tendermint
+### PBFT / Tendermint
 
 Please see the [relevant section](learn-comparisons-cosmos.md#consensus) in the Cosmos comparison
 article.
 
-## Casper FFG
+### Casper FFG
 
 The two main differences between GRANDPA and Casper FFG are:
 
@@ -243,7 +214,7 @@ The two main differences between GRANDPA and Casper FFG are:
 - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block
   production mechanism
 
-# Resources
+## Resources
 
 - [BABE paper](https://research.web3.foundation/Polkadot/protocols/block-production/Babe) - The
   academic description of the BABE protocol.
