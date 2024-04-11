@@ -20,14 +20,13 @@ Note that rewards are not guaranteed for those pools that do not have enough bon
 included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active
 pools will receive rewards.**
 
-- There are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
-  members.
-- There are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
-  pools.
+There are currently
+{{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
+members in
+{{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
+pools.
 
 :::
 
@@ -61,20 +60,18 @@ permissionlessly allow members to pool their funds together and act as a single 
 
 Due to the current runtime constraints,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can only handle
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
-nominators comfortably in the [electing set](learn-nominator.md#staking-election-stages). As one of
-the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the
-network, it can be inferred that the staking system on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} favors nominators with a larger
-stake. Only the nominator accounts which back the validators in the active set are eligible for
-receiving staking rewards. This leaves out nomination intents from the accounts with lower token
-balance than the min-active nomination and places them in a waiting queue to enter electing set.
-Nomination pools will be handy for members who want to participate in the staking system with a
-stake much lower than the dynamic min-active nomination threshold on the network. All operations are
-constant space and time complexity relative to the number of members, eliminating any theoretical
-upper bound on the number of members the system can handle and thus scaling the number of accounts
-that can participate and earn rewards in the staking system on
+{{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }} nominators comfortably in the
+[electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
+[NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
+inferred that the staking system on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+favors nominators with a larger stake. Only the nominator accounts which back the validators in the
+active set are eligible for receiving staking rewards. This leaves out nomination intents from the
+accounts with lower token balance than the min-active nomination and places them in a waiting queue
+to enter electing set. Nomination pools will be handy for members who want to participate in the
+staking system with a stake much lower than the dynamic min-active nomination threshold on the
+network. All operations are constant space and time complexity relative to the number of members,
+eliminating any theoretical upper bound on the number of members the system can handle and thus
+scaling the number of accounts that can participate and earn rewards in the staking system on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In summary, each nomination pool is
 viewed as a single nominator from the NPoS system point of view.
 
