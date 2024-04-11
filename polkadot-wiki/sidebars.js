@@ -245,7 +245,13 @@ module.exports = {
               items: [
                 "learn/learn-polkadot-opengov",
                 "learn/learn-polkadot-opengov-origins",
-                "learn/learn-polkadot-technical-fellowship"
+                "learn/learn-polkadot-technical-fellowship",
+                {
+                  type: 'link',
+                  label: 'OpenGov.Watch',
+                  description: 'Community-maintained Support Pages about Polkadot OpenGov.',
+                  href: 'https://www.opengov.watch/',
+                },
               ],
             },
             "learn/learn-polkadot-opengov-treasury",
