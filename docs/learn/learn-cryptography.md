@@ -98,8 +98,9 @@ broadcast this certificate via an extrinsic.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses six session keys:
 
 - Authority Discovery: sr25519
-- GRANDPA: ed25519
 - BABE: sr25519
+- BEEFY: ecdsa
+- GRANDPA: ed25519
 - I'm Online: sr25519
 - Parachain Assignment: sr25519
 - Parachain Validator: ed25519
