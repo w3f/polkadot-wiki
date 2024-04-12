@@ -472,7 +472,7 @@ A ready-to-use automated and decentralized method for ordering on-demand coretim
 currently [being implemented](https://github.com/paritytech/polkadot-sdk/issues/1487). Some teams
 already implemented a simplified [variant](https://github.com/Magport/Magnet/issues/4). What works
 in any case is ordering on-demand coretime "by hand", by sending the `placeOrderKeepAlive` extrinsic
-of the `onDemandAssignmentProvider`, via polkadot js for example.
+of the `onDemandAssignmentProvider`, via polkadot js for example. You can find an easy step-by-step guide [here](https://forum.polkadot.network/t/parachain-consensus-updates-coretime-asynchronous-backing-scalability/4396/8?u=kianenigma).
 
 #### How many cores will be configured for on-demand coretime?
 
