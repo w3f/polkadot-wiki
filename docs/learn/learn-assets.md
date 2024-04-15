@@ -36,18 +36,19 @@ logic.
 
 ## Sufficient Assets
 
-
-A sufficient asset on Asset Hub can allow for an account to exist on-chain even though it does not have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Any registered asset on the Asset Hub can be made _sufficient_ through governance on the Relay Chain. A balance of a non-sufficient asset can only exist on accounts that are on-chain
-(i.e., accounts having the
+A sufficient asset on Asset Hub can allow for an account to exist on-chain even though it does not
+have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Any registered
+asset on the Asset Hub can be made _sufficient_ through governance on the Relay Chain. A balance of
+a non-sufficient asset can only exist on accounts that are on-chain (i.e., accounts having the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
-That is, a user could not keep an account on-chain by transferring an non-sufficient asset to it; the
-account must already be on-chain by having more than the existential deposit in
+That is, a user could not keep an account on-chain by transferring an non-sufficient asset to it;
+the account must already be on-chain by having more than the existential deposit in
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset).
 
-Assets deemed _sufficient_ can instantiate accounts on the Asset Hub and pay for transaction fees without the need for
-{{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }} An example would be USDT on the Polkadot
-Asset Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset Hub system parachain
-without the need to hold DOT.
+Assets deemed _sufficient_ can instantiate accounts on the Asset Hub and pay for transaction fees
+without the need for {{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }} An example would be
+USDT on the Polkadot Asset Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset
+Hub system parachain without the need to hold DOT.
 
 :::warning Transfers of Non-sufficient assets
 
