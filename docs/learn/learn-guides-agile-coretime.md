@@ -41,3 +41,21 @@ assigning tasks.
 ![RegionX-regions-dashboard](../assets/coretime/regionx-manage-cores.png)
 
 ## Lastic
+
+Lastic is a marketplace for buying and selling blockspace. For more information, check
+[Lastic's official documentation](https://docs.lastic.xyz/).
+
+### Purchase Core with Lastic
+
+Lastic allows for purchasing core with accounts hosted on wallets like Subwallet, Talisman, Nova
+Wallet and Polkadot-JS Extension. Select the account to be used for the coretime purchase and then,
+click on "buy core" button to sign and broadcast the transaction.
+
+![Lastic-purchase-bulk-coretime](../assets/coretime/Lastic-UI.png)
+
+### Manage Core with Lastic
+
+Lastic enables you to transfer your core to another account, utilize it for a parachain, split it
+up, change block production frequency or assign it to a task.
+
+![Lastic-manage-core](../assets/coretime/Lastic-manage-core.png)
