@@ -2,7 +2,7 @@
 id: learn-consensus
 title: Polkadot's Consensus Protocols
 sidebar_label: Consensuses
-description: The Consensus Mechanism of Polkadot.
+description: The Consensus Mechanisms of Polkadot.
 keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus, finality]
 slug: ../learn-consensus
 ---
