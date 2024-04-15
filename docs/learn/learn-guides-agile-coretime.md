@@ -8,6 +8,36 @@ slug: ../learn-guides-agile-coretime
 ---
 
 The tutorials in this document use [CoreHub on RegionX](https://app.regionx.tech/), a user interface
-for managing and purchasing Coretime regions.
+for purchasing and Coretime regions and Coretime marketplace user interface by
+[Lastic](https://test.lastic.xyz/start).
+
+:::caution
+
+Both RegionX and Lastic are under active development and are released only for testing purposes.
+
+:::
+
+## RegionX
+
+The RegionX CoreHub offers options to purchase and manage cores.
 
 ![RegionX-UI](../assets/coretime/RegionX-UI.png)
+
+### Purchase Core with RegionX
+
+RegionX allows for purchasing core with accounts hosted on wallets like Subwallet, Talisman, Nova
+Wallet and Polkadot-JS Extension. Select the account to be used for the coretime purchase (displayed
+on top right) and ensure that both the relay chain and coretime chain are connected (displayed on
+bottom left). Then, click on purchse button to sign and broadcast the transaction.
+
+![RegionX-purchase-bulk-coretime](../assets/coretime/regionx-purchase-core.png)
+
+### Manage Core with RegionX
+
+The Regions dashboard lists all the cores purchased through the connected wallet account along with
+the basic information of the respective core. It allows for partitioning, interlacing, transfers and
+assigning tasks.
+
+![RegionX-regions-dashboard](../assets/coretime/regionx-manage-cores.png)
+
+## Lastic
