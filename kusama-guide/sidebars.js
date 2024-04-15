@@ -304,7 +304,6 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-consensus",
               ],
             },
           ],
@@ -415,6 +414,7 @@ module.exports = {
                 id: 'learn/learn-architecture',
               },
               items: [
+                "learn/learn-consensus",
                 {
                   type: "category",
                   label: "Parachains",
