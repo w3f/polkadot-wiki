@@ -214,34 +214,27 @@ more gas to utilize.
 
 ## Polkadot Virtual Machine (PVM)
 
-The PVM design is based on the RISC-V ISA (Instruction Set Architecture). It's a very simple
-instruction format. The RISC-V ISA is:
+The PVM design is rooted in the RISC-V ISA (Instruction Set Architecture), known for its simplicity
+and versatility. The RISC-V ISA offers several advantages:
 
-- easy to transpile into common hardware formats like x86, x64, and ARM
-- well supported by tooling like [LLVM](https://llvm.org/)
+- It is easy to transpile into common hardware formats such as x86, x64, and ARM.
+- It is well-supported by tooling like [LLVM](https://llvm.org/)
 
-PVM itself is simple and secure, sandboxable. It has various guarantees over execution, it is
-friendly to metering, deterministic, and consensus-sensitive. It can host arbitrary in a sense that
-PVM does not have much of the complexity, nor does it have much of the opinionation that you might
-otherwise find in other VMs.
+The PVM itself embodies simplicity and security, being sandboxable and offering various execution
+guarantees. It is deterministic, consensus-sensitive, and friendly to metering. Unlike other VMs,
+the PVM lacks complexity and excessive opinionation.
 
-WASM is ultimately optimized for a web use case, and this is sort of fine in most circumstances.
-However, the stack is not handled as part of the machine itself (but rather it's sort of
-off-machine) and this creates issues in continuations. Now, continuations can be really a very
-helpful thing to have, particularly when you're doing stuff like asynchronous programming with XCM.
+WASM, while optimized for web use cases, presents challenges with stack management, particularly in
+handling continuations. RISC-V addresses this issue by placing the stack in memory, facilitating
+continuations handling naturally without additional complexity.
 
-RISC-V, being such a simple and sort of regular machine, just puts the stack in a bit of memory,
-which means if you snapshot the whole of memory, or at least the pages that are actually used in
-memory, you will end up being able to have continuations naturally. There's nothing extra to do.
-Now, as it happens, PVM also achieves incredibly fast execution speeds (free metering compared to
-WASM) when run on regular hardware like X64 and ARM.
+Additionally, the PVM demonstrates exceptional execution speeds, especially when run on conventional
+hardware like X64 and ARM, offering advantages such as free metering compared to WASM.
 
-RISC-V-enabled continuations will set a new standard for coding that is meant to scale across
-multi-core platforms like JAM. Realistically, this is how all blockchains are ultimately going to
-scale. This idea of just throwing faster single-core CPUs at it is not going to go very far. We
-already can see this in hardware and in the evolution of software platforms as well. There is an
-increasing need to think in terms of asynchronous, parallelized architectures. The same will for
-sure be true in blockchain and consensus algorithms.
+The incorporation of RISC-V-enabled continuations is poised to establish a new standard for scalable
+coding across multi-core platforms like JAM. Asynchronous, parallelized architectures are
+increasingly essential for scalability in both hardware and software platforms, a trend that is
+expected to extend to blockchain and consensus algorithms.
 
 ## SAFROLE
 
