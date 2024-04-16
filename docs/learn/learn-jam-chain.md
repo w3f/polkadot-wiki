@@ -36,10 +36,9 @@ The job of the JAM chain is to provide the necessary apparatus to ensure that th
 correctly reflects the input when it goes through the transformation it's meant to have undergone. The JAM chain 
 accepts outputs of roll-ups, of bits of computation done elsewhere, and the data they yield is fed into the JAM chain.
 
-The JAM chain is there to integrate the outputs of these computations into some shared state. So it
-provides this shared state model, for integrating outputs together. We can see how Polkadot fits
-into this model. But interestingly, we can see how other chains like what Ethereum is doing also fit
-into this model.
+The JAM chain integrates the outputs of these computations into a shared state,
+providing a shared state model similar to how Polkadot relay chain functions. 
+
 
 ## Smart Contract Similarity
 
