@@ -57,7 +57,7 @@ certain state components, resembling the structure commonly observed on a smart 
 
 ## Service Entry Points
 
-JAM services' code itself is split into three different entry points:
+JAM services' code is split into three different entry points:
 
 - **Refine** is the function that does the mostly stateless computation. This is the bit that
   defines the transformation for the rollup for a specific service.
