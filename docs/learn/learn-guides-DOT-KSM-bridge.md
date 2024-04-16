@@ -126,3 +126,23 @@ balances of any account on Kusama Asset Hub can be queried on-chain through the
 `foreignAssets`pallet as shown below.
 
 ![Wrapped KSM Balance](../assets/bridge-hub/PAH-KSM-Balance.png)
+
+## Transfer of arbitrary assets between Polkadot Asset Hub and Kusama Asset Hub
+
+Transfer functionality of assets other than DOT and KSM between Asset Hubs is yet to be enabled. Once this
+functionality is enabled, assets which are sufficient or non-sufficient on the Asset Hubs can be bridged. 
+
+:::caution Avoid Asset Traps
+
+To avoid issues on the receiving side for non-sufficient assets, make sure to call
+[pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531) or [pallet_assets::touch_other()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1616)
+effectively guaranteeing the ability to successfully receive and accept the bridged assets in your
+account on the destination chain.
+This eliminates issues like your account on destination not existing or not having enough ED or having
+reached the maximum limit of different assets it can hold.
+Without this sanity step, you risk that the bridged assets will make their way to the destination chain
+but will not be accepted by your account, and instead get trapped in the Asset Trap on the destination chain.
+
+:::
+
+Once arbitrary asset transfers are enabled by the Asset Hubs, a guide will be posted to this Wiki page.
