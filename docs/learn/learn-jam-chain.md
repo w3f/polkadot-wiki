@@ -67,8 +67,7 @@ JAM services' code is split into three different entry points:
 
 **Work packages** are the input to a service. Work packages can have many **work items** in them.
 Every work item is associated with a service, and it reflects the actual input to the service. For
-the parachains service, this is where you would put in the transactions, all that stuff to do with
-blockchain inputs.
+the parachains service, this is where the transactions and all of the blockchain inputs are entered.
 
 The JAM security apparatus consists a two-stage processing where the Refine function accepts a work
 item as an input and yields a work result as an output, which gets fed into the Accumulate function.
