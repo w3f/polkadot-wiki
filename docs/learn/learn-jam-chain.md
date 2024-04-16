@@ -70,11 +70,9 @@ Every work item is associated with a service, and it reflects the actual input t
 the parachains service, this is where the transactions and all of the blockchain inputs are entered.
 
 The JAM security apparatus consists a two-stage processing where the Refine function accepts a work
-item as an input and yields a work result as an output, which gets fed into the Accumulate function.
-First Refine, then Accumulate. Work items are refined into work results, and therefore a work
-package, which contains many work items, is refined into a **work report**, which is the
-corresponding results of several items. A work package can be assigned that uses one core for one
-time slot, one six-second period of time.
+item as an input and yields a work result as an output, which gets fed into the Accumulate function (First Refine, then Accumulate.) Work items are refined into work results, and therefore, a work package containing many work items is refined into a **work report**, which is the
+corresponding results of several items. A work package can be assigned that uses one core for a specific
+time slot (typically a period of 6 seconds).
 
 ## JAM is Transactionless
 
