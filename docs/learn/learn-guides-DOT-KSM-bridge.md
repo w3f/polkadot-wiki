@@ -135,7 +135,7 @@ functionality is enabled, assets which are sufficient or non-sufficient on the A
 :::caution Avoid Asset Traps
 
 To avoid issues on the receiving side for non-sufficient assets, make sure to call
-[pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/002d9260f9a0f844f87eefd0abce8bd95aae351b/substrate/frame/support/src/traits/misc.rs#L1209)
+[pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531) or [pallet_assets::touch_other()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1616)
 effectively guaranteeing the ability to successfully receive and accept the bridged assets in your
 account on the destination chain.
 This eliminates issues like your account on destination not existing or not having enough ED or having
