@@ -57,7 +57,6 @@ and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The pro
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
-  (exceptions by approval for good intentions)
 - {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
 - Have a staking proxy set up
 - Must be on the latest release
