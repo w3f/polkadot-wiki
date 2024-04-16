@@ -76,10 +76,10 @@ time slot (typically a period of 6 seconds).
 
 ## JAM is Transactionless
 
-How does JAM differ from a smart contract chain? Well, it's **transactionless**. There are no
-transactions in JAM: Everything that is all permissionless input first goes through a Refine stage.
+JAM fundamentally differs from a smart contract chain in the fact that it's **transactionless**. There are no
+transactions in JAM: Everything is permissionless and the input first goes through a Refine stage.
 So the service pre-refines all of the input that is transformed into these work reports, these sets
-of work results. And then those work results make their way actually onto the chain.
+of work results. Then, those work results make their way onto the chain.
 
 So if there are no transactions, how does anything make its way from the external world in? Well,
 there is still extrinsic information of a specific format. There are five kinds of extrinsic in JAM:
