@@ -30,8 +30,7 @@ a unique manner.
 JAM will be a domain-specific chain, a chain that handles one particular domain of problems. In this
 case, roll-ups, what Ethereum people might call optimistic roll-ups. JAM's rollups are heavily
 bounded in terms of their security. This is what Polkadot has been doing for the last five years, it
-is already a highly domain-specific roll-up chain. It's just got a little bit more opinionation than
-we want, and that is essentially what JAM fixes.
+is already a highly domain-specific roll-up chain. JAM essentially makes it less opinionated and more generic.
 
 The JAM chain's job is to essentially provide the necessary apparatus to ensure that this output
 correctly reflects the input when it goes through whatever transformation it's meant to have gone
