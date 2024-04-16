@@ -59,7 +59,7 @@ certain state components, resembling the structure commonly observed on a smart 
 
 JAM services' code is split into three different entry points:
 
-- **Refine** is the function that does the mostly stateless computation. This is the bit that
+- **Refine** is the function that does the mostly stateless computation. It
   defines the transformation for the rollup for a specific service.
 - **Accumulate** is the function that takes the output of that and folds it into the overall state
   of the service
