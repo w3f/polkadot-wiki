@@ -84,6 +84,8 @@ package containing many work items is refined into a **work report**, which is t
 results of several items. A work package can be assigned that uses one core for a specific time slot
 (typically a period of 6 seconds).
 
+![refine-accumulate](../assets/refine-accumulate.png)
+
 ### JAM is Transactionless
 
 JAM distinguishes itself from smart contract chains by operating transactionlessly. There are no
