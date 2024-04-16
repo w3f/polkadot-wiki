@@ -7,6 +7,13 @@ keywords: [Polkadot, JAM, join-accumulate]
 slug: ../learn-jam-chain
 ---
 
+:::note 
+
+JAM paper is available at [graypaper.com](https://graypaper.com/) and the information regarding
+JAM prize is available at [jam.web3.foundation/](https://jam.web3.foundation/).
+
+:::
+
 JAM, short for Join-Accumulate Machine, represents a prospective design to succeed the relay chain.
 Its name originates from CoreJAM, denoting Collect Refine Join Accumulate, which outlines the
 computation model the machine embodies. However, within the actual chain, only the Join and
