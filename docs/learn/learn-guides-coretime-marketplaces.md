@@ -1,10 +1,10 @@
 ---
-id: learn-guides-agile-coretime
-title: Agile Coretime Guides
-sidebar_label: Agile Coretime Guides
-description: Agile Coretime usage guides
+id: learn-guides-coretime-marketplaces
+title: Coretime Marketplaces
+sidebar_label: Coretime Marketplaces
+description: Usage guides for coretime marketplaces
 keywords: [coretime, blockspace, parathread, parachain, cores]
-slug: ../learn-guides-agile-coretime
+slug: ../learn-guides-coretime-marketplaces
 ---
 
 The tutorials in this document use [CoreHub on RegionX](https://app.regionx.tech/), a user interface

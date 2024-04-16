@@ -1,10 +1,10 @@
 ---
-id: learn-agile-coretime-parachains
+id: learn-guides-coretime-parachains
 title: Agile Coretime for Parachains
-sidebar_label: Agile Coretime Parachains
+sidebar_label: Coretime for Parachains
 description: Agile Coretime from Parachains perspective
 keywords: [coretime, blockspace, parathread, parachain, cores]
-slug: ../learn-agile-coretime-parachains
+slug: ../learn-guides-coretime-parachains
 ---
 
 The landscape for parachains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
@@ -26,6 +26,20 @@ will be refunded. The existing parachains benefit from
 assignment of bulk coretime for a core without going through the regular purchasing process.
 
 ## Run a Parachain with Bulk Coretime
+
+The first step is to register a `ParaID`for the on-demand parachain. This can be done through
+Polkadot-JS UI by navigating to Network > Parachains > Parathreads and clicking on ParaID button.
+Ensure that you have sufficient tokens to successfully reserve the displayed `ParaID`
+
+![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
+
+The next step is to register the parachain's genesis code and state.
+
+![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
+
+After successful registration, the parachain starts onboarding as a parathread.
+
+![coretime-onboarding-parathread](../assets/coretime/coretime-parachain-onboarding.png)
 
 ## Run a Parachain with On-demand Coretime
 
