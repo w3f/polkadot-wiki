@@ -7,17 +7,19 @@ keywords: [Polkadot, JAM, join-accumulate]
 slug: ../learn-jam-chain
 ---
 
-:::note 
+:::note
 
-JAM paper is available at [graypaper.com](https://graypaper.com/) and the information regarding
-JAM prize is available at [jam.web3.foundation](https://jam.web3.foundation/).
+JAM paper is available at [graypaper.com](https://graypaper.com/) and the information regarding JAM
+prize is available at [jam.web3.foundation](https://jam.web3.foundation/).
 
 :::
 
 JAM, short for Join-Accumulate Machine, represents a prospective design to succeed the relay chain.
 Its name originates from CoreJAM, denoting Collect Refine Join Accumulate, which outlines the
-computation model the machine embodies. However, within the actual chain, only the Join and
-Accumulate functions are executed, while the Collect and Refine processes occur off-chain.
+computation model the machine embodies and that was
+[first described in an RFC by Gavin Wood](https://github.com/polkadot-fellows/RFCs/blob/006a9ff07c3d3bc5316c6bf63b05e966e694cc2d/text/corejam.md).
+However, within the actual chain, only the Join and Accumulate functions are executed, while the
+Collect and Refine processes occur off-chain.
 
 Unlike the current iterative approach, JAM will be introduced as a comprehensive singular upgrade.
 Several factors contribute to this decision:
@@ -29,23 +31,22 @@ Several factors contribute to this decision:
 
 While this shift entails a significant breaking change, efforts will be made to minimize its impact
 to manageable levels. Consolidating multiple smaller breaking changes into a single transition is
-deemed preferable, introducing a novel blockchain concept that integrates various existing ideas in
-a unique manner.
+deemed preferable, introducing a novel blockchain concept that uniquely integrates various existing
+ideas.
 
 ## A Rollup Chain
 
-JAM will be a domain-specific chain, a chain that handles one particular domain of problems. In this
-case, roll-ups, what Ethereum people might call optimistic roll-ups. JAM's rollups are heavily
-bounded in terms of their security. This is what Polkadot has been doing for the last five years, it
-is already a highly domain-specific roll-up chain. JAM essentially makes it less opinionated and more generic.
+JAM will be a domain-specific chain that handles one particular domain of problems. In this case,
+roll-ups, what Ethereum people call optimistic roll-ups. JAM's rollups are heavily bounded in terms
+of their security. This is what Polkadot has been doing for the last five years, it is already a
+highly domain-specific roll-up chain. JAM essentially makes it less opinionated and more generic.
 
-The job of the JAM chain is to provide the necessary apparatus to ensure that the output
-correctly reflects the input when it goes through the transformation it's meant to have undergone. The JAM chain 
-accepts outputs of roll-ups, of bits of computation done elsewhere, and the data they yield is fed into the JAM chain.
+The JAM chain accepts outputs of roll-ups, in more general terms, bits of computation done
+elsewhere, and integrates the outputs into a shared state, similarly to how the Polkadot Relay Chain
+functions.
 
-The JAM chain integrates the outputs of these computations into a shared state,
-providing a shared state model similar to how Polkadot relay chain functions. 
-
+The job of the JAM chain is to provide the necessary apparatus to ensure that the output correctly
+reflects the input when it goes through the transformation it's meant to have undergone.
 
 ## Smart Contract Similarity
 
@@ -66,8 +67,8 @@ certain state components, resembling the structure commonly observed on a smart 
 
 JAM services' code is split into three different entry points:
 
-- **Refine** is the function that does the mostly stateless computation. It
-  defines the transformation for the rollup for a specific service.
+- **Refine** is the function that does the mostly stateless computation. It defines the
+  transformation for the rollup for a specific service.
 - **Accumulate** is the function that takes the output of that and folds it into the overall state
   of the service
 - **OnTransfer** handles information coming from other services.
@@ -77,19 +78,21 @@ Every work item is associated with a service, and it reflects the actual input t
 the parachains service, this is where the transactions and all of the blockchain inputs are entered.
 
 The JAM security apparatus consists a two-stage processing where the Refine function accepts a work
-item as an input and yields a work result as an output, which gets fed into the Accumulate function (First Refine, then Accumulate.) Work items are refined into work results, and therefore, a work package containing many work items is refined into a **work report**, which is the
-corresponding results of several items. A work package can be assigned that uses one core for a specific
-time slot (typically a period of 6 seconds).
+item as an input and yields a work result as an output, which gets fed into the Accumulate function
+(first Refine, then Accumulate). Work items are refined into **work results**, and therefore, a work
+package containing many work items is refined into a **work report**, which is the corresponding
+results of several items. A work package can be assigned that uses one core for a specific time slot
+(typically a period of 6 seconds).
 
 ## JAM is Transactionless
 
-JAM fundamentally differs from a smart contract chain in the fact that it's **transactionless**. There are no
-transactions in JAM: Everything is permissionless and the input first goes through a Refine stage.
-So the service pre-refines all of the input that is transformed into these work reports, these sets
-of work results. Then, those work results make their way onto the chain.
+JAM distinguishes itself from smart contract chains by operating transactionlessly. There are no
+transactions within JAM; all actions are permissionless and initially undergo a Refine stage. During
+this stage, the service pre-refines input data, transforming it into work reports consisting of work
+results. Subsequently, these work results are transferred onto the chain.
 
-So if there are no transactions, how does anything make its way from the external world in? Well,
-there is still extrinsic information of a specific format. There are five kinds of extrinsic in JAM:
+Despite the absence of transactions, JAM still accommodates extrinsic information of a specific
+format. There are five types of extrinsic information:
 
 - Guarantees
 - Assurances
@@ -97,136 +100,117 @@ there is still extrinsic information of a specific format. There are five kinds 
 - Preimages
 - Tickets
 
-The first three are part of the security apparatus of the JAM chain. Guarantees and assurances are
-essentially the validators getting together and putting forward their attestations that a work
-result is the correct result of its work item when transformed through the service's refine
-function. Judgments are used when a work result is not reflective of the work items that is supposed
-to be, and it has already made its way through the system and has been since accumulated into its
-service's state. At this point, we have to roll things back, and we have to record the fact that
-this was invalid. Judgments come within one hour after the work report has been submitted to the
-chain. Basically, you've got this one hour period where things could not be reverted, because
-finality will pause until the judgment has been allowed to actually happen. In general, though, this
-is like a massively upper bound, and most of the times any possible judgment would have been done
-within maybe three or four after the work package, and finality would only be paused for that long.
+The first three types form part of the JAM chain's security framework. Guarantees and assurances
+involve validators collectively attesting that a work result accurately reflects the outcome of its
+corresponding work item after transformation through the service's refine function.
 
-Pre-images are a piece of functionality that the JAM chain provides for the refine function. The
-refine function is essentially stateless, but there is one particular thing that it can do that is
-stateful: It is allowed to look up the preimage of a hash. This is the one thing that is
-opinionated. A block author of the JAM chain may choose to bring in one pre-image rather than
-another pre-image. There's nothing that holds them to any particular pre-image. Whereas guarantees,
-assurances, judgments, and tickets, are particular pieces of information, which the author either
-has or doesn't have. And if they have it, regardless of whether they have it or not, their only
-option is to either provide it or not provide it. They can't provide something else in its place.
+Judgments occur when a work result does not align with its intended work item and has already been
+integrated into the service’s state. A rollback is necessary in such cases, and the result’s
+invalidity is recorded. Judgments must occur within one hour of submitting the work report to the
+chain, during which finality is temporarily paused.
 
-Tickets are essentially anonymous entries into the block production mechanism. They do not
-immediately need to be provided to produce a block, but rather we run two epochs in front. This is
-part of an algorithm called SAFROL, which is a small refinement of an original algorithm called
-SASSAFRAS.
+Preimages represent a feature provided by the JAM chain for the refine function. While the refine
+function is typically stateless, it can perform one stateful operation: looking up the preimage of a
+hash. This feature is the only opinionated aspect of the refine function.
+
+Tickets serve as anonymous entries into the block production mechanism. They are not immediately
+required for block production; instead, the system operates two epochs in advance. This mechanism is
+part of the SAFROL algorithm, a refined version of the original [SASSAFRAS](./learn-sassafras.md)
+algorithm.
 
 ## JAM Chain's Generalization
 
-Polkadot is quite heavily designed around one particular service profile, the delivery of
-parachains. This is what the original Polkadot paper had in it. In delivering that service, Polkadot
-created a number of useful subcomponents:
+Polkadot, as outlined in the original Polkadot white paper, is primarily tailored to a specific
+service profile: delivering parachains. In pursuit of this service, Polkadot has developed two
+essential subcomponents:
 
 - the distributed data availability system
-- the auditing and guarantees system for computation (i.e. an optimistic roll-up system with very
-  good and proven security guarantees)
+- the auditing and guarantees system for computation (i.e. an optimistic roll-up system with robust
+  security guarantees)
 
-JAM could be considered essentially a reduction in the level of opinionation, basically a greater
-level of abstraction and generalization so that it's easier to use these underlying components in a
-way that you would like to use them.
+JAM represents a reduction in the level of opinionation compared to Polkadot, offering a higher
+level of abstraction and generalization. This facilitates easier utilization of underlying
+components according to individual preferences.
 
-JAM is permissionless as it can hosts code very similar to a smart contract chain. People can upload
-code and can expect JAM to execute that code. It also hosts data, this preimage lookup, and state,
-essentially very similar to a key value pair. Anyone can introduce new services. The first service
-that would be in the JAM Genesis block would be a service that enables people to add new services.
-Since JAM itself doesn't have any way of accepting transactions, there's no immediate way for anyone
-to create a service on JAM. There has to be a service that starts in JAM to allow people to go
-through it and create their own services.
+JAM operates in a permissionless manner, akin to smart contract chains, allowing individuals to
+upload and expect the execution of code. Additionally, it hosts data, enables preimage lookup, and
+manages state, resembling a key-value pair system. The genesis block of JAM includes a service to
+facilitate the creation of new services since JAM lacks a mechanism for accepting transactions
+directly.
 
-Services do not have any particular limits on how much code, data, or state they can host. It's all
-crypto-economic based, so essentially the more DOT your services have deposited with them, the more
-data and the more state they can have in them. One example service would be the parachains service.
-Essentially, all of the Polkadot 1.1 functionality would be contained within a single service on
-JAM. Other services can be added that provide other functionality, but still use Polkadot's
-distributed availability system and the auditing and guarantees system for computation.
+Services within JAM have no predefined limits on the amount of code, data, or state they can
+accommodate. Their capabilities are determined by crypto-economic factors; the more DOT tokens
+deposited, the greater capacity for data and state. For instance, **the parachains service**
+consolidates all Polkadot 1.1 functionality within a single service on JAM, with the potential for
+additional services to leverage Polkadot's distributed availability system, and auditing and
+guarantees system for computation.
 
 ## Refine Function
 
-Refine accepts up to 5 MB of data every time slot, and a time slot is six seconds.
+In the Refine processing stage within JAM, up to 5 MB of data can be accepted during each time slot,
+which lasts 6 seconds. However, Refine yields a maximum of 4 kB of data, resulting in significant
+data compaction that is necessary due to the distributed nature of
+[the availability system](./learn-parachains-protocol.md#availability-and-validity-anv-protocol).
+For instance, in the context of a parachain, the 5 MB of data represents the
+[Proof of Validity (PoV)](./learn-parachains-protocol.md#protocols-summary), while the 4 kB of data
+corresponds to the [candidate receipt](./learn-parachains-protocol.md#candidate-receipts).
 
-Refine yields up to 4 kB of data. So you've got this big sort of compaction factor going on because
-of the nature of the distributed availability system. It's distributed and it is not possible to
-have all of this data making its way into the accumulate function onto the on-chain logic. So to
-give an example, for a parachain, the 5 MB of data would be the PoV while the 4 kB of data would be
-the candidate receipt.
+Refine can execute for up to 6 seconds of [PVM](#polkadot-virtual-machine-pvm) gas, equivalent to
+the full block period of the relay chain. This extended execution time, compared to the current
+limit of two seconds for PVFs, is facilitated by [secure metering](#benchmarks-vs-metering) and
+other optimizations inherent to PVM.
 
-The refine function can execute for up to six seconds of PVM gas, that is it can execute for the
-full relay chain block period. At the moment, PVFs can execute for two seconds. This can be because
-PVM has basically secure metering and few other optimizations so we can process three times as much
-stuff.
+Moreover, Refine receives contextual information about the ongoing work and its surroundings,
+including details about concurrent refinements being performed. This feature enables the
+construction of work packages containing multiple work items from various services, facilitating
+interactions like [accords](#accords) and synchronous communication between services.
 
-The refine function also gets some contextual information on what it is, on the world around it that
-the work that it's doing is being produced in. In particular, it gets information on what other
-things are being refined at the same time. Why is this important? Well, it means that you can
-construct work packages that have multiple work items of multiple services in them, which are
-codependent. This then enables certain things like, for example, accords, and the ability to have
-one service, like some sort of EVM service, interact synchronously with a parachain.
+Preimage lookups can also be conducted within Refine. If a hash and its associated preimage are
+believed to be available on the JAM chain, the preimage can be requested by providing the hash. This
+capability enables efficient storage and retrieval of code, such as parachain code, by storing the
+code on the JAM chain and referencing its hash in the work package.
 
-Inside of refine, you can also make preimage lookups. If you have a hash and you believe that the
-preimage is available for that hash, on the JAM chain, then you can request the preimage by giving
-it the hash.
-
-What this allows us to do is, for example, lookup code. We might have, for example, a parachain
-code, where you don't want to supply a parachain code, which could be upwards of a megabyte. You
-want to supply that inside of the work package. That would be a waste of the five megs, right? Every
-time you want to run the parachain, supply the same one megabyte. Instead, you store the one
-megabyte of code on the JAM chain, and you just have its hash in the work package. I would like the
-preimage to this hash. This, for what it's worth, is what we already do on Polkadot One, but we do
-it in a slightly suboptimal way, and very much not general. Now, that's refine. That's the first
-stage. That's the bit that does all the work. That's the workhorse, but it's largely stateless.
+Refine is the primary processing workhorse, handling tasks with largely stateless operations.
 
 ## Accumulate Function
 
-The accumulate function integrates the output of refine actually into the chain state. Accumulate
-accepts multiple outputs from refine, all of the same service, right? Don't forget, refine and
-accumulate are both entry points from a code blob that is specific to a service. It accepts multiple
-refine outputs and it can execute for a much smaller period of time per output around, at most, 10
-milliseconds. And this depends whether the work package has many different work items in, or if it's
-just one. If it's just one, it gets the full 10 milliseconds per work output. If it's many, then
-that's shared between each of the outputs of the work package.
+The accumulate function is responsible for integrating the output generated by the Refine function
+into the chain state. Accumulate can accept multiple outputs from Refine, all originating from the
+same service. Both Refine and Accumulate serve as entry points from a service-specific code blob.
 
-A big difference to refine, it's stateful. This means it can access the state of the JAM chain. It
-can read the storage from any service, and it can write to its own key value store. It can also
-transfer funds and send a little memo when it does transfer funds. And it can also create new
-services, obviously, upgrade its code, request the availability of a preimage, and a few other bits
-that I'm not talking about.
+Accumulate's execution time per output is considerably shorter than Refine’s, typically around 10
+milliseconds at most. However, the duration depends on factors such as the number of work items in
+the work package. If a work package contains multiple items, the available time is divided among
+them.
 
-Incidentally, and I actually forgot to mention this in the refine model, both of these can invoke
-child instances of the PVM. So you can make a new instance of the PVM that's sort of a sub-instance,
-a virtual machine, and you can put some code in there, and put some data in there, set the memory to
-whatever you want, set the stack even to whatever you want, and then kick it off and let it run for
-some period of gas, and then it will come back when it's done. So it's a very, very flexible model
-for computation.
+Unlike Refine, Accumulate is stateful, granting it access to the JAM chain's state. It can read
+storage from any service, write to its key-value store, transfer funds, and include a memo with fund
+transfers. Additionally, Accumulate can create new services, upgrade its code, and request preimage
+availability, among other functionalities.
+
+Moreover, both Refine and Accumulate can invoke child instances of the PVM. This allows for creating
+sub-instances, or virtual machines, where code and data can be deployed, memory and stack
+configurations can be customized, and computations can be executed within a flexible framework.
 
 ## On-transfer Function
 
-So onTransfer is also stateful. It can alter the service's state. It can look at other services'
-state and alter its own state. And this really is there so that you can allow for services to
-communicate with other services in an albeit asynchronous fashion. So it's a little different from
-many smart contract platforms in that this interaction of the encapsulated components, smart
-contracts or services in our case, happens in an asynchronous fashion. You fire off a message along
-with maybe some tokens, and then on the other side, at some point later in the same six-second
-execution period, the other service will get it and can execute upon it. There's no return path. If
-you want a return path, you have to send some, do a transfer back, basically, or possibly change
-your state in some way that the sending service can expect it and look at it later.
+The onTransfer function within the JAM system is also stateful, enabling it to modify the service's
+state. It has the capability to inspect the state of other services and make changes to its own
+state. This functionality facilitates communication between services, albeit in an asynchronous
+manner.
 
-Both accumulate and on transfer are written so that they can be executed in parallel. So the
-different services accumulates and transfers can all execute at the same time. This would allow for
-future designs to actually have more than this 10 milliseconds of gas input. In principle, there
-could, for example, be a secondary core, utilized for executing certain accumulates and giving them
-much, much greater amounts of gas to use.
+Unlike many smart contract platforms, where interactions occur synchronously, in JAM the interaction
+between encapsulated components, such as smart contracts or services in this case, happens
+asynchronously. Messages, along with tokens, are sent, and at some point later during the same
+six-second execution period, the receiving service processes them. There is no immediate return
+path; if a return path is needed, the sending service must initiate another transfer or modify its
+state in a way that the receiving service can later interpret.
+
+Both Accumulate and onTransfer are designed to be executed in parallel, allowing different services'
+accumulation and transfers to occur simultaneously. This design opens the possibility for future
+enhancements, such as allocating more than the current 10 milliseconds of gas input. In theory, a
+secondary core could be utilized to execute certain accumulations, providing them with significantly
+more gas to utilize.
 
 ## Polkadot Virtual Machine (PVM)
 
