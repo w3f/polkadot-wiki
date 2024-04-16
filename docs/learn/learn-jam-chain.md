@@ -32,11 +32,9 @@ case, roll-ups, what Ethereum people might call optimistic roll-ups. JAM's rollu
 bounded in terms of their security. This is what Polkadot has been doing for the last five years, it
 is already a highly domain-specific roll-up chain. JAM essentially makes it less opinionated and more generic.
 
-The JAM chain's job is to essentially provide the necessary apparatus to ensure that this output
-correctly reflects the input when it goes through whatever transformation it's meant to have gone
-through. Again, this is fairly basic stuff for what roll-ups are. What the JAM chain does is it
-accepts outputs of roll-ups, of bits of computation that have been done already. So these bits of
-computation are done elsewhere, and then whatever data they yield is fed into the JAM chain.
+The job of the JAM chain is to provide the necessary apparatus to ensure that the output
+correctly reflects the input when it goes through the transformation it's meant to have undergone. The JAM chain 
+accepts outputs of roll-ups, of bits of computation done elsewhere, and the data they yield is fed into the JAM chain.
 
 The JAM chain is there to integrate the outputs of these computations into some shared state. So it
 provides this shared state model, for integrating outputs together. We can see how Polkadot fits
