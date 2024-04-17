@@ -31,9 +31,7 @@ on Polkadot-SDK has been used. To compile the `adder-collator`, run the command 
 Polkadot-SDK repository.
 
 ```
-
 cargo build -r -p test-parachain-adder-collator
-
 ```
 
 After the test parachain collator node is successfully compiled, export its genesis state and the
@@ -41,24 +39,22 @@ code by using the following commands. If the export is successful, these two fil
 the Polkadot-SDK repository.
 
 ```
-
 ./target/release/adder-collator export-genesis-state genesis
-
 ```
 
 ```
-
 ./target/release/adder-collator export-genesis-wasm genesis-wasm
-
 ```
 
-## Run a Parachain with Bulk Coretime
+## Reserve ParaID
 
 The first step is to register a `ParaID`for the on-demand parachain. This can be done through
 Polkadot-JS UI by navigating to Network > Parachains > Parathreads and clicking on ParaID button.
 Ensure that you have sufficient tokens to successfully reserve the displayed `ParaID`
 
 ![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
+
+## Register Parachain State and Code
 
 The next step is to register the parachain's genesis wasm and state.
 
@@ -68,14 +64,16 @@ After successful registration, the parachain starts onboarding as a parathread.
 
 ![coretime-onboarding-parathread](../assets/coretime/coretime-parachain-onboarding.png)
 
+## Run Parachain Collator
+
 While the parachain is onboarding, start syncing the collator using the following command to rapidly
 sync with the specified relaychain.
 
 ```
-
 ./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
-
 ```
+
+## Run a Parachain with Bulk Coretime
 
 Now, you can purchase bulk coretime on [Coretime chain](./learn-guides-coretime-marketplaces.md) and
 assign the purchased core to the registered `ParaID`. The snapshot below is from
@@ -90,32 +88,10 @@ intervals, gradually incrementing the state by `2`.
 
 ## Run a Parachain with On-demand Coretime
 
-The first step is to register a `ParaID`for the on-demand parachain. This can be done through
-Polkadot-JS UI by navigating to Network > Parachains > Parathreads and clicking on ParaID button.
-Ensure that you have sufficient tokens to successfully reserve the displayed `ParaID`
-
-![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
-
-The next step is to register the parachain's genesis wasm and state.
-
-![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
-
-After successful registration, the parachain starts onboarding as a parathread.
-
-![coretime-onboarding-parathread](../assets/coretime/coretime-parachain-onboarding.png)
-
-While the parachain is onboarding, start syncing the collator using the following command to rapidly
-sync with the specified relaychain.
-
-```
-
-./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
-
-```
-
-After the collator node is fully synced with the relay chain, navigate to Developer > Extrinsics and
-issue `onDemandAssignmentProvider.placeOrderAllowDeath` extrinsic from the account that registered
-the `ParaID` by specifying sufficient `maxAmount`for the transaction to go through successfully.
+After the collator node is fully synced with the relay chain, navigate to Developer > Extrinsics on
+the relay chain and issue `onDemandAssignmentProvider.placeOrderAllowDeath` extrinsic from the
+account that registered the `ParaID` by specifying sufficient `maxAmount`for the transaction to go
+through successfully.
 
 ![coretime-ondemand-assignment](../assets/coretime/coretime-on-demand-assignment.png)
 
