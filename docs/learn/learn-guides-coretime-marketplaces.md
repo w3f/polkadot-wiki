@@ -48,7 +48,7 @@ assigning tasks.
 Lastic is a marketplace for buying and selling blockspace. For more information, check
 [Lastic's official documentation](https://docs.lastic.xyz/).
 
-### Purchase Core with Lastic
+### Purchasing Cores with Lastic
 
 Lastic allows for purchasing core with accounts hosted on wallets like Subwallet, Talisman, Nova
 Wallet and Polkadot-JS Extension. Select the account to be used for the coretime purchase and then,
