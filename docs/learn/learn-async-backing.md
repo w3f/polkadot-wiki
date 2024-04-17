@@ -9,6 +9,13 @@ slug: ../learn-async-backing
 
 import RPC from "./../../components/RPC-Connection";
 
+:::tip Asynchronous Backing Guide for Parachains
+
+For upgrading a parachain for Asynchronous Backing compatibility, follow the instructions on
+[this Wiki document.](../maintain/maintain-guides-async-backing.md)
+
+:::
+
 :::info Learn about Parachain Consensus
 
 To fully follow the material on this page, it is recommended to be familiar with the primary stages
