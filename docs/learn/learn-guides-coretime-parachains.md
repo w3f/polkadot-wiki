@@ -101,3 +101,19 @@ sync with the specified relaychain.
 ./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
 
 ```
+
+After the collator node is fully synced with the relay chain, navigate to Developer > Extrinsics and
+issue `onDemandAssignmentProvider.placeOrderAllowDeath` extrinsic from the account that registered
+the `ParaID` by specifying sufficient `maxAmount`for the transaction to go through successfully.
+
+![coretime-ondemand-assignment](../assets/coretime/coretime-on-demand-assignment.png)
+
+With each successful on-demand extrinsic, the parachain head changes (you may have to zoom out on
+the browser for parachain head details to show up on Polkadot-JS UI).
+
+![coretime-ondemand-parahead](../assets/coretime/coretime-on-demand-parahead.png)
+
+The successful collation can also be verified in the logs of the parachain collator. It can be
+noticed that with each parachain block, the state of `adder-collator` is incremented by `2`.
+
+![coretime-new-collation](../assets/coretime/coretime-create-new-collation.png)
