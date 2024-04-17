@@ -56,7 +56,7 @@ click on "buy core" button to sign and broadcast the transaction.
 
 ![Lastic-purchase-bulk-coretime](../assets/coretime/Lastic-UI.png)
 
-### Manage Core with Lastic
+### Managing Cores with Lastic
 
 Lastic enables you to transfer your core to another account, utilize it for a parachain, split it
 up, change block production frequency, or assign it to a task.
