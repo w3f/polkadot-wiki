@@ -15,7 +15,7 @@ scenarios:
 
 - Migrating from a legacy parachain lease into a bulk coretime model
 - Starting with bulk coretime model from scratch
-- Running a parachain with on-demand coretime purchases
+- Running a parachain with on-demand coretime purchases ("pay as you go")
 
 The parachain lease auctions will stop on-chain with the enactment of the
 [runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0), and the
