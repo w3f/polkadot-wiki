@@ -69,8 +69,8 @@ The next step is to register the parachain's genesis wasm and state.
 Registering the state and wasm code of the parachain requires a deposit that is computed based on
 the size. For the `adder-collator` example here, it turns out to be around 46 KSM on Kusama and 116
 DOT on Polkadot. As, the deposit used for registering `ParaID` is already counted in for this
-deposit, the total deposit requirement for registering `ParaID`, state and code is 46 KSM on Kusama
-and 116 DOT on Polkadot.
+deposit, the total deposit requirement for registering `ParaID`, state and code for `adder-collator`
+is around 46 KSM on Kusama and 116 DOT on Polkadot.
 
 :::
 
