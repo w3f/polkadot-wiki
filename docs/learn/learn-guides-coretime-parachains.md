@@ -52,11 +52,27 @@ The first step is to register a `ParaID`for the on-demand parachain. This can be
 Polkadot-JS UI by navigating to Network > Parachains > Parathreads and clicking on ParaID button.
 Ensure that you have sufficient tokens to successfully reserve the displayed `ParaID`
 
+:::info
+
+Reserving a `ParaID` requires a deposit of 40 KSM on Kusama and 100 DOT on Polkadot.
+
+:::
+
 ![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
 
 ## Register Parachain State and Code
 
 The next step is to register the parachain's genesis wasm and state.
+
+:::info
+
+Registering the state and wasm code of the parachain requires a deposit that is computed based on
+the size. For the `adder-collator` example here, it turns out to be around 46 KSM on Kusama and 116
+DOT on Polkadot. As, the deposit used for registering `ParaID` is already counted in for this
+deposit, the total deposit requirement for registering `ParaID`, state and code is 46 KSM on Kusama
+and 116 DOT on Polkadot.
+
+:::
 
 ![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
 
