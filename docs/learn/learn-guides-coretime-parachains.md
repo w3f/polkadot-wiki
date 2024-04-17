@@ -18,16 +18,16 @@ scenarios:
 - Running a parachain with on-demand coretime purchases
 
 The parachain lease auctions will stop on-chain with the enactment of the
-[runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0) and the
+[runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0), and the
 existing leases will be migrated to bulk coretime automatically. Leases that are yet to be started
-will be cancelled and the locked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}  
+will be canceled and the locked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}  
 will be refunded. The existing parachains benefit from
 [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html) which allows for the continued
 assignment of bulk coretime for a core without going through the regular purchasing process.
 
 :::info
 
-The tutorials below assume that you already developed the parachain runtime and a fully configured
+The tutorials below assume that you have already developed the parachain runtime and a fully configured
 parachain collator for the target relay chain using Polkadot-SDK.
 
 :::
@@ -42,7 +42,7 @@ cargo build -r -p test-parachain-adder-collator
 ```
 
 After the test parachain collator node is successfully compiled, export its genesis state and the
-code by using the following commands. If the export is successful, these two files should show up in
+code using the following commands. If the export succeeds, these two files should appear in
 the Polkadot-SDK repository.
 
 ```
@@ -57,7 +57,7 @@ the Polkadot-SDK repository.
 
 The first step is to register a `ParaID`for the on-demand parachain. This can be done through
 Polkadot-JS UI by navigating to Network > Parachains > Parathreads and clicking on ParaID button.
-Ensure that you have sufficient tokens to successfully reserve the displayed `ParaID`
+Ensure that you have sufficient tokens to reserve the displayed `ParaID` successfully.
 
 :::info
 
@@ -123,7 +123,7 @@ the browser for parachain head details to show up on Polkadot-JS UI).
 
 ![coretime-ondemand-parahead](../assets/coretime/coretime-on-demand-parahead.png)
 
-The successful collation can also be verified in the logs of the parachain collator. It can be
+The successful collation can also be verified in the parachain collator logs. It can be
 noticed that with each parachain block, the state of `adder-collator` is incremented by `2`.
 
 ![coretime-new-collation](../assets/coretime/coretime-create-new-collation.png)
