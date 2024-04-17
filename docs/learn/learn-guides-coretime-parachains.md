@@ -25,6 +25,13 @@ will be refunded. The existing parachains benefit from
 [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html) which allows for the continued
 assignment of bulk coretime for a core without going through the regular purchasing process.
 
+:::info
+
+The tutorials below assume that you already developed the parachain runtime and a fully configured
+parachain collator for the target relay chain using Polkadot-SDK.
+
+:::
+
 For the tutorials below,
 [the adder test parachain](https://github.com/paritytech/polkadot-sdk/tree/6f3d890ed35bfdee3e3f7d59018345635a62d1cd/polkadot/parachain/test-parachains/adder)
 on Polkadot-SDK has been used. To compile the `adder-collator`, run the command below in the
