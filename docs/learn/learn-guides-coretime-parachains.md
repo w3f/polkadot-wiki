@@ -77,6 +77,17 @@ sync with the specified relaychain.
 
 ```
 
+Now, you can purchase bulk coretime on [Coretime chain](./learn-guides-coretime-marketplaces.md) and
+assign the purchased core to the registered `ParaID`. The snapshot below is from
+[Lastic](https://test.lastic.xyz/) interface.
+
+![coretime-bulk-assign-lastic](../assets/coretime/lastic-assign-core.png)
+
+After successful assignment of the core, the `adder-collator` logs show new collations at regular
+intervals, gradually incrementing the state by `2`.
+
+![coretime-collation-bulk](../assets/coretime/coretime-collation-bulk.png)
+
 ## Run a Parachain with On-demand Coretime
 
 The first step is to register a `ParaID`for the on-demand parachain. This can be done through
