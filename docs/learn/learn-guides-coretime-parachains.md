@@ -25,6 +25,33 @@ will be refunded. The existing parachains benefit from
 [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html) which allows for the continued
 assignment of bulk coretime for a core without going through the regular purchasing process.
 
+For the tutorials below,
+[the adder test parachain](https://github.com/paritytech/polkadot-sdk/tree/6f3d890ed35bfdee3e3f7d59018345635a62d1cd/polkadot/parachain/test-parachains/adder)
+on Polkadot-SDK has been used. To compile the `adder-collator`, run the command below in the
+Polkadot-SDK repository.
+
+```
+
+cargo build -r -p test-parachain-adder-collator
+
+```
+
+After the test parachain collator node is successfully compiled, export its genesis state and the
+code by using the following commands. If the export is successful, these two files should show up in
+the Polkadot-SDK repository.
+
+```
+
+./target/release/adder-collator export-genesis-state genesis
+
+```
+
+```
+
+./target/release/adder-collator export-genesis-wasm genesis-wasm
+
+```
+
 ## Run a Parachain with Bulk Coretime
 
 The first step is to register a `ParaID`for the on-demand parachain. This can be done through
@@ -33,13 +60,22 @@ Ensure that you have sufficient tokens to successfully reserve the displayed `Pa
 
 ![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
 
-The next step is to register the parachain's genesis code and state.
+The next step is to register the parachain's genesis wasm and state.
 
 ![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
 
 After successful registration, the parachain starts onboarding as a parathread.
 
 ![coretime-onboarding-parathread](../assets/coretime/coretime-parachain-onboarding.png)
+
+While the parachain is onboarding, start syncing the collator using the following command to rapidly
+sync with the specified relaychain.
+
+```
+
+./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
+
+```
 
 ## Run a Parachain with On-demand Coretime
 
@@ -49,10 +85,19 @@ Ensure that you have sufficient tokens to successfully reserve the displayed `Pa
 
 ![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
 
-The next step is to register the parachain's genesis code and state.
+The next step is to register the parachain's genesis wasm and state.
 
 ![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
 
 After successful registration, the parachain starts onboarding as a parathread.
 
 ![coretime-onboarding-parathread](../assets/coretime/coretime-parachain-onboarding.png)
+
+While the parachain is onboarding, start syncing the collator using the following command to rapidly
+sync with the specified relaychain.
+
+```
+
+./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
+
+```
