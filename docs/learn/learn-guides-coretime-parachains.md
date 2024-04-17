@@ -55,7 +55,7 @@ the Polkadot-SDK repository.
 
 ## Reserve ParaID
 
-The first step is to register a `ParaID`for the on-demand parachain. This can be done through
+The first step is to register a `ParaID` for the on-demand parachain. This can be done through
 Polkadot-JS UI by navigating to Network > Parachains > Parathreads and clicking on ParaID button.
 Ensure that you have sufficient tokens to reserve the displayed `ParaID` successfully.
 
