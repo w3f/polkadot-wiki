@@ -35,7 +35,7 @@ bottom left). Then, click on the purchase button to sign and broadcast the trans
 
 ![RegionX-purchase-bulk-coretime](../assets/coretime/regionx-purchase-core.png)
 
-### Manage Core with RegionX
+### Managing Cores with RegionX
 
 The Regions dashboard lists all the cores purchased through the connected wallet account along with
 the basic information of the respective core. It allows for partitioning, interlacing, transfers, and
