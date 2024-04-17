@@ -26,7 +26,7 @@ The RegionX CoreHub offers options to purchase and manage cores.
 
 ![RegionX-UI](../assets/coretime/RegionX-UI.png)
 
-### Purchase Core with RegionX
+### Purchasing Cores with RegionX
 
 RegionX allows for purchasing core with accounts hosted on wallets like Subwallet, Talisman, Nova
 Wallet and Polkadot-JS Extension. Select the account to be used for the coretime purchase (displayed
