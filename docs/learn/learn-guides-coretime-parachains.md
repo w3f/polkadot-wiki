@@ -69,7 +69,7 @@ Reserving a `ParaID` requires a deposit of 40 KSM on Kusama and 100 DOT on Polka
 
 ## Register Parachain State and Code
 
-The next step is to register the parachain's genesis wasm and state.
+The next step is to register the parachain's genesis wasm and state, which you should have generated earlier.
 
 :::info
 
