@@ -12,7 +12,7 @@ The tutorials in this document utilize:
 - [CoreHub on RegionX](https://app.regionx.tech/), a user interface
 for purchasing and managing Coretime regions.
 
-- [Lastic](https://test.lastic.xyz/start), a Coretime marketplace user interface.
+- [Lastic](https://www.lastic.xyz/), a Coretime marketplace user interface.
 
 :::caution
 
