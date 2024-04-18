@@ -77,7 +77,7 @@ const languages = [
     tag: "he",
   },
   {
-    enabled: false,
+    enabled: true,
     name: "Magyar",
     tag: "hu",
   },
