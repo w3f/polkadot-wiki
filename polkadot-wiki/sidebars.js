@@ -677,6 +677,7 @@ module.exports = {
             "learn/learn-parathreads",
             "learn/learn-elastic-scaling",
             "learn/learn-sassafras",
+            "learn/learn-jam-chain",
           ],
         },
         {
