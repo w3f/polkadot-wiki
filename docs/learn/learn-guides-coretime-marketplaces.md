@@ -7,10 +7,19 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../learn-guides-coretime-marketplaces
 ---
 
+:::info
+
+If you aren't sure what Agile Coretime is, be sure to read the
+[introduction](./learn-agile-coretime.md),
+[terminology](./learn-agile-coretime.md#agile-coretime-terminology), and
+[FAQ](./learn-agile-coretime.md#agile-coretime-faq).
+
+:::
+
 The tutorials in this document utilize:
 
-- [CoreHub on RegionX](https://app.regionx.tech/), a user interface
-for purchasing and managing Coretime regions.
+- [CoreHub on RegionX](https://app.regionx.tech/), a user interface for purchasing and managing
+  Coretime regions.
 
 - [Lastic](https://test.lastic.xyz/start), a Coretime marketplace user interface.
 
@@ -38,8 +47,8 @@ bottom left). Then, click on the purchase button to sign and broadcast the trans
 ### Managing Cores with RegionX
 
 The Regions dashboard lists all the cores purchased through the connected wallet account along with
-the basic information of the respective core. It allows for partitioning, interlacing, transfers, and
-assigning tasks.
+the basic information of the respective core. It allows for partitioning, interlacing, transfers,
+and assigning tasks.
 
 ![RegionX-regions-dashboard](../assets/coretime/regionx-manage-cores.png)
 

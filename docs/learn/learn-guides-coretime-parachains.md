@@ -9,6 +9,15 @@ slug: ../learn-guides-coretime-parachains
 
 import RPC from "./../../components/RPC-Connection";
 
+:::info
+
+If you aren't sure what Agile Coretime is, be sure to read the
+[introduction](./learn-agile-coretime.md),
+[terminology](./learn-agile-coretime.md#agile-coretime-terminology), and
+[FAQ](./learn-agile-coretime.md#agile-coretime-faq).
+
+:::
+
 The landscape for parachains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 changes with the rollout of [Agile Coretime](./learn-agile-coretime.md). With
 [parachain auctions](./learn-auction.md) being phased out in favor of direct
