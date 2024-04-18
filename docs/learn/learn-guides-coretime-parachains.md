@@ -31,7 +31,8 @@ assignment of bulk coretime for a core without going through the regular purchas
 :::info
 
 The tutorials below assume that you have already developed the parachain runtime and a fully
-configured parachain collator for the target relay chain using the Polkadot SDK.
+configured parachain [collator](./learn-collator.md) for the target relay chain using the Polkadot
+SDK.
 
 :::
 
@@ -80,12 +81,15 @@ on Polkadot.
 ## Register Parachain State and Code
 
 The next step is to register the parachain's genesis wasm and state, which you should have generated
-earlier.
+earlier. Note that for this example, we are using `adder-collator`, but in theory a custom runtime
+compiled from a
+[template](https://github.com/paritytech/polkadot-sdk/tree/88a2f360238787bf5256cfdd14b40c08f519b38e/templates/parachain)
+would work as well.
 
 :::info
 
-Registering the state and wasm code of the parachain requires a deposit that is computed based on
-the size (a deposit is paid per byte uploaded):
+Registering the genesis state and WASM code of the parachain requires a deposit that is computed
+based on the size (a deposit is paid per byte uploaded):
 
 - Kusama:
   <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={10000000000} filter="humanReadable"/>
@@ -108,8 +112,8 @@ After successful registration, the parachain starts onboarding as a parathread.
 
 ## Run Parachain Collator
 
-While the parachain is onboarding, start syncing the collator using the following command to rapidly
-sync with the specified relaychain.
+While the parachain is onboarding, start syncing the [collator](./learn-collator.md) using the
+following command to rapidly sync with the specified relay chain.
 
 ```
 ./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
