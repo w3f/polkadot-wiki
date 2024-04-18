@@ -7,7 +7,7 @@ keywords: [Polkadot, JAM, join-accumulate]
 slug: ../learn-jam-chain
 ---
 
-:::note
+:::info
 
 JAM paper is available at [graypaper.com](https://graypaper.com/) and the information regarding JAM
 prize is available at [jam.web3.foundation](https://jam.web3.foundation/).
