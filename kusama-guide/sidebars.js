@@ -447,6 +447,8 @@ module.exports = {
                   },
                   items: [
                     "learn/learn-agile-coretime",
+                    "learn/learn-guides-coretime-marketplaces",
+                    "learn/learn-guides-coretime-parachains",
                   ],
                 },
                 {
