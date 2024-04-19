@@ -103,12 +103,13 @@ would work as well.
 Registering the genesis state and WASM code of the parachain requires a deposit that is computed
 based on the size (a deposit is paid per byte uploaded):
 
+<!-- prettier-ignore -->
 - **Kusama**:
-  <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/>
-  per byte
+  <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
+  
+  <!-- prettier-ignore -->
 - **Polkadot**:
-  <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/>
-  per byte
+  <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
 
 The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
 requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama
