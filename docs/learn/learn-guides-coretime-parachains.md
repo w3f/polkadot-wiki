@@ -130,6 +130,15 @@ following command to rapidly sync with the specified relay chain.
 
 ## Run a Parachain with Bulk Coretime
 
+:::info
+
+Note that we have two options: **bulk coretime** and **on-demand coretime**. Bulk coretime is
+purchased via the broker pallet, which is on the respective Coretime system parachain. On-demand
+coretime is ordered via the OnDemandAssignment pallet/module, which is located on the respective
+relay chain.
+
+:::
+
 You can purchase bulk coretime on [Coretime chain](./learn-guides-coretime-marketplaces.md) and
 assign the purchased core to the registered `ParaID`. The snapshot below is from
 [Lastic](https://test.lastic.xyz/) interface.
@@ -150,10 +159,16 @@ After the collator node is fully synced with the relay chain, navigate to
 
 ![coretime-ondemand-assignment](../assets/coretime/coretime-on-demand-assignment.png)
 
-:::info What is onDemandAssignmentProvider.placeOrderAllowDeath?
+:::info
 
-`onDemandAssignmentProvider.placeOrderAllowDeath` will reap the account once the provided funds run
-out, which allows you to pay per block.
+There are two extrinsics which allow you to place orders for on-demand coretime:
+
+- `onDemandAssignmentProvider.placeOrderAllowDeath` will
+  [reap](./learn-accounts.md#existential-deposit-and-reaping) the account once the provided funds
+  run out.
+
+- `onDemandAssignmentProvider.placeOrderKeepAlive` includes a check which will **not** reap the
+  account if the provided funds will run out, ensuring the account is kept alive.
 
 :::
 
