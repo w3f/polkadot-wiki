@@ -69,24 +69,23 @@ Polkadot-SDK repository.
 
 ## Reserve ParaID
 
+:::info
+
+Reserving a `ParaID` requires a deposit of:
+
+<!-- prettier-ignore -->
+- <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/> on Kusama
+
+<!-- prettier-ignore -->
+- <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/> on Polkadot
+
+:::
+
 The first step is to register a [`ParaID`](../general/glossary.md#paraid) for the parachain. This
 can be done through Polkadot-JS UI by navigating to
 [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) and
 clicking on ParaID button. Ensure that you have sufficient tokens to reserve the displayed `ParaID`
 successfully.
-
-<!-- prettier-ignore -->
-:::info
-
-Reserving a `ParaID` requires a deposit of:
-
-- <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>
-  on Kusama
-
-- <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>
-  on Polkadot
-
-:::
 
 ![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
 
