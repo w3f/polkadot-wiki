@@ -75,13 +75,16 @@ can be done through Polkadot-JS UI by navigating to
 clicking on ParaID button. Ensure that you have sufficient tokens to reserve the displayed `ParaID`
 successfully.
 
+<!-- prettier-ignore -->
 :::info
 
-Reserving a `ParaID` requires a deposit of
-<RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={10000000000} filter="humanReadable"/>
-on Kusama and
-<RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={10000000000} filter="humanReadable"/>
-on Polkadot.
+Reserving a `ParaID` requires a deposit of:
+
+- <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>
+  on Kusama
+
+- <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>
+  on Polkadot
 
 :::
 
@@ -95,16 +98,17 @@ compiled from a
 [template](https://github.com/paritytech/polkadot-sdk/tree/88a2f360238787bf5256cfdd14b40c08f519b38e/templates/parachain)
 would work as well.
 
+<!-- prettier-ignore -->
 :::info
 
 Registering the genesis state and WASM code of the parachain requires a deposit that is computed
 based on the size (a deposit is paid per byte uploaded):
 
-- Kusama:
-  <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={10000000000} filter="humanReadable"/>
+- **Kusama**:
+  <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/>
   per byte
-- Polkadot:
-  <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={10000000000} filter="humanReadable"/>
+- **Polkadot**:
+  <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/>
   per byte
 
 The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
@@ -133,8 +137,8 @@ following command to rapidly sync with the specified relay chain.
 :::info
 
 Note that we have two options: **bulk coretime** and **on-demand coretime**. Bulk coretime is
-purchased via the broker pallet, which is on the respective Coretime system parachain. On-demand
-coretime is ordered via the OnDemandAssignment pallet/module, which is located on the respective
+purchased via the `broker` pallet, which is on the respective Coretime system parachain. On-demand
+coretime is ordered via the `OnDemandAssignment` pallet/module, which is located on the respective
 relay chain.
 
 :::
