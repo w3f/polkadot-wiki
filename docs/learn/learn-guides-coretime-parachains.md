@@ -48,10 +48,12 @@ SDK.
 For the tutorials below,
 [the adder test parachain](https://github.com/paritytech/polkadot-sdk/tree/6f3d890ed35bfdee3e3f7d59018345635a62d1cd/polkadot/parachain/test-parachains/adder)
 on the Polkadot SDK has been used. To compile the `adder-collator`, run the command below in the
-_root_ of the Polkadot SDK repository.
+_root_ of the Polkadot SDK repository. You must have [Rust](https://www.rust-lang.org/tools/install)
+and its associated tooling installed before following along.
+
+Ensure the Polkadot SDK is cloned, and you are within the root directory (`cd polkadot-sdk`)
 
 ```sh
-# Ensure the polkadot-sdk is cloned, and you are within the root directory (cd polkadot-sdk)
 cargo build -r -p test-parachain-adder-collator
 ```
 
@@ -104,12 +106,10 @@ Registering the genesis state and WASM code of the parachain requires a deposit 
 based on the size (a deposit is paid per byte uploaded):
 
 <!-- prettier-ignore -->
-- **Kusama**:
-  <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
-  
-  <!-- prettier-ignore -->
-- **Polkadot**:
-  <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
+- **Kusama**: <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
+
+<!-- prettier-ignore -->
+- **Polkadot**: <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
 
 The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
 requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama
