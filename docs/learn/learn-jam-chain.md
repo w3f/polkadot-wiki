@@ -106,9 +106,8 @@ The first three types form part of the JAM chain's security framework. Guarantee
 involve validators collectively attesting that a work result accurately reflects the outcome of its
 corresponding work item after transformation through the service's refine function.
 
-Judgments occur when a work result does not align with its intended work item and has already been
-integrated into the service’s state. A rollback is necessary in such cases, and the result’s
-invalidity is recorded. Judgments must occur within one hour of submitting the work report to the
+Judgments occur when then integrity of a work result is considered uncertain and a large plurality of validators attest to its validity or lack thereof. In this case an invalid work item may already have been
+integrated into the service’s state and a rollback may need to happen. Judgments must occur within one hour of submitting the work report to the
 chain, during which finality is temporarily paused.
 
 Preimages represent a feature provided by the JAM chain for the refine function. While the refine
@@ -122,23 +121,18 @@ algorithm.
 
 ### Refine Function
 
-In the Refine processing stage within JAM, up to 5 MB of data can be accepted during each time slot,
-which lasts 6 seconds. However, Refine yields a maximum of 4 kB of data, resulting in significant
+In the Refine processing stage within JAM, up to 15 MB of data can be accepted during each time slot,
+which lasts 6 seconds. However, Refine yields a maximum of 90 kB of data, resulting in significant
 data compaction that is necessary due to the distributed nature of
 [the availability system](./learn-parachains-protocol.md#availability-and-validity-anv-protocol).
-For instance, in the context of a parachain, the 5 MB of data represents the
-[Proof of Validity (PoV)](./learn-parachains-protocol.md#protocols-summary), while the 4 kB of data
+For instance, in the context of a parachain, the 15 MB of data represents the
+[Proof of Validity (PoV)](./learn-parachains-protocol.md#protocols-summary), while the 90 kB of data
 corresponds to the [candidate receipt](./learn-parachains-protocol.md#candidate-receipts).
 
 Refine can execute for up to 6 seconds of [PVM](#polkadot-virtual-machine-pvm) gas, equivalent to
 the full block period of the relay chain. This extended execution time, compared to the current
 limit of two seconds for PVFs, is facilitated by [secure metering](#benchmarks-vs-metering) and
 other optimizations inherent to PVM.
-
-Moreover, Refine receives contextual information about the ongoing work and its surroundings,
-including details about concurrent refinements being performed. This feature enables the
-construction of work packages containing multiple work items from various services, facilitating
-interactions like [accords](#accords) and synchronous communication between services.
 
 Preimage lookups can also be conducted within Refine. If a hash and its associated preimage are
 believed to be available on the JAM chain, the preimage can be requested by providing the hash. This
@@ -163,7 +157,7 @@ storage from any service, write to its key-value store, transfer funds, and incl
 transfers. Additionally, Accumulate can create new services, upgrade its code, and request preimage
 availability, among other functionalities.
 
-Moreover, both Refine and Accumulate can invoke child instances of the PVM. This allows for creating
+Moreover, Refine can invoke child instances of the PVM. This allows for creating
 sub-instances, or virtual machines, where code and data can be deployed, memory and stack
 configurations can be customized, and computations can be executed within a flexible framework.
 
