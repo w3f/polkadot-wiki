@@ -680,11 +680,11 @@ module.exports = {
             {
               type: "category",
               label: "JAM",
-              description: "JAM",
+              description: "Technical description of Polkadot's JAM Chain.",
               link: {
                 type: 'generated-index',
                 title: "JAM",
-                description: "JAM",
+                description: "Technical description of Polkadot's JAM Chain.",
                 slug: '/learn-JAM-index',
               },
               items: [
