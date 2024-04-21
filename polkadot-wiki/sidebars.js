@@ -677,7 +677,21 @@ module.exports = {
             "learn/learn-parathreads",
             "learn/learn-elastic-scaling",
             "learn/learn-sassafras",
-            "learn/learn-jam-chain",
+            {
+              type: "category",
+              label: "JAM",
+              description: "JAM",
+              link: {
+                type: 'generated-index',
+                title: "JAM",
+                description: "JAM",
+                slug: '/learn-JAM-index',
+              },
+              items: [
+                "learn/learn-jam-chain",
+                "learn/learn-jam-talk",
+              ],
+            },
           ],
         },
         {
