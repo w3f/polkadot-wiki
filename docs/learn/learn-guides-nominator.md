@@ -146,15 +146,6 @@ validator's reward, find the top
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
 nominators for that era, and distribute the rewards pro rata.
 
-:::note
-
-The Staking system only applies the highest
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominations to each validator to reduce the complexity of the staking set.
-
-:::
-
 These details are handled for you automatically if you use the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
 batches of eras at once.
