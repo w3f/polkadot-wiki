@@ -184,8 +184,8 @@ WebAssembly related tools and projects.
   language.
 - [Go: Subscan API](https://github.com/itering/substrate-api-rpc) - Go API for Polkadot.
 - [C++ Polkadot API](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot.
-- [.NET Polkadot/Substrate API](https://github.com/SubstrateGaming/Substrate.NET.API) -
-  Core Framework for Substrate in .NET and connect to nodes.
+- [.NET Polkadot/Substrate API](https://github.com/SubstrateGaming/Substrate.NET.API) - Core
+  Framework for Substrate in .NET and connect to nodes.
 - [.NET Toolchain Polkadot/Substrate API](https://github.com/SubstrateGaming/Substrate.NET.Toolchain) -
   Toolchain to generate Polkadot/Substrate API & Service Layer for .NET.
 - [.NET Polkadot API](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API
@@ -202,7 +202,9 @@ WebAssembly related tools and projects.
 ### GAME ENGINE SDK
 
 - [Polkadot SDK for Unity](https://github.com/PolkadotPlay/Polkadot.Unity.SDK) - A powerful toolkit
-  that integrates substrate seamless into Unity projects. ([AssetStore](https://assetstore.unity.com/packages/decentralization/infrastructure/polkadot-sdk-for-unity-273535), [wiki](https://github.com/PolkadotPlay/Polkadot.Unity.SDK/wiki)).
+  that integrates substrate seamless into Unity projects.
+  ([AssetStore](https://assetstore.unity.com/packages/decentralization/infrastructure/polkadot-sdk-for-unity-273535),
+  [wiki](https://github.com/PolkadotPlay/Polkadot.Unity.SDK/wiki)).
 
 ### SCALE Codec
 

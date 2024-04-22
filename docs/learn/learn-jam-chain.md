@@ -106,9 +106,11 @@ The first three types form part of the JAM chain's security framework. Guarantee
 involve validators collectively attesting that a work result accurately reflects the outcome of its
 corresponding work item after transformation through the service's refine function.
 
-Judgments occur when then integrity of a work result is considered uncertain and a large plurality of validators attest to its validity or lack thereof. In this case an invalid work item may already have been
-integrated into the service’s state and a rollback may need to happen. Judgments must occur within one hour of submitting the work report to the
-chain, during which finality is temporarily paused.
+Judgments occur when then integrity of a work result is considered uncertain and a large plurality
+of validators attest to its validity or lack thereof. In this case an invalid work item may already
+have been integrated into the service’s state and a rollback may need to happen. Judgments must
+occur within one hour of submitting the work report to the chain, during which finality is
+temporarily paused.
 
 Preimages represent a feature provided by the JAM chain for the refine function. While the refine
 function is typically stateless, it can perform one stateful operation: looking up the preimage of a
@@ -121,9 +123,9 @@ algorithm.
 
 ### Refine Function
 
-In the Refine processing stage within JAM, up to 15 MB of data can be accepted during each time slot,
-which lasts 6 seconds. However, Refine yields a maximum of 90 kB of data, resulting in significant
-data compaction that is necessary due to the distributed nature of
+In the Refine processing stage within JAM, up to 15 MB of data can be accepted during each time
+slot, which lasts 6 seconds. However, Refine yields a maximum of 90 kB of data, resulting in
+significant data compaction that is necessary due to the distributed nature of
 [the availability system](./learn-parachains-protocol.md#availability-and-validity-anv-protocol).
 For instance, in the context of a parachain, the 15 MB of data represents the
 [Proof of Validity (PoV)](./learn-parachains-protocol.md#protocols-summary), while the 90 kB of data
@@ -157,9 +159,9 @@ storage from any service, write to its key-value store, transfer funds, and incl
 transfers. Additionally, Accumulate can create new services, upgrade its code, and request preimage
 availability, among other functionalities.
 
-Moreover, Refine can invoke child instances of the PVM. This allows for creating
-sub-instances, or virtual machines, where code and data can be deployed, memory and stack
-configurations can be customized, and computations can be executed within a flexible framework.
+Moreover, Refine can invoke child instances of the PVM. This allows for creating sub-instances, or
+virtual machines, where code and data can be deployed, memory and stack configurations can be
+customized, and computations can be executed within a flexible framework.
 
 ### On-transfer Function
 
