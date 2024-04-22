@@ -327,12 +327,8 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 
 ## Support
 
-The Support pages are:
+Support for the Staking Dashboard is available at [the official Polkadot support website](https://support.polkadot.network/support/home).
 
-- The Resources page provides a glossary with main definitions and links to support pages.
-- The Feedback page can be used to send feedback through
-  [Canny.io](https://polkadot-staking-dashboard.canny.io/feedback). This can be a bug report or a
-  feature request. We take your feedback seriously, do not hesitate to contact us.
 
 ## Network
 
