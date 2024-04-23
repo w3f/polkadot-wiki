@@ -322,8 +322,7 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 - **Panel B: The Validators Panel** shows all validators. You can order them by low/high commission
   or apply the following filters:
   - Include only active validators
-  - Exclude validators that are oversubscribed, have 100% commission, blocked nominations, and have
-    missing identity.
+  - Exclude validators that have 100% commission, blocked nominations, and have missing identity.
 
 ## Support
 

@@ -258,29 +258,12 @@ it by changing some parameters (e.g. how many days you would like to stake with 
 fees, compound rewards, etc.) to have a better estimate. Even though it may not be entirely accurate
 since staking participation is changing dynamically, it works well as an indicator.
 
-#### Oversubscription, Commission Fees & Slashes
+#### Commission Fees & Slashes
 
-There is an additional factor to consider in terms of rewards. While there is no limit to the number
-of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is
-currently
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>, :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>, :kusama }}
-although this can be modified via runtime upgrade. A validator with more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators is _oversubscribed_. When payouts occur, only the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> :kusama }}
-nominators as measured by the amount of stake allocated to that validator will receive rewards. All
-other nominators are essentially "wasting" their stake - they used their nomination to elect that
-validator to the active stake, but receive no rewards in exchange for doing so.
-
-Note that the network slashes a validator for a misbehavior (e.g. validator offline, equivocation,
-etc.) the slashed amount is a fixed percentage (and not a fixed amount), which means that validators
-with more stake get slashed more DOT. Again, this is done to provide nominators with an economic
-incentive to shift their preferences and back less popular validators whom they consider to be
-trustworthy.
+The network slashes a validator for a misbehavior (e.g. validator offline, equivocation, etc.) the
+slashed amount is a fixed percentage (and not a fixed amount), which means that validators with more
+stake get slashed more DOT. Again, this is done to provide nominators with an economic incentive to
+shift their preferences and back less popular validators whom they consider to be trustworthy.
 
 Also, note that each validator candidate is free to name their desired commission fee (as a
 percentage of rewards) to cover operational costs. Since validators are paid the same, validators
