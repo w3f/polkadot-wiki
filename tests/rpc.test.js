@@ -35,7 +35,6 @@ const paths = [
 	{ path: 'consts.system.blockHashCount', network: 'kusama' },
 	{ path: 'consts.balances.existentialDeposit', network: 'kusama' },
 	{ path: 'query.staking.validatorCount', network: 'kusama' },
-	{ path: 'consts.staking.maxNominatorRewardedPerValidator', network: 'kusama' },
 	{ path: 'consts.identity.basicDeposit', network: 'kusama' },
 	{ path: 'query.staking.currentEra', network: 'kusama' },
 	{ path: 'consts.phragmenElection.votingBondBase', network: 'kusama' },

@@ -632,10 +632,7 @@ already mentioned, any given nominator can only select up to {{ polkadot: 16 :po
 {{ kusama: 24 :kusama }} validators to nominate. Conversely, a single validator can have only
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nominators. A drawback to this is that it is possible, if the number of nominators is very high or
-the number of validators is very low, that all available validators may be "oversubscribed" and
-unable to accept more nominations. In this case, one may need a larger amount of stake to
-participate in staking, since nominations are priority-ranked in terms of amount of stake.
+nominators.
 
 ### Phragmms (aka Balphragmms)
 

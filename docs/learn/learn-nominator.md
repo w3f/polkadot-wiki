@@ -188,16 +188,6 @@ metrics shown as an example, followed by a brief description of each.
   all nominators who nominated Validator A. This includes the active count and all the other
   nominators whose stake in the current era is baking other validators.
 
-  Be cautious of validators with a high number of subscribers. A validator is considered
-  oversubscribed when more than
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-  active nominators are assigned to the validator. In this scenario, only the top
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-  nominators (sorted by stake) will receive rewards. The remaining nominators will not be rewarded.
-  However, they can be slashed if the validator commits a slashable offense.
-
   Every nominator can select up to a maximum of {{ polkadot: 16 :polkadot }}
   {{ kusama: 24 :kusama }} validators, which contributes towards maximizing the probability of
   having the nominator’s stake applied to the validators active set. Nominating too few validators
@@ -248,8 +238,6 @@ example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the ope
 :::
 
 - **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
-- **with capacity**: Do not show any validators who are currently operating
-  [at capacity](../general/glossary.md#capacity) (i.e., could potentially be oversubscribed).
 - **recent payouts**: Only show validators that have recently caused a
   [payout to be issued](learn-staking-advanced.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
@@ -345,11 +333,7 @@ The staking election system has three stages for both validators and nominators,
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake and is made using
   the [bags-list](./learn-staking-advanced.md#bags-list).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator. Staking rewards are received by the top
-  {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-  nominators ranked by stake. When slashing occurs, all the active nominators backing the validator
-  get slashed (also those who do not receive rewards due to oversubscription issues).
+  validator. When slashing occurs, all the active nominators backing the validator get slashed.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
@@ -369,11 +353,11 @@ factors.
 As long as you have nominated more than one validator candidate, at least one of them got elected,
 and you are nominating with enough stake to get into the solution set, your bonded stake will be
 fully distributed to one or more validators. That being said, you may not receive rewards if you
-nominated very few validator candidates and no one got elected, or your stake is small, and you only
-selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
-generally wise to choose as many trustworthy validators as you can
-{{ polkadot: (up to 16) :polkadot }}{{ kusama: (up to 24) :kusama }} to reduce the risk of none of
-your nominated validators being elected.
+nominated very few validator candidates and no one got elected, or your stake is small, and you are
+not part of the [top 22,500 nominators](./learn-staking-advanced.md#bags-list), or the validator
+you are nominating has 100% commission. It is generally wise to choose as many trustworthy
+validators as you can {{ polkadot: (up to 16) :polkadot }}{{ kusama: (up to 24) :kusama }} to reduce
+the risk of none of your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 
@@ -433,43 +417,6 @@ Thus, for **nominator counters**, we have:
   {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
 - count of active nominators and maximum possible active nominators
   {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
-
-### Avoiding Oversubscribed Validators
-
-Validators can only pay out to a certain number of nominators per era. This is currently set to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-but can be modified via governance. If more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators nominate the same validator, it is "oversubscribed", and only the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-staked nominators (ranked by the amount of stake) are paid rewards. Other nominators will receive no
-rewards for that era, although their stake will still be used to calculate entry into the active
-validator set.
-
-Although it is difficult to determine how many nominators will nominate a given validator in the
-next era, one can estimate based on the current number of nominators. A validator with only 5
-nominators in this era, for instance, is unlikely to have more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-in the next era. However, an already-oversubscribed validator with 1000 nominators this era is very
-likely to be oversubscribed in the next era as well.
-
-If you are not nominating with a large number of DOTs, you should try to avoid
-[oversubscribed](../general/glossary.md#oversubscribed) validators. It is not always easy to
-calculate if the validator selected will be oversubscribed in the next session; one way to avoid
-choosing potentially oversubscribed validators is to filter out any that are
-[at capacity](../general/glossary.md#capacity) on the Targets page.
-
-Finally, if you have a minimal amount of DOTs close to the value of `minActiveNomination`, you may
-need to stake more DOT to get into the election set. The nominator-to-validator mapping solution
-needs to be evaluated within a single block duration, and if there are too many nominators, the
-lowest-staked nominations will be dropped from even being considered to be part of the electing set.
-This `minActiveNomination` value is dynamic and will vary over time. You can read the blog post
-["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
-details.
 
 ### Active vs. Inactive Nomination
 

@@ -141,19 +141,7 @@ you're nominating, but you cannot withdraw your tokens unless you unbond them.
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
 fee. Someone must submit a transaction with a validator ID and an era index.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will automatically calculate that
-validator's reward, find the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators for that era, and distribute the rewards pro rata.
-
-:::note
-
-The Staking system only applies the highest
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominations to each validator to reduce the complexity of the staking set.
-
-:::
+validator's reward and distribute the rewards pro rata.
 
 These details are handled for you automatically if you use the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit

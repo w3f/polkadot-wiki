@@ -125,10 +125,7 @@ Ensuring Byzantine fault tolerance is an important part of developing any distri
 ## Capacity
 
 The maximum number of nominators signalling intent to nominate a validator (and thus could
-potentially actively nominate that validator in the next session). This maximum number will equal
-the number of nominators necessary to oversubscribe a validator. Any validator which is "at
-capacity" or higher may potentially be oversubscribed in the next session; a validator that is not
-at capacity cannot be oversubscribed unless more nominators select it before the next election.
+potentially actively nominate that validator in the next session).
 
 ## Candidate
 
@@ -448,16 +445,6 @@ The initiator of an extrinsic. A simple origin would be the account that is send
 another account. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} also supports more
 complex origin types, such as the [root origin](#root-origin), from which privileged functions can
 be called.
-
-## Oversubscribed
-
-If more than the maximum number of nominators nominate the same validator, it is "oversubscribed",
-and only the top staked nominators (ranked by the amount of stake, up to the maximum number of
-nominators) are paid rewards. Other nominators will receive no rewards for that era. The current
-maximum number of nominators is
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> on Polkadot, :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> on Kusama, :kusama }}
-but it can be modified via governance.
 
 ## Pallet
 
