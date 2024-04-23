@@ -12,23 +12,34 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import Doc
 
 <DocCardList />
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol with two
-goals: providing **shared security** among all connected parachains and allowing all connected
-chains to **interoperate** by using [XCM](../learn/learn-xcm.md). With the advent of
-[PDKs](../build/build-parachains.md#parachain-development-kit) like
-[Substrate](https://substrate.io/) and
-[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus), the time it takes to
-develop and launch a new chain has dropped significantly. While before, it would take years to
-launch a new chain, now it may only take weeks or even days, depending on your goals.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol that
+providing **shared security** among all connected [tasks](../learn/learn-agile-coretime.md#task) and
+allowing all connected tasks to **interoperate** by using [XCM](../learn/learn-xcm.md).
+
+:::info What is a task?
+
+You might see the term "task" references quite a bit, but in most cases refers to a protocol which
+is running using Polkadot. This could be a parachain, or any other computational process, so long as
+it adheres to the Polkadot protocol.
+
+A better definition can be found [here](../learn/learn-agile-coretime.md#task).
+
+:::
+
+The time it takes to develop and launch a new chain has dropped significantly with the tools
+Polkadot provides. While before, it would take years to launch a new chain, now it may only take
+weeks or even days, depending on your goals.
 
 This guide will walk you through the steps you can take today to get started building your vision
 with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will explain the difference
 between a [parachain](../learn/learn-parachains.md) and a smart contract in deciding which best fits
 your architectural needs.
 
+After
+
 This build guide provides three different tracks:
 
-1.  [Protocol Development - Blockchain & Parachain Development](#building-parachains)
+1.  [Protocol Development - Blockchain & Parachain Development](#building-tasks)
 2.  [Developing Smart Contracts](#developing-smart-contracts)
 3.  [Developing a dApp](#developing-a-dappuapp)
 
@@ -101,19 +112,20 @@ Before diving into any one of these tracks, it is encouraged to read about
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
 context about the application you could make.
 
-## Building Parachains
+## Building Tasks
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
 Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
 shared security of multiple [parachains](../learn/learn-parachains.md), which are _layer one_
-protocols. Parachains connect to a relay chain using the
-[Parachains Protocol](../learn/learn-parachains-protocol.md).
+protocols. Tasks currently connect to a relay chain using the
+[Parachains Protocol](../learn/learn-parachains-protocol.md). In the future, more elaborate (or
+simple!) tasks could be constructed.
 
 ![build 1](../assets/build-1.png)
 
 :::info
 
-Throughout this document, you will encounter the term **runtime** or **STF (State Transition
+Throughout this document, you may encounter the term **runtime** or **STF (State Transition
 Function)**. Both refer to the same concept, as they define how a particular system, i.e., a
 blockchain, should deal with state changes externally and internally. Both of these terms are used
 extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and by association,
@@ -121,7 +133,7 @@ Substrate contexts.
 
 :::
 
-Parachains open possibilities to construct complex **runtime**, or **STF** (state transition
+The Polkadot SDK opens possibilities to construct complex **runtime**, or **STF** (state transition
 function) the logic that would be too expensive to execute with smart contracts. However, unlike
 smart contracts, parachains lack a mandatory gas metering system entirely and could potentially be
 vulnerable to bugs that cause infinite loops (something that is prevented by design in smart
@@ -130,25 +142,20 @@ contracts). This vulnerability is mitigated by the
 -- although it places more of a burden on the developer of the parachain to perform properly
 benchmarks.
 
-:::info What is a parathread?
-
-Parathreads, or "on-demand parachains," are like parachains and enable the developer to have
-lower-level control of the logic of their application. The main difference between the two is
-economical since parathreads will be much less expensive to secure than a parachain and is a
-"pay-as-you-go" model. The lower costs of parathreads are because parathreads will only produce a
-block when needed, unlike parachains, which have secured a slot to produce a block at every block of
-the Relay Chain. When building a parathread, you will use the same tools (like PDKs) and get all the
-benefits of building a parachain without the cost drawback.
-
-:::
-
 ### Constructing FRAME Runtimes with Substrate
 
-Polkadot is built using the [Substrate](https://substrate.io/) framework.
-[Substrate](https://substrate.io/) is a highly configurable and dynamic framework for building
-blockchains. At a lower level, Substrate provides a set of tools and libraries ranging from
-[block production, finality gadgets to peer-to-peer networking](https://docs.substrate.io/reference/rust-api/).
-Both Polkadot and Kusama, as well as most parachains, are built using Substrate.
+Polkadot is built using the Polkadot SDK, which within contains the source code for:
+
+- The Polkadot client implemenation
+- Substrate - the core libraries used for constructing blockchains
+- Cumulus - parachain/task specific functions which allow for solo chains to become compatible with
+  Polkadot
+
+[Substrate](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/substrate/index.html)
+is a highly configurable and dynamic framework for building blockchains. At a lower level, Substrate
+provides a set of tools and libraries ranging from block production, finality gadgets to
+peer-to-peer networking. Both Polkadot and Kusama, as well as most parachains, are built using
+Substrate.
 
 In essence, Substrate can break down a blockchain's development process by providing crucial
 building blocks of functionality, removing the need for re-engineering complex mechanisms that
@@ -158,14 +165,13 @@ Substrate can be used as a basis for a parachain to connect to a relay chain lik
 Kusama, or even as a basis to form a conventional layer one solo chain.
 
 Currently, the most streamlined way of utilizing Substrate is
-[FRAME](https://docs.substrate.io/learn/runtime-development/#frame), which conveniently allows for a
-runtime/STF to be generated from a set of modules (called
-[pallets](https://docs.substrate.io/reference/frame-pallets/)).
-[Runtimes](https://docs.substrate.io/learn/architecture/#runtime) in Substrate are built using
-[WebAssembly](../learn/learn-wasm.md) (Wasm), and represent the state transition function for a
-network. FRAME allows for a collection of business logic-oriented modules, called
-[pallets](https://docs.substrate.io/reference/frame-pallets/), to construct a runtime/STF and define
-how exactly the blockchain is supposed to behave. Ranging from
+[FRAME](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html),
+which conveniently allows for a runtime/STF to be generated from a set of modules (called
+[pallets](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html#pallets)).
+Runtimes in Substrate are built using [WebAssembly](../learn/learn-wasm.md) (Wasm), and represent
+the state transition function for a network. FRAME provides a framework for
+[pallets](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html#pallets),
+to construct a runtime/STF and define how your task is supposed to behave. Ranging from
 [identity](https://paritytech.github.io/substrate/master/pallet_identity/index.html) to
 [smart contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html),
 pallets can be quite extensive in providing on-chain functionality.
@@ -187,18 +193,10 @@ comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
-Diving further into building parachains,
 [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is another set of tools
 that aid in building a parachain-ready blockchain for Polkadot or Kusama. Cumulus utilizes FRAME and
 Substrate to create an easy way to build your first parachain. It ensures the chain follows the
 Parachain Protocol.
-
-:::info
-
-_Cumulus clouds are shaped like dots; together, they form an intricate, beautiful and functional
-system._
-
-:::
 
 For most developers, the best place to start is to get familiar with Substrate independently,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
@@ -271,9 +269,9 @@ Pallets require more engineering and thought, as they can directly affect the ch
 ### ink! and EVM-based Smart Contracts
 
 At a high level, a _smart contract_ is simply some code that exists at an address on a chain and is
-callable by external actors. Whether it's
-[EVM-based](https://docs.substrate.io/tutorials/integrate-with-tools/evm-integration/), or written
-using [ink!](https://use.ink/), smart contracts sandboxed, executable programs that live on-chain.
+callable by external actors. Whether it's [EVM-based](https://polkadot-evm.github.io/frontier/), or
+written using [ink!](https://use.ink/), smart contracts sandboxed, executable programs that live
+on-chain.
 
 :::note
 
@@ -325,6 +323,5 @@ For a complete list of tools, please take a look here:
 - [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
 - [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
 - [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
-- [Polkadot Parachain Slots](https://polkadot.network/polkadot-parachain-slots/)
 - [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
 - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)
