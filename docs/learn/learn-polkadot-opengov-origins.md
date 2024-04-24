@@ -108,6 +108,8 @@ the confirm period. **Note how no referendum on the Whitelisted track can ever p
 {{ polkadot: <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}
 
+### Wish For Change
+
 ### Staking Admin
 
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
