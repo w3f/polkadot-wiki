@@ -110,6 +110,13 @@ the confirm period. **Note how no referendum on the Whitelisted track can ever p
 
 ### Wish For Change
 
+The Root track is typically utilized for handling one referendum at a time due to the sensitive
+nature of Root calls. However, it has also been employed to convey network desires to various bodies
+within the network. These statements lack stateful logic impacting the network and could be
+evaluated simultaneously. They should not delay voting on proposals requiring Root or be obligated
+to queue. Although the approval/support criteria resemble Root, passing items on this track serves
+as a signal without conferring privileges.
+
 ### Staking Admin
 
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
