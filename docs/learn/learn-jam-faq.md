@@ -91,7 +91,7 @@ Only the consensus would be kept, while the rest, such as security, governance, 
 system-level services. The current Relay Chain will run on multiple cores in the new JAM
 architecture, guaranteeing full compatibility.
 
-## In the new architecture, what does the stack look like?
+## In the new architecture, what does the tech stack look like?
 
 From the point of view of parachains, the stack doesn’t look that much different. They will continue
 to get validated by the validators, etc. JAM will offer the possibility of running smart contracts
