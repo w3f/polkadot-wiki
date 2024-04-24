@@ -39,9 +39,9 @@ asset. This asset's ID is announced in the `Event::PoolCreated` event. After cre
 liquidity can be added to it via the `Pallet::add_liquidity` function.
 
 For example, the snapshot below shows how to create liquidity pool with `ROC` tokens and `EDU`
-tokens with the asset with ID `149` on Rococo Asset Hub. Creating this extrinsic requires knowledge
-of [XCM Multilocations](xcm/fundamentals/multilocation/summary.md). From the perspective of
-AssetHub, an Asset Hub, the asset with an `AssetId` of `149` has a MultiLocation of
+tokens with the asset ID `149` on Rococo Asset Hub. Creating this extrinsic requires knowledge of
+[XCM Multilocations](xcm/fundamentals/multilocation/summary.md). From the perspective of AssetHub,
+an Asset Hub, the asset with an `AssetId` of `149` has a MultiLocation of
 
 ```
 {
@@ -70,9 +70,9 @@ be less than the specified minimums. Liquidity providers receive liquidity token
 share of the pool.
 
 For example, the snapshot below shows how to provide liquidity to the pool with `ROC` tokens and
-`EDU` tokens with the asset with ID `149` on Rococo Asset Hub. The intention is to provide liquidity
-of 1 `ROC` token (`u128` value of `1000000000000` as it has 12 decimals) and 100 `EDU` tokens
-(`u128` value of `1000000000000` as it has 10 decimals).
+`EDU` tokens with the asset ID `149` on Rococo Asset Hub. The intention is to provide liquidity of 1
+`ROC` token (`u128` value of `1000000000000` as it has 12 decimals) and 100 `EDU` tokens (`u128`
+value of `1000000000000` as it has 10 decimals).
 
 ![Provide Liquidity](../assets/asset-hub/Asset-Conversion-Add-Liquidity.png)
 
@@ -92,10 +92,10 @@ amount of the second asset in return. This function aims to provide predictabili
 outcomes, allowing users to manage their asset exchanges with confidence regarding the minimum
 return.
 
-For example, the snapshot below shows how to swap `ROC` tokens to `EDU` tokens with the asset with
-ID `149` on Rococo Asset Hub. The intention is to swap 0.1 `ROC` tokens (`u128` value of
-`100000000000` as it has 12 decimals) to at least 9 `EDU` tokens (`u128` value of `90000000000` as
-it has 10 decimals).
+For example, the snapshot below shows how to swap `ROC` tokens to `EDU` tokens with the asset ID
+`149` on Rococo Asset Hub. The intention is to swap 0.1 `ROC` tokens (`u128` value of `100000000000`
+as it has 12 decimals) to at least 9 `EDU` tokens (`u128` value of `90000000000` as it has 10
+decimals).
 
 ![Swap Exact Amount](../assets/asset-hub/Asset-Conversion-Swap-Exact-Token.png)
 
@@ -113,6 +113,19 @@ amount of one asset to precisely obtain a specified amount of another asset. It 
 do not spend more than a predetermined maximum amount of the initial asset to acquire the exact
 target amount of the second asset, providing a way to control the cost of the transaction while
 achieving the desired outcome.
+
+For example, the snapshot below shows how to swap `EDU` tokens with the asset ID `149` on Rococo
+Asset Hub to `ROC` Tokens. The intention is to swap for obtaining 0.1 `ROC` tokens (`u128` value of
+`100000000000` as it has 12 decimals) for a maximum of 10 `EDU` tokens (`u128` value of
+`100000000000` as it has 10 decimals).
+
+![Swap Exact Amount](../assets/asset-hub/Asset-Conversion-Swap-To-Exact-Tokens.png)
+
+Below is the snapshot of the liquidity pool on the
+[DOT ACP UI.](https://github.com/MVPWorkshop/dot-acp-ui) after successful submission of the
+extrinsic above.
+
+![Swap to Exact Amount Example](../assets/asset-hub/Asset-Conversion-Swap-To-Exact-Example.png)
 
 ## Withdraw Provided Liquidity
 
