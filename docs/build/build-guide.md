@@ -46,6 +46,7 @@ blockchain and deploying it on a testnet.
 This build guide covers four different areas, taking a **top-down** approach, from protocol
 development to user-facing applications:
 
+<!-- prettier-ignore -->
 <!-- no toc -->
 
 1. [Protocol Development - Developing parachains/blockchains](#building-parachains-tasks)
