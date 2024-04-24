@@ -34,7 +34,7 @@ flexibility teams need and compete with the rest of the ecosystem for resources.
 more efficient and flexible development environment, as the chains are custom-made for a specific
 purpose. With JAM, groundbreaking scalability currently only seen through rollups is brought to the
 consensus layer. Developers no longer need to decide if they build appchains or smart contracts;
-they need a flexible and rich environment for both. So, in short, there will be L2 scalability
+with JAM, they have a flexible and rich environment for both. So, in short, there will be L2 scalability
 without the need for rollup solutions while being fully flexible to build any application.
 
 ## What are services?
