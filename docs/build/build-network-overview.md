@@ -10,6 +10,12 @@ slug: ../build-network-overview
 While Polkadot itself is the mainnet, there are several networks that can cater to different
 development or application-driven contexts.
 
+:::info Looking for faucets?
+
+[See here for all available faucets and how to obtain testnet tokens.](../learn/learn-DOT.md#obtaining-testnet-tokens)
+
+:::
+
 ## Polkadot Ecosystem Networks
 
 - Mainnet: **Polkadot**
@@ -20,6 +26,8 @@ development or application-driven contexts.
   - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet
     (is not reset back to genesis block).
+  - **Paseo** - A community-run testnet which mirrors the Polkadot runtime. It is maintained by the
+    community.
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new
     genesis block).
   - **Contracts** - Wasm-based Smart Contract enabled parachain testnet on Rococo, primarily for

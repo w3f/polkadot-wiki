@@ -7,22 +7,20 @@ keywords: [build, how to build, develop, parachain, smart contract]
 slug: ../build-guide
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from
-'@theme/DocCardList';
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
-<DocCardList />
-
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol that
-providing **shared security** among all connected [tasks](../learn/learn-agile-coretime.md#task) and
-allowing all connected tasks to **interoperate** by using [XCM](../learn/learn-xcm.md).
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol and network
+that provides **shared security** amongst all connected parachains (which are
+[tasks](../learn/learn-agile-coretime.md#task)) and allowing all connected tasks to **interoperate**
+by using [XCM](../learn/learn-xcm.md).
 
 :::info What is a task?
 
-You might see the term "task" references quite a bit, but in most cases refers to a protocol which
-is running using Polkadot. This could be a parachain, or any other computational process, so long as
-it adheres to the Polkadot protocol.
+You might see the term "task" references quite a bit, but in most cases refers to a process which is
+utilizing the compute that Polkadot provides. This could be a parachain or any other computational
+process, so long as it adheres to the Polkadot protocol.
 
-A better definition can be found [here](../learn/learn-agile-coretime.md#task).
+The full definition can be found [here](../learn/learn-agile-coretime.md#task).
 
 :::
 
@@ -30,22 +28,34 @@ The time it takes to develop and launch a new chain has dropped significantly wi
 Polkadot provides. While before, it would take years to launch a new chain, now it may only take
 weeks or even days, depending on your goals.
 
-This guide will walk you through the steps you can take today to get started building your vision
-with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will explain the difference
-between a [parachain](../learn/learn-parachains.md) and a smart contract in deciding which best fits
-your architectural needs.
+This starters guide will walk you through the steps you can take today to get started building your
+vision with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will also point to
+resources which you can use to start building right away.
 
-After
+:::note For Developers!
 
-This build guide provides three different tracks:
+Please note that the following documentation is more geared towards developers. If you are looking
+for more general knowledge related to Polkadot, be sure to check otu the
+[Learn](../learn/learn-index) section.
 
-1.  [Protocol Development - Blockchain & Parachain Development](#building-tasks)
-2.  [Developing Smart Contracts](#developing-smart-contracts)
-3.  [Developing a dApp](#developing-a-dappuapp)
+Looking to jump into a guide? Check out our starter developer guides for creating a minimal
+blockchain and deploying it on a testnet.
 
-:::tip Keep reading to find out more, or visit each respective track
+:::
 
-Keep in mind that these tracks are merely suggestive, and there are many ways to utilize
+This build guide covers four different areas, taking a **top-down** approach, from protocol
+development to user-facing applications:
+
+<!-- no toc -->
+
+1. [Protocol Development - Developing parachains/blockchains](#building-parachains)
+2. [Deploying on a Core](#deploying-on-a-core)
+3. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
+4. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
+
+:::tip Keep reading to find out more, or explore each respective area
+
+Keep in mind that these areas are merely suggestive, and there are many ways to utilize
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, Substrate, and their various
 developmental components. For more inspiration, look at the
 [open source projects](./build-open-source.md) featured here in the wiki!
@@ -83,7 +93,7 @@ flowchart TB
         subgraph PSL ["Blockchain Development"]
            direction LR
            PS["Polkadot SDK"] --> R[WASM Runtime - Substrate & FRAME]
-           R -->Parachain["Parachain"]-->SSC["Shared Security - Cumulus"]
+           R -->Parachain["Parachain/Task"]-->SSC["Shared Security - Cumulus"]-->Core("Deployed on a Core")
            R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
         end
     end
@@ -112,14 +122,20 @@ Before diving into any one of these tracks, it is encouraged to read about
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
 context about the application you could make.
 
-## Building Tasks
+[Take a look at the various development network options here.](./build-network-overview.md)
+
+## Building Parachains
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
 Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
 shared security of multiple [parachains](../learn/learn-parachains.md), which are _layer one_
-protocols. Tasks currently connect to a relay chain using the
+protocols. Parachains currently connect to a relay chain using the
 [Parachains Protocol](../learn/learn-parachains-protocol.md). In the future, more elaborate (or
 simple!) tasks could be constructed.
+
+A parachain one of the examples of a type of **task**, which runs on a core on Polkadot. In theory,
+one could develop other types of tasks, not just other blockchains, that are able to run on a
+Polkadot core.
 
 ![build 1](../assets/build-1.png)
 
@@ -128,8 +144,7 @@ simple!) tasks could be constructed.
 Throughout this document, you may encounter the term **runtime** or **STF (State Transition
 Function)**. Both refer to the same concept, as they define how a particular system, i.e., a
 blockchain, should deal with state changes externally and internally. Both of these terms are used
-extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and by association,
-Substrate contexts.
+extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate.
 
 :::
 
@@ -142,14 +157,16 @@ contracts). This vulnerability is mitigated by the
 -- although it places more of a burden on the developer of the parachain to perform properly
 benchmarks.
 
-### Constructing FRAME Runtimes with Substrate
+### Polkadot SDK Overview
 
-Polkadot is built using the Polkadot SDK, which within contains the source code for:
+Polkadot is built using the Polkadot SDK, which besides,
+[the Polkadot node/host implementation](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/polkadot/index.html),
+within contains the source code for:
 
-- The Polkadot client implemenation
-- Substrate - the core libraries used for constructing blockchains
-- Cumulus - parachain/task specific functions which allow for solo chains to become compatible with
-  Polkadot
+- **Substrate** - a set of core libraries used for constructing blockchains - mostly un-opinionated
+  - **FRAME** - the framework used to build Substrate runtimes - more opinionated
+- **Cumulus** - parachain/task specific functions which allow for solo chains to become compatible
+  with Polkadot
 
 [Substrate](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/substrate/index.html)
 is a highly configurable and dynamic framework for building blockchains. At a lower level, Substrate
@@ -164,7 +181,7 @@ usually involved when developing a blockchain.
 Substrate can be used as a basis for a parachain to connect to a relay chain like Polkadot or
 Kusama, or even as a basis to form a conventional layer one solo chain.
 
-Currently, the most streamlined way of utilizing Substrate is
+Currently, the most streamlined way of utilizing Substrate is through
 [FRAME](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html),
 which conveniently allows for a runtime/STF to be generated from a set of modules (called
 [pallets](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html#pallets)).
@@ -177,8 +194,9 @@ to construct a runtime/STF and define how your task is supposed to behave. Rangi
 pallets can be quite extensive in providing on-chain functionality.
 
 Even though FRAME is heavily used, it is not the only way to create a valid runtime/STF using
-Substrate. Substrate can be used to create new paradigms and abstractions that build on the concept
-of web3.
+Substrate. Substrate can be used to create new paradigms and abstractions, one such example is the
+[Open Runtime Module Library (ORML)](https://github.com/open-web3-stack/open-runtime-module-library),
+which is another way creating and using runtime modules.
 
 :::note
 
@@ -193,41 +211,20 @@ comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
-[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is another set of tools
-that aid in building a parachain-ready blockchain for Polkadot or Kusama. Cumulus utilizes FRAME and
-Substrate to create an easy way to build your first parachain. It ensures the chain follows the
-Parachain Protocol.
+[Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html)
+transforms FRAME-based runtimes into Polkadot-compatible parachain runtimes, and Substrate-based
+nodes into Polkadot/Parachain-compatible nodes. In other words, Cumulus can enable a regular runtime
+to meet the necessary requirements to have its state verified by Polkadot and take part in shared
+security.
 
 For most developers, the best place to start is to get familiar with Substrate independently,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
 process. This way, one can view how various paradigms are applied and decide on integrating or
 utilizing Substrate for their particular use case.
 
-Please see the [parachain development guide](build-parachains.md) for how to get started on building
-a parachain or parathread.
+<!-- todo @bader: add guide link -->
 
-#### Parachains Benefits
-
-Parachains contain their own runtime/STF logic and benefit from the shared security and the
-cross-consensus messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
-permit high flexibility and customization but require more effort to create and maintain over time.
-A production-grade parachain is typically more involved to create due to the complexity involved in
-blockchain networks' technical and economic aspects.
-
-Parachains grant the creators more space to build the monetary system and other chain aspects from
-the ground up. They will allow for a more concise and efficient execution of complex logic than a
-smart contract platform could offer. Parachains also provide more flexibility in the form of
-governance and can perform complete upgrades in a less controversial way than the current process of
-hard forks.
-
-Some examples of features you can have on a parachain or parathread:
-
-- Custom fee structure (for example, pay a flat transaction fee or pay per byte).
-- Shared security and finalization via the relay chain (Polkadot or Kusama).
-- Custom monetary policy for the native token and local economy.
-- Treasury to be funded through transitions in your state function.
-- A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
-  treasury.
+Please see the parachain development guide for how to get started on building a parachain.
 
 ### Building a Pallet
 
@@ -237,8 +234,19 @@ environment. A pallet is a fully customizable module that allows you to implemen
 with relatively minimal development time on a fundamental level while still allowing the possibility
 of building advanced functionality into your custom chain.
 
-To learn how to build a pallet, follow the
-[Substrate documentation](https://docs.substrate.io/tutorials/build-application-logic/).
+## Deploying on a Core
+
+Once you have your runtime and pallets developed, you will be able to deploy it on a
+[core](../learn/learn-agile-coretime.md#core), which is how one utilizes the shared security of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. One does so by:
+
+1. **Compiling** the runtime (written in Rust) to a WebAssembly blob, thereby defining how your
+   state transitions from one state to the next.
+2. **Generating** your genesis state.
+3. **Obtaining** a core, most likely through a
+   [Coretime marketplace](../learn/learn-guides-coretime-marketplaces.md).
+4. **Registering** the runtime blob and genesis state with that core.
+5. **Ensuring** you have at least one honest, synced collator for your task
 
 ## Developing Smart Contracts
 
@@ -264,6 +272,9 @@ runtime/STF, whereas smart contracts are a product of a pallet (see:
 [pallet_contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html)).
 Pallets require more engineering and thought, as they can directly affect the chain's state.
 
+For a more comprehensive (and maintained) comparison, be sure to check out the
+[comparison from the Polkadot SDK documentation](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/runtime_vs_smart_contract/index.html).
+
 :::
 
 ### ink! and EVM-based Smart Contracts
@@ -275,14 +286,14 @@ on-chain.
 
 :::note
 
-The Polkadot relay chain does not support smart contracts. However, several parachains do. See the
-[smart contracts guide](build-smart-contracts.md#smart-contract-environments-are-still-maturing) for
-more information about the environments provided.
+_The Polkadot relay chain does not support smart contracts._ However, several parachains do. See the
+[smart contracts guide](build-smart-contracts.md#parachains) for the exact chains in which you can
+deploy contracts on Polkadot.
 
 :::
 
-A popular choice for smart contracts is [ink!](https://use.ink/). Other parachains that offer
-EVM-based contracts written in Solidity alongside ink!
+A Polkadot-native choice for smart contracts is [ink!](https://use.ink/). Other parachains that
+offer EVM-based contracts written in Solidity alongside ink!
 [are also available](./build-smart-contracts#parachains).
 
 Because smart contracts exist on a single chain at a time, they can have smooth interoperability
@@ -301,7 +312,7 @@ a smart contract.
 
 :::
 
-## Developing a dApp/uApp
+## Developing a dApp
 
 If one aims to develop a **dApp** (Decentralized App), the Polkadot ecosystem contains various SDKs
 to tap into the relay chain and parachains.
@@ -318,8 +329,8 @@ For a complete list of tools, please take a look here:
 ## Resources
 
 - [System (Common Good) Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+- [Agile Coretime Fellowship RFC](https://polkadot-fellows.github.io/RFCs/approved/0001-agile-coretime.html)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
-- [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
 - [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
 - [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
 - [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
