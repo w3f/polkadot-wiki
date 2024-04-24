@@ -48,7 +48,7 @@ function HomeNav() {
   const NavItemContent = ({ children }) => <div className="homeNavItemContent">{children}</div>;
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("explore-index")} aosDelay="0" imageSrc='img/polkadot-guide/Gift.png'>
+      <NavItem href={useDocUrl("explore-index")} aosDelay="0" imageSrc='img/polkadot-guide/Explore.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -68,7 +68,7 @@ function HomeNav() {
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("learn-index")} aosDelay="200">
+      <NavItem href={useDocUrl("learn-index")} aosDelay="200" imageSrc='img/polkadot-guide/Learn.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -88,7 +88,7 @@ function HomeNav() {
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("build-guide")} aosDelay="400">
+      <NavItem href={useDocUrl("build-guide")} aosDelay="400" imageSrc='img/polkadot-guide/Build.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -109,7 +109,7 @@ function HomeNav() {
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("maintain-index")} aosDelay="600">
+      <NavItem href={useDocUrl("maintain-index")} aosDelay="600" imageSrc='img/polkadot-guide/Maintain.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate
