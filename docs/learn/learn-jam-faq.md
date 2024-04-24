@@ -15,7 +15,7 @@ For an in-depth overview of JAM, see the [Wiki page about the JAM Chain](./learn
 
 ## What is JAM?
 
-JAM is a research and development project initiated by Parity Technologies. It's a computational
+JAM is a research and development project initiated by [Parity Technologies](https://www.parity.io/). It's a computational
 model that focuses on the process of collecting, refining, joining, and accumulating data within a
 blockchain network.
 
