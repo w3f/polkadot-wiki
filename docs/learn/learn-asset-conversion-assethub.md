@@ -40,7 +40,7 @@ Asset Conversion pallet allows you to:
 
 ## Fee Payment in Any Asset - Wallets
 
-Without Asset Conversion pallet, only DOT and sufficient assets can be used for paying transaction
+Without Asset Conversion pallet, only DOT and [sufficient assets](./learn-assets.md#sufficient-assets) can be used for paying transaction
 fees. With the Asset Conversion pallet deployed, Wallets can enable users to pay transaction fees
 through any arbitrary asset made available in pools with either DOT or sufficient assets. More
 specifically, this functionality is enabled through
