@@ -69,6 +69,19 @@ calculates an optimal contribution of assets, which may differ from the desired 
 be less than the specified minimums. Liquidity providers receive liquidity tokens representing their
 share of the pool.
 
+For example, the snapshot below shows how to provide liquidity to the pool with `ROC` tokens and
+`EDU` tokens with the asset with ID `149` on Rococo Asset Hub. The intention is to provide liquidity
+of 1 `ROC` token (`u128` value of `1000000000000` as it has 12 decimals) and 100 `EDU` tokens
+(`u128` value of `1000000000000` as it has 10 decimals).
+
+![Provide Liquidity](../assets/asset-hub/Asset-Conversion-Add-Liquidity.png)
+
+After successful submission of the extrinsic above, LP tokens are minted to the specified account.
+Below is the snapshot of the liquidity pool on the
+[DOT ACP UI.](https://github.com/MVPWorkshop/dot-acp-ui)
+
+![Liquidity Pool Example](../assets/asset-hub/Asset-Conversion-Liquidity-Pool-Example.png)
+
 ## Withdraw Provided Liquidity
 
 The `remove_liquidity` function allows users to withdraw their provided liquidity from a pool,
