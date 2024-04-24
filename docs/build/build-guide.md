@@ -16,9 +16,9 @@ by using [XCM](../learn/learn-xcm.md).
 
 :::info What is a task?
 
-You might see the term "task" references quite a bit, but in most cases refers to a process which is
-utilizing the compute that Polkadot provides. This could be a parachain or any other computational
-process, so long as it adheres to the Polkadot protocol.
+You might see the term "task" referenced quite a bit, but in most cases, it refers to a process
+utilizing Polkadot's compute. This could be a parachain or any other computational process, provided
+that it adheres to the Polkadot protocol.
 
 The full definition can be found [here](../learn/learn-agile-coretime.md#task).
 
@@ -30,7 +30,7 @@ weeks or even days, depending on your goals.
 
 This starters guide will walk you through the steps you can take today to get started building your
 vision with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will also point to
-resources which you can use to start building right away.
+resources you can use to start building immediately.
 
 :::note For Developers!
 
@@ -43,7 +43,7 @@ blockchain and deploying it on a testnet.
 
 :::
 
-This build guide covers four different areas, taking a **top-down** approach, from protocol
+This build guide covers four different areas, taking a **top-down** approach from protocol
 development to user-facing applications:
 
 <!-- prettier-ignore -->
@@ -67,54 +67,54 @@ developmental components. For more inspiration, look at the
 
 ```mermaid
 %%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'fontFamily': 'Unbounded',
-      'primaryColor': '#E6007A',
-      'fontSize': '16px',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#7C0000',
-      'lineColor': '#140523',
-      'secondaryColor': '#552BBF',
-      'tertiaryColor': '#fff'
-    }
-  }
+ init: {
+ 'theme': 'base',
+ 'themeVariables': {
+ 'fontFamily': 'Unbounded',
+ 'primaryColor': '#E6007A',
+ 'fontSize': '16px',
+ 'primaryTextColor': '#fff',
+ 'primaryBorderColor': '#7C0000',
+ 'lineColor': '#140523',
+ 'secondaryColor': '#552BBF',
+ 'tertiaryColor': '#fff'
+ }
+ }
 }%%
 flowchart TB
-    subgraph PL ["Protocol Land (Parachains, Smart Contracts)"]
+ subgraph PL ["Protocol Land (Parachains, Smart Contracts)"]
 
-        subgraph SCD ["Smart Contract Development"]
-          direction LR
-          SC["Use Smart Contract Parachain"]
-          SC --> ink!
-          SC --> Solidity
-        end
+ subgraph SCD ["Smart Contract Development"]
+ direction LR
+ SC["Use Smart Contract Parachain"]
+ SC --> ink!
+ SC --> Solidity
+ end
 
-        subgraph PSL ["Blockchain Development"]
-           direction LR
-           PS["Polkadot SDK"] --> R[WASM Runtime - Substrate & FRAME]
-           R -->Parachain["Parachain/Task"]-->SSC["Shared Security - Cumulus"]-->Core("Deployed on a Core")
-           R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
-        end
-    end
+ subgraph PSL ["Blockchain Development"]
+ direction LR
+ PS["Polkadot SDK"] --> R[WASM Runtime - Substrate & FRAME]
+ R -->Parachain["Parachain/Task"]-->SSC["Shared Security - Cumulus"]-->Core("Deployed on a Core")
+ R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
+ end
+ end
 
-    PL-->| Develop apps| CS
+ PL-->| Develop apps| CS
 
-    subgraph CS ["Client/User Land (dApps/uApps)"]
-        LC["Light Clients (Smoldot)"]
-        UA[uApp]
-        UA --> PAPI[Polkadot API]
-        UA --> PJS[Polkadot JS]
-        UA --> SubXT
-        PAPI --> LC
-        PJS --> LC
-        SubXT --> LC
-    end
+ subgraph CS ["Client/User Land (dApps/uApps)"]
+ LC["Light Clients (Smoldot)"]
+ UA[uApp]
+ UA --> PAPI[Polkadot API]
+ UA --> PJS[Polkadot JS]
+ UA --> SubXT
+ PAPI --> LC
+ PJS --> LC
+ SubXT --> LC
+ end
 ```
 
-Before diving into the various paths, one can take in developing on
-{{ polkadot: Polkadot :polkadot }}, it's important to realize and know key terms that make up the
+Before diving into the various paths one can take in developing on
+{{ polkadot: Polkadot :polkadot }}, it's essential to realize and know key terms that make up the
 following sections. Even before considering what kind of application you want to build, it's prudent
 to understand what {{ polkadot: Polkadot :polkadot }} _is_ and how {{ kusama: Kusama :kusama }}
 relates to it, and what each developmental component can do for you within the Polkadot ecosystem.
@@ -131,11 +131,11 @@ context about the application you could make.
 Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
 shared security of multiple [parachains](../learn/learn-parachains.md), which are _layer one_
 protocols. Parachains currently connect to a relay chain using the
-[Parachains Protocol](../learn/learn-parachains-protocol.md). In the future, more elaborate (or
-simple!) tasks could be constructed.
+[Parachains Protocol](../learn/learn-parachains-protocol.md). More elaborate (or simpler) tasks
+could be constructed in the future.
 
-A parachain one of the examples of a type of **task**, which runs on a core on Polkadot. In theory,
-one could develop other types of tasks, not just other blockchains, that are able to run on a
+A parachain is one of the examples of a type of **task**, which runs on a core on Polkadot. In
+theory, one could develop other types of tasks, not just other blockchains, that can run on a
 Polkadot core.
 
 ![build 1](../assets/build-1.png)
@@ -160,12 +160,12 @@ benchmarks.
 
 ### Polkadot SDK Overview
 
-Polkadot is built using the Polkadot SDK, which besides,
+Polkadot is built using the Polkadot SDK, which,
 [the Polkadot node/host implementation](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/polkadot/index.html),
 within contains the source code for:
 
 - **Substrate** - a set of core libraries used for constructing blockchains - mostly un-opinionated
-  - **FRAME** - the framework used to build Substrate runtimes - more opinionated
+- **FRAME** - the framework used to build Substrate runtimes - more opinionated
 - **Cumulus** - parachain/task specific functions which allow for solo chains to become compatible
   with Polkadot
 
@@ -202,8 +202,8 @@ which is another way creating and using runtime modules.
 :::note
 
 Although most parachains utilize FRAME and Substrate to build runtime/STFs for connecting to the
-relay chain, it is not contingent. Building a parachain using other tools is possible, as long as
-they follow the [Parachains Protocol](../learn/learn-parachains-protocol.md).
+relay chain, it is not contingent. Building a parachain using other tools is possible if they follow
+the [Parachains Protocol](../learn/learn-parachains-protocol.md).
 
 As a general rule of thumb, Substrate provides the means for this to become possible through
 comparably minimal effort.
@@ -215,8 +215,7 @@ comparably minimal effort.
 [Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html)
 transforms FRAME-based runtimes into Polkadot-compatible parachain runtimes, and Substrate-based
 nodes into Polkadot/Parachain-compatible nodes. In other words, Cumulus can enable a regular runtime
-to meet the necessary requirements to have its state verified by Polkadot and take part in shared
-security.
+to meet the requirements to have its state verified by Polkadot and take part in shared security.
 
 For most developers, the best place to start is to get familiar with Substrate independently,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
@@ -225,7 +224,7 @@ utilizing Substrate for their particular use case.
 
 <!-- todo @bader: add guide link -->
 
-Please see the parachain development guide for how to get started on building a parachain.
+Please see the parachain development guide for how to start building a parachain.
 
 ### Building a Pallet
 
@@ -322,7 +321,7 @@ For front-end applications, several options exist for interfacing with Substrate
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
 Substrate node.
 
-[Please visit the full documentation for developing dApps and other general client-side development resources.](build-dapp)
+[Please visit the documentation for developing dApps and other general client-side development resources.](build-dapp)
 
 For a complete list of tools, please take a look here:
 [Tools, APIs, and Languages](build-open-source.md)
