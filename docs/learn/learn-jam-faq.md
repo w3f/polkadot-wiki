@@ -87,7 +87,7 @@ be, for example, the current parachain functionality.
 ## How would the Relay Chain change with JAM?
 
 JAM would be a successor to the Relay Chain, with a more straightforward and flexible architecture.
-Only the consensus would be kept, while the rest, such as security, governance, etc., would run on
+Only the consensus functionality would be kept, while the rest, such as security, governance, etc., would run on
 system-level services. The current Relay Chain will run on multiple cores in the new JAM
 architecture, guaranteeing full compatibility.
 
