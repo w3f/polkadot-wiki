@@ -458,7 +458,6 @@ module.exports = {
                   items: [
                     "learn/learn-agile-coretime",
                     "learn/learn-guides-coretime-marketplaces",
-                    "learn/learn-guides-coretime-parachains",
                   ],
                 },
                 {
@@ -706,6 +705,7 @@ module.exports = {
         id: "build/build-guide"
       },
       items: [
+        "build/build-network-overview",
         {
           type: "category",
           label: "Client-side Development",
@@ -724,11 +724,24 @@ module.exports = {
         "build/build-smart-contracts",
         {
           type: "category",
-          label: "Protocol Development",
+          label: "Getting Started with Coretime",
           link: {
             type: 'generated-index',
-            title: "Protocol & Parachain Development",
+            title: "Getting Started with Coretime",
             description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-protocol-index',
+          },
+          items: [
+            "build/build-guides-coretime-adder-collator"
+          ],
+        },
+        {
+          type: "category",
+          label: "Protocol Development Resources",
+          link: {
+            type: 'generated-index',
+            title: "Protocol Development Resources",
+            description: "Miscellaneous aspects concerning protocol and parachain development",
             slug: '/build-protocol-index',
           },
           items: [
@@ -737,7 +750,6 @@ module.exports = {
             "build/build-hrmp-channels"
           ],
         },
-        "build/build-network-overview",
         {
           type: "category",
           label: "Tooling",

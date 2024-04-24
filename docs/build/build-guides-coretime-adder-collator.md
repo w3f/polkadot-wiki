@@ -1,10 +1,10 @@
 ---
-id: learn-guides-coretime-parachains
-title: Agile Coretime for Parachains
-sidebar_label: Coretime for Parachains
-description: Agile Coretime from Parachains perspective
+id: build-guides-coretime-adder-collator
+title: Getting Started - Adder Collator
+sidebar_label: Getting Started - Adder Collator
+description: Getting started with Agile Coretime with Adder Collator
 keywords: [coretime, blockspace, parathread, parachain, cores]
-slug: ../learn-guides-coretime-parachains
+slug: ../build-guides-coretime-adder-collator
 ---
 
 import RPC from "./../../components/RPC-Connection";
