@@ -48,7 +48,7 @@ development to user-facing applications:
 
 <!-- no toc -->
 
-1. [Protocol Development - Developing parachains/blockchains](#building-parachains)
+1. [Protocol Development - Developing parachains/blockchains](#building-parachains-tasks)
 2. [Deploying on a Core](#deploying-on-a-core)
 3. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
 4. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
@@ -124,7 +124,7 @@ context about the application you could make.
 
 [Take a look at the various development network options here.](./build-network-overview.md)
 
-## Building Parachains
+## Building Parachains (Tasks)
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
 Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
