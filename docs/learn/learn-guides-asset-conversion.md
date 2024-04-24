@@ -25,11 +25,41 @@ is deployed on Westend, Rococo and Kusama [here](https://app.dotacp.mvpworkshop.
 
 :::
 
+The tutorial below demonstrates the complete journey from creating a liquidity pool on Rococo test
+net and exploring all of the key functionalities of Asset Conversion pallet.
+
 ## Create a Liquidity Pool
+
+If there is no existing liquidity pool for an asset on Asset Hub, the first step is to create a
+liquidity pool. If you are looking for a guide on how to create an asset on Asset Hub, it is
+available [here.](./learn-guides-assets-create.md)
 
 The `create_pool` function is used to create an empty liquidity pool along with a new `lp_token`
 asset. This asset's ID is announced in the `Event::PoolCreated` event. After creating a pool,
 liquidity can be added to it via the `Pallet::add_liquidity` function.
+
+For example, the snapshot below shows how to create liquidity pool with `ROC` tokens and `EDU`
+tokens with the asset with ID `149` on Rococo Asset Hub. Creating this extrinsic requires knowledge
+of [XCM Multilocations](xcm/fundamentals/multilocation/summary.md). From the perspective of
+AssetHub, an Asset Hub, the asset with an `AssetId` of `149` has a MultiLocation of
+
+```
+{
+   parents: 0,
+   interior: {
+     X2: [{PalletInstance: 50}, {GeneralIndex: 149}]
+   }
+}
+```
+
+The PalletInstance of `50` represents the Assets pallet on Asset Hub and the `GeneralIndex` is the
+`AssetId` of the asset.
+
+![Create Liquidity Pool](../assets/asset-hub/Asset-Conversion-Create-Pool.png)
+
+The `lp_token` ID created for this pool is `24`, and
+[here](https://assethub-rococo.subscan.io/extrinsic/4604922-2?event=4604922-8) is the event for
+reference.
 
 ## Liquidity Provision
 
