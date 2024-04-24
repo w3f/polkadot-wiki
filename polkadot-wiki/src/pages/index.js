@@ -19,108 +19,61 @@ import KusamaCanary from "@site/static/img/kusama_canary_white.svg";
 function HomeNav() {
   const NavContainer = ({ children }) => (
     <section className="homeNavContainer">
-      <Container className="h-100 px-5">
-        <div className="row h-100 d-flex align-items-center justify-content-center">{children}</div>
+      <Container>
+        <Row className="justify-content-center">{children}</Row>
       </Container>
     </section>
   );
-  
-  const NavItem = ({ href, aosDelay, children }) => (
-    <div className="col-xs-12 col-md-6 col-lg-6 homeNavItem rounded-lg"> {/* Adjusted column classes */}
-      <a href={href} className="h-100" data-aos="fade-up" data-aos-delay={aosDelay}>
-        <div className="mx-auto">{children}</div>
+
+  const NavItem = ({ href, aosDelay, children, imageSrc, description }) => (
+    <Col xs={12} md={6} lg={6} className="mb-4">
+      <a href={href} className="text-decoration-none" data-aos="fade-up" data-aos-delay={aosDelay}>
+        <div className="card border-0 rounded-lg shadow">
+          <img src={imageSrc} alt="NavItem Image" className="card-img-top rounded-top" style={{ maxHeight: '200px', width: '100%', objectFit: 'contain' }} />
+          <div className="card-body" style={{ height: '150px' }}>
+            <h1 className="mt-0 text-dark font-weight-bold text-center">{children}</h1>
+            <div className="card-description text-center" style={{ overflowY: 'auto' }}>
+              {description}
+            </div>
+          </div>
+        </div>
       </a>
-    </div>
+    </Col>
   );
-
-  const NavItemTitle = ({ children }) => (
-    <h1 className="mt-0 text-dark font-weight-bold text-center">{children}</h1>
-  );
-
-  const NavItemContent = ({ children }) => <div className="homeNavItemContent">{children}</div>;
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("getting-started")} aosDelay="0">
-        <NavItemContent>
-          <NavItemTitle>
-            <Translate
-              id="homePage.navContainer.explore.title"
-              description="Title of Explore Navigator in Home page"
-            >
-              Explore
-            </Translate>
-          </NavItemTitle>
-          <p className="mx-auto small text-secondary px-4">
-            <Translate
-              id="homePage.navContainer.explore.content"
-              description="Content of Explore Navigator in Home page"
-            >
-              Explore Wallets, Applications and Programmes within the Polkadot Ecosystem.
-            </Translate>
-          </p>
-        </NavItemContent>
+      <NavItem
+        href={useDocUrl("getting-started")}
+        aosDelay="0"
+        imageSrc="img/polkadot-guide/Explore.png"
+        description={<Translate id="homePage.navContainer.explore.content">Explore Wallets, Applications and Programmes within the Polkadot Ecosystem.</Translate>}
+      >
+        <Translate id="homePage.navContainer.explore.title">Explore</Translate>
       </NavItem>
-      <NavItem href={useDocUrl("web3-and-polkadot")} aosDelay="200">
-        <NavItemContent>
-          <NavItemTitle>
-            <Translate
-              id="homePage.navContainer.learn.title"
-              description="Title of Learn Navigator in Home page"
-            >
-              Learn
-            </Translate>
-          </NavItemTitle>
-          <p className="mx-auto small text-secondary px-4">
-            <Translate
-              id="homePage.navContainer.learn.content"
-              description="Content of Learn Navigator in Home page"
-            >
-              Learn about Polkadot and how it provides Shared Security and Secure Interoperability to its Parachains.
-            </Translate>
-          </p>
-        </NavItemContent>
+      <NavItem
+        href={useDocUrl("web3-and-polkadot")}
+        aosDelay="200"
+        imageSrc="img/polkadot-guide/Learn.png"
+        description={<Translate id="homePage.navContainer.learn.content">Learn about Polkadot and how it provides Shared Security and Secure Interoperability to its Parachains.</Translate>}
+      >
+        <Translate id="homePage.navContainer.learn.title">Learn</Translate>
       </NavItem>
-      <NavItem href={useDocUrl("build-guide")} aosDelay="400">
-        <NavItemContent>
-          <NavItemTitle>
-            <Translate
-              id="homePage.navContainer.build.title"
-              description="Title of Build Navigator in Home page"
-            >
-              Build
-            </Translate>
-          </NavItemTitle>
-          <p className="mx-auto small text-secondary px-4">
-            <Translate
-              id="homePage.navContainer.build.content"
-              description="Content of Build Navigator in Home page"
-            >
-              Most up-to-date Information on the Status of the Development Tools in the Polkadot
-              Ecosystem.
-            </Translate>
-          </p>
-        </NavItemContent>
+      <NavItem
+        href={useDocUrl("build-guide")}
+        aosDelay="400"
+        imageSrc="img/polkadot-guide/Build.png"
+        description={<Translate id="homePage.navContainer.build.content">Most up-to-date Information on the Status of the Development Tools in the Polkadot Ecosystem.</Translate>}
+      >
+        <Translate id="homePage.navContainer.build.title">Build</Translate>
       </NavItem>
-      <NavItem href={useDocUrl("maintain-index")} aosDelay="600">
-        <NavItemContent>
-          <NavItemTitle>
-            <Translate
-              id="homePage.navContainer.maintain.title"
-              description="Title of Maintain Navigator in Home page"
-            >
-              Maintain
-            </Translate>
-          </NavItemTitle>
-          <p className="mx-auto small text-secondary px-4">
-            <Translate
-              id="homePage.navContainer.maintain.content"
-              description="Content of Maintain Navigator in Home page"
-            >
-              Information and Guides on how to Deploy a Node and Run the Network.
-            </Translate>
-          </p>
-        </NavItemContent>
+      <NavItem
+        href={useDocUrl("maintain-index")}
+        aosDelay="600"
+        imageSrc="img/polkadot-guide/Maintain.png"
+        description={<Translate id="homePage.navContainer.maintain.content">Information and Guides on how to Deploy a Node and Run the Network.</Translate>}
+      >
+        <Translate id="homePage.navContainer.maintain.title">Maintain</Translate>
       </NavItem>
     </NavContainer>
   );
