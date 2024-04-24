@@ -202,6 +202,8 @@ The issue on Polkadot-JS repo can be tracked
 
 :::
 
+![Asset Value, Beneficiary and ValidFrom](../assets/asset-hub/spend-amount-account-validfrom-temp.png)
+
 ### Specifying the Beneficiary
 
 The beneficiary account will be one on Asset Hub. For this reason, the XCM junction must be
@@ -214,8 +216,6 @@ The `validFrom` field is optional, and refers to the block height of the Relay C
 payout can be issued. If the `validFrom` parameter is not set, the spend can be paid out immediately
 after approval. For more information on this field, refer to the
 [guide below](#creating-a-staged-proposal-with-validfrom).
-
-![Asset Value, Beneficiary and ValidFrom](../assets/asset-hub/spend-amount-account-validfrom-temp.png)
 
 ### Summary: Final Call
 
