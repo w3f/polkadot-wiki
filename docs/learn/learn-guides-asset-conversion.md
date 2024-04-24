@@ -17,6 +17,14 @@ see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashb
 
 </div>
 
+:::info Wallet and UI Developers
+
+The [DOT ACP UI](https://github.com/MVPWorkshop/dot-acp-ui) project is part of Polkadot initiative
+for building front-end and UI for Asset Conversion Pallet on Polkadot's AssetHub. Currently, the app
+is deployed on Westend, Rococo and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
+
+:::
+
 ## Create a Liquidity Pool
 
 The `create_pool` function is used to create an empty liquidity pool along with a new `lp_token`
