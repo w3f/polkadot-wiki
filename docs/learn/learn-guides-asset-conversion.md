@@ -135,3 +135,16 @@ liquidity tokens (representing their share in the pool) they wish to burn. They 
 acceptable amounts for the assets they expect to receive back. This mechanism ensures users can
 control the minimum value they receive, protecting against unfavourable price movements during the
 withdrawal process​.
+
+For example, the snapshot below shows how to remove liquidity by specifying the number of LP tokens.
+In exchange of removing around half of the liquidity of the pool, the expecation is that we receive
+at least 0.4 `ROC` tokens (`u128` value of`400000000000` as it has 12 decimals) and 40 `EDU` tokens
+(`u128` value of `400000000000` as it has 10 decimals).
+
+![Remove Liquidity](../assets/asset-hub/Asset-Conversion-Remove-Liquidity.png)
+
+Below is the snapshot of the liquidity pool on the
+[DOT ACP UI.](https://github.com/MVPWorkshop/dot-acp-ui) after successful submission of the
+extrinsic above.
+
+![Remove Liquidity Example](../assets/asset-hub/Asset-Conversion-Remove-Liquidity-Example.png)
