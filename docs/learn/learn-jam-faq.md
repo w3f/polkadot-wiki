@@ -22,7 +22,7 @@ blockchain network.
 ## What does "JAM" stand for?
 
 "JAM" stands for "Join Accumulate Machine." It represents the core principles of the computational
-model implemented in JAM.
+model to be implemented on the JAM chain.
 
 ## Why is JAM groundbreaking?
 
