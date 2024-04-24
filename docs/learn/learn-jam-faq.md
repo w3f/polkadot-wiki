@@ -93,7 +93,7 @@ architecture, guaranteeing full compatibility.
 
 ## In the new architecture, what does the tech stack look like?
 
-From the point of view of parachains, the stack doesn’t look that much different. They will continue
+From the point of view of parachains, the tech stack doesn’t look that much different. They will continue
 to get validated by the validators, etc. JAM will offer the possibility of running smart contracts
 on the same level as parachains. This means a potential service can be written that enables people
 to run Solidity-based smart contracts directly on top of JAM without running on any parachain. The
