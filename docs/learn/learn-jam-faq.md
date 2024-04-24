@@ -15,9 +15,9 @@ For an in-depth overview of JAM, see the [Wiki page about the JAM Chain](./learn
 
 ## What is JAM?
 
-JAM is a research and development project initiated by [Parity Technologies](https://www.parity.io/). It's a computational
-model that focuses on the process of collecting, refining, joining, and accumulating data within a
-blockchain network.
+JAM is a research and development project initiated by
+[Parity Technologies](https://www.parity.io/). It's a computational model that focuses on the
+process of collecting, refining, joining, and accumulating data within a blockchain network.
 
 ## What does "JAM" stand for?
 
@@ -34,16 +34,16 @@ flexibility teams need and compete with the rest of the ecosystem for resources.
 more efficient and flexible development environment, as the chains are custom-made for a specific
 purpose. With JAM, groundbreaking scalability currently only seen through rollups is brought to the
 consensus layer. Developers no longer need to decide if they build appchains or smart contracts;
-with JAM, they have a flexible and rich environment for both. So, in short, there will be L2 scalability
-without the need for rollup solutions while being fully flexible to build any application.
+with JAM, they have a flexible and rich environment for both. So, in short, there will be L2
+scalability without the need for rollup solutions while being fully flexible to build any
+application.
 
 ## What are services?
 
 Services are modules that run on top of JAM. One of these services would be, for example, the
 ChainService. This service would implement the parachain logic that is currently enshrined in the
-Polkadot protocol. JAM’s `refine` and `accumulate` phases are generic and provided by these
-services. This will make it possible to implement even more completely permissionless services, such
-as providing an actor-like framework to run on top of JAM.
+Polkadot protocol. JAM’s `refine` and `accumulate` phases are generic entry points that will be used
+to implement specific permissionless services.
 
 ## How does JAM differ from traditional blockchain networks?
 
@@ -81,27 +81,29 @@ the network's integrity and security.
 ## Is JAM related to Polkadot?
 
 Yes, JAM is a potential candidate for evolving the Polkadot Relay Chain. The key change is that
-parachains are no longer enshrined; anyone can permissionlessly run their service. One service will
-be, for example, the current parachain functionality.
+parachains are no longer enshrined on the Relay Chain and will be running on top of a service that
+is compatible with parachain protocol. One service will be, for example, the current parachains
+service. Anyone can permissionlessly add a service to the JAM Chain by specifying the entry points
+Refine, Accumulate and onTransfer.
 
 ## How would the Relay Chain change with JAM?
 
 JAM would be a successor to the Relay Chain, with a more straightforward and flexible architecture.
-Only the consensus functionality would be kept, while the rest, such as security, governance, etc., would run on
-system-level services. The current Relay Chain will run on multiple cores in the new JAM
-architecture, guaranteeing full compatibility.
+Only the consensus functionality would be kept, while the rest, such as security, governance, etc.,
+would run on system-level services. The current Relay Chain will run on multiple cores in the new
+JAM architecture, guaranteeing full compatibility.
 
 ## In the new architecture, what does the tech stack look like?
 
-From the point of view of parachains, the tech stack doesn’t look that much different. They will continue
-to get validated by the validators, etc. JAM will offer the possibility of running smart contracts
-on the same level as parachains. This means a potential service can be written that enables people
-to run Solidity-based smart contracts directly on top of JAM without running on any parachain. The
-other more future-oriented development will be CorePlay. CorePlay will be an actor-based framework.
-The idea is to support long-running tasks/actors on top of JAM. Long-running here means that
-programs will continue running intermittently (can pause and resume). This provides quite a lot of
-simplifications for the developer when writing contracts. Ultimately, it should be much simpler to
-write a program that can run on top of a (decentralized) blockchain than it is now.
+From the point of view of parachains, the tech stack doesn’t look that much different. They will
+continue to get validated by the validators, etc. JAM will offer the possibility of running smart
+contracts on the same level as parachains. This means a potential service can be written that
+enables people to run Solidity-based smart contracts directly on top of JAM without running on any
+parachain. The other more future-oriented development will be CorePlay. CorePlay will be an
+actor-based framework. The idea is to support long-running tasks/actors on top of JAM. Long-running
+here means that programs will continue running intermittently (can pause and resume). This provides
+quite a lot of simplifications for the developer when writing contracts. Ultimately, it should be
+much simpler to write a program that can run on top of a (decentralized) blockchain than it is now.
 
 ## How can developers get involved with JAM?
 
@@ -137,7 +139,8 @@ layer.
 Parachains will be one of the “products” that can run on JAM. JAM will only remove the enshrined
 parachain consensus and replace it with a model supporting different services. For the first years
 after launch, it will still be faster to develop parachains, as the necessary tooling would need to
-be developed. For the migration support, full compatibility guarantees will be written into the code.
+be developed. For the migration support, full compatibility guarantees will be written into the
+code.
 
 ## Does it even make sense now to build a parachain on Polkadot?
 
