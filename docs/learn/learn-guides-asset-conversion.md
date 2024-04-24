@@ -82,15 +82,6 @@ Below is the snapshot of the liquidity pool on the
 
 ![Liquidity Pool Example](../assets/asset-hub/Asset-Conversion-Liquidity-Pool-Example.png)
 
-## Withdraw Provided Liquidity
-
-The `remove_liquidity` function allows users to withdraw their provided liquidity from a pool,
-receiving back the original assets. When calling this function, users specify the amount of
-liquidity tokens (representing their share in the pool) they wish to burn. They also set minimum
-acceptable amounts for the assets they expect to receive back. This mechanism ensures users can
-control the minimum value they receive, protecting against unfavourable price movements during the
-withdrawal process​.
-
 ## Swap Assets
 
 ### Swap from an exact amount of Tokens
@@ -101,6 +92,20 @@ amount of the second asset in return. This function aims to provide predictabili
 outcomes, allowing users to manage their asset exchanges with confidence regarding the minimum
 return.
 
+For example, the snapshot below shows how to swap `ROC` tokens to `EDU` tokens with the asset with
+ID `149` on Rococo Asset Hub. The intention is to swap 0.1 `ROC` tokens (`u128` value of
+`100000000000` as it has 12 decimals) to at least 9 `EDU` tokens (`u128` value of `90000000000` as
+it has 10 decimals).
+
+![Swap Exact Amount](../assets/asset-hub/Asset-Conversion-Swap-Exact-Token.png)
+
+Below is the snapshot of the liquidity pool on the
+[DOT ACP UI.](https://github.com/MVPWorkshop/dot-acp-ui) after successful submission of the
+extrinsic above. It can be observed that the pool now has 1.1 `ROC` tokens and around 9.06 `EDU`
+tokens are transferred out of it.
+
+![Swap Exact Amount Example](../assets/asset-hub/Asset-Conversion-Swap-Exact-Tokens-Example.png)
+
 ### Swap to an exact amount of Tokens
 
 On the other hand, the `swap_tokens_for_exact_tokens` function allows users to trade a flexible
@@ -108,3 +113,12 @@ amount of one asset to precisely obtain a specified amount of another asset. It 
 do not spend more than a predetermined maximum amount of the initial asset to acquire the exact
 target amount of the second asset, providing a way to control the cost of the transaction while
 achieving the desired outcome.
+
+## Withdraw Provided Liquidity
+
+The `remove_liquidity` function allows users to withdraw their provided liquidity from a pool,
+receiving back the original assets. When calling this function, users specify the amount of
+liquidity tokens (representing their share in the pool) they wish to burn. They also set minimum
+acceptable amounts for the assets they expect to receive back. This mechanism ensures users can
+control the minimum value they receive, protecting against unfavourable price movements during the
+withdrawal process​.
