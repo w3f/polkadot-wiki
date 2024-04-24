@@ -169,14 +169,38 @@ First, we specify the location - in this case, Asset Hub (parachain 1,000). `Pal
 refers to the Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of
 USDT in this instance of the Assets pallet.
 
+:::caution Bug on Polkadot-JS UI
+
+As the Polkadot-JS UI is interpreting the general index in DOT, it multiplies the entered values
+with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would
+like to have `1984` as the input argument, we can offset this UI induced error by entering
+`0.0000001984`.
+
+The issue on Polkadot-JS repo can be tracked
+[here](https://github.com/polkadot-js/apps/issues/10430).
+
+:::
+
 Here is how the final `assetKind` field should look:
 
-![Asset Kind](../assets/asset-hub/spend-usdt-assethub.png)
+![Asset Kind](../assets/asset-hub/spend-usdt-assethub-temp.png)
 
 ### Specifying the Amount
 
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
 asking for 100 USDT, we put `100000000` as the input for the amount.
+
+:::caution Bug on Polkadot-JS UI
+
+As the Polkadot-JS UI is interpreting the asset balance in DOT, it multiplies the entered values
+with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would
+like to have `100000000` as the input argument, we can offset this UI induced error by entering
+`0.01` for this particular example where we like to input 100 USDT.
+
+The issue on Polkadot-JS repo can be tracked
+[here](https://github.com/polkadot-js/apps/issues/10430).
+
+:::
 
 ### Specifying the Beneficiary
 
@@ -191,7 +215,7 @@ payout can be issued. If the `validFrom` parameter is not set, the spend can be 
 after approval. For more information on this field, refer to the
 [guide below](#creating-a-staged-proposal-with-validfrom).
 
-![Asset Value, Beneficiary and ValidFrom](../assets/asset-hub/spend-amount-account-validfrom.png)
+![Asset Value, Beneficiary and ValidFrom](../assets/asset-hub/spend-amount-account-validfrom-temp.png)
 
 ### Summary: Final Call
 
