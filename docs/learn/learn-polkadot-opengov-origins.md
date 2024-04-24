@@ -117,6 +117,9 @@ evaluated simultaneously. They should not delay voting on proposals requiring Ro
 to queue. Although the approval/support criteria resemble Root, passing items on this track serves
 as a signal without conferring privileges.
 
+{{ polkadot: <Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
+{{ kusama: <Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+
 ### Staking Admin
 
 The origin for canceling slashes. This origin has the privilege to execute calls from the staking
