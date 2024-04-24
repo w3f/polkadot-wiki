@@ -7,7 +7,7 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived. For up-to-date information about governance, see the
@@ -276,7 +276,7 @@ proposal is carried, no matter how much stake votes on the proposal.
 ![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
 To know more about where these above formulas come from, please read the
-[democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
+[democracy pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/democracy/src/vote_threshold.rs).
 
 #### Example of Adaptive Quorum Biasing
 
@@ -404,7 +404,7 @@ For more information, check out our
 ### Prime Members
 
 The council, being an instantiation of
-[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
+[Substrate's Collective pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/collective),
 implements what's called a _prime member_ whose vote acts as the default for other members that fail
 to vote before the timeout.
 
@@ -518,10 +518,32 @@ case for why the change should be made.
 
 :::
 
+## Gov1 Runtime Upgrade Monitoring
+
+Monitor the chain for:
+
+1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
+   referendum has started (although it does not mean it is a runtime upgrade). Get the referendum
+   info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
+   enactment `delay` (delay). If the referendum passes, it will execute on block number
+   `end + delay`.
+2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
+   If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
+   enactment block.
+3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. This
+   may be up to the last block before execution, but it will not work if this is missing.
+4. `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will
+   also be a `system(CodeUpdated)` event.
+
+You can also monitor [Polkassembly](https://polkadot.polkassembly.io/) for discussions on on-chain
+proposals and referenda.
+
+\* E.g. via `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` on Sidecar.
+
 ## Resources
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
-- [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+- [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar

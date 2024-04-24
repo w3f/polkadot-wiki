@@ -7,7 +7,7 @@ keyword: [launch, phases, polkadot, DOT, claim, token sale, redenomination]
 slug: ../learn-launch
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived.

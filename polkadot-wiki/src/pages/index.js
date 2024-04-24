@@ -48,7 +48,7 @@ function HomeNav() {
   const NavItemContent = ({ children }) => <div className="homeNavItemContent">{children}</div>;
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("explore-index")} aosDelay="0" imageSrc='img/polkadot-guide/Explore.png'>
+      <NavItem href={useDocUrl("getting-started")} aosDelay="0" imageSrc='img/polkadot-guide/Explore.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate
@@ -68,7 +68,7 @@ function HomeNav() {
           </p>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("learn-index")} aosDelay="200" imageSrc='img/polkadot-guide/Learn.png'>
+      <NavItem href={useDocUrl("web3-and-polkadot")} aosDelay="200" imageSrc='img/polkadot-guide/Learn.png'>
         <NavItemContent>
           <NavItemTitle>
             <Translate

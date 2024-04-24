@@ -7,7 +7,7 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived. For up-to-date information about treasury, see the
@@ -275,6 +275,6 @@ migration to a minority fork. However, the possibility of this scenario is quite
 
 ## Further Reading
 
-- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs)
+- [Substrate's Treasury Pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/treasury/src/lib.rs)
 
 - [Documentation of the Rust implementation of the Treasury](https://paritytech.github.io/substrate/master/pallet_treasury/index.html)

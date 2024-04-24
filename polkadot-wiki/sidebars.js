@@ -7,7 +7,7 @@ module.exports = {
       link: {
         type: 'generated-index',
         title: 'Explore',
-        description: 'Explore Wallets, Apps and Programmes in Polkadot and Kusama ecosystems.',
+        description: 'Explore Wallets, Apps and Programs in Polkadot and Kusama ecosystems.',
         slug: '/explore-index',
       },
       items: [
@@ -23,6 +23,12 @@ module.exports = {
             slug: '/wallets-index',
           },
           items: [
+            {
+              type: 'link',
+              label: 'Polkadot Ecosystem Wallets',
+              description: 'Wallets listed on official Polkadot website.',
+              href: 'https://polkadot.network/ecosystem/wallets/',
+            },
             "general/wallets-and-extensions",
             "general/ledger",
             "general/polkadot-vault",
@@ -90,13 +96,13 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Programmes",
-          description: 'Programmes for Grants, Bounties, Ambassadors and many more inititatives.',
+          label: "Programs",
+          description: 'Programs for Grants, Bounties, Ambassadors and many more inititatives.',
           link: {
             type: 'generated-index',
-            title: 'Programmes',
-            description: 'Learn about different programmes and initiatives within the Polkadot and Kusama ecosystems.',
-            slug: '/programmes-index',
+            title: 'Programs',
+            description: 'Learn about different programs and initiatives within the Polkadot and Kusama ecosystems.',
+            slug: '/programs-index',
           },
           items: [
             "general/decentralized-futures",
@@ -239,7 +245,13 @@ module.exports = {
               items: [
                 "learn/learn-polkadot-opengov",
                 "learn/learn-polkadot-opengov-origins",
-                "learn/learn-polkadot-technical-fellowship"
+                "learn/learn-polkadot-technical-fellowship",
+                {
+                  type: 'link',
+                  label: 'OpenGov.Watch',
+                  description: 'Community-maintained Support Pages about Polkadot OpenGov.',
+                  href: 'https://www.opengov.watch/',
+                },
               ],
             },
             "learn/learn-polkadot-opengov-treasury",
@@ -254,11 +266,38 @@ module.exports = {
                 slug: '/learn-assets-index',
               },
               items: [
-                "learn/learn-assets",
                 "learn/learn-DOT",
                 "learn/learn-inflation",
+                {
+                  type: "category",
+                  label: "Asset Hub",
+                  description: 'Fungible Tokens and NFTs on Polkadot.',
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-assets",
+                  },
+                  items: [
+                    "learn/learn-asset-conversion-assethub",,
+                  ],
+                },
                 "learn/learn-teleport",
                 "learn/learn-nft",
+              ],
+            },
+            {
+              type: "category",
+              label: "Network Participants",
+              description: "Participants in the Polkadot Ecosystem.",
+              link: {
+                type: 'generated-index',
+                title: "Participants in the Polkadot Ecosystem",
+                description: "Learn about collators, nominators and validators.",
+                slug: '/learn-participants-index',
+              },
+              items: [
+                "learn/learn-collator",
+                "learn/learn-nominator",
+                "learn/learn-validator",
               ],
             },
             {
@@ -275,7 +314,6 @@ module.exports = {
                 "learn/learn-polkadot-host",
                 'learn/learn-wasm',
                 "learn/learn-runtime-upgrades",
-                "learn/learn-consensus",
               ],
             },
           ],
@@ -296,10 +334,8 @@ module.exports = {
               label: "Polkadot-JS",
               description: 'Overview of Polkadot-JS.',
               link: {
-                type: 'generated-index',
-                title: 'Polkadot-JS',
-                description: 'Overview of Polkadot-JS.',
-                slug: '/learn-polkadotjs-index',
+                type: 'doc',
+                id: "learn/learn-polkadotjs",
               },
               items: [
                 "general/polkadotjs",
@@ -315,7 +351,7 @@ module.exports = {
                   items: [
                     {
                       type: "category",
-                      label: "Accounts",
+                      label: "Account Guides",
                       description: 'Polkadot-JS Guides about Accounts.',
                       link: {
                         type: 'doc',
@@ -330,16 +366,14 @@ module.exports = {
                     "learn/learn-guides-transfers",
                     {
                       type: "category",
-                      label: "Staking",
+                      label: "Staking Guides",
                       description: 'Polkadot-JS Guides about Staking.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Polkadot-JS Guides about Staking',
-                        description: 'Polkadot-JS Guides about Staking.',
-                        slug: '/learn-guides-staking-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-staking',
                       },
                       items: [
-                        "learn/learn-guides-staking",
+                        "learn/learn-guides-nominator",
                         "learn/learn-guides-staking-pools",
                       ],
                     },
@@ -351,17 +385,30 @@ module.exports = {
                     "learn/learn-guides-vault",
                     {
                       type: "category",
-                      label: "Asset Hub",
-                      description: 'Polkadot-JS Guides about the Asset Hub.',
+                      label: "Asset Hub Guides",
+                      description: 'Polkadot-JS Guides about Asset Hub.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Advanced Guides for Asset Hub',
-                        description: 'Polkadot-JS guides about the Asset Hub.',
-                        slug: '/learn-guides-assets-index',
+                        type: 'doc',
+                        id: 'learn/learn-guides-assets',
                       },
                       items: [
                         "learn/learn-guides-assets-create",
                         "learn/learn-guides-assets-ledger",
+                        "learn/learn-guides-asset-conversion",
+                      ],
+                    },
+                    {
+                      type: "category",
+                      label: "Bridge Hub Guides",
+                      description: 'Polkadot-JS Guides for Bridge Hub.',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Bridge Hub Guides',
+                        description: 'Guides and Tutorials for Trustless Bridges on Bridge Hub',
+                        slug: '/learn-guides-bridges',
+                      },
+                      items: [
+                        "learn/learn-guides-dot-ksm-bridge",
                       ],
                     },
                   ],
@@ -373,29 +420,11 @@ module.exports = {
               label: "Architecture",
               description: "Nominators, Validators, Collators, Parachains, and more.",
               link: {
-                type: 'generated-index',
-                title: "Polkadot's Architecture",
-                description: "Everything about Polkadot's Architecture.",
-                slug: '/learn-architecture-index',
+                type: 'doc',
+                id: 'learn/learn-architecture',
               },
               items: [
-                "learn/learn-architecture",
-                {
-                  type: "category",
-                  label: "Network Participants",
-                  description: "Participants in the Polkadot Ecosystem.",
-                  link: {
-                    type: 'generated-index',
-                    title: "Participants in the Polkadot Ecosystem",
-                    description: "Learn about collators, nominators and validators.",
-                    slug: '/learn-participants-index',
-                  },
-                  items: [
-                    "learn/learn-collator",
-                    "learn/learn-nominator",
-                    "learn/learn-validator",
-                  ],
-                },
+                "learn/learn-consensus",
                 {
                   type: "category",
                   label: "Parachains",
@@ -415,7 +444,37 @@ module.exports = {
                     "learn/learn-parachains-faq",
                   ],
                 },
-                "learn/learn-bridges",
+                "learn/learn-async-backing",
+                {
+                  type: "category",
+                  label: "Agile Coretime",
+                  description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                  link: {
+                    type: 'generated-index',
+                    title: "Agile Coretime",
+                    description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                    slug: '/learn-agile-coretime-index',
+                  },
+                  items: [
+                    "learn/learn-agile-coretime",
+                    "learn/learn-guides-coretime-marketplaces",
+                    "learn/learn-guides-coretime-parachains",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Bridges",
+                  description: "Bridging Polkadot to other Blockchain Protocols.",
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-bridges",
+                  },
+                  items: [
+                    "learn/learn-bridge-hub",
+                    "learn/learn-dot-ksm-bridge",
+                    "learn/learn-hyperbridge",
+                  ],
+                },
                 {
                   type: "category",
                   label: "Cross Consensus Messaging (XCM)",
@@ -616,9 +675,9 @@ module.exports = {
           items: [
             'learn/learn-spree',
             "learn/learn-parathreads",
-            "learn/learn-async-backing",
+            "learn/learn-elastic-scaling",
             "learn/learn-sassafras",
-            "learn/learn-hyperbridge",
+            "learn/learn-jam-chain",
           ],
         },
         {
@@ -657,11 +716,8 @@ module.exports = {
             slug: '/build-client-index',
           },
           items: [
-            "build/build-dapp",
-            "build/build-oracle", 
+            "build/build-client-side",
             "build/build-light-clients",
-            "build/build-storage",
-            "build/build-transaction-construction",
             "build/build-node-interaction",
           ],
         },
@@ -677,27 +733,11 @@ module.exports = {
           },
           items: [
             "build/build-protocol-info",
-            "build/build-parachains",
             "build/build-integrate-assets",
             "build/build-hrmp-channels"
           ],
         },
-        {
-          type: "category",
-          label: "Development Networks & Node Management",
-          link: {
-            type: 'generated-index',
-            title: "Development Networks & Node Management",
-            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
-            slug: '/build-network-index',
-          },
-          items: [
-            "build/build-network-overview",
-            "build/build-integration",
-            "build/build-node-management",
-          ],
-        },
-
+        "build/build-network-overview",
         {
           type: "category",
           label: "Tooling",
@@ -714,20 +754,45 @@ module.exports = {
           type: "doc",
           id: "build/build-hackathon",
         },
+        {
+          type: "category",
+          label: "Build Archive",
+          link: {
+            type: 'generated-index',
+            title: "Archived Build Resources",
+            description: "Archived build resources for building on Polkadot",
+            slug: '/build-archive-index',
+          },
+          items: [
+            "build/build-transaction-construction",
+            "build/build-integration",
+            "build/build-node-management",
+            "build/build-parachains"
+          ],
+        },
       ],
     },
     {
       type: "category",
       label: "Maintain",
+      link: {
+        type: 'doc',
+        id: "maintain/maintain-index",
+      },
       items: [
-        "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
-        "maintain/maintain-endpoints",
-        "maintain/maintain-guides-async-backing",
         {
           type: "category",
           label: "Nodes and Dapps",
+          description: 'Learn how to set up a node.',
+          link: {
+            type: 'generated-index',
+            title: "Nodes and Dapps",
+            description: "Learn how to set up a node.",
+            slug: '/maintain-node-index',
+          },
           items: [
+            "maintain/maintain-endpoints",
             "maintain/maintain-sync",
             "maintain/maintain-bootnode",
             "maintain/maintain-rpc",
@@ -736,10 +801,30 @@ module.exports = {
             "maintain/maintain-errors",
           ],
         },
-        "maintain/maintain-guides-how-to-nominate-polkadot",
+        {
+          type: "category",
+          label: "Collator Guides",
+          description: "Guides for Collator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Collator Guides",
+            description: "Guides for Collator Nodes.",
+            slug: '/maintain-collator-index',
+          },
+          items: [
+            "maintain/maintain-guides-async-backing",
+          ],
+        },
         {
           type: "category",
           label: "Validator Guides",
+          description: "Guides for Validator Nodes.",
+          link: {
+            type: 'generated-index',
+            title: "Validator Guides",
+            description: "Guides for Validator Nodes.",
+            slug: '/maintain-validator-index',
+          },
           items: [
             "maintain/maintain-guides-how-to-validate-polkadot",
             "maintain/maintain-guides-validator-payout",

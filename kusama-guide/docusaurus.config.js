@@ -84,12 +84,16 @@ module.exports = {
             from: ['/docs/maintain-bug-bounty']
           },
           {
-            to: '/docs/learn-guides-assets-create',
+            to: '/docs/learn-guides-assets',
             from: ['/docs/kusama-statemine']
           },
           {
             to: '/docs/learn-guides-assets-ledger',
             from: ['/docs/kusama-statemine-ledger']
+          },
+          {
+            to: '/docs/learn-nominator',
+            from: ['/docs/maintain-guides-how-to-nominate-polkadot']
           }
         ],
         createRedirects: function (existingPath) {

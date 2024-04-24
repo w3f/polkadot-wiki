@@ -194,16 +194,6 @@ actuality, it would be quite rare to see such a large difference between the sta
 but the same principle holds even for smaller differences. If there is a 10% slash of either
 validator, then you will lose 1 DOT in each case.
 
-:::caution
-
-If a validator is oversubscribed in an era, staking rewards are distributed only to the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators and the rest of the nominators do not receive any rewards. This is not the case for
-slashing! Every active nominator of the validator committing slashable offence will be slashed.
-
-:::
-
 ## Nominators and Validator Payments
 
 Nominated stake allows you to "vote" for validators and share in the rewards (and slashing) without

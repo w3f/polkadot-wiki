@@ -7,6 +7,14 @@ keywords: [collator, maintain, full node, block candidate]
 slug: ../learn-collator
 ---
 
+:::info
+
+This page provides a general overview of the role of collators' in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
+can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
+
+:::
+
 ## Collators' Role
 
 Collators maintain parachains by collecting parachain transactions from users and producing state
@@ -75,12 +83,14 @@ A block is produced every 6 seconds.
 ## Collators in the Wild
 
 Blockchains that are built using Substrate are unable to hook onto the Relay Chain on their own. The
-Parity team built the [Cumulus library](https://github.com/paritytech/cumulus/) to address this.
+Parity team built the
+[Cumulus library](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) to address this.
 Collators are being used on the
 [Rococo](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) testnet, and you can
 learn more about how they are used with Cumulus via the
-[Cumulus](https://github.com/paritytech/cumulus/) repository. More information can be found under
-the [Cumulus section](../build/build-parachains.md###cumulus) on the build parachain page.
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) repository. More
+information can be found under the [Cumulus section](../build/build-parachains.md###cumulus) on the
+build parachain page.
 
 ## Guides and Tools
 

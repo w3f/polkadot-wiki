@@ -19,19 +19,14 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block
   explorer. Supports dozens of other networks, including Kusama, Westend, and other remote or local
-  endpoints. [Access via IPFS](https://ipfs.io/ipns/dotapps.io)
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related
-  chains. [Repo](https://github.com/polkascan/polkascan-os).
+  endpoints. [Access via IPFS](https://cloudflare-ipfs.com/ipns/dotapps.io)
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
-- [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain
-  explorer.
 - [3xpl.com](https://3xpl.com/polkadot) - Fastest ad-free universal block explorer and JSON API with
   Polkadot support.
 - [Blockchair.com](https://blockchair.com/polkadot) - Universal blockchain explorer and search
   engine with Polkadot support.
-- [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi
-  support across 40+ parachains.
+- [Statescan.io](https://www.statescan.io/) - Polkadot & Kusama Blockchain explorer.
 
 ## Blockchain Analytics
 
@@ -63,8 +58,8 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## Clients
 
-- [Polkadot](https://github.com/paritytech/polkadot) - The original Rust implementation of the
-  Polkadot Host.
+- [Polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) - The original Rust
+  implementation of the Polkadot Host.
 - [Kagome](https://github.com/soramitsu/kagome) - A C++ Polkadot implementation of the Polkadot Host
   developed by [Soramitsu](https://github.com/soramitsu).
 - [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Host
@@ -74,8 +69,9 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## Tools
 
-- [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in
-  Rust. The Rust version of the Polkadot Host is being built with Substrate.
+- [Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) - Blockchain
+  development platform written in Rust. The Rust version of the Polkadot Host is being built with
+  Substrate.
 - [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and tutorials for
   building a blockchain using Substrate.
 - [Substrate VSCode plugin](https://github.com/paritytech/vscode-substrate).
@@ -188,8 +184,10 @@ WebAssembly related tools and projects.
   language.
 - [Go: Subscan API](https://github.com/itering/substrate-api-rpc) - Go API for Polkadot.
 - [C++ Polkadot API](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot.
-- [.NET Toolchain for Polkadot/Substrate API](https://github.com/ajuna-network/Ajuna.SDK) -
-  Toolchain to generate Polkadot API & Service Layer for .NET (usable in Unity).
+- [.NET Polkadot/Substrate API](https://github.com/SubstrateGaming/Substrate.NET.API) - Core
+  Framework for Substrate in .NET and connect to nodes.
+- [.NET Toolchain Polkadot/Substrate API](https://github.com/SubstrateGaming/Substrate.NET.Toolchain) -
+  Toolchain to generate Polkadot/Substrate API & Service Layer for .NET.
 - [.NET Polkadot API](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API
   for .NET.
 - [Python Polkadot API](https://github.com/polkascan/py-substrate-interface) - Polkadot library for
@@ -200,6 +198,13 @@ WebAssembly related tools and projects.
   Substrate, abstracting some complex RPC calls into simple REST calls.
 - [Subxt](https://github.com/paritytech/substrate-subxt) - A Rust library to submit extrinsics to a
   Substrate node via RPC.
+
+### GAME ENGINE SDK
+
+- [Polkadot SDK for Unity](https://github.com/PolkadotPlay/Polkadot.Unity.SDK) - A powerful toolkit
+  that integrates substrate seamless into Unity projects.
+  ([AssetStore](https://assetstore.unity.com/packages/decentralization/infrastructure/polkadot-sdk-for-unity-273535),
+  [wiki](https://github.com/PolkadotPlay/Polkadot.Unity.SDK/wiki)).
 
 ### SCALE Codec
 
@@ -220,9 +225,6 @@ languages exist:
 
 The following tools help you extract and structure data from a Substrate node.
 
-- [Polkascan PRE Harvester](https://github.com/polkascan/polkascan-pre-harvester)
-  ([matching explorer for harvested data](https://github.com/polkascan/polkascan-pre-explorer-gui)) -
-  Transforms raw blockchain data into relational data.
 - [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive) - Can be run
   alongside a Substrate node to archive all blocks, state, and extrinsic data into PostgreSQL
   database.

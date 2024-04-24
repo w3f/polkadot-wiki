@@ -7,7 +7,7 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived. For up-to-date information about governance, see the
@@ -201,7 +201,7 @@ Like [vesting](../../learn/learn-DOT.md#lazy-vesting), the tokens that are locke
 unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make
 your funds available again after the lock expires. Unbonding is another term you hear a lot in
 Polkadot, it means withdrawing your DOT that was used in staking. To know more about it, please see
-[here](../maintain-guides-how-to-nominate-polkadot.md).
+[here](../../learn/learn-nominator.md).
 
 You can do this from the "Accounts" page in
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts), unless you use Ledger (see below).
@@ -229,7 +229,7 @@ following extrinsic: `democracy.removeVote(index)` using the account that you vo
 index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the
 image below).
 
-The number of the referendum for which you voted is visible in an explorer such as Polkascan.
+The number of the referendum for which you voted is visible in an explorer such as Subscan.
 
 You need to press the "Submit Transaction" button to submit the extrinsic.
 
@@ -341,32 +341,3 @@ pallet, and you will specify the index of the referendum that is being voted, th
 
 For more material on adding and removing Governance proxies, as well as other types, please see the
 [Proxy page](../../learn/learn-proxies.md).
-
-## Interpreting On-Chain Voting Data
-
-Consider the following example showcasing how votes would be displayed on a block explorer.
-
-```
-Nay 0.1x => 0
-Nay 1x => 1
-Nay 2x => 2
-Nay 3x => 3
-Nay 4x => 4
-Nay 5x => 5
-Nay 6x => 6
-Aye 0.1x => 128
-Aye 1x => 129
-Aye 2x => 130
-Aye 3x => 131
-Aye 4x => 132
-Aye 5x => 133
-Aye 6x => 134
-```
-
-At first glance, it may be difficult to interpret what you voted on. We need to take a step back and
-consider the "voting data" at the binary level.
-
-The vote is stored as a byte using a bitfield data structure and displayed on the block explorer as
-a decimal integer. The bitfield stores both the conviction and aye/nay boolean, where the boolean is
-represented using the MSB of the byte. This would mean that the grouping of the 7 remaining bits is
-used to store the conviction.

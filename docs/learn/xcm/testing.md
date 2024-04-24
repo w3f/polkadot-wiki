@@ -21,22 +21,23 @@ We'll discuss tools and best practices for each of these levels.
 
 ## XCM Simulator
 
-The [xcm-simulator](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-simulator) is a tool
-to quickly test the execution of various XCM instructions against the `xcm-executor`. The examples
-in this documentation use the xcm-simulator. The simulator mocks the Downward Message Passing
-pallet, enabling us to get the XCMs that a parachain receives from the relay chain using the
+The
+[xcm-simulator](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-simulator)
+is a tool to quickly test the execution of various XCM instructions against the `xcm-executor`. The
+examples in this documentation use the xcm-simulator. The simulator mocks the Downward Message
+Passing pallet, enabling us to get the XCMs that a parachain receives from the relay chain using the
 `received_dmp` getter. The simulator should be used as a XCM playground. For testing the XCM
 configuration of your parachain and the integration with other chains, you can use the xcm-emulator.
 
 ## XCM Emulator
 
-The [xcm-emulator](https://github.com/paritytech/cumulus/tree/master/xcm/xcm-emulator) is a tool to
-emulate XCM program execution using pre-configured runtimes, including those used to run on live
-networks, such as Kusama, Polkadot, Statemine, etc. This allows for testing cross-chain message
-passing and verifying outcomes, weights, and side-effects.
+The [xcm-emulator](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/xcm/xcm-emulator)
+is a tool to emulate XCM program execution using pre-configured runtimes, including those used to
+run on live networks, such as Kusama, Polkadot, Statemine, etc. This allows for testing cross-chain
+message passing and verifying outcomes, weights, and side-effects.
 
 An example of how the emulator is used for testing common good parachains can be found
-[here](https://github.com/paritytech/cumulus/tree/master/parachains/integration-tests/emulated).
+[here](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/parachains/integration-tests/emulated).
 
 The xcm-emulator uses the transport layer pallets. However, the messages do not utilize the same
 messaging infrastructure as live networks, as the transport mechanism is being mocked out. Also,

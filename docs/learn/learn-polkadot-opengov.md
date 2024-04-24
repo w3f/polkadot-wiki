@@ -19,33 +19,8 @@ The governance protocol has already undergone iterations (see
 [Governance V1](./archive/learn-governance.md)). Governance is a constantly evolving protocol at
 this stage in its lifecycle.
 
-For technical information about Polkadot OpenGov and how to interact with it, please refer to this
-[dedicated Wiki page](./learn-guides-polkadot-opengov.md).
-
 For additional support about Polkadot OpenGov see the
 [dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
-
-:::
-
-:::info Polkadot Delegation Dashboard
-
-See the video tutorial below to easily delegate your votes to somebody else using the
-[Polkadot Delegation Dashboard](https://delegation.polkadot.network/).
-
-<div className="row">
-  <div className="col text--center">
-    <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">
-      <img src="https://img.youtube.com/vi/RapBYZc5ZPo/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://www.youtube.com/watch?v=RapBYZc5ZPo">Delegation Dashboard Tutorial</a>
-    </p>
-  </div>
-</div>
-
-**If you become a nomination pool member or a pool admin, you cannot participate in Governance with
-the bonded tokens in the pool, as they are held in a
-[system account](./learn-account-advanced.md#system-accounts).**
 
 :::
 
@@ -150,15 +125,6 @@ consider the merits and vote on the referenda submitted to the Root track. In th
 delegate their voting power just for the Root track to a trusted expert who (according to them) acts
 in the best interest of the network protocol. In this way, token holders do not need to be
 up-to-date with governance matters and can still make their votes count through delegates.
-
-:::info Delegation Dashboard
-
-To easily delegate your votes you can use the
-[Polkadot Delegation Dashboard](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to know more about the dashboard
-and learn how to use it.
-
-:::
 
 ## Gov1 vs. Polkadot OpenGov
 
@@ -315,7 +281,7 @@ include:
 
 :::info Example Scenario of an Edge Case
 
-A referendum my enter the confirmation period just one block before the decision period ends. In
+A referendum may enter the confirmation period just one block before the decision period ends. In
 this scenario, the referendum will pass if it satisfies approval and support thresholds for the
 minimum confirmation period (track-dependent).
 
@@ -578,10 +544,8 @@ to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the los
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance
 on their account.
 
-For unlocking generic account locks, navigate to
-[this section](./learn-guides-accounts.md#unlocking-locks). When you delegate your votes, the
-locking mechanism differs slightly. Please check the next section on Multirole Delegation for more
-information.
+When you delegate your votes, the locking mechanism differs slightly. Please check the next section
+on Multirole Delegation for more information.
 
 ### Multirole Delegation
 
@@ -596,22 +560,12 @@ For example, a voter could delegate one entity for managing a less potent refere
 different delegate for another class with more powerful consequences and still retain full voting
 power over any remaining classes.
 
-:::info Delegate your votes
+:::info Locks for Delegations
 
-In Polkadot OpenGov you can delegate your votes to different entities, who will vote on your behalf.
-You can delegate your votes using the
-[**Polkadot Delegation Dashboard**](https://delegation.polkadot.network/). See
-[this video tutorial](https://www.youtube.com/watch?v=RapBYZc5ZPo) to learn about the features of
-the dashboard.
-
-If you are staking directly and not through a nomination pool, you can use bonded tokens for voting.
-Note that if you are voting with conviction, your tokens will have a democracy lock in addition to
-the staking lock. For more information about locks, see
-[this page](./learn-accounts.md/#unlocking-locks).
-
-Democracy locks created through [conviction voting](#voluntary-locking) start the unlocking period
-after a referendum ends, provided you voted with the winning side. In the case of delegations, the
-unlocking period countdown begins after the account undelegates. There can be different scenarios:
+Democracy locks created through [conviction voting](#voluntary-locking-conviction-voting) start the
+unlocking period after a referendum ends, provided you voted with the winning side. In the case of
+delegations, the unlocking period countdown begins after the account undelegates. There can be
+different scenarios:
 
 - if the account delegated votes to one delegate, then after undelegating, there will be one
   unlocking period with length dependent on the conviction multiplier.
@@ -621,6 +575,8 @@ unlocking period countdown begins after the account undelegates. There can be di
 
 **Before delegating a specific track, you must remove any [vote](#voting-on-a-referendum) on that
 track.**
+
+For more information about locks, see [this page](./learn-accounts.md#account-balance-types).
 
 :::
 
@@ -641,7 +597,7 @@ For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, 
 
 ## Resources
 
-- [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+- [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
 - [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
 - [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io)
 - [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io)

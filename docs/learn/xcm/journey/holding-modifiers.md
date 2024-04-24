@@ -69,7 +69,7 @@ The `give` field indicates the maximum number of assets that can be removed from
 register.
 
 The `want` field indicates the minimum amount of assets which `give` should be exchanged for. We
-should at a mimimum get the assets in `want` for the execution of the instruction not to fail.
+should at a minimum get the assets in `want` for the execution of the instruction not to fail.
 
 If the `maximal` field is `true`, then we prefer to give as much as possible up to the limit of
 `give` and receive accordingly more assets then stated in `want`. If the `maximal` field is `false`,

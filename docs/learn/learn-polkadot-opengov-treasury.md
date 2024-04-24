@@ -10,7 +10,7 @@ slug: ../learn-polkadot-opengov-treasury
 import RPC from "./../../components/RPC-Connection";
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
-fees, slashing, and [staking inefficiencies](./learn-inflation.md).Treasury funds are held in a
+fees, slashing, and [staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
 [system account](./learn-account-advanced.md#system-accounts) that cannot be controlled by any
 external account; only the system internal logic can access it.
 
@@ -71,13 +71,67 @@ OpenGov allows for managing funds through six tracks, each with its own
 - [Big Tipper](./learn-polkadot-opengov-origins.md#big-tipper)
 - [Small Tipper](./learn-polkadot-opengov-origins.md#small-tipper)
 
-:::info How to access Treasury funds?
+## Submit Treasury Proposal via Polkassembly
 
 Access to Treasury funds requires successful enactment of referendum in the respective treasury
-track on-chain. Learn how to submit a treasury proposal for referendum
-[here](./learn-guides-treasury#creating-a-treasury-proposal).
+track on-chain. Learn how to submit a treasury proposal for referendum using
+[Polkassembly](../general/governance-apps.md).
 
-:::
+Go to [Polkassembly](https://polkadot.polkassembly.io/opengov) and click on the FAB button in the
+bottom right corner. Then,
+
+- Click on "Create Treasury Proposal" and choose an address for the proposer
+- After choosing an address, you will enter a three-stage guideline:
+
+  - Write a proposal: you can add a detailed description for the proposal, which will be stored on
+    Polkassembly. Alternatively, you can link an existing discussion post.
+
+  ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
+
+  - Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
+    preimage, add the beneficiary address and the
+    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto-selected
+    and the user can proceed with the creation of a preimage.
+
+  ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
+
+  - Create a proposal: final confirmation about the proposal creation. The description of the
+    proposal and the preimage are automatically linked to the proposal.
+
+## Sub-treasuries
+
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates on a
+single account on-chain. The above tracks manage the outflow of the treasury on the network. With
+_sub_-treasuries, having treasury accounts that correspond to each
+[collective](./learn-system-chains#collectives) is also possible.
+
+Rather than have many referenda through OpenGov, the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each
+sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
+can spend funds (depending on their specific rule set).
+
+New treasuries could be added to respective
+[system chains](./learn-system-chains#existing-system-chains) through governance by adding more
+instances of this pallet.
+
+## Multi-Asset Treasury Support
+
+The treasuries can support multiple asset types and thus can spend assets other than
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury, and their transfers
+and interactions across the chains facilitated by [cross-consensus messaging](./learn-xcm.md). These
+assets have a few requirements:
+
+1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
+2. The asset is active and has sufficient liquidity to be utilized for payouts.
+3. The asset has a set conversion rate, as per OpenGov referenda on the Treasurer track (set via the
+   asset rate pallet). This conversion rate defines a fixed-point representation for converting from
+   that asset to {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+4. The asset must be approved and onboarded via OpenGov to become spendable via the treasury as a
+   valid spend method.
+
+> For example,
+> [see how USDT became approved as an asset on AssetHub](https://forum.polkadot.network/t/multi-asset-treasury-and-milestone-based-spends/6780),
+> which can be used in the treasury.
 
 ## Bounties
 

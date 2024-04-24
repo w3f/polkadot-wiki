@@ -114,7 +114,7 @@ Transactions constructed for runtime `n` will not work for any other runtime `>n
 upgrade occurs before broadcasting a previously constructed transaction, you will need to
 reconstruct it with the appropriate runtime version and corresponding metadata.
 
-### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
+### For [Nominators](./learn-nominator.md)
 
 Runtime upgrades don't require any actions by a nominator, though it is always encouraged to keep
 up-to-date and participate with the latest runtime upgrade motions and releases while keeping an eye
@@ -128,51 +128,30 @@ Polkadot Fellowship's
 [runtime upgrades](https://github.com/polkadot-fellows/runtimes/releases/latest) to be aware of
 changes in the runtime logic.
 
-### Governance V1
-
-Monitor the chain for:
-
-1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
-   referendum has started (although it does not mean it is a runtime upgrade). Get the referendum
-   info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
-   enactment `delay` (delay). If the referendum passes, it will execute on block number
-   `end + delay`.
-2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
-   If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
-   enactment block.
-3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. This
-   may be up to the last block before execution, but it will not work if this is missing.
-4. `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will
-   also be a `system(CodeUpdated)` event.
-
-You can also monitor [Polkassembly](https://polkadot.polkassembly.io/) for discussions on on-chain
-proposals and referenda.
-
-\* E.g. via `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` on Sidecar.
-
-### Polkadot OpenGov
-
 Runtime upgrades are voted on and executed via [Polkadot OpenGov](./learn-polkadot-opengov.md). You
-should monitor the Relay chain as follows to know when the next runtime upgrade will be enacted:
+should monitor the Relay Chain as follows to know when the next runtime upgrade will be enacted:
 
-1. Check each block for `referenda (Submitted)` events and check if `track` is `1`, which means it's
-   `whitelistedCaller` - this is the only track that can enact runtime upgrdes - and log its `index`
-   and `proposal`, this will help you keep track of the proposal's evolution. With the index you can
-   lookup the details of the proposal in
+1. Check each block for `referenda (Submitted)` events and check if the `track` is `0` or `1`, which
+   correspond to the `Root` and `whitelistedCaller` tracks, respectively. These are the only tracks
+   that can enact runtime upgrdes. Log the referendum's `index`; this will help you keep track of
+   the its progress. With the index you can look up the details of the proposal in
    [Polkassembly.io](https://polkadot.polkassembly.io/whitelisted-caller?trackStatus=all&page=1) to
    see if it corresponds with a runtime upgrade.
-2. In the same block, look for the extrinsic `referenda.submit`, which has the `enactment_moment`
-   for the proposal in blocks.
+2. Ongoing referenda will have an `enactment` field under `referenda.ReferendumInfoFor` storage.
+   This is the block number that, if passed, the system will attempt to schedule the inner
+   proposal's execution for. Note that there are some constraints like a minimum enactment period
+   that could result in the proposal's execution occurring later. It is not possible for the
+   proposal to enact _before_ this block number.
 3. Check also for `referenda (DecisionDepositPlaced)` events where `index` matches the one
    previously found. This means that the required deposit has been placed.
-4. `referenda (DecisionStarted)` indicates that the decision period has started for the referenda of
-   that `index`.
-5. `referenda (ConfirmStarted)` indicates that `index`'s referenda has entered the confirmation
+4. `referenda (DecisionStarted)` indicates that the decision period has started for the referendum
+   of that `index`.
+5. `referenda (ConfirmStarted)` indicates that `index`'s referendum has entered the confirmation
    period.
-   1. `referenda (Confirmed)` indicates that `index`'s referenda has been confirmed and will enter
-      the enactment period. With this and `enactment_moment`, you can estimate when the proposal
+   1. `referenda (Confirmed)` indicates that `index`'s referendum has been confirmed and will enter
+      the enactment period. With this and `enactment_moment`, you can calculate when the proposal
       will be enacted.
-   2. `referenda (Rejected)` indicates that `index`'s referenda has been rejected and will not be
+   2. `referenda (Rejected)` indicates that `index`'s referendum has been rejected and will not be
       enacted.
-6. Once the enactment period is over, there will be a `system(CodeUpdated)` event confirming the
-   execution of the runtime upgrade.
+6. When the runtime upgrades, there will be a `system(CodeUpdated)` event confirming the execution
+   of the runtime upgrade.

@@ -10,7 +10,7 @@ slug: ../quickstart-summary
 # Quickstart
 
 The XCM code can be found in
-[polkadot repository](https://github.com/paritytech/polkadot/tree/master/xcm).
+[polkadot repository](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm).
 
 ## Rust & Cargo
 

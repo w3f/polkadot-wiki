@@ -734,7 +734,7 @@ div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: yellow;
+  background-color: #f5cbc4;
   padding: 30px;
   font-size: 20px;
   font-family: 'Unbounded';

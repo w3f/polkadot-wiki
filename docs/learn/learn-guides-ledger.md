@@ -1,11 +1,21 @@
 ---
 id: learn-guides-ledger
 title: Polkadot-JS Guides for Ledger Devices
-sidebar_label: Ledger
+sidebar_label: Ledger Guides
 description: Polkadot-JS Guides for Ledger Devices.
 keywords: [ledger, polkadot-js]
 slug: ../learn-guides-ledger
 ---
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 ## Loading Your Account
 

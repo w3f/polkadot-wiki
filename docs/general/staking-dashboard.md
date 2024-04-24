@@ -9,7 +9,7 @@ slug: ../staking-dashboard
 
 import RPC from "./../../components/RPC-Connection";
 
-:::info Preliminary Notes
+## Preliminary Notes
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) supports
 [**proxy accounts**](../learn/learn-proxies.md) and you can import your
@@ -38,7 +38,7 @@ For more information about staking on {{ polkadot: Polkadot :polkadot }}{{ kusam
 visit the [staking page](../learn/learn-staking.md) and the
 [advanced staking page](../learn/learn-staking-advanced.md).
 
-:::
+## Using the Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a tool only
 dedicated to [staking](../learn/learn-staking.md) on Polkadot,
@@ -66,6 +66,21 @@ to the world of [true Web3](./web3-and-polkadot.md)!
 The structure of this page follows the sidebar of the staking dashboard. Here you will learn about
 the main features of the dashboard. If you need more information, see the
 [Walkthrough Tutorial](https://youtu.be/hvXLc4H7rA4).
+
+:::info Walk-through Video Tutorials
+
+- [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
+  and start your staking journey on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+- [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
+  movement, keep {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure by staking
+  minimum 1 DOT and receiving staking rewards.
+- [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
+  Dashboard.
+- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
+  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
+  learn what you can do with the dashboard after you started staking.
+
+:::
 
 ## Overview
 
@@ -307,17 +322,12 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 - **Panel B: The Validators Panel** shows all validators. You can order them by low/high commission
   or apply the following filters:
   - Include only active validators
-  - Exclude validators that are oversubscribed, have 100% commission, blocked nominations, and have
-    missing identity.
+  - Exclude validators that have 100% commission, blocked nominations, and have missing identity.
 
 ## Support
 
-The Support pages are:
+Support for the Staking Dashboard is available at [the official Polkadot support website](https://support.polkadot.network/support/home).
 
-- The Resources page provides a glossary with main definitions and links to support pages.
-- The Feedback page can be used to send feedback through
-  [Canny.io](https://polkadot-staking-dashboard.canny.io/feedback). This can be a bug report or a
-  feature request. We take your feedback seriously, do not hesitate to contact us.
 
 ## Network
 

@@ -1,11 +1,21 @@
 ---
 id: learn-guides-assets-ledger
 title: Polkadot-JS Guides about Asset Hub Ledger App
-sidebar_label: Asset Hub Ledger App
+sidebar_label: Asset Hub Ledger Guides
 description: Polkadot-JS Guides about Ledger and the Asset Hub.
 keywords: [asset hub, ledger, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-ledger
 ---
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 :::info
 

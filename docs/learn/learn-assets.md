@@ -34,6 +34,30 @@ The Asset Hub does not support smart contracts. See the [Advanced](#advanced-tec
 the bottom for a discussion on using proxy and multisig accounts to replicate oft-used contract
 logic.
 
+## Sufficient Assets
+
+A sufficient asset on Asset Hub can allow for an account to exist on-chain even though it does not
+have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Any registered
+asset on the Asset Hub can be made _sufficient_ through governance on the Relay Chain. A balance of
+a non-sufficient asset can only exist on accounts that are on-chain (i.e., accounts having the
+[existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
+That is, a user could not keep an account on-chain by transferring an non-sufficient asset to it;
+the account must already be on-chain by having more than the existential deposit in
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset).
+
+Assets deemed _sufficient_ can instantiate accounts on the Asset Hub and pay for transaction fees
+without the need for {{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }} An example would be
+USDT on the Polkadot Asset Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset
+Hub system parachain without the need to hold DOT.
+
+:::warning Transfers of Non-sufficient assets
+
+Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover
+the existential deposit and transaction fees for future transfers. Please do so to ensure the asset
+transfer is successful.
+
+:::
+
 ## Creation and Management
 
 :::info Walk-through video tutorial about creating assets
@@ -81,15 +105,8 @@ roles but can reassign them after creation. These roles are:
 Always refer to the [**reference documentation**](https://crates.parity.io/pallet_assets/index.html)
 for certainty on privileged roles.
 
-An asset's details contain one field not accessible to its owner or admin team, **asset
-sufficiency**. Only the network's governance mechanism can deem an asset as _sufficient_. A balance
-of a non-sufficient asset can only exist on accounts that are on-chain (i.e. accounts having the
-existential deposit of a sufficient asset). That is, a user could not keep an account on-chain by
-transferring an insufficient asset to it; the account must already be on-chain by having more than
-the existential deposit in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient
-asset). However, assets deemed _sufficient_ can instantiate accounts and pay for transaction fees,
-such that users can transact on the Asset Hub without the need for
-{{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }}
+An asset's details contain one field not accessible to its owner or admin team,
+[asset sufficiency](#sufficient-assets).
 
 :::info Transaction Fees on Polkadot-JS UI
 
@@ -131,18 +148,6 @@ that will fail if execution kills the sending account.
 The Asset Hub also sweeps dust balances into transfers. For example, if an asset has a minimum
 balance of 10 and an account has a balance of 25, then an attempt to transfer 20 units would
 transfer all 25.
-
-:::warning Non-sufficient assets
-
-Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover
-the existential deposit and transaction fees for future transfers. Failing to do so will cause the
-asset transfer to fail. The transfer will be successful for sufficient assets, but without
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens, you will not be able to transfer
-those assets from the receiver account through Polkadot-JS UI. The feature request to
-[enable sufficient assets for transaction fee payment on Polkadot-JS UI](https://github.com/polkadot-js/apps/issues/7812)
-is yet to be implemented.
-
-:::
 
 :::info
 

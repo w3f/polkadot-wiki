@@ -1,7 +1,7 @@
 ---
 id: learn-guides-transfers
 title: Polkadot-JS Guides about Transfers
-sidebar_label: Transfers
+sidebar_label: Transfer Guides
 description: Polkadot-JS Guides about Balances Transfers.
 keywords: [gides, advanced, polkadot-js, transfers]
 slug: ../learn-guides-transfers
@@ -9,6 +9,16 @@ slug: ../learn-guides-transfers
 
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 ## Metadata Updates with the Polkadot-JS Browser Extension
 
@@ -229,9 +239,8 @@ reaped. References may still exist from:
 ### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at
-[Unbonding and Rebonding](../maintain/maintain-guides-how-to-nominate-polkadot.md) to check if you
-have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+Follow the instructions at [Unbonding and Rebonding](./learn-guides-nominator.md#bond-your-tokens)
+to check if you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 ### Checking for Locks
 
@@ -259,7 +268,7 @@ be checked by checking `session.nextKeys` in the chain state for an existing key
 ### Existing Recovery Info
 
 {{ polkadot: Currently, Polkadot does not use the
-[Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
+[Recovery Pallet](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/recovery/), so this is
 probably not the reason for your tokens having existing references. :polkadot }}
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
@@ -268,5 +277,5 @@ chain state. This can be found under `Developer > Chain state` in [PolkadotJS Ap
 ### Existing Non-Native Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
-[Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
-probably not the reason for your tokens having existing references.
+[Assets Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/assets), so
+this is probably not the reason for your tokens having existing references.

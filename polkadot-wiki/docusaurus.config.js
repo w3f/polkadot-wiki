@@ -126,7 +126,7 @@ module.exports = {
             from: ['/docs/learn-staking-faq']
           },
           {
-            to: '/docs/learn-guides-assets-create',
+            to: '/docs/learn-guides-assets',
             from: ['/docs/learn-statemint', '/docs/learn-assets-guides']
           },
           {
@@ -176,6 +176,10 @@ module.exports = {
           {
             to: '/docs/alpha-program',
             from: ['/docs/builders-program']
+          },
+          {
+            to: '/docs/learn-nominator',
+            from: ['/docs/maintain-guides-how-to-nominate-polkadot']
           }
         ],
         createRedirects: function (existingPath) {
@@ -212,7 +216,7 @@ module.exports = {
     },
     navbar: {
       logo: {
-        src: "img/Polkadot_Logo_Horizontal_Pink-Black.svg",
+        src: "img/wiki-logo-2.svg",
       },
       items: [
         {
@@ -264,7 +268,7 @@ module.exports = {
     footer: {
       copyright: `© ${new Date().getFullYear()} Web3 Foundation`,
       logo: {
-        src: "img/Polkadot_Logo_Horizontal_White.svg",
+        src: "img/wiki-logo-2.svg",
       },
     },
     algolia: {
@@ -283,7 +287,7 @@ module.exports = {
       textColor: 'white',
       isCloseable: true,
     },
-    image: 'img/og-polkadot.png'
+    image: 'img/wiki-logo-2.svg'
   },
 };
 

@@ -1,12 +1,12 @@
 ---
 id: dev-heroes
-title: Developer Heroes Programme
+title: Developer Heroes Program
 sidebar_label: Developer Heroes
 description: More Power to Polkadot's Developers.
 slug: ../dev-heroes
 ---
 
-For more information about the Developer Heroes Programme, see the
+For more information about the Developer Heroes Program, see the
 [Polkadot blog post](https://polkadot.network/blog/introducing-the-polkadot-developer-heroes-program?utm_source=twitter&utm_medium=social&utm_campaign=dhp&utm_content=tweet&utm_term=announcement).
 
 :::info Sign up

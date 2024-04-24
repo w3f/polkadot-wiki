@@ -1,18 +1,18 @@
 ---
 id: doc-thousand-contributors
-title: Thousand Contributors Programme
+title: Thousand Contributors Program
 sidebar_label: Thousand Contributors
 description: The Thousand Contributors Program and How it can Support your Contributions.
 slug: ../thousand-contributors
 ---
 
-The [Thousand Contributors Programme](https://github.com/w3f/1KC) is an initiative maintained by
-Web3 Foundation's Technical Education and Support team to offer an off-chain contributor program to
+The [Thousand Contributors Program](https://github.com/w3f/1KC) is an initiative maintained by Web3
+Foundation's Technical Education and Support team to offer an off-chain contributor program to
 support and reward community contributions. The program focuses on rewarding contributors in the
 areas of technical education, community, and support that relate to the Polkadot and Kusama
 ecosystems.
 
-:::note The pilot phase of Thousand Contributors Programme has ended
+:::note The pilot phase of Thousand Contributors Program has ended
 
 You can still submit your intent to participate. The submissions will be reviewed and accepted on a
 case-by-case basis.

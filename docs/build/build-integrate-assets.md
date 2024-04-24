@@ -1,8 +1,8 @@
 ---
 id: build-integrate-assets
-title: Assets on Polkadot
-sidebar_label: Integrating Assets
-description: Tools that you can use to integrating assets.
+title: Using AssetHub
+sidebar_label: Using AssetHub
+description: Tools that you can use for integrating assets.
 keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
@@ -21,7 +21,7 @@ infrastructure providers and users:
 
 - Support for on-chain assets.
 - Significantly lower transaction fees (about 1/10) than the Relay Chain.
-- Significantly lower deposits (1/10) than the Relay Chain. This includes the existential deposit
+- Significantly lower deposits (1/100) than the Relay Chain. This includes the existential deposit
   and deposits for proxy/multisig operations.
 - Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT to exist
   on-chain or pay fees.
@@ -146,7 +146,7 @@ means the providers need to monitor cross-chain transfers on top of local transf
 corresponding `balances.transfer` events.
 
 Currently {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can be sent and received in the
-Relay Chain either with a [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
+Relay Chain and in the Asset Hub either with a [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
 [system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a
 [Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport)
 from any other parachain. In both cases, the event emitted when processing the transfer is the
@@ -161,10 +161,10 @@ What has been mentioned earlier should be sufficient to confirm that
 However, in some cases, it may be interesting to identify the cross-chain message that emitted the
 relevant `balances.deposit` event. This can be done as follows:
 
-1. Query the Relay Chain `at` the block the `balances.deposit` event was emitted.
+1. Query the relevant chain `at` the block the `balances.deposit` event was emitted.
 2. Filter for a `messageQueue(Processed)` event, also emitted during block initialization. This
    event has a parameter `Id`. The value of `Id` identifies the cross-chain message received in the
-   Relay Chain. It can be used to track back the message in the origin parachain if needed. Note
+   Relay Chain or in the Asset Hub. It can be used to track back the message in the origin parachain if needed. Note
    that a block may contain several `messageQueue(Processed)` events corresponding to several
    cross-chain messages processed for this block.
 

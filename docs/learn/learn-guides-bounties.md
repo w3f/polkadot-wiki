@@ -1,13 +1,23 @@
 ---
 id: learn-guides-bounties
 title: Polkadot-JS Guides about Bounties
-sidebar_label: Bounties
+sidebar_label: Bounty Guides
 description: Polkadot-JS Guides for Bounties
 keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 slug: ../learn-guides-bounties
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 See [this page](./learn-polkadot-opengov-treasury.md#bounties) to learn about Bounties.
 

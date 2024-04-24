@@ -583,7 +583,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![bonding-JS-UI](../assets/JS-UI-bond.png)
 
-- **Stash account** - Select your Stash account (which is the acocunt with the DOT/KSM balance)
+- **Stash account** - Select your Stash account (which is the account with the DOT/KSM balance)
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
@@ -681,7 +681,7 @@ If you are on a remote server, it is easier to run this command on the same mach
 is running with the default WS RPC port configured):
 
 ```sh
-echo '{"id":1,"jsonrpc":"2.0","method":"author_rotateKeys","params":[]}' | websocat -n1 -B 99999999 ws://127.0.0.1:9933
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9944
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
@@ -760,8 +760,8 @@ validator set, you are now running a Polkadot validator! If you need help, reach
 ## Thousand Validators Programme
 
 The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
-to provide support for community validators. If you are interested in applying for the programme,
-you can find more information [on the wiki page](../general/thousand-validators.md).
+to provide support for community validators. If you are interested in applying for the program, you
+can find more information [on the wiki page](../general/thousand-validators.md).
 
 ## Running a validator on a testnet
 

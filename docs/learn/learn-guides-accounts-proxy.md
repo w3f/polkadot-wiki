@@ -1,13 +1,23 @@
 ---
 id: learn-guides-accounts-proxy
 title: Polkadot-JS Guides about Proxy Accounts
-sidebar_label: Proxy
+sidebar_label: Proxy Guides
 description: Polkadot-JS Guides about Proxy Accounts
 keyword: [guides, polkadot-js, accounts, proxy]
 slug: ../learn-guides-accounts-proxy
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 Proxies allow users to use an account (it can be in cold storage or a hot wallet) less frequently
 but actively participate in the network with the weight of the tokens in that account. Proxies are

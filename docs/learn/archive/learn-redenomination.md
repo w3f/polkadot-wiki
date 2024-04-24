@@ -7,7 +7,7 @@ keywords: [DOT, redenomination]
 slug: ../learn-redenomination
 ---
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 The content on this page is archived.

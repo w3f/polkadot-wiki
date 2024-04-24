@@ -24,7 +24,7 @@ in most situations (e.g. RuntimeCall). Other types have a default implementation
 unit type `()`. Most types you'll want to carefully choose which implementation they get. For most
 of these types there are pre-defined solutions and building blocks you can use and adapt to your
 scenario. These solutions are listed in the xcm-builder
-[folder](https://github.com/paritytech/polkadot/tree/master/xcm/xcm-builder/src).
+[folder](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/xcm/xcm-builder/src).
 
 We will now explain each type and go over some of the implementations of the type:
 
@@ -319,7 +319,7 @@ are properly account for. If you want to allow all calls in `Tansact`, use `Ever
 ## What Next
 
 Check out the
-[Kusama](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/xcm_config.rs),
-[Statemine](https://github.com/paritytech/cumulus/blob/master/parachains/runtimes/assets/statemine/src/xcm_config.rs),
+[Kusama](https://github.com/polkadot-fellows/runtimes/blob/main/relay/kusama/src/xcm_config.rs),
+[Statemine](https://github.com/polkadot-fellows/runtimes/blob/main/system-parachains/asset-hubs/asset-hub-kusama/src/xcm_config.rs),
 or [Trappist](https://github.com/paritytech/trappist/blob/main/runtime/trappist/src/xcm_config.rs)
 for examples of how to implement the xcm-executor config.

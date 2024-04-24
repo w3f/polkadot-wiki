@@ -1,13 +1,23 @@
 ---
 id: learn-guides-identity
 title: Polkadot-JS Guides about Identity
-sidebar_label: Identity
+sidebar_label: Identity Guides
 description: Polkadot-JS Guides about Identity.
 keywords: [registrar, identity, sub-identity, polkadot-js]
 slug: ../learn-guides-identity
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 This is an advanced guide that is relevant for entities that would like to become registrars or
 would like to set sub-identities to an existing account with an identity. See
@@ -123,7 +133,7 @@ Setting an Identity is not possible on Ledger app yet, but as a workaround, you 
 [set the identity for an on-chain account ](../learn/learn-identity.md#setting-an-identity) and then
 use it to set a sub-identity to your Ledger account.
 
-- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to
+- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots corresponding to
   the account to which you already set identity. You should see an option to set onchain
   sub-identities. Click on it.
 

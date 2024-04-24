@@ -9,7 +9,7 @@ slug: ../learn-archive
 
 import DocCardList from '@theme/DocCardList';
 
-<div className="sticky"> 
+<div className="sticky" style={{ zIndex: 1 }}> 
 <br />
 
 This section contains archived pages. The content in them no longer applies to Polkadot but can

@@ -1,7 +1,7 @@
 ---
 id: build-protocol-info
-title: Polkadot Protocol Information
-sidebar_label: Polkadot Protocol
+title: Polkadot Protocol Overview
+sidebar_label: Polkadot Protocol Overview
 description:
   Characteristics about the Polkadot protocol, and what you need to consider when building.
 keywords: [build, protocol, extrinsics, events, transaction]
@@ -13,6 +13,10 @@ import RPC from "./../../components/RPC-Connection";
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
 specific to Polkadot, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.
+
+> If the below does not offer a sufficient amount of information regarding the Polkadot protocol, be
+> sure to visit the [Polkadot Spec](https://spec.polkadot.network/id-polkadot-protocol), which is
+> more verbose than this Wiki page.
 
 ## Tokens
 
@@ -366,5 +370,4 @@ like locking or reserving tokens for operations that utilize state.
 **What is an external source to see the current chain height?**
 
 - [Polkadot-JS explorer](https://polkadot.js.org/apps/#/explorer)
-- [Polkascan block explorer](https://polkascan.io/)
 - [Subscan block explorer](https://www.subscan.io/)

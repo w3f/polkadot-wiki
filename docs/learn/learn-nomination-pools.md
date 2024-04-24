@@ -20,23 +20,13 @@ Note that rewards are not guaranteed for those pools that do not have enough bon
 included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active
 pools will receive rewards.**
 
-- There are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
-  members. (There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPoolMembers" defaultValue={16384} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
-  members.)
-- There are currently
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
-  pools. (There can be a maximum of
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={256} /> :kusama }}
-  pools)
-- {{ polkadot: No limit on :polkadot }}
-  {{ kusama: There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={1024} /> :kusama }}
-  members per pool.
+There are currently
+{{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
+members in
+{{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
+pools. There is no limit to the number of pools or pool members per pool.
 
 :::
 
@@ -70,20 +60,18 @@ permissionlessly allow members to pool their funds together and act as a single 
 
 Due to the current runtime constraints,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can only handle
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
-nominators comfortably in the [electing set](learn-nominator.md#staking-election-stages). As one of
-the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the
-network, it can be inferred that the staking system on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} favors nominators with a larger
-stake. Only the nominator accounts which back the validators in the active set are eligible for
-receiving staking rewards. This leaves out nomination intents from the accounts with lower token
-balance than the min-active nomination and places them in a waiting queue to enter electing set.
-Nomination pools will be handy for members who want to participate in the staking system with a
-stake much lower than the dynamic min-active nomination threshold on the network. All operations are
-constant space and time complexity relative to the number of members, eliminating any theoretical
-upper bound on the number of members the system can handle and thus scaling the number of accounts
-that can participate and earn rewards in the staking system on
+{{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }} nominators comfortably in the
+[electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
+[NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
+inferred that the staking system on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+favors nominators with a larger stake. Only the nominator accounts which back the validators in the
+active set are eligible for receiving staking rewards. This leaves out nomination intents from the
+accounts with lower token balance than the min-active nomination and places them in a waiting queue
+to enter electing set. Nomination pools will be handy for members who want to participate in the
+staking system with a stake much lower than the dynamic min-active nomination threshold on the
+network. All operations are constant space and time complexity relative to the number of members,
+eliminating any theoretical upper bound on the number of members the system can handle and thus
+scaling the number of accounts that can participate and earn rewards in the staking system on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In summary, each nomination pool is
 viewed as a single nominator from the NPoS system point of view.
 
@@ -325,14 +313,9 @@ active validator in all the eras and check if you are receiving your staking rew
 importantly, ensure that the validators you chose always act in the best interests of the network
 protocol and have less chance of getting slashed. To nominate, you need a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
-and to receive rewards, you need at least a balance greater than the minimum active bond. Depending
-on your validators, if your active validator is oversubscribed, you will earn rewards only if your
-stake is within that of the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators. If the validator misbehaves, It is worth noting that your stake is subject to slashing,
-irrespective of whether you are at the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators or not.
+and to receive rewards, you need at least a balance greater than the minimum active bond. If the
+validator misbehaves, It is worth noting that your stake is subject to slashing, irrespective of
+whether you are at the top nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the
 threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
@@ -368,7 +351,7 @@ Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more inf
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                        Minimum 250 DOT to nominate.                                                                                                                         |                                                                                                       Minimum 1 DOT to be a member.                                                                                                       |
 |                                                                                                       Rewards can be compounded automatically or sent to any account.                                                                                                       |                                                              Rewards can be manually claimed to the pool member's account and be bonded in the pool again to compound them.                                                               |
-|                                                      If the active validator gets slashed, all active nominators are subjected to slashing, also those that do not receive rewards due to the oversubscription issue.                                                       |                                                                             If the active validator gets slashed, all pool members are subjected to slashing.                                                                             |
+|                                                                                           If the active validator gets slashed, all active nominators are subjected to slashing.                                                                                            |                                                                             If the active validator gets slashed, all pool members are subjected to slashing.                                                                             |
 |                                                                                                                    Can bond and stake DOT indefinitely.                                                                                                                     |                                                                                               Can bond and stake DOT until the pool exists.                                                                                               |
 |                                                                                                    Unbonding period of 28 days. Can switch validators without unbonding.                                                                                                    |                                                                             Unbonding period of 28 days. Need to unbond before switching to a different pool.                                                                             |
 |                                                                                                                              Maximum uncapped.                                                                                                                              |                                                                                                             Maximum uncapped.                                                                                                             |

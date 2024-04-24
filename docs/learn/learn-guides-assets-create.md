@@ -1,13 +1,23 @@
 ---
 id: learn-guides-assets-create
 title: Polkadot-JS Guides about Creating Assets
-sidebar_label: Creating Assets
+sidebar_label: Create Asset Guides
 description: Polkadot-JS Guides about Creating Assets.
 keywords: [asset hub, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-create
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 The Asset Hub is a generic assets system parachain which provides functionality for deploying and
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset

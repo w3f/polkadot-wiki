@@ -125,10 +125,7 @@ Ensuring Byzantine fault tolerance is an important part of developing any distri
 ## Capacity
 
 The maximum number of nominators signalling intent to nominate a validator (and thus could
-potentially actively nominate that validator in the next session). This maximum number will equal
-the number of nominators necessary to oversubscribe a validator. Any validator which is "at
-capacity" or higher may potentially be oversubscribed in the next session; a validator that is not
-at capacity cannot be oversubscribed unless more nominators select it before the next election.
+potentially actively nominate that validator in the next session).
 
 ## Candidate
 
@@ -449,16 +446,6 @@ another account. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
 complex origin types, such as the [root origin](#root-origin), from which privileged functions can
 be called.
 
-## Oversubscribed
-
-If more than the maximum number of nominators nominate the same validator, it is "oversubscribed",
-and only the top staked nominators (ranked by the amount of stake, up to the maximum number of
-nominators) are paid rewards. Other nominators will receive no rewards for that era. The current
-maximum number of nominators is
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> on Polkadot, :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> on Kusama, :kusama }}
-but it can be modified via governance.
-
 ## Pallet
 
 A [Substrate](#substrate) runtime module.
@@ -700,7 +687,7 @@ A modular framework for building blockchains.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
 [Substrate](https://substrate.io/). Chains built with Substrate will be easy to connect as
 parachains. For developers, see the
-[Substrate GitHub repository](https://github.com/paritytech/substrate).
+[Substrate GitHub repository](https://github.com/paritytech/polkadot-sdk/tree/master/substrate).
 
 ## System Parachains
 

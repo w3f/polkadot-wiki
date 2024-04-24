@@ -141,9 +141,7 @@ The bags-list is capable of including an unlimited number of nodes, subject to t
 storage. In the current staking system configuration, the bags list keeps
 {{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nomination intents, of which, at most
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
+nomination intents, of which, at most {{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }}
 come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
@@ -167,11 +165,9 @@ staking/election system.
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
 Submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
-nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
-the number of tokens bonded is higher than the minimum active bond. For more information, see the
-[nominator guide](learn-nominator.md).
+{{ polkadot: 22500 :polkadot }} {{ kusama: 12500  :kusama }} nominators is applied to the validators
+in the active set. To avail of staking rewards, ensure that the number of tokens bonded is higher
+than the minimum active bond. For more information, see the [nominator guide](learn-nominator.md).
 
 :::
 
@@ -262,29 +258,12 @@ it by changing some parameters (e.g. how many days you would like to stake with 
 fees, compound rewards, etc.) to have a better estimate. Even though it may not be entirely accurate
 since staking participation is changing dynamically, it works well as an indicator.
 
-#### Oversubscription, Commission Fees & Slashes
+#### Commission Fees & Slashes
 
-There is an additional factor to consider in terms of rewards. While there is no limit to the number
-of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is
-currently
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>, :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/>, :kusama }}
-although this can be modified via runtime upgrade. A validator with more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :kusama }}
-nominators is _oversubscribed_. When payouts occur, only the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={512}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={516}/> :kusama }}
-nominators as measured by the amount of stake allocated to that validator will receive rewards. All
-other nominators are essentially "wasting" their stake - they used their nomination to elect that
-validator to the active stake, but receive no rewards in exchange for doing so.
-
-Note that the network slashes a validator for a misbehavior (e.g. validator offline, equivocation,
-etc.) the slashed amount is a fixed percentage (and not a fixed amount), which means that validators
-with more stake get slashed more DOT. Again, this is done to provide nominators with an economic
-incentive to shift their preferences and back less popular validators whom they consider to be
-trustworthy.
+The network slashes a validator for a misbehavior (e.g. validator offline, equivocation, etc.) the
+slashed amount is a fixed percentage (and not a fixed amount), which means that validators with more
+stake get slashed more DOT. Again, this is done to provide nominators with an economic incentive to
+shift their preferences and back less popular validators whom they consider to be trustworthy.
 
 Also, note that each validator candidate is free to name their desired commission fee (as a
 percentage of rewards) to cover operational costs. Since validators are paid the same, validators
@@ -443,8 +422,8 @@ reward would no longer be claimable.
 
 In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout
 before 28 eras have passed. See
-[this page](./learn-guides-staking.md#claiming-rewards-with-the-polkadot-js-ui) for more information
-about how to claim rewards using the Polkadot-JS UI.
+[this page](./learn-guides-nominator.md#claiming-rewards-with-the-polkadot-js-ui) for more
+information about how to claim rewards using the Polkadot-JS UI.
 
 :::
 

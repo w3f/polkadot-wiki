@@ -1,7 +1,7 @@
 ---
 id: learn-guides-accounts
 title: Polkadot-JS Guides about Accounts
-sidebar_label: Accounts
+sidebar_label: Account Guides
 description: Polkadot-JS Guides about Accounts
 keyword: [guides, polkadot-js, accounts]
 slug: ../learn-guides-accounts
@@ -9,6 +9,16 @@ slug: ../learn-guides-accounts
 
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
+
+</div>
 
 <DocCardList />
 

@@ -102,7 +102,8 @@ and transparent process for time-critical proposals. For instance, a referendum 
 track needs to amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser
 than the root) by the end of the first day with over
 {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval to be considered to be part of
-the confirm period.
+the confirm period. **Note how no referendum on the Whitelisted track can ever pass with less than
+5% support.**
 
 {{ polkadot: <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}

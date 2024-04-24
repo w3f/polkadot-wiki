@@ -10,9 +10,7 @@ slug: ../build-dapp
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 As with any blockchain, building decentralized applications (dApps) is a huge part of how a
-developer can build on Polkadot. Within the ecosystem, you also hear the term "Unstoppable App", or
-uApp. While the naming isn't too important, what is important is building resilient applications
-using decentralized technology.
+developer can build on Polkadot.
 
 As an application developer, you can compose your front-end apps in a few different ways. Because
 Polkadot and its parachains are all built using Substraste; you can often use the same SDK to
@@ -28,9 +26,8 @@ and which prefixes are available.
 
 ## SDKS & Libraries
 
-If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
-ecosystem contains various SDKs to tap into the relay chain and parachains. There are several
-languages already supported -
+If one aims to develop a **dApp** (Decentralized App), the Polkadot ecosystem contains various SDKs
+to tap into the relay chain and parachains. There are several languages already supported -
 [see the tooling page for a detailed overview of different SDKs and libraries that are available.](./build-tools-index.md)
 
 ## Frameworks & Toolkits

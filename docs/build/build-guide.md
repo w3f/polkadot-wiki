@@ -16,9 +16,10 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import Doc
 goals: providing **shared security** among all connected parachains and allowing all connected
 chains to **interoperate** by using [XCM](../learn/learn-xcm.md). With the advent of
 [PDKs](../build/build-parachains.md#parachain-development-kit) like
-[Substrate](https://substrate.io/) and [Cumulus](https://github.com/paritytech/cumulus), the time it
-takes to develop and launch a new chain has dropped significantly. While before, it would take years
-to launch a new chain, now it may only take weeks or even days, depending on your goals.
+[Substrate](https://substrate.io/) and
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus), the time it takes to
+develop and launch a new chain has dropped significantly. While before, it would take years to
+launch a new chain, now it may only take weeks or even days, depending on your goals.
 
 This guide will walk you through the steps you can take today to get started building your vision
 with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will explain the difference
@@ -186,10 +187,11 @@ comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
-Diving further into building parachains, [Cumulus](https://github.com/paritytech/cumulus) is another
-set of tools that aid in building a parachain-ready blockchain for Polkadot or Kusama. Cumulus
-utilizes FRAME and Substrate to create an easy way to build your first parachain. It ensures the
-chain follows the Parachain Protocol.
+Diving further into building parachains,
+[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus) is another set of tools
+that aid in building a parachain-ready blockchain for Polkadot or Kusama. Cumulus utilizes FRAME and
+Substrate to create an easy way to build your first parachain. It ensures the chain follows the
+Parachain Protocol.
 
 :::info
 
@@ -303,8 +305,8 @@ a smart contract.
 
 ## Developing a dApp/uApp
 
-If one aims to develop a **dApp** (Decentralized App) or **uApp** (Unstoppable App), the Polkadot
-ecosystem contains various SDKs to tap into the relay chain and parachains.
+If one aims to develop a **dApp** (Decentralized App), the Polkadot ecosystem contains various SDKs
+to tap into the relay chain and parachains.
 
 For front-end applications, several options exist for interfacing with Substrate-based chains
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
@@ -314,3 +316,15 @@ Substrate node.
 
 For a complete list of tools, please take a look here:
 [Tools, APIs, and Languages](build-open-source.md)
+
+## Resources
+
+- [System (Common Good) Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+- [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
+- [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
+- [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
+- [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
+- [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
+- [Polkadot Parachain Slots](https://polkadot.network/polkadot-parachain-slots/)
+- [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
+- [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)

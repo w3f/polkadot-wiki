@@ -45,6 +45,37 @@ DOT.
 For more information on the Polkadot roadmap please visit the
 [official Polkadot website](https://polkadot.network/technology/#roadmap).
 
+## Consensus
+
+### Why do we need Consensus?
+
+Consensus is a method for coming to agreement over a shared state. In order for the state of the
+blockchain to continue to build and move forward, all nodes in the network must agree and come to
+consensus. It is the way that the nodes in a decentralized network are able to stay synced with each
+other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to
+ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to
+provide the _objective_ view of the state amid participants who each have their own _subjective_
+views of the network. It is the process by which these nodes communicate and come to agreement, and
+are able to build new blocks.
+
+### What are PoW and PoS?
+
+Proof of Work (PoW) and Proof of Stake (PoS) have been inaccurately used as short hand to refer to
+consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method
+for agreeing on a block author and part of the fuller
+[Nakamoto consensus](../learn/learn-consensus.md#nakamoto-consensus) that also encompasses a chain
+selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a set of rules for selecting
+the validator set and does not specify a chain selection rule or how a chain might reach finality.
+PoS algorithms have traditionally been paired with an algorithm for coming to Byzantine agreement
+between nodes. For example, [Tendermint](../learn/learn-comparisons-cosmos.md) is a practical
+Byzantine fault tolerant algorithm that uses PoS as its validator set selection method.
+
+### Why not Proof of Work?
+
+Although simple and effective in coming to a decentralized consensus on the next block producer,
+proof of work with Nakamoto consensus consumes an incredible amount of energy, has no economic or
+provable finality, and has no effective strategy in resisting cartels.
+
 ## Validators
 
 ### How do I apply to be a validator?
@@ -67,7 +98,7 @@ stake-weighted votes and 2) equalize the stake backing each validator as much as
 You will likely want to campaign your validator to the community in order to get more backing. You
 are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
 For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint program called [Thousand Validators](thousand-validators.md) that will nominate
+also run a joint programme called [Thousand Validators](thousand-validators.md) that will nominate
 validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
@@ -85,9 +116,9 @@ size of the active set and how many validators are waiting in the pool.
 There are a few ways to estimate the minimum stake.
 
 One way can be to navigate to the
-[Polkadot Apps Targets tab](https://ipfs.io/ipns/polkadot.dotapps.io/#/staking/targets). The value
-at the top of the screen saying "Lowest" is the least staked validator. You need at least this
-much + 1 to enter the set.
+[Polkadot Apps Targets tab](https://cloudflare-ipfs.com/ipns/polkadot.dotapps.io/#/staking/targets).
+The value at the top of the screen saying "Lowest" is the least staked validator. You need at least
+this much + 1 to enter the set.
 
 You can also use some tools some to perform estimations.
 
@@ -308,11 +339,11 @@ libp2p and the standard and custom protocols, please see the
 
 ### How does libp2p differ from IPFS?
 
-The [Interplanetary File System](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used
-primarily for storage of files. It allows one to upload a file onto the network and share it with
-its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on
-the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate
-"uses" IPFS since besides sharing the underlying library for networking there is no native
+The [Interplanetary File System](https://ipfs.tech/) (IPFS) is a peer-to-peer hypermedia protocol
+used primarily for storage of files. It allows one to upload a file onto the network and share it
+with its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists
+higher on the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that
+Substrate "uses" IPFS since besides sharing the underlying library for networking there is no native
 integration between the two applications.
 
 ## Kusama

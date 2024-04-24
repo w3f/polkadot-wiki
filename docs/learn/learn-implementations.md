@@ -23,7 +23,7 @@ Polkadot uses WebAssembly ([Wasm](learn-wasm.md)) as a "meta-protocol". This all
 any programming language that can be interpreted or compiled into Wasm - being the driver for
 Polkadot's multiple implementations.
 
-### Parity Technologies: A [Rustic Vision for Polkadot](https://github.com/paritytech/polkadot)
+### Parity Technologies: A [Rustic Vision for Polkadot](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot)
 
 [Parity Technologies](https://www.parity.io/) is often in the spotlight for its core development of
 Polkadot, and while this is true, Parity Polkadot also serves to be the
@@ -37,7 +37,7 @@ stack that is used to implement Polkadot's sharded heterogeneous multi-chain mod
 > foster the development of the first implementation of Polkadot.
 
 Polkadot can support parachains that are not built on Substrate, In particular, as long as the state
-transition function (STF) of a shard is abstratced into Wasm, the validators on the network can
+transition function (STF) of a shard is abstracted into Wasm, the validators on the network can
 execute the STF within a Wasm environment.
 
 > Note: chains can also be built on Substrate and are not required to be deployed onto Polkadot.
@@ -86,4 +86,4 @@ collection of tools, interfaces, and libraries for Polkadot and Substrate.
 
 While the ecosystem continues to grow rapidly, the continued development of alternative
 implementations will only make Polkadot stronger. Consider becoming a contributor to the ecosystem,
-and learn about the how you can receieve a [grant](../general/grants.md) for your development.
+and learn about the how you can receive a [grant](../general/grants.md) for your development.

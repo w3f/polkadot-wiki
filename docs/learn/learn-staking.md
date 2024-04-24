@@ -45,7 +45,7 @@ Here you will learn about what staking is, why it is important and how it works 
 
 ## Proof-of-Stake (PoS)
 
-Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to
+Blockchain networks use [consensus](../general/faq.md#why-do-we-need-consensus) mechanisms to
 finalize blocks on the chain. Consensus is the process of agreeing on something, in this case, the
 progression of the blockchain or how blocks are added to the chain. Consensus consists of two
 actions:
@@ -222,9 +222,8 @@ relatively hands-off compared to that of a validator, and even more with
 [nomination pools](./learn-nomination-pools.md). For more information, you can take a look at the
 nominator [guide](learn-nominator.md) to understanding your responsibilities as a nominator.
 
-If you want to become a nominator, see
-[this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
-would like to securely stake your tokens using the Polkadot-JS UI, refer to
+If you want to become a nominator, see [this](../learn/learn-nominator.md) guide. If you are a
+beginner and would like to securely stake your tokens using the Polkadot-JS UI, refer to
 [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-)
 support article.
 {{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama. :kusama }}
@@ -624,7 +623,6 @@ rewards using Polkadot-JS UI.
 | :---------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |    Nominated validators are all in waiting status.    |                                                                                           Your stake has not been assigned to any of the nominated validators. You cannot earn rewards, nor be slashed in that era.                                                                                            |                                                                   Waiting validators are not in the active set in the current era and the stake backing them is not used to secure the network. In simple words, NPoS "does not see them".                                                                   |                                                                                    Change your nominations. Try to select validators (with reasonable commission) that have high chances to end up in the active set.                                                                                     |
 | You have some inactive, and some waiting nominations. | Validators shown as "Inactive" in your staking dashboard are still in the active set and are producing blocks in the current era, but your stake has not been assigned to any of them. You will not earn rewards if your stake is not backing an active validator. In this case, you cannot be slashed either. | **Scenario 1:** You have bonded less than the Minimum Active Bond. **Scenario 2:** You have more than the Minimum Active Bond, but your account is at the tail end of the [bags list](learn-staking-advanced.md#bags-list) and within your bag there are accounts with less stake than you, in front of you. | **Scenario 1:** Try bonding more funds. **Scenario 2:** Try to put your account in front of the accounts with less stake than you. Instructions available [here](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards) |
-|            You have one active validator.             |                                                                         Active validators are producing blocks in the current era, and your stake has been assigned to them. Even if you are not earning rewards, you can be slashed.                                                                          |                                                                           Your validator is oversubscribed, meaning that it has more than 512 nominators (ranked by stake), and your stake is less than that of those nominators.                                                                            |                                You can try to select validators that are not oversubscribed but in the long term you might want to bond more funds (even more than the Minimum Active Bond) to increase the chance of earning rewards also with oversubscribed validators.                                |
 
 :::tip Join a Nomination Pool
 
@@ -635,10 +633,11 @@ is receiving rewards.
 
 :::
 
-:::info
+:::info Bags List & Minimum Active Bond
 
 You can find information about why you might not receive staking rewards on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-).
+[this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-)
+and [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 :::
 
@@ -665,7 +664,6 @@ for the FAQs about staking.
 
 :::info Polkadot-JS Guides
 
-If you are an advanced user, see the
-[Polkadot-JS guides about staking](./learn-guides-staking-index).
+If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-staking).
 
 :::
