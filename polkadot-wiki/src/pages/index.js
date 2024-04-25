@@ -159,20 +159,6 @@ function HomeFooter() {
             </Translate>
           </button>
         </a>
-        <a
-          href="https://crowdin.com/project/polkadot-wiki"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <button className="btn btn-lg btn-primary btn-bg-primary">
-            <Translate
-              id="homepage.homeFooter.improveWiki.helpTranslateButton"
-              description="Help Translate Button Label of Improve Wiki Footer Section in Home page"
-            >
-              Help Translate
-            </Translate>
-          </button>
-        </a>
       </div>
     </Col>
   );

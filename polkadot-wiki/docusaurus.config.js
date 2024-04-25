@@ -253,16 +253,6 @@ module.exports = {
           label: "Contribute",
           position: "right",
         },
-        {
-          type: "localeDropdown",
-          position: "right",
-          dropdownItemsAfter: [
-            {
-              to: "https://crowdin.com/project/polkadot-wiki",
-              label: "Help us translate",
-            },
-          ],
-        },
       ],
     },
     footer: {
