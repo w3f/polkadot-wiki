@@ -677,7 +677,21 @@ module.exports = {
             "learn/learn-parathreads",
             "learn/learn-elastic-scaling",
             "learn/learn-sassafras",
-            "learn/learn-jam-chain",
+            {
+              type: "category",
+              label: "JAM",
+              description: "Polkadot's Join & Accumulate Machine.",
+              link: {
+                type: 'generated-index',
+                title: "JAM",
+                description: "Polkadot's Join & Accumulate Machine.",
+                slug: '/learn-jam',
+              },
+              items: [
+                "learn/learn-jam-chain",
+                "learn/learn-jam-faq",
+              ],
+            },
           ],
         },
         {
