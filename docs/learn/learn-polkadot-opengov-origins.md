@@ -110,12 +110,11 @@ the confirm period. **Note how no referendum on the Whitelisted track can ever p
 
 ### Wish For Change
 
-The Root track is typically utilized for handling one referendum at a time due to the sensitive
-nature of Root calls. However, it has also been employed to convey network desires to various bodies
-within the network. These statements lack stateful logic impacting the network and could be
-evaluated simultaneously. They should not delay voting on proposals requiring Root or be obligated
-to queue. Although the approval/support criteria resemble Root, passing items on this track serves
-as a signal without conferring privileges.
+The Wish For Change track serves as a medium for gathering consensus through OpenGov on a proposed change to the network through an [on-chain remark](../general/glossary.md#remarks). This track was added to ensure the Root track, which is typically utilized for handling one referendum at a time due to the sensitive
+nature of Root calls, is not employed to convey network desires to various bodies
+within the network. These remark statements could be voted on simultaneously because they lack stateful logic impacting the network. They should not delay voting on proposals requiring Root or be obligated
+to its queue. The approval/support criteria resemble Root, and passing items on this track serves 
+as a signal for a change without conferring privileges.
 
 {{ polkadot: <Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" /> :kusama }}
