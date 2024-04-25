@@ -13,7 +13,7 @@ slug: ../maintain-guides-async-backing
 This guide is relevant for cumulus based parachain projects started in 2023 or before. Later
 projects should already be async backing compatible. If starting a new parachain project, please use
 an async backing compatible template such as
-[`cumulus/parachain-template`](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/parachain-template).
+[`cumulus/parachain-template`](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain).
 
 :::
 
