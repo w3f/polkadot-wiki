@@ -46,10 +46,10 @@ async function GetTracks(network, wsUrl, setReturnValue) {
   rawTracksData.forEach(track => {
     const trackData = track.toHuman();
     // Format origin names
-    let origin = trackData[1].name.replace("_", " ");
+    let origin = trackData[1].name.replace(/_/g, " "); // Use a regular expression with the "g" flag to replace all occurrences
     origin = origin.split(' ')
-      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-      .join(' ');
+    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ');
     // Format minApproval and min Support (objects - contain nested values)
     const minApproval = FormatObject(trackData[1].minApproval);
     const minSupport = FormatObject(trackData[1].minSupport);
