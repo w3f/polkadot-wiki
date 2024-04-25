@@ -287,7 +287,7 @@ module.exports = {
       textColor: 'white',
       isCloseable: true,
     },
-    image: 'img/wiki-logo-2.svg'
+    image: 'img/og-polkadot-wiki.png'
   },
 };
 
