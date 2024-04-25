@@ -42,6 +42,14 @@ Democracy module. Below are a few links to stay informed and directly engage wit
 
 ## Important Parameters
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
+
 The important parameters to be aware of when voting using the Democracy module are as follows:
 
 **Launch Period** - How often new public referenda are launched.
@@ -59,6 +67,14 @@ being approved and enacted.
 vetoed.
 
 ## Proposing an Action
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 Proposing an action to be taken requires you to bond some tokens. In order to ensure you have enough
 tokens to make the minimum deposit, you can check the parameter in the chain state. Navigate to
@@ -104,6 +120,14 @@ preimage.
 
 ## Submitting a Preimage
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
+
 The act of making a proposal is split from submitting the preimage for the proposal since the
 storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage
 submission to come as a separate transaction means that another account could submit the preimage
@@ -125,6 +149,14 @@ submitted proposal.
 ![proposals](../../assets/democracy/proposals.png)
 
 ## Endorsing a Proposal
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 Endorsing a proposal means that you are agreeing with the proposal and backing it with an equal
 amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
@@ -159,6 +191,14 @@ Once successful, you will see your endorsement appear in the dropdown in the pro
 ![endorsement result](../../assets/democracy/endorsed-list.png)
 
 ## Voting on a Proposal
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 At the end of each launch period, the most endorsed proposal will move to a referendum. During this
 time you can cast a vote for or against the proposal. You may also lock up your tokens for a greater
@@ -197,6 +237,14 @@ your transaction and wait for it to be included in a block.
 
 ## Unlocking Locked Tokens
 
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
+
 Like [vesting](../../learn/learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are
 unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make
 your funds available again after the lock expires. Unbonding is another term you hear a lot in
@@ -217,6 +265,14 @@ cleared when successful.
 ![democracy clear locks](../../assets/democracy_clear_locks.png)
 
 #### With a Ledger hardware wallet or Unlocking Very Old Locks
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 If you do not see an option to clear expired democracy votes, it may be that the lock is very old.
 Or, if you are using the Ledger hardware wallet, you will not be able to issue the batch Unlock
@@ -249,6 +305,14 @@ DOT locked by voting for members of the Polkadot Council, you need to go to the
 All".
 
 ## Delegate a Vote
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 If you are too busy to keep up and vote on upcoming referenda, there is an option to delegate your
 vote to another account whose opinion you trust. When you delegate to another account, that account
@@ -283,6 +347,14 @@ through `democracy.votingOf` extrinsic.
 :::
 
 ## Undelegate a Vote
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 :::caution
 
@@ -333,6 +405,14 @@ modifications made to the account's delegation preferences.
 ![undelegate](../../assets/democracy/undelegate-save.png)
 
 ## Voting with a Governance Proxy
+
+<div className="sticky" style={{ zIndex: 1 }}> 
+<br />
+
+The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
+
+</div>
 
 Making a vote on behalf of a stash requires a "proxy" transaction from the Proxy pallet. When you
 choose this transaction from the "Extrinsics" tab, it will let you select "vote" from the Democracy
