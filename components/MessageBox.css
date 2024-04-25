@@ -22,6 +22,6 @@
     cursor: pointer;
   }
   
-  .message-content {
-    /* Add any additional styling for your message content */
+  .messageContent {
+    margin-top: 10px;
   }

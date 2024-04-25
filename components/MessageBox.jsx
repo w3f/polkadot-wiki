@@ -7,6 +7,11 @@ const MessageBox = ({ message }) => {
     setIsOpen(false);
   };
 
+  // Function to convert markdown links to HTML links
+  const renderMarkdownLinks = (text) => {
+    return text.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
+  };
+
   return (
     <>
       {isOpen && (
@@ -14,9 +19,10 @@ const MessageBox = ({ message }) => {
           <button className="close-button" onClick={handleClose}>
             &#10006; {/* Unicode character for "x" */}
           </button>
-          <div className="message-content">
-            <p>{message}</p> {/* Display the message text */}
-          </div>
+          <div
+            className="message-content"
+            dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(message) }} // Render HTML content
+          ></div>
         </div>
       )}
     </>
