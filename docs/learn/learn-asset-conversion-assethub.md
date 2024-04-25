@@ -74,9 +74,9 @@ threads), this becomes a huge burden in terms of network support. This is in con
 support for an additional ERC20 token; the marginal effort is very small since an Ethereum node
 already serves all the data they need.
 
-With support for these assets on AssetHub, exchanges/custodians could monitor one chain for deposits
-(applications and UIs would need to give the option to transfer to AssetHub). For withdrawals, users
-could choose to withdraw to their address on AssetHub. There are two user experience bonuses here:
+With support for these assets on Asset Hub, exchanges/custodians could monitor one chain for deposits
+(applications and UIs would need to give the option to transfer to Asset Hub). For withdrawals, users
+could choose to withdraw to their address on Asset Hub. There are two user experience bonuses here:
 
 - The exchange/custodian only needs to transact on one parachain and can access every other without
   any infrastructure lift.
