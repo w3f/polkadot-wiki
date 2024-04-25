@@ -90,75 +90,79 @@ function HomeFooter() {
 
   const LearnKusama = () => (
     <Col lg={6}>
-      <KusamaCanary height={45} />
-      <h3 className="h2 font-weight-medium text-heading">
-        <Translate
-          id="homepage.homeFooter.learnKusama.title"
-          description="Title of Learn Kusama Footer Section in Home Page"
-        >
-          Learn about Polkadot’s canary network Kusama
-        </Translate>
-      </h3>
-      <p className="">
-        <Translate
-          id="homepage.homeFooter.learnKusama.content"
-          description="Content of Learn Kusama Footer Section in Home Page"
-        >
-          Kusama is Polkadot’s “canary network”, a scalable, multi-chain network for radical
-          innovation and early stage Polkadot deployments. For developers, Kusama is a proving
-          ground for all things Polkadot I.e runtime upgrades, on-chain governance, parachains,
-          parathreads, etc.
-        </Translate>
-      </p>
-      <div>
-        <a href="https://guide.kusama.network">
-          <button className="btn btn-lg btn-primary btn-bg-primary">
-            <Translate
-              id="homepage.homeFooter.learnKusama.discoverKusamaButton"
-              description="Discover Kusama Button Label of Improve Wiki Footer Section in Home page"
-            >
-              Discover Kusama
-            </Translate>
-          </button>
-        </a>
+      <div className="text-center">
+        <KusamaCanary height={50} style={{ marginBottom: '20px' }}/>
+        <h3 className="h2 font-weight-medium text-heading">
+          <Translate
+            id="homepage.homeFooter.learnKusama.title"
+            description="Title of Learn Kusama Footer Section in Home Page"
+          >
+            Learn about Polkadot’s canary network Kusama
+          </Translate>
+        </h3>
+        <p className="">
+          <Translate
+            id="homepage.homeFooter.learnKusama.content"
+            description="Content of Learn Kusama Footer Section in Home Page"
+          >
+            Kusama is Polkadot’s “canary network”, a scalable, multi-chain network for radical
+            innovation and early stage Polkadot deployments. For developers, Kusama is a proving
+            ground for all things Polkadot I.e runtime upgrades, on-chain governance, parachains,
+            parathreads, etc.
+          </Translate>
+        </p>
+        <div>
+          <a href="https://guide.kusama.network">
+            <button className="btn btn-lg btn-primary btn-bg-primary">
+              <Translate
+                id="homepage.homeFooter.learnKusama.discoverKusamaButton"
+                description="Discover Kusama Button Label of Improve Wiki Footer Section in Home page"
+              >
+                Discover Kusama
+              </Translate>
+            </button>
+          </a>
+        </div>
       </div>
     </Col>
   );
 
   const ImproveWiki = () => (
     <Col lg={6}>
-      <span className="material-icons" style={{ fontSize: 50 + "px" }}>
-        language
-      </span>
-      <h3 className="h2 font-weight-medium text-heading">
-        <Translate
-          id="homepage.homeFooter.improveWiki.title"
-          description="Title of Improve Wiki Footer Section in Home page"
-        >
-          Help improve this wiki
-        </Translate>
-      </h3>
-      <p className="">
-        <Translate
-          id="homepage.homeFooter.improveWiki.content"
-          description="Content of Improve Wiki Footer Section in Home page"
-        >
-          This wiki was started by and is maintained by Web3 Foundation. It is an open-source-ish
-          project and aims to be the most extensive resource of knowledge on Polkadot and the
-          Polkadot ecosystem.
-        </Translate>
-      </p>
-      <div>
-        <a href={useDocUrl("contributing")}>
-          <button className="btn btn-lg btn-primary btn-bg-primary mr-3">
-            <Translate
-              id="homepage.homeFooter.improveWiki.contributeButton"
-              description="Contribute Button Label of Improve Wiki Footer Section in Home page"
-            >
-              Contribute
-            </Translate>
-          </button>
-        </a>
+      <div className="text-center">
+        <span className="material-icons" style={{ fontSize: 50 + "px", marginBottom: '20px' }}>
+          language
+        </span>
+        <h3 className="h2 font-weight-medium text-heading">
+          <Translate
+            id="homepage.homeFooter.improveWiki.title"
+            description="Title of Improve Wiki Footer Section in Home page"
+          >
+            Help improve this wiki
+          </Translate>
+        </h3>
+        <p className="">
+          <Translate
+            id="homepage.homeFooter.improveWiki.content"
+            description="Content of Improve Wiki Footer Section in Home page"
+          >
+            This wiki was started by and is maintained by Web3 Foundation. It is an open-source-ish
+            project and aims to be the most extensive resource of knowledge on Polkadot and the
+            Polkadot ecosystem.
+          </Translate>
+        </p>
+        <div>
+          <a href={useDocUrl("contributing")}>
+            <button className="btn btn-lg btn-primary btn-bg-primary mr-3">
+              <Translate
+                id="homepage.homeFooter.improveWiki.contributeButton"
+                description="Contribute Button Label of Improve Wiki Footer Section in Home page"
+              >
+                Contribute
+              </Translate>
+            </button>
+          </a>
+        </div>
       </div>
     </Col>
   );
