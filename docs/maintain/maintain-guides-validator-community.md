@@ -131,9 +131,9 @@ Some factors of architecture to highlight might include:
 Outlining how a validator runs its servers helps nominators understand how diversified a validator
 is. Does the Validator run in the cloud, on dedicated machines, in a co-located datacenter, or in a
 home residential setup? Do they run multiple nodes on the same machine? If every validator is hosted
-in AWS, there is a risk of potential outages that cause large amounts of nodes to go offline,
-causing slashing for unresponsiveness. Nominators may want to choose validators that have thoroughly
-diversified the providers they use or the facilities they operate in.
+in AWS, there is a risk of potential outages that cause large amounts of nodes to go offline.
+Nominators may want to choose validators that have thoroughly diversified the providers they use or
+the facilities they operate in.
 
 Additionally, how does a Validator contribute to decentralization? It can be helpful to outline
 these efforts so that the values of a Nominator and Validator are aligned.

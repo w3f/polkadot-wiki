@@ -300,9 +300,7 @@ over the validators' websites to see who they are, what kind of infrastructure s
 reputation, the vision behind the validator, and more.
 
 Any problematic behavior must be taken seriously. An example of problematic behavior will be if a
-validator is regularly offline. In this case, nominators most likely would get fewer rewards. If
-many validators are [unreachable](learn-staking.md#unresponsiveness), such validators and
-corresponding nominators will be slashed.
+validator is regularly offline. In this case, nominators will get fewer rewards.
 
 ![Validator Stats](../assets/validator_stats.png)
 
@@ -354,10 +352,10 @@ As long as you have nominated more than one validator candidate, at least one of
 and you are nominating with enough stake to get into the solution set, your bonded stake will be
 fully distributed to one or more validators. That being said, you may not receive rewards if you
 nominated very few validator candidates and no one got elected, or your stake is small, and you are
-not part of the [top 22,500 nominators](./learn-staking-advanced.md#bags-list), or the validator
-you are nominating has 100% commission. It is generally wise to choose as many trustworthy
-validators as you can {{ polkadot: (up to 16) :polkadot }}{{ kusama: (up to 24) :kusama }} to reduce
-the risk of none of your nominated validators being elected.
+not part of the [top 22,500 nominators](./learn-staking-advanced.md#bags-list), or the validator you
+are nominating has 100% commission. It is generally wise to choose as many trustworthy validators as
+you can {{ polkadot: (up to 16) :polkadot }}{{ kusama: (up to 24) :kusama }} to reduce the risk of
+none of your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 

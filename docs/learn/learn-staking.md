@@ -282,8 +282,7 @@ Understandably, most of the validator nodes run on cloud service providers that 
 hardware specifications and high levels of availability and connectivity. Keep in mind that a
 validator in the active set is supposed to be fully online and available for producing blocks. If
 the active validator node goes offline due to network interruptions or a power outage, that
-validator might be subject to
-[slashing due to unresponsiveness](./learn-staking-advanced#unresponsiveness). As
+validator will get fewer rewards. As
 [Polkadot's block production mechanism](./learn-consensus.md#block-production-babe) is reasonably
 resilient to a small proportion of validators going offline, no slashing is imposed until 10% of the
 validators in the active set go offline. Hence, if multiple nodes are running on a single cloud
@@ -487,15 +486,12 @@ particular levels are not implemented or referred to in the code or in the syste
 guidelines for different levels of severity for offenses. To understand how slash amounts are
 calculated, see the equations in the section below.
 
-- Level 1: isolated [unresponsiveness](./learn-staking-advanced.md/#unresponsiveness), i.e. being
-  offline for an entire session. Generally no slashing, only [chilling](#chilling).
-- Level 2: concurrent unresponsiveness or isolated
-  [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small amount of the
-  stake and chills.
-- Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
+- Level 1: Isolated [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small
+  amount of the stake and chills.
+- Level 2: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
   in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
-- Level 4: misconduct that poses serious security or monetary risk to the system, or mass collusion.
+- Level 3: misconduct that poses serious security or monetary risk to the system, or mass collusion.
   Slashes all or most of the stake behind the validator and chills.
 
 If you want to know more details about slashing, please look at our

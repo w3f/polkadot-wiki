@@ -15,52 +15,16 @@ all instances, slashes are accompanied by a loss of nominators.
 
 A slash may occur under four circumstances:
 
-1.  Unresponsiveness – Slashing starts when 10% of the active validators set are offline and
-    increases in a linear manner until 44% of the validator set is offline; at this point, the slash
-    is held at 7%
-2.  Equivocation – A slash of 0.01% is applied with as little as a single evocation. The slashed
+1.  Equivocation – A slash of 0.01% is applied with as little as a single evocation. The slashed
     amount increases to 100% incrementally as more validators also equivocate.
-3.  Malicious action – This may result from a validator trying to represent the contents of a block
+2.  Malicious action – This may result from a validator trying to represent the contents of a block
     falsely. Slashing penalties of 100% may apply.
-4.  Application related (bug or otherwise) – The amount is unknown and may manifest as scenarios 1,
-    2, and 3 above.
+3.  Application related (bug or otherwise) – The amount is unknown and may manifest as scenarios 1
+    and 2 above.
 
 This article provides some best practices to prevent slashing based on lessons learned from previous
 slashes. It provides comments and guidance for all circumstances except for malicious action by the
 node operator.
-
-## Unresponsiveness
-
-An offline event occurs when a validator does not produce a BLOCK or IMONLINE message within an
-EPOCH. Isolated offline events do not result in a slash; however, the validator would not earn any
-era points while offline. A slash for unresponsiveness occurs when 10% or more of the active
-validators are offline at the same time. Check the Wiki section on
-[slashing due to unresponsiveness](../learn/learn-staking-advanced.md#unresponsiveness) to learn
-more about its specifics.
-
-The following are recommendations to validators to avoid slashing under liveliness for servers that
-have historically functioned:
-
-1.  Utilize systems to host your validator instance. Systemd should be configured to auto reboot the
-    service with a minimum 60-second delay. This configuration should aid with re-establishing the
-    instance under isolated failures with the binary.
-2.  A validator instance can demonstrate un-lively behaviour if it cannot sync new blocks. This may
-    result from insufficient disk space or a corrupt database.
-3.  Monitoring should be implemented that allows node operators to monitor connectivity network
-    connectivity to the peer-to-peer port of the validator instance. Monitoring should also be
-    implemented to ensure that there is <50 Block ‘drift’ between the target and best blocks. If
-    either event produces a failure, the node operator should be notified. The following are
-    recommendations to validators to avoid liveliness for new servers / migrated servers:
-4.  Ensure that the `--validator` flag is used when starting the validator instance
-5.  If switching keys, ensure that the correct session keys are applied
-6.  If migrating using a two-server approach, ensure that you don’t switch off the original server
-    too soon.
-7.  Ensure that the database on the new server is fully synchronized.
-8.  It is highly recommended to avoid hosting on providers that other validators may also utilize.
-    If the provider fails, there is a probability that one or more other validators would also fail
-    due to liveliness building to a slash.  
-    There is a precedent that a slash may be forgiven if a single validator faces an offline event
-    when a larger operator also faces multiple offline events, resulting in a slash.
 
 ## Equivocation
 
@@ -102,9 +66,8 @@ obtain pristine binaries or source code and to ensure the security of their node
 
 ## Examples
 
-| Network  | Era  | Event Type              | Details                                                                                                                                                                                                                                                                                                                       | Action Taken                                                                                                                                                                                                                                                                     |
-| -------- | ---- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Polkadot | 774  | Small Equivocation      | [The validator](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io/$165562246360408hKCfC:matrix.org?via=matrix.parity.io&via=corepaper.org&via=matrix.org) migrated servers and cloned the keystore folder. The on-chain event can be viewed [here](https://polkadot.subscan.io/extrinsic/11190109-0?event=11190109-5). | The validator did not submit a request for the slash to be canceled.                                                                                                                                                                                                             |
-| Kusama   | 3329 | Small Equivocation      | The validator operated a test machine with cloned keys; the test machine was online at the same time as the primary, which resulted in a slash. Details can be found [here](https://kusama.polkassembly.io/post/1343).                                                                                                        | The validator requested a cancellation of the slash, but the council declined.                                                                                                                                                                                                   |
-| Kusama   | 3995 | Small Equivocation      | The validator noticed several errors, after which the client crashed, and a slash was applied. The validator recorded all events and opened GitHub issues to allow for technical opinions to be shared. Details can be found [here](https://kusama.polkassembly.io/post/1733).                                                | The validator requested to cancel the slash. The council approved the request as they believed the error was not operator related.                                                                                                                                               |
-| Kusama   | 4543 | Medium Unresponsiveness | A large amount of disputes flooded the network resulting in an application fault. The fault caused the client software to hang and as a result ~197 unique validators become unresponsive. Further details can be found [here](https://kusama.polkassembly.io/referenda/16).                                                  | The pending slash was cancelled and with runtime [9350](https://kusama.polkassembly.io/referenda/24) all lost nominations were restored. The application bug was addressed with client version [0.9.36](https://forum.polkadot.network/t/polkadot-release-analysis-v0-9-36/1529) |
+| Network  | Era  | Event Type         | Details                                                                                                                                                                                                                                                                                                                       | Action Taken                                                                                                                       |
+| -------- | ---- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Polkadot | 774  | Small Equivocation | [The validator](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io/$165562246360408hKCfC:matrix.org?via=matrix.parity.io&via=corepaper.org&via=matrix.org) migrated servers and cloned the keystore folder. The on-chain event can be viewed [here](https://polkadot.subscan.io/extrinsic/11190109-0?event=11190109-5). | The validator did not submit a request for the slash to be canceled.                                                               |
+| Kusama   | 3329 | Small Equivocation | The validator operated a test machine with cloned keys; the test machine was online at the same time as the primary, which resulted in a slash. Details can be found [here](https://kusama.polkassembly.io/post/1343).                                                                                                        | The validator requested a cancellation of the slash, but the council declined.                                                     |
+| Kusama   | 3995 | Small Equivocation | The validator noticed several errors, after which the client crashed, and a slash was applied. The validator recorded all events and opened GitHub issues to allow for technical opinions to be shared. Details can be found [here](https://kusama.polkassembly.io/post/1733).                                                | The validator requested to cancel the slash. The council approved the request as they believed the error was not operator related. |
