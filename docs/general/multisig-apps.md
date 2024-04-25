@@ -15,22 +15,21 @@ and add your Governance app to this page.
 
 :::
 
-## Polkadot Multisig by Signet
+## Mimir
 
-[Polkadot Multisig](https://polkadotmultisig.com/) by Signet is user-friendly software that helps teams 
-and businesses use multisigs in the Polkadot ecosystem. Multisigs are generally used by organizations to
-hold treasury assets, pay employees or service providers, receive grants or manage an organization's on-chain 
-identity. 
+Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
+[Website](https://app.mimir.global/) | [Twitter](https://twitter.com/Mimir_global) |
+[Telegram](https://t.me/+t7vZ1kXV5h1kNGQ9) | [Github](https://github.com/mimir-labs)
 
-Polkadot Multisig is designed to be usable by a non-technical business user and enables a user to be 
-productive and understand multisig transactions. Further information is available on
-[Polkadot Multisig guide.](https://guide.polkadotmultisig.com/en)
-
-### Signet
-
-Talisman [Signet](https://www.talisman.xyz/signet) supports multisig ops and enterprise workflow for 
-onchain organisations. Enterprise features and self-hosted options available. Signet is proprietary,
-where are Polkadot Multisig by Signet is available for free.
+- **Support for Various Account Types**: Mimir supports a range of account types including Flexible
+  Multisig, Static Multisig, Nested Multisig, and Extension Wallets.
+- **Transaction Tracking**: Offers real-time synchronization of transactions across different
+  account levels.
+- **Third-Party Application Integration**: Users can access third-party applications with their
+  multisig identities. Mimir currently supports integration with applications like Polkadot.js and
+  is planning to expand to others.
+- **User-Friendly Interface**: Designed for ease of use, making complex multisig operations more
+  accessible.
 
 ## Multix
 
@@ -58,21 +57,24 @@ Besides being user-friendly, Multix provides several benefits:
 The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
 [pure proxy page](../learn/learn-proxies-pure.md#scenario-three-multisig-controlling-a-pure-proxy).
 
-## Mimir
 
-Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
-[Website](https://app.mimir.global/) | [Twitter](https://twitter.com/Mimir_global) |
-[Telegram](https://t.me/+t7vZ1kXV5h1kNGQ9) | [Github](https://github.com/mimir-labs)
+## Polkadot Multisig by Signet
 
-- **Support for Various Account Types**: Mimir supports a range of account types including Flexible
-  Multisig, Static Multisig, Nested Multisig, and Extension Wallets.
-- **Transaction Tracking**: Offers real-time synchronization of transactions across different
-  account levels.
-- **Third-Party Application Integration**: Users can access third-party applications with their
-  multisig identities. Mimir currently supports integration with applications like Polkadot.js and
-  is planning to expand to others.
-- **User-Friendly Interface**: Designed for ease of use, making complex multisig operations more
-  accessible.
+[Polkadot Multisig](https://polkadotmultisig.com/) by Signet is user-friendly software that helps teams 
+and businesses use multisigs in the Polkadot ecosystem. Multisigs are generally used by organizations to
+hold treasury assets, pay employees or service providers, receive grants or manage an organization's on-chain 
+identity. 
+
+Polkadot Multisig is designed to be usable by a non-technical business user and enables a user to be 
+productive and understand multisig transactions. Further information is available on
+[Polkadot Multisig guide.](https://guide.polkadotmultisig.com/en)
+
+### Signet
+
+Talisman [Signet](https://www.talisman.xyz/signet) supports multisig ops and enterprise workflow for 
+onchain organisations. Enterprise features and self-hosted options available. Signet is proprietary,
+where are Polkadot Multisig by Signet is available for free.
+
 
 ## Polkasafe (Beta)
 
