@@ -458,6 +458,7 @@ module.exports = {
                   items: [
                     "learn/learn-agile-coretime",
                     "learn/learn-guides-coretime-marketplaces",
+                    "learn/learn-guides-coretime-parachains",
                   ],
                 },
                 {
@@ -722,19 +723,6 @@ module.exports = {
           ],
         },
         "build/build-smart-contracts",
-        {
-          type: "category",
-          label: "Getting Started with Coretime",
-          link: {
-            type: 'generated-index',
-            title: "Getting Started with Coretime",
-            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
-            slug: '/build-protocol-index',
-          },
-          items: [
-            "build/build-guides-coretime-adder-collator"
-          ],
-        },
         {
           type: "category",
           label: "Protocol Development Resources",

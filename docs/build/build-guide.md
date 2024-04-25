@@ -10,19 +10,8 @@ slug: ../build-guide
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol and network
-that provides **shared security** amongst all connected parachains (which are
-[tasks](../learn/learn-agile-coretime.md#task)) and allowing all connected tasks to **interoperate**
-by using [XCM](../learn/learn-xcm.md).
-
-:::info What is a task?
-
-You might see the term "task" referenced quite a bit, but in most cases, it refers to a process
-utilizing Polkadot's compute. This could be a parachain or any other computational process, provided
-that it adheres to the Polkadot protocol.
-
-The full definition can be found [here](../learn/learn-agile-coretime.md#task).
-
-:::
+that provides **shared security** amongst all connected parachains and allowing all connected tasks
+to **interoperate** by using [XCM](../learn/learn-xcm.md).
 
 The time it takes to develop and launch a new chain has dropped significantly with the tools
 Polkadot provides. While before, it would take years to launch a new chain, now it may only take
@@ -43,16 +32,15 @@ blockchain and deploying it on a testnet.
 
 :::
 
-This build guide covers four different areas, taking a **top-down** approach from protocol
+This build guide covers three different areas, taking a **top-down** approach from protocol
 development to user-facing applications:
 
 <!-- prettier-ignore -->
 <!-- no toc -->
 
 1. [Protocol Development - Developing parachains/blockchains](#building-parachains-tasks)
-2. [Deploying on a Core](#deploying-on-a-core)
-3. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
-4. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
+2. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
+3. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
 
 :::tip Keep reading to find out more, or explore each respective area
 
@@ -94,7 +82,7 @@ flowchart TB
  subgraph PSL ["Blockchain Development"]
  direction LR
  PS["Polkadot SDK"] --> R[WASM Runtime - Substrate & FRAME]
- R -->Parachain["Parachain/Task"]-->SSC["Shared Security - Cumulus"]-->Core("Deployed on a Core")
+ R -->Parachain["Parachain/Task"]-->SSC["Shared Security - Cumulus"]
  R -->SoloChain[Solo Chain]-->NSS["No Shared Security"]
  end
  end
@@ -125,7 +113,7 @@ context about the application you could make.
 
 [Take a look at the various development network options here.](./build-network-overview.md)
 
-## Building Parachains (Tasks)
+## Building Parachains
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
 Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
@@ -133,10 +121,6 @@ shared security of multiple [parachains](../learn/learn-parachains.md), which ar
 protocols. Parachains currently connect to a relay chain using the
 [Parachains Protocol](../learn/learn-parachains-protocol.md). More elaborate (or simpler) tasks
 could be constructed in the future.
-
-A parachain is one of the examples of a type of **task**, which runs on a core on Polkadot. In
-theory, one could develop other types of tasks, not just other blockchains, that can run on a
-Polkadot core.
 
 ![build 1](../assets/build-1.png)
 
@@ -222,10 +206,6 @@ followed by FRAME, with Cumulus as the final step to understanding the entire pa
 process. This way, one can view how various paradigms are applied and decide on integrating or
 utilizing Substrate for their particular use case.
 
-<!-- todo @bader: add guide link -->
-
-Please see the parachain development guide for how to start building a parachain.
-
 ### Building a Pallet
 
 While parachains are highly customizable, they are often complex to develop. If you wish to get
@@ -233,20 +213,6 @@ familiar with FRAME and Substrate, a good place to start is by building a pallet
 environment. A pallet is a fully customizable module that allows you to implement layer one logic
 with relatively minimal development time on a fundamental level while still allowing the possibility
 of building advanced functionality into your custom chain.
-
-## Deploying on a Core
-
-Once you have your runtime and pallets developed, you will be able to deploy it on a
-[core](../learn/learn-agile-coretime.md#core), which is how one utilizes the shared security of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. One does so by:
-
-1. **Compiling** the runtime (written in Rust) to a WebAssembly blob, thereby defining how your
-   state transitions from one state to the next.
-2. **Generating** your genesis state.
-3. **Obtaining** a core, most likely through a
-   [Coretime marketplace](../learn/learn-guides-coretime-marketplaces.md).
-4. **Registering** the runtime blob and genesis state with that core.
-5. **Ensuring** you have at least one honest, synced collator for your task
 
 ## Developing Smart Contracts
 

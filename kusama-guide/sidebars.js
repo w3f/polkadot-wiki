@@ -724,6 +724,19 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Getting Started with Coretime",
+          link: {
+            type: 'generated-index',
+            title: "Getting Started with Coretime",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-coretime-index',
+          },
+          items: [
+            "build/build-guides-coretime-adder-collator"
+          ],
+        },
+        {
+          type: "category",
           label: "Resources",
           items: ["build/build-hackathon"],
         },
