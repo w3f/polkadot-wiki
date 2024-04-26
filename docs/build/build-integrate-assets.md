@@ -77,7 +77,7 @@ hash, etc.) will change on transaction construction.
 
 ### Foreign Assets
 
-Foreign assets are those assets in Asset Hub whose native blockchain is not Asset Hub. These are mainly native tokens from other parachains or bridged tokens from other consensus systems (such as Ethereum). Once a foreign asset has been registered in Asset Hub (by its root origin), users are enabled to send this token from its native blockchain to Asset Hub and operate with it as if it was any other asset.
+Foreign assets are those assets in Asset Hub whose native blockchain is not Asset Hub. These are mainly native tokens from other parachains or bridged tokens from other consensus systems (such as Ethereum). Once a foreign asset has been registered in Asset Hub (by its root origin), users are enabled to send this token from its native blockchain to Asset Hub and operate with it as if it were any other asset.
 
 Practically speaking, foreign assets are handled by the `foreign-assets` pallet in Asset Hub, which is an instance of the Assets pallet. Hence, this pallet exposes the same interface to users and other pallets as the Assets pallet.
 
