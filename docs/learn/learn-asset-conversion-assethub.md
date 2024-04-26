@@ -38,6 +38,12 @@ Asset Conversion pallet allows you to:
   via a runtime call endpoint
 - [query the size of a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/trait.AssetConversionApi.html#method.get_reserves).
 
+:::info Asset Conversion Tutorials
+
+The Asset Conversion user guide and tutorials are available [here](./learn-guides-asset-conversion.md)
+
+:::
+
 ## Fee Payment in Any Asset - Wallets
 
 Without Asset Conversion pallet, only DOT and [sufficient assets](./learn-assets.md#sufficient-assets) can be used for paying transaction
