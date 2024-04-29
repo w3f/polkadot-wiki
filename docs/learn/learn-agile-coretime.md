@@ -288,6 +288,7 @@ previous sales and can increase by 5x depending on the number of cores sold and 
 These numbers represent extreme cases though.
 
 #### Can the renewal price be different per taskID (Parachain)? Or will each sale cycle have a fix renewal price?
+
 It is in general different per task if they hit their caps.
 
 With the current configuration on Kusama, if the price is going up, every renewal pays a max of 3% more than they paid the sale before. That keeps going back to the sale cycle they first bought their coretime (or the sale cycle they renewed their lease). And because people buy in different sale cycles, or even at different times in each sale cycle, their prices can be wildly different from one another. There’s a special case for leaseholders at the end of their lease. They pay the base price in the sale in which they expire.
