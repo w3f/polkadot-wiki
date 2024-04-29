@@ -287,6 +287,14 @@ The bulk price in Kusama might vary between a 50% decrease in case no cores were
 previous sales and can increase by 5x depending on the number of cores sold and when they sell.
 These numbers represent extreme cases though.
 
+#### Can the renewal price be different per taskID (Parachain)? Or will each sale cycle have a fix renewal price?
+
+It is in general different per task if they hit their caps.
+
+With the current configuration on Kusama, if the price is going up, every renewal pays a maximum of 3% more than they paid for the sale before. That keeps going back to the sale cycle they first bought their coretime (or the sale cycle they renewed their lease). And because people buy in different sale cycles, or even at different times in each sale cycle, their prices can be wildly different from one another. There’s a special case for leaseholders at the end of their lease. They pay the base price in the sale in which they expire.
+
+The story is different if the prices are decreasing, since the caps are irrelevant. If it drops far enough it could mean that all parachains renew at the same price.
+
 #### If purchased in bulk, do you then have “one core” or “one bucket of coretime” that you can use in your own time? Or is there a specific slot?
 
 You have a specific core for the duration of four weeks, and have the ability to split the region
@@ -396,7 +404,7 @@ migrated to Agile Coretime: In case you have a lease secured, you automatically 
 coretime, with renewal right.
 
 _Note: if your team secured a lease with a new paraID, please
-[read the question about swapping](https://github.com/w3f/polkadot-wiki/blob/master/docs/learn/learn-agile-coretime.md#will-i-be-able-to-still-swap-my-lease-with-another-project)._
+[read the question about swapping](#will-i-be-able-to-still-swap-my-lease-with-another-project)._
 
 #### When and how can I renew my legacy lease?
 
@@ -407,7 +415,7 @@ sale period you can renew your bulk coretime by calling `renew` on the lease's
 be charged and will be equal to the market price of a bulk core in that sale.
 
 For more details, check out our
-[technical guide](https://polkadot-public.notion.site/Agile-Coretime-FAQ-c930796e8c884011adb1fa24ef22f77c#472589f3d2424931b101461d8c503213).
+[technical guide](https://polkadot-public.notion.site/Implementation-reference-Coretime-from-Trappist-c930796e8c884011adb1fa24ef22f77c?pvs=4).
 
 #### Will all leases be migrated to Agile Coretime?
 
