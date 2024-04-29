@@ -57,24 +57,22 @@ Besides being user-friendly, Multix provides several benefits:
 The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
 [pure proxy page](../learn/learn-proxies-pure.md#scenario-three-multisig-controlling-a-pure-proxy).
 
-
 ## Polkadot Multisig by Signet
 
-[Polkadot Multisig](https://polkadotmultisig.com/) by Signet is user-friendly software that helps teams 
-and businesses use multisigs in the Polkadot ecosystem. Multisigs are generally used by organizations to
-hold treasury assets, pay employees or service providers, receive grants or manage an organization's on-chain 
-identity. 
+[Polkadot Multisig](https://polkadotmultisig.com/) by Signet is user-friendly software that helps
+teams and businesses use multisigs in the Polkadot ecosystem. Multisigs are generally used by
+organizations to hold treasury assets, pay employees or service providers, receive grants or manage
+an organization's on-chain identity.
 
-Polkadot Multisig is designed to be usable by a non-technical business user and enables a user to be 
+Polkadot Multisig is designed to be usable by a non-technical business user and enables a user to be
 productive and understand multisig transactions. Further information is available on
 [Polkadot Multisig guide.](https://guide.polkadotmultisig.com/en)
 
 ### Signet
 
-Talisman [Signet](https://www.talisman.xyz/signet) supports multisig ops and enterprise workflow for 
-onchain organisations. Enterprise features and self-hosted options are available. Signet is proprietary,
-where as Polkadot Multisig by Signet is free.
-
+Talisman [Signet](https://www.talisman.xyz/signet) supports multisig ops and enterprise workflow for
+onchain organisations. Enterprise features and self-hosted options are available. Signet is
+proprietary, where as Polkadot Multisig by Signet is free.
 
 ## Polkasafe (Beta)
 

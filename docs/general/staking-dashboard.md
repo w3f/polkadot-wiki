@@ -326,8 +326,8 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 
 ## Support
 
-Support for the Staking Dashboard is available at [the official Polkadot support website](https://support.polkadot.network/support/home).
-
+Support for the Staking Dashboard is available at
+[the official Polkadot support website](https://support.polkadot.network/support/home).
 
 ## Network
 

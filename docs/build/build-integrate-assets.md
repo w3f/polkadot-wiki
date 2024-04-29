@@ -77,11 +77,20 @@ hash, etc.) will change on transaction construction.
 
 ### Foreign Assets
 
-Foreign assets are those assets in Asset Hub whose native blockchain is not Asset Hub. These are mainly native tokens from other parachains or bridged tokens from other consensus systems (such as Ethereum). Once a foreign asset has been registered in Asset Hub (by its root origin), users are enabled to send this token from its native blockchain to Asset Hub and operate with it as if it were any other asset.
+Foreign assets are those assets in Asset Hub whose native blockchain is not Asset Hub. These are
+mainly native tokens from other parachains or bridged tokens from other consensus systems (such as
+Ethereum). Once a foreign asset has been registered in Asset Hub (by its root origin), users are
+enabled to send this token from its native blockchain to Asset Hub and operate with it as if it were
+any other asset.
 
-Practically speaking, foreign assets are handled by the `foreign-assets` pallet in Asset Hub, which is an instance of the Assets pallet. Hence, this pallet exposes the same interface to users and other pallets as the Assets pallet.
+Practically speaking, foreign assets are handled by the `foreign-assets` pallet in Asset Hub, which
+is an instance of the Assets pallet. Hence, this pallet exposes the same interface to users and
+other pallets as the Assets pallet.
 
-The main difference to take into account for foreign assets is their identifier. Instead of using integers as identifiers like in the Assets pallet, assets stored in the `foreign-assets` pallet are identified by [their XCM multilocation](https://wiki.polkadot.network/docs/learn/xcm/fundamentals/multilocation-summary).
+The main difference to take into account for foreign assets is their identifier. Instead of using
+integers as identifiers like in the Assets pallet, assets stored in the `foreign-assets` pallet are
+identified by
+[their XCM multilocation](https://wiki.polkadot.network/docs/learn/xcm/fundamentals/multilocation-summary).
 
 ## Integration
 
@@ -154,7 +163,8 @@ means the providers need to monitor cross-chain transfers on top of local transf
 corresponding `balances.transfer` events.
 
 Currently {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} can be sent and received in the
-Relay Chain and in the Asset Hub either with a [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
+Relay Chain and in the Asset Hub either with a
+[Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
 [system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a
 [Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport)
 from any other parachain. In both cases, the event emitted when processing the transfer is the
@@ -172,9 +182,9 @@ relevant `balances.deposit` event. This can be done as follows:
 1. Query the relevant chain `at` the block the `balances.deposit` event was emitted.
 2. Filter for a `messageQueue(Processed)` event, also emitted during block initialization. This
    event has a parameter `Id`. The value of `Id` identifies the cross-chain message received in the
-   Relay Chain or in the Asset Hub. It can be used to track back the message in the origin parachain if needed. Note
-   that a block may contain several `messageQueue(Processed)` events corresponding to several
-   cross-chain messages processed for this block.
+   Relay Chain or in the Asset Hub. It can be used to track back the message in the origin parachain
+   if needed. Note that a block may contain several `messageQueue(Processed)` events corresponding
+   to several cross-chain messages processed for this block.
 
 #### Additional Examples of Monitoring XCM Transfers
 

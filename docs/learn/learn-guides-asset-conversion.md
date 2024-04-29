@@ -20,8 +20,8 @@ see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashb
 :::info Wallet and UI Developers
 
 The [DOT ACP UI](https://github.com/MVPWorkshop/dot-acp-ui) project is part of Polkadot initiative
-for building front-end and UI for Asset Conversion Pallet on Polkadot's Asset Hub. Currently, the app
-is deployed on Westend, Rococo and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
+for building front-end and UI for Asset Conversion Pallet on Polkadot's Asset Hub. Currently, the
+app is deployed on Westend, Rococo and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
 
 :::
 
