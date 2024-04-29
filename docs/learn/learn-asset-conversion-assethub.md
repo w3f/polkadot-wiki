@@ -40,16 +40,18 @@ Asset Conversion pallet allows you to:
 
 :::info Asset Conversion Tutorials
 
-The Asset Conversion user guide and tutorials are available [here](./learn-guides-asset-conversion.md)
+The Asset Conversion user guide and tutorials are available
+[here](./learn-guides-asset-conversion.md)
 
 :::
 
 ## Fee Payment in Any Asset - Wallets
 
-Without Asset Conversion pallet, only DOT and [sufficient assets](./learn-assets.md#sufficient-assets) can be used for paying transaction
-fees. With the Asset Conversion pallet deployed, Wallets can enable users to pay transaction fees
-through any arbitrary asset made available in pools with either DOT or sufficient assets. More
-specifically, this functionality is enabled through
+Without Asset Conversion pallet, only DOT and
+[sufficient assets](./learn-assets.md#sufficient-assets) can be used for paying transaction fees.
+With the Asset Conversion pallet deployed, Wallets can enable users to pay transaction fees through
+any arbitrary asset made available in pools with either DOT or sufficient assets. More specifically,
+this functionality is enabled through
 [Asset Conversion Transaction Payment Pallet](https://github.com/paritytech/polkadot-sdk/tree/cdc8d197e6d487ef54f7e16767b5c1ab041c8b10/substrate/frame/transaction-payment/asset-conversion-tx-payment),
 allowing runtimes that include it to pay for transactions in assets other than the native token of
 the chain.
@@ -80,9 +82,10 @@ threads), this becomes a huge burden in terms of network support. This is in con
 support for an additional ERC20 token; the marginal effort is very small since an Ethereum node
 already serves all the data they need.
 
-With support for these assets on Asset Hub, exchanges/custodians could monitor one chain for deposits
-(applications and UIs would need to give the option to transfer to Asset Hub). For withdrawals, users
-could choose to withdraw to their address on Asset Hub. There are two user experience bonuses here:
+With support for these assets on Asset Hub, exchanges/custodians could monitor one chain for
+deposits (applications and UIs would need to give the option to transfer to Asset Hub). For
+withdrawals, users could choose to withdraw to their address on Asset Hub. There are two user
+experience bonuses here:
 
 - The exchange/custodian only needs to transact on one parachain and can access every other without
   any infrastructure lift.
