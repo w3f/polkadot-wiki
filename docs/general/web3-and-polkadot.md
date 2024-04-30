@@ -209,6 +209,9 @@ automatically by the light client. Polkadot has a browser-embedded light client
 [smoldot](https://github.com/smol-dot/smoldot) codebase. Most web3 applications today access
 blockchain data through a centralized RPC server.
 
+For more details about the inner workings of Smoldot, see
+[this blog post](https://hackmd.io/@s_iGZLIITG6WjSgnFX0pcg/rkmmcvBno).
+
 ## Interoperability
 
 The Web3 landscape's expansion into a multi-layered ecosystem highlights the need for
