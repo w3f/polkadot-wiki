@@ -7,14 +7,10 @@ keywords: [Gov1, Gov1 Treasury, Launch, Redenomination, Controller]
 slug: ../learn-archive
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 import DocCardList from '@theme/DocCardList';
 
-<div className="sticky" style={{ zIndex: 1 }}> 
-<br />
-
-This section contains archived pages. The content in them no longer applies to Polkadot but can
-still be relevant for parachains and related projects.
-
-</div>
+<MessageBox message="This section contains archived pages. The content in them no longer applies to Polkadot but can
+still be relevant for parachains and related projects." />
 
 <DocCardList />

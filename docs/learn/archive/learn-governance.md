@@ -7,13 +7,11 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
-<div className="sticky" style={{ zIndex: 1 }}> 
-<br />
+import MessageBox from "../../../components/MessageBox"; import
+"../../../components/MessageBox.css";
 
-The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
-
-</div>
+<MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md)." />
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled

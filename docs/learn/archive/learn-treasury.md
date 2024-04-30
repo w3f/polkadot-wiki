@@ -7,13 +7,11 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
-<div className="sticky" style={{ zIndex: 1 }}> 
-<br />
+import MessageBox from "../../../components/MessageBox"; import
+"../../../components/MessageBox.css";
 
-The content on this page is archived. For up-to-date information about treasury, see the
-[Polkadot OpenGov Treasury page](../../learn/learn-polkadot-opengov-treasury.md).
-
-</div>
+<MessageBox message="The content on this page is archived. For up-to-date information about treasury, see the
+[Polkadot OpenGov Treasury page](../../learn/learn-polkadot-opengov-treasury.md)." />
 
 The Treasury is a pot of funds collected through a portion of block production rewards, transaction
 fees, slashing, [staking inefficiencies](../learn-staking.md#inflation), etc.

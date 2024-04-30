@@ -7,12 +7,10 @@ keywords: [DOT, redenomination]
 slug: ../learn-redenomination
 ---
 
-<div className="sticky" style={{ zIndex: 1 }}> 
-<br />
+import MessageBox from "../../../components/MessageBox"; import
+"../../../components/MessageBox.css";
 
-The content on this page is archived.
-
-</div>
+<MessageBox message="The content on this page is archived." />
 
 On August 21, 2020, the redenomination of DOT, the native token on Polkadot, occurred. From this
 date, one DOT (old) equals 100 new DOT.
