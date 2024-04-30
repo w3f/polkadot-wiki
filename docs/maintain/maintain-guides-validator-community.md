@@ -277,4 +277,4 @@ since the validator then can build a reputation around the quality of their work
 validation services. Some potential building categories are block explorers, deployment scripts,
 monitoring, observability services, staking dashboards, wallets, command-line utilities, or porting
 implementations to other languages. Additionally, this may also be eligible to be funded via a
-[Web3 Foundation Grant](https://github.com/w3f/Grants-Program).
+[Web3 Foundation Grant](https://grants.web3.foundation).
