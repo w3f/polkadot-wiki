@@ -7,7 +7,7 @@ keywords: [ambassadors, contribute, contributions, program]
 slug: ../ambassadors
 ---
 
-The Polkadot Ambassador Program is an initiative ran by Web3 Foundation to support potential
+The Polkadot Ambassador Program is an initiative run by Web3 Foundation to support potential
 contributors to the Polkadot community and ecosystem.
 
 ## How it works
