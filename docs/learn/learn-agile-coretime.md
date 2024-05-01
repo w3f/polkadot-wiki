@@ -167,8 +167,8 @@ These features are still under development and will be rolled out in later relea
 #### What is currently being developed in the ecosystem to support Agile Coretime?
 
 There are several ecosystem projects in the making, such as the secondary markets for coretime,
-[Lastic](https://www.lastic.xyz/) (focusing on frontend)
-and [RegionX](https://app.regionx.tech/) (focusing on backend).
+[Lastic](https://www.lastic.xyz/),
+and [RegionX](https://app.regionx.tech/).
 
 Always do your own research. If you feel your project should be listed on the Wiki, please follow
 the [contributor's guide](../general/contributing.md).
