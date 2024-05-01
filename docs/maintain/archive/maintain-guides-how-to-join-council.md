@@ -7,13 +7,11 @@ keywords: [council, how to join council, governance, candidate]
 slug: ../maintain-guides-how-to-join-council
 ---
 
-<div className="sticky" style={{ zIndex: 1 }}> 
-<br />
+import MessageBox from "../../../components/MessageBox"; import
+"../../../components/MessageBox.css";
 
-The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md).
-
-</div>
+<MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
+[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md)." />
 
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing

@@ -402,10 +402,8 @@ module.exports = {
                       label: "Bridge Hub Guides",
                       description: 'Polkadot-JS Guides for Bridge Hub.',
                       link: {
-                        type: 'generated-index',
-                        title: 'Bridge Hub Guides',
-                        description: 'Guides and Tutorials for Trustless Bridges on Bridge Hub',
-                        slug: '/learn-guides-bridges',
+                        type: 'doc',
+                        id: 'learn/learn-guides-bridges',
                       },
                       items: [
                         "learn/learn-guides-dot-ksm-bridge",

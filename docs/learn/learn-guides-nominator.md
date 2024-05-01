@@ -7,17 +7,14 @@ keyword: [nominate, stake, staking, claim, rewards, polkadot-js]
 slug: ../learn-guides-nominator
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import MessageBox from
+"../../components/MessageBox"; import "../../components/MessageBox.css"; import DocCardList from
+'@theme/DocCardList';
 
-<div className="sticky" style={{ zIndex: 1 }}> 
-<br />
-
-Polkadot-JS is for developers and power users only. If you need help using the
+<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages.
-
-</div>
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
 See [this page](./learn-staking.md) to learn about staking.
 
