@@ -9,11 +9,13 @@ slug: ../build-guide
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain network protocol
-that provides **shared security** among all connected parachains and allowing all connected tasks
-to **interoperate** by using [XCM](../learn/learn-xcm.md).
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain network protocol that
+provides **shared security** among all connected parachains and allowing all connected tasks to
+**interoperate** by using [XCM](../learn/learn-xcm.md).
 
-With the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) and [Agile Coretime](../learn/learn-agile-coretime.md), the time it takes to develop and launch a new chain has dropped significantly. Depending on your goals, it may only take weeks or even days.
+With the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) and
+[Agile Coretime](../learn/learn-agile-coretime.md), the time it takes to develop and launch a new
+chain has dropped significantly. Depending on your goals, it may only take weeks or even days.
 
 This starters guide will walk you through the steps you can take today to get started building your
 vision with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will also point to
@@ -25,9 +27,6 @@ Please note that the following documentation is more geared towards developers. 
 for more general knowledge related to Polkadot, be sure to check out the
 [Learn](../learn/learn-index) section.
 
-Looking to jump into a guide? Check out our starter developer guides for creating a minimal
-blockchain and deploying it on a testnet.
-
 :::
 
 This build guide covers three different areas, taking a **top-down** approach from protocol
@@ -36,7 +35,7 @@ development to user-facing applications:
 <!-- prettier-ignore -->
 <!-- no toc -->
 
-1. [Protocol Development - Developing parachains/blockchains](#building-parachains-tasks)
+1. [Runtime Development - Developing parachains/blockchains](#building-parachains-tasks)
 2. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
 3. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
 
@@ -131,11 +130,11 @@ extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} an
 
 :::
 
-Parachains built through the Polkadot SDK, open possibilities to construct complex **runtime**, or **STF** (state transition
-function) the logic that would be too expensive to execute with smart contracts. However, unlike
-smart contracts, parachains lack a mandatory gas metering system entirely and could potentially be
-vulnerable to bugs that cause infinite loops (something that is prevented by design in smart
-contracts). This vulnerability is mitigated by the
+Parachains built through the Polkadot SDK, open possibilities to construct complex **runtime**, or
+**STF** (state transition function) the logic that would be too expensive to execute with smart
+contracts. However, unlike smart contracts, parachains lack a mandatory gas metering system entirely
+and could potentially be vulnerable to bugs that cause infinite loops (something that is prevented
+by design in smart contracts). This vulnerability is mitigated by the
 [weight system](https://docs.substrate.io/build/tx-weights-fees/) that is implemented in Substrate
 -- although it places more of a burden on the developer of the parachain to perform properly
 benchmarks.
@@ -194,12 +193,14 @@ comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
-[Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html) is a set of tools that allows you to convert a blockchain developed using Substrate and FRAME into a Polkadot-compatible Parachain. More specifically, it provides libraries for all of the necessary parts of the Polkadot protocol necessary for Parachains to work, for example:
+[Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html)
+is a set of tools that allows you to convert a blockchain developed using Substrate and FRAME into a
+Polkadot-compatible Parachain. More specifically, it provides libraries for all of the necessary
+parts of the Polkadot protocol necessary for Parachains to work, for example:
 
 - Creating new parachain blocks via Collators
 - Listening to the relay chain for updates
 - Synchronizing upgrades between the parachain and relay chain
-
 
 For most developers, the best place to start is to get familiar with Substrate independently,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
