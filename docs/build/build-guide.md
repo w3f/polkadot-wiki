@@ -22,7 +22,7 @@ resources you can use to start building immediately.
 :::note For Developers!
 
 Please note that the following documentation is more geared towards developers. If you are looking
-for more general knowledge related to Polkadot, be sure to check otu the
+for more general knowledge related to Polkadot, be sure to check out the
 [Learn](../learn/learn-index) section.
 
 Looking to jump into a guide? Check out our starter developer guides for creating a minimal
