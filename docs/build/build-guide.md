@@ -244,8 +244,8 @@ For a more comprehensive (and maintained) comparison, be sure to check out the
 ### ink! and EVM-based Smart Contracts
 
 At a high level, a _smart contract_ is simply some code that exists at an address on a chain and is
-callable by external actors. Whether it's [EVM-based](https://polkadot-evm.github.io/frontier/), or
-written using [ink!](https://use.ink/), smart contracts sandboxed, executable programs that live
+callable by external actors. Whether it's [EVM-based](https://polkadot-evm.github.io/frontier/) or
+written using [ink!](https://use.ink/), smart contracts are sandboxed, executable programs that live
 on-chain.
 
 :::note
