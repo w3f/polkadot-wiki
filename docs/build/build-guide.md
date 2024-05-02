@@ -13,9 +13,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 that provides **shared security** among all connected parachains and allowing all connected tasks
 to **interoperate** by using [XCM](../learn/learn-xcm.md).
 
-The time it takes to develop and launch a new chain has dropped significantly with the tools
-Polkadot provides. While before, it would take years to launch a new chain, now it may only take
-weeks or even days, depending on your goals.
+With the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) and [Agile Coretime](../learn/learn-agile-coretime.md), the time it takes to develop and launch a new chain has dropped significantly. Depending on your goals, it may only take weeks or even days.
 
 This starters guide will walk you through the steps you can take today to get started building your
 vision with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will also point to
