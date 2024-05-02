@@ -194,10 +194,12 @@ comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
-[Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html)
-transforms FRAME-based runtimes into Polkadot-compatible parachain runtimes, and Substrate-based
-nodes into Polkadot/Parachain-compatible nodes. In other words, Cumulus can enable a regular runtime
-to meet the requirements to have its state verified by Polkadot and take part in shared security.
+[Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html) is a set of tools that allows you to convert a blockchain developed using Substrate and FRAME into a Polkadot-compatible Parachain. More specifically, it provides libraries for all of the necessary parts of the Polkadot protocol necessary for Parachains to work, for example:
+
+- Creating new parachain blocks via Collators
+- Listening to the relay chain for updates
+- Synchronizing upgrades between the parachain and relay chain
+
 
 For most developers, the best place to start is to get familiar with Substrate independently,
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
