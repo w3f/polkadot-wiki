@@ -177,9 +177,9 @@ to construct a runtime/STF and define how your task is supposed to behave. Rangi
 pallets can be quite extensive in providing on-chain functionality.
 
 Even though FRAME is heavily used, it is not the only way to create a valid runtime/STF using
-Substrate. Substrate can be used to create new paradigms and abstractions, one such example is the
+Substrate. Substrate can be used to create new paradigms and abstractions. One such example is the
 [Open Runtime Module Library (ORML)](https://github.com/open-web3-stack/open-runtime-module-library),
-which is another way creating and using runtime modules.
+which is another way of creating and using runtime modules.
 
 :::note
 
