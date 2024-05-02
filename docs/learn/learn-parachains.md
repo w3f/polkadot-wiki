@@ -7,6 +7,10 @@ keywords: [parachains, application-specific, sharding]
 slug: ../learn-parachains
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="Parachain Slot Auctions are being soon deprecated. For existing parachains, leases will be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+
 :::info Testing on Rococo
 
 For information on how to participate in the crowdloan and parachain auction testing on Rococo,

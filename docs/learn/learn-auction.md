@@ -7,7 +7,10 @@ keywords: [auction, slot auctions, parachain, bidding]
 slug: ../learn-auction
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 import RPC from "./../../components/RPC-Connection";
+
+<MessageBox message="Parachain Slot Auctions are being soon deprecated. For existing parachains, leases will be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
 
 For a [parachain](learn-parachains.md) to be added to
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
