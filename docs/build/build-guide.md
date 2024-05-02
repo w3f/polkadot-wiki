@@ -35,7 +35,7 @@ development to user-facing applications:
 <!-- prettier-ignore -->
 <!-- no toc -->
 
-1. [Runtime Development - Developing parachains/blockchains](#building-parachains-tasks)
+1. [Runtime Development - Developing parachains/blockchains](#building-parachains)
 2. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
 3. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
 
