@@ -130,15 +130,13 @@ contracts). This vulnerability is mitigated by the
 -- although it places more of a burden on the developer of the parachain to perform properly
 benchmarks.
 
-:::info What is a parathread?
+:::info What is an on-demand parachain?
 
-Parathreads, or "on-demand parachains," are like parachains and enable the developer to have
-lower-level control of the logic of their application. The main difference between the two is
-economical since parathreads will be much less expensive to secure than a parachain and is a
-"pay-as-you-go" model. The lower costs of parathreads are because parathreads will only produce a
-block when needed, unlike parachains, which have secured a slot to produce a block at every block of
-the Relay Chain. When building a parathread, you will use the same tools (like PDKs) and get all the
-benefits of building a parachain without the cost drawback.
+On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
+Relay Chain. On-demand parachains will only produce a block when needed, unlike full parachains,
+which have secured a slot to produce a block at every block of the Relay Chain. When building an
+on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of building a
+parachain without the cost drawback.
 
 :::
 

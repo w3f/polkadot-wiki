@@ -1,9 +1,9 @@
 ---
 id: learn-parathreads
-title: Parathreads
-sidebar_label: Parathreads
-description: An Introductory Guide to Parathreads.
-keywords: [parathreads, slots]
+title: On-Demand Parachains
+sidebar_label: On-Demand Parachains
+description: An Introductory Guide to On-Demand Parachains.
+keywords: [parathreads, slots, on-demand]
 slug: ../learn-parathreads
 ---
 
