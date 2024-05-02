@@ -18,6 +18,13 @@ The fully functional Polkadot < > Kusama bridge facilitates secure asset transfe
 chains in both the ecosystems. The progress of Polkadot < > Kusama bridge implementation can be
 tracked [here](https://forum.polkadot.network/t/polkadot-kusama-bridge/2971/1).
 
+:::danger Polkadot < > Kusama Bridge is stuck.
+
+Do not send DOT and KSM tokens through the bridge until Polkadot OpenGov [Referendum 694](https://polkadot.polkassembly.io/referenda/694)
+is enacted. 
+
+:::
+
 ## Transfer DOT to Kusama Asset Hub
 
 This tutorial shows how to transfer DOT on Polkadot Asset Hub to Kusama Asset Hub. The first step is
