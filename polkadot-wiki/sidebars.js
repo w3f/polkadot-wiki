@@ -232,6 +232,7 @@ module.exports = {
                 "learn/learn-nomination-pools",
               ],
             },
+            "learn/learn-locks",
             {
               type: "category",
               label: "Polkadot OpenGov",
