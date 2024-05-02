@@ -92,7 +92,7 @@ The below table is a reference to the errors that exists in Polkadot. It is gene
 runtime's metadata.
 
 | Pallet                  | Error                                  | Documentation                                                                                                                                    |
-| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
 | System (0)              |                                        |                                                                                                                                                  |
 |                         | InvalidSpecName (0)                    | The name of specification does not match between the current runtime and the new runtime.                                                        |
 |                         | SpecVersionNeedsToIncrease (1)         | The specification version is not allowed to decrease between the current runtime and the new runtime.                                            |
@@ -165,10 +165,7 @@ runtime's metadata.
 |                         | TooSoon (3)                            | Cannot signal forced change so soon after last.                                                                                                  |
 |                         | InvalidKeyOwnershipProof (4)           | A key ownership proof provided as part of an equivocation report is invalid.                                                                     |
 |                         | InvalidEquivocationProof (5)           | An equivocation proof provided as part of an equivocation report is invalid.                                                                     |
-|                         | DuplicateOffenceReport (6)             | A given equivocation report is valid but already previously reported.                                                                            |
-| ImOnline (12)           |                                        |                                                                                                                                                  |
-|                         | InvalidKey (0)                         | Non existent public key.                                                                                                                         |
-|                         | DuplicatedHeartbeat (1)                | Duplicated heartbeat.                                                                                                                            |
+|                         | DuplicateOffenceReport (6)             | A given equivocation report is valid but already previously reported.                                                                            |     |
 | Democracy (14)          |                                        |                                                                                                                                                  |
 |                         | ValueLow (0)                           | Value too low                                                                                                                                    |
 |                         | ProposalMissing (1)                    | Proposal does not exist                                                                                                                          |
