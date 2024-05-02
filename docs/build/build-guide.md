@@ -131,7 +131,7 @@ extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} an
 
 :::
 
-The Polkadot SDK opens possibilities to construct complex **runtime**, or **STF** (state transition
+Parachains built through the Polkadot SDK, open possibilities to construct complex **runtime**, or **STF** (state transition
 function) the logic that would be too expensive to execute with smart contracts. However, unlike
 smart contracts, parachains lack a mandatory gas metering system entirely and could potentially be
 vulnerable to bugs that cause infinite loops (something that is prevented by design in smart
