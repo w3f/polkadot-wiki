@@ -1,18 +1,37 @@
 ---
 id: build-guides-coretime-start
-title: Getting Started - Deploying on Coretime
-sidebar_label: Getting Started with Coretime
-description: Getting started with Agile Coretime
+title: Getting Started - Intro to the Polkadot SDK
+sidebar_label: Intro to the Polkadot SDK
+description: Introduction to the Polkadot SDK
 keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../build-guides-coretime-start
 ---
 
-:::warning Only for Kusama and testnets!
-
-The following content is only for the Kusama and testnet networks at the moment, and is not yet
-deployed on Polkadot.
+:::warning This section is under construction!
 
 :::
+
+:::warning Only for Kusama and testnets!
+
+Agile coretime is only for the Kusama and testnet networks at the moment, and is not yet deployed on
+Polkadot.
+
+:::
+
+## Polkadot SDK
+
+At first glance, the Polkadot SDK can be rather overwhelming, and in a way it is - it packs a lot of
+tech into one place. The Polkadot SDK used to be overarching **three** respositories:
+
+- **Polkadot** - Which for a time, included both the client implementation and runtime, until the
+  runtime was moved to the Polkadot Fellows organization.
+- **Substrate** - The underlying, core primitives and libraries for building blockchains (any
+  blockchain, not just one for Polkadot). Much of Polkadot is built with Substrate!
+- **Cumulus** - A set of libraries and tools which pertain specifically with connecting blockchains
+  to Polkadot, known as parachains.
+
+> For an in-depth dive into the monorepo, I highly recommend you look into the
+> [Polkadot SDK Docs, which explains everything.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/index.html)
 
 ## Deploying on a Core
 
@@ -20,13 +39,16 @@ Once you have your runtime and pallets developed, you will be able to deploy it 
 [core](../learn/learn-agile-coretime.md#core), which is how one utilizes the shared security of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. One does so by:
 
-1. **Compiling** the runtime (written in Rust) to a WebAssembly blob, thereby defining how your
-   state transitions from one state to the next.
-2. **Generating** your genesis state.
-3. **Obtaining** a core, most likely through a
+1. **Reserving** a [`ParaId`](../general/glossary.md#paraid), where you will upload your runtime and
+   genesis state.
+2. **Compiling** the runtime (written in Rust) to a WebAssembly blob, thereby defining how your
+   state transitions from one state to the next. This runtime is created using the Polkadot SDK. 2a.
+   **Ensure** your chain spec is viable and ready to be deployed as a live, working parachain.
+3. **Generating** your genesis state and wasm.
+4. **Obtaining** a core, most likely through a
    [Coretime marketplace](../learn/learn-guides-coretime-marketplaces.md).
-4. **Registering** the runtime blob and genesis state with that core.
-5. **Ensuring** you have at least one honest, synced collator for your task
+5. **Assigning** that core to your[ `ParaId`](../general/glossary.md#paraid).
+6. **Ensuring** you have at least one honest, synced collator for your task
 
 :::info What is a task?
 
@@ -37,5 +59,3 @@ that it adheres to the Polkadot protocol.
 The full definition can be found here.
 
 :::
-
-## Polkadot SDK Templates
