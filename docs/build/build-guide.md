@@ -9,8 +9,8 @@ slug: ../build-guide
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain protocol and network
-that provides **shared security** amongst all connected parachains and allowing all connected tasks
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain network protocol
+that provides **shared security** among all connected parachains and allowing all connected tasks
 to **interoperate** by using [XCM](../learn/learn-xcm.md).
 
 The time it takes to develop and launch a new chain has dropped significantly with the tools
