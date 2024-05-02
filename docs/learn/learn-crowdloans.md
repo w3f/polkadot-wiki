@@ -10,7 +10,7 @@ slug: ../learn-crowdloans
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 import RPC from "./../../components/RPC-Connection";
 
-<MessageBox message="With Agile Coretime, parachain crowdloans are being soon deprecated. For an alternative option to crowdloans see the [Polimec parachain](https://www.polimec.org/)." />
+<MessageBox message="With Agile Coretime, crowdloans are being soon deprecated. For an alternative option to crowdloans see the [Polimec parachain](https://www.polimec.org/)." />
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
 for their parachain bids in a decentralized crowdloan.

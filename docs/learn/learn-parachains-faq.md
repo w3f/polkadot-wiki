@@ -7,6 +7,10 @@ keywords: [parachains, application-specific, sharding, faq]
 slug: ../learn-parachains-faq
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="Parachain Slot Auctions and Crowdloans are being soon deprecated. For existing parachains, leases will be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+
 ## General
 
 ### What is "parachain consensus"?
