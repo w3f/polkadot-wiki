@@ -183,22 +183,23 @@ are unreserved. Parachains that have not secured a new lease to extend their slo
 
 ## System Parachains
 
-System parachains are parachains that use execution cores allocated by the network's governance.
-These chains remove transactions from the Relay Chain, allowing network validators to allocate
-resources to validating parachains. System chains are Polkadot using its scaling technology to host
-itself.
+[System parachains](./learn-system-chains.md) are parachains that use execution cores allocated by
+the network's governance. These chains remove transactions from the Relay Chain, allowing network
+validators to allocate resources to validating parachains. System chains are Polkadot using its
+scaling technology to host itself.
 
-See the
-[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-this
-[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866),
-and the [system parachains](learn-system-chains.md) page for more information.
+See this
+[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+and this
+[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866)
+for more information.
 
 ## On-demand Parachains
 
 :::info On-demand parachains were previously named parathreads
 
-On-demand parachains are parachains that acquired on-demand coretime.
+On-demand parachains (previously called parathreads) are parachains that acquired
+[on-demand coretime](./learn-agile-coretime.md#on-demand-coretime).
 
 :::
 
@@ -221,26 +222,24 @@ needs more, the computer can create virtual memory by using _swap space_ on a ha
 allows the capacity of a computer's memory to expand and for more processes to run concurrently with
 the trade-off that some processes will take longer to progress.
 
-### Permanent Parachain vs. On-demand Parachains
+### Permanent vs. On-demand Parachains
 
-Permanent parachains and nn-demand parachains are very similar from a development perspective. One
+Permanent parachains and on-demand parachains are very similar from a development perspective. One
 can imagine that a chain developed with Substrate can at different points in its lifetime assume one
 of three states:
 
 - an independent chain with secured bridge,
-- a parachain always connected to the Relay Chain,
-- or an on-demand parachain intermittently connected to the Relay Chain.
+- a parachain always connected to the Relay Chain (i.e. permanent),
+- or a parachain intermittently connected to the Relay Chain (i.e. on-demand)
 
-It can switch between these last two states with relatively minimal effort since the difference is
-more of an economic distinction than a technological one.
+It can switch between these states with relatively minimal effort since the difference is more of an
+economic distinction than a technological one.
 
 On-demand parachains have the exact same benefits for connecting to
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} that a full parachain has. Namely,
 it is able to send messages to other para-objects through [XCMP](learn-xcm.md###XCMP) and it is
 secured under the full economic security of {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }}'s validator set.
-
-The difference between permanent parachains and on-demand parachains is economic.
 
 ## Parachains' Use Cases
 

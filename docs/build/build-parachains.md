@@ -388,7 +388,7 @@ Parachain slots will be sold in open auctions, the mechanics of which can be fou
 [parachain auction](../learn/learn-auction.md) page.
 
 A parachain can be
-[fully-fledged or on-demand](../learn/learn-parachains.md#permanent-parachain-vs-on-demand-parachains).
+[fully-fledged or on-demand](../learn/learn-parachains.md#permanent-vs-on-demand-parachains).
 
 ## Resources
 
