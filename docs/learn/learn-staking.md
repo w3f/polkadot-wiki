@@ -282,15 +282,7 @@ Understandably, most of the validator nodes run on cloud service providers that 
 hardware specifications and high levels of availability and connectivity. Keep in mind that a
 validator in the active set is supposed to be fully online and available for producing blocks. If
 the active validator node goes offline due to network interruptions or a power outage, that
-validator will get fewer rewards. As
-[Polkadot's block production mechanism](./learn-consensus.md#block-production-babe) is reasonably
-resilient to a small proportion of validators going offline, no slashing is imposed until 10% of the
-validators in the active set go offline. Hence, if multiple nodes are running on a single cloud
-service provider and go offline simultaneously due to an outage or due to a change in their terms
-and conditions policy regarding the support of Proof-of-Stake (PoS) operations, the offline
-validators and all the nominators backing them can be slashed up 7% of their stake on Polkadot.
-Hence, it is recommended that you check if you are nominating the validator nodes that are running
-on cloud service providers, and if they do, check if they allow for Proof-of-Stake operations.
+validator will get fewer rewards.
 
 :::tip Checking Validators using Network Providers
 
@@ -445,9 +437,8 @@ for details. For specific details about validator payouts, please see
 
 ### Slashing
 
-Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs
-modified software) in the network. They and their nominators will get slashed by losing a percentage
-of their bonded/staked DOT.
+Slashing will happen if a validator misbehaves in the network. They and their nominators will get
+slashed by losing a percentage of their bonded/staked DOT.
 
 Any slashed DOT will be added to the [Treasury](./archive/learn-treasury.md). The rationale for this
 (rather than burning or distributing them as rewards) is that slashes may then be reverted by the
@@ -487,7 +478,7 @@ guidelines for different levels of severity for offenses. To understand how slas
 calculated, see the equations in the section below.
 
 - Level 1: Isolated [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small
-  amount of the stake and chills.
+  amount of the stake.
 - Level 2: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
   in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.

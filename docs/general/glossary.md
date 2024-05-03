@@ -641,7 +641,7 @@ attacker would need to attack the entire
 ## Slashing
 
 The removal of a percentage of an account's DOT as a punishment for a validator acting maliciously
-or incompetently (e.g., equivocating or remaining offline for an extended period).
+or incompetently.
 
 ## Soft Fork
 

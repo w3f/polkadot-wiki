@@ -260,10 +260,10 @@ since staking participation is changing dynamically, it works well as an indicat
 
 #### Commission Fees & Slashes
 
-The network slashes a validator for a misbehavior (e.g. validator offline, equivocation, etc.) the
-slashed amount is a fixed percentage (and not a fixed amount), which means that validators with more
-stake get slashed more DOT. Again, this is done to provide nominators with an economic incentive to
-shift their preferences and back less popular validators whom they consider to be trustworthy.
+The network slashes a validator for a misbehavior. The slashed amount is a fixed percentage (and not
+a fixed amount), which means that validators with more stake get slashed more DOT. Again, this is
+done to provide nominators with an economic incentive to shift their preferences and back less
+popular validators whom they consider to be trustworthy.
 
 Also, note that each validator candidate is free to name their desired commission fee (as a
 percentage of rewards) to cover operational costs. Since validators are paid the same, validators
@@ -310,8 +310,7 @@ staking rewards as one), slashing grows exponentially. A single validator equivo
 Validators may run their nodes on multiple machines to make sure they can still perform validation
 work in case one of their nodes goes down, but validator operators should be extremely careful in
 setting these up. If they do not have good coordination to manage signing machines, equivocation is
-possible, and equivocation offenses are slashed at much higher rates than equivalent offline
-offenses.
+possible.
 
 If a validator is reported for any one of the offenses they will be removed from the validator set
 ([chilled](#chilling)) and they will not be paid while they are out. They will be considered

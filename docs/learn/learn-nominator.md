@@ -249,11 +249,11 @@ example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the ope
 
 :::warning Single Operators with Multiple Validators
 
-Recall that slashing is an additive function; the more validators offline or equivocating in a given
-session, the harsher the penalties. Since validators that are controlled by a single operator are
-more at risk of a "synchronized" failure, nominating them implies a greater risk of having a large
-slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is
-independent of others in many ways (different hardware, geographic location, owner, etc.).
+Recall that slashing is an additive function; the more validators equivocating in a given session,
+the harsher the penalties. Since validators that are controlled by a single operator are more at
+risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of
+your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of
+others in many ways (different hardware, geographic location, owner, etc.).
 
 :::
 
