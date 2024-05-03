@@ -37,9 +37,9 @@ ideas.
 ## A Rollup Chain
 
 JAM will be a domain-specific chain that handles one particular domain of problems. In this case,
-roll-ups, what Ethereum people call optimistic roll-ups. JAM's rollups are heavily bounded in terms
-of their security. This is what Polkadot has been doing for the last five years, it is already a
-highly domain-specific roll-up chain. JAM essentially makes it less opinionated and more generic.
+roll-ups. JAM's rollups are heavily bounded in terms of their security. This is what Polkadot has
+been doing for the last five years, it is already a highly domain-specific roll-up chain. JAM
+essentially makes it less opinionated and more generic.
 
 The JAM chain accepts outputs of roll-ups, in more general terms, bits of computation done
 elsewhere, and integrates the outputs into a shared state, similarly to how the Polkadot Relay Chain
@@ -190,8 +190,8 @@ service profile: delivering parachains. In pursuit of this service, Polkadot has
 essential subcomponents:
 
 - the distributed data availability system
-- the auditing and guarantees system for computation (i.e. an optimistic roll-up system with robust
-  security guarantees)
+- the auditing and guarantees system for computation (i.e. a roll-up system with robust security
+  guarantees)
 
 JAM represents a reduction in the level of opinionation compared to Polkadot, offering a higher
 level of abstraction and generalization. This facilitates easier utilization of underlying
