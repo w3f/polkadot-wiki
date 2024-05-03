@@ -102,6 +102,8 @@ These Ledger apps need to be updated every time there is a runtime upgrade.
 
 :::info In Development
 
+Check this [website](https://substrate.beryx.io/new_polkadot_ledger_app) for updates and info.
+
 :::
 
 The Polkadot Ledger Generic App will allow to use your Ledger device on the Relay Chain and
