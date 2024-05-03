@@ -18,7 +18,7 @@ hardware wallets that keep your secret key secured on a physical device that doe
 your computer or the internet. The private keys will not be exposed even if you connect your Ledger
 device via USB to your computer.
 
-Ledger devices are hierarchical deterministic wallets (HD wallets), that is:
+Ledger devices are hierarchical deterministic wallets (HD wallets), where:
 
 - _Deterministic_ means that only one seed phrase generates all the accounts for different
   blockchain networks.
