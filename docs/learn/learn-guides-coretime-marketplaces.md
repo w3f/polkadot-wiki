@@ -3,7 +3,7 @@ id: learn-guides-coretime-marketplaces
 title: Coretime Marketplaces
 sidebar_label: Coretime Marketplaces
 description: Usage guides for coretime marketplaces
-keywords: [coretime, blockspace, parathread, parachain, cores]
+keywords: [coretime, blockspace, on-demand, parachain, cores]
 slug: ../learn-guides-coretime-marketplaces
 ---
 

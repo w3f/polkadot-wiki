@@ -26,19 +26,20 @@ smart contracts are not supported. The main responsibility is to coordinate the 
 including parachains. Other specific work is delegated to the parachains, which have different
 implementations and features.
 
-## [Parachain](learn-parachains.md) and [Parathread](learn-parathreads.md) Slots
+## [Parachain](learn-parachains.md) Slots
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can support a number of execution
 slots. These slots are like cores on a computer's processor (a modern laptop's processor may have
 eight cores, for example). Each one of these cores can run one process at a time.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows these slots using two
-subscription models: parachains and parathreads. Parachains have a dedicated slot (core) for their
-chain and are like a process that runs constantly. Parathreads share slots amongst a group, and are
-thus more like processes that need to be woken up and run less frequently.
+subscription models: permanent parachains and on-demand parachains. Permanent parachains have a
+dedicated slot (core) for their chain and are like a process that runs constantly. On-demand
+parachains share slots amongst a group, and are thus more like processes that need to be woken up
+and run less frequently.
 
 Most of the computation that happens across the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network as a whole will be delegated
-to specific parachain or parathread implementations that handle various use cases.
+to specific parachain implementations that handle various use cases.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} places no constraints over what
 parachains can do besides that they must be able to generate a proof that can be validated by the
 validators assigned to the parachain. This proof verifies the state transition of the parachain.
@@ -47,11 +48,11 @@ like smart contracts, privacy, or scalability &mdash; still, others might be exp
 architectures that are not necessarily blockchain in nature.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides many ways to secure a slot
-for a parachain for a particular length of time. Parathreads are part of a pool that shares slots
-and must-win auctions for individual blocks. Parathreads and parachains have the same API; their
-difference is economic. Parachains will have to reserve
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for the duration of their slot lease;
-parathreads will pay on a per-block basis. Parathreads can become parachains, and vice-versa.
+for a parachain for a particular length of time. On-demand parachains share slots with other
+parachains. Permanent and on-demand parachains have the same API; their difference is economic.
+Permanent parachains will have to reserve {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for
+the duration of their slot lease; on-demand parachains will pay on a per-block basis. Parachains can
+switch between being on-demand and permanent.
 
 ### [Shared Security](learn-parachains.md)
 

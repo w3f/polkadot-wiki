@@ -74,9 +74,6 @@ The Treasury is funded from different sources:
    inflation to go to the Treasury. In other words, if 50% of all tokens are staked, then 100% of
    the inflation goes to the validators as reward. If the staking rate is greater than or less than
    50%, then the validators will receive less, with the remainder going to the Treasury.
-4. Parathreads: [Parathreads](../learn-parathreads.md) participate in a per-block auction for block
-   inclusion. Part of this bid goes to the validator that accepts the block and the remainder goes
-   to the Treasury.
 
 ## Tipping
 

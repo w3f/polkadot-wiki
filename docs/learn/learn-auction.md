@@ -16,8 +16,7 @@ parachain slots. The number of parachain slots is not unbounded on
 available. A limited number of slots are unlocked every few months through on-chain governance. If a
 parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a
 parachain slot. The development of
-[on-demand parachains](https://forum.polkadot.network/t/on-demand-parachains/2208) (previously
-referred to as parathreads) is in progress.
+[on-demand parachains](https://forum.polkadot.network/t/on-demand-parachains/2208) is in progress.
 
 The parachain slots will be leased according to an unpermissioned
 [candle auction](https://en.wikipedia.org/wiki/Candle_auction), with several alterations related to

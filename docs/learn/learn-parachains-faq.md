@@ -40,7 +40,7 @@ significant number of optimizations, and there are
 future. The exact number of parachains that the Relay Chain can support without any degradation in
 performance is yet to be discovered. Also, with the
 [blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm
-which brings parathreads into the picture, there is no hard limit number on the number of
+which brings on-demand parachains into the picture, there is no hard limit number on the number of
 blockchains that can be supported by {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }}.
 
@@ -110,9 +110,8 @@ validators.
 ### How will parachain slots be distributed?
 
 Parachain slots are acquirable through auction. For more information on the auction process, please
-see the [parachain slot auctions](learn-auction.md) article. Additionally, some parachain slots will
-be set aside to run [parathreads](learn-parathreads.md) &mdash; chains that bid on a per-block basis
-to be included in the Relay Chain. (Parathreads are not implemented yet.)
+see the [parachain slot auctions](learn-auction.md) article. Additionally, parachains will be able
+to access the Relay Chain [on-demand](./learn-parachains.md#on-demand-parachains).
 
 ### Why doesn't everyone bid for the max length?
 

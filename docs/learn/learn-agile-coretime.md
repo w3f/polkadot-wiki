@@ -3,7 +3,7 @@ id: learn-agile-coretime
 title: Introduction to Agile Coretime
 sidebar_label: Agile Coretime Intro
 description: Introduction to Agile Coretime and its terminology
-keywords: [coretime, blockspace, parathread, parachain, cores]
+keywords: [coretime, blockspace, parachain, on-demand, cores]
 slug: ../learn-agile-coretime
 ---
 
@@ -167,8 +167,7 @@ These features are still under development and will be rolled out in later relea
 #### What is currently being developed in the ecosystem to support Agile Coretime?
 
 There are several ecosystem projects in the making, such as the secondary markets for coretime,
-[Lastic](https://www.lastic.xyz/),
-and [RegionX](https://app.regionx.tech/).
+[Lastic](https://www.lastic.xyz/), and [RegionX](https://app.regionx.tech/).
 
 Always do your own research. If you feel your project should be listed on the Wiki, please follow
 the [contributor's guide](../general/contributing.md).
@@ -291,9 +290,15 @@ These numbers represent extreme cases though.
 
 It is in general different per task if they hit their caps.
 
-With the current configuration on Kusama, if the price is going up, every renewal pays a maximum of 3% more than they paid for the sale before. That keeps going back to the sale cycle they first bought their coretime (or the sale cycle they renewed their lease). And because people buy in different sale cycles, or even at different times in each sale cycle, their prices can be wildly different from one another. There’s a special case for leaseholders at the end of their lease. They pay the base price in the sale in which they expire.
+With the current configuration on Kusama, if the price is going up, every renewal pays a maximum of
+3% more than they paid for the sale before. That keeps going back to the sale cycle they first
+bought their coretime (or the sale cycle they renewed their lease). And because people buy in
+different sale cycles, or even at different times in each sale cycle, their prices can be wildly
+different from one another. There’s a special case for leaseholders at the end of their lease. They
+pay the base price in the sale in which they expire.
 
-The story is different if the prices are decreasing, since the caps are irrelevant. If it drops far enough it could mean that all parachains renew at the same price.
+The story is different if the prices are decreasing, since the caps are irrelevant. If it drops far
+enough it could mean that all parachains renew at the same price.
 
 #### If purchased in bulk, do you then have “one core” or “one bucket of coretime” that you can use in your own time? Or is there a specific slot?
 
@@ -474,7 +479,7 @@ Latency is the only drawback: at low demand, the buyer would receive the coretim
 the Relay Chain, but there’ll be a delay when executed on the Coretime Chain. At times of high
 demand, there will be a queue anyway and this delay matters less.
 
-#### What's the best way for on-demand tasks (previously known as on-demand parachains or parathreads) to regularly send extrinsics to the Relay Chain for allowing a block to be validate?
+#### What's the best way for on-demand tasks (previously known as on-demand parachains) to regularly send extrinsics to the Relay Chain for allowing a block to be validate?
 
 A ready-to-use automated and decentralized method for ordering on-demand coretime is
 currently [being implemented](https://github.com/paritytech/polkadot-sdk/issues/1487). Some teams

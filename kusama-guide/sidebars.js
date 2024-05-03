@@ -645,7 +645,6 @@ module.exports = {
           },
           items: [
             'learn/learn-spree',
-            "learn/learn-parathreads",
             "learn/learn-elastic-scaling",
             "learn/learn-sassafras",
           ],

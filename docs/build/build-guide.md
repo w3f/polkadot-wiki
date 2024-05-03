@@ -204,7 +204,7 @@ process. This way, one can view how various paradigms are applied and decide on 
 utilizing Substrate for their particular use case.
 
 Please see the [parachain development guide](build-parachains.md) for how to get started on building
-a parachain or parathread.
+a parachain.
 
 #### Parachains Benefits
 
@@ -220,7 +220,7 @@ smart contract platform could offer. Parachains also provide more flexibility in
 governance and can perform complete upgrades in a less controversial way than the current process of
 hard forks.
 
-Some examples of features you can have on a parachain or parathread:
+Some examples of features you can have on a parachain:
 
 - Custom fee structure (for example, pay a flat transaction fee or pay per byte).
 - Shared security and finalization via the relay chain (Polkadot or Kusama).

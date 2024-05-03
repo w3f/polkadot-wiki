@@ -33,9 +33,9 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
 - **A multicore computer** where chains that continuously operate in parallel on different cores are
   called [parachains](../learn/learn-parachains.md). Currently, one core is reserved for one chain
   through [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved
-  on-demand to multiple chains at different periods (see
-  [parathreads](../learn/learn-parathreads.md)). At the time of writing (mid 2023), there are around
-  50 cores independently operating in parallel on Polkadot.
+  on-demand to multiple chains at different periods (see the
+  [Agile Coretime page](../learn/learn-agile-coretime.md)). At the time of writing (mid 2023), there
+  are around 50 cores independently operating in parallel on Polkadot.
 
 From now on _application_ will be used as a general term to describe anything that can use a
 Polkadot core to access secure and decentralized computation.

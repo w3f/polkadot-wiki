@@ -107,8 +107,7 @@ function HomeFooter() {
           >
             Kusama is Polkadot’s “canary network”, a scalable, multi-chain network for radical
             innovation and early stage Polkadot deployments. For developers, Kusama is a proving
-            ground for all things Polkadot I.e runtime upgrades, on-chain governance, parachains,
-            parathreads, etc.
+            ground for all things Polkadot I.e runtime upgrades, on-chain governance, parachains, etc.
           </Translate>
         </p>
         <div>

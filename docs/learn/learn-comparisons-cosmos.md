@@ -48,8 +48,8 @@ checks before committing it to the final chain.
 Parachain slots are limited, and thus parachain candidates participate in an auction to reserve a
 slot for up to two years. For chains that do not have the funding for a parachain slot or the
 necessity to execute with a six-second block time, Polkadot also has
-[parathreads](learn-parathreads.md). Parathreads execute on a pay-as-you-go basis, only paying to
-execute a block when they need to.
+[on-demand parachains](./learn-parachains.md#on-demand-parachains) that execute on a pay-as-you-go
+basis, only paying to execute a block when they need to.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
 Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibility.
