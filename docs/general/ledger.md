@@ -15,7 +15,7 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} [Ledger](https://www.ledger.com/)
 application is compatible with the Ledger Nano S, Nano X and Stax devices. Ledger devices are
 hardware wallets that keep your secret key secured on a physical device that does not expose it to
-your computer or the internet. The private keys will not be leaked even if you connect your Ledger
+your computer or the internet. The private keys will not be exposed even if you connect your Ledger
 device via USB to your computer.
 
 Ledger devices are hierarchical deterministic wallets (HD wallets), that is:
