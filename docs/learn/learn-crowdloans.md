@@ -7,7 +7,10 @@ keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 import RPC from "./../../components/RPC-Connection";
+
+<MessageBox message="Crowdloans will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. As an alternative for fundraising in a decentralized, transparent, and regulatory compliant manner within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
 for their parachain bids in a decentralized crowdloan.
