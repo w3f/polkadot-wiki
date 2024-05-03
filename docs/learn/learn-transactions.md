@@ -50,10 +50,8 @@ account that has funds, and therefore {{ polkadot: Polkadot :polkadot }}{{ kusam
 can charge a transaction fee as a way to prevent spam.
 
 Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
-pair that does not control funds. For example, validators submit unsigned transactions in the form
-of "heartbeat" messages to indicate that they are online. These heartbeats must be signed by one of
-the validator's [session keys](learn-cryptography.md). Session keys never control funds. Unsigned
-transactions are only used in special cases because, since
+pair that does not control funds. For example, validator's [session keys](learn-cryptography.md)
+never control funds. Unsigned transactions are only used in special cases because, since
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} cannot charge a fee for them, each
 one needs its own, custom validation logic.
 

@@ -249,11 +249,11 @@ example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the ope
 
 :::warning Single Operators with Multiple Validators
 
-Recall that slashing is an additive function; the more validators offline or equivocating in a given
-session, the harsher the penalties. Since validators that are controlled by a single operator are
-more at risk of a "synchronized" failure, nominating them implies a greater risk of having a large
-slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is
-independent of others in many ways (different hardware, geographic location, owner, etc.).
+Recall that slashing is an additive function; the more validators equivocating in a given session,
+the harsher the penalties. Since validators that are controlled by a single operator are more at
+risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of
+your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of
+others in many ways (different hardware, geographic location, owner, etc.).
 
 :::
 
@@ -300,9 +300,7 @@ over the validators' websites to see who they are, what kind of infrastructure s
 reputation, the vision behind the validator, and more.
 
 Any problematic behavior must be taken seriously. An example of problematic behavior will be if a
-validator is regularly offline. In this case, nominators most likely would get fewer rewards. If
-many validators are [unreachable](learn-staking.md#unresponsiveness), such validators and
-corresponding nominators will be slashed.
+validator is regularly offline. In this case, nominators will get fewer rewards.
 
 ![Validator Stats](../assets/validator_stats.png)
 
