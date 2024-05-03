@@ -9,7 +9,7 @@ slug: ../learn-parachains
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="Parachain Slot Auctions are being soon deprecated. For existing parachains, leases will be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+<MessageBox message="Parachain Slot Auctions will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
 
 :::info Testing on Rococo
 
