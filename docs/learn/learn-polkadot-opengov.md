@@ -576,7 +576,8 @@ different scenarios:
 **Before delegating a specific track, you must remove any [vote](#voting-on-a-referendum) on that
 track.**
 
-For more information about locks, see [this page](./learn-accounts.md#account-balance-types).
+For more information about locks, see
+[this page](./learn-account-balances.md#balance-types-on-polkadot-js).
 
 :::
 
