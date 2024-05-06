@@ -73,8 +73,10 @@ Previously known as instantaneous coretime, the on-demand coretime refers to cor
 through bidding in near real-time for the validation of a single parachain block on one of the cores
 reserved specifically for on-demand orders.
 
-:::info On-demand parachains (previously called parathreads) are parachains that buy on-demand
-coretime and use it to access the Relay Chain through the on-demand coretime pool.
+:::info Parathreads are renamed to on-demand parachains
+
+On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and
+use it to access the Relay Chain through the on-demand coretime pool.
 
 :::
 

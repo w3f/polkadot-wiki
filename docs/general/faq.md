@@ -295,7 +295,7 @@ implementers.
 ### Are parachains ephemeral? What happens when a parachain loses the next auction?
 
 Parachains are not ephemeral. As long as someone is keeping the data for a parachain, the parachain
-can move between being a permanent parachain, an
+can move between being a parachain, an
 [on-demand parachain](../learn/learn-parachains.md#on-demand-parachains), or a separate sovereign
 chain at different points of its lifetime. Especially with on-demand parachains, parachains can
 produce blocks when their usage and throughput makes it necessary.
@@ -304,7 +304,7 @@ When a parachain loses an auction for renewal, that parachain has a few options.
 becoming an on-demand parachain instead would be a suitable choice. On-demand parachain are still
 secured by the Relay Chain, but don't need to hold a parachain slot and can produce a block when its
 economically feasible for them. For more on parachains please see the
-[parachains page](../learn/learn-parachains.md#permanent-vs-on-demand-parachains).
+[parachains page](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
 
 ## Networking
 

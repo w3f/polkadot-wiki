@@ -32,10 +32,9 @@ implementations and features.
 slots. These slots are like cores on a computer's processor (a modern laptop's processor may have
 eight cores, for example). Each one of these cores can run one process at a time.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows these slots using two
-subscription models: permanent parachains and on-demand parachains. Permanent parachains have a
-dedicated slot (core) for their chain and are like a process that runs constantly. On-demand
-parachains share slots amongst a group, and are thus more like processes that need to be woken up
-and run less frequently.
+subscription models: parachains and on-demand parachains. Parachains have a dedicated slot (core)
+for their chain and are like a process that runs constantly. On-demand parachains share slots
+amongst a group, and are thus more like processes that need to be woken up and run less frequently.
 
 Most of the computation that happens across the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network as a whole will be delegated
@@ -50,8 +49,8 @@ architectures that are not necessarily blockchain in nature.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides many ways to secure a slot
 for a parachain for a particular length of time. On-demand parachains share slots with other
 parachains. Permanent and on-demand parachains have the same API; their difference is economic.
-Permanent parachains will have to reserve {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for
-the duration of their slot lease; on-demand parachains will pay on a per-block basis. Parachains can
+Parachains will have to reserve {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for the
+duration of their slot lease; on-demand parachains will pay on a per-block basis. Parachains can
 switch between being on-demand and permanent.
 
 ### [Shared Security](learn-parachains.md)

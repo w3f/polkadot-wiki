@@ -31,8 +31,7 @@ parachain candidate block is valid or invalid.
 
 ## Auction (Parachain)
 
-Parachain auctions are how non-system parachains can access
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Parachain auctions are how non-system parachains can access Polkadot.
 
 ## Aura
 

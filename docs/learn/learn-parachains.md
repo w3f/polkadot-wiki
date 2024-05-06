@@ -222,11 +222,11 @@ needs more, the computer can create virtual memory by using _swap space_ on a ha
 allows the capacity of a computer's memory to expand and for more processes to run concurrently with
 the trade-off that some processes will take longer to progress.
 
-### Permanent vs. On-demand Parachains
+### Parachains vs. On-demand Parachains
 
-Permanent parachains and on-demand parachains are very similar from a development perspective. One
-can imagine that a chain developed with Substrate can at different points in its lifetime assume one
-of three states:
+Parachains and on-demand parachains are very similar from a development perspective. One can imagine
+that a chain developed with Substrate can at different points in its lifetime assume one of three
+states:
 
 - an independent chain with secured bridge,
 - a parachain always connected to the Relay Chain (i.e. permanent),
