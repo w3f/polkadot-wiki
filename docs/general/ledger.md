@@ -9,11 +9,11 @@ slug: ../ledger
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="If you need help using Ledger see [this support article](https://support.ledger.com/hc/en-us/articles/360016289919-Polkadot-DOT?docs=true). If the problem persists you can contact the
+<MessageBox message="If you need help using Ledger, see [this support article](https://support.ledger.com/hc/en-us/articles/360016289919-Polkadot-DOT?docs=true). If the problem persists, you can contact the
 [Polkadot Support Team](https://support.polkadot.network/support/home)." />
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} [Ledger](https://www.ledger.com/)
-application is compatible with the Ledger Nano S, Nano X and Stax devices. Ledger devices are
+application is compatible with the Ledger Nano S, Nano X, and Stax devices. Ledger devices are
 hardware wallets that keep your secret key secured on a physical device that does not expose it to
 your computer or the internet. The private keys will not be exposed even if you connect your Ledger
 device via USB to your computer.
@@ -42,15 +42,15 @@ Ledger Nano S has limited functionality. The Ledger Nano S is no longer produced
 memory that is just right to accommodate the XL version of the Polkadot Ledger App, which gives the
 user more functionalities.<br/><br/>
 
-If you do use a Nano S with the XL version you will not be able to:
+If you do use a Nano S with the XL version, you will not be able to:
 
 - Install any other Ledger application on your device
 - Add Polkadot accounts to the Ledger Live App.
 
 But you will be able to add them to [wallets and extensions](./wallets-and-extensions.md) that
-support Ledger devices.<br/><br/>
+support Ledger devices.
 
-More information on Ledger devices comparisons
+More information on Ledger device comparisons
 [here](https://shop.ledger.com/pages/hardware-wallets-comparison).
 
 ## Requirements
@@ -70,8 +70,8 @@ Here is a list of what you will need before using
 ## Polkadot Ledger App
 
 Ledger devices can be equipped with applications that are blockchain-specific. Third parties usually
-develop such applications, enabling the user to transact securely on the blockchain network.
-Polkadot Ledger apps are developed by [Zondax](https://zondax.ch/) and are available
+develop such applications, enabling users to transact securely on the blockchain network. Polkadot
+Ledger apps are developed by [Zondax](https://zondax.ch/) and are available
 [here](https://github.com/Zondax/ledger-polkadot). The Polkadot Ledger applications allow you to
 manage {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native token,
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, and more depending on the version of the
@@ -96,7 +96,7 @@ There are currently three versions of the Polkadot Ledger app, described below.
 |        XL        | Ongoing |
 | Nano SP/X - Stax | Ongoing |
 
-These Ledger apps need to be updated every time there is a runtime upgrade.
+These Ledger apps must be updated every time there is a runtime upgrade.
 
 ## Polkadot Ledger Generic App
 
@@ -106,12 +106,12 @@ Check this [website](https://substrate.beryx.io/new_polkadot_ledger_app) for upd
 
 :::
 
-The Polkadot Ledger Generic App will allow to use your Ledger device on the Relay Chain and
-parachains as well, without being affected by runtime upgrades. The goal is to provide a single
-application for the entire Polkadot ecosystem without compromising security. This new app will also
-count with Clear Signing which allows you to see what you sign on a trusted display. This way,
-unintentionally signing rogue transactions can be avoided. [See this page](./transaction-attacks.md)
-to understand the importance of verifying transactions before signing them.
+The Polkadot Ledger Generic App will allow you to use your Ledger device on the Relay Chain and
+parachains without being affected by runtime upgrades. The goal is to provide a single application
+for the entire Polkadot ecosystem without compromising security. This new app will also count with
+Clear Signing, allowing you to see what you sign on a trusted display. This way, unintentionally
+signing rogue transactions can be avoided. [See this page](./transaction-attacks.md) to understand
+the importance of verifying transactions before signing them.
 
 The Polkadot Ledger Generic app brings the following benefits:
 
@@ -120,15 +120,15 @@ The Polkadot Ledger Generic app brings the following benefits:
 - Network Adoption: Facilitating a smoother and more user-friendly adoption of the Polkadot
   ecosystem.
 - Innovation without compromising security: The new Polkadot app comes with the highest security
-  standards so that users can keep their assets in a safe way.
-- Development Efficiency: The app helps developing teams by saving costs for having and maintaining
-  their own app.
+  standards so that users can keep their assets safe.
+- Development Efficiency: The app helps developing teams save costs by having and maintaining their
+  app.
 
 The Polkadot Ledger Generic app will be supported by Ledger Live,
 [Nova Wallet](https://novawallet.io/), [Talisman](https://www.talisman.xyz/), and
 [Subwallet](https://www.subwallet.app/).
 
-For more information about the Polkadot Generic App see the
+For more information about the Polkadot Generic App, see the
 [Ledger FAQ](https://support.ledger.com/hc/en-us/articles/17550211746845-New-Polkadot-app-FAQ?docs=true%20:dot),
 and [Zondax beryx page](https://substrate.beryx.io/new_polkadot_ledger_app).
 
@@ -167,7 +167,7 @@ developer release from the shell using the latest version published on
 See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer
 release of your ledger app.
 
-Currently, the developer release can be installed only on the Nano S and S plus devices and can't be
+Currently, the developer release can be installed only on the Nano S and S Plus devices and can't be
 installed on the Nano X.
 
 :::
@@ -186,7 +186,7 @@ below:
 
 ![Dev Ledger Help Menu](../assets/ledger-help-menu.png)
 
-- Attach your Ledger Nano (in this case Nano S Plus) to your computer, enter the PIN code, and run
+- Attach your Ledger Nano (in this case, Nano S Plus) to your computer, enter the PIN code, and run
   the command `./installer_nanos_plus.sh load`. Scroll with the right button until you see "Allow
   unsafe manager", left and right press to confirm. You will be asked to confirm the action of
   uninstalling the app and subsequently installing the newer version. After confirming both actions,
