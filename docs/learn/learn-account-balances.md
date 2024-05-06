@@ -48,8 +48,8 @@ where `free`, `frozen` and `on_hold` are defined above. The `ED` is the the
 
 ## Example of Wallet Balance
 
-Here below there is an example of how a wallet balance composition changes depending user actions.
-Let’s take for example a wallet with 100 DOT.
+Here below there is an in-depth example of how a wallet balance composition changes depending user
+actions. Let’s take for example a wallet with 100 DOT.
 
 ```
 Free: 100 DOT
@@ -122,7 +122,8 @@ reduced because your governance deposit for a proposal was slashed).
 ## Locks
 
 Locks account for the `frozen` balance of your wallet. This is the balance that can be `free` but
-not transferrable, and locked on staking, governance and vesting.
+not transferrable, and locked on [staking](./learn-staking.md),
+[governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers).
 
 Locks overlap (in both, size and time), and the general rule is that:
 
@@ -135,26 +136,28 @@ Let's take for example 80 DOT as `frozen` balance. These 80 DOT are currently us
 governance as follows:
 
 - 80 DOT Staking (just unbonded) -> lock 28 days
-- 24 DOT OpenGov 1x conviction (Ref just ended, winning side) -> lock 7 days
-- 4 DOT OpenGov 6x conviction (Ref just ended, winning side) -> lock 224 days
+- 24 DOT OpenGov 1x conviction (referendum just ended, winning side) -> lock 7 days
+- 4 DOT OpenGov 6x conviction (referendum just ended, winning side) -> lock 224 days
 
 ![locks-example-1](../assets/locks-example-1.png)
 
-The 1 DOT ED is the existential deposit. The locked amount is 80 DOT (not 108 DOT!). But those 80
-DOT will be available for unlock at different times. You will need first to remove the governance
-lock on the 24 DOT after 7 days, then remove the staking lock for the 80 DOT after 28 days, and
-finally after 224 days, you will be able to remove the second governance lock.
+The 1 DOT ED is the existential deposit. The locked amount is 80 DOT (not 108 DOT). But those 80 DOT
+will be available for unlock at different times. You will need first to remove the governance lock
+on the 24 DOT after 7 days, then remove the staking lock for the 80 DOT after 28 days, and finally
+after 224 days, you will be able to remove the second governance lock.
 
 ![locks-example-2](../assets/locks-example-2.png)
+
+After 224 days all 80 DOT (- ED) will be free and transferrable.
 
 ### Edge Cases for Overlocking
 
 If you used different convictions, the longest period and the largest amount are taken into account.
 This is an (edge) case of overlocking.
 
-Following the previous example, if you
+Following the previous example, if you:
 
-- undelegate a 1x conviction delegation of 24 DOT -> 7 days lock 24 DOT
+- undelegate a 1x conviction delegation of 24 DOT, you will get a 7-day lock on 24 DOT
 - delegate 4 DOT with 6x conviction
 - undelegate again before the 1x conviction lock is removed
 
