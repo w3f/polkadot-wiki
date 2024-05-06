@@ -127,7 +127,7 @@ You can also use some tools some to perform estimations.
 - [Validator stats script](https://github.com/w3f/validator-stats) can give you an estimate that is
   based on the currently elected set, as well as some statistics about Kusama validators.
 
-### Why will Polkadot have only 1000 validators while other projects have hundreds of thousands?
+### Why Polkadot targets 1000 validators while other projects have hundreds of thousands?
 
 Polkadot's goal to have 1000 validators is set to be something that is practically achievable in the
 short term with high confidence of good performance in a live environment. Furthermore, validators
@@ -354,8 +354,8 @@ Please see information about [Existential Deposits](../build/build-protocol-info
 
 It is important to note that the cost of transferring KSM is dynamic. Currently, the minimum cost of
 transferring KSM is 0.01 KSM (the base fee), although this can be changed via governance. However,
-actual transaction fees will vary based on a variety of factors. Specifically, fee calculation
-follows the following formula:
+actual transaction fees vary based on a variety of factors. Specifically, fee calculation follows
+the following formula:
 
 ```
 base_fee + (tx_length * length_fee) + WeightToFee(weight)
