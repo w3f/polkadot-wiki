@@ -177,8 +177,7 @@ parachains that do. It's possible for parachains to enable smart contract functi
 benefit from the security and interoperability features of Polkadot. Additionally, existing smart
 contract chains can connect to Polkadot as a parachain, or via a bridge.
 
-While the Polkadot Relay Chain does not implement smart contracts directly, there are parachains
-that do. So it's better to say that the Polkadot _ecosystem_ has smart contracts versus "Polkadot
+So it's better to say that the Polkadot _ecosystem_ has smart contracts versus "Polkadot
 has smart contracts."
 
 ### How does the Polkadot Relay Chain connect to external chains in the ecosystem?
