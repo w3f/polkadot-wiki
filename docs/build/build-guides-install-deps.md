@@ -254,7 +254,7 @@ Mint, MX Linux, and Elementary OS.
    rustup target add wasm32-unknown-unknown --toolchain nightly
    ```
 
-7. Verify your installation here.
+7. [Verify your installation here.](#verifying-installation)
 
 ## Windows (WSL)
 
@@ -375,10 +375,10 @@ To install the Rust toolchain on WSL:
 10. Configure the Rust toolchain to use the latest stable version as the default toolchain by
     running the following commands:
 
-```bash
-rustup default stable
-rustup update
-```
+    ```bash
+    rustup default stable
+    rustup update
+    ```
 
 11. Add the `nightly` version of the toolchain and the `nightly` WebAssembly (`wasm`) target to your
     development environment by running the following commands:
@@ -389,11 +389,6 @@ rustup update
     ```
 
 12. [Verify your installation here.](#verifying-installation)
-
-```bash
-rustup update nightly
-rustup target add wasm32-unknown-unknown --toolchain nightly
-```
 
 ## Verifying Installation
 
