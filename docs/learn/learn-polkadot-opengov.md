@@ -7,11 +7,11 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-polkadot-opengov
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import VLTable from
+"./../../components/Voluntary-Locking"; import Fellowship from "./../../components/Fellowship";
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-import VLTable from "./../../components/Voluntary-Locking";
-
-import Fellowship from "./../../components/Fellowship";
+<MessageBox message="Before voting in Polkadot OpenGov, get familiar with [balances and locks](./learn-account-balances#locks)." />
 
 :::caution The content in this document is subject to change
 
@@ -309,6 +309,15 @@ For detailed information about origin and tracks, and parameter values in Kusama
 
 ### Voluntary Locking (Conviction Voting)
 
+:::info Conviction Voting Locks created during Gov 1
+
+Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
+in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
+existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
+Delegations under Governance v1 will need to be re-issued under OpenGov.
+
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
 locking that allows token holders to increase their voting power by declaring how long they are
 willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
@@ -331,27 +340,6 @@ days. For additional information regarding the timeline of governance events, ch
 governance section on the
 {{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
 
-:::info do votes stack?
-
-You can use the same number of tokens to vote on different referenda. Votes with conviction do not
-stack. If you voted with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on Referenda A, B
-and C with 2x conviction you would have 10 votes on all those referenda and 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} locked up only for the 2x conviction period
-(i.e. {{ polkadot: two weeks :polkadot }}{{ kusama: two weeks :kusama }}), with the unlocking
-countdown starting when the last referendum you voted on ends (assuming you are on the winning
-side). If you voted with conviction on referendum and then a week later voted on another one with
-the same conviction, the lock on your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be
-extended by a week (always assuming you are on the winning side).
-
-:::
-
-:::info Staked tokens can be used in governance
-
-While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
-only prohibited from transferring these tokens to another account.
-
-:::
-
 Votes are always "counted" at the same time (at the end of the voting period), no matter for how
 long the tokens are locked.
 
@@ -373,12 +361,12 @@ Even though combined both Logan and Kevin vote with more
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
 is less than Peter, leading to their voting power counting as less.
 
-:::info Conviction Voting Locks created during Gov 1
+:::info Staked tokens can be used in governance
 
-Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
-in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
-existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
-Delegations under Governance v1 will need to be re-issued under OpenGov.
+While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
+only prohibited from transferring these tokens to another account. **See the section about
+[OpenGov locks](#voting-on-a-referendum), and the learn more about locks on the
+[Balances page](./learn-account-balances.md#locks).**
 
 :::
 
@@ -491,6 +479,9 @@ the importance of the changes they bring to the network.
 
 ## Voting on a Referendum
 
+If you are a voter means that you will vote with your
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on each single referendum.
+
 In Governance V1, voters could cast only an _aye_ or _nay_ vote. In Polkadot OpenGov, voters can
 additionally cast a _abstain_ and _split_ votes.
 [Vote splitting](./learn-guides-polkadot-opengov.md#voting-on-referenda) allows voters to allocate
@@ -511,6 +502,17 @@ Note that to successfully cast votes you need to have the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
 to pay for transaction fees.
 
+In general, you can remove your vote:
+
+- While a referendum is ongoing (your vote does not count)
+- After a referendum ended (your vote counts)
+
+If you voted without conviction, there's no conviction lock in either case. If you voted with
+conviction, you only get a conviction lock if the referendum ended and you voted with the winning
+side.
+
+![voting-locks-1](../assets/voting-locks-1.png)
+
 :::info Revoke your delegation on a track if you like to vote on your own
 
 If you want to vote on a referendum on a specific track on your own, you will need to revoke any
@@ -519,35 +521,45 @@ conviction lock on the track, but you cannot have an active delegation.
 
 :::
 
-### Voting Locks
+### Voting Without Conviction
 
-#### Voting Without Conviction
+If you vote without conviction, the referendum is ongoing, and you remove the vote, you can unlock
+your tokens immediately. If the referendum ended, you can remove your vote and unlock your tokens
+immediately, regardless of whether you are on the winning or losing side of the referendum. The
+governance app or interface you used for participating in Polkadot OpenGov should show an option to
+unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
 
-A lock is placed on the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} when you vote on an
-Ongoing referendum. If you choose to remove your vote when the referendum is still in the decision
-period, your voting lock is removed. Once the referendum is decided (accepted or rejected), your
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be available for unlocking if you voted
-with zero conviction. The governance app or interface you used for participating in Polkadot OpenGov
-should show an option to unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
-[Here](https://support.polkadot.network/support/solutions/articles/65000184129) are the instructions
-to do it on the Polkadot-JS UI.
+### Voting with Conviction
 
-#### Voting with Conviction
+If you voted with conviction, the referendum is ongoing, and you removed the vote, you can unlock
+your tokens immediately. If the referendum ended and you are on the losing side, you can remove your
+vote and unlock the tokens immediately. However, if you are on the winning side of the referendum,
+you will get a conviction lock.
 
-If you voted with conviction, the corresponding locks start at the end of the Referendum and not at
-the moment you voted. For instance, let's say you voted AYE with 6X conviction on a referendum, and
-it got accepted; the {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you voted with is locked
-for 32 weeks from that moment. If you voted NAY with 6X conviction on a referendum and it got
-accepted, then your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} would be ready to be
-unlocked immediately. Polkadot OpenGov is designed to ensure that only the winning side is mandated
-to lock their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and the losing side can claim
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and have it added to the transferable balance
-on their account.
+Conviction locks are calculated from the time the referendum ended but are applied when you remove
+the vote.
+
+For example, if you voted with conviction 1x with 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, those 10
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be locked for 7 days after the
+referendum ends (assuming you are on the winning side). If you remove the vote 3 days after the
+referendum ended, your tokens will be locked for 4 more days. If you remove it on the 8th day after
+the end of the referendum, the tokens can be unlocked right away (after you remove the vote). When
+you remove the vote, the lock expiration block is calculated and added to the chain state.
+
+If you voted on multiple referenda, and you are on the winning side of all those referenda, you will
+get multiple conviction voting locks for all those referenda. **Locks do not stack**; the length and
+size of the lock decides. This means that - assuming you used the same conviction on the same number
+of tokens - when the conviction lock on the latest referendum (see below, Ref 4) expires, you will
+be able to unlock your tokens. In the meantime, the previous locks (1 to 3) might have expired, and
+you can remove those locks (after removing the votes).
+
+![voting-locks-2](../assets/voting-locks-2.png)
 
 When you delegate your votes, the locking mechanism differs slightly. Please check the next section
 on Multirole Delegation for more information.
 
-### Multirole Delegation
+## Multirole Delegation
 
 Polkadot OpenGov builds on the
 [vote delegation feature from Governance v1](./archive/learn-governance.md#delegations) where a
@@ -560,24 +572,36 @@ For example, a voter could delegate one entity for managing a less potent refere
 different delegate for another class with more powerful consequences and still retain full voting
 power over any remaining classes.
 
-:::info Locks for Delegations
+Contrary to solo voting, with delegations, any conviction locks are applied as soon as you
+undelegate, regardless of whether your delegated votes were used for voting during that time. If
+your delegated votes were used in any ongoing referenda, they would be removed from those referenda
+when you undelegate. Alternatively, after undelegating, you can delegate to another person or modify
+your delegation. The only way to modify the delegation is to undelegate and delegate again. You do
+not have to do this yourself; wallets and extensions should have implemented UI to modify delegation
+without you knowing this.
 
-Democracy locks created through [conviction voting](#voluntary-locking-conviction-voting) start the
-unlocking period after a referendum ends, provided you voted with the winning side. In the case of
-delegations, the unlocking period countdown begins after the account undelegates. There can be
-different scenarios:
+If you delegate without conviction and you undelegate, you can unlock your tokens immediately.
+Alternatively, after undelegating, you can always delegate to another person or modify your
+delegation.
 
-- if the account delegated votes to one delegate, then after undelegating, there will be one
-  unlocking period with length dependent on the conviction multiplier.
-- if the account delegated votes to different delegates using different convictions, then after
-  undelegating those delegates, there will be different unlocking periods with lengths dependent on
-  the conviction multipliers.
+![delegation-locks-1](../assets/delegation-locks-1.png)
+
+In the case you delegated with 1x conviction, you undelegate and re-delegate with 2x conviction; the
+time you undelegate again, you will have created two conviction locks: one for the 1x and one for
+the 2x conviction. If you re-delegate immediately with 1x conviction and undelegate, you will get a
+second 1x conviction lock, but the 2x conviction lock will be the one deciding when your token can
+be unlocked.
+
+![delegation-locks-2](../assets/delegation-locks-2.png)
+
+:::info
+
+If the account delegated votes to different delegates using different convictions, then after
+undelegating those delegates, there will be different unlocking periods with lengths dependent on
+the conviction multipliers.
 
 **Before delegating a specific track, you must remove any [vote](#voting-on-a-referendum) on that
 track.**
-
-For more information about locks, see
-[this page](./learn-account-balances.md#balance-types-on-polkadot-js).
 
 :::
 
@@ -591,10 +615,6 @@ while keeping the overall design censorship-free. Also, voters might not have th
 knowledge to judge some referenda or might not have the time to read all referenda. Delegations
 allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
 entities.
-
-For a step-by-step outline of how to delegate voting power in Polkadot OpenGov, check out the
-[Delegating Voting Power](./learn-guides-polkadot-opengov.md#delegations) section on the
-[Polkadot OpenGov Guides](./learn-guides-polkadot-opengov.md).
 
 ## Resources
 
