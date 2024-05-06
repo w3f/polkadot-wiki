@@ -27,7 +27,7 @@ The Wiki has three main sections:
 ## Interact with Polkadot
 
 <div className="row">
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="100">
     <a href="../docs/learn-accounts">
       <img src="/img/polkadot-guide/Creating an account.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -35,7 +35,7 @@ The Wiki has three main sections:
       <a href="../docs/learn-accounts">Accounts</a>
     </p>
   </div>
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="200">
     <a href="../docs/learn-transactions">
       <img src="/img/polkadot-guide/Balance Transfers.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -43,7 +43,7 @@ The Wiki has three main sections:
       <a href="../docs/learn-transactions">Transactions</a>
     </p>
   </div>
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="300">
     <a href="../docs/learn-staking">
       <img src="/img/polkadot-guide/Staking.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -54,7 +54,7 @@ The Wiki has three main sections:
 </div>
 
 <div className="row">
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="400">
     <a href="../docs/learn-polkadot-opengov">
       <img src="/img/polkadot-guide/Polkadot OpenGov.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -62,7 +62,7 @@ The Wiki has three main sections:
       <a href="../docs/learn-polkadot-opengov">Polkadot OpenGov</a>
     </p>
   </div>
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="500">
     <a href="../docs/learn-proxies">
       <img src="/img/polkadot-guide/Proxy Accounts.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -70,7 +70,7 @@ The Wiki has three main sections:
       <a href="../docs/learn-proxies">Proxy Accounts</a>
     </p>
   </div>
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="600">
     <a href="../docs/learn-identity">
       <img src="/img/polkadot-guide/Set an Identity.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -81,7 +81,7 @@ The Wiki has three main sections:
 </div>
 
 <div className="row">
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="700">
     <a href="../docs/learn-parachains">
       <img src="/img/polkadot-guide/Parachains.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -89,7 +89,7 @@ The Wiki has three main sections:
       <a href="../docs/learn-parachains">Parachains</a>
     </p>
   </div>
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="900">
     <a href="../docs/learn-bridges">
       <img src="/img/polkadot-guide/Bridges.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
@@ -97,7 +97,7 @@ The Wiki has three main sections:
       <a href="../docs/learn-bridges">Bridges</a>
     </p>
   </div>
-  <div className="col text--center">
+  <div className="col text--center" data-aos="fade-up" data-aos-delay="900">
     <a href="../docs/ambassadors">
       <img src="/img/polkadot-guide/Become an Ambassador.png" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
     </a>
