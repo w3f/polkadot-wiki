@@ -729,21 +729,7 @@ module.exports = {
             slug: '/build-coretime-index',
           },
           items: [
-            {
-              type: "category",
-              label: "Installing Dependencies",
-              link: {
-                type: 'generated-index',
-                title: "Installing Dependencies",
-                description: "Install the necessary development dependencies needed to start with the Polkadot SDK",
-                slug: '/build-install-dependencies',
-              },
-              items: [
-                "build/build-guides-install-macos",
-                "build/build-guides-install-linux",
-                "build/build-guides-install-windows"
-              ]
-            },
+            "build/build-guides-install-deps",
             "build/build-guides-coretime-start"
           ],
         },
