@@ -83,11 +83,8 @@ provable finality, and has no effective strategy in resisting cartels.
 There is no central authority that decides on validators, so there is not per se an _application_
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
-on how to do this you can consult the
-[Kusama validator guide](../maintain/kusama/maintain-guides-how-to-validate-kusama.md) on validating
-for Kusama or the
-[Polkadot validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md) for validating
-on Polkadot.
+on how to do validate you can consult the
+{{ polkadot: [Polkadot validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md) :polkadot }}{{ kusama: [Kusama validator guide](../maintain/kusama/maintain-guides-how-to-validate-kusama.md) :kusama }}.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
@@ -103,8 +100,9 @@ validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
-Validators are rewarded from the inflation of the Relay Chain, transaction fees, and tips. However,
-they only take a percentage of the former two. More details can be read on the page for
+Validators are rewarded from the [inflation of the Relay Chain](../learn/learn-inflation.md),
+[transaction fees](../learn/learn-transaction-fees.md), and tips. However, they only take a
+percentage of the former two. More details can be read on the page for
 [validator payouts](../maintain/maintain-guides-validator-payout.md).
 
 ### What is the minimum stake necessary to be elected as an active validator?
@@ -174,23 +172,23 @@ No - and yes. The Polkadot Relay Chain does not implement smart contracts native
 not having smart contracts on the Relay Chain is part of the design philosophy for Polkadot that
 dictates that the Relay Chain should be the minimal logic required to accomplish its job.
 
-However, Polkadot will be a platform for other chains that _do_ implement smart contracts. It's
-possible for parachains to enable smart contract functionality and then benefit from the security
-and interoperability features of Polkadot. Additionally, existing smart contract chains can connect
-to Polkadot as a parachain, or via a bridge.
+While the Polkadot Relay Chain does not implement smart contracts directly, there are numerous
+parachains that do. It's possible for parachains to enable smart contract functionality and then
+benefit from the security and interoperability features of Polkadot. Additionally, existing smart
+contract chains can connect to Polkadot as a parachain, or via a bridge.
 
-While the Polkadot Relay Chain does not implement smart contracts directly, undoubtedly there will
-be parachains that do. So it's better to say that the Polkadot _ecosystem_ has smart contracts
-versus "Polkadot has smart contracts."
+While the Polkadot Relay Chain does not implement smart contracts directly, there are parachains
+that do. So it's better to say that the Polkadot _ecosystem_ has smart contracts versus "Polkadot
+has smart contracts."
 
-### How will the Polkadot Relay Chain connect to external chains in the ecosystem?
+### How does the Polkadot Relay Chain connect to external chains in the ecosystem?
 
 One of the cornerstone interoperability technologies being researched and developed for deployment
-on Polkadot is cross-chain bridges. Bridges come in a variety of flavors with varying levels of
-trust associated with them. Polkadot is predominantly researching the trust-minimized flavor that
-imposes economic costs on the operators of the bridge, and therefore makes it economically secure.
-Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually,
-there will be bridges between Polkadot and most of the other major chains.
+on Polkadot is cross-chain [bridges](../learn/learn-bridges.md). Bridges come in a variety of
+flavors with varying levels of trust associated with them. Polkadot is predominantly researching the
+trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore
+makes it economically secure. Bridge efforts are being worked on in concert with other projects in
+the ecosystem.
 
 ### What is Polkadot's Transactions Per Second (TPS)?
 
