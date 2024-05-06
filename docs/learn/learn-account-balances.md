@@ -82,6 +82,8 @@ Those references determine if an account can be reaped, usually because there ar
 depending on the existence of such an account). For example, the existential deposit adds a provider
 reference simply because the account exists, while a proxy account adds a consumer reference (the
 proxy existence depends on the existence of the proxied account, the proxy is the consumer).
+**Because the existential deposit is part of the untouchable balance, the user can use all the
+spendable balance (there is no need to keep 1 DOT as spendable).**
 
 If the account creates a proxy, it will use the `free` balance as shown below.
 
