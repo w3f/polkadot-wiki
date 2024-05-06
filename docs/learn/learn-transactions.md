@@ -98,14 +98,14 @@ of transfer.
 
 ### Vested Transfers
 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock placed on them to account for
-vesting funds. Like other types of [locks](./learn-account-balances.md#locks), these funds cannot be
-transferred but can be used in other parts of the protocol such as voting in governance or being
-staked as a validator or nominator.
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock to account for vesting funds.
+Like other types of [locks](./learn-account-balances.md#locks), these funds cannot be transferred
+but can be used in other parts of the protocol such as voting in governance or being staked as a
+validator or nominator.
 
-Vesting funds are on a release schedule and unlock a constant number of tokens at each block
-(**linear vesting**) or can unlock the full amount after a specific block number (**cliff
-vesting**).
+Vesting funds are on a release schedule that unlocks a constant number of tokens at each block
+(**linear vesting**) or the full amount after a specific block number (**cliff vesting**). In all
+vesting cases, the lock decreases over time until all the funds are transferable.
 
 ## Verifying Extrinsics
 

@@ -123,6 +123,11 @@ reduced because your governance deposit for a proposal was slashed).
 
 ## Locks
 
+Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
+can operate on the same account, but they overlap rather than add. Locks are automatically added
+onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these
+are not customizable.
+
 Locks account for the `frozen` balance of your wallet. This is the balance that can be `free` but
 not transferrable, and locked on [staking](./learn-staking.md),
 [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers).

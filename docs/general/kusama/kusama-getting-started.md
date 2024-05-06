@@ -155,7 +155,7 @@ governance, acquisition of a parachain slot and for enabling several key functio
   the minimum balance required to have an active account on Kusama Network. If your account balance
   drops below the minimum, your account will be reaped. Learn more about
   [Accounts](../../learn/learn-accounts.md) and the
-  [Existential Deposit](../../build/build-protocol-info.md#existential-deposit) requirement.
+  [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
 
 - {{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable"/>:__ :kusama }}
   the minimum contribution required to join a
