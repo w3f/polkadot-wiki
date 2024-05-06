@@ -9,8 +9,8 @@ slug: ../ambassadors
 
 :::info Polkadot Ambassador On-chain Collective
 
-Polkadot Ambassador Program is transitioning into an on-chain, rank-based, system collective 
-after the approval of [Polkadot OpenGov referenda 487](https://polkadot.polkassembly.io/referenda/487).
+Polkadot Ambassador Program is transitioning into an on-chain, rank-based, system collective after
+the approval of [Polkadot OpenGov referenda 487](https://polkadot.polkassembly.io/referenda/487).
 
 :::
 
@@ -27,5 +27,3 @@ There are many ways you can get involved in expanding Polkadot’s ecosystem, su
 - Mentoring and onboarding newcomers
 - Identifying partnerships and opportunities for the Polkadot ecosystem
 - Participating in calls and tasks that help drive the ecosystem forward
-
-

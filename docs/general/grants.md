@@ -21,19 +21,16 @@ aimed at growing the Polkadot ecosystem. For details, see the
 Web3 Foundation offers grants for open source software development and research around Substrate,
 Polkadot, Kusama and ink!. Applications and deliveries are tracked transparently on GitHub.
 Information regarding requirements, the application process, deliveries, etc. can be found on the
-[Grants Program website](https://grants.web3.foundation/). For
-guidance, there is also a list of
-[previously accepted applications](https://grants.web3.foundation/applications)
-and a list of
+[Grants Program website](https://grants.web3.foundation/). For guidance, there is also a list of
+[previously accepted applications](https://grants.web3.foundation/applications) and a list of
 [frequently asked questions](https://grants.web3.foundation/docs/faq).
 
 ## Alternative Funding Sources
 
 :::info
 
-Check the
-[alternative funding sources](https://grants.web3.foundation/docs/funding)
-section on the Web3 Foundation Grants website for comprehensive information.
+Check the [alternative funding sources](https://grants.web3.foundation/docs/funding) section on the
+Web3 Foundation Grants website for comprehensive information.
 
 :::
 
@@ -64,11 +61,11 @@ community.
 Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 
 - [Acala Grants Program](https://acala.network/ecosystem-program)
-- [Aleph Zero Funding Program](https://alephzero.org/ecosystem-funding-program) 
-- [Avail Uncharted Grants](https://github.com/availproject/avail-uncharted/blob/main/grants/grants.md) 
+- [Aleph Zero Funding Program](https://alephzero.org/ecosystem-funding-program)
+- [Avail Uncharted Grants](https://github.com/availproject/avail-uncharted/blob/main/grants/grants.md)
 - [Darwinia Grants Program](https://github.com/darwinia-network/collaboration/blob/master/grant/README.md#grant-program)
-- [Decentralized Futures Program](https://futures.web3.foundation/) 
-- [Decentralized JAM](https://jam.web3.foundation/) 
+- [Decentralized Futures Program](https://futures.web3.foundation/)
+- [Decentralized JAM](https://jam.web3.foundation/)
 - [Edgeware Grants and Bounties](https://gov.edgewa.re/discussion/1132-edgeware-proposal-process-and-template)
 - [HydraDX Grants and Bounties](https://docs.hydradx.io/spending_fw/)
 - [ink!ubator](https://use.ink/ubator/)

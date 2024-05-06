@@ -20,8 +20,8 @@ tracked [here](https://forum.polkadot.network/t/polkadot-kusama-bridge/2971/1).
 
 :::danger Polkadot < > Kusama Bridge is stuck.
 
-Do not send DOT and KSM tokens through the bridge until Polkadot OpenGov [Referendum 694](https://polkadot.polkassembly.io/referenda/694)
-is enacted. 
+Do not send DOT and KSM tokens through the bridge until Polkadot OpenGov
+[Referendum 694](https://polkadot.polkassembly.io/referenda/694) is enacted.
 
 :::
 
