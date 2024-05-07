@@ -123,9 +123,9 @@ reduced because your governance deposit for a proposal was slashed).
 
 ## Locks
 
-Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
-can operate on the same account but overlap rather than add. Locks are automatically added onto
-accounts when tasks are done on the network (e.g., leasing a parachain slot or voting), these are
+Locks are abstractions over an account's free balance, preventing it from being spent. Several locks
+can overlap on the same account balance instead of being stacked on top of one another. Locks are automatically added onto
+accounts when the account participates in activities on-chain (staking, voting, etc.), but these are
 not customizable.
 
 Locks account for the `frozen` balance of your wallet. This is the balance that can be `free` but
