@@ -23,7 +23,7 @@ will allow using the `free` balance for on-chain activity like setting proxies a
 
 There are 5 types of account balances:
 
-- **Free** is the balance is the balance that can be used for on-chain activity but is not
+- **Free** is the balance that can be used for on-chain activity like staking, participating in governance etc. but is not
   necessarily spendable (or transferrable)
 - **Frozen** is the free balance locked for [staking](./learn-staking.md),
   [governance](./learn-polkadot-opengov.md), and [vesting](./learn-transactions.md#vested-transfers)
