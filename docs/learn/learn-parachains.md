@@ -214,7 +214,7 @@ the Relay Chain.
 
 ### Historical Context of On-demand parachains
 
-According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu, the origin of the
+According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu back in 2019, the origin of the
 idea came from similar notions in the limited resource of memory on early personal computers of the
 late '80s and '90s. Since computers have a limited amount of physical memory, when an application
 needs more, the computer can create virtual memory by using _swap space_ on a hard disk. Swap space
