@@ -299,6 +299,8 @@ To claim the first payout of [Referendum 382](https://kusama.subscan.io/referend
 [this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing
 the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
 reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
+[Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset
+Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
 
 :::
 
