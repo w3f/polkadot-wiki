@@ -159,7 +159,7 @@ After 224 days, all 80 DOT (- ED) will be free and transferrable.
 
 ### Edge Cases for Overlocking
 
-The longest period and the largest amount are considered if you used different convictions. This is
+The longest period and the largest amount are considered if you use different convictions. This is
 an (edge) case of overlocking.
 
 Following the previous example, if you:
