@@ -136,7 +136,7 @@ Transaction fees cannot cause an account to be reaped. Since fees are deducted f
 before any other transaction logic, accounts with balances _equal to_ the existential deposit cannot
 construct a valid transaction. Additional funds will need to be added to cover the transaction fees.
 
-:::info The existential deposit con differ on parachains
+:::info The existential deposit can be different on parachains
 
 Your account on the Relay Chain has no direct impact on parachains as you have separate accounts on
 each parachain. Still, parachains are able to define an existential deposit of their own, but this
