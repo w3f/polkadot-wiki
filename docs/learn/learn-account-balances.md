@@ -13,7 +13,7 @@ be used for transfers, to pay fees, or must remain frozen and unused due to an o
 
 :::info A more efficient distribution of account balance types
 
-Soon, pallets on Polkadot SDK will be implement the _fungible_ trait (see
+Soon, pallets on Polkadot SDK will be implementing the _fungible_ trait (see
 [Reference docs](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html)
 for more info). This new logic will allow for more efficient use of your account
 balance. Specifically, the
