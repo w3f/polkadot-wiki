@@ -3,7 +3,7 @@ id: learn-account-balances
 title: Account Balances
 sidebar_label: Account Balances
 description: Polkadot and Kusama Network Account Balance Types.
-keywords: [Polkadot, locks, balance, account]
+keywords: [Polkadot, Kusama, locks, balance, account]
 slug: ../learn-account-balances
 ---
 
