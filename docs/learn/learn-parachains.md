@@ -178,7 +178,8 @@ or source them from the community using the [crowdloan functionality](learn-crow
 
 When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
 balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
-are unreserved. Parachains without a new lease to extend their slot will be deprecated to the status of a parathread (i.e., a chain with a registered `ParaID` but has no access to a core).
+are unreserved. Parachains without a new lease to extend their slot will be deprecated to the status
+of a parathread (i.e., a chain with a registered `ParaID` but has no access to a core).
 
 ## System Parachains
 
@@ -214,12 +215,13 @@ the Relay Chain.
 
 ### Historical Context of On-demand parachains
 
-According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu back in 2019, the origin of the
-idea for on-demand parachains came from similar notions in the limited resource of memory on early personal computers of the
-late '80s and '90s. Since computers have a limited amount of physical memory, when an application
-needs more, the computer can create virtual memory by using _swap space_ on a hard disk. Swap space
-allows the capacity of a computer's memory to expand and for more processes to run concurrently with
-the trade-off that some processes will take longer to progress.
+According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu back in 2019, the
+origin of the idea for on-demand parachains came from similar notions in the limited resource of
+memory on early personal computers of the late '80s and '90s. Since computers have a limited amount
+of physical memory, when an application needs more, the computer can create virtual memory by using
+_swap space_ on a hard disk. Swap space allows the capacity of a computer's memory to expand and for
+more processes to run concurrently with the trade-off that some processes will take longer to
+progress.
 
 ### Parachains vs. On-demand Parachains
 
@@ -336,14 +338,16 @@ is higher if many messages are in queue to be processed or if no nodes are runni
 networks that can quickly gossip the message across the networks.
 
 Due to the necessary latency in sending crosschain messages, some parachains plan to become _hubs_
-for an entire industry. For example, many DeFi applications could take advantage of a property known
-as _composability_ which means that functions of one application can be synergistically composed
-with others to create new applications. One example of this includes flash loans, which borrow funds
-to execute some on-chain logic as long as the loan is repaid at the end of the transaction.
+for an entire industry (see the [Asset Hub](./learn-assets.md) and
+[Bridge Hub](./learn-bridge-hub.md)). For example, many DeFi applications could take advantage of a
+property known as _composability_ which means that functions of one application can be
+synergistically composed with others to create new applications. One example of this includes flash
+loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the end of
+the transaction.
 
 An issue with crosschain latency means that composability property weakens among parachains compared
 to a single blockchain. **This implication is common to all sharded blockchain designs, including
-Polkadot, Eth2.0, and others.** The solution to this is the introduction of parachain hubs, which
+Polkadot, Ethereum, and others.** The solution to this is the introduction of parachain hubs, which
 maintain the stronger property of single block composability.
 
 ## Resources
