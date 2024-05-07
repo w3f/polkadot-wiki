@@ -118,7 +118,7 @@ This update using the fungible trait allows the use of the frozen balance for on
 setting up proxies and identities. Note that
 [holds are slashable](https://github.com/paritytech/substrate/pull/12951), and the pallet
 [migrations](https://github.com/paritytech/polkadot-sdk/issues/226) need to take that into account.
-This means that freezes should account for hold being slashed (for example, your stash getting
+This means that freezes should account for hold being slashed (for example, your stash account balance getting
 reduced because your governance deposit for a proposal was slashed).
 
 ## Locks
