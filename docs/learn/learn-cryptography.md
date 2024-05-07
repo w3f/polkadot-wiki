@@ -84,8 +84,8 @@ Since the stash key is kept offline, it must be set to have its funds bonded to 
 proxy. For non-spending actions, the staking proxy has the funds of the stash behind it. For
 example, in nominating, staking, or voting, the proxy can indicate its preference with the weight of
 the stash. It will never be able to actually move or claim the funds in the stash key. However, if
-someone does obtain your proxy key, they could use it for slashable behavior, so you should still
-protect it and change it regularly.
+someone does obtain your proxy key, they could use it for [slashable behavior](./learn-offenses.md),
+so you should still protect it and change it regularly.
 
 ### Session Keys
 

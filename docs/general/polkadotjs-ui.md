@@ -79,7 +79,7 @@ Staking menu you can access:
   all bags within the [**bags list**](../learn/learn-staking-advanced.md#bags-list). Here (if
   applicable), you can rebag accounts that do not belong to the bag you are in, and you can move
   your account in front of the account having less stake than you.
-- The **Slashes** tab showing if there are any global slashes.
+- The **Slashes** tab showing if there are any global [slashes](../learn/learn-offenses.md).
 - The **Validator stats** tab showing statistics for a chosen validator.
 
 ### Settings

@@ -258,8 +258,8 @@ are dishonest and can back a candidate wrongly. To address this, the **Approval 
 detecting misbehavior after the fact without allocating more para-validators, which would ultimately
 reduce the system's throughput. As a parablock can accept children blocks after being considered
 available, failure to pass the approval process will invalidate the parablock and its descendants
-(children blocks). Only the validators who backed the block in question will be slashed, not those
-who backed the descendants.
+(children blocks). Only the validators who backed the block in question will be
+[slashed](./learn-offenses.md), not those who backed the descendants.
 
 The approval pipeline can be divided into the following steps:
 
@@ -295,7 +295,7 @@ Dealing with a bad parablock includes the following stages:
 
 - Detection: the bad block must be detected by honest validators.
 - Escalation: the honest validators must start a [dispute](#disputes).
-- Consequences: all involved malicious validators are slashed.
+- Consequences: all involved malicious validators are [slashed](./learn-offenses.md).
 
 The result of the dispute must be transplantable to all other forks so that malicious validators are
 slashed in all possible histories and so that honest validators will ignore any forks containing
@@ -448,10 +448,10 @@ there are approval checks (described above) and disputes. The latter ensures tha
 include something invalid is caught and the offending validators are punished.
 
 Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
-on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
-those actors responsible for it will also be slashed. To detect false positives, PoV information
-must be available after the block has been included to the Relay Chain via the
-[availability scheme](#availability-and-unavailability-phase).
+on the wrong side (once the dispute is resolved) will be [slashed](./learn-offenses.md). False
+positives can also happen; those actors responsible for it will also be slashed. To detect false
+positives, PoV information must be available after the block has been included to the Relay Chain
+via the [availability scheme](#availability-and-unavailability-phase).
 
 Disputes are _independent from a particular fork_, while backing and approval operate on particular
 forks. The approval voting stops if an alternative fork (which might not contain the

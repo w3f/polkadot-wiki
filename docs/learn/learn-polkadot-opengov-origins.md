@@ -124,8 +124,8 @@ track serves as a signal for a change without conferring privileges.
 
 ### Staking Admin
 
-The origin for canceling slashes. This origin has the privilege to execute calls from the staking
-pallet and the Election Provider Multiphase Pallet.
+The origin for canceling [slashes](./learn-offenses.md). This origin has the privilege to execute
+calls from the staking pallet and the Election Provider Multiphase Pallet.
 
 {{ polkadot: <Chart title="" type="line" dataId="AdminStaking" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
 {{ kusama: <Chart title="" type="line" dataId="AdminStaking" network="Kusama" maxX="336" maxY="100" /> :kusama }}

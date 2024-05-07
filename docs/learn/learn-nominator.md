@@ -62,7 +62,7 @@ take a slightly more passive role. Being a nominator does not require running a 
 worrying about online uptime. However, a good nominator performs due diligence on the validators
 that they elect. When looking for validators to nominate, a nominator should pay attention to their
 own reward percentage for nominating a specific validator - as well as the risk that they bear of
-being [slashed](./learn-staking.md#slashing) if the validator gets slashed.
+being [slashed](./learn-offenses.md) if the validator gets slashed.
 
 ## Why Nominate?
 
@@ -249,11 +249,12 @@ example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the ope
 
 :::warning Single Operators with Multiple Validators
 
-Recall that slashing is an additive function; the more validators equivocating in a given session,
-the harsher the penalties. Since validators that are controlled by a single operator are more at
-risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of
-your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of
-others in many ways (different hardware, geographic location, owner, etc.).
+Recall that [slashing](./learn-offenses.md) is an additive function; the more validators
+equivocating in a given session, the harsher the penalties. Since validators that are controlled by
+a single operator are more at risk of a "synchronized" failure, nominating them implies a greater
+risk of having a large slash of your nominated funds. Generally, it is safer to nominate validators
+whose behavior is independent of others in many ways (different hardware, geographic location,
+owner, etc.).
 
 :::
 

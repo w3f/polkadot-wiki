@@ -23,9 +23,9 @@ started.
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
 only your own stake, but also the stake of your current nominators. If you make a mistake and get
-slashed, your tokens and your reputation will be at risk. However, running a validator can also be
-very rewarding, knowing that you contribute to the security of a decentralized network while growing
-your stash.
+[slashed](../learn/learn-offenses.md), your tokens and your reputation will be at risk. However,
+running a validator can also be very rewarding, knowing that you contribute to the security of a
+decentralized network while growing your stash.
 
 :::warning
 
@@ -75,10 +75,10 @@ era
 {{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
 :::
 
-**Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
-insecure or improper setup may result in loss of DOT tokens! If you are not confident in your
-ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node
-instead.
+**Warning:** Any DOT that you stake for your validator is liable to be
+[slashed](../learn/learn-offenses.md), meaning that an insecure or improper setup may result in loss
+of DOT tokens! If you are not confident in your ability to run a validator node, it is recommended
+to nominate your DOT to a trusted validator node instead.
 
 ## Initial Set-up
 

@@ -79,10 +79,10 @@ equipment.
 
 PoS ensures that everybody participating in the staking process has "skin in the game" and thus can
 be held accountable. In case of misbehavior, participants in the staking process can be punished or
-**slashed**, and depending on the gravity of the situation, their stake can be partly or fully
-confiscated by the network. It is not in a staker's economic interest to orchestrate an attack and
-risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the
-PoS network rewards good behavior and punishes bad behavior.
+[**slashed**](./learn-offenses.md), and depending on the gravity of the situation, their stake can
+be partly or fully confiscated by the network. It is not in a staker's economic interest to
+orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want
+to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
 ## Nominated Proof-of-Stake (NPoS)
 
@@ -104,8 +104,8 @@ nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 is required to submit an intention to nominate, which can be thought of as registering to be a
-nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
-in-depth review of NPoS see
+nominator. Note that in NPoS the stake of both nominators and validators can be
+[slashed](./learn-offenses.md). For an in-depth review of NPoS see
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 :::caution Minimum Nomination to Receive Staking Rewards
@@ -435,59 +435,6 @@ If you wish to know if you received a payout, you will have to check via a block
 for details. For specific details about validator payouts, please see
 [this guide](../maintain/maintain-guides-validator-payout.md).
 
-### Slashing
-
-Slashing will happen if a validator misbehaves in the network. They and their nominators will get
-slashed by losing a percentage of their bonded/staked DOT.
-
-Any slashed DOT will be added to the [Treasury](./archive/learn-treasury.md). The rationale for this
-(rather than burning or distributing them as rewards) is that slashes may then be reverted by the
-Council by simply paying out from the Treasury. This would be useful in situations such as faulty
-slashes. In the case of legitimate slashing, it moves tokens away from malicious validators to those
-building the ecosystem through the normal Treasury process.
-
-Validators with a larger total stake backing them will get slashed more harshly than less popular
-ones, so we encourage nominators to shift their nominations to less popular validators to reduce
-their possible losses.
-
-It is important to realize that slashing only occurs for active validations for a given nominator,
-and slashes are not mitigated by having other inactive or waiting nominations. They are also not
-mitigated by the validator operator running separate validators; each validator is considered its
-own entity for purposes of slashing, just as they are for staking rewards.
-
-In rare instances, a nominator may be actively nominating several validators in a single era. In
-this case, the slash is proportionate to the amount staked to that specific validator. With very
-large bonds, such as parachain liquid staking accounts, a nominator has multiple active nominations
-per era (Acala's LDOT nominator typically has 7-12 active nominations per era). Note that you cannot
-control the percentage of stake you have allocated to each validator or choose who your active
-validator will be (except in the trivial case of nominating a single validator). Staking allocations
-are controlled by the [Phragmén algorithm](learn-phragmen.md).
-
-Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
-via
-[Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
-The UI shows it per validator and then all the affected nominators along with the amounts. While
-unapplied, a governance proposal can be made to reverse it during this period
-({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days). After the grace period, the slashes are applied.
-
-The following levels of offense are
-[defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
-particular levels are not implemented or referred to in the code or in the system; they are meant as
-guidelines for different levels of severity for offenses. To understand how slash amounts are
-calculated, see the equations in the section below.
-
-- Level 1: Isolated [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small
-  amount of the stake.
-- Level 2: misconducts unlikely to be accidental, but which do not harm the network's security to
-  any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
-  in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
-- Level 3: misconduct that poses serious security or monetary risk to the system, or mass collusion.
-  Slashes all or most of the stake behind the validator and chills.
-
-If you want to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
-
 ### Chilling
 
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
@@ -495,20 +442,10 @@ validator or nominator at any time, taking effect in the next era. It can also s
 removing a validator from the active validator set by another validator, disqualifying them from the
 set of electable candidates in the next NPoS cycle.
 
-Chilling may be voluntary and validator-initiated, e.g. if there is a planned outage in the
-validator's surroundings or hosting provider, and the validator wants to exit to protect themselves
-against slashing. When voluntary, chilling will keep the validator active in the current session,
-but will move them to the inactive set in the next. The validator will not lose their nominators.
-
-When used as part of a punishment (initiated externally), being chilled carries an implied penalty
-of being un-nominated. It also disables the validator for the remainder of the current era and
-removes the offending validator from the next election.
-
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows some validators to be
-disabled, but if the number of disabled validators gets too large,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will trigger a new validator election
-to get a full set. Disabled validators will need to resubmit their intention to validate and
-re-garner support from nominators.
+Chilling can be validator-initiated, e.g. if there is a planned outage in the validator's
+surroundings or hosting provider, and the validator wants to exit to protect themselves against
+slashing. Chilling will keep the validator active in the current session, but will move them to the
+inactive set in the next. The validator will not lose their nominators.
 
 For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
 this wiki.
@@ -562,7 +499,7 @@ users to withdraw. For in-depth understanding, check the
   days on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} No rewards will be earned
   during the unbonding period.
 - Possible punishment in case of the active validator found to be misbehaving (see
-  [slashing](#slashing)).
+  [slashing](./learn-offenses.md)).
 - Lack of liquidity i.e. You would not be able to use the tokens for participating in crowdloans or
   transfer them to different account etc.
 

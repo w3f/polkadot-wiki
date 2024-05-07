@@ -131,8 +131,8 @@ is interactive, unlike ZK rollups, which are non-interactive. Additionally, unli
 are no difficulties in creating parachains with Turing-complete logic. Each parachain is also a
 full-fledged state machine (usually in the form of a blockchain). Similarly to optimistic rollups,
 the Parachain Protocol also has cases where disputes and resolutions of potentially harmful para
-blocks (blocks representing the parachain) can take place, in which case validators are slashed if a
-bad parablock is found.
+blocks (blocks representing the parachain) can take place, in which case validators are
+[slashed](./learn-offenses.md) if a bad parablock is found.
 
 **Benefits:**
 

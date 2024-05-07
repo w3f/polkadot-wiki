@@ -178,9 +178,9 @@ multiplier after each block according to a custom formula defined
 Transaction weight must be computable prior to execution, and therefore can only represent fixed
 logic. Some transactions warrant limiting resources with other strategies. For example:
 
-- Bonds: Some transactions, like voting, may require a bond that will be returned or slashed after
-  an on-chain event. In the voting example, returned at the end of the election or slashed if the
-  voter tried anything malicious.
+- Bonds: Some transactions, like voting, may require a bond that will be returned or
+  [slashed](./learn-offenses.md) after an on-chain event. In the voting example, returned at the end
+  of the election or slashed if the voter tried anything malicious.
 - Deposits: Some transactions, like setting an [identity](learn-identity.md) or claiming an index,
   use storage space indefinitely. These require a deposit that will be returned if the user decides
   to free storage (e.g. clear their IDE).

@@ -9,8 +9,9 @@ slug: ../learn-polkadot-opengov-treasury
 
 import RPC from "./../../components/RPC-Connection";
 
-The Treasury is a pot of funds collected through a portion of block production rewards, transaction
-fees, slashing, and [staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
+The Treasury is a pot of funds collected through a portion of block production rewards,
+[transaction fees](./learn-transaction-fees.md), [slashing](./learn-offenses.md), and
+[staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
 [system account](./learn-account-advanced.md#system-accounts) that cannot be controlled by any
 external account; only the system internal logic can access it.
 
@@ -34,8 +35,8 @@ mechanisms:
   not creates less tokens, rather some share of the overall reward for stakers is diverted to the
   Treasury (more information
   [here](https://research.web3.foundation/Polkadot/overview/token-economics)).
-- **Slashes:** whenever validators and nominators are slashed, a share of the slashed tokens are
-  diverted to Treasury. They are typically rare and unpredictable events.
+- **Slashes:** whenever validators and nominators are [slashed](./learn-offenses.md), a share of the
+  slashed tokens are diverted to Treasury. They are typically rare and unpredictable events.
 - **Transfers:** everyone can send funds to the Treasury directly. This is a rare event and
   typically due to grantees reimbursing some of the amount they got allocated for various reasons.
 
