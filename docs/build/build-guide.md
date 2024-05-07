@@ -139,6 +139,16 @@ by design in smart contracts). This vulnerability is mitigated by the
 -- although it places more of a burden on the developer of the parachain to perform properly
 benchmarks.
 
+:::info What is an on-demand parachain?
+
+On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
+Relay Chain. On-demand parachains will only produce a block when needed, unlike full parachains,
+which have access to bulk coretime to produce a block at every block of the Relay Chain. When building an
+on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of building a
+parachain without the cost drawback of purchasing bulk coretime.
+
+:::
+
 ### Polkadot SDK Overview
 
 Polkadot is built using the Polkadot SDK, which,
@@ -206,6 +216,32 @@ For most developers, the best place to start is to get familiar with Substrate i
 followed by FRAME, with Cumulus as the final step to understanding the entire parachain building
 process. This way, one can view how various paradigms are applied and decide on integrating or
 utilizing Substrate for their particular use case.
+
+Please see the [parachain development guide](build-parachains.md) for how to get started on building
+a parachain.
+
+#### Parachains Benefits
+
+Parachains contain their own runtime/STF logic and benefit from the shared security and the
+cross-consensus messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
+permit high flexibility and customization but require more effort to create and maintain over time.
+A production-grade parachain is typically more involved to create due to the complexity involved in
+blockchain networks' technical and economic aspects.
+
+Parachains grant the creators more space to build the monetary system and other chain aspects from
+the ground up. They will allow for a more concise and efficient execution of complex logic than a
+smart contract platform could offer. Parachains also provide more flexibility in the form of
+governance and can perform complete upgrades in a less controversial way than the current process of
+hard forks.
+
+Some examples of features you can have on a parachain:
+
+- Custom fee structure (for example, pay a flat transaction fee or pay per byte).
+- Shared security and finalization via the relay chain (Polkadot or Kusama).
+- Custom monetary policy for the native token and local economy.
+- Treasury to be funded through transitions in your state function.
+- A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
+  treasury.
 
 ### Building a Pallet
 

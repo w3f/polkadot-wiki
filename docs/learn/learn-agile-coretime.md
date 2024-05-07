@@ -3,7 +3,7 @@ id: learn-agile-coretime
 title: Introduction to Agile Coretime
 sidebar_label: Agile Coretime Intro
 description: Introduction to Agile Coretime and its terminology
-keywords: [coretime, blockspace, parathread, parachain, cores]
+keywords: [coretime, blockspace, parachain, on-demand, cores]
 slug: ../learn-agile-coretime
 ---
 
@@ -72,6 +72,13 @@ The NFT representing a single unit of bulk coretime.
 Previously known as instantaneous coretime, the on-demand coretime refers to coretime acquired
 through bidding in near real-time for the validation of a single parachain block on one of the cores
 reserved specifically for on-demand orders.
+
+:::info Parathreads are renamed to on-demand parachains
+
+On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and
+use it to access the Relay Chain through the on-demand coretime pool.
+
+:::
 
 ### On-demand Coretime Pool
 
@@ -479,7 +486,7 @@ Latency is the only drawback: at low demand, the buyer would receive the coretim
 the Relay Chain, but there’ll be a delay when executed on the Coretime Chain. At times of high
 demand, there will be a queue anyway and this delay matters less.
 
-#### What's the best way for on-demand tasks (previously known as on-demand parachains or parathreads) to regularly send extrinsics to the Relay Chain for allowing a block to be validate?
+#### What's the best way for on-demand tasks (previously known as on-demand parachains) to regularly send extrinsics to the Relay Chain for allowing a block to be validate?
 
 A ready-to-use automated and decentralized method for ordering on-demand coretime is
 currently [being implemented](https://github.com/paritytech/polkadot-sdk/issues/1487). Some teams

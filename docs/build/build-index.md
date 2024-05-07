@@ -20,9 +20,9 @@ the wiki is divided into the following parts:
 
 ## Development Guide
 
-- [Starter's Guide](build-guide.md) - High-level overview on choosing a parachain, parathread, or
-  smart contract for your project and how to get started.
-- [Parachain Development](build-parachains.md) - Tools for building parachains and parathreads.
+- [Starter's Guide](build-guide.md) - High-level overview on choosing a parachain or smart contract
+  for your project and how to get started.
+- [Parachain Development](build-parachains.md) - Tools for building parachains.
 - [Smart Contracts](build-smart-contracts.md) - Tools to deploy contracts to a
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachain.
 

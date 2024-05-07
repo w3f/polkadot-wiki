@@ -99,7 +99,11 @@ module.exports = {
           {
             to: '/docs/learn-nominator',
             from: ['/docs/maintain-guides-how-to-nominate-polkadot']
-          }
+          },
+          {
+            to: '/docs/learn-parachains',
+            from: ['/docs/learn-parathreads']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {

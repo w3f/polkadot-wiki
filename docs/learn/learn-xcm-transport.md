@@ -41,8 +41,8 @@ _Direct_ and _Relayed_.
 - With _Direct_, message data goes direct between parachains and is O(1) on the side of the
   Relay-chain and is very scalable.
 - With _Relayed_, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much
-  less scalable, and parathreads in particular may not receive messages due to excessive queue
-  growth.
+  less scalable, and on-demand parachains in particular may not receive messages due to excessive
+  queue growth.
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
 ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output

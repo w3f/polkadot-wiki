@@ -130,8 +130,7 @@ good return on investment.
 parachain. They can be incentivized with a native token payout from:
 
 - Transaction fees collected
-- Parathread token sponsorship
-- Blocks are naturally produced when a parathread bid is less than the native token payout.
+- Parachain token sponsorship
 
 ### Para-objects
 
@@ -147,8 +146,7 @@ parallelizable objects.
 
 These could be in the form of:
 
-- System level chains (permanent chains): [leased slots](../learn/learn-auction.md),
-  [parathread pool](../learn/learn-parathreads.md)
+- System level chains (permanent chains): [leased slots](../learn/learn-auction.md)
 - [Bridge](../learn/learn-bridges.md) Hubs
 - Nested Relay Chains
 
@@ -273,7 +271,7 @@ Are you interested in building a PDK? See the [future PDKs](#future-pdks) sectio
 After creating your chain runtime logic with Substrate, you will be able to compile it down to a
 Wasm executable. This Wasm code blob will contain the entire state transition function of your
 chain, and is what you will need to deploy your project to
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as either a parachain or parathread.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as a parachain.
 
 Validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use the submitted
 Wasm code to validate the state transitions of your chain or thread, but doing this requires some
@@ -289,7 +287,7 @@ performs the critical action of producing new block candidates for your chain an
 Substrate comes with its own networking layer built-in but unfortunately only supports solo chains
 (that is, chains that do not connect to the relay chain). However, there is the Cumulus extension
 that includes a collator node and allows for your Substrate-built logic to be compatible with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as either a parachain or parathread.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as a parachain.
 
 ### Future PDKs
 
@@ -386,19 +384,10 @@ To include your parachain into the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
 network, you will need to acquire a parachain slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
-{{ polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}
-{{ kusama: [parachain auction](../learn/learn-auction.md) :kusama }} page of the wiki.
+[parachain auction](../learn/learn-auction.md) page.
 
-### Parathread
-
-Parathreads will not require a parachain slot, so you will not need to engage in the candle auction
-mechanism. Instead, you will be able to register your parathread code to a Relay Chain for a fee and
-from then be able to start participating in the per-block auctions for inclusion of your state
-transition into a Relay Chain.
-
-For more information on how parathread per-block auctions work, see the more detailed
-{{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
-{{ kusama: [parathread](../learn/learn-parathreads.md) :kusama }} page.
+A parachain can be producing blocks 
+[continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
 
 ## Resources
 

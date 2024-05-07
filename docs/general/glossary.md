@@ -31,7 +31,7 @@ parachain candidate block is valid or invalid.
 
 ## Auction (Parachain)
 
-Parachain auctions are how non-common-good parathreads win a slot to become a parachain.
+Parachain auctions are how non-system parachains can access Polkadot.
 
 ## Aura
 
@@ -448,7 +448,7 @@ A [Substrate](#substrate) runtime module.
 
 A blockchain that meets several characteristics that allow it to work within the confines of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host. Also known as "parallelized
-chain."
+chain". All parachains start their life-cycle as a parathread.
 
 ## Parachain Development Kit (PDK)
 
@@ -458,14 +458,13 @@ developers to create {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama
 
 ## ParaID
 
-A unique numeric (non-negative integer) identifier for a parathread.
+A unique numeric (non-negative integer) identifier for a parachain.
 
 ## Parathread
 
-A blockchain that works within the confines of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host, thus allowing it to connect to
-the Polkadot Relay Chain. This can be done either by becoming a parachain or connecting on a "pay as
-you go" basis. All parachains start their life-cycle as a parathread.
+Historically, the term "parathread" has been used in two contexts: a substrate-based chain not yet parachain (i.e. not connected to
+a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} core), or as an on-demand parachain
+(i.e. a parachain using on-demand coretime).
 
 ## Parachain Registry
 

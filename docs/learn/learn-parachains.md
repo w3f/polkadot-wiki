@@ -3,7 +3,7 @@ id: learn-parachains
 title: Parachains
 sidebar_label: Introduction to Parachains
 description: An Introduction to Polkadot's Parachains.
-keywords: [parachains, application-specific, sharding]
+keywords: [parachains, application-specific, sharding, on-demand, parathread]
 slug: ../learn-parachains
 ---
 
@@ -183,38 +183,13 @@ and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} would still e
 Parachains are not required to have their token. If they do, it is up to the parachain to make the
 economic case for their token, not {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-## Parachain Hubs
-
-While {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} enables crosschain
-functionality amongst the parachains, it necessitates that there is some latency between the
-dispatch of a message from one parachain until the destination parachain receives the message. In
-the optimistic scenario, the latency for this message should be at least two blocks - one block for
-the message to be dispatched and one block for the receiving parachain to process and produce a
-block that acts upon the message. However, in some cases, we may see that the latency for messages
-is higher if many messages are in queue to be processed or if no nodes are running both parachain
-networks that can quickly gossip the message across the networks.
-
-Due to the necessary latency in sending crosschain messages, some parachains plan to become _hubs_
-for an entire industry. For example, a parachain project [Acala](https://acala.network) is planning
-to become a hub for decentralized finance (DeFi) applications. Many DeFi applications take advantage
-of a property known as _composability_ which means that functions of one application can be
-synergistically composed with others to create new applications. One example of this includes flash
-loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the end of
-the transaction.
-
-An issue with crosschain latency means that composability property weakens among parachains compared
-to a single blockchain. **This implication is common to all sharded blockchain designs, including
-Polkadot, Eth2.0, and others.** The solution to this is the introduction of parachain hubs, which
-maintain the stronger property of single block composability.
-
 ## Parachain Slot Acquisition
 
-There are several ways to allocate parachain slots on
+There are two ways to allocate parachain slots on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}:
 
 - Governance granted parachains, or "system parachains"
 - Auction granted parachains
-- [Parathreads](./learn-parathreads.md)
 
 [System parachains](#system-parachains) are allocated by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s on-chain
@@ -226,28 +201,73 @@ from the Relay Chain, allowing for more efficient parachain processing.
 teams can either bid with their own {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens,
 or source them from the community using the [crowdloan functionality](learn-crowdloans.md).
 
-[Parathreads](learn-parathreads.md) have the same API as parachains, but are scheduled for execution
-on a pay-as-you-go basis with an auction for each block.
-
 ### Parachain Lease Expiration
 
 When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
 balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
-are unreserved. Parachains that have not secured a new lease to extend their slot will automatically
-become [parathreads](./learn-parathreads.md).
+are unreserved. Parachains without a new lease to extend their slot will be deprecated to the status
+of a parathread (i.e., a chain with a registered `ParaID` but has no access to a core).
 
 ## System Parachains
 
-System parachains are parachains that use execution cores allocated by the network's governance.
-These chains remove transactions from the Relay Chain, allowing network validators to allocate
-resources to validating parachains. System chains are Polkadot using its scaling technology to host
-itself.
+[System parachains](./learn-system-chains.md) are parachains that use execution cores allocated by
+the network's governance. These chains remove transactions from the Relay Chain, allowing network
+validators to allocate resources to validating parachains. System chains are Polkadot using its
+scaling technology to host itself.
 
-See the
-[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-this
-[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866),
-and the [system parachains](learn-system-chains.md) page for more information.
+See this
+[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+and this
+[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866)
+for more information.
+
+## On-demand Parachains
+
+:::info On-demand parachains were previously named parathreads
+
+On-demand parachains (previously called parathreads) are parachains that acquire
+[on-demand coretime](./learn-agile-coretime.md#on-demand-coretime).
+
+:::
+
+On-demand parachains temporarily participate (on a block by block basis) in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} security without needing to lease a
+dedicated parachain slot. This is done through economically sharing the scarce resource of a
+_parachain slot_ (or core) among several competing resources (parachains). Chains that otherwise
+would not be able to acquire a full parachain slot or do not find it economically sensible to do so,
+can participate in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s shared security
+as the [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a graceful off-ramp
+to parachains that no longer require a dedicated parachain slot, but would like to continue using
+the Relay Chain.
+
+### Historical Context of On-demand parachains
+
+According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu back in 2019, the
+origin of the idea for on-demand parachains came from similar notions in the limited resource of
+memory on early personal computers of the late '80s and '90s. Since computers have a limited amount
+of physical memory, when an application needs more, the computer can create virtual memory by using
+_swap space_ on a hard disk. Swap space allows the capacity of a computer's memory to expand and for
+more processes to run concurrently with the trade-off that some processes will take longer to
+progress.
+
+### Parachains vs. On-demand Parachains
+
+Parachains and on-demand parachains are very similar from a development perspective. One can imagine
+that a chain developed with Substrate can at different points in its lifetime assume one of three
+states:
+
+- an independent chain with secured bridge,
+- a parachain continuously connected to the Relay Chain,
+- or a parachain intermittently connected to the Relay Chain (i.e. on-demand)
+
+It can switch between these states with relatively minimal effort since the difference is more of an
+economic distinction than a technological one.
+
+On-demand parachains have the exact same benefits for connecting to
+{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} that a full parachain has. Namely,
+it is able to send messages to other para-objects through [XCMP](learn-xcm.md###XCMP) and it is
+secured under the full economic security of {{ polkadot: Polkadot :polkadot }}
+{{ kusama: Kusama :kusama }}'s validator set.
 
 ## Parachains' Use Cases
 
@@ -332,6 +352,30 @@ The Runtime and Node-side behavior are dependent on each other. The Runtime depe
 behavior to author blocks, and to include [extrinsics](./learn-transactions.md) which trigger the
 correct entry points. The Node-side behavior relies on the Runtime APIs to extract information
 necessary to determine which action to take.
+
+## Parachain Hubs
+
+While {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} enables crosschain
+functionality amongst the parachains, it necessitates that there is some latency between the
+dispatch of a message from one parachain until the destination parachain receives the message. In
+the optimistic scenario, the latency for this message should be at least two blocks - one block for
+the message to be dispatched and one block for the receiving parachain to process and produce a
+block that acts upon the message. However, in some cases, we may see that the latency for messages
+is higher if many messages are in queue to be processed or if no nodes are running both parachain
+networks that can quickly gossip the message across the networks.
+
+Due to the necessary latency in sending crosschain messages, some parachains plan to become _hubs_
+for an entire industry (see the [Asset Hub](./learn-assets.md) and
+[Bridge Hub](./learn-bridge-hub.md)). For example, many DeFi applications could take advantage of a
+property known as _composability_ which means that functions of one application can be
+synergistically composed with others to create new applications. One example of this includes flash
+loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the end of
+the transaction.
+
+An issue with crosschain latency means that composability property weakens among parachains compared
+to a single blockchain. **This implication is common to all sharded blockchain designs, including
+Polkadot, Ethereum, and others.** The solution to this is the introduction of parachain hubs, which
+maintain the stronger property of single block composability.
 
 ## Resources
 

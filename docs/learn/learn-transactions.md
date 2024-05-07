@@ -118,13 +118,13 @@ it allows you to add an extra security step. There are
 [a multitude of possible attacks](../general/transaction-attacks.md) that will prevent you to send
 funds to the desired destination account.
 
-## Shard Transactions
+## Parachain Transactions
 
 The transactions that take place within
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s shards - parachains and
-parathreads - do not incur Relay Chain transaction fees. Users of shard applications do not even
-need to hold DOT tokens, as each shard has its own economic model and may or may not have a token.
-There are, however, situations where shards themselves make transactions on the Relay Chain.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s parachains do not incur Relay Chain
+transaction fees. Users of shard applications do not even need to hold DOT tokens, as each shard has
+its own economic model and may or may not have a token. There are, however, situations where shards
+themselves make transactions on the Relay Chain.
 
 [Parachains](learn-parachains.md) have a dedicated slot on the Relay Chain for execution, so their
 collators do not need to own DOT in order to include blocks. The parachain will make some
@@ -132,10 +132,6 @@ transactions itself, for example, opening or closing an [XCM](learn-xcm.md) chan
 in an [auction](learn-auction.md) to renew its slot, or upgrading its runtime. Parachains have their
 own accounts on the Relay Chain and will need to use those funds to issue transactions on the
 parachain's behalf.
-
-[Parathreads](learn-parathreads.md) will also make all the same transactions that a parachain might.
-In addition, the collators need to participate in an auction every block to progress their chain.
-The collators will need to have DOT to participate in these auctions.
 
 ## Block Limits and Transaction Priority
 
