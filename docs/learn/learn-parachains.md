@@ -178,8 +178,7 @@ or source them from the community using the [crowdloan functionality](learn-crow
 
 When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
 balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
-are unreserved. Parachains that have not secured a new lease to extend their slot can acquire one
-[on-demand](#on-demand-parachains).
+are unreserved. Parachains without a new lease to extend their slot will be deprecated to the status of a parathread (i.e., a chain with a registered `ParaID` but has no access to a core).
 
 ## System Parachains
 
