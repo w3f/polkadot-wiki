@@ -302,6 +302,9 @@ reference to a payment ID. If the payout is successful, the balance on Asset Hub
 
 :::
 
+To clear the on-chain storage of a successful or expired spend, Treasury pallet's `checkStatus`
+extrinsic can be used. The transaction fees paid for issuing this extrinsic will be refunded.
+
 ### Proposing a "Void" for a Staged Proposal
 
 If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
