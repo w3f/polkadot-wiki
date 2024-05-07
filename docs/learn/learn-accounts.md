@@ -138,9 +138,8 @@ construct a valid transaction. Additional funds will need to be added to cover t
 
 :::info The existential deposit can be different on parachains
 
-Your account on the Relay Chain has no direct impact on parachains as you have separate accounts on
-each parachain. Still, parachains are able to define an existential deposit of their own, but this
-is separate to that of the Relay Chain ED.
+Having an Existential Deposit (ED) on the relay chain account does not guarantee the liveness of the same account on its system chains or parachains. Parachains typically define ED for an account in their native tokens but can also configure it with tokens that are deemed sufficient. For example, the Existential Deposit on Polkadot Asset Hub can be in DOT or sufficient assets like USDC or USDT.   
+
 
 :::
 
