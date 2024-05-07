@@ -696,28 +696,67 @@ module.exports = {
     {
       type: "category",
       label: "Build",
+      link: {
+        type: 'doc',
+        id: "build/build-guide"
+      },
       items: [
-        "build/build-index",
-        "maintain/maintain-endpoints",
+        "build/build-network-overview",
         {
           type: "category",
-          label: "Development Guide",
+          label: "Client-side Development",
+          link: {
+            type: 'generated-index',
+            title: "Client-side Development",
+            description: "Learn about different options for building client-side apps on Polkadot.",
+            slug: '/build-client-index',
+          },
           items: [
-            "build/build-guide",
-            "build/build-parachains",
-            "build/build-storage",
-            "build/build-smart-contracts",
-            "build/build-oracle",
-            "build/build-data",
+            "build/build-client-side",
             "build/build-light-clients",
+            "build/build-node-interaction",
           ],
         },
         {
           type: "category",
-          label: "Tools",
+          label: "Getting Started with Coretime",
+          link: {
+            type: 'generated-index',
+            title: "Getting Started with Coretime",
+            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            slug: '/build-coretime-index',
+          },
           items: [
-            "build/build-tools-index",
-            'build/build-open-source'
+            "build/build-guides-install-deps",
+            "build/build-guides-coretime-start"
+          ],
+        },
+        "build/build-smart-contracts",
+        {
+          type: "category",
+          label: "Protocol Development Resources",
+          link: {
+            type: 'generated-index',
+            title: "Protocol Development Resources",
+            description: "Miscellaneous aspects concerning protocol and parachain development",
+            slug: '/build-protocol-index',
+          },
+          items: [
+            "build/build-protocol-info",
+            "build/build-integrate-assets",
+            "build/build-hrmp-channels"
+          ],
+        },
+        {
+          type: "category",
+          label: "Tooling",
+          link: {
+            type: 'doc',
+            id: "build/build-tools-index"
+          },
+          items: [
+            "build/build-data",
+            "build/build-open-source",
           ],
         },
         {
@@ -726,7 +765,7 @@ module.exports = {
           items: ["build/build-hackathon"],
         },
       ],
-    }, 
+    },
     {
       type: "category",
       label: "What to Break",

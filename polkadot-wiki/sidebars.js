@@ -718,6 +718,7 @@ module.exports = {
         id: "build/build-guide"
       },
       items: [
+        "build/build-network-overview",
         {
           type: "category",
           label: "Client-side Development",
@@ -736,11 +737,11 @@ module.exports = {
         "build/build-smart-contracts",
         {
           type: "category",
-          label: "Protocol Development",
+          label: "Protocol Development Resources",
           link: {
             type: 'generated-index',
-            title: "Protocol & Parachain Development",
-            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
+            title: "Protocol Development Resources",
+            description: "Miscellaneous aspects concerning protocol and parachain development",
             slug: '/build-protocol-index',
           },
           items: [
@@ -749,7 +750,6 @@ module.exports = {
             "build/build-hrmp-channels"
           ],
         },
-        "build/build-network-overview",
         {
           type: "category",
           label: "Tooling",

@@ -21,7 +21,7 @@ The programming language used for development is [Rust](https://www.rust-lang.or
 
 :::info
 
-For more information about building on Polkadot, see [the Builder's Guide](../build/build-index.md).
+For more information about building on Polkadot, see [the Builder's Guide](../build/build-guide.md).
 
 :::
 
