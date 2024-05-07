@@ -33,7 +33,8 @@ In this section of the UI, you can see accounts injected from a browser extensio
 [**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or
 [**other in-browser wallets**](./wallets-and-extensions.md#browser-extensions). It is also possible
 to expand balance details and see different
-[**account balance types**](../learn/learn-accounts.md#account-balance-types). You can also:
+[**account balance types**](../learn/learn-account-balances.md#balance-types-on-polkadot-js). You
+can also:
 
 - Add an account (this option must be enabled under [Settings](#settings)). Note that if you clear
   the cache of your browser, you will lose it, and you will need to recover it through seed phrase

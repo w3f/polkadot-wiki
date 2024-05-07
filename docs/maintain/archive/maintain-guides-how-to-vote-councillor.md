@@ -27,13 +27,6 @@ of {{ polkadot: 0.032 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} per vote.
 whatever amount you wish to put behind your vote. See the
 [democracy guide](./maintain-guides-democracy.md) for more information.
 
-:::info Voting and staking locks can overlap
-
-- A user can use staked funds to vote for Councillors (and/or use those funds in referenda).
-- A user is only prohibited from transferring these funds to another account.
-
-:::
-
 :::warning
 
 If your balance is vesting, you cannot use unvested tokens for this lock. You will have to wait

@@ -198,6 +198,7 @@ module.exports = {
                 id: "learn/learn-accounts"
               },
               items: [
+                "learn/learn-account-balances",
                 "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",

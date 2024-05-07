@@ -163,7 +163,7 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
   the minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below the minimum, your account will be reaped. Learn more about
   [Accounts](../learn/learn-accounts.md) and the
-  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+  [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
 
 - {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
   the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
