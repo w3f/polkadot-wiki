@@ -386,8 +386,8 @@ network, you will need to acquire a parachain slot.
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
 [parachain auction](../learn/learn-auction.md) page.
 
-A parachain can be
-[fully-fledged or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
+A parachain can be producing blocks 
+[continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
 
 ## Resources
 
