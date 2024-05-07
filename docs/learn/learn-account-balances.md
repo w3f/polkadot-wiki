@@ -11,7 +11,7 @@ In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are dif
 balances depending on the account activity. Different balance types dictate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
 
-:::info A more efficient use of wallet balances
+:::info A more efficient distribution of account balance types
 
 Soon, Polkadot SDK pallets will implement the _fungible_ trait (see
 [Rust Book](https://doc.rust-lang.org/book/ch10-02-traits.html) for more info about traits). This
