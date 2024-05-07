@@ -132,7 +132,7 @@ Locks are accounted for within the `frozen` balance of the account. This is the 
 not transferrable, and locked in [staking](./learn-staking.md),
 [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers).
 
-Locks overlap (in both size and time), and the general rule is that:
+Locks overlap (in both amount and duration), and the general rule is that:
 
 - If you have multiple locks of different sizes, the biggest lock decides the total amount of locked
   tokens
