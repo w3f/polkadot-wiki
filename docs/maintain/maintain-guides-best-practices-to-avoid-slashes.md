@@ -7,12 +7,6 @@ keywords: [validator, rewards, slashing]
 slug: ../maintain-guides-avoid-slashing
 ---
 
-## Best practices to prevent slashing
-
-Slashing is implemented as a deterrent for validators to misbehave. Slashes are applied to a
-validator’s total stake (own + nominated) and can range from as little as 0.01% or rise to 100%. In
-all instances, slashes are accompanied by a loss of nominators.
-
 A slash may occur under four circumstances:
 
 1.  Equivocation – A slash of 0.01% is applied with as little as a single evocation. The slashed
@@ -22,9 +16,9 @@ A slash may occur under four circumstances:
 3.  Application related (bug or otherwise) – The amount is unknown and may manifest as scenarios 1
     and 2 above.
 
-This article provides some best practices to prevent slashing based on lessons learned from previous
-slashes. It provides comments and guidance for all circumstances except for malicious action by the
-node operator.
+This page provides some best practices to prevent [slashing](../learn/learn-offenses.md) based on
+lessons learned from previous slashes. It provides comments and guidance for all circumstances
+except for malicious action by the node operator.
 
 ## Equivocation
 
