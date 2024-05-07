@@ -7,7 +7,7 @@ keywords: [account, multisig, polkadot account, polkadotjs, multix]
 slug: ../learn-account-multisig
 ---
 
-:::info Mulisig Apps
+:::info Multisig Apps
 
 See the [multisig apps](../general/multisig-apps.md) page for more information about user-friendly
 tools about multi-signature accounts.
