@@ -7,6 +7,14 @@ keyword: [nominate, nominator, offenses, slashes, validator]
 slug: ../learn-offenses
 ---
 
+:::info Content subject to change
+
+The material provided here bases on the changes introduced by Step 2 of the _Disabling_ feature. See
+[this page](https://github.com/orgs/paritytech/projects/119/views/15?pane=issue&itemId=61684472) for
+more information.
+
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a public permissionless network.
 As such, it has a mechanism to disincentivize offenses and incentivize good behaviour. Below you can
 find a summary of punishments for specific offenses:
@@ -20,10 +28,34 @@ find a summary of punishments for specific offenses:
 |    Seconded + Valid Equivocation     |           -            |                No                |         No          |     No      |
 |     Double Seconded Equivocation     |           -            |                No                |         No          |     Yes     |
 
+## Offenses
+
+:::info Learn more about the parachain protocol
+
+To better understand the terminology used for offenses, it is recommended to get familiar with the
+[parachain protocol](./learn-parachains-protocol.md).
+
+:::
+
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main offenses as
+shown below.
+
+- Backing Invalid: A para-validator is backing an invalid block.
+- ForInvalid Vote: A validator (secondary checker) is voting in favour of a block that is invalid.
+- AgainstInvalid Vote: A validator (secondary checker) is voting against of a block that is invalid.
+- Equivocation: A validator produces two or more of the same block or vote.
+  - GRANDPA and BEEFY Equivocation: A validator signs two or more votes in the same round on
+    different chains.
+  - BABE Equivocation: A validator produces two or more blocks on the Relay Chain in the same time
+    slot.
+- Seconded + Valid Equivocation: **TODO**
+- Double Seconded Equivocation: **TODO**
+
 ## Punishments
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, offenses to the network can be
-punished depending on their severity.
+punished depending on their severity. There are three main punishments: slashing, disabling, and
+rep.
 
 ### Slashing
 
@@ -63,10 +95,23 @@ unapplied, a governance proposal can be made to reverse it during this period
 ({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days). After the grace period, the slashes are applied.
 
-If you want to know more details about slashing, please look at our
+The following levels of offense are
+[defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
+particular levels are not implemented or referred to in the code or in the system; they are meant as
+guidelines for different levels of severity for offenses.
+
+- Level 1: Isolated equivocation, slashes a very small amount of the stake.
+- Level 2: misconducts unlikely to be accidental, but which do not harm the network's security to
+  any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
+  in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake.
+- Level 3: misconduct that poses serious security or monetary risk to the system, or mass collusion.
+  Slashes all or most of the stake behind the validator.
+
+To understand how slash amounts for equivocations are calculated, see next section. If you want to
+know more details about slashing, please look at our
 [research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
 
-#### Slash Calculation
+#### Slash Calculation for Equivocation
 
 Both GRANDPA and BABE equivocation use the same formula for calculating the slashing penalty:
 
@@ -130,49 +175,3 @@ prioritizes disabling first backers, then ForInvalid, then AgainstValid.
 ### Rep
 
 **TODO**
-
-## Offenses
-
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main offenses as
-shown below.
-
-- Backing Invalid: A para-validator is backing an invalid block.
-- ForInvalid Vote: A validator (secondary checker) is voting in favour of a block that is invalid.
-- AgainstInvalid Vote: A validator (secondary checker) is voting against of a block that is invalid.
-- Equivocation: A validator produces two or more of the same block or vote.
-- Seconded + Valid Equivocation: **TODO**
-- Double Seconded Equivocation: **TODO**
-
-### Equivocation
-
-**GRANDPA and BEEFY Equivocation**: A validator signs two or more votes in the same round on
-different chains.
-
-**BABE Equivocation**: A validator produces two or more blocks on the Relay Chain in the same time
-slot.
-
-- Level 1: Isolated equivocation, slashes a very small amount of the stake.
-- Level 2: misconducts unlikely to be accidental, but which do not harm the network's security to
-  any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
-  in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake.
-- Level 3: misconduct that poses serious security or monetary risk to the system, or mass collusion.
-  Slashes all or most of the stake behind the validator.
-
-### Slashing
-
-The following levels of offense are
-[defined](https://research.web3.foundation/Polkadot/security/slashing/amounts). However, these
-particular levels are not implemented or referred to in the code or in the system; they are meant as
-guidelines for different levels of severity for offenses. To understand how slash amounts are
-calculated, see the equations in the section below.
-
-- Level 1: Isolated [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small
-  amount of the stake.
-- Level 2: misconducts unlikely to be accidental, but which do not harm the network's security to
-  any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
-  in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake.
-- Level 3: misconduct that poses serious security or monetary risk to the system, or mass collusion.
-  Slashes all or most of the stake behind the validator.
-
-If you want to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
