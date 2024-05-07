@@ -361,7 +361,7 @@ is less than Peter’s, leading to their voting power counting as less.
 
 :::info Staked tokens can be used in governance
 
-While a token is locked, you can still use it for voting and [staking](./learn-staking.md). You are
+While the tokens are locked, you can still use them for voting and [staking](./learn-staking.md). You are
 only prohibited from transferring these tokens to another account. **See the section about
 [OpenGov locks](#voting-on-a-referendum), and learn more about locks on the
 [Balances page](./learn-account-balances.md#locks).**
