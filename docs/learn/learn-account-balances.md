@@ -128,8 +128,8 @@ can overlap on the same account balance instead of being stacked on top of one a
 accounts when the account participates in activities on-chain (staking, voting, etc.), but these are
 not customizable.
 
-Locks account for the `frozen` balance of your wallet. This is the balance that can be `free` but
-not transferrable, and locked on [staking](./learn-staking.md),
+Locks are accounted for within the `frozen` balance of the account. This is the balance that can be `free` but
+not transferrable, and locked in [staking](./learn-staking.md),
 [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers).
 
 Locks overlap (in both size and time), and the general rule is that:
