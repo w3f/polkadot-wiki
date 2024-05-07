@@ -48,7 +48,7 @@ architectures that are not necessarily blockchain in nature.
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides many ways to secure a slot
 for a parachain for a particular length of time. On-demand parachains share slots with other
-parachains. Permanent and on-demand parachains have the same API; their difference is economic.
+parachains. Both regular and on-demand parachains have the same API; their difference is economic.
 Parachains will have to reserve {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for the
 duration of their slot lease; on-demand parachains will pay on a per-block basis. Parachains can
 switch between being on-demand and permanent.
