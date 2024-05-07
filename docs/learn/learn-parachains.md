@@ -228,7 +228,7 @@ that a chain developed with Substrate can at different points in its lifetime as
 states:
 
 - an independent chain with secured bridge,
-- a parachain always connected to the Relay Chain (i.e. permanent),
+- a parachain continuously connected to the Relay Chain,
 - or a parachain intermittently connected to the Relay Chain (i.e. on-demand)
 
 It can switch between these states with relatively minimal effort since the difference is more of an
