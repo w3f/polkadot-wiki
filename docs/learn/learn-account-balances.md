@@ -49,7 +49,7 @@ where `free`, `frozen` and `on_hold` are defined above. The `ED` is the the
 ## Example of Wallet Balance
 
 Below is an in-depth example of how an account balance composition changes depending on user actions once [the _fungible_ trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) is used for account balances.
-Let’s take, for example, a wallet with 100 DOT.
+Let’s take, for example, an account with 100 DOT.
 
 ```
 Free: 100 DOT
