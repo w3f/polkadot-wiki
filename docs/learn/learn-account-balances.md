@@ -14,7 +14,7 @@ be used for transfers, to pay fees, or must remain frozen and unused due to an o
 :::info A more efficient distribution of account balance types
 
 Soon, Polkadot SDK pallets will implement the _fungible_ trait (see
-[Rust Book](https://doc.rust-lang.org/book/ch10-02-traits.html) for more info about traits). This
+[Reference docs](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) for more info about traits). This
 new logic will allow for more efficient use of your account balance. Specifically, the
 [fungible trait](https://github.com/paritytech/polkadot-sdk/issues/1833#issuecomment-1805764506)
 will allow using the `free` balance for on-chain activity like setting proxies and identities.
