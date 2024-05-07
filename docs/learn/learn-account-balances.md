@@ -74,7 +74,7 @@ Untouchable: 80 DOT
 
 ![balance-example-2](../assets/balance-example-2.png)
 
-The spendable balance would be 20 DOT (- transaction fees).
+The spendable balance would be 20 DOT (which would also include fees for future transactions from this account).
 
 Note how the account cannot be reaped from the state while it has a frozen balance, or in general
 any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
