@@ -136,7 +136,7 @@ Locks overlap (in both amount and duration), and the general rule is that:
 
 - If you have multiple locks of different amounts of tokens, the biggest lock decides the total amount of locked
   tokens
-- If you have multiple locks of the same size, the longest lock decides when all the tokens can be
+- If you have multiple locks of the same amount of tokens, the lock with the longest duration decides when those tokens can be
   unlocked
 
 Let's take, for example, 80 DOT as a `frozen` balance. These 80 DOT are currently used in staking
