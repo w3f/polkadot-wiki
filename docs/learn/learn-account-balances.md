@@ -62,7 +62,7 @@ Untouchable: 1 DOT (ED)
 ![balance-example-1](../assets/balance-example-1.png)
 
 In this case, the existential deposit of 1 DOT is untouchable (meaning you can’t touch it if the
-account can’t or shouldn’t get reaped). We stake 80 DOT, and we get the following balance structure:
+account can’t or shouldn’t get reaped). If 80 DOT from the account is staked, we get the following balance structure:
 
 ```
 Free: 100 DOT
