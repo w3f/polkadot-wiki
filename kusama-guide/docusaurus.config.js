@@ -119,6 +119,7 @@ module.exports = {
       disableSwitch: true,
     },
     prism: {
+      additionalLanguages: ["rust"],
       theme: require("prism-react-renderer").themes.github,
     },
     /*

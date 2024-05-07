@@ -46,12 +46,6 @@ The full definition can be found [here](../learn/learn-agile-coretime.md#task).
 
 :::
 
-## Deploying on a Core
-
-Once you have your runtime and pallets developed, you will be able to deploy it on a
-[core](../learn/learn-agile-coretime.md#core), which is how one utilizes the shared security of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. One does so by:
-
 1. **Reserving** a [`ParaId`](../general/glossary.md#paraid), where you will upload your runtime and
    genesis state.
 2. **Compiling** the runtime (written in Rust) to a [WebAssembly](../learn/learn-wasm.md) blob,
@@ -64,7 +58,62 @@ Once you have your runtime and pallets developed, you will be able to deploy it 
 6. **Assigning** that core to your[ `ParaId`](../general/glossary.md#paraid).
 7. **Ensuring** you have at least one honest, synced collator for your task
 
+## Deploying on a Core
+
+Once you have your runtime and pallets developed, you will be able to deploy it on a
+[core](../learn/learn-agile-coretime.md#core), which is how one utilizes the shared security of the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. One does so by:
+
+```mermaid
+%%{
+ init: {
+ 'theme': 'base',
+ 'themeVariables': {
+ 'fontFamily': 'Unbounded',
+ 'primaryColor': '#E6007A',
+ 'fontSize': '16px',
+ 'primaryTextColor': '#fff',
+ 'primaryBorderColor': '#7C0000',
+ 'lineColor': '#140523',
+ 'secondaryColor': '#552BBF',
+ 'tertiaryColor': '#fff'
+ }
+ }
+}%%
+flowchart TD
+    subgraph GA["Generate Artifacts"]
+        direction LR
+        A["Creating a runtime"]-->B["Compiling to Wasm"]-->C["Generate Genesis State"]
+    end
+
+    subgraph PC["Procure ParaId & Core"]
+        direction LR
+        PARAID["Reserve ParaId"]
+        PARAID-->D["Buy Bulk Coretime"]
+        PARAID-->E["Issue On-Demand Coretime Extrinsic"]
+    end
+
+
+    subgraph DEP["Deploying"]
+        direction LR
+        F["Register artifacts to ParaId"]-->assign["Assign Core"]-->G["Sync collator"]-->H["Begin generating blocks!"]
+    end
+
+GA-->PC
+PC-->DEP
+```
+
+### Install dependencies
+
+Make sure you have everything you need for your target system
+[here.](./build-guides-install-deps.md)
+
 ### Deploy adder collator
 
 Try out the above by deploying the
 [adder collator, a very simple "counter" parachain implementation.](../learn/learn-guides-coretime-parachains.md).
+
+## Template to Core
+
+If you wish to use a template, such as the ones found in the Polkadot SDK, feel free to use the
+[Template to Core guide.](./build-guides-template-basic.md)

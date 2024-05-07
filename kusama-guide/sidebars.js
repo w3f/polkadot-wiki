@@ -727,7 +727,9 @@ module.exports = {
           },
           items: [
             "build/build-guides-install-deps",
-            "build/build-guides-coretime-start"
+            "build/build-guides-coretime-start",
+            "build/build-guides-template-basic",
+            "build/build-guides-coretime-troubleshoot"
           ],
         },
         "build/build-smart-contracts",
