@@ -199,7 +199,7 @@ types are the same for a Polkadot account).
   redeemable balance is 0.1 KSM.
 - The **locked** balance indicates the number of frozen tokens for on-chain participation to staking
   and democracy or for vested transfers. **Locks do not stack**, which means that if you have
-  different locks the total locked balance is not the addition of all single locks. Instead, **the
+  different locks, the total locked balance is not the addition of the individual locks. Instead, **the
   biggest lock decides the total locked balance**. In the example, the locked balance is 0.55 KSM
   because the biggest lock is on democracy (0.55 KSM).
 - The **reserved** balance indicates the number of frozen tokens for on-chain activity other than
