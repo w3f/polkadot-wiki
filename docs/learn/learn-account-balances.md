@@ -21,7 +21,7 @@ will allow using the `free` balance for on-chain activity like setting proxies a
 
 :::
 
-There are 5 types of balances:
+There are 5 types of account balances:
 
 - **Free** is the balance is the balance that can be used for on-chain activity but is not
   necessarily spendable (or transferrable)
