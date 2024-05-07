@@ -131,7 +131,6 @@ parachain. They can be incentivized with a native token payout from:
 
 - Transaction fees collected
 - Parachain token sponsorship
-- Blocks are naturally produced when a parachain bid is less than the native token payout.
 
 ### Para-objects
 
