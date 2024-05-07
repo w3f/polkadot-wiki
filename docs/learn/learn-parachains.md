@@ -197,7 +197,7 @@ for more information.
 
 :::info On-demand parachains were previously named parathreads
 
-On-demand parachains (previously called parathreads) are parachains that acquired
+On-demand parachains (previously called parathreads) are parachains that acquire
 [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime).
 
 :::
