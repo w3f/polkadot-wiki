@@ -1,6 +1,6 @@
 ---
 id: learn-account-balances
-title: Polkadot's Account Balances
+title: Account Balances
 sidebar_label: Account Balances
 description: Polkadot's Account Balance Types.
 keywords: [Polkadot, locks, balance, account]
