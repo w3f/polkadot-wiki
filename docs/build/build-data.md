@@ -69,7 +69,7 @@ infrastructure and tooling to help users visualize, curate, share, and analyze o
 and is currently live on the [Moonbeam](https://moonbeam.network/) network, bringing visibility to
 billions of blockchain data points to Polkadot via their unified API. The approach to deploying on
 Moonbeam simplifies the development of Polkadot-based blockchain applications as compared to
-implementing a full parachain or on-demand parachain.
+implementing a full parachain or an on-demand parachain.
 
 Covalent captures the entire history of blockchains and offers a way to zoom into data points
 recorded in smart contracts that are often not accessible.
