@@ -40,10 +40,9 @@ entities. The thinking is simple: "These entities that have a good reputation tr
 trust them, by association, you should trust us too". Indeed, association with a trusted entity can
 be a strong indicator of the legitimacy of a project.
 
-For example, if a project had received a
-[Web3 Foundation Grant](https://grants.web3.foundation), this is an indication that the
-project is indeed building on the Polkadot ecosystem, and if they have delivered all of their
-milestones, then their code is most likely of reasonable quality.
+For example, if a project had received a [Web3 Foundation Grant](https://grants.web3.foundation),
+this is an indication that the project is indeed building on the Polkadot ecosystem, and if they
+have delivered all of their milestones, then their code is most likely of reasonable quality.
 
 Furthermore, Web3 Foundation is not the only entity in the ecosystem that provides grants. Other
 reputable teams in the ecosystem that have developed platforms or prospective parachains provide
@@ -64,9 +63,8 @@ For example, if a project has the
 [Web3 Foundation Grant badge](https://grants.web3.foundation/docs/Support%20Docs/grant-badge-guidelines)
 on their site or claims to have received a grant, check to see if they have received one and that it
 has not been terminated. The complete list of projects that have successfully applied for a grant
-can be found
-[here](https://grants.web3.foundation/applications),
-where you can see what each project has delivered and if, perhaps, their grant has been terminated.
+can be found [here](https://grants.web3.foundation/applications), where you can see what each
+project has delivered and if, perhaps, their grant has been terminated.
 
 The same thing goes for VC funding or another grant, or any advertised association for that matter.
 Check on the corresponding sites to make sure such claims are valid.

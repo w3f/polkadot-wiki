@@ -101,7 +101,6 @@ broadcast this certificate via an extrinsic.
 - BABE: sr25519
 - BEEFY: ecdsa
 - GRANDPA: ed25519
-- I'm Online: sr25519
 - Parachain Assignment: sr25519
 - Parachain Validator: ed25519
 

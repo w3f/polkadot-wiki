@@ -232,7 +232,7 @@ Once this is finished, one may submit a proposal
 [as stated above](#submit-a-treasury-track-referendum). Keep in mind one will also need to
 [provide the decision deposit as well](#place-a-decision-deposit-for-the-treasury-track-referendum).
 
-## Creating a Staged Proposal with `validFrom`
+## Creating a Multistage Payout Proposal with `validFrom`
 
 Staged proposals are similar to a tranche or milestone-based funding model; instead of all spends
 being paid simultaneously, each portion is redeemable at a certain block height. This is done by
@@ -257,11 +257,18 @@ certain dates in the future.
 
 :::
 
-### Using `batchAll` for Multi-Spend Proposals
+### Using `batch` for Multi-Spend Proposals
 
 Using the Utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
 calls can have its own `validFrom` block height, which allows for scenarios such as the above to be
 possible.
+
+:::tip Multistage payout proposal example
+
+For reference on how to create a multistage payout proposal, please check
+[Referendum 382](https://kusama.subscan.io/referenda_v2/382) on Kusama.
+
+:::
 
 ### Using `validFrom` for a Milestone-Based Proposal
 
@@ -278,9 +285,27 @@ spend within 30 days.
 :::
 
 In order to claim the spend, you must manually call the `treasury.payout` extrinsic via a `Signed`
-origin. The ID used is the one found in
-[Polkadot-JS UI > Treasury](https://polkadot.js.org/apps/#/preimages), where the ID of the proposal
-in question would be available:
+origin. The `spendID` for the pending payout can be queried on-chain through Polkadot-JS UI >
+Developer > Chain State > Storage > treasury > spends and unselect the include option and then click
+on the plus button to the right.
+
+![payout](../assets/treasury/treasury-multistage-payout-spend-id.png)
+
+From the list of spends, find the `spendID` of your respetive payout and issue the payout extrinsic.
+
+:::tip payout example
+
+To claim the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382) on Kusama,
+[this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing
+the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
+reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
+[Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset
+Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
+
+:::
+
+To clear the on-chain storage of a successful or expired spend, Treasury pallet's `checkStatus`
+extrinsic can be used. The transaction fees paid for issuing this extrinsic will be refunded.
 
 ### Proposing a "Void" for a Staged Proposal
 

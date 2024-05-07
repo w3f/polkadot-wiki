@@ -245,14 +245,6 @@ The candidate can fail to be included in the parachain in any of the following w
 - The candidate's PoV is not considered available within a timeout, and the block is discarded from
   the Relay Chain.
 
-Signed negative statements will lead to a [dispute](#disputes), and if there are false negatives,
-whoever will be on the wrong side (once the dispute is resolved) will be slashed. False positives
-can also happen; those actors responsible for it will also be slashed. To detect false positives,
-PoV information must be available after the block has been added to the Relay Chain so that
-validators can check the work. However, as a part of the data
-[availability scheme](#availability-and-unavailability-phase), they are made available on the
-network for a certain period so that the validators can perform the required checks.
-
 ## Approval Process
 
 ### Overview
@@ -454,6 +446,12 @@ All parachain blocks that are in the finalized relay chain should be valid. This
 backed blocks that are not included. To ensure nothing invalid ends up in the finalized relay chain,
 there are approval checks (described above) and disputes. The latter ensures that each attempt to
 include something invalid is caught and the offending validators are punished.
+
+Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
+on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
+those actors responsible for it will also be slashed. To detect false positives, PoV information
+must be available after the block has been included to the Relay Chain via the
+[availability scheme](#availability-and-unavailability-phase).
 
 Disputes are _independent from a particular fork_, while backing and approval operate on particular
 forks. The approval voting stops if an alternative fork (which might not contain the

@@ -1,3 +1,4 @@
+const { markdown } = require("../polkadot-wiki/docusaurus.config");
 const { injectPlugin } = require("../scripts/injectPlugin");
 const i18n = require("./i18n");
 const isPub = process.env.PUBLISHING === "true";
@@ -10,6 +11,10 @@ module.exports = {
   baseUrl: "/",
   projectName: isPub ? "kusama-guide-hosting" : "",
   organizationName: "w3f",
+  markdown: {
+    mermaid: true
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   i18n,
   scripts: [
     "https://buttons.github.io/buttons.js",

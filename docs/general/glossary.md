@@ -427,12 +427,6 @@ governance allows decisions to be made transparently. Note that there are a vari
 algorithms for making these decisions, such as simple majority voting, adaptive quorum biasing, or
 identity-based quadratic voting.
 
-## Online Message
-
-This is a message that is broadcast by a validator to verify to the network that the validator is
-online, even if they haven't published a block this epoch. This is sometimes referred to as
-"ImOnline".
-
 ## Polkadot OpenGov
 
 Previously known as Governance v2 (Gov2) during early development,
@@ -646,7 +640,7 @@ attacker would need to attack the entire
 ## Slashing
 
 The removal of a percentage of an account's DOT as a punishment for a validator acting maliciously
-or incompetently (e.g., equivocating or remaining offline for an extended period).
+or incompetently.
 
 ## Soft Fork
 

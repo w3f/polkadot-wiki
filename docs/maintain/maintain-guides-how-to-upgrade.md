@@ -7,11 +7,11 @@ keywords: [upgrade, node, validator, release, session]
 slug: ../maintain-guides-how-to-upgrade
 ---
 
-Validators perform critical functions for the network, and as such, have strict uptime requirements.
-Validators may have to go offline for short-periods of time to upgrade client software or to upgrade
-the host machine. Usually, standard client upgrades will only require you to stop the service,
-replace the binary and restart the service. This operation can be executed within a session and if
-performed correctly will not produce a slashable event.
+Validators perform critical functions for the network by
+[backing and including blocks](../learn/learn-parachains-protocol.md). Validators may have to go
+offline for short-periods of time to upgrade client software or to upgrade the host machine.
+Usually, standard client upgrades will only require you to stop the service, replace the binary and
+restart the service. This operation can be executed within a session.
 
 Validators may also need to perform long-lead maintenance tasks that will span more than one
 session. Under these circumstances, an active validator may chill their stash and be removed from

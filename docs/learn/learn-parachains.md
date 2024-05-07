@@ -7,6 +7,10 @@ keywords: [parachains, application-specific, sharding, on-demand, parathread]
 slug: ../learn-parachains
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="Parachain Slot Auctions will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+
 :::info Testing on Rococo
 
 For information on how to participate in the crowdloan and parachain auction testing on Rococo,
@@ -79,6 +83,29 @@ Parachains are a solution to two fundamental problems in blockchains:
   problem or not so good at trying to solve many problems. A blockchain specializing in solving a
   specific problem has more leverage toward itself and its users. Parachains are purpose-built
   blockchains are highly specialized and can take advantage of each other through cooperation.
+
+### Parachain Benefits
+
+Parachains contain their own runtime/STF logic and benefit from the shared security and the
+cross-consensus messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
+permit high flexibility and customization but require more effort to create and maintain over time.
+A production-grade parachain is typically more involved to create due to the complexity involved in
+blockchain networks' technical and economic aspects.
+
+Parachains grant the creators more space to build the monetary system and other chain aspects from
+the ground up. They will allow for a more concise and efficient execution of complex logic than a
+smart contract platform could offer. Parachains also provide more flexibility in the form of
+governance and can perform complete upgrades in a less controversial way than the current process of
+hard forks.
+
+Some examples of features you can have on a parachain or parathread:
+
+- Custom fee structure (for example, pay a flat transaction fee or pay per byte).
+- Shared security and finalization via the relay chain (Polkadot or Kusama).
+- Custom monetary policy for the native token and local economy.
+- Treasury to be funded through transitions in your state function.
+- A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
+  treasury.
 
 ### Shared Security
 

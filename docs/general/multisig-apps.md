@@ -11,9 +11,17 @@ slug: ../multisig-apps
 
 This page is open to contributions from the community. Please follow the
 [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your Governance app to this page.
+and add your Multisig app to this page.
 
 :::
+
+List of Multisig apps in Polkadot Ecosystem
+
+- [Mimir](#mimir)
+- [Multix by Chainsafe](#multix-by-chainsafe)
+- [Nova Spektr](#nova-spektr)
+- [Polkadot Multisig by Signet](#polkadot-multisig-by-signet)
+- [Polkasafe](#polkasafe)
 
 ## Mimir
 
@@ -31,7 +39,7 @@ Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
 - **User-Friendly Interface**: Designed for ease of use, making complex multisig operations more
   accessible.
 
-## Multix
+## Multix by Chainsafe
 
 :::info Walk-Through Video Tutorial
 
@@ -57,6 +65,31 @@ Besides being user-friendly, Multix provides several benefits:
 The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
 [pure proxy page](../learn/learn-proxies-pure.md#scenario-three-multisig-controlling-a-pure-proxy).
 
+## Nova Spektr
+
+![](https://github.com/Leemo94/polkadot-wiki/blob/master/docs/assets/nova_spektr.png?raw=true)
+
+Nova Spektr is your all-in-one Polkadot Wallet, engineered with enterprise-grade capabilities such
+as multisigs, proxy accounts, hardware wallets, light clients, and much more. Nova Spektr is
+designed to meet the requirements of enterprises, power users, and individual users alike – funded
+by the Polkadot Treasury
+
+- Multichain Wallet – Nova Spektr supports 80+ Polkadot ecosystem networks, and hundreds of tokens
+  consolidating them all under a single interface!
+- Multisigs – Experience superior security with truly multi-chain Multisig Wallets in Nova Spektr!
+- Proxy Discovery – Discover all your Proxy accounts automatically when importing your wallet into
+  Nova Spektr!
+- Collaborative Asset Management – Manage your assets in a simple, secure, and collaborative manner,
+  requiring a predefined level of consensus to be reached for each transaction’s authorization.
+- Hardware Wallet Support – Safeguard your assets even further by pairing your hardware wallet with
+  Nova Spektr!
+- Light Clients – Unleash an unstoppable, fast, and trustless working environment with Nova Spektr
+  by utilizing locally hosted blockchain nodes to manage your digital assets in the Polkadot
+  ecosystem!
+- Data Verification – Benefit from Polkadot and Kusama Light Clients to cryptographically verify
+  data from public blockchain nodes!
+- Open Source & Trustless – Your data remains yours — Nova Spektr never stores or tracks user data!
+
 ## Polkadot Multisig by Signet
 
 [Polkadot Multisig](https://polkadotmultisig.com/) by Signet is user-friendly software that helps
@@ -74,7 +107,7 @@ Talisman [Signet](https://www.talisman.xyz/signet) supports multisig ops and ent
 onchain organisations. Enterprise features and self-hosted options are available. Signet is
 proprietary, where as Polkadot Multisig by Signet is free.
 
-## Polkasafe (Beta)
+## Polkasafe
 
 ![Polkasafe](https://github.com/w3f/polkadot-wiki/assets/874046/586bf051-a7fb-43c0-957e-0b659d50c9ab)
 

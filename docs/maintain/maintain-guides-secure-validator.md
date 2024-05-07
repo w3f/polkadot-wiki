@@ -32,9 +32,6 @@ doing.**
 
 Many expert validators have made mistakes in the past due to the handling of session keys.
 
-Remember, even if your validator goes offline for some time, the offline slash is much more
-forgiving than the equivocation or parachain validity slashing.
-
 ## Key Management
 
 See the [Polkadot Keys guide](../learn/learn-cryptography.md) for more information on keys. The keys
@@ -127,7 +124,6 @@ CONFIG_SECCOMP=y
 
 - Given that HA setups would always be at risk of double-signing and there's currently no built-in
   mechanism to prevent it, we propose having a single instance of the validator to avoid slashing.
-  Slashing penalties for being offline are much less than those for equivocation.
 
 ### Validators
 
