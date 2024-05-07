@@ -46,7 +46,7 @@ where `free`, `frozen` and `on_hold` are defined above. The `ED` is the the
 
 **Wallet providers might show you the spendable, locked, and reserved balance.**
 
-## Example of Wallet Balance
+## Example of Account Balance Types
 
 Below is an in-depth example of how an account balance composition changes depending on user actions once [the _fungible_ trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) is used for account balances.
 Let’s take, for example, an account with 100 DOT.
