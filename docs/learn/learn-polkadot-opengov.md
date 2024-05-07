@@ -113,7 +113,7 @@ origin's privileges. When both the approval and support criteria are satisfied f
 (called the confirmation period), the referendum passes and will be executed after the enactment
 period.
 
-All referenda within each track and across tracks can be voted on simultaneously (assuming the track
+All referenda within each track and across tracks can be voted on simultaneously (assuming the track's
 maximum capacity is not reached).
 
 Polkadot OpenGov also comes with multi-role delegations where the token holder can assign voting
