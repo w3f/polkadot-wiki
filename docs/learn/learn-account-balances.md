@@ -134,7 +134,7 @@ not transferrable, and locked in [staking](./learn-staking.md),
 
 Locks overlap (in both amount and duration), and the general rule is that:
 
-- If you have multiple locks of different sizes, the biggest lock decides the total amount of locked
+- If you have multiple locks of different amounts of tokens, the biggest lock decides the total amount of locked
   tokens
 - If you have multiple locks of the same size, the longest lock decides when all the tokens can be
   unlocked
