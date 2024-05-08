@@ -185,6 +185,10 @@ module.exports = {
             to: '/docs/learn-parachains',
             from: ['/docs/learn-parathreads']
           },
+          {
+            to: '/docs/learn-offenses',
+            from: ['/docs/maintain-guides-avoid-slashing']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
