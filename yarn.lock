@@ -4585,10 +4585,10 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
-cloudflare@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-3.1.0.tgz#bf317e91515f652e086a4a6aef2b7b31807081b8"
-  integrity sha512-yPoyXgl12izmfAnn5chPBOXmY5B8gGUBIUm9tNHf9knwRRNyhjMz10XO+eau/a/H2socYKpjlF2WW5B86nr7cg==
+cloudflare@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-3.2.0.tgz#525803d7eed7065700b036bbef77cebd8f93d0b6"
+  integrity sha512-L6X3ky8rj+vFv6wf+/MxVVkwzMcxm+rjHtPAznHejYp3UC3ESovv+z8a6SZv6uXIXkAXHbCMCsbegiM4NNvXsg==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
