@@ -9,10 +9,10 @@ slug: ../build-guides-template-basic
 
 :::warning This guide uses Rococo!
 
-This guide is using the Rococo testnet. The Kusama relay chain can also be used in place of Rococo,
-as it has coretime implemented. Polkadot will implement agile coertime at a later date after it has
-been tested on Kusama. This guide is considered a moving document - and will update as networks
-which have coretime enabled become suitable candidates.
+This guide uses the Rococo testnet. The Kusama relay chain can also be used in place of Rococo, as
+coretime is also implemented there. Polkadot will implement agile coretime later after it has been
+tested on Kusama. This guide is considered a moving document - and will update as networks that have
+coretime enabled become suitable candidates.
 
 :::
 
@@ -40,29 +40,28 @@ to upload our parachain's code:
    [Network > Parachains > Parathreads (the tab)](https://polkadot.js.org/apps/#/parachains/parathreads)
 5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains#reserve-paraid)
 
-You can also visit the Accounts tab to view all registered accounts and their associated balances
-within the Polkadot.js Extension. Once finished, you should see your new ParaId at the bottom of the
-list within
-[Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) with the
-option to "Deregister" to the right:
+You can also visit the Accounts tab to view all registered accounts and associated balances within
+the Polkadot.js Extension. Once finished, you should see your new ParaId at the bottom of the list
+within [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads)
+with the option to "Deregister" to the right:
 
 ![Registered ParaID in PolkadotJs](../assets/coretime/Coretime-ParaId-Registered.png)
 
 ## Creating our Chain & Generating Artifiacts
 
-We can now move on to working with the template. Some important prerequisites are:
+We can now move on to working with the template. Some essential prerequisites are:
 
 1. **Have** Rust and its associated tooling installed.
 2. **Install** the nightly version.
-3. **Have** a command line, git, and other common development tools at your disposal.
+3. **Have** a command line, git, and other common development tools.
 
 :::info Install dependencies
 
-Visit [the dependencies' installation](./build-guides-install-deps.md) page before getting started.
+Visit [the dependencies' installation](./build-guides-install-deps.md) page before starting.
 
 :::
 
-We need to clone the Polkadot SDK. This guide is using release
+We need to clone the Polkadot SDK. This guide uses release
 [`polkadot-v1.10.0`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.10.0),
 which can be cloned using the appropriate release tag:
 
@@ -84,13 +83,13 @@ to utilize a core.
 This tutorial won't go into the specifics of the template, nor will it go into the specifics of
 FRAME and Substrate. All you need to know is the following:
 
-- `runtime/` - Contains the runtime and business logic. This is your all of your pallets (runtime
+- `runtime/` - Contains the runtime and business logic. This is how all of your pallets (runtime
   modules) are configured. The runtime is what gets uploaded to the core as a WebAssembly blob once
-  its compiled.
-- `node/` - The node implementation, which takes care of networking and the like. The genesis
-  configuration (`chain_spec.rs`) is also located here.
+  it's compiled.
+- `node/` - The node implementation takes care of networking and the like. The genesis configuration
+  (`chain_spec.rs`) is also located here.
 
-> Pallets are essentially just Rust crates, which are imported as dependencies as seen in
+> Pallets are essentially just Rust crates, which are imported as dependencies, as seen in
 > `runtime/Cargo.toml`. Read more about
 > [pallets here.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html#pallets)
 
@@ -109,14 +108,14 @@ Before we generate our parachain's code, we have a bit of prep to do to our node
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
 3. **Make** sure that our `ChainType` is set to `ChainType::Live`
 4. **Remove** all collators except for **one**, Alice. See the
-   [FAQ/Troubshooting page](build-guides-coretime-troubleshoot.md) for why we do this
+   [FAQ/Troubleshooting page](build-guides-coretime-troubleshoot.md) for why we do this
 5. **Be** sure to also set the para id in `testnet_genesis`!
 6. **Optionally**, change the name and id of your chain (mine is called "SomeChain" for the name,
    and "some_chain" for the id). My ticker symbol for the default token is called "SOME". **You may
    change this as you see fit.**
 
 If you fail to do one of these, there is a large chance that your chain may fail to produce blocks.
-Feel free to copy the below config, and use it to ensure everything is in place for a Rococo
+Feel free to copy the configuration below and use it to ensure everything is in place for a Rococo
 deployment. This function should replace the `local_testnet_config` function within
 `node/src/chain_spec.rs`:
 
@@ -180,7 +179,7 @@ Once this is in place, you are ready to compile your parachain.
 
 ### Generating the Runtime and Genesis
 
-Be sure to first build the node using the following (assuming you're within
+Be sure first to build the node using the following (assuming you're within
 `polkadot-sdk/templates/parachain`):
 
 ```shell
@@ -202,10 +201,10 @@ Within `polkadot-sdk/templates/parachain`, you should now have two files:
 
 ## Starting to Sync - Running Your Collator
 
-You should now start syncing your collator. Keep in mind that you will need to sync Rococo first -
-this could take some time (12 hours to a day - depending on your download speed), so best to get
-started ASAP. In order to avoid the storing the full state of the relay chain, be sure to run with
-the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
+It would help if you now started syncing your collator. Keep in mind that you will need to sync
+Rococo first - this could take some time (12 hours to a day - depending on your download speed), so
+best to get started ASAP. In order to avoid storing the full state of the relay chain, be sure to
+run with the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
 
 ```shell
 ./../target/release/parachain-template-node --collator \
@@ -220,7 +219,7 @@ the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
 ```
 
 > **Fun fact**: This command really spins up _two_ nodes: your collator node for your parachain,
-> along with an embedded relay chain node, hence the seperation in the command via `--`.
+> along with an embedded relay chain node, hence the separation in the command via `--`.
 
 You should now see your relay chain syncing, reaching the same target that your target relay chain
 is currently at:
@@ -249,7 +248,7 @@ onboard. You can scroll down to your ParaId to see it onboarding, for example:
 
 ## Procuring Coretime
 
-> **Ideally, your node should be synced with the relay before this step.**
+> ** Your node should be synced with the relay before this step.**
 
 Procuring a core is easy with coretime marketplaces already available. Visit
 [The Coretime Marketplaces](../learn/learn-guides-coretime-marketplaces.md) page to learn more about
@@ -263,7 +262,7 @@ We have two options:
    production.
 
 With bulk coretime, we assign a core to our ParaId, and as long as that core is valid, our parachain
-will produce blocks and finalize via Rococo until we have to renew the core.
+will produce blocks and finalize them via Rococo until we have to renew the core.
 
 It's worth noting that you can easily experiment using on-demand extrinsics, then later switch to a
 bulk coretime model. For now, let's start with on-demand coretime to get our first blocks going.
@@ -273,7 +272,7 @@ you confirm your chain can create blocks!**
 
 ### On-Demand Coretime
 
-Provided your collator is synced, you can try creating a block using an on-demand extrinsic.
+Provided your collator is synced, you can create a block using an on-demand extrinsic.
 
 1. Head to [PolkadotJS > Extrinsics](https://polkadot.js.org/apps/#/extrinsics)
 2. Issue the `onDemandAssignmentProvider.placeOrderAllowDeath` extrinsic
@@ -286,8 +285,8 @@ Provided your collator is synced, you can try creating a block using an on-deman
 
 If everything is working as intended, you can now choose to assign bulk coretime to your parachain
 for persistent block generation. For this assignment,
-[RegionX's CoreHub](https://app.regionx.tech/regions?network=rococo) will be used for purchasing and
-assigning cores.
+[RegionX's CoreHub](https://app.regionx.tech/regions?network=rococo) will be used to purchase and
+assign cores.
 
 :::info Getting Coretime ROC
 
@@ -337,7 +336,7 @@ for doing so:
 
 ## What's Next?
 
-Now that you have the ability to launch a layer one blockchain, the possibilities are endless:
+Now that you can launch a layer one blockchain, the possibilities are endless:
 
 - Setup a local development environment for your parachain
 - Create a pallet
