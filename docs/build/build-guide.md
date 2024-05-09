@@ -143,9 +143,9 @@ benchmarks.
 
 On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
 Relay Chain. On-demand parachains will only produce a block when needed, unlike full parachains,
-which have access to bulk coretime to produce a block at every block of the Relay Chain. When building an
-on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of building a
-parachain without the cost drawback of purchasing bulk coretime.
+which have access to bulk coretime to produce a block at every block of the Relay Chain. When
+building an on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of
+building a parachain without the cost drawback of purchasing bulk coretime.
 
 :::
 
@@ -217,8 +217,8 @@ followed by FRAME, with Cumulus as the final step to understanding the entire pa
 process. This way, one can view how various paradigms are applied and decide on integrating or
 utilizing Substrate for their particular use case.
 
-Please see the [parachain development guide](build-parachains.md) for how to get started on building
-a parachain.
+Please see [our guides on getting started with coretime](build-guides-coretime-start.md) for how to
+get started on building and deploying a parachain.
 
 #### Parachains Benefits
 

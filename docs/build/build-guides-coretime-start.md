@@ -113,6 +113,19 @@ Make sure you have everything you need for your target system
 Try out the above by deploying the
 [adder collator, a very simple "counter" parachain implementation.](../learn/learn-guides-coretime-parachains.md).
 
+## OpenZepplin Templates & Guides
+
+OpenZepplin offers a generic parachain template, which has support for:
+
+- Proxy Pallet
+- Multisig Pallet
+- Governance support - a treasury, referenda (OpenGov!), and assets configuration
+- Collation/Parachain Support
+- XCM (Cross Consensus Messaging) Configuration and Support
+
+You can find more about it in their
+[Substrate parachain runtime guide.](https://docs.openzeppelin.com/substrate-runtimes/1.0.0/)
+
 ## Template to Core
 
 If you wish to use a template, such as the ones found in the Polkadot SDK, feel free to use the
