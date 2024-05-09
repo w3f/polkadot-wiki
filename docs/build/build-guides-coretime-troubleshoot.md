@@ -37,11 +37,11 @@ to sync locally.
 
 ---
 
-### I want to run more than one collator, how do I do that?\*\*
+### I want to run more than one collator, how do I do that?
 
-**A:** Ideally, you would want to run these on seperate machines/servers, but you could as long as
+**A:** Ideally, you would want to run these on separate machines/servers, but you could as long as
 you ensure you can provide different RPC/WebSocket and P2P ports for each collator. You also may
-need to sync a seperate instance of Rococo for each collator on the same machine.
+need to sync a separate instance of Rococo for each collator on the same machine.
 
 ---
 
@@ -49,7 +49,7 @@ need to sync a seperate instance of Rococo for each collator on the same machine
 
 **A:** Mostly for simplicity. If we have more than one collator, we would have to also spin it up,
 which would be a hassle on a single machine (it is possible though). Of course, if you had an actual
-network with multiple collators, it is assumed you'd have seperate VPS/servers for each.
+network with multiple collators, it is assumed you'd have separate VPS/servers for each.
 
 ---
 
@@ -61,7 +61,3 @@ other UIs, really we only have two types of parachain: on-demand parachains, and
 use bulk coretime.
 
 ---
-
-### What is a good amount to put as the `max_amount` for my on-demand assignment?
-
-**A:** todo

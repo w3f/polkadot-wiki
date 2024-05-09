@@ -108,8 +108,8 @@ Before we generate our parachain's code, we have a bit of prep to do to our node
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
 3. **Make** sure that our `ChainType` is set to `ChainType::Live`
-4. **Remove** all collators except for **one**, Alice. See the FAQ for why we do this (tldr; for
-   simplicity's sake)
+4. **Remove** all collators except for **one**, Alice. See the
+   [FAQ/Troubshooting page](build-guides-coretime-troubleshoot.md) for why we do this
 5. **Be** sure to also set the para id in `testnet_genesis`!
 6. **Optionally**, change the name and id of your chain (mine is called "SomeChain" for the name,
    and "some_chain" for the id). My ticker symbol for the default token is called "SOME". **You may
