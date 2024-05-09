@@ -285,18 +285,53 @@ Provided your collator is synced, you can try creating a block using an on-deman
 ### Bulk Coretime: Assigning your Core
 
 If everything is working as intended, you can now choose to assign bulk coretime to your parachain
-for persistent block generation. For this assignment, RegionX's CoreHub will be used for purchasing
-and assigning cores.
+for persistent block generation. For this assignment,
+[RegionX's CoreHub](https://app.regionx.tech/regions?network=rococo) will be used for purchasing and
+assigning cores.
 
-1. Connect your wallet (button in the top right corner)
-2. Click **Purchase a Core** on the left
-3. In the lower right, click "Purchase Core"
-4. Go to **My Regions**, and click to select your region
-5. Click **Assign** on the right side
-6. Click **Add Task**, and input your ParaId along with a name for your chain
-7. Select your task, and select **Provisional Assignment**
-8. Provided everything is synced and your collator is running, you should see blocks being
-   persistently created as they were with the on-demand extrinsic:
+:::info Getting Coretime ROC
+
+In the upper right, you will see two balances: one for the relay chain, and one for the coretime
+chain. Before you can purchase a core, you need ROC on the coretime chain. RegionX includes a tool
+for doing so:
+
+1. Head to General > Cross Chain Transfer on the right, and transfer 10 ROC:
+
+![Region X cross chain transfer](../assets/coretime/regionx-cross-chain-roc.png)
+
+2. Sign the transaction with Polkadot.js. If all goes well, you should see the balance update in the
+   upper right:
+
+![Region X cross chain transfer](../assets/coretime/regionx-balance-change.png)
+
+:::
+
+1. Connect your wallet and make sure you select **Rococo** as your network:
+
+![Connect your wallet to RegionX](../assets/coretime/coretime-regionx-connect-wallet.png)
+
+2. Click **Purchase a Core** on the left:
+
+![GMcdatDW8AEC8kh](https://hackmd.io/_uploads/r12b0mxMC.jpg)
+
+3. In the lower right, click "Purchase Core":
+
+![Purchase a core](../assets/coretime/regionx-purchase-bulk.png)
+
+4. Go to **My Regions**, and click to select your region, then click **Assign** on the right side:
+
+![Select and assign region](../assets/coretime/regionx-select-region.png)
+
+5. Click **Add Task**, and input your ParaId along with a name for your chain:
+
+![Add a new task](../assets/coretime/regionx-add-task.png)
+
+6. Select your task, and select **Provisional Assignment**, and sign using Polkadot JS:
+
+![Assign the core](../assets/coretime/regionx-assign-region.png)
+
+7. Once the transaction is confirmed, provided everything is synced and your collator is running,
+   you should see blocks being persistently created as they were with the on-demand extrinsic:
 
 ![GMcdatDW8AEC8kh](https://hackmd.io/_uploads/r12b0mxMC.jpg)
 
