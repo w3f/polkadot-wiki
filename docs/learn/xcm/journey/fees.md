@@ -54,7 +54,7 @@ the receiving chain. As mentioned in the [weight and fees](../fundamentals/weigh
 chapter of the fundamentals, XCMs instructions are usually assigned weights separately, so, in order
 to estimate the weight, you need to estimate the weight of every instruction and add them together.
 By using `WeightLimit::Limited()`, you guarantee the message will error if it tries to use more
-weight than you expect, if you don't mind this, you can use `WeightLimit::Unlimited`. The
+weight than you expect. If you don't mind this, you can use `WeightLimit::Unlimited`. The
 `fee_estimation` value is the maximum assets you want to use, if it doesn't cover all fees, message
 execution will fail. You can add a higher value (all of `withdraw_amount` for example) to make sure
 you have enough assets for fee payment. If you plan to use the entirety of `withdraw_amount`,

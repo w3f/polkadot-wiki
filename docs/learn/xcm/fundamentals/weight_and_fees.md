@@ -30,7 +30,7 @@ local system, usually by the origin of the message, because we are using the mes
 mechanism maintained by the origin. Similarly, the execution fees are paid on the destination
 system, via the `BuyExecution` instruction. In other words, XCMs are paid for via their own
 instructions. We'll talk more about `BuyExecution` in the
-[fee handling chapter](../journey/fees/index.html).
+[fee handling chapter](../journey-fees/index.html).
 
 XCM is agnostic, which means it doesn't assume fees need to be paid. It's entirely possible to not
 pay for the effects of an XCM on the destination system. Even in systems where fees have to be paid,
