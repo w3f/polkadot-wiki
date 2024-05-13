@@ -290,3 +290,7 @@ The information provided here is subject to change; keep up to date using the fo
   [Asynchronous Backing (Deep)](https://polkadot-blockchain-academy.github.io/pba-book/polkadot/async-backing-deep/page.html)
 - Polkadot Blog Post -
   [Asynchronous Backing: Elevating Polkadot's Performance and Scale](https://www.polkadot.network/blog/elevating-polkadots-performance-and-scale-with-asynchronous-backing)
+- Blog posts by Filippo Franchini on
+  [Synchronous](https://grillapp.net/10124/polkadot-s-synchronous-backing-explained-40627?ref=10124)
+  and
+  [Asynchronous Backing](https://grillapp.net/10124/polkadot-s-asynchronous-backing-explained-40701?ref=10124)
