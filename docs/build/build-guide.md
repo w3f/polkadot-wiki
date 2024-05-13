@@ -143,9 +143,9 @@ benchmarks.
 
 On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
 Relay Chain. On-demand parachains will only produce a block when needed, unlike full parachains,
-which have access to bulk coretime to produce a block at every block of the Relay Chain. When building an
-on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of building a
-parachain without the cost drawback of purchasing bulk coretime.
+which have access to bulk coretime to produce a block at every block of the Relay Chain. When
+building an on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of
+building a parachain without the cost drawback of purchasing bulk coretime.
 
 :::
 
