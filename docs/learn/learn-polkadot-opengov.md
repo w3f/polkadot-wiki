@@ -113,8 +113,8 @@ origin's privileges. When both the approval and support criteria are satisfied f
 (called the confirmation period), the referendum passes and will be executed after the enactment
 period.
 
-All referenda within each track and across tracks can be voted on simultaneously (assuming the track's
-maximum capacity is not reached).
+All referenda within each track and across tracks can be voted on simultaneously (assuming the
+track's maximum capacity is not reached).
 
 Polkadot OpenGov also comes with multi-role delegations where the token holder can assign voting
 power on different tracks to different entities who are experts in judging the referenda submitted
@@ -361,8 +361,8 @@ is less than Peter’s, leading to their voting power counting as less.
 
 :::info Staked tokens can be used in governance
 
-While the tokens are locked, you can still use them for voting and [staking](./learn-staking.md). You are
-only prohibited from transferring these tokens to another account. **See the section about
+While the tokens are locked, you can still use them for voting and [staking](./learn-staking.md).
+You are only prohibited from transferring these tokens to another account. **See the section about
 [OpenGov locks](#voting-on-a-referendum), and learn more about locks on the
 [Balances page](./learn-account-balances.md#locks).**
 

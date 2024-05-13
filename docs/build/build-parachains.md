@@ -384,8 +384,10 @@ To include your parachain into the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
 network, you will need to acquire a parachain slot.
 
 Parachain slot leases are acuqired through open auctions, the mechanics of which can be found on the
-[parachain auction](../learn/learn-auction.md) page. With [Agile Coretime,](../learn/learn-agile-coretime.md)
-these parachain lease auctions will be deprecated and parachains can [purchase coretime](../learn/learn-guides-coretime-marketplaces.md) to produce blocks 
+[parachain auction](../learn/learn-auction.md) page. With
+[Agile Coretime,](../learn/learn-agile-coretime.md) these parachain lease auctions will be
+deprecated and parachains can [purchase coretime](../learn/learn-guides-coretime-marketplaces.md) to
+produce blocks
 [continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
 
 ## Resources
