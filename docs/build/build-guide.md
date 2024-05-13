@@ -217,8 +217,8 @@ followed by FRAME, with Cumulus as the final step to understanding the entire pa
 process. This way, one can view how various paradigms are applied and decide on integrating or
 utilizing Substrate for their particular use case.
 
-Please see the [parachain development guide](build-parachains.md) for how to get started on building
-a parachain.
+Please see [our guides on getting started with coretime](build-guides-coretime-start.md) for how to
+get started on building and deploying a parachain.
 
 #### Parachains Benefits
 
