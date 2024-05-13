@@ -108,7 +108,7 @@ PC-->DEP
 Make sure you have everything you need for your target system
 [here.](./build-guides-install-deps.md)
 
-### Deploy adder collator
+### Deployment Example - Adder Collator
 
 Try out the above by deploying the
 [adder collator, a very simple "counter" parachain implementation.](../learn/learn-guides-coretime-parachains.md).
