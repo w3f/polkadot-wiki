@@ -79,7 +79,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-treebeard": "^3.2.4",
     "remark-docusaurus-tabs": "^0.2.0",
-    "utf-8-validate": "^5.0.10",
+    "utf-8-validate": "^6.0.4",
     "ws": "^8.17.0"
   },
   "husky": {
