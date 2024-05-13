@@ -115,7 +115,7 @@ Try out the above by deploying the
 
 ## OpenZeppelin Templates & Guides
 
-OpenZepplin offers a generic parachain template, which has support for:
+OpenZeppelin offers a [generic parachain template](https://github.com/OpenZeppelin/polkadot-generic-runtime-template), which has support for:
 
 - Proxy Pallet
 - Multisig Pallet
@@ -123,10 +123,10 @@ OpenZepplin offers a generic parachain template, which has support for:
 - Collation/Parachain Support
 - XCM (Cross Consensus Messaging) Configuration and Support
 
-You can find more about it in their
+For more information, check their
 [Substrate parachain runtime guide.](https://docs.openzeppelin.com/substrate-runtimes/1.0.0/)
 
-## Template to Core
+## Polkadot SDK Parachain Template
 
-If you wish to use a template, such as the ones found in the Polkadot SDK, feel free to use the
+If you wish to the [Polkadot SDK's Parachain template](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain), please follow the
 [Template to Core guide.](./build-guides-template-basic.md)

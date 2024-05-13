@@ -1,8 +1,8 @@
 ---
 id: build-guides-template-basic
-title: Template to Core - Setup & Initial Deployment
-sidebar_label: Template to Core - Basics
-description: Introduction to the Polkadot SDK
+title: Template to Core - Setup & Initial Deployment of a Parachain
+sidebar_label: Parachain Template Guide
+description: A minimal guide on how to deploy a parachain using Polkadot SDK's parachain template.
 keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
 slug: ../build-guides-template-basic
 ---
@@ -10,7 +10,7 @@ slug: ../build-guides-template-basic
 :::warning This guide uses Rococo!
 
 This guide uses the Rococo testnet. The Kusama relay chain can also be used in place of Rococo, as
-coretime is also implemented there. Polkadot will implement agile coretime later after it has been
+coretime is also enabled there. Polkadot will enable agile coretime after it has been thoroughly
 tested on Kusama. This guide is considered a moving document - and will update as networks that have
 coretime enabled become suitable candidates.
 
@@ -24,7 +24,7 @@ This guide aims to get you up and running with the basics of:
 
 ## Getting ROC and Reserving a ParaId
 
-Before starting to work with coretime, you'll need some funds to pay fees, reserve a
+Before starting to work with coretime, you'll need some ROC tokens to pay fees, reserve a
 [ParaId](../general/glossary.md#paraid), and more.
 
 Head over to Polkadot.js to reserve a [ParaId](../general/glossary.md#paraid). We'll need a ParaId
@@ -47,12 +47,12 @@ with the option to "Deregister" to the right:
 
 ![Registered ParaID in PolkadotJs](../assets/coretime/Coretime-ParaId-Registered.png)
 
-## Creating our Chain & Generating Artifiacts
+## Compiling Parachain Runtime and Generating Wasm Blob
 
 We can now move on to working with the template. Some essential prerequisites are:
 
-1. **Have** Rust and its associated tooling installed.
-2. **Install** the nightly version.
+1. **Install** Rust and its associated tooling.
+2. **Install** the [Rust nightly version](https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust).
 3. **Have** a command line, git, and other common development tools.
 
 :::info Install dependencies
@@ -78,15 +78,14 @@ cd polkadot-sdk/templates/parachain
 Open this in your code editor of choice. This template contains the necessary dependencies we need
 to utilize a core.
 
-### Using the Parachain Template
+### Compiling the Parachain Template Node
 
 This tutorial won't go into the specifics of the template, nor will it go into the specifics of
 FRAME and Substrate. All you need to know is the following:
 
 - `runtime/` - Contains the runtime and business logic. This is how all of your pallets (runtime
-  modules) are configured. The runtime is what gets uploaded to the core as a WebAssembly blob once
-  it's compiled.
-- `node/` - The node implementation takes care of networking and the like. The genesis configuration
+  modules) are configured. The runtime, once it's compiled as a WebAssembly blob, is uploaded to the state on-chain.
+- `node/` - The node implementation takes care of networking and RPC setup. The genesis configuration
   (`chain_spec.rs`) is also located here.
 
 > Pallets are essentially just Rust crates, which are imported as dependencies, as seen in
@@ -99,9 +98,9 @@ key artifacts for our core.
 For the sake of this example, we won't go into adding or modifying any pallets. However, this is
 definitey a next step after you get used to deploying your parachain on Rococo!
 
-### Getting our parachain live-ready
+### Configuring Parachain's Chain Spec
 
-Before we generate our parachain's code, we have a bit of prep to do to our node inside
+Before we generate the binary for our parachain's node, we have a bit of prep to do to our node inside
 `node/src/chain_spec.rs`. Namely, there are a few main factors to check off our list:
 
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
@@ -175,7 +174,7 @@ pub fn local_testnet_config() -> ChainSpec {
 }
 ```
 
-Once this is in place, you are ready to compile your parachain.
+Once this is in place, you are ready to compile your parachain node.
 
 ### Generating the Runtime and Genesis
 
@@ -199,7 +198,7 @@ Within `polkadot-sdk/templates/parachain`, you should now have two files:
 - **`genesis`** - the initial state of your parachain.
 - **`genesis-wasm`** - the initial runtime WebAssembly blob of your parachain.
 
-## Starting to Sync - Running Your Collator
+## Running Your Collator
 
 It would help if you now started syncing your collator. Keep in mind that you will need to sync
 Rococo first - this could take some time (12 hours to a day - depending on your download speed), so
@@ -228,7 +227,7 @@ is currently at:
 2024-05-07 11:43:18 [Relaychain] ⚙️  Syncing 490.8 bps, target=#10342815 (9 peers), best: #10013784 (0x91d7…aeb2), finalized #10013704 (0x8556…e679), ⬇ 8.3MiB/s ⬆ 1.2kiB/s
 ```
 
-## Create the Parathread
+## Register the Parachain as a Parathread
 
 With your **`genesis`** and **`genesis-wasm`** created, you can now create your parathread. Head
 back to
@@ -246,7 +245,7 @@ onboard. You can scroll down to your ParaId to see it onboarding, for example:
 
 ![Onboarding ParaId](../assets/coretime/coretime-parachain-onboarding.png)
 
-## Procuring Coretime
+## Procure Coretime
 
 > ** Your node should be synced with the relay before this step.**
 
