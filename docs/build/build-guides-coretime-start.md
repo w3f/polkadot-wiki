@@ -113,7 +113,7 @@ Make sure you have everything you need for your target system
 Try out the above by deploying the
 [adder collator, a very simple "counter" parachain implementation.](../learn/learn-guides-coretime-parachains.md).
 
-## OpenZepplin Templates & Guides
+## OpenZeppelin Templates & Guides
 
 OpenZepplin offers a generic parachain template, which has support for:
 
