@@ -42,7 +42,7 @@ shown below.
 
 - Backing Invalid: A para-validator is backing an invalid block.
 - ForInvalid Vote: A validator (secondary checker) votes in favor of an invalid block.
-- AgainstInvalid Vote: A validator (secondary checker) is voting against an invalid block.
+- AgainstValid Vote: A validator (secondary checker) is voting against a valid block and wasting network resources.
 - Equivocation: A validator produces two or more of the same block or vote.
   - GRANDPA and BEEFY Equivocation: A validator signs two or more votes in the same round on
     different chains.
