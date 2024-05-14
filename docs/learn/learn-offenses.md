@@ -23,7 +23,7 @@ find a summary of punishments for specific offenses:
 | :----------------------------------: | :--------------------: | :------------------------------: | :-----------------: | :---------: |
 |           Backing Invalid            |          100%          |               Yes                | Yes (High Priority) |     No      |
 |           ForInvalid Vote            |           -            |                No                | Yes (Mid Priority)  |     No      |
-|         AgainstInvalid Vote          |           -            |                No                | Yes (Low Priority)  |     No      |
+|         AgainstValid Vote          |           -            |                No                | Yes (Low Priority)  |     No      |
 | GRANDPA / BABE / BEEFY Equivocations |       0.01-100%        |               Yes                |         No          |     No      |
 |    Seconded + Valid Equivocation     |           -            |                No                |         No          |     No      |
 |     Double Seconded Equivocation     |           -            |                No                |         No          |     Yes     |
