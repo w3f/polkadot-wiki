@@ -217,6 +217,6 @@ rather than the sum. This ensures protection from overslashing.
 Off-chain disabling is always a lower priority than on-chain disabling. Off-chain disabling
 prioritizes disabling first backers then approval checkers.
 
-### Rep
+### Reputation Changes
 
 **TODO**
