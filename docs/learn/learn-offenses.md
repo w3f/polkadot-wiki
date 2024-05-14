@@ -51,14 +51,16 @@ shown below.
 - Seconded + Valid Equivocation: **TODO**
 - Double Seconded Equivocation: **TODO**
 
-### Equivocation
+### Equivocation (Conflicting Statements)
 
-Equivocation events can occur when a validator produces two or more of the same block; under this
-condition, it is referred to as a BABE equivocation. Equivocation may also happen when a validator
-signs two or more of the same consensus vote; under this condition, it is referred to as a GRANDPA
-Equivocation. Equivocations usually occur when duplicate signing keys reside on the validator host.
-If keys are never duplicated, the probability of an equivocation slash decreases to near 0.
+Equivocation occurs when a validator produces statements that conflict with each other.
 
+For instance as a block author appointed by BABE only a single block should be authored for the given slot and if two or more are authored they are in conflict with each other. This would be a BABE Equivocation Offence.
+
+In BEEFY & GRANDPA validators are expected to cast a single vote for the block they believe is the best, but if they are found with 2 or more votes for different blocks in means they tried to confuse the network with conflicting statements and when found out this will be a BEEFY/GRANDPA Equivocation Offence.
+
+Equivocations usually occur when duplicate signing keys reside on the validator host.
+If keys are never duplicated, the probability of an honest equivocation slash decreases to near 0.
 ## Punishments
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, offenses to the network can be
