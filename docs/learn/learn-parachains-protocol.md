@@ -295,7 +295,7 @@ Dealing with a bad parablock includes the following stages:
 
 - Detection: the bad block must be detected by honest validators.
 - Escalation: the honest validators must start a [dispute](#disputes).
-- Consequences: all involved malicious validators are [slashed](./learn-offenses.md).
+- Consequences: the backer for that parablock is [slashed](./learn-offenses.md).
 
 The result of the dispute must be transplantable to all other forks so that malicious validators are
 slashed in all possible histories and so that honest validators will ignore any forks containing
