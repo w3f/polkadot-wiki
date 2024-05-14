@@ -145,7 +145,7 @@ to know more details about slashing, please look at our
 
 #### Slash Calculation for Equivocation
 
-Both GRANDPA and BABE equivocation use the same formula for calculating the slashing penalty:
+GRANDPA, BABE and BEEFY equivocation use the same formula for calculating the slashing penalty:
 
     Let x = offenders, n = total number of validators in the active set
 
