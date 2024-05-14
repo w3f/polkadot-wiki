@@ -204,11 +204,7 @@ There are three main difficulties to account for with slashing in NPoS:
 - Slashable offenses can be found after the fact and out of order.
 
 To balance this, we only slash for the maximum slash a participant can receive in some time period
-rather than the sum. This ensures protection from overslashing. Likewise, the period over which
-maximum slashes are computed is finite, and the validator is chilled with nominations withdrawn
-after a slashing event, as stated in the previous section. This prevents rage-quit attacks in which,
-once caught misbehaving, a participant deliberately misbehaves more because their slashing amount is
-already maxed out.
+rather than the sum. This ensures protection from overslashing.
 
 ### Disabling
 
