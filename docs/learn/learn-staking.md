@@ -444,7 +444,7 @@ set of electable candidates in the next NPoS cycle.
 
 Chilling can be validator-initiated, e.g. if there is a planned outage in the validator's
 surroundings or hosting provider, and the validator wants to exit to protect themselves against
-slashing. Chilling will keep the validator active in the current session, but will move them to the
+slashing. Chilling will keep the validator active in the current era, but will move them to the
 inactive set in the next. The validator will not lose their nominators.
 
 For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
