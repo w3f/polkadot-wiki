@@ -217,7 +217,7 @@ rather than the sum. This ensures protection from overslashing.
   initiating a dispute.
 
 Off-chain disabling is always a lower priority than on-chain disabling. Off-chain disabling
-prioritizes disabling first backers, then ForInvalid, then AgainstValid.
+prioritizes disabling first backers then approval checkers.
 
 ### Rep
 
