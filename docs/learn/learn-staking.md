@@ -438,9 +438,7 @@ for details. For specific details about validator payouts, please see
 ### Chilling
 
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
-validator or nominator at any time, taking effect in the next era. It can also specifically mean
-removing a validator from the active validator set by another validator, disqualifying them from the
-set of electable candidates in the next NPoS cycle.
+validator or nominator at any time, taking effect in the next era.
 
 Chilling can be validator-initiated, e.g. if there is a planned outage in the validator's
 surroundings or hosting provider, and the validator wants to exit to protect themselves against
