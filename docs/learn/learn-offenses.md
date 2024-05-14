@@ -37,7 +37,7 @@ To better understand the terminology used for offenses, it is recommended to get
 
 :::
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main offenses as
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main validator offenses as
 shown below.
 
 - Backing Invalid: A para-validator is backing an invalid block.
