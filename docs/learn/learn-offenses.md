@@ -65,7 +65,7 @@ If keys are never duplicated, the probability of an honest equivocation slash de
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, offenses to the network can be
 punished depending on their severity. There are three main punishments: slashing, disabling, and
-rep.
+reputation changes.
 
 ### Slashing
 
