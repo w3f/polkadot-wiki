@@ -208,7 +208,7 @@ rather than the sum. This ensures protection from overslashing.
 
 ### Disabling
 
-**Disabling** stops validators from performing specific actions. Disabling is further divided into:
+**Disabling** stops validators from performing specific actions after they committed an offence. Disabling is further divided into:
 
 - On-chain disabling lasts for a whole era and stops validators from block authoring, backing
   through runtime filtering, initiating a dispute, and backing. It also makes other nodes ignore
