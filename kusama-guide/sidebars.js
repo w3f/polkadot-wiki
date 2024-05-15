@@ -451,7 +451,7 @@ module.exports = {
                     {
                       type: "category",
                       label: "Advanced Coretime Guides",
-                      description: "Advanced coretime guides",
+                      description: "More Advanced and Technical Coretime Guides",
                       link: {
                         type: 'generated-index',
                         title: "Advanced Coretime Guides",
