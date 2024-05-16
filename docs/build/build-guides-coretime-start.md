@@ -11,10 +11,10 @@ slug: ../build-guides-coretime-start
 
 :::
 
-:::warning Only for Kusama and testnets!
+:::warning Not a production ready guide.
 
 Agile coretime is only for the Kusama and testnet networks at the moment, and is not yet deployed on
-Polkadot.
+Polkadot. These guides are **not** production ready due to the moving nature of these features.
 
 :::
 
@@ -115,7 +115,9 @@ Try out the above by deploying the
 
 ## OpenZeppelin Templates & Guides
 
-OpenZeppelin offers a [generic parachain template](https://github.com/OpenZeppelin/polkadot-generic-runtime-template), which has support for:
+OpenZeppelin offers a
+[generic parachain template](https://github.com/OpenZeppelin/polkadot-generic-runtime-template),
+which has support for:
 
 - Proxy Pallet
 - Multisig Pallet
@@ -128,5 +130,6 @@ For more information, check their
 
 ## Polkadot SDK Parachain Template
 
-If you wish to the [Polkadot SDK's Parachain template](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain), please follow the
-[Template to Core guide.](./build-guides-template-basic.md)
+If you wish to the
+[Polkadot SDK's Parachain template](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain),
+please follow the [Template to Core guide.](./build-guides-template-basic.md)

@@ -7,7 +7,7 @@ keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
 slug: ../build-guides-template-basic
 ---
 
-:::warning This guide uses Rococo!
+:::warning Not a production ready guide.
 
 This guide uses the Rococo testnet. The Kusama relay chain can also be used in place of Rococo, as
 coretime is also enabled there. Polkadot will enable agile coretime after it has been thoroughly
@@ -52,7 +52,8 @@ with the option to "Deregister" to the right:
 We can now move on to working with the template. Some essential prerequisites are:
 
 1. **Install** Rust and its associated tooling.
-2. **Install** the [Rust nightly version](https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust).
+2. **Install** the
+   [Rust nightly version](https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust).
 3. **Have** a command line, git, and other common development tools.
 
 :::info Install dependencies
@@ -84,9 +85,10 @@ This tutorial won't go into the specifics of the template, nor will it go into t
 FRAME and Substrate. All you need to know is the following:
 
 - `runtime/` - Contains the runtime and business logic. This is how all of your pallets (runtime
-  modules) are configured. The runtime, once it's compiled as a WebAssembly blob, is uploaded to the state on-chain.
-- `node/` - The node implementation takes care of networking and RPC setup. The genesis configuration
-  (`chain_spec.rs`) is also located here.
+  modules) are configured. The runtime, once it's compiled as a WebAssembly blob, is uploaded to the
+  state on-chain.
+- `node/` - The node implementation takes care of networking and RPC setup. The genesis
+  configuration (`chain_spec.rs`) is also located here.
 
 > Pallets are essentially just Rust crates, which are imported as dependencies, as seen in
 > `runtime/Cargo.toml`. Read more about
@@ -100,8 +102,8 @@ definitey a next step after you get used to deploying your parachain on Rococo!
 
 ### Configuring Parachain's Chain Spec
 
-Before we generate the binary for our parachain's node, we have a bit of prep to do to our node inside
-`node/src/chain_spec.rs`. Namely, there are a few main factors to check off our list:
+Before we generate the binary for our parachain's node, we have a bit of prep to do to our node
+inside `node/src/chain_spec.rs`. Namely, there are a few main factors to check off our list:
 
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId

@@ -448,6 +448,23 @@ module.exports = {
                     "learn/learn-agile-coretime",
                     "learn/learn-guides-coretime-marketplaces",
                     "learn/learn-guides-coretime-parachains",
+                    {
+                      type: "category",
+                      label: "Advanced Coretime Guides",
+                      description: "More Advanced and Technical Coretime Guides",
+                      link: {
+                        type: 'generated-index',
+                        title: "Advanced Coretime Guides",
+                        description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                        slug: '/learn-agile-coretime-getting-started',
+                      },
+                      items: [
+                        "build/build-guides-install-deps",
+                        "build/build-guides-coretime-start",
+                        "build/build-guides-template-basic",
+                        "build/build-guides-coretime-troubleshoot"
+                      ]
+                    }
                   ],
                 },
                 {
@@ -715,22 +732,6 @@ module.exports = {
             "build/build-client-side",
             "build/build-light-clients",
             "build/build-node-interaction",
-          ],
-        },
-        {
-          type: "category",
-          label: "Getting Started with Coretime",
-          link: {
-            type: 'generated-index',
-            title: "Getting Started with Coretime",
-            description: "Learn how to get started with building parachains, solo-chains, and other aspects of protocol development.",
-            slug: '/build-coretime-index',
-          },
-          items: [
-            "build/build-guides-install-deps",
-            "build/build-guides-coretime-start",
-            "build/build-guides-template-basic",
-            "build/build-guides-coretime-troubleshoot"
           ],
         },
         "build/build-smart-contracts",
