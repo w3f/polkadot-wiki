@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, waitFor, fail } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
@@ -37,19 +37,15 @@ const paths = [
 	{ path: 'query.staking.validatorCount', network: 'kusama' },
 	{ path: 'consts.identity.basicDeposit', network: 'kusama' },
 	{ path: 'query.staking.currentEra', network: 'kusama' },
-	{ path: 'consts.phragmenElection.votingBondBase', network: 'kusama' },
 	{ path: 'query.staking.minNominatorBond', network: 'kusama' },
-	{ path: 'consts.staking.maxNominations', network: 'kusama' },
-	{ path: 'consts.democracy.votingPeriod', network: 'kusama' },
+	{ path: 'query.staking.maxNominatorsCount', network: 'kusama' },
 	{ path: 'consts.crowdloan.minContribution', network: 'kusama' },
 	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
 	{ path: 'consts.auctions.endingPeriod', network: 'kusama' },
-	{ path: 'consts.democracy.enactmentPeriod', network: 'kusama' },
 	{ path: 'consts.electionProviderMultiPhase.signedMaxSubmissions', network: 'kusama' },
 	{ path: 'consts.multisig.depositBase', network: 'kusama' },
 	{ path: 'consts.proxy.maxProxies', network: 'kusama' },
 	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
-	{ path: 'consts.democracy.voteLockingPeriod', network: 'kusama' },
 	{ path: 'consts.treasury.spendPeriod', network: 'kusama' },
 	{ path: 'query.staking.chillThreshold', network: 'kusama' },
 	{ path: 'query.nominationPools.counterForPoolMembers', network: 'kusama' },
@@ -82,7 +78,7 @@ for (let i = 0; i < paths.length; i++) {
 					wsUrl = "wss://polkadot-asset-hub-rpc.polkadot.io";
 					break;
 				default:
-					fail("Unknown network provided, no connection made.");
+					throw("Unknown network provided, no connection made.");
 			}
 
 			const wsProvider = new WsProvider(wsUrl);
@@ -104,7 +100,7 @@ for (let i = 0; i < paths.length; i++) {
 					chainValue = chainValue.toString();
 					break;
 				default:
-					fail(`Unknown path prefix (${pathParameters[0]}) in ${paths[i].path}`);
+					throw(`Unknown path prefix (${pathParameters[0]}) in ${paths[i].path}`);
 			}
 		} catch (error) {
 			console.log(error);
@@ -113,7 +109,7 @@ for (let i = 0; i < paths.length; i++) {
 		console.log(`${paths[i].path} on-chain value: ${chainValue}`);
 
 		if (chainValue === undefined) {
-			fail(`Undefined value returned from ${paths[i].path}`);
+			throw(`Undefined value returned from ${paths[i].path}`);
 		}
 	});
 }
