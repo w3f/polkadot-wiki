@@ -1,7 +1,7 @@
 ---
 id: assethub-dashboards
 title: AssetHub Dashboards
-sidebar_label: AssetHub Dashboards
+sidebar_label: AssetHub
 description:
   AssetHub is a specialized parachain on Polkadot designed to facilitate the handling and management
   of digital assets across various applications. It supports asset tokenization, trading, and

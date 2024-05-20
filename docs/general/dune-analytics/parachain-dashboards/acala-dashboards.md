@@ -1,7 +1,7 @@
 ---
 id: acala-dashboards
 title: Acala Dashboards
-sidebar_label: Acala Dashboards
+sidebar_label: Acala
 description:
   Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain liquidity
   and applications. It serves as a critical infrastructure layer for the Polkadot ecosystem.

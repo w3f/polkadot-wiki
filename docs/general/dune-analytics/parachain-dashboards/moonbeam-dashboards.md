@@ -1,7 +1,7 @@
 ---
 id: moonbeam-dashboards
 title: Moonbeam Dashboards
-sidebar_label: Moonbeam Dashboards
+sidebar_label: Moonbeam
 description:
   Moonbeam is a fully Ethereum-compatible parachain on the Polkadot network, enabling developers to
   deploy existing Solidity smart contracts and DApp frontends with minimal changes. It is designed

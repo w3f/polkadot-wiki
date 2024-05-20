@@ -1,7 +1,7 @@
 ---
 id: unique-dashboards
 title: Unique Dashboards
-sidebar_label: Unique Dashboards
+sidebar_label: Unique
 description:
   Unique is a leading parachain on Polkadot dedicated to enabling NFTs and their collections. It
   provides a robust framework for users and developers to engage with non-fungible tokens across
