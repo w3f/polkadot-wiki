@@ -2,7 +2,8 @@
 id: build-guides-coretime-troubleshoot
 title: Coretime Troubleshooting FAQ
 sidebar_label: Troubleshooting FAQ
-description: FAQ on issues related to using coretime and testing/deploying parachains using Polkadot SDK
+description:
+  FAQ on issues related to using coretime and testing/deploying parachains using Polkadot SDK
 keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
 slug: ../build-guides-coretime-troubleshoot
 ---
@@ -14,17 +15,19 @@ problems when using the Polkadot SDK or deploying on a core.
 
 ### Why do I have to sync Rococo locally? Can't I just use a remote, trusted node and connect to that?
 
-**A:** You can remotely connect to Rococo network via the --relay-chain-rpc-urls flag, which can be passed to your node. Unfortunately, the caveat is you can't use this node for collation at this time - meaning if
-you intend on being a collator/validator for your blockchain and intend to create blocks, you need
-to sync the chain locally.
+**A:** You can remotely connect to Rococo network via the --relay-chain-rpc-urls flag, which can be
+passed to your node. Unfortunately, the caveat is you can't use this node for collation at this
+time - meaning if you intend on being a collator/validator for your blockchain and intend to create
+blocks, you need to sync the chain locally.
 
 ---
 
 ### Is there a faster way to sync Rococo? Why not warp sync?
 
 **A:** Warp sync is currently not possible on Rococo or Westend.
-[See this answer for more context.](https://substrate.stackexchange.com/questions/9730/rococo-cant-warp-sync-stuck-at-16mb-finality-proof-download). However, `--chain=rococo—-sync fast-unsafe` should provide a faster way to sync with the relay chain by skipping downloading state proofs and just verifying the block headers. 
-
+[See this answer for more context.](https://substrate.stackexchange.com/questions/9730/rococo-cant-warp-sync-stuck-at-16mb-finality-proof-download).
+However, `--chain=rococo—-sync fast-unsafe` should provide a faster way to sync with the relay chain
+by skipping downloading state proofs and just verifying the block headers.
 
 ---
 
@@ -41,7 +44,9 @@ to sync the chain locally.
 
 **A:** Ideally, you would want to run these on separate machines/servers, but you could as long as
 you ensure you can provide different RPC/WebSocket and P2P ports for each collator. You also may
-need to sync a separate instance of Rococo for each collator on the same machine. You also will need to choose the block production mechanism like [Aura](https://substrate.stackexchange.com/questions/5572/production-like-parachain-setup-and-launch).
+need to sync a separate instance of Rococo for each collator on the same machine. You also will need
+to choose the block production mechanism like
+[Aura](https://substrate.stackexchange.com/questions/5572/production-like-parachain-setup-and-launch).
 
 ---
 
@@ -55,9 +60,10 @@ network with multiple collators, it is assumed you'd have separate VPS/servers f
 
 ### Why are we registering parathreads and not parachains?
 
-**A:** When registering a parachain on a relay chain, they are assigned a `ParaID`, and they are referred to as Parathreads till they start producing blocks. _Parathreads_ are a bit of an outdated term now. They refer to what are now known as
-on-demand parachains. Although they be references in various places through PolkadotJS, docs, or
-other UIs, really we only have two types of parachain: on-demand parachains, and parachains which
-use bulk coretime.
+**A:** When registering a parachain on a relay chain, they are assigned a `ParaID`, and they are
+referred to as Parathreads till they start producing blocks. _Parathreads_ are a bit of an outdated
+term now. They refer to what are now known as on-demand parachains. Although they be references in
+various places through PolkadotJS, docs, or other UIs, really we only have two types of parachain:
+on-demand parachains, and parachains which use bulk coretime.
 
 ---
