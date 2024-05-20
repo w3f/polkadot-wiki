@@ -11,7 +11,7 @@ test("Retrieves and applies a 'const' RPC value", async () => {
 
 test("Retrieves and applies a 'query' RPC value", async () => {
 	render(<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={0} filter="humanReadable" />);
-	await waitFor(() => expect(screen.getByText("100 DOT")).toBeInTheDocument(), { timeout: 5000 });
+	await waitFor(() => expect(screen.getByText("250 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("RPC falls back to default", async () => {
@@ -76,10 +76,10 @@ for (let i = 0; i < paths.length; i++) {
 					wsUrl = "wss://kusama-rpc.polkadot.io/";
 					break;
 				case "statemine":
-					wsUrl = "wss://statemine-rpc.polkadot.io/";
+					wsUrl = "wss://kusama-asset-hub-rpc.polkadot.io/";
 					break;
 				case "statemint":
-					wsUrl = "wss://statemint-rpc.polkadot.io/";
+					wsUrl = "wss://polkadot-asset-hub-rpc.polkadot.io";
 					break;
 				default:
 					fail("Unknown network provided, no connection made.");
