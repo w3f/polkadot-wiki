@@ -266,7 +266,7 @@ possible.
 :::tip Multistage payout proposal example
 
 For reference on how to create a multistage payout proposal, please check
-[Referendum 382](https://kusama.subscan.io/referenda_v2/382) on Kusama.
+[Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama.
 
 :::
 
@@ -295,7 +295,7 @@ From the list of spends, find the `spendID` of your respetive payout and issue t
 
 :::tip payout example
 
-To claim the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382) on Kusama,
+To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama,
 [this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing
 the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
 reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
