@@ -96,12 +96,28 @@ This workflow crafts an XCM transfer as shown below.
 Once this [extrinsic](https://assethub-polkadot.subscan.io/extrinsic/6028374-2) is signed and
 submitted, it is broadcast to Polkadot Asset Hub nodes. As this is a reserve asset transfer, the DOT
 is transferred to the destination's sovereign account on Polkadot Asset Hub and
-[the wrapped DOT is issued](https://assethub-kusama.subscan.io/extrinsic/6758392-0?event=6758392-1)
-as a foreign asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset
-balances of any account on Kusama Asset Hub can be queried on-chain through the
-`foreignAssets`pallet as shown below.
+[DOT is issued](https://assethub-kusama.subscan.io/extrinsic/6758392-0?event=6758392-1) as a foreign
+asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset balances of
+any account on Kusama Asset Hub can be queried on-chain through the `foreignAssets`pallet as shown
+below.
 
-![Wrapped DOT Balance](../assets/bridge-hub/KAH-DOT-Balance.png)
+![DOT Balance Kusama Asset Hub](../assets/bridge-hub/KAH-DOT-Balance.png)
+
+## Transfer DOT from Kusama Asset Hub to Polkadot Asset Hub
+
+This tutorial shows how to transfer DOT on Kusama Asset Hub to Polkadot Asset Hub. The first step is
+to ensure that your account on Kusama Asset Hub has enough KSM to cover the XCM transfer fee and the
+bridge fee (which is around 0.4 KSM). The next step is to craft an XCM message to be sent from
+Kusama Asset Hub.
+
+DOT which is registered as a foreign asset on Kusama Asset Hub can be transferred to Polkadot Asset
+Hub through an extrinsic like below, whose call data is
+[`0x1f0b040202090200a10f04000101009e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818040402010902000700e40b54020000000000`](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics/decode/0x1f0b040202090200a10f04000101009e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818040402010902000700e40b54020000000000).
+
+![DOT transferred out from Kusama Asset Hub](../assets/bridge-hub/KAH-DOT-transfer-PAH.png)
+
+For reference, this [extrinsic](https://assethub-kusama.subscan.io/extrinsic/7015118-2) is signed
+and submitted successfully, and the destination account on Polkadot Asset Hub received DOT.
 
 ## Transfer KSM to Polkadot Asset Hub
 
@@ -120,12 +136,28 @@ highlighted in the snapshot below.
 Once this [extrinsic](https://assethub-kusama.subscan.io/extrinsic/6761480-2) is signed and
 submitted, it is broadcast to Kusama Asset Hub nodes. As this is a reserve asset transfer, the KSM
 is transferred to the sovereign account on Kusama Asset Hub and
-[the wrapped KSM is issued](https://assethub-polkadot.subscan.io/extrinsic/6031467-0?event=6031467-6)
-as a foreign asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset
+[KSM is issued](https://assethub-polkadot.subscan.io/extrinsic/6031467-0?event=6031467-6) as a
+foreign asset and deposited onto the destination account on Kusama Asset Hub. The foreign asset
 balances of any account on Kusama Asset Hub can be queried on-chain through the
 `foreignAssets`pallet as shown below.
 
-![Wrapped KSM Balance](../assets/bridge-hub/PAH-KSM-Balance.png)
+![KSM Balance on Polkadot Asset Hub](../assets/bridge-hub/PAH-KSM-Balance.png)
+
+## Transfer KSM from Polkadot Asset Hub to Kusama Asset Hub
+
+This tutorial shows how to transfer KSM on Polkadot Asset Hub to Kusama Asset Hub. The first step is
+to ensure that your account on Polkadot Asset Hub has enough DOT to cover the XCM transfer fee and
+the bridge fee (which is around 2 DOT). The next step is to craft an XCM message to be sent from
+Polkadot Asset Hub.
+
+KSM which is registered as a foreign asset on Polkadot Asset Hub can be transferred to Kusama Asset
+Hub through an extrinsic like below, whose call data is
+[`0x1f0b040202090300a10f04000101008479c8ea5480acca5a847133cd97a87801b6e698a98f2eab0e8e9d5c51b14a33040402010903000700a0db215d0000000000`](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics/decode/0x1f0b040202090300a10f04000101008479c8ea5480acca5a847133cd97a87801b6e698a98f2eab0e8e9d5c51b14a33040402010903000700a0db215d0000000000)
+
+![KSM transferred out from Polkadot Asset Hub](../assets/bridge-hub/PAH-KSM-Transfer-KAH.png)
+
+For reference, this [extrinsic](https://assethub-polkadot.subscan.io/extrinsic/6303823-2) was signed
+and submitted successfully, and the destination account on Kusama Asset Hub received KSM.
 
 ## Transfer of arbitrary assets between Polkadot Asset Hub and Kusama Asset Hub
 
