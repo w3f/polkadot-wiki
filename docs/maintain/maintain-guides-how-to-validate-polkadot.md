@@ -58,7 +58,8 @@ transaction fees. The rest can come from nominators. To understand how validator
 the [NPoS Election algorithms](../learn/learn-phragmen.md) page.
 
 For further reference, you may look at the
-[statistics for current, active validators.](https://polkadot.subscan.io/validator_list?status=validator)
+{{ polkadot: [statistics for current, active validators.](https://polkadot.subscan.io/validator_list?status=validator) :polkadot }}
+{{ kusama: [statistics for current, active validators.](https://kusama.subscan.io/validator_list?status=validator) :kusama }}
 
 **Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
 insecure or improper setup may result in loss of DOT tokens! If you are not confident in your
@@ -539,8 +540,8 @@ But to enter the active validator set and be eligible to earn rewards, your vali
 nominated by a minimum number of DOT tokens.
 
 For example, the minimum stake backing a validator in era
-{{polkadot: 1449 :polkadot }}{{ kusama: 6646 :kusama }} is
-{{polkadot: 2,377,756.492 DOT :polkadot }}{{ kusama: 7,078.811 KSM :kusama }}. For a live view at
+{{ polkadot: 1449 :polkadot }}{{ kusama: 6646 :kusama }} (May 21st 2024) is
+{{ polkadot: 2,377,756.492 DOT :polkadot }}{{ kusama: 7,078.811 KSM :kusama }}. For a live view at
 current validator stats, you may look to
 [Subscan](https://polkadot.subscan.io/validator_list?status=validator) or the
 [Staking Dashboard.](https://staking.polkadot.network/#/overview)
