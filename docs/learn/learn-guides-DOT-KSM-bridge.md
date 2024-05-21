@@ -151,7 +151,7 @@ the bridge fee (which is around 2 DOT). The next step is to craft an XCM message
 Polkadot Asset Hub.
 
 KSM which is registered as a foreign asset on Polkadot Asset Hub can be transferred to Kusama Asset
-Hub through an extrinsic like below, whose call data is
+Hub through an extrinsic like the one below, whose call data is
 [`0x1f0b040202090300a10f04000101008479c8ea5480acca5a847133cd97a87801b6e698a98f2eab0e8e9d5c51b14a33040402010903000700a0db215d0000000000`](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics/decode/0x1f0b040202090300a10f04000101008479c8ea5480acca5a847133cd97a87801b6e698a98f2eab0e8e9d5c51b14a33040402010903000700a0db215d0000000000)
 
 ![KSM transferred out from Polkadot Asset Hub](../assets/bridge-hub/PAH-KSM-Transfer-KAH.png)
