@@ -352,7 +352,6 @@ Find the latest version; replace "VERSION" in the command below and run to chang
 
 ```sh
 git checkout VERSION
-./scripts/init.sh
 ```
 
 Build native code with the production profile. The following will make sure that the binaries are
