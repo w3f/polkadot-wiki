@@ -17,12 +17,12 @@ see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashb
 
 :::warning The identity pallet is no longer on the Kusama Relay Chain.
 
-The identity pallet, along with all of its data, has been migrated to and resumes functionality on
-the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
-
 If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
 be called via the system parachain,
 [which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
+
+The identity pallet, along with all of its data, has been migrated to and resumes functionality on
+the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
 
 :::
 
@@ -186,6 +186,7 @@ Next, select "Submit Proposal" and enter the previously copied preimage hash. Th
 field needs to be at least
 {{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="kusama-people" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>. :kusama }}
+
 You can find out the minimum by querying the chain state under
 [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy ->
 minimumDeposit.

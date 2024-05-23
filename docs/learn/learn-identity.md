@@ -11,12 +11,12 @@ import RPC from "./../../components/RPC-Connection";
 
 :::warning The identity pallet is no longer on the Kusama Relay Chain.
 
-The identity pallet, along with all of its data, has been migrated to and resumes functionality on
-the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
-
 If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
 be called via the system parachain,
 [which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
+
+The identity pallet, along with all of its data, has been migrated to and resumes functionality on
+the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
 
 :::
 
