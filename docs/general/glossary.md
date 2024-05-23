@@ -479,6 +479,10 @@ A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing S
 Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret
 Store.
 
+## People Chain
+
+A [system parachain](#system-parachains) for identity management.
+
 ## Polkadot
 
 A heterogeneous, multi-chain network allowing various blockchains of different characteristics to
@@ -687,7 +691,7 @@ parachains. For developers, see the
 ## System Parachains
 
 Parachains that are part of the Polkadot core protocol. These are allocated a parachain execution
-core by governance rather than auction.
+core by governance rather than by auction.
 
 ## Tabling
 

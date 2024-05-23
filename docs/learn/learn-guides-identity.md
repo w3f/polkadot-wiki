@@ -15,6 +15,17 @@ import RPC from "./../../components/RPC-Connection"; import MessageBox from
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
 see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
+:::warning The identity pallet is no longer on the Kusama Relay Chain.
+
+The identity pallet, along with all of its data, has been migrated to and resumes functionality on
+the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
+
+If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
+be called via the system parachain,
+[which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
+
+:::
+
 This is an advanced guide that is relevant for entities that would like to become registrars or
 would like to set sub-identities to an existing account with an identity. See
 [this page](./learn-identity.md) to learn about how to set an identity and have it verified.
@@ -55,7 +66,7 @@ makes sense.
 
 ## Request Judgement
 
-:::info Instructions for requesting and cancelling Identity judgments
+:::info Instructions for requesting and cancelling Identity judgements
 
 The procedure to request and cancel identity judgments is explained in detail in this
 [support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
