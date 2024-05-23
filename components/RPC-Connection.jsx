@@ -14,8 +14,9 @@ const Polkadot = "polkadot";
 const Kusama = "kusama";
 const Statemine = "statemine";
 const Statemint = "statemint";
+const KusamaPeople = "kusama-people";
 
-function RPC({ network, path, defaultValue, filter=undefined }) {
+function RPC({ network, path, defaultValue, filter = undefined }) {
 	const [returnValue, setReturnValue] = useState('');
 	network = network.toLowerCase();
 
@@ -43,6 +44,9 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 			case Statemint:
 				wsUrl = "wss://polkadot-asset-hub-rpc.polkadot.io/";
 				break;
+			case KusamaPeople:
+				wsUrl = "wss://kusama-people-rpc.polkadot.io";
+				break;
 			default:
 				console.log(`Unknown network provided, ${network}`);
 		}
@@ -55,7 +59,7 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 			const connect = async () => {
 				const newValue = await syncData(network, path, setReturnValue);
 				if (newValue === undefined) {
-					 // There was an issue with the request, use default
+					// There was an issue with the request, use default
 					return;
 				} else if (filter !== undefined) {
 					// Apply filter to retrieved value if a filter is provided
@@ -109,7 +113,7 @@ async function syncData(network, path, setReturnValue) {
 		// Build API call
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
-			if (param in api){
+			if (param in api) {
 				api = api[param];
 			}
 		});
@@ -136,7 +140,7 @@ function applyFilter(value, filter, network, setReturnValue) {
 	switch (filter) {
 		case "humanReadable":
 			HumanReadable(value, network, setReturnValue);
-    	break;
+			break;
 		case "precise":
 			Precise(value, network, setReturnValue);
 			break;

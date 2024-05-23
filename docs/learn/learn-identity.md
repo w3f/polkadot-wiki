@@ -26,12 +26,12 @@ verification of this information by [registrars](#registrars).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusama-people" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
 and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
-per each field beyond the legal name. These funds are _locked_, not spent - they are returned when
-the identity is cleared.
+{{ polkadot: <RPC network="polkadot" path="consts.identity.byteDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama-people" path="consts.identity.byteDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
+(per byte) per each field beyond the legal name. These funds are _locked_, not spent - they are
+returned when the identity is cleared.
 
 ## Judgements
 
@@ -119,7 +119,7 @@ their validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a deposit of
 {{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusama-people" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
 is required for every sub-account.
 
 ---
