@@ -232,6 +232,36 @@ Once this is finished, one may submit a proposal
 [as stated above](#submit-a-treasury-track-referendum). Keep in mind one will also need to
 [provide the decision deposit as well](#place-a-decision-deposit-for-the-treasury-track-referendum).
 
+### Manually Claiming Payouts
+
+In order to claim the spend, you must manually call the `treasury.payout` extrinsic via a `Signed`
+origin. The `spendID` for the pending payout can be queried on-chain through Polkadot-JS UI >
+Developer > Chain State > Storage > treasury > spends and unselect the include option and then click
+on the plus button to the right.
+
+![payout](../assets/treasury/treasury-multistage-payout-spend-id.png)
+
+From the list of spends, find the `spendID` of your respetive payout and issue the payout extrinsic.
+
+:::tip payout example
+
+To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama,
+[this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing
+the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
+reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
+[Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset
+Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
+
+:::
+
+To clear the on-chain storage of a successful or expired spend, Treasury pallet's `checkStatus`
+extrinsic can be used. The transaction fees paid for issuing this extrinsic will be refunded.
+
+### Proposing a "Void" for a Staged Proposal
+
+If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
+extrinsic can be utilized via a governance proposal.
+
 ## Creating a Multistage Payout Proposal with `validFrom`
 
 Staged proposals are similar to a tranche or milestone-based funding model; instead of all spends
@@ -275,42 +305,12 @@ For reference on how to create a multistage payout proposal, please check
 Once each spend is defined within the batched call, the `validFrom` field can be utilized to specify
 the "date", or block height, at which each spend will be executed.
 
-### Manually Claiming Payouts
-
 :::info Spends can expire!
 
 Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
 spend within 30 days.
 
 :::
-
-In order to claim the spend, you must manually call the `treasury.payout` extrinsic via a `Signed`
-origin. The `spendID` for the pending payout can be queried on-chain through Polkadot-JS UI >
-Developer > Chain State > Storage > treasury > spends and unselect the include option and then click
-on the plus button to the right.
-
-![payout](../assets/treasury/treasury-multistage-payout-spend-id.png)
-
-From the list of spends, find the `spendID` of your respetive payout and issue the payout extrinsic.
-
-:::tip payout example
-
-To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama,
-[this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing
-the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
-reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
-[Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset
-Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
-
-:::
-
-To clear the on-chain storage of a successful or expired spend, Treasury pallet's `checkStatus`
-extrinsic can be used. The transaction fees paid for issuing this extrinsic will be refunded.
-
-### Proposing a "Void" for a Staged Proposal
-
-If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
-extrinsic can be utilized via a governance proposal.
 
 ## Submit Treasury Proposal via Polkassembly
 
