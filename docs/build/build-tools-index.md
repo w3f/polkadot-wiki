@@ -13,7 +13,8 @@ developers, feel free to [add it in](../general/contributing.md).
 
 ## Wallets
 
-Please see the [Wallets](../general/wallets-and-extensions.md) page.
+Please see the [Wallets](https://polkadot.network/ecosystem/wallets/) page on the official website 
+or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for detailed information.
 
 ## Block Explorers
 
@@ -30,6 +31,8 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 
 ## Blockchain Analytics
 
+- [Dune Analytics](https://dune.com/substrate) - Community dashboards and analytics
+- [DotLake](https://dashboards.data.paritytech.io/) - data visualizations for the Polkadot Ecosystem maintained by Parity
 - [Web3go](https://app.web3go.xyz/#/) - An open platform for everyone to play with, curate and
   visualize multi-blockchain data
 - [Polkawatch](https://polkawatch.app/) - Polkadot Decentralization Analytics
@@ -78,6 +81,7 @@ Please see the [Wallets](../general/wallets-and-extensions.md) page.
 - [Substrate Debug Kit](https://github.com/paritytech/substrate-debug-kit) - A collection of debug
   tools and libraries around substrate chains. Includes tools to calculate NPoS elections offline,
   disk usage monitoring, test templates against chain state and other pallet-specific helper.
+- [POP CLI](https://github.com/r0gue-io/pop-cli) - An all-in-one tool for Polkadot development.
 - [Diener](https://crates.io/crates/diener) - A tool for easy changing of Polkadot or Substrate
   dependency versions.
 - [Polkadot Launch](https://github.com/shawntabrizi/polkadot-launch) - A tool to easily launch
