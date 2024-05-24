@@ -131,6 +131,56 @@ in this document.
 The preimage and decision deposits
 [can be claimed once the referendum ends](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits).
 
+## Creating a Multistage Payout Proposal with `validFrom`
+
+Staged proposals are similar to a tranche or milestone-based funding model; instead of all spends
+being paid simultaneously, each portion is redeemable at a certain block height. This is done by
+specifying each milestone, set at its respective amount and block height at which it becomes
+redeemable.
+
+For example, take the following "staged" proposal, which has three milestones, each at 100 DOT, and
+is redeemable at the following block heights. Usually, block heights correspond to a date in the
+future:
+
+- 100 DOT paid out at block height 1000
+- 200 DOT paid out at block height 2000
+- 500 DOT paid out at block height 4000
+
+Governance can also propose to **void** a staged proposal before it has completed all of its
+payouts.
+
+:::info Calculating dates from block heights
+
+Although not the most accurate form of measurement, block heights can be used to correspond to
+certain dates in the future.
+
+:::
+
+### Using `batch` for Multi-Spend Proposals
+
+Using the Utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
+calls can have its own `validFrom` block height, which allows for scenarios such as the above to be
+possible.
+
+:::tip Multistage payout proposal example
+
+For reference on how to create a multistage payout proposal, please check
+[Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama.
+
+:::
+
+### Using `validFrom` for a Milestone-Based Proposal
+
+Once each spend is defined within the batched call, the `validFrom` field can be utilized to specify
+the "date", or block height, at which each spend will be executed.
+
+:::info Treasury Spends have to be claimed manually. Spends can expire!
+
+Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
+spend within 30 days. Check the claiming process for treasury spends [here](#manually-claiming-payouts)
+
+:::
+
 ## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
 The following tutorial mostly goes over how to utilize the `spend` extrinsic, which, unlike
@@ -213,8 +263,6 @@ payout can be issued. If the `validFrom` parameter is not set, the spend can be 
 after approval. For more information on this field, refer to the
 [guide below](#creating-a-staged-proposal-with-validfrom).
 
-### Summary: Final Call
-
 The final call should look like the following, where we:
 
 - Specify our asset as **USDT** on **Asset Hub**.
@@ -262,55 +310,13 @@ extrinsic can be used. The transaction fees paid for issuing this extrinsic will
 If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
 extrinsic can be utilized via a governance proposal.
 
-## Creating a Multistage Payout Proposal with `validFrom`
+:::tip Example proposal - Voiding a Treasury Spend
 
-Staged proposals are similar to a tranche or milestone-based funding model; instead of all spends
-being paid simultaneously, each portion is redeemable at a certain block height. This is done by
-specifying each milestone, set at its respective amount and block height at which it becomes
-redeemable.
-
-For example, take the following "staged" proposal, which has three milestones, each at 100 DOT, and
-is redeemable at the following block heights. Usually, block heights correspond to a date in the
-future:
-
-- 100 DOT paid out at block height 1000
-- 200 DOT paid out at block height 2000
-- 500 DOT paid out at block height 4000
-
-Governance can also propose to **void** a staged proposal before it has completed all of its
-payouts.
-
-:::info Calculating dates from block heights
-
-Although not the most accurate form of measurement, block heights can be used to correspond to
-certain dates in the future.
+For reference, check the referenda on Kusama that [tests VoidSpend functionality for Treasury Payouts](https://kusama.subsquare.io/referenda/391).
+Through this referenda, a treasury spend was [successfully voided](https://kusama.subscan.io/event?page=1&time_dimension=date&module=treasury&event_id=assetspendvoided).
 
 :::
 
-### Using `batch` for Multi-Spend Proposals
-
-Using the Utility pallet, one can batch multiple `treasury.spend` calls together. Each of these
-calls can have its own `validFrom` block height, which allows for scenarios such as the above to be
-possible.
-
-:::tip Multistage payout proposal example
-
-For reference on how to create a multistage payout proposal, please check
-[Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama.
-
-:::
-
-### Using `validFrom` for a Milestone-Based Proposal
-
-Once each spend is defined within the batched call, the `validFrom` field can be utilized to specify
-the "date", or block height, at which each spend will be executed.
-
-:::info Spends can expire!
-
-Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
-spend within 30 days.
-
-:::
 
 ## Submit Treasury Proposal via Polkassembly
 
