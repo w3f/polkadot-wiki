@@ -21,8 +21,9 @@ If you are on **Kusama**, any of the extrinsics which require you to use the rel
 be called via the system parachain,
 [which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
 
-The identity pallet, along with all of its data, has been migrated to
-the [People Chain](../general/glossary.md#people-chain), a system parachain which can now be used for identity management.
+The identity pallet, along with all of its data, has been migrated to the
+[People Chain](../general/glossary.md#people-chain), a system parachain which can now be used for
+identity management.
 
 :::
 
