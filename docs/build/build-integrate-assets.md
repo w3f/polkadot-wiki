@@ -196,19 +196,19 @@ examples to showcase the slight differences:
 1. For an XCM transfer from a Parachain to a Relay chain
    _([example](https://polkadot.subscan.io/xcm_message/polkadot-3effaf637dd2a3ac5a644ccc693cbf58a6957d84))_:
 
-   - The [event](https://hydradx.subscan.io/extrinsic/5136464-2?event=5136464-7) to look for in
-     the Parachain side is called `parachainsystem (UpwardMessageSent)`, and the parameter
+   - The [event](https://hydradx.subscan.io/extrinsic/5136464-2?event=5136464-7) to look for in the
+     Parachain side is called `parachainsystem (UpwardMessageSent)`, and the parameter
      `message_hash` in this event identifies the XCM transfer.
-   - The [event](https://polkadot.subscan.io/block/20810935?tab=event&&event=20810935-4) to track in the
-     Relay chain side is called `messagequeue (Processed)`, and the parameter `id` of the event
+   - The [event](https://polkadot.subscan.io/block/20810935?tab=event&&event=20810935-4) to track in
+     the Relay chain side is called `messagequeue (Processed)`, and the parameter `id` of the event
      should be the same as the `message_hash` found in the Parachain event.
 
 2. For an XCM transfer from a Relay chain to a Parachain
    _([example](https://polkadot.subscan.io/xcm_message/polkadot-b2f455ed6ca1b4fdea746dfe8d150c10ec74440e))_:
 
    - The [event](https://polkadot.subscan.io/extrinsic/20810793-2?event=20810793-53) to look for in
-     the Relay chain side is called `xcmPallet (sent)`, and the parameter
-     `message_id` in this event identifies the XCM transfer.
+     the Relay chain side is called `xcmPallet (sent)`, and the parameter `message_id` in this event
+     identifies the XCM transfer.
    - The [event](https://moonbeam.subscan.io/extrinsic/6174523-0?event=6174523-5) to look for in the
      Parachain side is called `dmpqueue (ExecutedDownward)`, and the parameter that identifies the
      XCM message is either called `message_hash` or `message_id`.
@@ -219,9 +219,9 @@ examples to showcase the slight differences:
    - The [event](https://assethub-polkadot.subscan.io/extrinsic/6275027-4?event=6275027-22) to look
      for in the System Parachain side is called `xcmpqueue (XcmpMessageSent)`, and again the
      `message_hash` is one of the parameters of the event.
-   - The corresponding [event](https://hydradx.subscan.io/extrinsic/5135860-1?event=5135860-6) in the
-     Parachain side is the `xcmpqueue (Success)` and the `message_hash` found in that event should
-     have the same value as the one in the System parachain.
+   - The corresponding [event](https://hydradx.subscan.io/extrinsic/5135860-1?event=5135860-6) in
+     the Parachain side is the `xcmpqueue (Success)` and the `message_hash` found in that event
+     should have the same value as the one in the System parachain.
 
 #### Monitoring of Failed XCM Transfers
 
@@ -232,7 +232,8 @@ parameters in the events emitted or different events. Below are some examples:
    _([example](https://polkadot.subscan.io/xcm_message/polkadot-c8d7186edb43a592d65b3b5a87c4ecaac38c5aa2))_:
 
    - We will see the
-     [event](https://assethub-polkadot.subscan.io/extrinsic/4671081-0?event=4671081-1) `dmpqueue (ExecutedDownward)` in the System Parachain side with the following parameters:
+     [event](https://assethub-polkadot.subscan.io/extrinsic/4671081-0?event=4671081-1)
+     `dmpqueue (ExecutedDownward)` in the System Parachain side with the following parameters:
      - `outcome` with value `Incomplete` and with the type of error which in this example is
        [UntrustedReserveLocation](https://github.com/paritytech/polkadot-sdk/blob/c54ea64af43b522d23bfabb8d917a490c0f23217/polkadot/xcm/src/v2/traits.rs#L43).
      - `message_id` which shows the hash of the XCM Transfer.
@@ -247,8 +248,8 @@ parameters in the events emitted or different events. Below are some examples:
      - `message_hash` which identifies the XCM Transfer.
    - **Note**: there might be another
      [event](https://interlay.subscan.io/extrinsic/3627057-1?event=3627057-7) called
-     `polkadotxcm (AssetsTrapped)` which indicates that some assets have been trapped (and hence
-     can be claimed).
+     `polkadotxcm (AssetsTrapped)` which indicates that some assets have been trapped (and hence can
+     be claimed).
 
 A great resource to learn more about Error Management in XCM is the Polkadot blog post from Gavin
 Wood,

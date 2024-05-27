@@ -13,7 +13,7 @@ developers, feel free to [add it in](../general/contributing.md).
 
 ## Wallets
 
-Please see the [Wallets](https://polkadot.network/ecosystem/wallets/) page on the official website 
+Please see the [Wallets](https://polkadot.network/ecosystem/wallets/) page on the official website
 or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for detailed information.
 
 ## Block Explorers
@@ -32,7 +32,8 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
 ## Blockchain Analytics
 
 - [Dune Analytics](https://dune.com/substrate) - Community dashboards and analytics
-- [DotLake](https://dashboards.data.paritytech.io/) - data visualizations for the Polkadot Ecosystem maintained by Parity
+- [DotLake](https://dashboards.data.paritytech.io/) - data visualizations for the Polkadot Ecosystem
+  maintained by Parity
 - [Web3go](https://app.web3go.xyz/#/) - An open platform for everyone to play with, curate and
   visualize multi-blockchain data
 - [Polkawatch](https://polkawatch.app/) - Polkadot Decentralization Analytics
