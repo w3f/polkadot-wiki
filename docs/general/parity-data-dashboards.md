@@ -11,6 +11,11 @@ slug: ../parity-data-dashboards
 
 The Parity Data Team has made publicly available a [website](https://dashboards.data.paritytech.io/) that displays a number of dashboards relating to Polkadot Ecosystem On-Chain data. The graphs provided are grouped into the following sections: [Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html), [Treasury Related Activity](https://dashboards.data.paritytech.io/treasuries.html), [Staking](https://dashboards.data.paritytech.io/staking.html) and aggregated [Ecosystem-wide](https://dashboards.data.paritytech.io/parachains.html) metrics. There is also a [Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) which provides a monthly updated version of [The Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
 
+
+## Support: Data Requests, Collaborations, Parachain Onboarding etc. 
+
+The Parity Data Team is very eager to collaborate with the Ecosystem. If you have any questions, data requests that you need help with, interest in partnerships or you are a Parachain team and want your chain onboarded to the platform - please get in contact with data-team@parity.io. 
+ 
 ## Where the Data Comes From
 
 The data displayed on the website comes from Dotlake, which is a scalable and cost-efficient data platform built on Google Cloud Platform (GCP) by the Data Team at [Parity Technologies](https://www.parity.io/). It's designed to store all blocks, events, extrinsics, and more for all the chains in the Polkadot ecosystem. The platform uses a range of existing technologies, keeping the architecture simple with low operational overhead. This includes tools like Terraform, the Substrate Sidecar, Rust & Python programming languages, and various GCP services like Cloud Storage, BigQuery, Cloud Run & Jobs, and Workflows & Functions.
@@ -26,7 +31,3 @@ Dotlake currently consists of 70+ Polkadot & Kusama chains with their full histo
 
 **Real-Time Architecture**
 ![Real-Time](https://dashboards.data.paritytech.io/dotlake-rt.74537c4d.png)
-
-## Support
-
-Questions or requests for support regarding Polkadot data can be made by getting in contact with data-team@parity.io. 
