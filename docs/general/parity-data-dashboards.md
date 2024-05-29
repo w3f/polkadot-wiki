@@ -12,7 +12,7 @@ slug: ../parity-data-dashboards
 The Parity Data Team has made publicly available a [website](https://dashboards.data.paritytech.io/) that displays a number of dashboards relating to Polkadot Ecosystem On-Chain data. The graphs provided are grouped into the following sections: [Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html), [Treasury Related Activity](https://dashboards.data.paritytech.io/treasuries.html), [Staking](https://dashboards.data.paritytech.io/staking.html) and aggregated [Ecosystem-wide](https://dashboards.data.paritytech.io/parachains.html) metrics. There is also a [Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) which provides a monthly updated version of [The Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
 <br>
 
-## Notes on How to Use the Interactive Ecosystem Charts
+## Notes on How to Use the Interactive Charts
 
 The [Ecosystem Tab](https://dashboards.data.paritytech.io/parachains.html) shows a number of universally applicable metrics (Active Accounts, Unique Accounts, Transactions, Events) across both Polkadot & Kusama Relay/Parachains. Users can select whether they want to view: a) Polkadot or Kusama b) daily or monthly figures c) Substrate Only, EVM Only or Substrate + EVM numbers. The default view is set to Polkadot, Monthly, Substrate + EVM.  
 
@@ -22,11 +22,11 @@ The [Ecosystem Tab](https://dashboards.data.paritytech.io/parachains.html) shows
 
 <br>
 
-Here is an example of selecting Polkadot, Daily, Substrate Only.
+Here is an example of selecting Polkadot, Daily, Substrate Only for Transactions.
 
 <br>
 
-<img src="../assets/parity-data-dashboards/ecosystem-polkadot-daily-substrate-example.png" alt="Daily Substrate Selection" width="800" height = "auto"/>
+<img src="../assets/parity-data-dashboards/ecosystem-polkadot-daily-substrate-transactions-selection.png" alt="Daily Substrate Transactions Selection" width="800" height = "auto"/>
 
 <br>
 
@@ -35,6 +35,14 @@ Users can also specify which chains they would like to view metrics for. The def
 <br>
 
 <img src="../assets/parity-data-dashboards/ecosystem-chain-selection-example.png" alt="Chain Selection" width="800" height = "auto"/>
+
+<br>
+
+Also, for all graphs on the website, in the top right users can toggle between chart types: choosing bar, line or stacked and a combination of those. See below for an example from the [Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html) tab.
+
+<br>
+
+<img src="../assets/parity-data-dashboards/stablecoins-usdc-toggle-chart-type-example.png" alt="Batch" width="800" height = "auto"/>
 
 <br>
 
