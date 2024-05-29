@@ -52,13 +52,13 @@ DotLake currently consists of 80+ Polkadot, Kusama, solo-chains and test-nets wi
 
 **DotLake Batch Architecture**
 
-<img src="../assets/parity-data-dashboards/DotLake-batch.png" alt="Batch" width="800" height = "auto"/>
+<img src="../assets/parity-data-dashboards/dotlake-batch.png" alt="Batch" width="800" height = "auto"/>
 
 <br>
 
 **Real-Time Architecture**
 
-<img src="../assets/parity-data-dashboards/DotLake-rt.png" alt="Batch" width="800" height = "auto"/>
+<img src="../assets/parity-data-dashboards/dotlake-rt.png" alt="Batch" width="800" height = "auto"/>
 
 <br>
 
