@@ -75,6 +75,7 @@ module.exports = {
             slug: '/dashboards-index',
           },
           items: [
+            "general/parity-data-dashboards",
             "general/staking-dashboard",
           ],
         },
