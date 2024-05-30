@@ -12,21 +12,25 @@ slug: ../parity-data-dashboards
 The Parity Data Team has made publicly available a [website](https://dashboards.data.paritytech.io/)
 that displays a number of dashboards relating to Polkadot Ecosystem On-Chain data. The graphs
 provided are grouped into the following sections:
-[Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html),
-[Treasury Related Activity](https://dashboards.data.paritytech.io/treasuries.html),
-[Staking](https://dashboards.data.paritytech.io/staking.html) and aggregated
-[Ecosystem-wide](https://dashboards.data.paritytech.io/parachains.html) metrics. There is also a
-[Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) which provides a monthly updated
-version of
-[The Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
+
+- [Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html),
+- [Treasury Related Activity](https://dashboards.data.paritytech.io/treasuries.html),
+- [Staking](https://dashboards.data.paritytech.io/staking.html) and aggregated
+- [Ecosystem-wide](https://dashboards.data.paritytech.io/parachains.html) metrics. There is also a
+- [Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) which provides a monthly updated
+  version of
+  [The Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
 
 ## Notes on How to Use the Interactive Charts
 
 The [Ecosystem Tab](https://dashboards.data.paritytech.io/parachains.html) shows a number of
 universally applicable metrics (Active Accounts, Unique Accounts, Transactions, Events) across both
-Polkadot & Kusama Relay/Parachains. Users can select whether they want to view: a) Polkadot or
-Kusama b) daily or monthly figures c) Substrate Only, EVM Only or Substrate + EVM numbers. The
-default view is set to Polkadot, Monthly, Substrate + EVM.
+Polkadot & Kusama Relay/Parachains. Users can select whether they want to view:
+
+1. Polkadot or Kusama
+2. Daily or monthly figures
+3. Substrate Only, EVM Only or Substrate + EVM numbers. The default view is set to Polkadot,
+   Monthly, Substrate + EVM.
 
 ![Default Selection](../assets/parity-data-dashboards/ecosystem-chart-default-selection.png)
 
