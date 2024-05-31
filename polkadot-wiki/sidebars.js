@@ -127,12 +127,6 @@ module.exports = {
                   ],
                 },
                 "general/dune-analytics/dunesql-cheatsheet",
-                {
-                  type: 'link',
-                  label: 'Other',
-                  description: 'Other Dashboards on Dune Analytics.',
-                  href: 'https://hackmd.io/@Agbld/Byi6xxXXA',
-                },
               ],
             },
           ],
