@@ -81,7 +81,7 @@ new identity judgment, please use the other registrars.
 :::
 
 {{ kusama:
-:::info Registrar 2 also decommissioned
+:::info Registrar 2 decommissioned
 
 Registrar 2 is no longer offering registrar services on Kusama.
 
