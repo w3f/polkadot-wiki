@@ -80,6 +80,14 @@ new identity judgment, please use the other registrars.
 
 :::
 
+{{ kusama:
+:::info Registrar 2 decommissioned
+
+Registrar 2 is no longer offering registrar services on Kusama.
+
+:::
+:kusama }}
+
 ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
 {{ polkadot: ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ :polkadot }}
 {{ kusama: ~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ :kusama }} <br /> **Fee**:
@@ -90,10 +98,10 @@ Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
 {{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
 {{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
 
-Registrar 2: <br /> **Account**:
+{{ polkadot: Registrar 2 :polkadot}} {{ kusama: ~~Registrar 2~~ :kusama }}: <br /> **Account**:
 {{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
-{{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
+{{ kusama: ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ :kusama }} <br /> **Fee**:
+{{ polkadot: 0 DOT :polkadot }}{{ kusama: ~~1 KSM~~ :kusama }} <br />
 
 Registrar 3: <br /> **Account**:
 {{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC :polkadot }}
