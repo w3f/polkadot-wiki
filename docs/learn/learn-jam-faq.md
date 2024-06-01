@@ -121,8 +121,7 @@ but it is too early to jump into specific use cases just yet.
 
 While specific timelines may vary, the development of JAM typically involves ongoing research,
 testing, and iteration. The RFC will be published as a first step, where the community gives
-feedback and iterates on it. The timeframe that JAM is expected to be production-ready is 20-60
-months from its presentation at Token2049 in Dubai (April 2024), not including the service layer.
+feedback and iterates on it. 
 
 ## What about Polkadot? Will there be a hard fork?
 
