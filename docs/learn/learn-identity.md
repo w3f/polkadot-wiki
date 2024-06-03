@@ -80,13 +80,11 @@ new identity judgment, please use the other registrars.
 
 :::
 
-{{ kusama:
-:::info Registrar 2 decommissioned
+{{ kusama: :::info Registrar 2 decommissioned
 
 Registrar 2 is no longer offering registrar services on Kusama.
 
-:::
-:kusama }}
+::: :kusama }}
 
 ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
 {{ polkadot: ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ :polkadot }}

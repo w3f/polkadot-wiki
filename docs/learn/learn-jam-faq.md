@@ -121,7 +121,7 @@ but it is too early to jump into specific use cases just yet.
 
 While specific timelines may vary, the development of JAM typically involves ongoing research,
 testing, and iteration. The RFC will be published as a first step, where the community gives
-feedback and iterates on it. 
+feedback and iterates on it.
 
 ## What about Polkadot? Will there be a hard fork?
 
@@ -136,16 +136,16 @@ layer.
 ## Do parachains need to rewrite their code? How much work is it to build?
 
 Parachains will be one of the “products” that can run on JAM. JAM will only remove the enshrined
-parachain consensus and replace it with a model that supports different services. For some time,
-it will likely be easier to develop parachains, as the necessary tooling for
-developing services needs to be developed and adopted. For migration support, full
-compatibility guarantees will be written into the code.
+parachain consensus and replace it with a model that supports different services. For some time, it
+will likely be easier to develop parachains, as the necessary tooling for developing services needs
+to be developed and adopted. For migration support, full compatibility guarantees will be written
+into the code.
 
 ## Does it even make sense now to build a parachain on Polkadot?
 
 Of course! Parachains will be one of the “products” that can run on JAM, and they will stay
 first-class citizens. There will be different use cases, some suitable for parachains and some
-suitable for services. 
+suitable for services.
 
 ## What about DOT?
 

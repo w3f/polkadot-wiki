@@ -13,11 +13,16 @@ The Parity Data Team has made publicly available a [website](https://dashboards.
 that displays a number of dashboards relating to Polkadot Ecosystem On-Chain data. The graphs
 provided are grouped into the following sections:
 
-- [Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html) - metrics around stablecoins in Polkadot AssetHub. 
-- [Treasury](https://dashboards.data.paritytech.io/treasuries.html) - metrics around treasuries in the ecosystem. 
-- [Staking](https://dashboards.data.paritytech.io/staking.html) - metrics pertaining to staking, nomination pools and more. 
-- [Ecosystem](https://dashboards.data.paritytech.io/parachains.html) - high level activity metrics for Relay Chains and Parachains. 
-- [Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) - an updated version of the [Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
+- [Stablecoins](https://dashboards.data.paritytech.io/stablecoins.html) - metrics around stablecoins
+  in Polkadot AssetHub.
+- [Treasury](https://dashboards.data.paritytech.io/treasuries.html) - metrics around treasuries in
+  the ecosystem.
+- [Staking](https://dashboards.data.paritytech.io/staking.html) - metrics pertaining to staking,
+  nomination pools and more.
+- [Ecosystem](https://dashboards.data.paritytech.io/parachains.html) - high level activity metrics
+  for Relay Chains and Parachains.
+- [Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) - an updated version of the
+  [Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
 
 ## Notes on How to Use the Interactive Charts
 
@@ -27,10 +32,9 @@ Polkadot & Kusama Relay/Parachains. Users can select whether they want to view:
 
 - Polkadot or Kusama
 - Daily or monthly figures
-- Substrate Only, EVM Only or Substrate + EVM numbers. 
+- Substrate Only, EVM Only or Substrate + EVM numbers.
 
 The default view is set to Polkadot,Monthly, Substrate + EVM.
-
 
 ![Default Selection](../assets/parity-data-dashboards/ecosystem-chart-default-selection.png)
 
