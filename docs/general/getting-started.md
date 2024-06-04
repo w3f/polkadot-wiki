@@ -247,7 +247,8 @@ This is recommended for users with backgrounds of all levels, and the course is 
   paper that describes the protocol in more technical terms. We would recommend reading this
   overview paper if you are interested in digging more into the protocol itself.
 - [The Web3 Foundation's research site](https://research.web3.foundation/) contains details and
-  up-to-date technical research on Polkadot in general.
+  up-to-date technical research on Polkadot in general, including scalability, cryptographic,
+  economic, and security aspects of the protocol.
 - [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot](https://linktr.ee/polkadotbook) -
   a book funded by the Polkadot Treasury
 - [Polkadot's specification](https://github.com/w3f/polkadot-spec) is a GitHub repository that holds
