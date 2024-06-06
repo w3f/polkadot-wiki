@@ -5,7 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -13,8 +12,8 @@ import Col from "react-bootstrap/Col";
 import Translate from "@docusaurus/Translate";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-
 import KusamaCanary from "@site/static/img/kusama_canary_white.svg";
+import "@site/static/css/front-page-styles.css";
 
 function HomeNav() {
   const NavContainer = ({ children }) => (
@@ -28,8 +27,13 @@ function HomeNav() {
   const NavItem = ({ href, aosDelay, children, imageSrc, description }) => (
     <Col xs={12} md={6} lg={6} className="mb-4">
       <a href={href} className="text-decoration-none" data-aos="fade-up" data-aos-delay={aosDelay}>
-        <div className="card border-0 rounded-lg shadow" style={{ height: "100%" }}>
-          <img src={imageSrc} alt="NavItem Image" className="card-img-top rounded-top" style={{ maxHeight: '200px', width: '100%', objectFit: 'contain' }} />
+        <div className="card border-0 rounded-lg shadow" style={{ height: "100%", marginBottom: '1rem' }}>
+          <img
+            src={imageSrc}
+            alt="NavItem Image"
+            className="card-img-top rounded-top"
+            style={{ maxHeight: '200px', width: '100%', objectFit: 'contain' }}
+          />
           <div className="card-body d-flex flex-column justify-content-between">
             <h1 className="mt-0 text-dark font-weight-bold text-center">{children}</h1>
             <div className="card-description text-center" style={{ maxHeight: "5rem", overflowY: "auto" }}>
@@ -47,7 +51,11 @@ function HomeNav() {
         href={useDocUrl("getting-started")}
         aosDelay="0"
         imageSrc="img/polkadot-guide/Explore.png"
-        description={<Translate id="homePage.navContainer.explore.content">Explore Wallets, Applications and Programmes within the Polkadot Ecosystem.</Translate>}
+        description={
+          <Translate id="homePage.navContainer.explore.content">
+            Explore Wallets, Applications and Programmes within the Polkadot Ecosystem.
+          </Translate>
+        }
       >
         <Translate id="homePage.navContainer.explore.title">Explore</Translate>
       </NavItem>
@@ -55,7 +63,11 @@ function HomeNav() {
         href={useDocUrl("web3-and-polkadot")}
         aosDelay="200"
         imageSrc="img/polkadot-guide/Learn.png"
-        description={<Translate id="homePage.navContainer.learn.content">Learn about Polkadot and how it provides Shared Security and Secure Interoperability to its Parachains.</Translate>}
+        description={
+          <Translate id="homePage.navContainer.learn.content">
+            Learn about Polkadot and how it provides Shared Security and Secure Interoperability to its Parachains.
+          </Translate>
+        }
       >
         <Translate id="homePage.navContainer.learn.title">Learn</Translate>
       </NavItem>
@@ -63,7 +75,11 @@ function HomeNav() {
         href={useDocUrl("build-guide")}
         aosDelay="400"
         imageSrc="img/polkadot-guide/Build.png"
-        description={<Translate id="homePage.navContainer.build.content">Most up-to-date Information on the Status of the Development Tools in the Polkadot Ecosystem.</Translate>}
+        description={
+          <Translate id="homePage.navContainer.build.content">
+            Most up-to-date Information on the Status of the Development Tools in the Polkadot Ecosystem.
+          </Translate>
+        }
       >
         <Translate id="homePage.navContainer.build.title">Build</Translate>
       </NavItem>
@@ -71,7 +87,11 @@ function HomeNav() {
         href={useDocUrl("maintain-index")}
         aosDelay="600"
         imageSrc="img/polkadot-guide/Maintain.png"
-        description={<Translate id="homePage.navContainer.maintain.content">Information and Guides on how to Deploy a Node and Run the Network.</Translate>}
+        description={
+          <Translate id="homePage.navContainer.maintain.content">
+            Information and Guides on how to Deploy a Node and Run the Network.
+          </Translate>
+        }
       >
         <Translate id="homePage.navContainer.maintain.title">Maintain</Translate>
       </NavItem>
@@ -81,9 +101,9 @@ function HomeNav() {
 
 function HomeFooter() {
   const FooterContainer = ({ children }) => (
-    <section className="homeFooterContainer text-white text-left">
+    <section className="homeFooterContainer text-white text-left" style={{ marginTop: '1rem', paddingTop: '2rem', paddingBottom: '1rem' }}>
       <Container className="container-custom">
-        <Row className="">{children}</Row>
+        <Row>{children}</Row>
       </Container>
     </section>
   );
