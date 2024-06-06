@@ -33,6 +33,9 @@ community.
 
 ## Create a Referenda Proposal
 
+Before submitting a referendum, identify the right
+[track and origin](learn-polkadot-opengov.md#origins-and-tracks).
+
 ### Submitting a Preimage
 
 The act of creating a proposal is split from submitting the preimage for the proposal since the
@@ -50,7 +53,8 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 3. From the _propose_ drop-down field, select `treasury`.
 4. From the unlabeled drop-down field to the right of the _propose_ drop-down field, select
    `spendLocal(amount, beneficiary)`.
-5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount in plancks.
+5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount in
+   [plancks](learn-DOT.md#the-planck-unit).
 6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by
    default. Select the beneficiary from the `Id: AccountId` drop-down field.
 
