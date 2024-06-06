@@ -137,7 +137,7 @@ Visualized result:
 
 :::info DuneSQL Referece
 
-For more information on DuneSQL, please refer to the [DuneSQL Cheatsheet](./dunesql-cheatsheet.md)
+For more information on DuneSQL, please refer to the [DuneSQL Cheatsheet](../dunesql-cheatsheet.md)
 and
 [DuneSQL Official Documentation](https://docs.dune.com/query-engine/Functions-and-operators/index).
 
