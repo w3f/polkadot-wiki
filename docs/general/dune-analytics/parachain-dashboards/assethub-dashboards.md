@@ -1,33 +1,33 @@
 ---
 id: assethub-dashboards
-title: AssetHub Dashboards
-sidebar_label: AssetHub
+title: Asset Hub Dashboards
+sidebar_label: Asset Hub
 description:
-  AssetHub is a specialized parachain on Polkadot designed to facilitate the handling and management
+  Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and management
   of digital assets across various applications. It supports asset tokenization, trading, and
   bridging services within the Polkadot ecosystem.
 keywords: [polkadot, dashboard, dune, assethub, digital assets]
 slug: ../assethub-dashboards
 ---
 
-# AssetHub Dashboards
+# Asset Hub Dashboards
 
 ## Overview
 
-AssetHub is a specialized parachain on Polkadot designed to facilitate the handling and management
+Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and management
 of digital assets across various applications. It supports asset tokenization, trading, and bridging
 services within the Polkadot ecosystem.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the AssetHub parachain:
+Here you'll find a variety of dashboards that help visualize data from the Asset Hub parachain:
 
-- [AssetHub](https://dune.com/substrate/assethub): Explore comprehensive analytics on digital asset
+- [Asset Hub](https://dune.com/substrate/assethub): Explore comprehensive analytics on digital asset
   management and operations within the AssetHub parachain.
 
 ## Key Tables
 
-Data from the AssetHub parachain is organized into several key tables: `assethub.balances`,
+Data from the Asset Hub parachain is organized into several key tables: `assethub.balances`,
 `assethub.blocks`, `assethub.calls`, `assethub.events`, `assethub.extrinsics`, `assethub.transfers`
 
 ## Useful Queries
@@ -35,7 +35,7 @@ Data from the AssetHub parachain is organized into several key tables: `assethub
 Here are **materialized** or **parameterized** queries for Unique that may be useful to build your
 own charts:
 
-- [AssetHub Sum of Stablecoin on Each Chain by Time](https://dune.com/queries/3526956)
+- [Asset Hub Sum of Stablecoin on Each Chain by Time](https://dune.com/queries/3526956)
   (`query_3526956(asset_id='[ASSET_ID]')`)
 
 ## Getting Started with Queries
