@@ -446,11 +446,9 @@ backed blocks that are not included. To ensure nothing invalid ends up in the fi
 there are approval checks (described above) and disputes. The latter ensures that each attempt to
 include something invalid is caught and the offending validators are punished.
 
-Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
-on the wrong side (once the dispute is resolved) will be [slashed](./learn-offenses.md). False
-positives can also happen; those actors responsible for it will also be slashed. To detect false
-positives, PoV information must be available after the block has been included to the Relay Chain
-via the [availability scheme](#availability-and-unavailability-phase).
+False positives can happen; those actors responsible for it will be [slashed](./learn-offenses.md).
+To detect false positives, PoV information must be available after the block has been included to
+the Relay Chain via the [availability scheme](#availability-and-unavailability-phase).
 
 Disputes are _independent from a particular fork_, while backing and approval operate on particular
 forks. The approval voting stops if an alternative fork (which might not contain the

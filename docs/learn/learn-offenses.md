@@ -7,11 +7,17 @@ keyword: [nominate, nominator, offenses, slashes, validator, equivocation, disab
 slug: ../learn-offenses
 ---
 
-:::info Content subject to change
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-The material provided here is based on the changes introduced by Step 2 of the _Disabling_ feature.
+<MessageBox message="The material provided here is based on the changes introduced by Step 2 of the Disabling feature.
 See [this page](https://github.com/orgs/paritytech/projects/119/views/15?pane=issue&itemId=61684472)
-for more information.
+for more information." />
+
+:::info Disclaimer
+
+Various parachains or applications living on top of Polkadot might add various economic schemes and
+include slashes but they are unrelated to the slashes described here as they only refer to the
+staked tokens via [Nominated Proof-of-Stake](./learn-staking.md#nominated-proof-of-stake-npos).
 
 :::
 
@@ -19,14 +25,14 @@ for more information.
 As such, it has a mechanism to disincentivize offenses and incentivize good behavior. Below, you can
 find a summary of punishments for specific offenses:
 
-|               Offense                | [Slash (%)](#slashing) | [On-chain Disabling](#disabling) | Off-chain Disabling | [Rep](#rep) |
-| :----------------------------------: | :--------------------: | :------------------------------: | :-----------------: | :---------: |
-|           Backing Invalid            |          100%          |               Yes                | Yes (High Priority) |     No      |
-|           ForInvalid Vote            |           -            |                No                | Yes (Mid Priority)  |     No      |
-|         AgainstValid Vote          |           -            |                No                | Yes (Low Priority)  |     No      |
-| GRANDPA / BABE / BEEFY Equivocations |       0.01-100%        |               Yes                |         No          |     No      |
-|    Seconded + Valid Equivocation     |           -            |                No                |         No          |     No      |
-|     Double Seconded Equivocation     |           -            |                No                |         No          |     Yes     |
+|               Offense                | [Slash (%)](#slashing) | [On-chain Disabling](#disabling) | Off-chain Disabling | [Reputational Changes](#reputation-changes) |
+| :----------------------------------: | :--------------------: | :------------------------------: | :-----------------: | :-----------------------------------------: |
+|           Backing Invalid            |          100%          |               Yes                | Yes (High Priority) |                     No                      |
+|           ForInvalid Vote            |           -            |                No                | Yes (Mid Priority)  |                     No                      |
+|          AgainstValid Vote           |           -            |                No                | Yes (Low Priority)  |                     No                      |
+| GRANDPA / BABE / BEEFY Equivocations |       0.01-100%        |               Yes                |         No          |                     No                      |
+|    Seconded + Valid Equivocation     |           -            |                No                |         No          |                     No                      |
+|     Double Seconded Equivocation     |           -            |                No                |         No          |                     Yes                     |
 
 ## Offenses
 
@@ -37,30 +43,50 @@ To better understand the terminology used for offenses, it is recommended to get
 
 :::
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main validator offenses as
-shown below.
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main validator
+offenses as shown below.
 
-- Backing Invalid: A para-validator is backing an invalid block.
-- ForInvalid Vote: A validator (secondary checker) votes in favor of an invalid block.
-- AgainstValid Vote: A validator (secondary checker) is voting against a valid block and wasting network resources.
-- Equivocation: A validator produces two or more of the same block or vote.
+- **Backing Invalid:** A para-validator is backing an invalid block.
+- **ForInvalid Vote:** A validator (secondary checker) votes in favor of an invalid block.
+- **AgainstValid Vote:** A validator (secondary checker) is voting against a valid block and wasting
+  network resources.
+- **Equivocation:** A validator produces two or more of the same block or vote.
   - GRANDPA and BEEFY Equivocation: A validator signs two or more votes in the same round on
     different chains.
   - BABE Equivocation: A validator produces two or more blocks on the Relay Chain in the same time
     slot.
-- Seconded + Valid Equivocation: **TODO**
-- Double Seconded Equivocation: **TODO**
+- **Double Seconded Equivocation:** Within a backing group of 5 para-validators we can get at most 5
+  backed parablocks. Each parablock requires exactly 1 seconded and at least 2 more valid votes from
+  the 5 potential backers. This makes an upper bound on the number of parablocks the system has to
+  deal with while still allowing some choice for relay chain block authors. Backers must decide
+  which parablock to second and they cannot second another. If another seconding vote would be found
+  we will punish them (somewhat lightly as of now but there's little to gain from this). All of this
+  is made slightly more complicated with [asynchronous backing](./learn-async-backing.md) as it is
+  not longer 1 candidate per relay chain block as backers can back blocks "into the future"
+  optimistically. See
+  [this page](https://paritytech.github.io/polkadot-sdk/book/node/backing/statement-distribution.html#seconding-limit).
+- **Seconded + Valid Equivocation:** This happens when a malicious node first seconds something
+  (takes absolute responsibility for it) but then only pretends he was someone that just said it's
+  correct after someone else took responsibility. That is a straight up lie (equivocation). A node
+  could use that tactic to potentially escape from responsibility but once the system notices the
+  two conflicting votes the offence is reported.
 
 ### Equivocation (Conflicting Statements)
 
 Equivocation occurs when a validator produces statements that conflict with each other.
 
-For instance as a block author appointed by BABE only a single block should be authored for the given slot and if two or more are authored they are in conflict with each other. This would be a BABE Equivocation Offence.
+For instance as a block author appointed by BABE only a single block should be authored for the
+given slot and if two or more are authored they are in conflict with each other. This would be a
+BABE Equivocation Offence.
 
-In BEEFY & GRANDPA validators are expected to cast a single vote for the block they believe is the best, but if they are found with 2 or more votes for different blocks in means they tried to confuse the network with conflicting statements and when found out this will be a BEEFY/GRANDPA Equivocation Offence.
+In BEEFY & GRANDPA validators are expected to cast a single vote for the block they believe is the
+best, but if they are found with 2 or more votes for different blocks in means they tried to confuse
+the network with conflicting statements and when found out this will be a BEEFY/GRANDPA Equivocation
+Offence.
 
-Equivocations usually occur when duplicate signing keys reside on the validator host.
-If keys are never duplicated, the probability of an honest equivocation slash decreases to near 0.
+Equivocations usually occur when duplicate signing keys reside on the validator host. If keys are
+never duplicated, the probability of an honest equivocation slash decreases to near 0.
+
 ## Punishments
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, offenses to the network can be
@@ -69,12 +95,9 @@ reputation changes.
 
 ### Slashing
 
-**Slashing** removes part of a validator’s total stake (own + nominated) and can range from as
-little as 0.01% or rise to 100%. In all instances, slashes are accompanied by a loss of nominators.
-
-Slashing will happen if a validator misbehaves in the network. They and their nominators will get
-slashed by losing a percentage of their staked
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+**Slashing** will happen if a validator misbehaves in the network. They and their nominators will
+get slashed by losing a percentage of their staked
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, from as little as 0.01% up to 100%.
 
 Any slashed {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be added to the
 [Treasury](./archive/learn-treasury.md). The rationale for this (rather than burning or distributing
@@ -100,18 +123,15 @@ Once a validator gets slashed, it goes into the state as an "unapplied slash". Y
 via
 [Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator, followed by all the affected nominators and the amounts. While
-unapplied, a governance proposal can be made to reverse it during this period
-({{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days). After the grace period, the slashes are applied.
+unapplied, a governance proposal can be made to reverse it during a 27-day grace period after which
+the slashes are applied.
 
 A slash may occur under the circumstances below:
 
-1.  Equivocation – A slash of 0.01% is applied with as little as a single evocation. The slashed
+1.  Equivocations – A slash of 0.01% is applied with as little as a single evocation. The slashed
     amount increases to 100% incrementally as more validators also equivocate.
-2.  Malicious action – This may result from a validator trying to represent the contents of a block
-    falsely . Slashing penalties of 100% may apply.
-3.  Application related (bug or otherwise) – The amount is unknown and may manifest as scenarios 1
-    and 2 above.
+2.  Disputes – This may result from a validator trying to represent the contents of a block falsely
+    . Slashing penalties of 100% may apply.
 
 #### Slash for Equivocation
 
@@ -208,9 +228,11 @@ rather than the sum. This ensures protection from overslashing.
 
 ### Disabling
 
-**Disabling** stops validators from performing specific actions after they committed an offence. Disabling is further divided into:
+**Disabling** stops validators from performing specific actions after they committed an offence.
+Disabling is further divided into:
 
-- On-chain disabling lasts for a whole era and stops validators from block authoring, backing and initiating a dispute.
+- On-chain disabling lasts for a whole era and stops validators from block authoring, backing and
+  initiating a dispute.
 - Off-chain disabling lasts for a session, is caused by losing a dispute, and stops validators from
   initiating a dispute.
 
@@ -219,4 +241,10 @@ prioritizes disabling first backers then approval checkers.
 
 ### Reputation Changes
 
-**TODO**
+Some minor offences often connected to spamming are only punished by Networking Reputation Changes.
+When validators connect to each other they use a reputation metric for each of their peers. If our
+peers provide valuable data and behave properly we add reputation and if they provide us with faulty
+or spam data we reduce their reputation. If a validator looses enough reputation the peer will
+temporarily close the channel. This helps in fighting against DoS (Denial of Service) attacks. The
+consequences of closing the channel might be varied but in general performing validator tasks will
+be harder so it might result in lower validators rewards.
