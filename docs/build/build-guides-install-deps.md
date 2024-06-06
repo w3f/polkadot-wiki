@@ -418,3 +418,13 @@ active toolchain
 nightly-x86_64-unknown-linux-gnu (overridden by +toolchain on the command line)
 rustc 1.63.0-nightly (e7144
 ```
+
+## Install `polkadot-parachain` and `chain-spec-builder`
+
+```sh
+cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.10.0 --force polkadot-parachain-bin
+```
+
+```sh
+cargo install staging-chain-spec-builder
+```

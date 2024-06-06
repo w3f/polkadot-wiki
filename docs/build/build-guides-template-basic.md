@@ -183,9 +183,13 @@ Once this is in place, you are ready to compile your parachain node.
 Be sure first to build the node using the following (assuming you're within
 `polkadot-sdk/templates/parachain`):
 
+<!-- TODO: ensure a runtime blob is available for interaction, and specify this -->
+
 ```shell
 cargo build -p parachain-template-node --release
 ```
+
+<!-- TODO: chain-spec-builder -->
 
 ```shell
 ../../target/release/parachain-template-node export-genesis-state genesis
@@ -203,12 +207,12 @@ Within `polkadot-sdk/templates/parachain`, you should now have two files:
 ## Running Your Collator
 
 It would help if you now started syncing your collator. Keep in mind that you will need to sync
-Rococo first - this could take some time (12 hours to a day - depending on your download speed), so
-best to get started ASAP. In order to avoid storing the full state of the relay chain, be sure to
-run with the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
+Rococo first - this could take some time depending on your download speed, so it is best to start
+this process ASAP. In order to avoid storing the full state of the relay chain, be sure to run with
+the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
 
 ```shell
-./../target/release/parachain-template-node --collator \
+polkadot-parachain --collator \
 --alice \
 --force-authoring \
 --base-path  <your-base-path-here> \
