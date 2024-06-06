@@ -93,7 +93,16 @@ balance to pay for the submission deposit and the transaction fees.
 
 :::
 
-![Treasury Preimage](../assets/treasury/treasury-preimage.png)
+Here is the preimage requesting for 100 DOT.
+
+![Treasury Preimage](../assets/treasury/OpenGov-Treasury-Preimage-SpendLocal.png)
+
+:::info Balance entered is in Plancks
+
+Polkadot JS UI is for developers and the UI takes input of the balance in plancks. DOT has 10
+decimals. So, 1 DOT is 10000000000 plancks.
+
+:::
 
 After successful submission of the preimage, it is displayed on Polkadot-JS UI > Governance >
 Preimages page. Every preimage is associated with a unique preimage hash (highlighted in a box in
@@ -177,7 +186,8 @@ the "date", or block height, at which each spend will be executed.
 :::info Treasury Spends have to be claimed manually. Spends can expire!
 
 Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
-spend within 30 days. Check the claiming process for treasury spends [here](#manually-claiming-payouts)
+spend within 30 days. Check the claiming process for treasury spends
+[here](#manually-claiming-payouts)
 
 :::
 
@@ -293,9 +303,9 @@ From the list of spends, find the `spendID` of your respetive payout and issue t
 
 :::tip payout example
 
-To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama,
-[this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing
-the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
+To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on
+Kusama, [this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After
+issuing the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
 reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
 [Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset
 Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
@@ -312,11 +322,12 @@ extrinsic can be utilized via a governance proposal.
 
 :::tip Example proposal - Voiding a Treasury Spend
 
-For reference, check the referenda on Kusama that [tests VoidSpend functionality for Treasury Payouts](https://kusama.subsquare.io/referenda/391).
-Through this referenda, a treasury spend was [successfully voided](https://kusama.subscan.io/event?page=1&time_dimension=date&module=treasury&event_id=assetspendvoided).
+For reference, check the referenda on Kusama that
+[tests VoidSpend functionality for Treasury Payouts](https://kusama.subsquare.io/referenda/391).
+Through this referenda, a treasury spend was
+[successfully voided](https://kusama.subscan.io/event?page=1&time_dimension=date&module=treasury&event_id=assetspendvoided).
 
 :::
-
 
 ## Submit Treasury Proposal via Polkassembly
 
