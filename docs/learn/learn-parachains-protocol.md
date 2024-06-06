@@ -319,10 +319,9 @@ Validators perform two main actions in the Approval Process:
   receives enough random checkers. This stage tracks approval votes to identify when
   [no-show](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows) approval
   checks take suspiciously long. It also tracks relay chain
-  [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
-  determine when adversaries possibly gained foreknowledge about assignments and add more checks in
-  those cases. Assignees determine their own assignments to check specific candidates using two or
-  three
+  [equivocations](../learn/learn-offenses.md#slash-for-equivocation) to determine when adversaries
+  possibly gained foreknowledge about assignments and add more checks in those cases. Assignees
+  determine their own assignments to check specific candidates using two or three
   [assignment criteria](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
   which are based on two possible
   [stories](https://paritytech.github.io/polkadot/book/protocol-approval.html#stories) about the
