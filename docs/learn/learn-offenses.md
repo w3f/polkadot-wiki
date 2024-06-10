@@ -16,7 +16,7 @@ for more information." />
 :::info Disclaimer
 
 Various parachains or applications living on top of Polkadot might add various economic schemes and
-include slashes but they are unrelated to the slashes described here as they only refer to the
+include slashes, but they are unrelated to the slashes described here as they only refer to the
 staked tokens via [Nominated Proof-of-Stake](./learn-staking.md#nominated-proof-of-stake-npos).
 
 :::
@@ -48,41 +48,42 @@ offenses as shown below.
 
 - **Backing Invalid:** A para-validator is backing an invalid block.
 - **ForInvalid Vote:** A validator (secondary checker) votes in favor of an invalid block.
-- **AgainstValid Vote:** A validator (secondary checker) is voting against a valid block and wasting
-  network resources.
+- **AgainstValid Vote:** A validator (secondary checker) is voting against a valid block (and
+  wasting network resources).
 - **Equivocation:** A validator produces two or more of the same block or vote.
   - GRANDPA and BEEFY Equivocation: A validator signs two or more votes in the same round on
     different chains.
   - BABE Equivocation: A validator produces two or more blocks on the Relay Chain in the same time
     slot.
-- **Double Seconded Equivocation:** Within a backing group of 5 para-validators we can get at most 5
-  backed parablocks. Each parablock requires exactly 1 seconded and at least 2 more valid votes from
-  the 5 potential backers. This makes an upper bound on the number of parablocks the system has to
-  deal with while still allowing some choice for relay chain block authors. Backers must decide
-  which parablock to second and they cannot second another. If another seconding vote would be found
-  we will punish them (somewhat lightly as of now but there's little to gain from this). All of this
-  is made slightly more complicated with [asynchronous backing](./learn-async-backing.md) as it is
-  no longer 1 candidate per relay chain block as backers can back blocks "into the future"
-  optimistically. See
-  [this page](https://paritytech.github.io/polkadot-sdk/book/node/backing/statement-distribution.html#seconding-limit).
+- **Double Seconded Equivocation:** Within a backing group of 5 para-validators, at most 5 backed
+  parablocks are possible. Each parablock requires exactly one seconded and at least two more valid
+  votes from the five potential backers. This makes an upper bound on the number of parablocks the
+  system has to deal with while still allowing some choice for relay chain block authors. Backers
+  must decide which parablock to second, and they cannot second another. If another seconding vote
+  is found, they will be punished (somewhat lightly as of now, but there is little to gain from
+  this). All of this is made slightly more complicated with
+  [asynchronous backing](./learn-async-backing.md) as it is no longer one candidate per relay chain
+  block as backers can back blocks "into the future" optimistically. See
+  [this page](https://paritytech.github.io/polkadot-sdk/book/node/backing/statement-distribution.html#seconding-limit)
+  for more information.
 - **Seconded + Valid Equivocation:** This happens when a malicious node first seconds something
-  (takes absolute responsibility for it) but then only pretends he was someone that just said it's
-  correct after someone else took responsibility. That is a straight up lie (equivocation). A node
-  could use that tactic to potentially escape from responsibility but once the system notices the
-  two conflicting votes the offence is reported.
+  (takes absolute responsibility for it), and then only pretends to be someone who just said it is
+  correct after someone else takes responsibility. That is a straight-up lie (equivocation). A node
+  could use that tactic to escape responsibility, but once the system notices the two conflicting
+  votes, the offense is reported.
 
 ### Equivocation (Conflicting Statements)
 
 Equivocation occurs when a validator produces statements that conflict with each other.
 
-For instance as a block author appointed by BABE only a single block should be authored for the
-given slot and if two or more are authored they are in conflict with each other. This would be a
+For instance, as a block author appointed by BABE, only a single block should be authored for the
+given slot, and if two or more are authored, they are in conflict with each other. This would be a
 BABE Equivocation Offence.
 
 In BEEFY & GRANDPA validators are expected to cast a single vote for the block they believe is the
-best, but if they are found with 2 or more votes for different blocks in means they tried to confuse
-the network with conflicting statements and when found out this will be a BEEFY/GRANDPA Equivocation
-Offence.
+best, but if they are found with two or more votes for different blocks, it means they tried to
+confuse the network with conflicting statements and when found out this will be a BEEFY/GRANDPA
+Equivocation Offense.
 
 Equivocations usually occur when duplicate signing keys reside on the validator host. If keys are
 never duplicated, the probability of an honest equivocation slash decreases to near 0.
@@ -123,7 +124,7 @@ Once a validator gets slashed, it goes into the state as an "unapplied slash". Y
 via
 [Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator, followed by all the affected nominators and the amounts. While
-unapplied, a governance proposal can be made to reverse it during a 27-day grace period after which
+unapplied, a governance proposal can be made to reverse it during a 27-day grace period, after which
 the slashes are applied.
 
 A slash may occur under the circumstances below:
@@ -165,7 +166,7 @@ to know more details about slashing, please look at our
 
 #### Slash Calculation for Equivocation
 
-GRANDPA, BABE and BEEFY equivocation use the same formula for calculating the slashing penalty:
+GRANDPA, BABE, and BEEFY equivocation use the same formula for calculating the slashing penalty:
 
     Let x = offenders, n = total number of validators in the active set
 
@@ -179,13 +180,13 @@ validator (i.e., the stake held by the validator and its nominators).
 
 Now, assume that a group is running several validators, and they all have an issue in the same slot.
 The penalty would be min((3 \* 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
-equivocate, this is a much more serious offense and possibly indicates a coordinated attack on the
-network, and so the slash will be much greater - min((3 \* 20 / 100)^2, 1) = 0.36, or a 36% slash on
-all of these validators and their nominators. All slashed validators will also be chilled.
+equivocate, this is a much more serious offense, possibly indicating a coordinated attack on the
+network. So, the slash will be much greater - min((3 \* 20 / 100)^2, 1) = 0.36, or a 36% slash on
+all these validators and their nominators. All slashed validators will also be chilled.
 
 The example above shows the risk of nominating or running many validators in the active set. While
 rewards grow linearly (two validators will get you approximately twice as many staking rewards as
-one), slashing grows exponentially. A single validator equivocating causes a 0.09% slash, two
+one) slashing grows exponentially. A single validator equivocating causes a 0.09% slash, and two
 validators equivocating does not cause a 0.09 \* 2 = 0.18% slash, but rather a 0.36% slash - 4x as
 much as the single validator.
 
@@ -223,28 +224,29 @@ There are three main difficulties to account for with slashing in NPoS:
   does not mean you have N\*E coins to be slashed - you've only ever had N.
 - Slashable offenses can be found after the fact and out of order.
 
-To balance this, we only slash for the maximum slash a participant can receive in some time period
-rather than the sum. This ensures protection from overslashing.
+To balance this, the system applies only the maximum slash a participant can receive in a given time
+period rather than the sum. This ensures protection from overslashing.
 
 ### Disabling
 
-**Disabling** stops validators from performing specific actions after they committed an offence.
-Disabling is further divided into:
+**Disabling** stops validators from performing specific actions after they have committed an
+offense. Disabling is further divided into:
 
-- On-chain disabling lasts for a whole era and stops validators from block authoring, backing and
+- On-chain disabling lasts for a whole era and stops validators from block authoring, backing, and
   initiating a dispute.
 - Off-chain disabling lasts for a session, is caused by losing a dispute, and stops validators from
   initiating a dispute.
 
 Off-chain disabling is always a lower priority than on-chain disabling. Off-chain disabling
-prioritizes disabling first backers then approval checkers.
+prioritizes disabling first backers and then approval checkers.
 
 ### Reputation Changes
 
-Some minor offences often connected to spamming are only punished by Networking Reputation Changes.
-When validators connect to each other they use a reputation metric for each of their peers. If our
-peers provide valuable data and behave properly we add reputation and if they provide us with faulty
-or spam data we reduce their reputation. If a validator looses enough reputation the peer will
-temporarily close the channel. This helps in fighting against DoS (Denial of Service) attacks. The
-consequences of closing the channel might be varied but in general performing validator tasks will
-be harder so it might result in lower validators rewards.
+Some minor offenses often connected to spamming are only punished by Networking Reputation Changes.
+When validators connect to each other, they use a reputation metric for each of their peers. If our
+peers provide valuable data and behave appropriately, the system adds reputation; if they provide us
+with faulty or spam data, the system reduces their reputation. A validator can lose enough
+reputation so that the peers will temporarily close their channels. This helps in fighting against
+DoS (Denial of Service) attacks. The consequences of closing channels may vary. In general,
+performing validator tasks under reduced reputation will be harder, resulting in lower validator
+rewards.
