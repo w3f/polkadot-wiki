@@ -15,15 +15,16 @@ This primarily means that validators:
 
 - Must be high availability.
 - Must have infrastructure that protects the validator's signing keys so that an attacker cannot
-  take control and commit slashable behavior.
+  take control and commit [slashable behavior](../learn/learn-offenses.md).
 
 ## High Availability
 
 High availability set-ups that involve redundant validator nodes may seem attractive at first.
 However, they can be **very dangerous** if they are not set up perfectly. The reason for this is
 that the session keys used by a validator should always be isolated to just a single node.
-Replicating session keys across multiple nodes could lead to equivocation slashes or parachain
-validity slashes which can make you lose **100% of your staked funds**.
+Replicating session keys across multiple nodes could lead to equivocation
+[slashes](../learn/learn-offenses.md) or parachain validity slashes which can make you lose **100%
+of your staked funds**.
 
 The good news is that 100% uptime of your validator is not really needed, as it has some buffer
 within eras in order to go offline for a little while and upgrade. For this reason, we advise that

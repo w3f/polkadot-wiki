@@ -36,9 +36,10 @@ Web3 Foundation Grants website for comprehensive information.
 
 ### Polkadot Treasury
 
-The Polkadot Treasury is a pot of on-chain funds collected through transaction fees, slashing,
-staking inefficiencies, etc. The funds held in the treasury can be spent on spending proposals. Both
-Polkadot and Kusama offer everyone the opportunity to apply for funding via the treasury. See:
+The Polkadot Treasury is a pot of on-chain funds collected through transaction fees,
+[slashing](../learn/learn-offenses.md), staking inefficiencies, etc. The funds held in the treasury
+can be spent on spending proposals. Both Polkadot and Kusama offer everyone the opportunity to apply
+for funding via the treasury. See:
 
 - [Treasury Wiki](../learn/learn-polkadot-opengov-treasury.md)
 - [Polkadot Treasury Guide](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w)

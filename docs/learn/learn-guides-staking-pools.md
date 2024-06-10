@@ -89,7 +89,7 @@ A pool can be pushed into the “destroying” state via one of:
   specific ID of the pool and `state` is the pool's state that must be set to "destroying". Other
   possible states are "open" and "blocked".
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
-  been slashed.
+  been [slashed](./learn-offenses.md).
 
 When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
 anyone can help all the members exit.

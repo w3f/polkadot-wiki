@@ -22,11 +22,12 @@ throughout the ecosystem is a great way to attract nominations and solidify long
 sustainability as a validator.
 
 One thing to remember is that there is a risk involved in staking for both validators and
-nominators, as both can lose up to 100% of their funds if a validator gets slashed. This means it is
-paramount for nominators only to nominate validators that they trust, as well as for validators to
-do their best to instill confidence in their ability to provide validation services. Validators
-should do their best to build a reputation through many different means, as this is one of the most
-important factors in how nominators should pick whom they stake with.
+nominators, as both can lose up to 100% of their funds if a validator gets
+[slashed](../learn/learn-offenses.md). This means it is paramount for nominators only to nominate
+validators that they trust, as well as for validators to do their best to instill confidence in
+their ability to provide validation services. Validators should do their best to build a reputation
+through many different means, as this is one of the most important factors in how nominators should
+pick whom they stake with.
 
 ## Gaining Visibility
 
@@ -74,11 +75,11 @@ most essential factors in running quality validator services.
 ### Self Stake
 
 Validators should have skin in the game in their operations in the form of a stake that is
-self-bonded to their validator stash. Slashing applies to the total stake of a Validator, therefore
-having a high self-stake shows confidence in the operations. This helps show commitment from the
-Validator as they have skin in the game and can be penalized for negative actions or poor
-maintenance. mess up. Having very little self-stake can signal to nominators that they have nothing
-to lose in the case of failures.
+self-bonded to their validator stash. [Slashing](../learn/learn-offenses.md) applies to the total
+stake of a Validator, therefore having a high self-stake shows confidence in the operations. This
+helps show commitment from the Validator as they have skin in the game and can be penalized for
+negative actions or poor maintenance. mess up. Having very little self-stake can signal to
+nominators that they have nothing to lose in the case of failures.
 
 Additionally, it can help nominators to get a sense of how validators manage their stakes. Defining
 a self-allocation strategy is also helpful in seeing how efficiently a validator's stake can be

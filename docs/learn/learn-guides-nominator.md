@@ -45,7 +45,7 @@ their identities, the amount of KSM that are staking for them, amount that is th
 stake, how much they charge in commission, the era points they've earned in the current era, and the
 last block number that they produced. If you click on the chart button it will take you to the
 "Validator Stats" page for that validator that shows you more detailed and historical information
-about the validator's stake, rewards and slashes.
+about the validator's stake, rewards and [slashes](./learn-offenses.md).
 
 The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
 to stake and nominate.
@@ -64,7 +64,7 @@ queue for a very long time if they never get enough backing.
 
 The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
-rewards, and slashes.
+rewards, and [slashes](./learn-offenses.md).
 
 Pick "Account actions" underneath "Network" > "Staking", then click the "+ Nominator" button.
 
@@ -96,10 +96,9 @@ Read the support article about
 :::
 
 You are now bonded. Being bonded means your tokens are locked and could be
-[slashed](./learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds
-can now be distributed to up to {{ polkadot: 16 :polkadot }} {{ kusama: 24 :kusama }} validators. Be
-careful about the validators you choose since you will be slashed if your validator commits an
-offence.
+[slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can now be
+distributed to up to {{ polkadot: 16 :polkadot }} {{ kusama: 24 :kusama }} validators. Be careful
+about the validators you choose since you will be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select some validators.

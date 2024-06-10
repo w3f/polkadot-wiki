@@ -289,12 +289,12 @@ of nomination pools. The cycle includes creation, upkeep and destruction.
 
 ## Nomination Pools - Slashing
 
-Suppose the staking system slashes a pool’s underlying nomination account. In that case, the slash
-is distributed evenly across the bonded pool, and the unbonding pools from slash era+1 through the
-slash apply era. Thus, any member who either a) was unbonding or b) was actively bonded in the
-aforementioned range of eras will be affected by the slash. In other words, a member who may have
-been actively bonded during the offence is slashed pro rata based on its stake relative to the total
-slash amount.
+Suppose the staking system [slashes](./learn-offenses.md) a pool’s underlying nomination account. In
+that case, the slash is distributed evenly across the bonded pool, and the unbonding pools from
+slash era+1 through the slash apply era. Thus, any member who either a) was unbonding or b) was
+actively bonded in the aforementioned range of eras will be affected by the slash. In other words, a
+member who may have been actively bonded during the offence is slashed pro rata based on its stake
+relative to the total slash amount.
 
 Unbonding pools need to be slashed to ensure all nominators who were in the bonded pool while it was
 backing a validator that committed an offense are punished. Without these measures a nominator could
@@ -311,7 +311,8 @@ Nominating is the action of choosing validators. It does not simply involve bond
 Nominating is an active task, which implies that you regularly monitor that your stake is backing an
 active validator in all the eras and check if you are receiving your staking rewards. More
 importantly, ensure that the validators you chose always act in the best interests of the network
-protocol and have less chance of getting slashed. To nominate, you need a minimum of
+protocol and have less chance of getting [slashed](./learn-offenses.md). To nominate, you need a
+minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
 and to receive rewards, you need at least a balance greater than the minimum active bond. If the
 validator misbehaves, It is worth noting that your stake is subject to slashing, irrespective of

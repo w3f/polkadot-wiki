@@ -258,8 +258,8 @@ are dishonest and can back a candidate wrongly. To address this, the **Approval 
 detecting misbehavior after the fact without allocating more para-validators, which would ultimately
 reduce the system's throughput. As a parablock can accept children blocks after being considered
 available, failure to pass the approval process will invalidate the parablock and its descendants
-(children blocks). Only the validators who backed the block in question will be slashed, not those
-who backed the descendants.
+(children blocks). Only the validators who backed the block in question will be
+[slashed](./learn-offenses.md), not those who backed the descendants.
 
 The approval pipeline can be divided into the following steps:
 
@@ -295,7 +295,7 @@ Dealing with a bad parablock includes the following stages:
 
 - Detection: the bad block must be detected by honest validators.
 - Escalation: the honest validators must start a [dispute](#disputes).
-- Consequences: all involved malicious validators are slashed.
+- Consequences: the backer for that parablock is [slashed](./learn-offenses.md).
 
 The result of the dispute must be transplantable to all other forks so that malicious validators are
 slashed in all possible histories and so that honest validators will ignore any forks containing
@@ -319,10 +319,9 @@ Validators perform two main actions in the Approval Process:
   receives enough random checkers. This stage tracks approval votes to identify when
   [no-show](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows) approval
   checks take suspiciously long. It also tracks relay chain
-  [equivocations](../maintain/maintain-guides-best-practices-to-avoid-slashes.md/#equivocation) to
-  determine when adversaries possibly gained foreknowledge about assignments and add more checks in
-  those cases. Assignees determine their own assignments to check specific candidates using two or
-  three
+  [equivocations](../learn/learn-offenses.md#slash-for-equivocation) to determine when adversaries
+  possibly gained foreknowledge about assignments and add more checks in those cases. Assignees
+  determine their own assignments to check specific candidates using two or three
   [assignment criteria](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
   which are based on two possible
   [stories](https://paritytech.github.io/polkadot/book/protocol-approval.html#stories) about the
@@ -447,11 +446,9 @@ backed blocks that are not included. To ensure nothing invalid ends up in the fi
 there are approval checks (described above) and disputes. The latter ensures that each attempt to
 include something invalid is caught and the offending validators are punished.
 
-Signed negative statements will lead to a dispute, and if there are false negatives, whoever will be
-on the wrong side (once the dispute is resolved) will be slashed. False positives can also happen;
-those actors responsible for it will also be slashed. To detect false positives, PoV information
-must be available after the block has been included to the Relay Chain via the
-[availability scheme](#availability-and-unavailability-phase).
+False positives can happen; those actors responsible for it will be [slashed](./learn-offenses.md).
+To detect false positives, PoV information must be available after the block has been included to
+the Relay Chain via the [availability scheme](#availability-and-unavailability-phase).
 
 Disputes are _independent from a particular fork_, while backing and approval operate on particular
 forks. The approval voting stops if an alternative fork (which might not contain the

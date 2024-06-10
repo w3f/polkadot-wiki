@@ -236,11 +236,11 @@ functionalities like staking and democracy. In exchange to the lost staking rewa
 DOTs, the parachain team may offer rewards to the contributor.
 
 The utility of crowdloaned DOT is to provide a lease for a parachain. The utility of staked DOT is
-to secure the network through a reward/slash mechanism. Allowing crowdloaned DOT to be staked
-results in complex consequences like applying a slash on crowdloaned DOT that was meant to be bonded
-for the entire lease period of a parachain. In a way, the inaccessibility of crowdloaned DOTs and
-the lack of staking rewards for the entire lease duration encourages the contributors to back
-projects that are valuable to the ecosystem.
+to secure the network through a reward/[slash](../learn/learn-offenses.md) mechanism. Allowing
+crowdloaned DOT to be staked results in complex consequences like applying a slash on crowdloaned
+DOT that was meant to be bonded for the entire lease period of a parachain. In a way, the
+inaccessibility of crowdloaned DOTs and the lack of staking rewards for the entire lease duration
+encourages the contributors to back projects that are valuable to the ecosystem.
 
 ## Governance
 

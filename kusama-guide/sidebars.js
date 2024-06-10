@@ -292,6 +292,7 @@ module.exports = {
                 "learn/learn-validator",
               ],
             },
+            "learn/learn-offenses",
             {
               type: "category",
               label: "Components",
