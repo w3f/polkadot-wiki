@@ -62,7 +62,7 @@ offenses as shown below.
   which parablock to second and they cannot second another. If another seconding vote would be found
   we will punish them (somewhat lightly as of now but there's little to gain from this). All of this
   is made slightly more complicated with [asynchronous backing](./learn-async-backing.md) as it is
-  not longer 1 candidate per relay chain block as backers can back blocks "into the future"
+  no longer 1 candidate per relay chain block as backers can back blocks "into the future"
   optimistically. See
   [this page](https://paritytech.github.io/polkadot-sdk/book/node/backing/statement-distribution.html#seconding-limit).
 - **Seconded + Valid Equivocation:** This happens when a malicious node first seconds something
