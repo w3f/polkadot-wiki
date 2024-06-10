@@ -463,9 +463,11 @@ A unique numeric (non-negative integer) identifier for a parachain.
 
 ## Parathread
 
-Historically, the term "parathread" has been used in two contexts: a substrate-based chain not yet
-parachain (i.e. not connected to a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-core), or as an on-demand parachain (i.e. a parachain using on-demand coretime).
+Historically, the term "parathread" has been used in two contexts: a chain registered with a
+`ParaID` on the [relay chain](#relay-chain) that has not yet become a parachain (i.e. not connected
+to a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} core), or as an on-demand
+parachain (i.e. a parachain using on-demand coretime) which does not produce blocks at regular
+intervals.
 
 ## Parachain Registry
 
@@ -477,6 +479,10 @@ chain.
 A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate, Kusama and
 Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret
 Store.
+
+## People Chain
+
+A [system parachain](#system-parachains) for identity management.
 
 ## Polkadot
 
@@ -686,7 +692,7 @@ parachains. For developers, see the
 ## System Parachains
 
 Parachains that are part of the Polkadot core protocol. These are allocated a parachain execution
-core by governance rather than auction.
+core by governance rather than by auction.
 
 ## Tabling
 

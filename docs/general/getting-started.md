@@ -163,7 +163,7 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
   the minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below the minimum, your account will be reaped. Learn more about
   [Accounts](../learn/learn-accounts.md) and the
-  [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+  [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
 
 - {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:__ :polkadot }}
   the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
@@ -240,13 +240,15 @@ This is recommended for users with backgrounds of all levels, and the course is 
   rationale and technical details to support why this direction is beneficial. This original white
   paper also explains how Polkadot's core components work together to build this decentralized
   network.
-- [Polkadot's overview paper](https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf)
-  is an updated version of the white paper that describes the protocol in more technical terms. We
-  would recommend reading this overview paper if you are interested in digging more into the
-  protocol itself.
 - [Polkadot's light paper](https://polkadot.network/Polkadot-lightpaper.pdf) is a visual, easy to
   read, and less technical introduction into its blockchain technology. This paper dives into the
   components of Polkadot but is understandable for both a non-technical and technical reader.
+- [Polkadot's overview paper](https://arxiv.org/abs/2005.13456) is an updated version of the white
+  paper that describes the protocol in more technical terms. We would recommend reading this
+  overview paper if you are interested in digging more into the protocol itself.
+- [The Web3 Foundation's research site](https://research.web3.foundation/) contains details and
+  up-to-date technical research on Polkadot in general, including scalability, cryptographic,
+  economic, and security aspects of the protocol.
 - [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot](https://linktr.ee/polkadotbook) -
   a book funded by the Polkadot Treasury
 - [Polkadot's specification](https://github.com/w3f/polkadot-spec) is a GitHub repository that holds

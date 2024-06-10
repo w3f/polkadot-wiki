@@ -9,18 +9,29 @@ slug: ../learn-identity
 
 import RPC from "./../../components/RPC-Connection";
 
+:::warning The identity pallet is no longer on the Kusama Relay Chain.
+
+If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
+be called via the system parachain,
+[which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
+
+The identity pallet, along with all of its data, has been migrated to and resumes functionality on
+the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
+
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows
 participants to add personal information to their on-chain account and subsequently ask for
 verification of this information by [registrars](#registrars).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusama-people" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
 and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
-per each field beyond the legal name. These funds are _locked_, not spent - they are returned when
-the identity is cleared.
+{{ polkadot: <RPC network="polkadot" path="consts.identity.byteDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama-people" path="consts.identity.byteDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
+(per byte) per each field beyond the legal name. These funds are _locked_, not spent - they are
+returned when the identity is cleared.
 
 ## Judgements
 
@@ -69,6 +80,12 @@ new identity judgment, please use the other registrars.
 
 :::
 
+{{ kusama: :::info Registrar 2 decommissioned
+
+Registrar 2 is no longer offering registrar services on Kusama.
+
+::: :kusama }}
+
 ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
 {{ polkadot: ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ :polkadot }}
 {{ kusama: ~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ :kusama }} <br /> **Fee**:
@@ -79,10 +96,10 @@ Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
 {{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
 {{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
 
-Registrar 2: <br /> **Account**:
+{{ polkadot: Registrar 2 :polkadot}} {{ kusama: ~~Registrar 2~~ :kusama }}: <br /> **Account**:
 {{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
-{{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7 :kusama }} <br /> **Fee**:
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
+{{ kusama: ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ :kusama }} <br /> **Fee**:
+{{ polkadot: 0 DOT :polkadot }}{{ kusama: ~~1 KSM~~ :kusama }} <br />
 
 Registrar 3: <br /> **Account**:
 {{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC :polkadot }}
@@ -91,7 +108,7 @@ Registrar 3: <br /> **Account**:
 
 {{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**: 0.04 KSM <br /> :kusama }}
 
-{{ kusama: Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**: 0 KSM <br /> :kusama }}
+{{ kusama: Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**: 0.04 KSM <br /> :kusama }}
 
 {{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their [website](https://polkadot.polkassembly.io/). :polkadot }}
 {{ kusama: Polkassembly (Registrar 5) provides setting on-chain ID as a service on their [website](https://kusama.polkassembly.io/). :kusama }}
@@ -108,7 +125,7 @@ their validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a deposit of
 {{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusama-people" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
 is required for every sub-account.
 
 ---

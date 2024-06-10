@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, waitFor, fail } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
@@ -11,7 +11,7 @@ test("Retrieves and applies a 'const' RPC value", async () => {
 
 test("Retrieves and applies a 'query' RPC value", async () => {
 	render(<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={0} filter="humanReadable" />);
-	await waitFor(() => expect(screen.getByText("100 DOT")).toBeInTheDocument(), { timeout: 5000 });
+	await waitFor(() => expect(screen.getByText("250 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("RPC falls back to default", async () => {
@@ -37,19 +37,15 @@ const paths = [
 	{ path: 'query.staking.validatorCount', network: 'kusama' },
 	{ path: 'consts.identity.basicDeposit', network: 'kusama' },
 	{ path: 'query.staking.currentEra', network: 'kusama' },
-	{ path: 'consts.phragmenElection.votingBondBase', network: 'kusama' },
 	{ path: 'query.staking.minNominatorBond', network: 'kusama' },
-	{ path: 'consts.staking.maxNominations', network: 'kusama' },
-	{ path: 'consts.democracy.votingPeriod', network: 'kusama' },
+	{ path: 'query.staking.maxNominatorsCount', network: 'kusama' },
 	{ path: 'consts.crowdloan.minContribution', network: 'kusama' },
 	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
 	{ path: 'consts.auctions.endingPeriod', network: 'kusama' },
-	{ path: 'consts.democracy.enactmentPeriod', network: 'kusama' },
 	{ path: 'consts.electionProviderMultiPhase.signedMaxSubmissions', network: 'kusama' },
 	{ path: 'consts.multisig.depositBase', network: 'kusama' },
 	{ path: 'consts.proxy.maxProxies', network: 'kusama' },
 	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
-	{ path: 'consts.democracy.voteLockingPeriod', network: 'kusama' },
 	{ path: 'consts.treasury.spendPeriod', network: 'kusama' },
 	{ path: 'query.staking.chillThreshold', network: 'kusama' },
 	{ path: 'query.nominationPools.counterForPoolMembers', network: 'kusama' },
@@ -57,7 +53,7 @@ const paths = [
 	{ path: 'query.nominationPools.maxPoolMembersPerPool', network: 'kusama' },
 	{ path: 'query.nominationPools.minJoinBond', network: 'kusama' },
 	{ path: 'query.staking.minimumActiveStake', network: 'polkadot' },
-	{ path: 'consts.assets.assetDeposit', network: 'statemint' },
+	{ path: 'consts.assets.assetDeposit', network: 'assethub-polkadot' },
 ]
 
 jest.setTimeout(10000);
@@ -75,14 +71,14 @@ for (let i = 0; i < paths.length; i++) {
 				case "kusama":
 					wsUrl = "wss://kusama-rpc.polkadot.io/";
 					break;
-				case "statemine":
-					wsUrl = "wss://statemine-rpc.polkadot.io/";
+				case "assethub-kusama":
+					wsUrl = "wss://kusama-asset-hub-rpc.polkadot.io/";
 					break;
-				case "statemint":
-					wsUrl = "wss://statemint-rpc.polkadot.io/";
+				case "assethub-polkadot":
+					wsUrl = "wss://polkadot-asset-hub-rpc.polkadot.io";
 					break;
 				default:
-					fail("Unknown network provided, no connection made.");
+					throw new Error("Unknown network provided, no connection made.");
 			}
 
 			const wsProvider = new WsProvider(wsUrl);
@@ -104,7 +100,7 @@ for (let i = 0; i < paths.length; i++) {
 					chainValue = chainValue.toString();
 					break;
 				default:
-					fail(`Unknown path prefix (${pathParameters[0]}) in ${paths[i].path}`);
+					throw new Error(`Unknown path prefix (${pathParameters[0]}) in ${paths[i].path}`);
 			}
 		} catch (error) {
 			console.log(error);
@@ -113,7 +109,7 @@ for (let i = 0; i < paths.length; i++) {
 		console.log(`${paths[i].path} on-chain value: ${chainValue}`);
 
 		if (chainValue === undefined) {
-			fail(`Undefined value returned from ${paths[i].path}`);
+			throw new Error(`Undefined value returned from ${paths[i].path}`);
 		}
 	});
 }

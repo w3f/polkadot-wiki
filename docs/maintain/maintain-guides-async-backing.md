@@ -408,7 +408,7 @@ impl pallet_aura::Config for Runtime {
 }
 ```
 
-1. Increase the maximum `UNINCLUDED_SEGMENT_CAPACITY` in `runtime/src/lib.rs`.
+2. Increase the maximum `UNINCLUDED_SEGMENT_CAPACITY` in `runtime/src/lib.rs`.
 
 ```rust
 /// Maximum number of blocks simultaneously accepted by the Runtime, not yet included into the

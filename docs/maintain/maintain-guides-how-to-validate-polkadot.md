@@ -9,8 +9,6 @@ slug: ../maintain-guides-how-to-validate-polkadot
 
 import RPC from "./../../components/RPC-Connection";
 
-import MinimumStake from "./../../components/Minimum-Stake";
-
 :::tip
 
 If you are a beginner, it is recommended that you start your validator journey on Kusama network.
@@ -59,21 +57,9 @@ need enough DOT to set up stash (and optionally a staking
 transaction fees. The rest can come from nominators. To understand how validators are elected, check
 the [NPoS Election algorithms](../learn/learn-phragmen.md) page.
 
-:::info On-Chain Data for Reference
-
-On Polkadot, the minimum stake backing a validator in the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
-
-On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
-:::
+For further reference, you may look at the
+{{ polkadot: [statistics for current, active validators.](https://polkadot.subscan.io/validator_list?status=validator) :polkadot }}
+{{ kusama: [statistics for current, active validators.](https://kusama.subscan.io/validator_list?status=validator) :kusama }}
 
 **Warning:** Any DOT that you stake for your validator is liable to be
 [slashed](../learn/learn-offenses.md), meaning that an insecure or improper setup may result in loss
@@ -366,7 +352,6 @@ Find the latest version; replace "VERSION" in the command below and run to chang
 
 ```sh
 git checkout VERSION
-./scripts/init.sh
 ```
 
 Build native code with the production profile. The following will make sure that the binaries are
@@ -546,22 +531,19 @@ a non-canonical chain.
 
 ## Bond DOT
 
-To start a validator instance on Polkadot, the minimum bond required is
+To start a validator instance on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the
+minimum bond required is
 {{ polkadot: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :polkadot }}
 {{ kusama: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :kusama }}
 But to enter the active validator set and be eligible to earn rewards, your validator node should be
-nominated by a minimum number of DOT tokens. On Polkadot, the minimum stake backing a validator in
-the active set is
-{{ polkadot: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :polkadot }}
-{{ kusama: <MinimumStake network="polkadot" defaultValue={17314855524834056}/> :kusama }} in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="998"/>. :kusama }}
-On Kusama, the minimum stake backing a validator in the active set is
-{{ kusama: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :kusama }}
-{{ polkadot: <MinimumStake network="kusama" defaultValue={5288388652143741} /> :polkadot }} in the
-era
-{{ kusama: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :kusama }}
-{{ polkadot: <RPC network="kusama" path="query.staking.currentEra" defaultValue="4838"/>. :polkadot }}
+nominated by a minimum number of DOT tokens.
+
+For example, the minimum stake backing a validator in era
+{{ polkadot: 1449 :polkadot }}{{ kusama: 6646 :kusama }} (May 21st 2024) is
+{{ polkadot: 2,377,756.492 DOT :polkadot }}{{ kusama: 7,078.811 KSM :kusama }}. For a live view at
+current validator stats, you may look to
+[Subscan](https://polkadot.subscan.io/validator_list?status=validator) or the
+[Staking Dashboard.](https://staking.polkadot.network/#/overview)
 
 If you are validator who intends to get DOT/KSM nominations from the community, you will need to
 show some skin in the game. For that, you need to bond some DOT/KSM as own stake. Make sure not to

@@ -75,7 +75,61 @@ module.exports = {
             slug: '/dashboards-index',
           },
           items: [
+            "general/parity-data-dashboards",
             "general/staking-dashboard",
+            {
+              type: "category",
+              label: "Dune Analytics",
+              description: "Dune Analytics descriptions",
+              link: {
+                type: 'generated-index',
+                title: 'Dune Analytics',
+                description: "Dune Analytics descriptions",
+                slug: 'general/dune-analytics',
+              },
+              items: [
+                "general/dune-analytics/basic-metrics-dashboards",
+                {
+                  type: "category",
+                  label: "Polkadot Dashboards",
+                  description: "Polkadot Dashboards descriptions",
+                  link: {
+                    type: 'generated-index',
+                    title: 'Polkadot Dashboards',
+                    description: "Polkadot is a flagship project by Web3 Foundation, designed to enable a completely decentralized web where users are in control. It is a sharded multichain network, meaning it can process many transactions on several chains in parallel, improving scalability.",
+                    slug: 'general/dune-analytics/polkadot-dashboards',
+                  },
+                  items: [
+                    "general/dune-analytics/polkadot-dashboards/polkadot-dashboards-overview",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-dashboards-governance",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-dashboards-staking",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-dashboards-network",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Parachain Dashboards",
+                  description: "Parachain Dashboards descriptions",
+                  link: {
+                    type: 'generated-index',
+                    title: 'Parachain Dashboards',
+                    description: "Parachain Dashboards descriptions",
+                    slug: 'general/dune-analytics/parachain-dashboards',
+                  },
+                  items: [
+                    "general/dune-analytics/parachain-dashboards/assethub-dashboards",
+                    "general/dune-analytics/parachain-dashboards/unique-dashboards",
+                    "general/dune-analytics/parachain-dashboards/moonbeam-dashboards",
+                    "general/dune-analytics/parachain-dashboards/stellaswap-dashboards",
+                    "general/dune-analytics/parachain-dashboards/acala-dashboards",
+                    "general/dune-analytics/parachain-dashboards/interlay-dashboards",
+                    "general/dune-analytics/parachain-dashboards/bifrost-dashboards",
+                    "general/dune-analytics/parachain-dashboards/hydration-dashboards",
+                  ],
+                },
+                "general/dune-analytics/dunesql-cheatsheet",
+              ],
+            },
           ],
         },
         {
@@ -198,6 +252,7 @@ module.exports = {
                 id: "learn/learn-accounts"
               },
               items: [
+                "learn/learn-account-balances",
                 "learn/learn-account-abstraction",
                 "learn/learn-identity",
                 "learn/learn-account-multisig",

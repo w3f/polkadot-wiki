@@ -34,8 +34,10 @@ development or application-driven contexts.
     [`ink!`](https://use.ink/) development.
 
 {{ polkadot: Polkadot mainnet has been running since May 2020 :polkadot }}{{ kusama: Kusama mainnet has been
-running since August 2019 :kusama }} and has [implementations in various programming languages](../learn/learn-implementations.md)
-ranging from Rust to JavaScript. The leading implementation is built in Rust and uses the Substrate framework.
+running since August 2019 :kusama }}
+and has [implementations in various programming languages](../learn/learn-implementations.md)
+ranging from Rust to JavaScript. The leading implementation is built in Rust and uses the Substrate
+framework.
 
 Tooling is rapidly evolving to interact with the network; there are many ways to get started!
 
