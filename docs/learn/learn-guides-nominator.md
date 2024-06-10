@@ -197,7 +197,8 @@ for additional context)
 `NUMBER_OF_TOKENS`: The number of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you would
 like to stake to the network.
 {{ polkadot: DOT has ten decimal places and is always represented as an integer with zeroes at the end. So 1 DOT = 10_000_000_000 Plancks. :polkadot }}{{ kusama: KSM has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
-1_000_000_000_000 Plancks. :kusama }} For more information, see [this page](../learn/learn-DOT.md).
+1_000_000_000_000 Plancks. :kusama }}
+For more information, see [this page](../learn/learn-DOT.md).
 
 `REWARD_DESTINATION`:
 
