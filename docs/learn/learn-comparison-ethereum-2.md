@@ -157,7 +157,7 @@ GRANDPA.
 There are two main differences between Ethereum and
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus:
 
-1.  {{ polkadot: Polkadot's:polkadot }}{{ kusama: Kusama's:kusama }} finality protocol, GRANDPA,
+1.  {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} finality protocol, GRANDPA,
     finalizes batches of blocks based on
     [availability and validity checks](./learn-parachains-protocol.md#availability-and-unavailability-phase)
     that happen as the proposed chain grows. The time to finality varies with the number of checks
