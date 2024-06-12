@@ -72,7 +72,7 @@
     "bufferutil": "^4.0.8",
     "chart.js": "^4.4.3",
     "crowdin-cli": "^0.3.0",
-    "graphql": "^16.8.1",
+    "graphql": "^16.8.2",
     "graphql-ws": "^5.16.0",
     "prism-react-renderer": "^2.3.1",
     "punycode": "^2.3.1",
