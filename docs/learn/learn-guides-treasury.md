@@ -93,7 +93,16 @@ balance to pay for the submission deposit and the transaction fees.
 
 :::
 
-![Treasury Preimage](../assets/treasury/treasury-preimage.png)
+Here is the preimage requesting for 100 DOT.
+
+![Treasury Preimage](../assets/treasury/OpenGov-Treasury-Preimage-SpendLocal.png)
+
+:::info Balance entered is in Plancks
+
+Polkadot JS UI is for developers and the UI takes input of the balance in
+[plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals, which is 10000000000 plancks per DOT.
+
+:::
 
 After successful submission of the preimage, it is displayed on Polkadot-JS UI > Governance >
 Preimages page. Every preimage is associated with a unique preimage hash (highlighted in a box in
