@@ -100,7 +100,7 @@ Here is the preimage requesting for 100 DOT.
 :::info Balance entered is in Plancks
 
 Polkadot JS UI is for developers and the UI takes input of the balance in
-[plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals. So, 1 DOT is 10000000000 plancks.
+[plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals, which is 10000000000 plancks per DOT.
 
 :::
 
