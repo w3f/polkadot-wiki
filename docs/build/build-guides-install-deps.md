@@ -421,24 +421,12 @@ rustc 1.63.0-nightly (e7144
 
 ## Install `polkadot-parachain` and `chain-spec-builder`
 
-<!-- TODO: finish instructions -->
+> You can change `--tag` to the specific release of your choice
 
 ```sh
-cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.10.0 --force polkadot-parachain-bin
+cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.13.0 --force polkadot-parachain-bin
 ```
 
 ```sh
 cargo install staging-chain-spec-builder
-```
-
-## Installing the "Omninode"
-
-The `polkadot-parachain` binary can be used as a generic node implementation for any given runtime.
-
-Install it using this command:
-
-> You can change `--tag` to the specific release of your choice
-
-```sh
-cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.10.0 --force polkadot-parachain-bin
 ```
