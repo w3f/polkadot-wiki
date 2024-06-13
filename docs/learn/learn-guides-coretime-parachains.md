@@ -97,7 +97,8 @@ successfully.
 
 Due to the reasons [discussed here](https://github.com/paritytech/polkadot-sdk/pull/2372), instead
 of the usual per-byte method of charging for storing validation and genesis code upon registration,
-the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`).
+the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual
+size.
 
 On **Kusama**, the cost to register a parathread is **~1100 KSM**.
 
