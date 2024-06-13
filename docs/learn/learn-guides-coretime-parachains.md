@@ -101,7 +101,7 @@ the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`).
 
 On **Kusama**, the cost to register a parathread is **~1100 KSM**.
 
-On **Polkadot**, the cost to register a parathread is **~3300**
+On **Polkadot**, the cost to register a parathread is **~3300 DOT**.
 
 :::
 
