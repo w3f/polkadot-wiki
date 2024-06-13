@@ -189,8 +189,6 @@ Be sure first to build the node using the following (assuming you're within
 cargo build -p parachain-template-node --release
 ```
 
-<!-- TODO: chain-spec-builder -->
-
 ```shell
 ../../target/release/parachain-template-node export-genesis-state genesis
 ```

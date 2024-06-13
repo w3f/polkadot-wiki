@@ -431,7 +431,7 @@ cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1
 cargo install staging-chain-spec-builder
 ```
 
-## Installing the "Omninode" & Chain Spec Builder
+## Installing the "Omninode"
 
 The `polkadot-parachain` binary can be used as a generic node implementation for any given runtime.
 
@@ -441,13 +441,4 @@ Install it using this command:
 
 ```sh
 cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.10.0 --force polkadot-parachain-bin
-```
-
-There is also a dedicated tool for generating chain specs from a given WebAssembly blob called
-`chain-spec-builder`.
-
-Install it using this command:
-
-```sh
-cargo install staging-chain-spec-builder
 ```
