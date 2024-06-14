@@ -100,7 +100,7 @@ of the usual per-byte method of charging for storing validation and genesis code
 the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual
 size.
 
-On **Kusama**, the cost to register a parathread is **~1100 KSM**.
+On **Kusama**, the deposit required to register a parachain is **~1100 KSM**.
 
 On **Polkadot**, the cost to register a parathread is **~3300 DOT**.
 
