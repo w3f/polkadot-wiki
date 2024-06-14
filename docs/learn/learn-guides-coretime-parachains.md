@@ -93,6 +93,23 @@ successfully.
 
 ## Register Parachain State and Code
 
+:::info Deposit requirements for registering a parachain
+
+Due to the reasons [discussed here](https://github.com/paritytech/polkadot-sdk/pull/2372), instead
+of the usual per-byte method of charging for storing validation and genesis code upon registration,
+the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual
+size.
+
+On **Kusama**, the deposit required to register a parachain is **~1100 KSM**.
+
+On **Polkadot**, the deposit required to register a parachain is **~3300 DOT**.
+
+It is possible to deregister the parachain and withdraw the deposit if the parachain has not produced 
+any blocks. If the parachain produced blocks, then the parachain can only be deregistered through relay 
+chain governance.
+
+:::
+
 The next step is to register the parachain's genesis wasm and state, which you should have generated
 earlier. Note that for this example, we are using `adder-collator`, but in theory a custom runtime
 compiled from a
@@ -100,22 +117,22 @@ compiled from a
 would work as well.
 
 <!-- prettier-ignore -->
-:::info
+<!-- :::info
 
 Registering the genesis state and WASM code of the parachain requires a deposit that is computed
-based on the size (a deposit is paid per byte uploaded):
+based on the size (a deposit is paid per byte uploaded): -->
 
 <!-- prettier-ignore -->
-- **Kusama**: <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
+<!-- - **Kusama**: <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte -->
 
 <!-- prettier-ignore -->
-- **Polkadot**: <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte
+<!-- - **Polkadot**: <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte -->
 
-The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
+<!-- The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
 requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama
 and 116 DOT on Polkadot.
 
-:::
+::: -->
 
 ![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
 
