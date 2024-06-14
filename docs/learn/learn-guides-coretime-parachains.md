@@ -102,7 +102,7 @@ size.
 
 On **Kusama**, the deposit required to register a parachain is **~1100 KSM**.
 
-On **Polkadot**, the cost to register a parathread is **~3300 DOT**.
+On **Polkadot**, the deposit required to register a parachain is **~3300 DOT**.
 
 :::
 
