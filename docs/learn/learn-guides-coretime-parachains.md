@@ -93,7 +93,7 @@ successfully.
 
 ## Register Parachain State and Code
 
-:::warning Deposit is fixed at the maximum amount for registering a parathread!
+:::info Deposit requirements for registering a parachain
 
 Due to the reasons [discussed here](https://github.com/paritytech/polkadot-sdk/pull/2372), instead
 of the usual per-byte method of charging for storing validation and genesis code upon registration,
