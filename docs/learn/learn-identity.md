@@ -71,20 +71,16 @@ There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Ku
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
-:::info Registrar 0 decommissioned on April 1st, 2024
+:::info Decomissioned Registrar Service
 
-From the 1st of April 2024 onwards, Registrar 0 will still exist on-chain but will not accept any
-new judgment requests. The registrar fee is set to a substantial amount to dissuade identity
+From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept
+any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity
 judgement requests. Identities judged by the registrar before that date will not be affected. For
 new identity judgment, please use the other registrars.
 
+{{ kusama: **Registrar 2** is no longer offering registrar services on Kusama. :kusama }}
+
 :::
-
-{{ kusama: :::info Registrar 2 decommissioned
-
-Registrar 2 is no longer offering registrar services on Kusama.
-
-::: :kusama }}
 
 ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
 {{ polkadot: ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ :polkadot }}
@@ -96,9 +92,9 @@ Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
 {{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
 {{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
 
-{{ polkadot: Registrar 2 :polkadot}} {{ kusama: ~~Registrar 2~~ :kusama }}: <br /> **Account**:
+{{ polkadot: Registrar 2: :polkadot }} {{ kusama: ~~Registrar 2~~ :kusama }} <br /> **Account**:
 {{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
-{{ kusama: ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ :kusama }} <br /> **Fee**:
+{{ kusama: ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~  :kusama }} <br /> **Fee**:
 {{ polkadot: 0 DOT :polkadot }}{{ kusama: ~~1 KSM~~ :kusama }} <br />
 
 Registrar 3: <br /> **Account**:
