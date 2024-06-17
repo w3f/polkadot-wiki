@@ -108,7 +108,7 @@ of **~150 DOT**.
 
 It is possible to deregister the parachain and withdraw the deposit if the parachain has not
 produced any blocks. If the parachain produced blocks, then the parachain can only be deregistered
-through the relay chain governance.
+through the relay chain's governance.
 
 :::
 
