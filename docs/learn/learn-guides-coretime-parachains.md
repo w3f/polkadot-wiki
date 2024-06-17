@@ -104,9 +104,9 @@ On **Kusama**, the deposit required to register a parachain is **~1100 KSM**.
 
 On **Polkadot**, the deposit required to register a parachain is **~3300 DOT**.
 
-It is possible to deregister the parachain and withdraw the deposit if the parachain has not produced 
-any blocks. If the parachain produced blocks, then the parachain can only be deregistered through relay 
-chain governance.
+It is possible to deregister the parachain and withdraw the deposit if the parachain has not
+produced any blocks. If the parachain produced blocks, then the parachain can only be deregistered
+through relay chain governance.
 
 :::
 

@@ -35,7 +35,8 @@ community.
 
 Before submitting a referendum, identify the right track and origin for it. For instance, if the
 referendum is for requesting funds from treasury, select the treasury track with appropriate spend
-limits. If the referendum is for a suggestion to make changes to the protocol, select the "Wish for Change" track. For more info, check the
+limits. If the referendum is for a suggestion to make changes to the protocol, select the "Wish for
+Change" track. For more info, check the
 [tracks and origins](learn-polkadot-opengov.md#origins-and-tracks) of Polkadot OpenGov.
 
 ### Submitting a Preimage
