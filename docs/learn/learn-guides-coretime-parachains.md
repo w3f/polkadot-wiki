@@ -103,7 +103,7 @@ size.
 On **Kusama**, the deposit required to register a parachain is **~1100 KSM** and an estimated fees
 of **~5 KSM**.
 
-On **Polkadot**, the deposit required to register a parachain is **~3300 DOT** and an estimated fees
+On **Polkadot**, the deposit required to register a parachain is **~3300 DOT** and an estimated fee
 of **~150 DOT**.
 
 It is possible to deregister the parachain and withdraw the deposit if the parachain has not
