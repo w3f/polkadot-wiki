@@ -100,13 +100,15 @@ of the usual per-byte method of charging for storing validation and genesis code
 the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual
 size.
 
-On **Kusama**, the deposit required to register a parachain is **~1100 KSM**.
+On **Kusama**, the deposit required to register a parachain is **~1100 KSM** and an estimated fees
+of **~5 KSM**.
 
-On **Polkadot**, the deposit required to register a parachain is **~3300 DOT**.
+On **Polkadot**, the deposit required to register a parachain is **~3300 DOT** and an estimated fees
+of **~150 DOT**.
 
-It is possible to deregister the parachain and withdraw the deposit if the parachain has not produced 
-any blocks. If the parachain produced blocks, then the parachain can only be deregistered through relay 
-chain governance.
+It is possible to deregister the parachain and withdraw the deposit if the parachain has not
+produced any blocks. If the parachain produced blocks, then the parachain can only be deregistered
+through the relay chain governance.
 
 :::
 
@@ -134,11 +136,9 @@ and 116 DOT on Polkadot.
 
 ::: -->
 
-![coretime-register-parathread](../assets/coretime/coretime-register-parathread.png)
+![coretime-register-parathread](../assets/coretime/Register-Parachain.png)
 
 After successful registration, the parachain starts onboarding as a parathread.
-
-![coretime-onboarding-parathread](../assets/coretime/coretime-parachain-onboarding.png)
 
 ## Run Parachain Collator
 
