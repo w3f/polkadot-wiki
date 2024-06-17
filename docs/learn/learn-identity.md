@@ -71,7 +71,7 @@ There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Ku
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
-:::info Decomissioned Registrar Service
+:::info Decommissioned Registrar Service
 
 From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept
 any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity
