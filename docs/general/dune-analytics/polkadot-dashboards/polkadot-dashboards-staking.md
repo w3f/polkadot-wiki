@@ -3,9 +3,8 @@ id: polkadot-dashboards-staking
 title: "Polkadot Dashboards: Staking"
 sidebar_label: Staking
 description:
-  This document demonstrated various Polkadot staking dashboards, offering insights into staking
-  rewards, validator and nominator metrics, nomination pools, and pool member activities. These
-  dashboards aim to provide a comprehensive view of staking dynamics within the Polkadot network.
+  Dashboards offering insights into staking rewards, validator and nominator metrics, nomination
+  pools, and pool member activities within the Polkadot network.
 keywords: [polkadot, governance, staking, dashboard, dune]
 slug: ../polkadot-dashboards-staking
 ---

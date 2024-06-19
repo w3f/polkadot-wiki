@@ -3,10 +3,8 @@ id: polkadot-dashboards-network
 title: "Polkadot Dashboards: Network"
 sidebar_label: Network
 description:
-  This document demonstrated various Polkadot network dashboards, offering insights into shared
-  security, staking rates, validator dynamics, and staking pools. These dashboards aim to provide a
-  comprehensive understanding of the Polkadot ecosystem's economic and consensus mechanisms,
-  emphasizing network participation, security, and decentralization.
+  Data dashboards of Polkadot network dynamics, including staking rates, validator dynamics, and
+  staking pools.
 keywords: [polkadot, network, dashboard, dune]
 slug: ../polkadot-dashboards-network
 ---

@@ -25,8 +25,14 @@ Here you'll find a variety of dashboards that help visualize data from the Acala
 
 ## Key Tables
 
-Data from the Acala parachain is organized into several key tables: `acala.balances`,
-`acala.blocks`, `acala.calls`, `acala.events`, `acala.extrinsics`, `acala.transfers`
+Data from the Acala parachain is organized into several key tables:
+
+- `acala.balances`
+- `acala.blocks`
+- `acala.calls`
+- `acala.events`
+- `acala.extrinsics`
+- `acala.transfers`
 
 ## Useful Queries
 

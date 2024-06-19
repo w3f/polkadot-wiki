@@ -2,10 +2,7 @@
 id: polkadot-dashboards-overview
 title: Polkadot Dashboards Overview
 sidebar_label: Overview
-description:
-  Polkadot is a flagship project by Web3 Foundation, designed to enable a completely decentralized
-  web where users are in control. It is a sharded multichain network, meaning it can process many
-  transactions on several chains in parallel, improving scalability.
+description: The starting point for exploring Polkadot dashboards on Dune Analytics.
 keywords: [polkadot, dashboard, dune, governance, staking, NFT]
 slug: ../polkadot-dashboards-overview
 ---
