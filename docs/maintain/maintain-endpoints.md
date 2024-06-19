@@ -75,6 +75,7 @@ service, and additional metrics.
 - [1RPC](https://1rpc.io/)
 - [NOWNodes](https://nownodes.io/)
 - [All That Node](https://www.allthatnode.com/)
+- [SubQuery](https://www.rpc.subquery.network/)
 
 :::note
 
