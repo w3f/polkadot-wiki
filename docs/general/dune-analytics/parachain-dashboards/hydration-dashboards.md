@@ -36,9 +36,14 @@ Here you'll find a variety of dashboards that help visualize data from the Hydra
 
 ## Key Tables
 
-Data from the hydration parachain is organized into several key tables: `hydradx.balances`,
-`hydradx.blocks`, `hydradx.calls`, `hydradx.events`, `hydradx.extrinsics`, `hydradx.transfers`,
-`hydradx.traces`
+Data from the hydration parachain is organized into several key tables:
+
+- `hydradx.balances`
+- `hydradx.blocks`
+- `hydradx.calls`
+- `hydradx.events`,
+- `hydradx.extrinsics`
+- `hydradx.transfers`
 
 The `hydradx.traces` table is created by a snapshot script utilizing Hydration API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.
@@ -81,40 +86,42 @@ queries. You can also use the following DuneSQL queries as examples:
 ```sql title="Hydration Omnipool Asset (Latest)" showLineNumbers
 WITH MaxTimestamps AS (
   SELECT
-    CAST(JSON_VALUE(kv,'strict $.id') AS INT) as asset_id,
-    MAX(ts) as max_ts
+    CAST(JSON_VALUE(kv, 'strict $.id') AS INT) AS asset_id,
+    MAX(ts) AS max_ts
   FROM hydradx.traces
-  WHERE track='omniasset'
+  WHERE track = 'omniasset'
   GROUP BY 1
-), A AS
-(
-    SELECT
-      m.asset_id,
-      A1.ticker,
-      A1.decimals,
-      m.max_ts as ts,
-      CAST(JSON_VALUE(t.pv,'strict $.cap') as UINT256) as cap,
-      CAST(JSON_VALUE(t.pv,'strict $.hubReserve') as UINT256) as hubReserve,
-      CAST(JSON_VALUE(t.pv,'strict $.protocolShares') as UINT256) as protocolShares,
-      CAST(JSON_VALUE(t.pv,'strict $.shares') as UINT256) as shares,
-      JSON_VALUE(t.pv, 'strict $.tradable.bits') as tradeable
-    FROM MaxTimestamps m
-    INNER JOIN hydradx.traces t ON m.asset_id = CAST(JSON_VALUE(t.kv,'strict $.id') AS INT) AND m.max_ts = t.ts
-    JOIN query_3482301 A1 on A1.asset_id=m.asset_id
-    WHERE t.track='omniasset'
+), A AS (
+  SELECT
+    m.asset_id,
+    A1.ticker,
+    A1.decimals,
+    m.max_ts AS ts,
+    CAST(JSON_VALUE(t.pv, 'strict $.cap') AS UINT256) AS cap,
+    CAST(JSON_VALUE(t.pv, 'strict $.hubReserve') AS UINT256) AS hubReserve,
+    CAST(JSON_VALUE(t.pv, 'strict $.protocolShares') AS UINT256) AS protocolShares,
+    CAST(JSON_VALUE(t.pv, 'strict $.shares') AS UINT256) AS shares,
+    JSON_VALUE(t.pv, 'strict $.tradable.bits') AS tradeable
+  FROM MaxTimestamps m
+  INNER JOIN hydradx.traces t
+    ON m.asset_id = CAST(JSON_VALUE(t.kv, 'strict $.id') AS INT)
+    AND m.max_ts = t.ts
+  JOIN query_3482301 A1
+    ON A1.asset_id = m.asset_id
+  WHERE t.track = 'omniasset'
 )
 SELECT
-asset_id,
-ticker,
-round(100.0 * hubReserve / (sum(hubReserve) OVER(ORDER BY 1)), 1) as percentage_of_pool,
-(cap)/POW(10,18) as cap,
-round(hubReserve/POW(10,12)) as hubReserve,
-round(protocolShares/POW(10, decimals)) as protocolShares,
-round(shares/POW(10, decimals)) as shares,
-ts as last_update-- when this data was collected
+  asset_id,
+  ticker,
+  ROUND(100.0 * hubReserve / (SUM(hubReserve) OVER (ORDER BY 1)), 1) AS percentage_of_pool,
+  cap / POW(10, 18) AS cap,
+  ROUND(hubReserve / POW(10, 12)) AS hubReserve,
+  ROUND(protocolShares / POW(10, decimals)) AS protocolShares,
+  ROUND(shares / POW(10, decimals)) AS shares,
+  ts AS last_update -- when this data was collected
 FROM A
-where tradeable='15' -- all bits set to "on"
-ORDER BY 3 DESC
+WHERE tradeable = '15' -- all bits set to "on"
+ORDER BY 3 DESC;
 
 
 ```

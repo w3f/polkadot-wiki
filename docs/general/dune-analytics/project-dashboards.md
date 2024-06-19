@@ -22,5 +22,5 @@ ecosystem. The dashboards are created using Dune Analytics and DuneSQL.
   unincorporated non-profit association with a community originating in Kusama+Polkadot. The initial
   goal is set up the JAM DUNA as a Wyoming DUNA in July 2024. Wyoming DUNAs provide significant
   legal advantages over DAOs, requiring a minimum 100 members.
-- [DOT IS DED 😵](https://dune.com/substrate/dotisded): DED is a fair memecoin project originated in
-  the DOT community and developed by the DED Foundation
+- [DED](https://dune.com/substrate/dotisded): DED is a memecoin project originated in the DOT
+  community and developed by the DED Foundation

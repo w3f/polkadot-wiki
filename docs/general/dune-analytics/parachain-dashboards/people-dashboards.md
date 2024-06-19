@@ -28,8 +28,14 @@ Please also visit our dashboards for People on
 
 ## Key Tables
 
-Data from the People parachain is organized into several key tables: `people.balances`,
-`people.blocks`, `people.calls`, `people.events`, `people.extrinsics`, `people.transfers`
+Data from the People parachain is organized into several key tables:
+
+- `people.balances`
+- `people.blocks`
+- `people.calls`
+- `people.events`,
+- `people.extrinsics`
+- `people.transfers`
 
 ## Useful Queries
 
@@ -52,19 +58,17 @@ SELECT
     from_utf8(
       from_hex(JSON_EXTRACT_SCALAR(call_args, '$.info.display.raw'))
     ) AS VARCHAR
-  ) as name,
+  ) AS name,
   CAST(
     from_utf8(
-      from_hex(
-        JSON_EXTRACT_SCALAR(call_args, '$.info.email.raw')
-      )
+      from_hex(JSON_EXTRACT_SCALAR(call_args, '$.info.email.raw'))
     ) AS VARCHAR
-  ) as email
+  ) AS email
 FROM
   people_kusama.calls
 WHERE
   call_section = 'identity'
-  AND call_method = 'setIdentity'
+  AND call_method = 'setIdentity';
 ```
 
 Query result:

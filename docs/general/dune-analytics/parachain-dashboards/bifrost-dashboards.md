@@ -28,9 +28,14 @@ Here you'll find a variety of dashboards that help visualize data from the Bifro
 
 ## Key Tables
 
-Data from the bifrost parachain is organized into several key tables: `bifrost.balances`,
-`bifrost.blocks`, `bifrost.calls`, `bifrost.events`, `bifrost.extrinsics`, `bifrost.transfers`,
-`bifrost.traces`
+Data from the bifrost parachain is organized into several key tables:
+
+- `bifrost.balances`
+- `bifrost.blocks`
+- `bifrost.calls`
+- `bifrost.events`,
+- `bifrost.extrinsics`
+- `bifrost.transfers`
 
 The `bifrost.traces` table is created by a snapshot script utilizing Bifrost API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.
@@ -56,35 +61,46 @@ To get started with querying data from Bifrost, you are welcome to use the menti
 can also use the following DuneSQL queries as examples:
 
 ```sql title="Bifrost Loan Market Data" showLineNumbers
-WITH A AS(
-select
-block_time,
-event_id,
-section,
-method,
-JSON_ARRAY_LENGTH(data) as array_length,
-JSON_VALUE(data, 'strict $[0]') as account,
---JSON_QUERY(data, 'strict $[1]') as value_1,
---JSON_VALUE(data, 'strict $[2]') as some_amount,
-JSON_QUERY(data, 'strict $[3]') as token_in,
-JSON_QUERY(data, 'strict $[4]') as token_out,
-CAST(JSON_VALUE(data, 'strict $[5]') AS UINT256) as amount_in,
-CAST(JSON_VALUE(data, 'strict $[9]') AS UINT256) as amount_out
---JSON_QUERY(data, 'strict $[7]') as value_7,
---JSON_QUERY(data, 'strict $[8]') as value_8,
---JSON_QUERY(data, 'strict $[9]') as value_9
-from bifrost.events
-where section='stableAsset' and method in ('TokenSwapped') and block_time > TIMESTAMP '2024-05-01'
+WITH A AS (
+  SELECT
+    block_time,
+    event_id,
+    section,
+    method,
+    JSON_ARRAY_LENGTH(data) AS array_length,
+    JSON_VALUE(data, 'strict $[0]') AS account,
+    -- JSON_QUERY(data, 'strict $[1]') AS value_1,
+    -- JSON_VALUE(data, 'strict $[2]') AS some_amount,
+    JSON_QUERY(data, 'strict $[3]') AS token_in,
+    JSON_QUERY(data, 'strict $[4]') AS token_out,
+    CAST(JSON_VALUE(data, 'strict $[5]') AS UINT256) AS amount_in,
+    CAST(JSON_VALUE(data, 'strict $[9]') AS UINT256) AS amount_out
+    -- JSON_QUERY(data, 'strict $[7]') AS value_7,
+    -- JSON_QUERY(data, 'strict $[8]') AS value_8,
+    -- JSON_QUERY(data, 'strict $[9]') AS value_9
+  FROM
+    bifrost.events
+  WHERE
+    section = 'stableAsset'
+    AND method IN ('TokenSwapped')
+    AND block_time > TIMESTAMP '2024-05-01'
 )
 SELECT
-date_trunc('hour', block_time) as "day",
-SUM(amount_in)/1e10 as dot_volume_swapped,
-1.000 * SUM(amount_in)/SUM(amount_out) as avg_price,
-(1.000 * SUM(amount_in)/SUM(amount_out)) < 1 as price_low -- very low prices
-FROM A
-where token_in='{"token2":0}' and token_out='{"vToken2":0}' and amount_out>0 and block_time > TIMESTAMP '2024-05-01'
-GROUP BY 1
-order by 1 DESC
+  date_trunc('hour', block_time) AS "day",
+  SUM(amount_in) / 1e10 AS dot_volume_swapped,
+  1.000 * SUM(amount_in) / SUM(amount_out) AS avg_price,
+  (1.000 * SUM(amount_in) / SUM(amount_out)) < 1 AS price_low -- very low prices
+FROM
+  A
+WHERE
+  token_in = '{"token2":0}'
+  AND token_out = '{"vToken2":0}'
+  AND amount_out > 0
+  AND block_time > TIMESTAMP '2024-05-01'
+GROUP BY
+  1
+ORDER BY
+  1 DESC;
 
 ```
 

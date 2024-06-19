@@ -35,9 +35,14 @@ Here you'll find a variety of dashboards that help visualize data from the Bridg
 
 ## Key Tables
 
-Data from the BridgeHub parachain is organized into several key tables: `bridgehub.balances`,
-`bridgehub.blocks`, `bridgehub.calls`, `bridgehub.events`, `bridgehub.extrinsics`,
-`bridgehub.transfers`.
+Data from the BridgeHub parachain is organized into several key tables:
+
+- `bridgehub.balances`
+- `bridgehub.blocks`
+- `bridgehub.calls`
+- `bridgehub.events`,
+- `bridgehub.extrinsics`
+- `bridgehub.transfers`
 
 ## Useful Queries
 

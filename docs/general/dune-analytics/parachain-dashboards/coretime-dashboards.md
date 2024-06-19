@@ -30,8 +30,14 @@ Please also visit our dashboards for Coretime on
 
 ## Key Tables
 
-Data from the Coretime parachain is organized into several key tables: `coretime.balances`,
-`coretime.blocks`, `coretime.calls`, `coretime.events`, `coretime.extrinsics`, `coretime.transfers`
+Data from the Coretime parachain is organized into several key tables:
+
+- `coretime.balances`
+- `coretime.blocks`
+- `coretime.calls`
+- `coretime.events`,
+- `coretime.extrinsics`
+- `coretime.transfers`
 
 ## Useful Queries
 

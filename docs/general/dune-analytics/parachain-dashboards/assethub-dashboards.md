@@ -3,9 +3,9 @@ id: assethub-dashboards
 title: Asset Hub Dashboards
 sidebar_label: Asset Hub
 description:
-  Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and management
-  of digital assets across various applications. It supports asset tokenization, trading, and
-  bridging services within the Polkadot ecosystem.
+  Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and
+  management of digital assets across various applications. It supports asset tokenization, trading,
+  and bridging services within the Polkadot ecosystem.
 keywords: [polkadot, dashboard, dune, assethub, digital assets]
 slug: ../assethub-dashboards
 ---
@@ -27,8 +27,14 @@ Here you'll find a variety of dashboards that help visualize data from the Asset
 
 ## Key Tables
 
-Data from the Asset Hub parachain is organized into several key tables: `assethub.balances`,
-`assethub.blocks`, `assethub.calls`, `assethub.events`, `assethub.extrinsics`, `assethub.transfers`
+Data from the Asset Hub parachain is organized into several key tables:
+
+- `assethub.balances`
+- `assethub.blocks`
+- `assethub.calls`
+- `assethub.events`,
+- `assethub.extrinsics`
+- `assethub.transfers`
 
 ## Useful Queries
 
@@ -44,21 +50,21 @@ To get started with querying data from Unique, you are welcome to use the mentio
 queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Sum of USDC in Polkadot Parachains" showLineNumbers
-select
+SELECT
   *
-from
-  "query_3526956(asset_id='1337')" -- AssetHub Sum of Stablecoin on Each Chain by Time
-where
+FROM
+  "query_3526956(asset_id='1984')" -- AssetHub Sum of Stablecoin on Each Chain by Time
+WHERE
   not chain_name = ''
 ```
 
 Query result:
 
-<iframe src="https://dune.com/embeds/3527830/5933830/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3527846/5933854" height="350" width="100%"></iframe>
 
 Visualized result:
 
-<iframe src="https://dune.com/embeds/3527830/5933863/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3527846/6451568" height="350" width="100%"></iframe>
 
 :::info DuneSQL Referece
 

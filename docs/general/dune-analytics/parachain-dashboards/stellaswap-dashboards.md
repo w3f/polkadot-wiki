@@ -68,20 +68,27 @@ To get started with querying data from Stellaswap, you are welcome to use the me
 queries. You can also use the following DuneSQL queries as examples:
 
 ```sql title="Stellaswap Volume Last Day" showLineNumbers
-WITH maxts as(
-    select max(DATE_TRUNC('day', block_time)) as maxts from dune.substrate.result_stellaswap_trades_enriched T
+WITH maxts AS (
+  SELECT
+    MAX(DATE_TRUNC('day', block_time)) AS maxts
+  FROM
+    dune.substrate.result_stellaswap_trades_enriched T
 )
 SELECT
-DATE_TRUNC('day', block_time) as date,
-T.token_pair,
-project_contract_address,
-current_timestamp - max(block_time) as last_seen_ago,
-round(sum(abs(amount_usd))) as volume_usd,
-T.subquery
-FROM dune.substrate.result_stellaswap_trades_enriched T
-WHERE DATE_TRUNC('day', block_time) = (select maxts from maxts)
-GROUP BY 1, 2, 3, 6
-ORDER BY 1 DESC, 5 DESC
+  DATE_TRUNC('day', block_time) AS date,
+  T.token_pair,
+  project_contract_address,
+  current_timestamp - MAX(block_time) AS last_seen_ago,
+  ROUND(SUM(ABS(amount_usd))) AS volume_usd,
+  T.subquery
+FROM
+  dune.substrate.result_stellaswap_trades_enriched T
+WHERE
+  DATE_TRUNC('day', block_time) = (SELECT maxts FROM maxts)
+GROUP BY
+  1, 2, 3, 6
+ORDER BY
+  1 DESC, 5 DESC;
 
 
 ```

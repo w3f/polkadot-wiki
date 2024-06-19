@@ -1,6 +1,6 @@
 ---
 id: astar-dashboards
-title: Astar Dashoboards
+title: Astar Dashboards
 sidebar_label: Astar
 description:
   Astar Network, previously known as Plasm, is a decentralized blockchain platform designed for
@@ -12,7 +12,7 @@ keywords: [polkadot, dashboard, dune, astar, dApp]
 slug: ../astar-dashboards
 ---
 
-# Astar Dashoboards
+# Astar Dashboards
 
 ## Overview
 
@@ -30,8 +30,14 @@ Here you'll find a variety of dashboards that help visualize data from the Astar
 
 ## Key Tables
 
-Data from the Astar parachain is organized into several key tables: `astar.balances`,
-`astar.blocks`, `astar.calls`, `astar.events`, `astar.extrinsics`, `astar.transfers`,`astar.traces`
+Data from the Astar parachain is organized into several key tables:
+
+- `astar.balances`
+- `astar.blocks`
+- `astar.calls`
+- `astar.events`,
+- `astar.extrinsics`
+- `astar.transfers`
 
 ## Useful Queries
 

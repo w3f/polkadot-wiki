@@ -29,8 +29,14 @@ Here you'll find a variety of dashboards that help visualize data from the Acala
 
 ## Key Tables
 
-Data from the InvArch parachain is organized into several key tables: `invarch.balances`,
-`invarch.blocks`, `invarch.calls`, `invarch.events`, `invarch.extrinsics`, `invarch.transfers`
+Data from the InvArch parachain is organized into several key tables:
+
+- `invarch.balances`
+- `invarch.blocks`
+- `invarch.calls`
+- `invarch.events`,
+- `invarch.extrinsics`
+- `invarch.transfers`
 
 ## Useful Queries
 
@@ -42,30 +48,29 @@ To get started with querying data from Unique, you are welcome to use the mentio
 queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="InvArch Cumulative Activated Acounts by Day" showLineNumbers
-WITH
-  accounts_first_active AS (
-    SELECT
-      address_ss58,
-      MIN(date_trunc('day', ts)) AS first_active_date
-    FROM
-      invarch.balances
-    WHERE
-      (free + reserved + misc_frozen + frozen) > 0
-    GROUP BY
-      address_ss58
-  )
+WITH accounts_first_active AS (
+  SELECT
+    address_ss58,
+    MIN(date_trunc('day', ts)) AS first_active_date
+  FROM
+    invarch.balances
+  WHERE
+    (free + reserved + misc_frozen + frozen) > 0
+  GROUP BY
+    address_ss58
+)
 SELECT
   first_active_date AS date,
   SUM(COUNT(DISTINCT address_ss58)) OVER (
     ORDER BY
       DATE(first_active_date)
-  ) as cumulative_accounts
+  ) AS cumulative_accounts
 FROM
   accounts_first_active
 GROUP BY
   first_active_date
 ORDER BY
-  first_active_date DESC
+  first_active_date DESC;
 ```
 
 Query result:

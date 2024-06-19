@@ -28,8 +28,16 @@ Please also visit our dashboards for Phala on
 
 ## Key Tables
 
-Data from the Phala parachain is organized into several key tables: `phala.balances`,
-`phala.blocks`, `phala.calls`, `phala.events`, `phala.extrinsics`, `phala.transfers`
+Data from the Phala parachain is organized into several key tables:
+
+- `phala.balances`
+- `phala.blocks`
+- `phala.calls`
+- `phala.events`,
+- `phala.extrinsics`
+- `phala.transfers`
+
+Additional curated dataset from Phala team can be found at `dune.phala_network.*`
 
 ## Useful Queries
 
@@ -54,7 +62,7 @@ SELECT
   budget_per_share,
   delegator_count
 FROM
-  dune.phala_network.dataset_phala_computation
+  dune.phala_network.dataset_phala_computation;
 ```
 
 Query result:

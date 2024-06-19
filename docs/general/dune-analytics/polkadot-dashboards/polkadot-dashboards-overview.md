@@ -112,16 +112,18 @@ SELECT
   AVG(validator_normalized_staking_apr) AS staking_apr,
   era,
   DATE_FORMAT(ts, '%Y-%m-%d') AS era_ts
-FROM dune.substrate.result_polkadot_validators
+FROM
+  dune.substrate.result_polkadot_validators
 WHERE
-  validator_is_active = TRUE AND validator_commission <> 1
+  validator_is_active = TRUE
+  AND validator_commission <> 1
 GROUP BY
   era,
   ts
 HAVING
   AVG(validator_normalized_staking_apr) > 0
 ORDER BY
-  era DESC
+  era DESC;
 ```
 
 Query result:

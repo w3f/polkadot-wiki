@@ -35,9 +35,14 @@ Here you'll find a variety of dashboards that help visualize data from the Snowb
 
 ## Key Tables
 
-Data from the Snowbridge protocol is organized into several key tables: `bridgehub.balances`,
-`bridgehub.blocks`, `bridgehub.calls`, `bridgehub.events`, `bridgehub.extrinsics`,
-`bridgehub.transfers`.
+Data from the Snowbridge protocol is organized into several key tables:
+
+- `bridgehub.balances`
+- `bridgehub.blocks`
+- `bridgehub.calls`
+- `bridgehub.events`,
+- `bridgehub.extrinsics`
+- `bridgehub.transfers`
 
 ## Useful Queries
 
@@ -59,13 +64,13 @@ SELECT DISTINCT
   event_id,
   section,
   method,
-  CAST(JSON_VALUE(data, 'strict $[0]') as varchar) as message_id,
-  CAST(JSON_VALUE(data, 'strict $[1]') as uint256) as nonce
+  CAST(JSON_VALUE(data, 'strict $[0]') AS VARCHAR) AS message_id,
+  CAST(JSON_VALUE(data, 'strict $[1]') AS uint256) AS nonce
 FROM
   bridgehub.events
 WHERE
   section = 'ethereumOutboundQueue'
-  and method = 'MessageAccepted'
+  AND method = 'MessageAccepted';
 ```
 
 Query result:

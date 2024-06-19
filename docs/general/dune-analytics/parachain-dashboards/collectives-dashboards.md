@@ -30,9 +30,14 @@ Here you'll find a variety of dashboards that help visualize data from the Manta
 
 ## Key Tables
 
-Data from the manta parachain is organized into several key tables: `collectives.balances`,
-`collectives.blocks`, `collectives.calls`, `collectives.events`, `collectives.extrinsics`,
-`collectives.transfers`
+Data from the manta parachain is organized into several key tables:
+
+- `collectives.balances`
+- `collectives.blocks`
+- `collectives.calls`
+- `collectives.events`,
+- `collectives.extrinsics`
+- `collectives.transfers`
 
 ## Useful Queries
 
@@ -44,26 +49,28 @@ To get started with querying data from Collectives, you are welcome to use the m
 materialized queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Collectives Referenda Types" showLineNumbers
-with
-  types as (
-    select
-      block_time,
-      json_extract_scalar(params, '$.proposal.lookup.hash') as lookup,
-      json_extract_scalar(params, '$.proposal_origin.fellowshipOrigins') as fellowshipOrigins
-    from
-      collectives.extrinsics
-    where
-      section = 'fellowshipReferenda'
-      and method = 'submit'
-      and json_extract_scalar(params, '$.proposal.lookup.hash') is not null
-  )
-  select
-  json_extract_scalar(data,'$[0]') as r_id,
-  json_extract_scalar(data,'$[2].lookup.hash') as lookup,
-  COALESCE(types.fellowshipOrigins,'Fellows') as types
-  from collectives.events
-  LEFT JOIN types on json_extract_scalar(data,'$[2].lookup.hash')=types.lookup
-  where method='Submitted' and json_extract_scalar(data,'$[2].lookup.hash')is not null
+WITH types AS (
+  SELECT
+    block_time,
+    JSON_EXTRACT_SCALAR(params, '$.proposal.lookup.hash') AS lookup,
+    JSON_EXTRACT_SCALAR(params, '$.proposal_origin.fellowshipOrigins') AS fellowshipOrigins
+  FROM
+    collectives.extrinsics
+  WHERE
+    section = 'fellowshipReferenda'
+    AND method = 'submit'
+    AND JSON_EXTRACT_SCALAR(params, '$.proposal.lookup.hash') IS NOT NULL
+)
+SELECT
+  JSON_EXTRACT_SCALAR(data, '$[0]') AS r_id,
+  JSON_EXTRACT_SCALAR(data, '$[2].lookup.hash') AS lookup,
+  COALESCE(types.fellowshipOrigins, 'Fellows') AS types
+FROM
+  collectives.events
+LEFT JOIN types ON JSON_EXTRACT_SCALAR(data, '$[2].lookup.hash') = types.lookup
+WHERE
+  method = 'Submitted'
+  AND JSON_EXTRACT_SCALAR(data, '$[2].lookup.hash') IS NOT NULL;
 ```
 
 Query result:

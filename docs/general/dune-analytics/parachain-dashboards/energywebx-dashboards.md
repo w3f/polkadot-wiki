@@ -27,9 +27,14 @@ Here you'll find a variety of dashboards that help visualize data from the Energ
 
 ## Key Tables
 
-Data from the EnergyWebX parachain is organized into several key tables: `energywebx.balances`,
-`energywebx.blocks`, `energywebx.calls`, `energywebx.events`, `energywebx.extrinsics`,
-`energywebx.transfers`
+Data from the EnergyWebX parachain is organized into several key tables:
+
+- `energywebx.balances`
+- `energywebx.blocks`
+- `energywebx.calls`
+- `energywebx.events`,
+- `energywebx.extrinsics`
+- `energywebx.transfers`
 
 ## Useful Queries
 
@@ -40,45 +45,46 @@ Currently, there are no specific queries provided. Please check back later for u
 To get started with querying data from Snowbridge, you are welcome to use the mentioned materialized
 queries. You can use the following DuneSQL queries as examples:
 
-```sql title="Polkadot BridgeHub Outbound Msg Sent To Ethereum" showLineNumbers
-with
-  lift as (
-    select
-      date_trunc('day', block_time) as day,
-      sum(
-        cast(json_extract_scalar(data, '$[1]') as double) / power(10, 18)
-      ) as amount,
-      'AVTLifted' as method
-    from
+```sql title="EnergyWebX Token Lifted & Lowered" showLineNumbers
+WITH
+  lift AS (
+    SELECT
+      date_trunc('day', block_time) AS day,
+      SUM(
+        CAST(json_extract_scalar(data, '$[1]') AS double) / POWER(10, 18)
+      ) AS amount,
+      'AVTLifted' AS method
+    FROM
       energywebx.events
-    where
+    WHERE
       method = 'AVTLifted'
-    group by
+    GROUP BY
       date_trunc('day', block_time)
   ),
-  lower as (
-    select
-      date_trunc('day', block_time) as day,
-      sum(
-        cast(json_extract_scalar(data, '$[2]') as double) / power(10, 18)
-      ) as amount,
-      'AVTLowered' as method
-    from
+  lower AS (
+    SELECT
+      date_trunc('day', block_time) AS day,
+      SUM(
+        CAST(json_extract_scalar(data, '$[2]') AS double) / POWER(10, 18)
+      ) AS amount,
+      'AVTLowered' AS method
+    FROM
       energywebx.events
-    where
+    WHERE
       method = 'AvtLowered'
-    group by
+    GROUP BY
       date_trunc('day', block_time)
   )
-select
+SELECT
   *
-from
+FROM
   lift
-union all
-select
+UNION ALL
+SELECT
   *
-from
-  lower
+FROM
+  lower;
+
 ```
 
 Query result:

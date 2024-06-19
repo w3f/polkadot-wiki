@@ -31,8 +31,14 @@ Here you'll find a variety of dashboards that help visualize data from the Liten
 
 ## Key Tables
 
-Data from the Litentry parachain is organized into several key tables: `litentry.balances`,
-`litentry.blocks`, `litentry.calls`, `litentry.events`, `litentry.extrinsics`, `litentry.transfers`.
+Data from the Litentry parachain is organized into several key tables:
+
+- `litentry.balances`
+- `litentry.blocks`
+- `litentry.calls`
+- `litentry.events`,
+- `litentry.extrinsics`
+- `litentry.transfers`
 
 ## Useful Queries
 
@@ -48,20 +54,20 @@ queries. You can use the following DuneSQL queries as examples:
 SELECT DISTINCT
   block_time,
   extrinsic_id,
-  get_href (
+  get_href(
     'https://litentry.statescan.io/#/extrinsics/' || extrinsic_id,
     extrinsic_id
-  ) as extrinsic_id_url,
-  JSON_VALUE(data, 'strict $[0]') as dest_id,
-  JSON_VALUE(data, 'strict $[1]') as nonce,
-  JSON_VALUE(data, 'strict $[2]') as source_id,
+  ) AS extrinsic_id_url,
+  JSON_VALUE(data, 'strict $[0]') AS dest_id,
+  JSON_VALUE(data, 'strict $[1]') AS nonce,
+  JSON_VALUE(data, 'strict $[2]') AS source_id,
   IF(
-    JSON_VALUE(data, 'strict $[3]') like '0x%',
-    bytearray_to_int256 (JSON_VALUE(data, 'strict $[3]')) / pow(10, 12),
-    CAST(JSON_VALUE(data, 'strict $[3]') AS int256) / pow(10, 12)
-  ) as amount,
-  JSON_VALUE(data, 'strict $[4]') as recipient,
-  get_href (
+    JSON_VALUE(data, 'strict $[3]') LIKE '0x%',
+    bytearray_to_int256(JSON_VALUE(data, 'strict $[3]')) / POW(10, 12),
+    CAST(JSON_VALUE(data, 'strict $[3]') AS int256) / POW(10, 12)
+  ) AS amount,
+  JSON_VALUE(data, 'strict $[4]') AS recipient,
+  get_href(
     'https://etherscan.io/address/' || JSON_VALUE(data, 'strict $[4]'),
     CONCAT(
       SUBSTR(JSON_VALUE(data, 'strict $[4]'), 1, 4),
@@ -71,14 +77,14 @@ SELECT DISTINCT
         LENGTH(JSON_VALUE(data, 'strict $[4]')) - 3
       )
     )
-  ) as recipient_url
+  ) AS recipient_url
 FROM
   litentry.events
 WHERE
   section = 'chainBridge'
-  and method = 'FungibleTransfer'
+  AND method = 'FungibleTransfer'
 ORDER BY
-  block_time DESC
+  block_time DESC;
 ```
 
 Query result:

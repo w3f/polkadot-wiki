@@ -30,8 +30,14 @@ Please also visit our dashboards for Nodle on
 
 ## Key Tables
 
-Data from the Nodle parachain is organized into several key tables: `nodle.balances`,
-`nodle.blocks`, `nodle.calls`, `nodle.events`, `nodle.extrinsics`, `nodle.transfers`
+Data from the Nodle parachain is organized into several key tables:
+
+- `nodle.balances`
+- `nodle.blocks`
+- `nodle.calls`
+- `nodle.events`,
+- `nodle.extrinsics`
+- `nodle.transfers`
 
 ## Useful Queries
 
@@ -45,22 +51,22 @@ queries. You can use the following DuneSQL queries as examples:
 ```sql title="Nodle Mint Uniques" showLineNumbers
 SELECT DISTINCT
   block_time,
-  JSON_EXTRACT_SCALAR(call_args, '$.owner.id') as owner,
-  JSON_EXTRACT(call_args, '$.collection') as collection,
-  JSON_EXTRACT(call_args, '$.item') as item
+  JSON_EXTRACT_SCALAR(call_args, '$.owner.id') AS owner,
+  JSON_EXTRACT(call_args, '$.collection') AS collection,
+  JSON_EXTRACT(call_args, '$.item') AS item
 FROM
   nodle.calls
 WHERE
   (call_section = 'nodleUniques' OR call_section = 'uniques')
   AND call_method = 'mint'
-  AND extrinsic_id not in (
+  AND extrinsic_id NOT IN (
     SELECT
       extrinsic_id
     FROM
       nodle.events
     WHERE
       method = 'ExtrinsicFailed'
-  )
+  );
 ```
 
 Query result:

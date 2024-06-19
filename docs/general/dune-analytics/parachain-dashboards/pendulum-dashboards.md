@@ -30,8 +30,14 @@ Please also visit our dashboards for Pendulum on
 
 ## Key Tables
 
-Data from the Pendulum parachain is organized into several key tables: `pendulum.balances`,
-`pendulum.blocks`, `pendulum.calls`, `pendulum.events`, `pendulum.extrinsics`, `pendulum.transfers`
+Data from the Pendulum parachain is organized into several key tables:
+
+- `pendulum.balances`
+- `pendulum.blocks`
+- `pendulum.calls`
+- `pendulum.events`,
+- `pendulum.extrinsics`
+- `pendulum.transfers`
 
 ## Useful Queries
 
@@ -48,13 +54,13 @@ queries. You can use the following DuneSQL queries as examples:
 SELECT
   DATE_TRUNC('month', block_time) AS month,
   SUM(amount) AS amount,
-  count(*) AS count,
+  COUNT(*) AS count,
   token_name
 FROM
   query_3821151 -- Pendulum Spacewalk Transactions
 GROUP BY
   DATE_TRUNC('month', block_time),
-  token_name
+  token_name;
 ```
 
 Query result:
