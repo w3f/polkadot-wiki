@@ -664,7 +664,7 @@ module.exports = {
           items: [
             'learn/learn-spree',
             "learn/learn-elastic-scaling",
-            "learn/learn-sassafras",
+            "learn/learn-safrole",
           ],
         },
         {

@@ -24,7 +24,7 @@ module.exports = {
       onload: "addBackToTop()",
       defer: true,
     },
-	{
+    {
       src: "https://apisa.kusama.network/latest.js",
       async: true,
       defer: true,
@@ -67,7 +67,11 @@ module.exports = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-       redirects: [
+        redirects: [
+          {
+            to: '/docs/learn-safrole',
+            from: ['/docs/learn-sassafras']
+          },
           {
             to: '/docs/learn-polkadot-opengov',
             from: ['/docs/learn-gov2', '/docs/learn-opengov']
