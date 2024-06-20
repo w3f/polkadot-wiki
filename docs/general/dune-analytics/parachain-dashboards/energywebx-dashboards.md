@@ -38,7 +38,7 @@ Data from the EnergyWebX parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

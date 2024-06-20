@@ -3,7 +3,7 @@ id: polkadot-dashboards-governance
 title: "Polkadot Dashboards: Governance"
 sidebar_label: Governance
 description:
-  An comprehensive data analysis of Polkadot governance systems, including treasury management,
+  A comprehensive data analysis of Polkadot governance systems, including treasury management,
   referendum outcomes, voting patterns, and OpenGov referenda.
 keywords: [polkadot, governance, dashboard, dune]
 slug: ../polkadot-dashboards-governance

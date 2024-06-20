@@ -3,13 +3,7 @@ id: snowbridge-dashboards
 title: Snowbridge on BridgeHub
 sidebar_label: Snowbridge
 description: Snowbridge is a general-purpose, trustless, and decentralized bridge that connects
-  Polkadot and Ethereum. This bridge facilitates communication between any Polkadot parachain and
-  Ethereum using Polkadot's XCMP messaging protocol. Parachains can send XCM instructions to
-  BridgeHub, leveraging Snowbridge for cross-chain interactions.
-
-  For more details on bridging with Kusama, please refer to our [BridgeHub
-  Dashboard](https://dune.com/substrate/bridgehub).
-
+  Polkadot and Ethereum.
 keywords: [polkadot, ethereum, dashboard, dune, snowbridge]
 slug: ../snowbridge-dashboards
 ---
@@ -28,7 +22,7 @@ For more details on bridging with Kusama, please refer to our
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Snowbridge protocol:
+Here you will find a variety of dashboards that help visualize data from the Snowbridge protocol:
 
 - [Snowbridge](https://dune.com/substrate/snowbridge): A comprehensive analysis of Snowbridge,
   including: Ethereum Related On Chain Data Analysis, Analysis of Messages with Ethereum.
@@ -46,8 +40,7 @@ Data from the Snowbridge protocol is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific useful queries provided. Please check back later as this section
-will be updated with materialized queries for Snowbridge.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

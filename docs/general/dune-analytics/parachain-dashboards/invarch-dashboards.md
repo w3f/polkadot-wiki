@@ -22,7 +22,7 @@ all of their assets & execute transactions across any network.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Acala parachain:
+Here you will find a variety of dashboards that help visualize data from the Acala parachain:
 
 - [InvArch](https://dune.com/substrate/invarch): This dashboard provides a comprehensive view of
   InvArch chain-state and information about DAO Staking.
@@ -40,7 +40,7 @@ Data from the InvArch parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

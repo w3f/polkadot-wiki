@@ -3,9 +3,8 @@ id: manta-dashboards
 title: Manta Dashboards
 sidebar_label: Manta
 description:
-  Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting modular on-chain
-  compliance identities. Its suite of core products and technologies, including zkNFTs, staking and
-  ecosystem projects, offers user-friendly access to powerful ZK-enabled use cases.
+  Manta Atlantic is a fast and decentralized ZK Layer 1 supporting modular on-chain
+  compliance identities.
 keywords: [polkadot, dashboard, dune, manta]
 slug: ../manta-dashboards
 ---
@@ -14,13 +13,13 @@ slug: ../manta-dashboards
 
 ## Overview
 
-Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting modular on-chain
-compliance identities. Its suite of core products and technologies, including zkNFTs, staking and
+Manta Atlantic is a fast and decentralized ZK Layer 1 supporting modular on-chain
+compliance identities. Its suite of core products and technologies, including zkNFTs, staking, and
 ecosystem projects, offers user-friendly access to powerful ZK-enabled use cases.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Manta parachain:
+Here you will find a variety of dashboards that help visualize data from the Manta parachain:
 
 - [Manta Parachain Staking Dashboard](https://dune.com/substrate/manta): This dashboard provides
   various information on Manta Parachain Staking.
@@ -38,7 +37,7 @@ Data from the manta parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

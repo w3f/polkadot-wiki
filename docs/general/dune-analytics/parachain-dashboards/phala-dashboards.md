@@ -3,8 +3,8 @@ id: phala-dashboards
 title: Phala Dashboards
 sidebar_label: Phala
 description:
-  Phala is a parachain on Polkadot that provides a privacy-preserving computation and data
-  protection framework. It allows for the processing of sensitive data with guaranteed privacy.
+  Phala provides a privacy-preserving computation and data
+  protection framework. 
 keywords: [polkadot, dashboard, dune, phala, privacy]
 slug: ../phala-dashboards
 ---
@@ -18,7 +18,7 @@ framework. It allows for the processing of sensitive data with guaranteed privac
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Phala parachain:
+Here you will find a variety of dashboards that help visualize data from the Phala parachain:
 
 - [Phala Dashboard](https://dune.com/substrate/phala): A comprehensive view of activities within the
   Phala ecosystem.
@@ -41,7 +41,7 @@ Additional curated dataset from Phala team can be found at `dune.phala_network.*
 
 ## Useful Queries
 
-Currently, no specific queries have been provided. Please check back later for updates.
+Currently, no specific queries have been provided.
 
 ## Getting Started with Queries
 

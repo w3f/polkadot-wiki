@@ -3,11 +3,7 @@ id: neuroweb-dashboards
 title: Neuroweb Dashboards
 sidebar_label: Neuroweb
 description:
-  NeuroWeb is a decentralized AI blockchain that rewards knowledge creation and sharing. Its NEURO
-  token supports the AI economy by incentivizing contributions to the OriginTrail Decentralized
-  Knowledge Graph (DKG). NeuroWeb builds upon the groundwork established by its predecessor, the
-  OriginTrail Parachain (OTP). This transformation into NeuroWeb was facilitated through a community
-  governance vote on OTP in December 2023.
+  NeuroWeb is a decentralized AI blockchain that rewards knowledge creation and sharing.
 keywords: [polkadot, dashboard, dune, neuroweb, DKG, OTP, knowledgeasset]
 slug: ../neuroweb-dashboards
 ---
@@ -24,7 +20,7 @@ governance vote on OTP in December 2023.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Neuroweb parachain:
+Here you will find a variety of dashboards that help visualize data from the Neuroweb parachain:
 
 - [Neuroweb](https://dune.com/substrate/neuroweb): A comprehensive analysis of NeuroWeb, including:
   DKG, knowledge asset, asset, and XCM analysis.
@@ -42,8 +38,7 @@ Data from the NeuroWeb parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific useful queries provided. Please check back later as this section
-will be updated with materialized queries for Neuroweb.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

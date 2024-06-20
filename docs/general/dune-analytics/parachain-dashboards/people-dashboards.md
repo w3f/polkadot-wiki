@@ -3,7 +3,7 @@ id: people-dashboards
 title: People Dashboards
 sidebar_label: People
 description:
-  People is a parachain on Polkadot focused on decentralized identity and social interactions,
+  People's Chain focuses on decentralized identity and social interactions,
   enabling users to manage their digital identity and engage in community governance.
 keywords: [polkadot, dashboard, dune, people, identity]
 slug: ../people-dashboards
@@ -13,12 +13,12 @@ slug: ../people-dashboards
 
 ## Overview
 
-People is a parachain on Polkadot focused on decentralized identity and social interactions,
+People's Chain focuses on decentralized identity and social interactions,
 enabling users to manage their digital identity and engage in community governance.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the People parachain:
+Here you will find a variety of dashboards that help visualize data from the People parachain:
 
 - [People Dashboard](https://dune.com/substrate/people): A comprehensive view of identity management
   and social interaction activities within the People ecosystem.

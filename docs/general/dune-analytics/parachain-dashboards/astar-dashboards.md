@@ -3,10 +3,9 @@ id: astar-dashboards
 title: Astar Dashboards
 sidebar_label: Astar
 description:
-  Astar Network, previously known as Plasm, is a decentralized blockchain platform designed for
+  Astar Network is a blockchain platform designed for
   Web3. It is compatible with both EVM (Ethereum Virtual Machine) and WebAssembly, enabling seamless
-  interaction between the two environments. Developers can participate in the Build2Earn program to
-  earn rewards by creating decentralized applications.
+  interaction between the two environments.
 
 keywords: [polkadot, dashboard, dune, astar, dApp]
 slug: ../astar-dashboards
@@ -16,7 +15,7 @@ slug: ../astar-dashboards
 
 ## Overview
 
-Astar Network, previously known as Plasm, is a decentralized blockchain platform designed for Web3.
+Astar Network, previously known as Plasm, is a blockchain platform designed for Web3.
 It is compatible with both EVM (Ethereum Virtual Machine) and WebAssembly, enabling seamless
 interaction between the two environments. Developers can participate in the Build2Earn program to
 earn rewards by creating decentralized applications.
@@ -41,7 +40,7 @@ Data from the Astar parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

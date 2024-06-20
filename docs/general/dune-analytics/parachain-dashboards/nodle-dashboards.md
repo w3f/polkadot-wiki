@@ -4,8 +4,7 @@ title: Nodle Dashboards
 sidebar_label: Nodle
 description:
   Nodle is a parachain on Polkadot focused on providing connectivity and data liquidity for the
-  Internet of Things (IoT). It enables devices to securely connect, interact, and transact with
-  efficiency.
+  Internet of Things (IoT).
 keywords: [polkadot, dashboard, dune, nodle, IoT]
 slug: ../nodle-dashboards
 ---
@@ -20,7 +19,7 @@ efficiency.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Nodle parachain:
+Here you will find a variety of dashboards that help visualize data from the Nodle parachain:
 
 - [Nodle Dashboard](https://dune.com/substrate/nodle): A comprehensive view of IoT connectivity and
   transactions within the Nodle ecosystem.
@@ -41,7 +40,7 @@ Data from the Nodle parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, no specific queries have been provided. Please check back later for updates.
+Currently, no specific queries have been provided.
 
 ## Getting Started with Queries
 

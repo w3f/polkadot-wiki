@@ -3,8 +3,7 @@ id: project-dashboards
 title: Project Dashboards
 sidebar_label: Project Dashboards
 description:
-  A list of dashboards about some of the interesting projects in the Polkadot ecosystem. The
-  dashboards are created using Dune Analytics and DuneSQL.
+  A list of dashboards about some of the interesting projects in the Polkadot ecosystem.
 keywords: [polkadot, dashboard, dune, sql, dunesql]
 slug: ../project-dashboards
 ---

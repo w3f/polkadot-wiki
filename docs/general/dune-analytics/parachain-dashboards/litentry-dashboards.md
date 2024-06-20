@@ -4,10 +4,7 @@ title: Litentry Dashboards
 sidebar_label: Litentry
 description:
   Litentry is a decentralized identity aggregator that links user identities while ensuring privacy
-  protection, thus enabling various social and economic innovations. It features a three-layer
-  structure, comprising source data, address analysis, and identity aggregation layers, all secured
-  with Trusted Execution Environment (TEE) technology to enhance security and privacy. Litentry's
-  applications include airdrop whitelisting, credit scoring, and cross-platform reputation building.
+  protection.
 keywords: [polkadot, dashboard, dune, litentry, identity, LIT]
 slug: ../litentry-dashboards
 ---
@@ -24,7 +21,7 @@ applications include airdrop whitelisting, credit scoring, and cross-platform re
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Litentry parachain:
+Here you will find a variety of dashboards that help visualize data from the Litentry parachain:
 
 - [Litentry](https://dune.com/substrate/litentry): A comprehensive analysis of Litentry, including:
   Token Sent To Ethereum, Staking, Asset Analysis.
@@ -42,8 +39,7 @@ Data from the Litentry parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific useful queries provided. Please check back later as this section
-will be updated with materialized queries for Litentry.
+Currently, there are no specific queries provided. 
 
 ## Getting Started with Queries
 

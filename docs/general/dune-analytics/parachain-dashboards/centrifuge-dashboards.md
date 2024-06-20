@@ -31,7 +31,7 @@ By bringing the entire structured credit market onchain across securitization, t
 privacy, governance, and liquidity integrations, Centrifuge is building a more transparent,
 affordable, and limitless financial system.
 
-Some assets are managed on Ethereum, others are managed on Centrifuge (a polkadot parachain.)
+Some assets are managed on Ethereum, others are managed on Centrifuge.
 
 ## Featured Dashboards on Dune
 

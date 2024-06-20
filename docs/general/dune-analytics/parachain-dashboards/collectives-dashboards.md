@@ -4,14 +4,13 @@ title: Collectives Dashboards
 sidebar_label: Collectives
 description:
   The Technical Fellowship is a self-governing body of experts and developers of Polkadot and Kusama
-  networks protocols. It operates on-chain through the Polkadot Collectives system chain and
-  off-chain through the Polkadot Fellows repository.
+  networks protocols.
 
 keywords: [polkadot, dashboard, dune, collectives, fellowship]
 slug: ../collectives-dashboards
 ---
 
-# Manta Dashboards
+# Collectives Dashboards
 
 ## Overview
 
@@ -21,7 +20,7 @@ through the Polkadot Fellows repository.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Manta parachain:
+Here you will find a variety of dashboards that help visualize data from the Collectives parachain:
 
 - [Collectives](https://dune.com/substrate/collectives): This dashboard provides an overview of the
   Collectives ecosystem. On this dashboard, you can see the entire landscape of activities within
@@ -41,7 +40,7 @@ Data from the manta parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

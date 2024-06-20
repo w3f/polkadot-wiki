@@ -3,9 +3,8 @@ id: pendulum-dashboards
 title: Pendulum Dashboards
 sidebar_label: Pendulum
 description:
-  Pendulum is a parachain on Polkadot that focuses on bridging fiat currencies and decentralized
-  finance (DeFi). It aims to create a fully functional fiat-optimized blockchain that facilitates
-  open financial applications and connects them with the traditional financial sector.
+  Pendulum focuses on bridging fiat currencies and decentralized
+  finance (DeFi).
 keywords: [polkadot, dashboard, dune, pendulum, DeFi]
 slug: ../pendulum-dashboards
 ---
@@ -20,7 +19,7 @@ financial applications and connects them with the traditional financial sector.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Pendulum parachain:
+Here you will find a variety of dashboards that help visualize data from the Pendulum parachain:
 
 - [Pendulum on Polkadot](https://dune.com/substrate/pendulum): Explore comprehensive data
   visualizations tracking the integration of fiat and DeFi on the Pendulum parachain.
