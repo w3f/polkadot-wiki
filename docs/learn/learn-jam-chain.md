@@ -236,7 +236,7 @@ expected to extend to blockchain and consensus algorithms.
 
 ## SAFROLE
 
-SAFROLE is a block production algorithm, a simplification of
+[SAFROLE](./learn-safrole.md) is a block production algorithm, a simplification of
 [SASSAFRAS](https://research.web3.foundation/Polkadot/protocols/block-production/SASSAFRAS). It
 excludes some components that may be useful for parachains. So parachains may probably stick with
 SASSAFRAS rather SAFROLE. SAFROLE will be as simple as possible to:
