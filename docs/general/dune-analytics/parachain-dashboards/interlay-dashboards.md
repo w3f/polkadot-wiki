@@ -4,8 +4,6 @@ title: Interlay Dashboards
 sidebar_label: Interlay
 description:
   Interlay is a decentralized finance hub on Polkadot. It started as a native Bitcoin bridge,
-  allowing users to mint and redeem iBTC on the Polkadot network. iBTC is a trustless,
-  decentralized, and interoperable token redeemable one-for-one with native Bitcoin.
 keywords: [polkadot, dashboard, dune, interlay, DeFi]
 slug: ../interlay-dashboards
 ---
@@ -32,7 +30,7 @@ for a period of time.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Interlay parachain:
+Here you will find a variety of dashboards that help visualize data from the Interlay parachain:
 
 - [interlay on Polkadot](https://dune.com/substrate/polkadot-interlay): This dashboard provides a
   comprehensive view of iBTC minting, redeeming, lending, borrowing, and vault rewards.

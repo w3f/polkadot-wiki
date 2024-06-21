@@ -39,10 +39,6 @@ Data from the Phala parachain is organized into several key tables:
 
 Additional curated dataset from Phala team can be found at `dune.phala_network.*`
 
-## Useful Queries
-
-Currently, no specific queries have been provided.
-
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized

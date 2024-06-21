@@ -2,11 +2,9 @@
 id: bridgehub-dashboards
 title: BridgeHub Dashboards
 sidebar_label: BridgeHub
-description: Polkadot BridgeHub is a system parachain within the Polkadot ecosystem, designed to
-  enable trustless bridging between Polkadot and other blockchains such as Kusama and Ethereum.
-
-  The Ethereum to Polkadot BridgeHub primarily utilizes Snowbridge. For more details, visit our
-  [Snowbridge Dashboard](https://dune.com/substrate/snowbridge).
+description:
+  BridgeHub is a system parachain within the Polkadot ecosystem, designed to enable trustless
+  bridging between Polkadot and other blockchains such as Kusama and Ethereum.
 keywords: [polkadot, kusama, dashboard, dune, bridgehub, system-parachain]
 slug: ../bridgehub-dashboards
 ---
@@ -25,7 +23,7 @@ The Ethereum to Polkadot BridgeHub primarily utilizes Snowbridge. For more detai
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the BridgeHub parachain:
+Here you will find a variety of dashboards that help visualize data from the BridgeHub parachain:
 
 - [BridgeHub](https://dune.com/substrate/bridgehub): A comprehensive analysis of BridgeHub,
   including: Kusama Related On Chain Data Analysis, Analysis of Messages with Kusama.
@@ -43,7 +41,11 @@ Data from the BridgeHub parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided.
+Some of the most important queries for Bridgehub are mentioned here.
+
+| Title                          | Query                                               | Description                                          |
+| ------------------------------ | --------------------------------------------------- | ---------------------------------------------------- |
+| Bridgehub Messages with Kusama | [queries_3816910](https://dune.com/queries/3816910) | Find all message records between Polkadot and Kusama |
 
 ## Getting Started with Queries
 

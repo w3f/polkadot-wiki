@@ -3,9 +3,8 @@ id: polkadex-dashboards
 title: Polkadex Dashboards
 sidebar_label: Polkadex
 description:
-  Polkadex is a decentralized exchange that combines the benefits of
-  centralized and decentralized exchanges, offering a high-performance trading experience with
-  trustless custody.
+  Polkadex is a decentralized exchange parachain on Polkadot that combines the benefits of
+  centralized and decentralized exchanges.
 keywords: [polkadot, dashboard, dune, polkadex, decentralized exchange]
 slug: ../polkadex-dashboards
 ---
@@ -36,10 +35,6 @@ Data from the Polkadex parachain is organized into several key tables:
 - `polkadex.events`,
 - `polkadex.extrinsics`
 - `polkadex.transfers`
-
-## Useful Queries
-
-Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

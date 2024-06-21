@@ -3,8 +3,8 @@ id: collectives-dashboards
 title: Collectives Dashboards
 sidebar_label: Collectives
 description:
-  The Technical Fellowship is a self-governing body of experts and developers of Polkadot and Kusama
-  networks protocols.
+  Collectives is a self-governing body of experts and developers of Polkadot and Kusama networks
+  protocols.
 
 keywords: [polkadot, dashboard, dune, collectives, fellowship]
 slug: ../collectives-dashboards
@@ -37,10 +37,6 @@ Data from the manta parachain is organized into several key tables:
 - `collectives.events`,
 - `collectives.extrinsics`
 - `collectives.transfers`
-
-## Useful Queries
-
-Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

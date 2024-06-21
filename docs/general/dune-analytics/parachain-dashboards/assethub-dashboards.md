@@ -4,8 +4,7 @@ title: Asset Hub Dashboards
 sidebar_label: Asset Hub
 description:
   Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and
-  management of digital assets across various applications. It supports asset tokenization, trading,
-  and bridging services within the Polkadot ecosystem.
+  management of digital assets across various applications.
 keywords: [polkadot, dashboard, dune, assethub, digital assets]
 slug: ../assethub-dashboards
 ---
@@ -20,7 +19,7 @@ services within the Polkadot ecosystem.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Asset Hub parachain:
+Here you will find a variety of dashboards that help visualize data from the Asset Hub parachain:
 
 - [Asset Hub](https://dune.com/substrate/assethub): Explore comprehensive analytics on digital asset
   management and operations within the AssetHub parachain.
@@ -38,11 +37,11 @@ Data from the Asset Hub parachain is organized into several key tables:
 
 ## Useful Queries
 
-Here are **materialized** or **parameterized** queries for Unique that may be useful to build your
-own charts:
+Some of the most important queries for Asset Hub are mentioned here.
 
-- [Asset Hub Sum of Stablecoin on Each Chain by Time](https://dune.com/queries/3526956)
-  (`query_3526956(asset_id='[ASSET_ID]')`)
+| Title                                             | Query                                                                    | Description                                      |
+| ------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------ |
+| Asset Hub Sum of Stablecoin on Each Chain by Time | [query_3526956](https://dune.com/queries/3526956)(asset_id='[ASSET_ID]') | Find the sum of stablecoin on each chain by time |
 
 ## Getting Started with Queries
 

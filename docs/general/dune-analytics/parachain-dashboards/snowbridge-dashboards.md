@@ -2,8 +2,10 @@
 id: snowbridge-dashboards
 title: Snowbridge on BridgeHub
 sidebar_label: Snowbridge
-description: Snowbridge is a general-purpose, trustless, and decentralized bridge that connects
-  Polkadot and Ethereum.
+description:
+  Snowbridge is a general-purpose, trustless, and decentralized bridge that connects Polkadot and
+  Ethereum.
+
 keywords: [polkadot, ethereum, dashboard, dune, snowbridge]
 slug: ../snowbridge-dashboards
 ---
@@ -40,7 +42,12 @@ Data from the Snowbridge protocol is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided.
+Some of the most important queries for Snowbridge are mentioned here.
+
+| Title                                      | Query                                             | Description                               |
+| ------------------------------------------ | ------------------------------------------------- | ----------------------------------------- |
+| Snowbridge Tokensent                       | [query_3828274](https://dune.com/queries/3828274) | Find tokens sent from the Ethereum chain  |
+| Polkadot AssetHub ForeignAsset Mint & Burn | [query_3828126](https://dune.com/queries/3828126) | Find tokens minted and burned on Assethub |
 
 ## Getting Started with Queries
 

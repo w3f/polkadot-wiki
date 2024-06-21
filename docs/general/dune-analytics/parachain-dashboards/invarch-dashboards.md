@@ -3,8 +3,8 @@ id: invarch-dashboards
 title: InvArch Dashboards
 sidebar_label: InvArch
 description:
-  The InvArch Network is a Multichain Account abstraction hub, optimized for decentralized
-  operations & financial management spanning across every blockchain.
+  InvArch Network is a Multichain Account abstraction hub, optimized for decentralized operations &
+  financial management spanning across every blockchain.
 
 keywords: [polkadot, dashboard, dune, InvArch, DAO]
 slug: ../invarch-dashboards
@@ -37,10 +37,6 @@ Data from the InvArch parachain is organized into several key tables:
 - `invarch.events`,
 - `invarch.extrinsics`
 - `invarch.transfers`
-
-## Useful Queries
-
-Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

@@ -35,10 +35,6 @@ Data from the manta parachain is organized into several key tables:
 - `manta.extrinsics`
 - `manta.transfers`
 
-## Useful Queries
-
-Currently, there are no specific queries provided.
-
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized

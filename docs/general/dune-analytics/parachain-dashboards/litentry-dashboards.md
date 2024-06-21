@@ -39,7 +39,12 @@ Data from the Litentry parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. 
+Some of the most important queries for Litentry are mentioned here.
+
+| Title                               | Query                                             | Description                                      |
+| ----------------------------------- | ------------------------------------------------- | ------------------------------------------------ |
+| Litentry Latest Collator Info       | [query_3827164](https://dune.com/queries/3827164) | Find the latest collator information on Litentry |
+| Litentry LIT Token Sent To Ethereum | [query_3825036](https://dune.com/queries/3825036) | Find all records of LIT tokens sent to Ethereum  |
 
 ## Getting Started with Queries
 

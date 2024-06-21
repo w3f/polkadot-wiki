@@ -21,7 +21,7 @@ Liquidity providers can earn fees from the trades in the pools they provide liqu
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from StellaSwap:
+Here you will find a variety of dashboards that help visualize data from StellaSwap:
 
 - [stellaswap on Polkadot](https://dune.com/substrate/stellaswap): This dashboard provides a
   comprehensive view of DEX volumes and liquidity on StellaSwap.

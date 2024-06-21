@@ -3,8 +3,7 @@ id: people-dashboards
 title: People Dashboards
 sidebar_label: People
 description:
-  People's Chain focuses on decentralized identity and social interactions,
-  enabling users to manage their digital identity and engage in community governance.
+  People is a parachain on Polkadot focused on decentralized identity and social interactions.
 keywords: [polkadot, dashboard, dune, people, identity]
 slug: ../people-dashboards
 ---
@@ -39,9 +38,11 @@ Data from the People parachain is organized into several key tables:
 
 ## Useful Queries
 
-Here are **materialized** queries for Unique that may be useful to build your own charts:
+Some of the most important queries for People are mentioned here.
 
-- [Kusama People Chain - Identity History](https://dune.com/queries/3802618)
+| Title                                  | Query                                             | Description                                                  |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------ |
+| Kusama People Chain - Identity History | [query_3836167](https://dune.com/queries/3836167) | Find all identity history records on the Kusama People Chain |
 
 ## Getting Started with Queries
 

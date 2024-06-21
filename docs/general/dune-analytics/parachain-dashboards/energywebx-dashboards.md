@@ -3,9 +3,7 @@ id: energywebx-dashboards
 title: EnergyWebX Dashboards
 sidebar_label: EnergyWebX
 description:
-  EnergyWebX is a parachain focused on integrating blockchain technology within the energy sector,
-  aiming to enhance energy efficiency and promote renewable energy sources across the Polkadot
-  ecosystem.
+  EnergyWebX is a parachain focused on integrating blockchain technology within the energy sector.
 keywords: [polkadot, dashboard, dune, energywebx, energy]
 slug: ../energywebx-dashboards
 ---
@@ -20,7 +18,7 @@ ecosystem.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the EnergyWebX parachain:
+Here you will find a variety of dashboards that help visualize data from the EnergyWebX parachain:
 
 - [EnergyWebX](https://dune.com/substrate/energywebx): This dashboard provides a comprehensive view
   of the blockchain activities and energy transactions within the EnergyWebX network.
@@ -35,10 +33,6 @@ Data from the EnergyWebX parachain is organized into several key tables:
 - `energywebx.events`,
 - `energywebx.extrinsics`
 - `energywebx.transfers`
-
-## Useful Queries
-
-Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

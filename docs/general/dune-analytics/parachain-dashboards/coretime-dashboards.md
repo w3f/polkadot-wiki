@@ -3,8 +3,7 @@ id: coretime-dashboards
 title: Coretime Dashboards
 sidebar_label: Coretime
 description:
-  Coretime is a parachain on Polkadot that focuses on time-stamping and data certification,
-  providing a decentralized and secure mechanism for verifying data integrity.
+  Coretime is a parachain on Polkadot that focuses on time-stamping and data certification.
 keywords: [polkadot, dashboard, dune, coretime, data certification]
 slug: ../coretime-dashboards
 ---
@@ -18,7 +17,7 @@ a decentralized and secure mechanism for verifying data integrity.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Coretime parachain:
+Here you will find a variety of dashboards that help visualize data from the Coretime parachain:
 
 - [Coretime Dashboard](https://dune.com/substrate/coretime): Explore comprehensive data
   visualizations related to time-stamping services on Coretime.
@@ -38,10 +37,6 @@ Data from the Coretime parachain is organized into several key tables:
 - `coretime.events`,
 - `coretime.extrinsics`
 - `coretime.transfers`
-
-## Useful Queries
-
-Currently, no specific queries have been provided. Please check back later for updates.
 
 ## Getting Started with Queries
 

@@ -3,9 +3,7 @@ id: unique-dashboards
 title: Unique Dashboards
 sidebar_label: Unique
 description:
-  Unique is a leading parachain on Polkadot dedicated to enabling NFTs and their collections. It
-  provides a robust framework for users and developers to engage with non-fungible tokens across
-  different applications.
+  Unique is a leading parachain on Polkadot dedicated to enabling NFTs and their collections.
 keywords: [polkadot, dashboard, dune, unique, NFT]
 slug: ../unique-dashboards
 ---
@@ -20,7 +18,7 @@ different applications.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Unique parachain:
+Here you will find a variety of dashboards that help visualize data from the Unique parachain:
 
 - [Unique NFT Dashboard](https://dune.com/substrate/unique-nft-dashboard): A comprehensive view of
   NFT activities within the Unique parachain.
@@ -43,15 +41,14 @@ Data from the Unique parachain is organized into several key tables:
 
 ## Useful Queries
 
-Here are **materialized** queries for Unique that may be useful to build your own charts:
+Some of the most important queries for Unique are mentioned here.
 
-- [Unique ss58 and pubkey Maping Table](https://dune.com/queries/3632470)
-  (`dune.substrate.result_unique_ss58_pubkey_maping`)
-- [Unique NFT Info](https://dune.com/queries/3630265) (`dune.substrate.result_unique_nft_info`)
-- [Unique Collection Info](https://dune.com/queries/3628043)
-  (`dune.substrate.result_unique_collection_info`)
-- [Unique NFT Transaction Info](https://dune.com/queries/3631785)
-  (`dune.substrate.result_unique_nft_transaction_info`)
+| Title                               | Query                                             | Description                                 |
+| ----------------------------------- | ------------------------------------------------- | ------------------------------------------- |
+| Unique ss58 and pubkey Maping Table | [query_3632470](https://dune.com/queries/3632470) | Find all Unique ss58 and pubkey mappings    |
+| Unique NFT Info                     | [query_3630265](https://dune.com/queries/3630265) | Find all Unique NFT information             |
+| Unique Collection Info              | [query_3628043](https://dune.com/queries/3628043) | Find all Unique collection information      |
+| Unique NFT Transaction Info         | [query_3631785](https://dune.com/queries/3631785) | Find all Unique NFT transaction information |
 
 ## Getting Started with Queries
 

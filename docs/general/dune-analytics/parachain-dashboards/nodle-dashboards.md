@@ -38,10 +38,6 @@ Data from the Nodle parachain is organized into several key tables:
 - `nodle.extrinsics`
 - `nodle.transfers`
 
-## Useful Queries
-
-Currently, no specific queries have been provided.
-
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized

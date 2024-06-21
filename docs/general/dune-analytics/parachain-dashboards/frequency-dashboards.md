@@ -2,10 +2,7 @@
 id: frequency-dashboards
 title: Frequency Dashboards
 sidebar_label: Frequency
-description:
-  Frequency is a parachain on Polkadot focusing on decentralized communication solutions. It allows
-  the creation and management of decentralized networks for various applications, enhancing data
-  privacy and security.
+description: Frequency is a parachain on Polkadot focusing on decentralized communication solutions.
 keywords: [polkadot, dashboard, dune, frequency, communication]
 slug: ../frequency-dashboards
 ---
@@ -38,10 +35,6 @@ Data from the Frequency parachain is organized into several key tables:
 - `frequency.events`,
 - `frequency.extrinsics`
 - `frequency.transfers`
-
-## Useful Queries
-
-Currently, there are no specific queries provided.
 
 ## Getting Started with Queries
 

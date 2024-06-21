@@ -2,8 +2,7 @@
 id: neuroweb-dashboards
 title: Neuroweb Dashboards
 sidebar_label: Neuroweb
-description:
-  NeuroWeb is a decentralized AI blockchain that rewards knowledge creation and sharing.
+description: Neuroweb is a decentralized AI blockchain that rewards knowledge creation and sharing.
 keywords: [polkadot, dashboard, dune, neuroweb, DKG, OTP, knowledgeasset]
 slug: ../neuroweb-dashboards
 ---
@@ -38,7 +37,11 @@ Data from the NeuroWeb parachain is organized into several key tables:
 
 ## Useful Queries
 
-Currently, there are no specific queries provided.
+Some of the most important queries for Neuroweb are mentioned here.
+
+| Title                    | Query                                             | Description                                               |
+| ------------------------ | ------------------------------------------------- | --------------------------------------------------------- |
+| Neuroweb Knowledge Asset | [query_3695045](https://dune.com/queries/3695045) | Find all transfer records of knowledge assets on Neuroweb |
 
 ## Getting Started with Queries
 

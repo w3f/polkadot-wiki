@@ -29,7 +29,7 @@ Liquidity providers can earn fees from the trades in the pools they provide liqu
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Hydration parachain:
+Here you will find a variety of dashboards that help visualize data from the Hydration parachain:
 
 - [hydration on Polkadot](https://dune.com/substrate/hydradx): This dashboard provides a
   comprehensive view of DEX volumes and liquidity on the Hydration parachain.

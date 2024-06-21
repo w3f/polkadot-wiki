@@ -2,9 +2,7 @@
 id: acala-dashboards
 title: Acala Dashboards
 sidebar_label: Acala
-description:
-  Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain liquidity
-  and applications. It serves as a critical infrastructure layer for the Polkadot ecosystem.
+description: Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain
 keywords: [polkadot, dashboard, dune, acala, DeFi]
 slug: ../acala-dashboards
 ---
@@ -18,7 +16,7 @@ applications. It serves as a critical infrastructure layer for the Polkadot ecos
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Acala parachain:
+Here you will find a variety of dashboards that help visualize data from the Acala parachain:
 
 - [Acala on Polkadot](https://dune.com/substrate/acala): This dashboard provides a comprehensive
   view of financial activities and token dynamics within the Acala network.
@@ -33,10 +31,6 @@ Data from the Acala parachain is organized into several key tables:
 - `acala.events`
 - `acala.extrinsics`
 - `acala.transfers`
-
-## Useful Queries
-
-Currently, there are no specific queries provided. Please check back later for updates.
 
 ## Getting Started with Queries
 

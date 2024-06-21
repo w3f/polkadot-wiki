@@ -40,9 +40,11 @@ Data from the Pendulum parachain is organized into several key tables:
 
 ## Useful Queries
 
-Here are queries for Pendulum that may be useful to build your own charts:
+Some of the most important queries for Pendulum are mentioned here.
 
-- [Pendulum Spacewalk Transactions](https://dune.com/queries/3821151/6433579)
+| Title                           | Query                                             | Description                                               |
+| ------------------------------- | ------------------------------------------------- | --------------------------------------------------------- |
+| Pendulum Spacewalk Transactions | [query_3821151](https://dune.com/queries/3821151) | Find all Spacewalk transactions on the Pendulum parachain |
 
 ## Getting Started with Queries
 

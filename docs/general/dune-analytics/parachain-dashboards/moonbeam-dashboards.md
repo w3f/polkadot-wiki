@@ -2,10 +2,7 @@
 id: moonbeam-dashboards
 title: Moonbeam Dashboards
 sidebar_label: Moonbeam
-description:
-  Moonbeam is a fully Ethereum-compatible parachain on the Polkadot network, enabling developers to
-  deploy existing Solidity smart contracts and DApp frontends with minimal changes. It is designed
-  to provide interoperability and compatibility, bridging the gap between Ethereum and Polkadot.
+description: Moonbeam is a fully Ethereum-compatible parachain on the Polkadot network, enabling
 keywords: [polkadot, dashboard, dune, moonbeam, Ethereum]
 slug: ../moonbeam-dashboards
 ---
@@ -20,7 +17,7 @@ provide interoperability and compatibility, bridging the gap between Ethereum an
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Moonbeam parachain:
+Here you will find a variety of dashboards that help visualize data from the Moonbeam parachain:
 
 - [Moonbeam DEX](https://dune.com/substrate/moonbeam-dex): Explore decentralized exchange activities
   and token swaps within the Moonbeam ecosystem.
@@ -37,11 +34,6 @@ Data from the Moonbeam parachain is organized into several key tables:
 - `moonbeam.events`,
 - `moonbeam.extrinsics`
 - `moonbeam.transfers`
-
-## Useful Queries
-
-Currently, there are no specific useful queries provided. Please check back later as this section
-will be updated with materialized queries for Moonbeam.
 
 ## Getting Started with Queries
 

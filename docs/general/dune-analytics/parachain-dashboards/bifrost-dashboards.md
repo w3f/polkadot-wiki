@@ -21,7 +21,7 @@ They can also trade their vTokens in a DEX (stableswap) operating on the Bifrost
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Bifrost parachain:
+Here you will find a variety of dashboards that help visualize data from the Bifrost parachain:
 
 - [bifrost on Polkadot](https://dune.com/substrate/bifrost): This dashboard provides a comprehensive
   view of staking, value locked, and trading on Bifrost parachain.
