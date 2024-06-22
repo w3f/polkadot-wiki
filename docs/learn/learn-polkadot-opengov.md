@@ -613,6 +613,26 @@ knowledge to judge some referenda or might not have the time to read all referen
 allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
 entities.
 
+## Decision Deposits, Cancelling / Killing Referendum and the Governance Economic Game
+
+In Polkadot OpenGov, in order for a referendum to enter its Decision Period, someone must submit the Decision Deposit. The amount of DOT required for the Decision Deposit is dependent upon the privilege level of the track. For example, the Small Tipper track Decision Deposit is 1 DOT, it is very low due to due to the extremely minor amount of economic damage that the Small Tipper track can inflict upon the Polkadot network if malicious referendums are posted (Small Tipper can only spend up to 250 DOT). In contrast, the Root track can inflict massive amounts of economic damage to the Polkadot network, such as changing the entire network's runtime – as such, the Decision Deposit for the Root track is very high at 100,000 DOT. Every other track's Decision Deposits are set based on this principle. 
+
+Polkadot OpenGov has certain Origins that are dedicated to rejecting ongoing referendums, regardless of their status. These are known as the Governance Canceller and Governance Killer Origins.
+
+These Origins intervene in a referendum – if the referendum originating from Referendum Canceller or Referendum Killer is approved, it will immediately cancel or kill the targetted ongoing referendum regardless of its status.
+
+Cancellation itself is a type of referendum which must be voted on by the token holders in order to be executed. Cancellation comes with its own origin and track which has a lower lead time (Decision Period, etc.), and has Approval and Support curves with a steeper/sharper curve (meaning their criteria are much easier to meet over time) than most other Origins. This is due to the fact that the cancellation of a referendum usually comes with a sense of urgency.
+
+Governance Canceller aims to instantly cancel an already ongoing referendum. When a referendum is cancelled by this origin, both the Submission and Decision Deposit are refunded to their originators. An example of when a referendum might be considered to be cancelled is if the originator has made some human error in their referendum's contents, and hasn't necessarily tried to do anything malicious.
+
+Governance Killer aims to instantly kill an already ongoing referendum. This is where the governance economic game comes into play. Origins with high privilege levels, such as Root, have very high Decision Deposits which need to be posted in order for the referendum to enter the Decision Period.
+
+If a malicious actor submits a referendum, such as a referendum with Root origins which aims to set_code of the chains' runtime to something which will stop the chain producing blocks, then the Polkadot DAO can raise a Governance Killer referendum to punish this action. If the malicious referendum is killed via the Governance Killer origin, then both the Submission and Decision deposits are slashed, meaning that the account(s) which posted these deposits will lose those funds.
+
+This means that there is a severe economic consequence for malicious actors to attempt to raise a referendum which would have severe negative impacts on the chain, which in theory will stop any malicious actor from attempting to do this.
+
+The Decision Deposit for the Governance Killer track itself is quite high, this is in order to stop equally malicious actors from attempting to slash deposits of otherwise good referendum. An existing Governance Killer referendum can be killed by a subsequent Governance Killer referendum.
+
 ## Resources
 
 - [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
