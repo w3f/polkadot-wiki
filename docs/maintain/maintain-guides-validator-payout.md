@@ -169,38 +169,14 @@ than static, equilibrium. Potential validators will run different numbers of val
 different amounts of stake to them as time goes on, and in response to the actions of other
 validators on the network.
 
-## Slashing
-
-Although rewards are paid equally, slashes are relative to a validator's stake. Therefore, if you do
-have enough DOT to run multiple validators, it is in your best interest to do so. A slash of 30%
-will, of course, be more DOT for a validator with 18 DOT staked than one with 9 DOT staked.
-
-Running multiple validators does not absolve you of the consequences of misbehavior. Polkadot
-punishes attacks that appear coordinated more severely than individual attacks. You should not, for
-example, run multiple validators hosted on the same infrastructure. A proper multi-validator
-configuration would ensure that they do not fail simultaneously.
-
-Nominators have the incentive to nominate the lowest-staked validator, as this will result in the
-lowest risk and highest reward. This is due to the fact that while their vulnerability to slashing
-remains the same (since it is percentage-based), their rewards are higher since they will be a
-higher proportion of the total stake allocated to that validator.
-
-To clarify this, let us imagine two validators, `v1` and `v2`. Assume both are in the active set,
-have commission set to 0%, and are well-behaved. The only difference is that `v1` has 90 DOT
-nominating it and `v2` only has 10. If you nominate `v1`, it now has `90 + 10 = 100` DOT, and you
-will get 10% of the staking rewards for the next era. If you nominate `v2`, it now has
-`10 + 10 = 20` DOT nominating it, and you will get 50% of the staking rewards for the next era. In
-actuality, it would be quite rare to see such a large difference between the stake of validators,
-but the same principle holds even for smaller differences. If there is a 10% slash of either
-validator, then you will lose 1 DOT in each case.
-
 ## Nominators and Validator Payments
 
-Nominated stake allows you to "vote" for validators and share in the rewards (and slashing) without
-running a validator node yourself. Validators can choose to keep a percentage of the rewards due to
-their validator to "reimburse" themselves for the cost of running a validator node. Other than that,
-all rewards are shared based on the stake behind each validator. This includes the stake of the
-validator itself, plus any stake bonded by nominators.
+Nominated stake allows you to "vote" for validators and share in the rewards (and
+[slashing](../learn/learn-offenses.md)) without running a validator node yourself. Validators can
+choose to keep a percentage of the rewards due to their validator to "reimburse" themselves for the
+cost of running a validator node. Other than that, all rewards are shared based on the stake behind
+each validator. This includes the stake of the validator itself, plus any stake bonded by
+nominators.
 
 :::info
 

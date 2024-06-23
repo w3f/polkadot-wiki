@@ -33,6 +33,12 @@ community.
 
 ## Create a Referenda Proposal
 
+Before submitting a referendum, identify the right track and origin for it. For instance, if the
+referendum is for requesting funds from treasury, select the treasury track with appropriate spend
+limits. If the referendum is for a suggestion to make changes to the protocol, select the "Wish for
+Change" track. For more info, check the
+[tracks and origins](learn-polkadot-opengov.md#origins-and-tracks) of Polkadot OpenGov.
+
 ### Submitting a Preimage
 
 The act of creating a proposal is split from submitting the preimage for the proposal since the
@@ -41,7 +47,7 @@ come as a separate transaction means that another account could submit the preim
 the fee. The example below demonstrates the creation of a preimage to propose and approve a spend of
 treasury funds.
 
-![submit preimage](../assets/governance/opengov-submit-preimage.png)
+![submit preimage](../assets/treasury/OpenGov-Treasury-Preimage-SpendLocal.png)
 
 Follow the steps below to submit a preimage as shown in the screenshot above.
 
@@ -50,7 +56,8 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 3. From the _propose_ drop-down field, select `treasury`.
 4. From the unlabeled drop-down field to the right of the _propose_ drop-down field, select
    `spendLocal(amount, beneficiary)`.
-5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount.
+5. In the `amount: Compact<u128> (BalanceOf)` text field, enter the spend amount in
+   [plancks](learn-DOT.md#the-planck-unit).
 6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by
    default. Select the beneficiary from the `Id: AccountId` drop-down field.
 

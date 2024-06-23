@@ -121,12 +121,12 @@ algorithm to make decisions about which edges to keep and which to not.
 
 ## Staking Mechanics
 
-Avalanche uses a Delegated Proof-of-Stake mechanism without any slashing. The barrier to entry for
-staking as a full node validator is 2500 AVAX, and 25 AVAX to become a delegator. With a minimum
-stake period being two weeks and a maximum period being a year, for both validators and delegators.
-It is not clear from the Avalanche documentation what happens after a year, it is likely that
-validators will have to re-stake and start a new period. Validators acquire points for uptime and
-correctness of their work, and the remuneration of rewards depends on that.
+Avalanche uses a Delegated Proof-of-Stake mechanism without any [slashing](./learn-offenses.md). The
+barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a
+delegator. With a minimum stake period being two weeks and a maximum period being a year, for both
+validators and delegators. It is not clear from the Avalanche documentation what happens after a
+year, it is likely that validators will have to re-stake and start a new period. Validators acquire
+points for uptime and correctness of their work, and the remuneration of rewards depends on that.
 
 In Polkadot the minimum stake needed to be a validator is variable, same for being a nominator. The
 true minimum need to be competitive enough to be included in the active set for validators, or

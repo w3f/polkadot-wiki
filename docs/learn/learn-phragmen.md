@@ -590,11 +590,12 @@ cases, this could be an attack vector on the system, where nominators nominate m
 validators with small amounts of stake in order to slow the system at the next era change.
 
 While this would reduce network and on-chain load, being able to select only a single validator
-incurs some diversification costs. If the single validator that a nominator has nominated goes
-offline or acts maliciously, then the nominator incurs a risk of a significant amount of slashing.
-Nominators are thus allowed to nominate up to 16 different validators. However, after the weighted
-edge-reducing algorithm is run, the number of validators per nominator is minimized. Nominators are
-likely to see themselves nominating a single active validator for an era.
+incurs some diversification costs. If the single validator that a nominator has nominated acts
+maliciously, then the nominator incurs a risk of a significant amount of
+[slashing](./learn-offenses.md). Nominators are thus allowed to nominate up to 16 different
+validators. However, after the weighted edge-reducing algorithm is run, the number of validators per
+nominator is minimized. Nominators are likely to see themselves nominating a single active validator
+for an era.
 
 At each era change, as the algorithm runs again, nominators are likely to have a different validator
 than they had before (assuming a significant number of selected validators). Therefore, nominators

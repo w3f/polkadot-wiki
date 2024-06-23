@@ -65,7 +65,7 @@ library, a user can run an actual Substrate-compatible node.
 
 The UI connects to a node client that is directly integrated: **convenient**, **secure**, and
 **decentralized**. This is accomplished through Substrate connect using a
-[smoldot](https://github.com/paritytech/smoldot/) Wasm light client to securely connect to the
+[smoldot](https://github.com/smol-dot/smoldot) Wasm light client to securely connect to the
 blockchain network without relying on specific third parties.
 
 Application developers can now run a Substrate light client in any NodeJS environment

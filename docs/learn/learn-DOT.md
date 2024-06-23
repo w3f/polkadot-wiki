@@ -85,10 +85,10 @@ DOT will be used to facilitate the consensus mechanism that underpins Polkadot. 
 function and allow for valid transactions to be carried out across parachains, Polkadot will rely on
 holders of DOT to play active roles. Participants will put their DOT at risk (via staking) to
 perform these functions. The staking of DOT acts as a disincentive for malicious participants who
-will be punished by the network by getting their DOT slashed. The DOT required to participate in the
-network will vary depending on the activity that is being performed, the duration the DOT will be
-staked for, and the total number of DOT staked. For more information about staking on Polkadot visit
-[the dedicated staking page](./learn-staking.md).
+will be punished by the network by getting their DOT [slashed](./learn-offenses.md). The DOT
+required to participate in the network will vary depending on the activity that is being performed,
+the duration the DOT will be staked for, and the total number of DOT staked. For more information
+about staking on Polkadot visit [the dedicated staking page](./learn-staking.md).
 
 ### DOT for Parachain Slot Acquisition
 

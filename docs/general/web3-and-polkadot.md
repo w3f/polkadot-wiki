@@ -83,8 +83,7 @@ the chain. Although it can be possible to add an invalid block (a block with inv
 or censor certain transactions, if the blockchain network is not sufficiently decentralized. In
 decentralized proof-of-stake blockchains like
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially
-expensive, and attempting to do it can get you
-[slashed](../learn/learn-staking-advanced.md#slashing).
+expensive, and attempting to do it can get you [slashed](../learn/learn-offenses.md).
 
 So, with blockchain as a means of storing data and transactions permanently without an option to
 modify them, we can ensure what we cryptographically sign with our digital identity is set in stone

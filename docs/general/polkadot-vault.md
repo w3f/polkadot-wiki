@@ -13,7 +13,7 @@ The Polkadot Vault app rebranding is live on
 [iOS](https://apps.apple.com/us/app/parity-signer/id1218174838) and
 [Android](https://play.google.com/store/apps/details?id=io.parity.signer) devices. The source code
 of all versions can be downloaded on
-[the GitHub repo](https://github.com/paritytech/parity-signer/releases).
+[the GitHub repo](https://github.com/novasamatech/parity-signer/releases).
 
 The Polkadot Vault app is an air-gapped cold storage solution for all users, including developers
 and power users. See [Ledger](./ledger.md) devices for other cold storage solutions.
@@ -140,7 +140,8 @@ Ensure you always have your mnemonic seed phrase secure and available.
 :::
 
 To securely update the Polkadot Vault app follow the instructions
-[here](https://paritytech.github.io/parity-signer/tutorials/Upgrading.html). Briefly,
+[here](https://github.com/novasamatech/parity-signer/blob/master/docs/src/tutorials/Upgrading.md).
+Briefly,
 
 - backup your accounts (Backup key Set > write down the mnemonic seed phrase),
 - factory reset your Vault app (Settings > Wipe all Data),

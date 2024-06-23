@@ -21,9 +21,9 @@ started.
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
 only your own stake, but also the stake of your current nominators. If you make a mistake and get
-slashed, your tokens and your reputation will be at risk. However, running a validator can also be
-very rewarding, knowing that you contribute to the security of a decentralized network while growing
-your stash.
+[slashed](../learn/learn-offenses.md), your tokens and your reputation will be at risk. However,
+running a validator can also be very rewarding, knowing that you contribute to the security of a
+decentralized network while growing your stash.
 
 :::warning
 
@@ -61,10 +61,10 @@ For further reference, you may look at the
 {{ polkadot: [statistics for current, active validators.](https://polkadot.subscan.io/validator_list?status=validator) :polkadot }}
 {{ kusama: [statistics for current, active validators.](https://kusama.subscan.io/validator_list?status=validator) :kusama }}
 
-**Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
-insecure or improper setup may result in loss of DOT tokens! If you are not confident in your
-ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node
-instead.
+**Warning:** Any DOT that you stake for your validator is liable to be
+[slashed](../learn/learn-offenses.md), meaning that an insecure or improper setup may result in loss
+of DOT tokens! If you are not confident in your ability to run a validator node, it is recommended
+to nominate your DOT to a trusted validator node instead.
 
 ## Initial Set-up
 
@@ -683,6 +683,28 @@ in the field and click "Set Session Key".
 ![staking-session-result](../assets/guides/how-to-validate/set-session-key-2.png)
 
 Submit this extrinsic and you are now ready to start validating.
+
+### Setting the Node (aka Network) Key
+
+Validators must use a static network key to maintain a stable node identity across restarts.
+Starting with Polkadot version 1.11, a check is performed on startup, and the following error will be printed if a static node key is not set:
+
+```
+Error:
+0: Starting an authority without network key
+This is not a safe operation because other authorities in the network may depend on your node having a stable identity.
+Otherwise these other authorities may not being able to reach you.
+
+If it is the first time running your node you could use one of the following methods:
+1. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --base-path <YOUR_BASE_PATH>
+2. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --file <YOUR_PATH_TO_NODE_KEY>
+3. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --default-base-path
+4. [Unsafe] Pass --unsafe-force-node-key-generation and make sure you remove it for subsequent node restarts"
+```
+
+The recommended solution is to generate a node key and save it to a file using `polkadot key generate-node-key --file <PATH_TO_NODE_KEY>`, then attach it to your node with `--node-key-file <PATH_TO_NODE_KEY>`.
+
+Please see [polkadot-sdk#3852](https://github.com/paritytech/polkadot-sdk/pull/3852) for the rationale behind this change.
 
 ## Validate
 

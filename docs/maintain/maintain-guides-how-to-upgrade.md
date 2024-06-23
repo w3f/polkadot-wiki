@@ -45,7 +45,7 @@ the current session to finish and a further two sessions to elapse before they a
 Each validator server contains essential private keys in a folder called the _keystore_. These keys
 are used by a validator to sign transactions at the network level. If two or more validators sign
 certain transactions using the same keys, it can lead to an
-[equivocation slash](../learn/learn-staking.md/#slashing).
+[equivocation slash](../learn/learn-offenses.md).
 
 For this reason, it is advised that validators DO NOT CLONE or COPY the _keystore_ folder and
 instead generate session keys for each new validator instance.

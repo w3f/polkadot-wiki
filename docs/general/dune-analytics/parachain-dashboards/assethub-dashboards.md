@@ -3,7 +3,7 @@ id: assethub-dashboards
 title: Asset Hub Dashboards
 sidebar_label: Asset Hub
 description:
-  Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and
+  Asset Hub is a specialized system chain on Polkadot designed to facilitate the handling and
   management of digital assets across various applications.
 keywords: [polkadot, dashboard, dune, assethub, digital assets]
 slug: ../assethub-dashboards
