@@ -2,9 +2,7 @@
 id: pendulum-dashboards
 title: Pendulum Dashboards
 sidebar_label: Pendulum
-description:
-  Pendulum focuses on bridging fiat currencies and decentralized
-  finance (DeFi).
+description: Pendulum focuses on bridging fiat currencies and decentralized finance (DeFi).
 keywords: [polkadot, dashboard, dune, pendulum, DeFi]
 slug: ../pendulum-dashboards
 ---
@@ -34,13 +32,16 @@ Data from the Pendulum parachain is organized into several key tables:
 - `pendulum.balances`
 - `pendulum.blocks`
 - `pendulum.calls`
-- `pendulum.events`,
+- `pendulum.events`
 - `pendulum.extrinsics`
 - `pendulum.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=pendulum).
+
 ## Useful Queries
 
-Some of the most important queries for Pendulum are mentioned here.
+Some useful queries for Pendulum are provided:
 
 | Title                           | Query                                             | Description                                               |
 | ------------------------------- | ------------------------------------------------- | --------------------------------------------------------- |

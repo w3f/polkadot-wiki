@@ -41,16 +41,19 @@ Data from the hydration parachain is organized into several key tables:
 - `hydradx.balances`
 - `hydradx.blocks`
 - `hydradx.calls`
-- `hydradx.events`,
+- `hydradx.events`
 - `hydradx.extrinsics`
 - `hydradx.transfers`
 
 The `hydradx.traces` table is created by a snapshot script utilizing Hydration API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=hydradx).
+
 ## Useful Queries
 
-Some of the most important queries for Hydration are made available as materialized views.
+Some useful queries for Hydration are made available as materialized views.
 
 | Subject Area        | Query                                             | Materialized View                                 | Description                                                                          |
 | ------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ |

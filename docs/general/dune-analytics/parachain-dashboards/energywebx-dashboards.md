@@ -30,9 +30,21 @@ Data from the EnergyWebX parachain is organized into several key tables:
 - `energywebx.balances`
 - `energywebx.blocks`
 - `energywebx.calls`
-- `energywebx.events`,
+- `energywebx.events`
 - `energywebx.extrinsics`
 - `energywebx.transfers`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=energywebx).
+
+## Useful Queries
+
+Some useful queries for EnergyWebX are provided:
+
+| Title                           | Query                                             | Description                                                                    |
+| ------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| EnergyWebX Solutions and Groups | [query_3810095](https://dune.com/queries/3810095) | Provides a list of solutions and groups created within the EnergyWebX network. |
+| EnergyWebX Operators and Worker | [query_3813780](https://dune.com/queries/3813780) | Displays a list of operators and workers connected to the EnergyWebX network.  |
 
 ## Getting Started with Queries
 

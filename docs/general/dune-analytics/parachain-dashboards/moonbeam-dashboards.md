@@ -31,9 +31,21 @@ Data from the Moonbeam parachain is organized into several key tables:
 - `moonbeam.balances`
 - `moonbeam.blocks`
 - `moonbeam.calls`
-- `moonbeam.events`,
+- `moonbeam.events`
 - `moonbeam.extrinsics`
 - `moonbeam.transfers`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=moonbeam).
+
+## Useful Queries
+
+Some useful queries for Moonbeam are provided:
+
+| Title                     | Query                                             | Description                                                                                                                                                |
+| ------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Moonbeam Referenda Result | [query_3679042](https://dune.com/queries/3679042) | Provides details on the results of Moonbeam referenda, including the total aye and nay votes, support, and the result of the referendum.                   |
+| Moonbeam All Voting Types | [query_3642417](https://dune.com/queries/3642417) | Offers a comprehensive overview of all voting types on Moonbeam, including standard, split, and split abstain votes, voting conviction, and voting tokens. |
 
 ## Getting Started with Queries
 

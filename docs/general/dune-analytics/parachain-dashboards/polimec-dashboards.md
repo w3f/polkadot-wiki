@@ -2,8 +2,7 @@
 id: polimec-dashboards
 title: Polimec Dashboards
 sidebar_label: Polimec
-description:
-  Polimec offers a decentralized, transparent, and compliant method for fundraising.
+description: Polimec offers a decentralized, transparent, and compliant method for fundraising.
 keywords: [polkadot, dashboard, dune, polimec, PLMC, funding, staking]
 slug: ../polimec-dashboards
 ---
@@ -29,17 +28,22 @@ Data from the polimec parachain is organized into several key tables:
 - `polimec.balances`
 - `polimec.blocks`
 - `polimec.calls`
-- `polimec.events`,
+- `polimec.events`
 - `polimec.extrinsics`
 - `polimec.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=polimec).
+
 ## Useful Queries
 
-Some of the most important queries for Polimec are mentioned here.
+Some useful queries for Polimec are provided:
 
-| Title                        | Query                                             | Description                                     |
-| ---------------------------- | ------------------------------------------------- | ----------------------------------------------- |
-| Polimec Latest Collator Info | [query_3776548](https://dune.com/queries/3776548) | Find the latest collator information on Polimec |
+| Title                              | Query                                             | Description                                                           |
+| ---------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------- |
+| Polimec Latest Collator Info       | [query_3776548](https://dune.com/queries/3776548) | Find the latest collator information on Polimec                       |
+| Plimec All Evaluations             | [query_3802921](https://dune.com/queries/3802921) | Get all evaluation information for all projects on Polimec            |
+| Polimec All Funding Participations | [query_3850228](https://dune.com/queries/3850228) | Get all funding participation information for all projects on Polimec |
 
 ## Getting Started with Queries
 

@@ -33,13 +33,16 @@ Data from the Litentry parachain is organized into several key tables:
 - `litentry.balances`
 - `litentry.blocks`
 - `litentry.calls`
-- `litentry.events`,
+- `litentry.events`
 - `litentry.extrinsics`
 - `litentry.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=litentry).
+
 ## Useful Queries
 
-Some of the most important queries for Litentry are mentioned here.
+Some useful queries for Litentry are provided:
 
 | Title                               | Query                                             | Description                                      |
 | ----------------------------------- | ------------------------------------------------- | ------------------------------------------------ |

@@ -34,9 +34,21 @@ Data from the InvArch parachain is organized into several key tables:
 - `invarch.balances`
 - `invarch.blocks`
 - `invarch.calls`
-- `invarch.events`,
+- `invarch.events`
 - `invarch.extrinsics`
 - `invarch.transfers`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=invarch).
+
+## Useful Queries
+
+Some useful queries for InvArch are provided:
+
+| Title                                   | Query                                             | Description                                                                                                                                                                           |
+| --------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| InvArch DAO Staking All events          | [query_3753984](https://dune.com/queries/3753984) | This query provides a comprehensive overview of all events related to DAO staking on the InvArch network, including details about the staking amount, staker address, and event type. |
+| InvArch DAO staking info by DAO and Era | [query_3755288](https://dune.com/queries/3755288) | Access detailed information on DAO staking activities within the InvArch network, categorized by DAO and era for historical comparison.                                               |
 
 ## Getting Started with Queries
 

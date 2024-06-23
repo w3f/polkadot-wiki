@@ -70,8 +70,19 @@ ecosystem.
 
 ## Key Tables
 
-Data from the Polkadot network is organized into several key tables: `polkadot.balances`,
-`polkadot.blocks`, `polkadot.calls`, `polkadot.events`, `polkadot.extrinsics`, `polkadot.transfers`
+Data from the Polkadot network is organized into several key tables:
+
+- `polkadot.balances`
+- `polkadot.blocks`
+- `polkadot.calls`
+- `polkadot.events`
+- `polkadot.extrinsics`
+- `polkadot.transfers`
+- `polkadot.traces`
+- `polkadot.stakings`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=polkadot).
 
 ## Useful Queries
 

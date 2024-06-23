@@ -12,8 +12,8 @@ slug: ../people-dashboards
 
 ## Overview
 
-People's Chain focuses on decentralized identity and social interactions,
-enabling users to manage their digital identity and engage in community governance.
+People's Chain focuses on decentralized identity and social interactions, enabling users to manage
+their digital identity and engage in community governance.
 
 ## Featured Dashboards on Dune
 
@@ -32,13 +32,16 @@ Data from the People parachain is organized into several key tables:
 - `people.balances`
 - `people.blocks`
 - `people.calls`
-- `people.events`,
+- `people.events`
 - `people.extrinsics`
 - `people.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=people).
+
 ## Useful Queries
 
-Some of the most important queries for People are mentioned here.
+Some useful queries for People are provided:
 
 | Title                                  | Query                                             | Description                                                  |
 | -------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------ |

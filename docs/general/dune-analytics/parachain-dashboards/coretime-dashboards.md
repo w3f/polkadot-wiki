@@ -34,9 +34,20 @@ Data from the Coretime parachain is organized into several key tables:
 - `coretime.balances`
 - `coretime.blocks`
 - `coretime.calls`
-- `coretime.events`,
+- `coretime.events`
 - `coretime.extrinsics`
 - `coretime.transfers`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=coretime).
+
+## Useful Queries
+
+Some useful queries for Coretime are provided:
+
+| Title                           | Query                                             | Description                                                                                                                                                                                            |
+| ------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Kusama Coretime Core Statistics | [query_3765036](https://dune.com/queries/3765036) | This query provides detailed statistics on Coretime sales activities on the Kusama network, including sale start time, lead-in length, start and regular prices, region details, cores sold, and more. |
 
 ## Getting Started with Queries
 

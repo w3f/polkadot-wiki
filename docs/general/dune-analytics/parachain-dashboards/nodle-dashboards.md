@@ -34,9 +34,20 @@ Data from the Nodle parachain is organized into several key tables:
 - `nodle.balances`
 - `nodle.blocks`
 - `nodle.calls`
-- `nodle.events`,
+- `nodle.events`
 - `nodle.extrinsics`
 - `nodle.transfers`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=nodle).
+
+## Useful Queries
+
+Some useful queries for Nodle are provided:
+
+| Title              | Query                                             | Description                                                                 |
+| ------------------ | ------------------------------------------------- | --------------------------------------------------------------------------- |
+| Nodle Mint Uniques | [query_3753531](https://dune.com/queries/3753531) | This query retrieves data on Unique NFTs minted within the Nodle ecosystem. |
 
 ## Getting Started with Queries
 

@@ -36,18 +36,21 @@ Data from the Snowbridge protocol is organized into several key tables:
 - `bridgehub.balances`
 - `bridgehub.blocks`
 - `bridgehub.calls`
-- `bridgehub.events`,
+- `bridgehub.events`
 - `bridgehub.extrinsics`
 - `bridgehub.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=bridgehub).
+
 ## Useful Queries
 
-Some of the most important queries for Snowbridge are mentioned here.
+Some useful queries for Snowbridge are provided:
 
-| Title                                      | Query                                             | Description                               |
-| ------------------------------------------ | ------------------------------------------------- | ----------------------------------------- |
-| Snowbridge Tokensent                       | [query_3828274](https://dune.com/queries/3828274) | Find tokens sent from the Ethereum chain  |
-| Polkadot AssetHub ForeignAsset Mint & Burn | [query_3828126](https://dune.com/queries/3828126) | Find tokens minted and burned on Assethub |
+| Title                                      | Query                                             | Description                                                                               |
+| ------------------------------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Snowbridge Tokensent                       | [query_3828274](https://dune.com/queries/3828274) | Monitoring Tokensent from Snowbridge's gateway contract on Ethereum to Polkadot BridgeHub |
+| Polkadot AssetHub ForeignAsset Mint & Burn | [query_3828126](https://dune.com/queries/3828126) | Monitoring ForeignAsset Mint & Burn                                                       |
 
 ## Getting Started with Queries
 

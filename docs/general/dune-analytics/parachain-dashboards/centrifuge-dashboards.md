@@ -49,16 +49,19 @@ Data from the centrifuge parachain is organized into several key tables: `centri
 - `centrifuge.balances`
 - `centrifuge.blocks`
 - `centrifuge.calls`
-- `centrifuge.events`,
+- `centrifuge.events`
 - `centrifuge.extrinsics`
 - `centrifuge.transfers`
 
 The `centrifuge.traces` table is created by a snapshot script utilizing Centrifuge API calls to
 fetch accurate values which would be difficult to calculate from the blockchain events alone.
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=centrifuge).
+
 ## Useful Queries
 
-Some of the most important queries for Centrifuge are mentioned here.
+Some useful queries for Centrifuge are provided:
 
 | Subject Area                | Query                                             | Description                                                     |
 | --------------------------- | ------------------------------------------------- | --------------------------------------------------------------- |

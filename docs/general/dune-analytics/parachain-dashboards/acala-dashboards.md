@@ -32,6 +32,21 @@ Data from the Acala parachain is organized into several key tables:
 - `acala.extrinsics`
 - `acala.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=acala).
+
+## Useful Queries
+
+Some useful queries for Acala are provided:
+
+| Title                                            | Query                                             | Description                                                                               |
+| ------------------------------------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Acala Asset Exchange Rate by Date                | [query_3672976](https://dune.com/queries/3672976) | Retrieves historical exchange rates for Acala assets, date-wise breakdown                 |
+| Acala Assets Most Frequently Subject to Swapping | [query_3673478](https://dune.com/queries/3673478) | This query identifies which Acala assets are swapped the most frequently on the platform. |
+
+These descriptions aim to provide more context and details about what each query does and the
+insights they offer.
+
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized

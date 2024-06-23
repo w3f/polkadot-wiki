@@ -31,13 +31,16 @@ Data from the NeuroWeb parachain is organized into several key tables:
 - `neuroweb.balances`
 - `neuroweb.blocks`
 - `neuroweb.calls`
-- `neuroweb.events`,
+- `neuroweb.events`
 - `neuroweb.extrinsics`
 - `neuroweb.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=neuroweb).
+
 ## Useful Queries
 
-Some of the most important queries for Neuroweb are mentioned here.
+Some useful queries for Neuroweb are provided:
 
 | Title                    | Query                                             | Description                                               |
 | ------------------------ | ------------------------------------------------- | --------------------------------------------------------- |
