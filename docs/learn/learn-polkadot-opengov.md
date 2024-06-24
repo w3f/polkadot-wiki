@@ -139,49 +139,6 @@ up-to-date with governance matters and can still make their votes count through 
 | Only _aye_ or _nay_ votes possible.                                                                                                                                                                                                                                                                                                                    | Voters can have the additional voting options of abstaining or splitting votes.                                                                                                                                                                        | More ways to engage in voting and increase turnout.                                                                                                                |
 | Voters can decide to delegate votes to another account.                                                                                                                                                                                                                                                                                                | Voters can use [multirole delegations](#multirole-delegation) and delegate votes to different accounts depending on origins.                                                                                                                           | More agile delegations tailored by expertise.                                                                                                                      |
 
-## Proposals
-
-:::info Starting a proposal in Governance v1
-
-See [this page](./archive/learn-governance.md#proposals) for more information about starting
-referenda in Governance v1.
-
-:::
-
-In Polkadot OpenGov, anyone can start a referendum at any time and do so as often as they wish.
-Previous features were expanded and improved, most notably
-[**Origins and Tracks**](#origins-and-tracks) help facilitate the flow and processing of the
-submitted referenda.
-
-### Cancelling and Blacklisting
-
-:::info Cancelling Referenda in Governance v1
-
-See [this page](./archive/learn-governance.md#cancelling-proposals) for more information about
-cancelling referenda in Governance v1.
-
-:::
-
-In Polkadot OpenGov, there is a special operation called **Cancellation** for intervening with a
-proposal already being voted on. The operation will immediately reject an ongoing referendum
-regardless of its status. There is also a provision to ensure the deposit of the proposer is slashed
-if the proposal is malicious or spam.
-
-Cancellation is a governance operation the network must vote on to be executed. Cancellation comes
-with [its own Origin and Track](./learn-polkadot-opengov-origins.md#referendum-canceller) which has
-a low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for
-passing, given that it is invoked with a sense of urgency.
-
-For more information about how to cancel a referendum, see the
-[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
-
-:::info Blacklisting
-
-Blacklisting referenda in Polkadot OpenGov is
-[the same as in Governance v1](./archive/learn-governance.md#blacklisting-proposals).
-
-:::
-
 ## Referenda
 
 :::info Public and Council Referenda in Governance v1
@@ -194,9 +151,11 @@ referenda in Governance v1.
 
 :::
 
-**In Polkadot OpenGov all referenda are public.** The
-[Technical Fellowship](./learn-polkadot-technical-fellowship.md) has the option to
-[whitelist](#whitelisting) referenda that can be then proposed in the track with
+**In Polkadot OpenGov all referenda are public.** Anyone can start a referendum at any time and do
+so as often as they wish. Previous features were expanded and improved, most notably
+[**Origins and Tracks**](#origins-and-tracks) help facilitate the flow and processing of the
+submitted referenda. The [Technical Fellowship](./learn-polkadot-technical-fellowship.md) has the
+option to [whitelist](#whitelisting) referenda that can be then proposed in the track with
 [whitelist origin](./learn-polkadot-opengov-origins.md#whitelisted-caller).
 
 ### Referenda Timeline
@@ -230,6 +189,16 @@ three criteria:
   reviewed and decided upon carries the risk of using up the limited spots available in the
   referenda queue. Having a more significant but refundable deposit requirement makes sense to help
   mitigate spam. Failing to submit the decision deposit will lead to a referendum _timeout_.
+
+:::info Decision Deposit Amounts
+
+In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision
+Period. The number of tokens required for the Decision Deposit depends on the track’s privilege
+level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on
+the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda
+on the Root track can inflict more significant harm, such as changing the entire network's runtime.
+
+:::
 
 Until they are in the lead-in period, proposals remain undecided. Once the criteria above are met,
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
@@ -474,6 +443,45 @@ In Polkadot OpenGov, the proposer suggests the enactment period, but there is al
 each Origin Track. For example, `root` Origin approvals require an extended period because of the
 importance of the changes they bring to the network.
 
+### Cancelling, Killing & Blacklisting
+
+:::info Cancelling Referenda in Governance v1
+
+See [this page](./archive/learn-governance.md#cancelling-proposals) for more information about
+cancelling referenda in Governance v1.
+
+:::
+
+Polkadot OpenGov has two origins dedicated to rejecting ongoing referenda:
+[Referendum Canceller](./learn-polkadot-opengov-origins.md#referendum-canceller) and
+[Referendum Killer](./learn-polkadot-opengov-origins.md#referendum-killer).
+
+Referendum Canceller aims to cancel an already ongoing referendum. When this origin cancels a
+referendum, the Submission and Decision Deposit are refunded to their originators. An example of
+when a referendum might be considered to be canceled is if the originator has made some errors in
+creating the preimage and did not necessarily do anything malicious. Cancellation has a lower
+Decision Period, and Approval and Support criteria are much easier to meet over time than most other
+Origins. This is because the cancellation of a referendum usually comes with a sense of urgency.
+
+Referendum Killer aims to instantly kill an ongoing referendum, slashing submission and decision
+deposit (the account(s) that posted these deposits will lose those funds). This origin can be
+engaged if, for example, a malicious actor submits a referendum on the Root Track to set the code of
+the chains' runtime to stop block production.
+
+The Decision Deposit for the Referendum Killer track itself is high to prevent malicious actors from
+attempting to slash deposits of good referenda. A subsequent Referendum Killer can kill an existing
+Referendum Killer.
+
+For more information about how to cancel or kill a referendum, see the
+[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
+
+:::info Blacklisting
+
+Blacklisting referenda in Polkadot OpenGov is
+[the same as in Governance v1](./archive/learn-governance.md#blacklisting-proposals).
+
+:::
+
 ## Voting on a Referendum
 
 If you are a voter, it means that you will vote with your
@@ -612,20 +620,6 @@ while keeping the overall design censorship-free. Also, voters might not have th
 knowledge to judge some referenda or might not have the time to read all referenda. Delegations
 allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
 entities.
-
-## Decision Deposit Amounts
-
-In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the track’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda on the Root track can inflict more significant harm, such as changing the entire network's runtime.
-
-## Cancelling & Killing Referenda
-
-Polkadot OpenGov has two origins dedicated to rejecting ongoing referenda: Referendum Canceller and Referendum Killer.
-
-Referendum Canceller aims to cancel an already ongoing referendum. When this origin cancels a referendum, the Submission and Decision Deposit are refunded to their originators. An example of when a referendum might be considered to be canceled is if the originator has made some errors in creating the preimage and did not necessarily do anything malicious. Cancellation has a lower Decision Period, and Approval and Support criteria are much easier to meet over time than most other Origins. This is because the cancellation of a referendum usually comes with a sense of urgency.
-
-Referendum Killer aims to instantly kill an ongoing referendum, slashing submission and decision deposit (the account(s) that posted these deposits will lose those funds). This origin can be engaged if, for example, a malicious actor submits a referendum on the Root Track to set the code of the chains' runtime to stop block production.
-
-The Decision Deposit for the Referendum Killer track itself is high to prevent malicious actors from attempting to slash deposits of good referenda. A subsequent Referendum Killer can kill an existing Referendum Killer
 
 ## Resources
 
