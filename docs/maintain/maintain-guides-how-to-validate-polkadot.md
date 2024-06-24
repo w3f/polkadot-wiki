@@ -687,7 +687,8 @@ Submit this extrinsic and you are now ready to start validating.
 ### Setting the Node (aka Network) Key
 
 Validators must use a static network key to maintain a stable node identity across restarts.
-Starting with Polkadot version 1.11, a check is performed on startup, and the following error will be printed if a static node key is not set:
+Starting with Polkadot version 1.11, a check is performed on startup, and the following error will
+be printed if a static node key is not set:
 
 ```
 Error:
@@ -702,9 +703,12 @@ If it is the first time running your node you could use one of the following met
 4. [Unsafe] Pass --unsafe-force-node-key-generation and make sure you remove it for subsequent node restarts"
 ```
 
-The recommended solution is to generate a node key and save it to a file using `polkadot key generate-node-key --file <PATH_TO_NODE_KEY>`, then attach it to your node with `--node-key-file <PATH_TO_NODE_KEY>`.
+The recommended solution is to generate a node key and save it to a file using
+`polkadot key generate-node-key --file <PATH_TO_NODE_KEY>`, then attach it to your node with
+`--node-key-file <PATH_TO_NODE_KEY>`.
 
-Please see [polkadot-sdk#3852](https://github.com/paritytech/polkadot-sdk/pull/3852) for the rationale behind this change.
+Please see [polkadot-sdk#3852](https://github.com/paritytech/polkadot-sdk/pull/3852) for the
+rationale behind this change.
 
 ## Validate
 
