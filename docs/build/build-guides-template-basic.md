@@ -97,35 +97,68 @@ FRAME and Substrate. All you need to know is the following:
 When we compile our template, we can extract the runtime code as a `.wasm` blob, which is one of the
 key artifacts for our core.
 
-For the sake of this example, we won't go into adding or modifying any pallets. However, this is
-definitely a next step after you get used to deploying your parachain on Rococo!
-
-### Generating the Runtime and Genesis
-
-Be sure first to build the node using the following (assuming you're within
-`polkadot-sdk/templates/parachain`):
+Build the node using the following:
 
 ```shell
 cargo build -p parachain-template-node --release
 ```
 
-Once it is built, you will have a runtime WebAssembly blob within
-`target/release/wbuild/parachain-template-runtime` titled `parachain_template_runtime.wasm`. This
-blob is needed to generate the chain specification.
+For the sake of this example, we won't go into adding or modifying any pallets. However, this is
+definitely a next step after you get used to deploying your parachain on Rococo!
 
-```shell
-../../target/release/parachain-template-node export-genesis-state genesis
+### Generating the Chain Specification
+
+> Ensure you have
+> the[ `chain-spec-builder`](./build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder)
+> installed before following along!
+
+By now, your `./target` folder should look something akin to:
+
+```sh
+./target/release/wbuild/parachain-template-runtime
+├── Cargo.lock
+├── Cargo.toml
+├── parachain_template_runtime.compact.compressed.wasm
+├── parachain_template_runtime.compact.wasm
+├── parachain_template_runtime.wasm
+├── src
+└── target
 ```
 
-Within `polkadot-sdk/templates/parachain`, you should now have two files:
+We'll be using `parachain_template_runtime.wasm` in conjunction with `chain-spec-builder` to build
+our chain specification, which we can then use to generate our genesis code and WASM bundle.
 
-- **`genesis`** - the initial state of your parachain.
-- **`genesis-wasm`** - the initial runtime WebAssembly blob of your parachain.
+Although you may want to create a preset, we can use the default one and customize it as we need to
+directly:
 
-### Generating The Chain Spec
+```sh
+chain-spec-builder create -v -r ./target/release/wbuild/parachain-template-runtime/parachain_template_runtime.wasm default
+```
 
-Using the `chain-spec-builder` tool, we can generate a clean chain specification, upon which we can
-modify accordingly:
+You should now see `chain_spec.json` generated, with the message `Genesis config verification: OK`.
+
+Next, you'll need to modify a few things in your chain spec:
+
+```json
+  "name": "CHAIN_NAME_HERE",
+  "id": "live",
+  "chainType": "Live",
+  "bootNodes": [],
+  "telemetryEndpoints": null,
+  "protocolId": "chain-live",
+  "relay_chain": "paseo",
+  "para_id": PARA_ID_HERE,
+```
+
+You will also need to replace the following with your ParaID:
+
+```json
+"parachainInfo": {
+      "parachainId": PARA_ID_HERE
+   },
+```
+
+Use this checklist to ensure all the necessary fields are in place:
 
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
@@ -143,6 +176,32 @@ deployment. This function should replace the `local_testnet_config` function wit
 `node/src/chain_spec.rs`:
 
 Once this is in place, you are ready to compile your parachain node.
+
+For more information on chain specifications in general,
+[check out the reference document from the Polkadot SDK.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/chain_spec_genesis/index.html)
+
+### Generating the Runtime and Genesis
+
+With our chain specification successfully generated, we can move to generating the genesis state and
+runtime.
+
+Generate the genesis as follows:
+
+```shell
+polkadot-parachain export-genesis-head --chain chain_spec.json genesis
+```
+
+Although you can use the WebAssembly within `wbuild`, for ease of access you can also regenerate
+your WebAssembly blob with the following:
+
+```shell
+polkadot-parachain export-genesis-wasm --chain chain_spec.json genesis-wasm
+```
+
+Within `polkadot-sdk/templates/parachain`, you should now have two files:
+
+- **`genesis`** - the initial state of your parachain.
+- **`genesis-wasm`** - the initial runtime WebAssembly blob of your parachain.
 
 ## Running Your Collator
 

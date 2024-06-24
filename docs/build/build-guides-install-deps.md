@@ -421,11 +421,24 @@ rustc 1.63.0-nightly (e7144
 
 ## Install `polkadot-parachain` and `chain-spec-builder`
 
+The `polkadot-parachain` can be used a universal collator instance for running most of the
+parachains (an
+["omninode beta"](https://forum.polkadot.network/t/polkadot-parachain-omni-node-gathering-ideas-and-feedback/7823)).
+It can be installed as follows:
+
 > You can change `--tag` to the specific release of your choice
 
 ```sh
 cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.13.0 --force polkadot-parachain-bin
 ```
+
+The `chain-spec-builder` is how you will generate chain specifications from different presets. Each
+preset represents different type of your network, such as development, testnet, and live networks.
+It requires a `wasm` runtime bundle to generate the chain specification from.
+
+It can be installed as follows:
+
+> Note that chain-spec-builder only works with select Polkadot SDK versions (`<v1.13.0`)
 
 ```sh
 cargo install staging-chain-spec-builder
