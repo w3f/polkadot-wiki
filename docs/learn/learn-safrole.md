@@ -17,17 +17,28 @@ keywords:
 slug: ../learn-safrole
 ---
 
-> This page will be updated as progress ensues.
+SAFROLE (previously known as SASSAFRAS) is a SNARK-based block production algorithm. zk-SNARKs are
+used to construct a ringVRF, thereby providing anonomity in the validator selection process. SAFROLE
+also aims to deliver (nearly) fork-free, constant time block production. SAFROLE is an upgrade to
+BABE, the block production portion of the
+[hybrid consensus model](https://wiki.polkadot.network/docs/learn-consensus#hybrid-consensus) that
+Polkadot uses (and later JAM).
 
-SAFROLE is a SNARK-based block production algorithm. It uses SNARK specifically for their anonymity
-features. And it delivers constant time block production, almost entirely fork-free. There are a
-couple of instances where forks could possibly arise. They basically only happen when there's a net
-split or someone's being intentionally malicious. The great value for the anonymity is not
-specifically to keep validators' identities sort of a secret. In fact, when they actually produce a
-block, they give away their identity anyway, but rather for ensuring that the block production
-mechanism itself is secure, basically to avoid spamming.
+zkSNARKs, in conjunction with a RingVRF, are used to ensure that slots are not preassigned to
+malicious actors that are not part of the active validator set. The use of a zkSNARK would allow for
+the anonymity to be preserved when a validator submits a ticket, proving they are in the active set
+without revealing who their identity. This solution preserves anonymity within the block production
+mechanism and prevents the likelihood of spam.
+
+Part of how SAFROLE minimizes the possibility of forks is by limiting the possibility of multiple
+valid authors per six-second timeslot (the time to produce a block) where a valid, possible author
+must only be a single key-holder from within a pre-specified group of validators. In other words, it
+limits the possibility of two heads of the chain (built on the same parent) to form. More on how
+SAFROLE prevents forks can be found in
+[Section 4.3, 4.8, and 6 of the JAM Graypaper.](https://graypaper.com/graypaper.pdf)
 
 ## Resources
 
-- [Web3 Foundation Research page](https://research.web3.foundation/Polkadot/protocols/block-production/SASSAFRAS)
+- [The JAM Graypaper (see: **Block Production and Chain Growth**)](https://graypaper.com/graypaper.pdf)
+- [Web3 Foundation Research Page (SASSAFRAS)](https://research.web3.foundation/Polkadot/protocols/block-production/SASSAFRAS)
   about SASSAFRAS.
