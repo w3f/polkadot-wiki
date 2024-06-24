@@ -118,7 +118,7 @@ hash. This feature is the only opinionated aspect of the refine function.
 
 Tickets serve as anonymous entries into the block production mechanism. They are not immediately
 required for block production; instead, the system operates two epochs in advance. This mechanism is
-part of the SAFROL algorithm, a refined version of the original [SASSAFRAS](./learn-safrole.md)
+part of the SAFROLE algorithm, a refined version of the original [SASSAFRAS](./learn-safrole.md)
 algorithm.
 
 ### Refine Function
