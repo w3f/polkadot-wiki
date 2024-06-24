@@ -613,7 +613,7 @@ knowledge to judge some referenda or might not have the time to read all referen
 allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
 entities.
 
-## Decision Deposits, Cancelling / Killing Referendum and the Governance Economic Game
+## Decision Deposit Amounts
 
 In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the track’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda on the Root track can inflict more significant harm, such as changing the entire network's runtime.
 
