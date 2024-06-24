@@ -2,10 +2,7 @@
 id: polkadot-dashboards-overview
 title: Polkadot Dashboards Overview
 sidebar_label: Overview
-description:
-  Polkadot is a flagship project by Web3 Foundation, designed to enable a completely decentralized
-  web where users are in control. It is a sharded multichain network, meaning it can process many
-  transactions on several chains in parallel, improving scalability.
+description: The starting point for exploring Polkadot dashboards on Dune Analytics.
 keywords: [polkadot, dashboard, dune, governance, staking, NFT]
 slug: ../polkadot-dashboards-overview
 ---
@@ -73,8 +70,19 @@ ecosystem.
 
 ## Key Tables
 
-Data from the Polkadot network is organized into several key tables: `polkadot.balances`,
-`polkadot.blocks`, `polkadot.calls`, `polkadot.events`, `polkadot.extrinsics`, `polkadot.transfers`
+Data from the Polkadot network is organized into several key tables:
+
+- `polkadot.balances`
+- `polkadot.blocks`
+- `polkadot.calls`
+- `polkadot.events`
+- `polkadot.extrinsics`
+- `polkadot.transfers`
+- `polkadot.traces`
+- `polkadot.stakings`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=polkadot).
 
 ## Useful Queries
 
@@ -115,16 +123,18 @@ SELECT
   AVG(validator_normalized_staking_apr) AS staking_apr,
   era,
   DATE_FORMAT(ts, '%Y-%m-%d') AS era_ts
-FROM dune.substrate.result_polkadot_validators
+FROM
+  dune.substrate.result_polkadot_validators
 WHERE
-  validator_is_active = TRUE AND validator_commission <> 1
+  validator_is_active = TRUE
+  AND validator_commission <> 1
 GROUP BY
   era,
   ts
 HAVING
   AVG(validator_normalized_staking_apr) > 0
 ORDER BY
-  era DESC
+  era DESC;
 ```
 
 Query result:

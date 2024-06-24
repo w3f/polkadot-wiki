@@ -2,9 +2,7 @@
 id: acala-dashboards
 title: Acala Dashboards
 sidebar_label: Acala
-description:
-  Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain liquidity
-  and applications. It serves as a critical infrastructure layer for the Polkadot ecosystem.
+description: Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain
 keywords: [polkadot, dashboard, dune, acala, DeFi]
 slug: ../acala-dashboards
 ---
@@ -18,19 +16,36 @@ applications. It serves as a critical infrastructure layer for the Polkadot ecos
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Acala parachain:
+Here you will find a variety of dashboards that help visualize data from the Acala parachain:
 
 - [Acala on Polkadot](https://dune.com/substrate/acala): This dashboard provides a comprehensive
   view of financial activities and token dynamics within the Acala network.
 
 ## Key Tables
 
-Data from the Acala parachain is organized into several key tables: `acala.balances`,
-`acala.blocks`, `acala.calls`, `acala.events`, `acala.extrinsics`, `acala.transfers`
+Data from the Acala parachain is organized into several key tables:
+
+- `acala.balances`
+- `acala.blocks`
+- `acala.calls`
+- `acala.events`
+- `acala.extrinsics`
+- `acala.transfers`
+
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=acala).
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Some useful queries for Acala are provided:
+
+| Title                                            | Query                                             | Description                                                                               |
+| ------------------------------------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Acala Asset Exchange Rate by Date                | [query_3672976](https://dune.com/queries/3672976) | Retrieves historical exchange rates for Acala assets, date-wise breakdown                 |
+| Acala Assets Most Frequently Subject to Swapping | [query_3673478](https://dune.com/queries/3673478) | This query identifies which Acala assets are swapped the most frequently on the platform. |
+
+These descriptions aim to provide more context and details about what each query does and the
+insights they offer.
 
 ## Getting Started with Queries
 

@@ -4,8 +4,6 @@ title: Interlay Dashboards
 sidebar_label: Interlay
 description:
   Interlay is a decentralized finance hub on Polkadot. It started as a native Bitcoin bridge,
-  allowing users to mint and redeem iBTC on the Polkadot network. iBTC is a trustless,
-  decentralized, and interoperable token redeemable one-for-one with native Bitcoin.
 keywords: [polkadot, dashboard, dune, interlay, DeFi]
 slug: ../interlay-dashboards
 ---
@@ -32,23 +30,31 @@ for a period of time.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Interlay parachain:
+Here you will find a variety of dashboards that help visualize data from the Interlay parachain:
 
 - [interlay on Polkadot](https://dune.com/substrate/polkadot-interlay): This dashboard provides a
   comprehensive view of iBTC minting, redeeming, lending, borrowing, and vault rewards.
 
 ## Key Tables
 
-Data from the interlay parachain is organized into several key tables: `interlay.balances`,
-`interlay.blocks`, `interlay.calls`, `interlay.events`, `interlay.extrinsics`, `interlay.transfers`,
-`interlay.traces`
+Data from the interlay parachain is organized into several key tables:
+
+- `interlay.balances`
+- `interlay.blocks`
+- `interlay.calls`
+- `interlay.events`
+- `interlay.extrinsics`
+- `interlay.transfers`
 
 The `interlay.traces` table is created by a snapshot script utilizing Interlay API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=interlay).
+
 ## Useful Queries
 
-Some of the most important queries for Interlay are made available as materialized views.
+Some useful queries for Interlay are made available as materialized views.
 
 | Subject Area     | Query                                             | Materialized View                               | Description                                                                |
 | ---------------- | ------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------- |
@@ -67,46 +73,46 @@ To get started with querying data from Interlay, you are welcome to use the ment
 queries. You can also use the following DuneSQL queries as examples:
 
 ```sql title="Interlay Loan Market Data" showLineNumbers
-WITH ASSETS AS(
-    SELECT symbol, decimals
-    FROM (VALUES
+WITH ASSETS AS (
+  SELECT symbol, decimals
+  FROM (VALUES
     ('DOT', 10),
     ('INTR', 10),
-    ('IBTC', 8)) AS t(symbol, decimals)
-), LOANDATA AS
-(
-SELECT
-E.block_time,
-E.method,
-event_id,
-COALESCE(CAST(JSON_VALUE(data, 'strict $[0].token') as varchar), FA.symbol) as token,
---json_array_length(data) as len,
---COALESCE(ASSETS.decimals, FA.decimals) as token_decimals,
-CAST(JSON_VALUE(data, 'strict $[1]') AS UINT256)/POW(10,COALESCE(ASSETS.decimals, FA.decimals)) as total_borrows,
-CAST(JSON_VALUE(data, 'strict $[2]') AS UINT256)/POW(10,COALESCE(ASSETS.decimals, FA.decimals)) as total_reserves,
-CAST(JSON_VALUE(data, 'strict $[3]') AS UINT256)/1e18 as borrow_index,
-CAST(JSON_VALUE(data, 'strict $[4]') AS UINT256)/1e6 as utilization,
-CAST(JSON_VALUE(data, 'strict $[5]') AS UINT256)/1e18 as borrow_rate,
-CAST(JSON_VALUE(data, 'strict $[6]') AS UINT256)/1e18 as supply_rate,
-CAST(JSON_VALUE(data, 'strict $[7]') AS UINT256)/1e18 as exchange_rate
-from interlay.events E
-LEFT join query_3564454 FA on FA.foreign_asset=CAST(JSON_VALUE(data, 'strict $[0].foreignAsset') as INT)
-LEFT JOIN ASSETS on ASSETS.symbol=JSON_VALUE(data, 'strict $[0].token')
-where E.section='loans' and E.method='InterestAccrued'
+    ('IBTC', 8)
+  ) AS t(symbol, decimals)
+), LOANDATA AS (
+  SELECT
+    E.block_time,
+    E.method,
+    event_id,
+    COALESCE(CAST(JSON_VALUE(data, 'strict $[0].token') AS VARCHAR), FA.symbol) AS token,
+    -- json_array_length(data) as len,
+    -- COALESCE(ASSETS.decimals, FA.decimals) as token_decimals,
+    CAST(JSON_VALUE(data, 'strict $[1]') AS UINT256) / POW(10, COALESCE(ASSETS.decimals, FA.decimals)) AS total_borrows,
+    CAST(JSON_VALUE(data, 'strict $[2]') AS UINT256) / POW(10, COALESCE(ASSETS.decimals, FA.decimals)) AS total_reserves,
+    CAST(JSON_VALUE(data, 'strict $[3]') AS UINT256) / 1e18 AS borrow_index,
+    CAST(JSON_VALUE(data, 'strict $[4]') AS UINT256) / 1e6 AS utilization,
+    CAST(JSON_VALUE(data, 'strict $[5]') AS UINT256) / 1e18 AS borrow_rate,
+    CAST(JSON_VALUE(data, 'strict $[6]') AS UINT256) / 1e18 AS supply_rate,
+    CAST(JSON_VALUE(data, 'strict $[7]') AS UINT256) / 1e18 AS exchange_rate
+  FROM interlay.events E
+  LEFT JOIN query_3564454 FA ON FA.foreign_asset = CAST(JSON_VALUE(data, 'strict $[0].foreignAsset') AS INT)
+  LEFT JOIN ASSETS ON ASSETS.symbol = JSON_VALUE(data, 'strict $[0].token')
+  WHERE E.section = 'loans' AND E.method = 'InterestAccrued'
 )
 SELECT
-date_trunc('hour', block_time) as hour_period,
-token,
-avg(total_borrows) as total_borrows,
-avg(total_reserves) as total_reserves,
-avg(borrow_index) as borrow_index,
-avg(utilization) as utilization,
-avg(borrow_rate) as borrow_rate,
-avg(supply_rate) as supply_rate,
-avg(exchange_rate) as exchange_rate
+  date_trunc('hour', block_time) AS hour_period,
+  token,
+  AVG(total_borrows) AS total_borrows,
+  AVG(total_reserves) AS total_reserves,
+  AVG(borrow_index) AS borrow_index,
+  AVG(utilization) AS utilization,
+  AVG(borrow_rate) AS borrow_rate,
+  AVG(supply_rate) AS supply_rate,
+  AVG(exchange_rate) AS exchange_rate
 FROM LOANDATA
 GROUP BY 1, 2
-order by 1 desc
+ORDER BY 1 DESC;
 
 
 ```
