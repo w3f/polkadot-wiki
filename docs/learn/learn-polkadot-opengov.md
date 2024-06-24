@@ -615,7 +615,7 @@ entities.
 
 ## Decision Deposits, Cancelling / Killing Referendum and the Governance Economic Game
 
-In Polkadot OpenGov, in order for a referendum to enter its Decision Period, someone must submit the Decision Deposit. The amount of DOT required for the Decision Deposit is dependent upon the privilege level of the track. For example, the Small Tipper track Decision Deposit is 1 DOT, it is very low due to the extremely minor amount of economic damage that the Small Tipper track can inflict upon the Polkadot network if malicious referendums are posted (Small Tipper can only spend up to 250 DOT). In contrast, the Root track can inflict massive amounts of economic damage to the Polkadot network, such as changing the entire network's runtime – as such, the Decision Deposit for the Root track is very high at 100,000 DOT. Every other track's Decision Deposits are set based on this principle. 
+In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the track’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda on the Root track can inflict more significant harm, such as changing the entire network's runtime.
 
 Polkadot OpenGov has certain Origins that are dedicated to rejecting ongoing referendums, regardless of their status. These are known as the Governance Canceller and Governance Killer Origins.
 
