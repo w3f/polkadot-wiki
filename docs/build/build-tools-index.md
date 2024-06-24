@@ -69,7 +69,7 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
 - [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Host
   developed by [ChainSafe Systems](https://chainsafe.io/).
 - [TxWrapper-core](https://paritytech.github.io/txwrapper-core/) - Helper functions for offline
-   transaction generation.
+  transaction generation.
 
 ## Tools
 
