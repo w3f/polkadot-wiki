@@ -246,7 +246,7 @@ are breakable and prone to cyber-attacks. Polkadot is basing its resilience on d
   richly featured and high-performance ZK primitives ready for specific use cases is being built.
   The first use-case will be used to improve privacy for on-chain collectives such as
   [the Polkadot Technical Fellowship](../learn/learn-polkadot-technical-fellowship.md).
-- **[Sassafras](../learn/learn-sassafras.md) consensus:** New forkless block-production consensus
+- **[SAFROLE](../learn/learn-safrole.md) consensus:** New forkless block-production consensus
   algorithm replacing [BABE](../learn/learn-consensus.md#block-production-babe) and where block are
   not produced unless they are expected to be finalized. This will provide several benefits, such
   as:

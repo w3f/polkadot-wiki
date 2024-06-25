@@ -70,6 +70,10 @@ module.exports = {
       {
         redirects: [
           {
+            to: '/docs/learn-safrole',
+            from: ['/docs/learn-sassafras']
+          },
+          {
             to: "/",
             from: ["/en/latest", "/en/"],
           },

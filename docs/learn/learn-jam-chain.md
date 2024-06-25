@@ -118,7 +118,7 @@ hash. This feature is the only opinionated aspect of the refine function.
 
 Tickets serve as anonymous entries into the block production mechanism. They are not immediately
 required for block production; instead, the system operates two epochs in advance. This mechanism is
-part of the SAFROL algorithm, a refined version of the original [SASSAFRAS](./learn-sassafras.md)
+part of the SAFROLE algorithm, a refined version of the original [SASSAFRAS](./learn-safrole.md)
 algorithm.
 
 ### Refine Function
@@ -236,25 +236,18 @@ expected to extend to blockchain and consensus algorithms.
 
 ## SAFROLE
 
-SAFROLE is a block production algorithm, a simplification of [SASSAFRAS](./learn-sassafras.md). It
+[SAFROLE](./learn-safrole.md) is a block production algorithm, a simplification of
+[SASSAFRAS](https://research.web3.foundation/Polkadot/protocols/block-production/SASSAFRAS). It
 excludes some components that may be useful for parachains. So parachains may probably stick with
-SASSAFRAS rather SAFROLE. SAFROLE will be as simple as possile to:
+SASSAFRAS rather SAFROLE. SAFROLE will be as simple as possible to:
 
-- ensure that it is as minimally opinionated as possible to maximize the potential future use cases
-- to follow in the footsteps of Ethereum yellow paper, and really try to get as many implementations
+- Ensure that it is as minimally opinionated as possible to maximize the potential future use cases
+- To follow in the footsteps of Ethereum yellow paper, and really try to get as many implementations
   as possible to try and spread the expertise.
 
 Understanding how Polkadot 1.0 works end-to-end is challenging. With JAM, someone who is capable of
 reading and understanding the yellow paper would be able to read and understand fairly quickly how
 JAM works. So simplicity is crucial.
-
-SAFROLE is a SNARK-based block production algorithm. It uses SNARK specifically for their anonymity
-features. And it delivers constant time block production, almost entirely fork-free. There are a
-couple of instances where forks could possibly arise. They basically only happen when there's a net
-split or someone's being intentionally malicious. The great value for the anonymity is not
-specifically to keep validators' identities sort of a secret. In fact, when they actually produce a
-block, they give away their identity anyway, but rather for ensuring that the block production
-mechanism itself is secure, basically to avoid spamming.
 
 ## Networking
 
