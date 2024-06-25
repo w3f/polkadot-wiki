@@ -47,20 +47,6 @@ async () => {
   // ...
 ```
 
-#### Substrate Connect
-
-[Substrate connect](https://substrate.io/developers/substrate-connect/) builds on Polkadot JS so
-building an app is the same experience as with using a traditional RPC server node. It is a fast,
-secure, and decentralized way to interact with Polkadot, Kusama, and their parachains right in the
-browser.
-
-:::info
-
-Substrate Connect is still under
-[active development](https://github.com/paritytech/substrate-connect).
-
-:::
-
 ### Third Party Providers
 
 There are a number of third-party providers of RPC infrastructure to the Polkadot and Kusama
