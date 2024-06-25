@@ -10,7 +10,8 @@ slug: ../learn-jam-chain
 :::info
 
 JAM paper is available at [graypaper.com](https://graypaper.com/) and the information regarding JAM
-prize is available at [jam.web3.foundation](https://jam.web3.foundation/).
+prize is available at [jam.web3.foundation](https://jam.web3.foundation/). Download the printable
+version of the graypaper [here](../assets/graypaper_inverted_no_background.pdf).
 
 :::
 
