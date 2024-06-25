@@ -18,7 +18,7 @@ identifies an address belonging to a specific network.
 For example:
 
 - Polkadot addresses **always start with** the number **1**.
-- Kusama addresses always start with a capital letter, such as **C, D, F, G, H, J**.
+- Kusama addresses always start with a capital letter, such as **C, D, E, F, G, H, J**.
 - Generic Substrate addresses **always start with** the number **5**.
 
 These prefixes, including how to validate addresses, are embedded in the Substrate SS58 format.
