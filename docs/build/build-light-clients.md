@@ -31,7 +31,7 @@ for their application to synchronize with the chain. This is possible with Subst
 ### Replacing [RPC node](build-node-interaction.md) reliance with light clients
 
 [Substrate connect](https://substrate.io/substrate-connect/) is a JavaScript library and browser
-extension that builds on the [PolkadotJS API](https://polkadot.js.org/api/)) to enable developers to
+extension that builds on the [PolkadotJS API](https://polkadot.js.org/api/) to enable developers to
 build application-specific light clients for Substrate chains. There is no installation required or
 optional extension with minimal or no maintenance. The node is run by the JavaScript engine.
 
