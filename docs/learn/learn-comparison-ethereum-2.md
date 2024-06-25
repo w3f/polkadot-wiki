@@ -149,7 +149,7 @@ finalize batches of blocks in one round.
 
 For block production, both protocols use slot-based protocols that randomly assign validators to a
 slot and provide a fork choice rule for unfinalized blocks. Polkadot uses
-[BABE](./learn-consensus.md#badass-babe-sassafras) for block production. BABE includes two
+[BABE](./learn-consensus.md#block-production-babe) for block production. BABE includes two
 mechanisms for selecting block producers, one of which is a fallback in case the first fails, which
 allows for chain liveness. BABE produces unfinalized blocks on top of the chain already finalized by
 GRANDPA.
