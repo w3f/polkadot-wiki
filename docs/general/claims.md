@@ -18,14 +18,13 @@ To do this, you must sign a message on Ethereum containing the address of your
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can do this by using the
 Polkadot-JS UI [Claims app](https://polkadot.js.org/apps/#/claims). Ensure that you are connected to
 the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network (displayed in the
-upper-left hand corner of the screen).
+upper-left-hand corner of the screen).
 
 :::warning Third-party claim processes
 
-Claiming using a third-party process can lead to the loss of your allocation; therefore, we cannot
-recommend using any third-party apps to do so. Manually specifying your transaction data, as
-specified in our claims process below, is the only way to be certain you will receive your
-allocation.
+Claiming using a third-party process can lead to losing your allocation; therefore, we cannot
+recommend using any third-party apps. Manually specifying your transaction data, as specified in our
+claims process below, is the only way to ensure you will receive your allocation.
 
 :::
 
@@ -35,7 +34,7 @@ You will need to generate a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama 
 to claim {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. See the
 [available wallets and extensions](./wallets-and-extensions.md) for more information about wallets
 and browser extensions you can use to create an account. In terms of hardware wallet support, you
-can use the [Ledger](./ledger.md) devices, or [Polkadot Vault](./polkadot-vault.md).
+can use the [Ledger](./ledger.md) devices or [Polkadot Vault](./polkadot-vault.md).
 
 ## Claiming Tokens
 
@@ -69,7 +68,7 @@ prefix.
 
 Go to
 [the "Sign & Verify Message" tab on the MyCrypto web application](https://app.mycrypto.com/sign-message).
-MyCrypto is good to use in case you have stored the key to the Ethereum account holding your DOT
+MyCrypto is good to use if you have stored the key to the Ethereum account holding your DOT
 indicator tokens on a hardware device like a Ledger Nano. It also supports raw private keys,
 mnemonics, and the Polkadot Vault. After unlocking your Ethereum wallet, copy and paste the
 outputted sentence on the Polkadot-JS UI into the message box on the MyCrypto app.
@@ -94,7 +93,7 @@ Polkadot-JS UI and click "Confirm Claim."
 
 At this point, if you are eligible, you will see a success message if everything went right and your
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will now be in the account that you claimed
-to. Congratulations you can now participate in aspects of the
+to. Congratulations! You can now participate in aspects of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network such as
 [governance](../learn/learn-polkadot-opengov.md) and [staking](../learn/learn-staking.md).
 
@@ -103,5 +102,4 @@ to. Congratulations you can now participate in aspects of the
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
 immediately.
 
-Are you having trouble? Get in touch on the
-[Polkadot Support page](https://support.polkadot.network).
+Do you need help? Get in touch on the [Polkadot Support page](https://support.polkadot.network).
