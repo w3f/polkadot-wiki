@@ -22,7 +22,7 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 
 ## Polkadot Staking Dashboard
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a web3 application
+The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a web3 application
 dedicated to native non-custodial [staking](../learn/learn-staking.md) on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. The dashboard allows to
 stake as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member.

@@ -27,7 +27,7 @@ import RPC from "./../../components/RPC-Connection";
 
 Start your staking journey or explore more information about staking on
 [Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+[Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started. You can now stake on

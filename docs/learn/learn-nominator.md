@@ -15,7 +15,7 @@ Start your staking journey or explore more information about staking on
 [Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by
 reading [this dedicated page](../learn/learn-staking.md).
 
-Discover the new [**Staking Dashboard**](https://staking.polkadot.network/#/overview) that makes
+Discover the new [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes
 staking much easier and check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started.
@@ -117,7 +117,7 @@ can now unbond them immediately.
 If your bonded balance did not back any validators in the last
 {{ polkadot: 28 days on Polkadot (when the feature goes live) :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
 you are eligible to perform fast unstaking. The
-[staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
+[staking dashboard](https://staking.polkadot.cloud/#/overview) will automatically check if you
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
 
@@ -162,9 +162,9 @@ rewards is extremely unsafe.
 :::info
 
 Being a nominator is made simpler by using the
-[**Staking Dashboard**](https://staking.polkadot.network/#/overview) that will guide you step by
-step through specifying rewards destination and bonded amount, and nominating validators (more on
-this below). Note that staking proxies are not currently supported on the dashboard.
+[**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step
+through specifying rewards destination and bonded amount, and nominating validators (more on this
+below). Note that staking proxies are not currently supported on the dashboard.
 
 :::
 

@@ -15,7 +15,7 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey
 or explore more information about staking on
 [Polkadot's Staking Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+[Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and
@@ -230,7 +230,7 @@ support article.
 
 :::info Polkadot Staking Dashboard
 
-The [Staking Dashboard](https://staking.polkadot.network/dashboard/#/overview) provides a more
+The [Staking Dashboard](https://staking.polkadot.cloud/dashboard/#/overview) provides a more
 user-friendly alternative to staking. See the instructions in
 [this](https://support.polkadot.network/support/solutions/articles/65000182133-how-to-use-the-staking-dashboard-staking-your-dot)
 support article to learn how to stake with the dashboard.
@@ -461,7 +461,7 @@ can now unbond them immediately.
 If your bonded balance did not back any validators in the last
 {{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
 days, you are eligible to perform fast unstaking. The
-[staking dashboard](https://staking.polkadot.network/#/overview) will automatically check if you
+[staking dashboard](https://staking.polkadot.cloud/#/overview) will automatically check if you
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
 
