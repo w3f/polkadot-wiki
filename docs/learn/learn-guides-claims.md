@@ -81,20 +81,10 @@ Go to
 MyCrypto is good to use if you have stored the key to the Ethereum account holding your DOT
 indicator tokens on a hardware device like a Ledger Nano. It also supports raw private keys,
 mnemonics, and the Polkadot Vault. After unlocking your Ethereum wallet, copy and paste the
-outputted sentence on the Polkadot-JS UI into the message box on the MyCrypto app.
+outputted sentence on the Polkadot-JS UI into the message box on the MyCrypto app. When you click
+"Sign Message" you will get a JSON output signature as shown below:
 
 ![claim get signature](../assets/claim-get-signature.png)
-
-When you click "Sign Message" you will get a JSON output signature like the below:
-
-```
-{
-   "address": "0x ...",
-   "msg": "Pay DOTs to the Polkadot account: ...",
-   "sig": "0x ...",
-   "version": "2"
-}
-```
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
 Polkadot-JS UI and click "Confirm Claim."
