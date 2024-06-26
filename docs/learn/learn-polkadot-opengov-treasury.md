@@ -18,7 +18,7 @@ external account; only the system internal logic can access it.
 :::tip Creating a Treasury Proposal on Polkadot OpenGov
 
 If you would like to create a treasury proposal on Polkadot OpenGov, follow the instructions
-outlined on [this how-to guide](./learn-guides-treasury#creating-a-treasury-proposal).
+outlined on [this how-to guide](./learn-guides-treasury.md#creating-a-treasury-proposal).
 
 :::
 
