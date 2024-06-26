@@ -1,7 +1,7 @@
 ---
 id: learn-guides-claims
 title: Polkadot-JS Guides about Claims
-sidebar_label: Claims
+sidebar_label: Claim Guides
 description: Step-by-step guide on how to claim your tokens.
 keywords: [claims, tokens, kusama, polkadot]
 slug: ../learn-guides-claims
