@@ -1,11 +1,20 @@
 ---
 id: learn-guides-claims
-title: Claims
+title: Polkadot-JS Guides about Claims
 sidebar_label: Claims
 description: Step-by-step guide on how to claim your tokens.
 keywords: [claims, tokens, kusama, polkadot]
 slug: ../learn-guides-claims
 ---
+
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
+[Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
+[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
+see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+
+<DocCardList />
 
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
 tokens, you can now claim your DOT (and a proportional amount of KSM on the Kusama network). The
@@ -100,7 +109,5 @@ to. Congratulations! You can now participate in aspects of the
 
 ### Verifying your Claim
 
-After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
-immediately.
-
-Do you need help? Get in touch on the [Polkadot Support page](https://support.polkadot.network).
+After you make an on-chain claim for {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, your
+balance should be updated on your account immediately.
