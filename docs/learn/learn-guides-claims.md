@@ -1,10 +1,10 @@
 ---
-id: claims
+id: learn-guides-claims
 title: Claims
 sidebar_label: Claims
 description: Step-by-step guide on how to claim your tokens.
 keywords: [claims, tokens, kusama, polkadot]
-slug: ../claims
+slug: ../learn-guides-claims
 ---
 
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
@@ -32,9 +32,10 @@ claims process below, is the only way to ensure you will receive your allocation
 
 You will need to generate a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account
 to claim {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. See the
-[available wallets and extensions](./wallets-and-extensions.md) for more information about wallets
-and browser extensions you can use to create an account. In terms of hardware wallet support, you
-can use the [Ledger](./ledger.md) devices or [Polkadot Vault](./polkadot-vault.md).
+[available wallets and extensions](../general/wallets-and-extensions.md) for more information about
+wallets and browser extensions you can use to create an account. In terms of hardware wallet
+support, you can use the [Ledger](../general/ledger.md) devices or
+[Polkadot Vault](../general/polkadot-vault.md).
 
 ## Claiming Tokens
 

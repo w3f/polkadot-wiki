@@ -109,7 +109,7 @@ module.exports = {
             from: ['/docs/learn-parathreads']
           },
           {
-            to: '/docs/claims',
+            to: '/docs/learn-guides-claims',
             from: ['/docs/kusama-claims']
           },
         ],
