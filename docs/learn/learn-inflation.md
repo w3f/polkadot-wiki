@@ -71,7 +71,7 @@ security while keeping the native token liquid.
 - **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual
   returns on the staked tokens. You can determine the current annual staking rewards rate by looking
   at the top bar of the staking overview on
-  [the Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview).
+  [the Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview).
 
 Assuming that the ideal staking rate is 60%, all of the inflation would go to the validators and
 nominators if 60% of all {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked. Any

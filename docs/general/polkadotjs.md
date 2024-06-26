@@ -76,7 +76,7 @@ The extension does not let users interact directly with on-chain functions as on
 wallet app like Metamask, i.e. it does not allow you to transact or do anything else other than
 adding and managing accounts. However, it provides a simple interface for interacting with
 extension-compliant dApps such as the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
-and the [**Polkadot Staking Dashboard**](https://staking.polkadot.network/#/overview). Check
+and the [**Polkadot Staking Dashboard**](https://staking.polkadot.cloud/#/overview). Check
 [wallets and extensions](./wallets-and-extensions.md) page for wallets that are capable of
 transacting on-chain directly.
 

@@ -11,7 +11,7 @@ import RPC from "./../../components/RPC-Connection";
 
 ## Preliminary Notes
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) supports
+The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) supports
 [**proxy accounts**](../learn/learn-proxies.md) and you can import your
 [staking proxy](../learn/learn-staking-advanced.md#staking-proxies) (for nominators) or
 [non-transfer proxy](../learn/learn-proxies.md#non-transfer-proxy) (for nomination pool admins and
@@ -40,10 +40,10 @@ visit the [staking page](../learn/learn-staking.md) and the
 
 ## Using the Polkadot Staking Dashboard
 
-The [Polkadot Staking Dashboard](https://staking.polkadot.network/#/overview) is a tool only
-dedicated to [staking](../learn/learn-staking.md) on Polkadot,
-[Kusama](../learn/learn-comparisons-kusama.md) (Polkadot's canary network) and
-[Westend](../maintain/maintain-networks.md#westend-test-network) (Polkadot's test network).
+The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a tool only dedicated
+to [staking](../learn/learn-staking.md) on Polkadot, [Kusama](../learn/learn-comparisons-kusama.md)
+(Polkadot's canary network) and [Westend](../maintain/maintain-networks.md#westend-test-network)
+(Polkadot's test network).
 
 The dashboard is not a wallet, meaning that you cannot transfer funds between accounts. To fund
 accounts, you can use [wallets and extension](./wallets-and-extensions.md). You can participate in

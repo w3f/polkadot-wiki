@@ -543,7 +543,7 @@ For example, the minimum stake backing a validator in era
 {{ polkadot: 2,377,756.492 DOT :polkadot }}{{ kusama: 7,078.811 KSM :kusama }}. For a live view at
 current validator stats, you may look to
 [Subscan](https://polkadot.subscan.io/validator_list?status=validator) or the
-[Staking Dashboard.](https://staking.polkadot.network/#/overview)
+[Staking Dashboard.](https://staking.polkadot.cloud/#/overview)
 
 If you are validator who intends to get DOT/KSM nominations from the community, you will need to
 show some skin in the game. For that, you need to bond some DOT/KSM as own stake. Make sure not to
