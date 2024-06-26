@@ -42,14 +42,6 @@ MyCrypto. MyCrypto is good to use in case you have stored the key to the Ethereu
 your DOT indicator tokens on a hardware device like a Ledger Nano. It also supports raw private
 keys, mnemonics, and the Polkadot Vault.
 
-:::tip Downloading MyCrypto
-
-It is much more secure to download and use the MyCrypto app locally. Please make sure to download
-the latest version for your operating system. You can always find the most up-to-date releases of
-the desktop app on their [releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
-
-:::
-
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for
 maximum security), you can start by navigating to the Claims app on the Polkadot-JS UI. Select the
 account you would like to claim the KSM into and click the blue "Continue" button to proceed. Your
