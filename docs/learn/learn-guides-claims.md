@@ -14,7 +14,7 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
 see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
-<DocCardList />
+<MessageBox message="Screenshots on this page are based on Polkadot, but note that the same process applies to Kusama." />
 
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
 tokens, you can now claim your DOT (and a proportional amount of KSM on the Kusama network). The
@@ -59,7 +59,7 @@ Address to the hexadecimal public key.
 The Polkadot-JS [Claims app](https://polkadot.js.org/apps/#/claims) will guide you through the
 process of claiming the tokens.
 
-### Select Account on Polkadot
+### Select Accounts
 
 Select the account you would like to claim the
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} into and click the "Continue" button to
@@ -67,7 +67,7 @@ proceed. Your screen should look something like this:
 
 ![claim select dot account](../assets/claim-select-dot-account.png)
 
-### Select Account on Ethereum
+#### Select Account on Ethereum
 
 Paste the Ethereum address with the DOT allocation indicator tokens and click the "Continue" button
 to proceed.
