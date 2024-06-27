@@ -77,7 +77,7 @@ to proceed.
 ### Sign Message on Ethereum & Claim
 
 The hex-encoded string that follows the sentence: "Pay
-{{ polkadot: DOTs :polkadot }}{{ kusama: KSMs :kusama }} to the
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account:" is the hex-encoded public
 key of your {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account, minus the `0x`
 prefix.
