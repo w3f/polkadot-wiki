@@ -11,6 +11,7 @@ module.exports = {
   baseUrl: "/",
   projectName: isPub ? "kusama-guide-hosting" : "",
   organizationName: "w3f",
+  trailingSlash: false,
   markdown: {
     mermaid: true
   },

@@ -118,7 +118,7 @@ export default function Index() {
               <a href={docUrl("learn-governance")}>
                 <br />
                 <button className="kusama-mainpage-build-btn homepage-font">
-                  Read more on Politics
+                  Read more on Governance
                 </button>
               </a>
             </div>
