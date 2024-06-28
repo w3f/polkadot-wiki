@@ -16,7 +16,7 @@ function HomeSplash() {
         <button className="kusama-mainpage-build-btn-main homepage-font">
           <a
             className="homepage-font-start"
-            href="../docs/kusama-getting-started"
+            href={useDocUrl("kusama-getting-started")}
           >
             GET STARTED WITH KUSAMA
           </a>
@@ -160,4 +160,11 @@ export default function Index() {
       </div>
     </Layout>
   );
+}
+
+function useDocUrl(url) {
+  const { siteConfig } = useDocusaurusContext();
+  const { baseUrl } = siteConfig;
+  const docsPart = "docs/";
+  return `${baseUrl}${docsPart}${url}`;
 }
