@@ -16,7 +16,7 @@ function HomeSplash() {
         <button className="kusama-mainpage-build-btn-main homepage-font">
           <a
             className="homepage-font-start"
-            href="https://guide.kusama.network/docs/kusama-getting-started"
+            href="../docs/kusama-getting-started"
           >
             GET STARTED WITH KUSAMA
           </a>
