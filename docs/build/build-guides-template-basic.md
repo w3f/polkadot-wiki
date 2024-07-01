@@ -58,16 +58,16 @@ We can now move on to working with the template. Some essential prerequisites ar
 
 :::info Install dependencies
 
-Visit [the dependencies' installation](./build-guides-install-deps.md) page before starting.
+Visit [the dependencies installation](./build-guides-install-deps.md) page before starting.
 
 :::
 
 We need to clone the Polkadot SDK. This guide uses release
-[`polkadot-v1.10.0`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.10.0),
+[`polkadot-v1.13.0`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.13.0),
 which can be cloned using the appropriate release tag:
 
 ```shell
-git clone git@github.com:paritytech/polkadot-sdk.git --branch polkadot-v1.10.0 --single-branch
+git clone git@github.com:paritytech/polkadot-sdk.git --branch polkadot-v1.13.0 --single-branch
 ```
 
 Now, navigate to `polkadot-sdk/templates/parachain`:
@@ -97,13 +97,68 @@ FRAME and Substrate. All you need to know is the following:
 When we compile our template, we can extract the runtime code as a `.wasm` blob, which is one of the
 key artifacts for our core.
 
+Build the node using the following:
+
+```shell
+cargo build -p parachain-template-node --release
+```
+
 For the sake of this example, we won't go into adding or modifying any pallets. However, this is
-definitey a next step after you get used to deploying your parachain on Rococo!
+definitely a next step after you get used to deploying your parachain on Rococo!
 
-### Configuring Parachain's Chain Spec
+### Generating the Chain Specification
 
-Before we generate the binary for our parachain's node, we have a bit of prep to do to our node
-inside `node/src/chain_spec.rs`. Namely, there are a few main factors to check off our list:
+> Ensure you have
+> the[ `chain-spec-builder`](./build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder)
+> installed before following along!
+
+By now, your `./target` folder should look something akin to:
+
+```sh
+./target/release/wbuild/parachain-template-runtime
+├── Cargo.lock
+├── Cargo.toml
+├── parachain_template_runtime.compact.compressed.wasm
+├── parachain_template_runtime.compact.wasm
+├── parachain_template_runtime.wasm
+├── src
+└── target
+```
+
+We'll be using `parachain_template_runtime.wasm` in conjunction with `chain-spec-builder` to build
+our chain specification, which we can then use to generate our genesis code and WASM bundle.
+
+Although you may want to create a preset, we can use the default one and customize it as we need to
+directly:
+
+```sh
+chain-spec-builder create -v -r ./target/release/wbuild/parachain-template-runtime/parachain_template_runtime.wasm default
+```
+
+You should now see `chain_spec.json` generated, with the message `Genesis config verification: OK`.
+
+Next, you'll need to modify a few things in your chain spec:
+
+```json
+  "name": "CHAIN_NAME_HERE",
+  "id": "live",
+  "chainType": "Live",
+  "bootNodes": [],
+  "telemetryEndpoints": null,
+  "protocolId": "chain-live",
+  "relay_chain": "paseo",
+  "para_id": PARA_ID_HERE,
+```
+
+You will also need to replace the following with your ParaID:
+
+```json
+"parachainInfo": {
+      "parachainId": PARA_ID_HERE
+   },
+```
+
+Use this checklist to ensure all the necessary fields are in place:
 
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
@@ -120,79 +175,27 @@ Feel free to copy the configuration below and use it to ensure everything is in 
 deployment. This function should replace the `local_testnet_config` function within
 `node/src/chain_spec.rs`:
 
-> **:warning: WARNING! :warning:** Make sure you replace the ParaId with the one you reserved
-> earlier!
-
-```rust
-pub fn local_testnet_config() -> ChainSpec {
-    // Give your base currency a unit name and decimal places
-    let mut properties = sc_chain_spec::Properties::new();
-    properties.insert("tokenSymbol".into(), "SOME".into());
-    properties.insert("tokenDecimals".into(), (12).into());
-    properties.insert("ss58Format".into(), (42).into());
-
-    #[allow(deprecated)]
-    ChainSpec::builder(
-        runtime::WASM_BINARY.expect("WASM binary was not built, please build it!"),
-        Extensions {
-            relay_chain: "rococo".into(),
-            // You MUST set this to the correct network!
-            para_id: YOUR_PARA_ID_HERE,
-        }
-    )
-        .with_name("SomeChain")
-        .with_id("some_chain")
-        .with_chain_type(ChainType::Live)
-        .with_genesis_config_patch(
-            testnet_genesis(
-                // initial collators.
-                vec![
-                    (
-                        get_account_id_from_seed::<sr25519::Public>("Alice"),
-                        get_collator_keys_from_seed("Alice"),
-                    ),
-                ],
-                vec![
-                    get_account_id_from_seed::<sr25519::Public>("Alice"),
-                    get_account_id_from_seed::<sr25519::Public>("Bob"),
-                    get_account_id_from_seed::<sr25519::Public>("Charlie"),
-                    get_account_id_from_seed::<sr25519::Public>("Dave"),
-                    get_account_id_from_seed::<sr25519::Public>("Eve"),
-                    get_account_id_from_seed::<sr25519::Public>("Ferdie"),
-                    get_account_id_from_seed::<sr25519::Public>("Alice//stash"),
-                    get_account_id_from_seed::<sr25519::Public>("Bob//stash"),
-                    get_account_id_from_seed::<sr25519::Public>("Charlie//stash"),
-                    get_account_id_from_seed::<sr25519::Public>("Dave//stash"),
-                    get_account_id_from_seed::<sr25519::Public>("Eve//stash"),
-                    get_account_id_from_seed::<sr25519::Public>("Ferdie//stash")
-                ],
-                get_account_id_from_seed::<sr25519::Public>("Alice"),
-                (YOUR_PARA_ID_HERE).into()
-            )
-        )
-        .with_protocol_id("template-local")
-        .with_properties(properties)
-        .build()
-}
-```
-
 Once this is in place, you are ready to compile your parachain node.
+
+For more information on chain specifications in general,
+[check out the reference document from the Polkadot SDK.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/chain_spec_genesis/index.html)
 
 ### Generating the Runtime and Genesis
 
-Be sure first to build the node using the following (assuming you're within
-`polkadot-sdk/templates/parachain`):
+With our chain specification successfully generated, we can move to generating the genesis state and
+runtime.
+
+Generate the genesis as follows:
 
 ```shell
-cargo build -p parachain-template-node --release
+polkadot-parachain export-genesis-head --chain chain_spec.json genesis
 ```
 
-```shell
-../../target/release/parachain-template-node export-genesis-state genesis
-```
+Although you can use the WebAssembly within `wbuild`, for ease of access you can also regenerate
+your WebAssembly blob with the following:
 
 ```shell
-../../target/release/parachain-template-node export-genesis-wasm genesis-wasm
+polkadot-parachain export-genesis-wasm --chain chain_spec.json genesis-wasm
 ```
 
 Within `polkadot-sdk/templates/parachain`, you should now have two files:
@@ -202,16 +205,20 @@ Within `polkadot-sdk/templates/parachain`, you should now have two files:
 
 ## Running Your Collator
 
-It would help if you now started syncing your collator. Keep in mind that you will need to sync
-Rococo first - this could take some time (12 hours to a day - depending on your download speed), so
-best to get started ASAP. In order to avoid storing the full state of the relay chain, be sure to
-run with the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
+> Make sure you have the
+> [`polkadot-parachain`](./build-guides-install-deps.md#installing-the-omninode) binary installed!
+
+You should start syncing your collator. Keep in mind that you will need to sync Rococo first - this
+could take some time depending on your download speed, so it is best to start this process ASAP. In
+order to avoid storing the full state of the relay chain, be sure to run with the appropriate
+pruning flags (`blocks-pruning` and `state-pruning`):
 
 ```shell
-./../target/release/parachain-template-node --collator \
+polkadot-parachain --collator \
 --alice \
+--chain chain_spec.json \
 --force-authoring \
---base-path  <your-base-path-here> \
+--base-path <your-base-path-here> \
 -- \
 --chain=rococo \
 --sync fast-unsafe \
