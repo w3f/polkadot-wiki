@@ -486,6 +486,7 @@ module.exports = {
                         "learn/learn-guides-dot-ksm-bridge",
                       ],
                     },
+                    "learn/learn-guides-claims",
                   ],
                 },
               ],
