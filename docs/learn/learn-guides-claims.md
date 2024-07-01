@@ -46,14 +46,6 @@ wallets and browser extensions you can use to create an account. In terms of har
 support, you can use the [Ledger](../general/ledger.md) devices or
 [Polkadot Vault](../general/polkadot-vault.md).
 
-### Address Conversion
-
-If you need to (most likely you don't), you can use
-[this tool](https://www.shawntabrizi.com/substrate-js-utilities/) to convert the Substrate SS58
-Address to the hexadecimal public key.
-
-![SS58 to Hex](../assets/ss58-to-hex.png)
-
 ## Claiming Tokens
 
 The Polkadot-JS [Claims app](https://polkadot.js.org/apps/#/claims) will guide you through the
