@@ -109,6 +109,10 @@ module.exports = {
             to: '/docs/learn-parachains',
             from: ['/docs/learn-parathreads']
           },
+          {
+            to: '/docs/learn-guides-claims',
+            from: ['/docs/kusama-claims']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {

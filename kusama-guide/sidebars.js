@@ -17,7 +17,6 @@ module.exports = {
           items: [
             "general/kusama/kusama-getting-started",
             "general/kusama/kusama-coc",
-            "general/kusama/kusama-claims",
             "general/kusama/kusama-parameters",
             "general/kusama/kusama-timeline",
             "general/kusama/kusama-community",
@@ -402,6 +401,7 @@ module.exports = {
                         "learn/learn-guides-dot-ksm-bridge",
                       ],
                     },
+                    "learn/learn-guides-claims",
                   ],
                 },
               ],
