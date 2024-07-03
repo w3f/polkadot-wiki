@@ -24,8 +24,10 @@ Polkadot has some basic transaction information that is common to all transactio
 - Spec Version: The current spec version for the runtime.
 - Transaction Version: The current version for transaction format.
 - Tip: Optional, the [tip](build-protocol-info.md#fees) to increase transaction priority.
+- Mode: The flag indicating whether to verify the metadata hash or not.
 - Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid.
   If zero, the transaction is [immortal](build-protocol-info.md#transaction-mortality)
+- MetadataHash: The metadata hash which should match the RUNTIME_METADATA_HASH environment variable.
 
 :::caution
 
@@ -43,49 +45,25 @@ function from the Balances pallet will take:
 - `dest`: Destination address
 - `#[compact] value`: Number of tokens (compact encoding)
 
-**Serialized transaction format**
+Refer to [the protocol specifications](https://spec.polkadot.network/id-extrinsics), for the concrete specifications and types to build a transaction. 
+
+**Mode and MetadataHash**
+
+The mode and metadataHash fields were introduced in transaction construction to support the optional [`CheckMetadataHash` Signed Extension](https://github.com/polkadot-fellows/RFCs/blob/main/text/0078-merkleized-metadata.md). This enables trustless metadata verification by allowing the chain to verify the correctness of the metadata used without the need of a trusted party. This functionality was included in v1.2.5 runtime release by the Fellowship. A user may up out of this functionality by setting the mode to `0`. When mode is 00, the metadataHash field is empty/None.
+
+**Serialized transactions and metadata**
 
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded
 SCALE-encoded bytes. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtimes are
 upgradable and therefore any interfaces are subject to change, the metadata allows developers to
-structure any extrinsics or storage entries accordingly. This being said, the serialization format
-can be described as follows:
-
-- Compact encoded number of SCALE encoded bytes following this.
-- 1 bit: it is a 0 if no signature is present, or a 1 if it is.
-- 7 bits: the extrinsic version, it is equal to 4 in decimal.
-- 4 bytes: Spec version of the runtime.
-- 4 bytes: Transaction version of the runtime.
-- 32 bytes: Genesis hash of the chain.
-- 32 bytes: Block hash serving as the era reference. If the transaction is immortal, then this would
-  be the genesis hash.
-- If there is a signature:
-  - a SCALE encoded `sp_runtime::MultiAddress::Id<AccountId32, u32>` indicating the signer(s) of the
-    transaction.
-  - a SCALE encoded `sp_runtime::MultiSignature::{SigningScheme}` with the signature\*.
-  - a SCALE encoded `sp_runtime::generic::Era` indicating for how long this transaction is valid:
-    - If the transaction is immortal, the Era would be simply 0.
-    - Otherwise, it would be a `Vec[u64, u64]` comprising the period and the phase.
-  - Compact encoded `u32` with the nonce.
-  - Compact encoded `u128` with the tip paid to the block producer.
-  - a SCALE encoded `sp_runtime::traits::SignedExtension<Vec<Text>>` with the additional data and
-    logic associated with this transaction.
-- The specific transaction parameters or call data, which consists of:
-  - 1 byte: the pallet index the transaction is calling into.
-  - 1 byte: the function in the pallet the transaction is calling.
-  - variable: the SCALE-encoded parameters required by the function being called.
-
-The metadata provides you with all of the information required to know how to construct the
+structure any extrinsics or storage entries accordingly. The metadata provides you with all of the information required to know how to construct the
 serialized call data specific to your transaction. You can read more about the metadata, its format
 and how to get it in the
 [Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
-\* {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports sr25519, ed25519, and
-ECDSA as signing schemes.
-
 **Summary**
 
-Once you have all the necessary information, you will need to:
+The typical transaction workflow for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is as follows: 
 
 1. Construct an unsigned transaction.
 2. Create a signing payload.
