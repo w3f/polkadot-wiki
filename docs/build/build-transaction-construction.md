@@ -49,7 +49,7 @@ Refer to [the protocol specifications](https://spec.polkadot.network/id-extrinsi
 
 **Mode and MetadataHash**
 
-The mode and metadataHash fields were introduced in transaction construction to support the optional [`CheckMetadataHash` Signed Extension](https://github.com/polkadot-fellows/RFCs/blob/main/text/0078-merkleized-metadata.md). This enables trustless metadata verification by allowing the chain to verify the correctness of the metadata used without the need of a trusted party. This functionality was included in v1.2.5 runtime release by the Fellowship. A user may up out of this functionality by setting the mode to `0`. When mode is 00, the metadataHash field is empty/None.
+The mode and metadataHash fields were introduced in transaction construction to support the optional [`CheckMetadataHash` Signed Extension](https://github.com/polkadot-fellows/RFCs/blob/main/text/0078-merkleized-metadata.md). This enables trustless metadata verification by allowing the chain to verify the correctness of the metadata used without the need of a trusted party. This functionality was included in [v1.2.5](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.5) runtime release by the Fellowship. A user may up out of this functionality by setting the mode to `0`. When the mode is 00, the `metadataHash` field is empty/None.
 
 **Serialized transactions and metadata**
 
