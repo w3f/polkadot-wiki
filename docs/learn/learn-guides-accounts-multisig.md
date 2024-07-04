@@ -39,6 +39,20 @@ for more information.
 
 ## Multisig Transactions with Extrinsic Tab
 
+See the video tutorial below to learn about multi-signature accounts and how you can transact using
+the Polkadot-JS UI.
+
+<div className="row">
+<div className="col text--center">
+    <a href="https://youtu.be/Qv_nJVcvQr8?t=2109">
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://youtu.be/Qv_nJVcvQr8?t=2109">Transact with Multi-signature Accounts</a>
+    </p>
+  </div>
+</div>
+
 There are three types of actions you can take with a multisig account:
 
 - Executing a call `asMulti`. This is used to begin or end a multisig transaction.

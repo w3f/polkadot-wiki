@@ -19,7 +19,7 @@ Proxies allow users to use an account (it can be in cold storage or a hot wallet
 but actively participate in the network with the weight of the tokens in that account. Proxies are
 allowed to perform a limited amount of actions related to specific
 [substrate pallets](https://docs.substrate.io/reference/frame-pallets/) on behalf of another
-account. The video below contains more information about using proxies.
+account. The videos below contain more information about using proxies.
 
 <div className="row">
   <div className="col text--center">
@@ -28,6 +28,14 @@ account. The video below contains more information about using proxies.
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=1tcygkq52tU">Proxy Accounts Tutorial</a>
+    </p>
+  </div>
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=Qv_nJVcvQr8&t=4437s">
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=Qv_nJVcvQr8&t=4437s">Proxy Accounts Advanced Tutorial</a>
     </p>
   </div>
 </div>
