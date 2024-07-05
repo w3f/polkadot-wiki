@@ -187,3 +187,40 @@ anyone can initiate the claim on behalf of the beneficiary.
     </p>
   </div>
 </div>
+
+## Close Child Bounties
+
+Child bounties can be closed without awarding them. To close a child bounty, you must submit a
+`childBounties.closeChild.Bounty` extrinsic, specifying the parent bounty and child bounty IDs. Only
+the parent bounty curator can sign this transaction, resulting in the child bounty’s curator deposit
+being returned.
+
+See the video tutorial below to learn how to close a child bounty.
+
+<div className="row">
+  <div className="col text--center">
+    <a href="https://www.youtube.com/watch?v=Qv_nJVcvQr8&t=2109s">
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://www.youtube.com/watch?v=Qv_nJVcvQr8&t=2109s">Close a Child Bounty</a>
+    </p>
+  </div>
+</div>
+
+If the child bounty curator acts maliciously, the parent bounty curator can submit a
+`childBounties.unassignCurator` that slashes the curator's deposit.
+
+## Refill Parent Bounties
+
+To refill a parent bounty,
+[an OpenGov referendum must be submitted](./learn-guides-polkadot-opengov.md#submitting-a-preimage).
+
+The preimage must contain a `treasury.spendLocal` extrinsic specifying the amount of tokens to be
+sent from the treasury to the receiver's address, in this case the
+[system account](./learn-account-advanced.md#system-accounts) of the
+[parent bounty](./learn-polkadot-opengov-treasury.md#bounties).
+
+To get the bounty system account of a parent bounty, go to
+[Subsquare](https://polkadot.subsquare.io/treasury/bounties), search for the bounty name, and the
+address will be shown under Metadata.
