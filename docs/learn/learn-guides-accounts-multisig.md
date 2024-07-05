@@ -39,7 +39,7 @@ for more information.
 
 ## Multisig Transactions with Extrinsic Tab
 
-See the video tutorial below to learn about multi-signature accounts and how you can transact using
+See the video tutorial below to learn about multi-signature accounts and how you can transact with them using
 the Polkadot-JS UI.
 
 <div className="row">
