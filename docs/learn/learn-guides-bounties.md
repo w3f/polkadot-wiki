@@ -40,6 +40,14 @@ See the video tutorial below to learn how you can create a bounty and submit it 
 an OpenGov referendum.
 
 <div className="row">
+<div className="col text--center">
+    <a href="https://youtu.be/Qv_nJVcvQr8?t=52">
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+    </a>
+    <p>
+      <a href="https://youtu.be/Qv_nJVcvQr8?t=52">Introduction to Bounties</a>
+    </p>
+  </div>
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">
       <img src="https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
