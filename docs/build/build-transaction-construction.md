@@ -45,25 +45,33 @@ function from the Balances pallet will take:
 - `dest`: Destination address
 - `#[compact] value`: Number of tokens (compact encoding)
 
-Refer to [the protocol specifications](https://spec.polkadot.network/id-extrinsics), for the concrete specifications and types to build a transaction. 
+Refer to [the protocol specifications](https://spec.polkadot.network/id-extrinsics), for the
+concrete specifications and types to build a transaction.
 
 **Mode and MetadataHash**
 
-The mode and metadataHash fields were introduced in transaction construction to support the optional [`CheckMetadataHash` Signed Extension](https://github.com/polkadot-fellows/RFCs/blob/main/text/0078-merkleized-metadata.md). This enables trustless metadata verification by allowing the chain to verify the correctness of the metadata used without the need of a trusted party. This functionality was included in [v1.2.5](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.5) runtime release by the Fellowship. A user may up out of this functionality by setting the mode to `0`. When the mode is 00, the `metadataHash` field is empty/None.
+The mode and metadataHash fields were introduced in transaction construction to support the optional
+[`CheckMetadataHash` Signed Extension](https://github.com/polkadot-fellows/RFCs/blob/main/text/0078-merkleized-metadata.md).
+This enables trustless metadata verification by allowing the chain to verify the correctness of the
+metadata used without the need of a trusted party. This functionality was included in
+[v1.2.5](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.5) runtime release by the
+Fellowship. A user may up out of this functionality by setting the mode to `0`. When the mode is 00,
+the `metadataHash` field is empty/None.
 
 **Serialized transactions and metadata**
 
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded
 SCALE-encoded bytes. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtimes are
 upgradable and therefore any interfaces are subject to change, the metadata allows developers to
-structure any extrinsics or storage entries accordingly. The metadata provides you with all of the information required to know how to construct the
-serialized call data specific to your transaction. You can read more about the metadata, its format
-and how to get it in the
+structure any extrinsics or storage entries accordingly. The metadata provides you with all of the
+information required to know how to construct the serialized call data specific to your transaction.
+You can read more about the metadata, its format and how to get it in the
 [Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
 **Summary**
 
-The typical transaction workflow for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is as follows: 
+The typical transaction workflow for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+is as follows:
 
 1. Construct an unsigned transaction.
 2. Create a signing payload.
