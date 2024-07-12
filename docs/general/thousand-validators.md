@@ -42,8 +42,8 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 
 ## How to Apply
 
-{{ polkadot: **Entrance to the Polkadot program requires a rank of 25 or higher in the Kusama program.**
-Attaining a rank of 25 usually takes around two months. The leaderboard is available
+{{ polkadot: **Entrance to the Polkadot program requires a rank of 100 or higher in the Kusama program.**
+Attaining a rank of 100 usually takes around two months. The leaderboard is available
 [here](https://thousand-validators.kusama.network/#/leaderboard).
 In order to apply to the Polkadot 1KV programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
 and fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the team shortly. :polkadot }}
