@@ -27,7 +27,8 @@ Polkadot has some basic transaction information that is common to all transactio
 - Mode: The flag indicating whether to verify the metadata hash or not.
 - Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid.
   If zero, the transaction is [immortal](build-protocol-info.md#transaction-mortality)
-- MetadataHash: Optional, the metadata hash which should match the RUNTIME_METADATA_HASH environment variable.
+- MetadataHash: Optional, the metadata hash which should match the RUNTIME_METADATA_HASH environment
+  variable.
 
 :::caution
 
