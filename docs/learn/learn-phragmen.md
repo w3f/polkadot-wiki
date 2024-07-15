@@ -106,8 +106,8 @@ vote - that is, they can signal approval for any subset of the candidates.
 
 The subset should be a minimum size of one (i.e., one cannot vote for no candidates) and a maximum
 size of one less than the number of candidates (i.e., one cannot vote for all candidates). Users are
-allowed to vote for all or no candidates, but this will not have an effect on the final result, and
-so votes of this nature are meaningless.
+allowed to vote for all or no candidates, but this will not affect the final result, making votes of
+this nature meaningless.
 
 Note that in this example, all voters are assumed to have equal say (that is, their vote does not
 count more or less than any other votes). The weighted case will be considered later. However,
