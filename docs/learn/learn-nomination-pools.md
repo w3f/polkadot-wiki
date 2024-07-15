@@ -126,8 +126,8 @@ account.
 
 :::tip Use Proxy Accounts to join Nomination Pools
 
-Depending on how much control you want to give your proxy, you might choose between
-any > non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions
+Depending on how much control you want to give your proxy, you might choose between any >
+non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions
 related to the `NominationPool` pallet.
 
 :::
