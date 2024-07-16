@@ -41,7 +41,8 @@ module.exports = {
       'data-modal-example-questions': 'Where can I store my DOT?,How can I create a DOT account?,How can I stake my DOT?,How does Polkadot OpenGov work?',
       'data-search-mode-enabled': 'true',
       'data-search-mode-default': 'true',
-      'data-button-position-top': '80px',
+      'data-button-position-top': '120px',
+      'data-button-position-right': '0px',
     },
   ],
   stylesheets: [
