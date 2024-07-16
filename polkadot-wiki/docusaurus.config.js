@@ -31,6 +31,8 @@ module.exports = {
       'data-website-id': 'f4bbad14-cc24-471c-8b7d-3267eafc6dc2',
       'data-project-name': 'Polkadot',
       'data-modal-title': 'Polkadot AI Chatbot',
+      'data-search-mode-enabled': 'true',
+      'data-search-include-source-names': 'Polkadot Wiki',
       'data-project-color': '#1E1E1E',
       'data-button-bg-color': '#1C0533',
       'data-button-text-color': 'white',
