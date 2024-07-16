@@ -43,10 +43,10 @@ Vault app.
   </div>
 </div>
 
-[Polkadot Vault](https://www.parity.io/technologies/signer) (formerly Parity Signer) is a cold
-storage solution that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault
-app is not technically a wallet, as it does not allow to transfer funds. It is more of a key-chain
-tool that will enable you the create, manage, and restore accounts.
+[Polkadot Vault](https://vault.novasama.io/) (formerly Parity Signer) is a cold storage solution
+that allows you to use a phone in airplane mode as an air-gapped wallet. The Vault app is not
+technically a wallet, as it does not allow to transfer funds. It is more of a key-chain tool that
+will enable you the create, manage, and restore accounts.
 
 By default, the Vault app contains chain specifications for Polkadot, Kusama, and Westend. Metadata
 updates are possible via a [QR code fountain](https://metadata.parity.io/#/polkadot). It is also
