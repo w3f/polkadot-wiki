@@ -187,13 +187,13 @@ module.exports = {
       contextualSearch: true,
     },
     /* Banner / Announcement bar */
-    announcementBar: {
-      id: "banner",
-      content:
-        'The Polkadot Blockchain Academy is coming to Asia! <a href="https://www.polkadot.network/development/academy/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=pba%204%205&utm_content=notification" target="_blank" rel="noopener noreferrer">Find out more 👉</a>',
-      backgroundColor: '#e6007a',
-      textColor: 'white',
-      isCloseable: true,
-    },
+//    announcementBar: {
+//      id: "banner",
+//      content:
+//        'The Polkadot Blockchain Academy is coming to Asia! <a href="https://www.polkadot.network/development/academy/?utm_source=guide.kusama.network&utm_medium=referral&utm_campaign=pba%204%205&utm_content=notification" target="_blank" rel="noopener noreferrer">Find out more 👉</a>',
+//      backgroundColor: '#e6007a',
+//      textColor: 'white',
+//      isCloseable: true,
+//    },
   },
 };
