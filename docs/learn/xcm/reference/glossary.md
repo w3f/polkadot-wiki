@@ -1,8 +1,8 @@
 ---
 id: learn-xcm-docs-reference-glossary
-title: Glossary
-sidebar_label: Glossary
-description: Glossary.
+title: XCM Glossary
+sidebar_label: XCM Glossary
+description: XCM Glossary.
 keywords: [xcm, cross-consensus messaging, reference, glossary]
 slug: ../reference-glossary
 ---
