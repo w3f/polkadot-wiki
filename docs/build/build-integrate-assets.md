@@ -75,6 +75,22 @@ Note that you can use the same addresses (except
 you use on the Relay Chain. The SS58 encodings are the same; only the chain information (genesis
 hash, etc.) will change on transaction construction.
 
+#### Pays Transaction Fees in Another Asset
+Users in the Asset Hub can pay the fees of their transactions with assets other than DOT. The only requirement is that a liquidity pool of the relevant asset against DOT should already exist as a storage entry of [the Asset Conversion pallet](https://wiki.polkadot.network/docs/learn-asset-conversion-assethub).    
+
+Technically speaking, this is enabled by [the `ChargeAssetTxPayment` signed-extension](https://github.com/polkadot-fellows/runtimes/blob/bb52c327360d1098d3b3d36f4eafb40a74636e80/system-parachains/asset-hubs/asset-hub-polkadot/src/lib.rs#L1016) implemented in the Asset Hub runtime. This signed-extension extends transactions to include an optional `AssetId` that specifies the asset to be used for payment of both the execution fees and the optional tip. It defaults to the native token when it is set to `None`. In case it is given, this `AssetId` has to be an [XCM `Multilocation`](https://wiki.polkadot.network/docs/learn/xcm/fundamentals/multilocation-summary). Once the transaction is executed in the block, it will emit an `AssetTxFeePaid` event, informing of the account paying the fees, the amount in the asset paid as fee, the tip (if any), and the asset ID of the asset paying the fees.
+
+**HANDLING POOLS WITH LOW LIQUIDITY**
+
+Wallets and UIs enabling this functionality should ensure that the user is prompted with the necessary warnings, such that they do not accidentally spend all of their funds to perform a swap on a pool with no or low liquidity. 
+
+##### Examples for Devs and Wallets to pay transaction fees with other assets
+Below there is a list of examples on how to build a transaction that pays fees in another asset using different libraries:
+
+- [This repository](https://github.com/bee344/asset-conversion-example/tree/main) contains the complete workflow on how to create a liquidity pool for a given asset, add liquidity to it and then build a transaction to pays fees with this asset (including fees estimation). It is done with several libraries: Polkadot.js API and Subxt. 
+- [Example using Asset Transfer API](https://github.com/paritytech/asset-transfer-api/blob/main/examples/polkadot/assetHub/paysWithFeeOriginTransfers/dotToHydrationPaysWithGLMR.ts) to do a cross-chain transfer in Polkadot Asset Hub paying fees with GLMR.
+- [A simple script](https://github.com/bee344/asset-hub-examples/blob/main/polkadot-js-example/src/foreignAssetTransferWithFee.ts) using Polkadot.js API to do a local transfer of bridged KSM in Polkadot Asset Hub paying fees with USDT.
+
 ### Foreign Assets
 
 Foreign assets are those assets in Asset Hub whose native blockchain is not Asset Hub. These are
