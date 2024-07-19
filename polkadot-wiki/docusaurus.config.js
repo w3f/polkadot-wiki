@@ -43,6 +43,7 @@ module.exports = {
       'data-search-mode-default': 'true',
       'data-button-position-top': '120px',
       'data-button-position-right': '0px',
+      'data-search-include-source-names': '["Polkadot Wiki"]',
     },
   ],
   stylesheets: [
@@ -277,11 +278,6 @@ module.exports = {
         },
         {
           type: "search",
-          position: "right",
-        },
-        {
-          to: "docs/contributing",
-          label: "Contribute",
           position: "right",
         },
       ],
