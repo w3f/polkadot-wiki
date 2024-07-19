@@ -84,8 +84,7 @@ Technically speaking, this is enabled by [the `ChargeAssetTxPayment` signed-exte
 
 Wallets and UIs enabling this functionality should ensure that the user is prompted with the necessary warnings, such that they do not accidentally spend all of their funds to perform a swap on a pool with no or low liquidity. 
 
-##### Examples for Devs and Wallets on how to build transactions that pays fees with other assets
-Below there is a list of examples on how to build a transaction that pays fees in another asset using different libraries:
+##### Examples for Devs and Wallets on How to Build Transactions That Pays Fees with Other Assets
 
 - [This repository](https://github.com/bee344/asset-conversion-example/tree/main) contains the complete workflow on how to create a liquidity pool for a given asset, add liquidity to it and then build a transaction to pays fees with this asset (including fees estimation). It is done with several libraries: Polkadot.js API and Subxt. 
 - [Example using Asset Transfer API](https://github.com/paritytech/asset-transfer-api/blob/main/examples/polkadot/assetHub/paysWithFeeOriginTransfers/dotToHydrationPaysWithGLMR.ts) to do a cross-chain transfer in Polkadot Asset Hub paying fees with GLMR.
