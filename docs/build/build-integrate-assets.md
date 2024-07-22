@@ -80,11 +80,11 @@ Users in the Asset Hub can pay the fees of their transactions with assets other 
 
 Technically speaking, this is enabled by [the `ChargeAssetTxPayment` signed-extension](https://github.com/polkadot-fellows/runtimes/blob/bb52c327360d1098d3b3d36f4eafb40a74636e80/system-parachains/asset-hubs/asset-hub-polkadot/src/lib.rs#L1016) implemented in the Asset Hub runtime. This signed-extension extends transactions to include an optional `AssetId` that specifies the asset to be used for payment of both the execution fees and the optional tip. It defaults to the native token when it is set to `None`. In case it is given, this `AssetId` has to be an [XCM `Multilocation`](https://wiki.polkadot.network/docs/learn/xcm/fundamentals/multilocation-summary). Once the transaction is executed in the block, it will emit an `AssetTxFeePaid` event, informing of the account paying the fees, the amount in the asset paid as fee, the tip (if any), and the asset ID of the asset paying the fees.
 
-**HANDLING POOLS WITH LOW LIQUIDITY**
+**Handling Pools with Low Liquidity**
 
 Wallets and UIs enabling this functionality should ensure that the user is prompted with the necessary warnings, such that they do not accidentally spend all of their funds to perform a swap on a pool with no or low liquidity. 
 
-##### Examples for Devs and Wallets on How to Build Transactions That Pays Fees with Other Assets
+##### How to Build Transactions Paying Fees with Other Assets
 
 - [This repository](https://github.com/bee344/asset-conversion-example/tree/main) contains the complete workflow on how to create a liquidity pool for a given asset, add liquidity to it and then build a transaction to pays fees with this asset (including fees estimation). It is done with several libraries: Polkadot.js API and Subxt. 
 - [Example using Asset Transfer API](https://github.com/paritytech/asset-transfer-api/blob/main/examples/polkadot/assetHub/paysWithFeeOriginTransfers/dotToHydrationPaysWithGLMR.ts) to do a cross-chain transfer in Polkadot Asset Hub paying fees with GLMR.
