@@ -167,8 +167,8 @@ tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 credited with 1 WND by default. You can also specify to get more tokens by
 `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
 
-You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network.
-Watch the video below on how to get started on Westend.
+On the Westend network, you can also earn WNDs as rewards by
+[becoming a validator](learn-validator.md). Watch the video below on how to get started on Westend.
 
 <div className="row">
   <div className="col text--center">
