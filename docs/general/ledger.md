@@ -145,13 +145,13 @@ The migration process is not meant for Polkadot Relay Chain and System Chains us
 install the Polkadot app and operate it as usual. For users of Kusama Relay Chain, Kusama System
 Chains and parachains, and Polkadot parachains, see the procedure below:
 
-- Install Polkadot Migration and Polkadot App
+- Install Polkadot Migration and Polkadot App.
 - Use a browser extension or mobile wallet that supports the new apps. No application will
   automatically migrate your assets. You need to manually migrate your assets, identities, staking,
   etc., to the account controlled by the Polkadot app and sign in with the Migration app (the
-  extensions and wallets UI will tell you which app you need to use to sign in). When the migration
-  process is finished, you can delete the Migration app, and everything will be accessible using the
-  Polkadot Generic app.
+  extensions and wallets UI will tell you which app you need to use to sign in).
+- When the migration process is finished, you can delete the Migration app, and everything will be
+  accessible using the Polkadot Generic app.
 
 :::info Staking and Identities
 
