@@ -180,10 +180,10 @@ governance, acquisition of a parachain slot and for enabling several key functio
   the minimum amount of KSM required to become an active nominator and earn rewards.
 
 KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) where you can
-[vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum) or
+[vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
 [delegate your voting power](../../learn/learn-polkadot-opengov.md#multirole-delegation), and place
 deposits for your referenda or referenda proposed by others. KSM can also enable you to participate
-in programs like the [Thousand Validators Programme](../../general/thousand-validators.md#polkadot).
+in programs like the [Thousand Validators Programme](../../general/thousand-validators.md).
 
 ### Kusama Gifts
 
