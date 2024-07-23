@@ -63,11 +63,15 @@ Here is a list of what you will need before using
   functionalities).
 - [Ledger Live](https://www.ledger.com/ledger-live) installed and up-to-date.
 - The latest firmware of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger
-  App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to
+  App installed (always check for updates in Ledger Live under the "Manager" tab; you will need to
   allow access with your nano).
 - A Chromium-based web browser if you use a browser extension.
 
-## Polkadot Ledger App
+Ledger devices are tiny computers. They have an operating system (or firmware), and on top of it,
+you can install applications. Every blockchain needs to develop its own application to use Ledger
+devices. Make sure you have your Ledger devices with firmware and apps up-to-date.
+
+## Polkadot Ledger Apps
 
 Ledger devices can be equipped with applications that are blockchain-specific. Third parties usually
 develop such applications, enabling users to transact securely on the blockchain network. Polkadot
@@ -88,23 +92,26 @@ not on the **lite version**.
 
 :::
 
-There are currently three versions of the Polkadot Ledger app, described below.
+### Polkadot Migration App
 
-|   App Version    | Support |
-| :--------------: | :-----: |
-|       lite       | Ongoing |
-|        XL        | Ongoing |
-| Nano SP/X - Stax | Ongoing |
+:::warning For Migration Only
 
-These Ledger apps must be updated every time there is a runtime upgrade.
-
-## Polkadot Ledger Generic App
-
-:::info In Development
-
-Check this [website](https://substrate.beryx.io/new_polkadot_ledger_app) for updates and info.
+This app is only meant for performing the migration to the Polkadot Generic App; do not use it
+frequently. After you migrate your assets, delete the Migration app and use the Polkadot Generic
+App.
 
 :::
+
+The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot Relay Chain
+and Polkadot System Chains**. Old Ledger accounts are accounts that have been created using the old
+Kusama Ledger app and parachain Ledger apps (for both Kusama and Polkadot).
+
+Suppose you have accounts on any Polkadot parachain, Kusama Relay Chain, and Kusama parachains. In
+that case, you will need the Polkadot Migration app to move fungible and non-fungible assets,
+identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot
+Ledger app.
+
+### Polkadot (Generic) App
 
 The Polkadot Ledger Generic App will allow you to use your Ledger device on the Relay Chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
@@ -131,6 +138,28 @@ The Polkadot Ledger Generic app will be supported by Ledger Live,
 For more information about the Polkadot Generic App, see the
 [Ledger FAQ](https://support.ledger.com/hc/en-us/articles/17550211746845-New-Polkadot-app-FAQ?docs=true%20:dot),
 and [Zondax beryx page](https://substrate.beryx.io/new_polkadot_ledger_app).
+
+## Migration Process
+
+The migration process is not meant for Polkadot Relay Chain and System Chains users. Those users can
+install the Polkadot app and operate it as usual. For users of Kusama Relay Chain, Kusama System
+Chains and parachains, and Polkadot parachains, see the procedure below:
+
+- Install Polkadot Migration and Polkadot App
+- Use a browser extension or mobile wallet that supports the new apps. No application will
+  automatically migrate your assets. You need to manually migrate your assets, identities, staking,
+  etc., to the account controlled by the Polkadot app and sign in with the Migration app (the
+  extensions and wallets UI will tell you which app you need to use to sign in). When the migration
+  process is finished, you can delete the Migration app, and everything will be accessible using the
+  Polkadot Generic app.
+
+:::info Staking and Identities
+
+The migration process will also include removing identities from your old account and resetting them
+to the new one. You will also need to unstake, wait for the unbonding period, transfer the funds to
+the new account, and stake again.
+
+:::
 
 ## Using Ledger Live
 
