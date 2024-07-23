@@ -179,12 +179,11 @@ governance, acquisition of a parachain slot and for enabling several key functio
 - {{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={0} filter="humanReadable"/>:__ :kusama }}
   the minimum amount of KSM required to become an active nominator and earn rewards.
 
-KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md). Bonding KSM is a
-requirement to create proposals, to endorse them and to vote on them when they become referendums.
-Bonding
-{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={666666666000} filter="humanReadable"/> :kusama }}
-or 5% of requested funding is a requirement to make a
-[treasury proposal](../../learn/learn-polkadot-opengov-treasury.md).
+KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) where you can
+[vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
+[delegate your voting power](../../learn/learn-polkadot-opengov.md#multirole-delegation), and place
+deposits for your referenda or referenda proposed by others. KSM can also enable you to participate
+in programs like the [Thousand Validators Programme](../../general/thousand-validators.md).
 
 ### Kusama Gifts
 
