@@ -81,8 +81,8 @@ is a system parachain on Westend network.
 
 #### Westmint Faucet
 
-Claim WND tokens from the [faucet](https://paritytech.github.io/polkadot-testnet-faucet/westend) on
-Westend and teleport them to Westmint.
+Claim WND tokens from the [faucet](https://faucet.polkadot.io/westend) on Westend and teleport them
+to Westmint.
 
 ### Rococo Test Network
 

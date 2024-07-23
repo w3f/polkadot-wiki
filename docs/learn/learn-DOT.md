@@ -139,16 +139,16 @@ All the tokens under active issuance are can be used to participate in the gover
 
 ## Obtaining Testnet Tokens
 
-DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets like
-Paseo, Westend and Rococo do not have any value besides allowing you to experiment with the features
-on the network.
+DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets do not
+have any value besides allowing you to experiment with the features on the network.
+
+Tokens for each testnet described below can be obtained [**here**](https://faucet.polkadot.io/).
 
 ### Getting Tokens on the Paseo Testnet
 
-The Paseo testnet mirrors the Polkadot runtime and it is maintained by the community. To get Paseo
-tokens (PAS) you can use the web-based
-[Paseo faucet](https://paritytech.github.io/polkadot-testnet-faucet/paseo). The PAS tokens has the
-same Planck conversion as Polkadot.
+The Paseo testnet mirrors the Polkadot runtime and it is maintained by the community. The PAS tokens
+can be obtained [here](https://faucet.polkadot.io/) and have the same Planck conversion as
+Polkadot's native token DOT.
 
 | Unit            | Decimal Places | Conversion to Planck   | Conversion to PAS |
 | --------------- | -------------- | ---------------------- | ----------------- |
@@ -160,14 +160,12 @@ same Planck conversion as Polkadot.
 
 ### Getting Tokens on the Westend Testnet
 
-Polkadot's testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network) and
-you can obtain its native tokens (called Westies!) by posting `!drip <WESTEND_ADDRESS>` in the
-Matrix chatroom [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your
-account will be credited with 1 WND by default. You can also specify to get more tokens by
+Polkadot's testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network).
+Besides the [official faucet](https://faucet.polkadot.io/westend), you can obtain its native WND
+tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
+[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be
+credited with 1 WND by default. You can also specify to get more tokens by
 `!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
-
-Another way is to use our web-based
-[Westend faucet](https://paritytech.github.io/polkadot-testnet-faucet/westend).
 
 You can also earn WNDs as rewards by [becoming a validator](learn-validator.md) on Westend network.
 Watch the video below on how to get started on Westend.
@@ -193,12 +191,13 @@ Watch the video below on how to get started on Westend.
 
 ### Getting Tokens on the Rococo Testnet
 
-Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
-the [cross consensus](learn-xcm.md) message-passing aspects of this testnet. General users can
-obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
+Rococo is a parachain testnet. ROC tokens are given directly to teams working on parachains or
+exploring the [cross consensus](learn-xcm.md) message-passing aspects of this testnet. Besides the
+[official faucet](https://faucet.polkadot.io/rococo), users can obtain ROC by posting
+`!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org) or through the web-based
-[Rococo faucet](https://paritytech.github.io/polkadot-testnet-faucet/). Learn more about Rococo on
-its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
+[Rococo faucet](https://faucet.polkadot.io/rococo). Learn more about Rococo on its
+[dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
 ### Faucets support
 
