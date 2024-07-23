@@ -182,7 +182,7 @@ governance, acquisition of a parachain slot and for enabling several key functio
 KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) where you can
 [vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum) or
 [delegate your voting power](../../learn/learn-polkadot-opengov.md#multirole-delegation), and place
-deposits for your referenda or referenda proposed by others. DOT can also enable you to participate
+deposits for your referenda or referenda proposed by others. KSM can also enable you to participate
 in programs like the [Thousand Validators Programme](../../general/thousand-validators.md#polkadot).
 
 ### Kusama Gifts
