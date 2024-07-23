@@ -104,7 +104,8 @@ App.
 
 The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot Relay Chain
 and Polkadot System Chains**. Old Ledger accounts are accounts that have been created using the old
-Kusama Ledger app and parachain Ledger apps (for both Kusama and Polkadot).
+Kusama Ledger app and any parachain Ledger apps (for both Kusama and Polkadot) except for Polkadot
+System Chains.
 
 Suppose you have accounts on any Polkadot parachain, Kusama Relay Chain, and Kusama parachains. In
 that case, you will need the Polkadot Migration app to move fungible and non-fungible assets,
