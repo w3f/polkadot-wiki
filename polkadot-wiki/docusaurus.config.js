@@ -40,7 +40,7 @@ module.exports = {
       'data-modal-disclaimer': 'This is an AI chatbot trained to answer questions about Polkadot. As such, the answers it provides might not always be accurate or up-to-date. Please use your best judgement when evaluating its responses. Also, **please refrain from sharing any personal or private information with the bot**. By submitting a query, you agree that you have read and understood [these conditions](https://polkadot.network/legal-disclosures/). \n\n **If you need further assistance, you can reach out to [Polkadot Support](https://support.polkadot.network/support/tickets/new).**',
       'data-modal-example-questions': 'Where can I store my DOT?,How can I create a DOT account?,How can I stake my DOT?,How does Polkadot OpenGov work?',
       'data-search-mode-enabled': 'true',
-      'data-search-mode-default': 'true',
+      'data-search-mode-default': 'false',
       'data-button-position-top': '120px',
       'data-button-position-right': '0px',
       'data-search-include-source-names': '["Polkadot Wiki"]',
