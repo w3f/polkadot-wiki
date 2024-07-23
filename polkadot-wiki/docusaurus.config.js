@@ -25,6 +25,26 @@ module.exports = {
     "../js/custom.js",
     "../js/clipboard.min.js",
     "../js/copycode.js",
+    {
+      src: 'https://widget.kapa.ai/kapa-widget.bundle.js',
+      async: true,
+      'data-website-id': 'f4bbad14-cc24-471c-8b7d-3267eafc6dc2',
+      'data-project-name': 'Polkadot',
+      'data-modal-title': 'Polkadot AI Chatbot',
+      'data-project-color': '#1E1E1E',
+      'data-button-bg-color': '#1C0533',
+      'data-button-text-color': 'white',
+      'data-project-logo': 'https://1000logos.net/wp-content/uploads/2022/08/Polkadot-Symbol.png',
+      'data-modal-header-bg-color': '#1C0533',
+      'data-modal-title-color': 'white',
+      'data-modal-disclaimer': 'This is an AI chatbot trained to answer questions about Polkadot. As such, the answers it provides might not always be accurate or up-to-date. Please use your best judgement when evaluating its responses. Also, **please refrain from sharing any personal or private information with the bot**. By submitting a query, you agree that you have read and understood [these conditions](https://polkadot.network/legal-disclosures/). \n\n **If you need further assistance, you can reach out to [Polkadot Support](https://support.polkadot.network/support/tickets/new).**',
+      'data-modal-example-questions': 'Where can I store my DOT?,How can I create a DOT account?,How can I stake my DOT?,How does Polkadot OpenGov work?',
+      'data-search-mode-enabled': 'true',
+      'data-search-mode-default': 'true',
+      'data-button-position-top': '120px',
+      'data-button-position-right': '0px',
+      'data-search-include-source-names': '["Polkadot Wiki"]',
+    },
   ],
   stylesheets: [
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
@@ -260,11 +280,6 @@ module.exports = {
           type: "search",
           position: "right",
         },
-        {
-          to: "docs/contributing",
-          label: "Contribute",
-          position: "right",
-        },
       ],
     },
     footer: {
@@ -292,4 +307,3 @@ module.exports = {
     image: 'img/og-polkadot-wiki.png'
   },
 };
-
