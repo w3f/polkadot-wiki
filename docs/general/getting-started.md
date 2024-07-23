@@ -195,7 +195,7 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
   you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
 DOT has utility in Polkadot's OpenGov where you can
-[vote](../learn/learn-polkadot-opengov.md#voting-on-a-referendum) or
+[vote](../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
 [delegate your voting power](../learn/learn-polkadot-opengov.md#multirole-delegation), and place
 deposits for your referenda or referenda proposed by others. DOT can also enable you to participate
 in programs like the [Thousand Validators Programme](../general/thousand-validators.md#polkadot).
