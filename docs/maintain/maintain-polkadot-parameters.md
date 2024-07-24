@@ -7,7 +7,7 @@ keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -17,8 +17,12 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Polkadot generally runs at &frac14;th the speed of Kusama, except in the time slot duration
-itself. See [Kusama Parameters](https://guide.kusama.network/docs/kusama-parameters/) for more
-details on how Polkadot's parameters differ from Kusama's._
+itself._
+
+<!-- prettier-ignore -->
+<Tabs groupId="periods" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 4 hours (2_400 slots x 6 seconds)
@@ -31,6 +35,24 @@ details on how Polkadot's parameters differ from Kusama's._
 | Epoch    | 4 hours   | 2_400   |
 | Session  | 4 hours   | 2_400   |
 | Era      | 24 hours  | 14_400  |
+
+</TabItem>
+<TabItem value="kusama">
+
+- Slot: 6 seconds \*(generally one block per slot, although see note below)
+- Epoch: 1 hour (600 slots x 6 seconds)
+- Session: 1 hour (6 sessions per Era)
+- Era: 6 hours (3600 slots x 6 seconds)
+
+| Kusama  | Time      | Slots\* |
+| ------- | --------- | ------- |
+| Slot    | 6 seconds | 1       |
+| Epoch   | 1 hour    | 600     |
+| Session | 1 hour    | 600     |
+| Era     | 6 hours   | 3_600   |
+
+</TabItem>
+</Tabs>
 
 \*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
 a block in the chain. Thus, the times given are *estimates*. See
@@ -50,35 +72,66 @@ a block in the chain. Thus, the times given are *estimates*. See
 
 ### Governance
 
-| Democracy        | Time    | Slots   | Description                                                                                                                                                   |
-| ---------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Voting period    | 28 days | 403_200 | How long the public can vote on a referendum.                                                                                                                 |
-| Launch period    | 28 days | 403_200 | How long the public can select which proposal to hold a referendum on, i.e., every week, the highest-weighted proposal will be selected to have a referendum. |
-| Enactment period | 28 days | 403_200 | Time it takes for a successful referendum to be implemented on the network.                                                                                   |
+<!-- prettier-ignore -->
+<Tabs groupId="governance" values={[ 
+  { label: 'Polkadot', value: 'polkadot' }, 
+  { label: 'Kusama', value: 'kusama' } 
+]}>
 
-| Council       | Time   | Slots   | Description                                                          |
-| ------------- | ------ | ------- | -------------------------------------------------------------------- |
-| Term duration | 7 days | 100_800 | The length of a council member's term until the next election round. |
-| Voting period | 7 days | 100_800 | The council's voting period for motions.                             |
+  <TabItem value="polkadot">
 
-The Polkadot Council consists of up to 13 members and up to 20 runners up.
+  | Parameter        | Time    | Slots   | Description                                                                                           |
+  | ---------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------- |
+  | Voting period    | 28 days | 403_200 | How long the public can vote on a referendum.                                                         |
+  | Enactment period | 28 days | 403_200 | Time it takes for a successful referendum to be implemented on the network.                           |
 
-| Technical committee     | Time    | Slots   | Description                                                                                    |
-| ----------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------- |
-| Cool-off period         | 7 days  | 100_800 | The time a veto from the technical committee lasts before the proposal can be submitted again. |
-| Emergency voting period | 3 hours | 1_800   | The voting period after the technical committee expedites voting.                              |
+  </TabItem>
+
+  <TabItem value="kusama">
+
+  | Parameter        | Time   | Slots   | Description                                                                                           |
+  | ---------------- | ------ | ------- | ----------------------------------------------------------------------------------------------------- |
+  | Voting period    | 7 days | 100_800 | How long the public can vote on a referendum.                                                         |
+  | Enactment period | 8 days | 115_200 | Time it takes for a successful referendum to be implemented on the network.                           |
+
+  </TabItem>
+
+</Tabs>
 
 ### Staking, Validating, and Nominating
 
 The maximum number of validators that can be nominated by a nominator is
 {{ polkadot: 16. :polkadot }} {{ kusama: 24. :kusama }}
 
-| Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
+<!-- prettier-ignore -->
+<Tabs groupId="staking" values={[ 
+  { label: 'Polkadot', value: 'polkadot' }, 
+  { label: 'Kusama', value: 'kusama' } 
+]}>
+
+  <TabItem value="polkadot">
+
+| Parameter             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 1 Day   | 14_400  | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
-| Nomination period    | 1 Day   | 14_400  | How often a new validator set is elected according to Phragmén's method.                                                                                                                            |
+| Nomination period    | 1 Day   | 14_400  | How often a new validator set is elected according to [Phragmén's method](../learn/learn-phragmen.md).                                                                                                                            |
 | Bonding duration     | 28 days | 403_200 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 28 days | 403_200 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
+
+</TabItem>
+
+  <TabItem value="kusama">
+
+  | Parameter               | Time    | Slots   | Description                                                                                                                                                                                         |
+| -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Term duration        | 6 hours | 3_600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                      |
+| Nomination period    | 6 hours | 3_600   | How often a new validator set is elected according to [Phragmén's method](../learn/learn-phragmen.md).                                                                                                                          |
+| Bonding duration     | 7 days  | 604_800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
+| Slash defer duration | 7 days  | 604_800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
+
+</TabItem>
+
+</Tabs>
 
 ### Parachains
 
@@ -95,13 +148,45 @@ The maximum number of validators that can be nominated by a nominator is
 
 ### Treasury
 
+<!-- prettier-ignore -->
+<Tabs groupId="treasury" values={[ 
+  { label: 'Polkadot', value: 'polkadot' }, 
+  { label: 'Kusama', value: 'kusama' } 
+]}>
+
+  <TabItem value="polkadot">
+
 | Treasury               | Time    | Slots   | Description                                                  |
 | ---------------------- | ------- | ------- | ------------------------------------------------------------ |
 | Periods between spends | 24 days | 345_600 | When the treasury can spend again after spending previously. |
 
 Burn percentage is currently `1.00%`.
 
+</TabItem>
+
+  <TabItem value="kusama">
+
+  | Treasury               | Time   | Slots  | Description                                                  |
+| ---------------------- | ------ | ------ | ------------------------------------------------------------ |
+| Periods between spends | 6 days | 86_400 | When the treasury can spend again after spending previously. |
+
+Burn percentage is currently `0.20%`, though instead of being burned this amount is temporarily
+redirected into the [Society](../maintain/kusama/maintain-guides-society-kusama.md)'s treasury to
+fund growth.
+
+</TabItem>
+
+</Tabs>
+
 ### Precision
+
+<!-- prettier-ignore -->
+<Tabs groupId="precision" values={[ 
+  { label: 'Polkadot', value: 'polkadot' }, 
+  { label: 'Kusama', value: 'kusama' } 
+]}>
+
+  <TabItem value="polkadot">
 
 DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
 Plancks make up a DOT.
@@ -109,3 +194,14 @@ Plancks make up a DOT.
 The denomination of DOT was changed from 12 decimals of precision at block #1,248,328 in an event
 known as _Denomination Day_. See [Redenomination](../learn/archive/learn-redenomination.md) for
 details.
+
+</TabItem>
+
+  <TabItem value="kusama">
+
+KSM have 12 decimals of precision. In other words, 1e12 (1_000_000_000_000, or one trillion) Plancks
+make up a single KSM.
+
+</TabItem>
+
+</Tabs>
