@@ -66,6 +66,6 @@ service, and additional metrics.
 :::note
 
 The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from
-[Polkdot-JS UI](https://polkadot.js.org/apps/#/explorer)
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer)
 
 :::
