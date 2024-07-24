@@ -89,6 +89,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Wallet Plugins         | [Metamask-Snap by Chainsafe](https://github.com/ChainSafe/metamask-snap-polkadot) 🟢|
 | CLI Wallet             | [Subwallet](https://github.com/yxf/subwallet) ⚪, [Proxy-hot-wallet](https://github.com/canontech/proxy-hot-wallet) ⚪|
 | Hardware Wallets       | [Ledger Polkadot](https://github.com/ZondaX/ledger-polkadot) 🟢, [Ledger Kusama](https://github.com/Zondax/ledger-kusama) 🟡, [Ledger Statemint](https://github.com/Zondax/ledger-statemint) ⚪, [Ledger Statemine](https://github.com/Zondax/ledger-statemine) ⚪| Trezor                                                                                                                                                                                                                                                                            |
+| OAuth2-compatible Wallets | [DOT Login](https://github.com/singkeo/dot-login) 🟢 | |
 
 ### User Interface
 
