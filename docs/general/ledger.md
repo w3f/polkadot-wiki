@@ -103,12 +103,12 @@ App.
 :::
 
 The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot Relay Chain
-and Polkadot System Chains**. Old Ledger accounts are accounts that have been created using the old
-Kusama Ledger app and any parachain Ledger apps (for both Kusama and Polkadot) except for Polkadot
-System Chains.
+and [Polkadot System Chains](./glossary.md#system-parachains)**. Old Ledger accounts are accounts
+that have been created using the old Kusama Ledger app and any parachain Ledger apps (for both
+Kusama and Polkadot) except for Polkadot System Chains.
 
 Suppose you have accounts on any Polkadot parachain, Kusama Relay Chain, and Kusama parachains. In
-that case, you will need the Polkadot Migration app to move fungible and non-fungible assets,
+that case, you will need the Polkadot Migration app to move fungible and non-fungible assets (NFT),
 identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot
 Ledger app.
 
@@ -148,9 +148,10 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 
 - Install Polkadot Migration and Polkadot App.
 - Use a browser extension or mobile wallet that supports the new apps. No application will
-  automatically migrate your assets. You need to manually migrate your assets, identities, staking,
-  etc., to the account controlled by the Polkadot app and sign in with the Migration app (the
-  extensions and wallets UI will tell you which app you need to use to sign in).
+  automatically migrate your assets. You need to manually migrate your assets,
+  [identities](../learn/learn-identity.md), [staking](../learn/learn-staking.md), etc., to the
+  account controlled by the Polkadot app and sign in with the Migration app (the extensions and
+  wallets UI will tell you which app you need to use to sign in).
 - When the migration process is finished, you can delete the Migration app, and everything will be
   accessible using the Polkadot Generic app.
 
