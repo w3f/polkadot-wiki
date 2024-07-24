@@ -44,6 +44,7 @@ module.exports = {
       'data-button-position-top': '120px',
       'data-button-position-right': '0px',
       'data-search-include-source-names': '["Polkadot Wiki"]',
+      'data-modal-override-open-class': 'algolia',
     },
   ],
   stylesheets: [
