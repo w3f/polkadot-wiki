@@ -150,8 +150,8 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 - Use a browser extension or mobile wallet that supports the new apps. No application will
   automatically migrate your assets. You need to manually migrate your assets,
   [identities](../learn/learn-identity.md), [staking](../learn/learn-staking.md), etc., to the
-  account controlled by the Polkadot app and sign in with the Migration app (the extensions and
-  wallets UI will tell you which app you need to use to sign in).
+  account controlled by the Polkadot app and sign in with the Migration app (some extensions and
+  wallets UI will prompt which app you need to use to sign in depending on the chain you are in).
 - When the migration process is finished, you can delete the Migration app, and everything will be
   accessible using the Polkadot Generic app.
 
