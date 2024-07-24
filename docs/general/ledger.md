@@ -63,11 +63,15 @@ Here is a list of what you will need before using
   functionalities).
 - [Ledger Live](https://www.ledger.com/ledger-live) installed and up-to-date.
 - The latest firmware of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger
-  App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to
+  App installed (always check for updates in Ledger Live under the "Manager" tab; you will need to
   allow access with your nano).
 - A Chromium-based web browser if you use a browser extension.
 
-## Polkadot Ledger App
+Ledger devices are tiny computers. They have an operating system (or firmware), and on top of it,
+you can install applications. Every blockchain needs to develop its own application to use Ledger
+devices. Make sure you have your Ledger devices with firmware and apps up-to-date.
+
+## Polkadot Ledger Apps
 
 Ledger devices can be equipped with applications that are blockchain-specific. Third parties usually
 develop such applications, enabling users to transact securely on the blockchain network. Polkadot
@@ -88,23 +92,27 @@ not on the **lite version**.
 
 :::
 
-There are currently three versions of the Polkadot Ledger app, described below.
+### Polkadot Migration App
 
-|   App Version    | Support |
-| :--------------: | :-----: |
-|       lite       | Ongoing |
-|        XL        | Ongoing |
-| Nano SP/X - Stax | Ongoing |
+:::warning For Migration Only
 
-These Ledger apps must be updated every time there is a runtime upgrade.
-
-## Polkadot Ledger Generic App
-
-:::info In Development
-
-Check this [website](https://substrate.beryx.io/new_polkadot_ledger_app) for updates and info.
+This app is only meant for performing the migration to the Polkadot Generic App; do not use it
+frequently. After you migrate your assets, delete the Migration app and use the Polkadot Generic
+App.
 
 :::
+
+The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot Relay Chain
+and [Polkadot System Chains](./glossary.md#system-parachains)**. Old Ledger accounts are accounts
+that have been created using the old Kusama Ledger app and any parachain Ledger apps (for both
+Kusama and Polkadot) except for Polkadot System Chains.
+
+Suppose you have accounts on any Polkadot parachain, Kusama Relay Chain, and Kusama parachains. In
+that case, you will need the Polkadot Migration app to move fungible and non-fungible assets (NFT),
+identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot
+Ledger app.
+
+### Polkadot (Generic) App
 
 The Polkadot Ledger Generic App will allow you to use your Ledger device on the Relay Chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
@@ -132,69 +140,34 @@ For more information about the Polkadot Generic App, see the
 [Ledger FAQ](https://support.ledger.com/hc/en-us/articles/17550211746845-New-Polkadot-app-FAQ?docs=true%20:dot),
 and [Zondax beryx page](https://substrate.beryx.io/new_polkadot_ledger_app).
 
+## Migration Process
+
+The migration process is not meant for Polkadot Relay Chain and System Chains users. Those users can
+install the Polkadot app and operate it as usual. For users of Kusama Relay Chain, Kusama System
+Chains and parachains, and Polkadot parachains, see the procedure below:
+
+- Install Polkadot Migration and Polkadot App.
+- Use a browser extension or mobile wallet that supports the new apps. No application will
+  automatically migrate your assets. You need to manually migrate your assets,
+  [identities](../learn/learn-identity.md), [staking](../learn/learn-staking.md), etc., to the
+  account controlled by the Polkadot app and sign in with the Migration app (some extensions and
+  wallets UI will prompt which app you need to use to sign in depending on the chain you are in).
+- When the migration process is finished, you can delete the Migration app, and everything will be
+  accessible using the Polkadot Generic app.
+
+:::info Staking and Identities
+
+The migration process will also include removing identities from your old account and resetting them
+to the new one. You will also need to unstake, wait for the unbonding period, transfer the funds to
+the new account, and stake again.
+
+:::
+
 ## Using Ledger Live
 
 See
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
 to learn how to use {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with ledger live.
-
-## Ledger Developer Release
-
-:::warning
-
-This section is for developers only. It is recommended to install the application from Ledger Live
-unless you _know precisely what you're doing_.
-
-:::
-
-### Why you might need the Developer Release
-
-Ledger apps for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem are
-developed by [Zondax](https://zondax.ch/). When new functionalities are added to the Ledger apps,
-they are made available on a developer release for testing purposes. After a successful audit and
-review, the apps would be available for download and installation using
-[Ledger Live](https://www.ledger.com/ledger-live). As it takes some time for Ledger to audit and
-review the release, the app upgrade option may not be available on Ledger Live when the new runtime
-is deployed on the network. If this happens, users cannot use Ledger devices to sign transactions.
-Suppose you cannot wait a few days until the app passes the Ledger audit, you can install the
-developer release from the shell using the latest version published on
-[the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
-
-### Install the Developer Release
-
-:::info
-
-See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer
-release of your ledger app.
-
-Currently, the developer release can be installed only on the Nano S and S Plus devices and can't be
-installed on the Nano X.
-
-:::
-
-To install the developer version, make sure you have the latest `pip` version and follow the steps
-below:
-
-- Install _ledgerblue_ running the command `python3 -m pip install ledgerblue`.
-- Download the developer release from the
-  [Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases). The file will be
-  named `installer_nanos_plus.sh` or something similar, depending on your ledger device.
-- Locate the downloaded shell script and make it executable in your shell by typing the command
-  `chmod +x installer_nanos_plus.sh`.
-- You can now use the `./installer_nanos_plus.sh --help` command to visualize the available options
-  (see below)
-
-![Dev Ledger Help Menu](../assets/ledger-help-menu.png)
-
-- Attach your Ledger Nano (in this case, Nano S Plus) to your computer, enter the PIN code, and run
-  the command `./installer_nanos_plus.sh load`. Scroll with the right button until you see "Allow
-  unsafe manager", left and right press to confirm. You will be asked to confirm the action of
-  uninstalling the app and subsequently installing the newer version. After confirming both actions,
-  the shell script will install the version on your device. You must insert the PIN code to use the
-  device after the installation.
-- If you wish to revert the version to the stable release, go to Ledger Live. The app will
-  automatically detect the developer release and give the option to install the previous stable
-  release.
 
 ---
 
