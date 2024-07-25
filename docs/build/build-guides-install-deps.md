@@ -426,10 +426,8 @@ parachains (an
 ["omninode beta"](https://forum.polkadot.network/t/polkadot-parachain-omni-node-gathering-ideas-and-feedback/7823)).
 It can be installed as follows:
 
-> You can change `--tag` to the specific release of your choice
-
 ```sh
-cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.13.0 --force polkadot-parachain-bin
+cargo install polkadot-parachain-bin
 ```
 
 The `chain-spec-builder` is how you will generate chain specifications from different presets. Each
