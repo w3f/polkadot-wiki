@@ -26,10 +26,10 @@ verification of this information by [registrars](#registrars).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ polkadot: <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> :kusama }}
 and
 {{ polkadot: <RPC network="polkadotpeople" path="consts.identity.byteDeposit" defaultValue={100000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> :kusama }}
 (per byte) per each field beyond the legal name. These funds are _locked_, not spent - they are
 returned when the identity is cleared.
 

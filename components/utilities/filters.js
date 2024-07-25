@@ -23,12 +23,12 @@ const values = {
     symbol: "KSM",
   },
   polkadotpeople: {
-    precision: 1e10,
-    symbol: "DOT",
+    precision: 1e7,
+    symbol: "milli DOT",
   },
   kusamapeople: {
-    precision: 1e12,
-    symbol: "KSM",
+    precision: 1e9,
+    symbol: "milli KSM",
   },
 };
 

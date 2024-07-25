@@ -153,11 +153,11 @@ use it to set a sub-identity to your Ledger account.
 - Sign and submit the transaction from the parent account with the identity
 
 You should now see the sub-identity displayed on-chain. You need to be aware that
-{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> :kusama }}
 is reserved for setting identity and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.subAccountDeposit" defaultValue={2005300000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6684333309} filter="humanReadable"/> :kusama }}
 for each sub-identity. This reserved account balance is freed once you
 [clear the identities](../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
 

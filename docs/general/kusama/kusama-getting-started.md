@@ -167,7 +167,7 @@ governance, acquisition of a parachain slot and for enabling several key functio
   the minimum contribution required to participate in [crowdloans](../../learn/learn-crowdloans.md)
   for [parachain slot auctions](../../learn/learn-auction.md).
 
-- {{ kusama: __<RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={333333333000} filter="humanReadable"/>:__ :kusama }}
+- {{ kusama: __<RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/>:__ :kusama }}
   register an [on-chain identity](../../learn/learn-identity.md)
 
 - {{ kusama: __<RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>:__ :kusama }}

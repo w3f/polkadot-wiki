@@ -40,13 +40,13 @@ a block in the chain. Thus, the times given are *estimates*. See
 
 - The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is
   {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :kusama }}
+  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :kusama }}
 - The deposit required to set an Identity is
-  {{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :kusama }}
+  {{ polkadot: <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> :polkadot }}
+  {{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> :kusama }}
 - The minimum contribution required to participate in a crowdloan is
   {{ polkadot: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :kusama }}
+  {{ kusama: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :kusama }}
 
 ### Governance
 
