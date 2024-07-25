@@ -98,7 +98,7 @@ See the [Bridges page](learn-bridges.md) for information on the latest bridge pr
 
 ### People Chain
 
-The People Chain allows users to [transfer tokens](./learn-transactions.md), mange their account [identity](./learn-identity.md), [proxies](./learn-proxies.md) and [multi-signature accounts](./learn-account-multisig.md), and more.
+The People Chain allows users to mange their account [identity](./learn-identity.md).
 
 ### Coretime Chain
 
