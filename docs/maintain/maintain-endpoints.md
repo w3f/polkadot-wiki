@@ -20,7 +20,7 @@ tables below list these endpoints.
 
 ### Network Endpoints
 
-Endpoints for all production and test networks are visible on the
+Endpoints for all production and test networks are listed on the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) and can be accessed
 [here](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/src/endpoints).
 Endpoints for Polkadot Relay Chain and Kusama Relay Chain, parachains, and Paseo test network are
