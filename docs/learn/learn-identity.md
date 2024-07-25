@@ -25,11 +25,11 @@ participants to add personal information to their on-chain account and subsequen
 verification of this information by [registrars](#registrars).
 
 Users must reserve funds in a bond to store their information on chain:
-{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
 and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.byteDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.byteDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.byteDeposit" defaultValue={100000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
 (per byte) per each field beyond the legal name. These funds are _locked_, not spent - they are
 returned when the identity is cleared.
 

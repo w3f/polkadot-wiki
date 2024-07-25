@@ -14,7 +14,8 @@ const Polkadot = "polkadot";
 const Kusama = "kusama";
 const Statemine = "statemine";
 const Statemint = "statemint";
-const KusamaPeople = "kusama-people";
+const KusamaPeople = "kusamapeople";
+const PolkadotPeople = "polkadotpeople";
 
 function RPC({ network, path, defaultValue, filter = undefined }) {
 	const [returnValue, setReturnValue] = useState('');
@@ -46,6 +47,9 @@ function RPC({ network, path, defaultValue, filter = undefined }) {
 				break;
 			case KusamaPeople:
 				wsUrl = "wss://kusama-people-rpc.polkadot.io";
+				break;
+			case PolkadotPeople:
+				wsUrl = "wss://polkadot-people-rpc.polkadot.io";
 				break;
 			default:
 				console.log(`Unknown network provided, ${network}`);
@@ -97,6 +101,12 @@ async function syncData(network, path, setReturnValue) {
 			break;
 		case "statemint":
 			wsUrl = "wss://statemint-rpc.polkadot.io/";
+			break;
+		case "polkadotpeople":
+			wsUrl = "wss://polkadot-people-rpc.polkadot.io/";
+			break;
+		case "kusamapeople":
+			wsUrl = "wss://kusama-people-rpc.polkadot.io/";
 			break;
 		default:
 			console.log("Unknown socket url provided, no connection made.");
