@@ -102,7 +102,7 @@ The People Chain allows users to mange their account [identity](./learn-identity
 
 ### Coretime Chain
 
-The Coretime system chain allows users to buy coretime and access Polkadot's computation. [Coretime marketplaces](./learn-guides-coretime-marketplaces.md) run on top of the Coretime chain. For more information about agile coretime, see [here](./learn-agile-coretime.md).
+The Coretime system chain allows users to buy coretime to access Polkadot's computation. [Coretime marketplaces](./learn-guides-coretime-marketplaces.md) run on top of the Coretime chain. For more information about agile coretime, see [here](./learn-agile-coretime.md).
 
 </TabItem>
 <TabItem value="kusama">
