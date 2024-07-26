@@ -2,6 +2,8 @@ const Polkadot = "polkadot";
 const Kusama = "kusama";
 const Statemine = "statemine";
 const Statemint = "statemint";
+const PolkadotPeople = "polkadotpeople";
+const KusamaPeople = "kusamapeople";
 
 const values = {
   polkadot: {
@@ -20,15 +22,23 @@ const values = {
     precision: 1e12,
     symbol: "KSM",
   },
+  polkadotpeople: {
+    precision: 1e7,
+    symbol: "milliDOT",
+  },
+  kusamapeople: {
+    precision: 1e9,
+    symbol: "milliKSM",
+  },
 };
 
 module.exports = {
 
   HumanReadable: function (value, network, setReturnValue) {
     let decimals = undefined;
-    if (network === Polkadot || network === Statemint) {
+    if (network === Polkadot || network === Statemint || network == PolkadotPeople) {
       decimals = 3;
-    } else if (network === Kusama || network === Statemine) {
+    } else if (network === Kusama || network === Statemine || network == KusamaPeople) {
       decimals = 6;
     } else {
       console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
@@ -63,9 +73,9 @@ module.exports = {
 
   ErasToDays: function (value, setReturnValue, network) {
     let factor = undefined;
-    if (network === Polkadot || network === Statemint) {
+    if (network === Polkadot || network === Statemint || network == PolkadotPeople) {
       factor = 1;
-    } else if (network === Kusama || network === Statemine) {
+    } else if (network === Kusama || network === Statemine || network == KusamaPeople) {
       factor = 4;
     } else {
       console.log("Unknown network type found when attempting to apply 'Human Readable' filter");

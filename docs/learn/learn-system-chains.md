@@ -7,7 +7,7 @@ keywords: [common good, system, parachains, system level, public utility]
 slug: ../learn-system-chains
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 ## Overview
 
@@ -35,6 +35,11 @@ so "System Parachains" is preferred now. A discussion on this evolution can be f
 :::
 
 ## Existing System Chains
+
+<!-- prettier-ignore -->
+<Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot"> 
 
 ### Asset Hub
 
@@ -66,6 +71,43 @@ while only
 {{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>  :polkadot }}
 {{ kusama: <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>  :kusama }}
 on the Asset Hub.
+
+### Collectives
+
+The Polkadot Collectives parachain was added in
+[Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
+there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
+Polkadot network.
+
+Some of these collectives are the
+[Polkadot Alliance](https://polkadot.polkassembly.io/referendum/94) and the Polkadot Technical
+[Fellowship](./learn-polkadot-technical-fellowship.md). These on-chain collectives will play
+important roles in the future of network stewardship and decentralized governance.
+
+Networks themselves can act as collectives and express their legislative voices as single opinions
+within other networks. This is achieved with the assistance from a [bridge hub](#bridge-hubs).
+
+### Bridge Hubs
+
+Before Polkadot and Kusama supported their first parachains, the only way to design a bridge was to
+put the logic onto the Relay Chain itself. Since both networks now support parachains, it makes
+sense to have a parachain on each network dedicated to bridges. This is because of the execution
+isolation provided by parachains.
+
+See the [Bridges page](learn-bridges.md) for information on the latest bridge projects.
+
+### People Chain
+
+The People Chain allows users to mange their account [identity](./learn-identity.md).
+
+### Coretime Chain
+
+The Coretime system chain allows users to buy coretime to access Polkadot's computation. [Coretime marketplaces](./learn-guides-coretime-marketplaces.md) run on top of the Coretime chain. For more information about agile coretime, see [here](./learn-agile-coretime.md).
+
+</TabItem>
+<TabItem value="kusama">
+
+Compared to Polkadot, Kusama does not have the Collectives system chain, and it has the [Encointer](https://encointer.org/encointer-for-web3/) system chain.
 
 ### Encointer
 
@@ -107,28 +149,5 @@ To learn more about Encointer, check out the official
 
 :::
 
-### Collectives
-
-The Polkadot Collectives parachain was added in
-[Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
-there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
-Polkadot network.
-
-Some of these collectives are the
-[Polkadot Alliance](https://polkadot.polkassembly.io/referendum/94) and the Polkadot Technical
-[Fellowship](./learn-polkadot-technical-fellowship.md). These on-chain collectives will play
-important roles in the future of network stewardship and decentralized governance.
-
-Networks themselves can act as collectives and express their legislative voices as single opinions
-within other networks. This is achieved with the assistance from a [bridge hub](#bridge-hubs).
-
-### Bridge Hubs
-
-Before Polkadot and Kusama supported their first parachains, the only way to design a bridge was to
-put the logic onto the Relay Chain itself. Since both networks now support parachains, it makes
-sense to have a parachain on each network dedicated to bridges. This is because of the execution
-isolation provided by parachains.
-
-See the [Bridges page](learn-bridges.md) for information on the latest bridge projects. Currently, a
-Bridge Hub parachain is in development that will be a portal for trust-minimized bridges to other
-networks.
+</TabItem>
+</Tabs>

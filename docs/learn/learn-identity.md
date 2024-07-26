@@ -9,29 +9,33 @@ slug: ../learn-identity
 
 import RPC from "./../../components/RPC-Connection";
 
-:::warning The identity pallet is no longer on the Kusama Relay Chain.
-
-If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
-be called via the system parachain,
-[which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
-
-The identity pallet, along with all of its data, has been migrated to and resumes functionality on
-the [People Chain](../general/glossary.md#people-chain), a system parachain for identity management.
-
-:::
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows
 participants to add personal information to their on-chain account and subsequently ask for
 verification of this information by [registrars](#registrars).
 
 Users must reserve funds in a bond to store their information on chain:
-{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> :kusama }}
 and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.byteDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.byteDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.byteDeposit" defaultValue={100000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> :kusama }}
 (per byte) per each field beyond the legal name. These funds are _locked_, not spent - they are
 returned when the identity is cleared.
+
+Identities are managed on the [People system chain](./learn-system-chains.md).
+
+## Sub-Identities
+
+Users can also link accounts by setting "sub accounts", each with its own identity, under a primary
+account. The system reserves a bond for each sub account. An example of how you might use this would
+be a validation company running multiple validators. A single entity, "My Staking Company", could
+register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of
+their validators.
+
+An account can have a maximum of 100 sub-accounts. Note that a deposit of
+{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+is required for every sub-account.
 
 ## Judgements
 
@@ -110,19 +114,6 @@ Registrar 3: <br /> **Account**:
 {{ kusama: Polkassembly (Registrar 5) provides setting on-chain ID as a service on their [website](https://kusama.polkassembly.io/). :kusama }}
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
-
-## Sub-Identities
-
-Users can also link accounts by setting "sub accounts", each with its own identity, under a primary
-account. The system reserves a bond for each sub account. An example of how you might use this would
-be a validation company running multiple validators. A single entity, "My Staking Company", could
-register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of
-their validators.
-
-An account can have a maximum of 100 sub-accounts. Note that a deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama-people" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
-is required for every sub-account.
 
 ---
 

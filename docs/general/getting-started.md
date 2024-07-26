@@ -176,7 +176,7 @@ Explore Polkadot with a secure and user-friendly wallets listed on the
 
 - **Around 20 DOT**:
 
-  - {{ polkadot: __<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>:__ :polkadot }}
+  - {{ polkadot: __<RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/>:__ :polkadot }}
     register an [on-chain identity](../learn/learn-identity.md)
   - {{ polkadot: __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__ :polkadot }}
     create a [proxy account](../learn/learn-proxies.md).
