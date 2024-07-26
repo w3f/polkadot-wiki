@@ -87,7 +87,7 @@ to learn more about how to assign a curator to a bounty.
 :::
 
 Once your bounty is shown as "funded" on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. The referendum must be submitted to the same track used for proposing the bounty or a higher track. For example, if the bounty was submitted to the Medium Spender Track, the curator must be proposed using the same track or the Big Spender or Treasurer tracks. See the
+[Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. The referendum must be submitted to the same track used for proposing the bounty or a higher track ([see the code snippet](https://github.com/paritytech/polkadot-sdk/blob/22e90b1c11509f1f13083f1ac6c5f028f54432e7/substrate/frame/bounties/src/lib.rs#L412)). For example, if the bounty was submitted to the Medium Spender Track, the curator must be proposed using the same track or the Big Spender or Treasurer tracks. See the
 video tutorial below to learn how you can add a curator to a bounty and submit it for approval
 through an OpenGov referendum.
 
