@@ -200,6 +200,17 @@ selected does not support teleportation yet.
 
 ## Calculating Fees with Polkadot-JS
 
+To calculate fees you can fo to Developer > Runtime Calls and select the following extrinsics:
+
+- `transactionPaymentApi.queryInfo`
+- `transactionPaymentApi.queryFeeDetails`
+
+and specify the `0x` prefixed hex call data and its length.
+
+![Fee details](../assets/fee-details.png)
+
+The sum of `baseFee`, `lenFee` and `adjustedWeightFee` will yield the `partialFee`.
+
 One useful utility for estimating transaction fees programmatically is the via the
 [@polkadot/api](https://www.npmjs.com/package/@polkadot/api). Check out the following script that
 logs some relevant fee information:
