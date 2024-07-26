@@ -7,11 +7,11 @@ keywords: [transaction, fees]
 slug: ../learn-transaction-fees
 ---
 
-Several resources in a blockchain network are limited, for example, storage and computation.
-Transaction fees prevent individual users from consuming too many resources.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a weight-based fee model as
-opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the
-fee is paid, nodes will execute the transaction.
+Storage and computation are limited resources in a blockchain network. Transaction fees prevent
+individual users from consuming too many resources.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a **weight-based fee model** as
+opposed to a gas-metering model. As such, fees are charged prior to transaction execution; and once
+the fee is paid, nodes will execute the transaction.
 
 ## Fee Calculation
 
