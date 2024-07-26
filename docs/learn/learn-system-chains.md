@@ -107,7 +107,7 @@ The Coretime system chain allows users to buy coretime to access Polkadot's comp
 </TabItem>
 <TabItem value="kusama">
 
-Compared to Polkadot, Kusama does not have the Collectives system chain, and it has the Encointer system chain.
+Compared to Polkadot, Kusama does not have the Collectives system chain, and it has the [Encointer](https://encointer.org/encointer-for-web3/) system chain.
 
 ### Encointer
 
