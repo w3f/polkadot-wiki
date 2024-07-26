@@ -17,7 +17,7 @@ module.exports = {
           items: [
             "general/kusama/kusama-getting-started",
             "general/kusama/kusama-coc",
-            "general/kusama/kusama-parameters",
+            "maintain/maintain-polkadot-parameters",
             "general/kusama/kusama-timeline",
             "general/kusama/kusama-community",
             "maintain/kusama/maintain-guides-society-kusama",

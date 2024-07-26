@@ -114,6 +114,10 @@ module.exports = {
             from: ['/docs/kusama-claims']
           },
           {
+            to: '/docs/maintain-polkadot-parameters',
+            from: ['/docs/kusama-parameters']
+          },
+          {
             to: '/docs/kusama-getting-started',
             from: ['/docs/kusama-index']
           },
