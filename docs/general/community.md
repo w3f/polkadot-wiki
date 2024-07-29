@@ -7,8 +7,7 @@ keywords: [community, events, socials, chat, blogs, ecosystem]
 slug: ../community
 ---
 
-The Polkadot community is expanding every day. Below are the most essential links to the community
-channels.
+Below are the most essential links to the community channels for Polkadot and Kusama.
 
 :::caution
 
