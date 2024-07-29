@@ -7,7 +7,8 @@ keywords: [common good, system, parachains, system level, public utility]
 slug: ../learn-system-chains
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem";
 
 ## Overview
 
@@ -39,7 +40,7 @@ so "System Parachains" is preferred now. A discussion on this evolution can be f
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-<TabItem value="polkadot"> 
+<TabItem value="polkadot">
 
 ### Asset Hub
 
@@ -102,12 +103,15 @@ The People Chain allows users to mange their account [identity](./learn-identity
 
 ### Coretime Chain
 
-The Coretime system chain allows users to buy coretime to access Polkadot's computation. [Coretime marketplaces](./learn-guides-coretime-marketplaces.md) run on top of the Coretime chain. For more information about agile coretime, see [here](./learn-agile-coretime.md).
+The Coretime system chain allows users to buy coretime to access Polkadot's computation.
+[Coretime marketplaces](./learn-guides-coretime-marketplaces.md) run on top of the Coretime chain.
+For more information about agile coretime, see [here](./learn-agile-coretime.md).
 
 </TabItem>
 <TabItem value="kusama">
 
-Compared to Polkadot, Kusama does not have the Collectives system chain, and it has the [Encointer](https://encointer.org/encointer-for-web3/) system chain.
+Compared to Polkadot, Kusama does not have the Collectives system chain, and it has the
+[Encointer](https://encointer.org/encointer-for-web3/) system chain.
 
 ### Encointer
 

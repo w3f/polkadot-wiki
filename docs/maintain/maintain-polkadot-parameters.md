@@ -7,7 +7,8 @@ keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
+from "@theme/TabItem";
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -80,19 +81,19 @@ a block in the chain. Thus, the times given are *estimates*. See
 
   <TabItem value="polkadot">
 
-  | Parameter        | Time    | Slots   | Description                                                                                           |
-  | ---------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------- |
-  | Voting period    | 28 days | 403_200 | How long the public can vote on a referendum.                                                         |
-  | Enactment period | 28 days | 403_200 | Time it takes for a successful referendum to be implemented on the network.                           |
+| Parameter        | Time    | Slots   | Description                                                                 |
+| ---------------- | ------- | ------- | --------------------------------------------------------------------------- |
+| Voting period    | 28 days | 403_200 | How long the public can vote on a referendum.                               |
+| Enactment period | 28 days | 403_200 | Time it takes for a successful referendum to be implemented on the network. |
 
   </TabItem>
 
   <TabItem value="kusama">
 
-  | Parameter        | Time   | Slots   | Description                                                                                           |
-  | ---------------- | ------ | ------- | ----------------------------------------------------------------------------------------------------- |
-  | Voting period    | 7 days | 100_800 | How long the public can vote on a referendum.                                                         |
-  | Enactment period | 8 days | 115_200 | Time it takes for a successful referendum to be implemented on the network.                           |
+| Parameter        | Time   | Slots   | Description                                                                 |
+| ---------------- | ------ | ------- | --------------------------------------------------------------------------- |
+| Voting period    | 7 days | 100_800 | How long the public can vote on a referendum.                               |
+| Enactment period | 8 days | 115_200 | Time it takes for a successful referendum to be implemented on the network. |
 
   </TabItem>
 
@@ -111,10 +112,10 @@ The maximum number of validators that can be nominated by a nominator is
 
   <TabItem value="polkadot">
 
-| Parameter             | Time    | Slots   | Description                                                                                                                                                                                         |
+| Parameter            | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 1 Day   | 14_400  | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
-| Nomination period    | 1 Day   | 14_400  | How often a new validator set is elected according to [Phragmén's method](../learn/learn-phragmen.md).                                                                                                                            |
+| Nomination period    | 1 Day   | 14_400  | How often a new validator set is elected according to [Phragmén's method](../learn/learn-phragmen.md).                                                                                              |
 | Bonding duration     | 28 days | 403_200 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 28 days | 403_200 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 
@@ -122,10 +123,10 @@ The maximum number of validators that can be nominated by a nominator is
 
   <TabItem value="kusama">
 
-  | Parameter               | Time    | Slots   | Description                                                                                                                                                                                         |
+| Parameter            | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Term duration        | 6 hours | 3_600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                      |
-| Nomination period    | 6 hours | 3_600   | How often a new validator set is elected according to [Phragmén's method](../learn/learn-phragmen.md).                                                                                                                          |
+| Term duration        | 6 hours | 3_600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
+| Nomination period    | 6 hours | 3_600   | How often a new validator set is elected according to [Phragmén's method](../learn/learn-phragmen.md).                                                                                              |
 | Bonding duration     | 7 days  | 604_800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 7 days  | 604_800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 
@@ -166,7 +167,7 @@ Burn percentage is currently `1.00%`.
 
   <TabItem value="kusama">
 
-  | Treasury               | Time   | Slots  | Description                                                  |
+| Treasury               | Time   | Slots  | Description                                                  |
 | ---------------------- | ------ | ------ | ------------------------------------------------------------ |
 | Periods between spends | 6 days | 86_400 | When the treasury can spend again after spending previously. |
 
