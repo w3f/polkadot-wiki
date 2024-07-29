@@ -200,7 +200,7 @@ selected does not support teleportation yet.
 
 ## Calculating Fees with Polkadot-JS
 
-To calculate fees you can fo to Developer > Runtime Calls and select the following extrinsics:
+To calculate fees you can go to Developer > Runtime Calls and select the following extrinsics:
 
 - `transactionPaymentApi.queryInfo`
 - `transactionPaymentApi.queryFeeDetails`
