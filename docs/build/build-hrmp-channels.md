@@ -61,9 +61,19 @@ of the `XcmExecutor`, which handles notifications of channel requests and accept
 
 [`establish_channel_with_system`](https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_parachains/hrmp/pallet/dispatchables/fn.establish_channel_with_system.html)
 call can be used to establish a bi-directional channel between any parachain and a system chain.
-This call needs to be dispatched from the parachain as an XCM message that gets executed on the
-relay chain. 
+This call needs to be dispatched from the parachain as an XCM message that needs to get executed on
+the relay chain.
 
+For instance, the call to be executed on the relay chain to establish bi-directional channel between
+a parachain with `ParaID` 4428 and the Asset Hub with `ParaID` 1000 is `0x3c0ae8030000`
+
+![asset-hub-hrmp-channel](../assets/asset-hub/establish-channel-asset-hub.png)
+
+Here is an example call with XCM message sent from the parachain with `ParaID` 4428 to Rococo relay
+chain to establish channel a bi-directional channel with Rococo Asset Hub -
+`0x0f001f000301000314000400000000070010a5d4e81300000000070010a5d4e80006000300c16678419c183c0ae8030000140d01000001003145`
+
+![asset-hub-hrmp-channel-xcm](../assets/asset-hub/asset-hub-establish-channel-xcm.png)
 
 ## Opening HRMP Channels Between Two System Parachains
 
