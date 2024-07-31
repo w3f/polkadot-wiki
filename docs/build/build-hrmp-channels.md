@@ -59,7 +59,7 @@ of the `XcmExecutor`, which handles notifications of channel requests and accept
 
 ## Opening HRMP Channels with System Parachains
 
-[`establish_channel_with_system`](https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_parachains/hrmp/pallet/dispatchables/fn.establish_channel_with_system.html)
+The [`establish_channel_with_system`](https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_parachains/hrmp/pallet/dispatchables/fn.establish_channel_with_system.html)
 call can be used to establish a bi-directional channel between any parachain and a system chain.
 This call needs to be dispatched from the parachain as an XCM message that needs to get executed on
 the relay chain.
