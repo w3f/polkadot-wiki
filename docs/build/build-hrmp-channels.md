@@ -64,11 +64,11 @@ call can be used to establish a bi-directional channel between any parachain and
 This call needs to be dispatched from the parachain via an XCM program to execute on the Relay Chain.
 
 For instance, the call to be executed on the relay chain to establish bi-directional channel between
-a parachain with `ParaID` 4428 and the Asset Hub with `ParaID` 1000 is `0x3c0ae8030000`
+a parachain and the Asset Hub with `ParaID` 1000 is `0x3c0ae8030000`
 
 ![asset-hub-hrmp-channel](../assets/asset-hub/establish-channel-asset-hub.png)
 
-Here is an example call with XCM message sent from the parachain with `ParaID` 4428 to Rococo relay
+Here is an example call with XCM message sent from the parachain to Rococo relay
 chain to establish channel a bi-directional channel with Rococo Asset Hub -
 `0x0f001f000301000314000400000000070010a5d4e81300000000070010a5d4e80006000300c16678419c183c0ae8030000140d01000001003145`
 
