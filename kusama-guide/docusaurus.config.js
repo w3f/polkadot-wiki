@@ -121,6 +121,10 @@ module.exports = {
             to: '/docs/kusama-getting-started',
             from: ['/docs/kusama-index']
           },
+          {
+            to: '/docs/learn-transactions',
+            from: ['/docs/learn-transaction-fees']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {
