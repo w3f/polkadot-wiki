@@ -187,7 +187,7 @@ The general rule for rewards across validators is that two validators get paid e
 amount of tokens for equal work, i.e. they are not paid proportional to their total stakes. There is
 a probabilistic component to staking rewards in the form of
 [era points](../maintain/maintain-guides-validator-payout.md##era-points) and
-[tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
+[tips](./learn-guides-transfers.md#calculating-fees-with-polkadot-js) but these should average out over time.
 
 :::
 
