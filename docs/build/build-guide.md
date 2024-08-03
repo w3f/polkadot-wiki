@@ -89,7 +89,7 @@ flowchart TB
  subgraph CS ["Client/User Land (dApps/uApps)"]
  LC["Light Clients (Smoldot)"]
  UA[uApp]
- UA --> PAPI[Polkadot API]
+ UA --> PAPI[Polkadot-API]
  UA --> PJS[Polkadot JS]
  UA --> SubXT
  PAPI --> LC
