@@ -78,6 +78,7 @@
     "prism-react-renderer": "^2.3.1",
     "punycode": "^2.3.1",
     "react-chartjs-2": "^5.2.0",
+    "react-markdown": "^9.0.1",
     "react-treebeard": "^3.2.4",
     "remark-docusaurus-tabs": "^0.2.0",
     "utf-8-validate": "^6.0.4",

@@ -122,6 +122,10 @@ module.exports = {
             from: ['/docs/kusama-index']
           },
           {
+            to: '/docs/community',
+            from: ['/docs/kusama-community']
+          },
+          {
             to: '/docs/learn-transactions',
             from: ['/docs/learn-transaction-fees']
           },

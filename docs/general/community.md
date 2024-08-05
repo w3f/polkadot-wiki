@@ -7,8 +7,9 @@ keywords: [community, events, socials, chat, blogs, ecosystem]
 slug: ../community
 ---
 
-The Polkadot community is expanding every day. Below are the most essential links to the community
-channels.
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
+Below are the most essential links to the community channels for Polkadot and Kusama.
 
 :::caution
 
@@ -19,13 +20,31 @@ contact and anyone doing so is likely trying to scam you.
 
 ## General
 
-- [Polkadot Forum](https://forum.polkadot.network/) - a place for thoughtful comments and
-  discussions on the future of Polkadot, and the steps we can take to get there together.
-- [Polkadot GitHub](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) - Parity
-  maintained repository that houses the Rust implementation of the Polkadot Host.
-- [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
-  [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research (news)](https://research.web3.foundation/news)
+<!-- prettier-ignore -->
+<Tabs 
+  groupId="clients" 
+  values={[
+    { label: 'Polkadot', value: 'polkadot' },
+    { label: 'Kusama', value: 'kusama' } ]}>
+
+  <TabItem value="polkadot">
+    <ul>
+      <li><a href="https://forum.polkadot.network/">Polkadot Forum</a> - a place for thoughtful comments and discussions on the future of Polkadot, and the steps we can take to get there together.</li>
+      <li><a href="https://github.com/paritytech/polkadot-sdk/tree/master/polkadot">Polkadot GitHub</a> - Parity maintained repository that houses the Rust implementation of the Polkadot Host.</li>
+      <li><a href="https://support.polkadot.network/support/home">Polkadot Support Knowledgebase</a> and <a href="https://support.polkadot.network">Polkadot Support Contact</a></li>
+      <li><a href="https://research.web3.foundation/news">Polkadot's Latest Research (news)</a></li>
+      <li><a href="https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be">Polkadot Meetup Hub</a> - Information on hosting meetups, applying for funding, and materials for running it.</li>
+      <li><a href="https://polkadot.polkassembly.io/">Polkadot Discussion and Governance on Polkassembly</a></li>
+    </ul>
+  </TabItem>
+
+  <TabItem value="kusama">
+    <ul>
+      <li><a href="https://kusama.polkassembly.io/">Kusama Discussion and Governance on Polkassembly</a></li>
+    </ul>
+  </TabItem>
+
+</Tabs>
 
 ### Events
 
@@ -44,46 +63,53 @@ We primarily use [Matrix](https://matrix.org) across the organization and to com
 community members. The application we use most often to interact with the Matrix protocol is the
 [Element](https://app.element.io) messenger client.
 
-- This Wiki's public Matrix room is [here](https://matrix.to/#/#polkadotwikipublic:web3.foundation).
+<!-- prettier-ignore -->
+<Tabs 
+  groupId="clients" 
+  values={[
+    { label: 'Polkadot', value: 'polkadot' },
+    { label: 'Kusama', value: 'kusama' },
+    { label: 'Technical', value: 'technical' }]}>
 
-### Polkadot
+  <TabItem value="polkadot">
+    <p>
+      <a href="https://matrix.to/#/#polkadot:web3.foundation"><strong>Polkadot Space</strong></a> - Space containing all official
+      rooms below. Note that this is a newer feature and may not be supported by your Matrix client. If
+      you face any issues, join the rooms individually.
+    </p>
+    <ul>
+      <li><a href="https://matrix.to/#/#polkadot-watercooler:parity.io">Polkadot Watercooler</a> - General room for talk about Polkadot.</li>
+      <li><a href="https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation">Polkadot Validator Lounge</a> - Room for validators learning about setting up a node.</li>
+      <li><a href="https://matrix.to/#/#Polkadot-Direction:parity.io">Polkadot Direction</a> - Governance, and a place to discuss the future of Polkadot.</li>
+      <li><a href="https://matrix.to/#/#dailydigest:web3.foundation">Polkadot Digest</a> - News about what is happening in the Polkadot ecosystem, published every weekday except holidays.</li>
+      <li><a href="https://matrix.to/#/#polkadotwikipublic:web3.foundation">Polkadot Wiki</a> - The official matrix room about the Polkadot Wiki.
+  </li>
+    </ul>
+  </TabItem>
 
-[**Polkadot Space**](https://matrix.to/#/#polkadot:web3.foundation) - Space containing all official
-rooms below. Note that this is a newer feature and may not be supported by your Matrix client. If
-you face any issues, join the rooms individually.
+  <TabItem value="kusama">
+    <p>
+      <a href="https://matrix.to/#/#kusama:web3.foundation"><strong>Kusama Space</strong></a> - Space containing all official
+      rooms below. Note that this is a newer feature and may not be supported by your Matrix client. If
+      you face any issues, join the rooms individually.
+    </p>
+    <ul>
+      <li><a href="https://matrix.to/#/#kusamawatercooler:web3.foundation">Kusama Watercooler</a> - General room for talk about Kusama.</li>
+      <li><a href="https://matrix.to/#/#KusamaValidatorLounge:parity.io">Kusama Validator Lounge</a> - Room for validators learning about setting up a node.</li>
+      <li><a href="https://matrix.to/#/#Kusama-Direction:parity.io">Kusama Direction</a> - Governance, and a place to discuss the future of Kusama.</li>
+    </ul>
+  </TabItem>
 
-- [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) - General room for
-  talk about Polkadot.
-- [Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) - Room
-  for validators learning about setting up a node.
-- [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) - Governance, and a place
-  to discuss the future of Polkadot.
-- [Polkadot Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is happening
-  in the Polkadot ecosystem, published every weekday except holidays
+  <TabItem value="technical">
+    <ul>
+      <li><a href="https://matrix.to/#/#substratedevs:matrix.org">Substrate Developers Chat</a> - A Matrix chat room for Substrate development.</li>
+      <li><a href="https://t.me/substratedevs">Substrate Developers Telegram Chat</a> - A Telegram chat room for Substrate development, bridged to Matrix Substrate Developers Chat linked above.</li>
+      <li><a href="https://substrate.stackexchange.com/">Substrate and Polkadot StackExchange</a> - More advanced room for technical questions on building with Substrate.</li>
+      <li><a href="https://matrix.to/#/#ink:parity.io">Smart Contracts & Parity Ink!</a> - A room to discuss developing Substrate smart contracts using Parity Ink!</li>
+    </ul>
+  </TabItem>
 
-### Kusama
-
-[**Kusama Space**](https://matrix.to/#/#kusama:web3.foundation) - Space containing all official
-rooms below. Note that this is a newer feature and may not be supported by your Matrix client. If
-you face any issues, join the rooms individually.
-
-- [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:web3.foundation) - General room for
-  talk about Kusama.
-- [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:parity.io) - Room for
-  validators learning about setting up a node.
-- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) - Governance, and a place to
-  discuss the future of Kusama.
-
-### Technical
-
-- [Substrate Developers Chat](https://matrix.to/#/#substratedevs:matrix.org) - A Matrix chat room
-  for Substrate development.
-- [Substrate Developers Telegram Chat](https://t.me/substratedevs) - A Telegram chat room for
-  Substrate development, bridged to Matrix Substrate Developers Chat linked above.
-- [Substrate and Polkadot StackExchange](https://substrate.stackexchange.com/) - More advanced room
-  for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:parity.io) - A room to discuss developing
-  Substrate smart contracts using Parity Ink!
+</Tabs>
 
 ## Socials
 
@@ -94,16 +120,38 @@ you face any issues, join the rooms individually.
 
 ### Social media
 
-- [Polkadot Twitter](https://twitter.com/Polkadot)
-- [Kusama Twitter](https://twitter.com/kusamanetwork)
-- [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+<!-- prettier-ignore -->
+<Tabs 
+  groupId="socials" 
+  values={[
+    { label: 'Web3 Foundation', value: 'w3f' },
+    { label: 'Polkadot', value: 'polkadot' },
+    { label: 'Kusama', value: 'kusama' }]}>
 
-- [Polkadot Reddit](https://www.reddit.com/r/polkadot)
-- [Kusama Reddit](https://www.reddit.com/r/Kusama)
+<TabItem value="w3f">
+  <ul>
+    <li><a href="https://twitter.com/web3foundation">Web3 Foundation Twitter</a></li>
+    <li><a href="https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g">Web3 Foundation YouTube</a></li>
+  </ul>
+</TabItem>
 
-- [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
-- [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
-- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
+<TabItem value="polkadot">
+  <ul>
+    <li><a href="https://twitter.com/Polkadot">Polkadot Twitter</a></li>
+    <li><a href="https://www.reddit.com/r/polkadot">Polkadot Reddit</a></li>
+    <li><a href="https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw">Polkadot YouTube</a></li>
+  </ul>
+</TabItem>
+
+<TabItem value="kusama">
+  <ul>
+    <li><a href="https://twitter.com/kusamanetwork">Kusama Twitter</a></li>
+    <li><a href="https://www.reddit.com/r/Kusama">Kusama Reddit</a></li>
+    <li><a href="http://youtube.com/c/kusamanetwork">Kusama YouTube Channel</a></li>
+  </ul>
+</TabItem>
+
+</Tabs>
 
 ### Blogs and tutorials
 
@@ -117,6 +165,7 @@ you face any issues, join the rooms individually.
 - [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) -
   official, infrequent
 - [Dot Leap Newsletter](https://dotleap.substack.com/) - less official, weekly
+- [NFT Review](https://news.nft.review) - Covering the evolution of the NFT ecosystem on Kusama
 
 ## Ecosystem
 
