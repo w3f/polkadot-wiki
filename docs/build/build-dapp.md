@@ -37,7 +37,7 @@ For front-end applications, several options exist for interfacing with Substrate
 Substrate node:
 
 <!-- prettier-ignore -->
-<Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, { label: 'Polkadot-API', value: 'papi'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink!', value: 'useink'}, {label: 'ink!athon Boilerplate', value: 'inkathon'}, { label: 'Polkadot Cloud', value: 'pcloud'} ]}>
+<Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, { label: 'Polkadot-API', value: 'papi'}, {label: 'Reactive DOT', value: 'reactive-dot'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink!', value: 'useink'}, {label: 'ink!athon Boilerplate', value: 'inkathon'}, { label: 'Polkadot Cloud', value: 'pcloud'} ]}>
 
 <TabItem value="pjs"> Promise and RxJS APIs around Polkadot and Substrate-based chains via RPC
 calls. It is dynamically generated based on what the Substrate runtime provides regarding metadata.
@@ -46,6 +46,10 @@ available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>. 
 
 <TabItem value="papi"> Polkadot-API will serve as a replacement for Polkadot JS. Full documentation
 & examples available&nbsp;<a href="https://papi.how/" target="_blank">here</a>. </TabItem>
+
+<TabItem value="reactive-dot"> A reactive library for building Substrate front-ends. Full
+documentation & examples available&nbsp;<a href="https://reactivedot.dev/" target="_blank">here</a>.
+</TabItem>
 
 <TabItem value="subxt"> Query and submit extrinsics (transactions) to a Substrate node via RPC using
 Rust. Also referred to as Rust Parity. Full documentation & examples
