@@ -52,15 +52,9 @@ subgraphs using [GraphQL](https://graphql.org/).
 
 ## Analytics platform
 
-### Dolpha Analytics
+### DIN
 
-[Dolpha Analytics](https://dolpha.com/) is an on-chain data analytics and insights platform for the
-Polkadot and Kusama ecosystems. Dolpha empowers casual and power users to get a pulse on the
-ecosystems, perform due diligence, surface signals, and make informed data-driven decisions.
-
-### Web3Go
-
-[Web3GO](https://web3go.xyz/) is a Polkadot-based open data analytics platform that provides
+[DIN](https://din.lol/)(formally named Web3Go) is a Polkadot-based open data analytics platform that provides
 infrastructure and tooling to help users visualize, curate, share, and analyze on-chain data.
 
 ### Covalent
