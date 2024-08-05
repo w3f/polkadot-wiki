@@ -46,7 +46,6 @@ available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>. 
 
 <TabItem value="papi"> Polkadot-API will serve as a replacement for Polkadot JS. Full documentation
 & examples available&nbsp;<a href="https://papi.how/" target="_blank">here</a>. </TabItem>
-</TabItem>
 
 <TabItem value="subxt"> Query and submit extrinsics (transactions) to a Substrate node via RPC using
 Rust. Also referred to as Rust Parity. Full documentation & examples
