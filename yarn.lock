@@ -2660,7 +2660,7 @@
   dependencies:
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
-    
+
 "@polkadot/types@12.2.3":
   version "12.2.3"
   resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-12.2.3.tgz#0e48dae653df42d069e5c709c36e08b4cc8a07e6"
@@ -5555,7 +5555,7 @@ debug@2.6.9, debug@^2.6.0, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@^4.1.0, debug@^4.1.1, debug@~4.3.6:
+debug@4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@~4.3.6:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.6.tgz#2ab2c38fbaffebf8aa95fdfe6d88438c7a13c52b"
   integrity sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==
