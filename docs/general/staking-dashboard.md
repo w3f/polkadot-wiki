@@ -29,8 +29,9 @@ wallets or extensions can be imported from [Ledger](./ledger.md) or
 [Polkadot Vault](./polkadot-vault.md).
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
-need some free balance to pay for [transaction fees](../learn/learn-transaction-fees.md) and the
-minimum amount to place your nominations (only for nominators, currently
+need some free balance to pay for
+[transaction fees](../learn/learn-transactions.md#transaction-fees) and the minimum amount to place
+your nominations (only for nominators, currently
 {{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__ :kusama }})
 or join a nomination pool (only for pool members, currently
 {{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>__ :polkadot }}{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>__ :kusama }}).

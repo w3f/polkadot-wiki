@@ -14,7 +14,7 @@ import MessageBox from "../../../components/MessageBox"; import
 [Polkadot OpenGov Treasury page](../../learn/learn-polkadot-opengov-treasury.md)." />
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
-[transaction fees](../learn-transaction-fees.md), [slashing](../learn-offenses.md),
+[transaction fees](../learn-transactions.md#transaction-fees), [slashing](../learn-offenses.md),
 [staking inefficiencies](../learn-staking.md#inflation), etc.
 
 The Treasury funds are held in a [system account](../learn-account-advanced.md#system-accounts) not

@@ -195,7 +195,7 @@ module.exports = {
           },
           {
             to: '/docs/learn-transactions',
-            from: ['/docs/learn-transactions-index', '/docs/learn-extrinsics', '/docs/learn-balance-transfers']
+            from: ['/docs/learn-transactions-index', '/docs/learn-extrinsics', '/docs/learn-balance-transfers', '/docs/learn-transaction-fees']
           },
           {
             to: '/docs/alpha-program',
