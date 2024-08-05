@@ -101,8 +101,8 @@ validators if they apply and fit the requirements.
 ### How are validators rewarded?
 
 Validators are rewarded from the [inflation of the Relay Chain](../learn/learn-inflation.md),
-[transaction fees](../learn/learn-transactions.md#transaction-fees), and tips. However, they only take a
-percentage of the former two. More details can be read on the page for
+[transaction fees](../learn/learn-transactions.md#transaction-fees), and tips. However, they only
+take a percentage of the former two. More details can be read on the page for
 [validator payouts](../maintain/maintain-guides-validator-payout.md).
 
 ### What is the minimum stake necessary to be elected as an active validator?
