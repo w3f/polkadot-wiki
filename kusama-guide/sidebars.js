@@ -207,18 +207,7 @@ module.exports = {
                 "general/kusama/kusama-social-recovery",
               ],
             },
-            {
-              type: "category",
-              label: "Transactions",
-              description: 'Extrinsics, Balance Transfers, and Fees.',
-              link: {
-                type: 'doc',
-                id: "learn/learn-transactions",
-              },
-              items: [
-                "learn/learn-transaction-fees",
-              ],
-            },
+            "learn/learn-transactions",
             {
               type: "category",
               label: "Staking",
