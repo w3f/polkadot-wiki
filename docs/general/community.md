@@ -25,10 +25,7 @@ contact and anyone doing so is likely trying to scam you.
   groupId="clients" 
   values={[
     { label: 'Polkadot', value: 'polkadot' },
-    { label: 'Kusama', value: 'kusama' }
-  ]}
-
->
+    { label: 'Kusama', value: 'kusama' } ]}>
 
   <TabItem value="polkadot">
     <ul>
@@ -72,10 +69,7 @@ community members. The application we use most often to interact with the Matrix
   values={[
     { label: 'Polkadot', value: 'polkadot' },
     { label: 'Kusama', value: 'kusama' },
-    { label: 'Technical', value: 'technical' }
-  ]}
-
->
+    { label: 'Technical', value: 'technical' }]}>
 
   <TabItem value="polkadot">
     <p>
@@ -132,10 +126,7 @@ community members. The application we use most often to interact with the Matrix
   values={[
     { label: 'Web3 Foundation', value: 'w3f' },
     { label: 'Polkadot', value: 'polkadot' },
-    { label: 'Kusama', value: 'kusama' },
-  ]}
-
->
+    { label: 'Kusama', value: 'kusama' }]}>
 
 <TabItem value="w3f">
   <ul>
