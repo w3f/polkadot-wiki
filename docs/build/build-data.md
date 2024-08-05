@@ -54,8 +54,9 @@ subgraphs using [GraphQL](https://graphql.org/).
 
 ### DIN
 
-[DIN](https://din.lol/)(formally named Web3Go) is a Polkadot-based open data analytics platform that provides
-infrastructure and tooling to help users visualize, curate, share, and analyze on-chain data.
+[DIN](https://din.lol/)(formally named Web3Go) is a Polkadot-based open data analytics platform that
+provides infrastructure and tooling to help users visualize, curate, share, and analyze on-chain
+data.
 
 ### Covalent
 
