@@ -7,10 +7,10 @@ keywords: [polkadot, kusama, constants, variables]
 slug: ../constants-variables
 ---
 
-<!-- prettier-ignore -->
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem";
 
+<!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value:
 'kusama'} ]}>
 
@@ -18,9 +18,8 @@ from "@theme/TabItem";
 
 ## Treasury Spending Period
 
-The spending period on Polkadot is currently
-<RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/>
-days.
+<!-- prettier-ignore -->
+The spending period on Polkadot is currently <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> days.
 
 ## Minimum Bond to Participate in Staking
 
