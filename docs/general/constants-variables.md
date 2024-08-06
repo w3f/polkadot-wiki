@@ -7,11 +7,12 @@ keywords: [polkadot, kusama, constants, variables]
 slug: ../constants-variables
 ---
 
+<!-- prettier-ignore -->
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem";
 
-<!-- prettier-ignore -->
-<Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+<Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value:
+'kusama'} ]}>
 
 <TabItem value="polkadot">
 
