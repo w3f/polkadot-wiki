@@ -1654,7 +1654,7 @@
     "@docusaurus/theme-search-algolia" "2.4.3"
     "@docusaurus/types" "2.4.3"
 
-"@docusaurus/react-loadable@5.5.2", "react-loadable@npm:@docusaurus/react-loadable@5.5.2":
+"@docusaurus/react-loadable@5.5.2":
   version "5.5.2"
   resolved "https://registry.npmjs.org/@docusaurus/react-loadable/-/react-loadable-5.5.2.tgz"
   integrity sha512-A3dYjdBGuy0IGT+wyLIGIKLRE+sAk1iNk0f1HjNDysO7u8lhL4N3VEm+FAubmJbAztn94F7MxBTPmnixbiyFdQ==
@@ -2489,63 +2489,63 @@
   resolved "https://registry.npmjs.org/@polkadot-api/utils/-/utils-0.0.1.tgz"
   integrity sha512-3j+pRmlF9SgiYDabSdZsBSsN5XHbpXOAce1lWj56IEEaFZVjsiCaxDOA7C9nCcgfVXuvnbxqqEGQvnY+QfBAUw==
 
-"@polkadot/api-augment@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/api-augment/-/api-augment-12.2.3.tgz#6a07ddac3549a9487d5b22fcf3ca606e9d180649"
-  integrity sha512-w3FYQAzVzZuD1xAUGwEeEftJr5N5oYigItrWkEc3nk+I3wUjNuHNlab3hCJZslRlHrE2zYVK5mGDDZYVPyn86Q==
+"@polkadot/api-augment@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/api-augment/-/api-augment-12.3.1.tgz#07c1b510310868e01f89e4d2f2313595d068b228"
+  integrity sha512-KfofZVEUeTgLzcexdxKBT2vihazDheUoTLxbsa2ztmmw4UB/IjOL911y04pjg2obZQAI9B+oCyxJXyCfzauWEg==
   dependencies:
-    "@polkadot/api-base" "12.2.3"
-    "@polkadot/rpc-augment" "12.2.3"
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-augment" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
+    "@polkadot/api-base" "12.3.1"
+    "@polkadot/rpc-augment" "12.3.1"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-augment" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/api-base@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/api-base/-/api-base-12.2.3.tgz#4d6b16473371621a3eeb8fab41ed26919e530db2"
-  integrity sha512-fUJt3+uvBViwjz5tiiEE1VQkcDiXLzAPdex2OeECXopNnHt9gq8n6dS2arBzfG2eEDv/viCyjggj0wcSaV2yUg==
+"@polkadot/api-base@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/api-base/-/api-base-12.3.1.tgz#084801da4e54820ec0e91c51a237bcd861665c1d"
+  integrity sha512-vNbxXNjn4APfXg+ui99gurX2Jzns+eezmWranxoGXT7q0mme1zAtWus5t4e+qe1qRjDNZZYPruF7YJA8dL5k8A==
   dependencies:
-    "@polkadot/rpc-core" "12.2.3"
-    "@polkadot/types" "12.2.3"
+    "@polkadot/rpc-core" "12.3.1"
+    "@polkadot/types" "12.3.1"
     "@polkadot/util" "^13.0.2"
     rxjs "^7.8.1"
     tslib "^2.6.2"
 
-"@polkadot/api-derive@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-12.2.3.tgz#1dcd18c9dceb52e89eee28a70ad96b72815c0dae"
-  integrity sha512-zcQOuLoBeYXTMr2r9oPQiIJ7t4997eoQ1yM76KK2/2KTESKfJHus6nA0IK9fDk+c5vIdFKd/BJ0UukQ1AJiLLA==
+"@polkadot/api-derive@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-12.3.1.tgz#2da05346fed18ff29ed2a581a3270591de11662c"
+  integrity sha512-2MbK1h4GcKEdSgDKKYI28iZESw0VOm0kekV6YGQflZNWe84jJOn2rohP8pACseUjQjwWDgbPPBvTlRZTk7zdAw==
   dependencies:
-    "@polkadot/api" "12.2.3"
-    "@polkadot/api-augment" "12.2.3"
-    "@polkadot/api-base" "12.2.3"
-    "@polkadot/rpc-core" "12.2.3"
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
+    "@polkadot/api" "12.3.1"
+    "@polkadot/api-augment" "12.3.1"
+    "@polkadot/api-base" "12.3.1"
+    "@polkadot/rpc-core" "12.3.1"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
     "@polkadot/util" "^13.0.2"
     "@polkadot/util-crypto" "^13.0.2"
     rxjs "^7.8.1"
     tslib "^2.6.2"
 
-"@polkadot/api@12.2.3", "@polkadot/api@^12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-12.2.3.tgz#23f2e5e12955a6319258113f027c1e9a94d5180f"
-  integrity sha512-qpC29Uq0JZh/7Spcvmw+jUREG/ZYeb7miGUKomqHqU1hwBvyk9bqy7Vr10g3Hh0bkl5nP29YmnrLrG0NG+EtPg==
+"@polkadot/api@12.3.1", "@polkadot/api@^12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-12.3.1.tgz#bce62c902293295460832d15ee8fa2119a36ae42"
+  integrity sha512-VCrtadJRJttya5NhZ8slkD/UQyOZv4qABjagQMaG1eTZpn5k1wskmDUGdHrZZpYO5jBPewnCgaN8+LPKO2qiOw==
   dependencies:
-    "@polkadot/api-augment" "12.2.3"
-    "@polkadot/api-base" "12.2.3"
-    "@polkadot/api-derive" "12.2.3"
+    "@polkadot/api-augment" "12.3.1"
+    "@polkadot/api-base" "12.3.1"
+    "@polkadot/api-derive" "12.3.1"
     "@polkadot/keyring" "^13.0.2"
-    "@polkadot/rpc-augment" "12.2.3"
-    "@polkadot/rpc-core" "12.2.3"
-    "@polkadot/rpc-provider" "12.2.3"
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-augment" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
-    "@polkadot/types-create" "12.2.3"
-    "@polkadot/types-known" "12.2.3"
+    "@polkadot/rpc-augment" "12.3.1"
+    "@polkadot/rpc-core" "12.3.1"
+    "@polkadot/rpc-provider" "12.3.1"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-augment" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
+    "@polkadot/types-create" "12.3.1"
+    "@polkadot/types-known" "12.3.1"
     "@polkadot/util" "^13.0.2"
     "@polkadot/util-crypto" "^13.0.2"
     eventemitter3 "^5.0.1"
@@ -2570,37 +2570,37 @@
     "@substrate/ss58-registry" "^1.46.0"
     tslib "^2.6.2"
 
-"@polkadot/rpc-augment@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-augment/-/rpc-augment-12.2.3.tgz#ff2f737b59ab9827dc7f13974b7d5dc4366c0186"
-  integrity sha512-3V+Xp5cGb8hA0YZ4V4jXdC0POZGirQ63DkUnypmq86Fa1A7NCuVgD+s9ayOc8kNUMuKJIRKr3cLTj97S6f15lw==
+"@polkadot/rpc-augment@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-augment/-/rpc-augment-12.3.1.tgz#9a896c4578753055ab25326243e716344a895a8a"
+  integrity sha512-/tZLl5IuQ4vdGlUAbd8x3ShZ35XDSeyknKHCC+9kIrM/+KIyoCYBob2RXP9uqX8m516AWkXUrjsSO6DFPBpRGg==
   dependencies:
-    "@polkadot/rpc-core" "12.2.3"
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
+    "@polkadot/rpc-core" "12.3.1"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/rpc-core@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-12.2.3.tgz#dc78f4d4d8c61bb8332d7bee5d68599a77903a8c"
-  integrity sha512-XJyPpwYBe+ijlivEKcRYRlQ5vx/CUXG0PZ23/TLKMRNlh5BVAC4HK/4dzBmOc3FT0ulOMbu7/TH+mk7ppQHrKg==
+"@polkadot/rpc-core@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-12.3.1.tgz#6107c507c30839313e0325c82bffae9f1b08dbab"
+  integrity sha512-bNo26P20nRpLfANTK4sWEakxvqBJpKwAp/Gt7KlxoGgoTUbWFapyGKScFxp/pblycEziEbC+ZjkLMkaWaqi69g==
   dependencies:
-    "@polkadot/rpc-augment" "12.2.3"
-    "@polkadot/rpc-provider" "12.2.3"
-    "@polkadot/types" "12.2.3"
+    "@polkadot/rpc-augment" "12.3.1"
+    "@polkadot/rpc-provider" "12.3.1"
+    "@polkadot/types" "12.3.1"
     "@polkadot/util" "^13.0.2"
     rxjs "^7.8.1"
     tslib "^2.6.2"
 
-"@polkadot/rpc-provider@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-12.2.3.tgz#69596f3d6b271d0710876579136d8638e8372956"
-  integrity sha512-hzw6YGV+3daU49rsEPmdl/UDupAmc3lqBYN2gj7lxQCMSqYjBr0Pj1ScGJJXzlR8ZyiY97e/TGIW13W6ivmIGQ==
+"@polkadot/rpc-provider@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-12.3.1.tgz#90bfbb8518bd63d94141bf4d2643c89b89e61413"
+  integrity sha512-Tg1Oj/1ldivqwnnOWepcNHEHYgpOBffxlrZMEXH1XX6D3AZaUhAWbatizyisydpuMbknTQ9FGYSnb9rOc2QBJw==
   dependencies:
     "@polkadot/keyring" "^13.0.2"
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-support" "12.2.3"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-support" "12.3.1"
     "@polkadot/util" "^13.0.2"
     "@polkadot/util-crypto" "^13.0.2"
     "@polkadot/x-fetch" "^13.0.2"
@@ -2613,63 +2613,63 @@
   optionalDependencies:
     "@substrate/connect" "0.8.10"
 
-"@polkadot/types-augment@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-augment/-/types-augment-12.2.3.tgz#5371aec706f688499e155245af8a83f1a4dce2c4"
-  integrity sha512-RLHWl4TIgJqWFuGDgstKTYqB7EWGx4oJ5nzIdKCQgYAeOi+LFYXyZjE2ffhmX258VPsSXu4syeQpcBIEWns8kA==
+"@polkadot/types-augment@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-augment/-/types-augment-12.3.1.tgz#c7853049829d39d35b94fb01a84c1ea0d61ca9e0"
+  integrity sha512-I3ggJt7W3UOScP6WA6PNmNsmpCfZtXkRJvSJkX7bi2LsSm/iF0xo0KdpQK02dHu7nGRFD9O5cSoVawzZJifGLA==
   dependencies:
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/types-codec@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-codec/-/types-codec-12.2.3.tgz#73740b8adf332a14543152551a561463e20cd519"
-  integrity sha512-oBHAEXyAMZ6ghEEgKW95cc4OFdkxiRKazx18Dk433sWk2HGkwGoKd9uK6xdelMgO1EnbBzZwc2epOhKH7rTEmQ==
+"@polkadot/types-codec@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-codec/-/types-codec-12.3.1.tgz#4eb113a5a2c9e7784f1393db4d6cfe39b24da014"
+  integrity sha512-yZ4exsQI+eVkE/fZNuJBOajAgOH/YncKWOOf0N4lc6iq28oYp22DCAXc50Ym372l4HO+uhC9QdMPH9EiWwT2pQ==
   dependencies:
     "@polkadot/util" "^13.0.2"
     "@polkadot/x-bigint" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/types-create@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-create/-/types-create-12.2.3.tgz#6c2c1b0c0e9d00b8a674777b32a0edeeb129ae43"
-  integrity sha512-4XR04QFgKeHZEj7NyBK3A55EgzmGZtC175Hbq5y3+j8XV84amOOhVqj7gDQqnSyRMAtl7+HSsfpx3+Loh+4l+g==
+"@polkadot/types-create@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-create/-/types-create-12.3.1.tgz#867ff2971f0d1c7b68788eb3b9f7c060fcbc648f"
+  integrity sha512-Jf9BByWB64FPW3lM5/Mcc/foyPJ3L9t0QwHVHaYWaonZt6l7SPX71rQmD7twJiTj9q1d1WidDKg/TtRDNbm1yA==
   dependencies:
-    "@polkadot/types-codec" "12.2.3"
+    "@polkadot/types-codec" "12.3.1"
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/types-known@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-known/-/types-known-12.2.3.tgz#7ea58d7ed7ee237837cd74ec60f5092d6f40db09"
-  integrity sha512-hB3fBlZ51dBaGRJf6ParvoqCSig9ovqjDgpFwysewXsc74GRoPPR7RQFw/hITxwdKL5ldyTZnBIGBxROiF86Tg==
+"@polkadot/types-known@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-known/-/types-known-12.3.1.tgz#11aade98492e37c2e6d095c78fcd229a212ee933"
+  integrity sha512-G8t0uiIW1iu3KwylHDPnqdHxg5qwBxzPZQJvsjnGx2qBUk2VqXditKWcNFLEwCTnJPL95t2AzEO711lS99WRbg==
   dependencies:
     "@polkadot/networks" "^13.0.2"
-    "@polkadot/types" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
-    "@polkadot/types-create" "12.2.3"
+    "@polkadot/types" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
+    "@polkadot/types-create" "12.3.1"
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/types-support@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-support/-/types-support-12.2.3.tgz#b9f46b12e4cb08efd1ed345e88b41749ebb3b8be"
-  integrity sha512-/YVZ0j126el/5e/BTrhw1SuDmlyV394zKak7LkYcAJ8IyDmT53cajMK2TQe03uVsE/vveligkYmJ24IEjZ+DRg==
+"@polkadot/types-support@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-support/-/types-support-12.3.1.tgz#7111f3a7a55a5f4f50b11450c62b7fe5340e4a21"
+  integrity sha512-TwL5M5HkZ4jQGKekD+qJFLba7UXWASfwlPy2OpKj0LOnnmq4tudXgN13UFdQ7HoOmisPhr+vYo9vteYeBZ0jTA==
   dependencies:
     "@polkadot/util" "^13.0.2"
     tslib "^2.6.2"
 
-"@polkadot/types@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-12.2.3.tgz#0e48dae653df42d069e5c709c36e08b4cc8a07e6"
-  integrity sha512-p6y3WdZBvdgT5+m+gvPaHXUaei1DQjMI9BxhzHS5FfOvDMSDf0uBacamtRmkdII5bJuUgGBYG9BjHic8yWu0/g==
+"@polkadot/types@12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-12.3.1.tgz#46a44aaa672d9c3c8598bbf8b8668e575c55f76a"
+  integrity sha512-4MkTF1znpgp9mZc/ZZPdFe7/5it9v+EJmzXc/DEOX9kVWs2BuKOWopzOFyO3reVUUB+v7dxfSOArSsxkMUcuoA==
   dependencies:
     "@polkadot/keyring" "^13.0.2"
-    "@polkadot/types-augment" "12.2.3"
-    "@polkadot/types-codec" "12.2.3"
-    "@polkadot/types-create" "12.2.3"
+    "@polkadot/types-augment" "12.3.1"
+    "@polkadot/types-codec" "12.3.1"
+    "@polkadot/types-create" "12.3.1"
     "@polkadot/util" "^13.0.2"
     "@polkadot/util-crypto" "^13.0.2"
     rxjs "^7.8.1"
@@ -10317,6 +10317,14 @@ react-loadable-ssr-addon-v5-slorber@^1.0.1:
   integrity sha512-lq3Lyw1lGku8zUEJPDxsNm1AfYHBrO9Y1+olAYwpUJ2IGFBskM0DMKok97A6LWUpHm+o7IvQBOWu9MLenp9Z+A==
   dependencies:
     "@babel/runtime" "^7.10.3"
+
+"react-loadable@npm:@docusaurus/react-loadable@5.5.2":
+  version "5.5.2"
+  resolved "https://registry.npmjs.org/@docusaurus/react-loadable/-/react-loadable-5.5.2.tgz"
+  integrity sha512-A3dYjdBGuy0IGT+wyLIGIKLRE+sAk1iNk0f1HjNDysO7u8lhL4N3VEm+FAubmJbAztn94F7MxBTPmnixbiyFdQ==
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.2"
 
 react-markdown@^9.0.1:
   version "9.0.1"
