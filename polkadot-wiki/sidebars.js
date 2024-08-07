@@ -192,6 +192,7 @@ module.exports = {
           ],
         },
         "general/metadata",
+        "general/constants-variables",
       ],
     },
     {
