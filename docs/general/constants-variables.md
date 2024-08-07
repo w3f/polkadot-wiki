@@ -41,7 +41,7 @@ The spending period on Kusama is currently <RPC network="kusama" path="consts.tr
 
 #### Minimum Bond to Participate in Staking
 
-The minimum bond to nominate on Polkadot is <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>.
+The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>.
 
 #### Existential Deposit
 
