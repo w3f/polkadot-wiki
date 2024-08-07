@@ -63,7 +63,7 @@ The [`establish_channel_with_system`](https://paritytech.github.io/polkadot-sdk/
 call can be used to establish a bi-directional channel between any parachain and a system chain.
 This call needs to be dispatched from the parachain via an XCM program to execute on the Relay Chain.
 
-For instance, the call to be executed on the relay chain to establish bi-directional channel between
+For instance, the call to be executed on the relay chain to establish a bi-directional channel between
 a parachain and the Asset Hub with `ParaID` 1000 is `0x3c0ae8030000`
 
 ![asset-hub-hrmp-channel](../assets/asset-hub/establish-channel-asset-hub.png)
