@@ -97,10 +97,11 @@ FRAME and Substrate. All you need to know is the following:
 When we compile our template, we can extract the runtime code as a `.wasm` blob, which is one of the
 key artifacts for our core.
 
-Build the node using the following:
+Build the node using the following (assuming you are located within
+`polkadot-sdk/templates/parachain`):
 
 ```shell
-cargo build -p parachain-template-node --release
+cargo build --release
 ```
 
 For the sake of this example, we won't go into adding or modifying any pallets. However, this is
@@ -109,51 +110,49 @@ definitely a next step after you get used to deploying your parachain on Rococo!
 ### Customizing our chain specification's patch file
 
 You can bootstrap your network with some initial values, such as initial collators, balances, and
-more. Feel free to use the patch provided here, which you can look to tweaking:
+more. This is done using a patch file, which the `chain-spec-builder` tool uses to create the
+genesis state of your network. You should do the following to create your `patch.json`:
 
-> Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId!
+1. Create the file: `touch patch.json`
+2. Paste the below patch JSON.
+
+Feel free to use the patch provided here, which you can look to tweaking to your liking.
+
+:::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId! :::
 
 ```json
 {
-    "balances": {
-        "balances": [
-            [
-                "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
-                1152921504606846976
-            ],
-            [
-                "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
-                1152921504606846976
-            ]
-        ]
-    },
-    "collatorSelection": {
-        "candidacyBond": 16000000000,
-        "invulnerables": [
-            "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
-        ]
-    },
-    "parachainInfo": {
-        "parachainId": YOUR_PARA_ID_HERE
-    },
-    "polkadotXcm": {
-        "safeXcmVersion": 4
-    },
+  "balances": {
+    "balances": [
+      ["5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY", 1152921504606846976],
+      ["5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty", 1152921504606846976]
+    ]
+  },
+  "collatorSelection": {
+    "candidacyBond": 16000000000,
+    "invulnerables": ["5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"]
+  },
+  "parachainInfo": {
+    "parachainId": 1000
+  },
+  "polkadotXcm": {
+    "safeXcmVersion": 4
+  },
 
-    "session": {
-        "keys": [
-            [
-                "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
-                "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
-                {
-                    "aura": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
-                }
-            ],
-        ]
-    },
-    "sudo": {
-        "key": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
-    }
+  "session": {
+    "keys": [
+      [
+        "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+        "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+        {
+          "aura": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+        }
+      ]
+    ]
+  },
+  "sudo": {
+    "key": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+  }
 }
 ```
 
