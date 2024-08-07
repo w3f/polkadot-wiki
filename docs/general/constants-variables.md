@@ -37,7 +37,7 @@ The minimum amount of tokens to nominate is <RPC network="polkadot" path="query.
 
 #### Treasury Spending Period
 
-The spending period on Polkadot is currently <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> days.
+The spending period on Kusama is currently <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> days.
 
 #### Minimum Bond to Participate in Staking
 
