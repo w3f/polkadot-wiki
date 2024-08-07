@@ -430,9 +430,8 @@ It can be installed as follows:
 cargo install polkadot-parachain-bin
 ```
 
-The `chain-spec-builder` is how you will generate chain specifications from different presets. Each
-preset represents different type of your network, such as development, testnet, and live networks.
-It requires a `wasm` runtime bundle to generate the chain specification from.
+`chain-spec-builder` is how you will generate chain specifications for your network. It requires a
+`wasm` runtime bundle to generate the chain specification from.
 
 It can be installed as follows:
 

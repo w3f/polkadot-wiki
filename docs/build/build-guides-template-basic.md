@@ -106,7 +106,58 @@ cargo build -p parachain-template-node --release
 For the sake of this example, we won't go into adding or modifying any pallets. However, this is
 definitely a next step after you get used to deploying your parachain on Rococo!
 
-### Generating the Chain Specification
+### Customizing our chain specification's patch file
+
+You can bootstrap your network with some initial values, such as initial collators, balances, and
+more. Feel free to use the patch provided here, which you can look to tweaking:
+
+> Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId!
+
+```json
+{
+    "balances": {
+        "balances": [
+            [
+                "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+                1152921504606846976
+            ],
+            [
+                "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+                1152921504606846976
+            ]
+        ]
+    },
+    "collatorSelection": {
+        "candidacyBond": 16000000000,
+        "invulnerables": [
+            "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+        ]
+    },
+    "parachainInfo": {
+        "parachainId": YOUR_PARA_ID_HERE
+    },
+    "polkadotXcm": {
+        "safeXcmVersion": 4
+    },
+
+    "session": {
+        "keys": [
+            [
+                "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+                "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+                {
+                    "aura": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+                }
+            ],
+        ]
+    },
+    "sudo": {
+        "key": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+    }
+}
+```
+
+### Generating the chain specification
 
 > Ensure you have
 > the[ `chain-spec-builder`](./build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder)
@@ -126,43 +177,62 @@ By now, your `./target` folder should look something akin to:
 ```
 
 We'll be using `parachain_template_runtime.wasm` in conjunction with `chain-spec-builder` to build
-our chain specification, which we can then use to generate our genesis code and WASM bundle.
-
-Although you may want to create a preset, we can use the default one and customize it as we need to
-directly:
+our chain specification:
 
 ```sh
-chain-spec-builder create -v -r ./target/release/wbuild/parachain-template-runtime/parachain_template_runtime.wasm default
+chain-spec-builder create \
+-v \
+-r ../../target/release/wbuild/parachain-template-runtime/parachain_template_runtime.wasm \
+patch patch.json
 ```
 
 You should now see `chain_spec.json` generated, with the message `Genesis config verification: OK`.
+The `-v` does a superficial verification of the JSON to ensure all fields are properly populated.
 
-Next, you'll need to modify a few things in your chain spec:
+Next, you'll need to modify a few things in your chain spec, namely by adding the following fields
+to make it parachain-ready:
 
 ```json
-  "name": "CHAIN_NAME_HERE",
-  "id": "live",
+"properties": {
+   "ss58Format": 42,
+   "tokenDecimals": 12,
+   "tokenSymbol": "UNIT"
+},
+"para_id": PARA_ID_HERE,
+"relay_chain": "rococo",
+```
+
+Once you finish modifying the file, it should look like this:
+
+```json
+{
+  "name": "Custom",
+  "id": "custom",
   "chainType": "Live",
   "bootNodes": [],
   "telemetryEndpoints": null,
-  "protocolId": "chain-live",
-  "relay_chain": "paseo",
-  "para_id": PARA_ID_HERE,
+  "protocolId": null,
+  "properties": {
+    "ss58Format": 42,
+    "tokenDecimals": 12,
+    "tokenSymbol": "UNIT"
+  },
+  "para_id": YOUR_PARA_ID_HERE,
+  "relay_chain": "rococo",
+  "codeSubstitutes": {},
+  "genesis": { ... }
+}
 ```
 
-You will also need to replace the following with your ParaID:
+Feel free to customize various aspects of your spec, such as the `UNIT` ticker, `name`, `id`, or
+other fields.
 
-```json
-"parachainInfo": {
-      "parachainId": PARA_ID_HERE
-   },
-```
-
-Use this checklist to ensure all the necessary fields are in place:
+Now you should open your `chain_spec.json`, and use this checklist to ensure all the necessary
+fields are in place:
 
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
-3. **Make** sure that our `ChainType` is set to `ChainType::Live`
+3. **Make** sure that our `chain_type` is set to `live`
 4. **Remove** all collators except for **one**, Alice. See the
    [FAQ/Troubleshooting page](build-guides-coretime-troubleshoot.md) for why we do this
 5. **Be** sure to also set the para id in `testnet_genesis`!
