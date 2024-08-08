@@ -206,7 +206,7 @@ module.exports = {
     announcementBar: {
       id: "banner",
       content:
-        'The Web3 Summit is coming to Berlin this August! <a href="https://ti.to/web3-summit/web3-summit-2024" target="_blank" rel="noopener noreferrer">Buy your ticket 👉</a>',
+        'The Web3 Summit is coming to Berlin this August! <a href="https://ti.to/web3-summit/web3-summit-2024" target="_blank" rel="noopener noreferrer">Get your ticket 👉</a>',
       backgroundColor: '#e6007a',
       textColor: 'white',
       isCloseable: true,
