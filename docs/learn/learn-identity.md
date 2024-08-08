@@ -110,8 +110,11 @@ Registrar 3: <br /> **Account**:
 
 {{ kusama: Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**: 0.04 KSM <br /> :kusama }}
 
+{{ kusama: Registrar 6: <br /> **Account**: HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**: 0.04 KSM <br /> :kusama }}
+
 {{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their [website](https://polkadot.polkassembly.io/). :polkadot }}
 {{ kusama: Polkassembly (Registrar 5) provides setting on-chain ID as a service on their [website](https://kusama.polkassembly.io/). :kusama }}
+{{ kusama: PolkaIdentity (Registrar 6) provides setting on-chain ID as a service on their [website](https://polkaidentity.com/). :kusama }}
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
