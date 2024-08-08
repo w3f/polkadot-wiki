@@ -21,16 +21,11 @@ like Brave, Chrome or Edge.
 
 :::
 
-The Asset Hub has a [Ledger](https://www.ledger.com/) application that is compatible with the Ledger
-Nano S and Ledger Nano X devices. The Ledger devices are hardware wallets that keep your private key
-secured on a physical device that does not get directly exposed to your computer or the internet.
+The [Ledger devices](../general/ledger.md) are hardware wallets that keep your private key secured
+on a physical device that does not get directly exposed to your computer or the internet.
 
-The Statemine application allows you to manage your KSM and other tokens on the Asset Hub parachain.
-It supports most of the available transaction types of the network in the XL version of the app
-(details [below](#installing-the-ledger-application)).
-
-If you have trouble using Ledger or following the directions below, you can try searching for your
-issue on the [Polkadot Support page](https://support.polkadot.network/).
+The [Polkadot Generic application](../general/ledger#polkadot-generic-app) allows you to manage your
+tokens and other tokens on the Asset Hub and any other chain within the Polkadot ecosystem.
 
 :::note Intro to Ledger Explainer
 
