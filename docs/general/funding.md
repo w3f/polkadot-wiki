@@ -20,7 +20,7 @@ Check out the [programs](programs-index) for numerous ecosystem support opportun
 
 <DocCardList />
 
-If you are certain you want to apply for a W3F grant, head straight to our
+If you are certain you want to apply for a W3F grant, head straight to the
 [application process documentation](https://grants.web3.foundation/docs/Process/how-to-apply).
 Alternatively, the flowchart below outlines where we think the grants program fits in relation to
 other popular funding opportunities.
