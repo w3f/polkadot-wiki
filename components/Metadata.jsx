@@ -17,10 +17,10 @@ const Networks = [
   { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
   { name: "Polkadot People", rpc: "wss://polkadot-people-rpc.polkadot.io"},
   { name: "Polkadot Collectives", rpc: "wss://polkadot-collectives-rpc.polkadot.io"},
-  { name: "Polkadot Bridge Hub", rpc: "wss://polkadot-bridge-hub-rpc.polkadot.io"}
+  { name: "Polkadot Bridge Hub", rpc: "wss://polkadot-bridge-hub-rpc.polkadot.io"},
   { name: "Kusama Bridge Hub", rpc: "wss://kusama-bridge-hub-rpc.polkadot.io"},
   { name: "Kusama Coretime", rpc: "wss://kusama-coretime-rpc.polkadot.io"},
-  { name: "Kusama People", rpc: "wss://kusama-people-rpc.polkadot.io"}
+  { name: "Kusama People", rpc: "wss://kusama-people-rpc.polkadot.io"},
 ];
 
 // Common pallets specific to Polkadot/Kusama.
