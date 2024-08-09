@@ -98,8 +98,8 @@ module.exports = {
             from: ['/docs/kusama-statemine']
           },
           {
-            to: '/docs/learn-guides-assets-ledger',
-            from: ['/docs/kusama-statemine-ledger']
+            to: '/docs/learn-guides-ledger',
+            from: ['/docs/kusama-statemine-ledger', '/docs/learn-guides-assets-ledger']
           },
           {
             to: '/docs/learn-nominator',
