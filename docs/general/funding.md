@@ -14,7 +14,7 @@ import "../../components/MessageBox.css";
 
 :::tip
 
-Check out the [programs](programs-index) for all kinds of ecosystem support opportunities.
+Check out the [programs](programs-index) for numerous ecosystem support opportunities.
 
 :::
 
