@@ -213,6 +213,10 @@ module.exports = {
             to: '/docs/learn-offenses',
             from: ['/docs/maintain-guides-avoid-slashing']
           },
+          {
+            to: '/docs/learn-guides-ledger',
+            from: ['/docs/learn-guides-assets-ledger']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
