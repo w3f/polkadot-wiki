@@ -10,7 +10,9 @@ slug: ../learn-staking
 import RPC from "./../../components/RPC-Connection"; import MessageBox from
 "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="Polkadot nomination pool members will be able to vote in OpenGov; see [these support guides](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) for more information about how to prepare for the upcoming changes." />
+<MessageBox message="<b>Nomination Pools are evolving!</b>
+Soon you'll be able to participate in a pool and in OpenGov with your pooled funds!
+You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check [<b>this article</b>](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) on the actions you need to take as soon as possible." />
 
 :::tip New to Staking?
 
