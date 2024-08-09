@@ -118,7 +118,8 @@ genesis state of your network. You should do the following to create your `patch
 
 Feel free to use the patch provided here, which you can look to tweaking to your liking.
 
-:::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId! :::
+:::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId! This should be the same
+as the ID you reserved. :::
 
 ```json
 {
@@ -133,7 +134,7 @@ Feel free to use the patch provided here, which you can look to tweaking to your
     "invulnerables": ["5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"]
   },
   "parachainInfo": {
-    "parachainId": 1000
+    "parachainId": YOUR_PARA_ID_HERE
   },
   "polkadotXcm": {
     "safeXcmVersion": 4
@@ -192,6 +193,7 @@ Next, you'll need to modify a few things in your chain spec, namely by adding th
 to make it parachain-ready:
 
 ```json
+"protocolId": "my-live-protocol",
 "properties": {
    "ss58Format": 42,
    "tokenDecimals": 12,
@@ -210,7 +212,7 @@ Once you finish modifying the file, it should look like this:
   "chainType": "Live",
   "bootNodes": [],
   "telemetryEndpoints": null,
-  "protocolId": null,
+  "protocolId": "my-live-protocol",
   "properties": {
     "ss58Format": 42,
     "tokenDecimals": 12,
