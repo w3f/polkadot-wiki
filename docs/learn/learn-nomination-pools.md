@@ -7,7 +7,10 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import MessageBox from
+"../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="Polkadot nomination pool members will be able to vote in OpenGov; see [these support guides](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation)." />
 
 :::info Nomination Pools are live on Polkadot!
 
