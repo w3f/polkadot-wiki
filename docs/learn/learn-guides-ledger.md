@@ -14,40 +14,25 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
 see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
-:::info
-
-Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
-like Brave, Chrome or Edge.
-
-:::
-
 The [Ledger devices](../general/ledger.md) are hardware wallets that keep your private key secured
 on a physical device that does not get directly exposed to your computer or the internet.
 
-The [Polkadot Generic application](../general/ledger#polkadot-generic-app) allows you to manage your
-tokens and other tokens on the Asset Hub and any other chain within the Polkadot ecosystem.
+The [Polkadot Generic application](../general/ledger.md#polkadot-generic-app) allows you to manage
+your tokens and other tokens on the Asset Hub and any other chain within the Polkadot ecosystem.
+
+## Adding Your Account to the Browser Extension
 
 ## Adding Your Account to the UI
 
-:::note
-
-These instructions will guide you on how to add a Ledger account that's **only** available on the
-Asset Hub. If you want to use the same Ledger account on both
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} **and** the Asset Hub check the
-instructions [below](#working-on-relay-chains-and-asset-hubs).
-
-:::
-
-[Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer) already has an integration with the
+The [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) already has an integration with the
 Ledger application so that your device will work with the browser interface after installation. The
 functionality is currently gated behind a feature setting that you will need to turn on.
 
-In order to turn on the interoperability with the Statemine Ledger application, go to the "Settings"
-tab in [Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer). Find the option for attaching
-Ledger devices and switch the option from the default "Do not attach Ledger devices" to "Attach
-Ledger via WebUSB" (**but see note above**).
+In order to turn on the interoperability with Ledger devices, go to
+[Settings](<(https://polkadot.js.org/apps/#/settings)>) > Account Options and under "Manage Hardware
+Connections" choose "Attach Ledger Via WebUSB (Chrome, recommended)".
 
-![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](../assets/ledger.png)
+![Allow Ledger connections in Polkadot-JS UI Settings](../assets/ledger.png)
 
 Click "Save" to keep your settings.
 
