@@ -8,12 +8,12 @@ const PolkadotJSVersion = Packages.devDependencies["@polkadot/api"].substring(1)
 
 // Chains that will appear in the dropdown selection menu (add new parachains here)
 const Networks = [
-  { name: "Polkadot", rpc: "wss://rpc.polkadot.io" },
+  { name: "Polkadot", rpc: "wss://rpc.ibp.network/polkadot" },
   { name: "Polkadot Asset Hub", rpc: "wss://polkadot-asset-hub-rpc.polkadot.io" },
   { name: "Polkadot People", rpc: "wss://polkadot-people-rpc.polkadot.io"},
   { name: "Polkadot Bridge Hub", rpc: "wss://polkadot-bridge-hub-rpc.polkadot.io"},
   { name: "Polkadot Collectives", rpc: "wss://polkadot-collectives-rpc.polkadot.io"},
-  { name: "Kusama", rpc: "wss://kusama-rpc.polkadot.io" },
+  { name: "Kusama", rpc: "wss://rpc.ibp.network/kusama" },
   { name: "Kusama Asset Hub", rpc: "wss://kusama-asset-hub-rpc.polkadot.io" },
   { name: "Kusama People", rpc: "wss://kusama-people-rpc.polkadot.io"},
   { name: "Kusama Bridge Hub", rpc: "wss://kusama-bridge-hub-rpc.polkadot.io"},
