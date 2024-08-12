@@ -58,7 +58,7 @@ We can now move on to working with the template. Some essential prerequisites ar
 
 :::info Install dependencies
 
-Visit [the dependencies installation](./build-guides-install-deps.md) page before starting.
+Visit [the dependencies' installation](./build-guides-install-deps.md) page before starting.
 
 :::
 
