@@ -9,17 +9,16 @@ slug: ../build-guides-template-basic
 
 :::warning Not a production ready guide.
 
-This guide uses the Rococo testnet. The Kusama relay chain can also be used in place of Rococo, as
-coretime is also enabled there. Polkadot will enable agile coretime after it has been thoroughly
-tested on Kusama. This guide is considered a moving document - and will update as networks that have
-coretime enabled become suitable candidates.
+This guide is considered a moving document and currently uses the **Rococo** testnet. The Kusama
+relay chain can also be used in place of Rococo, as coretime is also enabled there. Polkadot will
+enable agile coretime after it has been thoroughly tested on Kusama.
 
 :::
 
 This guide aims to get you up and running with the basics of:
 
-- **Obtaining** coretime (bulk or on-demand)
 - **Compiling** and configuring your first template
+- **Obtaining** coretime (bulk or on-demand)
 - **Deploying** your template on your procured core
 
 ## Getting ROC and Reserving a ParaId
@@ -40,21 +39,21 @@ to upload our parachain's code:
    [Network > Parachains > Parathreads (the tab)](https://polkadot.js.org/apps/#/parachains/parathreads)
 5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains#reserve-paraid)
 
-You can also visit the Accounts tab to view all registered accounts and associated balances within
-the Polkadot.js Extension. Once finished, you should see your new ParaId at the bottom of the list
-within [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads)
-with the option to "Deregister" to the right:
+You can also visit the [Accounts](https://polkadot.js.org/apps/#/accounts) tab to view all
+registered accounts and associated balances within the Polkadot.js Extension. Once finished, you
+should see your new ParaId at the bottom of the list within
+[Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) with the
+option to "Deregister" to the right:
 
 ![Registered ParaID in PolkadotJs](../assets/coretime/Coretime-ParaId-Registered.png)
 
 ## Compiling Parachain Runtime and Generating Wasm Blob
 
-We can now move on to working with the template. Some essential prerequisites are:
+We can now move on to working with the template. Essential prerequisites are:
 
-1. **Install** Rust and its associated tooling.
-2. **Install** the
-   [Rust nightly version](https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust).
-3. **Have** a command line, git, and other common development tools.
+1. **Have** a command line, git, and other common development tools to edit code/files.
+2. **Rust**, its associated tooling, the nightly toolchain, and the `wasm32-unknown-unknown`
+   compilation target.
 
 :::info Install dependencies
 
@@ -62,18 +61,24 @@ Visit [the dependencies' installation](./build-guides-install-deps.md) page befo
 
 :::
 
-We need to clone the Polkadot SDK. This guide uses release
-[`polkadot-v1.13.0`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.13.0),
-which can be cloned using the appropriate release tag:
+This guide uses release
+[`polkadot-v1.15.0`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.15.0), for
+associated tooling (such as `polkadot-parachain` and `chain-spec-builder`).
+
+We will be using the
+[Polkadot SDK's parachain template](https://github.com/paritytech/polkadot-sdk-parachain-template),
+which is kept in sync with the Polkadot SDK.
+
+Clone the repository:
 
 ```shell
-git clone git@github.com:paritytech/polkadot-sdk.git --branch polkadot-v1.13.0 --single-branch
+git clone git@github.com:paritytech/polkadot-sdk-parachain-template.git
 ```
 
-Now, navigate to `polkadot-sdk/templates/parachain`:
+Now, navigate to `polkadot-sdk-parachain-template/`:
 
 ```bash
-cd polkadot-sdk/templates/parachain
+cd polkadot-sdk-parachain-template
 ```
 
 Open this in your code editor of choice. This template contains the necessary dependencies we need
@@ -85,20 +90,18 @@ This tutorial won't go into the specifics of the template, nor will it go into t
 FRAME and Substrate. All you need to know is the following:
 
 - `runtime/` - Contains the runtime and business logic. This is how all of your pallets (runtime
-  modules) are configured. The runtime, once it's compiled as a WebAssembly blob, is uploaded to the
-  state on-chain.
-- `node/` - The node implementation takes care of networking and RPC setup. The genesis
-  configuration (`chain_spec.rs`) is also located here.
+  modules) are configured. The runtime, once it's compiled as a WebAssembly blob, is uploaded
+  on-chain.
+- `node/` - The node implementation, which takes care of networking and RPC setup.
 
 > Pallets are essentially just Rust crates, which are imported as dependencies, as seen in
 > `runtime/Cargo.toml`. Read more about
 > [pallets here.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/frame_runtime/index.html#pallets)
 
-When we compile our template, we can extract the runtime code as a `.wasm` blob, which is one of the
-key artifacts for our core.
+When we compile our template, we can extract the runtime code as a WebAssembly `.wasm` blob, which
+is one of the key artifacts for registering our parachain on the relay chain.
 
-Build the node using the following (assuming you are located within
-`polkadot-sdk/templates/parachain`):
+Build the node using the following command:
 
 ```shell
 cargo build --release
@@ -109,14 +112,26 @@ definitely a next step after you get used to deploying your parachain on Rococo!
 
 ### Customizing our chain specification's patch file
 
-You can bootstrap your network with some initial values, such as initial collators, balances, and
-more. This is done using a patch file, which the `chain-spec-builder` tool uses to create the
-genesis state of your network. You should do the following to create your `patch.json`:
+The chain specification is a JSON file which describes Substrate-based networks. It usually contains
+the genesis runtime (in hex) under `genesis.runtimeGenesis.code`. Under that, it also contains
+genesis values/state for the pallets included in your runtime.
+
+You can bootstrap your network with some initial values, such as initial collators, balances for
+certain accounts, and more. This is done using a patch file, which the `chain-spec-builder` tool
+uses to create the full chain specification of your network. You should do the following to create
+your `patch.json`:
+
+Feel free to use the patch provided here, which you can look to tweaking to your liking.
 
 1. Create the file: `touch patch.json`
 2. Paste the below patch JSON.
 
-Feel free to use the patch provided here, which you can look to tweaking to your liking.
+The patch JSON states that:
+
+- The `Alice` and `Bob` accounts get a substantial balance.
+- `Alice` is the collator and block producer of this network. This makes it easy for us to run our
+  collator with `--alice` later on.
+- `Alice` is the sudo key of our network.
 
 :::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId! This should be the same
 as the ID you reserved. :::
@@ -163,7 +178,8 @@ as the ID you reserved. :::
 > the[ `chain-spec-builder`](./build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder)
 > installed before following along!
 
-By now, your `./target` folder should look something akin to:
+By now, you should have `patch.json` created and populated, and your `./target` folder should look
+something akin to:
 
 ```sh
 ./target/release/wbuild/parachain-template-runtime
@@ -190,7 +206,7 @@ You should now see `chain_spec.json` generated, with the message `Genesis config
 The `-v` does a superficial verification of the JSON to ensure all fields are properly populated.
 
 Next, you'll need to modify a few things in your chain spec, namely by adding the following fields
-to make it parachain-ready:
+to make it parachain-ready. Once again, make sure you set `para_id` to the one you reserved earlier:
 
 ```json
 "protocolId": "my-live-protocol",
@@ -233,20 +249,13 @@ fields are in place:
 
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
-3. **Make** sure that our `chain_type` is set to `live`
-4. **Remove** all collators except for **one**, Alice. See the
-   [FAQ/Troubleshooting page](build-guides-coretime-troubleshoot.md) for why we do this
-5. **Be** sure to also set the para id in `testnet_genesis`!
-6. **Optionally**, change the name and id of your chain (mine is called "SomeChain" for the name,
-   and "some_chain" for the id). My ticker symbol for the default token is called "SOME". **You may
-   change this as you see fit.**
+3. **Make** sure that our `chain_type` is set to `Live`
+4. **Optionally**, change the name and id of your chain (mine is called "SomeChain" for the name,
+   and "some_chain" for the id). My ticker symbol for the default token is called "SOME".
 
 If you fail to do one of these, there is a large chance that your chain may fail to produce blocks.
 Feel free to copy the configuration below and use it to ensure everything is in place for a Rococo
-deployment. This function should replace the `local_testnet_config` function within
-`node/src/chain_spec.rs`:
-
-Once this is in place, you are ready to compile your parachain node.
+deployment.
 
 For more information on chain specifications in general,
 [check out the reference document from the Polkadot SDK.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/chain_spec_genesis/index.html)
@@ -269,7 +278,7 @@ your WebAssembly blob with the following:
 polkadot-parachain export-genesis-wasm --chain chain_spec.json genesis-wasm
 ```
 
-Within `polkadot-sdk/templates/parachain`, you should now have two files:
+Within your project folder, you should now have two files:
 
 - **`genesis`** - the initial state of your parachain.
 - **`genesis-wasm`** - the initial runtime WebAssembly blob of your parachain.
