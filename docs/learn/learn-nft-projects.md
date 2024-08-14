@@ -17,6 +17,7 @@ and add your NFT app to this page.
 
 ## List of NFT Projects
 
+<!-- prettier-ignore -->
 <!-- no toc -->
 
 - [Astar](#astar)
