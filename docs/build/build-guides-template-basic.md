@@ -198,7 +198,7 @@ our chain specification:
 ```sh
 chain-spec-builder create \
 -v \
--r ../../target/release/wbuild/parachain-template-runtime/parachain_template_runtime.wasm \
+-r ./target/release/wbuild/parachain-template-runtime/parachain_template_runtime.wasm \
 patch patch.json
 ```
 
