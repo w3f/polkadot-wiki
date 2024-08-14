@@ -17,14 +17,15 @@ and add your NFT app to this page.
 
 ## List of NFT Projects
 
-- [Astar](#Astar)
+<!-- no toc -->
+
+- [Astar](#astar)
 - [Basilisk](#basilisk)
-- [Efinity](#efinity)
-- [Kodadot](#kodadot)
+- [KodaDot](#kodadot)
 - [Moonbeam](#moonbeam)
 - [RMRK](#rmrk)
 - [Asset Hub](#asset-hub)
-- [Unique](#unique-network)
+- [Unique Network](#unique-network)
 
 ## Astar
 
@@ -58,15 +59,6 @@ that allows creating a buy order for a specific NFT.
 These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
 
 ![nft-basilisk](../assets/nft/nft-basilisk.png)
-
-## Efinity
-
-Spearheaded by [Enjin](https://enjin.io), the authors of Ethereum's ERC1155 standard and makers of
-the Enjin wallet and Unity plugin, which allows easy implementation of NFTs into 3D games, Efinity
-is an NFT bridging chain coming to Kusama and Polkadot in 2022.
-
-They plan to build a _paratoken_ which would be a standard for token migration across different
-parachains in the Polkadot ecosystem, but also into and out of Ethereum and other EVM systems.
 
 ## [KodaDot](https://kodadot.xyz)
 
