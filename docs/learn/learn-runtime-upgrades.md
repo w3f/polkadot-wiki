@@ -10,7 +10,12 @@ slug: ../learn-runtime-upgrades
 Runtime upgrades allow {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to change the
 logic of a Substrate-based chain without the need for a hard fork.
 
-:::info Substrate is part of the Polkadot SDK :::
+:::info Substrate is part of the Polkadot SDK
+
+Substrate is one of the core parts of the Polkadot SDK, containing libraries used to build
+blockchains.
+
+:::
 
 ## Forkless Upgrades
 
