@@ -55,9 +55,7 @@ been called.
 
 The node architectural design for parachains and solo chains is similar to that of the relay chain, with the runtime
 code being a Wasm blob that is stored in chain state. Solo chains built with Polkadot SDK, which are blockchains that have a native consensus mechanism that is independent of
-the relay chain's consensus, are able to be update with whatever governance that solo chain has
-implemented. This could either be a governance system like [OpenGov](./learn-polkadot-opengov.md),
-or a simple sudo/multisig setup.
+the relay chain's consensus, can be updated through an on-chain governance system like [OpenGov](./learn-polkadot-opengov.md) or a simple sudo/multisig setup.
 
 Parachains must notify the relay chain whenever a new upgrade is to be enacted. This is done using
 two key extrinsics:
