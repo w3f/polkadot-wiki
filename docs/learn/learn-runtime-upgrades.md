@@ -7,15 +7,9 @@ keywords: [runtime, upgrades, releases, forkless]
 slug: ../learn-runtime-upgrades
 ---
 
-Runtime upgrades allow {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to change the
-logic of a Substrate-based chain without the need for a hard fork.
-
-:::info Substrate is part of the Polkadot SDK
-
-Substrate is one of the core components of the Polkadot SDK, containing libraries used to build
-blockchains.
-
-:::
+Runtime upgrades allow the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay
+chain, parachains, and solo blockchains built with the Polkadot SDK to change their core business
+logic (referred to as the **runtime**) without the need for a hard fork.
 
 ## Forkless Upgrades
 
@@ -28,9 +22,9 @@ inefficient, and error-prone due to the levels of offline coordination required 
 propensity to bundle many upgrades into one large-scale event.
 
 The usage of [WebAssembly](./learn-wasm.md) in the Polkadot SDK (the framework powering Polkadot,
-Kusama and their respective parachains), give the relay chain, its parachains, as well as any other standalone solo
-chains built with the Polkadot SDK the ability to upgrade their runtime (the chain's "business logic")
-without a hard fork of the respective network.
+Kusama and their respective parachains), give the relay chain, its parachains, as well as any other
+standalone solo chains built with the Polkadot SDK the ability to upgrade their runtime (the chain's
+"business logic") without a hard fork of the respective network.
 
 Rather than encoding the runtime in the nodes,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
@@ -53,16 +47,20 @@ been called.
 
 ### Forkless Upgrades - Parachains & Solo Chains
 
-The node architectural design for parachains and solo chains is similar to that of the relay chain, with the runtime
-code being a Wasm blob that is stored in chain state. Solo chains built with Polkadot SDK, which are blockchains that have a native consensus mechanism that is independent of
-the relay chain's consensus, can be updated through an on-chain governance system like [OpenGov](./learn-polkadot-opengov.md) or a simple sudo/multisig setup.
+The node architectural design for parachains and solo chains is similar to that of the relay chain,
+with the runtime code being a Wasm blob that is stored in chain state. Solo chains built with
+Polkadot SDK, which are blockchains that have a native consensus mechanism that is independent of
+the relay chain's consensus, can be updated through an on-chain governance system like
+[OpenGov](./learn-polkadot-opengov.md) or a simple sudo/multisig setup.
 
 Parachains must notify the relay chain whenever a new upgrade is to be enacted. This is done using
 two key extrinsics:
 
-- The first notifies the relay chain that an upgrade is to take place, and thus a new state
-  transition function is going to be introduced for that parachain to be validated with.
-- The second enacts the upgrade, assuming it has been approved.
+- [`system.authorizeUpgrade`](https://paritytech.github.io/polkadot-sdk/master/frame_system/pallet/struct.Pallet.html#method.authorize_upgrade) -
+  notifies the relay chain that an upgrade is to take place, and thus a new state transition
+  function is going to be introduced for that parachain to be validated with.
+- [`system.applyAuthorizedUpgrade`](https://paritytech.github.io/polkadot-sdk/master/frame_system/pallet/struct.Pallet.html#method.apply_authorized_upgrade) -
+  enacts the upgrade, assuming it has been approved.
 
 ## Client Releases
 
