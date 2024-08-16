@@ -28,9 +28,9 @@ inefficient, and error-prone due to the levels of offline coordination required 
 propensity to bundle many upgrades into one large-scale event.
 
 The usage of [WebAssembly](./learn-wasm.md) in the Polkadot SDK (the framework powering Polkadot,
-Kusama, and its respective parachains/rollups), gives any relay chains, parachains, and any other
-chains built with the Polkadot SDK the ability to upgrade their runtime (a chain's "business logic")
-without hard forking.
+Kusama and their respective parachains), give the relay chain, its parachains, as well as any other standalone solo
+chains built with the Polkadot SDK the ability to upgrade their runtime (the chain's "business logic")
+without a hard fork of the respective network.
 
 Rather than encoding the runtime in the nodes,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
