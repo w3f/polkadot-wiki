@@ -44,7 +44,7 @@ The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is st
 the logic stored on-chain and removes the coordination challenge of requiring thousands of node
 operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
 upgrades through the [on-chain governance](./learn-polkadot-opengov.md) system, which also enacts
-them autonomously once voted through.
+them autonomously once the runtime upgrade referendum is approved through on-chain voting.
 
 As a result of storing the runtime as part of the state, the runtime code itself becomes state
 sensitive, and calls to runtime can change the runtime code itself. Therefore, the Polkadot Host
