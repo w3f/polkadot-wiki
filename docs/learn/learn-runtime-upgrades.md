@@ -53,7 +53,7 @@ been called.
 
 ### Forkless Upgrades - Parachains & Solo Chains
 
-The architecture for parachains and solo chains is the same as the relay chain, with the runtime
+The node architectural design for parachains and solo chains is similar to that of the relay chain, with the runtime
 code being stored on-chain. Solo chains, which are blockchains which are not secured by / following
 the relay chain's consensus, are able to be update with whatever governance that solo chain has
 implemented. This could either be a governance system like [OpenGov](./learn-polkadot-opengov.md),
