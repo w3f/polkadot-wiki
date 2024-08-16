@@ -12,7 +12,7 @@ logic of a Substrate-based chain without the need for a hard fork.
 
 :::info Substrate is part of the Polkadot SDK
 
-Substrate is one of the core parts of the Polkadot SDK, containing libraries used to build
+Substrate is one of the core components of the Polkadot SDK, containing libraries used to build
 blockchains.
 
 :::
