@@ -7,8 +7,9 @@ keywords: [runtime, upgrades, releases, forkless]
 slug: ../learn-runtime-upgrades
 ---
 
-Runtime upgrades allow {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to change the
-logic of the chain without the need for a hard fork.
+Runtime upgrades allow the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay
+chain, parachains, and solo blockchains built with the Polkadot SDK to change their core business
+logic (referred to as the **runtime**) without the need for a hard fork.
 
 ## Forkless Upgrades
 
@@ -20,15 +21,16 @@ thousands) of nodes in the network that need to upgrade their software. Thus, ha
 inefficient, and error-prone due to the levels of offline coordination required and, therefore, the
 propensity to bundle many upgrades into one large-scale event.
 
-By using Wasm in Substrate (the framework powering Polkadot, Kusama, and many connecting chains),
-parachains are given the ability to upgrade their runtime (a chain's "business logic") without hard
-forking.
+The usage of [WebAssembly](./learn-wasm.md) in the Polkadot SDK (the framework powering Polkadot,
+Kusama and their respective parachains), give the relay chain, its parachains, as well as any other
+standalone solo chains built with the Polkadot SDK the ability to upgrade their runtime (the chain's
+"business logic") without a hard fork of the respective network.
 
 Rather than encoding the runtime in the nodes,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
 [execution host](learn-polkadot-host). They maintain consensus on a very low-level and
 well-established instruction set. Upgrades can be small, isolated, and very specific by deploying
-Wasm on-chain and having nodes auto-enact the new logic at a particular block height.
+WebAssembly on-chain and having nodes auto-enact the new logic at a particular block height.
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is stored on the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain itself.
@@ -36,12 +38,29 @@ The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is st
 the logic stored on-chain and removes the coordination challenge of requiring thousands of node
 operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
 upgrades through the [on-chain governance](./learn-polkadot-opengov.md) system, which also enacts
-them autonomously.
+them autonomously once the runtime upgrade referendum is approved through on-chain voting.
 
-As a result of storing the Runtime as part of the state, the Runtime code itself becomes state
-sensitive, and calls to Runtime can change the Runtime code itself. Therefore, the Polkadot Host
-must always ensure it provides the Runtime corresponding to the state in which the entry point has
+As a result of storing the runtime as part of the state, the runtime code itself becomes state
+sensitive, and calls to runtime can change the runtime code itself. Therefore, the Polkadot Host
+must always ensure it provides the runtime corresponding to the state in which the entry point has
 been called.
+
+### Forkless Upgrades - Parachains & Solo Chains
+
+The node architectural design for parachains and solo chains is similar to that of the relay chain,
+with the runtime code being a Wasm blob that is stored in chain state. Solo chains built with
+Polkadot SDK, which are blockchains that have a native consensus mechanism that is independent of
+the relay chain's consensus, can be updated through an on-chain governance system like
+[OpenGov](./learn-polkadot-opengov.md) or a simple sudo/multisig setup.
+
+Parachains must notify the relay chain whenever a new upgrade is to be enacted. This is done using
+two key extrinsics:
+
+- [`system.authorizeUpgrade`](https://paritytech.github.io/polkadot-sdk/master/frame_system/pallet/struct.Pallet.html#method.authorize_upgrade) -
+  notifies the relay chain that an upgrade is to take place, and thus a new state transition
+  function is going to be introduced for that parachain to be validated with.
+- [`system.applyAuthorizedUpgrade`](https://paritytech.github.io/polkadot-sdk/master/frame_system/pallet/struct.Pallet.html#method.apply_authorized_upgrade) -
+  enacts the upgrade, assuming it has been approved.
 
 ## Client Releases
 
