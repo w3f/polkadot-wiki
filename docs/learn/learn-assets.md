@@ -60,14 +60,14 @@ transfer is successful.
 
 ## Asset Conversion
 
-An asset conversion pallet a simple AMM (automated market maker) deployed on AssetHub with Uniswap
-V2-style functionality. This specific model employs a mathematical formula to determine the price of
-a token based on its ratio within the liquidity pool.
+[An asset conversion pallet](https://paritytech.github.io/polkadot-sdk/master/pallet_asset_conversion/index.html)
+is deployed on AssetHub with Uniswap V2-style functionality. It implements a simple AMM (automated
+market maker), which employs a mathematical formula to determine the price of a token based on its
+ratio within the liquidity pool.
 
-This also enables fees to be paid in any asset that has corresponding liquidity (in DOT/KSM) on
+This pallet enables fees to be paid in any asset that has corresponding liquidity (in DOT/KSM) on
 AssetHub, allowing collators to still be paid in native currency. Learn more about asset conversion
-on AssetHub,
-[including guides on how to use it here.](https://wiki.polkadot.network/docs/learn-asset-conversion-assethub)
+on AssetHub, [including guides on how to use it here.](./learn-asset-conversion-assethub.md)
 
 ## Creation and Management
 
