@@ -286,7 +286,7 @@ and mouse hover "+" then select `Import`.
 `Import via grafana.com` - It allows you to use a dashboard that someone else has created and made
 public. You can check what other dashboards are available via
 [https://grafana.com/grafana/dashboards](https://grafana.com/grafana/dashboards). In this guide, we
-use ["My Polkadot Metrics"](https://grafana.com/grafana/dashboards/12425), so input "12425" under
+use ["Substrate Node Metrics"](https://grafana.com/grafana/dashboards/21715-substrate-node-metrics/), so input "21715" under
 the id field and click `Load`.
 
 ![5-import-dashboard](../assets/guides/how-to-monitor/5-import-dashboard.png)
@@ -297,8 +297,7 @@ click `Import`.
 ![5-import-dashboard-2](../assets/guides/how-to-monitor/5-import-dashboard-2.png)
 
 In the meantime, start your Polkadot node by running `./polkadot`. If everything is done correctly,
-you should be able to monitor your node's performance such as the current block height, CPU, memory
-usage, etc. on the Grafana dashboard.
+you should be able to monitor your node's performance such as the current block height, network traffic, running tasks, etc. on the Grafana dashboard.
 
 ![6-dashboard-metric](../assets/guides/how-to-monitor/6-dashboard-metric.png)
 
