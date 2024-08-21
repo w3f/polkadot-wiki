@@ -13,6 +13,8 @@ This guide is considered a moving document and currently uses the **Rococo** tes
 relay chain can also be used in place of Rococo, as coretime is also enabled there. Polkadot will
 enable agile coretime after it has been thoroughly tested on Kusama.
 
+**This guide assumes Polkadot SDK tag `polkadot-v1.15.1`**
+
 :::
 
 This guide aims to get you up and running with the basics of:
@@ -133,8 +135,11 @@ The patch JSON states that:
   collator with `--alice` later on.
 - `Alice` is the sudo key of our network.
 
-:::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId! This should be the same
-as the ID you reserved. :::
+:::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId!
+
+This should be the same as the ID you reserved.
+
+:::
 
 ```json
 {
@@ -250,14 +255,11 @@ fields are in place:
 1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
 3. **Make** sure that our `chain_type` is set to `Live`
-4. **Optionally**, change the name and id of your chain (mine is called "SomeChain" for the name,
-   and "some_chain" for the id). My ticker symbol for the default token is called "SOME".
+4. **Optionally**, change the name, id, and token symbol of your chain.
 
 If you fail to do one of these, there is a large chance that your chain may fail to produce blocks.
-Feel free to copy the configuration below and use it to ensure everything is in place for a Rococo
-deployment.
 
-For more information on chain specifications in general,
+For more information on chain specifications,
 [check out the reference document from the Polkadot SDK.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/chain_spec_genesis/index.html)
 
 ### Generating the Runtime and Genesis

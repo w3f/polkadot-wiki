@@ -427,7 +427,7 @@ parachains (an
 It can be installed as follows:
 
 ```sh
-cargo install polkadot-parachain-bin
+cargo install --git https://github.com/paritytech/polkadot-sdk --tag polkadot-v1.15.1 --force polkadot-parachain-bin
 ```
 
 `chain-spec-builder` is how you will generate chain specifications for your network. It requires a
