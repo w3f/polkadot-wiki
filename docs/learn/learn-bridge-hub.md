@@ -32,7 +32,7 @@ offchain (relayers) components.
 Examples of trustless on Bridge Hub include:
 
 - Snowfork, a decentralized bridge between Polkadot and Ethereum
-- [Hyperbridge, a interoperability coprocessor which features permissionless relayers](./learn-hyperbridge.md)
+- [The Polkadot-to-Kusama Bridge](./learn-DOT-KSM-bridge.md)
 
 ### On-chain Bridge Components
 
