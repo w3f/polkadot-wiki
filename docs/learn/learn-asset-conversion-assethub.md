@@ -28,15 +28,15 @@ that the fee handler (in this case, a Collator) only receives the native asset
 
 Asset Conversion pallet allows you to:
 
-- [create a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.create_pool)
+- [Create a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.create_pool)
   with {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and an asset
-- [provide the liquidity](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.add_liquidity)
+- [Provide the liquidity](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.add_liquidity)
   and receive back an LP token
-- [exchange the LP token back to assets](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.remove_liquidity)
-- [swap assets if there is a pool created](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.swap_exact_tokens_for_tokens)
-- [query for an exchange price](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/trait.AssetConversionApi.html#method.quote_price_exact_tokens_for_tokens)
+- [Exchange the LP token back to assets](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.remove_liquidity)
+- [Swap assets if there is a pool created](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.swap_exact_tokens_for_tokens)
+- [Query for an exchange price](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/trait.AssetConversionApi.html#method.quote_price_exact_tokens_for_tokens)
   via a runtime call endpoint
-- [query the size of a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/trait.AssetConversionApi.html#method.get_reserves).
+- [Query the size of a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/trait.AssetConversionApi.html#method.get_reserves).
 
 :::info Asset Conversion Tutorials
 
