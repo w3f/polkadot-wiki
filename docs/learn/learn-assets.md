@@ -66,8 +66,8 @@ market maker), which employs a mathematical formula to determine the price of a 
 ratio within the liquidity pool.
 
 This pallet enables fees to be paid in any asset that has corresponding liquidity (in DOT/KSM) on
-AssetHub. Learn more about asset conversion
-on AssetHub, [including guides on how to use it here.](./learn-asset-conversion-assethub.md)
+AssetHub. Learn more about asset conversion on AssetHub,
+[including guides on how to use it here.](./learn-asset-conversion-assethub.md)
 
 ## Creation and Management
 
