@@ -99,6 +99,7 @@ service, and additional metrics.
 - [NOWNodes](https://nownodes.io/)
 - [All That Node](https://www.allthatnode.com/)
 - [SubQuery](https://www.rpc.subquery.network/)
+- [dRPC](https://drpc.org/)
 
 :::note
 
