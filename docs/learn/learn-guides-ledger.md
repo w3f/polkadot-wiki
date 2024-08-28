@@ -15,7 +15,7 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
 The [Ledger devices](../general/ledger.md) are hardware wallets that keep your private key secured
-on a physical device that does not get directly exposed to your computer or the internet.
+on a physical device not directly exposed to your computer or the internet.
 
 The [Polkadot Generic application](../general/ledger.md#polkadot-generic-app) allows you to manage
 your tokens and other tokens on the Asset Hub and any other chain within the Polkadot ecosystem.
@@ -24,7 +24,7 @@ your tokens and other tokens on the Asset Hub and any other chain within the Pol
 
 :::info
 
-Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with normal
+Ledger Live should be off while using Ledger with Polkadot-JS UI, as it can interfere with normal
 operation.
 
 :::
@@ -33,7 +33,7 @@ You can import your Ledger account to [Polkadot Extension](https://polkadot.js.o
 the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). For instructions on how to import
 Ledger accounts to the Polkadot Extension read through
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension),
-while if you want to import Ledger accounts to the Polkadot-JS UI you can consult
+while if you want to import Ledger accounts to the Polkadot-JS UI, you can consult
 [this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
 
 ### Derivation paths
@@ -58,19 +58,18 @@ Ledger Live.
 
 ### Confirming the Address on your Device
 
-If you have your Ledger account directly imported into the Polkadot-JS UI, you can ask the UI to
-confirm the address on your Ledger device. There are a few methods to check the balance of your
-Ledger account. Check out
+If your Ledger account is directly imported into the Polkadot-JS UI, you can ask the UI to confirm
+the address on your Ledger device. There are a few methods to check the balance of your Ledger
+account. Check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000169332-where-can-i-see-the-balance-of-my-account-)
 for information.
 
 ## Navigating your Account
 
-Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
-account. At the far right of the row is located your account's DOT balance. If you expand the
-balance arrow, it will show details of your balance such as locks or reserved amounts. For more
-information about type of balances visit the
-[balances page](./learn-account-balances.md#balance-types-on-polkadot-js).
+Once you have loaded your account on the “Accounts” tab, it should show a row with your Ledger
+account. Your account’s DOT balance is on the row’s far right. Expanding the balance arrow will show
+your balance details, such as locks or reserved amounts. For more information about the type of
+balances, visit the [balances page](./learn-account-balances.md#balance-types-on-polkadot-js).
 
 ## Sending a Transfer with Ledger Devices
 
@@ -78,9 +77,9 @@ information about type of balances visit the
 
 Visit the
 [**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger)
-and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn about how to
+and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing for transactions.
+to you while signing transactions.
 
 :::
 
@@ -97,14 +96,14 @@ more information about signing transactions using your ledger.
 
 General instructions to send a transfer can be found on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
-To sign transactions with your Ledger nano check
+To sign transactions with your Ledger Nano check
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181994) or
 see [this video tutorial](https://youtu.be/gbvrHzr4EDY?t=579).
 
 ## Receiving a Transfer
 
 To receive a transfer on the accounts stored on your Ledger device, you must provide the sender
-(i.e. the payer) with your address. To do so, follow the instructions on
+(i.e., the payer) with your address. To do so, follow the instructions on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
 :::caution Before giving anyone your address
@@ -116,9 +115,10 @@ vigilant around copy-paste operations makes sense.
 
 :::
 
-The easiest way to get your address is to click on the account name which will open a sidebar. Your
-address will be shown in this sidebar, along with some other information. Another method is just
-clicking on your account's avatar icon - this immediately copies your address to the clipboard.
+The easiest way to get your address is to click on the account name. This will open a sidebar
+showing the information about your address and other information, such as on-chain identity. Another
+method is just clicking on your account's avatar icon - this immediately copies your address to the
+clipboard.
 
 :::note Your Asset Hub address is the same as your Relay Chain address
 
@@ -131,7 +131,7 @@ chain.
 
 ## Staking
 
-For staking using Ledger devices see
+For staking using Ledger devices, see
 [this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
 
 ## Ledger Developer Release
