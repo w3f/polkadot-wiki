@@ -20,70 +20,6 @@ on a physical device that does not get directly exposed to your computer or the 
 The [Polkadot Generic application](../general/ledger.md#polkadot-generic-app) allows you to manage
 your tokens and other tokens on the Asset Hub and any other chain within the Polkadot ecosystem.
 
-## Adding Your Account to the Browser Extension
-
-## Adding Your Account to the UI
-
-The [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer) already has an integration with the
-Ledger application so that your device will work with the browser interface after installation. The
-functionality is currently gated behind a feature setting that you will need to turn on.
-
-In order to turn on the interoperability with Ledger devices, go to
-[Settings](<(https://polkadot.js.org/apps/#/settings)>) > Account Options and under "Manage Hardware
-Connections" choose "Attach Ledger Via WebUSB (Chrome, recommended)".
-
-![Allow Ledger connections in Polkadot-JS UI Settings](../assets/ledger.png)
-
-Click "Save" to keep your settings.
-
-Now when you go to the "Accounts" tab you will see a new button that says "Add via Ledger". Ensure
-that your Ledger device is unlocked, Ledger Live is **closed** and you have
-[switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes)
-to the Statemine application, then click this button.
-
-![Add Ledger button in Polkadot-JS Apps UI](../assets/ledger/query-ledger.png)
-
-A popup will appear asking you to select an account and derivation path.
-
-![Picking an account and derivation path](../assets/ledger/add-account.png)
-
-The first option lets you select an account. You can have multiple accounts on a single Ledger
-device. The second dropdown lets you pick a derivation path - think of it like a formula from which
-child accounts are generated. If in doubt, pick the default option for both.
-
-Once you confirm your selection, depending on your browser and its security settings, you might need
-to confirm the USB connection through a popup like the one below when adding the Ledger device for
-the first time:
-
-![Display the device connection popup](../assets/ledger/query-device.png)
-
-You should now be able to scroll down and find a new account on the page with the type "ledger".
-
-![Displaying the Ledger account in the list](../assets/ledger/ledger-balance.png)
-
-You can now use this account to interact with the Asset Hub on
-[Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer) and it will prompt your ledger for
-confirmation when you initiate a transaction.
-
-### Confirming the Address on your Device
-
-On the "Accounts" tab, find your Ledger-connected account. Click on the three vertical dots at the
-end of the row. This will open a new menu, here you can click the "Show address on hardware device"
-option to display the address on your device.
-
-![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](../assets/ledger-4.png)
-
-Here you can scroll through and make sure the address matches to what is displayed on
-[Polkadot-JS Apps UI](https://polkadot.js.org/apps/#/explorer).
-
-## Navigating your Account
-
-Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
-account. At the far right of the row is located your account's DOT balance. If you expand the
-balance arrow, it will show details of your balance such as locks or reserved amounts.
-
-![Account row showing empty balance](../assets/ledger/ledger-balance.png)
-
 ## Loading Your Account
 
 :::info
@@ -120,40 +56,21 @@ used in Ledger Live, as it only scans through the parent accounts. So, remember 
 the children accounts cannot be viewed, and you will not be able to transact with those accounts on
 Ledger Live.
 
-### Connecting your ledger device
+### Confirming the Address on your Device
 
-While using a ledger device to sign transactions, depending on your browser and its security
-settings, you might need to confirm the USB connection through a popup like the one below:
-
-![Display the device connection popup](../assets/ledger/query-device.png)
-
-If you are adding your Ledger Nano for the first time, click on the "Unknown device" line and the
-"Connect" button will become available.
-
-:::info Signature error message
-
-If you have already connected your device, but an error message appears before signing a
-transaction, make sure you have opened the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} application on your Ledger Nano
-device. Visit
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
-more information about signing transactions using your ledger.
-
-:::
-
-## Confirming the Address on your Device
-
-To display your {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account
-address on your Ledger Nano, you can follow the guidelines on
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device).
-Here you can scroll through and make sure the address matches what is displayed on
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
-
-## Checking the Balance of Your Account
-
-There are a few methods to check the balance of your account. Check out
+If you have your Ledger account directly imported into the Polkadot-JS UI, you can ask the UI to
+confirm the address on your Ledger device. There are a few methods to check the balance of your
+Ledger account. Check out
 [this support article](https://support.polkadot.network/support/solutions/articles/65000169332-where-can-i-see-the-balance-of-my-account-)
 for information.
+
+## Navigating your Account
+
+Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
+account. At the far right of the row is located your account's DOT balance. If you expand the
+balance arrow, it will show details of your balance such as locks or reserved amounts. For more
+information about type of balances visit the
+[balances page](./learn-account-balances.md#balance-types-on-polkadot-js).
 
 ## Sending a Transfer with Ledger Devices
 
@@ -164,6 +81,17 @@ Visit the
 and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn about how to
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
 to you while signing for transactions.
+
+:::
+
+:::info Signature error message
+
+If you have already connected your device, but an error message appears before signing a
+transaction, make sure you have opened the
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} application on your Ledger Nano
+device. Visit
+[this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
+more information about signing transactions using your ledger.
 
 :::
 
@@ -179,7 +107,7 @@ To receive a transfer on the accounts stored on your Ledger device, you must pro
 (i.e. the payer) with your address. To do so, follow the instructions on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
-:::warning
+:::caution Before giving anyone your address
 
 Before giving anyone your address, ensure it matches what's on the Ledger by
 [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
@@ -187,11 +115,6 @@ intercept clicks and clipboard requests and can change your copied value in-flig
 vigilant around copy-paste operations makes sense.
 
 :::
-
-## Receiving a Transfer
-
-In order to receive a transfer on the accounts stored on your Ledger device, you will need to
-provide the sender (i.e. the payer) with your address.
 
 The easiest way to get your address is to click on the account name which will open a sidebar. Your
 address will be shown in this sidebar, along with some other information. Another method is just
@@ -206,30 +129,10 @@ chain.
 
 :::
 
-:::caution Before giving anyone your address
-
-Make sure it matches what's really on the Ledger by
-[confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
-intercept clicks and clipboard requests and can change your copied value in-flight, so being extra
-vigilant around copy-paste operations makes sense.
-
-:::
-
 ## Staking
 
-For staking using Ledger devices, check the section "How to stake using your Ledger" on
+For staking using Ledger devices see
 [this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
-
-## Removing Expired Democracy Locks
-
-Check out
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181870-how-to-remove-expired-democracy-locks)
-the learn how to remove democracy locks after the end of a Governance referendum.
-
-**Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger
-Nano S and the Ledger Nano X, some extrinsics are not supported by the light version. The following
-[repository by Zondax](https://github.com/Zondax/ledger-polkadot) lists the currently supported
-extrinsics on the XL version of the Ledger app.
 
 ## Ledger Developer Release
 
