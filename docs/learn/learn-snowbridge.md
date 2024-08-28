@@ -33,7 +33,7 @@ Ethereum and Polkadot parachain.
 
 ## Accessing & Using Snowbridge
 
-Snowbridge can be accessed through [the web app.](https://app.snowbridge.network/), where you may
+Snowbridge can be accessed through [the web app](https://app.snowbridge.network/), where you may
 track [how long transfers are taking,](https://app.snowbridge.network/status),
 [recent transfers](https://app.snowbridge.network/history), and other information about the bridge's
 overall status.
