@@ -24,6 +24,10 @@ The number of Polkadot validators in the active set is <RPC network="polkadot" p
 
 To reserve an asset you need a deposit of <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
 
+#### Auction Ending Period
+
+The auction ending period is <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
+
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
@@ -39,6 +43,10 @@ The minimum amount of tokens to nominate is <RPC network="polkadot" path="query.
 #### Minimum Bond to Participate in Staking
 
 The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>.
+
+#### Period per Slot Auction
+
+The number of period per slot auction is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
 
 #### Treasury Spending Period
 
@@ -56,6 +64,10 @@ The number of Kusama validators in the active set is <RPC network="kusama" path=
 
 To reserve an asset you need a deposit of <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
 
+#### Auction Ending Period
+
+The auction ending period is <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
+
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
@@ -71,6 +83,10 @@ The minimum amount of tokens to nominate is <RPC network="kusama" path="query.st
 #### Minimum Bond to Participate in Staking
 
 The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>.
+
+#### Period per Slot Auction
+
+The number of period per slot auction is <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
 
 #### Treasury Spending Period
 
