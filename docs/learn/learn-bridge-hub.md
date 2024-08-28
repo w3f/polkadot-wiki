@@ -16,7 +16,7 @@ advantage of the inherent parallelization the architecture of Polkadot provides.
 
 The Bridge Hub system parachain operates on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and is responsible for faciliating
-bridges to the wider Web3 space. It contains all required bridge
+bridges to the wider Web3 space. It contains the required bridge
 [pallets](../general/glossary.md#pallet) in its runtime, which enable trustless bridging with other
 blockchain networks like {{ polkadot: Kusama :polkadot }}{{ kusama: Polkadot :kusama }}, Ethereum
 etc. The Bridge Hub uses the native token of the relay chain,
