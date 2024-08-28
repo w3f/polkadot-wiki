@@ -20,6 +20,10 @@ from "@theme/TabItem";
 
 The number of Polkadot validators in the active set is <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>.
 
+#### Asset Deposit
+
+To reserve an asset you need a deposit of <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
+
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
@@ -47,6 +51,10 @@ The spending period on Polkadot is currently <RPC network="polkadot" path="const
 #### Active Validator Count
 
 The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
+
+#### Asset Deposit
+
+To reserve an asset you need a deposit of <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
 
 #### Existential Deposit
 
