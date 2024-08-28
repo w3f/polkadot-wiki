@@ -58,9 +58,9 @@
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.1.0",
     "prettier": "^3.3.0",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.3.1",
     "shx": "^0.3.4",
     "unist-util-visit": "2.0.1",
     "yargs": "^17.7.2"
