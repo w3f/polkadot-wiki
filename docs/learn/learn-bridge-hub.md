@@ -2,20 +2,24 @@
 id: learn-bridge-hub
 title: Bridge Hub
 sidebar_label: Bridge Hub
-description: Overview of Bridge Hub System Parachain.
+description: Overview of the Bridge Hub System Parachain.
 keywords: [Bridge, XCM, Bridge Hub]
 slug: ../learn-bridge-hub
 ---
 
-The primary functionality of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay
-chain is to secure the parachains and facilitate secure communication between them. All other
-functionalities like asset transfers, governance, identities and especially bridging, which can be
-resource intensive can benefit from operating seaparately on system parachains. That's why, the
-Bridge Hub system parachain is operating on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} since 2023. The Bridge Hub has all
-the required bridge pallets in its runtime, which enable trustless bridging with other blockchain
-networks like {{ polkadot: Kusama :polkadot }}{{ kusama: Polkadot :kusama }}, Ethereum etc. The
-Bridge Hub uses the native token of the relay chain,
+The primary functionality of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+relay chain is to secure the parachains and facilitate secure communication between them. All other
+functionalities like asset transfers, governance, identities and bridging (a potentially resource
+intensive task) can benefit from operating separately on [system parachains](./learn-system-chains.md). System parachains are
+responsible for delegating functionality away from the relay chain for peformance reasons, taking
+advantage of the inherent parallelization the architecture of Polkadot provides.
+
+The Bridge Hub system parachain operates on
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and is responsible for faciliating
+bridges to the wider Web3 space. It contains the required bridge
+[pallets](../general/glossary.md#pallet) in its runtime, which enable trustless bridging with other
+blockchain networks like {{ polkadot: Kusama :polkadot }}{{ kusama: Polkadot :kusama }} and Ethereum
+. The Bridge Hub uses the native token of the relay chain,
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
 
 ## Trustless Bridges on Bridge Hub
@@ -24,6 +28,11 @@ A two-way trustless bridge between chains A and B can be viewed as two one-way b
 → A). Hence, the design of a two-way bridge can be explained in terms of a one-way bridge with a
 source and a target chain. Any bridge operating on the Bridge Hub will have on-chain (pallets) and
 offchain (relayers) components.
+
+Examples of trustless bridges on Bridge Hub include:
+
+- Snowfork, a decentralized bridge between Polkadot and Ethereum
+- [The Polkadot-to-Kusama Bridge](./learn-DOT-KSM-bridge.md)
 
 ### On-chain Bridge Components
 
