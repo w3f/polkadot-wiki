@@ -122,9 +122,8 @@ upgrades (as determined through its local governance).
 
 :::info Minimum Crowdloan Contribution
 
-The minimum balance for contributions for a crowdloan campaign is currently set to
-{{ polkadot: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
+There is a
+[minimum balance for contributions for a crowdloan campaign](../general/constants-variables.md#minimum-crowdloan-contribution).
 This is to make crowdloans as accessible as possible while maintaining a balance to justify using
 the network's resources.
 

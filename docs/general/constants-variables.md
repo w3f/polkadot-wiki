@@ -44,6 +44,10 @@ The minimum amount of tokens to nominate is <RPC network="polkadot" path="query.
 
 The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>.
 
+#### Minimum Crowdloan contribution
+
+The minimum amount to participate to a crowdloan is <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>.
+
 #### Period per Slot Auction
 
 The number of period per slot auction is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
@@ -83,6 +87,10 @@ The minimum amount of tokens to nominate is <RPC network="kusama" path="query.st
 #### Minimum Bond to Participate in Staking
 
 The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>.
+
+#### Minimum Crowdloan contribution
+
+The minimum amount to participate to a crowdloan is <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>.
 
 #### Period per Slot Auction
 
