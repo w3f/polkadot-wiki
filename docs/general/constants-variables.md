@@ -32,6 +32,10 @@ The auction ending period is <RPC network="polkadot" path="consts.auctions.endin
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
+#### Inactive Issuance
+
+The inactive issuance is <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="1784854324418488473" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>.
+
 #### Index Deposit
 
 The deposit to reserve an index is <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
@@ -51,6 +55,10 @@ The minimum amount to participate to a crowdloan is <RPC network="polkadot" path
 #### Period per Slot Auction
 
 The number of period per slot auction is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
+
+#### Total Issuance
+
+The total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="13557639805348170350" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>.
 
 #### Treasury Spending Period
 
@@ -76,6 +84,10 @@ The auction ending period is <RPC network="kusama" path="consts.auctions.endingP
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
+#### Inactive Issuance
+
+The inactive issuance is <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="320302796457002024" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="5649"/>.
+
 #### Index Deposit
 
 The deposit to reserve an index is <RPC network="kusama" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
@@ -95,6 +107,10 @@ The minimum amount to participate to a crowdloan is <RPC network="kusama" path="
 #### Period per Slot Auction
 
 The number of period per slot auction is <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
+
+#### Total Issuance
+
+The total issuance is  <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="14017001595616667835" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="5649"/>.
 
 #### Treasury Spending Period
 

@@ -102,34 +102,14 @@ slots.
 
 #### Total Issuance
 
-It is the total number of token units in existence on the network.
-
-:::info On-chain data for reference
-
-The total issuance is
-{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="13557639805348170350" filter= "humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="14017001595616667835" filter= "humanReadable"/> :kusama }}
-in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="5649"/>. :kusama }}
-
-:::
+The [total issuance](../general/constants-variables.md#total-issuance) is the total number of token
+units in existence on the network.
 
 #### Inactive Issuance
 
-It is the total units of outstanding deactivated balance on the network that cannot be used for
-participation in governance. This comprises tokens locked away in crowdloans and nomination pools.
-
-:::info On-chain data for reference
-
-The inactive issuance is
-{{ polkadot: <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="1784854324418488473" filter= "humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="320302796457002024" filter= "humanReadable"/> :kusama }}
-in the era
-{{ polkadot: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.currentEra" defaultValue="5649"/>. :kusama }}
-
-:::
+The [inactive issuance](../general/constants-variables.md#inactive-issuance) is the total units of
+outstanding deactivated balance on the network that cannot be used for participation in governance.
+This comprises tokens locked away in crowdloans and nomination pools.
 
 #### Active Issuance
 
