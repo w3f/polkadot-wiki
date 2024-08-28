@@ -29,7 +29,7 @@ A two-way trustless bridge between chains A and B can be viewed as two one-way b
 source and a target chain. Any bridge operating on the Bridge Hub will have on-chain (pallets) and
 offchain (relayers) components.
 
-Examples of trustless on Bridge Hub include:
+Examples of trustless bridges on Bridge Hub include:
 
 - Snowfork, a decentralized bridge between Polkadot and Ethereum
 - [The Polkadot-to-Kusama Bridge](./learn-DOT-KSM-bridge.md)
