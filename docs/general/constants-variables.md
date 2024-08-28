@@ -16,9 +16,17 @@ from "@theme/TabItem";
 
 <TabItem value="polkadot">
 
+#### Active Validator Count
+
+The number of Polkadot validators in the active set is <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>.
+
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+
+#### Index Deposit
+
+The deposit to reserve an index is <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
 
 #### Minimum Active Bond
 
@@ -32,17 +40,21 @@ The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.
 
 The spending period on Polkadot is currently <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> days.
 
-#### Validator Count
-
-The number of Polkadot validators in the active set is <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>.
-
 
 </TabItem>
 <TabItem value="kusama">
 
+#### Active Validator Count
+
+The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
+
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the blockchain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+
+#### Index Deposit
+
+The deposit to reserve an index is <RPC network="kusama" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
 
 #### Minimum Active Bond
 
@@ -55,10 +67,6 @@ The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.stak
 #### Treasury Spending Period
 
 The spending period on Kusama is currently <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> days.
-
-#### Validator Count
-
-The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
 
 </TabItem>
 
