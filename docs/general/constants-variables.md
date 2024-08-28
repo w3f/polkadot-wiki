@@ -32,6 +32,11 @@ The minimum number of tokens to keep an account alive on the blockchain is <RPC 
 
 The minimum amount of tokens to nominate is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
 
+#### Validator Count
+
+The number of Polkadot validators in the active set is <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>.
+
+
 </TabItem>
 <TabItem value="kusama">
 
@@ -50,6 +55,10 @@ The minimum number of tokens to keep an account alive on the blockchain is <RPC 
 #### Minimum Active Bond
 
 The minimum amount of tokens to nominate is <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
+
+#### Validator Count
+
+The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
 
 </TabItem>
 
