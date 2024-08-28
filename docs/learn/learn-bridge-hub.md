@@ -12,7 +12,7 @@ relay chain is to secure the parachains and facilitate secure communication betw
 functionalities like asset transfers, governance, identities and bridging (a potentially resource
 intensive task) can benefit from operating separately on [system parachains](./learn-system-chains.md). System parachains are
 responsible for delegating functionality away from the relay chain for peformance reasons, taking
-advantage of the inherent parallelization the relay chain provides.
+advantage of the inherent parallelization the architecture of Polkadot provides.
 
 The Bridge Hub system parachain operates on
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and is responsible for faciliating
