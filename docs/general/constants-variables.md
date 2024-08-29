@@ -130,12 +130,20 @@ The spending period on Kusama is currently <RPC network="kusama" path="consts.tr
 
 To reserve an asset on the Polkadot Asset Hub you need a deposit of <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
 
+#### Existential Deposit
+
+The minimum number of tokens to keep an account alive on the Polkadot Asset Hub is <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={100000000} filter="humanReadable"/>.
+
 </TabItem>
 <TabItem value="ahk">
 
 #### Asset Deposit
 
 To reserve an asset on the Kusama Asset Hub you need a deposit of <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
+
+#### Existential Deposit
+
+The minimum number of tokens to keep an account alive on the Kusama Asset Hub is <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>.
 
 </TabItem>
 
