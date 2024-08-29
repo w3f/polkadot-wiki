@@ -11,7 +11,7 @@ import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Ta
 from "@theme/TabItem";
 
 <!-- prettier-ignore-start -->
-<Tabs groupId="chains" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'}, {label: 'Polkadot Asset Hub', value: 'ahp'}, {label: 'Kusama Asset Hub', value: 'ahk'} ]}>
+<Tabs groupId="chains" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'}, {label: 'Polkadot Asset Hub', value: 'ahp'}, {label: 'Kusama Asset Hub', value: 'ahk'}, {label: 'Polkadot People', value: 'pp'}, {label: 'Kusama People', value: 'kp'} ]}>
 
 <TabItem value="polkadot">
 
@@ -87,6 +87,7 @@ The spending period on Polkadot is currently <RPC network="polkadot" path="const
 </TabItem>
 <TabItem value="kusama">
 
+
 #### Active Validator Count
 
 The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
@@ -117,7 +118,7 @@ The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.
 
 #### Minimum Active Bond
 
-The minimum amount of tokens to nominat on Kusama is <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
+The minimum amount of tokens to nominate on Kusama is <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
 
 #### Minimum Bond to Participate in Staking
 
@@ -137,7 +138,7 @@ The multisig deposit factor on Kusama is <RPC network="kusama" path="consts.mult
 
 #### Parachain ID Registration Deposit
 
-Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
+Reserving a `ParaID` on Kusama requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
 
 #### Parachain Genesis State Registration Deposit
 
@@ -176,6 +177,28 @@ To reserve an asset on the Kusama Asset Hub you need a deposit of <RPC network="
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the Kusama Asset Hub is <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>.
+
+</TabItem>
+<TabItem value="pp">
+
+#### Identity Deposit
+
+The creation of a Polkadot identity required a deposit of <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/>.
+
+#### Sub-identity Deposit
+
+The creation of a Polkadot sub-identity required a deposit of <RPC network="polkadotpeople" path="consts.identity.subAccountDeposit" defaultValue={2005300000} filter="humanReadable"/>.
+
+</TabItem>
+<TabItem value="kp">
+
+#### Identity Deposit
+
+The creation of a Polkadot identity required a deposit of <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/>.
+
+#### Sub-identity Deposit
+
+The creation of a Polkadot sub-identity required a deposit of <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6684333309} filter="humanReadable"/>.
 
 </TabItem>
 
