@@ -35,10 +35,6 @@ The waiting time before claiming a Polkadot child bounty reward is <RPC network=
 
 The minimum number of tokens to keep an account alive on the Polkadot Relay Chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
-#### Genesis State Registration Deposit
-
-Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
-
 #### Inactive Issuance
 
 Polkadot's inactive issuance is <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="1784854324418488473" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>.
@@ -70,6 +66,10 @@ The multisig deposit factor on Polkadot is <RPC network="polkadot" path="consts.
 #### Parachain ID Registration Deposit
 
 Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
+
+#### Parachain Genesis State Registration Deposit
+
+Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
 
 #### Period per Slot Auction
 
@@ -107,10 +107,6 @@ The waiting time before claiming a Kusama child bounty reward is <RPC network="k
 
 The minimum number of tokens to keep an account alive on the Kusama Relay Chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
-#### Genesis State Registration Deposit
-
-Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
-
 #### Inactive Issuance
 
 Kusama's inactive issuance is <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="320302796457002024" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="5649"/>.
@@ -142,6 +138,10 @@ The multisig deposit factor on Kusama is <RPC network="kusama" path="consts.mult
 #### Parachain ID Registration Deposit
 
 Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
+
+#### Parachain Genesis State Registration Deposit
+
+Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
 
 #### Period per Slot Auction
 
