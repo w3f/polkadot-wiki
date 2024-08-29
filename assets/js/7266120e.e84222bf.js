@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[3204],{73036:e=>{e.exports=JSON.parse('{"title":"JAM","description":"Polkadot\'s Join & Accumulate Machine.","slug":"/learn-jam","permalink":"/docs/learn-jam","navigation":{"previous":{"title":"SAFROLE","permalink":"/docs/learn-safrole"},"next":{"title":"JAM Chain","permalink":"/docs/learn-jam-chain"}}}')}}]);
