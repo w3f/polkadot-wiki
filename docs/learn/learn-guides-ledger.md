@@ -106,7 +106,7 @@ To receive a transfer on the accounts stored on your Ledger device, you must pro
 (i.e., the payer) with your address. To do so, follow the instructions on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
-:::caution Before giving anyone your address
+:::caution Sharing your account address
 
 Before giving anyone your address, ensure it matches what's on the Ledger by
 [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
