@@ -52,6 +52,14 @@ The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.
 
 The minimum amount to participate to a crowdloan is <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>.
 
+#### Multisig Deposit Base
+
+The multisig deposit base is <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/>.
+
+#### Multisig Deposit Factor
+
+The multisig deposit factor is <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>.
+
 #### Period per Slot Auction
 
 The number of period per slot auction is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
@@ -103,6 +111,14 @@ The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.stak
 #### Minimum Crowdloan contribution
 
 The minimum amount to participate to a crowdloan is <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>.
+
+#### Multisig Deposit Base
+
+The multisig deposit base is <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={669599996400} filter="humanReadable"/>.
+
+#### Multisig Deposit Factor
+
+The multisig deposit factor is <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>.
 
 #### Period per Slot Auction
 
