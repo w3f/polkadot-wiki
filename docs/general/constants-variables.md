@@ -23,6 +23,14 @@ The number of Polkadot validators in the active set is <RPC network="polkadot" p
 
 The auction ending period on Polkadot is <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
+#### Bounty Deposit
+
+The deposit to submit a bounty is <RPC network="polkadot" path="consts.bounties.bountyDepositBase" defaultValue={10000000000} filter="humanReadable"/>.
+
+#### Child Bounty Payout Delay
+
+The waiting time before claiming the child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
+
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the Polkadot Relay Chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
@@ -78,6 +86,14 @@ The number of Kusama validators in the active set is <RPC network="kusama" path=
 #### Auction Ending Period
 
 The auction ending period on Kusama is <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
+
+#### Bounty Deposit
+
+The deposit to submit a bounty is <RPC network="kusama" path="consts.bounties.bountyDepositBase" defaultValue={33333333300} filter="humanReadable"/>.
+
+#### Child Bounty Payout Delay
+
+The waiting time before claiming the child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
