@@ -131,7 +131,7 @@ chain.
 
 ## Staking
 
-For staking using Ledger devices, see
+For staking using Ledger devices, follow the instructions on
 [this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
 
 ## Ledger Developer Release
