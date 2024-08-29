@@ -79,7 +79,7 @@ Visit the
 [**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger)
 and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing transactions.
+while signing transactions.
 
 :::
 
