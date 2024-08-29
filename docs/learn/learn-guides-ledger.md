@@ -116,7 +116,7 @@ vigilant around copy-paste operations makes sense.
 :::
 
 The easiest way to get your address is to click on the account name. This will open a sidebar
-showing the information about your address and other information, such as on-chain identity. Another
+showing your address and other information, such as on-chain identity. Another
 method is just clicking on your account's avatar icon - this immediately copies your address to the
 clipboard.
 
