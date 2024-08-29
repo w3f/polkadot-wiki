@@ -71,20 +71,10 @@ Polkadot-SDK repository.
 
 ## Reserve ParaID
 
-:::info
-
-Reserving a `ParaID` requires a deposit of:
-
-<!-- prettier-ignore -->
-- <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/> on Kusama
-
-<!-- prettier-ignore -->
-- <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/> on Polkadot
-
-:::
-
-The first step is to register a [`ParaID`](../general/glossary.md#paraid) for the parachain. This
-can be done through Polkadot-JS UI by navigating to
+Reserving a `ParaID` requires a
+[deposit](../general/constants-variables.md#parachain-id-registration-deposit). The first step is to
+register a [`ParaID`](../general/glossary.md#paraid) for the parachain. This can be done through
+Polkadot-JS UI by navigating to
 [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) and
 clicking on ParaID button. Ensure that you have sufficient tokens to reserve the displayed `ParaID`
 successfully.
@@ -121,14 +111,7 @@ would work as well.
 <!-- prettier-ignore -->
 <!-- :::info
 
-Registering the genesis state and WASM code of the parachain requires a deposit that is computed
-based on the size (a deposit is paid per byte uploaded): -->
-
-<!-- prettier-ignore -->
-<!-- - **Kusama**: <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte -->
-
-<!-- prettier-ignore -->
-<!-- - **Polkadot**: <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte -->
+Registering the genesis state and WASM code of the parachain requires a [deposit](../general/constants-variables.md#genesis-state-registration-deposit) that is computed based on the size (a deposit is paid per byte uploaded).
 
 <!-- The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
 requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama

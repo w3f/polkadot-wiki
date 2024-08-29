@@ -25,15 +25,19 @@ The auction ending period on Polkadot is <RPC network="polkadot" path="consts.au
 
 #### Bounty Deposit
 
-The deposit to submit a bounty is <RPC network="polkadot" path="consts.bounties.bountyDepositBase" defaultValue={10000000000} filter="humanReadable"/>.
+The deposit to submit a bounty on Polkadot is <RPC network="polkadot" path="consts.bounties.bountyDepositBase" defaultValue={10000000000} filter="humanReadable"/>.
 
 #### Child Bounty Payout Delay
 
-The waiting time before claiming the child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
+The waiting time before claiming a Polkadot child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the Polkadot Relay Chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+
+#### Genesis State Registration Deposit
+
+Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
 
 #### Inactive Issuance
 
@@ -63,6 +67,10 @@ The multisig deposit base on Polkadot is <RPC network="polkadot" path="consts.mu
 
 The multisig deposit factor on Polkadot is <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>.
 
+#### Parachain ID Registration Deposit
+
+Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
+
 #### Period per Slot Auction
 
 The number of period per slot auction on Polkadot is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
@@ -89,15 +97,19 @@ The auction ending period on Kusama is <RPC network="kusama" path="consts.auctio
 
 #### Bounty Deposit
 
-The deposit to submit a bounty is <RPC network="kusama" path="consts.bounties.bountyDepositBase" defaultValue={33333333300} filter="humanReadable"/>.
+The deposit to submit a bounty on Kusama is <RPC network="kusama" path="consts.bounties.bountyDepositBase" defaultValue={33333333300} filter="humanReadable"/>.
 
 #### Child Bounty Payout Delay
 
-The waiting time before claiming the child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
+The waiting time before claiming a Kusama child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
 The minimum number of tokens to keep an account alive on the Kusama Relay Chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+
+#### Genesis State Registration Deposit
+
+Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
 
 #### Inactive Issuance
 
@@ -126,6 +138,10 @@ The multisig deposit base on Kusama is <RPC network="kusama" path="consts.multis
 #### Multisig Deposit Factor
 
 The multisig deposit factor on Kusama is <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>.
+
+#### Parachain ID Registration Deposit
+
+Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
 
 #### Period per Slot Auction
 
