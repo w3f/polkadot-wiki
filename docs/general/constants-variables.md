@@ -207,7 +207,7 @@ The minimum number of tokens to keep an account alive on the Kusama Asset Hub is
 
 #### Identity Deposit
 
-The creation of a Polkadot identity required a deposit of <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/>.
+The creation of a Polkadot identity required a deposit of <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> and <RPC network="polkadotpeople" path="consts.identity.byteDeposit" defaultValue={100000} filter="humanReadable"/> (per byte) per each field beyond the legal name.
 
 #### Sub-identity Deposit
 
@@ -218,7 +218,7 @@ The creation of a Polkadot sub-identity required a deposit of <RPC network="polk
 
 #### Identity Deposit
 
-The creation of a Polkadot identity required a deposit of <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/>.
+The creation of a Polkadot identity required a deposit of <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> and <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> (per byte) per each field beyond the legal name.
 
 #### Sub-identity Deposit
 
