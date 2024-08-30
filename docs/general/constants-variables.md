@@ -34,7 +34,7 @@ from "@theme/TabItem";
 
 - __<RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/>:__
     register an [on-chain identity](../learn/learn-identity.md)
-    
+
 - __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__
     create a [proxy account](../learn/learn-proxies.md).
 
@@ -76,6 +76,10 @@ A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="
 #### Child Bounty Payout Delay
 
 The waiting time before claiming a Polkadot child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
+
+#### Conviction Voting Lock Period
+
+One conviction voting lock period on Polkadot equals <RPC network="polkadot" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
@@ -227,6 +231,10 @@ A Kusama bounty has a predetermined duration of <RPC network="kusama" path="cons
 #### Child Bounty Payout Delay
 
 The waiting time before claiming a Kusama child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
+
+#### Conviction Voting Lock Period
+
+One conviction voting lock period on Kusama equals <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
