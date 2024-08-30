@@ -7,8 +7,6 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-polkadot-opengov-treasury
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 The Treasury is a pot of funds collected through a portion of block production rewards,
 [transaction fees](./learn-transactions.md#transaction-fees), [slashing](./learn-offenses.md), and
 [staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
