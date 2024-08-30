@@ -47,6 +47,10 @@ The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="con
 
 The maximum number of nominators on Polkadot is uncapped and currently sits at <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={50000}/>.
 
+#### Maximum Votes per Nominator
+
+A nominator on Polkadot can select up to <RPC network="polkadot" path="consts.electionProviderMultiPhase.minerMaxVotesPerVoter" defaultValue={16} /> validators.
+
 #### Minimum Active Bond
 
 The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
@@ -150,6 +154,10 @@ The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.
 #### Maximum Number of Nominators
 
 The maximum number of nominators on Kusama is capped at <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> and currently sits at <RPC network="kusama" path="query.staking.counterForNominators" defaultValue={50000}/>.
+
+#### Maximum Votes per Nominator
+
+A nominator on Kusama can select up to <RPC network="kusama" path="consts.electionProviderMultiPhase.minerMaxVotesPerVoter" defaultValue={24} /> validators.
 
 #### Minimum Active Bond
 
