@@ -97,6 +97,10 @@ The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="con
 
 The maximum number of nominators on Polkadot is uncapped and currently sits at <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={50000}/>.
 
+#### Maximum Number of Proxies per Account
+
+The maximum number of proxies per Polkadot account is <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. You can have the same proxy for multiple accounts.
+
 #### Maximum Votes per Nominator
 
 A nominator on Polkadot can select up to <RPC network="polkadot" path="consts.electionProviderMultiPhase.minerMaxVotesPerVoter" defaultValue={16} /> validators.
@@ -156,6 +160,12 @@ Registering the genesis state and WASM code of a Polkadot parachain requires a d
 #### Period per Slot Auction
 
 The number of period per slot auction on Polkadot is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
+
+#### Proxy Deposits
+
+The creation of proxies on Polkadot requires a **proxy deposit base** of <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
+
+In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> for announcing a call and an announcement deposit factor of <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/> for each proxy call.
 
 #### Total Issuance
 
@@ -252,6 +262,10 @@ The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.
 
 The maximum number of nominators on Kusama is capped at <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> and currently sits at <RPC network="kusama" path="query.staking.counterForNominators" defaultValue={50000}/>.
 
+#### Maximum Number of Proxies per Account
+
+The maximum number of proxies per Kusama account is <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. You can have the same proxy for multiple accounts.
+
 #### Maximum Votes per Nominator
 
 A nominator on Kusama can select up to <RPC network="kusama" path="consts.electionProviderMultiPhase.minerMaxVotesPerVoter" defaultValue={24} /> validators.
@@ -311,6 +325,12 @@ Registering the genesis state and WASM code of a Kusama parachain requires a dep
 #### Period per Slot Auction
 
 The number of period per slot auction on Kusama is <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
+
+#### Proxy Deposits
+
+The creation of proxies on Kusama requires a **proxy deposit base** of <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
+
+In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> for announcing a call and an announcement deposit factor of <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/> for each proxy call.
 
 #### Total Issuance
 

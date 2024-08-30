@@ -7,8 +7,6 @@ keywords: [proxy, proxies, proxy accounts, proxy types, staking proxy]
 slug: ../learn-proxies
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 Proxies are helpful because they let you delegate efficiently and add a layer of security. Rather
 than using funds in a single account, smaller accounts with unique roles can complete tasks on
 behalf of the main stash account. Proxies can be _hotter_ than the initial account, which can be
@@ -42,15 +40,6 @@ could just set a new proxy to replace it. You can also monitor proxies by
 Creating multiple proxy accounts that act for a single account, lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
 participate in the network.
-
-:::info
-
-The **maximum number of proxies** allowed for a single account is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. :kusama }} You
-can have the same proxy for multiple accounts.
-
-:::
 
 ## Proxy Types
 
@@ -103,15 +92,11 @@ The required deposit amount for `n` proxies is equal to:
 
 `ProxyDepositBase` + `ProxyDepositFactor` \* `n`
 
-where the `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy
-list (creates one new item in storage). For every proxy the account has, an additional amount
-defined by the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location). The
-`ProxyDepositBase` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
-and the `ProxyDepositFactor` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/>. :kusama }}
+where the [`ProxyDepositBase`](../general/constants-variables.md#proxy-deposits) is the required
+amount to be reserved for an account to have a proxy list (creates one new item in storage). For
+every proxy the account has, an additional amount defined by the
+[`ProxyDepositFactor`](../general/constants-variables.md#proxy-deposits) is reserved as well
+(appends 33 bytes to storage location).
 
 ## Time-delayed Proxy
 
@@ -128,14 +113,10 @@ Announcing `n` calls using a time-delayed proxy also requires a deposit of the f
 
 `announcementDepositBase` + `announcementDepositFactor` \* `n`
 
-where the `announcementDepositBase` is the required amount to be reserved for an account to announce
-a proxy call. For every proxy call the account has, an additional amount defined by the
-`announcementDepositFactor` is reserved as well. The `announcementDepositBase` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> :kusama }}
-and the `announcementDepositFactor` is
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/>. :kusama }}
+where the [`announcementDepositBase`](../general/constants-variables.md#proxy-deposits) is the
+required amount to be reserved for an account to announce a proxy call. For every proxy call the
+account has, an additional amount defined by the
+[`announcementDepositFactor`](../general/constants-variables.md#proxy-deposits) is reserved as well.
 
 ---
 
