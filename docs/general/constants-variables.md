@@ -165,7 +165,17 @@ The number of period per slot auction on Polkadot is <RPC network="polkadot" pat
 
 The creation of proxies on Polkadot requires a **proxy deposit base** of <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
 
-In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> for announcing a call and an announcement deposit factor of <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/> for each proxy call.
+In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> for announcing a call and an **announcement deposit factor** of <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/> for each proxy call.
+
+#### Staking Miner Deposit and Reward
+
+Staking miners on Polkadot are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/>, a **signed deposit per byte** of  <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/> (a solution weighing 200KB would yield 200 x 0.0000097656 = 0.00195312 DOT), and a **signed deposit weight** set to 0.
+
+The **signed reward base** on Polkadot is <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> which is a fixed amount.
+
+#### Staking Miner Max Submissions
+
+The maximum number of submission for a staking miner on Polkadot is <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
 
 #### Total Issuance
 
@@ -330,7 +340,17 @@ The number of period per slot auction on Kusama is <RPC network="kusama" path="c
 
 The creation of proxies on Kusama requires a **proxy deposit base** of <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
 
-In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> for announcing a call and an announcement deposit factor of <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/> for each proxy call.
+In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> for announcing a call and an **announcement deposit factor** of <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/> for each proxy call.
+
+#### Staking Miner Deposit and Reward
+
+Staking miners on Kusama are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/>, a **signed deposit per byte** of  <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/> (a solution weighing 200KB would yield 200 x 0.00000032551 = 0.000065102 KSM), and a **signed deposit weight** set to 0 and has no effect.
+
+The **signed reward base** on Kusama is <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> which is a fixed amount.
+
+#### Staking Miner Max Submissions
+
+The maximum number of submission for a staking miner on Kusama is <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
 
 #### Total Issuance
 
